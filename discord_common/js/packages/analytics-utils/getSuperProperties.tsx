@@ -1,17 +1,17 @@
-// === Module 1359: getSuperProperties ===
+// === Module 1348: getSuperProperties ===
 
-// Module 1359 (getSuperProperties)
+// Module 1348 (getSuperProperties)
 import Storage7 from "Storage" /* 510 */;
-import encodeProperties from "encodeProperties" /* 1357 */;
-import getSystemLocale2 from "getSystemLocale" /* 1360 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1361 */;
-import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1362 */;
-import clientLaunchId from "clientLaunchId" /* 1363 */;
-import formatDefault from "format" /* 1364 */;
-import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1365 */;
-import NativeClientInfoModule from "NativeClientInfoModule" /* 1366 */;
-import DesignIds from "DesignIds" /* 1367 */;
-import SessionStorage3 from "SessionStorage" /* 1368 */;
+import encodeProperties from "encodeProperties" /* 1346 */;
+import getSystemLocale2 from "getSystemLocale" /* 1349 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1350 */;
+import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1351 */;
+import clientLaunchId from "clientLaunchId" /* 1352 */;
+import formatDefault from "format" /* 1353 */;
+import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1354 */;
+import NativeClientInfoModule from "NativeClientInfoModule" /* 1355 */;
+import DesignIds from "DesignIds" /* 1356 */;
+import SessionStorage3 from "SessionStorage" /* 1357 */;
 import size from "module_2" /* 2 */;
 
 function getOS() {
@@ -187,7 +187,7 @@ if (null == obj) {
         tmp7 = tmp9;
       }
       const Storage5 = Storage7.Storage;
-      value3 = Storage5.get(referralProperties);
+      let value3 = Storage5.get(referralProperties);
       if (null == value3) {
         obj = {};
         const Storage6 = Storage7.Storage;
@@ -195,7 +195,7 @@ if (null == obj) {
         value3 = obj;
       }
       const SessionStorage = SessionStorage3.SessionStorage;
-      value4 = SessionStorage.get(referralProperties);
+      let value4 = SessionStorage.get(referralProperties);
       if (null == value4) {
         const obj3 = {};
         const _Object = Object;
@@ -219,6 +219,7 @@ if (null == obj) {
         const obj6 = {};
         const merged1 = Object.assign(obj5);
         obj6.os_version = tmp24.systemVersion || "";
+        obj6.os_sdk_version = tmp24.osSdkVersion || undefined;
         let obj7 = obj6;
       } else {
         obj7 = {};
@@ -252,7 +253,7 @@ function extendSuperProperties(arg0) {
   closure_5 = encodeProperties.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
-  obj = { client_build_number: parseInt("35320300000000", 10) };
+  obj = { client_build_number: parseInt("35320400000000", 10) };
   let buildNumber;
   if (DiscordNative != null) {
     const app = DiscordNative.app;

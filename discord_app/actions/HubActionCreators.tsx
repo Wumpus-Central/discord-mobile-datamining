@@ -1,14 +1,14 @@
-// === Module 14142: HubActionCreators ===
+// === Module 14289: HubActionCreators ===
 
-// Module 14142 (HubActionCreators)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import TypeUtils from "TypeUtils" /* 4869 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6734 */;
+// Module 14289 (HubActionCreators)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import TypeUtils from "TypeUtils" /* 4870 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/HubActionCreators.tsx");
 
@@ -110,7 +110,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ export default {
               throw value;
             } else if (arg0 !== 2) {
               closure_128_0 = value;
-              guild = closure_128_0.body.guild;
+              const guild = closure_128_0.body.guild;
               let id;
               if (guild != null) {
                 id = guild.id;
@@ -197,7 +197,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -230,7 +230,7 @@ export default {
                 return obj8;
               } else {
                 c5 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "HermesInternal", done: null };
               }
             }
           } else if (1 === tmp7) {
@@ -249,7 +249,7 @@ export default {
             return obj10;
           } else {
             closure_128_0 = value;
-            guild = closure_128_0.body.guild;
+            const guild = closure_128_0.body.guild;
             let id;
             if (guild != null) {
               id = guild.id;

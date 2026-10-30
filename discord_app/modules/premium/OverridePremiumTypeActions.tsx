@@ -1,18 +1,17 @@
-// === Module 17562: OverridePremiumTypeActions ===
+// === Module 17616: OverridePremiumTypeActions ===
 
-// Module 17562 (OverridePremiumTypeActions)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import createMessage from "createMessage" /* 10274 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 17616 (OverridePremiumTypeActions)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import createMessage from "createMessage" /* 10299 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/OverridePremiumTypeActions.tsx");
 
-export function updateClientPremiumTypeOverride(premiumType, stateFromStores) {
-  let currentUser = stateFromStores;
+export function updateClientPremiumTypeOverride(premiumType, currentUser) {
   DispatcherDefault.dispatch({ type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType });
-  if (stateFromStores == null) {
+  if (currentUser == null) {
     currentUser = UserStore.getCurrentUser();
   }
   if (null != currentUser) {

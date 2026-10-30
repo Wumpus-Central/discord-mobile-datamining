@@ -1,16 +1,16 @@
-// === Module 10899: ConjurePublishActionCreators ===
+// === Module 10922: ConjurePublishActionCreators ===
 
-// Module 10899 (ConjurePublishActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10830 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10852 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10900 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10902 */;
+// Module 10922 (ConjurePublishActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10853 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10875 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10923 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10925 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1389 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10824 */;
+import UserStore from "UserStore" /* 1384 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10847 */;
 
 require = fn;
 function unpublishProject() {
@@ -34,7 +34,7 @@ let closure_9 = async function _unpublishProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_9 = async function _unpublishProject(arg0) {
           ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2 } = closure_1);
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -150,7 +150,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -182,7 +182,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
           closure_130_12 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -312,7 +312,7 @@ let closure_13 = async function _refreshPublishedApplication() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -355,7 +355,7 @@ let closure_13 = async function _refreshPublishedApplication() {
             closure_132_14(closure_131_0, closure_131_1, closure_131_2);
           }
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         c6 = tmp;
@@ -378,7 +378,7 @@ function reloadAfterPublish(application_id, arg1, integrationInstalled) {
     const result1 = ConjurePreviewActionCreators.reloadConjureAppFrames(application_id);
   }
 }
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/ConjurePublishActionCreators.tsx");
 

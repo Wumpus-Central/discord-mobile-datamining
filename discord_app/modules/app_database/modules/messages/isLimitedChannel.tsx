@@ -1,10 +1,10 @@
-// === Module 7652: isLimitedChannel ===
+// === Module 7657: isLimitedChannel ===
 
-// Module 7652 (isLimitedChannel)
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5231 */;
+// Module 7657 (isLimitedChannel)
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5237 */;
 
-const ChannelTypes = fn(1084).ChannelTypes;
+const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 

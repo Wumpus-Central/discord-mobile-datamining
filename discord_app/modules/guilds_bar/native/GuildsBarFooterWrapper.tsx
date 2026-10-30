@@ -1,67 +1,22 @@
-// === Module 18306: GuildsBarFooterWrapper ===
+// === Module 18365: GuildsBarFooterWrapper ===
 
-// Module 18306 (GuildsBarFooterWrapper)
+// Module 18365 (GuildsBarFooterWrapper)
 import jsxProd from "jsxProd" /* 21 */;
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5289 */;
-import NativeViewDefault from "NativeView" /* 6946 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17963 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 18243 */;
-import createStyles from "createStyles" /* 5005 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import nativeDefault from "native" /* 575 */;
+import useToken from "useToken" /* 5591 */;
+import NativeViewDefault from "NativeView" /* 6954 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18024 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 18302 */;
+import createStyles from "createStyles" /* 5009 */;
 import size from "module_2" /* 2 */;
 
 const GUILD_ITEM_HIT_SLOP = GuildsBarConstants.GUILD_ITEM_HIT_SLOP;
 const jsx = jsxProd.jsx;
 let obj = { footerWrapper: { display: "flex", alignSelf: "stretch", alignItems: "center", gap: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING } };
 let closure_5 = createStyles.createStyles(obj);
-let obj2 = { display: "flex", alignSelf: "stretch", alignItems: "center", gap: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING };
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBarFooterWrapper(children) {
-  const cResult = c.c(9);
-  children = children.children;
-  const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmp5 = closure_5();
-  const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
-  if (cResult[0] === isHomeDrawerEnabled) {
-    if (cResult[1] === token) {
-      let tmp7 = cResult[2];
-    }
-    if (cResult[3] === tmp5.footerWrapper) {
-      if (cResult[4] === tmp7) {
-        let tmp10 = cResult[5];
-      }
-      if (cResult[6] === children) {
-        if (cResult[7] === tmp10) {
-          let tmp11 = cResult[8];
-        }
-        return tmp11;
-      }
-      const obj4 = { style: tmp10, children };
-      const tmp13 = jsx(NativeViewDefault, { style: tmp10, children });
-      cResult[6] = children;
-      cResult[7] = tmp10;
-      cResult[8] = tmp13;
-      tmp11 = tmp13;
-    }
-    const items = [tmp5.footerWrapper, tmp7];
-    cResult[3] = tmp5.footerWrapper;
-    cResult[4] = tmp7;
-    cResult[5] = items;
-    tmp10 = items;
-  }
-  let tmp8 = null;
-  if (!isHomeDrawerEnabled) {
-    const obj5 = { width: token + GUILD_ITEM_HIT_SLOP.left + GUILD_ITEM_HIT_SLOP.right };
-    tmp8 = obj5;
-  }
-  cResult[0] = isHomeDrawerEnabled;
-  cResult[1] = token;
-  cResult[2] = tmp8;
-  tmp7 = tmp8;
-}) : (function GuildsBarFooterWrapper(children) {
+export default function GuildsBarFooterWrapper(children) {
   const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = closure_5();
   const isHomeDrawerEnabled = useHomeDrawerGesture.useIsHomeDrawerEnabled();
@@ -73,4 +28,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBa
   }
   style[1] = tmp6;
   return jsx(NativeViewDefault, { style, children: children.children });
-});
+};

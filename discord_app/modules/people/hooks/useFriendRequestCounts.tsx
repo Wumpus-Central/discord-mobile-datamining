@@ -1,33 +1,21 @@
-// === Module 18721: useFriendRequestCounts ===
+// === Module 18780: useFriendRequestCounts ===
 
-// Module 18721 (useFriendRequestCounts)
+// Module 18780 (useFriendRequestCounts)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7788 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7793 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIncomingFriendRequestCount() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [RelationshipStore, GameRelationshipStore];
-    const fn = function o() {
-      const items = [RelationshipStore, GameRelationshipStore];
-      [obj, obj2] = items;
-      const pendingCount = obj.getPendingCount();
-      return pendingCount + obj2.getPendingIncomingCount();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useIncomingFriendRequestCount() {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
+
+export function getIncomingFriendRequestCount(items) {
+  [obj, obj2] = items;
+  const pendingCount = obj.getPendingCount();
+  return pendingCount + obj2.getPendingIncomingCount();
+}
+export function useIncomingFriendRequestCount() {
   let items = [RelationshipStore, GameRelationshipStore];
   return initialize.useStateFromStores(items, () => {
     const items = [RelationshipStore, GameRelationshipStore];
@@ -35,22 +23,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIncomin
     const pendingCount = obj.getPendingCount();
     return pendingCount + obj2.getPendingIncomingCount();
   });
-});
-let closure_5 = tmp2;
-function getIncomingFriendRequestCount(items) {
-  [obj, obj2] = items;
-  const pendingCount = obj.getPendingCount();
-  return pendingCount + obj2.getPendingIncomingCount();
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
-
-export { getIncomingFriendRequestCount };
-export const useIncomingFriendRequestCount = tmp2;
 export function getOutgoingFriendRequestCount() {
   let tmp = items1;
   if (items1 === undefined) {
-    const items = [closure_5, ];
+    const items = [globalThis.o, ];
     items[1] = globalThis.s;
     tmp = items;
   }

@@ -1,26 +1,27 @@
-// === Module 18731: AddFriendsScreen ===
+// === Module 18790: AddFriendsScreen ===
 
-// Module 18731 (AddFriendsScreen)
+// Module 18790 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8903 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14046 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14050 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 18734 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 18736 */;
+import nativeDefault from "native" /* 575 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8937 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14194 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14198 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 18793 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 18795 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7788 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7793 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function handleFindFriends() {
-  ContactSyncModalActionCreators.openContactSyncModal({}, map1.FRIENDS_ADD_FRIENDS_MODAL);
+  ContactSyncModalActionCreators.openContactSyncModal({}, constants2.FRIENDS_ADD_FRIENDS_MODAL);
 }
 function handleShare() {
   const self = this;
@@ -42,7 +43,7 @@ let closure_23 = async function _handleShare() {
   obj8.message = intl2.formatToPlainString(closure_130_0(closure_130_2[16]).t.PJf9P9, { link: closure_130_1(closure_130_2[17])(code) });
   obj8.location = closure_130_14.ADD_FRIENDS_MODAL;
   closure_129_0(obj8);
-  await "IconComponent";
+  await "HermesInternal";
   const intl = closure_130_0(closure_130_2[16]).intl;
   closure_130_0(closure_130_2[15]).presentError(intl.string(closure_130_0(closure_130_2[16]).t.R0RpRX));
   { link: closure_130_1(closure_130_2[17])(code) };
@@ -58,14 +59,14 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(14070).Sections;
-const Constants = fn(1084);
+const Sections = fn(14218).Sections;
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-let ContactPermissions = fn(14048).ContactPermissions;
+const ContactPermissions = fn(14196).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { flex: 1 }, inviteAppsContainerNonSticky: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 }, inviteAppsContentContainer: { paddingTop: 0, paddingBottom: 0, minWidth: "100%" }, emptyContainer: null, emptyActionContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 };
 obj2.emptyContainer = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -74,1089 +75,12 @@ obj2.emptyActionContainer = { marginHorizontal: nativeDefault.space.PX_16, paddi
 let obj5 = { marginHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 };
 obj2.loading = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, justifyContent: "center", flex: 1 };
 let closure_20 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowContactSync() {
-  const cResult = require("c").c(4);
-  let obj = require("c");
-  const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
-  if (cResult[0] !== contactSyncAccount) {
-    const isContactSyncEnabledResult = tmp(14050).isContactSyncEnabled(contactSyncAccount);
-    cResult[0] = contactSyncAccount;
-    cResult[1] = isContactSyncEnabledResult;
-    let tmp5 = isContactSyncEnabledResult;
-    let tmpResult = tmp(14050);
-  } else {
-    tmp5 = cResult[1];
-  }
-  const tmp7 = _slicedToArray(noop.useState(false), 2);
-  _require = tmp7[1];
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function s() {
-      if (obj.isContactSyncAvailable()) {
-        const result = ContactSyncUtils.checkContactPermissions();
-        result.then((result) => {
-          const obj = closure_0(dependencyMap[21]);
-          let tmp3 = result === constants.NOT_DETERMINED;
-          if (!tmp3) {
-            tmp3 = tmp2;
-          }
-          closure_1_0(tmp3);
-          tmp2 = closure_0(dependencyMap[21]).isAndroid() && result === constants.UNAUTHORIZED;
-        });
-        const tmpResult = ContactSyncUtils;
-      }
-      obj = ContactSyncUtils;
-    };
-    const items = [];
-    cResult[2] = fn;
-    cResult[3] = items;
-    let tmp9 = items;
-    let tmp8 = fn;
-  } else {
-    tmp8 = cResult[2];
-    tmp9 = cResult[3];
-  }
-  const effect = noop.useEffect(tmp8, tmp9);
-  const obj2 = require("ContactSyncUtils");
-  let result = require("ContactSyncUtils").isContactSyncAvailable();
-  if (result) {
-    let first = !tmp5;
-    if (tmp5) {
-      first = tmp7[0];
-    }
-    result = first;
-  }
-  return result;
-}) : (function useShowContactSync() {
-  const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
-  const isContactSyncEnabledResult = ContactSyncUtils.isContactSyncEnabled(contactSyncAccount);
-  [tmp4, require] = noop.useState(false);
-  const effect = noop.useEffect(() => {
-    if (obj.isContactSyncAvailable()) {
-      const result = ContactSyncUtils.checkContactPermissions();
-      result.then((result) => {
-        const obj = require("PlatformUtils");
-        let tmp3 = result === constants.NOT_DETERMINED;
-        if (!tmp3) {
-          tmp3 = tmp2;
-        }
-        closure_1_0(tmp3);
-        tmp2 = require("PlatformUtils").isAndroid() && result === constants.UNAUTHORIZED;
-      });
-      const tmpResult = ContactSyncUtils;
-    }
-    obj = ContactSyncUtils;
-  }, []);
-  let tmp3 = _slicedToArray(noop.useState(false), 2);
-  let result = ContactSyncUtils.isContactSyncAvailable();
-  if (result) {
-    let tmp7 = !isContactSyncEnabledResult;
-    if (isContactSyncEnabledResult) {
-      tmp7 = tmp4;
-    }
-    result = tmp7;
-  }
-  return result;
-});
-ReactCompilerGating = fn(558);
-let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTransitionEnd(navigation) {
-  const cResult = c.c(3);
-  navigation = navigation.navigation;
-  [tmp3, importDefault] = noop.useState(false);
-  if (cResult[0] !== navigation) {
-    const fn = function o() {
-      return navigation.addListener("transitionEnd", () => {
-        closure_1_1(true);
-      });
-    };
-    const items = [navigation];
-    cResult[0] = navigation;
-    cResult[1] = fn;
-    cResult[2] = items;
-    let tmp5 = items;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-  }
-  const effect = noop.useEffect(tmp4, tmp5);
-  return tmp3;
-}) : (function useTransitionEnd(navigation) {
-  navigation = navigation.navigation;
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  closure_1 = tmp[1];
-  const items = [navigation];
-  const effect = noop.useEffect(() => navigation.addListener("transitionEnd", () => {
-    closure_1_1(true);
-  }), items);
-  return tmp[0];
-});
-ReactCompilerGating = fn(558);
-let obj6 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, justifyContent: "center", flex: 1 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFriendsScreen(navigation) {
-  const cResult = navigation(analyticsLocations[19]).c(80);
+export default function AddFriendsScreen(navigation) {
   navigation = navigation.navigation;
-  const sourcePage = navigation.route.params.sourcePage;
-  added();
-  let obj = navigation(analyticsLocations[19]);
-  analyticsLocations = sourcePage(analyticsLocations[22])(sourcePage(analyticsLocations[23]).ADD_FRIENDS).analyticsLocations;
-  let tmp6 = sourcePage(analyticsLocations[22]);
-  _slicedToArray = sourcePage(analyticsLocations[24])();
-  let tmp7 = sourcePage(analyticsLocations[24])();
-  const userRowWithSubLabelHeight = navigation(analyticsLocations[25]).useUserRowWithSubLabelHeight(1);
-  let obj2 = navigation(analyticsLocations[25]);
-  const userRowWithSubLabelHeight1 = navigation(analyticsLocations[25]).useUserRowWithSubLabelHeight(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  [first1, closure_7] = userRowWithSubLabelHeight1.useState(first);
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    let items1 = [];
-    cResult[num] = items1;
-    let tmp14 = items1;
-  } else {
-    tmp14 = cResult[1];
-  }
-  [first2, RelationshipStore] = userRowWithSubLabelHeight1.useState(tmp14);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [];
-    cResult[2] = items2;
-    let tmp17 = items2;
-  } else {
-    tmp17 = cResult[2];
-  }
-  [first3, Sections] = userRowWithSubLabelHeight1.useState(tmp17);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items3 = [];
-    cResult[3] = items3;
-    let tmp20 = items3;
-  } else {
-    tmp20 = cResult[3];
-  }
-  [first4, closure_13] = userRowWithSubLabelHeight1.useState(tmp20);
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    class X {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_13;
-          tmp4 = closure_13((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_9;
-          tmp2 = closure_9((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-    cResult[4] = X;
-  } else {
-    class X {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_13;
-          tmp4 = closure_13((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_9;
-          tmp2 = closure_9((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-  }
-  closure_14 = X;
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-    cResult[5] = Y;
-  } else {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-  }
-  constants = Y;
-  if (cResult[6] !== sourcePage) {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-    cResult[6] = sourcePage;
-    cResult[7] = tmp26;
-  } else {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-  }
-  sourcePage(analyticsLocations[27])(tmp26);
-  if (cResult[8] !== navigation) {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-    cResult[8] = navigation;
-    cResult[9] = tmp29;
-  } else {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-  }
-  ContactPermissions = tmp29;
-  if (cResult[10] !== analyticsLocations) {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-    cResult[10] = analyticsLocations;
-    cResult[11] = tmp31;
-  } else {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-  }
-  closure_17 = tmp31;
-  if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-    const items4 = [RelationshipStore, first3];
-    cResult[12] = items4;
-    const tmp32 = items4;
-  } else {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-  }
-  if (cResult[13] === first2) {
-    class Y {
-      constructor(arg0, arg1) {
-        closure_0 = navigation;
-        closure_1 = arg1;
-        if (null != arg1) {
-          tmp3 = closure_11;
-          tmp4 = closure_11((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-            return items;
-          });
-        } else {
-          tmp = closure_7;
-          tmp2 = closure_7((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-            return items;
-          });
-        }
-        return;
-      }
-    }
-    const stateFromStoresArray = tmp(tmp2[31]).useStateFromStoresArray(tmp32, se);
-    const _Symbol = Symbol;
-    if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-      class Y {
-        constructor(arg0, arg1) {
-          closure_0 = navigation;
-          closure_1 = arg1;
-          if (null != arg1) {
-            tmp3 = closure_11;
-            tmp4 = closure_11((arg0) => {
-              const items = [];
-              items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-              return items;
-            });
-          } else {
-            tmp = closure_7;
-            tmp2 = closure_7((arg0) => {
-              const items = [];
-              items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-              return items;
-            });
-          }
-          return;
-        }
-      }
-      const items5 = [first2, RelationshipStore, first3];
-      cResult[16] = items5;
-    } else {
-      class Y {
-        constructor(arg0, arg1) {
-          closure_0 = navigation;
-          closure_1 = arg1;
-          if (null != arg1) {
-            tmp3 = closure_11;
-            tmp4 = closure_11((arg0) => {
-              const items = [];
-              items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-              return items;
-            });
-          } else {
-            tmp = closure_7;
-            tmp2 = closure_7((arg0) => {
-              const items = [];
-              items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-              return items;
-            });
-          }
-          return;
-        }
-      }
-    }
-    if (cResult[17] === first4) {
-      class Y {
-        constructor(arg0, arg1) {
-          closure_0 = navigation;
-          closure_1 = arg1;
-          if (null != arg1) {
-            tmp3 = closure_11;
-            tmp4 = closure_11((arg0) => {
-              const items = [];
-              items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-              return items;
-            });
-          } else {
-            tmp = closure_7;
-            tmp2 = closure_7((arg0) => {
-              const items = [];
-              items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-              return items;
-            });
-          }
-          return;
-        }
-      }
-      const tmpResult2 = tmp(tmp2[31]);
-      const stateFromStores = tmpResult2.useStateFromStores(tmp34, tmp37, tmp38, areHydratedGameFriendRequestRowStatesEqual);
-      const tmp44 = tmp5(tmp2[32])();
-      added = tmp44.added;
-      const setAdded = tmp44.setAdded;
-      const friendSuggestions = tmp44.friendSuggestions;
-      let tmp45 = friendSuggestions.length > 0;
-      if (tmp45) {
-        class Y {
-          constructor(arg0, arg1) {
-            closure_0 = navigation;
-            closure_1 = arg1;
-            if (null != arg1) {
-              tmp3 = closure_11;
-              tmp4 = closure_11((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                return items;
-              });
-            } else {
-              tmp = closure_7;
-              tmp2 = closure_7((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                return items;
-              });
-            }
-            return;
-          }
-        }
-        tmp45 = stateFromStoresArray.length > 3;
-      }
-      closure_23 = tmp45;
-      let tmp46 = friendSuggestions.length > 0;
-      if (tmp46) {
-        class Y {
-          constructor(arg0, arg1) {
-            closure_0 = navigation;
-            closure_1 = arg1;
-            if (null != arg1) {
-              tmp3 = closure_11;
-              tmp4 = closure_11((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                return items;
-              });
-            } else {
-              tmp = closure_7;
-              tmp2 = closure_7((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                return items;
-              });
-            }
-            return;
-          }
-        }
-        tmp46 = stateFromStores.length > 3;
-      }
-      closure_24 = tmp46;
-      if (tmp46) {
-        class Y {
-          constructor(arg0, arg1) {
-            closure_0 = navigation;
-            closure_1 = arg1;
-            if (null != arg1) {
-              tmp3 = closure_11;
-              tmp4 = closure_11((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                return items;
-              });
-            } else {
-              tmp = closure_7;
-              tmp2 = closure_7((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                return items;
-              });
-            }
-            return;
-          }
-        }
-        const bound = Math.min(stateFromStores.length, 3);
-      } else {
-        class Y {
-          constructor(arg0, arg1) {
-            closure_0 = navigation;
-            closure_1 = arg1;
-            if (null != arg1) {
-              tmp3 = closure_11;
-              tmp4 = closure_11((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                return items;
-              });
-            } else {
-              tmp = closure_7;
-              tmp2 = closure_7((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                return items;
-              });
-            }
-            return;
-          }
-        }
-      }
-      if (cResult[21] === stateFromStores) {
-        class Y {
-          constructor(arg0, arg1) {
-            closure_0 = navigation;
-            closure_1 = arg1;
-            if (null != arg1) {
-              tmp3 = closure_11;
-              tmp4 = closure_11((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                return items;
-              });
-            } else {
-              tmp = closure_7;
-              tmp2 = closure_7((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                return items;
-              });
-            }
-            return;
-          }
-        }
-        sourcePage(analyticsLocations[33])(tmp48);
-        if (cResult[24] !== navigation) {
-          class Y {
-            constructor(arg0, arg1) {
-              closure_0 = navigation;
-              closure_1 = arg1;
-              if (null != arg1) {
-                tmp3 = closure_11;
-                tmp4 = closure_11((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                  return items;
-                });
-              } else {
-                tmp = closure_7;
-                tmp2 = closure_7((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                  return items;
-                });
-              }
-              return;
-            }
-          }
-          tmp56[0] = navigation;
-          cResult[24] = navigation;
-          cResult[25] = tmp56;
-        } else {
-          class Y {
-            constructor(arg0, arg1) {
-              closure_0 = navigation;
-              closure_1 = arg1;
-              if (null != arg1) {
-                tmp3 = closure_11;
-                tmp4 = closure_11((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                  return items;
-                });
-              } else {
-                tmp = closure_7;
-                tmp2 = closure_7((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                  return items;
-                });
-              }
-              return;
-            }
-          }
-        }
-        const tmp58 = closure_25(tmp56);
-        const tmp60 = closure_24();
-        closure_25 = tmp60;
-        if (!tmp58) {
-          class Y {
-            constructor(arg0, arg1) {
-              closure_0 = navigation;
-              closure_1 = arg1;
-              if (null != arg1) {
-                tmp3 = closure_11;
-                tmp4 = closure_11((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                  return items;
-                });
-              } else {
-                tmp = closure_7;
-                tmp2 = closure_7((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                  return items;
-                });
-              }
-              return;
-            }
-          }
-        }
-        if (tmp60) {
-          class Y {
-            constructor(arg0, arg1) {
-              closure_0 = navigation;
-              closure_1 = arg1;
-              if (null != arg1) {
-                tmp3 = closure_11;
-                tmp4 = closure_11((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                  return items;
-                });
-              } else {
-                tmp = closure_7;
-                tmp2 = closure_7((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                  return items;
-                });
-              }
-              return;
-            }
-          }
-        }
-        if (!tmp45) {
-          class Y {
-            constructor(arg0, arg1) {
-              closure_0 = navigation;
-              closure_1 = arg1;
-              if (null != arg1) {
-                tmp3 = closure_11;
-                tmp4 = closure_11((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                  return items;
-                });
-              } else {
-                tmp = closure_7;
-                tmp2 = closure_7((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                  return items;
-                });
-              }
-              return;
-            }
-          }
-        }
-        if (!tmp46) {
-          class Y {
-            constructor(arg0, arg1) {
-              closure_0 = navigation;
-              closure_1 = arg1;
-              if (null != arg1) {
-                tmp3 = closure_11;
-                tmp4 = closure_11((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                  return items;
-                });
-              } else {
-                tmp = closure_7;
-                tmp2 = closure_7((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                  return items;
-                });
-              }
-              return;
-            }
-          }
-        }
-        if (cResult[26] === friendSuggestions.length) {
-          class Y {
-            constructor(arg0, arg1) {
-              closure_0 = navigation;
-              closure_1 = arg1;
-              if (null != arg1) {
-                tmp3 = closure_11;
-                tmp4 = closure_11((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                  return items;
-                });
-              } else {
-                tmp = closure_7;
-                tmp2 = closure_7((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                  return items;
-                });
-              }
-              return;
-            }
-          }
-        }
-        const items6 = [num, 4, 4, friendSuggestions.length];
-        cResult[26] = friendSuggestions.length;
-        cResult[27] = num;
-        cResult[28] = 4;
-        cResult[29] = 4;
-        cResult[30] = items6;
-      }
-      const items7 = [];
-      let num20 = 0;
-      if (0 < bound) {
-        class Y {
-          constructor(arg0, arg1) {
-            closure_0 = navigation;
-            closure_1 = arg1;
-            if (null != arg1) {
-              tmp3 = closure_11;
-              tmp4 = closure_11((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                return items;
-              });
-            } else {
-              tmp = closure_7;
-              tmp2 = closure_7((arg0) => {
-                const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                return items;
-              });
-            }
-            return;
-          }
-        }
-        while (true) {
-          class Y {
-            constructor(arg0, arg1) {
-              closure_0 = navigation;
-              closure_1 = arg1;
-              if (null != arg1) {
-                tmp3 = closure_11;
-                tmp4 = closure_11((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                  return items;
-                });
-              } else {
-                tmp = closure_7;
-                tmp2 = closure_7((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                  return items;
-                });
-              }
-              return;
-            }
-          }
-          if (null != tmp50) {
-            class Y {
-              constructor(arg0, arg1) {
-                closure_0 = navigation;
-                closure_1 = arg1;
-                if (null != arg1) {
-                  tmp3 = closure_11;
-                  tmp4 = closure_11((arg0) => {
-                    const items = [];
-                    items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                    return items;
-                  });
-                } else {
-                  tmp = closure_7;
-                  tmp2 = closure_7((arg0) => {
-                    const items = [];
-                    items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                    return items;
-                  });
-                }
-                return;
-              }
-            }
-          }
-          num20 = num20 + num;
-          if (num20 >= bound) {
-            class Y {
-              constructor(arg0, arg1) {
-                closure_0 = navigation;
-                closure_1 = arg1;
-                if (null != arg1) {
-                  tmp3 = closure_11;
-                  tmp4 = closure_11((arg0) => {
-                    const items = [];
-                    items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                    return items;
-                  });
-                } else {
-                  tmp = closure_7;
-                  tmp2 = closure_7((arg0) => {
-                    const items = [];
-                    items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                    return items;
-                  });
-                }
-                return;
-              }
-            }
-          } else {
-            class Y {
-              constructor(arg0, arg1) {
-                closure_0 = navigation;
-                closure_1 = arg1;
-                if (null != arg1) {
-                  tmp3 = closure_11;
-                  tmp4 = closure_11((arg0) => {
-                    const items = [];
-                    items[HermesBuiltin.arraySpread(arg0, 0)] = { userId, applicationId };
-                    return items;
-                  });
-                } else {
-                  tmp = closure_7;
-                  tmp2 = closure_7((arg0) => {
-                    const items = [];
-                    items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-                    return items;
-                  });
-                }
-                return;
-              }
-            }
-          }
-        }
-      }
-      cResult[21] = stateFromStores;
-      cResult[22] = bound;
-      cResult[23] = items7;
-      tmp48 = items7;
-    }
-    function ue() {
-      const gameRelationshipsByType = first2.getGameRelationshipsByType(constants.PENDING_INCOMING);
-      const items = [];
-      const item = gameRelationshipsByType.forEach((id) => {
-        id = id.id;
-        const applicationId = id.applicationId;
-        const user = UserStore.getUser(id);
-        let someResult = RelationshipStore.isSpam(id) || RelationshipStore.isBlockedOrIgnored(id);
-        if (!someResult) {
-          someResult = null == user;
-        }
-        if (!someResult) {
-          someResult = first3.some((userId) => userId.userId === id && userId.applicationId === tmp);
-        }
-        if (!someResult) {
-          const obj2 = { user, applicationId };
-          items.push(obj2);
-        }
-      });
-      const items1 = [];
-      const item1 = first4.forEach((userId) => {
-        const user = UserStore.getUser(userId.userId);
-        if (null != user) {
-          const obj = { user, applicationId: userId.applicationId };
-          items1.push(obj);
-        }
-      });
-      let obj = sourcePage(analyticsLocations[29]);
-      return sourcePage(analyticsLocations[29]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-        const name = items1(5059).getName(user.user);
-        const obj = items1(5059);
-        return name.localeCompare(items1(5059).getName(user2.user));
-      });
-    }
-    const items8 = [first4, first3];
-    cResult[17] = first4;
-    cResult[18] = first3;
-    cResult[19] = ue;
-    cResult[20] = items8;
-    const tmpResult = tmp(tmp2[31]);
-  }
-  se = function se() {
-    const items = [];
-    const mutableRelationships = RelationshipStore.getMutableRelationships();
-    const keys = mutableRelationships.keys();
-    const iter = keys[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp3 = nextResult;
-      if (RelationshipStore.isUnfilteredPendingIncoming(nextResult)) {
-        let user = UserStore.getUser(tmp3);
-        let hasItem = null == user;
-        let tmp8 = user;
-        if (!hasItem) {
-          hasItem = first1.includes(tmp3);
-        }
-        if (!hasItem) {
-          let arr = items.push(tmp8);
-        }
-      }
-      continue;
-    }
-    const items1 = [];
-    const item = first2.forEach((item) => {
-      const user = first3.getUser(item);
-      if (null != user) {
-        items1.push(user);
-      }
-    });
-    return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = sourcePage(5059).getName(arg0);
-      const obj = sourcePage(5059);
-      return name.localeCompare(sourcePage(5059).getName(arg1));
-    });
-  };
-  cResult[13] = first2;
-  cResult[14] = first1;
-  cResult[15] = se;
-  let obj3 = navigation(analyticsLocations[25]);
-}) : (function AddFriendsScreen(navigation) {
-  navigation = navigation.navigation;
-  const sourcePage = navigation.route.params.sourcePage;
+  importDefault = navigation.route.params.sourcePage;
   let analyticsLocations;
   c6 = undefined;
   c7 = undefined;
@@ -1171,22 +95,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
   friendSuggestions = undefined;
   closure_23 = undefined;
   closure_24 = undefined;
-  closure_25 = undefined;
+  c25 = undefined;
   let memo1;
   let callback1;
   let tmp = c20();
-  let tmp2 = sourcePage;
+  let tmp2 = importDefault;
   let obj = analyticsLocations;
-  analyticsLocations = sourcePage(analyticsLocations[22])(sourcePage(analyticsLocations[23]).ADD_FRIENDS).analyticsLocations;
-  const tmp4 = sourcePage(analyticsLocations[24])();
+  analyticsLocations = require("useAnalyticsLocations")(require("AnalyticsLocation").ADD_FRIENDS).analyticsLocations;
+  const tmp4 = require("useScaledRowHeight")();
   _slicedToArray = tmp4;
-  let tmp3 = sourcePage(analyticsLocations[22]);
-  const userRowWithSubLabelHeight = navigation(analyticsLocations[25]).useUserRowWithSubLabelHeight(1);
-  let obj2 = navigation(analyticsLocations[25]);
-  const userRowWithSubLabelHeight1 = navigation(analyticsLocations[25]).useUserRowWithSubLabelHeight(2);
-  let obj3 = navigation(analyticsLocations[25]);
+  let tmp3 = require("useAnalyticsLocations");
+  const userRowWithSubLabelHeight = navigation(analyticsLocations[23]).useUserRowWithSubLabelHeight(1);
+  let obj2 = navigation(analyticsLocations[23]);
+  const userRowWithSubLabelHeight1 = navigation(analyticsLocations[23]).useUserRowWithSubLabelHeight(2);
+  let obj3 = navigation(analyticsLocations[23]);
   [c6, c7] = userRowWithSubLabelHeight1.useState([]);
-  let tmp8 = _slicedToArray(userRowWithSubLabelHeight1.useState([]), 2);
+  const tmp9 = _slicedToArray(userRowWithSubLabelHeight1.useState([]), 2);
   [c8, c9] = userRowWithSubLabelHeight1.useState([]);
   [first, closure_11] = userRowWithSubLabelHeight1.useState([]);
   [first1, closure_13] = userRowWithSubLabelHeight1.useState([]);
@@ -1220,8 +144,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       });
     }
   }, []);
-  sourcePage(analyticsLocations[27])(() => {
-    AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: map1.FRIENDS_ADD_FRIENDS_MODAL, source_page: sourcePage });
+  require("useMountEffect")(() => {
+    AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_FRIENDS_MODAL, source_page });
   });
   let items = [navigation];
   const onPress = userRowWithSubLabelHeight1.useCallback(() => {
@@ -1231,9 +155,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
   closure_17 = userRowWithSubLabelHeight1.useCallback((id) => {
     showUserProfileActionSheetDefault({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations, location: "Add Friends Modal User Profile" });
   }, items1);
-  const tmp9 = _slicedToArray(userRowWithSubLabelHeight1.useState([]), 2);
+  const tmp10 = _slicedToArray(userRowWithSubLabelHeight1.useState([]), 2);
   const items2 = [c9, first];
-  const stateFromStoresArray = navigation(analyticsLocations[31]).useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray = navigation(analyticsLocations[27]).useStateFromStoresArray(items2, () => {
     const items = [];
     const mutableRelationships = RelationshipStore.getMutableRelationships();
     const keys = mutableRelationships.keys();
@@ -1262,15 +186,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       }
     });
     return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = sourcePage(5059).getName(arg0);
-      const obj = sourcePage(5059);
-      return name.localeCompare(sourcePage(5059).getName(arg1));
+      const name = source_page(5063).getName(arg0);
+      const obj = source_page(5063);
+      return name.localeCompare(source_page(5063).getName(arg1));
     });
   });
-  let obj5 = navigation(analyticsLocations[31]);
+  let obj5 = navigation(analyticsLocations[27]);
   const items3 = [c8, c9, first];
   const items4 = [first1, first];
-  const stateFromStores = navigation(analyticsLocations[31]).useStateFromStores(items3, () => {
+  const stateFromStores = navigation(analyticsLocations[27]).useStateFromStores(items3, () => {
     const gameRelationshipsByType = _undefined3.getGameRelationshipsByType(constants.PENDING_INCOMING);
     const items = [];
     const item = gameRelationshipsByType.forEach((id) => {
@@ -1297,26 +221,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
         items1.push(obj);
       }
     });
-    let obj = sourcePage(analyticsLocations[29]);
-    return sourcePage(analyticsLocations[29]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(5059).getName(user.user);
-      const obj = items1(5059);
-      return name.localeCompare(items1(5059).getName(user2.user));
+    let obj = source_page(analyticsLocations[28]);
+    return source_page(analyticsLocations[28]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
+      const name = items1(5063).getName(user.user);
+      const obj = items1(5063);
+      return name.localeCompare(items1(5063).getName(user2.user));
     });
-  }, items4, memo1);
-  let obj6 = navigation(analyticsLocations[31]);
-  ({ added: c20, setAdded: c21, friendSuggestions } = sourcePage(analyticsLocations[32])());
-  let tmp17 = friendSuggestions.length > 0;
-  if (tmp17) {
-    tmp17 = stateFromStoresArray.length > 3;
-  }
-  closure_23 = tmp17;
+  }, items4, closure_24);
+  let obj6 = navigation(analyticsLocations[27]);
+  ({ added: c20, setAdded: c21, friendSuggestions } = require("useSuggestedFriends")());
   let tmp18 = friendSuggestions.length > 0;
   if (tmp18) {
-    tmp18 = stateFromStores.length > 3;
+    tmp18 = stateFromStoresArray.length > 3;
   }
-  closure_24 = tmp18;
-  const items5 = [stateFromStores, tmp18];
+  closure_23 = tmp18;
+  let tmp19 = friendSuggestions.length > 0;
+  if (tmp19) {
+    tmp19 = stateFromStores.length > 3;
+  }
+  closure_24 = tmp19;
+  const items5 = [stateFromStores, tmp19];
   const memo = obj4.useMemo(() => {
     if (closure_24) {
       const _Math = Math;
@@ -1333,14 +257,50 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     }
     return items;
   }, items5);
-  tmp2(obj[33])(memo);
-  const tmp16 = sourcePage(analyticsLocations[32])();
-  const tmp22 = closure_24();
-  closure_25 = tmp22;
-  const items6 = [stateFromStoresArray.length, friendSuggestions.length, stateFromStores.length, tmp22, tmp17, tmp18];
+  tmp2(obj[31])(memo);
+  const tmp8Result = _slicedToArray(userRowWithSubLabelHeight1.useState(false), 2);
+  importDefault = tmp8Result[1];
+  const items6 = [navigation];
+  const effect = obj4.useEffect(() => navigation.addListener("transitionEnd", () => {
+    source_page(true);
+  }), items6);
+  closure_129_0 = undefined;
+  const tmp17 = require("useSuggestedFriends")();
+  const contactSyncAccount = navigation(obj[18]).useContactSyncAccount();
+  const tmp5Result = navigation(obj[18]);
+  const isContactSyncEnabledResult = navigation(obj[18]).isContactSyncEnabled(contactSyncAccount);
+  const tmp5Result3 = navigation(obj[18]);
+  [tmp27, closure_129_0] = userRowWithSubLabelHeight1.useState(false);
+  const effect1 = obj4.useEffect(() => {
+    if (obj.isContactSyncAvailable()) {
+      const result = ContactSyncUtils.checkContactPermissions();
+      result.then((result) => {
+        const obj = navigation(analyticsLocations[19]);
+        let tmp3 = result === callback.NOT_DETERMINED;
+        if (!tmp3) {
+          tmp3 = tmp2;
+        }
+        closure_1_0(tmp3);
+        tmp2 = navigation(analyticsLocations[19]).isAndroid() && result === callback.UNAUTHORIZED;
+      });
+      const tmpResult = ContactSyncUtils;
+    }
+    obj = ContactSyncUtils;
+  }, []);
+  const tmp8Result2 = _slicedToArray(userRowWithSubLabelHeight1.useState(false), 2);
+  let result = navigation(obj[18]).isContactSyncAvailable();
+  if (result) {
+    let tmp30 = !isContactSyncEnabledResult;
+    if (isContactSyncEnabledResult) {
+      tmp30 = tmp27;
+    }
+    result = tmp30;
+  }
+  c25 = result;
+  const items7 = [stateFromStoresArray.length, friendSuggestions.length, stateFromStores.length, result, tmp18, tmp19];
   memo1 = obj4.useMemo(() => {
     let num = 1;
-    if (closure_25) {
+    if (c25) {
       num = 2;
     }
     const items = [num, , , ];
@@ -1356,8 +316,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     items[2] = num2;
     items[3] = friendSuggestions.length;
     return items;
-  }, items6);
-  const items7 = [memo1, tmp17, tmp18];
+  }, items7);
+  const items8 = [memo1, tmp18, tmp19];
   callback1 = obj4.useCallback((arg0, arg1) => {
     let tmp = arg1 === memo1[arg0] - 1;
     if (stateFromStores.INCOMING_FRIEND_REQUESTS === arg0) {
@@ -1374,8 +334,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     } else {
       return false;
     }
-  }, items7);
-  const items8 = [callback1, tmp4, userRowWithSubLabelHeight, userRowWithSubLabelHeight1, friendSuggestions];
+  }, items8);
+  const items9 = [callback1, tmp4, userRowWithSubLabelHeight, userRowWithSubLabelHeight1, friendSuggestions];
   const callback2 = obj4.useCallback((arg0) => {
     if (stateFromStores.FIND_FRIENDS !== arg0) {
       if (stateFromStores.INCOMING_FRIEND_REQUESTS === arg0) {
@@ -1431,20 +391,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       }
       return userRowWithSubLabelHeight;
     }
-  }, items8);
+  }, items9);
   let obj7 = { value: analyticsLocations, children: null };
-  const items9 = [closure_17(tmp2(obj[40]), { absolute: true }), ];
+  const items10 = [closure_17(tmp2(obj[32]), { absolute: true }), ];
   const obj8 = { style: tmp.container, children: null };
-  const obj9 = { style: tmp.inviteAppsContainerNonSticky, children: closure_17(tmp2(obj[41]), { onItemPressed: friendSuggestions, contentContainerStyle: tmp.inviteAppsContentContainer }) };
-  const items10 = [closure_17(c6, obj9), ];
-  if (!tmp21) {
-    if (!tmp23) {
-      const obj11 = { style: tmp.loading, children: tmp29(tmp5(obj[42]).ActivityIndicator, {}) };
-      items10[1] = tmp29(tmp30, obj11);
-      obj8.children = items10;
-      items9[1] = tmp28(tmp30, obj8);
-      obj7.children = items9;
-      return tmp28(tmp5(obj[22]).AnalyticsLocationProvider, obj7);
+  const obj9 = { style: tmp.inviteAppsContainerNonSticky, children: closure_17(tmp2(obj[33]), { onItemPressed: friendSuggestions, contentContainerStyle: tmp.inviteAppsContentContainer }) };
+  const items11 = [closure_17(c6, obj9), ];
+  if (!tmp8Result[0]) {
+    if (!tmp31) {
+      const obj11 = { style: tmp.loading, children: tmp37(tmp5(obj[34]).ActivityIndicator, {}) };
+      items11[1] = tmp37(tmp38, obj11);
+      obj8.children = items11;
+      items10[1] = tmp36(tmp38, obj8);
+      obj7.children = items10;
+      return tmp36(tmp5(obj[20]).AnalyticsLocationProvider, obj7);
     }
   }
   if (0 === stateFromStoresArray.length && 0 === stateFromStores.length && 0 === friendSuggestions.length) {
@@ -1453,29 +413,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     const obj14 = { label: null, labelLineClamp: 1, icon: null, arrow: true, onPress: null, start: true, end: true };
     let intl = tmp5(obj[16]).intl;
     obj14.label = intl.string(tmp5(obj[16]).t.QzVsOs);
-    const obj15 = { IconComponent: tmp5(obj[36]).AtIcon };
-    obj14.icon = tmp29(tmp5(obj[34]).TableRow.Icon, obj15);
+    const obj15 = { IconComponent: tmp5(obj[38]).AtIcon };
+    obj14.icon = tmp37(tmp5(obj[36]).TableRow.Icon, obj15);
     obj14.onPress = onPress;
-    obj13.children = tmp29(tmp5(obj[34]).TableRow, obj14);
-    const items11 = [tmp29(tmp30, obj13), ];
+    obj13.children = tmp37(tmp5(obj[36]).TableRow, obj14);
+    const items12 = [tmp37(tmp38, obj13), ];
     tmp = null;
-    if (tmp22) {
-      tmp2 = tmp2(obj[44]);
+    if (result) {
+      tmp2 = tmp2(obj[42]);
       obj = {};
-      tmp = tmp29(tmp2, obj);
+      tmp = tmp37(tmp2, obj);
     }
-    items11[1] = tmp;
-    obj12.children = items11;
-    tmp28(c7, obj12);
+    items12[1] = tmp;
+    obj12.children = items12;
+    tmp36(c7, obj12);
   } else {
     const obj16 = {
       sections: memo1,
-      getItemProps(arg0, arg1) {
+      getItemProps(flag2, arg1) {
           const start = tmp;
-          const end = arg1 === memo1[arg0] - 1;
-          if (stateFromStores.FIND_FRIENDS === arg0) {
+          const end = arg1 === memo1[flag2] - 1;
+          if (stateFromStores.FIND_FRIENDS === flag2) {
             if (tmp) {
-              if (closure_25) {
+              if (c25) {
                 const obj2 = {
                   type: "custom",
                   itemType: "showContactSyncCTA",
@@ -1484,10 +444,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
                           const obj = { start: true, height: "100%", label: null, labelLineClamp: 1, icon: null, trailing: null, onPress: null };
                           const intl = start(user[16]).intl;
                           obj.label = intl.string(start(user[16]).t.j2POVo);
-                          obj.icon = onPress2(start(user[34]).TableRow.Icon, { IconComponent: start(user[35]).FriendsIcon });
-                          obj.trailing = onPress2(start(user[34]).TableRow.Arrow, {});
+                          obj.icon = onPress2(start(user[36]).TableRow.Icon, { IconComponent: start(user[37]).FriendsIcon });
+                          obj.trailing = onPress2(start(user[36]).TableRow.Arrow, {});
                           obj.onPress = onPress3;
-                          return onPress2(start(user[34]).TableRow, obj);
+                          return onPress2(start(user[36]).TableRow, obj);
                         }
                 };
                 let obj3 = obj2;
@@ -1502,13 +462,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
                   const obj = { start: !closure_1_25, end: true, height: "100%", label: null, labelLineClamp: 1, icon: null, arrow: true, onPress: null };
                   const intl = navigation(analyticsLocations[16]).intl;
                   obj.label = intl.string(navigation(analyticsLocations[16]).t.QzVsOs);
-                  obj.icon = onPress2(navigation(analyticsLocations[34]).TableRow.Icon, { IconComponent: navigation(analyticsLocations[36]).AtIcon });
+                  obj.icon = onPress2(navigation(analyticsLocations[36]).TableRow.Icon, { IconComponent: navigation(analyticsLocations[38]).AtIcon });
                   obj.onPress = onPress;
-                  return onPress2(navigation(analyticsLocations[34]).TableRow, obj);
+                  return onPress2(navigation(analyticsLocations[36]).TableRow, obj);
                 }
             };
-          } else if (stateFromStores.INCOMING_FRIEND_REQUESTS === arg0) {
-            if (callback1(arg0, arg1)) {
+          } else if (stateFromStores.INCOMING_FRIEND_REQUESTS === flag2) {
+            if (callback1(flag2, arg1)) {
               const obj4 = {
                 type: "custom",
                 itemType: "viewAll",
@@ -1516,13 +476,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
                 component() {
                       const obj = {
                         onPress() {
-                          closure_1(closure_2[26]).track(constants2.FRIEND_FINDER_SECTION_EXPANDED, { section_id: constants.PENDING, truncated_count: 3, expanded_count: length.length, location: "AddFriends" });
+                          closure_1(closure_2[25]).track(constants2.FRIEND_FINDER_SECTION_EXPANDED, { section_id: constants.PENDING, truncated_count: 3, expanded_count: length.length, location: "AddFriends" });
                           navigation.navigate("requests");
                         },
                         users: stateFromStoresArray.slice(3),
                         count: stateFromStoresArray.length
                       };
-                      return onPress2(sourcePage(analyticsLocations[37]), obj);
+                      return onPress2(end(analyticsLocations[39]), obj);
                     }
               };
               return obj4;
@@ -1533,13 +493,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
                 itemType: "incomingRequest",
                 key: stateFromStoresArray[arg1].id,
                 component() {
-                      return constants(IncomingRequestRow.IncomingFriendRequestRow, { accepted: c8.includes(user.id), user, start, end, onPress: onPress2, onDeclineIncomingRequest, onAcceptIncomingRequest });
+                      return closure_3_17(IncomingRequestRow.IncomingFriendRequestRow, { accepted: c8.includes(user.id), user, start, end, onPress: onPress2, onDeclineIncomingRequest, onAcceptIncomingRequest });
                     }
               };
               return obj5;
             }
-          } else if (stateFromStores.INCOMING_GAME_FRIEND_REQUESTS === arg0) {
-            if (callback1(arg0, arg1)) {
+          } else if (stateFromStores.INCOMING_GAME_FRIEND_REQUESTS === flag2) {
+            if (callback1(flag2, arg1)) {
               const obj6 = {
                 type: "custom",
                 itemType: "viewAll",
@@ -1555,7 +515,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
                       const substr = stateFromStores.slice(3);
                       obj.users = substr.map((user) => user.user);
                       obj.count = stateFromStores.length;
-                      return onPress2(sourcePage(analyticsLocations[37]), obj);
+                      return onPress2(end(analyticsLocations[39]), obj);
                     }
               };
               return obj6;
@@ -1566,11 +526,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
               const _HermesInternal = HermesInternal;
               obj7.key = "" + user.id + "-" + applicationId;
               obj7.component = function component() {
-                return constants(IncomingRequestRow.ConnectedIncomingGameFriendRequestRow, { accepted: null != first1.find((userId) => userId.userId === id.id && userId.applicationId === tmp), applicationId, user, start, end, onPress: onPress2, onDeclineIncomingRequest, onAcceptIncomingRequest });
+                return closure_3_17(IncomingRequestRow.ConnectedIncomingGameFriendRequestRow, { accepted: null != first1.find((userId) => userId.userId === id.id && userId.applicationId === tmp), applicationId, user, start, end, onPress: onPress2, onDeclineIncomingRequest, onAcceptIncomingRequest });
               };
               return obj7;
             }
-          } else if (stateFromStores.CONTACT_SUGGESTIONS === arg0) {
+          } else if (stateFromStores.CONTACT_SUGGESTIONS === flag2) {
             const suggestedFriend = tmp4;
             let mutualFriendsCount;
             if (friendSuggestions[arg1] != null) {
@@ -1593,13 +553,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
               itemType: str,
               key: friendSuggestions[arg1].user.id,
               component() {
-                  return constants(ContactSuggestionRow.ContactSuggestionRow, {
+                  return closure_3_17(ContactSuggestionRow.ContactSuggestionRow, {
                     added: c20.includes(suggestedFriend),
                     suggestedFriend,
                     start,
                     end,
                     onPress: onPress2,
-                    location: constants2.ADD_FRIENDS_MODAL,
+                    location: constants3.ADD_FRIENDS_MODAL,
                     onAddSuggestion() {
                       return onPress3((arg0) => {
                         const items = [];
@@ -1618,6 +578,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       insetEnd: 12,
       disableStickySections: true
     };
-    tmp29(tmp5(obj[43]).UsersFastList, obj16);
+    tmp37(tmp5(obj[35]).UsersFastList, obj16);
   }
-});
+};

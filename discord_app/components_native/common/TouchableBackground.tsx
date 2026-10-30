@@ -1,135 +1,26 @@
-// === Module 13742: TouchableBackground ===
+// === Module 13889: TouchableBackground ===
 
-// Module 13742 (TouchableBackground)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
+// Module 13889 (TouchableBackground)
+import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-let closure_2 = ["activeBackgroundColor", "pressableStyle", "style", "children", "onPressIn", "onPressOut"];
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
+({ View: c2, Pressable: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { default: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
-let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj3 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/TouchableBackground.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function TouchableBackground(onPressOut) {
-  const cResult = c.c(28);
-  if (cResult[0] !== onPressOut) {
-    ({ activeBackgroundColor, pressableStyle, style, children, onPressIn } = onPressOut);
-    closure_0 = onPressIn;
-    onPressOut = onPressOut.onPressOut;
-    closure_1 = onPressOut;
-    const tmp11 = _objectWithoutProperties(onPressOut, closure_2);
-    cResult[0] = onPressOut;
-    cResult[1] = activeBackgroundColor;
-    cResult[2] = children;
-    cResult[3] = onPressIn;
-    cResult[4] = onPressOut;
-    cResult[5] = pressableStyle;
-    cResult[6] = tmp11;
-    cResult[7] = style;
-    let tmp2 = activeBackgroundColor;
-  } else {
-    tmp2 = cResult[1];
-    closure_0 = cResult[3];
-    closure_1 = cResult[4];
-  }
-  const tmp12 = closure_9();
-  [tmp14, closure_2] = noop.useState(false);
-  if (cResult[8] !== onPressIn) {
-    const fn = function p(arg0) {
-      closure_1_2(true);
-      if (closure_0 != null) {
-        tmp2(arg0);
-      }
-    };
-    cResult[8] = onPressIn;
-    cResult[9] = fn;
-  }
-  if (cResult[10] !== tmp5) {
-    class R {
-      constructor(arg0) {
-        if (closure_1 != null) {
-          tmp2 = onPressOut;
-          tmpResult = tmp(onPressOut);
-        }
-        tmp4 = closure_2(false);
-        return;
-      }
-    }
-    cResult[10] = tmp5;
-    cResult[11] = R;
-  } else {
-    class R {
-      constructor(arg0) {
-        if (closure_1 != null) {
-          tmp2 = onPressOut;
-          tmpResult = tmp(onPressOut);
-        }
-        tmp4 = closure_2(false);
-        return;
-      }
-    }
-  }
-  if (cResult[12] === tmp2) {
-    class R {
-      constructor(arg0) {
-        if (closure_1 != null) {
-          tmp2 = onPressOut;
-          tmpResult = tmp(onPressOut);
-        }
-        tmp4 = closure_2(false);
-        return;
-      }
-    }
-  }
-  let tmp17 = tmp14;
-  if (tmp14) {
-    class R {
-      constructor(arg0) {
-        if (closure_1 != null) {
-          tmp2 = onPressOut;
-          tmpResult = tmp(onPressOut);
-        }
-        tmp4 = closure_2(false);
-        return;
-      }
-    }
-    if (tmp2 == null) {
-      class R {
-        constructor(arg0) {
-          if (closure_1 != null) {
-            tmp2 = onPressOut;
-            tmpResult = tmp(onPressOut);
-          }
-          tmp4 = closure_2(false);
-          return;
-        }
-      }
-    }
-    const obj2 = { backgroundColor: tmp2 };
-    tmp17 = obj2;
-  }
-  cResult[12] = tmp2;
-  cResult[13] = tmp14;
-  cResult[14] = tmp12;
-  cResult[15] = tmp17;
-  const tmp13 = _slicedToArray(noop.useState(false), 2);
-}) : (function TouchableBackground(onPressOut) {
+export default function TouchableBackground(onPressOut) {
   ({ activeBackgroundColor, onPressIn } = onPressOut);
   onPressOut = onPressOut.onPressOut;
   ({ pressableStyle, style, children } = onPressOut);
   const merged = Object.assign(onPressOut, Object.assign({ activeBackgroundColor: 0, pressableStyle: 0, style: 0, children: 0, onPressIn: 0, onPressOut: 0 }));
   c2 = undefined;
-  const tmp2 = closure_9();
+  const tmp2 = closure_5();
   [tmp4, c2] = noop.useState(false);
   const items = [onPressIn];
   const items1 = [onPressOut];
@@ -157,6 +48,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Touchabl
     const obj2 = { backgroundColor: activeBackgroundColor };
   }
   items2[1] = tmp4;
-  obj.children = <timestampProducer style={items2}>{children}</timestampProducer>;
-  return <React5 accessibilityRole="button" style={pressableStyle} />;
-});
+  obj.children = <React2 style={items2}>{children}</React2>;
+  return <React3 accessibilityRole="button" style={pressableStyle} />;
+};

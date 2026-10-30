@@ -1,11 +1,11 @@
-// === Module 10885: loadEmbeddedAppCSPForLaunch ===
+// === Module 10908: loadEmbeddedAppCSPForLaunch ===
 
-// Module 10885 (loadEmbeddedAppCSPForLaunch)
-import getURLForApplication from "getURLForApplication" /* 5661 */;
-import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 10887 */;
-import useEmbeddedAppCSP from "useEmbeddedAppCSP" /* 10888 */;
+// Module 10908 (loadEmbeddedAppCSPForLaunch)
+import getURLForApplication from "getURLForApplication" /* 5667 */;
+import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 10910 */;
+import useEmbeddedAppCSP from "useEmbeddedAppCSP" /* 10911 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 10886 */;
+import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 10909 */;
 
 const getURLForApplicationDefault = getURLForApplication;
 
@@ -21,7 +21,7 @@ let closure_5 = async function _loadEmbeddedAppCSPForLaunch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_5 = async function _loadEmbeddedAppCSPForLaunch(arg0) {
         throw tmp262;
       }
       c4 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp18) {
       c4 = tmp;
       throw tmp18;

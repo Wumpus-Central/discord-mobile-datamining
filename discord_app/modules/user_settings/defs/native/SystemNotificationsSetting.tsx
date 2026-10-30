@@ -1,8 +1,8 @@
-// === Module 17356: SystemNotificationsSetting ===
+// === Module 17410: SystemNotificationsSetting ===
 
-// Module 17356 (SystemNotificationsSetting)
-import util from "util" /* 1125 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7949 */;
+// Module 17410 (SystemNotificationsSetting)
+import util from "util" /* 1114 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -78,17 +78,17 @@ let closure_8 = async function _handleEnableSystemNotification() {
     }
   }
 };
-const AnalyticEvents = fn(1084).AnalyticEvents;
-let closure_5 = fn(7926).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(13777);
+const AnalyticEvents = fn(1072).AnalyticEvents;
+let closure_5 = fn(7932).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(13924);
 ({ EventActionType: metroRequire, EventActionLocation: closure_7 } = NotificationPermissionConstants);
-const SettingBuilders = fn(11302);
+const SettingBuilders = fn(11505);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(8387).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8424).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_8.apply;

@@ -1,11 +1,11 @@
-// === Module 5070: ThemeActionCreators ===
+// === Module 5074: ThemeActionCreators ===
 
-// Module 5070 (ThemeActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1242 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
+// Module 5074 (ThemeActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1231 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 
-const SystemThemeState = fn(1207).SystemThemeState;
+const SystemThemeState = fn(1196).SystemThemeState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/ThemeActionCreators.tsx");
 

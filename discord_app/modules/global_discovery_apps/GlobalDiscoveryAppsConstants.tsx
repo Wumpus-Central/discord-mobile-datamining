@@ -1,6 +1,6 @@
-// === Module 1092: GlobalDiscoveryAppsConstants ===
+// === Module 1080: GlobalDiscoveryAppsConstants ===
 
-// Module 1092 (GlobalDiscoveryAppsConstants)
+// Module 1080 (GlobalDiscoveryAppsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx");

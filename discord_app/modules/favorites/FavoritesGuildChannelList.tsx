@@ -1,24 +1,24 @@
-// === Module 18233: FavoritesGuildChannelList ===
+// === Module 18293: FavoritesGuildChannelList ===
 
-// Module 18233 (FavoritesGuildChannelList)
-import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7470 */;
-import ChannelListState from "ChannelListState" /* 7695 */;
+// Module 18293 (FavoritesGuildChannelList)
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7478 */;
+import ChannelListState from "ChannelListState" /* 7700 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6842 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6828 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4939 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7273 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7694 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import ReadStateStore from "ReadStateStore" /* 6829 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
-import FavoriteStore from "FavoriteStore" /* 4860 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6849 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6835 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4943 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7280 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7699 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import ReadStateStore from "ReadStateStore" /* 6836 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
+import FavoriteStore from "FavoriteStore" /* 4861 */;
 
 const require = globalThis.__r;
 
@@ -110,13 +110,13 @@ function computeFavoritesState(favoriteChannels, arg1) {
       continue;
     } else {
       let tmp4 = favoriteChannels;
-      if (tmp20.type === favoriteChannels(1208).FavoriteChannelType.CATEGORY) {
+      if (tmp20.type === favoriteChannels(1197).FavoriteChannelType.CATEGORY) {
         continue;
       } else {
         let tmp7 = closure_19(favoriteChannels, tmp20, channel);
         if (null != tmp20.parentId) {
           if (null != favoriteChannels[tmp20.parentId]) {
-            if (favoriteChannels[tmp20.parentId].type === tmp4(1208).FavoriteChannelType.CATEGORY) {
+            if (favoriteChannels[tmp20.parentId].type === tmp4(1197).FavoriteChannelType.CATEGORY) {
               let parentId = tmp20.parentId;
               if (!(parentId in obj2)) {
                 obj2[parentId] = [];
@@ -188,8 +188,8 @@ function computeFavoritesState(favoriteChannels, arg1) {
               } else {
                 isMutedResult = UserGuildSettingsStore.isChannelMuted(isPrivate.guild_id, isPrivate.id);
               }
-              obj2 = { id: isPrivate.id, record: isPrivate, category: self, position: items[isPrivate.id].order, threadIds, threadCount: c1(dependencyMap[25]).size(threadIds), isCollapsed: isCollapsedResult, isMuted: isMutedResult, isFirstVoiceChannel: false, subtitle: null };
-              const obj5 = c1(dependencyMap[25]);
+              obj2 = { id: isPrivate.id, record: isPrivate, category: self, position: items[isPrivate.id].order, threadIds, threadCount: c1(dependencyMap[23]).size(threadIds), isCollapsed: isCollapsedResult, isMuted: isMutedResult, isFirstVoiceChannel: false, subtitle: null };
+              const obj5 = c1(dependencyMap[23]);
               obj2.subtitle = favoriteChannels(dependencyMap[20]).computeSubtitle(isPrivate, isCollapsedResult, false);
               if (!tmp4) {
                 if (!tmp7) {
@@ -217,7 +217,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                       return obj2;
                     }
                   }
-                  tmp28Result = c1(dependencyMap[25]);
+                  tmp28Result = c1(dependencyMap[23]);
                 }
               }
               return obj2;
@@ -225,7 +225,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
           }
           activeJoinedUnreadThreadsForParent = c6.getActiveJoinedRelevantThreadsForParent(isPrivate.guild_id, isPrivate.id);
         });
-        const found = mapped.filter(favoriteChannels(1385).isNotNullish);
+        const found = mapped.filter(favoriteChannels(1380).isNotNullish);
         const arr = _undefined(12)(items);
         closure_6 = found.sortBy((arg0) => {
           ({ record, position } = arg0);
@@ -250,7 +250,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10789).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10812).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -322,8 +322,8 @@ function computeFavoritesState(favoriteChannels, arg1) {
                     } else {
                       isMutedResult = UserGuildSettingsStore.isChannelMuted(isPrivate.guild_id, isPrivate.id);
                     }
-                    obj2 = { id: isPrivate.id, record: isPrivate, category: self, position: items[isPrivate.id].order, threadIds, threadCount: c1(dependencyMap[25]).size(threadIds), isCollapsed: isCollapsedResult, isMuted: isMutedResult, isFirstVoiceChannel: false, subtitle: null };
-                    const obj5 = c1(dependencyMap[25]);
+                    obj2 = { id: isPrivate.id, record: isPrivate, category: self, position: items[isPrivate.id].order, threadIds, threadCount: c1(dependencyMap[23]).size(threadIds), isCollapsed: isCollapsedResult, isMuted: isMutedResult, isFirstVoiceChannel: false, subtitle: null };
+                    const obj5 = c1(dependencyMap[23]);
                     obj2.subtitle = favoriteChannels(dependencyMap[20]).computeSubtitle(isPrivate, isCollapsedResult, false);
                     if (!tmp4) {
                       if (!tmp7) {
@@ -351,7 +351,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                             return obj2;
                           }
                         }
-                        tmp28Result = c1(dependencyMap[25]);
+                        tmp28Result = c1(dependencyMap[23]);
                       }
                     }
                     return obj2;
@@ -359,7 +359,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                 }
                 activeJoinedUnreadThreadsForParent = c6.getActiveJoinedRelevantThreadsForParent(isPrivate.guild_id, isPrivate.id);
               });
-              const found = mapped.filter(items(1385).isNotNullish);
+              const found = mapped.filter(items(1380).isNotNullish);
               const arr = closure_1(12)(items);
               closure_1 = found.sortBy((arg0) => {
                 ({ record, position } = arg0);
@@ -522,7 +522,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
             let str = tmp3.record.name;
             let str2 = str.trim();
             let formatted = str2.toLowerCase();
-            tmp5 = formatted === closure_2_20.toLowerCase();
+            tmp5 = formatted === dependencyMap.toLowerCase();
           }
           let sum = num2 + ChannelListState.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
           for (let num = 0; num < tmp.channelList.length; num = num + 1) {
@@ -589,321 +589,18 @@ function computeFavoritesState(favoriteChannels, arg1) {
     }
   };
 }
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: c10 } = ChannelRecord);
-let closure_19 = fn(4936).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(4870);
+let closure_19 = fn(4940).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(4871);
 ({ FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_20, FAVORITES_RAW_GUILD_ID: closure_21, MAX_FAVORITE_CHANNELS: closure_22 } = FavoritesConstants);
-const constants = fn(7701).ChannelListChannelNoticeRow;
-const Permissions = fn(1095).Permissions;
+const constants = fn(7706).ChannelListChannelNoticeRow;
+const Permissions = fn(1083).Permissions;
 let items = [EmbeddedActivitiesStore, FavoriteStore, GatewayConnectionStore, GuildScheduledEventStore, ActiveJoinedThreadsStore, JoinedThreadsStore, CategoryCollapseStore, ChannelStore, PermissionStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore];
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildChannelList.tsx");
 
-export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildChannelList(arg0) {
-  const cResult = require("c").c(17);
-  if (cResult[0] !== arg0) {
-    let obj2 = arg0;
-    if (undefined === arg0) {
-      obj2 = {};
-    }
-    cResult[0] = arg0;
-    cResult[1] = obj2;
-    let tmp4 = obj2;
-  } else {
-    tmp4 = cResult[1];
-  }
-  let withSuggestionsNotice = tmp4.withSuggestionsNotice;
-  _require = tmp5;
-  if (cResult[2] !== (undefined !== withSuggestionsNotice && withSuggestionsNotice)) {
-    const fn = function h() {
-      return computeFavoritesState(undefined, { withSuggestionsNotice });
-    };
-    cResult[2] = tmp5;
-    cResult[3] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[3];
-  }
-  let obj = require("c");
-  const tmp = _require;
-  [obj4, importDefault] = noop.useState(tmp6);
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const isConnectedResult = GatewayConnectionStore.isConnected();
-    cResult[4] = isConnectedResult;
-    let tmp8 = isConnectedResult;
-  } else {
-    tmp8 = cResult[4];
-  }
-  dependencyMap = tmp8;
-  if (cResult[5] !== (undefined !== withSuggestionsNotice && withSuggestionsNotice)) {
-    const fn2 = function _() {
-      closure_1(computeFavoritesState(undefined, { withSuggestionsNotice }));
-      withSuggestionsNotice = require("module_12").throttle(function recompute() {
-        closure_1_1(computeFavoritesState(undefined, { withSuggestionsNotice }));
-      }, 100);
-      let item = items.forEach((addChangeListener) => addChangeListener.addChangeListener(closure_0));
-      return () => {
-        withSuggestionsNotice.cancel();
-        const item = items.forEach((removeChangeListener) => removeChangeListener.removeChangeListener(withSuggestionsNotice));
-      };
-    };
-    items = [tmp5];
-    cResult[5] = tmp5;
-    cResult[6] = fn2;
-    cResult[7] = items;
-    let tmp12 = items;
-    let tmp11 = fn2;
-  } else {
-    tmp11 = cResult[6];
-    tmp12 = cResult[7];
-  }
-  const effect = noop.useEffect(tmp11, tmp12);
-  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
-      constructor() {
-        if (closure_2) {
-          tmp = getMissingFavoriteThreadIds;
-          obj = { limit: null, includeLoading: false };
-          tmp2 = MAX_FAVORITE_CHANNELS;
-          obj.limit = MAX_FAVORITE_CHANNELS;
-          num = 0;
-          arr = getMissingFavoriteThreadIds(obj);
-          if (0 === arr.length) {
-            tmp6 = globalThis;
-            _Promise = Promise;
-            resolved = Promise.resolve();
-          } else {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[22]);
-            threadsBulk = obj2.loadThreadsBulk(arr);
-          }
-        }
-        return;
-      }
-    }
-    const items1 = [tmp8];
-    cResult[8] = I;
-    cResult[9] = items1;
-    let tmp15 = items1;
-  } else {
-    class I {
-      constructor() {
-        if (closure_2) {
-          tmp = getMissingFavoriteThreadIds;
-          obj = { limit: null, includeLoading: false };
-          tmp2 = MAX_FAVORITE_CHANNELS;
-          obj.limit = MAX_FAVORITE_CHANNELS;
-          num = 0;
-          arr = getMissingFavoriteThreadIds(obj);
-          if (0 === arr.length) {
-            tmp6 = globalThis;
-            _Promise = Promise;
-            resolved = Promise.resolve();
-          } else {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[22]);
-            threadsBulk = obj2.loadThreadsBulk(arr);
-          }
-        }
-        return;
-      }
-    }
-    tmp15 = cResult[9];
-  }
-  const effect1 = noop.useEffect(I, tmp15);
-  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-    class I {
-      constructor() {
-        if (closure_2) {
-          tmp = getMissingFavoriteThreadIds;
-          obj = { limit: null, includeLoading: false };
-          tmp2 = MAX_FAVORITE_CHANNELS;
-          obj.limit = MAX_FAVORITE_CHANNELS;
-          num = 0;
-          arr = getMissingFavoriteThreadIds(obj);
-          if (0 === arr.length) {
-            tmp6 = globalThis;
-            _Promise = Promise;
-            resolved = Promise.resolve();
-          } else {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[22]);
-            threadsBulk = obj2.loadThreadsBulk(arr);
-          }
-        }
-        return;
-      }
-    }
-    const tmp18 = getMissingFavoriteThreadIds({ limit: 1, includeLoading: true });
-    cResult[10] = tmp18;
-  } else {
-    class I {
-      constructor() {
-        if (closure_2) {
-          tmp = getMissingFavoriteThreadIds;
-          obj = { limit: null, includeLoading: false };
-          tmp2 = MAX_FAVORITE_CHANNELS;
-          obj.limit = MAX_FAVORITE_CHANNELS;
-          num = 0;
-          arr = getMissingFavoriteThreadIds(obj);
-          if (0 === arr.length) {
-            tmp6 = globalThis;
-            _Promise = Promise;
-            resolved = Promise.resolve();
-          } else {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[22]);
-            threadsBulk = obj2.loadThreadsBulk(arr);
-          }
-        }
-        return;
-      }
-    }
-  }
-  if (cResult[11] !== obj4) {
-    class I {
-      constructor() {
-        if (closure_2) {
-          tmp = getMissingFavoriteThreadIds;
-          obj = { limit: null, includeLoading: false };
-          tmp2 = MAX_FAVORITE_CHANNELS;
-          obj.limit = MAX_FAVORITE_CHANNELS;
-          num = 0;
-          arr = getMissingFavoriteThreadIds(obj);
-          if (0 === arr.length) {
-            tmp6 = globalThis;
-            _Promise = Promise;
-            resolved = Promise.resolve();
-          } else {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[22]);
-            threadsBulk = obj2.loadThreadsBulk(arr);
-          }
-        }
-        return;
-      }
-    }
-    let flag2 = false;
-    if (tmp20 <= tmp(7695).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
-      class I {
-        constructor() {
-          if (closure_2) {
-            tmp = getMissingFavoriteThreadIds;
-            obj = { limit: null, includeLoading: false };
-            tmp2 = MAX_FAVORITE_CHANNELS;
-            obj.limit = MAX_FAVORITE_CHANNELS;
-            num = 0;
-            arr = getMissingFavoriteThreadIds(obj);
-            if (0 === arr.length) {
-              tmp6 = globalThis;
-              _Promise = Promise;
-              resolved = Promise.resolve();
-            } else {
-              tmp3 = closure_1;
-              tmp4 = closure_2;
-              obj2 = closure_1(closure_2[22]);
-              threadsBulk = obj2.loadThreadsBulk(arr);
-            }
-          }
-          return;
-        }
-      }
-      obj4.forEachShownChannel(() => {
-        c0 = true;
-      });
-      flag2 = !_require;
-    }
-    cResult[11] = obj4;
-    cResult[12] = flag2;
-  } else {
-    class I {
-      constructor() {
-        if (closure_2) {
-          tmp = getMissingFavoriteThreadIds;
-          obj = { limit: null, includeLoading: false };
-          tmp2 = MAX_FAVORITE_CHANNELS;
-          obj.limit = MAX_FAVORITE_CHANNELS;
-          num = 0;
-          arr = getMissingFavoriteThreadIds(obj);
-          if (0 === arr.length) {
-            tmp6 = globalThis;
-            _Promise = Promise;
-            resolved = Promise.resolve();
-          } else {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[22]);
-            threadsBulk = obj2.loadThreadsBulk(arr);
-          }
-        }
-        return;
-      }
-    }
-  }
-  if (tmp19) {
-    class I {
-      constructor() {
-        if (closure_2) {
-          tmp = getMissingFavoriteThreadIds;
-          obj = { limit: null, includeLoading: false };
-          tmp2 = MAX_FAVORITE_CHANNELS;
-          obj.limit = MAX_FAVORITE_CHANNELS;
-          num = 0;
-          arr = getMissingFavoriteThreadIds(obj);
-          if (0 === arr.length) {
-            tmp6 = globalThis;
-            _Promise = Promise;
-            resolved = Promise.resolve();
-          } else {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[22]);
-            threadsBulk = obj2.loadThreadsBulk(arr);
-          }
-        }
-        return;
-      }
-    }
-  }
-  if (cResult[13] === obj4) {
-    class I {
-      constructor() {
-        if (closure_2) {
-          tmp = getMissingFavoriteThreadIds;
-          obj = { limit: null, includeLoading: false };
-          tmp2 = MAX_FAVORITE_CHANNELS;
-          obj.limit = MAX_FAVORITE_CHANNELS;
-          num = 0;
-          arr = getMissingFavoriteThreadIds(obj);
-          if (0 === arr.length) {
-            tmp6 = globalThis;
-            _Promise = Promise;
-            resolved = Promise.resolve();
-          } else {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj2 = closure_1(closure_2[22]);
-            threadsBulk = obj2.loadThreadsBulk(arr);
-          }
-        }
-        return;
-      }
-    }
-  }
-  cResult[13] = obj4;
-  cResult[14] = tmp19;
-  cResult[15] = tmp19;
-  cResult[16] = { guildChannels: obj4, shouldShowEmptyState: tmp19, hasNoChannels: tmp19 };
-  const obj5 = { guildChannels: obj4, shouldShowEmptyState: tmp19, hasNoChannels: tmp19 };
-  const tmp7 = _slicedToArray(noop.useState(tmp6), 2);
-}) : (function useFavoritesGuildChannelList() {
+export function useFavoritesGuildChannelList(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -919,7 +616,7 @@ export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerE
   items = [flag];
   const effect = noop.useEffect(() => {
     _undefined(computeFavoritesState(undefined, { withSuggestionsNotice }));
-    withSuggestionsNotice = _undefined(_undefined2[25]).throttle(function recompute() {
+    withSuggestionsNotice = _undefined(_undefined2[23]).throttle(function recompute() {
       _undefined(computeFavoritesState(undefined, { withSuggestionsNotice }));
     }, 100);
     let item = items.forEach((addChangeListener) => addChangeListener.addChangeListener(closure_0));
@@ -958,5 +655,5 @@ export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerE
   obj3.shouldShowEmptyState = tmp8;
   obj3.hasNoChannels = flag2;
   return obj3;
-});
+}
 export { computeFavoritesState };

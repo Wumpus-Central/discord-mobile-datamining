@@ -1,54 +1,23 @@
-// === Module 12080: CommandRowButton ===
+// === Module 12256: CommandRowButton ===
 
-// Module 12080 (CommandRowButton)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
+// Module 12256 (CommandRowButton)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import SendMessageIcon from "SendMessageIcon" /* 5724 */;
+import TableRowArrow from "TableRowArrow" /* 6978 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const util = TableRowArrow(1125);
-const components_Button_Button = TableRowArrow(5281);
-const SendMessageIcon = TableRowArrow(5718);
-const TableRowArrow2 = TableRowArrow(6972);
 require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRowIcon(arg0) {
-  let TableRowArrow = require;
-  const cResult = c.c(4);
-  ({ hasOptions, sending, onPressSend } = arg0);
-  if (cResult[0] === hasOptions) {
-    if (cResult[1] === onPressSend) {
-      if (cResult[2] === sending) {
-        return cResult[3];
-      }
-    }
-  }
-  if (hasOptions) {
-    TableRowArrow = TableRowArrow2.TableRowArrow;
-    const obj = {};
-    let tmp2Result = <TableRowArrow />;
-  } else {
-    const obj3 = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
-    const intl = util.intl;
-    obj3.text = intl.string(util.t.TXNS7S);
-    obj3.onPress = onPressSend;
-    const obj4 = { size: "sm", color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
-    obj3.icon = jsx(SendMessageIcon.SendMessageIcon, { size: "sm", color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT });
-    obj3.disabled = sending;
-    tmp2Result = jsx(components_Button_Button.Button, { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null });
-  }
-  cResult[0] = hasOptions;
-  cResult[1] = onPressSend;
-  cResult[2] = sending;
-  cResult[3] = tmp2Result;
-}) : (function CommandRowIcon(hasOptions) {
+export default function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
-    let tmp3Result = jsx(TableRowArrow2.TableRowArrow, {});
+    let tmp3Result = jsx(TableRowArrow.TableRowArrow, {});
   } else {
     const obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
     const intl = util.intl;
@@ -60,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandR
     tmp3Result = jsx(components_Button_Button.Button, { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null });
   }
   return tmp3Result;
-});
+};
 export function useCommandRowSend(command) {
   command = command.command;
   const beforeExecuteCommand = command.beforeExecuteCommand;
@@ -89,7 +58,7 @@ export function useCommandRowSend(command) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -139,7 +108,7 @@ export function useCommandRowSend(command) {
           c3 = 0;
           closure_128_5(false);
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {

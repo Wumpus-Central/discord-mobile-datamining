@@ -1,22 +1,22 @@
-// === Module 15504: RequestReviewStore ===
+// === Module 15544: RequestReviewStore ===
 
-// Module 15504 (RequestReviewStore)
+// Module 15544 (RequestReviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConstantsIOS from "ConstantsIOS" /* 1104 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
-import RootNavigationRef from "RootNavigationRef" /* 5188 */;
-import TimeUtils from "TimeUtils" /* 5760 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7087 */;
-import RequestReviewNoTTIExperiment2 from "RequestReviewNoTTIExperiment" /* 15505 */;
-import requestReviewModalDefault from "requestReviewModal" /* 15506 */;
-import InstallTime from "InstallTime" /* 15508 */;
-import ExperimentStore from "ExperimentStore" /* 5227 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1623 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
+import RootNavigationRef from "RootNavigationRef" /* 5194 */;
+import TimeUtils from "TimeUtils" /* 5767 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7095 */;
+import RequestReviewNoTTIExperiment2 from "RequestReviewNoTTIExperiment" /* 15545 */;
+import requestReviewModalDefault from "requestReviewModal" /* 15546 */;
+import InstallTime from "InstallTime" /* 15548 */;
+import ExperimentStore from "ExperimentStore" /* 5233 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1247 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
 
 require = fn;
 function delayShowReviewRequestModal() {
@@ -79,7 +79,7 @@ function handleConnectionClosedOrInterrupted() {
     c11 = -1;
   }
 }
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const RequestReviewStore = "RequestReviewStore";
 let obj = { revision: 0 };
 let closure_10 = false;

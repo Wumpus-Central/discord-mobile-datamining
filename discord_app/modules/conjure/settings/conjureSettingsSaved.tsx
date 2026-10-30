@@ -1,13 +1,13 @@
-// === Module 12283: conjureSettingsSaved ===
+// === Module 12446: conjureSettingsSaved ===
 
-// Module 12283 (conjureSettingsSaved)
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import conjureSettingsConnection from "conjureSettingsConnection" /* 10922 */;
-import ConjureChatStore from "ConjureChatStore" /* 10808 */;
+// Module 12446 (conjureSettingsSaved)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import conjureSettingsConnection from "conjureSettingsConnection" /* 10945 */;
+import ConjureChatStore from "ConjureChatStore" /* 10831 */;
 
 require = fn;
-const sendUserMessage = fn(10807).sendUserMessage;
+const sendUserMessage = fn(10830).sendUserMessage;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsSaved.tsx");
 
@@ -20,5 +20,5 @@ export function settleProjectSettingsSave(arg0, notifyAgent) {
     }
   }
   const intl = util.intl;
-  sendUserMessage(arg0, intl.string(_modDef3864["08bsJL"]));
+  sendUserMessage(arg0, intl.string(_modDef3865["08bsJL"]));
 }

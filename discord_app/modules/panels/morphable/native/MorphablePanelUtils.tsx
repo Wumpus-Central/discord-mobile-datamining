@@ -1,7 +1,7 @@
-// === Module 18984: MorphablePanelUtils ===
+// === Module 19078: MorphablePanelUtils ===
 
-// Module 18984 (MorphablePanelUtils)
-import MorphablePanelConstants from "MorphablePanelConstants" /* 10975 */;
+// Module 19078 (MorphablePanelUtils)
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11205 */;
 import size from "module_2" /* 2 */;
 
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
@@ -12,10 +12,10 @@ function clamp(arg0, arg1, arg2) {
 clamp.__closure = {};
 clamp.__workletHash = 1391695493868;
 clamp.__initData = { code: "function clamp_MorphablePanelUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);}" };
-function calculateXYDiff(state, sharedValue) {
+function calculateXYDiff(state, get) {
   ({ absoluteY, absoluteX } = state.changedTouches[0]);
-  const diff = sharedValue.get().absoluteYStart - absoluteY;
-  const diff1 = sharedValue.get().absoluteXStart - absoluteX;
+  const diff = get.get().absoluteYStart - absoluteY;
+  const diff1 = get.get().absoluteXStart - absoluteX;
   const absolute = Math.abs(diff);
   const obj = { absoluteX, absoluteY, xDiff: diff1, yDiff: diff, isNotPullDownGesture: null, absoluteMovement: null };
   const bound = Math.max(absolute, Math.abs(diff1));

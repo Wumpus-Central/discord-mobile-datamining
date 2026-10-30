@@ -1,56 +1,15 @@
-// === Module 9286: useResolveGame ===
+// === Module 9299: useResolveGame ===
 
-// Module 9286 (useResolveGame)
-import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7317 */;
-import useGame from "useGame" /* 7466 */;
+// Module 9299 (useResolveGame)
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7324 */;
+import useGame from "useGame" /* 7474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useResolveGame(arg0) {
-  const cResult = c.c(6);
-  ({ applicationId, gameId } = arg0);
-  let tmp4;
-  if (null == gameId) {
-    tmp4 = applicationId;
-  }
-  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp4);
-  let tmp5 = gameId;
-  if (null == gameId) {
-    tmp5 = null;
-    if (null != getOrFetchApplication) {
-      if (cResult[0] !== getOrFetchApplication) {
-        const canonicalGameId = getOrFetchApplication.getCanonicalGameId();
-        cResult[0] = getOrFetchApplication;
-        cResult[1] = canonicalGameId;
-      }
-    }
-  }
-  const game = useGame.useGame(tmp5);
-  ({ data, isLoading } = game);
-  if (data == null) {
-    data = null;
-  }
-  if (cResult[2] === tmp5) {
-    if (cResult[3] === data) {
-      if (cResult[4] === tmp10) {
-        let tmp11 = cResult[5];
-      }
-      return tmp11;
-    }
-  }
-  const obj3 = { gameId: tmp5, gameRecord: data, isLoading: null == gameId && null != applicationId && null == getOrFetchApplication || isLoading };
-  cResult[2] = tmp5;
-  cResult[3] = data;
-  cResult[4] = null == gameId && null != applicationId && null == getOrFetchApplication || isLoading;
-  cResult[5] = obj3;
-  tmp11 = obj3;
-  const tmpResult = useGame;
-}) : (function useResolveGame(arg0) {
+export default function useResolveGame(arg0) {
   ({ applicationId, gameId } = arg0);
   let getOrFetchApplication;
   let tmp3;
@@ -79,4 +38,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useResol
   obj2.gameRecord = data;
   obj2.isLoading = null == gameId && null != applicationId && null == getOrFetchApplication || game.isLoading;
   return obj2;
-});
+};

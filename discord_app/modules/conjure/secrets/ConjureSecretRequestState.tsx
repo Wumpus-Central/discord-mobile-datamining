@@ -1,10 +1,9 @@
-// === Module 12401: ConjureSecretRequestState ===
+// === Module 12553: ConjureSecretRequestState ===
 
-// Module 12401 (ConjureSecretRequestState)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import conjureChatTurns from "conjureChatTurns" /* 10809 */;
+// Module 12553 (ConjureSecretRequestState)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import conjureChatTurns from "conjureChatTurns" /* 10832 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,10 +11,10 @@ require = fn;
 function isSecretsSavedMessage(content) {
   const trimmed = content.content.trim();
   const intl = util.intl;
-  let tmp5 = trimmed === intl.string(_modDef3864.UGqnoV);
+  let tmp5 = trimmed === intl.string(_modDef3865.UGqnoV);
   if (!tmp5) {
     const intl2 = util.intl;
-    tmp5 = trimmed === intl2.string(_modDef3864.sMQt5O);
+    tmp5 = trimmed === intl2.string(_modDef3865.sMQt5O);
   }
   return tmp5;
 }
@@ -40,7 +39,6 @@ function isSavedMcpCard(secretRequest) {
   return tmp2;
 }
 let set = new Set();
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
 
@@ -142,45 +140,8 @@ export function secretRequestStatuses(memo, secrets) {
   }
   return map;
 }
-export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecretRequestStatusChanged(cardId, arg1) {
-  closure_1 = arg1;
-  const cResult = c.c(3);
-  if (cResult[0] === cardId) {
-    if (cResult[1] === arg1) {
-      let tmp2 = cResult[2];
-    }
-    [tmp6, tmp7] = noop.useState(tmp2);
-    if (tmp6.cardId === cardId) {
-      if (null == tmp6.status) {
-        return flag;
-      }
-      flag = null != tmp6.status && arg1 !== tmp6.status;
-    }
-    const obj2 = { cardId, status: null };
-    let tmp9 = null;
-    if ("pending" !== arg1) {
-      tmp9 = arg1;
-    }
-    obj2.status = tmp9;
-    tmp7(obj2);
-    flag = false;
-    const tmp5 = _slicedToArray(noop.useState(tmp2), 2);
-  }
-  const fn = function l() {
-    const obj = { cardId, status: null };
-    let tmp = null;
-    if ("pending" !== closure_1) {
-      tmp = closure_1;
-    }
-    obj.status = tmp;
-    return obj;
-  };
-  cResult[0] = cardId;
-  cResult[1] = arg1;
-  cResult[2] = fn;
-  tmp2 = fn;
-}) : (function useSecretRequestStatusChanged(cardId, arg1) {
-  closure_1 = arg1;
+export function useSecretRequestStatusChanged(cardId, status) {
+  closure_1 = status;
   [tmp2, tmp3] = noop.useState(() => {
     const obj = { cardId, status: null };
     let tmp = null;
@@ -194,14 +155,14 @@ export const useSecretRequestStatusChanged = ReactCompilerGating.isReactCompiler
     if (null == tmp2.status) {
       return flag;
     }
-    flag = null != tmp2.status && arg1 !== tmp2.status;
+    flag = null != tmp2.status && status !== tmp2.status;
   }
   let obj = { cardId, status: null };
   let tmp5 = null;
-  if ("pending" !== arg1) {
-    tmp5 = arg1;
+  if ("pending" !== status) {
+    tmp5 = status;
   }
   obj.status = tmp5;
   tmp3(obj);
   flag = false;
-});
+}

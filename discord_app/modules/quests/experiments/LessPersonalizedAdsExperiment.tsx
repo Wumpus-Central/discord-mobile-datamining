@@ -1,7 +1,7 @@
-// === Module 9645: LessPersonalizedAdsExperiment ===
+// === Module 9670: LessPersonalizedAdsExperiment ===
 
-// Module 9645 (LessPersonalizedAdsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 9670 (LessPersonalizedAdsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-01-less-personalized-ads", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

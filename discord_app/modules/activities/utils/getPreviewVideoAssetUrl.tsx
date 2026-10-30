@@ -1,7 +1,7 @@
-// === Module 12022: getPreviewVideoAssetUrl ===
+// === Module 12208: getPreviewVideoAssetUrl ===
 
-// Module 12022 (getPreviewVideoAssetUrl)
-import Constants from "Constants" /* 1084 */;
+// Module 12208 (getPreviewVideoAssetUrl)
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

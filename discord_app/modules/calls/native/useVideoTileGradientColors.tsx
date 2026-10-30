@@ -1,9 +1,8 @@
-// === Module 8784: useVideoTileGradientColors ===
+// === Module 8818: useVideoTileGradientColors ===
 
-// Module 8784 (useVideoTileGradientColors)
-import c from "c" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8760 */;
+// Module 8818 (useVideoTileGradientColors)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8794 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,28 +48,14 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
   }
   return null;
 }
-const ThemeTypes = fn(1084).ThemeTypes;
-const ReactCompilerGating = fn(558);
+const ThemeTypes = fn(1072).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
 
 export { computeVideoTileGradientStops };
-export const useVideoTileGradientColors = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoTileGradientColors(modalV2BackgroundColor, modalV2BackgroundColor) {
-  const cResult = c.c(3);
-  if (cResult[0] === modalV2BackgroundColor) {
-    if (cResult[1] === modalV2BackgroundColor) {
-      let tmp2 = cResult[2];
-    }
-    return tmp2;
-  }
-  const tmp3 = computeVideoTileGradientStops(modalV2BackgroundColor, modalV2BackgroundColor);
-  cResult[0] = modalV2BackgroundColor;
-  cResult[1] = modalV2BackgroundColor;
-  cResult[2] = tmp3;
-  tmp2 = tmp3;
-}) : (function useVideoTileGradientColors(arg0, arg1) {
+export function useVideoTileGradientColors(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
   return noop.useMemo(() => computeVideoTileGradientStops(closure_0, closure_1), items);
-});
+}

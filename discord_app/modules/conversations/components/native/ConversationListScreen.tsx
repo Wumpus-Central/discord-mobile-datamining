@@ -1,16 +1,15 @@
-// === Module 9832: ConversationListScreen ===
+// === Module 9858: ConversationListScreen ===
 
-// Module 9832 (ConversationListScreen)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9805 */;
-import ConversationListItemDefault from "ConversationListItem" /* 9833 */;
+// Module 9858 (ConversationListScreen)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9831 */;
+import ConversationListItemDefault from "ConversationListItem" /* 9859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7755 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7760 */;
 
 const require = globalThis.__r;
 
@@ -24,11 +23,11 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(5644);
+const ConversationConstants = fn(5650);
 ({ MAX_CONVERSATIONS_PER_CHANNEL: closure_9, MOBILE_FETCH_LIMIT: c10, MOBILE_PREVIEW_MESSAGE_COUNT: closure_11 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
-let createStyles = fn(5005);
+let createStyles = fn(5009);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, content: null, footerSpacer: null, spinner: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -39,41 +38,17 @@ let closure_14 = createStyles.createStyles((arg0) => {
   obj.spinner = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 + arg0, alignItems: "center" };
   return obj;
 });
-createStyles = fn(5005);
+createStyles = fn(5009);
 let obj = { empty: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_15 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-const ListEmptyComponent = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyComponent() {
-  const cResult = c.c(3);
-  const tmp4 = closure_15();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
-    const intl = util.intl;
-    obj2.children = intl.string(util.t.LJuFRG);
-    const tmp7 = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
-    cResult[0] = tmp7;
-    let first = tmp7;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== tmp4.empty) {
-    const obj3 = { style: tmp4.empty, children: first };
-    const tmp11 = <React5 style={tmp4.empty}>{first}</React5>;
-    cResult[1] = tmp4.empty;
-    cResult[2] = tmp11;
-    let tmp8 = tmp11;
-  } else {
-    tmp8 = cResult[2];
-  }
-  return tmp8;
-}) : (function EmptyComponent() {
+const ListEmptyComponent = noop.memo(function EmptyComponent() {
   const obj = { style: closure_15().empty, children: null };
   const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.LJuFRG);
   obj.children = jsx(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
   return <React5 style={closure_15().empty}>{null}</React5>;
-}));
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationListScreen.tsx");
 
@@ -83,7 +58,7 @@ export default function ConversationListScreen() {
   _require = channelId;
   let guildId = params.guildId;
   let _handleEndReached = guildId;
-  const bottom = _handleEndReached(1631)().bottom;
+  const bottom = _handleEndReached(1626)().bottom;
   const tmp3 = closure_14(bottom);
   dependencyMap = tmp3;
   let obj = require("BaseNavigationContainer");
@@ -105,7 +80,7 @@ export default function ConversationListScreen() {
   const items2 = [stateFromStoresArray, channelId];
   const memo = noop.useMemo(() => {
     const substr = stateFromStoresArray.slice();
-    const sorted = substr.sort((arg0, arg1) => _handleEndReached(closure_1_2[18]).compare(arg1, arg0));
+    const sorted = substr.sort((arg0, arg1) => _handleEndReached(closure_1_2[16]).compare(arg1, arg0));
     return sorted.map((conversationId) => ({ channelId, conversationId }));
   }, items2);
   let obj4 = require("initialize");
@@ -137,7 +112,7 @@ export default function ConversationListScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -162,7 +137,7 @@ export default function ConversationListScreen() {
                     obj5.hydrateMessages = obj6;
                     guildId = 2;
                     ref = 1;
-                    const obj7 = { value: tmp3(closure_2[19]).fetchChannelConversations(obj5), done: false };
+                    const obj7 = { value: tmp3(closure_2[17]).fetchChannelConversations(obj5), done: false };
                     return obj7;
                   }
                 }
@@ -263,6 +238,6 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(7280).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
+  obj7.children = jsx(tmp(7288).FlashList, { data: memo, renderItem, keyExtractor, contentContainerStyle: tmp3.content, scrollIndicatorInsets: { bottom }, onEndReached: null, ListEmptyComponent: null, ListFooterComponent: null, onViewableItemsChanged: null, viewabilityConfig: null });
   return <memo style={tmp3.container}>{null}</memo>;
 };

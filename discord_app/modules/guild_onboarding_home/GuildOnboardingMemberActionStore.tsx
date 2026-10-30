@@ -1,8 +1,8 @@
-// === Module 8355: GuildOnboardingMemberActionStore ===
+// === Module 8332: GuildOnboardingMemberActionStore ===
 
-// Module 8355 (GuildOnboardingMemberActionStore)
+// Module 8332 (GuildOnboardingMemberActionStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let obj = {};
 obj = {};

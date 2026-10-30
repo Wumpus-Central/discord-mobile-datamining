@@ -1,7 +1,7 @@
-// === Module 12455: conjureQueuedMessage ===
+// === Module 12542: conjureQueuedMessage ===
 
-// Module 12455 (conjureQueuedMessage)
-import conjureChatConnection from "conjureChatConnection" /* 10829 */;
+// Module 12542 (conjureQueuedMessage)
+import conjureChatConnection from "conjureChatConnection" /* 10852 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureQueuedMessage.tsx");
@@ -17,4 +17,13 @@ export function queuedMessageActionHandler(projectId, message, stateFromStores) 
       }
     }
   }
+}
+export function queuedUserMessages(stateFromStores) {
+  return stateFromStores.filter((role) => {
+    let tmp = "user" === role.role;
+    if (tmp) {
+      tmp = "queued" === role.disposition;
+    }
+    return tmp;
+  });
 }

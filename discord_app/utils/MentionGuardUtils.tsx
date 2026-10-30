@@ -1,11 +1,11 @@
-// === Module 10175: MentionGuardUtils ===
+// === Module 10200: MentionGuardUtils ===
 
-// Module 10175 (MentionGuardUtils)
+// Module 10200 (MentionGuardUtils)
 import _modDef38 from "module_38" /* 38 */;
-import MessageParserDefault from "MessageParser" /* 7812 */;
+import MessageParserDefault from "MessageParser" /* 7817 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7432 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7440 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 function parsedItemUsesEveryoneRole(content) {
   if (typeof content.content === "string") {
@@ -38,7 +38,7 @@ function parsedItemUsesEveryoneRole(content) {
   }
   return null;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Permissions: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const regExp = new RegExp(/@(:?everyone|here)/);
 const size = fn(2);

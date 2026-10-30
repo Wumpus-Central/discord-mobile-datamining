@@ -1,19 +1,17 @@
-// === Module 14223: InAppNotificationUtils ===
+// === Module 11003: InAppNotificationUtils ===
 
-// Module 14223 (InAppNotificationUtils)
+// Module 11003 (InAppNotificationUtils)
 import _mod12 from "module_12" /* 12 */;
-import c from "c" /* 576 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import v1 from "v1" /* 1278 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5639 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import v1 from "v1" /* 1267 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5645 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5755 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(14224).REACTION_MILESTONE_COUNTS;
-const Constants = fn(1084);
+const REACTION_MILESTONE_COUNTS = fn(11004).REACTION_MILESTONE_COUNTS;
+const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, ChannelTypes: metroRequire, InAppNotificationTypes: closure_7, MessageEmbedTypes: closure_8, MessageFlags: closure_9 } = Constants);
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
 
@@ -79,80 +77,28 @@ export function getNotificationDuration(ALERT) {
   }
   return 5 * DurationsDefault.Millis.SECOND;
 }
-export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPreviewableMedia(hasFlag) {
-  const cResult = c.c(2);
-  if (cResult[0] !== hasFlag) {
-    let hasFlagResult = hasFlag.hasFlag(constants4.IS_VOICE_MESSAGE);
-    if (!hasFlagResult) {
-      hasFlagResult = hasFlag.attachments.length > 0;
-    }
-    if (!hasFlagResult) {
-      let everyResult = hasFlag.embeds.length > 0;
-      if (everyResult) {
-        let embeds = hasFlag.embeds;
-        everyResult = embeds.every((type) => type.type === constants.GIFV);
-      }
-      hasFlagResult = everyResult;
-    }
-    if (!hasFlagResult) {
-      hasFlagResult = hasFlag.stickerItems.length > 0;
-    }
-    if (!hasFlagResult) {
-      let someResult = isForwardMessageDefault(hasFlag);
-      if (someResult) {
-        const messageSnapshots = hasFlag.messageSnapshots;
-        someResult = messageSnapshots.some((message) => {
-          message = message.message;
-          let hasFlagResult = message.hasFlag(constants.IS_VOICE_MESSAGE);
-          if (!hasFlagResult) {
-            hasFlagResult = message.attachments.length > 0;
-          }
-          if (!hasFlagResult) {
-            let everyResult = message.embeds.length > 0;
-            if (everyResult) {
-              const embeds = message.embeds;
-              everyResult = embeds.every((type) => type.type === constants.GIFV);
-            }
-            hasFlagResult = everyResult;
-          }
-          if (!hasFlagResult) {
-            hasFlagResult = message.stickerItems.length > 0;
-          }
-          return hasFlagResult;
-        });
-      }
-      hasFlagResult = someResult;
-    }
-    cResult[0] = hasFlag;
-    cResult[1] = hasFlagResult;
-    let tmp3 = hasFlagResult;
-  } else {
-    tmp3 = cResult[1];
-  }
-  return tmp3;
-}) : (function useHasPreviewableMedia(arg0) {
-  closure_0 = arg0;
-  const items = [arg0];
+export function useHasPreviewableMedia(message) {
+  const items = [message];
   return noop.useMemo(() => {
-    let hasFlagResult = closure_0.hasFlag(constants4.IS_VOICE_MESSAGE);
+    let hasFlagResult = message.hasFlag(constants4.IS_VOICE_MESSAGE);
     if (!hasFlagResult) {
-      hasFlagResult = closure_0.attachments.length > 0;
+      hasFlagResult = message.attachments.length > 0;
     }
     if (!hasFlagResult) {
-      let everyResult = closure_0.embeds.length > 0;
+      let everyResult = message.embeds.length > 0;
       if (everyResult) {
-        let embeds = closure_0.embeds;
+        let embeds = message.embeds;
         everyResult = embeds.every((type) => type.type === constants.GIFV);
       }
       hasFlagResult = everyResult;
     }
     if (!hasFlagResult) {
-      hasFlagResult = closure_0.stickerItems.length > 0;
+      hasFlagResult = message.stickerItems.length > 0;
     }
     if (!hasFlagResult) {
-      let someResult = isForwardMessageDefault(closure_0);
+      let someResult = isForwardMessageDefault(message);
       if (someResult) {
-        const messageSnapshots = closure_0.messageSnapshots;
+        const messageSnapshots = message.messageSnapshots;
         someResult = messageSnapshots.some((message) => {
           message = message.message;
           let hasFlagResult = message.hasFlag(constants.IS_VOICE_MESSAGE);
@@ -177,13 +123,13 @@ export const useHasPreviewableMedia = ReactCompilerGating.isReactCompilerEnabled
     }
     return hasFlagResult;
   }, items);
-});
+}
 export function extractMetadataFromNotification(notification) {
   const type = notification.type;
   if (constants3.MESSAGE !== type) {
     if (constants3.REACTION !== type) {
       if (constants3.ALERT === type) {
-        guild = notification.guild;
+        const guild = notification.guild;
         let id;
         if (guild != null) {
           id = guild.id;

@@ -1,14 +1,14 @@
-// === Module 10042: cheapWorkletShallowEqual ===
+// === Module 10069: cheapWorkletShallowEqual ===
 
-// Module 10042 (cheapWorkletShallowEqual)
+// Module 10069 (cheapWorkletShallowEqual)
 import size from "module_2" /* 2 */;
 
-function cheapWorkletShallowEqual(safeAreaState, safeAreaState2) {
-  if (safeAreaState === safeAreaState2) {
+function cheapWorkletShallowEqual(safeAreaState, current) {
+  if (safeAreaState === current) {
     return true;
   } else {
     if (null != safeAreaState) {
-      if (null != safeAreaState2) {
+      if (null != current) {
         for (const key10005 in arg0) {
           if (arg0[key10005] === arg1[key10005]) {
             continue;

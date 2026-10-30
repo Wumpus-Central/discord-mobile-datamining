@@ -1,9 +1,9 @@
-// === Module 16958: QuestDockDismissalToast ===
+// === Module 17012: QuestDockDismissalToast ===
 
-// Module 16958 (QuestDockDismissalToast)
-import util from "util" /* 1125 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5724 */;
+// Module 17012 (QuestDockDismissalToast)
+import util from "util" /* 1114 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5730 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/QuestDockDismissalToast.tsx");

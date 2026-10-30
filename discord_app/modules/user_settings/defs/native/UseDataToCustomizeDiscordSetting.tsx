@@ -1,69 +1,28 @@
-// === Module 16653: UseDataToCustomizeDiscordSetting ===
+// === Module 16706: UseDataToCustomizeDiscordSetting ===
 
-// Module 16653 (UseDataToCustomizeDiscordSetting)
+// Module 16706 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
-import common_AlertDefault from "common/Alert" /* 6018 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16613 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 16651 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16652 */;
-import ConsentStore from "ConsentStore" /* 6729 */;
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
+import common_AlertDefault from "common/Alert" /* 6025 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16666 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 16704 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16705 */;
+import ConsentStore from "ConsentStore" /* 6736 */;
 
 require = fn;
-const Consents = fn(1084).Consents;
-let ReactCompilerGating = fn(558);
-ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
-function useIsDisabled() {
-  return useParentalControlSettings.useIsParentallyControlled();
-}
-const SettingBuilders = fn(11302);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ConsentStore];
-    const fn = function o() {
-      return ConsentStore.hasConsented(constants.PERSONALIZATION);
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useDataToCustomizeDiscordSettingValue() {
-  const items = [ConsentStore];
-  return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
-});
+const Consents = fn(1072).Consents;
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8387).MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [ConsentStore];
-      const fn = function o() {
-        return ConsentStore.hasConsented(constants.PERSONALIZATION);
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (function useDataToCustomizeDiscordSettingValue() {
+  parent: fn(8424).MobileUserSettings.DATA_AND_PRIVACY,
+  useValue: function useDataToCustomizeDiscordSettingValue() {
     const items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
-  }),
+  },
   onValueChange: function handlePersonalizationChange(arg0) {
     if (arg0) {
       let items = [Consents.PERSONALIZATION];
@@ -87,9 +46,11 @@ const toggle = SettingBuilders.createToggle({
       AlertActionCreatorsDefault.show(obj2);
     }
   },
-  useIsDisabled
+  useIsDisabled() {
+    return useParentalControlSettings.useIsParentallyControlled();
+  }
 });
 const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
 
 export default toggle;

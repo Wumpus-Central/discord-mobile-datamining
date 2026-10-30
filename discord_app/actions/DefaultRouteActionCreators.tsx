@@ -1,13 +1,13 @@
-// === Module 11833: DefaultRouteActionCreators ===
+// === Module 12026: DefaultRouteActionCreators ===
 
-// Module 11833 (DefaultRouteActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import matchPathCompat from "matchPathCompat" /* 5041 */;
-import RouteUtils from "RouteUtils" /* 5054 */;
-import LurkingStore from "LurkingStore" /* 4938 */;
+// Module 12026 (DefaultRouteActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import matchPathCompat from "matchPathCompat" /* 5045 */;
+import RouteUtils from "RouteUtils" /* 5058 */;
+import LurkingStore from "LurkingStore" /* 4942 */;
 
 require = fn;
-const Routes = fn(1084).Routes;
+const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 18375: NotificationCenterStoreActions ===
+// === Module 18434: NotificationCenterStoreActions ===
 
-// Module 18375 (NotificationCenterStoreActions)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 18434 (NotificationCenterStoreActions)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterStoreActions.tsx");

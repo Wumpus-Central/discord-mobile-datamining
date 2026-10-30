@@ -1,81 +1,219 @@
-// === Module 16571: PasskeyInitStep ===
+// === Module 16623: PasskeyInitStep ===
 
-// Module 16571 (PasskeyInitStep)
-import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6735 */;
+// Module 16623 (PasskeyInitStep)
+import nativeDefault from "native" /* 575 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6742 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 16475 */;
+import WebAuthnStore from "WebAuthnStore" /* 16526 */;
 
 require = fn;
 function CredentialList(navigation) {
   navigation = navigation.navigation;
   dependencyMap = undefined;
-  _slicedToArray = undefined;
+  c3 = undefined;
   let items = [WebAuthnStore];
   const credentials = navigation(504).useStateFromStoresObject(items, () => ({ credentials: credentials.getCredentials() })).credentials;
-  const tmp3 = closure_10();
+  const tmp3 = closure_11();
   closure_1 = tmp3;
   let obj = navigation(504);
   [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
     let obj2 = { style: tmp3.upsellContainer, children: null };
-    const items1 = [closure_8(tmp(16572).PasskeysSpotIllustration, { scale: 0.6 }), ];
+    const items1 = [closure_9(tmp(16624).PasskeysSpotIllustration, { scale: 0.6 }), ];
     let obj3 = { variant: "text-md/normal", style: tmp3.upsellText, children: null };
-    let intl2 = tmp(1125).intl;
-    obj3.children = intl2.string(tmp(1125).t.FSNwFW);
-    items1[1] = closure_8(tmp(5271).Text, obj3);
+    let intl2 = tmp(1114).intl;
+    obj3.children = intl2.string(tmp(1114).t.FSNwFW);
+    items1[1] = closure_9(tmp(5619).Text, obj3);
     obj2.children = items1;
-    return closure_9(View, obj2);
+    return closure_10(View, obj2);
   } else {
-    const obj4 = { title: null, hasIcons: false, children: null };
-    let intl = tmp(1125).intl;
-    obj4.title = intl.string(tmp(1125).t["4RIqrQ"]);
+    let obj4 = { title: null, hasIcons: false, children: null };
+    let intl = tmp(1114).intl;
+    obj4.title = intl.string(tmp(1114).t["4RIqrQ"]);
     obj4.children = credentials.map((label) => {
-      const obj = { label: label.name, trailing: null, subLabel: null };
+      let obj = { label: label.name, trailing: null, subLabel: null };
       const credential = label;
-      const obj2 = { style: closure_1.iconButtonGroup, children: null };
-      const obj3 = { variant: "secondary", icon: closure_1_8(navigation(_undefined[14]).TrashIcon, { color: closure_1(_undefined[7]).colors.TEXT_FEEDBACK_CRITICAL }), accessibilityLabel: null, size: "sm", disabled: null, loading: null, onPress: null };
-      const intl = navigation(_undefined[11]).intl;
-      obj3.accessibilityLabel = intl.string(navigation(_undefined[11]).t.N86XcP);
+      let obj2 = { style: closure_1.iconButtonGroup, children: null };
+      let obj3 = { variant: "secondary", icon: closure_1_9(navigation(_undefined[15]).TrashIcon, { color: closure_1(_undefined[8]).colors.TEXT_FEEDBACK_CRITICAL }), accessibilityLabel: null, size: "sm", disabled: null, loading: null, onPress: null };
+      let intl = navigation(_undefined[12]).intl;
+      obj3.accessibilityLabel = intl.string(navigation(_undefined[12]).t.N86XcP);
       obj3.disabled = _undefined;
       obj3.loading = _undefined;
-      obj3.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16576, dependencyMap.paths), "WEBAUTHN_DELETE_SHEET_KEY", { credential, deleting, setDeleting });
-      };
-      const items = [closure_1_8(navigation(_undefined[13]).IconButton, obj3), ];
-      const obj5 = { variant: "secondary", icon: closure_1_8(navigation(_undefined[18]).PencilIcon, {}), accessibilityLabel: null, size: "sm", disabled: null, loading: null, onPress: null };
-      const intl2 = navigation(_undefined[11]).intl;
-      obj5.accessibilityLabel = intl2.string(navigation(_undefined[11]).t.bt75uw);
+      obj3.onPress = _undefined2(function*() {
+        if (setDeleting === 2) {
+          setDeleting = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            setDeleting = 2;
+            if (0 === deleting) {
+              if (arg0 === 1) {
+                setDeleting = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                setDeleting = 3;
+                let obj4 = { value, done: true };
+                return obj4;
+              } else {
+                closure_1 = tmp5;
+                closure_128_0 = undefined;
+                closure_128_1 = undefined;
+                setDeleting(true);
+                deleting = 1;
+                setDeleting = 1;
+                let obj5 = { value: tmp2(paths[16]).isLastRemainingMfaFactor("webauthn"), done: false };
+                return obj5;
+              }
+            } else if (arg0 === 1) {
+              setDeleting = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              setDeleting = 3;
+              const obj7 = { value, done: true };
+              return obj7;
+            } else {
+              closure_128_1 = value;
+              setDeleting(false);
+              if (closure_128_1) {
+                const obj8 = { title: null, body: null, confirmColor: null, confirmText: null, cancelText: null, onConfirm: null };
+                const intl = tmp2(paths[12]).intl;
+                obj8.title = intl.string(tmp2(paths[12]).t["J/x6ns"]);
+                const intl2 = tmp2(paths[12]).intl;
+                obj8.body = intl2.string(tmp2(paths[12]).t.IMKkcn);
+                obj8.confirmColor = tmp2(paths[18]).ButtonColors.RED;
+                const intl3 = tmp2(paths[12]).intl;
+                obj8.confirmText = intl3.string(tmp2(paths[12]).t.zYOk0f);
+                const intl4 = tmp2(paths[12]).intl;
+                obj8.cancelText = intl4.string(tmp2(paths[12]).t["lqK//z"]);
+                closure_128_0 = _undefined2(function*() {
+                  if (c4 === 2) {
+                    c4 = 3;
+                    throw new TypeError("Generator functions may not be called on executing generators");
+                  } else if (tmp6 === 3) {
+                    if (arg0 === 1) {
+                      throw value;
+                    } else if (arg0 === 2) {
+                      const obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } else {
+                    try {
+                      c4 = 2;
+                      if (0 === c1) {
+                        if (arg0 === 1) {
+                          c4 = 3;
+                          throw value;
+                        } else if (arg0 === 2) {
+                          c4 = 3;
+                          const obj4 = { value, done: true };
+                          return obj4;
+                        } else {
+                          setDeleting(true);
+                          c3 = 1;
+                          c1 = 2;
+                          c4 = 1;
+                          const obj5 = { value: tmp3(tmp24[19]).deleteWebAuthnCredentialWithToast(tmp3), done: false };
+                          return obj5;
+                        }
+                      } else if (1 === tmp7) {
+                        c3 = 0;
+                        setDeleting(false);
+                        throw closure_2;
+                      } else if (arg0 === 1) {
+                        c4 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c3 = 0;
+                        setDeleting(false);
+                        c4 = 3;
+                        const obj = { value, done: true };
+                        return obj;
+                      } else {
+                        c3 = 0;
+                        setDeleting(false);
+                        c4 = 3;
+                        return { value: "HermesInternal", done: null };
+                      }
+                    } catch (tmp24) {
+                      closure_2 = tmp24;
+                      if (tmp4 === c3) {
+                        c4 = tmp2;
+                        throw tmp24;
+                      } else {
+                        c1 = tmp;
+                      }
+                    }
+                  }
+                });
+                obj8.onConfirm = function onConfirm() {
+                  const self = this;
+                  const apply = closure_1_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                closure_2_1(paths[17]).show(obj8);
+                let obj3 = closure_2_1(paths[17]);
+              } else {
+                const obj9 = { credential: closure_129_0, deleting, setDeleting };
+                closure_2_1(paths[20]).openLazy(tmp2(paths[22])(paths[21], paths.paths), "WEBAUTHN_DELETE_SHEET_KEY", obj9);
+                let obj = closure_2_1(paths[20]);
+              }
+              setDeleting = 3;
+            }
+          } catch (tmp45) {
+            setDeleting = tmp;
+            throw tmp45;
+          }
+        }
+      });
+      const items = [closure_1_9(navigation(_undefined[14]).IconButton, obj3), ];
+      let obj5 = { variant: "secondary", icon: closure_1_9(navigation(_undefined[23]).PencilIcon, {}), accessibilityLabel: null, size: "sm", disabled: null, loading: null, onPress: null };
+      let intl2 = navigation(_undefined[12]).intl;
+      obj5.accessibilityLabel = intl2.string(navigation(_undefined[12]).t.bt75uw);
       obj5.disabled = _undefined;
       obj5.loading = _undefined;
       obj5.onPress = function onPress() {
         navigation.push(UserSettingsSections.WEBAUTHN_EDIT, { credential });
       };
-      items[1] = closure_1_8(navigation(_undefined[13]).IconButton, obj5);
+      items[1] = closure_1_9(navigation(_undefined[14]).IconButton, obj5);
       obj2.children = items;
-      obj.trailing = closure_1_9(navigation(_undefined[12]).ButtonGroup, obj2);
+      obj.trailing = closure_1_10(navigation(_undefined[13]).ButtonGroup, obj2);
       let formatResult = null;
       if (null != label.last_used) {
-        const intl3 = navigation(_undefined[11]).intl;
-        const obj6 = { lastUsed: navigation(_undefined[21]).formatDate(label.last_used) };
-        formatResult = intl3.format(navigation(_undefined[11]).t["7JgxF5"], obj6);
-        const tmp2Result = navigation(_undefined[21]);
+        let intl3 = navigation(_undefined[12]).intl;
+        const obj6 = { lastUsed: navigation(_undefined[26]).formatDate(label.last_used) };
+        formatResult = intl3.format(navigation(_undefined[12]).t["7JgxF5"], obj6);
+        const tmp2Result = navigation(_undefined[26]);
       }
       obj.subLabel = formatResult;
-      return closure_1_8(navigation(_undefined[20]).TableRow, obj, label.id);
+      return closure_1_9(navigation(_undefined[25]).TableRow, obj, label.id);
     });
-    return closure_8(tmp(7047).TableRowGroup, obj4);
+    return closure_9(tmp(7054).TableRowGroup, obj4);
   }
   const tmp4 = _slicedToArray(noop.useState(false), 2);
 }
 const View = fn(17).View;
-const UserSettingsSections = fn(1084).UserSettingsSections;
+const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5005);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5009);
 let obj2 = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8 }, upsellContainer: null, upsellText: null, iconButtonGroup: null, headerAddButton: null };
 let obj3 = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8 };
 obj2.upsellContainer = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
@@ -84,162 +222,18 @@ obj2.upsellText = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDe
 let obj5 = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_16, textAlign: "center" };
 obj2.iconButtonGroup = { flexDirection: "row", paddingVertical: nativeDefault.space.PX_8 };
 obj2.headerAddButton = { alignSelf: "center" };
-let closure_10 = createStyles.createStyles(obj2);
-let closure_11 = { top: 12, bottom: 12, left: 12, right: 12 };
-const ReactCompilerGating = fn(558);
-let obj6 = { flexDirection: "row", paddingVertical: nativeDefault.space.PX_8 };
+let closure_11 = createStyles.createStyles(obj2);
+let closure_12 = { top: 12, bottom: 12, left: 12, right: 12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/PasskeyInitStep.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function PasskeyInitStep() {
-  const cResult = navigation(hasFetchedCredentials[23]).c(14);
-  let obj = navigation(hasFetchedCredentials[23]);
-  navigation = navigation(hasFetchedCredentials[24]).useNavigation();
-  const tmp5 = closure_10();
-  closure_1 = tmp5;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [WebAuthnStore];
-    const fn = function c() {
-      return { hasFetchedCredentials: WebAuthnStore.hasFetchedCredentials() };
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp6 = items;
-    tmp7 = fn;
-  } else {
-    [tmp6, tmp7] = cResult;
-  }
-  const obj2 = navigation(hasFetchedCredentials[24]);
-  hasFetchedCredentials = navigation(hasFetchedCredentials[8]).useStateFromStoresObject(tmp6, tmp7).hasFetchedCredentials;
-  if (cResult[2] !== hasFetchedCredentials) {
-    class T {
-      constructor() {
-        if (!hasFetchedCredentials) {
-          tmp = closure_0;
-          tmp2 = closure_2;
-          obj = closure_0(closure_2[25]);
-          webAuthnCredentials = obj.fetchWebAuthnCredentials();
-        }
-        return;
-      }
-    }
-    const items1 = [hasFetchedCredentials];
-    cResult[2] = hasFetchedCredentials;
-    cResult[3] = T;
-    cResult[4] = items1;
-    let tmp10 = items1;
-  } else {
-    class T {
-      constructor() {
-        if (!hasFetchedCredentials) {
-          tmp = closure_0;
-          tmp2 = closure_2;
-          obj = closure_0(closure_2[25]);
-          webAuthnCredentials = obj.fetchWebAuthnCredentials();
-        }
-        return;
-      }
-    }
-    tmp10 = cResult[4];
-  }
-  const effect = noop.useEffect(T, tmp10);
-  if (cResult[5] === navigation) {
-    class T {
-      constructor() {
-        if (!hasFetchedCredentials) {
-          tmp = closure_0;
-          tmp2 = closure_2;
-          obj = closure_0(closure_2[25]);
-          webAuthnCredentials = obj.fetchWebAuthnCredentials();
-        }
-        return;
-      }
-    }
-    const layoutEffect = noop.useLayoutEffect(S, items2);
-    if (cResult[9] !== navigation) {
-      class T {
-        constructor() {
-          if (!hasFetchedCredentials) {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[25]);
-            webAuthnCredentials = obj.fetchWebAuthnCredentials();
-          }
-          return;
-        }
-      }
-      const obj3 = { navigation };
-      const tmp15 = closure_8(CredentialList, obj3);
-      cResult[9] = navigation;
-      cResult[10] = tmp15;
-    } else {
-      class T {
-        constructor() {
-          if (!hasFetchedCredentials) {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[25]);
-            webAuthnCredentials = obj.fetchWebAuthnCredentials();
-          }
-          return;
-        }
-      }
-    }
-    if (cResult[11] === tmp5.container) {
-      class T {
-        constructor() {
-          if (!hasFetchedCredentials) {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[25]);
-            webAuthnCredentials = obj.fetchWebAuthnCredentials();
-          }
-          return;
-        }
-      }
-      return tmp16;
-    }
-    const obj5 = { children: null };
-    const obj6 = { style: tmp5.container, children: tmp13 };
-    obj5.children = closure_8(View, obj6);
-    const tmp19 = closure_8(tmp(tmp2[28]).Form, obj5);
-    cResult[11] = tmp5.container;
-    cResult[12] = tmp13;
-    cResult[13] = tmp19;
-    tmp16 = tmp19;
-  }
-  class S {
-    constructor() {
-      obj = {
-        headerRight() {
-              if (navigation(hasFetchedCredentials[26]).hasWebAuthn) {
-                const obj = { text: null, style: null, hitSlop: null, onPress: null, foregroundRipple: true };
-                const intl = navigation(hasFetchedCredentials[11]).intl;
-                obj.text = intl.string(navigation(hasFetchedCredentials[11]).t.OYkgVk);
-                obj.style = headerAddButton.headerAddButton;
-                obj.hitSlop = hitSlop;
-                obj.onPress = function onPress() { ... };
-                return closure_2_8(navigation(hasFetchedCredentials[27]).HeaderActionButton, obj);
-              }
-            }
-      };
-      setOptionsResult = closure_0.setOptions(obj);
-      return;
-    }
-  }
-  items2 = [navigation, tmp5.headerAddButton];
-  cResult[5] = navigation;
-  cResult[6] = tmp5.headerAddButton;
-  cResult[7] = S;
-  cResult[8] = items2;
-  const tmpResult = navigation(hasFetchedCredentials[8]);
-}) : (function PasskeyInitStep() {
-  navigation = navigation(hasFetchedCredentials[24]).useNavigation();
-  const tmp2 = closure_10();
+export default function PasskeyInitStep() {
+  navigation = navigation(hasFetchedCredentials[27]).useNavigation();
+  const tmp2 = closure_11();
   closure_1 = tmp2;
-  let obj = navigation(hasFetchedCredentials[24]);
+  let obj = navigation(hasFetchedCredentials[27]);
   const items = [WebAuthnStore];
-  hasFetchedCredentials = navigation(hasFetchedCredentials[8]).useStateFromStoresObject(items, () => ({ hasFetchedCredentials: WebAuthnStore.hasFetchedCredentials() })).hasFetchedCredentials;
+  hasFetchedCredentials = navigation(hasFetchedCredentials[9]).useStateFromStoresObject(items, () => ({ hasFetchedCredentials: WebAuthnStore.hasFetchedCredentials() })).hasFetchedCredentials;
   const items1 = [hasFetchedCredentials];
   const effect = noop.useEffect(() => {
     if (!hasFetchedCredentials) {
@@ -250,22 +244,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PasskeyI
   const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({
       headerRight() {
-        if (navigation(hasFetchedCredentials[26]).hasWebAuthn) {
+        if (navigation(hasFetchedCredentials[29]).hasWebAuthn) {
           const obj = { text: null, style: null, hitSlop: null, onPress: null, foregroundRipple: true };
-          const intl = navigation(hasFetchedCredentials[11]).intl;
-          obj.text = intl.string(navigation(hasFetchedCredentials[11]).t.OYkgVk);
+          const intl = navigation(hasFetchedCredentials[12]).intl;
+          obj.text = intl.string(navigation(hasFetchedCredentials[12]).t.OYkgVk);
           obj.style = headerAddButton.headerAddButton;
           obj.hitSlop = hitSlop;
           obj.onPress = function onPress() {
             closure_1_0.push(constants.WEBAUTHN_REGISTER);
           };
-          return closure_2_8(navigation(hasFetchedCredentials[27]).HeaderActionButton, obj);
+          return closure_2_9(navigation(hasFetchedCredentials[30]).HeaderActionButton, obj);
         }
       }
     });
   }, items2);
   const obj3 = { children: null };
-  const obj2 = navigation(hasFetchedCredentials[8]);
-  obj3.children = closure_8(View, { style: tmp2.container, children: closure_8(CredentialList, { navigation }) });
-  return closure_8(navigation(hasFetchedCredentials[28]).Form, obj3);
-});
+  const obj2 = navigation(hasFetchedCredentials[9]);
+  obj3.children = closure_9(View, { style: tmp2.container, children: closure_9(CredentialList, { navigation }) });
+  return closure_9(navigation(hasFetchedCredentials[31]).Form, obj3);
+};

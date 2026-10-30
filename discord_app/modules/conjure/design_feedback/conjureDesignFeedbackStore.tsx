@@ -1,10 +1,8 @@
-// === Module 11865: conjureDesignFeedbackStore ===
+// === Module 12053: conjureDesignFeedbackStore ===
 
-// Module 11865 (conjureDesignFeedbackStore)
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11866 */;
+// Module 12053 (conjureDesignFeedbackStore)
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 12054 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 require = fn;
 function subscribeConjureDesignFeedback(arg0) {
@@ -18,26 +16,16 @@ let active = Object.freeze({ active: false, annotations: Object.freeze([]), cont
 const map = new Map();
 const set = new Set();
 let c6 = 0;
-const ReactCompilerGating = fn(558);
-let obj = { active: false, annotations: Object.freeze([]), context: null };
-function getConjureDesignFeedback(arg0) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/design_feedback/conjureDesignFeedbackStore.tsx");
+
+export function getConjureDesignFeedback(arg0) {
   value = map.get(arg0);
   if (value == null) {
     value = closure_3;
   }
   return value;
 }
-function canEditConjureDesignAnnotation(authorId, arg1) {
-  let tmp = null != arg1;
-  if (tmp) {
-    tmp = authorId.authorId === arg1;
-  }
-  return tmp;
-}
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/design_feedback/conjureDesignFeedbackStore.tsx");
-
-export { getConjureDesignFeedback };
 export function enterConjureDesignFeedback(arg0) {
   value = map.get(arg0);
   if (value == null) {
@@ -216,7 +204,13 @@ export function relocateConjureDesignAnnotations(arg0, size) {
     const result = map.set(arg0, obj2);
   }
 }
-export { canEditConjureDesignAnnotation };
+export function canEditConjureDesignAnnotation(authorId, arg1) {
+  let tmp = null != arg1;
+  if (tmp) {
+    tmp = authorId.authorId === arg1;
+  }
+  return tmp;
+}
 export function updateConjureDesignAnnotation(arg0, arg1, arg2, comment) {
   closure_0 = arg2;
   value = map.get(arg0);
@@ -299,29 +293,7 @@ export function removeConjureDesignAnnotation(arg0, arg1, arg2) {
   }
 }
 export { subscribeConjureDesignFeedback };
-export const useConjureDesignFeedback = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureDesignFeedback(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(2);
-  if (cResult[0] !== arg0) {
-    const fn = function s() {
-      if (null == closure_0) {
-        value = closure_3;
-      } else {
-        value = map.get(tmp);
-        if (value == null) {
-          value = closure_3;
-        }
-      }
-      return value;
-    };
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    let tmp2 = fn;
-  } else {
-    tmp2 = cResult[1];
-  }
-  return noop.useSyncExternalStore(subscribeConjureDesignFeedback, tmp2, tmp2);
-}) : (function useConjureDesignFeedback(arg0) {
+export function useConjureDesignFeedback(arg0) {
   closure_0 = arg0;
   const items = [arg0];
   const callback = noop.useCallback(() => {
@@ -336,4 +308,4 @@ export const useConjureDesignFeedback = ReactCompilerGating.isReactCompilerEnabl
     return value;
   }, items);
   return noop.useSyncExternalStore(subscribeConjureDesignFeedback, callback, callback);
-});
+}

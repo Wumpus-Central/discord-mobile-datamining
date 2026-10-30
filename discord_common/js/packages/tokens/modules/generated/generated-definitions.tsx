@@ -1,6 +1,6 @@
-// === Module 592: ? ===
+// === Module 580: ? ===
 
-// Module 592
+// Module 580
 import size from "module_2" /* 2 */;
 
 const obj = { Modules: null };

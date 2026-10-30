@@ -1,112 +1,42 @@
-// === Module 9335: GameProfileView ===
+// === Module 9349: GameProfileView ===
 
-// Module 9335 (GameProfileView)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7313 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
-import useGameProfileInvite from "useGameProfileInvite" /* 9337 */;
-import GameProfileMediaDefault from "GameProfileMedia" /* 9346 */;
-import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 9353 */;
-import GameProfileReviewsDefault from "GameProfileReviews" /* 9354 */;
-import GameProfileSummaryDefault from "GameProfileSummary" /* 9368 */;
-import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 9397 */;
-import GameProfileCommunityDefault from "GameProfileCommunity" /* 9403 */;
-import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 9406 */;
-import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 9419 */;
-import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 9543 */;
-import GameProfileDetailsDefault from "GameProfileDetails" /* 9545 */;
-import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 9565 */;
-import GameProfileReportButtonDefault from "GameProfileReportButton" /* 9566 */;
+// Module 9349 (GameProfileView)
+import nativeDefault from "native" /* 575 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7320 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
+import useGameProfileInvite from "useGameProfileInvite" /* 9351 */;
+import GameProfileHeaderDefault from "GameProfileHeader" /* 9352 */;
+import GameProfileMediaDefault from "GameProfileMedia" /* 9360 */;
+import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 9367 */;
+import GameProfileReviewsDefault from "GameProfileReviews" /* 9368 */;
+import GameProfileSummaryDefault from "GameProfileSummary" /* 9382 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 9414 */;
+import GameProfileCommunityDefault from "GameProfileCommunity" /* 9420 */;
+import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 9423 */;
+import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 9436 */;
+import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 9562 */;
+import GameProfileDetailsDefault from "GameProfileDetails" /* 9564 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 9588 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 9589 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const GameProfileHeaderDefault = tmp5(9338);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 }, body: null, buttonsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 };
-obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(9336).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
-let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(9336).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(9350).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(9350).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
 obj2.buttonsContainer = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj5 = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileView.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileView(onHeaderHeightMeasured) {
-  const cResult = c.c(87);
-  ({ game, invite, viewId, source, trackAction, onGuildInviteResolved, closeModal, scrollY, websiteButtons, onStoreLinksMeasured } = onHeaderHeightMeasured);
-  onHeaderHeightMeasured = onHeaderHeightMeasured.onHeaderHeightMeasured;
-  closure_7();
-  importDefault = noop.useRef(null);
-  dependencyMap = noop.useRef(null);
-  const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GAME_PROFILE).analyticsLocations;
-  if (cResult[0] !== game) {
-    const result = useGameProfileInvite.hasGameProfileDiscordWebsite(game);
-    cResult[0] = game;
-    cResult[1] = result;
-    const tmpResult = useGameProfileInvite;
-  }
-  if (cResult[2] !== onStoreLinksMeasured) {
-    class R {
-      constructor() {
-        current = closure_1.current;
-        current2 = closure_2.current;
-        tmp = null != current && null != current2;
-        if (tmp) {
-          if (onStoreLinksMeasured != null) {
-            tmp2Result = tmp2(current + current2);
-          }
-        }
-        return;
-      }
-    }
-    cResult[2] = onStoreLinksMeasured;
-    cResult[3] = R;
-    const tmp9 = R;
-  } else {
-    class R {
-      constructor() {
-        current = closure_1.current;
-        current2 = closure_2.current;
-        tmp = null != current && null != current2;
-        if (tmp) {
-          if (onStoreLinksMeasured != null) {
-            tmp2Result = tmp2(current + current2);
-          }
-        }
-        return;
-      }
-    }
-  }
-  R = tmp9;
-  if (cResult[4] === game) {
-    class R {
-      constructor() {
-        current = closure_1.current;
-        current2 = closure_2.current;
-        tmp = null != current && null != current2;
-        if (tmp) {
-          if (onStoreLinksMeasured != null) {
-            tmp2Result = tmp2(current + current2);
-          }
-        }
-        return;
-      }
-    }
-  }
-  cResult[4] = game;
-  cResult[5] = onHeaderHeightMeasured;
-  cResult[6] = scrollY;
-  cResult[7] = hasOwnProperty(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured });
-  const tmp10 = hasOwnProperty(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured });
-}) : (function GameProfileView(arg0) {
+export default function GameProfileView(arg0) {
   ({ game, viewId, source, trackAction, closeModal, scrollY, websiteButtons, onStoreLinksMeasured } = arg0);
   ({ invite, onGuildInviteResolved, onHeaderHeightMeasured } = arg0);
   const tmp = closure_7();
@@ -152,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   }
   items2[1] = tmp6Result;
   items2[2] = hasOwnProperty(GameProfileReviewsDefault, { game, trackAction });
-  items2[3] = hasOwnProperty(GameProfileSummaryDefault, { game, viewId, source, trackAction });
+  items2[3] = hasOwnProperty(GameProfileSummaryDefault, { game, trackAction });
   items2[4] = hasOwnProperty(GameProfileLinkAccountDefault, { game, analyticsLocations, trackAction });
   items2[5] = hasOwnProperty(GameProfileCommunityDefault, { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
   items2[6] = hasOwnProperty(GameProfileAnnouncementsDefault, { gameId: game.id, hasDiscordWebsite: result, invite, closeModal, trackAction, scrollY });
@@ -168,4 +98,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   obj3.children = items1;
   obj2.children = timestampProducer(View, obj3);
   return hasOwnProperty(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
-});
+};

@@ -1,72 +1,26 @@
-// === Module 10478: ForumTagContextMenu ===
+// === Module 10503: ForumTagContextMenu ===
 
-// Module 10478 (ForumTagContextMenu)
+// Module 10503 (ForumTagContextMenu)
 import jsxProd from "jsxProd" /* 21 */;
-import ToastUtils from "ToastUtils" /* 5700 */;
-import ClipboardUtils from "ClipboardUtils" /* 7345 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import ToastUtils from "ToastUtils" /* 5706 */;
+import ClipboardUtils from "ClipboardUtils" /* 7352 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
 const result = size.fileFinishedImporting("modules/forums/native/ForumTagContextMenu.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumTagContextMenu(tagId) {
-  const cResult = tagId(576).c(7);
-  tagId = tagId.tagId;
-  const children = tagId.children;
-  const DeveloperMode = tagId(4833).DeveloperMode;
-  const setting = DeveloperMode.useSetting();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1125).intl;
-    const stringResult = intl.string(tmp(1125).t["8VG6IY"]);
-    cResult[0] = stringResult;
-    let first = stringResult;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== tagId) {
-    const obj2 = {
-      label: first,
-      IconComponent: tmp(10479).IdIcon,
-      action() {
-          ClipboardUtils.copy(tagId);
-          ToastUtils.presentIdCopied();
-        }
-    };
-    const items = [obj2];
-    cResult[1] = tagId;
-    cResult[2] = items;
-    let tmp7 = items;
-  } else {
-    tmp7 = cResult[2];
-  }
-  if (cResult[3] === children) {
-    if (cResult[4] === tmp7) {
-      if (cResult[5] === setting) {
-        let tmp8 = cResult[6];
-      }
-      return tmp8;
-    }
-  }
-  const tmp9 = jsx(tagId(9827).ContextMenu, { triggerOnLongPress: true, items: tmp7, enabled: setting, children });
-  cResult[3] = children;
-  cResult[4] = tmp7;
-  cResult[5] = setting;
-  cResult[6] = tmp9;
-  tmp8 = tmp9;
-  let obj = tagId(576);
-}) : (function ForumTagContextMenu(children) {
+export default function ForumTagContextMenu(children) {
   const tagId = children.tagId;
-  const DeveloperMode = tagId(4833).DeveloperMode;
+  const DeveloperMode = tagId(4834).DeveloperMode;
   let obj = { label: null, IconComponent: null, action: null };
   const enabled = DeveloperMode.useSetting();
-  const intl = tagId(1125).intl;
-  obj.label = intl.string(tagId(1125).t["8VG6IY"]);
-  obj.IconComponent = tagId(10479).IdIcon;
+  const intl = tagId(1114).intl;
+  obj.label = intl.string(tagId(1114).t["8VG6IY"]);
+  obj.IconComponent = tagId(10504).IdIcon;
   obj.action = function action() {
     ClipboardUtils.copy(tagId);
     ToastUtils.presentIdCopied();
   };
   const items = [obj];
-  return jsx(tagId(9827).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
-});
+  return jsx(tagId(9853).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
+};

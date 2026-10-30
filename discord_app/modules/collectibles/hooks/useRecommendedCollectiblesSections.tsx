@@ -1,11 +1,9 @@
-// === Module 14983: useRecommendedCollectiblesSections ===
+// === Module 15027: useRecommendedCollectiblesSections ===
 
-// Module 14983 (useRecommendedCollectiblesSections)
+// Module 15027 (useRecommendedCollectiblesSections)
 import _mod19 from "module_19" /* 19 */;
-import useInitialValueDefault from "useInitialValue" /* 5636 */;
-import CollectiblesRecommendationUtils from "CollectiblesRecommendationUtils" /* 14986 */;
-import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 14984 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import useInitialValueDefault from "useInitialValue" /* 5607 */;
+import CollectiblesRecommendationStore from "CollectiblesRecommendationStore" /* 15028 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -14,101 +12,7 @@ let useMemo = _mod19.useMemo;
 let closure_5 = [];
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useRecommendedCollectiblesSections.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRecommendedCollectiblesSections(arr, arg1) {
-  _require = arg1;
-  const cResult = require("c").c(9);
-  const obj = require("c");
-  let tmp = arr;
-  const isEditProfileCollectiblesOrderingEnabled = require("EditProfileCollectiblesOrderingExperiment").useIsEditProfileCollectiblesOrderingEnabled("collectibles_picker");
-  if (cResult[0] !== isEditProfileCollectiblesOrderingEnabled) {
-    const fn = function n() {
-      if (isEditProfileCollectiblesOrderingEnabled) {
-        const recommendations = CollectiblesRecommendationStore.getRecommendations();
-        let skuIds;
-        if (recommendations != null) {
-          skuIds = recommendations.skuIds;
-        }
-        if (skuIds == null) {
-          skuIds = closure_5;
-        }
-        let tmp = skuIds;
-      } else {
-        tmp = closure_5;
-      }
-      return tmp;
-    };
-    cResult[0] = isEditProfileCollectiblesOrderingEnabled;
-    cResult[1] = fn;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-  }
-  arr = isEditProfileCollectiblesOrderingEnabled(tmp[5])(tmp4);
-  if (0 === arr.length) {
-    return arr;
-  } else {
-    if (cResult[6] === arg1) {
-      if (cResult[7] === arr) {
-        let tmp5 = cResult[8];
-      }
-      const mapped = arr.map(tmp5);
-      class C {
-        constructor(arg0) {
-          if (arr.section !== closure_0) {
-            return arr;
-          } else {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[6]);
-            tmp3 = closure_2;
-            result = obj.reorderCollectiblesByRecommendation(arr.items, closure_2);
-            tmp5 = arr;
-            if (result !== arr.items) {
-              obj1 = {};
-              tmp6 = obj1;
-              tmp7 = arr;
-              merged = Object.assign(arr);
-              obj1.items = result;
-              tmp5 = obj1;
-            }
-            return tmp5;
-          }
-        }
-      }
-      cResult[2] = arg1;
-      cResult[3] = arr;
-      cResult[4] = arr;
-      cResult[5] = mapped;
-    }
-    class C {
-      constructor(arg0) {
-        if (arr.section !== closure_0) {
-          return arr;
-        } else {
-          tmp = closure_0;
-          tmp2 = closure_2;
-          obj = closure_0(closure_2[6]);
-          tmp3 = closure_2;
-          result = obj.reorderCollectiblesByRecommendation(arr.items, closure_2);
-          tmp5 = arr;
-          if (result !== arr.items) {
-            obj1 = {};
-            tmp6 = obj1;
-            tmp7 = arr;
-            merged = Object.assign(arr);
-            obj1.items = result;
-            tmp5 = obj1;
-          }
-          return tmp5;
-        }
-      }
-    }
-    cResult[6] = arg1;
-    cResult[7] = arr;
-    cResult[8] = C;
-    tmp5 = C;
-  }
-}) : (function useRecommendedCollectiblesSections(arg0, arg1) {
+export default function useRecommendedCollectiblesSections(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   dependencyMap = require("EditProfileCollectiblesOrderingExperiment").useIsEditProfileCollectiblesOrderingEnabled("collectibles_picker");
@@ -138,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRecom
         if (section.section !== closure_1_1) {
           return section;
         } else {
-          const result = closure_0(closure_2[6]).reorderCollectiblesByRecommendation(section.items, length);
+          const result = closure_0(closure_2[4]).reorderCollectiblesByRecommendation(section.items, length);
           let tmp5 = section;
           if (result !== section.items) {
             const obj2 = {};
@@ -152,4 +56,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRecom
     }
     return mapped;
   }, items);
-});
+};

@@ -1,6 +1,6 @@
-// === Module 568: discord_common/shallowEqual ===
+// === Module 558: discord_common/shallowEqual ===
 
-// Module 568 (discord_common/shallowEqual)
+// Module 558 (discord_common/shallowEqual)
 import size from "module_2" /* 2 */;
 
 let closure_0 = {};

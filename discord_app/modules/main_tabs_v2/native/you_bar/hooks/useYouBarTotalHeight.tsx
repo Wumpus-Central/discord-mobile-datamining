@@ -1,27 +1,19 @@
-// === Module 16952: useYouBarTotalHeight ===
+// === Module 17006: useYouBarTotalHeight ===
 
-// Module 16952 (useYouBarTotalHeight)
-import useYouBarMargins from "useYouBarMargins" /* 16949 */;
-import YouBarConstants from "YouBarConstants" /* 16950 */;
-import useConnectionBannerHeight from "useConnectionBannerHeight" /* 16953 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 17006 (useYouBarTotalHeight)
+import useYouBarMargins from "useYouBarMargins" /* 17003 */;
+import YouBarConstants from "YouBarConstants" /* 17004 */;
+import useConnectionBannerHeight from "useConnectionBannerHeight" /* 17007 */;
 import size from "module_2" /* 2 */;
 
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");
 
-export const useYouBarTotalHeight = ReactCompilerGating.isReactCompilerEnabled() ? (function useYouBarTotalHeight(arg0) {
-  let num = 0;
-  if (undefined !== arg0) {
-    num = arg0;
-  }
-  const youBarBottomMargin = useYouBarMargins.useYouBarBottomMargin();
-  return youBarBottomMargin + YOU_BAR_HEIGHT + useConnectionBannerHeight.useConnectionBannerHeight() + num;
-}) : (function useYouBarTotalHeight() {
+export function useYouBarTotalHeight(arg0) {
   let num = arg0;
   if (arg0 === undefined) {
     num = 0;
   }
   const youBarBottomMargin = useYouBarMargins.useYouBarBottomMargin();
   return youBarBottomMargin + YOU_BAR_HEIGHT + useConnectionBannerHeight.useConnectionBannerHeight() + num;
-});
+}

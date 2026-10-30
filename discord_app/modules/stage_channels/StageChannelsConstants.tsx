@@ -1,9 +1,9 @@
-// === Module 6696: StageChannelsConstants ===
+// === Module 6703: StageChannelsConstants ===
 
-// Module 6696 (StageChannelsConstants)
-import Constants from "Constants" /* 1084 */;
-import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
+// Module 6703 (StageChannelsConstants)
+import Constants from "Constants" /* 1072 */;
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;

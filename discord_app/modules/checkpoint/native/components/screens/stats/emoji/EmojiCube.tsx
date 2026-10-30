@@ -1,18 +1,15 @@
-// === Module 13465: EmojiCube ===
+// === Module 13615: EmojiCube ===
 
-// Module 13465 (EmojiCube)
+// Module 13615 (EmojiCube)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import nativeDefault from "native" /* 587 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import CheckpointConstants from "CheckpointConstants" /* 6054 */;
-import EmojiDefault from "Emoji" /* 7287 */;
-import _mod13466 from "module_13466" /* 13466 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
-import createStyles from "createStyles" /* 5005 */;
-import PlatformUtils_mod from "utils/PlatformUtils" /* 1382 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import nativeDefault from "native" /* 575 */;
+import CheckpointConstants from "CheckpointConstants" /* 6061 */;
+import EmojiDefault from "Emoji" /* 7294 */;
+import _mod13616 from "module_13616" /* 13616 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import createStyles from "createStyles" /* 5009 */;
+import PlatformUtils_mod from "utils/PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 function transformMatrix(items, rotation) {
@@ -28,22 +25,22 @@ function transformMatrix(items, rotation) {
   if (point2 === undefined) {
     point2 = { x: 0, y: 0, z: 0 };
   }
-  const mat4 = _mod13466.mat4;
+  const mat4 = _mod13616.mat4;
   const obj = mat4.create();
-  const mat42 = _mod13466.mat4;
+  const mat42 = _mod13616.mat4;
   mat42.copy(obj, items);
-  const mat43 = _mod13466.mat4;
+  const mat43 = _mod13616.mat4;
   mat43.rotateX(obj, obj, point.x);
-  const mat44 = _mod13466.mat4;
+  const mat44 = _mod13616.mat4;
   mat44.rotateY(obj, obj, point.y);
-  const mat45 = _mod13466.mat4;
+  const mat45 = _mod13616.mat4;
   mat45.rotateZ(obj, obj, point.z);
-  const mat46 = _mod13466.mat4;
+  const mat46 = _mod13616.mat4;
   items = [, , ];
   ({ x: arr[0], y: arr[1], z: arr[2] } = translation);
   mat46.translate(obj, obj, items);
-  const mat47 = _mod13466.mat4;
-  const mat48 = _mod13466.mat4;
+  const mat47 = _mod13616.mat4;
+  const mat48 = _mod13616.mat4;
   mat48.multiply(obj, obj, mat47.fromValues(1, point2.y, 0, 0, point2.x, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));
   return Array.from(obj);
 }
@@ -88,145 +85,14 @@ let PlatformUtils = PlatformUtils_mod;
 if (PlatformUtils.isIOS()) {
   transformMatrixResult1 = items1;
 }
-let obj6 = { transform: null };
+const obj6 = { transform: null };
 const items4 = [{ matrix: transformMatrixResult1 }];
 obj6.transform = items4;
 obj.rightFace = obj6;
 let closure_6 = createStyles.createStyles(obj);
-let result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/emoji/EmojiCube.tsx");
+const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/stats/emoji/EmojiCube.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiCube(emoji) {
-  const cResult = emoji(576).c(27);
-  emoji = emoji.emoji;
-  const style = emoji.style;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [AccessibilityStore];
-    const fn = function l() {
-      return useReducedMotion.useReducedMotion;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  let obj = emoji(576);
-  const stateFromStores = emoji(504).useStateFromStores(tmp4, tmp5);
-  if (cResult[2] === emoji.animated) {
-    if (cResult[3] === emoji.id) {
-      if (cResult[4] === stateFromStores) {
-        let tmp8 = cResult[5];
-      }
-      importDefault = tmp8;
-      const tmp13 = closure_6();
-      dependencyMap = tmp13;
-      const result = useWindowDimensionsDefault().width / 392;
-      if (cResult[6] !== result) {
-        const obj2 = { transform: null };
-        const obj4 = { scale: result };
-        const items1 = [obj4];
-        obj2.transform = items1;
-        cResult[6] = result;
-        cResult[7] = obj2;
-        let tmp16 = obj2;
-      } else {
-        tmp16 = cResult[7];
-      }
-      if (cResult[8] === style) {
-        if (cResult[9] === tmp13.container) {
-          if (cResult[10] === tmp16) {
-            let tmp17 = cResult[11];
-          }
-          if (cResult[12] === tmp13.leftFace) {
-            if (cResult[13] === tmp13.rightFace) {
-              if (cResult[14] === tmp13.topFace) {
-                let arr4 = cResult[15];
-              }
-              if (cResult[16] === emoji.id) {
-                if (cResult[17] === emoji.name) {
-                  if (cResult[18] === tmp8) {
-                    if (cResult[19] === tmp13.customEmoji) {
-                      if (cResult[20] === tmp13.emoji) {
-                        if (cResult[21] === tmp13.textEmoji) {
-                          if (cResult[22] === arr4) {
-                            let tmp18 = cResult[23];
-                          }
-                          if (cResult[24] === tmp17) {
-                            if (cResult[25] === tmp18) {
-                              let tmp20 = cResult[26];
-                            }
-                            return tmp20;
-                          }
-                          const obj5 = { style: tmp17, children: tmp18 };
-                          const tmp23 = <View style={tmp17}>{tmp18}</View>;
-                          cResult[24] = tmp17;
-                          cResult[25] = tmp18;
-                          cResult[26] = tmp23;
-                          tmp20 = tmp23;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              const mapped = arr4.map((item, index) => {
-                const obj = { style: null, fastImageStyle: closure_2.customEmoji, textEmojiStyle: closure_2.textEmoji, name: null, src: null };
-                const items = [closure_2.emoji, item];
-                obj.style = items;
-                let str = "";
-                if (null == emoji.id) {
-                  str = emoji.name;
-                }
-                obj.name = str;
-                obj.src = src;
-                return jsx(EmojiDefault, { style: null, fastImageStyle: closure_2.customEmoji, textEmojiStyle: closure_2.textEmoji, name: null, src: null }, index);
-              });
-              cResult[16] = emoji.id;
-              cResult[17] = emoji.name;
-              cResult[18] = tmp8;
-              cResult[19] = tmp13.customEmoji;
-              cResult[20] = tmp13.emoji;
-              cResult[21] = tmp13.textEmoji;
-              cResult[22] = arr4;
-              cResult[23] = mapped;
-              tmp18 = mapped;
-            }
-          }
-          const items2 = [, , ];
-          ({ topFace: arr5[0], leftFace: arr5[1], rightFace: arr5[2] } = tmp13);
-          cResult[12] = tmp13.leftFace;
-          cResult[13] = tmp13.rightFace;
-          cResult[14] = tmp13.topFace;
-          cResult[15] = items2;
-          arr4 = items2;
-        }
-      }
-      const items3 = [tmp13.container, tmp16, style];
-      cResult[8] = style;
-      cResult[9] = tmp13.container;
-      cResult[10] = tmp16;
-      cResult[11] = items3;
-      tmp17 = items3;
-    }
-  }
-  let emojiURL;
-  if (null != emoji.id) {
-    const obj6 = { id: emoji.id, animated: null, size: 48 };
-    let tmp11 = !stateFromStores;
-    if (!stateFromStores) {
-      tmp11 = true === emoji.animated;
-    }
-    obj6.animated = tmp11;
-    emojiURL = AvatarUtilsDefault.getEmojiURL(obj6);
-  }
-  cResult[2] = emoji.animated;
-  cResult[3] = emoji.id;
-  cResult[4] = stateFromStores;
-  cResult[5] = emojiURL;
-  tmp8 = emojiURL;
-  const tmpResult = emoji(504);
-}) : (function EmojiCube(emoji) {
+export default function EmojiCube(emoji) {
   emoji = emoji.emoji;
   dependencyMap = undefined;
   let items = [AccessibilityStore];
@@ -239,8 +105,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiCub
       tmp5 = true === emoji.animated;
     }
     obj3.animated = tmp5;
-    emojiURL = emojiURL(1415).getEmojiURL(obj3);
-    const obj2 = emojiURL(1415);
+    emojiURL = emojiURL(1410).getEmojiURL(obj3);
+    const obj2 = emojiURL(1410);
   }
   const tmp6 = closure_6();
   dependencyMap = tmp6;
@@ -248,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiCub
   const items1 = [tmp6.container, , ];
   const obj5 = { transform: null };
   let obj = emoji(504);
-  const items2 = [{ scale: emojiURL(1497)().width / 392 }];
+  const items2 = [{ scale: emojiURL(1492)().width / 392 }];
   obj5.transform = items2;
   items1[1] = obj5;
   items1[2] = emoji.style;
@@ -268,4 +134,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiCub
     return jsx(EmojiDefault, { style: null, fastImageStyle: closure_2.customEmoji, textEmojiStyle: closure_2.textEmoji, name: null, src: null }, index);
   });
   return <View style={null}>{null}</View>;
-});
+};

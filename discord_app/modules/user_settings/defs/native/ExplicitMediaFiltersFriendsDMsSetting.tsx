@@ -1,62 +1,29 @@
-// === Module 16620: ExplicitMediaFiltersFriendsDMsSetting ===
+// === Module 16673: ExplicitMediaFiltersFriendsDMsSetting ===
 
-// Module 16620 (ExplicitMediaFiltersFriendsDMsSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7456 */;
-import SettingsConstants from "SettingsConstants" /* 8387 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8645 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16621 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16622 */;
-import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 16624 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 16673 (ExplicitMediaFiltersFriendsDMsSetting)
+import util from "util" /* 1114 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7464 */;
+import SettingsConstants from "SettingsConstants" /* 8424 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8679 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 16674 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16675 */;
+import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 16677 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
-function getTitle() {
-  const intl = util.intl;
-  return intl.string(util.t["+uI23H"]);
-}
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useObscuredContentFriendsDmSettingValue() {
-  const cResult = c.c(2);
-  const explicitContentFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
-  if (cResult[0] !== explicitContentFriendDm) {
-    const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentFriendDm)();
-    cResult[0] = explicitContentFriendDm;
-    cResult[1] = tmp5;
-    let tmp4 = tmp5;
-    const tmpResult = ExplicitMediaRedactionUtils;
-  } else {
-    tmp4 = cResult[1];
-  }
-  return tmp4;
-}) : (function useObscuredContentFriendsDmSettingValue() {
-  const obj = useExplicitContentSettingsOrDefault;
-  return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
-});
 const pressable = SettingBuilders.createPressable({
-  useTitle: getTitle,
+  useTitle: function getTitle() {
+    const intl = util.intl;
+    return intl.string(util.t["+uI23H"]);
+  },
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useObscuredContentFriendsDmSettingValue() {
-    const cResult = c.c(2);
-    const explicitContentFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
-    if (cResult[0] !== explicitContentFriendDm) {
-      const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentFriendDm)();
-      cResult[0] = explicitContentFriendDm;
-      cResult[1] = tmp5;
-      let tmp4 = tmp5;
-      const tmpResult = ExplicitMediaRedactionUtils;
-    } else {
-      tmp4 = cResult[1];
-    }
-    return tmp4;
-  }) : (function useObscuredContentFriendsDmSettingValue() {
+  useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const obj = useExplicitContentSettingsOrDefault;
     return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
-  }),
+  },
   onPress: function onObscuredContentFriendsDmOnPress() {
     const intl = util.intl;
     const obj = SensitiveMediaExplicitRedactionSettingsUtils;

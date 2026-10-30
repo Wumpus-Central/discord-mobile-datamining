@@ -1,7 +1,7 @@
-// === Module 10884: leaveEmbeddedActivity ===
+// === Module 10907: leaveEmbeddedActivity ===
 
-// Module 10884 (leaveEmbeddedActivity)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 10907 (leaveEmbeddedActivity)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/leaveEmbeddedActivity.tsx");

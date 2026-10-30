@@ -1,12 +1,12 @@
-// === Module 9167: InstantInviteSendStateStore ===
+// === Module 9180: InstantInviteSendStateStore ===
 
-// Module 9167 (InstantInviteSendStateStore)
-import module_570 from "module_570" /* 570 */;
+// Module 9180 (InstantInviteSendStateStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-let useInstantInviteSendStates = module_570.create(() => ({}));
+let useInstantInviteSendStates = module_560.create(() => ({}));
 const result = size.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
 
 export function setSendState(arg0, arg1, arg2) {

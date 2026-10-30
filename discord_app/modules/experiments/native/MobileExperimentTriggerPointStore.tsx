@@ -1,11 +1,11 @@
-// === Module 15501: MobileExperimentTriggerPointStore ===
+// === Module 15541: MobileExperimentTriggerPointStore ===
 
-// Module 15501 (MobileExperimentTriggerPointStore)
+// Module 15541 (MobileExperimentTriggerPointStore)
 import initializeDefault from "initialize" /* 504 */;
-import Dispatcher2 from "Dispatcher" /* 584 */;
-import MobileConnectionOpenTriggerPoint2 from "MobileConnectionOpenTriggerPoint" /* 15502 */;
-import ExperimentStore from "ExperimentStore" /* 5227 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
+import Dispatcher2 from "Dispatcher" /* 572 */;
+import MobileConnectionOpenTriggerPoint2 from "MobileConnectionOpenTriggerPoint" /* 15542 */;
+import ExperimentStore from "ExperimentStore" /* 5233 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1247 */;
 
 const Dispatcher = Dispatcher2;
 
@@ -32,4 +32,4 @@ let obj = { CONNECTION_OPEN: handleConnectionOpen };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/native/MobileExperimentTriggerPointStore.tsx");
 
-export default new "initialize"(Dispatcher, obj, fn(584).DispatchBand.Early, prototype, MobileExperimentTriggerPointStore, "initialize", Dispatcher, obj);
+export default new "initialize"(Dispatcher, obj, fn(572).DispatchBand.Early, prototype, MobileExperimentTriggerPointStore, "initialize", Dispatcher, obj);

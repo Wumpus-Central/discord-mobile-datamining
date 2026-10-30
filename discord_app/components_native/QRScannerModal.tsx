@@ -1,61 +1,46 @@
-// === Module 15611: QRScannerModal ===
+// === Module 15651: QRScannerModal ===
 
-// Module 15611 (QRScannerModal)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import LinkingDefault from "Linking" /* 5698 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
-import _modDef7244 from "module_7244" /* 7244 */;
-import openUserSettings from "openUserSettings" /* 7549 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9077 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13156 */;
-import QRLoginUtils from "QRLoginUtils" /* 15587 */;
-import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 15612 */;
+// Module 15651 (QRScannerModal)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import LinkingDefault from "Linking" /* 5704 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5954 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+import _modDef7251 from "module_7251" /* 7251 */;
+import openUserSettings from "openUserSettings" /* 7557 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9090 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13306 */;
+import QRLoginUtils from "QRLoginUtils" /* 15627 */;
+import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 15652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+function DCDQRScanner(arg0) {
+  const merged = Object.assign(arg0);
+  return React6(importDefaultResult, {});
+}
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, requireNativeComponent } = get_ActivityIndicator);
-const UserSettingsSections = fn(1084).UserSettingsSections;
-let closure_7 = fn(7704).FAMILY_CENTER_LINK_REQUEST_REGEX;
+const UserSettingsSections = fn(1072).UserSettingsSections;
+let closure_7 = fn(7709).FAMILY_CENTER_LINK_REQUEST_REGEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1376);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = QRScannerNativeComponentDefault;
 } else {
   importDefaultResult = requireNativeComponent("DCDQRScanner");
 }
 let c10 = importDefaultResult;
-const ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function DCDQRScanner(arg0) {
-  const cResult = c.c(2);
-  if (cResult[0] !== arg0) {
-    const obj2 = {};
-    const merged = Object.assign(arg0);
-    const tmp8 = closure_1_8(importDefaultResult, obj2);
-    cResult[0] = arg0;
-    cResult[1] = tmp8;
-    let tmp2 = tmp8;
-  } else {
-    tmp2 = cResult[1];
-  }
-  return tmp2;
-}) : (function DCDQRScanner(arg0) {
-  const merged = Object.assign(arg0);
-  return closure_1_8(importDefaultResult, {});
-});
-let obj3 = { scanner: { position: "absolute", height: "100%", width: "100%" }, closeButton: { marginLeft: 8 }, emptyView: { backgroundColor: nativeDefault.unsafe_rawColors.BLACK }, showHelp: null, text: null };
-let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.BLACK };
-obj3.showHelp = { marginLeft: 16, marginRight: 16, marginTop: "auto", borderRadius: 16, backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500, paddingTop: 4, paddingBottom: 4, paddingLeft: 16, paddingRight: 16 };
-let obj5 = { marginLeft: 16, marginRight: 16, marginTop: "auto", borderRadius: 16, backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500, paddingTop: 4, paddingBottom: 4, paddingLeft: 16, paddingRight: 16 };
-obj3.text = { color: nativeDefault.unsafe_rawColors.WHITE, textAlign: "center" };
+let obj2 = { scanner: { position: "absolute", height: "100%", width: "100%" }, closeButton: { marginLeft: 8 }, emptyView: { backgroundColor: nativeDefault.unsafe_rawColors.BLACK }, showHelp: null, text: null };
+let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.BLACK };
+obj2.showHelp = { marginLeft: 16, marginRight: 16, marginTop: "auto", borderRadius: 16, backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500, paddingTop: 4, paddingBottom: 4, paddingLeft: 16, paddingRight: 16 };
+let obj4 = { marginLeft: 16, marginRight: 16, marginTop: "auto", borderRadius: 16, backgroundColor: nativeDefault.unsafe_rawColors.BRAND_500, paddingTop: 4, paddingBottom: 4, paddingLeft: 16, paddingRight: 16 };
+obj2.text = { color: nativeDefault.unsafe_rawColors.WHITE, textAlign: "center" };
 let closure_13 = { SUCCEEDED: "SUCCEEDED", FAILED: "FAILED" };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/QRScannerModal.tsx");
@@ -65,7 +50,7 @@ export default function QRScannerModal(showHelp) {
   const onScanSuccess = showHelp.onScanSuccess;
   [tmp3, importDefault] = noop.useState(true);
   const effect = noop.useEffect(() => {
-    closure_0 = onScanSuccess(dependencyMap[11]).runAfterInteractions(() => {
+    closure_0 = onScanSuccess(dependencyMap[9]).runAfterInteractions(() => {
       closure_1_1(false);
     });
     return () => {
@@ -77,17 +62,17 @@ export default function QRScannerModal(showHelp) {
   let obj = { style: { flex: 1 }, children: null };
   ({ bottom, top } = useSafeAreaInsetsDefault());
   if (tmp3) {
-    let obj2 = { style: null };
+    obj2 = { style: null };
     const items = [, ];
-    ({ scanner: arr[0], emptyView: arr[1] } = obj3);
+    ({ scanner: arr[0], emptyView: arr[1] } = obj2);
     obj2.style = items;
     let tmp10Result = closure_8(closure_5, obj2);
-    let tmp12 = obj3;
+    let tmp12 = obj2;
     let tmp14 = closure_8;
   } else {
-    obj3 = { style: null, pointerEvents: "none", onQRCodeFound: null };
-    tmp12 = obj3;
-    obj3.style = obj3.scanner;
+    let obj3 = { style: null, pointerEvents: "none", onQRCodeFound: null };
+    tmp12 = obj2;
+    obj3.style = obj2.scanner;
     obj3.onQRCodeFound = function onQRCodeFound(nativeEvent) {
       if (constants.SUCCEEDED === nativeEvent.nativeEvent.status) {
         if (undefined !== onScanSuccess) {
@@ -101,8 +86,8 @@ export default function QRScannerModal(showHelp) {
           if (null != result) {
             ModalActionCreatorsDefault.pop();
             const tmp21Result = ModalActionCreatorsDefault;
-            const obj2 = { remoteAuthFingerprint: result };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15601, dependencyMap.paths), obj2);
+            obj2 = { remoteAuthFingerprint: result };
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15641, dependencyMap.paths), obj2);
             const tmp21Result4 = ModalActionCreatorsDefault;
           } else {
             let match;
@@ -113,7 +98,7 @@ export default function QRScannerModal(showHelp) {
               if (null != str) {
                 ModalActionCreatorsDefault.pop();
                 const tmp21Result5 = ModalActionCreatorsDefault;
-                obj3 = { screen: UserSettingsSections.FAMILY_CENTER };
+                const obj3 = { screen: UserSettingsSections.FAMILY_CENTER };
                 openUserSettings.openUserSettings(obj3);
                 const tmp3Result = openUserSettings;
                 const result1 = FamilyCenterNativeUtils.handleFamilyCenterQRCodeScan(str, "UserSettingsQRCodeScan");
@@ -135,18 +120,18 @@ export default function QRScannerModal(showHelp) {
         actions_AlertActionCreatorsDefault.show(obj4);
         tmp9 = importDefault;
       }
-      tmp9(6731).pop();
-      const tmp9Result = tmp9(6731);
+      tmp9(6738).pop();
+      const tmp9Result = tmp9(6738);
     };
-    tmp10Result = closure_8(closure_11, obj3);
+    tmp10Result = closure_8(DCDQRScanner, obj3);
     tmp14 = closure_8;
   }
   const items1 = [tmp10Result, , ];
   let obj4 = { accessibilityRole: "button", accessibilityLabel: null, source: null, style: null, onPress: null };
   const tmp7 = useSafeAreaInsetsDefault();
-  let intl = onScanSuccess(1125).intl;
-  obj4.accessibilityLabel = intl.string(onScanSuccess(1125).t.cpT0Cq);
-  obj4.source = _modDef7244;
+  let intl = onScanSuccess(1114).intl;
+  obj4.accessibilityLabel = intl.string(onScanSuccess(1114).t.cpT0Cq);
+  obj4.source = _modDef7251;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj4.style = items2;
   obj4.onPress = ModalActionCreatorsDefault.pop;
@@ -161,9 +146,9 @@ export default function QRScannerModal(showHelp) {
       items3[1] = obj6;
       obj5.style = items3;
       const obj7 = { style: tmp12.text, children: null };
-      let intl2 = tmp17(1125).intl;
-      obj7.children = intl2.string(tmp17(1125).t.dklV0G);
-      obj5.children = tmp14(tmp17(1199).LegacyText, obj7);
+      let intl2 = tmp17(1114).intl;
+      obj7.children = intl2.string(tmp17(1114).t.dklV0G);
+      obj5.children = tmp14(tmp17(1188).LegacyText, obj7);
       tmp14Result = tmp14(closure_5, obj5);
     }
   }

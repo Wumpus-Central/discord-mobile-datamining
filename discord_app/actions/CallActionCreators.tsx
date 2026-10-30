@@ -1,21 +1,21 @@
-// === Module 7473: CallActionCreators ===
+// === Module 7481: CallActionCreators ===
 
-// Module 7473 (CallActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1125 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6693 */;
-import useCanRing from "useCanRing" /* 7483 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 7481 (CallActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6700 */;
+import useCanRing from "useCanRing" /* 7491 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7, ChannelTypesSets: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/CallActionCreators.tsx");
@@ -77,7 +77,7 @@ export default {
       }
     }
   },
-  ring(channelId, items, voice_panel_floating_cta) {
+  ring(channelId, items, gdm_invite) {
     const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
       const CALLABLE = constants2.CALLABLE;
@@ -85,7 +85,7 @@ export default {
       if (result) {
         const HTTP = HTTPUtils.HTTP;
         const request = { url: timestampProducer.CALL_RING(channelId), body: null, oldFormErrors: true, rejectWithError: true };
-        const obj2 = { recipients: items, analytics_location: voice_panel_floating_cta };
+        const obj2 = { recipients: items, analytics_location: gdm_invite };
         request.body = obj2;
         HTTP.post(request);
       } else if (tmp12) {

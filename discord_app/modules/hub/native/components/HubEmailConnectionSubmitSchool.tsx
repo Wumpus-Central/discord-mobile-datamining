@@ -1,15 +1,15 @@
-// === Module 14150: HubEmailConnectionSubmitSchool ===
+// === Module 14297: HubEmailConnectionSubmitSchool ===
 
-// Module 14150 (HubEmailConnectionSubmitSchool)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import native from "native" /* 1199 */;
-import useNavigation from "useNavigation" /* 1503 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5630 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7067 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14137 */;
+// Module 14297 (HubEmailConnectionSubmitSchool)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1188 */;
+import useNavigation from "useNavigation" /* 1498 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5602 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7075 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,12 +17,12 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(14128).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14276).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5005);
-let obj2 = { container: { paddingHorizontal: 16 }, title: { fontFamily: fn(1084).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 24 }, scrollViewContainer: { flexGrow: 2 }, input: { marginBottom: 8 }, redesignTextInput: null, redesignGrowSpacing: null, redesignSubmit: null };
-let obj3 = { fontFamily: fn(1084).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
+const createStyles = fn(5009);
+let obj2 = { container: { paddingHorizontal: 16 }, title: { fontFamily: fn(1072).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 24 }, scrollViewContainer: { flexGrow: 2 }, input: { marginBottom: 8 }, redesignTextInput: null, redesignGrowSpacing: null, redesignSubmit: null };
+let obj3 = { fontFamily: fn(1072).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -48,7 +48,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

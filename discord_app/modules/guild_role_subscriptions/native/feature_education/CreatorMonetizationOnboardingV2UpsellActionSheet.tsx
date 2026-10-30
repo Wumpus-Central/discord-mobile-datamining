@@ -1,262 +1,27 @@
-// === Module 18194: CreatorMonetizationOnboardingV2UpsellActionSheet ===
+// === Module 18254: CreatorMonetizationOnboardingV2UpsellActionSheet ===
 
-// Module 18194 (CreatorMonetizationOnboardingV2UpsellActionSheet)
-import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5302 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9042 */;
-import _modDef18195 from "module_18195" /* 18195 */;
+// Module 18254 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+import util from "util" /* 1114 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5267 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9055 */;
+import _modDef18255 from "module_18255" /* 18255 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildSettingsSections = fn(1084).GuildSettingsSections;
-const ContentDismissActionType = fn(4854).ContentDismissActionType;
+const GuildSettingsSections = fn(1072).GuildSettingsSections;
+const ContentDismissActionType = fn(4855).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_8 = createStyles.createStyles({ container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 }, title: { marginBottom: 6 }, description: { marginBottom: 24 }, image: { marginBottom: 24, width: "100%" }, dismissButton: { marginTop: 4 } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/CreatorMonetizationOnboardingV2UpsellActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorMonetizationOnboardingV2UpsellActionSheet(guildId) {
-  const cResult = guildId(576).c(34);
-  guildId = guildId.guildId;
-  const markAsDismissed = guildId.markAsDismissed;
-  const tmp4 = closure_8();
-  if (cResult[0] === guildId) {
-    if (cResult[1] === markAsDismissed) {
-      let tmp5 = cResult[2];
-    }
-    if (cResult[3] !== markAsDismissed) {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      cResult[3] = markAsDismissed;
-      cResult[4] = N;
-    } else {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    const _Symbol = Symbol;
-    ({ container, title } = tmp4);
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const stringResult = obj2.string(tmp(1125).t["v+Jm6X"]);
-      cResult[5] = stringResult;
-      const tmp8 = stringResult;
-    } else {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    if (cResult[6] !== tmp4.title) {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const obj3 = { style: title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp8 };
-      const tmp11 = closure_6(tmp(5271).Text, obj3);
-      cResult[6] = tmp4.title;
-      cResult[7] = tmp11;
-    } else {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    const _Symbol2 = Symbol;
-    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const stringResult1 = obj4.string(tmp(1125).t.kUUFbG);
-      cResult[8] = stringResult1;
-      const tmp12 = stringResult1;
-    } else {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    if (cResult[9] !== tmp4.description) {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const obj5 = { style: tmp4.description, accessibilityRole: "text", variant: "text-sm/medium", color: "text-default", children: tmp12 };
-      const tmp15 = closure_6(tmp(5271).Text, obj5);
-      cResult[9] = tmp4.description;
-      cResult[10] = tmp15;
-    } else {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    if (cResult[11] !== tmp4.image) {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(18195) };
-      const tmp19 = closure_6(markAsDismissed(5707), obj6);
-      cResult[11] = tmp4.image;
-      cResult[12] = tmp19;
-      const tmp18 = markAsDismissed(5707);
-    } else {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    const _Symbol3 = Symbol;
-    if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const stringResult2 = obj7.string(tmp(1125).t.OgQQbG);
-      cResult[13] = stringResult2;
-      const tmp20 = stringResult2;
-    } else {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    if (cResult[14] !== tmp5) {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const obj8 = { onPress: tmp5, text: tmp20 };
-      const tmp23 = closure_6(tmp(5281).Button, obj8);
-      cResult[14] = tmp5;
-      cResult[15] = tmp23;
-    } else {
-      class N {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    if (cResult[16] !== markAsDismissed) {
-      class A {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      cResult[16] = markAsDismissed;
-      cResult[17] = A;
-    } else {
-      class A {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    const _Symbol4 = Symbol;
-    if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-      class A {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const stringResult3 = obj9.string(tmp(1125).t.WAI6xu);
-      cResult[18] = stringResult3;
-      const tmp25 = stringResult3;
-    } else {
-      class A {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    if (cResult[19] !== A) {
-      class A {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      const obj10 = { onPress: A, text: tmp25, variant: "secondary" };
-      const tmp28 = closure_6(tmp(5281).Button, obj10);
-      cResult[19] = A;
-      cResult[20] = tmp28;
-    } else {
-      class A {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-    }
-    if (cResult[21] === tmp4.dismissButton) {
-      class A {
-        constructor() {
-          return markAsDismissed(ContentDismissActionType.UNKNOWN);
-        }
-      }
-      if (cResult[24] === tmp4.container) {
-        class A {
-          constructor() {
-            return markAsDismissed(ContentDismissActionType.UNKNOWN);
-          }
-        }
-      }
-      const obj11 = { style: container, children: null };
-      const items = [tmp10, tmp14, tmp16, tmp22, tmp29];
-      obj11.children = items;
-      const tmp36 = closure_7(View, obj11);
-      cResult[24] = tmp4.container;
-      cResult[25] = tmp16;
-      cResult[26] = tmp22;
-      cResult[27] = tmp29;
-      cResult[28] = tmp10;
-      cResult[29] = tmp14;
-      cResult[30] = tmp36;
-    }
-    const obj12 = { style: tmp4.dismissButton, children: tmp27 };
-    const tmp32 = closure_6(View, obj12);
-    cResult[21] = tmp4.dismissButton;
-    cResult[22] = tmp27;
-    cResult[23] = tmp32;
-  }
-  function handleCheckItOut() {
-    markAsDismissed(ContentDismissActionType.UNKNOWN);
-    GuildSettingsActionCreatorsDefault.open(guildId, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
-  }
-  cResult[0] = guildId;
-  cResult[1] = markAsDismissed;
-  cResult[2] = handleCheckItOut;
-  tmp5 = handleCheckItOut;
-  const obj = guildId(576);
-}) : (function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
+export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed: importDefault } = arg0);
   const tmp = closure_8();
   const obj = {
@@ -275,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef18195 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef18255 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress: function handleCheckItOut() {
@@ -302,4 +67,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
   obj2.children = items;
   obj.children = closure_7(View, obj2);
   return closure_6(Sheet_BottomSheet.BottomSheet, obj);
-});
+};

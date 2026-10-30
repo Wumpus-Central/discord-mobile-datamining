@@ -1,65 +1,29 @@
-// === Module 17175: DarkModeThemeSetting ===
+// === Module 17229: DarkModeThemeSetting ===
 
-// Module 17175 (DarkModeThemeSetting)
+// Module 17229 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17173 */;
-import ThemeStore from "ThemeStore" /* 1204 */;
+import util from "util" /* 1114 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 17227 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 
 require = fn;
-const SystemTheme = fn(1207).SystemTheme;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ThemeStore];
-    const fn = function n() {
-      return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useSyncedModePickerVisible() {
-  const items = [ThemeStore];
-  return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-});
+const SystemTheme = fn(1196).SystemTheme;
+const SettingBuilders = fn(11505);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(8387).MobileUserSettings.APPEARANCE,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [ThemeStore];
-      const fn = function n() {
-        return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (function useSyncedModePickerVisible() {
+  parent: fn(8424).MobileUserSettings.APPEARANCE,
+  usePredicate: function useSyncedModePickerVisible() {
     const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-  }),
+  },
   useTrailing() {
     return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.DARK);
   },
   screen: {
-    route: fn(1084).UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
+    route: fn(1072).UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
     getComponent() {
       return require("SettingsAppearanceDarkModeThemePickerScreen").default;
     }

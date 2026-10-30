@@ -1,25 +1,25 @@
-// === Module 5778: destroy ===
+// === Module 5785: destroy ===
 
-// Module 5778 (destroy)
-import formatDefault from "format" /* 1364 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
-import inject from "inject" /* 2014 */;
-import VideoDefault from "Video" /* 5781 */;
-import CameraDefault from "Camera" /* 5785 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 5786 */;
-import pollConnectionStatsDefault from "pollConnectionStats" /* 5787 */;
-import ConnectionDefault from "Connection" /* 5789 */;
-import Devices from "Devices" /* 5849 */;
+// Module 5785 (destroy)
+import formatDefault from "format" /* 1353 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1377 */;
+import inject from "inject" /* 2009 */;
+import VideoDefault from "Video" /* 5788 */;
+import CameraDefault from "Camera" /* 5792 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 5793 */;
+import pollConnectionStatsDefault from "pollConnectionStats" /* 5794 */;
+import ConnectionDefault from "Connection" /* 5796 */;
+import Devices from "Devices" /* 5856 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5780 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5787 */;
 
 require = fn;
 let closure_3 = ["id", "useGraphicsCapture", "useGraphicsCaptureApiLevel"];
-let Constants = fn(5756);
+let Constants = fn(5763);
 ({ QUEUE_METRICS_INTERVAL_MS: closure_7, SIDECHAIN_COMPRESSION_MAX_RATIO: closure_8, SIDECHAIN_COMPRESSION_MAX_THRESHOLD: closure_9, SIDECHAIN_COMPRESSION_MIN_RATIO: c10, SIDECHAIN_COMPRESSION_MIN_THRESHOLD: closure_11, ProcessPriority: closure_12 } = Constants);
-Constants = fn(5779);
+Constants = fn(5786);
 ({ ClipsRecordingEvent: map1, DEFAULT_VOLUME: closure_14, DeviceTypes: closure_15, DISABLED_DEVICE_ID: closure_16, Features: closure_17, MediaEngineContextTypes: closure_18, NativeFeatures: closure_19, WATCHDOG_TIMEOUT_MS: closure_20 } = Constants);
 class MediaEngineNative extends tmp4 {
   constructor() {
@@ -255,7 +255,7 @@ class MediaEngineNative extends tmp4 {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -276,7 +276,7 @@ class MediaEngineNative extends tmp4 {
               if (importDefault) {
                 c3 = 3;
               } else {
-                voiceEngine = v0(2014).getVoiceEngine();
+                voiceEngine = v0(2009).getVoiceEngine();
                 const promise = new Promise((arg0) => {
                   closure_0 = arg0;
                   pollQueueMetrics = pollQueueMetrics.pollQueueMetrics;
@@ -298,7 +298,7 @@ class MediaEngineNative extends tmp4 {
           } else if (arg0 !== 2) {
             closure_128_1 = value;
             closure_128_1.periodMs = periodMs;
-            closure_129_0.emit(v0(5786).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
+            closure_129_0.emit(v0(5793).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
             const _setTimeout = setTimeout;
             const timerId = setTimeout(closure_129_2, periodMs);
           }
@@ -506,7 +506,7 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   if (!obj.supportsFeature(constants5.EXPERIMENT_CONFIG)) {
     videoSupported.experiments = undefined;
   }
-  obj = obj3(2014);
+  obj = obj3(2009);
   let flag = videoSupported.videoSupported;
   if (flag == null) {
     flag = true;
@@ -514,8 +514,8 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   if (flag) {
     flag = self.supports(constants3.VIDEO);
   }
-  obj3 = self(5789).create(arg0, arg1, videoSupported, flag);
-  obj3.on(obj3(5794).BaseConnectionEvent.Destroy, (arg0) => {
+  obj3 = self(5796).create(arg0, arg1, videoSupported, flag);
+  obj3.on(obj3(5801).BaseConnectionEvent.Destroy, (arg0) => {
     const connections = self.connections;
     connections.delete(arg0);
     if (self.connectionsEmpty()) {
@@ -527,36 +527,36 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
       }
     }
   });
-  obj3.on(obj3(5794).BaseConnectionEvent.Connected, () => {
+  obj3.on(obj3(5801).BaseConnectionEvent.Connected, () => {
     obj3.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj3));
   });
-  obj3.on(obj3(5794).BaseConnectionEvent.Silence, (arg0) => {
+  obj3.on(obj3(5801).BaseConnectionEvent.Silence, (arg0) => {
     self.emit(MediaEngineEvent.MediaEngineEvent.Silence, arg0);
   });
   let connections = self.connections;
   connections.add(obj3);
-  let obj2 = self(5789);
+  let obj2 = self(5796);
   let HIGH = videoSupported.processPriority;
   if (HIGH == null) {
     HIGH = constants.HIGH;
   }
-  obj3(2014).setProcessPriority(HIGH);
+  obj3(2009).setProcessPriority(HIGH);
   if (null != videoSupported.threadPriorityConfiguration) {
-    let voiceEngine = tmp(2014).getVoiceEngine();
+    let voiceEngine = tmp(2009).getVoiceEngine();
     let setNativeThreadsPriority = voiceEngine.setNativeThreadsPriority;
     if (setNativeThreadsPriority != null) {
       let result = setNativeThreadsPriority(videoSupported.threadPriorityConfiguration);
     }
-    const tmpResult2 = tmp(2014);
+    const tmpResult2 = tmp(2009);
   }
-  self.emit(obj3(5786).MediaEngineEvent.Connection, obj3);
+  self.emit(obj3(5793).MediaEngineEvent.Connection, obj3);
   return obj3;
 };
 prototype["shouldConnectionBroadcastVideo"] = function shouldConnectionBroadcastVideo(context) {
   let hasDesktopSourceResult = context.context === constants4.DEFAULT;
   if (hasDesktopSourceResult) {
     const self = this;
-    hasDesktopSourceResult = this.videoInputDeviceId !== value3;
+    hasDesktopSourceResult = this.videoInputDeviceId !== __initData2;
   }
   if (!hasDesktopSourceResult) {
     hasDesktopSourceResult = context.hasDesktopSource();
@@ -671,7 +671,7 @@ prototype["setAudioInputDeviceByIndex"] = function setAudioInputDeviceByIndex(au
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -714,7 +714,7 @@ prototype["setAudioInputDeviceByIndex"] = function setAudioInputDeviceByIndex(au
             const obj = audioInputDeviceId(tmp5[9]);
           }
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp19) {
         c4 = tmp;
@@ -751,7 +751,7 @@ prototype["setAudioOutputDeviceByIndex"] = function setAudioOutputDeviceByIndex(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -794,7 +794,7 @@ prototype["setAudioOutputDeviceByIndex"] = function setAudioOutputDeviceByIndex(
             const obj = audioOutputDeviceId(tmp5[9]);
           }
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp19) {
         c4 = tmp;
@@ -820,7 +820,7 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -861,11 +861,11 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
           closure_128_1 = id;
           if (closure_128_1 === closure_129_1.videoInputDeviceId) {
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           } else {
             closure_129_1.videoInputDeviceId = closure_128_1;
             if (!obj9.supportsFeature(constants.SET_VIDEO_DEVICE_BY_ID)) {
-              const voiceEngine = tmp2(2014).getVoiceEngine();
+              const voiceEngine = tmp2(2009).getVoiceEngine();
               let num3 = -1;
               if (forEach != closure_128_0) {
                 num3 = closure_128_0.index;
@@ -874,19 +874,19 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice(arg0) {
               const connections = closure_129_1.connections;
               forEach = connections.forEach;
               const item = forEach((setVideoBroadcast) => setVideoBroadcast.setVideoBroadcast(closure_1_1.shouldConnectionBroadcastVideo(setVideoBroadcast)));
-              const obj = tmp2(2014);
+              const obj = tmp2(2009);
             }
             if (forEach == closure_128_0) {
               closure_128_2 = closure_1_16;
-              const voiceEngine1 = tmp2(2014).getVoiceEngine();
+              const voiceEngine1 = tmp2(2009).getVoiceEngine();
               voiceEngine1.setVideoInputDevice(closure_128_2);
-              const obj3 = tmp2(2014);
+              const obj3 = tmp2(2009);
             }
             if (forEach == closure_128_0.originalId) {
               const id2 = closure_128_0.id;
             }
             const originalId = closure_128_0.originalId;
-            obj9 = tmp2(2014);
+            obj9 = tmp2(2009);
           }
         }
       } catch (tmp42) {
@@ -1031,7 +1031,7 @@ prototype["startSnapshotCapture"] = function startSnapshotCapture(width, arg1) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -1112,7 +1112,7 @@ prototype["startSnapshotCapture"] = function startSnapshotCapture(width, arg1) {
                 const result3 = signalSnapshotProcessed3(closure_133_0);
               }
               c10 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp51) {
             closure_7 = tmp51;
@@ -1289,7 +1289,7 @@ prototype["hasClipsV3Support"] = function hasClipsV3Support() {
 };
 prototype["registerClipsRecordingEventHandler"] = function registerClipsRecordingEventHandler() {
   const self = this;
-  const voiceEngine = self(2014).getVoiceEngine();
+  const voiceEngine = self(2009).getVoiceEngine();
   if (!tmp) {
     self.clipsRecordingEventHandlerRegistered = true;
     const result = voiceEngine.setOnClipsRecordingEvent((arg0, arg1) => {
@@ -1609,7 +1609,7 @@ prototype["getSingleWindowPreview"] = function getSingleWindowPreview(arg0, arg1
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1856,7 +1856,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
   const replay = ConnectionDefault.createReplay(arg0, arg1);
   let tmp2 = null;
   if (null != replay) {
-    replay.on(self(5794).BaseConnectionEvent.Destroy, (arg0) => {
+    replay.on(self(5801).BaseConnectionEvent.Destroy, (arg0) => {
       const connections = self.connections;
       connections.delete(arg0);
       if (self.connectionsEmpty()) {
@@ -1865,10 +1865,10 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
     });
     let connections = self.connections;
     connections.add(replay);
-    self(2014).setProcessPriority(constants.HIGH);
-    self.emit(self(5786).MediaEngineEvent.Connection, replay);
+    self(2009).setProcessPriority(constants.HIGH);
+    self.emit(self(5793).MediaEngineEvent.Connection, replay);
     tmp2 = replay;
-    const obj3 = self(2014);
+    const obj3 = self(2009);
   }
   return tmp2;
 };
@@ -1992,8 +1992,8 @@ prototype["setSidechainCompression"] = function setSidechainCompression(arg0) {
 };
 prototype["setSidechainCompressionStrength"] = function setSidechainCompressionStrength(arg0) {
   const diff = 100 - arg0;
-  const sum = closure_1_11 + (React6 - closure_1_11) * diff / 100;
-  const sum1 = v65535 + (closure_1_8 - v65535) * diff / 100;
+  const sum = closure_1_11 + (React7 - closure_1_11) * diff / 100;
+  const sum1 = closure_1_10 + (React6 - closure_1_10) * diff / 100;
   const voiceEngine = inject.getVoiceEngine();
   const applySidechainCompressionSettings = voiceEngine.applySidechainCompressionSettings;
   if (applySidechainCompressionSettings != null) {
@@ -2113,7 +2113,7 @@ prototype["emitCurrentDevices"] = function emitCurrentDevices(deviceChangeGenera
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2156,7 +2156,7 @@ prototype["emitCurrentDevices"] = function emitCurrentDevices(deviceChangeGenera
             closure_129_1.emit(tmp2(c2[10]).MediaEngineEvent.DeviceChange, closure_128_2, closure_128_3, closure_128_4);
           }
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
         c3 = tmp;

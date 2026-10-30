@@ -1,12 +1,12 @@
-// === Module 8821: AppFreezeStore ===
+// === Module 8855: AppFreezeStore ===
 
-// Module 8821 (AppFreezeStore)
-import module_570 from "module_570" /* 570 */;
+// Module 8855 (AppFreezeStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/panels/morphable/AppFreezeStore.tsx");
 
-export default module_570.create((arg0) => {
+export default module_560.create((arg0) => {
   closure_0 = arg0;
   let obj = {
     lockKeys: new Set(),

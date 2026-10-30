@@ -1,9 +1,9 @@
-// === Module 11572: setupEmbeddedAppBotScope ===
+// === Module 11773: setupEmbeddedAppBotScope ===
 
-// Module 11572 (setupEmbeddedAppBotScope)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6889 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8867 */;
-import GuildMemberStore from "GuildMemberStore" /* 4917 */;
+// Module 11773 (setupEmbeddedAppBotScope)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6896 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8901 */;
+import GuildMemberStore from "GuildMemberStore" /* 4921 */;
 
 const require = globalThis.__r;
 

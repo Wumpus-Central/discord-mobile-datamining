@@ -1,13 +1,13 @@
-// === Module 10829: conjureChatConnection ===
+// === Module 10852: conjureChatConnection ===
 
-// Module 10829 (conjureChatConnection)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10812 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10830 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
+// Module 10852 (conjureChatConnection)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10835 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10853 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10854 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -77,13 +77,13 @@ let obj = {
   }
 };
 let obj2 = {
-  reaction(setting, arg1) {
-    const result = conjureAgentReaction.agentReactionFromStep(setting);
+  reaction(message_id, projectId) {
+    const result = conjureAgentReaction.agentReactionFromStep(message_id);
     if (tmp3) {
-      obj3 = { type: "CONJURE_CHAT_MESSAGE_REACTION", projectId: arg1.projectId, id: setting.message_id, reaction: result };
+      obj3 = { type: "CONJURE_CHAT_MESSAGE_REACTION", projectId: projectId.projectId, id: message_id.message_id, reaction: result };
       DispatcherDefault.dispatch(obj3);
     }
-    tmp3 = null != setting.message_id && null != result;
+    tmp3 = null != message_id.message_id && null != result;
   },
   reply(message, projectId) {
     projectId = projectId.projectId;
@@ -98,7 +98,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3864["913RMa"]);
+      const stringResult = intl.string(_modDef3865["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -187,7 +187,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3864["0+RUWx"]);
+      const stringResult = intl.string(_modDef3865["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -232,10 +232,11 @@ let obj2 = {
       DispatcherDefault.dispatch(obj2);
     }
   },
-  clarification(onKept, arg1) {
-    let tmp = null != onKept.clarification;
+  clarification(onSubmit, arg1) {
+    let ts = onSubmit;
+    let tmp = null != onSubmit.clarification;
     if (tmp) {
-      const questions = onKept.clarification.questions;
+      const questions = ts.clarification.questions;
       let num;
       if (questions != null) {
         num = questions.length;
@@ -246,20 +247,29 @@ let obj2 = {
       tmp = num > 0;
     }
     if (tmp) {
-      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: onKept.turn_id, patch: null };
-      obj3 = { clarification: onKept.clarification };
+      let obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: ts.turn_id, patch: null };
+      obj3 = { clarification: ts.clarification };
+      if (null != ts.ts) {
+        obj4 = { clarificationAt: null };
+        ts = ts.ts;
+        obj4.clarificationAt = ts;
+        obj5 = obj4;
+      } else {
+        obj5 = {};
+      }
+      const merged = Object.assign(obj5);
       obj2.patch = obj3;
-      DispatcherDefault.dispatch(obj2);
+      obj2 = DispatcherDefault.dispatch(obj2);
     }
   },
-  attachment(bottomSheetClose, arg1) {
-    let tmp = null != bottomSheetClose.attachments;
+  attachment(c2, arg1) {
+    let tmp = null != dependencyMap.attachments;
     if (tmp) {
-      tmp = bottomSheetClose.attachments.length > 0;
+      tmp = dependencyMap.attachments.length > 0;
     }
     if (tmp) {
-      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: bottomSheetClose.turn_id, patch: null };
-      obj3 = { attachments: bottomSheetClose.attachments };
+      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: dependencyMap.turn_id, patch: null };
+      obj3 = { attachments: dependencyMap.attachments };
       obj2.patch = obj3;
       DispatcherDefault.dispatch(obj2);
     }

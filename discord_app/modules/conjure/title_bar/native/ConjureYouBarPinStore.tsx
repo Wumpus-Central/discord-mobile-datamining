@@ -1,8 +1,8 @@
-// === Module 9630: ConjureYouBarPinStore ===
+// === Module 9655: ConjureYouBarPinStore ===
 
-// Module 9630 (ConjureYouBarPinStore)
+// Module 9655 (ConjureYouBarPinStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 let obj = { pinnedUserIds: [] };

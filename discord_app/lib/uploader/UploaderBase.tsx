@@ -1,17 +1,17 @@
-// === Module 10164: UploaderBase ===
+// === Module 10189: UploaderBase ===
 
-// Module 10164 (UploaderBase)
+// Module 10189 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8207 */;
-import UploadTargets from "UploadTargets" /* 8230 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8210 */;
+import UploadTargets from "UploadTargets" /* 8233 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const AbortCodes = fn(1084).AbortCodes;
-const FileUploadErrorTypes = fn(5010).FileUploadErrorTypes;
+const AbortCodes = fn(1072).AbortCodes;
+const FileUploadErrorTypes = fn(5014).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
-const EventEmitter = fn(580).EventEmitter;
+const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
   constructor() {
     tmp3 = new UploaderBase(tmp2, new.target, new.target, tmp);
@@ -22,7 +22,7 @@ class UploaderBase extends EventEmitter {
     tmp3._lastUpdate = 0;
     tmp3._loaded = 0;
     tmp3.alreadyStarted = false;
-    tmp3._handleStart = function _handleStart(c5) {
+    tmp3._handleStart = function _handleStart(_cancel) {
       closure_0._cancel = _cancel;
       if (!closure_0.alreadyStarted) {
         closure_0.emit("start", closure_0._file);
@@ -78,7 +78,7 @@ class UploaderBase extends EventEmitter {
     };
     obj = closure_1(closure_2[5]);
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "application" };
+    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "applicationId" };
     return tmp3;
   }
 }
@@ -114,7 +114,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -381,7 +381,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

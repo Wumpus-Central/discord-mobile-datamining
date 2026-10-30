@@ -1,8 +1,8 @@
-// === Module 6741: ChannelSpoilerAgreeStore ===
+// === Module 6748: ChannelSpoilerAgreeStore ===
 
-// Module 6741 (ChannelSpoilerAgreeStore)
+// Module 6748 (ChannelSpoilerAgreeStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 let closure_1 = { users: {} };

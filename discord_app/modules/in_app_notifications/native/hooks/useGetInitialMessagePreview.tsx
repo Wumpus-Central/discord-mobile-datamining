@@ -1,65 +1,15 @@
-// === Module 14239: useGetInitialMessagePreview ===
+// === Module 11046: useGetInitialMessagePreview ===
 
-// Module 14239 (useGetInitialMessagePreview)
-import c from "c" /* 576 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5639 */;
+// Module 11046 (useGetInitialMessagePreview)
+import isForwardMessageDefault from "isForwardMessage" /* 5645 */;
 import noop from "module_19" /* 19 */;
-import MessageRecord from "MessageRecord" /* 4948 */;
+import MessageRecord from "MessageRecord" /* 4952 */;
 
-require = fn;
-const MessageSnapshotRecord = fn(4948).MessageSnapshotRecord;
-const ReactCompilerGating = fn(558);
+const MessageSnapshotRecord = fn(4952).MessageSnapshotRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
 
-export const useGetInitialMessagePreview = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetInitialMessagePreview(message) {
-  const cResult = c.c(4);
-  message = message.message;
-  if (cResult[0] !== message) {
-    const tmp8 = new MessageRecord(message);
-    tmp8.attachments = [];
-    tmp8.stickerItems = [];
-    if (tmp8.embeds.length <= 0) {
-      if (!isForwardMessageDefault(message)) {
-        cResult[0] = message;
-        cResult[1] = tmp8;
-        let tmp3 = tmp8;
-      } else {
-        const _Symbol2 = Symbol;
-        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function f(message) {
-            const obj = { message: null };
-            message = message.message;
-            obj.message = message.merge({ attachments: [], embeds: [], stickerItems: [] });
-            return new MessageSnapshotRecord(obj);
-          };
-          cResult[3] = fn2;
-          let tmp14 = fn2;
-        } else {
-          tmp14 = cResult[3];
-        }
-        const messageSnapshots = tmp8.messageSnapshots;
-        tmp8.messageSnapshots = messageSnapshots.map(tmp14);
-      }
-    } else {
-      const _Symbol = Symbol;
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function u(image) {
-          return null == image.image && null == image.thumbnail;
-        };
-        cResult[2] = fn;
-        let tmp11 = fn;
-      } else {
-        tmp11 = cResult[2];
-      }
-      const embeds = tmp8.embeds;
-      tmp8.embeds = embeds.filter(tmp11);
-    }
-  } else {
-    tmp3 = cResult[1];
-  }
-  return tmp3;
-}) : (function useGetInitialMessagePreview(message) {
+export function useGetInitialMessagePreview(message) {
   message = message.message;
   const items = [message];
   return noop.useMemo(() => {
@@ -76,9 +26,9 @@ export const useGetInitialMessagePreview = ReactCompilerGating.isReactCompilerEn
         const obj = { message: null };
         message = message.message;
         obj.message = message.merge({ attachments: [], embeds: [], stickerItems: [] });
-        return new closure_1_5(obj);
+        return new closure_1_4(obj);
       });
     }
     return tmp2;
   }, items);
-});
+}

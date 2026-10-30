@@ -1,11 +1,11 @@
-// === Module 5684: CountryCodeUtils ===
+// === Module 5690: CountryCodeUtils ===
 
-// Module 5684 (CountryCodeUtils)
+// Module 5690 (CountryCodeUtils)
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1125 */;
-import CountriesDefault from "Countries" /* 5685 */;
-import CountryCodes from "CountryCodes" /* 5686 */;
-import CountryCodesISO3to2 from "CountryCodesISO3to2" /* 5687 */;
+import util from "util" /* 1114 */;
+import CountriesDefault from "Countries" /* 5691 */;
+import CountryCodes from "CountryCodes" /* 5692 */;
+import CountryCodesISO3to2 from "CountryCodesISO3to2" /* 5693 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "United States";
@@ -1064,8 +1064,8 @@ export function getDefaultCountryCode() {
   _modDef38(null != tmp4, "Default country code cannot be missing.");
   return tmp4;
 }
-export function getI18NCountryName(alpha2) {
-  return dependencyMap[alpha2]();
+export function getI18NCountryName(arg0) {
+  return dependencyMap[arg0]();
 }
 export function getI18NCountryNameSafe(arg0) {
   let tmp = arg0;

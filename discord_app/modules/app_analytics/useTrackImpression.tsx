@@ -1,19 +1,16 @@
-// === Module 6016: useTrackImpression ===
+// === Module 6023: useTrackImpression ===
 
-// Module 6016 (useTrackImpression)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtils2 from "AnalyticsUtils" /* 1264 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import useMountEffectDefault from "useMountEffect" /* 5300 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import uniqueIdDefault from "uniqueId" /* 6017 */;
+// Module 6023 (useTrackImpression)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1253 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
+import _modDef1343 from "module_1343" /* 1343 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import uniqueIdDefault from "uniqueId" /* 6024 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
-
-const require = globalThis.__r;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
 
 require = fn;
 function trackImpression(type) {
@@ -49,134 +46,48 @@ function trackImpression(type) {
     channel_id = SelectedChannelStore.getChannelId(guild_id);
   }
   const tmpResult = AnalyticsUtils2;
-  const obj2 = { impression_type: type, location: v65535() };
+  const obj2 = { impression_type: type, location: closure_1_10() };
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
   const tmpResult4 = AppAnalyticsUtils;
   const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(channel_id)));
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj2);
   if (flag) {
-    React6(null, null);
+    React7(null, null);
   } else {
     if (tmp15) {
       AnalyticsUtils2.debugLogEvent(name, result);
       closure_12(name, result);
       const tmpResult6 = AnalyticsUtils2;
     }
-    React6(name, result);
+    React7(name, result);
     tmp15 = null != name && null != type;
   }
   const tmpResult5 = AppAnalyticsUtils;
 }
-const ImpressionStore = fn(1265);
+const ImpressionStore = fn(1254);
 ({ setCurrentImpression: closure_7, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: c10, getImpressionStack: closure_11 } = ImpressionStore);
-const AnalyticsUtils = fn(1272);
-let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1264).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
-const ReactCompilerGating = fn(558);
-let obj2 = { analyticEventConfigs: fn(1264).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+const AnalyticsUtils = fn(1261);
+let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1253).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackImpression(current, arg1, current2) {
-  _require = current;
-  importDefault = current2;
-  const cResult = require("c").c(12);
-  if (cResult[0] !== arg1) {
-    let obj2 = arg1;
-    if (undefined === arg1) {
-      obj2 = { disableTrack: false, trackOnInitialLoad: false };
-    }
-    cResult[0] = arg1;
-    cResult[1] = obj2;
-    let tmp3 = obj2;
-  } else {
-    tmp3 = cResult[1];
-  }
-  dependencyMap = tmp3;
-  noop = noop.useRef(undefined);
-  noop.useRef(undefined);
-  if (cResult[2] === current2) {
-    if (cResult[3] === tmp3.disableTrack) {
-      if (cResult[4] === current) {
-        let tmp4 = cResult[5];
-      }
-      SelectedChannelStore = tmp4;
-      if (cResult[6] === tmp3.trackOnInitialLoad) {
-        if (cResult[7] === tmp4) {
-          let tmp5 = cResult[8];
-        }
-        useMountEffectDefault(tmp5);
-        if (cResult[9] === tmp3.trackOnInitialLoad) {
-          if (cResult[10] === tmp4) {
-            let tmp8 = cResult[11];
-          }
-          const effect = noop.useEffect(tmp8);
-        }
-        class T {
-          constructor() {
-            if (closure_2.trackOnInitialLoad) {
-              return;
-            } else {
-              tmp = closure_5;
-              return closure_5();
-            }
-          }
-        }
-        cResult[9] = tmp3.trackOnInitialLoad;
-        cResult[10] = tmp4;
-        cResult[11] = T;
-        tmp8 = T;
-      }
-      const fn = function v() {
-        if (closure_2.trackOnInitialLoad) {
-          return closure_5();
-        }
-      };
-      cResult[6] = tmp3.trackOnInitialLoad;
-      cResult[7] = tmp4;
-      cResult[8] = fn;
-      tmp5 = fn;
-    }
-  }
-  function trackImpressionEffect() {
-    if (!tmp5) {
-      ref.current = current;
-    }
-    tmp5 = _modDef1354(ref.current, current);
-    if (!tmp8) {
-      ref2.current = current2;
-    }
-    const obj = {};
-    const merged = Object.assign(current);
-    obj.sequenceId = uniqueIdDefault("impression_");
-    trackImpression(obj, closure_2.disableTrack);
-    return () => {
-      if (null != obj) {
-        closure_2_8(tmp);
-      }
-    };
-  }
-  cResult[2] = current2;
-  cResult[3] = tmp3.disableTrack;
-  cResult[4] = current;
-  cResult[5] = trackImpressionEffect;
-  tmp4 = trackImpressionEffect;
-}) : (function useTrackImpression(current, arg1) {
+export default function useTrackImpression(current, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = { disableTrack: false, trackOnInitialLoad: false };
   }
-  dependencyMap = current2;
+  dependencyMap = items;
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5300)(() => {
+  obj(5588)(() => {
     if (obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1354(ref.current, current);
+      const tmp6 = _modDef1343(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1354(ref2.current, current2);
+      const tmp10 = _modDef1343(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }
@@ -196,11 +107,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
   });
   const effect = noop.useEffect(() => {
     if (!obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1354(ref.current, current);
+      const tmp6 = _modDef1343(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1354(ref2.current, current2);
+      const tmp10 = _modDef1343(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }
@@ -218,5 +129,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
       return fn;
     }
   });
-});
+};
 export { trackImpression };

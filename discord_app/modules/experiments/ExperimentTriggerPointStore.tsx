@@ -1,11 +1,11 @@
-// === Module 15497: ExperimentTriggerPointStore ===
+// === Module 15537: ExperimentTriggerPointStore ===
 
-// Module 15497 (ExperimentTriggerPointStore)
+// Module 15537 (ExperimentTriggerPointStore)
 import initializeDefault from "initialize" /* 504 */;
-import Dispatcher2 from "Dispatcher" /* 584 */;
-import ConnectionOpenTriggerPoint2 from "ConnectionOpenTriggerPoint" /* 15499 */;
-import ExperimentStore from "ExperimentStore" /* 5227 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
+import Dispatcher2 from "Dispatcher" /* 572 */;
+import ConnectionOpenTriggerPoint2 from "ConnectionOpenTriggerPoint" /* 15539 */;
+import ExperimentStore from "ExperimentStore" /* 5233 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1247 */;
 
 const Dispatcher = Dispatcher2;
 
@@ -14,7 +14,7 @@ function handleConnectionOpen() {
   const ConnectionOpenTriggerPoint = ConnectionOpenTriggerPoint2.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
-const DebugExperiment = fn(15498);
+const DebugExperiment = fn(15538);
 const Store = initializeDefault.Store;
 class ExperimentTriggerPointStore extends Store {
   constructor() {
@@ -33,4 +33,4 @@ let obj = { CONNECTION_OPEN: handleConnectionOpen };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/ExperimentTriggerPointStore.tsx");
 
-export default new "initialize"(Dispatcher, obj, fn(584).DispatchBand.Early, prototype, ExperimentTriggerPointStore, "initialize", Dispatcher, obj);
+export default new "initialize"(Dispatcher, obj, fn(572).DispatchBand.Early, prototype, ExperimentTriggerPointStore, "initialize", Dispatcher, obj);

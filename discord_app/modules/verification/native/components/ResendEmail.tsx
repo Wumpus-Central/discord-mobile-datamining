@@ -1,321 +1,29 @@
-// === Module 7056: ResendEmail ===
+// === Module 7064: ResendEmail ===
 
-// Module 7056 (ResendEmail)
-import util from "util" /* 1125 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6727 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6981 */;
+// Module 7064 (ResendEmail)
+import util from "util" /* 1114 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6734 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6989 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4851 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4852 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 const View = fn(17).View;
-const VerificationModalScenes = fn(1084).VerificationModalScenes;
+const VerificationModalScenes = fn(1072).VerificationModalScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, resend: { marginTop: 16, width: "100%" }, change: { marginTop: 8, width: "100%" } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/components/ResendEmail.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEmail() {
-  const cResult = navigation(576).c(37);
-  const tmp4 = closure_11();
-  let obj = navigation(576);
-  navigation = navigation(1503).useNavigation();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UserStore];
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    cResult[0] = items;
-    cResult[1] = E;
-    tmp6 = items;
-  } else {
-    [tmp6, tmp7] = cResult;
-  }
-  const obj2 = navigation(1503);
-  const stateFromStores = navigation(504).useStateFromStores(tmp6, E);
-  ({ email, verified } = stateFromStores);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [UserRequiredActionStore];
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    cResult[2] = items1;
-    cResult[3] = tmp13;
-    let tmp11 = tmp13;
-    let tmp10 = items1;
-  } else {
-    tmp10 = cResult[2];
-    tmp11 = cResult[3];
-  }
-  const tmpResult = navigation(504);
-  const stateFromStores1 = navigation(504).useStateFromStores(tmp10, tmp11);
-  if (cResult[4] !== stateFromStores1) {
-    const result = verified(7057).isEmailReverification(stateFromStores1);
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    cResult[4] = stateFromStores1;
-    cResult[5] = result;
-    const obj5 = verified(7057);
-  }
-  const tmpResult2 = navigation(504);
-  [tmp19, dependencyMap] = ref(noop.useState(false), 2);
-  const tmp18 = ref(noop.useState(false), 2);
-  if (cResult[6] !== verified) {
-    class A {
-      constructor() {
-        tmp = verified;
-        if (verified) {
-          tmp2 = closure_3;
-          flag = false;
-          tmp = false === closure_3.current;
-        }
-        if (tmp) {
-          tmp3 = closure_1;
-          tmp4 = closure_2;
-          obj = closure_1(closure_2[14]);
-          closeResult = obj.close();
-        }
-        return;
-      }
-    }
-    const items2 = [verified];
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    cResult[6] = verified;
-    cResult[7] = A;
-    cResult[8] = items2;
-    let tmp21 = items2;
-  } else {
-    class A {
-      constructor() {
-        tmp = verified;
-        if (verified) {
-          tmp2 = closure_3;
-          flag = false;
-          tmp = false === closure_3.current;
-        }
-        if (tmp) {
-          tmp3 = closure_1;
-          tmp4 = closure_2;
-          obj = closure_1(closure_2[14]);
-          closeResult = obj.close();
-        }
-        return;
-      }
-    }
-    tmp21 = cResult[8];
-  }
-  const effect = noop.useEffect(A, tmp21);
-  if (cResult[9] !== verified) {
-    class O {
-      constructor() {
-        closure_3.current = verified;
-        return;
-      }
-    }
-    cResult[9] = verified;
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    cResult[10] = O;
-  } else {
-    class O {
-      constructor() {
-        closure_3.current = verified;
-        return;
-      }
-    }
-  }
-  const effect1 = noop.useEffect(O);
-  if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-    class O {
-      constructor() {
-        closure_3.current = verified;
-        return;
-      }
-    }
-    cResult[11] = tmp25;
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-  } else {
-    class O {
-      constructor() {
-        closure_3.current = verified;
-        return;
-      }
-    }
-  }
-  if (cResult[12] !== navigation) {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-    cResult[12] = navigation;
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    cResult[13] = P;
-  } else {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-  }
-  if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    const tmp28 = closure_9(tmp(7058).EnvelopeOpenSpotIllustration, { scale: 0.75 });
-  } else {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-  }
-  if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-    const stringResult = obj7.string(tmp(1125).t.fUtddV);
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    cResult[15] = stringResult;
-  } else {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-  }
-  if (cResult[16] !== tmp4.title) {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-    let obj3 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    const tmp32 = closure_9(tmp(5271).Text, obj3);
-    cResult[16] = tmp4.title;
-    cResult[17] = tmp32;
-  } else {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-  }
-  if (cResult[18] === email) {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-  }
-  if (tmp19) {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-    { email: null }.email = email;
-    class E {
-      constructor() {
-        currentUser = closure_1_7.getCurrentUser();
-        tmp2 = verified(closure_2[11])(null != currentUser, "ResendEmail: user cannot be undefined");
-        return currentUser;
-      }
-    }
-    const obj4 = { email: null };
-  } else {
-    class P {
-      constructor() {
-        arr = closure_0.push(VerificationModalScenes.ENTER_EMAIL);
-        return;
-      }
-    }
-    const tmp33Result = tmp33(tmp(1125).t.tSXg8O);
-  }
-  cResult[18] = email;
-  cResult[19] = tmp19;
-  cResult[20] = tmp33Result;
-  ref = noop.useRef(verified);
-}) : (function ResendEmail() {
+export default function ResendEmail() {
   let tmp = closure_11();
-  navigation = navigation(1503).useNavigation();
-  let obj = navigation(1503);
+  navigation = navigation(1498).useNavigation();
+  let obj = navigation(1498);
   const items = [UserStore];
   const stateFromStores = navigation(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -327,11 +35,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const items1 = [UserRequiredActionStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items1, () => action.getAction());
   let obj3 = navigation(504);
-  const result = verified(7057).isEmailReverification(stateFromStores1);
+  const result = verified(7065).isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
-  const obj4 = verified(7057);
-  [tmp10, dependencyMap] = ref(noop.useState(false), 2);
-  const tmp9 = ref(noop.useState(false), 2);
+  const obj4 = verified(7065);
+  [tmp10, dependencyMap] = noop.useState(false);
+  _slicedToArray = noop.useRef(verified);
   const items2 = [verified];
   const effect = noop.useEffect(() => {
     let tmp = verified;
@@ -350,25 +58,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const callback = noop.useCallback(() => {
     navigation.push(VerificationModalScenes.ENTER_EMAIL);
   }, items3);
-  const items4 = [closure_9(navigation(7058).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [closure_9(navigation(7066).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  let intl = navigation(1125).intl;
-  obj6.children = intl.string(navigation(1125).t.fUtddV);
-  items4[1] = closure_9(navigation(5271).Text, obj6);
+  let intl = navigation(1114).intl;
+  obj6.children = intl.string(navigation(1114).t.fUtddV);
+  items4[1] = closure_9(navigation(5619).Text, obj6);
   const obj7 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = navigation(1125).intl;
+  const intl2 = navigation(1114).intl;
   if (tmp10) {
     const obj8 = { email: stateFromStores.email };
-    let formatResult = intl2.format(tmp2(1125).t.JqLgQL, obj8);
+    let formatResult = intl2.format(tmp2(1114).t.JqLgQL, obj8);
   } else {
-    formatResult = intl2.string(tmp2(1125).t.tSXg8O);
+    formatResult = intl2.string(tmp2(1114).t.tSXg8O);
   }
   obj7.children = formatResult;
-  items4[2] = closure_9(navigation(5271).Text, obj7);
+  items4[2] = closure_9(navigation(5619).Text, obj7);
   const obj9 = { style: tmp.resend, children: null };
   const obj10 = { text: null, variant: "primary", onPress: null, grow: true };
-  const intl3 = tmp2(1125).intl;
-  obj10.text = intl3.string(navigation(1125).t.WnX4J2);
+  const intl3 = tmp2(1114).intl;
+  obj10.text = intl3.string(navigation(1114).t.WnX4J2);
   obj10.onPress = function handleResendEmail() {
     dependencyMap(true);
     AuthenticationActionCreatorsDefault.verifyResend();
@@ -377,18 +85,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
     obj3.text = intl.string(util.t["84yeoz"]);
     ToastActionCreatorsDefault.open("USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", obj3);
   };
-  obj9.children = closure_9(navigation(5281).Button, obj10);
+  obj9.children = closure_9(navigation(5629).Button, obj10);
   items4[3] = closure_9(View, obj9);
   if (!result) {
     const obj11 = { style: tmp.change, children: null };
     const obj12 = { text: null, variant: "secondary", onPress: null, grow: true };
-    const intl4 = tmp2(1125).intl;
-    obj12.text = intl4.string(tmp2(1125).t.Vm8akB);
+    const intl4 = tmp2(1114).intl;
+    obj12.text = intl4.string(tmp2(1114).t.Vm8akB);
     obj12.onPress = callback;
-    obj11.children = closure_9(tmp2(5281).Button, obj12);
+    obj11.children = closure_9(tmp2(5629).Button, obj12);
     tmp16Result = closure_9(View, obj11);
   }
   items4[4] = tmp16Result;
   obj5.children = items4;
   return closure_10(View, obj5);
-});
+};

@@ -1,50 +1,50 @@
-// === Module 11177: useMobileTenureBadgeImages ===
+// === Module 11382: useMobileTenureBadgeImages ===
 
-// Module 11177 (useMobileTenureBadgeImages)
-import PremiumConstants from "PremiumConstants" /* 1391 */;
-import _modDef11178 from "module_11178" /* 11178 */;
-import _modDef11179 from "module_11179" /* 11179 */;
-import _modDef11180 from "module_11180" /* 11180 */;
-import _modDef11181 from "module_11181" /* 11181 */;
-import _modDef11182 from "module_11182" /* 11182 */;
-import _modDef11183 from "module_11183" /* 11183 */;
-import _modDef11184 from "module_11184" /* 11184 */;
-import _modDef11185 from "module_11185" /* 11185 */;
-import _modDef11186 from "module_11186" /* 11186 */;
-import _modDef11187 from "module_11187" /* 11187 */;
-import _modDef11188 from "module_11188" /* 11188 */;
-import _modDef11189 from "module_11189" /* 11189 */;
-import _modDef11190 from "module_11190" /* 11190 */;
-import _modDef11191 from "module_11191" /* 11191 */;
-import _modDef11192 from "module_11192" /* 11192 */;
-import _modDef11193 from "module_11193" /* 11193 */;
-import _modDef11194 from "module_11194" /* 11194 */;
-import _modDef11195 from "module_11195" /* 11195 */;
-import _modDef11196 from "module_11196" /* 11196 */;
-import _modDef11197 from "module_11197" /* 11197 */;
-import _modDef11198 from "module_11198" /* 11198 */;
-import _modDef11199 from "module_11199" /* 11199 */;
-import _modDef11200 from "module_11200" /* 11200 */;
-import _modDef11201 from "module_11201" /* 11201 */;
+// Module 11382 (useMobileTenureBadgeImages)
+import PremiumConstants from "PremiumConstants" /* 1386 */;
+import _modDef11383 from "module_11383" /* 11383 */;
+import _modDef11384 from "module_11384" /* 11384 */;
+import _modDef11385 from "module_11385" /* 11385 */;
+import _modDef11386 from "module_11386" /* 11386 */;
+import _modDef11387 from "module_11387" /* 11387 */;
+import _modDef11388 from "module_11388" /* 11388 */;
+import _modDef11389 from "module_11389" /* 11389 */;
+import _modDef11390 from "module_11390" /* 11390 */;
+import _modDef11391 from "module_11391" /* 11391 */;
+import _modDef11392 from "module_11392" /* 11392 */;
+import _modDef11393 from "module_11393" /* 11393 */;
+import _modDef11394 from "module_11394" /* 11394 */;
+import _modDef11395 from "module_11395" /* 11395 */;
+import _modDef11396 from "module_11396" /* 11396 */;
+import _modDef11397 from "module_11397" /* 11397 */;
+import _modDef11398 from "module_11398" /* 11398 */;
+import _modDef11399 from "module_11399" /* 11399 */;
+import _modDef11400 from "module_11400" /* 11400 */;
+import _modDef11401 from "module_11401" /* 11401 */;
+import _modDef11402 from "module_11402" /* 11402 */;
+import _modDef11403 from "module_11403" /* 11403 */;
+import _modDef11404 from "module_11404" /* 11404 */;
+import _modDef11405 from "module_11405" /* 11405 */;
+import _modDef11406 from "module_11406" /* 11406 */;
 import size from "module_2" /* 2 */;
 
 const TieredTenureBadge = PremiumConstants.TieredTenureBadge;
 const obj = {};
-obj[TieredTenureBadge.PREMIUM_TENURE_1_MONTH] = { small: _modDef11178, medium: _modDef11179, large: _modDef11180 };
-const obj2 = { small: _modDef11178, medium: _modDef11179, large: _modDef11180 };
-obj[TieredTenureBadge.PREMIUM_TENURE_3_MONTH] = { small: _modDef11181, medium: _modDef11182, large: _modDef11183 };
-const obj3 = { small: _modDef11181, medium: _modDef11182, large: _modDef11183 };
-obj[TieredTenureBadge.PREMIUM_TENURE_6_MONTH] = { small: _modDef11184, medium: _modDef11185, large: _modDef11186 };
-const obj4 = { small: _modDef11184, medium: _modDef11185, large: _modDef11186 };
-obj[TieredTenureBadge.PREMIUM_TENURE_12_MONTH] = { small: _modDef11187, medium: _modDef11188, large: _modDef11189 };
-const obj5 = { small: _modDef11187, medium: _modDef11188, large: _modDef11189 };
-obj[TieredTenureBadge.PREMIUM_TENURE_24_MONTH] = { small: _modDef11190, medium: _modDef11191, large: _modDef11192 };
-const obj6 = { small: _modDef11190, medium: _modDef11191, large: _modDef11192 };
-obj[TieredTenureBadge.PREMIUM_TENURE_36_MONTH] = { small: _modDef11193, medium: _modDef11194, large: _modDef11195 };
-const obj7 = { small: _modDef11193, medium: _modDef11194, large: _modDef11195 };
-obj[TieredTenureBadge.PREMIUM_TENURE_60_MONTH] = { small: _modDef11196, medium: _modDef11197, large: _modDef11198 };
-const obj8 = { small: _modDef11196, medium: _modDef11197, large: _modDef11198 };
-obj[TieredTenureBadge.PREMIUM_TENURE_72_MONTH] = { small: _modDef11199, medium: _modDef11200, large: _modDef11201 };
+obj[TieredTenureBadge.PREMIUM_TENURE_1_MONTH] = { small: _modDef11383, medium: _modDef11384, large: _modDef11385 };
+const obj2 = { small: _modDef11383, medium: _modDef11384, large: _modDef11385 };
+obj[TieredTenureBadge.PREMIUM_TENURE_3_MONTH] = { small: _modDef11386, medium: _modDef11387, large: _modDef11388 };
+const obj3 = { small: _modDef11386, medium: _modDef11387, large: _modDef11388 };
+obj[TieredTenureBadge.PREMIUM_TENURE_6_MONTH] = { small: _modDef11389, medium: _modDef11390, large: _modDef11391 };
+const obj4 = { small: _modDef11389, medium: _modDef11390, large: _modDef11391 };
+obj[TieredTenureBadge.PREMIUM_TENURE_12_MONTH] = { small: _modDef11392, medium: _modDef11393, large: _modDef11394 };
+const obj5 = { small: _modDef11392, medium: _modDef11393, large: _modDef11394 };
+obj[TieredTenureBadge.PREMIUM_TENURE_24_MONTH] = { small: _modDef11395, medium: _modDef11396, large: _modDef11397 };
+const obj6 = { small: _modDef11395, medium: _modDef11396, large: _modDef11397 };
+obj[TieredTenureBadge.PREMIUM_TENURE_36_MONTH] = { small: _modDef11398, medium: _modDef11399, large: _modDef11400 };
+const obj7 = { small: _modDef11398, medium: _modDef11399, large: _modDef11400 };
+obj[TieredTenureBadge.PREMIUM_TENURE_60_MONTH] = { small: _modDef11401, medium: _modDef11402, large: _modDef11403 };
+const obj8 = { small: _modDef11401, medium: _modDef11402, large: _modDef11403 };
+obj[TieredTenureBadge.PREMIUM_TENURE_72_MONTH] = { small: _modDef11404, medium: _modDef11405, large: _modDef11406 };
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/hooks/useMobileTenureBadgeImages.tsx");
 
 export function useMobileTenureBadgeImages(id) {

@@ -1,112 +1,23 @@
-// === Module 17086: LabeledDataBlock ===
+// === Module 17140: LabeledDataBlock ===
 
-// Module 17086 (LabeledDataBlock)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1199 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import Pressables from "Pressables" /* 6968 */;
+// Module 17140 (LabeledDataBlock)
+import nativeDefault from "native" /* 575 */;
+import native from "native" /* 1188 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import Pressables from "Pressables" /* 6974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 }, title: { marginRight: 4 }, titleSection: { flexDirection: "row", alignItems: "center", marginBottom: 16 } };
 let closure_5 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function LabeledDataBlock(arg0) {
-  const cResult = c.c(19);
-  ({ children, title, style, icon, onPressIcon } = arg0);
-  const tmp4 = closure_5();
-  if (cResult[0] === style) {
-    if (cResult[1] === tmp4.container) {
-      let tmp5 = cResult[2];
-    }
-    if (cResult[3] === tmp4.title) {
-      if (cResult[4] === title) {
-        let tmp6 = cResult[5];
-      }
-      if (cResult[6] === icon) {
-        if (cResult[7] === onPressIcon) {
-          let tmp9 = cResult[8];
-        }
-        if (cResult[9] === tmp4.titleSection) {
-          if (cResult[10] === tmp6) {
-            if (cResult[11] === tmp9) {
-              let tmp13 = cResult[12];
-            }
-            if (cResult[13] !== children) {
-              let tmp18 = children;
-              if (typeof children === "string") {
-                const obj2 = { variant: "heading-xl/medium", color: "mobile-text-heading-primary", children };
-                tmp18 = React3(Text_Text.Text, obj2);
-              }
-              cResult[13] = children;
-              cResult[14] = tmp18;
-              let tmp17 = tmp18;
-            } else {
-              tmp17 = cResult[14];
-            }
-            if (cResult[15] === tmp5) {
-              if (cResult[16] === tmp13) {
-                if (cResult[17] === tmp17) {
-                  let tmp19 = cResult[18];
-                }
-                return tmp19;
-              }
-            }
-            const obj3 = { style: tmp5, children: null };
-            const items = [tmp13, tmp17];
-            obj3.children = items;
-            const tmp22 = React4(View, obj3);
-            cResult[15] = tmp5;
-            cResult[16] = tmp13;
-            cResult[17] = tmp17;
-            cResult[18] = tmp22;
-            tmp19 = tmp22;
-          }
-        }
-        const obj4 = { style: tmp4.titleSection, children: null };
-        const items1 = [tmp6, tmp9];
-        obj4.children = items1;
-        const tmp16 = React4(View, obj4);
-        cResult[9] = tmp4.titleSection;
-        cResult[10] = tmp6;
-        cResult[11] = tmp9;
-        cResult[12] = tmp16;
-        tmp13 = tmp16;
-      }
-      let tmp11 = null != icon;
-      if (tmp11) {
-        const obj5 = { accessibilityRole: "button", onPress: onPressIcon, children: null };
-        const obj6 = { size: native.Icon.Sizes.SMALL, source: icon };
-        obj5.children = React3(native.Icon, obj6);
-        tmp11 = React3(Pressables.PressableOpacity, obj5);
-      }
-      cResult[6] = icon;
-      cResult[7] = onPressIcon;
-      cResult[8] = tmp11;
-      tmp9 = tmp11;
-    }
-    const obj7 = { style: tmp4.title, accessibilityRole: "header", variant: "text-sm/medium", color: "interactive-text-default", children: title };
-    const tmp8 = React3(Text_Text.Text, obj7);
-    cResult[3] = tmp4.title;
-    cResult[4] = title;
-    cResult[5] = tmp8;
-    tmp6 = tmp8;
-  }
-  const items2 = [tmp4.container, style];
-  cResult[0] = style;
-  cResult[1] = tmp4.container;
-  cResult[2] = items2;
-  tmp5 = items2;
-}) : (function LabeledDataBlock(arg0) {
+export default function LabeledDataBlock(arg0) {
   ({ children, icon } = arg0);
   ({ title, style, onPressIcon } = arg0);
   const tmp = closure_5();
@@ -133,4 +44,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LabeledD
   items2[1] = tmp4Result2;
   obj.children = items2;
   return React4(View, obj);
-});
+};

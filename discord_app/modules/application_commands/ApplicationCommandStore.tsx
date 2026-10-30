@@ -1,12 +1,12 @@
-// === Module 8361: ApplicationCommandStore ===
+// === Module 8338: ApplicationCommandStore ===
 
-// Module 8361 (ApplicationCommandStore)
+// Module 8338 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7693 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6849 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6856 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
 
 require = fn;
 function handleInit() {
@@ -134,7 +134,7 @@ function handleUpdateOptionStates(channelId) {
           }
         }
       } else {
-        obj[tmp9] = { hasValue: false, isActive: false, lastValidationResult: null, optionValue: null, location: "r", length: "IconComponent" };
+        obj[tmp9] = { hasValue: false, isActive: false, lastValidationResult: null, optionValue: null, location: "r", length: "HermesInternal" };
         if (tmp.activeOptionName === tmp9) {
           tmp.activeOptionName = null;
         }

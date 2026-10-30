@@ -1,113 +1,23 @@
-// === Module 14731: MediaViewerPager ===
+// === Module 14766: MediaViewerPager ===
 
-// Module 14731 (MediaViewerPager)
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8792 */;
-import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 14728 */;
+// Module 14766 (MediaViewerPager)
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8826 */;
+import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter" /* 14762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let closure_6 = { code: "function MediaViewerPagerTsx1(){const{zoomScale,isClosing}=this.__closure;return zoomScale.get()<=1&&!isClosing.get();}" };
-let closure_7 = { code: "function MediaViewerPagerTsx2(_,manager){const{isPaging}=this.__closure;if(isPaging.get()){manager.fail();}}" };
-let closure_8 = { code: "function MediaViewerPagerTsx3(t13){const{zoomed,zoomRef}=this.__closure;var x=t13.x,y=t13.y;if(zoomed.get()){var _zoomRef$current;(_zoomRef$current=zoomRef.current)===null||_zoomRef$current===void 0||_zoomRef$current.unzoom();}else{var _zoomRef$current2;(_zoomRef$current2=zoomRef.current)===null||_zoomRef$current2===void 0||_zoomRef$current2.zoomTo({x:x,y:y});}}" };
-let closure_9 = { code: "function MediaViewerPagerTsx4(){const{hasSpoiler,removeSpoiler,currentPage,zoomed,overlayEnabled}=this.__closure;if(hasSpoiler){removeSpoiler(currentPage);}else{if(!zoomed.get()){overlayEnabled.set(!overlayEnabled.get());}}}" };
-let closure_10 = { code: "function MediaViewerPagerTsx5(){const{shouldHideMediaOptions,onLongPress}=this.__closure;if(!shouldHideMediaOptions){var _onLongPress;(_onLongPress=onLongPress)===null||_onLongPress===void 0||_onLongPress();}}" };
-let closure_11 = { code: "function MediaViewerPagerTsx6(){const{zoomScale}=this.__closure;return zoomScale.get()>1;}" };
-let closure_12 = { code: "function MediaViewerPagerTsx7(isZoomed,previous){const{zoomed,isInteracting}=this.__closure;if(previous===isZoomed){return;}zoomed.set(isZoomed);isInteracting.set(isZoomed);}" };
-let closure_13 = { code: "function MediaViewerPagerTsx8(){const{zoomScale,isClosing}=this.__closure;return zoomScale.get()<=1&&!isClosing.get();}" };
-let closure_14 = { code: "function MediaViewerPagerTsx9(_,manager){const{isPaging}=this.__closure;if(isPaging.get())manager.fail();}" };
-let closure_15 = { code: "function MediaViewerPagerTsx10(){const{zoomScale}=this.__closure;return zoomScale.get()>1;}" };
-let closure_16 = { code: "function MediaViewerPagerTsx11(isZoomed,previous){const{zoomed,isInteracting}=this.__closure;if(previous===isZoomed)return;zoomed.set(isZoomed);isInteracting.set(isZoomed);}" };
-const ReactCompilerGating = fn(558);
+let closure_7 = { code: "function MediaViewerPagerTsx2(_,manager){const{isPaging}=this.__closure;if(isPaging.get())manager.fail();}" };
+let closure_8 = { code: "function MediaViewerPagerTsx3(){const{zoomScale}=this.__closure;return zoomScale.get()>1;}" };
+let closure_9 = { code: "function MediaViewerPagerTsx4(isZoomed,previous){const{zoomed,isInteracting}=this.__closure;if(previous===isZoomed)return;zoomed.set(isZoomed);isInteracting.set(isZoomed);}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerPager.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MediaViewerPager(entranceAnimationDriver) {
-  const cResult = entranceAnimationDriver(pagerIndex[4]).c(65);
-  entranceAnimationDriver = entranceAnimationDriver.entranceAnimationDriver;
-  const onLongPress = entranceAnimationDriver.onLongPress;
-  ({ onScrollWorklets, pagerIndex } = entranceAnimationDriver);
-  const panGestureConfig = entranceAnimationDriver.panGestureConfig;
-  const sources = entranceAnimationDriver.sources;
-  const renderMedia = entranceAnimationDriver.renderMedia;
-  const originLayout = entranceAnimationDriver.originLayout;
-  const useItemVisible = entranceAnimationDriver.useItemVisible;
-  const windowWidth = entranceAnimationDriver.windowWidth;
-  const windowHeight = entranceAnimationDriver.windowHeight;
-  const zoomed = entranceAnimationDriver.zoomed;
-  if (cResult[0] !== pagerIndex) {
-    class S {
-      constructor() {
-        return pagerIndex.get();
-      }
-    }
-    cResult[0] = pagerIndex;
-    cResult[1] = S;
-  } else {
-    class S {
-      constructor() {
-        return pagerIndex.get();
-      }
-    }
-  }
-  let obj = entranceAnimationDriver(pagerIndex[4]);
-  let tmp = entranceAnimationDriver;
-  const first = panGestureConfig(sources.useState(S), 2)[0];
-  if (cResult[2] !== sources[first]) {
-    class S {
-      constructor() {
-        return pagerIndex.get();
-      }
-    }
-    let flattenSourceResult;
-    if (null != tmp7) {
-      class S {
-        constructor() {
-          return pagerIndex.get();
-        }
-      }
-      flattenSourceResult = obj2.flattenSource(tmp7);
-    }
-    cResult[2] = tmp7;
-    cResult[3] = flattenSourceResult;
-  } else {
-    class S {
-      constructor() {
-        return pagerIndex.get();
-      }
-    }
-  }
-  flattenSourceResult = tmp8;
-  let tmp5 = panGestureConfig(sources.useState(S), 2);
-  const mediaItemHasSpoiler = tmp(pagerIndex[6]).useMediaItemHasSpoiler(first);
-  const tmp11 = onLongPress;
-  const tmpResult = tmp(pagerIndex[6]);
-  if (tmp8 != null) {
-    class S {
-      constructor() {
-        return pagerIndex.get();
-      }
-    }
-  }
-  const tmp12 = onLongPress(pagerIndex[7]);
-  closure_14 = onLongPress(pagerIndex[7])(undefined);
-  if (cResult[4] === sources[first]) {
-    class S {
-      constructor() {
-        return pagerIndex.get();
-      }
-    }
-  }
-  const tmp12Result = onLongPress(pagerIndex[7])(undefined);
-  cResult[4] = sources[first];
-  cResult[5] = windowHeight;
-  cResult[6] = windowWidth;
-  cResult[7] = tmp11(pagerIndex[8])(windowWidth, windowHeight, sources[first]);
-  const tmp14 = tmp11(pagerIndex[8])(windowWidth, windowHeight, sources[first]);
-}) : (function MediaViewerPager(entranceAnimationDriver) {
+export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   entranceAnimationDriver = entranceAnimationDriver.entranceAnimationDriver;
   const onLongPress = entranceAnimationDriver.onLongPress;
   ({ onScrollWorklets, pagerIndex } = entranceAnimationDriver);
@@ -121,7 +31,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const zoomed = entranceAnimationDriver.zoomed;
   c12 = undefined;
   let mediaItemHasSpoiler;
-  __initData = undefined;
+  closure_14 = undefined;
   let ref;
   let ref1;
   let sharedValue;
@@ -137,49 +47,46 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const first = tmp[0];
   let flattenSourceResult;
   if (null != sources[first]) {
-    flattenSourceResult = entranceAnimationDriver(pagerIndex[5]).flattenSource(tmp3);
-    const obj2 = entranceAnimationDriver(pagerIndex[5]);
+    flattenSourceResult = entranceAnimationDriver(pagerIndex[3]).flattenSource(tmp3);
+    const obj2 = entranceAnimationDriver(pagerIndex[3]);
   }
   c12 = flattenSourceResult;
-  mediaItemHasSpoiler = entranceAnimationDriver(pagerIndex[6]).useMediaItemHasSpoiler(first);
+  mediaItemHasSpoiler = entranceAnimationDriver(pagerIndex[4]).useMediaItemHasSpoiler(first);
   let channelId;
-  const obj3 = entranceAnimationDriver(pagerIndex[6]);
+  const obj3 = entranceAnimationDriver(pagerIndex[4]);
   if (flattenSourceResult != null) {
     channelId = flattenSourceResult.channelId;
   }
-  const tmp11Result = onLongPress(pagerIndex[7])(channelId);
-  __initData = tmp11Result;
-  const tmp11 = onLongPress(pagerIndex[7]);
-  ({ width, height, maximumZoomScale } = onLongPress(pagerIndex[8])(windowWidth, windowHeight, sources[first]));
+  const tmp11Result = onLongPress(pagerIndex[5])(channelId);
+  closure_14 = tmp11Result;
+  const tmp11 = onLongPress(pagerIndex[5]);
+  ({ width, height, maximumZoomScale } = onLongPress(pagerIndex[6])(windowWidth, windowHeight, sources[first]));
   ref = obj.useRef(null);
   ref1 = obj.useRef(undefined);
-  const tmp14 = onLongPress(pagerIndex[8])(windowWidth, windowHeight, sources[first]);
-  sharedValue = entranceAnimationDriver(pagerIndex[9]).useSharedValue(false);
-  const tmp7Result = entranceAnimationDriver(pagerIndex[9]);
-  sharedValue1 = entranceAnimationDriver(pagerIndex[9]).useSharedValue(1);
+  const tmp14 = onLongPress(pagerIndex[6])(windowWidth, windowHeight, sources[first]);
+  sharedValue = entranceAnimationDriver(pagerIndex[7]).useSharedValue(false);
+  const tmp7Result = entranceAnimationDriver(pagerIndex[7]);
+  sharedValue1 = entranceAnimationDriver(pagerIndex[7]).useSharedValue(1);
   isInteracting = panGestureConfig.isInteracting;
   isClosing = panGestureConfig.isClosing;
   overlayEnabled = panGestureConfig.overlayEnabled;
-  const tmp7Result5 = entranceAnimationDriver(pagerIndex[9]);
-  class C {
-    constructor() {
-      tmp = closure_18.get() <= 1;
-      if (tmp) {
-        tmp2 = isClosing;
-        tmp = !isClosing.get();
-      }
-      return tmp;
+  const tmp7Result5 = entranceAnimationDriver(pagerIndex[7]);
+  let fn = function z() {
+    let tmp = sharedValue1.get() <= 1;
+    if (tmp) {
+      tmp = !isClosing.get();
     }
-  }
-  C.__closure = { zoomScale: sharedValue1, isClosing };
-  C.__workletHash = 14916863344010;
-  C.__initData = mediaItemHasSpoiler;
-  const derivedValue = entranceAnimationDriver(pagerIndex[9]).useDerivedValue(C);
-  const tmp7Result6 = entranceAnimationDriver(pagerIndex[9]);
-  const mediaViewerPanGesture = entranceAnimationDriver(pagerIndex[10]).useMediaViewerPanGesture(panGestureConfig, derivedValue);
+    return tmp;
+  };
+  fn.__closure = { zoomScale: sharedValue1, isClosing };
+  fn.__workletHash = 2867564605891;
+  fn.__initData = originLayout;
+  const derivedValue = entranceAnimationDriver(pagerIndex[7]).useDerivedValue(fn);
+  const tmp7Result6 = entranceAnimationDriver(pagerIndex[7]);
+  const mediaViewerPanGesture = entranceAnimationDriver(pagerIndex[8]).useMediaViewerPanGesture(panGestureConfig, derivedValue);
   const panGestureGeneratorResult = mediaViewerPanGesture.panGestureGenerator(0);
   c22 = panGestureGeneratorResult;
-  const effect = obj.useEffect(() => entranceAnimationDriver(pagerIndex[11]).dismissKeyboard(), []);
+  const effect = obj.useEffect(() => entranceAnimationDriver(pagerIndex[9]).dismissKeyboard(), []);
   const items = [first, windowWidth, windowHeight, mediaItemHasSpoiler];
   const effect1 = obj.useEffect(() => {
     const current = ref.current;
@@ -192,13 +99,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const callback = obj.useCallback((simultaneousWithExternalGesture, simultaneousWithExternalGesture2) => {
     const Gesture = LegacyBaseButton.Gesture;
     const result = simultaneousWithExternalGesture.simultaneousWithExternalGesture(ref1, c22);
-    const fn = function t(arg0, fail) {
+    const fn = function o(arg0, fail) {
       if (sharedValue.get()) {
         fail.fail();
       }
     };
     fn.__closure = { isPaging: sharedValue };
-    fn.__workletHash = 6857879304501;
+    fn.__workletHash = 119388263678;
     fn.__initData = __initData;
     return Gesture.Simultaneous(result.onTouchesDown(fn), simultaneousWithExternalGesture2.simultaneousWithExternalGesture(ref1, c22));
   }, items1);
@@ -277,16 +184,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const Gesture6 = LegacyBaseButton.Gesture;
     return Gesture4.Simultaneous(Gesture5.Race(onStartResult, c22), Gesture6.Exclusive(onStartResult, onStartResult1), onStartResult2);
   }, items5);
-  const tmp7Result7 = entranceAnimationDriver(pagerIndex[10]);
-  class N {
+  const tmp7Result7 = entranceAnimationDriver(pagerIndex[8]);
+  class Q {
     constructor() {
       return closure_18.get() > 1;
     }
   }
-  N.__closure = { zoomScale: sharedValue1 };
-  N.__workletHash = 5407919468888;
-  N.__initData = ref;
-  class B {
+  Q.__closure = { zoomScale: sharedValue1 };
+  Q.__workletHash = 14368392963786;
+  Q.__initData = windowWidth;
+  class N {
     constructor(arg0, arg1) {
       if (arg1 !== entranceAnimationDriver) {
         tmp = zoomed;
@@ -297,16 +204,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return;
     }
   }
-  B.__closure = { zoomed, isInteracting };
-  B.__workletHash = 8295874676092;
-  B.__initData = ref1;
-  const animatedReaction = entranceAnimationDriver(pagerIndex[9]).useAnimatedReaction(N, B);
+  N.__closure = { zoomed, isInteracting };
+  N.__workletHash = 16737291391784;
+  N.__initData = windowHeight;
+  const animatedReaction = entranceAnimationDriver(pagerIndex[7]).useAnimatedReaction(Q, N);
   const items6 = [entranceAnimationDriver, originLayout, panGestureConfig, renderMedia, sources, useItemVisible, windowWidth, windowHeight];
   const callback5 = obj.useCallback((index) => jsx(MediaViewerItemPresenterDefault, { useItemVisible, index, source: sources[index], originLayout, renderMedia, windowWidth, windowHeight, entranceAnimationDriver, panGestureConfig }), items6);
   const obj4 = { ref, zoomScale: sharedValue1, onCreateGesture: callback, gestureEnabled: !mediaItemHasSpoiler, contentWidth: width, contentHeight: height, maximumZoomScale, children: null };
-  const tmp7Result8 = entranceAnimationDriver(pagerIndex[9]);
+  const tmp7Result8 = entranceAnimationDriver(pagerIndex[7]);
   const obj5 = {};
-  const tmp10Result = onLongPress(pagerIndex[17]);
+  const tmp10Result = onLongPress(pagerIndex[14]);
   const merged = Object.assign(onScrollWorklets);
   obj5.selectedPage = pagerIndex;
   obj5.onPageChanged = tmp[1];
@@ -318,6 +225,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj5.height = windowHeight;
   obj5.gestureRef = ref1;
   obj5.gestureEnabled = derivedValue;
-  obj4.children = renderMedia(onLongPress(pagerIndex[16]), obj5);
+  obj4.children = renderMedia(onLongPress(pagerIndex[15]), obj5);
   return renderMedia(tmp10Result, obj4);
-}));
+});

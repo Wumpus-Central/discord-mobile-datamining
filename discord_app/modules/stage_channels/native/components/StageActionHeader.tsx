@@ -1,80 +1,50 @@
-// === Module 11780: StageActionHeader ===
+// === Module 11973: StageActionHeader ===
 
-// Module 11780 (StageActionHeader)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import LinearGradientDefault from "LinearGradient" /* 5295 */;
-import useChannelNameDefault from "useChannelName" /* 5641 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5748 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7925 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7927 */;
-import _modDef8160 from "module_8160" /* 8160 */;
-import _modDef8969 from "module_8969" /* 8969 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9086 */;
-import StatusBarDefault from "StatusBar" /* 10963 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 11629 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11643 */;
-import _modDef11781 from "module_11781" /* 11781 */;
-import _modDef11782 from "module_11782" /* 11782 */;
-import _modDef11783 from "module_11783" /* 11783 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11784 */;
-import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 11785 */;
+// Module 11973 (StageActionHeader)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import LinearGradientDefault from "LinearGradient" /* 5582 */;
+import useChannelNameDefault from "useChannelName" /* 5647 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5754 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7931 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7933 */;
+import _modDef8166 from "module_8166" /* 8166 */;
+import _modDef8188 from "module_8188" /* 8188 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9099 */;
+import StatusBarDefault from "StatusBar" /* 11193 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11843 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11857 */;
+import _modDef11974 from "module_11974" /* 11974 */;
+import _modDef11975 from "module_11975" /* 11975 */;
+import _modDef11976 from "module_11976" /* 11976 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11977 */;
+import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 11978 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6873 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import StageInstanceStore from "StageInstanceStore" /* 4862 */;
-import StageMusicStore from "StageMusicStore" /* 11617 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6880 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import StageInstanceStore from "StageInstanceStore" /* 4863 */;
+import StageMusicStore from "StageMusicStore" /* 11836 */;
 
 require = fn;
-const View = fn(17).View;
-const Constants = fn(1084);
-({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5005);
-let obj = { header: { height: fn(5305).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, overflow: "visible" }, leftTitleContainer: { marginLeft: 12, flex: 1 }, titleWrapper: { position: "relative", flex: 1, justifyContent: "center" }, linearGradient: { position: "absolute", zIndex: 1, left: 0, right: 0, top: 0, bottom: 0 }, iconBackground: null, iconContainer: null, settingsButton: null, stageInfo: null, stageInfoTopic: null, icon: null };
-let obj4 = { backgroundColor: null };
-let ColorUtils = fn(5002);
-obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
-obj.iconBackground = obj4;
-let obj5 = { backgroundColor: null };
-ColorUtils = fn(5002);
-obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
-obj.iconContainer = obj5;
-obj.settingsButton = { marginRight: 4 };
-let obj3 = { height: fn(5305).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, overflow: "visible" };
-obj.stageInfo = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
-obj.stageInfoTopic = { marginLeft: 4 };
-let obj7 = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
-obj.icon = { marginLeft: 8, marginRight: 4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
-let closure_14 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HideStageChannelCallIcon(channel) {
-  const cResult = channel(576).c(12);
-  channel = channel.channel;
-  const tmp4 = closure_14();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildReadStateStore];
-    const fn = function o() {
-      return totalMentionCount.getTotalMentionCount();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
-  } else {
-    [tmp5, tmp6] = cResult;
-  }
-  let obj = channel(576);
-  const stateFromStores = channel(504).useStateFromStores(tmp5, tmp6);
-  if (cResult[2] !== channel) {
-    function handleClose() {
+class HideStageChannelCallIcon {
+  constructor(arg0) {
+    channel = global.channel;
+    tmp = closure_14();
+    obj = channel(closure_2[19]);
+    items = [];
+    items[0] = closure_6;
+    stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
+    obj1 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
+    tmp3 = closure_1(closure_2[20]);
+    obj1.source = closure_1(closure_2[21]);
+    intl = channel(closure_2[22]).intl;
+    obj1.accessibilityLabel = intl.string(channel(closure_2[22]).t.cpT0Cq);
+    obj1.onPress = function handleClose() {
       const obj = AnalyticsUtilsDefault;
       const obj2 = { video_layout: "pop out" };
       const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channel.id));
@@ -83,410 +53,138 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function HideStageCha
       const obj5 = ModalActionCreatorsDefault;
       obj5.popWithKey(PrivateChannelCallUtils.getVoiceChannelKey(channel.id));
       const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-    }
-    cResult[2] = channel;
-    cResult[3] = handleClose;
-    let tmp9 = handleClose;
-  } else {
-    tmp9 = cResult[3];
-  }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1125).intl;
-    const stringResult = intl.string(tmp(1125).t.cpT0Cq);
-    cResult[4] = stringResult;
-    let tmp10 = stringResult;
-  } else {
-    tmp10 = cResult[4];
-  }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = {};
-    cResult[5] = obj2;
-    let tmp12 = obj2;
-  } else {
-    tmp12 = cResult[5];
-  }
-  if (cResult[6] !== stateFromStores) {
-    let obj3 = { value: stateFromStores, maskStyle: tmp12 };
-    const tmp15 = closure_12(tmp(1199).MaskedBadge, obj3);
-    cResult[6] = stateFromStores;
-    cResult[7] = tmp15;
-    let tmp13 = tmp15;
-  } else {
-    tmp13 = cResult[7];
-  }
-  if (cResult[8] === tmp9) {
-    if (cResult[9] === tmp4.iconContainer) {
-      if (cResult[10] === tmp13) {
-        let tmp16 = cResult[11];
-      }
-      return tmp16;
-    }
-  }
-  let obj4 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
-  const tmpResult = channel(504);
-  obj4.source = _modDef11781;
-  obj4.accessibilityLabel = tmp10;
-  obj4.onPress = tmp9;
-  obj4.containerStyle = tmp4.iconContainer;
-  obj4.children = tmp13;
-  const tmp18 = closure_12(ChannelCallNavigatorIconDefault, obj4);
-  cResult[8] = tmp9;
-  cResult[9] = tmp4.iconContainer;
-  cResult[10] = tmp13;
-  cResult[11] = tmp18;
-  tmp16 = tmp18;
-}) : (function HideStageChannelCallIcon(channel) {
-  channel = channel.channel;
-  const tmp = closure_14();
-  const items = [GuildReadStateStore];
-  const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
-  let obj2 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
-  let obj = channel(504);
-  obj2.source = _modDef11781;
-  const intl = channel(1125).intl;
-  obj2.accessibilityLabel = intl.string(channel(1125).t.cpT0Cq);
-  obj2.onPress = function handleClose() {
-    const obj = AnalyticsUtilsDefault;
-    const obj2 = { video_layout: "pop out" };
-    const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channel.id));
-    obj.track(constants.VIDEO_LAYOUT_TOGGLED, obj2);
-    StatusBarDefault.setHidden(false);
-    const obj5 = ModalActionCreatorsDefault;
-    obj5.popWithKey(PrivateChannelCallUtils.getVoiceChannelKey(channel.id));
-    const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-  };
-  obj2.containerStyle = tmp.iconContainer;
-  obj2.children = closure_12(channel(1199).MaskedBadge, { value: stateFromStores, maskStyle: {} });
-  return closure_12(ChannelCallNavigatorIconDefault, obj2);
-});
-let closure_15 = tmp4;
-ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelCallHeader(channel) {
-  const cResult = channel(576).c(28);
-  channel = channel.channel;
-  const tmp4 = closure_14();
-  const tmp6 = useChannelNameDefault(channel);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [StageInstanceStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== channel.id) {
-    const fn = function c() {
-      return StageInstanceStore.getStageInstanceByChannel(channel.id);
     };
-    const items1 = [channel.id];
-    cResult[1] = channel.id;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp10 = items1;
-    let tmp9 = fn;
-  } else {
-    tmp9 = cResult[2];
-    tmp10 = cResult[3];
+    obj1.containerStyle = tmp.iconContainer;
+    obj1.children = jsx(channel(closure_2[24]).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+    return jsx(tmp3, obj1);
   }
-  const obj = channel(576);
-  const stateFromStores = channel(504).useStateFromStores(first, tmp9, tmp10);
-  const tmpResult = channel(504);
-  const stageParticipantsCount = channel(6752).useStageParticipantsCount(channel.id, tmp(6746).StageChannelParticipantNamedIndex.AUDIENCE);
-  const tmpResult4 = channel(6752);
-  const actualStageSpeakerCount = channel(6752).useActualStageSpeakerCount(channel.id);
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [ChannelRTCStore];
-    cResult[4] = items2;
-    let tmp14 = items2;
-  } else {
-    tmp14 = cResult[4];
-  }
-  if (cResult[5] !== channel.id) {
-    const fn2 = function b() {
-      return ChannelRTCStore.getSelectedParticipant(channel.id);
-    };
-    cResult[5] = channel.id;
-    cResult[6] = fn2;
-    let tmp16 = fn2;
-  } else {
-    tmp16 = cResult[6];
-  }
-  const tmpResult5 = channel(6752);
-  const stateFromStores1 = channel(504).useStateFromStores(tmp14, tmp16);
-  if (cResult[7] === stateFromStores1) {
-    if (cResult[8] === tmp4.linearGradient) {
-      let tmp18 = cResult[9];
+}
+class StageChannelCallHeader {
+  constructor(arg0) {
+    channel = global.channel;
+    tmp = closure_14();
+    tmp2 = closure_1;
+    tmp3 = closure_2;
+    tmp4 = closure_1(closure_2[25])(channel);
+    tmp5 = channel;
+    obj = channel(closure_2[19]);
+    items = [];
+    items[0] = closure_8;
+    items1 = [];
+    items1[0] = channel.id;
+    stateFromStores = obj.useStateFromStores(items, () => StageInstanceStore.getStageInstanceByChannel(channel.id), items1);
+    obj2 = channel(closure_2[26]);
+    stageParticipantsCount = obj2.useStageParticipantsCount(channel.id, channel(closure_2[27]).StageChannelParticipantNamedIndex.AUDIENCE);
+    obj3 = channel(closure_2[26]);
+    actualStageSpeakerCount = obj3.useActualStageSpeakerCount(channel.id);
+    obj4 = channel(closure_2[19]);
+    items2 = [];
+    items2[0] = closure_4;
+    tmp9 = jsxs;
+    tmp10 = View;
+    obj1 = { pointerEvents: "none", style: tmp.leftTitleContainer, children: null };
+    obj15 = { style: tmp.titleWrapper, children: null };
+    tmp11 = null == obj4.useStateFromStores(items2, () => ChannelRTCStore.getSelectedParticipant(channel.id));
+    if (tmp11) {
+      tmp12 = jsx;
+      obj16 = { style: null, colors: null, start: null, end: null };
+      obj16.style = tmp.linearGradient;
+      obj16.colors = ["#00000000", "#000000"];
+      obj16.start = { x: 0.85, y: 0 };
+      obj16.end = { x: 1, y: 0 };
+      tmp11 = jsx(tmp2(tmp3[28]), obj16);
     }
-    let topic;
+    items3 = [, ];
+    items3[0] = tmp11;
+    tmp13 = jsx;
+    topic = undefined;
     if (stateFromStores != null) {
       topic = stateFromStores.topic;
     }
     if (topic == null) {
-      topic = tmp6;
+      topic = tmp4;
     }
-    if (cResult[10] !== topic) {
-      const obj2 = { color: "text-overlay-light", variant: "text-md/semibold", children: topic };
-      const tmp25 = closure_12(tmp(5271).Text, obj2);
-      cResult[10] = topic;
-      cResult[11] = tmp25;
-      let tmp23 = tmp25;
-    } else {
-      tmp23 = cResult[11];
+    items3[1] = tmp13(tmp5(tmp3[29]).Text, { color: "text-overlay-light", variant: "text-md/semibold", children: topic });
+    obj15.children = items3;
+    items4 = [, ];
+    items4[0] = tmp9(tmp10, obj15);
+    tmp9Result = null != stateFromStores;
+    if (tmp9Result) {
+      obj17 = { style: null, children: null };
+      obj17.style = tmp.stageInfo;
+      obj18 = { source: null, size: null, disableColor: true };
+      obj18.source = tmp2(tmp3[30]);
+      obj18.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
+      items5 = [, , , , , ];
+      items5[0] = tmp13(tmp5(tmp3[24]).Icon, obj18);
+      obj19 = { variant: "text-xs/normal", style: null, children: null };
+      obj19.style = tmp.stageInfoTopic;
+      obj19.children = tmp4;
+      items5[1] = tmp13(tmp5(tmp3[29]).Text, obj19);
+      obj20 = { source: null, size: null, style: null };
+      obj20.source = tmp2(tmp3[31]);
+      obj20.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
+      obj20.style = tmp.icon;
+      items5[2] = tmp13(tmp5(tmp3[24]).Icon, obj20);
+      obj21 = { variant: "text-xs/normal", children: null };
+      obj21.children = actualStageSpeakerCount;
+      items5[3] = tmp13(tmp5(tmp3[29]).Text, obj21);
+      obj22 = { source: null, size: null, style: null };
+      obj22.source = tmp2(tmp3[32]);
+      obj22.size = tmp5(tmp3[24]).Icon.Sizes.SMALL;
+      obj22.style = tmp.icon;
+      items5[4] = tmp13(tmp5(tmp3[24]).Icon, obj22);
+      obj23 = { variant: "text-xs/normal", children: null };
+      obj23.children = stageParticipantsCount;
+      items5[5] = tmp13(tmp5(tmp3[29]).Text, obj23);
+      obj17.children = items5;
+      tmp9Result = tmp9(tmp10, obj17);
     }
-    if (cResult[12] === tmp4.titleWrapper) {
-      if (cResult[13] === tmp18) {
-        if (cResult[14] === tmp23) {
-          let tmp26 = cResult[15];
-        }
-        if (cResult[16] === stageParticipantsCount) {
-          if (cResult[17] === tmp6) {
-            if (cResult[18] === actualStageSpeakerCount) {
-              if (cResult[19] === stateFromStores) {
-                if (cResult[20] === tmp4.icon) {
-                  if (cResult[21] === tmp4.stageInfo) {
-                    if (cResult[22] === tmp4.stageInfoTopic) {
-                      let tmp30 = cResult[23];
-                    }
-                    if (cResult[24] === tmp4.leftTitleContainer) {
-                      if (cResult[25] === tmp30) {
-                        if (cResult[26] === tmp26) {
-                          let tmp35 = cResult[27];
-                        }
-                        return tmp35;
-                      }
-                    }
-                    const obj3 = { pointerEvents: "none", style: tmp4.leftTitleContainer, children: null };
-                    const items3 = [tmp26, tmp30];
-                    obj3.children = items3;
-                    const tmp38 = closure_13(View, obj3);
-                    cResult[24] = tmp4.leftTitleContainer;
-                    cResult[25] = tmp30;
-                    cResult[26] = tmp26;
-                    cResult[27] = tmp38;
-                    tmp35 = tmp38;
-                  }
-                }
-              }
-            }
-          }
-        }
-        let tmp31 = null != stateFromStores;
-        if (tmp31) {
-          const obj4 = { style: tmp4.stageInfo, children: null };
-          const obj5 = { source: _modDef8969, size: tmp(1199).Icon.Sizes.SMALL, disableColor: true };
-          const items4 = [closure_12(tmp(1199).Icon, obj5), , , , , ];
-          const obj6 = { variant: "text-xs/normal", style: tmp4.stageInfoTopic, children: tmp6 };
-          items4[1] = closure_12(tmp(5271).Text, obj6);
-          const obj7 = { source: _modDef8160, size: tmp(1199).Icon.Sizes.SMALL, style: tmp4.icon };
-          items4[2] = closure_12(tmp(1199).Icon, obj7);
-          const obj8 = { variant: "text-xs/normal", children: actualStageSpeakerCount };
-          items4[3] = closure_12(tmp(5271).Text, obj8);
-          const obj9 = { source: _modDef11782, size: tmp(1199).Icon.Sizes.SMALL, style: tmp4.icon };
-          items4[4] = closure_12(tmp(1199).Icon, obj9);
-          const obj10 = { variant: "text-xs/normal", children: stageParticipantsCount };
-          items4[5] = closure_12(tmp(5271).Text, obj10);
-          obj4.children = items4;
-          tmp31 = closure_13(View, obj4);
-        }
-        cResult[16] = stageParticipantsCount;
-        cResult[17] = tmp6;
-        cResult[18] = actualStageSpeakerCount;
-        cResult[19] = stateFromStores;
-        cResult[20] = tmp4.icon;
-        cResult[21] = tmp4.stageInfo;
-        cResult[22] = tmp4.stageInfoTopic;
-        cResult[23] = tmp31;
-        tmp30 = tmp31;
-      }
-    }
-    const obj11 = { style: tmp4.titleWrapper, children: null };
-    const items5 = [tmp18, tmp23];
-    obj11.children = items5;
-    const tmp29 = closure_13(View, obj11);
-    cResult[12] = tmp4.titleWrapper;
-    cResult[13] = tmp18;
-    cResult[14] = tmp23;
-    cResult[15] = tmp29;
-    tmp26 = tmp29;
+    items4[1] = tmp9Result;
+    obj1.children = items4;
+    return tmp9(tmp10, obj1);
   }
-  let tmp19 = null == stateFromStores1;
-  if (tmp19) {
-    const obj12 = { style: tmp4.linearGradient, colors: ["#00000000", "#000000"], start: { x: 0.85, y: 0 }, end: { x: 1, y: 0 } };
-    tmp19 = closure_12(LinearGradientDefault, obj12);
-  }
-  cResult[7] = stateFromStores1;
-  cResult[8] = tmp4.linearGradient;
-  cResult[9] = tmp19;
-  tmp18 = tmp19;
-  const tmpResult6 = channel(504);
-}) : (function StageChannelCallHeader(channel) {
-  channel = channel.channel;
-  const tmp = closure_14();
-  const tmp4 = useChannelNameDefault(channel);
-  const items = [StageInstanceStore];
-  const items1 = [channel.id];
-  const stateFromStores = channel(504).useStateFromStores(items, () => StageInstanceStore.getStageInstanceByChannel(channel.id), items1);
-  const obj = channel(504);
-  const stageParticipantsCount = channel(6752).useStageParticipantsCount(channel.id, channel(6746).StageChannelParticipantNamedIndex.AUDIENCE);
-  const obj2 = channel(6752);
-  const actualStageSpeakerCount = channel(6752).useActualStageSpeakerCount(channel.id);
-  const obj3 = channel(6752);
-  const items2 = [ChannelRTCStore];
-  const obj5 = { pointerEvents: "none", style: tmp.leftTitleContainer, children: null };
-  const obj6 = { style: tmp.titleWrapper, children: null };
-  let tmp11 = null == channel(504).useStateFromStores(items2, () => ChannelRTCStore.getSelectedParticipant(channel.id));
-  if (tmp11) {
-    const obj7 = { style: tmp.linearGradient, colors: ["#00000000", "#000000"], start: { x: 0.85, y: 0 }, end: { x: 1, y: 0 } };
-    tmp11 = closure_12(LinearGradientDefault, obj7);
-  }
-  const items3 = [tmp11, ];
-  let topic;
-  if (stateFromStores != null) {
-    topic = stateFromStores.topic;
-  }
-  if (topic == null) {
-    topic = tmp4;
-  }
-  items3[1] = closure_12(channel(5271).Text, { color: "text-overlay-light", variant: "text-md/semibold", children: topic });
-  obj6.children = items3;
-  const items4 = [closure_13(View, obj6), ];
-  let tmp9Result = null != stateFromStores;
-  if (tmp9Result) {
-    const obj8 = { style: tmp.stageInfo, children: null };
-    const obj9 = { source: _modDef8969, size: tmp5(1199).Icon.Sizes.SMALL, disableColor: true };
-    const items5 = [closure_12(tmp5(1199).Icon, obj9), , , , , ];
-    const obj10 = { variant: "text-xs/normal", style: tmp.stageInfoTopic, children: tmp4 };
-    items5[1] = closure_12(tmp5(5271).Text, obj10);
-    const obj11 = { source: _modDef8160, size: tmp5(1199).Icon.Sizes.SMALL, style: tmp.icon };
-    items5[2] = closure_12(tmp5(1199).Icon, obj11);
-    const obj12 = { variant: "text-xs/normal", children: actualStageSpeakerCount };
-    items5[3] = closure_12(tmp5(5271).Text, obj12);
-    const obj13 = { source: _modDef11782, size: tmp5(1199).Icon.Sizes.SMALL, style: tmp.icon };
-    items5[4] = closure_12(tmp5(1199).Icon, obj13);
-    const obj14 = { variant: "text-xs/normal", children: stageParticipantsCount };
-    items5[5] = closure_12(tmp5(5271).Text, obj14);
-    obj8.children = items5;
-    tmp9Result = closure_13(View, obj8);
-  }
-  items4[1] = tmp9Result;
-  obj5.children = items4;
-  return closure_13(View, obj5);
-});
-let closure_16 = tmp5;
-fn(558);
-let obj9 = { marginLeft: 8, marginRight: 4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
-ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSettingsButton(channelId) {
-  const cResult = channelId(576).c(10);
-  channelId = channelId.channelId;
-  const onOpenRTCDebugOverlay = channelId.onOpenRTCDebugOverlay;
-  const tmp4 = closure_14();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1125).intl;
-    const stringResult = intl.string(tmp(1125).t["lIx5+G"]);
-    cResult[0] = stringResult;
-    let first = stringResult;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === tmp4.iconBackground) {
-    if (cResult[2] === tmp4.settingsButton) {
-      let tmp7 = cResult[3];
-    }
-    if (cResult[4] === channelId) {
-      if (cResult[5] === onOpenRTCDebugOverlay) {
-        let tmp8 = cResult[6];
-      }
-      if (cResult[7] === tmp7) {
-        if (cResult[8] === tmp8) {
-          let tmp9 = cResult[9];
-        }
-        return tmp9;
-      }
-      const obj2 = { accessibilityLabel: first, containerStyle: tmp7, source: onOpenRTCDebugOverlay(11783), onPress: tmp8, disableBackground: true };
-      const tmp13 = closure_12(onOpenRTCDebugOverlay(11643), obj2);
-      cResult[7] = tmp7;
-      cResult[8] = tmp8;
-      cResult[9] = tmp13;
-      tmp9 = tmp13;
-      const tmp12 = onOpenRTCDebugOverlay(11643);
-    }
-    const fn = function l() {
-      return StageChannelActionCreatorExtras.openStageSettingsSheet(channelId, onOpenRTCDebugOverlay);
+}
+class StageSettingsButton {
+  constructor(arg0) {
+    ({ channelId, onOpenRTCDebugOverlay } = global);
+    tmp = closure_14();
+    obj = { accessibilityLabel: null, containerStyle: null, source: null, onPress: null, disableBackground: true };
+    tmp2 = onOpenRTCDebugOverlay(closure_2[20]);
+    intl = channelId(closure_2[22]).intl;
+    obj.accessibilityLabel = intl.string(channelId(closure_2[22]).t["lIx5+G"]);
+    items = [, ];
+    ({ iconBackground: arr[0], settingsButton: arr[1] } = tmp);
+    obj.containerStyle = items;
+    obj.source = onOpenRTCDebugOverlay(closure_2[33]);
+    obj.onPress = function onPress() {
+      return StageChannelActionCreatorExtras.openStageSettingsSheet(closure_1_0, importDefault);
     };
-    cResult[4] = channelId;
-    cResult[5] = onOpenRTCDebugOverlay;
-    cResult[6] = fn;
-    tmp8 = fn;
+    return jsx(tmp2, obj);
   }
-  const items = [, ];
-  ({ iconBackground: arr[0], settingsButton: arr[1] } = tmp4);
-  cResult[1] = tmp4.iconBackground;
-  cResult[2] = tmp4.settingsButton;
-  cResult[3] = items;
-  tmp7 = items;
-  const obj = channelId(576);
-}) : (function StageSettingsButton(arg0) {
-  ({ channelId: require, onOpenRTCDebugOverlay: importDefault } = arg0);
-  const obj = { accessibilityLabel: null, containerStyle: null, source: null, onPress: null, disableBackground: true };
-  const tmp = closure_14();
-  const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t["lIx5+G"]);
-  const items = [, ];
-  ({ iconBackground: arr[0], settingsButton: arr[1] } = tmp);
-  obj.containerStyle = items;
-  obj.source = _modDef11783;
-  obj.onPress = function onPress() {
-    return StageChannelActionCreatorExtras.openStageSettingsSheet(_require, importDefault);
-  };
-  return closure_12(ChannelCallNavigatorIconDefault, obj);
-});
-let closure_17 = tmp7;
-ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageInviteButton(channelId) {
-  let GroupPlusIcon = stateFromStores1;
-  const cResult = channelId(stateFromStores1[20]).c(17);
-  channelId = channelId.channelId;
-  let iconBackground = closure_14();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== channelId) {
-    const fn = function o() {
-      return ChannelStore.getChannel(channelId);
-    };
-    const items1 = [channelId];
-    cResult[1] = channelId;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp6 = items1;
-    let tmp5 = fn;
-  } else {
-    tmp5 = cResult[2];
-    tmp6 = cResult[3];
-  }
-  let obj = channelId(stateFromStores1[20]);
-  const stateFromStores = channelId(GroupPlusIcon[21]).useStateFromStores(first, tmp5, tmp6);
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [GuildStore];
-    cResult[4] = items2;
-    let tmp8 = items2;
-  } else {
-    tmp8 = cResult[4];
-  }
-  let guild_id;
-  if (stateFromStores != null) {
-    guild_id = stateFromStores.guild_id;
-  }
-  if (cResult[5] !== guild_id) {
-    let guild_id1;
-    if (stateFromStores != null) {
-      guild_id1 = stateFromStores.guild_id;
-    }
-    const fn2 = function f() {
+}
+class StageInviteButton {
+  constructor(arg0) {
+    channelId = global.channelId;
+    closure_1 = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
+    tmp2 = channelId;
+    tmp3 = closure_2;
+    tmp = closure_14();
+    obj = channelId(closure_2[19]);
+    items = [];
+    items[0] = closure_5;
+    items1 = [];
+    items1[0] = channelId;
+    stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+    closure_1 = stateFromStores;
+    obj2 = channelId(closure_2[19]);
+    items2 = [];
+    items2[0] = closure_7;
+    items3 = [];
+    items3[0] = stateFromStores;
+    stateFromStores1 = obj2.useStateFromStores(items2, () => {
       let guild_id;
       if (stateFromStores != null) {
         guild_id = stateFromStores.guild_id;
@@ -495,250 +193,132 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageInviteB
         guild_id = null;
       }
       return GuildStore.getGuild(guild_id);
-    };
-    cResult[5] = guild_id1;
-    cResult[6] = fn2;
-    let tmp11 = fn2;
-  } else {
-    tmp11 = cResult[6];
-  }
-  if (cResult[7] !== stateFromStores) {
-    const items3 = [stateFromStores];
-    cResult[7] = stateFromStores;
-    cResult[8] = items3;
-    let tmp13 = items3;
-  } else {
-    tmp13 = cResult[8];
-  }
-  const tmpResult = channelId(GroupPlusIcon[21]);
-  stateFromStores1 = channelId(GroupPlusIcon[21]).useStateFromStores(tmp8, tmp11, tmp13);
-  const tmpResult3 = channelId(GroupPlusIcon[21]);
-  const activeEvent = channelId(GroupPlusIcon[37]).useActiveEvent(channelId);
-  let tmp16 = null;
-  if (null != stateFromStores) {
-    tmp16 = null;
-    if (null != stateFromStores1) {
-      const _Symbol = Symbol;
-      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(GroupPlusIcon[23]).intl;
-        const stringResult = intl.string(tmp(GroupPlusIcon[23]).t.VINpSK);
-        cResult[9] = stringResult;
-        let tmp17 = stringResult;
-      } else {
-        tmp17 = cResult[9];
-      }
-      if (cResult[10] === stateFromStores) {
-        let id;
-        if (activeEvent != null) {
-          id = activeEvent.id;
-        }
-        if (cResult[11] === id) {
-          if (cResult[12] === stateFromStores1) {
-            let tmp20 = cResult[13];
-          }
-          if (cResult[14] === iconBackground.iconBackground) {
-          }
-          let obj2 = { accessibilityLabel: tmp17, containerStyle: iconBackground.iconBackground, source: null, IconComponent: null, onPress: null, disableBackground: true };
-          tmp17 = stateFromStores(GroupPlusIcon[39]);
-          obj2.source = tmp17;
-          GroupPlusIcon = tmp(GroupPlusIcon[40]).GroupPlusIcon;
-          obj2.IconComponent = GroupPlusIcon;
-          obj2.onPress = tmp20;
-          const tmp26 = closure_12(stateFromStores(GroupPlusIcon[25]), obj2);
-          iconBackground = iconBackground.iconBackground;
-          cResult[14] = iconBackground;
-          cResult[15] = tmp20;
-          cResult[16] = tmp26;
-          const tmp25 = stateFromStores(GroupPlusIcon[25]);
-        }
-      }
-      cResult[10] = stateFromStores;
-      let id1;
-      if (activeEvent != null) {
-        id1 = activeEvent.id;
-      }
-      const fn3 = function _() {
-        if (null != stateFromStores1.vanityURLCode) {
-          const result = instant_invite_InstantInviteUtils.showVanityUrlInviteActionSheet(tmp, stateFromStores, constants2.STAGE_CHANNEL);
-        } else {
-          const obj2 = { source: constants2.STAGE_CHANNEL, guildScheduledEventId: null };
-          let id;
-          if (activeEvent != null) {
-            id = activeEvent.id;
-          }
-          obj2.guildScheduledEventId = id;
-          const result1 = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(stateFromStores, obj2);
-        }
-      };
-      cResult[11] = id1;
-      cResult[12] = stateFromStores1;
-      cResult[13] = fn3;
-      tmp20 = fn3;
-    }
-  }
-  return tmp16;
-}) : (function StageInviteButton(channelId) {
-  channelId = channelId.channelId;
-  let stateFromStores1;
-  const tmp = closure_14();
-  const items = [ChannelStore];
-  const items1 = [channelId];
-  const stateFromStores = channelId(stateFromStores1[21]).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  let obj = channelId(stateFromStores1[21]);
-  const items2 = [GuildStore];
-  const items3 = [stateFromStores];
-  stateFromStores1 = channelId(stateFromStores1[21]).useStateFromStores(items2, () => {
-    let guild_id;
-    if (stateFromStores != null) {
-      guild_id = stateFromStores.guild_id;
-    }
-    if (guild_id == null) {
-      guild_id = null;
-    }
-    return GuildStore.getGuild(guild_id);
-  }, items3);
-  let obj2 = channelId(stateFromStores1[21]);
-  let id = channelId(stateFromStores1[37]).useActiveEvent(channelId);
-  let tmp6 = null;
-  if (null != stateFromStores) {
+    }, items3);
+    closure_2 = stateFromStores1;
+    obj3 = channelId(closure_2[35]);
+    closure_3 = obj3.useActiveEvent(channelId);
     tmp6 = null;
-    if (null != stateFromStores1) {
-      const obj4 = { accessibilityLabel: null, containerStyle: null, source: null, IconComponent: null, onPress: null, disableBackground: true };
-      const intl = tmp2(tmp3[23]).intl;
-      obj4.accessibilityLabel = intl.string(tmp2(tmp3[23]).t.VINpSK);
-      obj4.containerStyle = tmp.iconBackground;
-      obj4.source = stateFromStores(tmp3[39]);
-      obj4.IconComponent = tmp2(tmp3[40]).GroupPlusIcon;
-      obj4.onPress = function onPress() {
-        if (null != stateFromStores1.vanityURLCode) {
-          const result = instant_invite_InstantInviteUtils.showVanityUrlInviteActionSheet(tmp, stateFromStores, constants2.STAGE_CHANNEL);
-        } else {
-          const obj2 = { source: constants2.STAGE_CHANNEL, guildScheduledEventId: null };
-          id = undefined;
-          if (id != null) {
-            id = id.id;
+    if (null != stateFromStores) {
+      tmp6 = null;
+      if (null != stateFromStores1) {
+        tmp7 = jsx;
+        tmp8 = closure_1;
+        obj1 = { accessibilityLabel: null, containerStyle: null, source: null, IconComponent: null, onPress: null, disableBackground: true };
+        tmp9 = closure_1(tmp3[20]);
+        intl = tmp2(tmp3[22]).intl;
+        obj1.accessibilityLabel = intl.string(tmp2(tmp3[22]).t.VINpSK);
+        obj1.containerStyle = tmp.iconBackground;
+        obj1.source = closure_1(tmp3[36]);
+        obj1.IconComponent = tmp2(tmp3[37]).GroupPlusIcon;
+        obj1.onPress = function onPress() {
+          if (null != stateFromStores1.vanityURLCode) {
+            const result = instant_invite_InstantInviteUtils.showVanityUrlInviteActionSheet(tmp, stateFromStores, constants2.STAGE_CHANNEL);
+          } else {
+            const obj2 = { source: constants2.STAGE_CHANNEL, guildScheduledEventId: null };
+            id = undefined;
+            if (id != null) {
+              id = id.id;
+            }
+            obj2.guildScheduledEventId = id;
+            const result1 = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(stateFromStores, obj2);
           }
-          obj2.guildScheduledEventId = id;
-          const result1 = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(stateFromStores, obj2);
-        }
-      };
-      tmp6 = closure_12(stateFromStores(tmp3[25]), obj4);
-      const tmp9 = stateFromStores(tmp3[25]);
+        };
+        tmp6 = jsx(tmp9, obj1);
+      }
     }
+    return tmp6;
   }
-  return tmp6;
-});
-let closure_18 = tmp8;
-ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function MusicMuteButton(channelId) {
-  const cResult = stateFromStores(576).c(11);
-  const tmp4 = closure_14();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [StageMusicStore];
-    const fn = function o() {
-      return muted.isMuted();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
-  } else {
-    [tmp5, tmp6] = cResult;
-  }
-  const obj = stateFromStores(576);
-  stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
-  const tmpResult = stateFromStores(504);
-  if (tmpResult2.useShowStageMusicMuteButton(channelId.channelId)) {
-    if (cResult[2] !== stateFromStores) {
-      const intl = tmp(1125).intl;
-      const string = intl.string;
-      let ScHlfl = tmp(1125).t;
+}
+class MusicMuteButton {
+  constructor(arg0) {
+    closure_0 = undefined;
+    tmp2 = closure_0;
+    tmp3 = closure_2;
+    tmp = closure_14();
+    obj = closure_0(closure_2[19]);
+    items = [];
+    items[0] = closure_9;
+    stateFromStores = obj.useStateFromStores(items, () => muted.isMuted());
+    closure_0 = stateFromStores;
+    obj2 = closure_0(closure_2[39]);
+    if (!obj2.useShowStageMusicMuteButton(global.channelId)) {
+      return null;
+    } else {
+      tmp5 = jsx;
+      tmp6 = closure_1;
+      tmp7 = closure_1(tmp3[20]);
+      intl = tmp2(tmp3[22]).intl;
+      string = intl.string;
+      t = tmp2(tmp3[22]).t;
       if (stateFromStores) {
-        ScHlfl = ScHlfl.ScHlfl;
-        let stringResult = string(ScHlfl);
+        stringResult = string(t.ScHlfl);
       } else {
-        stringResult = string(ScHlfl.zqxfrf);
+        stringResult = string(t.zqxfrf);
       }
-      cResult[2] = stateFromStores;
-      cResult[3] = stringResult;
-    } else {
-      const tmp12Result = importDefault(stateFromStores ? 11625 : 11626);
-      if (cResult[4] !== stateFromStores) {
-        class C {
-          constructor() {
-            obj = closure_0(closure_2[44]);
-            return obj.updateStageMusicMuted(!closure_0);
-          }
-        }
-        cResult[4] = stateFromStores;
-        cResult[5] = C;
-      } else {
-        class C {
-          constructor() {
-            obj = closure_0(closure_2[44]);
-            return obj.updateStageMusicMuted(!closure_0);
-          }
-        }
-      }
-      if (cResult[6] === tmp4.iconBackground) {
-        class C {
-          constructor() {
-            obj = closure_0(closure_2[44]);
-            return obj.updateStageMusicMuted(!closure_0);
-          }
-        }
-      }
-      const obj2 = { accessibilityLabel: cResult[3], containerStyle: tmp4.iconBackground, source: tmp12Result, onPress: C, disableBackground: true };
-      const tmp17 = closure_12(ChannelCallNavigatorIconDefault, obj2);
-      cResult[6] = tmp4.iconBackground;
-      cResult[7] = cResult[3];
-      cResult[8] = tmp12Result;
-      cResult[9] = C;
-      cResult[10] = tmp17;
+      obj1 = { accessibilityLabel: null, containerStyle: null, source: null, onPress: null, disableBackground: true };
+      obj1.accessibilityLabel = stringResult;
+      obj1.containerStyle = tmp.iconBackground;
+      obj1.source = tmp6(stateFromStores ? tmp3[40] : tmp3[41]);
+      obj1.onPress = function onPress() {
+        return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
+      };
+      tmp5Result = tmp5(tmp7, obj1);
     }
-  } else {
-    class C {
-      constructor() {
-        obj = closure_0(closure_2[44]);
-        return obj.updateStageMusicMuted(!closure_0);
-      }
-    }
-    return null;
+    return;
   }
-  tmpResult2 = stateFromStores(11619);
-}) : (function MusicMuteButton(channelId) {
-  let stateFromStores;
-  const tmp = closure_14();
-  const items = [StageMusicStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => muted.isMuted());
-  const obj = stateFromStores(504);
-  if (!obj2.useShowStageMusicMuteButton(channelId.channelId)) {
-    return null;
-  } else {
-    const intl = tmp2(1125).intl;
-    const string = intl.string;
-    const t = tmp2(1125).t;
-    if (stateFromStores) {
-      let stringResult = string(t.ScHlfl);
-    } else {
-      stringResult = string(t.zqxfrf);
-    }
-    const obj3 = {
-      accessibilityLabel: stringResult,
-      containerStyle: tmp.iconBackground,
-      source: importDefault(stateFromStores ? 11625 : 11626),
-      onPress() {
-          return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
-        },
-      disableBackground: true
-    };
-    closure_12(ChannelCallNavigatorIconDefault, obj3);
+}
+const View = fn(17).View;
+const Constants = fn(1072);
+({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(5009);
+let obj = { header: { height: fn(5581).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, overflow: "visible" }, leftTitleContainer: { marginLeft: 12, flex: 1 }, titleWrapper: { position: "relative", flex: 1, justifyContent: "center" }, linearGradient: { position: "absolute", zIndex: 1, left: 0, right: 0, top: 0, bottom: 0 }, iconBackground: null, iconContainer: null, settingsButton: null, stageInfo: null, stageInfoTopic: null, icon: null };
+let obj4 = { backgroundColor: null };
+let ColorUtils = fn(5006);
+obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
+obj.iconBackground = obj4;
+let obj5 = { backgroundColor: null };
+ColorUtils = fn(5006);
+obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
+obj.iconContainer = obj5;
+obj.settingsButton = { marginRight: 4 };
+let obj3 = { height: fn(5581).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, overflow: "visible" };
+obj.stageInfo = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
+obj.stageInfoTopic = { marginLeft: 4 };
+let obj7 = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
+obj.icon = { marginLeft: 8, marginRight: 4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
+const value = createStyles.createStyles(obj);
+let obj9 = { marginLeft: 8, marginRight: 4, tintColor: nativeDefault.colors.TEXT_SUBTLE };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionHeader.tsx");
+
+export default noop.memo(function StageActionHeader(onOpenRTCDebugOverlay) {
+  ({ channel, fullscreenStream } = onOpenRTCDebugOverlay);
+  const tmp3 = useMyCurrentStageChannelRoleDefault(channel.id);
+  let speaker;
+  if (tmp3 != null) {
+    speaker = tmp3.speaker;
   }
-  obj2 = stateFromStores(11619);
+  const obj = { style: closure_14().header, pointerEvents: "box-none", children: null };
+  const items = [closure_1_12(HideStageChannelCallIcon, { channel, fullscreenStream }), closure_1_12(StageChannelCallHeader, { channel }), , , , , ];
+  if (speaker) {
+    const obj2 = { channelId: channel.id };
+    speaker = closure_1_12(MusicMuteButton, obj2);
+  }
+  items[2] = speaker;
+  if (fullscreenStream) {
+    const obj3 = { channel };
+    fullscreenStream = closure_1_12(ChannelCallHeaderButtons.GridButton, obj3);
+  }
+  items[3] = fullscreenStream;
+  items[4] = closure_1_12(ChannelCallHeaderButtons.CameraButton, {});
+  items[5] = closure_1_12(StageInviteButton, { channelId: channel.id });
+  items[6] = closure_1_12(StageSettingsButton, { channelId: channel.id, onOpenRTCDebugOverlay: onOpenRTCDebugOverlay.onOpenRTCDebugOverlay });
+  obj.children = items;
+  return map1(View, obj);
 });
-let closure_19 = tmp9;
-ReactCompilerGating = fn(558);
-function closeStageModal(id) {
+export function closeStageModal(id) {
   const obj = AnalyticsUtilsDefault;
   const obj2 = { video_layout: "pop out" };
   const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(id.id));
@@ -747,96 +327,18 @@ function closeStageModal(id) {
   const obj5 = ModalActionCreatorsDefault;
   obj5.popWithKey(PrivateChannelCallUtils.getVoiceChannelKey(id.id));
 }
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HideChannelCallButton(channel) {
-  const cResult = channel(576).c(12);
-  channel = channel.channel;
-  const tmp4 = closure_14();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildReadStateStore];
-    const fn = function o() {
-      return totalMentionCount.getTotalMentionCount();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
-  } else {
-    [tmp5, tmp6] = cResult;
-  }
-  let obj = channel(576);
-  const stateFromStores = channel(504).useStateFromStores(tmp5, tmp6);
-  if (cResult[2] !== channel) {
-    function handleClose() {
-      const obj = AnalyticsUtilsDefault;
-      const obj2 = { video_layout: "pop out" };
-      const merged = Object.assign(AppAnalyticsUtils.collectVoiceAnalyticsMetadata(channel.id));
-      obj.track(constants.VIDEO_LAYOUT_TOGGLED, obj2);
-      StatusBarDefault.setHidden(false);
-      const obj5 = ModalActionCreatorsDefault;
-      obj5.popWithKey(PrivateChannelCallUtils.getVoiceChannelKey(channel.id));
-      const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
-    }
-    cResult[2] = channel;
-    cResult[3] = handleClose;
-    let tmp9 = handleClose;
-  } else {
-    tmp9 = cResult[3];
-  }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1125).intl;
-    const stringResult = intl.string(tmp(1125).t.cpT0Cq);
-    cResult[4] = stringResult;
-    let tmp10 = stringResult;
-  } else {
-    tmp10 = cResult[4];
-  }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = {};
-    cResult[5] = obj2;
-    let tmp12 = obj2;
-  } else {
-    tmp12 = cResult[5];
-  }
-  if (cResult[6] !== stateFromStores) {
-    let obj3 = { value: stateFromStores, maskStyle: tmp12 };
-    const tmp15 = closure_12(tmp(1199).MaskedBadge, obj3);
-    cResult[6] = stateFromStores;
-    cResult[7] = tmp15;
-    let tmp13 = tmp15;
-  } else {
-    tmp13 = cResult[7];
-  }
-  if (cResult[8] === tmp9) {
-    if (cResult[9] === tmp4.iconContainer) {
-      if (cResult[10] === tmp13) {
-        let tmp16 = cResult[11];
-      }
-      return tmp16;
-    }
-  }
-  let obj4 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
-  const tmpResult = channel(504);
-  obj4.source = _modDef11781;
-  obj4.accessibilityLabel = tmp10;
-  obj4.onPress = tmp9;
-  obj4.containerStyle = tmp4.iconContainer;
-  obj4.children = tmp13;
-  const tmp18 = closure_12(ChannelCallNavigatorIconDefault, obj4);
-  cResult[8] = tmp9;
-  cResult[9] = tmp4.iconContainer;
-  cResult[10] = tmp13;
-  cResult[11] = tmp18;
-  tmp16 = tmp18;
-}) : (function HideChannelCallButton(channel) {
+export { HideStageChannelCallIcon };
+export { StageChannelCallHeader };
+export function HideChannelCallButton(channel) {
   channel = channel.channel;
   const tmp = closure_14();
   const items = [GuildReadStateStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let obj2 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   let obj = channel(504);
-  obj2.source = _modDef11781;
-  const intl = channel(1125).intl;
-  obj2.accessibilityLabel = intl.string(channel(1125).t.cpT0Cq);
+  obj2.source = _modDef11974;
+  const intl = channel(1114).intl;
+  obj2.accessibilityLabel = intl.string(channel(1114).t.cpT0Cq);
   obj2.onPress = function handleClose() {
     const obj = AnalyticsUtilsDefault;
     const obj2 = { video_layout: "pop out" };
@@ -848,153 +350,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HideChannelC
     const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
   };
   obj2.containerStyle = tmp.iconContainer;
-  obj2.children = closure_12(channel(1199).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  obj2.children = closure_12(channel(1188).MaskedBadge, { value: stateFromStores, maskStyle: {} });
   return closure_12(ChannelCallNavigatorIconDefault, obj2);
-});
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionHeader.tsx");
-
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StageActionHeader(arg0) {
-  const cResult = c.c(25);
-  ({ channel, fullscreenStream, onOpenRTCDebugOverlay } = arg0);
-  const tmp4 = closure_14();
-  const tmp5 = useMyCurrentStageChannelRoleDefault(channel.id);
-  if (tmp5 != null) {
-    const speaker = tmp5.speaker;
-  }
-  if (cResult[0] === channel) {
-    if (cResult[1] === fullscreenStream) {
-      let tmp6 = cResult[2];
-    }
-    if (cResult[3] !== channel) {
-      const obj2 = { channel };
-      const tmp11 = __initData(closure_16, obj2);
-      cResult[3] = channel;
-      cResult[4] = tmp11;
-      let tmp8 = tmp11;
-    } else {
-      tmp8 = cResult[4];
-    }
-    if (cResult[5] === channel.id) {
-      if (cResult[6] === speaker) {
-        let tmp12 = cResult[7];
-      }
-      if (cResult[8] === channel) {
-        if (cResult[9] === fullscreenStream) {
-          let tmp16 = cResult[10];
-        }
-        const _Symbol = Symbol;
-        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp22 = __initData(ChannelCallHeaderButtons.CameraButton, {});
-          cResult[11] = tmp22;
-          let tmp20 = tmp22;
-        } else {
-          tmp20 = cResult[11];
-        }
-        if (cResult[12] !== channel.id) {
-          const obj3 = { channelId: channel.id };
-          const tmp26 = __initData(closure_18, obj3);
-          cResult[12] = channel.id;
-          cResult[13] = tmp26;
-          let tmp23 = tmp26;
-        } else {
-          tmp23 = cResult[13];
-        }
-        if (cResult[14] === channel.id) {
-          if (cResult[15] === onOpenRTCDebugOverlay) {
-            let tmp27 = cResult[16];
-          }
-          if (cResult[17] === tmp4.header) {
-            if (cResult[18] === tmp6) {
-              if (cResult[19] === tmp8) {
-                if (cResult[20] === tmp12) {
-                  if (cResult[21] === tmp16) {
-                    if (cResult[22] === tmp23) {
-                      if (cResult[23] === tmp27) {
-                        let tmp31 = cResult[24];
-                      }
-                      return tmp31;
-                    }
-                  }
-                }
-              }
-            }
-          }
-          const obj4 = { style: tmp4.header, pointerEvents: "box-none", children: null };
-          const items = [tmp6, tmp8, tmp12, tmp16, tmp20, tmp23, tmp27];
-          obj4.children = items;
-          const tmp34 = map1(View, obj4);
-          cResult[17] = tmp4.header;
-          cResult[18] = tmp6;
-          cResult[19] = tmp8;
-          cResult[20] = tmp12;
-          cResult[21] = tmp16;
-          cResult[22] = tmp23;
-          cResult[23] = tmp27;
-          cResult[24] = tmp34;
-          tmp31 = tmp34;
-        }
-        const obj5 = { channelId: channel.id, onOpenRTCDebugOverlay };
-        const tmp30 = __initData(closure_17, obj5);
-        cResult[14] = channel.id;
-        cResult[15] = onOpenRTCDebugOverlay;
-        cResult[16] = tmp30;
-        tmp27 = tmp30;
-      }
-      let tmp17 = fullscreenStream;
-      if (fullscreenStream) {
-        const obj6 = { channel };
-        tmp17 = __initData(ChannelCallHeaderButtons.GridButton, obj6);
-      }
-      cResult[8] = channel;
-      cResult[9] = fullscreenStream;
-      cResult[10] = tmp17;
-      tmp16 = tmp17;
-    }
-    let tmp13 = speaker;
-    if (speaker) {
-      const obj7 = { channelId: channel.id };
-      tmp13 = __initData(closure_19, obj7);
-    }
-    cResult[5] = channel.id;
-    cResult[6] = speaker;
-    cResult[7] = tmp13;
-    tmp12 = tmp13;
-  }
-  const tmp7 = __initData(closure_15, { channel, fullscreenStream });
-  cResult[0] = channel;
-  cResult[1] = fullscreenStream;
-  cResult[2] = tmp7;
-  tmp6 = tmp7;
-}) : (function StageActionHeader(onOpenRTCDebugOverlay) {
-  ({ channel, fullscreenStream } = onOpenRTCDebugOverlay);
-  const tmp3 = useMyCurrentStageChannelRoleDefault(channel.id);
-  let speaker;
-  if (tmp3 != null) {
-    speaker = tmp3.speaker;
-  }
-  const obj = { style: closure_14().header, pointerEvents: "box-none", children: null };
-  const items = [__initData(closure_15, { channel, fullscreenStream }), __initData(closure_16, { channel }), , , , , ];
-  if (speaker) {
-    const obj2 = { channelId: channel.id };
-    speaker = __initData(closure_19, obj2);
-  }
-  items[2] = speaker;
-  if (fullscreenStream) {
-    const obj3 = { channel };
-    fullscreenStream = __initData(ChannelCallHeaderButtons.GridButton, obj3);
-  }
-  items[3] = fullscreenStream;
-  items[4] = __initData(ChannelCallHeaderButtons.CameraButton, {});
-  items[5] = __initData(closure_18, { channelId: channel.id });
-  items[6] = __initData(closure_17, { channelId: channel.id, onOpenRTCDebugOverlay: onOpenRTCDebugOverlay.onOpenRTCDebugOverlay });
-  obj.children = items;
-  return map1(View, obj);
-}));
-export { closeStageModal };
-export const HideStageChannelCallIcon = tmp4;
-export const StageChannelCallHeader = tmp5;
-export const HideChannelCallButton = tmp6;
-export const StageSettingsButton = tmp7;
-export const StageInviteButton = tmp8;
-export const MusicMuteButton = tmp9;
+}
+export { StageSettingsButton };
+export { StageInviteButton };
+export { MusicMuteButton };

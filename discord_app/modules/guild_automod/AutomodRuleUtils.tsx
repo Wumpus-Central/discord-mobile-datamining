@@ -1,17 +1,17 @@
-// === Module 19548: AutomodRuleUtils ===
+// === Module 19611: AutomodRuleUtils ===
 
-// Module 19548 (AutomodRuleUtils)
-import util from "util" /* 1125 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
-import AutomodErrorUtils from "AutomodErrorUtils" /* 8322 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 19549 */;
-import AutomodActionUtils from "AutomodActionUtils" /* 19552 */;
+// Module 19611 (AutomodRuleUtils)
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7693 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 8379 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 19612 */;
+import AutomodActionUtils from "AutomodActionUtils" /* 19615 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const getRuleCountByTriggerType = fn(19545).getRuleCountByTriggerType;
-const Constants = fn(13091);
+const getRuleCountByTriggerType = fn(19608).getRuleCountByTriggerType;
+const Constants = fn(13242);
 ({ AutomodTriggerType: closure_4, MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: metroRequire, MAX_CHARACTERS_PER_KEYWORD: closure_7, MIN_CHARACTERS_PER_KEYWORD: closure_8, MIN_REGEX_PATTERN_LENGTH: closure_9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: closure_11, AutomodEventType: closure_12, MAX_MENTION_SPAM_LIMIT: map1, MIN_MENTION_SPAM_LIMIT: closure_14 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
@@ -35,10 +35,10 @@ export function isRegexSupported(arg0) {
 export function getNewAutomodRuleMockId(arg0, arg1) {
   return "" + arg0 + "-" + arg1 + "-new-rule";
 }
-export function isRuleKeywordFilter(rule) {
+export function isRuleKeywordFilter(length) {
   let triggerType;
-  if (rule != null) {
-    triggerType = rule.triggerType;
+  if (length != null) {
+    triggerType = length.triggerType;
   }
   return triggerType === constants.KEYWORD;
 }
@@ -77,10 +77,10 @@ export function isRuleUserProfileFilter(rule) {
   }
   return triggerType === constants.USER_PROFILE;
 }
-export function isRuleApplicationFilter(rule) {
+export function isRuleApplicationFilter(editingRule) {
   let triggerType;
-  if (rule != null) {
-    triggerType = rule.triggerType;
+  if (editingRule != null) {
+    triggerType = editingRule.triggerType;
   }
   return triggerType === constants.APPLICATION;
 }
@@ -119,11 +119,11 @@ export function createDefaultRule(guildId, triggerType) {
   }
   obj5 = ApplicationCommandUtils;
 }
-export function validateKeywordsOrThrow(arr, maxWordCount) {
-  if (arr.length > maxWordCount) {
+export function validateKeywordsOrThrow(arr, limit) {
+  if (arr.length > limit) {
     const _Error = Error;
     const intl = util.intl;
-    const obj = { limit: maxWordCount };
+    const obj = { limit };
     const error = new Error(intl.formatToPlainString(util.t.mee4qd, obj));
     throw error;
   } else {

@@ -1,61 +1,19 @@
-// === Module 12383: useConjurePublishedServerName ===
+// === Module 12622: useConjurePublishedServerName ===
 
-// Module 12383 (useConjurePublishedServerName)
-import GuildStore from "GuildStore" /* 4879 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+// Module 12622 (useConjurePublishedServerName)
+import GuildStore from "GuildStore" /* 4880 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishedServerName.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePublishedServerName(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(3);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ConjureProjectStore, GuildStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function s() {
-      const project = ConjureProjectStore.getProject(closure_0);
-      let tmp2 = null;
-      if (null != project) {
-        tmp2 = null;
-        if ("user" !== project.install_scope) {
-          tmp2 = null;
-          if (null != project.guild_id) {
-            guild = GuildStore.getGuild(project.guild_id);
-            let name;
-            if (guild != null) {
-              name = guild.name;
-            }
-            if (name == null) {
-              name = null;
-            }
-            tmp2 = name;
-          }
-        }
-      }
-      return tmp2;
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp7 = fn;
-  } else {
-    tmp7 = cResult[2];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp7);
-}) : (function useConjurePublishedServerName(arg0) {
+export default function useConjurePublishedServerName(arg0) {
   _require = arg0;
   const items = [ConjureProjectStore, GuildStore];
-  return require("initialize").useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     const project = ConjureProjectStore.getProject(closure_0);
     let tmp2 = null;
     if (null != project) {
@@ -63,18 +21,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       if ("user" !== project.install_scope) {
         tmp2 = null;
         if (null != project.guild_id) {
-          guild = GuildStore.getGuild(project.guild_id);
-          let name;
-          if (guild != null) {
-            name = guild.name;
+          let guild = GuildStore.getGuild(project.guild_id);
+          if (guild == null) {
+            guild = null;
           }
-          if (name == null) {
-            name = null;
-          }
-          tmp2 = name;
+          tmp2 = guild;
         }
       }
     }
     return tmp2;
   });
-});
+  let tmp2 = null;
+  if (null != stateFromStores) {
+    ({ id: obj2.guildId, name: obj2.name } = stateFromStores);
+    tmp2 = { guildId: null, name: null };
+    const obj3 = { guildId: null, name: null };
+  }
+  return tmp2;
+};

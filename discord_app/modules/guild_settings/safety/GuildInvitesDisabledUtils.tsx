@@ -1,47 +1,21 @@
-// === Module 13732: GuildInvitesDisabledUtils ===
+// === Module 13879: GuildInvitesDisabledUtils ===
 
-// Module 13732 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11333 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+// Module 13879 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10991 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+
+const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
-let ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvitesDisabledPermission(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [PermissionStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function l() {
-      let canResult = null != closure_0;
-      if (canResult) {
-        canResult = PermissionStore.can(constants2.MANAGE_GUILD, tmp);
-      }
-      return canResult;
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : (function useInvitesDisabledPermission(arg0) {
-  _require = arg0;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
+
+export function useInvitesDisabledPermission(guild) {
+  _require = guild;
   const items = [PermissionStore];
-  const items1 = [arg0];
+  const items1 = [guild];
   return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
@@ -49,75 +23,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvites
     }
     return canResult;
   }, items1);
-});
-let closure_6 = tmp3;
-ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvitesDisabled(features) {
-  _require = features;
-  const cResult = require("c").c(6);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildIncidentsStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== features) {
-    const fn = function u() {
-      let guildIncident = null;
-      if (null != closure_0) {
-        guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
-      }
-      return guildIncident;
-    };
-    cResult[1] = features;
-    cResult[2] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-  }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
-  let features1;
-  if (features != null) {
-    features1 = features.features;
-  }
-  if (cResult[3] === features1) {
-    if (cResult[4] === stateFromStores) {
-      let tmp9 = cResult[5];
-    }
-    return tmp9;
-  }
-  let hasItem;
-  if (features != null) {
-    features = features.features;
-    hasItem = features.has(constants.INVITES_DISABLED);
-  }
-  if (!hasItem) {
-    let invitesDisabledUntil;
-    if (stateFromStores != null) {
-      invitesDisabledUntil = stateFromStores.invitesDisabledUntil;
-    }
-    let tmp13 = null != invitesDisabledUntil;
-    if (tmp13) {
-      const _Date = Date;
-      const date = new Date(stateFromStores.invitesDisabledUntil);
-      const _Date2 = Date;
-      const date1 = new Date();
-      tmp13 = date > date1;
-    }
-    hasItem = tmp13;
-  }
-  let features2;
-  if (features != null) {
-    features2 = features.features;
-  }
-  cResult[3] = features2;
-  cResult[4] = stateFromStores;
-  cResult[5] = hasItem;
-  tmp9 = hasItem;
-  const tmpResult = require("initialize");
-}) : (function useInvitesDisabled(features) {
+}
+export function useInvitesDisabled(features) {
   _require = features;
   const items = [GuildIncidentsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
@@ -148,24 +55,50 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvites
     hasItem = tmp5;
   }
   return hasItem;
-});
-let closure_7 = tmp4;
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
-
-export const useInvitesDisabledPermission = tmp3;
-export const useInvitesDisabled = tmp4;
-export const useShouldShowInvitesDisabledNotif = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowInvitesDisabledNotif(arg0) {
-  let tmp = closure_6(arg0);
-  if (tmp) {
-    tmp = closure_7(arg0);
+}
+export function useShouldShowInvitesDisabledNotif(guild) {
+  _require = guild;
+  const items = [PermissionStore];
+  const items1 = [guild];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => {
+    let canResult = null != closure_0;
+    if (canResult) {
+      canResult = PermissionStore.can(constants2.MANAGE_GUILD, tmp);
+    }
+    return canResult;
+  }, items1);
+  closure_129_0 = guild;
+  const obj = require("initialize");
+  const items2 = [GuildIncidentsStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
+    let guildIncident = null;
+    if (null != closure_0) {
+      guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
+    }
+    return guildIncident;
+  });
+  let hasItem;
+  if (guild != null) {
+    const features = guild.features;
+    hasItem = features.has(constants.INVITES_DISABLED);
   }
-  return tmp;
-}) : (function useShouldShowInvitesDisabledNotif(arg0) {
-  let tmp = closure_6(arg0);
-  if (tmp) {
-    tmp = closure_7(arg0);
+  if (!hasItem) {
+    let invitesDisabledUntil;
+    if (stateFromStores1 != null) {
+      invitesDisabledUntil = stateFromStores1.invitesDisabledUntil;
+    }
+    let tmp6 = null != invitesDisabledUntil;
+    if (tmp6) {
+      const _Date = Date;
+      const date = new Date(stateFromStores1.invitesDisabledUntil);
+      const _Date2 = Date;
+      const date1 = new Date();
+      tmp6 = date > date1;
+    }
+    hasItem = tmp6;
   }
-  return tmp;
-});
+  if (stateFromStores) {
+    stateFromStores = hasItem;
+  }
+  return stateFromStores;
+}

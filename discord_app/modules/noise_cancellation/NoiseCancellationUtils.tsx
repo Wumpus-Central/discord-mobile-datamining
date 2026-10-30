@@ -1,14 +1,15 @@
-// === Module 11725: NoiseCancellationUtils ===
+// === Module 11918: NoiseCancellationUtils ===
 
-// Module 11725 (NoiseCancellationUtils)
+// Module 11918 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 11726 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 11919 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
-function getNoiseCancellationDeferredToSystem() {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
+
+export function getNoiseCancellationDeferredToSystem() {
   let obj = MediaEngineStore;
   if (MediaEngineStore === undefined) {
     obj = MediaEngineStore;
@@ -16,30 +17,10 @@ function getNoiseCancellationDeferredToSystem() {
   const systemMicrophoneMode = obj.getSystemMicrophoneMode();
   return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
-
-export { getNoiseCancellationDeferredToSystem };
-export const useNoiseCancellationDeferredToSystem = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoiseCancellationDeferredToSystem() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [MediaEngineStore];
-    const fn = function n() {
-      systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();
-      return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useNoiseCancellationDeferredToSystem() {
+export function useNoiseCancellationDeferredToSystem() {
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
     systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();
     return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);
   });
-});
+}

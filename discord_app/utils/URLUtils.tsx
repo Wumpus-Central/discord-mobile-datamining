@@ -1,12 +1,12 @@
-// === Module 1383: URLUtils ===
+// === Module 1378: URLUtils ===
 
-// Module 1383 (URLUtils)
+// Module 1378 (URLUtils)
 import _modDef12 from "module_12" /* 12 */;
-import Constants from "Constants" /* 1084 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import UrlAll from "Url" /* 1386 */;
-import ip from "ip" /* 1384 */;
+import Constants from "Constants" /* 1072 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import UrlAll from "Url" /* 1381 */;
+import ip from "ip" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 function isDiscordDirectAssetUrl(shareURI) {
@@ -67,12 +67,12 @@ function isDiscordDirectAssetUrl(shareURI) {
     return tmp18;
   }
 }
-function isDiscordProxiedAssetUrl(src, arg1, arg2) {
+function isDiscordProxiedAssetUrl(assetURL, arg1, arg2) {
   if (tmp) {
-    if (null == src) {
+    if (null == assetURL) {
       return false;
     } else {
-      const url = URLUtilsDefault.toURLSafe(src);
+      const url = URLUtilsDefault.toURLSafe(assetURL);
       let tmp15 = null != url;
       if (tmp15) {
         const result = GlobalUtils.isDiscordBackendDevelopment();
@@ -235,11 +235,11 @@ export default {
   },
   isDiscordDirectAssetUrl,
   isDiscordProxiedAssetUrl,
-  isAllowedGifProviderUrl(src) {
-    if (null == src) {
+  isAllowedGifProviderUrl(assetURL) {
+    if (null == assetURL) {
       return false;
     } else {
-      const toURLSafeResult = URLUtilsDefault.toURLSafe(src);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
       let hasItem = null != toURLSafeResult;
       if (hasItem) {
         hasItem = set.has(toURLSafeResult.hostname);
@@ -247,14 +247,14 @@ export default {
       return hasItem;
     }
   },
-  isDiscordAssetUrl(src, arg1, arg2) {
-    let tmp = isDiscordDirectAssetUrl(src);
+  isDiscordAssetUrl(assetURL, arg1, arg2) {
+    let tmp = isDiscordDirectAssetUrl(assetURL);
     if (!tmp) {
-      let tmp5 = isDiscordProxiedAssetUrl(src, arg1, arg2);
+      let tmp5 = isDiscordProxiedAssetUrl(assetURL, arg1, arg2);
       if (!tmp5) {
         let flag = false;
-        if (null != src) {
-          const toURLSafeResult = URLUtilsDefault.toURLSafe(src);
+        if (null != assetURL) {
+          const toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
           let hasItem = null != toURLSafeResult;
           if (hasItem) {
             hasItem = set.has(toURLSafeResult.hostname);
@@ -267,10 +267,10 @@ export default {
     }
     return tmp;
   },
-  isDiscordUrlOrUri(src) {
+  isDiscordUrlOrUri(assetURL) {
     let flag = false;
-    if (null != src) {
-      const toURLSafeResult = URLUtilsDefault.toURLSafe(src);
+    if (null != assetURL) {
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
       let hostname;
       if (toURLSafeResult != null) {
         hostname = toURLSafeResult.hostname;
@@ -289,9 +289,9 @@ export default {
       }
     }
     if (!flag) {
-      let tmp8 = null != src;
+      let tmp8 = null != assetURL;
       if (tmp8) {
-        const protocol = UrlAll.parse(src).protocol;
+        const protocol = UrlAll.parse(assetURL).protocol;
         let tmp11 = null != protocol;
         if (tmp11) {
           tmp11 = "discord:" === protocol;
@@ -332,19 +332,19 @@ export default {
       return null;
     }
   },
-  toURLSafe(src, arg1) {
+  toURLSafe(assetURL, arg1) {
     try {
       const _URL = URL;
-      const uRL = new URL(src, arg1);
+      const uRL = new URL(assetURL, arg1);
       return uRL;
     } catch (err) {
       return null;
     }
   },
-  toOriginSafe(src) {
+  toOriginSafe(assetURL) {
     let tmp = null;
-    if (null != src) {
-      const toURLSafeResult = URLUtilsDefault.toURLSafe(src);
+    if (null != assetURL) {
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
       let origin;
       if (toURLSafeResult != null) {
         origin = toURLSafeResult.origin;

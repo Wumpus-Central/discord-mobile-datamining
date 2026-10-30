@@ -1,6 +1,6 @@
-// === Module 2026: ActivityApplications ===
+// === Module 2023: ActivityApplications ===
 
-// Module 2026 (ActivityApplications)
+// Module 2023 (ActivityApplications)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ActivityApplications.tsx");

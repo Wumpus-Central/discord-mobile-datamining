@@ -1,8 +1,8 @@
-// === Module 10828: ConjureVoiceChannelPinStore ===
+// === Module 10851: ConjureVoiceChannelPinStore ===
 
-// Module 10828 (ConjureVoiceChannelPinStore)
+// Module 10851 (ConjureVoiceChannelPinStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

@@ -1,9 +1,9 @@
-// === Module 9111: GameSearchSession ===
+// === Module 9124: GameSearchSession ===
 
-// Module 9111 (GameSearchSession)
-import Constants from "Constants" /* 1084 */;
-import AnalyticsUtils from "AnalyticsUtils" /* 1264 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8639 */;
+// Module 9124 (GameSearchSession)
+import Constants from "Constants" /* 1072 */;
+import AnalyticsUtils from "AnalyticsUtils" /* 1253 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8673 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsUtilsDefault = AnalyticsUtils;
@@ -15,8 +15,8 @@ class GameSearchSession {
     closure_0 = obj;
     obj.state = null;
     obj.selectedQuery = null;
-    obj.onQuery = function onQuery(c2) {
-      const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(c2);
+    obj.onQuery = function onQuery(query) {
+      const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(query);
       if (null == result) {
         obj2.selectedQuery = null;
         if (null != obj2.state) {
@@ -47,7 +47,7 @@ class GameSearchSession {
         state.lastActivityAt = timestamp;
       }
     };
-    obj.onResults = function onResults(query, results1) {
+    obj.onResults = function onResults(query, found) {
       const state = obj2.state;
       let tmp2 = null != state;
       if (tmp2) {
@@ -60,8 +60,8 @@ class GameSearchSession {
         let tmp4 = null != state.displayed;
         if (tmp4) {
           const displayed = state.displayed;
-          closure_0 = results1;
-          let everyResult = displayed.query === query && displayed.results.length === results1.length;
+          closure_0 = found;
+          let everyResult = displayed.query === query && displayed.results.length === found.length;
           if (everyResult) {
             const results = displayed.results;
             everyResult = results.every((id, index) => id.id === closure_0[index].id);
@@ -69,10 +69,10 @@ class GameSearchSession {
           tmp4 = everyResult;
         }
         if (!tmp4) {
-          const obj = { query, results: results1 };
+          const obj = { query, results: found };
           state.displayed = obj;
           state.numResultSets = state.numResultSets + 1;
-          if (results1.length > 0) {
+          if (found.length > 0) {
             state.sawAnyResults = true;
           }
         }
@@ -208,8 +208,8 @@ export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
       let obj2 = Object.create(tmp5.prototype);
       obj2.state = null;
       obj2.selectedQuery = null;
-      obj2.onQuery = function onQuery(c2) {
-        const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(c2);
+      obj2.onQuery = function onQuery(query) {
+        const result = GameAutocompleteUtils.normalizeGameAutocompleteQuery(query);
         if (null == result) {
           obj2.selectedQuery = null;
           if (null != obj2.state) {
@@ -240,7 +240,7 @@ export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
           state.lastActivityAt = timestamp;
         }
       };
-      obj2.onResults = function onResults(query, results1) {
+      obj2.onResults = function onResults(query, found) {
         const state = obj2.state;
         let tmp2 = null != state;
         if (tmp2) {
@@ -253,8 +253,8 @@ export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
           let tmp4 = null != state.displayed;
           if (tmp4) {
             const displayed = state.displayed;
-            closure_0 = results1;
-            let everyResult = displayed.query === query && displayed.results.length === results1.length;
+            closure_0 = found;
+            let everyResult = displayed.query === query && displayed.results.length === found.length;
             if (everyResult) {
               const results = displayed.results;
               everyResult = results.every((id, index) => id.id === closure_0[index].id);
@@ -262,10 +262,10 @@ export function getGameSearchSession(CHAT_MENTION, DEFAULT) {
             tmp4 = everyResult;
           }
           if (!tmp4) {
-            const obj = { query, results: results1 };
+            const obj = { query, results: found };
             state.displayed = obj;
             state.numResultSets = state.numResultSets + 1;
-            if (results1.length > 0) {
+            if (found.length > 0) {
               state.sawAnyResults = true;
             }
           }

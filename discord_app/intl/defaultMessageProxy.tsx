@@ -1,13 +1,13 @@
-// === Module 15928: defaultMessageProxy ===
+// === Module 15968: defaultMessageProxy ===
 
-// Module 15928 (defaultMessageProxy)
-import _modDef15931 from "module_15931" /* 15931 */;
-import "module_1164";
-import "module_1128";
-import module_1164 from "module_1164" /* 1164 */;
-import messagesProxy from "module_15929" /* 15929 */;
+// Module 15968 (defaultMessageProxy)
+import _modDef15971 from "module_15971" /* 15971 */;
+import "module_1153";
+import "module_1117";
+import module_1153 from "module_1153" /* 1153 */;
+import messagesProxy from "module_15969" /* 15969 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("intl/defaultMessageProxy.tsx");
 
-export const _defaultMessages = module_1164.chainMessagesObjects(messagesProxy, module_1164.chainMessagesObjects(messagesProxy, _modDef15931));
+export const _defaultMessages = module_1153.chainMessagesObjects(messagesProxy, module_1153.chainMessagesObjects(messagesProxy, _modDef15971));

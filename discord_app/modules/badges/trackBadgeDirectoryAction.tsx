@@ -1,11 +1,11 @@
-// === Module 11237: trackBadgeDirectoryAction ===
+// === Module 11442: trackBadgeDirectoryAction ===
 
-// Module 11237 (trackBadgeDirectoryAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UserStore from "UserStore" /* 1389 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8721 */;
+// Module 11442 (trackBadgeDirectoryAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import UserStore from "UserStore" /* 1384 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8755 */;
 
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/trackBadgeDirectoryAction.tsx");
 

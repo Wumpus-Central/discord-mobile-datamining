@@ -1,7 +1,7 @@
-// === Module 15060: MessageActivityInviteCoverImageActionCreators ===
+// === Module 15104: MessageActivityInviteCoverImageActionCreators ===
 
-// Module 15060 (MessageActivityInviteCoverImageActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 15104 (MessageActivityInviteCoverImageActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageActionCreators.tsx");

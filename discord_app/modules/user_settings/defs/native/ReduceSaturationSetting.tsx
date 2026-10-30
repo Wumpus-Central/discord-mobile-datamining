@@ -1,54 +1,29 @@
-// === Module 17280: ReduceSaturationSetting ===
+// === Module 17334: ReduceSaturationSetting ===
 
-// Module 17280 (ReduceSaturationSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import native from "native" /* 1199 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11249 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16185 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17181 */;
+// Module 17334 (ReduceSaturationSetting)
+import util from "util" /* 1114 */;
+import native from "native" /* 1188 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11454 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16225 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17235 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSaturationSettingProps() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { value: AccessibilityStore.saturation, onChangeEnd: AccessibilityActionCreators.setSaturation, minValue: 0, maxValue: 1, step: 0.05, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}) };
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  return first;
-}) : (function useSaturationSettingProps() {
-  return noop.useMemo(() => ({ value: saturation.saturation, onChangeEnd: AccessibilityActionCreators.setSaturation, minValue: 0, maxValue: 1, step: 0.05, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}) }), []);
-});
+const SettingBuilders = fn(11505);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["5PWWCY"]);
   },
-  parent: fn(8387).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8424).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },
-  useProps: ReactCompilerGating.isReactCompilerEnabled() ? (function useSaturationSettingProps() {
-    const cResult = c.c(1);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { value: AccessibilityStore.saturation, onChangeEnd: AccessibilityActionCreators.setSaturation, minValue: 0, maxValue: 1, step: 0.05, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}) };
-      cResult[0] = obj2;
-      let first = obj2;
-    } else {
-      first = cResult[0];
-    }
-    return first;
-  }) : (function useSaturationSettingProps() {
+  useProps: function useSaturationSettingProps() {
     return noop.useMemo(() => ({ value: saturation.saturation, onChangeEnd: AccessibilityActionCreators.setSaturation, minValue: 0, maxValue: 1, step: 0.05, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}) }), []);
-  })
+  }
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ReduceSaturationSetting.tsx");

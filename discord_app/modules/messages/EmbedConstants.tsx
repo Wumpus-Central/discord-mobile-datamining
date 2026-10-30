@@ -1,7 +1,7 @@
-// === Module 6546: EmbedConstants ===
+// === Module 6553: EmbedConstants ===
 
-// Module 6546 (EmbedConstants)
-import Constants from "Constants" /* 1084 */;
+// Module 6553 (EmbedConstants)
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const MessageEmbedTypes = Constants.MessageEmbedTypes;

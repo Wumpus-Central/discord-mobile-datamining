@@ -1,6 +1,6 @@
-// === Module 14884: shared/ClipsConstants ===
+// === Module 14921: shared/ClipsConstants ===
 
-// Module 14884 (shared/ClipsConstants)
+// Module 14921 (shared/ClipsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ClipsConstants.tsx");

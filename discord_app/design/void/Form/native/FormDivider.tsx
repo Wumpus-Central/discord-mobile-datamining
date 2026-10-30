@@ -1,93 +1,28 @@
-// === Module 8992: FormDivider ===
+// === Module 8175: FormDivider ===
 
-// Module 8992 (FormDivider)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import ColorUtils from "ColorUtils" /* 5002 */;
-import native from "native" /* 5071 */;
-import RedesignCompat from "RedesignCompat" /* 7046 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7340 */;
+// Module 8175 (FormDivider)
+import nativeDefault from "native" /* 575 */;
+import ColorUtils from "ColorUtils" /* 5006 */;
+import native from "native" /* 5075 */;
+import RedesignCompat from "RedesignCompat" /* 7053 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7347 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_7 = createStyles.createStyles(() => {
   const obj = { divider: {}, dividerOuter: { marginLeft: 0, height: hasOwnProperty.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * hasOwnProperty.hairlineWidth }, dividerHasIcon: { marginLeft: 56 } };
   return obj;
 });
 let obj2 = { [LIGHT]: nativeDefault.unsafe_rawColors.BLACK, [ASH]: nativeDefault.unsafe_rawColors.WHITE, [DARK]: nativeDefault.unsafe_rawColors.WHITE, [ONYX]: nativeDefault.unsafe_rawColors.WHITE };
-({ LIGHT, ASH, DARK, ONYX } = fn(1084).ThemeTypes);
-const ReactCompilerGating = fn(558);
+({ LIGHT, ASH, DARK, ONYX } = fn(1072).ThemeTypes);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function Divider(arg0) {
-  const cResult = c.c(10);
-  ({ outer, iconPush, style } = arg0);
-  let dividerHasIcon = undefined !== iconPush && iconPush;
-  const tmp5 = closure_7();
-  const themeContext = native.useThemeContext();
-  ({ theme, primaryColor } = themeContext);
-  const tmpResult = native;
-  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme);
-  let tmp8 = null;
-  if (null != undefined !== outer && outer ? tmp5.dividerOuter : tmp5.divider.backgroundColor) {
-    tmp8 = null;
-    if (null != primaryColor) {
-      tmp8 = null;
-      if (null != profileThemeValues) {
-        if (cResult[0] === profileThemeValues.dividerOpacity) {
-          if (cResult[1] === tmp10) {
-            let tmp11 = cResult[2];
-          }
-          if (cResult[3] !== tmp11) {
-            obj2 = { backgroundColor: tmp11 };
-            cResult[3] = tmp11;
-            cResult[4] = obj2;
-          }
-        }
-        const hexOpacityToRgbaResult = ColorUtils.hexOpacityToRgba(obj2[theme], profileThemeValues.dividerOpacity);
-        cResult[0] = profileThemeValues.dividerOpacity;
-        cResult[1] = obj2[theme];
-        cResult[2] = hexOpacityToRgbaResult;
-        tmp11 = hexOpacityToRgbaResult;
-        const tmpResult4 = ColorUtils;
-      }
-    }
-  }
-  if (noop.useContext(RedesignCompat.RedesignCompatContext)) {
-    return null;
-  } else {
-    const tmp15 = tmp4 ? tmp5.dividerOuter : tmp5.divider;
-    if (dividerHasIcon) {
-      dividerHasIcon = tmp5.dividerHasIcon;
-    }
-    if (cResult[5] === style) {
-      if (cResult[6] === tmp15) {
-        if (cResult[7] === dividerHasIcon) {
-          if (cResult[8] === tmp8) {
-            let tmp16 = cResult[9];
-          }
-          return tmp16;
-        }
-      }
-    }
-    const obj3 = { style: null };
-    const items = [tmp15, dividerHasIcon, style, tmp8];
-    obj3.style = items;
-    const tmp19 = <React4 style={null} />;
-    cResult[5] = style;
-    cResult[6] = tmp15;
-    cResult[7] = dividerHasIcon;
-    cResult[8] = tmp8;
-    cResult[9] = tmp19;
-    tmp16 = tmp19;
-  }
-  const tmpResult3 = useProfileThemeValues;
-}) : (function Divider(arg0) {
+export default function Divider(arg0) {
   let flag = arg0.outer;
   if (flag === undefined) {
     flag = false;
@@ -121,5 +56,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Divider(
     tmp10Result = <React4 style={null} />;
   }
   return tmp10Result;
-});
+};
 export const DIVIDER_COLORS = obj2;

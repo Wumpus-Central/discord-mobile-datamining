@@ -1,33 +1,68 @@
-// === Module 12566: ConjureClarification ===
+// === Module 12549: ConjureClarification ===
 
-// Module 12566 (ConjureClarification)
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import useChannelName from "useChannelName" /* 5641 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 12549 (ConjureClarification)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import useChannelName from "useChannelName" /* 5647 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelTypes = fn(1084).ChannelTypes;
+const ChannelTypes = fn(1072).ChannelTypes;
 let closure_6 = { [ChannelTypes.GUILD_TEXT]: "text", [ChannelTypes.GUILD_VOICE]: "voice", [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement", [ChannelTypes.GUILD_STAGE_VOICE]: "stage", [ChannelTypes.GUILD_FORUM]: "forum", [ChannelTypes.GUILD_MEDIA]: "media" };
 let closure_7 = { channel: "#", role: "@", user: "@", project: "", server: "" };
 let obj = { channel: null, role: null, user: null, project: null, server: null };
-let items = [_modDef3864["9+dfPT"], _modDef3864.pGSJqE];
+let items = [_modDef3865["9+dfPT"], _modDef3865.pGSJqE];
 obj.channel = items;
-let items1 = [_modDef3864["2VkCoD"], _modDef3864.c8YlX8];
+let items1 = [_modDef3865["2VkCoD"], _modDef3865.c8YlX8];
 obj.role = items1;
-let items2 = [_modDef3864.GZIAxl, _modDef3864["4bptbQ"]];
+let items2 = [_modDef3865.GZIAxl, _modDef3865["4bptbQ"]];
 obj.user = items2;
-const items3 = [_modDef3864.twlOb6, _modDef3864.twlOb6];
+const items3 = [_modDef3865.twlOb6, _modDef3865.twlOb6];
 obj.project = items3;
-const items4 = [_modDef3864.ZWXDeI, _modDef3864.ZWXDeI];
+const items4 = [_modDef3865.ZWXDeI, _modDef3865.ZWXDeI];
 obj.server = items4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
 
+export function liveClarification(memo) {
+  let tmp2;
+  let diff = memo.length - 1;
+  if (0 <= diff) {
+    while (true) {
+      tmp2 = memo[diff];
+      if (null != tmp2.clarification) {
+        if (0 !== tmp2.clarification.questions.length) {
+          break;
+        }
+      }
+      diff = diff - 1;
+    }
+    let settled_at = tmp2.clarificationAt;
+    if (settled_at == null) {
+      settled_at = tmp2.settled_at;
+    }
+    let sum = diff + 1;
+    if (sum < memo.length) {
+      while (true) {
+        if ("user" === memo[sum].role) {
+          if (null == settled_at) {
+            break;
+          } else if (memo[sum].created_at > settled_at) {
+            break;
+          }
+        }
+        sum = sum + 1;
+      }
+      return null;
+    }
+    return tmp2.clarification;
+  }
+  return null;
+}
 export function isTypedClarificationQuestion(options) {
   let tmp = 0 === options.options.length;
   if (tmp) {
@@ -41,7 +76,7 @@ export function clarificationDraftPlaceholder(options) {
   if (tmp2) {
     tmp2 = null == options.input;
   }
-  const tmp4 = _modDef3864;
+  const tmp4 = _modDef3865;
   return intl.string(tmp2 ? tmp4.yLN1x6 : tmp4["tOC+tn"]);
 }
 export function isClarificationComplete(questions, arg1) {
@@ -232,9 +267,9 @@ export function clarificationEntities(project, items, arg2, arg3) {
     }
   });
 }
-export function clarificationChannelEntities(id, arg1) {
-  closure_0 = id;
-  const items = [id.id];
+export function clarificationChannelEntities(stateFromStores1, arg1) {
+  closure_0 = stateFromStores1;
+  const items = [stateFromStores1.id];
   closure_129_0 = "channel";
   closure_129_1 = () => useChannelName.computeChannelName(closure_0, UserStore, RelationshipStore);
   closure_129_2 = arg1;

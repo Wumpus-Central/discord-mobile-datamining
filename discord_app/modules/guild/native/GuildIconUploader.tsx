@@ -1,24 +1,24 @@
-// === Module 13024: GuildIconUploader ===
+// === Module 13175: GuildIconUploader ===
 
-// Module 13024 (GuildIconUploader)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import shared from "shared" /* 5012 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import Pressables from "Pressables" /* 6968 */;
-import _modDef13025 from "module_13025" /* 13025 */;
-import _modDef13026 from "module_13026" /* 13026 */;
-import _modDef13027 from "module_13027" /* 13027 */;
-import _modDef13028 from "module_13028" /* 13028 */;
+// Module 13175 (GuildIconUploader)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import shared from "shared" /* 5016 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import Pressables from "Pressables" /* 6974 */;
+import _modDef13176 from "module_13176" /* 13176 */;
+import _modDef13177 from "module_13177" /* 13177 */;
+import _modDef13178 from "module_13178" /* 13178 */;
+import _modDef13179 from "module_13179" /* 13179 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1204 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { width: 82, height: 82, marginTop: 4 }, guildPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, guildIcon: { width: 82, height: 82, borderRadius: 41 }, iconWrapperBorder: { position: "absolute", top: -8, right: -8, width: 40, height: 40, borderRadius: 20, justifyContent: "center", alignItems: "center" }, filledIconWrapper: null, emptyIconWrapper: null, emptyGuildIcon: null, emptyGuildIconText: null, uploadIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.filledIconWrapper = size;
@@ -51,9 +51,9 @@ prototype["renderIcon"] = function renderIcon() {
     obj4.style = items1;
     const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp10Result = _modDef13025;
+      let tmp10Result = _modDef13176;
     } else {
-      tmp10Result = _modDef13026;
+      tmp10Result = _modDef13177;
     }
     const obj = { source: tmp10Result };
     const items2 = [hasOwnProperty(tmp12, obj), ];
@@ -84,13 +84,13 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef13027;
+    obj5.source = _modDef13178;
     obj4.children = hasOwnProperty(FastImageDefault, obj5);
     obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef13028 };
+    const obj7 = { source: _modDef13179 };
     obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
   return hasOwnProperty(View, obj);
@@ -115,7 +115,7 @@ prototype["render"] = function render() {
   obj.children = timestampProducer(View, obj2);
   return hasOwnProperty(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(5071).ThemeContext;
+GuildIconUploader.contextType = fn(5075).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

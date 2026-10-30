@@ -1,13 +1,12 @@
-// === Module 16808: useBountiesRecapOrbCount ===
+// === Module 16862: useBountiesRecapOrbCount ===
 
-// Module 16808 (useBountiesRecapOrbCount)
-import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
-import useBountiesRecapScroll from "useBountiesRecapScroll" /* 16807 */;
+// Module 16862 (useBountiesRecapOrbCount)
+import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+import useBountiesRecapScroll from "useBountiesRecapScroll" /* 16861 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let c4 = 0.95;
 function getRecapOrbCountFromPullProgress(arg0, arg1) {
   if (arg1 > 0) {
     const _Number = Number;
@@ -23,109 +22,20 @@ function getRecapOrbCountFromPullProgress(arg0, arg1) {
 getRecapOrbCountFromPullProgress.__closure = {};
 getRecapOrbCountFromPullProgress.__workletHash = 14295638108053;
 getRecapOrbCountFromPullProgress.__initData = { code: "function getRecapOrbCountFromPullProgress_useBountiesRecapOrbCountTsx1(progress,targetOrbAmount){if(targetOrbAmount<=0||!Number.isFinite(targetOrbAmount)){return 0;}const clampedProgress=Math.min(1,Math.max(0,progress));return Math.round(clampedProgress*targetOrbAmount);}" };
-let closure_6 = { code: "function useBountiesRecapOrbCountTsx2(){const{enabled,recapRevealHeight,getRevealProgress,scrollY,lastBountyScrollOffset,RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS,getRecapOrbCountFromPullProgress,targetOrbAmount}=this.__closure;if(!enabled||recapRevealHeight<=0){return{count:0,revealed:false};}const pullProgress=getRevealProgress(scrollY.get(),lastBountyScrollOffset,recapRevealHeight)/RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS;if(pullProgress<=0.1){return{count:0,revealed:false};}return{count:getRecapOrbCountFromPullProgress(pullProgress,targetOrbAmount),revealed:true};}" };
-let closure_7 = { code: "function useBountiesRecapOrbCountTsx3(t1){const{runOnJS,resetDisplayCount,setDisplayCountMonotonic}=this.__closure;const{count:count_0,revealed:revealed}=t1;if(!revealed){runOnJS(resetDisplayCount)();return;}runOnJS(setDisplayCountMonotonic)(count_0);}" };
-const __initData = { code: "function useBountiesRecapOrbCountTsx4(){const{enabled,recapRevealHeight,getRevealProgress,scrollY,lastBountyScrollOffset,RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS,getRecapOrbCountFromPullProgress,targetOrbAmount}=this.__closure;if(!enabled||recapRevealHeight<=0){return{count:0,revealed:false};}const pullProgress=getRevealProgress(scrollY.get(),lastBountyScrollOffset,recapRevealHeight)/RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS;if(pullProgress<=0.1){return{count:0,revealed:false};}return{count:getRecapOrbCountFromPullProgress(pullProgress,targetOrbAmount),revealed:true};}" };
-const __initData2 = { code: "function useBountiesRecapOrbCountTsx5({count:count_0,revealed:revealed}){const{runOnJS,resetDisplayCount,setDisplayCountMonotonic}=this.__closure;if(!revealed){runOnJS(resetDisplayCount)();return;}runOnJS(setDisplayCountMonotonic)(count_0);}" };
-const ReactCompilerGating = fn(558);
+let __initData = { code: "function useBountiesRecapOrbCountTsx2(){const{enabled,recapRevealHeight,getRevealProgress,scrollY,lastBountyScrollOffset,RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS,getRecapOrbCountFromPullProgress,targetOrbAmount}=this.__closure;if(!enabled||recapRevealHeight<=0){return{count:0,revealed:false};}const pullProgress=getRevealProgress(scrollY.get(),lastBountyScrollOffset,recapRevealHeight)/RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS;if(pullProgress<=0.1){return{count:0,revealed:false};}return{count:getRecapOrbCountFromPullProgress(pullProgress,targetOrbAmount),revealed:true};}" };
+let closure_6 = { code: "function useBountiesRecapOrbCountTsx3({count:count,revealed:revealed}){const{runOnJS,resetDisplayCount,setDisplayCountMonotonic}=this.__closure;if(!revealed){runOnJS(resetDisplayCount)();return;}runOnJS(setDisplayCountMonotonic)(count);}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx");
 
 export { getRecapOrbCountFromPullProgress };
-export const useBountiesRecapOrbCount = ReactCompilerGating.isReactCompilerEnabled() ? (function useBountiesRecapOrbCount(scrollY) {
+export function useBountiesRecapOrbCount(scrollY) {
   scrollY = scrollY.scrollY;
   const lastBountyScrollOffset = scrollY.lastBountyScrollOffset;
   const recapRevealHeight = scrollY.recapRevealHeight;
   const targetOrbAmount = scrollY.targetOrbAmount;
   const enabled = scrollY.enabled;
-  let tmp = recapRevealHeight(targetOrbAmount.useState(0), 2);
-  getRecapOrbCountFromPullProgress = tmp[1];
-  function setDisplayCountMonotonic(arg0) {
-    closure_0 = arg0;
-    closure_5((arg0) => {
-      let tmp = arg0;
-      if (closure_0 > arg0) {
-        tmp = closure_0;
-      }
-      return tmp;
-    });
-  }
-  function resetDisplayCount() {
-    closure_5(0);
-  }
-  class R {
-    constructor() {
-      if (enabled) {
-        num = 0;
-        if (recapRevealHeight > 0) {
-          tmp3 = closure_0;
-          tmp4 = closure_1;
-          obj2 = closure_0(closure_1[4]);
-          tmp5 = scrollY;
-          tmp6 = lastBountyScrollOffset;
-          tmp7 = c4;
-          result = obj2.getRevealProgress(scrollY.get(), lastBountyScrollOffset, tmp) / c4;
-          num4 = 0.1;
-          if (result <= 0.1) {
-            obj = { count: 0, revealed: false };
-          } else {
-            tmp9 = getRecapOrbCountFromPullProgress;
-            tmp10 = targetOrbAmount;
-            if (typeof getRecapOrbCountFromPullProgress === "function") {
-              num2 = 0;
-              if (tmp10 > 0) {
-                tmp2 = globalThis;
-                _Number = Number;
-                num2 = 0;
-                if (Number.isFinite(tmp10)) {
-                  _Math = Math;
-                  _Math2 = Math;
-                  num3 = 1;
-                  _Math3 = Math;
-                  num2 = Math.round(Math.min(1, Math.max(0, result)) * tmp10);
-                }
-              }
-              obj = { count: null, revealed: true };
-              obj.count = num2;
-            } else {
-              str = "Trying to call a non-function";
-              throw new TypeError("Trying to call a non-function");
-            }
-          }
-          return obj;
-        }
-      }
-      return { count: 0, revealed: false };
-    }
-  }
-  let obj = scrollY(lastBountyScrollOffset[3]);
-  R.__closure = { enabled, recapRevealHeight, getRevealProgress: scrollY(lastBountyScrollOffset[4]).getRevealProgress, scrollY, lastBountyScrollOffset, RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: enabled, getRecapOrbCountFromPullProgress, targetOrbAmount };
-  R.__workletHash = 2855285055570;
-  R.__initData = setDisplayCountMonotonic;
-  const fn = function _(arg0) {
-    ({ count, revealed } = arg0);
-    const runOnJS = ReanimatedRexport.runOnJS;
-    if (revealed) {
-      runOnJS(setDisplayCountMonotonic)(count);
-    } else {
-      runOnJS(resetDisplayCount)();
-    }
-  };
-  const obj2 = { enabled, recapRevealHeight, getRevealProgress: scrollY(lastBountyScrollOffset[4]).getRevealProgress, scrollY, lastBountyScrollOffset, RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: enabled, getRecapOrbCountFromPullProgress, targetOrbAmount };
-  fn.__closure = { runOnJS: scrollY(lastBountyScrollOffset[3]).runOnJS, resetDisplayCount, setDisplayCountMonotonic };
-  fn.__workletHash = 11866742563582;
-  fn.__initData = resetDisplayCount;
-  const animatedReaction = obj.useAnimatedReaction(R, fn);
-  return tmp[0];
-}) : (function useBountiesRecapOrbCount(scrollY) {
-  scrollY = scrollY.scrollY;
-  const lastBountyScrollOffset = scrollY.lastBountyScrollOffset;
-  const recapRevealHeight = scrollY.recapRevealHeight;
-  const targetOrbAmount = scrollY.targetOrbAmount;
-  const enabled = scrollY.enabled;
-  getRecapOrbCountFromPullProgress = undefined;
   [tmp2, c5] = recapRevealHeight(targetOrbAmount.useState(0), 2);
-  const setDisplayCountMonotonic = targetOrbAmount.useCallback((arg0) => {
+  __initData = targetOrbAmount.useCallback((arg0) => {
     closure_0 = arg0;
     _undefined((arg0) => {
       let tmp = arg0;
@@ -139,56 +49,38 @@ export const useBountiesRecapOrbCount = ReactCompilerGating.isReactCompilerEnabl
     _undefined(0);
   }, []);
   let tmp = recapRevealHeight(targetOrbAmount.useState(0), 2);
-  class C {
-    constructor() {
-      if (enabled) {
-        num = 0;
-        if (recapRevealHeight > 0) {
-          tmp3 = closure_0;
-          tmp4 = closure_1;
-          obj2 = closure_0(closure_1[4]);
-          tmp5 = scrollY;
-          tmp6 = lastBountyScrollOffset;
-          tmp7 = c4;
-          result = obj2.getRevealProgress(scrollY.get(), lastBountyScrollOffset, tmp) / c4;
-          num4 = 0.1;
-          if (result <= 0.1) {
-            obj = { count: 0, revealed: false };
-          } else {
-            tmp9 = getRecapOrbCountFromPullProgress;
-            tmp10 = targetOrbAmount;
-            if (typeof getRecapOrbCountFromPullProgress === "function") {
-              num2 = 0;
-              if (tmp10 > 0) {
-                tmp2 = globalThis;
-                _Number = Number;
-                num2 = 0;
-                if (Number.isFinite(tmp10)) {
-                  _Math = Math;
-                  _Math2 = Math;
-                  num3 = 1;
-                  _Math3 = Math;
-                  num2 = Math.round(Math.min(1, Math.max(0, result)) * tmp10);
-                }
-              }
-              obj = { count: null, revealed: true };
-              obj.count = num2;
-            } else {
-              str = "Trying to call a non-function";
-              throw new TypeError("Trying to call a non-function");
+  const fn = function b() {
+    if (enabled) {
+      if (recapRevealHeight > 0) {
+        const result = useBountiesRecapScroll.getRevealProgress(scrollY.get(), lastBountyScrollOffset, tmp) / 0.95;
+        if (result <= 0.1) {
+          let obj = { count: 0, revealed: false };
+        } else if (typeof getRecapOrbCountFromPullProgress === "function") {
+          let num2 = 0;
+          if (targetOrbAmount > 0) {
+            const _Number = Number;
+            num2 = 0;
+            if (Number.isFinite(targetOrbAmount)) {
+              const _Math = Math;
+              const _Math2 = Math;
+              const _Math3 = Math;
+              num2 = Math.round(Math.min(1, Math.max(0, result)) * targetOrbAmount);
             }
           }
-          return obj;
+          obj = { count: num2, revealed: true };
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
+        return obj;
       }
-      return { count: 0, revealed: false };
     }
-  }
-  let obj = scrollY(lastBountyScrollOffset[3]);
-  C.__closure = { enabled, recapRevealHeight, getRevealProgress: scrollY(lastBountyScrollOffset[4]).getRevealProgress, scrollY, lastBountyScrollOffset, RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: enabled, getRecapOrbCountFromPullProgress, targetOrbAmount };
-  C.__workletHash = 4646852023252;
-  C.__initData = __initData;
-  const fn = function v(arg0) {
+    return { count: 0, revealed: false };
+  };
+  let obj = scrollY(lastBountyScrollOffset[2]);
+  fn.__closure = { enabled, recapRevealHeight, getRevealProgress: scrollY(lastBountyScrollOffset[3]).getRevealProgress, scrollY, lastBountyScrollOffset, RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: 0.95, getRecapOrbCountFromPullProgress: enabled, targetOrbAmount };
+  fn.__workletHash = 2855285055570;
+  fn.__initData = __initData;
+  const fn2 = function p(arg0) {
     ({ count, revealed } = arg0);
     const runOnJS = ReanimatedRexport.runOnJS;
     if (revealed) {
@@ -197,10 +89,10 @@ export const useBountiesRecapOrbCount = ReactCompilerGating.isReactCompilerEnabl
       runOnJS(callback1)();
     }
   };
-  const obj2 = { enabled, recapRevealHeight, getRevealProgress: scrollY(lastBountyScrollOffset[4]).getRevealProgress, scrollY, lastBountyScrollOffset, RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: enabled, getRecapOrbCountFromPullProgress, targetOrbAmount };
-  fn.__closure = { runOnJS: scrollY(lastBountyScrollOffset[3]).runOnJS, resetDisplayCount: callback1, setDisplayCountMonotonic };
-  fn.__workletHash = 14883339167099;
-  fn.__initData = __initData2;
-  const animatedReaction = obj.useAnimatedReaction(C, fn);
+  const obj2 = { enabled, recapRevealHeight, getRevealProgress: scrollY(lastBountyScrollOffset[3]).getRevealProgress, scrollY, lastBountyScrollOffset, RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS: 0.95, getRecapOrbCountFromPullProgress: enabled, targetOrbAmount };
+  fn2.__closure = { runOnJS: scrollY(lastBountyScrollOffset[2]).runOnJS, resetDisplayCount: callback1, setDisplayCountMonotonic: __initData };
+  fn2.__workletHash = 12006414940221;
+  fn2.__initData = __initData;
+  const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   return tmp2;
-});
+}

@@ -1,13 +1,10 @@
-// === Module 12064: useClickOnHomeActivityOpensAppDetails ===
+// === Module 12240: useClickOnHomeActivityOpensAppDetails ===
 
-// Module 12064 (useClickOnHomeActivityOpensAppDetails)
-import UserSettings from "UserSettings" /* 4833 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+// Module 12240 (useClickOnHomeActivityOpensAppDetails)
+import UserSettings from "UserSettings" /* 4834 */;
 import size from "module_2" /* 2 */;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/app_launcher/hooks/useClickOnHomeActivityOpensAppDetails.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useClickOnHomeActivityOpensAppDetails.tsx");
 
 export function useClickOnHomeActivityOpensAppDetails() {
   const DeveloperMode = UserSettings.DeveloperMode;

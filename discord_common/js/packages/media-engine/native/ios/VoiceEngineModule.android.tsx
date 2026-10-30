@@ -1,7 +1,7 @@
-// === Module 2016: VoiceEngineModule ===
+// === Module 2011: VoiceEngineModule ===
 
-// Module 2016 (VoiceEngineModule)
-import NativeMediaEngineModule_mod from "NativeMediaEngineModule" /* 2017 */;
+// Module 2011 (VoiceEngineModule)
+import NativeMediaEngineModule_mod from "NativeMediaEngineModule" /* 2012 */;
 
 let NativeMediaEngineModule = NativeMediaEngineModule_mod;
 NativeMediaEngineModule = NativeMediaEngineModule.getConstants();

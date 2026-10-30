@@ -1,6 +1,6 @@
-// === Module 7899: ? ===
+// === Module 7905: ? ===
 
-// Module 7899
+// Module 7905
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/guild-room/test-background/Room-Partial-Posters-Blurred.webp.js");

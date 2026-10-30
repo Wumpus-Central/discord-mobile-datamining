@@ -1,7 +1,7 @@
-// === Module 14527: DiceRollExperiment ===
+// === Module 14560: DiceRollExperiment ===
 
-// Module 14527 (DiceRollExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 14560 (DiceRollExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-05-dice-roll-slash-command", defaultConfig: { enabled: false }, variations: null };

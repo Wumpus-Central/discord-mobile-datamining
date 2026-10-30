@@ -1,15 +1,15 @@
-// === Module 11293: ExternalStreamingStore ===
+// === Module 11496: ExternalStreamingStore ===
 
-// Module 11293 (ExternalStreamingStore)
+// Module 11496 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7334 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import _modDef1343 from "module_1343" /* 1343 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7341 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
-import StreamerModeStore from "StreamerModeStore" /* 5060 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
+import StreamerModeStore from "StreamerModeStore" /* 5064 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {
@@ -41,7 +41,7 @@ function streamerModeUpdate() {
     obj3.stop();
   }
 }
-const PlatformTypes = fn(1084).PlatformTypes;
+const PlatformTypes = fn(1072).PlatformTypes;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let closure_8 = 5 * DurationsDefault.Millis.MINUTE;
 const re9 = /live_user_(.*)-\{width\}/;
@@ -98,7 +98,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -499,7 +499,7 @@ prototype2["getStream"] = function getStream() {
 ExternalStreamingStore.displayName = "ExternalStreamingStore";
 const externalStreamingStore = new ExternalStreamingStore(DispatcherDefault, {
   STREAMING_UPDATE: function streamUpdate(stream) {
-    if (_modDef1354(stream.stream, stream)) {
+    if (_modDef1343(stream.stream, stream)) {
       return false;
     } else {
       stream = stream.stream;

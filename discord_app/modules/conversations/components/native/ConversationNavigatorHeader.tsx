@@ -1,90 +1,20 @@
-// === Module 9821: ConversationNavigatorHeader ===
+// === Module 9847: ConversationNavigatorHeader ===
 
-// Module 9821 (ConversationNavigatorHeader)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 5289 */;
-import useChannelNameDefault from "useChannelName" /* 5641 */;
-import HeaderShared from "HeaderShared" /* 9765 */;
-import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9822 */;
+// Module 9847 (ConversationNavigatorHeader)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1377 */;
+import useToken from "useToken" /* 5591 */;
+import useChannelNameDefault from "useChannelName" /* 5647 */;
+import HeaderShared from "HeaderShared" /* 9791 */;
+import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9848 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(5005);
-let closure_6 = createStyles.createStyles((arg0) => {
-  const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
-  let num = 0;
-  if (!arg0) {
-    num = nativeDefault.space.PX_64;
-  }
-  container.paddingRight = num;
-  return { container };
-});
-let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationNavigatorHeader(channelId) {
-  const cResult = channelId(576).c(10);
-  channelId = channelId.channelId;
-  ({ title, hasRightAction } = channelId);
-  let tmp5 = undefined !== hasRightAction;
-  if (tmp5) {
-    tmp5 = hasRightAction;
-  }
-  const tmp4Result = closure_6(tmp5);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== channelId) {
-    const fn = function u() {
-      return ChannelStore.getChannel(channelId);
-    };
-    const items1 = [channelId];
-    cResult[1] = channelId;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp10 = items1;
-    let tmp9 = fn;
-  } else {
-    tmp9 = cResult[2];
-    tmp10 = cResult[3];
-  }
-  const obj = channelId(576);
-  const stateFromStores = channelId(504).useStateFromStores(first, tmp9, tmp10);
-  const tmp12 = useChannelNameDefault(stateFromStores, true);
-  if (cResult[4] === tmp12) {
-    if (cResult[5] === title) {
-      let tmp13 = cResult[6];
-    }
-    if (cResult[7] === tmp4Result.container) {
-      if (cResult[8] === tmp13) {
-        let tmp15 = cResult[9];
-      }
-      return tmp15;
-    }
-    const obj2 = { style: tmp4Result.container, children: tmp13 };
-    const tmp18 = <View style={tmp4Result.container}>{tmp13}</View>;
-    cResult[7] = tmp4Result.container;
-    cResult[8] = tmp13;
-    cResult[9] = tmp18;
-    tmp15 = tmp18;
-  }
-  const tmp14 = jsx(channelId(9765).GenericHeaderTitle, { title, subtitle: tmp12, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
-  cResult[4] = tmp12;
-  cResult[5] = title;
-  cResult[6] = tmp14;
-  tmp13 = tmp14;
-  const tmpResult = channelId(504);
-}) : (function ConversationNavigatorHeader(channelId) {
+function ConversationNavigatorHeader(channelId) {
   channelId = channelId.channelId;
   let flag = channelId.hasRightAction;
   if (flag === undefined) {
@@ -97,39 +27,10 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Convers
   const obj = channelId(504);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj2.children = jsx(channelId(9765).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj2.children = jsx(channelId(9791).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   return <View style={tmp.container}>{null}</View>;
-});
-ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderWithBorder(shouldHandleSafeArea) {
-  const cResult = c.c(4);
-  const token = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE);
-  const token1 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  if (cResult[0] === token1) {
-    if (cResult[1] === token) {
-      if (cResult[2] === shouldHandleSafeArea) {
-        let tmp6 = cResult[3];
-      }
-      return tmp6;
-    }
-  }
-  const obj4 = {};
-  const merged = Object.assign(shouldHandleSafeArea);
-  shouldHandleSafeArea = shouldHandleSafeArea.shouldHandleSafeArea;
-  if (shouldHandleSafeArea == null) {
-    shouldHandleSafeArea = utils_PlatformUtils.isAndroid();
-    const tmpResult2 = utils_PlatformUtils;
-  }
-  obj4.shouldHandleSafeArea = shouldHandleSafeArea;
-  obj4.style = { borderColor: token, backgroundColor: token1 };
-  const renderHeaderResult = HeaderShared.renderHeader(obj4);
-  cResult[0] = token1;
-  cResult[1] = token;
-  cResult[2] = shouldHandleSafeArea;
-  cResult[3] = renderHeaderResult;
-  tmp6 = renderHeaderResult;
-  const tmpResult = HeaderShared;
-}) : (function HeaderWithBorder(shouldHandleSafeArea) {
+}
+function HeaderWithBorder(shouldHandleSafeArea) {
   const token = useToken.useToken(nativeDefault.colors.BORDER_SUBTLE);
   const token1 = useToken.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   const obj4 = {};
@@ -142,6 +43,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderW
   obj4.shouldHandleSafeArea = shouldHandleSafeArea;
   obj4.style = { borderColor: token, backgroundColor: token1 };
   return HeaderShared.renderHeader(obj4);
+}
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(5009);
+let closure_6 = createStyles.createStyles((arg0) => {
+  const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
+  let num = 0;
+  if (!arg0) {
+    num = nativeDefault.space.PX_64;
+  }
+  container.paddingRight = num;
+  return { container };
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorHeader.tsx");
@@ -158,7 +71,7 @@ export function conversationNavigatorListHeaderOptions(route, navigation, backgr
         shouldHandleSafeArea = backgroundColor.shouldHandleSafeArea;
       }
       obj.shouldHandleSafeArea = shouldHandleSafeArea;
-      return <closure_8 />;
+      return <HeaderWithBorder />;
     },
     headerLeft: null,
     headerTitle: null
@@ -172,7 +85,7 @@ export function conversationNavigatorListHeaderOptions(route, navigation, backgr
     const obj = { channelId: navigation.params.channelId, title: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.T3WBRp);
-    return <closure_7 channelId={navigation.params.channelId} title={null} />;
+    return <ConversationNavigatorHeader channelId={navigation.params.channelId} title={null} />;
   };
   return obj;
 }
@@ -188,7 +101,7 @@ export function conversationNavigatorFocusHeaderOptions(route, navigation, backg
         shouldHandleSafeArea = backgroundColor.shouldHandleSafeArea;
       }
       obj.shouldHandleSafeArea = shouldHandleSafeArea;
-      return <closure_8 />;
+      return <HeaderWithBorder />;
     },
     headerLeft: null,
     headerTitle: null,
@@ -203,7 +116,7 @@ export function conversationNavigatorFocusHeaderOptions(route, navigation, backg
     let tmp2 = null;
     if (null != closure_0.params) {
       const obj = { channelId: closure_0.params.channelId, title: closure_0.params.title, hasRightAction: true };
-      tmp2 = <closure_7 channelId={closure_0.params.channelId} title={closure_0.params.title} hasRightAction />;
+      tmp2 = <ConversationNavigatorHeader channelId={closure_0.params.channelId} title={closure_0.params.title} hasRightAction />;
     }
     return tmp2;
   };

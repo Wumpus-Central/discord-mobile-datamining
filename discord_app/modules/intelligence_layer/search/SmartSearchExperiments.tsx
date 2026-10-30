@@ -1,25 +1,24 @@
-// === Module 13729: SmartSearchExperiments ===
+// === Module 13876: SmartSearchExperiments ===
 
-// Module 13729 (SmartSearchExperiments)
-import ConversationExperiments from "ConversationExperiments" /* 9800 */;
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 13876 (SmartSearchExperiments)
+import ConversationExperiments from "ConversationExperiments" /* 9826 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildFeatures = fn(1084).GuildFeatures;
-let ApexExperiment = fn(1453);
+const GuildFeatures = fn(1072).GuildFeatures;
+let ApexExperiment = fn(1448);
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-mobile-nlp-search-user-flag", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1453);
+ApexExperiment = fn(1448);
 const apexExperiment1 = ApexExperiment.createApexExperiment({ kind: "guild", name: "2026-09-mobile-nlp-search-guild-experiment", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchExperiments.tsx");
 
 export const NlpSearchUserExperiment = apexExperiment;
 export const NlpSearchGuildExperiment = apexExperiment1;
 export function isNlpSearchEnabled(guildId, suggested_searches) {
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   let flag;
   if (guild != null) {
     const features = guild.features;
@@ -45,89 +44,14 @@ export function isNlpSearchEnabled(guildId, suggested_searches) {
     return false;
   }
 }
-export const useIsNlpSearchEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsNlpSearchEnabled(arg0, location) {
-  _require = arg0;
-  const cResult = require("c").c(9);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function c() {
-      let tmp2 = null != closure_0;
-      if (tmp2) {
-        guild = GuildStore.getGuild(tmp);
-        let flag;
-        if (guild != null) {
-          const features = guild.features;
-          flag = features.has(GuildFeatures.DISCOVERABLE);
-        }
-        if (flag == null) {
-          flag = false;
-        }
-        tmp2 = flag;
-      }
-      return tmp2;
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
-  }
-  const obj = require("c");
-  let stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-  const tmpResult = require("initialize");
-  let isConversationDebugUXEnabled = require("ConversationExperiments").useIsConversationDebugUXEnabled(arg0, location);
-  if (cResult[4] !== location) {
-    const obj2 = { location };
-    cResult[4] = location;
-    cResult[5] = obj2;
-    let tmp10 = obj2;
-  } else {
-    tmp10 = cResult[5];
-  }
-  let enabled = apexExperiment.useConfig(tmp10).enabled;
-  let str = arg0;
-  if (arg0 == null) {
-    str = "";
-  }
-  if (cResult[6] === location) {
-    if (cResult[7] === str) {
-      let tmp11 = cResult[8];
-    }
-    if (stateFromStores) {
-      if (!isConversationDebugUXEnabled) {
-        if (enabled) {
-          enabled = apexExperiment1.useConfig(tmp11).enabled;
-        }
-        isConversationDebugUXEnabled = enabled;
-      }
-      stateFromStores = isConversationDebugUXEnabled;
-    }
-    return stateFromStores;
-  }
-  const obj3 = { guildId: str, location };
-  cResult[6] = location;
-  cResult[7] = str;
-  cResult[8] = obj3;
-  tmp11 = obj3;
-  const tmpResult2 = require("ConversationExperiments");
-}) : (function useIsNlpSearchEnabled(arg0, location) {
-  _require = arg0;
+export function useIsNlpSearchEnabled(guildId, fetch_answer) {
+  _require = guildId;
   const items = [GuildStore];
-  const items1 = [arg0];
+  const items1 = [guildId];
   let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      guild = GuildStore.getGuild(tmp);
+      const guild = GuildStore.getGuild(tmp);
       let flag;
       if (guild != null) {
         const features = guild.features;
@@ -141,9 +65,9 @@ export const useIsNlpSearchEnabled = ReactCompilerGating.isReactCompilerEnabled(
     return tmp2;
   }, items1);
   const obj = require("initialize");
-  let isConversationDebugUXEnabled = require("ConversationExperiments").useIsConversationDebugUXEnabled(arg0, location);
-  let enabled = apexExperiment.useConfig({ location }).enabled;
-  if (arg0 == null) {
+  let isConversationDebugUXEnabled = require("ConversationExperiments").useIsConversationDebugUXEnabled(guildId, fetch_answer);
+  let enabled = apexExperiment.useConfig({ location: fetch_answer }).enabled;
+  if (guildId == null) {
     const str = "";
   }
   if (stateFromStores) {
@@ -156,4 +80,4 @@ export const useIsNlpSearchEnabled = ReactCompilerGating.isReactCompilerEnabled(
     stateFromStores = isConversationDebugUXEnabled;
   }
   return stateFromStores;
-});
+}

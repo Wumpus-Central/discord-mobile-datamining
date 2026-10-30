@@ -1,8 +1,8 @@
-// === Module 6843: MessageRequestStore ===
+// === Module 6850: MessageRequestStore ===
 
-// Module 6843 (MessageRequestStore)
-import ChannelStore from "ChannelStore" /* 4857 */;
-import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1083 */;
+// Module 6850 (MessageRequestStore)
+import ChannelStore from "ChannelStore" /* 4858 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
 
 function processChannel(isMessageRequest) {
   let tmp = isMessageRequest.isMessageRequest && !isMessageRequest.isSpam;

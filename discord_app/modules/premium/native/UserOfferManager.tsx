@@ -1,12 +1,12 @@
-// === Module 19510: UserOfferManager ===
+// === Module 19573: UserOfferManager ===
 
-// Module 19510 (UserOfferManager)
-import UserStore from "UserStore" /* 1389 */;
-import UserOfferStore from "UserOfferStore" /* 7618 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+// Module 19573 (UserOfferManager)
+import UserStore from "UserStore" /* 1384 */;
+import UserOfferStore from "UserOfferStore" /* 7623 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 let require = fn;
-const PaymentGateways = fn(1095).PaymentGateways;
+const PaymentGateways = fn(1083).PaymentGateways;
 const prototype = function UserOfferManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;

@@ -1,59 +1,23 @@
-// === Module 17124: EchoCancellationSetting ===
+// === Module 17178: EchoCancellationSetting ===
 
-// Module 17124 (EchoCancellationSetting)
+// Module 17178 (EchoCancellationSetting)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import util from "util" /* 1114 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEchoCancellationSettingValue() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [MediaEngineStore];
-    const fn = function l() {
-      return echoCancellation.getEchoCancellation();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useEchoCancellationSettingValue() {
-  const items = [MediaEngineStore];
-  return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
-});
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.iWTwu6);
   },
-  parent: fn(8387).MobileUserSettings.VOICE,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useEchoCancellationSettingValue() {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [MediaEngineStore];
-      const fn = function l() {
-        return echoCancellation.getEchoCancellation();
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (function useEchoCancellationSettingValue() {
+  parent: fn(8424).MobileUserSettings.VOICE,
+  useValue: function useEchoCancellationSettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
-  }),
-  onValueChange: fn(11724).handleEchoCancellationChange
+  },
+  onValueChange: fn(11917).handleEchoCancellationChange
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");

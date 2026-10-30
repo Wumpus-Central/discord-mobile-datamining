@@ -1,11 +1,11 @@
-// === Module 7337: getConnectionsRoles ===
+// === Module 7344: getConnectionsRoles ===
 
-// Module 7337 (getConnectionsRoles)
-import GuildRoleStore from "GuildRoleStore" /* 4911 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import BigFlagUtils from "BigFlagUtils" /* 1096 */;
+// Module 7344 (getConnectionsRoles)
+import GuildRoleStore from "GuildRoleStore" /* 4915 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes, Permissions } = Constants);
 let items = [, , , , , , ];
 ({ GUILD_TEXT: arr[0], GUILD_VOICE: arr[1], GUILD_ANNOUNCEMENT: arr[2], GUILD_FORUM: arr[3], GUILD_APP: arr[4], PUBLIC_THREAD: arr[5], PRIVATE_THREAD: arr[6] } = ChannelTypes);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/channel/getConnectionsRoles.t
 export default function getConnectionsRoles(type) {
   if (null != type) {
     if (items.includes(type.type)) {
-      guild = GuildStore.getGuild(type.guild_id);
+      const guild = GuildStore.getGuild(type.guild_id);
       if (null == guild) {
         items = [];
       } else {

@@ -1,15 +1,15 @@
-// === Module 5745: transitionToChannel ===
+// === Module 5751: transitionToChannel ===
 
-// Module 5745 (transitionToChannel)
+// Module 5751 (transitionToChannel)
 import _modDef38 from "module_38" /* 38 */;
-import router_utils from "router_utils" /* 1111 */;
-import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 5746 */;
-import preloadChannelDefault from "preloadChannel" /* 5747 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5748 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+import router_utils from "router_utils" /* 1100 */;
+import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 5752 */;
+import preloadChannelDefault from "preloadChannel" /* 5753 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5754 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 require = fn;
-const Routes = fn(1084).Routes;
+const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToChannel.tsx");
 
@@ -86,15 +86,15 @@ export function tryTransitionToThreadMessage(parentChannelId, threadId, messageI
     }
   }
 }
-export function transitionToMessage(channelId, messageId, arg2) {
-  const channel = ChannelStore.getChannel(channelId);
+export function transitionToMessage(id, id2, arg2) {
+  const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     const obj3 = { openChannel: true };
     const obj2 = router_utils;
     const merged = Object.assign(arg2);
-    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId), obj3);
-    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
+    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id2), obj3);
+    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id2);
   }
 }
 export function transitionToStaticChannelRoute(arg0, arg1, arg2) {

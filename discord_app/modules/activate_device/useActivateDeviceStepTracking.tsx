@@ -1,58 +1,17 @@
-// === Module 15619: useActivateDeviceStepTracking ===
+// === Module 15659: useActivateDeviceStepTracking ===
 
-// Module 15619 (useActivateDeviceStepTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import usePreviousDefault from "usePrevious" /* 6719 */;
-import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15620 */;
+// Module 15659 (useActivateDeviceStepTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import usePreviousDefault from "usePrevious" /* 6726 */;
+import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15660 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
 require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const ReactCompilerGating = fn(558);
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
 
-export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivateDeviceStepTracking(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  const tmp2 = usePreviousDefault(arg0);
-  importDefault = tmp2;
-  if (cResult[0] === tmp2) {
-    if (cResult[1] === arg0) {
-      let tmp3 = cResult[2];
-      let tmp4 = cResult[3];
-    }
-    const effect = noop.useEffect(tmp3, tmp4);
-  }
-  const fn = function p() {
-    if (closure_0 !== type) {
-      let tmp3 = "user-code-input" !== closure_0.type;
-      if (tmp3) {
-        tmp3 = "handoff" !== closure_0.type;
-      }
-      let result = null;
-      if (tmp3) {
-        result = ActivateDeviceUtils.clientIdToActivateDevicePlatform(closure_0.userCodeData.clientId);
-      }
-      type = undefined;
-      if (type != null) {
-        type = type.type;
-      }
-      const obj3 = { previous_step: type, current_step: closure_0.type, platform_type: result };
-      AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj3);
-    }
-  };
-  const items = [tmp2, arg0];
-  cResult[0] = tmp2;
-  cResult[1] = arg0;
-  cResult[2] = fn;
-  cResult[3] = items;
-  tmp4 = items;
-  tmp3 = fn;
-  let obj = require("c");
-}) : (function useActivateDeviceStepTracking(arg0) {
+export function useActivateDeviceStepTracking(arg0) {
   closure_0 = arg0;
   const tmp = usePreviousDefault(arg0);
   importDefault = tmp;
@@ -75,4 +34,4 @@ export const useActivateDeviceStepTracking = ReactCompilerGating.isReactCompiler
       AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj3);
     }
   }, items);
-});
+}

@@ -1,11 +1,11 @@
-// === Module 15155: UserTrialActionCreators ===
+// === Module 15195: UserTrialActionCreators ===
 
-// Module 15155 (UserTrialActionCreators)
+// Module 15195 (UserTrialActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7622 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7627 */;
 
 const require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: hasOwnProperty, PaymentGateways: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/UserTrialActionCreators.android.tsx");
@@ -23,7 +23,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

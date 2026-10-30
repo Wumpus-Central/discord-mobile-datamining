@@ -1,23 +1,23 @@
-// === Module 7642: TTIAnalyticsUtils ===
+// === Module 7647: TTIAnalyticsUtils ===
 
-// Module 7642 (TTIAnalyticsUtils)
+// Module 7647 (TTIAnalyticsUtils)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
-import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import DeviceUtils from "DeviceUtils" /* 4962 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
-import RootNavigationRef from "RootNavigationRef" /* 5188 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5194 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5878 */;
-import AppStartInfo2 from "AppStartInfo" /* 7802 */;
+import SentryUtilsDefault from "SentryUtils" /* 1243 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import DeviceUtils from "DeviceUtils" /* 4966 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
+import RootNavigationRef from "RootNavigationRef" /* 5194 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5200 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5885 */;
+import AppStartInfo2 from "AppStartInfo" /* 7807 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CacheStore from "CacheStore" /* 7643 */;
-import ExperimentStore from "ExperimentStore" /* 5227 */;
-import ThemeStore from "ThemeStore" /* 1204 */;
+import CacheStore from "CacheStore" /* 7648 */;
+import ExperimentStore from "ExperimentStore" /* 5233 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1358 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1375 */;
 
 require = fn;
 function getDeviceMetadata() {
@@ -112,7 +112,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -184,7 +184,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
               closure_1_1(9).setTTICallback(() => true);
               closure_1_27();
               c25 = null;
-            }, 15 * closure_1_1(1101).Millis.SECOND);
+            }, 15 * closure_1_1(1090).Millis.SECOND);
             closure_1_1(9).setTTICallback(() => {
               const tmp = closure_1_21();
               let flag = false;
@@ -228,7 +228,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
           }
         })();
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp6) {
       c6 = tmp;
@@ -247,7 +247,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -304,7 +304,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
         const merged2 = Object.assign(closure_133_0);
         closure_134_1(closure_134_2[19]).track(closure_134_10.APP_UI_VIEWED, obj9, { logEventProperties: true });
         c8 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp7) {
       c8 = tmp;
@@ -333,7 +333,7 @@ let closure_28 = async function _trackAppUIViewed() {
       const obj9 = { value, done: true };
       return obj9;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -497,7 +497,7 @@ let closure_28 = async function _trackAppUIViewed() {
           })(closure_131_6);
         }
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp66) {
       c6 = tmp;
@@ -537,7 +537,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -573,7 +573,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
         closure_133_0 = ThemeStore(closure_3, closure_2, value);
         closure_132_1(closure_132_2[19]).track(closure_132_10.APP_LAUNCH_COMPLETED, closure_133_0, { logEventProperties: true });
         c8 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp21) {
       c8 = tmp;
@@ -581,11 +581,11 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7801).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(4864).StaticChannelRoutes;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const ACCEPT_INVITE_MODAL_KEY = fn(7806).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(4865).StaticChannelRoutes;
 const jsx = fn(21).jsx;
-const v1 = fn(1278);
+const v1 = fn(1267);
 const load_id = v1.v4();
 const Manifest = ClientInfoUtils.getConstants().Manifest;
 let c18 = false;

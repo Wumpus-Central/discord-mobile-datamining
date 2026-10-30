@@ -1,8 +1,8 @@
-// === Module 19605: EmojiRecord ===
+// === Module 19668: EmojiRecord ===
 
-// Module 19605 (EmojiRecord)
-import Record from "Record" /* 1404 */;
-import UserRecord from "UserRecord" /* 1403 */;
+// Module 19668 (EmojiRecord)
+import Record from "Record" /* 1399 */;
+import UserRecord from "UserRecord" /* 1398 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("records/EmojiRecord.tsx");

@@ -1,7 +1,7 @@
-// === Module 6560: ConnectedAccountRecord ===
+// === Module 6567: ConnectedAccountRecord ===
 
-// Module 6560 (ConnectedAccountRecord)
-import Record from "Record" /* 1404 */;
+// Module 6567 (ConnectedAccountRecord)
+import Record from "Record" /* 1399 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("records/ConnectedAccountRecord.tsx");

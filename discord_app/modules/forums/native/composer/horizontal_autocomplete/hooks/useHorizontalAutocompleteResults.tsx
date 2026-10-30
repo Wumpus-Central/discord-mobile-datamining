@@ -1,12 +1,12 @@
-// === Module 10262: useHorizontalAutocompleteResults ===
+// === Module 10287: useHorizontalAutocompleteResults ===
 
-// Module 10262 (useHorizontalAutocompleteResults)
-import AutocompleteOptions from "AutocompleteOptions" /* 10263 */;
+// Module 10287 (useHorizontalAutocompleteResults)
+import AutocompleteOptions from "AutocompleteOptions" /* 10288 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AutoCompleteResultTypes: closure_4, ChannelTypes: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");

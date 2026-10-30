@@ -1,123 +1,38 @@
-// === Module 16446: UserProfileTryItOutGetPremiumUpsell ===
+// === Module 16501: UserProfileTryItOutGetPremiumUpsell ===
 
-// Module 16446 (UserProfileTryItOutGetPremiumUpsell)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7313 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9858 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9859 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9982 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16442 */;
+// Module 16501 (UserProfileTryItOutGetPremiumUpsell)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7320 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9884 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9885 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16498 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTryItOutGetPremiumUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileTryItOutGetPremiumUpsell(onLayout) {
-  const cResult = analyticsLocations(576).c(12);
-  onLayout = onLayout.onLayout;
-  let obj = analyticsLocations(576);
-  const nitroTrialCtaOverride = analyticsLocations(7614).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  if (cResult[0] !== analyticsLocations) {
-    const fn = function o() {
-      const obj = { analyticsLocation: { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT, object: constants.BUTTON_CTA }, analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
-      openPremiumModalDefault(obj);
-    };
-    cResult[0] = analyticsLocations;
-    cResult[1] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[1];
-  }
-  const obj2 = analyticsLocations(7614);
-  ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, tmp6, constants2.USER_SETTINGS));
-  const tmp7 = usePremiumFeatureUpsellGetNitroDefault(false, tmp6, constants2.USER_SETTINGS);
-  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(16447).useMobileNitroPreviewDirectCheckoutEnabled();
-  if (cResult[2] !== tmp6) {
-    const intl = tmp(1125).intl;
-    const obj3 = { onClick: tmp6 };
-    const formatResult = intl.format(tmp(1125).t.TmfgI2, obj3);
-    cResult[2] = tmp6;
-    cResult[3] = formatResult;
-    let tmp9 = formatResult;
-  } else {
-    tmp9 = cResult[3];
-  }
-  if (cResult[4] !== nitroTrialCtaOverride) {
-    let stringResult = nitroTrialCtaOverride;
-    if (nitroTrialCtaOverride == null) {
-      const intl2 = tmp(1125).intl;
-      stringResult = intl2.string(tmp(1125).t.pj0XBN);
-    }
-    cResult[4] = nitroTrialCtaOverride;
-    cResult[5] = stringResult;
-    let tmp11 = stringResult;
-  } else {
-    tmp11 = cResult[5];
-  }
-  let tmp14 = mobileNitroPreviewDirectCheckoutEnabled;
-  if (mobileNitroPreviewDirectCheckoutEnabled) {
-    tmp14 = loading;
-  }
-  if (mobileNitroPreviewDirectCheckoutEnabled) {
-    tmp6 = onPress;
-  }
-  if (cResult[6] === onLayout) {
-    if (cResult[7] === tmp9) {
-      if (cResult[8] === tmp11) {
-        if (cResult[9] === tmp14) {
-          if (cResult[10] === tmp6) {
-            let tmp15 = cResult[11];
-          }
-          return tmp15;
-        }
-      }
-    }
-  }
-  const tmp16 = jsx(UserProfileFloatingUpsellDefault, { text: tmp9, buttonText: tmp11, buttonVariant: "experimental_premium-primary", loading: tmp14, onButtonPress: tmp6, onLayout });
-  cResult[6] = onLayout;
-  cResult[7] = tmp9;
-  cResult[8] = tmp11;
-  cResult[9] = tmp14;
-  cResult[10] = tmp6;
-  cResult[11] = tmp16;
-  tmp15 = tmp16;
-  const tmpResult = analyticsLocations(16447);
-}) : (function UserProfileTryItOutGetPremiumUpsell(onLayout) {
+export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7614).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7619).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const items = [analyticsLocations];
-  let callback = noop.useCallback(() => {
+  const callback = noop.useCallback(() => {
     const obj = { analyticsLocation: { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT, object: constants.BUTTON_CTA }, analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   }, items);
-  let obj = analyticsLocations(7614);
-  ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS));
-  const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS);
-  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(16447).useMobileNitroPreviewDirectCheckoutEnabled();
-  const obj3 = { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", loading: null, onButtonPress: null, onLayout: null };
-  const obj2 = analyticsLocations(16447);
-  const intl = analyticsLocations(1125).intl;
-  obj3.text = intl.format(analyticsLocations(1125).t.TmfgI2, { onClick: callback });
+  const obj2 = { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", onButtonPress: null, onLayout: null };
+  let obj = analyticsLocations(7619);
+  const intl = analyticsLocations(1114).intl;
+  obj2.text = intl.format(analyticsLocations(1114).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {
-    const intl2 = tmp(1125).intl;
-    nitroTrialCtaOverride = intl2.string(tmp(1125).t.pj0XBN);
+    const intl2 = tmp(1114).intl;
+    nitroTrialCtaOverride = intl2.string(tmp(1114).t.pj0XBN);
   }
-  obj3.buttonText = nitroTrialCtaOverride;
-  let tmp9 = mobileNitroPreviewDirectCheckoutEnabled;
-  if (mobileNitroPreviewDirectCheckoutEnabled) {
-    tmp9 = loading;
-  }
-  obj3.loading = tmp9;
-  if (mobileNitroPreviewDirectCheckoutEnabled) {
-    callback = onPress;
-  }
-  obj3.onButtonPress = callback;
-  obj3.onLayout = onLayout.onLayout;
-  return jsx(UserProfileFloatingUpsellDefault, { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", loading: null, onButtonPress: null, onLayout: null });
-});
+  obj2.buttonText = nitroTrialCtaOverride;
+  obj2.onButtonPress = callback;
+  obj2.onLayout = onLayout.onLayout;
+  return jsx(UserProfileFloatingUpsellDefault, { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", onButtonPress: null, onLayout: null });
+};

@@ -1,137 +1,19 @@
-// === Module 18096: FavoritesGuildAddCategoryActionSheet ===
+// === Module 18157: FavoritesGuildAddCategoryActionSheet ===
 
-// Module 18096 (FavoritesGuildAddCategoryActionSheet)
-import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5247 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10788 */;
+// Module 18157 (FavoritesGuildAddCategoryActionSheet)
+import nativeDefault from "native" /* 575 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5253 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10811 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
-const maxLength = fn(4870).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-const createStyles = fn(5005);
-let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
-let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
-obj2.body = { gap: nativeDefault.space.PX_16 };
-let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildAddCategoryActionSheet() {
-  const cResult = value(576).c(20);
-  const tmp4 = closure_9();
-  const tmp5 = _slicedToArray(noop.useState(""), 2);
-  value = tmp5[0];
-  if (cResult[0] !== value) {
-    const result = tmp(4882).isFavoritesGuildCategoryNameValid(value);
-    cResult[0] = value;
-    cResult[1] = result;
-    let tmp7 = result;
-    const tmpResult = tmp(4882);
-  } else {
-    tmp7 = cResult[1];
-  }
-  closure_1 = tmp7;
-  if (cResult[2] === tmp7) {
-    if (cResult[3] === value) {
-      let tmp9 = cResult[4];
-    }
-    const _Symbol = Symbol;
-    ({ content, body } = tmp4);
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      let obj2 = { title: null };
-      const intl = tmp(1125).intl;
-      obj2.title = intl.string(tmp(1125).t["ISN+NM"]);
-      const tmp13 = closure_6(tmp(7308).BottomSheetTitleHeader, obj2);
-      cResult[5] = tmp13;
-      let tmp11 = tmp13;
-    } else {
-      tmp11 = cResult[5];
-    }
-    const _Symbol2 = Symbol;
-    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = tmp(1125).intl;
-      const stringResult = intl2.string(tmp(1125).t.OCAkGP);
-      const intl3 = tmp(1125).intl;
-      const stringResult1 = intl3.string(tmp(1125).t.eTVbtx);
-      cResult[6] = stringResult;
-      cResult[7] = stringResult1;
-      let tmp15 = stringResult1;
-      let tmp14 = stringResult;
-    } else {
-      tmp14 = cResult[6];
-      tmp15 = cResult[7];
-    }
-    if (cResult[8] === tmp9) {
-      if (cResult[9] === value) {
-        let tmp18 = cResult[10];
-      }
-      const _Symbol3 = Symbol;
-      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl4 = tmp(1125).intl;
-        const stringResult2 = intl4.string(tmp(1125).t.CumH4u);
-        cResult[11] = stringResult2;
-        let tmp22 = stringResult2;
-      } else {
-        tmp22 = cResult[11];
-      }
-      if (cResult[12] === tmp9) {
-        if (cResult[13] === tmp24) {
-          let tmp25 = cResult[14];
-        }
-        if (cResult[15] === tmp4.body) {
-          if (cResult[16] === tmp4.content) {
-            if (cResult[17] === tmp25) {
-              if (cResult[18] === tmp18) {
-                let tmp28 = cResult[19];
-              }
-              return tmp28;
-            }
-          }
-        }
-        const obj3 = { contentStyles: content, bodyStyles: body, keyboardShouldPersistTaps: "always", header: tmp11, children: null };
-        const items = [tmp18, tmp25];
-        obj3.children = items;
-        const tmp30 = closure_7(tmp(5302).BottomSheet, obj3);
-        cResult[15] = tmp4.body;
-        cResult[16] = tmp4.content;
-        cResult[17] = tmp25;
-        cResult[18] = tmp18;
-        cResult[19] = tmp30;
-        tmp28 = tmp30;
-      }
-      const obj4 = { text: tmp22, onPress: tmp9, disabled: !tmp7 };
-      const tmp27 = closure_6(tmp(5281).Button, obj4);
-      cResult[12] = tmp9;
-      cResult[13] = !tmp7;
-      cResult[14] = tmp27;
-      tmp25 = tmp27;
-    }
-    const obj5 = { label: tmp14, placeholder: tmp15, value, onChange: tmp5[1], maxLength, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: tmp9 };
-    const tmp21 = closure_6(tmp(7068).TextInput, obj5);
-    cResult[8] = tmp9;
-    cResult[9] = value;
-    cResult[10] = tmp21;
-    tmp18 = tmp21;
-  }
-  const fn = function p() {
-    if (closure_1) {
-      FavoritesActionCreators.addFavoriteCategory(first);
-      ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildAddCategoryActionSheet);
-    }
-  };
-  cResult[2] = tmp7;
-  cResult[3] = value;
-  cResult[4] = fn;
-  tmp9 = fn;
-  let obj = value(576);
-}) : (function FavoritesGuildAddCategoryActionSheet() {
+function FavoritesGuildAddCategoryActionSheet() {
   const tmp = closure_9();
   [value, obj4.onChange] = noop.useState("");
-  const result = value(4882).isFavoritesGuildCategoryNameValid(value);
+  const result = value(4883).isFavoritesGuildCategoryNameValid(value);
   importDefault = result;
   const items = [result, value];
   const callback = noop.useCallback(() => {
@@ -142,31 +24,40 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favori
   }, items);
   let obj2 = { contentStyles: tmp.content, bodyStyles: tmp.body, keyboardShouldPersistTaps: "always", header: null, children: null };
   const obj3 = { title: null };
-  const intl = value(1125).intl;
-  obj3.title = intl.string(value(1125).t["ISN+NM"]);
-  obj2.header = closure_6(value(7308).BottomSheetTitleHeader, obj3);
+  const intl = value(1114).intl;
+  obj3.title = intl.string(value(1114).t["ISN+NM"]);
+  obj2.header = closure_6(value(7315).BottomSheetTitleHeader, obj3);
   const obj4 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, clearable: true, returnKeyType: "done", onSubmitEditing: null };
-  const intl2 = value(1125).intl;
-  obj4.label = intl2.string(value(1125).t.OCAkGP);
-  const intl3 = value(1125).intl;
-  obj4.placeholder = intl3.string(value(1125).t.eTVbtx);
+  const intl2 = value(1114).intl;
+  obj4.label = intl2.string(value(1114).t.OCAkGP);
+  const intl3 = value(1114).intl;
+  obj4.placeholder = intl3.string(value(1114).t.eTVbtx);
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(7068).TextInput, obj4), ];
+  const items1 = [closure_6(value(7076).TextInput, obj4), ];
   const obj5 = { text: null, onPress: null, disabled: null };
-  const intl4 = value(1125).intl;
-  obj5.text = intl4.string(value(1125).t.CumH4u);
+  const intl4 = value(1114).intl;
+  obj5.text = intl4.string(value(1114).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5281).Button, obj5);
+  items1[1] = closure_6(value(5629).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(5302).BottomSheet, obj2);
-});
+  return closure_7(value(5267).BottomSheet, obj2);
+}
+const maxLength = fn(4871).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
+const createStyles = fn(5009);
+let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj2.body = { gap: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");
 
 export function openFavoritesGuildAddCategoryActionSheet() {
   const obj = ActionSheetActionCreators;
-  obj.showActionSheet({ content: timestampProducer(closure_10, {}), key: FavoritesGuildAddCategoryActionSheet });
+  obj.showActionSheet({ content: timestampProducer(FavoritesGuildAddCategoryActionSheet, {}), key: FavoritesGuildAddCategoryActionSheet });
 }

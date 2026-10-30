@@ -1,85 +1,23 @@
-// === Module 14143: InkQuillSpotIllustration ===
+// === Module 14290: InkQuillSpotIllustration ===
 
-// Module 14143 (InkQuillSpotIllustration)
-import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import assetHelpers from "assetHelpers" /* 7055 */;
-import _modDef14144 from "module_14144" /* 14144 */;
-import _modDef14145 from "module_14145" /* 14145 */;
-import _modDef14146 from "module_14146" /* 14146 */;
+// Module 14290 (InkQuillSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7063 */;
+import _modDef14291 from "module_14291" /* 14291 */;
+import _modDef14292 from "module_14292" /* 14292 */;
+import _modDef14293 from "module_14293" /* 14293 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14144 }, 3: null };
-let obj2 = { uri: _modDef14144 };
-obj[2] = { uri: _modDef14145 };
-const obj3 = { uri: _modDef14145 };
-obj[3] = { uri: _modDef14146 };
-const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef14146 };
+let obj = { 1: null, 2: { uri: _modDef14291 }, 3: null };
+let obj2 = { uri: _modDef14291 };
+obj[2] = { uri: _modDef14292 };
+const obj3 = { uri: _modDef14292 };
+obj[3] = { uri: _modDef14293 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/InkQuillSpotIllustration.native.tsx");
 
-export const InkQuillSpotIllustration = ReactCompilerGating.isReactCompilerEnabled() ? (function InkQuillSpotIllustration(arg0) {
-  obj = c;
-  const cResult = obj.c(12);
-  ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
-  let num = 1;
-  if (undefined !== scale) {
-    num = scale;
-  }
-  if (cResult[0] === height) {
-    if (cResult[1] === num) {
-      if (cResult[2] === width) {
-        let tmp4 = cResult[3];
-      }
-      const _Symbol = Symbol;
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const assetSource = assetHelpers.getAssetSource(obj);
-        cResult[4] = assetSource;
-        let tmp7 = assetSource;
-        const tmpResult = assetHelpers;
-      } else {
-        tmp7 = cResult[4];
-      }
-      if (cResult[5] !== resizeMode) {
-        const assetResizeMode = assetHelpers.getAssetResizeMode(resizeMode);
-        cResult[5] = resizeMode;
-        cResult[6] = assetResizeMode;
-        let tmp10 = assetResizeMode;
-        const tmpResult3 = assetHelpers;
-      } else {
-        tmp10 = cResult[6];
-      }
-      if (cResult[7] === accessibilityLabel) {
-        if (cResult[8] === accessible) {
-          if (cResult[9] === tmp4) {
-            if (cResult[10] === tmp10) {
-              let tmp12 = cResult[11];
-            }
-            return tmp12;
-          }
-        }
-      }
-      const obj2 = { fadeDuration: 0, source: tmp7, style: tmp4, accessible, accessibilityLabel, resizeMode: tmp10 };
-      const tmp15 = jsx(FastImageDefault, { fadeDuration: 0, source: tmp7, style: tmp4, accessible, accessibilityLabel, resizeMode: tmp10 });
-      cResult[7] = accessibilityLabel;
-      cResult[8] = accessible;
-      cResult[9] = tmp4;
-      cResult[10] = tmp10;
-      cResult[11] = tmp15;
-      tmp12 = tmp15;
-    }
-  }
-  const assetSizeStyle = assetHelpers.getAssetSizeStyle({ width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 162 });
-  cResult[0] = height;
-  cResult[1] = num;
-  cResult[2] = width;
-  cResult[3] = assetSizeStyle;
-  tmp4 = assetSizeStyle;
-  const tmpResult4 = assetHelpers;
-}) : (function InkQuillSpotIllustration(width) {
+export function InkQuillSpotIllustration(width) {
   width = width.width;
   const height = width.height;
   let num = width.scale;
@@ -93,12 +31,12 @@ export const InkQuillSpotIllustration = ReactCompilerGating.isReactCompilerEnabl
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const tmp2 = height(num[8]);
-  obj.source = width(num[7]).getAssetSource(obj);
+  const tmp2 = height(num[6]);
+  obj.source = width(num[5]).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
-  const obj2 = width(num[7]);
-  obj.resizeMode = width(num[7]).getAssetResizeMode(resizeMode);
+  const obj2 = width(num[5]);
+  obj.resizeMode = width(num[5]).getAssetResizeMode(resizeMode);
   return <tmp2 fadeDuration={0} source={null} style={null} accessible={null} accessibilityLabel={null} resizeMode={null} />;
-});
+}

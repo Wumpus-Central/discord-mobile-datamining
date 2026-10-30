@@ -1,52 +1,45 @@
-// === Module 7594: NativeCheckoutStore ===
+// === Module 7602: NativeCheckoutStore ===
 
-// Module 7594 (NativeCheckoutStore)
-import _mod1266 from "module_1266" /* 1266 */;
-import _mod4920 from "module_4920" /* 4920 */;
-import OrderActionCreators from "OrderActionCreators" /* 7404 */;
-import ContextUtilsDefault from "ContextUtils" /* 7598 */;
-import payments_OrderActionCreators from "payments/OrderActionCreators" /* 7599 */;
+// Module 7602 (NativeCheckoutStore)
+import _mod1255 from "module_1255" /* 1255 */;
+import _mod4924 from "module_4924" /* 4924 */;
+import OrderActionCreators from "OrderActionCreators" /* 7412 */;
+import ContextUtilsDefault from "ContextUtils" /* 7606 */;
+import payments_OrderActionCreators from "payments/OrderActionCreators" /* 7607 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 7595 */;
+import OrderRecord from "OrderRecord" /* 7603 */;
 
 require = fn;
-const OrderStatus = fn(5736).OrderStatus;
+const OrderStatus = fn(5742).OrderStatus;
 [exports.NativeCheckoutStoreContext, closure_7] = ContextUtilsDefault();
 let context = noop.createContext("unset_context");
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutStore.tsx");
 
 export const NativeCheckoutStoreContextOrNull = context;
-export const useNativeCheckoutStore = ReactCompilerGating.isReactCompilerEnabled() ? (function useNativeCheckoutStore(cResult, shallow) {
-  if (undefined === shallow) {
-    shallow = _mod4920.shallow;
+export function useNativeCheckoutStore(arg0) {
+  if (shallow === undefined) {
+    shallow = _mod4924.shallow;
   }
   const tmp3 = closure_7();
-  return _mod1266.useStoreWithEqualityFn(tmp3, cResult, shallow);
-}) : (function useNativeCheckoutStore(cResult) {
+  return _mod1255.useStoreWithEqualityFn(tmp3, arg0, shallow);
+}
+export function useNativeCheckoutStoreOrNull(arg0) {
   if (shallow === undefined) {
-    shallow = _mod4920.shallow;
-  }
-  const tmp3 = closure_7();
-  return _mod1266.useStoreWithEqualityFn(tmp3, cResult, shallow);
-});
-export function useNativeCheckoutStoreOrNull(cResult) {
-  if (shallow === undefined) {
-    shallow = _mod4920.shallow;
+    shallow = _mod4924.shallow;
   }
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
   if ("unset_context" !== context) {
-    storeWithEqualityFn = _mod1266.useStoreWithEqualityFn(context, cResult, shallow);
+    storeWithEqualityFn = _mod1255.useStoreWithEqualityFn(context, arg0, shallow);
   }
   return storeWithEqualityFn;
 }
 export function createNativeStore(arg0) {
   ({ order: require, checkoutInitParameters: importDefault, contextMetadata: dependencyMap, analyticsFields: asyncGeneratorStep, paymentGateway: noop, orderRequired: OrderRecord, onOrderRetryCancellation: OrderStatus, initialSubscriptionFacet: closure_7 } = arg0);
-  return _mod1266.createWithEqualityFn((arg0, arg1) => {
+  return _mod1255.createWithEqualityFn((arg0, arg1) => {
     closure_0 = arg0;
     checkoutInitParameters = arg1;
     function runPatchOrderLineItems() {
@@ -72,7 +65,7 @@ export function createNativeStore(arg0) {
           throw error;
         }
         ({ id: obj5.orderId, revision: obj5.expectedRevision } = orderRecord);
-        await closure_2_0(runPatchOrderLineItems[9]).patchOrder({ orderId: null, expectedRevision: null, orderLineItems, externalGatewayFacet });
+        await closure_2_0(runPatchOrderLineItems[8]).patchOrder({ orderId: null, expectedRevision: null, orderLineItems, externalGatewayFacet });
         closure_130_0 = value;
         closure_131_0({ orderRecord: closure_2_5.createFromServer(closure_130_0) });
         return closure_130_0;
@@ -103,7 +96,7 @@ export function createNativeStore(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -149,11 +142,11 @@ export function createNativeStore(arg0) {
                     obj9.line_items = line_items.map((external_product_id) => ({ external_product_id: external_product_id.external_product_id }));
                     tmp20 = obj9;
                   }
-                  obj3 = closure_2_1(runPatchOrderLineItems[10]);
+                  obj3 = closure_2_1(runPatchOrderLineItems[9]);
                   const obj10 = { orderLineItems: mapped, paymentGateway, isGift: tmp5.isGift, subscriptionFacet: tmp15, externalGatewayFacet: tmp20, countryCode: country.country };
                   c3 = 1;
                   paymentGateway = 1;
-                  const obj11 = { value: closure_2_0(runPatchOrderLineItems[9]).createOrder(obj10), done: false };
+                  const obj11 = { value: closure_2_0(runPatchOrderLineItems[8]).createOrder(obj10), done: false };
                   return obj11;
                 } else {
                   paymentGateway = 3;
@@ -198,7 +191,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -340,7 +333,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -380,11 +373,11 @@ export function createNativeStore(arg0) {
             }
             const obj7 = { orderId: id };
             obj6.extra = obj7;
-            const result = closure_0(runPatchOrderLineItems[12]).captureBillingException(closure_130_2, obj6);
-            const obj5 = closure_0(runPatchOrderLineItems[12]);
+            const result = closure_0(runPatchOrderLineItems[11]).captureBillingException(closure_130_2, obj6);
+            const obj5 = closure_0(runPatchOrderLineItems[11]);
             c6 = 4;
             c7 = 1;
-            const obj9 = { value: closure_0(runPatchOrderLineItems[13]).showCheckoutOrderErrorModal(() => closure_2(closure_1_0, closure_1_1)), done: false };
+            const obj9 = { value: closure_0(runPatchOrderLineItems[12]).showCheckoutOrderErrorModal(() => closure_2(closure_1_0, closure_1_1)), done: false };
             return obj9;
           } else if (3 === tmp8) {
             if (arg0 === 1) {
@@ -453,7 +446,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -492,11 +485,11 @@ export function createNativeStore(arg0) {
             }
             const obj8 = { orderId: id };
             obj7.extra = obj8;
-            const result = closure_0(runPatchOrderLineItems[12]).captureBillingException(closure_129_1, obj7);
-            const obj3 = closure_0(runPatchOrderLineItems[12]);
+            const result = closure_0(runPatchOrderLineItems[11]).captureBillingException(closure_129_1, obj7);
+            const obj3 = closure_0(runPatchOrderLineItems[11]);
             c5 = 4;
             c6 = 1;
-            const obj9 = { value: closure_0(runPatchOrderLineItems[13]).showCheckoutOrderErrorModal(() => c4(closure_1_0), c6), done: false };
+            const obj9 = { value: closure_0(runPatchOrderLineItems[12]).showCheckoutOrderErrorModal(() => c4(closure_1_0), c6), done: false };
             return obj9;
           } else {
             if (3 === tmp8) {
@@ -525,7 +518,7 @@ export function createNativeStore(arg0) {
             c4 = 0;
             closure_130_0({ isCreateOrderLoading: false });
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp42) {
           closure_3 = tmp42;
@@ -561,7 +554,7 @@ export function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -599,11 +592,11 @@ export function createNativeStore(arg0) {
             }
             const obj8 = { orderId: id };
             obj7.extra = obj8;
-            const result = closure_0(runPatchOrderLineItems[12]).captureBillingException(closure_128_0, obj7);
-            const obj3 = closure_0(runPatchOrderLineItems[12]);
+            const result = closure_0(runPatchOrderLineItems[11]).captureBillingException(closure_128_0, obj7);
+            const obj3 = closure_0(runPatchOrderLineItems[11]);
             c4 = 4;
             c5 = 1;
-            const obj9 = { value: closure_0(runPatchOrderLineItems[13]).showCheckoutOrderErrorModal(() => closure_1_6(), closure_1_6), done: false };
+            const obj9 = { value: closure_0(runPatchOrderLineItems[12]).showCheckoutOrderErrorModal(() => closure_1_6(), closure_1_6), done: false };
             return obj9;
           } else {
             if (3 === tmp8) {
@@ -632,7 +625,7 @@ export function createNativeStore(arg0) {
             c3 = 0;
             closure_129_0({ isCreateOrderLoading: false });
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp41) {
           closure_2 = tmp41;
@@ -675,5 +668,5 @@ export function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = runRevertOrderToDraft;
     return obj;
-  }, _mod4920.shallow);
+  }, _mod4924.shallow);
 }

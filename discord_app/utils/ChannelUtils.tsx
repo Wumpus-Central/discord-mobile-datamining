@@ -1,23 +1,23 @@
-// === Module 6034: ChannelUtils ===
+// === Module 6041: ChannelUtils ===
 
-// Module 6034 (ChannelUtils)
+// Module 6041 (ChannelUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import util from "util" /* 1125 */;
-import PremiumConstants from "PremiumConstants" /* 1391 */;
-import Server from "Server" /* 1998 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
-import UserUtilsDefault from "UserUtils" /* 5059 */;
-import ChannelListUtils from "ChannelListUtils" /* 6035 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6036 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6041 */;
-import ChannelRecord from "ChannelRecord" /* 4861 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildChannelStore from "GuildChannelStore" /* 4935 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5755 */;
-import Constants from "Constants" /* 1084 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import util from "util" /* 1114 */;
+import PremiumConstants from "PremiumConstants" /* 1386 */;
+import Server from "Server" /* 1993 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
+import UserUtilsDefault from "UserUtils" /* 5063 */;
+import ChannelListUtils from "ChannelListUtils" /* 6042 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6043 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6048 */;
+import ChannelRecord from "ChannelRecord" /* 4862 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildChannelStore from "GuildChannelStore" /* 4939 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5762 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -26,21 +26,21 @@ function allowChannelAccess(id, channelType, ROLE) {
   const NONE = PermissionUtilsAll.NONE;
   let tmp3 = React4(channelType);
   if (!tmp3) {
-    tmp3 = channelType === closure_1_22;
+    tmp3 = channelType === __initData2;
   }
   let addResult = NONE;
   if (tmp3) {
     addResult = BigFlagUtilsAll.add(NONE, constants.VIEW_CHANNEL);
     const tmpResult = BigFlagUtilsAll;
   }
-  let tmp7 = channelType === guild;
+  let tmp7 = channelType === __initData;
   if (!tmp7) {
-    tmp7 = channelType === closure_1_22;
+    tmp7 = channelType === __initData2;
   }
   if (!tmp7) {
-    let tmp10 = channelType === closure_1_23;
+    let tmp10 = channelType === __initData3;
     if (!tmp10) {
-      tmp10 = channelType === closure_1_22;
+      tmp10 = channelType === __initData2;
     }
     tmp7 = tmp10;
   }
@@ -124,7 +124,7 @@ export function permissionOverwritesForAnnouncement(id) {
 }
 export function isChannelFull(channel, VoiceStateStore, GuildStore) {
   const guildId = channel.getGuildId();
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   let num;
   if (guild != null) {
     num = guild.maxVideoChannelUsers;
@@ -142,7 +142,7 @@ export function isChannelFull(channel, VoiceStateStore, GuildStore) {
   const result = SortedVoiceStateStore.countVoiceStatesForChannel(channel.id);
   const voiceStatesForChannel = SortedVoiceStateStore.getVoiceStatesForChannel(channel);
   const tmp6 = PermissionStore.can(constants.MOVE_MEMBERS, channel) && PermissionStore.can(constants.CONNECT, channel);
-  if (channel.type === closure_1_23) {
+  if (channel.type === __initData3) {
     let tmp8 = null != guildId;
     if (tmp8) {
       let hasVideoResult = VoiceStateStore.hasVideo(channel.id);
@@ -183,15 +183,15 @@ export function isChannelFull(channel, VoiceStateStore, GuildStore) {
 export const sanitizeGuildTextChannelName = sanitizeGuildTextChannelNameDefault;
 export function getBitrateLimit(guild, channel) {
   if (channel.isGuildStageVoice()) {
-    let bound = constants;
+    let bound = closure_1_17;
   } else if (null == guild) {
-    bound = value3;
+    bound = __initData2;
   } else {
     const features = guild.features;
     if (features.has(constants2.VIP_REGIONS)) {
       let bitrate = BoostedGuildFeatures[TIER_3.TIER_3].limits.bitrate;
     } else {
-      bitrate = value3;
+      bitrate = __initData2;
     }
     bound = Math.max(bitrate, BoostedGuildFeatures[guild.premiumTier].limits.bitrate);
   }

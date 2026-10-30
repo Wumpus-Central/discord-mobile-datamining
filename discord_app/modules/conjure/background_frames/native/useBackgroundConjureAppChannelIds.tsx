@@ -1,10 +1,9 @@
-// === Module 18709: useBackgroundConjureAppChannelIds ===
+// === Module 18768: useBackgroundConjureAppChannelIds ===
 
-// Module 18709 (useBackgroundConjureAppChannelIds)
+// Module 18768 (useBackgroundConjureAppChannelIds)
 import initialize from "initialize" /* 504 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
-import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18566 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6843 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18625 */;
 import size from "module_2" /* 2 */;
 
 function getChannelIds() {
@@ -13,9 +12,7 @@ function getChannelIds() {
   const found = mapped.filter((item) => null != item);
   return found.sort();
 }
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/conjure/background_frames/native/useBackgroundConjureAppChannelIds.tsx");
+const result = size.fileFinishedImporting("modules/conjure/background_frames/native/useBackgroundConjureAppChannelIds.tsx");
 
 export default function useBackgroundConjureAppChannelIds() {
   return initialize.useStateFromStoresArray(conjureAppPictureInPictureFrames.FLOATING_APP_STORES, getChannelIds);

@@ -1,7 +1,7 @@
-// === Module 10718: getChannelCopyForEmbeddedActivity ===
+// === Module 10741: getChannelCopyForEmbeddedActivity ===
 
-// Module 10718 (getChannelCopyForEmbeddedActivity)
-import util from "util" /* 1125 */;
+// Module 10741 (getChannelCopyForEmbeddedActivity)
+import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");

@@ -1,27 +1,27 @@
-// === Module 7760: UserProfileStore ===
+// === Module 7765: UserProfileStore ===
 
-// Module 7760 (UserProfileStore)
+// Module 7765 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
-import util from "util" /* 1125 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import Timers from "Timers" /* 4852 */;
-import WidgetType from "WidgetType" /* 7761 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7762 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7765 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7766 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7768 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7769 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7770 */;
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7771 */;
-import LocaleStore from "LocaleStore" /* 2066 */;
-import UserRecord from "UserRecord" /* 1403 */;
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1988 */;
+import Timers from "Timers" /* 4853 */;
+import WidgetType from "WidgetType" /* 7766 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7767 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7770 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7771 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7773 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7774 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7775 */;
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7776 */;
+import LocaleStore from "LocaleStore" /* 2063 */;
+import UserRecord from "UserRecord" /* 1398 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1083 */;
-import PresenceStore from "PresenceStore" /* 5750 */;
-import SortedGuildStore from "SortedGuildStore" /* 6759 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
+import PresenceStore from "PresenceStore" /* 5756 */;
+import SortedGuildStore from "SortedGuildStore" /* 6766 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -115,7 +115,7 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
   closure_1 = guild_id;
   if (null != guild_id) {
     value = map2.get(value6);
-    value4 = undefined;
+    let value4;
     if (value != null) {
       value4 = value.get(guild_id);
     }
@@ -269,7 +269,7 @@ function handleProfileFetch(arg0) {
     const mutual_guilds = userProfile.mutual_guilds;
     const item = mutual_guilds.forEach((id) => {
       id = id.id;
-      guild = GuildStore.getGuild(id);
+      const guild = GuildStore.getGuild(id);
       if (null != guild) {
         obj = { guild, nick: id.nick };
         set[id] = obj;
@@ -454,7 +454,7 @@ function handleProfileFetch(arg0) {
   }
   obj.widgets = found3;
   obj.wishlistSettings = userProfile.wishlist_settings;
-  value3 = map1.get(userProfile.user.id);
+  const value3 = map1.get(userProfile.user.id);
   let profileReadState;
   if (value3 != null) {
     profileReadState = value3.profileReadState;
@@ -489,7 +489,7 @@ function handleProfileFetch(arg0) {
     obj6.badges = userProfile.guild_badges;
     obj6.fetchStartedAt = fetchStartedAt;
     obj6.fetchEndedAt = timestamp;
-    value4 = map2.get(userProfile.user.id);
+    const value4 = map2.get(userProfile.user.id);
     if (null != value4) {
       const result6 = value4.set(userProfile.guild_member_profile.guild_id, obj6);
     } else {
@@ -532,9 +532,9 @@ function handleProfileFetchFailure(arg0) {
     value.delete(tmp);
   }
   set.delete(userId);
-  value4 = map1.get(userId);
+  let value4 = map1.get(userId);
   if (value4 == null) {
-    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "unicodeVersion" };
+    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "children" };
     value4 = obj;
   }
   const timestamp = Date.now();
@@ -575,7 +575,7 @@ function handleProfileUpdateSuccess(guild_id) {
     value = map2.get(userId);
     if (null != guild_id) {
       if (null != value) {
-        value3 = value.get(guild_id);
+        const value3 = value.get(guild_id);
         if (null != value3) {
           obj = {};
           const merged = Object.assign(value3);
@@ -595,7 +595,7 @@ function handleProfileUpdateSuccess(guild_id) {
   } else {
     const userId2 = guild_id.userId;
     ({ accent_color: accent_color2, banner: banner2, bio: bio2, pronouns: pronouns2, popout_animation_particle_type: popout_animation_particle_type2, theme_colors: theme_colors2, collectibles: collectibles2 } = guild_id);
-    value4 = map1.get(userId2);
+    const value4 = map1.get(userId2);
     if (null != value4) {
       const obj3 = {};
       const merged2 = Object.assign(value4);
@@ -726,7 +726,7 @@ function resetProfileFetch(id) {
     }
   }
 }
-const MAX_TIMEOUT_MS = fn(1084).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1072).MAX_TIMEOUT_MS;
 let closure_10 = Symbol("NO GUILD ID");
 let map = new Map();
 let set = new Set();
@@ -891,13 +891,13 @@ prototype["getFirstWishlistId"] = function getFirstWishlistId(id) {
     return first;
   }
 };
-prototype["getWishlistSettings"] = function getWishlistSettings(userId, wishlistId) {
-  value = map1.get(userId);
+prototype["getWishlistSettings"] = function getWishlistSettings(id, firstWishlistId) {
+  value = map1.get(id);
   let tmp2;
   if (value != null) {
     const wishlistSettings = value.wishlistSettings;
     if (wishlistSettings != null) {
-      tmp2 = wishlistSettings[wishlistId];
+      tmp2 = wishlistSettings[firstWishlistId];
     }
   }
   if (tmp2 == null) {
@@ -905,13 +905,13 @@ prototype["getWishlistSettings"] = function getWishlistSettings(userId, wishlist
   }
   return tmp2;
 };
-prototype["getProfileReadStateSectionAckedAt"] = function getProfileReadStateSectionAckedAt(arg0, arg1) {
-  value = map1.get(arg0);
+prototype["getProfileReadStateSectionAckedAt"] = function getProfileReadStateSectionAckedAt(id, WISHLIST) {
+  value = map1.get(id);
   let tmp2;
   if (value != null) {
     const profileReadState = value.profileReadState;
     if (profileReadState != null) {
-      tmp2 = profileReadState[arg1];
+      tmp2 = profileReadState[WISHLIST];
     }
   }
   if (tmp2 == null) {

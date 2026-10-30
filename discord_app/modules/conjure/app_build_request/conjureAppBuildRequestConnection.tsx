@@ -1,7 +1,7 @@
-// === Module 10925: conjureAppBuildRequestConnection ===
+// === Module 10948: conjureAppBuildRequestConnection ===
 
-// Module 10925 (conjureAppBuildRequestConnection)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 10948 (conjureAppBuildRequestConnection)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/app_build_request/conjureAppBuildRequestConnection.tsx");

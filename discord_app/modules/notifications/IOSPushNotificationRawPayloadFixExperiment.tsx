@@ -1,7 +1,7 @@
-// === Module 6553: IOSPushNotificationRawPayloadFixExperiment ===
+// === Module 6560: IOSPushNotificationRawPayloadFixExperiment ===
 
-// Module 6553 (IOSPushNotificationRawPayloadFixExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 6560 (IOSPushNotificationRawPayloadFixExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-01-ios-push-notif-json-fix", kind: "user", defaultConfig: { enabled: false }, variations: null };

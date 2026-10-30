@@ -1,8 +1,8 @@
-// === Module 1627: MediaKeyboardConstants ===
+// === Module 1622: MediaKeyboardConstants ===
 
-// Module 1627 (MediaKeyboardConstants)
-import nativeDefault from "native" /* 587 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
+// Module 1622 (MediaKeyboardConstants)
+import nativeDefault from "native" /* 575 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1623 */;
 import size from "module_2" /* 2 */;
 
 if (MetaQuestUtils.isMetaQuest()) {

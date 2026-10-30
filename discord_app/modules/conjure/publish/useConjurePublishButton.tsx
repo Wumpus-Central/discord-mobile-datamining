@@ -1,10 +1,9 @@
-// === Module 12243: useConjurePublishButton ===
+// === Module 12399: useConjurePublishButton ===
 
-// Module 12243 (useConjurePublishButton)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 11857 */;
+// Module 12399 (useConjurePublishButton)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 12400 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +13,7 @@ function publishButtonText(upToDate, arg1) {
     return arg1;
   } else if (null == upToDate) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef3864["120EFN"]);
+    let label = intl2.string(_modDef3865["120EFN"]);
   } else {
     let tmp = null != upToDate && upToDate.upToDate;
     if (tmp) {
@@ -26,122 +25,16 @@ function publishButtonText(upToDate, arg1) {
     if (tmp) {
       if (!upToDate.publishing) {
         const intl = util.intl;
-        label = intl.string(_modDef3864.kAfbEN);
+        label = intl.string(_modDef3865.kAfbEN);
       }
     }
     label = upToDate.label;
   }
 }
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishButton.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePublishButton(arg0, guildId, busy, arg3) {
-  const cResult = c.c(29);
-  [r10015, require] = noop.useState(null);
-  noop.useRef(null);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function c() {
-      if (null != ref.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref.current);
-      }
-      ref.current = null;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function y() {
-      return first;
-    };
-    const items = [first];
-    cResult[1] = fn2;
-    cResult[2] = items;
-    let tmp5 = items;
-    let tmp4 = fn2;
-  } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-  }
-  const effect = noop.useEffect(tmp4, tmp5);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class P {
-      constructor(arg0) {
-        tmp = closure_2();
-        tmp2 = closure_0(arg0);
-        closure_1.current = setTimeout(() => {
-          ref.current = null;
-          closure_1_0(null);
-        }, 1500);
-        return;
-      }
-    }
-    cResult[3] = P;
-  } else {
-    class P {
-      constructor(arg0) {
-        tmp = closure_2();
-        tmp2 = closure_0(arg0);
-        closure_1.current = setTimeout(() => {
-          ref.current = null;
-          closure_1_0(null);
-        }, 1500);
-        return;
-      }
-    }
-  }
-  if (cResult[4] !== arg3) {
-    class P {
-      constructor(arg0) {
-        tmp = closure_2();
-        tmp2 = closure_0(arg0);
-        closure_1.current = setTimeout(() => {
-          ref.current = null;
-          closure_1_0(null);
-        }, 1500);
-        return;
-      }
-    }
-    const merged = Object.assign(arg3);
-    tmp9.showConfirmation = P;
-    cResult[4] = arg3;
-    cResult[5] = tmp9;
-  } else {
-    class P {
-      constructor(arg0) {
-        tmp = closure_2();
-        tmp2 = closure_0(arg0);
-        closure_1.current = setTimeout(() => {
-          ref.current = null;
-          closure_1_0(null);
-        }, 1500);
-        return;
-      }
-    }
-  }
-  if (cResult[6] === busy) {
-    class P {
-      constructor(arg0) {
-        tmp = closure_2();
-        tmp2 = closure_0(arg0);
-        closure_1.current = setTimeout(() => {
-          ref.current = null;
-          closure_1_0(null);
-        }, 1500);
-        return;
-      }
-    }
-  }
-  cResult[6] = busy;
-  cResult[7] = guildId;
-  cResult[8] = tmp9;
-  cResult[9] = { guildId, platform: tmp9, busy };
-  const obj3 = { guildId, platform: tmp9, busy };
-  const tmp2 = _slicedToArray(noop.useState(null), 2);
-}) : (function useConjurePublishButton(arg0, guildId, busy, arg3) {
+export default function useConjurePublishButton(arg0, guildId, busy, arg3) {
   closure_2 = arg3;
   [tmp2, _slicedToArray] = noop.useState(null);
   noop.useRef(null);
@@ -223,4 +116,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   }
   obj2.indicator = tmp13;
   return obj2;
-});
+};

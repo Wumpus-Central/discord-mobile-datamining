@@ -1,12 +1,12 @@
-// === Module 19647: GuildSettingsRolesManager ===
+// === Module 19710: GuildSettingsRolesManager ===
 
-// Module 19647 (GuildSettingsRolesManager)
-import module_570 from "module_570" /* 570 */;
+// Module 19710 (GuildSettingsRolesManager)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const useGuildSettingsRolesManagerState = module_570.create(() => ({ roleJustCreated: false }));
+const useGuildSettingsRolesManagerState = module_560.create(() => ({ roleJustCreated: false }));
 const result = size.fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRolesManager.tsx");
 
 export function setRoleJustCreated(roleJustCreated) {

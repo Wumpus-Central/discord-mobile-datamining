@@ -1,24 +1,33 @@
-// === Module 13612: PortalKeyboardPlaceholder ===
+// === Module 13760: PortalKeyboardPlaceholder ===
 
-// Module 13612 (PortalKeyboardPlaceholder)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1897 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 5198 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5633 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7098 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9774 */;
+// Module 13760 (PortalKeyboardPlaceholder)
+import nativeDefault from "native" /* 575 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
+import KeyboardTypes from "KeyboardTypes" /* 1624 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
+import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1892 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 5204 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5605 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7106 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9800 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+function PortalKeyboardPlaceholderInner(keyboardType) {
+  const rect = useSafeAreaInsetsDefault();
+  const tmp = useIsWindowLargeDefault();
+  const tmp2 = useWindowDimensionsDefault();
+  const tmp3 = closure_6(keyboardType.keyboardType, useWindowDimensionsDefault().width - rect.left - rect.right, useCustomKeyboardHeightDefault(), tmp);
+  const obj2 = { style: null };
+  const items = [tmp3.container, ClientThemesOverrides.useGradientBottom()];
+  obj2.style = items;
+  return <React3 style={null} />;
+}
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_6 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   let absoluteFillObject = null;
   if (obj.isIOS()) {
@@ -62,68 +71,10 @@ let closure_6 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   obj2.height = tmp13;
   return { container: obj2 };
 });
-let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PortalKeyboardPlaceholderInner(keyboardType) {
-  const cResult = c.c(3);
-  const rect = useSafeAreaInsetsDefault();
-  const tmp2 = useIsWindowLargeDefault();
-  const tmp4 = closure_6(keyboardType.keyboardType, useWindowDimensionsDefault().width - rect.left - rect.right, useCustomKeyboardHeightDefault(), tmp2);
-  const tmp3 = useWindowDimensionsDefault();
-  const gradientBottom = ClientThemesOverrides.useGradientBottom();
-  if (cResult[0] === tmp4.container) {
-    if (cResult[1] === gradientBottom) {
-      let tmp6 = cResult[2];
-    }
-    return tmp6;
-  }
-  const obj3 = { style: null };
-  const items = [tmp4.container, gradientBottom];
-  obj3.style = items;
-  const tmp7 = <React3 style={null} />;
-  cResult[0] = tmp4.container;
-  cResult[1] = gradientBottom;
-  cResult[2] = tmp7;
-  tmp6 = tmp7;
-}) : (function PortalKeyboardPlaceholderInner(keyboardType) {
-  const rect = useSafeAreaInsetsDefault();
-  const tmp = useIsWindowLargeDefault();
-  const tmp2 = useWindowDimensionsDefault();
-  const tmp3 = closure_6(keyboardType.keyboardType, useWindowDimensionsDefault().width - rect.left - rect.right, useCustomKeyboardHeightDefault(), tmp);
-  const obj2 = { style: null };
-  const items = [tmp3.container, ClientThemesOverrides.useGradientBottom()];
-  obj2.style = items;
-  return <React3 style={null} />;
-});
-ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardPlaceholder.tsx");
 
-export const PORTAL_KEYBOARD_PLACEHOLDER_INSTANCE = jsx(ReactCompilerGating.isReactCompilerEnabled() ? (function PortalKeyboardPlaceholder() {
-  const cResult = c.c(2);
-  const tmp4 = useKeyboardTypeDefault();
-  let num = 0;
-  let isAndroidResult = useSystemKeyboardHeightDefault() > 0;
-  if (isAndroidResult) {
-    isAndroidResult = PlatformUtils.isAndroid();
-    const tmpResult = PlatformUtils;
-  }
-  if (tmp4 !== KeyboardTypes.KeyboardTypes.SYSTEM) {
-    let tmp6 = null;
-    if (!isAndroidResult) {
-      if (cResult[0] !== tmp4) {
-        const obj2 = { keyboardType: tmp4 };
-        const tmp10 = <closure_7 keyboardType={tmp4} />;
-        cResult[num] = tmp4;
-        num = 1;
-        cResult[1] = tmp10;
-      }
-    }
-  } else {
-    PlatformUtils;
-    tmp6 = null;
-  }
-  return tmp6;
-}) : (function PortalKeyboardPlaceholder() {
+export const PORTAL_KEYBOARD_PLACEHOLDER_INSTANCE = jsx(function PortalKeyboardPlaceholder() {
   const tmp2 = useKeyboardTypeDefault();
   let isAndroidResult = useSystemKeyboardHeightDefault() > 0;
   if (isAndroidResult) {
@@ -133,11 +84,11 @@ export const PORTAL_KEYBOARD_PLACEHOLDER_INSTANCE = jsx(ReactCompilerGating.isRe
     let tmp6 = null;
     if (!isAndroidResult) {
       const obj2 = { keyboardType: tmp2 };
-      tmp6 = <closure_7 keyboardType={tmp2} />;
+      tmp6 = <PortalKeyboardPlaceholderInner keyboardType={tmp2} />;
     }
   } else {
     PlatformUtils;
     tmp6 = null;
   }
   return tmp6;
-}), {});
+}, {});

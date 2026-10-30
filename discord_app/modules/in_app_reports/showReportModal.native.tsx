@@ -1,7 +1,7 @@
-// === Module 8165: showReportModal ===
+// === Module 8346: showReportModal ===
 
-// Module 8165 (showReportModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
+// Module 8346 (showReportModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ let closure_5 = async function _showReportModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -44,7 +44,7 @@ let closure_5 = async function _showReportModal(arg0) {
           closure_131_4 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

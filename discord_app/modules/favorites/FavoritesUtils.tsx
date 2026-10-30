@@ -1,9 +1,9 @@
-// === Module 4882: FavoritesUtils ===
+// === Module 4883: FavoritesUtils ===
 
-// Module 4882 (FavoritesUtils)
-import Constants from "Constants" /* 1084 */;
-import util from "util" /* 1125 */;
-import FavoritesConstants from "FavoritesConstants" /* 4870 */;
+// Module 4883 (FavoritesUtils)
+import Constants from "Constants" /* 1072 */;
+import util from "util" /* 1114 */;
+import FavoritesConstants from "FavoritesConstants" /* 4871 */;
 import size from "module_2" /* 2 */;
 
 const FAVORITES_RAW_GUILD_ID = FavoritesConstants.FAVORITES_RAW_GUILD_ID;

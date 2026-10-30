@@ -1,15 +1,12 @@
-// === Module 17778: DisableStreamPreviewsSetting ===
+// === Module 17849: DisableStreamPreviewsSetting ===
 
-// Module 17778 (DisableStreamPreviewsSetting)
-import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import SettingsConstants from "SettingsConstants" /* 8387 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 17849 (DisableStreamPreviewsSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import SettingsConstants from "SettingsConstants" /* 8424 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -30,6 +27,6 @@ const toggle = SettingBuilders.createToggle({
   },
   onValueChange: UserSettings.DisableStreamPreviews.updateSetting
 });
-const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
 
 export default toggle;

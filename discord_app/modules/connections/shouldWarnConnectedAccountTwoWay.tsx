@@ -1,7 +1,7 @@
-// === Module 16763: shouldWarnConnectedAccountTwoWay ===
+// === Module 16817: shouldWarnConnectedAccountTwoWay ===
 
-// Module 16763 (shouldWarnConnectedAccountTwoWay)
-import Constants from "Constants" /* 1084 */;
+// Module 16817 (shouldWarnConnectedAccountTwoWay)
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const items = [, , , ];

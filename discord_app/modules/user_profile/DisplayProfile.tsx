@@ -1,9 +1,9 @@
-// === Module 8718: DisplayProfile ===
+// === Module 8752: DisplayProfile ===
 
-// Module 8718 (DisplayProfile)
-import PremiumConstants from "PremiumConstants" /* 1391 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8695 */;
+// Module 8752 (DisplayProfile)
+import PremiumConstants from "PremiumConstants" /* 1386 */;
+import AvatarUtils from "AvatarUtils" /* 1410 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8729 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

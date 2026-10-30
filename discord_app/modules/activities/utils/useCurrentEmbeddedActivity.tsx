@@ -1,31 +1,14 @@
-// === Module 11550: useCurrentEmbeddedActivity ===
+// === Module 11751: useCurrentEmbeddedActivity ===
 
-// Module 11550 (useCurrentEmbeddedActivity)
+// Module 11751 (useCurrentEmbeddedActivity)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrentEmbeddedActivity() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [EmbeddedActivitiesStore];
-    const fn = function n() {
-      return currentEmbeddedActivity.getCurrentEmbeddedActivity();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useCurrentEmbeddedActivity() {
+export default function useCurrentEmbeddedActivity() {
   const items = [EmbeddedActivitiesStore];
   return initialize.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
-});
+};

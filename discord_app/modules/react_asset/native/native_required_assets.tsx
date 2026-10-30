@@ -1,8 +1,8 @@
-// === Module 20001: native_required_assets ===
+// === Module 20064: native_required_assets ===
 
-// Module 20001 (native_required_assets)
-import native_required_assets_icons from "native_required_assets_icons" /* 20002 */;
-import native_required_assets_misc from "native_required_assets_misc" /* 20008 */;
+// Module 20064 (native_required_assets)
+import native_required_assets_icons from "native_required_assets_icons" /* 20065 */;
+import native_required_assets_misc from "native_required_assets_misc" /* 20071 */;
 import size from "module_2" /* 2 */;
 
 const merged = Object.assign(native_required_assets_icons.NATIVE_REQUIRED_ASSETS_ICONS);

@@ -1,10 +1,10 @@
-// === Module 7333: useProviderConnection ===
+// === Module 7340: useProviderConnection ===
 
-// Module 7333 (useProviderConnection)
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7334 */;
+// Module 7340 (useProviderConnection)
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7341 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
 
 const require = globalThis.__r;
 
@@ -12,8 +12,8 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");
 
-export function useProviderConnection(arg0) {
-  _require = arg0;
+export function useProviderConnection(provider_id) {
+  _require = provider_id;
   const items = [ConnectedAccountsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let account = null;
@@ -40,7 +40,7 @@ export function useProviderConnection(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -110,12 +110,12 @@ export function useProviderConnection(arg0) {
       }
     }
   });
-  const items2 = [arg0];
+  const items2 = [provider_id];
   let obj2 = require("initialize");
   return {
     loading: stateFromStores1,
     hasConnection: tmp3,
-    canConnect: null != arg0,
+    canConnect: null != provider_id,
     startConnection: noop.useCallback(function() {
       const self = this;
       const apply = closure_0.apply;

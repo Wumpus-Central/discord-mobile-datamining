@@ -1,73 +1,12 @@
-// === Module 9247: SecureFramesCode ===
+// === Module 9260: SecureFramesCode ===
 
-// Module 9247 (SecureFramesCode)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5271 */;
+// Module 9260 (SecureFramesCode)
+import nativeDefault from "native" /* 575 */;
+import Text_Text from "Text/Text" /* 5619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5005);
-let obj2 = { codeText: { fontFamily: fn(1095).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, codeHeader: null, code: null, loading: null };
-let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj2.codeHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
-obj2.code = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, paddingVertical: 8, paddingHorizontal: 16, borderBottomRightRadius: nativeDefault.radii.lg, borderBottomLeftRadius: nativeDefault.radii.lg };
-obj2.loading = { minHeight: 126 };
-let closure_8 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFramesCodeGrid(arg0) {
-  const cResult = require("c").c(6);
-  ({ chunks, columns } = arg0);
-  const tmp2 = closure_8();
-  _require = tmp2;
-  if (cResult[0] === chunks) {
-    if (cResult[1] === columns) {
-      arr = cResult[2];
-    }
-    if (cResult[3] === arr) {
-      if (cResult[4] === tmp2) {
-        let tmp7 = cResult[5];
-      }
-      return tmp7;
-    }
-    let obj2 = {
-      children: arr.map((join, index) => {
-          const children = [hasOwnProperty(React4, { style: row.row, children: join.map((children, index) => closure_2_5(closure_0(arr[8]).Text, { style: row.codeText, variant: "text-md/normal", color: "text-default", children }, "" + children + "-" + index)) }), ];
-          let tmp3Result = index < arr.length - 1;
-          if (tmp3Result) {
-            const obj2 = { style: row.divider };
-            tmp3Result = hasOwnProperty(React4, obj2);
-          }
-          children[1] = tmp3Result;
-          return timestampProducer(React4, { children }, "" + join.join(" ") + "-" + index);
-        })
-    };
-    const tmp10 = closure_5(closure_7, obj2);
-    cResult[3] = arr;
-    cResult[4] = tmp2;
-    cResult[5] = tmp10;
-    tmp7 = tmp10;
-  }
-  const items = [];
-  const rounded = Math.ceil(chunks.length / columns);
-  for (let num = 0; num < rounded; num = num + 1) {
-    let items1 = [];
-    for (let num2 = 0; num2 < columns; num2 = num2 + 1) {
-      let arr2 = items1.push(chunks[num * columns + num2]);
-    }
-    let arr3 = items.push(items1);
-  }
-  cResult[0] = chunks;
-  cResult[1] = columns;
-  cResult[2] = items;
-  arr = items;
-  const obj = require("c");
-}) : (function SecureFramesCodeGrid(chunks) {
+function SecureFramesCodeGrid(chunks) {
   chunks = chunks.chunks;
   const columns = chunks.columns;
   noop = closure_8();
@@ -86,7 +25,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SecureF
   }, items);
   return closure_5(closure_7, {
     children: memo.map((join, index) => {
-      const children = [hasOwnProperty(React4, { style: row.row, children: join.map((children, index) => closure_2_5(chunks(columns[8]).Text, { style: codeText.codeText, variant: "text-md/normal", color: "text-default", children }, "" + children + "-" + index)) }), ];
+      const children = [hasOwnProperty(React4, { style: row.row, children: join.map((children, index) => closure_2_5(chunks(columns[6]).Text, { style: codeText.codeText, variant: "text-md/normal", color: "text-default", children }, "" + children + "-" + index)) }), ];
       let tmp3Result = index < memo.length - 1;
       if (tmp3Result) {
         const obj2 = { style: row.divider };
@@ -96,85 +35,23 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SecureF
       return timestampProducer(React4, { children }, "" + join.join(" ") + "-" + index);
     })
   });
-});
-ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, paddingVertical: 8, paddingHorizontal: 16, borderBottomRightRadius: nativeDefault.radii.lg, borderBottomLeftRadius: nativeDefault.radii.lg };
+}
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
+const createStyles = fn(5009);
+let obj2 = { codeText: { fontFamily: fn(1083).Fonts.CODE_NORMAL }, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE }, codeHeader: null, code: null, loading: null };
+let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.codeHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: nativeDefault.radii.lg, borderTopLeftRadius: nativeDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
+obj2.code = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, paddingVertical: 8, paddingHorizontal: 16, borderBottomRightRadius: nativeDefault.radii.lg, borderBottomLeftRadius: nativeDefault.radii.lg };
+obj2.loading = { minHeight: 126 };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/native/SecureFramesCode.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFramesCode(arg0) {
-  const cResult = c.c(16);
-  ({ title, trailing, chunks, columns } = arg0);
-  const tmp4 = closure_8();
-  if (cResult[0] !== title) {
-    const obj2 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: title };
-    const tmp7 = hasOwnProperty(Text_Text.Text, obj2);
-    cResult[0] = title;
-    cResult[1] = tmp7;
-    let tmp5 = tmp7;
-  } else {
-    tmp5 = cResult[1];
-  }
-  if (cResult[2] === tmp4.codeHeader) {
-    if (cResult[3] === tmp5) {
-      if (cResult[4] === trailing) {
-        let tmp8 = cResult[5];
-      }
-      if (cResult[6] === chunks) {
-        if (cResult[7] === columns) {
-          if (cResult[8] === tmp4.loading) {
-            if (cResult[10] === tmp4.code) {
-              if (cResult[11] === tmp10) {
-                let tmp18 = cResult[12];
-              }
-              if (cResult[13] === tmp8) {
-                if (cResult[14] === tmp18) {
-                  let tmp22 = cResult[15];
-                }
-                return tmp22;
-              }
-              const obj3 = { children: null };
-              const items = [tmp8, tmp18];
-              obj3.children = items;
-              const tmp25 = timestampProducer(React5, obj3);
-              cResult[13] = tmp8;
-              cResult[14] = tmp18;
-              cResult[15] = tmp25;
-              tmp22 = tmp25;
-            }
-            const obj4 = { style: tmp4.code, children: cResult[9] };
-            const tmp21 = hasOwnProperty(React4, obj4);
-            cResult[10] = tmp4.code;
-            cResult[11] = cResult[9];
-            cResult[12] = tmp21;
-            tmp18 = tmp21;
-          }
-        }
-      }
-      if (null != chunks) {
-        const obj5 = { chunks, columns };
-        let tmp14 = hasOwnProperty(closure_9, obj5);
-      } else {
-        const obj6 = { style: tmp4.loading };
-        tmp14 = hasOwnProperty(React3, obj6);
-      }
-      cResult[6] = chunks;
-      cResult[7] = columns;
-      columns = tmp4.loading;
-      cResult[8] = columns;
-      cResult[9] = tmp14;
-    }
-  }
-  const obj7 = { style: tmp4.codeHeader, children: null };
-  const items1 = [tmp5, trailing];
-  obj7.children = items1;
-  const tmp9 = timestampProducer(React4, obj7);
-  cResult[2] = tmp4.codeHeader;
-  cResult[3] = tmp5;
-  cResult[4] = trailing;
-  cResult[5] = tmp9;
-  tmp8 = tmp9;
-}) : (function SecureFramesCode(chunks) {
+export default function SecureFramesCode(chunks) {
   chunks = chunks.chunks;
   ({ title, trailing, columns } = chunks);
   const tmp = closure_8();
@@ -185,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
   const obj2 = { style: tmp.code, children: null };
   if (null != chunks) {
     const obj3 = { chunks, columns };
-    let tmp5Result = hasOwnProperty(closure_9, obj3);
+    let tmp5Result = hasOwnProperty(SecureFramesCodeGrid, obj3);
   } else {
     const obj4 = { style: tmp.loading };
     tmp5Result = hasOwnProperty(React3, obj4);
@@ -195,4 +72,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
   items1[1] = hasOwnProperty(React4, obj2);
   obj5.children = items1;
   return timestampProducer(React5, obj5);
-});
+};

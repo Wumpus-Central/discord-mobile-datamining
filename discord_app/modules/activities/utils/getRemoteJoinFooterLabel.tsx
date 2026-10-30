@@ -1,24 +1,23 @@
-// === Module 15051: getRemoteJoinFooterLabel ===
+// === Module 15095: getRemoteJoinFooterLabel ===
 
-// Module 15051 (getRemoteJoinFooterLabel)
-import Constants from "Constants" /* 1084 */;
-import util from "util" /* 1125 */;
+// Module 15095 (getRemoteJoinFooterLabel)
+import util from "util" /* 1114 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9718 */;
 import size from "module_2" /* 2 */;
 
-const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
 const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");
 
 export function getRemoteJoinFooterLabel(remoteJoinPlatform) {
-  if (ActivityGamePlatforms.DESKTOP === remoteJoinPlatform) {
+  if (ActivityGamePlatforms.ActivityGamePlatforms.DESKTOP === remoteJoinPlatform) {
     const intl5 = util.intl;
     return intl5.string(util.t.aqN8U9);
-  } else if (ActivityGamePlatforms.IOS === remoteJoinPlatform) {
+  } else if (ActivityGamePlatforms.ActivityGamePlatforms.IOS === remoteJoinPlatform) {
     const intl4 = util.intl;
     return intl4.string(util.t.CyQ5ia);
-  } else if (ActivityGamePlatforms.ANDROID === remoteJoinPlatform) {
+  } else if (ActivityGamePlatforms.ActivityGamePlatforms.ANDROID === remoteJoinPlatform) {
     const intl3 = util.intl;
     return intl3.string(util.t.fMs6uW);
-  } else if (ActivityGamePlatforms.XBOX === remoteJoinPlatform) {
+  } else if (ActivityGamePlatforms.ActivityGamePlatforms.XBOX === remoteJoinPlatform) {
     const intl2 = util.intl;
     return intl2.string(util.t.o0hjdt);
   } else {

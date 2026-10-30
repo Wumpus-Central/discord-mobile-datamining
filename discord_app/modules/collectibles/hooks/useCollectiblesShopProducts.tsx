@@ -1,17 +1,16 @@
-// === Module 9539: useCollectiblesShopProducts ===
+// === Module 9558: useCollectiblesShopProducts ===
 
-// Module 9539 (useCollectiblesShopProducts)
-import c from "c" /* 576 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7707 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8748 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9541 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9542 */;
+// Module 9558 (useCollectiblesShopProducts)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7712 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8782 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 9560 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9540 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8749 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7709 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7710 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9559 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8783 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7714 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7715 */;
 
 const require = globalThis.__r;
 
@@ -51,161 +50,7 @@ function computeEntryState(arg0) {
   }
   return str;
 }
-let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchResolvedAbsent(id, arg1) {
-  const cResult = c.c(2);
-  if (cResult[0] !== id) {
-    const obj2 = { id, sawFetch: false };
-    cResult[0] = id;
-    cResult[1] = obj2;
-    let tmp2 = obj2;
-  } else {
-    tmp2 = cResult[1];
-  }
-  [tmp4, tmp5] = noop.useState(tmp2);
-  let flag = tmp4.sawFetch;
-  if (tmp4.id !== id) {
-    const obj3 = { id, sawFetch: null != arg1 };
-    tmp5(obj3);
-    flag = tmp10;
-  } else {
-    if (!tmp7) {
-      const obj4 = { id, sawFetch: true };
-      tmp5(obj4);
-      flag = true;
-    }
-    tmp7 = null == arg1 || tmp4.sawFetch;
-  }
-  let tmp12 = "" !== id;
-  if (tmp12) {
-    tmp12 = null == arg1;
-  }
-  if (tmp12) {
-    tmp12 = flag;
-  }
-  return tmp12;
-}) : (function useFetchResolvedAbsent(id, arg1) {
-  [tmp2, tmp3] = noop.useState({ id, sawFetch: false });
-  let flag = tmp2.sawFetch;
-  if (tmp2.id !== id) {
-    const obj2 = { id, sawFetch: null != arg1 };
-    tmp3(obj2);
-    flag = tmp8;
-  } else {
-    if (!tmp5) {
-      const obj3 = { id, sawFetch: true };
-      tmp3(obj3);
-      flag = true;
-    }
-    tmp5 = null == arg1 || tmp2.sawFetch;
-  }
-  let tmp10 = "" !== id;
-  if (tmp10) {
-    tmp10 = null == arg1;
-  }
-  if (tmp10) {
-    tmp10 = flag;
-  }
-  return tmp10;
-});
-let closure_9 = tmp2;
-fn(558);
-ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAbsentIds(arg0) {
-  const cResult = first1(576).c(14);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function c() {
-      return new Set();
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  const obj = first1(576);
-  first1 = _slicedToArray(noop.useState(first), 2)[0];
-  if (cResult[1] === arg0) {
-    if (cResult[2] === first1) {
-      let tmp6 = cResult[3];
-      let tmp7 = cResult[4];
-    }
-    if (cResult[5] === tmp7) {
-      if (cResult[6] === first1) {
-        if (cResult[7] === tmp6) {
-          let tmp9 = cResult[8];
-        }
-        dependencyMap = tmp9;
-        if (tmp7) {
-          tmp5(tmp9);
-        }
-        if (cResult[9] === tmp9) {
-          if (cResult[10] === arg0) {
-            let obj3 = cResult[11];
-          }
-          const str2 = obj3.join(",");
-          if (cResult[12] !== str2) {
-            if ("" === str2) {
-              let items = [];
-            } else {
-              items = str2.split(",");
-            }
-            const set = new Set(items);
-            cResult[12] = str2;
-            cResult[13] = set;
-          } else {
-            return cResult[13];
-          }
-        }
-        const _Object = Object;
-        const entries = Object.entries(arg0);
-        const found = entries.filter((item) => {
-          const first = _slicedToArray(item, 2)[0];
-          let hasItem = "" !== first;
-          if (hasItem) {
-            hasItem = null == tmp3;
-          }
-          if (hasItem) {
-            hasItem = set.has(first);
-          }
-          return hasItem;
-        });
-        const mapped = found.map((item) => _slicedToArray(item, 1)[0]);
-        cResult[9] = tmp9;
-        cResult[10] = arg0;
-        cResult[11] = mapped;
-        obj3 = mapped;
-      }
-    }
-    let set1 = first1;
-    if (tmp7) {
-      const _Set = Set;
-      const items1 = [];
-      HermesBuiltin.arraySpread(tmp6, HermesBuiltin.arraySpread(first1, 0));
-      set1 = new Set(items1);
-    }
-    cResult[5] = tmp7;
-    cResult[6] = first1;
-    cResult[7] = tmp6;
-    cResult[8] = set1;
-    tmp9 = set1;
-  }
-  const entries1 = Object.entries(arg0);
-  const found1 = entries1.filter((item) => {
-    let tmp3 = "" !== _slicedToArray(item, 2)[0];
-    if (tmp3) {
-      tmp3 = null != tmp2;
-    }
-    return tmp3;
-  });
-  const mapped1 = found1.map((item) => _slicedToArray(item, 1)[0]);
-  const someResult = mapped1.some((item) => !first1.has(item));
-  cResult[1] = arg0;
-  cResult[2] = first1;
-  cResult[3] = mapped1;
-  cResult[4] = someResult;
-  tmp7 = someResult;
-  tmp6 = mapped1;
-}) : (function useAbsentIds(arg0) {
+function useAbsentIds(arg0) {
   const tmp = _slicedToArray(noop.useState(() => new Set()), 2);
   const first = tmp[0];
   const entries = Object.entries(arg0);
@@ -258,147 +103,36 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAbs
     }
     return new Set(items);
   }, items1);
-});
+}
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectiblesShopProducts.tsx");
 
-export const useFetchResolvedAbsent = tmp2;
-export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEnabled() ? (function useCollectiblesShopProduct(arg0, arg1) {
-  _require = arg0;
-  const cResult = require("c").c(49);
-  if (cResult[0] !== arg1) {
-    let obj2 = arg1;
-    if (undefined === arg1) {
-      obj2 = {};
-    }
-    cResult[0] = arg1;
-    cResult[1] = obj2;
-    let tmp4 = obj2;
+export function useFetchResolvedAbsent(id, arg1) {
+  [tmp2, tmp3] = noop.useState({ id, sawFetch: false });
+  let flag = tmp2.sawFetch;
+  if (tmp2.id !== id) {
+    const obj2 = { id, sawFetch: null != arg1 };
+    tmp3(obj2);
+    flag = tmp8;
   } else {
-    tmp4 = cResult[1];
+    if (!tmp5) {
+      const obj3 = { id, sawFetch: true };
+      tmp3(obj3);
+      flag = true;
+    }
+    tmp5 = null == arg1 || tmp2.sawFetch;
   }
-  ({ needsCategory, seedCategoryStore, shouldFetchProduct, includeUnpublished, flattenVariants } = tmp4);
-  dependencyMap = tmp5;
-  closure_2 = undefined !== seedCategoryStore && seedCategoryStore;
-  noop = tmp6;
-  closure_4 = tmp7;
-  if (cResult[2] === (undefined === shouldFetchProduct || shouldFetchProduct)) {
-    if (cResult[3] === arg0) {
-      let tmp8 = cResult[4];
-      let tmp9 = cResult[5];
-    }
-    const effect = noop.useEffect(tmp8, tmp9);
-    const _Symbol = Symbol;
-    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      let items = [str3];
-      cResult[6] = items;
-      let tmp13 = items;
-    } else {
-      tmp13 = cResult[6];
-    }
-    if (cResult[7] !== arg0) {
-      class F {
-        constructor() {
-          obj = { products: closure_5.getProductsForSku(closure_0), fetchState: closure_5.getFetchStateForSku(closure_0) };
-          return obj;
-        }
-      }
-      let items1 = [arg0];
-      cResult[7] = arg0;
-      cResult[8] = F;
-      cResult[9] = items1;
-      let tmp16 = items1;
-    } else {
-      class F {
-        constructor() {
-          obj = { products: closure_5.getProductsForSku(closure_0), fetchState: closure_5.getFetchStateForSku(closure_0) };
-          return obj;
-        }
-      }
-      tmp16 = cResult[9];
-    }
-    const stateFromStoresObject = tmp(504).useStateFromStoresObject(tmp13, F, tmp16);
-    ({ products, fetchState } = stateFromStoresObject);
-    if (products != null) {
-      class F {
-        constructor() {
-          obj = { products: closure_5.getProductsForSku(closure_0), fetchState: closure_5.getFetchStateForSku(closure_0) };
-          return obj;
-        }
-      }
-    }
-    str3 = "";
-    if (tmp5) {
-      class F {
-        constructor() {
-          obj = { products: closure_5.getProductsForSku(closure_0), fetchState: closure_5.getFetchStateForSku(closure_0) };
-          return obj;
-        }
-      }
-      if (tmp19 != null) {
-        class F {
-          constructor() {
-            obj = { products: closure_5.getProductsForSku(closure_0), fetchState: closure_5.getFetchStateForSku(closure_0) };
-            return obj;
-          }
-        }
-      }
-      if (tmp20 == null) {
-        class F {
-          constructor() {
-            obj = { products: closure_5.getProductsForSku(closure_0), fetchState: closure_5.getFetchStateForSku(closure_0) };
-            return obj;
-          }
-        }
-      }
-      str3 = tmp20;
-    }
-    if (cResult[10] === str3) {
-      class F {
-        constructor() {
-          obj = { products: closure_5.getProductsForSku(closure_0), fetchState: closure_5.getFetchStateForSku(closure_0) };
-          return obj;
-        }
-      }
-    }
-    const fn2 = function _() {
-      let tmp = closure_1;
-      if (closure_1) {
-        tmp = "" !== str3;
-      }
-      if (tmp) {
-        const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
-        const items = [str3];
-        const obj = { includeUnpublished };
-        const collections = CollectiblesShopManager.requestCollections(items, obj);
-      }
-    };
-    const items2 = [tmp5, str3, tmp7];
-    cResult[10] = str3;
-    cResult[11] = tmp7;
-    cResult[12] = tmp5;
-    cResult[13] = fn2;
-    cResult[14] = items2;
-    let tmpResult = tmp(504);
+  let tmp10 = "" !== id;
+  if (tmp10) {
+    tmp10 = null == arg1;
   }
-  const fn = function b() {
-    if (closure_3) {
-      const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
-      const items = [closure_0];
-      const products = CollectiblesShopManager.requestProducts(items);
-    }
-  };
-  const items3 = [arg0, undefined === shouldFetchProduct || shouldFetchProduct];
-  cResult[2] = undefined === shouldFetchProduct || shouldFetchProduct;
-  cResult[3] = arg0;
-  cResult[4] = fn;
-  cResult[5] = items3;
-  tmp9 = items3;
-  tmp8 = fn;
-  let obj = require("c");
-  tmp = _require;
-}) : (function useCollectiblesShopProduct(arg0) {
-  _require = arg0;
+  if (tmp10) {
+    tmp10 = flag;
+  }
+  return tmp10;
+}
+export function useCollectiblesShopProduct(skuId, arg1) {
+  _require = skuId;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -424,14 +158,14 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
     flag5 = false;
   }
   fetchState = undefined;
-  let str2;
+  let str;
   let collection;
   let fetchState2;
   let memo;
   let memo1;
   closure_13 = undefined;
   closure_14 = undefined;
-  let items = [arg0, flag3];
+  let items = [skuId, flag3];
   const effect = flag3.useEffect(() => {
     if (flag3) {
       const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
@@ -440,45 +174,44 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
     }
   }, items);
   let items1 = [flag5];
-  const items2 = [arg0];
+  const items2 = [skuId];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ products: StorefrontProductStore.getProductsForSku(closure_0), fetchState: StorefrontProductStore.getFetchStateForSku(closure_0) }), items2);
   ({ products, fetchState } = stateFromStoresObject);
   let first;
   if (products != null) {
     first = products[0];
   }
-  let str = "";
-  str2 = "";
+  str = "";
   if (flag) {
-    let primaryCollectionId;
+    let str2;
     if (first != null) {
-      primaryCollectionId = first.primaryCollectionId;
+      str2 = first.primaryCollectionId;
     }
-    if (primaryCollectionId == null) {
-      primaryCollectionId = str;
+    if (str2 == null) {
+      str2 = "";
     }
-    str2 = primaryCollectionId;
+    str = str2;
   }
-  const items3 = [flag, str2, flag4];
+  const items3 = [flag, str, flag4];
   const effect1 = obj2.useEffect(() => {
     let tmp = flag;
     if (flag) {
-      tmp = "" !== str2;
+      tmp = "" !== str;
     }
     if (tmp) {
       const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
-      const items = [str2];
+      const items = [str];
       const obj = { includeUnpublished: flag4 };
       const collections = CollectiblesShopManager.requestCollections(items, obj);
     }
   }, items3);
   let obj3 = require("initialize");
   const items4 = [flag4];
-  const items5 = [str2];
-  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items4, () => ({ collection: StorefrontCollectionStore.getCollection(str2), fetchState: StorefrontCollectionStore.getFetchState(str2) }), items5);
+  const items5 = [str];
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items4, () => ({ collection: StorefrontCollectionStore.getCollection(str), fetchState: StorefrontCollectionStore.getFetchState(str) }), items5);
   collection = stateFromStoresObject1.collection;
   fetchState2 = stateFromStoresObject1.fetchState;
-  const items6 = [first, flag5, arg0];
+  const items6 = [first, flag5, skuId];
   memo = obj2.useMemo(() => {
     let tmp2 = null;
     if (null != first) {
@@ -506,17 +239,48 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
     }
     return result;
   }, items7);
-  const tmp12 = collection(arg0, fetchState);
-  closure_13 = tmp12;
-  if (flag) {
-    str = str2;
+  const obj4 = { id: skuId, sawFetch: false };
+  const tmp10 = flag2;
+  const tmp2Result = require("initialize");
+  [tmp12, tmp13] = flag2(flag3.useState({ id: skuId, sawFetch: false }), 2);
+  let flag6 = tmp12.sawFetch;
+  if (tmp12.id !== skuId) {
+    const obj5 = { id: skuId, sawFetch: null != fetchState };
+    tmp13(obj5);
+    flag6 = tmp16;
+  } else {
+    if (!tmp14) {
+      const obj6 = { id: skuId, sawFetch: true };
+      tmp13(obj6);
+      flag6 = true;
+    }
+    tmp14 = null == fetchState || tmp12.sawFetch;
   }
-  const tmp11Result = collection(str, fetchState2);
-  closure_14 = tmp11Result;
-  const items8 = [fetchState, tmp12, fetchState2, tmp11Result, flag, str2, memo, memo1];
+  closure_13 = tmp18;
+  let str3 = "";
+  if (flag) {
+    str3 = str;
+  }
+  const tmp11 = flag2(flag3.useState({ id: skuId, sawFetch: false }), 2);
+  [tmp20, tmp21] = tmp10(flag3.useState({ id: str3, sawFetch: false }), 2);
+  let flag7 = tmp20.sawFetch;
+  if (tmp20.id !== str3) {
+    const obj7 = { id: str3, sawFetch: null != fetchState2 };
+    tmp21(obj7);
+    flag7 = tmp24;
+  } else {
+    if (!tmp22) {
+      const obj8 = { id: str3, sawFetch: true };
+      tmp21(obj8);
+      flag7 = true;
+    }
+    tmp22 = null == fetchState2 || tmp20.sawFetch;
+  }
+  closure_14 = tmp26;
+  const items8 = [fetchState, "" !== skuId && null == fetchState && flag6, fetchState2, "" !== str3 && null == fetchState2 && flag7, flag, str, memo, memo1];
   const items9 = [flag2, memo];
   const memo2 = obj2.useMemo(() => {
-    let str = "error";
+    str = "error";
     if ("error" !== fetchState) {
       str = "error";
       if (!tmp2) {
@@ -558,8 +322,8 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
       const result = CollectiblesActionCreators.seedCollectiblesProductFromStandaloneLoad(memo);
     }
   }, items9);
-  const items10 = [arg0, flag, str2, flag4];
-  const tmp2Result = require("initialize");
+  const items10 = [skuId, flag, str, flag4];
+  const tmp10Result = tmp10(flag3.useState({ id: str3, sawFetch: false }), 2);
   return {
     product: memo,
     category: memo1,
@@ -571,11 +335,11 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
       const result = StorefrontProductActionCreators.maybeFetchProductsBySkuIds(obj2);
       let tmp4 = flag;
       if (flag) {
-        tmp4 = "" !== str2;
+        tmp4 = "" !== str;
       }
       if (tmp4) {
         const obj3 = { collectionIds: null, includeUnpublishedCollections: null, includeUnpublishedProducts: null, ignoreCache: true };
-        const items1 = [str2];
+        const items1 = [str];
         obj3.collectionIds = items1;
         obj3.includeUnpublishedCollections = flag4;
         obj3.includeUnpublishedProducts = flag4;
@@ -584,11 +348,11 @@ export const useCollectiblesShopProduct = ReactCompilerGating.isReactCompilerEna
       }
     }, items10)
   };
-});
-export function useCollectiblesShopProducts(skuIds) {
-  _require = skuIds;
-  let obj = cResult;
-  if (cResult === undefined) {
+}
+export function useCollectiblesShopProducts(resolvedSkuIds, arg1) {
+  _require = resolvedSkuIds;
+  let obj = arg1;
+  if (arg1 === undefined) {
     obj = {};
   }
   let flag = obj.needsCategory;
@@ -601,9 +365,8 @@ export function useCollectiblesShopProducts(skuIds) {
   }
   let memo;
   let stateFromStoresObject1;
-  let set;
-  let items = [skuIds];
-  memo = memo.useMemo(() => skuIds.filter((item) => "" !== item), items);
+  let items = [resolvedSkuIds];
+  memo = memo.useMemo(() => closure_0.filter((item) => "" !== item), items);
   const items1 = [memo.join(",")];
   const effect = memo.useEffect(() => {
     if (memo.length > 0) {
@@ -701,9 +464,8 @@ export function useCollectiblesShopProducts(skuIds) {
     }
     return obj;
   }, items12);
-  const tmp8 = set(stateFromStoresObject1);
-  set = tmp8;
-  let tmp9 = set(stateFromStoresObject3);
+  const tmp8 = stateFromStoresObject3(stateFromStoresObject1);
+  let tmp9 = stateFromStoresObject3(stateFromStoresObject3);
   const items13 = [memo, stateFromStoresObject, stateFromStoresObject1, memo1, stateFromStoresObject2, stateFromStoresObject3, tmp8, tmp9, flag, flag2];
   return memo.useMemo(() => {
     const obj = {};

@@ -1,7 +1,7 @@
-// === Module 1901: NumberUtils ===
+// === Module 1896: NumberUtils ===
 
-// Module 1901 (NumberUtils)
-import module_1902 from "module_1902" /* 1902 */;
+// Module 1896 (NumberUtils)
+import module_1897 from "module_1897" /* 1897 */;
 
 let c1 = 1000000;
 const map = new Map();
@@ -10,7 +10,7 @@ let result = size.fileFinishedImporting("../discord_common/js/shared/utils/Numbe
 
 export function shortenAndLocalizeNumber(count) {
   if (count < c1) {
-    locale = module_1902.getLocale();
+    locale = module_1897.getLocale();
     const _HermesInternal = HermesInternal;
     const combined = "" + locale + "|" + "";
     value = map.get(combined);
@@ -23,7 +23,7 @@ export function shortenAndLocalizeNumber(count) {
     return value.format(count);
   } else {
     const result1 = count / tmp;
-    const NUMBER_ABBREVIATIONS_MILLION = module_1902.Messages.NUMBER_ABBREVIATIONS_MILLION;
+    const NUMBER_ABBREVIATIONS_MILLION = module_1897.Messages.NUMBER_ABBREVIATIONS_MILLION;
     const obj = { num: result1.toFixed(1) };
     return NUMBER_ABBREVIATIONS_MILLION.format(obj);
   }
@@ -42,7 +42,7 @@ export function humanizeValue(newPostCount, stateFromStores) {
     const _Math2 = Math;
     return value.format(Math.floor(newPostCount));
   } else if (newPostCount < c1) {
-    const NUMBER_ABBREVIATIONS_THOUSAND = module_1902.Messages.NUMBER_ABBREVIATIONS_THOUSAND;
+    const NUMBER_ABBREVIATIONS_THOUSAND = module_1897.Messages.NUMBER_ABBREVIATIONS_THOUSAND;
     const obj = { num: null };
     const _Math = Math;
     obj.num = Math.floor(newPostCount / 1000);
@@ -59,7 +59,7 @@ export function humanizeValue(newPostCount, stateFromStores) {
       const result2 = map.set(combined1, numberFormat1);
       value2 = numberFormat1;
     }
-    const NUMBER_ABBREVIATIONS_MILLION = module_1902.Messages.NUMBER_ABBREVIATIONS_MILLION;
+    const NUMBER_ABBREVIATIONS_MILLION = module_1897.Messages.NUMBER_ABBREVIATIONS_MILLION;
     const obj2 = { num: value2.format(result1) };
     return NUMBER_ABBREVIATIONS_MILLION.format(obj2);
   }
@@ -97,7 +97,7 @@ export (communicators, stateFromStores) => {
       const result1 = map.set(combined1, numberFormat1);
       value2 = numberFormat1;
     }
-    const NUMBER_ABBREVIATIONS_MILLION = module_1902.Messages.NUMBER_ABBREVIATIONS_MILLION;
+    const NUMBER_ABBREVIATIONS_MILLION = module_1897.Messages.NUMBER_ABBREVIATIONS_MILLION;
     const obj4 = { num: value2.format(communicators / 1000000) };
     return NUMBER_ABBREVIATIONS_MILLION.format(obj4);
   }
@@ -119,11 +119,11 @@ export function parseInteger(discriminator, arg1) {
     return parsed;
   }
 }
-export function formatPercent(stateFromStores, percentComplete, arg2) {
+export function formatPercent(locale, percentComplete, arg2) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
   const merged = Object.assign(obj);
-  return Intl.NumberFormat(stateFromStores, { style: "percent", minimumFractionDigits: 0 }).format(percentComplete);
+  return Intl.NumberFormat(locale, { style: "percent", minimumFractionDigits: 0 }).format(percentComplete);
 }

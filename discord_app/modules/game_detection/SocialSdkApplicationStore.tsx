@@ -1,8 +1,8 @@
-// === Module 11288: SocialSdkApplicationStore ===
+// === Module 11491: SocialSdkApplicationStore ===
 
-// Module 11288 (SocialSdkApplicationStore)
+// Module 11491 (SocialSdkApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const dependencyMap = {};

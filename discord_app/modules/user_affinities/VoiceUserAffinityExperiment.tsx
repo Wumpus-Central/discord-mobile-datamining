@@ -1,9 +1,7 @@
-// === Module 8498: VoiceUserAffinityExperiment ===
+// === Module 8532: VoiceUserAffinityExperiment ===
 
-// Module 8498 (VoiceUserAffinityExperiment)
-import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1453 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 8532 (VoiceUserAffinityExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-08-voice-user-affinity", defaultConfig: { enabled: false }, variations: { 0: { enabled: false, sortType: "Array" }, 1: { enabled: true, sortType: "vc_probability" }, 2: { enabled: true, sortType: "communication_probability" } } });
@@ -13,17 +11,6 @@ export default apexExperiment;
 export function getVoiceUserAffinitySortType(location) {
   return apexExperiment.getConfig({ location }).sortType;
 }
-export const useVoiceUserAffinitySortType = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceUserAffinitySortType(location) {
-  const cResult = c.c(2);
-  if (cResult[0] !== location) {
-    const obj2 = { location };
-    cResult[0] = location;
-    cResult[1] = obj2;
-    let tmp2 = obj2;
-  } else {
-    tmp2 = cResult[1];
-  }
-  return apexExperiment.useConfig(tmp2).sortType;
-}) : (function useVoiceUserAffinitySortType(location) {
-  return apexExperiment.useConfig({ location }).sortType;
-});
+export function useVoiceUserAffinitySortType(useVoiceChannelUsers) {
+  return apexExperiment.useConfig({ location: useVoiceChannelUsers }).sortType;
+}

@@ -1,19 +1,19 @@
-// === Module 8880: ICYMIUtils ===
+// === Module 8914: ICYMIUtils ===
 
-// Module 8880 (ICYMIUtils)
-import util from "util" /* 1125 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6051 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8672 */;
-import ICYMITypes from "ICYMITypes" /* 8876 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8881 */;
-import generateHydrationId from "generateHydrationId" /* 8883 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8884 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8885 */;
+// Module 8914 (ICYMIUtils)
+import util from "util" /* 1114 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6058 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8706 */;
+import ICYMITypes from "ICYMITypes" /* 8910 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8915 */;
+import generateHydrationId from "generateHydrationId" /* 8917 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8918 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6842 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8877 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6849 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8911 */;
 
 require = fn;
 let closure_12 = async function _hydrateItems(arg0) {
@@ -27,7 +27,7 @@ let closure_12 = async function _hydrateItems(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -47,10 +47,10 @@ let closure_12 = async function _hydrateItems(arg0) {
             let obj2 = ICYMIActionCreatorsDefault;
             const hydratedAttempt = obj2.loadHydratedAttempt(generateHydrationId.generateHydrationId(closure_1, dependencyMap2));
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(8876).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(8910).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(8876).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(8910).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -86,7 +86,7 @@ let closure_12 = async function _hydrateItems(arg0) {
             });
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(8876).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(8910).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj7 = { messageItems: null, activityItems: null };
@@ -109,15 +109,15 @@ let closure_12 = async function _hydrateItems(arg0) {
         return obj;
       }
       c4 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp17) {
       c4 = tmp;
       throw tmp17;
     }
   }
 };
-const ThreadChannelRecord = fn(4861).ThreadChannelRecord;
-const Constants = fn(1084);
+const ThreadChannelRecord = fn(4862).ThreadChannelRecord;
+const Constants = fn(1072);
 ({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
 const ICYMICustomScore = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };
 const size = fn(2);
@@ -256,7 +256,7 @@ export function isItemNSFW(data) {
     if (guild_id1 == null) {
       guild_id1 = guild_id;
     }
-    guild = null;
+    let guild = null;
     if (null != guild_id1) {
       guild = GuildStore.getGuild(guild_id1);
     }
@@ -369,36 +369,36 @@ export function determineContentType(channel, message) {
     }
   }
 }
-export function contentTypeToText(ANNOUNCEMENT) {
-  let flag = mentioned;
-  if (mentioned === undefined) {
+export function contentTypeToText(arg0) {
+  let flag = arg1;
+  if (arg1 === undefined) {
     flag = false;
   }
-  if (ICYMITypes.ContentType.POPULAR_MESSAGE === ANNOUNCEMENT) {
+  if (ICYMITypes.ContentType.POPULAR_MESSAGE === arg0) {
     const intl10 = util.intl;
     return intl10.string(util.t["H/2+cl"]);
-  } else if (ICYMITypes.ContentType.IMAGE === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.IMAGE === arg0) {
     const intl9 = util.intl;
     return intl9.string(util.t.gmOWAo);
-  } else if (ICYMITypes.ContentType.VIDEO === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.VIDEO === arg0) {
     const intl8 = util.intl;
     return intl8.string(util.t.swhcPM);
-  } else if (ICYMITypes.ContentType.LINK === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.LINK === arg0) {
     const intl7 = util.intl;
     return intl7.string(util.t.oj5yvD);
-  } else if (ICYMITypes.ContentType.THREAD === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.THREAD === arg0) {
     const intl6 = util.intl;
     return intl6.string(util.t.DwLrLK);
-  } else if (ICYMITypes.ContentType.FORUM_POST === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.FORUM_POST === arg0) {
     const intl5 = util.intl;
     return intl5.string(util.t["Q9/6BS"]);
-  } else if (ICYMITypes.ContentType.CHANGED_STATUS === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.CHANGED_STATUS === arg0) {
     const intl4 = util.intl;
     return intl4.string(util.t.TGrUmi);
-  } else if (ICYMITypes.ContentType.INTERESTING === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.INTERESTING === arg0) {
     const intl3 = util.intl;
     return intl3.string(util.t["TahE/i"]);
-  } else if (ICYMITypes.ContentType.ANNOUNCEMENT === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.ANNOUNCEMENT === arg0) {
     const intl2 = util.intl;
     const string = intl2.string;
     const t = util.t;
@@ -408,7 +408,7 @@ export function contentTypeToText(ANNOUNCEMENT) {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
-  } else if (ICYMITypes.ContentType.FILE === ANNOUNCEMENT) {
+  } else if (ICYMITypes.ContentType.FILE === arg0) {
     const intl = util.intl;
     return intl.string(util.t.pYrnTY);
   }

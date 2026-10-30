@@ -1,12 +1,12 @@
-// === Module 8497: maybeSortByProbability ===
+// === Module 8531: maybeSortByProbability ===
 
-// Module 8497 (maybeSortByProbability)
-import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8498 */;
+// Module 8531 (maybeSortByProbability)
+import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8532 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
-export function maybeSortByProbability(reduced, stateFromStores, location) {
+export function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   let sort = reduced;
   const voiceUserAffinitySortType = VoiceUserAffinityExperiment.getVoiceUserAffinitySortType(location);
   if (null == voiceUserAffinitySortType) {
@@ -16,7 +16,7 @@ export function maybeSortByProbability(reduced, stateFromStores, location) {
     HermesBuiltin.arraySpread(sort, 0);
     sort = items.sort;
     let sorted = sort((id, id2) => {
-      value = stateFromStores.get(id2.id);
+      value = userAffinitiesMap.get(id2.id);
       let num;
       if (value != null) {
         num = value.vcProbability;
@@ -24,7 +24,7 @@ export function maybeSortByProbability(reduced, stateFromStores, location) {
       if (num == null) {
         num = 0;
       }
-      value2 = stateFromStores.get(id.id);
+      value2 = userAffinitiesMap.get(id.id);
       let num2;
       if (value2 != null) {
         num2 = value2.vcProbability;
@@ -38,7 +38,7 @@ export function maybeSortByProbability(reduced, stateFromStores, location) {
     const items1 = [];
     HermesBuiltin.arraySpread(sort, 0);
     sorted = items1.sort((id, id2) => {
-      value = stateFromStores.get(id2.id);
+      value = userAffinitiesMap.get(id2.id);
       let num;
       if (value != null) {
         num = value.communicationProbability;
@@ -46,7 +46,7 @@ export function maybeSortByProbability(reduced, stateFromStores, location) {
       if (num == null) {
         num = 0;
       }
-      value2 = stateFromStores.get(id.id);
+      value2 = userAffinitiesMap.get(id.id);
       let num2;
       if (value2 != null) {
         num2 = value2.communicationProbability;

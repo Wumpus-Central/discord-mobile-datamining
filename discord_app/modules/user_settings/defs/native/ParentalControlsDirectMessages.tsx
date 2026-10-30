@@ -1,15 +1,13 @@
-// === Module 17809: ParentalControlsDirectMessages ===
+// === Module 17880: ParentalControlsDirectMessages ===
 
-// Module 17809 (ParentalControlsDirectMessages)
-import util from "util" /* 1125 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16613 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16614 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7703 */;
+// Module 17880 (ParentalControlsDirectMessages)
+import util from "util" /* 1114 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16666 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16667 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7708 */;
 
 require = fn;
-let ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11302);
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -19,7 +17,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.wbYDfT);
   },
-  parent: fn(8387).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8424).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     return !useParentalControlSettings.useDefaultGuildsRestricted();
   },
@@ -33,7 +31,7 @@ const toggle = SettingBuilders.createToggle({
   unsearchable: true
 });
 const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
 
 export default toggle;
 export const ParentalControlsDirectMessages = toggle;

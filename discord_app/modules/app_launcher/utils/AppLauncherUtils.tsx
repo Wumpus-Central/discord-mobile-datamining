@@ -1,22 +1,22 @@
-// === Module 9715: AppLauncherUtils ===
+// === Module 9741: AppLauncherUtils ===
 
-// Module 9715 (AppLauncherUtils)
-import util from "util" /* 1125 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import Server from "Server" /* 1998 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
-import getPlatformDefault from "getPlatform" /* 5671 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6870 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11262 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11500 */;
+// Module 9741 (AppLauncherUtils)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
+import Server from "Server" /* 1993 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2026 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
+import getPlatformDefault from "getPlatform" /* 5677 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6877 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7693 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11467 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11700 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9716 */;
-import ApplicationRecord from "ApplicationRecord" /* 2022 */;
-import AppLauncherStore from "AppLauncherStore" /* 12062 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9742 */;
+import ApplicationRecord from "ApplicationRecord" /* 2017 */;
+import AppLauncherStore from "AppLauncherStore" /* 12238 */;
 
 const require = globalThis.__r;
 
@@ -66,9 +66,9 @@ function getShelfBadgeTypeIfActive(application) {
   NONE = Server.EmbeddedActivityLabelTypes.NONE;
 }
 let closure_3 = ["fakeAppIconURL"];
-const ApplicationFlags = fn(1084).ApplicationFlags;
-const BuiltInSectionId = fn(6023).BuiltInSectionId;
-const MessageSendLocation = fn(5010).MessageSendLocation;
+const ApplicationFlags = fn(1072).ApplicationFlags;
+const BuiltInSectionId = fn(6030).BuiltInSectionId;
+const MessageSendLocation = fn(5014).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -85,9 +85,9 @@ export function getSectionName(FAKE_BUILT_IN_APP) {
   }
   return name;
 }
-export function getSectionDescription(application) {
-  if (application.id !== BuiltInSectionId.BUILT_IN) {
-    let description = application.description;
+export function getSectionDescription(FAKE_BUILT_IN_APP) {
+  if (FAKE_BUILT_IN_APP.id !== BuiltInSectionId.BUILT_IN) {
+    let description = FAKE_BUILT_IN_APP.description;
   } else {
     const intl = util.intl;
     description = intl.string(util.t.X9fusn);
@@ -155,7 +155,7 @@ export function executeAppLauncherCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -223,7 +223,7 @@ export function executeAppLauncherCommand(arg0) {
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;
@@ -291,8 +291,8 @@ export function isApplicationAdSupported(application) {
   }
   return null != tmp2 && tmp2.displays_advertisements;
 }
-export function appLauncherShowsRecommendations(entrypoint) {
-  return entrypoint === AppLauncherTypes.AppLauncherEntrypoint.TEXT;
+export function appLauncherShowsRecommendations(initialSearchQuery) {
+  return initialSearchQuery === AppLauncherTypes.AppLauncherEntrypoint.TEXT;
 }
 export function formatPrimaryEntryPointCommandName(displayName) {
   let str = "";
@@ -304,9 +304,9 @@ export function formatPrimaryEntryPointCommandName(displayName) {
   }
   return str;
 }
-export function ensureRecommendationSectionsOnlyContainActivities(stateFromStores) {
+export function ensureRecommendationSectionsOnlyContainActivities(entrypoint) {
   const items = [];
-  const iter = stateFromStores[Symbol.iterator]();
+  const iter = entrypoint[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let prop = nextResult.application_directory_collection_items;

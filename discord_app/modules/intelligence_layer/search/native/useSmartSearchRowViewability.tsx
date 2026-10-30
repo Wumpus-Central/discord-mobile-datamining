@@ -1,100 +1,29 @@
-// === Module 18644: useSmartSearchRowViewability ===
+// === Module 18703: useSmartSearchRowViewability ===
 
-// Module 18644 (useSmartSearchRowViewability)
-import useChatLayoutDefault from "useChatLayout" /* 5190 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13711 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13713 */;
+// Module 18703 (useSmartSearchRowViewability)
+import useChatLayoutDefault from "useChatLayout" /* 5196 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13858 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13860 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1999 */;
+import AppStateStore from "AppStateStore" /* 1994 */;
 
 const require = fn;
-let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmartSearchRowNavigationState() {
-  const cResult = require("c").c(6);
-  const obj = require("c");
-  const tmp = _require;
-  const currentNavigationRouteName = require("NavigationRouteUtils").useCurrentNavigationRouteName();
-  const context = noop.useContext(require("SwipeForMemberListContext").SwipeForMemberListContext);
-  const obj2 = require("NavigationRouteUtils");
-  const isFocused = require("Link").useIsFocused();
-  const isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
-  if (cResult[0] === currentNavigationRouteName) {
-    if (cResult[1] === isChatLockedOpen) {
-      let tmp7 = cResult[2];
-    }
-    let tmp11 = isFocused;
-    if (null != context) {
-      tmp11 = context.isPanelActive && tmp7;
-      const tmp12 = context.isPanelActive && tmp7;
-    }
-    _require = tmp11;
-    if (cResult[3] !== tmp11) {
-      class S {
-        constructor() {
-          obj = closure_1(closure_2[8]);
-          result = obj.setIsNavigationFocused(closure_0, closure_1(closure_2[9]));
-          return;
-        }
-      }
-      const items = [tmp11];
-      cResult[3] = tmp11;
-      cResult[4] = S;
-      cResult[5] = items;
-      let tmp14 = items;
-    } else {
-      class S {
-        constructor() {
-          obj = closure_1(closure_2[8]);
-          result = obj.setIsNavigationFocused(closure_0, closure_1(closure_2[9]));
-          return;
-        }
-      }
-      tmp14 = cResult[5];
-    }
-    const effect = noop.useEffect(S, tmp14);
-  }
-  const obj4 = require("Link");
-  let tmp8 = null != tmp(5187).coerceChannelRoute({ name: currentNavigationRouteName });
-  if (!tmp8) {
-    class S {
-      constructor() {
-        obj = closure_1(closure_2[8]);
-        result = obj.setIsNavigationFocused(closure_0, closure_1(closure_2[9]));
-        return;
-      }
-    }
-    if (isChatLockedOpen) {
-      class S {
-        constructor() {
-          obj = closure_1(closure_2[8]);
-          result = obj.setIsNavigationFocused(closure_0, closure_1(closure_2[9]));
-          return;
-        }
-      }
-      const obj5 = { name: currentNavigationRouteName };
-      const tmp9 = null != obj6.coerceGuildsRoute(obj5);
-    }
-    tmp8 = tmp9;
-  }
-  cResult[0] = currentNavigationRouteName;
-  cResult[1] = isChatLockedOpen;
-  cResult[2] = tmp8;
-  tmp7 = tmp8;
-  const tmpResult = tmp(5187);
-}) : (function useSmartSearchRowNavigationState() {
-  const currentNavigationRouteName = require("NavigationRouteUtils").useCurrentNavigationRouteName();
-  const context = noop.useContext(require("SwipeForMemberListContext").SwipeForMemberListContext);
-  const obj = require("NavigationRouteUtils");
-  const tmp = _require;
-  const isFocused = require("Link").useIsFocused();
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchRowViewability.tsx");
+
+export function useSmartSearchRowViewability() {
+  const currentNavigationRouteName = stateFromStores(5193).useCurrentNavigationRouteName();
+  const context = noop.useContext(stateFromStores(13948).SwipeForMemberListContext);
+  const obj = stateFromStores(5193);
+  const isFocused = stateFromStores(1499).useIsFocused();
   let isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
-  const obj3 = require("Link");
-  let tmp6 = null != require("NavigationRouteUtils").coerceChannelRoute({ name: currentNavigationRouteName });
+  const obj3 = stateFromStores(1499);
+  let tmp6 = null != stateFromStores(5193).coerceChannelRoute({ name: currentNavigationRouteName });
   if (!tmp6) {
     if (isChatLockedOpen) {
       const obj5 = { name: currentNavigationRouteName };
-      isChatLockedOpen = null != tmp(5187).coerceGuildsRoute(obj5);
-      const tmpResult = tmp(5187);
+      isChatLockedOpen = null != tmp(5193).coerceGuildsRoute(obj5);
+      const tmpResult = tmp(5193);
     }
     tmp6 = isChatLockedOpen;
   }
@@ -103,79 +32,23 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmar
     tmp7 = context.isPanelActive && tmp6;
     const tmp8 = context.isPanelActive && tmp6;
   }
-  _require = tmp7;
+  closure_129_0 = tmp7;
   const items = [tmp7];
   const effect = noop.useEffect(() => {
-    const result = SmartSearchAnalyticsManagerDefault.setIsNavigationFocused(closure_0, SearchSessionAnalyticsManagerDefault);
+    const result = SmartSearchAnalyticsManagerDefault.setIsNavigationFocused(stateFromStores, SearchSessionAnalyticsManagerDefault);
   }, items);
-  const obj4 = require("NavigationRouteUtils");
-});
-ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchRowViewability.tsx");
-
-export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerEnabled() ? (function useSmartSearchRowViewability() {
-  const cResult = stateFromStores(576).c(7);
-  closure_5();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AppStateStore];
-    const fn = function c() {
-      state = state.getState();
-      return state === stateFromStores(dependencyMap[10]).AppStates.ACTIVE;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
-  } else {
-    [tmp5, tmp6] = cResult;
-  }
-  const obj = stateFromStores(576);
-  stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6);
-  if (cResult[2] !== stateFromStores) {
-    const fn2 = function l() {
-      SmartSearchAnalyticsManagerDefault.setIsAppActive(stateFromStores, SearchSessionAnalyticsManagerDefault);
-    };
-    const items1 = [stateFromStores];
-    cResult[2] = stateFromStores;
-    cResult[3] = fn2;
-    cResult[4] = items1;
-    let tmp10 = items1;
-    let tmp9 = fn2;
-  } else {
-    tmp9 = cResult[3];
-    tmp10 = cResult[4];
-  }
-  const effect = noop.useEffect(tmp9, tmp10);
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn3 = function f() {
-      return () => {
-        closure_1_1(13713).setIsRowViewable(false, closure_1_1(13711));
-      };
-    };
-    const items2 = [];
-    cResult[5] = fn3;
-    cResult[6] = items2;
-    let tmp13 = items2;
-    let tmp12 = fn3;
-  } else {
-    tmp12 = cResult[5];
-    tmp13 = cResult[6];
-  }
-  const effect1 = noop.useEffect(tmp12, tmp13);
-  const tmpResult = stateFromStores(504);
-}) : (function useSmartSearchRowViewability() {
-  closure_5();
-  const items = [AppStateStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
+  const obj4 = stateFromStores(5193);
+  const items1 = [AppStateStore];
+  stateFromStores = stateFromStores(504).useStateFromStores(items1, () => {
     state = state.getState();
-    return state === stateFromStores(dependencyMap[10]).AppStates.ACTIVE;
+    return state === stateFromStores(dependencyMap[9]).AppStates.ACTIVE;
   });
-  const items1 = [stateFromStores];
-  const effect = noop.useEffect(() => {
+  const items2 = [stateFromStores];
+  const effect1 = noop.useEffect(() => {
     SmartSearchAnalyticsManagerDefault.setIsAppActive(stateFromStores, SearchSessionAnalyticsManagerDefault);
-  }, items1);
-  const effect1 = noop.useEffect(() => () => {
-    closure_1_1(13713).setIsRowViewable(false, closure_1_1(13711));
+  }, items2);
+  const effect2 = noop.useEffect(() => () => {
+    closure_1_1(13860).setIsRowViewable(false, closure_1_1(13858));
   }, []);
-});
+  const tmpResult2 = stateFromStores(504);
+}

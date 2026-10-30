@@ -1,9 +1,9 @@
-// === Module 11557: DiscordEnvironment ===
+// === Module 11758: DiscordEnvironment ===
 
-// Module 11557 (DiscordEnvironment)
-import UserSettings from "UserSettings" /* 4833 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
-import ThemeStore from "ThemeStore" /* 1204 */;
+// Module 11758 (DiscordEnvironment)
+import UserSettings from "UserSettings" /* 4834 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 
 require = fn;
 function getDiscordCustomTheme() {
@@ -39,7 +39,7 @@ function getDiscordCustomTheme() {
   }
   return null;
 }
-const UIDensityConstants = fn(11558);
+const UIDensityConstants = fn(11759);
 ({ RESPONSIVE_DENSITY_FALLBACK: closure_4, RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty, resolveUIDensity: metroRequire } = UIDensityConstants);
 const frozen = Object.freeze({ baseTheme: "dark", customTheme: null, uiDensity: "default", messageDisplayCompact: false, fontScale: 100, reducedMotion: false, highContrast: false, forcedColors: false, underlineLinks: false, formFactor: "desktop" });
 let closure_8 = ["custom-theme-background", "custom-client-theme"];

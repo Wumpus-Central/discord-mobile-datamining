@@ -1,7 +1,7 @@
-// === Module 10167: RequestGatewaySocket ===
+// === Module 10192: RequestGatewaySocket ===
 
-// Module 10167 (RequestGatewaySocket)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+// Module 10192 (RequestGatewaySocket)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -48,7 +48,7 @@ let closure_10 = async function _withRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -103,7 +103,7 @@ let closure_10 = async function _withRequest(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 let closure_5 = ["COLD_START"];
 let c6 = true;
 const map = new Map();
@@ -135,7 +135,7 @@ export function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(7640).requestSafeIdleCallback(() => {
+  combined(7645).requestSafeIdleCallback(() => {
     if (map.has(combined)) {
       const obj3 = { bridge_token: combined, cleared_after: null };
       const _performance = performance;
@@ -154,7 +154,7 @@ export function startBridgeTo(arg0) {
       const result = map.set(combined, diff);
     }
   }, { timeout: 5000 });
-  let obj2 = combined(7640);
+  let obj2 = combined(7645);
 }
 export { stopRequest };
 export function withRequest() {

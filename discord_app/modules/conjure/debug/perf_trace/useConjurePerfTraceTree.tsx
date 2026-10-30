@@ -1,7 +1,7 @@
-// === Module 12820: useConjurePerfTraceTree ===
+// === Module 12971: useConjurePerfTraceTree ===
 
-// Module 12820 (useConjurePerfTraceTree)
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10846 */;
+// Module 12971 (useConjurePerfTraceTree)
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10869 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,155 +11,10 @@ require = fn;
 let obj = { collapsed: new Set(), revealed: null };
 let set = new Set();
 obj.revealed = new Set();
-const ReactCompilerGating = fn(558);
-const set1 = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/useConjurePerfTraceTree.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePerfTraceTree(spans) {
-  const cResult = require("c").c(38);
-  if (cResult[0] !== spans) {
-    let perfTraceTreeResult = null;
-    if (null != spans) {
-      perfTraceTreeResult = tmp(10846).perfTraceTree(spans);
-      const tmpResult = tmp(10846);
-    }
-    cResult[0] = spans;
-    cResult[1] = perfTraceTreeResult;
-    let tmp4 = perfTraceTreeResult;
-  } else {
-    tmp4 = cResult[1];
-  }
-  _require = tmp4;
-  if (cResult[2] !== tmp4) {
-    const fn = function o() {
-      if (null == closure_0) {
-        let overviewViewResult = obj;
-      } else {
-        obj = ConjurePerfTraceLayout;
-        overviewViewResult = obj.overviewView(tmp);
-      }
-      return overviewViewResult;
-    };
-    cResult[2] = tmp4;
-    cResult[3] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[3];
-  }
-  obj = require("c");
-  [tmp8, dependencyMap] = noop.useState(tmp6);
-  const tmp7 = _slicedToArray(noop.useState(tmp6), 2);
-  _slicedToArray = _slicedToArray(noop.useState(null), 2)[0];
-  if (cResult[4] !== tmp4) {
-    if (null == tmp4) {
-      const _Set = Set;
-      let set = new Set();
-    } else {
-      set = tmp(10846).perfTraceKeys(tmp4);
-      const tmpResult2 = tmp(10846);
-    }
-    cResult[4] = tmp4;
-    cResult[5] = set;
-  } else {
-    noop = obj3.useRef(cResult[5]);
-    if (cResult[6] !== tmp4) {
-      class C {
-        constructor() {
-          if (null != current) {
-            tmp2 = closure_3;
-            current = closure_3.current;
-            tmp3 = closure_0;
-            tmp4 = closure_1;
-            obj = closure_0(closure_1[4]);
-            closure_3.current = obj.perfTraceKeys(tmp);
-            tmp5 = closure_1;
-            tmp6 = closure_1((collapsed) => ConjurePerfTraceLayout.extendView(collapsed, closure_0, current));
-          }
-          return;
-        }
-      }
-      const items = [tmp4];
-      cResult[6] = tmp4;
-      cResult[7] = C;
-      cResult[8] = items;
-      let tmp16 = items;
-    } else {
-      class C {
-        constructor() {
-          if (null != current) {
-            tmp2 = closure_3;
-            current = closure_3.current;
-            tmp3 = closure_0;
-            tmp4 = closure_1;
-            obj = closure_0(closure_1[4]);
-            closure_3.current = obj.perfTraceKeys(tmp);
-            tmp5 = closure_1;
-            tmp6 = closure_1((collapsed) => ConjurePerfTraceLayout.extendView(collapsed, closure_0, current));
-          }
-          return;
-        }
-      }
-      tmp16 = cResult[8];
-    }
-    const effect = obj3.useEffect(C, tmp16);
-    if (cResult[9] === tmp4) {
-      class C {
-        constructor() {
-          if (null != current) {
-            tmp2 = closure_3;
-            current = closure_3.current;
-            tmp3 = closure_0;
-            tmp4 = closure_1;
-            obj = closure_0(closure_1[4]);
-            closure_3.current = obj.perfTraceKeys(tmp);
-            tmp5 = closure_1;
-            tmp6 = closure_1((collapsed) => ConjurePerfTraceLayout.extendView(collapsed, closure_0, current));
-          }
-          return;
-        }
-      }
-    }
-    if (null == tmp4) {
-      class C {
-        constructor() {
-          if (null != current) {
-            tmp2 = closure_3;
-            current = closure_3.current;
-            tmp3 = closure_0;
-            tmp4 = closure_1;
-            obj = closure_0(closure_1[4]);
-            closure_3.current = obj.perfTraceKeys(tmp);
-            tmp5 = closure_1;
-            tmp6 = closure_1((collapsed) => ConjurePerfTraceLayout.extendView(collapsed, closure_0, current));
-          }
-          return;
-        }
-      }
-    } else {
-      class C {
-        constructor() {
-          if (null != current) {
-            tmp2 = closure_3;
-            current = closure_3.current;
-            tmp3 = closure_0;
-            tmp4 = closure_1;
-            obj = closure_0(closure_1[4]);
-            closure_3.current = obj.perfTraceKeys(tmp);
-            tmp5 = closure_1;
-            tmp6 = closure_1((collapsed) => ConjurePerfTraceLayout.extendView(collapsed, closure_0, current));
-          }
-          return;
-        }
-      }
-      const visiblePerfTraceRowsResult = obj5.visiblePerfTraceRows(tmp4, tmp8);
-    }
-    cResult[9] = tmp4;
-    cResult[10] = tmp8;
-    cResult[11] = visiblePerfTraceRowsResult;
-  }
-  const tmp9 = _slicedToArray(noop.useState(null), 2);
-}) : (function useConjurePerfTraceTree(arg0) {
+export default function useConjurePerfTraceTree(arg0) {
   _require = arg0;
   let items = [arg0];
   const memo = noop.useMemo(() => {
@@ -194,9 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   const effect = obj.useEffect(() => {
     if (null != memo) {
       const current = ref.current;
-      ref.current = closure_0(memo[4]).perfTraceKeys(tmp);
+      ref.current = closure_0(memo[2]).perfTraceKeys(tmp);
       closure_3((collapsed) => ConjurePerfTraceLayout.extendView(collapsed, memo, current));
-      obj = closure_0(memo[4]);
+      obj = closure_0(memo[2]);
     }
   }, items1);
   const items2 = [memo, first];
@@ -216,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     }
     closure_0 = findPerfTraceNodeResult;
     if (null != findPerfTraceNodeResult) {
-      closure_3((collapsed) => closure_0(memo[4]).toggleNode(collapsed, findPerfTraceNodeResult));
+      closure_3((collapsed) => closure_0(memo[2]).toggleNode(collapsed, findPerfTraceNodeResult));
     }
   }, items3);
   const items4 = [memo];
@@ -237,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     }
     closure_0 = findPerfTraceNodeResult;
     if (null != findPerfTraceNodeResult) {
-      closure_3((collapsed) => closure_0(memo[4]).expandSubtree(collapsed, findPerfTraceNodeResult));
+      closure_3((collapsed) => closure_0(memo[2]).expandSubtree(collapsed, findPerfTraceNodeResult));
     }
   }, items4);
   const items6 = [memo];
@@ -276,4 +131,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   obj3.collapseAll = callback4;
   obj3.reset = callback5;
   return obj3;
-});
+};

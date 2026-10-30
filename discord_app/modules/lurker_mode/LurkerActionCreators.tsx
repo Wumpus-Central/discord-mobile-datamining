@@ -1,10 +1,10 @@
-// === Module 7495: LurkerActionCreators ===
+// === Module 7503: LurkerActionCreators ===
 
-// Module 7495 (LurkerActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 7503 (LurkerActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import LurkingStore from "LurkingStore" /* 4938 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import LurkingStore from "LurkingStore" /* 4942 */;
 
 const require = fn;
 function stopLurkingAll() {
@@ -31,7 +31,7 @@ let closure_8 = async function _stopLurkingAll() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -68,14 +68,14 @@ let closure_8 = async function _stopLurkingAll() {
                                 _null = null;
                               }
                               closure_130_1 = _null;
-                              const HTTP = closure_0(1294).HTTP;
+                              const HTTP = closure_0(1283).HTTP;
                               const request = { url: closure_2_6.GUILD_LEAVE(closure_0), body: { lurking: true }, oldFormErrors: true, rejectWithError: true };
                               yield HTTP.del(request);
                               if (1 === tmp8) {
                                 c5 = 0;
-                                map(584).dispatch({ type: "GUILD_STOP_LURKING_FAILURE", lurkingGuildId: closure_130_0, lurkingSource: closure_130_1 });
+                                map(572).dispatch({ type: "GUILD_STOP_LURKING_FAILURE", lurkingGuildId: closure_130_0, lurkingSource: closure_130_1 });
                                 c7 = 3;
-                                map(584);
+                                map(572);
                               } else if (arg0 === 1) {
                                 c7 = 3;
                                 throw value;
@@ -110,7 +110,7 @@ let closure_8 = async function _stopLurkingAll() {
           return obj;
         }
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;
@@ -119,82 +119,39 @@ let closure_8 = async function _stopLurkingAll() {
   })();
 };
 let closure_9 = async function _stopLurking() {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
+  if (1 === tmp4) {
     if (arg0 === 1) {
+      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      c4 = 3;
+      return { value, done: true };
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp4;
-          c1 = 0;
-          closure_129_0 = undefined;
-          let tmp19 = closure_0;
-          if (closure_0 === undefined) {
-            tmp19 = null;
-          }
-          closure_129_0 = tmp19;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: null };
-        }
-      } else {
-        if (1 === tmp4) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_129_1 = closure_130_5.lurkingGuildIds();
-            if (0 !== closure_129_1.length) {
-              const items = [closure_129_0, closure_130_4.getGuildId()];
-              closure_129_2 = items.filter(closure_130_0(closure_130_2[6]).isNotNullish);
-              c3 = 2;
-              c4 = 1;
-              const obj5 = { value: closure_130_7(closure_129_2), done: false };
-              return obj5;
-            }
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj = { value, done: true };
-          return obj;
-        }
-        c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+      closure_129_1 = closure_130_5.lurkingGuildIds();
+      if (0 !== closure_129_1.length) {
+        const items = [closure_129_0, closure_130_4.getGuildId()];
+        closure_129_2 = items.filter(closure_130_0(closure_130_2[6]).isNotNullish);
+        c3 = 2;
+        c4 = 1;
+        return { value: closure_130_7(closure_129_2), done: false };
       }
-    } catch (tmp20) {
-      c4 = tmp;
-      throw tmp20;
     }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c4 = 3;
+    return { value, done: true };
   }
+  await "HermesInternal";
+  let tmp19 = closure_0;
+  if (closure_0 === undefined) {
+    tmp19 = null;
+  }
+  closure_129_0 = tmp19;
+  return "flexDirection";
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 

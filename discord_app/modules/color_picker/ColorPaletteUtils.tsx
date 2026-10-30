@@ -1,6 +1,6 @@
-// === Module 1410: ColorPaletteUtils ===
+// === Module 1405: ColorPaletteUtils ===
 
-// Module 1410 (ColorPaletteUtils)
+// Module 1405 (ColorPaletteUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/color_picker/ColorPaletteUtils.tsx");

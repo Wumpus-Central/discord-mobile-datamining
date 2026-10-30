@@ -1,34 +1,34 @@
-// === Module 8820: MediaModal ===
+// === Module 8854: MediaModal ===
 
-// Module 8820 (MediaModal)
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import HapticUtils from "HapticUtils" /* 5249 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5250 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8797 */;
-import MediaModalPortal from "MediaModalPortal" /* 8800 */;
-import MediaModalTiktok from "MediaModalTiktok" /* 8827 */;
-import MediaModalWebVideoFile from "MediaModalWebVideoFile" /* 8829 */;
-import common_Video from "common/Video" /* 8830 */;
-import MediaModalOverlayDefault from "MediaModalOverlay" /* 14693 */;
-import MediaModalYoutubeDefault from "MediaModalYoutube" /* 14711 */;
-import MediaModalWebEmbedDefault from "MediaModalWebEmbed" /* 14713 */;
-import MediaModalVideoDefault from "MediaModalVideo" /* 14718 */;
-import MediaModalImageDefault from "MediaModalImage" /* 14722 */;
+// Module 8854 (MediaModal)
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import HapticUtils from "HapticUtils" /* 5255 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8831 */;
+import MediaModalPortal from "MediaModalPortal" /* 8834 */;
+import MediaModalTiktok from "MediaModalTiktok" /* 8861 */;
+import MediaModalWebVideoFile from "MediaModalWebVideoFile" /* 8863 */;
+import common_Video from "common/Video" /* 8864 */;
+import MediaModalOverlayDefault from "MediaModalOverlay" /* 14726 */;
+import MediaModalYoutubeDefault from "MediaModalYoutube" /* 14745 */;
+import MediaModalWebEmbedDefault from "MediaModalWebEmbed" /* 14747 */;
+import MediaModalVideoDefault from "MediaModalVideo" /* 14752 */;
+import MediaModalImageDefault from "MediaModalImage" /* 14756 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8821 */;
-import AppStateStore from "AppStateStore" /* 1999 */;
+import AppFreezeStore from "AppFreezeStore" /* 8855 */;
+import AppStateStore from "AppStateStore" /* 1994 */;
 
 const MediaModalPortalDefault = MediaModalPortal;
 const MediaModalTiktokDefault = MediaModalTiktok;
 const MediaModalWebVideoFileDefault = MediaModalWebVideoFile;
 
-const useVideoControls = obj(8794);
+const useVideoControls = obj(8828);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const AppStates = fn(1084).AppStates;
+const AppStates = fn(1072).AppStates;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModal.tsx");
@@ -181,11 +181,11 @@ export default function MediaModal(originLayout) {
         const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
         const tmp2Result = HapticUtils;
         const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8862, dependencyMap.paths), "MediaShareActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8896, dependencyMap.paths), "MediaShareActionSheet", obj2);
       }
     }
   }, items5);
-  const callback4 = flag2.useCallback((onClose, overlayEnabled) => jsx(MediaModalOverlayDefault, { syncer: mediaViewerSyncer, getVideoControls: callback1, onClose, shareable: flag2, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, contextName, contextIcon, overlayEnabled, onIndexChange }), items6);
+  const callback4 = flag2.useCallback((onClose, overlayEnabled, entranceAnimationDriver) => jsx(MediaModalOverlayDefault, { entranceAnimationDriver, syncer: mediaViewerSyncer, getVideoControls: callback1, onClose, shareable: flag2, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, contextName, contextIcon, overlayEnabled, onIndexChange }), items6);
   let obj3 = num(onCloseCallback[9]);
   const mediaPlayerMutedStore = num(onCloseCallback[24]).useMediaPlayerMutedStore((isMuted) => isMuted.isMuted);
   const items7 = [callback1, callback2, mediaPlayerMutedStore, videoStateStore];

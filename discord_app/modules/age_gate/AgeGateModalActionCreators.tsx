@@ -1,12 +1,12 @@
-// === Module 6726: AgeGateModalActionCreators ===
+// === Module 6733: AgeGateModalActionCreators ===
 
-// Module 6726 (AgeGateModalActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AgeGateConstants from "AgeGateConstants" /* 1109 */;
-import router_utils from "router_utils" /* 1111 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6727 */;
-import Constants from "Constants" /* 1084 */;
+// Module 6733 (AgeGateModalActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AgeGateConstants from "AgeGateConstants" /* 1098 */;
+import router_utils from "router_utils" /* 1100 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6734 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const AgeGateAnalyticAction = AgeGateConstants.AgeGateAnalyticAction;
@@ -25,6 +25,9 @@ export function closeAgeGateModal(source) {
     AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, obj2);
     const tmpResult = AnalyticsUtilsDefault;
   }
+}
+export function closeAgeGateModalAfterSubmit() {
+  DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_CLOSE", submitted: true });
 }
 export function openSuccessAgeGateModal(source) {
   DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN", source });

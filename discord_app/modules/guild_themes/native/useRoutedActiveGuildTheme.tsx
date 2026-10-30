@@ -1,11 +1,10 @@
-// === Module 5186: useRoutedActiveGuildTheme ===
+// === Module 5192: useRoutedActiveGuildTheme ===
 
-// Module 5186 (useRoutedActiveGuildTheme)
-import c from "c" /* 576 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
-import RootNavigationRef from "RootNavigationRef" /* 5188 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5213 */;
-import GuildThemeResolver from "GuildThemeResolver" /* 5214 */;
+// Module 5192 (useRoutedActiveGuildTheme)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
+import RootNavigationRef from "RootNavigationRef" /* 5194 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5219 */;
+import GuildThemeResolver from "GuildThemeResolver" /* 5220 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -148,42 +147,13 @@ function getActiveGuildThemeGuildIdSnapshot() {
   }
   return null;
 }
-const ME = fn(1084).ME;
-let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRoutedActiveGuildThemeGuildId() {
-  const cResult = c.c(2);
+const ME = fn(1072).ME;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
+
+export default function useRoutedActiveGuildTheme() {
   const context = noop.useContext(GuildThemeGuildIdOverrideContextDefault);
   [tmp4, require] = noop.useState(getActiveGuildThemeGuildIdSnapshot);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l() {
-      const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
-      if (null != rootNavigationRef) {
-        closure_1_0(getActiveGuildThemeGuildIdSnapshot());
-        return rootNavigationRef.addListener("state", function handleStateChange() {
-          closure_1_0(getActiveGuildThemeGuildIdSnapshot());
-        });
-      }
-    };
-    const items = [];
-    cResult[0] = fn;
-    cResult[1] = items;
-    tmp5 = fn;
-    tmp6 = items;
-  } else {
-    [tmp5, tmp6] = cResult;
-  }
-  const effect = noop.useEffect(tmp5, tmp6);
-  if (undefined !== context) {
-    let tmp9 = null;
-    if (context !== ME) {
-      tmp9 = context;
-    }
-    tmp4 = tmp9;
-  }
-  return tmp4;
-}) : (function useRoutedActiveGuildThemeGuildId() {
-  const context = noop.useContext(GuildThemeGuildIdOverrideContextDefault);
-  [tmp3, require] = noop.useState(getActiveGuildThemeGuildIdSnapshot);
   const effect = noop.useEffect(() => {
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
@@ -195,22 +165,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRout
     }
   }, []);
   if (undefined !== context) {
-    let tmp6 = null;
+    let tmp7 = null;
     if (context !== ME) {
-      tmp6 = context;
+      tmp7 = context;
     }
-    tmp3 = tmp6;
+    tmp4 = tmp7;
   }
-  return tmp3;
-});
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRoutedActiveGuildTheme() {
-  const tmp = closure_8();
-  return GuildThemeResolver.useActiveGuildThemeForGuildId(tmp);
-}) : (function useRoutedActiveGuildTheme() {
-  const tmp = closure_8();
-  return GuildThemeResolver.useActiveGuildThemeForGuildId(tmp);
-});
+  const tmp3 = _slicedToArray(noop.useState(getActiveGuildThemeGuildIdSnapshot), 2);
+  return GuildThemeResolver.useActiveGuildThemeForGuildId(tmp4);
+};

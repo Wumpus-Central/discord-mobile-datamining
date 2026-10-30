@@ -1,164 +1,30 @@
-// === Module 12349: useConjureConnectActions ===
+// === Module 12511: useConjureConnectActions ===
 
-// Module 12349 (useConjureConnectActions)
-import conjureExternalConnections from "conjureExternalConnections" /* 12320 */;
+// Module 12511 (useConjureConnectActions)
+import conjureExternalConnections from "conjureExternalConnections" /* 12482 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
 require = fn;
 const set = new Set();
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/external_connections/useConjureConnectActions.tsx");
 
-export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureConnectActions(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const cResult = require("c").c(7);
-  let obj = require("c");
-  [tmp3, dependencyMap] = first(noop.useState(set), 2);
-  noop.useRef(set);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function s(arg0) {
-      ref.current = conjureExternalConnections.endExternalAuthorization(ref.current, arg0);
-      dependencyMap(ref.current);
-    };
-    cResult[0] = fn;
-    first = fn;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === arg1) {
-    if (cResult[2] === arg0) {
-      let tmp5 = cResult[3];
-    }
-    if (cResult[4] === tmp5) {
-      if (cResult[5] === tmp3) {
-        let tmp6 = cResult[6];
-      }
-      return tmp6;
-    }
-    let obj2 = { pending: tmp3, connect: tmp5 };
-    cResult[4] = tmp5;
-    cResult[5] = tmp3;
-    cResult[6] = obj2;
-    tmp6 = obj2;
-  }
-  const fn2 = function v(type) {
-    if (null != type) {
-      const result = type(12320).beginExternalAuthorization(ref.current, type.type);
-      if (null != result) {
-        ref.current = result;
-        dependencyMap(result);
-        type = ref(function*() {
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj2 = { value, done: true };
-              return obj2;
-            } else {
-              return { value: "IconComponent", done: "IconComponent" };
-            }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  closure_128_0 = undefined;
-                  c2 = 1;
-                  c3 = 1;
-                  const obj6 = { value: tmp2(12319).requestExternalAuthorizeUrl(tmp2, tmp2.type), done: false };
-                  return obj6;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj7 = { value, done: true };
-                return obj7;
-              } else {
-                closure_128_0 = value;
-                first(tmp2.type);
-                if ("url" === closure_128_0.type) {
-                  const obj8 = { href: closure_128_0.url, trusted: false };
-                  tmp2(8897).handleClick(obj8);
-                  c3 = 3;
-                  const obj = tmp2(8897);
-                }
-                if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
-                  const intl2 = tmp2(1125).intl;
-                  let stringResult = intl2.string(tmp5(3864)["jCQ/1B"]);
-                } else {
-                  const intl = tmp2(1125).intl;
-                  stringResult = intl.string(tmp5(3864).POxkSh);
-                }
-                closure_2_1(stringResult);
-                obj3 = tmp2(12320);
-              }
-            } catch (tmp34) {
-              c3 = tmp;
-              throw tmp34;
-            }
-          }
-        });
-        (function startAuthorization() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        })().catch(() => first(type.type));
-        const promise = (function startAuthorization() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        })();
-      }
-      let obj = type(12320);
-    }
-  };
-  cResult[1] = arg1;
-  cResult[2] = arg0;
-  cResult[3] = fn2;
-  tmp5 = fn2;
-}) : (function useConjureConnectActions(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
+export function useConjureConnectActions(projectId, presentError) {
   [tmp2, dependencyMap] = callback(noop.useState(set), 2);
   noop.useRef(set);
   callback = noop.useCallback((arg0) => {
     ref.current = conjureExternalConnections.endExternalAuthorization(ref.current, arg0);
     dependencyMap(ref.current);
   }, []);
-  const items = [arg1, arg0, callback];
+  const items = [presentError, projectId, callback];
   const tmp = callback(noop.useState(set), 2);
   return {
     pending: tmp2,
     connect: noop.useCallback((type) => {
-      closure_1 = async function _startAuthorization2() {
+      projectId = type;
+      closure_1 = async function _startAuthorization() {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -169,7 +35,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -188,7 +54,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                 closure_128_0 = undefined;
                 c2 = 1;
                 c3 = 1;
-                const obj6 = { value: type(12319).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
+                const obj6 = { value: type(12481).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
                 return obj6;
               }
             } else if (arg0 === 1) {
@@ -203,19 +69,19 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
               callback(closure_129_0.type);
               if ("url" === closure_128_0.type) {
                 const obj8 = { href: closure_128_0.url, trusted: false };
-                type(8897).handleClick(obj8);
+                type(8931).handleClick(obj8);
                 c3 = 3;
-                const obj = type(8897);
+                const obj = type(8931);
               }
               if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
-                const intl2 = type(1125).intl;
-                let stringResult = intl2.string(closure_2_1(3864)["jCQ/1B"]);
+                const intl2 = type(1114).intl;
+                let stringResult = intl2.string(presentError(3865)["jCQ/1B"]);
               } else {
-                const intl = type(1125).intl;
-                stringResult = intl.string(closure_2_1(3864).POxkSh);
+                const intl = type(1114).intl;
+                stringResult = intl.string(presentError(3865).POxkSh);
               }
               closure_1(stringResult);
-              obj3 = type(12320);
+              obj3 = type(12482);
             }
           } catch (tmp34) {
             c3 = tmp;
@@ -223,8 +89,8 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
           }
         }
       };
-      if (null != type) {
-        const result = type(12320).beginExternalAuthorization(ref.current, type.type);
+      if (null != projectId) {
+        const result = projectId(12482).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -249,8 +115,8 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
             return applyArgumentsResult;
           })();
         }
-        let obj = type(12320);
+        let obj = projectId(12482);
       }
     }, items)
   };
-});
+}

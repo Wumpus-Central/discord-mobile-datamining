@@ -1,12 +1,12 @@
-// === Module 14706: MediaModalOverlayFooter ===
+// === Module 14739: MediaModalOverlayFooter ===
 
-// Module 14706 (MediaModalOverlayFooter)
-import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1199 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
-import timing from "timing" /* 5243 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5334 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11328 */;
+// Module 14739 (MediaModalOverlayFooter)
+import nativeDefault from "native" /* 575 */;
+import native from "native" /* 1188 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+import timing from "timing" /* 5249 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11532 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5005);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "__packager_asset" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+const createStyles = fn(5009);
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "__closure" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "getCurrentUser" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 function clamp(arg0, arg1, arg2) {
@@ -387,7 +387,7 @@ export function MediaModalOverlayFooter(channelId) {
   const obj18 = { style: tmp.messagePreviewContainer, children: null };
   const obj16 = { tabStyle: tmp.drawerHeaderTab, style: tmp.drawerHeader };
   const tmp44 = overlayEnabled(num[12]);
-  obj18.children = full(overlayEnabled(num[15]), { channelId: channelId.channelId, messageId: channelId.messageId, onClose: channelId.onClose, onTapMessage: callback2, onMeasureFullHeight: callback3, onMeasureCollapsedHeight: callback4, full, canExpand: first2 > first1, setScrollViewIsAtTop: tmp34[1], flingUpRef: ref, flingDownRef: ref1, animationDriver: sharedValue2 });
+  obj18.children = full(overlayEnabled(num[15]), { channelId: channelId.channelId, messageId: channelId.messageId, onClose: channelId.onClose, onTapMessage: callback2, onMeasureFullHeight: callback3, onMeasureCollapsedHeight: callback4, full, canExpand: first2 > first1, setScrollViewIsAtTop: tmp34[1], flingUpRef: ref, flingDownRef: ref1, animationDriver: sharedValue2, entranceAnimationDriver: channelId.entranceAnimationDriver });
   const items15 = [full(sharedValue1, obj18), ];
   if (tmp41Result) {
     const obj20 = { style: null, children: null };

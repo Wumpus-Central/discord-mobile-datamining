@@ -1,6 +1,6 @@
-// === Module 19553: KeywordTextUtils ===
+// === Module 19616: KeywordTextUtils ===
 
-// Module 19553 (KeywordTextUtils)
+// Module 19616 (KeywordTextUtils)
 import size from "module_2" /* 2 */;
 
 const re0 = /[\t\n,]/g;
@@ -23,8 +23,8 @@ export function sortKeywords(arr) {
     return replaced.localeCompare(str2.replaceAll(closure_1_2, ""));
   });
 }
-export function getKeywordStringFromKeywordFilter(keywords) {
-  return keywords.join(", ");
+export function getKeywordStringFromKeywordFilter(join) {
+  return join.join(", ");
 }
 export function isKeywordParseableString(arr) {
   let hasItem = arr.includes("\n");
@@ -38,6 +38,6 @@ export function getRegexPatternsFromString(str) {
   const mapped = parts.map((item) => item.trim());
   return mapped.filter(Boolean);
 }
-export function getStringFromRegexPatterns(keywords) {
-  return keywords.join("\n");
+export function getStringFromRegexPatterns(join) {
+  return join.join("\n");
 }

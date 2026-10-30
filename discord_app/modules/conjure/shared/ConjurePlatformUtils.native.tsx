@@ -1,21 +1,21 @@
-// === Module 10854: ConjurePlatformUtils ===
+// === Module 10877: ConjurePlatformUtils ===
 
-// Module 10854 (ConjurePlatformUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5640 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10840 */;
-import ApplicationUtils from "ApplicationUtils" /* 10861 */;
-import PushNotificationDefault from "PushNotification" /* 10866 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 10871 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 10875 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 10876 */;
-import restartFrames from "restartFrames" /* 10878 */;
+// Module 10877 (ConjurePlatformUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5646 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10863 */;
+import ApplicationUtils from "ApplicationUtils" /* 10884 */;
+import PushNotificationDefault from "PushNotification" /* 10889 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 10894 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 10898 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 10899 */;
+import restartFrames from "restartFrames" /* 10901 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 5248 */;
-import AppStateStore from "AppStateStore" /* 1999 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ActionSheetStore from "ActionSheetStore" /* 5254 */;
+import AppStateStore from "AppStateStore" /* 1994 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
 
 const require = globalThis.__r;
 
@@ -233,7 +233,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -300,7 +300,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
               const obj9 = { value: { status: "unavailable" }, done: true };
               return obj9;
             } else if (null == onAccepted) {
-              let obj10 = { uploadToken: "r" };
+              let obj10 = { uploadToken: "getCurrentUser" };
             } else {
               c7 = 2;
               c8 = 1;
@@ -387,7 +387,7 @@ let closure_19 = async function _inspectConjurePreviewPoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -466,7 +466,7 @@ let closure_20 = async function _relayPreviewControl(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -633,14 +633,14 @@ let closure_20 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const isLaunched = fn(6834).isLaunched;
-const LocalNotificationTypes = fn(10855).LocalNotificationTypes;
-let items = [fn(8867).OAuth2Scopes.BOT, fn(8867).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const isLaunched = fn(6841).isLaunched;
+const LocalNotificationTypes = fn(10878).LocalNotificationTypes;
+let items = [fn(8901).OAuth2Scopes.BOT, fn(8901).OAuth2Scopes.APPLICATIONS_COMMANDS];
 const ConjureAppInstallSheet = "ConjureAppInstallSheet";
 let c17 = 0;
 let c18 = 0;
 let c21 = 0;
-const conjurePreviewControlLease = fn(10875);
+const conjurePreviewControlLease = fn(10898);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -743,7 +743,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(10877);
+const conjurePreviewOperationSurfaces = fn(10900);
 let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -752,14 +752,14 @@ let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
   }
   let tmp3 = null;
   if (null != prop) {
-    const conjureBuilderPreviewFrame = iframeId(10840).getConjureBuilderPreviewFrame(prop);
+    const conjureBuilderPreviewFrame = iframeId(10863).getConjureBuilderPreviewFrame(prop);
     let tmp7 = null;
     if (null != conjureBuilderPreviewFrame) {
       const obj3 = { applicationId: prop, launched: isLaunched(conjureBuilderPreviewFrame) };
       tmp7 = obj3;
     }
     tmp3 = tmp7;
-    const obj2 = iframeId(10840);
+    const obj2 = iframeId(10863);
   }
   let launched;
   if (tmp3 != null) {
@@ -780,13 +780,13 @@ let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
     }
     let tmp12 = null;
     if (null != prop1) {
-      const conjureBuilderPreviewFrame1 = iframeId(10840).getConjureBuilderPreviewFrame(prop1);
+      const conjureBuilderPreviewFrame1 = iframeId(10863).getConjureBuilderPreviewFrame(prop1);
       iframeId = null;
       if (isLaunched(conjureBuilderPreviewFrame1)) {
         iframeId = conjureBuilderPreviewFrame1.data.iframeId;
       }
       tmp12 = iframeId;
-      const obj5 = iframeId(10840);
+      const obj5 = iframeId(10863);
     }
     iframeId = tmp12;
     const obj6 = {
@@ -850,7 +850,7 @@ export default {
     obj.dismissOAuthModal = onClose;
     if (ActionSheetStore.isOpen()) {
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp16 = asyncRequireImpl(10856, dependencyMap.paths);
+      const tmp16 = asyncRequireImpl(10879, dependencyMap.paths);
       const obj2 = {};
       const merged = Object.assign(obj);
       obj2.sheetKey = ConjureAppInstallSheet;

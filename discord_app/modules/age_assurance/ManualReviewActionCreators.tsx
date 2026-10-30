@@ -1,10 +1,10 @@
-// === Module 8158: ManualReviewActionCreators ===
+// === Module 8164: ManualReviewActionCreators ===
 
-// Module 8158 (ManualReviewActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7955 */;
+// Module 8164 (ManualReviewActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7961 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -32,7 +32,7 @@ let closure_14 = async function _handleManualReviewCta() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -54,7 +54,7 @@ let closure_14 = async function _handleManualReviewCta() {
           } else {
             c11 = true;
             c3 = 2;
-            closure_128_0 = __initData;
+            closure_128_0 = closure_2_12;
             let tmp23 = null == closure_128_0;
             if (!tmp23) {
               const _Date2 = Date;
@@ -152,8 +152,8 @@ let closure_14 = async function _handleManualReviewCta() {
     }
   }
 };
-const Endpoints = fn(1084).Endpoints;
-const SafetyToastType = fn(7476).SafetyToastType;
+const Endpoints = fn(1072).Endpoints;
+const SafetyToastType = fn(7484).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

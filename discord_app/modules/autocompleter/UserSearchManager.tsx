@@ -1,21 +1,21 @@
-// === Module 9106: UserSearchManager ===
+// === Module 9119: UserSearchManager ===
 
-// Module 9106 (UserSearchManager)
+// Module 9119 (UserSearchManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import Constants from "Constants" /* 1084 */;
-import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import ChannelRecord from "ChannelRecord" /* 4861 */;
-import UserUtilsDefault from "UserUtils" /* 5059 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9107 */;
-import UserRecord from "UserRecord" /* 1403 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildMemberStore from "GuildMemberStore" /* 4917 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import Constants from "Constants" /* 1072 */;
+import SentryUtilsDefault from "SentryUtils" /* 1243 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import FlagUtilsAll from "FlagUtils" /* 1397 */;
+import ChannelRecord from "ChannelRecord" /* 4862 */;
+import UserUtilsDefault from "UserUtils" /* 5063 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9120 */;
+import UserRecord from "UserRecord" /* 1398 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 import size from "module_2" /* 2 */;
 
 function getTransformedUser(user) {
@@ -950,7 +950,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResu
       }
     };
     obj._worker = _worker;
-    obj._uuid = obj(1278).v4();
+    obj._uuid = obj(1267).v4();
     obj._callback = parseUserResults;
     obj._limit = num;
     obj._currentQuery = null;

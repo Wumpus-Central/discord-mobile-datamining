@@ -1,18 +1,18 @@
-// === Module 7591: PremiumPlanPurchasedStore ===
+// === Module 7599: PremiumPlanPurchasedStore ===
 
-// Module 7591 (PremiumPlanPurchasedStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7592 */;
-import ActionSheetStore from "ActionSheetStore" /* 5248 */;
+// Module 7599 (PremiumPlanPurchasedStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7600 */;
+import ActionSheetStore from "ActionSheetStore" /* 5254 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const module_570 = fn(570);
-const obj3 = module_570.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
+const module_560 = fn(560);
+const obj3 = module_560.create(() => ({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: null }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanPurchasedStore.tsx");
 
@@ -20,7 +20,7 @@ export const usePremiumPlanPurchasedStore = obj3;
 export function setInitiatedPurchaseFromNewFlow(productId) {
   productId = productId.productId;
   ({ onPaymentStart, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = productId);
-  productId(1271).batchUpdates(() => {
+  productId(1260).batchUpdates(() => {
     obj3.setState({ productId, initiatedPurchaseFromNewFlow: true, onPaymentSuccess, onPaymentDismiss });
   });
   if (onPaymentStart != null) {
@@ -84,6 +84,6 @@ export function reset() {
         str = "dismissed";
       }
     }
-    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "ix", onPaymentDismiss: "then" });
+    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "applicationId", onPaymentDismiss: "paddingHorizontal" });
   });
 }

@@ -1,6 +1,6 @@
-// === Module 13307: ? ===
+// === Module 13457: ? ===
 
-// Module 13307
+// Module 13457
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_face_14_possessed_textureAtlas.webp.js");

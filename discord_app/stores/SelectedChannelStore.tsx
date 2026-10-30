@@ -1,23 +1,23 @@
-// === Module 4908: SelectedChannelStore ===
+// === Module 4912: SelectedChannelStore ===
 
-// Module 4908 (SelectedChannelStore)
+// Module 4912 (SelectedChannelStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import router_utils from "router_utils" /* 1111 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 5642 */;
-import GatedChannelStore from "GatedChannelStore" /* 4909 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import router_utils from "router_utils" /* 1100 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 5648 */;
+import GatedChannelStore from "GatedChannelStore" /* 4913 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildChannelStore from "GuildChannelStore" /* 4935 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildChannelStore from "GuildChannelStore" /* 4939 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {
@@ -206,7 +206,7 @@ function navigateAwayFromChannel(id, guild_id, id2) {
     tmp19 = tmp20;
   }
   if (tmp19) {
-    router_utils.replaceWith(dependencyMap.CHANNEL(tmp4, tmp11));
+    router_utils.replaceWith(dependencyMap2.CHANNEL(tmp4, tmp11));
   }
   if (flag3) {
     const Storage = Storage3.Storage;
@@ -311,11 +311,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(4864).isGuildHomeChannel;
+const isGuildHomeChannel = fn(4865).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -359,7 +359,7 @@ prototype["getChannelId"] = function getChannelId(arg0) {
   }
   let guildId = arg0;
   let tmp2 = null;
-  if (arg0 !== closure_1_22) {
+  if (arg0 !== __initData2) {
     if (guildId == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
@@ -405,9 +405,9 @@ prototype["getMostRecentSelectedTextChannelId"] = function getMostRecentSelected
   }
   return tmp;
 };
-prototype["getCurrentlySelectedChannelId"] = function getCurrentlySelectedChannelId(id) {
-  if (null != id) {
-    let tmp = selectedChannelIds[id];
+prototype["getCurrentlySelectedChannelId"] = function getCurrentlySelectedChannelId(guildId) {
+  if (null != guildId) {
+    let tmp = selectedChannelIds[guildId];
   } else {
     tmp = c6;
   }
@@ -562,7 +562,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const channel = ChannelStore.getChannel(channelId);
             let tmp10 = null != channel;
             if (tmp10) {
-              tmp10 = __initData(channel.type);
+              tmp10 = closure_1_12(channel.type);
             }
             if (channel != null) {
               const guildId1 = channel.getGuildId();
@@ -691,7 +691,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const channel = ChannelStore.getChannel(id1);
             let tmp7 = null != channel;
             if (tmp7) {
-              tmp7 = __initData(channel.type);
+              tmp7 = closure_1_12(channel.type);
             }
             if (channel != null) {
               const guildId = channel.getGuildId();
@@ -878,7 +878,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const values = closure_1_1(12)(selectedChannelIds).values();
             const obj2 = closure_1_1(12)(selectedChannelIds);
             const combined = values.concat(closure_1_1(12).values(mostRecentSelectedTextChannelIds));
-            const found = combined.filter(closure_1_0(1385).isNotNullish);
+            const found = combined.filter(closure_1_0(1380).isNotNullish);
             const obj4 = closure_1_1(12);
             const uniqResult = found.uniq();
             obj.knownThreadIds = found.uniq().filter((item) => {
@@ -1035,7 +1035,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
   AUTO_UPDATER_QUIT_AND_INSTALL: function handleAutoUpdaterQuitAndInstall() {
     let tmp = null == selectedVoiceChannelId;
     if (!tmp) {
-      tmp = null == v65535;
+      tmp = null == closure_1_10;
     }
     if (!tmp) {
       const _Date = Date;

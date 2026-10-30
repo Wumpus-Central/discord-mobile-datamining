@@ -1,10 +1,10 @@
-// === Module 17882: RegistrationUtils ===
+// === Module 17941: RegistrationUtils ===
 
-// Module 17882 (RegistrationUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+// Module 17941 (RegistrationUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5738 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 9091 */;
+import InviteStore from "InviteStore" /* 5744 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 9104 */;
 
 const require = globalThis.__r;
 
@@ -63,7 +63,7 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.invite_channel_type = type;
   let id1;
   if (invite != null) {
-    guild = invite.guild;
+    const guild = invite.guild;
     if (guild != null) {
       id1 = guild.id;
     }
@@ -81,13 +81,12 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.to_step = toStep;
   AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
 }
-const RegistrationUIStore = fn(17874);
+const RegistrationUIStore = fn(17933);
 ({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
-const RegistrationConstants = fn(17875);
+const RegistrationConstants = fn(17934);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
 
@@ -142,49 +141,7 @@ export function getTrackRegTransition(arg0) {
     return tmp9;
   };
 }
-export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled() ? (function BackButtonWithTracking(destinationStep) {
-  const cResult = context(onPress[9]).c(7);
-  context = noop.useContext(context(onPress[10]).TrackRegistrationContext);
-  destinationStep = destinationStep.destinationStep;
-  onPress = destinationStep.onPress;
-  if (cResult[0] === destinationStep) {
-    if (cResult[1] === onPress) {
-      if (cResult[2] === context) {
-        let tmp5 = cResult[3];
-      }
-      if (cResult[4] === tmp5) {
-        if (cResult[5] === destinationStep) {
-          let tmp6 = cResult[6];
-        }
-        return tmp6;
-      }
-      const obj2 = {};
-      const merged = Object.assign(destinationStep);
-      obj2.onPress = tmp5;
-      const tmp11 = jsx(tmp(tmp2[11]).HeaderBackButton, {});
-      cResult[4] = tmp5;
-      cResult[5] = destinationStep;
-      cResult[6] = tmp11;
-      tmp6 = tmp11;
-    }
-  }
-  function handlePress() {
-    if (null != onPress) {
-      timestampProducer();
-      const obj = { step: destinationStep, actionType: constants2.VIEWED };
-      context(obj);
-      tmp();
-    }
-  }
-  cResult[0] = destinationStep;
-  cResult[1] = onPress;
-  cResult[2] = context;
-  cResult[3] = handlePress;
-  tmp5 = handlePress;
-  let obj = context(onPress[9]);
-  tmp = context;
-  tmp2 = onPress;
-}) : (function BackButtonWithTracking(arg0) {
+export function BackButtonWithTracking(arg0) {
   _require = noop.useContext(require("Auth").TrackRegistrationContext);
   ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
   let obj = {};
@@ -197,8 +154,8 @@ export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled
       tmp();
     }
   };
-  return jsx(require("module_6993").HeaderBackButton, {});
-});
+  return jsx(require("module_6999").HeaderBackButton, {});
+}
 export function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {
     const _HermesInternal7 = HermesInternal;

@@ -1,8 +1,8 @@
-// === Module 11986: ApplicationAssetsV2Store ===
+// === Module 12174: ApplicationAssetsV2Store ===
 
-// Module 11986 (ApplicationAssetsV2Store)
+// Module 12174 (ApplicationAssetsV2Store)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const require = fn;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {

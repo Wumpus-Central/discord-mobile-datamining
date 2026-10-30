@@ -1,30 +1,14 @@
-// === Module 18639: GuildChannelMemberRow ===
+// === Module 18698: GuildChannelMemberRow ===
 
-// Module 18639 (GuildChannelMemberRow)
-import c from "c" /* 576 */;
-import UserRowDefault from "UserRow" /* 10695 */;
+// Module 18698 (GuildChannelMemberRow)
+import UserRowDefault from "UserRow" /* 10718 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildChannelMemberRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildChannelMemberRow(arg0) {
-  const cResult = c.c(2);
-  if (cResult[0] !== arg0) {
-    const obj2 = {};
-    const merged = Object.assign(arg0);
-    const tmp10 = jsx(UserRowDefault, {});
-    cResult[0] = arg0;
-    cResult[1] = tmp10;
-    let tmp3 = tmp10;
-  } else {
-    tmp3 = cResult[1];
-  }
-  return tmp3;
-}) : (function GuildChannelMemberRow(arg0) {
+export default function GuildChannelMemberRow(arg0) {
   const merged = Object.assign(arg0);
   return jsx(UserRowDefault, {});
-});
+};

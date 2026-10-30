@@ -1,10 +1,10 @@
-// === Module 16735: AuthorizedAppsSetting ===
+// === Module 16789: AuthorizedAppsSetting ===
 
-// Module 16735 (AuthorizedAppsSetting)
-import Constants from "Constants" /* 1084 */;
-import util from "util" /* 1125 */;
-import KeyIcon from "KeyIcon" /* 7111 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 16789 (AuthorizedAppsSetting)
+import Constants from "Constants" /* 1072 */;
+import util from "util" /* 1114 */;
+import KeyIcon from "KeyIcon" /* 7119 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

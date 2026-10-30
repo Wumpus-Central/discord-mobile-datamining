@@ -1,10 +1,9 @@
-// === Module 14036: ChannelSafeAreaBottomAnimated ===
+// === Module 14168: ChannelSafeAreaBottomAnimated ===
 
-// Module 14036 (ChannelSafeAreaBottomAnimated)
-import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 10989 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 10994 */;
+// Module 14168 (ChannelSafeAreaBottomAnimated)
+import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11219 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11224 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -14,46 +13,10 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const __initData = { code: "function ChannelSafeAreaBottomAnimatedAndroidTsx1(){const{heightSharedValue}=this.__closure;return{height:heightSharedValue.get()};}" };
-const __initData2 = { code: "function ChannelSafeAreaBottomAnimatedAndroidTsx2(){const{heightSharedValue}=this.__closure;return{height:heightSharedValue.get()};}" };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSafeAreaBottom(channelId) {
-  const cResult = c.c(5);
-  const tmp4 = useChannelSafeAreaHeightSharedValueDefault();
-  closure_0 = tmp4;
-  const tmp5 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
-  const fn = function n() {
-    return { height: closure_0.get() };
-  };
-  fn.__closure = { heightSharedValue: tmp4 };
-  fn.__workletHash = 6491350126069;
-  fn.__initData = __initData;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-  if (cResult[0] !== tmp5) {
-    const obj3 = { style: null };
-    const items = [React3.absoluteFill, tmp5];
-    obj3.style = items;
-    const tmp11 = <React4 style={null} />;
-    cResult[0] = tmp5;
-    cResult[1] = tmp11;
-    let tmp7 = tmp11;
-  } else {
-    tmp7 = cResult[1];
-  }
-  if (cResult[2] === animatedStyle) {
-    if (cResult[3] === tmp7) {
-      let tmp12 = cResult[4];
-    }
-    return tmp12;
-  }
-  const tmp13 = jsx(ReanimatedRexportDefault.View, { style: animatedStyle, children: tmp7 });
-  cResult[2] = animatedStyle;
-  cResult[3] = tmp7;
-  cResult[4] = tmp13;
-  tmp12 = tmp13;
-}) : (function ChannelSafeAreaBottom(channelId) {
+export default noop.memo(function ChannelSafeAreaBottom(channelId) {
   const tmp = useChannelSafeAreaHeightSharedValueDefault();
   closure_0 = tmp;
   const tmp2 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
@@ -61,13 +24,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return { height: closure_0.get() };
   };
   fn.__closure = { heightSharedValue: tmp };
-  fn.__workletHash = 15913264108790;
-  fn.__initData = __initData2;
+  fn.__workletHash = 6491350126069;
+  fn.__initData = __initData;
   const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
   const obj2 = { style: animatedStyle, children: null };
   const obj3 = { style: null };
-  const items = [React3.absoluteFill, tmp2];
+  const items = [absoluteFill.absoluteFill, tmp2];
   obj3.style = items;
   obj2.children = <React4 style={null} />;
   return jsx(ReanimatedRexportDefault.View, { style: animatedStyle, children: null });
-}));
+});

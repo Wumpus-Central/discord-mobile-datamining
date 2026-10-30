@@ -1,17 +1,17 @@
-// === Module 1243: UserSettingsProtoStore ===
+// === Module 1232: UserSettingsProtoStore ===
 
-// Module 1243 (UserSettingsProtoStore)
+// Module 1232 (UserSettingsProtoStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import timestamp from "timestamp" /* 1238 */;
-import frecency_user_settings from "frecency_user_settings" /* 1244 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
-import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1247 */;
-import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1248 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1094 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import timestamp from "timestamp" /* 1227 */;
+import frecency_user_settings from "frecency_user_settings" /* 1233 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1234 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1236 */;
+import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1237 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1082 */;
 import size from "module_2" /* 2 */;
 
 function handleConnectionClosedOrResumed() {
@@ -163,7 +163,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
       if (guildIds.id != null) {
         value = iter.value;
       }
-      value3 = undefined;
+      let value3;
       if (guildIds.color != null) {
         value3 = iter2.value;
       }
@@ -174,7 +174,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
         NumberResult = Number(value);
       }
       obj.folderId = NumberResult;
-      value4 = undefined;
+      let value4;
       if (guildIds.name != null) {
         value4 = iter3.value;
       }

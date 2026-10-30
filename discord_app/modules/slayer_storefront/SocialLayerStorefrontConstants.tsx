@@ -1,7 +1,7 @@
-// === Module 7393: SocialLayerStorefrontConstants ===
+// === Module 7401: SocialLayerStorefrontConstants ===
 
-// Module 7393 (SocialLayerStorefrontConstants)
-import UserStoreConstants from "UserStoreConstants" /* 1401 */;
+// Module 7401 (SocialLayerStorefrontConstants)
+import UserStoreConstants from "UserStoreConstants" /* 1396 */;
 import size from "module_2" /* 2 */;
 
 const Environments = UserStoreConstants.Environments;

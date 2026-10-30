@@ -1,78 +1,18 @@
-// === Module 10181: useBackspaceHandler ===
+// === Module 10206: useBackspaceHandler ===
 
-// Module 10181 (useBackspaceHandler)
+// Module 10206 (useBackspaceHandler)
 import noop from "module_19" /* 19 */;
 
-const require = fn;
-const re3 = /((\ud83c[\udde6-\uddff]){2}|([#*0-9]\u20e3)|(\u00a9|\u00ae|[\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])((\ud83c[\udffb-\udfff])?(\ud83e[\uddb0-\uddb3])?(\ufe0f?\u200d([\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])\ufe0f?)?)*)/g;
-const ReactCompilerGating = fn(558);
+const re1 = /((\ud83c[\udde6-\uddff]){2}|([#*0-9]\u20e3)|(\u00a9|\u00ae|[\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])((\ud83c[\udffb-\udfff])?(\ud83e[\uddb0-\uddb3])?(\ufe0f?\u200d([\u2000-\u3300]|[\ud83c-\ud83e][\ud000-\udfff])\ufe0f?)?)*)/g;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/useBackspaceHandler.tsx");
 
-export const useBackspaceHandler = ReactCompilerGating.isReactCompilerEnabled() ? (function useBackspaceHandler(selection) {
-  const cResult = selection(draftContent[2]).c(4);
-  selection = selection.selection;
-  draftContent = selection.draftContent;
-  const handleTextChange = selection.handleTextChange;
-  if (cResult[0] === draftContent) {
-    if (cResult[1] === handleTextChange) {
-      if (cResult[2] === selection) {
-        let tmp2 = cResult[3];
-      }
-      return tmp2;
-    }
-  }
-  const fn = function t() {
-    let num2;
-    ({ start, end } = selection);
-    if (0 !== start) {
-      let num = 1;
-      if (null != end) {
-        num = 1;
-        if (start !== end) {
-          const substr = draftContent.substring(0, start);
-          handleTextChange(substr + draftContent.substring(end));
-        }
-      }
-      while (true) {
-        if (start >= num) {
-          if (re3.test(draftContent.substring(start - num, start))) {
-            let sum = num + 1;
-            num2 = num;
-            if (start < sum) {
-              break;
-            } else {
-              let sum1 = sum;
-              num2 = num;
-              if (!re3.test(draftContent.substring(start - num - 1, start))) {
-                break;
-              } else {
-                num = sum1;
-                num2 = 1;
-                if (sum1 > 8) {
-                  break;
-                }
-              }
-            }
-          }
-        }
-        sum1 = num + 1;
-      }
-      const substr1 = draftContent.substring(0, start - num2);
-      handleTextChange(substr1 + draftContent.substring(start));
-    }
-  };
-  cResult[0] = draftContent;
-  cResult[1] = handleTextChange;
-  cResult[2] = selection;
-  cResult[3] = fn;
-  tmp2 = fn;
-}) : (function useBackspaceHandler(selection) {
+export function useBackspaceHandler(selection) {
   selection = selection.selection;
   const draftContent = selection.draftContent;
   const handleTextChange = selection.handleTextChange;
   const items = [selection, draftContent, handleTextChange];
-  return handleTextChange.useCallback(() => {
+  return selection.useCallback(() => {
     let num2;
     ({ start, end } = selection);
     if (0 !== start) {
@@ -86,7 +26,7 @@ export const useBackspaceHandler = ReactCompilerGating.isReactCompilerEnabled() 
       }
       while (true) {
         if (start >= num) {
-          if (re3.test(draftContent.substring(start - num, start))) {
+          if (re1.test(draftContent.substring(start - num, start))) {
             let sum = num + 1;
             num2 = num;
             if (start < sum) {
@@ -94,7 +34,7 @@ export const useBackspaceHandler = ReactCompilerGating.isReactCompilerEnabled() 
             } else {
               let sum1 = sum;
               num2 = num;
-              if (!re3.test(draftContent.substring(start - num - 1, start))) {
+              if (!re1.test(draftContent.substring(start - num - 1, start))) {
                 break;
               } else {
                 num = sum1;
@@ -112,4 +52,4 @@ export const useBackspaceHandler = ReactCompilerGating.isReactCompilerEnabled() 
       handleTextChange(substr1 + draftContent.substring(start));
     }
   }, items);
-});
+}

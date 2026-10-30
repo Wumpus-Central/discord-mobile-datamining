@@ -1,11 +1,11 @@
-// === Module 7835: ConsoleQuestUIStore ===
+// === Module 7840: ConsoleQuestUIStore ===
 
-// Module 7835 (ConsoleQuestUIStore)
-import module_570 from "module_570" /* 570 */;
+// Module 7840 (ConsoleQuestUIStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = [];
-let obj = module_570.create((arg0, arg1) => {
+let obj = module_560.create((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   let obj = {

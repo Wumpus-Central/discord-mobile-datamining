@@ -1,10 +1,10 @@
-// === Module 8433: GuildDiscoverySystemMessage ===
+// === Module 8467: GuildDiscoverySystemMessage ===
 
-// Module 8433 (GuildDiscoverySystemMessage)
-import util from "util" /* 1125 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 8467 (GuildDiscoverySystemMessage)
+import util from "util" /* 1114 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8414 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 require = fn;
 const size = fn(2);
@@ -25,7 +25,7 @@ export function createGuildDiscoveryDisqualifiedSystemMessage(message) {
     }
     guild_id = guild_id1;
   }
-  guild = GuildStore.getGuild(guild_id);
+  const guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;
@@ -66,7 +66,7 @@ export function createGuildDiscoveryGracePeriodInitialWarningSystemMessage(messa
     }
     guild_id = guild_id1;
   }
-  guild = GuildStore.getGuild(guild_id);
+  const guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;
@@ -100,7 +100,7 @@ export function createGuildDiscoveryGracePeriodFinalWarningSystemMessage(message
     }
     guild_id = guild_id1;
   }
-  guild = GuildStore.getGuild(guild_id);
+  const guild = GuildStore.getGuild(guild_id);
   let name;
   if (guild != null) {
     name = guild.name;

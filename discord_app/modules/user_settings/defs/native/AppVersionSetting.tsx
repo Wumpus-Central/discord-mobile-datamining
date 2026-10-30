@@ -1,20 +1,20 @@
-// === Module 17426: AppVersionSetting ===
+// === Module 17480: AppVersionSetting ===
 
-// Module 17426 (AppVersionSetting)
-import util from "util" /* 1125 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 17427 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
+// Module 17480 (AppVersionSetting)
+import util from "util" /* 1114 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 17481 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1375 */;
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11302);
+const SettingBuilders = fn(11505);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10639).ClydeIcon,
+  IconComponent: fn(10665).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -28,7 +28,7 @@ let obj = {
     }
     return combined;
   },
-  usePredicate: fn(4833).DeveloperMode.useSetting
+  usePredicate: fn(4834).DeveloperMode.useSetting
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
@@ -39,7 +39,7 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10639).ClydeIcon,
+  IconComponent: fn(10665).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -53,5 +53,5 @@ export default SettingBuilders.createStatic({
     }
     return combined;
   },
-  usePredicate: fn(4833).DeveloperMode.useSetting
+  usePredicate: fn(4834).DeveloperMode.useSetting
 });

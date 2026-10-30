@@ -1,47 +1,15 @@
-// === Module 9782: openChannelSecondaryViewChat ===
+// === Module 9808: openChannelSecondaryViewChat ===
 
-// Module 9782 (openChannelSecondaryViewChat)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import RootNavigationRef from "RootNavigationRef" /* 5188 */;
-import MessageManagerDefault from "MessageManager" /* 9783 */;
+// Module 9808 (openChannelSecondaryViewChat)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import RootNavigationRef from "RootNavigationRef" /* 5194 */;
+import MessageManagerDefault from "MessageManager" /* 9809 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ME = fn(1084).ME;
-const ReactCompilerGating = fn(558);
-function getChannelSecondaryViewChatIndex(id) {
-  _require = id;
-  const rootNavigationRef = require("RootNavigationRef").getRootNavigationRef();
-  let num = -1;
-  if (null != rootNavigationRef) {
-    num = -1;
-    if (rootNavigationRef.isReady()) {
-      const routes = rootNavigationRef.getRootState().routes;
-      num = routes.findIndex((item) => {
-        const result = handleFrameDeepLinkQueued(dependencyMap[3]).coerceChannelSecondaryViewChatRoute(item);
-        let channelId;
-        if (result != null) {
-          channelId = result.params.channelId;
-        }
-        return channelId === closure_0;
-      });
-    }
-  }
-  return num;
-}
-function presentChannelSecondaryViewChat(guildId, channelId) {
-  _require = guildId;
-  closure_1 = channelId;
-  const result = require("RootNavigationRef").runWhenRootNavigationReady(() => {
-    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
-    if (rootNavigationRef != null) {
-      const obj2 = { guildId, channelId };
-      rootNavigationRef.navigate("channel-secondary-view-chat", obj2, { pop: true });
-    }
-  });
-}
+const ME = fn(1072).ME;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_channels/native/openChannelSecondaryViewChat.tsx");
 
@@ -63,77 +31,48 @@ export default function openChannelSecondaryViewChat(guildId, channelId) {
   });
   const obj3 = require("RootNavigationRef");
 };
-export { getChannelSecondaryViewChatIndex };
-export { presentChannelSecondaryViewChat };
-export const useDismissChannelSecondaryViewChatOnFrameDeepLink = ReactCompilerGating.isReactCompilerEnabled() ? (function useDismissChannelSecondaryViewChatOnFrameDeepLink(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(3);
-  if (cResult[0] !== arg0) {
-    const fn = function o() {
-      if (null != handleFrameDeepLinkQueued) {
-        handleFrameDeepLinkQueued = function handleFrameDeepLinkQueued(channelId) {
-          if (channelId.channelId === handleFrameDeepLinkQueued) {
-            const rootNavigationRef = handleFrameDeepLinkQueued(5188).getRootNavigationRef();
-            handleFrameDeepLinkQueued = tmp;
-            const obj2 = handleFrameDeepLinkQueued(5188);
-            const tmp6 = handleFrameDeepLinkQueued;
-            const rootNavigationRef1 = handleFrameDeepLinkQueued(5188).getRootNavigationRef();
-            let num = -1;
-            if (null != rootNavigationRef1) {
-              num = -1;
-              if (rootNavigationRef1.isReady()) {
-                const routes = rootNavigationRef1.getRootState().routes;
-                num = routes.findIndex((item) => {
-                  const result = handleFrameDeepLinkQueued(dependencyMap[3]).coerceChannelSecondaryViewChatRoute(item);
-                  let channelId;
-                  if (result != null) {
-                    channelId = result.params.channelId;
-                  }
-                  return channelId === closure_0;
-                });
-              }
-            }
-            if (null != rootNavigationRef) {
-              if (-1 !== num) {
-                const rootState = rootNavigationRef.getRootState();
-                const obj = {};
-                const StackActions = tmp6(1504).StackActions;
-                const merged = Object.assign(StackActions.pop(rootState.routes.length - num));
-                obj.target = rootState.key;
-                rootNavigationRef.dispatch(obj);
-              }
-            }
-            const obj4 = handleFrameDeepLinkQueued(5188);
-          }
-        };
-        const subscription = DispatcherDefault.subscribe("FRAME_DEEP_LINK_QUEUED", handleFrameDeepLinkQueued);
-        return () => {
-          DispatcherDefault.unsubscribe("FRAME_DEEP_LINK_QUEUED", handleFrameDeepLinkQueued);
-        };
-      }
-    };
-    const items = [arg0];
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    cResult[2] = items;
-    let tmp3 = items;
-    let tmp2 = fn;
-  } else {
-    tmp2 = cResult[1];
-    tmp3 = cResult[2];
+export function getChannelSecondaryViewChatIndex(channelId) {
+  _require = channelId;
+  const rootNavigationRef = require("RootNavigationRef").getRootNavigationRef();
+  let num = -1;
+  if (null != rootNavigationRef) {
+    num = -1;
+    if (rootNavigationRef.isReady()) {
+      const routes = rootNavigationRef.getRootState().routes;
+      num = routes.findIndex((item) => {
+        const result = handleFrameDeepLinkQueued(dependencyMap[3]).coerceChannelSecondaryViewChatRoute(item);
+        channelId = undefined;
+        if (result != null) {
+          channelId = result.params.channelId;
+        }
+        return channelId === closure_0;
+      });
+    }
   }
-  const effect = noop.useEffect(tmp2, tmp3);
-}) : (function useDismissChannelSecondaryViewChatOnFrameDeepLink(arg0) {
-  closure_0 = arg0;
-  const items = [arg0];
+  return num;
+}
+export function presentChannelSecondaryViewChat(guildId, channelId) {
+  _require = guildId;
+  closure_1 = channelId;
+  const result = require("RootNavigationRef").runWhenRootNavigationReady(() => {
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+    if (rootNavigationRef != null) {
+      const obj2 = { guildId, channelId };
+      rootNavigationRef.navigate("channel-secondary-view-chat", obj2, { pop: true });
+    }
+  });
+}
+export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
+  closure_0 = channelId;
+  const items = [channelId];
   const effect = noop.useEffect(() => {
     function handleFrameDeepLinkQueued(channelId) {
       if (channelId.channelId === handleFrameDeepLinkQueued) {
-        const rootNavigationRef = handleFrameDeepLinkQueued(5188).getRootNavigationRef();
+        const rootNavigationRef = handleFrameDeepLinkQueued(5194).getRootNavigationRef();
         handleFrameDeepLinkQueued = tmp;
-        const obj2 = handleFrameDeepLinkQueued(5188);
+        const obj2 = handleFrameDeepLinkQueued(5194);
         const tmp6 = handleFrameDeepLinkQueued;
-        const rootNavigationRef1 = handleFrameDeepLinkQueued(5188).getRootNavigationRef();
+        const rootNavigationRef1 = handleFrameDeepLinkQueued(5194).getRootNavigationRef();
         let num = -1;
         if (null != rootNavigationRef1) {
           num = -1;
@@ -141,7 +80,7 @@ export const useDismissChannelSecondaryViewChatOnFrameDeepLink = ReactCompilerGa
             const routes = rootNavigationRef1.getRootState().routes;
             num = routes.findIndex((item) => {
               const result = handleFrameDeepLinkQueued(dependencyMap[3]).coerceChannelSecondaryViewChatRoute(item);
-              let channelId;
+              channelId = undefined;
               if (result != null) {
                 channelId = result.params.channelId;
               }
@@ -153,13 +92,13 @@ export const useDismissChannelSecondaryViewChatOnFrameDeepLink = ReactCompilerGa
           if (-1 !== num) {
             const rootState = rootNavigationRef.getRootState();
             const obj = {};
-            const StackActions = tmp6(1504).StackActions;
+            const StackActions = tmp6(1499).StackActions;
             const merged = Object.assign(StackActions.pop(rootState.routes.length - num));
             obj.target = rootState.key;
             rootNavigationRef.dispatch(obj);
           }
         }
-        const obj4 = handleFrameDeepLinkQueued(5188);
+        const obj4 = handleFrameDeepLinkQueued(5194);
       }
     }
     if (null != handleFrameDeepLinkQueued) {
@@ -169,4 +108,4 @@ export const useDismissChannelSecondaryViewChatOnFrameDeepLink = ReactCompilerGa
       };
     }
   }, items);
-});
+}

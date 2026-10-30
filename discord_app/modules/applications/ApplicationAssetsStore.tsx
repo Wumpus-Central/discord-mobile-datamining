@@ -1,9 +1,9 @@
-// === Module 8680: ApplicationAssetsStore ===
+// === Module 8714: ApplicationAssetsStore ===
 
-// Module 8680 (ApplicationAssetsStore)
+// Module 8714 (ApplicationAssetsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 function handleFetchEmbeddedActivityShelfSuccess(assets) {
   assets = assets.assets;

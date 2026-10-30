@@ -1,21 +1,21 @@
-// === Module 1501: KeyboardUIStore ===
+// === Module 1496: KeyboardUIStore ===
 
-// Module 1501 (KeyboardUIStore)
+// Module 1496 (KeyboardUIStore)
 import Storage5 from "Storage" /* 510 */;
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1240 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1502 */;
-import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1627 */;
-import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import ChatInputFocused from "ChatInputFocused" /* 1630 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1631 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1643 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1645 */;
-import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1893 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1381 */;
-import module_570 from "module_570" /* 570 */;
-import SafeAreaStore from "SafeAreaStore" /* 1632 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1495 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1497 */;
+import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1622 */;
+import KeyboardTypes from "KeyboardTypes" /* 1624 */;
+import ChatInputFocused from "ChatInputFocused" /* 1625 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1626 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1638 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1640 */;
+import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1888 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1376 */;
+import module_560 from "module_560" /* 560 */;
+import SafeAreaStore from "SafeAreaStore" /* 1627 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -219,7 +219,7 @@ let str2 = "keyboardWillHide";
 if (PlatformUtils.isAndroid()) {
   str2 = "keyboardDidHide";
 }
-let keyboardContexts = module_570.create(() => {
+let keyboardContexts = module_560.create(() => {
   const obj = { byAppEntry: { main: createInitialEntryState("main"), share: createInitialEntryState("share") } };
   return obj;
 });

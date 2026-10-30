@@ -1,9 +1,9 @@
-// === Module 7723: CollectiblesPurchaseStore ===
+// === Module 7728: CollectiblesPurchaseStore ===
 
-// Module 7723 (CollectiblesPurchaseStore)
+// Module 7728 (CollectiblesPurchaseStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 require = fn;
 let map = new Map();

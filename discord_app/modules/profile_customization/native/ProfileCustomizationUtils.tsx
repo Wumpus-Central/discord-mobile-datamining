@@ -1,76 +1,14 @@
-// === Module 8778: profile_customization/ProfileCustomizationUtils ===
+// === Module 8812: profile_customization/ProfileCustomizationUtils ===
 
-// Module 8778 (profile_customization/ProfileCustomizationUtils)
-import c from "c" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import VideoBackground from "VideoBackground" /* 8779 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 8812 (profile_customization/ProfileCustomizationUtils)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import AvatarUtils from "AvatarUtils" /* 1410 */;
+import VideoBackground from "VideoBackground" /* 8813 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
-export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileBannerBackgroundColor(arg0) {
-  const cResult = c.c(10);
-  ({ user, guildId, pendingAvatarSrc, displayProfile } = arg0);
-  let tmp4 = null;
-  if (null != user) {
-    if (null == pendingAvatarSrc) {
-      if (cResult[0] === guildId) {
-      }
-      const avatarURL = user.getAvatarURL(guildId, 80);
-      cResult[0] = guildId;
-      cResult[1] = user;
-      cResult[2] = avatarURL;
-    } else {
-      if (cResult[3] === pendingAvatarSrc) {
-        if (cResult[4] === user) {
-          let tmp5 = cResult[5];
-        }
-        tmp4 = tmp5;
-      }
-      let userAvatarURL = pendingAvatarSrc;
-      if (pendingAvatarSrc == null) {
-        const obj2 = {};
-        const merged = Object.assign(user);
-        obj2.avatar = null;
-        userAvatarURL = AvatarUtils.getUserAvatarURL(obj2);
-        const tmpResult = AvatarUtils;
-      }
-      cResult[3] = pendingAvatarSrc;
-      cResult[4] = user;
-      cResult[5] = userAvatarURL;
-      tmp5 = userAvatarURL;
-    }
-  }
-  if (cResult[6] !== tmp4) {
-    const memoizedImageSourceResult = VideoBackground.memoizedImageSource(tmp4);
-    cResult[6] = tmp4;
-    cResult[7] = memoizedImageSourceResult;
-    let tmp13 = memoizedImageSourceResult;
-    const tmpResult4 = VideoBackground;
-  } else {
-    tmp13 = cResult[7];
-  }
-  const dominantColorFromImage = VideoBackground.useDominantColorFromImage(tmp4, tmp13);
-  if (cResult[8] !== dominantColorFromImage) {
-    const rgb2intResult = utils_ColorUtils.rgb2int(dominantColorFromImage);
-    cResult[8] = dominantColorFromImage;
-    cResult[9] = rgb2intResult;
-    let tmp16 = rgb2intResult;
-    const tmpResult6 = utils_ColorUtils;
-  } else {
-    tmp16 = cResult[9];
-  }
-  let primaryColor;
-  if (displayProfile != null) {
-    primaryColor = displayProfile.primaryColor;
-  }
-  if (primaryColor == null) {
-    primaryColor = tmp16;
-  }
-  return primaryColor;
-}) : (function useUserProfileBannerBackgroundColor(arg0) {
+export function useUserProfileBannerBackgroundColor(arg0) {
   ({ user, pendingAvatarSrc, displayProfile } = arg0);
   if (null == user) {
     const memoizedImageSourceResult = VideoBackground.memoizedImageSource(null);
@@ -90,7 +28,7 @@ export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCo
     obj2.avatar = null;
     pendingAvatarSrc = AvatarUtils.getUserAvatarURL(obj2);
   }
-});
+}
 export function getAvatarSource(getAvatarURL, guildId, avatarSrcOverride, stateFromStores) {
   if (null == getAvatarURL) {
     return null;

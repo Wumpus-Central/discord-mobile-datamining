@@ -1,136 +1,19 @@
-// === Module 12389: useConjureIncompleteAppNotice ===
+// === Module 12538: useConjureIncompleteAppNotice ===
 
-// Module 12389 (useConjureIncompleteAppNotice)
+// Module 12538 (useConjureIncompleteAppNotice)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4879 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjureIncompleteAppNotice.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureIncompleteAppNotice(arg0) {
+export default function useConjureIncompleteAppNotice(arg0) {
   _require = arg0;
-  const cResult = require("c").c(11);
-  const tmp4 = guildId(11857)(arg0);
-  guildId = undefined;
-  if (tmp4 != null) {
-    guildId = tmp4.guildId;
-  }
-  if (guildId == null) {
-    guildId = null;
-  }
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== guildId) {
-    const fn = function o() {
-      let tmp2 = null;
-      if (null != guildId) {
-        guild = GuildStore.getGuild(tmp);
-        let name;
-        if (guild != null) {
-          name = guild.name;
-        }
-        if (name == null) {
-          name = null;
-        }
-        tmp2 = name;
-      }
-      return tmp2;
-    };
-    cResult[1] = guildId;
-    cResult[2] = fn;
-    let tmp8 = fn;
-  } else {
-    tmp8 = cResult[2];
-  }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp8);
-  const tmp10 = _slicedToArray(noop.useState(null), 2);
-  dependencyMap = tmp10[1];
-  let missingSurface;
-  if (tmp4 != null) {
-    missingSurface = tmp4.missingSurface;
-  }
-  if (missingSurface == null) {
-    missingSurface = null;
-  }
-  let tmp12 = null;
-  if (null != missingSurface) {
-    tmp12 = null;
-    if (tmp10[0] !== arg0) {
-      if (cResult[3] === stateFromStores) {
-        if (cResult[4] === missingSurface) {
-          let tmp13 = cResult[5];
-        }
-        if (cResult[6] !== arg0) {
-          class I {
-            constructor() {
-              return closure_2(closure_0);
-            }
-          }
-          cResult[6] = arg0;
-          cResult[7] = I;
-        } else {
-          class I {
-            constructor() {
-              return closure_2(closure_0);
-            }
-          }
-        }
-        if (cResult[8] === tmp13) {
-          class I {
-            constructor() {
-              return closure_2(closure_0);
-            }
-          }
-        }
-        const obj2 = { message: tmp13, onDismiss: I };
-        cResult[8] = tmp13;
-        cResult[9] = I;
-        cResult[10] = obj2;
-      }
-      const intl = tmp(1125).intl;
-      if ("channel" === missingSurface) {
-        class I {
-          constructor() {
-            return closure_2(closure_0);
-          }
-        }
-      } else {
-        class I {
-          constructor() {
-            return closure_2(closure_0);
-          }
-        }
-      }
-      if (stateFromStores == null) {
-        class I {
-          constructor() {
-            return closure_2(closure_0);
-          }
-        }
-      }
-      const obj3 = { server: stateFromStores };
-      const formatResult = intl.format(tmp14, obj3);
-      cResult[3] = stateFromStores;
-      cResult[4] = missingSurface;
-      cResult[5] = formatResult;
-      tmp13 = formatResult;
-    }
-  }
-  return tmp12;
-}) : (function useConjureIncompleteAppNotice(arg0) {
-  _require = arg0;
-  const tmp3 = guildId(11857)(arg0);
+  const tmp3 = guildId(12400)(arg0);
   guildId = undefined;
   if (tmp3 != null) {
     guildId = tmp3.guildId;
@@ -142,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != guildId) {
-      guild = GuildStore.getGuild(tmp);
+      const guild = GuildStore.getGuild(tmp);
       let name;
       if (guild != null) {
         name = guild.name;
@@ -169,9 +52,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if (tmp7[0] !== arg0) {
       const intl = require("util").intl;
       if ("channel" === missingSurface) {
-        let Lm7IRC = tmp(3864)["1cm4fj"];
+        let Lm7IRC = tmp(3865)["1cm4fj"];
       } else {
-        Lm7IRC = tmp(3864).Lm7IRC;
+        Lm7IRC = tmp(3865).Lm7IRC;
       }
       let str2 = stateFromStores;
       if (stateFromStores == null) {
@@ -187,4 +70,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     }
   }
   return tmp9;
-});
+};

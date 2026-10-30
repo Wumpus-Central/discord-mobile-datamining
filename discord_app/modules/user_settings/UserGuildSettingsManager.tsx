@@ -1,12 +1,12 @@
-// === Module 7272: UserGuildSettingsManager ===
+// === Module 7279: UserGuildSettingsManager ===
 
-// Module 7272 (UserGuildSettingsManager)
-import DurationsDefault from "Durations" /* 1101 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 7279 (UserGuildSettingsManager)
+import DurationsDefault from "Durations" /* 1090 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7273 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7280 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -42,7 +42,7 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -102,7 +102,7 @@ let closure_14 = async function _saveUserGuildSettings(arg0) {
             return obj;
           }
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp13) {
         c3 = tmp;
@@ -135,7 +135,7 @@ let closure_16 = async function _saveUserGuildSettingsBulk() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ function handleUserGuildSettingsFullUpdate() {
   const obj = {};
   const merged = Object.assign(CategoryCollapseStore.getCollapsedCategories());
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: hasOwnProperty, FAVORITES: metroRequire, ME: closure_7 } = Constants);
 let actions = {};
 let closure_9 = 0;

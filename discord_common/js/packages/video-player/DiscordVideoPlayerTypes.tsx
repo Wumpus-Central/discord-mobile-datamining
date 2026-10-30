@@ -1,6 +1,6 @@
-// === Module 7837: DiscordVideoPlayerTypes ===
+// === Module 7842: DiscordVideoPlayerTypes ===
 
-// Module 7837 (DiscordVideoPlayerTypes)
+// Module 7842 (DiscordVideoPlayerTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx");

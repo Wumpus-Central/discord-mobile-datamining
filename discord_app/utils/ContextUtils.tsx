@@ -1,67 +1,38 @@
-// === Module 7598: ContextUtils ===
+// === Module 7606: ContextUtils ===
 
-// Module 7598 (ContextUtils)
+// Module 7606 (ContextUtils)
 import noop from "module_19" /* 19 */;
 
-const require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/ContextUtils.tsx");
 
 export default function createDefinedContext() {
-  let context = noop.createContext(undefined);
-  const tmp4 = context(558).isReactCompilerEnabled() ? (function useContext() {
-    context = noop.useContext(context);
-    if (null == context) {
-      const _Error = Error;
-      const error = new Error("Context was used outside of defined provider.");
-      throw error;
-    } else {
-      return context;
-    }
-  }) : (function useContext() {
-    context = noop.useContext(context);
-    if (null == context) {
-      const _Error = Error;
-      const error = new Error("Context was used outside of defined provider.");
-      throw error;
-    } else {
-      return context;
-    }
-  });
-  dependencyMap = tmp4;
-  const obj = context(558);
+  context = context.createContext(undefined);
   const items = [
     context,
-    tmp4,
-    context(558).isReactCompilerEnabled() ? (function useForwardedContext() {
-      const cResult = context(576).c(2);
-      const tmp2 = dependencyMap();
-      value = tmp2;
-      if (cResult[0] !== tmp2) {
-        class ForwardedContext {
-          constructor(arg0) {
-            obj = { value: closure_0, children: arg0.children };
-            return jsx(closure_0.Provider, obj);
-          }
-        }
-        cResult[0] = tmp2;
-        cResult[1] = ForwardedContext;
+    function useContext() {
+      context = noop.useContext(context);
+      if (null == context) {
+        const _Error = Error;
+        const error = new Error("Context was used outside of defined provider.");
+        throw error;
       } else {
-        class ForwardedContext {
-          constructor(arg0) {
-            obj = { value: closure_0, children: arg0.children };
-            return jsx(closure_0.Provider, obj);
-          }
-        }
+        return context;
       }
-      return ForwardedContext;
-    }) : (function useForwardedContext() {
-      value = dependencyMap();
-      return function ForwardedContext(children) {
-        return <context.Provider value={value}>{children.children}</context.Provider>;
-      };
-    })
+    },
+    function useForwardedContext() {
+      context = context.useContext(context);
+      if (null == context) {
+        const _Error = Error;
+        const error = new Error("Context was used outside of defined provider.");
+        throw error;
+      } else {
+        return function ForwardedContext(children) {
+          return <context.Provider value={context}>{children.children}</context.Provider>;
+        };
+      }
+    }
   ];
   return items;
 };

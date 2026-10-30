@@ -1,16 +1,16 @@
-// === Module 10891: activityLaunchErrorUtils ===
+// === Module 10914: activityLaunchErrorUtils ===
 
-// Module 10891 (activityLaunchErrorUtils)
-import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6057 */;
-import InteractionUtils from "InteractionUtils" /* 8658 */;
-import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 10890 */;
-import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10893 */;
+// Module 10914 (activityLaunchErrorUtils)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 6064 */;
+import InteractionUtils from "InteractionUtils" /* 8692 */;
+import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 10913 */;
+import fetchDeveloperApplications from "fetchDeveloperApplications" /* 10916 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 10892 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5663 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 10915 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5669 */;
 
 require = fn;
 let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
@@ -24,7 +24,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -162,8 +162,8 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(5663).DevShelfFetchState;
-const AbortCodes = fn(1084).AbortCodes;
+const DevShelfFetchState = fn(5669).DevShelfFetchState;
+const AbortCodes = fn(1072).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = { ClientError: 0, [0]: "ClientError", CallbackError: 1, [1]: "CallbackError", ApiError: 2, [2]: "ApiError" };
 const size = fn(2);

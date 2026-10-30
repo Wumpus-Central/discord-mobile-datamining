@@ -1,45 +1,45 @@
-// === Module 19547: GuildSettingsAutomodRuleStore ===
+// === Module 19610: GuildSettingsAutomodRuleStore ===
 
-// Module 19547 (GuildSettingsAutomodRuleStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import _mod4920 from "module_4920" /* 4920 */;
+// Module 19610 (GuildSettingsAutomodRuleStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
+import _mod4924 from "module_4924" /* 4924 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const AbortCodes = fn(1084).AbortCodes;
+const AbortCodes = fn(1072).AbortCodes;
 let closure_5 = Object.freeze({ editingRule: null, hasChanges: false, isLoading: false, errorMessage: null });
-const identity = fn(1266);
+const identity = fn(1255);
 let closure_6 = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   let obj = {
     editingRule: null,
     hasChanges: false,
-    setEditingRule(guildId) {
+    setEditingRule(id) {
       const editingRule = obj2().editingRule;
-      const hasChanges = null != guildId && null != editingRule && guildId.id === editingRule.id;
-      const cloneDeepResult = closure_1(12).cloneDeep(guildId);
+      const hasChanges = null != id && null != editingRule && id.id === editingRule.id;
+      const cloneDeepResult = closure_1(12).cloneDeep(id);
       obj2 = cloneDeepResult;
       if (null != cloneDeepResult) {
         obj2 = {};
         const merged = Object.assign(cloneDeepResult);
         const actions = cloneDeepResult.actions;
-        obj2.actions = actions.filter(hasChanges(1385).isNotNullish);
+        obj2.actions = actions.filter(hasChanges(1380).isNotNullish);
       }
       const obj = closure_1(12);
-      hasChanges(1271).batchUpdates(() => hasChanges({ editingRule: obj2, hasChanges, errorMessage: null }));
-      const obj3 = hasChanges(1271);
+      hasChanges(1260).batchUpdates(() => hasChanges({ editingRule: obj2, hasChanges, errorMessage: null }));
+      const obj3 = hasChanges(1260);
     },
-    createNewEditingRule(guildId, c0, arg2) {
+    createNewEditingRule(guildId, triggerType, arg2) {
       let obj = arg2;
       const obj2 = {};
-      const merged = Object.assign(obj2(19548).createDefaultRule(guildId, c0));
+      const merged = Object.assign(obj2(19611).createDefaultRule(guildId, triggerType));
       if (arg2 == null) {
         obj = {};
       }
       const merged1 = Object.assign(obj);
-      const obj3 = obj2(19548);
-      obj2(1271).batchUpdates(() => obj2({ editingRule: obj2, hasChanges: false }));
+      const obj3 = obj2(19611);
+      obj2(1260).batchUpdates(() => obj2({ editingRule: obj2, hasChanges: false }));
       return obj2;
     },
     isLoading: false,
@@ -64,7 +64,7 @@ let closure_6 = identity.createWithEqualityFn((arg0, arg1) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -83,7 +83,7 @@ let closure_6 = identity.createWithEqualityFn((arg0, arg1) => {
             closure_133_0 = undefined;
             closure_133_1 = undefined;
             if (null == closure_0) {
-              closure_0(1271).batchUpdates(() => {
+              closure_0(1260).batchUpdates(() => {
                 const merged = Object.assign(closure_5);
                 return closure_1_0({});
               });
@@ -92,81 +92,81 @@ let closure_6 = identity.createWithEqualityFn((arg0, arg1) => {
             } else {
               c8 = 1;
               if (obj27.isRuleKeywordFilter(closure_0)) {
-                const obj8 = closure_0(19553);
+                const obj8 = closure_0(19616);
                 const keywordFilter = closure_0.triggerMetadata.keywordFilter;
                 dependencyMap = keywordFilter;
                 if (keywordFilter == null) {
                   dependencyMap = [];
                 }
-                closure_0.triggerMetadata.keywordFilter = obj8.sortKeywords(closure_0(19553).dedupeKeywords(dependencyMap));
-                const obj9 = closure_0(19553);
-                const obj10 = closure_0(19553);
+                closure_0.triggerMetadata.keywordFilter = obj8.sortKeywords(closure_0(19616).dedupeKeywords(dependencyMap));
+                const obj9 = closure_0(19616);
+                const obj10 = closure_0(19616);
                 const allowList = closure_0.triggerMetadata.allowList;
                 closure_3 = allowList;
                 if (allowList == null) {
                   closure_3 = [];
                 }
-                closure_0.triggerMetadata.allowList = obj10.sortKeywords(closure_0(19553).dedupeKeywords(closure_3));
-                const obj11 = closure_0(19553);
+                closure_0.triggerMetadata.allowList = obj10.sortKeywords(closure_0(19616).dedupeKeywords(closure_3));
+                const obj11 = closure_0(19616);
               }
-              obj27 = closure_0(19548);
+              obj27 = closure_0(19611);
               if (obj12.isRuleDefaultKeywordListFilter(closure_0)) {
-                const obj13 = closure_0(19553);
+                const obj13 = closure_0(19616);
                 const allowList2 = closure_0.triggerMetadata.allowList;
                 closure_4 = allowList2;
                 if (allowList2 == null) {
                   closure_4 = [];
                 }
-                closure_0.triggerMetadata.allowList = obj13.sortKeywords(closure_0(19553).dedupeKeywords(closure_4));
-                const obj14 = closure_0(19553);
+                closure_0.triggerMetadata.allowList = obj13.sortKeywords(closure_0(19616).dedupeKeywords(closure_4));
+                const obj14 = closure_0(19616);
               }
-              obj12 = closure_0(19548);
-              const result = closure_0(19549).validateRuleByTriggerConfigOrThrow(closure_0, tmp98);
-              const obj15 = closure_0(19549);
-              const result1 = closure_0(19548).validateRuleBeforeSaveOrThrow(closure_0);
+              obj12 = closure_0(19611);
+              const result = closure_0(19612).validateRuleByTriggerConfigOrThrow(closure_0, tmp98);
+              const obj15 = closure_0(19612);
+              const result1 = closure_0(19611).validateRuleBeforeSaveOrThrow(closure_0);
               c8 = 2;
-              const obj16 = closure_0(19548);
-              closure_0(1271).batchUpdates(() => {
+              const obj16 = closure_0(19611);
+              closure_0(1260).batchUpdates(() => {
                 closure_1_0({ isLoading: true });
               });
               closure_133_0 = null;
-              const obj17 = closure_0(1271);
+              const obj17 = closure_0(1260);
               if (obj18.isBackendPersistedRule(closure_0)) {
                 if (!obj19.isDefaultRuleId(closure_0.id)) {
                   c9 = 4;
                   c10 = 1;
-                  const obj21 = { value: closure_0(13096).updateAutomodRule(closure_0), done: false };
+                  const obj21 = { value: closure_0(13247).updateAutomodRule(closure_0), done: false };
                   return obj21;
                 }
-                obj19 = closure_0(19546);
+                obj19 = closure_0(19609);
               }
-              obj18 = closure_0(19548);
+              obj18 = closure_0(19611);
               c9 = 3;
               c10 = 1;
-              const obj23 = { value: closure_0(13096).createAutomodRule(closure_0), done: false };
+              const obj23 = { value: closure_0(13247).createAutomodRule(closure_0), done: false };
               return obj23;
             }
           }
         } else if (1 === tmp9) {
           c8 = 0;
           closure_133_2 = closure_7;
-          if (closure_133_2 instanceof closure_0(8322).InvalidKeywordError) {
-            closure_0(1271).batchUpdates(() => {
+          if (closure_133_2 instanceof closure_0(8379).InvalidKeywordError) {
+            closure_0(1260).batchUpdates(() => {
               const obj = { errorMessage: null, isLoading: false };
               const intl = closure_0(message[2]).intl;
               obj.errorMessage = intl.string(closure_0(message[2]).t["4Dxaus"]);
               closure_1_0(obj);
             });
             c10 = 3;
-            const obj7 = closure_0(1271);
+            const obj7 = closure_0(1260);
           } else {
-            const tmp41 = closure_133_2 instanceof closure_0(8322).InvalidRegexPatternError;
+            const tmp41 = closure_133_2 instanceof closure_0(8379).InvalidRegexPatternError;
             if (!tmp41) {
               obj6.batchUpdates(() => {
                 closure_0({ errorMessage: message.message, isLoading: false });
               });
             }
-            obj6 = closure_0(1271);
+            obj6 = closure_0(1260);
           }
           tmp46(() => {
             const obj = { errorMessage: null, isLoading: false };
@@ -177,9 +177,9 @@ let closure_6 = identity.createWithEqualityFn((arg0, arg1) => {
         } else if (2 === tmp9) {
           c8 = 0;
           closure_133_3 = closure_7;
-          const aPIError = new closure_0(6433).APIError(closure_133_3);
+          const aPIError = new closure_0(6440).APIError(closure_133_3);
           closure_133_1 = aPIError;
-          closure_0(1271).batchUpdates(() => {
+          closure_0(1260).batchUpdates(() => {
             if (code.code === constants.INVALID_FORM_BODY) {
               const errors = code.errors;
               let regex_patterns;
@@ -221,7 +221,7 @@ let closure_6 = identity.createWithEqualityFn((arg0, arg1) => {
             return obj;
           }
           closure_133_0 = value;
-          closure_0(1271).batchUpdates(() => {
+          closure_0(1260).batchUpdates(() => {
             const merged = Object.assign(closure_5);
             return closure_1_0({});
           });
@@ -263,14 +263,14 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/GuildSettingsAutomodRuleStore.tsx");
 
 export function useAutomodEditingRuleActions() {
-  return closure_6((hasChanges) => ({ hasChanges: hasChanges.hasChanges, editingRule: hasChanges.editingRule, isLoading: hasChanges.isLoading, errorMessage: hasChanges.errorMessage, saveRule: hasChanges.saveRule, saveEditingRule: hasChanges.saveEditingRule, cancelEditingRule: hasChanges.cancelEditingRule }), _mod4920.shallow);
+  return closure_6((hasChanges) => ({ hasChanges: hasChanges.hasChanges, editingRule: hasChanges.editingRule, isLoading: hasChanges.isLoading, errorMessage: hasChanges.errorMessage, saveRule: hasChanges.saveRule, saveEditingRule: hasChanges.saveEditingRule, cancelEditingRule: hasChanges.cancelEditingRule }), _mod4924.shallow);
 }
 export function useAutomodEditingRuleState() {
-  let tmp = guildId;
-  if (guildId === undefined) {
+  let tmp = id;
+  if (id === undefined) {
     tmp = null;
   }
-  const obj = closure_6((hasChanges) => ({ hasChanges: hasChanges.hasChanges, editingRule: hasChanges.editingRule, setEditingRule: hasChanges.setEditingRule, createNewEditingRule: hasChanges.createNewEditingRule }), _mod4920.shallow);
+  const obj = closure_6((hasChanges) => ({ hasChanges: hasChanges.hasChanges, editingRule: hasChanges.editingRule, setEditingRule: hasChanges.setEditingRule, createNewEditingRule: hasChanges.createNewEditingRule }), _mod4924.shallow);
   if (null != tmp) {
     obj.setEditingRule(tmp);
   }

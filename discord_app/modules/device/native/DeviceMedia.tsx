@@ -1,14 +1,14 @@
-// === Module 10496: DeviceMedia ===
+// === Module 10521: DeviceMedia ===
 
-// Module 10496 (DeviceMedia)
-import Constants from "Constants" /* 1084 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10497 */;
-import module_570 from "module_570" /* 570 */;
+// Module 10521 (DeviceMedia)
+import Constants from "Constants" /* 1072 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10522 */;
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
-let state = module_570.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
+let state = module_560.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
 const result = size.fileFinishedImporting("modules/device/native/DeviceMedia.tsx");
 
 export default {
@@ -92,9 +92,9 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(10497)(obj2);
+          lastAssetIndex(10522)(obj2);
         }
-        obj = assets(1381);
+        obj = assets(1376);
       }
     }
   },
@@ -151,7 +151,7 @@ export default {
           obj2.num_assets = length;
           AnalyticsUtilsDefault.track(constants.MEDIA_PICKER_ASSETS_DEBUG, obj2);
         }
-        batchSize(1271).batchUpdates(() => {
+        batchSize(1260).batchUpdates(() => {
           const obj = { assets, page: 0, lastAssetIndex: batchSize, endCursor: null, hasReachedEnd: null };
           let end_cursor;
           if (assets != null) {
@@ -174,7 +174,7 @@ export default {
           obj.hasReachedEnd = !num;
           state.setState(obj);
         });
-        const obj3 = batchSize(1271);
+        const obj3 = batchSize(1260);
       }
     });
   },

@@ -1,8 +1,8 @@
-// === Module 7063: ChangeEmailActionCreators ===
+// === Module 7071: ChangeEmailActionCreators ===
 
-// Module 7063 (ChangeEmailActionCreators)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6734 */;
+// Module 7071 (ChangeEmailActionCreators)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _confirmEmailChange() {
     return value.body;
   })();
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
 

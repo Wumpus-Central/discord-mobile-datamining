@@ -1,18 +1,18 @@
-// === Module 19943: RequestToStreamManager ===
+// === Module 20006: RequestToStreamManager ===
 
-// Module 19943 (RequestToStreamManager)
+// Module 20006 (RequestToStreamManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import StreamActionCreatorsAll from "StreamActionCreators" /* 7887 */;
-import MobileRequestToStreamExperiment2 from "MobileRequestToStreamExperiment" /* 14795 */;
-import useStreamRequestActivities from "useStreamRequestActivities" /* 14797 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
-import MessageStore from "MessageStore" /* 6049 */;
-import RequestToStreamStore from "RequestToStreamStore" /* 14766 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import StreamActionCreatorsAll from "StreamActionCreators" /* 7893 */;
+import MobileRequestToStreamExperiment2 from "MobileRequestToStreamExperiment" /* 14830 */;
+import useStreamRequestActivities from "useStreamRequestActivities" /* 14832 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6708 */;
+import MessageStore from "MessageStore" /* 6056 */;
+import RequestToStreamStore from "RequestToStreamStore" /* 14801 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
-let closure_7 = fn(14800).STREAM_REQUEST_AUTO_WATCH_MAX_AGE;
-const ActivityActionTypes = fn(1084).ActivityActionTypes;
+let closure_7 = fn(14835).STREAM_REQUEST_AUTO_WATCH_MAX_AGE;
+const ActivityActionTypes = fn(1072).ActivityActionTypes;
 class RequestToStreamManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

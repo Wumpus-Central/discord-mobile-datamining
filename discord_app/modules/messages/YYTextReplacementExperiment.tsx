@@ -1,7 +1,7 @@
-// === Module 19906: YYTextReplacementExperiment ===
+// === Module 19969: YYTextReplacementExperiment ===
 
-// Module 19906 (YYTextReplacementExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 19969 (YYTextReplacementExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-01-yytext-replacement-ios", kind: "user", defaultConfig: { enabled: false }, variations: null };

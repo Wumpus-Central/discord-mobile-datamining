@@ -1,713 +1,28 @@
-// === Module 19643: GuildSettingsModalSecurity ===
+// === Module 19706: GuildSettingsModalSecurity ===
 
-// Module 19643 (GuildSettingsModalSecurity)
-import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9042 */;
+// Module 19706 (GuildSettingsModalSecurity)
+import nativeDefault from "native" /* 575 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9055 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import UserStore from "UserStore" /* 1389 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9043 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import UserStore from "UserStore" /* 1384 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9056 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(4875).isGuildOwnerWithRequiredMfaLevel;
-const Constants = fn(1084);
+let closure_6 = fn(4876).isGuildOwnerWithRequiredMfaLevel;
+const Constants = fn(1072);
 ({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { wrapper: { flexGrow: 1, justifyContent: "space-between", paddingTop: 99 }, center: { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING }, label: { textAlign: "center", marginBottom: 8 }, image: { width: 295, height: 142, marginHorizontal: 35 }, infoWrapper: { marginBottom: 40 }, button: { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 } };
 let closure_15 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsModalSecurity(guildId) {
-  const cResult = guildId(576).c(51);
-  guildId = guildId.guildId;
-  const contentContainerStyle = guildId.contentContainerStyle;
-  const tmp4 = closure_15();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== guildId) {
-    const fn = function p() {
-      return GuildStore.getGuild(guildId);
-    };
-    cResult[1] = guildId;
-    cResult[2] = fn;
-    let tmp7 = fn;
-  } else {
-    tmp7 = cResult[2];
-  }
-  let obj = guildId(576);
-  const stateFromStores = guildId(504).useStateFromStores(first, tmp7);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [GuildSettingsStore];
-    const fn2 = function w() {
-      return props.getProps().mfaLevel;
-    };
-    cResult[3] = items1;
-    cResult[4] = fn2;
-    let tmp10 = fn2;
-    let tmp9 = items1;
-  } else {
-    tmp9 = cResult[3];
-    tmp10 = cResult[4];
-  }
-  const tmpResult = guildId(504);
-  const stateFromStores1 = guildId(504).useStateFromStores(tmp9, tmp10);
-  if (cResult[5] === stateFromStores) {
-    if (cResult[6] === stateFromStores1) {
-      dependencyMap = cResult[7];
-      class B {
-        constructor() {
-          if (null == closure_1) {
-            return;
-          } else {
-            tmp2 = closure_1;
-            tmp3 = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = { guildId: null, level: null };
-            obj1.guildId = tmp.id;
-            tmp4 = closure_2;
-            tmp5 = MFALevels;
-            obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-            obj1 = obj.updateMFALevel(obj1);
-          }
-          return;
-        }
-      }
-    }
-    if (cResult[9] === stateFromStores) {
-      if (cResult[10] === tmp13) {
-        let tmp22 = cResult[11];
-      }
-      if (cResult[12] === contentContainerStyle) {
-        if (cResult[13] === tmp4.wrapper) {
-          let tmp23 = cResult[14];
-        }
-        const _Symbol = Symbol;
-        class B {
-          constructor() {
-            if (null == closure_1) {
-              return;
-            } else {
-              tmp2 = closure_1;
-              tmp3 = closure_2;
-              obj = closure_1(closure_2[13]);
-              obj1 = { guildId: null, level: null };
-              obj1.guildId = tmp.id;
-              tmp4 = closure_2;
-              tmp5 = MFALevels;
-              obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-              obj1 = obj.updateMFALevel(obj1);
-            }
-            return;
-          }
-        }
-        const label = tmp4.label;
-        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          const string = tmp(1125).intl.string;
-          class B {
-            constructor() {
-              if (null == closure_1) {
-                return;
-              } else {
-                tmp2 = closure_1;
-                tmp3 = closure_2;
-                obj = closure_1(closure_2[13]);
-                obj1 = { guildId: null, level: null };
-                obj1.guildId = tmp.id;
-                tmp4 = closure_2;
-                tmp5 = MFALevels;
-                obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                obj1 = obj.updateMFALevel(obj1);
-              }
-              return;
-            }
-          }
-          cResult[15] = tmp27;
-          let tmp26 = tmp27;
-        } else {
-          tmp26 = cResult[15];
-        }
-        if (cResult[16] !== tmp4.label) {
-          let obj2 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-          class B {
-            constructor() {
-              if (null == closure_1) {
-                return;
-              } else {
-                tmp2 = closure_1;
-                tmp3 = closure_2;
-                obj = closure_1(closure_2[13]);
-                obj1 = { guildId: null, level: null };
-                obj1.guildId = tmp.id;
-                tmp4 = closure_2;
-                tmp5 = MFALevels;
-                obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                obj1 = obj.updateMFALevel(obj1);
-              }
-              return;
-            }
-          }
-          obj2.children = tmp26;
-          const tmp30 = closure_12(tmp(5271).Text, obj2);
-          cResult[16] = tmp4.label;
-          cResult[17] = tmp30;
-          let tmp28 = tmp30;
-        } else {
-          tmp28 = cResult[17];
-        }
-        if (cResult[18] !== tmp13) {
-          const intl = tmp(1125).intl;
-          const string2 = intl.string;
-          class B {
-            constructor() {
-              if (null == closure_1) {
-                return;
-              } else {
-                tmp2 = closure_1;
-                tmp3 = closure_2;
-                obj = closure_1(closure_2[13]);
-                obj1 = { guildId: null, level: null };
-                obj1.guildId = tmp.id;
-                tmp4 = closure_2;
-                tmp5 = MFALevels;
-                obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                obj1 = obj.updateMFALevel(obj1);
-              }
-              return;
-            }
-          }
-          if (tmp13) {
-            prop = prop["MP0Ho+"];
-            let string2Result = string2(prop);
-          } else {
-            string2Result = string2(prop.yZcYGa);
-          }
-          cResult[18] = tmp13;
-          cResult[19] = string2Result;
-        } else {
-          class B {
-            constructor() {
-              if (null == closure_1) {
-                return;
-              } else {
-                tmp2 = closure_1;
-                tmp3 = closure_2;
-                obj = closure_1(closure_2[13]);
-                obj1 = { guildId: null, level: null };
-                obj1.guildId = tmp.id;
-                tmp4 = closure_2;
-                tmp5 = MFALevels;
-                obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                obj1 = obj.updateMFALevel(obj1);
-              }
-              return;
-            }
-          }
-          if (cResult[20] === tmp22) {
-            if (cResult[21] === tmp31) {
-              if (cResult[22] === tmp35) {
-                if (cResult[23] === str) {
-                  let tmp36 = cResult[24];
-                }
-                if (cResult[25] === tmp4.button) {
-                  if (cResult[26] === tmp36) {
-                    let tmp39 = cResult[27];
-                  }
-                  class B {
-                    constructor() {
-                      if (null == closure_1) {
-                        return;
-                      } else {
-                        tmp2 = closure_1;
-                        tmp3 = closure_2;
-                        obj = closure_1(closure_2[13]);
-                        obj1 = { guildId: null, level: null };
-                        obj1.guildId = tmp.id;
-                        tmp4 = closure_2;
-                        tmp5 = MFALevels;
-                        obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                        obj1 = obj.updateMFALevel(obj1);
-                      }
-                      return;
-                    }
-                  }
-                  if (stateFromStores != null) {
-                    const features2 = stateFromStores.features;
-                  }
-                  if (cResult[28] !== features2) {
-                    if (stateFromStores != null) {
-                      const features3 = stateFromStores.features;
-                      class B {
-                        constructor() {
-                          if (null == closure_1) {
-                            return;
-                          } else {
-                            tmp2 = closure_1;
-                            tmp3 = closure_2;
-                            obj = closure_1(closure_2[13]);
-                            obj1 = { guildId: null, level: null };
-                            obj1.guildId = tmp.id;
-                            tmp4 = closure_2;
-                            tmp5 = MFALevels;
-                            obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                            obj1 = obj.updateMFALevel(obj1);
-                          }
-                          return;
-                        }
-                      }
-                    }
-                    class B {
-                      constructor() {
-                        if (null == closure_1) {
-                          return;
-                        } else {
-                          tmp2 = closure_1;
-                          tmp3 = closure_2;
-                          obj = closure_1(closure_2[13]);
-                          obj1 = { guildId: null, level: null };
-                          obj1.guildId = tmp.id;
-                          tmp4 = closure_2;
-                          tmp5 = MFALevels;
-                          obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                          obj1 = obj.updateMFALevel(obj1);
-                        }
-                        return;
-                      }
-                    }
-                    if (undefined) {
-                      const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
-                      class B {
-                        constructor() {
-                          if (null == closure_1) {
-                            return;
-                          } else {
-                            tmp2 = closure_1;
-                            tmp3 = closure_2;
-                            obj = closure_1(closure_2[13]);
-                            obj1 = { guildId: null, level: null };
-                            obj1.guildId = tmp.id;
-                            tmp4 = closure_2;
-                            tmp5 = MFALevels;
-                            obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                            obj1 = obj.updateMFALevel(obj1);
-                          }
-                          return;
-                        }
-                      }
-                      const intl2 = tmp(1125).intl;
-                      obj3.children = intl2.string(tmp(1125).t["KG1V/E"]);
-                      const tmp46 = closure_12(tmp48, obj3);
-                    }
-                    let features1;
-                    if (stateFromStores != null) {
-                      features1 = stateFromStores.features;
-                    }
-                    cResult[28] = features1;
-                    cResult[29] = tmp46;
-                    let tmp43 = tmp46;
-                  } else {
-                    tmp43 = cResult[29];
-                  }
-                  if (cResult[30] === tmp4.center) {
-                    if (cResult[31] === tmp28) {
-                      if (cResult[32] === tmp39) {
-                        if (cResult[33] === tmp43) {
-                          let tmp50 = cResult[34];
-                        }
-                        if (cResult[35] !== tmp4.image) {
-                          class B {
-                            constructor() {
-                              if (null == closure_1) {
-                                return;
-                              } else {
-                                tmp2 = closure_1;
-                                tmp3 = closure_2;
-                                obj = closure_1(closure_2[13]);
-                                obj1 = { guildId: null, level: null };
-                                obj1.guildId = tmp.id;
-                                tmp4 = closure_2;
-                                tmp5 = MFALevels;
-                                obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                                obj1 = obj.updateMFALevel(obj1);
-                              }
-                              return;
-                            }
-                          }
-                          tmp58[0] = stateFromStores(16562);
-                          tmp58[1] = tmp4.image;
-                          const tmp59 = closure_12(stateFromStores(5707), tmp58);
-                          cResult[35] = tmp4.image;
-                          cResult[36] = tmp59;
-                          let tmp54 = tmp59;
-                          const tmp57 = stateFromStores(5707);
-                        } else {
-                          tmp54 = cResult[36];
-                        }
-                        class B {
-                          constructor() {
-                            if (null == closure_1) {
-                              return;
-                            } else {
-                              tmp2 = closure_1;
-                              tmp3 = closure_2;
-                              obj = closure_1(closure_2[13]);
-                              obj1 = { guildId: null, level: null };
-                              obj1.guildId = tmp.id;
-                              tmp4 = closure_2;
-                              tmp5 = MFALevels;
-                              obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                              obj1 = obj.updateMFALevel(obj1);
-                            }
-                            return;
-                          }
-                        }
-                        if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
-                          const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
-                          class B {
-                            constructor() {
-                              if (null == closure_1) {
-                                return;
-                              } else {
-                                tmp2 = closure_1;
-                                tmp3 = closure_2;
-                                obj = closure_1(closure_2[13]);
-                                obj1 = { guildId: null, level: null };
-                                obj1.guildId = tmp.id;
-                                tmp4 = closure_2;
-                                tmp5 = MFALevels;
-                                obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                                obj1 = obj.updateMFALevel(obj1);
-                              }
-                              return;
-                            }
-                          }
-                          const intl3 = tmp(1125).intl;
-                          obj4.children = intl3.format(tmp(1125).t["FK0+iX"], {});
-                          const tmp63 = closure_12(tmp62, obj4);
-                          cResult[37] = tmp63;
-                          let tmp60 = tmp63;
-                        } else {
-                          tmp60 = cResult[37];
-                        }
-                        if (cResult[38] !== tmp4.infoWrapper) {
-                          class B {
-                            constructor() {
-                              if (null == closure_1) {
-                                return;
-                              } else {
-                                tmp2 = closure_1;
-                                tmp3 = closure_2;
-                                obj = closure_1(closure_2[13]);
-                                obj1 = { guildId: null, level: null };
-                                obj1.guildId = tmp.id;
-                                tmp4 = closure_2;
-                                tmp5 = MFALevels;
-                                obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                                obj1 = obj.updateMFALevel(obj1);
-                              }
-                              return;
-                            }
-                          }
-                          tmp67[0] = tmp4.infoWrapper;
-                          tmp67[1] = tmp60;
-                          const tmp68 = closure_12(closure_4, tmp67);
-                          cResult[38] = tmp4.infoWrapper;
-                          cResult[39] = tmp68;
-                          let tmp64 = tmp68;
-                        } else {
-                          tmp64 = cResult[39];
-                        }
-                        if (cResult[40] === tmp4.center) {
-                          if (cResult[41] === tmp54) {
-                            if (cResult[42] === tmp64) {
-                              let tmp69 = cResult[43];
-                            }
-                            if (cResult[44] === tmp50) {
-                              if (cResult[45] === tmp69) {
-                                if (cResult[46] === tmp23) {
-                                  let tmp73 = cResult[47];
-                                }
-                                const _Symbol2 = Symbol;
-                                class B {
-                                  constructor() {
-                                    if (null == closure_1) {
-                                      return;
-                                    } else {
-                                      tmp2 = closure_1;
-                                      tmp3 = closure_2;
-                                      obj = closure_1(closure_2[13]);
-                                      obj1 = { guildId: null, level: null };
-                                      obj1.guildId = tmp.id;
-                                      tmp4 = closure_2;
-                                      tmp5 = MFALevels;
-                                      obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                                      obj1 = obj.updateMFALevel(obj1);
-                                    }
-                                    return;
-                                  }
-                                }
-                                if (tmp76 === Symbol.for("react.memo_cache_sentinel")) {
-                                  const tmp79 = closure_12(tmp(5629).NavScrim, {});
-                                  class B {
-                                    constructor() {
-                                      if (null == closure_1) {
-                                        return;
-                                      } else {
-                                        tmp2 = closure_1;
-                                        tmp3 = closure_2;
-                                        obj = closure_1(closure_2[13]);
-                                        obj1 = { guildId: null, level: null };
-                                        obj1.guildId = tmp.id;
-                                        tmp4 = closure_2;
-                                        tmp5 = MFALevels;
-                                        obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                                        obj1 = obj.updateMFALevel(obj1);
-                                      }
-                                      return;
-                                    }
-                                  }
-                                  cResult[48] = tmp79;
-                                  let tmp77 = tmp79;
-                                } else {
-                                  tmp77 = cResult[48];
-                                }
-                                if (cResult[49] !== tmp73) {
-                                  class B {
-                                    constructor() {
-                                      if (null == closure_1) {
-                                        return;
-                                      } else {
-                                        tmp2 = closure_1;
-                                        tmp3 = closure_2;
-                                        obj = closure_1(closure_2[13]);
-                                        obj1 = { guildId: null, level: null };
-                                        obj1.guildId = tmp.id;
-                                        tmp4 = closure_2;
-                                        tmp5 = MFALevels;
-                                        obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                                        obj1 = obj.updateMFALevel(obj1);
-                                      }
-                                      return;
-                                    }
-                                  }
-                                  const items2 = [tmp73, tmp77];
-                                  tmp83[0] = items2;
-                                  const tmp84 = closure_13(closure_14, tmp83);
-                                  cResult[49] = tmp73;
-                                  cResult[50] = tmp84;
-                                  let tmp80 = tmp84;
-                                } else {
-                                  tmp80 = cResult[50];
-                                }
-                                return tmp80;
-                              }
-                            }
-                            class B {
-                              constructor() {
-                                if (null == closure_1) {
-                                  return;
-                                } else {
-                                  tmp2 = closure_1;
-                                  tmp3 = closure_2;
-                                  obj = closure_1(closure_2[13]);
-                                  obj1 = { guildId: null, level: null };
-                                  obj1.guildId = tmp.id;
-                                  tmp4 = closure_2;
-                                  tmp5 = MFALevels;
-                                  obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                                  obj1 = obj.updateMFALevel(obj1);
-                                }
-                                return;
-                              }
-                            }
-                            const obj5 = { contentContainerStyle: tmp23, alwaysBounceVertical: false, children: null };
-                            const items3 = [tmp50, tmp69];
-                            obj5.children = items3;
-                            const tmp75 = closure_13(closure_5, obj5);
-                            cResult[44] = tmp50;
-                            cResult[45] = tmp69;
-                            cResult[46] = tmp23;
-                            cResult[47] = tmp75;
-                            tmp73 = tmp75;
-                          }
-                        }
-                        const obj6 = { style: tmp4.center, children: null };
-                        const items4 = [tmp54, tmp64];
-                        obj6.children = items4;
-                        const tmp72 = closure_13(closure_4, obj6);
-                        cResult[40] = tmp4.center;
-                        cResult[41] = tmp54;
-                        cResult[42] = tmp64;
-                        cResult[43] = tmp72;
-                        tmp69 = tmp72;
-                      }
-                    }
-                  }
-                  const obj7 = { style: tmp25, children: null };
-                  const items5 = [tmp28, tmp39, tmp43];
-                  obj7.children = items5;
-                  const tmp53 = closure_13(closure_4, obj7);
-                  cResult[30] = tmp4.center;
-                  cResult[31] = tmp28;
-                  cResult[32] = tmp39;
-                  cResult[33] = tmp43;
-                  cResult[34] = tmp53;
-                  tmp50 = tmp53;
-                }
-                class B {
-                  constructor() {
-                    if (null == closure_1) {
-                      return;
-                    } else {
-                      tmp2 = closure_1;
-                      tmp3 = closure_2;
-                      obj = closure_1(closure_2[13]);
-                      obj1 = { guildId: null, level: null };
-                      obj1.guildId = tmp.id;
-                      tmp4 = closure_2;
-                      tmp5 = MFALevels;
-                      obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-                      obj1 = obj.updateMFALevel(obj1);
-                    }
-                    return;
-                  }
-                }
-                const obj8 = { style: tmp4.button, children: tmp36 };
-                const tmp41 = closure_12(closure_4, obj8);
-                cResult[25] = tmp4.button;
-                cResult[26] = tmp36;
-                cResult[27] = tmp41;
-                tmp39 = tmp41;
-              }
-            }
-          }
-          const obj9 = { text: cResult[19], disabled: !tmp14, variant: str, onPress: tmp22, shrink: true };
-          const tmp38 = closure_12(tmp(5281).Button, obj9);
-          cResult[20] = tmp22;
-          cResult[21] = cResult[19];
-          cResult[22] = !tmp14;
-          cResult[23] = str;
-          cResult[24] = tmp38;
-          tmp36 = tmp38;
-        }
-      }
-      class B {
-        constructor() {
-          if (null == closure_1) {
-            return;
-          } else {
-            tmp2 = closure_1;
-            tmp3 = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = { guildId: null, level: null };
-            obj1.guildId = tmp.id;
-            tmp4 = closure_2;
-            tmp5 = MFALevels;
-            obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-            obj1 = obj.updateMFALevel(obj1);
-          }
-          return;
-        }
-      }
-      tmp24[0] = tmp4.wrapper;
-      tmp24[1] = contentContainerStyle;
-      cResult[12] = contentContainerStyle;
-      cResult[13] = tmp4.wrapper;
-      cResult[14] = tmp24;
-      tmp23 = tmp24;
-    }
-    class B {
-      constructor() {
-        if (null == closure_1) {
-          return;
-        } else {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { guildId: null, level: null };
-          obj1.guildId = tmp.id;
-          tmp4 = closure_2;
-          tmp5 = MFALevels;
-          obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-          obj1 = obj.updateMFALevel(obj1);
-        }
-        return;
-      }
-    }
-    cResult[9] = stateFromStores;
-    cResult[10] = tmp13;
-    cResult[11] = B;
-    tmp22 = B;
-  }
-  const currentUser = UserStore.getCurrentUser();
-  dependencyMap = tmp16;
-  let mfaEnabled;
-  if (currentUser != null) {
-    mfaEnabled = currentUser.mfaEnabled;
-  }
-  let tmp18 = true === mfaEnabled && null != stateFromStores;
-  if (tmp18) {
-    tmp18 = closure_6(stateFromStores, currentUser);
-  }
-  if (tmp18) {
-    if (tmp16) {
-      const features = stateFromStores.features;
-      class B {
-        constructor() {
-          if (null == closure_1) {
-            return;
-          } else {
-            tmp2 = closure_1;
-            tmp3 = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = { guildId: null, level: null };
-            obj1.guildId = tmp.id;
-            tmp4 = closure_2;
-            tmp5 = MFALevels;
-            obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-            obj1 = obj.updateMFALevel(obj1);
-          }
-          return;
-        }
-      }
-    }
-    class B {
-      constructor() {
-        if (null == closure_1) {
-          return;
-        } else {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { guildId: null, level: null };
-          obj1.guildId = tmp.id;
-          tmp4 = closure_2;
-          tmp5 = MFALevels;
-          obj1.level = closure_2 ? tmp5.NONE : tmp5.ELEVATED;
-          obj1 = obj.updateMFALevel(obj1);
-        }
-        return;
-      }
-    }
-  }
-  cResult[5] = stateFromStores;
-  cResult[6] = stateFromStores1;
-  cResult[7] = stateFromStores1 === constants2.ELEVATED;
-  cResult[8] = tmp18;
-  tmp14 = tmp18;
-  const tmpResult2 = guildId(504);
-}) : (function GuildSettingsModalSecurity(guildId) {
+export default function GuildSettingsModalSecurity(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_15();
   const items = [GuildStore];
@@ -745,13 +60,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     }
   }, items2);
   const obj5 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp2(1125).intl;
-  obj5.children = intl.string(guildId(1125).t.Wi9LEV);
-  const items4 = [closure_12(guildId(5271).Text, obj5), , ];
+  const intl = tmp2(1114).intl;
+  obj5.children = intl.string(guildId(1114).t.Wi9LEV);
+  const items4 = [closure_12(guildId(5619).Text, obj5), , ];
   const obj6 = { style: tmp.button, children: null };
-  const intl2 = tmp2(1125).intl;
+  const intl2 = tmp2(1114).intl;
   const string = intl2.string;
-  const t = tmp2(1125).t;
+  const t = tmp2(1114).t;
   if (stateFromStores1 === constants2.ELEVATED) {
     let stringResult = string(t["MP0Ho+"]);
   } else {
@@ -764,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   }
   obj7.variant = str;
   obj7.onPress = callback;
-  obj6.children = closure_12(guildId(5281).Button, obj7);
+  obj6.children = closure_12(guildId(5629).Button, obj7);
   items4[1] = closure_12(closure_4, obj6);
   let hasItem;
   if (stateFromStores != null) {
@@ -774,9 +89,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   let tmp18Result = null;
   if (hasItem) {
     const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
-    const intl3 = tmp2(1125).intl;
-    obj8.children = intl3.string(tmp2(1125).t["KG1V/E"]);
-    tmp18Result = closure_12(tmp2(5271).Text, obj8);
+    const intl3 = tmp2(1114).intl;
+    obj8.children = intl3.string(tmp2(1114).t["KG1V/E"]);
+    tmp18Result = closure_12(tmp2(5619).Text, obj8);
   }
   const obj9 = { children: null };
   items4[2] = tmp18Result;
@@ -785,19 +100,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(16562);
+  obj11.source = stateFromStores(16613);
   obj11.style = tmp.image;
-  const items6 = [closure_12(stateFromStores(5707), obj11), ];
+  const items6 = [closure_12(stateFromStores(5712), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };
   const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl4 = tmp2(1125).intl;
-  obj13.children = intl4.format(guildId(1125).t["FK0+iX"], {});
-  obj12.children = closure_12(guildId(5271).Text, obj13);
+  const intl4 = tmp2(1114).intl;
+  obj13.children = intl4.format(guildId(1114).t["FK0+iX"], {});
+  obj12.children = closure_12(guildId(5619).Text, obj13);
   items6[1] = closure_12(closure_4, obj12);
   obj10.children = items6;
   items5[1] = closure_13(closure_4, obj10);
   obj3.children = items5;
-  const items7 = [closure_13(closure_5, obj3), closure_12(guildId(5629).NavScrim, {})];
+  const items7 = [closure_13(closure_5, obj3), closure_12(guildId(5601).NavScrim, {})];
   obj9.children = items7;
   return closure_13(closure_14, obj9);
-});
+};

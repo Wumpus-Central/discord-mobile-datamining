@@ -1,94 +1,71 @@
-// === Module 14004: NoMutualFriends ===
+// === Module 14138: NoMutualFriends ===
 
-// Module 14004 (NoMutualFriends)
-import c from "c" /* 576 */;
-import shared from "shared" /* 5012 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import _mod8764 from "module_8764" /* 8764 */;
+// Module 14138 (NoMutualFriends)
+import shared from "shared" /* 5016 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import _mod8798 from "module_8798" /* 8798 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoMutualFriendsSource() {
-  const cResult = c.c(2);
-  const theme = shared.useThemeContext().theme;
-  if (cResult[0] !== theme) {
-    const obj3 = {
-      dark() {
-          return require("module_14005");
-        },
-      darker() {
-          return require("module_14006");
-        },
-      light() {
-          return require("module_14007");
-        }
-    };
-    const illustrationSource = _mod8764.getIllustrationSource(theme, obj3);
-    cResult[0] = theme;
-    cResult[1] = illustrationSource;
-    let tmp4 = illustrationSource;
-    const tmpResult = _mod8764;
-  } else {
-    tmp4 = cResult[1];
-  }
-  return tmp4;
-}) : (function useNoMutualFriendsSource() {
-  const obj = shared;
-  return _mod8764.getIllustrationSource(obj.useThemeContext().theme, {
-    dark() {
-      return require("module_14005");
-    },
-    darker() {
-      return require("module_14006");
-    },
-    light() {
-      return require("module_14007");
-    }
-  });
-});
-let closure_4 = tmp3;
-ReactCompilerGating = fn(558);
-function getNoMutualFriendsSource(theme) {
-  return _mod8764.getIllustrationSource(theme, {
-    dark() {
-      return require("module_14005");
-    },
-    darker() {
-      return require("module_14006");
-    },
-    light() {
-      return require("module_14007");
-    }
-  });
-}
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoMutualFriends.tsx");
 
-export { getNoMutualFriendsSource };
-export const useNoMutualFriendsSource = tmp3;
-export const NoMutualFriends = ReactCompilerGating.isReactCompilerEnabled() ? (function NoMutualFriends(arg0) {
-  const cResult = c.c(3);
-  const tmp3 = closure_4();
-  if (cResult[0] === arg0) {
-    if (cResult[1] === tmp3) {
-      let tmp4 = cResult[2];
+export function getNoMutualFriendsSource(theme) {
+  return _mod8798.getIllustrationSource(theme, {
+    dark() {
+      return require("module_14139");
+    },
+    darker() {
+      return require("module_14140");
+    },
+    light() {
+      return require("module_14141");
     }
-    return tmp4;
-  }
-  const obj2 = {};
+  });
+}
+export function useNoMutualFriendsSource() {
+  const obj = shared;
+  return _mod8798.getIllustrationSource(obj.useThemeContext().theme, {
+    dark() {
+      return require("module_14139");
+    },
+    darker() {
+      return require("module_14140");
+    },
+    light() {
+      return require("module_14141");
+    }
+  });
+}
+export function NoMutualFriends(arg0) {
+  const obj = shared;
+  const illustrationSource = _mod8798.getIllustrationSource(obj.useThemeContext().theme, {
+    dark() {
+      return require("module_14139");
+    },
+    darker() {
+      return require("module_14140");
+    },
+    light() {
+      return require("module_14141");
+    }
+  });
+  const obj4 = {};
+  const obj3 = {
+    dark() {
+      return require("module_14139");
+    },
+    darker() {
+      return require("module_14140");
+    },
+    light() {
+      return require("module_14141");
+    }
+  };
   const merged = Object.assign(arg0);
-  obj2.source = tmp3;
-  const tmp7 = jsx(FastImageDefault, {});
-  cResult[0] = arg0;
-  cResult[1] = tmp3;
-  cResult[2] = tmp7;
-  tmp4 = tmp7;
-}) : (function NoMutualFriends(arg0) {
-  const obj = {};
-  const tmp = closure_4();
-  const merged = Object.assign(arg0);
-  obj.source = tmp;
+  obj4.source = illustrationSource;
   return jsx(FastImageDefault, {});
-});
+}

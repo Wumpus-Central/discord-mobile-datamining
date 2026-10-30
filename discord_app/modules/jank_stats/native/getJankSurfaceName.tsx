@@ -1,10 +1,10 @@
-// === Module 17952: getJankSurfaceName ===
+// === Module 18011: getJankSurfaceName ===
 
-// Module 17952 (getJankSurfaceName)
-import getJankScreenName from "getJankScreenName" /* 17947 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17951 */;
+// Module 18011 (getJankSurfaceName)
+import getJankScreenName from "getJankScreenName" /* 18006 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 18010 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5248 */;
+import ActionSheetStore from "ActionSheetStore" /* 5254 */;
 
 require = fn;
 function composeJankSurfaceName(getBaseScreenName) {
@@ -29,14 +29,14 @@ function composeJankSurfaceName(getBaseScreenName) {
       componentDisplayName = getJankScreenName.getComponentDisplayName(tmp3.content.type);
     }
     if (null == componentDisplayName) {
-      let combined = closure_1_8;
+      let combined = React6;
     } else {
       let key = componentDisplayName;
       if (set.has(componentDisplayName)) {
         key = tmp3.key;
       }
       const _HermesInternal = HermesInternal;
-      combined = "" + closure_1_8 + ":" + key;
+      combined = "" + React6 + ":" + key;
     }
   }
   if (null != tmp2) {
@@ -85,7 +85,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(17948);
+const JankScreenConstants = fn(18007);
 ({ CHANNEL_DETAILS_SCREEN: hasOwnProperty, INTERACTION_NONE: metroRequire, PANEL_SURFACE: closure_7, SHEET_SURFACE: closure_8 } = JankScreenConstants);
 const set = new Set(["SimpleActionSheet"]);
 const main = "main";
@@ -114,14 +114,14 @@ export function recordJankChannelDetailsOpen(memo1, arg1) {
   }
   return flag;
 }
-export function setJankChannelDetailsOpen(constants, arg1) {
-  let flag = arg1 !== set1.has(constants);
+export function setJankChannelDetailsOpen(memo1, arg1) {
+  let flag = arg1 !== set1.has(memo1);
   if (flag) {
     if (arg1) {
-      set1.add(constants);
+      set1.add(memo1);
       flag = true;
     } else {
-      set1.delete(constants);
+      set1.delete(memo1);
       flag = true;
     }
   }

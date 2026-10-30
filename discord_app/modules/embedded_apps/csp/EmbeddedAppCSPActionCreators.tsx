@@ -1,7 +1,7 @@
-// === Module 10889: EmbeddedAppCSPActionCreators ===
+// === Module 10912: EmbeddedAppCSPActionCreators ===
 
-// Module 10889 (EmbeddedAppCSPActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 10912 (EmbeddedAppCSPActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_4 = async function _fetchEmbeddedAppCSP(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -63,13 +63,13 @@ let closure_4 = async function _fetchEmbeddedAppCSP(arg0) {
         closure_130_1(closure_130_2[2]).dispatch(obj8);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
-    } catch (tmp24) {
-      closure_3 = tmp24;
+    } catch (tmp27) {
+      closure_3 = tmp27;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp24;
+        throw tmp27;
       } else {
         c5 = tmp;
       }

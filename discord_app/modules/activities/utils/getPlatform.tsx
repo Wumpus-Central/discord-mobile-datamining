@@ -1,17 +1,17 @@
-// === Module 5671: getPlatform ===
+// === Module 5677: getPlatform ===
 
-// Module 5671 (getPlatform)
-import Server from "Server" /* 1998 */;
+// Module 5677 (getPlatform)
+import EmbeddedActivitySupportedPlatforms from "EmbeddedActivitySupportedPlatforms" /* 2022 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 
 export default function getPlatform(oS) {
   if ("android" === oS) {
-    return Server.EmbeddedActivitySupportedPlatforms.ANDROID;
+    return EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.ANDROID;
   } else if ("ios" === oS) {
-    return Server.EmbeddedActivitySupportedPlatforms.IOS;
+    return EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
-    return Server.EmbeddedActivitySupportedPlatforms.WEB;
+    return EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.WEB;
   }
 };

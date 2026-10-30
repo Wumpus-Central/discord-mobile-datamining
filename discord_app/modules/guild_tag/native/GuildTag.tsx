@@ -1,31 +1,30 @@
-// === Module 9262: GuildTag ===
+// === Module 9276: GuildTag ===
 
-// Module 9262 (GuildTag)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import GuildTagUtils from "GuildTagUtils" /* 8694 */;
+// Module 9276 (GuildTag)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import GuildTagUtils from "GuildTagUtils" /* 8728 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(8328).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(8385).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = { container: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 }, tag: null };
-let PlatformUtils = fn(1381);
+let PlatformUtils = fn(1376);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
 let obj4 = { lineHeight: num, textAlignVertical: null, overflow: "hidden" };
-PlatformUtils = fn(1381);
+PlatformUtils = fn(1376);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";
@@ -33,43 +32,7 @@ if (PlatformUtils.isAndroid()) {
 obj4.textAlignVertical = str;
 obj.tag = obj4;
 let closure_10 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTagBadge(arg0) {
-  let tmp2 = dependencyMap;
-  const cResult = c.c(6);
-  ({ source, size } = arg0);
-  if (undefined === size) {
-    size = GuildTagBadgeSize.SIZE_12;
-  }
-  if (null == source) {
-    return null;
-  } else {
-    const _Symbol = Symbol;
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = util.intl;
-      const stringResult = intl.string(util.t.HHYPgJ);
-      cResult[0] = stringResult;
-      let first = stringResult;
-    } else {
-      first = cResult[0];
-    }
-    if (cResult[1] !== size) {
-      const size1 = { width: size, height: size };
-      cResult[1] = size;
-      cResult[2] = size1;
-      let tmp8 = size1;
-    } else {
-      tmp8 = cResult[2];
-    }
-    if (cResult[3] === source) {
-    }
-    const obj2 = { source, accessibilityLabel: first, style: tmp8 };
-    tmp2 = React5(FastImageDefault, obj2);
-    cResult[3] = source;
-    cResult[4] = tmp8;
-    cResult[5] = tmp2;
-  }
-}) : (function GuildTagBadge(arg0) {
+const memoResult = noop.memo(function GuildTagBadge(arg0) {
   ({ source, size } = arg0);
   if (size === undefined) {
     size = GuildTagBadgeSize.SIZE_12;
@@ -84,110 +47,8 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     tmp2 = React5(FastImageDefault, obj);
   }
   return tmp2;
-}));
-ReactCompilerGating = fn(558);
-const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function BaseGuildTagChiplet(guildBadge) {
-  let PressableHighlight = guildTag;
-  let obj = textStyle;
-  const cResult = guildTag(textStyle[9]).c(14);
-  ({ containerStyles, guildTag } = guildBadge);
-  guildBadge = guildBadge.guildBadge;
-  ({ onPress, disabled, textVariant, textColor, textStyle } = guildBadge);
-  let SIZE_12 = guildBadge.badgeSize;
-  let str = "text-xs/semibold";
-  if (undefined !== textVariant) {
-    str = textVariant;
-  }
-  let str2 = "text-default";
-  if (undefined !== textColor) {
-    str2 = textColor;
-  }
-  if (undefined === SIZE_12) {
-    SIZE_12 = container.SIZE_12;
-  }
-  container = closure_10();
-  if (cResult[0] === SIZE_12) {
-    if (cResult[1] === guildBadge) {
-      if (cResult[2] === guildTag) {
-        if (cResult[3] === container.tag) {
-          if (cResult[4] === str2) {
-            if (cResult[5] === textStyle) {
-              if (cResult[6] === str) {
-                let tmp4 = cResult[7];
-              }
-              if (cResult[8] === containerStyles) {
-                if (cResult[9] === tmp2) {
-                  if (cResult[10] === onPress) {
-                    if (cResult[11] === tmp4) {
-                      if (cResult[12] === container.container) {
-                        return cResult[13];
-                      }
-                    }
-                  }
-                }
-              }
-              if (null != onPress) {
-                PressableHighlight = PressableHighlight(obj[13]).PressableHighlight;
-                obj = { onPress, style: null, disabled: null, accessibilityRole: "button", accessibilityState: null, children: null };
-                let items = [container.container, containerStyles];
-                obj.style = items;
-                obj.disabled = tmp2;
-                let obj3 = { disabled: tmp2 };
-                obj.accessibilityState = obj3;
-                obj.children = tmp4();
-                let tmp8 = closure_7(PressableHighlight, obj);
-              } else {
-                let obj4 = { style: null, children: null };
-                let items1 = [container.container, containerStyles];
-                obj4.style = items1;
-                obj4.children = tmp4();
-                tmp8 = closure_7(str2, obj4);
-              }
-              cResult[8] = containerStyles;
-              cResult[9] = tmp2;
-              cResult[10] = onPress;
-              cResult[11] = tmp4;
-              container = container.container;
-              cResult[12] = container;
-              cResult[13] = tmp8;
-            }
-          }
-        }
-      }
-    }
-  }
-  function renderContent() {
-    let tmp4 = guildBadge;
-    if (null != guildBadge) {
-      tmp4 = guildBadge;
-      if (typeof guildBadge === "string") {
-        const obj2 = { source: null, size: null };
-        const obj3 = { uri: guildBadge };
-        obj2.source = obj3;
-        obj2.size = SIZE_12;
-        tmp4 = React5(memoResult, obj2);
-      }
-    }
-    const obj = { children: null };
-    const items = [tmp4, ];
-    const obj4 = { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: null, children: guildTag };
-    const items1 = [container.tag, textStyle];
-    obj4.style = items1;
-    items[1] = React5(Text_Text.Text, obj4);
-    obj.children = items;
-    return React6(closure_2_8, obj);
-  }
-  cResult[0] = SIZE_12;
-  cResult[1] = guildBadge;
-  cResult[2] = guildTag;
-  cResult[3] = container.tag;
-  cResult[4] = str2;
-  cResult[5] = textStyle;
-  cResult[6] = str;
-  cResult[7] = renderContent;
-  tmp4 = renderContent;
-  let obj2 = guildTag(textStyle[9]);
-}) : (function BaseGuildTagChiplet(textVariant) {
+});
+const memoResult1 = noop.memo(function BaseGuildTagChiplet(textVariant) {
   ({ containerStyles, guildTag: require, guildBadge: importDefault, onPress, disabled } = textVariant);
   if (disabled === undefined) {
     disabled = false;
@@ -223,7 +84,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
     obj4.style = items1;
     items[1] = React5(Text_Text.Text, obj4);
     obj.children = items;
-    return React6(closure_2_8, obj);
+    return React7(React6, obj);
   }
   const tmp2 = closure_10();
   GuildTagBadgeSize = tmp2;
@@ -244,7 +105,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
     tmp5 = closure_7(View, obj);
   }
   return tmp5;
-}));
+});
 let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/native/GuildTag.tsx");
@@ -264,7 +125,7 @@ export default noop.memo(function GuildTagChiplet(primaryGuild) {
   guildId = undefined;
   const items = [UserStore];
   const items1 = [userId, primaryGuild];
-  const stateFromStoresObject = primaryGuild(guildId[14]).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = primaryGuild(guildId[12]).useStateFromStoresObject(items, () => {
     const user = UserStore.getUser(userId);
     primaryGuild = undefined;
     if (user != null) {
@@ -279,7 +140,7 @@ export default noop.memo(function GuildTagChiplet(primaryGuild) {
   if (null != guildId) {
     tmp8Result = null;
     if (null != tag) {
-      let obj2 = { guildTag: tag, guildBadge: primaryGuild(guildId[15]).getGuildTagBadgeUrl(guildId, stateFromStoresObject.badge, SIZE_12), badgeSize: SIZE_12 };
+      let obj2 = { guildTag: tag, guildBadge: primaryGuild(guildId[13]).getGuildTagBadgeUrl(guildId, stateFromStoresObject.badge, SIZE_12), badgeSize: SIZE_12 };
       const merged1 = Object.assign(merged);
       let tmp13;
       if (!flag) {
@@ -287,7 +148,7 @@ export default noop.memo(function GuildTagChiplet(primaryGuild) {
       }
       obj2.onPress = tmp13;
       tmp8Result = closure_7(memoResult1, obj2);
-      const tmp3Result = primaryGuild(guildId[15]);
+      const tmp3Result = primaryGuild(guildId[13]);
     }
   }
   return tmp8Result;

@@ -1,10 +1,10 @@
-// === Module 18724: getFriendStatusCounts ===
+// === Module 18783: getFriendStatusCounts ===
 
-// Module 18724 (getFriendStatusCounts)
-import PresenceStore from "PresenceStore" /* 5750 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
+// Module 18783 (getFriendStatusCounts)
+import PresenceStore from "PresenceStore" /* 5756 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
 
-const StatusTypes = fn(1084).StatusTypes;
+const StatusTypes = fn(1072).StatusTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 18497: NavigationTTIRegionDebugState ===
+// === Module 18556: NavigationTTIRegionDebugState ===
 
-// Module 18497 (NavigationTTIRegionDebugState)
+// Module 18556 (NavigationTTIRegionDebugState)
 import size from "module_2" /* 2 */;
 
 const set = new Set();
@@ -19,10 +19,10 @@ export function recordNavigationTTIRegionDebugMeasurement(traceId, spanComponent
     continue;
   }
 }
-export function getNavigationTTIRegionDebugMeasurement(activeTraceId, regionId) {
+export function getNavigationTTIRegionDebugMeasurement(activeTraceId, navTTISurface) {
   let tmp = null;
   if (activeTraceId === global) {
-    value = map.get(regionId);
+    value = map.get(navTTISurface);
     if (value == null) {
       value = null;
     }

@@ -1,7 +1,7 @@
-// === Module 17163: HappeningNowConstants ===
+// === Module 17217: HappeningNowConstants ===
 
-// Module 17163 (HappeningNowConstants)
-import native from "native" /* 1199 */;
+// Module 17217 (HappeningNowConstants)
+import native from "native" /* 1188 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx");

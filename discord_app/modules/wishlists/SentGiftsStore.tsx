@@ -1,8 +1,8 @@
-// === Module 14369: SentGiftsStore ===
+// === Module 14402: SentGiftsStore ===
 
-// Module 14369 (SentGiftsStore)
+// Module 14402 (SentGiftsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 let global = { sentGifts: {} };

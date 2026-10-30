@@ -1,12 +1,12 @@
-// === Module 2065: HelpdeskUtils ===
+// === Module 2062: HelpdeskUtils ===
 
-// Module 2065 (HelpdeskUtils)
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import getLocalizedLinkDefault from "getLocalizedLink" /* 4820 */;
-import LocaleStore from "LocaleStore" /* 2066 */;
+// Module 2062 (HelpdeskUtils)
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import getLocalizedLinkDefault from "getLocalizedLink" /* 4821 */;
+import LocaleStore from "LocaleStore" /* 2063 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 const LocalizedLinks = Constants.LocalizedLinks;
 let combined = "https://" + Constants.SUPPORT_DOMAIN;
 let closure_6 = "https://" + Constants.SUPPORT_DEV_DOMAIN;
@@ -14,8 +14,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("utils/HelpdeskUtils.tsx");
 
 export default {
-  getArticleURL(TIGGER_PAWTECT_LEARN_MORE) {
-    return combined + "/hc/" + LocaleStore.locale.toLowerCase() + "/articles/" + TIGGER_PAWTECT_LEARN_MORE;
+  getArticleURL(REFERRAL_PROGRAM) {
+    return combined + "/hc/" + LocaleStore.locale.toLowerCase() + "/articles/" + REFERRAL_PROGRAM;
   },
   getDevArticleURL(arg0) {
     let tmp2 = closure_6;

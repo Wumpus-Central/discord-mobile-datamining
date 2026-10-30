@@ -1,19 +1,19 @@
-// === Module 19294: ChannelResyncManager ===
+// === Module 19357: ChannelResyncManager ===
 
-// Module 19294 (ChannelResyncManager)
+// Module 19357 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import FlagUtils from "FlagUtils" /* 1402 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7782 */;
-import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 15479 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import FlagUtils from "FlagUtils" /* 1397 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7787 */;
+import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 15519 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6761 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6768 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
 function handleGuildCreate(guild) {
@@ -247,7 +247,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -322,7 +322,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                   }
                   if (null == guild.getGuild(id)) {
                     const obj3 = { guild_id: id, request_id: str, failure_reason: "guild_not_found" };
-                    closure_2_1(1264).track(constants.GUILD_CHANNEL_RESYNC_FAILED, obj3);
+                    closure_2_1(1253).track(constants.GUILD_CHANNEL_RESYNC_FAILED, obj3);
                     if (null != dependencyMap2[id]) {
                       let _clearTimeout2 = clearTimeout;
                       clearTimeout(tmp31[id]);
@@ -333,7 +333,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                       clearTimeout(dependencyMap[id]);
                       delete tmp3[tmp2];
                     }
-                    const obj5 = closure_2_1(1264);
+                    const obj5 = closure_2_1(1253);
                   } else {
                     const items = [];
                     mutableGuildChannelsForGuild = mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(id);
@@ -343,7 +343,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                     if (keys !== undefined) {
                       num = num2;
                       while (keys[tmp] !== undefined) {
-                        let obj7 = closure_2_0(1402);
+                        let obj7 = closure_2_0(1397);
                         if (obj7.hasFlag(mutableGuildChannelsForGuild[tmp13].flags, constants2.OBFUSCATED)) {
                           let arr = items.push(tmp13);
                         }
@@ -352,7 +352,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                       }
                     }
                     const obj4 = { guild_id: id, request_id: str, num_obfuscated_channels: items.length, num_total_channels: num };
-                    closure_2_1(1264).track(constants.GUILD_CHANNEL_RESYNC_EXECUTED, obj4);
+                    closure_2_1(1253).track(constants.GUILD_CHANNEL_RESYNC_EXECUTED, obj4);
                     socket = socket.getSocket();
                     const result = socket.triggerGuildChannelResync(id, items);
                     const guild_id = id;
@@ -378,10 +378,10 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                       const obj2 = { guild_id, request_id: str, failure_reason: "timeout" };
                     }, closure_2_15);
                     closure_2_32(id);
-                    let obj2 = closure_2_1(1264);
+                    let obj2 = closure_2_1(1253);
                   }
                 }
-                obj = closure_2_0(15479);
+                obj = closure_2_0(15519);
               }, Math.ceil(Math.random() * closure_2_12));
             }
             tmp2 = null != closure_1_0 && id.id !== tmp;
@@ -398,7 +398,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
           }
         }
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c4 = tmp;
@@ -437,11 +437,11 @@ function scheduleIntegrityCheck(guild_id) {
     if (null != dependencyMap[guild_id]) {
       let requestId = tmp15.requestId;
     } else {
-      const v4Result = tmp4(1278).v4();
+      const v4Result = tmp4(1267).v4();
       let obj2 = { guildId: guild_id, requestId: v4Result, source: "integrity_check", requestedUserId: AuthenticationStore.getId() };
       tmp14[guild_id] = obj2;
       requestId = v4Result;
-      const tmp4Result = tmp4(1278);
+      const tmp4Result = tmp4(1267);
     }
     if (!tmp8) {
       let obj3 = { guild_id, request_id: requestId };
@@ -510,8 +510,8 @@ function scheduleIntegrityCheck(guild_id) {
   obj = require("PrivateChannelHidingExperiment");
   tmp4 = _require;
 }
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const ChannelFlags = fn(4864).ChannelFlags;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const ChannelFlags = fn(4865).ChannelFlags;
 let closure_11 = new LoggerDefault("ChannelResyncManager");
 let closure_12 = 2 * DurationsDefault.Millis.SECOND;
 let closure_13 = 30 * DurationsDefault.Millis.SECOND;

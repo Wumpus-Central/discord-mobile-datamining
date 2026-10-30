@@ -1,8 +1,8 @@
-// === Module 14717: EmbedIFrameConfig ===
+// === Module 14751: EmbedIFrameConfig ===
 
-// Module 14717 (EmbedIFrameConfig)
-import Constants from "Constants" /* 1084 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
+// Module 14751 (EmbedIFrameConfig)
+import Constants from "Constants" /* 1072 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 
 const obj = { YOUTUBE: "YouTube", TIKTOK: "TikTok", TWITCH: "Twitch" };
@@ -35,7 +35,7 @@ let result = size.fileFinishedImporting("modules/chat/EmbedIFrameConfig.tsx");
 
 export const EMBED_IFRAME_SANDBOX = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
 export const SupportedEmbedIFrame = obj;
-export function formatProviderSrc(uri, cResult, arg2) {
+export function formatProviderSrc(uri, provider, arg2) {
   let str = uri;
   obj2 = URLUtilsDefault;
   if (uri == null) {

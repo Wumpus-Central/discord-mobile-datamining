@@ -1,38 +1,12 @@
-// === Module 8699: useBottomSheetRef ===
+// === Module 8733: useBottomSheetRef ===
 
-// Module 8699 (useBottomSheetRef)
-import c from "c" /* 576 */;
+// Module 8733 (useBottomSheetRef)
 import noop from "module_19" /* 19 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Sheet/native/useBottomSheetRef.tsx");
 
-export const useBottomSheetRef = ReactCompilerGating.isReactCompilerEnabled() ? (function useBottomSheetRef() {
-  const cResult = c.c(2);
-  const ref = noop.useRef(null);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function o() {
-      const current = ref.current;
-      if (current != null) {
-        current.closeActionSheet();
-      }
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { bottomSheetRef: ref, bottomSheetClose: first };
-    cResult[1] = obj2;
-    let tmp4 = obj2;
-  } else {
-    tmp4 = cResult[1];
-  }
-  return tmp4;
-}) : (function useBottomSheetRef() {
+export function useBottomSheetRef() {
   const ref = noop.useRef(null);
   const items = [ref];
   return {
@@ -44,4 +18,4 @@ export const useBottomSheetRef = ReactCompilerGating.isReactCompilerEnabled() ? 
       }
     }, items)
   };
-});
+}

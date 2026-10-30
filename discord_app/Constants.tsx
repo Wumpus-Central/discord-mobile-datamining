@@ -1,20 +1,20 @@
-// === Module 1084: Constants ===
+// === Module 1072: Constants ===
 
-// Module 1084 (Constants)
-import MessageTypes from "MessageTypes" /* 1100 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import ApplicationDistributors from "ApplicationDistributors" /* 1103 */;
-import ConstantsIOS2 from "ConstantsIOS" /* 1104 */;
-import ChannelTypes from "ChannelTypes" /* 1105 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 1106 */;
-import MessageReferenceTypes from "MessageReferenceTypes" /* 1107 */;
-import SKUFlags from "SKUFlags" /* 1108 */;
+// Module 1072 (Constants)
+import MessageTypes from "MessageTypes" /* 1089 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import ApplicationDistributors from "ApplicationDistributors" /* 1092 */;
+import ConstantsIOS2 from "ConstantsIOS" /* 1093 */;
+import ChannelTypes from "ChannelTypes" /* 1094 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
+import MessageReferenceTypes from "MessageReferenceTypes" /* 1096 */;
+import SKUFlags from "SKUFlags" /* 1097 */;
 import checkEnv from "checkEnv" /* 16 */;
-import RouteConstants from "RouteConstants" /* 1085 */;
-import Constants_mod from "Constants" /* 1095 */;
-import PathUtils from "utils/PathUtils" /* 1093 */;
-import ColorUtils from "utils/ColorUtils" /* 1102 */;
-import BigFlagUtils_mod from "BigFlagUtils" /* 1096 */;
+import RouteConstants from "RouteConstants" /* 1073 */;
+import Constants_mod from "Constants" /* 1083 */;
+import PathUtils from "utils/PathUtils" /* 1081 */;
+import ColorUtils from "utils/ColorUtils" /* 1091 */;
+import BigFlagUtils_mod from "BigFlagUtils" /* 1084 */;
 import size from "module_2" /* 2 */;
 import "Constants";
 
@@ -196,8 +196,8 @@ const frozen2 = Object.freeze({
   GUILD_ROLE_MEMBERS(id, id2) {
     return "/guilds/" + id + "/roles/" + id2 + "/members";
   },
-  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, roleId) {
-    return "/guilds/" + guildId + "/roles/" + roleId + "/connections/eligibility";
+  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id) {
+    return "/guilds/" + guildId + "/roles/" + id + "/connections/eligibility";
   },
   GUILD_ROLE_CONNECTIONS_ASSIGN(arg0, arg1) {
     return "/guilds/" + arg0 + "/roles/" + arg1 + "/connections/assign";
@@ -1972,8 +1972,8 @@ const frozen2 = Object.freeze({
   VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
   VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED: "/users/@me/virtual-currency/total-redeemed",
   ORB_USER_CHALLENGES_LIST: "/users/@me/achievements/list?reward_type=orbs",
-  ORB_USER_CHALLENGE_CLAIM(arg0) {
-    return "/users/@me/achievements/" + arg0 + "/claim";
+  ORB_USER_CHALLENGE_CLAIM(achievementIdentifier) {
+    return "/users/@me/achievements/" + achievementIdentifier + "/claim";
   },
   ORB_USER_CHALLENGES_UNREAD_STATE: "/users/@me/achievements/unread-state",
   ORB_USER_CHALLENGES_UNREAD_STATE_ACK: "/users/@me/achievements/unread-ack",
@@ -2265,8 +2265,8 @@ const obj2 = {
   GUILD_ROLE_MEMBERS(id, id2) {
     return "/guilds/" + id + "/roles/" + id2 + "/members";
   },
-  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, roleId) {
-    return "/guilds/" + guildId + "/roles/" + roleId + "/connections/eligibility";
+  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id) {
+    return "/guilds/" + guildId + "/roles/" + id + "/connections/eligibility";
   },
   GUILD_ROLE_CONNECTIONS_ASSIGN(arg0, arg1) {
     return "/guilds/" + arg0 + "/roles/" + arg1 + "/connections/assign";
@@ -4041,8 +4041,8 @@ const obj2 = {
   VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
   VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED: "/users/@me/virtual-currency/total-redeemed",
   ORB_USER_CHALLENGES_LIST: "/users/@me/achievements/list?reward_type=orbs",
-  ORB_USER_CHALLENGE_CLAIM(arg0) {
-    return "/users/@me/achievements/" + arg0 + "/claim";
+  ORB_USER_CHALLENGE_CLAIM(achievementIdentifier) {
+    return "/users/@me/achievements/" + achievementIdentifier + "/claim";
   },
   ORB_USER_CHALLENGES_UNREAD_STATE: "/users/@me/achievements/unread-state",
   ORB_USER_CHALLENGES_UNREAD_STATE_ACK: "/users/@me/achievements/unread-ack",

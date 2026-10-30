@@ -1,57 +1,16 @@
-// === Module 9553: useGameProfilePlatforms ===
+// === Module 9572: useGameProfilePlatforms ===
 
-// Module 9553 (useGameProfilePlatforms)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import PlatformType from "PlatformType" /* 8870 */;
+// Module 9572 (useGameProfilePlatforms)
+import util from "util" /* 1114 */;
+import PlatformType from "PlatformType" /* 8904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let items = [fn(8870).PlatformType.DESKTOP, "mobile", fn(8870).PlatformType.XBOX, fn(8870).PlatformType.PLAYSTATION, fn(8870).PlatformType.NINTENDO, fn(8870).PlatformType.ROBLOX];
-const ReactCompilerGating = fn(558);
+let items = [fn(8904).PlatformType.DESKTOP, "mobile", fn(8904).PlatformType.XBOX, fn(8904).PlatformType.PLAYSTATION, fn(8904).PlatformType.NINTENDO, fn(8904).PlatformType.ROBLOX];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfilePlatforms.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameProfilePlatforms(platforms) {
-  const cResult = c.c(5);
-  if (cResult[0] !== platforms.platforms) {
-    const _Set = Set;
-    let set = new Set(platforms.platforms);
-    let hasItem = set.has(PlatformType.PlatformType.MACOS);
-    if (!hasItem) {
-      hasItem = set.has(PlatformType.PlatformType.LINUX);
-    }
-    if (hasItem) {
-      set.add(PlatformType.PlatformType.DESKTOP);
-    }
-    cResult[0] = platforms.platforms;
-    cResult[1] = set;
-  } else {
-    set = cResult[1];
-  }
-  let hasItem1 = obj2.has(PlatformType.PlatformType.IOS);
-  if (!hasItem1) {
-    hasItem1 = obj2.has(PlatformType.PlatformType.ANDROID);
-  }
-  if (cResult[2] === obj2) {
-    if (cResult[3] === hasItem1) {
-      let tmp11 = cResult[4];
-    }
-    return tmp11;
-  }
-  const found = items.filter((item) => {
-    if ("mobile" === item) {
-      let hasItem = hasItem1;
-    } else {
-      hasItem = set.has(item);
-    }
-    return hasItem;
-  });
-  cResult[2] = obj2;
-  cResult[3] = hasItem1;
-  cResult[4] = found;
-  tmp11 = found;
-}) : (function useGameProfilePlatforms(platforms) {
+export default function useGameProfilePlatforms(platforms) {
   items = [platforms.platforms];
   return noop.useMemo(() => {
     const set = new Set(platforms.platforms);
@@ -75,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameP
       return hasItem;
     });
   }, items);
-});
+};
 export function getGameProfilePlatformText(item) {
   if (PlatformType.PlatformType.DESKTOP === item) {
     const intl6 = util.intl;

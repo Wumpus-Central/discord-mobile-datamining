@@ -1,142 +1,21 @@
-// === Module 8769: useUserProfileColors ===
+// === Module 8803: useUserProfileColors ===
 
-// Module 8769 (useUserProfileColors)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import useThemeDefault from "useTheme" /* 5242 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7340 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+// Module 8803 (useUserProfileColors)
+import initialize from "initialize" /* 504 */;
+import nativeDefault from "native" /* 575 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import useThemeDefault from "useTheme" /* 5248 */;
+import useToken from "useToken" /* 5591 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7347 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8794 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
-const initialize = obj(504);
-const utils_ColorUtils = obj(1102);
-const useToken = obj(5289);
-const UserProfileGradientUtils = obj(8760);
 require = fn;
-const ThemeTypes = fn(1095).ThemeTypes;
-const ReactCompilerGating = fn(558);
+const ThemeTypes = fn(1083).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");
 
-export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserProfileColors(theme) {
-  let obj = require;
-  let int2hexResult = dependencyMap;
-  const cResult = c.c(21);
-  ({ primaryColor, secondaryColor } = theme);
-  const tmp4 = useThemeDefault();
-  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AccessibilityStore];
-    const fn = function s() {
-      return AccessibilityStore.syncProfileThemeWithUserTheme;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp6 = items;
-    tmp7 = fn;
-  } else {
-    [tmp6, tmp7] = cResult;
-  }
-  const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
-  const objResult = initialize;
-  const token = useToken.useToken(nativeDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp4);
-  const objResult12 = useToken;
-  const token1 = useToken.useToken(nativeDefault.colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp4);
-  const objResult13 = useToken;
-  const token2 = useToken.useToken(nativeDefault.colors.CARD_MUTED_BG, tmp4);
-  const objResult14 = useToken;
-  const token3 = useToken.useToken(nativeDefault.colors.BORDER_MUTED, tmp4);
-  const objResult15 = useToken;
-  const token4 = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER, tmp4);
-  const objResult16 = useToken;
-  const token5 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tmp4);
-  if (cResult[2] === token) {
-    if (cResult[3] === token1) {
-      if (cResult[4] === token2) {
-        if (cResult[5] === token3) {
-          if (cResult[6] === token4) {
-            if (cResult[7] === token5) {
-              let tmp16 = cResult[8];
-            }
-            const LIGHT = ThemeTypes.LIGHT;
-            const containerBackground = tmp16.containerBackground;
-            if (null != primaryColor) {
-              if (null != secondaryColor) {
-                if (null != profileThemeValues) {
-                  ({ sectionBox, overlay, overlaySyncedWithUserTheme } = profileThemeValues);
-                  if (cResult[9] === tmp16) {
-                    if (cResult[10] === overlay) {
-                      if (cResult[11] === overlaySyncedWithUserTheme) {
-                        if (cResult[12] === primaryColor) {
-                          if (cResult[13] === secondaryColor) {
-                            if (cResult[14] === sectionBox) {
-                              if (cResult[15] === stateFromStores) {
-                                if (cResult[16] === containerBackground) {
-                                  return cResult[17];
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  let tmp19 = overlay;
-                  if (stateFromStores) {
-                    tmp19 = overlaySyncedWithUserTheme;
-                  }
-                  const result = UserProfileGradientUtils.calculateOverlayedColor(primaryColor, tmp19);
-                  if (cResult[18] === overlay) {
-                    if (cResult[19] === secondaryColor) {
-                      let tmp21 = cResult[20];
-                    }
-                    const obj4 = {};
-                    const merged = Object.assign(tmp16);
-                    obj4.containerBackground = containerBackground;
-                    obj4.gradientSecondaryBackground = tmp21;
-                    obj4.avatarBackground = utils_ColorUtils.int2hex(result);
-                    const objResult19 = utils_ColorUtils;
-                    obj = UserProfileGradientUtils;
-                    int2hexResult = utils_ColorUtils.int2hex(obj.calculateOverlayedColor(result, sectionBox));
-                    obj4.statusBackground = int2hexResult;
-                    cResult[9] = tmp16;
-                    cResult[10] = overlay;
-                    cResult[11] = overlaySyncedWithUserTheme;
-                    cResult[12] = primaryColor;
-                    cResult[13] = secondaryColor;
-                    cResult[14] = sectionBox;
-                    cResult[15] = stateFromStores;
-                    cResult[16] = containerBackground;
-                    cResult[17] = obj4;
-                    const objResult20 = utils_ColorUtils;
-                  }
-                  const objResult18 = UserProfileGradientUtils;
-                  const objResult21 = utils_ColorUtils;
-                  const int2hexResult1 = objResult21.int2hex(UserProfileGradientUtils.calculateOverlayedColor(secondaryColor, overlay));
-                  cResult[18] = overlay;
-                  cResult[19] = secondaryColor;
-                  cResult[20] = int2hexResult1;
-                  tmp21 = int2hexResult1;
-                  const objResult22 = UserProfileGradientUtils;
-                }
-              }
-            }
-            return tmp16;
-          }
-        }
-      }
-    }
-  }
-  const obj5 = { gradientFallbackBackground: token, gradientSecondaryBackground: token1, containerBackground: token2, containerBorderColor: token3, avatarBackground: token4, statusBackground: token5 };
-  cResult[2] = token;
-  cResult[3] = token1;
-  cResult[4] = token2;
-  cResult[5] = token3;
-  cResult[6] = token4;
-  cResult[7] = token5;
-  cResult[8] = obj5;
-  tmp16 = obj5;
-  const objResult17 = useToken;
-}) : (function useUserProfileColors(theme) {
+export function useUserProfileColors(theme) {
   ({ primaryColor, secondaryColor } = theme);
   const tmp2 = useThemeDefault();
   const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme.theme);
@@ -174,4 +53,4 @@ export const useUserProfileColors = ReactCompilerGating.isReactCompilerEnabled()
     }
   }
   return obj3;
-});
+}

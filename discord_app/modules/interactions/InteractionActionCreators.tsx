@@ -1,8 +1,8 @@
-// === Module 8659: InteractionActionCreators ===
+// === Module 8693: InteractionActionCreators ===
 
-// Module 8659 (InteractionActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 8693 (InteractionActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_5 = async function _fetchMessageInteractionData() {
   closure_131_1(closure_131_2[2]).dispatch({ type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS", channelId: closure_130_0, messageId: closure_130_1, interactionData: body });
   return body;
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interactions/InteractionActionCreators.tsx");
 

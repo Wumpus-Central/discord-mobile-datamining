@@ -1,36 +1,16 @@
-// === Module 5261: BurstReactionAnimationPreview ===
+// === Module 5609: BurstReactionAnimationPreview ===
 
-// Module 5261 (BurstReactionAnimationPreview)
-import c from "c" /* 576 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5262 */;
-import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 5263 */;
+// Module 5609 (BurstReactionAnimationPreview)
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5610 */;
+import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 5611 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstReactionAnimationPreview(arg0) {
-  let tmp = dependencyMap;
-  const cResult = c.c(4);
-  ({ channelId, emoji, messageId, reactionType } = arg0);
-  if (reactionType !== MessageReactionsTypes.ReactionTypes.BURST) {
-    return null;
-  } else {
-    if (cResult[0] === channelId) {
-      if (cResult[1] === emoji) {
-      }
-    }
-    const obj2 = { isFullscreen: true, channelId, messageId, emoji };
-    tmp = jsx(BurstReactionAnimationDefault, { isFullscreen: true, channelId, messageId, emoji });
-    cResult[0] = channelId;
-    cResult[1] = emoji;
-    cResult[2] = messageId;
-    cResult[3] = tmp;
-  }
-}) : (function BurstReactionAnimationPreview(arg0) {
+export default function BurstReactionAnimationPreview(arg0) {
   ({ channelId, emoji, messageId, reactionType } = arg0);
   let tmp2 = null;
   if (reactionType === MessageReactionsTypes.ReactionTypes.BURST) {
@@ -38,4 +18,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
     tmp2 = jsx(BurstReactionAnimationDefault, { isFullscreen: true, channelId, messageId, emoji });
   }
   return tmp2;
-});
+};

@@ -1,10 +1,10 @@
-// === Module 5928: NetworkStore ===
+// === Module 5935: NetworkStore ===
 
-// Module 5928 (NetworkStore)
+// Module 5935 (NetworkStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import NetworkUtilsDefault from "NetworkUtils" /* 1481 */;
-import Constants from "Constants" /* 1084 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import NetworkUtilsDefault from "NetworkUtils" /* 1476 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 function handleConnectionInfoChange(type) {

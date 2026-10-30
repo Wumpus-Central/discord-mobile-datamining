@@ -1,14 +1,14 @@
-// === Module 1496: utils/ImageUtils ===
+// === Module 1491: utils/ImageUtils ===
 
-// Module 1496 (utils/ImageUtils)
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1451 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1452 */;
-import _modDef1491 from "module_1491" /* 1491 */;
-import useWindowDimensions from "useWindowDimensions" /* 1497 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1898 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1899 */;
+// Module 1491 (utils/ImageUtils)
+import AvatarUtils from "AvatarUtils" /* 1410 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1413 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1446 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1447 */;
+import _modDef1486 from "module_1486" /* 1486 */;
+import useWindowDimensions from "useWindowDimensions" /* 1492 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1893 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1894 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function getSrcWithWidthAndHeight(animated) {
     flag = false;
   }
   const tmp = _slicedToArray(src.split("?"), 2);
-  const items = [tmp[0], _modDef1491.parse(tmp[1])];
+  const items = [tmp[0], _modDef1486.parse(tmp[1])];
   [tmp5, tmp6] = items;
   if (re7.test(tmp5)) {
     tmp6.format = "webp";
@@ -68,12 +68,12 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp4 = _slicedToArray(items, 2);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    _modDef1491;
+    _modDef1486;
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;
 }
-function getMobileOptimizedSrc(proxy_url, c7, c72) {
+function getMobileOptimizedSrc(proxy_url, width, height) {
   let tmp = png;
   if (png === undefined) {
     tmp = null;
@@ -84,24 +84,24 @@ function getMobileOptimizedSrc(proxy_url, c7, c72) {
   }
   const size = useWindowDimensions.getWindowDimensions();
   const result = PixelRatio.getPixelSizeForLayoutSize(size.width) * num;
-  const bound = Math.min(sourceWidth > sourceHeight ? result / sourceWidth : PixelRatio.getPixelSizeForLayoutSize(size.height / 2) * num / sourceHeight, 1);
-  let rounded1 = sourceHeight;
-  let rounded = sourceWidth;
+  const bound = Math.min(width > height ? result / width : PixelRatio.getPixelSizeForLayoutSize(size.height / 2) * num / height, 1);
+  let rounded1 = height;
+  let rounded = width;
   if (bound < 1) {
     const _Math = Math;
-    rounded = Math.ceil(sourceWidth * bound);
+    rounded = Math.ceil(width * bound);
     const _Math2 = Math;
-    rounded1 = Math.ceil(sourceHeight * bound);
+    rounded1 = Math.ceil(height * bound);
   }
-  return getSrcWithWidthAndHeight({ src: proxy_url, sourceWidth, sourceHeight, targetWidth: rounded, targetHeight: rounded1, format: tmp });
+  return getSrcWithWidthAndHeight({ src: proxy_url, sourceWidth: width, sourceHeight: height, targetWidth: rounded, targetHeight: rounded1, format: tmp });
 }
-function getPaletteForAvatarMobile(src) {
+function getPaletteForAvatarMobile(automodAvatarURL) {
   const obj = utils_AvatarUtils;
-  const ensureAvatarSourceResult = obj.ensureAvatarSource(AvatarUtils.makeSource(src));
+  const ensureAvatarSourceResult = obj.ensureAvatarSource(AvatarUtils.makeSource(automodAvatarURL));
   return NativeImageManagerModuleDefault.getDominantColors(ensureAvatarSourceResult);
 }
 const PixelRatio = fn(17).PixelRatio;
-let closure_5 = fn(1084).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
+let closure_5 = fn(1072).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp2 = /\.(gif)$/i;
 const re6 = tmp2;
 const tmp3 = /\.(avif)$/i;

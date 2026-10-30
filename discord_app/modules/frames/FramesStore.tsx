@@ -1,15 +1,15 @@
-// === Module 6833: FramesStore ===
+// === Module 6840: FramesStore ===
 
-// Module 6833 (FramesStore)
+// Module 6840 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1095 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5646 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5661 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6835 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
-import FramesConstants from "FramesConstants" /* 6834 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import Constants from "Constants" /* 1083 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5652 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5667 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6842 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6843 */;
+import FramesConstants from "FramesConstants" /* 6841 */;
 import size from "module_2" /* 2 */;
 
 function computeMuted(poolVisibility, userMuted) {
@@ -91,11 +91,11 @@ prototype["getFrameByEmbeddedContext"] = function getFrameByEmbeddedContext(cont
   }
 };
 prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
-  return map.get(closure_1_8(arg0, arg1));
+  return map.get(React6(arg0, arg1));
 };
 prototype["getFramesForSurface"] = function getFramesForSurface(arg0) {
   closure_0 = arg0;
-  return Array.from(map.values()).filter((applicationId) => closure_2_8(applicationId.applicationId, closure_0) === applicationId.id);
+  return Array.from(map.values()).filter((applicationId) => React6(applicationId.applicationId, closure_0) === applicationId.id);
 };
 prototype["getFramesForChannel"] = function getFramesForChannel(id) {
   closure_0 = id;

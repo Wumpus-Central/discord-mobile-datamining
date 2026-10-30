@@ -1,31 +1,55 @@
-// === Module 18020: HappeningNowCardActivitySubtitle ===
+// === Module 18083: HappeningNowCardActivitySubtitle ===
 
-// Module 18020 (HappeningNowCardActivitySubtitle)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import useChannelNameDefault from "useChannelName" /* 5641 */;
-import isStreamingDefault from "isStreaming" /* 8789 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9054 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10719 */;
-import HappeningNowCard from "HappeningNowCard" /* 17164 */;
+// Module 18083 (HappeningNowCardActivitySubtitle)
+import util from "util" /* 1114 */;
+import useChannelNameDefault from "useChannelName" /* 5647 */;
+import ActivityTypes from "ActivityTypes" /* 5757 */;
+import isStreamingDefault from "isStreaming" /* 8823 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9066 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10742 */;
+import HappeningNowCard from "HappeningNowCard" /* 17218 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 require = fn;
-function getActivitySubtitle(activity, stream) {
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(5009);
+let closure_6 = createStyles.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
+
+export function HappeningNowVoiceCardSubtitle(voiceState) {
+  voiceState = voiceState.voiceState;
+  const tmp = closure_6();
+  const items = [ChannelStore];
+  const stateFromStores = voiceState(504).useStateFromStores(items, () => ChannelStore.getChannel(voiceState.channelId));
+  const obj2 = { style: tmp.cardDetails, children: null };
+  const obj = voiceState(504);
+  let tmp8;
+  if (null != stateFromStores) {
+    const obj3 = { channel: stateFromStores };
+    tmp8 = getChannelA11yLabelDefault(obj3);
+  }
+  obj2.children = jsx(voiceState(17218).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
+  return <View style={tmp.cardDetails}>{null}</View>;
+}
+export function HappeningNowActivityCardSubtitle(activity) {
+  activity = activity.activity;
   if (null != activity) {
-    if (activity.type === ActivityTypes.CUSTOM_STATUS) {
+    if (activity.type === ActivityTypes.ActivityTypes.CUSTOM_STATUS) {
       let trimmed = null;
       if (null != activity.state) {
         trimmed = activity.state.trim();
       }
-      let tmp3 = trimmed;
+      let tmp4 = trimmed;
     }
-    return tmp3;
+    const obj = { lineClamp: 1, children: tmp4 };
+    return jsx(HappeningNowCard.HappeningNowCardSubtitle, { lineClamp: 1, children: tmp4 });
   }
-  if (null != stream) {
+  if (null != activity.stream) {
     if (null != activity) {
-      if (activity.type === ActivityTypes.PLAYING) {
+      if (activity.type === ActivityTypes.ActivityTypes.PLAYING) {
         let name3 = activity.name;
       }
     }
@@ -36,7 +60,7 @@ function getActivitySubtitle(activity, stream) {
     if (activity != null) {
       name1 = activity.name;
     }
-    tmp3 = null;
+    tmp4 = null;
     if (null != name1) {
       if (!isStreamingDefault(activity)) {
         if (isListeningOnSpotifyDefault(activity)) {
@@ -54,121 +78,5 @@ function getActivitySubtitle(activity, stream) {
       }
       const details = activity.details;
     }
-  }
-}
-const View = fn(17).View;
-const ActivityTypes = fn(1084).ActivityTypes;
-const jsx = fn(21).jsx;
-const createStyles = fn(5005);
-let closure_7 = createStyles.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
-let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled();
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
-
-export function HappeningNowVoiceCardSubtitle(voiceState) {
-  if (closure_8) {
-    const cResult = voiceState(576).c(11);
-    voiceState = voiceState.voiceState;
-    closure_129_0 = voiceState;
-    let cardDetails = closure_7();
-    const _Symbol = Symbol;
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [ChannelStore];
-      cResult[0] = items;
-      let first = items;
-    } else {
-      first = cResult[0];
-    }
-    if (cResult[1] !== voiceState.channelId) {
-      const fn = function p() {
-        return ChannelStore.getChannel(voiceState.channelId);
-      };
-      cResult[1] = voiceState.channelId;
-      cResult[2] = fn;
-      let tmp20 = fn;
-    } else {
-      tmp20 = cResult[2];
-    }
-    const obj5 = voiceState(576);
-    const stateFromStores = voiceState(504).useStateFromStores(first, tmp20);
-    const tmp23 = useChannelNameDefault(stateFromStores);
-    if (cResult[3] !== stateFromStores) {
-      let tmp26;
-      if (null != stateFromStores) {
-        const obj2 = { channel: stateFromStores };
-        tmp26 = getChannelA11yLabelDefault(obj2);
-      }
-      cResult[3] = stateFromStores;
-      cResult[4] = tmp26;
-      let tmp24 = tmp26;
-    } else {
-      tmp24 = cResult[4];
-    }
-    if (cResult[5] === tmp23) {
-      if (cResult[6] === tmp24) {
-        let tmp27 = cResult[7];
-      }
-      if (cResult[8] === cardDetails.cardDetails) {
-      }
-      const obj3 = { style: cardDetails.cardDetails, children: tmp27 };
-      const tmp33 = <View style={cardDetails.cardDetails}>{tmp27}</View>;
-      cardDetails = cardDetails.cardDetails;
-      cResult[8] = cardDetails;
-      cResult[9] = tmp27;
-      cResult[10] = tmp33;
-    }
-    const obj4 = { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 };
-    const tmp29 = jsx(voiceState(17164).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 });
-    cResult[5] = tmp23;
-    cResult[6] = tmp24;
-    cResult[7] = tmp29;
-    tmp27 = tmp29;
-    const tmp13Result = voiceState(504);
-  } else {
-    voiceState = voiceState.voiceState;
-    const tmp2 = closure_7();
-    const items1 = [ChannelStore];
-    const stateFromStores1 = voiceState(504).useStateFromStores(items1, () => ChannelStore.getChannel(voiceState.channelId));
-    const obj6 = { style: tmp2.cardDetails, children: null };
-    const obj = voiceState(504);
-    let tmp12;
-    if (null != stateFromStores1) {
-      const obj7 = { channel: stateFromStores1 };
-      tmp12 = getChannelA11yLabelDefault(obj7);
-    }
-    const obj8 = { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) };
-    obj6.children = jsx(voiceState(17164).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) });
-    return <View style={tmp2.cardDetails}>{null}</View>;
-  }
-}
-export function HappeningNowActivityCardSubtitle(activity) {
-  if (closure_10) {
-    let HappeningNowCardSubtitle = require;
-    let tmp6 = dependencyMap;
-    const cResult = c.c(5);
-    ({ activity, stream } = activity);
-    if (cResult[0] === activity) {
-      if (cResult[1] === stream) {
-        let tmp8 = cResult[2];
-      }
-      if (cResult[3] !== tmp8) {
-        HappeningNowCardSubtitle = HappeningNowCardSubtitle(17164).HappeningNowCardSubtitle;
-        const obj3 = { lineClamp: 1, children: tmp8 };
-        tmp6 = <HappeningNowCardSubtitle lineClamp={1}>{tmp8}</HappeningNowCardSubtitle>;
-        cResult[3] = tmp8;
-        cResult[4] = tmp6;
-      }
-    }
-    const tmp10 = getActivitySubtitle(activity, stream);
-    cResult[0] = activity;
-    cResult[1] = stream;
-    cResult[2] = tmp10;
-    tmp8 = tmp10;
-  } else {
-    const obj = { lineClamp: 1, children: getActivitySubtitle(activity.activity, activity.stream) };
-    return jsx(HappeningNowCard.HappeningNowCardSubtitle, { lineClamp: 1, children: getActivitySubtitle(activity.activity, activity.stream) });
   }
 }

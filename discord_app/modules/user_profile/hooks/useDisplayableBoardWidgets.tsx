@@ -1,11 +1,10 @@
-// === Module 14892: useDisplayableBoardWidgets ===
+// === Module 14929: useDisplayableBoardWidgets ===
 
-// Module 14892 (useDisplayableBoardWidgets)
-import c from "c" /* 576 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7762 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7765 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7766 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 14893 */;
+// Module 14929 (useDisplayableBoardWidgets)
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7767 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7770 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7771 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 14930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,25 +24,12 @@ function isNonEmptyBoardWidget(games) {
   }
   return tmp3;
 }
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
-export const useDisplayableBoardWidgets = ReactCompilerGating.isReactCompilerEnabled() ? (function useDisplayableBoardWidgets(arg0) {
-  const cResult = c.c(2);
-  const arr = useUserProfileWidgetsDefault(arg0);
-  if (cResult[0] !== arr) {
-    const found = arr.filter(isNonEmptyBoardWidget);
-    cResult[0] = arr;
-    cResult[1] = found;
-    let tmp2 = found;
-  } else {
-    tmp2 = cResult[1];
-  }
-  return tmp2;
-}) : (function useDisplayableBoardWidgets(arg0) {
-  const tmp = useUserProfileWidgetsDefault(arg0);
+export function useDisplayableBoardWidgets(id) {
+  const tmp = useUserProfileWidgetsDefault(id);
   closure_0 = tmp;
   const items = [tmp];
   return noop.useMemo(() => closure_0.filter(isNonEmptyBoardWidget), items);
-});
+}

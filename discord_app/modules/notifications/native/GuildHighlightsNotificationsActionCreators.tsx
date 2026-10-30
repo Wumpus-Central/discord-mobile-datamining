@@ -1,10 +1,10 @@
-// === Module 10108: GuildHighlightsNotificationsActionCreators ===
+// === Module 10135: GuildHighlightsNotificationsActionCreators ===
 
-// Module 10108 (GuildHighlightsNotificationsActionCreators)
-import Constants from "Constants" /* 1084 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import Constants2 from "Constants" /* 10109 */;
+// Module 10135 (GuildHighlightsNotificationsActionCreators)
+import Constants from "Constants" /* 1072 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import Constants2 from "Constants" /* 10136 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -60,5 +60,5 @@ export function openGuildHighlightNotificationForPush(guild_id2, message, notifi
     AnalyticsUtilsDefault.track(AnalyticEvents.FEEDBACK_FORM_SUBMITTED, obj3);
   };
   obj2.feedbackSettings = obj3;
-  obj.openLazy(require("asyncRequireImpl")(10110, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+  obj.openLazy(require("asyncRequireImpl")(10137, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
 }

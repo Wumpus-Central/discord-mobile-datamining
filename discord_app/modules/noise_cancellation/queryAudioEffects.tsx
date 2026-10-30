@@ -1,9 +1,9 @@
-// === Module 15871: queryAudioEffects ===
+// === Module 15910: queryAudioEffects ===
 
-// Module 15871 (queryAudioEffects)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
-import DiscordNativeDefault from "DiscordNative" /* 4819 */;
-import _modDef15814 from "module_15814" /* 15814 */;
+// Module 15910 (queryAudioEffects)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1377 */;
+import DiscordNativeDefault from "DiscordNative" /* 4820 */;
+import _modDef15853 from "module_15853" /* 15853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -25,7 +25,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -57,7 +57,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
                 const obj7 = { value: Promise.reject(error), done: true };
                 return obj7;
               }
-              obj5 = _modDef15814;
+              obj5 = _modDef15853;
             } else {
               const _Error = Error;
               const error1 = new Error("Audio effects querying not supported on non-Windows platforms");
@@ -73,7 +73,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
           closure_132_5.error("Failed to probe audio effects for device", closure_131_2);
           closure_132_1(closure_132_2[7]).track(closure_132_4.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
           c8 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c8 = 3;
           throw value;
@@ -107,7 +107,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
     }
   })();
 };
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const logger = new fn(4).Logger("AudioEffects");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");

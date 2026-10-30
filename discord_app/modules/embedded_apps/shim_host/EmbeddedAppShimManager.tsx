@@ -1,13 +1,13 @@
-// === Module 19315: EmbeddedAppShimManager ===
+// === Module 19378: EmbeddedAppShimManager ===
 
-// Module 19315 (EmbeddedAppShimManager)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators" /* 11563 */;
-import protocol from "protocol" /* 19316 */;
-import embeddedAppShimKeybindsDefault from "embeddedAppShimKeybinds" /* 19319 */;
+// Module 19378 (EmbeddedAppShimManager)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators" /* 11764 */;
+import protocol from "protocol" /* 19379 */;
+import embeddedAppShimKeybindsDefault from "embeddedAppShimKeybinds" /* 19382 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FramesStore from "FramesStore" /* 6833 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import FramesStore from "FramesStore" /* 6840 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
 function createParentStateMessage(iframeId) {
@@ -66,7 +66,7 @@ function handleShimPipeOpen(iframeId) {
           }
         }
     };
-    const embeddedAppShimHost = iframeId(19320).createEmbeddedAppShimHost(obj2);
+    const embeddedAppShimHost = iframeId(19383).createEmbeddedAppShimHost(obj2);
     let result = map.set(iframeId, embeddedAppShimHost);
     let frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
     if (null == frameByIframeId) {
@@ -79,7 +79,7 @@ function handleShimPipeOpen(iframeId) {
       obj3 = { muted: frameByIframeId.data.muted };
     }
     const result1 = map1.set(iframeId, obj3);
-    let obj4 = iframeId(19320);
+    let obj4 = iframeId(19383);
   }
 }
 function handleIFrameUnmount(id) {
@@ -107,7 +107,7 @@ function updateParentStates() {
   }
   tmp2 = map[Symbol.iterator]();
 }
-const ComponentActions = fn(1084).ComponentActions;
+const ComponentActions = fn(1072).ComponentActions;
 let closure_6 = { muted: false };
 const map = new Map();
 const map1 = new Map();

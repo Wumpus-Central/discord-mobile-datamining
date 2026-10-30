@@ -1,111 +1,31 @@
-// === Module 13070: GuildEnableCommunicationAlert ===
+// === Module 13221: GuildEnableCommunicationAlert ===
 
-// Module 13070 (GuildEnableCommunicationAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6029 */;
-import useUserCommunicationDisabledDefault from "useUserCommunicationDisabled" /* 8389 */;
-import CountDownDefault from "CountDown" /* 10102 */;
+// Module 13221 (GuildEnableCommunicationAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import CountDownDefault from "CountDown" /* 10129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
-const require = globalThis.__r;
-
-const useMountEffectDefault = tmp11(5300);
 const require = fn;
-let closure_3 = ["guildId", "userId", "onCancel"];
 const View = fn(17).View;
-const GuildDisableCommunicationConstants = fn(4919);
-({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: closure_9, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: c10 } = GuildDisableCommunicationConstants);
-const Constants = fn(1084);
-({ AnalyticEvents: closure_11, Fonts } = Constants);
+const GuildDisableCommunicationConstants = fn(4923);
+({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: closure_7, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8 } = GuildDisableCommunicationConstants);
+const Constants = fn(1072);
+({ AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5005);
-let closure_14 = createStyles.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: { fontFamily: Fonts.PRIMARY_SEMIBOLD } });
-const ReactCompilerGating = fn(558);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5009);
+let closure_12 = createStyles.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: { fontFamily: Fonts.PRIMARY_SEMIBOLD } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEnableCommunicationAlert(guildId) {
-  const cResult = require("c").c(43);
-  if (cResult[0] !== guildId) {
-    guildId = guildId.guildId;
-    _require = guildId;
-    const userId = guildId.userId;
-    importDefault = userId;
-    const onCancel = guildId.onCancel;
-    const tmp9 = _objectWithoutProperties(guildId, first);
-    cResult[0] = guildId;
-    cResult[1] = tmp9;
-    cResult[2] = guildId;
-    cResult[3] = onCancel;
-    cResult[4] = userId;
-  } else {
-    _require = cResult[2];
-    importDefault = cResult[4];
-  }
-  const tmp10 = closure_14();
-  dependencyMap = tmp10;
-  first = _slicedToArray(useUserCommunicationDisabledDefault(tmp6, tmp4), 1)[0];
-  if (cResult[5] === first) {
-    if (cResult[8] === tmp4) {
-      if (cResult[9] === tmp6) {
-        let tmp14 = cResult[10];
-      }
-      useMountEffectDefault(tmp14);
-      class U {
-        constructor() {
-          obj = closure_1(closure_2[14]);
-          obj1 = { type: closure_9, guild_id: closure_0, other_user_id: closure_1 };
-          trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
-          return;
-        }
-      }
-      function getUsername() {
-        const user = UserStore.getUser(closure_1);
-        let str = NicknameUtilsDefault.getName(closure_0, null, user);
-        if (str == null) {
-          str = "";
-        }
-        return str;
-      }
-      cResult[11] = tmp4;
-      cResult[12] = tmp6;
-      cResult[13] = getUsername;
-    }
-    class U {
-      constructor() {
-        obj = closure_1(closure_2[14]);
-        obj1 = { type: closure_9, guild_id: closure_0, other_user_id: closure_1 };
-        trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
-        return;
-      }
-    }
-    cResult[8] = tmp4;
-    cResult[9] = tmp6;
-    cResult[10] = U;
-    tmp14 = U;
-  }
-  function countdown() {
-    let num = 0;
-    if (null != first) {
-      const _Date = Date;
-      num = new Date(first);
-    }
-    return __initData(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
-  }
-  cResult[5] = first;
-  cResult[6] = tmp10.countdown;
-  cResult[7] = countdown;
-  let obj = require("c");
-}) : (function GuildEnableCommunicationAlert(guildId) {
+export default function GuildEnableCommunicationAlert(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const merged = Object.assign(guildId, Object.assign({ guildId: 0, userId: 0, onCancel: 0 }));
-  closure_4 = async function _handleConfirmRemoveTimeout2() {
+  _slicedToArray = async function _handleConfirmRemoveTimeout(arg0) {
     if (dependencyMap === 2) {
       dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -116,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -132,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(13069).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(13220).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -144,11 +64,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
           return obj;
         } else {
           const obj7 = { text: null, variant: "success" };
-          const intl = tmp4(1125).intl;
-          obj7.text = intl.string(tmp4(1125).t["/Mmbfv"]);
-          v1(5701).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
+          const intl = tmp4(1114).intl;
+          obj7.text = intl.string(tmp4(1114).t["/Mmbfv"]);
+          v1(5707).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;
@@ -156,27 +76,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
       }
     }
   };
-  const tmp2 = closure_14();
+  const tmp2 = closure_12();
   dependencyMap = tmp2;
-  closure_3 = _slicedToArray(userId(8389)(userId, guildId), 1)[0];
-  userId(5300)(() => {
+  closure_3 = _slicedToArray(userId(8426)(userId, guildId), 1)[0];
+  userId(5588)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });
   let obj = {};
   const merged1 = Object.assign(merged);
-  let intl = guildId(1125).intl;
-  obj.title = intl.string(guildId(1125).t["+ZD3ou"]);
+  let intl = guildId(1114).intl;
+  obj.title = intl.string(guildId(1114).t["+ZD3ou"]);
   obj.style = tmp2.wrapper;
-  const intl2 = guildId(1125).intl;
-  obj.cancelText = intl2.string(guildId(1125).t["ETE/oC"]);
+  const intl2 = guildId(1114).intl;
+  obj.cancelText = intl2.string(guildId(1114).t["ETE/oC"]);
   let onClose;
   if (merged != null) {
     onClose = merged.onClose;
   }
   obj.onClose = onClose;
   obj.onCancel = guildId.onCancel;
-  const intl3 = tmp9(1125).intl;
-  obj.confirmText = intl3.string(guildId(1125).t.qXtNtS);
+  const intl3 = tmp9(1114).intl;
+  obj.confirmText = intl3.string(guildId(1114).t.qXtNtS);
   obj.onConfirm = function handleConfirmRemoveTimeout() {
     const self = this;
     const apply = closure_4.apply;
@@ -189,14 +109,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
   };
   const obj2 = { style: tmp2.body, children: null };
   let obj3 = { style: tmp2.description, variant: "text-sm/medium", children: null };
-  const intl4 = tmp9(1125).intl;
+  const intl4 = tmp9(1114).intl;
   const user = UserStore.getUser(userId);
-  const tmp7 = userId(6018);
-  let str = userId(6029).getName(guildId, null, user);
+  const tmp7 = userId(6025);
+  let str = userId(6036).getName(guildId, null, user);
   if (str == null) {
     str = "";
   }
-  obj3.children = intl4.format(guildId(1125).t["t+abNU"], {
+  obj3.children = intl4.format(guildId(1114).t["t+abNU"], {
     username: str,
     countdown(arg0) {
       let num = 0;
@@ -204,18 +124,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
         const _Date = Date;
         num = new Date(closure_3);
       }
-      return __initData(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
+      return closure_2_10(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
-  const items = [closure_12(guildId(5271).Text, obj3), ];
+  const items = [closure_10(guildId(5619).Text, obj3), ];
   let obj5 = { style: null, variant: "text-sm/medium", children: null };
   const items1 = [, ];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   obj5.style = items1;
-  const intl5 = tmp9(1125).intl;
-  obj5.children = intl5.format(guildId(1125).t.KtENkK, { link });
-  items[1] = closure_12(guildId(5271).Text, obj5);
+  const intl5 = tmp9(1114).intl;
+  obj5.children = intl5.format(guildId(1114).t.KtENkK, { link });
+  items[1] = closure_10(guildId(5619).Text, obj5);
   obj2.children = items;
-  obj.children = closure_13(View, obj2);
-  return closure_12(tmp7, obj);
-});
+  obj.children = closure_11(View, obj2);
+  return closure_10(tmp7, obj);
+};

@@ -1,18 +1,18 @@
-// === Module 10812: conjureAgentReaction ===
+// === Module 10835: conjureAgentReaction ===
 
-// Module 10812 (conjureAgentReaction)
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4951 */;
+// Module 10835 (conjureAgentReaction)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4955 */;
 import size from "module_2" /* 2 */;
 
 const re3 = /^\d{17,20}$/;
 const re4 = /^\w{2,32}$/;
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureAgentReaction.tsx");
 
-export function agentReactionFromStep(setting) {
-  let animated = setting;
-  ({ emoji, emoji_id } = setting);
+export function agentReactionFromStep(message_id) {
+  let animated = message_id;
+  ({ emoji, emoji_id } = message_id);
   let tmp = null;
   if (null != emoji) {
     tmp = null;
@@ -46,5 +46,5 @@ export function getConjureAgentReactionLabel(reaction) {
     emojiName = UnicodeEmojisDefault.convertSurrogateToName(reaction.emoji, false);
   }
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3864.lxXLho, { emojiName });
+  return intl.formatToPlainString(_modDef3865.lxXLho, { emojiName });
 }

@@ -1,12 +1,12 @@
-// === Module 6944: ExpressionSourceRecord ===
+// === Module 6952: ExpressionSourceRecord ===
 
-// Module 6944 (ExpressionSourceRecord)
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4871 */;
-import SetUtils from "SetUtils" /* 4874 */;
+// Module 6952 (ExpressionSourceRecord)
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4872 */;
+import SetUtils from "SetUtils" /* 4875 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import Record from "Record" /* 1404 */;
+import Record from "Record" /* 1399 */;
 
 require = fn;
 function getEmojiSourceData() {
@@ -70,7 +70,7 @@ let closure_8 = async function _getEmojiSourceData(arg0) {
   }
   return value;
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: closure_4, GuildFeatures: hasOwnProperty } = Constants);
 const EmojiSourceDataTypes = { GUILD: "GUILD", APPLICATION: "APPLICATION", PACK: "PACK" };
 let ExpressionSourceGuildRecord;
@@ -91,11 +91,10 @@ prototype["getIconURL"] = function getIconURL(size) {
 };
 prototype["getIconSource"] = function getIconSource(size) {
   const self = this;
-  let flag = hasItem;
-  if (hasItem === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
-  return self(1415).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
+  return self(1410).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
 };
 prototype["hasFeature"] = function hasFeature(arg0) {
   const features = this.features;
@@ -111,7 +110,7 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
     closure_0 = tmp2;
     await closure_1_7(closure_0);
     closure_128_0 = value;
-    guild = null;
+    let guild = null;
     if (null != closure_128_0) {
       let type;
       if (closure_128_0 != null) {

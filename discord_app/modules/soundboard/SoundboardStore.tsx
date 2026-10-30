@@ -1,19 +1,19 @@
-// === Module 6046: SoundboardStore ===
+// === Module 6053: SoundboardStore ===
 
-// Module 6046 (SoundboardStore)
+// Module 6053 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import _modDef2047 from "module_2047" /* 2047 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import FrecencyDefault from "Frecency" /* 5768 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5897 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import _modDef2044 from "module_2044" /* 2044 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import FrecencyDefault from "Frecency" /* 5775 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5904 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import UserStore from "UserStore" /* 1389 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 6047 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import UserStore from "UserStore" /* 1384 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 6054 */;
 import apply_mod from "module_12" /* 12 */;
 
 require = fn;
@@ -73,10 +73,10 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(6048);
+const SoundboardConstants = fn(6055);
 ({ DEFAULT_SOUND_GUILD_ID: closure_8, EMPTY_SOUND_ID_LIST: closure_9 } = SoundboardConstants);
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const UserSettingsTypes = fn(1094).UserSettingsTypes;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const UserSettingsTypes = fn(1082).UserSettingsTypes;
 const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 let map = new Map();
 const map1 = new Map();
@@ -113,7 +113,7 @@ let closure_22 = new FrecencyDefault({
       }
       return num2;
     }
-    obj = _modDef2047();
+    obj = _modDef2044();
   },
   lookupKey(arg0) {
     return arg0;
@@ -204,8 +204,8 @@ prototype["isUserPlayingSounds"] = function isUserPlayingSounds(id) {
   }
   return tmp2;
 };
-prototype["isPlayingSound"] = function isPlayingSound(soundId) {
-  return null != map2.get(soundId);
+prototype["isPlayingSound"] = function isPlayingSound(sharedValue1) {
+  return null != map2.get(sharedValue1);
 };
 prototype["isFavoriteSound"] = function isFavoriteSound(soundId) {
   return set.has(soundId);
@@ -221,7 +221,7 @@ prototype["getTopSoundboardSoundsMetadata"] = function getTopSoundboardSoundsMet
 };
 prototype["getTopSoundboardSoundIds"] = function getTopSoundboardSoundIds(id) {
   if (null == id) {
-    return React6;
+    return React7;
   } else {
     value = map1.get(id);
     let soundIds;
@@ -233,7 +233,7 @@ prototype["getTopSoundboardSoundIds"] = function getTopSoundboardSoundIds(id) {
       soundIds = topSoundboardSoundIdsByGuildId;
     }
     if (soundIds == null) {
-      soundIds = React6;
+      soundIds = React7;
     }
     return soundIds;
   }
@@ -424,7 +424,7 @@ const soundboardStore = new SoundboardStore(DispatcherDefault, {
     FETCHED = obj.FETCHING;
   },
   SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function handleFetchDefaultSoundsSuccess(soundboardSounds) {
-    const result = map.set(closure_1_8, soundboardSounds.soundboardSounds);
+    const result = map.set(React6, soundboardSounds.soundboardSounds);
     FETCHED = obj.FETCHED;
   },
   SOUNDBOARD_SOUNDS_RECEIVED: function handleSoundboardSoundsReceived(updates) {
@@ -456,8 +456,8 @@ const soundboardStore = new SoundboardStore(DispatcherDefault, {
   TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS: function handleTopSoundboardSoundsLoaded(topSoundsMetadata) {
     topSoundsMetadata = topSoundsMetadata.topSoundsMetadata;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: null };
-    const obj2 = _modDef2047();
-    obj.topSoundsTTL = _modDef2047().add(1, "days").valueOf();
+    const obj2 = _modDef2044();
+    obj.topSoundsTTL = _modDef2044().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
   }
 });

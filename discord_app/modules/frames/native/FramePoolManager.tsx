@@ -1,10 +1,10 @@
-// === Module 11874: FramePoolManager ===
+// === Module 12070: FramePoolManager ===
 
-// Module 11874 (FramePoolManager)
-import leaveFrame from "leaveFrame" /* 10879 */;
-import FrameStackLevel from "FrameStackLevel" /* 11876 */;
-import FramePoolActionCreators from "FramePoolActionCreators" /* 11877 */;
-import AbstractFramePoolManager from "AbstractFramePoolManager" /* 11875 */;
+// Module 12070 (FramePoolManager)
+import leaveFrame from "leaveFrame" /* 10902 */;
+import FrameStackLevel from "FrameStackLevel" /* 12072 */;
+import FramePoolActionCreators from "FramePoolActionCreators" /* 12073 */;
+import AbstractFramePoolManager from "AbstractFramePoolManager" /* 12071 */;
 
 require = fn;
 class FramePoolManager extends tmp4 {
@@ -44,9 +44,9 @@ prototype["setWebViewLoaded"] = function setWebViewLoaded(id, iframeId) {
     self.emitChange();
   }
 };
-prototype["isWebViewLoaded"] = function isWebViewLoaded(frameId, arg1) {
+prototype["isWebViewLoaded"] = function isWebViewLoaded(layoutMode, arg1) {
   const loadedWebViewKeys = this.loadedWebViewKeys;
-  return loadedWebViewKeys.get(frameId) === arg1;
+  return loadedWebViewKeys.get(layoutMode) === arg1;
 };
 prototype["place"] = function place(id, target, level) {
   let str = "hidden";

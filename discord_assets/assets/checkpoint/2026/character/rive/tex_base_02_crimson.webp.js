@@ -1,6 +1,6 @@
-// === Module 13277: ? ===
+// === Module 13427: ? ===
 
-// Module 13277
+// Module 13427
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_base_02_crimson.webp.js");

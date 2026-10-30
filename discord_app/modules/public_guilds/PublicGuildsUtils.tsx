@@ -1,11 +1,11 @@
-// === Module 8460: PublicGuildsUtils ===
+// === Module 8494: PublicGuildsUtils ===
 
-// Module 8460 (PublicGuildsUtils)
-import Constants from "Constants" /* 1084 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import isCrosspostDefault from "isCrosspost" /* 8462 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8461 */;
+// Module 8494 (PublicGuildsUtils)
+import Constants from "Constants" /* 1072 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import isCrosspostDefault from "isCrosspost" /* 8496 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8495 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -29,7 +29,7 @@ export function isPublicSystemMessage(message) {
   return tmp;
 }
 export function getPublicSystemMessageAvatar() {
-  return require("module_8463");
+  return require("module_8497");
 }
 export function trackEnableCommunityFlow(fromStep) {
   const obj = AnalyticsUtilsDefault;

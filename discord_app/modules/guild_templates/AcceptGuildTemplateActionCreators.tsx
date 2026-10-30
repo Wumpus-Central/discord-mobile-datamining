@@ -1,20 +1,20 @@
-// === Module 13020: AcceptGuildTemplateActionCreators ===
+// === Module 13182: AcceptGuildTemplateActionCreators ===
 
-// Module 13020 (AcceptGuildTemplateActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import transitionToGuild from "transitionToGuild" /* 7508 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 13182 (AcceptGuildTemplateActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import transitionToGuild from "transitionToGuild" /* 7516 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_templates/AcceptGuildTemplateActionCreators.tsx");
 
 export default {
-  acceptGuildTemplate(code, first1, first12) {
-    importDefault = first1;
-    dependencyMap = first12;
+  acceptGuildTemplate(code, name, first1) {
+    importDefault = name;
+    dependencyMap = first1;
     DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_ACCEPT", code });
     let obj2 = { type: "GUILD_TEMPLATE_ACCEPT", code };
     return new Promise((code, arg1) => {

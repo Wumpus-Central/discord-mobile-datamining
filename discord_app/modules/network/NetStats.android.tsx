@@ -1,17 +1,17 @@
-// === Module 7627: NetStats ===
+// === Module 7632: NetStats ===
 
-// Module 7627 (NetStats)
+// Module 7632 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import configure from "configure" /* 1483 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5194 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5936 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import configure from "configure" /* 1478 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5200 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5943 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7628 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import NetworkUtils_mod from "utils/NetworkUtils" /* 1482 */;
-import Dispatcher_mod from "Dispatcher" /* 584 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7633 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import NetworkUtils_mod from "utils/NetworkUtils" /* 1477 */;
+import Dispatcher_mod from "Dispatcher" /* 572 */;
 
 require = fn;
 function receiveNetworkInfoformation(result) {
@@ -48,12 +48,12 @@ function updateNetworkUsage() {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, AppState } = get_ActivityIndicator);
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 let closure_9 = new LoggerDefault("NetStats");
 let closure_10 = { signalStrengthLevel: null, isNetworkRoaming: false, cellularReceiveBytes: 0, cellularSendBytes: 0, totalReceiveBytes: 0, totalSendBytes: 0, uidReceiveBytes: 0, uidSendBytes: 0, socketBytesReceived: 0, otaBytesReceived: 0, otaNumRequests: 0, xhrBytesReceived: 0, xhrNumRequests: 0, frescoBytesReceived: 0, frescoNumRequests: 0, downloadBytesReceived: 0, downloadNumRequests: 0, mediaPlayerBytesReceived: 0 };
 let c11 = null;
 const tmp3 = new LoggerDefault("NetStats");
-let global = { type: fn(1483).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+let global = { type: fn(1478).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 global = null;
 let closure_14 = "active" === AppState.currentState;
 let closure_15 = 0;
@@ -158,7 +158,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -226,7 +226,7 @@ prototype["track"] = function track() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

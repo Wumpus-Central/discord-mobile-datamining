@@ -1,29 +1,29 @@
-// === Module 16224: ActivitySessionAnalytics ===
+// === Module 16264: ActivitySessionAnalytics ===
 
-// Module 16224 (ActivitySessionAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import v1 from "v1" /* 1278 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import getPlatformDefault from "getPlatform" /* 5671 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5942 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6527 */;
-import MetricEvents from "MetricEvents" /* 6532 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6870 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9721 */;
-import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10891 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 11495 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11496 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 11503 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 14602 */;
+// Module 16264 (ActivitySessionAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import v1 from "v1" /* 1267 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import getPlatformDefault from "getPlatform" /* 5677 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5949 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6534 */;
+import MetricEvents from "MetricEvents" /* 6539 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6877 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9747 */;
+import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10914 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 11695 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 11696 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 11703 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 14635 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2043 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
-import QuestStore from "QuestStore" /* 7834 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import UserStore from "UserStore" /* 1389 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 16225 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import ApplicationStore from "ApplicationStore" /* 2040 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
+import QuestStore from "QuestStore" /* 7839 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import UserStore from "UserStore" /* 1384 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 16265 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
 
 require = fn;
 function resolveFrameLaunchContext(applicationId, arg1) {
@@ -106,7 +106,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -192,7 +192,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
     }
   }
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, ApplicationFlags: map1 } = Constants);
 const activeSessionIds = {};
 let obj2 = {};

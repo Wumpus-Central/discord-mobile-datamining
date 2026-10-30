@@ -1,7 +1,7 @@
-// === Module 7634: ClickstreamExperiment ===
+// === Module 7639: ClickstreamExperiment ===
 
-// Module 7634 (ClickstreamExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 7639 (ClickstreamExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-clickstream-analytics", kind: "user", defaultConfig: { enabled: false }, variations: null };

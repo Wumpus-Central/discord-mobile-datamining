@@ -1,9 +1,9 @@
-// === Module 2040: GameDetectionTypes ===
+// === Module 2037: GameDetectionTypes ===
 
-// Module 2040 (GameDetectionTypes)
-import Record from "Record" /* 1404 */;
+// Module 2037 (GameDetectionTypes)
+import Record from "Record" /* 1399 */;
 
-const createExecutable = fn(2022).createExecutable;
+const createExecutable = fn(2017).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
 class DetectableGameRecord extends tmp2 {

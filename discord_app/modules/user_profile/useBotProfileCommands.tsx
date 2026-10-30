@@ -1,57 +1,15 @@
-// === Module 11256: useBotProfileCommands ===
+// === Module 11461: useBotProfileCommands ===
 
-// Module 11256 (useBotProfileCommands)
-import c from "c" /* 576 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10271 */;
+// Module 11461 (useBotProfileCommands)
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10296 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-const ReactCompilerGating = fn(558);
+const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBotProfileCommands(arg0, arg1, arg2) {
-  const cResult = c.c(5);
-  const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(arg0, arg1, arg2);
-  ({ commands, application } = accessibleCommandsForApplication);
-  if (cResult[0] !== commands) {
-    let found;
-    if (commands != null) {
-      found = commands.filter((nsfw) => {
-        let tmp = true !== nsfw.nsfw;
-        if (tmp) {
-          const options = nsfw.options;
-          let found;
-          if (options != null) {
-            found = options.find((type) => {
-              type = type.type;
-              return type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND || type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
-            });
-          }
-          tmp = null == found;
-        }
-        return tmp;
-      });
-    }
-    cResult[0] = commands;
-    cResult[1] = found;
-    let tmp3 = found;
-  } else {
-    tmp3 = cResult[1];
-  }
-  if (cResult[2] === application) {
-    if (cResult[3] === tmp3) {
-      let tmp6 = cResult[4];
-    }
-    return tmp6;
-  }
-  const obj3 = { application, commands: tmp3 };
-  cResult[2] = application;
-  cResult[3] = tmp3;
-  cResult[4] = obj3;
-  tmp6 = obj3;
-}) : (function useBotProfileCommands(arg0, arg1, arg2) {
-  const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(arg0, arg1, arg2);
+export default function useBotProfileCommands(channel, arg1, arg2) {
+  const accessibleCommandsForApplication = ApplicationCommandQueryApiAll.useAccessibleCommandsForApplication(channel, arg1, arg2);
   const commands = accessibleCommandsForApplication.commands;
   const obj2 = { application: accessibleCommandsForApplication.application, commands: null };
   const items = [commands];
@@ -66,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBotPr
           if (options != null) {
             found = options.find((type) => {
               type = type.type;
-              return type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND || type === closure_1_0(dependencyMap[4]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+              return type === closure_1_0(dependencyMap[2]).ApplicationCommandOptionType.SUB_COMMAND || type === closure_1_0(dependencyMap[2]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
             });
           }
           tmp = null == found;
@@ -77,4 +35,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBotPr
     return found;
   }, items);
   return obj2;
-});
+};

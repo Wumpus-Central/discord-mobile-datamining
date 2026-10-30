@@ -1,13 +1,13 @@
-// === Module 19511: VoiceChannelSettingsManager ===
+// === Module 19574: VoiceChannelSettingsManager ===
 
-// Module 19511 (VoiceChannelSettingsManager)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 19574 (VoiceChannelSettingsManager)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import BitRateStore from "BitRateStore" /* 15800 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import VideoQualityModeStore from "VideoQualityModeStore" /* 15801 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import BitRateStore from "BitRateStore" /* 15839 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import VideoQualityModeStore from "VideoQualityModeStore" /* 15840 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 function updateVoiceSettings() {
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
@@ -51,7 +51,7 @@ function handleVoiceStateUpdates(voiceStates) {
     }
   });
 }
-const VideoQualityMode = fn(1084).VideoQualityMode;
+const VideoQualityMode = fn(1072).VideoQualityMode;
 const prototype = function VoiceChannelSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_UPDATES: handleChannelUpdates, VOICE_STATE_UPDATES: handleVoiceStateUpdates };

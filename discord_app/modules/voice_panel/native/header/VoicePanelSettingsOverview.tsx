@@ -1,311 +1,113 @@
-// === Module 19059: VoicePanelSettingsOverview ===
+// === Module 19166: VoicePanelSettingsOverview ===
 
-// Module 19059 (VoicePanelSettingsOverview)
+// Module 19166 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5748 */;
-import TableRow from "TableRow" /* 6963 */;
-import TableRowIcon from "TableRowIcon" /* 6971 */;
-import TableRowArrow from "TableRowArrow" /* 6972 */;
-import TableSwitchRow from "TableSwitchRow" /* 7355 */;
-import LockIcon from "LockIcon" /* 8625 */;
-import showShareActionSheet from "showShareActionSheet" /* 8888 */;
-import FormComponents from "FormComponents" /* 9200 */;
-import useIsSecureFramesVerified from "useIsSecureFramesVerified" /* 9214 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9237 */;
-import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9252 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10160 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11707 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 14663 */;
-import _modDef15094 from "module_15094" /* 15094 */;
-import WrenchIcon from "WrenchIcon" /* 17432 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19057 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 19060 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5754 */;
+import TableRow from "TableRow" /* 6969 */;
+import TableRowIcon from "TableRowIcon" /* 6977 */;
+import TableRowArrow from "TableRowArrow" /* 6978 */;
+import TableSwitchRow from "TableSwitchRow" /* 7363 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8191 */;
+import _modDef8342 from "module_8342" /* 8342 */;
+import LockIcon from "LockIcon" /* 8659 */;
+import showShareActionSheet from "showShareActionSheet" /* 8922 */;
+import FormComponents from "FormComponents" /* 9213 */;
+import useIsSecureFramesVerified from "useIsSecureFramesVerified" /* 9227 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9250 */;
+import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9265 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11900 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 14697 */;
+import WrenchIcon from "WrenchIcon" /* 17486 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19164 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 19167 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11466 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11667 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import UserStore from "UserStore" /* 1389 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5755 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import UserStore from "UserStore" /* 1384 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5762 */;
 
 require = fn;
-const Constants = fn(1084);
-({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
-const isStreamParticipant = fn(5670).isStreamParticipant;
-let closure_17 = fn(9234).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
-const jsxProd = fn(21);
-({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(5005);
-let obj = { headerContainer: { alignItems: "center" }, channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 }, channelTitle: { textAlign: "center" }, channelSubtitle: { marginTop: 4, marginHorizontal: 16, textAlign: "center" }, secureFrames: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, marginTop: 8, padding: 4, gap: 4 }, secureFramesIcon: { marginStart: 4 } };
-let closure_21 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelSettingsOverviewHeader(guildId) {
-  const cResult = guildId(576).c(33);
-  guildId = guildId.guildId;
-  const channelId = guildId.channelId;
-  const tmp4 = closure_21();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [SortedVoiceStateStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === channelId) {
-    if (cResult[2] === guildId) {
-      let tmp7 = cResult[3];
+class VoicePanelSettingsOverviewHeader {
+  constructor(arg0) {
+    ({ guildId, channelId } = global);
+    tmp = closure_21();
+    tmp2 = guildId;
+    tmp3 = closure_2;
+    obj = guildId(closure_2[16]);
+    items = [];
+    items[0] = closure_12;
+    stateFromStores = obj.useStateFromStores(items, () => {
+      const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channelId, require);
+      const substr = voiceStatesForChannelAlt.slice(0, 2);
+      const mapped = substr.map((user) => user.user);
+      return getChannelInfoSubtitleDefault(require, channelId, mapped, voiceStatesForChannelAlt.length - mapped.length);
+    });
+    obj2 = guildId(closure_2[16]);
+    items1 = [];
+    items1[0] = closure_8;
+    items2 = [];
+    items2[0] = channelId;
+    stateFromStores1 = obj2.useStateFromStores(items1, () => ChannelStore.getChannel(channelId), items2);
+    tmp6 = channelId;
+    tmp7 = channelId(closure_2[18])(stateFromStores1);
+    obj3 = guildId(closure_2[19]);
+    isSecureFramesUIEnabled = obj3.useIsSecureFramesUIEnabled({ channelId });
+    obj4 = guildId(closure_2[20]);
+    isCallSecureFramesVerified = obj4.useIsCallSecureFramesVerified({ channelId });
+    tmp10 = jsxs;
+    obj1 = { style: tmp.headerContainer, children: null };
+    tmp11 = channelId(closure_2[21]);
+    obj12 = { style: tmp.channelTitleWrapper, children: null };
+    tmp13 = jsx;
+    tmp12 = channelId(closure_2[21]);
+    obj13 = { style: tmp.channelTitle, variant: "heading-lg/bold", lineClamp: 1, accessibilityRole: "header", children: tmp7 };
+    items3 = [, ];
+    items3[0] = jsx(guildId(closure_2[22]).Text, obj13);
+    if (isCallSecureFramesVerified) {
+      obj14 = { style: null, size: "xs", accessibilityLabel: null };
+      obj14.style = tmp.secureFramesIcon;
+      intl = tmp2(tmp3[24]).intl;
+      obj14.accessibilityLabel = intl.string(tmp2(tmp3[24]).t.mR9cf3);
+      isCallSecureFramesVerified = tmp13(tmp2(tmp3[23]).ShieldLockIcon, obj14);
     }
-    const stateFromStores = tmp(504).useStateFromStores(first, tmp7);
-    const _Symbol = Symbol;
-    if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const items1 = [ChannelStore];
-      cResult[4] = items1;
-      let tmp9 = items1;
-    } else {
-      tmp9 = cResult[4];
+    items3[1] = isCallSecureFramesVerified;
+    obj12.children = items3;
+    items4 = [, , ];
+    items4[0] = tmp10(tmp12, obj12);
+    obj15 = { style: tmp.channelSubtitle, variant: "text-sm/medium", accessibilityRole: "summary", children: stateFromStores };
+    items4[1] = tmp13(tmp2(tmp3[22]).Text, obj15);
+    if (isSecureFramesUIEnabled) {
+      obj16 = { style: null, children: null };
+      obj16.style = tmp.secureFrames;
+      tmp6Result = tmp6(tmp3[21]);
+      items5 = [, ];
+      items5[0] = tmp13(tmp2(tmp3[25]).LockIcon, { size: "xxs", color: "status-positive" });
+      obj17 = { variant: "text-xs/medium", color: "status-positive", children: null };
+      intl2 = tmp2(tmp3[24]).intl;
+      obj17.children = intl2.string(tmp2(tmp3[24]).t["3BogKe"]);
+      items5[1] = tmp13(tmp2(tmp3[22]).Text, obj17);
+      obj16.children = items5;
+      isSecureFramesUIEnabled = tmp10(tmp6Result, obj16);
     }
-    if (cResult[5] !== channelId) {
-      const fn2 = function b() {
-        return ChannelStore.getChannel(channelId);
-      };
-      const items2 = [channelId];
-      cResult[5] = channelId;
-      cResult[6] = fn2;
-      cResult[7] = items2;
-      let tmp12 = items2;
-      let tmp11 = fn2;
-    } else {
-      tmp11 = cResult[6];
-      tmp12 = cResult[7];
-    }
-    const tmpResult = tmp(504);
-    const stateFromStores1 = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
-    const tmp15 = channelId(5641)(stateFromStores1);
-    if (cResult[8] !== channelId) {
-      const obj2 = { channelId };
-      cResult[8] = channelId;
-      cResult[9] = obj2;
-      let tmp16 = obj2;
-    } else {
-      tmp16 = cResult[9];
-    }
-    const tmpResult4 = tmp(504);
-    const isSecureFramesUIEnabled = tmp(9252).useIsSecureFramesUIEnabled(tmp16);
-    if (cResult[10] !== channelId) {
-      const obj3 = { channelId };
-      cResult[10] = channelId;
-      cResult[11] = obj3;
-      let tmp18 = obj3;
-    } else {
-      tmp18 = cResult[11];
-    }
-    const tmpResult5 = tmp(9252);
-    const isCallSecureFramesVerified = tmp(9214).useIsCallSecureFramesVerified(tmp18);
-    if (cResult[12] === tmp15) {
-      if (cResult[13] === tmp4.channelTitle) {
-        let tmp20 = cResult[14];
-      }
-      if (cResult[15] === isCallSecureFramesVerified) {
-        if (cResult[16] === tmp4.secureFramesIcon) {
-          let tmp23 = cResult[17];
-        }
-        if (cResult[18] === tmp4.channelTitleWrapper) {
-          if (cResult[19] === tmp20) {
-            if (cResult[20] === tmp23) {
-              let tmp26 = cResult[21];
-            }
-            if (cResult[22] === stateFromStores) {
-              if (cResult[23] === tmp4.channelSubtitle) {
-                let tmp29 = cResult[24];
-              }
-              if (cResult[25] === isSecureFramesUIEnabled) {
-                if (cResult[26] === tmp4.secureFrames) {
-                  let tmp32 = cResult[27];
-                }
-                if (cResult[28] === tmp4.headerContainer) {
-                  if (cResult[29] === tmp26) {
-                    if (cResult[30] === tmp29) {
-                      if (cResult[31] === tmp32) {
-                        let tmp37 = cResult[32];
-                      }
-                      return tmp37;
-                    }
-                  }
-                }
-                const obj4 = { style: tmp4.headerContainer, children: null };
-                const items3 = [tmp26, tmp29, tmp32];
-                obj4.children = items3;
-                const tmp39 = closure_19(tmp14(6946), obj4);
-                cResult[28] = tmp4.headerContainer;
-                cResult[29] = tmp26;
-                cResult[30] = tmp29;
-                cResult[31] = tmp32;
-                cResult[32] = tmp39;
-                tmp37 = tmp39;
-              }
-              let tmp33 = isSecureFramesUIEnabled;
-              if (isSecureFramesUIEnabled) {
-                const obj5 = { style: tmp4.secureFrames, children: null };
-                const items4 = [closure_18(tmp(8625).LockIcon, { size: "xxs", color: "status-positive" }), ];
-                const obj6 = { variant: "text-xs/medium", color: "status-positive", children: null };
-                const intl2 = tmp(1125).intl;
-                obj6.children = intl2.string(tmp(1125).t["3BogKe"]);
-                items4[1] = closure_18(tmp(5271).Text, obj6);
-                obj5.children = items4;
-                tmp33 = closure_19(tmp14(6946), obj5);
-                const tmp14Result = tmp14(6946);
-              }
-              cResult[25] = isSecureFramesUIEnabled;
-              cResult[26] = tmp4.secureFrames;
-              cResult[27] = tmp33;
-              tmp32 = tmp33;
-            }
-            const obj7 = { style: tmp4.channelSubtitle, variant: "text-sm/medium", accessibilityRole: "summary", children: stateFromStores };
-            const tmp31 = closure_18(tmp(5271).Text, obj7);
-            cResult[22] = stateFromStores;
-            cResult[23] = tmp4.channelSubtitle;
-            cResult[24] = tmp31;
-            tmp29 = tmp31;
-          }
-        }
-        const obj8 = { style: tmp4.channelTitleWrapper, children: null };
-        const items5 = [tmp20, tmp23];
-        obj8.children = items5;
-        const tmp28 = closure_19(tmp14(6946), obj8);
-        cResult[18] = tmp4.channelTitleWrapper;
-        cResult[19] = tmp20;
-        cResult[20] = tmp23;
-        cResult[21] = tmp28;
-        tmp26 = tmp28;
-      }
-      let tmp24 = isCallSecureFramesVerified;
-      if (isCallSecureFramesVerified) {
-        const obj9 = { style: tmp4.secureFramesIcon, size: "xs", accessibilityLabel: null };
-        const intl = tmp(1125).intl;
-        obj9.accessibilityLabel = intl.string(tmp(1125).t.mR9cf3);
-        tmp24 = closure_18(tmp(14663).ShieldLockIcon, obj9);
-      }
-      cResult[15] = isCallSecureFramesVerified;
-      cResult[16] = tmp4.secureFramesIcon;
-      cResult[17] = tmp24;
-      tmp23 = tmp24;
-    }
-    const obj10 = { style: tmp4.channelTitle, variant: "heading-lg/bold", lineClamp: 1, accessibilityRole: "header", children: tmp15 };
-    const tmp22 = closure_18(tmp(5271).Text, obj10);
-    cResult[12] = tmp15;
-    cResult[13] = tmp4.channelTitle;
-    cResult[14] = tmp22;
-    tmp20 = tmp22;
-    const tmpResult6 = tmp(9214);
+    items4[2] = isSecureFramesUIEnabled;
+    obj1.children = items4;
+    return tmp10(tmp11, obj1);
   }
-  const fn = function l() {
-    const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channelId, guildId);
-    const substr = voiceStatesForChannelAlt.slice(0, 2);
-    const mapped = substr.map((user) => user.user);
-    return getChannelInfoSubtitleDefault(guildId, channelId, mapped, voiceStatesForChannelAlt.length - mapped.length);
-  };
-  cResult[1] = channelId;
-  cResult[2] = guildId;
-  cResult[3] = fn;
-  tmp7 = fn;
-  const obj = guildId(576);
-}) : (function VoicePanelSettingsOverviewHeader(arg0) {
-  ({ guildId: require, channelId } = arg0);
-  const tmp = closure_21();
-  const items = [SortedVoiceStateStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => {
-    const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channelId, require);
-    const substr = voiceStatesForChannelAlt.slice(0, 2);
-    const mapped = substr.map((user) => user.user);
-    return getChannelInfoSubtitleDefault(require, channelId, mapped, voiceStatesForChannelAlt.length - mapped.length);
-  });
-  const items1 = [ChannelStore];
-  const items2 = [channelId];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => ChannelStore.getChannel(channelId), items2);
-  const tmp7 = channelId(5641)(stateFromStores1);
-  let isSecureFramesUIEnabled = useIsSecureFramesUIEnabled.useIsSecureFramesUIEnabled({ channelId });
-  let isCallSecureFramesVerified = useIsSecureFramesVerified.useIsCallSecureFramesVerified({ channelId });
-  const obj5 = { style: tmp.headerContainer, children: null };
-  const obj6 = { style: tmp.channelTitleWrapper, children: null };
-  const tmp11 = channelId(6946);
-  const items3 = [closure_18(Text_Text.Text, { style: tmp.channelTitle, variant: "heading-lg/bold", lineClamp: 1, accessibilityRole: "header", children: tmp7 }), ];
-  if (isCallSecureFramesVerified) {
-    const obj8 = { style: tmp.secureFramesIcon, size: "xs", accessibilityLabel: null };
-    const intl = util.intl;
-    obj8.accessibilityLabel = intl.string(util.t.mR9cf3);
-    isCallSecureFramesVerified = closure_18(ShieldLockIcon.ShieldLockIcon, obj8);
-  }
-  items3[1] = isCallSecureFramesVerified;
-  obj6.children = items3;
-  const items4 = [closure_19(channelId(6946), obj6), closure_18(Text_Text.Text, { style: tmp.channelSubtitle, variant: "text-sm/medium", accessibilityRole: "summary", children: stateFromStores }), ];
-  if (isSecureFramesUIEnabled) {
-    const obj10 = { style: tmp.secureFrames, children: null };
-    const items5 = [closure_18(LockIcon.LockIcon, { size: "xxs", color: "status-positive" }), ];
-    const obj11 = { variant: "text-xs/medium", color: "status-positive", children: null };
-    const intl2 = util.intl;
-    obj11.children = intl2.string(util.t["3BogKe"]);
-    items5[1] = closure_18(Text_Text.Text, obj11);
-    obj10.children = items5;
-    isSecureFramesUIEnabled = closure_19(channelId(6946), obj10);
-    const tmp6Result = channelId(6946);
-  }
-  items4[2] = isSecureFramesUIEnabled;
-  obj5.children = items4;
-  return closure_19(tmp11, obj5);
-});
-let closure_22 = tmp4;
-ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShareActivityLogsButton() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t() {
-      const items = [closure_1_15];
-      const json = LogAggregator.stringify(items);
-      if ("" === json) {
-        const obj2 = { text: null };
-        const intl = util.intl;
-        obj2.text = intl.string(util.t["i+9VWy"]);
-        ToastActionCreatorsDefault.open("EMBEDDED_ACTIVITIES_SHARE_EMPTY_LOGS_ERROR_MESSAGE", obj2);
-      } else {
-        const result = VoicePanelSettingsActionCreators.closeVoicePanelSettingsActionSheet();
-        const tmpResult = VoicePanelSettingsActionCreators;
-        const obj3 = { message: json };
-        showShareActionSheet.showShareActionSheet(obj3, "Activity Logs");
-        const tmpResult2 = showShareActionSheet;
-      }
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { onPress: first, icon: null, label: null, trailing: null };
-    let obj3 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef15094 };
-    obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj3);
-    let intl = util.intl;
-    obj2.label = intl.string(util.t.iQzQs3);
-    obj2.trailing = collapsedCategories(TableRowArrow.TableRowArrow, {});
-    const tmp8 = collapsedCategories(TableRow.TableRow, obj2);
-    cResult[1] = tmp8;
-    let tmp5 = tmp8;
-  } else {
-    tmp5 = cResult[1];
-  }
-  return tmp5;
-}) : (function ShareActivityLogsButton() {
+}
+function ShareActivityLogsButton() {
   const callback = noop.useCallback(() => {
     const items = [closure_1_15];
     const json = LogAggregator.stringify(items);
@@ -322,76 +124,20 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShareA
       const tmpResult2 = showShareActionSheet;
     }
   }, []);
-  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef15094 }), label: null, trailing: null };
+  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8342 }), label: null, trailing: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
   obj.trailing = collapsedCategories(TableRowArrow.TableRowArrow, {});
   return collapsedCategories(TableRow.TableRow, obj);
-});
-ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityDebugToggle() {
-  const cResult = c.c(8);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelCallLifecycleStore];
-    const fn = function n() {
-      return showActivitiesDebugOverlay.getShowActivitiesDebugOverlay();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function s(visible) {
-      DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
-    };
-    cResult[2] = fn2;
-    let tmp8 = fn2;
-  } else {
-    tmp8 = cResult[2];
-  }
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef15094 };
-    const tmp13 = collapsedCategories(TableRowIcon.TableRowIcon, obj2);
-    const intl = util.intl;
-    const stringResult = intl.string(util.t["qv5/SP"]);
-    cResult[3] = tmp13;
-    cResult[4] = stringResult;
-    let tmp10 = stringResult;
-    let tmp9 = tmp13;
-  } else {
-    tmp9 = cResult[3];
-    tmp10 = cResult[4];
-  }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = util.intl;
-    const stringResult1 = intl2.string(util.t["qv5/SP"]);
-    cResult[5] = stringResult1;
-    let tmp15 = stringResult1;
-  } else {
-    tmp15 = cResult[5];
-  }
-  if (cResult[6] !== stateFromStores) {
-    const obj3 = { icon: tmp9, accessibilityHint: tmp10, value: stateFromStores, onValueChange: tmp8, label: tmp15 };
-    const tmp19 = collapsedCategories(TableSwitchRow.TableSwitchRow, obj3);
-    cResult[6] = stateFromStores;
-    cResult[7] = tmp19;
-    let tmp17 = tmp19;
-  } else {
-    tmp17 = cResult[7];
-  }
-  return tmp17;
-}) : (function ActivityDebugToggle() {
+}
+function ActivityDebugToggle() {
   const items = [ChannelCallLifecycleStore];
   const stateFromStores = initialize.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const callback = noop.useCallback((visible) => {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
   }, []);
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef15094 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8342 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
   obj2.value = stateFromStores;
@@ -399,7 +145,16 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t["qv5/SP"]);
   return collapsedCategories(TableSwitchRow.TableSwitchRow, obj2);
-});
+}
+const Constants = fn(1072);
+({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
+const isStreamParticipant = fn(5676).isStreamParticipant;
+let closure_17 = fn(9247).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
+const createStyles = fn(5009);
+let obj = { headerContainer: { alignItems: "center" }, channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 }, channelTitle: { textAlign: "center" }, channelSubtitle: { marginTop: 4, marginHorizontal: 16, textAlign: "center" }, secureFrames: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, marginTop: 8, padding: 4, gap: 4 }, secureFramesIcon: { marginStart: 4 } };
+const __initData = createStyles.createStyles(obj);
 let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, marginTop: 8, padding: 4, gap: 4 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsOverview.tsx");
@@ -412,16 +167,16 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   const tmp = guildId;
   const tmp2 = stateFromStores;
   let items = [ChannelStore];
-  stateFromStores = guildId(stateFromStores[19]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  const DeveloperMode = guildId(stateFromStores[39]).DeveloperMode;
+  stateFromStores = guildId(stateFromStores[16]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const DeveloperMode = guildId(stateFromStores[37]).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = guildId(stateFromStores[19]);
+  let obj = guildId(stateFromStores[16]);
   const items1 = [SortedVoiceStateStore];
-  const stateFromStores1 = guildId(stateFromStores[19]).useStateFromStores(items1, () => SortedVoiceStateStore.getVoiceStatesForChannelAlt(channelId, guildId));
-  const obj2 = guildId(stateFromStores[19]);
+  const stateFromStores1 = guildId(stateFromStores[16]).useStateFromStores(items1, () => SortedVoiceStateStore.getVoiceStatesForChannelAlt(channelId, guildId));
+  const obj2 = guildId(stateFromStores[16]);
   const items2 = [UserStore];
   const items3 = [stateFromStores, stateFromStores1];
-  const stateFromStoresArray = guildId(stateFromStores[19]).useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray = guildId(stateFromStores[16]).useStateFromStoresArray(items2, () => {
     if (null != stateFromStores) {
       if (stateFromStores.isPrivate()) {
         const _Set = Set;
@@ -445,18 +200,18 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
     }
     return [];
   }, items3);
-  const obj3 = guildId(stateFromStores[19]);
+  const obj3 = guildId(stateFromStores[16]);
   const items4 = [MediaEngineStore];
-  const stateFromStores2 = guildId(stateFromStores[19]).useStateFromStores(items4, () => selfDeaf.isSelfDeaf());
+  const stateFromStores2 = guildId(stateFromStores[16]).useStateFromStores(items4, () => selfDeaf.isSelfDeaf());
   const callback = stateFromStores1.useCallback(() => {
-    channelId(stateFromStores[40]).toggleSelfDeaf();
+    channelId(stateFromStores[38]).toggleSelfDeaf();
   }, []);
-  const obj4 = guildId(stateFromStores[19]);
+  const obj4 = guildId(stateFromStores[16]);
   const items5 = [stateFromStores4];
-  const stateFromStores3 = guildId(stateFromStores[19]).useStateFromStores(items5, () => ChannelRTCStore.getVoiceParticipantsHidden(channelId));
-  const obj5 = guildId(stateFromStores[19]);
+  const stateFromStores3 = guildId(stateFromStores[16]).useStateFromStores(items5, () => ChannelRTCStore.getVoiceParticipantsHidden(channelId));
+  const obj5 = guildId(stateFromStores[16]);
   const items6 = [stateFromStores4, AuthenticationStore];
-  stateFromStores4 = guildId(stateFromStores[19]).useStateFromStores(items6, () => {
+  stateFromStores4 = guildId(stateFromStores[16]).useStateFromStores(items6, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channelId);
     let id = null;
     if (isStreamParticipant(selectedParticipant)) {
@@ -484,39 +239,39 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19061, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19168, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {
       const result = SecureFramesPlatformUtilsDefault.openSecureFramesStreamVerification(tmp, channelId);
     }
   }, items11);
-  const obj6 = guildId(stateFromStores[19]);
-  const isCallRTCConnectionEmpty = guildId(stateFromStores[48]).useIsCallRTCConnectionEmpty();
-  const obj7 = guildId(stateFromStores[48]);
-  const isStreamRTCConnectionEmpty = guildId(stateFromStores[48]).useIsStreamRTCConnectionEmpty(stateFromStores4);
-  const obj8 = guildId(stateFromStores[48]);
+  const obj6 = guildId(stateFromStores[16]);
+  const isCallRTCConnectionEmpty = guildId(stateFromStores[46]).useIsCallRTCConnectionEmpty();
+  const obj7 = guildId(stateFromStores[46]);
+  const isStreamRTCConnectionEmpty = guildId(stateFromStores[46]).useIsStreamRTCConnectionEmpty(stateFromStores4);
+  const obj8 = guildId(stateFromStores[46]);
   const items12 = [stateFromStores3];
-  const stateFromStores5 = guildId(stateFromStores[19]).useStateFromStores(items12, () => null != stateFromStores3.getCurrentEmbeddedActivity(), []);
-  const obj9 = guildId(stateFromStores[19]);
-  const tmp18 = channelId(stateFromStores[49])(stateFromStores);
+  const stateFromStores5 = guildId(stateFromStores[16]).useStateFromStores(items12, () => null != stateFromStores3.getCurrentEmbeddedActivity(), []);
+  const obj9 = guildId(stateFromStores[16]);
+  const tmp18 = channelId(stateFromStores[47])(stateFromStores);
   const items13 = [PermissionStore];
   const items14 = [channelId];
-  const stateFromStores6 = guildId(stateFromStores[19]).useStateFromStores(items13, () => PermissionStore.canWithPartialContext(constants2.MANAGE_CHANNELS, { channelId }), items14);
-  const obj10 = guildId(stateFromStores[19]);
-  const canInviteMembers = guildId(stateFromStores[50]).useCanInviteMembers(channelId);
-  const obj11 = guildId(stateFromStores[50]);
-  const obj12 = guildId(stateFromStores[51]);
-  const inviteMembersCallback = guildId(stateFromStores[51]).useInviteMembersCallback(channelId);
-  const tmp22 = channelId(stateFromStores[52])(stateFromStores);
-  let isSecureFramesUIEnabled = guildId(stateFromStores[21]).useIsSecureFramesUIEnabled({ channelId });
-  const children = [closure_18(closure_22, { guildId, channelId }), , , , , ];
+  const stateFromStores6 = guildId(stateFromStores[16]).useStateFromStores(items13, () => PermissionStore.canWithPartialContext(constants2.MANAGE_CHANNELS, { channelId }), items14);
+  const obj10 = guildId(stateFromStores[16]);
+  const canInviteMembers = guildId(stateFromStores[48]).useCanInviteMembers(channelId);
+  const obj11 = guildId(stateFromStores[48]);
+  const obj12 = guildId(stateFromStores[49]);
+  const inviteMembersCallback = guildId(stateFromStores[49]).useInviteMembersCallback(channelId);
+  const tmp22 = channelId(stateFromStores[50])(stateFromStores);
+  let isSecureFramesUIEnabled = guildId(stateFromStores[19]).useIsSecureFramesUIEnabled({ channelId });
+  const children = [closure_18(VoicePanelSettingsOverviewHeader, { guildId, channelId }), , , , , ];
   let tmp26Result = null;
   if (tmp22) {
     const obj14 = { hasIcons: false, children: null };
     const obj15 = { channel: stateFromStores, analyticsSection: constants.CHANNEL_ACTION_SHEET };
-    obj14.children = closure_18(tmp17(tmp2[54]), obj15);
-    tmp26Result = closure_18(tmp(tmp2[53]).VoicePanelFormSection, obj14);
+    obj14.children = closure_18(tmp17(tmp2[52]), obj15);
+    tmp26Result = closure_18(tmp(tmp2[51]).VoicePanelFormSection, obj14);
   }
   children[1] = tmp26Result;
   let tmp26Result7 = stateFromStores6;
@@ -527,50 +282,50 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
     let tmp26Result6 = stateFromStores6;
     if (stateFromStores6) {
       const obj16 = { onPress: callback2, label: null, subLabel: null, trailing: null };
-      const intl = tmp(tmp2[25]).intl;
-      obj16.label = intl.string(tmp(tmp2[25]).t.XPDhcc);
-      const intl2 = tmp(tmp2[25]).intl;
-      obj16.subLabel = intl2.string(tmp(tmp2[25]).t.w7ZEot);
-      obj16.trailing = closure_18(tmp(tmp2[36]).TableRowArrow, {});
-      tmp26Result6 = closure_18(tmp(tmp2[32]).TableRow, obj16);
+      const intl = tmp(tmp2[24]).intl;
+      obj16.label = intl.string(tmp(tmp2[24]).t.XPDhcc);
+      const intl2 = tmp(tmp2[24]).intl;
+      obj16.subLabel = intl2.string(tmp(tmp2[24]).t.w7ZEot);
+      obj16.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+      tmp26Result6 = closure_18(tmp(tmp2[30]).TableRow, obj16);
     }
     const obj17 = { hasIcons: false, children: tmp26Result6 };
-    tmp26Result7 = closure_18(tmp(tmp2[53]).VoicePanelFormSection, obj17);
+    tmp26Result7 = closure_18(tmp(tmp2[51]).VoicePanelFormSection, obj17);
   }
   children[2] = tmp26Result7;
   const obj18 = { onPress: callback3, icon: null, label: null, subLabel: null, trailing: null };
-  const obj13 = guildId(stateFromStores[21]);
-  obj18.icon = closure_18(tmp(tmp2[33]).TableRowIcon, { IconComponent: tmp(tmp2[55]).SettingsIcon, source: channelId(tmp2[56]) });
-  const intl3 = tmp(tmp2[25]).intl;
-  obj18.label = intl3.string(tmp(tmp2[25]).t.dsXapM);
-  const intl4 = tmp(tmp2[25]).intl;
-  obj18.subLabel = intl4.string(tmp(tmp2[25]).t["16SG+O"]);
-  obj18.trailing = closure_18(tmp(tmp2[36]).TableRowArrow, {});
-  const items16 = [closure_18(tmp(tmp2[32]).TableRow, obj18), , , , ];
+  const obj13 = guildId(stateFromStores[19]);
+  obj18.icon = closure_18(tmp(tmp2[31]).TableRowIcon, { IconComponent: tmp(tmp2[53]).SettingsIcon, source: channelId(tmp2[54]) });
+  const intl3 = tmp(tmp2[24]).intl;
+  obj18.label = intl3.string(tmp(tmp2[24]).t.dsXapM);
+  const intl4 = tmp(tmp2[24]).intl;
+  obj18.subLabel = intl4.string(tmp(tmp2[24]).t["16SG+O"]);
+  obj18.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+  const items16 = [closure_18(tmp(tmp2[30]).TableRow, obj18), , , , ];
   const obj20 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  const obj19 = { IconComponent: tmp(tmp2[55]).SettingsIcon, source: channelId(tmp2[56]) };
-  obj20.icon = closure_18(tmp(tmp2[33]).TableRowIcon, { IconComponent: tmp(tmp2[57]).HeadphonesSlashIcon, source: channelId(tmp2[58]) });
-  const intl5 = tmp(tmp2[25]).intl;
-  obj20.accessibilityHint = intl5.string(tmp(tmp2[25]).t.wjcRFX);
+  const obj19 = { IconComponent: tmp(tmp2[53]).SettingsIcon, source: channelId(tmp2[54]) };
+  obj20.icon = closure_18(tmp(tmp2[31]).TableRowIcon, { IconComponent: tmp(tmp2[55]).HeadphonesSlashIcon, source: channelId(tmp2[56]) });
+  const intl5 = tmp(tmp2[24]).intl;
+  obj20.accessibilityHint = intl5.string(tmp(tmp2[24]).t.wjcRFX);
   obj20.value = stateFromStores2;
   obj20.onValueChange = callback;
-  const intl6 = tmp(tmp2[25]).intl;
-  obj20.label = intl6.string(tmp(tmp2[25]).t.wjcRFX);
-  const intl7 = tmp(tmp2[25]).intl;
-  obj20.subLabel = intl7.string(tmp(tmp2[25]).t.M3VN2U);
-  items16[1] = closure_18(tmp(tmp2[38]).TableSwitchRow, obj20);
+  const intl6 = tmp(tmp2[24]).intl;
+  obj20.label = intl6.string(tmp(tmp2[24]).t.wjcRFX);
+  const intl7 = tmp(tmp2[24]).intl;
+  obj20.subLabel = intl7.string(tmp(tmp2[24]).t.M3VN2U);
+  items16[1] = closure_18(tmp(tmp2[36]).TableSwitchRow, obj20);
   const obj22 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  const obj21 = { IconComponent: tmp(tmp2[57]).HeadphonesSlashIcon, source: channelId(tmp2[58]) };
-  obj22.icon = closure_18(tmp(tmp2[33]).TableRowIcon, { IconComponent: tmp(tmp2[59]).VideoIcon, source: channelId(tmp2[60]) });
-  const intl8 = tmp(tmp2[25]).intl;
-  obj22.accessibilityHint = intl8.string(tmp(tmp2[25]).t.ZMTRyc);
+  const obj21 = { IconComponent: tmp(tmp2[55]).HeadphonesSlashIcon, source: channelId(tmp2[56]) };
+  obj22.icon = closure_18(tmp(tmp2[31]).TableRowIcon, { IconComponent: tmp(tmp2[57]).VideoIcon, source: channelId(tmp2[58]) });
+  const intl8 = tmp(tmp2[24]).intl;
+  obj22.accessibilityHint = intl8.string(tmp(tmp2[24]).t.ZMTRyc);
   obj22.value = stateFromStores3;
   obj22.onValueChange = callback1;
-  const intl9 = tmp(tmp2[25]).intl;
-  obj22.label = intl9.string(tmp(tmp2[25]).t.ZMTRyc);
-  const intl10 = tmp(tmp2[25]).intl;
-  obj22.subLabel = intl10.string(tmp(tmp2[25]).t.MlpCFS);
-  items16[2] = closure_18(tmp(tmp2[38]).TableSwitchRow, obj22);
+  const intl9 = tmp(tmp2[24]).intl;
+  obj22.label = intl9.string(tmp(tmp2[24]).t.ZMTRyc);
+  const intl10 = tmp(tmp2[24]).intl;
+  obj22.subLabel = intl10.string(tmp(tmp2[24]).t.MlpCFS);
+  items16[2] = closure_18(tmp(tmp2[36]).TableSwitchRow, obj22);
   let tmp26Result8 = isSecureFramesUIEnabled;
   if (isSecureFramesUIEnabled) {
     tmp26Result8 = null == stateFromStores4;
@@ -580,14 +335,14 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }
   if (tmp26Result8) {
     const obj24 = { onPress: callback4, icon: null, label: null, subLabel: null, trailing: null };
-    const obj25 = { IconComponent: tmp(tmp2[27]).LockIcon, source: tmp17(tmp2[56]) };
-    obj24.icon = closure_18(tmp(tmp2[33]).TableRowIcon, obj25);
-    const intl11 = tmp(tmp2[25]).intl;
-    obj24.label = intl11.string(tmp(tmp2[25]).t.cTQI5t);
-    const intl12 = tmp(tmp2[25]).intl;
-    obj24.subLabel = intl12.string(tmp(tmp2[25]).t.Etxti2);
-    obj24.trailing = closure_18(tmp(tmp2[36]).TableRowArrow, {});
-    tmp26Result8 = closure_18(tmp(tmp2[32]).TableRow, obj24);
+    const obj25 = { IconComponent: tmp(tmp2[25]).LockIcon, source: tmp17(tmp2[54]) };
+    obj24.icon = closure_18(tmp(tmp2[31]).TableRowIcon, obj25);
+    const intl11 = tmp(tmp2[24]).intl;
+    obj24.label = intl11.string(tmp(tmp2[24]).t.cTQI5t);
+    const intl12 = tmp(tmp2[24]).intl;
+    obj24.subLabel = intl12.string(tmp(tmp2[24]).t.Etxti2);
+    obj24.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+    tmp26Result8 = closure_18(tmp(tmp2[30]).TableRow, obj24);
   }
   items16[3] = tmp26Result8;
   if (isSecureFramesUIEnabled) {
@@ -598,35 +353,35 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }
   if (isSecureFramesUIEnabled) {
     const obj26 = { onPress: callback5, icon: null, label: null, subLabel: null, trailing: null };
-    const obj27 = { IconComponent: tmp(tmp2[27]).LockIcon, source: tmp17(tmp2[56]) };
-    obj26.icon = closure_18(tmp(tmp2[33]).TableRowIcon, obj27);
-    const intl13 = tmp(tmp2[25]).intl;
-    obj26.label = intl13.string(tmp(tmp2[25]).t.QogHld);
-    const intl14 = tmp(tmp2[25]).intl;
-    obj26.subLabel = intl14.string(tmp(tmp2[25]).t["j5+1ed"]);
-    obj26.trailing = closure_18(tmp(tmp2[36]).TableRowArrow, {});
-    isSecureFramesUIEnabled = closure_18(tmp(tmp2[32]).TableRow, obj26);
+    const obj27 = { IconComponent: tmp(tmp2[25]).LockIcon, source: tmp17(tmp2[54]) };
+    obj26.icon = closure_18(tmp(tmp2[31]).TableRowIcon, obj27);
+    const intl13 = tmp(tmp2[24]).intl;
+    obj26.label = intl13.string(tmp(tmp2[24]).t.QogHld);
+    const intl14 = tmp(tmp2[24]).intl;
+    obj26.subLabel = intl14.string(tmp(tmp2[24]).t["j5+1ed"]);
+    obj26.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+    isSecureFramesUIEnabled = closure_18(tmp(tmp2[30]).TableRow, obj26);
   }
   items16[4] = isSecureFramesUIEnabled;
-  children[3] = closure_19(tmp(tmp2[53]).VoicePanelFormSection, { hasIcons: true, children: items16 });
+  children[3] = closure_19(tmp(tmp2[51]).VoicePanelFormSection, { hasIcons: true, children: items16 });
   let tmp24Result = stateFromStores1.length > 0 || canInviteMembers;
   if (tmp24Result) {
     const obj28 = { title: null, hasIcons: true, children: null };
-    const intl15 = tmp(tmp2[25]).intl;
+    const intl15 = tmp(tmp2[24]).intl;
     const obj29 = { count: null };
     const _HermesInternal = HermesInternal;
     obj29.count = "" + stateFromStores1.length;
     const _HermesInternal2 = HermesInternal;
-    obj28.title = "" + intl15.formatToPlainString(tmp(tmp2[25]).t.AWmdd9, obj29);
+    obj28.title = "" + intl15.formatToPlainString(tmp(tmp2[24]).t.AWmdd9, obj29);
     let tmp26Result9 = null;
     if (canInviteMembers) {
       const obj30 = { onPress: inviteMembersCallback, icon: null, label: null, trailing: null };
-      const obj31 = { IconComponent: tmp(tmp2[61]).GroupPlusIcon, source: tmp17(tmp2[62]) };
-      obj30.icon = closure_18(tmp(tmp2[33]).TableRowIcon, obj31);
-      const intl16 = tmp(tmp2[25]).intl;
-      obj30.label = intl16.string(tmp(tmp2[25]).t["f1+QIK"]);
-      obj30.trailing = closure_18(tmp(tmp2[36]).TableRowArrow, {});
-      tmp26Result9 = closure_18(tmp(tmp2[32]).TableRow, obj30);
+      const obj31 = { IconComponent: tmp(tmp2[59]).GroupPlusIcon, source: tmp17(tmp2[60]) };
+      obj30.icon = closure_18(tmp(tmp2[31]).TableRowIcon, obj31);
+      const intl16 = tmp(tmp2[24]).intl;
+      obj30.label = intl16.string(tmp(tmp2[24]).t["f1+QIK"]);
+      obj30.trailing = closure_18(tmp(tmp2[34]).TableRowArrow, {});
+      tmp26Result9 = closure_18(tmp(tmp2[30]).TableRow, obj30);
     }
     const items17 = [
       tmp26Result9,
@@ -639,23 +394,23 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
       stateFromStoresArray.map((user) => collapsedCategories(FormComponents.MemberRowItem, { user, channelId, guildId, notConnected: true, showRing: true }, user.id))
     ];
     obj28.children = items17;
-    tmp24Result = closure_19(tmp(tmp2[53]).VoicePanelFormSection, obj28);
+    tmp24Result = closure_19(tmp(tmp2[51]).VoicePanelFormSection, obj28);
   }
   children[4] = tmp24Result;
   let tmp24Result2 = null;
   if (setting) {
     const obj32 = { title: null, hasIcons: true, children: null };
-    const intl17 = tmp(tmp2[25]).intl;
-    obj32.title = intl17.string(tmp(tmp2[25]).t.J6rqB7);
+    const intl17 = tmp(tmp2[24]).intl;
+    obj32.title = intl17.string(tmp(tmp2[24]).t.J6rqB7);
     let tmp26Result10 = null;
     if (stateFromStores5) {
-      tmp26Result10 = closure_18(closure_23, {});
+      tmp26Result10 = closure_18(ShareActivityLogsButton, {});
     }
-    const items18 = [tmp26Result10, closure_18(closure_24, {})];
+    const items18 = [tmp26Result10, closure_18(ActivityDebugToggle, {})];
     obj32.children = items18;
-    tmp24Result2 = closure_19(tmp(tmp2[53]).VoicePanelFormSection, obj32);
+    tmp24Result2 = closure_19(tmp(tmp2[51]).VoicePanelFormSection, obj32);
   }
   children[5] = tmp24Result2;
   return closure_19(closure_20, { children });
 });
-export const VoicePanelSettingsOverviewHeader = tmp4;
+export { VoicePanelSettingsOverviewHeader };

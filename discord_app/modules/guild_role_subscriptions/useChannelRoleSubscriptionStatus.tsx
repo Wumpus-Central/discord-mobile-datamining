@@ -1,9 +1,9 @@
-// === Module 6033: useChannelRoleSubscriptionStatus ===
+// === Module 6040: useChannelRoleSubscriptionStatus ===
 
-// Module 6033 (useChannelRoleSubscriptionStatus)
-import GatedChannelStore from "GatedChannelStore" /* 4909 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+// Module 6040 (useChannelRoleSubscriptionStatus)
+import GatedChannelStore from "GatedChannelStore" /* 4913 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 const require = globalThis.__r;
 
@@ -45,42 +45,15 @@ function getChannelRoleSubscriptionStatus(id) {
   }
   return obj3;
 }
-const Permissions = fn(1084).Permissions;
+const Permissions = fn(1072).Permissions;
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelRoleSubscriptionStatus(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelStore, GatedChannelStore, PermissionStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function c() {
-      return getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore);
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
-  } else {
-    tmp8 = cResult[2];
-    tmp9 = cResult[3];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStoresObject(first, tmp8, tmp9);
-}) : (function useChannelRoleSubscriptionStatus(arg0) {
+export default function useChannelRoleSubscriptionStatus(arg0) {
   _require = arg0;
   const items = [ChannelStore, GatedChannelStore, PermissionStore];
   const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(items, () => getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore), items1);
-});
+};
 export { getChannelRoleSubscriptionStatus };

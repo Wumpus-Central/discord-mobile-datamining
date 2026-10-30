@@ -1,8 +1,8 @@
-// === Module 5776: RTCDebugActionCreators ===
+// === Module 5783: RTCDebugActionCreators ===
 
-// Module 5776 (RTCDebugActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DiscordNativeDefault from "DiscordNative" /* 4819 */;
+// Module 5783 (RTCDebugActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DiscordNativeDefault from "DiscordNative" /* 4820 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/RTCDebugActionCreators.tsx");

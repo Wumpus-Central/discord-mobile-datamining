@@ -1,23 +1,26 @@
-// === Module 12438: conjureIdeasIntroTip ===
+// === Module 12592: conjureIdeasIntroTip ===
 
-// Module 12438 (conjureIdeasIntroTip)
-import conjureBotPermissionsTip from "conjureBotPermissionsTip" /* 12435 */;
+// Module 12592 (conjureIdeasIntroTip)
+import conjureBotPermissionsTip from "conjureBotPermissionsTip" /* 12589 */;
 import size from "module_2" /* 2 */;
 
-function resolveIdeasIntroTip(ideasIntroAnchorId) {
+function resolveIdeasIntroTip(agentIdle) {
   let tmp5 = null;
-  if (null != ideasIntroAnchorId.ideasIntroAnchorId) {
+  if (agentIdle.agentIdle) {
     tmp5 = null;
-    if (!obj.isBotPermissionsReviewPending(tmp2)) {
-      if (null == tmp) {
-        if (!tmp3) {
-          let str = null;
+    if (null != agentIdle.ideasIntroAnchorId) {
+      tmp5 = null;
+      if (!obj.isBotPermissionsReviewPending(tmp2)) {
+        if (null == tmp) {
+          if (!tmp3) {
+            let str = null;
+          }
+          tmp5 = str;
         }
-        tmp5 = str;
+        str = "card";
       }
-      str = "card";
+      obj = conjureBotPermissionsTip;
     }
-    obj = conjureBotPermissionsTip;
   }
   return tmp5;
 }

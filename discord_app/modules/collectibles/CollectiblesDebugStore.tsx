@@ -1,10 +1,10 @@
-// === Module 7722: CollectiblesDebugStore ===
+// === Module 7727: CollectiblesDebugStore ===
 
-// Module 7722 (CollectiblesDebugStore)
-import module_570 from "module_570" /* 570 */;
+// Module 7727 (CollectiblesDebugStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
-const useCollectiblesDebugStore = module_570.create((arg0) => {
+const useCollectiblesDebugStore = module_560.create((arg0) => {
   closure_0 = arg0;
   return {
     logs: [],

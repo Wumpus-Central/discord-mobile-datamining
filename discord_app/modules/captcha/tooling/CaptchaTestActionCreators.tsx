@@ -1,7 +1,7 @@
-// === Module 17566: CaptchaTestActionCreators ===
+// === Module 17620: CaptchaTestActionCreators ===
 
-// Module 17566 (CaptchaTestActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 17620 (CaptchaTestActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_4 = async function _testCaptcha() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -51,7 +51,7 @@ let closure_4 = async function _testCaptcha() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp10) {
         c2 = tmp;
@@ -60,7 +60,7 @@ let closure_4 = async function _testCaptcha() {
     }
   })();
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
 

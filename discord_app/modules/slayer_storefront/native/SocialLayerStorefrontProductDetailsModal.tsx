@@ -1,230 +1,33 @@
-// === Module 10625: SocialLayerStorefrontProductDetailsModal ===
+// === Module 10651: SocialLayerStorefrontProductDetailsModal ===
 
-// Module 10625 (SocialLayerStorefrontProductDetailsModal)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import StringUtils from "StringUtils" /* 2031 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2063 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import StoreUtils from "StoreUtils" /* 6442 */;
-import XSmallIcon from "XSmallIcon" /* 6991 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7390 */;
-import common_Video from "common/Video" /* 8830 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10623 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10624 */;
-import carouselMediaItems from "carouselMediaItems" /* 10627 */;
-import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10628 */;
-import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 10629 */;
-import NativePaymentContext from "NativePaymentContext" /* 10643 */;
+// Module 10651 (SocialLayerStorefrontProductDetailsModal)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import StringUtils from "StringUtils" /* 2028 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2060 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import StoreUtils from "StoreUtils" /* 6449 */;
+import XSmallIcon from "XSmallIcon" /* 7048 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7398 */;
+import common_Video from "common/Video" /* 8864 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10649 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10650 */;
+import carouselMediaItems from "carouselMediaItems" /* 10653 */;
+import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10654 */;
+import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 10655 */;
+import NativePaymentContext from "NativePaymentContext" /* 10669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6883 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7392 */;
-import n_mod from "module_683" /* 683 */;
+import SKUStore from "SKUStore" /* 6890 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7400 */;
+import n_mod from "module_671" /* 671 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ ScrollView: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SlayerShopPDPCTAType = fn(10626).SlayerShopPDPCTAType;
-const Constants = fn(1084);
-({ AnalyticEvents: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1 } = Constants);
-const jsxProd = fn(21);
-({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let n = n_mod;
-const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BRAND_500);
-let closure_16 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
-let n = n_mod;
-const alphaResult = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
-const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
-let closure_17 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0).hex();
-const createStyles = fn(5005);
-let obj = { container: { flex: 1 }, header: null, headerTitle: null, closeButtonIcon: null, scrollContent: null, scrollContainer: null, columnsLandscape: null, heroColumnLandscape: null, heroColumnContentLandscape: null, bundleGroupLandscape: null, detailsScrollLandscape: null, detailsContentLandscape: null, detailsGroupLandscape: null, section: null, bundleThumbnailRow: null, thumbnail: null, thumbnailSelected: null, thumbnailInner: null, thumbnailInnerSelected: null, thumbnailImage: null, labelRow: null, labelIcon: null, priceRow: null, footer: null, footerButtonRow: null, buyButton: null, availabilityCopy: null, legalCopy: null, hero: null, heroLandscape: null, priceSection: null, heroImage: null, exclusiveBadgeContainer: null };
-const alphaResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0);
-obj.header = { height: fn(5305).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.headerTitle = { flexShrink: 1 };
-let obj2 = { height: fn(5305).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.closeButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-let obj3 = { tintColor: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-obj.scrollContent = { alignItems: "stretch", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 };
-obj.scrollContainer = { flex: 1 };
-let obj4 = { alignItems: "stretch", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 };
-obj.columnsLandscape = { flex: 1, flexDirection: "row", gap: nativeDefault.space.PX_16 };
-obj.heroColumnLandscape = { flex: 1 };
-let obj6 = { flex: 1, flexDirection: "row", gap: nativeDefault.space.PX_16 };
-obj.heroColumnContentLandscape = { flexGrow: 1, gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16 };
-let obj7 = { flexGrow: 1, gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16 };
-obj.bundleGroupLandscape = { gap: nativeDefault.space.PX_4 };
-obj.detailsScrollLandscape = { flex: 1 };
-obj.detailsContentLandscape = { flexGrow: 1, justifyContent: "space-between", paddingBottom: 0 };
-let obj8 = { gap: nativeDefault.space.PX_4 };
-obj.detailsGroupLandscape = { gap: nativeDefault.space.PX_16 };
-let obj9 = { gap: nativeDefault.space.PX_16 };
-obj.section = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-let obj10 = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-obj.bundleThumbnailRow = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
-let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.md, borderWidth: 2, borderColor: "transparent" };
-obj.thumbnail = size;
-let obj11 = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
-obj.thumbnailSelected = { borderColor: nativeDefault.colors.BORDER_STRONG };
-let obj12 = { borderColor: nativeDefault.colors.BORDER_STRONG };
-obj.thumbnailInner = { flex: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-let obj13 = { flex: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-obj.thumbnailInnerSelected = { margin: 2, borderRadius: nativeDefault.radii.sm };
-obj.thumbnailImage = { width: "100%", height: "100%" };
-let obj14 = { margin: 2, borderRadius: nativeDefault.radii.sm };
-obj.labelRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-const size1 = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
-obj.labelIcon = size1;
-let obj15 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj.priceRow = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
-let obj16 = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
-obj.footer = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
-let obj17 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
-obj.footerButtonRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-obj.buyButton = { flex: 1 };
-obj.availabilityCopy = { textAlign: "center" };
-let obj18 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
-let obj19 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
-obj.hero = { marginHorizontal: nativeDefault.space.PX_16, height: fn(10627).MOBILE_HERO_HEIGHT_PX, borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "apply" };
-let obj20 = { marginHorizontal: nativeDefault.space.PX_16, height: fn(10627).MOBILE_HERO_HEIGHT_PX, borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj.priceSection = { width: "100%", gap: nativeDefault.space.PX_8 };
-obj.heroImage = { width: "100%", height: "100%" };
-let obj21 = { width: "100%", gap: nativeDefault.space.PX_8 };
-obj.exclusiveBadgeContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
-let closure_18 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeroMedia(arg0) {
-  const cResult = c.c(31);
-  ({ mediaItem, landscape } = arg0);
-  const tmp4 = closure_18();
-  if (landscape) {
-    landscape = tmp4.heroLandscape;
-  }
-  if (cResult[0] === tmp4.hero) {
-    if (cResult[1] === landscape) {
-      let tmp5 = cResult[2];
-    }
-    if ("video" === mediaItem.type) {
-      if (cResult[3] !== mediaItem.src) {
-        const obj2 = { uri: mediaItem.src };
-        cResult[3] = mediaItem.src;
-        cResult[4] = obj2;
-        let tmp30 = obj2;
-      } else {
-        tmp30 = cResult[4];
-      }
-      if (cResult[5] === mediaItem.videoThumbnailSrc) {
-        if (cResult[6] === tmp4.heroImage) {
-          if (cResult[7] === tmp30) {
-            let tmp31 = cResult[8];
-          }
-          if (cResult[9] === tmp5) {
-          }
-          const obj3 = { style: tmp5, children: tmp31 };
-          const tmp37 = closure_1_14(React5, obj3);
-          cResult[9] = tmp5;
-          cResult[10] = tmp31;
-          cResult[11] = tmp37;
-        }
-      }
-      const obj4 = { source: tmp30, poster: mediaItem.videoThumbnailSrc, muted: true, resizeMode: "cover", style: tmp4.heroImage };
-      const tmp33 = closure_1_14(common_Video.VideoComponent, obj4);
-      cResult[5] = mediaItem.videoThumbnailSrc;
-      cResult[6] = tmp4.heroImage;
-      cResult[7] = tmp30;
-      cResult[8] = tmp33;
-      tmp31 = tmp33;
-    } else if (null != mediaItem.backgroundSrc) {
-      if (cResult[12] !== mediaItem.backgroundSrc) {
-        const obj5 = { source: null, style: null, resizeMode: "cover" };
-        const obj6 = { uri: mediaItem.backgroundSrc };
-        obj5.source = obj6;
-        obj5.style = timestampProducer.absoluteFill;
-        const tmp19 = closure_1_14(FastImageDefault, obj5);
-        cResult[12] = mediaItem.backgroundSrc;
-        cResult[13] = tmp19;
-        let tmp15 = tmp19;
-      } else {
-        tmp15 = cResult[13];
-      }
-      if (cResult[14] !== mediaItem.src) {
-        const obj7 = { uri: mediaItem.src };
-        cResult[14] = mediaItem.src;
-        cResult[15] = obj7;
-        let tmp20 = obj7;
-      } else {
-        tmp20 = cResult[15];
-      }
-      if (cResult[16] === tmp4.heroImage) {
-        if (cResult[17] === tmp20) {
-          let tmp21 = cResult[18];
-        }
-        if (cResult[19] === tmp5) {
-          if (cResult[20] === tmp15) {
-          }
-        }
-        const obj8 = { style: tmp5, children: null };
-        const items = [tmp15, tmp21];
-        obj8.children = items;
-        const tmp28 = value2(React5, obj8);
-        cResult[19] = tmp5;
-        cResult[20] = tmp15;
-        cResult[21] = tmp21;
-        cResult[22] = tmp28;
-      }
-      const obj9 = { source: tmp20, style: tmp4.heroImage, resizeMode: "cover" };
-      const tmp24 = closure_1_14(FastImageDefault, obj9);
-      cResult[16] = tmp4.heroImage;
-      cResult[17] = tmp20;
-      cResult[18] = tmp24;
-      tmp21 = tmp24;
-    } else {
-      if (cResult[23] !== mediaItem.src) {
-        const obj10 = { uri: mediaItem.src };
-        cResult[23] = mediaItem.src;
-        cResult[24] = obj10;
-        let tmp6 = obj10;
-      } else {
-        tmp6 = cResult[24];
-      }
-      if (cResult[25] === tmp4.heroImage) {
-        if (cResult[26] === tmp6) {
-          let tmp7 = cResult[27];
-        }
-        if (cResult[28] === tmp5) {
-          if (cResult[29] === tmp7) {
-            let tmp11 = cResult[30];
-          }
-          return tmp11;
-        }
-        const obj11 = { style: tmp5, children: tmp7 };
-        const tmp14 = closure_1_14(React5, obj11);
-        cResult[28] = tmp5;
-        cResult[29] = tmp7;
-        cResult[30] = tmp14;
-        tmp11 = tmp14;
-      }
-      const obj12 = { source: tmp6, style: tmp4.heroImage, resizeMode: "cover" };
-      const tmp10 = closure_1_14(FastImageDefault, obj12);
-      cResult[25] = tmp4.heroImage;
-      cResult[26] = tmp6;
-      cResult[27] = tmp10;
-      tmp7 = tmp10;
-    }
-  }
-  const items1 = [tmp4.hero, landscape];
-  cResult[0] = tmp4.hero;
-  cResult[1] = landscape;
-  cResult[2] = items1;
-  tmp5 = items1;
-}) : (function HeroMedia(arg0) {
+function HeroMedia(arg0) {
   ({ mediaItem, landscape } = arg0);
   const tmp = closure_18();
   const items = [tmp.hero, ];
@@ -246,7 +49,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeroMe
     const obj6 = { source: null, style: null, resizeMode: "cover" };
     const obj7 = { uri: mediaItem.backgroundSrc };
     obj6.source = obj7;
-    obj6.style = timestampProducer.absoluteFill;
+    obj6.style = absoluteFill.absoluteFill;
     const items1 = [closure_1_14(FastImageDefault, obj6), ];
     const obj8 = { source: null, style: null, resizeMode: "cover" };
     const obj9 = { uri: mediaItem.src };
@@ -254,7 +57,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeroMe
     obj8.style = tmp.heroImage;
     items1[1] = closure_1_14(FastImageDefault, obj8);
     obj5.children = items1;
-    tmp6 = value2(React5, obj5);
+    tmp6 = __initData(React5, obj5);
   } else {
     const obj = { style: items, children: null };
     const obj10 = { source: null, style: null, resizeMode: "cover" };
@@ -265,452 +68,30 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeroMe
     tmp6 = closure_1_14(React5, obj);
   }
   return tmp6;
-});
-ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function InGameItemTag() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl = util.intl;
-    obj2.children = intl.string(util.t.V91tvy);
-    const tmp6 = closure_1_14(Text_Text.Text, obj2);
-    cResult[0] = tmp6;
-    let first = tmp6;
-  } else {
-    first = cResult[0];
-  }
-  return first;
-}) : (function InGameItemTag() {
+}
+function InGameItemTag() {
   const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj.children = intl.string(util.t.V91tvy);
   return closure_1_14(Text_Text.Text, obj);
-});
-ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProductPriceSection(sku) {
-  const cResult = c.c(11);
-  sku = sku.sku;
-  let priceSection = closure_18();
-  if (cResult[0] !== sku) {
-    const obj2 = { sku, priceSetAssignmentPurchaseType: constants3.DEFAULT };
-    cResult[0] = sku;
-    cResult[1] = obj2;
-    let tmp4 = obj2;
-  } else {
-    tmp4 = cResult[1];
-  }
-  const userPrice = StorefrontNativeUtils.useFormattedSKUPrice(tmp4).userPrice;
-  if (null == userPrice) {
-    return null;
-  } else {
-    const _Symbol = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp10 = closure_1_14(closure_20, {});
-      cResult[2] = tmp10;
-      let tmp7 = tmp10;
-    } else {
-      tmp7 = cResult[2];
-    }
-    if (cResult[3] !== userPrice) {
-      const obj3 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: userPrice };
-      const tmp13 = closure_1_14(Text_Text.Text, obj3);
-      cResult[3] = userPrice;
-      cResult[4] = tmp13;
-      let tmp11 = tmp13;
-    } else {
-      tmp11 = cResult[4];
-    }
-    if (cResult[5] === priceSection.priceRow) {
-      if (cResult[6] === tmp11) {
-        let tmp14 = cResult[7];
-      }
-      if (cResult[8] === priceSection.priceSection) {
-      }
-      const obj4 = { style: priceSection.priceSection, children: null };
-      const items = [tmp7, tmp14];
-      obj4.children = items;
-      const tmp21 = value2(React5, obj4);
-      priceSection = priceSection.priceSection;
-      cResult[8] = priceSection;
-      cResult[9] = tmp14;
-      cResult[10] = tmp21;
-    }
-    const obj5 = { style: priceSection.priceRow, children: tmp11 };
-    const tmp17 = closure_1_14(React5, obj5);
-    cResult[5] = priceSection.priceRow;
-    cResult[6] = tmp11;
-    cResult[7] = tmp17;
-    tmp14 = tmp17;
-  }
-  const tmpResult = StorefrontNativeUtils;
-}) : (function ProductPriceSection(sku) {
+}
+function ProductPriceSection(sku) {
   const tmp = closure_18();
   const userPrice = StorefrontNativeUtils.useFormattedSKUPrice({ sku: sku.sku, priceSetAssignmentPurchaseType: constants3.DEFAULT }).userPrice;
   let tmp4 = null;
   if (null != userPrice) {
     const obj3 = { style: tmp.priceSection, children: null };
-    const items = [closure_1_14(closure_20, {}), ];
+    const items = [closure_1_14(InGameItemTag, {}), ];
     const obj4 = { style: tmp.priceRow, children: null };
     const obj5 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: userPrice };
     obj4.children = closure_1_14(Text_Text.Text, obj5);
     items[1] = closure_1_14(React5, obj4);
     obj3.children = items;
-    tmp4 = value2(React5, obj3);
+    tmp4 = __initData(React5, obj3);
   }
   return tmp4;
-});
-ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function BundleThumbnailRow(onSelectIndex) {
-  const cResult = items(onSelectIndex[14]).c(29);
-  items = onSelectIndex.items;
-  ({ mediaItems, selectedIndex: thumbnailSelected } = onSelectIndex);
-  onSelectIndex = onSelectIndex.onSelectIndex;
-  const trackPDPClick = onSelectIndex.trackPDPClick;
-  let tmp4 = closure_18();
-  noop = tmp4;
-  if (cResult[0] === onSelectIndex) {
-    if (cResult[1] === trackPDPClick) {
-      let tmp5 = cResult[2];
-    }
-    closure_5 = tmp5;
-    const _Symbol = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-      const intl = tmp(tmp2[18]).intl;
-      obj2.children = intl.string(tmp(tmp2[18]).t.U7DAV9);
-      const tmp9 = closure_14(tmp(tmp2[17]).Text, obj2);
-      cResult[3] = tmp9;
-      let tmp7 = tmp9;
-    } else {
-      tmp7 = cResult[3];
-    }
-    if (cResult[4] === tmp5) {
-      if (cResult[5] === items) {
-        if (cResult[6] === mediaItems) {
-          if (cResult[7] === thumbnailSelected) {
-            if (cResult[8] === tmp4.thumbnail) {
-              if (cResult[9] === tmp4.thumbnailImage) {
-                if (cResult[10] === tmp4.thumbnailInner) {
-                  if (cResult[11] === tmp4.thumbnailInnerSelected) {
-                    if (cResult[12] === tmp4.thumbnailSelected) {
-                      if (cResult[23] === tmp4.bundleThumbnailRow) {
-                        if (cResult[24] === tmp11) {
-                          let tmp15 = cResult[25];
-                        }
-                        if (cResult[26] === tmp4.section) {
-                          if (cResult[27] === tmp15) {
-                            let tmp19 = cResult[28];
-                          }
-                          return tmp19;
-                        }
-                        let obj3 = { style: tmp4.section, children: null };
-                        let items1 = [tmp7, tmp15];
-                        obj3.children = items1;
-                        class C {
-                          constructor(arg0, arg1) {
-                            closure_0 = arg1;
-                            tmp = closure_0[arg1];
-                            tmp3 = closure_1_14;
-                            tmp5 = onSelectIndex;
-                            tmp2 = selectedIndex;
-                            tmp4 = items;
-                            label = undefined;
-                            if (tmp != null) {
-                              label = tmp.label;
-                            }
-                            if (label == null) {
-                              title = undefined;
-                              if (tmp != null) {
-                                title = tmp.title;
-                              }
-                              label = title;
-                            }
-                            thumbnailInnerSelected = arg1 === tmp2;
-                            obj = {
-                              accessibilityRole: "button",
-                              accessibilityLabel: label,
-                              accessibilityState: { selected: thumbnailInnerSelected },
-                              onPress() {
-                                                          return closure_5(closure_0);
-                                                        },
-                              style: null,
-                              children: null
-                            };
-                            tmp8 = closure_4;
-                            items = [, ];
-                            items[0] = closure_4.thumbnail;
-                            thumbnailSelected = thumbnailInnerSelected;
-                            if (thumbnailInnerSelected) {
-                              thumbnailSelected = tmp8.thumbnailSelected;
-                            }
-                            items[1] = thumbnailSelected;
-                            obj.style = items;
-                            items1 = [, ];
-                            items1[0] = tmp8.thumbnailInner;
-                            tmp9 = closure_1_7;
-                            if (thumbnailInnerSelected) {
-                              thumbnailInnerSelected = tmp8.thumbnailInnerSelected;
-                            }
-                            obj1 = { style: items1, children: null };
-                            items1[1] = thumbnailInnerSelected;
-                            obj6 = { source: null, style: null, resizeMode: "cover" };
-                            obj7 = { uri: null };
-                            tmp10 = selectedIndex(tmp5[16]);
-                            tmp4Result = tmp4(tmp5[12]);
-                            obj7.uri = tmp4Result.getThumbnailSrc(onSelectIndex);
-                            obj6.source = obj7;
-                            obj6.style = tmp8.thumbnailImage;
-                            obj1.children = tmp3(tmp10, obj6);
-                            obj.children = tmp3(tmp9, obj1);
-                            return tmp3(items(onSelectIndex[20]).PressableOpacity, obj, arg1);
-                          }
-                        }
-                        cResult[26] = tmp4.section;
-                        cResult[27] = tmp15;
-                        cResult[28] = tmp22;
-                        tmp19 = tmp22;
-                      }
-                      let obj4 = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: tmp10, children: cResult[13] };
-                      const tmp18 = closure_14(closure_5, obj4);
-                      cResult[23] = tmp4.bundleThumbnailRow;
-                      class C {
-                        constructor(arg0, arg1) {
-                          closure_0 = arg1;
-                          tmp = closure_0[arg1];
-                          tmp3 = closure_1_14;
-                          tmp5 = onSelectIndex;
-                          tmp2 = selectedIndex;
-                          tmp4 = items;
-                          label = undefined;
-                          if (tmp != null) {
-                            label = tmp.label;
-                          }
-                          if (label == null) {
-                            title = undefined;
-                            if (tmp != null) {
-                              title = tmp.title;
-                            }
-                            label = title;
-                          }
-                          thumbnailInnerSelected = arg1 === tmp2;
-                          obj = {
-                            accessibilityRole: "button",
-                            accessibilityLabel: label,
-                            accessibilityState: { selected: thumbnailInnerSelected },
-                            onPress() {
-                                                      return closure_5(closure_0);
-                                                    },
-                            style: null,
-                            children: null
-                          };
-                          tmp8 = closure_4;
-                          items = [, ];
-                          items[0] = closure_4.thumbnail;
-                          thumbnailSelected = thumbnailInnerSelected;
-                          if (thumbnailInnerSelected) {
-                            thumbnailSelected = tmp8.thumbnailSelected;
-                          }
-                          items[1] = thumbnailSelected;
-                          obj.style = items;
-                          items1 = [, ];
-                          items1[0] = tmp8.thumbnailInner;
-                          tmp9 = closure_1_7;
-                          if (thumbnailInnerSelected) {
-                            thumbnailInnerSelected = tmp8.thumbnailInnerSelected;
-                          }
-                          obj1 = { style: items1, children: null };
-                          items1[1] = thumbnailInnerSelected;
-                          obj6 = { source: null, style: null, resizeMode: "cover" };
-                          obj7 = { uri: null };
-                          tmp10 = selectedIndex(tmp5[16]);
-                          tmp4Result = tmp4(tmp5[12]);
-                          obj7.uri = tmp4Result.getThumbnailSrc(onSelectIndex);
-                          obj6.source = obj7;
-                          obj6.style = tmp8.thumbnailImage;
-                          obj1.children = tmp3(tmp10, obj6);
-                          obj.children = tmp3(tmp9, obj1);
-                          return tmp3(items(onSelectIndex[20]).PressableOpacity, obj, arg1);
-                        }
-                      }
-                      cResult[24] = cResult[13];
-                      cResult[25] = tmp18;
-                      tmp15 = tmp18;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    if (cResult[14] === tmp5) {
-      if (cResult[15] === items) {
-        if (cResult[16] === thumbnailSelected) {
-          if (cResult[17] === tmp4.thumbnail) {
-            if (cResult[18] === tmp4.thumbnailImage) {
-              if (cResult[19] === tmp4.thumbnailInner) {
-                if (cResult[20] === tmp4.thumbnailInnerSelected) {
-                  if (cResult[21] === tmp4.thumbnailSelected) {
-                    let tmp12 = cResult[22];
-                  }
-                  const mapped = mediaItems.map(tmp12);
-                  cResult[4] = tmp5;
-                  cResult[5] = items;
-                  cResult[6] = mediaItems;
-                  cResult[7] = thumbnailSelected;
-                  class C {
-                    constructor(arg0, arg1) {
-                      closure_0 = arg1;
-                      tmp = closure_0[arg1];
-                      tmp3 = closure_1_14;
-                      tmp5 = onSelectIndex;
-                      tmp2 = selectedIndex;
-                      tmp4 = items;
-                      label = undefined;
-                      if (tmp != null) {
-                        label = tmp.label;
-                      }
-                      if (label == null) {
-                        title = undefined;
-                        if (tmp != null) {
-                          title = tmp.title;
-                        }
-                        label = title;
-                      }
-                      thumbnailInnerSelected = arg1 === tmp2;
-                      obj = {
-                        accessibilityRole: "button",
-                        accessibilityLabel: label,
-                        accessibilityState: { selected: thumbnailInnerSelected },
-                        onPress() {
-                                              return closure_5(closure_0);
-                                            },
-                        style: null,
-                        children: null
-                      };
-                      tmp8 = closure_4;
-                      items = [, ];
-                      items[0] = closure_4.thumbnail;
-                      thumbnailSelected = thumbnailInnerSelected;
-                      if (thumbnailInnerSelected) {
-                        thumbnailSelected = tmp8.thumbnailSelected;
-                      }
-                      items[1] = thumbnailSelected;
-                      obj.style = items;
-                      items1 = [, ];
-                      items1[0] = tmp8.thumbnailInner;
-                      tmp9 = closure_1_7;
-                      if (thumbnailInnerSelected) {
-                        thumbnailInnerSelected = tmp8.thumbnailInnerSelected;
-                      }
-                      obj1 = { style: items1, children: null };
-                      items1[1] = thumbnailInnerSelected;
-                      obj6 = { source: null, style: null, resizeMode: "cover" };
-                      obj7 = { uri: null };
-                      tmp10 = selectedIndex(tmp5[16]);
-                      tmp4Result = tmp4(tmp5[12]);
-                      obj7.uri = tmp4Result.getThumbnailSrc(onSelectIndex);
-                      obj6.source = obj7;
-                      obj6.style = tmp8.thumbnailImage;
-                      obj1.children = tmp3(tmp10, obj6);
-                      obj.children = tmp3(tmp9, obj1);
-                      return tmp3(items(onSelectIndex[20]).PressableOpacity, obj, arg1);
-                    }
-                  }
-                  cResult[8] = tmp4.thumbnail;
-                  cResult[9] = tmp4.thumbnailImage;
-                  cResult[10] = tmp4.thumbnailInner;
-                  ({ thumbnailInnerSelected: tmp3[11], thumbnailSelected } = tmp4);
-                  cResult[12] = thumbnailSelected;
-                  cResult[13] = mapped;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    class C {
-      constructor(arg0, arg1) {
-        closure_0 = arg1;
-        tmp = closure_0[arg1];
-        tmp3 = closure_1_14;
-        tmp5 = onSelectIndex;
-        tmp2 = selectedIndex;
-        tmp4 = items;
-        label = undefined;
-        if (tmp != null) {
-          label = tmp.label;
-        }
-        if (label == null) {
-          title = undefined;
-          if (tmp != null) {
-            title = tmp.title;
-          }
-          label = title;
-        }
-        thumbnailInnerSelected = arg1 === tmp2;
-        obj = {
-          accessibilityRole: "button",
-          accessibilityLabel: label,
-          accessibilityState: { selected: thumbnailInnerSelected },
-          onPress() {
-                  return closure_5(closure_0);
-                },
-          style: null,
-          children: null
-        };
-        tmp8 = closure_4;
-        items = [, ];
-        items[0] = closure_4.thumbnail;
-        thumbnailSelected = thumbnailInnerSelected;
-        if (thumbnailInnerSelected) {
-          thumbnailSelected = tmp8.thumbnailSelected;
-        }
-        items[1] = thumbnailSelected;
-        obj.style = items;
-        items1 = [, ];
-        items1[0] = tmp8.thumbnailInner;
-        tmp9 = closure_1_7;
-        if (thumbnailInnerSelected) {
-          thumbnailInnerSelected = tmp8.thumbnailInnerSelected;
-        }
-        obj1 = { style: items1, children: null };
-        items1[1] = thumbnailInnerSelected;
-        obj6 = { source: null, style: null, resizeMode: "cover" };
-        obj7 = { uri: null };
-        tmp10 = selectedIndex(tmp5[16]);
-        tmp4Result = tmp4(tmp5[12]);
-        obj7.uri = tmp4Result.getThumbnailSrc(onSelectIndex);
-        obj6.source = obj7;
-        obj6.style = tmp8.thumbnailImage;
-        obj1.children = tmp3(tmp10, obj6);
-        obj.children = tmp3(tmp9, obj1);
-        return tmp3(items(onSelectIndex[20]).PressableOpacity, obj, arg1);
-      }
-    }
-    cResult[14] = tmp5;
-    cResult[15] = items;
-    cResult[16] = thumbnailSelected;
-    cResult[17] = tmp4.thumbnail;
-    cResult[18] = tmp4.thumbnailImage;
-    cResult[19] = tmp4.thumbnailInner;
-    cResult[20] = tmp4.thumbnailInnerSelected;
-    cResult[21] = tmp4.thumbnailSelected;
-    cResult[22] = C;
-    tmp12 = C;
-  }
-  const fn = function l(arg0) {
-    trackPDPClick(SlayerShopPDPCTAType.CAROUSEL_ITEM);
-    onSelectIndex(arg0);
-  };
-  cResult[0] = onSelectIndex;
-  cResult[1] = trackPDPClick;
-  cResult[2] = fn;
-  tmp5 = fn;
-  let obj = items(onSelectIndex[14]);
-}) : (function BundleThumbnailRow(trackPDPClick) {
+}
+function BundleThumbnailRow(trackPDPClick) {
   ({ items: require, mediaItems, selectedIndex: importDefault, onSelectIndex } = trackPDPClick);
   trackPDPClick = trackPDPClick.trackPDPClick;
   const tmp = closure_18();
@@ -775,60 +156,14 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bundle
         obj3.style = thumbnail.thumbnailImage;
         obj2.children = closure_1_14(tmp10, obj3);
         obj.children = closure_1_14(closure_1_7, obj2);
-        return closure_1_14(dependencyMap(onSelectIndex[20]).PressableOpacity, obj, index);
+        return closure_1_14(dependencyMap(onSelectIndex[18]).PressableOpacity, obj, index);
       })
     })
   ];
   obj.children = items1;
   return closure_15(closure_7, obj);
-});
-ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function SKUNameAndDescriptionSection(sku) {
-  const cResult = c.c(8);
-  sku = sku.sku;
-  let section = closure_18();
-  if (obj2.isNullOrEmpty(sku.name)) {
-    return null;
-  } else {
-    if (cResult[0] !== sku.name) {
-      const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: sku.name };
-      const tmp6 = closure_1_14(Text_Text.Heading, obj3);
-      cResult[0] = sku.name;
-      cResult[1] = tmp6;
-      let tmp4 = tmp6;
-    } else {
-      tmp4 = cResult[1];
-    }
-    if (cResult[2] !== sku.description) {
-      const isNullOrEmptyResult = StringUtils.isNullOrEmpty(sku.description);
-      let tmp9 = !isNullOrEmptyResult;
-      if (!isNullOrEmptyResult) {
-        const obj4 = { variant: "text-md/medium", color: "text-muted", children: sku.description };
-        tmp9 = closure_1_14(Text_Text.Text, obj4);
-      }
-      cResult[2] = sku.description;
-      cResult[3] = tmp9;
-      let tmp7 = tmp9;
-      const tmpResult = StringUtils;
-    } else {
-      tmp7 = cResult[3];
-    }
-    if (cResult[4] === section.section) {
-      if (cResult[5] === tmp4) {
-      }
-    }
-    const obj5 = { style: section.section, children: null };
-    const items = [tmp4, tmp7];
-    obj5.children = items;
-    const tmp14 = value2(React5, obj5);
-    section = section.section;
-    cResult[4] = section;
-    cResult[5] = tmp4;
-    cResult[6] = tmp7;
-    cResult[7] = tmp14;
-  }
-  obj2 = StringUtils;
-}) : (function SKUNameAndDescriptionSection(sku) {
+}
+function SKUNameAndDescriptionSection(sku) {
   sku = sku.sku;
   const tmp = closure_18();
   let tmp5Result = null;
@@ -844,144 +179,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function SKUNam
     }
     items[1] = tmp7Result;
     obj2.children = items;
-    tmp5Result = value2(React5, obj2);
+    tmp5Result = __initData(React5, obj2);
     const tmp2Result = StringUtils;
   }
   return tmp5Result;
-});
-ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemDetailsSection(arg0) {
-  const cResult = c.c(20);
-  ({ selectedItem, applicationId } = arg0);
-  const tmp4 = closure_18();
-  if (cResult[0] === applicationId) {
-    if (cResult[1] === selectedItem.labelIconAssetId) {
-      let tmp5 = cResult[2];
-    }
-    if (cResult[3] === tmp5) {
-      if (cResult[4] === selectedItem.description) {
-        if (cResult[5] === selectedItem.label) {
-          if (cResult[6] === selectedItem.title) {
-            if (cResult[7] === tmp4) {
-              let tmp7 = cResult[8];
-              let tmp8 = cResult[9];
-              let tmp9 = cResult[10];
-              let tmp10 = cResult[11];
-              let tmp11 = cResult[12];
-              let tmp12 = cResult[13];
-            }
-            const _Symbol2 = Symbol;
-            if (tmp12 !== Symbol.for("react.early_return_sentinel")) {
-              return tmp12;
-            } else {
-              if (cResult[14] === tmp7) {
-                if (cResult[15] === tmp8) {
-                  if (cResult[16] === tmp9) {
-                    if (cResult[17] === tmp10) {
-                    }
-                  }
-                }
-              }
-              const obj2 = { style: tmp8, children: null };
-              const items = [tmp9, tmp10, tmp11];
-              obj2.children = items;
-              const tmp41 = value2(tmp7, obj2);
-              cResult[14] = tmp7;
-              cResult[15] = tmp8;
-              cResult[16] = tmp9;
-              cResult[17] = tmp10;
-              cResult[18] = tmp11;
-              cResult[19] = tmp41;
-            }
-          }
-        }
-      }
-    }
-    const _Symbol = Symbol;
-    let trimmed;
-    if (selectedItem.title != null) {
-      trimmed = str2.trim();
-    }
-    let trimmed1;
-    if (selectedItem.label != null) {
-      trimmed1 = str3.trim();
-    }
-    let trimmed2;
-    if (selectedItem.description != null) {
-      trimmed2 = str4.trim();
-    }
-    const forResult = Symbol.for("react.early_return_sentinel");
-    if (tmpResult.isNullOrEmpty(trimmed)) {
-      if (tmpResult7.isNullOrEmpty(trimmed1)) {
-        StringUtils;
-        let tmp19 = null;
-      }
-      cResult[3] = tmp5;
-      cResult[4] = selectedItem.description;
-      cResult[5] = selectedItem.label;
-      cResult[6] = selectedItem.title;
-      cResult[7] = tmp4;
-      cResult[8] = React5;
-      cResult[9] = section;
-      cResult[10] = tmp22;
-      cResult[11] = tmp21;
-      cResult[12] = tmp20;
-      cResult[13] = tmp19;
-      tmp12 = tmp19;
-      tmp11 = tmp20;
-      tmp10 = tmp21;
-      tmp9 = tmp22;
-      tmp8 = section;
-      tmp7 = React5;
-      tmpResult7 = StringUtils;
-    }
-    tmpResult = StringUtils;
-    const isNullOrEmptyResult = StringUtils.isNullOrEmpty(trimmed);
-    let tmp26 = !isNullOrEmptyResult;
-    if (!isNullOrEmptyResult) {
-      const obj3 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: trimmed };
-      tmp26 = closure_1_14(Text_Text.Heading, obj3);
-    }
-    const tmpResult9 = StringUtils;
-    const isNullOrEmptyResult1 = StringUtils.isNullOrEmpty(trimmed1);
-    let tmp30Result = !isNullOrEmptyResult1;
-    if (!isNullOrEmptyResult1) {
-      const obj4 = { style: tmp4.labelRow, children: null };
-      let tmp31 = null != tmp5;
-      if (tmp31) {
-        const obj5 = { source: null, style: null };
-        const obj6 = { uri: tmp5 };
-        obj5.source = obj6;
-        obj5.style = tmp4.labelIcon;
-        tmp31 = closure_1_14(FastImageDefault, obj5);
-      }
-      const items1 = [tmp31, ];
-      const obj7 = { variant: "text-sm/medium", color: "text-muted", children: trimmed1 };
-      items1[1] = closure_1_14(Text_Text.Text, obj7);
-      obj4.children = items1;
-      tmp30Result = value2(React5, obj4);
-    }
-    const tmpResult10 = StringUtils;
-    const isNullOrEmptyResult2 = StringUtils.isNullOrEmpty(trimmed2);
-    let tmp36 = !isNullOrEmptyResult2;
-    if (!isNullOrEmptyResult2) {
-      const obj8 = { variant: "text-md/medium", color: "text-default", children: trimmed2 };
-      tmp36 = closure_1_14(Text_Text.Text, obj8);
-    }
-    tmp19 = forResult;
-    section = tmp4.section;
-    const tmpResult11 = StringUtils;
-  }
-  let assetURL = null;
-  if (null != selectedItem.labelIconAssetId) {
-    assetURL = StoreUtils.getAssetURL(applicationId, selectedItem.labelIconAssetId);
-    const tmpResult12 = StoreUtils;
-  }
-  cResult[0] = applicationId;
-  cResult[1] = selectedItem.labelIconAssetId;
-  cResult[2] = assetURL;
-  tmp5 = assetURL;
-}) : (function ItemDetailsSection(selectedItem) {
+}
+function ItemDetailsSection(selectedItem) {
   selectedItem = selectedItem.selectedItem;
   const tmp = closure_18();
   let assetURL = null;
@@ -1033,7 +236,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemDe
     const obj8 = { variant: "text-sm/medium", color: "text-muted", children: trimmed1 };
     items1[1] = closure_1_14(Text_Text.Text, obj8);
     obj5.children = items1;
-    tmp11Result = value2(React5, obj5);
+    tmp11Result = __initData(React5, obj5);
   }
   items[1] = tmp11Result;
   const tmp8Result7 = StringUtils;
@@ -1045,248 +248,10 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemDe
   }
   items[2] = tmp23;
   obj3.children = items;
-  tmp11Result2 = value2(React5, obj3);
+  tmp11Result2 = __initData(React5, obj3);
   const tmp8Result8 = StringUtils;
-});
-ReactCompilerGating = fn(558);
-let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLayerStorefrontProductDetailsModal(skuId) {
-  const cResult = skuId(mobileStoreFront[14]).c(163);
-  skuId = skuId.skuId;
-  const analyticsLocations = skuId.analyticsLocations;
-  let obj = skuId(mobileStoreFront[14]);
-  importDefault = closure_18();
-  require("useSafeAreaInsets")();
-  let tmp4 = closure_18();
-  const isScreenLandscape = skuId(mobileStoreFront[24]).useIsScreenLandscape();
-  let obj2 = skuId(mobileStoreFront[24]);
-  mobileStoreFront = require("NativePaymentHooks").useMobileStoreFront();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [SKUStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== skuId) {
-    const fn = function b() {
-      return SKUStore.get(skuId);
-    };
-    cResult[1] = skuId;
-    cResult[2] = fn;
-    let tmp11 = fn;
-  } else {
-    tmp11 = cResult[2];
-  }
-  let obj3 = require("NativePaymentHooks");
-  const stateFromStores = skuId(mobileStoreFront[26]).useStateFromStores(first, tmp11);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [SKUStore];
-    cResult[3] = items1;
-    let tmp13 = items1;
-  } else {
-    tmp13 = cResult[3];
-  }
-  if (cResult[4] !== skuId) {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-    cResult[4] = skuId;
-    cResult[5] = N;
-  } else {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-  }
-  const tmpResult = skuId(mobileStoreFront[26]);
-  const stateFromStores1 = skuId(mobileStoreFront[26]).useStateFromStores(tmp13, N);
-  const tmpResult5 = skuId(mobileStoreFront[26]);
-  if (stateFromStores != null) {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-  }
-  const getOrFetchApplication = skuId(mobileStoreFront[27]).useGetOrFetchApplication(undefined);
-  const tmpResult6 = skuId(mobileStoreFront[27]);
-  if (getOrFetchApplication == null) {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-  }
-  const hasAlreadyLinked = require("useStartAuthorize")(getOrFetchApplication).hasAlreadyLinked;
-  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-    const items2 = [SocialLayerStorefrontStore];
-    class X {
-      constructor() {
-        return closure_9.getSkuAssets();
-      }
-    }
-    cResult[6] = items2;
-    cResult[7] = X;
-    let tmp20 = X;
-    const tmp19 = items2;
-  } else {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-    tmp20 = cResult[7];
-  }
-  let tmp5Result = require("useStartAuthorize");
-  const stateFromStores2 = skuId(mobileStoreFront[26]).useStateFromStores(tmp19, tmp20);
-  const tmpResult7 = skuId(mobileStoreFront[26]);
-  const cardImageURL = skuId(mobileStoreFront[29]).getCardImageURL(stateFromStores);
-  const tmpResult8 = skuId(mobileStoreFront[29]);
-  [r10099, r10100] = stateFromStores(stateFromStores1.useState(0), 2);
-  if (cResult[8] !== analyticsLocations) {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-    if (analyticsLocations == null) {
-      class N {
-        constructor() {
-          obj = closure_8;
-          tmp = skuId;
-          tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-          return tmp2;
-        }
-      }
-    }
-    class X {
-      constructor() {
-        return closure_9.getSkuAssets();
-      }
-    }
-    cResult[9] = tmp25;
-  } else {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-  }
-  if (cResult[10] !== tmp25) {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-    class X {
-      constructor() {
-        return closure_9.getSkuAssets();
-      }
-    }
-    tmp27[HermesBuiltin.arraySpread(tmp25, 0)] = tmp5(tmp2[30]).SLAYER_STOREFRONT_NATIVE_PDP;
-    cResult[10] = tmp25;
-    cResult[11] = tmp27;
-    const arraySpreadResult = HermesBuiltin.arraySpread(tmp25, 0);
-  } else {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-  }
-  location_stack = tmp27;
-  if (cResult[12] === tmp27) {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-    if (stateFromStores != null) {
-      class N {
-        constructor() {
-          obj = closure_8;
-          tmp = skuId;
-          tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-          return tmp2;
-        }
-      }
-    }
-    class X {
-      constructor() {
-        return closure_9.getSkuAssets();
-      }
-    }
-  }
-  cResult[12] = tmp27;
-  if (stateFromStores != null) {
-    class N {
-      constructor() {
-        obj = closure_8;
-        tmp = skuId;
-        tmp2 = closure_8.isFetching(skuId) || obj.didFetchingSkuFail(tmp);
-        return tmp2;
-      }
-    }
-  }
-  class J {
-    constructor() {
-      obj = closure_1(closure_2[31]);
-      obj1 = { location_stack: closure_5, type: closure_0(closure_2[32]).SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY, sku_id: skuId, application_id: null };
-      applicationId = undefined;
-      if (closure_3 != null) {
-        applicationId = closure_3.applicationId;
-      }
-      obj1.application_id = applicationId;
-      trackResult = obj.track(AnalyticEvents.OPEN_MODAL, obj1);
-      return;
-    }
-  }
-  cResult[13] = undefined;
-  cResult[14] = skuId;
-  cResult[15] = J;
-  const tmp23 = stateFromStores(stateFromStores1.useState(0), 2);
-}) : (function SocialLayerStorefrontProductDetailsModal(skuId) {
+}
+function SocialLayerStorefrontProductDetailsModal(skuId) {
   skuId = skuId.skuId;
   const analyticsLocations = skuId.analyticsLocations;
   let stateFromStores2;
@@ -1298,11 +263,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   c12 = undefined;
   const tmp = closure_18();
   dependencyMap = tmp;
-  const rect = analyticsLocations(1631)();
-  const isScreenLandscape = skuId(8731).useIsScreenLandscape();
-  let obj = skuId(8731);
-  const mobileStoreFront = analyticsLocations(9863).useMobileStoreFront();
-  let obj2 = analyticsLocations(9863);
+  const rect = analyticsLocations(1626)();
+  const isScreenLandscape = skuId(8765).useIsScreenLandscape();
+  let obj = skuId(8765);
+  const mobileStoreFront = analyticsLocations(9889).useMobileStoreFront();
+  let obj2 = analyticsLocations(9889);
   let items = [trackPDPClick];
   const stateFromStores = skuId(504).useStateFromStores(items, () => SKUStore.get(skuId));
   let obj3 = skuId(504);
@@ -1313,13 +278,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   if (stateFromStores != null) {
     applicationId1 = stateFromStores.applicationId;
   }
-  const getOrFetchApplication = skuId(7317).useGetOrFetchApplication(applicationId1);
+  const getOrFetchApplication = skuId(7324).useGetOrFetchApplication(applicationId1);
   let tmp12 = getOrFetchApplication;
-  const obj5 = skuId(7317);
+  const obj5 = skuId(7324);
   if (getOrFetchApplication == null) {
     tmp12 = null;
   }
-  const tmp2Result = analyticsLocations(7314);
+  const tmp2Result = analyticsLocations(7321);
   const items2 = [skuAssets];
   stateFromStores2 = skuId(504).useStateFromStores(items2, () => skuAssets.getSkuAssets());
   const items3 = [stateFromStores];
@@ -1335,9 +300,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     const items1 = [...items, AnalyticsLocationDefault.SLAYER_STOREFRONT_NATIVE_PDP];
     return items1;
   }, items4);
-  analyticsLocations(5300)(() => {
+  analyticsLocations(5588)(() => {
     const obj2 = { location_stack: memo1, type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY, sku_id: skuId, application_id: null };
-    applicationId = undefined;
+    let applicationId;
     if (stateFromStores != null) {
       applicationId = stateFromStores.applicationId;
     }
@@ -1352,8 +317,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   items5[1] = applicationId2;
   items5[2] = memo1;
   trackPDPClick = stateFromStores.useCallback((cta_type) => {
-    const obj2 = { slayer_storefront_session_id: "Array", sku_id: skuId, guild_id: true, application_id: true, cta_type: false, location_stack: false };
-    applicationId = undefined;
+    const obj2 = { slayer_storefront_session_id: "Array", sku_id: skuId, guild_id: true, application_id: true, cta_type: "_shouldSetResponder", location_stack: null };
+    let applicationId;
     if (stateFromStores != null) {
       applicationId = stateFromStores.applicationId;
     }
@@ -1365,7 +330,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   const items6 = [stateFromStores, stateFromStores2];
   let tmp4Result = skuId(504);
   [arr8, arr9] = mobileStoreFront(stateFromStores.useMemo(() => {
-    applicationId = undefined;
+    let applicationId;
     if (stateFromStores != null) {
       applicationId = stateFromStores.applicationId;
     }
@@ -1373,7 +338,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       const items = [[], []];
       let result = items;
     } else {
-      const obj = carouselMediaItems;
+      const obj2 = carouselMediaItems;
       const tenantMetadata = stateFromStores.tenantMetadata;
       let carouselItems;
       if (tenantMetadata != null) {
@@ -1385,8 +350,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       if (carouselItems == null) {
         carouselItems = [];
       }
-      const obj2 = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
-      result = obj.convertCarouselItemsToMediaItems(carouselItems, stateFromStores.applicationId, stateFromStores2, obj2);
+      const obj = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
+      result = obj2.convertCarouselItemsToMediaItems(carouselItems, stateFromStores.applicationId, stateFromStores2, obj);
     }
     return result;
   }, items6), 2);
@@ -1420,7 +385,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   }
   skuAssets = tmp26;
   const tmp15Result = mobileStoreFront(stateFromStores.useMemo(() => {
-    applicationId = undefined;
+    let applicationId;
     if (stateFromStores != null) {
       applicationId = stateFromStores.applicationId;
     }
@@ -1428,7 +393,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       const items = [[], []];
       let result = items;
     } else {
-      const obj = carouselMediaItems;
+      const obj2 = carouselMediaItems;
       const tenantMetadata = stateFromStores.tenantMetadata;
       let carouselItems;
       if (tenantMetadata != null) {
@@ -1440,8 +405,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       if (carouselItems == null) {
         carouselItems = [];
       }
-      const obj2 = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
-      result = obj.convertCarouselItemsToMediaItems(carouselItems, stateFromStores.applicationId, stateFromStores2, obj2);
+      const obj = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
+      result = obj2.convertCarouselItemsToMediaItems(carouselItems, stateFromStores.applicationId, stateFromStores2, obj);
     }
     return result;
   }, items6), 2);
@@ -1524,22 +489,22 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       _undefined3((arg0) => arg0 + 1);
       _undefined(true);
     } else {
-      applicationId = undefined;
+      let applicationId;
       if (stateFromStores != null) {
         applicationId = stateFromStores.applicationId;
       }
       const obj2 = { applicationId, skuId, source: "SocialLayerStorefrontProductDetailsModal" };
       redirectToSlayerStorefrontWebDefault(obj2).then((result) => {
         if (result) {
-          result = skuId(closeButtonIcon[32]).closeSocialLayerStorefrontProductDetailsModal();
-          const obj = skuId(closeButtonIcon[32]);
+          result = skuId(closeButtonIcon[31]).closeSocialLayerStorefrontProductDetailsModal();
+          const obj = skuId(closeButtonIcon[31]);
         }
       });
       const tmp4Result = redirectToSlayerStorefrontWebDefault(obj2);
     }
     obj = BillingPlatformUtils;
   }, items9);
-  const OTPACOMOrderExperiment = tmp4(9862).OTPACOMOrderExperiment;
+  const OTPACOMOrderExperiment = tmp4(9888).OTPACOMOrderExperiment;
   let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
   const tmp15Result6 = mobileStoreFront(stateFromStores.useState(0), 2);
   if (tmp4Result6.isIOS()) {
@@ -1558,7 +523,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     obj6.orderRequired = enabled;
     const items10 = [skuId];
     obj6.skuIds = items10;
-    obj6.onOrderRetryCancellation = tmp4(10623).closeSocialLayerStorefrontProductDetailsModal;
+    obj6.onOrderRetryCancellation = tmp4(10649).closeSocialLayerStorefrontProductDetailsModal;
     const obj8 = { is_gift: false, location_stack: memo1, payment_type: "sku", sku_id: skuId, sku_type: null, sku_product_line: null, application_id: null };
     let type;
     if (stateFromStores != null) {
@@ -1577,40 +542,40 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     obj8.application_id = applicationId4;
     obj6.checkoutAnalyticsFields = obj8;
     const obj9 = { attempt: tmp32, skuId, sku: stateFromStores, analyticsLocations: memo1, onPurchaseComplete: callback2, onPurchaseError: callback1 };
-    obj6.children = closure_14(tmp4(10634).HeadlessSlayerStorefrontPurchaseRunner, obj9);
-    tmp43Result = closure_14(tmp2(10630), obj6, skuId);
-    const tmp2Result2 = tmp2(10630);
+    obj6.children = closure_14(tmp4(10660).HeadlessSlayerStorefrontPurchaseRunner, obj9);
+    tmp43Result = closure_14(tmp2(10656), obj6, skuId);
+    const tmp2Result2 = tmp2(10656);
   }
   const items11 = [skuId, memo1, trackPDPClick];
   if (null == stateFromStores) {
     return null;
   } else {
-    let result = tmp4(7395).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
-    const intl4 = tmp4(1125).intl;
-    const stringResult = intl4.string(tmp4(1125).t.boqtTA);
-    const tmp4Result7 = tmp4(7395);
-    let result1 = tmp4(2063).isSocialLayerStorefrontGiftingSupported();
+    let result = tmp4(7403).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
+    const intl4 = tmp4(1114).intl;
+    const stringResult = intl4.string(tmp4(1114).t.boqtTA);
+    const tmp4Result7 = tmp4(7403);
+    let result1 = tmp4(2060).isSocialLayerStorefrontGiftingSupported();
     if (null != tmp25) {
       const obj10 = { mediaItem: tmp25, landscape: isScreenLandscape };
-      let tmp49 = closure_14(closure_19, obj10);
+      let tmp49 = closure_14(HeroMedia, obj10);
     } else {
       tmp49 = null;
       if (null != memo) {
         const obj11 = { sku: stateFromStores };
-        tmp49 = closure_14(tmp2(9480), obj11);
+        tmp49 = closure_14(tmp2(9499), obj11);
       }
     }
     let tmp53 = null;
     if (stateFromStores.exclusive) {
-      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10638).ExclusiveBadge, {}) };
+      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10664).ExclusiveBadge, {}) };
       tmp53 = closure_14(memo1, obj12);
     }
     let tmp56 = null;
     if (tmp23) {
       const obj13 = { items: arr8, mediaItems: arr9, selectedIndex: num, onSelectIndex: tmp16[1], trackPDPClick };
-      tmp56 = closure_14(closure_22, obj13);
+      tmp56 = closure_14(BundleThumbnailRow, obj13);
     }
-    applicationId = stateFromStores.applicationId;
+    let applicationId = stateFromStores.applicationId;
     let tmp59 = null;
     if (tmp23) {
       tmp59 = tmp24;
@@ -1620,22 +585,22 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       tmp60 = null;
       if (null != applicationId) {
         const obj14 = { selectedItem: tmp59, applicationId };
-        tmp60 = closure_14(closure_24, obj14);
+        tmp60 = closure_14(ItemDetailsSection, obj14);
       }
     }
     const obj15 = { style: null, children: null };
     const items12 = [tmp.footer, ];
-    const obj16 = { paddingBottom: rect.bottom + tmp2(587).space.PX_16 };
+    const obj16 = { paddingBottom: rect.bottom + tmp2(575).space.PX_16 };
     items12[1] = obj16;
     obj15.style = items12;
     const obj17 = { sku: stateFromStores };
-    const items13 = [closure_14(closure_21, obj17), , , ];
+    const items13 = [closure_14(ProductPriceSection, obj17), , , ];
     let tmp65Result = !result;
     if (!result) {
       const obj18 = { variant: "text-xs/normal", color: "text-muted", style: tmp.availabilityCopy, includeFontPadding: true, children: null };
-      const intl = tmp4(1125).intl;
-      obj18.children = intl.string(tmp2(3734).gndWN7);
-      tmp65Result = closure_14(tmp4(5271).Text, obj18);
+      const intl = tmp4(1114).intl;
+      obj18.children = intl.string(tmp2(3735).gndWN7);
+      tmp65Result = closure_14(tmp4(5619).Text, obj18);
     }
     items13[1] = tmp65Result;
     const obj19 = { style: tmp.footerButtonRow, children: null };
@@ -1647,14 +612,14 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     }
     obj21.disabled = tmp68;
     obj21.onPress = callback3;
-    obj20.children = closure_14(tmp4(5281).Button, obj21);
+    obj20.children = closure_14(tmp4(5629).Button, obj21);
     const items14 = [closure_14(memo1, obj20), ];
     if (result1) {
-      const obj22 = { icon: tmp2(8507), variant: "primary", size: "lg", disabled: tmp28, accessibilityLabel: null, onPress: null };
-      const intl2 = tmp4(1125).intl;
-      obj22.accessibilityLabel = intl2.string(tmp4(1125).t.QAZA5f);
+      const obj22 = { icon: tmp2(8541), variant: "primary", size: "lg", disabled: tmp28, accessibilityLabel: null, onPress: null };
+      const intl2 = tmp4(1114).intl;
+      obj22.accessibilityLabel = intl2.string(tmp4(1114).t.QAZA5f);
       obj22.onPress = tmp48;
-      result1 = closure_14(tmp4(8014).IconButton, obj22);
+      result1 = closure_14(tmp4(8020).IconButton, obj22);
     }
     items14[1] = result1;
     obj19.children = items14;
@@ -1662,16 +627,16 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     if (result) {
       const obj23 = { style: tmp.legalCopy, children: null };
       const obj24 = { shouldAppendDisclaimer: false === tmp2Result(tmp12).hasAlreadyLinked };
-      const mobileFinePrintMessageForApplication = tmp4(10641).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj24);
-      obj23.children = mobileFinePrintMessageForApplication.map((children, index) => closure_1_14(skuId(closeButtonIcon[17]).Text, { variant: "text-xs/normal", color: "text-muted", includeFontPadding: true, children }, index));
+      const mobileFinePrintMessageForApplication = tmp4(10667).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj24);
+      obj23.children = mobileFinePrintMessageForApplication.map((children, index) => closure_1_14(skuId(closeButtonIcon[15]).Text, { variant: "text-xs/normal", color: "text-muted", includeFontPadding: true, children }, index));
       result = closure_14(tmp64, obj23);
-      const tmp4Result9 = tmp4(10641);
+      const tmp4Result9 = tmp4(10667);
     }
     items13[3] = result;
     obj15.children = items13;
     const tmp63Result = closure_15(memo1, obj15);
     const items15 = [tmp.container, ];
-    const tmp4Result8 = tmp4(2063);
+    const tmp4Result8 = tmp4(2060);
     let num3 = 0;
     if (!tmp4Result10.isIOS()) {
       num3 = rect.top;
@@ -1683,23 +648,23 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     const items16 = [tmp43Result, , , ];
     const obj27 = { style: tmp.header, children: null };
     const obj28 = {
-      onPress: tmp4(10623).closeSocialLayerStorefrontProductDetailsModal,
+      onPress: tmp4(10649).closeSocialLayerStorefrontProductDetailsModal,
       backImage() {
           return closure_2_14(XSmallIcon.XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
         },
       accessibilityLabel: null,
       displayMode: "minimal"
     };
-    const intl3 = tmp4(1125).intl;
-    obj28.accessibilityLabel = intl3.string(tmp4(1125).t.cpT0Cq);
-    const items17 = [closure_14(tmp4(6993).HeaderBackButton, obj28), ];
+    const intl3 = tmp4(1114).intl;
+    obj28.accessibilityLabel = intl3.string(tmp4(1114).t.cpT0Cq);
+    const items17 = [closure_14(tmp4(6999).HeaderBackButton, obj28), ];
     const obj29 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.headerTitle, children: null };
     let name;
     if (getOrFetchApplication != null) {
       name = getOrFetchApplication.name;
     }
     obj29.children = name;
-    items17[1] = closure_14(tmp4(5271).Heading, obj29);
+    items17[1] = closure_14(tmp4(5619).Heading, obj29);
     obj27.children = items17;
     items16[1] = closure_15(memo1, obj27);
     const obj30 = { style: tmp.scrollContainer, children: null };
@@ -1708,7 +673,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       const obj31 = { style: stateFromStores2.absoluteFill, colors: null, pointerEvents: "none" };
       const items18 = [closure_16, closure_17];
       obj31.colors = items18;
-      exclusive = closure_14(tmp2(5295), obj31);
+      exclusive = closure_14(tmp2(5582), obj31);
     }
     const items19 = [exclusive, ];
     if (isScreenLandscape) {
@@ -1732,7 +697,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       const obj37 = { style: tmp.detailsGroupLandscape, children: null };
       const items25 = [tmp53, ];
       const obj38 = { sku: stateFromStores };
-      items25[1] = closure_14(closure_23, obj38);
+      items25[1] = closure_14(SKUNameAndDescriptionSection, obj38);
       obj37.children = items25;
       const items26 = [closure_15(tmp64, obj37), tmp63Result];
       obj36.children = items26;
@@ -1743,7 +708,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
       const obj39 = { contentContainerStyle: tmp.scrollContent, children: null };
       const items27 = [tmp49, tmp53, , , ];
       const obj40 = { sku: stateFromStores };
-      items27[2] = closure_14(closure_23, obj40);
+      items27[2] = closure_14(SKUNameAndDescriptionSection, obj40);
       items27[3] = tmp56;
       items27[4] = tmp60;
       obj39.children = items27;
@@ -1760,38 +725,85 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     obj25.children = items16;
     return closure_15(memo1, obj25);
   }
-  tmp4Result6 = skuId(1381);
-});
-ReactCompilerGating = fn(558);
-let obj22 = { paddingHorizontal: nativeDefault.space.PX_16 };
+  tmp4Result6 = skuId(1376);
+}
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const SlayerShopPDPCTAType = fn(10652).SlayerShopPDPCTAType;
+const Constants = fn(1072);
+({ AnalyticEvents: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
+let n = n_mod;
+const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BRAND_500);
+let closure_16 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
+let n = n_mod;
+const alphaResult = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
+const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
+let closure_17 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0).hex();
+const createStyles = fn(5009);
+let obj = { container: { flex: 1 }, header: null, headerTitle: null, closeButtonIcon: null, scrollContent: null, scrollContainer: null, columnsLandscape: null, heroColumnLandscape: null, heroColumnContentLandscape: null, bundleGroupLandscape: null, detailsScrollLandscape: null, detailsContentLandscape: null, detailsGroupLandscape: null, section: null, bundleThumbnailRow: null, thumbnail: null, thumbnailSelected: null, thumbnailInner: null, thumbnailInnerSelected: null, thumbnailImage: null, labelRow: null, labelIcon: null, priceRow: null, footer: null, footerButtonRow: null, buyButton: null, availabilityCopy: null, legalCopy: null, hero: null, heroLandscape: null, priceSection: null, heroImage: null, exclusiveBadgeContainer: null };
+const alphaResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0);
+obj.header = { height: fn(5581).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.headerTitle = { flexShrink: 1 };
+let obj2 = { height: fn(5581).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.closeButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
+let obj3 = { tintColor: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
+obj.scrollContent = { alignItems: "stretch", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 };
+obj.scrollContainer = { flex: 1 };
+let obj4 = { alignItems: "stretch", gap: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 };
+obj.columnsLandscape = { flex: 1, flexDirection: "row", gap: nativeDefault.space.PX_16 };
+obj.heroColumnLandscape = { flex: 1 };
+let obj6 = { flex: 1, flexDirection: "row", gap: nativeDefault.space.PX_16 };
+obj.heroColumnContentLandscape = { flexGrow: 1, gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16 };
+let obj7 = { flexGrow: 1, gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16 };
+obj.bundleGroupLandscape = { gap: nativeDefault.space.PX_4 };
+obj.detailsScrollLandscape = { flex: 1 };
+obj.detailsContentLandscape = { flexGrow: 1, justifyContent: "space-between", paddingBottom: 0 };
+let obj8 = { gap: nativeDefault.space.PX_4 };
+obj.detailsGroupLandscape = { gap: nativeDefault.space.PX_16 };
+let obj9 = { gap: nativeDefault.space.PX_16 };
+obj.section = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+let obj10 = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
+obj.bundleThumbnailRow = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.md, borderWidth: 2, borderColor: "transparent" };
+obj.thumbnail = size;
+let obj11 = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };
+obj.thumbnailSelected = { borderColor: nativeDefault.colors.BORDER_STRONG };
+let obj12 = { borderColor: nativeDefault.colors.BORDER_STRONG };
+obj.thumbnailInner = { flex: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+let obj13 = { flex: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+obj.thumbnailInnerSelected = { margin: 2, borderRadius: nativeDefault.radii.sm };
+obj.thumbnailImage = { width: "100%", height: "100%" };
+let obj14 = { margin: 2, borderRadius: nativeDefault.radii.sm };
+obj.labelRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+const size1 = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
+obj.labelIcon = size1;
+let obj15 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj.priceRow = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
+let obj16 = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
+obj.footer = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
+let obj17 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.footerButtonRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj.buyButton = { flex: 1 };
+obj.availabilityCopy = { textAlign: "center" };
+let obj18 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
+let obj19 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
+obj.hero = { marginHorizontal: nativeDefault.space.PX_16, height: fn(10653).MOBILE_HERO_HEIGHT_PX, borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "apply" };
+let obj20 = { marginHorizontal: nativeDefault.space.PX_16, height: fn(10653).MOBILE_HERO_HEIGHT_PX, borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj.priceSection = { width: "100%", gap: nativeDefault.space.PX_8 };
+obj.heroImage = { width: "100%", height: "100%" };
+let obj21 = { width: "100%", gap: nativeDefault.space.PX_8 };
+obj.exclusiveBadgeContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_18 = createStyles.createStyles(obj);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontProductDetailsModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function WrappedSocialLayerStorefrontProductDetailsModal(arg0) {
-  const cResult = c.c(3);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const obj2 = { skuIDs: first, activeSubscription: null, children: null };
-    const obj3 = {};
-    const merged = Object.assign(arg0);
-    obj2.children = closure_1_14(closure_25, obj3);
-    const tmp11 = closure_1_14(NativePaymentContext.NativePaymentContextProvider, obj2);
-    cResult[1] = arg0;
-    cResult[2] = tmp11;
-    let tmp5 = tmp11;
-  } else {
-    tmp5 = cResult[2];
-  }
-  return tmp5;
-}) : (function WrappedSocialLayerStorefrontProductDetailsModal(arg0) {
+export default function WrappedSocialLayerStorefrontProductDetailsModal(arg0) {
   const obj = { skuIDs: [], activeSubscription: null, children: null };
   const merged = Object.assign(arg0);
-  obj.children = closure_1_14(closure_25, {});
+  obj.children = closure_1_14(SocialLayerStorefrontProductDetailsModal, {});
   return closure_1_14(NativePaymentContext.NativePaymentContextProvider, obj);
-});
+};

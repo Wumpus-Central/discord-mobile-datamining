@@ -1,15 +1,15 @@
-// === Module 19904: MessageSendFailureNotificationManager ===
+// === Module 19967: MessageSendFailureNotificationManager ===
 
-// Module 19904 (MessageSendFailureNotificationManager)
-import util from "util" /* 1125 */;
-import PushNotificationDefault from "PushNotification" /* 10866 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 14223 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 14225 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
-import UserStore from "UserStore" /* 1389 */;
-import AppStateStore from "AppStateStore" /* 1999 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+// Module 19967 (MessageSendFailureNotificationManager)
+import util from "util" /* 1114 */;
+import PushNotificationDefault from "PushNotification" /* 10889 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11003 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11005 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
+import UserStore from "UserStore" /* 1384 */;
+import AppStateStore from "AppStateStore" /* 1994 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -74,9 +74,9 @@ function handleMessageCreate(message) {
     }, 3000);
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(10855).LocalNotificationTypes;
+const LocalNotificationTypes = fn(10878).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

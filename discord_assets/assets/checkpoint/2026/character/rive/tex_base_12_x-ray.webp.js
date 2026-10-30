@@ -1,6 +1,6 @@
-// === Module 13287: ? ===
+// === Module 13437: ? ===
 
-// Module 13287
+// Module 13437
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_base_12_x-ray.webp.js");

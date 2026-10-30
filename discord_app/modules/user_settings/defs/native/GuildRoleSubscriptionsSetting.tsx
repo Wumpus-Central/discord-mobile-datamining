@@ -1,21 +1,18 @@
-// === Module 17070: GuildRoleSubscriptionsSetting ===
+// === Module 17124: GuildRoleSubscriptionsSetting ===
 
-// Module 17070 (GuildRoleSubscriptionsSetting)
-import Constants from "Constants" /* 1084 */;
-import util from "util" /* 1125 */;
-import SettingsConstants from "SettingsConstants" /* 8387 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 17071 */;
-import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 17072 */;
-import TicketIcon from "TicketIcon" /* 17073 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 17124 (GuildRoleSubscriptionsSetting)
+import Constants from "Constants" /* 1072 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 8424 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 17125 */;
+import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 17126 */;
+import TicketIcon from "TicketIcon" /* 17127 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const constants = GuildRoleSubscriptionsConstants.UserGuildRoleSubscriptionRelationship;
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -33,6 +30,6 @@ const route = SettingBuilders.createRoute({
     }
   }
 });
-const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx");
 
 export default route;

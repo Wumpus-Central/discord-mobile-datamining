@@ -1,18 +1,18 @@
-// === Module 7780: Guilds ===
+// === Module 7785: Guilds ===
 
-// Module 7780 (Guilds)
+// Module 7785 (Guilds)
 import LoggerDefault from "Logger" /* 3 */;
-import GuildRecordUtilsAll from "GuildRecordUtils" /* 4871 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4883 */;
-import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4913 */;
-import GuildRoleUtilsAll from "GuildRoleUtils" /* 4915 */;
+import GuildRecordUtilsAll from "GuildRecordUtils" /* 4872 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4887 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4917 */;
+import GuildRoleUtilsAll from "GuildRoleUtils" /* 4919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4917 */;
-import GuildRoleStore from "GuildRoleStore" /* 4911 */;
-import GuildStore from "GuildStore" /* 4879 */;
+import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import GuildRoleStore from "GuildRoleStore" /* 4915 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
-const updateJoinedAt = fn(4875).updateJoinedAt;
+const updateJoinedAt = fn(4876).updateJoinedAt;
 let closure_9 = new LoggerDefault("Guilds");
 class Guilds {
   constructor() {
@@ -86,7 +86,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("unavailable" !== nextResult.data_mode) {
-      guild = GuildStore.getGuild(tmp2.id);
+      let guild = GuildStore.getGuild(tmp2.id);
       if (null != guild) {
         let unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(tmp2.id);
         if ("partial" === tmp2.data_mode) {
@@ -98,10 +98,10 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
           filterRoleDeletesResult = obj.fromServerArray(tmp2.id, tmp2.roles);
           tmp7 = importAll;
         }
-        let tmp7Result = tmp7(4871);
-        let tmp7Result3 = tmp7(4871);
+        let tmp7Result = tmp7(4872);
+        let tmp7Result3 = tmp7(4872);
         let fromBackgroundSyncResult = tmp7Result3.fromBackgroundSync(tmp2, tmp22);
-        let tmp7Result4 = tmp7(4913);
+        let tmp7Result4 = tmp7(4917);
         let result = tmp7Result4.toSerializedPartition(filterRoleDeletesResult);
         let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, GuildMemberStore.getSelfMember(tmp2.id)), arg1);
       }
@@ -133,7 +133,7 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild, arg1) {
   this.delete(guild.guild.id, arg1);
 };
 prototype["handleGuildRoleChange"] = function handleGuildRoleChange(guildId, arg1) {
-  guild = GuildStore.getGuild(guildId.guildId);
+  const guild = GuildStore.getGuild(guildId.guildId);
   const unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guildId.guildId);
   if (null != guild) {
     const self = this;
@@ -147,7 +147,7 @@ prototype["handleGuildRoleChange"] = function handleGuildRoleChange(guildId, arg
   }
 };
 prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(guildId, arg1) {
-  guild = GuildStore.getGuild(guildId.guildId);
+  const guild = GuildStore.getGuild(guildId.guildId);
   if (null != guild) {
     const obj4 = {};
     const merged = Object.assign(GuildRoleStore.getUnsafeMutableRoles(guildId.guildId));
@@ -170,7 +170,7 @@ prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(guildId, arg
 prototype["handleGuildMemberAdd"] = function handleGuildMemberAdd(joinedAt, arg1) {
   if (null != joinedAt.joinedAt) {
     if (joinedAt.user.id === AuthenticationStore.getId()) {
-      guild = GuildStore.getGuild(joinedAt.guildId);
+      const guild = GuildStore.getGuild(joinedAt.guildId);
       if (null != guild) {
         const self = this;
         const obj = GuildRecordUtilsAll;
@@ -183,7 +183,7 @@ prototype["handleGuildMemberAdd"] = function handleGuildMemberAdd(joinedAt, arg1
 };
 prototype["handleGuildMemberUpdate"] = function handleGuildMemberUpdate(user, arg1) {
   if (user.user.id === AuthenticationStore.getId()) {
-    guild = GuildStore.getGuild(user.guildId);
+    const guild = GuildStore.getGuild(user.guildId);
     if (null != guild) {
       const self = this;
       const obj = GuildRecordUtilsAll;
@@ -198,7 +198,7 @@ prototype["resetInMemoryState"] = function resetInMemoryState() {
 prototype["putOne"] = function putOne(members, arg1) {
   members = members.members;
   const found = members.find((user) => user.user.id === id.getId());
-  guild = GuildStore.getGuild(members.id);
+  const guild = GuildStore.getGuild(members.id);
   if (null != members.properties) {
     ({ id, roles } = members);
     const fromSyncOperationResult = GuildRoleRecordUtilsAll.fromSyncOperation(id, roles, GuildRoleStore.getUnsafeMutableRoles(members.id));

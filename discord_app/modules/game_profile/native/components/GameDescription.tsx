@@ -1,67 +1,14 @@
-// === Module 9395: GameDescription ===
+// === Module 9412: GameDescription ===
 
-// Module 9395 (GameDescription)
-import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import groupDescriptionRuns from "groupDescriptionRuns" /* 9396 */;
+// Module 9412 (GameDescription)
+import Text_Text from "Text/Text" /* 5619 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8931 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9320 */;
+import groupDescriptionRuns from "groupDescriptionRuns" /* 9413 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
 require = fn;
-const jsx = fn(21).jsx;
-const createStyles = fn(5005);
-let closure_4 = createStyles.createStyles({ italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } });
-let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function DescriptionTextRun(arg0) {
-  const cResult = c.c(7);
-  ({ run, styles } = arg0);
-  ({ text, bold, italic, underline } = run);
-  if (!bold) {
-    if (!italic) {
-      if (!underline) {
-        return text;
-      }
-    }
-  }
-  let str = "text-md/normal";
-  if (bold) {
-    str = "text-md/bold";
-  }
-  let italic1;
-  if (italic) {
-    italic1 = styles.italic;
-  }
-  let underline1;
-  if (underline) {
-    underline1 = styles.underline;
-  }
-  if (cResult[0] === italic1) {
-    if (cResult[1] === underline1) {
-      let tmp6 = cResult[2];
-    }
-    if (cResult[3] === str) {
-      if (cResult[4] === tmp6) {
-        if (cResult[5] === text) {
-          let tmp7 = cResult[6];
-        }
-        return tmp7;
-      }
-    }
-    const obj2 = { variant: str, color: "none", style: tmp6, children: text };
-    const tmp9 = jsx(Text_Text.Text, { variant: str, color: "none", style: tmp6, children: text });
-    cResult[3] = str;
-    cResult[4] = tmp6;
-    cResult[5] = text;
-    cResult[6] = tmp9;
-    tmp7 = tmp9;
-  }
-  const items = [italic1, underline1];
-  cResult[0] = italic1;
-  cResult[1] = underline1;
-  cResult[2] = items;
-  tmp6 = items;
-}) : (function DescriptionTextRun(arg0) {
+function DescriptionTextRun(arg0) {
   ({ run, styles } = arg0);
   ({ text, bold, italic, underline } = run);
   if (!bold) {
@@ -88,52 +35,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Descrip
   obj.style = items;
   obj.children = text;
   tmp = jsx(Text_Text.Text, { variant: str, color: "none", style: null, children: null });
-});
-ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function DescriptionHeadingRun(arg0) {
-  const cResult = c.c(7);
-  ({ run, styles } = arg0);
-  ({ text, italic, underline } = run);
-  if (!italic) {
-    if (!underline) {
-      return text;
-    }
-  }
-  const tmp4 = groupDescriptionRuns.GAME_DESCRIPTION_HEADING_VARIANTS[arg0.heading];
-  let italic1;
-  if (italic) {
-    italic1 = styles.italic;
-  }
-  let underline1;
-  if (underline) {
-    underline1 = styles.underline;
-  }
-  if (cResult[0] === italic1) {
-    if (cResult[1] === underline1) {
-      let tmp7 = cResult[2];
-    }
-    if (cResult[3] === tmp4) {
-      if (cResult[4] === tmp7) {
-        if (cResult[5] === text) {
-          let tmp8 = cResult[6];
-        }
-        return tmp8;
-      }
-    }
-    const obj2 = { variant: tmp4, color: "none", style: tmp7, children: text };
-    const tmp10 = jsx(Text_Text.Text, { variant: tmp4, color: "none", style: tmp7, children: text });
-    cResult[3] = tmp4;
-    cResult[4] = tmp7;
-    cResult[5] = text;
-    cResult[6] = tmp10;
-    tmp8 = tmp10;
-  }
-  const items = [italic1, underline1];
-  cResult[0] = italic1;
-  cResult[1] = underline1;
-  cResult[2] = items;
-  tmp7 = items;
-}) : (function DescriptionHeadingRun(arg0) {
+}
+function DescriptionHeadingRun(arg0) {
   ({ run, styles } = arg0);
   ({ text, italic, underline } = run);
   if (italic) {
@@ -155,65 +58,69 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Descrip
     tmp3Result = text;
   }
   return tmp3Result;
-});
-ReactCompilerGating = fn(558);
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/game_profile/native/components/GameDescription.tsx");
-
-export const GameDescription = ReactCompilerGating.isReactCompilerEnabled() ? (function GameDescription(runs) {
-  let groupDescriptionRunsResult = _require;
-  let mapped = dependencyMap;
-  const cResult = require("c").c(5);
-  runs = runs.runs;
-  const tmp3 = closure_4();
-  _require = tmp3;
-  if (cResult[0] === runs) {
-    if (cResult[1] === tmp3) {
-      return cResult[2];
-    }
-  }
-  if (cResult[3] !== tmp3) {
-    const fn = function p(heading, id) {
-      if (null != heading.heading) {
-        heading = heading.heading;
-        const obj2 = { variant: styles(9396).GAME_DESCRIPTION_HEADING_VARIANTS[heading], color: "mobile-text-heading-primary", children: null };
-        const runs = heading.runs;
-        obj2.children = runs.map((run, index) => <closure_6 key={index} run={run} heading={heading} styles={styles} />);
-        return jsx(styles(5271).Heading, { variant: styles(9396).GAME_DESCRIPTION_HEADING_VARIANTS[heading], color: "mobile-text-heading-primary", children: null }, id);
-      } else {
-        const obj = { children: null };
-        const runs1 = heading.runs;
-        obj.children = runs1.map((run, index) => <closure_2_5 key={index} run={run} styles={heading} />);
-        return < key={id}>{null}</>;
-      }
-    };
-    cResult[3] = tmp3;
-    cResult[4] = fn;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[4];
-  }
-  const result = groupDescriptionRunsResult(9396);
-  groupDescriptionRunsResult = result.groupDescriptionRuns(runs);
-  mapped = groupDescriptionRunsResult.map(tmp4);
-  cResult[0] = runs;
-  cResult[1] = tmp3;
-  cResult[2] = mapped;
-}) : (function GameDescription(runs) {
-  _require = closure_4();
-  let obj = require("groupDescriptionRuns");
-  return require("groupDescriptionRuns").groupDescriptionRuns(runs.runs).map((heading, index) => {
-    if (null != heading.heading) {
-      heading = heading.heading;
-      const obj2 = { variant: styles(9396).GAME_DESCRIPTION_HEADING_VARIANTS[heading], color: "mobile-text-heading-primary", children: null };
-      const runs = heading.runs;
-      obj2.children = runs.map((run, index) => <closure_6 key={index} run={run} heading={heading} styles={styles} />);
-      return jsx(styles(5271).Heading, { variant: styles(9396).GAME_DESCRIPTION_HEADING_VARIANTS[heading], color: "mobile-text-heading-primary", children: null }, index);
+}
+function DescriptionSegment(styles) {
+  ({ segment, heading } = styles);
+  styles = styles.styles;
+  const trackAction = styles.trackAction;
+  const runs = segment.runs;
+  const mapped = runs.map((run, index) => {
+    if (null == heading) {
+      const obj2 = { run, styles };
+      let tmp5 = <DescriptionTextRun key={index} run={run} styles={styles} />;
     } else {
-      const obj = { children: null };
-      const runs1 = heading.runs;
-      obj.children = runs1.map((run, index) => <closure_2_5 key={index} run={run} styles={heading} />);
-      return < key={index}>{null}</>;
+      const obj = { run, heading: tmp, styles };
+      tmp5 = <DescriptionHeadingRun key={index} run={run} heading={tmp} styles={styles} />;
     }
+    return tmp5;
   });
-});
+  const link = segment.link;
+  let tmp3Result = mapped;
+  if (null != link) {
+    let str = "text-md/normal";
+    if (null != heading) {
+      str = tmp4(tmp5[4]).GAME_DESCRIPTION_HEADING_VARIANTS[heading];
+    }
+    let obj = {
+      variant: str,
+      color: "text-link",
+      accessibilityRole: "link",
+      style: styles.underline,
+      onPress() {
+          trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.ClickDescriptionLink);
+          MaskedLinkUtils.handleClick({ href: link });
+        },
+      children: mapped
+    };
+    tmp3Result = link(heading(styles[3]).Text, obj);
+    tmp4 = heading;
+    tmp5 = styles;
+  }
+  return tmp3Result;
+}
+function DescriptionGroup(arg0) {
+  ({ group, styles: require, trackAction: dependencyMap } = arg0);
+  const heading = group.heading;
+  const segments = group.segments;
+  const mapped = segments.map((segment, index) => <DescriptionSegment key={index} segment={segment} heading={heading} styles={styles} trackAction={trackAction} />);
+  let tmp2 = mapped;
+  if (null != heading) {
+    const obj = { variant: groupDescriptionRuns.GAME_DESCRIPTION_HEADING_VARIANTS[heading], color: "mobile-text-heading-primary", children: mapped };
+    tmp2 = jsx(Text_Text.Heading, { variant: groupDescriptionRuns.GAME_DESCRIPTION_HEADING_VARIANTS[heading], color: "mobile-text-heading-primary", children: mapped });
+  }
+  return tmp2;
+}
+const jsx = fn(21).jsx;
+const createStyles = fn(5009);
+let closure_4 = createStyles.createStyles({ italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameDescription.tsx");
+
+export function GameDescription(runs) {
+  runs = runs.runs;
+  const trackAction = runs.trackAction;
+  noop = closure_4();
+  const items = [runs];
+  const memo = noop.useMemo(() => groupDescriptionRuns.groupDescriptionRuns(runs), items);
+  return memo.map((group, index) => <DescriptionGroup key={index} group={group} styles={styles} trackAction={trackAction} />);
+}

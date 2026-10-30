@@ -1,7 +1,7 @@
-// === Module 12019: FrecencySectionStoreActionCreators ===
+// === Module 12205: FrecencySectionStoreActionCreators ===
 
-// Module 12019 (FrecencySectionStoreActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 12205 (FrecencySectionStoreActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStoreActionCreators.tsx");

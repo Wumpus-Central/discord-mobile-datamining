@@ -1,15 +1,15 @@
-// === Module 9339: SKUUtils ===
+// === Module 9353: SKUUtils ===
 
-// Module 9339 (SKUUtils)
-import util from "util" /* 1125 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import _modDef2047 from "module_2047" /* 2047 */;
-import matchPathCompat from "matchPathCompat" /* 5041 */;
-import StoreUtils from "StoreUtils" /* 6442 */;
+// Module 9353 (SKUUtils)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import _modDef2044 from "module_2044" /* 2044 */;
+import matchPathCompat from "matchPathCompat" /* 5045 */;
+import StoreUtils from "StoreUtils" /* 6449 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 const GameGenres = Constants.GameGenres;
 ({ SKUTypes: hasOwnProperty, Routes: metroRequire, SKUProductLines: closure_7 } = Constants);
 const merged = Object.assign(GameGenres);
@@ -277,7 +277,7 @@ export function getReadablePreorderReleaseDate(arg0) {
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
-      const obj = _modDef2047(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef2044(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

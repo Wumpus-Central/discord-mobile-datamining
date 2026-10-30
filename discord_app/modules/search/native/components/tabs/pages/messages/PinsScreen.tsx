@@ -1,13 +1,13 @@
-// === Module 18690: messages/PinsScreen ===
+// === Module 18749: messages/PinsScreen ===
 
-// Module 18690 (messages/PinsScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13710 */;
-import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 14449 */;
-import MessagesScreenDefault from "MessagesScreen" /* 18687 */;
+// Module 18749 (messages/PinsScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13857 */;
+import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 14482 */;
+import MessagesScreenDefault from "MessagesScreen" /* 18746 */;
 import noop from "module_19" /* 19 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 14450 */;
-import SearchMessageStore from "SearchMessageStore" /* 6850 */;
-import SearchQueryStore from "SearchQueryStore" /* 13703 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 14483 */;
+import SearchMessageStore from "SearchMessageStore" /* 6857 */;
+import SearchQueryStore from "SearchQueryStore" /* 13850 */;
 
 const require = fn;
 function InitialPinsScreen(searchContext) {
@@ -137,71 +137,16 @@ function InitialPinsScreen(searchContext) {
     ItemSeparatorComponent: null
   });
 }
-const FetchState = fn(14450).FetchState;
-const SearchConstants = fn(9780);
+const FetchState = fn(14483).FetchState;
+const SearchConstants = fn(9806);
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8, SearchListItemTypes: closure_9, SEARCH_PINNED_MESSAGES_LINE_CLAMP: c10 } = SearchConstants);
-let closure_11 = fn(9779).SearchResultContentEntityTypes;
-const SearchTypes = fn(1084).SearchTypes;
+let closure_11 = fn(9805).SearchResultContentEntityTypes;
+const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/PinsScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PinsScreen(searchContext) {
-  let tmp2 = dependencyMap;
-  const cResult = searchContext(576).c(12);
-  searchContext = searchContext.searchContext;
-  ({ tab, isFocused } = searchContext);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [SearchQueryStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== searchContext) {
-    const fn = function n() {
-      return SearchQueryStore.isInitialSearchQuery(searchContext);
-    };
-    const items1 = [searchContext];
-    cResult[1] = searchContext;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
-  }
-  const obj = searchContext(576);
-  if (tmpResult.useStateFromStores(first, tmp6, tmp7)) {
-    if (cResult[4] === isFocused) {
-      if (cResult[5] === searchContext) {
-        if (cResult[6] === tab) {
-          let tmp9 = cResult[7];
-        }
-        return tmp9;
-      }
-    }
-    const obj2 = { searchContext, tab, isFocused };
-    const tmp12 = <InitialPinsScreen searchContext={searchContext} tab={tab} isFocused={isFocused} />;
-    cResult[4] = isFocused;
-    cResult[5] = searchContext;
-    cResult[6] = tab;
-    cResult[7] = tmp12;
-    tmp9 = tmp12;
-  }
-  if (cResult[8] === isFocused) {
-    if (cResult[9] === searchContext) {
-    }
-  }
-  tmp2 = jsx(MessagesScreenDefault, { searchContext, tab, isFocused });
-  cResult[8] = isFocused;
-  cResult[9] = searchContext;
-  cResult[10] = tab;
-  cResult[11] = tmp2;
-  tmpResult = searchContext(504);
-}) : (function PinsScreen(searchContext) {
+export default noop.memo(function PinsScreen(searchContext) {
   searchContext = searchContext.searchContext;
   ({ tab, isFocused } = searchContext);
   const items = [SearchQueryStore];
@@ -214,4 +159,4 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp5 = <InitialPinsScreen searchContext={searchContext} tab={tab} isFocused={isFocused} />;
   }
   return tmp5;
-}));
+});

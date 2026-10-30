@@ -1,10 +1,8 @@
-// === Module 16560: MFACodeInput ===
+// === Module 16611: MFACodeInput ===
 
-// Module 16560 (MFACodeInput)
-import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 5012 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import ClipboardUtils from "ClipboardUtils" /* 7345 */;
+// Module 16611 (MFACodeInput)
+import nativeDefault from "native" /* 575 */;
+import ClipboardUtils from "ClipboardUtils" /* 7352 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -12,264 +10,16 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const AppStates = fn(1084).AppStates;
+const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: { color: nativeDefault.unsafe_rawColors.RED_400 }, minHeightGuard: { minHeight: 20 } };
 let closure_12 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/MFACodeInput.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function MFACodeInput(appState) {
-  const cResult = appState(error[9]).c(40);
-  appState = appState.appState;
-  const handleSubmit = appState.handleSubmit;
-  ({ style, error } = appState);
-  const showActivityIndicator = appState.showActivityIndicator;
-  let resetLoginOnClose = appState.resetLoginOnClose;
-  let tmp4 = undefined === resetLoginOnClose;
-  if (!tmp4) {
-    tmp4 = resetLoginOnClose;
-  }
-  resetLoginOnClose = tmp4;
-  const tmp5 = closure_12();
-  error = tmp5;
-  let obj = appState(error[9]);
-  const theme = appState(error[10]).useThemeContext().theme;
-  const tmp6 = showActivityIndicator(resetLoginOnClose.useState(""), 2);
-  const first = tmp6[0];
-  closure_8 = tmp6[1];
-  const tmp8 = showActivityIndicator(resetLoginOnClose.useState(null), 2);
-  const first1 = tmp8[0];
-  closure_10 = tmp8[1];
-  if (cResult[0] !== first1) {
-    const fn = function h() {
-      const string = ClipboardUtils.getString();
-      string.then((result) => {
-        const trimmed = result.trim();
-        let tmp = trimmed !== first1;
-        if (tmp) {
-          let isMatch = 6 === trimmed.length;
-          if (isMatch) {
-            isMatch = /^\d+$/.test(trimmed);
-            const obj = /^\d+$/;
-          }
-          if (!isMatch) {
-            let isMatch1 = 8 === trimmed.length;
-            if (isMatch1) {
-              isMatch1 = /^[a-z0-9]+$/i.test(trimmed);
-              const obj2 = /^[a-z0-9]+$/i;
-            }
-            isMatch = isMatch1;
-          }
-          tmp = isMatch;
-        }
-        if (tmp) {
-          closure_1_8(trimmed);
-          closure_1_10(trimmed);
-        }
-      });
-    };
-    cResult[0] = first1;
-    cResult[1] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[1];
-  }
-  closure_11 = tmp10;
-  if (cResult[2] === first) {
-    if (cResult[3] === tmp10) {
-      if (cResult[4] === tmp4) {
-        let tmp11 = cResult[5];
-      }
-      handleSubmit(tmp2[13])(tmp11);
-      if (cResult[6] === appState) {
-        if (cResult[7] === tmp10) {
-          let tmp14 = cResult[8];
-          let tmp15 = cResult[9];
-        }
-        const effect = obj3.useEffect(tmp14, tmp15);
-        if (cResult[10] === first) {
-          if (cResult[11] === handleSubmit) {
-            let tmp17 = cResult[12];
-            let tmp18 = cResult[13];
-          }
-          const effect1 = obj3.useEffect(tmp17, tmp18);
-          class P {
-            constructor() {
-              arr = closure_7;
-              isMatch = 6 === closure_7.length;
-              if (isMatch) {
-                obj = /^\d+$/;
-                isMatch = obj.test(arr);
-              }
-              if (!isMatch) {
-                num = 8;
-                isMatch = 8 === arr.length;
-              }
-              if (isMatch) {
-                tmp2 = handleSubmit;
-                tmp3 = handleSubmit(arr);
-              }
-              return;
-            }
-          }
-          if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            class W {
-              constructor() {
-                obj = {
-                  clear() {
-                                  closure_1_8("");
-                                }
-                };
-                return obj;
-              }
-            }
-            const items = [];
-            class P {
-              constructor() {
-                arr = closure_7;
-                isMatch = 6 === closure_7.length;
-                if (isMatch) {
-                  obj = /^\d+$/;
-                  isMatch = obj.test(arr);
-                }
-                if (!isMatch) {
-                  num = 8;
-                  isMatch = 8 === arr.length;
-                }
-                if (isMatch) {
-                  tmp2 = handleSubmit;
-                  tmp3 = handleSubmit(arr);
-                }
-                return;
-              }
-            }
-            cResult[15] = items;
-            let tmp22 = items;
-          } else {
-            class W {
-              constructor() {
-                obj = {
-                  clear() {
-                                  closure_1_8("");
-                                }
-                };
-                return obj;
-              }
-            }
-            tmp22 = cResult[15];
-          }
-          const imperativeHandle = obj3.useImperativeHandle(appState.ref, W, tmp22);
-          if (cResult[16] === error) {
-            class W {
-              constructor() {
-                obj = {
-                  clear() {
-                                  closure_1_8("");
-                                }
-                };
-                return obj;
-              }
-            }
-          }
-          function renderStatus() {
-            if (showActivityIndicator) {
-              const unsafe_rawColors = nativeDefault.unsafe_rawColors;
-              const obj3 = { color: shared.isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
-              return React6(hasOwnProperty, obj3);
-            } else {
-              let tmp2 = null;
-              if (null != error) {
-                const obj = { style: error.error, variant: "text-md/medium", children: tmp };
-                tmp2 = React6(Text_Text.Text, obj);
-              }
-              return tmp2;
-            }
-          }
-          cResult[16] = error;
-          cResult[17] = showActivityIndicator;
-          cResult[18] = tmp5.error;
-          cResult[19] = theme;
-          cResult[20] = renderStatus;
-        }
-        class P {
-          constructor() {
-            arr = closure_7;
-            isMatch = 6 === closure_7.length;
-            if (isMatch) {
-              obj = /^\d+$/;
-              isMatch = obj.test(arr);
-            }
-            if (!isMatch) {
-              num = 8;
-              isMatch = 8 === arr.length;
-            }
-            if (isMatch) {
-              tmp2 = handleSubmit;
-              tmp3 = handleSubmit(arr);
-            }
-            return;
-          }
-        }
-        const items1 = [first, handleSubmit];
-        cResult[10] = first;
-        cResult[11] = handleSubmit;
-        cResult[12] = P;
-        cResult[13] = items1;
-        tmp18 = items1;
-        tmp17 = P;
-      }
-      const fn3 = function k() {
-        if (appState === AppStates.ACTIVE) {
-          closure_11();
-        }
-      };
-      const items2 = [appState, tmp10];
-      cResult[6] = appState;
-      cResult[7] = tmp10;
-      cResult[8] = fn3;
-      cResult[9] = items2;
-      tmp15 = items2;
-      tmp14 = fn3;
-    }
-  }
-  const fn2 = function z() {
-    closure_11();
-    return () => {
-      if (first.isAuthenticated()) {
-        const string = appState(error[11]).getString();
-        string.then((result) => {
-          let tmp2 = "" !== closure_1_7;
-          if (tmp2) {
-            tmp2 = tmp === result;
-          }
-          if (tmp2) {
-            appState(error[11]).copy("");
-            const obj = appState(error[11]);
-          }
-        });
-        const obj2 = appState(error[11]);
-      } else {
-        let obj = handleSubmit(error[12]);
-        if (resetLoginOnClose) {
-          obj.loginReset();
-        } else {
-          obj.loginStatusReset();
-        }
-      }
-    };
-  };
-  cResult[2] = first;
-  cResult[3] = tmp10;
-  cResult[4] = tmp4;
-  cResult[5] = fn2;
-  tmp11 = fn2;
-  const tmpResult = appState(error[10]);
-}) : (function MFACodeInput(appState) {
+export default function MFACodeInput(appState) {
   appState = appState.appState;
   const handleSubmit = appState.handleSubmit;
   ({ error, resetLoginOnClose } = appState);
@@ -314,24 +64,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MFACodeI
       }
     });
   }, items);
-  handleSubmit(resetLoginOnClose[13])(() => {
+  handleSubmit(resetLoginOnClose[10])(() => {
     callback();
     return () => {
       if (callback.isAuthenticated()) {
-        const string = appState(resetLoginOnClose[11]).getString();
+        const string = appState(resetLoginOnClose[9]).getString();
         string.then((result) => {
           let tmp2 = "" !== closure_1_3;
           if (tmp2) {
             tmp2 = tmp === result;
           }
           if (tmp2) {
-            appState(resetLoginOnClose[11]).copy("");
-            const obj = appState(resetLoginOnClose[11]);
+            appState(resetLoginOnClose[9]).copy("");
+            const obj = appState(resetLoginOnClose[9]);
           }
         });
-        const obj2 = appState(resetLoginOnClose[11]);
+        const obj2 = appState(resetLoginOnClose[9]);
       } else {
-        let obj = handleSubmit(resetLoginOnClose[12]);
+        let obj = handleSubmit(resetLoginOnClose[11]);
         if (closure_1_2) {
           obj.loginReset();
         } else {
@@ -368,24 +118,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MFACodeI
   let obj2 = { autoFocus: true, style: null, textStyle: tmp.input, value, autoCapitalize: "none", maxLength: 8, textContentType: "oneTimeCode", onChangeText: tmp4[1], accessibilityLabel: null };
   const items3 = [tmp.inputContainer, style];
   obj2.style = items3;
-  let obj = appState(resetLoginOnClose[10]);
+  let obj = appState(resetLoginOnClose[8]);
   const tmp10 = handleSubmit;
-  const intl = appState(resetLoginOnClose[15]).intl;
-  obj2.accessibilityLabel = intl.string(appState(resetLoginOnClose[15]).t.yO4lAM);
-  const items4 = [closure_9(handleSubmit(resetLoginOnClose[16]), obj2), ];
+  const intl = appState(resetLoginOnClose[13]).intl;
+  obj2.accessibilityLabel = intl.string(appState(resetLoginOnClose[13]).t.yO4lAM);
+  const items4 = [closure_9(handleSubmit(resetLoginOnClose[12]), obj2), ];
   const items5 = [tmp.status, ];
-  const tmp18 = handleSubmit(resetLoginOnClose[16]);
+  const tmp18 = handleSubmit(resetLoginOnClose[12]);
   const tmp19 = closure_6;
   const obj3 = { style: items5, children: null };
   items5[1] = Boolean(error) && tmp.minHeightGuard;
   if (showActivityIndicator) {
-    const tmp2Result = tmp2(tmp3[10]);
+    const tmp2Result = tmp2(tmp3[8]);
     tmp10(tmp3[7]).unsafe_rawColors;
-    const isThemeDarkResult = tmp2(tmp3[10]).isThemeDark(obj.useThemeContext().theme);
+    const isThemeDarkResult = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme);
     const unsafe_rawColors = first1;
-    const obj4 = { color: tmp2(tmp3[10]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
+    const obj4 = { color: tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
     closure_9(first1, obj4);
-    const tmp23 = tmp2(tmp3[10]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+    const tmp23 = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
   } else {
     let tmp17Result2 = null;
     if (null != error) {
@@ -399,4 +149,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MFACodeI
     return closure_11(closure_10, obj6);
   }
   const tmp20 = Boolean(error) && tmp.minHeightGuard;
-});
+};

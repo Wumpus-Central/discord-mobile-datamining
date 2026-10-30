@@ -1,14 +1,14 @@
-// === Module 7267: GuildCategoryStore ===
+// === Module 7274: GuildCategoryStore ===
 
-// Module 7267 (GuildCategoryStore)
+// Module 7274 (GuildCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7268 */;
-import FavoriteStore from "FavoriteStore" /* 4860 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7275 */;
+import FavoriteStore from "FavoriteStore" /* 4861 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4935 */;
-import GuildStore from "GuildStore" /* 4879 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4939 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 function setIndex(arg0, index) {
   arg0.index = index;
@@ -223,7 +223,7 @@ function handleFavoritesUpdate() {
     }
     _null.push({ channel, index: -1 });
   }
-  const channels = GuildChannelStore.getChannels(v65535);
+  const channels = GuildChannelStore.getChannels(closure_1_10);
   const obj = { _categories: [], null: [] };
   const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
     channel = channel.channel;
@@ -234,12 +234,12 @@ function handleFavoritesUpdate() {
   const item1 = channels[hasOwnProperty].forEach(updateChannel);
   const item2 = channels[timestampProducer].forEach(updateChannel);
   const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
-  closure_12[v65535] = obj;
+  closure_12[closure_1_10] = obj;
 }
-let GuildChannelStore = fn(4935);
+let GuildChannelStore = fn(4939);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: closure_9, FAVORITES: c10 } = Constants);
 let c11 = null;
 const dependencyMap = {};

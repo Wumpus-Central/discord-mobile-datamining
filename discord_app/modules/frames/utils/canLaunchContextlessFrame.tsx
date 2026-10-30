@@ -1,8 +1,8 @@
-// === Module 11489: canLaunchContextlessFrame ===
+// === Module 11689: canLaunchContextlessFrame ===
 
-// Module 11489 (canLaunchContextlessFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11451 */;
+// Module 11689 (canLaunchContextlessFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11652 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/utils/canLaunchContextlessFrame.tsx");

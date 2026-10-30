@@ -1,8 +1,8 @@
-// === Module 18136: UnclaimedGamesStore ===
+// === Module 18197: UnclaimedGamesStore ===
 
-// Module 18136 (UnclaimedGamesStore)
+// Module 18197 (UnclaimedGamesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let guildIdToGameIds = null;
 const Store = initializeDefault.Store;

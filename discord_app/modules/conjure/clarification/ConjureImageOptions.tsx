@@ -1,9 +1,9 @@
-// === Module 12571: ConjureImageOptions ===
+// === Module 12721: ConjureImageOptions ===
 
-// Module 12571 (ConjureImageOptions)
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8900 */;
+// Module 12721 (ConjureImageOptions)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8934 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -36,13 +36,13 @@ export function viewableImageOptions(items) {
     return items1;
   });
 }
-export function answeredOptionIds(first1) {
-  let kind;
-  if (first1 != null) {
-    kind = first1.kind;
+export function answeredOptionIds(kind) {
+  kind = undefined;
+  if (kind != null) {
+    kind = kind.kind;
   }
   if ("option" === kind) {
-    const items = [first1.optionId];
+    const items = [kind.optionId];
     let tmp2 = items;
   } else {
     tmp2 = closure_4;
@@ -57,7 +57,7 @@ export function imageOptionViewerSize(value) {
 export function ownImageOption(image) {
   const obj = { id: "own:" + image.attachment.id, label: null, image: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef3864.SUdqCQ);
+  obj.label = intl.string(_modDef3865.SUdqCQ);
   obj.image = { attachment_id: image.attachment.id };
   return obj;
 }
@@ -141,6 +141,6 @@ export function imageOptionCaption(option) {
 export function ownImageUploadText(question) {
   const intl = util.intl;
   const isMatch = /\bicons?\b/i.test(question.question);
-  const tmp2 = _modDef3864;
+  const tmp2 = _modDef3865;
   return intl.string(isMatch ? tmp2.qU4WN6 : tmp2.cbMDDB);
 }

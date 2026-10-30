@@ -1,15 +1,15 @@
-// === Module 5036: SelectedGuildStore ===
+// === Module 5040: SelectedGuildStore ===
 
-// Module 5036 (SelectedGuildStore)
+// Module 5040 (SelectedGuildStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import router_utils from "router_utils" /* 1111 */;
-import matchPathCompat from "matchPathCompat" /* 5041 */;
-import RouteUtils from "RouteUtils" /* 5054 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5037 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import router_utils from "router_utils" /* 1100 */;
+import matchPathCompat from "matchPathCompat" /* 5045 */;
+import RouteUtils from "RouteUtils" /* 5058 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5040 */;
-import GuildStore from "GuildStore" /* 4879 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5044 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -38,7 +38,7 @@ function handleConnectionOpen() {
     prop[tmp11] = Date.now();
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
 let c8 = null;
 let c9 = null;

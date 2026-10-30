@@ -1,189 +1,99 @@
-// === Module 6013: BackPressTracking ===
+// === Module 6020: BackPressTracking ===
 
-// Module 6013 (BackPressTracking)
+// Module 6020 (BackPressTracking)
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
-const require = fn;
 fn(17).BackHandler;
-let closure_6 = 0;
+let closure_5 = 0;
 const set = new Set();
-let c8 = false;
-const ReactCompilerGating = fn(558);
+let c7 = false;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/routing/native/BackPressTracking.android.tsx");
 
 export function addBackPressListener(fn) {
   closure_0 = BackHandler.addEventListener("hardwareBackPress", fn);
-  closure_6 = closure_6 + 1;
-  if (!c8) {
-    c8 = true;
+  closure_5 = closure_5 + 1;
+  if (!c7) {
+    c7 = true;
     let _queueMicrotask = queueMicrotask;
     queueMicrotask(() => {
-      c8 = false;
-      let tmp = closure_1_6 > 0;
+      c7 = false;
+      let tmp = closure_1_5 > 0;
       if (!tmp) {
         tmp = size.size > 0;
       }
-      if (tmp !== closure_3) {
-        closure_3 = tmp;
-        const result = closure_1_1(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
-        obj = closure_1_1(dependencyMap[2]);
+      if (tmp !== closure_2) {
+        closure_2 = tmp;
+        const result = obj(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
+        obj = obj(dependencyMap[2]);
       }
     });
   }
   return {
     remove() {
       closure_0.remove();
-      closure_6 = closure_6 - 1;
-      if (!c8) {
-        c8 = true;
+      closure_5 = closure_5 - 1;
+      if (!c7) {
+        c7 = true;
         const _queueMicrotask = queueMicrotask;
         queueMicrotask(() => {
-          c8 = false;
-          let tmp = closure_1_6 > 0;
+          c7 = false;
+          let tmp = closure_1_5 > 0;
           if (!tmp) {
             tmp = size.size > 0;
           }
-          if (tmp !== closure_3) {
-            closure_3 = tmp;
-            const result = closure_1_1(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
-            obj = closure_1_1(dependencyMap[2]);
+          if (tmp !== closure_2) {
+            closure_2 = tmp;
+            const result = obj(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
+            obj = obj(dependencyMap[2]);
           }
         });
       }
     }
   };
 }
-export const useTrackNavigationBackPress = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackNavigationBackPress(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(3);
-  if (cResult[0] !== arg0) {
-    const fn = function t() {
-      if (null != closure_0) {
-        if (closure_0.isReady()) {
-          if (closure_0.canGoBack()) {
-            set.add(closure_0);
-          }
-          if (!c8) {
-            c8 = true;
-            let _queueMicrotask = queueMicrotask;
-            queueMicrotask(() => {
-              c8 = false;
-              let tmp = closure_1_6 > 0;
-              if (!tmp) {
-                tmp = size.size > 0;
-              }
-              if (tmp !== closure_3) {
-                closure_3 = tmp;
-                const result = closure_1_1(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
-                obj = closure_1_1(dependencyMap[2]);
-              }
-            });
-          }
-          closure_1 = closure_0.addListener("state", function update() {
-            if (obj.isReady()) {
-              if (obj.canGoBack()) {
-                set.add(obj);
-              }
-              if (!c8) {
-                c8 = true;
-                const _queueMicrotask = queueMicrotask;
-                queueMicrotask(() => {
-                  c8 = false;
-                  let tmp = closure_1_6 > 0;
-                  if (!tmp) {
-                    tmp = size.size > 0;
-                  }
-                  if (tmp !== closure_3) {
-                    closure_3 = tmp;
-                    const result = closure_1_1(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
-                    obj = closure_1_1(dependencyMap[2]);
-                  }
-                });
-              }
-            }
-            set.delete(obj);
-          });
-          return () => {
-            closure_1();
-            set.delete(obj);
-            if (!c8) {
-              c8 = true;
-              const _queueMicrotask = queueMicrotask;
-              queueMicrotask(() => {
-                c8 = false;
-                let tmp = closure_1_6 > 0;
-                if (!tmp) {
-                  tmp = size.size > 0;
-                }
-                if (tmp !== closure_3) {
-                  closure_3 = tmp;
-                  const result = closure_1_1(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
-                  obj = closure_1_1(dependencyMap[2]);
-                }
-              });
-            }
-          };
-        }
-        set.delete(closure_0);
-      }
-    };
-    const items = [arg0];
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    cResult[2] = items;
-    let tmp3 = items;
-    let tmp2 = fn;
-  } else {
-    tmp2 = cResult[1];
-    tmp3 = cResult[2];
-  }
-  const effect = noop.useEffect(tmp2, tmp3);
-}) : (function useTrackNavigationBackPress(arg0) {
-  closure_0 = arg0;
-  const items = [arg0];
+export function useTrackNavigationBackPress(navigationContainerRef) {
+  const items = [navigationContainerRef];
   const effect = noop.useEffect(() => {
-    if (null != closure_0) {
-      if (closure_0.isReady()) {
-        if (closure_0.canGoBack()) {
-          set.add(closure_0);
+    if (null != navigationContainerRef) {
+      if (navigationContainerRef.isReady()) {
+        if (navigationContainerRef.canGoBack()) {
+          set.add(navigationContainerRef);
         }
-        if (!c8) {
-          c8 = true;
+        if (!c7) {
+          c7 = true;
           let _queueMicrotask = queueMicrotask;
           queueMicrotask(() => {
-            c8 = false;
-            let tmp = closure_1_6 > 0;
+            c7 = false;
+            let tmp = closure_1_5 > 0;
             if (!tmp) {
               tmp = size.size > 0;
             }
-            if (tmp !== closure_3) {
-              closure_3 = tmp;
-              const result = closure_1_1(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
-              obj = closure_1_1(dependencyMap[2]);
+            if (tmp !== closure_2) {
+              closure_2 = tmp;
+              const result = obj(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
+              obj = obj(dependencyMap[2]);
             }
           });
         }
-        closure_1 = closure_0.addListener("state", function update() {
+        closure_1 = navigationContainerRef.addListener("state", function update() {
           if (obj.isReady()) {
             if (obj.canGoBack()) {
               set.add(obj);
             }
-            if (!c8) {
-              c8 = true;
+            if (!c7) {
+              c7 = true;
               const _queueMicrotask = queueMicrotask;
               queueMicrotask(() => {
-                c8 = false;
-                let tmp = closure_1_6 > 0;
+                c7 = false;
+                let tmp = closure_1_5 > 0;
                 if (!tmp) {
                   tmp = size.size > 0;
                 }
-                if (tmp !== closure_3) {
-                  closure_3 = tmp;
-                  const result = closure_1_1(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
-                  obj = closure_1_1(dependencyMap[2]);
+                if (tmp !== closure_2) {
+                  closure_2 = tmp;
+                  const result = obj(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
+                  obj = obj(dependencyMap[2]);
                 }
               });
             }
@@ -191,27 +101,27 @@ export const useTrackNavigationBackPress = ReactCompilerGating.isReactCompilerEn
           set.delete(obj);
         });
         return () => {
-          closure_1();
+          dependencyMap();
           set.delete(obj);
-          if (!c8) {
-            c8 = true;
+          if (!c7) {
+            c7 = true;
             const _queueMicrotask = queueMicrotask;
             queueMicrotask(() => {
-              c8 = false;
-              let tmp = closure_1_6 > 0;
+              c7 = false;
+              let tmp = closure_1_5 > 0;
               if (!tmp) {
                 tmp = size.size > 0;
               }
-              if (tmp !== closure_3) {
-                closure_3 = tmp;
-                const result = closure_1_1(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
-                obj = closure_1_1(dependencyMap[2]);
+              if (tmp !== closure_2) {
+                closure_2 = tmp;
+                const result = obj(dependencyMap[2]).setHasActiveBackPressHandler(tmp);
+                obj = obj(dependencyMap[2]);
               }
             });
           }
         };
       }
-      set.delete(closure_0);
+      set.delete(navigationContainerRef);
     }
   }, items);
-});
+}

@@ -1,86 +1,18 @@
-// === Module 19034: useChannelFloatingCTAContent ===
+// === Module 19114: useChannelFloatingCTAContent ===
 
-// Module 19034 (useChannelFloatingCTAContent)
-import dismissible_content from "dismissible_content" /* 4841 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11744 */;
+// Module 19114 (useChannelFloatingCTAContent)
+import dismissible_content from "dismissible_content" /* 4842 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useChannelFloatingCTAContent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelFloatingCTAContent(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(9);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [RTCConnectionStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function l() {
-      let tmp2 = null != closure_0;
-      if (tmp2) {
-        tmp2 = RTCConnectionStore.getChannelId() === tmp;
-      }
-      return tmp2;
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-  }
-  const obj = require("c");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
-  const obj3 = useGameConsoleAccountsDefault();
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [MediaEngineStore];
-    const fn2 = function _() {
-      return anyLocalVideoAutoDisabled.isAnyLocalVideoAutoDisabled();
-    };
-    cResult[3] = items1;
-    cResult[4] = fn2;
-    let tmp9 = fn2;
-    let tmp8 = items1;
-  } else {
-    tmp8 = cResult[3];
-    tmp9 = cResult[4];
-  }
-  const tmpResult = require("useStateFromStores");
-  const stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp8, tmp9);
-  if (cResult[5] === obj3) {
-    if (cResult[6] === stateFromStores1) {
-      if (cResult[7] === stateFromStores) {
-        let tmp12 = cResult[8];
-      }
-      return tmp12;
-    }
-  }
-  const items2 = [];
-  if (stateFromStores1) {
-    items2.push(tmp(4841).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
-  }
-  if (stateFromStores) {
-    items2.push(tmp(4841).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
-  }
-  if (obj3.some((twoWayLink) => twoWayLink.twoWayLink)) {
-    items2.push(tmp(4841).DismissibleContent.DONUT_MOBILE_NUX);
-  }
-  cResult[5] = obj3;
-  cResult[6] = stateFromStores1;
-  cResult[7] = stateFromStores;
-  cResult[8] = items2;
-  tmp12 = items2;
-  const tmpResult2 = require("useStateFromStores");
-}) : (function useChannelFloatingCTAContent(arg0) {
+export default function useChannelFloatingCTAContent(arg0) {
   _require = arg0;
   let items = [RTCConnectionStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => {
@@ -109,4 +41,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
     }
     return items;
   }, items2);
-});
+};

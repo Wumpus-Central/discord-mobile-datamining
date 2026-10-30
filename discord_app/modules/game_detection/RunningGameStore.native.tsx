@@ -1,13 +1,13 @@
-// === Module 2019: RunningGameStore ===
+// === Module 2014: RunningGameStore ===
 
-// Module 2019 (RunningGameStore)
+// Module 2014 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11294 */;
-import OverlayTypes from "OverlayTypes" /* 15795 */;
-import GameStore from "GameStore" /* 2020 */;
-import DetectableGameStore from "DetectableGameStore" /* 2037 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2041 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11497 */;
+import OverlayTypes from "OverlayTypes" /* 15833 */;
+import GameStore from "GameStore" /* 2015 */;
+import DetectableGameStore from "DetectableGameStore" /* 2034 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2038 */;
 
 require = fn;
 const Store = initializeDefault.Store;

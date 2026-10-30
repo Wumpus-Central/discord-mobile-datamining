@@ -1,18 +1,18 @@
-// === Module 14813: getActivityJoinability ===
+// === Module 14848: getActivityJoinability ===
 
-// Module 14813 (getActivityJoinability)
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
-import hasFlagDefault from "hasFlag" /* 7469 */;
-import getPartySize from "getPartySize" /* 11444 */;
-import isPartyFull from "isPartyFull" /* 11446 */;
-import getIsInParty from "getIsInParty" /* 11447 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11450 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11451 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11481 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11551 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 14814 */;
-import Constants from "Constants" /* 1084 */;
+// Module 14848 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
+import hasFlagDefault from "hasFlag" /* 7477 */;
+import getPartySize from "getPartySize" /* 11645 */;
+import isPartyFull from "isPartyFull" /* 11647 */;
+import getIsInParty from "getIsInParty" /* 11648 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11651 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11652 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11682 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11752 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 14849 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
@@ -120,7 +120,7 @@ export default function getActivityJoinability(arg0) {
                 const type = channel1.type;
                 if (constants2.DM !== type) {
                   if (constants2.GROUP_DM !== type) {
-                    guild = GuildStore.getGuild(channel1.getGuildId());
+                    const guild = GuildStore.getGuild(channel1.getGuildId());
                     if (null != guild) {
                       const features = guild.features;
                       if (!features.has(constants3.COMMUNITY)) {

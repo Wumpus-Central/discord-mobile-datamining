@@ -1,49 +1,19 @@
-// === Module 14572: CrunchyrollLinkError ===
+// === Module 14605: CrunchyrollLinkError ===
 
-// Module 14572 (CrunchyrollLinkError)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import useNavigation from "useNavigation" /* 1503 */;
-import useConnectRetry from "useConnectRetry" /* 14547 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 14548 */;
+// Module 14605 (CrunchyrollLinkError)
+import util from "util" /* 1114 */;
+import useNavigation from "useNavigation" /* 1498 */;
+import useConnectRetry from "useConnectRetry" /* 14580 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 14581 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(14564).CrunchyrollLinkModalScenes;
+const constants = fn(14597).CrunchyrollLinkModalScenes;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkError.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CrunchyrollLinkDiscordError(onClose) {
-  const cResult = c.c(5);
-  onClose = onClose.onClose;
-  const navigation = useNavigation.useNavigation();
-  const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const stringResult = intl.string(util.t["8YK70c"]);
-    const intl2 = util.intl;
-    const stringResult1 = intl2.string(util.t.moyYLf);
-    cResult[0] = stringResult;
-    cResult[1] = stringResult1;
-    tmp6 = stringResult;
-    tmp7 = stringResult1;
-  } else {
-    [tmp6, tmp7] = cResult;
-  }
-  if (cResult[2] === onClose) {
-    if (cResult[3] === connectRetry) {
-      let tmp10 = cResult[4];
-    }
-    return tmp10;
-  }
-  const tmp11 = jsx(TwoWayLinkError.TwoWayLinkError, { title: tmp6, body: tmp7, onClose, onRetry: connectRetry });
-  cResult[2] = onClose;
-  cResult[3] = connectRetry;
-  cResult[4] = tmp11;
-  tmp10 = tmp11;
-}) : (function CrunchyrollLinkDiscordError(onClose) {
+export default function CrunchyrollLinkDiscordError(onClose) {
   const navigation = useNavigation.useNavigation();
   const connectRetry = useConnectRetry.useConnectRetry(navigation, constants.PRE_CONNECT);
   const obj3 = { title: null, body: null, onClose: null, onRetry: null };
@@ -54,4 +24,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   obj3.onClose = onClose.onClose;
   obj3.onRetry = connectRetry;
   return jsx(TwoWayLinkError.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
-});
+};

@@ -1,77 +1,39 @@
-// === Module 12436: ConjureLiveBehindTip ===
+// === Module 12590: ConjureLiveBehindTip ===
 
-// Module 12436 (ConjureLiveBehindTip)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import UploadIcon from "UploadIcon" /* 9870 */;
-import useConjureStartPublishDefault from "useConjureStartPublish" /* 12244 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 12431 */;
+// Module 12590 (ConjureLiveBehindTip)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import UploadIcon from "UploadIcon" /* 9895 */;
+import useConjureStartPublishDefault from "useConjureStartPublish" /* 12405 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 12585 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function LiveBehindHint(onDismiss) {
-  const cResult = c.c(5);
-  onDismiss = onDismiss.onDismiss;
-  ({ projectId, publish } = onDismiss);
-  const tmp5 = useConjureStartPublishDefault(projectId, publish);
-  closure_0 = tmp5;
-  if (cResult[0] !== tmp5) {
-    const intl = util.intl;
-    const obj2 = {
-      onPublish() {
-          return closure_0("outdated_notice");
-        }
-    };
-    const formatResult = intl.format(_modDef3864.fWfeZ8, obj2);
-    cResult[0] = tmp5;
-    cResult[1] = formatResult;
-    let tmp6 = formatResult;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === onDismiss) {
-    if (cResult[3] === tmp6) {
-      let tmp8 = cResult[4];
-    }
-    return tmp8;
-  }
-  const obj3 = { icon: null, onDismiss: null, children: null };
-  obj3.icon = UploadIcon.UploadIcon;
-  obj3.onDismiss = onDismiss;
-  obj3.children = tmp6;
-  const tmp10 = jsx(ConjureTipHintDefault, { icon: null, onDismiss: null, children: null });
-  cResult[2] = onDismiss;
-  cResult[3] = tmp6;
-  cResult[4] = tmp10;
-  tmp8 = tmp10;
-  const tmp4Result = ConjureTipHintDefault;
-}) : (function LiveBehindHint(arg0) {
+function LiveBehindHint(arg0) {
   ({ projectId, publish, onDismiss } = arg0);
   closure_0 = useConjureStartPublishDefault(projectId, publish);
   const obj = { icon: UploadIcon.UploadIcon, onDismiss, children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3864.fWfeZ8, {
+  obj.children = intl.format(_modDef3865.fWfeZ8, {
     onPublish() {
       return closure_0("outdated_notice");
     }
   });
   return jsx(ConjureTipHintDefault, { icon: UploadIcon.UploadIcon, onDismiss, children: null });
-});
-let obj2 = {};
-const merged = Object.assign(fn(12422).CONJURE_LIVE_BEHIND_TIP_BASE);
-obj2.render = function render(arg0, context) {
+}
+const jsx = fn(21).jsx;
+let obj = {};
+const merged = Object.assign(fn(12574).CONJURE_LIVE_BEHIND_TIP_BASE);
+obj.render = function render(arg0, context) {
   const publish = context.context.publish;
   let tmp3 = null;
   if (null != publish) {
     const obj = { projectId: tmp, publish, onDismiss: tmp2 };
-    tmp3 = <closure_4 projectId={tmp} publish={publish} onDismiss={tmp2} />;
+    tmp3 = <LiveBehindHint projectId={tmp} publish={publish} onDismiss={tmp2} />;
   }
   return tmp3;
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/tips/native/ConjureLiveBehindTip.tsx");
 
-export const CONJURE_LIVE_BEHIND_TIP = obj2;
+export const CONJURE_LIVE_BEHIND_TIP = obj;

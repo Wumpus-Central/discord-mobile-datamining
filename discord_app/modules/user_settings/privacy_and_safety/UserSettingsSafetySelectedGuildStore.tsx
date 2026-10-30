@@ -1,11 +1,11 @@
-// === Module 17784: UserSettingsSafetySelectedGuildStore ===
+// === Module 17855: UserSettingsSafetySelectedGuildStore ===
 
-// Module 17784 (UserSettingsSafetySelectedGuildStore)
-import module_570 from "module_570" /* 570 */;
+// Module 17855 (UserSettingsSafetySelectedGuildStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = { selectedGuildId: "0" };
-const useUserSafetySettingsSelectedGuildStore = module_570.create((arg0) => {
+const useUserSafetySettingsSelectedGuildStore = module_560.create((arg0) => {
   closure_0 = arg0;
   const obj = {};
   const merged = Object.assign(closure_0);

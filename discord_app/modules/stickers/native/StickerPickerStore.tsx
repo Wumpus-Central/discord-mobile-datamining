@@ -1,12 +1,12 @@
-// === Module 10224: StickerPickerStore ===
+// === Module 10249: StickerPickerStore ===
 
-// Module 10224 (StickerPickerStore)
-import module_570 from "module_570" /* 570 */;
+// Module 10249 (StickerPickerStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPickerStore.tsx");
 
-export const useStickerPickerStore = module_570.create((arg0) => {
+export const useStickerPickerStore = module_560.create((arg0) => {
   closure_0 = arg0;
   return {
     packToScrollTo: null,

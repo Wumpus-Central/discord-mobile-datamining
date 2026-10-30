@@ -1,11 +1,11 @@
-// === Module 9358: GameProfileReviewUtils ===
+// === Module 9372: GameProfileReviewUtils ===
 
-// Module 9358 (GameProfileReviewUtils)
-import util from "util" /* 1125 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2040 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9282 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 9311 */;
-import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9359 */;
+// Module 9372 (GameProfileReviewUtils)
+import util from "util" /* 1114 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2037 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9320 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 9325 */;
+import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9373 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -34,7 +34,8 @@ obj.googlePlay = {
 };
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
 
-export function getMobileStoreReviews(reviews) {
+export function getMobileStoreReviews(game) {
+  let reviews = game;
   const entries = Object.entries(obj);
   return entries.flatMap((item) => {
     [tmp, obj] = item;

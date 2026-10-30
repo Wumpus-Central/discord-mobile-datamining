@@ -1,7 +1,7 @@
-// === Module 13940: useGuildPowerupColorConfig ===
+// === Module 14072: useGuildPowerupColorConfig ===
 
-// Module 13940 (useGuildPowerupColorConfig)
-import nativeDefault from "native" /* 587 */;
+// Module 14072 (useGuildPowerupColorConfig)
+import nativeDefault from "native" /* 575 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");

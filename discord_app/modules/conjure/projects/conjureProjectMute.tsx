@@ -1,14 +1,16 @@
-// === Module 10835: conjureProjectMute ===
+// === Module 10858: conjureProjectMute ===
 
-// Module 10835 (conjureProjectMute)
-import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+// Module 10858 (conjureProjectMute)
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReactCompilerGating = fn(558);
-function isConjureProjectMuted(settings, id) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conjure/projects/conjureProjectMute.tsx");
+
+export function isConjureProjectMuted(settings, id) {
   const conjure = settings.conjure;
   let muted;
   if (conjure != null) {
@@ -18,47 +20,10 @@ function isConjureProjectMuted(settings, id) {
   }
   return true === muted;
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/projects/conjureProjectMute.tsx");
-
-export { isConjureProjectMuted };
-export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConjureProjectMuted(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UserSettingsProtoStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function n() {
-      const conjure = UserSettingsProtoStore.settings.conjure;
-      let muted;
-      if (conjure != null) {
-        if (conjure.projects[tmp] != null) {
-          muted = tmp3.muted;
-        }
-      }
-      return true === muted;
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : (function useIsConjureProjectMuted(arg0) {
-  _require = arg0;
+export function useIsConjureProjectMuted(id) {
+  _require = id;
   const items = [UserSettingsProtoStore];
-  const items1 = [arg0];
+  const items1 = [id];
   return require("initialize").useStateFromStores(items, () => {
     const conjure = UserSettingsProtoStore.settings.conjure;
     let muted;
@@ -69,7 +34,7 @@ export const useIsConjureProjectMuted = ReactCompilerGating.isReactCompilerEnabl
     }
     return true === muted;
   }, items1);
-});
+}
 export function setConjureProjectMuted(id, arg1) {
   _require = id;
   dependencyMap = arg1;

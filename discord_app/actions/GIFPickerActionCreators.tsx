@@ -1,20 +1,20 @@
-// === Module 10199: GIFPickerActionCreators ===
+// === Module 10224: GIFPickerActionCreators ===
 
-// Module 10199 (GIFPickerActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1125 */;
-import frecency_user_settings from "frecency_user_settings" /* 1244 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import v1 from "v1" /* 1278 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9784 */;
-import GifProvider from "GifProvider" /* 10200 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10201 */;
-import LocaleStore from "LocaleStore" /* 2066 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10198 */;
+// Module 10224 (GIFPickerActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import util from "util" /* 1114 */;
+import frecency_user_settings from "frecency_user_settings" /* 1233 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import v1 from "v1" /* 1267 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5755 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9810 */;
+import GifProvider from "GifProvider" /* 10225 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10226 */;
+import LocaleStore from "LocaleStore" /* 2063 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10223 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -66,9 +66,9 @@ function doSearchRequest(q, arg1, limit) {
     const obj9 = { type: "GIF_PICKER_QUERY_SUCCESS", query, items: body };
   }, () => DispatcherDefault.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query }));
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, SearchTypes: closure_8, GIFPickerResultTypes: closure_9 } = Constants);
-const UserSettingsConstants = fn(1094);
+const UserSettingsConstants = fn(1082);
 ({ MAX_FAVORITE_GIFS_SIZE: c10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
 const re12 = /-/g;
 let closure_14 = apply.debounce(doSearchRequest, 250);
@@ -328,7 +328,7 @@ export function addFavoriteGIF(size) {
           obj3.order = num + 1;
           gifs.gifs[tmp23] = obj3;
           const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
-          if (FavoriteGIFs.toBinary(gifs).length > v65535) {
+          if (FavoriteGIFs.toBinary(gifs).length > closure_2_10) {
             const obj5 = { title: null, body: null };
             const intl = util.intl;
             obj5.title = intl.string(util.t["+XYXtZ"]);

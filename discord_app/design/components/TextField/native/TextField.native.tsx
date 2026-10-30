@@ -1,82 +1,18 @@
-// === Module 7075: TextField ===
+// === Module 7083: TextField ===
 
-// Module 7075 (TextField)
-import c from "c" /* 576 */;
-import useTextField from "useTextField" /* 7076 */;
-import useInputClearButton from "useInputClearButton" /* 7077 */;
-import useInputAttachments from "useInputAttachments" /* 7081 */;
-import BaseTextField from "BaseTextField" /* 7085 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+// Module 7083 (TextField)
+import useTextField from "useTextField" /* 7084 */;
+import useInputClearButton from "useInputClearButton" /* 7085 */;
+import useInputAttachments from "useInputAttachments" /* 7089 */;
+import BaseTextField from "BaseTextField" /* 7093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_2 = ["ref"];
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
 
-export const TextField = ReactCompilerGating.isReactCompilerEnabled() ? (function TextField(ref) {
-  const cResult = c.c(11);
-  if (cResult[0] !== ref) {
-    const tmp8 = _objectWithoutProperties(ref.ref, closure_2);
-    cResult[0] = ref.ref;
-    cResult[1] = tmp8;
-    cResult[2] = ref.ref;
-    let tmp5 = ref;
-    let tmp4 = tmp8;
-  } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-  }
-  const textField = useTextField.useTextField(tmp4, tmp5);
-  ({ innerRef, inputProps, state } = textField);
-  const tmpResult = useTextField;
-  const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(tmp4, state);
-  if (cResult[3] !== inputClearButtonConfig) {
-    let tmp13;
-    if (null != inputClearButtonConfig) {
-      ({ content: obj4.trailing, pressableProps: obj4.trailingPressableProps } = inputClearButtonConfig);
-      tmp13 = { trailing: null, trailingPressableProps: null };
-      const obj2 = { trailing: null, trailingPressableProps: null };
-    }
-    cResult[3] = inputClearButtonConfig;
-    cResult[4] = tmp13;
-    let tmp11 = tmp13;
-  } else {
-    tmp11 = cResult[4];
-  }
-  const tmpResult3 = useInputClearButton;
-  const inputAttachments = useInputAttachments.useInputAttachments(tmp4, tmp11);
-  ({ leading, trailing, inputStyle } = inputAttachments);
-  if (cResult[5] === inputStyle) {
-    if (cResult[6] === innerRef) {
-      if (cResult[7] === inputProps) {
-        if (cResult[8] === leading) {
-          if (cResult[9] === trailing) {
-            let tmp15 = cResult[10];
-          }
-          return tmp15;
-        }
-      }
-    }
-  }
-  const obj3 = {};
-  const merged = Object.assign(inputProps);
-  obj3.ref = innerRef;
-  obj3.leading = leading;
-  obj3.trailing = trailing;
-  obj3.inputStyle = inputStyle;
-  const tmp17 = jsx(BaseTextField.BaseTextField, {});
-  cResult[5] = inputStyle;
-  cResult[6] = innerRef;
-  cResult[7] = inputProps;
-  cResult[8] = leading;
-  cResult[9] = trailing;
-  cResult[10] = tmp17;
-  tmp15 = tmp17;
-  const tmpResult4 = useInputAttachments;
-}) : (function TextField(ref) {
+export function TextField(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const textField = useTextField.useTextField(merged, ref.ref);
   ({ inputProps, innerRef, state } = textField);
@@ -96,4 +32,4 @@ export const TextField = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj5.trailing = trailing;
   obj5.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
-});
+}

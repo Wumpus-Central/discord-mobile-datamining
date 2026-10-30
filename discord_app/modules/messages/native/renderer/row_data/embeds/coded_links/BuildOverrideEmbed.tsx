@@ -1,19 +1,19 @@
-// === Module 15040: BuildOverrideEmbed ===
+// === Module 15084: BuildOverrideEmbed ===
 
-// Module 15040 (BuildOverrideEmbed)
+// Module 15084 (BuildOverrideEmbed)
 import _mod17 from "module_17" /* 17 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1380 */;
-import Constants from "Constants" /* 7867 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8192 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8329 */;
-import BuildOverrideStore2 from "BuildOverrideStore" /* 11120 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12991 */;
-import _modDef13033 from "module_13033" /* 13033 */;
-import _modDef13034 from "module_13034" /* 13034 */;
-import _modDef15039 from "module_15039" /* 15039 */;
-import validateBuildOverrideDefault from "validateBuildOverride" /* 15041 */;
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1375 */;
+import Constants from "Constants" /* 7872 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8373 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8386 */;
+import BuildOverrideStore2 from "BuildOverrideStore" /* 11325 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 13142 */;
+import _modDef13185 from "module_13185" /* 13185 */;
+import _modDef13186 from "module_13186" /* 13186 */;
+import _modDef15083 from "module_15083" /* 15083 */;
+import validateBuildOverrideDefault from "validateBuildOverride" /* 15085 */;
 import size from "module_2" /* 2 */;
 
 const BuildOverrideStore = BuildOverrideStore2;
@@ -90,7 +90,7 @@ export function createBuildOverrideEmbed(code, theme) {
               obj3.titleColor = colors.titleColor;
               obj3.subtitle = id;
               obj3.subtitleColor = colors.subtitleColor;
-              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef15039).uri;
+              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef15083).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
@@ -135,9 +135,9 @@ export function createBuildOverrideEmbed(code, theme) {
     }
     obj5.subtitleColor = subtitleColor;
     if (tmp20Result.isThemeDark(theme)) {
-      let tmpResult2 = _modDef13033;
+      let tmpResult2 = _modDef13185;
     } else {
-      tmpResult2 = _modDef13034;
+      tmpResult2 = _modDef13186;
     }
     obj5.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
     obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

@@ -1,104 +1,23 @@
-// === Module 7361: RoleIcon ===
+// === Module 7368: RoleIcon ===
 
-// Module 7361 (RoleIcon)
-import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5707 */;
+// Module 7368 (RoleIcon)
+import Text_Text from "Text/Text" /* 5619 */;
+import FastImageDefault from "FastImage" /* 5712 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Text(5271);
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1381);
-const ReactCompilerGating = fn(558);
+const PlatformUtils = fn(1376);
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
+const result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon(arg0) {
-  let Text = require;
-  let tmp = dependencyMap;
-  const cResult = c.c(19);
-  ({ src, unicodeEmoji, size } = arg0);
-  num = 20;
-  if (undefined !== size) {
-    num = size;
-  }
-  if (cResult[0] !== num) {
-    const size1 = { height: num, width: num };
-    cResult[0] = num;
-    cResult[1] = size1;
-    let tmp3 = size1;
-  } else {
-    tmp3 = cResult[1];
-  }
-  const result = num * num;
-  if (cResult[2] === num) {
-    if (cResult[3] === result) {
-      let tmp5 = cResult[4];
-    }
-    if (cResult[5] === tmp3) {
-      if (cResult[6] === tmp5) {
-        let roleIcon = cResult[7];
-      }
-      if (null != src) {
-        if (cResult[8] !== src) {
-          const obj2 = { uri: src };
-          cResult[8] = src;
-          cResult[9] = obj2;
-          let tmp12 = obj2;
-        } else {
-          tmp12 = cResult[9];
-        }
-        if (cResult[10] === roleIcon.roleIcon) {
-        }
-        const obj3 = { resizeMode: "contain", source: tmp12, style: roleIcon.roleIcon };
-        tmp = jsx(FastImageDefault, { resizeMode: "contain", source: tmp12, style: roleIcon.roleIcon });
-        roleIcon = roleIcon.roleIcon;
-        cResult[10] = roleIcon;
-        cResult[11] = tmp12;
-        cResult[12] = tmp;
-      } else if (null == unicodeEmoji) {
-        return null;
-      } else {
-        if (cResult[13] === roleIcon.roleIcon) {
-          if (cResult[14] === roleIcon.unicodeEmojiRoleIcon) {
-            let tmp7 = cResult[15];
-          }
-          if (cResult[16] === tmp7) {
-          }
-          Text = Text_Text.Text;
-          const obj4 = { allowFontScaling: false, color: "none", style: tmp7, variant: "text-lg/normal", children: unicodeEmoji.surrogates };
-          const tmp10 = <Text allowFontScaling={false} color="none" style={tmp7} variant="text-lg/normal">{unicodeEmoji.surrogates}</Text>;
-          cResult[16] = tmp7;
-          unicodeEmoji = unicodeEmoji.surrogates;
-          cResult[17] = unicodeEmoji;
-          cResult[18] = tmp10;
-        }
-        const items = [, ];
-        ({ roleIcon: arr[0], unicodeEmojiRoleIcon: arr[1] } = roleIcon);
-        cResult[13] = roleIcon.roleIcon;
-        cResult[14] = roleIcon.unicodeEmojiRoleIcon;
-        cResult[15] = items;
-        tmp7 = items;
-      }
-    }
-    const obj5 = { roleIcon: tmp3, unicodeEmojiRoleIcon: tmp5 };
-    cResult[5] = tmp3;
-    cResult[6] = tmp5;
-    cResult[7] = obj5;
-    roleIcon = obj5;
-  }
-  const obj6 = { fontFamily: "System", fontSize: result, lineHeight: "ix", textAlign: "useEffect", width: num, marginBottom: "duration" };
-  cResult[2] = num;
-  cResult[3] = result;
-  cResult[4] = obj6;
-  tmp5 = obj6;
-}) : (function RoleIcon(arg0) {
+export default function RoleIcon(arg0) {
   ({ src, unicodeEmoji, size } = arg0);
   if (size === undefined) {
     size = 20;
   }
   const size1 = { height: size, width: size };
-  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "ix", textAlign: "useEffect", width: size, marginBottom: "duration" };
+  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "id", textAlign: "<string:4268818845>", width: size, marginBottom: "PX_16" };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
     const obj3 = { uri: src };
@@ -116,4 +35,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
     }
   }
   return tmp;
-});
+};

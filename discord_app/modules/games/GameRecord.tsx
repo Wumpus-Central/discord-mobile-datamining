@@ -1,15 +1,15 @@
-// === Module 2021: GameRecord ===
+// === Module 2016: GameRecord ===
 
-// Module 2021 (GameRecord)
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import Server from "Server" /* 1998 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2030 */;
-import Record from "Record" /* 1404 */;
-import ApplicationRecord from "ApplicationRecord" /* 2022 */;
+// Module 2016 (GameRecord)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import AvatarUtils from "AvatarUtils" /* 1410 */;
+import Server from "Server" /* 1993 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2027 */;
+import Record from "Record" /* 1399 */;
+import ApplicationRecord from "ApplicationRecord" /* 2017 */;
 
 require = fn;
-const createExecutable = fn(2022).createExecutable;
+const createExecutable = fn(2017).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -184,7 +184,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   }
   return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
 };
-prototype["getCoverURL"] = function getCoverURL(rounded) {
+prototype["getCoverURL"] = function getCoverURL(imageSize) {
   const media = this.media;
   let cover;
   if (media != null) {
@@ -194,7 +194,7 @@ prototype["getCoverURL"] = function getCoverURL(rounded) {
   if (AvatarUtils.SUPPORTS_WEBP) {
     str = "webp";
   }
-  return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size: rounded });
+  return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size: imageSize });
 };
 prototype["getArtworkURLs"] = function getArtworkURLs(size) {
   const self = this;
@@ -213,11 +213,11 @@ prototype["getArtworkURLs"] = function getArtworkURLs(size) {
   const mapped = artwork.map((item) => getGameMediaRefURLDefault(self.id, item, { size, format: str, keepAspectRatio: true }));
   return mapped.filter(str(self[5]).isNotNullish);
 };
-prototype["getScreenshotURL"] = function getScreenshotURL(_Math, size) {
+prototype["getScreenshotURL"] = function getScreenshotURL(index, size) {
   const screenshotUrls = this.screenshotUrls;
   let tmp;
   if (screenshotUrls != null) {
-    tmp = screenshotUrls[_Math];
+    tmp = screenshotUrls[index];
   }
   let tmp7Result = null;
   if (null != tmp) {

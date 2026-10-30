@@ -1,8 +1,8 @@
-// === Module 18296: getGuildBarNeighbors ===
+// === Module 18355: getGuildBarNeighbors ===
 
-// Module 18296 (getGuildBarNeighbors)
-import GuildsTree from "GuildsTree" /* 6764 */;
-import SortedGuildStore from "SortedGuildStore" /* 6759 */;
+// Module 18355 (getGuildBarNeighbors)
+import GuildsTree from "GuildsTree" /* 6771 */;
+import SortedGuildStore from "SortedGuildStore" /* 6766 */;
 
 require = fn;
 const size = fn(2);

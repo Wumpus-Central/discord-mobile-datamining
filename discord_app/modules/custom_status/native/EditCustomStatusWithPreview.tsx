@@ -1,30 +1,39 @@
-// === Module 11155: EditCustomStatusWithPreview ===
+// === Module 11361: EditCustomStatusWithPreview ===
 
-// Module 11155 (EditCustomStatusWithPreview)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import native from "native" /* 1199 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import shared from "shared" /* 5012 */;
-import ChatInputUtils from "ChatInputUtils" /* 5196 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6009 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
-import Pressables from "Pressables" /* 6968 */;
-import NavigatorHeader from "NavigatorHeader" /* 6984 */;
-import _modDef7092 from "module_7092" /* 7092 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9891 */;
-import setCustomStatusDefault from "setCustomStatus" /* 11159 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 11161 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11164 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11166 */;
+// Module 11361 (EditCustomStatusWithPreview)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1188 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import shared from "shared" /* 5016 */;
+import ChatInputUtils from "ChatInputUtils" /* 5202 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6016 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+import Pressables from "Pressables" /* 6974 */;
+import NavigatorHeader from "NavigatorHeader" /* 6992 */;
+import _modDef7100 from "module_7100" /* 7100 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9918 */;
+import setCustomStatusDefault from "setCustomStatus" /* 11365 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 11367 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11370 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11372 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
+function ClearInputButton(onPress) {
+  const obj = { style: { borderRadius: 10, paddingLeft: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.VkKicb);
+  obj.onPress = onPress.onPress;
+  obj.hitSlop = { top: 8, bottom: 8, right: 8 };
+  const tmp = closure_15();
+  obj.children = map1(native.Icon, { source: _modDef7100, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
+  return map1(Pressables.PressableOpacity, obj);
+}
 function EditCustomStatusWithPreview(navigation) {
   navigation = navigation.navigation;
   const onClose = navigation.onClose;
@@ -48,7 +57,7 @@ function EditCustomStatusWithPreview(navigation) {
   let memo;
   let callback8;
   if (null == _prompt) {
-    _prompt = onClose(analyticsLocations[16])();
+    _prompt = onClose(analyticsLocations[14])();
   }
   ref = stateFromStores.useRef(_prompt);
   const items = [analyticsLocations];
@@ -56,12 +65,12 @@ function EditCustomStatusWithPreview(navigation) {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: constants2.EDIT_CUSTOM_STATUS_MODAL_WITH_PREVIEW, location_stack: analyticsLocations });
   }, items);
   const tmp5 = callback3();
-  const customStatusActivity = navigation(analyticsLocations[18]).useCustomStatusActivity();
-  const obj2 = navigation(analyticsLocations[18]);
+  const customStatusActivity = navigation(analyticsLocations[16]).useCustomStatusActivity();
+  const obj2 = navigation(analyticsLocations[16]);
   const items1 = [first1];
-  stateFromStores = navigation(analyticsLocations[19]).useStateFromStores(items1, () => first1.getCurrentUser());
+  stateFromStores = navigation(analyticsLocations[17]).useStateFromStores(items1, () => first1.getCurrentUser());
   let str;
-  const obj3 = navigation(analyticsLocations[19]);
+  const obj3 = navigation(analyticsLocations[17]);
   if (customStatusActivity != null) {
     str = customStatusActivity.state;
   }
@@ -81,15 +90,15 @@ function EditCustomStatusWithPreview(navigation) {
   const tmp12Result = ref(stateFromStores.useState(emoji), 2);
   first1 = tmp12Result[0];
   maxLength = tmp19;
-  const tmp12Result2 = ref(stateFromStores.useState(onClose(analyticsLocations[20])()), 2);
+  const tmp12Result2 = ref(stateFromStores.useState(onClose(analyticsLocations[18])()), 2);
   first2 = tmp12Result2[0];
   onChange = tmp12Result2[1];
   if (null != ref.current) {
     let current = ref.current;
     let labelResult = current.label();
   } else {
-    let intl = tmp6(tmp7[12]).intl;
-    labelResult = intl.string(tmp6(tmp7[12]).t.xod367);
+    let intl = tmp6(tmp7[11]).intl;
+    labelResult = intl.string(tmp6(tmp7[11]).t.xod367);
   }
   c11 = labelResult;
   const items2 = [value, first1, first2, analyticsLocations];
@@ -111,9 +120,9 @@ function EditCustomStatusWithPreview(navigation) {
   const callback2 = obj.useCallback(() => {
     removeCustomStatusDefault();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = navigation(5012).AccessibilityAnnouncer;
-      const intl = navigation(1125).intl;
-      AccessibilityAnnouncer.announce(intl.string(navigation(1125).t.YdUwBS));
+      const AccessibilityAnnouncer = navigation(5016).AccessibilityAnnouncer;
+      const intl = navigation(1114).intl;
+      AccessibilityAnnouncer.announce(intl.string(navigation(1114).t.YdUwBS));
     }, 300);
     onClose();
   }, items4);
@@ -151,7 +160,7 @@ function EditCustomStatusWithPreview(navigation) {
   }, items7);
   ref2 = obj.useRef(null);
   const ref3 = stateFromStores.useRef(null);
-  const insets = tmp10(tmp7[26])({ includeKeyboardHeight: true, isKeyboardAwareOnIOS: false }).insets;
+  const insets = tmp10(tmp7[24])({ includeKeyboardHeight: true, isKeyboardAwareOnIOS: false }).insets;
   const obj4 = { insets, inputs: null, scrollViewRef: ref3 };
   const items8 = [{ ref: ref2 }];
   obj4.inputs = items8;
@@ -191,11 +200,11 @@ function EditCustomStatusWithPreview(navigation) {
     let obj = {
       headerRight() {
         const obj = { text: null, onPress: null, disabled: null };
-        const intl = navigation(analyticsLocations[12]).intl;
-        obj.text = intl.string(navigation(analyticsLocations[12]).t["R3BPH+"]);
+        const intl = navigation(analyticsLocations[11]).intl;
+        obj.text = intl.string(navigation(analyticsLocations[11]).t["R3BPH+"]);
         obj.onPress = onPress;
         obj.disabled = !memo;
-        return callback1(navigation(analyticsLocations[30]).HeaderActionButton, obj);
+        return callback1(navigation(analyticsLocations[28]).HeaderActionButton, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(callback8)
     };
@@ -210,15 +219,15 @@ function EditCustomStatusWithPreview(navigation) {
     const obj7 = { style: tmp5.statusSection, children: null };
     const obj8 = { style: tmp5.statusSectionHeader, children: null };
     const obj9 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", children: null };
-    const intl5 = tmp6(tmp7[12]).intl;
-    obj9.children = intl5.string(tmp6(tmp7[12]).t.zOdg0A);
-    obj8.children = callback1(tmp6(tmp7[32]).Text, obj9);
+    const intl5 = tmp6(tmp7[11]).intl;
+    obj9.children = intl5.string(tmp6(tmp7[11]).t.zOdg0A);
+    obj8.children = callback1(tmp6(tmp7[30]).Text, obj9);
     const items14 = [callback1(closure_6, obj8), ];
     const obj10 = { style: tmp5.statusInput, children: null };
     const obj11 = { style: tmp5.statusInputRow, children: null };
     const obj12 = { ref: ref1, accessibilityLabel: null, accessibilityValue: null, accessibilityRole: "button", onPress: null, children: null };
-    const intl6 = tmp6(tmp7[12]).intl;
-    obj12.accessibilityLabel = intl6.string(tmp6(tmp7[12]).t.WkfRZP);
+    const intl6 = tmp6(tmp7[11]).intl;
+    obj12.accessibilityLabel = intl6.string(tmp6(tmp7[11]).t.WkfRZP);
     let name;
     if (first1 != null) {
       name = first1.name;
@@ -227,18 +236,18 @@ function EditCustomStatusWithPreview(navigation) {
     obj12.accessibilityValue = obj13;
     obj12.onPress = callback5;
     const obj14 = { emoji: first1, size: 20, style: tmp5.emoji, withPlaceholder: true };
-    obj12.children = callback1(tmp10(tmp7[33]), obj14);
-    const items15 = [callback1(tmp6(tmp7[15]).PressableOpacity, obj12), , ];
+    obj12.children = callback1(tmp10(tmp7[31]), obj14);
+    const items15 = [callback1(tmp6(tmp7[10]).PressableOpacity, obj12), , ];
     const obj15 = { ref: ref2, maxLength, placeholder: labelResult, placeholderTextColor: tmp5.inputPlaceholder.color, accessibilityLabel: null, onSubmitEditing: null, onFocus: null, style: null, value: null, onChange: null, autoCorrect: false, showBorder: false, showTopContainer: false, autoCapitalize: "none", inputTextStyle: null, multiline: true, submitBehavior: "blurAndSubmit", returnKeyType: "done", autoFocus: true };
-    const intl2 = tmp6(tmp7[12]).intl;
-    obj15.accessibilityLabel = intl2.string(tmp6(tmp7[12]).t.xalUlT);
+    const intl2 = tmp6(tmp7[11]).intl;
+    obj15.accessibilityLabel = intl2.string(tmp6(tmp7[11]).t.xalUlT);
     obj15.onSubmitEditing = callback7;
-    obj15.onFocus = tmp10(tmp7[27])(obj4).onFocus;
+    obj15.onFocus = tmp10(tmp7[25])(obj4).onFocus;
     obj15.style = tmp5.status;
     obj15.value = value;
     obj15.onChange = tmp15;
     obj15.inputTextStyle = tmp5.statusText;
-    items15[1] = callback1(tmp10(tmp7[34]), obj15);
+    items15[1] = callback1(tmp10(tmp7[32]), obj15);
     let tmp49Result = null != first1;
     if (!tmp49Result) {
       tmp49Result = "" !== value;
@@ -255,32 +264,32 @@ function EditCustomStatusWithPreview(navigation) {
     items13[1] = ref1(closure_6, obj7);
     const obj17 = { hasIcons: false, children: null };
     const obj18 = { label: null, arrow: true, onPress: null, trailing: null };
-    const intl3 = tmp6(tmp7[12]).intl;
-    obj18.label = intl3.string(tmp6(tmp7[12]).t["+14vvU"]);
+    const intl3 = tmp6(tmp7[11]).intl;
+    obj18.label = intl3.string(tmp6(tmp7[11]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11246, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11451, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
-    const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[41])(first2) };
-    obj18.trailing = callback1(tmp6(tmp7[32]).Text, obj19);
-    obj17.children = callback1(tmp6(tmp7[36]).TableRow, obj18);
-    items13[2] = callback1(tmp6(tmp7[35]).TableRowGroup, obj17);
+    const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[39])(first2) };
+    obj18.trailing = callback1(tmp6(tmp7[30]).Text, obj19);
+    obj17.children = callback1(tmp6(tmp7[34]).TableRow, obj18);
+    items13[2] = callback1(tmp6(tmp7[33]).TableRowGroup, obj17);
     let tmp49Result3 = null != customStatusActivity;
     if (tmp49Result3) {
       const obj20 = { hasIcons: true, children: null };
       const obj21 = { icon: null, label: null, onPress: null, variant: "danger" };
       const obj22 = { color: tmp10(tmp7[9]).colors.TEXT_FEEDBACK_CRITICAL };
-      obj21.icon = tmp49(tmp6(tmp7[42]).TrashIcon, obj22);
-      const intl4 = tmp6(tmp7[12]).intl;
-      obj21.label = intl4.string(tmp6(tmp7[12]).t.wO53tu);
+      obj21.icon = tmp49(tmp6(tmp7[40]).TrashIcon, obj22);
+      const intl4 = tmp6(tmp7[11]).intl;
+      obj21.label = intl4.string(tmp6(tmp7[11]).t.wO53tu);
       obj21.onPress = callback2;
-      obj20.children = tmp49(tmp6(tmp7[36]).TableRow, obj21);
-      tmp49Result3 = tmp49(tmp6(tmp7[35]).TableRowGroup, obj20);
+      obj20.children = tmp49(tmp6(tmp7[34]).TableRow, obj21);
+      tmp49Result3 = tmp49(tmp6(tmp7[33]).TableRowGroup, obj20);
     }
     items13[3] = tmp49Result3;
     obj5.children = items13;
     const tmp47Result = ref1(closure_6, obj5);
-    const tmp10Result = tmp10(tmp7[34]);
+    const tmp10Result = tmp10(tmp7[32]);
     if (tmp6Result.isAndroid()) {
       const obj23 = { ref: ref3, keyboardShouldPersistTaps: "always", contentContainerStyle: null, children: null };
       const obj24 = { paddingBottom: insets.bottom };
@@ -289,21 +298,21 @@ function EditCustomStatusWithPreview(navigation) {
       let tmp49Result4 = tmp49(value, obj23);
     } else {
       const obj25 = { keyboardShouldPersistTaps: "always", children: tmp47Result };
-      tmp49Result4 = tmp49(tmp6(tmp7[44]).KeyboardAwareScrollView, obj25);
+      tmp49Result4 = tmp49(tmp6(tmp7[42]).KeyboardAwareScrollView, obj25);
     }
     return tmp49Result4;
   }
-  const tmp11 = onClose(analyticsLocations[20])();
+  const tmp11 = onClose(analyticsLocations[18])();
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11156).STATUS_MAX_LENGTH;
-const Constants = fn(1084);
+const STATUS_MAX_LENGTH = fn(11362).STATUS_MAX_LENGTH;
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
-const EmojiIntention = fn(1392).EmojiIntention;
+const EmojiIntention = fn(1387).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { flexGrow: 1, padding: 16, rowGap: 24 }, statusSection: { rowGap: 8 }, statusInput: { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 }, statusInputRow: { flexDirection: "row", alignItems: "center" }, emoji: { marginRight: 8 }, status: null, statusText: null, inputPlaceholder: null, previewContainer: null, closeIcon: null, statusSectionHeader: null };
 let obj3 = { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 };
 obj2.status = { color: nativeDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
@@ -318,123 +327,10 @@ let obj7 = { alignItems: "center" };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0 };
 obj2.statusSectionHeader = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 let closure_15 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearInputButton(onPress) {
-  const cResult = c.c(8);
-  onPress = onPress.onPress;
-  const tmp4 = closure_15();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { borderRadius: 10, paddingLeft: 8 };
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const stringResult = intl.string(util.t.VkKicb);
-    cResult[1] = stringResult;
-    let tmp6 = stringResult;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const rect = { top: 8, bottom: 8, right: 8 };
-    cResult[2] = rect;
-    let tmp8 = rect;
-  } else {
-    tmp8 = cResult[2];
-  }
-  if (cResult[3] !== tmp4.closeIcon) {
-    const obj3 = { source: _modDef7092, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
-    const tmp12 = map1(native.Icon, obj3);
-    cResult[3] = tmp4.closeIcon;
-    cResult[4] = tmp12;
-    let tmp9 = tmp12;
-  } else {
-    tmp9 = cResult[4];
-  }
-  if (cResult[5] === onPress) {
-    if (cResult[6] === tmp9) {
-      let tmp13 = cResult[7];
-    }
-    return tmp13;
-  }
-  const tmp14 = map1(Pressables.PressableOpacity, { style: first, accessibilityRole: "button", accessibilityLabel: tmp6, onPress, hitSlop: tmp8, children: tmp9 });
-  cResult[5] = onPress;
-  cResult[6] = tmp9;
-  cResult[7] = tmp14;
-  tmp13 = tmp14;
-}) : (function ClearInputButton(onPress) {
-  const obj = { style: { borderRadius: 10, paddingLeft: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.VkKicb);
-  obj.onPress = onPress.onPress;
-  obj.hitSlop = { top: 8, bottom: 8, right: 8 };
-  const tmp = closure_15();
-  obj.children = map1(native.Icon, { source: _modDef7092, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
-  return map1(Pressables.PressableOpacity, obj);
-});
-ReactCompilerGating = fn(558);
-let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_status/native/EditCustomStatusWithPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCustomStatusWithPreviewModal(arg0) {
-  const cResult = analyticsLocations(576).c(6);
-  ({ analyticsLocations, prompt: _prompt } = arg0);
-  if (cResult[0] === analyticsLocations) {
-    if (cResult[1] === _prompt) {
-      let tmp4 = cResult[2];
-    }
-    const _Symbol = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      let obj2;
-      if (!tmpResult.isAndroid()) {
-        obj2 = { height: 56 };
-      }
-      cResult[3] = obj2;
-      let tmp6 = obj2;
-      tmpResult = analyticsLocations(1382);
-    } else {
-      tmp6 = cResult[3];
-    }
-    if (cResult[4] !== tmp4) {
-      const obj3 = { initialRouteName: "root", screens: tmp4, headerStatusBarHeight: null, headerStyle: null };
-      analyticsLocations(1382);
-      obj3.headerStatusBarHeight = 12;
-      obj3.headerStyle = tmp6;
-      const tmp8Result = closure_13(analyticsLocations(7155).Navigator, obj3);
-      cResult[4] = tmp4;
-      cResult[5] = tmp8Result;
-      let tmp7 = tmp8Result;
-    } else {
-      tmp7 = cResult[5];
-    }
-    return tmp7;
-  }
-  const obj4 = { root: null };
-  const obj5 = { title: null, headerTitle: null, headerLeft: null, ignoreKeyboard: true, render: null };
-  const intl = analyticsLocations(1125).intl;
-  obj5.title = intl.string(analyticsLocations(1125).t.Iuzg8R);
-  obj5.headerTitle = function headerTitle() {
-    const obj = { title: null };
-    const intl = analyticsLocations(1125).intl;
-    obj.title = intl.string(analyticsLocations(1125).t.Iuzg8R);
-    return closure_1_13(analyticsLocations(9765).GenericHeaderTitle, obj);
-  };
-  const obj = analyticsLocations(576);
-  obj5.headerLeft = analyticsLocations(6984).getHeaderCloseButton(_prompt(6731).pop);
-  obj5.render = function render(arg0, navigation) {
-    return closure_2_13(EditCustomStatusWithPreview, { navigation, onClose: _prompt(dependencyMap[46]).pop, analyticsLocations, prompt: _prompt });
-  };
-  obj4.root = obj5;
-  cResult[0] = analyticsLocations;
-  cResult[1] = _prompt;
-  cResult[2] = obj4;
-  tmp4 = obj4;
-  const tmpResult4 = analyticsLocations(6984);
-}) : (function EditCustomStatusWithPreviewModal(analyticsLocations) {
+export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const _prompt = analyticsLocations.prompt;
   const items = [analyticsLocations, _prompt];
@@ -445,24 +341,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     obj2.title = intl.string(util.t.Iuzg8R);
     obj2.headerTitle = function headerTitle() {
       const obj = { title: null };
-      const intl = analyticsLocations(1125).intl;
-      obj.title = intl.string(analyticsLocations(1125).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(9765).GenericHeaderTitle, obj);
+      const intl = analyticsLocations(1114).intl;
+      obj.title = intl.string(analyticsLocations(1114).t.Iuzg8R);
+      return closure_1_13(analyticsLocations(9791).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {
-      return closure_2_13(EditCustomStatusWithPreview, { navigation, onClose: _prompt(dependencyMap[46]).pop, analyticsLocations, prompt: _prompt });
+      return closure_2_13(EditCustomStatusWithPreview, { navigation, onClose: _prompt(dependencyMap[44]).pop, analyticsLocations, prompt: _prompt });
     };
     obj.root = obj2;
     return obj;
   }, items);
   let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: null, headerStyle: null };
-  analyticsLocations(1382);
+  analyticsLocations(1377);
   obj.headerStatusBarHeight = 12;
   let obj3;
   if (!tmp3Result.isAndroid()) {
     obj3 = { height: 56 };
   }
   obj.headerStyle = obj3;
-  return closure_13(analyticsLocations(7155).Navigator, obj);
-});
+  return closure_13(analyticsLocations(7163).Navigator, obj);
+};

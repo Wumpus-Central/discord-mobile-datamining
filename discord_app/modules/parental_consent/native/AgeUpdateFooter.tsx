@@ -1,57 +1,28 @@
-// === Module 19968: AgeUpdateFooter ===
+// === Module 20031: AgeUpdateFooter ===
 
-// Module 19968 (AgeUpdateFooter)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import _modDef2834 from "module_2834" /* 2834 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6716 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7941 */;
+// Module 20031 (AgeUpdateFooter)
+import util from "util" /* 1114 */;
+import _modDef2835 from "module_2835" /* 2835 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6723 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7947 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeUpdateFooter() {
-  const cResult = c.c(3);
-  const tmp4 = closure_4();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const obj2 = {
-      handleAgeVerifyHook() {
-          const obj = AgeVerificationActionCreatorsDefault;
-          return obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT });
-        }
-    };
-    const formatResult = intl.format(_modDef2834.ifObbX, obj2);
-    cResult[0] = formatResult;
-    let first = formatResult;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== tmp4.text) {
-    const obj3 = { variant: "text-md/medium", color: "text-muted", style: tmp4.text, children: first };
-    const tmp10 = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", style: tmp4.text, children: first });
-    cResult[1] = tmp4.text;
-    cResult[2] = tmp10;
-    let tmp8 = tmp10;
-  } else {
-    tmp8 = cResult[2];
-  }
-  return tmp8;
-}) : (function AgeUpdateFooter() {
+export default function AgeUpdateFooter() {
   let obj = { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef2834.ifObbX, {
+  obj.children = intl.format(_modDef2835.ifObbX, {
     handleAgeVerifyHook() {
       const obj = AgeVerificationActionCreatorsDefault;
       return obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT });
     }
   });
   return jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null });
-});
+};

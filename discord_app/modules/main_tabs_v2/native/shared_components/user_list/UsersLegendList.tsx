@@ -1,9 +1,9 @@
-// === Module 14338: UsersLegendList ===
+// === Module 14368: UsersLegendList ===
 
-// Module 14338 (UsersLegendList)
-import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
-import BottomSheetModal from "BottomSheetModal" /* 5306 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7219 */;
+// Module 14368 (UsersLegendList)
+import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+import BottomSheetModal from "BottomSheetModal" /* 5270 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7226 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,280 +17,13 @@ function renderBottomSheetScrollComponent(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_7 = createStyles.createStyles({ row: { overflow: "hidden" } });
-const __initData = { code: "function UsersLegendListTsx1(event){const{scrollPosValue,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){runOnJS(onScroll)({nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}}" };
-let closure_10 = { code: "function UsersLegendListTsx2(event){const{scrollPosValue,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){runOnJS(onScroll)({nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}}" };
-const ReactCompilerGating = fn(558);
+let closure_9 = { code: "function UsersLegendListTsx1(event){const{scrollPosValue,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);if(onScroll!=null){runOnJS(onScroll)({nativeEvent:{contentOffset:{x:event.contentOffset.x,y:event.contentOffset.y},contentSize:{width:event.contentSize.width,height:event.contentSize.height},layoutMeasurement:{width:event.layoutMeasurement.width,height:event.layoutMeasurement.height}}});}}" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersLegendList.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UsersLegendList(renderItem) {
-  const cResult = onContentLengthChange(renderItem[7]).c(50);
-  ({ insetStart, insetEnd, itemSize, keyExtractor, listHeaderSize, onContentLengthChange } = renderItem);
-  ({ onLayout, onScroll } = renderItem);
-  renderItem = renderItem.renderItem;
-  ({ renderListHeader, renderSectionHeader } = renderItem);
-  const sectionHeaderIsSticky = renderItem.sectionHeaderIsSticky;
-  ({ sectionHeaderSize, sections, style } = renderItem);
-  let num = 0;
-  ({ inActionSheet, ref } = renderItem);
-  if (undefined !== insetStart) {
-    num = insetStart;
-  }
-  let obj = onContentLengthChange(renderItem[7]);
-  const row = sharedValue();
-  sectionHeaderIsSticky.useRef(null);
-  let obj2 = sectionHeaderIsSticky;
-  const tmp5 = sharedValue();
-  sharedValue = onContentLengthChange(renderItem[8]).useSharedValue(0);
-  if (cResult[0] !== sharedValue) {
-    let obj3 = { scrollOffset: sharedValue };
-    cResult[0] = sharedValue;
-    cResult[1] = obj3;
-  }
-  let tmpResult = onContentLengthChange(renderItem[8]);
-  class J {
-    constructor(arg0) {
-      result = closure_7.set(renderItem.contentOffset.y);
-      if (null != onScroll) {
-        tmp3 = closure_0;
-        tmp4 = closure_2;
-        obj = closure_0(closure_2[8]);
-        obj1 = { nativeEvent: null };
-        obj7 = { contentOffset: null, contentSize: null, layoutMeasurement: null };
-        point = { x: null, y: null };
-        point.x = renderItem.contentOffset.x;
-        point.y = renderItem.contentOffset.y;
-        obj7.contentOffset = point;
-        size = { width: null, height: null };
-        size.width = renderItem.contentSize.width;
-        size.height = renderItem.contentSize.height;
-        obj7.contentSize = size;
-        size1 = { width: null, height: null };
-        size1.width = renderItem.layoutMeasurement.width;
-        size1.height = renderItem.layoutMeasurement.height;
-        obj7.layoutMeasurement = size1;
-        obj1.nativeEvent = obj7;
-        tmp5 = obj.runOnJS(tmp2)(obj1);
-      }
-      return;
-    }
-  }
-  const tmpResult2 = onContentLengthChange(renderItem[8]);
-  J.__closure = { scrollPosValue: sharedValue, onScroll, runOnJS: onContentLengthChange(renderItem[8]).runOnJS };
-  J.__workletHash = 15701235151389;
-  J.__initData = __initData;
-  tmpResult2.useAnimatedScrollHandler(J);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    class P {
-      constructor() {
-        obj = onContentLengthChange(renderItem[9]);
-        return obj.getWindowDimensions();
-      }
-    }
-    cResult[2] = P;
-  } else {
-    class P {
-      constructor() {
-        obj = onContentLengthChange(renderItem[9]);
-        return obj.getWindowDimensions();
-      }
-    }
-  }
-  const first = renderSectionHeader(obj2.useState(P), 1)[0];
-  if (cResult[3] !== listHeaderSize) {
-    class P {
-      constructor() {
-        obj = onContentLengthChange(renderItem[9]);
-        return obj.getWindowDimensions();
-      }
-    }
-    cResult[3] = listHeaderSize;
-    cResult[4] = tmp13;
-  } else {
-    class P {
-      constructor() {
-        obj = onContentLengthChange(renderItem[9]);
-        return obj.getWindowDimensions();
-      }
-    }
-    if (cResult[5] === num) {
-      class P {
-        constructor() {
-          obj = onContentLengthChange(renderItem[9]);
-          return obj.getWindowDimensions();
-        }
-      }
-    }
-    let items = [];
-    const items1 = [];
-    const items2 = [];
-    const items3 = [];
-    const _Map = Map;
-    const map = new Map();
-    let sum = num + tmp12;
-    let num7 = 0;
-    if (0 < sections.length) {
-      class P {
-        constructor() {
-          obj = onContentLengthChange(renderItem[9]);
-          return obj.getWindowDimensions();
-        }
-      }
-      while (true) {
-        class P {
-          constructor() {
-            obj = onContentLengthChange(renderItem[9]);
-            return obj.getWindowDimensions();
-          }
-        }
-        let tmp22 = num7;
-        let tmp23 = sum;
-        if (0 !== tmp20) {
-          class P {
-            constructor() {
-              obj = onContentLengthChange(renderItem[9]);
-              return obj.getWindowDimensions();
-            }
-          }
-          let SECTION_HEADER = onScroll(renderItem[10]).SECTION_HEADER;
-          let sectionHeaderSizeResult = sectionHeaderSize(num7);
-          let _HermesInternal = HermesInternal;
-          let result = map.set("" + num7 + ":" + -1, items.length);
-          let obj5 = { type: SECTION_HEADER, section: num7, item: -1, key: null };
-          let combined;
-          if (keyExtractor != null) {
-            class P {
-              constructor() {
-                obj = onContentLengthChange(renderItem[9]);
-                return obj.getWindowDimensions();
-              }
-            }
-          }
-          if (combined == null) {
-            class P {
-              constructor() {
-                obj = onContentLengthChange(renderItem[9]);
-                return obj.getWindowDimensions();
-              }
-            }
-            let str3 = "";
-            let str4 = ":";
-            let str5 = ":";
-            combined = "" + SECTION_HEADER + ":" + tmp22 + ":" + -1;
-          }
-          obj5.key = combined;
-          let arr = items.push(obj5);
-          let arr2 = items1.push(sum);
-          let arr3 = items2.push(sectionHeaderSizeResult);
-          let sum1 = sum + sectionHeaderSizeResult;
-          let num9 = 0;
-          tmp23 = sum1;
-          if (0 < tmp20) {
-            class P {
-              constructor() {
-                obj = onContentLengthChange(renderItem[9]);
-                return obj.getWindowDimensions();
-              }
-            }
-            while (true) {
-              class P {
-                constructor() {
-                  obj = onContentLengthChange(renderItem[9]);
-                  return obj.getWindowDimensions();
-                }
-              }
-              let ITEM = onScroll(renderItem[10]).ITEM;
-              let tmp37 = num9;
-              if (typeof itemSize !== "number") {
-                class P {
-                  constructor() {
-                    obj = onContentLengthChange(renderItem[9]);
-                    return obj.getWindowDimensions();
-                  }
-                }
-              }
-              let _HermesInternal2 = HermesInternal;
-              let result1 = map.set("" + num7 + ":" + num9, items.length);
-              let obj6 = { type: ITEM, section: num7, item: num9, key: null };
-              let combined1;
-              if (keyExtractor != null) {
-                class P {
-                  constructor() {
-                    obj = onContentLengthChange(renderItem[9]);
-                    return obj.getWindowDimensions();
-                  }
-                }
-              }
-              if (combined1 == null) {
-                class P {
-                  constructor() {
-                    obj = onContentLengthChange(renderItem[9]);
-                    return obj.getWindowDimensions();
-                  }
-                }
-                let str6 = "";
-                let str7 = ":";
-                let str8 = ":";
-                combined1 = "" + ITEM + ":" + tmp22 + ":" + tmp37;
-              }
-              obj6.key = combined1;
-              let arr4 = items.push(obj6);
-              let arr10 = items1.push(sum1);
-              let arr11 = items2.push(itemSize);
-              sum1 = sum1 + itemSize;
-              num9 = num9 + 1;
-              tmp23 = sum1;
-              if (num9 >= tmp20) {
-                class P {
-                  constructor() {
-                    obj = onContentLengthChange(renderItem[9]);
-                    return obj.getWindowDimensions();
-                  }
-                }
-              } else {
-                class P {
-                  constructor() {
-                    obj = onContentLengthChange(renderItem[9]);
-                    return obj.getWindowDimensions();
-                  }
-                }
-              }
-            }
-          }
-        }
-        num7 = num7 + 1;
-        sum = tmp23;
-        if (num7 >= sections.length) {
-          class P {
-            constructor() {
-              obj = onContentLengthChange(renderItem[9]);
-              return obj.getWindowDimensions();
-            }
-          }
-        } else {
-          class P {
-            constructor() {
-              obj = onContentLengthChange(renderItem[9]);
-              return obj.getWindowDimensions();
-            }
-          }
-        }
-      }
-    }
-    const obj7 = { listData: items, offsets: items1, sizes: items2, stickyHeaderIndices: items3, indexByLocation: map };
-    cResult[5] = num;
-    cResult[6] = itemSize;
-    cResult[7] = keyExtractor;
-    cResult[8] = tmp12;
-    cResult[9] = sectionHeaderIsSticky;
-    cResult[10] = sectionHeaderSize;
-    cResult[11] = sections;
-    cResult[12] = obj7;
-  }
-  let obj4 = { scrollPosValue: sharedValue, onScroll, runOnJS: onContentLengthChange(renderItem[8]).runOnJS };
-}) : (function UsersLegendList(insetStart) {
+export default noop.memo(function UsersLegendList(insetStart) {
   let num = insetStart.insetStart;
   if (num === undefined) {
     num = 0;
@@ -315,44 +48,32 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let tmp = renderListHeader();
   const row = tmp;
   const ref1 = onContentLengthChange.useRef(null);
-  const sharedValue = num(itemSize[8]).useSharedValue(0);
+  const sharedValue = num(itemSize[6]).useSharedValue(0);
   let items = [sharedValue];
   const memo = onContentLengthChange.useMemo(() => ({ scrollOffset: sharedValue }), items);
-  let obj2 = num(itemSize[8]);
+  let obj2 = num(itemSize[6]);
   let tmp3 = num;
   let tmp4 = itemSize;
-  class E {
-    constructor(arg0) {
-      result = closure_14.set(insetStart.contentOffset.y);
-      if (null != onScroll) {
-        tmp3 = closure_0;
-        tmp4 = closure_2;
-        obj = closure_0(closure_2[8]);
-        obj1 = { nativeEvent: null };
-        obj7 = { contentOffset: null, contentSize: null, layoutMeasurement: null };
-        point = { x: null, y: null };
-        point.x = insetStart.contentOffset.x;
-        point.y = insetStart.contentOffset.y;
-        obj7.contentOffset = point;
-        size = { width: null, height: null };
-        size.width = insetStart.contentSize.width;
-        size.height = insetStart.contentSize.height;
-        obj7.contentSize = size;
-        size1 = { width: null, height: null };
-        size1.width = insetStart.layoutMeasurement.width;
-        size1.height = insetStart.layoutMeasurement.height;
-        obj7.layoutMeasurement = size1;
-        obj1.nativeEvent = obj7;
-        tmp5 = obj.runOnJS(tmp2)(obj1);
-      }
-      return;
+  const fn = function b(contentOffset) {
+    const result = sharedValue.set(contentOffset.contentOffset.y);
+    if (null != onScroll) {
+      const obj2 = { nativeEvent: null };
+      const obj3 = { contentOffset: null, contentSize: null, layoutMeasurement: null };
+      const point = { x: contentOffset.contentOffset.x, y: contentOffset.contentOffset.y };
+      obj3.contentOffset = point;
+      const size = { width: contentOffset.contentSize.width, height: contentOffset.contentSize.height };
+      obj3.contentSize = size;
+      const size1 = { width: contentOffset.layoutMeasurement.width, height: contentOffset.layoutMeasurement.height };
+      obj3.layoutMeasurement = size1;
+      obj2.nativeEvent = obj3;
+      ReanimatedRexport.runOnJS(tmp2)(obj2);
     }
-  }
-  let obj3 = num(itemSize[8]);
-  E.__closure = { scrollPosValue: sharedValue, onScroll, runOnJS: num(itemSize[8]).runOnJS };
-  E.__workletHash = 5898393771710;
-  E.__initData = sectionHeaderSize;
-  let obj4 = { scrollPosValue: sharedValue, onScroll, runOnJS: num(itemSize[8]).runOnJS };
+  };
+  let obj3 = num(itemSize[6]);
+  fn.__closure = { scrollPosValue: sharedValue, onScroll, runOnJS: num(itemSize[6]).runOnJS };
+  fn.__workletHash = 15701235151389;
+  fn.__initData = sectionHeaderIsSticky;
+  let obj4 = { scrollPosValue: sharedValue, onScroll, runOnJS: num(itemSize[6]).runOnJS };
   if (typeof listHeaderSize === "function") {
     num3 = listHeaderSize();
   } else {
@@ -531,14 +252,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return tmpResult;
   }, items7);
-  const obj5 = { ref: ref1, accessibilityRole: "list", contentContainerStyle: memo3, data: memo1.listData, estimatedHeaderSize: num3, extraData: callback, estimatedListSize: keyExtractor(onContentLengthChange.useState(() => num(itemSize[9]).getWindowDimensions()), 1)[0], getFixedItemSize: callback3, getItemType: callback1, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", keyExtractor: callback2, ListHeaderComponent: memo2, onContentSizeChange: null, onLayout: null, onScroll: null, renderItem: null, renderScrollComponent: null, sharedValues: null, stickyHeaderIndices: null, style: null };
+  const obj5 = { ref: ref1, accessibilityRole: "list", contentContainerStyle: memo3, data: memo1.listData, estimatedHeaderSize: num3, extraData: callback, estimatedListSize: keyExtractor(onContentLengthChange.useState(() => num(itemSize[7]).getWindowDimensions()), 1)[0], getFixedItemSize: callback3, getItemType: callback1, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", keyExtractor: callback2, ListHeaderComponent: memo2, onContentSizeChange: null, onLayout: null, onScroll: null, renderItem: null, renderScrollComponent: null, sharedValues: null, stickyHeaderIndices: null, style: null };
   let tmp18;
   if (null != onContentLengthChange) {
     tmp18 = callback4;
   }
   obj5.onContentSizeChange = tmp18;
   obj5.onLayout = onLayout;
-  obj5.onScroll = obj3.useAnimatedScrollHandler(E);
+  obj5.onScroll = obj3.useAnimatedScrollHandler(fn);
   obj5.renderItem = callback;
   let tmp19;
   if (true === insetStart.inActionSheet) {
@@ -548,5 +269,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj5.sharedValues = memo;
   obj5.stickyHeaderIndices = memo1.stickyHeaderIndices;
   obj5.style = style;
-  return renderItem(tmp3(tmp4[11]).AnimatedLegendList, obj5);
-}));
+  return renderItem(tmp3(tmp4[9]).AnimatedLegendList, obj5);
+});

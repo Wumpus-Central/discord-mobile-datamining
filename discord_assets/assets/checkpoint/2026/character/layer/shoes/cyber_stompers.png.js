@@ -1,6 +1,6 @@
-// === Module 6160: ? ===
+// === Module 6167: ? ===
 
-// Module 6160
+// Module 6167
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/shoes/cyber_stompers.png.js");

@@ -1,10 +1,10 @@
-// === Module 5176: native ===
+// === Module 5182: native ===
 
-// Module 5176 (native)
-import themes from "themes" /* 5027 */;
-import shared_getNodeText from "shared/getNodeText" /* 5177 */;
-import mergeProps from "mergeProps" /* 5178 */;
-import useFocus from "useFocus" /* 5179 */;
+// Module 5182 (native)
+import themes from "themes" /* 5031 */;
+import shared_getNodeText from "shared/getNodeText" /* 5183 */;
+import mergeProps from "mergeProps" /* 5184 */;
+import useFocus from "useFocus" /* 5185 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/native.tsx");

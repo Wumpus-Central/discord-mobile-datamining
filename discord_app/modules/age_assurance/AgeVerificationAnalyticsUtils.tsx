@@ -1,10 +1,10 @@
-// === Module 6716: AgeVerificationAnalyticsUtils ===
+// === Module 6723: AgeVerificationAnalyticsUtils ===
 
-// Module 6716 (AgeVerificationAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+// Module 6723 (AgeVerificationAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationAnalyticsUtils.tsx");
 
@@ -12,13 +12,13 @@ export const AgeVerificationModalEntryPoint = { GET_STARTED_MODAL: "get_started_
 export const AgeVerificationModalVersion = { PRIMARY: 1, [1]: "PRIMARY", RETRY: 2, [2]: "RETRY", EXPRESSIVE_PRIMARY: 3, [3]: "EXPRESSIVE_PRIMARY", SAFETY_FLOWS: 4, [4]: "SAFETY_FLOWS", EXPRESSIVE_V2: 5, [5]: "EXPRESSIVE_V2" };
 export const AgeVerificationModalCta = { LEARN_MORE: "learn_more", GET_STARTED: "get_started", SYSTEM_DMS_LEARN_MORE: "system_dms_learn_more", TRUSTED_PROVIDERS: "trusted_providers", METHOD_SELECT: "method_select", LOG_OUT: "log_out" };
 export const AgeVerificationDmCta = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen", MANUAL_REVIEW: "manual_review" };
-export const NsfwSpaceWarningModalType = fn(6717).NsfwSpaceWarningModalType;
+export const NsfwSpaceWarningModalType = fn(6724).NsfwSpaceWarningModalType;
 export const NsfwSpaceWarningModalCta = { NSFW_CHANNEL_AGREE_CTA: "nsfw_channel_agree_cta", NSFW_CHANNEL_DISAGREE_CTA: "nsfw_channel_disagree_cta" };
 export function trackAgeVerificationModalViewed(memo, EXPRESSIVE_PRIMARY, entryPoint) {
   AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: memo, modal_version: EXPRESSIVE_PRIMARY, entry_point: entryPoint });
 }
-export function trackAgeVerificationModalClicked(modalSessionId, EXPRESSIVE_PRIMARY, METHOD_SELECT, GOOGLE_WALLET) {
-  AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: modalSessionId, modal_version: EXPRESSIVE_PRIMARY, cta: METHOD_SELECT, method: GOOGLE_WALLET });
+export function trackAgeVerificationModalClicked(modalSessionId, EXPRESSIVE_V2, METHOD_SELECT, GOOGLE_WALLET) {
+  AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: modalSessionId, modal_version: EXPRESSIVE_V2, cta: METHOD_SELECT, method: GOOGLE_WALLET });
 }
 export function trackAgeVerificationDmClicked(CONNECT_TO_TEEN, channelId) {
   AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_DM_CLICKED, { cta: CONNECT_TO_TEEN, channel_id: channelId });

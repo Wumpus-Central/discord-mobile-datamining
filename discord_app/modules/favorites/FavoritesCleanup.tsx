@@ -1,15 +1,15 @@
-// === Module 10801: FavoritesCleanup ===
+// === Module 10824: FavoritesCleanup ===
 
-// Module 10801 (FavoritesCleanup)
-import DurationsDefault from "Durations" /* 1101 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6881 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7470 */;
+// Module 10824 (FavoritesCleanup)
+import DurationsDefault from "Durations" /* 1090 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6888 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7478 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import ReadStateStore from "ReadStateStore" /* 6829 */;
-import FavoriteStore from "FavoriteStore" /* 4860 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import ReadStateStore from "ReadStateStore" /* 6836 */;
+import FavoriteStore from "FavoriteStore" /* 4861 */;
 
 require = fn;
 function getFavoriteThreadIdsForCleanup(categoryId) {
@@ -49,7 +49,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -77,7 +77,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -85,8 +85,8 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4861).THREAD_CHANNEL_TYPES;
-const Permissions = fn(1095).Permissions;
+const THREAD_CHANNEL_TYPES = fn(4862).THREAD_CHANNEL_TYPES;
+const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");
 

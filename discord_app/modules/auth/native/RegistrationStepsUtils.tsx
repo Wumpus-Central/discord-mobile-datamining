@@ -1,25 +1,25 @@
-// === Module 17873: RegistrationStepsUtils ===
+// === Module 17932: RegistrationStepsUtils ===
 
-// Module 17873 (RegistrationStepsUtils)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import Link from "Link" /* 1504 */;
-import LoginDefault from "Login" /* 7094 */;
-import WelcomeDefault from "Welcome" /* 17876 */;
-import RegistrationUtils from "RegistrationUtils" /* 17882 */;
-import RegisterIdentity from "RegisterIdentity" /* 17883 */;
-import auth_register from "auth/register" /* 17885 */;
-import RegisterDisplayNameDefault from "RegisterDisplayName" /* 17895 */;
-import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 17896 */;
-import components_VerifyPhoneDefault from "components/VerifyPhone" /* 17902 */;
-import components_MFADefault from "components/MFA" /* 17904 */;
-import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 17905 */;
-import ExternalLinkDefault from "ExternalLink" /* 17909 */;
-import RegisterAgeGateDefault from "RegisterAgeGate" /* 17910 */;
-import AgeGateUnderageDefault from "AgeGateUnderage" /* 17916 */;
-import CompanionRemoteAuth from "CompanionRemoteAuth" /* 17917 */;
+// Module 17932 (RegistrationStepsUtils)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
+import Link from "Link" /* 1499 */;
+import LoginDefault from "Login" /* 7102 */;
+import WelcomeDefault from "Welcome" /* 17935 */;
+import RegistrationUtils from "RegistrationUtils" /* 17941 */;
+import RegisterIdentity from "RegisterIdentity" /* 17942 */;
+import auth_register from "auth/register" /* 17944 */;
+import RegisterDisplayNameDefault from "RegisterDisplayName" /* 17954 */;
+import RegisterAccountInformationDefault from "RegisterAccountInformation" /* 17955 */;
+import components_VerifyPhoneDefault from "components/VerifyPhone" /* 17961 */;
+import components_MFADefault from "components/MFA" /* 17963 */;
+import AccountDisabledOrDeletionScheduledDefault from "AccountDisabledOrDeletionScheduled" /* 17964 */;
+import ExternalLinkDefault from "ExternalLink" /* 17968 */;
+import RegisterAgeGateDefault from "RegisterAgeGate" /* 17969 */;
+import AgeGateUnderageDefault from "AgeGateUnderage" /* 17975 */;
+import CompanionRemoteAuth from "CompanionRemoteAuth" /* 17976 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16503 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 16554 */;
 
 require = fn;
 function headerTitle() {
@@ -44,7 +44,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -58,10 +58,10 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          React6();
+          React7();
           const tmp22 = getNextAuthState(closure_0);
           if (null != tmp22) {
-            const obj4 = { step: v65535(closure_0), toStep: v65535(tmp22), actionType: constants.SUCCESS };
+            const obj4 = { step: closure_2_10(closure_0), toStep: closure_2_10(tmp22), actionType: constants.SUCCESS };
             dependencyMap(obj4);
             const StackActions = Link.StackActions;
             importDefault.dispatch(StackActions.push(tmp22));
@@ -81,7 +81,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
         return obj;
       }
       c3 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp12) {
       c3 = tmp;
       throw tmp12;
@@ -135,7 +135,7 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
       closure_132_0(closure_132_2[28]);
     } else {
       c8 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else if (arg0 === 1) {
     c8 = 3;
@@ -148,12 +148,12 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6728).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(17874);
+const usePromoEmailConsentStore = fn(6735).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(17933);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17875);
+const RegistrationConstants = fn(17934);
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
-const AuthStates = fn(1084).AuthStates;
+const AuthStates = fn(1072).AuthStates;
 const jsx = fn(21).jsx;
 const items = [, , , , ];
 ({ WELCOME: arr[0], REGISTER_IDENTITY: arr[1], REGISTER_DISPLAY_NAME: arr[2], REGISTER_ACCOUNT_INFORMATION: arr[3], AGE_GATE: arr[4] } = AuthStates);
@@ -305,7 +305,7 @@ export function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(7203), {
+      return closure_15(closure_1(7210), {
         onClose() {
           return closure_0.pop();
         },
@@ -422,7 +422,7 @@ export function getPreviousRegistrationTransitionStep(AGE_GATE) {
     }
   }
   if (null != tmp3) {
-    return v65535(tmp3);
+    return closure_1_10(tmp3);
   }
 }
 export function getNextRegistrationTransitionStep(arg0) {
@@ -434,7 +434,7 @@ export function getNextRegistrationTransitionStep(arg0) {
     }
   }
   if (null != tmp2) {
-    return v65535(tmp2);
+    return closure_1_10(tmp2);
   }
 }
 export function handleNextOrSubmitRegistration() {

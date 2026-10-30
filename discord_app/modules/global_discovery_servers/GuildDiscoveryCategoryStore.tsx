@@ -1,12 +1,12 @@
-// === Module 18433: GuildDiscoveryCategoryStore ===
+// === Module 18492: GuildDiscoveryCategoryStore ===
 
-// Module 18433 (GuildDiscoveryCategoryStore)
+// Module 18492 (GuildDiscoveryCategoryStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1125 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9044 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9057 */;
 import size from "module_2" /* 2 */;
 
 ({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: closure_4, DISCOVERY_ALL_CATEGORIES_ID: hasOwnProperty, DISCOVERY_SIDEBAR_CATEGORIES: metroRequire } = GlobalDiscoveryServersConstants);

@@ -1,37 +1,18 @@
-// === Module 17831: VideoBackgroundSetting ===
+// === Module 17902: VideoBackgroundSetting ===
 
-// Module 17831 (VideoBackgroundSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import applyBackgroundOption from "applyBackgroundOption" /* 5899 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5902 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5904 */;
-import SettingsConstants from "SettingsConstants" /* 8387 */;
-import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 11712 */;
-import VideoBackgroundOptions from "VideoBackgroundOptions" /* 11732 */;
-import Constants from "Constants" /* 1084 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 17902 (VideoBackgroundSetting)
+import util from "util" /* 1114 */;
+import applyBackgroundOption from "applyBackgroundOption" /* 5906 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5909 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5911 */;
+import SettingsConstants from "SettingsConstants" /* 8424 */;
+import useIsVideoBackgroundEnabledDefault from "useIsVideoBackgroundEnabled" /* 11905 */;
+import VideoBackgroundOptions from "VideoBackgroundOptions" /* 11925 */;
+import Constants from "Constants" /* 1072 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticsSections: c3, NOOP: closure_4, AnalyticsPages: hasOwnProperty } = Constants);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoBackgroundSettingValue() {
-  const cResult = c.c(2);
-  const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
-  if (cResult[0] !== lastUsedVideoBackgroundOption) {
-    const result = VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
-    cResult[0] = lastUsedVideoBackgroundOption;
-    cResult[1] = result;
-    let tmp5 = result;
-    const tmpResult = VideoBackgroundOptions;
-  } else {
-    tmp5 = cResult[1];
-  }
-  return "" + tmp5;
-}) : (function useVideoBackgroundSettingValue() {
-  const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
-  return "" + VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
-});
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
@@ -41,23 +22,10 @@ const radio = SettingBuilders.createRadio({
   usePredicate() {
     return useIsVideoBackgroundEnabledDefault("VideoBackgroundSetting");
   },
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoBackgroundSettingValue() {
-    const cResult = c.c(2);
-    const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
-    if (cResult[0] !== lastUsedVideoBackgroundOption) {
-      const result = VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
-      cResult[0] = lastUsedVideoBackgroundOption;
-      cResult[1] = result;
-      let tmp5 = result;
-      const tmpResult = VideoBackgroundOptions;
-    } else {
-      tmp5 = cResult[1];
-    }
-    return "" + tmp5;
-  }) : (function useVideoBackgroundSettingValue() {
+  useValue: function useVideoBackgroundSettingValue() {
     const lastUsedVideoBackgroundOption = LastUsedVideoBackgroundOption.useLastUsedVideoBackgroundOption();
     return "" + VideoBackgroundOptions.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
-  }),
+  },
   onValueChange: function onVideoBackgroundSettingChange(arg0) {
     const obj = VideoBackgroundOptions;
     const result = obj.fromVideoBackgroundRadioValue(VideoBackgroundOptions.parseVideoBackgroundRadioValue(arg0));

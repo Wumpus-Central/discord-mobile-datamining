@@ -1,14 +1,13 @@
-// === Module 18652: EnglishAnalyzer ===
+// === Module 18711: EnglishAnalyzer ===
 
-// Module 18652 (EnglishAnalyzer)
+// Module 18711 (EnglishAnalyzer)
 import _modDef12 from "module_12" /* 12 */;
-import snowballStemmer from "snowballStemmer" /* 18653 */;
+import snowballStemmer from "snowballStemmer" /* 18712 */;
+import Search from "Search" /* 18714 */;
 import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-
-function stripPossessive(item) {
-  return item.replace(/('|\u2019|\uFF07)(s|S)$/, "");
+function stripPossessive(item10009) {
+  return item10009.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
 function lowercase(str) {
   return str.toLowerCase();
@@ -19,12 +18,12 @@ function isStopWord(arg0) {
 function isBlank(arg0) {
   return 0 === arg0.length;
 }
-function shouldHighlight(item, set, arg2) {
+function shouldHighlight(item10009, set, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  const tmp = lowercase(stripPossessive(item));
+  const tmp = lowercase(stripPossessive(item10009));
   if (isBlank(tmp)) {
     return false;
   } else if (isStopWord(tmp)) {
@@ -46,9 +45,9 @@ function shouldHighlight(item, set, arg2) {
     }
   }
 }
-function highlightAST(content, set, flag) {
-  closure_0 = set;
-  closure_1 = flag;
+function highlightAST(content, c0, c1) {
+  closure_0 = _require;
+  closure_1 = importDefault;
   if (Array.isArray(content)) {
     const item = content.forEach((item) => {
       highlightAST(item, closure_0, closure_1);
@@ -63,44 +62,90 @@ function highlightAST(content, set, flag) {
   } else {
     if (typeof content.content === "string") {
       if ("codeBlock" !== content.type) {
-        const items1 = [];
-        content = "";
-        const parts = content.content.split(/(\W+)/g);
-        const item2 = parts.forEach((content) => {
-          if (shouldHighlight(content, closure_0, closure_1)) {
-            if (arr.length > 0) {
-              const obj = { type: "text", content };
-              items1.push(obj);
+        const obj = { words: _require, supportPartialMatches: importDefault };
+        const arr = splitHighlights(content.content, obj);
+        if (null != arr) {
+          const mapped = arr.map((content) => {
+            let type = "text";
+            if (content.highlight) {
+              type = "highlight";
             }
-            const obj2 = { type: "highlight", content };
-            items1.push(obj2);
-            content = "";
-          } else {
-            content = arr + content;
-          }
-        });
-        if (items1.length > 0) {
-          if (content.length > 0) {
-            let obj = { type: "text", content };
-            items1.push(obj);
-          }
+            return { type, content: content.text };
+          });
           if ("text" === content.type) {
-            content.content = items1;
+            content.content = mapped;
           } else {
-            let obj2 = { type: "text", content: items1 };
-            const items2 = [obj2];
-            content.content = items2;
+            const obj2 = { type: "text", content: mapped };
+            const items1 = [obj2];
+            content.content = items1;
           }
         }
       }
     }
     if (null != content.content) {
-      highlightAST(content.content, set, flag);
+      highlightAST(content.content, _require, importDefault);
     }
   }
   return content;
 }
-let set = new Set(["a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with"]);
+function createHighlightMatcher(str) {
+  if (flag === undefined) {
+    flag = false;
+  }
+  let tmp3 = str.length >= Search.SEARCH_PARTIAL_NAME_MATCH_MIN_QUERY_LENGTH;
+  if (tmp3) {
+    tmp3 = str.length <= Search.SEARCH_PARTIAL_NAME_MATCH_MAX_QUERY_LENGTH;
+  }
+  const obj = { words: null, supportPartialMatches: null };
+  const mapped = _modDef12(str.split(/\W+/)).map(stripPossessive);
+  const tmp4Result = _modDef12(str.split(/\W+/));
+  const mapped1 = mapped.reject(isBlank).map(lowercase);
+  const rejectResult = mapped.reject(isBlank);
+  const rejectResult1 = mapped1.reject(isStopWord);
+  const iter = mapped1.reject(isStopWord).map(snowballStemmer.snowballStem);
+  obj.words = new Set(mapped1.reject(isStopWord).map(snowballStemmer.snowballStem).value());
+  if (tmp3) {
+    tmp3 = flag;
+  }
+  obj.supportPartialMatches = tmp3;
+  return obj;
+}
+function splitHighlights(content, words) {
+  words = words.words;
+  if (0 === words.size) {
+    return null;
+  } else {
+    const items = [];
+    let str = "";
+    const parts = content.split(/(\W+)/g);
+    for (const item10009 of parts) {
+      if (shouldHighlight(item10009, words, tmp)) {
+        if (``.length > 0) {
+          let obj = { text: null, highlight: false };
+          obj.text = str;
+          let arr = items.push(obj);
+        }
+        let obj2 = { text: item10009, highlight: true };
+        let arr4 = items.push(obj2);
+        str = "";
+      } else {
+        str = `${tmp3}`;
+      }
+      continue;
+    }
+    let tmp11 = null;
+    if (0 !== items.length) {
+      tmp11 = items;
+      if (str.length > 0) {
+        const obj3 = { text: str, highlight: false };
+        items.push(obj3);
+        tmp11 = items;
+      }
+    }
+    return tmp11;
+  }
+}
+const set = new Set(["a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with"]);
 const result = size.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
 export function analyze(str) {
@@ -113,31 +158,17 @@ export function analyze(str) {
 }
 export { shouldHighlight };
 export { highlightAST };
-export function createASTHighlighter(str) {
-  let flag = arg1;
-  if (arg1 === undefined) {
+export { createHighlightMatcher };
+export { splitHighlights };
+export function createASTHighlighter(arg0) {
+  if (flag === undefined) {
     flag = false;
   }
-  importDefault = undefined;
-  let set;
-  let tmp3 = str.length >= flag(set[2]).SEARCH_PARTIAL_NAME_MATCH_MIN_QUERY_LENGTH;
-  if (tmp3) {
-    tmp3 = str.length <= tmp(tmp2[2]).SEARCH_PARTIAL_NAME_MATCH_MAX_QUERY_LENGTH;
-  }
-  importDefault = tmp3;
-  const tmp4 = require("module_12");
-  const mapped = require("module_12")(str.split(/\W+/)).map(stripPossessive);
-  const tmp4Result = require("module_12")(str.split(/\W+/));
-  const mapped1 = mapped.reject(isBlank).map(lowercase);
-  const rejectResult = mapped.reject(isBlank);
-  const rejectResult1 = mapped1.reject(isStopWord);
-  set = new Set(mapped1.reject(isStopWord).map(flag(set[1]).snowballStem).value());
+  c0 = undefined;
+  c1 = undefined;
+  ({ words: c0, supportPartialMatches: c1 } = createHighlightMatcher(arg0, flag));
   return (content) => {
-    let tmp3 = closure_1;
-    if (closure_1) {
-      tmp3 = flag;
-    }
-    highlightAST(content, set, tmp3);
+    highlightAST(content, c0, c1);
     return content;
   };
 }

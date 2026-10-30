@@ -1,30 +1,42 @@
-// === Module 9095: InstantInviteActionSheet ===
+// === Module 9108: InstantInviteActionSheet ===
 
-// Module 9095 (InstantInviteActionSheet)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5739 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9086 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9096 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9098 */;
+// Module 9108 (InstantInviteActionSheet)
+import nativeDefault from "native" /* 575 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5745 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9099 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9109 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9111 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 4862 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9087 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+import StageInstanceStore from "StageInstanceStore" /* 4863 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9100 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 require = fn;
+function Loading() {
+  const tmp = closure_15();
+  const items = [];
+  let num = 0;
+  do {
+    let obj = { row: num };
+    let arr = items.push(closure_1_12(UserPlaceholderRowDefault, obj, num));
+    num = num + 1;
+  } while (num < 10);
+  const obj2 = { children: null };
+  const items1 = [closure_1_12(hasOwnProperty, { style: tmp.placeholderHeader }), closure_1_12(hasOwnProperty, { style: tmp.placeholderLabel }), items];
+  obj2.children = items1;
+  return closure_1_14(map1, obj2);
+}
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7867).InviteTargetTypes;
-const Permissions = fn(1084).Permissions;
+const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
-({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5005);
+({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
+const createStyles = fn(5009);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;
@@ -35,601 +47,30 @@ obj2.searchAndShareContainer = { borderTopWidth: 1, borderColor: nativeDefault.c
 let obj3 = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, flexDirection: "column", gap: nativeDefault.space.PX_12 };
 obj2.inviteAgeText = { paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_4 };
 obj2.shareApps = { paddingVertical: 0 };
-let closure_16 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Loading() {
-  const cResult = c.c(8);
-  const tmp2 = closure_16();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [];
-    let num4 = 0;
-    do {
-      let obj2 = { row: num4 };
-      let arr = items.push(map1(UserPlaceholderRowDefault, obj2, num4));
-      num4 = num4 + 1;
-    } while (num4 < 10);
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== tmp2.placeholderHeader) {
-    const obj3 = { style: tmp2.placeholderHeader };
-    const tmp11 = map1(hasOwnProperty, obj3);
-    cResult[1] = tmp2.placeholderHeader;
-    cResult[2] = tmp11;
-    let tmp8 = tmp11;
-  } else {
-    tmp8 = cResult[2];
-  }
-  if (cResult[3] !== tmp2.placeholderLabel) {
-    const obj4 = { style: tmp2.placeholderLabel };
-    const tmp15 = map1(hasOwnProperty, obj4);
-    cResult[3] = tmp2.placeholderLabel;
-    cResult[4] = tmp15;
-    let tmp12 = tmp15;
-  } else {
-    tmp12 = cResult[4];
-  }
-  if (cResult[5] === tmp8) {
-    if (cResult[6] === tmp12) {
-      let tmp16 = cResult[7];
-    }
-    return tmp16;
-  }
-  const obj5 = { children: null };
-  const items1 = [tmp8, tmp12, first];
-  obj5.children = items1;
-  const tmp17 = value2(closure_1_14, obj5);
-  cResult[5] = tmp8;
-  cResult[6] = tmp12;
-  cResult[7] = tmp17;
-  tmp16 = tmp17;
-}) : (function Loading() {
-  const tmp = closure_16();
-  const items = [];
-  let num = 0;
-  do {
-    let obj = { row: num };
-    let arr = items.push(map1(UserPlaceholderRowDefault, obj, num));
-    num = num + 1;
-  } while (num < 10);
-  const obj2 = { children: null };
-  const items1 = [map1(hasOwnProperty, { style: tmp.placeholderHeader }), map1(hasOwnProperty, { style: tmp.placeholderLabel }), items];
-  obj2.children = items1;
-  return value2(closure_1_14, obj2);
-});
-ReactCompilerGating = fn(558);
-let obj4 = { paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_4 };
+let closure_15 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInviteActionSheet(channel) {
-  const cResult = channel(vanityURLCode[13]).c(66);
-  channel = channel.channel;
-  const source = channel.source;
-  vanityURLCode = channel.vanityURLCode;
-  const guildScheduledEventId = channel.guildScheduledEventId;
-  ({ targetApplicationId, code } = channel);
-  closure_16();
-  const bottom = source(vanityURLCode[15])().bottom;
-  let obj = channel(vanityURLCode[13]);
-  const analyticsLocations = source(vanityURLCode[16])(source(vanityURLCode[17]).INSTANT_INVITE_MODAL).analyticsLocations;
-  if (cResult[0] !== targetApplicationId) {
-    if (null != targetApplicationId) {
-      const items = [targetApplicationId];
-      let items1 = items;
-    } else {
-      items1 = [];
-    }
-    cResult[0] = targetApplicationId;
-    cResult[1] = items1;
-  } else {
-    const first = guildScheduledEventId(tmp5(tmp2[18])(cResult[1]), 1)[0];
-    const _Symbol = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const items2 = [PermissionStore, CreateInviteModalStore, StageInstanceStore];
-      cResult[2] = items2;
-      let tmp11 = items2;
-    } else {
-      tmp11 = cResult[2];
-    }
-    if (cResult[3] === channel) {
-      if (cResult[4] === code) {
-        if (cResult[5] === guildScheduledEventId) {
-          if (cResult[6] === vanityURLCode) {
-            let tmp15 = cResult[7];
-          }
-          const stateFromStores = tmp(tmp2[20]).useStateFromStores(tmp11, tmp15);
-          const _Symbol2 = Symbol;
-          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const items3 = [CreateInviteModalStore];
-            class U {
-              constructor() {
-                return closure_1_8.getError();
-              }
-            }
-            cResult[8] = items3;
-            cResult[9] = U;
-            let tmp18 = U;
-            let tmp17 = items3;
-          } else {
-            tmp17 = cResult[8];
-            tmp18 = cResult[9];
-          }
-          const tmpResult = tmp(tmp2[20]);
-          const stateFromStores1 = tmp(tmp2[20]).useStateFromStores(tmp17, tmp18);
-          if (cResult[10] !== stateFromStores) {
-            let tmp23 = null;
-            if (null != stateFromStores) {
-              tmp23 = tmp5(tmp2[21])(stateFromStores);
-            }
-            class U {
-              constructor() {
-                return closure_1_8.getError();
-              }
-            }
-            cResult[10] = stateFromStores;
-            cResult[11] = tmp23;
-            cResult[12] = "";
-            class M {
-              constructor() {
-                if (null != code) {
-                  return code;
-                } else {
-                  tmp16 = channel;
-                  if (channel.isGuildStageVoice()) {
-                    tmp = closure_10;
-                    tmp2 = Permissions;
-                    if (!closure_10.can(Permissions.CREATE_INSTANT_INVITE, tmp16)) {
-                      tmp3 = closure_7;
-                      stageInstanceByChannel = closure_7.getStageInstanceByChannel(tmp16.id);
-                      invite_code = undefined;
-                      if (stageInstanceByChannel != null) {
-                        invite_code = stageInstanceByChannel.invite_code;
-                      }
-                      if (null != invite_code) {
-                        return stageInstanceByChannel.invite_code;
-                      }
-                    }
-                  }
-                  tmp6 = vanityURLCode;
-                  if (null != vanityURLCode) {
-                    inviteKeyFromExtraData = tmp6;
-                    if (null != guildScheduledEventId) {
-                      tmp14 = closure_0;
-                      tmp15 = closure_2;
-                      obj3 = closure_0(closure_2[19]);
-                      obj1 = { baseCode: null, guildScheduledEventId: null };
-                      obj1.baseCode = tmp6;
-                      obj1.guildScheduledEventId = tmp12;
-                      inviteKeyFromExtraData = obj3.generateInviteKeyFromExtraData(obj1);
-                    }
-                    return inviteKeyFromExtraData;
-                  } else {
-                    tmp7 = closure_8;
-                    code = closure_8.getInvite();
-                    if (null == code) {
-                      return;
-                    } else {
-                      if (null != guildScheduledEventId) {
-                        tmp9 = closure_0;
-                        tmp10 = closure_2;
-                        obj = closure_0(closure_2[19]);
-                        obj5 = { baseCode: null, guildScheduledEventId: null };
-                        code = code.code;
-                        obj5.baseCode = code;
-                        obj5.guildScheduledEventId = tmp8;
-                        code2 = obj.generateInviteKeyFromExtraData(obj5);
-                      } else {
-                        code2 = code.code;
-                      }
-                      tmp11 = code2;
-                    }
-                  }
-                }
-                return;
-              }
-            }
-          }
-          class M {
-            constructor() {
-              if (null != code) {
-                return code;
-              } else {
-                tmp16 = channel;
-                if (channel.isGuildStageVoice()) {
-                  tmp = closure_10;
-                  tmp2 = Permissions;
-                  if (!closure_10.can(Permissions.CREATE_INSTANT_INVITE, tmp16)) {
-                    tmp3 = closure_7;
-                    stageInstanceByChannel = closure_7.getStageInstanceByChannel(tmp16.id);
-                    invite_code = undefined;
-                    if (stageInstanceByChannel != null) {
-                      invite_code = stageInstanceByChannel.invite_code;
-                    }
-                    if (null != invite_code) {
-                      return stageInstanceByChannel.invite_code;
-                    }
-                  }
-                }
-                tmp6 = vanityURLCode;
-                if (null != vanityURLCode) {
-                  inviteKeyFromExtraData = tmp6;
-                  if (null != guildScheduledEventId) {
-                    tmp14 = closure_0;
-                    tmp15 = closure_2;
-                    obj3 = closure_0(closure_2[19]);
-                    obj1 = { baseCode: null, guildScheduledEventId: null };
-                    obj1.baseCode = tmp6;
-                    obj1.guildScheduledEventId = tmp12;
-                    inviteKeyFromExtraData = obj3.generateInviteKeyFromExtraData(obj1);
-                  }
-                  return inviteKeyFromExtraData;
-                } else {
-                  tmp7 = closure_8;
-                  code = closure_8.getInvite();
-                  if (null == code) {
-                    return;
-                  } else {
-                    if (null != guildScheduledEventId) {
-                      tmp9 = closure_0;
-                      tmp10 = closure_2;
-                      obj = closure_0(closure_2[19]);
-                      obj5 = { baseCode: null, guildScheduledEventId: null };
-                      code = code.code;
-                      obj5.baseCode = code;
-                      obj5.guildScheduledEventId = tmp8;
-                      code2 = obj.generateInviteKeyFromExtraData(obj5);
-                    } else {
-                      code2 = code.code;
-                    }
-                    tmp11 = code2;
-                  }
-                }
-              }
-              return;
-            }
-          }
-          let EMBEDDED_APPLICATION = null;
-          if (null != targetApplicationId) {
-            EMBEDDED_APPLICATION = InviteTargetTypes.EMBEDDED_APPLICATION;
-          }
-          if (cResult[13] === analyticsLocations) {
-            if (cResult[16] === channel) {
-              if (cResult[17] === stateFromStores) {
-                if (cResult[18] === tmp22) {
-                  if (cResult[21] !== channel) {
-                    class Q {
-                      constructor() {
-                        obj = closure_0(closure_2[25]);
-                        guildId = channel.getGuildId();
-                        result = obj.setHubProgressActionComplete(guildId, closure_0(closure_2[26]).HubProgressStep.INVITE_USER);
-                        return;
-                      }
-                    }
-                    class W {
-                      constructor(arg0) {
-                        if (null != closure_6) {
-                          tmp2 = channel;
-                          obj = { channel: null, code: null, message: null, location: null };
-                          tmp3 = channel;
-                          obj.channel = channel;
-                          obj.code = tmp;
-                          tmp4 = closure_7;
-                          obj.message = closure_7;
-                          tmp5 = source;
-                          obj.location = source;
-                          tmp6 = channel(obj);
-                          tmp7 = closure_0;
-                          tmp8 = closure_2;
-                          obj2 = closure_0(closure_2[25]);
-                          guildId = channel.getGuildId();
-                          result = obj2.setHubProgressActionComplete(guildId, closure_0(closure_2[26]).HubProgressStep.INVITE_USER);
-                        }
-                        return;
-                      }
-                    }
-                    class J {
-                      constructor() {
-                        obj = closure_0(closure_2[22]);
-                        return obj.handleCopy(closure_6, channel, source);
-                      }
-                    }
-                    cResult[22] = Q;
-                  } else {
-                    class Q {
-                      constructor() {
-                        obj = closure_0(closure_2[25]);
-                        guildId = channel.getGuildId();
-                        result = obj.setHubProgressActionComplete(guildId, closure_0(closure_2[26]).HubProgressStep.INVITE_USER);
-                        return;
-                      }
-                    }
-                  }
-                  class W {
-                    constructor(arg0) {
-                      if (null != closure_6) {
-                        tmp2 = channel;
-                        obj = { channel: null, code: null, message: null, location: null };
-                        tmp3 = channel;
-                        obj.channel = channel;
-                        obj.code = tmp;
-                        tmp4 = closure_7;
-                        obj.message = closure_7;
-                        tmp5 = source;
-                        obj.location = source;
-                        tmp6 = channel(obj);
-                        tmp7 = closure_0;
-                        tmp8 = closure_2;
-                        obj2 = closure_0(closure_2[25]);
-                        guildId = channel.getGuildId();
-                        result = obj2.setHubProgressActionComplete(guildId, closure_0(closure_2[26]).HubProgressStep.INVITE_USER);
-                      }
-                      return;
-                    }
-                  }
-                  class J {
-                    constructor() {
-                      obj = closure_0(closure_2[22]);
-                      return obj.handleCopy(closure_6, channel, source);
-                    }
-                  }
-                  cResult[23] = channel;
-                  cResult[24] = stateFromStores;
-                  cResult[25] = source;
-                  class M {
-                    constructor() {
-                      if (null != code) {
-                        return code;
-                      } else {
-                        tmp16 = channel;
-                        if (channel.isGuildStageVoice()) {
-                          tmp = closure_10;
-                          tmp2 = Permissions;
-                          if (!closure_10.can(Permissions.CREATE_INSTANT_INVITE, tmp16)) {
-                            tmp3 = closure_7;
-                            stageInstanceByChannel = closure_7.getStageInstanceByChannel(tmp16.id);
-                            invite_code = undefined;
-                            if (stageInstanceByChannel != null) {
-                              invite_code = stageInstanceByChannel.invite_code;
-                            }
-                            if (null != invite_code) {
-                              return stageInstanceByChannel.invite_code;
-                            }
-                          }
-                        }
-                        tmp6 = vanityURLCode;
-                        if (null != vanityURLCode) {
-                          inviteKeyFromExtraData = tmp6;
-                          if (null != guildScheduledEventId) {
-                            tmp14 = closure_0;
-                            tmp15 = closure_2;
-                            obj3 = closure_0(closure_2[19]);
-                            obj1 = { baseCode: null, guildScheduledEventId: null };
-                            obj1.baseCode = tmp6;
-                            obj1.guildScheduledEventId = tmp12;
-                            inviteKeyFromExtraData = obj3.generateInviteKeyFromExtraData(obj1);
-                          }
-                          return inviteKeyFromExtraData;
-                        } else {
-                          tmp7 = closure_8;
-                          code = closure_8.getInvite();
-                          if (null == code) {
-                            return;
-                          } else {
-                            if (null != guildScheduledEventId) {
-                              tmp9 = closure_0;
-                              tmp10 = closure_2;
-                              obj = closure_0(closure_2[19]);
-                              obj5 = { baseCode: null, guildScheduledEventId: null };
-                              code = code.code;
-                              obj5.baseCode = code;
-                              obj5.guildScheduledEventId = tmp8;
-                              code2 = obj.generateInviteKeyFromExtraData(obj5);
-                            } else {
-                              code2 = code.code;
-                            }
-                            tmp11 = code2;
-                          }
-                        }
-                      }
-                      return;
-                    }
-                  }
-                  cResult[26] = J;
-                }
-              }
-            }
-            class W {
-              constructor(arg0) {
-                if (null != closure_6) {
-                  tmp2 = channel;
-                  obj = { channel: null, code: null, message: null, location: null };
-                  tmp3 = channel;
-                  obj.channel = channel;
-                  obj.code = tmp;
-                  tmp4 = closure_7;
-                  obj.message = closure_7;
-                  tmp5 = source;
-                  obj.location = source;
-                  tmp6 = channel(obj);
-                  tmp7 = closure_0;
-                  tmp8 = closure_2;
-                  obj2 = closure_0(closure_2[25]);
-                  guildId = channel.getGuildId();
-                  result = obj2.setHubProgressActionComplete(guildId, closure_0(closure_2[26]).HubProgressStep.INVITE_USER);
-                }
-                return;
-              }
-            }
-            class U {
-              constructor() {
-                return closure_1_8.getError();
-              }
-            }
-            cResult[16] = channel;
-            cResult[17] = stateFromStores;
-            cResult[18] = tmp22;
-            class M {
-              constructor() {
-                if (null != code) {
-                  return code;
-                } else {
-                  tmp16 = channel;
-                  if (channel.isGuildStageVoice()) {
-                    tmp = closure_10;
-                    tmp2 = Permissions;
-                    if (!closure_10.can(Permissions.CREATE_INSTANT_INVITE, tmp16)) {
-                      tmp3 = closure_7;
-                      stageInstanceByChannel = closure_7.getStageInstanceByChannel(tmp16.id);
-                      invite_code = undefined;
-                      if (stageInstanceByChannel != null) {
-                        invite_code = stageInstanceByChannel.invite_code;
-                      }
-                      if (null != invite_code) {
-                        return stageInstanceByChannel.invite_code;
-                      }
-                    }
-                  }
-                  tmp6 = vanityURLCode;
-                  if (null != vanityURLCode) {
-                    inviteKeyFromExtraData = tmp6;
-                    if (null != guildScheduledEventId) {
-                      tmp14 = closure_0;
-                      tmp15 = closure_2;
-                      obj3 = closure_0(closure_2[19]);
-                      obj1 = { baseCode: null, guildScheduledEventId: null };
-                      obj1.baseCode = tmp6;
-                      obj1.guildScheduledEventId = tmp12;
-                      inviteKeyFromExtraData = obj3.generateInviteKeyFromExtraData(obj1);
-                    }
-                    return inviteKeyFromExtraData;
-                  } else {
-                    tmp7 = closure_8;
-                    code = closure_8.getInvite();
-                    if (null == code) {
-                      return;
-                    } else {
-                      if (null != guildScheduledEventId) {
-                        tmp9 = closure_0;
-                        tmp10 = closure_2;
-                        obj = closure_0(closure_2[19]);
-                        obj5 = { baseCode: null, guildScheduledEventId: null };
-                        code = code.code;
-                        obj5.baseCode = code;
-                        obj5.guildScheduledEventId = tmp8;
-                        code2 = obj.generateInviteKeyFromExtraData(obj5);
-                      } else {
-                        code2 = code.code;
-                      }
-                      tmp11 = code2;
-                    }
-                  }
-                }
-                return;
-              }
-            }
-            cResult[20] = W;
-          }
-          const fn = function z(userId) {
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-            showUserProfileActionSheetDefault({ userId, channelId: channel.id, sourceAnalyticsLocations: analyticsLocations });
-          };
-          cResult[13] = analyticsLocations;
-          cResult[14] = channel.id;
-          cResult[15] = fn;
-          const tmpResult2 = tmp(tmp2[20]);
-        }
-      }
-    }
-    class M {
-      constructor() {
-        if (null != code) {
-          return code;
-        } else {
-          tmp16 = channel;
-          if (channel.isGuildStageVoice()) {
-            tmp = closure_10;
-            tmp2 = Permissions;
-            if (!closure_10.can(Permissions.CREATE_INSTANT_INVITE, tmp16)) {
-              tmp3 = closure_7;
-              stageInstanceByChannel = closure_7.getStageInstanceByChannel(tmp16.id);
-              invite_code = undefined;
-              if (stageInstanceByChannel != null) {
-                invite_code = stageInstanceByChannel.invite_code;
-              }
-              if (null != invite_code) {
-                return stageInstanceByChannel.invite_code;
-              }
-            }
-          }
-          tmp6 = vanityURLCode;
-          if (null != vanityURLCode) {
-            inviteKeyFromExtraData = tmp6;
-            if (null != guildScheduledEventId) {
-              tmp14 = closure_0;
-              tmp15 = closure_2;
-              obj3 = closure_0(closure_2[19]);
-              obj1 = { baseCode: null, guildScheduledEventId: null };
-              obj1.baseCode = tmp6;
-              obj1.guildScheduledEventId = tmp12;
-              inviteKeyFromExtraData = obj3.generateInviteKeyFromExtraData(obj1);
-            }
-            return inviteKeyFromExtraData;
-          } else {
-            tmp7 = closure_8;
-            code = closure_8.getInvite();
-            if (null == code) {
-              return;
-            } else {
-              if (null != guildScheduledEventId) {
-                tmp9 = closure_0;
-                tmp10 = closure_2;
-                obj = closure_0(closure_2[19]);
-                obj5 = { baseCode: null, guildScheduledEventId: null };
-                code = code.code;
-                obj5.baseCode = code;
-                obj5.guildScheduledEventId = tmp8;
-                code2 = obj.generateInviteKeyFromExtraData(obj5);
-              } else {
-                code2 = code.code;
-              }
-              tmp11 = code2;
-            }
-          }
-        }
-        return;
-      }
-    }
-    cResult[3] = channel;
-    cResult[4] = code;
-    cResult[5] = guildScheduledEventId;
-    cResult[6] = vanityURLCode;
-    cResult[7] = M;
-    tmp15 = M;
-  }
-  const tmp6 = source(vanityURLCode[16]);
-}) : (function InstantInviteActionSheet(channel) {
+export default function InstantInviteActionSheet(channel) {
   channel = channel.channel;
   const source = channel.source;
   const vanityURLCode = channel.vanityURLCode;
   ({ guildScheduledEventId: _slicedToArray, targetApplicationId, code } = channel);
   let stateFromStores;
   let str;
-  const tmp = closure_16();
-  const analyticsLocations = source(vanityURLCode[16])(source(vanityURLCode[17]).INSTANT_INVITE_MODAL).analyticsLocations;
-  const tmp4 = source(vanityURLCode[16]);
+  const tmp = closure_15();
+  const analyticsLocations = source(vanityURLCode[13])(source(vanityURLCode[14]).INSTANT_INVITE_MODAL).analyticsLocations;
+  const tmp4 = source(vanityURLCode[13]);
   if (null != targetApplicationId) {
     const items = [targetApplicationId];
     let items1 = items;
   } else {
     items1 = [];
   }
-  let name = _slicedToArray(source(vanityURLCode[18])(items1), 1)[0];
-  const tmp5 = source(vanityURLCode[18]);
+  let name = _slicedToArray(source(vanityURLCode[15])(items1), 1)[0];
+  const tmp5 = source(vanityURLCode[15]);
   const items2 = [PermissionStore, CreateInviteModalStore, str];
-  stateFromStores = channel(vanityURLCode[20]).useStateFromStores(items2, () => {
+  stateFromStores = channel(vanityURLCode[16]).useStateFromStores(items2, () => {
     if (null != code) {
       return code;
     } else {
@@ -668,21 +109,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
       }
     }
   });
-  let obj = channel(vanityURLCode[20]);
+  let obj = channel(vanityURLCode[16]);
   const items3 = [CreateInviteModalStore];
-  const stateFromStores1 = channel(vanityURLCode[20]).useStateFromStores(items3, () => error.getError());
+  const stateFromStores1 = channel(vanityURLCode[16]).useStateFromStores(items3, () => error.getError());
   let tmp10 = null;
   if (null != stateFromStores) {
-    tmp10 = tmp2(tmp3[21])(stateFromStores);
+    tmp10 = tmp2(tmp3[18])(stateFromStores);
   }
   str = "";
   if (null != tmp10) {
-    str = tmp7(tmp3[22]).getShareMessage(tmp10);
-    const tmp7Result = tmp7(tmp3[22]);
+    str = tmp7(tmp3[19]).getShareMessage(tmp10);
+    const tmp7Result = tmp7(tmp3[19]);
   }
   let EMBEDDED_APPLICATION = null;
   if (null != targetApplicationId) {
-    EMBEDDED_APPLICATION = InviteTargetTypes.EMBEDDED_APPLICATION;
+    EMBEDDED_APPLICATION = tmp7(tmp3[20]).InviteTargetTypes.EMBEDDED_APPLICATION;
   }
   const items4 = [channel, analyticsLocations];
   const items5 = [channel, stateFromStores, str, source];
@@ -709,30 +150,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   const items9 = [channel];
   const callback4 = code.useCallback(() => instant_invite_InstantInviteUtils.handleOpenShareSheet(stateFromStores, channel, str, source), items8);
   const callback5 = code.useCallback(() => instant_invite_InstantInviteUtils.handlePressSettings(channel), items9);
-  let obj2 = channel(vanityURLCode[20]);
-  ({ rows, isFetchingRows } = source(vanityURLCode[27])(channel, source, EMBEDDED_APPLICATION, targetApplicationId));
-  let tmp20 = null == stateFromStores;
-  if (!tmp20) {
-    tmp20 = 0 === rows.length && isFetchingRows;
-    const tmp21 = 0 === rows.length && isFetchingRows;
+  let obj2 = channel(vanityURLCode[16]);
+  ({ rows, isFetchingRows } = source(vanityURLCode[25])(channel, source, EMBEDDED_APPLICATION, targetApplicationId));
+  let tmp19 = null == stateFromStores;
+  if (!tmp19) {
+    tmp19 = 0 === rows.length && isFetchingRows;
+    const tmp20 = 0 === rows.length && isFetchingRows;
   }
-  let tmp22 = null != stateFromStores;
-  if (tmp22) {
-    tmp22 = 0 === rows.length;
+  let tmp21 = null != stateFromStores;
+  if (tmp21) {
+    tmp21 = 0 === rows.length;
   }
-  if (tmp22) {
-    tmp22 = !isFetchingRows;
+  if (tmp21) {
+    tmp21 = !isFetchingRows;
   }
-  const first = _slicedToArray(code.useState(tmp22), 1)[0];
+  const first = _slicedToArray(code.useState(tmp21), 1)[0];
   let obj3 = { value: analyticsLocations, children: null };
-  let tmp25 = null != stateFromStores1;
-  if (!tmp25) {
-    tmp25 = !tmp20;
+  let tmp24 = null != stateFromStores1;
+  if (!tmp24) {
+    tmp24 = !tmp19;
   }
-  if (!tmp25) {
-    tmp25 = !first;
+  if (!tmp24) {
+    tmp24 = !first;
   }
-  const obj5 = { showGradient: tmp25, scrollable: true, startExpanded: true, header: null, children: null };
+  const obj5 = { showGradient: tmp24, scrollable: true, startExpanded: true, header: null, children: null };
   if (null != targetApplicationId) {
     if (null != name) {
       const intl3 = tmp7(tmp3[28]).intl;
@@ -747,30 +188,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   } else {
     const intl = tmp7(tmp3[28]).intl;
     const obj7 = { title: intl.string(tmp7(tmp3[28]).t["f1+QIK"]) };
-    obj5.header = closure_13(tmp26, obj7);
+    obj5.header = closure_12(tmp25, obj7);
     if (null != stateFromStores1) {
-      const obj8 = { style: tmp.errorEmptyState, Illustration: tmp7(tmp3[31]).AppCrash, title: stateFromStores1 };
-      let tmp29Result = closure_13(tmp7(tmp3[30]).EmptyState, obj8);
-    } else if (tmp20) {
-      tmp29Result = closure_13(closure_17, {});
+      const obj8 = { style: tmp.errorEmptyState, Illustration: tmp7(tmp3[30]).AppCrash, title: stateFromStores1 };
+      let tmp28Result = closure_12(tmp7(tmp3[29]).EmptyState, obj8);
+    } else if (tmp19) {
+      tmp28Result = closure_12(Loading, {});
     } else if (first) {
       const obj9 = { contentContainerStyle: null, children: null };
-      const obj10 = { paddingBottom: source(vanityURLCode[15])().bottom + 16 };
+      const obj10 = { paddingBottom: source(vanityURLCode[12])().bottom + 16 };
       obj9.contentContainerStyle = obj10;
       const obj11 = { link: tmp10, onCopy: callback3, onShare: callback4, onPressSettings: callback5 };
-      obj9.children = closure_13(tmp2(tmp3[32]), obj11);
-      tmp29Result = closure_13(stateFromStores, obj9);
+      obj9.children = closure_12(tmp2(tmp3[31]), obj11);
+      tmp28Result = closure_12(stateFromStores, obj9);
     } else {
       const obj12 = { contentContainerStyle: tmp.shareApps, onItemPressed: callback1 };
-      const items10 = [closure_13(tmp2(tmp3[33]), obj12), ];
+      const items10 = [closure_12(tmp2(tmp3[32]), obj12), ];
       const obj13 = { style: tmp.searchAndShareContainer, children: null };
-      const obj14 = { size: "md", round: true, onChange: tmp7(tmp3[35]).searchInviteSuggestions, placeholder: null };
+      const obj14 = { size: "md", round: true, onChange: tmp7(tmp3[34]).searchInviteSuggestions, placeholder: null };
       if (null != targetApplicationId) {
         const intl5 = tmp7(tmp3[28]).intl;
         let stringResult = intl5.string(tmp7(tmp3[28]).t.iI1gMg);
       } else {
         const intl4 = tmp7(tmp3[28]).intl;
-        guild = GuildStore.getGuild(channel.guild_id);
+        const guild = GuildStore.getGuild(channel.guild_id);
         let name1;
         if (guild != null) {
           name1 = guild.name;
@@ -779,31 +220,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
         stringResult = intl4.formatToPlainString(tmp7(tmp3[28]).t["1UgGdm"], obj15);
       }
       obj14.placeholder = stringResult;
-      const items11 = [closure_13(tmp7(tmp3[34]).SearchBar, obj14), ];
-      let tmp24Result2 = null == vanityURLCode;
-      if (tmp24Result2) {
+      const items11 = [closure_12(tmp7(tmp3[33]).SearchBar, obj14), ];
+      let tmp23Result2 = null == vanityURLCode;
+      if (tmp23Result2) {
         const obj16 = { style: tmp.inviteAgeText, channel, canEditInvite: null == code };
-        tmp24Result2 = closure_13(tmp2(tmp3[36]), obj16);
+        tmp23Result2 = closure_12(tmp2(tmp3[35]), obj16);
       }
       const obj17 = { children: null };
-      items11[1] = tmp24Result2;
+      items11[1] = tmp23Result2;
       obj13.children = items11;
-      items10[1] = closure_15(analyticsLocations, obj13);
+      items10[1] = closure_14(analyticsLocations, obj13);
       obj17.children = items10;
-      const items12 = [closure_15(analyticsLocations, obj17), ];
+      const items12 = [closure_14(analyticsLocations, obj17), ];
       const obj18 = { data: rows, code: stateFromStores, source: null, onPressAvatar: null, onInviteSent: null };
       const obj19 = { children: null };
       obj18.source = source;
       obj18.onPressAvatar = callback;
       obj18.onInviteSent = callback2;
-      items12[1] = closure_13(tmp2(tmp3[37]), obj18);
+      items12[1] = closure_12(tmp2(tmp3[36]), obj18);
       obj19.children = items12;
-      tmp29Result = closure_15(closure_14, obj19);
-      const tmp2Result = tmp2(tmp3[37]);
+      tmp28Result = closure_14(closure_13, obj19);
+      const tmp2Result = tmp2(tmp3[36]);
     }
-    obj5.children = tmp29Result;
-    obj3.children = closure_13(tmp7(tmp3[38]).BottomSheet, obj5);
-    return closure_13(tmp7(tmp3[16]).AnalyticsLocationProvider, obj3);
+    obj5.children = tmp28Result;
+    obj3.children = closure_12(tmp7(tmp3[26]).BottomSheet, obj5);
+    return closure_12(tmp7(tmp3[13]).AnalyticsLocationProvider, obj3);
   }
-  const tmp19 = source(vanityURLCode[27])(channel, source, EMBEDDED_APPLICATION, targetApplicationId);
-});
+  const tmp18 = source(vanityURLCode[25])(channel, source, EMBEDDED_APPLICATION, targetApplicationId);
+};

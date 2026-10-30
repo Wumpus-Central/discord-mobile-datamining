@@ -1,6 +1,6 @@
-// === Module 14256: uploadRtcLogFiles ===
+// === Module 11073: uploadRtcLogFiles ===
 
-// Module 14256 (uploadRtcLogFiles)
+// Module 11073 (uploadRtcLogFiles)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -112,7 +112,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
       }
       if (dependencyMap === undefined) {
         c8 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       } else {
         closure_131_1 = tmp57;
         closure_131_2 = "";
@@ -126,7 +126,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
     }
   }
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ DebugLogCategory: c3, Endpoints: closure_4 } = Constants);
 let closure_5 = new LoggerDefault("uploadRtcLogFiles");
 const size = fn(2);

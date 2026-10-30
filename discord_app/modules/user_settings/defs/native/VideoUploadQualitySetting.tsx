@@ -1,61 +1,25 @@
-// === Module 17330: VideoUploadQualitySetting ===
+// === Module 17384: VideoUploadQualitySetting ===
 
-// Module 17330 (VideoUploadQualitySetting)
+// Module 17384 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import UserSettingsText from "UserSettingsText" /* 17329 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import UserSettingsText from "UserSettingsText" /* 17383 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 
 require = fn;
-const VideoQualitySettings = fn(1206).VideoQualitySettings;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoUploadQualitySettingValue() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UnsyncedUserSettingsStore];
-    const fn = function o() {
-      return videoUploadQuality.videoUploadQuality;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useVideoUploadQualitySettingValue() {
-  const items = [UnsyncedUserSettingsStore];
-  return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
-});
+const VideoQualitySettings = fn(1195).VideoQualitySettings;
+const SettingBuilders = fn(11505);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(8387).MobileUserSettings.CHAT,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoUploadQualitySettingValue() {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [UnsyncedUserSettingsStore];
-      const fn = function o() {
-        return videoUploadQuality.videoUploadQuality;
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (function useVideoUploadQualitySettingValue() {
+  parent: fn(8424).MobileUserSettings.CHAT,
+  useValue: function useVideoUploadQualitySettingValue() {
     const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
-  }),
+  },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
     const obj3 = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;

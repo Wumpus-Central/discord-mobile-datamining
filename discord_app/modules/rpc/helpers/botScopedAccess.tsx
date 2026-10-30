@@ -1,18 +1,18 @@
-// === Module 9303: botScopedAccess ===
+// === Module 9316: botScopedAccess ===
 
-// Module 9303 (botScopedAccess)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8867 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9294 */;
-import RPCErrorDefault from "RPCError" /* 9300 */;
-import validateScopeDefault from "validateScope" /* 9302 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9304 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+// Module 9316 (botScopedAccess)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8901 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9307 */;
+import RPCErrorDefault from "RPCError" /* 9313 */;
+import validateScopeDefault from "validateScope" /* 9315 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9317 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: metroRequire, Permissions: closure_7, RPCErrors: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/botScopedAccess.tsx");

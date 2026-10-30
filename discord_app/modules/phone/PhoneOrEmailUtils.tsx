@@ -1,6 +1,6 @@
-// === Module 7116: PhoneOrEmailUtils ===
+// === Module 7124: PhoneOrEmailUtils ===
 
-// Module 7116 (PhoneOrEmailUtils)
+// Module 7124 (PhoneOrEmailUtils)
 import size from "module_2" /* 2 */;
 
 const PhoneOrEmailSelectorForceMode = { PHONE: "phone", EMAIL: "email" };
@@ -8,15 +8,15 @@ const re1 = /^[-() \d]+$/;
 const result = size.fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
 
 export { PhoneOrEmailSelectorForceMode };
-export function shouldShowCountryCodeSelector(forceMode, cResult) {
+export function shouldShowCountryCodeSelector(forceMode, value) {
   if (forceMode === obj.PHONE) {
-    let tmp2 = !cResult.startsWith("+");
+    let tmp2 = !value.startsWith("+");
   } else {
     tmp2 = forceMode !== tmp.EMAIL;
     if (tmp2) {
-      let isMatch = cResult.length >= 3;
+      let isMatch = value.length >= 3;
       if (isMatch) {
-        isMatch = re1.test(cResult);
+        isMatch = re1.test(value);
       }
       tmp2 = isMatch;
     }

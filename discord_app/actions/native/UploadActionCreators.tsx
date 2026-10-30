@@ -1,11 +1,11 @@
-// === Module 11435: UploadActionCreators ===
+// === Module 11636: UploadActionCreators ===
 
-// Module 11435 (UploadActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DraftStore from "DraftStore" /* 7689 */;
-import UploadStore from "UploadStore" /* 8327 */;
+// Module 11636 (UploadActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DraftStore from "DraftStore" /* 7694 */;
+import UploadStore from "UploadStore" /* 8384 */;
 
-const DraftType = fn(7689).DraftType;
+const DraftType = fn(7694).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/native/UploadActionCreators.tsx");
 

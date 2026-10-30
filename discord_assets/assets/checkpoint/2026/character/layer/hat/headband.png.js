@@ -1,6 +1,6 @@
-// === Module 6345: ? ===
+// === Module 6352: ? ===
 
-// Module 6345
+// Module 6352
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/hat/headband.png.js");

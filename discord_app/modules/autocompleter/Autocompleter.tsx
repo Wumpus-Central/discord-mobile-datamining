@@ -1,20 +1,20 @@
-// === Module 9104: Autocompleter ===
+// === Module 9117: Autocompleter ===
 
-// Module 9104 (Autocompleter)
+// Module 9117 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import _modDef1949 from "module_1949" /* 1949 */;
-import StringUtils from "StringUtils" /* 2031 */;
-import findCodedLinks from "findCodedLinks" /* 5737 */;
-import CodedLink from "CodedLink" /* 5741 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6766 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6887 */;
-import GuildUtilsDefault from "GuildUtils" /* 6888 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9106 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 7430 */;
-import LinkRecord from "LinkRecord" /* 9105 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import _modDef1944 from "module_1944" /* 1944 */;
+import StringUtils from "StringUtils" /* 2028 */;
+import findCodedLinks from "findCodedLinks" /* 5743 */;
+import CodedLink from "CodedLink" /* 5747 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6773 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6894 */;
+import GuildUtilsDefault from "GuildUtils" /* 6895 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9119 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7438 */;
+import LinkRecord from "LinkRecord" /* 9118 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
 
@@ -27,9 +27,9 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
-fn(6884).AutocompleterResultTypes;
-const React6 = Object.freeze({});
+const GUILD_VOCAL_CHANNELS_KEY = fn(4939).GUILD_VOCAL_CHANNELS_KEY;
+fn(6891).AutocompleterResultTypes;
+const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
 class Autocompleter {
@@ -160,11 +160,11 @@ prototype["setLimit"] = function setLimit(_limit) {
 prototype["setRefetchForSingleCategoryLimit"] = function setRefetchForSingleCategoryLimit(_refetchForSingleCategoryLimit) {
   this._refetchForSingleCategoryLimit = _refetchForSingleCategoryLimit;
 };
-prototype["setResultTypes"] = function setResultTypes(resultTypes) {
+prototype["setResultTypes"] = function setResultTypes(items) {
   let set = null;
-  if (null != resultTypes) {
+  if (null != items) {
     const _Set = Set;
-    set = new Set(resultTypes);
+    set = new Set(items);
   }
   const self = this;
   this.resultTypes = set;
@@ -545,7 +545,7 @@ prototype["queryLink"] = function queryLink(query) {
       const items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef1949.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef1944.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

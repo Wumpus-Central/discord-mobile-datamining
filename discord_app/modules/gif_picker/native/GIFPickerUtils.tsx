@@ -1,17 +1,15 @@
-// === Module 10202: gif_picker/GIFPickerUtils ===
+// === Module 10227: gif_picker/GIFPickerUtils ===
 
-// Module 10202 (gif_picker/GIFPickerUtils)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9784 */;
-import FavoriteGIFHooks from "FavoriteGIFHooks" /* 10203 */;
+// Module 10227 (gif_picker/GIFPickerUtils)
+import util from "util" /* 1114 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9810 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function transformFavoriteGifUrl(src, arg1) {
-  let combined = src;
-  const str = URLUtilsDefault.toURLSafe(src);
+function transformFavoriteGifUrl(assetURL, arg1) {
+  let combined = assetURL;
+  const str = URLUtilsDefault.toURLSafe(assetURL);
   if (null != str) {
     if (obj6.isExternalProxiedAttachmentUrl(str)) {
       const formatted = str.pathname.toLowerCase();
@@ -53,51 +51,18 @@ function transformFavoriteGifUrl(src, arg1) {
     return combined;
   }
 }
-fn(1084).GIFPickerResultTypes;
+fn(1072).GIFPickerResultTypes;
 const re6 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
 const re7 = /(tenor\.com)/;
 const re8 = /-(?:.(?!-))+$/;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtils.tsx");
 
 export const GIF_HEADER_HEIGHT = 56;
-export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoriteGIFsMobile() {
-  const cResult = c.c(6);
-  const sortedFavoriteGIFs = FavoriteGIFHooks.useSortedFavoriteGIFs(transformFavoriteGifUrl);
-  if (cResult[0] === sortedFavoriteGIFs[0]) {
-    if (cResult[1] === sortedFavoriteGIFs.length) {
-      let tmp4 = cResult[2];
-    }
-    if (cResult[3] === sortedFavoriteGIFs) {
-      if (cResult[4] === tmp4) {
-        let tmp7 = cResult[5];
-      }
-      return tmp7;
-    }
-    const obj3 = { favorites: sortedFavoriteGIFs, favoritesCategory: tmp4 };
-    cResult[3] = sortedFavoriteGIFs;
-    cResult[4] = tmp4;
-    cResult[5] = obj3;
-    tmp7 = obj3;
-  }
-  let tmp5;
-  if (sortedFavoriteGIFs.length > 0) {
-    const obj4 = { type: GIFPickerResultTypes.FAVORITES, name: null, src: null, format: null };
-    const intl = util.intl;
-    obj4.name = intl.string(util.t.k8fFjp);
-    obj4.src = sortedFavoriteGIFs[0].src;
-    obj4.format = sortedFavoriteGIFs[0].format;
-    tmp5 = obj4;
-  }
-  cResult[0] = sortedFavoriteGIFs[0];
-  cResult[1] = sortedFavoriteGIFs.length;
-  cResult[2] = tmp5;
-  tmp4 = tmp5;
-}) : (function useFavoriteGIFsMobile() {
-  sortedFavoriteGIFs = sortedFavoriteGIFs(10203).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+export function useFavoriteGIFsMobile() {
+  sortedFavoriteGIFs = sortedFavoriteGIFs(10228).useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
-  let obj = sortedFavoriteGIFs(10203);
+  let obj = sortedFavoriteGIFs(10228);
   return {
     favorites: sortedFavoriteGIFs,
     favoritesCategory: noop.useMemo(() => {
@@ -113,7 +78,7 @@ export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled(
       return tmp2;
     }, items)
   };
-});
+}
 export const GIF_PICKER_ITEM_ESIMTATED_HEIGHT = 180;
 export const GIF_PICKER_GUTTER_SPACING = 8;
 export const DEFAULT_CATEGORY_ROWS = 20;

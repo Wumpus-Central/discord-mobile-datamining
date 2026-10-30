@@ -1,9 +1,9 @@
-// === Module 16950: YouBarConstants ===
+// === Module 17004: YouBarConstants ===
 
-// Module 16950 (YouBarConstants)
+// Module 17004 (YouBarConstants)
 import _mod17 from "module_17" /* 17 */;
-import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1199 */;
+import nativeDefault from "native" /* 575 */;
+import native from "native" /* 1188 */;
 import size from "module_2" /* 2 */;
 
 const PixelRatio = _mod17.PixelRatio;

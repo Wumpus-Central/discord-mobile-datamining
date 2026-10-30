@@ -1,10 +1,10 @@
-// === Module 4834: UserSettingsOverridesStore ===
+// === Module 4835: UserSettingsOverridesStore ===
 
-// Module 4834 (UserSettingsOverridesStore)
+// Module 4835 (UserSettingsOverridesStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
 
 require = fn;
 function updateExistingSettings() {
@@ -18,7 +18,7 @@ function updateExistingSettings() {
   }
   obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
   const textAndImages2 = settings.textAndImages;
-  value3 = undefined;
+  let value3;
   if (textAndImages2 != null) {
     if (textAndImages2.animateEmoji != null) {
       value3 = iter2.value;
@@ -26,7 +26,7 @@ function updateExistingSettings() {
   }
   obj.animateEmoji = value3;
   const textAndImages3 = settings.textAndImages;
-  value4 = undefined;
+  let value4;
   if (textAndImages3 != null) {
     if (textAndImages3.animateStickers != null) {
       value4 = iter3.value;
@@ -90,7 +90,7 @@ obj = {
     }
     obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
     const textAndImages2 = settings.textAndImages;
-    value3 = undefined;
+    let value3;
     if (textAndImages2 != null) {
       if (textAndImages2.animateEmoji != null) {
         value3 = iter2.value;
@@ -98,7 +98,7 @@ obj = {
     }
     obj.animateEmoji = value3;
     const textAndImages3 = settings.textAndImages;
-    value4 = undefined;
+    let value4;
     if (textAndImages3 != null) {
       if (textAndImages3.animateStickers != null) {
         value4 = iter3.value;

@@ -1,10 +1,10 @@
-// === Module 11750: transferToPlayStation ===
+// === Module 11943: transferToPlayStation ===
 
-// Module 11750 (transferToPlayStation)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11751 */;
-import ConsoleCommands from "ConsoleCommands" /* 11755 */;
+// Module 11943 (transferToPlayStation)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11944 */;
+import ConsoleCommands from "ConsoleCommands" /* 11948 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       } else {
         closure_132_1(closure_132_2[4])(closure_131_2.id, closure_131_0);
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp29) {
       c6 = tmp;
@@ -134,7 +134,7 @@ let closure_6 = async function _sendConnectVoiceCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -206,7 +206,7 @@ let closure_6 = async function _sendConnectVoiceCommand() {
     }
   })();
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/transferToPlayStation.tsx");
 

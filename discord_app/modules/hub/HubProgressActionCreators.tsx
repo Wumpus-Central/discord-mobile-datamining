@@ -1,28 +1,28 @@
-// === Module 9098: HubProgressActionCreators ===
+// === Module 9111: HubProgressActionCreators ===
 
-// Module 9098 (HubProgressActionCreators)
-import FlagUtils from "FlagUtils" /* 1402 */;
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 9111 (HubProgressActionCreators)
+import FlagUtils from "FlagUtils" /* 1397 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9099).HUB_PROGRESS_STEP_ORDER;
-const GuildFeatures = fn(1084).GuildFeatures;
+const HUB_PROGRESS_STEP_ORDER = fn(9112).HUB_PROGRESS_STEP_ORDER;
+const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
 
-export function setHubProgressActionComplete(guildId, INVITE_USER) {
+export function setHubProgressActionComplete(guildId, JOIN_GUILD) {
   if (null != guildId) {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
       hasItem = features.has(GuildFeatures.HUB);
     }
     if (hasItem) {
-      const items = [INVITE_USER];
-      const result = items(4838).updateUserGuildSettings(guildId, (hubProgress) => {
+      const items = [JOIN_GUILD];
+      const result = items(4839).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {
           let obj = FlagUtils;
@@ -34,8 +34,8 @@ export function setHubProgressActionComplete(guildId, INVITE_USER) {
           continue;
         }
         return flag;
-      }, items(4838).UserSettingsDelay.INFREQUENT_USER_ACTION);
-      const obj = items(4838);
+      }, items(4839).UserSettingsDelay.INFREQUENT_USER_ACTION);
+      const obj = items(4839);
     }
   }
 }

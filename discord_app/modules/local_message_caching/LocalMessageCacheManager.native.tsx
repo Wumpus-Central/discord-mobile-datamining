@@ -1,22 +1,22 @@
-// === Module 16317: LocalMessageCacheManager ===
+// === Module 16358: LocalMessageCacheManager ===
 
-// Module 16317 (LocalMessageCacheManager)
+// Module 16358 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import _modDef2047 from "module_2047" /* 2047 */;
-import DateUtils from "DateUtils" /* 4830 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7624 */;
-import createMessageDefault from "createMessage" /* 10274 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 11435 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import _modDef2044 from "module_2044" /* 2044 */;
+import DateUtils from "DateUtils" /* 4831 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7629 */;
+import createMessageDefault from "createMessage" /* 10299 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 11636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4948 */;
+import MessageRecord from "MessageRecord" /* 4952 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import MessageStore from "MessageStore" /* 6049 */;
-import LifecycleManager from "LifecycleManager" /* 2002 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import MessageStore from "MessageStore" /* 6056 */;
+import LifecycleManager from "LifecycleManager" /* 1997 */;
 
 require = fn;
 function _getKeyForFileId(id) {
@@ -42,11 +42,11 @@ function removeCachedMessage(arg0) {
 function getAllCachedMessages() {
   return closure_10(_getMessages);
 }
-function messageTimestampIsInInterval(arg0, c7) {
+function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
-    const tmp4 = _modDef2047();
-    const tmp5 = _modDef2047(arg0);
-    return DateUtils.isWithinInterval(tmp4, tmp5, c7);
+    const tmp4 = _modDef2044();
+    const tmp5 = _modDef2044(arg0);
+    return DateUtils.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
   }
@@ -113,7 +113,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -242,8 +242,8 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const MessageStates = fn(1084).MessageStates;
-const MutexUtils = fn(16318);
+const MessageStates = fn(1072).MessageStates;
+const MutexUtils = fn(16359);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -320,7 +320,7 @@ class LocalMessageCacheManager extends tmp3 {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -367,7 +367,7 @@ class LocalMessageCacheManager extends tmp3 {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -387,7 +387,7 @@ class LocalMessageCacheManager extends tmp3 {
                             }, 0);
                           }
                           c1 = 3;
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } catch (tmp9) {
                         c1 = tmp;
@@ -400,7 +400,7 @@ class LocalMessageCacheManager extends tmp3 {
                   applyArgumentsResult = values[Symbol.iterator]();
                   if (applyArgumentsResult === undefined) {
                     c10 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "HermesInternal", done: null };
                   } else {
                     c7 = 1;
                     closure_134_2 = tmp34;
@@ -642,7 +642,7 @@ class LocalMessageCacheManager extends tmp3 {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -683,7 +683,7 @@ class LocalMessageCacheManager extends tmp3 {
               return obj;
             }
             c1 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           } catch (tmp9) {
             c1 = tmp;
             throw tmp9;
@@ -908,7 +908,7 @@ prototype["_initialize"] = function _initialize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       while (true) {
@@ -954,17 +954,17 @@ prototype["_initialize"] = function _initialize() {
               let values = Object.values(closure_131_0);
               _self = values[Symbol.iterator]();
               if (_self === undefined) {
-                let obj3 = values(584);
+                let obj3 = values(572);
                 let subscription = obj3.subscribe("LOAD_MESSAGES_SUCCESS", closure_132_0.handleLoadMessagesSuccess);
-                let obj4 = values(584);
+                let obj4 = values(572);
                 let subscription1 = obj4.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
                 c8 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "HermesInternal", done: null };
               } else {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6550);
+                let obj9 = values(6557);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

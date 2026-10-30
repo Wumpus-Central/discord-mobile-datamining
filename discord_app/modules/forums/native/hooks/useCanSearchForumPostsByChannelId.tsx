@@ -1,46 +1,18 @@
-// === Module 11085: useCanSearchForumPostsByChannelId ===
+// === Module 11311: useCanSearchForumPostsByChannelId ===
 
-// Module 11085 (useCanSearchForumPostsByChannelId)
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+// Module 11311 (useCanSearchForumPostsByChannelId)
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1084).Permissions;
-const ReactCompilerGating = fn(558);
+const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx");
 
-export const useCanSearchForumPostsByChannelId = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSearchForumPostsByChannelId(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(3);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelStore, PermissionStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function l() {
-      const channel = ChannelStore.getChannel(closure_0);
-      let canResult = null != channel;
-      if (canResult) {
-        canResult = PermissionStore.can(Permissions.READ_MESSAGE_HISTORY, channel);
-      }
-      return canResult;
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp7 = fn;
-  } else {
-    tmp7 = cResult[2];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp7);
-}) : (function useCanSearchForumPostsByChannelId(arg0) {
-  _require = arg0;
+export function useCanSearchForumPostsByChannelId(channelId) {
+  _require = channelId;
   const items = [ChannelStore, PermissionStore];
   return require("initialize").useStateFromStores(items, () => {
     const channel = ChannelStore.getChannel(closure_0);
@@ -50,4 +22,4 @@ export const useCanSearchForumPostsByChannelId = ReactCompilerGating.isReactComp
     }
     return canResult;
   });
-});
+}

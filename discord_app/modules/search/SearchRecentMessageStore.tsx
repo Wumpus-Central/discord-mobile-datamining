@@ -1,8 +1,8 @@
-// === Module 13698: SearchRecentMessageStore ===
+// === Module 13845: SearchRecentMessageStore ===
 
-// Module 13698 (SearchRecentMessageStore)
+// Module 13845 (SearchRecentMessageStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const require = fn;
 function handleReset() {

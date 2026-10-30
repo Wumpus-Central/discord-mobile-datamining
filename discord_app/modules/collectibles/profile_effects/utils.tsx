@@ -1,13 +1,11 @@
-// === Module 9457: utils ===
+// === Module 9476: utils ===
 
-// Module 9457 (utils)
+// Module 9476 (utils)
 import _mod12 from "module_12" /* 12 */;
-import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/utils.tsx");
 
@@ -24,108 +22,7 @@ export function sortEffectLayers(effects) {
     return num - num2;
   });
 }
-export const usePotentiallyRandomizedProfileEffect = ReactCompilerGating.isReactCompilerEnabled() ? (function usePotentiallyRandomizedProfileEffect(arg0) {
-  const cResult = c.c(2);
-  [tmp6, tmp7] = noop.useState(arg0);
-  if (cResult[0] !== arg0) {
-    let tmp10 = arg0;
-    if (null != arg0) {
-      const cloneDeepResult = _mod12.cloneDeep(arg0);
-      const effects = cloneDeepResult.effects;
-      const _Math = Math;
-      const _Math2 = Math;
-      const diff = effects.reduce((acc, randomizedSources) => {
-        randomizedSources = randomizedSources.randomizedSources;
-        let num;
-        if (randomizedSources != null) {
-          num = randomizedSources.length;
-        }
-        if (num == null) {
-          num = 0;
-        }
-        let tmp = acc;
-        if (num > 0) {
-          let bound = num;
-          if (0 !== acc) {
-            const _Math = Math;
-            bound = Math.min(acc, num);
-          }
-          tmp = bound;
-        }
-        return tmp;
-      }, 0) - 1;
-      closure_0 = Math.floor(Math.random() * (diff + 1));
-      const effects1 = cloneDeepResult.effects;
-      cloneDeepResult.effects = effects1.map((randomizedSources) => {
-        let tmp = null != randomizedSources.randomizedSources;
-        if (tmp) {
-          tmp = randomizedSources.randomizedSources.length > 0;
-        }
-        if (tmp) {
-          randomizedSources.src = randomizedSources.randomizedSources[closure_0].src;
-        }
-        return randomizedSources;
-      });
-      tmp10 = cloneDeepResult;
-      const tmpResult = _mod12;
-    }
-    cResult[0] = arg0;
-    cResult[1] = tmp10;
-    let tmp8 = tmp10;
-  } else {
-    tmp8 = cResult[1];
-  }
-  const tmp5 = _slicedToArray(noop.useState(arg0), 2);
-  [tmp12, tmp13] = noop.useState(tmp8);
-  const tmp4Result = _slicedToArray(noop.useState(tmp8), 2);
-  if (!tmpResult3.isEqual(tmp6, arg0)) {
-    tmp7(arg0);
-    closure_0 = undefined;
-    let tmp16 = arg0;
-    if (null != arg0) {
-      const cloneDeepResult1 = _mod12.cloneDeep(arg0);
-      const effects2 = cloneDeepResult1.effects;
-      const _Math3 = Math;
-      const _Math4 = Math;
-      const diff1 = effects2.reduce((acc, randomizedSources) => {
-        randomizedSources = randomizedSources.randomizedSources;
-        let num;
-        if (randomizedSources != null) {
-          num = randomizedSources.length;
-        }
-        if (num == null) {
-          num = 0;
-        }
-        let tmp = acc;
-        if (num > 0) {
-          let bound = num;
-          if (0 !== acc) {
-            const _Math = Math;
-            bound = Math.min(acc, num);
-          }
-          tmp = bound;
-        }
-        return tmp;
-      }, 0) - 1;
-      closure_0 = Math.floor(Math.random() * (diff1 + 1));
-      const effects3 = cloneDeepResult1.effects;
-      cloneDeepResult1.effects = effects3.map((randomizedSources) => {
-        let tmp = null != randomizedSources.randomizedSources;
-        if (tmp) {
-          tmp = randomizedSources.randomizedSources.length > 0;
-        }
-        if (tmp) {
-          randomizedSources.src = randomizedSources.randomizedSources[closure_0].src;
-        }
-        return randomizedSources;
-      });
-      tmp16 = cloneDeepResult1;
-      const tmpResult4 = _mod12;
-    }
-    tmp13(tmp16);
-  }
-  return tmp12;
-}) : (function usePotentiallyRandomizedProfileEffect(arg0) {
+export function usePotentiallyRandomizedProfileEffect(arg0) {
   closure_0 = undefined;
   let tmp6 = arg0;
   [tmp4, tmp5] = noop.useState(arg0);
@@ -218,4 +115,4 @@ export const usePotentiallyRandomizedProfileEffect = ReactCompilerGating.isReact
     tmp9(tmp13);
   }
   return tmp8;
-});
+}

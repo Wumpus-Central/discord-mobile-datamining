@@ -1,8 +1,8 @@
-// === Module 4850: LoginRequiredActionStore ===
+// === Module 4851: LoginRequiredActionStore ===
 
-// Module 4850 (LoginRequiredActionStore)
+// Module 4851 (LoginRequiredActionStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 function handleUpdateUser(user) {
   id = user.user.id;

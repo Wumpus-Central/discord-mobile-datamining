@@ -1,12 +1,12 @@
-// === Module 13247: CheckpointActionCreators ===
+// === Module 13397: CheckpointActionCreators ===
 
-// Module 13247 (CheckpointActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7471 */;
+// Module 13397 (CheckpointActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import CheckpointStore from "CheckpointStore" /* 13236 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import CheckpointStore from "CheckpointStore" /* 13386 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -20,7 +20,7 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_9 = async function _completeCheckpoint() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -180,7 +180,7 @@ let closure_10 = async function _resetCheckpoint() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -262,7 +262,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -307,10 +307,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             value: Promise.allSettled(closure_133_2.map((item) => {
                       channel = channel.getChannel(item);
                       if (null != channel) {
-                        const obj = checkpointCardType(7624);
+                        const obj = checkpointCardType(7629);
                         const id = channel.id;
                         const obj3 = { location: "checkpoint", checkpointCardType };
-                        return obj.sendMessage(id, checkpointCardType(7812).parse(channel, closure_1_0), false, obj3);
+                        return obj.sendMessage(id, checkpointCardType(7817).parse(channel, closure_1_0), false, obj3);
                       }
                     })),
             done: false
@@ -340,7 +340,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             }
           }
           c10 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         c8 = 0;
@@ -350,7 +350,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

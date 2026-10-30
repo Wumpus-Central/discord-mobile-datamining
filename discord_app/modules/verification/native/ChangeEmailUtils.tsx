@@ -1,8 +1,8 @@
-// === Module 7137: verification/ChangeEmailUtils ===
+// === Module 7145: verification/ChangeEmailUtils ===
 
-// Module 7137 (verification/ChangeEmailUtils)
-import ConstantsIOS from "ConstantsIOS" /* 1104 */;
-import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 7138 */;
+// Module 7145 (verification/ChangeEmailUtils)
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 7146 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_6 = async function _saveEmail(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -104,7 +104,7 @@ let closure_6 = async function _saveEmail(arg0) {
     }
   }
 };
-const ChangeEmailStore = fn(6983);
+const ChangeEmailStore = fn(6991);
 ({ setChangeEmailError: closure_4, ChangeEmailFields: hasOwnProperty } = ChangeEmailStore);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");

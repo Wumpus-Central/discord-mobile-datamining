@@ -1,7 +1,7 @@
-// === Module 7823: activityBookmarkUtils ===
+// === Module 7828: activityBookmarkUtils ===
 
-// Module 7823 (activityBookmarkUtils)
-import URLUtilsDefault from "URLUtils" /* 1383 */;
+// Module 7828 (activityBookmarkUtils)
+import URLUtilsDefault from "URLUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
@@ -22,7 +22,7 @@ export function extractActivityBookmarkParams(url) {
     value = searchParams.get("referrer_id");
   }
   const obj2 = { referrerId: value, customId: null, linkId: null, channelId: null };
-  value4 = undefined;
+  let value4;
   if (toURLSafeResult != null) {
     const searchParams2 = toURLSafeResult.searchParams;
     value4 = searchParams2.get("custom_id");

@@ -1,104 +1,18 @@
-// === Module 18542: MembersPruneActionSheet ===
+// === Module 18601: MembersPruneActionSheet ===
 
-// Module 18542 (MembersPruneActionSheet)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7425 */;
-import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 18544 */;
+// Module 18601 (MembersPruneActionSheet)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7433 */;
+import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 18603 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import UserStore from "UserStore" /* 1389 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
-const PrunePreviewStore = fn(18543);
-({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function MembersPruneActionSheetContent(guild) {
-  const cResult = guild(first[8]).c(37);
-  guild = guild.guild;
-  const id = guild.id;
-  [first, _slicedToArray] = count.useState(7);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [];
-    cResult[0] = items;
-    let first1 = items;
-  } else {
-    first1 = cResult[0];
-  }
-  let obj = guild(first[8]);
-  let obj2 = count;
-  count = closure_5(guild.id, first, first1).count;
-  if (cResult[1] !== guild.id) {
-    class T {
-      constructor() {
-        handlePruneUpdate = function handlePruneUpdate() { ... };
-        obj = id(closure_2[9]);
-        subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return /* F157326 */ function() { ... };
-      }
-    }
-    cResult[1] = guild.id;
-    cResult[2] = T;
-  } else {
-    class T {
-      constructor() {
-        handlePruneUpdate = function handlePruneUpdate() { ... };
-        obj = id(closure_2[9]);
-        subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return /* F157326 */ function() { ... };
-      }
-    }
-  }
-  if (cResult[3] === first) {
-    class T {
-      constructor() {
-        handlePruneUpdate = function handlePruneUpdate() { ... };
-        obj = id(closure_2[9]);
-        subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-        return /* F157326 */ function() { ... };
-      }
-    }
-    const effect = obj2.useEffect(T, items2);
-    if (cResult[6] === first) {
-      class T {
-        constructor() {
-          handlePruneUpdate = function handlePruneUpdate() { ... };
-          obj = id(closure_2[9]);
-          subscription = obj.subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
-          return /* F157326 */ function() { ... };
-        }
-      }
-    }
-    class R {
-      constructor() {
-        if (null == count) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[10]);
-          tmp3 = guild;
-          tmp4 = closure_2;
-          updateEstimateV2Result = obj.updateEstimateV2(guild.id, closure_2);
-        }
-        return;
-      }
-    }
-    const items1 = [guild.id, first, count];
-    cResult[6] = first;
-    cResult[7] = count;
-    cResult[8] = guild.id;
-    cResult[9] = R;
-    cResult[10] = items1;
-  }
-  items2 = [guild.id, first];
-  cResult[3] = first;
-  cResult[4] = guild.id;
-  cResult[5] = items2;
-  const tmp5 = closure_5(guild.id, first, first1);
-}) : (function MembersPruneActionSheetContent(guild) {
+function MembersPruneActionSheetContent(guild) {
   guild = guild.guild;
   days = undefined;
   _slicedToArray = undefined;
@@ -117,7 +31,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         }
       }
     }
-    const subscription = id(first[9]).subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
+    const subscription = id(first[7]).subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
     return () => {
       DispatcherDefault.unsubscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
     };
@@ -130,12 +44,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   }, items1);
   let obj = { header: null, children: null };
   let obj2 = { title: null };
-  const intl = guild(days[13]).intl;
-  obj2.title = intl.string(guild(days[13]).t.zbyz7p);
-  obj.header = closure_11(guild(days[12]).BottomSheetTitleHeader, obj2);
+  const intl = guild(days[11]).intl;
+  obj2.title = intl.string(guild(days[11]).t.zbyz7p);
+  obj.header = closure_11(guild(days[10]).BottomSheetTitleHeader, obj2);
   const obj3 = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
-  const intl2 = guild(days[13]).intl;
-  obj3.title = intl2.string(guild(days[13]).t.YccTvK);
+  const intl2 = guild(days[11]).intl;
+  obj3.title = intl2.string(guild(days[11]).t.YccTvK);
   obj3.defaultValue = days;
   obj3.onChange = function handleDaysChange(arg0) {
     let tmp = first !== arg0;
@@ -147,21 +61,21 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
     }
   };
   const obj4 = { value: 7, label: null };
-  const intl3 = guild(days[13]).intl;
-  obj4.label = intl3.formatToPlainString(guild(days[13]).t.FM1dHS, { days: 7 });
-  const items2 = [closure_11(guild(days[14]).TableRadioRow, obj4), ];
+  const intl3 = guild(days[11]).intl;
+  obj4.label = intl3.formatToPlainString(guild(days[11]).t.FM1dHS, { days: 7 });
+  const items2 = [closure_11(guild(days[13]).TableRadioRow, obj4), ];
   const obj5 = { value: 30, label: null };
-  const intl4 = guild(days[13]).intl;
-  obj5.label = intl4.formatToPlainString(guild(days[13]).t.FM1dHS, { days: 30 });
-  items2[1] = closure_11(guild(days[14]).TableRadioRow, obj5);
+  const intl4 = guild(days[11]).intl;
+  obj5.label = intl4.formatToPlainString(guild(days[11]).t.FM1dHS, { days: 30 });
+  items2[1] = closure_11(guild(days[13]).TableRadioRow, obj5);
   obj3.children = items2;
-  const items3 = [closure_12(guild(days[15]).TableRadioGroup, obj3), , ];
-  const intl5 = guild(days[13]).intl;
-  const t = guild(days[13]).t;
+  const items3 = [closure_12(guild(days[12]).TableRadioGroup, obj3), , ];
+  const intl5 = guild(days[11]).intl;
+  const t = guild(days[11]).t;
   if (num == null) {
     num = -1;
   }
-  items3[1] = closure_11(guild(days[16]).Text, { variant: "text-sm/medium", children: intl5.format(tmp3.isLoading ? t["98cHOp"] : t.f13az9, { members: num, days }) });
+  items3[1] = closure_11(guild(days[14]).Text, { variant: "text-sm/medium", children: intl5.format(tmp3.isLoading ? t["98cHOp"] : t.f13az9, { members: num, days }) });
   const obj7 = {
     variant: "destructive",
     onPress: function handlePrune() {
@@ -177,102 +91,20 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
     },
     text: null
   };
-  const intl6 = tmp7(tmp8[13]).intl;
-  obj7.text = intl6.string(guild(days[13]).t["2mIlKQ"]);
-  items3[2] = closure_11(guild(days[17]).Button, obj7);
+  const intl6 = tmp7(tmp8[11]).intl;
+  obj7.text = intl6.string(guild(days[11]).t["2mIlKQ"]);
+  items3[2] = closure_11(guild(days[15]).Button, obj7);
   obj.children = items3;
-  return closure_12(guild(days[18]).ActionSheet, obj);
-});
-ReactCompilerGating = fn(558);
+  return closure_12(guild(days[9]).ActionSheet, obj);
+}
+const PrunePreviewStore = fn(18602);
+({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/MembersPruneActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function MembersPruneActionSheet(guild) {
-  const cResult = guild(576).c(9);
-  guild = guild.guild;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, PermissionStore, UserStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== guild) {
-    const fn = function u() {
-      guild = GuildStore.getGuild(guild.id);
-      return MemberSafetyPermissionsUtils.canPruneGuildMembers(guild, UserStore.getCurrentUser(), PermissionStore);
-    };
-    const items1 = [guild];
-    cResult[1] = guild;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
-  } else {
-    tmp8 = cResult[2];
-    tmp9 = cResult[3];
-  }
-  let obj = guild(576);
-  const stateFromStores = guild(504).useStateFromStores(first, tmp8, tmp9);
-  if (cResult[4] !== stateFromStores) {
-    class S {
-      constructor() {
-        if (!closure_1) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[11]);
-          hideActionSheetResult = obj.hideActionSheet();
-        }
-        return;
-      }
-    }
-    const items2 = [stateFromStores];
-    cResult[4] = stateFromStores;
-    cResult[5] = S;
-    cResult[6] = items2;
-    let tmp12 = items2;
-  } else {
-    class S {
-      constructor() {
-        if (!closure_1) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[11]);
-          hideActionSheetResult = obj.hideActionSheet();
-        }
-        return;
-      }
-    }
-    tmp12 = cResult[6];
-  }
-  const effect = noop.useEffect(S, tmp12);
-  if (!stateFromStores) {
-    class S {
-      constructor() {
-        if (!closure_1) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[11]);
-          hideActionSheetResult = obj.hideActionSheet();
-        }
-        return;
-      }
-    }
-  } else {
-    class S {
-      constructor() {
-        if (!closure_1) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[11]);
-          hideActionSheetResult = obj.hideActionSheet();
-        }
-        return;
-      }
-    }
-  }
-  const tmpResult = guild(504);
-}) : (function MembersPruneActionSheet(guild) {
+export default function MembersPruneActionSheet(guild) {
   guild = guild.guild;
   const items = [GuildStore, PermissionStore, UserStore];
   const items1 = [guild];
@@ -289,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MembersP
   let tmp3 = null;
   if (stateFromStores) {
     const obj2 = { guild };
-    tmp3 = closure_11(closure_13, obj2);
+    tmp3 = closure_11(MembersPruneActionSheetContent, obj2);
   }
   return tmp3;
-});
+};

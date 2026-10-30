@@ -1,10 +1,10 @@
-// === Module 6868: ApplicationActionCreators ===
+// === Module 6875: ApplicationActionCreators ===
 
-// Module 6868 (ApplicationActionCreators)
+// Module 6875 (ApplicationActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6869 */;
-import ApplicationRecord from "ApplicationRecord" /* 2022 */;
-import ApplicationStore from "ApplicationStore" /* 2043 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6876 */;
+import ApplicationRecord from "ApplicationRecord" /* 2017 */;
+import ApplicationStore from "ApplicationStore" /* 2040 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ let closure_10 = async function _fetchApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_10 = async function _fetchApplication(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -118,7 +118,7 @@ let closure_10 = async function _fetchApplication(arg0) {
     }
   }
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: closure_7, NOOP: closure_8 } = Constants);
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(ApplicationStore, {
@@ -145,7 +145,7 @@ const fetchStore = initialize.createFetchStore(ApplicationStore, {
   },
   load(arg0) {
     if (null != arg0) {
-      let nextPromise = fetchApplication(arg0, false).then(closure_1_8);
+      let nextPromise = fetchApplication(arg0, false).then(React6);
       const promise = fetchApplication(arg0, false);
     } else {
       nextPromise = Promise.resolve();
@@ -160,7 +160,6 @@ const fetchStore = initialize.createFetchStore(ApplicationStore, {
     return result;
   }
 });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/ApplicationActionCreators.tsx");
 
@@ -168,8 +167,8 @@ export default {
   createApplication(arg0) {
     ({ name: require, guildId: importDefault, type: dependencyMap, teamId: asyncGeneratorStep } = arg0);
     return (async () => {
-      const HTTP = tmp5(1294).HTTP;
-      const request = { url: constants.APPLICATIONS, body: { name, type, guild_id, team_id }, rejectWithError: tmp5(1294).rejectWithMigratedError() };
+      const HTTP = tmp5(1283).HTTP;
+      const request = { url: constants.APPLICATIONS, body: { name, type, guild_id, team_id }, rejectWithError: tmp5(1283).rejectWithMigratedError() };
       await HTTP.post(request);
       const body = value.body;
       let tmp8 = null != closure_129_1;
@@ -177,8 +176,8 @@ export default {
         tmp8 = null != closure_129_2;
       }
       if (tmp8) {
-        tmp2(584).dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: body });
-        tmp2(584);
+        tmp2(572).dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: body });
+        tmp2(572);
       }
       return body;
     })();
@@ -192,16 +191,16 @@ export default {
     const includeTeam = obj.includeTeam;
     closure_2 = Object.assign(obj, Object.assign({ includeTeam: 0 }));
     return (async () => {
-      const HTTP = tmp5(1294).HTTP;
+      const HTTP = tmp5(1283).HTTP;
       const request = { url: closure_1_7.GUILD_APPLICATIONS(tmp5), query: null, rejectWithError: null };
       const obj4 = {};
       const merged = Object.assign(closure_2);
       obj4.include_team = includeTeam;
       request.query = obj4;
-      request.rejectWithError = tmp5(1294).rejectWithMigratedError();
+      request.rejectWithError = tmp5(1283).rejectWithMigratedError();
       await HTTP.get(request);
       const body = value.body;
-      tmp2(584).dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: body });
+      tmp2(572).dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: body });
       return body;
     })();
   },
@@ -222,11 +221,11 @@ export default {
   transferApplication(arg0) {
     ({ applicationId: require, teamId: importDefault } = arg0);
     return (async () => {
-      const HTTP = tmp5(1294).HTTP;
-      const request = { url: closure_1_7.APPLICATION_OWNER_TRANSFER(_require), body: { team_id }, rejectWithError: tmp5(1294).rejectWithMigratedError() };
+      const HTTP = tmp5(1283).HTTP;
+      const request = { url: closure_1_7.APPLICATION_OWNER_TRANSFER(_require), body: { team_id }, rejectWithError: tmp5(1283).rejectWithMigratedError() };
       await HTTP.post(request);
       const body = value.body;
-      tmp2(584).dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: body });
+      tmp2(572).dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: body });
       return body;
     })();
   },
@@ -247,7 +246,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -350,60 +349,7 @@ export default {
 };
 export { fetchApplication };
 export const useApplication = fetchStore;
-export const useApplicationWithLoggedOutContext = ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationWithLoggedOutContext(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(9);
-  const tmp4 = fetchStore(arg0);
-  const data = tmp4.data;
-  ({ isLoading, error } = tmp4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ApplicationDirectoryApplicationsStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === arg0) {
-    if (cResult[2] === data) {
-      let tmp7 = cResult[3];
-      let tmp8 = cResult[4];
-    }
-    const stateFromStores = tmp(504).useStateFromStores(first, tmp7, tmp8);
-    if (cResult[5] === stateFromStores) {
-      if (cResult[6] === isLoading) {
-        if (cResult[7] === error) {
-          let tmp11 = cResult[8];
-        }
-        return tmp11;
-      }
-    }
-    const obj2 = { app: stateFromStores, isLoading, error };
-    cResult[5] = stateFromStores;
-    cResult[6] = isLoading;
-    cResult[7] = error;
-    cResult[8] = obj2;
-    tmp11 = obj2;
-    const tmpResult = tmp(504);
-  }
-  const fn = function p() {
-    if (null == data) {
-      const application = ApplicationDirectoryApplicationsStore.getApplication(closure_0);
-      if (null != application) {
-        return ApplicationRecord.createFromServer(application);
-      }
-    }
-    return data;
-  };
-  const items1 = [arg0, data];
-  cResult[1] = arg0;
-  cResult[2] = data;
-  cResult[3] = fn;
-  cResult[4] = items1;
-  tmp8 = items1;
-  tmp7 = fn;
-  const obj = require("c");
-  tmp = _require;
-}) : (function useApplicationWithLoggedOutContext(arg0) {
+export function useApplicationWithLoggedOutContext(arg0) {
   _require = arg0;
   const tmp = fetchStore(arg0);
   const data = tmp.data;
@@ -421,4 +367,4 @@ export const useApplicationWithLoggedOutContext = ReactCompilerGating.isReactCom
     return data;
   }, items1);
   return obj;
-});
+}

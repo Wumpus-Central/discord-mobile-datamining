@@ -1,7 +1,7 @@
-// === Module 7362: UserProfileRoleUtils ===
+// === Module 7369: UserProfileRoleUtils ===
 
-// Module 7362 (UserProfileRoleUtils)
-import GuildRoleUtils from "GuildRoleUtils" /* 4915 */;
+// Module 7369 (UserProfileRoleUtils)
+import GuildRoleUtils from "GuildRoleUtils" /* 4919 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");

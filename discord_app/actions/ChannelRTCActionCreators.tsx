@@ -1,11 +1,11 @@
-// === Module 5748: ChannelRTCActionCreators ===
+// === Module 5754: ChannelRTCActionCreators ===
 
-// Module 5748 (ChannelRTCActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import Constants from "Constants" /* 1084 */;
+// Module 5754 (ChannelRTCActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -50,9 +50,9 @@ export default {
   updateStageVideoLimitBoostUpsellDismissed(channelId, dismissed) {
     DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED", channelId, dismissed });
   },
-  updateChatOpen(id, shown) {
-    _require = id;
-    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown });
+  updateChatOpen(channelId, shown) {
+    _require = channelId;
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId, chatOpen: shown });
     if (shown) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
@@ -63,7 +63,7 @@ export default {
       let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
       ComponentDispatch.dispatch(constants3.FOCUS_CHAT_BUTTON);
     }
-    const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown };
+    const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId, chatOpen: shown };
   },
   updateStageAudienceSidebarOpen(channelId, open) {
     DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_AUDIENCE_SIDEBAR_OPEN", channelId, open });

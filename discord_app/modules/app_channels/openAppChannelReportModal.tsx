@@ -1,9 +1,9 @@
-// === Module 14477: openAppChannelReportModal ===
+// === Module 14510: openAppChannelReportModal ===
 
-// Module 14477 (openAppChannelReportModal)
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6868 */;
+// Module 14510 (openAppChannelReportModal)
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6875 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2043 */;
+import ApplicationStore from "ApplicationStore" /* 2040 */;
 
 const require = fn;
 let closure_5 = async function _getApplication(arg0) {
@@ -17,7 +17,7 @@ let closure_5 = async function _getApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_6 = async function _openAppChannelReportModal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

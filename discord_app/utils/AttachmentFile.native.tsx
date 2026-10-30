@@ -1,10 +1,10 @@
-// === Module 8208: AttachmentFile ===
+// === Module 8211: AttachmentFile ===
 
-// Module 8208 (AttachmentFile)
+// Module 8211 (AttachmentFile)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import UploadPlatform from "UploadPlatform" /* 8200 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8209 */;
+import UploadPlatform from "UploadPlatform" /* 8203 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8212 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -25,7 +25,7 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -130,7 +130,7 @@ let closure_6 = async function _cancelGetAttachmentFile(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -158,7 +158,7 @@ let closure_6 = async function _cancelGetAttachmentFile(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c1 = tmp;

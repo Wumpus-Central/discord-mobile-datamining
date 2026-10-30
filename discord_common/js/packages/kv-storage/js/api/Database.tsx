@@ -1,10 +1,10 @@
-// === Module 4891: Database ===
+// === Module 4895: Database ===
 
-// Module 4891 (Database)
+// Module 4895 (Database)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
-import TableId from "TableId" /* 4890 */;
-import Host2 from "Host" /* 4892 */;
-import Runtime2 from "Runtime" /* 4893 */;
+import TableId from "TableId" /* 4894 */;
+import Host2 from "Host" /* 4896 */;
+import Runtime2 from "Runtime" /* 4897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -198,7 +198,7 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,58 +1,18 @@
-// === Module 8964: useGuildsUserCanStartStageIn ===
+// === Module 8995: useGuildsUserCanStartStageIn ===
 
-// Module 8964 (useGuildsUserCanStartStageIn)
-import GuildChannelStore from "GuildChannelStore" /* 4935 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+// Module 8995 (useGuildsUserCanStartStageIn)
+import GuildChannelStore from "GuildChannelStore" /* 4939 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 const require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
-const ReactCompilerGating = fn(558);
+const GUILD_VOCAL_CHANNELS_KEY = fn(4939).GUILD_VOCAL_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
 
-export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelsUserCanStartStageIn(id) {
-  const cResult = id(576).c(4);
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  if (id == null) {
-    id = null;
-  }
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildChannelStore, PermissionStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== id) {
-    class S {
-      constructor() {
-        arr = closure_2.getChannels(c0)[GUILD_VOCAL_CHANNELS_KEY];
-        return arr.reduce(/* F148816 */ function() { ... }, []);
-      }
-    }
-    const items1 = [id];
-    cResult[1] = id;
-    cResult[2] = S;
-    cResult[3] = items1;
-    let tmp9 = items1;
-  } else {
-    class S {
-      constructor() {
-        arr = closure_2.getChannels(c0)[GUILD_VOCAL_CHANNELS_KEY];
-        return arr.reduce(/* F148816 */ function() { ... }, []);
-      }
-    }
-    tmp9 = cResult[3];
-  }
-  const obj = id(576);
-  return id(504).useStateFromStoresArray(first, S, tmp9);
-}) : (function useChannelsUserCanStartStageIn(id) {
-  id = undefined;
-  if (id != null) {
-    id = id.id;
+export function useChannelsUserCanStartStageIn(guild) {
+  let id;
+  if (guild != null) {
+    id = guild.id;
   }
   if (id == null) {
     id = null;
@@ -75,4 +35,4 @@ export const useChannelsUserCanStartStageIn = ReactCompilerGating.isReactCompile
     }
     return arr;
   }, []), items1);
-});
+}

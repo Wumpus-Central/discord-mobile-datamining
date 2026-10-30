@@ -1,13 +1,12 @@
-// === Module 9260: isPlayingGameActivity ===
+// === Module 9273: isPlayingGameActivity ===
 
-// Module 9260 (isPlayingGameActivity)
-import Constants from "Constants" /* 1084 */;
-import Constants2 from "Constants" /* 2024 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7870 */;
+// Module 9273 (isPlayingGameActivity)
+import Constants from "Constants" /* 2019 */;
+import ActivityTypes from "ActivityTypes" /* 5757 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7876 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Constants2.XBOX_ACTIVITY_APPLICATION_ID;
-const ActivityTypes = Constants.ActivityTypes;
+let closure_3 = Constants.XBOX_ACTIVITY_APPLICATION_ID;
 const result = size.fileFinishedImporting("modules/activities/utils/isPlayingGameActivity.tsx");
 
 export default function isPlayingGameActivity(application_id) {
@@ -15,13 +14,13 @@ export default function isPlayingGameActivity(application_id) {
   if (tmp) {
     let tmp2 = null != application_id.application_id;
     if (tmp2) {
-      tmp2 = application_id.type === ActivityTypes.PLAYING;
+      tmp2 = application_id.type === ActivityTypes.ActivityTypes.PLAYING;
     }
     if (tmp2) {
       tmp2 = !isEmbeddedActivityDefault(application_id);
     }
     if (tmp2) {
-      tmp2 = application_id.application_id !== closure_2;
+      tmp2 = application_id.application_id !== closure_3;
     }
     tmp = tmp2;
   }

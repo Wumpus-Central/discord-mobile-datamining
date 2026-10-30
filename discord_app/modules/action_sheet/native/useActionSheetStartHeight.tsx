@@ -1,15 +1,12 @@
-// === Module 10185: useActionSheetStartHeight ===
+// === Module 10210: useActionSheetStartHeight ===
 
-// Module 10185 (useActionSheetStartHeight)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 5303 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+// Module 10210 (useActionSheetStartHeight)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 5268 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ActionSheetConstants.ACTION_SHEET_START_HEIGHT_RATIO;
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/action_sheet/native/useActionSheetStartHeight.tsx");
+const result = size.fileFinishedImporting("modules/action_sheet/native/useActionSheetStartHeight.tsx");
 
 export default function useActionSheetHeight() {
   return useWindowDimensionsDefault().height * closure_2;

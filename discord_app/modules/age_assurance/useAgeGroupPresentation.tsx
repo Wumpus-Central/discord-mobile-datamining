@@ -1,44 +1,29 @@
-// === Module 10085: useAgeGroupPresentation ===
+// === Module 10112: useAgeGroupPresentation ===
 
-// Module 10085 (useAgeGroupPresentation)
-import c from "c" /* 576 */;
-import Constants from "Constants" /* 1084 */;
-import util from "util" /* 1125 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6716 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7941 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+// Module 10112 (useAgeGroupPresentation)
+import Constants from "Constants" /* 1072 */;
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6720 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6723 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7947 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
 const AgeGroupState = { ADULT: "adult", TEEN: "teen", UNVERIFIED: "unverified" };
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeGroupState() {
-  const obj = AgeVerificationUtils;
-  const isAgeVerified = obj.useIsAgeVerified();
-  if (obj2.useIsVerifiedTeen()) {
-    let TEEN = tmp2.TEEN;
-  } else {
-    TEEN = isAgeVerified ? tmp2.ADULT : tmp2.UNVERIFIED;
-  }
-  return TEEN;
-}) : (function useAgeGroupState() {
-  const obj = AgeVerificationUtils;
-  const isAgeVerified = obj.useIsAgeVerified();
-  if (obj2.useIsVerifiedTeen()) {
-    let TEEN = tmp2.TEEN;
-  } else {
-    TEEN = isAgeVerified ? tmp2.ADULT : tmp2.UNVERIFIED;
-  }
-  return TEEN;
-});
-let closure_5 = tmp2;
-let ReactCompilerGating = ReactCompilerGating_mod;
 let result = size.fileFinishedImporting("modules/age_assurance/useAgeGroupPresentation.tsx");
 
 export { AgeGroupState };
-export const useAgeGroupState = tmp2;
+export function useAgeGroupState() {
+  const obj = AgeVerificationUtils;
+  const isAgeVerified = obj.useIsAgeVerified();
+  if (obj2.useIsVerifiedTeen()) {
+    let TEEN = tmp2.TEEN;
+  } else {
+    TEEN = isAgeVerified ? tmp2.ADULT : tmp2.UNVERIFIED;
+  }
+  return TEEN;
+}
 export function handleOpenAgeGatedContentArticle() {
   const obj = AgeVerificationActionCreatorsDefault;
   obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
@@ -47,54 +32,28 @@ export function handleShowAgeVerification() {
   const obj = AgeVerificationActionCreatorsDefault;
   const result = obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP });
 }
-export const useAgeGroupValueLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeGroupValueLabel() {
-  const obj = c;
-  const cResult = obj.c(3);
-  const tmp4 = closure_5();
-  if (obj.ADULT === tmp4) {
-    const _Symbol3 = Symbol;
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl3 = util.intl;
-      const stringResult = intl3.string(util.t.XxRj7f);
-      cResult[0] = stringResult;
-      let first = stringResult;
-    } else {
-      first = cResult[0];
-    }
-    return first;
-  } else if (tmp5.TEEN === tmp4) {
-    const _Symbol2 = Symbol;
-    if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = util.intl;
-      const stringResult1 = intl2.string(util.t.sK0dmH);
-      cResult[1] = stringResult1;
-      let tmp10 = stringResult1;
-    } else {
-      tmp10 = cResult[1];
-    }
-    return tmp10;
-  } else if (tmp5.UNVERIFIED === tmp4) {
-    const _Symbol = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = util.intl;
-      const stringResult2 = intl.string(util.t.lKDPGA);
-      cResult[2] = stringResult2;
-      let tmp7 = stringResult2;
-    } else {
-      tmp7 = cResult[2];
-    }
-    return tmp7;
+export function useAgeGroupValueLabel() {
+  const obj = AgeVerificationUtils;
+  const isAgeVerified = obj.useIsAgeVerified();
+  if (obj2.useIsVerifiedTeen()) {
+    let UNVERIFIED = tmp4.TEEN;
+    let tmp5 = tmp4;
+  } else if (isAgeVerified) {
+    UNVERIFIED = tmp4.ADULT;
+    tmp5 = tmp4;
+  } else {
+    UNVERIFIED = tmp4.UNVERIFIED;
+    tmp5 = tmp4;
   }
-}) : (function useAgeGroupValueLabel() {
-  const tmp = closure_5();
-  if (obj.ADULT === tmp) {
+  if (tmp5.ADULT === UNVERIFIED) {
     const intl3 = util.intl;
     return intl3.string(util.t.XxRj7f);
-  } else if (obj.TEEN === tmp) {
+  } else if (tmp5.TEEN === UNVERIFIED) {
     const intl2 = util.intl;
     return intl2.string(util.t.sK0dmH);
-  } else if (obj.UNVERIFIED === tmp) {
+  } else if (tmp5.UNVERIFIED === UNVERIFIED) {
     const intl = util.intl;
     return intl.string(util.t.lKDPGA);
   }
-});
+  obj2 = AgeVerificationUtils;
+}

@@ -1,8 +1,8 @@
-// === Module 9514: VirtualCurrencyStore ===
+// === Module 9533: VirtualCurrencyStore ===
 
-// Module 9514 (VirtualCurrencyStore)
+// Module 9533 (VirtualCurrencyStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const Store = initializeDefault.Store;
 class VirtualCurrencyStore extends Store {

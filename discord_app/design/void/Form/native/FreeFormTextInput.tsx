@@ -1,21 +1,30 @@
-// === Module 7091: FreeFormTextInput ===
+// === Module 7099: FreeFormTextInput ===
 
-// Module 7091 (FreeFormTextInput)
+// Module 7099 (FreeFormTextInput)
 import _modDef38 from "module_38" /* 38 */;
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import native from "native" /* 1199 */;
-import Pressables from "Pressables" /* 6968 */;
-import _modDef7092 from "module_7092" /* 7092 */;
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1188 */;
+import Pressables from "Pressables" /* 6974 */;
+import _modDef7100 from "module_7100" /* 7100 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
+function ClearButton(onPress) {
+  const obj = { style: { borderRadius: 20, padding: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.VkKicb);
+  obj.onPress = onPress.onPress;
+  obj.hitSlop = { top: 8, bottom: 8, right: 8 };
+  const tmp = closure_9();
+  obj.children = React5(native.Icon, { source: _modDef7100, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
+  return React5(Pressables.PressableOpacity, obj);
+}
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" }, onPress: { flexDirection: "row" }, input: null, error: null, closeIcon: null, placeholder: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
 obj2.input = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -26,63 +35,6 @@ obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, mar
 const obj6 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
 obj2.placeholder = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearButton(onPress) {
-  const cResult = c.c(8);
-  onPress = onPress.onPress;
-  const tmp4 = closure_9();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { borderRadius: 20, padding: 8 };
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const stringResult = intl.string(util.t.VkKicb);
-    cResult[1] = stringResult;
-    let tmp6 = stringResult;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const rect = { top: 8, bottom: 8, right: 8 };
-    cResult[2] = rect;
-    let tmp8 = rect;
-  } else {
-    tmp8 = cResult[2];
-  }
-  if (cResult[3] !== tmp4.closeIcon) {
-    const obj3 = { source: _modDef7092, style: tmp4.closeIcon, size: native.Icon.Sizes.MEDIUM };
-    const tmp12 = React5(native.Icon, obj3);
-    cResult[3] = tmp4.closeIcon;
-    cResult[4] = tmp12;
-    let tmp9 = tmp12;
-  } else {
-    tmp9 = cResult[4];
-  }
-  if (cResult[5] === onPress) {
-    if (cResult[6] === tmp9) {
-      let tmp13 = cResult[7];
-    }
-    return tmp13;
-  }
-  const tmp14 = React5(Pressables.PressableOpacity, { style: first, accessibilityRole: "button", accessibilityLabel: tmp6, onPress, hitSlop: tmp8, children: tmp9 });
-  cResult[5] = onPress;
-  cResult[6] = tmp9;
-  cResult[7] = tmp14;
-  tmp13 = tmp14;
-}) : (function ClearButton(onPress) {
-  const obj = { style: { borderRadius: 20, padding: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.VkKicb);
-  obj.onPress = onPress.onPress;
-  obj.hitSlop = { top: 8, bottom: 8, right: 8 };
-  const tmp = closure_9();
-  obj.children = React5(native.Icon, { source: _modDef7092, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
-  return React5(Pressables.PressableOpacity, obj);
-});
 const size = fn(2);
 let result = size.fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
 
@@ -238,10 +190,10 @@ export default (editable) => {
           return tmpResult;
         }
     };
-    tmp15Result = React5(closure_10, obj5);
+    tmp15Result = React5(ClearButton, obj5);
   }
   items1[3] = tmp15Result;
   obj3.children = items1;
-  obj.children = closure_1_8(hasOwnProperty, obj3);
+  obj.children = React6(hasOwnProperty, obj3);
   return React5(null != onPress ? timestampProducer : React4, obj);
 };

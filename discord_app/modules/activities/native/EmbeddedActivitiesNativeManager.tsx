@@ -1,27 +1,27 @@
-// === Module 16296: EmbeddedActivitiesNativeManager ===
+// === Module 16337: EmbeddedActivitiesNativeManager ===
 
-// Module 16296 (EmbeddedActivitiesNativeManager)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import util from "util" /* 1125 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ChatInputUtils from "ChatInputUtils" /* 5196 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5942 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5947 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11488 */;
-import activityWebViewController from "activityWebViewController" /* 11559 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 16297 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 16298 */;
+// Module 16337 (EmbeddedActivitiesNativeManager)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ChatInputUtils from "ChatInputUtils" /* 5202 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5949 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5954 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11688 */;
+import activityWebViewController from "activityWebViewController" /* 11760 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 16338 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 16339 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, ComponentActions: closure_7 } = Constants);
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1376);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);

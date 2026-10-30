@@ -1,13 +1,13 @@
-// === Module 17964: HomeDrawerSubtitleStore ===
+// === Module 18025: HomeDrawerSubtitleStore ===
 
-// Module 17964 (HomeDrawerSubtitleStore)
-import module_570 from "module_570" /* 570 */;
+// Module 18025 (HomeDrawerSubtitleStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 let c0 = null;
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
 
-export default module_570.create((arg0, arg1) => {
+export default module_560.create((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   return {

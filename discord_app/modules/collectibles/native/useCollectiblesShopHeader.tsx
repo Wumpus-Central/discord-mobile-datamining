@@ -1,32 +1,48 @@
-// === Module 17748: useCollectiblesShopHeader ===
+// === Module 17819: useCollectiblesShopHeader ===
 
-// Module 17748 (useCollectiblesShopHeader)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
-import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7290 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8708 */;
-import ShopIcon from "ShopIcon" /* 12114 */;
+// Module 17819 (useCollectiblesShopHeader)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 7297 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
+import ShopIcon from "ShopIcon" /* 12290 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
+function CollectiblesShopHeaderTitle(currentScreen) {
+  const tmp = closure_12();
+  const obj = { style: tmp.headerTitleContainer, children: null };
+  const items = [closure_1_10(ShopIcon.ShopIcon, { size: "md", color: "icon-strong" }), ];
+  const obj2 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
+  if (currentScreen.currentScreen === constants.ORBS) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.ElYQFS);
+  } else {
+    const intl = util.intl;
+    stringResult = intl.string(util.t.pWG4ze);
+  }
+  obj2.children = stringResult;
+  items[1] = closure_1_10(Text_Text.Heading, obj2);
+  obj.children = items;
+  return closure_1_11(View, obj);
+}
 function CollectiblesShopHeaderRight(currentScreen) {
   currentScreen = currentScreen.currentScreen;
   let balance;
   const tmp = closure_12();
   let items = [UserStore];
-  const stateFromStores = currentScreen(balance[15]).useStateFromStores(items, () => currentUser.getCurrentUser(), []);
-  let obj = currentScreen(balance[15]);
-  balance = currentScreen(balance[16]).useFetchVirtualCurrencyBalance().balance;
-  let obj2 = currentScreen(balance[16]);
+  const stateFromStores = currentScreen(balance[13]).useStateFromStores(items, () => currentUser.getCurrentUser(), []);
+  let obj = currentScreen(balance[13]);
+  balance = currentScreen(balance[14]).useFetchVirtualCurrencyBalance().balance;
+  let obj2 = currentScreen(balance[14]);
   const items1 = [currentScreen];
-  const isEligibleForQuests = currentScreen(balance[17]).getIsEligibleForQuests();
+  const isEligibleForQuests = currentScreen(balance[15]).getIsEligibleForQuests();
   const items2 = [balance];
   const memo = noop.useMemo(() => {
     const obj = { label: null, action: null, trailingIndicator: null };
@@ -34,11 +50,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj.label = intl.string(util.t["xNiB/O"]);
     obj.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7338).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
+      const items = [stateFromStores(7345).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(7338).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(7345).COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM;
       obj2.screen = constants.FEATURED_PAGE;
-      const result = currentScreen(7707).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7712).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon;
     if (currentScreen === constants.FEATURED_PAGE) {
@@ -51,11 +67,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj2.label = intl2.string(util.t.RSyoZu);
     obj2.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7338).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
+      const items = [stateFromStores(7345).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(7338).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(7345).COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM;
       obj2.screen = constants.SHOP_ALL;
-      const result = currentScreen(7707).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7712).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon1;
     if (currentScreen === constants.SHOP_ALL) {
@@ -68,11 +84,11 @@ function CollectiblesShopHeaderRight(currentScreen) {
     obj3.label = intl3.string(util.t.fG3RIg);
     obj3.action = function action() {
       const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
-      const items = [stateFromStores(7338).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
+      const items = [stateFromStores(7345).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM];
       obj2.analyticsLocations = items;
-      obj2.analyticsSource = stateFromStores(7338).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
+      obj2.analyticsSource = stateFromStores(7345).COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM;
       obj2.screen = constants.ORBS;
-      const result = currentScreen(7707).openCollectiblesShopMobile(obj2);
+      const result = currentScreen(7712).openCollectiblesShopMobile(obj2);
     };
     let CheckmarkSmallIcon2;
     if (currentScreen === constants.ORBS) {
@@ -90,27 +106,27 @@ function CollectiblesShopHeaderRight(currentScreen) {
     const intl = util.intl;
     obj3.buttonText = intl.string(util.t.SymzJC);
     obj3.onButtonPress = function onButtonPress() {
-      const obj = stateFromStores(balance[24]);
-      obj.track(constants2.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_TO_QUEST_HOME", source: stateFromStores(balance[19]).COLLECTIBLES_SHOP, balance });
-      const obj2 = { type: "GO_TO_QUEST_HOME", source: stateFromStores(balance[19]).COLLECTIBLES_SHOP, balance };
-      stateFromStores(balance[21]).hideActionSheet();
-      const obj3 = stateFromStores(balance[21]);
-      const obj4 = currentScreen(balance[25]);
-      obj4.openQuestHome({ mergeExistingRoutes: true, filter: constants3.VIRTUAL_CURRENCY, fromContent: currentScreen(balance[26]).QuestContent.ORBS_BALANCE_MENU });
+      const obj = stateFromStores(balance[22]);
+      obj.track(constants2.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_TO_QUEST_HOME", source: stateFromStores(balance[17]).COLLECTIBLES_SHOP, balance });
+      const obj2 = { type: "GO_TO_QUEST_HOME", source: stateFromStores(balance[17]).COLLECTIBLES_SHOP, balance };
+      stateFromStores(balance[19]).hideActionSheet();
+      const obj3 = stateFromStores(balance[19]);
+      const obj4 = currentScreen(balance[23]);
+      obj4.openQuestHome({ mergeExistingRoutes: true, filter: constants3.VIRTUAL_CURRENCY, fromContent: currentScreen(balance[24]).QuestContent.ORBS_BALANCE_MENU });
     };
     obj2.primaryButtonConfig = obj3;
     let obj4 = { buttonText: null, onButtonPress: null };
     const intl2 = util.intl;
     obj4.buttonText = intl2.string(util.t["/g10LC"]);
     obj4.onButtonPress = function onButtonPress() {
-      const obj = stateFromStores(balance[24]);
-      obj.track(constants2.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_BACK", source: stateFromStores(balance[19]).COLLECTIBLES_SHOP, balance });
-      const obj2 = { type: "GO_BACK", source: stateFromStores(balance[19]).COLLECTIBLES_SHOP, balance };
-      stateFromStores(balance[21]).hideActionSheet();
+      const obj = stateFromStores(balance[22]);
+      obj.track(constants2.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_BACK", source: stateFromStores(balance[17]).COLLECTIBLES_SHOP, balance });
+      const obj2 = { type: "GO_BACK", source: stateFromStores(balance[17]).COLLECTIBLES_SHOP, balance };
+      stateFromStores(balance[19]).hideActionSheet();
     };
     obj2.secondaryButtonConfig = obj4;
     obj2.source = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
-    ActionSheetActionCreatorsDefault.openLazy(() => currentScreen(balance[23])(balance[22], balance.paths).then((result) => result.default), "BalanceWidgetActionSheet", obj2);
+    ActionSheetActionCreatorsDefault.openLazy(() => currentScreen(balance[21])(balance[20], balance.paths).then((result) => result.default), "BalanceWidgetActionSheet", obj2);
   }, items2);
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -133,7 +149,7 @@ function CollectiblesShopHeaderRight(currentScreen) {
       showUserProfileActionSheetDefault(obj4);
     }
   }, items3);
-  const tmp2Result = currentScreen(balance[29]);
+  const tmp2Result = currentScreen(balance[27]);
   if (isEligibleForQuests) {
     const obj5 = { balance, onPress: callback };
     let tmp13Result = closure_10(tmp2Result.BalanceWidgetPillButton, obj5);
@@ -147,171 +163,62 @@ function CollectiblesShopHeaderRight(currentScreen) {
   let tmp16Result = null != stateFromStores;
   if (tmp16Result) {
     const obj7 = { accessibilityLabel: null, variant: "tertiary", size: "sm", icon: null, onPress: null };
-    let intl = tmp2(tmp3[13]).intl;
-    obj7.accessibilityLabel = intl.string(tmp2(tmp3[13]).t["7lZ31J"]);
-    obj7.icon = tmp16(tmp2(tmp3[31]).HeartIcon, { size: "sm", color: "redesign-button-tertiary-text" });
+    let intl = tmp2(tmp3[12]).intl;
+    obj7.accessibilityLabel = intl.string(tmp2(tmp3[12]).t["7lZ31J"]);
+    obj7.icon = tmp16(tmp2(tmp3[29]).HeartIcon, { size: "sm", color: "redesign-button-tertiary-text" });
     obj7.onPress = callback1;
-    tmp16Result = tmp16(tmp2(tmp3[30]).IconButton, obj7);
+    tmp16Result = tmp16(tmp2(tmp3[28]).IconButton, obj7);
   }
   items4[1] = tmp16Result;
   const obj8 = { items: memo, align: "below", title: null, keyboardShouldPersistTaps: "handled", children: null };
-  let intl2 = tmp2(tmp3[13]).intl;
-  obj8.title = intl2.string(currentScreen(balance[13]).t.nSFuC0);
+  let intl2 = tmp2(tmp3[12]).intl;
+  obj8.title = intl2.string(currentScreen(balance[12]).t.nSFuC0);
   obj8.children = function children(ref) {
     const merged = Object.assign(ref, Object.assign({ ref: 0 }));
     const obj = { ref: ref.ref };
     const merged1 = Object.assign(merged);
     obj.variant = "tertiary";
-    const intl = currentScreen(balance[13]).intl;
-    obj.accessibilityLabel = intl.string(currentScreen(balance[13]).t.nSFuC0);
+    const intl = currentScreen(balance[12]).intl;
+    obj.accessibilityLabel = intl.string(currentScreen(balance[12]).t.nSFuC0);
     obj.size = "sm";
-    obj.icon = closure_1_10(currentScreen(balance[33]).MenuIcon, { size: "sm", color: "redesign-button-tertiary-text" });
-    return closure_1_10(currentScreen(balance[30]).IconButton, obj);
+    obj.icon = closure_1_10(currentScreen(balance[31]).MenuIcon, { size: "sm", color: "redesign-button-tertiary-text" });
+    return closure_1_10(currentScreen(balance[28]).IconButton, obj);
   };
-  items4[2] = tmp16(currentScreen(balance[32]).ContextMenu, obj8, currentScreen);
+  items4[2] = tmp16(currentScreen(balance[30]).ContextMenu, obj8, currentScreen);
   obj4.children = items4;
   return closure_11(View, obj4);
 }
 const View = fn(17).View;
-const constants = fn(1086).CollectiblesMobileShopScreen;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const RewardFilterTypes = fn(6768).RewardFilterTypes;
-const UserProfileSections = fn(8712).UserProfileSections;
+const constants = fn(1074).CollectiblesMobileShopScreen;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const RewardFilterTypes = fn(6775).RewardFilterTypes;
+const UserProfileSections = fn(8746).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { headerTitleContainer: { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, headerTitle: { flexShrink: 1 }, headerRightContainer: null };
 let obj3 = { width: "100%", flexDirection: "row", alignItems: "center", marginTop: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.headerRightContainer = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
 let closure_12 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function CollectiblesShopHeaderTitle(currentScreen) {
-  const cResult = c.c(9);
-  currentScreen = currentScreen.currentScreen;
-  const tmp4 = closure_12();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = v65535(ShopIcon.ShopIcon, { size: "md", color: "icon-strong" });
-    cResult[0] = tmp7;
-    let first = tmp7;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== currentScreen) {
-    if (currentScreen === constants.ORBS) {
-      const intl2 = util.intl;
-      let stringResult = intl2.string(util.t.ElYQFS);
-    } else {
-      const intl = util.intl;
-      stringResult = intl.string(util.t.pWG4ze);
-    }
-    cResult[1] = currentScreen;
-    cResult[2] = stringResult;
-  } else {
-    if (cResult[3] === tmp4.headerTitle) {
-      if (cResult[4] === tmp8) {
-        let tmp12 = cResult[5];
-      }
-      if (cResult[6] === tmp4.headerTitleContainer) {
-        if (cResult[7] === tmp12) {
-          let tmp15 = cResult[8];
-        }
-        return tmp15;
-      }
-      const obj2 = { style: tmp4.headerTitleContainer, children: null };
-      const items = [first, tmp12];
-      obj2.children = items;
-      const tmp18 = closure_1_11(View, obj2);
-      cResult[6] = tmp4.headerTitleContainer;
-      cResult[7] = tmp12;
-      cResult[8] = tmp18;
-      tmp15 = tmp18;
-    }
-    const obj3 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp4.headerTitle, children: cResult[2] };
-    const tmp14 = v65535(Text_Text.Heading, obj3);
-    cResult[3] = tmp4.headerTitle;
-    cResult[4] = cResult[2];
-    cResult[5] = tmp14;
-    tmp12 = tmp14;
-  }
-}) : (function CollectiblesShopHeaderTitle(currentScreen) {
-  const tmp = closure_12();
-  const obj = { style: tmp.headerTitleContainer, children: null };
-  const items = [v65535(ShopIcon.ShopIcon, { size: "md", color: "icon-strong" }), ];
-  const obj2 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
-  if (currentScreen.currentScreen === constants.ORBS) {
-    const intl2 = util.intl;
-    let stringResult = intl2.string(util.t.ElYQFS);
-  } else {
-    const intl = util.intl;
-    stringResult = intl.string(util.t.pWG4ze);
-  }
-  obj2.children = stringResult;
-  items[1] = v65535(Text_Text.Heading, obj2);
-  obj.children = items;
-  return closure_1_11(View, obj);
-});
-ReactCompilerGating = fn(558);
-let obj4 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", gap: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCollectiblesShopHeader(arg0) {
-  const cResult = currentScreen(576).c(6);
-  if (cResult[0] !== arg0) {
-    let obj2 = arg0;
-    if (undefined === arg0) {
-      obj2 = {};
-    }
-    cResult[0] = arg0;
-    cResult[1] = obj2;
-    let tmp4 = obj2;
-  } else {
-    tmp4 = cResult[1];
-  }
-  currentScreen = tmp4.currentScreen;
-  const obj = currentScreen(576);
-  const navigation = currentScreen(1503).useNavigation();
-  if (cResult[2] === currentScreen) {
-    if (cResult[3] === navigation) {
-      let tmp6 = cResult[4];
-      let tmp7 = cResult[5];
-    }
-    const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
-  }
-  const fn = function c() {
-    navigation.setOptions({
-      headerTitle() {
-        return closure_2_10(closure_2_13, { currentScreen });
-      },
-      headerRight() {
-        return closure_2_10(CollectiblesShopHeaderRight, { currentScreen });
-      }
-    });
-  };
-  const items = [navigation, currentScreen];
-  cResult[2] = currentScreen;
-  cResult[3] = navigation;
-  cResult[4] = fn;
-  cResult[5] = items;
-  tmp7 = items;
-  tmp6 = fn;
-  const tmpResult = currentScreen(1503);
-}) : (function useCollectiblesShopHeader() {
+export default function useCollectiblesShopHeader() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
   const currentScreen = obj.currentScreen;
-  const navigation = currentScreen(1503).useNavigation();
+  const navigation = currentScreen(1498).useNavigation();
   const items = [navigation, currentScreen];
   const layoutEffect = noop.useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle() {
-        return closure_2_10(closure_2_13, { currentScreen });
+        return closure_2_10(CollectiblesShopHeaderTitle, { currentScreen });
       },
       headerRight() {
         return closure_2_10(CollectiblesShopHeaderRight, { currentScreen });
       }
     });
   }, items);
-});
+};

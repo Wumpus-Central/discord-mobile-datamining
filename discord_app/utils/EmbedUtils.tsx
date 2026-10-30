@@ -1,13 +1,13 @@
-// === Module 6545: EmbedUtils ===
+// === Module 6552: EmbedUtils ===
 
-// Module 6545 (EmbedUtils)
+// Module 6552 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import FlagUtils from "FlagUtils" /* 1402 */;
-import _modDef2047 from "module_2047" /* 2047 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6053 */;
-import EmbedConstants from "EmbedConstants" /* 6546 */;
-import Constants from "Constants" /* 1084 */;
+import FlagUtils from "FlagUtils" /* 1397 */;
+import _modDef2044 from "module_2044" /* 2044 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6060 */;
+import EmbedConstants from "EmbedConstants" /* 6553 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 function getEffectiveVideoProvider(name, url1) {
@@ -65,8 +65,8 @@ export function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = _modDef2047(date);
-    const tmpResult = _modDef2047;
+    obj.timestamp = _modDef2044(date);
+    const tmpResult = _modDef2044;
   }
   if (null != footer.color) {
     obj.color = footer.color;

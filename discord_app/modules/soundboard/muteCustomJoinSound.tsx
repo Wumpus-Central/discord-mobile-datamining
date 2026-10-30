@@ -1,7 +1,7 @@
-// === Module 15569: muteCustomJoinSound ===
+// === Module 15609: muteCustomJoinSound ===
 
-// Module 15569 (muteCustomJoinSound)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 15609 (muteCustomJoinSound)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/soundboard/muteCustomJoinSound.tsx");

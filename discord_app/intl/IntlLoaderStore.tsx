@@ -1,14 +1,13 @@
-// === Module 2067: IntlLoaderStore ===
+// === Module 2064: IntlLoaderStore ===
 
-// Module 2067 (IntlLoaderStore)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import _modDef2068 from "module_2068" /* 2068 */;
-import bg from "bg" /* 4283 */;
-import formatjs from "formatjs" /* 4758 */;
-import moment from "moment" /* 4789 */;
+// Module 2064 (IntlLoaderStore)
+import util from "util" /* 1114 */;
+import _modDef2065 from "module_2065" /* 2065 */;
+import bg from "bg" /* 4284 */;
+import formatjs from "formatjs" /* 4759 */;
+import moment from "moment" /* 4790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import module_1902 from "module_1902" /* 1902 */;
+import module_1897 from "module_1897" /* 1897 */;
 
 require = fn;
 let closure_6 = async function _setAppLocale(arg0) {
@@ -22,7 +21,7 @@ let closure_6 = async function _setAppLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -57,7 +56,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -74,7 +73,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2078).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2075).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -88,7 +87,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                   } else {
                     c1 = 2;
                     dependencyMap = 1;
-                    const obj8 = { value: closure_0(1164).loadAllMessagesInLocale(closure_128_0), done: false };
+                    const obj8 = { value: closure_0(1153).loadAllMessagesInLocale(closure_128_0), done: false };
                     return obj8;
                   }
                 } else if (arg0 === 1) {
@@ -100,7 +99,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                   return obj;
                 } else {
                   dependencyMap = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp11) {
                 dependencyMap = tmp;
@@ -159,7 +158,7 @@ let closure_6 = async function _setAppLocale(arg0) {
       } else {
         closure_129_1.setLoadingSucceeded(closure_129_0);
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp10) {
       c3 = tmp;
@@ -178,7 +177,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -204,7 +203,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2068);
+            state.setLocaleData(_modDef2065);
             c3 = 3;
           }
         }
@@ -235,7 +234,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -266,7 +265,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -285,7 +284,7 @@ let closure_9 = async function _setMomentLocale(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -336,28 +335,28 @@ let closure_9 = async function _setMomentLocale(arg0) {
       closure_129_1.push("en-US");
       closure_130_0(closure_130_2[10]).locale(closure_129_1);
       c4 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp26) {
       c4 = tmp;
       throw tmp26;
     }
   }
 };
-const identity = fn(1266);
+const identity = fn(1255);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "toCharArray$esjava$1",
-    localeData: _modDef2068,
+    error: "id",
+    localeData: _modDef2065,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "toCharArray$esjava$1" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "id" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -372,7 +371,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/IntlLoaderStore.tsx");
 
@@ -396,26 +394,10 @@ export function setAppLocale() {
   }
   return applyArgumentsResult;
 }
-export const useLocaleData = ReactCompilerGating.isReactCompilerEnabled() ? (function useLocaleData() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function o(localeData) {
-      return localeData.localeData;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  let tmp4 = withEqualityFn(first);
-  if (tmp4 == null) {
-    tmp4 = _modDef2068;
-  }
-  return tmp4;
-}) : (function useLocaleData() {
+export function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2068;
+    tmp = _modDef2065;
   }
   return tmp;
-});
+}

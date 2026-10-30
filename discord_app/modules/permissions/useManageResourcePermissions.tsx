@@ -1,11 +1,11 @@
-// === Module 8981: useManageResourcePermissions ===
+// === Module 9011: useManageResourcePermissions ===
 
-// Module 8981 (useManageResourcePermissions)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
+// Module 9011 (useManageResourcePermissions)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import UserStore from "UserStore" /* 1389 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
@@ -60,9 +60,9 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(8980);
+const PermissionsConstants = fn(9010);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
-const Permissions = fn(1095).Permissions;
+const Permissions = fn(1083).Permissions;
 let closure_11 = {
   canCreateExpressions: false,
   canCreateGuildEvent: false,
@@ -75,8 +75,10 @@ let closure_11 = {
     return false;
   }
 };
-const ReactCompilerGating = fn(558);
-function attachChannelPermissions(channel) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/permissions/useManageResourcePermissions.tsx");
+
+export function attachChannelPermissions(channel) {
   if (null == channel) {
     const items = [, ];
     ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
@@ -84,180 +86,30 @@ function attachChannelPermissions(channel) {
   } else {
     let tmp = React5;
     if (channel.isGuildStageVoice()) {
-      tmp = closure_1_8;
-    } else if (channel.isGuildVoice()) {
       tmp = React6;
+    } else if (channel.isGuildVoice()) {
+      tmp = React7;
     }
     const items1 = [BigFlagUtilsAll.combine(tmp, Permissions.CREATE_EVENTS), ];
     items1[1] = BigFlagUtilsAll.combine(tmp, Permissions.MANAGE_EVENTS);
     return items1;
   }
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/permissions/useManageResourcePermissions.tsx");
-
-export { attachChannelPermissions };
-export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerEnabled() ? (function useManageResourcePermissions(isGuildStageVoice) {
-  _require = isGuildStageVoice;
-  const cResult = require("c").c(24);
-  if (cResult[0] !== isGuildStageVoice) {
-    if (tmpResult.isGuildRecord(isGuildStageVoice)) {
-      let items = [, ];
-      ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
-      let items2 = items;
-    } else if (null == isGuildStageVoice) {
-      const items1 = [, ];
-      ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
-      items2 = items1;
-    } else {
-      let tmp5 = stateFromStores;
-      if (isGuildStageVoice.isGuildStageVoice()) {
-        tmp5 = closure_8;
-      } else if (isGuildStageVoice.isGuildVoice()) {
-        tmp5 = closure_9;
-      }
-      items2 = [first(1096).combine(tmp5, Permissions.CREATE_EVENTS), ];
-      const obj3 = first(1096);
-      items2[1] = first(1096).combine(tmp5, Permissions.MANAGE_EVENTS);
-      const obj4 = first(1096);
-    }
-    cResult[0] = isGuildStageVoice;
-    cResult[1] = items2;
-    tmpResult = tmp(4871);
-  } else {
-    const tmp12 = first1(cResult[1], 2);
-    first = tmp12[0];
-    dependencyMap = tmp14;
-    const _Symbol = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const items3 = [closure_5];
-      cResult[2] = items3;
-      let tmp16 = items3;
-    } else {
-      tmp16 = cResult[2];
-    }
-    if (cResult[3] === isGuildStageVoice) {
-      if (cResult[4] === first) {
-        if (cResult[5] === tmp14) {
-          let tmp18 = cResult[6];
-        }
-        const tmp11Result = tmp11(tmp(504).useStateFromStoresArray(tmp16, tmp18), 4);
-        first1 = tmp11Result[0];
-        closure_4 = tmp21;
-        closure_5 = tmp22;
-        UserStore = tmp23;
-        const _Symbol2 = Symbol;
-        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const items4 = [UserStore];
-          class G {
-            constructor() {
-              return closure_6.getCurrentUser();
-            }
-          }
-          cResult[7] = items4;
-          cResult[8] = G;
-          let tmp25 = G;
-          let tmp24 = items4;
-        } else {
-          tmp24 = cResult[7];
-          tmp25 = cResult[8];
-        }
-        const tmpResult3 = tmp(504);
-        stateFromStores = tmp(504).useStateFromStores(tmp24, tmp25);
-        if (cResult[9] === first1) {
-          if (cResult[10] === tmp21) {
-            if (cResult[11] === stateFromStores) {
-              let tmp28 = cResult[12];
-            }
-            if (cResult[13] === tmp22) {
-              if (cResult[14] === tmp23) {
-                if (cResult[15] === stateFromStores) {
-                  let tmp29 = cResult[16];
-                }
-                if (null != isGuildStageVoice) {
-                  const obj2 = { canCreateExpressions: first1, canCreateGuildEvent: null, canManageAllExpressions: null, canManageAllEvents: null, canManageGuildExpression: null, canManageGuildEvent: null };
-                  class G {
-                    constructor() {
-                      return closure_6.getCurrentUser();
-                    }
-                  }
-                  obj2.canManageAllExpressions = tmp21;
-                  obj2.canManageAllEvents = tmp23;
-                  obj2.canManageGuildExpression = tmp28;
-                  obj2.canManageGuildEvent = tmp29;
-                  cResult[17] = tmp22;
-                  cResult[18] = first1;
-                  cResult[19] = tmp23;
-                  cResult[20] = tmp21;
-                  cResult[21] = tmp29;
-                  class V {
-                    constructor(arg0) {
-                      return canManageResource(isGuildStageVoice, closure_7, closure_4, closure_3);
-                    }
-                  }
-                  cResult[23] = obj2;
-                }
-                class G {
-                  constructor() {
-                    return closure_6.getCurrentUser();
-                  }
-                }
-              }
-            }
-            const fn2 = function x(arg0) {
-              return canManageResource(arg0, stateFromStores, closure_6, closure_5);
-            };
-            class G {
-              constructor() {
-                return closure_6.getCurrentUser();
-              }
-            }
-            cResult[13] = tmp22;
-            cResult[14] = tmp23;
-            cResult[15] = stateFromStores;
-            cResult[16] = fn2;
-            tmp29 = fn2;
-          }
-        }
-        class V {
-          constructor(arg0) {
-            return canManageResource(isGuildStageVoice, closure_7, closure_4, closure_3);
-          }
-        }
-        cResult[9] = first1;
-        cResult[10] = tmp11Result[1];
-        cResult[11] = stateFromStores;
-        cResult[12] = V;
-        tmp28 = V;
-        const tmpResult4 = tmp(504);
-      }
-    }
-    const fn = function l() {
-      const items = [PermissionStore.can(Permissions.CREATE_GUILD_EXPRESSIONS, closure_0), PermissionStore.can(Permissions.MANAGE_GUILD_EXPRESSIONS, closure_0), PermissionStore.can(first, closure_0), PermissionStore.can(closure_2, closure_0)];
-      return items;
-    };
-    cResult[3] = isGuildStageVoice;
-    cResult[4] = first;
-    cResult[6] = fn;
-    tmp18 = fn;
-    tmp11 = first1;
-  }
-  const obj = require("c");
-}) : (function useManageResourcePermissions(isGuildStageVoice) {
-  _require = isGuildStageVoice;
-  if (obj.isGuildRecord(isGuildStageVoice)) {
+export function useManageResourcePermissions(channel) {
+  _require = channel;
+  if (obj.isGuildRecord(channel)) {
     let items = [, ];
     ({ CREATE_EVENTS: arr3[0], MANAGE_EVENTS: arr3[1] } = Permissions);
     let items2 = items;
-  } else if (null == isGuildStageVoice) {
+  } else if (null == channel) {
     const items1 = [, ];
     ({ CREATE_EVENTS: arr2[0], MANAGE_EVENTS: arr2[1] } = Permissions);
     items2 = items1;
   } else {
     let tmp4 = stateFromStores;
-    if (isGuildStageVoice.isGuildStageVoice()) {
+    if (channel.isGuildStageVoice()) {
       tmp4 = closure_8;
-    } else if (isGuildStageVoice.isGuildVoice()) {
+    } else if (channel.isGuildVoice()) {
       tmp4 = closure_9;
     }
     items2 = [BigFlagUtilsAll.combine(tmp4, Permissions.CREATE_EVENTS), ];
@@ -281,13 +133,13 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
   const items5 = [canCreateExpressions, tmp10[1], stateFromStores];
   const items6 = [tmp10[3], tmp10[2], stateFromStores];
   const callback = noop.useCallback((arg0) => canManageResource(arg0, stateFromStores, closure_4, first), items5);
-  if (null == isGuildStageVoice) {
+  if (null == channel) {
     let obj4 = closure_11;
   } else {
     obj4 = { canCreateExpressions, canCreateGuildEvent: tmp13, canManageAllExpressions: tmp12, canManageAllEvents: tmp14, canManageGuildExpression: callback, canManageGuildEvent: tmp17 };
   }
   return obj4;
-});
+}
 export function getManageResourcePermissions(guild) {
   let obj = c6;
   if (c6 === undefined) {

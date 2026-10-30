@@ -1,22 +1,22 @@
-// === Module 18421: ItemDetailsActionSheet ===
+// === Module 18480: ItemDetailsActionSheet ===
 
-// Module 18421 (ItemDetailsActionSheet)
+// Module 18480 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
-import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1199 */;
-import useChannelNameDefault from "useChannelName" /* 5641 */;
-import GuildIcon from "GuildIcon" /* 6943 */;
-import TableRow from "TableRow" /* 6963 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6986 */;
-import TableRowGroup from "TableRowGroup" /* 7047 */;
-import ActionSheet from "ActionSheet" /* 7358 */;
-import ICYMIUtils from "ICYMIUtils" /* 8880 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11106 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18422 */;
+import nativeDefault from "native" /* 575 */;
+import native from "native" /* 1188 */;
+import useChannelNameDefault from "useChannelName" /* 5647 */;
+import GuildIcon from "GuildIcon" /* 6951 */;
+import TableRow from "TableRow" /* 6969 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6994 */;
+import TableRowGroup from "TableRowGroup" /* 7054 */;
+import ActionSheet from "ActionSheet" /* 7360 */;
+import ICYMIUtils from "ICYMIUtils" /* 8914 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11125 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 18481 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import ICYMIStore from "ICYMIStore" /* 8863 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import ICYMIStore from "ICYMIStore" /* 8897 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,203 +24,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/ItemDetailsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ItemDetailsActionSheet(guildId) {
-  const cResult = guildId(id[9]).c(37);
-  guildId = guildId.guildId;
-  const channelId = guildId.channelId;
-  id = guildId.id;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== channelId) {
-    const fn = function _() {
-      return ChannelStore.getChannel(channelId);
-    };
-    cResult[1] = channelId;
-    cResult[2] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-  }
-  const obj = guildId(id[9]);
-  const stateFromStores = guildId(id[10]).useStateFromStores(first, tmp6);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [GuildStore];
-    cResult[3] = items1;
-    let tmp8 = items1;
-  } else {
-    tmp8 = cResult[3];
-  }
-  if (cResult[4] !== guildId) {
-    const fn2 = function f() {
-      return GuildStore.getGuild(guildId);
-    };
-    cResult[4] = guildId;
-    cResult[5] = fn2;
-    let tmp10 = fn2;
-  } else {
-    tmp10 = cResult[5];
-  }
-  const tmpResult = guildId(id[10]);
-  const stateFromStores1 = guildId(id[10]).useStateFromStores(tmp8, tmp10);
-  const tmp13 = channelId(id[11])(stateFromStores, true);
-  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [ICYMIStore];
-    cResult[6] = items2;
-    let tmp14 = items2;
-  } else {
-    tmp14 = cResult[6];
-  }
-  if (cResult[7] !== id) {
-    class C {
-      constructor() {
-        dehydratedItem = null;
-        if (null != id) {
-          tmp3 = closure_6;
-          dehydratedItem = closure_6.getDehydratedItem(tmp);
-        }
-        return dehydratedItem;
-      }
-    }
-    cResult[7] = id;
-    cResult[8] = C;
-  } else {
-    class C {
-      constructor() {
-        dehydratedItem = null;
-        if (null != id) {
-          tmp3 = closure_6;
-          dehydratedItem = closure_6.getDehydratedItem(tmp);
-        }
-        return dehydratedItem;
-      }
-    }
-  }
-  const tmp12 = channelId;
-  const tmpResult3 = guildId(id[10]);
-  const stateFromStores2 = guildId(id[10]).useStateFromStores(tmp14, C);
-  tmp12(id[12])("show_icymi_debug_scores");
-  if (null != stateFromStores1) {
-    class C {
-      constructor() {
-        dehydratedItem = null;
-        if (null != id) {
-          tmp3 = closure_6;
-          dehydratedItem = closure_6.getDehydratedItem(tmp);
-        }
-        return dehydratedItem;
-      }
-    }
-  } else {
-    class C {
-      constructor() {
-        dehydratedItem = null;
-        if (null != id) {
-          tmp3 = closure_6;
-          dehydratedItem = closure_6.getDehydratedItem(tmp);
-        }
-        return dehydratedItem;
-      }
-    }
-    if (null != stateFromStores) {
-      class C {
-        constructor() {
-          dehydratedItem = null;
-          if (null != id) {
-            tmp3 = closure_6;
-            dehydratedItem = closure_6.getDehydratedItem(tmp);
-          }
-          return dehydratedItem;
-        }
-      }
-    }
-    closure_10();
-    if (cResult[13] === stateFromStores) {
-      class C {
-        constructor() {
-          dehydratedItem = null;
-          if (null != id) {
-            tmp3 = closure_6;
-            dehydratedItem = closure_6.getDehydratedItem(tmp);
-          }
-          return dehydratedItem;
-        }
-      }
-      if (stateFromStores1 != null) {
-        class C {
-          constructor() {
-            dehydratedItem = null;
-            if (null != id) {
-              tmp3 = closure_6;
-              dehydratedItem = closure_6.getDehydratedItem(tmp);
-            }
-            return dehydratedItem;
-          }
-        }
-      }
-      if (undefined == null) {
-        class C {
-          constructor() {
-            dehydratedItem = null;
-            if (null != id) {
-              tmp3 = closure_6;
-              dehydratedItem = closure_6.getDehydratedItem(tmp);
-            }
-            return dehydratedItem;
-          }
-        }
-      }
-      if (cResult[16] === tmp13) {
-        class C {
-          constructor() {
-            dehydratedItem = null;
-            if (null != id) {
-              tmp3 = closure_6;
-              dehydratedItem = closure_6.getDehydratedItem(tmp);
-            }
-            return dehydratedItem;
-          }
-        }
-      }
-      const obj2 = { icon: tmp20, title: tmp13, subtitle: undefined };
-      const tmp30 = closure_7(tmp(tmp2[16]).ActionSheetIconHeader, obj2);
-      cResult[16] = tmp13;
-      cResult[17] = tmp20;
-      cResult[18] = undefined;
-      cResult[19] = tmp30;
-    }
-    let result = null != stateFromStores && null != stateFromStores1;
-    if (result) {
-      class C {
-        constructor() {
-          dehydratedItem = null;
-          if (null != id) {
-            tmp3 = closure_6;
-            dehydratedItem = closure_6.getDehydratedItem(tmp);
-          }
-          return dehydratedItem;
-        }
-      }
-      result = obj5.isChannelCustomScoreEligible(stateFromStores);
-    }
-    cResult[13] = stateFromStores;
-    cResult[14] = stateFromStores1;
-    cResult[15] = result;
-  }
-  const tmpResult4 = guildId(id[10]);
-}) : (function ItemDetailsActionSheet(arg0) {
+export default function ItemDetailsActionSheet(arg0) {
   ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
   const items = [ChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(importDefault));
@@ -297,4 +107,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ItemDeta
   items3[2] = tmp16Result2;
   obj7.children = items3;
   return closure_9(ActionSheet.ActionSheet, obj7);
-});
+};

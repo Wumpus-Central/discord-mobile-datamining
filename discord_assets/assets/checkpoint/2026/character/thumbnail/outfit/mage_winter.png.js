@@ -1,6 +1,6 @@
-// === Module 6278: ? ===
+// === Module 6285: ? ===
 
-// Module 6278
+// Module 6285
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/mage_winter.png.js");

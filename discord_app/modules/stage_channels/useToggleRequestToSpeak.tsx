@@ -1,11 +1,11 @@
-// === Module 11648: useToggleRequestToSpeak ===
+// === Module 11862: useToggleRequestToSpeak ===
 
-// Module 11648 (useToggleRequestToSpeak)
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6036 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6716 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6745 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7931 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7941 */;
+// Module 11862 (useToggleRequestToSpeak)
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6043 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6723 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6752 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7937 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7947 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -14,86 +14,10 @@ const require = globalThis.__r;
 const useAudienceRequestToSpeakStateDefault = useAudienceRequestToSpeakState;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/useToggleRequestToSpeak.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useToggleRequestToSpeak(id) {
-  _require = id;
-  const cResult = require("c").c(12);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AuthenticationStore];
-    const fn = function _() {
-      return id2.getId();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  let obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
-  const tmp8 = useAudienceRequestToSpeakStateDefault(stateFromStores, id.id);
-  importDefault = tmp8;
-  const tmp9 = tmp8 === require("useAudienceRequestToSpeakState").RequestToSpeakStates.REQUESTED_TO_SPEAK || tmp8 === require("useAudienceRequestToSpeakState").RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-  dependencyMap = tmp9;
-  const tmp10 = first(noop.useState(tmp9), 2);
-  first = tmp10[0];
-  noop = tmp10[1];
-  if (cResult[2] !== tmp9) {
-    class E {
-      constructor() {
-        tmp = closure_4(closure_2);
-        return;
-      }
-    }
-    const items1 = [tmp9];
-    cResult[2] = tmp9;
-    cResult[3] = E;
-    cResult[4] = items1;
-    let tmp13 = items1;
-  } else {
-    class E {
-      constructor() {
-        tmp = closure_4(closure_2);
-        return;
-      }
-    }
-    tmp13 = cResult[4];
-  }
-  const effect = noop.useEffect(E, tmp13);
-  if (cResult[5] === id) {
-    class E {
-      constructor() {
-        tmp = closure_4(closure_2);
-        return;
-      }
-    }
-  }
-  function handleToggleRequestToSpeak() {
-    if (obj.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-      const obj2 = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-      const result = AgeVerificationActionCreatorsDefault.showAgeVerificationGetStartedModal(obj2);
-    } else {
-      if (closure_1 === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
-        const result1 = StageChannelActionCreators.audienceAckRequestToSpeak(id, true);
-        const tmpResult = StageChannelActionCreators;
-      } else {
-        StageChannelActionCreators.toggleRequestToSpeak(id, !first);
-        const tmpResult2 = StageChannelActionCreators;
-      }
-      closure_4(!first);
-    }
-    obj = useStageSpeakingForCurrentUser;
-  }
-  cResult[5] = id;
-  cResult[6] = tmp8;
-  cResult[7] = first;
-  cResult[8] = handleToggleRequestToSpeak;
-  let tmpResult = require("initialize");
-}) : (function useToggleRequestToSpeak(id) {
+export default function useToggleRequestToSpeak(id) {
   _require = id;
   const items = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => id2.getId());
@@ -128,4 +52,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useToggl
     }
   ];
   return items2;
-});
+};

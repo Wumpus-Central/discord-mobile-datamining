@@ -1,23 +1,23 @@
-// === Module 8646: transformEmbeds ===
+// === Module 8680: transformEmbeds ===
 
-// Module 8646 (transformEmbeds)
+// Module 8680 (transformEmbeds)
 import _mod17 from "module_17" /* 17 */;
-import Constants from "Constants" /* 1084 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
-import util from "util" /* 1125 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import DateUtils from "DateUtils" /* 4830 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6039 */;
-import EmbedUtils from "EmbedUtils" /* 6545 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6713 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7449 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7455 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8331 */;
-import MarkupParsers from "MarkupParsers" /* 8518 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8647 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8648 */;
-import utils from "utils" /* 8649 */;
-import NativeChatCapabilities from "NativeChatCapabilities" /* 8650 */;
+import Constants from "Constants" /* 1072 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import DateUtils from "DateUtils" /* 4831 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6046 */;
+import EmbedUtils from "EmbedUtils" /* 6552 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6720 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7457 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7463 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8388 */;
+import MarkupParsers from "MarkupParsers" /* 8552 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8681 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8682 */;
+import utils from "utils" /* 8683 */;
+import NativeChatCapabilities from "NativeChatCapabilities" /* 8684 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -221,14 +221,14 @@ export default function transformEmbeds(arg0) {
                           const mapped1 = fields.map((rawName) => {
                             let result = null;
                             if (null != rawName.rawName) {
-                              result = channelId(8518).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                              const obj = channelId(8518);
+                              result = channelId(8552).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                              const obj = channelId(8552);
                             }
                             let result1 = null;
                             if (null != rawName.rawValue) {
                               const obj3 = { description: rawName.rawValue, channelId, isField: true, ignoreCache, replaceMap: { "\t": "" }, showListsAndHeaders, showMaskedLinks };
-                              result1 = channelId(8518).parseEmbedDescriptionMarkup(obj3);
-                              const obj2 = channelId(8518);
+                              result1 = channelId(8552).parseEmbedDescriptionMarkup(obj3);
+                              const obj2 = channelId(8552);
                             }
                             const obj4 = {};
                             const merged = Object.assign(rawName);

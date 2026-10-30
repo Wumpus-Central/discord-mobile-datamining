@@ -1,11 +1,11 @@
-// === Module 7573: BillingStandaloneNativeUtils ===
+// === Module 7581: BillingStandaloneNativeUtils ===
 
-// Module 7573 (BillingStandaloneNativeUtils)
+// Module 7581 (BillingStandaloneNativeUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import Constants from "Constants" /* 1084 */;
-import LinkingDefault from "Linking" /* 5698 */;
-import PaymentConstants from "PaymentConstants" /* 5736 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7574 */;
+import Constants from "Constants" /* 1072 */;
+import LinkingDefault from "Linking" /* 5704 */;
+import PaymentConstants from "PaymentConstants" /* 5742 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7582 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -49,7 +49,7 @@ export function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selectio
     obj3.flowType = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
     let tmp5 = obj3;
   } else {
-    obj3.deepLinkType = tmp(1104).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    obj3.deepLinkType = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
     tmp5 = obj3;
   }
   return obj.goToStandalonePremiumCheckout(tmp5, (body, searchParams) => {
@@ -73,7 +73,7 @@ export function goToStandaloneNitroManagementFromMobileApp(premium_external_mana
   if (obj2.isMetaQuest()) {
     let result = Routes.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT, loadId);
   } else {
-    result = Routes.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(tmp(1104).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT, loadId);
+    result = Routes.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT, loadId);
   }
   return obj.goToBillingStandalonePageWithHandoff(result, (body, searchParams) => {
     searchParams = searchParams.searchParams;
@@ -93,7 +93,7 @@ export function goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, ne
   CustomCheckoutFlow = arg4;
   let prop;
   if (!obj.isMetaQuest()) {
-    prop = tmp(1104).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    prop = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
   }
   obj = require("MetaQuestUtils");
   let prop1;

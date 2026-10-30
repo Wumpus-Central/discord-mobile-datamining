@@ -1,49 +1,19 @@
-// === Module 18561: conjureBackgroundFrames ===
+// === Module 18620: conjureBackgroundFrames ===
 
-// Module 18561 (conjureBackgroundFrames)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10840 */;
-import leaveFrame from "leaveFrame" /* 10879 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10880 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 16207 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18562 */;
-import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 18564 */;
+// Module 18620 (conjureBackgroundFrames)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6843 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10863 */;
+import leaveFrame from "leaveFrame" /* 10902 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10903 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 16247 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18621 */;
+import conjureBackgroundFramePlatformDefault from "conjureBackgroundFramePlatform" /* 18623 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6833 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-
-const require = globalThis.__r;
+import FramesStore from "FramesStore" /* 6840 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 require = fn;
-function releaseConjureFrame(frameId) {
-  const frame = FramesStore.getFrame(frameId);
-  if (null != frame) {
-    let result = conjureBackgroundFrameRules.shouldRunInBackgroundOnRelease(frame);
-    if (result) {
-      result = !conjureBackgroundFrameRules.isBuilderPreviewFrame(frame);
-      const tmp13Result = conjureBackgroundFrameRules;
-    }
-    if (result) {
-      result = !conjureBackgroundFramePlatformDefault.hasOwnPictureInPicture(frame);
-    }
-    if (result) {
-      result = !conjureBackgroundFramePlatformDefault.isInHostWindow(frame);
-    }
-    if (result) {
-      result = !conjureBackgroundFramePlatformDefault.isActivityPopoutOpen();
-    }
-    const intent = frame.intent;
-    if (result) {
-      if (intent === constants.INLINE) {
-        FramesActionCreatorsDefault.promoteFrame(frameId);
-      }
-      const result1 = conjureBackgroundFramePlatformDefault.enterPictureInPicture(frameId);
-    } else if (intent === constants.MAIN) {
-      FramesActionCreatorsDefault.demoteMainFrame(frameId);
-    }
-  }
-}
 function isRunningInBackground(surface) {
   let isPictureInPicture = dependencyMap;
   let tmp2 = surface.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY;
@@ -98,81 +68,12 @@ function closeBackgroundedConjureAppFrames(applicationId, arg1) {
   }
   obj = validateConjureAppFrame;
 }
-const FramesConstants = fn(6834);
+const FramesConstants = fn(6841);
 ({ FrameIntent: metroRequire, makeFrameId: closure_7 } = FramesConstants);
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrames.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureFrameHandoff(arg0, arg1) {
-  _require = arg0;
-  const cResult = require("c").c(7);
-  if (cResult[0] === arg0) {
-    if (cResult[1] === arg1) {
-      let tmp2 = cResult[2];
-    }
-    closure_1 = tmp2;
-    if (cResult[3] === arg0) {
-      if (cResult[4] === tmp2) {
-        let tmp5 = cResult[5];
-        let tmp6 = cResult[6];
-      }
-      const effect = noop.useEffect(tmp5, tmp6);
-    }
-    const fn = function s() {
-      if (null != closure_1) {
-        closeBackgroundedConjureAppFrames(closure_0, closure_1);
-        const frame = FramesStore.getFrame(closure_1);
-        if (null != frame) {
-          if (!obj6.isActivityPopoutOpen()) {
-            const mainFrame = FramesStore.getMainFrame();
-            let id;
-            if (mainFrame != null) {
-              id = mainFrame.id;
-            }
-            if (frame.intent === constants.MAIN) {
-              if (!tmp8) {
-                FramesActionCreatorsDefault.promoteFrame(closure_1);
-                const tmp15Result = FramesActionCreatorsDefault;
-              }
-              const result = FramesActionCreatorsDefault.resetFrameLayoutModes(closure_1);
-              const tmp15Result3 = FramesActionCreatorsDefault;
-            } else {
-              let isConjureApplicationResult = tmp8;
-              if (tmp8) {
-                isConjureApplicationResult = validateConjureAppFrame.isConjureApplication(frame.applicationId);
-              }
-              if (isConjureApplicationResult) {
-                FramesActionCreatorsDefault.clearMainFrameSlot();
-                const tmp15Result4 = FramesActionCreatorsDefault;
-              }
-            }
-          }
-          obj6 = conjureBackgroundFramePlatformDefault;
-        }
-        return () => {
-          releaseConjureFrame(closure_1_1);
-        };
-      }
-    };
-    const items = [arg0, tmp2];
-    cResult[3] = arg0;
-    cResult[4] = tmp2;
-    cResult[5] = fn;
-    cResult[6] = items;
-    tmp6 = items;
-    tmp5 = fn;
-  }
-  let tmp3 = null;
-  if (null != arg1) {
-    tmp3 = closure_7(arg0, arg1);
-  }
-  cResult[0] = arg0;
-  cResult[1] = arg1;
-  cResult[2] = tmp3;
-  tmp2 = tmp3;
-  const obj = require("c");
-}) : (function useConjureFrameHandoff(arg0, arg1) {
+export default function useConjureFrameHandoff(arg0, arg1) {
   closure_0 = arg0;
   let tmp = null;
   if (null != arg1) {
@@ -183,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   const effect = noop.useEffect(() => {
     if (null != closure_1) {
       closeBackgroundedConjureAppFrames(closure_0, closure_1);
-      const frame = FramesStore.getFrame(closure_1);
+      frame = FramesStore.getFrame(closure_1);
       if (null != frame) {
         if (!obj6.isActivityPopoutOpen()) {
           const mainFrame = FramesStore.getMainFrame();
@@ -196,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
               FramesActionCreatorsDefault.promoteFrame(closure_1);
               const tmp15Result = FramesActionCreatorsDefault;
             }
-            const result = FramesActionCreatorsDefault.resetFrameLayoutModes(closure_1);
+            let result = FramesActionCreatorsDefault.resetFrameLayoutModes(closure_1);
             const tmp15Result3 = FramesActionCreatorsDefault;
           } else {
             let isConjureApplicationResult = tmp8;
@@ -212,11 +113,43 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
         obj6 = conjureBackgroundFramePlatformDefault;
       }
       return () => {
-        releaseConjureFrame(closure_1_1);
+        frame = frame.getFrame(closure_1_1);
+        if (null != frame) {
+          let result = closure_0(dependencyMap[4]).shouldRunInBackgroundOnRelease(frame);
+          if (result) {
+            result = !closure_0(dependencyMap[4]).isBuilderPreviewFrame(frame);
+            const tmp14Result = closure_0(dependencyMap[4]);
+          }
+          if (result) {
+            result = !closure_1(dependencyMap[5]).hasOwnPictureInPicture(frame);
+            const obj2 = closure_1(dependencyMap[5]);
+          }
+          if (result) {
+            result = !closure_1(dependencyMap[5]).isInHostWindow(frame);
+            const obj3 = closure_1(dependencyMap[5]);
+          }
+          if (result) {
+            result = !closure_1(dependencyMap[5]).isActivityPopoutOpen();
+            const obj4 = closure_1(dependencyMap[5]);
+          }
+          const intent = frame.intent;
+          if (result) {
+            if (intent === constants.INLINE) {
+              closure_1(dependencyMap[6]).promoteFrame(closure_1_1);
+              const obj6 = closure_1(dependencyMap[6]);
+            }
+            const result1 = closure_1(dependencyMap[5]).enterPictureInPicture(closure_1_1);
+            const obj7 = closure_1(dependencyMap[5]);
+          } else if (intent === constants.MAIN) {
+            closure_1(dependencyMap[6]).demoteMainFrame(closure_1_1);
+            const obj5 = closure_1(dependencyMap[6]);
+          }
+          const obj8 = closure_0(dependencyMap[4]);
+        }
       };
     }
   }, items);
-});
+};
 export { closeBackgroundedConjureAppFrames };
 export function returnToConjureFrameSurface(frame) {
   if (frame.intent === constants.INLINE) {

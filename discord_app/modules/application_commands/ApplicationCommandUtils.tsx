@@ -1,19 +1,19 @@
-// === Module 7688: ApplicationCommandUtils ===
+// === Module 7693: ApplicationCommandUtils ===
 
-// Module 7688 (ApplicationCommandUtils)
+// Module 7693 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
-import Constants2 from "Constants" /* 1095 */;
-import Server from "Server" /* 1998 */;
-import ChannelRecord from "ChannelRecord" /* 4861 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import DraftStore from "DraftStore" /* 7689 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7691 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6023 */;
-import Constants from "Constants" /* 1084 */;
-import BigFlagUtils from "BigFlagUtils" /* 1096 */;
+import Constants2 from "Constants" /* 1083 */;
+import Server from "Server" /* 1993 */;
+import ChannelRecord from "ChannelRecord" /* 4862 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5678 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import DraftStore from "DraftStore" /* 7694 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7696 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6030 */;
+import Constants from "Constants" /* 1072 */;
+import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 function buildCommand(arg0) {
@@ -122,13 +122,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F147897 */ function() { ... });
+                      mapped = choices.map(/* F123716 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F101015 */ function() { ... });
+                      mapped1 = options.map(/* F91064 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -436,8 +436,7 @@ export { buildCommand };
 export function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
   return _modDef12.flatMap(uniqByResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
-    return buildSubCommands(obj);
+    return buildSubCommands({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions });
   });
 }
 export function applicationPermissionsList(arr) {
@@ -476,16 +475,16 @@ export function getMatchingGroupCommands(contextCommands, regExp, arg2, arg3) {
   });
   return items.slice(0, arg3);
 }
-export function getApplicationCommandOptionQueryOptions(option) {
-  let tmp3 = option.type === Server.ApplicationCommandOptionType.USER;
+export function getApplicationCommandOptionQueryOptions(activeOption) {
+  let tmp3 = activeOption.type === Server.ApplicationCommandOptionType.USER;
   if (!tmp3) {
-    tmp3 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
+    tmp3 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  let tmp4 = option.type === Server.ApplicationCommandOptionType.ROLE;
+  let tmp4 = activeOption.type === Server.ApplicationCommandOptionType.ROLE;
   if (!tmp4) {
-    tmp4 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
+    tmp4 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  const tmp5 = option.type === Server.ApplicationCommandOptionType.STRING;
+  const tmp5 = activeOption.type === Server.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;
   if (!tmp5) {
     tmp6 = tmp4;
@@ -493,7 +492,7 @@ export function getApplicationCommandOptionQueryOptions(option) {
   const obj = { canMentionEveryone: tmp6, canMentionHere: tmp5, canMentionChannels: null, canMentionUsers: null, canMentionRoles: null, canMentionAnyGuildUser: null, canMentionNonMentionableRoles: null, canMentionOtherGlobals: null };
   let tmp7 = tmp5;
   if (!tmp5) {
-    tmp7 = option.type === Server.ApplicationCommandOptionType.CHANNEL;
+    tmp7 = activeOption.type === Server.ApplicationCommandOptionType.CHANNEL;
   }
   obj.canMentionChannels = tmp7;
   let tmp8 = tmp5;

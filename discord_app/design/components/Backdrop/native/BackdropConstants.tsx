@@ -1,6 +1,6 @@
-// === Module 15731: BackdropConstants ===
+// === Module 15771: BackdropConstants ===
 
-// Module 15731 (BackdropConstants)
+// Module 15771 (BackdropConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Backdrop/native/BackdropConstants.tsx");

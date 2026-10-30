@@ -1,28 +1,28 @@
-// === Module 12801: ConjureTemplateWizardSheet ===
+// === Module 12952: ConjureTemplateWizardSheet ===
 
-// Module 12801 (ConjureTemplateWizardSheet)
-import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import TableRadioRow from "TableRadioRow" /* 7044 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
-import ConjureCreateErrors from "ConjureCreateErrors" /* 10836 */;
-import ConjureTemplateWizard from "ConjureTemplateWizard" /* 12806 */;
+// Module 12952 (ConjureTemplateWizardSheet)
+import nativeDefault from "native" /* 575 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import TableRadioRow from "TableRadioRow" /* 7055 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
+import ConjureCreateErrors from "ConjureCreateErrors" /* 10859 */;
+import ConjureTemplateWizard from "ConjureTemplateWizard" /* 12957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import ConjureChatStore from "ConjureChatStore" /* 10808 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import ConjureChatStore from "ConjureChatStore" /* 10831 */;
 
 require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10807);
+const ConjureConnectionStore = fn(10830);
 ({ ensureConnection: c10, sendUserMessage: closure_11, stageModelSettings: closure_12 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const ConjureTemplateWizardSheet = "ConjureTemplateWizardSheet";
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, loading: null, pointCard: null, pointIcon: null, point: null, actions: null, action: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.loading = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
@@ -36,7 +36,7 @@ let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.action = { flex: 1 };
 let closure_17 = createStyles.createStyles(obj2);
-let obj9 = { shield: fn(12802).ChatShieldIcon, hammer: fn(12804).HammerIcon, group: fn(8619).GroupIcon };
+let obj9 = { shield: fn(12953).ChatShieldIcon, hammer: fn(12955).HammerIcon, group: fn(8653).GroupIcon };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/templates/native/ConjureTemplateWizardSheet.tsx");
 
@@ -66,7 +66,7 @@ export default function ConjureTemplateWizardSheet(template) {
   let obj = template;
   let result3 = dependencyMap;
   let items = [first, closure_8];
-  const stateFromStores = template(504).useStateFromStores(items, () => template(12806).conjureTemplateWizardGuilds(first.getGuildsArray(), "ConjureTemplateWizardSheet"));
+  const stateFromStores = template(504).useStateFromStores(items, () => template(12957).conjureTemplateWizardGuilds(first.getGuildsArray(), "ConjureTemplateWizardSheet"));
   let obj2 = template(504);
   [tmp4, c6] = stateFromStores.useState(0);
   [first, closure_8] = stateFromStores.useState(() => {
@@ -99,23 +99,23 @@ export default function ConjureTemplateWizardSheet(template) {
     if (null != first) {
       c0 = false;
       const obj2 = { guild_id: tmp, install_scope: "guild" };
-      const project = template(10832).createProject(obj2);
-      let obj = template(10832);
+      const project = template(10855).createProject(obj2);
+      let obj = template(10855);
       project.then((current) => {
         closure_0 = current;
         ref.current = current;
         ref2.current = current;
         if (closure_0) {
-          const obj3 = template(10832);
-          template(10832).deleteProject(current).catch(() => {
+          const obj3 = template(10855);
+          template(10855).deleteProject(current).catch(() => {
 
           });
-          const deleteProjectResult = template(10832).deleteProject(current);
+          const deleteProjectResult = template(10855).deleteProject(current);
         } else {
           const obj = { templateId: _true.id };
           closure_10(current, obj);
           first3(current, dependencyMap);
-          const result = template(12806).startConjureTemplateWizard(current, _true);
+          const result = template(12957).startConjureTemplateWizard(current, _true);
           return result.then((result) => {
             if (!c0) {
               c11(result);
@@ -163,7 +163,7 @@ export default function ConjureTemplateWizardSheet(template) {
   if (tmp25) {
     tmp25 = null != stateFromStores1;
   }
-  guildId(12808)(first2, template.id, tmp25);
+  guildId(12959)(first2, template.id, tmp25);
   if (stateFromStores2) {
     stateFromStores2 = null == tmp21;
   }
@@ -183,14 +183,14 @@ export default function ConjureTemplateWizardSheet(template) {
       onCreated(first2, current);
     }
   }, items5);
-  const tmp24 = guildId(12808);
-  const conjureWizardIntroResult = obj(12806).conjureWizardIntro(tmp21);
-  const objResult6 = obj(12806);
-  let result = obj(12806).conjureWizardServerCopy(tmp21);
-  const objResult7 = obj(12806);
-  result1 = obj(12806).conjureWizardQuestions(tmp21);
-  const objResult8 = obj(12806);
-  const result2 = obj(12806).conjureTemplateWizardSteps(result1, first1);
+  const tmp24 = guildId(12959);
+  const conjureWizardIntroResult = obj(12957).conjureWizardIntro(tmp21);
+  const objResult6 = obj(12957);
+  let result = obj(12957).conjureWizardServerCopy(tmp21);
+  const objResult7 = obj(12957);
+  result1 = obj(12957).conjureWizardQuestions(tmp21);
+  const objResult8 = obj(12957);
+  const result2 = obj(12957).conjureTemplateWizardSteps(result1, first1);
   const tmp31 = result2[Math.min(Math, tmp4, result2.length - 1)];
   length = result2.length;
   let tmp32;
@@ -226,7 +226,7 @@ export default function ConjureTemplateWizardSheet(template) {
     }
   }, []);
   const callback1 = obj3.useCallback(() => {
-    guildId(5247).hideActionSheet(c16);
+    guildId(5253).hideActionSheet(c16);
   }, []);
   const items6 = [first3, onCreated, first, first2, result1, first4, template.id];
   closure_24 = obj3.useCallback(onCreated(function*() {
@@ -240,7 +240,7 @@ export default function ConjureTemplateWizardSheet(template) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -273,9 +273,9 @@ export default function ConjureTemplateWizardSheet(template) {
                       c5 = 1;
                       obj9 = {
                         value: result(tmp48[16]).setGuildHints(first2, obj8).catch((error) => {
-                                            result = closure_1_0(10836).classifyCreateFailure(error);
-                                            const obj = closure_1_0(10836);
-                                            const conjureCreateError = new closure_1_0(10836).ConjureCreateError(result, closure_1_0(10836).createFailureStatus(error));
+                                            result = closure_1_0(10859).classifyCreateFailure(error);
+                                            const obj = closure_1_0(10859);
+                                            const conjureCreateError = new closure_1_0(10859).ConjureCreateError(result, closure_1_0(10859).createFailureStatus(error));
                                             throw conjureCreateError;
                                           }),
                         done: false
@@ -338,14 +338,14 @@ export default function ConjureTemplateWizardSheet(template) {
   }
   if (null != tmp17) {
     let obj5 = { variant: "text-sm/normal", color: "text-feedback-critical", children: tmp17 };
-    let tmp43Result2 = closure_13(obj(5271).Text, obj5);
+    let tmp43Result2 = closure_13(obj(5619).Text, obj5);
     let tmp39 = closure_13;
   } else {
     tmp39 = closure_13;
-    let obj6 = { style: tmp.loading, children: closure_13(obj(6940).ActivityIndicator, {}) };
+    let obj6 = { style: tmp.loading, children: closure_13(obj(6947).ActivityIndicator, {}) };
     tmp43Result2 = closure_13(c6, obj6);
   }
-  let obj7 = { startExpanded: true, keyboardShouldPersistTaps: "handled", onDismiss: callback, header: tmp39(obj(7308).BottomSheetTitleHeader, { title: name }), children: null };
+  let obj7 = { startExpanded: true, keyboardShouldPersistTaps: "handled", onDismiss: callback, header: tmp39(obj(7315).BottomSheetTitleHeader, { title: name }), children: null };
   let obj8 = { style: tmp.content, children: null };
   let tmp45 = null;
   if ("about" === tmp31) {
@@ -353,7 +353,7 @@ export default function ConjureTemplateWizardSheet(template) {
     if (null != conjureWizardIntroResult) {
       obj9 = { children: null };
       let obj10 = { variant: "text-md/medium", color: "text-default", children: conjureWizardIntroResult.lead };
-      const items7 = [tmp39(obj(5271).Text, obj10), ];
+      const items7 = [tmp39(obj(5619).Text, obj10), ];
       const points = conjureWizardIntroResult.points;
       items7[1] = points.map((children, index) => {
         const obj = { style: closure_4.pointCard, children: null };
@@ -402,17 +402,17 @@ export default function ConjureTemplateWizardSheet(template) {
                 },
           disabled: first4
         };
-        const items9 = [tmp39(obj(7240).TextArea, obj12), , ];
+        const items9 = [tmp39(obj(7247).TextArea, obj12), , ];
         let tmp39Result = null;
         if (null != tmp32.hint) {
           const obj13 = { variant: "text-sm/normal", color: "text-muted", children: tmp32.hint };
-          tmp39Result = tmp39(obj(5271).Text, obj13);
+          tmp39Result = tmp39(obj(5619).Text, obj13);
         }
         items9[1] = tmp39Result;
         let tmp39Result4 = null;
         if (null != tmp17) {
           const obj14 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp17 };
-          tmp39Result4 = tmp39(obj(5271).Text, obj14);
+          tmp39Result4 = tmp39(obj(5619).Text, obj14);
         }
         items9[2] = tmp39Result4;
         obj11.children = items9;
@@ -425,21 +425,21 @@ export default function ConjureTemplateWizardSheet(template) {
     const obj16 = { style: tmp.action, children: null };
     if (0 === tmp4) {
       const obj17 = { variant: "secondary", text: null, disabled: null, onPress: null };
-      const intl4 = obj(1125).intl;
-      obj17.text = intl4.string(obj(1125).t["ETE/oC"]);
+      const intl4 = obj(1114).intl;
+      obj17.text = intl4.string(obj(1114).t["ETE/oC"]);
       obj17.disabled = first4;
       obj17.onPress = callback1;
       let obj18 = obj17;
     } else {
       obj18 = { variant: "secondary", text: null, disabled: null, onPress: null };
-      const intl3 = obj(1125).intl;
-      obj18.text = intl3.string(obj(1125).t["13/7kX"]);
+      const intl3 = obj(1114).intl;
+      obj18.text = intl3.string(obj(1114).t["13/7kX"]);
       obj18.disabled = first4;
       obj18.onPress = function onPress() {
         return _undefined((arg0) => Math.max(0, arg0 - 1));
       };
     }
-    obj16.children = tmp39(obj(5281).Button, obj18);
+    obj16.children = tmp39(obj(5629).Button, obj18);
     const items10 = [tmp39(tmp44, obj16), ];
     if ("none" === first1) {
       items10[1] = null;
@@ -447,16 +447,16 @@ export default function ConjureTemplateWizardSheet(template) {
       items8[3] = tmp43(tmp44, obj15);
       obj8.children = items8;
       obj7.children = tmp43(tmp44, obj8);
-      return tmp39(obj(7358).ActionSheet, obj7);
+      return tmp39(obj(7360).ActionSheet, obj7);
     } else {
       const obj19 = { style: tmp.action, children: null };
       if (tmp4 === length - 1) {
         const obj20 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
-        const intl5 = obj(1125).intl;
-        obj20.text = intl5.string(tmp23(3864)["5iv8MF"]);
+        const intl5 = obj(1114).intl;
+        obj20.text = intl5.string(tmp23(3865)["5iv8MF"]);
         let tmp56 = null == first2 || null == first;
         if (!tmp56) {
-          obj = obj(12806);
+          obj = obj(12957);
           result3 = obj.isConjureWizardComplete(result1, first3);
           tmp56 = !result3;
         }
@@ -469,8 +469,8 @@ export default function ConjureTemplateWizardSheet(template) {
         };
         let obj21 = obj20;
       } else {
-        const intl6 = obj(1125).intl;
-        const t = obj(1125).t;
+        const intl6 = obj(1114).intl;
+        const t = obj(1114).t;
         obj21 = { variant: "primary", text: intl6.string(tmp34 ? t["5Wxrcd"] : t.PDTjLN), disabled: null, onPress: null };
         if (tmp48) {
           tmp48 = null == first;
@@ -478,8 +478,8 @@ export default function ConjureTemplateWizardSheet(template) {
         if (!tmp48) {
           let tmp55 = typeof tmp31 === "object";
           if (typeof tmp31 === "object") {
-            tmp55 = !obj(12806).canLeaveConjureWizardQuestion(tmp32, str);
-            const objResult10 = obj(12806);
+            tmp55 = !obj(12957).canLeaveConjureWizardQuestion(tmp32, str);
+            const objResult10 = obj(12957);
           }
           tmp48 = tmp55;
         }
@@ -488,14 +488,14 @@ export default function ConjureTemplateWizardSheet(template) {
           return _undefined((arg0) => Math.min(length - 1, arg0 + 1));
         };
       }
-      obj19.children = tmp39(obj(5281).Button, obj21);
+      obj19.children = tmp39(obj(5629).Button, obj21);
       tmp39(tmp44, obj19);
     }
   } else if (0 === stateFromStores.length) {
     const obj22 = { variant: "text-sm/normal", color: "text-muted", children: null };
-    const intl2 = obj(1125).intl;
-    obj22.children = intl2.string(tmp23(3864)["6ys5dn"]);
-    let tmp39Result6 = tmp39(obj(5271).Text, obj22);
+    const intl2 = obj(1114).intl;
+    obj22.children = intl2.string(tmp23(3865)["6ys5dn"]);
+    let tmp39Result6 = tmp39(obj(5619).Text, obj22);
   } else {
     let str4 = first;
     if (first == null) {
@@ -511,12 +511,12 @@ export default function ConjureTemplateWizardSheet(template) {
       accessibilityLabel: null,
       children: null
     };
-    const intl = obj(1125).intl;
-    obj24.accessibilityLabel = intl.string(tmp23(3864).lHT5Dp);
+    const intl = obj(1114).intl;
+    obj24.accessibilityLabel = intl.string(tmp23(3865).lHT5Dp);
     obj24.children = stateFromStores.map((label) => map1(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first4 }, label.id));
-    const items11 = [tmp39(obj(7045).TableRadioGroup, obj24), ];
+    const items11 = [tmp39(obj(7052).TableRadioGroup, obj24), ];
     const obj25 = { variant: "text-sm/normal", color: "text-muted", children: result.hint };
-    items11[1] = tmp39(obj(5271).Text, obj25);
+    items11[1] = tmp39(obj(5619).Text, obj25);
     obj23.children = items11;
     tmp39Result6 = tmp43(closure_15, obj23);
   }

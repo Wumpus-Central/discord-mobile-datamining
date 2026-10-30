@@ -1,72 +1,19 @@
-// === Module 16506: AccountDisplayNameSetting ===
+// === Module 16557: AccountDisplayNameSetting ===
 
-// Module 16506 (AccountDisplayNameSetting)
+// Module 16557 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import UserStore from "UserStore" /* 1389 */;
+import util from "util" /* 1114 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountDisplayNameSettingTrailing() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UserStore];
-    const fn = function s() {
-      currentUser = currentUser.getCurrentUser();
-      let globalName;
-      if (currentUser != null) {
-        globalName = currentUser.globalName;
-      }
-      return globalName;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useAccountDisplayNameSettingTrailing() {
-  const items = [UserStore];
-  return initialize.useStateFromStores(items, () => {
-    currentUser = currentUser.getCurrentUser();
-    let globalName;
-    if (currentUser != null) {
-      globalName = currentUser.globalName;
-    }
-    return globalName;
-  });
-});
+const SettingBuilders = fn(11505);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9AjdkD"]);
   },
-  parent: fn(8387).MobileUserSettings.ACCOUNT,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountDisplayNameSettingTrailing() {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [UserStore];
-      const fn = function s() {
-        currentUser = currentUser.getCurrentUser();
-        let globalName;
-        if (currentUser != null) {
-          globalName = currentUser.globalName;
-        }
-        return globalName;
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (function useAccountDisplayNameSettingTrailing() {
+  parent: fn(8424).MobileUserSettings.ACCOUNT,
+  useTrailing: function useAccountDisplayNameSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
@@ -76,9 +23,9 @@ const route = SettingBuilders.createRoute({
       }
       return globalName;
     });
-  }),
+  },
   screen: {
-    route: fn(1084).UserSettingsSections.PROFILE_CUSTOMIZATION,
+    route: fn(1072).UserSettingsSections.PROFILE_CUSTOMIZATION,
     getComponent() {
       return require("ProfileCustomizationSettingScreen").default;
     }

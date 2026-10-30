@@ -1,7 +1,7 @@
-// === Module 15873: IOSAudioInterruptExperiment ===
+// === Module 15912: IOSAudioInterruptExperiment ===
 
-// Module 15873 (IOSAudioInterruptExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 15912 (IOSAudioInterruptExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-ios-audio-interrupt-handling", kind: "user", defaultConfig: { enabled: false }, variations: null };

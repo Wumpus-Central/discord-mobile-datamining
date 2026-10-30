@@ -1,12 +1,12 @@
-// === Module 8005: useInitiateAgeVerification ===
+// === Module 8011: useInitiateAgeVerification ===
 
-// Module 8005 (useInitiateAgeVerification)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7954 */;
+// Module 8011 (useInitiateAgeVerification)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 function useAgeVerificationRunner(onComplete) {
@@ -49,7 +49,7 @@ function useAgeVerificationRunner(onComplete) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -169,62 +169,12 @@ function useAgeVerificationRunner(onComplete) {
     }, items2)
   };
 }
-const AbortCodes = fn(1084).AbortCodes;
-const SafetyToastType = fn(7476).SafetyToastType;
-fn(558);
-const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInitiateAgeVerification(arg0) {
-  const cResult = classificationId(576).c(10);
-  ({ onComplete, entryPoint, shouldShowExpressiveModal, classificationId } = arg0);
-  let tmp3 = null;
-  if (undefined !== classificationId) {
-    tmp3 = classificationId;
-  }
-  classificationId = tmp3;
-  if (cResult[0] === entryPoint) {
-    if (cResult[1] === onComplete) {
-      if (cResult[2] === tmp2) {
-        let tmp4 = cResult[3];
-      }
-      ({ loading, startVerification } = useAgeVerificationRunner(tmp4));
-      if (cResult[4] === tmp3) {
-        if (cResult[5] === startVerification) {
-          let tmp7 = cResult[6];
-        }
-        if (cResult[7] === tmp7) {
-          if (cResult[8] === loading) {
-            let tmp8 = cResult[9];
-          }
-          return tmp8;
-        }
-        let obj2 = { loading, initiateAgeVerification: tmp7 };
-        cResult[7] = tmp7;
-        cResult[8] = loading;
-        cResult[9] = obj2;
-        tmp8 = obj2;
-      }
-      const fn = function v(method, vendor) {
-        startVerification = vendor;
-        return startVerification(() => {
-          const obj2 = { method, classificationId, vendor };
-          return AgeVerificationURLActionCreators.requestAgeVerification(obj2);
-        });
-      };
-      cResult[4] = tmp3;
-      cResult[5] = startVerification;
-      cResult[6] = fn;
-      tmp7 = fn;
-      const tmp6 = useAgeVerificationRunner(tmp4);
-    }
-  }
-  const obj3 = { onComplete, entryPoint, shouldShowExpressiveModal: undefined !== shouldShowExpressiveModal && shouldShowExpressiveModal };
-  cResult[0] = entryPoint;
-  cResult[1] = onComplete;
-  cResult[2] = undefined !== shouldShowExpressiveModal && shouldShowExpressiveModal;
-  cResult[3] = obj3;
-  tmp4 = obj3;
-  const obj = classificationId(576);
-}) : (function useInitiateAgeVerification(shouldShowExpressiveModal) {
+const AbortCodes = fn(1072).AbortCodes;
+const SafetyToastType = fn(7484).SafetyToastType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
+
+export function useInitiateAgeVerification(shouldShowExpressiveModal) {
   let flag = shouldShowExpressiveModal.shouldShowExpressiveModal;
   ({ onComplete, entryPoint } = shouldShowExpressiveModal);
   if (flag === undefined) {
@@ -246,60 +196,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInitiateA
     });
   }, items);
   return obj;
-});
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
-
-export const useInitiateAgeVerification = tmp2;
-export const useInitiateAgeVerificationV2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInitiateAgeVerificationV2(arg0) {
-  const cResult = startVerification(576).c(9);
-  ({ onComplete, entryPoint, onMethodUnavailable } = arg0);
-  if (cResult[0] === entryPoint) {
-    if (cResult[1] === onComplete) {
-      if (cResult[2] === onMethodUnavailable) {
-        let tmp2 = cResult[3];
-      }
-      ({ loading, startVerification } = useAgeVerificationRunner(tmp2));
-      if (cResult[4] !== startVerification) {
-        const fn = function c(arg0) {
-          closure_0 = arg0;
-          return startVerification(() => startVerification(dependencyMap[12]).requestAgeVerificationV2(closure_0.method, closure_0.vendor), arg0);
-        };
-        cResult[4] = startVerification;
-        cResult[5] = fn;
-        let tmp5 = fn;
-      } else {
-        tmp5 = cResult[5];
-      }
-      if (cResult[6] === tmp5) {
-        if (cResult[7] === loading) {
-          let tmp6 = cResult[8];
-        }
-        return tmp6;
-      }
-      const obj2 = { loading, initiateAgeVerificationV2: tmp5 };
-      cResult[6] = tmp5;
-      cResult[7] = loading;
-      cResult[8] = obj2;
-      tmp6 = obj2;
-      const tmp4 = useAgeVerificationRunner(tmp2);
-    }
-  }
-  const obj3 = { onComplete, entryPoint, shouldShowExpressiveModal: true, onMethodUnavailable };
-  cResult[0] = entryPoint;
-  cResult[1] = onComplete;
-  cResult[2] = onMethodUnavailable;
-  cResult[3] = obj3;
-  tmp2 = obj3;
-  const obj = startVerification(576);
-}) : (function useInitiateAgeVerificationV2(onComplete) {
+}
+export function useInitiateAgeVerificationV2(onComplete) {
   const tmp = useAgeVerificationRunner({ onComplete: onComplete.onComplete, entryPoint: onComplete.entryPoint, shouldShowExpressiveModal: true, onMethodUnavailable: onComplete.onMethodUnavailable });
   const startVerification = tmp.startVerification;
   const obj2 = { loading: tmp.loading, initiateAgeVerificationV2: null };
   const items = [startVerification];
   obj2.initiateAgeVerificationV2 = noop.useCallback((arg0) => {
     closure_0 = arg0;
-    return startVerification(() => startVerification(dependencyMap[12]).requestAgeVerificationV2(closure_0.method, closure_0.vendor), arg0);
+    return startVerification(() => startVerification(dependencyMap[10]).requestAgeVerificationV2(closure_0.method, closure_0.vendor), arg0);
   }, items);
   return obj2;
-});
+}

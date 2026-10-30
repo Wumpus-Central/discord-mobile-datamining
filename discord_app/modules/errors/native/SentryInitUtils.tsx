@@ -1,21 +1,21 @@
-// === Module 1255: SentryInitUtils ===
+// === Module 1244: SentryInitUtils ===
 
-// Module 1255 (SentryInitUtils)
+// Module 1244 (SentryInitUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import _mod686 from "module_686" /* 686 */;
-import router_utils from "router_utils" /* 1111 */;
-import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import TelemetryRingLifecycle from "TelemetryRingLifecycle" /* 1256 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import DesignIds from "DesignIds" /* 1367 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1380 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
-import DeviceUtils from "DeviceUtils" /* 4962 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6528 */;
-import MetricEvents from "MetricEvents" /* 6532 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 15881 */;
+import _mod674 from "module_674" /* 674 */;
+import router_utils from "router_utils" /* 1100 */;
+import SentryUtilsDefault from "SentryUtils" /* 1243 */;
+import TelemetryRingLifecycle from "TelemetryRingLifecycle" /* 1245 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import DesignIds from "DesignIds" /* 1356 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1375 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1623 */;
+import DeviceUtils from "DeviceUtils" /* 4966 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6535 */;
+import MetricEvents from "MetricEvents" /* 6539 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 15920 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 15921 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -34,7 +34,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -541,8 +541,8 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1254).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1254);
+    tmp25(1243).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1243);
   }
   const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
@@ -553,14 +553,14 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6527).increment(obj6, true);
-  const tmp26Result = tmp26(6527);
+  tmp26(6534).increment(obj6, true);
+  const tmp26Result = tmp26(6534);
 }
 const NativeModules = fn(17).NativeModules;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, Endpoints } = Constants);
-const PRIMARY_DOMAIN = fn(1095).PRIMARY_DOMAIN;
-let registerSpanErrorInstrumentation = fn(686);
+const PRIMARY_DOMAIN = fn(1083).PRIMARY_DOMAIN;
+let registerSpanErrorInstrumentation = fn(674);
 registerSpanErrorInstrumentation = registerSpanErrorInstrumentation.reactNavigationIntegration();
 const regExp = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS, "g");
 let items = [regExp, , ];
@@ -573,7 +573,7 @@ let closure_11 = ["The operation couldn\u2019t be completed. (com.apple.CallKit.
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1374);
+const CommonSentryInitUtils = fn(1369);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -629,24 +629,24 @@ export function initSentry() {
               closure_1_19(result, { crash_event_source: "startup_reconcile" });
             }
           });
-          const tmp15Result13 = _mod686;
+          const tmp15Result13 = _mod674;
           let str2 = "ios";
           if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35320300000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@353.3.0-2+353203", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35320400000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@353.4.0-2+353204", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
           tmp15Result14 = PlatformUtils;
-          items1[1] = _mod686.featureFlagsIntegration();
-          const tmp15Result15 = _mod686;
+          items1[1] = _mod674.featureFlagsIntegration();
+          const tmp15Result15 = _mod674;
           const obj5 = {
             shouldCreateSpanForRequest(url) {
                   return !closure_1_9.some((item) => null != url.match(item));
                 }
           };
-          items1[2] = _mod686.reactNativeTracingIntegration(obj5);
+          items1[2] = _mod674.reactNativeTracingIntegration(obj5);
           obj3.integrations = items1;
           obj3.beforeBreadcrumb = function beforeBreadcrumb(data) {
             if (null == data.data) {
@@ -664,16 +664,16 @@ export function initSentry() {
             return data;
           };
           tmp15Result13.init(obj3);
-          const tmp15Result16 = _mod686;
-          _mod686.setTag("buildNumber", "35320300000000");
-          const tmp15Result17 = _mod686;
-          _mod686.setTag("appVersion", constants.Version);
-          const tmp15Result18 = _mod686;
+          const tmp15Result16 = _mod674;
+          _mod674.setTag("buildNumber", "35320400000000");
+          const tmp15Result17 = _mod674;
+          _mod674.setTag("appVersion", constants.Version);
+          const tmp15Result18 = _mod674;
           const _HermesInternal = HermesInternal;
-          _mod686.setTag("design_id", "" + DesignIds.DesignIds.DESIGN_TABS_IA);
-          const tmp15Result19 = _mod686;
+          _mod674.setTag("design_id", "" + DesignIds.DesignIds.DESIGN_TABS_IA);
+          const tmp15Result19 = _mod674;
           if (tmp15Result20.isReactCompilerBuild()) {
-            const tmp15Result21 = _mod686;
+            const tmp15Result21 = _mod674;
             let str9 = "unoptimized";
             if (tmp15Result22.isReactCompilerEnabled()) {
               str9 = "optimized";

@@ -1,15 +1,12 @@
-// === Module 14771: useConjurePresenceActivityImage ===
+// === Module 14806: useConjurePresenceActivityImage ===
 
-// Module 14771 (useConjurePresenceActivityImage)
-import shared from "shared" /* 5012 */;
-import useThemeDefault from "useTheme" /* 5242 */;
-import conjurePresenceActivityImageDefault from "conjurePresenceActivityImage" /* 14772 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+// Module 14806 (useConjurePresenceActivityImage)
+import shared from "shared" /* 5016 */;
+import useThemeDefault from "useTheme" /* 5248 */;
+import conjurePresenceActivityImageDefault from "conjurePresenceActivityImage" /* 14807 */;
 import size from "module_2" /* 2 */;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/conjure/presence/useConjurePresenceActivityImage.tsx");
+const result = size.fileFinishedImporting("modules/conjure/presence/useConjurePresenceActivityImage.tsx");
 
 export default function useConjurePresenceActivityImage() {
   const tmp2 = conjurePresenceActivityImageDefault;

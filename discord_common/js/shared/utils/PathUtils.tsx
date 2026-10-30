@@ -1,6 +1,6 @@
-// === Module 1093: utils/PathUtils ===
+// === Module 1081: utils/PathUtils ===
 
-// Module 1093 (utils/PathUtils)
+// Module 1081 (utils/PathUtils)
 import size from "module_2" /* 2 */;
 
 function getAuthenticationPath(login, arg1) {

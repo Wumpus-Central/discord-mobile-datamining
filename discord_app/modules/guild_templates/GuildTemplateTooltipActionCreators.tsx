@@ -1,11 +1,11 @@
-// === Module 7484: GuildTemplateTooltipActionCreators ===
+// === Module 7492: GuildTemplateTooltipActionCreators ===
 
-// Module 7484 (GuildTemplateTooltipActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 7492 (GuildTemplateTooltipActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
-const Permissions = fn(1084).Permissions;
+const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 
@@ -23,7 +23,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ export default {
             return obj;
           }
           guildId = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp7) {
           guildId = tmp;
           throw tmp7;

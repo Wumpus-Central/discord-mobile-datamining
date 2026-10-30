@@ -1,11 +1,11 @@
-// === Module 4900: DatabaseManager ===
+// === Module 4904: DatabaseManager ===
 
-// Module 4900 (DatabaseManager)
+// Module 4904 (DatabaseManager)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
-import Dispatcher2 from "Dispatcher" /* 584 */;
-import _mod4884 from "module_4884" /* 4884 */;
-import StartupDataAll from "StartupData" /* 4901 */;
+import Dispatcher2 from "Dispatcher" /* 572 */;
+import _mod4888 from "module_4888" /* 4888 */;
+import StartupDataAll from "StartupData" /* 4905 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -26,7 +26,7 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
           const _HermesInternal = HermesInternal;
           timestampProducer.verbose("speculatively opening " + tmp25);
           c4 = 1;
-          const Database = require("module_4884").Database;
+          const Database = require("module_4888").Database;
           c5 = 2;
           c6 = 1;
           const obj4 = { value: Database.open(tmp25), done: false };
@@ -165,7 +165,7 @@ prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
             }
           }
         })(50, () => {
-          const Database = _mod4884.Database;
+          const Database = _mod4888.Database;
           return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
         });
         const _HermesInternal3 = HermesInternal;
@@ -231,7 +231,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== _mod4884.DatabaseState.Open;
+    tmp3 = stateResult !== _mod4888.DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);
@@ -270,7 +270,7 @@ function carefullySpeculativelyOpen(userId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -359,7 +359,7 @@ let obj = {
     return closure_0.handleAuthenticationStoreChanged();
   }
 };
-let tmp2 = new tmp(Dispatcher, obj, fn(584).DispatchBand.Early, DatabaseManager, tmp, Dispatcher, obj, new.target, undefined, carefullySpeculativelyOpen, globalThis, fn);
+let tmp2 = new tmp(Dispatcher, obj, fn(572).DispatchBand.Early, DatabaseManager, tmp, Dispatcher, obj, new.target, undefined, carefullySpeculativelyOpen, globalThis, fn);
 let closure_129_0 = tmp2;
 let tmp3 = new LoggerDefault("DatabaseManager");
 tmp2.databases = new Map();

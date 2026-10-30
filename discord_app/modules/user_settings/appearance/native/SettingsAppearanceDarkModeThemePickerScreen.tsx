@@ -1,34 +1,19 @@
-// === Module 17176: SettingsAppearanceDarkModeThemePickerScreen ===
+// === Module 17230: SettingsAppearanceDarkModeThemePickerScreen ===
 
-// Module 17176 (SettingsAppearanceDarkModeThemePickerScreen)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 17135 */;
+// Module 17230 (SettingsAppearanceDarkModeThemePickerScreen)
+import util from "util" /* 1114 */;
+import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 17189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SystemTheme = fn(1207).SystemTheme;
+const SystemTheme = fn(1196).SystemTheme;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAppearanceDarkModeThemePickerScreen() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };
-    const intl = util.intl;
-    obj2.headerTitle = intl.string(util.t["EgvHH/"]);
-    const tmp9 = jsx(SettingsAppearanceThemePickerScreenDefault, { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null });
-    cResult[0] = tmp9;
-    let first = tmp9;
-  } else {
-    first = cResult[0];
-  }
-  return first;
-}) : (function SettingsAppearanceDarkModeThemePickerScreen() {
+export default function SettingsAppearanceDarkModeThemePickerScreen() {
   const obj = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };
   const intl = util.intl;
   obj.headerTitle = intl.string(util.t["EgvHH/"]);
   return jsx(SettingsAppearanceThemePickerScreenDefault, { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null });
-});
+};

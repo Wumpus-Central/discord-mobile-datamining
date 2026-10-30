@@ -1,13 +1,13 @@
-// === Module 8347: UploadAttachmentStore ===
+// === Module 8200: UploadAttachmentStore ===
 
-// Module 8347 (UploadAttachmentStore)
+// Module 8200 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import DraftStore from "DraftStore" /* 7689 */;
-import CloudUpload from "CloudUpload" /* 8198 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8207 */;
-import Constants from "Constants" /* 1084 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import DraftStore from "DraftStore" /* 7694 */;
+import CloudUpload from "CloudUpload" /* 8201 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8210 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -73,15 +73,15 @@ prototype["getUploads"] = function getUploads(id, ChannelMessage) {
   }
   return value2;
 };
-prototype["getUploadCount"] = function getUploadCount(channelId, draftType) {
-  map = map.get(channelId);
+prototype["getUploadCount"] = function getUploadCount(c1, ChannelMessage) {
+  map = map.get(c1);
   if (map == null) {
     const _Map = Map;
     map = new Map();
   }
   value2 = undefined;
   if (map != null) {
-    value2 = map.get(draftType);
+    value2 = map.get(ChannelMessage);
   }
   if (value2 == null) {
     value2 = closure_7;
@@ -108,8 +108,8 @@ prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
   }
   return value2.find((id) => id.id === closure_0);
 };
-prototype["findUpload"] = function findUpload(channelId, ChannelMessage, arg2) {
-  map = map.get(channelId);
+prototype["findUpload"] = function findUpload(id, ChannelMessage, arg2) {
+  map = map.get(id);
   if (map == null) {
     const _Map = Map;
     map = new Map();
@@ -132,7 +132,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value3 = undefined;
+    let value3;
     if (map != null) {
       value3 = map.get(DraftType.ChannelMessage);
     }
@@ -141,7 +141,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     }
     const items = [...value3];
     items.shift();
-    value4 = obj.get(channelId);
+    let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();
@@ -158,7 +158,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value3 = undefined;
+    let value3;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -184,7 +184,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const cloudUpload = new CloudUpload.CloudUpload(file, channelId, items.length, importDefault);
       items.push(cloudUpload);
     });
-    value4 = obj.get(channelId);
+    let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();
@@ -200,7 +200,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value3 = undefined;
+    let value3;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -243,7 +243,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
         return id;
       }
     });
-    value4 = obj.get(channelId);
+    let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();
@@ -258,7 +258,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value3 = undefined;
+    let value3;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -270,7 +270,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     if (findIndexResult > -1) {
       const first = items.splice(findIndexResult, 1)[0];
       first.removeFromMsgDraft();
-      value4 = obj.get(channelId);
+      let value4 = obj.get(channelId);
       if (value4 == null) {
         const _Map2 = Map;
         value4 = new Map();
@@ -287,7 +287,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value3 = undefined;
+    let value3;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -303,7 +303,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
         first.removeFromMsgDraft();
       }
     });
-    value4 = obj.get(channelId);
+    let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();
@@ -339,7 +339,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    value3 = undefined;
+    let value3;
     if (map != null) {
       value3 = map.get(draftType);
     }
@@ -350,7 +350,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     const found = items.filter((id) => id.id !== require);
     const cloudUpload = new CloudUpload.CloudUpload(file, channelId, undefined, allowOptimization);
     found.push(cloudUpload);
-    value4 = obj.get(channelId);
+    let value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();

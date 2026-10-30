@@ -1,8 +1,8 @@
-// === Module 9540: StorefrontCollectionStore ===
+// === Module 9559: StorefrontCollectionStore ===
 
-// Module 9540 (StorefrontCollectionStore)
+// Module 9559 (StorefrontCollectionStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const dependencyMap = {};
 const dependencyMap2 = {};

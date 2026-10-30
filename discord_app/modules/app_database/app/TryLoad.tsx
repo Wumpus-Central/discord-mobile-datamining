@@ -1,8 +1,8 @@
-// === Module 4903: TryLoad ===
+// === Module 4907: TryLoad ===
 
-// Module 4903 (TryLoad)
+// Module 4907 (TryLoad)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_4 = async function _tryLoadAsync(arg0) {
@@ -16,7 +16,7 @@ let closure_4 = async function _tryLoadAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

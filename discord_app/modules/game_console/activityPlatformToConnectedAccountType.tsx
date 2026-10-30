@@ -1,19 +1,20 @@
-// === Module 19071: activityPlatformToConnectedAccountType ===
+// === Module 19178: activityPlatformToConnectedAccountType ===
 
-// Module 19071 (activityPlatformToConnectedAccountType)
-import Constants from "Constants" /* 1084 */;
+// Module 19178 (activityPlatformToConnectedAccountType)
+import Constants from "Constants" /* 1072 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9718 */;
 import size from "module_2" /* 2 */;
 
-({ ActivityGamePlatforms: closure_0, PlatformTypes: closure_1 } = Constants);
+const PlatformTypes = Constants.PlatformTypes;
 const result = size.fileFinishedImporting("modules/game_console/activityPlatformToConnectedAccountType.tsx");
 
 export default function activityPlatformToConnectedAccountType(arg0) {
-  if (PS4.PS4 !== arg0) {
-    if (PS4.PS5 !== arg0) {
-      if (PS4.XBOX === arg0) {
-        return constants.XBOX;
+  if (ActivityGamePlatforms.ActivityGamePlatforms.PLAYSTATION_4 !== arg0) {
+    if (ActivityGamePlatforms.ActivityGamePlatforms.PLAYSTATION_5 !== arg0) {
+      if (ActivityGamePlatforms.ActivityGamePlatforms.XBOX === arg0) {
+        return PlatformTypes.XBOX;
       }
     }
   }
-  return constants.PLAYSTATION;
+  return PlatformTypes.PLAYSTATION;
 };

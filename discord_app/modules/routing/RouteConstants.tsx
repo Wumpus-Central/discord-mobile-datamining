@@ -1,10 +1,10 @@
-// === Module 1085: RouteConstants ===
+// === Module 1073: RouteConstants ===
 
-// Module 1085 (RouteConstants)
-import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1086 */;
-import ConferenceModeConstants from "ConferenceModeConstants" /* 1091 */;
-import GlobalDiscoveryAppsConstants from "GlobalDiscoveryAppsConstants" /* 1092 */;
-import PathUtils from "utils/PathUtils" /* 1093 */;
+// Module 1073 (RouteConstants)
+import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
+import ConferenceModeConstants from "ConferenceModeConstants" /* 1079 */;
+import GlobalDiscoveryAppsConstants from "GlobalDiscoveryAppsConstants" /* 1080 */;
+import PathUtils from "utils/PathUtils" /* 1081 */;
 import size from "module_2" /* 2 */;
 
 const CollectibleShopTab = CollectiblesShopConstants.CollectibleShopTab;
@@ -209,7 +209,6 @@ const obj = {
   COLLECTIBLES_SHOP_GAME_SHOP: null,
   COLLECTIBLES_SHOP_WITH_TAB: null,
   COLLECTIBLES_SHOP_COLLECTION_DETAIL: null,
-  COLLECTIBLES_SHOP_PRODUCT_DETAIL: null,
   NITRO_HOME: "/store",
   ACCOUNT_STANDING: "/account-standing",
   CHANNEL_SUMMARIES: null,
@@ -555,9 +554,6 @@ obj.COLLECTIBLES_SHOP_WITH_TAB = function COLLECTIBLES_SHOP_WITH_TAB(arg0) {
 };
 obj.COLLECTIBLES_SHOP_COLLECTION_DETAIL = function COLLECTIBLES_SHOP_COLLECTION_DETAIL(arg0) {
   return "/shop/collection/" + arg0;
-};
-obj.COLLECTIBLES_SHOP_PRODUCT_DETAIL = function COLLECTIBLES_SHOP_PRODUCT_DETAIL(arg0) {
-  return "/shop/product/" + arg0;
 };
 obj.CHANNEL_SUMMARIES = function CHANNEL_SUMMARIES(channelId) {
   return "/channels/" + channelId + "/summaries";

@@ -1,10 +1,10 @@
-// === Module 8726: BadgeDirectoryActionCreators ===
+// === Module 8760: BadgeDirectoryActionCreators ===
 
-// Module 8726 (BadgeDirectoryActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 8760 (BadgeDirectoryActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1389 */;
-import Dispatcher from "Dispatcher" /* 584 */;
+import UserStore from "UserStore" /* 1384 */;
+import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
 function urlUserId(arg0) {
@@ -30,7 +30,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
           closure_131_8 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -182,7 +182,7 @@ let closure_11 = async function _fetchBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -295,7 +295,7 @@ let closure_12 = async function _requestBadgeSummary(arg0) {
   }
   return value;
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: hasOwnProperty, ME: metroRequire } = Constants);
 const map = new Map();
 const map1 = new Map();

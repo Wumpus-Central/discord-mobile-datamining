@@ -1,77 +1,23 @@
-// === Module 12584: ConjureTipInlineCallout ===
+// === Module 12734: ConjureTipInlineCallout ===
 
-// Module 12584 (ConjureTipInlineCallout)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import XSmallIcon from "XSmallIcon" /* 6991 */;
-import IconButton from "IconButton" /* 8014 */;
+// Module 12734 (ConjureTipInlineCallout)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import XSmallIcon from "XSmallIcon" /* 7048 */;
+import IconButton from "IconButton" /* 8020 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { dismissible: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_5 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/tips/native/ConjureTipInlineCallout.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureTipInlineCallout(arg0) {
-  const cResult = c.c(8);
-  ({ onDismiss, children } = arg0);
-  const tmp4 = closure_5();
-  if (null == onDismiss) {
-    return children;
-  } else {
-    const _Symbol2 = Symbol;
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp7 = React3(XSmallIcon.XSmallIcon, { size: "sm" });
-      cResult[0] = tmp7;
-      let first = tmp7;
-    } else {
-      first = cResult[0];
-    }
-    const _Symbol = Symbol;
-    if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = util.intl;
-      const stringResult = intl.string(util.t.WAI6xu);
-      cResult[1] = stringResult;
-      let tmp8 = stringResult;
-    } else {
-      tmp8 = cResult[1];
-    }
-    if (cResult[2] !== onDismiss) {
-      const obj2 = { variant: "tertiary", size: "sm", icon: first, onPress: onDismiss, accessibilityLabel: tmp8 };
-      const tmp12 = React3(IconButton.IconButton, obj2);
-      cResult[2] = onDismiss;
-      cResult[3] = tmp12;
-      let tmp10 = tmp12;
-    } else {
-      tmp10 = cResult[3];
-    }
-    if (cResult[4] === children) {
-      if (cResult[5] === tmp4.dismissible) {
-        if (cResult[6] === tmp10) {
-          let tmp13 = cResult[7];
-        }
-        return tmp13;
-      }
-    }
-    const obj3 = { style: tmp4.dismissible, children: null };
-    const items = [children, tmp10];
-    obj3.children = items;
-    const tmp16 = React4(View, obj3);
-    cResult[4] = children;
-    cResult[5] = tmp4.dismissible;
-    cResult[6] = tmp10;
-    cResult[7] = tmp16;
-    tmp13 = tmp16;
-  }
-}) : (function ConjureTipInlineCallout(arg0) {
+export default function ConjureTipInlineCallout(arg0) {
   ({ onDismiss, children } = arg0);
   let tmp2 = children;
   if (null != onDismiss) {
@@ -85,4 +31,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp2 = React4(View, obj);
   }
   return tmp2;
-});
+};

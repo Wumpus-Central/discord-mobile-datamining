@@ -1,16 +1,16 @@
-// === Module 9054: getChannelA11yLabel ===
+// === Module 9066: getChannelA11yLabel ===
 
-// Module 9054 (getChannelA11yLabel)
-import util from "util" /* 1125 */;
-import UserUtils from "UserUtils" /* 5059 */;
-import useChannelName from "useChannelName" /* 5641 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7262 */;
-import utils from "utils" /* 8676 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 9066 (getChannelA11yLabel)
+import util from "util" /* 1114 */;
+import UserUtils from "UserUtils" /* 5063 */;
+import useChannelName from "useChannelName" /* 5647 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7269 */;
+import utils from "utils" /* 8710 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");
@@ -257,14 +257,14 @@ export default function getChannelA11yLabel(mentionCount) {
     }
   }
 };
-export function getStatusLabel(value) {
-  if (constants2.ONLINE === value) {
+export function getStatusLabel(status) {
+  if (constants2.ONLINE === status) {
     return UserUtils.humanizeStatus(constants2.ONLINE);
-  } else if (constants2.IDLE === value) {
+  } else if (constants2.IDLE === status) {
     return UserUtils.humanizeStatus(constants2.IDLE);
-  } else if (constants2.DND === value) {
+  } else if (constants2.DND === status) {
     return UserUtils.humanizeStatus(constants2.DND);
-  } else if (constants2.INVISIBLE === value) {
+  } else if (constants2.INVISIBLE === status) {
     return UserUtils.humanizeStatus(constants2.INVISIBLE);
   } else {
     return "";

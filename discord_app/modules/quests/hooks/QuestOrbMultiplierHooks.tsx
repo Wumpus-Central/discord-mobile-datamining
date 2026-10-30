@@ -1,11 +1,10 @@
-// === Module 9657: QuestOrbMultiplierHooks ===
+// === Module 9682: QuestOrbMultiplierHooks ===
 
-// Module 9657 (QuestOrbMultiplierHooks)
+// Module 9682 (QuestOrbMultiplierHooks)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9658 */;
-import UserStore from "UserStore" /* 1389 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9683 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub) {
@@ -33,27 +32,11 @@ function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStanda
   }
   return INELIGIBLE;
 }
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/hooks/QuestOrbMultiplierHooks.tsx");
 
-export const useQuestOrbMultiplierEligibility = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestOrbMultiplierEligibility() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UserStore];
-    const fn = function u() {
-      return getQuestOrbMultiplierEligibilityForUser(currentUser.getCurrentUser());
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useQuestOrbMultiplierEligibility() {
+export function useQuestOrbMultiplierEligibility() {
   const items = [UserStore];
   return initialize.useStateFromStores(items, () => getQuestOrbMultiplierEligibilityForUser(currentUser.getCurrentUser()));
-});
+}
 export { getQuestOrbMultiplierEligibilityForUser };

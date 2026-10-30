@@ -1,7 +1,7 @@
-// === Module 19469: ParentalConsentWarningFetchExperiment ===
+// === Module 19532: ParentalConsentWarningFetchExperiment ===
 
-// Module 19469 (ParentalConsentWarningFetchExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 19532 (ParentalConsentWarningFetchExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-07-parental-consent-warning-fetch", defaultConfig: { enabled: false }, variations: null };

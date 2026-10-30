@@ -1,23 +1,23 @@
-// === Module 14599: VideoQuestUtils ===
+// === Module 14632: VideoQuestUtils ===
 
-// Module 14599 (VideoQuestUtils)
-import util from "util" /* 1125 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7840 */;
-import AnalyticsActions from "AnalyticsActions" /* 7850 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7856 */;
-import QuestActionCreators from "QuestActionCreators" /* 9637 */;
-import NetworkStore from "NetworkStore" /* 5928 */;
-import QuestStore from "QuestStore" /* 7834 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7836 */;
+// Module 14632 (VideoQuestUtils)
+import util from "util" /* 1114 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7845 */;
+import AnalyticsActions from "AnalyticsActions" /* 7855 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7861 */;
+import QuestActionCreators from "QuestActionCreators" /* 9662 */;
+import NetworkStore from "NetworkStore" /* 5935 */;
+import QuestStore from "QuestStore" /* 7839 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7841 */;
 
 require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(14600).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(14633).getVideoQuestWatchCtaText;
 export function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
@@ -100,6 +100,13 @@ export function formatVideoProgressRatio(maxVideoProgressSeconds, current) {
     }
   }
   return num;
+}
+export function isValidDuration(arg0) {
+  let isFiniteResult = Number.isFinite(arg0);
+  if (isFiniteResult) {
+    isFiniteResult = arg0 > 0;
+  }
+  return isFiniteResult;
 }
 export function getVideoQuestEndCardCtaText(ctaConfig) {
   let buttonLabel = ctaConfig.ctaConfig.buttonLabel;

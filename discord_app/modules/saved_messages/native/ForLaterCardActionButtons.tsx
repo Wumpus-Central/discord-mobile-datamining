@@ -1,88 +1,26 @@
-// === Module 14284: ForLaterCardActionButtons ===
+// === Module 11146: ForLaterCardActionButtons ===
 
-// Module 14284 (ForLaterCardActionButtons)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import IconButton from "IconButton" /* 8014 */;
-import _modDef9175 from "module_9175" /* 9175 */;
-import ContextMenu from "ContextMenu" /* 9827 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 14278 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+// Module 11146 (ForLaterCardActionButtons)
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import IconButton from "IconButton" /* 8020 */;
+import _modDef9188 from "module_9188" /* 9188 */;
+import ContextMenu from "ContextMenu" /* 9853 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 11140 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = ["menuItems"];
-let closure_4 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
-let closure_9 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
-const ReactCompilerGating = fn(558);
+const createStyles = fn(5009);
+let closure_6 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardActionButtons.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterCardActionButtons(menuItems) {
-  const cResult = c.c(10);
-  if (cResult[0] !== menuItems) {
-    menuItems = menuItems.menuItems;
-    const tmp8 = _objectWithoutProperties(menuItems, closure_3);
-    cResult[0] = menuItems;
-    cResult[1] = tmp8;
-    cResult[2] = menuItems;
-    let tmp5 = menuItems;
-    let tmp4 = tmp8;
-  } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-  }
-  const tmp9 = closure_9();
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function p(ref) {
-      const obj = { ref: ref.ref };
-      const merged = Object.assign(_objectWithoutProperties(ref, closure_1_4));
-      obj.variant = "secondary";
-      const intl = util.intl;
-      obj.accessibilityLabel = intl.string(util.t.e1heBD);
-      obj.size = "sm";
-      obj.icon = _modDef9175;
-      return jsx(IconButton.IconButton, { ref: ref.ref });
-    };
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] !== tmp5) {
-    const obj2 = { items: tmp5, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: tmp10 };
-    const tmp13 = jsx(ContextMenu.ContextMenu, { items: tmp5, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: tmp10 });
-    cResult[4] = tmp5;
-    cResult[5] = tmp13;
-    let tmp11 = tmp13;
-  } else {
-    tmp11 = cResult[5];
-  }
-  if (cResult[6] === tmp4) {
-    if (cResult[7] === tmp9.actionGroup) {
-      if (cResult[8] === tmp11) {
-        let tmp14 = cResult[9];
-      }
-      return tmp14;
-    }
-  }
-  const obj3 = { style: tmp9.actionGroup };
-  let merged = Object.assign(tmp4);
-  obj3.children = tmp11;
-  const tmp16 = <View style={tmp9.actionGroup} />;
-  cResult[6] = tmp4;
-  cResult[7] = tmp9.actionGroup;
-  cResult[8] = tmp11;
-  cResult[9] = tmp16;
-  tmp14 = tmp16;
-}) : (function ForLaterCardActionButtons(items) {
+export default function ForLaterCardActionButtons(items) {
   let merged = Object.assign(items, Object.assign({ menuItems: 0 }));
-  let obj = { style: closure_9().actionGroup };
+  let obj = { style: closure_6().actionGroup };
   let merged1 = Object.assign(merged);
   obj.children = jsx(ContextMenu.ContextMenu, {
     items: items.menuItems,
@@ -96,48 +34,48 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.e1heBD);
       obj.size = "sm";
-      obj.icon = _modDef9175;
+      obj.icon = _modDef9188;
       return jsx(IconButton.IconButton, { ref: ref.ref });
     }
   });
-  return <View style={closure_9().actionGroup} />;
-});
+  return <View style={closure_6().actionGroup} />;
+};
 export function useForLaterCardMenuItems(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const jumpToMessage = savedMessage.jumpToMessage;
   const items = [savedMessage];
   const obj = { label: null, IconComponent: null, action: null };
   let tmp2Result = dependencyMap;
-  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14285, dependencyMap.paths), "MessageReminderDurationActionSheet", {
+  const callback = noop.useCallback(() => ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11147, dependencyMap.paths), "MessageReminderDurationActionSheet", {
     createReminder(dueAt) {
       const obj2 = {};
       const merged = Object.assign(closure_1_0.saveData);
       obj2.dueAt = dueAt;
-      obj2.source = savedMessage(14288).SavedMessageSources.FOR_LATER_LIST;
-      return savedMessage(14278).addOrUpdateSavedMessage(obj2);
+      obj2.source = savedMessage(11150).SavedMessageSources.FOR_LATER_LIST;
+      return savedMessage(11140).addOrUpdateSavedMessage(obj2);
     },
     removeReminder() {
-      return savedMessage(14278).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
+      return savedMessage(11140).removeSavedMessage({ channelId: closure_1_0.saveData.channelId, messageId: closure_1_0.saveData.messageId, displayToast: true, isReminder: true });
     },
     channelId: savedMessage.saveData.channelId,
     messageId: savedMessage.saveData.messageId
   }), items);
-  const intl = savedMessage(1125).intl;
-  obj.label = intl.string(savedMessage(1125).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(12616).ChatArrowRightIcon;
+  const intl = savedMessage(1114).intl;
+  obj.label = intl.string(savedMessage(1114).t["+TSRGD"]);
+  obj.IconComponent = savedMessage(11151).ChatArrowRightIcon;
   obj.action = function action() {
     return jumpToMessage();
   };
   const items1 = [obj, ];
-  const intl2 = savedMessage(1125).intl;
+  const intl2 = savedMessage(1114).intl;
   if (null != savedMessage.saveData.dueAt) {
-    let SvXS1Z = tmp2(1125).t["a6gcZ/"];
+    let SvXS1Z = tmp2(1114).t["a6gcZ/"];
   } else {
-    SvXS1Z = tmp2(1125).t.SvXS1Z;
+    SvXS1Z = tmp2(1114).t.SvXS1Z;
   }
   items1[1] = {
     label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6991).XSmallIcon,
+    IconComponent: savedMessage(7048).XSmallIcon,
     action() {
       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
     },
@@ -146,14 +84,14 @@ export function useForLaterCardMenuItems(savedMessage) {
   if (null == savedMessage.saveData.dueAt) {
     return items1;
   } else {
-    const intl3 = tmp2(1125).intl;
-    const t = tmp2(1125).t;
+    const intl3 = tmp2(1114).intl;
+    const t = tmp2(1114).t;
     let obj3 = { label: intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1), IconComponent: null, action: null };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      tmp2Result = tmp2(14289);
+      tmp2Result = tmp2(11153);
       let PencilIcon = tmp2Result.BellZIcon;
     } else {
-      PencilIcon = tmp2(10187).PencilIcon;
+      PencilIcon = tmp2(10212).PencilIcon;
     }
     obj3.IconComponent = PencilIcon;
     obj3.action = callback;

@@ -1,8 +1,8 @@
-// === Module 11407: ChannelDetailsUtils ===
+// === Module 11610: ChannelDetailsUtils ===
 
-// Module 11407 (ChannelDetailsUtils)
-import ChannelTypes from "ChannelTypes" /* 1105 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10090 */;
+// Module 11610 (ChannelDetailsUtils)
+import ChannelTypes from "ChannelTypes" /* 1094 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10117 */;
 import size from "module_2" /* 2 */;
 
 const ChannelDetailsButtonTypes = ChannelDetailsConstants.ChannelDetailsButtonTypes;
@@ -25,6 +25,6 @@ export function getChannelDetailsButtons(channel) {
   }
   return found;
 }
-export function navigateToChannelDetailsScreen(navigation, PERMISSIONS, channelId, source) {
-  navigation.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
+export function navigateToChannelDetailsScreen(navigate, PERMISSIONS, channelId, source) {
+  navigate.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
 }

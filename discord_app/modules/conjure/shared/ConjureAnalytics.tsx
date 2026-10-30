@@ -1,10 +1,10 @@
-// === Module 10830: ConjureAnalytics ===
+// === Module 10853: ConjureAnalytics ===
 
-// Module 10830 (ConjureAnalytics)
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import ConjureUtils from "ConjureUtils" /* 7405 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+// Module 10853 (ConjureAnalytics)
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import ConjureUtils from "ConjureUtils" /* 7413 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
 
 require = fn;
 function projectFields(projectId) {
@@ -85,7 +85,7 @@ function conjureLocation(projectId, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
 

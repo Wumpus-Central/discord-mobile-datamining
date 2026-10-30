@@ -1,25 +1,25 @@
-// === Module 6873: GuildReadStateStore ===
+// === Module 6880: GuildReadStateStore ===
 
-// Module 6873 (GuildReadStateStore)
+// Module 6880 (GuildReadStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import FavoritesUtils from "FavoritesUtils" /* 4882 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4945 */;
-import NSFWContentGate from "NSFWContentGate" /* 6739 */;
-import isOptInEnabled from "isOptInEnabled" /* 6872 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6874 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6845 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6828 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4939 */;
+import FavoritesUtils from "FavoritesUtils" /* 4883 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4949 */;
+import NSFWContentGate from "NSFWContentGate" /* 6746 */;
+import isOptInEnabled from "isOptInEnabled" /* 6879 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6881 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6852 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6835 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4943 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1083 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import ReadStateStore from "ReadStateStore" /* 6829 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import ReadStateStore from "ReadStateStore" /* 6836 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 function updateGuildUnreadSentinel(NULL_STRING_GUILD_ID) {
@@ -87,7 +87,7 @@ function isCountableChannel(channel) {
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
-            let result2 = v65535(channel.type);
+            let result2 = closure_1_10(channel.type);
             if (!result2) {
               result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(channel);
             }
@@ -458,19 +458,19 @@ function recountGuild(guildId, hasItem) {
             tmp37 = tmp34;
           }
           if (tmp37) {
-            let tmp40 = React6(obj14.type);
+            let tmp40 = React7(obj14.type);
             let tmp41 = !tmp40;
             if (tmp40) {
               tmp41 = 0 !== mentionCount;
             }
             if (tmp41) {
-              let canBasicChannelResult = PermissionStore.canBasicChannel(closure_1_8(obj14.type), obj14);
+              let canBasicChannelResult = PermissionStore.canBasicChannel(React6(obj14.type), obj14);
               if (canBasicChannelResult) {
                 let tmp45 = null != obj14.guild_id;
                 if (tmp45) {
                   let tmp46 = result;
                   if (result) {
-                    let result2 = v65535(obj14.type);
+                    let result2 = closure_1_10(obj14.type);
                     if (!result2) {
                       result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj14);
                     }
@@ -959,13 +959,13 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: c10 } = ChannelRecord);
-const isGuildNSFW = fn(4875).isGuildNSFW;
-const ChannelFlags = fn(4864).ChannelFlags;
-const ReadStateConstants = fn(6763);
+const isGuildNSFW = fn(4876).isGuildNSFW;
+const ChannelFlags = fn(4865).ChannelFlags;
+const ReadStateConstants = fn(6770);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
-const NULL_STRING_GUILD_ID = fn(1084).NULL_STRING_GUILD_ID;
+const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
 let guilds = {};
 let set = new Set();
 let closure_26 = 0;

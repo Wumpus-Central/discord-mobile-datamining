@@ -1,123 +1,22 @@
-// === Module 13964: GuildPowerupsMultiPerkCard ===
+// === Module 14096: GuildPowerupsMultiPerkCard ===
 
-// Module 13964 (GuildPowerupsMultiPerkCard)
-import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 13938 */;
+// Module 14096 (GuildPowerupsMultiPerkCard)
+import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 14070 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsMultiPerkCard(guildId) {
-  const cResult = guildId(576).c(17);
+export default function GuildPowerupsMultiPerkCard(guildId) {
   guildId = guildId.guildId;
   const listing = guildId.listing;
-  const tmp5 = listing(13941)(guildId, listing);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AccessibilityStore];
-    const fn = function l() {
-      return useReducedMotion.useReducedMotion;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-  } else {
-    [tmp6, tmp7] = cResult;
-  }
-  guildId(504);
-  if (cResult[2] === guildId) {
-    if (cResult[3] === listing.powerups) {
-      let tmp11 = cResult[4];
-    }
-    const tmp12 = tmp4(13965)(tmp11);
-    if (cResult[5] === guildId) {
-      if (cResult[6] === listing) {
-        let tmp13 = cResult[7];
-      }
-      if (null != tmp12) {
-        if (null != tmp5) {
-          const image = tmp5.image;
-          const tmp15 = tmp10 ? image.staticUrl : image.animatedUrl;
-          if (cResult[8] === tmp5.badge) {
-            if (cResult[9] === tmp5.description) {
-              if (cResult[10] === tmp5.title) {
-                if (cResult[11] === tmp13) {
-                  if (cResult[12] === tmp12.cost) {
-                    if (cResult[13] === tmp12.costDecorator) {
-                      if (cResult[14] === tmp12.status) {
-                        if (cResult[15] === tmp15) {
-                          let tmp16 = cResult[16];
-                        }
-                        return tmp16;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          class P {
-            constructor() {
-              obj = { guildId, listing };
-              tmp = closure_1(closure_2[8])(obj);
-              return;
-            }
-          }
-          const obj2 = { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null };
-          ({ title: obj3.title, description: obj3.description } = tmp5);
-          obj2.cost = tmp12.cost;
-          obj2.imageUrl = tmp15;
-          ({ status: obj3.status, costDecorator: obj3.costDecorator } = tmp12);
-          obj2.onPress = tmp13;
-          obj2.badge = tmp5.badge;
-          const tmp17 = jsx(tmp4(13963), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
-          cResult[8] = tmp5.badge;
-          cResult[9] = tmp5.description;
-          cResult[10] = tmp5.title;
-          cResult[11] = tmp13;
-          cResult[12] = tmp12.cost;
-          cResult[13] = tmp12.costDecorator;
-          cResult[14] = tmp12.status;
-          cResult[15] = tmp15;
-          cResult[16] = tmp17;
-          tmp16 = tmp17;
-        }
-      }
-      class P {
-        constructor() {
-          obj = { guildId, listing };
-          tmp = closure_1(closure_2[8])(obj);
-          return;
-        }
-      }
-    }
-    class P {
-      constructor() {
-        obj = { guildId, listing };
-        tmp = closure_1(closure_2[8])(obj);
-        return;
-      }
-    }
-    cResult[5] = guildId;
-    cResult[6] = listing;
-    cResult[7] = P;
-    tmp13 = P;
-  }
-  const obj5 = { guildId, powerups: listing.powerups };
-  cResult[2] = guildId;
-  cResult[3] = listing.powerups;
-  cResult[4] = obj5;
-  tmp11 = obj5;
-  const obj = guildId(576);
-}) : (function GuildPowerupsMultiPerkCard(guildId) {
-  guildId = guildId.guildId;
-  const listing = guildId.listing;
-  let badge = listing(13941)(guildId, listing);
+  let badge = listing(14073)(guildId, listing);
   const items = [AccessibilityStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  costDecorator = listing(13965)({ guildId, powerups: listing.powerups });
+  costDecorator = listing(14097)({ guildId, powerups: listing.powerups });
   const items1 = [guildId, listing];
   let tmp5 = null;
   if (null != costDecorator) {
@@ -133,8 +32,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
       obj5.onPress = tmp4;
       badge = badge.badge;
       obj5.badge = badge;
-      jsx(listing(13963), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
+      jsx(listing(14095), { title: null, description: null, cost: null, imageUrl: null, status: null, costDecorator: null, onPress: null, badge: null });
     }
   }
   return tmp5;
-});
+};

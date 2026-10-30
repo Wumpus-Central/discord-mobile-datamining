@@ -1,13 +1,14 @@
-// === Module 15552: NowPlayingStore ===
+// === Module 15592: NowPlayingStore ===
 
-// Module 15552 (NowPlayingStore)
+// Module 15592 (NowPlayingStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 15553 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7789 */;
-import PresenceStore from "PresenceStore" /* 5750 */;
-import UserStore from "UserStore" /* 1389 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 15593 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7794 */;
+import PresenceStore from "PresenceStore" /* 5756 */;
+import UserStore from "UserStore" /* 1384 */;
 
+const require = fn;
 function _handlePresenceUpdate(user) {
   user = user.user;
   const activities = user.activities;
@@ -15,7 +16,7 @@ function _handlePresenceUpdate(user) {
   if (null == user) {
     return false;
   } else {
-    const found = activities.filter((type) => type.type !== constants.CUSTOM_STATUS);
+    const found = activities.filter((type) => type.type !== user(dependencyMap[3]).ActivityTypes.CUSTOM_STATUS);
     if (0 === found.length) {
       let flag2 = false;
       if (null != obj2[user.id]) {
@@ -131,7 +132,6 @@ function handleUserAffinitiesV2StoreUpdate() {
   closure_6 = !UserAffinitiesV2Store.shouldFetch();
   return flag;
 }
-const ActivityTypes = fn(1084).ActivityTypes;
 let c6 = false;
 const Store = initializeDefault.Store;
 class NowPlayingStore extends Store {

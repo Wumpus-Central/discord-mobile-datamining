@@ -1,61 +1,28 @@
-// === Module 18942: useGiftingPromotionAssetsReady ===
+// === Module 19002: useGiftingPromotionAssetsReady ===
 
-// Module 18942 (useGiftingPromotionAssetsReady)
-import c from "c" /* 576 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1899 */;
+// Module 19002 (useGiftingPromotionAssetsReady)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-let ReactCompilerGating = fn(558);
-let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoachmarkAssetReady(arg0) {
-  const cResult = themeAndReducedMotionAwareAssetUrl(576).c(3);
-  let obj = themeAndReducedMotionAwareAssetUrl(576);
-  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(10577).useThemeAndReducedMotionAwareAssetUrl(arg0);
-  let obj2 = themeAndReducedMotionAwareAssetUrl(10577);
-  [tmp4, importDefault] = noop.useState(null);
-  if (cResult[0] !== themeAndReducedMotionAwareAssetUrl) {
-    const fn = function u() {
-      if (null != c0) {
-        c0 = true;
-        const obj2 = { uri: tmp };
-        NativeImageManagerModuleDefault.preload(obj2).then((result) => {
-          if (c0) {
-            let tmp3 = null;
-            if (result) {
-              tmp3 = themeAndReducedMotionAwareAssetUrl;
-            }
-            importDefault(tmp3);
-          }
-        });
-        return () => {
-          c0 = false;
-        };
-      }
-    };
-    const items = [themeAndReducedMotionAwareAssetUrl];
-    cResult[0] = themeAndReducedMotionAwareAssetUrl;
-    cResult[1] = fn;
-    cResult[2] = items;
-    let tmp6 = items;
-    let tmp5 = fn;
-  } else {
-    tmp5 = cResult[1];
-    tmp6 = cResult[2];
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
+
+export default function useGiftingPromotionAssetsReady(asset, asset2) {
+  asset = undefined;
+  if (asset != null) {
+    asset = asset.asset;
   }
-  const effect = noop.useEffect(tmp5, tmp6);
-  return null == themeAndReducedMotionAwareAssetUrl || tmp4 === themeAndReducedMotionAwareAssetUrl;
-}) : (function useCoachmarkAssetReady(arg0) {
-  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(10577).useThemeAndReducedMotionAwareAssetUrl(arg0);
-  const tmp2 = _slicedToArray(noop.useState(null), 2);
-  closure_1 = tmp2[1];
+  themeAndReducedMotionAwareAssetUrl = themeAndReducedMotionAwareAssetUrl(10603).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const tmp6 = _slicedToArray(noop.useState(null), 2);
+  closure_1 = tmp6[1];
   const items = [themeAndReducedMotionAwareAssetUrl];
   const effect = noop.useEffect(() => {
     if (null != c0) {
       c0 = true;
       const obj2 = { uri: tmp };
-      const obj = closure_1(dependencyMap[5]);
-      closure_1(dependencyMap[5]).preload(obj2).then((result) => {
+      const obj = closure_1(dependencyMap[3]);
+      closure_1(dependencyMap[3]).preload(obj2).then((result) => {
         if (c0) {
           let tmp3 = null;
           if (result) {
@@ -69,45 +36,37 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoac
       };
     }
   }, items);
-  return null == themeAndReducedMotionAwareAssetUrl || tmp2[0] === themeAndReducedMotionAwareAssetUrl;
-});
-ReactCompilerGating = fn(558);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGiftingPromotionAssetsReady(asset, asset2) {
-  const cResult = c.c(3);
-  asset = undefined;
-  if (asset != null) {
-    asset = asset.asset;
-  }
-  const tmp2Result = closure_5(asset);
+  const obj3 = { isGiftCoachmarkAssetReady: null == themeAndReducedMotionAwareAssetUrl || tmp6[0] === themeAndReducedMotionAwareAssetUrl, isGiftReminderAssetReady: null };
   let asset1;
   if (asset2 != null) {
     asset1 = asset2.asset;
   }
-  const tmp2Result2 = closure_5(asset1);
-  if (cResult[0] === tmp2Result) {
-    if (cResult[1] === tmp2Result2) {
-      let tmp7 = cResult[2];
+  let obj = themeAndReducedMotionAwareAssetUrl(10603);
+  const tmp8 = null == themeAndReducedMotionAwareAssetUrl || tmp6[0] === themeAndReducedMotionAwareAssetUrl;
+  const themeAndReducedMotionAwareAssetUrl1 = themeAndReducedMotionAwareAssetUrl(10603).useThemeAndReducedMotionAwareAssetUrl(asset1);
+  closure_129_0 = themeAndReducedMotionAwareAssetUrl1;
+  const tmp5Result = _slicedToArray(noop.useState(null), 2);
+  closure_129_1 = tmp5Result[1];
+  const items1 = [themeAndReducedMotionAwareAssetUrl1];
+  const effect1 = noop.useEffect(() => {
+    if (null != c0) {
+      c0 = true;
+      const obj2 = { uri: tmp };
+      const obj = closure_1(dependencyMap[3]);
+      closure_1(dependencyMap[3]).preload(obj2).then((result) => {
+        if (c0) {
+          let tmp3 = null;
+          if (result) {
+            tmp3 = themeAndReducedMotionAwareAssetUrl;
+          }
+          closure_1(tmp3);
+        }
+      });
+      return () => {
+        c0 = false;
+      };
     }
-    return tmp7;
-  }
-  const obj2 = { isGiftCoachmarkAssetReady: tmp2Result, isGiftReminderAssetReady: tmp2Result2 };
-  cResult[0] = tmp2Result;
-  cResult[1] = tmp2Result2;
-  cResult[2] = obj2;
-  tmp7 = obj2;
-}) : (function useGiftingPromotionAssetsReady(asset, asset2) {
-  asset = undefined;
-  if (asset != null) {
-    asset = asset.asset;
-  }
-  const obj = { isGiftCoachmarkAssetReady: closure_5(asset), isGiftReminderAssetReady: null };
-  let asset1;
-  if (asset2 != null) {
-    asset1 = asset2.asset;
-  }
-  obj.isGiftReminderAssetReady = closure_5(asset1);
-  return obj;
-});
+  }, items1);
+  obj3.isGiftReminderAssetReady = null == themeAndReducedMotionAwareAssetUrl1 || tmp5Result[0] === themeAndReducedMotionAwareAssetUrl1;
+  return obj3;
+};

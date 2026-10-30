@@ -1,8 +1,8 @@
-// === Module 4880: LibdiscoreStore ===
+// === Module 4881: LibdiscoreStore ===
 
-// Module 4880 (LibdiscoreStore)
+// Module 4881 (LibdiscoreStore)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const require = fn;
 function identity(arg0) {

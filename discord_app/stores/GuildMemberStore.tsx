@@ -1,27 +1,27 @@
-// === Module 4917: GuildMemberStore ===
+// === Module 4921: GuildMemberStore ===
 
-// Module 4917 (GuildMemberStore)
+// Module 4921 (GuildMemberStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtils from "FlagUtils" /* 1402 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1406 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1985 */;
-import mappers from "mappers" /* 1986 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1997 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 4915 */;
-import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 4918 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4923 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4924 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4925 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4926 */;
-import ImpersonateStore from "ImpersonateStore" /* 4910 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import FlagUtils from "FlagUtils" /* 1397 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1401 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1980 */;
+import mappers from "mappers" /* 1981 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1992 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 4919 */;
+import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 4922 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4927 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4928 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4929 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4930 */;
+import ImpersonateStore from "ImpersonateStore" /* 4914 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildRoleStore from "GuildRoleStore" /* 4911 */;
-import GuildStore from "GuildStore" /* 4879 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildRoleStore from "GuildRoleStore" /* 4915 */;
+import GuildStore from "GuildStore" /* 4880 */;
 import size from "module_2" /* 2 */;
 
 function trackCommunicationDisabled(guildId, tmp10Result) {
@@ -89,7 +89,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "application", hoistRoleId: "guild", iconRoleId: "jsxs", highestRoleId: "Array" };
+    return { colorString: null, colorStrings: null, colorRoleId: "id", hoistRoleId: "Math", iconRoleId: "next", highestRoleId: "y" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {
@@ -264,7 +264,7 @@ function handleGuildMemberUpdate(arg0) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -311,7 +311,7 @@ function batchUpdateGuildMembers(guildId, members) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during batchUpdateGuildMembers.");
@@ -426,7 +426,7 @@ function handleGuildRoleUpdateOrDelete(guildId) {
   if (null == obj[guildId.guildId]) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId.guildId);
+    const guild = GuildStore.getGuild(guildId.guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId.guildId + " not found during " + guildId.type + ".");
@@ -474,7 +474,7 @@ function handleImpersonateUpdate(guildId) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during IMPERSONATE_UPDATE.");
@@ -871,11 +871,11 @@ prototype["getCachedSelfMember"] = function getCachedSelfMember(id) {
   }
   return tmp;
 };
-prototype["getNick"] = function getNick(guildId, id) {
-  if (null != guildId) {
-    if (null != id) {
+prototype["getNick"] = function getNick(id, id2) {
+  if (null != id) {
+    if (null != id2) {
       const self = this;
-      const member = this.getMember(guildId, id);
+      const member = this.getMember(id, id2);
       let nick = null;
       if (null != member) {
         nick = member.nick;
@@ -984,7 +984,7 @@ obj = {
     if (null == tmp3) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         return false;
       } else {
@@ -1202,7 +1202,7 @@ obj = {
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function handleLoadArchivedThreadsSuccess(arg0) {
     ({ guildId, owners } = arg0);
-    guild = undefined;
+    let guild;
     closure_1 = tmp;
     if (null == obj[guildId]) {
       return false;
@@ -1300,7 +1300,7 @@ obj = {
       }
       return arr;
     }, []);
-    guild = undefined;
+    let guild;
     closure_1 = tmp2;
     if (null == obj[guildId]) {
       return false;
@@ -1368,7 +1368,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1397,7 +1397,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1427,7 +1427,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1471,7 +1471,7 @@ obj = {
     let flag = members.members.length > 0;
     if (flag) {
       ({ guildId, members } = members);
-      guild = undefined;
+      let guild;
       closure_1 = tmp2;
       if (null == obj[guildId]) {
         flag = false;
@@ -1587,7 +1587,7 @@ obj = {
   MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function hangdleMemberSafetyGuildMemberSearchSuccess(arg0) {
     ({ guildId, members } = arg0);
     const mapped = members.map((member) => member.member);
-    guild = undefined;
+    let guild;
     dependencyMap = tmp;
     if (null == obj[guildId]) {
       return false;

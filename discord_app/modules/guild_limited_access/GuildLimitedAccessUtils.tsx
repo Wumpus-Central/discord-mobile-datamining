@@ -1,7 +1,7 @@
-// === Module 19254: GuildLimitedAccessUtils ===
+// === Module 19315: GuildLimitedAccessUtils ===
 
-// Module 19254 (GuildLimitedAccessUtils)
-import Constants from "Constants" /* 1084 */;
+// Module 19315 (GuildLimitedAccessUtils)
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;

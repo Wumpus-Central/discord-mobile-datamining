@@ -1,27 +1,27 @@
-// === Module 6555: GatewayConnectionStore ===
+// === Module 6562: GatewayConnectionStore ===
 
-// Module 6555 (GatewayConnectionStore)
+// Module 6562 (GatewayConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6859 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 15442 */;
-import ConnectionStateDefault from "ConnectionState" /* 15456 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15477 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 15485 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6866 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 15482 */;
+import ConnectionStateDefault from "ConnectionState" /* 15496 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 15517 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 15525 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6556 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import RTCRegionStore from "RTCRegionStore" /* 5851 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7872 */;
+import CallStore from "CallStore" /* 6563 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import RTCRegionStore from "RTCRegionStore" /* 5858 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7878 */;
 
 require = fn;
 let closure_25 = async function _handleConnectionOpen(arg0) {
@@ -39,7 +39,7 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -66,12 +66,12 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
             closure_129_0 = {};
             const Storage3 = require("Storage").Storage;
             value = Storage3.get("discord_update_restart_timestamp");
-            let tmp18 = null != value;
-            if (tmp18) {
+            let tmp19 = null != value;
+            if (tmp19) {
               const _Date = Date;
               const _parseInt = parseInt;
               const timestamp = Date.now();
-              tmp18 = timestamp - parseInt(value, 10) < 300000;
+              tmp19 = timestamp - parseInt(value, 10) < 300000;
             }
             const Storage = require("Storage").Storage;
             Storage.remove("discord_update_restart_timestamp");
@@ -80,12 +80,12 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
             if (null != voiceChannelId) {
               const Storage4 = require("Storage").Storage;
               value2 = Storage4.get("discord_watchdog_restart_timestamp");
-              let tmp25 = null != value2;
-              if (tmp25) {
+              let tmp26 = null != value2;
+              if (tmp26) {
                 const _Date2 = Date;
                 const _parseInt2 = parseInt;
                 const timestamp1 = Date.now();
-                tmp25 = timestamp1 - parseInt(value2, 10) < 60000;
+                tmp26 = timestamp1 - parseInt(value2, 10) < 60000;
               }
               const Storage2 = require("Storage").Storage;
               Storage2.remove("discord_watchdog_restart_timestamp");
@@ -106,8 +106,8 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
                 }
               }
               if ("reload" !== type) {
-                if (!tmp25) {
-                  if (!tmp18) {
+                if (!tmp26) {
+                  if (!tmp19) {
                     let lastCrash;
                     if (processUtils != null) {
                       processUtils = processUtils.processUtils;
@@ -148,11 +148,11 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
           }
           if (null == rendererCrashReason) {
             if (closure_130_22) {
-              let tmp10 = null;
+              let tmp11 = null;
               if (null != closure_129_1) {
-                tmp10 = closure_129_1;
+                tmp11 = closure_129_1;
               }
-              const result = closure_130_10.setLastSessionVoiceChannelId(tmp10);
+              const result = closure_130_10.setLastSessionVoiceChannelId(tmp11);
               const voiceChannel = closure_130_1(closure_130_3[18]).selectVoiceChannel(null);
               const obj = closure_130_1(closure_130_3[18]);
             }
@@ -161,9 +161,9 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
         c4 = 3;
         const obj6 = { value, done: true };
         return obj6;
-      } catch (tmp54) {
+      } catch (tmp55) {
         c4 = tmp;
-        throw tmp54;
+        throw tmp55;
       }
     }
   })();
@@ -182,10 +182,10 @@ function handleLocalPresenceChange() {
   localPresenceState.update();
   return false;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
-const UserSettingsTypes = fn(1094).UserSettingsTypes;
-fn(15442).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+const UserSettingsTypes = fn(1082).UserSettingsTypes;
+fn(15482).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -513,13 +513,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6704).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6711).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(15442).socket;
+          const socket = closure_0(15482).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(15442).socket;
+            const socket2 = closure_0(15482).socket;
             socket2.streamDelete(item);
           }
         });

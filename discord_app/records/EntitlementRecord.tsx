@@ -1,14 +1,13 @@
-// === Module 2044: EntitlementRecord ===
+// === Module 2041: EntitlementRecord ===
 
-// Module 2044 (EntitlementRecord)
-import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 15794 */;
-import Record from "Record" /* 1404 */;
-import SKURecord from "SKURecord" /* 2045 */;
-import UserRecord from "UserRecord" /* 1403 */;
+// Module 2041 (EntitlementRecord)
+import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 15832 */;
+import Record from "Record" /* 1399 */;
+import SKURecord from "SKURecord" /* 2042 */;
+import UserRecord from "UserRecord" /* 1398 */;
 
 require = fn;
-const EntitlementTypes = fn(1084).EntitlementTypes;
 let EntitlementRecord;
 class EntitlementRecord extends tmp2 {
   constructor(arg0) {
@@ -105,7 +104,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
 };
 Object.defineProperty(prototype, "isGiftable", {
   get: function isGiftable() {
-    let tmp = this.type === EntitlementTypes.USER_GIFT;
+    let tmp = this.type === require("EntitlementTypes").EntitlementTypes.USER_GIFT;
     if (tmp) {
       tmp = null == this.gifterId;
     }
@@ -121,7 +120,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
   const self = this;
   if (!this.isGiftable) {
     if (!self.deleted) {
-      if (self.type === EntitlementTypes.PREMIUM_SUBSCRIPTION) {
+      if (self.type === require("EntitlementTypes").EntitlementTypes.PREMIUM_SUBSCRIPTION) {
         value = get.get(self.skuId);
         if (null != value) {
           if (!value.premium) {

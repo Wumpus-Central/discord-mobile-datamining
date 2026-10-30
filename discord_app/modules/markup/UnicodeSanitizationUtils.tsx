@@ -1,7 +1,7 @@
-// === Module 6026: UnicodeSanitizationUtils ===
+// === Module 6033: UnicodeSanitizationUtils ===
 
-// Module 6026 (UnicodeSanitizationUtils)
-import URLUtilsDefault from "URLUtils" /* 1383 */;
+// Module 6033 (UnicodeSanitizationUtils)
+import URLUtilsDefault from "URLUtils" /* 1378 */;
 import size from "module_2" /* 2 */;
 
 function safelyPartiallyDecodeURIComponent(hash) {
@@ -211,8 +211,8 @@ let result = size.fileFinishedImporting("modules/markup/UnicodeSanitizationUtils
 
 export const BLANK_CHARACTERS_TO_SANITIZE_REGEX = regExp;
 export const BLANK_CHARACTERS_TO_SANITIZE_REGEX_EXCLUDING_TABS = regExp1;
-export function sanitizeWhitespace(src) {
-  return src.replace(regExp, "");
+export function sanitizeWhitespace(assetURL) {
+  return assetURL.replace(regExp, "");
 }
 export function sanitizeWhitespaceExcludingTabs(str) {
   return str.replace(regExp1, "");

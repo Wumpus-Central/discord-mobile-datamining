@@ -1,14 +1,14 @@
-// === Module 9644: QuestDecisionRoundtripTracker ===
+// === Module 9669: QuestDecisionRoundtripTracker ===
 
-// Module 9644 (QuestDecisionRoundtripTracker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AdCreativeType from "AdCreativeType" /* 6775 */;
-import NetStats from "NetStats" /* 7627 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7630 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7807 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7832 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7831 */;
-import NetworkStore from "NetworkStore" /* 5928 */;
+// Module 9669 (QuestDecisionRoundtripTracker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import AdCreativeType from "AdCreativeType" /* 6782 */;
+import NetStats from "NetStats" /* 7632 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7635 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7812 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7837 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7836 */;
+import NetworkStore from "NetworkStore" /* 5935 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
@@ -59,7 +59,7 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     const tmp2Result = SessionForegroundUtils;
   }
 }
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 class QuestDecisionRoundtripTracker {
   constructor() {
     merged = Object.assign({ pendingRequests: null });

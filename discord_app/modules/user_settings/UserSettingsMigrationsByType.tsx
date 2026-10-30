@@ -1,7 +1,7 @@
-// === Module 1247: UserSettingsMigrationsByType ===
+// === Module 1236: UserSettingsMigrationsByType ===
 
-// Module 1247 (UserSettingsMigrationsByType)
-import UserSettingsConstants from "UserSettingsConstants" /* 1094 */;
+// Module 1236 (UserSettingsMigrationsByType)
+import UserSettingsConstants from "UserSettingsConstants" /* 1082 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;

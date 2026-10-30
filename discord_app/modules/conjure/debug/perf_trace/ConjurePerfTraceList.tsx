@@ -1,12 +1,13 @@
-// === Module 12822: ConjurePerfTraceList ===
+// === Module 12973: ConjurePerfTraceList ===
 
-// Module 12822 (ConjurePerfTraceList)
+// Module 12973 (ConjurePerfTraceList)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/ConjurePerfTraceList.tsx");
 
-export function filterPerfTraces(stateFromStoresArray, first1) {
-  const formatted = first1.trim().toLowerCase();
+export function filterPerfTraces(stateFromStoresArray, str) {
+  str = str.trim();
+  const formatted = str.toLowerCase();
   let found = stateFromStoresArray;
   if ("" !== formatted) {
     found = stateFromStoresArray.filter((item) => (function perfTraceText(item) {

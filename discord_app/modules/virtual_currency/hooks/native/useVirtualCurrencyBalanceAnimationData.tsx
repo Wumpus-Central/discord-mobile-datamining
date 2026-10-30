@@ -1,131 +1,15 @@
-// === Module 14418: useVirtualCurrencyBalanceAnimationData ===
+// === Module 14451: useVirtualCurrencyBalanceAnimationData ===
 
-// Module 14418 (useVirtualCurrencyBalanceAnimationData)
+// Module 14451 (useVirtualCurrencyBalanceAnimationData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
 const require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx");
 
-export const useVirtualCurrencyBalanceAnimationData = ReactCompilerGating.isReactCompilerEnabled() ? (function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
-  const cResult = initialRenderedBalance(stateFromStores[4]).c(29);
-  initialRenderedBalance = initialRenderedBalance.initialRenderedBalance;
-  const balance = initialRenderedBalance.balance;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [useReducedMotion];
-    const fn = function o() {
-      return useReducedMotion.useReducedMotion;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  const obj = initialRenderedBalance(stateFromStores[4]);
-  stateFromStores = initialRenderedBalance(stateFromStores[5]).useStateFromStores(tmp4, tmp5);
-  const tmp8 = first(noop.useState(null), 2);
-  first = tmp8[0];
-  noop = tmp8[1];
-  useReducedMotion = noop.useRef(null);
-  noop.useRef(null);
-  const tmpResult = initialRenderedBalance(stateFromStores[5]);
-  [r10045, closure_7] = first(noop.useState(null != initialRenderedBalance), 2);
-  const tmp12 = first(noop.useState(null == initialRenderedBalance), 2);
-  const first1 = tmp12[0];
-  closure_9 = tmp12[1];
-  const tmp11 = first(noop.useState(null != initialRenderedBalance), 2);
-  closure_10 = balance(stateFromStores[6])(balance);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function y() {
-
-    };
-    cResult[2] = fn2;
-  }
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class M {
-      constructor() {
-        closure_5.current = null;
-        tmp = closure_4(null);
-        return;
-      }
-    }
-    cResult[3] = M;
-  } else {
-    class M {
-      constructor() {
-        closure_5.current = null;
-        tmp = closure_4(null);
-        return;
-      }
-    }
-  }
-  if (cResult[4] !== first) {
-    class M {
-      constructor() {
-        closure_5.current = null;
-        tmp = closure_4(null);
-        return;
-      }
-    }
-    cResult[4] = first;
-    cResult[5] = tmp18;
-  } else {
-    class M {
-      constructor() {
-        closure_5.current = null;
-        tmp = closure_4(null);
-        return;
-      }
-    }
-  }
-  if (cResult[6] === balance) {
-    class M {
-      constructor() {
-        closure_5.current = null;
-        tmp = closure_4(null);
-        return;
-      }
-    }
-  }
-  class O {
-    constructor() {
-      if (null != closure_0) {
-        tmp = balance;
-        if (null !== balance) {
-          tmp2 = closure_8;
-          if (!closure_8) {
-            tmp3 = globalThis;
-            _setTimeout = setTimeout;
-            num = 1250;
-            closure_0 = setTimeout(() => {
-              if (!stateFromStores) {
-                closure_1_11(balance - closure_0);
-              }
-              closure_1_7(false);
-              closure_1_9(true);
-            }, 1250);
-            return () => clearTimeout(closure_0);
-          }
-        }
-      }
-      return;
-    }
-  }
-  const items1 = [initialRenderedBalance, balance, first1, stateFromStores, tmp17];
-  cResult[6] = balance;
-  cResult[7] = first1;
-  cResult[8] = initialRenderedBalance;
-  cResult[9] = tmp17;
-  cResult[10] = stateFromStores;
-  cResult[11] = O;
-  cResult[12] = items1;
-  const tmp14 = balance(stateFromStores[6])(balance);
-}) : (function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
+export function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
   initialRenderedBalance = initialRenderedBalance.initialRenderedBalance;
   const balance = initialRenderedBalance.balance;
   let stateFromStores;
@@ -134,18 +18,18 @@ export const useVirtualCurrencyBalanceAnimationData = ReactCompilerGating.isReac
   let useReducedMotion;
   c7 = undefined;
   const items = [useReducedMotion];
-  stateFromStores = initialRenderedBalance(stateFromStores[5]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  stateFromStores = initialRenderedBalance(stateFromStores[3]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let tmp2 = currentAnimationType(noop.useState(null), 2);
   currentAnimationType = tmp2[0];
   noop = tmp2[1];
   useReducedMotion = noop.useRef(null);
   const lottieRef = noop.useRef(null);
-  const obj = initialRenderedBalance(stateFromStores[5]);
+  const obj = initialRenderedBalance(stateFromStores[3]);
   [tmp6, c7] = currentAnimationType(noop.useState(null != initialRenderedBalance), 2);
   const tmp7 = currentAnimationType(noop.useState(null == initialRenderedBalance), 2);
   const first1 = tmp7[0];
   closure_9 = tmp7[1];
-  const tmp9 = balance(stateFromStores[6])(balance);
+  const tmp9 = balance(stateFromStores[4])(balance);
   closure_10 = tmp9;
   const onValueChange = noop.useCallback(() => {
 
@@ -210,4 +94,4 @@ export const useVirtualCurrencyBalanceAnimationData = ReactCompilerGating.isReac
     }
   }, items3);
   return { onValueChange, onValueReached, showInitialRenderedBalance, currentAnimationType, lottieRef };
-});
+}

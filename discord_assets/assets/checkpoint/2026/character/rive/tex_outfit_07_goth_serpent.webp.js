@@ -1,6 +1,6 @@
-// === Module 13357: ? ===
+// === Module 13507: ? ===
 
-// Module 13357
+// Module 13507
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_07_goth_serpent.webp.js");

@@ -1,8 +1,8 @@
-// === Module 10931: MediaChannelActionCreators ===
+// === Module 10956: MediaChannelActionCreators ===
 
-// Module 10931 (MediaChannelActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 10956 (MediaChannelActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -48,7 +48,7 @@ let closure_6 = async function _unfurlEmbedUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -93,11 +93,11 @@ let closure_6 = async function _unfurlEmbedUrl() {
           const obj = { value: value.body, done: true };
           return obj;
         }
-      } catch (tmp19) {
-        closure_3 = tmp19;
+      } catch (tmp23) {
+        closure_3 = tmp23;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp19;
+          throw tmp23;
         } else {
           c5 = tmp;
         }
@@ -105,7 +105,7 @@ let closure_6 = async function _unfurlEmbedUrl() {
     }
   })();
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
 

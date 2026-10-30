@@ -1,39 +1,39 @@
-// === Module 14242: ChannelSettingsNotifications ===
+// === Module 11049: ChannelSettingsNotifications ===
 
-// Module 14242 (ChannelSettingsNotifications)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import useChannelName from "useChannelName" /* 5641 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
-import Stack_Stack from "Stack/Stack" /* 6015 */;
-import TableRow from "TableRow" /* 6963 */;
-import TableRowGroup from "TableRowGroup" /* 7047 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7270 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7275 */;
-import TableSwitchRow from "TableSwitchRow" /* 7355 */;
-import Form from "Form" /* 8988 */;
-import MutedUntilText from "MutedUntilText" /* 11102 */;
+// Module 11049 (ChannelSettingsNotifications)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import useChannelName from "useChannelName" /* 5647 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5755 */;
+import Stack_Stack from "Stack/Stack" /* 6022 */;
+import TableRow from "TableRow" /* 6969 */;
+import TableRowGroup from "TableRowGroup" /* 7054 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7277 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7282 */;
+import TableSwitchRow from "TableSwitchRow" /* 7363 */;
+import Form from "Form" /* 8169 */;
+import MutedUntilText from "MutedUntilText" /* 11055 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5231 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5237 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const MutedUntilTextDefault = MutedUntilText;
 
 require = fn;
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ isGuildTextChannelType: closure_4, CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING: hasOwnProperty } = ChannelRecord);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, UserNotificationSettings: closure_12, ChannelTypes: map1, SettingsPaneTypes: closure_14, MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_15 } = Constants);
-const UnreadSetting = fn(6763).UnreadSetting;
-let closure_17 = fn(1094).ChannelNotificationSettingsFlags;
+const UnreadSetting = fn(6770).UnreadSetting;
+let closure_17 = fn(1082).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
 const hybrid = "hybrid";
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -226,46 +226,46 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     tmp10 = defaultUnreadSetting === UnreadSetting.ALL_MESSAGES;
   }
   if (tmp10) {
-    const intl5 = tmp5(1125).intl;
-    let stringResult1 = intl5.string(tmp5(1125).t.JzbSEY);
+    const intl5 = tmp5(1114).intl;
+    let stringResult1 = intl5.string(tmp5(1114).t.JzbSEY);
   } else if (constants2.ALL_MESSAGES === defaultSetting) {
-    const intl4 = tmp5(1125).intl;
-    stringResult1 = intl4.string(tmp5(1125).t["n/bTaY"]);
+    const intl4 = tmp5(1114).intl;
+    stringResult1 = intl4.string(tmp5(1114).t["n/bTaY"]);
   } else if (constants2.ONLY_MENTIONS === defaultSetting) {
-    const intl3 = tmp5(1125).intl;
-    stringResult1 = intl3.format(tmp5(1125).t.L2hmYy, {});
+    const intl3 = tmp5(1114).intl;
+    stringResult1 = intl3.format(tmp5(1114).t.L2hmYy, {});
   } else if (constants2.NO_MESSAGES === defaultSetting) {
-    const intl15 = tmp5(1125).intl;
-    stringResult1 = intl15.string(tmp5(1125).t.CtVGyQ);
+    const intl15 = tmp5(1114).intl;
+    stringResult1 = intl15.string(tmp5(1114).t.CtVGyQ);
   }
   if (channel.isGuildStageVoice()) {
     const obj2 = { value: messageNotifications, onChange: null, groupRef: null, title: null, hasIcons: false, children: null };
     ({ handleTypeChange: obj7.onChange, radioGroupRef: obj7.groupRef } = self);
-    const intl12 = tmp7(1125).intl;
-    obj2.title = intl12.string(tmp7(1125).t.h850Ss);
+    const intl12 = tmp7(1114).intl;
+    obj2.title = intl12.string(tmp7(1114).t.h850Ss);
     let tmp31 = muted;
     if (!muted) {
       tmp31 = guildMuted;
     }
     const obj3 = { disabled: tmp31, label: stringResult, subLabel: stringResult1, value: constants2.NULL };
-    const items = [collapsedCategories(tmp7(7044).TableRadioRow, obj3), , ];
+    const items = [collapsedCategories(tmp7(7055).TableRadioRow, obj3), , ];
     let tmp33 = muted;
     if (!muted) {
       tmp33 = guildMuted;
     }
     const obj4 = { disabled: tmp33, value: constants2.ONLY_MENTIONS, label: null };
-    const intl13 = tmp7(1125).intl;
-    obj4.label = intl13.string(tmp7(1125).t["BENn/6"]);
-    items[1] = collapsedCategories(tmp7(7044).TableRadioRow, obj4);
+    const intl13 = tmp7(1114).intl;
+    obj4.label = intl13.string(tmp7(1114).t["BENn/6"]);
+    items[1] = collapsedCategories(tmp7(7055).TableRadioRow, obj4);
     if (!muted) {
       muted = guildMuted;
     }
     const obj5 = { disabled: muted, value: constants2.NO_MESSAGES, label: null };
-    const intl14 = tmp7(1125).intl;
-    obj5.label = intl14.string(tmp7(1125).t.CtVGyQ);
-    items[2] = collapsedCategories(tmp7(7044).TableRadioRow, obj5);
+    const intl14 = tmp7(1114).intl;
+    obj5.label = intl14.string(tmp7(1114).t.CtVGyQ);
+    items[2] = collapsedCategories(tmp7(7055).TableRadioRow, obj5);
     obj2.children = items;
-    return closure_1_20(tmp7(7045).TableRadioGroup, obj2);
+    return dependencyMap(tmp7(7052).TableRadioGroup, obj2);
   } else {
     let tmp15 = messageNotifications;
     if (useNewNotifications) {
@@ -279,8 +279,8 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     const obj = { value: tmp15, onChange: null, groupRef: null, title: null, hasIcons: false, children: null };
     ({ handleTypeChange: obj.onChange, radioGroupRef: obj.groupRef } = self);
-    const intl6 = tmp7(1125).intl;
-    obj.title = intl6.string(tmp7(1125).t.h850Ss);
+    const intl6 = tmp7(1114).intl;
+    obj.title = intl6.string(tmp7(1114).t.h850Ss);
     const obj6 = { label: stringResult, subLabel: stringResult1, disabled: null, value: null };
     let tmp20 = muted;
     if (!muted) {
@@ -288,10 +288,10 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj6.disabled = tmp20;
     obj6.value = constants2.NULL;
-    const items1 = [collapsedCategories(tmp7(7044).TableRadioRow, obj6), , , , ];
+    const items1 = [collapsedCategories(tmp7(7055).TableRadioRow, obj6), , , , ];
     const obj8 = { label: null, disabled: null, subLabel: null, value: null };
-    const intl7 = tmp7(1125).intl;
-    obj8.label = intl7.string(tmp7(1125).t["n/bTaY"]);
+    const intl7 = tmp7(1114).intl;
+    obj8.label = intl7.string(tmp7(1114).t["n/bTaY"]);
     let tmp22 = muted;
     if (!muted) {
       tmp22 = guildMuted;
@@ -300,52 +300,52 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     let stringResult2 = null;
     if (null != guildMemberCount) {
       stringResult2 = null;
-      if (guildMemberCount >= value2) {
-        const intl8 = tmp7(1125).intl;
-        stringResult2 = intl8.string(tmp7(1125).t.Dh5p5j);
+      if (guildMemberCount >= __initData) {
+        const intl8 = tmp7(1114).intl;
+        stringResult2 = intl8.string(tmp7(1114).t.Dh5p5j);
       }
     }
     obj8.subLabel = stringResult2;
     obj8.value = constants2.ALL_MESSAGES;
-    items1[1] = collapsedCategories(tmp7(7044).TableRadioRow, obj8);
+    items1[1] = collapsedCategories(tmp7(7055).TableRadioRow, obj8);
     if (useNewNotifications) {
       const obj9 = { label: null, disabled: null, value: null };
-      const intl9 = tmp7(1125).intl;
-      obj9.label = intl9.string(tmp7(1125).t.JzbSEY);
+      const intl9 = tmp7(1114).intl;
+      obj9.label = intl9.string(tmp7(1114).t.JzbSEY);
       let tmp25 = muted;
       if (!muted) {
         tmp25 = guildMuted;
       }
       obj9.disabled = tmp25;
       obj9.value = hybrid;
-      const items2 = [collapsedCategories(tmp7(7044).TableRadioRow, obj9, hybrid)];
+      const items2 = [collapsedCategories(tmp7(7055).TableRadioRow, obj9, hybrid)];
       let items3 = items2;
     } else {
       items3 = [];
     }
     items1[2] = items3;
     const obj10 = { label: null, disabled: null, value: null };
-    const intl10 = tmp7(1125).intl;
-    obj10.label = intl10.format(tmp7(1125).t.L2hmYy, {});
+    const intl10 = tmp7(1114).intl;
+    obj10.label = intl10.format(tmp7(1114).t.L2hmYy, {});
     let tmp27 = muted;
     if (!muted) {
       tmp27 = guildMuted;
     }
     obj10.disabled = tmp27;
     obj10.value = constants2.ONLY_MENTIONS;
-    items1[3] = collapsedCategories(tmp7(7044).TableRadioRow, obj10);
+    items1[3] = collapsedCategories(tmp7(7055).TableRadioRow, obj10);
     const obj19 = { label: null, disabled: null, value: null };
-    const intl11 = tmp7(1125).intl;
-    obj19.label = intl11.string(tmp7(1125).t.CtVGyQ);
+    const intl11 = tmp7(1114).intl;
+    obj19.label = intl11.string(tmp7(1114).t.CtVGyQ);
     let tmp28 = muted;
     if (!muted) {
       tmp28 = guildMuted;
     }
     obj19.disabled = tmp28;
     obj19.value = constants2.NO_MESSAGES;
-    items1[4] = collapsedCategories(tmp7(7044).TableRadioRow, obj19);
+    items1[4] = collapsedCategories(tmp7(7055).TableRadioRow, obj19);
     obj.children = items1;
-    return closure_1_20(tmp7(7045).TableRadioGroup, obj);
+    return dependencyMap(tmp7(7052).TableRadioGroup, obj);
   }
 };
 prototype["render"] = function render() {
@@ -395,241 +395,33 @@ prototype["render"] = function render() {
     items[2] = tmp9Result;
     items[3] = tmp5;
     obj6.children = items;
-    obj5.children = closure_1_20(Stack_Stack.Stack, obj6);
+    obj5.children = dependencyMap(Stack_Stack.Stack, obj6);
     tmp9Result2 = collapsedCategories(Form.Form, obj5);
   }
   return tmp9Result2;
 };
-ChannelSettingsNotifications.contextType = fn(5071).ThemeContext;
-const ReactCompilerGating = fn(558);
-let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+ChannelSettingsNotifications.contextType = fn(5075).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsNotifications.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSettingsNotificationsGuard(onClose) {
-  const cResult = onClose(stateFromStores[33]).c(23);
-  onClose = onClose.onClose;
-  const channelId = onClose.channelId;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== channelId) {
-    const fn = function c() {
-      return ChannelStore.getChannel(channelId);
-    };
-    cResult[1] = channelId;
-    cResult[2] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-  }
-  let obj = onClose(stateFromStores[33]);
-  stateFromStores = onClose(stateFromStores[34]).useStateFromStores(first, tmp6);
-  if (cResult[3] !== stateFromStores) {
-    let guildId;
-    if (stateFromStores != null) {
-      guildId = stateFromStores.getGuildId();
-    }
-    cResult[3] = stateFromStores;
-    cResult[4] = guildId;
-    let tmp7 = guildId;
-  } else {
-    tmp7 = cResult[4];
-  }
-  noop = tmp7;
-  const tmpResult = onClose(stateFromStores[34]);
-  let shouldUseNewNotificationSystem = onClose(stateFromStores[35]).useShouldUseNewNotificationSystem("ChannelSettingsNotificationsNative");
-  if (shouldUseNewNotificationSystem) {
-    shouldUseNewNotificationSystem = null != stateFromStores;
-  }
-  if (shouldUseNewNotificationSystem) {
-    shouldUseNewNotificationSystem = set.has(stateFromStores.type);
-  }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [UserGuildSettingsStore];
-    cResult[5] = items1;
-    let tmp13 = items1;
-  } else {
-    tmp13 = cResult[5];
-  }
-  if (cResult[6] === stateFromStores) {
-    if (cResult[7] === channelId) {
-      if (cResult[8] === tmp7) {
-        let tmp15 = cResult[9];
-      }
-      const stateFromStoresObject = tmp(tmp2[34]).useStateFromStoresObject(tmp13, tmp15);
-      const _Symbol = Symbol;
-      if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const items2 = [GuildMemberCountStore];
-        cResult[10] = items2;
-        let tmp17 = items2;
-      } else {
-        tmp17 = cResult[10];
-      }
-      if (cResult[11] !== tmp7) {
-        class R {
-          constructor() {
-            return closure_7.getMemberCount(closure_3);
-          }
-        }
-        cResult[11] = tmp7;
-        cResult[12] = R;
-      } else {
-        class R {
-          constructor() {
-            return closure_7.getMemberCount(closure_3);
-          }
-        }
-      }
-      const tmpResult5 = tmp(tmp2[34]);
-      const stateFromStores1 = tmp(tmp2[34]).useStateFromStores(tmp17, R);
-      if (cResult[13] === stateFromStores) {
-        class R {
-          constructor() {
-            return closure_7.getMemberCount(closure_3);
-          }
-        }
-        const effect = noop.useEffect(U, tmp22);
-        if (cResult[17] === stateFromStores) {
-          class R {
-            constructor() {
-              return closure_7.getMemberCount(closure_3);
-            }
-          }
-        }
-        if (null != stateFromStores) {
-          class R {
-            constructor() {
-              return closure_7.getMemberCount(closure_3);
-            }
-          }
-          const obj2 = { onClose, channel: stateFromStores };
-          const merged = Object.assign(stateFromStoresObject);
-          obj2.guildMemberCount = stateFromStores1;
-          obj2.useNewNotifications = shouldUseNewNotificationSystem;
-          class U {
-            constructor() {
-              if (null == closure_2) {
-                if (onClose != null) {
-                  tmpResult = tmp();
-                }
-              }
-              return;
-            }
-          }
-        }
-        cResult[17] = stateFromStores;
-        cResult[18] = stateFromStores1;
-        class U {
-          constructor() {
-            if (null == closure_2) {
-              if (onClose != null) {
-                tmpResult = tmp();
-              }
-            }
-            return;
-          }
-        }
-        cResult[19] = onClose;
-        cResult[20] = stateFromStoresObject;
-        cResult[21] = shouldUseNewNotificationSystem;
-        cResult[22] = null;
-      }
-      class U {
-        constructor() {
-          if (null == closure_2) {
-            if (onClose != null) {
-              tmpResult = tmp();
-            }
-          }
-          return;
-        }
-      }
-      const items3 = [stateFromStores, onClose];
-      cResult[13] = stateFromStores;
-      cResult[14] = onClose;
-      cResult[15] = U;
-      cResult[16] = items3;
-      tmp22 = items3;
-      const tmpResult6 = tmp(tmp2[34]);
-    }
-  }
-  const fn2 = function _() {
-    let parent_id;
-    if (stateFromStores != null) {
-      parent_id = stateFromStores.parent_id;
-    }
-    if (null != parent_id) {
-      let NULL = UserGuildSettingsStore.getChannelMessageNotifications(closure_3, stateFromStores.parent_id);
-    } else {
-      NULL = constants2.NULL;
-    }
-    const messageNotifications = UserGuildSettingsStore.getMessageNotifications(closure_3);
-    let tmp8 = messageNotifications;
-    if (NULL !== constants2.NULL) {
-      tmp8 = NULL;
-    }
-    let parent_id1;
-    if (stateFromStores != null) {
-      parent_id1 = stateFromStores.parent_id;
-    }
-    if (null != parent_id1) {
-      let UNSET = UserGuildSettingsStore.getChannelUnreadSetting(closure_3, stateFromStores.parent_id);
-    } else {
-      UNSET = UnreadSetting.UNSET;
-    }
-    if (null != closure_3) {
-      let UNSET2 = UserGuildSettingsStore.getGuildUnreadSetting(closure_3);
-    } else {
-      UNSET2 = UnreadSetting.UNSET;
-    }
-    const obj = { messageNotifications: UserGuildSettingsStore.getChannelMessageNotifications(closure_3, channelId), muted: UserGuildSettingsStore.isChannelMuted(closure_3, channelId), muteConfig: UserGuildSettingsStore.getChannelMuteConfig(closure_3, channelId), guildMuted: UserGuildSettingsStore.isMuted(closure_3), guildMessageNotifications: messageNotifications, newForumThreadsCreated: null, defaultSetting: null, unreadSetting: null, defaultUnreadSetting: null };
-    let newForumThreadsCreated = null != stateFromStores;
-    if (newForumThreadsCreated) {
-      newForumThreadsCreated = UserGuildSettingsStore.getNewForumThreadsCreated(stateFromStores);
-    }
-    obj.newForumThreadsCreated = newForumThreadsCreated;
-    obj.defaultSetting = tmp8;
-    if (null != stateFromStores) {
-      let UNSET3 = UserGuildSettingsStore.resolveUnreadSetting(stateFromStores);
-    } else {
-      UNSET3 = UnreadSetting.UNSET;
-    }
-    obj.unreadSetting = UNSET3;
-    if (UNSET !== UnreadSetting.UNSET) {
-      UNSET2 = UNSET;
-    }
-    obj.defaultUnreadSetting = UNSET2;
-    return obj;
-  };
-  cResult[6] = stateFromStores;
-  cResult[7] = channelId;
-  cResult[8] = tmp7;
-  cResult[9] = fn2;
-  tmp15 = fn2;
-  const tmpResult4 = onClose(stateFromStores[35]);
-}) : (function ChannelSettingsNotificationsGuard(onClose) {
+export default function ChannelSettingsNotificationsGuard(onClose) {
   onClose = onClose.onClose;
   const channelId = onClose.channelId;
   let stateFromStores;
   const items = [ChannelStore];
-  stateFromStores = onClose(stateFromStores[34]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  stateFromStores = onClose(stateFromStores[32]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let guildId;
   if (stateFromStores != null) {
     guildId = stateFromStores.getGuildId();
   }
-  let obj = onClose(stateFromStores[34]);
-  let hasItem = onClose(stateFromStores[35]).useShouldUseNewNotificationSystem("ChannelSettingsNotificationsNative") && null != stateFromStores;
+  let obj = onClose(stateFromStores[32]);
+  let hasItem = onClose(stateFromStores[33]).useShouldUseNewNotificationSystem("ChannelSettingsNotificationsNative") && null != stateFromStores;
   if (hasItem) {
     hasItem = set.has(stateFromStores.type);
   }
-  const tmpResult = onClose(stateFromStores[35]);
+  const tmpResult = onClose(stateFromStores[33]);
   const items1 = [UserGuildSettingsStore];
-  const stateFromStoresObject = onClose(stateFromStores[34]).useStateFromStoresObject(items1, () => {
+  const stateFromStoresObject = onClose(stateFromStores[32]).useStateFromStoresObject(items1, () => {
     let parent_id;
     if (stateFromStores != null) {
       parent_id = stateFromStores.parent_id;
@@ -677,10 +469,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     obj.defaultUnreadSetting = UNSET2;
     return obj;
   });
-  const tmpResult3 = onClose(stateFromStores[34]);
+  const tmpResult3 = onClose(stateFromStores[32]);
   const items2 = [GuildMemberCountStore];
   const items3 = [stateFromStores, onClose];
-  const stateFromStores1 = onClose(stateFromStores[34]).useStateFromStores(items2, () => GuildMemberCountStore.getMemberCount(guildId));
+  const stateFromStores1 = onClose(stateFromStores[32]).useStateFromStores(items2, () => GuildMemberCountStore.getMemberCount(guildId));
   const effect = guildId.useEffect(() => {
     if (null == stateFromStores) {
       if (onClose != null) {
@@ -697,4 +489,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     tmp9 = closure_18(ChannelSettingsNotifications, obj2);
   }
   return tmp9;
-});
+};

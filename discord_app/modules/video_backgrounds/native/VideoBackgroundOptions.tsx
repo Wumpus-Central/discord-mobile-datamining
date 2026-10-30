@@ -1,23 +1,22 @@
-// === Module 11732: VideoBackgroundOptions ===
+// === Module 11925: VideoBackgroundOptions ===
 
-// Module 11732 (VideoBackgroundOptions)
-import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5907 */;
+// Module 11925 (VideoBackgroundOptions)
+import nativeDefault from "native" /* 575 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5914 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const BLUR_BACKGROUND_OPTION = fn(5901).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(5908).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { imageThumbnail: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.lg };
 obj2.imageThumbnail = size;
 let closure_6 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/native/VideoBackgroundOptions.tsx");
 
@@ -54,55 +53,7 @@ export function parseVideoBackgroundRadioValue(arg0) {
   }
   return NumberResult;
 }
-export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoBackgroundRadioOptions() {
-  const cResult = require("c").c(5);
-  const tmp4 = closure_6();
-  _require = tmp4;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const _Object = Object;
-    const values = Object.values(getDefaultBackgroundDataDefault());
-    const found = values.filter((source) => "" !== source.source);
-    cResult[0] = found;
-    let first = found;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { value: none, label: null, icon: null };
-    const intl = tmp(1125).intl;
-    obj2.label = intl.string(tmp(1125).t.fUdMeO);
-    const obj3 = { IconComponent: tmp(9836).DenyIcon };
-    obj2.icon = jsx(tmp(6971).TableRowIcon, { IconComponent: tmp(9836).DenyIcon });
-    cResult[1] = obj2;
-    let tmp7 = obj2;
-  } else {
-    tmp7 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { value: BLUR_BACKGROUND_OPTION, label: null, icon: null };
-    const intl2 = tmp(1125).intl;
-    obj4.label = intl2.string(tmp(1125).t.LhSyL8);
-    const obj5 = { IconComponent: tmp(11733).BlurBackgroundIcon };
-    obj4.icon = jsx(tmp(6971).TableRowIcon, { IconComponent: tmp(11733).BlurBackgroundIcon });
-    cResult[2] = obj4;
-    let tmp10 = obj4;
-  } else {
-    tmp10 = cResult[2];
-  }
-  if (cResult[3] !== tmp4) {
-    const items = [tmp7, tmp10];
-    HermesBuiltin.arraySpread(first.map((uri) => {
-      const obj = { value: uri.id, label: uri.name, icon: jsx(FastImageDefault, { source: { uri: uri.source }, style: imageThumbnail.imageThumbnail, resizeMode: "cover" }) };
-      return obj;
-    }), 2);
-    cResult[3] = tmp4;
-    cResult[4] = items;
-    let tmp13 = items;
-  } else {
-    tmp13 = cResult[4];
-  }
-  return tmp13;
-}) : (function useVideoBackgroundRadioOptions() {
+export function useVideoBackgroundRadioOptions() {
   _require = closure_6();
   const values = Object.values(getDefaultBackgroundDataDefault());
   const found = values.filter((source) => "" !== source.source);
@@ -122,4 +73,4 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
     return obj;
   }), 2);
   return items;
-});
+}

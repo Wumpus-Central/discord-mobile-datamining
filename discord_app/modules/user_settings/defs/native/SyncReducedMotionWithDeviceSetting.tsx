@@ -1,59 +1,23 @@
-// === Module 17284: SyncReducedMotionWithDeviceSetting ===
+// === Module 17338: SyncReducedMotionWithDeviceSetting ===
 
-// Module 17284 (SyncReducedMotionWithDeviceSetting)
+// Module 17338 (SyncReducedMotionWithDeviceSetting)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16185 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import util from "util" /* 1114 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16225 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReducedMotionSyncSettingValue() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AccessibilityStore];
-    const fn = function o() {
-      return "auto" === AccessibilityStore.rawPrefersReducedMotion;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useReducedMotionSyncSettingValue() {
-  const items = [AccessibilityStore];
-  return initialize.useStateFromStores(items, () => "auto" === AccessibilityStore.rawPrefersReducedMotion);
-});
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["St+DJK"]);
   },
-  parent: fn(8387).MobileUserSettings.ACCESSIBILITY,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useReducedMotionSyncSettingValue() {
-    const cResult = c.c(2);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [AccessibilityStore];
-      const fn = function o() {
-        return "auto" === AccessibilityStore.rawPrefersReducedMotion;
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp4 = items;
-      tmp5 = fn;
-    } else {
-      [tmp4, tmp5] = cResult;
-    }
-    return initialize.useStateFromStores(tmp4, tmp5);
-  }) : (function useReducedMotionSyncSettingValue() {
+  parent: fn(8424).MobileUserSettings.ACCESSIBILITY,
+  useValue: function useReducedMotionSyncSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => "auto" === AccessibilityStore.rawPrefersReducedMotion);
-  }),
+  },
   onValueChange: function onReducedMotionSyncSettingValueChange(arg0) {
     let str = "auto";
     if (!arg0) {

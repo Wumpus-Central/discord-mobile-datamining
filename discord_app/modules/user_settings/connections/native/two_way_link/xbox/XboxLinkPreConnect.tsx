@@ -1,83 +1,21 @@
-// === Module 9687: XboxLinkPreConnect ===
+// === Module 9712: XboxLinkPreConnect ===
 
-// Module 9687 (XboxLinkPreConnect)
-import _modDef9688 from "module_9688" /* 9688 */;
+// Module 9712 (XboxLinkPreConnect)
+import _modDef9713 from "module_9713" /* 9713 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const XboxLinkModalScenes = fn(9678).XboxLinkModalScenes;
-const PlatformTypes = fn(1084).PlatformTypes;
+const XboxLinkModalScenes = fn(9703).XboxLinkModalScenes;
+const PlatformTypes = fn(1072).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_7 = createStyles.createStyles({ image: { width: 231, height: 160 } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLinkPreConnect() {
-  const cResult = navigation(576).c(11);
-  const tmp4 = closure_7();
-  const obj = navigation(576);
-  navigation = navigation(1503).useNavigation();
-  if (cResult[0] !== navigation) {
-    const fn = function t(arg0) {
-      navigation.push(XboxLinkModalScenes.DISCORD_CONSENT, arg0);
-    };
-    cResult[0] = navigation;
-    cResult[1] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] !== navigation) {
-    const fn2 = function b() {
-      navigation.push(XboxLinkModalScenes.ERROR);
-    };
-    cResult[2] = navigation;
-    cResult[3] = fn2;
-    let tmp7 = fn2;
-  } else {
-    tmp7 = cResult[3];
-  }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { uri: _modDef9688 };
-    cResult[4] = obj3;
-    let tmp8 = obj3;
-  } else {
-    tmp8 = cResult[4];
-  }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1125).intl;
-    const stringResult = intl.string(tmp(1125).t["e/z3na"]);
-    const intl2 = tmp(1125).intl;
-    const stringResult1 = intl2.string(tmp(1125).t["7tXu0i"]);
-    cResult[5] = stringResult;
-    cResult[6] = stringResult1;
-    let tmp11 = stringResult1;
-    let tmp10 = stringResult;
-  } else {
-    tmp10 = cResult[5];
-    tmp11 = cResult[6];
-  }
-  if (cResult[7] === tmp7) {
-    if (cResult[8] === tmp6) {
-      if (cResult[9] === tmp4.image) {
-        let tmp14 = cResult[10];
-      }
-      return tmp14;
-    }
-  }
-  const tmp15 = jsx(navigation(9689).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: tmp7, onNext: tmp6, img: tmp8, imgStyle: tmp4.image, title: tmp10, body: tmp11 });
-  cResult[7] = tmp7;
-  cResult[8] = tmp6;
-  cResult[9] = tmp4.image;
-  cResult[10] = tmp15;
-  tmp14 = tmp15;
-  const obj2 = navigation(1503);
-  const obj4 = { platformType: PlatformTypes.XBOX, onError: tmp7, onNext: tmp6, img: tmp8, imgStyle: tmp4.image, title: tmp10, body: tmp11 };
-}) : (function XboxLinkPreConnect() {
+export default function XboxLinkPreConnect() {
   const tmp = closure_7();
-  navigation = navigation(1503).useNavigation();
+  navigation = navigation(1498).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback((arg0) => {
@@ -86,11 +24,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef9688 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef9713 }), []);
   const obj2 = { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
-  const intl = navigation(1125).intl;
-  obj2.title = intl.string(navigation(1125).t["e/z3na"]);
-  const intl2 = navigation(1125).intl;
-  obj2.body = intl2.string(navigation(1125).t["7tXu0i"]);
-  return jsx(navigation(9689).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
-});
+  const intl = navigation(1114).intl;
+  obj2.title = intl.string(navigation(1114).t["e/z3na"]);
+  const intl2 = navigation(1114).intl;
+  obj2.body = intl2.string(navigation(1114).t["7tXu0i"]);
+  return jsx(navigation(9714).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
+};

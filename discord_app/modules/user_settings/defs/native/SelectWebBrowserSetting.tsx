@@ -1,88 +1,15 @@
-// === Module 17344: SelectWebBrowserSetting ===
+// === Module 17398: SelectWebBrowserSetting ===
 
-// Module 17344 (SelectWebBrowserSetting)
-import c from "c" /* 576 */;
-import ConstantsIOS from "ConstantsIOS" /* 1104 */;
-import util from "util" /* 1125 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import BrowserManager from "BrowserManager" /* 5731 */;
-import SettingsConstants from "SettingsConstants" /* 8387 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 17398 (SelectWebBrowserSetting)
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import BrowserManager from "BrowserManager" /* 5737 */;
+import SettingsConstants from "SettingsConstants" /* 8424 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating.isReactCompilerEnabled();
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWebBrowserSettingOptions() {
-  let CHROME = dependencyMap;
-  const cResult = c.c(6);
-  const browserManagerIsChromeInstalled = BrowserManager.useBrowserManagerIsChromeInstalled();
-  const browserManagerSupportsInAppBrowser = BrowserManager.useBrowserManagerSupportsInAppBrowser();
-  if (cResult[0] === browserManagerIsChromeInstalled) {
-    if (cResult[1] === browserManagerSupportsInAppBrowser) {
-      let tmp5 = cResult[2];
-    }
-    return tmp5;
-  }
-  const items = [];
-  if (!browserManagerSupportsInAppBrowser) {
-    if (tmpResult.isAndroid()) {
-      if (!browserManagerIsChromeInstalled) {
-        cResult[0] = browserManagerIsChromeInstalled;
-        cResult[1] = browserManagerSupportsInAppBrowser;
-        cResult[2] = items;
-        tmp5 = items;
-      } else {
-        const _Symbol3 = Symbol;
-        if (cResult[5] !== Symbol.for("react.memo_cache_sentinel")) {
-          items.push(cResult[5]);
-        }
-        const tmpResult2 = PlatformUtils;
-        const intl3 = util.intl;
-        const string = intl3.string;
-        let t = util.t;
-        if (isAndroidResult) {
-          let stringResult = string(t.kEfv89);
-        } else {
-          stringResult = string(t.FfjVVt);
-        }
-        t = { label: stringResult, value: null };
-        CHROME = ConstantsIOS.WebBrowserType.CHROME;
-        t.value = CHROME;
-        cResult[5] = t;
-        isAndroidResult = PlatformUtils.isAndroid();
-      }
-    } else {
-      const _Symbol2 = Symbol;
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { label: null, value: null };
-        const intl2 = util.intl;
-        obj4.label = intl2.string(util.t.kEfv89);
-        obj4.value = ConstantsIOS.WebBrowserType.SAFARI;
-        cResult[4] = obj4;
-        let tmp10 = obj4;
-      } else {
-        tmp10 = cResult[4];
-      }
-      items.push(tmp10);
-    }
-    tmpResult = PlatformUtils;
-  } else {
-    const _Symbol = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj5 = { label: null, value: null };
-      const intl = util.intl;
-      obj5.label = intl.string(util.t.YayR6P);
-      obj5.value = ConstantsIOS.WebBrowserType.IN_APP;
-      cResult[3] = obj5;
-      let tmp7 = obj5;
-    } else {
-      tmp7 = cResult[3];
-    }
-    items.push(tmp7);
-  }
-}) : (function useWebBrowserSettingOptions() {
+function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
   const items = [];
   const browserManagerIsChromeInstalled = BrowserManager.useBrowserManagerIsChromeInstalled();
@@ -120,9 +47,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWebBrow
     isAndroidResult = PlatformUtils.isAndroid();
   }
   tmpResult = PlatformUtils;
-});
-function useWebBrowserSettingValue() {
-  return BrowserManager.useBrowserManagerSelectedBrowser();
 }
 const radio = SettingBuilders.createRadio({
   useTitle() {
@@ -130,13 +54,15 @@ const radio = SettingBuilders.createRadio({
     return intl.string(util.t["C+DkPu"]);
   },
   parent: SettingsConstants.MobileUserSettings.WEB_BROWSER,
-  useValue: useWebBrowserSettingValue,
+  useValue: function useWebBrowserSettingValue() {
+    return BrowserManager.useBrowserManagerSelectedBrowser();
+  },
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
     const result = BrowserManager.browserManagerSelectBrowser(Number(arg0));
   },
-  useOptions: tmp3
+  useOptions: useWebBrowserSettingOptions
 });
-const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/SelectWebBrowserSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/SelectWebBrowserSetting.tsx");
 
 export default radio;
-export const useWebBrowserSettingOptions = tmp3;
+export { useWebBrowserSettingOptions };

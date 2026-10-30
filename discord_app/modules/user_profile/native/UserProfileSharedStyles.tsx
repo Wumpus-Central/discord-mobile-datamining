@@ -1,10 +1,9 @@
-// === Module 8772: UserProfileSharedStyles ===
+// === Module 8806: UserProfileSharedStyles ===
 
-// Module 8772 (UserProfileSharedStyles)
-import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 7364 */;
-import createStyles from "createStyles" /* 5005 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+// Module 8806 (UserProfileSharedStyles)
+import nativeDefault from "native" /* 575 */;
+import Constants from "Constants" /* 7371 */;
+import createStyles from "createStyles" /* 5009 */;
 import size from "module_2" /* 2 */;
 
 ({ AVATAR_CONTAINER_SIZE: c2, AVATAR_CUSTOM_STATUS_GAP: c3, AVATAR_PADDING: closure_4, CARD_PADDING: hasOwnProperty, PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_SIDE_PADDING: closure_7, PROFILE_TOP_LAYER_Z_INDEX: closure_8 } = Constants);
@@ -20,9 +19,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj.card = { borderRadius: nativeDefault.radii.md, padding, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
   return obj;
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/user_profile/native/UserProfileSharedStyles.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileSharedStyles.tsx");
 
 export default function useSharedStyles() {
   return closure_9();

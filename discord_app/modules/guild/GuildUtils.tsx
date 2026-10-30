@@ -1,7 +1,7 @@
-// === Module 10018: guild/GuildUtils ===
+// === Module 10045: guild/GuildUtils ===
 
-// Module 10018 (guild/GuildUtils)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6889 */;
+// Module 10045 (guild/GuildUtils)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

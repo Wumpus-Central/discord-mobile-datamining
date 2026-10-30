@@ -1,6 +1,6 @@
-// === Module 18929: ? ===
+// === Module 18989: ? ===
 
-// Module 18929
+// Module 18989
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ShopIllocon-2x.png.js");

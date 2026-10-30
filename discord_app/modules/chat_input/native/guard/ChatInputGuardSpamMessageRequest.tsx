@@ -1,149 +1,36 @@
-// === Module 13825: ChatInputGuardSpamMessageRequest ===
+// === Module 13972: ChatInputGuardSpamMessageRequest ===
 
-// Module 13825 (ChatInputGuardSpamMessageRequest)
+// Module 13972 (ChatInputGuardSpamMessageRequest)
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardSpamMessageRequest.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputGuardSpamMessageRequest(channel) {
-  const cResult = channel(longestChannelMessageBeforeReply[4]).c(28);
-  channel = channel.channel;
-  const obj = channel(longestChannelMessageBeforeReply[4]);
-  const navigation = channel(longestChannelMessageBeforeReply[5]).useNavigation();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [markAsNotSpam];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== channel) {
-    const fn = function s() {
-      return UserStore.getUser(channel.getRecipientId());
-    };
-    cResult[1] = channel;
-    cResult[2] = fn;
-    let tmp7 = fn;
-  } else {
-    tmp7 = cResult[2];
-  }
-  let obj2 = channel(longestChannelMessageBeforeReply[5]);
-  const stateFromStores = channel(longestChannelMessageBeforeReply[6]).useStateFromStores(first, tmp7);
-  if (cResult[3] !== channel) {
-    const recipientId = channel.getRecipientId();
-    cResult[3] = channel;
-    cResult[4] = recipientId;
-    let tmp9 = recipientId;
-  } else {
-    tmp9 = cResult[4];
-  }
-  const tmpResult = channel(longestChannelMessageBeforeReply[6]);
-  longestChannelMessageBeforeReply = channel(longestChannelMessageBeforeReply[7]).useLongestChannelMessageBeforeReply(channel.id, tmp9);
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    function handleRequestError() {
-      const obj2 = { text: null, variant: "critical" };
-      const intl = channel(longestChannelMessageBeforeReply[9]).intl;
-      obj2.text = intl.string(channel(longestChannelMessageBeforeReply[9]).t["EDYbS+"]);
-      navigation(longestChannelMessageBeforeReply[8]).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
-    }
-    cResult[5] = handleRequestError;
-    let tmp12 = handleRequestError;
-  } else {
-    tmp12 = cResult[5];
-  }
-  if (cResult[6] !== navigation) {
-    class E {
-      constructor() {
-        arr = closure_1.pop();
-        return;
-      }
-    }
-    cResult[6] = navigation;
-    cResult[7] = E;
-  } else {
-    class E {
-      constructor() {
-        arr = closure_1.pop();
-        return;
-      }
-    }
-  }
-  if (cResult[8] === E) {
-    class E {
-      constructor() {
-        arr = closure_1.pop();
-        return;
-      }
-    }
-    const messageRequestActions = tmp(tmp2[10]).useMessageRequestActions(obj3);
-    const rejectMessageRequest = messageRequestActions.rejectMessageRequest;
-    ({ isRejectLoading, isUserProfileLoading, isOptimisticRejected, markAsNotSpam } = messageRequestActions);
-    if (!isRejectLoading) {
-      class E {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
-    }
-    if (!isRejectLoading) {
-      class E {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
-    }
-    if (cResult[11] === channel) {
-      class E {
-        constructor() {
-          arr = closure_1.pop();
-          return;
-        }
-      }
-    }
-    function handleAcceptClick(stopPropagation) {
-      stopPropagation.stopPropagation();
-      markAsNotSpam(channel, longestChannelMessageBeforeReply, () => channel(longestChannelMessageBeforeReply[11]).transitionToChannel(id.id, { navigationReplace: true }));
-    }
-    cResult[11] = channel;
-    cResult[12] = markAsNotSpam;
-    cResult[13] = longestChannelMessageBeforeReply;
-    cResult[14] = handleAcceptClick;
-    const tmpResult4 = tmp(tmp2[10]);
-  }
-  obj3 = { user: stateFromStores, onError: tmp12, onRejectSuccess: E };
-  cResult[8] = E;
-  cResult[9] = stateFromStores;
-  cResult[10] = obj3;
-  const tmpResult3 = channel(longestChannelMessageBeforeReply[7]);
-}) : (function ChatInputGuardSpamMessageRequest(channel) {
+export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   channel = channel.channel;
   noop = undefined;
   c4 = undefined;
-  const navigation = channel(1503).useNavigation();
-  const obj = channel(1503);
+  const navigation = channel(1498).useNavigation();
+  const obj = channel(1498);
   const items = [c4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj2 = channel(504);
-  dependencyMap = channel(13826).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+  dependencyMap = channel(13973).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
     navigation.pop();
   }, items1);
-  const obj3 = channel(13826);
-  const messageRequestActions = channel(13818).useMessageRequestActions({
+  const obj3 = channel(13973);
+  const messageRequestActions = channel(13965).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
-      const intl = channel(1125).intl;
-      obj2.text = intl.string(channel(1125).t["EDYbS+"]);
-      navigation(5701).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
+      const intl = channel(1114).intl;
+      obj2.text = intl.string(channel(1114).t["EDYbS+"]);
+      navigation(5707).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onRejectSuccess: callback
   });
@@ -156,23 +43,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp7 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(13818);
+  const obj4 = channel(13965);
   const obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
-      const intl = channel(1125).intl;
-      obj2.text = intl.string(channel(1125).t["EDYbS+"]);
-      navigation(5701).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
+      const intl = channel(1114).intl;
+      obj2.text = intl.string(channel(1114).t["EDYbS+"]);
+      navigation(5707).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onRejectSuccess: callback
   };
-  let intl = tmp(1125).intl;
-  obj6.message = intl.string(channel(1125).t.fS08qB);
-  const intl2 = tmp(1125).intl;
-  obj6.subtext = intl2.string(channel(1125).t["8U5OXE"]);
-  const intl3 = tmp(1125).intl;
-  obj6.buttonPrimaryText = intl3.string(channel(1125).t.cpT0Cq);
+  let intl = tmp(1114).intl;
+  obj6.message = intl.string(channel(1114).t.fS08qB);
+  const intl2 = tmp(1114).intl;
+  obj6.subtext = intl2.string(channel(1114).t["8U5OXE"]);
+  const intl3 = tmp(1114).intl;
+  obj6.buttonPrimaryText = intl3.string(channel(1114).t.cpT0Cq);
   obj6.buttonPrimaryOnPress = function handleRejectClick(stopPropagation) {
     stopPropagation.stopPropagation();
     _undefined(channel.id);
@@ -182,13 +69,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     isRejectLoading = isOptimisticRejected;
   }
   obj6.buttonPrimaryLoading = isRejectLoading;
-  const intl4 = tmp(1125).intl;
-  obj6.buttonSecondaryText = intl4.string(channel(1125).t.olZgw5);
+  const intl4 = tmp(1114).intl;
+  obj6.buttonSecondaryText = intl4.string(channel(1114).t.olZgw5);
   obj6.buttonSecondaryOnPress = function handleAcceptClick(stopPropagation) {
     stopPropagation.stopPropagation();
-    _undefined2(channel, closure_2, () => channel(closure_2[11]).transitionToChannel(id.id, { navigationReplace: true }));
+    _undefined2(channel, closure_2, () => channel(closure_2[10]).transitionToChannel(id.id, { navigationReplace: true }));
   };
   obj6.buttonSecondaryDisabled = tmp7;
   obj6.buttonSecondaryLoading = isUserProfileLoading;
-  return jsx(navigation(13824), { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null });
-}));
+  return jsx(navigation(13971), { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null });
+});

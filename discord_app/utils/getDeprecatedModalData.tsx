@@ -1,9 +1,9 @@
-// === Module 6732: getDeprecatedModalData ===
+// === Module 6739: getDeprecatedModalData ===
 
-// Module 6732 (getDeprecatedModalData)
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+// Module 6739 (getDeprecatedModalData)
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
-const ModalAnimation = fn(1084).ModalAnimation;
+const ModalAnimation = fn(1072).ModalAnimation;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/getDeprecatedModalData.tsx");
 

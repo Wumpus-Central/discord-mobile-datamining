@@ -1,7 +1,7 @@
-// === Module 5021: ThemeUtils ===
+// === Module 5025: ThemeUtils ===
 
-// Module 5021 (ThemeUtils)
-import ThemeTypes from "ThemeTypes" /* 588 */;
+// Module 5025 (ThemeUtils)
+import ThemeTypes from "ThemeTypes" /* 576 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/utils/ThemeUtils.tsx");

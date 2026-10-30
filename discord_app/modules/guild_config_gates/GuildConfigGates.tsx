@@ -1,12 +1,12 @@
-// === Module 19682: GuildConfigGates ===
+// === Module 19745: GuildConfigGates ===
 
-// Module 19682 (GuildConfigGates)
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 19745 (GuildConfigGates)
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildConfigGatesStore from "GuildConfigGatesStore" /* 19683 */;
+import GuildConfigGatesStore from "GuildConfigGatesStore" /* 19746 */;
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const initialize = fn(504);
 let obj2 = {
   getQueryId(arg0) {
@@ -40,7 +40,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -109,12 +109,8 @@ obj2.load = function load() {
   return applyArgumentsResult;
 };
 let closure_6 = initialize.createFetchStore(GuildConfigGatesStore, obj2);
-let ReactCompilerGating = fn(558);
-ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result2 = size.fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
+const result = size.fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
 
 export function useGuildVerificationRoleEnabled(arg0) {
   const data = closure_6(arg0).data;

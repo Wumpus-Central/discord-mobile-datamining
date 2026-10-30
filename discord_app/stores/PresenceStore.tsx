@@ -1,39 +1,41 @@
-// === Module 5750: PresenceStore ===
+// === Module 5756: PresenceStore ===
 
-// Module 5750 (PresenceStore)
+// Module 5756 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5751 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import _modDef1343 from "module_1343" /* 1343 */;
+import ActivityTypes from "ActivityTypes" /* 5757 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5758 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
+require = fn;
 function sortActivity(type, type2) {
   type = type2.type;
   let num = 4;
   let num2 = 4;
-  if (constants2.CUSTOM_STATUS !== type) {
+  if (ActivityTypes.ActivityTypes.CUSTOM_STATUS !== type) {
     num2 = 3;
-    if (constants2.COMPETING !== type) {
+    if (ActivityTypes.ActivityTypes.COMPETING !== type) {
       num2 = 2;
-      if (constants2.STREAMING !== type) {
+      if (ActivityTypes.ActivityTypes.STREAMING !== type) {
         num2 = 0;
-        if (constants2.PLAYING === type) {
+        if (ActivityTypes.ActivityTypes.PLAYING === type) {
           num2 = 1;
         }
       }
     }
   }
   type2 = type.type;
-  if (constants2.CUSTOM_STATUS !== type2) {
+  if (ActivityTypes.ActivityTypes.CUSTOM_STATUS !== type2) {
     num = 3;
-    if (constants2.COMPETING !== type2) {
+    if (ActivityTypes.ActivityTypes.COMPETING !== type2) {
       num = 2;
-      if (constants2.STREAMING !== type2) {
+      if (ActivityTypes.ActivityTypes.STREAMING !== type2) {
         num = 0;
-        if (constants2.PLAYING === type2) {
+        if (ActivityTypes.ActivityTypes.PLAYING === type2) {
           num = 1;
         }
       }
@@ -74,7 +76,7 @@ function filterPlayingActivities(arg0) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;
-      if (nextResult.type === constants2.PLAYING) {
+      if (nextResult.type === ActivityTypes.ActivityTypes.PLAYING) {
         let arr = items1.push(tmp4);
       } else {
         let arr2 = items.push(tmp4);
@@ -288,7 +290,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (_modDef1354(tmp25.activities, sorted)) {
+        if (_modDef1343(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }
@@ -381,8 +383,8 @@ function clearPresences(id) {
   }
   tmp2 = keys[Symbol.iterator]();
 }
-const Constants = fn(1084);
-({ StatusTypes: closure_4, ActivityTypes: hasOwnProperty, ClientTypes: metroRequire, ME: closure_7, UserFlags: closure_8 } = Constants);
+const Constants = fn(1072);
+({ StatusTypes: hasOwnProperty, ClientTypes: metroRequire, ME: closure_7, UserFlags: closure_8 } = Constants);
 let closure_9 = Object.freeze([]);
 const presencesForGuilds = {};
 const statuses = {};
@@ -418,7 +420,7 @@ prototype["getStatus"] = function getStatus(arg0) {
   const user = UserStore.getUser(arg0);
   let hasFlagResult = null != user;
   if (hasFlagResult) {
-    hasFlagResult = user.hasFlag(constants4.BOT_HTTP_INTERACTIONS);
+    hasFlagResult = user.hasFlag(constants3.BOT_HTTP_INTERACTIONS);
   }
   if (hasFlagResult) {
     UNKNOWN = constants.UNKNOWN;
@@ -526,7 +528,7 @@ prototype["getPrimaryActivity"] = function getPrimaryActivity(arg0) {
     tmp = null;
   }
   activities = this.getActivities(arg0, tmp);
-  return activities.filter((type) => type.type !== constants.HANG_STATUS)[0];
+  return activities.filter((type) => type.type !== ActivityTypes.ActivityTypes.HANG_STATUS)[0];
 };
 prototype["getAllApplicationActivities"] = function getAllApplicationActivities(arg0) {
   const items = [];
@@ -581,20 +583,20 @@ prototype["getUserIds"] = function getUserIds() {
 prototype["isMobileOnline"] = function isMobileOnline(id) {
   let tmp2 = null != tmp;
   if (tmp2) {
-    tmp2 = tmp[constants3.MOBILE] === constants.ONLINE;
+    tmp2 = tmp[constants2.MOBILE] === constants.ONLINE;
   }
   if (tmp2) {
-    tmp2 = tmp[constants3.DESKTOP] !== constants.ONLINE;
+    tmp2 = tmp[constants2.DESKTOP] !== constants.ONLINE;
   }
   if (tmp2) {
-    tmp2 = tmp[constants3.VR] !== constants.ONLINE;
+    tmp2 = tmp[constants2.VR] !== constants.ONLINE;
   }
   return tmp2;
 };
 prototype["isVROnline"] = function isVROnline(id) {
   let tmp2 = null != tmp;
   if (tmp2) {
-    tmp2 = tmp[constants3.VR] === constants.ONLINE;
+    tmp2 = tmp[constants2.VR] === constants.ONLINE;
   }
   return tmp2;
 };
@@ -699,7 +701,7 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
     return false;
   },
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(arg0) {
-    ({ guildId: importDefault, members } = arg0);
+    ({ guildId: require, members } = arg0);
     const item = members.forEach((presence) => {
       if (null != presence.presence) {
         const obj = { guildId, userId: presence.user_id, status: presence.presence.status, clientStatus: presence.presence.clientStatus, activities: presence.presence.activities, hiddenActivities: presence.presence.hiddenActivities, processedAtTimestamp: presence.presence.processedAtTimestamp };
@@ -708,7 +710,7 @@ const presenceStore = new PresenceStore(DispatcherDefault, {
     });
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(arg0) {
-    ({ guildId: importDefault, addedMembers } = arg0);
+    ({ guildId: require, addedMembers } = arg0);
     if (addedMembers != null) {
       const item = addedMembers.forEach((presence) => {
         if (null != presence.presence) {

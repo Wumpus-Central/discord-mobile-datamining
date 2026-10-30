@@ -1,152 +1,17 @@
-// === Module 12255: useConjureAppIdentityDraft ===
+// === Module 12416: useConjureAppIdentityDraft ===
 
-// Module 12255 (useConjureAppIdentityDraft)
-import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
-import useConjureAppIdentityDefault from "useConjureAppIdentity" /* 12256 */;
+// Module 12416 (useConjureAppIdentityDraft)
+import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/identity/useConjureAppIdentityDraft.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAppIdentityDraft(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(21);
-  const tmp2 = useConjureAppIdentityDefault(arg0);
-  if (cResult[0] !== arg0) {
-    const fn = function c() {
-      const result = ConjureActionCreators.refreshPreviewApplication(closure_0);
-      result.catch(() => {
-
-      });
-    };
-    const items = [arg0];
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    cResult[2] = items;
-    let tmp4 = items;
-    let tmp3 = fn;
-  } else {
-    tmp3 = cResult[1];
-    tmp4 = cResult[2];
-  }
-  const effect = noop.useEffect(tmp3, tmp4);
-  const obj = require("c");
-  [tmp7, tmp8] = noop.useState(null);
-  importDefault = tmp8;
-  const tmp6 = _slicedToArray(noop.useState(null), 2);
-  [str, tmp10] = noop.useState(null);
-  dependencyMap = tmp10;
-  if (cResult[3] !== str) {
-    const trimmed = str.trim();
-    cResult[3] = str;
-    cResult[4] = trimmed;
-    let tmp11 = trimmed;
-  } else {
-    tmp11 = cResult[4];
-  }
-  if (cResult[5] === tmp2.description) {
-    if (cResult[6] === tmp11) {
-      let tmp13 = cResult[7];
-    }
-    if (cResult[8] !== tmp7) {
-      if (null != tmp7) {
-        const obj2 = { icon: tmp7 };
-        let obj3 = obj2;
-      } else {
-        obj3 = {};
-      }
-      cResult[8] = tmp7;
-      cResult[9] = obj3;
-    } else if (cResult[10] !== tmp13) {
-      if (null != tmp13) {
-        const obj4 = { description: tmp13 };
-        let obj5 = obj4;
-      } else {
-        obj5 = {};
-      }
-      cResult[10] = tmp13;
-      cResult[11] = obj5;
-    } else {
-      if (cResult[12] === tmp15) {
-        if (cResult[13] === tmp17) {
-          let tmp19 = cResult[14];
-        }
-        const _Symbol = Symbol;
-        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          class E {
-            constructor() {
-              tmp = closure_1(null);
-              tmp2 = closure_2(null);
-              return;
-            }
-          }
-          cResult[15] = E;
-        } else {
-          class E {
-            constructor() {
-              tmp = closure_1(null);
-              tmp2 = closure_2(null);
-              return;
-            }
-          }
-        }
-        if (tmp7 == null) {
-          class E {
-            constructor() {
-              tmp = closure_1(null);
-              tmp2 = closure_2(null);
-              return;
-            }
-          }
-        }
-        if (cResult[16] === tmp19) {
-          class E {
-            constructor() {
-              tmp = closure_1(null);
-              tmp2 = closure_2(null);
-              return;
-            }
-          }
-        }
-        const obj6 = { iconURL: tmp7, setIcon: tmp8, description: str, setDescription: tmp10, changes: tmp19, changed: null != tmp7 || null != tmp13, commit: E };
-        cResult[16] = tmp19;
-        cResult[17] = str;
-        cResult[18] = tmp7;
-        cResult[19] = null != tmp7 || null != tmp13;
-        cResult[20] = obj6;
-      }
-      const obj7 = {};
-      const merged = Object.assign(tmp15);
-      const merged1 = Object.assign(tmp17);
-      cResult[12] = tmp15;
-      cResult[13] = cResult[11];
-      cResult[14] = obj7;
-      tmp19 = obj7;
-    }
-  }
-  if (tmp11 !== str2.trim()) {
-    class E {
-      constructor() {
-        tmp = closure_1(null);
-        tmp2 = closure_2(null);
-        return;
-      }
-    }
-  }
-  cResult[5] = tmp2.description;
-  cResult[6] = tmp11;
-  cResult[7] = null;
-  tmp13 = tmp14;
-  str2 = tmp2.description;
-  const tmp9 = _slicedToArray(noop.useState(null), 2);
-}) : (function useConjureAppIdentityDraft(arg0) {
+export default function useConjureAppIdentityDraft(arg0) {
   closure_0 = arg0;
-  const tmp = first(12256)(arg0);
+  const tmp = first(12417)(arg0);
   const items = [arg0];
   const effect = trimmed.useEffect(() => {
     const result = ConjureActionCreators.refreshPreviewApplication(closure_0);
@@ -192,4 +57,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     iconURL = tmp.iconURL;
   }
   return { iconURL, setIcon: tmp3[1], description: str, setDescription: tmp7, changes: memo, changed: null != first || null != tmp9, commit: callback };
-});
+};

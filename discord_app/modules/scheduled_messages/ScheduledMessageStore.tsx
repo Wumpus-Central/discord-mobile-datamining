@@ -1,8 +1,8 @@
-// === Module 9764: ScheduledMessageStore ===
+// === Module 9790: ScheduledMessageStore ===
 
-// Module 9764 (ScheduledMessageStore)
+// Module 9790 (ScheduledMessageStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 function handleScheduledMessageRemovalStart(scheduledMessageId) {
   scheduledMessageId = scheduledMessageId.scheduledMessageId;

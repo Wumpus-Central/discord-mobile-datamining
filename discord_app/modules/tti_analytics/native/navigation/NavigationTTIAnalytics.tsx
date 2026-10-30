@@ -1,9 +1,9 @@
-// === Module 13131: NavigationTTIAnalytics ===
+// === Module 13281: NavigationTTIAnalytics ===
 
-// Module 13131 (NavigationTTIAnalytics)
+// Module 13281 (NavigationTTIAnalytics)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1358 */;
 
 let obj = new LoggerDefault("NavTTIAnalytics");
 obj.enableNativeLogger(true);

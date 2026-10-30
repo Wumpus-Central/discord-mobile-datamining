@@ -1,11 +1,11 @@
-// === Module 18962: VideoActionCreators ===
+// === Module 19056: VideoActionCreators ===
 
-// Module 18962 (VideoActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 19056 (VideoActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media/VideoActionCreators.tsx");
 
-export function updateVideoSize(streamId, size, scale) {
-  DispatcherDefault.dispatch({ type: "VIDEO_SIZE_UPDATE", streamId, dimensions: size, zoom: scale });
+export function updateVideoSize(streamId, size, sharedValue2) {
+  DispatcherDefault.dispatch({ type: "VIDEO_SIZE_UPDATE", streamId, dimensions: size, zoom: sharedValue2 });
 }

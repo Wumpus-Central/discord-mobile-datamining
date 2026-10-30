@@ -1,19 +1,19 @@
-// === Module 11166: CustomStatusPreview ===
+// === Module 11372: CustomStatusPreview ===
 
-// Module 11166 (CustomStatusPreview)
-import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ChatInputUtils from "ChatInputUtils" /* 5196 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
+// Module 11372 (CustomStatusPreview)
+import nativeDefault from "native" /* 575 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import ChatInputUtils from "ChatInputUtils" /* 5202 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7364);
+const Constants = fn(7371);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty, UserProfileThemeTypes: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { flex: 1, position: "relative", overflow: "hidden", width: 323, maxHeight: 301, borderWidth: 1, borderColor: null, borderRadius: null };
   const colors = nativeDefault.colors;
@@ -26,8 +26,8 @@ let closure_9 = createStyles.createStyles((arg0) => {
   }
   const obj2 = { profileContainer: null, profileEffect: null };
   obj.borderColor = BACKGROUND_SURFACE_HIGH;
-  obj.borderRadius = tmp4(587).radii.lg;
-  const merged = Object.assign(tmp4(587).shadows.SHADOW_HIGH);
+  obj.borderRadius = tmp4(575).radii.lg;
+  const merged = Object.assign(tmp4(575).shadows.SHADOW_HIGH);
   obj2.profileContainer = obj;
   obj2.profileEffect = { zIndex: 1 };
   return obj2;
@@ -51,7 +51,7 @@ export default function CustomStatusPreview(user) {
   ({ gradientFallbackBackground, avatarBackground, containerBackground } = userProfileColors);
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11167, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11373, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
   }, items);
   const obj2 = { theme, primaryColor, secondaryColor, children: null };
   const obj3 = { style: tmp7.profileContainer, children: null };

@@ -1,8 +1,8 @@
-// === Module 7888: PopoutWindowStore ===
+// === Module 7894: PopoutWindowStore ===
 
-// Module 7888 (PopoutWindowStore)
+// Module 7894 (PopoutWindowStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const PersistedStore = initializeDefault.PersistedStore;
 class PopoutWindowStore extends PersistedStore {

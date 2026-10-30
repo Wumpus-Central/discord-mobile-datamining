@@ -1,10 +1,10 @@
-// === Module 16243: getFrameChannelId ===
+// === Module 16283: getFrameChannelId ===
 
-// Module 16243 (getFrameChannelId)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+// Module 16283 (getFrameChannelId)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6843 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
-const ChannelTypes = fn(1084).ChannelTypes;
+const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getFrameChannelId.tsx");
 

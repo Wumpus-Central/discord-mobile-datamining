@@ -1,21 +1,21 @@
-// === Module 14752: UserProfileOverflowMenuItems ===
+// === Module 14787: UserProfileOverflowMenuItems ===
 
-// Module 14752 (UserProfileOverflowMenuItems)
-import util from "util" /* 1125 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import ToastUtils from "ToastUtils" /* 5700 */;
-import ClipboardUtils from "ClipboardUtils" /* 7345 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7351 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7474 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7482 */;
-import ReportModals from "ReportModals" /* 8163 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 14011 */;
-import BotReportChooser from "BotReportChooser" /* 14753 */;
-import Constants from "Constants" /* 1084 */;
-import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11033 */;
+// Module 14787 (UserProfileOverflowMenuItems)
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import ToastUtils from "ToastUtils" /* 5706 */;
+import ClipboardUtils from "ClipboardUtils" /* 7352 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7358 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7482 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7490 */;
+import ReportModals from "ReportModals" /* 8344 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 14143 */;
+import BotReportChooser from "BotReportChooser" /* 14788 */;
+import Constants from "Constants" /* 1072 */;
+import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11261 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, AVATAR_MAX_SIZE: closure_4, NOOP: hasOwnProperty } = Constants);
@@ -43,7 +43,7 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11035, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11263, dependencyMap.paths);
         obj.openLazy(tmp, React5, {
           userId: user.id,
           channelId,
@@ -81,7 +81,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11034, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11262, dependencyMap.paths);
       obj.openLazy(tmp, timestampProducer, {
         userId: user.id,
         channelId,
@@ -103,15 +103,15 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
   ({ channelId: importDefault, analyticsLocations: dependencyMap, trackUserProfileAction: closure_3 } = user);
   ({ guildId: closure_4, reportEntrypoint: closure_5 } = isInIarUserReportingExperiment);
   if (isInIarUserReportingExperiment.isInIarUserReportingExperiment) {
-    const intl2 = tmp(1125).intl;
-    tmp(1125).t;
+    const intl2 = tmp(1114).intl;
+    tmp(1114).t;
     const t = { label: null, variant: "destructive", action: null };
     t.label = intl2.string(user.bot ? t.jhJzez : t.A1MM3D);
     t.action = function action() {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14753, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(14788, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -125,8 +125,8 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
     let tmp3 = null;
     if (tmpResult.isAndroid()) {
       let obj = { label: null, variant: "destructive", action: null };
-      const intl = tmp(1125).intl;
-      obj.label = intl.string(tmp(1125).t.TbHyMG);
+      const intl = tmp(1114).intl;
+      obj.label = intl.string(tmp(1114).t.TbHyMG);
       obj.action = function action() {
         closure_1_3({ action: "REPORT", analyticsLocations });
         UserProfileAlertUtils.alertUserReported();
@@ -156,8 +156,8 @@ export function getDeveloperCopyMenuItem(arg0, tidaWebformEnabled) {
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5059).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5059);
+        obj2.copy(analyticsLocations(5063).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5063);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);

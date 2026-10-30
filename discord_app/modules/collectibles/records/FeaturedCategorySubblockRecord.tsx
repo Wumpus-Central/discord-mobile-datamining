@@ -1,7 +1,7 @@
-// === Module 7738: FeaturedCategorySubblockRecord ===
+// === Module 7743: FeaturedCategorySubblockRecord ===
 
-// Module 7738 (FeaturedCategorySubblockRecord)
-import FeaturedSubblockType from "FeaturedSubblockType" /* 7739 */;
+// Module 7743 (FeaturedCategorySubblockRecord)
+import FeaturedSubblockType from "FeaturedSubblockType" /* 7744 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function FeaturedCategorySubblockRecord(unpublished_at) {

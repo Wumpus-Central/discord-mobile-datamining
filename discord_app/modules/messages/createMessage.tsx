@@ -1,15 +1,15 @@
-// === Module 10274: createMessage ===
+// === Module 10299: createMessage ===
 
-// Module 10274 (createMessage)
+// Module 10299 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
-import createNonce from "createNonce" /* 10270 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7754 */;
-import UserRecord from "UserRecord" /* 1403 */;
-import UserStore from "UserStore" /* 1389 */;
+import createNonce from "createNonce" /* 10295 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7759 */;
+import UserRecord from "UserRecord" /* 1398 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
-const ReferencedMessageState = fn(7754).ReferencedMessageState;
-const Constants = fn(1084);
+const ReferencedMessageState = fn(7759).ReferencedMessageState;
+const Constants = fn(1072);
 ({ MessageStates: closure_7, MessageTypes: closure_8, LOCAL_BOT_ID: closure_9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/createMessage.tsx");

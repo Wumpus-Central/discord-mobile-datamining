@@ -1,105 +1,28 @@
-// === Module 16498: AccountUsernameSetting ===
+// === Module 16549: AccountUsernameSetting ===
 
-// Module 16498 (AccountUsernameSetting)
+// Module 16549 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import UserUtilsDefault from "UserUtils" /* 5059 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 13100 */;
+import util from "util" /* 1114 */;
+import UserUtilsDefault from "UserUtils" /* 5063 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 13251 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
-const Text_Text = Text(5271);
 require = fn;
 const jsx = fn(21).jsx;
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingTrailing() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UserStore];
-    const fn = function s() {
-      return UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" });
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useAccountUsernameSettingTrailing() {
-  const items = [UserStore];
-  return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
-});
-const SettingBuilders = fn(11302);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
-  let Text = require;
-  let tmp = dependencyMap;
-  const cResult = c.c(2);
-  const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
-  let first;
-  if (guildAutomodProfileQuarantineErrors != null) {
-    const nick = guildAutomodProfileQuarantineErrors.nick;
-    if (nick != null) {
-      first = nick[0];
-    }
-  }
-  if (null == first) {
-    return null;
-  } else if (cResult[0] !== first) {
-    Text = Text_Text.Text;
-    const obj3 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
-    tmp = <Text variant="text-xs/medium" color="text-feedback-warning">{first}</Text>;
-    cResult[0] = first;
-    cResult[1] = tmp;
-  }
-}) : (function useAccountUsernameSettingDescription() {
-  const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
-  let first;
-  if (guildAutomodProfileQuarantineErrors != null) {
-    const nick = guildAutomodProfileQuarantineErrors.nick;
-    if (nick != null) {
-      first = nick[0];
-    }
-  }
-  let tmp5 = null;
-  if (null != first) {
-    const obj2 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
-    tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
-  }
-  return tmp5;
-});
+const SettingBuilders = fn(11505);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8387).MobileUserSettings.ACCOUNT,
-  useTrailing: tmp3,
-  useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
-    let Text = require;
-    let tmp = dependencyMap;
-    const cResult = c.c(2);
-    const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
-    let first;
-    if (guildAutomodProfileQuarantineErrors != null) {
-      const nick = guildAutomodProfileQuarantineErrors.nick;
-      if (nick != null) {
-        first = nick[0];
-      }
-    }
-    if (null == first) {
-      return null;
-    } else if (cResult[0] !== first) {
-      Text = Text_Text.Text;
-      const obj3 = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
-      tmp = <Text variant="text-xs/medium" color="text-feedback-warning">{first}</Text>;
-      cResult[0] = first;
-      cResult[1] = tmp;
-    }
-  }) : (function useAccountUsernameSettingDescription() {
+  parent: fn(8424).MobileUserSettings.ACCOUNT,
+  useTrailing: function useAccountUsernameSettingTrailing() {
+    const items = [UserStore];
+    return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
+  },
+  useDescription: function useAccountUsernameSettingDescription() {
     const guildAutomodProfileQuarantineErrors = AutomodQuarantineUtils.useGuildAutomodProfileQuarantineErrors();
     let first;
     if (guildAutomodProfileQuarantineErrors != null) {
@@ -114,9 +37,9 @@ const route = SettingBuilders.createRoute({
       tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
     }
     return tmp5;
-  }),
+  },
   screen: {
-    route: fn(1084).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
+    route: fn(1072).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
     getComponent() {
       return require("UserSettingsChangeUsername").default;
     }

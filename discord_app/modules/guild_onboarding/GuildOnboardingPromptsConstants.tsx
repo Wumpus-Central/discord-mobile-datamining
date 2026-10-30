@@ -1,9 +1,9 @@
-// === Module 7256: GuildOnboardingPromptsConstants ===
+// === Module 7263: GuildOnboardingPromptsConstants ===
 
-// Module 7256 (GuildOnboardingPromptsConstants)
-import util from "util" /* 1125 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import StringUtils from "StringUtils" /* 2031 */;
+// Module 7263 (GuildOnboardingPromptsConstants)
+import util from "util" /* 1114 */;
+import _modDef1343 from "module_1343" /* 1343 */;
+import StringUtils from "StringUtils" /* 2028 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
@@ -61,7 +61,7 @@ function validateOnboardingConnection(connection_type) {
 }
 let closure_3 = ["id"];
 let closure_4 = ["id"];
-const PlatformTypes = fn(1084).PlatformTypes;
+const PlatformTypes = fn(1072).PlatformTypes;
 const OnboardingPromptType = { MULTIPLE_CHOICE: 0, [0]: "MULTIPLE_CHOICE", DROPDOWN: 1, [1]: "DROPDOWN" };
 let obj2 = { APPLICATION: 0, [0]: "APPLICATION", PROVIDER_CONNECTED_ACCOUNT: 1, [1]: "PROVIDER_CONNECTED_ACCOUNT" };
 let items = [, , , , , , , ];
@@ -82,7 +82,7 @@ export const MAX_DEFAULT_CHANNEL_IDS = 25;
 export const MAX_NUMBER_OF_ONBOARDING_CONNECTIONS = 10;
 export const MAX_CONNECTION_DESCRIPTION_LENGTH = 100;
 export const MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING = 4;
-export const NUM_DEFAULT_CHATTABLE_CHANNELS_MIN = 1;
+export const NUM_DEFAULT_CHATTABLE_CHANNELS_MIN = 0;
 export const ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD = 13;
 export const GuildOnboardingTab = { CUSTOMIZE: 0, [0]: "CUSTOMIZE", BROWSE: 1, [1]: "BROWSE" };
 export { OnboardingPromptType };
@@ -103,7 +103,7 @@ export function isDefaultPrompt(options) {
     const id = obj.id;
     const id2 = options.id;
     const tmp7 = _objectWithoutProperties(obj, closure_3);
-    return _modDef1354(tmp7, _objectWithoutProperties(options, closure_4));
+    return _modDef1343(tmp7, _objectWithoutProperties(options, closure_4));
   }
 }
 export function getDefaultPrompt() {

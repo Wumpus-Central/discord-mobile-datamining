@@ -1,19 +1,19 @@
-// === Module 7778: GuildBasicChannels ===
+// === Module 7783: GuildBasicChannels ===
 
-// Module 7778 (GuildBasicChannels)
+// Module 7783 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4883 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4946 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4887 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4950 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildRoleStore from "GuildRoleStore" /* 4911 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildRoleStore from "GuildRoleStore" /* 4915 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4859 */;
 
 const require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
@@ -31,8 +31,8 @@ function hasBasicChannelChanged(basicChannel, nextResult) {
   }
   return tmp;
 }
-let closure_7 = fn(4861).createChannelRecordFromServer;
-const ChannelLoader = fn(4857).ChannelLoader;
+let closure_7 = fn(4862).createChannelRecordFromServer;
+const ChannelLoader = fn(4858).ChannelLoader;
 let closure_15 = new LoggerDefault("GuildBasicChannels");
 class GuildBasicChannels {
   constructor() {
@@ -88,9 +88,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    let items = [tmp3(4883).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(4883).basicChannels(closure_0);
-    items[1] = tmp3(4883).syncedBasicChannels(closure_0).getKvEntries();
+    let items = [tmp3(4887).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4887).basicChannels(closure_0);
+    items[1] = tmp3(4887).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -211,7 +211,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -258,7 +258,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "HermesInternal", done: null };
                         }
                       } else {
                         try {
@@ -304,7 +304,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "r" }, done: true };
+                            const obj5 = { value: { v: "getCurrentUser" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {
@@ -316,7 +316,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               return obj6;
                             } else {
                               c6 = 3;
-                              return { value: "IconComponent", done: "IconComponent" };
+                              return { value: "HermesInternal", done: null };
                             }
                           } else if (3 === tmp7) {
                             if (arg0 === 1) {
@@ -376,7 +376,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               }
             }
             c10 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp7) {
           c7 = 0;

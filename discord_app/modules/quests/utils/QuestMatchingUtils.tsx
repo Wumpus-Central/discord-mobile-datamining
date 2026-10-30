@@ -1,13 +1,14 @@
-// === Module 14602: QuestMatchingUtils ===
+// === Module 14635: QuestMatchingUtils ===
 
-// Module 14602 (QuestMatchingUtils)
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7840 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7854 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7856 */;
-import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 14187 */;
+// Module 14635 (QuestMatchingUtils)
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7845 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7859 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7861 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 9718 */;
+import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 14332 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationStore from "ApplicationStore" /* 2043 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11288 */;
+import ApplicationStore from "ApplicationStore" /* 2040 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11491 */;
 
 require = fn;
 function questMatchesActivity(arg0, id) {
@@ -16,31 +17,35 @@ function questMatchesActivity(arg0, id) {
   if (null == arg0) {
     return tmp3;
   } else {
-    let tmp5 = formatted.application_id === closure_10;
+    let tmp5 = formatted.application_id === closure_9;
     if (!tmp5) {
-      tmp5 = formatted.platform === ActivityGamePlatforms.XBOX;
+      tmp5 = formatted.platform === ActivityGamePlatforms.ActivityGamePlatforms.XBOX;
     }
     if (!tmp5) {
-      if (!tmp9) {
-        let tmp10 = tmp2 != id;
-        if (tmp10) {
-          tmp10 = id.id === React5;
+      let tmp11 = formatted.platform === ActivityGamePlatforms.ActivityGamePlatforms.PLAYSTATION_4;
+      if (!tmp11) {
+        tmp11 = formatted.platform === ActivityGamePlatforms.ActivityGamePlatforms.PLAYSTATION_5;
+      }
+      if (!tmp11) {
+        let tmp12 = tmp2 != id;
+        if (tmp12) {
+          tmp12 = id.id === React5;
         }
-        if (tmp10) {
-          tmp10 = formatted.application_id === closure_1_8;
+        if (tmp12) {
+          tmp12 = formatted.application_id === React6;
         }
-        if (!tmp10) {
-          let tmp13 = tmp2 != formatted.application_id;
-          if (tmp13) {
+        if (!tmp12) {
+          let tmp15 = tmp2 != formatted.application_id;
+          if (tmp15) {
             const application_id = formatted.application_id;
             const allApplicationIds = QuestTaskUtils.getAllApplicationIds(id);
-            tmp13 = tmp2 != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
+            const tmp9Result = QuestTaskUtils;
+            tmp15 = tmp2 != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
             const tmp16 = tmp2 != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
           }
-          tmp10 = tmp13;
+          tmp12 = tmp15;
         }
       }
-      tmp9 = formatted.platform === ActivityGamePlatforms.PS4 || formatted.platform === tmp8.PS5;
     }
     formatted = formatted.name.toLowerCase();
     const consoleApplicationId = QuestTaskUtils.getConsoleApplicationId(id);
@@ -53,7 +58,7 @@ function questMatchesActivity(arg0, id) {
       }
       flag = tmp2;
     }
-    tmp10 = flag;
+    tmp12 = flag;
   }
 }
 function getQuestByActivity(result, arg1) {
@@ -76,10 +81,9 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(6768);
+const QuestConstants = fn(6775);
 ({ DISCORD_APPLICATION_ID: metroRequire, PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: closure_7, PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8 } = QuestConstants);
-const ActivityGamePlatforms = fn(1084).ActivityGamePlatforms;
-let closure_10 = fn(2024).XBOX_ACTIVITY_APPLICATION_ID;
+let closure_9 = fn(2019).XBOX_ACTIVITY_APPLICATION_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 

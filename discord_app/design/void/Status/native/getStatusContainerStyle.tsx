@@ -1,8 +1,8 @@
-// === Module 15903: getStatusContainerStyle ===
+// === Module 15943: getStatusContainerStyle ===
 
-// Module 15903 (getStatusContainerStyle)
+// Module 15943 (getStatusContainerStyle)
 import _mod17 from "module_17" /* 17 */;
-import StatusConstants from "StatusConstants" /* 1200 */;
+import StatusConstants from "StatusConstants" /* 1189 */;
 import size_mod from "module_2" /* 2 */;
 
 const PixelRatio = _mod17.PixelRatio;
@@ -134,49 +134,49 @@ obj.containerVRXLarge = size14;
 let size = size_mod;
 let result = size.fileFinishedImporting("design/void/Status/native/getStatusContainerStyle.tsx");
 
-export default function getStatusContainerStyle(statusSizeOverride, isMobileOnline) {
-  let flag = isVROnline;
-  if (isVROnline === undefined) {
+export default function getStatusContainerStyle(items, flag) {
+  flag = flag2;
+  if (flag2 === undefined) {
     flag = false;
   }
   const SMALL = StatusSizes.SMALL;
   if (flag) {
-    if (SMALL === statusSizeOverride) {
+    if (SMALL === items) {
       return obj.containerVRSmall;
-    } else if (StatusSizes.REFRESH_MEDIUM_10 === statusSizeOverride) {
+    } else if (StatusSizes.REFRESH_MEDIUM_10 === items) {
       return obj.containerVRRefreshMedium;
-    } else if (StatusSizes.MEDIUM === statusSizeOverride) {
+    } else if (StatusSizes.MEDIUM === items) {
       return obj.containerVRMedium;
-    } else if (StatusSizes.LARGE === statusSizeOverride) {
+    } else if (StatusSizes.LARGE === items) {
       return obj.containerVRLarge;
-    } else if (StatusSizes.XLARGE === statusSizeOverride) {
+    } else if (StatusSizes.XLARGE === items) {
       return obj.containerVRXLarge;
     } else {
-      const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(statusSizeOverride * VR_STATUS_SCALE);
+      const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(items * VR_STATUS_SCALE);
       const sum = roundToNearestPixelResult + 2 * STATUS_PADDING;
       const size = { width: PixelRatio.roundToNearestPixel(roundToNearestPixelResult * VR_STATUS_WIDTH_RATIO) + 2 * STATUS_PADDING, height: sum, borderRadius: sum / 2, paddingLeft: STATUS_PADDING, paddingRight: STATUS_PADDING, paddingTop: STATUS_PADDING, paddingBottom: STATUS_PADDING };
       return size;
     }
-  } else if (SMALL === statusSizeOverride) {
-    return isMobileOnline ? obj.containerMobileOnlineSmall : obj.containerSmall;
-  } else if (StatusSizes.REFRESH_MEDIUM_10 === statusSizeOverride) {
-    return isMobileOnline ? obj.containerMobileOnlineRefreshMedium : obj.containerRefreshMedium;
-  } else if (StatusSizes.MEDIUM === statusSizeOverride) {
-    return isMobileOnline ? obj.containerMobileOnlineMedium : obj.containerMedium;
-  } else if (StatusSizes.LARGE === statusSizeOverride) {
-    return isMobileOnline ? obj.containerMobileOnlineLarge : obj.containerLarge;
-  } else if (StatusSizes.XLARGE === statusSizeOverride) {
-    return isMobileOnline ? obj.containerMobileOnlineXLarge : obj.containerXLarge;
+  } else if (SMALL === items) {
+    return flag ? obj.containerMobileOnlineSmall : obj.containerSmall;
+  } else if (StatusSizes.REFRESH_MEDIUM_10 === items) {
+    return flag ? obj.containerMobileOnlineRefreshMedium : obj.containerRefreshMedium;
+  } else if (StatusSizes.MEDIUM === items) {
+    return flag ? obj.containerMobileOnlineMedium : obj.containerMedium;
+  } else if (StatusSizes.LARGE === items) {
+    return flag ? obj.containerMobileOnlineLarge : obj.containerLarge;
+  } else if (StatusSizes.XLARGE === items) {
+    return flag ? obj.containerMobileOnlineXLarge : obj.containerXLarge;
   } else {
     const size1 = { width: null, height: null, borderRadius: null, paddingLeft: null, paddingRight: null, paddingTop: null, paddingBottom: null };
-    const sum1 = PixelRatio.roundToNearestPixel(statusSizeOverride) + 2 * STATUS_PADDING;
+    const sum1 = PixelRatio.roundToNearestPixel(items) + 2 * STATUS_PADDING;
     size1.width = sum1;
     let num2 = 0;
-    if (isMobileOnline) {
+    if (flag) {
       num2 = sum1 / 2.5;
     }
     size1.height = sum1 + num2;
-    if (isMobileOnline) {
+    if (flag) {
       let result = sum1 / 4;
     } else {
       result = sum1 / 2;
@@ -185,12 +185,12 @@ export default function getStatusContainerStyle(statusSizeOverride, isMobileOnli
     size1.paddingLeft = STATUS_PADDING;
     size1.paddingRight = STATUS_PADDING;
     let num4 = 0;
-    if (isMobileOnline) {
+    if (flag) {
       num4 = 1;
     }
     size1.paddingTop = STATUS_PADDING + num4;
     let num5 = 0;
-    if (isMobileOnline) {
+    if (flag) {
       num5 = 1;
     }
     size1.paddingBottom = STATUS_PADDING + num5;

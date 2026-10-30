@@ -1,16 +1,16 @@
-// === Module 18166: GuildPowerupsProgressBar ===
+// === Module 18226: GuildPowerupsProgressBar ===
 
-// Module 18166 (GuildPowerupsProgressBar)
-import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 5243 */;
-import LinearGradientDefault from "LinearGradient" /* 5295 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13871 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 18169 */;
+// Module 18226 (GuildPowerupsProgressBar)
+import nativeDefault from "native" /* 575 */;
+import timing from "timing" /* 5249 */;
+import LinearGradientDefault from "LinearGradient" /* 5582 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 14005 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 18229 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 18167 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 18227 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -18,10 +18,9 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
-let c10 = 500;
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 const obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.track = { height: 30, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };
@@ -37,148 +36,27 @@ obj.textContainer = { flexDirection: "row", justifyContent: "space-between", ali
 obj.headerText = { flexShrink: 1 };
 obj.rightContent = { flexDirection: "row", alignItems: "center", flexShrink: 1 };
 obj.descriptionText = { flexShrink: 1, opacity: 0.7 };
-let closure_12 = createStyles.createStyles(obj);
-let closure_13 = { code: "function GuildPowerupsProgressBarTsx1(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
-const __initData = { code: "function GuildPowerupsProgressBarTsx2(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
-const ReactCompilerGating = fn(558);
-let obj7 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
-const sum = result + 30;
+let closure_11 = createStyles.createStyles(obj);
+const __initData = { code: "function GuildPowerupsProgressBarTsx1(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
 const size = fn(2);
 let result1 = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsProgressBar.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerupsProgressBar(guildId) {
-  const cResult = guildId(576).c(59);
-  guildId = guildId.guildId;
-  closure_12();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== guildId) {
-    const fn = function u() {
-      return GuildStore.getGuild(guildId);
-    };
-    const items1 = [guildId];
-    cResult[1] = guildId;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp8 = items1;
-    let tmp7 = fn;
-  } else {
-    tmp7 = cResult[2];
-    tmp8 = cResult[3];
-  }
-  let obj = guildId(576);
-  const stateFromStores = guildId(573).useStateFromStores(first, tmp7, tmp8);
-  stateFromStores1(18168)(stateFromStores);
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [GuildBoostingProgressBarPersistedStore];
-    cResult[4] = items2;
-    let tmp11 = items2;
-  } else {
-    tmp11 = cResult[4];
-  }
-  if (cResult[5] !== guildId) {
-    class I {
-      constructor() {
-        num = closure_5.getCountForGuild(guildId);
-        if (num == null) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-    const items3 = [guildId];
-    cResult[5] = guildId;
-    cResult[6] = I;
-    cResult[7] = items3;
-    let tmp14 = items3;
-  } else {
-    class I {
-      constructor() {
-        num = closure_5.getCountForGuild(guildId);
-        if (num == null) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-    tmp14 = cResult[7];
-  }
-  const tmpResult = guildId(573);
-  stateFromStores1 = guildId(573).useStateFromStores(tmp11, I, tmp14);
-  if (stateFromStores != null) {
-    class I {
-      constructor() {
-        num = closure_5.getCountForGuild(guildId);
-        if (num == null) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-  }
-  if (undefined == null) {
-    class I {
-      constructor() {
-        num = closure_5.getCountForGuild(guildId);
-        if (num == null) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-  }
-  dependencyMap = tmp16;
-  if (cResult[8] === stateFromStores1) {
-    class I {
-      constructor() {
-        num = closure_5.getCountForGuild(guildId);
-        if (num == null) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-  }
-  class A {
-    constructor() {
-      if (closure_1 !== c2) {
-        tmp2 = closure_0;
-        tmp3 = closure_2;
-        obj = closure_0(closure_2[13]);
-        tmp4 = guildId;
-        result = obj.updateGuildPremiumSubscriptionCount(guildId, tmp);
-      }
-      return;
-    }
-  }
-  const items4 = [guildId, stateFromStores1, undefined];
-  cResult[8] = stateFromStores1;
-  cResult[9] = guildId;
-  cResult[10] = undefined;
-  cResult[11] = A;
-  cResult[12] = items4;
-  const tmpResult2 = guildId(573);
-}) : (function GuildPowerupsProgressBar(guildId) {
+export default function GuildPowerupsProgressBar(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
   let num;
   let num2;
   let sharedValue;
   let sharedValue1;
-  const tmp = closure_12();
+  const tmp = closure_11();
   const items = [GuildStore];
   const items1 = [guildId];
-  const stateFromStores = guildId(num[11]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
-  const tmp6 = stateFromStores1(num[12])(stateFromStores);
-  let obj = guildId(num[11]);
+  const stateFromStores = guildId(num[9]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
+  const tmp6 = stateFromStores1(num[10])(stateFromStores);
+  let obj = guildId(num[9]);
   const items2 = [sharedValue1];
   const items3 = [guildId];
-  stateFromStores1 = guildId(num[11]).useStateFromStores(items2, () => {
+  stateFromStores1 = guildId(num[9]).useStateFromStores(items2, () => {
     num = GuildBoostingProgressBarPersistedStore.getCountForGuild(guildId);
     if (num == null) {
       num = 0;
@@ -203,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     const _Math = Math;
     num2 = Math.min(stateFromStores1 / tmp6 * 100, 100);
   }
-  let obj2 = guildId(num[11]);
+  const obj2 = guildId(num[9]);
   sharedValue = guildId(num[6]).useSharedValue(num2);
   const tmp2Result = guildId(num[6]);
   let num4 = 0;
@@ -213,13 +91,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   sharedValue1 = guildId(num[6]).useSharedValue(num4);
   const items5 = [sharedValue, sharedValue1, num2];
   const effect1 = obj3.useEffect(() => {
-    const result = sharedValue.set(timing.withTiming(num2, { duration }));
-    const obj2 = { duration };
+    const result = sharedValue.set(timing.withTiming(num2, { duration: 500 }));
     num = 0;
     if (num2 > 0) {
       num = 1;
     }
-    const result1 = sharedValue1.set(timing.withTiming(num, { duration }));
+    const result1 = sharedValue1.set(timing.withTiming(num, { duration: 500 }));
     return () => {
       guildId(num[6]).cancelAnimation(sharedValue);
       const obj = guildId(num[6]);
@@ -227,33 +104,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     };
   }, items5);
   const tmp2Result3 = guildId(num[6]);
-  class F {
+  class T {
     constructor() {
       obj = { width: "" + closure_4.get() + "%", opacity: closure_5.get() };
       return obj;
     }
   }
-  F.__closure = { animatedFillPercent: sharedValue, animatedFillOpacity: sharedValue1 };
-  F.__workletHash = 3044920745091;
-  F.__initData = __initData;
+  T.__closure = { animatedFillPercent: sharedValue, animatedFillOpacity: sharedValue1 };
+  T.__workletHash = 6718232104000;
+  T.__initData = __initData;
   const items6 = [guildId];
-  const animatedStyle = guildId(num[6]).useAnimatedStyle(F);
+  const animatedStyle = guildId(num[6]).useAnimatedStyle(T);
   const callback = obj3.useCallback(() => {
     const obj = { guildId, analyticsLocation: AnalyticsLocationDefault.GUILD_BOOSTING_SIDEBAR_DISPLAY };
     openGuildPowerupsModalDefault(obj);
   }, items6);
   if (stateFromStores1 >= tmp6) {
-    const intl2 = tmp2(tmp3[17]).intl;
+    const intl2 = tmp2(tmp3[15]).intl;
     const obj4 = { appliedBoostCount: stateFromStores1 };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp5(tmp3[18])["Ehpq+7"], obj4);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp5(tmp3[16])["Ehpq+7"], obj4);
   } else {
-    const intl = tmp2(tmp3[17]).intl;
+    const intl = tmp2(tmp3[15]).intl;
     const obj5 = { appliedBoostCount: stateFromStores1, maxBoostCount: tmp6 };
-    formatToPlainStringResult = intl.formatToPlainString(tmp5(tmp3[18])["/rbPDs"], obj5);
+    formatToPlainStringResult = intl.formatToPlainString(tmp5(tmp3[16])["/rbPDs"], obj5);
   }
   const obj6 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, style: null, children: null };
-  const intl3 = tmp2(tmp3[17]).intl;
-  obj6.accessibilityLabel = intl3.string(stateFromStores1(num[18]).NI6Ihe);
+  const intl3 = tmp2(tmp3[15]).intl;
+  obj6.accessibilityLabel = intl3.string(stateFromStores1(num[16]).NI6Ihe);
   obj6.accessibilityValue = { text: formatToPlainStringResult };
   obj6.onPress = callback;
   obj6.style = tmp.container;
@@ -269,26 +146,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   const obj10 = { style: tmp.textContainer, children: null };
   const obj11 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.headerText, children: null };
   if (num >= tmp6) {
-    const intl5 = tmp2(tmp3[17]).intl;
+    const intl5 = tmp2(tmp3[15]).intl;
     const _HermesInternal = HermesInternal;
-    let combined = "" + intl5.string(tmp5(tmp3[18]).NI6Ihe) + " \u{1F389}";
+    let combined = "" + intl5.string(tmp5(tmp3[16]).NI6Ihe) + " \u{1F389}";
   } else {
-    const intl4 = tmp2(tmp3[17]).intl;
-    combined = intl4.string(tmp5(tmp3[18]).NI6Ihe);
+    const intl4 = tmp2(tmp3[15]).intl;
+    combined = intl4.string(tmp5(tmp3[16]).NI6Ihe);
   }
   obj11.children = combined;
-  const items9 = [closure_7(guildId(num[19]).Text, obj11), ];
+  const items9 = [closure_7(guildId(num[18]).Text, obj11), ];
   const obj12 = { style: tmp.rightContent, children: null };
-  const items10 = [closure_7(guildId(num[19]).Text, { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult }), ];
+  const items10 = [closure_7(guildId(num[18]).Text, { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult }), ];
   const obj13 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult };
   const tmp2Result4 = guildId(num[6]);
-  items10[1] = closure_7(guildId(num[20]).ChevronSmallRightIcon, { size: "sm", color: stateFromStores1(num[5]).colors.TEXT_DEFAULT });
+  items10[1] = closure_7(guildId(num[19]).ChevronSmallRightIcon, { size: "sm", color: stateFromStores1(num[5]).colors.TEXT_DEFAULT });
   obj12.children = items10;
   items9[1] = closure_8(sharedValue, obj12);
   obj10.children = items9;
   items8[1] = closure_8(sharedValue, obj10);
   obj7.children = items8;
   obj6.children = closure_8(sharedValue, obj7);
-  return closure_7(guildId(num[21]).PressableScale, obj6);
-});
-export const BOOST_PROGRESS_BAR_HEIGHT = sum;
+  return closure_7(guildId(num[17]).PressableScale, obj6);
+};
+export const BOOST_PROGRESS_BAR_HEIGHT = result + 30;

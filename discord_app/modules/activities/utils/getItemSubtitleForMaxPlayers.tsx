@@ -1,7 +1,7 @@
-// === Module 12123: getItemSubtitleForMaxPlayers ===
+// === Module 12299: getItemSubtitleForMaxPlayers ===
 
-// Module 12123 (getItemSubtitleForMaxPlayers)
-import util from "util" /* 1125 */;
+// Module 12299 (getItemSubtitleForMaxPlayers)
+import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");

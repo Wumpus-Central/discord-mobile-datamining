@@ -1,7 +1,7 @@
-// === Module 4846: ShopMarketingFatigueExperiment ===
+// === Module 4847: ShopMarketingFatigueExperiment ===
 
-// Module 4846 (ShopMarketingFatigueExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 4847 (ShopMarketingFatigueExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-shop-marketing-fatigue", kind: "user", defaultConfig: { enforceFatigue: false }, variations: null };

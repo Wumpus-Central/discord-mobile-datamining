@@ -1,23 +1,24 @@
-// === Module 2024: Constants ===
+// === Module 2019: Constants ===
 
-// Module 2024 (Constants)
-import Constants2 from "Constants" /* 1084 */;
-import Server from "Server" /* 1998 */;
-import ActivityApplications from "ActivityApplications" /* 2026 */;
-import Constants from "Constants" /* 2025 */;
+// Module 2019 (Constants)
+import Constants2 from "Constants" /* 1072 */;
+import Server from "Server" /* 1993 */;
+import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2021 */;
+import EmbeddedActivitySupportedPlatforms from "EmbeddedActivitySupportedPlatforms" /* 2022 */;
+import ActivityApplications from "ActivityApplications" /* 2023 */;
+import Constants from "Constants" /* 2020 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants2.ChannelTypes;
-const OrientationLockState = Constants.OrientationLockState;
 const items = ["1037680572660727838", "235088799074484224", "1007373802981822582", "1067803140071620628", "1194351737264406548", "1245041113882955918", "1245040907732910201", "1245040436427489471", "1208090049871351890", "1235205910863806484", "1227719606223765687"];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
 ({ ActivityIntent, ActivityLayoutMode } = Constants);
 const obj = { label_type: Server.EmbeddedActivityLabelTypes.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] };
-const obj2 = { application_id: "", requires_age_gate: false, legacy_responsive_aspect_ratio: false, default_orientation_lock_state: OrientationLockState.UNLOCKED, tablet_default_orientation_lock_state: OrientationLockState.UNLOCKED, supported_platforms: null, client_platform_config: null, has_csp_exception: false, displays_advertisements: false, blocked_locales: null, supported_locales: null };
-const items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
+const obj2 = { application_id: "", requires_age_gate: false, legacy_responsive_aspect_ratio: false, default_orientation_lock_state: EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.UNLOCKED, tablet_default_orientation_lock_state: EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.UNLOCKED, supported_platforms: null, client_platform_config: null, has_csp_exception: false, displays_advertisements: false, blocked_locales: null, supported_locales: null };
+const items3 = [EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.WEB];
 obj2.supported_platforms = items3;
-obj2.client_platform_config = { [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj, [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj, [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj };
+obj2.client_platform_config = { [EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.WEB]: obj, [EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.IOS]: obj, [EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.ANDROID]: obj };
 obj2.blocked_locales = [];
 obj2.supported_locales = [];
 const items4 = [, , , ];
@@ -82,7 +83,6 @@ export const ActivityFeedbackReasons = { ADS: "ADS", FAILED_LOAD: "FAILED_LOAD",
 export const ActivityTooltipName = { BETRAYAL_MARKETING_TOOLTIP: "BETRAYAL_MARKETING_TOOLTIP", FISHINGTON_MARKETING_TOOLTIP: "FISHINGTON_MARKETING_TOOLTIP", POKER_MARKETING_TOOLTIP: "POKER_MARKETING_TOOLTIP", YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP" };
 export { ActivityIntent };
 export { ActivityLayoutMode };
-export { OrientationLockState };
 export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = { UNHANDLED: -1, [-1]: "UNHANDLED", PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
 export const DEFAULT_EMBEDDED_ACTIVITY_CONFIG = obj2;

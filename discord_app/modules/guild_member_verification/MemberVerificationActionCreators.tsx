@@ -1,15 +1,15 @@
-// === Module 6909: MemberVerificationActionCreators ===
+// === Module 6916: MemberVerificationActionCreators ===
 
-// Module 6909 (MemberVerificationActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5739 */;
+// Module 6916 (MemberVerificationActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5745 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 4910 */;
-import GuildMemberStore from "GuildMemberStore" /* 4917 */;
-import InviteStore from "InviteStore" /* 5738 */;
-import UserStore from "UserStore" /* 1389 */;
+import ImpersonateStore from "ImpersonateStore" /* 4914 */;
+import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import InviteStore from "InviteStore" /* 5744 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 let closure_10 = async function _fetchVerificationForm() {
@@ -25,7 +25,7 @@ let closure_10 = async function _fetchVerificationForm() {
     const id = currentUser.id;
   }
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React6.GUILD_MEMBER_VERIFICATION(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
+  const request = { url: React7.GUILD_MEMBER_VERIFICATION(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
   const obj5 = { with_guild: !member.isMember(closure_0, id), invite_code: null };
   if (null != inviteKeyForGuildId2) {
     const result = InviteCodeUtils.parseInviteCodeFromInviteKey(tmp27);
@@ -37,7 +37,7 @@ let closure_10 = async function _fetchVerificationForm() {
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
   await HTTP.get(request);
   closure_132_1(closure_132_2[8]).dispatch({ type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: closure_131_0 });
-  await "IconComponent";
+  await "HermesInternal";
   closure_131_1 = value;
   if (null == closure_131_1.body) {
     throw closure_131_1;
@@ -70,7 +70,7 @@ let closure_11 = async function _updateVerificationForm(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -112,7 +112,7 @@ let closure_11 = async function _updateVerificationForm(arg0) {
           obj7.form = obj8;
           closure_133_1(closure_133_2[8]).dispatch(obj7);
           c7 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp6) {
         c7 = tmp;
@@ -136,7 +136,7 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ let closure_12 = async function _updateVerificationFormDescription(arg0) {
           obj7.form = obj8;
           closure_131_1(closure_131_2[8]).dispatch(obj7);
           c5 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp6) {
         c5 = tmp;
@@ -202,7 +202,7 @@ let closure_13 = async function _enableVerificationForm(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ let closure_13 = async function _enableVerificationForm(arg0) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -255,7 +255,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -282,7 +282,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           let body;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -296,7 +296,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           const obj7 = { memberOptions: { isPending: false } };
           const result = closure_133_0(closure_133_2[10]).updateImpersonatedData(closure_132_0, obj7);
           c9 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         } else {
           c7 = 1;
           const HTTP = closure_133_0(closure_133_2[6]).HTTP;
@@ -387,7 +387,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
     }
   }
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationActionCreators.tsx");

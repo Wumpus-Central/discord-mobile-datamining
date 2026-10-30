@@ -1,69 +1,18 @@
-// === Module 7541: useCustomJoinSound ===
+// === Module 7549: useCustomJoinSound ===
 
-// Module 7541 (useCustomJoinSound)
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+// Module 7549 (useCustomJoinSound)
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(6048).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
+let closure_3 = fn(6055).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
 const CustomSoundType = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
 
 export { CustomSoundType };
-export const useCustomJoinSound = ReactCompilerGating.isReactCompilerEnabled() ? (function useCustomJoinSound(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(3);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UserSettingsProtoStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function t() {
-      const guilds = UserSettingsProtoStore.settings.guilds;
-      let guilds1;
-      if (guilds != null) {
-        guilds1 = guilds.guilds;
-      }
-      if (guilds1 == null) {
-        guilds1 = {};
-      }
-      let joinSound1;
-      if (guilds1[closure_0] != null) {
-        joinSound1 = tmp.joinSound;
-      }
-      if (guilds1[closure_3] != null) {
-        const joinSound = tmp3.joinSound;
-      }
-      let tmp4 = joinSound1;
-      if (joinSound1 == null) {
-        tmp4 = joinSound;
-      }
-      if (null != tmp4) {
-        const obj = {};
-        const merged = Object.assign(tmp4);
-        if (null != joinSound1) {
-          let GLOBAL = obj.GUILD;
-        } else {
-          GLOBAL = obj.GLOBAL;
-        }
-        obj.type = GLOBAL;
-      }
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-  }
-  let obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6);
-}) : (function useCustomJoinSound(arg0) {
+export function useCustomJoinSound(arg0) {
   _require = arg0;
   const items = [UserSettingsProtoStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -97,7 +46,7 @@ export const useCustomJoinSound = ReactCompilerGating.isReactCompilerEnabled() ?
       obj.type = GLOBAL;
     }
   });
-});
+}
 export function getCustomJoinSound(arg0) {
   const guilds = UserSettingsProtoStore.settings.guilds;
   let guilds1;

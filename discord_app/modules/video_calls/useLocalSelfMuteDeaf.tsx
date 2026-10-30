@@ -1,17 +1,15 @@
-// === Module 9203: useLocalSelfMuteDeaf ===
+// === Module 9216: useLocalSelfMuteDeaf ===
 
-// Module 9203 (useLocalSelfMuteDeaf)
+// Module 9216 (useLocalSelfMuteDeaf)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
 
 require = fn;
 function getLocalSelfMuteDeaf() {
   const obj = { sessionId: AuthenticationStore.getSessionId(), selfMute: MediaEngineStore.isSelfMute() || MediaEngineStore.isSelfMutedTemporarily(), selfDeaf: MediaEngineStore.isSelfDeaf() };
   return obj;
 }
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useLocalSelfMuteDeaf.tsx");
 
@@ -31,17 +29,7 @@ export function withLocalSelfMuteDeaf(voiceState, localSelfMuteDeaf) {
   }
   return mergeResult;
 }
-export const useLocalSelfMuteDeaf = ReactCompilerGating.isReactCompilerEnabled() ? (function useLocalSelfMuteDeaf() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AuthenticationStore, MediaEngineStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  return initialize.useStateFromStoresObject(first, getLocalSelfMuteDeaf);
-}) : (function useLocalSelfMuteDeaf() {
+export function useLocalSelfMuteDeaf() {
   const items = [AuthenticationStore, MediaEngineStore];
   return initialize.useStateFromStoresObject(items, getLocalSelfMuteDeaf);
-});
+}

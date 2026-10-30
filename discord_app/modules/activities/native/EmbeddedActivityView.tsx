@@ -1,285 +1,44 @@
-// === Module 11555: EmbeddedActivityView ===
+// === Module 11756: EmbeddedActivityView ===
 
-// Module 11555 (EmbeddedActivityView)
-import c from "c" /* 576 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5748 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10884 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11556 */;
-import DiscordEnvironment from "DiscordEnvironment" /* 11557 */;
-import activityWebViewController from "activityWebViewController" /* 11559 */;
+// Module 11756 (EmbeddedActivityView)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5754 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10907 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11757 */;
+import activityWebViewController from "activityWebViewController" /* 11760 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
 
 require = fn;
-function useQueryParams(arg0) {
-  ({ currentEmbeddedActivity, channel } = arg0);
-  if (null == currentEmbeddedActivity) {
-    return { instance_id: "" };
-  } else {
-    const discordEnvQueryParams = DiscordEnvironment.getDiscordEnvQueryParams();
-    const ui_density = discordEnvQueryParams.ui_density;
-    const tmp15 = _objectWithoutProperties(discordEnvQueryParams, closure_3);
-    let launchId = currentEmbeddedActivity.compositeInstanceId;
-    if (launchId == null) {
-      launchId = currentEmbeddedActivity.launchId;
-    }
-    const obj = { instance_id: launchId, location_id: null, launch_id: null };
-    const _location = currentEmbeddedActivity.location;
-    let id;
-    if (_location != null) {
-      id = _location.id;
-    }
-    obj.location_id = id;
-    obj.launch_id = currentEmbeddedActivity.launchId;
-    const merged = Object.assign(tmp15);
-    if (null != currentEmbeddedActivity.proxyTicket) {
-      obj.discord_proxy_ticket = currentEmbeddedActivity.proxyTicket;
-    }
-    let tmp5 = null != channel && null != channel.id;
-    if (tmp5) {
-      tmp5 = "" !== channel.id;
-    }
-    if (tmp5) {
-      obj.channel_id = channel.id;
-    }
-    let guild_id;
-    if (channel != null) {
-      guild_id = channel.guild_id;
-    }
-    let tmp7 = null != guild_id;
-    if (tmp7) {
-      let guild_id1;
-      if (channel != null) {
-        guild_id1 = channel.guild_id;
-      }
-      tmp7 = "" !== guild_id1;
-    }
-    if (tmp7) {
-      let guild_id2;
-      if (channel != null) {
-        guild_id2 = channel.guild_id;
-      }
-      obj.guild_id = guild_id2;
-    }
-    return obj;
-  }
-}
-let user = ["ui_density"];
-let closure_4 = ["deepLinkQueryParams", "applicationId"];
-get_ActivityIndicator = fn(17);
-({ ActivityIndicator: closure_8, View: closure_9 } = get_ActivityIndicator);
-const Constants = fn(2024);
-({ ActivityLayoutMode: closure_11, ActivityScreenOrientation: closure_12 } = Constants);
-fn(1372).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
-const jsxProd = fn(21);
-({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5005);
-let closure_16 = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
-const EmbeddedActivities = "EmbeddedActivities";
-let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActivityView(orientationLockState) {
-  const cResult = orientationLockState(setShowLoadingStateForLockingOrientation[10]).c(29);
-  orientationLockState = orientationLockState.orientationLockState;
-  const showLoadingIndicator = orientationLockState.showLoadingIndicator;
-  setShowLoadingStateForLockingOrientation = orientationLockState.setShowLoadingStateForLockingOrientation;
-  const application = orientationLockState.application;
-  const setOrientationLockState = orientationLockState.setOrientationLockState;
-  const tmp5 = _slicedToArray(first1.useState(false), 2);
-  const first = tmp5[0];
-  if (cResult[0] !== application) {
-    const defaultOrientationLockState = orientationLockState(tmp2[11]).getDefaultOrientationLockState(application);
-    cResult[0] = application;
-    cResult[1] = defaultOrientationLockState;
-    let tmp7 = defaultOrientationLockState;
-    const tmpResult = orientationLockState(tmp2[11]);
-  } else {
-    tmp7 = cResult[1];
-  }
-  _slicedToArray = tmp7;
-  let id;
-  if (application != null) {
-    id = application.id;
-  }
-  [first1, closure_8] = first1.useState(false);
-  const size = showLoadingIndicator(tmp2[12])();
-  closure_9 = tmp12;
-  if (cResult[2] !== size.width > size.height) {
-    const fn = function h() {
-      DispatcherDefault.dispatch({ type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE", screenOrientation: closure_9 ? __initData.LANDSCAPE : __initData.PORTRAIT });
-      const tmp2 = closure_9 ? __initData.LANDSCAPE : __initData.PORTRAIT;
-    };
-    const items = [tmp12];
-    cResult[2] = tmp12;
-    cResult[3] = fn;
-    cResult[4] = items;
-    let tmp14 = items;
-    let tmp13 = fn;
-  } else {
-    tmp13 = cResult[3];
-    tmp14 = cResult[4];
-  }
-  const layoutEffect = obj2.useLayoutEffect(tmp13, tmp14);
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function _() {
-      closure_8(false);
-    };
-    cResult[5] = fn2;
-    let tmp16 = fn2;
-  } else {
-    tmp16 = cResult[5];
-  }
-  if (cResult[6] !== id) {
-    const items1 = [id];
-    cResult[6] = id;
-    cResult[7] = items1;
-    let tmp17 = items1;
-  } else {
-    tmp17 = cResult[7];
-  }
-  const layoutEffect1 = obj2.useLayoutEffect(tmp16, tmp17);
-  if (cResult[8] === tmp7) {
-    if (cResult[9] === application) {
-      if (cResult[10] === first1) {
-        if (cResult[11] === tmp12) {
-          if (cResult[12] === orientationLockState) {
-            if (cResult[13] === setOrientationLockState) {
-              if (cResult[14] === setShowLoadingStateForLockingOrientation) {
-                let tmp19 = cResult[15];
-                let tmp20 = cResult[16];
-              }
-              const layoutEffect2 = obj2.useLayoutEffect(tmp19, tmp20);
-              if (cResult[17] === tmp12) {
-                if (cResult[18] === orientationLockState) {
-                  if (cResult[19] === setShowLoadingStateForLockingOrientation) {
-                    let tmp22 = cResult[20];
-                    let tmp23 = cResult[21];
-                  }
-                  const layoutEffect3 = obj2.useLayoutEffect(tmp22, tmp23);
-                  if (cResult[22] === first) {
-                    if (cResult[23] === showLoadingIndicator) {
-                      let tmp26 = cResult[24];
-                      let tmp27 = cResult[25];
-                    }
-                    const layoutEffect4 = obj2.useLayoutEffect(tmp26, tmp27);
-                    if (cResult[26] === tmp12) {
-                      if (cResult[27] === first) {
-                        let tmp29 = cResult[28];
-                      }
-                      return tmp29;
-                    }
-                    class O {
-                      constructor() {
-                        tmp = showLoadingIndicator;
-                        if (!showLoadingIndicator) {
-                          tmp = closure_5;
-                        }
-                        if (!tmp) {
-                          tmp2 = closure_8;
-                          flag = true;
-                          tmp3 = closure_8(true);
-                        }
-                        return;
-                      }
-                    }
-                    tmp30[0] = first;
-                    tmp30[1] = tmp5[1];
-                    tmp30[2] = tmp12;
-                    cResult[26] = tmp12;
-                    cResult[27] = first;
-                    cResult[28] = tmp30;
-                    tmp29 = tmp30;
-                  }
-                  class O {
-                    constructor() {
-                      tmp = showLoadingIndicator;
-                      if (!showLoadingIndicator) {
-                        tmp = closure_5;
-                      }
-                      if (!tmp) {
-                        tmp2 = closure_8;
-                        flag = true;
-                        tmp3 = closure_8(true);
-                      }
-                      return;
-                    }
-                  }
-                  const items2 = [showLoadingIndicator, first];
-                  cResult[22] = first;
-                  cResult[23] = showLoadingIndicator;
-                  cResult[24] = O;
-                  cResult[25] = items2;
-                  tmp27 = items2;
-                  tmp26 = O;
-                }
-              }
-              const items3 = [orientationLockState, tmp12, setShowLoadingStateForLockingOrientation];
-              cResult[17] = tmp12;
-              cResult[18] = orientationLockState;
-              cResult[19] = setShowLoadingStateForLockingOrientation;
-              cResult[20] = tmp24;
-              cResult[21] = items3;
-              tmp23 = items3;
-              tmp22 = tmp24;
-            }
-          }
-        }
-      }
-    }
-  }
-  const fn3 = function b() {
-    if (!first1) {
-      if (null == orientationLockState) {
-        if (!doesOrientationMatchLockStateDefault(closure_9, closure_6)) {
-          setShowLoadingStateForLockingOrientation(true);
-        }
-        if (null != application) {
-          setOrientationLockState(tmp10, orientationLockState);
-        }
-      }
-    }
-    setShowLoadingStateForLockingOrientation(false);
-  };
-  const items4 = [tmp7, application, orientationLockState, size.width > size.height, first1, setShowLoadingStateForLockingOrientation, setOrientationLockState];
-  cResult[8] = tmp7;
-  cResult[9] = application;
-  cResult[10] = first1;
-  cResult[11] = size.width > size.height;
-  cResult[12] = orientationLockState;
-  cResult[13] = setOrientationLockState;
-  cResult[14] = setShowLoadingStateForLockingOrientation;
-  cResult[15] = fn3;
-  cResult[16] = items4;
-  tmp20 = items4;
-  tmp19 = fn3;
-}) : (function useBaseActivityView(orientationLockState) {
+function useBaseActivityView(orientationLockState) {
   orientationLockState = orientationLockState.orientationLockState;
   const showLoadingIndicator = orientationLockState.showLoadingIndicator;
   const setShowLoadingStateForLockingOrientation = orientationLockState.setShowLoadingStateForLockingOrientation;
   const application = orientationLockState.application;
   const setOrientationLockState = orientationLockState.setOrientationLockState;
+  let isResetting;
   let defaultOrientationLockState;
   let first1;
   closure_8 = undefined;
   let isLandscape;
-  const setIsResetting = defaultOrientationLockState(first1.useState(false), 2);
-  const isResetting = setIsResetting[0];
-  defaultOrientationLockState = orientationLockState(setShowLoadingStateForLockingOrientation[11]).getDefaultOrientationLockState(application);
+  const setIsResetting = isResetting(defaultOrientationLockState.useState(false), 2);
+  isResetting = setIsResetting[0];
+  defaultOrientationLockState = orientationLockState(setShowLoadingStateForLockingOrientation[9]).getDefaultOrientationLockState(application);
   let id;
   if (application != null) {
     id = application.id;
   }
-  const tmpResult = defaultOrientationLockState(first1.useState(false), 2);
+  const tmpResult = isResetting(defaultOrientationLockState.useState(false), 2);
   first1 = tmpResult[0];
   closure_8 = tmpResult[1];
-  const size = showLoadingIndicator(setShowLoadingStateForLockingOrientation[12])();
+  const size = showLoadingIndicator(setShowLoadingStateForLockingOrientation[10])();
   isLandscape = size.width > size.height;
   const items = [isLandscape];
   const layoutEffect = obj.useLayoutEffect(() => {
-    DispatcherDefault.dispatch({ type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE", screenOrientation: isLandscape ? __initData.LANDSCAPE : __initData.PORTRAIT });
-    const tmp2 = isLandscape ? __initData.LANDSCAPE : __initData.PORTRAIT;
+    DispatcherDefault.dispatch({ type: "ACTIVITY_SCREEN_ORIENTATION_UPDATE", screenOrientation: isLandscape ? constants.LANDSCAPE : constants.PORTRAIT });
+    const tmp2 = isLandscape ? constants.LANDSCAPE : constants.PORTRAIT;
   }, items);
   const items1 = [id];
   const layoutEffect1 = obj.useLayoutEffect(() => {
@@ -316,522 +75,118 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
     }
   }, items4);
   return { isResetting, setIsResetting: setIsResetting[1], isLandscape };
-});
-let closure_18 = tmp5;
-ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityViewLoadingIndicator() {
-  const cResult = c.c(3);
-  const tmp2 = closure_16();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp6 = closure_1_14(closure_1_8, { size: "large" });
-    cResult[0] = tmp6;
-    let first = tmp6;
-  } else {
-    first = cResult[0];
+}
+class ActivityViewLoadingIndicator {
+  constructor() {
+    obj = { style: closure_15().loadingContainer, children: jsx(ActivityIndicator, { size: "large" }) };
+    return jsx(View, obj);
   }
-  if (cResult[1] !== tmp2.loadingContainer) {
-    const obj2 = { style: tmp2.loadingContainer, children: first };
-    const tmp10 = closure_1_14(React6, obj2);
-    cResult[1] = tmp2.loadingContainer;
-    cResult[2] = tmp10;
-    let tmp7 = tmp10;
-  } else {
-    tmp7 = cResult[2];
-  }
-  return tmp7;
-}) : (function ActivityViewLoadingIndicator() {
-  return closure_1_14(React6, { style: closure_16().loadingContainer, children: closure_1_14(closure_1_8, { size: "large" }) });
-});
-let closure_20 = tmp6;
-ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivityView(showLoadingIndicator) {
-  const cResult = c.c(1);
-  if (showLoadingIndicator.showLoadingIndicator) {
-    const _Symbol = Symbol;
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp9 = closure_1_14(closure_20, {});
-      cResult[0] = tmp9;
-      let first = tmp9;
+}
+class BaseActivityView {
+  constructor(arg0) {
+    if (global.showLoadingIndicator) {
+      tmp4 = jsx;
+      tmp5 = ActivityViewLoadingIndicator;
+      tmp3 = jsx(ActivityViewLoadingIndicator, {});
     } else {
-      first = cResult[0];
-    }
-  } else {
-    let tmp4 = null;
-    if (!tmp3) {
-      tmp4 = tmp2;
-    }
-    return tmp4;
-  }
-}) : (function BaseActivityView(showLoadingIndicator) {
-  if (showLoadingIndicator.showLoadingIndicator) {
-    let tmp3 = closure_1_14(closure_20, {});
-  } else {
-    tmp3 = null;
-    if (!tmp2) {
-      tmp3 = tmp;
-    }
-  }
-  return tmp3;
-});
-let closure_21 = tmp7;
-ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmbeddedActivityWebView(arg0) {
-  const cResult = require("c").c(12);
-  if (cResult[0] !== arg0) {
-    ({ deepLinkQueryParams, applicationId } = arg0);
-    _require = applicationId;
-    const tmp9 = _objectWithoutProperties(arg0, closure_4);
-    cResult[0] = arg0;
-    cResult[1] = applicationId;
-    cResult[2] = deepLinkQueryParams;
-    cResult[3] = tmp9;
-    let tmp6 = tmp9;
-    let tmp5 = deepLinkQueryParams;
-  } else {
-    _require = cResult[1];
-    tmp5 = cResult[2];
-    tmp6 = cResult[3];
-  }
-  if (cResult[4] !== applicationId) {
-    const fn = function p() {
-      return activityWebViewController.getOrCreateActivityWebViewController(closure_0);
-    };
-    cResult[4] = applicationId;
-    cResult[5] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[5];
-  }
-  ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(tmp10), 1)[0]);
-  if (cResult[6] === applicationId) {
-    if (cResult[7] === tmp5) {
-      if (cResult[8] === iframeId) {
-        if (cResult[9] === tmp6) {
-          if (cResult[10] === shellBridgeSecret) {
-            let tmp11 = cResult[11];
-          }
-          return tmp11;
-        }
+      tmp3 = null;
+      if (!tmp2) {
+        tmp3 = tmp;
       }
     }
+    return tmp3;
   }
-  const merged = Object.assign(tmp6);
-  const tmp13 = closure_14(require("BaseEmbeddedAppWebView").BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: tmp5, applicationId });
-  cResult[6] = applicationId;
-  cResult[7] = tmp5;
-  cResult[8] = iframeId;
-  cResult[9] = tmp6;
-  cResult[10] = shellBridgeSecret;
-  cResult[11] = tmp13;
-  tmp11 = tmp13;
-  const obj = require("c");
-  const obj2 = { iframeId, shellBridgeSecret, deepLinkQueryParams: tmp5, applicationId };
-}) : (function EmbeddedActivityWebView(applicationId) {
+}
+function EmbeddedActivityWebView(applicationId) {
   applicationId = applicationId.applicationId;
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
   ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0]);
   const merged1 = Object.assign(merged);
-  return closure_14(applicationId(11582).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
-});
-ReactCompilerGating = fn(558);
-const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmbeddedActivityViewInner(channel) {
-  const cResult = channel(first[10]).c(45);
-  channel = channel.channel;
-  const layoutMode = channel.layoutMode;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-    cResult[0] = currentEmbeddedActivity;
-    first = currentEmbeddedActivity;
-  } else {
-    first = cResult[0];
-  }
-  const tmp8 = layoutMode(first[18])();
-  user = tmp8;
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [EmbeddedActivitiesStore];
-    cResult[1] = items;
-    let tmp9 = items;
-  } else {
-    tmp9 = cResult[1];
-  }
-  if (cResult[2] !== tmp8) {
-    class L {
-      constructor() {
-        orientationLockStateForApp = undefined;
-        if (null != closure_3) {
-          tmp3 = closure_10;
-          orientationLockStateForApp = closure_10.getOrientationLockStateForApp(tmp.id);
-        }
-        return orientationLockStateForApp;
-      }
-    }
-    const items1 = [tmp8];
-    cResult[2] = tmp8;
-    cResult[3] = L;
-    cResult[4] = items1;
-    let tmp12 = items1;
-  } else {
-    class L {
-      constructor() {
-        orientationLockStateForApp = undefined;
-        if (null != closure_3) {
-          tmp3 = closure_10;
-          orientationLockStateForApp = closure_10.getOrientationLockStateForApp(tmp.id);
-        }
-        return orientationLockStateForApp;
-      }
-    }
-    tmp12 = cResult[4];
-  }
-  let obj = channel(first[10]);
-  const tmp7 = layoutMode;
-  const stateFromStores = channel(first[19]).useStateFromStores(tmp9, L, tmp12);
-  const tmpResult = channel(first[19]);
-  [r10055, tmp15] = noop.useState(true);
-  if (cResult[5] !== channel) {
-    class L {
-      constructor() {
-        orientationLockStateForApp = undefined;
-        if (null != closure_3) {
-          tmp3 = closure_10;
-          orientationLockStateForApp = closure_10.getOrientationLockStateForApp(tmp.id);
-        }
-        return orientationLockStateForApp;
-      }
-    }
-    tmp17[0] = first;
-    tmp17[1] = channel;
-    cResult[5] = channel;
-    cResult[6] = tmp17;
-  } else {
-    class L {
-      constructor() {
-        orientationLockStateForApp = undefined;
-        if (null != closure_3) {
-          tmp3 = closure_10;
-          orientationLockStateForApp = closure_10.getOrientationLockStateForApp(tmp.id);
-        }
-        return orientationLockStateForApp;
-      }
-    }
-  }
-  useQueryParams(tmp17);
-  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    class L {
-      constructor() {
-        orientationLockStateForApp = undefined;
-        if (null != closure_3) {
-          tmp3 = closure_10;
-          orientationLockStateForApp = closure_10.getOrientationLockStateForApp(tmp.id);
-        }
-        return orientationLockStateForApp;
-      }
-    }
-    tmp20[0] = first;
-    cResult[7] = tmp20;
-  } else {
-    class L {
-      constructor() {
-        orientationLockStateForApp = undefined;
-        if (null != closure_3) {
-          tmp3 = closure_10;
-          orientationLockStateForApp = closure_10.getOrientationLockStateForApp(tmp.id);
-        }
-        return orientationLockStateForApp;
-      }
-    }
-  }
-  tmp7(first[20])(tmp20);
-  if (cResult[8] !== layoutMode) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-    const items2 = [layoutMode, first];
-    cResult[8] = layoutMode;
-    cResult[9] = Q;
-    cResult[10] = items2;
-    let tmp23 = items2;
-  } else {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-    tmp23 = cResult[10];
-  }
-  const layoutEffect = noop.useLayoutEffect(Q, tmp23);
-  if (tmp8 != null) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-  }
-  if (cResult[11] !== undefined) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-    if (tmp8 != null) {
-      class Q {
-        constructor() {
-          if (null != closure_2) {
-            tmp2 = closure_1;
-            tmp3 = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-            tmp4 = layoutMode;
-            obj1.layoutMode = layoutMode;
-            obj1.applicationId = tmp.applicationId;
-            dispatchResult = obj.dispatch(obj1);
-          }
-          return;
-        }
-      }
-    }
-    class U {
-      constructor() {
-        obj = closure_0(closure_2[21]);
-        _location = undefined;
-        if (closure_2 != null) {
-          _location = closure_2.location;
-        }
-        obj1 = { location: _location, applicationId: null };
-        id = undefined;
-        if (closure_3 != null) {
-          id = closure_3.id;
-        }
-        obj1.applicationId = id;
-        result = obj.leaveEmbeddedActivity(obj1);
-        return;
-      }
-    }
-    cResult[11] = tmp26;
-    cResult[12] = U;
-  } else {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-  }
-  if (tmp8 != null) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-  }
-  c4 = undefined;
-  if (null != first) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-    if (first != null) {
-      class Q {
-        constructor() {
-          if (null != closure_2) {
-            tmp2 = closure_1;
-            tmp3 = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-            tmp4 = layoutMode;
-            obj1.layoutMode = layoutMode;
-            obj1.applicationId = tmp.applicationId;
-            dispatchResult = obj.dispatch(obj1);
-          }
-          return;
-        }
-      }
-    }
-    class U {
-      constructor() {
-        obj = closure_0(closure_2[21]);
-        _location = undefined;
-        if (closure_2 != null) {
-          _location = closure_2.location;
-        }
-        obj1 = { location: _location, applicationId: null };
-        id = undefined;
-        if (closure_3 != null) {
-          id = closure_3.id;
-        }
-        obj1.applicationId = id;
-        result = obj.leaveEmbeddedActivity(obj1);
-        return;
-      }
-    }
-  }
-  if (null != first) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-  }
-  if (null != first) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-  }
-  if (null != first) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-  }
-  if (cResult[13] === tmp8) {
-    class Q {
-      constructor() {
-        if (null != closure_2) {
-          tmp2 = closure_1;
-          tmp3 = closure_2;
-          obj = closure_1(closure_2[13]);
-          obj1 = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
-          tmp4 = layoutMode;
-          obj1.layoutMode = layoutMode;
-          obj1.applicationId = tmp.applicationId;
-          dispatchResult = obj.dispatch(obj1);
-        }
-        return;
-      }
-    }
-  }
-  const tmp14 = _slicedToArray(noop.useState(true), 2);
-  cResult[13] = tmp8;
-  cResult[14] = stateFromStores;
-  cResult[15] = null == first;
-  cResult[16] = { orientationLockState: stateFromStores, showLoadingIndicator: null == first, setShowLoadingStateForLockingOrientation: tmp15, application: tmp8, setOrientationLockState: channel(first[11]).setOrientationLockState };
-  let obj2 = { orientationLockState: stateFromStores, showLoadingIndicator: null == first, setShowLoadingStateForLockingOrientation: tmp15, application: tmp8, setOrientationLockState: channel(first[11]).setOrientationLockState };
-}) : (function EmbeddedActivityViewInner(channel) {
+  return closure_13(applicationId(11783).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+}
+let closure_3 = ["ui_density"];
+get_ActivityIndicator = fn(17);
+({ ActivityIndicator: closure_7, View: closure_8 } = get_ActivityIndicator);
+const Constants = fn(2019);
+({ ActivityLayoutMode: c10, ActivityScreenOrientation: closure_11 } = Constants);
+fn(1361).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
+const jsxProd = fn(21);
+({ jsx: map1, jsxs: closure_14 } = jsxProd);
+const createStyles = fn(5009);
+const __initData = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
+const memoResult = noop.memo(function EmbeddedActivityViewInner(channel) {
   channel = channel.channel;
   const layoutMode = channel.layoutMode;
   let landscapeSafeAreasConfig = channel.portraitSafeAreasConfig;
+  let id1;
   let setIsResetting;
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-  const tmp4 = layoutMode(currentEmbeddedActivity[18])();
+  const tmp4 = layoutMode(currentEmbeddedActivity[16])();
+  let id = tmp4;
   const items = [EmbeddedActivitiesStore];
   const items1 = [tmp4];
-  const stateFromStores = channel(currentEmbeddedActivity[19]).useStateFromStores(items, () => {
+  const stateFromStores = channel(currentEmbeddedActivity[17]).useStateFromStores(items, () => {
     let orientationLockStateForApp;
     if (null != closure_3) {
       orientationLockStateForApp = EmbeddedActivitiesStore.getOrientationLockStateForApp(tmp.id);
     }
     return orientationLockStateForApp;
   }, items1);
-  let obj = channel(currentEmbeddedActivity[19]);
-  const tmp2 = layoutMode;
-  [tmp8, tmp9] = noop.useState(true);
-  const tmp7 = _slicedToArray(noop.useState(true), 2);
-  layoutMode(currentEmbeddedActivity[20])({ connectedEmbeddedActivity: currentEmbeddedActivity });
+  let obj = channel(currentEmbeddedActivity[17]);
+  [tmp8, tmp9] = setIsResetting(noop.useState(true), 2);
+  if (null == currentEmbeddedActivity) {
+    let obj3 = { instance_id: "" };
+  } else {
+    const discordEnvQueryParams = tmp5(tmp3[13]).getDiscordEnvQueryParams();
+    const ui_density = discordEnvQueryParams.ui_density;
+    const tmp39 = id1(discordEnvQueryParams, id);
+    let launchId = currentEmbeddedActivity.compositeInstanceId;
+    if (launchId == null) {
+      launchId = currentEmbeddedActivity.launchId;
+    }
+    const obj4 = { instance_id: launchId, location_id: null, launch_id: null };
+    let _location = currentEmbeddedActivity.location;
+    id = undefined;
+    if (_location != null) {
+      id = _location.id;
+    }
+    obj4.location_id = id;
+    obj4.launch_id = currentEmbeddedActivity.launchId;
+    const merged = Object.assign(tmp39);
+    if (null != currentEmbeddedActivity.proxyTicket) {
+      obj4.discord_proxy_ticket = currentEmbeddedActivity.proxyTicket;
+    }
+    let tmp14 = null != channel && null != channel.id;
+    if (tmp14) {
+      tmp14 = "" !== channel.id;
+    }
+    if (tmp14) {
+      obj4.channel_id = channel.id;
+    }
+    let guild_id;
+    if (channel != null) {
+      guild_id = channel.guild_id;
+    }
+    let tmp16 = null != guild_id;
+    if (tmp16) {
+      let guild_id1;
+      if (channel != null) {
+        guild_id1 = channel.guild_id;
+      }
+      tmp16 = "" !== guild_id1;
+    }
+    obj3 = obj4;
+    if (tmp16) {
+      let guild_id2;
+      if (channel != null) {
+        guild_id2 = channel.guild_id;
+      }
+      obj4.guild_id = guild_id2;
+      obj3 = obj4;
+    }
+    const tmp5Result = tmp5(tmp3[13]);
+  }
+  layoutMode(currentEmbeddedActivity[18])({ connectedEmbeddedActivity: currentEmbeddedActivity });
   const items2 = [layoutMode, currentEmbeddedActivity];
   const layoutEffect = noop.useLayoutEffect(() => {
     if (null != currentEmbeddedActivity) {
@@ -840,7 +195,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
   }, items2);
   const items3 = [tmp4, currentEmbeddedActivity];
-  let id;
+  id1 = undefined;
   const callback = noop.useCallback(() => {
     let _location;
     if (currentEmbeddedActivity != null) {
@@ -855,42 +210,41 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     const result = leaveEmbeddedActivity.leaveEmbeddedActivity(obj2);
   }, items3);
   if (tmp4 != null) {
-    id = tmp4.id;
+    id1 = tmp4.id;
   }
-  let tmp15 = null == currentEmbeddedActivity;
-  if (!tmp15) {
-    let launchId;
+  let tmp23 = null == currentEmbeddedActivity;
+  if (!tmp23) {
+    let launchId1;
     if (currentEmbeddedActivity != null) {
-      launchId = currentEmbeddedActivity.launchId;
+      launchId1 = currentEmbeddedActivity.launchId;
     }
-    tmp15 = null == launchId;
+    tmp23 = null == launchId1;
   }
-  if (!tmp15) {
-    tmp15 = tmp8;
+  if (!tmp23) {
+    tmp23 = tmp8;
   }
-  if (!tmp15) {
-    tmp15 = null == id;
+  if (!tmp23) {
+    tmp23 = null == id1;
   }
-  if (!tmp15) {
-    tmp15 = null == tmp4;
+  if (!tmp23) {
+    tmp23 = null == tmp4;
   }
-  const tmp10 = useQueryParams({ currentEmbeddedActivity, channel });
-  let obj2 = { orientationLockState: stateFromStores, showLoadingIndicator: tmp15, setShowLoadingStateForLockingOrientation: tmp9, application: tmp4, setOrientationLockState: channel(currentEmbeddedActivity[11]).setOrientationLockState };
-  setIsResetting = closure_18({ orientationLockState: stateFromStores, showLoadingIndicator: tmp15, setShowLoadingStateForLockingOrientation: tmp9, application: tmp4, setOrientationLockState: channel(currentEmbeddedActivity[11]).setOrientationLockState }).setIsResetting;
+  const tmp7 = setIsResetting(noop.useState(true), 2);
+  const obj5 = { orientationLockState: stateFromStores, showLoadingIndicator: tmp23, setShowLoadingStateForLockingOrientation: tmp9, application: tmp4, setOrientationLockState: channel(currentEmbeddedActivity[9]).setOrientationLockState };
+  setIsResetting = useBaseActivityView({ orientationLockState: stateFromStores, showLoadingIndicator: tmp23, setShowLoadingStateForLockingOrientation: tmp9, application: tmp4, setOrientationLockState: channel(currentEmbeddedActivity[9]).setOrientationLockState }).setIsResetting;
   if (null != currentEmbeddedActivity) {
-    if (null != id) {
-      let obj3 = {};
+    if (null != id1) {
+      const obj6 = {};
       if (null != currentEmbeddedActivity.customId) {
-        obj3.custom_id = currentEmbeddedActivity.customId;
+        obj6.custom_id = currentEmbeddedActivity.customId;
       }
       if (null != currentEmbeddedActivity.referrerId) {
-        obj3.referrer_id = currentEmbeddedActivity.referrerId;
+        obj6.referrer_id = currentEmbeddedActivity.referrerId;
       }
-      const obj4 = { showLoadingIndicator: tmp15, isResetting: tmp18, children: null };
-      const obj5 = { wakeLockKey: EmbeddedActivities };
-      const items4 = [closure_14(tmp2(tmp3[22]), obj5), ];
-      const obj6 = {
-        deepLinkQueryParams: obj3,
+      const obj7 = { showLoadingIndicator: tmp23, isResetting: tmp26, children: null };
+      const items4 = [closure_13(tmp2(tmp3[20]), { wakeLockKey: "EmbeddedActivities" }), ];
+      const obj8 = {
+        deepLinkQueryParams: obj6,
         onInvalidUrl() {
               id = undefined;
               if (channel != null) {
@@ -899,15 +253,15 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
               if (null != id) {
                 const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
               }
-              const result = leaveEmbeddedActivity.leaveEmbeddedActivity({ location: currentEmbeddedActivity.location, applicationId: id, showFeedback: false });
-              const obj3 = { location: currentEmbeddedActivity.location, applicationId: id, showFeedback: false };
+              const result = leaveEmbeddedActivity.leaveEmbeddedActivity({ location: currentEmbeddedActivity.location, applicationId: id1, showFeedback: false });
+              const obj3 = { location: currentEmbeddedActivity.location, applicationId: id1, showFeedback: false };
             },
         onActivityCrash() {
               const result = activityWebViewController.releaseActivityWebView();
               setIsResetting(true);
               const timerId = setTimeout(() => setIsResetting(false), 0);
             },
-        applicationId: id,
+        applicationId: id1,
         channelId: null,
         guildId: null,
         activityUrl: null,
@@ -920,43 +274,43 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
         safeAreasConfig: null,
         ignoreSilentHardwareSwitch: null
       };
-      let id1;
+      let id2;
       if (channel != null) {
-        id1 = channel.id;
+        id2 = channel.id;
       }
-      obj6.channelId = id1;
-      let guild_id;
+      obj8.channelId = id2;
+      let guild_id3;
       if (channel != null) {
-        guild_id = channel.guild_id;
+        guild_id3 = channel.guild_id;
       }
-      obj6.guildId = guild_id;
-      obj6.activityUrl = currentEmbeddedActivity.url;
+      obj8.guildId = guild_id3;
+      obj8.activityUrl = currentEmbeddedActivity.url;
       let compositeInstanceId;
       if (currentEmbeddedActivity != null) {
         compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
       }
-      obj6.activitySessionId = compositeInstanceId;
-      obj6.queryParams = tmp10;
-      obj6.onLoadError = callback;
-      obj6.allowPopups = tmp5(tmp3[24]).allowPopups(tmp4);
-      obj6.isPipOrGridMode = layoutMode === constants.PIP || layoutMode === constants.GRID;
-      if (tmp19) {
+      obj8.activitySessionId = compositeInstanceId;
+      obj8.queryParams = obj3;
+      obj8.onLoadError = callback;
+      obj8.allowPopups = tmp5(tmp3[22]).allowPopups(tmp4);
+      obj8.isPipOrGridMode = layoutMode === constants.PIP || layoutMode === constants.GRID;
+      if (tmp27) {
         landscapeSafeAreasConfig = channel.landscapeSafeAreasConfig;
       }
-      obj6.safeAreasConfig = landscapeSafeAreasConfig;
-      obj6.ignoreSilentHardwareSwitch = !set.has(id);
-      items4[1] = closure_14(closure_22, obj6);
-      obj4.children = items4;
-      return closure_15(closure_21, obj4);
+      obj8.safeAreasConfig = landscapeSafeAreasConfig;
+      obj8.ignoreSilentHardwareSwitch = !set.has(id1);
+      items4[1] = closure_13(EmbeddedActivityWebView, obj8);
+      obj7.children = items4;
+      return closure_14(BaseActivityView, obj7);
     }
   }
   return null;
-}));
+});
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/EmbeddedActivityView.tsx");
 
 export default memoResult;
-export const useBaseActivityView = tmp5;
-export const ActivityViewLoadingIndicator = tmp6;
-export const BaseActivityView = tmp7;
+export { useBaseActivityView };
+export { ActivityViewLoadingIndicator };
+export { BaseActivityView };
 export const EmbeddedActivityView = memoResult;

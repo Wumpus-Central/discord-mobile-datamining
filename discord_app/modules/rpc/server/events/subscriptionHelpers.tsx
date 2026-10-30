@@ -1,18 +1,18 @@
-// === Module 16258: subscriptionHelpers ===
+// === Module 16298: subscriptionHelpers ===
 
-// Module 16258 (subscriptionHelpers)
-import QuestTaskUtils from "QuestTaskUtils" /* 7856 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8731 */;
-import getSocketFrameDefault from "getSocketFrame" /* 9293 */;
-import useThermalState from "useThermalState" /* 16212 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16214 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16209 */;
-import QuestStore from "QuestStore" /* 7834 */;
+// Module 16298 (subscriptionHelpers)
+import QuestTaskUtils from "QuestTaskUtils" /* 7861 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8765 */;
+import getSocketFrameDefault from "getSocketFrame" /* 9306 */;
+import useThermalState from "useThermalState" /* 16252 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16254 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16249 */;
+import QuestStore from "QuestStore" /* 7839 */;
 
 require = fn;
-const RPCEvents = fn(1084).RPCEvents;
-const Constants = fn(2024);
+const RPCEvents = fn(1072).RPCEvents;
+const Constants = fn(2019);
 ({ ActivityLayoutMode: metroRequire, ActivityScreenOrientation: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");

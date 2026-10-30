@@ -1,6 +1,6 @@
-// === Module 8740: ProfileFrameLayerAnchor ===
+// === Module 8774: ProfileFrameLayerAnchor ===
 
-// Module 8740 (ProfileFrameLayerAnchor)
+// Module 8774 (ProfileFrameLayerAnchor)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerAnchor.tsx");

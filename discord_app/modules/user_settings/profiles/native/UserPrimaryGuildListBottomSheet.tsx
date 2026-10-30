@@ -1,26 +1,26 @@
-// === Module 16409: UserPrimaryGuildListBottomSheet ===
+// === Module 16461: UserPrimaryGuildListBottomSheet ===
 
-// Module 16409 (UserPrimaryGuildListBottomSheet)
+// Module 16461 (UserPrimaryGuildListBottomSheet)
 import _modDef12 from "module_12" /* 12 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5014 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import GuildIconDefault from "GuildIcon" /* 6943 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7338 */;
-import Form from "Form" /* 8988 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14658 */;
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5018 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import GuildIconDefault from "GuildIcon" /* 6951 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
+import Form from "Form" /* 8169 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8328).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8385).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = { titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" }, guildIcon: { marginLeft: 4 }, tag: { padding: 2 }, tagStyles: null, divider: null, itemTrailingStyle: null, searchContainer: null, searchRow: null, searchField: null, emptyState: null, noResults: null };
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1376);
 let num = 18;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -34,192 +34,7 @@ obj.searchField = { flex: 1 };
 obj.emptyState = { alignItems: "center" };
 obj.noResults = { padding: 16, textAlign: "center" };
 let closure_10 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Item(arg0) {
-  const cResult = item(576).c(34);
-  ({ start, end, item } = arg0);
-  ({ selected, onSelectGuild } = arg0);
-  const tmp4 = closure_10();
-  let profile;
-  if (item != null) {
-    profile = item.profile;
-  }
-  let badge;
-  if (profile != null) {
-    badge = profile.badge;
-  }
-  if (cResult[0] === badge) {
-    if (cResult[1] === item) {
-      let tmp7 = cResult[2];
-    }
-    if (cResult[3] !== selected) {
-      const obj2 = { selected };
-      cResult[3] = selected;
-      cResult[4] = obj2;
-      let tmp12 = obj2;
-    } else {
-      tmp12 = cResult[4];
-    }
-    const radioA11yNative = item(5073).useRadioA11yNative(tmp12);
-    ({ accessibilityRole, accessibilityState } = radioA11yNative);
-    let id;
-    if (item != null) {
-      id = item.id;
-    }
-    if (cResult[5] === id) {
-      if (cResult[6] === onSelectGuild) {
-        let tmp15 = cResult[7];
-      }
-      if (cResult[8] !== item) {
-        if (null != item) {
-          let name = item.name;
-        } else {
-          const intl = item(1125).intl;
-          name = intl.string(item(1125).t.PoWNfe);
-        }
-        cResult[8] = item;
-        cResult[9] = name;
-      } else {
-        if (cResult[10] === item) {
-          if (cResult[11] === tmp4.guildIcon) {
-            let tmp19 = cResult[12];
-          }
-          if (cResult[13] === tmp7) {
-            if (cResult[14] === profile) {
-              if (cResult[15] === item) {
-                if (cResult[16] === tmp4.tag) {
-                  if (cResult[17] === tmp4.tagStyles) {
-                    let tmp24 = cResult[18];
-                  }
-                  if (cResult[19] !== selected) {
-                    const obj3 = { selected };
-                    const tmp30 = closure_7(item(7048).FormRadio, obj3);
-                    cResult[19] = selected;
-                    cResult[20] = tmp30;
-                    let tmp28 = tmp30;
-                  } else {
-                    tmp28 = cResult[20];
-                  }
-                  if (cResult[21] === tmp4.itemTrailingStyle) {
-                    if (cResult[22] === tmp24) {
-                      if (cResult[23] === tmp28) {
-                        let tmp31 = cResult[24];
-                      }
-                      if (cResult[25] === accessibilityRole) {
-                        if (cResult[26] === accessibilityState) {
-                          if (cResult[27] === end) {
-                            if (cResult[28] === start) {
-                              if (cResult[29] === tmp15) {
-                                if (cResult[30] === tmp17) {
-                                  if (cResult[31] === tmp19) {
-                                    if (cResult[32] === tmp31) {
-                                      let tmp35 = cResult[33];
-                                    }
-                                    return tmp35;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      const obj4 = { start, end, onPress: tmp15, label: tmp17, icon: tmp19, accessibilityRole, accessibilityState, trailing: tmp31 };
-                      const tmp37 = closure_7(item(6963).TableRow, obj4);
-                      cResult[25] = accessibilityRole;
-                      cResult[26] = accessibilityState;
-                      cResult[27] = end;
-                      cResult[28] = start;
-                      cResult[29] = tmp15;
-                      cResult[30] = tmp17;
-                      cResult[31] = tmp19;
-                      cResult[32] = tmp31;
-                      cResult[33] = tmp37;
-                      tmp35 = tmp37;
-                    }
-                  }
-                  const obj5 = { style: tmp4.itemTrailingStyle, children: null };
-                  const items = [tmp24, tmp28];
-                  obj5.children = items;
-                  const tmp34 = closure_8(View, obj5);
-                  cResult[21] = tmp4.itemTrailingStyle;
-                  cResult[22] = tmp24;
-                  cResult[23] = tmp28;
-                  cResult[24] = tmp34;
-                  tmp31 = tmp34;
-                }
-              }
-            }
-          }
-          let tmp26Result = null != item && null != profile;
-          if (tmp26Result) {
-            const obj7 = { containerStyles: null, textStyle: null, guildTag: null, guildBadge: null, badgeSize: null, textVariant: "heading-md/semibold", textColor: "text-strong" };
-            ({ tag: obj6.containerStyles, tagStyles: obj6.textStyle } = tmp4);
-            const tag = profile.tag;
-            obj7.guildTag = tag;
-            obj7.guildBadge = tmp7;
-            obj7.badgeSize = GuildTagBadgeSize.SIZE_16;
-            tmp26Result = closure_7(item(9262).BaseGuildTagChiplet, obj7);
-          }
-          cResult[13] = tmp7;
-          cResult[14] = profile;
-          cResult[15] = item;
-          cResult[16] = tmp4.tag;
-          cResult[17] = tmp4.tagStyles;
-          cResult[18] = tmp26Result;
-          tmp24 = tmp26Result;
-        }
-        let tmp20 = null;
-        if (null != item) {
-          const obj8 = { style: tmp4.guildIcon, guild: item, size: item(6943).GuildIconSizes.SMALL_32 };
-          tmp20 = closure_7(onSelectGuild(6943), obj8);
-          const tmp23 = onSelectGuild(6943);
-        }
-        cResult[10] = item;
-        cResult[11] = tmp4.guildIcon;
-        cResult[12] = tmp20;
-        tmp19 = tmp20;
-      }
-    }
-    let id1;
-    if (item != null) {
-      id1 = item.id;
-    }
-    const fn = function _() {
-      let id;
-      if (item != null) {
-        id = item.id;
-      }
-      if (id == null) {
-        id = null;
-      }
-      onSelectGuild(id);
-      ActionSheetActionCreatorsDefault.hideActionSheet();
-    };
-    cResult[5] = id1;
-    cResult[6] = onSelectGuild;
-    cResult[7] = fn;
-    tmp15 = fn;
-    const tmpResult = item(5073);
-  }
-  let guildTagBadgeUrl = null != item;
-  if (guildTagBadgeUrl) {
-    let badge1;
-    if (profile != null) {
-      badge1 = profile.badge;
-    }
-    guildTagBadgeUrl = item(8694).getGuildTagBadgeUrl(item.id, badge1, GuildTagBadgeSize.SIZE_24);
-    const tmpResult2 = item(8694);
-  }
-  let badge2;
-  if (profile != null) {
-    badge2 = profile.badge;
-  }
-  cResult[0] = badge2;
-  cResult[1] = item;
-  cResult[2] = guildTagBadgeUrl;
-  tmp7 = guildTagBadgeUrl;
-  let obj = item(576);
-}) : (function Item(item) {
+let closure_11 = noop.memo(function Item(item) {
   item = item.item;
   ({ selected, onSelectGuild: importDefault } = item);
   ({ start, end } = item);
@@ -233,10 +48,10 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     if (profile != null) {
       badge = profile.badge;
     }
-    guildTagBadgeUrl = item(8694).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-    let obj = item(8694);
+    guildTagBadgeUrl = item(8728).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+    let obj = item(8728);
   }
-  const radioA11yNative = item(5073).useRadioA11yNative({ selected });
+  const radioA11yNative = item(5077).useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj3 = {
     start,
@@ -261,13 +76,13 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   if (null != item) {
     let name = item.name;
   } else {
-    const intl = tmp7(1125).intl;
-    name = intl.string(tmp7(1125).t.PoWNfe);
+    const intl = tmp7(1114).intl;
+    name = intl.string(tmp7(1114).t.PoWNfe);
   }
   obj3.label = name;
   let tmp10Result = null;
   if (null != item) {
-    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(6943).GuildIconSizes.SMALL_32 };
+    const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(6951).GuildIconSizes.SMALL_32 };
     tmp10Result = closure_7(GuildIconDefault, obj4);
   }
   obj3.icon = tmp10Result;
@@ -285,357 +100,17 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_7(tmp7(9262).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_7(tmp7(9276).BaseGuildTagChiplet, obj10);
   }
-  const items = [tmp10Result2, closure_7(item(7048).FormRadio, { selected })];
+  const items = [tmp10Result2, closure_7(item(7056).FormRadio, { selected })];
   obj5.children = items;
   obj3.trailing = closure_8(View, obj5);
-  return closure_7(item(6963).TableRow, obj3);
-}));
-ReactCompilerGating = fn(558);
-let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+  return closure_7(item(6969).TableRow, obj3);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrimaryGuildListBottomSheet(onSelectGuild) {
-  const cResult = selectedGuildId(576).c(61);
-  ({ availableGuilds, selectedGuildId } = onSelectGuild);
-  onSelectGuild = onSelectGuild.onSelectGuild;
-  const tmp4 = closure_10();
-  dependencyMap = tmp4;
-  let num = 2;
-  const tmp5 = str(ref.useState(""), 2);
-  ref = ref.useRef(null);
-  let obj = selectedGuildId(576);
-  const guildTagCreationUpsell = selectedGuildId(14655).useGuildTagCreationUpsell("UserPrimaryGuildListBottomSheet");
-  const creatableGuilds = guildTagCreationUpsell.creatableGuilds;
-  const isUpsellVisible = guildTagCreationUpsell.isUpsellVisible;
-  if (cResult[0] !== availableGuilds) {
-    const _Symbol = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn = function b(name) {
-        return name.name.toLowerCase();
-      };
-      cResult[num] = fn;
-      let tmp10 = fn;
-    } else {
-      tmp10 = cResult[2];
-    }
-    const sortByResult = onSelectGuild(12).sortBy(availableGuilds, tmp10);
-    cResult[0] = availableGuilds;
-    num = 1;
-    cResult[1] = sortByResult;
-    const obj4 = onSelectGuild(12);
-  } else {
-    if (cResult[3] === str) {
-      if (cResult[4] === tmp8) {
-        closure_7 = tmp14;
-        const _Symbol2 = Symbol;
-        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class U {
-            constructor() {
-              current = closure_4.current;
-              if (current != null) {
-                scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-              }
-              return;
-            }
-          }
-          cResult[8] = U;
-        } else {
-          class U {
-            constructor() {
-              current = closure_4.current;
-              if (current != null) {
-                scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-              }
-              return;
-            }
-          }
-        }
-        if (cResult[9] !== str) {
-          class U {
-            constructor() {
-              current = closure_4.current;
-              if (current != null) {
-                scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-              }
-              return;
-            }
-          }
-          tmp21[0] = str;
-          cResult[9] = str;
-          cResult[10] = tmp21;
-        } else {
-          class U {
-            constructor() {
-              current = closure_4.current;
-              if (current != null) {
-                scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-              }
-              return;
-            }
-          }
-        }
-        const effect = obj2.useEffect(U, tmp21);
-        if (cResult[11] === cResult[5]) {
-          class U {
-            constructor() {
-              current = closure_4.current;
-              if (current != null) {
-                scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-              }
-              return;
-            }
-          }
-          const effect1 = obj2.useEffect(V, tmp24);
-          if (cResult[15] !== creatableGuilds) {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-            cResult[15] = creatableGuilds;
-            cResult[16] = tmp27;
-          } else {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-          }
-          if (0 === availableGuilds.length) {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-          }
-          const _Symbol3 = Symbol;
-          if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-            const obj5 = { placeholder: null, accessibilityLabel: null, onChange: null };
-            const SearchBar = selectedGuildId(7205).SearchBar;
-            let intl = selectedGuildId(1125).intl;
-            obj5.placeholder = intl.string(selectedGuildId(1125).t.uohsSv);
-            const intl2 = selectedGuildId(1125).intl;
-            obj5.accessibilityLabel = intl2.string(selectedGuildId(1125).t.uohsSv);
-            obj5.onChange = tmp5[1];
-            class V {
-              constructor() {
-                if ("" !== closure_3.trim()) {
-                  tmp = closure_0;
-                  tmp2 = closure_2;
-                  AccessibilityAnnouncer = closure_0(closure_2[20]).AccessibilityAnnouncer;
-                  intl = closure_0(closure_2[13]).intl;
-                  obj = { count: null };
-                  tmp3 = closure_7;
-                  obj.count = closure_7.length;
-                  str = "polite";
-                  announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[13]).t.ZGVL3g, obj), "polite");
-                }
-                return;
-              }
-            }
-            cResult[24] = tmp29;
-          } else {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-          }
-          const _Symbol4 = Symbol;
-          class V {
-            constructor() {
-              if ("" !== closure_3.trim()) {
-                tmp = closure_0;
-                tmp2 = closure_2;
-                AccessibilityAnnouncer = closure_0(closure_2[20]).AccessibilityAnnouncer;
-                intl = closure_0(closure_2[13]).intl;
-                obj = { count: null };
-                tmp3 = closure_7;
-                obj.count = closure_7.length;
-                str = "polite";
-                announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[13]).t.ZGVL3g, obj), "polite");
-              }
-              return;
-            }
-          }
-          if (cResult[26] !== tmp4.titleContainer) {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-            const obj6 = { style: tmp4.titleContainer, children: tmp31 };
-            cResult[26] = tmp4.titleContainer;
-            cResult[27] = closure_7(creatableGuilds, obj6);
-            class V {
-              constructor() {
-                if ("" !== closure_3.trim()) {
-                  tmp = closure_0;
-                  tmp2 = closure_2;
-                  AccessibilityAnnouncer = closure_0(closure_2[20]).AccessibilityAnnouncer;
-                  intl = closure_0(closure_2[13]).intl;
-                  obj = { count: null };
-                  tmp3 = closure_7;
-                  obj.count = closure_7.length;
-                  str = "polite";
-                  announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[13]).t.ZGVL3g, obj), "polite");
-                }
-                return;
-              }
-            }
-            const tmp33 = closure_7(creatableGuilds, obj6);
-          } else {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-          }
-          if (cResult[28] === tmp27) {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-          }
-          let tmp35 = tmp29;
-          if (isUpsellVisible) {
-            class U {
-              constructor() {
-                current = closure_4.current;
-                if (current != null) {
-                  scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-                }
-                return;
-              }
-            }
-            const obj7 = { style: tmp4.searchRow, children: null };
-            const obj8 = { style: tmp4.searchField, children: tmp29 };
-            const items = [closure_7(creatableGuilds, obj8), ];
-            class V {
-              constructor() {
-                if ("" !== closure_3.trim()) {
-                  tmp = closure_0;
-                  tmp2 = closure_2;
-                  AccessibilityAnnouncer = closure_0(closure_2[20]).AccessibilityAnnouncer;
-                  intl = closure_0(closure_2[13]).intl;
-                  obj = { count: null };
-                  tmp3 = closure_7;
-                  obj.count = closure_7.length;
-                  str = "polite";
-                  announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[13]).t.ZGVL3g, obj), "polite");
-                }
-                return;
-              }
-            }
-            const intl3 = selectedGuildId(1125).intl;
-            tmp38[0] = intl3.string(selectedGuildId(1125).t.CumH4u);
-            const intl4 = selectedGuildId(1125).intl;
-            tmp38[1] = intl4.string(selectedGuildId(1125).t.xO5QzM);
-            tmp38[4] = tmp27;
-            items[1] = closure_7(selectedGuildId(5281).Button, tmp38);
-            obj7.children = items;
-            tmp35 = closure_8(creatableGuilds, obj7);
-          }
-          cResult[28] = tmp27;
-          cResult[29] = isUpsellVisible;
-          cResult[30] = tmp4.searchField;
-          cResult[31] = tmp4.searchRow;
-          cResult[32] = tmp35;
-        }
-        class V {
-          constructor() {
-            if ("" !== closure_3.trim()) {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              AccessibilityAnnouncer = closure_0(closure_2[20]).AccessibilityAnnouncer;
-              intl = closure_0(closure_2[13]).intl;
-              obj = { count: null };
-              tmp3 = closure_7;
-              obj.count = closure_7.length;
-              str = "polite";
-              announceResult = AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_0(closure_2[13]).t.ZGVL3g, obj), "polite");
-            }
-            return;
-          }
-        }
-        const items1 = [cResult[5], str];
-        cResult[11] = cResult[5];
-        cResult[12] = str;
-        cResult[13] = V;
-        cResult[14] = items1;
-        tmp24 = items1;
-      }
-    }
-    let formatted = str.trim().toLowerCase();
-    if ("" !== formatted) {
-      class U {
-        constructor() {
-          current = closure_4.current;
-          if (current != null) {
-            scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-          }
-          return;
-        }
-      }
-    } else {
-      class U {
-        constructor() {
-          current = closure_4.current;
-          if (current != null) {
-            scrollToOffsetResult = current.scrollToOffset({ offset: 0, animated: false });
-          }
-          return;
-        }
-      }
-    }
-    cResult[3] = str;
-    cResult[4] = cResult[1];
-    cResult[5] = tmp16;
-    const str3 = str.trim();
-  }
-  const obj3 = selectedGuildId(14655);
-}) : (function UserPrimaryGuildListBottomSheet(availableGuilds) {
+export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   availableGuilds = availableGuilds.availableGuilds;
   const selectedGuildId = availableGuilds.selectedGuildId;
   const onSelectGuild = availableGuilds.onSelectGuild;
@@ -649,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrim
   _slicedToArray = tmp;
   [first, obj6.onChange] = first.useState("");
   const ref = first.useRef(null);
-  const guildTagCreationUpsell = availableGuilds(onSelectGuild[18]).useGuildTagCreationUpsell("UserPrimaryGuildListBottomSheet");
+  const guildTagCreationUpsell = availableGuilds(onSelectGuild[16]).useGuildTagCreationUpsell("UserPrimaryGuildListBottomSheet");
   ({ creatableGuilds: c6, isUpsellVisible } = guildTagCreationUpsell);
   let items = [availableGuilds];
   const memo = first.useMemo(() => _modDef12.sortBy(availableGuilds, (name) => name.name.toLowerCase()), items);
@@ -704,34 +179,34 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrim
       if (isUpsellVisible) {
         const obj2 = { children: null };
         const obj3 = { title: null, subtitle: null };
-        const intl8 = tmp5(tmp6[13]).intl;
-        obj3.title = intl8.string(tmp5(tmp6[13]).t.Fo0g9x);
-        const intl9 = tmp5(tmp6[13]).intl;
-        obj3.subtitle = intl9.string(tmp5(tmp6[13]).t["NV+MBV"]);
-        const items4 = [memo(tmp5(tmp6[23]).BottomSheetTitleHeader, obj3), ];
+        const intl8 = tmp5(tmp6[12]).intl;
+        obj3.title = intl8.string(tmp5(tmp6[12]).t.Fo0g9x);
+        const intl9 = tmp5(tmp6[12]).intl;
+        obj3.subtitle = intl9.string(tmp5(tmp6[12]).t["NV+MBV"]);
+        const items4 = [memo(tmp5(tmp6[22]).BottomSheetTitleHeader, obj3), ];
         const obj4 = { style: tmp.emptyState, children: null };
         const obj5 = { text: null, onPress: null };
-        const intl10 = tmp5(tmp6[13]).intl;
-        obj5.text = intl10.string(tmp5(tmp6[13]).t["65zBhE"]);
+        const intl10 = tmp5(tmp6[12]).intl;
+        obj5.text = intl10.string(tmp5(tmp6[12]).t["65zBhE"]);
         obj5.onPress = handleCreateGuildTag;
-        obj4.children = memo(tmp5(tmp6[24]).Button, obj5);
+        obj4.children = memo(tmp5(tmp6[23]).Button, obj5);
         items4[1] = memo(ref, obj4);
         obj2.children = items4;
-        return memo1(tmp5(tmp6[25]).ActionSheet, obj2);
+        return memo1(tmp5(tmp6[21]).ActionSheet, obj2);
       }
     }
   }
   const obj6 = { placeholder: null, accessibilityLabel: null, onChange: null };
-  let intl = tmp5(tmp6[13]).intl;
-  obj6.placeholder = intl.string(availableGuilds(onSelectGuild[13]).t.uohsSv);
-  const intl2 = tmp5(tmp6[13]).intl;
-  obj6.accessibilityLabel = intl2.string(availableGuilds(onSelectGuild[13]).t.uohsSv);
-  const tmp13 = memo(availableGuilds(onSelectGuild[26]).SearchBar, obj6);
+  let intl = tmp5(tmp6[12]).intl;
+  obj6.placeholder = intl.string(availableGuilds(onSelectGuild[12]).t.uohsSv);
+  const intl2 = tmp5(tmp6[12]).intl;
+  obj6.accessibilityLabel = intl2.string(availableGuilds(onSelectGuild[12]).t.uohsSv);
+  const tmp13 = memo(availableGuilds(onSelectGuild[24]).SearchBar, obj6);
   const obj7 = { style: tmp.titleContainer, children: null };
   const obj8 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
-  const intl3 = tmp5(tmp6[13]).intl;
-  obj8.children = intl3.string(availableGuilds(onSelectGuild[13]).t.Fo0g9x);
-  obj7.children = memo(availableGuilds(onSelectGuild[27]).Text, obj8);
+  const intl3 = tmp5(tmp6[12]).intl;
+  obj8.children = intl3.string(availableGuilds(onSelectGuild[12]).t.Fo0g9x);
+  obj7.children = memo(availableGuilds(onSelectGuild[26]).Text, obj8);
   const items5 = [memo(ref, obj7), ];
   const obj9 = { style: tmp.searchContainer, children: null };
   let tmp14Result = tmp13;
@@ -740,12 +215,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrim
     const obj11 = { style: tmp.searchField, children: tmp13 };
     const items6 = [tmp12(tmp16, obj11), ];
     const obj12 = { text: null, accessibilityLabel: null, variant: "secondary", size: "lg", onPress: null };
-    const intl4 = tmp5(tmp6[13]).intl;
-    obj12.text = intl4.string(tmp5(tmp6[13]).t.CumH4u);
-    const intl5 = tmp5(tmp6[13]).intl;
-    obj12.accessibilityLabel = intl5.string(tmp5(tmp6[13]).t.xO5QzM);
+    const intl4 = tmp5(tmp6[12]).intl;
+    obj12.text = intl4.string(tmp5(tmp6[12]).t.CumH4u);
+    const intl5 = tmp5(tmp6[12]).intl;
+    obj12.accessibilityLabel = intl5.string(tmp5(tmp6[12]).t.xO5QzM);
     obj12.onPress = handleCreateGuildTag;
-    items6[1] = tmp12(tmp5(tmp6[24]).Button, obj12);
+    items6[1] = tmp12(tmp5(tmp6[23]).Button, obj12);
     obj10.children = items6;
     tmp14Result = tmp14(tmp16, obj10);
   }
@@ -756,12 +231,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrim
   obj14.children = items5;
   obj13.header = memo1(closure_9, obj14);
   const obj15 = { ref, maintainVisibleContentPosition: { disabled: true }, accessibilityRole: "radiogroup", accessibilityLabel: null, keyboardShouldPersistTaps: "handled", ListEmptyComponent: null, ItemSeparatorComponent: null, data: null, contentContainerStyle: null, keyExtractor: null, renderItem: null };
-  const intl6 = tmp5(tmp6[13]).intl;
-  obj15.accessibilityLabel = intl6.string(availableGuilds(onSelectGuild[13]).t.Fo0g9x);
+  const intl6 = tmp5(tmp6[12]).intl;
+  obj15.accessibilityLabel = intl6.string(availableGuilds(onSelectGuild[12]).t.Fo0g9x);
   const obj16 = { variant: "text-md/normal", color: "text-muted", style: tmp.noResults, children: null };
-  const intl7 = tmp5(tmp6[13]).intl;
-  obj16.children = intl7.formatToPlainString(availableGuilds(onSelectGuild[13]).t.ZGVL3g, { count: 0 });
-  obj15.ListEmptyComponent = memo(availableGuilds(onSelectGuild[27]).Text, obj16);
+  const intl7 = tmp5(tmp6[12]).intl;
+  obj16.children = intl7.formatToPlainString(availableGuilds(onSelectGuild[12]).t.ZGVL3g, { count: 0 });
+  obj15.ListEmptyComponent = memo(availableGuilds(onSelectGuild[26]).Text, obj16);
   obj15.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return React5(Form.FormDivider, { iconPush: true, style: divider.divider });
   };
@@ -792,6 +267,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserPrim
     obj.onSelectGuild = onSelectGuild;
     return React5(closure_11, obj);
   };
-  obj13.children = memo(availableGuilds(onSelectGuild[29]).BottomSheetFlashList, obj15);
-  return memo(availableGuilds(onSelectGuild[30]).BottomSheet, obj13);
-});
+  obj13.children = memo(availableGuilds(onSelectGuild[27]).BottomSheetFlashList, obj15);
+  return memo(availableGuilds(onSelectGuild[25]).BottomSheet, obj13);
+};

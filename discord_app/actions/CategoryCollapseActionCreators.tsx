@@ -1,16 +1,16 @@
-// === Module 11346: CategoryCollapseActionCreators ===
+// === Module 11549: CategoryCollapseActionCreators ===
 
-// Module 11346 (CategoryCollapseActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 11549 (CategoryCollapseActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 
-export function categoryCollapse(id) {
-  DispatcherDefault.dispatch({ type: "CATEGORY_COLLAPSE", id });
+export function categoryCollapse(channel) {
+  DispatcherDefault.dispatch({ type: "CATEGORY_COLLAPSE", id: channel });
 }
-export function categoryExpand(id) {
-  DispatcherDefault.dispatch({ type: "CATEGORY_EXPAND", id });
+export function categoryExpand(channel) {
+  DispatcherDefault.dispatch({ type: "CATEGORY_EXPAND", id: channel });
 }
 export function categoryCollapseAll(guildId) {
   DispatcherDefault.dispatch({ type: "CATEGORY_COLLAPSE_ALL", guildId });

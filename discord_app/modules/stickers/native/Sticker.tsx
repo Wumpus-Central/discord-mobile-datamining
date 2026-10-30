@@ -1,214 +1,26 @@
-// === Module 10237: Sticker ===
+// === Module 10262: Sticker ===
 
-// Module 10237 (Sticker)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import shared from "shared" /* 5012 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import StickersUtils from "StickersUtils" /* 6547 */;
-import StickersTypes from "StickersTypes" /* 6548 */;
-import _modDef7288 from "module_7288" /* 7288 */;
-import _modDef7289 from "module_7289" /* 7289 */;
-import NativeLottieView from "NativeLottieView" /* 8414 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 10238 */;
+// Module 10262 (Sticker)
+import util from "util" /* 1114 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import StickersUtils from "StickersUtils" /* 6554 */;
+import StickersTypes from "StickersTypes" /* 6555 */;
+import _modDef7295 from "module_7295" /* 7295 */;
+import _modDef7296 from "module_7296" /* 7296 */;
+import NativeLottieView from "NativeLottieView" /* 8448 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 10263 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1204 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 
 const NativeLottieViewDefault = NativeLottieView;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-function getStickerAssetUrl(format_type, size, arg2) {
-  if (format_type.format_type === StickersTypes.StickerFormat.LOTTIE) {
-    let str = StickersUtils.getStickerAssetUrl(format_type);
-    const tmpResult = StickersUtils;
-  } else if (format_type.format_type === StickersTypes.StickerFormat.APNG) {
-    const obj = { isPreview: !arg2, size };
-    str = StickersUtils.getStickerAssetUrl(format_type, obj);
-    const tmpResult3 = StickersUtils;
-  } else {
-    const obj2 = { isPreview: !arg2, size: PixelRatio.getPixelSizeForLayoutSize(size) };
-    str = StickersUtils.getStickerAssetUrl(format_type, obj2);
-    const tmpResult4 = StickersUtils;
-  }
-  if (str == null) {
-    str = "";
-  }
-  return str;
-}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/Sticker.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(arg0) {
-  const cResult = c.c(33);
-  ({ sticker, size, animated, opaque } = arg0);
-  if (undefined === opaque) {
-    let num = 1;
-  } else {
-    num = 0.3;
-  }
-  if (cResult[0] === (undefined === animated || animated)) {
-    if (cResult[1] === size) {
-      if (cResult[2] === sticker) {
-        let tmp5 = cResult[3];
-      }
-      if (cResult[4] !== sticker.name) {
-        const intl = util.intl;
-        const obj2 = { stickerName: sticker.name };
-        const formatToPlainStringResult = intl.formatToPlainString(util.t.rk6pOw, obj2);
-        cResult[4] = sticker.name;
-        cResult[5] = formatToPlainStringResult;
-        let tmp7 = formatToPlainStringResult;
-      } else {
-        tmp7 = cResult[5];
-      }
-      if (sticker.format_type === StickersTypes.StickerFormat.LOTTIE) {
-        let str4 = sticker.id;
-        if (str4 == null) {
-          str4 = "";
-        }
-        const NativeLottieRenderMode = NativeLottieView.NativeLottieRenderMode;
-        const tmp31 = tmp4 ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-        if (cResult[6] === tmp7) {
-          if (cResult[7] === num) {
-            if (cResult[8] === size) {
-              if (cResult[9] === tmp5) {
-                if (cResult[10] === str4) {
-                  if (cResult[11] === tmp31) {
-                    let tmp32 = cResult[12];
-                  }
-                  return tmp32;
-                }
-              }
-            }
-          }
-        }
-        const size1 = { url: tmp5, asset: str4, width: size, height: size, opacity: num, renderMode: tmp31, accessibilityLabel: tmp7 };
-        const tmp35 = jsx(NativeLottieViewDefault, { url: tmp5, asset: str4, width: size, height: size, opacity: num, renderMode: tmp31, accessibilityLabel: tmp7 });
-        cResult[6] = tmp7;
-        cResult[7] = num;
-        cResult[8] = size;
-        cResult[9] = tmp5;
-        cResult[10] = str4;
-        cResult[11] = tmp31;
-        cResult[12] = tmp35;
-        tmp32 = tmp35;
-      } else {
-        if (sticker.format_type === StickersTypes.StickerFormat.APNG) {
-          if ("type" in sticker) {
-            StickersUtils;
-          }
-          if (cResult[13] === num) {
-            if (cResult[14] === size) {
-              let tmp9 = cResult[15];
-            }
-            if (cResult[16] !== sticker.format_type) {
-              const stickerExtensionFromFormatType = StickersUtils.getStickerExtensionFromFormatType(sticker.format_type);
-              cResult[16] = sticker.format_type;
-              cResult[17] = stickerExtensionFromFormatType;
-              let tmp10 = stickerExtensionFromFormatType;
-              const tmpResult6 = StickersUtils;
-            } else {
-              tmp10 = cResult[17];
-            }
-            const _HermesInternal = HermesInternal;
-            const combined = "" + sticker.id + "." + tmp10;
-            if (cResult[18] === tmp7) {
-              if (cResult[19] === tmp5) {
-                if (cResult[20] === tmp9) {
-                  if (cResult[21] === combined) {
-                    let tmp14 = cResult[22];
-                  }
-                  return tmp14;
-                }
-              }
-            }
-            const obj3 = { style: tmp9, url: tmp5, name: combined, accessibilityLabel: tmp7 };
-            const obj4 = {};
-            const merged = Object.assign(obj3);
-            const tmp21 = jsx(NativeAPNGViewDefault, {});
-            cResult[18] = tmp7;
-            cResult[19] = tmp5;
-            cResult[20] = tmp9;
-            cResult[21] = combined;
-            cResult[22] = tmp21;
-            tmp14 = tmp21;
-          }
-          const size2 = { height: size, width: size, opacity: num };
-          cResult[13] = num;
-          cResult[14] = size;
-          cResult[15] = size2;
-          tmp9 = size2;
-        }
-        if (cResult[23] === num) {
-          if (cResult[24] === size) {
-            let tmp22 = cResult[25];
-          }
-          if (cResult[26] !== tmp5) {
-            const obj5 = { uri: tmp5 };
-            cResult[26] = tmp5;
-            cResult[27] = obj5;
-            let tmp23 = obj5;
-          } else {
-            tmp23 = cResult[27];
-          }
-          if (cResult[28] === tmp7) {
-            if (cResult[29] === tmp4) {
-              if (cResult[30] === tmp22) {
-                if (cResult[31] === tmp23) {
-                  return cResult[32];
-                }
-              }
-            }
-          }
-          let obj6 = { enableAnimation: tmp4, resizeMode: "contain", style: tmp22, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
-          if (tmpResult7.isThemeDark(ThemeStore.theme)) {
-            let tmp25Result = _modDef7288;
-          } else {
-            tmp25Result = _modDef7289;
-          }
-          obj6.placeholder = tmp25Result;
-          obj6.source = tmp23;
-          obj6.accessibilityLabel = tmp7;
-          obj6 = <tmp26 enableAnimation={tmp4} resizeMode="contain" style={tmp22} placeholder={null} source={null} accessible accessibilityLabel={null} />;
-          cResult[28] = tmp7;
-          cResult[29] = tmp4;
-          cResult[30] = tmp22;
-          cResult[31] = tmp23;
-          cResult[32] = obj6;
-          tmpResult7 = shared;
-        }
-        const size3 = { height: size, width: size, opacity: num };
-        cResult[23] = num;
-        cResult[24] = size;
-        cResult[25] = size3;
-        tmp22 = size3;
-      }
-    }
-  }
-  if (sticker.format_type === StickersTypes.StickerFormat.LOTTIE) {
-    let str = StickersUtils.getStickerAssetUrl(sticker);
-    const tmpResult8 = StickersUtils;
-  } else if (sticker.format_type === StickersTypes.StickerFormat.APNG) {
-    const obj7 = { isPreview: !tmp4, size };
-    str = StickersUtils.getStickerAssetUrl(sticker, obj7);
-    const tmpResult9 = StickersUtils;
-  } else {
-    const obj8 = { isPreview: !tmp4, size: PixelRatio.getPixelSizeForLayoutSize(size) };
-    str = StickersUtils.getStickerAssetUrl(sticker, obj8);
-    const tmpResult10 = StickersUtils;
-  }
-  if (str == null) {
-    str = "";
-  }
-  cResult[0] = undefined === animated || animated;
-  cResult[1] = size;
-  cResult[2] = sticker;
-  cResult[3] = str;
-  tmp5 = str;
-}) : (function Sticker(opaque) {
+export default function Sticker(opaque) {
   ({ sticker, size, animated } = opaque);
   if (animated === undefined) {
     animated = true;
@@ -273,9 +85,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(
     const size3 = { height: size, width: size, opacity: num };
     obj6.style = size3;
     if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef7288;
+      let tmp13Result = _modDef7295;
     } else {
-      tmp13Result = _modDef7289;
+      tmp13Result = _modDef7296;
     }
     obj6.placeholder = tmp13Result;
     const obj7 = { uri: str };
@@ -284,5 +96,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(
     return <tmp14 enableAnimation={animated} resizeMode="contain" style={null} placeholder={null} source={null} accessible accessibilityLabel={null} />;
   }
   const obj3 = { stickerName: sticker.name };
-});
-export { getStickerAssetUrl };
+};
+export function getStickerAssetUrl(format_type, size, arg2) {
+  if (format_type.format_type === StickersTypes.StickerFormat.LOTTIE) {
+    let str = StickersUtils.getStickerAssetUrl(format_type);
+    const tmpResult = StickersUtils;
+  } else if (format_type.format_type === StickersTypes.StickerFormat.APNG) {
+    const obj = { isPreview: !arg2, size };
+    str = StickersUtils.getStickerAssetUrl(format_type, obj);
+    const tmpResult3 = StickersUtils;
+  } else {
+    const obj2 = { isPreview: !arg2, size: PixelRatio.getPixelSizeForLayoutSize(size) };
+    str = StickersUtils.getStickerAssetUrl(format_type, obj2);
+    const tmpResult4 = StickersUtils;
+  }
+  if (str == null) {
+    str = "";
+  }
+  return str;
+}

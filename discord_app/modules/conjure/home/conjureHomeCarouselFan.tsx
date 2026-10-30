@@ -1,6 +1,6 @@
-// === Module 12636: conjureHomeCarouselFan ===
+// === Module 12785: conjureHomeCarouselFan ===
 
-// Module 12636 (conjureHomeCarouselFan)
+// Module 12785 (conjureHomeCarouselFan)
 import size from "module_2" /* 2 */;
 
 function conjureHomeCarouselFan(arg0, arg1) {

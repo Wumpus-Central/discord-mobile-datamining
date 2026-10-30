@@ -1,14 +1,14 @@
-// === Module 7255: GuildOnboardingPromptsStore ===
+// === Module 7262: GuildOnboardingPromptsStore ===
 
-// Module 7255 (GuildOnboardingPromptsStore)
+// Module 7262 (GuildOnboardingPromptsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7257 */;
-import ImpersonateStore from "ImpersonateStore" /* 4910 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7251 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7264 */;
+import ImpersonateStore from "ImpersonateStore" /* 4914 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7258 */;
 
 require = fn;
 function handleUpdate(arg0) {
@@ -81,8 +81,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(7251).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(7256).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(7258).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(7263).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -184,9 +184,9 @@ prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(
   }
   return tmp2;
 };
-prototype["getDefaultChannelIds"] = function getDefaultChannelIds(guildId) {
+prototype["getDefaultChannelIds"] = function getDefaultChannelIds(id) {
   let defaultChannelIds;
-  if (dependencyMap[guildId] != null) {
+  if (dependencyMap[id] != null) {
     defaultChannelIds = tmp.defaultChannelIds;
   }
   if (defaultChannelIds == null) {
@@ -208,8 +208,8 @@ prototype["getEnabled"] = function getEnabled(id) {
   }
   return flag;
 };
-prototype["getOnboardingPrompt"] = function getOnboardingPrompt(promptId) {
-  closure_0 = promptId;
+prototype["getOnboardingPrompt"] = function getOnboardingPrompt(targetId13) {
+  closure_0 = targetId13;
   const values = Object.values(closure_8);
   const mapped = values.map((prompts) => prompts.prompts);
   return mapped.flat().find((id) => id.id === closure_0);

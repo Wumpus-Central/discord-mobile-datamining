@@ -1,10 +1,10 @@
-// === Module 18489: VisibleChannelScreenStore ===
+// === Module 18548: VisibleChannelScreenStore ===
 
-// Module 18489 (VisibleChannelScreenStore)
-import module_570 from "module_570" /* 570 */;
+// Module 18548 (VisibleChannelScreenStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
-const obj = module_570.create(() => ({ channelId: null }));
+const obj = module_560.create(() => ({ channelId: null }));
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/VisibleChannelScreenStore.tsx");
 
 export default obj;

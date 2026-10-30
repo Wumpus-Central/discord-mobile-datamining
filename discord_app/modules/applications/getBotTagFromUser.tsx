@@ -1,7 +1,7 @@
-// === Module 10737: getBotTagFromUser ===
+// === Module 10760: getBotTagFromUser ===
 
-// Module 10737 (getBotTagFromUser)
-import ApplicationConstants from "ApplicationConstants" /* 1372 */;
+// Module 10760 (getBotTagFromUser)
+import ApplicationConstants from "ApplicationConstants" /* 1361 */;
 import size from "module_2" /* 2 */;
 
 const BotTagTypes = ApplicationConstants.BotTagTypes;

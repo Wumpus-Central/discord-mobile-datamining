@@ -1,77 +1,53 @@
-// === Module 17399: SettingsAdvancedScreen ===
+// === Module 17453: SettingsAdvancedScreen ===
 
-// Module 17399 (SettingsAdvancedScreen)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
-import SettingLayoutDefault from "SettingLayout" /* 16482 */;
+// Module 17453 (SettingsAdvancedScreen)
+import util from "util" /* 1114 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
+import SettingLayoutDefault from "SettingLayout" /* 16533 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function getAdvancedSettings() {
-  const obj = { label: null, settings: null, subLabel: null };
-  const intl = util.intl;
-  obj.label = intl.string(util.t["+U02+i"]);
-  const items = [MobileUserSettings.DEVELOPER_MODE];
-  obj.settings = items;
-  const intl2 = util.intl;
-  obj.subLabel = intl2.format(util.t["CY6q/Q"], { apiDocsUrl: MarketingURLs.API_DOCS });
-  const items1 = [obj, , , , ];
-  const obj3 = { settings: null, subLabel: null };
-  const items2 = [MobileUserSettings.LAUNCHPAD];
-  obj3.settings = items2;
-  const intl3 = util.intl;
-  obj3.subLabel = intl3.string(util.t.gI2GEL);
-  items1[1] = obj3;
-  const obj4 = { settings: null };
-  const items3 = [MobileUserSettings.CHANNEL_LIST_LAYOUT];
-  obj4.settings = items3;
-  items1[2] = obj4;
-  const obj5 = { label: null, settings: null };
-  const intl4 = util.intl;
-  obj5.label = intl4.string(util.t["jnXV/V"]);
-  const items4 = [MobileUserSettings.ICYMI_TAB];
-  obj5.settings = items4;
-  items1[3] = obj5;
-  const obj6 = { label: null, settings: null };
-  const intl5 = util.intl;
-  obj6.label = intl5.string(util.t.GwQs0C);
-  const items5 = [MobileUserSettings.NATIVE_MARKDOWN];
-  obj6.settings = items5;
-  items1[4] = obj6;
-  return items1;
-}
-const MobileUserSettings = fn(8387).MobileUserSettings;
-const MarketingURLs = fn(1084).MarketingURLs;
+const MobileUserSettings = fn(8424).MobileUserSettings;
+const MarketingURLs = fn(1072).MarketingURLs;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/advanced/native/SettingsAdvancedScreen.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsAdvancedScreen() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { sections: getAdvancedSettings() };
-    const list = SettingBuilders.createList(obj2);
-    cResult[0] = list;
-    let first = list;
-    const tmpResult = SettingBuilders;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { node: first };
-    const tmp10 = jsx(SettingLayoutDefault, { node: first });
-    cResult[1] = tmp10;
-    let tmp7 = tmp10;
-  } else {
-    tmp7 = cResult[1];
-  }
-  return tmp7;
-}) : (function SettingsAdvancedScreen() {
+export default noop.memo(function SettingsAdvancedScreen() {
   const node = noop.useMemo(() => {
-    const obj = SettingBuilders;
-    return obj.createList({ sections: getAdvancedSettings() });
+    const obj2 = { sections: null };
+    const obj3 = { label: null, settings: null, subLabel: null };
+    const intl = util.intl;
+    obj3.label = intl.string(util.t["+U02+i"]);
+    const items = [constants.DEVELOPER_MODE];
+    obj3.settings = items;
+    const intl2 = util.intl;
+    obj3.subLabel = intl2.format(util.t["CY6q/Q"], { apiDocsUrl: constants2.API_DOCS });
+    const items1 = [obj3, , , , ];
+    const obj5 = { settings: null, subLabel: null };
+    const items2 = [constants.LAUNCHPAD];
+    obj5.settings = items2;
+    const intl3 = util.intl;
+    obj5.subLabel = intl3.string(util.t.gI2GEL);
+    items1[1] = obj5;
+    const obj6 = { settings: null };
+    const items3 = [constants.CHANNEL_LIST_LAYOUT];
+    obj6.settings = items3;
+    items1[2] = obj6;
+    const obj7 = { label: null, settings: null };
+    const intl4 = util.intl;
+    obj7.label = intl4.string(util.t["jnXV/V"]);
+    const items4 = [constants.ICYMI_TAB];
+    obj7.settings = items4;
+    items1[3] = obj7;
+    const obj8 = { label: null, settings: null };
+    const intl5 = util.intl;
+    obj8.label = intl5.string(util.t.GwQs0C);
+    const items5 = [constants.NATIVE_MARKDOWN];
+    obj8.settings = items5;
+    items1[4] = obj8;
+    obj2.sections = items1;
+    return SettingBuilders.createList(obj2);
   }, []);
   return jsx(SettingLayoutDefault, { node });
-}));
+});

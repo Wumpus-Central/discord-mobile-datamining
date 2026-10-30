@@ -1,9 +1,9 @@
-// === Module 2053: PaymentSourceStore ===
+// === Module 2050: PaymentSourceStore ===
 
-// Module 2053 (PaymentSourceStore)
+// Module 2050 (PaymentSourceStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import PaymentSourceRecord from "PaymentSourceRecord" /* 2054 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 2051 */;
 
 function handlePaymentSourceUpdate(paymentSource) {
   paymentSource = paymentSource.paymentSource;

@@ -1,7 +1,7 @@
-// === Module 12567: conjureClarificationLinks ===
+// === Module 12550: conjureClarificationLinks ===
 
-// Module 12567 (conjureClarificationLinks)
-import conjureLinkedApps from "conjureLinkedApps" /* 12303 */;
+// Module 12550 (conjureClarificationLinks)
+import conjureLinkedApps from "conjureLinkedApps" /* 12464 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/clarification/conjureClarificationLinks.tsx");

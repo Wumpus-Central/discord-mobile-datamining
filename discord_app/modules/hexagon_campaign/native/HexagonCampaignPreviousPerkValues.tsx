@@ -1,27 +1,27 @@
-// === Module 16885: HexagonCampaignPreviousPerkValues ===
+// === Module 16939: HexagonCampaignPreviousPerkValues ===
 
-// Module 16885 (HexagonCampaignPreviousPerkValues)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5032 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5239 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16357 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5029 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
-import ThemeStore from "ThemeStore" /* 1204 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
+// Module 16939 (HexagonCampaignPreviousPerkValues)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5036 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5245 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16410 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5033 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1239 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isHexagonCampaignAppIcon = fn(9931).isHexagonCampaignAppIcon;
-const ClientThemesConstants = fn(1252);
+const isHexagonCampaignAppIcon = fn(9958).isHexagonCampaignAppIcon;
+const ClientThemesConstants = fn(1241);
 ({ BACKGROUND_GRADIENT_PRESETS_MAP: closure_7, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } = ClientThemesConstants);
-const SystemThemeState = fn(1207).SystemThemeState;
+const SystemThemeState = fn(1196).SystemThemeState;
 const DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = { theme: "system" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignPreviousPerkValues.tsx");
 
 export { DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME };
-export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(9932).FreemiumAppIconIds.DEFAULT;
+export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(9959).FreemiumAppIconIds.DEFAULT;
 export function getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME) {
   _require = DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
   if (null != DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME.backgroundGradientPresetId) {

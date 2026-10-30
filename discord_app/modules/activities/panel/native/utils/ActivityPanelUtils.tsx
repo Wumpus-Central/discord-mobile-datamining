@@ -1,51 +1,28 @@
-// === Module 18976: ActivityPanelUtils ===
+// === Module 19070: ActivityPanelUtils ===
 
-// Module 18976 (ActivityPanelUtils)
+// Module 19070 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import ChannelTypes from "ChannelTypes" /* 1105 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4926 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5667 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import ChannelTypes from "ChannelTypes" /* 1094 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4930 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5673 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
 
 require = fn;
-const ActivityPanelModes = fn(5646).ActivityPanelModes;
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActivityPanelFullscreen() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [EmbeddedActivitiesStore];
-    const fn = function n() {
-      const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(EmbeddedActivitiesStore.getConnectedActivityLocation());
-      let tmp3 = EmbeddedActivitiesStore.getActivityPanelMode() === constants.PANEL;
-      if (tmp3) {
-        tmp3 = !isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
-      }
-      return tmp3;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
+const ActivityPanelModes = fn(5652).ActivityPanelModes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
+
+export function isActivityPanelFullscreen() {
+  const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(EmbeddedActivitiesStore.getConnectedActivityLocation());
+  let tmp3 = EmbeddedActivitiesStore.getActivityPanelMode() === ActivityPanelModes.PANEL;
+  if (tmp3) {
+    tmp3 = !isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useIsActivityPanelFullscreen() {
-  const items = [EmbeddedActivitiesStore];
-  return initialize.useStateFromStores(items, () => {
-    const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(EmbeddedActivitiesStore.getConnectedActivityLocation());
-    let tmp3 = EmbeddedActivitiesStore.getActivityPanelMode() === constants.PANEL;
-    if (tmp3) {
-      tmp3 = !isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
-    }
-    return tmp3;
-  });
-});
-function isConnectedToActivityInText() {
+  return tmp3;
+}
+export function isConnectedToActivityInText() {
   const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
   if (null == connectedActivityLocation) {
     return false;
@@ -75,61 +52,18 @@ function isConnectedToActivityInText() {
     }
   }
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
-
-export function isActivityPanelFullscreen() {
-  const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(EmbeddedActivitiesStore.getConnectedActivityLocation());
-  let tmp3 = EmbeddedActivitiesStore.getActivityPanelMode() === ActivityPanelModes.PANEL;
-  if (tmp3) {
-    tmp3 = !isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
-  }
-  return tmp3;
+export function useIsActivityPanelFullscreen() {
+  const items = [EmbeddedActivitiesStore];
+  return initialize.useStateFromStores(items, () => {
+    const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(EmbeddedActivitiesStore.getConnectedActivityLocation());
+    let tmp3 = EmbeddedActivitiesStore.getActivityPanelMode() === constants.PANEL;
+    if (tmp3) {
+      tmp3 = !isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
+    }
+    return tmp3;
+  });
 }
-export { isConnectedToActivityInText };
-export const useIsActivityPanelFullscreen = tmp2;
-export const useIsConnectedToActivityInText = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConnectedToActivityInText() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
-    const fn = function s() {
-      connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
-      let flag = false;
-      if (null != connectedActivityLocation) {
-        const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(connectedActivityLocation);
-        flag = false;
-        if (null != embeddedActivityLocationChannelId) {
-          channel = channel.getChannel(embeddedActivityLocationChannelId);
-          let type;
-          if (channel != null) {
-            type = channel.type;
-          }
-          let tmp7 = type === ChannelTypes.ChannelTypes.GUILD_TEXT;
-          if (!tmp7) {
-            let isPrivateResult;
-            if (channel != null) {
-              isPrivateResult = channel.isPrivate();
-            }
-            let tmp9 = true === isPrivateResult;
-            if (tmp9) {
-              tmp9 = voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId;
-            }
-            tmp7 = tmp9;
-          }
-          flag = tmp7;
-        }
-      }
-      return flag;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useIsConnectedToActivityInText() {
+export function useIsConnectedToActivityInText() {
   const items = [EmbeddedActivitiesStore, ChannelStore, SelectedChannelStore];
   return initialize.useStateFromStores(items, () => {
     connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
@@ -160,4 +94,4 @@ export const useIsConnectedToActivityInText = ReactCompilerGating.isReactCompile
     }
     return flag;
   });
-});
+}

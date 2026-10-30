@@ -1,6 +1,6 @@
-// === Module 9221: KeyFingerprint ===
+// === Module 9234: KeyFingerprint ===
 
-// Module 9221 (KeyFingerprint)
+// Module 9234 (KeyFingerprint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _generateKeyFingerprint(arg0) {
@@ -14,7 +14,7 @@ let closure_1 = async function _generateKeyFingerprint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {

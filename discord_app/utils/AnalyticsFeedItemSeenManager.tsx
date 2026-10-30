@@ -1,8 +1,8 @@
-// === Module 9796: AnalyticsFeedItemSeenManager ===
+// === Module 9822: AnalyticsFeedItemSeenManager ===
 
-// Module 9796 (AnalyticsFeedItemSeenManager)
+// Module 9822 (AnalyticsFeedItemSeenManager)
 import _modDef38 from "module_38" /* 38 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -253,7 +253,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -327,7 +327,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
           return obj;
         }
         c2 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp17) {
         c2 = tmp;
         throw tmp17;

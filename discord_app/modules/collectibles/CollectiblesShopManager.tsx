@@ -1,11 +1,11 @@
-// === Module 9541: CollectiblesShopManager ===
+// === Module 9560: CollectiblesShopManager ===
 
-// Module 9541 (CollectiblesShopManager)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8748 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9542 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9540 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8749 */;
-import Dispatcher from "Dispatcher" /* 584 */;
+// Module 9560 (CollectiblesShopManager)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8782 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9561 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9559 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8783 */;
+import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
 function chunk(arr) {

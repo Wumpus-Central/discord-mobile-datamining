@@ -1,6 +1,6 @@
-// === Module 13330: ? ===
+// === Module 13480: ? ===
 
-// Module 13330
+// Module 13480
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_02_trash.webp.js");

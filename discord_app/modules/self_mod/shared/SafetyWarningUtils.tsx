@@ -1,14 +1,14 @@
-// === Module 11013: SafetyWarningUtils ===
+// === Module 11243: SafetyWarningUtils ===
 
-// Module 11013 (SafetyWarningUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 11243 (SafetyWarningUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import UserStore from "UserStore" /* 1384 */;
 
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 
-export function trackViewedEvent(SAFETY_WARNING_MODAL_VIEWED, warningId) {
+export function trackViewedEvent(SAFETY_WARNING_VIEWED, warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType } = warningId);
   const obj2 = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
@@ -20,7 +20,7 @@ export function trackViewedEvent(SAFETY_WARNING_MODAL_VIEWED, warningId) {
   obj2.warning_id = parsed;
   obj2.warning_type = warningType;
   obj2.other_user_id = senderId;
-  AnalyticsUtilsDefault.track(SAFETY_WARNING_MODAL_VIEWED, obj2);
+  AnalyticsUtilsDefault.track(SAFETY_WARNING_VIEWED, obj2);
 }
 export const ViewNameTypes = { SAFETY_WARNING_BANNER: "safety_warning_banner", SAFETY_TAKEOVER_MODAL: "safety_takeover_modal", SAFETY_TOOLS_NUDGE_TOOLTIP: "safety_tools_nudge_tooltip", SAFETY_TOOLS_BUTTON: "safety_tools_button" };
 export function trackNamedViewEvent(warningId) {

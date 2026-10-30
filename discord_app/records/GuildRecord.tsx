@@ -1,12 +1,12 @@
-// === Module 4875: GuildRecord ===
+// === Module 4876: GuildRecord ===
 
-// Module 4875 (GuildRecord)
+// Module 4876 (GuildRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import StringUtils from "StringUtils" /* 2031 */;
-import ServerNSFWLevelExperiment from "ServerNSFWLevelExperiment" /* 4876 */;
-import PlainRecord from "PlainRecord" /* 4872 */;
-import Constants from "Constants" /* 1084 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
+import StringUtils from "StringUtils" /* 2028 */;
+import ServerNSFWLevelExperiment from "ServerNSFWLevelExperiment" /* 4877 */;
+import PlainRecord from "PlainRecord" /* 4873 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 ({ set: c3, TypeTag } = PlainRecord);
@@ -37,8 +37,7 @@ export function getGuildIconURL(id, size) {
 export function getGuildIconSource(arg0, size) {
   closure_0 = arg0;
   importDefault = size;
-  let flag = hasItem;
-  if (hasItem === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
   return AvatarUtilsDefault.getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: closure_0.id, size, icon: closure_0.icon, canAnimate }));

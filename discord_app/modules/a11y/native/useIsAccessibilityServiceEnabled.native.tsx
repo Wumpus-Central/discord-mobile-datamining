@@ -1,16 +1,15 @@
-// === Module 8337: useIsAccessibilityServiceEnabled ===
+// === Module 8394: useIsAccessibilityServiceEnabled ===
 
-// Module 8337 (useIsAccessibilityServiceEnabled)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5304 */;
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5950 */;
-import module_570 from "module_570" /* 570 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 8394 (useIsAccessibilityServiceEnabled)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5269 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5957 */;
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 function ACCESSIBILITY_SERVICE_ENABLED_GETTER(accessibilityServiceEnabled) {
   return accessibilityServiceEnabled.accessibilityServiceEnabled;
 }
-const state = module_570.create((arg0) => {
+const state = module_560.create((arg0) => {
   closure_0 = arg0;
   const result = NativeDeviceAccessibilityModuleDefault.onAccessibilityServiceEnabledChanged((accessibilityServiceEnabled) => {
     closure_0({ accessibilityServiceEnabled });
@@ -28,16 +27,10 @@ export function getIsAccessibilityServiceEnabled() {
   }
   return accessibilityServiceEnabled;
 }
-export const useIsAccessibilityServiceEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAccessibilityServiceEnabled() {
+export function useIsAccessibilityServiceEnabled() {
   let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (!isScreenReaderEnabled) {
     isScreenReaderEnabled = state(ACCESSIBILITY_SERVICE_ENABLED_GETTER);
   }
   return isScreenReaderEnabled;
-}) : (function useIsAccessibilityServiceEnabled() {
-  let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
-  if (!isScreenReaderEnabled) {
-    isScreenReaderEnabled = state(ACCESSIBILITY_SERVICE_ENABLED_GETTER);
-  }
-  return isScreenReaderEnabled;
-});
+}

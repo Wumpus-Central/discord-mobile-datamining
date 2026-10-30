@@ -1,7 +1,7 @@
-// === Module 1377: utils/AnalyticsSchema ===
+// === Module 1372: utils/AnalyticsSchema ===
 
-// Module 1377 (utils/AnalyticsSchema)
-import Constants from "Constants" /* 1084 */;
+// Module 1372 (utils/AnalyticsSchema)
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

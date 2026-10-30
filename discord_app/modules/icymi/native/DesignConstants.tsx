@@ -1,7 +1,7 @@
-// === Module 18451: DesignConstants ===
+// === Module 18510: DesignConstants ===
 
-// Module 18451 (DesignConstants)
-import nativeDefault from "native" /* 587 */;
+// Module 18510 (DesignConstants)
+import nativeDefault from "native" /* 575 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/icymi/native/DesignConstants.tsx");

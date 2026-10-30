@@ -1,8 +1,8 @@
-// === Module 6870: ApplicationFlagUtils ===
+// === Module 6877: ApplicationFlagUtils ===
 
-// Module 6870 (ApplicationFlagUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import ApplicationRecord from "ApplicationRecord" /* 2022 */;
+// Module 6877 (ApplicationFlagUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import ApplicationRecord from "ApplicationRecord" /* 2017 */;
 
 function getApplicationFlags(application) {
   if (null == application) {

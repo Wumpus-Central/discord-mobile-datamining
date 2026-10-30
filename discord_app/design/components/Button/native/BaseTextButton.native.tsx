@@ -1,146 +1,47 @@
-// === Module 5282: BaseTextButton ===
+// === Module 5630: BaseTextButton ===
 
-// Module 5282 (BaseTextButton)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5086 */;
-import HapticUtils from "HapticUtils" /* 5249 */;
-import IconDefault from "Icon" /* 5283 */;
-import spring from "spring" /* 5284 */;
-import springPresets from "springPresets" /* 5285 */;
-import ButtonHooks from "ButtonHooks" /* 5288 */;
+// Module 5630 (BaseTextButton)
+import nativeDefault from "native" /* 575 */;
+import HapticUtils from "HapticUtils" /* 5255 */;
+import IconDefault from "Icon" /* 5631 */;
+import spring from "spring" /* 5632 */;
+import springPresets from "springPresets" /* 5633 */;
+import ButtonHooks from "ButtonHooks" /* 5636 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-
-const ReanimatedRexport = ReanimatedRexport2;
+import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Text: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5005);
-const React6 = createStyles.createStyles((arg0, sm) => {
-  const obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: { flexShrink: 1, flexGrow: 0 }, androidLineHeight: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
-  if (typeof getTextPlatformLineHeight === "function") {
-    if (null != sm) {
-      const obj2 = { sm, md: sm + 0.5, lg: sm + 1.9 };
-      const tmp3 = obj2[arg0];
-    }
-    let tmp7;
-    if (obj3.isAndroid()) {
-      tmp7 = tmp3;
-    }
-    const obj4 = { lineHeight: tmp7 };
-    obj.androidLineHeight = obj4;
-    obj.icon = { flexShrink: 0, flexGrow: 0 };
-    obj.iconLeft = { paddingLeft: 4 };
-    obj.iconRight = { paddingRight: 4 };
-    obj.expressiveButtonContainer = { position: "relative" };
-    return obj;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-});
-createStyles = fn(5005);
-let closure_10 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", position: "relative" }, textCollapsed: { position: "absolute", left: 0 } });
-createStyles = fn(5005);
-let obj = { entityWrapper: { borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" } };
-let closure_11 = createStyles.createStyles(obj);
-const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
-noop.createContext("md");
-const __initData = { code: "function BaseTextButtonNativeTsx1(t1){const{containerWidth}=this.__closure;const{nativeEvent:nativeEvent}=t1;if(containerWidth.get()!==0){return;}const{width:width}=nativeEvent.layout;containerWidth.set(width);}" };
-const __initData2 = { code: "function BaseTextButtonNativeTsx2({nativeEvent:nativeEvent}){const{containerWidth}=this.__closure;if(containerWidth.get()!==0)return;const{width:width}=nativeEvent.layout;containerWidth.set(width);}" };
-let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function CollapsingText(arg0) {
-  const cResult = c.c(10);
-  ({ children, collapseText } = arg0);
-  const tmp3 = closure_10();
-  const sharedValue = ReanimatedRexport2.useSharedValue(0);
-  const fn = function n(nativeEvent) {
-    if (0 === sharedValue.get()) {
-      const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
-    }
-  };
-  fn.__closure = { containerWidth: sharedValue };
-  fn.__workletHash = 14011826491350;
-  fn.__initData = __initData;
-  const items = [sharedValue];
-  const workletCallback = ReanimatedRexport2.useWorkletCallback(fn, items);
-  const tmp6 = closure_19(sharedValue, collapseText);
-  const tmp7 = closure_22(sharedValue, collapseText);
-  if (cResult[0] === tmp6) {
-    if (cResult[1] === tmp3.container) {
-      let tmp8 = cResult[2];
-    }
-    if (cResult[3] === children) {
-      if (cResult[4] === tmp7) {
-        let tmp9 = cResult[5];
-      }
-      if (cResult[6] === workletCallback) {
-        if (cResult[7] === tmp8) {
-          if (cResult[8] === tmp9) {
-            let tmp13 = cResult[9];
-          }
-          return tmp13;
-        }
-      }
-      const obj4 = { style: tmp8, onLayout: workletCallback, children: tmp9 };
-      const tmp16 = React5(ReanimatedRexport.View, obj4);
-      cResult[6] = workletCallback;
-      cResult[7] = tmp8;
-      cResult[8] = tmp9;
-      cResult[9] = tmp16;
-      tmp13 = tmp16;
-    }
-    const obj5 = { style: tmp7, children };
-    const tmp12 = React5(ReanimatedRexport.View, obj5);
-    cResult[3] = children;
-    cResult[4] = tmp7;
-    cResult[5] = tmp12;
-    tmp9 = tmp12;
-  }
-  const items1 = [tmp3.container, tmp6];
-  cResult[0] = tmp6;
-  cResult[1] = tmp3.container;
-  cResult[2] = items1;
-  tmp8 = items1;
-}) : (function CollapsingText(children) {
+function CollapsingText(children) {
   const collapseText = children.collapseText;
+  let sharedValue;
   const tmp = closure_10();
-  const sharedValue = ReanimatedRexport2.useSharedValue(0);
+  sharedValue = sharedValue(textCollapsed[6]).useSharedValue(0);
+  let obj = sharedValue(textCollapsed[6]);
   const fn = function o(nativeEvent) {
     if (0 === sharedValue.get()) {
       const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
     }
   };
   fn.__closure = { containerWidth: sharedValue };
-  fn.__workletHash = 14617966668944;
-  fn.__initData = __initData2;
+  fn.__workletHash = 5541458715155;
+  fn.__initData = __initData;
   const items = [sharedValue];
-  const workletCallback = ReanimatedRexport2.useWorkletCallback(fn, items);
-  const tmp4 = closure_19(sharedValue, collapseText);
-  const obj3 = { style: null, onLayout: workletCallback, children: React5(ReanimatedRexport.View, { style: closure_22(sharedValue, collapseText), children: children.children }) };
-  const items1 = [tmp.container, tmp4];
-  obj3.style = items1;
-  return React5(ReanimatedRexport.View, obj3);
-});
-const __initData3 = { code: "function BaseTextButtonNativeTsx3(){const{containerWidth,withSpring,collapsed,SUBTLE_SPRING}=this.__closure;if(containerWidth.get()===0){return{};}return{width:withSpring(collapsed.get()===1?0:containerWidth.get(),SUBTLE_SPRING,\"animate-always\"),opacity:withSpring(collapsed.get()===1?0:1,SUBTLE_SPRING,\"animate-always\")};}" };
-const __initData4 = { code: "function BaseTextButtonNativeTsx4(){const{containerWidth,withSpring,collapsed,SUBTLE_SPRING}=this.__closure;if(containerWidth.get()===0)return{};return{width:withSpring(collapsed.get()===1?0:containerWidth.get(),SUBTLE_SPRING,'animate-always'),opacity:withSpring(collapsed.get()===1?0:1,SUBTLE_SPRING,'animate-always')};}" };
-ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCollapsingTextContainerStyles(containerWidth, collapsed) {
-  _require = containerWidth;
-  const fn = function o() {
-    if (0 === containerWidth.get()) {
+  closure_129_0 = sharedValue;
+  closure_129_1 = collapseText;
+  let obj2 = sharedValue(textCollapsed[6]);
+  const workletCallback = sharedValue(textCollapsed[6]).useWorkletCallback(fn, items);
+  const fn2 = function o() {
+    if (0 === sharedValue.get()) {
       let obj2 = {};
     } else {
       let num2 = 1;
       let num = 0;
-      if (1 !== collapsed.get()) {
-        num = containerWidth.get();
+      if (1 !== collapseText.get()) {
+        num = sharedValue.get();
       }
       obj2 = { width: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), opacity: null };
-      if (num2 === collapsed.get()) {
+      if (num2 === collapseText.get()) {
         num2 = 0;
       }
       obj2.opacity = spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always");
@@ -148,148 +49,40 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCol
     }
     return obj2;
   };
-  const obj = require("ReanimatedRexport");
-  fn.__closure = { containerWidth, withSpring: require("spring").withSpring, collapsed, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
-  fn.__workletHash = 11030023180396;
-  fn.__initData = __initData3;
-  return obj.useAnimatedStyle(fn);
-}) : (function useCollapsingTextContainerStyles(containerWidth, collapsed) {
-  _require = containerWidth;
-  const fn = function o() {
-    if (0 === containerWidth.get()) {
-      let obj2 = {};
-    } else {
-      let num2 = 1;
-      let num = 0;
-      if (1 !== collapsed.get()) {
-        num = containerWidth.get();
-      }
-      obj2 = { width: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"), opacity: null };
-      if (num2 === collapsed.get()) {
-        num2 = 0;
-      }
-      obj2.opacity = spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always");
-      const tmpResult = spring;
-    }
-    return obj2;
-  };
-  const obj = require("ReanimatedRexport");
-  fn.__closure = { containerWidth, withSpring: require("spring").withSpring, collapsed, SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING };
-  fn.__workletHash = 5528763277901;
-  fn.__initData = __initData4;
-  return obj.useAnimatedStyle(fn);
-});
-const __initData5 = { code: "function BaseTextButtonNativeTsx5(){const{collapsed,textCollapsed,containerWidth}=this.__closure;if(collapsed.get()===0){return{};}return{...textCollapsed,width:containerWidth.get()};}" };
-const __initData6 = { code: "function BaseTextButtonNativeTsx6(){const{collapsed,textCollapsed,containerWidth}=this.__closure;if(collapsed.get()===0)return{};return{...textCollapsed,width:containerWidth.get()};}" };
-ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCollapsingTextStyles(containerWidth, collapsed) {
-  const textCollapsed = closure_10().textCollapsed;
-  const fn = function o() {
-    if (0 === collapsed.get()) {
+  const obj3 = sharedValue(textCollapsed[6]);
+  fn2.__closure = { containerWidth: sharedValue, withSpring: sharedValue(textCollapsed[8]).withSpring, collapsed: collapseText, SUBTLE_SPRING: sharedValue(textCollapsed[9]).SUBTLE_SPRING };
+  fn2.__workletHash = 493185281611;
+  fn2.__initData = __initData2;
+  const animatedStyle = obj3.useAnimatedStyle(fn2);
+  textCollapsed = closure_10().textCollapsed;
+  let obj4 = { containerWidth: sharedValue, withSpring: sharedValue(textCollapsed[8]).withSpring, collapsed: collapseText, SUBTLE_SPRING: sharedValue(textCollapsed[9]).SUBTLE_SPRING };
+  const fn3 = function s() {
+    if (0 === collapseText.get()) {
       let obj = {};
     } else {
       obj = {};
       const merged = Object.assign(textCollapsed);
-      obj.width = containerWidth.get();
+      obj.width = sharedValue.get();
     }
     return obj;
   };
-  fn.__closure = { collapsed, textCollapsed, containerWidth };
-  fn.__workletHash = 15223478677680;
-  fn.__initData = __initData5;
-  return ReanimatedRexport2.useAnimatedStyle(fn);
-}) : (function useCollapsingTextStyles(containerWidth, collapsed) {
-  const textCollapsed = closure_10().textCollapsed;
-  const fn = function o() {
-    if (0 === collapsed.get()) {
-      let obj = {};
-    } else {
-      obj = {};
-      const merged = Object.assign(textCollapsed);
-      obj.width = containerWidth.get();
-    }
-    return obj;
-  };
-  fn.__closure = { collapsed, textCollapsed, containerWidth };
-  fn.__workletHash = 4732498665045;
-  fn.__initData = __initData6;
-  return ReanimatedRexport2.useAnimatedStyle(fn);
-});
-createStyles = fn(5005);
-let closure_23 = createStyles.createStyles((arg0, marginLeft) => {
-  if (0 === marginLeft) {
-    const obj2 = { offset: {} };
-    return obj2;
-  } else if ("start" === arg0) {
-    const obj3 = { offset: null };
-    const obj4 = { marginLeft };
-    obj3.offset = obj4;
-    return obj3;
-  } else if ("end" === arg0) {
-    const obj5 = { offset: null };
-    obj6 = { marginRight: marginLeft };
-    obj5.offset = obj6;
-    return obj5;
-  } else {
-    const obj = { offset: {} };
-    return obj;
-  }
-});
-let obj6 = { sm: null, md: null, lg: null };
-const LARGE_BUTTON_HEIGHT = fn(5287).LARGE_BUTTON_HEIGHT;
-const bound = Math.max((fn(5287).MINIMUM_HIT_AREA - fn(5287).SMALL_BUTTON_HEIGHT) / 2, 0);
-const rect = { top: bound, left: "Array", right: "toCharArray$esjava$1", bottom: bound };
-obj6.sm = rect;
-const LARGE_BUTTON_HEIGHT2 = fn(5287).LARGE_BUTTON_HEIGHT;
-const bound1 = Math.max((fn(5287).MINIMUM_HIT_AREA - fn(5287).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-const rect1 = { top: bound1, left: "Array", right: "toCharArray$esjava$1", bottom: bound1 };
-obj6.md = rect1;
-const bound2 = Math.max((fn(5287).MINIMUM_HIT_AREA - fn(5287).LARGE_BUTTON_HEIGHT) / 2, 0);
-const rect2 = { top: bound2, left: "Array", right: "toCharArray$esjava$1", bottom: bound2 };
-obj6.lg = rect2;
-function getTextPlatformLineHeight(arg0, arg1) {
-
+  fn3.__closure = { collapsed: collapseText, textCollapsed, containerWidth: sharedValue };
+  fn3.__workletHash = 5824483783888;
+  fn3.__initData = __initData3;
+  const animatedStyle1 = sharedValue(textCollapsed[6]).useAnimatedStyle(fn3);
+  obj6 = { style: null, onLayout: workletCallback, children: closure_7(collapseText(textCollapsed[6]).View, { style: animatedStyle1, children: children.children }) };
+  const items1 = [tmp.container, animatedStyle];
+  obj6.style = items1;
+  return closure_7(collapseText(textCollapsed[6]).View, obj6);
 }
-ReactCompilerGating = fn(558);
-let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseTextButtonIcon(arg0) {
-  const cResult = c.c(7);
-  ({ icon, style, size, iconPosition, iconOpticalOffsetMargin } = arg0);
-  const iconSizeStyles = ButtonHooks.useIconSizeStyles(size);
-  const tmp3 = closure_23(iconPosition, iconOpticalOffsetMargin);
-  if (cResult[0] === tmp3.offset) {
-    if (cResult[1] === iconSizeStyles) {
-      if (cResult[2] === style) {
-        let tmp4 = cResult[3];
-      }
-      if (cResult[4] === icon) {
-        if (cResult[5] === tmp4) {
-          let tmp5 = cResult[6];
-        }
-        return tmp5;
-      }
-      const obj3 = { source: icon, style: tmp4 };
-      const tmp8 = React5(Icon, obj3);
-      cResult[4] = icon;
-      cResult[5] = tmp4;
-      cResult[6] = tmp8;
-      tmp5 = tmp8;
-    }
-  }
-  const items = [style, iconSizeStyles, tmp3.offset];
-  cResult[0] = tmp3.offset;
-  cResult[1] = iconSizeStyles;
-  cResult[2] = style;
-  cResult[3] = items;
-  tmp4 = items;
-}) : (function BaseTextButtonIcon(arg0) {
+function BaseTextButtonIcon(arg0) {
   ({ icon, size, iconPosition, iconOpticalOffsetMargin, style } = arg0);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(size);
   const obj2 = { source: icon, style: null };
-  const items = [style, iconSizeStyles, closure_23(iconPosition, iconOpticalOffsetMargin).offset];
+  const items = [style, iconSizeStyles, closure_18(iconPosition, iconOpticalOffsetMargin).offset];
   obj2.style = items;
   return React5(Icon, obj2);
-});
-ReactCompilerGating = fn(558);
+}
 class BaseTextButton {
   constructor(arg0) {
     merged = Object.assign(global, Object.assign({ ref: 0 }));
@@ -305,7 +98,7 @@ class BaseTextButton {
     if (undefined === size) {
       tmp2 = onPressIn;
       tmp3 = onLayout;
-      size = onPressIn(onLayout[12]).DEFAULT_BUTTON_SIZE;
+      size = onPressIn(onLayout[10]).DEFAULT_BUTTON_SIZE;
     }
     ({ icon, iconPosition } = merged);
     str = "start";
@@ -330,7 +123,7 @@ class BaseTextButton {
     if (undefined === maxFontSizeMultiplier) {
       tmp4 = onPressIn;
       tmp5 = onLayout;
-      maxFontSizeMultiplier = onPressIn(onLayout[12]).BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
+      maxFontSizeMultiplier = onPressIn(onLayout[10]).BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
     }
     shiny = merged.shiny;
     tmp6 = undefined !== shiny && shiny;
@@ -342,15 +135,15 @@ class BaseTextButton {
     } else {
       tmp7 = onPressIn;
       tmp8 = onLayout;
-      obj = onPressIn(onLayout[12]);
+      obj = onPressIn(onLayout[10]);
       textVariant = obj.getButtonDefaultTextVariant(size);
     }
     tmp9 = onPressIn;
     tmp10 = onLayout;
-    tmp11 = onPressIn(onLayout[15]).TextStyleSheet[textVariant];
+    tmp11 = onPressIn(onLayout[13]).TextStyleSheet[textVariant];
     tmp12 = closure_9(size, tmp11.fontSize);
     obj2 = closure_4;
-    enabled = closure_4.useContext(onPressIn(onLayout[16]).AccessibilityPreferencesContext).reducedMotion.enabled;
+    enabled = closure_4.useContext(onPressIn(onLayout[14]).AccessibilityPreferencesContext).reducedMotion.enabled;
     str3 = merged.variant;
     if (str3 == null) {
       str3 = "primary";
@@ -420,7 +213,7 @@ class BaseTextButton {
         const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
       }
     }, items2);
-    tmp9Result1 = tmp9(tmp10[14]);
+    tmp9Result1 = tmp9(tmp10[12]);
     buttonTextColorStyles = tmp9Result1.useButtonTextColorStyles(str3);
     if (null == icon) {
       obj1 = {};
@@ -453,7 +246,7 @@ class BaseTextButton {
       items4[1] = tmp11;
       tmp24 = closure_7;
       tmp25 = closure_5;
-      tmp9Result2 = tmp9(tmp10[13]);
+      tmp9Result2 = tmp9(tmp10[11]);
       androidLineHeight = null;
       if (tmp9Result2.isAndroid()) {
         androidLineHeight = tmp12.androidLineHeight;
@@ -495,11 +288,11 @@ class BaseTextButton {
     obj18.pressed = sharedValue;
     obj18.accessibilityRole = str2;
     if (accessibilityLabel == null) {
-      tmp9Result3 = tmp9(tmp10[19]);
+      tmp9Result3 = tmp9(tmp10[17]);
       accessibilityLabel = tmp9Result3.getNodeText(text);
     }
     obj18.accessibilityLabel = accessibilityLabel;
-    obj18.hitSlop = closure_24[size];
+    obj18.hitSlop = closure_19[size];
     obj19 = { variant: str3, size, loading: merged.loading, pressed: sharedValue, style: pillStyle, shiny: tmp6, expressiveRiveRef: null, expressivePressState: null, children: null };
     tmp29 = undefined;
     if (startsWithResult) {
@@ -542,47 +335,83 @@ class BaseTextButton {
     items6[2] = tmp35;
     obj20.children = items6;
     obj19.children = tmp31(closure_13.Provider, obj20);
-    obj18.children = tmp27(tmp9(tmp10[20]).ButtonPill, obj19);
-    return tmp27(tmp9(tmp10[18]).BaseButton, obj18);
+    obj18.children = tmp27(tmp9(tmp10[18]).ButtonPill, obj19);
+    return tmp27(tmp9(tmp10[16]).BaseButton, obj18);
   }
 }
-BaseTextButton.Icon = ReactCompilerGating.isReactCompilerEnabled() ? (function TextButtonIcon(arg0) {
-  const cResult = c.c(7);
-  ({ source, variant, disableColor } = arg0);
-  let str = "icon";
-  if (undefined !== variant) {
-    str = variant;
-  }
-  const context = noop.useContext(closure_13);
-  let entityWrapper = closure_11();
-  const iconSizeStyles = ButtonHooks.useIconSizeStyles(context);
-  if (cResult[0] === (undefined === disableColor || disableColor)) {
-    if (cResult[1] === iconSizeStyles) {
-      if (cResult[2] === source) {
-        let tmp7 = cResult[3];
-      }
-      if ("entity" !== str) {
-        return tmp7;
-      } else {
-        if (cResult[4] === tmp7) {
-        }
-        const obj2 = { style: entityWrapper.entityWrapper, children: tmp7 };
-        const tmp13 = React5(timestampProducer, obj2);
-        cResult[4] = tmp7;
-        entityWrapper = entityWrapper.entityWrapper;
-        cResult[5] = entityWrapper;
-        cResult[6] = tmp13;
-      }
+get_ActivityIndicator = fn(17);
+({ Text: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let createStyles = fn(5009);
+const React7 = createStyles.createStyles((arg0, sm) => {
+  const obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: { flexShrink: 1, flexGrow: 0 }, androidLineHeight: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
+  if (typeof getTextPlatformLineHeight === "function") {
+    if (null != sm) {
+      const obj2 = { sm, md: sm + 0.5, lg: sm + 1.9 };
+      const tmp3 = obj2[arg0];
     }
+    let tmp7;
+    if (obj3.isAndroid()) {
+      tmp7 = tmp3;
+    }
+    const obj4 = { lineHeight: tmp7 };
+    obj.androidLineHeight = obj4;
+    obj.icon = { flexShrink: 0, flexGrow: 0 };
+    obj.iconLeft = { paddingLeft: 4 };
+    obj.iconRight = { paddingRight: 4 };
+    obj.expressiveButtonContainer = { position: "relative" };
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp8 = React5(Icon, { source, disableColor: undefined === disableColor || disableColor, style: iconSizeStyles });
-  cResult[0] = undefined === disableColor || disableColor;
-  cResult[1] = iconSizeStyles;
-  cResult[2] = source;
-  cResult[3] = tmp8;
-  tmp7 = tmp8;
-  const tmpResult = ButtonHooks;
-}) : (function TextButtonIcon(source) {
+});
+createStyles = fn(5009);
+let closure_10 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", position: "relative" }, textCollapsed: { position: "absolute", left: 0 } });
+createStyles = fn(5009);
+let obj = { entityWrapper: { borderWidth: 1, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden" } };
+let closure_11 = createStyles.createStyles(obj);
+const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
+noop.createContext("md");
+const __initData = { code: "function BaseTextButtonNativeTsx1({nativeEvent:nativeEvent}){const{containerWidth}=this.__closure;if(containerWidth.get()!==0)return;const{width:width}=nativeEvent.layout;containerWidth.set(width);}" };
+const __initData2 = { code: "function BaseTextButtonNativeTsx2(){const{containerWidth,withSpring,collapsed,SUBTLE_SPRING}=this.__closure;if(containerWidth.get()===0)return{};return{width:withSpring(collapsed.get()===1?0:containerWidth.get(),SUBTLE_SPRING,'animate-always'),opacity:withSpring(collapsed.get()===1?0:1,SUBTLE_SPRING,'animate-always')};}" };
+const __initData3 = { code: "function BaseTextButtonNativeTsx3(){const{collapsed,textCollapsed,containerWidth}=this.__closure;if(collapsed.get()===0)return{};return{...textCollapsed,width:containerWidth.get()};}" };
+createStyles = fn(5009);
+let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
+  if (0 === marginLeft) {
+    const obj2 = { offset: {} };
+    return obj2;
+  } else if ("start" === arg0) {
+    const obj3 = { offset: null };
+    const obj4 = { marginLeft };
+    obj3.offset = obj4;
+    return obj3;
+  } else if ("end" === arg0) {
+    const obj5 = { offset: null };
+    obj6 = { marginRight: marginLeft };
+    obj5.offset = obj6;
+    return obj5;
+  } else {
+    const obj = { offset: {} };
+    return obj;
+  }
+});
+let obj6 = { sm: null, md: null, lg: null };
+const LARGE_BUTTON_HEIGHT = fn(5635).LARGE_BUTTON_HEIGHT;
+const bound = Math.max((fn(5635).MINIMUM_HIT_AREA - fn(5635).SMALL_BUTTON_HEIGHT) / 2, 0);
+const rect = { top: bound, left: "Array", right: "applicationId", bottom: bound };
+obj6.sm = rect;
+const LARGE_BUTTON_HEIGHT2 = fn(5635).LARGE_BUTTON_HEIGHT;
+const bound1 = Math.max((fn(5635).MINIMUM_HIT_AREA - fn(5635).MEDIUM_BUTTON_HEIGHT) / 2, 0);
+const rect1 = { top: bound1, left: "Array", right: "applicationId", bottom: bound1 };
+obj6.md = rect1;
+const bound2 = Math.max((fn(5635).MINIMUM_HIT_AREA - fn(5635).LARGE_BUTTON_HEIGHT) / 2, 0);
+const rect2 = { top: bound2, left: "Array", right: "applicationId", bottom: bound2 };
+obj6.lg = rect2;
+function getTextPlatformLineHeight(arg0, arg1) {
+
+}
+BaseTextButton.Icon = function TextButtonIcon(source) {
   let str = source.variant;
   if (str === undefined) {
     str = "icon";
@@ -600,7 +429,7 @@ BaseTextButton.Icon = ReactCompilerGating.isReactCompilerEnabled() ? (function T
     tmp3Result = React5(timestampProducer, obj3);
   }
   return tmp3Result;
-});
+};
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Button/native/BaseTextButton.native.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 15527: HabitualDNDStore ===
+// === Module 15567: HabitualDNDStore ===
 
-// Module 15527 (HabitualDNDStore)
+// Module 15567 (HabitualDNDStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
 
 require = fn;
-const StatusTypes = fn(1084).StatusTypes;
+const StatusTypes = fn(1072).StatusTypes;
 let sessionStartsWithDND = [];
 let c6 = false;
 const PersistedStore = initializeDefault.PersistedStore;

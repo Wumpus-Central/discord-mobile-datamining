@@ -1,13 +1,13 @@
-// === Module 17847: NotifSettingsActionCreators ===
+// === Module 17918: NotifSettingsActionCreators ===
 
-// Module 17847 (NotifSettingsActionCreators)
+// Module 17918 (NotifSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import notification_settings from "notification_settings" /* 15489 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1234 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import notification_settings from "notification_settings" /* 15529 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15488 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15528 */;
 
 require = fn;
 function skipEdit(edit) {
@@ -34,7 +34,7 @@ let closure_10 = async function _persistPendingEdit() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_10 = async function _persistPendingEdit() {
               logger.log("Failed to take ownership of apply; current is", NotifSettingsProtoStore.applyingEdit);
               skipEdit(pendingEdit);
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             } else {
               const protoToB64Result = user_settings_UserSettingsUtils.protoToB64(notification_settings.DeclarativeSettings, pendingEdit.partialSettings);
               if (null != protoToB64Result) {
@@ -91,7 +91,7 @@ let closure_10 = async function _persistPendingEdit() {
               logger.log("Not persisting proto because there is nothing to change");
               skipEdit(pendingEdit);
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             c7 = 3;
@@ -165,8 +165,8 @@ let closure_10 = async function _persistPendingEdit() {
           if (null != closure_130_1) {
             pendingEdit2.offlineEditDataVersion = closure_130_1;
           }
-          const obj14 = { minRescheduleDelayMillis: closure_130_2 };
-          closure_131_12(pendingEdit2, obj14);
+          const obj13 = { minRescheduleDelayMillis: closure_130_2 };
+          closure_131_12(pendingEdit2, obj13);
         }
       }
       if (closure_130_7) {
@@ -193,11 +193,11 @@ let closure_10 = async function _persistPendingEdit() {
       }
       closure_131_7.log("Unknown notif settings error %s", closure_130_9);
       tmp77 = closure_130_9;
-    } catch (tmp97) {
-      closure_4 = tmp97;
+    } catch (tmp100) {
+      closure_4 = tmp100;
       if (tmp4 === c5) {
         c7 = tmp2;
-        throw tmp97;
+        throw tmp100;
       } else {
         c6 = tmp;
       }
@@ -215,7 +215,7 @@ let closure_11 = async function _reload() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -345,7 +345,7 @@ function updateNotifSettingValue(CALLS, arg1) {
     tmp9 = null != orCreatePendingEdit.timeout || NotifSettingsProtoStore.isApplyingEdit;
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AbortCodes: hasOwnProperty, Endpoints: metroRequire } = Constants);
 let closure_7 = new LoggerDefault("NotifSettingsActionCreators");
 const size = fn(2);

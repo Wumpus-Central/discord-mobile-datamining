@@ -1,779 +1,36 @@
-// === Module 15720: GuildActionSheetTabItems ===
+// === Module 15760: GuildActionSheetTabItems ===
 
-// Module 15720 (GuildActionSheetTabItems)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
-import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6755 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7275 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9042 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9086 */;
-import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9089 */;
+// Module 15760 (GuildActionSheetTabItems)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5755 */;
+import BoostingActionCreatorsAll from "BoostingActionCreators" /* 6762 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7282 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9055 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9099 */;
+import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9102 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildChannelStore from "GuildChannelStore" /* 4935 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildChannelStore from "GuildChannelStore" /* 4939 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetTabItems.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildActionSheetTabItems(guild) {
-  const cResult = guild(576).c(32);
-  guild = guild.guild;
-  let obj = guild(576);
-  const canAccessSettings = guild(15705).useGuildActionSheetPermissions(guild).canAccessSettings;
-  const total = stateFromStores(8426)(guild.id).total;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildChannelStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== guild.id) {
-    class S {
-      constructor() {
-        return closure_6.getChannels(guild.id);
-      }
-    }
-    cResult[1] = guild.id;
-    cResult[2] = S;
-  } else {
-    class S {
-      constructor() {
-        return closure_6.getChannels(guild.id);
-      }
-    }
-  }
-  let obj2 = guild(15705);
-  stateFromStores = guild(504).useStateFromStores(first, S);
-  if (cResult[3] === stateFromStores) {
-    class S {
-      constructor() {
-        return closure_6.getChannels(guild.id);
-      }
-    }
-    if (cResult[6] === stateFromStores) {
-      class S {
-        constructor() {
-          return closure_6.getChannels(guild.id);
-        }
-      }
-      importAll = G;
-      class G {
-        constructor() {
-          tmp = guild;
-          channelId = closure_7.getChannelId(guild.id);
-          tmp3 = closure_0;
-          tmp4 = closure_3;
-          obj = closure_0(closure_3[11]);
-          tmp5 = closure_1;
-          channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-          if (null == channel) {
-            tmp7 = closure_6;
-            channel = closure_6.getDefaultChannel(tmp.id);
-          }
-          if (null != channel) {
-            tmp3Result = tmp3(tmp4[12]);
-            tmp8 = InstantInviteSources;
-            tmp9 = tmp3Result;
-            tmp10 = tmp;
-            tmp11 = tmp5;
-            result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-          }
-          return;
-        }
-      }
-      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            return closure_6.getChannels(guild.id);
-          }
-        }
-        class G {
-          constructor() {
-            tmp = guild;
-            channelId = closure_7.getChannelId(guild.id);
-            tmp3 = closure_0;
-            tmp4 = closure_3;
-            obj = closure_0(closure_3[11]);
-            tmp5 = closure_1;
-            channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-            if (null == channel) {
-              tmp7 = closure_6;
-              channel = closure_6.getDefaultChannel(tmp.id);
-            }
-            if (null != channel) {
-              tmp3Result = tmp3(tmp4[12]);
-              tmp8 = InstantInviteSources;
-              tmp9 = tmp3Result;
-              tmp10 = tmp;
-              tmp11 = tmp5;
-              result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-            }
-            return;
-          }
-        }
-      } else {
-        class S {
-          constructor() {
-            return closure_6.getChannels(guild.id);
-          }
-        }
-      }
-      if (cResult[10] !== total) {
-        class S {
-          constructor() {
-            return closure_6.getChannels(guild.id);
-          }
-        }
-        if (total > 0) {
-          class S {
-            constructor() {
-              return closure_6.getChannels(guild.id);
-            }
-          }
-          class G {
-            constructor() {
-              tmp = guild;
-              channelId = closure_7.getChannelId(guild.id);
-              tmp3 = closure_0;
-              tmp4 = closure_3;
-              obj = closure_0(closure_3[11]);
-              tmp5 = closure_1;
-              channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-              if (null == channel) {
-                tmp7 = closure_6;
-                channel = closure_6.getDefaultChannel(tmp.id);
-              }
-              if (null != channel) {
-                tmp3Result = tmp3(tmp4[12]);
-                tmp8 = InstantInviteSources;
-                tmp9 = tmp3Result;
-                tmp10 = tmp;
-                tmp11 = tmp5;
-                result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-              }
-              return;
-            }
-          }
-          tmp17[0] = total;
-          const formatToPlainStringResult = obj5.formatToPlainString(tmp(1125).t["pob/cL"], tmp17);
-        } else {
-          class S {
-            constructor() {
-              return closure_6.getChannels(guild.id);
-            }
-          }
-          const string = tmp15.string;
-          class G {
-            constructor() {
-              tmp = guild;
-              channelId = closure_7.getChannelId(guild.id);
-              tmp3 = closure_0;
-              tmp4 = closure_3;
-              obj = closure_0(closure_3[11]);
-              tmp5 = closure_1;
-              channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-              if (null == channel) {
-                tmp7 = closure_6;
-                channel = closure_6.getDefaultChannel(tmp.id);
-              }
-              if (null != channel) {
-                tmp3Result = tmp3(tmp4[12]);
-                tmp8 = InstantInviteSources;
-                tmp9 = tmp3Result;
-                tmp10 = tmp;
-                tmp11 = tmp5;
-                result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-              }
-              return;
-            }
-          }
-        }
-        class G {
-          constructor() {
-            tmp = guild;
-            channelId = closure_7.getChannelId(guild.id);
-            tmp3 = closure_0;
-            tmp4 = closure_3;
-            obj = closure_0(closure_3[11]);
-            tmp5 = closure_1;
-            channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-            if (null == channel) {
-              tmp7 = closure_6;
-              channel = closure_6.getDefaultChannel(tmp.id);
-            }
-            if (null != channel) {
-              tmp3Result = tmp3(tmp4[12]);
-              tmp8 = InstantInviteSources;
-              tmp9 = tmp3Result;
-              tmp10 = tmp;
-              tmp11 = tmp5;
-              result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-            }
-            return;
-          }
-        }
-        cResult[10] = total;
-        cResult[11] = formatToPlainStringResult;
-      } else {
-        class S {
-          constructor() {
-            return closure_6.getChannels(guild.id);
-          }
-        }
-        const _Symbol = Symbol;
-        class G {
-          constructor() {
-            tmp = guild;
-            channelId = closure_7.getChannelId(guild.id);
-            tmp3 = closure_0;
-            tmp4 = closure_3;
-            obj = closure_0(closure_3[11]);
-            tmp5 = closure_1;
-            channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-            if (null == channel) {
-              tmp7 = closure_6;
-              channel = closure_6.getDefaultChannel(tmp.id);
-            }
-            if (null != channel) {
-              tmp3Result = tmp3(tmp4[12]);
-              tmp8 = InstantInviteSources;
-              tmp9 = tmp3Result;
-              tmp10 = tmp;
-              tmp11 = tmp5;
-              result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-            }
-            return;
-          }
-        }
-        if (tmp19 === Symbol.for("react.memo_cache_sentinel")) {
-          class S {
-            constructor() {
-              return closure_6.getChannels(guild.id);
-            }
-          }
-          let obj3 = { color: null };
-          class G {
-            constructor() {
-              tmp = guild;
-              channelId = closure_7.getChannelId(guild.id);
-              tmp3 = closure_0;
-              tmp4 = closure_3;
-              obj = closure_0(closure_3[11]);
-              tmp5 = closure_1;
-              channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-              if (null == channel) {
-                tmp7 = closure_6;
-                channel = closure_6.getDefaultChannel(tmp.id);
-              }
-              if (null != channel) {
-                tmp3Result = tmp3(tmp4[12]);
-                tmp8 = InstantInviteSources;
-                tmp9 = tmp3Result;
-                tmp10 = tmp;
-                tmp11 = tmp5;
-                result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-              }
-              return;
-            }
-          }
-          obj3.color = tmp4(587).unsafe_rawColors.GUILD_BOOSTING_PINK;
-          const tmp22 = closure_12(tmp21, obj3);
-          cResult[12] = tmp22;
-          const tmp20 = tmp22;
-        } else {
-          class S {
-            constructor() {
-              return closure_6.getChannels(guild.id);
-            }
-          }
-        }
-        if (cResult[13] !== guild.id) {
-          class R {
-            constructor() {
-              obj = closure_1(closure_3[16]);
-              obj1 = { location: null };
-              obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-              obj1.location = obj6;
-              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-              obj4 = closure_1(closure_3[17]);
-              hideActionSheetResult = obj4.hideActionSheet();
-              obj5 = closure_2(closure_3[18]);
-              openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-              return;
-            }
-          }
-          class G {
-            constructor() {
-              tmp = guild;
-              channelId = closure_7.getChannelId(guild.id);
-              tmp3 = closure_0;
-              tmp4 = closure_3;
-              obj = closure_0(closure_3[11]);
-              tmp5 = closure_1;
-              channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-              if (null == channel) {
-                tmp7 = closure_6;
-                channel = closure_6.getDefaultChannel(tmp.id);
-              }
-              if (null != channel) {
-                tmp3Result = tmp3(tmp4[12]);
-                tmp8 = InstantInviteSources;
-                tmp9 = tmp3Result;
-                tmp10 = tmp;
-                tmp11 = tmp5;
-                result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-              }
-              return;
-            }
-          }
-          cResult[14] = R;
-        } else {
-          class R {
-            constructor() {
-              obj = closure_1(closure_3[16]);
-              obj1 = { location: null };
-              obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-              obj1.location = obj6;
-              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-              obj4 = closure_1(closure_3[17]);
-              hideActionSheetResult = obj4.hideActionSheet();
-              obj5 = closure_2(closure_3[18]);
-              openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-              return;
-            }
-          }
-        }
-        if (cResult[15] === tmp14) {
-          class R {
-            constructor() {
-              obj = closure_1(closure_3[16]);
-              obj1 = { location: null };
-              obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-              obj1.location = obj6;
-              trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-              obj4 = closure_1(closure_3[17]);
-              hideActionSheetResult = obj4.hideActionSheet();
-              obj5 = closure_2(closure_3[18]);
-              openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-              return;
-            }
-          }
-          if (cResult[18] === tmp9) {
-            class R {
-              constructor() {
-                obj = closure_1(closure_3[16]);
-                obj1 = { location: null };
-                obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                obj1.location = obj6;
-                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                obj4 = closure_1(closure_3[17]);
-                hideActionSheetResult = obj4.hideActionSheet();
-                obj5 = closure_2(closure_3[18]);
-                openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                return;
-              }
-            }
-            const _Symbol2 = Symbol;
-            class G {
-              constructor() {
-                tmp = guild;
-                channelId = closure_7.getChannelId(guild.id);
-                tmp3 = closure_0;
-                tmp4 = closure_3;
-                obj = closure_0(closure_3[11]);
-                tmp5 = closure_1;
-                channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-                if (null == channel) {
-                  tmp7 = closure_6;
-                  channel = closure_6.getDefaultChannel(tmp.id);
-                }
-                if (null != channel) {
-                  tmp3Result = tmp3(tmp4[12]);
-                  tmp8 = InstantInviteSources;
-                  tmp9 = tmp3Result;
-                  tmp10 = tmp;
-                  tmp11 = tmp5;
-                  result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-                }
-                return;
-              }
-            }
-            if (tmp30 === Symbol.for("react.memo_cache_sentinel")) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_3[16]);
-                  obj1 = { location: null };
-                  obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                  obj1.location = obj6;
-                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                  obj4 = closure_1(closure_3[17]);
-                  hideActionSheetResult = obj4.hideActionSheet();
-                  obj5 = closure_2(closure_3[18]);
-                  openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                  return;
-                }
-              }
-              const string2 = tmp32.string;
-              class G {
-                constructor() {
-                  tmp = guild;
-                  channelId = closure_7.getChannelId(guild.id);
-                  tmp3 = closure_0;
-                  tmp4 = closure_3;
-                  obj = closure_0(closure_3[11]);
-                  tmp5 = closure_1;
-                  channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-                  if (null == channel) {
-                    tmp7 = closure_6;
-                    channel = closure_6.getDefaultChannel(tmp.id);
-                  }
-                  if (null != channel) {
-                    tmp3Result = tmp3(tmp4[12]);
-                    tmp8 = InstantInviteSources;
-                    tmp9 = tmp3Result;
-                    tmp10 = tmp;
-                    tmp11 = tmp5;
-                    result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-                  }
-                  return;
-                }
-              }
-              cResult[21] = tmp33;
-            } else {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_3[16]);
-                  obj1 = { location: null };
-                  obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                  obj1.location = obj6;
-                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                  obj4 = closure_1(closure_3[17]);
-                  hideActionSheetResult = obj4.hideActionSheet();
-                  obj5 = closure_2(closure_3[18]);
-                  openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                  return;
-                }
-              }
-            }
-            if (cResult[22] !== guild.id) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_3[16]);
-                  obj1 = { location: null };
-                  obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                  obj1.location = obj6;
-                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                  obj4 = closure_1(closure_3[17]);
-                  hideActionSheetResult = obj4.hideActionSheet();
-                  obj5 = closure_2(closure_3[18]);
-                  openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                  return;
-                }
-              }
-              let obj4 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-              class G {
-                constructor() {
-                  tmp = guild;
-                  channelId = closure_7.getChannelId(guild.id);
-                  tmp3 = closure_0;
-                  tmp4 = closure_3;
-                  obj = closure_0(closure_3[11]);
-                  tmp5 = closure_1;
-                  channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-                  if (null == channel) {
-                    tmp7 = closure_6;
-                    channel = closure_6.getDefaultChannel(tmp.id);
-                  }
-                  if (null != channel) {
-                    tmp3Result = tmp3(tmp4[12]);
-                    tmp8 = InstantInviteSources;
-                    tmp9 = tmp3Result;
-                    tmp10 = tmp;
-                    tmp11 = tmp5;
-                    result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-                  }
-                  return;
-                }
-              }
-              obj4.icon = tmp4(8334);
-              obj4.onPress = function onPress() {
-                ActionSheetActionCreatorsDefault.hideActionSheet();
-                NotificationSettingsModalActionCreatorsDefault.open(guild.id);
-              };
-              const tmp35 = closure_12(tmp(8014).IconButton, obj4);
-              cResult[22] = guild.id;
-              cResult[23] = tmp35;
-            } else {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_3[16]);
-                  obj1 = { location: null };
-                  obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                  obj1.location = obj6;
-                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                  obj4 = closure_1(closure_3[17]);
-                  hideActionSheetResult = obj4.hideActionSheet();
-                  obj5 = closure_2(closure_3[18]);
-                  openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                  return;
-                }
-              }
-            }
-            if (cResult[24] === canAccessSettings) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_3[16]);
-                  obj1 = { location: null };
-                  obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                  obj1.location = obj6;
-                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                  obj4 = closure_1(closure_3[17]);
-                  hideActionSheetResult = obj4.hideActionSheet();
-                  obj5 = closure_2(closure_3[18]);
-                  openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                  return;
-                }
-              }
-              if (cResult[27] === tmp27) {
-                class R {
-                  constructor() {
-                    obj = closure_1(closure_3[16]);
-                    obj1 = { location: null };
-                    obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                    obj1.location = obj6;
-                    trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                    obj4 = closure_1(closure_3[17]);
-                    hideActionSheetResult = obj4.hideActionSheet();
-                    obj5 = closure_2(closure_3[18]);
-                    openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                    return;
-                  }
-                }
-              }
-              class G {
-                constructor() {
-                  tmp = guild;
-                  channelId = closure_7.getChannelId(guild.id);
-                  tmp3 = closure_0;
-                  tmp4 = closure_3;
-                  obj = closure_0(closure_3[11]);
-                  tmp5 = closure_1;
-                  channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-                  if (null == channel) {
-                    tmp7 = closure_6;
-                    channel = closure_6.getDefaultChannel(tmp.id);
-                  }
-                  if (null != channel) {
-                    tmp3Result = tmp3(tmp4[12]);
-                    tmp8 = InstantInviteSources;
-                    tmp9 = tmp3Result;
-                    tmp10 = tmp;
-                    tmp11 = tmp5;
-                    result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-                  }
-                  return;
-                }
-              }
-              const obj6 = { direction: "horizontal", style: tmp13, children: null };
-              const items1 = [tmp24, tmp27, tmp34, tmp36];
-              obj6.children = items1;
-              const tmp40 = closure_13(tmp(6754).ButtonGroup, obj6);
-              cResult[27] = tmp27;
-              cResult[28] = tmp34;
-              cResult[29] = tmp36;
-              cResult[30] = tmp24;
-              cResult[31] = tmp40;
-            }
-            let tmp37 = canAccessSettings;
-            if (canAccessSettings) {
-              class R {
-                constructor() {
-                  obj = closure_1(closure_3[16]);
-                  obj1 = { location: null };
-                  obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                  obj1.location = obj6;
-                  trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                  obj4 = closure_1(closure_3[17]);
-                  hideActionSheetResult = obj4.hideActionSheet();
-                  obj5 = closure_2(closure_3[18]);
-                  openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                  return;
-                }
-              }
-              const obj7 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-              class G {
-                constructor() {
-                  tmp = guild;
-                  channelId = closure_7.getChannelId(guild.id);
-                  tmp3 = closure_0;
-                  tmp4 = closure_3;
-                  obj = closure_0(closure_3[11]);
-                  tmp5 = closure_1;
-                  channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-                  if (null == channel) {
-                    tmp7 = closure_6;
-                    channel = closure_6.getDefaultChannel(tmp.id);
-                  }
-                  if (null != channel) {
-                    tmp3Result = tmp3(tmp4[12]);
-                    tmp8 = InstantInviteSources;
-                    tmp9 = tmp3Result;
-                    tmp10 = tmp;
-                    tmp11 = tmp5;
-                    result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-                  }
-                  return;
-                }
-              }
-              const intl2 = tmp(1125).intl;
-              obj7.label = intl2.string(tmp(1125).t["3D5yo/"]);
-              obj7.icon = tmp4(7548);
-              obj7.onPress = function onPress() {
-                ActionSheetActionCreatorsDefault.hideActionSheet();
-                GuildSettingsActionCreatorsDefault.open(guild.id);
-              };
-              tmp37 = closure_12(tmp38, obj7);
-            }
-            cResult[24] = canAccessSettings;
-            cResult[25] = guild.id;
-            cResult[26] = tmp37;
-          }
-          class G {
-            constructor() {
-              tmp = guild;
-              channelId = closure_7.getChannelId(guild.id);
-              tmp3 = closure_0;
-              tmp4 = closure_3;
-              obj = closure_0(closure_3[11]);
-              tmp5 = closure_1;
-              channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-              if (null == channel) {
-                tmp7 = closure_6;
-                channel = closure_6.getDefaultChannel(tmp.id);
-              }
-              if (null != channel) {
-                tmp3Result = tmp3(tmp4[12]);
-                tmp8 = InstantInviteSources;
-                tmp9 = tmp3Result;
-                tmp10 = tmp;
-                tmp11 = tmp5;
-                result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-              }
-              return;
-            }
-          }
-          if (tmp9) {
-            class R {
-              constructor() {
-                obj = closure_1(closure_3[16]);
-                obj1 = { location: null };
-                obj6 = { section: AnalyticsSections.GUILD_POPOUT, object: AnalyticsObjects.BOOST_GEM_ICON };
-                obj1.location = obj6;
-                trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, obj1);
-                obj4 = closure_1(closure_3[17]);
-                hideActionSheetResult = obj4.hideActionSheet();
-                obj5 = closure_2(closure_3[18]);
-                openApplyBoostModalResult = obj5.openApplyBoostModal(guild.id);
-                return;
-              }
-            }
-            const obj8 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-            class G {
-              constructor() {
-                tmp = guild;
-                channelId = closure_7.getChannelId(guild.id);
-                tmp3 = closure_0;
-                tmp4 = closure_3;
-                obj = closure_0(closure_3[11]);
-                tmp5 = closure_1;
-                channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-                if (null == channel) {
-                  tmp7 = closure_6;
-                  channel = closure_6.getDefaultChannel(tmp.id);
-                }
-                if (null != channel) {
-                  tmp3Result = tmp3(tmp4[12]);
-                  tmp8 = InstantInviteSources;
-                  tmp9 = tmp3Result;
-                  tmp10 = tmp;
-                  tmp11 = tmp5;
-                  result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-                }
-                return;
-              }
-            }
-            const intl = tmp(1125).intl;
-            obj8.label = intl.string(tmp(1125).t.VINpSK);
-            obj8.icon = tmp4(10934);
-            obj8.onPress = function onPress() {
-              ActionSheetActionCreatorsDefault.hideActionSheet();
-              tmp11();
-            };
-            const tmp28 = closure_12(tmp29, obj8);
-          }
-          cResult[18] = tmp9;
-          cResult[19] = G;
-          cResult[20] = tmp28;
-        }
-        const obj9 = { variant: "secondary", label: tmp14, icon: tmp20, grow: true, onPress: R };
-        const tmp26 = closure_12(tmp(8014).IconButton, obj9);
-        cResult[15] = tmp14;
-        cResult[16] = R;
-        cResult[17] = tmp26;
-      }
-    }
-    class G {
-      constructor() {
-        tmp = guild;
-        channelId = closure_7.getChannelId(guild.id);
-        tmp3 = closure_0;
-        tmp4 = closure_3;
-        obj = closure_0(closure_3[11]);
-        tmp5 = closure_1;
-        channel = closure_5.getChannel(obj.getInviteChannelId(channelId, closure_1));
-        if (null == channel) {
-          tmp7 = closure_6;
-          channel = closure_6.getDefaultChannel(tmp.id);
-        }
-        if (null != channel) {
-          tmp3Result = tmp3(tmp4[12]);
-          tmp8 = InstantInviteSources;
-          tmp9 = tmp3Result;
-          tmp10 = tmp;
-          tmp11 = tmp5;
-          result = tmp3Result.handleOpenInviteActionsheet(tmp, channel.id, tmp5, InstantInviteSources.SERVER_PROFILE);
-        }
-        return;
-      }
-    }
-    cResult[6] = stateFromStores;
-    cResult[7] = guild;
-    cResult[8] = G;
-  }
-  const tmpResult = guild(504);
-  const shouldRenderInviteResult = guild(9089).shouldRenderInvite(stateFromStores, guild);
-  cResult[3] = stateFromStores;
-  cResult[4] = guild;
-  cResult[5] = shouldRenderInviteResult;
-  const tmpResult2 = guild(9089);
-}) : (function GuildActionSheetTabItems(guild) {
+export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let canAccessSettings = guild(15705).useGuildActionSheetPermissions(guild).canAccessSettings;
-  const total = stateFromStores(8426)(guild.id).total;
-  let obj = guild(15705);
+  let canAccessSettings = guild(15745).useGuildActionSheetPermissions(guild).canAccessSettings;
+  const total = stateFromStores(8460)(guild.id).total;
+  let obj = guild(15745);
   const items = [GuildChannelStore];
   stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);
-  let shouldRenderInviteResult = guild(9089).shouldRenderInvite(stateFromStores, guild);
+  let shouldRenderInviteResult = guild(9102).shouldRenderInvite(stateFromStores, guild);
   const items1 = [stateFromStores, guild];
   closure_2 = noop.useCallback(() => {
     const channelId = SelectedChannelStore.getChannelId(guild.id);
@@ -788,16 +45,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
   }, items1);
   let obj4 = { direction: "horizontal", style: { flexWrap: "wrap" }, children: null };
   if (total > 0) {
-    const intl2 = tmp(1125).intl;
+    const intl2 = tmp(1114).intl;
     const obj5 = { subscriptions: total };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1125).t["pob/cL"], obj5);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["pob/cL"], obj5);
   } else {
-    const intl = tmp(1125).intl;
-    formatToPlainStringResult = intl.string(tmp(1125).t.Uj0md3);
+    const intl = tmp(1114).intl;
+    formatToPlainStringResult = intl.string(tmp(1114).t.Uj0md3);
   }
   const obj6 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
-  let obj3 = guild(9089);
-  obj6.icon = closure_12(guild(9874).BoostGemIcon, { color: stateFromStores(587).unsafe_rawColors.GUILD_BOOSTING_PINK });
+  let obj3 = guild(9102);
+  obj6.icon = closure_12(guild(9899).BoostGemIcon, { color: stateFromStores(575).unsafe_rawColors.GUILD_BOOSTING_PINK });
   obj6.onPress = function onPress() {
     const obj2 = { location: { section: constants3.GUILD_POPOUT, object: constants2.BOOST_GEM_ICON } };
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.PREMIUM_GUILD_PROMOTION_OPENED, obj2);
@@ -805,40 +62,40 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAct
     ActionSheetActionCreatorsDefault.hideActionSheet();
     BoostingActionCreatorsAll.openApplyBoostModal(guild.id);
   };
-  const items2 = [closure_12(guild(8014).IconButton, obj6), , , ];
+  const items2 = [closure_12(guild(8020).IconButton, obj6), , , ];
   if (shouldRenderInviteResult) {
     const obj8 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-    const intl3 = tmp(1125).intl;
-    obj8.label = intl3.string(tmp(1125).t.VINpSK);
-    obj8.icon = tmp3(10934);
+    const intl3 = tmp(1114).intl;
+    obj8.label = intl3.string(tmp(1114).t.VINpSK);
+    obj8.icon = tmp3(10959);
     obj8.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_2();
     };
-    shouldRenderInviteResult = closure_12(tmp(8014).IconButton, obj8);
+    shouldRenderInviteResult = closure_12(tmp(8020).IconButton, obj8);
   }
   items2[1] = shouldRenderInviteResult;
   const obj9 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-  const intl4 = tmp(1125).intl;
-  obj9.label = intl4.string(guild(1125).t.HcoRu0);
-  obj9.icon = stateFromStores(8334);
+  const intl4 = tmp(1114).intl;
+  obj9.label = intl4.string(guild(1114).t.HcoRu0);
+  obj9.icon = stateFromStores(8391);
   obj9.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
   };
-  items2[2] = closure_12(guild(8014).IconButton, obj9);
+  items2[2] = closure_12(guild(8020).IconButton, obj9);
   if (canAccessSettings) {
     const obj10 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-    const intl5 = tmp(1125).intl;
-    obj10.label = intl5.string(tmp(1125).t["3D5yo/"]);
-    obj10.icon = tmp3(7548);
+    const intl5 = tmp(1114).intl;
+    obj10.label = intl5.string(tmp(1114).t["3D5yo/"]);
+    obj10.icon = tmp3(7556);
     obj10.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsActionCreatorsDefault.open(guild.id);
     };
-    canAccessSettings = closure_12(tmp(8014).IconButton, obj10);
+    canAccessSettings = closure_12(tmp(8020).IconButton, obj10);
   }
   items2[3] = canAccessSettings;
   obj4.children = items2;
-  return closure_13(guild(6754).ButtonGroup, obj4);
-});
+  return closure_13(guild(6761).ButtonGroup, obj4);
+};

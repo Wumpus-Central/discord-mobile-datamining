@@ -1,16 +1,13 @@
-// === Module 11299: useLaunchPadType ===
+// === Module 11502: useLaunchPadType ===
 
-// Module 11299 (useLaunchPadType)
-import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11298 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+// Module 11502 (useLaunchPadType)
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11501 */;
 import size from "module_2" /* 2 */;
 
 const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
+const result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
 
 export default function useLaunchPadType() {
   const LaunchPadModeSetting = UserSettings.LaunchPadModeSetting;

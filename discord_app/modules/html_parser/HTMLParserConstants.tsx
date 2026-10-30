@@ -1,8 +1,11 @@
-// === Module 9370: HTMLParserConstants ===
+// === Module 9385: HTMLParserConstants ===
 
-// Module 9370 (HTMLParserConstants)
+// Module 9385 (HTMLParserConstants)
 import size from "module_2" /* 2 */;
 
+const rawResult = String.raw(HermesBuiltin.getTemplateObject(false, "https?:\\/\\/[^\\s<]+[^<.,:;\"'\\]\\s]", "https?://[^s<]+[^<.,:;\"']s]"));
+const regExp = new RegExp("^(" + rawResult + ")", "i");
+const regExp1 = new RegExp(rawResult, "gi");
 const obj = { LINE: 1, PARAGRAPH: 2 };
 const map = new Map(Object.entries({ b: { style: "bold" }, strong: { style: "bold" }, i: { style: "italic" }, em: { style: "italic" }, u: { style: "underline" }, h1: { heading: "h1", breaks: obj.PARAGRAPH }, h2: { heading: "h2", breaks: obj.PARAGRAPH }, h3: { heading: "h3", breaks: obj.PARAGRAPH }, h4: { heading: "h4", breaks: obj.PARAGRAPH }, p: { breaks: obj.PARAGRAPH }, blockquote: { breaks: obj.PARAGRAPH }, hr: { breaks: obj.PARAGRAPH }, div: { breaks: obj.LINE }, br: { lineBreak: true }, ul: { breaks: obj.LINE, list: "unordered" }, ol: { breaks: obj.LINE, list: "ordered" }, li: { breaks: obj.LINE, item: true }, a: { link: true }, span: {}, small: {}, sup: {}, script: { hidden: true }, style: { hidden: true } }));
 const obj2 = { b: { style: "bold" }, strong: { style: "bold" }, i: { style: "italic" }, em: { style: "italic" }, u: { style: "underline" }, h1: { heading: "h1", breaks: obj.PARAGRAPH }, h2: { heading: "h2", breaks: obj.PARAGRAPH }, h3: { heading: "h3", breaks: obj.PARAGRAPH }, h4: { heading: "h4", breaks: obj.PARAGRAPH }, p: { breaks: obj.PARAGRAPH }, blockquote: { breaks: obj.PARAGRAPH }, hr: { breaks: obj.PARAGRAPH }, div: { breaks: obj.LINE }, br: { lineBreak: true }, ul: { breaks: obj.LINE, list: "unordered" }, ol: { breaks: obj.LINE, list: "ordered" }, li: { breaks: obj.LINE, item: true }, a: { link: true }, span: {}, small: {}, sup: {}, script: { hidden: true }, style: { hidden: true } };
@@ -10,6 +13,12 @@ const set = new Set(["area", "base", "basefont", "br", "col", "command", "embed"
 const result = size.fileFinishedImporting("modules/html_parser/HTMLParserConstants.tsx");
 
 export const DEFAULT_MAX_HTML_LENGTH = 10000;
+export const ASCII_CONTROL_CHARACTERS = /[\u0000-\u001f\u007f]/;
+export const HTTP_URL_SCHEME = /https?:\/\//i;
+export const URL_MATCH = regExp;
+export const URL_IN_LABEL = regExp1;
+export const URL_AT_RUN_END = /https?:\/\/\S+$/i;
+export const URL_CONTINUATION_AT_RUN_START = /^(?:[a-z0-9_/?#&=%-]|\.[a-z0-9])/i;
 export const HTML_WHITESPACE_CODES = { SPACE: 32, TAB: 9, LINE_FEED: 10, FORM_FEED: 12, CARRIAGE_RETURN: 13 };
 export const BLOCK_BREAKS = obj;
 export const TAG_BEHAVIORS = map;

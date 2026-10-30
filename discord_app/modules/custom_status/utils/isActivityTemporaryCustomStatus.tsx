@@ -1,14 +1,13 @@
-// === Module 18006: isActivityTemporaryCustomStatus ===
+// === Module 18069: isActivityTemporaryCustomStatus ===
 
-// Module 18006 (isActivityTemporaryCustomStatus)
-import Constants from "Constants" /* 1084 */;
+// Module 18069 (isActivityTemporaryCustomStatus)
+import ActivityTypes from "ActivityTypes" /* 5757 */;
 import size from "module_2" /* 2 */;
 
-const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
 
 export function isActivityTemporaryCustomStatus(type) {
-  let tmp = type.type === ActivityTypes.CUSTOM_STATUS;
+  let tmp = type.type === ActivityTypes.ActivityTypes.CUSTOM_STATUS;
   if (tmp) {
     const timestamps = type.timestamps;
     let end;

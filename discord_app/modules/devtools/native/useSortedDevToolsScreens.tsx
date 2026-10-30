@@ -1,12 +1,11 @@
-// === Module 17630: useSortedDevToolsScreens ===
+// === Module 17701: useSortedDevToolsScreens ===
 
-// Module 17630 (useSortedDevToolsScreens)
+// Module 17701 (useSortedDevToolsScreens)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 17448 */;
-import DevToolsScreens from "DevToolsScreens" /* 17452 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 17502 */;
+import DevToolsScreens from "DevToolsScreens" /* 17506 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7851 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7856 */;
 
 require = fn;
 function getSortedDevToolsScreens() {
@@ -40,64 +39,10 @@ function getSortedDevToolsScreens() {
     return num2;
   });
 }
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSortedDevToolsScreens() {
-  const cResult = c.c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [DevToolsSettingsStore];
-    const fn = function s() {
-      return sortedScreenKeys.sortedScreenKeys;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-  if (cResult[2] !== stateFromStores) {
-    let sortedScreenKeys = stateFromStores;
-    if (stateFromStores === undefined) {
-      sortedScreenKeys = DevToolsSettingsStore.sortedScreenKeys;
-    }
-    const _Object = Object;
-    const entries = Object.entries(DevToolsScreens.DevToolsScreens);
-    const found = entries.filter((item) => {
-      [, obj] = item;
-      return null == obj.predicate || obj.predicate();
-    });
-    const sorted = found.sort((arg0, arg1) => {
-      [tmp] = arg0;
-      [tmp2] = arg1;
-      const index = sortedScreenKeys.indexOf(tmp);
-      const index1 = sortedScreenKeys.indexOf(tmp2);
-      let num = -1;
-      if (-1 !== index) {
-        let num3 = 1;
-        if (!tmp5) {
-          if (num !== index1) {
-            num = index - index1;
-          }
-          num3 = num;
-        }
-        let num2 = num3;
-      } else {
-        num2 = 0;
-      }
-      return num2;
-    });
-    cResult[2] = stateFromStores;
-    cResult[3] = sorted;
-    let tmp8 = sorted;
-  } else {
-    tmp8 = cResult[3];
-  }
-  return tmp8;
-}) : (function useSortedDevToolsScreens() {
+export default function useSortedDevToolsScreens() {
   const items = [DevToolsSettingsStore];
   initialize.useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
   let sortedScreenKeys;
@@ -129,8 +74,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSorte
     }
     return num2;
   });
-});
-export function updateSortOrder(screenKey, down) {
+};
+export function updateSortOrder(_require, down) {
   const items = [...DevToolsSettingsStore.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();
   while (tmp2 !== undefined) {
@@ -141,7 +86,7 @@ export function updateSortOrder(screenKey, down) {
     }
     continue;
   }
-  const index = items.indexOf(screenKey);
+  const index = items.indexOf(_require);
   if ("up" === down) {
     items[index] = items[index - 1];
     items[index - 1] = items[index];

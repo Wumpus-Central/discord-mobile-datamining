@@ -1,6 +1,6 @@
-// === Module 5292: styleConstants ===
+// === Module 5639: styleConstants ===
 
-// Module 5292 (styleConstants)
+// Module 5639 (styleConstants)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

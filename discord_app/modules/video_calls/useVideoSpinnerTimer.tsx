@@ -1,83 +1,15 @@
-// === Module 11530: useVideoSpinnerTimer ===
+// === Module 11728: useVideoSpinnerTimer ===
 
-// Module 11530 (useVideoSpinnerTimer)
-import VideoSpinnerTimer from "VideoSpinnerTimer" /* 11528 */;
+// Module 11728 (useVideoSpinnerTimer)
+import VideoSpinnerTimer from "VideoSpinnerTimer" /* 11729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoSpinnerTimer(location) {
-  const cResult = _location(videoSpinnerContext[3]).c(10);
-  _location = location.location;
-  videoSpinnerContext = location.videoSpinnerContext;
-  const userId = location.userId;
-  const streamId = location.streamId;
-  const loading = location.loading;
-  const paused = location.paused;
-  closure_5 = tmp2;
-  if (cResult[0] !== _location) {
-    const fn = function u() {
-      const videoSpinnerTimer = new VideoSpinnerTimer.VideoSpinnerTimer(_location);
-      return videoSpinnerTimer;
-    };
-    cResult[0] = _location;
-    cResult[1] = fn;
-    let tmp3 = fn;
-  } else {
-    tmp3 = cResult[1];
-  }
-  const first = userId(streamId.useState(tmp3), 1)[0];
-  if (cResult[2] === loading) {
-    if (cResult[3] === tmp2) {
-      if (cResult[4] === streamId) {
-        if (cResult[5] === userId) {
-          if (cResult[6] === videoSpinnerContext) {
-            if (cResult[7] === first) {
-              let tmp5 = cResult[8];
-              let tmp6 = cResult[9];
-            }
-            const effect = streamId.useEffect(tmp5, tmp6);
-          }
-        }
-      }
-    }
-  }
-  class T {
-    constructor() {
-      if (!paused) {
-        tmp = loading;
-        if (loading) {
-          tmp8 = closure_6;
-          onSpinnerStartedResult = closure_6.onSpinnerStarted();
-        } else {
-          tmp3 = null;
-          if (null != streamId) {
-            tmp4 = closure_6;
-            tmp5 = videoSpinnerContext;
-            tmp6 = userId;
-            trackSpinnerDurationResult = closure_6.trackSpinnerDuration(videoSpinnerContext, userId, tmp2);
-          }
-        }
-      }
-      return;
-    }
-  }
-  const items = [loading, undefined !== paused && paused, streamId, first, videoSpinnerContext, userId];
-  cResult[2] = loading;
-  cResult[3] = undefined !== paused && paused;
-  cResult[4] = streamId;
-  cResult[5] = userId;
-  cResult[6] = videoSpinnerContext;
-  cResult[7] = first;
-  cResult[8] = T;
-  cResult[9] = items;
-  tmp6 = items;
-  tmp5 = T;
-}) : (function useVideoSpinnerTimer(userId) {
+export default function useVideoSpinnerTimer(userId) {
   ({ location: require, videoSpinnerContext } = userId);
   userId = userId.userId;
   const streamId = userId.streamId;
@@ -100,4 +32,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
       }
     }
   }, items);
-});
+};

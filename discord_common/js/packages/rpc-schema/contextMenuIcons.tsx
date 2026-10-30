@@ -1,6 +1,6 @@
-// === Module 16219: contextMenuIcons ===
+// === Module 16259: contextMenuIcons ===
 
-// Module 16219 (contextMenuIcons)
+// Module 16259 (contextMenuIcons)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/contextMenuIcons.tsx");

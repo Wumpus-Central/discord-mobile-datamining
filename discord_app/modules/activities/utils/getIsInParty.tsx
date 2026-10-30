@@ -1,6 +1,6 @@
-// === Module 11447: getIsInParty ===
+// === Module 11648: getIsInParty ===
 
-// Module 11447 (getIsInParty)
+// Module 11648 (getIsInParty)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");

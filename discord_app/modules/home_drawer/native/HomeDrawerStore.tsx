@@ -1,11 +1,11 @@
-// === Module 17958: HomeDrawerStore ===
+// === Module 18018: HomeDrawerStore ===
 
-// Module 17958 (HomeDrawerStore)
-import Constants from "Constants" /* 1084 */;
-import _mod4920 from "module_4920" /* 4920 */;
-import timing from "timing" /* 5243 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17959 */;
-import identity from "module_1266" /* 1266 */;
+// Module 18018 (HomeDrawerStore)
+import Constants from "Constants" /* 1072 */;
+import _mod4924 from "module_4924" /* 4924 */;
+import timing from "timing" /* 5249 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18019 */;
+import identity from "module_1255" /* 1255 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -24,10 +24,10 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj.lastInteractionAt = { current: 0 };
   const obj5 = require("ReanimatedRexport");
   obj.isPanelTouchActive = require("ReanimatedRexport").makeMutable(false);
-  obj.setPanelX = function setPanelX(open) {
+  obj.setPanelX = function setPanelX(arg0) {
     const tmp = closure_1();
     ({ panelX, snapX, isOpenTarget, gestureState } = tmp);
-    if (isOpenTarget.get() !== "open" === open) {
+    if (isOpenTarget.get() !== "open" === arg0) {
       const result = isOpenTarget.set(tmp2);
       let num = 0;
       if (tmp2) {
@@ -49,7 +49,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     closure_1().lastInteractionAt.current = Date.now();
   };
   return obj;
-}, _mod4920.shallow);
+}, _mod4924.shallow);
 let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;

@@ -1,15 +1,15 @@
-// === Module 11747: GameConsoleActionCreators ===
+// === Module 11940: GameConsoleActionCreators ===
 
-// Module 11747 (GameConsoleActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5895 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 11748 */;
+// Module 11940 (GameConsoleActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5902 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 11941 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import SessionsStore from "SessionsStore" /* 5754 */;
-import GameConsoleStore from "GameConsoleStore" /* 5753 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import SessionsStore from "SessionsStore" /* 5761 */;
+import GameConsoleStore from "GameConsoleStore" /* 5760 */;
 
 require = fn;
 function disconnectRemote() {
@@ -91,7 +91,7 @@ let closure_12 = async function _getConnectNonce() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_12 = async function _getConnectNonce() {
             CREATE_NEW_CALL = ConsoleHandoffType.ConsoleHandoffType.CREATE_NEW_CALL;
             tmp21 = require;
           }
-          const HTTP = tmp21(1294).HTTP;
+          const HTTP = tmp21(1283).HTTP;
           const request = { url: constants.CONNECT_REQUEST_CREATE, body: null, rejectWithError: false };
           const obj5 = { analytics_properties: null };
           const obj6 = { handoff_type: CREATE_NEW_CALL };
@@ -158,7 +158,7 @@ let closure_12 = async function _getConnectNonce() {
 };
 function cancelConnectRequest(nonce) {
   const HTTP = HTTPUtils.HTTP;
-  return HTTP.del({ url: closure_1_8.CONNECT_REQUEST(nonce), rejectWithError: false });
+  return HTTP.del({ url: React6.CONNECT_REQUEST(nonce), rejectWithError: false });
 }
 let closure_14 = async function _fetchDevices() {
   c5 = 0;
@@ -175,7 +175,7 @@ let closure_14 = async function _fetchDevices() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ let closure_16 = async function _cancelCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -313,7 +313,7 @@ let closure_16 = async function _cancelCommand() {
           const obj11 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS", platform: closure_131_0, deviceId: closure_131_1, commandId: closure_131_2 };
           closure_132_1(closure_132_2[6]).dispatch(obj11);
           c8 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp28) {
         closure_5 = tmp28;
@@ -327,7 +327,7 @@ let closure_16 = async function _cancelCommand() {
     }
   })();
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8, PlatformTypes: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");

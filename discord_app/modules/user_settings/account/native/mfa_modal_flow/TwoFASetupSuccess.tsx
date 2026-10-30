@@ -1,15 +1,14 @@
-// === Module 16561: TwoFASetupSuccess ===
+// === Module 16612: TwoFASetupSuccess ===
 
-// Module 16561 (TwoFASetupSuccess)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import native from "native" /* 1199 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 16551 */;
-import _mod16562 from "module_16562" /* 16562 */;
+// Module 16612 (TwoFASetupSuccess)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1188 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 16602 */;
+import _mod16613 from "module_16613" /* 16613 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG }, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
 let size = { height: 2, width: 48, margin: 32, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
@@ -28,266 +27,94 @@ obj2.ctaDescription = { fontSize: 14, textAlign: "center", marginTop: 4, marginH
 let obj4 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
 obj2.errorText = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let closure_9 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj5 = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASetupSuccess() {
-  const cResult = c.c(40);
-  const tmp4 = closure_9();
-  [tmp6, require] = noop.useState(false);
-  const tmp5 = _slicedToArray(noop.useState(false), 2);
-  [tmp8, importDefault] = noop.useState("");
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function o() {
-      setError("");
-      setRegistering = asyncGeneratorStep(async (arg0) => {
-        ({ ticket, credential } = closure_0);
-        const intl = closure_0(1125).intl;
-        await closure_0(6735).finishRegisterWebAuthnCredential(intl.string(closure_0(1125).t["8H5RmH"]), ticket, credential);
-        if (1 === tmp7) {
-          c4 = 0;
-          tmp3(tmp17.body.message);
-          c5 = 3;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          setError(16550).close();
-          c4 = 0;
-          setError(16550);
-        }
-        return value;
-      });
-      setError(dependencyMap[12]).registerPasskey({
-        setRegistering,
-        setError,
-        onRegisterSuccess() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        }
-      });
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== tmp4.flex) {
-    const obj2 = { style: tmp4.flex };
-    const tmp13 = closure_7(View, obj2);
-    cResult[1] = tmp4.flex;
-    cResult[2] = tmp13;
-    let tmp10 = tmp13;
-  } else {
-    tmp10 = cResult[2];
-  }
-  if (cResult[3] !== tmp4.image) {
-    const obj3 = { source: _mod16562, style: tmp4.image };
-    const tmp18 = closure_7(FastImageDefault, obj3);
-    cResult[3] = tmp4.image;
-    cResult[4] = tmp18;
-    let tmp14 = tmp18;
-  } else {
-    tmp14 = cResult[4];
-  }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    let intl = util.intl;
-    const stringResult = intl.string(util.t.Awk3Gw);
-    cResult[5] = stringResult;
-    let tmp19 = stringResult;
-  } else {
-    tmp19 = cResult[5];
-  }
-  if (cResult[6] !== tmp4.success) {
-    const obj4 = { style: tmp4.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: tmp19 };
-    const tmp23 = closure_7(Text_Text.Text, obj4);
-    cResult[6] = tmp4.success;
-    cResult[7] = tmp23;
-    let tmp21 = tmp23;
-  } else {
-    tmp21 = cResult[7];
-  }
-  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = util.intl;
-    const stringResult1 = intl2.string(util.t["0d1bXM"]);
-    cResult[8] = stringResult1;
-    let tmp24 = stringResult1;
-  } else {
-    tmp24 = cResult[8];
-  }
-  if (cResult[9] !== tmp4.successBody) {
-    const obj5 = { style: tmp4.successBody, children: tmp24 };
-    const tmp28 = closure_7(native.LegacyText, obj5);
-    cResult[9] = tmp4.successBody;
-    cResult[10] = tmp28;
-    let tmp26 = tmp28;
-  } else {
-    tmp26 = cResult[10];
-  }
-  if (cResult[11] !== tmp4.divider) {
-    const obj6 = { style: tmp4.divider };
-    const tmp32 = closure_7(View, obj6);
-    cResult[11] = tmp4.divider;
-    cResult[12] = tmp32;
-    let tmp29 = tmp32;
-  } else {
-    tmp29 = cResult[12];
-  }
-  if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = util.intl;
-    const stringResult2 = intl3.string(util.t.okgGTu);
-    cResult[13] = stringResult2;
-    let tmp33 = stringResult2;
-  } else {
-    tmp33 = cResult[13];
-  }
-  if (cResult[14] !== tmp4.ctaDescription) {
-    const obj7 = { style: tmp4.ctaDescription, children: tmp33 };
-    const tmp37 = closure_7(native.LegacyText, obj7);
-    cResult[14] = tmp4.ctaDescription;
-    cResult[15] = tmp37;
-    let tmp35 = tmp37;
-  } else {
-    tmp35 = cResult[15];
-  }
-  if (cResult[16] !== tmp6) {
-    const intl4 = util.intl;
-    const string = intl4.string;
-    let wePEBF = util.t;
-    if (tmp6) {
-      wePEBF = wePEBF.wePEBF;
-      let stringResult3 = string(wePEBF);
-    } else {
-      stringResult3 = string(wePEBF.NIFmCJ);
-    }
-    cResult[16] = tmp6;
-    cResult[17] = stringResult3;
-  } else {
-    if (cResult[18] === tmp6) {
-      if (cResult[19] === tmp38) {
-        let tmp41 = cResult[20];
-      }
-      if (cResult[21] === tmp8) {
-        if (cResult[22] === tmp4.errorText) {
-          let tmp44 = cResult[23];
-        }
-        if (cResult[24] === tmp4.buttonWrapper) {
-          if (cResult[25] === tmp41) {
-            if (cResult[26] === tmp44) {
-              let tmp47 = cResult[27];
-            }
-            if (cResult[28] !== tmp4.flex) {
-              const obj8 = { style: tmp4.flex };
-              const tmp54 = closure_7(View, obj8);
-              cResult[28] = tmp4.flex;
-              cResult[29] = tmp54;
-              let tmp51 = tmp54;
-            } else {
-              tmp51 = cResult[29];
-            }
-            if (cResult[30] === tmp4.container) {
-              if (cResult[31] === tmp29) {
-                if (cResult[32] === tmp35) {
-                  if (cResult[33] === tmp47) {
-                    if (cResult[34] === tmp51) {
-                      if (cResult[35] === tmp10) {
-                        if (cResult[36] === tmp14) {
-                          if (cResult[37] === tmp21) {
-                            if (cResult[38] === tmp26) {
-                              let tmp55 = cResult[39];
-                            }
-                            return tmp55;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            const obj9 = { children: null };
-            const obj10 = { style: tmp4.container, children: null };
-            const items = [tmp10, tmp14, tmp21, tmp26, tmp29, tmp35, tmp47, tmp51];
-            obj10.children = items;
-            obj9.children = closure_8(View, obj10);
-            const tmp59 = closure_7(TwoFASetupModal.TwoFASetupModalScreen, obj9);
-            cResult[30] = tmp4.container;
-            cResult[31] = tmp29;
-            cResult[32] = tmp35;
-            cResult[33] = tmp47;
-            cResult[34] = tmp51;
-            cResult[35] = tmp10;
-            cResult[36] = tmp14;
-            cResult[37] = tmp21;
-            cResult[38] = tmp26;
-            cResult[39] = tmp59;
-            tmp55 = tmp59;
-          }
-        }
-        const obj11 = { style: tmp4.buttonWrapper, children: null };
-        const items1 = [tmp41, tmp44];
-        obj11.children = items1;
-        const tmp50 = closure_8(View, obj11);
-        cResult[24] = tmp4.buttonWrapper;
-        cResult[25] = tmp41;
-        cResult[26] = tmp44;
-        cResult[27] = tmp50;
-        tmp47 = tmp50;
-      }
-      let tmp45 = "" !== tmp8;
-      if (tmp45) {
-        const obj12 = { style: tmp4.errorText, children: tmp8 };
-        tmp45 = closure_7(native.LegacyText, obj12);
-      }
-      cResult[21] = tmp8;
-      cResult[22] = tmp4.errorText;
-      cResult[23] = tmp45;
-      tmp44 = tmp45;
-    }
-    const obj13 = { text: cResult[17], onPress: first, disabled: tmp6, loading: tmp6, grow: true };
-    const tmp43 = closure_7(components_Button_Button.Button, obj13);
-    cResult[18] = tmp6;
-    cResult[19] = cResult[17];
-    cResult[20] = tmp43;
-    tmp41 = tmp43;
-  }
-  const tmp7 = _slicedToArray(noop.useState(""), 2);
-}) : (function TwoFASetupSuccess() {
+export default function TwoFASetupSuccess() {
   const tmp = closure_9();
   [tmp3, require] = noop.useState(false);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   [tmp5, importDefault] = noop.useState("");
   const callback = noop.useCallback(() => {
-    setRegistering = async function _onRegisterSuccess2(arg0) {
-      closure_2 = tmp3;
-      ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
-      await "Reflect";
-      const intl = setRegistering(1125).intl;
-      await closure_2_0(6735).finishRegisterWebAuthnCredential(intl.string(closure_2_0(1125).t["8H5RmH"]), closure_129_0, closure_129_1);
-      if (2 === tmp8) {
-        c4 = 0;
-        tmp5(tmp19.body.message);
+    setRegistering = async function _onRegisterSuccess(arg0) {
+      if (c6 === 2) {
         c6 = 3;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        setError(16550).close();
-        c4 = 0;
-        setError(16550);
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_2 = tmp3;
+              closure_129_0 = undefined;
+              closure_129_1 = undefined;
+              ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
+              c5 = 1;
+              c6 = 1;
+              return { value: "flexDirection", done: true };
+            }
+          } else if (1 === tmp8) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              c4 = 1;
+              const intl = setRegistering(1114).intl;
+              c5 = 3;
+              c6 = 1;
+              const obj5 = { value: setRegistering(6742).finishRegisterWebAuthnCredential(intl.string(setRegistering(1114).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              return obj5;
+            }
+          } else {
+            if (2 === tmp8) {
+              c4 = 0;
+              tmp5(tmp19.body.message);
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              setError(16601).close();
+              c4 = 0;
+              const obj = setError(16601);
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          }
+        } catch (tmp19) {
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp19;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      return value;
     };
     setError("");
-    setError(dependencyMap[12]).registerPasskey({
+    setError(dependencyMap[10]).registerPasskey({
       setRegistering,
       setError,
       onRegisterSuccess(arg0) {
@@ -302,19 +129,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
       }
     });
   }, []);
-  const obj = { style: tmp.container, children: null };
+  let obj = { style: tmp.container, children: null };
   const items = [closure_7(View, { style: tmp.flex }), , , , , , , ];
-  const obj3 = { source: null, style: null };
-  const obj2 = { style: tmp.flex };
+  let obj3 = { source: null, style: null };
+  let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod16562;
+  obj3.source = _mod16613;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
-  const obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);
   items[2] = closure_7(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.successBody, children: null };
+  let obj5 = { style: tmp.successBody, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t["0d1bXM"]);
   items[3] = closure_7(native.LegacyText, obj5);
@@ -346,4 +173,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
   obj.children = items;
   obj10.children = closure_8(View, obj);
   return closure_7(TwoFASetupModal.TwoFASetupModalScreen, obj10);
-});
+};

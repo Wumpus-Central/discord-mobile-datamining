@@ -1,9 +1,9 @@
-// === Module 15715: GuildPopoutStore ===
+// === Module 15755: GuildPopoutStore ===
 
-// Module 15715 (GuildPopoutStore)
+// Module 15755 (GuildPopoutStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7507 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7515 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -24,7 +24,7 @@ prototype["isFetchingGuild"] = function isFetchingGuild(arg0) {
   return tmp2;
 };
 prototype["getGuild"] = function getGuild(arg0) {
-  guild = null;
+  let guild = null;
   if (null != closure_4.guilds[arg0]) {
     guild = tmp.guild;
   }

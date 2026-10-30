@@ -1,13 +1,13 @@
-// === Module 8940: useCanInviteForGuildEvent ===
+// === Module 8973: useCanInviteForGuildEvent ===
 
-// Module 8940 (useCanInviteForGuildEvent)
-import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
-import canViewInviteModal from "canViewInviteModal" /* 8941 */;
-import StageInstanceStore from "StageInstanceStore" /* 4862 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildChannelStore from "GuildChannelStore" /* 4935 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+// Module 8973 (useCanInviteForGuildEvent)
+import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
+import canViewInviteModal from "canViewInviteModal" /* 8974 */;
+import StageInstanceStore from "StageInstanceStore" /* 4863 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildChannelStore from "GuildChannelStore" /* 4939 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 const require = globalThis.__r;
 
@@ -52,7 +52,7 @@ function isGuildEventInvitable(guildEvent) {
     } else {
       defaultChannel = obj2.getChannel(channel_id);
     }
-    guild = obj3.getGuild(guildEvent.guild_id);
+    const guild = obj3.getGuild(guildEvent.guild_id);
     const stageInstanceByChannel = obj4.getStageInstanceByChannel(channel_id);
     const obj5 = canViewInviteModal;
     let canViewInviteModalResult = obj5.canViewInviteModal(PermissionStore, guild, defaultChannel, stageInstanceByChannel);
@@ -67,41 +67,13 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(6842).isGuildEventEnded;
-const constants = fn(4863).GuildScheduledEventEntityTypes;
-const Permissions = fn(1084).Permissions;
-const ReactCompilerGating = fn(558);
+const isGuildEventEnded = fn(6849).isGuildEventEnded;
+const constants = fn(4864).GuildScheduledEventEntityTypes;
+const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanInviteForGuildEvent(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function s() {
-      const items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
-      return isGuildEventInvitable(closure_0, items);
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp10 = items1;
-    let tmp9 = fn;
-  } else {
-    tmp9 = cResult[2];
-    tmp10 = cResult[3];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp9, tmp10);
-}) : (function useCanInviteForGuildEvent(arg0) {
+export default function useCanInviteForGuildEvent(arg0) {
   _require = arg0;
   let items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
   const items1 = [arg0];
@@ -109,6 +81,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanIn
     const items = [GuildChannelStore, ChannelStore, GuildStore, StageInstanceStore];
     return isGuildEventInvitable(closure_0, items);
   }, items1);
-});
+};
 export { canEveryoneRoleViewEvent };
 export { isGuildEventInvitable };

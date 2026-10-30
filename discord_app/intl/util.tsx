@@ -1,29 +1,24 @@
-// === Module 1127: intl/util ===
+// === Module 1116: intl/util ===
 
-// Module 1127 (intl/util)
-import c from "c" /* 576 */;
-import _mod1164 from "module_1164" /* 1164 */;
-import _Parser from "_Parser" /* 1187 */;
+// Module 1116 (intl/util)
+import _mod1153 from "module_1153" /* 1153 */;
+import _Parser from "_Parser" /* 1176 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = { es: "es-ES", nb: "no", nn: "no" };
-const ReactCompilerGating = fn(558);
-function getLanguages() {
-  return require("module_1186");
-}
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/util.tsx");
 
 export function getAvailableLocales() {
-  _require = require("module_1128").default;
-  const found = require("module_1186").filter((enabled) => enabled.enabled);
+  _require = require("module_1117").default;
+  const found = require("module_1175").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
-    const obj2 = _mod1164;
+    const obj2 = _mod1153;
     obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
   });
@@ -41,9 +36,11 @@ export function getAvailableLocales() {
     return num;
   });
 }
-export { getLanguages };
+export function getLanguages() {
+  return require("module_1175");
+}
 export function getNormalizedLocale(Language, arg1) {
-  const found = require("module_1186").filter((enabled) => enabled.enabled);
+  const found = require("module_1175").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
     return Language;
@@ -74,42 +71,15 @@ export function getNormalizedLocale(Language, arg1) {
       }
     }
   }
-  const arr = require("module_1186");
+  const arr = require("module_1175");
 }
 export function parseRuntimeIcuAsIntlMessage(acknowledgedBadgeLabel, currentLocale) {
   const parsed = _Parser.parse(acknowledgedBadgeLabel, { ignoreTag: true });
-  const internalIntlMessage = new _mod1164.InternalIntlMessage(parsed, currentLocale);
+  const internalIntlMessage = new _mod1153.InternalIntlMessage(parsed, currentLocale);
   return internalIntlMessage;
 }
-export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncMessages(arg0, arg1) {
+export function useSyncMessages(arg0, withFormattersResult) {
   closure_0 = arg0;
-  const currentLocale = arg1;
-  const cResult = c.c(5);
-  if (cResult[0] !== arg0) {
-    const fn = function s(arg0) {
-      return closure_0.onChange(arg0);
-    };
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    let tmp2 = fn;
-  } else {
-    tmp2 = cResult[1];
-  }
-  if (cResult[2] === arg1) {
-    if (cResult[3] === arg0) {
-      let tmp3 = cResult[4];
-    }
-    const syncExternalStore = noop.useSyncExternalStore(tmp2, tmp3);
-  }
-  const fn2 = function l() {
-    return closure_0.isLocaleLoaded(currentLocale.currentLocale);
-  };
-  cResult[2] = arg1;
-  cResult[3] = arg0;
-  cResult[4] = fn2;
-  tmp3 = fn2;
-}) : (function useSyncMessages(arg0, arg1) {
-  closure_0 = arg0;
-  const currentLocale = arg1;
+  const currentLocale = withFormattersResult;
   const syncExternalStore = noop.useSyncExternalStore((arg0) => closure_0.onChange(arg0), () => closure_0.isLocaleLoaded(currentLocale.currentLocale));
-});
+}

@@ -1,14 +1,14 @@
-// === Module 1272: discord_common/AnalyticsUtils ===
+// === Module 1261: discord_common/AnalyticsUtils ===
 
-// Module 1272 (discord_common/AnalyticsUtils)
+// Module 1261 (discord_common/AnalyticsUtils)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsTrackingStore from "AnalyticsTrackingStore" /* 1273 */;
-import StandardAnalyticsConstants from "StandardAnalyticsConstants" /* 1352 */;
-import AnalyticsTrackingActionCreators from "AnalyticsTrackingActionCreators" /* 1353 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import encodeProperties from "encodeProperties" /* 1357 */;
-import AnalyticsSchema from "AnalyticsSchema" /* 1358 */;
-import getSuperProperties from "getSuperProperties" /* 1359 */;
+import AnalyticsTrackingStore from "AnalyticsTrackingStore" /* 1262 */;
+import StandardAnalyticsConstants from "StandardAnalyticsConstants" /* 1341 */;
+import AnalyticsTrackingActionCreators from "AnalyticsTrackingActionCreators" /* 1342 */;
+import _modDef1343 from "module_1343" /* 1343 */;
+import encodeProperties from "encodeProperties" /* 1346 */;
+import AnalyticsSchema from "AnalyticsSchema" /* 1347 */;
+import getSuperProperties from "getSuperProperties" /* 1348 */;
 import size from "module_2" /* 2 */;
 
 const dependencyMap = {};
@@ -85,7 +85,7 @@ export (arg0) => {
             }
           }
           if (obj3.deduplicate) {
-            if (_modDef1354(closure_5[joined], obj2)) {
+            if (_modDef1343(closure_5[joined], obj2)) {
               return Promise.resolve();
             } else {
               closure_5[joined] = obj2;

@@ -1,8 +1,8 @@
-// === Module 9995: useEmojiPickerViewableItemsCallback ===
+// === Module 10022: useEmojiPickerViewableItemsCallback ===
 
-// Module 9995 (useEmojiPickerViewableItemsCallback)
+// Module 10022 (useEmojiPickerViewableItemsCallback)
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 

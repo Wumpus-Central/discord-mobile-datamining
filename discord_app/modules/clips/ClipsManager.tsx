@@ -1,34 +1,34 @@
-// === Module 19892: clips/ClipsManager ===
+// === Module 19955: clips/ClipsManager ===
 
-// Module 19892 (clips/ClipsManager)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import DiscordNativeDefault from "DiscordNative" /* 4819 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5777 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6704 */;
-import isClipsEnabled from "isClipsEnabled" /* 15131 */;
-import ClipsExperiment from "ClipsExperiment" /* 15132 */;
+// Module 19955 (clips/ClipsManager)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import DiscordNativeDefault from "DiscordNative" /* 4820 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5784 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6711 */;
+import isClipsEnabled from "isClipsEnabled" /* 15171 */;
+import ClipsExperiment from "ClipsExperiment" /* 15172 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7872 */;
-import ClipsStore from "ClipsStore" /* 2018 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7878 */;
+import ClipsStore from "ClipsStore" /* 2013 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(5771).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8203);
+const getSystemAnalyticsInfo = fn(5778).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8206);
 ({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1, CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_14, ClipsHardwareClassification: closure_15, CLIP_RUNTIME: closure_16 } = ClipsConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(6702).StreamTypes;
-const Features = fn(5756).Features;
+const StreamTypes = fn(6709).StreamTypes;
+const Features = fn(5763).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -227,7 +227,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

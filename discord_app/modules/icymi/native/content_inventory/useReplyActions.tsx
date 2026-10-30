@@ -1,28 +1,28 @@
-// === Module 18465: useReplyActions ===
+// === Module 18524: useReplyActions ===
 
-// Module 18465 (useReplyActions)
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5262 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8672 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8881 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9891 */;
+// Module 18524 (useReplyActions)
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5610 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8706 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8915 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9918 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7689).DraftType;
-const EmojiIntention = fn(1392).EmojiIntention;
-const MessageSendLocation = fn(5010).MessageSendLocation;
+const DraftType = fn(7694).DraftType;
+const EmojiIntention = fn(1387).EmojiIntention;
+const MessageSendLocation = fn(5014).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
-export function useReplyActions(cResult) {
-  const content = cResult.content;
+export function useReplyActions(content) {
+  content = content.content;
   _require = content;
   let hotwheels_gaming_activity;
   let stateFromStores1;
@@ -74,7 +74,7 @@ export function useReplyActions(cResult) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -229,7 +229,7 @@ export function useReplyActions(cResult) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18466, dependencyMap.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18525, dependencyMap.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

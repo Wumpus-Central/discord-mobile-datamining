@@ -1,16 +1,16 @@
-// === Module 6045: getSoundmojiASTFromString ===
+// === Module 6052: getSoundmojiASTFromString ===
 
-// Module 6045 (getSoundmojiASTFromString)
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import isSoundValidDefault from "isSoundValid" /* 7509 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 13227 */;
-import getSoundFromMessageDefault from "getSoundFromMessage" /* 15571 */;
-import getSoundStringDefault from "getSoundString" /* 15572 */;
-import SoundboardStore from "SoundboardStore" /* 6046 */;
-import MessageStore from "MessageStore" /* 6049 */;
+// Module 6052 (getSoundmojiASTFromString)
+import AvatarUtils from "AvatarUtils" /* 1410 */;
+import isSoundValidDefault from "isSoundValid" /* 7517 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 13377 */;
+import getSoundFromMessageDefault from "getSoundFromMessage" /* 15611 */;
+import getSoundStringDefault from "getSoundString" /* 15612 */;
+import SoundboardStore from "SoundboardStore" /* 6053 */;
+import MessageStore from "MessageStore" /* 6056 */;
 
 require = fn;
-const MessageStates = fn(1084).MessageStates;
+const MessageStates = fn(1072).MessageStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
 

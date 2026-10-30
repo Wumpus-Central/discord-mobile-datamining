@@ -1,8 +1,8 @@
-// === Module 10827: ConjureSpendLimitStore ===
+// === Module 10850: ConjureSpendLimitStore ===
 
-// Module 10827 (ConjureSpendLimitStore)
+// Module 10850 (ConjureSpendLimitStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

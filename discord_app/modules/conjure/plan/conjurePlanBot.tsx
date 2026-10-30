@@ -1,9 +1,9 @@
-// === Module 12547: conjurePlanBot ===
+// === Module 12699: conjurePlanBot ===
 
-// Module 12547 (conjurePlanBot)
-import Server from "Server" /* 1998 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6832 */;
-import conjurePlanTags from "conjurePlanTags" /* 12536 */;
+// Module 12699 (conjurePlanBot)
+import Server from "Server" /* 1993 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6839 */;
+import conjurePlanTags from "conjurePlanTags" /* 12688 */;
 import size from "module_2" /* 2 */;
 
 function isAppCommand(type) {
@@ -80,10 +80,10 @@ const set = new Set(items);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanBot.tsx");
 
 export { isAppCommand };
-export function getConjurePlanBotInteraction(supported_surfaces) {
-  bot = supported_surfaces;
-  const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(supported_surfaces, ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
-  if (!obj2.planDeclaresSurface(supported_surfaces, ConjureProjectTypes.ConjureSupportedSurface.BOT)) {
+export function getConjurePlanBotInteraction(proposal) {
+  bot = proposal;
+  const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
+  if (!obj2.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.BOT)) {
     if (!planDeclaresSurfaceResult) {
       return null;
     }

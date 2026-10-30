@@ -1,7 +1,7 @@
-// === Module 7685: AutomodFeedback ===
+// === Module 7690: AutomodFeedback ===
 
-// Module 7685 (AutomodFeedback)
-import util from "util" /* 1125 */;
+// Module 7690 (AutomodFeedback)
+import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
 const Feedback = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
@@ -24,13 +24,13 @@ export function generateFeedbackOptions() {
 }
 export const RaidAlertType = { JOIN_RAID: "JOIN_RAID", MENTION_RAID: "MENTION_RAID" };
 export const RaidResolutionType = obj2;
-export function getMostImportantRaidResolutionType(c3) {
-  if (obj2.includes(obj2.LEGITIMATE_ACTIVITY)) {
+export function getMostImportantRaidResolutionType(arr) {
+  if (arr.includes(obj2.LEGITIMATE_ACTIVITY)) {
     let DM_SPAM = obj2.LEGITIMATE_ACTIVITY;
-  } else if (obj2.includes(obj2.DM_SPAM)) {
+  } else if (arr.includes(obj2.DM_SPAM)) {
     DM_SPAM = obj2.DM_SPAM;
   } else {
-    DM_SPAM = obj2.includes(obj2.JOIN_RAID) ? obj2.JOIN_RAID : obj2.OTHER;
+    DM_SPAM = arr.includes(obj2.JOIN_RAID) ? obj2.JOIN_RAID : obj2.OTHER;
   }
   return DM_SPAM;
 }

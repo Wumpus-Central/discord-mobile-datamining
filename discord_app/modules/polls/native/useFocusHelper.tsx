@@ -1,6 +1,6 @@
-// === Module 12225: useFocusHelper ===
+// === Module 12381: useFocusHelper ===
 
-// Module 12225 (useFocusHelper)
+// Module 12381 (useFocusHelper)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 

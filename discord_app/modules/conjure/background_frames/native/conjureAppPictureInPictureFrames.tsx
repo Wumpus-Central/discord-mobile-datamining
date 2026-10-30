@@ -1,19 +1,19 @@
-// === Module 18566: conjureAppPictureInPictureFrames ===
+// === Module 18625: conjureAppPictureInPictureFrames ===
 
-// Module 18566 (conjureAppPictureInPictureFrames)
+// Module 18625 (conjureAppPictureInPictureFrames)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10880 */;
-import closeFrameDefault from "closeFrame" /* 14314 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 14332 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18562 */;
-import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 18565 */;
-import ApplicationStore from "ApplicationStore" /* 2043 */;
-import FramesStore from "FramesStore" /* 6833 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10903 */;
+import closeFrameDefault from "closeFrame" /* 14344 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 14362 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 18621 */;
+import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 18624 */;
+import ApplicationStore from "ApplicationStore" /* 2040 */;
+import FramesStore from "FramesStore" /* 6840 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
 
 require = fn;
 function canFloat(id) {
@@ -85,18 +85,16 @@ function closeToMakeRoom(frameId) {
     const obj = { text: null };
     const intl = util.intl;
     const obj2 = { appName: tmp3 };
-    obj.text = intl.formatToPlainString(_modDef3864.jmMirO, obj2);
+    obj.text = intl.formatToPlainString(_modDef3865.jmMirO, obj2);
     ToastActionCreatorsDefault.open("CONJURE_APP_PIP_CLOSED_TO_MAKE_ROOM", obj);
     const tmp7Result = ToastActionCreatorsDefault;
   }
 }
-const FramesConstants = fn(6834);
+const FramesConstants = fn(6841);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const items = [FramesStore, UnsyncedUserSettingsStore, ConjureProjectStore];
-let ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/conjure/background_frames/native/conjureAppPictureInPictureFrames.tsx");
+let result = size.fileFinishedImporting("modules/conjure/background_frames/native/conjureAppPictureInPictureFrames.tsx");
 
 export const FLOATING_APP_STORES = items;
 export function getFloatableFrames() {

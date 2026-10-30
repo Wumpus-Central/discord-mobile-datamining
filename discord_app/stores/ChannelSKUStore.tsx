@@ -1,8 +1,8 @@
-// === Module 15549: ChannelSKUStore ===
+// === Module 15589: ChannelSKUStore ===
 
-// Module 15549 (ChannelSKUStore)
+// Module 15589 (ChannelSKUStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let closure_0 = {};
 const Store = initializeDefault.Store;

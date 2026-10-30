@@ -1,12 +1,12 @@
-// === Module 7783: GuildVersions ===
+// === Module 7788: GuildVersions ===
 
-// Module 7783 (GuildVersions)
+// Module 7788 (GuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4883 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4887 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4879 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 require = fn;
 let closure_6 = new LoggerDefault("GuildVersions");
@@ -75,7 +75,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

@@ -1,44 +1,15 @@
-// === Module 13553: ScheduledMessageDraftCoachmarkHooks ===
+// === Module 13702: ScheduledMessageDraftCoachmarkHooks ===
 
-// Module 13553 (ScheduledMessageDraftCoachmarkHooks)
-import c from "c" /* 576 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7555 */;
+// Module 13702 (ScheduledMessageDraftCoachmarkHooks)
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7563 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-let closure_3 = fn(4841).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
-const ReactCompilerGating = fn(558);
+let closure_3 = fn(4842).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageDraftCoachmarkHooks.tsx");
 
-export const useScheduledMessageDraftCoachmarkState = ReactCompilerGating.isReactCompilerEnabled() ? (function useScheduledMessageDraftCoachmarkState(isEligible) {
-  const cResult = c.c(5);
-  isEligible = isEligible.isEligible;
-  if (cResult[0] !== isEligible) {
-    if (isEligible) {
-      const items = [closure_3];
-      let items1 = items;
-    } else {
-      items1 = [];
-    }
-    cResult[0] = isEligible;
-    cResult[1] = items1;
-  } else {
-    const tmp7 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(cResult[1]), 2);
-    if (cResult[2] === tmp7[1]) {
-      if (cResult[3] === tmp10) {
-        let tmp11 = cResult[4];
-      }
-      return tmp11;
-    }
-    const obj2 = { isCoachmarkVisible: tmp7[0] === closure_3, dismissCoachmark: tmp7[1] };
-    cResult[2] = tmp7[1];
-    cResult[3] = tmp7[0] === closure_3;
-    cResult[4] = obj2;
-    tmp11 = obj2;
-    const tmpResult = useSelectedDismissibleContent;
-  }
-}) : (function useScheduledMessageDraftCoachmarkState(isEligible) {
+export function useScheduledMessageDraftCoachmarkState(isEligible) {
   if (isEligible.isEligible) {
     const items = [closure_3];
     let items1 = items;
@@ -47,4 +18,4 @@ export const useScheduledMessageDraftCoachmarkState = ReactCompilerGating.isReac
   }
   const tmp2 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(items1), 2);
   return { isCoachmarkVisible: tmp2[0] === closure_3, dismissCoachmark: tmp2[1] };
-});
+}

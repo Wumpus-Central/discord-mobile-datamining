@@ -2,7 +2,7 @@
 
 // Module 503 (BrowserHandoffStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const Store = initializeDefault.Store;
 class BrowserHandoffStore extends Store {

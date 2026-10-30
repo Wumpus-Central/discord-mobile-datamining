@@ -1,9 +1,9 @@
-// === Module 5938: VideoQualityStats ===
+// === Module 5945: VideoQualityStats ===
 
-// Module 5938 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 5760 */;
-import Histogram from "Histogram" /* 5921 */;
-import SystemResourcesDefault from "SystemResources" /* 5929 */;
+// Module 5945 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 5767 */;
+import Histogram from "Histogram" /* 5928 */;
+import SystemResourcesDefault from "SystemResources" /* 5936 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

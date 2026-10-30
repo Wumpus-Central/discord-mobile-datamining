@@ -1,30 +1,30 @@
-// === Module 6039: MediaFormatTesters ===
+// === Module 6046: MediaFormatTesters ===
 
-// Module 6039 (MediaFormatTesters)
-import WebViewWebmSupportTest from "WebViewWebmSupportTest" /* 6040 */;
+// Module 6046 (MediaFormatTesters)
+import WebViewWebmSupportTest from "WebViewWebmSupportTest" /* 6047 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const re3 = /\.(png|jpe?g|jfif|webp|gif|heic|heif|dng|avif)$/i;
 const re4 = /\.(webp|gif|avif)$/i;
 const re5 = /\.gif$/i;
-let PlatformUtils = fn(1381);
+let PlatformUtils = fn(1376);
 if (PlatformUtils.isIOS()) {
   let tmp2 = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i;
 } else {
-  tmp2 = fn(1381).isAndroid() ? /\.(mp3|m4a|wav|ogg|opus|flac)$/i : /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i;
-  let obj2 = fn(1381);
+  tmp2 = fn(1376).isAndroid() ? /\.(mp3|m4a|wav|ogg|opus|flac)$/i : /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i;
+  let obj2 = fn(1376);
 }
 const regex = tmp2;
 const re7 = /\.(webm)$/i;
 const re8 = /\.(riv)$/i;
-PlatformUtils = fn(1381);
+PlatformUtils = fn(1376);
 if (PlatformUtils.isIOS()) {
   let tmp4 = /\.(mp4|mov|qt)$/i;
 } else {
-  fn(1381).isAndroid();
+  fn(1376).isAndroid();
   tmp4 = /\.(mp4|webm|mov|qt)$/i;
-  const obj4 = fn(1381);
+  const obj4 = fn(1376);
 }
 const re9 = tmp4;
 function urlMatchesFileExtension(sourceURI, GIF_RE_IOS) {
@@ -115,18 +115,18 @@ export function isAudioFile(filename) {
   return isMatch;
 }
 export { isWebPlayerVideoUrl };
-export function isVideoUrl(proxyURL) {
+export function isVideoUrl(url) {
   let flag = false;
-  if (null != proxyURL) {
-    const tmp2 = _slicedToArray(proxyURL.split(/\?/, 1), 2);
+  if (null != url) {
+    const tmp2 = _slicedToArray(url.split(/\?/, 1), 2);
     flag = re9.test(tmp2[0]);
   }
   if (!flag) {
     let isIOSWithWebMResult = WebViewWebmSupportTest.isIOSWithWebM();
     if (isIOSWithWebMResult) {
       let flag2 = false;
-      if (null != proxyURL) {
-        const tmp8 = _slicedToArray(proxyURL.split(/\?/, 1), 2);
+      if (null != url) {
+        const tmp8 = _slicedToArray(url.split(/\?/, 1), 2);
         flag2 = re7.test(tmp8[0]);
       }
       isIOSWithWebMResult = flag2;

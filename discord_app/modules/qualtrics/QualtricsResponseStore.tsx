@@ -1,12 +1,12 @@
-// === Module 7917: QualtricsResponseStore ===
+// === Module 7923: QualtricsResponseStore ===
 
-// Module 7917 (QualtricsResponseStore)
-import module_570 from "module_570" /* 570 */;
+// Module 7923 (QualtricsResponseStore)
+import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/qualtrics/QualtricsResponseStore.tsx");
 
-export const useQualtricsResponseStore = module_570.create((arg0, arg1) => {
+export const useQualtricsResponseStore = module_560.create((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   return {

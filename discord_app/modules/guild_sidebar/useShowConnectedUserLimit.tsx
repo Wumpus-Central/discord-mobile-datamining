@@ -1,17 +1,19 @@
-// === Module 13645: useShowConnectedUserLimit ===
+// === Module 13792: useShowConnectedUserLimit ===
 
-// Module 13645 (useShowConnectedUserLimit)
-import c from "c" /* 576 */;
-import Constants from "Constants" /* 1084 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9192 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import "ReactCompilerGating";
+// Module 13792 (useShowConnectedUserLimit)
+import Constants from "Constants" /* 1072 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9205 */;
 import size from "module_2" /* 2 */;
 
-let closure_3 = Constants.MAX_STAGE_VOICE_USER_LIMIT;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnectedUserLimit(arg0) {
-  ({ channel, video, considerMaxStageVoiceUserLimit } = arg0);
+let closure_2 = Constants.MAX_STAGE_VOICE_USER_LIMIT;
+const result = size.fileFinishedImporting("modules/guild_sidebar/useShowConnectedUserLimit.tsx");
+
+export default function useShowConnectedUserLimit(channel) {
+  ({ channel, video, considerMaxStageVoiceUserLimit } = { channel: channel.channel, video: channel.video });
+  ({ locked, selected } = channel);
+  if (considerMaxStageVoiceUserLimit === undefined) {
+    considerMaxStageVoiceUserLimit = true;
+  }
   const limit = useChannelVideoLimitDefault(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
@@ -20,22 +22,23 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnected
   if (video) {
     video = limit > 0;
   }
-  let tmp2 = num;
+  let tmp = num;
   if (video) {
     let bound = limit;
     if (num > 0) {
       const _Math = Math;
       bound = Math.min(num, limit);
     }
-    tmp2 = bound;
+    tmp = bound;
   }
-  if (!tmp) {
-    let num2 = tmp2;
+  if (!considerMaxStageVoiceUserLimit) {
+    let num2 = tmp;
   } else {
     num2 = 0;
   }
-  return num2;
-}) : (function useConnectedUserLimit(arg0) {
+  return num2 > 0 && !locked && !selected;
+};
+export function useConnectedUserLimit(arg0) {
   ({ channel, video, considerMaxStageVoiceUserLimit } = arg0);
   if (considerMaxStageVoiceUserLimit === undefined) {
     considerMaxStageVoiceUserLimit = true;
@@ -63,84 +66,41 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnected
     num2 = 0;
   }
   return num2;
-});
-let closure_4 = tmp2;
-let ReactCompilerGating = ReactCompilerGating_mod;
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnectedUserLimitFormatted(arg0) {
-  const cResult = c.c(6);
-  ({ channel, video, userCount } = arg0);
-  if (cResult[0] === channel) {
-    if (cResult[1] === video) {
-      let tmp2 = cResult[2];
-    }
-    const obj3 = closure_4(tmp2);
-    if (obj3 <= 0) {
-      return null;
-    } else {
-      if (null == userCount) {
-        if (obj3 >= 1000) {
-          const _Math = Math;
-          let str3 = "";
-          const rounded = Math.floor(obj3 / 1000);
-          if (obj3 % 1000 !== 0) {
-            str3 = "+";
-          }
-          const _HermesInternal = HermesInternal;
-          let combined = "" + rounded + "k" + str3;
-        } else {
-          combined = obj3.toFixed(0).padStart(2, "0");
-          const toFixedResult = obj3.toFixed(0);
-        }
-        cResult[3] = obj3;
-        cResult[4] = userCount;
-        cResult[5] = combined;
-      }
-      let num4 = 1000;
-      if (userCount >= 1000) {
-        const _Math2 = Math;
-        let str7 = "";
-        const rounded1 = Math.floor(userCount / num4);
-        if (userCount % num4 !== 0) {
-          str7 = "+";
-        }
-        const _HermesInternal2 = HermesInternal;
-        let combined1 = "" + rounded1 + "k" + str7;
-      } else {
-        combined1 = userCount.toFixed(0).padStart(2, "0");
-        const toFixedResult1 = userCount.toFixed(0);
-      }
-      if (obj3 >= num4) {
-        const _Math3 = Math;
-        const rounded2 = Math.floor(obj3 / num4);
-        num4 = obj3 % num4;
-        let str11 = "";
-        if (num4 !== 0) {
-          str11 = "+";
-        }
-        const _HermesInternal3 = HermesInternal;
-        let combined2 = "" + rounded2 + "k" + str11;
-      } else {
-        combined2 = obj3.toFixed(0).padStart(2, "0");
-        const toFixedResult2 = obj3.toFixed(0);
-      }
-      const _HermesInternal4 = HermesInternal;
-      const combined3 = "" + combined1 + "/" + combined2;
-    }
-  }
-  const obj2 = { channel, video };
-  cResult[0] = channel;
-  cResult[1] = video;
-  cResult[2] = obj2;
-  tmp2 = obj2;
-}) : (function useConnectedUserLimitFormatted(channel) {
+}
+export function useConnectedUserLimitFormatted(channel) {
   const userCount = channel.userCount;
-  let str = closure_4({ channel: channel.channel, video: channel.video });
+  ({ channel, video, considerMaxStageVoiceUserLimit } = { channel: channel.channel, video: channel.video });
+  if (considerMaxStageVoiceUserLimit === undefined) {
+    considerMaxStageVoiceUserLimit = true;
+  }
+  const limit = useChannelVideoLimitDefault(channel).limit;
+  let num = -1;
+  if (channel.userLimit > 0) {
+    num = channel.userLimit;
+  }
+  if (video) {
+    video = limit > 0;
+  }
+  let tmp = num;
+  if (video) {
+    let bound = limit;
+    if (num > 0) {
+      const _Math = Math;
+      bound = Math.min(num, limit);
+    }
+    tmp = bound;
+  }
+  if (!considerMaxStageVoiceUserLimit) {
+    let str = tmp;
+  } else {
+    str = 0;
+  }
   if (str <= 0) {
     return null;
   } else {
     if (null == userCount) {
       if (str >= 1000) {
-        const _Math = Math;
+        const _Math2 = Math;
         let str4 = "";
         const rounded = Math.floor(str / 1000);
         if (str % 1000 !== 0) {
@@ -153,12 +113,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnect
         const toFixedResult = str.toFixed(0);
       }
     }
-    let num3 = 1000;
+    let num4 = 1000;
     if (userCount >= 1000) {
-      const _Math2 = Math;
+      const _Math3 = Math;
       let str8 = "";
-      const rounded1 = Math.floor(userCount / num3);
-      if (userCount % num3 !== 0) {
+      const rounded1 = Math.floor(userCount / num4);
+      if (userCount % num4 !== 0) {
         str8 = "+";
       }
       const _HermesInternal2 = HermesInternal;
@@ -167,12 +127,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnect
       combined1 = userCount.toFixed(0).padStart(2, "0");
       const toFixedResult1 = userCount.toFixed(0);
     }
-    if (str >= num3) {
-      const _Math3 = Math;
-      const rounded2 = Math.floor(str / num3);
-      num3 = str % num3;
+    if (str >= num4) {
+      const _Math4 = Math;
+      const rounded2 = Math.floor(str / num4);
+      num4 = str % num4;
       let str12 = "";
-      if (num3 !== 0) {
+      if (num4 !== 0) {
         str12 = "+";
       }
       const _HermesInternal3 = HermesInternal;
@@ -185,26 +145,4 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnect
     str = "/";
     const combined3 = "" + combined1 + "/" + combined2;
   }
-});
-const result = size.fileFinishedImporting("modules/guild_sidebar/useShowConnectedUserLimit.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShowConnectedUserLimit(arg0) {
-  const cResult = c.c(3);
-  ({ channel, video } = arg0);
-  if (cResult[0] === channel) {
-    if (cResult[1] === video) {
-      let tmp4 = cResult[2];
-    }
-    return closure_4(tmp4) > 0 && !tmp2 && !tmp3;
-  }
-  const obj2 = { channel, video };
-  cResult[0] = channel;
-  cResult[1] = video;
-  cResult[2] = obj2;
-  tmp4 = obj2;
-}) : (function useShowConnectedUserLimit(channel) {
-  ({ locked, selected } = channel);
-  return closure_4({ channel: channel.channel, video: channel.video }) > 0 && !locked && !selected;
-});
-export const useConnectedUserLimit = tmp2;
-export const useConnectedUserLimitFormatted = tmp3;
+}

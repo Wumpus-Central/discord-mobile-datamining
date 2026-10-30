@@ -1,8 +1,8 @@
-// === Module 12807: conjureTemplateIntakeRequests ===
+// === Module 12958: conjureTemplateIntakeRequests ===
 
-// Module 12807 (conjureTemplateIntakeRequests)
-import util from "util" /* 1125 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
+// Module 12958 (conjureTemplateIntakeRequests)
+import util from "util" /* 1114 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -22,7 +22,7 @@ let closure_3 = async function _fetchStoredConjureIntake(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

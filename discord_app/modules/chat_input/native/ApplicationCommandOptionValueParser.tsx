@@ -1,19 +1,19 @@
-// === Module 12082: ApplicationCommandOptionValueParser ===
+// === Module 12258: ApplicationCommandOptionValueParser ===
 
-// Module 12082 (ApplicationCommandOptionValueParser)
+// Module 12258 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import Server from "Server" /* 1998 */;
-import useChannelName from "useChannelName" /* 5641 */;
-import MessageParser from "MessageParser" /* 7812 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import Server from "Server" /* 1993 */;
+import useChannelName from "useChannelName" /* 5647 */;
+import MessageParser from "MessageParser" /* 7817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6828 */;
-import GuildChannelStore from "GuildChannelStore" /* 4935 */;
-import GuildMemberStore from "GuildMemberStore" /* 4917 */;
-import GuildRoleStore from "GuildRoleStore" /* 4911 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6835 */;
+import GuildChannelStore from "GuildChannelStore" /* 4939 */;
+import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import GuildRoleStore from "GuildRoleStore" /* 4915 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const MessageParserDefault = MessageParser;
 
@@ -43,7 +43,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(5641).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(5647).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -77,207 +77,207 @@ function getChannels(getGuildId, arr) {
     });
   }
 }
-let closure_6 = fn(4861).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(6024);
+let closure_6 = fn(4862).isGuildSelectableChannelType;
+const ChannelAutocompleteConstants = fn(6031);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {
 
 }
-class ApplicationCommandOptionValueParser {
-  constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    closure_0 = obj;
-    obj.parse = function parse(text, type) {
-      const trimmed = text.trim();
-      let arr7 = trimmed;
-      const arr2 = getUsers(obj.channel);
-      closure_1 = arr2;
-      const guild_id = obj.channel.guild_id;
-      if (null != guild_id) {
-        sortedRoles = sortedRoles.getSortedRoles(guild_id);
+const prototype = function ApplicationCommandOptionValueParser(channel) {
+  const obj = Object.create(new.target.prototype);
+  obj.parse = function parse(text, type) {
+    const trimmed = text.trim();
+    let arr7 = trimmed;
+    const arr2 = getUsers(obj.channel);
+    closure_1 = arr2;
+    const guild_id = obj.channel.guild_id;
+    if (null != guild_id) {
+      sortedRoles = sortedRoles.getSortedRoles(guild_id);
+    } else {
+      sortedRoles = [];
+    }
+    closure_2 = _modDef12(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
+    closure_3 = arr2.map((text) => {
+      obj = {};
+      const merged = Object.assign(text);
+      obj.text = text.text.split("#")[0];
+      return obj;
+    });
+    function matchUser() {
+      if (typeof closure_2_14 === "function") {
+        let firstResult = null;
+        if (arr7[0] === closure_2_12) {
+          closure_1 = arr7.substr(closure_2_12.length);
+          const found = obj.sortBy((text) => -text.text.length).filter((text) => {
+            const formatted = closure_1.toLowerCase();
+            return formatted === text.text.toLowerCase();
+          });
+          const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
+          firstResult = mapped.first();
+          const sortByResult = obj.sortBy((text) => -text.text.length);
+        }
+        let id;
+        if (firstResult != null) {
+          id = firstResult.id;
+        }
+        if (null != id) {
+          const obj2 = { type: "userMention", userId: firstResult.id };
+          let tmp7 = obj2;
+        } else if (typeof tmp === "function") {
+          let firstResult1 = null;
+          if (arr7[0] === closure_2_12) {
+            closure_1 = arr7.substr(closure_2_12.length);
+            const found1 = closure_3.sortBy((text) => -text.text.length).filter((text) => {
+              const formatted = closure_1.toLowerCase();
+              return formatted === text.text.toLowerCase();
+            });
+            const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
+            firstResult1 = mapped1.first();
+            const sortByResult1 = closure_3.sortBy((text) => -text.text.length);
+          }
+          let id1;
+          if (firstResult1 != null) {
+            id1 = firstResult1.id;
+          }
+          if (null != id1) {
+            const obj3 = { type: "userMention", userId: firstResult1.id };
+            tmp7 = obj3;
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+        return tmp7;
       } else {
-        sortedRoles = [];
+        throw new TypeError("Trying to call a non-function");
       }
-      closure_2 = _modDef12(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
-      closure_3 = arr2.map((text) => {
-        obj = {};
-        const merged = Object.assign(text);
-        obj.text = text.text.split("#")[0];
-        return obj;
-      });
-      function matchUser() {
-        if (typeof closure_2_14 === "function") {
-          let firstResult = null;
-          if (arr7[0] === closure_2_12) {
-            closure_1 = arr7.substr(closure_2_12.length);
-            const found = obj.sortBy((text) => -text.text.length).filter((text) => {
-              const formatted = closure_1.toLowerCase();
-              return formatted === text.text.toLowerCase();
-            });
-            const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
-            firstResult = mapped.first();
-            const sortByResult = obj.sortBy((text) => -text.text.length);
-          }
-          let id;
-          if (firstResult != null) {
-            id = firstResult.id;
-          }
-          if (null != id) {
-            const obj2 = { type: "userMention", userId: firstResult.id };
-            let tmp7 = obj2;
-          } else if (typeof tmp === "function") {
-            let firstResult1 = null;
-            if (arr7[0] === closure_2_12) {
-              closure_1 = arr7.substr(closure_2_12.length);
-              const found1 = closure_3.sortBy((text) => -text.text.length).filter((text) => {
-                const formatted = closure_1.toLowerCase();
-                return formatted === text.text.toLowerCase();
-              });
-              const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
-              firstResult1 = mapped1.first();
-              const sortByResult1 = closure_3.sortBy((text) => -text.text.length);
-            }
-            let id1;
-            if (firstResult1 != null) {
-              id1 = firstResult1.id;
-            }
-            if (null != id1) {
-              const obj3 = { type: "userMention", userId: firstResult1.id };
-              tmp7 = obj3;
-            }
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-          return tmp7;
-        } else {
-          throw new TypeError("Trying to call a non-function");
+      obj = closure_1;
+    }
+    if (type.type === channel(1993).ApplicationCommandOptionType.USER) {
+      const matchUserResult = matchUser();
+      if (null != matchUserResult) {
+        return matchUserResult;
+      } else {
+        let str = trimmed;
+        if (trimmed[0] === closure_2_12) {
+          str = trimmed.slice(1);
         }
-        obj = closure_1;
+        [tmp7, tmp8] = str.split("#", 2);
+        if (null != tmp8) {
+          if ("0000" !== tmp8) {
+            obj = /^[0-9]{4}$/;
+            if (obj.test(tmp8)) {
+              let findByTagResult = UserStore.findByTag(tmp7, tmp8);
+            }
+          }
+          if (null != findByTagResult) {
+            let obj2 = { type: "userMention", userId: findByTagResult.id };
+            return obj2;
+          }
+        }
+        findByTagResult = UserStore.findByTag(tmp7);
+        const tmp6 = _slicedToArray(str.split("#", 2), 2);
       }
-      if (type.type === channel(1998).ApplicationCommandOptionType.USER) {
-        const matchUserResult = matchUser();
-        if (null != matchUserResult) {
-          return matchUserResult;
+    }
+    function matchRole() {
+      if (typeof closure_2_14 === "function") {
+        let firstResult = null;
+        if (arr7[0] === closure_2_12) {
+          closure_1 = arr7.substr(closure_2_12.length);
+          const found = closure_2.sortBy((text) => -text.text.length).filter((text) => {
+            const formatted = closure_1.toLowerCase();
+            return formatted === text.text.toLowerCase();
+          });
+          const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
+          firstResult = mapped.first();
+          const sortByResult = closure_2.sortBy((text) => -text.text.length);
+        }
+        let id;
+        if (firstResult != null) {
+          id = firstResult.id;
+        }
+        if (null != id) {
+          const obj2 = { type: "roleMention", roleId: firstResult.id };
+          let obj3 = obj2;
+        } else if ("@everyone" === arr7) {
+          obj3 = { type: "textMention", text: "@everyone" };
+        }
+        return obj3;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+    if (type.type === channel(1993).ApplicationCommandOptionType.ROLE) {
+      const matchRoleResult = matchRole();
+      if (null != matchRoleResult) {
+        return matchRoleResult;
+      }
+    }
+    if (type.type === channel(1993).ApplicationCommandOptionType.CHANNEL) {
+      arr7 = closure_2_13;
+      if (typeof matchPrefix === "function") {
+        let firstResult = null;
+        if (trimmed[0] === arr7) {
+          closure_1 = trimmed.substr(arr7.length);
+          let found = obj8.sortBy((text) => -text.text.length).filter((text) => {
+            const formatted = closure_1.toLowerCase();
+            return formatted === text.text.toLowerCase();
+          });
+          let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
+          firstResult = mapped.first();
+          let sortByResult = obj8.sortBy((text) => -text.text.length);
+        }
+        if (null != firstResult) {
+          if (null != firstResult.id) {
+            const obj4 = { type: "channelMention", channelId: firstResult.id };
+            return obj4;
+          }
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+      obj8 = getChannels(obj.channel, type.channelTypes);
+    }
+    if (type.type === channel(1993).ApplicationCommandOptionType.MENTIONABLE) {
+      const matchRoleResult1 = matchRole();
+      if (null != matchRoleResult1) {
+        return matchRoleResult1;
+      } else {
+        const matchUserResult1 = matchUser();
+        if (null != matchUserResult1) {
+          return matchUserResult1;
         } else {
-          let str = trimmed;
+          let str4 = trimmed;
           if (trimmed[0] === closure_2_12) {
-            str = trimmed.slice(1);
+            str4 = trimmed.slice(1);
           }
-          [tmp7, tmp8] = str.split("#", 2);
-          if (null != tmp8) {
-            if ("0000" !== tmp8) {
-              obj = /^[0-9]{4}$/;
-              if (obj.test(tmp8)) {
-                let findByTagResult = UserStore.findByTag(tmp7, tmp8);
+          [tmp16, tmp17] = str4.split("#", 2);
+          if (null != tmp17) {
+            if ("0000" !== tmp17) {
+              if (obj3.test(tmp17)) {
+                let findByTagResult1 = UserStore.findByTag(tmp16, tmp17);
               }
+              obj3 = /^[0-9]{4}$/;
             }
-            if (null != findByTagResult) {
-              let obj2 = { type: "userMention", userId: findByTagResult.id };
-              return obj2;
-            }
-          }
-          findByTagResult = UserStore.findByTag(tmp7);
-          const tmp6 = _slicedToArray(str.split("#", 2), 2);
-        }
-      }
-      function matchRole() {
-        if (typeof closure_2_14 === "function") {
-          let firstResult = null;
-          if (arr7[0] === closure_2_12) {
-            closure_1 = arr7.substr(closure_2_12.length);
-            const found = closure_2.sortBy((text) => -text.text.length).filter((text) => {
-              const formatted = closure_1.toLowerCase();
-              return formatted === text.text.toLowerCase();
-            });
-            const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
-            firstResult = mapped.first();
-            const sortByResult = closure_2.sortBy((text) => -text.text.length);
-          }
-          let id;
-          if (firstResult != null) {
-            id = firstResult.id;
-          }
-          if (null != id) {
-            const obj2 = { type: "roleMention", roleId: firstResult.id };
-            let obj3 = obj2;
-          } else if ("@everyone" === arr7) {
-            obj3 = { type: "textMention", text: "@everyone" };
-          }
-          return obj3;
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      if (type.type === channel(1998).ApplicationCommandOptionType.ROLE) {
-        const matchRoleResult = matchRole();
-        if (null != matchRoleResult) {
-          return matchRoleResult;
-        }
-      }
-      if (type.type === channel(1998).ApplicationCommandOptionType.CHANNEL) {
-        arr7 = closure_2_13;
-        if (typeof matchPrefix === "function") {
-          let firstResult = null;
-          if (trimmed[0] === arr7) {
-            closure_1 = trimmed.substr(arr7.length);
-            let found = obj8.sortBy((text) => -text.text.length).filter((text) => {
-              const formatted = closure_1.toLowerCase();
-              return formatted === text.text.toLowerCase();
-            });
-            let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
-            firstResult = mapped.first();
-            let sortByResult = obj8.sortBy((text) => -text.text.length);
-          }
-          if (null != firstResult) {
-            if (null != firstResult.id) {
-              const obj4 = { type: "channelMention", channelId: firstResult.id };
-              return obj4;
+            if (null != findByTagResult1) {
+              const obj5 = { type: "userMention", userId: findByTagResult1.id };
+              return obj5;
             }
           }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-        obj8 = getChannels(obj.channel, type.channelTypes);
-      }
-      if (type.type === channel(1998).ApplicationCommandOptionType.MENTIONABLE) {
-        const matchRoleResult1 = matchRole();
-        if (null != matchRoleResult1) {
-          return matchRoleResult1;
-        } else {
-          const matchUserResult1 = matchUser();
-          if (null != matchUserResult1) {
-            return matchUserResult1;
-          } else {
-            let str4 = trimmed;
-            if (trimmed[0] === closure_2_12) {
-              str4 = trimmed.slice(1);
-            }
-            [tmp16, tmp17] = str4.split("#", 2);
-            if (null != tmp17) {
-              if ("0000" !== tmp17) {
-                if (obj3.test(tmp17)) {
-                  let findByTagResult1 = UserStore.findByTag(tmp16, tmp17);
-                }
-                obj3 = /^[0-9]{4}$/;
-              }
-              if (null != findByTagResult1) {
-                const obj5 = { type: "userMention", userId: findByTagResult1.id };
-                return obj5;
-              }
-            }
-            findByTagResult1 = UserStore.findByTag(tmp16);
-            const tmp15 = _slicedToArray(str4.split("#", 2), 2);
-          }
+          findByTagResult1 = UserStore.findByTag(tmp16);
+          const tmp15 = _slicedToArray(str4.split("#", 2), 2);
         }
       }
-      return { type: "text", text };
-    };
-    obj.channel = global;
-    return obj;
-  }
-}
-const ReactCompilerGating = fn(558);
-function getRoles(guild_id) {
+    }
+    return { type: "text", text };
+  };
+  obj.channel = channel;
+  return obj;
+}.prototype;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/ApplicationCommandOptionValueParser.tsx");
+
+export { getUsers };
+export function getRoles(guild_id) {
   guild_id = guild_id.guild_id;
   if (null != guild_id) {
     let sortedRoles = GuildRoleStore.getSortedRoles(guild_id);
@@ -286,13 +286,8 @@ function getRoles(guild_id) {
   }
   return _modDef12(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/chat_input/native/ApplicationCommandOptionValueParser.tsx");
-
-export { getUsers };
-export { getRoles };
 export { getChannels };
-export { ApplicationCommandOptionValueParser };
+export const ApplicationCommandOptionValueParser = prototype;
 export function parseOptionValuesForSend(channel, command, current) {
   if (null == command.options) {
     return {};
@@ -327,214 +322,12 @@ export function parseOptionValuesForSend(channel, command, current) {
     return obj3;
   }
 }
-export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationCommandOptionValueParser(channel) {
-  const cResult = obj2(576).c(2);
-  channel = channel.channel;
-  if (cResult[0] !== channel) {
-    if (typeof ApplicationCommandOptionValueParser === "function") {
-      obj2 = Object.create(ApplicationCommandOptionValueParser.prototype);
-      obj2.parse = function parse(text, type) {
-        const trimmed = text.trim();
-        let arr7 = trimmed;
-        const arr2 = getUsers(obj.channel);
-        closure_1 = arr2;
-        const guild_id = obj.channel.guild_id;
-        if (null != guild_id) {
-          sortedRoles = sortedRoles.getSortedRoles(guild_id);
-        } else {
-          sortedRoles = [];
-        }
-        closure_2 = _modDef12(sortedRoles).map((id) => ({ id: id.id, text: id.name }));
-        closure_3 = arr2.map((text) => {
-          obj = {};
-          const merged = Object.assign(text);
-          obj.text = text.text.split("#")[0];
-          return obj;
-        });
-        function matchUser() {
-          if (typeof closure_2_14 === "function") {
-            let firstResult = null;
-            if (arr7[0] === closure_2_12) {
-              closure_1 = arr7.substr(closure_2_12.length);
-              const found = obj.sortBy((text) => -text.text.length).filter((text) => {
-                const formatted = closure_1.toLowerCase();
-                return formatted === text.text.toLowerCase();
-              });
-              const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
-              firstResult = mapped.first();
-              const sortByResult = obj.sortBy((text) => -text.text.length);
-            }
-            let id;
-            if (firstResult != null) {
-              id = firstResult.id;
-            }
-            if (null != id) {
-              const obj2 = { type: "userMention", userId: firstResult.id };
-              let tmp7 = obj2;
-            } else if (typeof tmp === "function") {
-              let firstResult1 = null;
-              if (arr7[0] === closure_2_12) {
-                closure_1 = arr7.substr(closure_2_12.length);
-                const found1 = closure_3.sortBy((text) => -text.text.length).filter((text) => {
-                  const formatted = closure_1.toLowerCase();
-                  return formatted === text.text.toLowerCase();
-                });
-                const mapped1 = found1.map((id) => ({ text: arr + id.text, id: id.id }));
-                firstResult1 = mapped1.first();
-                const sortByResult1 = closure_3.sortBy((text) => -text.text.length);
-              }
-              let id1;
-              if (firstResult1 != null) {
-                id1 = firstResult1.id;
-              }
-              if (null != id1) {
-                const obj3 = { type: "userMention", userId: firstResult1.id };
-                tmp7 = obj3;
-              }
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-            return tmp7;
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-          obj = closure_1;
-        }
-        if (type.type === channel(1998).ApplicationCommandOptionType.USER) {
-          const matchUserResult = matchUser();
-          if (null != matchUserResult) {
-            return matchUserResult;
-          } else {
-            let str = trimmed;
-            if (trimmed[0] === closure_2_12) {
-              str = trimmed.slice(1);
-            }
-            [tmp7, tmp8] = str.split("#", 2);
-            if (null != tmp8) {
-              if ("0000" !== tmp8) {
-                obj = /^[0-9]{4}$/;
-                if (obj.test(tmp8)) {
-                  let findByTagResult = UserStore.findByTag(tmp7, tmp8);
-                }
-              }
-              if (null != findByTagResult) {
-                let obj2 = { type: "userMention", userId: findByTagResult.id };
-                return obj2;
-              }
-            }
-            findByTagResult = UserStore.findByTag(tmp7);
-            const tmp6 = _slicedToArray(str.split("#", 2), 2);
-          }
-        }
-        function matchRole() {
-          if (typeof closure_2_14 === "function") {
-            let firstResult = null;
-            if (arr7[0] === closure_2_12) {
-              closure_1 = arr7.substr(closure_2_12.length);
-              const found = closure_2.sortBy((text) => -text.text.length).filter((text) => {
-                const formatted = closure_1.toLowerCase();
-                return formatted === text.text.toLowerCase();
-              });
-              const mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
-              firstResult = mapped.first();
-              const sortByResult = closure_2.sortBy((text) => -text.text.length);
-            }
-            let id;
-            if (firstResult != null) {
-              id = firstResult.id;
-            }
-            if (null != id) {
-              const obj2 = { type: "roleMention", roleId: firstResult.id };
-              let obj3 = obj2;
-            } else if ("@everyone" === arr7) {
-              obj3 = { type: "textMention", text: "@everyone" };
-            }
-            return obj3;
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        if (type.type === channel(1998).ApplicationCommandOptionType.ROLE) {
-          const matchRoleResult = matchRole();
-          if (null != matchRoleResult) {
-            return matchRoleResult;
-          }
-        }
-        if (type.type === channel(1998).ApplicationCommandOptionType.CHANNEL) {
-          arr7 = closure_2_13;
-          if (typeof matchPrefix === "function") {
-            let firstResult = null;
-            if (trimmed[0] === arr7) {
-              closure_1 = trimmed.substr(arr7.length);
-              let found = obj8.sortBy((text) => -text.text.length).filter((text) => {
-                const formatted = closure_1.toLowerCase();
-                return formatted === text.text.toLowerCase();
-              });
-              let mapped = found.map((id) => ({ text: arr + id.text, id: id.id }));
-              firstResult = mapped.first();
-              let sortByResult = obj8.sortBy((text) => -text.text.length);
-            }
-            if (null != firstResult) {
-              if (null != firstResult.id) {
-                const obj4 = { type: "channelMention", channelId: firstResult.id };
-                return obj4;
-              }
-            }
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-          obj8 = getChannels(obj.channel, type.channelTypes);
-        }
-        if (type.type === channel(1998).ApplicationCommandOptionType.MENTIONABLE) {
-          const matchRoleResult1 = matchRole();
-          if (null != matchRoleResult1) {
-            return matchRoleResult1;
-          } else {
-            const matchUserResult1 = matchUser();
-            if (null != matchUserResult1) {
-              return matchUserResult1;
-            } else {
-              let str4 = trimmed;
-              if (trimmed[0] === closure_2_12) {
-                str4 = trimmed.slice(1);
-              }
-              [tmp16, tmp17] = str4.split("#", 2);
-              if (null != tmp17) {
-                if ("0000" !== tmp17) {
-                  if (obj3.test(tmp17)) {
-                    let findByTagResult1 = UserStore.findByTag(tmp16, tmp17);
-                  }
-                  obj3 = /^[0-9]{4}$/;
-                }
-                if (null != findByTagResult1) {
-                  const obj5 = { type: "userMention", userId: findByTagResult1.id };
-                  return obj5;
-                }
-              }
-              findByTagResult1 = UserStore.findByTag(tmp16);
-              const tmp15 = _slicedToArray(str4.split("#", 2), 2);
-            }
-          }
-        }
-        return { type: "text", text };
-      };
-      obj2.channel = channel;
-      cResult[0] = channel;
-      cResult[1] = obj2;
-      let tmp2 = obj2;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    tmp2 = cResult[1];
-  }
-  return tmp2;
-}) : (function useApplicationCommandOptionValueParser(channel) {
+export function useApplicationCommandOptionValueParser(channel) {
   channel = channel.channel;
   const items = [channel];
   return noop.useMemo(() => {
-    if (typeof ApplicationCommandOptionValueParser === "function") {
-      let obj = Object.create(ApplicationCommandOptionValueParser.prototype);
+    if (typeof prototype === "function") {
+      let obj = Object.create(prototype.prototype);
       obj.parse = function parse(text, type) {
         const trimmed = text.trim();
         let arr7 = trimmed;
@@ -602,7 +395,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj = closure_1;
         }
-        if (type.type === channel(1998).ApplicationCommandOptionType.USER) {
+        if (type.type === channel(1993).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
           if (null != matchUserResult) {
             return matchUserResult;
@@ -656,13 +449,13 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (type.type === channel(1998).ApplicationCommandOptionType.ROLE) {
+        if (type.type === channel(1993).ApplicationCommandOptionType.ROLE) {
           const matchRoleResult = matchRole();
           if (null != matchRoleResult) {
             return matchRoleResult;
           }
         }
-        if (type.type === channel(1998).ApplicationCommandOptionType.CHANNEL) {
+        if (type.type === channel(1993).ApplicationCommandOptionType.CHANNEL) {
           arr7 = closure_2_13;
           if (typeof matchPrefix === "function") {
             let firstResult = null;
@@ -687,7 +480,7 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
           }
           obj8 = getChannels(obj.channel, type.channelTypes);
         }
-        if (type.type === channel(1998).ApplicationCommandOptionType.MENTIONABLE) {
+        if (type.type === channel(1993).ApplicationCommandOptionType.MENTIONABLE) {
           const matchRoleResult1 = matchRole();
           if (null != matchRoleResult1) {
             return matchRoleResult1;
@@ -726,4 +519,4 @@ export const useApplicationCommandOptionValueParser = ReactCompilerGating.isReac
       throw new TypeError("Trying to call a non-function");
     }
   }, items);
-});
+}

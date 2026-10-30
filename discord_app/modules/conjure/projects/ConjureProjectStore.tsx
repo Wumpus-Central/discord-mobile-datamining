@@ -1,20 +1,20 @@
-// === Module 6831: ConjureProjectStore ===
+// === Module 6838: ConjureProjectStore ===
 
-// Module 6831 (ConjureProjectStore)
+// Module 6838 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6832 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6839 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
-function isProjectOwner(stateFromStores) {
+function isProjectOwner(item10010) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  return stateFromStores.owner_user_id === id;
+  return item10010.owner_user_id === id;
 }
 function handleProjectUpsert(project) {
   project = project.project;
@@ -32,6 +32,8 @@ let c13 = false;
 let obj = null;
 const set1 = new Set();
 const map4 = new Map();
+const map5 = new Map();
+let closure_18 = [];
 let error = "unattempted";
 const Store = initializeDefault.Store;
 class ConjureProjectStore extends Store {
@@ -59,7 +61,7 @@ prototype["getProject"] = function getProject(arg0) {
   }
   return value;
 };
-prototype["findProjectByApplicationId"] = function findProjectByApplicationId(applicationId) {
+prototype["findProjectByApplicationId"] = function findProjectByApplicationId(prop) {
   const values = map.values();
   for (const item10009 of values) {
     obj.return();
@@ -81,6 +83,13 @@ prototype["getSharedProjects"] = function getSharedProjects(guildId) {
     continue;
   }
   return items;
+};
+prototype["getViewOnlyProjects"] = function getViewOnlyProjects(arg0) {
+  value = map5.get(arg0);
+  if (value == null) {
+    value = closure_18;
+  }
+  return value;
 };
 prototype["getIntegrationStatus"] = function getIntegrationStatus(arg0) {
   value = map1.get(arg0);
@@ -143,10 +152,12 @@ obj = {
             if (0 === map3.size) {
               if (0 === set.size) {
                 if (0 === set1.size) {
-                  if (null == obj) {
-                    if (null == maxProjects) {
-                      if (!c13) {
-                        return false;
+                  if (0 === map5.size) {
+                    if (null == obj) {
+                      if (null == maxProjects) {
+                        if (!c13) {
+                          return false;
+                        }
                       }
                     }
                   }
@@ -165,6 +176,7 @@ obj = {
     set.clear();
     set1.clear();
     map4.clear();
+    map5.clear();
     obj = null;
     c11 = false;
     error = "unattempted";
@@ -181,7 +193,8 @@ obj = {
   },
   CONJURE_PROJECTS_FETCH_SUCCESS: function handleProjectsFetchSuccess(arg0) {
     ({ projects, guildId } = arg0);
-    set = new Set(projects.map((id) => id.id));
+    const found = projects.filter((view_only) => true !== view_only.view_only);
+    set = new Set(found.map((id) => id.id));
     while (tmp2 !== undefined) {
       let tmp5 = _slicedToArray(tmp3, 2);
       [tmp6, tmp8] = tmp5;
@@ -200,13 +213,14 @@ obj = {
       }
       continue;
     }
-    for (const item10044 of projects) {
-      let result = map.set(item10044.id, item10044);
+    for (const item10047 of found) {
+      let result = map.set(item10047.id, item10047);
       continue;
     }
     if (null != guildId) {
       set1.add(guildId);
       const result1 = map4.set(guildId, "success");
+      const result2 = map5.set(guildId, projects.filter((view_only) => true === view_only.view_only));
     }
     (function pruneProjectScopedState() {
       const keys = set2.keys();

@@ -1,7 +1,7 @@
-// === Module 18713: GuildThemeAnalyticsUtils ===
+// === Module 18772: GuildThemeAnalyticsUtils ===
 
-// Module 18713 (GuildThemeAnalyticsUtils)
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 18772 (GuildThemeAnalyticsUtils)
+import GuildStore from "GuildStore" /* 4880 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");
@@ -10,7 +10,7 @@ export function collectGuildThemeAnalyticsMetadata(selectedGuildId) {
   if (null == selectedGuildId) {
     return null;
   } else {
-    guild = GuildStore.getGuild(selectedGuildId);
+    const guild = GuildStore.getGuild(selectedGuildId);
     if (null == guild) {
       return null;
     } else {

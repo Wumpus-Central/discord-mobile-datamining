@@ -1,9 +1,9 @@
-// === Module 7805: IOSAnchoredChatScrollerExperiment ===
+// === Module 7810: IOSAnchoredChatScrollerExperiment ===
 
-// Module 7805 (IOSAnchoredChatScrollerExperiment)
+// Module 7810 (IOSAnchoredChatScrollerExperiment)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

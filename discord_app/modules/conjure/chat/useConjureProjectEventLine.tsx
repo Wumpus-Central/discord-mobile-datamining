@@ -1,235 +1,18 @@
-// === Module 12461: useConjureProjectEventLine ===
+// === Module 12614: useConjureProjectEventLine ===
 
-// Module 12461 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12444 */;
+// Module 12614 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12598 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import UserStore from "UserStore" /* 1389 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/useConjureProjectEventLine.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
-  let type = actor_user_id;
-  _require = actor_user_id;
-  importDefault = arg2;
-  let intl = _require;
-  let obj = actor_user_id;
-  const cResult = require("c").c(23);
-  actor_user_id = actor_user_id.actor_user_id;
-  if (cResult[0] !== actor_user_id) {
-    const fn = function c() {
-      const messageAuthor = conjureMessageAuthors.requestMessageAuthor(actor_user_id);
-    };
-    const items = [actor_user_id];
-    cResult[0] = actor_user_id;
-    cResult[1] = fn;
-    cResult[2] = items;
-    let tmp3 = items;
-    let tmp2 = fn;
-  } else {
-    tmp2 = cResult[1];
-    tmp3 = cResult[2];
-  }
-  const effect = stateFromStores.useEffect(tmp2, tmp3);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [UserStore];
-    cResult[3] = items1;
-    let tmp5 = items1;
-  } else {
-    tmp5 = cResult[3];
-  }
-  if (cResult[4] !== actor_user_id) {
-    const fn2 = function f() {
-      let user = null;
-      if (null != actor_user_id) {
-        user = UserStore.getUser(tmp);
-      }
-      return user;
-    };
-    const items2 = [actor_user_id];
-    cResult[4] = actor_user_id;
-    cResult[5] = fn2;
-    cResult[6] = items2;
-    let tmp8 = items2;
-    let tmp7 = fn2;
-  } else {
-    tmp7 = cResult[5];
-    tmp8 = cResult[6];
-  }
-  const obj2 = require("c");
-  stateFromStores = intl(obj[6]).useStateFromStores(tmp5, tmp7, tmp8);
-  const intlResult = intl(obj[6]);
-  let name = intl(obj[7]).useName(stateFromStores);
-  let Lwsrhg = importDefault;
-  source_name = require("useConjurePublishedAppName")(arg0);
-  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const items3 = [name];
-    cResult[7] = items3;
-    let tmp11 = items3;
-  } else {
-    tmp11 = cResult[7];
-  }
-  if (cResult[8] !== type.guild_id) {
-    const fn3 = function y() {
-      let tmp2 = null;
-      if (null != actor_user_id.guild_id) {
-        guild = GuildStore.getGuild(tmp.guild_id);
-        name = undefined;
-        if (guild != null) {
-          name = guild.name;
-        }
-        tmp2 = name;
-      }
-      return tmp2;
-    };
-    const items4 = [type.guild_id];
-    cResult[8] = type.guild_id;
-    cResult[9] = fn3;
-    cResult[10] = items4;
-    let tmp14 = items4;
-    let tmp13 = fn3;
-  } else {
-    tmp13 = cResult[9];
-    tmp14 = cResult[10];
-  }
-  const intlResult1 = intl(obj[7]);
-  const stateFromStores1 = intl(obj[6]).useStateFromStores(tmp11, tmp13, tmp14);
-  if (cResult[11] === stateFromStores) {
-    if (cResult[12] === source_name) {
-      if (cResult[13] === type.channel_name) {
-        if (cResult[14] === type.source_name) {
-          if (cResult[15] === type.type) {
-            if (cResult[16] === stateFromStores1) {
-              if (cResult[17] === arg2) {
-                if (cResult[18] === name) {
-                  const _Symbol = Symbol;
-                  if (cResult[19] !== Symbol.for("react.early_return_sentinel")) {
-                    return tmp16;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  let forResult = Symbol.for("react.early_return_sentinel");
-  let stringResult = stateFromStores1;
-  if (stateFromStores1 == null) {
-    const intl2 = intl(obj[9]).intl;
-    stringResult = intl2.string(Lwsrhg(obj[10]).R1tPlP);
-  }
-  let tmp19 = null;
-  if (null != stateFromStores) {
-    tmp19 = null;
-    if (null != name) {
-      const obj3 = {
-        user: name,
-        userHook(arg0, arg1) {
-              return closure_1(stateFromStores.id, name, arg1);
-            }
-      };
-      tmp19 = obj3;
-    }
-  }
-  const type2 = type.type;
-  if ("app_removed" === type2) {
-    if (null == tmp19) {
-      intl = intl(obj[9]).intl;
-      Lwsrhg = Lwsrhg(obj[10]).Lwsrhg;
-      obj = { app: source_name, server: stringResult };
-      let formatResult = intl.format(Lwsrhg, obj);
-    } else {
-      const intl11 = intl(obj[9]).intl;
-      const obj4 = { app: source_name, server: stringResult };
-      const merged = Object.assign(tmp19);
-      formatResult = intl11.format(Lwsrhg(obj[10]).qqePfT, obj4);
-    }
-  } else {
-    if ("bot_removed" === type2) {
-      if (null == tmp19) {
-        const intl10 = intl(obj[9]).intl;
-        const obj5 = { app: source_name, server: stringResult };
-        let formatResult1 = intl10.format(Lwsrhg(obj[10]).mT7EQG, obj5);
-      } else {
-        const intl9 = intl(obj[9]).intl;
-        const obj6 = { app: source_name, server: stringResult };
-        const merged1 = Object.assign(tmp19);
-        formatResult1 = intl9.format(Lwsrhg(obj[10])["lA/crI"], obj6);
-      }
-      forResult = formatResult1;
-      cResult[11] = stateFromStores;
-      cResult[12] = source_name;
-      ({ channel_name: tmp[13], source_name } = type);
-      cResult[14] = source_name;
-      type = type.type;
-      cResult[15] = type;
-      cResult[16] = stateFromStores1;
-      cResult[17] = arg2;
-      cResult[18] = name;
-      cResult[19] = forResult;
-    } else if ("preview_bot_removed" === type2) {
-      if (null == tmp19) {
-        const intl8 = intl(obj[9]).intl;
-        const obj7 = { app: source_name, server: stringResult };
-        let formatResult2 = intl8.format(Lwsrhg(obj[10])["4LVIeo"], obj7);
-      } else {
-        const intl7 = intl(obj[9]).intl;
-        const obj8 = { app: source_name, server: stringResult };
-        const merged2 = Object.assign(tmp19);
-        formatResult2 = intl7.format(Lwsrhg(obj[10]).YJOV6D, obj8);
-      }
-      forResult = formatResult2;
-    } else if ("app_channel_deleted" === type2) {
-      let str2 = type.channel_name;
-      if (str2 == null) {
-        str2 = "";
-      }
-      if (null == tmp19) {
-        const intl6 = intl(obj[9]).intl;
-        const obj9 = { channel: str2, server: stringResult };
-        let formatResult3 = intl6.format(Lwsrhg(obj[10])["4VQfid"], obj9);
-      } else {
-        const intl5 = intl(obj[9]).intl;
-        const obj10 = { channel: str2, server: stringResult };
-        const merged3 = Object.assign(tmp19);
-        formatResult3 = intl5.format(Lwsrhg(obj[10]).RlMIJN, obj10);
-      }
-      forResult = formatResult3;
-    } else if ("remixed" !== type2) {
-      if ("voice_channel_pin" === type2) {
-        const _Symbol2 = Symbol;
-        if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = intl(obj[9]).intl;
-          const stringResult1 = intl3.string(Lwsrhg(obj[10]).UGAfl9);
-          cResult[22] = stringResult1;
-          let tmp20 = stringResult1;
-        } else {
-          tmp20 = cResult[22];
-        }
-        forResult = tmp20;
-      }
-    }
-    if (cResult[20] !== type.source_name) {
-      const intl4 = intl(obj[9]).intl;
-      const obj11 = { source: type.source_name };
-      const formatResult4 = intl4.format(Lwsrhg(obj[10]).mHCXtm, obj11);
-      cResult[20] = type.source_name;
-      cResult[21] = formatResult4;
-      let tmp22 = formatResult4;
-    } else {
-      tmp22 = cResult[21];
-    }
-    forResult = tmp22;
-  }
-  const intlResult2 = intl(obj[6]);
-}) : (function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
+export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
   _require = actor_user_id;
   importDefault = arg2;
   actor_user_id = actor_user_id.actor_user_id;
@@ -255,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   let stateFromStores1 = require("initialize").useStateFromStores(items3, () => {
     let tmp2 = null;
     if (null != actor_user_id.guild_id) {
-      guild = GuildStore.getGuild(tmp.guild_id);
+      const guild = GuildStore.getGuild(tmp.guild_id);
       name = undefined;
       if (guild != null) {
         name = guild.name;
@@ -265,8 +48,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     return tmp2;
   }, items4);
   if (stateFromStores1 == null) {
-    const intl = tmp2(tmp3[9]).intl;
-    stateFromStores1 = intl.string(tmp6(tmp3[10]).R1tPlP);
+    const intl = tmp2(tmp3[7]).intl;
+    stateFromStores1 = intl.string(tmp6(tmp3[8]).R1tPlP);
   }
   let tmp9 = null;
   if (null != stateFromStores) {
@@ -284,38 +67,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   const type = actor_user_id.type;
   if ("app_removed" === type) {
     if (null == tmp9) {
-      const intl11 = tmp2(tmp3[9]).intl;
+      const intl11 = tmp2(tmp3[7]).intl;
       const obj5 = { app: tmp7, server: stateFromStores1 };
-      let formatResult = intl11.format(tmp6(tmp3[10]).Lwsrhg, obj5);
+      let formatResult = intl11.format(tmp6(tmp3[8]).Lwsrhg, obj5);
     } else {
-      const intl10 = tmp2(tmp3[9]).intl;
+      const intl10 = tmp2(tmp3[7]).intl;
       const obj6 = { app: tmp7, server: stateFromStores1 };
       const merged = Object.assign(tmp9);
-      formatResult = intl10.format(tmp6(tmp3[10]).qqePfT, obj6);
+      formatResult = intl10.format(tmp6(tmp3[8]).qqePfT, obj6);
     }
     return formatResult;
   } else if ("bot_removed" === type) {
     if (null == tmp9) {
-      const intl9 = tmp2(tmp3[9]).intl;
+      const intl9 = tmp2(tmp3[7]).intl;
       const obj7 = { app: tmp7, server: stateFromStores1 };
-      let formatResult1 = intl9.format(tmp6(tmp3[10]).mT7EQG, obj7);
+      let formatResult1 = intl9.format(tmp6(tmp3[8]).mT7EQG, obj7);
     } else {
-      const intl8 = tmp2(tmp3[9]).intl;
+      const intl8 = tmp2(tmp3[7]).intl;
       const obj8 = { app: tmp7, server: stateFromStores1 };
       const merged1 = Object.assign(tmp9);
-      formatResult1 = intl8.format(tmp6(tmp3[10])["lA/crI"], obj8);
+      formatResult1 = intl8.format(tmp6(tmp3[8])["lA/crI"], obj8);
     }
     return formatResult1;
   } else if ("preview_bot_removed" === type) {
     if (null == tmp9) {
-      const intl7 = tmp2(tmp3[9]).intl;
+      const intl7 = tmp2(tmp3[7]).intl;
       const obj9 = { app: tmp7, server: stateFromStores1 };
-      let formatResult2 = intl7.format(tmp6(tmp3[10])["4LVIeo"], obj9);
+      let formatResult2 = intl7.format(tmp6(tmp3[8])["4LVIeo"], obj9);
     } else {
-      const intl6 = tmp2(tmp3[9]).intl;
+      const intl6 = tmp2(tmp3[7]).intl;
       const obj10 = { app: tmp7, server: stateFromStores1 };
       const merged2 = Object.assign(tmp9);
-      formatResult2 = intl6.format(tmp6(tmp3[10]).YJOV6D, obj10);
+      formatResult2 = intl6.format(tmp6(tmp3[8]).YJOV6D, obj10);
     }
     return formatResult2;
   } else if ("app_channel_deleted" === type) {
@@ -324,23 +107,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       str2 = "";
     }
     if (null == tmp9) {
-      const intl5 = tmp2(tmp3[9]).intl;
+      const intl5 = tmp2(tmp3[7]).intl;
       const obj11 = { channel: str2, server: stateFromStores1 };
-      let formatResult3 = intl5.format(tmp6(tmp3[10])["4VQfid"], obj11);
+      let formatResult3 = intl5.format(tmp6(tmp3[8])["4VQfid"], obj11);
     } else {
-      const intl4 = tmp2(tmp3[9]).intl;
+      const intl4 = tmp2(tmp3[7]).intl;
       const obj12 = { channel: str2, server: stateFromStores1 };
       const merged3 = Object.assign(tmp9);
-      formatResult3 = intl4.format(tmp6(tmp3[10]).RlMIJN, obj12);
+      formatResult3 = intl4.format(tmp6(tmp3[8]).RlMIJN, obj12);
     }
     return formatResult3;
   } else if ("remixed" === type) {
-    const intl3 = tmp2(tmp3[9]).intl;
+    const intl3 = tmp2(tmp3[7]).intl;
     const obj13 = { source: actor_user_id.source_name };
-    return intl3.format(tmp6(tmp3[10]).mHCXtm, obj13);
+    return intl3.format(tmp6(tmp3[8]).mHCXtm, obj13);
   } else if ("voice_channel_pin" === type) {
-    const intl2 = tmp2(tmp3[9]).intl;
-    return intl2.string(tmp6(tmp3[10]).UGAfl9);
+    const intl2 = tmp2(tmp3[7]).intl;
+    return intl2.string(tmp6(tmp3[8]).UGAfl9);
   }
   const obj3 = require("initialize");
-});
+};

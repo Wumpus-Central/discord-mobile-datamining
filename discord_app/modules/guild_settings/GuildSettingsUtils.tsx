@@ -1,10 +1,10 @@
-// === Module 19674: GuildSettingsUtils ===
+// === Module 19737: GuildSettingsUtils ===
 
-// Module 19674 (GuildSettingsUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4912 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18802 */;
-import Constants from "Constants" /* 1084 */;
+// Module 19737 (GuildSettingsUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4916 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18862 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 const hasPermission = GuildRoleRecord.hasPermission;

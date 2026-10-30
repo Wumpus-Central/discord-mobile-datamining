@@ -1,30 +1,17 @@
-// === Module 7135: ManaTypeConsolidationExperiment ===
+// === Module 7143: ManaTypeConsolidationExperiment ===
 
-// Module 7135 (ManaTypeConsolidationExperiment)
-import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1453 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 7143 (ManaTypeConsolidationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-05-mana-type-consolidation", kind: "user", defaultConfig: { enabled: false }, variations: null };
-let obj2 = { 1: null };
+const obj2 = { 1: null };
 obj2[1] = { enabled: true };
 obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/design/ManaTypeConsolidationExperiment.tsx");
 
 export default apexExperiment;
-export const useManaTypeConsolidationExperiment = ReactCompilerGating.isReactCompilerEnabled() ? (function useManaTypeConsolidationExperiment(location) {
-  const cResult = c.c(2);
-  if (cResult[0] !== location) {
-    const obj2 = { location };
-    cResult[0] = location;
-    cResult[1] = obj2;
-    let tmp2 = obj2;
-  } else {
-    tmp2 = cResult[1];
-  }
-  return apexExperiment.useConfig(tmp2).enabled;
-}) : (function useManaTypeConsolidationExperiment(location) {
-  return apexExperiment.useConfig({ location }).enabled;
-});
+export function useManaTypeConsolidationExperiment(ChannelHeaderAppSubTitle) {
+  return apexExperiment.useConfig({ location: ChannelHeaderAppSubTitle }).enabled;
+}

@@ -1,18 +1,18 @@
-// === Module 14803: UserProfileActivityVoiceChannel ===
+// === Module 14838: UserProfileActivityVoiceChannel ===
 
-// Module 14803 (UserProfileActivityVoiceChannel)
+// Module 14838 (UserProfileActivityVoiceChannel)
 import _mod17 from "module_17" /* 17 */;
-import Constants from "Constants" /* 1095 */;
-import native from "native" /* 1199 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import GuildRecord from "GuildRecord" /* 4875 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7925 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+import Constants from "Constants" /* 1083 */;
+import native from "native" /* 1188 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import GuildRecord from "GuildRecord" /* 4876 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7931 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5005 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
+import createStyles from "createStyles" /* 5009 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -92,7 +92,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
     obj10.accessibilityLabel = tmp2(tmp3[21])(obj11);
     const intl2 = tmp4(tmp3[15]).intl;
     obj10.accessibilityHint = intl2.string(tmp4(tmp3[15]).t["9C444m"]);
-    obj10.onPress = function handlePress_0() {
+    obj10.onPress = function handlePress() {
       onAction({ action: "OPEN_VOICE_CHANNEL" });
       PrivateChannelCallUtils.openGuildVoiceModal(channel, newestAnalyticsLocation);
       ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -116,7 +116,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.accessibilityLabel = intl3.formatToPlainString(guild(onAction[15]).t.e95u3C, { count: users.length });
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14805, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14840, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
       users,
       channel,
       onPressUser(userId) {

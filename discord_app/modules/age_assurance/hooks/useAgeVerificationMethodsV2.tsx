@@ -1,11 +1,11 @@
-// === Module 8004: useAgeVerificationMethodsV2 ===
+// === Module 8010: useAgeVerificationMethodsV2 ===
 
-// Module 8004 (useAgeVerificationMethodsV2)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 8010 (useAgeVerificationMethodsV2)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 6714 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 6721 */;
 
 const require = fn;
 const size = fn(2);
@@ -45,7 +45,7 @@ export function useAgeVerificationMethodsV2() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -76,8 +76,8 @@ export function useAgeVerificationMethodsV2() {
             tmp75(true);
             v0(false);
             v0 = 2;
-            const result = closure_0(7955).isCurrentUserSuspended();
-            const obj7 = closure_0(7987);
+            const result = closure_0(7961).isCurrentUserSuspended();
+            const obj7 = closure_0(7993);
             if (result) {
               c5 = 4;
               c6 = 1;
@@ -89,7 +89,7 @@ export function useAgeVerificationMethodsV2() {
               const obj9 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
               return obj9;
             }
-            const obj6 = closure_0(7955);
+            const obj6 = closure_0(7961);
           }
         } else if (1 === tmp9) {
           v0 = 0;
@@ -144,7 +144,7 @@ export function useAgeVerificationMethodsV2() {
             tmp75(false);
           }
           c6 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp75) {
         if (tmp5 === v0) {

@@ -1,14 +1,14 @@
-// === Module 5217: GuildThemeRuntimeStore ===
+// === Module 5223: GuildThemeRuntimeStore ===
 
-// Module 5217 (GuildThemeRuntimeStore)
+// Module 5223 (GuildThemeRuntimeStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 4878 */;
-import Powerups from "Powerups" /* 5222 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5218 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 4879 */;
+import Powerups from "Powerups" /* 5228 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5224 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
 
 require = fn;
 function snapshotSelectedGuildId(guildId) {
@@ -20,7 +20,7 @@ function snapshotSelectedGuildId(guildId) {
     }
     let flag = flag3;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let guildTheme;
     if (guild != null) {
       guildTheme = guild.guildTheme;
@@ -60,7 +60,7 @@ function handleSavedGuildTheme(guildId) {
   let tmp = guildId === SelectedGuildStore.getGuildId();
   if (tmp) {
     const cloneGuildThemeResult = guildThemeSerialization.cloneGuildTheme(guildId.guildTheme);
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -87,7 +87,7 @@ function handleSavedGuildTheme(guildId) {
   }
   return tmp;
 }
-const GuildFeatures = fn(1084).GuildFeatures;
+const GuildFeatures = fn(1072).GuildFeatures;
 let c6 = null;
 let c7 = null;
 const Store = initializeDefault.Store;

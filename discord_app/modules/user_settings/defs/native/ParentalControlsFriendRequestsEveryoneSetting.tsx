@@ -1,69 +1,29 @@
-// === Module 17811: ParentalControlsFriendRequestsEveryoneSetting ===
+// === Module 17882: ParentalControlsFriendRequestsEveryoneSetting ===
 
-// Module 17811 (ParentalControlsFriendRequestsEveryoneSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7151 */;
-import useSelectedTeen from "useSelectedTeen" /* 8182 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16614 */;
+// Module 17882 (ParentalControlsFriendRequestsEveryoneSetting)
+import util from "util" /* 1114 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7159 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16667 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7703 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7708 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
-  const cResult = c.c(2);
-  const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-  const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
-  const controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
-  if (cResult[0] !== controlledSetting) {
-    const flags = UserSettingsUtils.computeFlags(controlledSetting);
-    cResult[0] = controlledSetting;
-    cResult[1] = flags;
-    let tmp6 = flags;
-    const tmpResult = UserSettingsUtils;
-  } else {
-    tmp6 = cResult[1];
-  }
-  return tmp6.all;
-}) : (function useFriendRequestsEveryoneSettingValue() {
-  const selectedTeenId = controlledSetting(8182).useSelectedTeenId();
-  const ParentalControlledFriendSourceFlags = controlledSetting(16614).ParentalControlledFriendSourceFlags;
-  controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
-  const items = [controlledSetting];
-  return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
-});
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8387).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
-    const cResult = c.c(2);
-    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
-    const controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
-    if (cResult[0] !== controlledSetting) {
-      const flags = UserSettingsUtils.computeFlags(controlledSetting);
-      cResult[0] = controlledSetting;
-      cResult[1] = flags;
-      let tmp6 = flags;
-      const tmpResult = UserSettingsUtils;
-    } else {
-      tmp6 = cResult[1];
-    }
-    return tmp6.all;
-  }) : (function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(8182).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(16614).ParentalControlledFriendSourceFlags;
+  parent: fn(8424).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: function useFriendRequestsEveryoneSettingValue() {
+    const selectedTeenId = controlledSetting(8363).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(16667).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
-  }),
+  },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {

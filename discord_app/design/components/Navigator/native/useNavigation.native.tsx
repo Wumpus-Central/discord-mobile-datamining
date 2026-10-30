@@ -1,20 +1,13 @@
-// === Module 1503: useNavigation ===
+// === Module 1498: useNavigation ===
 
-// Module 1503 (useNavigation)
-import Link from "Link" /* 1504 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+// Module 1498 (useNavigation)
+import Link from "Link" /* 1499 */;
 import size from "module_2" /* 2 */;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating.isReactCompilerEnabled();
 function useNavigation() {
   return Link.useNavigation();
 }
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating.isReactCompilerEnabled();
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result3 = size.fileFinishedImporting("design/components/Navigator/native/useNavigation.native.tsx");
+const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigation.native.tsx");
 
 export { useNavigation };
 export function useNativeStackNavigation() {

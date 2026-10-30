@@ -1,14 +1,15 @@
-// === Module 8904: InstantInviteStore ===
+// === Module 8938: InstantInviteStore ===
 
-// Module 8904 (InstantInviteStore)
+// Module 8938 (InstantInviteStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import headDefault from "head" /* 8906 */;
-import reverseDefault from "reverse" /* 8908 */;
-import _modDef8909 from "module_8909" /* 8909 */;
-import InviteRecord from "InviteRecord" /* 8905 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7873 */;
+import headDefault from "head" /* 8939 */;
+import reverseDefault from "reverse" /* 8941 */;
+import _modDef8942 from "module_8942" /* 8942 */;
+import InviteRecord from "InviteRecord" /* 8193 */;
 
-const InviteTargetTypes = fn(7867).InviteTargetTypes;
+require = fn;
 let closure_5 = {};
 const dependencyMap = {};
 const dependencyMap2 = {};
@@ -27,35 +28,35 @@ prototype["getInvite"] = function getInvite(arg0) {
     obj = {};
   }
   ({ targetType, targetUserId, targetApplicationId } = obj);
-  if (targetType === InviteTargetTypes.STREAM) {
+  if (targetType === InviteTargetTypes.InviteTargetTypes.STREAM) {
     if (null != targetUserId) {
-      let tmp10;
+      let tmp11;
       if (dependencyMap[arg0] != null) {
-        tmp10 = tmp9[targetUserId];
+        tmp11 = tmp10[targetUserId];
       }
-      let tmp4 = tmp10;
+      let tmp5 = tmp11;
     }
-    return tmp4;
+    return tmp5;
   }
-  if (targetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
+  if (targetType === InviteTargetTypes.InviteTargetTypes.EMBEDDED_APPLICATION) {
     if (null != targetApplicationId) {
-      let tmp7;
+      let tmp8;
       if (dependencyMap2[arg0] != null) {
-        tmp7 = tmp6[targetApplicationId];
+        tmp8 = tmp7[targetApplicationId];
       }
-      tmp4 = tmp7;
+      tmp5 = tmp8;
     }
   }
-  tmp4 = closure_5[arg0];
+  tmp5 = closure_5[arg0];
 };
 prototype["getFriendInvite"] = function getFriendInvite() {
-  return c2;
+  return c3;
 };
 prototype["getFriendInvitesFetching"] = function getFriendInvitesFetching() {
   return c9;
 };
 prototype["canRevokeFriendInvite"] = function canRevokeFriendInvite() {
-  let tmp = null != c2;
+  let tmp = null != c3;
   if (tmp) {
     tmp = !c10;
   }
@@ -74,7 +75,7 @@ const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
     closure_6 = {};
     closure_7 = {};
     closure_8 = {};
-    c2 = null;
+    c3 = null;
     c10 = false;
     c11 = false;
     c9 = false;
@@ -89,11 +90,11 @@ const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
     closure_8[invite.invite.code] = InviteRecord.createFromServer(invite.invite);
     const tmp = headDefault;
     const tmp2 = reverseDefault;
-    let tmpResult = tmp(tmp2(_modDef8909(Object.values(closure_8), "createdAt")));
+    let tmpResult = tmp(tmp2(_modDef8942(Object.values(closure_8), "createdAt")));
     if (tmpResult == null) {
       tmpResult = null;
     }
-    c2 = tmpResult;
+    c3 = tmpResult;
     c11 = false;
   },
   FRIEND_INVITE_CREATE_FAILURE: function handleFriendInviteCreateFailure() {
@@ -111,17 +112,17 @@ const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
     }
     const tmp2 = headDefault;
     const tmp3 = reverseDefault;
-    let tmp2Result = tmp2(tmp3(_modDef8909(Object.values(closure_8), "createdAt")));
+    let tmp2Result = tmp2(tmp3(_modDef8942(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
-    c2 = tmp2Result;
+    c3 = tmp2Result;
     c10 = false;
   },
   INSTANT_INVITE_CREATE_SUCCESS: function handleInstantInviteCreateSuccess(channelId) {
     channelId = channelId.channelId;
     const fromServer = InviteRecord.createFromServer(channelId.invite);
-    if (fromServer.targetType === InviteTargetTypes.STREAM) {
+    if (fromServer.targetType === InviteTargetTypes.InviteTargetTypes.STREAM) {
       if (null != fromServer.targetUser) {
         if (null == dependencyMap[channelId]) {
           dependencyMap[channelId] = {};
@@ -130,7 +131,7 @@ const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
         dependencyMap[channelId][String(fromServer.targetUser.id)] = fromServer;
       }
     }
-    if (fromServer.targetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
+    if (fromServer.targetType === InviteTargetTypes.InviteTargetTypes.EMBEDDED_APPLICATION) {
       if (null != fromServer.targetApplication) {
         if (null == dependencyMap2[channelId]) {
           dependencyMap2[channelId] = {};
@@ -163,11 +164,11 @@ const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
     });
     const tmp2 = headDefault;
     const tmp3 = reverseDefault;
-    let tmp2Result = tmp2(tmp3(_modDef8909(Object.values(closure_8), "createdAt")));
+    let tmp2Result = tmp2(tmp3(_modDef8942(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
-    c2 = tmp2Result;
+    c3 = tmp2Result;
     c9 = false;
   },
   INSTANT_INVITE_CLEAR: function handleInstantInviteClear(arg0) {

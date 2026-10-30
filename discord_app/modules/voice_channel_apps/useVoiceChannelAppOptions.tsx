@@ -1,26 +1,23 @@
-// === Module 18786: useVoiceChannelAppOptions ===
+// === Module 18846: useVoiceChannelAppOptions ===
 
-// Module 18786 (useVoiceChannelAppOptions)
-import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7317 */;
-import ConjureUtils from "ConjureUtils" /* 7405 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
+// Module 18846 (useVoiceChannelAppOptions)
+import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
+import ConjureUtils from "ConjureUtils" /* 7413 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
 
 const require = globalThis.__r;
-const useGetOrFetchApplicationsDefault = useGetOrFetchApplications;
 
 require = fn;
-function voiceChannelAppCandidates(stateFromStoresArray, stateFromStoresArray1, guildId) {
+function voiceChannelAppCandidates(memo5, result, arg2) {
   const map = new Map();
-  const items = [...stateFromStoresArray1];
+  const items = [...result];
   for (const item10020 of items) {
     let obj2 = ConjureUtils;
     if (obj2.isConjureProjectInGuild(item10020, arg2)) {
-      let result = map.set(item10020.application_id, item10020);
+      result = map.set(item10020.application_id, item10020);
     }
     continue;
   }
@@ -30,515 +27,59 @@ function voiceChannelAppCandidates(stateFromStoresArray, stateFromStoresArray1, 
     return name.localeCompare(name2.name);
   });
 }
-let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelAppOptions(guildId) {
-  _require = guildId;
-  const cResult = require("c").c(46);
-  if (cResult[0] !== guildId) {
-    const fn = function p() {
-      ConjureActionCreators.listProjects(closure_0);
-    };
-    let items = [guildId];
-    cResult[0] = guildId;
-    cResult[1] = fn;
-    cResult[2] = items;
-    let tmp5 = items;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-  }
-  const effect = noop.useEffect(tmp4, tmp5);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [ConjureProjectStore];
-    const fn2 = function c() {
-      return closure_5.getOwnedProjects();
-    };
-    cResult[3] = items1;
-    cResult[4] = fn2;
-    let tmp8 = fn2;
-    let tmp7 = items1;
-  } else {
-    tmp7 = cResult[3];
-    tmp8 = cResult[4];
-  }
-  let obj = require("c");
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp7, tmp8);
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [ConjureProjectStore];
-    cResult[5] = items2;
-    let tmp11 = items2;
-  } else {
-    tmp11 = cResult[5];
-  }
-  if (cResult[6] !== guildId) {
-    const fn3 = function f() {
-      return ConjureProjectStore.getSharedProjects(closure_0);
-    };
-    const items3 = [guildId];
-    cResult[6] = guildId;
-    cResult[7] = fn3;
-    cResult[8] = items3;
-    let tmp14 = items3;
-    let tmp13 = fn3;
-  } else {
-    tmp13 = cResult[7];
-    tmp14 = cResult[8];
-  }
-  const tmpResult = require("initialize");
-  const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(tmp11, tmp13, tmp14);
-  if (cResult[9] === guildId) {
-    if (cResult[10] === stateFromStoresArray) {
-      if (cResult[11] === stateFromStoresArray1) {
-        let arr5 = cResult[12];
-      }
-      if (cResult[13] !== arr5) {
-        const _Symbol = Symbol;
-        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn4 = function w(application_id) {
-            return application_id.application_id;
-          };
-          cResult[15] = fn4;
-          let tmp17 = fn4;
-        } else {
-          tmp17 = cResult[15];
-        }
-        const mapped = arr5.map(tmp17);
-        cResult[13] = arr5;
-        cResult[14] = mapped;
-      } else {
-        const tmp21 = useGetOrFetchApplicationsDefault(cResult[14], false);
-        const _Symbol2 = Symbol;
-        if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-          const _Set = Set;
-          const set = new Set();
-          cResult[16] = set;
-          let tmp22 = set;
-        } else {
-          tmp22 = cResult[16];
-        }
-        importDefault = obj2.useRef(tmp22);
-        const _Symbol3 = Symbol;
-        if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-          const _Set2 = Set;
-          const set1 = new Set();
-          cResult[17] = set1;
-          let tmp27 = set1;
-        } else {
-          tmp27 = cResult[17];
-        }
-        [dependencyMap, _slicedToArray] = obj2.useState(tmp27);
-        const tmp33 = _slicedToArray(obj2.useState(tmp27), 2);
-        noop = _slicedToArray(obj2.useState(false), 2)[1];
-        if (cResult[18] === arr5) {
-          if (cResult[19] === tmp21) {
-            let tmp36 = cResult[20];
-          }
-          ConjureProjectStore = tmp36;
-          if (cResult[21] !== tmp36) {
-            class U {
-              constructor() {
-                found = closure_5.filter((item) => {
-                  const current = ref.current;
-                  return !current.has(item);
-                });
-                closure_0 = found;
-                if (0 !== found.length) {
-                  tmp = found;
-                  tmp2 = found;
-                  for (const item10010 of found) {
-                    tmp3 = closure_1;
-                    current = closure_1.current;
-                    addResult = current.add(item10010);
-                    continue;
-                  }
-                  tmp5 = closure_1;
-                  tmp6 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  flag = true;
-                  applications = obj.fetchApplications(found, true);
-                  catchPromise = applications.catch(() => closure_1_4(true));
-                  cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                }
-                return;
-              }
-            }
-            const items4 = [tmp36];
-            cResult[21] = tmp36;
-            cResult[22] = U;
-            cResult[23] = items4;
-            let tmp39 = items4;
-          } else {
-            class U {
-              constructor() {
-                found = closure_5.filter((item) => {
-                  const current = ref.current;
-                  return !current.has(item);
-                });
-                closure_0 = found;
-                if (0 !== found.length) {
-                  tmp = found;
-                  tmp2 = found;
-                  for (const item10010 of found) {
-                    tmp3 = closure_1;
-                    current = closure_1.current;
-                    addResult = current.add(item10010);
-                    continue;
-                  }
-                  tmp5 = closure_1;
-                  tmp6 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  flag = true;
-                  applications = obj.fetchApplications(found, true);
-                  catchPromise = applications.catch(() => closure_1_4(true));
-                  cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                }
-                return;
-              }
-            }
-            tmp39 = cResult[23];
-          }
-          const effect1 = obj2.useEffect(U, tmp39);
-          if (cResult[24] === arr5) {
-            class U {
-              constructor() {
-                found = closure_5.filter((item) => {
-                  const current = ref.current;
-                  return !current.has(item);
-                });
-                closure_0 = found;
-                if (0 !== found.length) {
-                  tmp = found;
-                  tmp2 = found;
-                  for (const item10010 of found) {
-                    tmp3 = closure_1;
-                    current = closure_1.current;
-                    addResult = current.add(item10010);
-                    continue;
-                  }
-                  tmp5 = closure_1;
-                  tmp6 = closure_2;
-                  obj = closure_1(closure_2[12]);
-                  flag = true;
-                  applications = obj.fetchApplications(found, true);
-                  catchPromise = applications.catch(() => closure_1_4(true));
-                  cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                }
-                return;
-              }
-            }
-            const _Symbol4 = Symbol;
-            if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-              class U {
-                constructor() {
-                  found = closure_5.filter((item) => {
-                    const current = ref.current;
-                    return !current.has(item);
-                  });
-                  closure_0 = found;
-                  if (0 !== found.length) {
-                    tmp = found;
-                    tmp2 = found;
-                    for (const item10010 of found) {
-                      tmp3 = closure_1;
-                      current = closure_1.current;
-                      addResult = current.add(item10010);
-                      continue;
-                    }
-                    tmp5 = closure_1;
-                    tmp6 = closure_2;
-                    obj = closure_1(closure_2[12]);
-                    flag = true;
-                    applications = obj.fetchApplications(found, true);
-                    catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                  }
-                  return;
-                }
-              }
-              const items5 = [ConjureProjectStore];
-              cResult[27] = items5;
-              const tmp42 = items5;
-            } else {
-              class U {
-                constructor() {
-                  found = closure_5.filter((item) => {
-                    const current = ref.current;
-                    return !current.has(item);
-                  });
-                  closure_0 = found;
-                  if (0 !== found.length) {
-                    tmp = found;
-                    tmp2 = found;
-                    for (const item10010 of found) {
-                      tmp3 = closure_1;
-                      current = closure_1.current;
-                      addResult = current.add(item10010);
-                      continue;
-                    }
-                    tmp5 = closure_1;
-                    tmp6 = closure_2;
-                    obj = closure_1(closure_2[12]);
-                    flag = true;
-                    applications = obj.fetchApplications(found, true);
-                    catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                  }
-                  return;
-                }
-              }
-            }
-            if (cResult[28] !== guildId) {
-              class U {
-                constructor() {
-                  found = closure_5.filter((item) => {
-                    const current = ref.current;
-                    return !current.has(item);
-                  });
-                  closure_0 = found;
-                  if (0 !== found.length) {
-                    tmp = found;
-                    tmp2 = found;
-                    for (const item10010 of found) {
-                      tmp3 = closure_1;
-                      current = closure_1.current;
-                      addResult = current.add(item10010);
-                      continue;
-                    }
-                    tmp5 = closure_1;
-                    tmp6 = closure_2;
-                    obj = closure_1(closure_2[12]);
-                    flag = true;
-                    applications = obj.fetchApplications(found, true);
-                    catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                  }
-                  return;
-                }
-              }
-              const items6 = [guildId];
-              cResult[28] = guildId;
-              cResult[29] = tmp45;
-              cResult[30] = items6;
-              let tmp44 = items6;
-            } else {
-              class U {
-                constructor() {
-                  found = closure_5.filter((item) => {
-                    const current = ref.current;
-                    return !current.has(item);
-                  });
-                  closure_0 = found;
-                  if (0 !== found.length) {
-                    tmp = found;
-                    tmp2 = found;
-                    for (const item10010 of found) {
-                      tmp3 = closure_1;
-                      current = closure_1.current;
-                      addResult = current.add(item10010);
-                      continue;
-                    }
-                    tmp5 = closure_1;
-                    tmp6 = closure_2;
-                    obj = closure_1(closure_2[12]);
-                    flag = true;
-                    applications = obj.fetchApplications(found, true);
-                    catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                  }
-                  return;
-                }
-              }
-              tmp44 = cResult[30];
-            }
-            const stateFromStores = tmp(504).useStateFromStores(tmp42, tmp45, tmp44);
-            let str = "unattempted";
-            if ("unattempted" !== stateFromStores) {
-              class U {
-                constructor() {
-                  found = closure_5.filter((item) => {
-                    const current = ref.current;
-                    return !current.has(item);
-                  });
-                  closure_0 = found;
-                  if (0 !== found.length) {
-                    tmp = found;
-                    tmp2 = found;
-                    for (const item10010 of found) {
-                      tmp3 = closure_1;
-                      current = closure_1.current;
-                      addResult = current.add(item10010);
-                      continue;
-                    }
-                    tmp5 = closure_1;
-                    tmp6 = closure_2;
-                    obj = closure_1(closure_2[12]);
-                    flag = true;
-                    applications = obj.fetchApplications(found, true);
-                    catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                  }
-                  return;
-                }
-              }
-              if ("loading" === stateFromStores) {
-                class U {
-                  constructor() {
-                    found = closure_5.filter((item) => {
-                      const current = ref.current;
-                      return !current.has(item);
-                    });
-                    closure_0 = found;
-                    if (0 !== found.length) {
-                      tmp = found;
-                      tmp2 = found;
-                      for (const item10010 of found) {
-                        tmp3 = closure_1;
-                        current = closure_1.current;
-                        addResult = current.add(item10010);
-                        continue;
-                      }
-                      tmp5 = closure_1;
-                      tmp6 = closure_2;
-                      obj = closure_1(closure_2[12]);
-                      flag = true;
-                      applications = obj.fetchApplications(found, true);
-                      catchPromise = applications.catch(() => closure_1_4(true));
-                      cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                    }
-                    return;
-                  }
-                }
-              } else {
-                class U {
-                  constructor() {
-                    found = closure_5.filter((item) => {
-                      const current = ref.current;
-                      return !current.has(item);
-                    });
-                    closure_0 = found;
-                    if (0 !== found.length) {
-                      tmp = found;
-                      tmp2 = found;
-                      for (const item10010 of found) {
-                        tmp3 = closure_1;
-                        current = closure_1.current;
-                        addResult = current.add(item10010);
-                        continue;
-                      }
-                      tmp5 = closure_1;
-                      tmp6 = closure_2;
-                      obj = closure_1(closure_2[12]);
-                      flag = true;
-                      applications = obj.fetchApplications(found, true);
-                      catchPromise = applications.catch(() => closure_1_4(true));
-                      cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                    }
-                    return;
-                  }
-                }
-              }
-              str = tmp48;
-            }
-            if (cResult[31] === str) {
-              class U {
-                constructor() {
-                  found = closure_5.filter((item) => {
-                    const current = ref.current;
-                    return !current.has(item);
-                  });
-                  closure_0 = found;
-                  if (0 !== found.length) {
-                    tmp = found;
-                    tmp2 = found;
-                    for (const item10010 of found) {
-                      tmp3 = closure_1;
-                      current = closure_1.current;
-                      addResult = current.add(item10010);
-                      continue;
-                    }
-                    tmp5 = closure_1;
-                    tmp6 = closure_2;
-                    obj = closure_1(closure_2[12]);
-                    flag = true;
-                    applications = obj.fetchApplications(found, true);
-                    catchPromise = applications.catch(() => closure_1_4(true));
-                    cleanupPromise = catchPromise.finally(() => _slicedToArray(/* F164608 */ function() { ... }));
-                  }
-                  return;
-                }
-              }
-            }
-            const tmpResult5 = tmp(504);
-            let obj3 = { hasRows: arr8.length > 0, loadFailed: "error" === stateFromStores || tmp35, fetchPhase: str };
-            const result = tmp(18787).voiceChannelAppListState(obj3);
-            cResult[31] = str;
-            cResult[32] = "error" === stateFromStores || tmp35;
-            cResult[33] = arr8.length > 0;
-            cResult[34] = result;
-            const tmpResult6 = tmp(18787);
-          }
-          closure_130_0 = tmp21;
-          let found = arr5.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
-          cResult[24] = arr5;
-          cResult[25] = tmp21;
-          cResult[26] = found;
-          arr8 = found;
-        }
-        closure_129_0 = tmp21;
-        const found1 = arr5.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
-        const mapped1 = found1.map((application_id) => application_id.application_id);
-        cResult[18] = arr5;
-        cResult[19] = tmp21;
-        cResult[20] = mapped1;
-        tmp36 = mapped1;
-        const tmp34 = _slicedToArray(obj2.useState(false), 2);
-      }
-    }
-  }
-  const tmp16 = voiceChannelAppCandidates(stateFromStoresArray, stateFromStoresArray1, guildId);
-  cResult[9] = guildId;
-  cResult[10] = stateFromStoresArray;
-  cResult[11] = stateFromStoresArray1;
-  cResult[12] = tmp16;
-  arr5 = tmp16;
-  const tmpResult4 = require("initialize");
-}) : (function useVoiceChannelAppOptions(arg0) {
-  _require = arg0;
-  let items = [arg0];
-  const effect = noop.useEffect(() => {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_channel_apps/useVoiceChannelAppOptions.tsx");
+
+export { voiceChannelAppCandidates };
+export function voiceChannelAppRows(arr, arg1) {
+  closure_0 = arg1;
+  return arr.filter((item, index) => dependencyMap(result[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(result[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
+}
+export function voiceChannelAppIdsToFetch(arr, arg1) {
+  closure_0 = arg1;
+  const found = arr.filter((item, index) => !dependencyMap(result[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(result[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
+  return found.map((application_id) => application_id.application_id);
+}
+export function useVoiceChannelAppSettingOptions(guildId, application_id) {
+  _require = application_id;
+  closure_129_0 = guildId;
+  let items = [guildId];
+  const effect = getOrFetchApplication.useEffect(() => {
     ConjureActionCreators.listProjects(closure_0);
   }, items);
-  const items1 = [ref];
+  const items1 = [ConjureProjectStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => ref.getOwnedProjects());
+  closure_129_1 = stateFromStoresArray;
   let obj2 = require("initialize");
-  let tmp2 = _require;
-  const items2 = [ref];
-  const items3 = [arg0];
-  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items2, () => ConjureProjectStore.getSharedProjects(closure_0), items3);
-  const items4 = [stateFromStoresArray, stateFromStoresArray1, arg0];
-  const memo = noop.useMemo(() => voiceChannelAppCandidates(stateFromStoresArray, stateFromStoresArray1, closure_0), items4);
+  const items2 = [ConjureProjectStore];
+  const items3 = [guildId];
+  const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items2, () => ConjureProjectStore.getSharedProjects(closure_0), items3);
+  closure_129_2 = stateFromStoresArray1;
+  const items4 = [stateFromStoresArray, stateFromStoresArray1, guildId];
+  const memo = getOrFetchApplication.useMemo(() => voiceChannelAppCandidates(memo5, result, closure_0), items4);
+  closure_129_3 = memo;
   const items5 = [memo];
-  const memo1 = noop.useMemo(() => memo.map((application_id) => application_id.application_id), items5);
-  const tmp9 = stateFromStoresArray(stateFromStoresArray1[11])(memo1, false);
-  noop = tmp9;
+  const memo1 = getOrFetchApplication.useMemo(() => application_id.map((application_id) => application_id.application_id), items5);
+  const tmp9 = memo5(7324)(memo1, false);
+  closure_129_4 = tmp9;
   let obj3 = require("initialize");
-  const tmp8 = stateFromStoresArray;
-  ref = noop.useRef(new Set());
+  const tmp8 = memo5;
+  closure_129_5 = getOrFetchApplication.useRef(new Set());
   const set = new Set();
   const set1 = new Set();
-  [voiceChannelAppCandidates, closure_7] = memo(noop.useState(new Set()), 2);
-  const tmp13 = memo(noop.useState(false), 2);
-  closure_8 = tmp13[1];
+  [closure_129_6, closure_129_7] = getOrFetchApplication.useState(new Set());
+  const tmp13 = _slicedToArray(getOrFetchApplication.useState(false), 2);
+  closure_129_8 = tmp13[1];
   const items6 = [memo, tmp9];
-  const memo2 = noop.useMemo(() => {
-    dependencyMap = closure_4;
-    const found = memo.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
+  const memo2 = getOrFetchApplication.useMemo(() => {
+    dependencyMap = getOrFetchApplication;
+    const found = application_id.filter((item, index) => !dependencyMap(result[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(result[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
     return found.map((application_id) => application_id.application_id);
   }, items6);
+  closure_129_9 = memo2;
   const items7 = [memo2];
-  const effect1 = noop.useEffect(() => {
-    const found = memo2.filter((item) => {
+  const effect1 = getOrFetchApplication.useEffect(() => {
+    const found = closure_9.filter((item) => {
       const current = ref.current;
       return !current.has(item);
     });
@@ -548,8 +89,8 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
         let addResult = current.add(item10010);
         continue;
       }
-      const applications = stateFromStoresArray(stateFromStoresArray1[12]).fetchApplications(found, true);
-      const obj = stateFromStoresArray(stateFromStoresArray1[12]);
+      const applications = memo5(result[10]).fetchApplications(found, true);
+      const obj = memo5(result[10]);
       applications.catch(() => closure_1_8(true)).finally(() => closure_2_7((arg0) => {
         const items = [...closure_1_0];
         return new Set(items);
@@ -558,13 +99,14 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
     }
   }, items7);
   const items8 = [memo, tmp9];
-  const memo3 = noop.useMemo(() => {
-    dependencyMap = closure_4;
-    return memo.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
+  const memo3 = getOrFetchApplication.useMemo(() => {
+    dependencyMap = getOrFetchApplication;
+    return application_id.filter((item, index) => dependencyMap(result[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(result[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
   }, items8);
-  const tmp12 = memo(noop.useState(new Set()), 2);
-  const items9 = [ref];
-  const items10 = [arg0];
+  closure_129_10 = memo3;
+  const tmp12 = _slicedToArray(getOrFetchApplication.useState(new Set()), 2);
+  const items9 = [ConjureProjectStore];
+  const items10 = [guildId];
   const stateFromStores = require("initialize").useStateFromStores(items9, () => ConjureProjectStore.getGuildProjectsFetchState(closure_0), items10);
   let str = "unattempted";
   if ("unattempted" !== stateFromStores) {
@@ -575,28 +117,27 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
     }
     str = str3;
   }
-  const obj4 = require("initialize");
-  const obj5 = { hasRows: memo3.length > 0, loadFailed: null, fetchPhase: null };
+  let obj4 = require("initialize");
+  let obj5 = { hasRows: memo3.length > 0, loadFailed: null, fetchPhase: null };
   let first = "error" === stateFromStores;
   if (!first) {
     first = tmp13[0];
   }
   obj5.loadFailed = first;
   obj5.fetchPhase = str;
+  const result = require("voiceChannelAppListState").voiceChannelAppListState(obj5);
   const items11 = [memo3];
-  const result = tmp2(stateFromStoresArray1[13]).voiceChannelAppListState(obj5);
-  const memo4 = obj.useMemo(() => memo3.map((preview_application_id) => {
-    let application_id = preview_application_id.preview_application_id;
+  const memo4 = obj.useMemo(() => closure_1_10.map((preview_application_id) => {
+    application_id = preview_application_id.preview_application_id;
     if (application_id == null) {
       application_id = preview_application_id.application_id;
     }
     return application_id;
   }), items11);
-  const tmp21 = tmp8(stateFromStoresArray1[11])(memo4);
-  closure_11 = tmp21;
-  let obj6 = { options: null, listState: result };
+  const tmp21 = tmp8(7324)(memo4);
+  closure_129_11 = tmp21;
   const items12 = [memo3, tmp21];
-  obj6.options = noop.useMemo(() => memo3.map((application_id, index) => {
+  memo5 = obj.useMemo(() => closure_1_10.map((application_id, index) => {
     application_id = application_id.application_id;
     const obj = { applicationId: application_id, name: application_id.name, iconApplication: null, iconURL: null };
     let tmp2 = tmp;
@@ -612,133 +153,36 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
     let tmp4 = null;
     if (null != icon) {
       ({ id: obj4.id, icon: obj4.icon } = tmp);
-      let applicationIconURL = stateFromStoresArray(stateFromStoresArray1[3]).getApplicationIconURL({ id: null, icon: null, size: 24 });
+      let applicationIconURL = memo5(result[3]).getApplicationIconURL({ id: null, icon: null, size: 24 });
       if (applicationIconURL == null) {
         applicationIconURL = null;
       }
       tmp4 = applicationIconURL;
-      const obj3 = stateFromStoresArray(stateFromStoresArray1[3]);
+      const obj3 = memo5(result[3]);
       const obj6 = { id: null, icon: null, size: 24 };
     }
     obj.iconURL = tmp4;
     return obj;
   }), items12);
-  return obj6;
-});
-ReactCompilerGating = fn(558);
-function voiceChannelAppRows(arr, arg1) {
-  closure_0 = arg1;
-  return arr.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
-}
-function voiceChannelAppIdsToFetch(arr, arg1) {
-  closure_0 = arg1;
-  const found = arr.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
-  return found.map((application_id) => application_id.application_id);
-}
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/voice_channel_apps/useVoiceChannelAppOptions.tsx");
-
-export { voiceChannelAppCandidates };
-export { voiceChannelAppRows };
-export { voiceChannelAppIdsToFetch };
-export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelAppSettingOptions(arg0, arg1) {
-  closure_0 = arg1;
-  const cResult = c.c(11);
-  ({ options, listState } = closure_7(arg0));
-  let tmp5 = null;
-  if (null != arg1) {
-    tmp5 = null;
-    if (!options.some((applicationId) => applicationId.applicationId === closure_0)) {
-      tmp5 = arg1;
+  dependencyMap = result;
+  let tmp22 = null;
+  if (null != application_id) {
+    tmp22 = null;
+    if (!memo5.some((applicationId) => applicationId.applicationId === closure_0)) {
+      tmp22 = application_id;
     }
   }
-  const tmp4 = closure_7(arg0);
-  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp5);
-  if (null != tmp5) {
-    if (null != getOrFetchApplication) {
-      if (cResult[3] === getOrFetchApplication) {
-        if (cResult[4] === tmp5) {
-          let tmp8 = cResult[5];
-        }
-        if (cResult[6] === options) {
-          if (cResult[7] === tmp8) {
-            let tmp14 = cResult[8];
-          }
-          if (cResult[9] !== tmp14) {
-            const obj2 = { options: tmp14, listState: "rows" };
-            cResult[9] = tmp14;
-            cResult[10] = obj2;
-          }
-        }
-        const items = [tmp8];
-        HermesBuiltin.arraySpread(options, 1);
-        cResult[6] = options;
-        cResult[7] = tmp8;
-        cResult[8] = items;
-        tmp14 = items;
-      }
-      const obj3 = { applicationId: tmp5, name: getOrFetchApplication.name, iconApplication: null, iconURL: null };
-      let tmp9 = getOrFetchApplication;
-      if (getOrFetchApplication == null) {
-        const obj4 = { id: tmp5, icon: null };
-        tmp9 = obj4;
-      }
-      obj3.iconApplication = tmp9;
-      let icon;
-      if (getOrFetchApplication != null) {
-        icon = getOrFetchApplication.icon;
-      }
-      let tmp11 = null;
-      if (null != icon) {
-        ({ id: obj7.id, icon: obj7.icon } = getOrFetchApplication);
-        let applicationIconURL = AvatarUtilsDefault.getApplicationIconURL({ id: null, icon: null, size: 24 });
-        if (applicationIconURL == null) {
-          applicationIconURL = null;
-        }
-        tmp11 = applicationIconURL;
-        const obj5 = { id: null, icon: null, size: 24 };
-      }
-      obj3.iconURL = tmp11;
-      cResult[3] = getOrFetchApplication;
-      cResult[4] = tmp5;
-      cResult[5] = obj3;
-      tmp8 = obj3;
-    }
-  }
-  if (cResult[0] === listState) {
-    if (cResult[1] === options) {
-      let tmp7 = cResult[2];
-    }
-    return tmp7;
-  }
-  const obj8 = { options, listState };
-  cResult[0] = listState;
-  cResult[1] = options;
-  cResult[2] = obj8;
-  tmp7 = obj8;
-  const tmpResult = useGetOrFetchApplications;
-}) : (function useVoiceChannelAppSettingOptions(arg0, arg1) {
-  _require = arg1;
-  const tmp = closure_7(arg0);
-  const options = tmp.options;
-  const listState = tmp.listState;
-  let tmp2 = null;
-  if (null != arg1) {
-    tmp2 = null;
-    if (!options.some((applicationId) => applicationId.applicationId === closure_0)) {
-      tmp2 = arg1;
-    }
-  }
-  closure_3 = tmp2;
-  const getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(tmp2);
-  let items = [options, listState, tmp2, getOrFetchApplication];
+  _slicedToArray = tmp22;
+  const tmp2Result = require("voiceChannelAppListState");
+  getOrFetchApplication = require("useGetOrFetchApplications").useGetOrFetchApplication(tmp22);
+  const items13 = [memo5, result, tmp22, getOrFetchApplication];
   return getOrFetchApplication.useMemo(() => {
-    if (null != id) {
+    if (null != application_id) {
       if (null != getOrFetchApplication) {
-        const obj4 = { applicationId: id, name: getOrFetchApplication.name, iconApplication: null, iconURL: null };
+        const obj4 = { applicationId: application_id, name: getOrFetchApplication.name, iconApplication: null, iconURL: null };
         let tmp2 = getOrFetchApplication;
         if (getOrFetchApplication == null) {
-          const obj = { id, icon: null };
+          const obj = { id: application_id, icon: null };
           tmp2 = obj;
         }
         obj4.iconApplication = tmp2;
@@ -759,12 +203,12 @@ export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompi
         let obj6 = { options: null, listState: "rows" };
         obj4.iconURL = tmp4;
         const items = [obj4];
-        HermesBuiltin.arraySpread(options, 1);
+        HermesBuiltin.arraySpread(memo5, 1);
         obj6.options = items;
       }
       return obj6;
     }
-    obj6 = { options, listState };
-    const obj10 = { options, listState };
-  }, items);
-});
+    obj6 = { options: memo5, listState: result };
+    const obj10 = { options: memo5, listState: result };
+  }, items13);
+}

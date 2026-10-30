@@ -1,10 +1,10 @@
-// === Module 15640: FormStyles ===
+// === Module 15680: FormStyles ===
 
-// Module 15640 (FormStyles)
-import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1084 */;
-import createStyles from "createStyles" /* 5005 */;
-import TextStyles from "TextStyles" /* 6710 */;
+// Module 15680 (FormStyles)
+import nativeDefault from "native" /* 575 */;
+import Constants from "Constants" /* 1072 */;
+import createStyles from "createStyles" /* 5009 */;
+import TextStyles from "TextStyles" /* 6717 */;
 import size from "module_2" /* 2 */;
 
 const obj = { header: { marginTop: 24, paddingStart: 16 }, inputContainer: { marginHorizontal: nativeDefault.space.PX_16 }, dropdownInput: null };

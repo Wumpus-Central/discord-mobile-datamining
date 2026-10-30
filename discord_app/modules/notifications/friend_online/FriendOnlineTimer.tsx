@@ -1,13 +1,13 @@
-// === Module 19895: FriendOnlineTimer ===
+// === Module 19958: FriendOnlineTimer ===
 
-// Module 19895 (FriendOnlineTimer)
-import DurationsDefault from "Durations" /* 1101 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import UserSettings from "UserSettings" /* 4833 */;
+// Module 19958 (FriendOnlineTimer)
+import DurationsDefault from "Durations" /* 1090 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import UserSettings from "UserSettings" /* 4834 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
-import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 19896 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
+import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 19959 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
 let closure_9 = async function _reportSessionMeaningfullyOnline() {
@@ -38,8 +38,8 @@ let closure_9 = async function _reportSessionMeaningfullyOnline() {
   }
   return value;
 };
-const Endpoints = fn(1084).Endpoints;
-const StatusTypes = fn(1095).StatusTypes;
+const Endpoints = fn(1072).Endpoints;
+const StatusTypes = fn(1083).StatusTypes;
 let closure_8 = 5 * DurationsDefault.Millis.MINUTE;
 class FriendOnlineTimerManager extends tmp2 {
   constructor() {

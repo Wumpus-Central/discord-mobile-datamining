@@ -1,7 +1,7 @@
-// === Module 8918: deferJoinActivityInChannel ===
+// === Module 8951: deferJoinActivityInChannel ===
 
-// Module 8918 (deferJoinActivityInChannel)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 8951 (deferJoinActivityInChannel)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");

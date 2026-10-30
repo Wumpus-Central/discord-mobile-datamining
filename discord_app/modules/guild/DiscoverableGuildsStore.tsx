@@ -1,10 +1,10 @@
-// === Module 9571: DiscoverableGuildsStore ===
+// === Module 9594: DiscoverableGuildsStore ===
 
-// Module 9571 (DiscoverableGuildsStore)
+// Module 9594 (DiscoverableGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7507 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7515 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -19,7 +19,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(AuthenticationStore);
 };
 prototype["getGuild"] = function getGuild(arg0) {
-  guild = undefined;
+  let guild;
   if (dependencyMap[arg0] != null) {
     guild = tmp.guild;
   }
@@ -30,7 +30,7 @@ prototype["getGuild"] = function getGuild(arg0) {
 };
 prototype["getGuilds"] = function getGuilds(arr) {
   const mapped = arr.map((item) => {
-    guild = undefined;
+    let guild;
     if (dependencyMap[item] != null) {
       guild = tmp.guild;
     }
@@ -79,7 +79,7 @@ const discoverableGuildsStore = new DiscoverableGuildsStore(DispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = dependencyMap[nextResult];
-      guild = undefined;
+      let guild;
       let tmp2 = nextResult;
       if (tmp4 != null) {
         guild = tmp4.guild;
@@ -128,7 +128,7 @@ const discoverableGuildsStore = new DiscoverableGuildsStore(DispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = dependencyMap[nextResult];
-      guild = undefined;
+      let guild;
       let tmp2 = nextResult;
       if (tmp4 != null) {
         guild = tmp4.guild;

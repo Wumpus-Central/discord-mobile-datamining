@@ -1,6 +1,6 @@
-// === Module 13321: ? ===
+// === Module 13471: ? ===
 
-// Module 13321
+// Module 13471
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_12_trafficCone.webp.js");

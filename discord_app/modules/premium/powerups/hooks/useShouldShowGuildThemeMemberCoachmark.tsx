@@ -1,25 +1,24 @@
-// === Module 18100: useShouldShowGuildThemeMemberCoachmark ===
+// === Module 18161: useShouldShowGuildThemeMemberCoachmark ===
 
-// Module 18100 (useShouldShowGuildThemeMemberCoachmark)
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5219 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5223 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 5224 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8426 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13903 */;
-import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 18101 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 18161 (useShouldShowGuildThemeMemberCoachmark)
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5225 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5229 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 5230 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8460 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 14037 */;
+import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled" /* 18162 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = GuildPowerupsConstants.GUILD_THEME_POWERUP_BOOST_PRICE;
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowGuildThemeMemberCoachmark(arg0) {
-  const tmp = useHasAllocateBoostPermissionDefault(arg0);
-  let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
+export default function useShouldShowGuildThemeMemberCoachmark(guildId) {
+  const tmp = useHasAllocateBoostPermissionDefault(guildId);
+  let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(guildId, "useShouldShowGuildThemeMemberCoachmark");
   const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
-  const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
-  const tmp5 = useIsGuildThemePerkEnabledDefault(arg0);
-  const isLoading = useGuildPowerupsBoostCountDefault(arg0).isLoading;
+  const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(guildId, "useShouldShowGuildThemeMemberCoachmark");
+  const tmp5 = useIsGuildThemePerkEnabledDefault(guildId);
+  const isLoading = useGuildPowerupsBoostCountDefault(guildId).isLoading;
   let tmp8 = !isLoading;
   if (!isLoading) {
     if (serverThemeEnabled) {
@@ -40,31 +39,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShoul
     tmp8 = serverThemeEnabled;
   }
   return tmp8;
-}) : (function useShouldShowGuildThemeMemberCoachmark(arg0) {
-  const tmp = useHasAllocateBoostPermissionDefault(arg0);
-  let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
-  const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
-  const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(arg0, "useShouldShowGuildThemeMemberCoachmark");
-  const tmp5 = useIsGuildThemePerkEnabledDefault(arg0);
-  const isLoading = useGuildPowerupsBoostCountDefault(arg0).isLoading;
-  let tmp8 = !isLoading;
-  if (!isLoading) {
-    if (serverThemeEnabled) {
-      serverThemeEnabled = serverThemeUserEnabled;
-    }
-    if (serverThemeEnabled) {
-      serverThemeEnabled = !serverThemeRollbackEnabled;
-    }
-    if (serverThemeEnabled) {
-      serverThemeEnabled = tmp7 < closure_3;
-    }
-    if (serverThemeEnabled) {
-      serverThemeEnabled = !tmp5;
-    }
-    if (serverThemeEnabled) {
-      serverThemeEnabled = false === tmp;
-    }
-    tmp8 = serverThemeEnabled;
-  }
-  return tmp8;
-});
+};

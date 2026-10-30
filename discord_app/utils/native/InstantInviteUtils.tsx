@@ -1,19 +1,19 @@
-// === Module 9089: utils/InstantInviteUtils ===
+// === Module 9102: utils/InstantInviteUtils ===
 
-// Module 9089 (utils/InstantInviteUtils)
-import util from "util" /* 1125 */;
-import canViewInviteModal from "canViewInviteModal" /* 8941 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4935 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+// Module 9102 (utils/InstantInviteUtils)
+import util from "util" /* 1114 */;
+import canViewInviteModal from "canViewInviteModal" /* 8974 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4939 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4935);
+let GuildChannelStore = fn(4939);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Permissions = fn(1084).Permissions;
+const Permissions = fn(1072).Permissions;
 let closure_129_0 = () => {
   const intl = util.intl;
   return intl.string(util.t.PqEzn8);
@@ -178,7 +178,6 @@ const obj18 = { value: 100 };
 Object.defineProperty(obj18, "label", { get: () => require(), set: undefined });
 Object.defineProperty(obj18, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 let items1 = [obj12, obj13, obj14, obj15, obj16, obj17, obj18];
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/InstantInviteUtils.tsx");
 
@@ -259,121 +258,8 @@ export function shouldRenderInvite(channels, guild) {
   }
   return tmp6;
 }
-export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowInviteInActionBar(id) {
-  const _require = id;
-  const cResult = require("c").c(7);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildChannelStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== id.id) {
-    class S {
-      constructor() {
-        return closure_5.getChannels(closure_0.id);
-      }
-    }
-    const items1 = [id.id];
-    cResult[1] = id.id;
-    cResult[2] = S;
-    cResult[3] = items1;
-    let tmp7 = items1;
-  } else {
-    class S {
-      constructor() {
-        return closure_5.getChannels(closure_0.id);
-      }
-    }
-    tmp7 = cResult[3];
-  }
-  const obj = require("c");
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, S, tmp7);
-  if (id != null) {
-    class S {
-      constructor() {
-        return closure_5.getChannels(closure_0.id);
-      }
-    }
-  }
-  if (null != undefined) {
-    class S {
-      constructor() {
-        return closure_5.getChannels(closure_0.id);
-      }
-    }
-    if (obj3.canViewInviteModal(PermissionStore, id)) {
-      class S {
-        constructor() {
-          return closure_5.getChannels(closure_0.id);
-        }
-      }
-      return true;
-    }
-  }
-  if (null == stateFromStoresObject) {
-    class S {
-      constructor() {
-        return closure_5.getChannels(closure_0.id);
-      }
-    }
-    return true;
-  } else {
-    class S {
-      constructor() {
-        return closure_5.getChannels(closure_0.id);
-      }
-    }
-    if (null != arr4.find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel))) {
-      class S {
-        constructor() {
-          return closure_5.getChannels(closure_0.id);
-        }
-      }
-      return true;
-    } else {
-      class S {
-        constructor() {
-          return closure_5.getChannels(closure_0.id);
-        }
-      }
-      if (cResult[4] !== stateFromStoresObject[closure_4]) {
-        class S {
-          constructor() {
-            return closure_5.getChannels(closure_0.id);
-          }
-        }
-        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class S {
-            constructor() {
-              return closure_5.getChannels(closure_0.id);
-            }
-          }
-          cResult[6] = tmp11;
-        } else {
-          class S {
-            constructor() {
-              return closure_5.getChannels(closure_0.id);
-            }
-          }
-        }
-        const found = arr3.find(tmp11);
-        cResult[4] = arr3;
-        cResult[5] = found;
-      } else {
-        class S {
-          constructor() {
-            return closure_5.getChannels(closure_0.id);
-          }
-        }
-      }
-    }
-    arr4 = stateFromStoresObject[closure_3];
-  }
-  const tmpResult = require("initialize");
-}) : (function useShouldShowInviteInActionBar(id) {
-  const _require = id;
+export function useShouldShowInviteInActionBar(id) {
+  _require = id;
   const items = [GuildChannelStore];
   const items1 = [id.id];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => GuildChannelStore.getChannels(id.id), items1);
@@ -399,4 +285,4 @@ export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompile
     tmp7 = tmp8;
   }
   return tmp7;
-});
+}

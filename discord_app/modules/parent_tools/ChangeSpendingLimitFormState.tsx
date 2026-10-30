@@ -1,11 +1,11 @@
-// === Module 16704: ChangeSpendingLimitFormState ===
+// === Module 16757: ChangeSpendingLimitFormState ===
 
-// Module 16704 (ChangeSpendingLimitFormState)
-import SpendingLimitUtils from "SpendingLimitUtils" /* 16616 */;
+// Module 16757 (ChangeSpendingLimitFormState)
+import SpendingLimitUtils from "SpendingLimitUtils" /* 16669 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7703 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7708 */;
 
 const require = globalThis.__r;
 
@@ -103,7 +103,7 @@ export function useChangeSpendingLimitFormState(teenId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -121,13 +121,13 @@ export function useChangeSpendingLimitFormState(teenId) {
               closure_8(true);
               c3 = 1;
               if (closure_5) {
-                const ParentalControlledSpendingLimit2 = tmp3(16614).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit2 = tmp3(16667).ParentalControlledSpendingLimit;
                 dependencyMap = 2;
                 c4 = 1;
                 const obj4 = { value: ParentalControlledSpendingLimit2.updateControlledSetting(tmp3, null), done: false };
                 return obj4;
               } else if (null != rounded) {
-                const ParentalControlledSpendingLimit = tmp3(16614).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit = tmp3(16667).ParentalControlledSpendingLimit;
                 const obj5 = { amount: tmp16, currency: formatted };
                 dependencyMap = 3;
                 c4 = 1;
@@ -136,7 +136,7 @@ export function useChangeSpendingLimitFormState(teenId) {
               }
             }
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (1 === tmp7) {
           c3 = 0;

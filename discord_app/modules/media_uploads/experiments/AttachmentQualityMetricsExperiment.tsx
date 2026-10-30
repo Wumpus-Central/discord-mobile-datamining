@@ -1,7 +1,7 @@
-// === Module 8224: AttachmentQualityMetricsExperiment ===
+// === Module 8227: AttachmentQualityMetricsExperiment ===
 
-// Module 8224 (AttachmentQualityMetricsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 8227 (AttachmentQualityMetricsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-attachment-quality-metrics", kind: "user", defaultConfig: { enableQualityMetrics: false, enableOriginDetection: false }, variations: { 0: { enableQualityMetrics: false, enableOriginDetection: false }, 1: { enableQualityMetrics: true, enableOriginDetection: true } } });

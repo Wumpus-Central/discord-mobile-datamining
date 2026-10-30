@@ -1,14 +1,14 @@
-// === Module 6850: SearchMessageStore ===
+// === Module 6857: SearchMessageStore ===
 
-// Module 6850 (SearchMessageStore)
+// Module 6857 (SearchMessageStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ReactionUtils from "ReactionUtils" /* 4949 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6051 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6433 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ReactionUtils from "ReactionUtils" /* 4953 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6058 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6440 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
 
 require = fn;
 function handleReaction(optimistic) {
@@ -47,7 +47,7 @@ function handleReaction(optimistic) {
   }
   obj = ReactionUtils;
 }
-const ChannelTypes = fn(1084).ChannelTypes;
+const ChannelTypes = fn(1072).ChannelTypes;
 class SearchState {
   constructor() {
     merged = Object.assign({ isIndexing: false, isHistoricalIndexing: false, isFetching: false, analyticsId: null, error: null, messages: null, documentsIndexed: 0, totalResults: null, messageIds: null, isInitialFetchComplete: false, cursor: null });

@@ -1,17 +1,17 @@
-// === Module 16207: validateConjureAppFrame ===
+// === Module 16247: validateConjureAppFrame ===
 
-// Module 16207 (validateConjureAppFrame)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5640 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
-import isConjureApplicationDefault from "isConjureApplication" /* 6841 */;
-import RPCErrorDefault from "RPCError" /* 9300 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16208 */;
-import ApplicationStore from "ApplicationStore" /* 2043 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+// Module 16247 (validateConjureAppFrame)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5646 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
+import isConjureApplicationDefault from "isConjureApplication" /* 6848 */;
+import RPCErrorDefault from "RPCError" /* 9313 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16248 */;
+import ApplicationStore from "ApplicationStore" /* 2040 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 require = fn;
-const RPCErrors = fn(1084).RPCErrors;
+const RPCErrors = fn(1072).RPCErrors;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateConjureAppFrame.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 11564: bridgeProtocol ===
+// === Module 11765: bridgeProtocol ===
 
-// Module 11564 (bridgeProtocol)
+// Module 11765 (bridgeProtocol)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/embedded-app-shims/src/native-shell/bridgeProtocol.tsx");

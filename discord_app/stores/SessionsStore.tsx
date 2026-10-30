@@ -1,9 +1,9 @@
-// === Module 5754: SessionsStore ===
+// === Module 5761: SessionsStore ===
 
-// Module 5754 (SessionsStore)
+// Module 5761 (SessionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function handleUpdate(sessions) {

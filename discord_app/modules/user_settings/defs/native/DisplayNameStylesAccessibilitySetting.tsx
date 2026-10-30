@@ -1,50 +1,33 @@
-// === Module 17274: DisplayNameStylesAccessibilitySetting ===
+// === Module 17328: DisplayNameStylesAccessibilitySetting ===
 
-// Module 17274 (DisplayNameStylesAccessibilitySetting)
+// Module 17328 (DisplayNameStylesAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import _modDef2930 from "module_2930" /* 2930 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16185 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import util from "util" /* 1114 */;
+import _modDef2931 from "module_2931" /* 2931 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16225 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AccessibilityStore];
-    const fn = function s() {
-      return AccessibilityStore.displayNameStylesEnabled;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useValue() {
+function useValue() {
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
-});
+}
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-const SettingBuilders = fn(11302);
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2930["2gFUEw"]);
+    return intl.string(_modDef2931["2gFUEw"]);
   },
-  parent: fn(8387).MobileUserSettings.ACCESSIBILITY,
-  useValue: tmp2,
+  parent: fn(8424).MobileUserSettings.ACCESSIBILITY,
+  useValue,
   onValueChange
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
 
 export default toggle;
-export const useValue = tmp2;
+export { useValue };
 export { onValueChange };

@@ -1,14 +1,14 @@
-// === Module 6711: StreamPermissionUtils ===
+// === Module 6718: StreamPermissionUtils ===
 
-// Module 6711 (StreamPermissionUtils)
-import ChannelUtils from "ChannelUtils" /* 6034 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 6698 */;
-import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6712 */;
-import AgeGateUtils from "AgeGateUtils" /* 6721 */;
-import GameConsoleStore from "GameConsoleStore" /* 5753 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import VoiceStateStore from "VoiceStateStore" /* 5668 */;
+// Module 6718 (StreamPermissionUtils)
+import ChannelUtils from "ChannelUtils" /* 6041 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 6705 */;
+import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6719 */;
+import AgeGateUtils from "AgeGateUtils" /* 6728 */;
+import GameConsoleStore from "GameConsoleStore" /* 5760 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import VoiceStateStore from "VoiceStateStore" /* 5674 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ function canStreamInChannel(channel, GuildStore, PermissionStore, arg3) {
   if (channel.isPrivate()) {
     return true;
   } else {
-    guild = GuildStore.getGuild(channel.getGuildId());
+    const guild = GuildStore.getGuild(channel.getGuildId());
     let num;
     if (guild != null) {
       num = guild.maxStageVideoChannelUsers;
@@ -105,44 +105,21 @@ function canWatchStream(basicChannel1, VoiceStateStore, GuildStore, PermissionSt
     return items1;
   }
 }
-const ChannelRecordBase = fn(4861).ChannelRecordBase;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4935).GUILD_VOCAL_CHANNELS_KEY;
-const Permissions = fn(1084).Permissions;
+const ChannelRecordBase = fn(4862).ChannelRecordBase;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4939).GUILD_VOCAL_CHANNELS_KEY;
+const Permissions = fn(1072).Permissions;
 const StreamUnavailableReasons = { REMOTE_MODE: 0, [0]: "REMOTE_MODE", CHANNEL_FULL: 1, [1]: "CHANNEL_FULL", NO_PERMISSION: 2, [2]: "NO_PERMISSION", AGE_RESTRICTED: 3, [3]: "AGE_RESTRICTED" };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/go_live/utils/StreamPermissionUtils.tsx");
 
 export { canStreamInChannel };
 export { StreamUnavailableReasons };
 export { canWatchStream };
-export const useCanWatchStream = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanWatchStream(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(3);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function c() {
-      return canWatchStream(closure_0, VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore);
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp9 = fn;
-  } else {
-    tmp9 = cResult[2];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStoresArray(first, tmp9);
-}) : (function useCanWatchStream(arg0) {
-  _require = arg0;
+export function useCanWatchStream(stateFromStores) {
+  _require = stateFromStores;
   const items = [VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore];
   return require("initialize").useStateFromStoresArray(items, () => canWatchStream(closure_0, VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore));
-});
+}
 export function getStreamEligibleChannels(arg0, GuildStore, PermissionStore) {
   const items = [];
   for (const item10011 of tmp) {

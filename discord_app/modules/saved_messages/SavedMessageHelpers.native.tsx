@@ -1,8 +1,8 @@
-// === Module 14278: SavedMessageHelpers ===
+// === Module 11140: SavedMessageHelpers ===
 
-// Module 14278 (SavedMessageHelpers)
+// Module 11140 (SavedMessageHelpers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10144 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 10171 */;
 
 const require = fn;
 let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
@@ -20,7 +20,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -45,7 +45,7 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
             closure_129_4 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -72,21 +72,21 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                         if (code === constants.TOO_MANY_SAVED_MESSAGES) {
                           closure_0 = tmp6;
                           const obj3 = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
-                          const intl2 = closure_0(1125).intl;
-                          obj3.title = intl2.string(closure_0(1125).t.mlbiZW);
-                          const intl3 = closure_0(1125).intl;
-                          const t = closure_0(1125).t;
+                          const intl2 = closure_0(1114).intl;
+                          obj3.title = intl2.string(closure_0(1114).t.mlbiZW);
+                          const intl3 = closure_0(1114).intl;
+                          const t = closure_0(1114).t;
                           const obj4 = { max: null != closure_1_1.dueAt ? closure_2_7 : closure_2_6 };
                           obj3.body = intl3.formatToPlainString(null != closure_1_1.dueAt ? t.Anr1Dg : t["1zVbEG"], obj4);
-                          const intl4 = tmp9(1125).intl;
-                          obj3.confirmText = intl4.string(closure_0(1125).t.BddRzS);
-                          const intl5 = tmp9(1125).intl;
-                          obj3.cancelText = intl5.string(closure_0(1125).t.ZGbTcy);
+                          const intl4 = tmp9(1114).intl;
+                          obj3.confirmText = intl4.string(closure_0(1114).t.BddRzS);
+                          const intl5 = tmp9(1114).intl;
+                          obj3.cancelText = intl5.string(closure_0(1114).t.ZGbTcy);
                           obj3.onCancel = function onCancel() {
-                            const SavedMessageSortTypes = displayToast(10145).SavedMessageSortTypes;
-                            return displayToast(14269).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+                            const SavedMessageSortTypes = displayToast(10172).SavedMessageSortTypes;
+                            return displayToast(11131).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
                           };
-                          closure_1(5946).show(obj3);
+                          closure_1(5953).show(obj3);
                           return null;
                         } else {
                           let message;
@@ -97,11 +97,11 @@ let closure_8 = async function _addOrUpdateSavedMessage(arg0) {
                             }
                           }
                           if (message == null) {
-                            const intl = closure_0(1125).intl;
-                            message = intl.string(closure_0(1125).t.R0RpRX);
+                            const intl = closure_0(1114).intl;
+                            message = intl.string(closure_0(1114).t.R0RpRX);
                           }
                           const obj = { text: message, variant: "critical" };
-                          closure_1(5701).open("SAVED_MESSAGE_CREATE_ERROR", obj);
+                          closure_1(5707).open("SAVED_MESSAGE_CREATE_ERROR", obj);
                           return null;
                         }
                       }),
@@ -166,7 +166,7 @@ let closure_9 = async function _removeSavedMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -191,7 +191,7 @@ let closure_9 = async function _removeSavedMessage(arg0) {
           closure_129_4 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -267,8 +267,8 @@ let closure_9 = async function _removeSavedMessage(arg0) {
     }
   }
 };
-const AbortCodes = fn(1084).AbortCodes;
-const SavedMessagesConstants = fn(14279);
+const AbortCodes = fn(1072).AbortCodes;
+const SavedMessagesConstants = fn(11141);
 ({ SAVED_BOOKMARKS_MAX: metroRequire, SAVED_REMINDERS_MAX: closure_7 } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

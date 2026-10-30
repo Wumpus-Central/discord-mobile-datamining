@@ -1,13 +1,13 @@
-// === Module 16246: providers ===
+// === Module 16286: providers ===
 
-// Module 16246 (providers)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7334 */;
-import RPCErrorDefault from "RPCError" /* 9300 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11571 */;
+// Module 16286 (providers)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7341 */;
+import RPCErrorDefault from "RPCError" /* 9313 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11772 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
 
 require = fn;
 let closure_10 = async function _refreshProviderAccessToken() {
@@ -20,13 +20,13 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(6437);
+let Constants = fn(6444);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
-Constants = fn(1084);
+Constants = fn(1072);
 ({ AnalyticsLocations: hasOwnProperty, ComponentActions: metroRequire, PlatformTypes: closure_7 } = Constants);
-Constants = fn(2024);
+Constants = fn(2019);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
-Constants = fn(1095);
+Constants = fn(1083);
 ({ RPCCommands, RPCErrors: closure_8 } = Constants);
 const items = [AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID];
 const set = new Set(items);
@@ -52,12 +52,12 @@ obj2 = {
     value = provider(connection_redirect[10]).get(provider);
     c3 = value;
     if (null == value) {
-      const obj4 = { errorCode: closure_8.INVALID_PROVIDER };
+      const obj4 = { errorCode: constants.INVALID_PROVIDER };
       const _HermesInternal = HermesInternal;
       const tmp4Result1 = new tmp4(tmp[7])(obj4, "Platform not found for provider \"" + provider + "\"");
       throw tmp4Result1;
     } else if (provider !== constants2.AMAZON_MUSIC) {
-      const obj5 = { errorCode: closure_8.UNAUTHORIZED_FOR_APPLICATION };
+      const obj5 = { errorCode: constants.UNAUTHORIZED_FOR_APPLICATION };
       const tmp22 = new tmp4(tmp[7])(obj5, "Command not available for this application");
       throw tmp22;
     } else if (set.has(validateApplicationResult)) {
@@ -95,19 +95,19 @@ obj2 = {
             }
           }
           function handleConnectionsCallbackError() {
-            const obj = { errorCode: closure_3_8.OAUTH2_ERROR };
-            closure_1(new RPCErrorDefault({ errorCode: closure_3_8.OAUTH2_ERROR }, "OAuth2 setup for \"" + provider + "\" failed"));
+            const obj = { errorCode: React6.OAUTH2_ERROR };
+            closure_1(new RPCErrorDefault({ errorCode: React6.OAUTH2_ERROR }, "OAuth2 setup for \"" + provider + "\" failed"));
             const removed = _require.removeEventListener("abort", handleSocketDisconnected);
-            const tmp2 = new RPCErrorDefault({ errorCode: closure_3_8.OAUTH2_ERROR }, "OAuth2 setup for \"" + provider + "\" failed");
+            const tmp2 = new RPCErrorDefault({ errorCode: React6.OAUTH2_ERROR }, "OAuth2 setup for \"" + provider + "\" failed");
             DispatcherDefault.unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
             const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
             ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
           }
           function handleSocketDisconnected() {
-            const obj = { errorCode: closure_3_8.OAUTH2_ERROR };
-            closure_1(new RPCErrorDefault({ errorCode: closure_3_8.OAUTH2_ERROR }, "OAuth2 setup for \"" + provider + "\" was abandoned"));
+            const obj = { errorCode: React6.OAUTH2_ERROR };
+            closure_1(new RPCErrorDefault({ errorCode: React6.OAUTH2_ERROR }, "OAuth2 setup for \"" + provider + "\" was abandoned"));
             const removed = _require.removeEventListener("abort", handleSocketDisconnected);
-            const tmp2 = new RPCErrorDefault({ errorCode: closure_3_8.OAUTH2_ERROR }, "OAuth2 setup for \"" + provider + "\" was abandoned");
+            const tmp2 = new RPCErrorDefault({ errorCode: React6.OAUTH2_ERROR }, "OAuth2 setup for \"" + provider + "\" was abandoned");
             DispatcherDefault.unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
             const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
             ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
@@ -128,7 +128,7 @@ obj2 = {
       }
       return promise;
     } else {
-      const obj6 = { errorCode: closure_8.UNAUTHORIZED_FOR_APPLICATION };
+      const obj6 = { errorCode: constants.UNAUTHORIZED_FOR_APPLICATION };
       const tmp10 = new tmp4(tmp[7])(obj6, "Command not available for this application");
       throw tmp10;
     }
@@ -161,7 +161,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -187,7 +187,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
           closure_129_5 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

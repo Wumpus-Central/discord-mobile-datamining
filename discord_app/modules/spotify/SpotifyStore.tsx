@@ -1,26 +1,26 @@
-// === Module 6558: SpotifyStore ===
+// === Module 6565: SpotifyStore ===
 
-// Module 6558 (SpotifyStore)
+// Module 6565 (SpotifyStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import BackoffDefault from "Backoff" /* 569 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import Timers from "Timers" /* 4852 */;
-import useIsSpeaking from "useIsSpeaking" /* 6839 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8679 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11439 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 15441 */;
-import RunningGameStore from "RunningGameStore" /* 2019 */;
+import BackoffDefault from "Backoff" /* 559 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import Timers from "Timers" /* 4853 */;
+import useIsSpeaking from "useIsSpeaking" /* 6846 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8713 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11640 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 15481 */;
+import RunningGameStore from "RunningGameStore" /* 2014 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
-import IdleStore from "IdleStore" /* 6692 */;
-import PresenceStore from "PresenceStore" /* 5750 */;
-import SpeakingStore from "SpeakingStore" /* 6743 */;
-import VoiceStateStore from "VoiceStateStore" /* 5668 */;
-import Platforms from "Platforms" /* 6561 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
+import IdleStore from "IdleStore" /* 6699 */;
+import PresenceStore from "PresenceStore" /* 5756 */;
+import SpeakingStore from "SpeakingStore" /* 6750 */;
+import VoiceStateStore from "VoiceStateStore" /* 5674 */;
+import Platforms from "Platforms" /* 6568 */;
 
 require = fn;
 function upsertAccount(accountId, accessToken) {
@@ -56,7 +56,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4852).Interval();
+    const interval = new obj(4853).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -484,9 +484,9 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8868);
+const SpotifyConstants = fn(8902);
 ({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SpotifyConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 const PlatformTypes = Constants.PlatformTypes;
 ({ ActivityFlags: closure_19, AnalyticEvents: closure_20 } = Constants);
 const user = Platforms.get(PlatformTypes.SPOTIFY);
@@ -503,11 +503,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4852).Timeout();
-const timeout1 = new fn(4852).Timeout();
-const timeout2 = new fn(4852).Timeout();
-const timeout3 = new fn(4852).Timeout();
-const timeout4 = new fn(4852).Timeout();
+const timeout = new fn(4853).Timeout();
+const timeout1 = new fn(4853).Timeout();
+const timeout2 = new fn(4853).Timeout();
+const timeout3 = new fn(4853).Timeout();
+const timeout4 = new fn(4853).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -574,7 +574,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11439).SpotifyAPI;
+    const SpotifyAPI = self(11640).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1036,7 +1036,7 @@ prototype2["getActivity"] = function getActivity() {
       return obj4;
     }
     const _HermesInternal = HermesInternal;
-    partyId = "" + value2 + AuthenticationStore.getId();
+    partyId = "" + __initData + AuthenticationStore.getId();
     tmp6 = null != album.image && null != assetFromImageURL;
   }
 };
@@ -1092,7 +1092,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           let flag2 = true;
         } else {
           flag2 = false;
-          if (!account(568)(found, device)) {
+          if (!account(558)(found, device)) {
             const _Object = Object;
             const merged = Object.assign(found, device);
             flag2 = true;
@@ -1170,7 +1170,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6839);
+        obj9 = device(6846);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1204,15 +1204,15 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
             }
             if (null != tmp10) {
               const obj6 = { type: "SPOTIFY_NEW_TRACK", track: tmp10, connectionId: accountId };
-              tmp25(584).dispatch(obj6);
-              const tmp25Result = tmp25(584);
+              tmp25(572).dispatch(obj6);
+              const tmp25Result = tmp25(572);
               const obj7 = { party_platform: PlatformTypes.SPOTIFY, track_id: tmp10.id, has_images: true, details: tmp10.album.name, state: tmp10.name, album_id: tmp10.album.id, author_ids: null, author_names: null };
               const artists = tmp10.artists;
               obj7.author_ids = artists.map((id) => id.id);
               const artists1 = tmp10.artists;
               obj7.author_names = artists1.map((name) => name.name);
-              tmp25(1264).track(constants4.ACTIVITY_UPDATED, obj7);
-              const tmp25Result2 = tmp25(1264);
+              tmp25(1253).track(constants4.ACTIVITY_UPDATED, obj7);
+              const tmp25Result2 = tmp25(1253);
             }
           } else {
             tmp55 = flag;

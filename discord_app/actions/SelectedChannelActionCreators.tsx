@@ -1,16 +1,16 @@
-// === Module 6693: SelectedChannelActionCreators ===
+// === Module 6700: SelectedChannelActionCreators ===
 
-// Module 6693 (SelectedChannelActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import router_utils from "router_utils" /* 1111 */;
-import SelectedChannelActionCreatorsAdditional from "SelectedChannelActionCreatorsAdditional" /* 6694 */;
-import GameConsoleActionCreatorsAll from "GameConsoleActionCreators" /* 11747 */;
-import GameConsoleStore from "GameConsoleStore" /* 5753 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+// Module 6700 (SelectedChannelActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import router_utils from "router_utils" /* 1100 */;
+import SelectedChannelActionCreatorsAdditional from "SelectedChannelActionCreatorsAdditional" /* 6701 */;
+import GameConsoleActionCreatorsAll from "GameConsoleActionCreators" /* 11940 */;
+import GameConsoleStore from "GameConsoleStore" /* 5760 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ME: closure_7, PopoutWindowKeys, Routes: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
@@ -28,7 +28,7 @@ export default {
     DispatcherDefault.dispatch({ type: "CHANNEL_SELECT", guildId: tmp2, channelId, fromGuildId, fromChannelId, messageId, jumpType, source, skipMessageFetch, opensChannel, isAppStartupNavigation });
   },
   selectPrivateChannel(id) {
-    router_utils.transitionTo(closure_1_8.CHANNEL(React5, id));
+    router_utils.transitionTo(React6.CHANNEL(React5, id));
   },
   selectVoiceChannel(id) {
     let flag = MediaEngineStore;

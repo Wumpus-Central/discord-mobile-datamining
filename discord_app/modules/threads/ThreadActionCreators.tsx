@@ -1,21 +1,21 @@
-// === Module 8341: ThreadActionCreators ===
+// === Module 8194: ThreadActionCreators ===
 
-// Module 8341 (ThreadActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1125 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5946 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8358 */;
-import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8359 */;
+// Module 8194 (ThreadActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8335 */;
+import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8336 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8342 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4939 */;
-import ThreadSummaryStore from "ThreadSummaryStore" /* 8357 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8195 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4943 */;
+import ThreadSummaryStore from "ThreadSummaryStore" /* 8334 */;
 
 const require = globalThis.__r;
 
@@ -44,11 +44,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   const obj = DispatcherDefault;
   obj.dispatch({ type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: AuthenticationStore.getId(), isJoining });
 }
-let closure_4 = fn(4861).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8342).PAGE_SIZE;
-const Constants = fn(1084);
+let closure_4 = fn(4862).createChannelRecordFromServer;
+const PAGE_SIZE = fn(8195).PAGE_SIZE;
+const Constants = fn(1072);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(4864).ChannelFlags;
+const ChannelFlags = fn(4865).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 
@@ -91,7 +91,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -149,7 +149,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -207,7 +207,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -362,7 +362,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -409,7 +409,7 @@ export default {
             return obj;
           }
           c0 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         } catch (tmp9) {
           c0 = tmp;
           throw tmp9;
@@ -452,7 +452,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -524,7 +524,7 @@ export default {
                 dispatchThreadMemberLocalUpdate(closure_129_0, false);
               }
               c5 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -566,7 +566,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -664,17 +664,17 @@ export default {
       DispatcherDefault.dispatch(obj2);
     }
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: __initData.THREAD_MEMBER(channel.id), query: { location }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: closure_1_12.THREAD_MEMBER(channel.id), query: { location }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(request);
   },
   removeMember(id, arg1, location) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: __initData.THREAD_MEMBER(id, arg1), query: { location }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: closure_1_12.THREAD_MEMBER(id, arg1), query: { location }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(request);
   },
   setAutoArchiveDuration(id, auto_archive_duration) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: __initData.CHANNEL(id.id), body: { auto_archive_duration }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: closure_1_12.CHANNEL(id.id), body: { auto_archive_duration }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.patch(request);
   },
   pin(dependencyMap) {
@@ -691,19 +691,19 @@ export default {
       flag = false;
     }
     return (async () => {
-      flags(584).dispatch({ type: "THREAD_UPDATE", channel: tmp3.merge({ flags }) });
+      flags(572).dispatch({ type: "THREAD_UPDATE", channel: tmp3.merge({ flags }) });
       const obj7 = { flags };
       if (flag) {
         obj7.archived = false;
       }
-      const HTTP = tmp3(1294).HTTP;
+      const HTTP = tmp3(1283).HTTP;
       const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj7, rejectWithError: true };
       await HTTP.patch(request);
       if (1 === tmp7) {
         dependencyMap = 0;
-        flags(584).dispatch({ type: "THREAD_UPDATE", channel: closure_128_0 });
+        flags(572).dispatch({ type: "THREAD_UPDATE", channel: closure_128_0 });
         c3 = 3;
-        flags(584);
+        flags(572);
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
@@ -728,7 +728,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -747,10 +747,10 @@ export default {
               const mergeResult = tmp3.merge(obj5);
               const mergeResult1 = v6.merge(obj7);
               const obj9 = { type: "THREAD_UPDATE", channel: mergeResult };
-              v6(584).dispatch(obj9);
-              const obj24 = v6(584);
+              v6(572).dispatch(obj9);
+              const obj24 = v6(572);
               const obj10 = { type: "THREAD_UPDATE", channel: mergeResult1 };
-              v6(584).dispatch(obj10);
+              v6(572).dispatch(obj10);
               v6 = 1;
               c3 = 1;
               const obj11 = { value: self.unarchiveThreadIfNecessary(tmp3.id), done: false };
@@ -780,7 +780,7 @@ export default {
               return obj14;
             } else {
               dependencyMap = 1;
-              const HTTP2 = tmp3(1294).HTTP;
+              const HTTP2 = tmp3(1283).HTTP;
               const request = { url: closure_1_12.CHANNEL(closure_128_0.id), body: null, rejectWithError: true };
               const obj15 = { flags: closure_128_0.flags & ~constants.PINNED };
               request.body = obj15;
@@ -792,10 +792,10 @@ export default {
           } else if (3 === tmp8) {
             dependencyMap = 0;
             const obj17 = { type: "THREAD_UPDATE", channel: closure_128_0 };
-            v6(584).dispatch(obj17);
-            const obj6 = v6(584);
+            v6(572).dispatch(obj17);
+            const obj6 = v6(572);
             const obj18 = { type: "THREAD_UPDATE", channel: closure_128_1 };
-            v6(584).dispatch(obj18);
+            v6(572).dispatch(obj18);
             c3 = 3;
             const obj19 = { value: undefined, done: true };
             return obj19;
@@ -803,9 +803,9 @@ export default {
             if (4 === tmp8) {
               dependencyMap = 0;
               const obj20 = { type: "THREAD_UPDATE", channel: closure_128_1 };
-              v6(584).dispatch(obj20);
+              v6(572).dispatch(obj20);
               c3 = 3;
-              const obj4 = v6(584);
+              const obj4 = v6(572);
             } else if (5 === tmp8) {
               if (arg0 === 1) {
                 c3 = 3;
@@ -817,7 +817,7 @@ export default {
                 return obj21;
               } else {
                 dependencyMap = 2;
-                const HTTP = tmp3(1294).HTTP;
+                const HTTP = tmp3(1283).HTTP;
                 const request1 = { url: closure_1_12.CHANNEL(closure_128_1.id), body: null, rejectWithError: true };
                 const obj22 = { flags: closure_128_1.flags | constants.PINNED };
                 request1.body = obj22;
@@ -875,7 +875,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

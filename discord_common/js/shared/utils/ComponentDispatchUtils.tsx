@@ -1,7 +1,7 @@
-// === Module 1122: utils/ComponentDispatchUtils ===
+// === Module 1111: utils/ComponentDispatchUtils ===
 
-// Module 1122 (utils/ComponentDispatchUtils)
-import _mod580 from "module_580" /* 580 */;
+// Module 1111 (utils/ComponentDispatchUtils)
+import _mod568 from "module_568" /* 568 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
@@ -169,11 +169,11 @@ prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, channelI
   const items = ["" + VOICE_MESSAGE_SEND + "_" + channelId, ...substr];
   return this.dispatch.apply(items);
 };
-prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, channelId, callback) {
-  return this.subscribe("" + VOICE_MESSAGE_SEND + "_" + channelId, callback);
+prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, sharedValue1, callback) {
+  return this.subscribe("" + VOICE_MESSAGE_SEND + "_" + sharedValue1, callback);
 };
-prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, channelId, callback) {
-  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + channelId, callback);
+prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, sharedValue1, callback) {
+  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + sharedValue1, callback);
 };
 
 export { ComponentDispatcher };

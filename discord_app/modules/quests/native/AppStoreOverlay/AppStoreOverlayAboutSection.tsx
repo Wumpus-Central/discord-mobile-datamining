@@ -1,10 +1,9 @@
-// === Module 14591: AppStoreOverlayAboutSection ===
+// === Module 14624: AppStoreOverlayAboutSection ===
 
-// Module 14591 (AppStoreOverlayAboutSection)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5271 */;
+// Module 14624 (AppStoreOverlayAboutSection)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 5619 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,183 +13,13 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_12, bottom: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12 };
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = { aboutSection: { borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj3 = { borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStoreOverlayAboutSection(arg0) {
-  const cResult = c.c(20);
-  ({ description, onSeeMorePress } = arg0);
-  closure_9();
-  [tmp6, dependencyMap] = noop.useState(false);
-  [first, closure_3] = noop.useState(null);
-  if (cResult[0] !== first) {
-    const fn = function c(nativeEvent) {
-      if (null == first) {
-        closure_3(nativeEvent.nativeEvent.lines.length > 3);
-      }
-    };
-    cResult[0] = first;
-    cResult[1] = fn;
-    let tmp9 = fn;
-  } else {
-    tmp9 = cResult[1];
-  }
-  if (cResult[2] !== onSeeMorePress) {
-    class X {
-      constructor() {
-        tmp = closure_1((arg0) => {
-          if (!arg0) {
-            if (onSeeMorePress != null) {
-              tmp();
-            }
-          }
-          return !arg0;
-        });
-        return;
-      }
-    }
-    cResult[2] = onSeeMorePress;
-    cResult[3] = X;
-  } else {
-    class X {
-      constructor() {
-        tmp = closure_1((arg0) => {
-          if (!arg0) {
-            if (onSeeMorePress != null) {
-              tmp();
-            }
-          }
-          return !arg0;
-        });
-        return;
-      }
-    }
-  }
-  if (cResult[4] !== tmp6) {
-    class X {
-      constructor() {
-        tmp = closure_1((arg0) => {
-          if (!arg0) {
-            if (onSeeMorePress != null) {
-              tmp();
-            }
-          }
-          return !arg0;
-        });
-        return;
-      }
-    }
-    const t = util.t;
-    const stringResult = obj2.string(tmp6 ? t["6MwJo/"] : t.lBeKY2);
-    cResult[4] = tmp6;
-    cResult[5] = stringResult;
-  } else {
-    class X {
-      constructor() {
-        tmp = closure_1((arg0) => {
-          if (!arg0) {
-            if (onSeeMorePress != null) {
-              tmp();
-            }
-          }
-          return !arg0;
-        });
-        return;
-      }
-    }
-    const _Symbol = Symbol;
-    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      class X {
-        constructor() {
-          tmp = closure_1((arg0) => {
-            if (!arg0) {
-              if (onSeeMorePress != null) {
-                tmp();
-              }
-            }
-            return !arg0;
-          });
-          return;
-        }
-      }
-      const obj3 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-      const intl = util.intl;
-      obj3.children = intl.string(util.t.CI0vSJ);
-      const tmp15 = timestampProducer(Text_Text.Text, obj3);
-      cResult[6] = tmp15;
-    } else {
-      class X {
-        constructor() {
-          tmp = closure_1((arg0) => {
-            if (!arg0) {
-              if (onSeeMorePress != null) {
-                tmp();
-              }
-            }
-            return !arg0;
-          });
-          return;
-        }
-      }
-    }
-    if (tmp6) {
-      class X {
-        constructor() {
-          tmp = closure_1((arg0) => {
-            if (!arg0) {
-              if (onSeeMorePress != null) {
-                tmp();
-              }
-            }
-            return !arg0;
-          });
-          return;
-        }
-      }
-    } else {
-      class X {
-        constructor() {
-          tmp = closure_1((arg0) => {
-            if (!arg0) {
-              if (onSeeMorePress != null) {
-                tmp();
-              }
-            }
-            return !arg0;
-          });
-          return;
-        }
-      }
-    }
-    if (cResult[7] === description) {
-      class X {
-        constructor() {
-          tmp = closure_1((arg0) => {
-            if (!arg0) {
-              if (onSeeMorePress != null) {
-                tmp();
-              }
-            }
-            return !arg0;
-          });
-          return;
-        }
-      }
-    }
-    const obj4 = { variant: "text-sm/medium", color: "text-default", lineClamp: tmp16, onTextLayout: tmp9, children: description };
-    const tmp19 = timestampProducer(Text_Text.Text, obj4);
-    cResult[7] = description;
-    cResult[8] = tmp9;
-    cResult[9] = tmp16;
-    cResult[10] = tmp19;
-  }
-  const tmp5 = _slicedToArray(noop.useState(false), 2);
-}) : (function AppStoreOverlayAboutSection(children) {
+export default function AppStoreOverlayAboutSection(children) {
   const onSeeMorePress = children.onSeeMorePress;
   c1 = undefined;
   first = undefined;
@@ -236,4 +65,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   items2[2] = tmp13Result;
   obj.children = items2;
   return React5(hasOwnProperty, obj);
-});
+};

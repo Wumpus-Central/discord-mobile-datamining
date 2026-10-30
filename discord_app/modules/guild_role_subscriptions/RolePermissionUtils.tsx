@@ -1,9 +1,9 @@
-// === Module 4928: RolePermissionUtils ===
+// === Module 4932: RolePermissionUtils ===
 
-// Module 4928 (RolePermissionUtils)
-import Constants from "Constants" /* 1084 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4912 */;
+// Module 4932 (RolePermissionUtils)
+import Constants from "Constants" /* 1072 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4916 */;
 import size from "module_2" /* 2 */;
 
 const hasPermission = GuildRoleRecord.hasPermission;

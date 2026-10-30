@@ -1,85 +1,23 @@
-// === Module 17570: NitroWumpusFlightRight3dIllustration ===
+// === Module 17624: NitroWumpusFlightRight3dIllustration ===
 
-// Module 17570 (NitroWumpusFlightRight3dIllustration)
-import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import assetHelpers from "assetHelpers" /* 7055 */;
-import _modDef17571 from "module_17571" /* 17571 */;
-import _modDef17572 from "module_17572" /* 17572 */;
-import _modDef17573 from "module_17573" /* 17573 */;
+// Module 17624 (NitroWumpusFlightRight3dIllustration)
+import assetHelpers from "assetHelpers" /* 7063 */;
+import _modDef17625 from "module_17625" /* 17625 */;
+import _modDef17626 from "module_17626" /* 17626 */;
+import _modDef17627 from "module_17627" /* 17627 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17571 }, 3: null };
-let obj2 = { uri: _modDef17571 };
-obj[2] = { uri: _modDef17572 };
-const obj3 = { uri: _modDef17572 };
-obj[3] = { uri: _modDef17573 };
-const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17573 };
+let obj = { 1: null, 2: { uri: _modDef17625 }, 3: null };
+let obj2 = { uri: _modDef17625 };
+obj[2] = { uri: _modDef17626 };
+const obj3 = { uri: _modDef17626 };
+obj[3] = { uri: _modDef17627 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx");
 
-export const NitroWumpusFlightRight3dIllustration = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroWumpusFlightRight3dIllustration(arg0) {
-  obj = c;
-  const cResult = obj.c(12);
-  ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
-  let num = 1;
-  if (undefined !== scale) {
-    num = scale;
-  }
-  if (cResult[0] === height) {
-    if (cResult[1] === num) {
-      if (cResult[2] === width) {
-        let tmp4 = cResult[3];
-      }
-      const _Symbol = Symbol;
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const assetSource = assetHelpers.getAssetSource(obj);
-        cResult[4] = assetSource;
-        let tmp7 = assetSource;
-        const tmpResult = assetHelpers;
-      } else {
-        tmp7 = cResult[4];
-      }
-      if (cResult[5] !== resizeMode) {
-        const assetResizeMode = assetHelpers.getAssetResizeMode(resizeMode);
-        cResult[5] = resizeMode;
-        cResult[6] = assetResizeMode;
-        let tmp10 = assetResizeMode;
-        const tmpResult3 = assetHelpers;
-      } else {
-        tmp10 = cResult[6];
-      }
-      if (cResult[7] === accessibilityLabel) {
-        if (cResult[8] === accessible) {
-          if (cResult[9] === tmp4) {
-            if (cResult[10] === tmp10) {
-              let tmp12 = cResult[11];
-            }
-            return tmp12;
-          }
-        }
-      }
-      const obj2 = { fadeDuration: 0, source: tmp7, style: tmp4, accessible, accessibilityLabel, resizeMode: tmp10 };
-      const tmp15 = jsx(FastImageDefault, { fadeDuration: 0, source: tmp7, style: tmp4, accessible, accessibilityLabel, resizeMode: tmp10 });
-      cResult[7] = accessibilityLabel;
-      cResult[8] = accessible;
-      cResult[9] = tmp4;
-      cResult[10] = tmp10;
-      cResult[11] = tmp15;
-      tmp12 = tmp15;
-    }
-  }
-  const assetSizeStyle = assetHelpers.getAssetSizeStyle({ width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 });
-  cResult[0] = height;
-  cResult[1] = num;
-  cResult[2] = width;
-  cResult[3] = assetSizeStyle;
-  tmp4 = assetSizeStyle;
-  const tmpResult4 = assetHelpers;
-}) : (function NitroWumpusFlightRight3dIllustration(width) {
+export function NitroWumpusFlightRight3dIllustration(width) {
   width = width.width;
   const height = width.height;
   let num = width.scale;
@@ -93,12 +31,12 @@ export const NitroWumpusFlightRight3dIllustration = ReactCompilerGating.isReactC
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const tmp2 = height(num[8]);
-  obj.source = width(num[7]).getAssetSource(obj);
+  const tmp2 = height(num[6]);
+  obj.source = width(num[5]).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
-  const obj2 = width(num[7]);
-  obj.resizeMode = width(num[7]).getAssetResizeMode(resizeMode);
+  const obj2 = width(num[5]);
+  obj.resizeMode = width(num[5]).getAssetResizeMode(resizeMode);
   return <tmp2 fadeDuration={0} source={null} style={null} accessible={null} accessibilityLabel={null} resizeMode={null} />;
-});
+}

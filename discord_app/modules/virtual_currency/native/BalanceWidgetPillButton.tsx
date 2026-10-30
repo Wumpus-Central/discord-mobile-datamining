@@ -1,125 +1,61 @@
-// === Module 14426: BalanceWidgetPillButton ===
+// === Module 14459: BalanceWidgetPillButton ===
 
-// Module 14426 (BalanceWidgetPillButton)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import _modDef9492 from "module_9492" /* 9492 */;
+// Module 14459 (BalanceWidgetPillButton)
+import util from "util" /* 1114 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import _modDef9511 from "module_9511" /* 9511 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function BalanceWidgetPillButton(arg0) {
-  const cResult = c.c(14);
-  ({ balance, onPress, variant, accessible } = arg0);
-  let str = "tertiary";
-  if (undefined !== variant) {
-    str = variant;
-  }
-  if (cResult[0] !== balance) {
-    let str2;
+class BalanceWidgetPillButton {
+  constructor(arg0) {
+    ({ balance, variant } = global);
+    if (variant === undefined) {
+      variant = "tertiary";
+    }
+    flag = global.accessible;
+    if (flag === undefined) {
+      flag = true;
+    }
+    tmp2 = closure_0;
+    tmp3 = closure_2;
+    tmp = jsx;
+    obj = { variant, onPress: global.onPress, size: "sm", text: null, icon: null, accessible: null, accessibilityElementsHidden: null, importantForAccessibility: null, accessibilityLabel: null, disabled: null, loading: null };
+    str = undefined;
     if (balance != null) {
-      str2 = balance.toString();
+      str = balance.toString();
     }
-    if (str2 == null) {
-      str2 = "";
+    if (str == null) {
+      str = "";
     }
-    cResult[0] = balance;
-    cResult[1] = str2;
-    let tmp5 = str2;
-  } else {
-    tmp5 = cResult[1];
-  }
-  let str3 = "no";
-  if (undefined === accessible || accessible) {
-    str3 = "auto";
-  }
-  if (cResult[2] === balance) {
-    if (cResult[3] === tmp8) {
-      if (cResult[5] === tmp4) {
-        if (cResult[6] === tmp8) {
-          if (cResult[7] === onPress) {
-            if (cResult[8] === tmp5) {
-              if (cResult[9] === tmp7) {
-                if (cResult[10] === str3) {
-                  if (cResult[11] === tmp9) {
-                    if (cResult[12] === str) {
-                      let tmp11 = cResult[13];
-                    }
-                    return tmp11;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      const obj2 = { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef9492, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 };
-      const tmp14 = jsx(components_Button_Button.Button, { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef9492, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 });
-      cResult[5] = tmp4;
-      cResult[6] = tmp8;
-      cResult[7] = onPress;
-      cResult[8] = tmp5;
-      cResult[9] = tmp7;
-      cResult[10] = str3;
-      cResult[11] = cResult[4];
-      cResult[12] = str;
-      cResult[13] = tmp14;
-      tmp11 = tmp14;
+    obj.text = str;
+    obj.icon = closure_1(tmp3[3]);
+    obj.accessible = flag;
+    obj.accessibilityElementsHidden = !flag;
+    str2 = "no";
+    if (flag) {
+      str2 = "auto";
     }
+    tmp4 = null === balance;
+    obj.importantForAccessibility = str2;
+    intl = tmp2(tmp3[4]).intl;
+    if (tmp4) {
+      stringResult = intl.string(tmp2(tmp3[4]).t.y0WGqP);
+    } else {
+      obj1 = { balance: null };
+      obj1.balance = balance.toString();
+      stringResult = intl.formatToPlainString(tmp2(tmp3[4]).t.zPaLL9, obj1);
+    }
+    obj.accessibilityLabel = stringResult;
+    obj.disabled = tmp4;
+    obj.loading = tmp4;
+    return tmp(closure_0(closure_2[2]).Button, obj);
   }
-  const intl = util.intl;
-  if (null === balance) {
-    let stringResult = intl.string(util.t.y0WGqP);
-  } else {
-    const obj3 = { balance: balance.toString() };
-    stringResult = intl.formatToPlainString(util.t.zPaLL9, obj3);
-  }
-  cResult[2] = balance;
-  cResult[3] = null === balance;
-  cResult[4] = stringResult;
-}) : (function BalanceWidgetPillButton(accessible) {
-  ({ balance, variant } = accessible);
-  if (variant === undefined) {
-    variant = "tertiary";
-  }
-  let flag = accessible.accessible;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const obj = { variant, onPress: accessible.onPress, size: "sm", text: null, icon: null, accessible: null, accessibilityElementsHidden: null, importantForAccessibility: null, accessibilityLabel: null, disabled: null, loading: null };
-  let str;
-  if (balance != null) {
-    str = balance.toString();
-  }
-  if (str == null) {
-    str = "";
-  }
-  obj.text = str;
-  obj.icon = _modDef9492;
-  obj.accessible = flag;
-  obj.accessibilityElementsHidden = !flag;
-  let str2 = "no";
-  if (flag) {
-    str2 = "auto";
-  }
-  obj.importantForAccessibility = str2;
-  const intl = util.intl;
-  if (null === balance) {
-    let stringResult = intl.string(util.t.y0WGqP);
-  } else {
-    const obj2 = { balance: balance.toString() };
-    stringResult = intl.formatToPlainString(util.t.zPaLL9, obj2);
-  }
-  obj.accessibilityLabel = stringResult;
-  obj.disabled = null === balance;
-  obj.loading = null === balance;
-  return jsx(components_Button_Button.Button, { variant, onPress: accessible.onPress, size: "sm", text: null, icon: null, accessible: null, accessibilityElementsHidden: null, importantForAccessibility: null, accessibilityLabel: null, disabled: null, loading: null });
-});
-tmp3.displayName = "BalanceWidgetPillButton";
+}
+const jsx = fn(21).jsx;
+BalanceWidgetPillButton.displayName = "BalanceWidgetPillButton";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPillButton.tsx");
 
-export default tmp3;
-export const BalanceWidgetPillButton = tmp3;
+export default BalanceWidgetPillButton;
+export { BalanceWidgetPillButton };

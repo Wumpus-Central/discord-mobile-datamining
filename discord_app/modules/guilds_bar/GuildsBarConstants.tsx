@@ -1,8 +1,8 @@
-// === Module 18251: guilds_bar/GuildsBarConstants ===
+// === Module 18310: guilds_bar/GuildsBarConstants ===
 
-// Module 18251 (guilds_bar/GuildsBarConstants)
-import ColorUtils from "utils/ColorUtils" /* 1102 */;
-import shims from "shims" /* 586 */;
+// Module 18310 (guilds_bar/GuildsBarConstants)
+import ColorUtils from "utils/ColorUtils" /* 1091 */;
+import shims from "shims" /* 574 */;
 import size from "module_2" /* 2 */;
 
 const hex2intResult = ColorUtils.hex2int(shims.unsafe_getResolvedRawColor("BRAND_500", { saturation: 1 }));

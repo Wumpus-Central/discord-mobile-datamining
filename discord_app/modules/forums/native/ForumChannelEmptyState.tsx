@@ -1,150 +1,25 @@
-// === Module 14181: ForumChannelEmptyState ===
+// === Module 14326: ForumChannelEmptyState ===
 
-// Module 14181 (ForumChannelEmptyState)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import shared from "shared" /* 5012 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import _modDef14182 from "module_14182" /* 14182 */;
-import _modDef14183 from "module_14183" /* 14183 */;
+// Module 14326 (ForumChannelEmptyState)
+import util from "util" /* 1114 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
+import shared from "shared" /* 5016 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import _modDef14327 from "module_14327" /* 14327 */;
+import _modDef14328 from "module_14328" /* 14328 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ForumChannelEmptyState(arg0) {
-  const cResult = c.c(26);
-  ({ topViewHeight, channelName, tagFilter } = arg0);
-  let num = 0;
-  if (undefined !== topViewHeight) {
-    num = topViewHeight;
-  }
-  const tmp4 = closure_6();
-  const rect = useSafeAreaInsetsDefault();
-  const sum = rect.bottom + rect.top + num;
-  if (cResult[0] !== sum) {
-    const obj2 = { marginBottom: sum };
-    cResult[0] = sum;
-    cResult[1] = obj2;
-    let tmp8 = obj2;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] === tmp4.container) {
-    if (cResult[3] === tmp8) {
-      let tmp9 = cResult[4];
-    }
-    if (tmpResult2.isThemeLight(tmpResult.useThemeContext().theme)) {
-      let tmp5Result = _modDef14182;
-    } else {
-      tmp5Result = _modDef14183;
-    }
-    if (cResult[5] === tmp4.image) {
-      if (cResult[6] === tmp5Result) {
-        let tmp11 = cResult[7];
-      }
-      if (cResult[8] === tmp7) {
-        if (cResult[9] === tagFilter.size) {
-          if (cResult[11] === tmp4.title) {
-            if (cResult[12] === tmp14) {
-              let tmp17 = cResult[13];
-            }
-            if (cResult[14] === channelName) {
-              if (cResult[15] === tmp7) {
-                if (cResult[16] === tagFilter.size) {
-                  if (cResult[18] === tmp4.subtext) {
-                    if (cResult[19] === tmp20) {
-                      let tmp23 = cResult[20];
-                    }
-                    if (cResult[21] === tmp9) {
-                      if (cResult[22] === tmp11) {
-                        if (cResult[23] === tmp17) {
-                          if (cResult[24] === tmp23) {
-                            let tmp26 = cResult[25];
-                          }
-                          return tmp26;
-                        }
-                      }
-                    }
-                    const obj3 = { style: tmp9, children: null };
-                    const items = [tmp11, tmp17, tmp23];
-                    obj3.children = items;
-                    const tmp29 = hasOwnProperty(View, obj3);
-                    cResult[21] = tmp9;
-                    cResult[22] = tmp11;
-                    cResult[23] = tmp17;
-                    cResult[24] = tmp23;
-                    cResult[25] = tmp29;
-                    tmp26 = tmp29;
-                  }
-                  const obj4 = { style: tmp4.subtext, variant: "text-sm/medium", color: "text-default", children: cResult[17] };
-                  const tmp25 = React4(Text_Text.Text, obj4);
-                  cResult[18] = tmp4.subtext;
-                  cResult[19] = cResult[17];
-                  cResult[20] = tmp25;
-                  tmp23 = tmp25;
-                }
-              }
-            }
-            const intl2 = util.intl;
-            const formatToPlainString = intl2.formatToPlainString;
-            let t = util.t;
-            if (tmp7) {
-              t = { numTags: tagFilter.size };
-              let formatToPlainStringResult = formatToPlainString(t.AAeye1, t);
-            } else {
-              const obj5 = { channelName };
-              formatToPlainStringResult = formatToPlainString(t.YtsXFD, obj5);
-            }
-            cResult[14] = channelName;
-            cResult[15] = tmp7;
-            tagFilter = tagFilter.size;
-            cResult[16] = tagFilter;
-            cResult[17] = formatToPlainStringResult;
-          }
-          const obj6 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: cResult[10] };
-          const tmp19 = React4(Text_Text.Text, obj6);
-          cResult[11] = tmp4.title;
-          cResult[12] = cResult[10];
-          cResult[13] = tmp19;
-          tmp17 = tmp19;
-        }
-      }
-      const intl = util.intl;
-      if (tmp7) {
-        const obj7 = { numTags: tagFilter.size };
-        let formatToPlainStringResult1 = intl.formatToPlainString(util.t.lvPci0, obj7);
-      } else {
-        formatToPlainStringResult1 = intl.string(util.t.PwTMG0);
-      }
-      cResult[8] = tmp7;
-      cResult[9] = tagFilter.size;
-      cResult[10] = formatToPlainStringResult1;
-    }
-    const obj8 = { source: tmp5Result, style: tmp4.image };
-    const tmp13 = React4(FastImageDefault, obj8);
-    cResult[5] = tmp4.image;
-    cResult[6] = tmp5Result;
-    cResult[7] = tmp13;
-    tmp11 = tmp13;
-    tmpResult2 = shared;
-  }
-  const items1 = [tmp4.container, tmp8];
-  cResult[2] = tmp4.container;
-  cResult[3] = tmp8;
-  cResult[4] = items1;
-  tmp9 = items1;
-  tmpResult = shared;
-}) : (function ForumChannelEmptyState(topViewHeight) {
+export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   let num = topViewHeight.topViewHeight;
   if (num === undefined) {
     num = 0;
@@ -158,9 +33,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef14182;
+    let tmp4Result = _modDef14327;
   } else {
-    tmp4Result = _modDef14183;
+    tmp4Result = _modDef14328;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
@@ -188,4 +63,4 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   items1[2] = React4(Text_Text.Text, obj7);
   obj2.children = items1;
   return hasOwnProperty(View, obj2);
-}));
+});

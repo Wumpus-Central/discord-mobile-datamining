@@ -1,8 +1,8 @@
-// === Module 10886: EmbeddedAppCSPStore ===
+// === Module 10909: EmbeddedAppCSPStore ===
 
-// Module 10886 (EmbeddedAppCSPStore)
+// Module 10909 (EmbeddedAppCSPStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

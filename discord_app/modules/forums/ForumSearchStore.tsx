@@ -1,9 +1,9 @@
-// === Module 8344: ForumSearchStore ===
+// === Module 8197: ForumSearchStore ===
 
-// Module 8344 (ForumSearchStore)
+// Module 8197 (ForumSearchStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 const dependencyMap = {};
 const Store = initializeDefault.Store;
@@ -13,16 +13,16 @@ const prototype = ForumSearchStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore);
 };
-prototype["getSearchQuery"] = function getSearchQuery(channelId) {
+prototype["getSearchQuery"] = function getSearchQuery(arg0) {
   let query;
-  if (dependencyMap[channelId] != null) {
+  if (dependencyMap[arg0] != null) {
     query = tmp.query;
   }
   return query;
 };
-prototype["getSearchLoading"] = function getSearchLoading(channelId) {
+prototype["getSearchLoading"] = function getSearchLoading(arg0) {
   let flag;
-  if (dependencyMap[channelId] != null) {
+  if (dependencyMap[arg0] != null) {
     flag = tmp.loading;
   }
   if (flag == null) {

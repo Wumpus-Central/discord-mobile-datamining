@@ -1,17 +1,17 @@
-// === Module 16284: discordEnvironmentEvents ===
+// === Module 16324: discordEnvironmentEvents ===
 
-// Module 16284 (discordEnvironmentEvents)
-import _modDef12 from "module_12" /* 12 */;
+// Module 16324 (discordEnvironmentEvents)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
 let closure_3 = ["uiDensity"];
-const Constants = fn(6437);
+const Constants = fn(6444);
 const RPC_AUTHENTICATED_SCOPE = Constants.RPC_AUTHENTICATED_SCOPE;
 const RPC_EMBEDDED_APP_SCOPE = Constants.RPC_EMBEDDED_APP_SCOPE;
 const RPC_SCOPE_CONFIG = Constants.RPC_SCOPE_CONFIG;
-const RPCEvents = fn(1084).RPCEvents;
+const RPCEvents = fn(1072).RPCEvents;
 let c0 = false;
+let c1;
 let obj = {
   scope: null,
   handler() {
@@ -20,6 +20,9 @@ let obj = {
     return (arg0) => {
       ({ prevState, dispatch } = arg0);
       let discordEnvironment = c0(dependencyMap[4]).getDiscordEnvironment(useReducedMotion.useReducedMotion);
+      if (null != _null) {
+        discordEnvironment.customTheme = _null();
+      }
       let tmp2 = discordEnvironment;
       if (c0) {
         let uiDensity = discordEnvironment.uiDensity;
@@ -30,9 +33,9 @@ let obj = {
         if (prevState == null) {
           prevState = null;
         }
-        closure_1 = prevState;
+        _null = prevState;
       } else {
-        closure_1 = tmp2;
+        _null = tmp2;
         dispatch(tmp2);
       }
       c0 = dispatch;
@@ -43,6 +46,9 @@ let obj = {
           const animationFrame = requestAnimationFrame(() => {
             c0 = false;
             const discordEnvironment = closure_1_0(dependencyMap[4]).getDiscordEnvironment(useReducedMotion.useReducedMotion);
+            if (null != c1) {
+              discordEnvironment.customTheme = c1();
+            }
             let tmp2 = discordEnvironment;
             if (c0) {
               const uiDensity = discordEnvironment.uiDensity;
@@ -53,7 +59,7 @@ let obj = {
               closure_1 = tmp2;
               closure_1_0(tmp2);
             }
-            obj2 = _modDef12;
+            obj2 = closure_1(12);
           });
         });
       }
@@ -66,11 +72,12 @@ obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/discordEnvironmentEvents.tsx");
 
-export function createDiscordEnvironmentEvents(arg0) {
+export function createDiscordEnvironmentEvents(arg0, arg1) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
+  closure_1 = arg1;
   let obj = {
     scope: null,
     handler() {
@@ -79,6 +86,9 @@ export function createDiscordEnvironmentEvents(arg0) {
       return (arg0) => {
         ({ prevState, dispatch } = arg0);
         let discordEnvironment = c0(dependencyMap[4]).getDiscordEnvironment(useReducedMotion.useReducedMotion);
+        if (null != _null) {
+          discordEnvironment.customTheme = _null();
+        }
         let tmp2 = discordEnvironment;
         if (c0) {
           let uiDensity = discordEnvironment.uiDensity;
@@ -89,9 +99,9 @@ export function createDiscordEnvironmentEvents(arg0) {
           if (prevState == null) {
             prevState = null;
           }
-          closure_1 = prevState;
+          _null = prevState;
         } else {
-          closure_1 = tmp2;
+          _null = tmp2;
           dispatch(tmp2);
         }
         c0 = dispatch;
@@ -102,6 +112,9 @@ export function createDiscordEnvironmentEvents(arg0) {
             const animationFrame = requestAnimationFrame(() => {
               c0 = false;
               const discordEnvironment = closure_1_0(dependencyMap[4]).getDiscordEnvironment(useReducedMotion.useReducedMotion);
+              if (null != c1) {
+                discordEnvironment.customTheme = c1();
+              }
               let tmp2 = discordEnvironment;
               if (c0) {
                 const uiDensity = discordEnvironment.uiDensity;
@@ -112,7 +125,7 @@ export function createDiscordEnvironmentEvents(arg0) {
                 closure_1 = tmp2;
                 closure_1_0(tmp2);
               }
-              obj2 = _modDef12;
+              obj2 = closure_1(12);
             });
           });
         }

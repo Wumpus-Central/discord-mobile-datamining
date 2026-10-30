@@ -1,14 +1,14 @@
-// === Module 10882: _launchFrame ===
+// === Module 10905: _launchFrame ===
 
-// Module 10882 (_launchFrame)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6836 */;
-import createProxyTicket from "createProxyTicket" /* 10842 */;
-import leaveFrame from "leaveFrame" /* 10879 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10883 */;
+// Module 10905 (_launchFrame)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6843 */;
+import createProxyTicket from "createProxyTicket" /* 10865 */;
+import leaveFrame from "leaveFrame" /* 10902 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 10906 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 6833 */;
+import FramesStore from "FramesStore" /* 6840 */;
 
 require = fn;
 let closure_13 = async function _launchFrame(arg0) {
@@ -27,7 +27,7 @@ let closure_13 = async function _launchFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -64,7 +64,7 @@ let closure_13 = async function _launchFrame(arg0) {
             closure_130_12 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
@@ -221,7 +221,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(10879);
+    obj2 = obj2(10902);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -244,7 +244,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -273,7 +273,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
             const applicationId = frame.applicationId;
             closure_129_1 = applicationId;
             const surface = frame.surface;
-            if (React6(frame)) {
+            if (React7(frame)) {
               let invite = frame.data.invite;
             } else {
               invite = frame.invite;
@@ -354,9 +354,9 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6834);
+const FramesConstants = fn(6841);
 ({ FrameIntent: metroRequire, FrameLayoutModes: closure_7, getFrameIntentForSurface: closure_8, isLaunched: closure_9, makeFrameId: c10 } = FramesConstants);
-const ActivityPanelModes = fn(5646).ActivityPanelModes;
+const ActivityPanelModes = fn(5652).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
@@ -393,8 +393,8 @@ export function resetFrameLayoutModes(frameId) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL });
   const obj4 = { type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL };
 }
-export function attachFrameIframe(id, first1) {
-  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: id, iframeId: first1 });
+export function attachFrameIframe(id, iframeId) {
+  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: id, iframeId });
 }
 export function detachFrameIframe(frameId, iframeId) {
   DispatcherDefault.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId });

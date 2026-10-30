@@ -1,8 +1,8 @@
-// === Module 8749: StorefrontProductStore ===
+// === Module 8783: StorefrontProductStore ===
 
-// Module 8749 (StorefrontProductStore)
+// Module 8783 (StorefrontProductStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const dependencyMap = {};
 const dependencyMap2 = {};
@@ -97,11 +97,11 @@ prototype["getProduct"] = function getProduct(arg0) {
   }
   return product;
 };
-prototype["getProductsForSku"] = function getProductsForSku(skuId) {
+prototype["getProductsForSku"] = function getProductsForSku(nextResult) {
   let tmp;
-  if (null != skuId) {
+  if (null != nextResult) {
     let products;
-    if (dependencyMap2[skuId] != null) {
+    if (dependencyMap2[nextResult] != null) {
       products = tmp3.products;
     }
     tmp = products;

@@ -1,7 +1,7 @@
-// === Module 9894: EmojiPickerListConstants ===
+// === Module 9921: EmojiPickerListConstants ===
 
-// Module 9894 (EmojiPickerListConstants)
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1240 */;
+// Module 9921 (EmojiPickerListConstants)
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
 import size from "module_2" /* 2 */;
 
 const result = 2 * ExpressionPickerConstants.PADDING_VERTICAL;

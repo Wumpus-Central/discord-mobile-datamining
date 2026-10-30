@@ -1,7 +1,7 @@
-// === Module 15565: getPinotReadyAction ===
+// === Module 15605: getPinotReadyAction ===
 
-// Module 15565 (getPinotReadyAction)
-import PinotMemberSettingStore from "PinotMemberSettingStore" /* 15566 */;
+// Module 15605 (getPinotReadyAction)
+import PinotMemberSettingStore from "PinotMemberSettingStore" /* 15606 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pinot/getPinotReadyAction.tsx");

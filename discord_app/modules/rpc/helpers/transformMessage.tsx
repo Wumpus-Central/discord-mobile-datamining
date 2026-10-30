@@ -1,16 +1,16 @@
-// === Module 11575: transformMessage ===
+// === Module 11776: transformMessage ===
 
-// Module 11575 (transformMessage)
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import Server from "Server" /* 1998 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5743 */;
-import useMessageAuthor from "useMessageAuthor" /* 6425 */;
-import transformUserDefault from "transformUser" /* 9298 */;
-import getRemoteIconURLDefault from "getRemoteIconURL" /* 11576 */;
-import UserRecord from "UserRecord" /* 1403 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 11776 (transformMessage)
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import Server from "Server" /* 1993 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5749 */;
+import useMessageAuthor from "useMessageAuthor" /* 6432 */;
+import transformUserDefault from "transformUser" /* 9311 */;
+import getRemoteIconURLDefault from "getRemoteIconURL" /* 11777 */;
+import UserRecord from "UserRecord" /* 1398 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 function recurseReplaceContentTree(type) {
@@ -267,7 +267,7 @@ function transformInteractionMetadata(triggering_interaction_metadata) {
   obj.triggering_interaction_metadata = tmp14;
   return obj;
 }
-const MessageEmbedTypes = fn(1084).MessageEmbedTypes;
+const MessageEmbedTypes = fn(1072).MessageEmbedTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/transformMessage.tsx");
 

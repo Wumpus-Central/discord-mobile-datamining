@@ -1,15 +1,15 @@
-// === Module 9416: GameProfileHttpUtils ===
+// === Module 9433: GameProfileHttpUtils ===
 
-// Module 9416 (GameProfileHttpUtils)
-import BackoffDefault from "Backoff" /* 569 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import StoreUtils from "StoreUtils" /* 6442 */;
+// Module 9433 (GameProfileHttpUtils)
+import BackoffDefault from "Backoff" /* 559 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import StoreUtils from "StoreUtils" /* 6449 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7727 */;
-import LocaleStore from "LocaleStore" /* 2066 */;
-import GameProfileStore from "GameProfileStore" /* 9289 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7732 */;
+import LocaleStore from "LocaleStore" /* 2063 */;
+import GameProfileStore from "GameProfileStore" /* 9302 */;
 
 require = fn;
 let closure_9 = async function _getShopCollection() {
@@ -54,7 +54,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -102,11 +102,11 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
         const obj7 = { type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: closure_130_0, games: closure_130_1 };
         closure_131_1(closure_131_2[6]).dispatch(obj7);
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
-    } catch (tmp14) {
+    } catch (tmp18) {
       c5 = tmp;
-      throw tmp14;
+      throw tmp18;
     }
   }
 };
@@ -162,8 +162,8 @@ let closure_11 = async function _getGameAnnouncements() {
     return value;
   })();
 };
-const Endpoints = fn(1084).Endpoints;
-let closure_8 = fn(9417).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+const Endpoints = fn(1072).Endpoints;
+let closure_8 = fn(9434).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameProfileStore, {
   getQueryId(arg0, arg1) {

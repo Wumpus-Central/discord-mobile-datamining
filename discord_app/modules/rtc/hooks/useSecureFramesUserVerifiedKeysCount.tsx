@@ -1,63 +1,15 @@
-// === Module 9246: useSecureFramesUserVerifiedKeysCount ===
+// === Module 9259: useSecureFramesUserVerifiedKeysCount ===
 
-// Module 9246 (useSecureFramesUserVerifiedKeysCount)
-import _mod9218 from "module_9218" /* 9218 */;
+// Module 9259 (useSecureFramesUserVerifiedKeysCount)
+import _mod9231 from "module_9231" /* 9231 */;
 import noop from "module_19" /* 19 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9217 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9230 */;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");
 
-export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureFramesUserVerifiedKeysCount(userId) {
-  const cResult = userId(576).c(7);
-  userId = userId.userId;
-  const keyToOmit = userId.keyToOmit;
-  if (null == keyToOmit) {
-    dependencyMap = null;
-    const _Symbol = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [VerifiedKeyStore];
-      cResult[2] = items;
-      let tmp14 = items;
-    } else {
-      tmp14 = cResult[2];
-    }
-    if (cResult[3] === null) {
-      if (cResult[4] === userId) {
-        let tmp16 = cResult[5];
-        let tmp17 = cResult[6];
-      }
-      return tmp(504).useStateFromStores(tmp14, tmp16, tmp17);
-    }
-    const fn = function v() {
-      const userVerifiedKeys = VerifiedKeyStore.getUserVerifiedKeys(userId);
-      let num = 0;
-      if (null != userVerifiedKeys) {
-        const _Object = Object;
-        const keys = Object.keys(userVerifiedKeys);
-        num = keys.filter((item) => item !== closure_1_1).length;
-      }
-      return num;
-    };
-    const items1 = [null, userId];
-    cResult[3] = null;
-    cResult[4] = userId;
-    cResult[5] = fn;
-    cResult[6] = items1;
-    tmp17 = items1;
-    tmp16 = fn;
-  } else if (cResult[0] !== keyToOmit) {
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(keyToOmit);
-    const serializeKeyResult = tmp(9218).serializeKey(uint8Array);
-    cResult[0] = keyToOmit;
-    cResult[1] = serializeKeyResult;
-    const tmpResult2 = tmp(9218);
-  }
-  const obj = userId(576);
-}) : (function useSecureFramesUserVerifiedKeysCount(userId) {
+export function useSecureFramesUserVerifiedKeysCount(userId) {
   userId = userId.userId;
   const keyToOmit = userId.keyToOmit;
   let memo;
@@ -68,12 +20,12 @@ export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactC
     } else {
       const _Uint8Array = Uint8Array;
       const uint8Array = new Uint8Array(keyToOmit);
-      return _mod9218.serializeKey(uint8Array);
+      return _mod9231.serializeKey(uint8Array);
     }
   }, items);
   const items1 = [VerifiedKeyStore];
   const items2 = [memo, userId];
-  return userId(keyToOmit[5]).useStateFromStores(items1, () => {
+  return userId(keyToOmit[3]).useStateFromStores(items1, () => {
     const userVerifiedKeys = VerifiedKeyStore.getUserVerifiedKeys(userId);
     let num = 0;
     if (null != userVerifiedKeys) {
@@ -83,4 +35,4 @@ export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactC
     }
     return num;
   }, items2);
-});
+}

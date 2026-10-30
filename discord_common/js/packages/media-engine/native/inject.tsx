@@ -1,6 +1,6 @@
-// === Module 2014: inject ===
+// === Module 2009: inject ===
 
-// Module 2014 (inject)
+// Module 2009 (inject)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");

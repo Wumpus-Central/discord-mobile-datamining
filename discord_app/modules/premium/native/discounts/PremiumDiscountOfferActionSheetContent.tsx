@@ -1,189 +1,33 @@
-// === Module 18915: PremiumDiscountOfferActionSheetContent ===
+// === Module 18975: PremiumDiscountOfferActionSheetContent ===
 
-// Module 18915 (PremiumDiscountOfferActionSheetContent)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import PremiumUtils from "PremiumUtils" /* 2051 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5066 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import FolderIcon from "FolderIcon" /* 8604 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9487 */;
-import UserIcon from "UserIcon" /* 12268 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14529 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 17570 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 17574 */;
+// Module 18975 (PremiumDiscountOfferActionSheetContent)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import PremiumUtils from "PremiumUtils" /* 2048 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5070 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import FolderIcon from "FolderIcon" /* 8638 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9506 */;
+import UserIcon from "UserIcon" /* 12431 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14562 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 17624 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 17628 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1386).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = { contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
 let obj3 = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumDiscountOfferActionSheetContent(onConfirm) {
-  const cResult = c.c(26);
-  onConfirm = onConfirm.onConfirm;
-  const tmp4 = closure_7();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { IconComponent: UserIcon.UserIcon, label: null, description: null };
-    const intl = util.intl;
-    obj2.label = intl.string(util.t.kpMomJ);
-    const intl2 = util.intl;
-    obj2.description = intl2.string(util.t.uVUtPw);
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { IconComponent: ChatSmileIcon.ChatSmileIcon, label: null, description: null };
-    const intl3 = util.intl;
-    obj3.label = intl3.string(util.t["R2IV/Q"]);
-    const intl4 = util.intl;
-    obj3.description = intl4.string(util.t["3SUJLd"]);
-    cResult[1] = obj3;
-    let tmp6 = obj3;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [first, tmp6, ];
-    const obj4 = { IconComponent: FolderIcon.FolderIcon, label: null, description: null };
-    const intl5 = util.intl;
-    obj4.label = intl5.string(util.t["u/NJKc"]);
-    const obj5 = { legacyCopy: null, rolloutCopy: null };
-    const intl6 = util.intl;
-    obj5.legacyCopy = intl6.string(util.t.i1UuMk);
-    const intl7 = util.intl;
-    const obj6 = { maxFileSize: null };
-    const tmpResult = NitroFileUploadExperiments;
-    obj6.maxFileSize = PremiumUtils.getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
-    obj5.rolloutCopy = intl7.formatToPlainString(util.t.PvqncD, obj6);
-    obj4.description = tmpResult.getNitroFileUploadRolloutCopy(obj5);
-    items[2] = obj4;
-    cResult[2] = items;
-    let tmp7 = items;
-    const tmpResult2 = PremiumUtils;
-  } else {
-    tmp7 = cResult[2];
-  }
-  const amount = onConfirm.discountOffer.discount.amount;
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = hasOwnProperty(NitroWumpusFlightRight3dIllustration.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 });
-    cResult[3] = tmp11;
-    let tmp9 = tmp11;
-  } else {
-    tmp9 = cResult[3];
-  }
-  if (cResult[4] !== tmp4.heroIllustrationContainer) {
-    const obj7 = { style: tmp4.heroIllustrationContainer, children: tmp9 };
-    const tmp15 = hasOwnProperty(View, obj7);
-    cResult[4] = tmp4.heroIllustrationContainer;
-    cResult[5] = tmp15;
-    let tmp12 = tmp15;
-  } else {
-    tmp12 = cResult[5];
-  }
-  if (cResult[6] !== amount) {
-    const intl8 = util.intl;
-    const obj8 = { percent: amount };
-    const formatToPlainStringResult = intl8.formatToPlainString(util.t.qowbUk, obj8);
-    cResult[6] = amount;
-    cResult[7] = formatToPlainStringResult;
-    let tmp16 = formatToPlainStringResult;
-  } else {
-    tmp16 = cResult[7];
-  }
-  if (cResult[8] === tmp4.title) {
-    if (cResult[9] === tmp16) {
-      let tmp18 = cResult[10];
-    }
-    const _Symbol = Symbol;
-    if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj9 = { perks: tmp7 };
-      const tmp23 = hasOwnProperty(PremiumPerksListDefault, obj9);
-      cResult[11] = tmp23;
-      let tmp20 = tmp23;
-    } else {
-      tmp20 = cResult[11];
-    }
-    if (cResult[12] !== amount) {
-      const intl9 = util.intl;
-      const obj10 = { percent: amount };
-      const formatToPlainStringResult1 = intl9.formatToPlainString(util.t.bkQ4bH, obj10);
-      cResult[12] = amount;
-      cResult[13] = formatToPlainStringResult1;
-      let tmp24 = formatToPlainStringResult1;
-    } else {
-      tmp24 = cResult[13];
-    }
-    const _Symbol2 = Symbol;
-    if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj11 = { size: "md", color: nativeDefault.unsafe_rawColors.WHITE };
-      const tmp29 = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj11);
-      cResult[14] = tmp29;
-      let tmp26 = tmp29;
-    } else {
-      tmp26 = cResult[14];
-    }
-    if (cResult[15] === onConfirm) {
-      if (cResult[16] === tmp24) {
-        let tmp30 = cResult[17];
-      }
-      if (cResult[18] === tmp4.buttonContainer) {
-        if (cResult[19] === tmp30) {
-          let tmp33 = cResult[20];
-        }
-        if (cResult[21] === tmp4.contentContainer) {
-          if (cResult[22] === tmp33) {
-            if (cResult[23] === tmp12) {
-              if (cResult[24] === tmp18) {
-                let tmp37 = cResult[25];
-              }
-              return tmp37;
-            }
-          }
-        }
-        const obj12 = { style: tmp4.contentContainer, children: null };
-        const items1 = [tmp12, tmp18, tmp20, tmp33];
-        obj12.children = items1;
-        const tmp40 = timestampProducer(View, obj12);
-        cResult[21] = tmp4.contentContainer;
-        cResult[22] = tmp33;
-        cResult[23] = tmp12;
-        cResult[24] = tmp18;
-        cResult[25] = tmp40;
-        tmp37 = tmp40;
-      }
-      const obj13 = { style: tmp4.buttonContainer, children: tmp30 };
-      const tmp36 = hasOwnProperty(View, obj13);
-      cResult[18] = tmp4.buttonContainer;
-      cResult[19] = tmp30;
-      cResult[20] = tmp36;
-      tmp33 = tmp36;
-    }
-    const obj14 = { size: "lg", text: tmp24, onPress: onConfirm, grow: true, icon: tmp26 };
-    const tmp32 = hasOwnProperty(components_Button_Button.Button, obj14);
-    cResult[15] = onConfirm;
-    cResult[16] = tmp24;
-    cResult[17] = tmp32;
-    tmp30 = tmp32;
-  }
-  const tmp19 = hasOwnProperty(Text_Text.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp4.title, children: tmp16 });
-  cResult[8] = tmp4.title;
-  cResult[9] = tmp16;
-  cResult[10] = tmp19;
-  tmp18 = tmp19;
-}) : (function PremiumDiscountOfferActionSheetContent(arg0) {
+export default noop.memo(function PremiumDiscountOfferActionSheetContent(arg0) {
   ({ discountOffer, onConfirm } = arg0);
   const tmp = closure_7();
   const obj = { IconComponent: UserIcon.UserIcon, label: null, description: null };
@@ -230,4 +74,4 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   items1[3] = hasOwnProperty(View, obj11);
   obj8.children = items1;
   return timestampProducer(View, obj8);
-}));
+});

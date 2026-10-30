@@ -1,73 +1,27 @@
-// === Module 12015: AppLauncherNativeUtils ===
+// === Module 12201: AppLauncherNativeUtils ===
 
-// Module 12015 (AppLauncherNativeUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import _modDef1988 from "module_1988" /* 1988 */;
-import Server from "Server" /* 1998 */;
-import HapticUtils from "HapticUtils" /* 5249 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8359 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9715 */;
-import FrecencySection from "FrecencySection" /* 12016 */;
+// Module 12201 (AppLauncherNativeUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
+import _modDef1983 from "module_1983" /* 1983 */;
+import Server from "Server" /* 1993 */;
+import HapticUtils from "HapticUtils" /* 5255 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5678 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7693 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8336 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9741 */;
+import FrecencySection from "FrecencySection" /* 12202 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import UserStore from "UserStore" /* 1384 */;
+
+const require = globalThis.__r;
 
 require = fn;
-const AppLauncherNativeConstants = fn(1502);
+const AppLauncherNativeConstants = fn(1497);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const BuiltInSectionId = fn(6023).BuiltInSectionId;
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLogAppLauncherEmptyStateView(arg0, arg1) {
-  _require = arg0;
-  const cResult = require("c").c(7);
-  let obj = require("c");
-  const entrypoint = require("AppLauncherContext").useAppLauncherContext().entrypoint;
-  if (cResult[0] === entrypoint) {
-    if (cResult[1] === arg0) {
-      let tmp2 = cResult[2];
-    }
-    if (cResult[3] === entrypoint) {
-      if (cResult[4] === arg1) {
-        if (cResult[5] === arg0) {
-          let tmp4 = cResult[6];
-        }
-        const effect = noop.useEffect(tmp2, tmp4);
-      }
-    }
-    const items = [arg0, arg1, entrypoint];
-    cResult[3] = entrypoint;
-    cResult[4] = arg1;
-    cResult[5] = arg0;
-    cResult[6] = items;
-    tmp4 = items;
-  }
-  const fn = function c() {
-    if (null != closure_0) {
-      const obj2 = { type: tmp, source: entrypoint };
-      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj2);
-    }
-  };
-  cResult[0] = entrypoint;
-  cResult[1] = arg0;
-  cResult[2] = fn;
-  tmp2 = fn;
-  let obj2 = require("AppLauncherContext");
-}) : (function useLogAppLauncherEmptyStateView(arg0, arg1) {
-  _require = arg0;
-  const entrypoint = require("AppLauncherContext").useAppLauncherContext().entrypoint;
-  const items = [arg0, arg1, entrypoint];
-  const effect = noop.useEffect(() => {
-    if (null != closure_0) {
-      const obj2 = { type: tmp, source: entrypoint };
-      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj2);
-    }
-  }, items);
-});
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const BuiltInSectionId = fn(6030).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
@@ -257,7 +211,7 @@ export function getInitialOptionValues(option) {
 }
 export function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1988;
+    let applicationIconSource = _modDef1983;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {
@@ -271,119 +225,18 @@ export function getAppLauncherIconSource(application) {
   }
   return applicationIconSource;
 }
-export const useLogAppLauncherEmptyStateView = tmp3;
-export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompilerEnabled() ? (function useHandleActivityItemSelected(onActivityItemSelected) {
-  const cResult = sectionName(entrypoint[16]).c(23);
-  ({ applicationId, context, sectionName } = onActivityItemSelected);
-  onActivityItemSelected = onActivityItemSelected.onActivityItemSelected;
-  const _location = onActivityItemSelected.location;
-  entrypoint = onActivityItemSelected.entrypoint;
-  ({ launchingComponentId, fetchesApplication } = onActivityItemSelected);
-  let obj = sectionName(entrypoint[16]);
-  const analyticsContext = sectionName(entrypoint[18]).useAnalyticsContext();
-  if (cResult[0] === applicationId) {
-    if (cResult[1] === context) {
-      if (cResult[2] === tmp4) {
-        let tmp6 = cResult[3];
-      }
-      const activityAction = tmp(tmp2[19]).useActivityAction(tmp6);
-      const tmpResult5 = tmp(tmp2[19]);
-      const getOrFetchApplication = tmp(tmp2[20]).useGetOrFetchApplication(applicationId, tmp4);
-      const tmpResult6 = tmp(tmp2[20]);
-      const entrypointParams = tmp(tmp2[17]).useAppLauncherContext().entrypointParams;
-      if (cResult[4] === activityAction) {
-        if (cResult[5] === entrypoint) {
-          if (cResult[6] === _location) {
-            if (cResult[7] === onActivityItemSelected) {
-              if (cResult[8] === sectionName) {
-                let tmp9 = cResult[9];
-              }
-              let customId;
-              if (entrypointParams != null) {
-                customId = entrypointParams.customId;
-              }
-              let referrerId;
-              if (entrypointParams != null) {
-                referrerId = entrypointParams.referrerId;
-              }
-              if (cResult[10] === analyticsContext.location) {
-                if (cResult[11] === getOrFetchApplication) {
-                  if (cResult[12] === context) {
-                    if (cResult[13] === entrypoint) {
-                      if (cResult[14] === tmp4) {
-                        if (cResult[15] === launchingComponentId) {
-                          if (cResult[16] === sectionName) {
-                            if (cResult[17] === tmp9) {
-                              if (cResult[18] === customId) {
-                                if (cResult[19] === referrerId) {
-                                  let tmp13 = cResult[20];
-                                }
-                                const onActivityItemSelected1 = tmp(tmp2[19]).useOnActivityItemSelected(tmp13);
-                                if (cResult[21] !== onActivityItemSelected1) {
-                                  const obj2 = {
-                                    handleActivityItemSelected() {
-                                                                      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
-                                                                      onActivityItemSelected1();
-                                                                    }
-                                  };
-                                  cResult[21] = onActivityItemSelected1;
-                                  cResult[22] = obj2;
-                                  let tmp15 = obj2;
-                                } else {
-                                  tmp15 = cResult[22];
-                                }
-                                return tmp15;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              const obj3 = { application: getOrFetchApplication, context, locationObject: analyticsContext.location, onActivityItemSelectedProp: tmp9, launchingComponentId, commandOrigin: tmp(tmp2[7]).CommandOrigin.APPLICATION_LAUNCHER, sectionName, source: entrypoint, fetchesApplication: tmp4, customId, referrerId };
-              cResult[10] = analyticsContext.location;
-              cResult[11] = getOrFetchApplication;
-              cResult[12] = context;
-              cResult[13] = entrypoint;
-              cResult[14] = tmp4;
-              cResult[15] = launchingComponentId;
-              cResult[16] = sectionName;
-              cResult[17] = tmp9;
-              cResult[18] = customId;
-              cResult[19] = referrerId;
-              cResult[20] = obj3;
-              tmp13 = obj3;
-            }
-          }
-        }
-      }
-      const fn = function h(applicationId) {
-        applicationId = applicationId.applicationId;
-        if (onActivityItemSelected != null) {
-          const obj = { applicationId };
-          tmp(obj);
-        }
-        AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, { location: _location, application_id: applicationId, section_name: sectionName, action: activityAction, source: entrypoint });
-      };
-      cResult[4] = activityAction;
-      cResult[5] = entrypoint;
-      cResult[6] = _location;
-      cResult[7] = onActivityItemSelected;
-      cResult[8] = sectionName;
-      cResult[9] = fn;
-      tmp9 = fn;
-      const tmpResult7 = tmp(tmp2[17]);
+export function useLogAppLauncherEmptyStateView(COMMAND_NOT_FOUND, query) {
+  _require = COMMAND_NOT_FOUND;
+  const entrypoint = require("AppLauncherContext").useAppLauncherContext().entrypoint;
+  const items = [COMMAND_NOT_FOUND, query, entrypoint];
+  const effect = noop.useEffect(() => {
+    if (null != closure_0) {
+      const obj2 = { type: tmp, source: entrypoint };
+      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj2);
     }
-  }
-  const obj4 = { context, applicationId, fetchesApplication: undefined === fetchesApplication || fetchesApplication };
-  cResult[0] = applicationId;
-  cResult[1] = context;
-  cResult[2] = undefined === fetchesApplication || fetchesApplication;
-  cResult[3] = obj4;
-  tmp6 = obj4;
-}) : (function useHandleActivityItemSelected(fetchesApplication) {
+  }, items);
+}
+export function useHandleActivityItemSelected(fetchesApplication) {
   ({ applicationId, context, sectionName } = fetchesApplication);
   ({ onActivityItemSelected: importDefault, location: importAll, entrypoint } = fetchesApplication);
   let flag = fetchesApplication.fetchesApplication;
@@ -391,14 +244,14 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
     flag = true;
   }
   closure_5 = undefined;
-  const analyticsContext = sectionName(entrypoint[18]).useAnalyticsContext();
-  let obj = sectionName(entrypoint[18]);
-  const action = sectionName(entrypoint[19]).useActivityAction({ context, applicationId, fetchesApplication: flag });
-  const obj2 = sectionName(entrypoint[19]);
-  const getOrFetchApplication = sectionName(entrypoint[20]).useGetOrFetchApplication(applicationId, flag);
-  const obj3 = sectionName(entrypoint[20]);
-  const entrypointParams = sectionName(entrypoint[17]).useAppLauncherContext().entrypointParams;
-  const obj4 = sectionName(entrypoint[17]);
+  const analyticsContext = sectionName(entrypoint[16]).useAnalyticsContext();
+  let obj = sectionName(entrypoint[16]);
+  const action = sectionName(entrypoint[17]).useActivityAction({ context, applicationId, fetchesApplication: flag });
+  const obj2 = sectionName(entrypoint[17]);
+  const getOrFetchApplication = sectionName(entrypoint[18]).useGetOrFetchApplication(applicationId, flag);
+  const obj3 = sectionName(entrypoint[18]);
+  const entrypointParams = sectionName(entrypoint[15]).useAppLauncherContext().entrypointParams;
+  const obj4 = sectionName(entrypoint[15]);
   const obj6 = {
     application: getOrFetchApplication,
     context,
@@ -429,11 +282,11 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
     referrerId = entrypointParams.referrerId;
   }
   obj6.referrerId = referrerId;
-  closure_5 = sectionName(entrypoint[19]).useOnActivityItemSelected(obj6);
+  closure_5 = sectionName(entrypoint[17]).useOnActivityItemSelected(obj6);
   return {
     handleActivityItemSelected() {
       const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
       closure_5();
     }
   };
-});
+}

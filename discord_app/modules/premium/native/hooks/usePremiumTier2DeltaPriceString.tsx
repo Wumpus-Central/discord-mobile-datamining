@@ -1,13 +1,11 @@
-// === Module 15358: usePremiumTier2DeltaPriceString ===
+// === Module 15398: usePremiumTier2DeltaPriceString ===
 
-// Module 15358 (usePremiumTier2DeltaPriceString)
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import BillingUtils from "BillingUtils" /* 4821 */;
-import PriceUtils from "PriceUtils" /* 7399 */;
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7577 */;
-import ProductIds from "ProductIds" /* 7578 */;
+// Module 15398 (usePremiumTier2DeltaPriceString)
+import BillingUtils from "BillingUtils" /* 4822 */;
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7585 */;
+import ProductIds from "ProductIds" /* 7586 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7582 */;
+import IAPStore from "IAPStore" /* 7590 */;
 
 const require = globalThis.__r;
 
@@ -40,410 +38,17 @@ function getViewerProductId(subscription) {
     }
   }
 }
-function computeDelta(productId, currencyCode, stateFromStores) {
-  if (null != currencyCode) {
-    if (null != stateFromStores) {
-      const platformName = PlatformUtils.getPlatformName();
-      if (currencyCode.currencyCode !== stateFromStores.currencyCode) {
-        const obj2 = { priceString: null, failure: null };
-        const obj3 = { kind: "currency_mismatch", platform: platformName, productId: productId.productId, currencyCode: currencyCode.currencyCode };
-        obj2.failure = obj3;
-        return obj2;
-      } else {
-        const diff = currencyCode.price - stateFromStores.price;
-        if (diff > 0) {
-          if (diff < currencyCode.price) {
-            let result = diff;
-            if (tmp4Result.isAndroid()) {
-              result = diff / 100;
-            }
-            const obj4 = { priceString: null, failure: null };
-            tmp4Result = PlatformUtils;
-            obj4.priceString = PriceUtils.formatPrice(result, currencyCode.currencyCode, { convertToMajorUnits: false });
-            let obj = obj4;
-            const tmp4Result2 = PriceUtils;
-          }
-          return obj;
-        }
-        obj = { priceString: null, failure: null };
-        const obj5 = { kind: "delta_out_of_range", platform: platformName, productId: productId.productId, currencyCode: currencyCode.currencyCode };
-        obj.failure = obj5;
-      }
-    }
-  }
-  return closure_6;
-}
-function computeAcomDeltaResult(productId, checkoutContext, viewerProductId) {
-  if (null == checkoutContext) {
-    return closure_6;
-  } else {
-    const availablePlanForItems = checkoutContext.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(productId.productId));
-    if (null == availablePlanForItems) {
-      return closure_6;
-    } else {
-      const addOnPrice = availablePlanForItems.getAddOnPrice();
-      if (null != addOnPrice) {
-        if (addOnPrice.majorUnits > 0) {
-          let tmp = null;
-          if (null != viewerProductId) {
-            tmp = ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[viewerProductId];
-          }
-          if (null != viewerProductId) {
-            if (null != tmp) {
-              if (0 !== tmp.numPremiumGuild) {
-                const availablePlanForItems1 = checkoutContext.getAvailablePlanForItems(PremiumBundledPlansUtils.getSubscriptionItemsForProduct(viewerProductId));
-                let addOnPrice1;
-                if (availablePlanForItems1 != null) {
-                  addOnPrice1 = availablePlanForItems1.getAddOnPrice();
-                }
-                if (null == addOnPrice1) {
-                  return closure_6;
-                } else {
-                  const diff = addOnPrice.majorUnits - addOnPrice1.majorUnits;
-                  if (diff > 0) {
-                    const obj = { priceString: PriceUtils.formatPrice(diff, addOnPrice.currency, { convertToMajorUnits: false }), failure: null };
-                    let tmp4 = obj;
-                    const tmp10Result3 = PriceUtils;
-                  } else {
-                    tmp4 = closure_6;
-                  }
-                  return tmp4;
-                }
-                const tmp10Result = PremiumBundledPlansUtils;
-              }
-            }
-          }
-          const obj2 = { priceString: PriceUtils.formatPrice(addOnPrice.majorUnits, addOnPrice.currency, { convertToMajorUnits: false }), failure: null };
-          return obj2;
-        }
-      }
-      return closure_6;
-    }
-  }
-}
-const useNativeCheckoutStore = fn(7594).useNativeCheckoutStore;
-const PremiumTypes = fn(1391).PremiumTypes;
+const useNativeCheckoutStore = fn(7602).useNativeCheckoutStore;
+const PremiumTypes = fn(1386).PremiumTypes;
 let closure_6 = { priceString: null, failure: null };
-let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReportDeltaFailure(kind) {
-  const cResult = kind(platform[9]).c(6);
-  kind = undefined;
-  if (kind != null) {
-    kind = kind.kind;
-  }
-  if (kind == null) {
-    kind = null;
-  }
-  platform = undefined;
-  if (kind != null) {
-    platform = kind.platform;
-  }
-  if (platform == null) {
-    platform = null;
-  }
-  let currencyCode;
-  if (kind != null) {
-    currencyCode = kind.currencyCode;
-  }
-  if (currencyCode == null) {
-    currencyCode = null;
-  }
-  let productId;
-  if (kind != null) {
-    productId = kind.productId;
-  }
-  if (productId == null) {
-    productId = null;
-  }
-  if (cResult[0] === currencyCode) {
-    if (cResult[1] === kind) {
-      if (cResult[2] === platform) {
-        if (cResult[3] === productId) {
-          let tmp6 = cResult[4];
-          let tmp7 = cResult[5];
-        }
-        const effect = currencyCode.useEffect(tmp6, tmp7);
-      }
-    }
-  }
-  const fn = function n() {
-    if (null != kind) {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const error = new Error("delta_price_integrity_" + kind);
-      const obj3 = { source: "usePremiumTier2DeltaPriceString", delta_failure_kind: kind, delta_platform: null, delta_currency_code: null, delta_product_id: null };
-      let str = platform;
-      if (platform == null) {
-        str = "unknown";
-      }
-      obj3.delta_platform = str;
-      let str2 = currencyCode;
-      if (currencyCode == null) {
-        str2 = "unknown";
-      }
-      obj3.delta_currency_code = str2;
-      let str3 = productId;
-      if (productId == null) {
-        str3 = "unknown";
-      }
-      const obj = { tags: null };
-      obj3.delta_product_id = str3;
-      obj.tags = obj3;
-      const result = BillingUtils.captureBillingException(error, obj);
-    }
-  };
-  const items = [kind, platform, currencyCode, productId];
-  cResult[0] = currencyCode;
-  cResult[1] = kind;
-  cResult[2] = platform;
-  cResult[3] = productId;
-  cResult[4] = fn;
-  cResult[5] = items;
-  tmp7 = items;
-  tmp6 = fn;
-}) : (function useReportDeltaFailure(kind) {
-  kind = undefined;
-  if (kind != null) {
-    kind = kind.kind;
-  }
-  if (kind == null) {
-    kind = null;
-  }
-  let platform;
-  if (kind != null) {
-    platform = kind.platform;
-  }
-  if (platform == null) {
-    platform = null;
-  }
-  let currencyCode;
-  if (kind != null) {
-    currencyCode = kind.currencyCode;
-  }
-  if (currencyCode == null) {
-    currencyCode = null;
-  }
-  let productId;
-  if (kind != null) {
-    productId = kind.productId;
-  }
-  if (productId == null) {
-    productId = null;
-  }
-  const items = [kind, platform, currencyCode, productId];
-  const effect = currencyCode.useEffect(() => {
-    if (null != kind) {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const error = new Error("delta_price_integrity_" + kind);
-      const obj3 = { source: "usePremiumTier2DeltaPriceString", delta_failure_kind: kind, delta_platform: null, delta_currency_code: null, delta_product_id: null };
-      let str = platform;
-      if (platform == null) {
-        str = "unknown";
-      }
-      obj3.delta_platform = str;
-      let str2 = currencyCode;
-      if (currencyCode == null) {
-        str2 = "unknown";
-      }
-      obj3.delta_currency_code = str2;
-      let str3 = productId;
-      if (productId == null) {
-        str3 = "unknown";
-      }
-      const obj = { tags: null };
-      obj3.delta_product_id = str3;
-      obj.tags = obj3;
-      const result = BillingUtils.captureBillingException(error, obj);
-    }
-  }, items);
-});
-ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx");
 
-export const usePremiumTier2DeltaPriceString = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumTier2DeltaPriceString(premiumTier, subscription, currencyCode, arg3) {
-  const cResult = require("c").c(17);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    cResult[0] = P;
-  } else {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-  }
-  const obj = require("c");
-  const tmp = _require;
-  ({ orderRequired, checkoutContext } = useNativeCheckoutStore(P));
-  if (cResult[1] !== subscription) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    const tmp7 = getViewerProductId(subscription);
-    cResult[1] = subscription;
-    cResult[2] = tmp7;
-  } else {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-  }
-  _require = tmp6;
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    const items = [IAPStore];
-    cResult[3] = items;
-    const tmp8 = items;
-  } else {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-  }
-  if (cResult[4] !== tmp6) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    cResult[4] = tmp6;
-    cResult[5] = tmp10;
-  } else {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-  }
-  const tmp5 = useNativeCheckoutStore(P);
-  const stateFromStores = tmp(504).useStateFromStores(tmp8, tmp10);
-  if (cResult[6] !== orderRequired) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    const tmp13 = obj3.isIOS() && orderRequired;
-    cResult[6] = orderRequired;
-    cResult[7] = tmp13;
-  } else {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-  }
-  if (cResult[8] === stateFromStores) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-  }
-  let flag = false;
-  if (arg3) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    flag = false;
-    if (premiumTier.premiumTier === PremiumTypes.TIER_2) {
-      class P {
-        constructor(arg0) {
-          obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-          return obj;
-        }
-      }
-      flag = false;
-      if (premiumTier.numPremiumGuild >= 1) {
-        class P {
-          constructor(arg0) {
-            obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-            return obj;
-          }
-        }
-        if (null != tmp14) {
-          class P {
-            constructor(arg0) {
-              obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-              return obj;
-            }
-          }
-        }
-        flag = null != null && null.basePlanId === premiumTier.basePlanId && null.numPremiumGuild < premiumTier.numPremiumGuild;
-        tmp14 = getViewerProductId(subscription);
-        const tmp17 = null != null && null.basePlanId === premiumTier.basePlanId && null.numPremiumGuild < premiumTier.numPremiumGuild;
-      }
-    }
-  }
-  if (!flag) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    cResult[8] = stateFromStores;
-    cResult[9] = currencyCode;
-    cResult[10] = checkoutContext;
-    cResult[11] = tmp12;
-    cResult[12] = arg3;
-    cResult[13] = premiumTier;
-    cResult[14] = subscription;
-    cResult[15] = tmp6;
-    cResult[16] = tmp18;
-  }
-  if (tmp12) {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    computeAcomDeltaResult(premiumTier, checkoutContext, tmp6);
-  } else {
-    class P {
-      constructor(arg0) {
-        obj = { orderRequired: premiumTier.orderRequired, checkoutContext: premiumTier.getCheckoutContextRecord() };
-        return obj;
-      }
-    }
-    computeDelta(premiumTier, currencyCode, stateFromStores);
-  }
-  const tmpResult = tmp(504);
-}) : (function usePremiumTier2DeltaPriceString(premiumTier, subscription, currencyCode, arg3) {
-  ({ orderRequired, checkoutContext } = useNativeCheckoutStore((orderRequired) => ({ orderRequired: orderRequired.orderRequired, checkoutContext: orderRequired.getCheckoutContextRecord() })));
+export function usePremiumTier2DeltaPriceString(plan, subscription, currencyCode, flag4) {
+  const tmp = useNativeCheckoutStore((orderRequired) => ({ orderRequired: orderRequired.orderRequired, checkoutContext: orderRequired.getCheckoutContextRecord() }));
+  const checkoutContext = tmp.checkoutContext;
   const tmp3 = getViewerProductId(subscription);
   _require = tmp3;
-  const tmp = useNativeCheckoutStore((orderRequired) => ({ orderRequired: orderRequired.orderRequired, checkoutContext: orderRequired.getCheckoutContextRecord() }));
-  const tmp4 = _require;
   const items = [IAPStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let product = null;
@@ -452,33 +57,162 @@ export const usePremiumTier2DeltaPriceString = ReactCompilerGating.isReactCompil
     }
     return product;
   });
-  const obj = require("initialize");
-  const obj2 = require("PlatformUtils");
+  let obj = require("initialize");
+  let obj2 = require("PlatformUtils");
   let flag = false;
-  if (arg3) {
+  if (flag4) {
     flag = false;
-    if (premiumTier.premiumTier === PremiumTypes.TIER_2) {
+    if (plan.premiumTier === PremiumTypes.TIER_2) {
       flag = false;
-      if (premiumTier.numPremiumGuild >= 1) {
+      if (plan.numPremiumGuild >= 1) {
         const tmp2Result = getViewerProductId(subscription);
         let tmp11 = null;
         if (null != tmp2Result) {
-          tmp11 = tmp4(7578).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
+          tmp11 = tmp4(7586).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
         }
-        flag = null != tmp11 && tmp11.basePlanId === premiumTier.basePlanId && tmp11.numPremiumGuild < premiumTier.numPremiumGuild;
-        const tmp12 = null != tmp11 && tmp11.basePlanId === premiumTier.basePlanId && tmp11.numPremiumGuild < premiumTier.numPremiumGuild;
+        flag = null != tmp11 && tmp11.basePlanId === plan.basePlanId && tmp11.numPremiumGuild < plan.numPremiumGuild;
+        const tmp12 = null != tmp11 && tmp11.basePlanId === plan.basePlanId && tmp11.numPremiumGuild < plan.numPremiumGuild;
       }
     }
   }
   if (flag) {
-    if (tmp7) {
-      let tmp16 = computeAcomDeltaResult(premiumTier, checkoutContext, tmp3);
+    if (!tmp7) {
+      if (null != currencyCode) {
+        if (null != stateFromStores) {
+          const platformName = tmp4(1376).getPlatformName();
+          if (currencyCode.currencyCode !== stateFromStores.currencyCode) {
+            let obj3 = { priceString: null, failure: null };
+            const obj4 = { kind: "currency_mismatch", platform: platformName, productId: plan.productId, currencyCode: currencyCode.currencyCode };
+            obj3.failure = obj4;
+            let obj6 = obj3;
+          } else {
+            const diff = currencyCode.price - stateFromStores.price;
+            if (diff > 0) {
+              if (diff < currencyCode.price) {
+                let result = diff;
+                if (tmp4Result7.isAndroid()) {
+                  result = diff / 100;
+                }
+                const obj5 = { priceString: null, failure: null };
+                tmp4Result7 = tmp4(1376);
+                obj5.priceString = tmp4(7407).formatPrice(result, currencyCode.currencyCode, { convertToMajorUnits: false });
+                obj6 = obj5;
+                const tmp4Result8 = tmp4(7407);
+              }
+            }
+            obj6 = { priceString: null, failure: null };
+            const obj7 = { kind: "delta_out_of_range", platform: platformName, productId: plan.productId, currencyCode: currencyCode.currencyCode };
+            obj6.failure = obj7;
+          }
+          const tmp4Result = tmp4(1376);
+        }
+      }
+      obj6 = closure_6;
+    }
+    if (null == checkoutContext) {
     } else {
-      tmp16 = computeDelta(premiumTier, currencyCode, stateFromStores);
+      const availablePlanForItems = checkoutContext.getAvailablePlanForItems(tmp4(7585).getSubscriptionItemsForProduct(plan.productId));
+      if (null == availablePlanForItems) {
+      } else {
+        const addOnPrice = availablePlanForItems.getAddOnPrice();
+        if (null != addOnPrice) {
+          if (addOnPrice.majorUnits > 0) {
+            let tmp17 = null;
+            if (null != tmp3) {
+              tmp17 = tmp4(7586).AppStorePremiumProductIdsToPremiumBundledItems[tmp3];
+            }
+            if (null != tmp3) {
+              if (null != tmp17) {
+                if (0 !== tmp17.numPremiumGuild) {
+                  const availablePlanForItems1 = checkoutContext.getAvailablePlanForItems(tmp4(7585).getSubscriptionItemsForProduct(tmp3));
+                  let addOnPrice1;
+                  if (availablePlanForItems1 != null) {
+                    addOnPrice1 = availablePlanForItems1.getAddOnPrice();
+                  }
+                  if (null != addOnPrice1) {
+                    const diff1 = addOnPrice.majorUnits - addOnPrice1.majorUnits;
+                    if (diff1 > 0) {
+                      const obj8 = { priceString: tmp4(7407).formatPrice(diff1, addOnPrice.currency, { convertToMajorUnits: false }), failure: null };
+                      const tmp4Result11 = tmp4(7407);
+                    }
+                  }
+                  const tmp4Result10 = tmp4(7585);
+                }
+              }
+            }
+            const obj9 = { priceString: tmp4(7407).formatPrice(addOnPrice.majorUnits, addOnPrice.currency, { convertToMajorUnits: false }), failure: null };
+            const tmp4Result12 = tmp4(7407);
+          }
+        }
+      }
+      const tmp4Result9 = tmp4(7585);
     }
   } else {
-    closure_10(closure_6.failure);
+    const failure = closure_6.failure;
+    closure_129_0 = undefined;
+    closure_129_1 = undefined;
+    closure_129_2 = undefined;
+    closure_129_3 = undefined;
+    let kind;
+    if (failure != null) {
+      kind = failure.kind;
+    }
+    if (kind == null) {
+      kind = null;
+    }
+    closure_129_0 = kind;
+    let platform;
+    if (failure != null) {
+      platform = failure.platform;
+    }
+    if (platform == null) {
+      platform = null;
+    }
+    closure_129_1 = platform;
+    currencyCode = undefined;
+    if (failure != null) {
+      currencyCode = failure.currencyCode;
+    }
+    if (currencyCode == null) {
+      currencyCode = null;
+    }
+    closure_129_2 = currencyCode;
+    let productId;
+    if (failure != null) {
+      productId = failure.productId;
+    }
+    if (productId == null) {
+      productId = null;
+    }
+    closure_129_3 = productId;
+    const items1 = [kind, platform, currencyCode, productId];
+    const effect = noop.useEffect(() => {
+      if (null != delta_failure_kind) {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error = new Error("delta_price_integrity_" + delta_failure_kind);
+        const obj3 = { source: "usePremiumTier2DeltaPriceString", delta_failure_kind, delta_platform: null, delta_currency_code: null, delta_product_id: null };
+        let str = dependencyMap;
+        if (dependencyMap == null) {
+          str = "unknown";
+        }
+        obj3.delta_platform = str;
+        let str2 = noop;
+        if (noop == null) {
+          str2 = "unknown";
+        }
+        obj3.delta_currency_code = str2;
+        let str3 = useNativeCheckoutStore;
+        if (useNativeCheckoutStore == null) {
+          str3 = "unknown";
+        }
+        const obj = { tags: null };
+        obj3.delta_product_id = str3;
+        obj.tags = obj3;
+        const result = BillingUtils.captureBillingException(error, obj);
+      }
+    }, items1);
     return closure_6.priceString;
   }
-  tmp7 = require("PlatformUtils").isIOS() && orderRequired;
-});
+  tmp7 = require("PlatformUtils").isIOS() && tmp.orderRequired;
+}

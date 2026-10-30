@@ -1,7 +1,18 @@
-// === Module 1129: AssetJsonUtils ===
+// === Module 1118: AssetJsonUtils ===
 
-// Module 1129 (AssetJsonUtils)
+// Module 1118 (AssetJsonUtils)
+import _mod1119 from "module_1119" /* 1119 */;
+import _mod1121 from "module_1121" /* 1121 */;
+import _mod1122 from "module_1122" /* 1122 */;
+import _mod1123 from "module_1123" /* 1123 */;
+import _mod1124 from "module_1124" /* 1124 */;
+import _mod1125 from "module_1125" /* 1125 */;
+import _mod1126 from "module_1126" /* 1126 */;
+import _mod1127 from "module_1127" /* 1127 */;
+import _mod1128 from "module_1128" /* 1128 */;
+import _mod1129 from "module_1129" /* 1129 */;
 import _mod1130 from "module_1130" /* 1130 */;
+import _mod1131 from "module_1131" /* 1131 */;
 import _mod1132 from "module_1132" /* 1132 */;
 import _mod1133 from "module_1133" /* 1133 */;
 import _mod1134 from "module_1134" /* 1134 */;
@@ -20,17 +31,6 @@ import _mod1146 from "module_1146" /* 1146 */;
 import _mod1147 from "module_1147" /* 1147 */;
 import _mod1148 from "module_1148" /* 1148 */;
 import _mod1149 from "module_1149" /* 1149 */;
-import _mod1150 from "module_1150" /* 1150 */;
-import _mod1151 from "module_1151" /* 1151 */;
-import _mod1152 from "module_1152" /* 1152 */;
-import _mod1153 from "module_1153" /* 1153 */;
-import _mod1154 from "module_1154" /* 1154 */;
-import _mod1155 from "module_1155" /* 1155 */;
-import _mod1156 from "module_1156" /* 1156 */;
-import _mod1157 from "module_1157" /* 1157 */;
-import _mod1158 from "module_1158" /* 1158 */;
-import _mod1159 from "module_1159" /* 1159 */;
-import _mod1160 from "module_1160" /* 1160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -44,37 +44,102 @@ function loadJsonAsset() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _loadJsonAsset() {
-  closure_2 = tmp2;
-  closure_130_0 = closure_0;
-  let flag = closure_1;
-  if (closure_1 === undefined) {
-    flag = true;
-  }
-  closure_130_1 = flag;
-  await "Reflect";
-  if (null != closure_131_5[closure_130_0]) {
-    if (closure_130_1) {
-      c5 = 3;
-      return { value: closure_131_5[closure_130_0], done: true };
+let closure_7 = async function _loadJsonAsset(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          c3 = 0;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = true;
+          }
+          closure_130_1 = flag;
+          let uri;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "flexDirection", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          if (null != closure_131_5[closure_130_0]) {
+            if (closure_130_1) {
+              c5 = 3;
+              const obj6 = { value: closure_131_5[closure_130_0], done: true };
+              return obj6;
+            }
+          }
+          uri = closure_131_4.resolveAssetSource(closure_130_0).uri;
+          c4 = 2;
+          c5 = 1;
+          const obj7 = { value: closure_131_1(closure_131_2[32]).readAsset(uri, "utf8"), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_130_3 = value;
+        if (null == closure_130_3) {
+          c5 = 3;
+          return { value: null, done: true };
+        } else {
+          if (null != closure_131_5[closure_130_0]) {
+            if (closure_130_1) {
+              c5 = 3;
+              const obj9 = { value: closure_131_5[closure_130_0], done: true };
+              return obj9;
+            }
+          }
+          const _JSON = JSON;
+          closure_130_4 = JSON.parse(closure_130_3);
+          closure_131_5[closure_130_0] = closure_130_4;
+          c5 = 3;
+          const obj = { value: closure_130_4, done: true };
+          return obj;
+        }
+      }
+    } catch (tmp31) {
+      c5 = tmp;
+      throw tmp31;
     }
   }
-  const uri = closure_131_4.resolveAssetSource(closure_130_0).uri;
-  await closure_131_1(closure_131_2[32]).readAsset(uri, "utf8");
-  closure_130_3 = value;
-  if (null == closure_130_3) {
-    return null;
-  }
-  if (null != closure_131_5[closure_130_0]) {
-    if (closure_130_1) {
-      c5 = 3;
-      return { value: closure_131_5[closure_130_0], done: true };
-    }
-  }
-  const _JSON = JSON;
-  closure_130_4 = JSON.parse(closure_130_3);
-  closure_131_5[closure_130_0] = closure_130_4;
-  return closure_130_4;
 };
 const Image = fn(17).Image;
 let closure_5 = {};
@@ -83,94 +148,94 @@ const result = size.fileFinishedImporting("modules/asset_json/native/AssetJsonUt
 
 export const jsonAssets = {
   i18n_bg() {
-    return loadJsonAsset(_mod1130);
+    return loadJsonAsset(_mod1119);
   },
   i18n_cs() {
-    return loadJsonAsset(_mod1132);
+    return loadJsonAsset(_mod1121);
   },
   i18n_da() {
-    return loadJsonAsset(_mod1133);
+    return loadJsonAsset(_mod1122);
   },
   i18n_de() {
-    return loadJsonAsset(_mod1134);
+    return loadJsonAsset(_mod1123);
   },
   i18n_el() {
-    return loadJsonAsset(_mod1135);
+    return loadJsonAsset(_mod1124);
   },
   i18n_enGB() {
-    return loadJsonAsset(_mod1136);
+    return loadJsonAsset(_mod1125);
   },
   i18n_esES() {
-    return loadJsonAsset(_mod1137);
+    return loadJsonAsset(_mod1126);
   },
   i18n_es419() {
-    return loadJsonAsset(_mod1138);
+    return loadJsonAsset(_mod1127);
   },
   i18n_fi() {
-    return loadJsonAsset(_mod1139);
+    return loadJsonAsset(_mod1128);
   },
   i18n_fr() {
-    return loadJsonAsset(_mod1140);
+    return loadJsonAsset(_mod1129);
   },
   i18n_hr() {
-    return loadJsonAsset(_mod1141);
+    return loadJsonAsset(_mod1130);
   },
   i18n_hu() {
-    return loadJsonAsset(_mod1142);
+    return loadJsonAsset(_mod1131);
   },
   i18n_it() {
-    return loadJsonAsset(_mod1143);
+    return loadJsonAsset(_mod1132);
   },
   i18n_ja() {
-    return loadJsonAsset(_mod1144);
+    return loadJsonAsset(_mod1133);
   },
   i18n_ko() {
-    return loadJsonAsset(_mod1145);
+    return loadJsonAsset(_mod1134);
   },
   i18n_lt() {
-    return loadJsonAsset(_mod1146);
+    return loadJsonAsset(_mod1135);
   },
   i18n_nl() {
-    return loadJsonAsset(_mod1147);
+    return loadJsonAsset(_mod1136);
   },
   i18n_no() {
-    return loadJsonAsset(_mod1148);
+    return loadJsonAsset(_mod1137);
   },
   i18n_pl() {
-    return loadJsonAsset(_mod1149);
+    return loadJsonAsset(_mod1138);
   },
   i18n_ptBR() {
-    return loadJsonAsset(_mod1150);
+    return loadJsonAsset(_mod1139);
   },
   i18n_ro() {
-    return loadJsonAsset(_mod1151);
+    return loadJsonAsset(_mod1140);
   },
   i18n_ru() {
-    return loadJsonAsset(_mod1152);
+    return loadJsonAsset(_mod1141);
   },
   i18n_svSE() {
-    return loadJsonAsset(_mod1153);
+    return loadJsonAsset(_mod1142);
   },
   i18n_th() {
-    return loadJsonAsset(_mod1154);
+    return loadJsonAsset(_mod1143);
   },
   i18n_tr() {
-    return loadJsonAsset(_mod1155);
+    return loadJsonAsset(_mod1144);
   },
   i18n_uk() {
-    return loadJsonAsset(_mod1156);
+    return loadJsonAsset(_mod1145);
   },
   i18n_vi() {
-    return loadJsonAsset(_mod1157);
+    return loadJsonAsset(_mod1146);
   },
   i18n_zhCN() {
-    return loadJsonAsset(_mod1158);
+    return loadJsonAsset(_mod1147);
   },
   i18n_zhTW() {
-    return loadJsonAsset(_mod1159);
+    return loadJsonAsset(_mod1148);
   },
   i18n_hi() {
-    return loadJsonAsset(_mod1160);
+    return loadJsonAsset(_mod1149);
   }
 };
 export { loadJsonAsset };

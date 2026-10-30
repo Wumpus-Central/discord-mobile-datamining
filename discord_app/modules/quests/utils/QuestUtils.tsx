@@ -1,17 +1,17 @@
-// === Module 7854: utils/QuestUtils ===
+// === Module 7859: utils/QuestUtils ===
 
-// Module 7854 (utils/QuestUtils)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6711 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7856 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7857 */;
-import QuestType2 from "QuestType" /* 7858 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7859 */;
+// Module 7859 (utils/QuestUtils)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6718 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7861 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7862 */;
+import QuestType2 from "QuestType" /* 7863 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7864 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 5753 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import VoiceStateStore from "VoiceStateStore" /* 5668 */;
-import QuestUtmStore from "QuestUtmStore" /* 7855 */;
+import GameConsoleStore from "GameConsoleStore" /* 5760 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import VoiceStateStore from "VoiceStateStore" /* 5674 */;
+import QuestUtmStore from "QuestUtmStore" /* 7860 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {
@@ -29,14 +29,14 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(6768);
+const QuestConstants = fn(6775);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
 export { isSponsoredPlayQuest };
 export function isPlayAnyActivityQuest(quest) {
-  return QuestTaskUtils.getPlayActivityApplicationId(quest) === closure_1_8;
+  return QuestTaskUtils.getPlayActivityApplicationId(quest) === React6;
 }
 export { hasVariant };
 export function canLaunchActivity(quest) {
@@ -73,8 +73,8 @@ export function filterQuestsForSocialEntrypoints(stateFromStores, has) {
 export function isShareableQuest(config) {
   return config.sharePolicy !== QuestSharePolicy.QuestSharePolicy.NOT_SHAREABLE;
 }
-export function isStreamingAndCanWatch(channelId, stateFromStores) {
-  let first = null != channelId && null != stateFromStores;
+export function isStreamingAndCanWatch(arg0, stateFromStores) {
+  let first = null != arg0 && null != stateFromStores;
   if (first) {
     const obj = StreamPermissionUtils;
     first = obj.canWatchStream(stateFromStores, VoiceStateStore, GuildStore, PermissionStore, GameConsoleStore)[0];

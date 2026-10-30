@@ -1,7 +1,7 @@
-// === Module 5783: DirectVideoStream ===
+// === Module 5790: DirectVideoStream ===
 
-// Module 5783 (DirectVideoStream)
-import inject from "inject" /* 2014 */;
+// Module 5790 (DirectVideoStream)
+import inject from "inject" /* 2009 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

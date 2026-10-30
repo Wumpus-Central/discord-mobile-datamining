@@ -1,8 +1,7 @@
-// === Module 9867: getTrialCtaOverride ===
+// === Module 9893: getTrialCtaOverride ===
 
-// Module 9867 (getTrialCtaOverride)
-import PremiumUtils from "PremiumUtils" /* 2051 */;
-import ReferralTrialCtaExperiment from "ReferralTrialCtaExperiment" /* 9868 */;
+// Module 9893 (getTrialCtaOverride)
+import PremiumUtils from "PremiumUtils" /* 2048 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/premium/getTrialCtaOverride.tsx");
@@ -16,12 +15,7 @@ export function getTrialCtaOverride(premiumTrialOffer, TIER_2) {
     }
     result = null;
     if (true === isReferralTrial) {
-      result = null;
-      if (obj.getReferralTrialCtaExperimentEnabled()) {
-        result = PremiumUtils.formatTrialCtaIntervalDurationFromTrialOffer(premiumTrialOffer, TIER_2);
-        const tmp4Result = PremiumUtils;
-      }
-      obj = ReferralTrialCtaExperiment;
+      result = PremiumUtils.formatTrialCtaIntervalDurationFromTrialOffer(premiumTrialOffer, TIER_2);
     }
   }
   return result;

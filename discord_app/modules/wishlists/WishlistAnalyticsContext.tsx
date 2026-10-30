@@ -1,75 +1,25 @@
-// === Module 14924: WishlistAnalyticsContext ===
+// === Module 14966: WishlistAnalyticsContext ===
 
-// Module 14924 (WishlistAnalyticsContext)
-import c from "c" /* 576 */;
+// Module 14966 (WishlistAnalyticsContext)
 import noop from "module_19" /* 19 */;
 
-require = fn;
 const jsx = fn(21).jsx;
 let context = noop.createContext(null);
-let ReactCompilerGating = fn(558);
-ReactCompilerGating.isReactCompilerEnabled();
-function useWishlistAnalyticsContext() {
-  return noop.useContext(context);
-}
-ReactCompilerGating = fn(558);
 const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/wishlists/WishlistAnalyticsContext.tsx");
+const result = size.fileFinishedImporting("modules/wishlists/WishlistAnalyticsContext.tsx");
 
 export const WishlistAnalyticsContext = context;
-export { useWishlistAnalyticsContext };
-export const WishlistAnalyticsProvider = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistAnalyticsProvider(arg0) {
-  const cResult = c.c(6);
-  ({ newValue, children } = arg0);
-  if (typeof useWishlistAnalyticsContext === "function") {
-    context = noop.useContext(context);
-    if (cResult[0] === newValue) {
-      if (cResult[1] === context) {
-        let tmp5 = cResult[2];
-      }
-      if (cResult[3] === children) {
-        if (cResult[4] === tmp5) {
-          let tmp12 = cResult[5];
-        }
-        return tmp12;
-      }
-      const obj2 = { value: tmp5, children };
-      const tmp14 = <tmp3.Provider value={tmp5}>{children}</tmp3.Provider>;
-      cResult[3] = children;
-      cResult[4] = tmp5;
-      cResult[5] = tmp14;
-      tmp12 = tmp14;
-    }
-    const obj3 = {};
+export function useWishlistAnalyticsContext() {
+  return noop.useContext(context);
+}
+export function WishlistAnalyticsProvider(children) {
+  const newValue = children.newValue;
+  context = undefined;
+  context = noop.useContext(context);
+  const items = [context, newValue];
+  return <context.Provider value={noop.useMemo(() => {
     const merged = Object.assign(context);
     const merged1 = Object.assign(newValue);
-    cResult[0] = newValue;
-    cResult[1] = context;
-    cResult[2] = obj3;
-    tmp5 = obj3;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}) : (function WishlistAnalyticsProvider(newValue) {
-  newValue = newValue.newValue;
-  context = undefined;
-  if (typeof useWishlistAnalyticsContext === "function") {
-    context = noop.useContext(context);
-    const items = [context, newValue];
-    const obj = {
-      value: noop.useMemo(() => {
-          const merged = Object.assign(context);
-          const merged1 = Object.assign(newValue);
-          return {};
-        }, items),
-      children: tmp
-    };
-    return <context.Provider value={noop.useMemo(() => {
-      const merged = Object.assign(context);
-      const merged1 = Object.assign(newValue);
-      return {};
-    }, items)}>{tmp}</context.Provider>;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-});
+    return {};
+  }, items)}>{children.children}</context.Provider>;
+}

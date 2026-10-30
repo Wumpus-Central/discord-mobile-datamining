@@ -1,7 +1,7 @@
-// === Module 4901: StartupData ===
+// === Module 4905: StartupData ===
 
-// Module 4901 (StartupData)
-import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 4902 */;
+// Module 4905 (StartupData)
+import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 4906 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");

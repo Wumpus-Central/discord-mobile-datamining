@@ -1,23 +1,20 @@
-// === Module 8015: BaseIconButton ===
+// === Module 8021: BaseIconButton ===
 
-// Module 8015 (BaseIconButton)
-import c from "c" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5086 */;
-import IconDefault from "Icon" /* 5283 */;
-import ButtonConstants from "ButtonConstants" /* 5287 */;
-import ButtonHooks from "ButtonHooks" /* 5288 */;
-import Button_BaseButton from "Button/BaseButton" /* 5291 */;
-import ButtonPill from "ButtonPill" /* 5293 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+// Module 8021 (BaseIconButton)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5090 */;
+import IconDefault from "Icon" /* 5631 */;
+import ButtonConstants from "ButtonConstants" /* 5635 */;
+import ButtonHooks from "ButtonHooks" /* 5636 */;
+import Button_BaseButton from "Button/BaseButton" /* 5638 */;
+import ButtonPill from "ButtonPill" /* 5640 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-let closure_2 = ["ref"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
-let closure_6 = createStyles.createStyles((arg0, arg1) => {
+const createStyles = fn(5009);
+let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = { paddingHorizontal: ButtonConstants.SMALL_BUTTON_PADDING, paddingVertical: ButtonConstants.SMALL_BUTTON_PADDING };
     let obj = obj2;
@@ -37,80 +34,10 @@ let closure_6 = createStyles.createStyles((arg0, arg1) => {
   return obj5;
 });
 const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
 
-export const BaseIconButton = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseIconButton(ref) {
-  let num = 2;
-  const cResult = c.c(2);
-  const tmp4 = _objectWithoutProperties(ref, closure_2);
-  ({ variant, size, icon, scaleAmountInPx } = tmp4);
-  let str = "primary";
-  ({ style, pillStyle, maxFontSizeMultiplier, loading } = tmp4);
-  if (undefined !== variant) {
-    str = variant;
-  }
-  if (undefined === size) {
-    size = ButtonConstants.DEFAULT_BUTTON_SIZE;
-  }
-  let num2 = 4;
-  if (undefined !== scaleAmountInPx) {
-    num2 = scaleAmountInPx;
-  }
-  const tmp5 = closure_6(str, size);
-  let num3 = 0;
-  const sharedValue = ReanimatedRexport2.useSharedValue(0);
-  const tmpResult = ReanimatedRexport2;
-  const iconTintStyles = ButtonHooks.useIconTintStyles(str, sharedValue);
-  ButtonHooks;
-  if (cResult[0] !== size) {
-    let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
-    if ("sm" === size) {
-      MEDIUM_BUTTON_HEIGHT = ButtonConstants.SMALL_BUTTON_HEIGHT;
-    } else if ("md" === size) {
-      MEDIUM_BUTTON_HEIGHT = ButtonConstants.MEDIUM_BUTTON_HEIGHT;
-    }
-    const _Math = Math;
-    num = (ButtonConstants.MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / num;
-    const bound = Math.max(num, num3);
-    cResult[num3] = size;
-    num3 = 1;
-    cResult[1] = bound;
-  } else {
-    const obj2 = {};
-    const merged = Object.assign(tmp4);
-    obj2.ref = ref.ref;
-    const items = [tmp5.button, style];
-    obj2.style = items;
-    obj2.pressed = sharedValue;
-    obj2.scaleAmountInPx = num2;
-    obj2.hitSlop = cResult[1];
-    const obj3 = { style: null, variant: null, size: null, loading: null, loaderSize: null, pressed: null, children: null };
-    const items1 = [tmp5.pill, pillStyle];
-    obj3.style = items1;
-    obj3.variant = str;
-    obj3.size = size;
-    obj3.loading = loading;
-    let str4 = "xs";
-    if ("lg" === size) {
-      str4 = "sm";
-    }
-    obj3.loaderSize = str4;
-    obj3.pressed = sharedValue;
-    let tmp13Result = icon;
-    if (!noop.isValidElement(icon)) {
-      const obj4 = { source: icon, style: null };
-      const items2 = [iconTintStyles, tmp9];
-      obj4.style = items2;
-      tmp13Result = <Icon source={icon} style={null} />;
-    }
-    obj3.children = tmp13Result;
-    obj2.children = jsx(ButtonPill.ButtonPill, { style: null, variant: null, size: null, loading: null, loaderSize: null, pressed: null, children: null });
-    return jsx(Button_BaseButton.BaseButton, {});
-  }
-  const tmpResult3 = ButtonHooks;
-}) : (function BaseIconButton(ref) {
+export function BaseIconButton(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const variant = merged.variant;
   let str = "primary";
@@ -128,7 +55,7 @@ export const BaseIconButton = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   if (undefined !== scaleAmountInPx) {
     num = scaleAmountInPx;
   }
-  const tmp4 = closure_6(str, DEFAULT_BUTTON_SIZE);
+  const tmp4 = closure_4(str, DEFAULT_BUTTON_SIZE);
   const sharedValue = ReanimatedRexport2.useSharedValue(0);
   const iconTintStyles = ButtonHooks.useIconTintStyles(str, sharedValue);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
@@ -166,4 +93,4 @@ export const BaseIconButton = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   obj5.children = tmp11Result;
   obj4.children = jsx(ButtonPill.ButtonPill, { style: null, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
   return jsx(Button_BaseButton.BaseButton, {});
-});
+}

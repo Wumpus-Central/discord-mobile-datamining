@@ -1,17 +1,17 @@
-// === Module 11528: VideoSpinnerTimer ===
+// === Module 11729: VideoSpinnerTimer ===
 
-// Module 11528 (VideoSpinnerTimer)
+// Module 11729 (VideoSpinnerTimer)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import TimeUtils from "TimeUtils" /* 5760 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import TimeUtils from "TimeUtils" /* 5767 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import NetworkStore from "NetworkStore" /* 5928 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import VoiceStateStore from "VoiceStateStore" /* 5668 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import NetworkStore from "NetworkStore" /* 5935 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import VoiceStateStore from "VoiceStateStore" /* 5674 */;
 
 require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/VideoSpinnerTimer.tsx");

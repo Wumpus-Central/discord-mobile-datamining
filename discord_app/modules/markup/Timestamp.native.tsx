@@ -1,57 +1,20 @@
-// === Module 12055: Timestamp ===
+// === Module 11038: Timestamp ===
 
-// Module 12055 (Timestamp)
-import nativeDefault from "native" /* 587 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
-import useFormattedTimestampDefault from "useFormattedTimestamp" /* 12056 */;
+// Module 11038 (Timestamp)
+import nativeDefault from "native" /* 575 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+import useFormattedTimestampDefault from "useFormattedTimestamp" /* 11039 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 const obj2 = { timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_4 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj3 = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/Timestamp.native.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function Timestamp(node) {
-  const cResult = node(576).c(6);
-  node = node.node;
-  const obj = node(576);
-  const tmp = node;
-  const tmp5 = useFormattedTimestampDefault(node);
-  let style = closure_4().timestamp;
-  if (style == null) {
-    style = node.style;
-  }
-  if (cResult[0] !== node.full) {
-    const fn = function o() {
-      ToastActionCreatorsDefault.open("TIMESTAMP", { text: node.full });
-    };
-    cResult[0] = node.full;
-    cResult[1] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === tmp5) {
-    if (cResult[3] === style) {
-      if (cResult[4] === tmp6) {
-        let tmp7 = cResult[5];
-      }
-      return tmp7;
-    }
-  }
-  const tmp8 = jsx(tmp(1199).LegacyText, { style, onPress: tmp6, children: tmp5 });
-  cResult[2] = tmp5;
-  cResult[3] = style;
-  cResult[4] = tmp6;
-  cResult[5] = tmp8;
-  tmp7 = tmp8;
-  const tmp4 = closure_4();
-}) : (function Timestamp(node) {
+export default function Timestamp(node) {
   node = node.node;
   const tmp = closure_4();
   let style = tmp.timestamp;
@@ -59,11 +22,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Timestam
     style = node.style;
   }
   const tmp2 = useFormattedTimestampDefault(node);
-  return jsx(node(1199).LegacyText, {
+  return jsx(node(1188).LegacyText, {
     style,
     onPress() {
       ToastActionCreatorsDefault.open("TIMESTAMP", { text: node.full });
     },
     children: useFormattedTimestampDefault(node)
   });
-});
+};

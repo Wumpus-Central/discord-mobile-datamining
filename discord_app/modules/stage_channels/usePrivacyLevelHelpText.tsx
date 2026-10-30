@@ -1,107 +1,21 @@
-// === Module 9079: usePrivacyLevelHelpText ===
+// === Module 9092: usePrivacyLevelHelpText ===
 
-// Module 9079 (usePrivacyLevelHelpText)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2065 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+// Module 9092 (usePrivacyLevelHelpText)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const HelpdeskArticles = fn(1084).HelpdeskArticles;
-const constants = fn(4863).GuildScheduledEventPrivacyLevel;
-const Permissions = fn(1095).Permissions;
-const ReactCompilerGating = fn(558);
+const HelpdeskArticles = fn(1072).HelpdeskArticles;
+const constants = fn(4864).GuildScheduledEventPrivacyLevel;
+const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStagePrivacyLevelSettings(channel, arg1, arg2) {
-  _require = channel;
-  const cResult = require("c").c(14);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [PermissionStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== channel) {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-    cResult[1] = channel;
-    cResult[2] = E;
-  } else {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-  }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, E);
-  if (cResult[3] !== channel) {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-    const obj3 = PermissionUtilsAll;
-    const canEveryoneRoleResult = obj3.canEveryoneRole(BigFlagUtilsAll.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT), channel);
-    cResult[3] = channel;
-    cResult[4] = canEveryoneRoleResult;
-  } else {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-  }
-  if (cResult[5] === tmp8) {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-  }
-  if (arg1 != null) {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-  }
-  if (undefined === constants.PUBLIC) {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-    const stringResult = obj5.string(tmp(1125).t.GFq5Rg);
-  } else {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-  }
-  cResult[5] = tmp8;
-  cResult[6] = stateFromStores;
-  cResult[7] = arg2;
-  if (arg1 != null) {
-    class E {
-      constructor() {
-        return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
-      }
-    }
-  }
-  cResult[8] = undefined;
-  cResult[9] = stringResult;
-  const tmpResult = require("initialize");
-}) : (function useStagePrivacyLevelSettings(channel, privacy_level, arg2) {
+export default function useStagePrivacyLevelSettings(channel, privacy_level, arg2) {
   _require = channel;
   const items = [PermissionStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, closure_0));
@@ -113,24 +27,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStage
     privacy_level = privacy_level.privacy_level;
   }
   if (privacy_level === constants.PUBLIC) {
-    const intl4 = tmp(1125).intl;
-    let stringResult = intl4.string(tmp(1125).t.GFq5Rg);
+    const intl4 = tmp(1114).intl;
+    let stringResult = intl4.string(tmp(1114).t.GFq5Rg);
   } else if (stateFromStores) {
     if (canEveryoneRoleResult) {
       let formatResult = null;
       if (arg2 === constants.PUBLIC) {
-        const intl3 = tmp(1125).intl;
+        const intl3 = tmp(1114).intl;
         const obj4 = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
-        formatResult = intl3.format(tmp(1125).t["ew/Jq4"], obj4);
+        formatResult = intl3.format(tmp(1114).t["ew/Jq4"], obj4);
       }
       let stringResult1 = formatResult;
     } else {
-      const intl2 = tmp(1125).intl;
-      stringResult1 = intl2.string(tmp(1125).t.E5T7a3);
+      const intl2 = tmp(1114).intl;
+      stringResult1 = intl2.string(tmp(1114).t.E5T7a3);
     }
   } else {
-    const intl = tmp(1125).intl;
-    stringResult = intl.string(tmp(1125).t.BOjr7t);
+    const intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t.BOjr7t);
   }
   const obj6 = { helpText: stringResult, guildOnlyDisabled: null, publicDisabled: null };
   let privacy_level1;
@@ -144,4 +58,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStage
   }
   obj6.publicDisabled = tmp15;
   return obj6;
-});
+};

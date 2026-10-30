@@ -1,8 +1,8 @@
-// === Module 19877: GuildRoleSubscriptionTierTemplateActionCreators ===
+// === Module 19940: GuildRoleSubscriptionTierTemplateActionCreators ===
 
-// Module 19877 (GuildRoleSubscriptionTierTemplateActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 19940 (GuildRoleSubscriptionTierTemplateActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_5 = async function _getTemplates(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_5 = async function _getTemplates(arg0) {
           const obj = closure_130_1(closure_130_2[2]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp16) {
       c4 = tmp;
@@ -65,7 +65,7 @@ let closure_5 = async function _getTemplates(arg0) {
     }
   }
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
 

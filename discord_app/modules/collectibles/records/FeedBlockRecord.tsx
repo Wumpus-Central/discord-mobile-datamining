@@ -1,13 +1,13 @@
-// === Module 7740: FeedBlockRecord ===
+// === Module 7745: FeedBlockRecord ===
 
-// Module 7740 (FeedBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 5678 */;
+// Module 7745 (FeedBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 5684 */;
 import size from "module_2" /* 2 */;
 
-const prototype = function FeedBlockRecord(length) {
+const prototype = function FeedBlockRecord(arg0) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.FEED;
-  ({ ranked_sku_ids: tmp.rankedSkuIds, sorted_sku_ids: tmp.sortedSkuIds } = length);
+  ({ ranked_sku_ids: tmp.rankedSkuIds, sorted_sku_ids: tmp.sortedSkuIds } = arg0);
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {

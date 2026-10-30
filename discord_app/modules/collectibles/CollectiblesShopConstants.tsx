@@ -1,10 +1,10 @@
-// === Module 1086: CollectiblesShopConstants ===
+// === Module 1074: CollectiblesShopConstants ===
 
-// Module 1086 (CollectiblesShopConstants)
-import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1087 */;
-import CollectibleSearchItemType from "CollectibleSearchItemType" /* 1088 */;
-import CollectibleSearchSortType from "CollectibleSearchSortType" /* 1089 */;
-import CollectibleSearchSortDirection from "CollectibleSearchSortDirection" /* 1090 */;
+// Module 1074 (CollectiblesShopConstants)
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
+import CollectibleSearchItemType from "CollectibleSearchItemType" /* 1076 */;
+import CollectibleSearchSortType from "CollectibleSearchSortType" /* 1077 */;
+import CollectibleSearchSortDirection from "CollectibleSearchSortDirection" /* 1078 */;
 import size from "module_2" /* 2 */;
 
 const CollectibleShopTab = { HOME: "home", CATALOG: "catalog", ORBS: "orbs", AVATAR_DECORATIONS: "avatar-decorations", PROFILE_EFFECTS: "profile-effects", NAMEPLATES: "nameplates", PROFILE_FRAMES: "profile-frames", BUNDLES: "bundles", COLLABS: "collabs", OFFER_ELIGIBLE: "offer-eligible", PROMOTION: "promotion", COLLECTION_INDEX: "collection-index", GAME_SHOPS: "game-shops", GAME_SERVERS: "game-servers" };
@@ -33,9 +33,10 @@ export const COLLECTIBLES_SHOP_CACHE_DURATION_MS = 600000;
 export const COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS = 600000;
 export const ViewState = { VISIBLE: 0, [0]: "VISIBLE", HIDDEN: 1, [1]: "HIDDEN", IN: 2, [2]: "IN", OUT: 3, [3]: "OUT" };
 export const SEARCH_BAR_ICON_WIDTH_PX = 24;
-export const SEARCH_BAR_WIDTH_PX = 225;
+export const CollectiblesUpgradedSearchBarWidthPx = { DEFAULT: 182, [182]: "DEFAULT", WIDE: 256, [256]: "WIDE" };
 export const STATE_TRANSITION_THRESHOLD_PX = 20;
 export const CollectiblesSearchBarCTAName = { SEARCH_ICON: "search icon", SEARCH_BAR: "search bar", SEARCH_BAR_CLEAR: "search bar clear" };
+export const CollectiblesSearchBarTileType = { SEARCH: "SEARCH", SEARCH_SUGGESTION: "search suggestion" };
 export const BROWSE_CATEGORY_QUERY_PARAM = "category";
 export const GAME_SERVER_GAME_ID_QUERY_PARAM = "game_server_game_id";
 export { CollectibleShopTab };

@@ -1,6 +1,6 @@
-// === Module 13341: ? ===
+// === Module 13491: ? ===
 
-// Module 13341
+// Module 13491
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_04_camper_amber.webp.js");

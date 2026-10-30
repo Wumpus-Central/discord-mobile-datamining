@@ -1,21 +1,19 @@
-// === Module 4837: UserSettingDefinitions ===
+// === Module 4838: UserSettingDefinitions ===
 
-// Module 4837 (UserSettingDefinitions)
+// Module 4838 (UserSettingDefinitions)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
 
 require = fn;
-const UserSettingsDelay = fn(1094).UserSettingsDelay;
+const UserSettingsDelay = fn(1082).UserSettingsDelay;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingDefinitions.tsx");
 
 export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, arg4) {
   let getSetting = textAndImages;
-  let f95449 = activityRestrictedGuildIds;
-  dependencyMap = explicitContentFromProto;
+  let f86255 = activityRestrictedGuildIds;
   closure_3 = explicitContentToProto;
   let obj = arg4;
   if (arg4 === undefined) {
@@ -27,23 +25,22 @@ export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, ex
   }
   fn = obj.comparator;
   if (fn === undefined) {
-    fn = function c(arg0, arg1) {
+    fn = function p(arg0, arg1) {
       return arg0 === arg1;
     };
   }
   getSetting = function getSetting() {
     let tmp3;
     if (UserSettingsProtoStore.settings[getSetting] != null) {
-      tmp3 = tmp2[f95449];
+      tmp3 = tmp2[f86255];
     }
     return explicitContentFromProto(tmp3);
   };
-  const obj2 = getSetting(558);
-  f95449 = (favorites) => {
+  f86255 = (favorites) => {
     closure_0 = favorites;
-    const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[6]).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, async (arg0) => {
-      arg0[f95449] = closure_3(closure_0, arg0[f95449]);
+      arg0[f86255] = closure_3(closure_0, arg0[f86255]);
     }, INFREQUENT_USER_ACTION);
   };
   return {
@@ -53,22 +50,12 @@ export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, ex
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f95455(tmp2);
+      return f86262(tmp2);
     },
-    useSetting: getSetting(558).isReactCompilerEnabled() ? (() => {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [UserSettingsProtoStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      return initialize.useStateFromStores(first, getSetting, undefined, fn);
-    }) : (() => {
+    useSetting() {
       const items = [UserSettingsProtoStore];
       return initialize.useStateFromStores(items, getSetting, undefined, fn);
-    })
+    }
   };
 }
 export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, animateEmoji) {
@@ -124,7 +111,7 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f95455(tmp2);
+      return f86262(tmp2);
     }
   };
 }
@@ -138,9 +125,9 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
     }
     return setting;
   }
-  const f95455 = (arg0) => {
+  const f86262 = (arg0) => {
     const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: null };
-    const items = [f95455];
+    const items = [f86262];
     obj2.settings = items;
     DispatcherDefault.dispatch(obj2);
     return getSetting.updateSetting(arg0);
@@ -160,7 +147,7 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f95455(tmp2);
+      return f86262(tmp2);
     }
   };
 }

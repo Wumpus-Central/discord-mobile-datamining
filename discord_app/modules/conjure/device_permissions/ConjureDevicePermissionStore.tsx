@@ -1,8 +1,8 @@
-// === Module 10910: ConjureDevicePermissionStore ===
+// === Module 10933: ConjureDevicePermissionStore ===
 
-// Module 10910 (ConjureDevicePermissionStore)
+// Module 10933 (ConjureDevicePermissionStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 let obj = { users: {} };
@@ -20,14 +20,14 @@ prototype["initialize"] = function initialize(users) {
     users = {};
   }
 };
-prototype["getDecision"] = function getDecision(applicationId, item10010) {
+prototype["getDecision"] = function getDecision(applicationId, item10006) {
   const id = AuthenticationStore.getId();
   let tmp2 = null;
   if (null != id) {
     let tmp5;
     if (obj.users[id] != null) {
       if (tmp4[applicationId] != null) {
-        tmp5 = tmp7[item10010];
+        tmp5 = tmp7[item10006];
       }
     }
     if (tmp5 == null) {

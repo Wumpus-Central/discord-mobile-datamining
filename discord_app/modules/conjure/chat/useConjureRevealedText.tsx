@@ -1,241 +1,20 @@
-// === Module 12343: useConjureRevealedText ===
+// === Module 12505: useConjureRevealedText ===
 
-// Module 12343 (useConjureRevealedText)
-import ConjureStreamReveal from "ConjureStreamReveal" /* 12344 */;
-import conjurePageVisibility from "conjurePageVisibility" /* 12345 */;
+// Module 12505 (useConjureRevealedText)
+import ConjureStreamReveal from "ConjureStreamReveal" /* 12506 */;
+import conjurePageVisibility from "conjurePageVisibility" /* 12507 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/chat/useConjureRevealedText.tsx");
+const result = size.fileFinishedImporting("modules/conjure/chat/useConjureRevealedText.tsx");
 
-export const useConjureRevealedText = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureRevealedText(target, streaming) {
-  _require = target;
-  target = _require;
-  const cResult = require("c").c(22);
-  streaming = streaming.streaming;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ref];
-    const fn = function h() {
-      return ref.useReducedMotion;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp2 = items;
-    tmp3 = fn;
-  } else {
-    [tmp2, tmp3] = cResult;
-  }
-  length = dependencyMap;
-  let obj = require("c");
-  if (streaming) {
-    streaming = !targetResult.useStateFromStores(tmp2, tmp3);
-  }
-  if (cResult[2] !== target) {
-    const fn2 = function v() {
-      return { target, length: target.length };
-    };
-    cResult[2] = target;
-    cResult[3] = fn2;
-    let tmp5 = fn2;
-  } else {
-    tmp5 = cResult[3];
-  }
-  targetResult = target(504);
-  [tmp7, tmp8] = noop.useState(tmp5);
-  _slicedToArray = tmp8;
-  if (cResult[4] === tmp7) {
-    if (cResult[5] === streaming) {
-      if (cResult[6] === target) {
-        dependencyMap = cResult[7];
-      }
-      if (arr2 !== tmp7) {
-        tmp8(arr2);
-      }
-      let tmp16 = streaming;
-      if (streaming) {
-        tmp16 = arr2.length < target.length;
-      }
-      noop = tmp16;
-      ref = obj3.useRef(arr2);
-      if (cResult[8] !== arr2) {
-        class L {
-          constructor() {
-            closure_4.current = closure_1;
-            return;
-          }
-        }
-        cResult[8] = arr2;
-        cResult[9] = L;
-      } else {
-        class L {
-          constructor() {
-            closure_4.current = closure_1;
-            return;
-          }
-        }
-      }
-      const layoutEffect = obj3.useLayoutEffect(L);
-      closure_5 = obj3.useRef(0);
-      closure_6 = obj3.useRef(0);
-      if (cResult[10] !== tmp16) {
-        class L {
-          constructor() {
-            closure_4.current = closure_1;
-            return;
-          }
-        }
-        const items1 = [tmp16];
-        cResult[10] = tmp16;
-        cResult[11] = tmp21;
-        cResult[12] = items1;
-        let tmp20 = items1;
-      } else {
-        class L {
-          constructor() {
-            closure_4.current = closure_1;
-            return;
-          }
-        }
-        tmp20 = cResult[12];
-      }
-      const effect = obj3.useEffect(tmp21, tmp20);
-      if (cResult[13] !== tmp16) {
-        class L {
-          constructor() {
-            closure_4.current = closure_1;
-            return;
-          }
-        }
-        const items2 = [tmp16];
-        cResult[13] = tmp16;
-        cResult[14] = tmp25;
-        cResult[15] = items2;
-        let tmp24 = items2;
-      } else {
-        class L {
-          constructor() {
-            closure_4.current = closure_1;
-            return;
-          }
-        }
-        tmp24 = cResult[15];
-      }
-      const effect1 = obj3.useEffect(tmp25, tmp24);
-      const _Math = Math;
-      const bound = Math.min(arr2.length, target.length);
-      if (cResult[16] === bound) {
-        class L {
-          constructor() {
-            closure_4.current = closure_1;
-            return;
-          }
-        }
-        if (streaming) {
-          class L {
-            constructor() {
-              closure_4.current = closure_1;
-              return;
-            }
-          }
-        }
-        if (cResult[19] === streaming) {
-          class L {
-            constructor() {
-              closure_4.current = closure_1;
-              return;
-            }
-          }
-          return tmp30;
-        }
-        let obj2 = { text: tmp28, revealing: streaming };
-        cResult[19] = streaming;
-        cResult[20] = tmp28;
-        cResult[21] = obj2;
-        tmp30 = obj2;
-      }
-      if (bound < target.length) {
-        class L {
-          constructor() {
-            closure_4.current = closure_1;
-            return;
-          }
-        }
-      }
-      cResult[16] = bound;
-      cResult[17] = target;
-      cResult[18] = target;
-    }
-  }
-  dependencyMap = tmp7;
-  let tmp9 = tmp7;
-  if (tmp7.target === target) {
-    class L {
-      constructor() {
-        closure_4.current = closure_1;
-        return;
-      }
-    }
-    if (!streaming) {
-      class L {
-        constructor() {
-          closure_4.current = closure_1;
-          return;
-        }
-      }
-    }
-    if (!tmp13) {
-      class L {
-        constructor() {
-          closure_4.current = closure_1;
-          return;
-        }
-      }
-      tmp14[0] = target;
-      tmp14[1] = target.length;
-      dependencyMap = tmp14;
-      tmp9 = tmp14;
-    }
-    cResult[4] = tmp7;
-    cResult[5] = streaming;
-    cResult[6] = target;
-    cResult[7] = tmp9;
-  } else {
-    class L {
-      constructor() {
-        closure_4.current = closure_1;
-        return;
-      }
-    }
-    tmp10[0] = target;
-    if (streaming) {
-      class L {
-        constructor() {
-          closure_4.current = closure_1;
-          return;
-        }
-      }
-      ({ target, length } = tmp7);
-      const result = obj4.reconcileRevealedLength(target, target, length);
-    } else {
-      class L {
-        constructor() {
-          closure_4.current = closure_1;
-          return;
-        }
-      }
-    }
-    tmp10[1] = result;
-    dependencyMap = tmp10;
-  }
-  const tmp6 = _slicedToArray(noop.useState(tmp5), 2);
-}) : (function useConjureRevealedText(target, streaming) {
-  _require = target;
+export function useConjureRevealedText(source, streaming) {
+  _require = source;
   streaming = streaming.streaming;
   dependencyMap = undefined;
   let obj5;
@@ -254,13 +33,13 @@ export const useConjureRevealedText = ReactCompilerGating.isReactCompilerEnabled
   dependencyMap = tmp3;
   obj5 = tmp2;
   let arr2 = tmp2;
-  if (tmp2.target === target) {
+  if (tmp2.target === source) {
     let tmp5 = streaming;
     if (!streaming) {
-      tmp5 = arr2.length === target.length;
+      tmp5 = arr2.length === source.length;
     }
     if (!tmp5) {
-      let obj3 = { target, length: target.length };
+      let obj3 = { target: source, length: source.length };
       obj5 = obj3;
       arr2 = obj3;
     }
@@ -269,7 +48,7 @@ export const useConjureRevealedText = ReactCompilerGating.isReactCompilerEnabled
     }
     let tmp7 = streaming;
     if (streaming) {
-      tmp7 = arr2.length < target.length;
+      tmp7 = arr2.length < source.length;
     }
     noop = tmp7;
     ref = obj2.useRef(arr2);
@@ -321,33 +100,33 @@ export const useConjureRevealedText = ReactCompilerGating.isReactCompilerEnabled
             const obj2 = { target, length: target.length };
             dependencyMap(obj2);
           }
-          obj = closure_0(12345);
+          obj = closure_0(12507);
         }
         obj = conjurePageVisibility;
         return conjurePageVisibility.subscribePageVisibility(flushIfHidden);
       }
     }, items2);
     const _Math = Math;
-    const bound = Math.min(arr2.length, target.length);
-    let substr = target;
-    if (bound < target.length) {
-      substr = target.slice(0, bound);
+    const bound = Math.min(arr2.length, source.length);
+    let substr = source;
+    if (bound < source.length) {
+      substr = source.slice(0, bound);
     }
     const obj4 = { text: substr, revealing: null };
     if (streaming) {
-      streaming = bound < target.length;
+      streaming = bound < source.length;
     }
     obj4.revealing = streaming;
     return obj4;
   } else {
-    obj5 = { target, length: null };
+    obj5 = { target: source, length: null };
     if (streaming) {
       ({ target, length } = tmp2);
-      let length2 = target(12344).reconcileRevealedLength(target, target, length);
-      const targetResult = target(12344);
+      let length2 = target(12506).reconcileRevealedLength(target, source, length);
+      const targetResult = target(12506);
     } else {
-      length2 = target.length;
+      length2 = source.length;
     }
     obj5.length = length2;
   }
-});
+}

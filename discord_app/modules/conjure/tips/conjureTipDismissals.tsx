@@ -1,14 +1,13 @@
-// === Module 12427: conjureTipDismissals ===
+// === Module 12581: conjureTipDismissals ===
 
-// Module 12427 (conjureTipDismissals)
+// Module 12581 (conjureTipDismissals)
 import Storage5 from "Storage" /* 510 */;
-import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function isConjureTipDismissed(forEach, tip2) {
-  let tmp = id;
-  if (id === undefined) {
+  let tmp = id1;
+  if (id1 === undefined) {
     tmp = null;
   }
   const dismissal = forEach.dismissal;
@@ -46,7 +45,7 @@ function isConjureTipDismissed(forEach, tip2) {
     return tmp22;
   } else if ("app" === dismissal) {
     const Storage2 = Storage5.Storage;
-    value3 = Storage2.get(conjureTipDismissals);
+    const value3 = Storage2.get(conjureTipDismissals);
     let forever1;
     if (value3 != null) {
       forever1 = value3.forever;
@@ -69,7 +68,7 @@ function isConjureTipDismissed(forEach, tip2) {
     return true === hasItem;
   } else if ("forever" === dismissal) {
     const Storage = Storage5.Storage;
-    value4 = Storage.get(conjureTipDismissals);
+    const value4 = Storage.get(conjureTipDismissals);
     let forever2;
     if (value4 != null) {
       forever2 = value4.forever;
@@ -97,7 +96,6 @@ const conjureTipDismissals = "conjureTipDismissals";
 let set = new Set();
 const set1 = new Set();
 let closure_6 = 0;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/tips/conjureTipDismissals.tsx");
 
@@ -190,18 +188,6 @@ export function dismissConjureTip(tip, tip2) {
     }
   }
 }
-export const useConjureTipDismissalsVersion = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureTipDismissalsVersion() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function n() {
-      return closure_1_6;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return noop.useSyncExternalStore(subscribe, first);
-}) : (function useConjureTipDismissalsVersion() {
+export function useConjureTipDismissalsVersion() {
   return noop.useSyncExternalStore(subscribe, () => closure_1_6);
-});
+}

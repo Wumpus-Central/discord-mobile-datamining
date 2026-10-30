@@ -1,8 +1,8 @@
-// === Module 12400: ConjureTimelineTree ===
+// === Module 12552: ConjureTimelineTree ===
 
-// Module 12400 (ConjureTimelineTree)
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
+// Module 12552 (ConjureTimelineTree)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -41,7 +41,7 @@ function buildTimelineTree(steps, arg1) {
           const obj3 = { id, kind: "step", detail: [], detailDrivenBy: [], detailError: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
           const result = map1.set(combined, obj3);
           if (null != taskId) {
-            value3 = map.get(taskId);
+            let value3 = map.get(taskId);
             if (null == value3) {
               const obj4 = { taskId, task: null, steps: null };
               const obj5 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], detailError: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
@@ -60,7 +60,7 @@ function buildTimelineTree(steps, arg1) {
       }
     }
     if (null != taskId) {
-      value4 = map.get(taskId);
+      let value4 = map.get(taskId);
       if (null == value4) {
         const obj7 = { taskId, task: null, steps: null };
         const obj8 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], detailError: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
@@ -575,7 +575,7 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { healthcheck_failed: _modDef3864.iwOTgo, preview_ready: _modDef3864.okkgSB, working: _modDef3864.t8skVB, error: _modDef3864.avt0ax, error_service_unavailable: _modDef3864.yreXyD, error_rate_limited: _modDef3864.d8lNBq, error_timeout: _modDef3864.t1R7Rt };
+let obj = { healthcheck_failed: _modDef3865.iwOTgo, preview_ready: _modDef3865.okkgSB, working: _modDef3865.t8skVB, error: _modDef3865.avt0ax, error_service_unavailable: _modDef3865.yreXyD, error_rate_limited: _modDef3865.d8lNBq, error_timeout: _modDef3865.t1R7Rt };
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 const size = fn(2);
@@ -593,14 +593,14 @@ export function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef3864.t8skVB;
+    t8skVB = _modDef3865.t8skVB;
   }
   return intl.string(t8skVB);
 }
 export { buildTimelineTree };
-export function currentStep(productId) {
+export function currentStep(steps) {
   let tmp;
-  const iter = productId[Symbol.iterator]();
+  const iter = steps[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp5 = null == tmp;
@@ -731,14 +731,14 @@ export function turnSegments(steps, arg1) {
   }
   return items5;
 }
-export function turnLifecycle(arr, turnActive) {
-  const found = arr.filter((hasWork) => hasWork.hasWork || hasWork.hasTodos);
+export function turnLifecycle(memo1, turnActive) {
+  const found = memo1.filter((hasWork) => hasWork.hasWork || hasWork.hasTodos);
   const atResult = found.at(-1);
   let index1;
   if (atResult != null) {
     index1 = atResult.index;
   }
-  const atResult1 = arr.at(-1);
+  const atResult1 = memo1.at(-1);
   if (atResult1 != null) {
     const index = atResult1.index;
   }

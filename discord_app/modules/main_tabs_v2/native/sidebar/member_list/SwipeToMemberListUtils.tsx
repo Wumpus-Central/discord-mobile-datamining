@@ -1,15 +1,12 @@
-// === Module 11300: SwipeToMemberListUtils ===
+// === Module 11503: SwipeToMemberListUtils ===
 
-// Module 11300 (SwipeToMemberListUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 6864 */;
-import ChatGestureSettings from "ChatGestureSettings" /* 11301 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+// Module 11503 (SwipeToMemberListUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 6871 */;
+import ChatGestureSettings from "ChatGestureSettings" /* 11504 */;
 import size from "module_2" /* 2 */;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
 
 export function useIsSwipeToMemberListEnabled() {
   const swipeToReplySettingValue = ChatGestureSettings.useSwipeToReplySettingValue();

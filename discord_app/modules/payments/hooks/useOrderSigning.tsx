@@ -1,15 +1,15 @@
-// === Module 9520: useOrderSigning ===
+// === Module 9539: useOrderSigning ===
 
-// Module 9520 (useOrderSigning)
-import BillingUtils from "BillingUtils" /* 4821 */;
-import BillingErrorDefault from "BillingError" /* 4828 */;
+// Module 9539 (useOrderSigning)
+import BillingUtils from "BillingUtils" /* 4822 */;
+import BillingErrorDefault from "BillingError" /* 4829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: metroRequire } = noop);
-const OrderStatus = fn(5736).OrderStatus;
+const OrderStatus = fn(5742).OrderStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 
@@ -70,7 +70,7 @@ export function useOrderSigning(order) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -99,7 +99,7 @@ export function useOrderSigning(order) {
             let orderSigningError;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else if (1 === tmp9) {
           if (arg0 === 1) {

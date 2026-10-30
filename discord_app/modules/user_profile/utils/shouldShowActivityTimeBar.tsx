@@ -1,24 +1,26 @@
-// === Module 14780: shouldShowActivityTimeBar ===
+// === Module 14815: shouldShowActivityTimeBar ===
 
-// Module 14780 (shouldShowActivityTimeBar)
-import Constants from "Constants" /* 1084 */;
+// Module 14815 (shouldShowActivityTimeBar)
+import ActivityTypes from "ActivityTypes" /* 5757 */;
 import size from "module_2" /* 2 */;
 
-const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");
 
 export default function shouldShowActivityTimeBar(type) {
-  let tmp2 = type.type === ActivityTypes.LISTENING || type.type === tmp.WATCHING;
-  if (tmp2) {
+  let tmp3 = type.type === ActivityTypes.ActivityTypes.LISTENING;
+  if (!tmp3) {
+    tmp3 = type.type === ActivityTypes.ActivityTypes.WATCHING;
+  }
+  if (tmp3) {
     const timestamps = type.timestamps;
     let start;
     if (timestamps != null) {
       start = timestamps.start;
     }
-    tmp2 = null != start;
+    tmp3 = null != start;
   }
-  if (tmp2) {
-    tmp2 = null != type.timestamps.end;
+  if (tmp3) {
+    tmp3 = null != type.timestamps.end;
   }
-  return tmp2;
+  return tmp3;
 };

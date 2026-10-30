@@ -1,303 +1,23 @@
-// === Module 13662: GuildDirectoryCreateOrAdd ===
+// === Module 13809: GuildDirectoryCreateOrAdd ===
 
-// Module 13662 (GuildDirectoryCreateOrAdd)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import GuildIconDefault from "GuildIcon" /* 6943 */;
-import TableRow from "TableRow" /* 6963 */;
-import SegmentedControlState from "SegmentedControlState" /* 8938 */;
-import SegmentedControl from "SegmentedControl" /* 9182 */;
+// Module 13809 (GuildDirectoryCreateOrAdd)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import GuildIconDefault from "GuildIcon" /* 6951 */;
+import TableRow from "TableRow" /* 6969 */;
+import SegmentedControlState from "SegmentedControlState" /* 8971 */;
+import SegmentedControl from "SegmentedControl" /* 9195 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13663 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13810 */;
 
 const require = globalThis.__r;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(13661).GuildDirectoryCreate;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5005);
-let obj = { loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" }, container: { flex: 1 }, guildIcon: { borderRadius: nativeDefault.radii.sm }, header: { padding: 16, alignItems: "center", justifyContent: "center" }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null, segmentedControl: null };
-let obj3 = { borderRadius: nativeDefault.radii.sm };
-obj.footerSafeAreaContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
-obj.footerContainer = { paddingHorizontal: 16, height: 110, justifyContent: "center" };
-obj.footerTitle = { alignSelf: "center", textAlign: "center", marginBottom: 16 };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
-obj.segmentedControl = { paddingHorizontal: nativeDefault.space.PX_12, width: "100%", marginTop: 18 };
-let closure_11 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryEntryEditRow(guild) {
-  const cResult = guild(576).c(15);
-  guild = guild.guild;
-  const directoryChannelId = guild.directoryChannelId;
-  ({ start, end } = guild);
-  const tmp4 = closure_11();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildDirectoryStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === directoryChannelId) {
-    if (cResult[2] === guild.id) {
-      let tmp7 = cResult[3];
-    }
-    const stateFromStores = tmp(504).useStateFromStores(first, tmp7);
-    if (cResult[4] === guild) {
-      if (cResult[5] === tmp4.guildIcon) {
-        let tmp9 = cResult[6];
-      }
-      if (cResult[7] !== stateFromStores) {
-        const obj2 = { entry: stateFromStores };
-        const tmp16 = closure_9(directoryChannelId(13664), obj2);
-        cResult[7] = stateFromStores;
-        cResult[8] = tmp16;
-        let tmp13 = tmp16;
-      } else {
-        tmp13 = cResult[8];
-      }
-      if (cResult[9] === end) {
-        if (cResult[10] === guild.name) {
-          if (cResult[11] === start) {
-            if (cResult[12] === tmp9) {
-              if (cResult[13] === tmp13) {
-                let tmp17 = cResult[14];
-              }
-              return tmp17;
-            }
-          }
-        }
-      }
-      const obj3 = { label: guild.name, icon: tmp9, trailing: tmp13, start, end };
-      const tmp19 = closure_9(tmp(6963).TableRow, obj3);
-      cResult[9] = end;
-      cResult[10] = guild.name;
-      cResult[11] = start;
-      cResult[12] = tmp9;
-      cResult[13] = tmp13;
-      cResult[14] = tmp19;
-      tmp17 = tmp19;
-    }
-    const obj4 = { style: tmp4.guildIcon, guild };
-    const tmp12 = closure_9(directoryChannelId(6943), obj4);
-    cResult[4] = guild;
-    cResult[5] = tmp4.guildIcon;
-    cResult[6] = tmp12;
-    tmp9 = tmp12;
-    const tmpResult = tmp(504);
-  }
-  const fn = function o() {
-    return GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id);
-  };
-  cResult[1] = directoryChannelId;
-  cResult[2] = guild.id;
-  cResult[3] = fn;
-  tmp7 = fn;
-  const obj = guild(576);
-}) : (function GuildDirectoryEntryEditRow(guild) {
-  guild = guild.guild;
-  const directoryChannelId = guild.directoryChannelId;
-  ({ start, end } = guild);
-  const tmp = closure_11();
-  const items = [GuildDirectoryStore];
-  const stateFromStores = guild(504).useStateFromStores(items, () => GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id));
-  const obj2 = { label: guild.name, icon: closure_9(directoryChannelId(6943), { style: tmp.guildIcon, guild }), trailing: closure_9(directoryChannelId(13664), { entry: stateFromStores }), start, end };
-  return closure_9(guild(6963).TableRow, obj2);
-}));
-ReactCompilerGating = fn(558);
-let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryEntryAddRow(guild) {
-  const cResult = c.c(13);
-  guild = guild.guild;
-  const handleItemPress = guild.handleItemPress;
-  ({ start, end } = guild);
-  const tmp4 = closure_11();
-  if (cResult[0] === guild) {
-    if (cResult[1] === handleItemPress) {
-      let tmp5 = cResult[2];
-    }
-    if (cResult[3] === guild) {
-      if (cResult[4] === tmp4.guildIcon) {
-        let tmp6 = cResult[5];
-      }
-      const _Symbol = Symbol;
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = React6(TableRow.TableRow.Arrow, {});
-        cResult[6] = tmp13;
-        let tmp11 = tmp13;
-      } else {
-        tmp11 = cResult[6];
-      }
-      if (cResult[7] === end) {
-        if (cResult[8] === guild.name) {
-          if (cResult[9] === start) {
-            if (cResult[10] === tmp5) {
-              if (cResult[11] === tmp6) {
-                let tmp14 = cResult[12];
-              }
-              return tmp14;
-            }
-          }
-        }
-      }
-      const obj2 = { onPress: tmp5, label: guild.name, icon: tmp6, trailing: tmp11, start, end };
-      const tmp16 = React6(TableRow.TableRow, obj2);
-      cResult[7] = end;
-      cResult[8] = guild.name;
-      cResult[9] = start;
-      cResult[10] = tmp5;
-      cResult[11] = tmp6;
-      cResult[12] = tmp16;
-      tmp14 = tmp16;
-    }
-    const obj3 = { style: tmp4.guildIcon, guild };
-    const tmp9 = React6(GuildIconDefault, obj3);
-    cResult[3] = guild;
-    cResult[4] = tmp4.guildIcon;
-    cResult[5] = tmp9;
-    tmp6 = tmp9;
-  }
-  const fn = function n() {
-    return handleItemPress(guild);
-  };
-  cResult[0] = guild;
-  cResult[1] = handleItemPress;
-  cResult[2] = fn;
-  tmp5 = fn;
-}) : (function GuildDirectoryEntryAddRow(guild) {
-  guild = guild.guild;
-  const handleItemPress = guild.handleItemPress;
-  ({ start, end } = guild);
-  const obj = {
-    onPress() {
-      return handleItemPress(guild);
-    },
-    label: guild.name,
-    icon: null,
-    trailing: React6(TableRow.TableRow.Arrow, {}),
-    start,
-    end
-  };
-  const tmp = closure_11();
-  obj.icon = React6(GuildIconDefault, { style: closure_11().guildIcon, guild });
-  return React6(TableRow.TableRow, obj);
-}));
-ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryCreateOrAddHeader(arg0) {
-  const cResult = c.c(22);
-  ({ directoryGuildName, tabIndex, setTabIndex } = arg0);
-  const tmp4 = closure_11();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const items = [intl.string(util.t.FTe8HS), ];
-    const intl2 = util.intl;
-    items[1] = intl2.string(util.t.epOumr);
-    const mapped = items.map((id) => ({ id, label: id, page: null }));
-    cResult[0] = mapped;
-    let first = mapped;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === setTabIndex) {
-    if (cResult[2] === tabIndex) {
-      let tmp7 = cResult[3];
-    }
-    const segmentedControlState = SegmentedControlState.useSegmentedControlState(tmp7);
-    ({ header, title } = tmp4);
-    if (cResult[4] !== directoryGuildName) {
-      const intl3 = util.intl;
-      const obj2 = { guildName: directoryGuildName };
-      const formatResult = intl3.format(util.t["9SKJdF"], obj2);
-      cResult[4] = directoryGuildName;
-      cResult[5] = formatResult;
-      let tmp9 = formatResult;
-    } else {
-      tmp9 = cResult[5];
-    }
-    if (cResult[6] === tmp4.title) {
-      if (cResult[7] === tmp9) {
-        let tmp11 = cResult[8];
-      }
-      const _Symbol = Symbol;
-      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl4 = util.intl;
-        const stringResult = intl4.string(util.t.pYFZ9p);
-        cResult[9] = stringResult;
-        let tmp14 = stringResult;
-      } else {
-        tmp14 = cResult[9];
-      }
-      if (cResult[10] !== tmp4.description) {
-        const obj3 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp14 };
-        const tmp18 = React6(Text_Text.Text, obj3);
-        cResult[10] = tmp4.description;
-        cResult[11] = tmp18;
-        let tmp16 = tmp18;
-      } else {
-        tmp16 = cResult[11];
-      }
-      if (cResult[12] !== segmentedControlState) {
-        const obj4 = { state: segmentedControlState };
-        const tmp21 = React6(SegmentedControl.SegmentedControl, obj4);
-        cResult[12] = segmentedControlState;
-        cResult[13] = tmp21;
-        let tmp19 = tmp21;
-      } else {
-        tmp19 = cResult[13];
-      }
-      if (cResult[14] === tmp4.segmentedControl) {
-        if (cResult[15] === tmp19) {
-          let tmp22 = cResult[16];
-        }
-        if (cResult[17] === tmp4.header) {
-          if (cResult[18] === tmp22) {
-            if (cResult[19] === tmp11) {
-              if (cResult[20] === tmp16) {
-                let tmp26 = cResult[21];
-              }
-              return tmp26;
-            }
-          }
-        }
-        const obj5 = { style: header, children: null };
-        const items1 = [tmp11, tmp16, tmp22];
-        obj5.children = items1;
-        const tmp29 = v65535(hasOwnProperty, obj5);
-        cResult[17] = tmp4.header;
-        cResult[18] = tmp22;
-        cResult[19] = tmp11;
-        cResult[20] = tmp16;
-        cResult[21] = tmp29;
-        tmp26 = tmp29;
-      }
-      const obj6 = { style: tmp4.segmentedControl, children: tmp19 };
-      const tmp25 = React6(hasOwnProperty, obj6);
-      cResult[14] = tmp4.segmentedControl;
-      cResult[15] = tmp19;
-      cResult[16] = tmp25;
-      tmp22 = tmp25;
-    }
-    const obj7 = { style: title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp9 };
-    const tmp13 = React6(Text_Text.Text, obj7);
-    cResult[6] = tmp4.title;
-    cResult[7] = tmp9;
-    cResult[8] = tmp13;
-    tmp11 = tmp13;
-    const tmpResult = SegmentedControlState;
-  }
-  const obj8 = { pageWidth: 0, defaultIndex: tabIndex, onSetActiveIndex: setTabIndex, items: first };
-  cResult[1] = setTabIndex;
-  cResult[2] = tabIndex;
-  cResult[3] = obj8;
-  tmp7 = obj8;
-}) : (function GuildDirectoryCreateOrAddHeader(arg0) {
+function GuildDirectoryCreateOrAddHeader(arg0) {
   ({ directoryGuildName, tabIndex, setTabIndex } = arg0);
   const tmp = closure_11();
   const obj2 = { pageWidth: 0, defaultIndex: tabIndex, onSetActiveIndex: setTabIndex, items: null };
@@ -311,105 +31,16 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = util.intl;
   obj4.children = intl3.format(util.t["9SKJdF"], { guildName: directoryGuildName });
-  const items1 = [React6(Text_Text.Text, obj4), , ];
+  const items1 = [React7(Text_Text.Text, obj4), , ];
   const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl4 = util.intl;
   obj5.children = intl4.string(util.t.pYFZ9p);
-  items1[1] = React6(Text_Text.Text, obj5);
-  items1[2] = React6(hasOwnProperty, { style: tmp.segmentedControl, children: React6(SegmentedControl.SegmentedControl, { state: segmentedControlState }) });
+  items1[1] = React7(Text_Text.Text, obj5);
+  items1[2] = React7(hasOwnProperty, { style: tmp.segmentedControl, children: React7(SegmentedControl.SegmentedControl, { state: segmentedControlState }) });
   obj3.children = items1;
-  return v65535(hasOwnProperty, obj3);
-});
-ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
-  const cResult = c.c(18);
-  handleFooterPress = handleFooterPress.handleFooterPress;
-  const tmp4 = closure_11();
-  const bottom = useSafeAreaInsetsDefault().bottom;
-  if (cResult[0] !== bottom) {
-    const obj2 = { paddingBottom: bottom };
-    cResult[0] = bottom;
-    cResult[1] = obj2;
-    let tmp5 = obj2;
-  } else {
-    tmp5 = cResult[1];
-  }
-  if (cResult[2] === tmp4.footerSafeAreaContainer) {
-    if (cResult[3] === tmp5) {
-      let tmp6 = cResult[4];
-    }
-    const _Symbol = Symbol;
-    ({ footerContainer, footerTitle } = tmp4);
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = util.intl;
-      const stringResult = intl.string(util.t.pgCZRP);
-      cResult[5] = stringResult;
-      let tmp8 = stringResult;
-    } else {
-      tmp8 = cResult[5];
-    }
-    if (cResult[6] !== tmp4.footerTitle) {
-      const obj3 = { style: footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: tmp8 };
-      const tmp12 = React6(Text_Text.Text, obj3);
-      cResult[6] = tmp4.footerTitle;
-      cResult[7] = tmp12;
-      let tmp10 = tmp12;
-    } else {
-      tmp10 = cResult[7];
-    }
-    const _Symbol2 = Symbol;
-    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = util.intl;
-      const stringResult1 = intl2.string(util.t.WqJbLi);
-      cResult[8] = stringResult1;
-      let tmp13 = stringResult1;
-    } else {
-      tmp13 = cResult[8];
-    }
-    if (cResult[9] !== handleFooterPress) {
-      const obj4 = { variant: "secondary", text: tmp13, onPress: handleFooterPress };
-      const tmp17 = React6(components_Button_Button.Button, obj4);
-      cResult[9] = handleFooterPress;
-      cResult[10] = tmp17;
-      let tmp15 = tmp17;
-    } else {
-      tmp15 = cResult[10];
-    }
-    if (cResult[11] === tmp4.footerContainer) {
-      if (cResult[12] === tmp10) {
-        if (cResult[13] === tmp15) {
-          let tmp18 = cResult[14];
-        }
-        if (cResult[15] === tmp6) {
-          if (cResult[16] === tmp18) {
-            let tmp22 = cResult[17];
-          }
-          return tmp22;
-        }
-        const obj5 = { style: tmp6, children: tmp18 };
-        const tmp25 = React6(hasOwnProperty, obj5);
-        cResult[15] = tmp6;
-        cResult[16] = tmp18;
-        cResult[17] = tmp25;
-        tmp22 = tmp25;
-      }
-    }
-    const obj6 = { style: footerContainer, children: null };
-    const items = [tmp10, tmp15];
-    obj6.children = items;
-    const tmp21 = v65535(hasOwnProperty, obj6);
-    cResult[11] = tmp4.footerContainer;
-    cResult[12] = tmp10;
-    cResult[13] = tmp15;
-    cResult[14] = tmp21;
-    tmp18 = tmp21;
-  }
-  const items1 = [tmp4.footerSafeAreaContainer, tmp5];
-  cResult[2] = tmp4.footerSafeAreaContainer;
-  cResult[3] = tmp5;
-  cResult[4] = items1;
-  tmp6 = items1;
-}) : (function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
+  return closure_1_10(hasOwnProperty, obj3);
+}
+function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
   const tmp = closure_11();
   const obj = { style: null, children: null };
   const items = [tmp.footerSafeAreaContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
@@ -418,142 +49,74 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildD
   const obj4 = { style: tmp.footerTitle, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.pgCZRP);
-  const items1 = [React6(Text_Text.Text, obj4), ];
+  const items1 = [React7(Text_Text.Text, obj4), ];
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl2 = util.intl;
   obj5.text = intl2.string(util.t.WqJbLi);
   obj5.onPress = handleFooterPress.handleFooterPress;
-  items1[1] = React6(components_Button_Button.Button, obj5);
+  items1[1] = React7(components_Button_Button.Button, obj5);
   obj3.children = items1;
-  obj.children = v65535(hasOwnProperty, obj3);
-  return React6(hasOwnProperty, obj);
+  obj.children = closure_1_10(hasOwnProperty, obj3);
+  return React7(hasOwnProperty, obj);
+}
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
+const GuildDirectoryCreate = fn(13808).GuildDirectoryCreate;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5009);
+let obj = { loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" }, container: { flex: 1 }, guildIcon: { borderRadius: nativeDefault.radii.sm }, header: { padding: 16, alignItems: "center", justifyContent: "center" }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null, segmentedControl: null };
+let obj3 = { borderRadius: nativeDefault.radii.sm };
+obj.footerSafeAreaContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
+obj.footerContainer = { paddingHorizontal: 16, height: 110, justifyContent: "center" };
+obj.footerTitle = { alignSelf: "center", textAlign: "center", marginBottom: 16 };
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
+obj.segmentedControl = { paddingHorizontal: nativeDefault.space.PX_12, width: "100%", marginTop: 18 };
+let closure_11 = createStyles.createStyles(obj);
+let closure_12 = noop.memo(function GuildDirectoryEntryEditRow(guild) {
+  guild = guild.guild;
+  const directoryChannelId = guild.directoryChannelId;
+  ({ start, end } = guild);
+  const tmp = closure_11();
+  const items = [GuildDirectoryStore];
+  const stateFromStores = guild(504).useStateFromStores(items, () => GuildDirectoryStore.getDirectoryEntry(directoryChannelId, guild.id));
+  const obj2 = { label: guild.name, icon: closure_9(directoryChannelId(6951), { style: tmp.guildIcon, guild }), trailing: closure_9(directoryChannelId(13811), { entry: stateFromStores }), start, end };
+  return closure_9(guild(6969).TableRow, obj2);
 });
-ReactCompilerGating = fn(558);
-let obj5 = { paddingHorizontal: nativeDefault.space.PX_12, width: "100%", marginTop: 18 };
+let closure_13 = noop.memo(function GuildDirectoryEntryAddRow(guild) {
+  guild = guild.guild;
+  const handleItemPress = guild.handleItemPress;
+  ({ start, end } = guild);
+  const obj = {
+    onPress() {
+      return handleItemPress(guild);
+    },
+    label: guild.name,
+    icon: null,
+    trailing: React7(TableRow.TableRow.Arrow, {}),
+    start,
+    end
+  };
+  const tmp = closure_11();
+  obj.icon = React7(GuildIconDefault, { style: closure_11().guildIcon, guild });
+  return React7(TableRow.TableRow, obj);
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAdd.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryCreateOrAdd(current) {
-  _require = current;
-  const cResult = require("c").c(27);
-  closure_11();
-  let obj = require("c");
-  const navigation = require("useNavigation").useNavigation();
-  ref = noop.useRef(current);
-  const tmp7 = navigation(ref[21])(ref);
-  if (cResult[0] !== current) {
-    const fn = function s() {
-      ref.current = current;
-    };
-    cResult[0] = current;
-    cResult[1] = fn;
-    let tmp8 = fn;
-  } else {
-    tmp8 = cResult[1];
-  }
-  const effect = obj3.useEffect(tmp8);
-  let obj2 = require("useNavigation");
-  ({ addedGuilds, availableGuilds, loading } = navigation(ref[22])(tmp7.directoryGuildId, tmp7.directoryChannelId));
-  const bottom = tmp6(tmp[18])().bottom;
-  const tmp11 = tabIndex(noop.useState(0), 2);
-  tabIndex = tmp11[0];
-  noop = tmp11[1];
-  if (0 === tabIndex) {
-    addedGuilds = availableGuilds;
-  }
-  if (cResult[2] !== navigation) {
-    class A {
-      constructor() {
-        obj = {
-          directoryGuildName: closure_2.current.directoryGuildName,
-          onHubGuildInfoSet(name, icon, template) {
-                  const obj = { createGuild: { name, icon, template }, directoryChannelId: ref.current.directoryChannelId, directoryGuildName: ref.current.directoryGuildName };
-                  navigation.push(constants.DESCRIPTION, obj);
-                }
-        };
-        arr = closure_1.push(GuildDirectoryCreate.TEMPLATES, obj);
-        return;
-      }
-    }
-    cResult[2] = navigation;
-    cResult[3] = A;
-  } else {
-    class A {
-      constructor() {
-        obj = {
-          directoryGuildName: closure_2.current.directoryGuildName,
-          onHubGuildInfoSet(name, icon, template) {
-                  const obj = { createGuild: { name, icon, template }, directoryChannelId: ref.current.directoryChannelId, directoryGuildName: ref.current.directoryGuildName };
-                  navigation.push(constants.DESCRIPTION, obj);
-                }
-        };
-        arr = closure_1.push(GuildDirectoryCreate.TEMPLATES, obj);
-        return;
-      }
-    }
-  }
-  if (cResult[4] === addedGuilds.length) {
-    class A {
-      constructor() {
-        obj = {
-          directoryGuildName: closure_2.current.directoryGuildName,
-          onHubGuildInfoSet(name, icon, template) {
-                  const obj = { createGuild: { name, icon, template }, directoryChannelId: ref.current.directoryChannelId, directoryGuildName: ref.current.directoryGuildName };
-                  navigation.push(constants.DESCRIPTION, obj);
-                }
-        };
-        arr = closure_1.push(GuildDirectoryCreate.TEMPLATES, obj);
-        return;
-      }
-    }
-  }
-  class B {
-    constructor(arg0) {
-      index = current.index;
-      obj = { guild: current.item, start: 0 === index, end: index === availableGuilds.length - 1 };
-      if (1 === closure_3) {
-        tmp7 = jsx;
-        tmp8 = closure_12;
-        obj1 = {};
-        tmp9 = obj1;
-        tmp10 = obj;
-        merged = Object.assign(obj);
-        tmp12 = closure_2;
-        obj1.directoryChannelId = closure_2.current.directoryChannelId;
-        tmp6 = jsx(closure_12, obj1);
-      } else {
-        tmp = jsx;
-        tmp2 = closure_13;
-        obj4 = {};
-        tmp3 = obj4;
-        tmp4 = obj;
-        merged1 = Object.assign(obj);
-        obj4.handleItemPress = function handleItemPress(guild) {
-          navigation.push(constants.DESCRIPTION, { guild, directoryChannelId: ref.current.directoryChannelId, directoryGuildName: ref.current.directoryGuildName });
-        };
-        tmp6 = jsx(closure_13, obj4);
-      }
-      return tmp6;
-    }
-  }
-  cResult[4] = addedGuilds.length;
-  cResult[5] = navigation;
-  cResult[6] = tabIndex;
-  cResult[7] = B;
-  const tmp10 = navigation(ref[22])(tmp7.directoryGuildId, tmp7.directoryChannelId);
-}) : (function GuildDirectoryCreateOrAdd(current) {
+export default function GuildDirectoryCreateOrAdd(current) {
   _require = current;
   const tmp = closure_11();
   const navigation = require("useNavigation").useNavigation();
   ref = addedGuilds.useRef(current);
-  let tmp6 = navigation(ref[21])(ref);
+  let tmp6 = navigation(ref[19])(ref);
   const effect = addedGuilds.useEffect(() => {
     ref.current = current;
   });
-  const tmp8 = navigation(ref[22])(tmp6.directoryGuildId, tmp6.directoryChannelId);
+  const tmp8 = navigation(ref[20])(tmp6.directoryGuildId, tmp6.directoryChannelId);
   const availableGuilds = tmp8.availableGuilds;
   addedGuilds = tmp8.addedGuilds;
-  const bottom = navigation(ref[18])().bottom;
+  const bottom = navigation(ref[16])().bottom;
   const tmp9 = availableGuilds(addedGuilds.useState(0), 2);
   const tabIndex = tmp9[0];
   const setTabIndex = tmp9[1];
@@ -578,19 +141,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
       const obj2 = {};
       const merged = Object.assign(obj);
       obj2.directoryChannelId = ref.current.directoryChannelId;
-      let tmp6 = React6(closure_12, obj2);
+      let tmp6 = React7(closure_12, obj2);
     } else {
       const obj3 = {};
       const merged1 = Object.assign(obj);
       obj3.handleItemPress = function handleItemPress(guild) {
         navigation.push(memo.DESCRIPTION, { guild, directoryChannelId: ref.current.directoryChannelId, directoryGuildName: ref.current.directoryGuildName });
       };
-      tmp6 = React6(closure_13, obj3);
+      tmp6 = React7(closure_13, obj3);
     }
     return tmp6;
   }, items2);
   [][0] = bottom;
-  const callback2 = addedGuilds.useCallback(() => React6(closure_14, { directoryGuildName: ref.current.directoryGuildName, tabIndex, setTabIndex }), items3);
+  const callback2 = addedGuilds.useCallback(() => React7(GuildDirectoryCreateOrAddHeader, { directoryGuildName: ref.current.directoryGuildName, tabIndex, setTabIndex }), items3);
   if (tmp8.loading) {
     let obj2 = { style: tmp.loadingContainer, children: closure_9(tabIndex, {}) };
     let tmp15Result = closure_9(bottom, obj2);
@@ -606,12 +169,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDir
       renderItem: callback1,
       contentContainerStyle: tmp14
     };
-    const items4 = [closure_9(tmp2(tmp3[23]).FlashList, obj5), ];
+    const items4 = [closure_9(tmp2(tmp3[22]).FlashList, obj5), ];
     const obj6 = { handleFooterPress: callback };
-    items4[1] = closure_9(closure_15, obj6);
+    items4[1] = closure_9(GuildDirectoryCreateOrAddFooter, obj6);
     obj4.children = items4;
     obj3.children = closure_10(bottom, obj4);
-    tmp15Result = closure_9(tmp2(tmp3[24]).GuildDirectoryAddModalScreen, obj3);
+    tmp15Result = closure_9(tmp2(tmp3[21]).GuildDirectoryAddModalScreen, obj3);
   }
   return tmp15Result;
-});
+};

@@ -1,52 +1,19 @@
-// === Module 10252: StickerPickerEmptyState ===
+// === Module 10277: StickerPickerEmptyState ===
 
-// Module 10252 (StickerPickerEmptyState)
-import c from "c" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HapticUtils from "HapticUtils" /* 5249 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5250 */;
-import StickersHooks from "StickersHooks" /* 10221 */;
-import StickerDefault from "Sticker" /* 10237 */;
+// Module 10277 (StickerPickerEmptyState)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import HapticUtils from "HapticUtils" /* 5255 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
+import StickersHooks from "StickersHooks" /* 10246 */;
+import StickerDefault from "Sticker" /* 10262 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6824 */;
+import StickersStore from "StickersStore" /* 6831 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const View = fn(17).View;
-const EMPTY_STATE_STICKERS = fn(4836).EMPTY_STATE_STICKERS;
-const Constants = fn(1084);
-({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
-const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5005);
-let closure_13 = createStyles.createStyles({ header: { marginBottom: 8, textAlign: "center" }, blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 }, premiumButton: { marginTop: 20, alignSelf: "center", paddingLeft: 5, paddingRight: 10, flexGrow: 0 }, nitroWheel: { width: 32 }, stickersRow: { flexDirection: "row", alignSelf: "center" }, sticker: { paddingHorizontal: 2 } });
-let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyStateSticker(arg0) {
-  const cResult = c.c(4);
-  ({ sticker, isFocused } = arg0);
-  const shouldAnimateSticker = StickersHooks.useShouldAnimateSticker(isFocused);
-  let id;
-  if (sticker != null) {
-    id = sticker.id;
-  }
-  if (cResult[0] === shouldAnimateSticker) {
-    if (cResult[1] === sticker) {
-      if (cResult[2] === id) {
-        let tmp5 = cResult[3];
-      }
-      return tmp5;
-    }
-  }
-  const tmp6 = closure_1_11(StickerDefault, { sticker, size: 60, animated: shouldAnimateSticker }, id);
-  cResult[0] = shouldAnimateSticker;
-  cResult[1] = sticker;
-  cResult[2] = id;
-  cResult[3] = tmp6;
-  tmp5 = tmp6;
-}) : (function EmptyStateSticker(sticker) {
+function EmptyStateSticker(sticker) {
   sticker = sticker.sticker;
   const animated = StickersHooks.useShouldAnimateSticker(sticker.isFocused);
   let id;
@@ -54,234 +21,26 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyS
     id = sticker.id;
   }
   return closure_1_11(StickerDefault, { sticker, size: 60, animated }, id);
-});
-ReactCompilerGating = fn(558);
+}
+const View = fn(17).View;
+const EMPTY_STATE_STICKERS = fn(4837).EMPTY_STATE_STICKERS;
+const Constants = fn(1072);
+({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
+const PremiumUpsellTypes = fn(1386).PremiumUpsellTypes;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5009);
+let closure_13 = createStyles.createStyles({ header: { marginBottom: 8, textAlign: "center" }, blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 }, premiumButton: { marginTop: 20, alignSelf: "center", paddingLeft: 5, paddingRight: 10, flexGrow: 0 }, nitroWheel: { width: 32 }, stickersRow: { flexDirection: "row", alignSelf: "center" }, sticker: { paddingHorizontal: 2 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/native/StickerPickerEmptyState.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
-  const cResult = require("c").c(35);
-  const tmp4 = closure_13();
-  _require = tmp4;
-  let obj = require("c");
-  const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
-  let obj2 = require("StickersHooks");
-  analyticsLocations = analyticsLocations(first[13])(analyticsLocations(first[14]).EMPTY_STATE).analyticsLocations;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [StickersStore];
-    const fn = function b() {
-      const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
-      return mapped.filter((item) => null != item);
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp7 = items;
-    tmp8 = fn;
-  } else {
-    [tmp7, tmp8] = cResult;
-  }
-  const tmp6 = analyticsLocations(first[13]);
-  let stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp7, tmp8);
-  [first, _slicedToArray] = noop.useState(null);
-  if (cResult[2] !== analyticsLocations) {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-    const items1 = [analyticsLocations];
-    cResult[2] = analyticsLocations;
-    cResult[3] = R;
-    cResult[4] = items1;
-    let tmp13 = items1;
-  } else {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-    tmp13 = cResult[4];
-  }
-  const effect = noop.useEffect(R, tmp13);
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-    const stringResult = obj5.string(tmp(tmp2[17]).t.HEm04J);
-    cResult[5] = stringResult;
-    const tmp15 = stringResult;
-  } else {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-  }
-  if (cResult[6] !== tmp4.header) {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-    const obj3 = { style: tmp4.header, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
-    const tmp18 = closure_11(tmp(tmp2[18]).Text, obj3);
-    cResult[6] = tmp4.header;
-    cResult[7] = tmp18;
-  } else {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-  }
-  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-    const stringResult1 = obj7.string(tmp(tmp2[17]).t.FnNud4);
-    cResult[8] = stringResult1;
-    const tmp19 = stringResult1;
-  } else {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-  }
-  if (cResult[9] !== tmp4.blurb) {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-    const obj6 = { style: tmp4.blurb, variant: "text-sm/medium", color: "text-default", children: tmp19 };
-    const tmp22 = closure_11(tmp(tmp2[18]).Text, obj6);
-    cResult[9] = tmp4.blurb;
-    cResult[10] = tmp22;
-  } else {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-  }
-  if (cResult[11] === first) {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-  }
-  if (cResult[15] === first) {
-    class R {
-      constructor() {
-        obj = closure_1(closure_2[16]);
-        obj1 = { type: PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL, source: null, location_stack: analyticsLocations };
-        obj4 = { section: AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL };
-        obj1.source = obj4;
-        trackResult = obj.track(AnalyticEvents.PREMIUM_UPSELL_VIEWED, obj1);
-        return;
-      }
-    }
-    let mapped = stateFromStoresArray.map(H);
-    cResult[11] = first;
-    cResult[12] = stateFromStoresArray;
-    stateFromStoresArray = tmp4.sticker;
-    cResult[13] = stateFromStoresArray;
-    cResult[14] = mapped;
-  }
-  class H {
-    constructor(arg0) {
-      closure_0 = arg0;
-      tmp = closure_1_11;
-      obj = {
-        accessible: false,
-        onLongPress() {
-              const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-              closure_3(sticker.id);
-            },
-        style: closure_0.sticker,
-        children: null
-      };
-      obj1 = { sticker: arg0, isFocused: closure_2 === arg0.id };
-      obj.children = closure_1_11(closure_1_14, obj1);
-      id = undefined;
-      if (arg0 != null) {
-        id = arg0.id;
-      }
-      return tmp(closure_0(closure_2[19]).PressableOpacity, obj, id);
-    }
-  }
-  cResult[15] = first;
-  cResult[16] = tmp4.sticker;
-  cResult[17] = H;
-  const tmpResult = require("initialize");
-}) : (() => {
+export default function _default() {
   const tmp = closure_13();
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(7313)(analyticsLocations(7338).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(7313);
+  analyticsLocations = analyticsLocations(7320)(analyticsLocations(7345).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(7320);
   const items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -314,13 +73,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           _slicedToArray(sticker.id);
         },
         style: sticker.sticker,
-        children: closure_1_11(closure_1_14, { sticker, isFocused: closure_2 === sticker.id })
+        children: closure_1_11(EmptyStateSticker, { sticker, isFocused: closure_2 === sticker.id })
       };
       let id;
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(6968).PressableOpacity, obj, id);
+      return closure_1_11(sticker(6974).PressableOpacity, obj, id);
     })
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -336,25 +95,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           _slicedToArray(sticker.id);
         },
         style: sticker.sticker,
-        children: closure_1_11(closure_1_14, { sticker, isFocused: closure_2 === sticker.id })
+        children: closure_1_11(EmptyStateSticker, { sticker, isFocused: closure_2 === sticker.id })
       };
       let id;
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(6968).PressableOpacity, obj, id);
+      return closure_1_11(sticker(6974).PressableOpacity, obj, id);
     })
   };
-  obj9.source = analyticsLocations(9967);
+  obj9.source = analyticsLocations(9994);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5707), obj9);
+  obj8.icon = closure_11(analyticsLocations(5712), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(10246)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(10271)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);
   obj3.children = items2;
   return closure_12(View, obj3);
-});
+};

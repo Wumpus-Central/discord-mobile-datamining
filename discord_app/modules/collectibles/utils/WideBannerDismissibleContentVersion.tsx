@@ -1,11 +1,11 @@
-// === Module 5676: WideBannerDismissibleContentVersion ===
+// === Module 5682: WideBannerDismissibleContentVersion ===
 
-// Module 5676 (WideBannerDismissibleContentVersion)
-import ShopBlockType from "ShopBlockType" /* 5678 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5677 */;
+// Module 5682 (WideBannerDismissibleContentVersion)
+import ShopBlockType from "ShopBlockType" /* 5684 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5683 */;
 
 require = fn;
-const CollectibleShopTab = fn(1086).CollectibleShopTab;
+const CollectibleShopTab = fn(1074).CollectibleShopTab;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
 

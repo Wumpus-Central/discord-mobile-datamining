@@ -1,245 +1,91 @@
-// === Module 15417: PremiumGuildPreview ===
+// === Module 15457: PremiumGuildPreview ===
 
-// Module 15417 (PremiumGuildPreview)
+// Module 15457 (PremiumGuildPreview)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1199 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import GuildIcon from "GuildIcon" /* 6943 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8421 */;
-import _modDef15418 from "module_15418" /* 15418 */;
-import _modDef15419 from "module_15419" /* 15419 */;
-import _modDef15420 from "module_15420" /* 15420 */;
-import _modDef15421 from "module_15421" /* 15421 */;
-import _modDef15422 from "module_15422" /* 15422 */;
-import _modDef15423 from "module_15423" /* 15423 */;
-import _modDef15424 from "module_15424" /* 15424 */;
-import _modDef15425 from "module_15425" /* 15425 */;
+import nativeDefault from "native" /* 575 */;
+import native from "native" /* 1188 */;
+import shared from "shared" /* 5016 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import GuildIcon from "GuildIcon" /* 6951 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8455 */;
+import _modDef15458 from "module_15458" /* 15458 */;
+import _modDef15459 from "module_15459" /* 15459 */;
+import _modDef15460 from "module_15460" /* 15460 */;
+import _modDef15461 from "module_15461" /* 15461 */;
+import _modDef15462 from "module_15462" /* 15462 */;
+import _modDef15463 from "module_15463" /* 15463 */;
+import _modDef15464 from "module_15464" /* 15464 */;
+import _modDef15465 from "module_15465" /* 15465 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1204 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-function getTierIcon(theme, tier) {
+function PremiumGuildTierPill(arg0) {
+  ({ tier, theme } = arg0);
+  const tmp = closure_8();
+  const obj = { style: tmp.tierPill, children: null };
+  const obj2 = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp20 = _modDef15419;
-    const tmp19 = _modDef15418;
-    if (obj4.isThemeDark(theme)) {
-      tmp20 = tmp19;
+    let tmp5Result8 = _modDef15459;
+    const tmp5Result = _modDef15458;
+    if (obj5.isThemeDark(theme)) {
+      tmp5Result8 = tmp5Result;
     }
-    return tmp20;
+    let tmp9 = tmp5Result8;
+    obj5 = shared;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp15 = _modDef15421;
-    const tmp14 = _modDef15420;
-    if (obj3.isThemeDark(theme)) {
-      tmp15 = tmp14;
+    let tmp5Result10 = _modDef15461;
+    const tmp5Result9 = _modDef15460;
+    if (obj4.isThemeDark(theme)) {
+      tmp5Result10 = tmp5Result9;
     }
-    return tmp15;
+    tmp9 = tmp5Result10;
+    obj4 = shared;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp10 = _modDef15423;
-    const tmp9 = _modDef15422;
-    if (obj2.isThemeDark(theme)) {
-      tmp10 = tmp9;
+    let tmp5Result12 = _modDef15463;
+    const tmp5Result11 = _modDef15462;
+    if (obj3.isThemeDark(theme)) {
+      tmp5Result12 = tmp5Result11;
     }
-    return tmp10;
+    tmp9 = tmp5Result12;
+    obj3 = shared;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5 = _modDef15425;
-    const tmp4 = _modDef15424;
-    if (obj.isThemeDark(theme)) {
-      tmp5 = tmp4;
+    let tmp5Result14 = _modDef15465;
+    const tmp5Result13 = _modDef15464;
+    if (obj8.isThemeDark(theme)) {
+      tmp5Result14 = tmp5Result13;
     }
-    return tmp5;
+    tmp9 = tmp5Result14;
+    obj8 = shared;
   }
+  obj2.source = tmp9;
+  const items = [timestampProducer(FastImageDefault, obj2), ];
+  const obj6 = { style: tmp.tierPillText, children: null };
+  obj6.children = GuildBoostingUtils.getTierName(tier);
+  items[1] = timestampProducer(native.LegacyText, obj6);
+  obj.children = items;
+  return React5(View, obj);
 }
 const View = fn(17).View;
-const BoostedGuildTiers = fn(1084).BoostedGuildTiers;
+const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { guild: { padding: 16, borderRadius: nativeDefault.radii.xs, flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, guildInfo: { marginLeft: 16 }, guildName: null, tierPill: null, tierPillImage: null, tierPillText: null };
 let obj3 = { padding: 16, borderRadius: nativeDefault.radii.xs, flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(6765).DARK_WHITE_500_LIGHT_BLACK_500 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: fn(6765).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(6772).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(6772).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.tierPill = { marginTop: 8, padding: 4, paddingRight: 8, alignSelf: "flex-start", flexDirection: "row", borderRadius: 11, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tierPillImage = { width: 16, height: 16 };
 let obj5 = { marginTop: 8, padding: 4, paddingRight: 8, alignSelf: "flex-start", flexDirection: "row", borderRadius: 11, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6765).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6772).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_8 = createStyles.createStyles(obj2);
-let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGuildTierPill(arg0) {
-  const cResult = c.c(15);
-  ({ tier, theme } = arg0);
-  const tmp4 = closure_8();
-  if (cResult[0] === theme) {
-    if (cResult[1] === tier) {
-      let tmp7 = cResult[2];
-    }
-    if (cResult[3] === tmp4.tierPillImage) {
-      if (cResult[4] === tmp7) {
-        let tmp9 = cResult[5];
-      }
-      if (cResult[6] !== tier) {
-        const tierName = GuildBoostingUtils.getTierName(tier);
-        cResult[6] = tier;
-        cResult[7] = tierName;
-        let tmp13 = tierName;
-        const tmpResult = GuildBoostingUtils;
-      } else {
-        tmp13 = cResult[7];
-      }
-      if (cResult[8] === tmp4.tierPillText) {
-        if (cResult[9] === tmp13) {
-          let tmp15 = cResult[10];
-        }
-        if (cResult[11] === tmp4.tierPill) {
-          if (cResult[12] === tmp9) {
-            if (cResult[13] === tmp15) {
-              let tmp18 = cResult[14];
-            }
-            return tmp18;
-          }
-        }
-        const obj2 = { style: tmp5, children: null };
-        const items = [tmp9, tmp15];
-        obj2.children = items;
-        const tmp21 = React5(View, obj2);
-        cResult[11] = tmp4.tierPill;
-        cResult[12] = tmp9;
-        cResult[13] = tmp15;
-        cResult[14] = tmp21;
-        tmp18 = tmp21;
-      }
-      const obj3 = { style: tmp4.tierPillText, children: tmp13 };
-      const tmp17 = timestampProducer(native.LegacyText, obj3);
-      cResult[8] = tmp4.tierPillText;
-      cResult[9] = tmp13;
-      cResult[10] = tmp17;
-      tmp15 = tmp17;
-    }
-    const obj4 = { style: tmp6, source: tmp7 };
-    const tmp12 = timestampProducer(FastImageDefault, obj4);
-    cResult[3] = tmp4.tierPillImage;
-    cResult[4] = tmp7;
-    cResult[5] = tmp12;
-    tmp9 = tmp12;
-  }
-  const tmp8 = getTierIcon(theme, tier);
-  cResult[0] = theme;
-  cResult[1] = tier;
-  cResult[2] = tmp8;
-  tmp7 = tmp8;
-}) : (function PremiumGuildTierPill(tier) {
-  tier = tier.tier;
-  const tmp = closure_8();
-  const obj = { style: tmp.tierPill, children: null };
-  const obj2 = { style: tmp.tierPillImage, source: getTierIcon(tier.theme, tier) };
-  const items = [timestampProducer(FastImageDefault, obj2), ];
-  const obj3 = { style: tmp.tierPillText, children: null };
-  obj3.children = GuildBoostingUtils.getTierName(tier);
-  items[1] = timestampProducer(native.LegacyText, obj3);
-  obj.children = items;
-  return React5(View, obj);
-});
-ReactCompilerGating = fn(558);
-let obj6 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(6765).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGuildPreview(arg0) {
-  const cResult = c.c(21);
-  ({ guild, style } = arg0);
-  const tmp4 = closure_8();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ThemeStore];
-    const fn = function h() {
-      return theme.theme;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
-  } else {
-    [tmp5, tmp6] = cResult;
-  }
-  const stateFromStores = initialize.useStateFromStores(tmp5, tmp6);
-  if (cResult[2] === style) {
-    if (cResult[3] === tmp4.guild) {
-      let tmp9 = cResult[4];
-    }
-    if (cResult[5] !== guild) {
-      const obj2 = { guild, size: GuildIcon.GuildIconSizes.LARGE, selected: false };
-      const tmp14 = timestampProducer(GuildIconDefault, obj2);
-      cResult[5] = guild;
-      cResult[6] = tmp14;
-      let tmp10 = tmp14;
-    } else {
-      tmp10 = cResult[6];
-    }
-    if (cResult[7] === guild.name) {
-      if (cResult[8] === tmp4.guildName) {
-        let tmp15 = cResult[9];
-      }
-      if (cResult[10] === guild.premiumTier) {
-        if (cResult[11] === stateFromStores) {
-          let tmp18 = cResult[12];
-        }
-        if (cResult[13] === tmp4.guildInfo) {
-          if (cResult[14] === tmp15) {
-            if (cResult[15] === tmp18) {
-              let tmp22 = cResult[16];
-            }
-            if (cResult[17] === tmp9) {
-              if (cResult[18] === tmp10) {
-                if (cResult[19] === tmp22) {
-                  let tmp26 = cResult[20];
-                }
-                return tmp26;
-              }
-            }
-            const obj3 = { style: tmp9, children: null };
-            const items1 = [tmp10, tmp22];
-            obj3.children = items1;
-            const tmp29 = React5(View, obj3);
-            cResult[17] = tmp9;
-            cResult[18] = tmp10;
-            cResult[19] = tmp22;
-            cResult[20] = tmp29;
-            tmp26 = tmp29;
-          }
-        }
-        const obj4 = { style: tmp4.guildInfo, children: null };
-        const items2 = [tmp15, tmp18];
-        obj4.children = items2;
-        const tmp25 = React5(View, obj4);
-        cResult[13] = tmp4.guildInfo;
-        cResult[14] = tmp15;
-        cResult[15] = tmp18;
-        cResult[16] = tmp25;
-        tmp22 = tmp25;
-      }
-      const obj5 = { tier: guild.premiumTier, theme: stateFromStores };
-      const tmp21 = timestampProducer(closure_10, obj5);
-      cResult[10] = guild.premiumTier;
-      cResult[11] = stateFromStores;
-      cResult[12] = tmp21;
-      tmp18 = tmp21;
-    }
-    const obj6 = { style: tmp4.guildName, children: guild.name };
-    const tmp17 = timestampProducer(native.LegacyText, obj6);
-    cResult[7] = guild.name;
-    cResult[8] = tmp4.guildName;
-    cResult[9] = tmp17;
-    tmp15 = tmp17;
-  }
-  const items3 = [tmp4.guild, style];
-  cResult[2] = style;
-  cResult[3] = tmp4.guild;
-  cResult[4] = items3;
-  tmp9 = items3;
-  const tmpResult = initialize;
-}) : (function PremiumGuildPreview(guild) {
+export default function PremiumGuildPreview(guild) {
   guild = guild.guild;
   const tmp = closure_8();
   const items = [ThemeStore];
@@ -251,9 +97,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   obj3.size = GuildIcon.GuildIconSizes.LARGE;
   const items2 = [timestampProducer(GuildIconDefault, obj3), ];
   const obj4 = { style: tmp.guildInfo, children: null };
-  const items3 = [timestampProducer(native.LegacyText, { style: tmp.guildName, children: guild.name }), timestampProducer(closure_10, { tier: guild.premiumTier, theme: stateFromStores })];
+  const items3 = [timestampProducer(native.LegacyText, { style: tmp.guildName, children: guild.name }), timestampProducer(PremiumGuildTierPill, { tier: guild.premiumTier, theme: stateFromStores })];
   obj4.children = items3;
   items2[1] = React5(View, obj4);
   obj2.children = items2;
   return React5(View, obj2);
-});
+};

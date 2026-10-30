@@ -1,8 +1,8 @@
-// === Module 14887: showReportModalForUserWidget ===
+// === Module 14924: showReportModalForUserWidget ===
 
-// Module 14887 (showReportModalForUserWidget)
-import ReportModals from "ReportModals" /* 8163 */;
-import ApplicationStore from "ApplicationStore" /* 2043 */;
+// Module 14924 (showReportModalForUserWidget)
+import ReportModals from "ReportModals" /* 8344 */;
+import ApplicationStore from "ApplicationStore" /* 2040 */;
 
 const require = globalThis.__r;
 
@@ -12,11 +12,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/showReportModalForUserWidget.tsx");
 
 export const USER_PROFILE_WIDGET_REPORT_ENTRYPOINT = "user_profile_widget";
-export function showReportModalForUserWidget(userId, widget) {
-  _require = userId;
-  importDefault = widget;
-  if (widget instanceof require("UserProfileApplicationWidgetTypes").ApplicationWidget) {
-    applicationId = widget.applicationId;
+export function showReportModalForUserWidget(user_id, applicationId) {
+  _require = user_id;
+  importDefault = applicationId;
+  if (applicationId instanceof require("UserProfileApplicationWidgetTypes").ApplicationWidget) {
+    applicationId = applicationId.applicationId;
     if (ApplicationStore.isHydrated(applicationId)) {
       let application = ApplicationStore.getApplication(applicationId);
       let conjureProjectId;
@@ -28,7 +28,7 @@ export function showReportModalForUserWidget(userId, widget) {
         let result = tmp(tmp2[2]).showReportModalForApp(obj);
         const tmpResult = tmp(tmp2[2]);
       } else {
-        let result1 = tmp(tmp2[2]).showReportModalForWidget(userId, widget);
+        let result1 = tmp(tmp2[2]).showReportModalForWidget(user_id, applicationId);
         const tmpResult3 = tmp(tmp2[2]);
       }
     } else {
@@ -62,7 +62,7 @@ export function showReportModalForUserWidget(userId, widget) {
       });
     }
   } else {
-    const result2 = tmp(tmp2[2]).showReportModalForWidget(userId, widget);
+    const result2 = tmp(tmp2[2]).showReportModalForWidget(user_id, applicationId);
     const tmpResult4 = tmp(tmp2[2]);
   }
 }

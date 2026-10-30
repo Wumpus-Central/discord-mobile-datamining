@@ -1,8 +1,8 @@
-// === Module 7747: CollectiblesShopStore ===
+// === Module 7752: CollectiblesShopStore ===
 
-// Module 7747 (CollectiblesShopStore)
+// Module 7752 (CollectiblesShopStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const items = [];
 let analyticsLocations = items;

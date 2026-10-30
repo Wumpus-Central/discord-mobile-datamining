@@ -1,36 +1,18 @@
-// === Module 5192: useBaseAppContainerDimensions ===
+// === Module 5198: useBaseAppContainerDimensions ===
 
-// Module 5192 (useBaseAppContainerDimensions)
-import c from "c" /* 576 */;
-import useWindowDimensions from "useWindowDimensions" /* 1497 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1631 */;
+// Module 5198 (useBaseAppContainerDimensions)
+import useWindowDimensions from "useWindowDimensions" /* 1492 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1626 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowDimensionsDefault = useWindowDimensions;
 const useSafeAreaInsetsDefault = useSafeAreaInsets;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseAppContainerDimensions() {
-  const cResult = c.c(3);
-  ({ height, width } = useWindowDimensionsDefault());
-  const rect = useSafeAreaInsetsDefault();
-  const diff = width - rect.left - rect.right;
-  if (cResult[0] === height) {
-    if (cResult[1] === diff) {
-      let tmp4 = cResult[2];
-    }
-    return tmp4;
-  }
-  const size = { width: diff, height };
-  cResult[0] = height;
-  cResult[1] = diff;
-  cResult[2] = size;
-  tmp4 = size;
-}) : (function useBaseAppContainerDimensions() {
+export default function useBaseAppContainerDimensions() {
   let size = useWindowDimensionsDefault();
   const width = size.width;
   const height = size.height;
@@ -42,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseA
     const size = { width: width - left - right, height };
     return size;
   }, items);
-});
+};
 export function getBaseAppContainerDimensions() {
   const windowDimensions = useWindowDimensions.getWindowDimensions();
   ({ width, height } = windowDimensions);

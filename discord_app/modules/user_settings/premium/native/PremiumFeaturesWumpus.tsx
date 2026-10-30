@@ -1,119 +1,44 @@
-// === Module 9883: PremiumFeaturesWumpus ===
+// === Module 9908: PremiumFeaturesWumpus ===
 
-// Module 9883 (PremiumFeaturesWumpus)
-import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7098 */;
-import _modDef7606 from "module_7606" /* 7606 */;
-import _modDef7608 from "module_7608" /* 7608 */;
+// Module 9908 (PremiumFeaturesWumpus)
+import _modDef9909 from "module_9909" /* 9909 */;
+import _modDef9914 from "module_9914" /* 9914 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1386).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5005);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5009);
 let obj2 = { clouds: { position: "absolute", top: 0, right: 0 }, wumpus: { position: "absolute", top: 22, right: 22, height: 90 }, wumpusLeft: null };
-let obj3 = { transform: null };
+const obj3 = { transform: null };
 let items = [{ scaleX: -1 }];
 obj3.transform = items;
 obj2.wumpusLeft = obj3;
-let closure_8 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
+let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesWumpus.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumFeaturesWumpus(premiumType) {
-  const cResult = c.c(16);
+export default function PremiumFeaturesWumpus(premiumType) {
   premiumType = premiumType.premiumType;
-  const tmp3 = closure_8();
-  const tmp5 = useIsWindowLargeDefault();
-  if (premiumType === PremiumTypes.TIER_0) {
-    const tmp4Result = importDefault(tmp5 ? 9884 : 9885);
-    if (cResult[0] !== tmp4Result) {
-      const obj2 = { wumpusImageSource: _modDef7606, cloudsImageSource: tmp4Result };
-      cResult[0] = tmp4Result;
-      cResult[1] = obj2;
-    }
-  } else {
-    const tmp4Result2 = importDefault(tmp5 ? 9886 : 9887);
-    if (cResult[2] !== tmp4Result2) {
-      const obj3 = { wumpusImageSource: _modDef7608, cloudsImageSource: tmp4Result2 };
-      cResult[2] = tmp4Result2;
-      cResult[3] = obj3;
-      let tmp8 = obj3;
-    } else {
-      tmp8 = cResult[3];
-    }
-    ({ wumpusImageSource, cloudsImageSource } = tmp8);
-    if (cResult[4] === cloudsImageSource) {
-      if (cResult[5] === tmp3.clouds) {
-        let tmp12 = cResult[6];
-      }
-      if (cResult[7] === tmp3.wumpus) {
-        if (cResult[8] === tmp15) {
-          let tmp16 = cResult[9];
-        }
-        if (cResult[10] === tmp16) {
-          if (cResult[11] === wumpusImageSource) {
-            let tmp17 = cResult[12];
-          }
-          if (cResult[13] === tmp12) {
-            if (cResult[14] === tmp17) {
-              let tmp20 = cResult[15];
-            }
-            return tmp20;
-          }
-          const obj4 = { children: null };
-          const items = [tmp12, tmp17];
-          obj4.children = items;
-          const tmp23 = React5(timestampProducer, obj4);
-          cResult[13] = tmp12;
-          cResult[14] = tmp17;
-          cResult[15] = tmp23;
-          tmp20 = tmp23;
-        }
-        const obj5 = { style: tmp16, resizeMode: "contain", source: wumpusImageSource };
-        const tmp19 = hasOwnProperty(FastImageDefault, obj5);
-        cResult[10] = tmp16;
-        cResult[11] = wumpusImageSource;
-        cResult[12] = tmp19;
-        tmp17 = tmp19;
-      }
-      const items1 = [tmp3.wumpus, premiumType === tmp6.TIER_0 && tmp3.wumpusLeft];
-      cResult[7] = tmp3.wumpus;
-      cResult[8] = premiumType === tmp6.TIER_0 && tmp3.wumpusLeft;
-      cResult[9] = items1;
-      tmp16 = items1;
-    }
-    const obj6 = { style: tmp3.clouds, resizeMode: "contain", source: cloudsImageSource };
-    const tmp14 = hasOwnProperty(FastImageDefault, obj6);
-    cResult[4] = cloudsImageSource;
-    cResult[5] = tmp3.clouds;
-    cResult[6] = tmp14;
-    tmp12 = tmp14;
-  }
-}) : (function PremiumFeaturesWumpus(premiumType) {
-  premiumType = premiumType.premiumType;
-  const tmp = closure_8();
-  const tmp2 = useIsWindowLargeDefault();
-  importDefault = tmp2;
+  const tmp = closure_7();
+  const tmp2 = premiumType(7106)();
+  dependencyMap = tmp2;
   const items = [premiumType, tmp2];
   const memo = noop.useMemo(() => {
     if (premiumType === PremiumTypes.TIER_0) {
-      const obj2 = { wumpusImageSource: _modDef7606, cloudsImageSource: importDefault(closure_1 ? 9884 : 9885) };
+      const obj2 = { wumpusImageSource: _modDef9909, cloudsImageSource: importDefault(closure_1 ? 9910 : 9911) };
     } else {
       if (closure_1) {
-        let tmp4 = 9886;
+        let tmp4 = 9912;
       } else {
-        tmp4 = 9887;
+        tmp4 = 9913;
       }
-      const obj = { wumpusImageSource: _modDef7608, cloudsImageSource: importDefault(tmp4) };
+      const obj = { wumpusImageSource: _modDef9914, cloudsImageSource: importDefault(tmp4) };
       return obj;
     }
   }, items);
   ({ wumpusImageSource, cloudsImageSource } = memo);
-  const items1 = [closure_5(FastImageDefault, { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }), ];
+  const items1 = [closure_4(premiumType(5712), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }), ];
   const items2 = [tmp.wumpus, ];
   let wumpusLeft = premiumType === PremiumTypes.TIER_0;
   if (wumpusLeft) {
@@ -121,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   }
   let obj2 = { children: null };
   items2[1] = wumpusLeft;
-  items1[1] = closure_5(FastImageDefault, { style: items2, resizeMode: "contain", source: wumpusImageSource });
+  items1[1] = closure_4(premiumType(5712), { style: items2, resizeMode: "contain", source: wumpusImageSource });
   obj2.children = items1;
-  return closure_7(closure_6, obj2);
-});
+  return closure_6(closure_5, obj2);
+};

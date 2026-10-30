@@ -1,80 +1,17 @@
-// === Module 5706: BaseIconImage ===
+// === Module 5711: BaseIconImage ===
 
-// Module 5706 (BaseIconImage)
-import c from "c" /* 576 */;
-import useToken from "useToken" /* 5289 */;
-import FastImageDefault from "FastImage" /* 5707 */;
+// Module 5711 (BaseIconImage)
+import useToken from "useToken" /* 5591 */;
+import FastImageDefault from "FastImage" /* 5712 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const dependencyMap = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Array", height: "Reflect" }, refresh_sm: { width: 18, height: 18 } };
-const ReactCompilerGating = fn(558);
+let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "color", height: "Error" }, refresh_sm: { width: 18, height: 18 } };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
-export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseIconImage(arg0) {
-  const cResult = c.c(14);
-  ({ source, size, color, resizeMode, style, accessible, accessibilityLabel } = arg0);
-  const str = "md";
-  const token = useToken.useToken(color);
-  if (null != token) {
-    if (cResult[0] !== token) {
-      const obj2 = { tintColor: token };
-      cResult[0] = token;
-      cResult[1] = obj2;
-    }
-  } else {
-    let tmp7;
-    if (tmp6) {
-      if (cResult[2] !== color) {
-        const obj3 = { tintColor: color };
-        cResult[2] = color;
-        cResult[3] = obj3;
-        let tmp8 = obj3;
-      } else {
-        tmp8 = cResult[3];
-      }
-      tmp7 = tmp8;
-    }
-    if (cResult[4] === tmp5) {
-      if (cResult[5] === style) {
-        if (cResult[6] === tmp7) {
-          let tmp11 = cResult[7];
-        }
-        if (cResult[8] === accessibilityLabel) {
-          if (cResult[9] === accessible) {
-            if (cResult[10] === resizeMode) {
-              if (cResult[11] === source) {
-                if (cResult[12] === tmp11) {
-                  let tmp12 = cResult[13];
-                }
-                return tmp12;
-              }
-            }
-          }
-        }
-        const obj4 = { fadeDuration: 0, source, resizeMode, style: tmp11, accessible, accessibilityLabel };
-        const tmp15 = jsx(FastImageDefault, { fadeDuration: 0, source, resizeMode, style: tmp11, accessible, accessibilityLabel });
-        cResult[8] = accessibilityLabel;
-        cResult[9] = accessible;
-        cResult[10] = resizeMode;
-        cResult[11] = source;
-        cResult[12] = tmp11;
-        cResult[13] = tmp15;
-        tmp12 = tmp15;
-      }
-    }
-    const items = [tmp5, tmp7, style];
-    cResult[4] = tmp5;
-    cResult[5] = style;
-    cResult[6] = tmp7;
-    cResult[7] = items;
-    tmp11 = items;
-    tmp6 = null != color && typeof color === "string";
-  }
-  const tmpResult = useToken;
-}) : (function BaseIconImage(size) {
+export function BaseIconImage(size) {
   let str = size.size;
   if (str === undefined) {
     str = "md";
@@ -93,7 +30,7 @@ export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     tmp3 = null != color && typeof color === "string";
   }
   const obj4 = { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel };
-  const items = [dependencyMap[str], tmp4, style];
+  const items = [closure_4[str], tmp4, style];
   obj4.style = items;
   return jsx(FastImageDefault, { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel });
-});
+}

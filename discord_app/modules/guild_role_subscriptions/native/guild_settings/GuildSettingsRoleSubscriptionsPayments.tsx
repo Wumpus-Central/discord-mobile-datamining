@@ -1,33 +1,16 @@
-// === Module 19866: GuildSettingsRoleSubscriptionsPayments ===
+// === Module 19929: GuildSettingsRoleSubscriptionsPayments ===
 
-// Module 19866 (GuildSettingsRoleSubscriptionsPayments)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 18501 */;
+// Module 19929 (GuildSettingsRoleSubscriptionsPayments)
+import util from "util" /* 1114 */;
+import UnavailableNoticeDefault from "UnavailableNotice" /* 18560 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSettingsRoleSubscriptionPayments() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { title: null, description: null, brightTitle: true };
-    const intl = util.intl;
-    obj2.title = intl.string(util.t.qAMb9K);
-    const intl2 = util.intl;
-    obj2.description = intl2.string(util.t.pRuzXJ);
-    const tmp8 = jsx(UnavailableNoticeDefault, { title: null, description: null, brightTitle: true });
-    cResult[0] = tmp8;
-    let first = tmp8;
-  } else {
-    first = cResult[0];
-  }
-  return first;
-}) : (function GuildSettingsRoleSubscriptionPayments(arg0) {
+export default function GuildSettingsRoleSubscriptionPayments(arg0) {
   const merged = Object.assign(arg0, Object.assign({ ref: 0 }));
   const obj = { title: null, description: null, brightTitle: true };
   const intl = util.intl;
@@ -35,4 +18,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const intl2 = util.intl;
   obj.description = intl2.string(util.t.pRuzXJ);
   return jsx(UnavailableNoticeDefault, { title: null, description: null, brightTitle: true });
-});
+};

@@ -1,7 +1,7 @@
-// === Module 7935: GuildTiVPlatformUtils ===
+// === Module 7941: GuildTiVPlatformUtils ===
 
-// Module 7935 (GuildTiVPlatformUtils)
-import util from "util" /* 1125 */;
+// Module 7941 (GuildTiVPlatformUtils)
+import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/text_in_voice/GuildTiVPlatformUtils.native.tsx");

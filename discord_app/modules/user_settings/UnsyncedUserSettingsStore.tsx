@@ -1,22 +1,22 @@
-// === Module 1206: UnsyncedUserSettingsStore ===
+// === Module 1195: UnsyncedUserSettingsStore ===
 
-// Module 1206 (UnsyncedUserSettingsStore)
+// Module 1195 (UnsyncedUserSettingsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1242 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1231 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_3 = ["allowConjurePictureInPictureOnNavigateAway", "allowVibegrationsPictureInPictureOnNavigateAway"];
-const SystemThemeState = fn(1207).SystemThemeState;
-const ListDensityMode = fn(1094).ListDensityMode;
-const Constants = fn(1084);
+const SystemThemeState = fn(1196).SystemThemeState;
+const ListDensityMode = fn(1082).ListDensityMode;
+const Constants = fn(1072);
 ({ DEFAULT_CHAT_SIDEBAR_WIDTH: closure_7, CHANNEL_SIDEBAR_WIDTH } = Constants);
 let closure_9 = Constants.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-const ExpressionPickerWidths = fn(1240).ExpressionPickerWidths;
-let closure_11 = fn(1241).STAGE_AUDIENCE_SIDEBAR_DEFAULT_WIDTH;
+const ExpressionPickerWidths = fn(1229).ExpressionPickerWidths;
+let closure_11 = fn(1230).STAGE_AUDIENCE_SIDEBAR_DEFAULT_WIDTH;
 let obj = { DATA_SAVER: "data_saver", STANDARD: "standard", BEST: "best" };
 let closure_12 = (window.innerWidth - CHANNEL_SIDEBAR_WIDTH) / 2;
 const STANDARD = obj.STANDARD;

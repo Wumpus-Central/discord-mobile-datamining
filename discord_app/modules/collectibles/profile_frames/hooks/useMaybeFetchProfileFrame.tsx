@@ -1,49 +1,16 @@
-// === Module 8732: useMaybeFetchProfileFrame ===
+// === Module 8766: useMaybeFetchProfileFrame ===
 
-// Module 8732 (useMaybeFetchProfileFrame)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7707 */;
-import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8733 */;
-import useProfileFrameDefault from "useProfileFrame" /* 8743 */;
+// Module 8766 (useMaybeFetchProfileFrame)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7712 */;
+import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8767 */;
+import useProfileFrameDefault from "useProfileFrame" /* 8777 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetchProfileFrame(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  let tmp2 = useFramePreviewOverrideFrameDefault();
-  const tmp3 = useProfileFrameDefault(arg0);
-  importDefault = tmp4;
-  if (cResult[0] === (null == tmp2 && null != arg0 && null == tmp3)) {
-    if (cResult[1] === arg0) {
-      let tmp5 = cResult[2];
-      let tmp6 = cResult[3];
-    }
-    const effect = noop.useEffect(tmp5, tmp6);
-    if (tmp2 == null) {
-      tmp2 = tmp3;
-    }
-    return tmp2;
-  }
-  const fn = function u() {
-    if (closure_1) {
-      const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);
-    }
-  };
-  const items = [null == tmp2 && null != arg0 && null == tmp3, arg0];
-  cResult[0] = null == tmp2 && null != arg0 && null == tmp3;
-  cResult[1] = arg0;
-  cResult[2] = fn;
-  cResult[3] = items;
-  tmp6 = items;
-  tmp5 = fn;
-  let obj = require("c");
-}) : (function useMaybeFetchProfileFrame(arg0) {
+export default function useMaybeFetchProfileFrame(arg0) {
   closure_0 = arg0;
   let tmp = useFramePreviewOverrideFrameDefault();
   const tmp2 = useProfileFrameDefault(arg0);
@@ -58,4 +25,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybe
     tmp = tmp2;
   }
   return tmp;
-});
+};

@@ -1,9 +1,9 @@
-// === Module 15133: maybeConvertPrivateChannel ===
+// === Module 15173: maybeConvertPrivateChannel ===
 
-// Module 15133 (maybeConvertPrivateChannel)
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7383 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7471 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+// Module 15173 (maybeConvertPrivateChannel)
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7390 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 require = fn;
 const size = fn(2);

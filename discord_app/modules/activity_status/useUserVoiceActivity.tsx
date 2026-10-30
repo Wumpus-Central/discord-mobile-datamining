@@ -1,9 +1,9 @@
-// === Module 10705: useUserVoiceActivity ===
+// === Module 10728: useUserVoiceActivity ===
 
-// Module 10705 (useUserVoiceActivity)
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import VoiceStateStore from "VoiceStateStore" /* 5668 */;
+// Module 10728 (useUserVoiceActivity)
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import VoiceStateStore from "VoiceStateStore" /* 5674 */;
 
 const require = fn;
 function getVisibleUserVoiceActivity(arg0, arg1) {
@@ -73,11 +73,21 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
     }
   }
 }
-const Permissions = fn(1095).Permissions;
+const Permissions = fn(1083).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "Reflect" });
-const ReactCompilerGating = fn(558);
-function getUserVoiceState(arg0) {
+let closure_7 = Object.freeze({ voiceState: "color", voiceChannel: "Error" });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
+
+export default function useUserVoiceActivity(userId) {
+  userId = userId.userId;
+  const guildId = userId.guildId;
+  const includeNonDiscoverable = userId.includeNonDiscoverable;
+  const items = [includeNonDiscoverable, PermissionStore, VoiceStateStore];
+  const items1 = [guildId, userId, includeNonDiscoverable];
+  return userId(guildId[4]).useStateFromStoresObject(items, () => getVisibleUserVoiceActivity({ userId, guildId, includeNonDiscoverable }, { ChannelStore, PermissionStore, VoiceStateStore }), items1);
+};
+export function getUserVoiceState(arg0) {
   ({ userId, guildId, includeNonDiscoverable } = arg0);
   if (includeNonDiscoverable === undefined) {
     includeNonDiscoverable = false;
@@ -105,53 +115,6 @@ function getUserVoiceState(arg0) {
     }
   }
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
-
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserVoiceActivity(userId) {
-  const cResult = userId(guildId[5]).c(6);
-  userId = userId.userId;
-  guildId = userId.guildId;
-  const includeNonDiscoverable = userId.includeNonDiscoverable;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [includeNonDiscoverable, PermissionStore, VoiceStateStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === guildId) {
-    if (cResult[2] === includeNonDiscoverable) {
-      if (cResult[3] === userId) {
-        let tmp8 = cResult[4];
-        let tmp9 = cResult[5];
-      }
-      return tmp(tmp2[6]).useStateFromStoresObject(first, tmp8, tmp9);
-    }
-  }
-  const fn = function l() {
-    return getVisibleUserVoiceActivity({ userId, guildId, includeNonDiscoverable }, { ChannelStore, PermissionStore, VoiceStateStore });
-  };
-  const items1 = [guildId, userId, includeNonDiscoverable];
-  cResult[1] = guildId;
-  cResult[2] = includeNonDiscoverable;
-  cResult[3] = userId;
-  cResult[4] = fn;
-  cResult[5] = items1;
-  tmp9 = items1;
-  tmp8 = fn;
-  const obj = userId(guildId[5]);
-  tmp = userId;
-  tmp2 = guildId;
-}) : (function useUserVoiceActivity(userId) {
-  userId = userId.userId;
-  const guildId = userId.guildId;
-  const includeNonDiscoverable = userId.includeNonDiscoverable;
-  const items = [includeNonDiscoverable, PermissionStore, VoiceStateStore];
-  const items1 = [guildId, userId, includeNonDiscoverable];
-  return userId(guildId[6]).useStateFromStoresObject(items, () => getVisibleUserVoiceActivity({ userId, guildId, includeNonDiscoverable }, { ChannelStore, PermissionStore, VoiceStateStore }), items1);
-});
-export { getUserVoiceState };
 export function canViewUserVoiceChannel(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {

@@ -1,8 +1,8 @@
-// === Module 8368: BasicGuildStore ===
+// === Module 8405: BasicGuildStore ===
 
-// Module 8368 (BasicGuildStore)
+// Module 8405 (BasicGuildStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let closure_0 = 0;
 const dependencyMap = {};

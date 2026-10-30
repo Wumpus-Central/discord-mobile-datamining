@@ -1,141 +1,21 @@
-// === Module 19070: useConsoleConnectedAccountForVoiceUpsell ===
+// === Module 19177: useConsoleConnectedAccountForVoiceUpsell ===
 
-// Module 19070 (useConsoleConnectedAccountForVoiceUpsell)
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
-import GameConsoleStore from "GameConsoleStore" /* 5753 */;
+// Module 19177 (useConsoleConnectedAccountForVoiceUpsell)
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
+import GameConsoleStore from "GameConsoleStore" /* 5760 */;
 
 const require = fn;
-const CONSOLE_VOICE_PLATFORMS = fn(9692).CONSOLE_VOICE_PLATFORMS;
-const ActivityTypes = fn(1084).ActivityTypes;
-const ReactCompilerGating = fn(558);
+const CONSOLE_VOICE_PLATFORMS = fn(9717).CONSOLE_VOICE_PLATFORMS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConsoleConnectedAccountForVoiceUpsell() {
-  const cResult = arr3(576).c(10);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [SelfPresenceStore];
-    const fn = function c() {
-      return activities.getActivities(true);
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  const obj = arr3(576);
-  const stateFromStores = arr3(504).useStateFromStores(tmp4, tmp5);
-  if (cResult[2] !== stateFromStores) {
-    const _Symbol = Symbol;
-    if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn2 = function p(platform) {
-        platform = platform.platform;
-        let hasItem = platform.type === constants.PLAYING;
-        if (hasItem) {
-          hasItem = null != platform;
-        }
-        if (hasItem) {
-          hasItem = set.has(platform);
-        }
-        return hasItem;
-      };
-      cResult[4] = fn2;
-      let tmp7 = fn2;
-    } else {
-      tmp7 = cResult[4];
-    }
-    const found = stateFromStores.filter(tmp7);
-    cResult[2] = stateFromStores;
-    cResult[3] = found;
-  } else {
-    const _Symbol2 = Symbol;
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const items1 = [GameConsoleStore];
-      class A {
-        constructor() {
-          obj = closure_1_5;
-          tmp = null != closure_1_5.getAwaitingRemoteSessionInfo() || null != obj.getRemoteSessionId();
-          return tmp;
-        }
-      }
-      cResult[5] = items1;
-      cResult[6] = A;
-      let tmp11 = A;
-      let tmp10 = items1;
-    } else {
-      tmp10 = cResult[5];
-      tmp11 = cResult[6];
-    }
-    const _Symbol3 = Symbol;
-    const stateFromStores1 = tmp(504).useStateFromStores(tmp10, tmp11);
-    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const items2 = [ConnectedAccountsStore];
-      class A {
-        constructor() {
-          obj = closure_1_5;
-          tmp = null != closure_1_5.getAwaitingRemoteSessionInfo() || null != obj.getRemoteSessionId();
-          return tmp;
-        }
-      }
-      cResult[7] = items2;
-      let tmp14 = items2;
-    } else {
-      tmp14 = cResult[7];
-    }
-    if (cResult[8] !== cResult[3]) {
-      const fn3 = function y() {
-        const mapped = arr3.map((platform) => {
-          platform = platform.platform;
-          if (null == platform) {
-            return null;
-          } else {
-            const tmp3 = closure_1_1(closure_1_2[8])(platform);
-            account = null;
-            if (null != tmp3) {
-              account = account.getAccount(null, tmp3);
-            }
-            return account;
-          }
-        });
-        return mapped.find((item) => null != item);
-      };
-      cResult[8] = arr3;
-      class A {
-        constructor() {
-          obj = closure_1_5;
-          tmp = null != closure_1_5.getAwaitingRemoteSessionInfo() || null != obj.getRemoteSessionId();
-          return tmp;
-        }
-      }
-      cResult[9] = fn3;
-      let tmp16 = fn3;
-    } else {
-      tmp16 = cResult[9];
-    }
-    const tmpResult3 = tmp(504);
-    const stateFromStores2 = tmp(504).useStateFromStores(tmp14, tmp16);
-    let tmp19 = null;
-    if (cResult[3].length > 0) {
-      tmp19 = null;
-      if (null != stateFromStores2) {
-        tmp19 = null;
-        if (!stateFromStores1) {
-          tmp19 = stateFromStores2;
-        }
-      }
-    }
-    return tmp19;
-  }
-  const tmpResult = arr3(504);
-}) : (function useConsoleConnectedAccountForVoiceUpsell() {
+export default function useConsoleConnectedAccountForVoiceUpsell() {
   const items = [SelfPresenceStore];
   const stateFromStores = found(504).useStateFromStores(items, () => activities.getActivities(true));
   found = stateFromStores.filter((platform) => {
     platform = platform.platform;
-    let hasItem = platform.type === constants.PLAYING;
+    let hasItem = platform.type === found(dependencyMap[5]).ActivityTypes.PLAYING;
     if (hasItem) {
       hasItem = null != platform;
     }
@@ -155,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConso
       if (null == platform) {
         return null;
       } else {
-        const tmp3 = closure_1_1(closure_1_2[8])(platform);
+        const tmp3 = closure_1_1(closure_1_2[6])(platform);
         account = null;
         if (null != tmp3) {
           account = account.getAccount(null, tmp3);
@@ -176,4 +56,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConso
     }
   }
   return tmp3;
-});
+};

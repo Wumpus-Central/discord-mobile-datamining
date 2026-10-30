@@ -1,7 +1,7 @@
-// === Module 12414: ConjureTodoAgents ===
+// === Module 12566: ConjureTodoAgents ===
 
-// Module 12414 (ConjureTodoAgents)
-import ConjureTimelineTree from "ConjureTimelineTree" /* 12400 */;
+// Module 12566 (ConjureTodoAgents)
+import ConjureTimelineTree from "ConjureTimelineTree" /* 12552 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoAgents.tsx");
@@ -30,9 +30,9 @@ export function runningTodoAgents(tasks) {
   }
   return items;
 }
-export function groupAgentsByTodo(cResult) {
+export function groupAgentsByTodo(items) {
   const map = new Map();
-  const iter = cResult[Symbol.iterator]();
+  const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -43,7 +43,7 @@ export function groupAgentsByTodo(cResult) {
         if (null != value) {
           let arr2 = arr.push(tmp2);
         } else {
-          let items = [tmp2];
+          items = [tmp2];
           let result = map.set(tmp2.todoId, items);
         }
       }

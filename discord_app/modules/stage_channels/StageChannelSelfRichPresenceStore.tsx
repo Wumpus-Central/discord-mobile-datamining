@@ -1,22 +1,23 @@
-// === Module 11292: StageChannelSelfRichPresenceStore ===
+// === Module 11495: StageChannelSelfRichPresenceStore ===
 
-// Module 11292 (StageChannelSelfRichPresenceStore)
+// Module 11495 (StageChannelSelfRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4942 */;
-import useChannelName from "useChannelName" /* 5641 */;
-import StageMediaHooks from "StageMediaHooks" /* 6699 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 6746 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10720 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import UserStore from "UserStore" /* 1389 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6700 */;
-import StageInstanceStore from "StageInstanceStore" /* 4862 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import _modDef1343 from "module_1343" /* 1343 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
+import useChannelName from "useChannelName" /* 5647 */;
+import ActivityTypes2 from "ActivityTypes" /* 5757 */;
+import StageMediaHooks from "StageMediaHooks" /* 6706 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6753 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10743 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import UserStore from "UserStore" /* 1384 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6707 */;
+import StageInstanceStore from "StageInstanceStore" /* 4863 */;
 
 require = fn;
 function handleUpdateActivity() {
@@ -31,7 +32,7 @@ function handleUpdateActivity() {
       if (null != channel) {
         tmp2 = null;
         if (obj2.canEveryone(constants2.VIEW_CHANNEL, channel)) {
-          guild = GuildStore.getGuild(channel.getGuildId());
+          const guild = GuildStore.getGuild(channel.getGuildId());
           tmp2 = null;
           if (null != guild) {
             const features = guild.features;
@@ -74,7 +75,9 @@ function handleUpdateActivity() {
                 const tmp12Result = useChannelName;
               }
               obj.name = topic;
-              obj.type = StageMediaHooks.getStageHasMedia(channel.id) ? map1.WATCHING : map1.LISTENING;
+              const stageHasMedia = StageMediaHooks.getStageHasMedia(channel.id);
+              const ActivityTypes = ActivityTypes2.ActivityTypes;
+              obj.type = stageHasMedia ? ActivityTypes.WATCHING : ActivityTypes.LISTENING;
               let start;
               if (tmp15 != null) {
                 const timestamps = tmp15.timestamps;
@@ -107,7 +110,7 @@ function handleUpdateActivity() {
       }
     }
   }
-  const tmp30 = _modDef1354(tmp2, obj);
+  const tmp30 = _modDef1343(tmp2, obj);
   let flag = !tmp30;
   if (!tmp30) {
     obj = tmp2;
@@ -115,9 +118,9 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6696).STAGE_APPLICATION_ID;
-const Constants = fn(1084);
-({ ActivityTypes: map1, GuildFeatures: closure_14, Permissions: closure_15, RTCConnectionStates: closure_16 } = Constants);
+const STAGE_APPLICATION_ID = fn(6703).STAGE_APPLICATION_ID;
+const Constants = fn(1072);
+({ GuildFeatures: map1, Permissions: closure_14, RTCConnectionStates: closure_15 } = Constants);
 let obj = null;
 const Store = initializeDefault.Store;
 class StageChannelSelfRichPresenceStore extends Store {

@@ -1,52 +1,17 @@
-// === Module 17095: useSubscriptionRole ===
+// === Module 17149: useSubscriptionRole ===
 
-// Module 17095 (useSubscriptionRole)
-import GuildRoleStore from "GuildRoleStore" /* 4911 */;
+// Module 17149 (useSubscriptionRole)
+import GuildRoleStore from "GuildRoleStore" /* 4915 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useSubscriptionRole.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscriptionRole(arg0, arg1) {
+export default function useSubscriptionRole(arg0, editStateId) {
   _require = arg0;
-  const cResult = require("c").c(4);
-  const obj = require("c");
-  const tmp = _require;
-  const tmp2 = subscriptionListing;
-  subscriptionListing = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(arg1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildRoleStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === arg0) {
-    if (cResult[2] === subscriptionListing) {
-      let tmp7 = cResult[3];
-    }
-    return tmp(tmp2[4]).useStateFromStores(first, tmp7);
-  }
-  const fn = function l() {
-    let role;
-    if (null != closure_0) {
-      if (null != subscriptionListing) {
-        role = GuildRoleStore.getRole(tmp, tmp3.role_id);
-      }
-    }
-    return role;
-  };
-  cResult[1] = arg0;
-  cResult[2] = subscriptionListing;
-  cResult[3] = fn;
-  tmp7 = fn;
-  const obj2 = require("GuildRoleSubscriptionsHooks");
-}) : (function useSubscriptionRole(arg0, arg1) {
-  _require = arg0;
-  dependencyMap = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(arg1);
+  dependencyMap = require("GuildRoleSubscriptionsHooks").useSubscriptionListing(editStateId);
   const obj = require("GuildRoleSubscriptionsHooks");
   const items = [GuildRoleStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -58,4 +23,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSubsc
     }
     return role;
   });
-});
+};

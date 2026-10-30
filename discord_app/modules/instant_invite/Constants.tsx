@@ -1,7 +1,6 @@
-// === Module 7867: Constants ===
+// === Module 7872: Constants ===
 
-// Module 7867 (Constants)
-import Constants from "Constants" /* 1095 */;
+// Module 7872 (Constants)
 import size from "module_2" /* 2 */;
 
 const obj = { GUILD: 0, [0]: "GUILD", GROUP_DM: 1, [1]: "GROUP_DM", FRIEND: 2, [2]: "FRIEND" };
@@ -12,5 +11,4 @@ const result = size.fileFinishedImporting("modules/instant_invite/Constants.tsx"
 export const InviteSendStates = { SENDING: "sending", SENT: "sent", ERROR: "error" };
 export const InviteTypes = obj;
 export const DESKTOP_APP_REDIRECTABLE_INVITE_TYPES = new Set(items);
-export const InviteTargetTypes = Constants.InviteTargetTypes;
 export const InstantInviteModalPages = { MAIN: "main", SETTINGS: "settings" };

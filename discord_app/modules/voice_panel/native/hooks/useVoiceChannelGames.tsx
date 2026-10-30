@@ -1,115 +1,20 @@
-// === Module 19115: useVoiceChannelGames ===
+// === Module 19219: useVoiceChannelGames ===
 
-// Module 19115 (useVoiceChannelGames)
-import useGameProfileObscured from "useGameProfileObscured" /* 8640 */;
+// Module 19219 (useVoiceChannelGames)
+import useGameProfileObscured from "useGameProfileObscured" /* 8674 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5750 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
-import UserStore from "UserStore" /* 1389 */;
+import PresenceStore from "PresenceStore" /* 5756 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoiceChannelGames.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelGames(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const cResult = require("c").c(10);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AuthenticationStore, SelfPresenceStore, PresenceStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === arg1) {
-    if (cResult[2] === arg0) {
-      let tmp10 = cResult[3];
-      let tmp11 = cResult[4];
-    }
-    const stateFromStoresArray = tmp2(504).useStateFromStoresArray(first, tmp10, tmp11);
-    const tmp2Result = tmp2(504);
-    const getGamesForAppIds = tmp2(9261).useGetGamesForAppIds(stateFromStoresArray);
-    const _Symbol = Symbol;
-    if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const items1 = [UserStore];
-      const fn2 = function _() {
-        currentUser = currentUser.getCurrentUser();
-        let nsfwAllowed;
-        if (currentUser != null) {
-          nsfwAllowed = currentUser.nsfwAllowed;
-        }
-        return nsfwAllowed;
-      };
-      cResult[5] = items1;
-      cResult[6] = fn2;
-      let tmp17 = fn2;
-      let tmp16 = items1;
-    } else {
-      tmp16 = cResult[5];
-      tmp17 = cResult[6];
-    }
-    const tmp2Result3 = tmp2(9261);
-    const stateFromStores = tmp2(504).useStateFromStores(tmp16, tmp17);
-    if (cResult[7] === getGamesForAppIds) {
-      if (cResult[8] === stateFromStores) {
-        let tmp22 = cResult[9];
-      }
-      return tmp22;
-    }
-    const items2 = [];
-    const _Set = Set;
-    let set = new Set();
-    for (const item10074 of getGamesForAppIds) {
-      let obj6 = require("useGameProfileObscured");
-      let result = obj6.isGameProfileObscured(item10074, stateFromStores);
-      if (!result) {
-        result = set.has(item10074.id);
-      }
-      if (!result) {
-        let addResult = set.add(item10074.id);
-        let arr = items2.push(item10074.id);
-      }
-      continue;
-    }
-    cResult[7] = getGamesForAppIds;
-    cResult[8] = stateFromStores;
-    cResult[9] = items2;
-    tmp22 = items2;
-    const tmp2Result4 = tmp2(504);
-  }
-  const fn = function f() {
-    const id = AuthenticationStore.getId();
-    const tmp4 = dependencyMap[Symbol.iterator]();
-    while (true) {
-      if (tmp4 === undefined) {
-        let _Array = Array;
-        return Array.from(set);
-      } else {
-        let user = tmp6.user;
-        if (user.id === id) {
-          let activities = SelfPresenceStore.getActivities();
-        } else {
-          activities = PresenceStore.getActivities(tmp8.id, closure_1);
-        }
-        let tmp15 = activities[Symbol.iterator]();
-      }
-    }
-    set = new Set();
-  };
-  const items3 = [arg0, arg1];
-  cResult[1] = arg1;
-  cResult[2] = arg0;
-  cResult[3] = fn;
-  cResult[4] = items3;
-  tmp11 = items3;
-  tmp10 = fn;
-  const obj = require("c");
-}) : (function useVoiceChannelGames(arg0, arg1) {
+export default function useVoiceChannelGames(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   let items = [AuthenticationStore, SelfPresenceStore, PresenceStore];
@@ -163,4 +68,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoice
     }
     return items;
   }, items3);
-});
+};

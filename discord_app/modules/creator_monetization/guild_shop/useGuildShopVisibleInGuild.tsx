@@ -1,20 +1,17 @@
-// === Module 7422: useGuildShopVisibleInGuild ===
+// === Module 7430: useGuildShopVisibleInGuild ===
 
-// Module 7422 (useGuildShopVisibleInGuild)
-import c from "c" /* 576 */;
-import Constants from "Constants" /* 1084 */;
-import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 7410 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7413 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 7418 */;
-import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 7423 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 7430 (useGuildShopVisibleInGuild)
+import Constants from "Constants" /* 1072 */;
+import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 7418 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7421 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 7426 */;
+import useGuildShopPreviewVisible from "useGuildShopPreviewVisible" /* 7431 */;
 import size from "module_2" /* 2 */;
 
 const GuildFeatures = Constants.GuildFeatures;
 let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
 
-export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildShopVisibleInGuild(id) {
-  c.c(5);
+export function useGuildShopVisibleInGuild(id) {
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -34,27 +31,7 @@ export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEna
   }
   const shouldHideGuildPurchaseEntryPoints = CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
   return false;
-}) : (function useGuildShopVisibleInGuild(id) {
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(id);
-  let id1;
-  if (id != null) {
-    id1 = id.id;
-  }
-  const roleSubscriptionsVisibleInGuild = useRoleSubscriptionsVisibleInGuild.useRoleSubscriptionsVisibleInGuild(id1);
-  const tmpResult = useRoleSubscriptionsVisibleInGuild;
-  const guildShopPreviewVisible = useGuildShopPreviewVisible.useGuildShopPreviewVisible(id);
-  const tmpResult3 = useGuildShopPreviewVisible;
-  let id2;
-  if (id != null) {
-    id2 = id.id;
-  }
-  const shouldHideGuildPurchaseEntryPoints = CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
-  return false;
-});
+}
 export function isGuildShopVisibleInGuild(id, unsafeMutableRoles) {
   id = undefined;
   if (id != null) {

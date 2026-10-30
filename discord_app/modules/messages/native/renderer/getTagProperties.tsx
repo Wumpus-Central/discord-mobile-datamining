@@ -1,12 +1,12 @@
-// === Module 8459: getTagProperties ===
+// === Module 8493: getTagProperties ===
 
-// Module 8459 (getTagProperties)
+// Module 8493 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
-import util from "util" /* 1125 */;
-import MessageConstants from "MessageConstants" /* 5010 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8460 */;
-import isCrosspostDefault from "isCrosspost" /* 8462 */;
-import _modDef8464 from "module_8464" /* 8464 */;
+import util from "util" /* 1114 */;
+import MessageConstants from "MessageConstants" /* 5014 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8494 */;
+import isCrosspostDefault from "isCrosspost" /* 8496 */;
+import _modDef8498 from "module_8498" /* 8498 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8464).uri;
+            uri = Image.resolveAssetSource(_modDef8498).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "toCharArray$esjava$1", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "horse_racing_tone3", opTagBackgroundColor: 172800000 };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "isArray", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: null, opTagBackgroundColor: "Boolean" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

@@ -1,31 +1,37 @@
-// === Module 13199: ChannelTabsActionCreators ===
+// === Module 13350: ChannelTabsActionCreators ===
 
-// Module 13199 (ChannelTabsActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import router_utils from "router_utils" /* 1111 */;
-import transitionToChannel from "transitionToChannel" /* 5745 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5748 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 13200 */;
+// Module 13350 (ChannelTabsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import router_utils from "router_utils" /* 1100 */;
+import transitionToChannel from "transitionToChannel" /* 5751 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5754 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 13348 */;
 
 require = fn;
-function navigateToTabLocation(found) {
-  if ("route" === found.kind) {
-    router_utils.transitionTo(found.routePath);
+function navigateToTabLocation(activeTab) {
+  if (flag === undefined) {
+    flag = false;
+  }
+  if ("route" === activeTab.kind) {
+    router_utils.transitionTo(activeTab.routePath);
   } else {
-    ({ channelId, guildId } = found);
+    ({ channelId, guildId } = activeTab);
+    if (flag === undefined) {
+      flag = false;
+    }
     const channel = ChannelStore.getChannel(channelId);
-    if (tmp) {
-      ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, true);
+    if (tmp3) {
+      ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, !flag);
     }
     if (null != guildId) {
       router_utils.transitionTo(Routes.CHANNEL(guildId, channelId), { openChannel: true });
     } else {
       transitionToChannel.transitionToChannel(channelId);
     }
-    tmp = null != channel && channel.isGuildVocal();
+    tmp3 = null != channel && channel.isGuildVocal();
   }
 }
 function openChannelTabActive(id, guildId) {
@@ -126,8 +132,54 @@ function navigateActiveTabHistory(arg0) {
     return ChannelTabsStore.Passthrough;
   }
 }
-const Routes = fn(1084).Routes;
-const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
+function selectChannelTab(id) {
+  closure_0 = id;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const tabs = ChannelTabsStore.getTabs();
+  const found = tabs.find((id) => id.id === closure_0);
+  if (null != found) {
+    if (ChannelTabsStore.getActiveTabId() !== id) {
+      const obj2 = { type: "CHANNEL_TABS_SET_ACTIVE", tabId: id };
+      DispatcherDefault.dispatch(obj2);
+      navigateToTabLocation(found, flag);
+    } else if ("channel" === found.kind) {
+      if (SelectedChannelStore.getCurrentlySelectedChannelId() !== found.channelId) {
+        ({ channelId, guildId } = found);
+        let flag4 = flag;
+        if (flag === undefined) {
+          flag4 = false;
+        }
+        const channel = ChannelStore.getChannel(channelId);
+        if (tmp9) {
+          ChannelRTCActionCreatorsDefault.updateChatOpen(channelId, !flag4);
+        }
+        if (null != guildId) {
+          router_utils.transitionTo(Routes.CHANNEL(guildId, channelId), { openChannel: true });
+        } else {
+          transitionToChannel.transitionToChannel(channelId);
+        }
+        tmp9 = null != channel && channel.isGuildVocal();
+      } else {
+        let tmp2 = flag;
+        if (flag) {
+          const channel1 = ChannelStore.getChannel(found.channelId);
+          let isGuildVocalResult;
+          if (channel1 != null) {
+            isGuildVocalResult = channel1.isGuildVocal();
+          }
+          tmp2 = true === isGuildVocalResult;
+        }
+        if (tmp2) {
+          ChannelRTCActionCreatorsDefault.updateChatOpen(found.channelId, false);
+        }
+      }
+    }
+  }
+}
+const Routes = fn(1072).Routes;
+const isStaticChannelRoute = fn(4865).isStaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");
@@ -195,31 +247,13 @@ export function goForwardInActiveTab() {
 export function setChannelTabsEnabled(enabled) {
   DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled });
 }
-export function selectChannelTab(tabId) {
-  closure_0 = tabId;
-  const tabs = ChannelTabsStore.getTabs();
-  const found = tabs.find((id) => id.id === id);
-  if (tmp2) {
-    const obj3 = { type: "CHANNEL_TABS_SET_ACTIVE", tabId };
-    DispatcherDefault.dispatch(obj3);
-    navigateToTabLocation(found);
-  }
-  tmp2 = null != found && ChannelTabsStore.getActiveTabId() !== tabId;
-}
+export { selectChannelTab };
 export function cycleChannelTab(arg0) {
   const tabs = ChannelTabsStore.getTabs();
   if (tabs.length > 1) {
     const findIndexResult = tabs.findIndex((id) => id.id === activeTabId.getActiveTabId());
     if (-1 !== findIndexResult) {
-      const id = tabs[(findIndexResult + arg0 + tabs.length) % tabs.length].id;
-      const tabs1 = ChannelTabsStore.getTabs();
-      const found = tabs1.find((id) => id.id === id);
-      if (tmp) {
-        const obj3 = { type: "CHANNEL_TABS_SET_ACTIVE", tabId: id };
-        DispatcherDefault.dispatch(obj3);
-        navigateToTabLocation(found);
-      }
-      tmp = null != found && ChannelTabsStore.getActiveTabId() !== id;
+      selectChannelTab(tabs[(findIndexResult + arg0 + tabs.length) % tabs.length].id);
     }
   }
 }

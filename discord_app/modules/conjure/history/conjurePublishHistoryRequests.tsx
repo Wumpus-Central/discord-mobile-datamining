@@ -1,7 +1,7 @@
-// === Module 12340: conjurePublishHistoryRequests ===
+// === Module 12502: conjurePublishHistoryRequests ===
 
-// Module 12340 (conjurePublishHistoryRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
+// Module 12502 (conjurePublishHistoryRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10929 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

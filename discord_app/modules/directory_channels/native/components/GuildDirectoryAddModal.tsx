@@ -1,175 +1,112 @@
-// === Module 13660: GuildDirectoryAddModal ===
+// === Module 13807: GuildDirectoryAddModal ===
 
-// Module 13660 (GuildDirectoryAddModal)
-import c from "c" /* 576 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import useInitialValueDefault from "useInitialValue" /* 5636 */;
-import NavigatorHeader from "NavigatorHeader" /* 6984 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7281 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13659 */;
-import GuildDirectoryCreateOrAddDefault from "GuildDirectoryCreateOrAdd" /* 13662 */;
-import GuildDirectoryCreateOrAddDescriptionDefault from "GuildDirectoryCreateOrAddDescription" /* 13670 */;
-import GuildDirectoryTemplatesDefault from "GuildDirectoryTemplates" /* 13674 */;
-import CreateGuildContainerDefault from "CreateGuildContainer" /* 13684 */;
+// Module 13807 (GuildDirectoryAddModal)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
+import useInitialValueDefault from "useInitialValue" /* 5607 */;
+import NavigatorHeader from "NavigatorHeader" /* 6992 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7286 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 13806 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-function getScreens() {
-  const obj = {};
-  const obj2 = {
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
-    headerLeft: NavigatorHeader.getHeaderCloseButton(GuildDirectoryAddModalActionCreatorsDefault.close),
-    headerTitle() {
-      return null;
-    },
-    render(arg0) {
-      const merged = Object.assign(arg0);
-      return jsx(GuildDirectoryCreateOrAddDefault, {});
-    }
-  };
-  obj[GuildDirectoryCreate.CREATE_OR_ADD] = obj2;
-  obj[GuildDirectoryCreate.DESCRIPTION] = {
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
-    headerTitle() {
-      return null;
-    },
-    render(arg0) {
-      const merged = Object.assign(arg0);
-      return jsx(GuildDirectoryCreateOrAddDescriptionDefault, {});
-    }
-  };
-  const obj4 = {
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
-    headerTitle() {
-      return null;
-    },
-    render(arg0) {
-      const merged = Object.assign(arg0);
-      return jsx(GuildDirectoryCreateOrAddDescriptionDefault, {});
-    }
-  };
-  obj[GuildDirectoryCreate.TEMPLATES] = {
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
-    headerTitle() {
-      return null;
-    },
-    render(arg0) {
-      const merged = Object.assign(arg0);
-      return jsx(GuildDirectoryTemplatesDefault, {});
-    }
-  };
-  const obj5 = {
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
-    headerTitle() {
-      return null;
-    },
-    render(arg0) {
-      const merged = Object.assign(arg0);
-      return jsx(GuildDirectoryTemplatesDefault, {});
-    }
-  };
-  obj[GuildDirectoryCreate.CREATE] = {
-    headerTitle() {
-      return null;
-    },
-    fullscreen: true,
-    impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
-    render(arg0) {
-      const merged = Object.assign(arg0);
-      return jsx(CreateGuildContainerDefault, {});
-    }
-  };
-  return obj;
-}
-const GuildDirectoryCreate = fn(13661).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(13808).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
-let obj2 = { safeArea: { marginTop: fn(5305).NAV_BAR_HEIGHT, flex: 1 } };
+const createStyles = fn(5009);
+let obj2 = { safeArea: { marginTop: fn(5581).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
-fn(558);
-let obj3 = { marginTop: fn(5305).NAV_BAR_HEIGHT, flex: 1 };
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryAddModalScreen(children) {
-  const cResult = c.c(3);
-  children = children.children;
-  const tmp4 = closure_5();
-  if (cResult[0] === children) {
-    if (cResult[1] === tmp4.safeArea) {
-      let tmp5 = cResult[2];
-    }
-    return tmp5;
-  }
-  const tmp6 = jsx(common_SafeAreaView.SafeAreaPaddingView, { top: true, style: tmp4.safeArea, children });
-  cResult[0] = children;
-  cResult[1] = tmp4.safeArea;
-  cResult[2] = tmp6;
-  tmp5 = tmp6;
-  const obj2 = { top: true, style: tmp4.safeArea, children };
-}) : (function GuildDirectoryAddModalScreen(children) {
-  const tmp = closure_5();
-  return jsx(common_SafeAreaView.SafeAreaPaddingView, { top: true, style: closure_5().safeArea, children: children.children });
-});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryAddModal(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(6);
-  if (cResult[0] !== arg0) {
-    const fn = function s() {
-      const obj = { name: GuildDirectoryCreate.CREATE_OR_ADD, params: null };
-      const merged = Object.assign(closure_0);
-      obj.params = {};
-      const items = [obj];
-      return { screens: getScreens(), initialStack: items };
-    };
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-  }
-  let obj = require("c");
-  ({ screens, initialStack } = useInitialValueDefault(tmp4));
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1125).intl;
-    const stringResult = intl.string(tmp(1125).t["13/7kX"]);
-    cResult[2] = stringResult;
-    let tmp6 = stringResult;
-  } else {
-    tmp6 = cResult[2];
-  }
-  if (cResult[3] === initialStack) {
-    if (cResult[4] === screens) {
-      let tmp8 = cResult[5];
-    }
-    return tmp8;
-  }
-  const tmp9 = jsx(require("Navigator").Navigator, { screens, initialRouteStack: initialStack, headerBackTitle: tmp6 });
-  cResult[3] = initialStack;
-  cResult[4] = screens;
-  cResult[5] = tmp9;
-  tmp8 = tmp9;
-  const tmp5 = useInitialValueDefault(tmp4);
-}) : (function GuildDirectoryAddModal(arg0) {
+export default function GuildDirectoryAddModal(arg0) {
   _require = arg0;
   ({ screens, initialStack } = useInitialValueDefault(() => {
     const obj = { name: GuildDirectoryCreate.CREATE_OR_ADD, params: null };
-    const merged = Object.assign(closure_0);
+    let merged = Object.assign(closure_0);
     obj.params = {};
     const items = [obj];
-    return { screens: getScreens(), initialStack: items };
+    const obj3 = { screens: null, initialStack: null };
+    const obj4 = {};
+    const obj5 = {
+      fullscreen: true,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
+      headerLeft: NavigatorHeader.getHeaderCloseButton(GuildDirectoryAddModalActionCreatorsDefault.close),
+      headerTitle() {
+        return null;
+      },
+      render(arg0) {
+        const merged = Object.assign(arg0);
+        return closure_1_4(closure_1_1(13809), {});
+      }
+    };
+    obj4[GuildDirectoryCreate.CREATE_OR_ADD] = obj5;
+    const obj2 = {};
+    obj4[GuildDirectoryCreate.DESCRIPTION] = {
+      fullscreen: true,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
+      headerTitle() {
+        return null;
+      },
+      render(arg0) {
+        const merged = Object.assign(arg0);
+        return closure_1_4(closure_1_1(13817), {});
+      }
+    };
+    const obj7 = {
+      fullscreen: true,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
+      headerTitle() {
+        return null;
+      },
+      render(arg0) {
+        const merged = Object.assign(arg0);
+        return closure_1_4(closure_1_1(13817), {});
+      }
+    };
+    obj4[GuildDirectoryCreate.TEMPLATES] = {
+      fullscreen: true,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
+      headerTitle() {
+        return null;
+      },
+      render(arg0) {
+        const merged = Object.assign(arg0);
+        return closure_1_4(closure_1_1(13821), {});
+      }
+    };
+    const obj8 = {
+      fullscreen: true,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
+      headerTitle() {
+        return null;
+      },
+      render(arg0) {
+        const merged = Object.assign(arg0);
+        return closure_1_4(closure_1_1(13821), {});
+      }
+    };
+    obj4[GuildDirectoryCreate.CREATE] = {
+      headerTitle() {
+        return null;
+      },
+      fullscreen: true,
+      impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
+      render(arg0) {
+        const merged = Object.assign(arg0);
+        return closure_1_4(closure_1_1(13831), {});
+      }
+    };
+    obj3.screens = obj4;
+    obj3.initialStack = items;
+    return obj3;
   }));
   let obj = { screens, initialRouteStack: initialStack, headerBackTitle: null };
   const intl = require("util").intl;
   obj.headerBackTitle = intl.string(require("util").t["13/7kX"]);
   return jsx(require("Navigator").Navigator, { screens, initialRouteStack: initialStack, headerBackTitle: null });
-});
-export const GuildDirectoryAddModalScreen = tmp3;
+};
+export function GuildDirectoryAddModalScreen(children) {
+  const tmp = closure_5();
+  return jsx(common_SafeAreaView.SafeAreaPaddingView, { top: true, style: closure_5().safeArea, children: children.children });
+}

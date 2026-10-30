@@ -1,17 +1,14 @@
-// === Module 17382: SummaryReminderNotificationSetting ===
+// === Module 17436: SummaryReminderNotificationSetting ===
 
-// Module 17382 (SummaryReminderNotificationSetting)
-import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import SettingsConstants from "SettingsConstants" /* 8387 */;
-import SummaryReminderNotificationExperiment from "SummaryReminderNotificationExperiment" /* 17383 */;
-import SummaryReminderNotificationUtils from "SummaryReminderNotificationUtils" /* 17384 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 17436 (SummaryReminderNotificationSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import SettingsConstants from "SettingsConstants" /* 8424 */;
+import SummaryReminderNotificationExperiment from "SummaryReminderNotificationExperiment" /* 17437 */;
+import SummaryReminderNotificationUtils from "SummaryReminderNotificationUtils" /* 17438 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -28,6 +25,6 @@ const toggle = SettingBuilders.createToggle({
     return SummaryReminderNotificationExperiment.useSummaryReminderNotificationExperiment("tabsV2Settings").showSettingsToggle;
   }
 });
-const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
 
 export default toggle;

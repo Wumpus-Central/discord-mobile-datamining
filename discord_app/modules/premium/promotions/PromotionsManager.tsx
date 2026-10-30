@@ -1,15 +1,15 @@
-// === Module 19473: PromotionsManager ===
+// === Module 19536: PromotionsManager ===
 
-// Module 19473 (PromotionsManager)
-import PromotionsActionCreators from "PromotionsActionCreators" /* 9624 */;
-import LocaleStore from "LocaleStore" /* 2066 */;
-import SubscriptionStore from "SubscriptionStore" /* 2056 */;
-import PromotionsStore from "PromotionsStore" /* 9583 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+// Module 19536 (PromotionsManager)
+import EntitlementTypes from "EntitlementTypes" /* 1086 */;
+import PromotionsActionCreators from "PromotionsActionCreators" /* 9648 */;
+import LocaleStore from "LocaleStore" /* 2063 */;
+import SubscriptionStore from "SubscriptionStore" /* 2053 */;
+import PromotionsStore from "PromotionsStore" /* 9606 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
-const EntitlementTypes = fn(1084).EntitlementTypes;
-const SubscriptionTypes = fn(1095).SubscriptionTypes;
+const SubscriptionTypes = fn(1083).SubscriptionTypes;
 class PromotionsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -104,7 +104,7 @@ prototype["onOfferUpdated"] = function onOfferUpdated() {
 };
 prototype["onVCRedeemed"] = function onVCRedeemed(entitlements) {
   entitlements = entitlements.entitlements;
-  if (entitlements.some((type) => type.type === constants.FRACTIONAL_REDEMPTION)) {
+  if (entitlements.some((type) => type.type === EntitlementTypes.EntitlementTypes.FRACTIONAL_REDEMPTION)) {
     const result = PromotionsActionCreators.maybeFetchActivePromotions(false);
   }
 };

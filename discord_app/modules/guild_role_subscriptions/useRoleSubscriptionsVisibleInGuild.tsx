@@ -1,12 +1,12 @@
-// === Module 7410: useRoleSubscriptionsVisibleInGuild ===
+// === Module 7418: useRoleSubscriptionsVisibleInGuild ===
 
-// Module 7410 (useRoleSubscriptionsVisibleInGuild)
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7411 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7412 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 7418 */;
-import ImpersonateStore from "ImpersonateStore" /* 4910 */;
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 7418 (useRoleSubscriptionsVisibleInGuild)
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7419 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 7420 */;
+import ImpersonateStore from "ImpersonateStore" /* 4914 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
+const require = globalThis.__r;
 const useHasRoleSubscriptionInGuildDefault = useHasRoleSubscriptionInGuild;
 
 require = fn;
@@ -17,7 +17,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
     tmp = items;
   }
   [obj, obj2] = tmp;
-  guild = obj.getGuild(id1);
+  const guild = obj.getGuild(id1);
   if (null == guild) {
     return false;
   } else {
@@ -34,68 +34,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(id1) {
     return isViewingServerShopResult;
   }
 }
-const GuildFeatures = fn(1084).GuildFeatures;
-let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRoleSubscriptionsVisibleInGuild(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  const obj = require("c");
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [GuildStore, ImpersonateStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function t() {
-      const items = [GuildStore, ImpersonateStore];
-      return computeCanEveryoneInGuildSeeRoleSubscriptions(closure_0, items);
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
-  } else {
-    tmp8 = cResult[2];
-    tmp9 = cResult[3];
-  }
-  const tmp4 = useHasRoleSubscriptionInGuildDefault(arg0);
-  let stateFromStores = require("initialize").useStateFromStores(first, tmp8, tmp9);
-  const tmpResult = require("initialize");
-  const shouldHideGuildPurchaseEntryPoints = require("CreatorMonetizationRestrictionsHooks").useShouldHideGuildPurchaseEntryPoints(arg0).shouldHideGuildPurchaseEntryPoints;
-  let tmp11 = !shouldHideGuildPurchaseEntryPoints;
-  if (!shouldHideGuildPurchaseEntryPoints) {
-    if (!stateFromStores) {
-      stateFromStores = tmp4;
-    }
-    tmp11 = stateFromStores;
-  }
-  return tmp11;
-}) : (function useRoleSubscriptionsVisibleInGuild(arg0) {
-  _require = arg0;
-  const tmp = useHasRoleSubscriptionInGuildDefault(arg0);
-  let items = [GuildStore, ImpersonateStore];
-  const items1 = [arg0];
-  let stateFromStores = require("initialize").useStateFromStores(items, () => {
-    const items = [GuildStore, ImpersonateStore];
-    return computeCanEveryoneInGuildSeeRoleSubscriptions(closure_0, items);
-  }, items1);
-  const obj = require("initialize");
-  const shouldHideGuildPurchaseEntryPoints = require("CreatorMonetizationRestrictionsHooks").useShouldHideGuildPurchaseEntryPoints(arg0).shouldHideGuildPurchaseEntryPoints;
-  let tmp3 = !shouldHideGuildPurchaseEntryPoints;
-  if (!shouldHideGuildPurchaseEntryPoints) {
-    if (!stateFromStores) {
-      stateFromStores = tmp;
-    }
-    tmp3 = stateFromStores;
-  }
-  return tmp3;
-});
-let closure_7 = tmp2;
-ReactCompilerGating = fn(558);
+const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
 
@@ -106,27 +45,53 @@ export function areRoleSubscriptionsVisibleInGuild(id1, unsafeMutableRoles) {
   }
   return hasRoleSubscriptionsInGuild;
 }
-export const useRoleSubscriptionsVisibleInGuild = tmp2;
-export const useShowRoleSubscriptionsInChannelList = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowRoleSubscriptionsInChannelList(arg0) {
-  let tmp = closure_7(arg0);
-  const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(arg0);
-  if (tmp) {
+export function useRoleSubscriptionsVisibleInGuild(id1) {
+  _require = id1;
+  const tmp = useHasRoleSubscriptionInGuildDefault(id1);
+  const items = [GuildStore, ImpersonateStore];
+  const items1 = [id1];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const items = [GuildStore, ImpersonateStore];
+    return computeCanEveryoneInGuildSeeRoleSubscriptions(closure_0, items);
+  }, items1);
+  const obj = require("initialize");
+  const shouldHideGuildPurchaseEntryPoints = require("CreatorMonetizationRestrictionsHooks").useShouldHideGuildPurchaseEntryPoints(id1).shouldHideGuildPurchaseEntryPoints;
+  let tmp3 = !shouldHideGuildPurchaseEntryPoints;
+  if (!shouldHideGuildPurchaseEntryPoints) {
+    if (!stateFromStores) {
+      stateFromStores = tmp;
+    }
+    tmp3 = stateFromStores;
+  }
+  return tmp3;
+}
+export function useShowRoleSubscriptionsInChannelList(id) {
+  _require = id;
+  const tmp2 = useHasRoleSubscriptionInGuildDefault(id);
+  const tmp3 = _require;
+  let items = [GuildStore, ImpersonateStore];
+  const items1 = [id];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const items = [GuildStore, ImpersonateStore];
+    return computeCanEveryoneInGuildSeeRoleSubscriptions(closure_0, items);
+  }, items1);
+  const obj = require("initialize");
+  const shouldHideGuildPurchaseEntryPoints = require("CreatorMonetizationRestrictionsHooks").useShouldHideGuildPurchaseEntryPoints(id).shouldHideGuildPurchaseEntryPoints;
+  let tmp5 = !shouldHideGuildPurchaseEntryPoints;
+  if (!shouldHideGuildPurchaseEntryPoints) {
+    if (!stateFromStores) {
+      stateFromStores = tmp2;
+    }
+    tmp5 = stateFromStores;
+  }
+  const obj2 = require("CreatorMonetizationRestrictionsHooks");
+  const guildEligibleForGuildProducts = tmp3(7426).useGuildEligibleForGuildProducts(id);
+  if (tmp5) {
     let flag = !guildEligibleForGuildProducts;
     if (guildEligibleForGuildProducts) {
       flag = true;
     }
-    tmp = flag;
+    tmp5 = flag;
   }
-  return tmp;
-}) : (function useShowRoleSubscriptionsInChannelList(arg0) {
-  let tmp = closure_7(arg0);
-  const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(arg0);
-  if (tmp) {
-    let flag = !guildEligibleForGuildProducts;
-    if (guildEligibleForGuildProducts) {
-      flag = true;
-    }
-    tmp = flag;
-  }
-  return tmp;
-});
+  return tmp5;
+}

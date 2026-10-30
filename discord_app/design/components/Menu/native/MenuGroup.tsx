@@ -1,14 +1,14 @@
-// === Module 15737: MenuGroup ===
+// === Module 15777: MenuGroup ===
 
-// Module 15737 (MenuGroup)
-import nativeDefault from "native" /* 587 */;
+// Module 15777 (MenuGroup)
+import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { divider: { marginLeft: 0, height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,13 +24,13 @@ export function MenuGroup(ref) {
   }
   const items = [tmp4, ];
   const Children = ref.Children;
-  items[1] = Children.map(children, (label, arg1) => {
-    let cloneElementResult = label;
+  items[1] = Children.map(children, (icon, arg1) => {
+    let cloneElementResult = icon;
     if (0 === arg1) {
-      cloneElementResult = label;
-      if (noop.isValidElement(label)) {
+      cloneElementResult = icon;
+      if (noop.isValidElement(icon)) {
         const obj2 = { ref };
-        cloneElementResult = noop.cloneElement(label, obj2);
+        cloneElementResult = noop.cloneElement(icon, obj2);
       }
     }
     return cloneElementResult;

@@ -1,15 +1,15 @@
-// === Module 8163: ReportModals ===
+// === Module 8344: ReportModals ===
 
-// Module 8163 (ReportModals)
-import GuildRecordUtils from "GuildRecordUtils" /* 4871 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5749 */;
-import MenuTypes from "MenuTypes" /* 8164 */;
-import showReportModal from "showReportModal" /* 8165 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8167 */;
+// Module 8344 (ReportModals)
+import GuildRecordUtils from "GuildRecordUtils" /* 4872 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5755 */;
+import MenuTypes from "MenuTypes" /* 8345 */;
+import showReportModal from "showReportModal" /* 8346 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8348 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StageInstanceStore from "StageInstanceStore" /* 4862 */;
-import MessageRecord from "MessageRecord" /* 4948 */;
-import UserRecord from "UserRecord" /* 1403 */;
+import StageInstanceStore from "StageInstanceStore" /* 4863 */;
+import MessageRecord from "MessageRecord" /* 4952 */;
+import UserRecord from "UserRecord" /* 1398 */;
 
 require = fn;
 let closure_8 = async function _submitHamReportForFirstDM() {
@@ -65,7 +65,7 @@ let closure_9 = async function _submitReportForInappropriateConversationSafetyAl
     return value;
   })();
 };
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportModals.tsx");
 
@@ -208,7 +208,7 @@ export function showUnauthenticatedReportModalForTida(emailToken, onClose) {
 export function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "Array", channel_id: "Reflect" });
+  const merged = Object.assign({ message_id: "color", channel_id: "Error" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

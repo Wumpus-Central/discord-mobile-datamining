@@ -1,16 +1,14 @@
-// === Module 558: ReactCompilerGating ===
+// === Module 15921: ReactCompilerGating ===
 
-// Module 558 (ReactCompilerGating)
-import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
+// Module 15921 (ReactCompilerGating)
 import size from "module_2" /* 2 */;
 
-const ReactCompilerExperiment = libdiscoreExperiments.ReactCompilerExperiment;
-const cachedEnabled = ReactCompilerExperiment.getCachedEnabled();
+let c0 = false;
 const result = size.fileFinishedImporting("modules/react_compiler/ReactCompilerGating.tsx");
 
 export function isReactCompilerEnabled() {
-  return closure_0;
+  return false;
 }
 export function isReactCompilerBuild() {
-  return true;
+  return c0;
 }

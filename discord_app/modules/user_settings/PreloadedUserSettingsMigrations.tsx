@@ -1,16 +1,16 @@
-// === Module 16202: PreloadedUserSettingsMigrations ===
+// === Module 16242: PreloadedUserSettingsMigrations ===
 
-// Module 16202 (PreloadedUserSettingsMigrations)
+// Module 16242 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import wrappers from "wrappers" /* 1239 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1245 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4840 */;
-import dismissible_content from "dismissible_content" /* 4841 */;
-import HotspotStore2 from "HotspotStore" /* 7368 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import wrappers from "wrappers" /* 1228 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1234 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4841 */;
+import dismissible_content from "dismissible_content" /* 4842 */;
+import HotspotStore2 from "HotspotStore" /* 7375 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7693 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 require = fn;
 function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NOTICE_HUBLINK) {
@@ -37,7 +37,7 @@ function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NO
   }
   return hasHiddenHotspotResult;
 }
-const ChannelNoticeTypes = fn(1084).ChannelNoticeTypes;
+const ChannelNoticeTypes = fn(1072).ChannelNoticeTypes;
 let items = [
   {
     version: 2,
@@ -469,7 +469,7 @@ let items = [
         flag2 = true;
       }
       const Storage2 = Storage4.Storage;
-      value3 = Storage2.get("hidePremiumTier2TrialEnding");
+      let value3 = Storage2.get("hidePremiumTier2TrialEnding");
       if (value3) {
         const NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING = dismissible_content.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING;
         if (null == userContent.userContent) {
@@ -494,7 +494,7 @@ let items = [
         flag2 = true;
       }
       const Storage3 = Storage4.Storage;
-      value4 = Storage3.get("hidePremiumReactivateNotice");
+      let value4 = Storage3.get("hidePremiumReactivateNotice");
       if (value4) {
         const NAGBAR_NOTICE_PREMIUM_REACTIVATE = dismissible_content.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE;
         if (null == userContent.userContent) {

@@ -1,77 +1,21 @@
-// === Module 9021: CreateChannelTypeDescription ===
+// === Module 9034: CreateChannelTypeDescription ===
 
-// Module 9021 (CreateChannelTypeDescription)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import GuildProfileVisibility from "GuildProfileVisibility" /* 6913 */;
-import useGuildProfile from "useGuildProfile" /* 9023 */;
+// Module 9034 (CreateChannelTypeDescription)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import GuildProfileVisibility from "GuildProfileVisibility" /* 6920 */;
+import useGuildProfile from "useGuildProfile" /* 9036 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9022).GuildProfileFetchStatus;
-const ChannelTypes = fn(1084).ChannelTypes;
+const GuildProfileFetchStatus = fn(9035).GuildProfileFetchStatus;
+const ChannelTypes = fn(1072).ChannelTypes;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateChannelTypeDescription(arg0) {
-  let stringResult = dependencyMap;
-  const cResult = c.c(6);
-  ({ guildId, channelType } = arg0);
-  const guildProfile1 = useGuildProfile.useGuildProfile(guildId);
-  ({ guildProfile, fetchGuildProfile } = guildProfile1);
-  let hasItem = null != guildProfile;
-  if (hasItem) {
-    const VISIBLE = GuildProfileVisibility.GuildProfileVisibilitySets.VISIBLE;
-    hasItem = VISIBLE.has(guildProfile.visibility);
-  }
-  let tmp7 = !tmp6;
-  if (guildProfile1.fetchStatus === GuildProfileFetchStatus.FETCHED) {
-    tmp7 = !hasItem;
-  }
-  if (tmp7) {
-    tmp7 = channelType === ChannelTypes.GUILD_ANNOUNCEMENT;
-  }
-  if (cResult[0] !== fetchGuildProfile) {
-    const fn = function c() {
-      fetchGuildProfile();
-    };
-    cResult[0] = fetchGuildProfile;
-    cResult[1] = fn;
-    let tmp9 = fn;
-  } else {
-    tmp9 = cResult[1];
-  }
-  if (cResult[2] === fetchGuildProfile) {
-    if (cResult[3] === guildId) {
-      let tmp10 = cResult[4];
-    }
-    const effect = noop.useEffect(tmp9, tmp10);
-    if (!tmp7) {
-      return null;
-    } else {
-      const _Symbol = Symbol;
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { children: null };
-        const obj4 = { variant: "text-sm/normal", color: "text-subtle", children: null };
-        const intl = util.intl;
-        stringResult = intl.string(util.t["2Ab4Id"]);
-        obj4.children = stringResult;
-        obj3.children = jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: null });
-        const tmp18 = <View>{null}</View>;
-        cResult[5] = tmp18;
-      }
-    }
-  }
-  const items = [guildId, fetchGuildProfile];
-  cResult[2] = fetchGuildProfile;
-  cResult[3] = guildId;
-  cResult[4] = items;
-  tmp10 = items;
-}) : (function CreateChannelTypeDescription(guildId) {
+export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
   const guildProfile1 = useGuildProfile.useGuildProfile(guildId);
@@ -102,4 +46,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateCh
     tmp9 = <View>{null}</View>;
   }
   return tmp9;
-});
+};

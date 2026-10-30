@@ -1,22 +1,23 @@
-// === Module 10719: isListeningOnSpotify ===
+// === Module 10742: isListeningOnSpotify ===
 
-// Module 10719 (isListeningOnSpotify)
-import PlatformsDefault from "Platforms" /* 6561 */;
-import SpotifyConstants from "SpotifyConstants" /* 8868 */;
-import Constants from "Constants" /* 1084 */;
+// Module 10742 (isListeningOnSpotify)
+import Constants from "Constants" /* 1072 */;
+import ActivityTypes from "ActivityTypes" /* 5757 */;
+import PlatformsDefault from "Platforms" /* 6568 */;
+import SpotifyConstants from "SpotifyConstants" /* 8902 */;
 import size from "module_2" /* 2 */;
 
-({ ActivityTypes: c2, PlatformTypes: c3 } = Constants);
+const PlatformTypes = Constants.PlatformTypes;
 const isSpotifyParty = SpotifyConstants.isSpotifyParty;
 const result = size.fileFinishedImporting("modules/activities/utils/isListeningOnSpotify.tsx");
 
 export default function isListeningOnSpotify(type) {
   let tmp = null != type;
   if (tmp) {
-    tmp = type.type === constants.LISTENING;
+    tmp = type.type === ActivityTypes.ActivityTypes.LISTENING;
   }
   if (tmp) {
-    tmp = type.name === PlatformsDefault.get(constants2.SPOTIFY).name;
+    tmp = type.name === PlatformsDefault.get(PlatformTypes.SPOTIFY).name;
   }
   if (tmp) {
     tmp = null != type.party;

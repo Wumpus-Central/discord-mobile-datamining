@@ -1,100 +1,27 @@
-// === Module 13968: useGameServerPerk ===
+// === Module 14100: useGameServerPerk ===
 
-// Module 13968 (useGameServerPerk)
-import util from "util" /* 1125 */;
-import _modDef2994 from "module_2994" /* 2994 */;
-import useGameServerFeaturedGameNamesDefault from "useGameServerFeaturedGameNames" /* 13969 */;
-import _modDef13970 from "module_13970" /* 13970 */;
+// Module 14100 (useGameServerPerk)
+import util from "util" /* 1114 */;
+import _modDef2995 from "module_2995" /* 2995 */;
+import _modDef14102 from "module_14102" /* 14102 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8427 */;
+import GameServerStore from "GameServerStore" /* 8461 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const skuId = fn(5220).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(5219).GuildPowerupType;
-const ReactCompilerGating = fn(558);
+let closure_5 = fn(5226).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(5225).GuildPowerupType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameServerPerk(arg0) {
-  _require = arg0;
-  let tmp9Result = dependencyMap;
-  const cResult = require("c").c(11);
-  const obj = require("c");
-  const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(arg0, "useGameServerPerk");
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GameServerStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function u() {
-      return GameServerStore.getLowestGameCostForGuild(closure_0);
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp7 = fn;
-  } else {
-    tmp7 = cResult[2];
-  }
-  const obj2 = require("GameServerExperiment");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
-  const tmpResult = require("initialize");
-  ({ gameName, gameName2 } = useGameServerFeaturedGameNamesDefault());
-  let tmp11 = null;
-  if (gameServerEnabled) {
-    tmp11 = null;
-    if (null != stateFromStores) {
-      const _Symbol = Symbol;
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1125).intl;
-        const stringResult = intl.string(_modDef2994["B3OfL/"]);
-        cResult[3] = stringResult;
-        let tmp12 = stringResult;
-      } else {
-        tmp12 = cResult[3];
-      }
-      if (cResult[4] === gameName) {
-        if (cResult[5] === gameName2) {
-          let tmp14 = cResult[6];
-        }
-        const _Symbol2 = Symbol;
-        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const items1 = [];
-          cResult[7] = items1;
-          let tmp16 = items1;
-        } else {
-          tmp16 = cResult[7];
-        }
-        if (cResult[8] === stateFromStores) {
-        }
-        const obj3 = { skuId, title: tmp12, description: tmp14, cost: stateFromStores, dependencies: tmp16, type: GuildPowerupType.PERK, animatedImageUrl: _modDef13970, staticImageUrl: null };
-        tmp9Result = _modDef13970;
-        obj3.staticImageUrl = tmp9Result;
-        cResult[8] = stateFromStores;
-        cResult[9] = tmp14;
-        cResult[10] = obj3;
-      }
-      const intl2 = tmp(1125).intl;
-      const obj4 = { gameName, gameName2 };
-      const formatResult = intl2.format(_modDef2994["+UqyGU"], obj4);
-      cResult[4] = gameName;
-      cResult[5] = gameName2;
-      cResult[6] = formatResult;
-      tmp14 = formatResult;
-    }
-  }
-  return tmp11;
-}) : (function useGameServerPerk(arg0) {
-  _require = arg0;
-  const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(arg0, "useGameServerPerk");
+export default function useGameServerPerk(guildId) {
+  _require = guildId;
+  const gameServerEnabled = require("GameServerExperiment").useGameServerEnabled(guildId, "useGameServerPerk");
   let obj = require("GameServerExperiment");
   const items = [gameName2];
   stateFromStores = require("initialize").useStateFromStores(items, () => GameServerStore.getLowestGameCostForGuild(closure_0));
-  const tmp3 = gameServerEnabled(stateFromStores[8])();
+  const tmp3 = gameServerEnabled(stateFromStores[6])();
   const gameName = tmp3.gameName;
   gameName2 = tmp3.gameName2;
   const items1 = [gameServerEnabled, stateFromStores, gameName, gameName2];
@@ -105,18 +32,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
       if (null != stateFromStores) {
         const obj = { skuId, title: null, description: null, cost: null, dependencies: null, type: null, animatedImageUrl: null, staticImageUrl: null };
         const intl = util.intl;
-        obj.title = intl.string(_modDef2994["B3OfL/"]);
+        obj.title = intl.string(_modDef2995["B3OfL/"]);
         const intl2 = util.intl;
         const obj2 = { gameName, gameName2 };
-        obj.description = intl2.format(_modDef2994["+UqyGU"], obj2);
+        obj.description = intl2.format(_modDef2995["+UqyGU"], obj2);
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef13970;
-        obj.staticImageUrl = _modDef13970;
+        obj.animatedImageUrl = _modDef14102;
+        obj.staticImageUrl = _modDef14102;
         tmp = obj;
       }
     }
     return tmp;
   }, items1);
-});
+};

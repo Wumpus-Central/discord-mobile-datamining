@@ -1,8 +1,8 @@
-// === Module 5770: SecureFramesPersistedStore ===
+// === Module 5777: SecureFramesPersistedStore ===
 
-// Module 5770 (SecureFramesPersistedStore)
+// Module 5777 (SecureFramesPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let items = [];
 let persistentCodesEnabled = false;

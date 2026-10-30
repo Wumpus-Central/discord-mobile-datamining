@@ -1,9 +1,9 @@
-// === Module 7833: BountyStore ===
+// === Module 7838: BountyStore ===
 
-// Module 7833 (BountyStore)
+// Module 7838 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AdCreativeType from "AdCreativeType" /* 6775 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AdCreativeType from "AdCreativeType" /* 6782 */;
 
 require = fn;
 function resetStateForDeliveredBounties(items) {
@@ -45,7 +45,7 @@ Object.defineProperty(prototype, "questHomeBounties", {
 prototype["isBountyCompleted"] = function isBountyCompleted(id) {
   return set.has(id);
 };
-prototype["getCompletedBountyCount"] = function getCompletedBountyCount(first1) {
+prototype["getCompletedBountyCount"] = function getCompletedBountyCount(arg0) {
   let num = 0;
   while (tmp !== undefined) {
     if (set.has(tmp2.id)) {

@@ -1,8 +1,8 @@
-// === Module 8461: PublicGuildsConstants ===
+// === Module 8495: PublicGuildsConstants ===
 
-// Module 8461 (PublicGuildsConstants)
-import Constants from "Constants" /* 1084 */;
-import BigFlagUtils from "BigFlagUtils" /* 1096 */;
+// Module 8495 (PublicGuildsConstants)
+import Constants from "Constants" /* 1072 */;
+import BigFlagUtils from "BigFlagUtils" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const items = [, , , , , , , , , , , , , ];

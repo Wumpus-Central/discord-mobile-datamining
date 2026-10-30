@@ -1,11 +1,11 @@
-// === Module 4956: EmojiPackStore ===
+// === Module 4960: EmojiPackStore ===
 
-// Module 4956 (EmojiPackStore)
+// Module 4960 (EmojiPackStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DefaultEmojisExperiment2 from "DefaultEmojisExperiment" /* 4957 */;
-import emojiPacksFromServer from "emojiPacksFromServer" /* 4958 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DefaultEmojisExperiment2 from "DefaultEmojisExperiment" /* 4961 */;
+import emojiPacksFromServer from "emojiPacksFromServer" /* 4962 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1247 */;
 
 require = fn;
 function handleExperimentChange() {

@@ -1,15 +1,15 @@
-// === Module 14075: NUFActionCreators ===
+// === Module 14223: NUFActionCreators ===
 
-// Module 14075 (NUFActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6731 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14050 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14054 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 14157 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14160 */;
+// Module 14223 (NUFActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14198 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14202 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 14304 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14307 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
-import UserStore from "UserStore" /* 1389 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp25) {
         c3 = tmp;
@@ -95,11 +95,11 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(14047);
+const ContactSyncModalStore = fn(14195);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
-let closure_10 = fn(14076).NUF_DISCOVERABILITY_MODAL_KEY;
-const PlatformTypes = fn(1084).PlatformTypes;
-let closure_12 = fn(7133).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_10 = fn(14224).NUF_DISCOVERABILITY_MODAL_KEY;
+const PlatformTypes = fn(1072).PlatformTypes;
+let closure_12 = fn(7141).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 
@@ -136,8 +136,8 @@ export function transitionToHubEmailConnectionModal(SLIDE_IN, arg1) {
     flag = false;
   }
   HubEmailConnectionModalActionCreatorsDefault.open({
-    onCloseExtra(invite) {
-      if (invite) {
+    onCloseExtra(arg0) {
+      if (arg0) {
         const result = nuf_NUFActionCreators.setNewUserFlowCompleted();
       } else {
         DispatcherDefault.dispatch({ type: "ONBOARDING_STEP" });

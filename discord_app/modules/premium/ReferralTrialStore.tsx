@@ -1,11 +1,11 @@
-// === Module 7620: ReferralTrialStore ===
+// === Module 7625: ReferralTrialStore ===
 
-// Module 7620 (ReferralTrialStore)
+// Module 7625 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageTypes from "MessageTypes" /* 1100 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7621 */;
-import UserStore from "UserStore" /* 1389 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import MessageTypes from "MessageTypes" /* 1089 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7626 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 function emitChanges() {
@@ -43,7 +43,7 @@ function handleLoadMessages(messages) {
     return false;
   });
 }
-const NOOP_NULL = fn(1084).NOOP_NULL;
+const NOOP_NULL = fn(1072).NOOP_NULL;
 let c4 = null;
 let set = new Set();
 let map = new Map();

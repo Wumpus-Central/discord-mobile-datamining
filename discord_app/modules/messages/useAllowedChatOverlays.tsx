@@ -1,16 +1,15 @@
-// === Module 11117: useAllowedChatOverlays ===
+// === Module 11322: useAllowedChatOverlays ===
 
-// Module 11117 (useAllowedChatOverlays)
-import useStateFromStores from "useStateFromStores" /* 573 */;
-import c from "c" /* 576 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4926 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5667 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+// Module 11322 (useAllowedChatOverlays)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4930 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 5673 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 require = fn;
-const ChatOverlays = fn(11115).ChatOverlays;
-const ActivityPanelModes = fn(5646).ActivityPanelModes;
+const ChatOverlays = fn(11320).ChatOverlays;
+const ActivityPanelModes = fn(5652).ActivityPanelModes;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: null };
 let items = [, , ];
@@ -29,57 +28,10 @@ obj[ActivityPanelModes.PIP] = items3;
 const items4 = [, , ];
 ({ NEW_MESSAGES: arr5[0], OPT_IN_CHANNEL: arr5[1], SUMMARIES: arr5[2] } = ChatOverlays);
 obj[ActivityPanelModes.ACTIVITY_POPOUT_WINDOW] = items4;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAllowedChatOverlays() {
-  obj = c;
-  const cResult = obj.c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [EmbeddedActivitiesStore];
-    class E {
-      constructor() {
-        return closure_1_3.getCurrentEmbeddedActivity();
-      }
-    }
-    cResult[0] = items;
-    cResult[1] = E;
-    tmp4 = items;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  const stateFromStores = useStateFromStores.useStateFromStores(tmp4, E);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [EmbeddedActivitiesStore];
-    class E {
-      constructor() {
-        return closure_1_3.getCurrentEmbeddedActivity();
-      }
-    }
-    cResult[2] = items1;
-    cResult[3] = tmp11;
-    let tmp9 = tmp11;
-    let tmp8 = items1;
-  } else {
-    tmp8 = cResult[2];
-    tmp9 = cResult[3];
-  }
-  const tmpResult = useStateFromStores;
-  const stateFromStores1 = useStateFromStores.useStateFromStores(tmp8, tmp9);
-  embeddedActivityLocationUtils;
-  if (stateFromStores != null) {
-    const _location = stateFromStores.location;
-  }
-  if (undefined !== stateFromStores) {
-    class E {
-      constructor() {
-        return closure_1_3.getCurrentEmbeddedActivity();
-      }
-    }
-  }
-  const tmpResult3 = useStateFromStores;
-}) : (function useAllowedChatOverlays() {
+export default function useAllowedChatOverlays() {
   obj = useStateFromStores;
   const items = [EmbeddedActivitiesStore];
   const stateFromStores = obj.useStateFromStores(items, () => EmbeddedActivitiesStore.getCurrentEmbeddedActivity());
@@ -96,4 +48,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAllow
     return tmp9;
   }
   tmp9 = obj[no_text_activity];
-});
+};

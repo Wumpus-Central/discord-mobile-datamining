@@ -1,15 +1,14 @@
-// === Module 14287: MessageRemindersCustomDurationModal ===
+// === Module 11149: MessageRemindersCustomDurationModal ===
 
-// Module 14287 (MessageRemindersCustomDurationModal)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5014 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import Pressables from "Pressables" /* 6968 */;
-import HeaderShared from "HeaderShared" /* 9765 */;
+// Module 11149 (MessageRemindersCustomDurationModal)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1889 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5018 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import HeaderActionButton from "HeaderActionButton" /* 7552 */;
+import HeaderShared from "HeaderShared" /* 9791 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,19 +16,16 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5005);
-let obj = { modal: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerLeftContainer: null, headerRightContainer: null, container: null, formHeader: null, inputContainer: null, error: null };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(5009);
+let obj = { modal: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerLeftContainer: null, headerRightContainer: null, container: null, error: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
 const obj4 = { paddingLeft: nativeDefault.space.PX_16 };
 obj.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
 obj.container = { paddingHorizontal: 16, paddingTop: 24, gap: 24 };
-obj.formHeader = { marginBottom: 8 };
-let obj5 = { paddingRight: nativeDefault.space.PX_16 };
-obj.inputContainer = { paddingHorizontal: 16, paddingVertical: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
 obj.error = { marginTop: 8 };
 let closure_9 = createStyles.createStyles(obj);
-let obj6 = { paddingHorizontal: 16, paddingVertical: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
+let obj5 = { paddingRight: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/saved_messages/message_reminders/native/MessageRemindersCustomDurationModal.tsx");
 
@@ -80,8 +76,8 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
     obj3.maximumDate = toDateResult;
     obj3.mode = date;
     obj3.onSubmit = handleSubmitDueDate;
-    obj2.openLazy(asyncRequireImpl(8970, dependencyMap.paths), "DatePicker", obj3);
-    const tmp3 = asyncRequireImpl(8970, dependencyMap.paths);
+    obj2.openLazy(asyncRequireImpl(9000, dependencyMap.paths), "DatePicker", obj3);
+    const tmp3 = asyncRequireImpl(9000, dependencyMap.paths);
   }
   const tmp = handleSubmitDueDate();
   [first, closure_7] = getError.useState(onClose.defaultValue);
@@ -114,65 +110,54 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
   };
   let num = 0;
   if (!obj5.isIOS()) {
-    num = createReminder(1631)().top;
+    num = createReminder(1626)().top;
   }
-  obj3.headerStatusBarHeight = num + createReminder(587).space.PX_8;
-  obj5 = onClose(1381);
-  obj3.headerLeft = onClose(6984).getHeaderCloseButton(onClose);
+  obj3.headerStatusBarHeight = num + createReminder(575).space.PX_8;
+  obj5 = onClose(1376);
+  obj3.headerLeft = onClose(6992).getHeaderCloseButton(onClose);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
   obj3.headerRight = function headerRight() {
-    const obj = { accessibilityRole: "button", disabled: null != error, onPress, children: null };
-    let str = "control-brand-foreground";
-    if (null != error) {
-      str = "text-muted";
-    }
-    const obj2 = { variant: "text-md/semibold", color: str, children: null };
+    const obj = { text: null, onPress: null, disabled: null };
     const intl = util.intl;
-    obj2.children = intl.string(util.t["R3BPH+"]);
-    obj.children = React5(Text_Text.Text, obj2);
-    return React5(Pressables.PressableOpacity, obj);
+    obj.text = intl.string(util.t["R3BPH+"]);
+    obj.onPress = onPress;
+    obj.disabled = null != error;
+    return React5(HeaderActionButton.HeaderActionButton, obj);
   };
-  const items1 = [closure_7(onClose(6993).Header, obj3), ];
+  const items1 = [closure_7(onClose(6999).Header, obj3), ];
   const obj6 = { style: tmp.container, children: null };
-  const obj7 = { children: null };
-  const obj8 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
-  let intl = tmp11(1125).intl;
-  obj8.children = intl.string(onClose(1125).t.pSZKvM);
-  const items2 = [closure_7(onClose(5271).Text, obj8), ];
-  const obj9 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, style: null, children: null };
-  const intl2 = tmp11(1125).intl;
-  obj9.accessibilityLabel = intl2.string(onClose(1125).t.pSZKvM);
-  obj9.accessibilityValue = { text: formatResult };
-  obj9.onPress = function onPress() {
+  const obj7 = { title: null, hasIcons: false, children: null };
+  let intl = tmp11(1114).intl;
+  obj7.title = intl.string(onClose(1114).t.pSZKvM);
+  const obj8 = { label: formatResult, accessibilityLabel: null, accessibilityValue: null, onPress: null };
+  const intl2 = tmp11(1114).intl;
+  obj8.accessibilityLabel = intl2.string(onClose(1114).t.pSZKvM);
+  obj8.accessibilityValue = { text: formatResult };
+  obj8.onPress = function onPress() {
     handleOpenDatePicker("date");
   };
-  obj9.style = tmp.inputContainer;
-  obj9.children = closure_7(onClose(5271).Text, { variant: "text-md/medium", children: formatResult });
-  items2[1] = closure_7(onClose(6968).PressableOpacity, obj9);
-  obj7.children = items2;
-  const items3 = [error(first, obj7), ];
-  const obj10 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
-  const intl3 = tmp11(1125).intl;
-  obj10.children = intl3.string(onClose(1125).t.GOmEb8);
-  const items4 = [closure_7(onClose(5271).Text, obj10), , ];
-  const obj11 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, style: null, children: null };
-  const intl4 = tmp11(1125).intl;
-  obj11.accessibilityLabel = intl4.string(onClose(1125).t.GOmEb8);
-  obj11.accessibilityValue = { text: formatResult1 };
-  obj11.onPress = function onPress() {
+  obj7.children = closure_7(onClose(6969).TableRow, obj8);
+  const items2 = [closure_7(onClose(7054).TableRowGroup, obj7), ];
+  const obj9 = { title: null, hasIcons: false, children: null };
+  const intl3 = tmp11(1114).intl;
+  obj9.title = intl3.string(onClose(1114).t.GOmEb8);
+  const obj10 = { label: formatResult1, accessibilityLabel: null, accessibilityValue: null, onPress: null };
+  const intl4 = tmp11(1114).intl;
+  obj10.accessibilityLabel = intl4.string(onClose(1114).t.GOmEb8);
+  obj10.accessibilityValue = { text: formatResult1 };
+  obj10.onPress = function onPress() {
     handleOpenDatePicker("time");
   };
-  obj11.style = tmp.inputContainer;
-  obj11.children = closure_7(onClose(5271).Text, { variant: "text-md/medium", children: formatResult1 });
-  items4[1] = closure_7(onClose(6968).PressableOpacity, obj11);
+  obj9.children = closure_7(onClose(6969).TableRow, obj10);
+  const items3 = [closure_7(onClose(7054).TableRowGroup, obj9), ];
   let tmp10Result = null != error;
   if (tmp10Result) {
-    const obj12 = { style: tmp.error, variant: "text-sm/medium", color: "text-feedback-critical", accessibilityRole: "alert", children: error };
-    tmp10Result = tmp10(tmp11(5271).Text, obj12);
+    const obj11 = { style: tmp.error, variant: "text-sm/medium", color: "text-feedback-critical", accessibilityRole: "alert", children: error };
+    tmp10Result = tmp10(tmp11(5619).Text, obj11);
   }
-  items4[2] = tmp10Result;
-  items3[1] = error(first, { children: items4 });
-  obj6.children = items3;
+  items3[1] = tmp10Result;
+  items2[1] = error(first, { children: items3 });
+  obj6.children = items2;
   items1[1] = error(first, obj6);
   obj2.children = items1;
   return error(first, obj2);

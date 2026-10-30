@@ -1,14 +1,13 @@
-// === Module 7955: SafetyHubUtils ===
+// === Module 7961: SafetyHubUtils ===
 
-// Module 7955 (SafetyHubUtils)
+// Module 7961 (SafetyHubUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import util from "util" /* 1125 */;
-import _modDef2047 from "module_2047" /* 2047 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6039 */;
-import SafetyHubModels from "SafetyHubModels" /* 7957 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import util from "util" /* 1114 */;
+import _modDef2044 from "module_2044" /* 2044 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6046 */;
+import SafetyHubModels from "SafetyHubModels" /* 7963 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -46,18 +45,17 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7956);
+const SafetyHubConstants = fn(7962);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
 const result = 182 * DurationsDefault.Millis.DAY;
 let c10 = result;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef2047().to(_modDef2047(timestamp));
+  return _modDef2044().to(_modDef2044(timestamp));
 }
 export function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -174,25 +172,10 @@ export function getClassificationAccountStatusExpiration(classification) {
     return null;
   }
 }
-export const useIsSuspendedUser = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSuspendedUser() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [AuthenticationStore];
-    const fn = function s() {
-      return suspendedUserToken.getSuspendedUserToken();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return null != initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useIsSuspendedUser() {
+export function useIsSuspendedUser() {
   const items = [AuthenticationStore];
   return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
-});
+}
 export function isCurrentUserSuspended() {
   return null != AuthenticationStore.getSuspendedUserToken();
 }

@@ -1,13 +1,13 @@
-// === Module 12817: ConjurePerfTraceFormat ===
+// === Module 12968: ConjurePerfTraceFormat ===
 
-// Module 12817 (ConjurePerfTraceFormat)
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10846 */;
-import ConjureTimeFormat from "ConjureTimeFormat" /* 12818 */;
+// Module 12968 (ConjurePerfTraceFormat)
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10869 */;
+import ConjureTimeFormat from "ConjureTimeFormat" /* 12969 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-function formatPerfMs(totalMs) {
-  const rounded = Math.round(totalMs);
+function formatPerfMs(start) {
+  const rounded = Math.round(start);
   if (rounded < 1000) {
     const _HermesInternal2 = HermesInternal;
     let combined = "" + rounded + "ms";

@@ -1,8 +1,8 @@
-// === Module 11504: ApplicationSubscriptionsHttpApi ===
+// === Module 11704: ApplicationSubscriptionsHttpApi ===
 
-// Module 11504 (ApplicationSubscriptionsHttpApi)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import APIErrorDefault from "APIError" /* 6434 */;
+// Module 11704 (ApplicationSubscriptionsHttpApi)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import APIErrorDefault from "APIError" /* 6441 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ let closure_8 = async function _fetchEligibleApplicationSubscriptionGuilds() {
     return value.body;
   })();
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
 

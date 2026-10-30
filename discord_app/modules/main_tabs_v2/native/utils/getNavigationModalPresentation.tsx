@@ -1,11 +1,11 @@
-// === Module 10097: getNavigationModalPresentation ===
+// === Module 10124: getNavigationModalPresentation ===
 
-// Module 10097 (getNavigationModalPresentation)
-import useWindowDimensions from "useWindowDimensions" /* 1497 */;
-import DeviceUtils from "DeviceUtils" /* 4962 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7098 */;
-import DeviceOrientation from "DeviceOrientation" /* 8860 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1381 */;
+// Module 10124 (getNavigationModalPresentation)
+import useWindowDimensions from "useWindowDimensions" /* 1492 */;
+import DeviceUtils from "DeviceUtils" /* 4966 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 7106 */;
+import DeviceOrientation from "DeviceOrientation" /* 8894 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1376 */;
 import size from "module_2" /* 2 */;
 
 let PlatformUtils = PlatformUtils_mod;
@@ -34,7 +34,7 @@ if (!PlatformUtils) {
 obj.lockOrientation = tmp3;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
-export default function getNavigationModalPresentation(arg0) {
+export default function getNavigationModalPresentation() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = obj;

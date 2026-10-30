@@ -1,11 +1,11 @@
-// === Module 18416: ICYMIStoreUtils ===
+// === Module 18475: ICYMIStoreUtils ===
 
-// Module 18416 (ICYMIStoreUtils)
-import ICYMIItemTypes from "ICYMIItemTypes" /* 18417 */;
+// Module 18475 (ICYMIStoreUtils)
+import ICYMIItemTypes from "ICYMIItemTypes" /* 18476 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MessageStore from "MessageStore" /* 6049 */;
-import ReadStateStore from "ReadStateStore" /* 6829 */;
-import ICYMIStore from "ICYMIStore" /* 8863 */;
+import MessageStore from "MessageStore" /* 6056 */;
+import ReadStateStore from "ReadStateStore" /* 6836 */;
+import ICYMIStore from "ICYMIStore" /* 8897 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ let closure_8 = async function _hydrateNextPage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_8 = async function _hydrateNextPage() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -75,7 +75,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -198,7 +198,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
       } else {
         const recommendedGuilds = closure_130_1(closure_130_2[12]).getRecommendedGuilds();
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp36) {
       c4 = tmp;
@@ -206,100 +206,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
     }
   }
 };
-const ChannelTypes = fn(1084).ChannelTypes;
-fn(558);
-let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGravityMessage(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [MessageStore, ICYMIStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function l() {
-      let message = MessageStore.getMessage(channelId.getChannelId(), channelId.id);
-      if (message == null) {
-        const hydratedItem = ICYMIStore.getHydratedItem(channelId.id);
-        let message1;
-        if (hydratedItem != null) {
-          message1 = hydratedItem.message;
-        }
-        message = message1;
-      }
-      if (message == null) {
-        message = channelId;
-      }
-      return message;
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp8 = items1;
-    let tmp7 = fn;
-  } else {
-    tmp7 = cResult[2];
-    tmp8 = cResult[3];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp7, tmp8);
-}) : (function useGravityMessage(arg0) {
-  _require = arg0;
-  const items = [MessageStore, ICYMIStore];
-  const items1 = [arg0];
-  return require("initialize").useStateFromStores(items, () => {
-    let message = MessageStore.getMessage(channelId.getChannelId(), channelId.id);
-    if (message == null) {
-      const hydratedItem = ICYMIStore.getHydratedItem(channelId.id);
-      let message1;
-      if (hydratedItem != null) {
-        message1 = hydratedItem.message;
-      }
-      message = message1;
-    }
-    if (message == null) {
-      message = channelId;
-    }
-    return message;
-  }, items1);
-});
-ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGravityMessageItem(id) {
-  _require = id;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ICYMIStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== id.id) {
-    const fn = function n() {
-      return ICYMIStore.getHydratedItem(id.id);
-    };
-    const items1 = [id.id];
-    cResult[1] = id.id;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-    tmp7 = cResult[3];
-  }
-  const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6, tmp7);
-}) : (function useGravityMessageItem(id) {
-  _require = id;
-  const items = [ICYMIStore];
-  const items1 = [id.id];
-  return require("initialize").useStateFromStores(items, () => ICYMIStore.getHydratedItem(id.id), items1);
-});
+const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIStoreUtils.tsx");
 
@@ -356,56 +263,37 @@ export function regenerateFeedAndClearReadStates() {
   }
   return applyArgumentsResult;
 }
-export const useGravityMessage = tmp2;
-export const useGravityMessageItem = tmp3;
-export const useICYMIMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function useICYMIMessage(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const cResult = require("c").c(5);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [MessageStore, ICYMIStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === arg0) {
-    if (cResult[2] === arg1) {
-      let tmp7 = cResult[3];
-      let tmp8 = cResult[4];
-    }
-    return tmp(504).useStateFromStores(first, tmp7, tmp8);
-  }
-  const fn = function o() {
-    let tmp2 = null;
-    if (null != closure_1) {
-      let message = MessageStore.getMessage(closure_0, closure_1);
-      if (message == null) {
-        const hydratedItem = ICYMIStore.getHydratedItem(closure_1);
-        let message1;
-        if (hydratedItem != null) {
-          message1 = hydratedItem.message;
-        }
-        message = message1;
-      }
-      tmp2 = message;
-    }
-    return tmp2;
-  };
-  const items1 = [arg0, arg1];
-  cResult[1] = arg0;
-  cResult[2] = arg1;
-  cResult[3] = fn;
-  cResult[4] = items1;
-  tmp8 = items1;
-  tmp7 = fn;
-  const obj = require("c");
-  tmp = _require;
-}) : (function useICYMIMessage(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
+export function useGravityMessage(message) {
+  _require = message;
   const items = [MessageStore, ICYMIStore];
-  const items1 = [arg0, arg1];
+  const items1 = [message];
+  return require("initialize").useStateFromStores(items, () => {
+    message = MessageStore.getMessage(message.getChannelId(), message.id);
+    if (message == null) {
+      const hydratedItem = ICYMIStore.getHydratedItem(tmp.id);
+      let message1;
+      if (hydratedItem != null) {
+        message1 = hydratedItem.message;
+      }
+      message = message1;
+    }
+    if (message == null) {
+      message = tmp;
+    }
+    return message;
+  }, items1);
+}
+export function useGravityMessageItem(id) {
+  _require = id;
+  const items = [ICYMIStore];
+  const items1 = [id.id];
+  return require("initialize").useStateFromStores(items, () => ICYMIStore.getHydratedItem(id.id), items1);
+}
+export function useICYMIMessage(id, before_message_id) {
+  _require = id;
+  closure_1 = before_message_id;
+  const items = [MessageStore, ICYMIStore];
+  const items1 = [id, before_message_id];
   return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_1) {
@@ -422,4 +310,4 @@ export const useICYMIMessage = ReactCompilerGating.isReactCompilerEnabled() ? (f
     }
     return tmp2;
   }, items1);
-});
+}

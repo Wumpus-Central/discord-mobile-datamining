@@ -1,19 +1,19 @@
-// === Module 4955: EmojiUtils ===
+// === Module 4959: EmojiUtils ===
 
-// Module 4955 (EmojiUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import ImageUtils from "ImageUtils" /* 1494 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
-import EmojiTypes from "EmojiTypes" /* 4954 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4961 */;
+// Module 4959 (EmojiUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
+import ImageUtils from "ImageUtils" /* 1489 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
+import EmojiTypes from "EmojiTypes" /* 4958 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4965 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiPackStore from "EmojiPackStore" /* 4956 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import UserStore from "UserStore" /* 1389 */;
+import EmojiPackStore from "EmojiPackStore" /* 4960 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import UserStore from "UserStore" /* 1384 */;
 
-const PremiumTypeUtils = isPremiumResult(1989);
-const CreatorMonetizationRestrictionsUtils = isPremiumResult(4929);
-const RoleSubscriptionEmojiUtils = isPremiumResult(4959);
+const PremiumTypeUtils = isPremiumResult(1984);
+const CreatorMonetizationRestrictionsUtils = isPremiumResult(4933);
+const RoleSubscriptionEmojiUtils = isPremiumResult(4963);
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
@@ -30,7 +30,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   if (emoji.type === EmojiTypes.EmojiTypes.PACK) {
     if (intention !== constants.GUILD_PROFILE) {
       if (intention !== constants.NO_CUSTOM_EMOJI) {
-        if (value2(intention)) {
+        if (__initData(intention)) {
           if (EmojiPackStore.isPackEmojiUsable(emoji)) {
             isPremiumResult = PremiumTypeUtils.isPremium(UserStore.getCurrentUser(), PremiumTypes.TIER_2);
             PREMIUM_LOCKED = null;
@@ -95,7 +95,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
             }
             DISALLOW_EXTERNAL = EmojiDisabledReasons.DISALLOW_EXTERNAL;
           } else {
-            if (!value2(intention)) {
+            if (!__initData(intention)) {
               let tmp17 = null != emoji && null != guildId;
               if (tmp17) {
                 const type2 = emoji.type;
@@ -178,13 +178,13 @@ let closure_21 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: metroRequire } = ChannelRecord);
-const Permissions = fn(1084).Permissions;
-const EmojiConstants = fn(1392);
+const Permissions = fn(1072).Permissions;
+const EmojiConstants = fn(1387);
 ({ EMOJI_MAX_FILESIZE: c10, EMOJI_MAX_LENGTH: closure_11, EMOJI_RE: closure_12, EmojiDisabledReasons } = EmojiConstants);
 ({ EmojiIntention: closure_14, isExternalEmojiAllowedForIntention: closure_15 } = EmojiConstants);
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1386).PremiumTypes;
 const items = [, ];
 ({ PREMIUM_LOCKED: arr[0], ROLE_SUBSCRIPTION_LOCKED: arr[1] } = EmojiDisabledReasons);
 const set = new Set(items);
@@ -199,7 +199,7 @@ const result = size.fileFinishedImporting("utils/EmojiUtils.tsx");
 export default {
   sanitizeEmojiName(str) {
     let length;
-    const replaced = str.replace(__initData, "");
+    const replaced = str.replace(closure_1_12, "");
     const substr = replaced.slice(0, closure_1_11);
     let tmp = substr;
     let tmp2 = substr;
@@ -321,7 +321,7 @@ export default {
     return size.size > 2097152;
   },
   isDataTooBig(base64) {
-    return ImageUtils.dataUriFileSize(base64) > v65535;
+    return ImageUtils.dataUriFileSize(base64) > closure_1_10;
   }
 };
 export function countEmoji(arr, arg1) {

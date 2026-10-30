@@ -1,51 +1,18 @@
-// === Module 17810: ParentalControlsMessageRequests ===
+// === Module 17881: ParentalControlsMessageRequests ===
 
-// Module 17810 (ParentalControlsMessageRequests)
-import util from "util" /* 1125 */;
-import _modDef2536 from "module_2536" /* 2536 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6716 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7941 */;
-import useSelectedTeen from "useSelectedTeen" /* 8182 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16613 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16614 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 17796 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7703 */;
+// Module 17881 (ParentalControlsMessageRequests)
+import util from "util" /* 1114 */;
+import _modDef2537 from "module_2537" /* 2537 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6723 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7947 */;
+import useSelectedTeen from "useSelectedTeen" /* 8363 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16666 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16667 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 17867 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7708 */;
 
 require = fn;
-fn(558);
-let ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-function useIsDisabled() {
-  return useParentalControlSettings.useDefaultGuildsRestricted();
-}
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
-  if (typeof useIsDisabled === "function") {
-    const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
-    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-    const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
-    let tmp6 = !defaultGuildsRestricted;
-    if (!defaultGuildsRestricted) {
-      tmp6 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
-    }
-    return tmp6;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}) : (function useValue() {
-  if (typeof useIsDisabled === "function") {
-    const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
-    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-    const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
-    let tmp6 = !defaultGuildsRestricted;
-    if (!defaultGuildsRestricted) {
-      tmp6 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
-    }
-    return tmp6;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-});
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -53,37 +20,22 @@ const toggle = SettingBuilders.createToggle({
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2536["7aYkh1"]);
+    return intl.string(_modDef2537["7aYkh1"]);
   },
-  parent: fn(8387).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
-    if (typeof useIsDisabled === "function") {
-      const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
-      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-      const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
-      let tmp6 = !defaultGuildsRestricted;
-      if (!defaultGuildsRestricted) {
-        tmp6 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
-      }
-      return tmp6;
-    } else {
-      throw new TypeError("Trying to call a non-function");
+  parent: fn(8424).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue() {
+    const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
+    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+    const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
+    let tmp3 = !defaultGuildsRestricted;
+    if (!defaultGuildsRestricted) {
+      tmp3 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
     }
-  }) : (function useValue() {
-    if (typeof useIsDisabled === "function") {
-      const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
-      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-      const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
-      let tmp6 = !defaultGuildsRestricted;
-      if (!defaultGuildsRestricted) {
-        tmp6 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
-      }
-      return tmp6;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  }),
-  useIsDisabled,
+    return tmp3;
+  },
+  useIsDisabled() {
+    return useParentalControlSettings.useDefaultGuildsRestricted();
+  },
   onValueChange: function onAllowMessageRequestsFromServerMembersValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
@@ -101,6 +53,6 @@ const toggle = SettingBuilders.createToggle({
   unsearchable: true
 });
 const size = fn(2);
-let result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx");
 
 export default toggle;

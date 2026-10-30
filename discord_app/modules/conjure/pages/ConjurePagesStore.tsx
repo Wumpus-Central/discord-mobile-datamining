@@ -1,8 +1,8 @@
-// === Module 11291: ConjurePagesStore ===
+// === Module 11494: ConjurePagesStore ===
 
-// Module 11291 (ConjurePagesStore)
+// Module 11494 (ConjurePagesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let closure_0 = { chatOpen: true, debugOpen: false, previewSelection: null, chatScroll: null };
 let c1 = null;

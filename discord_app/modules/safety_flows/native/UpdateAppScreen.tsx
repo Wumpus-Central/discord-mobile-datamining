@@ -1,16 +1,14 @@
-// === Module 19963: UpdateAppScreen ===
+// === Module 20026: UpdateAppScreen ===
 
-// Module 19963 (UpdateAppScreen)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import _modDef2834 from "module_2834" /* 2834 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
+// Module 20026 (UpdateAppScreen)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import _modDef2835 from "module_2835" /* 2835 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5005 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import createStyles from "createStyles" /* 5009 */;
 import size from "module_2" /* 2 */;
 
 ({ NativeModules: c3, View: closure_4 } = get_ActivityIndicator);
@@ -19,85 +17,18 @@ let obj = { container: { flexDirection: "column", justifyContent: "center", gap:
 let obj2 = { flexDirection: "column", justifyContent: "center", gap: nativeDefault.space.PX_8 };
 obj.buttonContainer = { marginTop: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj);
-let obj3 = { marginTop: nativeDefault.space.PX_8 };
 const result = size.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function UpdateAppScreen() {
-  const cResult = c.c(9);
-  const tmp4 = closure_7();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    function handlePress() {
-      BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
-      BundleUpdaterManager.reload();
-    }
-    cResult[0] = handlePress;
-    let first = handlePress;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { variant: "heading-lg/semibold", children: null };
-    const intl = util.intl;
-    obj2.children = intl.string(_modDef2834.yxqMCD);
-    const tmp9 = hasOwnProperty(Text_Text.Text, obj2);
-    cResult[1] = tmp9;
-    let tmp6 = tmp9;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
-    const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef2834.VBZJJg);
-    const tmp13 = hasOwnProperty(Text_Text.Text, obj3);
-    cResult[2] = tmp13;
-    let tmp10 = tmp13;
-  } else {
-    tmp10 = cResult[2];
-  }
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { onPress: first, text: null, variant: "primary", size: "md" };
-    const intl3 = util.intl;
-    obj4.text = intl3.string(_modDef2834.o4D6fm);
-    const tmp17 = hasOwnProperty(components_Button_Button.Button, obj4);
-    cResult[3] = tmp17;
-    let tmp14 = tmp17;
-  } else {
-    tmp14 = cResult[3];
-  }
-  if (cResult[4] !== tmp4.buttonContainer) {
-    const obj5 = { style: tmp4.buttonContainer, children: tmp14 };
-    const tmp21 = hasOwnProperty(React4, obj5);
-    cResult[4] = tmp4.buttonContainer;
-    cResult[5] = tmp21;
-    let tmp18 = tmp21;
-  } else {
-    tmp18 = cResult[5];
-  }
-  if (cResult[6] === tmp4.container) {
-    if (cResult[7] === tmp18) {
-      let tmp22 = cResult[8];
-    }
-    return tmp22;
-  }
-  const obj6 = { style: tmp4.container, children: null };
-  const items = [tmp6, tmp10, tmp18];
-  obj6.children = items;
-  const tmp23 = timestampProducer(React4, obj6);
-  cResult[6] = tmp4.container;
-  cResult[7] = tmp18;
-  cResult[8] = tmp23;
-  tmp22 = tmp23;
-}) : (function UpdateAppScreen() {
+export default function UpdateAppScreen() {
   const tmp = closure_7();
   const obj = { style: tmp.container, children: null };
   const obj2 = { variant: "heading-lg/semibold", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2834.yxqMCD);
+  obj2.children = intl.string(_modDef2835.yxqMCD);
   const items = [hasOwnProperty(Text_Text.Text, obj2), , ];
   const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.string(_modDef2834.VBZJJg);
+  obj3.children = intl2.string(_modDef2835.VBZJJg);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = {
@@ -110,9 +41,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UpdateAp
     size: "md"
   };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef2834.o4D6fm);
+  obj5.text = intl3.string(_modDef2835.o4D6fm);
   obj4.children = hasOwnProperty(components_Button_Button.Button, obj5);
   items[2] = hasOwnProperty(React4, obj4);
   obj.children = items;
   return timestampProducer(React4, obj);
-});
+};

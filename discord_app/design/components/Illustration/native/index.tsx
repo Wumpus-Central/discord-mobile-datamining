@@ -1,10 +1,8 @@
-// === Module 8764: ? ===
+// === Module 8798: ? ===
 
-// Module 8764
-import c from "c" /* 576 */;
-import Constants from "Constants" /* 1084 */;
-import native from "native" /* 5071 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 8798
+import Constants from "Constants" /* 1072 */;
+import native from "native" /* 5075 */;
 import size from "module_2" /* 2 */;
 
 const ThemeTypes = Constants.ThemeTypes;
@@ -33,20 +31,6 @@ export function getIllustrationSource(theme, light) {
   }
   return lightResult;
 }
-export const useIllustrationSource = ReactCompilerGating.isReactCompilerEnabled() ? (function useIllustrationSource(fn) {
-  const cResult = c.c(3);
-  const theme = native.useThemeContext().theme;
-  if (cResult[0] === fn) {
-    if (cResult[1] === theme) {
-      let tmp2 = cResult[2];
-    }
-    return tmp2;
-  }
-  const tmp3 = fn(theme);
-  cResult[0] = fn;
-  cResult[1] = theme;
-  cResult[2] = tmp3;
-  tmp2 = tmp3;
-}) : (function useIllustrationSource(fn) {
+export function useIllustrationSource(fn) {
   return fn(native.useThemeContext().theme);
-});
+}

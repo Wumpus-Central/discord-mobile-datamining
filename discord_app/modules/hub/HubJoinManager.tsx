@@ -1,13 +1,13 @@
-// === Module 14153: HubJoinManager ===
+// === Module 14300: HubJoinManager ===
 
-// Module 14153 (HubJoinManager)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import transitionToGuild from "transitionToGuild" /* 7508 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import LifecycleManager from "LifecycleManager" /* 2002 */;
+// Module 14300 (HubJoinManager)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import transitionToGuild from "transitionToGuild" /* 7516 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import LifecycleManager from "LifecycleManager" /* 1997 */;
 
 require = fn;
-const GuildFeatures = fn(1084).GuildFeatures;
+const GuildFeatures = fn(1072).GuildFeatures;
 class HubJoinManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

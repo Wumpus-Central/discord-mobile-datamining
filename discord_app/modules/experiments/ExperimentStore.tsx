@@ -1,17 +1,17 @@
-// === Module 5227: ExperimentStore ===
+// === Module 5233: ExperimentStore ===
 
-// Module 5227 (ExperimentStore)
+// Module 5233 (ExperimentStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage5 from "Storage" /* 510 */;
-import Dispatcher from "Dispatcher" /* 584 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1263 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1378 */;
-import GuildFilters from "GuildFilters" /* 5229 */;
+import Dispatcher from "Dispatcher" /* 572 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1252 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1373 */;
+import GuildFilters from "GuildFilters" /* 5235 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1083 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1071 */;
 
 require = fn;
 function getHash(arg0) {
@@ -558,13 +558,13 @@ function loadLocalOverrides() {
   }
   const items = [obj, , ];
   const Storage2 = Storage5.Storage;
-  value3 = Storage2.get(userExperimentOverrides);
+  let value3 = Storage2.get(userExperimentOverrides);
   if (value3 == null) {
     value3 = {};
   }
   items[1] = value3;
   const Storage3 = Storage5.Storage;
-  value4 = Storage3.get(guildExperimentOverrides);
+  let value4 = Storage3.get(guildExperimentOverrides);
   if (value4 == null) {
     value4 = {};
   }
@@ -721,9 +721,9 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(5228);
+const ExperimentConstants = fn(5234);
 ({ ExperimentBuckets: hasOwnProperty, ExperimentTypes: metroRequire, ExposureTypes: closure_7 } = ExperimentConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: c10 } = Constants);
 let c11 = "scientist:triggered";
 const exerimentOverrides = "exerimentOverrides";
@@ -879,7 +879,7 @@ prototype["getUserExperimentDescriptor"] = function getUserExperimentDescriptor(
 prototype["getGuildExperimentDescriptor"] = function getGuildExperimentDescriptor(id, guildId) {
   let tmp = guildId;
   if (guildId == null) {
-    tmp = React6;
+    tmp = React7;
   }
   if (c26) {
     if (null != tmp2) {
@@ -1039,7 +1039,7 @@ prototype["hasExperimentTrackedExposure"] = hasExperimentTrackedExposure;
 ExperimentStore.displayName = "ExperimentStore";
 ExperimentStore.LATEST_SNAPSHOT_VERSION = 1;
 obj = { LOGOUT: handleLogout, LOGIN_SUCCESS: handleLogin, CONNECTION_OPEN: handleLoadedExperiments, EXPERIMENTS_FETCH_SUCCESS: handleLoadedExperiments, OVERLAY_INITIALIZE: handleOverlayInitialize, EXPERIMENTS_FETCH_FAILURE: handleFetchFailure, EXPERIMENT_OVERRIDE_BUCKET: handleExperimentOverrideBucket, GUILD_CREATE: handleGuildChange, GUILD_UPDATE: handleGuildChange };
-const hasExperimentTrackedExposure1 = new hasExperimentTrackedExposure(obj, fn(584).DispatchBand.Early, tmp, Object, prototype, "hasExperimentTrackedExposure", handleLogout, handleLogin, handleLoadedExperiments, handleOverlayInitialize, handleFetchFailure, ExperimentStore);
+const hasExperimentTrackedExposure1 = new hasExperimentTrackedExposure(obj, fn(572).DispatchBand.Early, tmp, Object, prototype, "hasExperimentTrackedExposure", handleLogout, handleLogin, handleLoadedExperiments, handleOverlayInitialize, handleFetchFailure, ExperimentStore);
 hasExperimentTrackedExposure1.trackExposure = trackExposure;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/ExperimentStore.tsx");

@@ -1,10 +1,10 @@
-// === Module 1259: BaseApexExperimentStore ===
+// === Module 1248: BaseApexExperimentStore ===
 
-// Module 1259 (BaseApexExperimentStore)
+// Module 1248 (BaseApexExperimentStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import ApexTypes from "ApexTypes" /* 1261 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1263 */;
+import ApexTypes from "ApexTypes" /* 1250 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1252 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -40,7 +40,7 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-const WebAnalyticsEvents = fn(1095).WebAnalyticsEvents;
+const WebAnalyticsEvents = fn(1083).WebAnalyticsEvents;
 const logger = new fn(4).Logger("ApexExperimentStore");
 let tmp3 = typeof window === "undefined";
 if (typeof window !== "undefined") {
@@ -53,9 +53,9 @@ if (typeof window !== "undefined") {
   tmp3 = tmp4;
 }
 if (!tmp3) {
-  fn(1260);
+  fn(1249);
 }
-let items = [fn(1261).UnitType.User, fn(1261).UnitType.Installation];
+let items = [fn(1250).UnitType.User, fn(1250).UnitType.Installation];
 let closure_10 = {};
 let clientOverrides = {};
 const dependencyMap2 = {};
@@ -362,15 +362,14 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(us
   }
   const tmp2 = _slicedToArray(this.getEvaluationAndAssignmentInner(user, id, logger), 2);
 };
-prototype["trackExperimentExposure"] = function trackExperimentExposure(evaluation_id, experiment, location, unit_type, revision1, trackedVariantId1, arg6) {
+prototype["trackExperimentExposure"] = function trackExperimentExposure(evaluation_id, experiment, location, unit_type, revision, trackedVariantId, arg6) {
   const self = this;
   importDefault = evaluation_id;
   dependencyMap = experiment;
   const exposure_location = location;
-  const revision = revision1;
-  const tracked_variation_id = trackedVariantId1;
+  const tracked_variation_id = trackedVariantId;
   closure_0 = arg6;
-  const combined = "" + experiment + "|" + revision1 + "|" + trackedVariantId1 + "|" + location + "|" + arg6 + "|1";
+  const combined = "" + experiment + "|" + revision + "|" + trackedVariantId + "|" + location + "|" + arg6 + "|1";
   let tmp3 = dependencyMap4[combined];
   if (null == tmp3) {
     const v3Result = MurmurHashV3Default.v3(combined);
@@ -392,10 +391,10 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
     const combined = "" + evaluationId + "|" + evaluationId;
     let tmp3 = dependencyMap2[combined];
     if (null == tmp3) {
-      const v3Result = self(1263).v3(combined);
+      const v3Result = self(1252).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      obj = self(1263);
+      obj = self(1252);
     }
     self.withExposureTracking(tmp3, () => self.track(WebAnalyticsEvents.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: evaluationId, exposure_location: evaluationId, unit_type: "user" }, { flush: true }));
   }
@@ -410,10 +409,10 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
     const combined = "" + evaluationId + "|" + evaluationId;
     let tmp3 = dependencyMap2[combined];
     if (null == tmp3) {
-      const v3Result = self(1263).v3(combined);
+      const v3Result = self(1252).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      obj = self(1263);
+      obj = self(1252);
     }
     _self.withExposureTracking(tmp3, () => self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id: evaluationId, exposure_location: evaluationId, unit_type: "installation", installation_id }, { flush: true }));
   }

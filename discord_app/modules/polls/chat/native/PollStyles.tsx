@@ -1,15 +1,15 @@
-// === Module 12213: PollStyles ===
+// === Module 12369: PollStyles ===
 
-// Module 12213 (PollStyles)
-import _mod6543 from "module_6543" /* 6543 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 12214 */;
-import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 12215 */;
+// Module 12369 (PollStyles)
+import _mod6550 from "module_6550" /* 6550 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 12370 */;
+import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 12371 */;
 import size from "module_2" /* 2 */;
 
-function normal(border, first1) {
+function normal(border, config) {
   closure_0 = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = _mod6543.match(first1);
+  const match = _mod6550.match(config);
   obj.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
   obj.answerBackground = border.colors.BACKGROUND_MOD_MUTED;
   obj.answerFill = border.colors.BACKGROUND_MOD_SUBTLE;
@@ -18,11 +18,11 @@ function normal(border, first1) {
   obj.radioForeground = border.colors.WHITE;
   return obj;
 }
-function normalVote(colors, first1) {
+function normalVote(colors, config) {
   if (typeof normal === "function") {
     const obj = {};
     const obj2 = { border: colors.colors.BORDER_SUBTLE, borderWidth: 1, fill: colors.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-    const match = _mod6543.match(first1);
+    const match = _mod6550.match(config);
     obj2.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
     obj2.answerBackground = colors.colors.BACKGROUND_MOD_MUTED;
     obj2.answerFill = colors.colors.BACKGROUND_MOD_SUBTLE;
@@ -36,16 +36,16 @@ function normalVote(colors, first1) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-function notVoted(colors, first1) {
+function notVoted(colors, config) {
   const obj = {};
-  const merged = Object.assign(normalVote(colors, first1));
+  const merged = Object.assign(normalVote(colors, config));
   obj.answerFill = colors.colors.INTERACTIVE_BACKGROUND_ACTIVE;
   obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.NONE;
   return obj;
 }
-function victorNotSelected(colors, first1) {
+function victorNotSelected(colors, config) {
   const obj = {};
-  const merged = Object.assign(normalVote(colors, first1));
+  const merged = Object.assign(normalVote(colors, config));
   obj.border = colors.colors.STATUS_POSITIVE;
   obj.borderWidth = 1;
   obj.answerFill = colors.colors.POLLS_VICTOR_FILL;
@@ -55,11 +55,11 @@ function victorNotSelected(colors, first1) {
 const result = size.fileFinishedImporting("modules/polls/chat/native/PollStyles.tsx");
 
 export const pollStyleSets = {
-  loserSelected(colors, first1) {
+  loserSelected(colors, config) {
     if (typeof notVoted === "function") {
       const obj = {};
       const obj2 = {};
-      const merged = Object.assign(normalVote(colors, first1));
+      const merged = Object.assign(normalVote(colors, config));
       obj2.answerFill = colors.colors.INTERACTIVE_BACKGROUND_ACTIVE;
       obj2.radioStyle = PollMessageChatDataTypes.PollRadioStyle.NONE;
       const merged1 = Object.assign(obj2);
@@ -73,22 +73,22 @@ export const pollStyleSets = {
   },
   normal,
   notVoted,
-  selected(iconBackground, first1) {
+  selected(unselected, config) {
     const obj = {};
-    const merged = Object.assign(normalVote(iconBackground, first1));
-    obj.border = iconBackground.colors.BACKGROUND_BRAND;
+    const merged = Object.assign(normalVote(unselected, config));
+    obj.border = unselected.colors.BACKGROUND_BRAND;
     obj.borderWidth = 1;
     obj.radioStyle = PollMessageChatDataTypes.PollRadioStyle.FILLED;
-    obj.radioBackground = iconBackground.colors.REDESIGN_INPUT_CONTROL_SELECTED;
-    obj.radioForeground = iconBackground.colors.STATUS_POSITIVE_TEXT;
+    obj.radioBackground = unselected.colors.REDESIGN_INPUT_CONTROL_SELECTED;
+    obj.radioForeground = unselected.colors.STATUS_POSITIVE_TEXT;
     return obj;
   },
   victorNotSelected,
-  victorSelected(colors, first1) {
+  victorSelected(colors, config) {
     if (typeof victorNotSelected === "function") {
       const obj = {};
       const obj2 = {};
-      const merged = Object.assign(normalVote(colors, first1));
+      const merged = Object.assign(normalVote(colors, config));
       obj2.border = colors.colors.STATUS_POSITIVE;
       obj2.borderWidth = 1;
       obj2.answerFill = colors.colors.POLLS_VICTOR_FILL;
@@ -102,9 +102,9 @@ export const pollStyleSets = {
       throw new TypeError("Trying to call a non-function");
     }
   },
-  voted(colors, first1) {
+  voted(colors, config) {
     const obj = {};
-    const merged = Object.assign(normalVote(colors, first1));
+    const merged = Object.assign(normalVote(colors, config));
     obj.border = colors.colors.BACKGROUND_BRAND;
     obj.borderWidth = 1;
     obj.answerFill = colors.colors.POLLS_VOTED_FILL;

@@ -1,8 +1,8 @@
-// === Module 11485: VoiceCallOverlayUtils ===
+// === Module 11685: VoiceCallOverlayUtils ===
 
-// Module 11485 (VoiceCallOverlayUtils)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 10957 */;
+// Module 11685 (VoiceCallOverlayUtils)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 10982 */;
 import size from "module_2" /* 2 */;
 
 const MIN_MARGIN_BETWEEN_OVERLAYS = ChannelCallConstants.MIN_MARGIN_BETWEEN_OVERLAYS;

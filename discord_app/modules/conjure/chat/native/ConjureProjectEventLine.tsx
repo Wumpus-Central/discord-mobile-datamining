@@ -1,16 +1,14 @@
-// === Module 12460: ConjureProjectEventLine ===
+// === Module 12613: ConjureProjectEventLine ===
 
-// Module 12460 (ConjureProjectEventLine)
-import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12448 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12452 */;
-import useConjureProjectEventLineDefault from "useConjureProjectEventLine" /* 12461 */;
-import useConjureRemixSettingsRequestDefault from "useConjureRemixSettingsRequest" /* 12463 */;
+// Module 12613 (ConjureProjectEventLine)
+import Text_Text from "Text/Text" /* 5619 */;
+import useConjureRemixSettingsRequestDefault from "useConjureRemixSettingsRequest" /* 12579 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12602 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 12606 */;
+import ConjureVoiceChannelPinCardDefault from "ConjureVoiceChannelPinCard" /* 12616 */;
+import ConjureSettingsRequestCardDefault from "ConjureSettingsRequestCard" /* 12618 */;
 import noop from "module_19" /* 19 */;
 
-const ConjureVoiceChannelPinCardDefault = tmp4(12465);
-const ConjureSettingsRequestCardDefault = tmp4(12467);
 require = fn;
 function renderMention(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -25,65 +23,10 @@ function renderMention(arg0, arg1, arg2) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureProjectEventLine.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureProjectEventLine(arg0) {
-  let tmp2 = dependencyMap;
-  const cResult = c.c(10);
-  ({ projectId, event } = arg0);
-  let tmp4 = importDefault;
-  const tmp5 = useConjureProjectEventLineDefault(projectId, event, renderMention);
-  const tmp6 = useConjureRemixSettingsRequestDefault(projectId, event);
-  if ("voice_channel_pin" === event.type) {
-    if (cResult[0] !== projectId) {
-      tmp4 = ConjureVoiceChannelPinCardDefault;
-      const obj2 = { projectId };
-      tmp2 = React3(tmp4, obj2);
-      cResult[0] = projectId;
-      cResult[1] = tmp2;
-    }
-  } else {
-    if (cResult[2] !== tmp5) {
-      const obj3 = { variant: "text-md/normal", color: "text-default", children: tmp5 };
-      const tmp9 = React3(Text_Text.Text, obj3);
-      cResult[2] = tmp5;
-      cResult[3] = tmp9;
-      let tmp7 = tmp9;
-    } else {
-      tmp7 = cResult[3];
-    }
-    if (cResult[4] === projectId) {
-      if (cResult[5] === tmp6) {
-        let tmp10 = cResult[6];
-      }
-      if (cResult[7] === tmp7) {
-        if (cResult[8] === tmp10) {
-          let tmp13 = cResult[9];
-        }
-        return tmp13;
-      }
-      const obj4 = { children: null };
-      const items = [tmp7, tmp10];
-      obj4.children = items;
-      const tmp16 = hasOwnProperty(React4, obj4);
-      cResult[7] = tmp7;
-      cResult[8] = tmp10;
-      cResult[9] = tmp16;
-      tmp13 = tmp16;
-    }
-    let tmp11 = null;
-    if (null != tmp6) {
-      const obj5 = { projectId, request: tmp6, notifyAgent: false };
-      tmp11 = React3(ConjureSettingsRequestCardDefault, obj5);
-    }
-    cResult[4] = projectId;
-    cResult[5] = tmp6;
-    cResult[6] = tmp11;
-    tmp10 = tmp11;
-  }
-}) : (function ConjureProjectEventLine(arg0) {
+export default function ConjureProjectEventLine(arg0) {
   ({ projectId, event } = arg0);
   const tmp4 = useConjureRemixSettingsRequestDefault(projectId, event);
   if ("voice_channel_pin" === event.type) {
@@ -103,4 +46,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     tmp8Result = hasOwnProperty(React4, obj4);
   }
   return tmp8Result;
-});
+};

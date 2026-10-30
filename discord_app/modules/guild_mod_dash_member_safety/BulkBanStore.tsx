@@ -1,8 +1,8 @@
-// === Module 6890: BulkBanStore ===
+// === Module 6897: BulkBanStore ===
 
-// Module 6890 (BulkBanStore)
+// Module 6897 (BulkBanStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const set = new Set();

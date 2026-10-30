@@ -1,6 +1,6 @@
-// === Module 11822: useThrottle ===
+// === Module 12015: useThrottle ===
 
-// Module 11822 (useThrottle)
+// Module 12015 (useThrottle)
 import _mod12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,8 +13,8 @@ function throttleStateFn(arg0) {
 function useThrottledFunction(callback4, arg1) {
   _require = callback4;
   dependencyMap = arg1;
-  let items = cResult;
-  if (cResult === undefined) {
+  let items = items4;
+  if (items4 === undefined) {
     items = [];
   }
   noop = sharedValue;
@@ -34,24 +34,24 @@ function useThrottledFunction(callback4, arg1) {
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useThrottle.tsx");
 
-export (memo, arg1) => {
+export (memo, throttleDurationForChannel) => {
   let current = memo;
   _require = memo;
-  let items = cResult;
-  if (cResult === undefined) {
+  let items = items5;
+  if (items5 === undefined) {
     items = [];
   }
   let current2;
   let ref1;
   if (typeof useThrottledFunction === "function") {
     _require = tmp;
-    current2 = arg1;
+    current2 = throttleDurationForChannel;
     if (items === undefined) {
       items = [];
     }
     ref1 = arg3;
-    const ref = ref1.useRef(require("module_12").throttle(tmp, arg1, arg3));
-    const items1 = [tmp, arg1, arg3];
+    const ref = ref1.useRef(require("module_12").throttle(tmp, throttleDurationForChannel, arg3));
+    const items1 = [tmp, throttleDurationForChannel, arg3];
     HermesBuiltin.arraySpread(items, 3);
     const effect = ref1.useEffect(() => {
       ref.current = _mod12.throttle(closure_0, current2, ref1);
@@ -68,7 +68,7 @@ export (memo, arg1) => {
     const effect1 = ref1.useEffect(() => {
       ref1.current = current2(closure_0);
     }, items2);
-    if (0 !== arg1) {
+    if (0 !== throttleDurationForChannel) {
       current = ref1.current;
     }
     return current;

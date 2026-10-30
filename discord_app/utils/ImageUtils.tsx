@@ -1,9 +1,9 @@
-// === Module 1494: ImageUtils ===
+// === Module 1489: ImageUtils ===
 
-// Module 1494 (ImageUtils)
+// Module 1489 (ImageUtils)
 import _modDef38 from "module_38" /* 38 */;
-import PQueueDefault from "PQueue" /* 1495 */;
-import utils_ImageUtils from "utils/ImageUtils" /* 1496 */;
+import PQueueDefault from "PQueue" /* 1490 */;
+import utils_ImageUtils from "utils/ImageUtils" /* 1491 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import apply from "module_12" /* 12 */;
 
@@ -283,8 +283,8 @@ export function makeCssUrlString(arg0) {
   return str;
 }
 export { getPalette };
-export function getPaletteForAvatar(src) {
-  return utils_ImageUtils.default.getPaletteForAvatarMobile(src);
+export function getPaletteForAvatar(automodAvatarURL) {
+  return utils_ImageUtils.default.getPaletteForAvatarMobile(automodAvatarURL);
 }
 export function readFileAsBase64(value) {
   closure_0 = value;

@@ -1,6 +1,6 @@
-// === Module 13371: ? ===
+// === Module 13521: ? ===
 
-// Module 13371
+// Module 13521
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_10_traveler_chrono.webp.js");

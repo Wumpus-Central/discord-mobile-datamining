@@ -1,8 +1,8 @@
-// === Module 10821: ConjureLiveReloadStore ===
+// === Module 10844: ConjureLiveReloadStore ===
 
-// Module 10821 (ConjureLiveReloadStore)
+// Module 10844 (ConjureLiveReloadStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

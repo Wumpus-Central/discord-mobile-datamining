@@ -1,12 +1,12 @@
-// === Module 13521: MessagesUtils ===
+// === Module 13671: MessagesUtils ===
 
-// Module 13521 (MessagesUtils)
-import CodedLink from "CodedLink" /* 5741 */;
-import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 6037 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7487 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8543 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11122 */;
-import Constants from "Constants" /* 1084 */;
+// Module 13671 (MessagesUtils)
+import CodedLink from "CodedLink" /* 5747 */;
+import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 6044 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7495 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 8577 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11327 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 ({ InviteStates: c2, MessageEmbedTypes: c3 } = Constants);

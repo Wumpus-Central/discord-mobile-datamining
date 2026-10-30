@@ -1,155 +1,35 @@
-// === Module 14778: UserProfileActivityBadges ===
+// === Module 14813: UserProfileActivityBadges ===
 
-// Module 14778 (UserProfileActivityBadges)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7870 */;
-import GroupIcon from "GroupIcon" /* 8619 */;
-import AppsIcon2 from "AppsIcon" /* 8636 */;
-import utils from "utils" /* 8676 */;
-import GameControllerIcon from "GameControllerIcon" /* 9682 */;
-import TvIcon from "TvIcon" /* 10709 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10714 */;
-import MusicIcon from "MusicIcon" /* 10715 */;
-import TopicsIcon from "TopicsIcon" /* 11429 */;
-import HourglassIcon from "HourglassIcon" /* 11995 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14780 */;
-import Badges from "Badges" /* 14781 */;
+// Module 14813 (UserProfileActivityBadges)
+import nativeDefault from "native" /* 575 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import ActivityTypes from "ActivityTypes" /* 5757 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7876 */;
+import GroupIcon from "GroupIcon" /* 8653 */;
+import AppsIcon2 from "AppsIcon" /* 8670 */;
+import utils from "utils" /* 8710 */;
+import GameControllerIcon from "GameControllerIcon" /* 9707 */;
+import TvIcon from "TvIcon" /* 10732 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10737 */;
+import MusicIcon from "MusicIcon" /* 10738 */;
+import TopicsIcon from "TopicsIcon" /* 11630 */;
+import HourglassIcon from "HourglassIcon" /* 12181 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14815 */;
+import Badges from "Badges" /* 14816 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function getTimestampBadgeIcon(activity, arg1) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (flag) {
-    let AppsIcon = HourglassIcon.HourglassIcon;
-  } else {
-    if (!isEmbeddedActivityDefault(activity)) {
-      if (!obj.isConjurePresenceActivity(activity)) {
-        if (activity.type === ActivityTypes.WATCHING) {
-          AppsIcon = TvIcon.TvIcon;
-        } else if (activity.type === tmp5.LISTENING) {
-          AppsIcon = MusicIcon.MusicIcon;
-        } else {
-          AppsIcon = GameControllerIcon.GameControllerIcon;
-        }
-      }
-      obj = conjurePresenceActivity;
-    }
-    AppsIcon = AppsIcon2.AppsIcon;
-  }
-  return AppsIcon;
-}
 const View = fn(17).View;
-const ActivityTypes = fn(1084).ActivityTypes;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5005);
-let closure_7 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
-fn(558);
-let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TimestampBadge(activity) {
-  const cResult = c.c(16);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5009);
+let closure_6 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
+
+export function TimestampBadge(activity) {
   activity = activity.activity;
-  const tmp4 = closure_7();
-  const timestamps = activity.timestamps;
-  let start;
-  if (timestamps != null) {
-    start = timestamps.start;
-  }
-  if (start == null) {
-    start = activity.created_at;
-  }
-  if (null != start) {
-    if (!shouldShowActivityTimeBarDefault(activity)) {
-      const timestamps2 = activity.timestamps;
-      if (timestamps2 != null) {
-        const end = timestamps2.end;
-      }
-      const timestamps3 = activity.timestamps;
-      let flag;
-      if (timestamps3 != null) {
-        flag = timestamps3.isCountDown;
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      let tmp6 = flag;
-      if (flag) {
-        tmp6 = null != end;
-      }
-      if (tmp6) {
-        tmp6 = end > obj2.useTimestampTickedNow().now;
-      }
-      if (cResult[0] === activity) {
-        if (cResult[1] === tmp6) {
-          let tmp7 = cResult[2];
-        }
-        if (cResult[3] !== tmp7) {
-          const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-          const tmp12 = hasOwnProperty(tmp7, obj3);
-          cResult[3] = tmp7;
-          cResult[4] = tmp12;
-          let tmp10 = tmp12;
-        } else {
-          tmp10 = cResult[4];
-        }
-        if (cResult[5] === end) {
-          if (cResult[6] === flag) {
-            if (cResult[7] === start) {
-              let tmp13 = cResult[8];
-            }
-            if (cResult[9] === tmp4.bold) {
-              if (cResult[10] === tmp13) {
-                let tmp14 = cResult[11];
-              }
-              if (cResult[12] === tmp4.container) {
-                if (cResult[13] === tmp10) {
-                  if (cResult[14] === tmp14) {
-                    let tmp17 = cResult[15];
-                  }
-                  return tmp17;
-                }
-              }
-              const obj4 = { style: tmp4.container, children: null };
-              const items = [tmp10, tmp14];
-              obj4.children = items;
-              const tmp20 = timestampProducer(View, obj4);
-              cResult[12] = tmp4.container;
-              cResult[13] = tmp10;
-              cResult[14] = tmp14;
-              cResult[15] = tmp20;
-              tmp17 = tmp20;
-            }
-            const obj5 = { entry: tmp13, style: tmp4.bold };
-            const tmp16 = hasOwnProperty(Badges.ActiveTimestamp, obj5);
-            cResult[9] = tmp4.bold;
-            cResult[10] = tmp13;
-            cResult[11] = tmp16;
-            tmp14 = tmp16;
-          }
-        }
-        const obj6 = { start, end, isCountDown: flag };
-        cResult[5] = end;
-        cResult[6] = flag;
-        cResult[7] = start;
-        cResult[8] = obj6;
-        tmp13 = obj6;
-      }
-      const tmp9 = getTimestampBadgeIcon(activity, tmp6);
-      cResult[0] = activity;
-      cResult[1] = tmp6;
-      cResult[2] = tmp9;
-      tmp7 = tmp9;
-    }
-  }
-  return null;
-}) : (function TimestampBadge(activity) {
-  activity = activity.activity;
-  const tmp = closure_7();
+  const tmp = closure_6();
   const timestamps = activity.timestamps;
   let start;
   if (timestamps != null) {
@@ -173,81 +53,48 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TimestampBad
       if (flag == null) {
         flag = false;
       }
-      let tmp7 = flag;
+      let flag2 = flag;
       if (flag) {
-        tmp7 = null != end;
+        flag2 = null != end;
       }
-      if (tmp7) {
-        tmp7 = end > obj.useTimestampTickedNow().now;
+      if (flag2) {
+        flag2 = end > obj.useTimestampTickedNow().now;
+      }
+      if (flag2 === undefined) {
+        flag2 = false;
+      }
+      if (flag2) {
+        let AppsIcon = HourglassIcon.HourglassIcon;
+      } else {
+        if (!isEmbeddedActivityDefault(activity)) {
+          if (!tmp2Result.isConjurePresenceActivity(activity)) {
+            if (activity.type === ActivityTypes.ActivityTypes.WATCHING) {
+              AppsIcon = TvIcon.TvIcon;
+            } else if (activity.type === ActivityTypes.ActivityTypes.LISTENING) {
+              AppsIcon = MusicIcon.MusicIcon;
+            } else {
+              AppsIcon = GameControllerIcon.GameControllerIcon;
+            }
+          }
+          tmp2Result = conjurePresenceActivity;
+        }
+        AppsIcon = AppsIcon2.AppsIcon;
       }
       const obj2 = { style: tmp.container, children: null };
       const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-      const items = [hasOwnProperty(getTimestampBadgeIcon(activity, tmp7), obj3), ];
+      const items = [React4(AppsIcon, obj3), ];
       const obj4 = { entry: null, style: null };
       const obj5 = { start, end, isCountDown: flag };
       obj4.entry = obj5;
       obj4.style = tmp.bold;
-      items[1] = hasOwnProperty(Badges.ActiveTimestamp, obj4);
+      items[1] = React4(Badges.ActiveTimestamp, obj4);
       obj2.children = items;
-      return timestampProducer(View, obj2);
+      return hasOwnProperty(View, obj2);
     }
   }
   return null;
-});
-ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PartyBadge(activity) {
-  const cResult = c.c(9);
-  activity = activity.activity;
-  let container = closure_7();
-  if (!isEmbeddedActivityDefault(activity)) {
-    if (null != activity.party) {
-      if (cResult[0] === activity.party) {
-        if (cResult[1] === activity.state) {
-          let tmp6 = cResult[2];
-        }
-        if (null == tmp6) {
-          return null;
-        } else {
-          const _Symbol = Symbol;
-          if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-            const tmp12 = hasOwnProperty(GroupIcon.GroupIcon, obj2);
-            cResult[3] = tmp12;
-            let tmp10 = tmp12;
-          } else {
-            tmp10 = cResult[3];
-          }
-          if (cResult[4] !== tmp6) {
-            const obj3 = { variant: "text-sm/medium", color: "text-muted", children: tmp6 };
-            const tmp15 = hasOwnProperty(Text_Text.Text, obj3);
-            cResult[4] = tmp6;
-            cResult[5] = tmp15;
-            let tmp13 = tmp15;
-          } else {
-            tmp13 = cResult[5];
-          }
-          if (cResult[6] === container.container) {
-          }
-          const obj4 = { style: container.container, children: null };
-          const items = [tmp10, tmp13];
-          obj4.children = items;
-          const tmp19 = timestampProducer(View, obj4);
-          container = container.container;
-          cResult[6] = container;
-          cResult[7] = tmp13;
-          cResult[8] = tmp19;
-        }
-      }
-      const richGameStateBadgeText = utils.getRichGameStateBadgeText(activity.state, activity.party);
-      cResult[0] = activity.party;
-      cResult[1] = activity.state;
-      cResult[2] = richGameStateBadgeText;
-      tmp6 = richGameStateBadgeText;
-      const tmpResult = utils;
-    }
-  }
-  return null;
-}) : (function PartyBadge(activity) {
+}
+export function PartyBadge(activity) {
   activity = activity.activity;
   if (!isEmbeddedActivityDefault(activity)) {
     if (null != activity.party) {
@@ -256,73 +103,19 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PartyBadge(a
       if (null != richGameStateBadgeText) {
         const obj = { style: tmp.container, children: null };
         const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-        const items = [hasOwnProperty(GroupIcon.GroupIcon, obj2), ];
+        const items = [React4(GroupIcon.GroupIcon, obj2), ];
         const obj3 = { variant: "text-sm/medium", color: "text-muted", children: richGameStateBadgeText };
-        items[1] = hasOwnProperty(Text_Text.Text, obj3);
+        items[1] = React4(Text_Text.Text, obj3);
         obj.children = items;
-        tmp8 = timestampProducer(View, obj);
+        tmp8 = hasOwnProperty(View, obj);
       }
       return tmp8;
     }
   }
   return null;
-});
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
-
-export const TimestampBadge = tmp4;
-export const PartyBadge = tmp5;
-export const EpisodeBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function EpisodeBadge(activity) {
-  const cResult = c.c(8);
-  let container = closure_7();
-  const assets = activity.activity.assets;
-  let large_text;
-  if (assets != null) {
-    large_text = assets.large_text;
-  }
-  if (cResult[0] !== large_text) {
-    const episodeBadgeText = utils.getEpisodeBadgeText(large_text);
-    cResult[0] = large_text;
-    cResult[1] = episodeBadgeText;
-    let tmp5 = episodeBadgeText;
-    const tmpResult = utils;
-  } else {
-    tmp5 = cResult[1];
-  }
-  if (null == tmp5) {
-    return null;
-  } else {
-    const _Symbol = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-      const tmp11 = hasOwnProperty(TopicsIcon.TopicsIcon, obj2);
-      cResult[2] = tmp11;
-      let tmp8 = tmp11;
-    } else {
-      tmp8 = cResult[2];
-    }
-    if (cResult[3] !== tmp5) {
-      const obj3 = { variant: "text-sm/medium", color: "text-muted", children: tmp5 };
-      const tmp14 = hasOwnProperty(Text_Text.Text, obj3);
-      cResult[3] = tmp5;
-      cResult[4] = tmp14;
-      let tmp12 = tmp14;
-    } else {
-      tmp12 = cResult[4];
-    }
-    if (cResult[5] === container.container) {
-    }
-    const obj4 = { style: container.container, children: null };
-    const items = [tmp8, tmp12];
-    obj4.children = items;
-    const tmp18 = timestampProducer(View, obj4);
-    container = container.container;
-    cResult[5] = container;
-    cResult[6] = tmp12;
-    cResult[7] = tmp18;
-  }
-}) : (function EpisodeBadge(activity) {
-  const tmp = closure_7();
+}
+export function EpisodeBadge(activity) {
+  const tmp = closure_6();
   const assets = activity.activity.assets;
   let large_text;
   if (assets != null) {
@@ -333,11 +126,11 @@ export const EpisodeBadge = ReactCompilerGating.isReactCompilerEnabled() ? (func
   if (null != episodeBadgeText) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    const items = [hasOwnProperty(TopicsIcon.TopicsIcon, obj3), ];
+    const items = [React4(TopicsIcon.TopicsIcon, obj3), ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: episodeBadgeText };
-    items[1] = hasOwnProperty(Text_Text.Text, obj4);
+    items[1] = React4(Text_Text.Text, obj4);
     obj2.children = items;
-    tmp6 = timestampProducer(View, obj2);
+    tmp6 = hasOwnProperty(View, obj2);
   }
   return tmp6;
-});
+}

@@ -1,13 +1,11 @@
-// === Module 8985: StageChannelUpsellCardStore ===
+// === Module 9015: StageChannelUpsellCardStore ===
 
-// Module 8985 (StageChannelUpsellCardStore)
+// Module 9015 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
-import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4863 */;
-import _mod4920 from "module_4920" /* 4920 */;
-import identity from "module_1266" /* 1266 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4864 */;
+import _mod4924 from "module_4924" /* 4924 */;
+import identity from "module_1255" /* 1255 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -27,24 +25,10 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
 });
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx");
 
-export const useStageChannelUpsellCardStore = ReactCompilerGating.isReactCompilerEnabled() ? (function useStageChannelUpsellCardStore() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l(arg0) {
-      const items = [, ];
-      ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
-      return items;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return closure_3(first, _mod4920.shallow);
-}) : (function useStageChannelUpsellCardStore() {
+export function useStageChannelUpsellCardStore() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, _mod4920.shallow);
-});
+  }, _mod4924.shallow);
+}

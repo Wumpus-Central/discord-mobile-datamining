@@ -1,66 +1,15 @@
-// === Module 18257: useHomeDrawerToggleAccessibilityAction ===
+// === Module 18316: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 18257 (useHomeDrawerToggleAccessibilityAction)
-import util from "util" /* 1125 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5014 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
+// Module 18316 (useHomeDrawerToggleAccessibilityAction)
+import util from "util" /* 1114 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 require = fn;
 let c3 = "toggle-home-drawer";
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerToggleAccessibilityAction.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
-  _require = arg1;
-  const cResult = require("c").c(7);
-  if (!arg0) {
-    return null;
-  } else if (cResult[0] !== arg1) {
-    let intl = tmp(1125).intl;
-    let string = intl.string;
-    let h8xFEv = tmp(1125).t;
-    if (arg1) {
-      h8xFEv = h8xFEv.h8xFEv;
-      let stringResult = string(h8xFEv);
-    } else {
-      stringResult = string(h8xFEv["Rgk/2h"]);
-    }
-    cResult[0] = arg1;
-    cResult[1] = stringResult;
-  } else {
-    if (cResult[2] !== arg1) {
-      function action() {
-        NavigationRouteUtils.setHomeDrawerState(!closure_0);
-        const intl = util.intl;
-        const string = intl.string;
-        const t = util.t;
-        if (closure_0) {
-          let stringResult = string(t["0s/g+O"]);
-        } else {
-          stringResult = string(t.hfxfVb);
-        }
-        const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
-        AccessibilityAnnouncer.announce(stringResult);
-      }
-      cResult[2] = arg1;
-      cResult[3] = action;
-      let tmp7 = action;
-    } else {
-      tmp7 = cResult[3];
-    }
-    if (cResult[4] === tmp7) {
-    }
-    const obj2 = { name, label: cResult[1], action: tmp7 };
-    cResult[4] = tmp7;
-    cResult[5] = cResult[1];
-    cResult[6] = obj2;
-  }
-  let obj = require("c");
-}) : (function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
+export default function useHomeDrawerToggleAccessibilityAction(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
@@ -78,18 +27,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeD
         name,
         label: stringResult,
         action() {
-            closure_0(5187).setHomeDrawerState(!dependencyMap);
-            const intl = closure_0(1125).intl;
+            closure_0(5193).setHomeDrawerState(!dependencyMap);
+            const intl = closure_0(1114).intl;
             const string = intl.string;
-            const t = closure_0(1125).t;
+            const t = closure_0(1114).t;
             if (dependencyMap) {
               let stringResult = string(t["0s/g+O"]);
             } else {
               stringResult = string(t.hfxfVb);
             }
-            const AccessibilityAnnouncer = closure_0(5014).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(5018).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-            const obj = closure_0(5187);
+            const obj = closure_0(5193);
           }
       };
       return obj;
@@ -97,5 +46,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeD
       return null;
     }
   }, items);
-});
+};
 export const TOGGLE_HOME_DRAWER_A11Y_ACTION = "toggle-home-drawer";

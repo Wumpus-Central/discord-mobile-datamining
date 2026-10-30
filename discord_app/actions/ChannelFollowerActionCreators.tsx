@@ -1,12 +1,12 @@
-// === Module 13837: ChannelFollowerActionCreators ===
+// === Module 11183: ChannelFollowerActionCreators ===
 
-// Module 13837 (ChannelFollowerActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 11183 (ChannelFollowerActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ChannelFollowerActionCreators.tsx");
 

@@ -1,25 +1,25 @@
-// === Module 10832: ConjureActionCreators ===
+// === Module 10855: ConjureActionCreators ===
 
-// Module 10832 (ConjureActionCreators)
-import BackoffDefault from "Backoff" /* 569 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5664 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6832 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6868 */;
-import UserActionCreators from "UserActionCreators" /* 8710 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10837 */;
-import conjurePreviewTicket from "conjurePreviewTicket" /* 10839 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10840 */;
-import createProxyTicket from "createProxyTicket" /* 10842 */;
-import conjureAppInServer from "conjureAppInServer" /* 10843 */;
+// Module 10855 (ConjureActionCreators)
+import BackoffDefault from "Backoff" /* 559 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6839 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6875 */;
+import UserActionCreators from "UserActionCreators" /* 8744 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10854 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10860 */;
+import conjurePreviewTicket from "conjurePreviewTicket" /* 10862 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10863 */;
+import createProxyTicket from "createProxyTicket" /* 10865 */;
+import conjureAppInServer from "conjureAppInServer" /* 10866 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 6829 */;
-import UserStore from "UserStore" /* 1389 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10833 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import ReadStateStore from "ReadStateStore" /* 6836 */;
+import UserStore from "UserStore" /* 1384 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 10856 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
 
 require = fn;
 function updateIntegrationStatus(projectId, integrationStatus) {
@@ -50,7 +50,7 @@ let closure_18 = async function _listProjects() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -176,7 +176,7 @@ let closure_20 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -218,7 +218,7 @@ let closure_20 = async function _forgetMissingProjects() {
             }
           }
           c7 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else if (1 === tmp4) {
         c5 = 0;
@@ -309,7 +309,7 @@ let closure_31 = async function _fetchMissingProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -394,7 +394,7 @@ let closure_32 = async function _fetchMissingConjureProjectNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -471,7 +471,7 @@ let closure_34 = async function _drainMissingProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -559,7 +559,7 @@ let closure_36 = async function _fetchProjectLimit() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -634,10 +634,10 @@ let closure_36 = async function _fetchProjectLimit() {
         }
       }
       c5 = 3;
-    } catch (tmp23) {
+    } catch (tmp24) {
       if (tmp4 === c3) {
         c5 = tmp2;
-        throw tmp23;
+        throw tmp24;
       } else {
         c4 = tmp;
       }
@@ -739,7 +739,7 @@ let closure_43 = async function _postProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -857,7 +857,7 @@ let closure_47 = async function _fetchConjureApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -894,7 +894,7 @@ let closure_47 = async function _fetchConjureApplication(arg0) {
           const obj = closure_130_1(closure_130_2[8]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp18) {
       c4 = tmp;
@@ -913,7 +913,7 @@ let closure_48 = async function _refreshPreviewApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -948,7 +948,7 @@ let closure_48 = async function _refreshPreviewApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp11) {
       c1 = tmp;
       throw tmp11;
@@ -995,7 +995,7 @@ let closure_50 = async function _fetchApplicationChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1071,7 +1071,7 @@ let closure_52 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1136,8 +1136,8 @@ let closure_52 = async function _deleteProject() {
 };
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
-const Endpoints = fn(1084).Endpoints;
-const ReadStateTypes = fn(6763).ReadStateTypes;
+const Endpoints = fn(1072).Endpoints;
+const ReadStateTypes = fn(6770).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;

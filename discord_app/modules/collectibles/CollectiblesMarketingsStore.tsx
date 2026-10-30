@@ -1,8 +1,8 @@
-// === Module 5673: CollectiblesMarketingsStore ===
+// === Module 5679: CollectiblesMarketingsStore ===
 
-// Module 5673 (CollectiblesMarketingsStore)
+// Module 5679 (CollectiblesMarketingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 const FetchState = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 const obj2 = { marketingsBySurfaces: null, fetchedAt: null };

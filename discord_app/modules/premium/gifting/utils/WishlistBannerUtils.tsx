@@ -1,10 +1,8 @@
-// === Module 10622: WishlistBannerUtils ===
+// === Module 10648: WishlistBannerUtils ===
 
-// Module 10622 (WishlistBannerUtils)
+// Module 10648 (WishlistBannerUtils)
 import _mod19 from "module_19" /* 19 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;
@@ -34,7 +32,7 @@ obj5.getSubtitle = function getSubtitle(username) {
   return intl.formatToPlainString(util.t.wyMp1j, { username });
 };
 obj2.SHOP_ONLY = obj5;
-let obj6 = { title: null, getSubtitle: null, showIcons: false };
+const obj6 = { title: null, getSubtitle: null, showIcons: false };
 const intl4 = util.intl;
 obj6.title = intl4.string(util.t.BCi1gT);
 obj6.getSubtitle = function getSubtitle(username) {
@@ -42,7 +40,11 @@ obj6.getSubtitle = function getSubtitle(username) {
   return intl.formatToPlainString(util.t.BjEX38, { username });
 };
 obj2.SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY = obj6;
-function getBannerMode(wishlistInDmLength) {
+const result = size.fileFinishedImporting("modules/premium/gifting/utils/WishlistBannerUtils.tsx");
+
+export { BannerMode };
+export const BANNER_CONFIG_MOBILE = obj2;
+export function getBannerMode(wishlistInDmLength) {
   ({ totalUnownedWishlistItemCount, displayItems } = wishlistInDmLength);
   if (totalUnownedWishlistItemCount >= wishlistInDmLength.wishlistInDmLength) {
     let SHOP_ONLY = obj.FULL_WISHLIST;
@@ -66,91 +68,7 @@ function getBannerMode(wishlistInDmLength) {
   }
   return SHOP_ONLY;
 }
-const result = size.fileFinishedImporting("modules/premium/gifting/utils/WishlistBannerUtils.tsx");
-
-export { BannerMode };
-export const BANNER_CONFIG_MOBILE = obj2;
-export { getBannerMode };
-export const useWishlistBannerConfig = ReactCompilerGating.isReactCompilerEnabled() ? (function useWishlistBannerConfig(wishlistInDmLength) {
-  const obj = c;
-  const cResult = obj.c(9);
-  ({ totalUnownedWishlistItemCount, displayItems, recipientName } = wishlistInDmLength);
-  if (totalUnownedWishlistItemCount >= wishlistInDmLength.wishlistInDmLength) {
-    let SHOP_ONLY = obj.FULL_WISHLIST;
-    let tmp4 = obj;
-  } else if (totalUnownedWishlistItemCount > 0) {
-    SHOP_ONLY = obj.MIXED;
-    tmp4 = obj;
-  } else {
-    if (displayItems.length > 0) {
-      if (displayItems.every((item) => {
-        ({ sku, source } = item);
-        let isGameItemSKUResult = source === totalUnownedWishlistItemCount(wishlistInDmLength[2]).WishlistItemSource.POPULAR;
-        if (isGameItemSKUResult) {
-          isGameItemSKUResult = totalUnownedWishlistItemCount(wishlistInDmLength[3]).isGameItemSKU(sku);
-          const tmpResult = totalUnownedWishlistItemCount(wishlistInDmLength[3]);
-        }
-        return isGameItemSKUResult;
-      })) {
-        SHOP_ONLY = obj.SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY;
-        tmp4 = obj;
-      }
-    }
-    tmp4 = obj;
-    SHOP_ONLY = obj.SHOP_ONLY;
-  }
-  if (tmp4.FULL_WISHLIST === SHOP_ONLY) {
-    if (cResult[0] !== recipientName) {
-      const intl3 = util.intl;
-      const obj2 = { username: recipientName };
-      const formatToPlainStringResult = intl3.formatToPlainString(util.t["YcL/Vr"], obj2);
-      cResult[0] = recipientName;
-      cResult[1] = formatToPlainStringResult;
-      let tmp13 = formatToPlainStringResult;
-    } else {
-      tmp13 = cResult[1];
-    }
-    if (cResult[2] !== tmp13) {
-      const obj3 = { title: tmp13, showIcons: false };
-      cResult[2] = tmp13;
-      cResult[3] = obj3;
-    }
-  } else {
-    if (tmp4.MIXED === SHOP_ONLY) {
-      if (cResult[4] !== recipientName) {
-        const intl2 = util.intl;
-        const obj4 = { username: recipientName };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(util.t.dIDKgi, obj4);
-        cResult[4] = recipientName;
-        cResult[5] = formatToPlainStringResult1;
-        let tmp10 = formatToPlainStringResult1;
-      } else {
-        tmp10 = cResult[5];
-      }
-      if (cResult[6] !== tmp10) {
-        const obj5 = { title: tmp10, showIcons: true };
-        cResult[6] = tmp10;
-        cResult[7] = obj5;
-        let tmp12 = obj5;
-      } else {
-        tmp12 = cResult[7];
-      }
-      let tmp9 = tmp12;
-    } else {
-      const _Symbol = Symbol;
-      if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj6 = { title: null, showIcons: false };
-        const intl = util.intl;
-        obj6.title = intl.string(util.t.BCi1gT);
-        cResult[8] = obj6;
-        tmp9 = obj6;
-      } else {
-        tmp9 = cResult[8];
-      }
-    }
-    return tmp9;
-  }
-}) : (function useWishlistBannerConfig(totalUnownedWishlistItemCount) {
+export function useWishlistBannerConfig(totalUnownedWishlistItemCount) {
   totalUnownedWishlistItemCount = totalUnownedWishlistItemCount.totalUnownedWishlistItemCount;
   const wishlistInDmLength = totalUnownedWishlistItemCount.wishlistInDmLength;
   const displayItems = totalUnownedWishlistItemCount.displayItems;
@@ -201,4 +119,4 @@ export const useWishlistBannerConfig = ReactCompilerGating.isReactCompilerEnable
       return obj;
     }
   }, items1);
-});
+}

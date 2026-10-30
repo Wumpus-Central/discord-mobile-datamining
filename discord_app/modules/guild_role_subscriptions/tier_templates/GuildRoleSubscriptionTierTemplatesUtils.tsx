@@ -1,15 +1,15 @@
-// === Module 17099: GuildRoleSubscriptionTierTemplatesUtils ===
+// === Module 17153: GuildRoleSubscriptionTierTemplatesUtils ===
 
-// Module 17099 (GuildRoleSubscriptionTierTemplatesUtils)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7420 */;
-import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15636 */;
+// Module 17153 (GuildRoleSubscriptionTierTemplatesUtils)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import FlagUtilsAll from "FlagUtils" /* 1397 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7428 */;
+import GuildRoleSubscriptionsExperimentUtils from "GuildRoleSubscriptionsExperimentUtils" /* 15676 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4930 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 17100 */;
-import allSettled_mod from "allSettled" /* 6443 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4934 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 17154 */;
+import allSettled_mod from "allSettled" /* 6450 */;
 
 const require = globalThis.__r;
 
@@ -56,7 +56,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
           let item = importDefault.forEach((ref_id) => {
             channel = channel.getChannel(ref_id.ref_id);
             if (null != channel) {
-              const obj = closure_1(c3[14]);
+              const obj = closure_1(c3[12]);
               closure_1_2.push(obj.createRoleSubscriptionTemplateChannel(closure_1_0, channel.name, channel.type, channel.topic));
               closure_1_3.push(channel);
             }
@@ -138,127 +138,17 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(17094).useEditStateStore;
-const GuildFeatures = fn(1084).GuildFeatures;
-const ChannelFlags = fn(4864).ChannelFlags;
+const useEditStateStore = fn(17148).useEditStateStore;
+const GuildFeatures = fn(1072).GuildFeatures;
+const ChannelFlags = fn(4865).ChannelFlags;
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
 let closure_12 = {};
-fn(558);
-const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelWithTemplateFallback(arg0) {
-  _require = arg0;
-  let flags = dependencyMap;
-  const cResult = require("c").c(12);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function s() {
-      return ChannelStore.getChannel(closure_0);
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp5 = fn;
-  } else {
-    tmp5 = cResult[2];
-  }
-  const obj = require("c");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp5);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [GuildRoleSubscriptionTierTemplatesStore];
-    cResult[3] = items1;
-    let tmp6 = items1;
-  } else {
-    tmp6 = cResult[3];
-  }
-  if (cResult[4] !== arg0) {
-    const fn2 = function f() {
-      return GuildRoleSubscriptionTierTemplatesStore.getChannel(closure_0);
-    };
-    cResult[4] = arg0;
-    cResult[5] = fn2;
-    let tmp8 = fn2;
-  } else {
-    tmp8 = cResult[5];
-  }
-  const tmpResult = require("useStateFromStores");
-  let stateFromStores1 = require("useStateFromStores").useStateFromStores(tmp6, tmp8);
-  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [GuildRoleSubscriptionsStore];
-    cResult[6] = items2;
-    let tmp10 = items2;
-  } else {
-    tmp10 = cResult[6];
-  }
-  if (cResult[7] !== arg0) {
-    class C {
-      constructor() {
-        return closure_7.getBenefitChannel(closure_0);
-      }
-    }
-    cResult[7] = arg0;
-    cResult[8] = C;
-  } else {
-    class C {
-      constructor() {
-        return closure_7.getBenefitChannel(closure_0);
-      }
-    }
-  }
-  const tmpResult3 = require("useStateFromStores");
-  let name = require("useStateFromStores").useStateFromStores(tmp10, C);
-  if (null != stateFromStores) {
-    class C {
-      constructor() {
-        return closure_7.getBenefitChannel(closure_0);
-      }
-    }
-    if (stateFromStores.isObfuscated()) {
-      class C {
-        constructor() {
-          return closure_7.getBenefitChannel(closure_0);
-        }
-      }
-      if (null != name) {
-        class C {
-          constructor() {
-            return closure_7.getBenefitChannel(closure_0);
-          }
-        }
-        const obj2 = { name: name.name, flags: null };
-        flags = stateFromStores.flags;
-        obj2.flags = FlagUtilsAll.removeFlag(flags, ChannelFlags.OBFUSCATED);
-        const mergeResult = stateFromStores.merge(obj2);
-        name = name.name;
-        cResult[9] = name;
-        cResult[10] = stateFromStores;
-        cResult[11] = mergeResult;
-      }
-    }
-  }
-  if (null != stateFromStores) {
-    class C {
-      constructor() {
-        return closure_7.getBenefitChannel(closure_0);
-      }
-    }
-    if (stateFromStores.isObfuscated()) {
-      class C {
-        constructor() {
-          return closure_7.getBenefitChannel(closure_0);
-        }
-      }
-    }
-    stateFromStores1 = tmp17;
-  }
-  return stateFromStores1;
-}) : (function useChannelWithTemplateFallback(arg0) {
-  _require = arg0;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx");
+
+export function useChannelWithTemplateFallback(ref_id) {
+  _require = ref_id;
   const items = [ChannelStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => ChannelStore.getChannel(closure_0));
   const obj = require("useStateFromStores");
@@ -293,237 +183,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelWi
     stateFromStores1 = tmp4;
   }
   return stateFromStores1;
-});
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx");
-
-export const useChannelWithTemplateFallback = tmp3;
-export const useSuggestedUnusedPrices = ReactCompilerGating.isReactCompilerEnabled() ? (function useSuggestedUnusedPrices(arg0, arg1, arg2) {
-  _require = arg0;
-  const cResult = require("c").c(21);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildRoleSubscriptionsStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function u() {
-      return GuildRoleSubscriptionsStore.getSubscriptionListingsForGuild(closure_0);
-    };
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[2];
-  }
-  const obj = require("c");
-  const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
-  if (cResult[3] !== arg0) {
-    const fn2 = function h(arg0) {
-      return arg0.editStateIdsForGroup[closure_0];
-    };
-    cResult[3] = arg0;
-    cResult[4] = fn2;
-    let tmp7 = fn2;
-  } else {
-    tmp7 = cResult[4];
-  }
-  const tmp9 = useEditStateStore(tmp7);
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn3 = function p(listings) {
-      return listings.listings;
-    };
-    cResult[5] = fn3;
-    let tmp10 = fn3;
-  } else {
-    tmp10 = cResult[5];
-  }
-  const tmp8Result = useEditStateStore(tmp10);
-  closure_1 = tmp8Result;
-  if (undefined !== arg2) {
-    if (undefined !== arg1) {
-      if (cResult[6] !== stateFromStores) {
-        const _Symbol = Symbol;
-        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class S {
-            constructor(arg0) {
-              soft_deleted = arg0.soft_deleted;
-              tmp = !soft_deleted;
-              if (!soft_deleted) {
-                tmp = !arg0.archived;
-              }
-              return tmp;
-            }
-          }
-          cResult[8] = S;
-        } else {
-          class S {
-            constructor(arg0) {
-              soft_deleted = arg0.soft_deleted;
-              tmp = !soft_deleted;
-              if (!soft_deleted) {
-                tmp = !arg0.archived;
-              }
-              return tmp;
-            }
-          }
-        }
-        const found = stateFromStores.filter(S);
-        const _Symbol2 = Symbol;
-        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          class T {
-            constructor(arg0) {
-              return arg0.subscription_plans[0].price;
-            }
-          }
-          cResult[9] = T;
-        } else {
-          class T {
-            constructor(arg0) {
-              return arg0.subscription_plans[0].price;
-            }
-          }
-        }
-        const mapped = found.map(T);
-        cResult[6] = stateFromStores;
-        cResult[7] = mapped;
-      } else {
-        class T {
-          constructor(arg0) {
-            return arg0.subscription_plans[0].price;
-          }
-        }
-        if (cResult[10] === tmp8Result) {
-          class T {
-            constructor(arg0) {
-              return arg0.subscription_plans[0].price;
-            }
-          }
-          if (cResult[13] === obj3) {
-            class T {
-              constructor(arg0) {
-                return arg0.subscription_plans[0].price;
-              }
-            }
-            if (obj4.has(arg2)) {
-              class T {
-                constructor(arg0) {
-                  return arg0.subscription_plans[0].price;
-                }
-              }
-              if (-1 === tmp22) {
-                class T {
-                  constructor(arg0) {
-                    return arg0.subscription_plans[0].price;
-                  }
-                }
-                return null;
-              } else {
-                class T {
-                  constructor(arg0) {
-                    return arg0.subscription_plans[0].price;
-                  }
-                }
-                const _Symbol3 = Symbol;
-                const forResult = Symbol.for("react.early_return_sentinel");
-                const items1 = [];
-                const sum = tmp22 + 1;
-                let tmp27 = forResult;
-                if (sum < arg1.length) {
-                  class T {
-                    constructor(arg0) {
-                      return arg0.subscription_plans[0].price;
-                    }
-                  }
-                  while (true) {
-                    class T {
-                      constructor(arg0) {
-                        return arg0.subscription_plans[0].price;
-                      }
-                    }
-                    if (!obj4.has(arg1[sum])) {
-                      class T {
-                        constructor(arg0) {
-                          return arg0.subscription_plans[0].price;
-                        }
-                      }
-                    }
-                    tmp27 = items1;
-                    if (3 === items1.length) {
-                      class T {
-                        constructor(arg0) {
-                          return arg0.subscription_plans[0].price;
-                        }
-                      }
-                    } else {
-                      class T {
-                        constructor(arg0) {
-                          return arg0.subscription_plans[0].price;
-                        }
-                      }
-                      tmp27 = forResult;
-                      if (sum >= arg1.length) {
-                        class T {
-                          constructor(arg0) {
-                            return arg0.subscription_plans[0].price;
-                          }
-                        }
-                      } else {
-                        class T {
-                          constructor(arg0) {
-                            return arg0.subscription_plans[0].price;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                cResult[16] = tmp22;
-                cResult[17] = arg1;
-                cResult[18] = obj4;
-                cResult[19] = items1;
-                cResult[20] = tmp27;
-              }
-            } else {
-              class T {
-                constructor(arg0) {
-                  return arg0.subscription_plans[0].price;
-                }
-              }
-              return null;
-            }
-          }
-          const _Set = Set;
-          const set = new Set(obj3.concat(tmp12));
-          cResult[13] = obj3;
-          cResult[14] = tmp12;
-          cResult[15] = set;
-        }
-        const items2 = [];
-        if (undefined !== tmp9) {
-          class T {
-            constructor(arg0) {
-              return arg0.subscription_plans[0].price;
-            }
-          }
-        }
-        cResult[10] = tmp8Result;
-        cResult[11] = tmp9;
-        cResult[12] = items2;
-      }
-    }
-  }
-  return null;
-}) : (function useSuggestedUnusedPrices(arg0, arr, arg2) {
-  _require = arg0;
+}
+export function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
+  _require = guildId;
   const items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListingsForGuild(closure_0));
   const arr3 = useEditStateStore((arg0) => arg0.editStateIdsForGroup[closure_0]);
   closure_1 = useEditStateStore((listings) => listings.listings);
-  if (undefined !== arg2) {
-    if (undefined !== arr) {
+  if (undefined !== price_tier) {
+    if (undefined !== priceTiers) {
       const found = stateFromStores.filter((soft_deleted) => {
         soft_deleted = soft_deleted.soft_deleted;
         let tmp = !soft_deleted;
@@ -547,17 +215,17 @@ export const useSuggestedUnusedPrices = ReactCompilerGating.isReactCompilerEnabl
       }
       const _Set = Set;
       const set = new Set(items1.concat(mapped));
-      if (set.has(arg2)) {
-        const index = arr.indexOf(arg2);
+      if (set.has(price_tier)) {
+        const index = priceTiers.indexOf(price_tier);
         if (-1 === index) {
           return null;
         } else {
           const items2 = [];
           let sum = index + 1;
-          if (sum < arr.length) {
+          if (sum < priceTiers.length) {
             while (true) {
-              if (!set.has(arr[sum])) {
-                arr = items2.push(arr[sum]);
+              if (!set.has(priceTiers[sum])) {
+                let arr = items2.push(priceTiers[sum]);
               }
               if (3 === items2.length) {
                 break;
@@ -575,7 +243,7 @@ export const useSuggestedUnusedPrices = ReactCompilerGating.isReactCompilerEnabl
     }
   }
   return null;
-});
+}
 export function announceCreateTemplateChannels(arg0) {
   const arr = getUsedTemplateChannelsForGuild(arg0);
   closure_12[arg0] = arr;

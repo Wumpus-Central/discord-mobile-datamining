@@ -1,10 +1,10 @@
-// === Module 12631: selectConjureChannel ===
+// === Module 12780: selectConjureChannel ===
 
-// Module 12631 (selectConjureChannel)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6693 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+// Module 12780 (selectConjureChannel)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6700 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
 
-const StaticChannelRoute = fn(4864).StaticChannelRoute;
+const StaticChannelRoute = fn(4865).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/builder/selectConjureChannel.tsx");
 

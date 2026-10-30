@@ -1,16 +1,16 @@
-// === Module 13594: application_commands/ApplicationCommandUtils ===
+// === Module 13743: application_commands/ApplicationCommandUtils ===
 
-// Module 13594 (application_commands/ApplicationCommandUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import _modDef1988 from "module_1988" /* 1988 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6023 */;
-import DraftStore from "DraftStore" /* 7689 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9731 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10483 */;
-import _modDef13595 from "module_13595" /* 13595 */;
-import _modDef13596 from "module_13596" /* 13596 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8347 */;
+// Module 13743 (application_commands/ApplicationCommandUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
+import _modDef1983 from "module_1983" /* 1983 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5678 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6030 */;
+import DraftStore from "DraftStore" /* 7694 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9757 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10508 */;
+import _modDef13744 from "module_13744" /* 13744 */;
+import _modDef13745 from "module_13745" /* 13745 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8200 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;
@@ -23,9 +23,9 @@ export function getApplicationCommandsIconSource(section, stateFromStores) {
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef13595);
+      return AvatarUtilsDefault.makeSource(_modDef13744);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef13596);
+      return AvatarUtilsDefault.makeSource(_modDef13745);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
@@ -38,7 +38,7 @@ export function getApplicationCommandsIconSource(section, stateFromStores) {
         obj5.guildMember = stateFromStores;
         let applicationIconSource = AvatarUtilsDefault.getApplicationIconSource(obj5);
       } else {
-        applicationIconSource = _modDef1988;
+        applicationIconSource = _modDef1983;
       }
       return applicationIconSource;
     }

@@ -1,8 +1,8 @@
-// === Module 7602: ColorConstants ===
+// === Module 7610: ColorConstants ===
 
-// Module 7602 (ColorConstants)
-import nativeDefault from "native" /* 587 */;
-import PremiumConstants from "PremiumConstants" /* 1391 */;
+// Module 7610 (ColorConstants)
+import nativeDefault from "native" /* 575 */;
+import PremiumConstants from "PremiumConstants" /* 1386 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;

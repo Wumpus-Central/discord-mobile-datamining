@@ -1,12 +1,12 @@
-// === Module 5196: ChatInputUtils ===
+// === Module 5202: ChatInputUtils ===
 
-// Module 5196 (ChatInputUtils)
-import KeyboardUIStore from "KeyboardUIStore" /* 1501 */;
-import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5197 */;
-import useKeyboardType from "useKeyboardType" /* 5198 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5199 */;
+// Module 5202 (ChatInputUtils)
+import KeyboardUIStore from "KeyboardUIStore" /* 1496 */;
+import KeyboardTypes from "KeyboardTypes" /* 1624 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1889 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5203 */;
+import useKeyboardType from "useKeyboardType" /* 5204 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5205 */;
 import size from "module_2" /* 2 */;
 
 function getHighestIndexForScreenIndexMap(map1) {

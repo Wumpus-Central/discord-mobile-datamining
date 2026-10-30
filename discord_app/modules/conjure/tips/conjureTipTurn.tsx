@@ -1,7 +1,7 @@
-// === Module 12425: conjureTipTurn ===
+// === Module 12577: conjureTipTurn ===
 
-// Module 12425 (conjureTipTurn)
-import conjureChatTurns from "conjureChatTurns" /* 10809 */;
+// Module 12577 (conjureTipTurn)
+import conjureChatTurns from "conjureChatTurns" /* 10832 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/tips/conjureTipTurn.tsx");
@@ -35,6 +35,15 @@ export function newestSettledTurn(arr) {
     return null;
   }
   return null;
+}
+export function hasRunningTurn(arr) {
+  const findOpenTurnResult = conjureChatTurns.findOpenTurn(arr);
+  let tmp4 = null != findOpenTurnResult;
+  if (tmp4) {
+    tmp4 = !conjureChatTurns.isStrandedSegment(arr, arr.lastIndexOf(findOpenTurnResult));
+    const tmpResult = conjureChatTurns;
+  }
+  return tmp4;
 }
 export function newestPublish(arr) {
   let tmp2;
@@ -82,6 +91,18 @@ export function hasOpenAsk(newestSettledTurnResult) {
       num = 0;
     }
     tmp = num > 0;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.clarification;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.appBuildRequest;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.restoreProposal;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.publishScheduleProposal;
   }
   return tmp;
 }

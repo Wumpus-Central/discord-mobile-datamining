@@ -1,8 +1,8 @@
-// === Module 19516: PhoneVerificationStore ===
+// === Module 19579: PhoneVerificationStore ===
 
-// Module 19516 (PhoneVerificationStore)
+// Module 19579 (PhoneVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let c0 = false;
 const Store = initializeDefault.Store;

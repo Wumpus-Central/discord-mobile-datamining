@@ -1,159 +1,31 @@
-// === Module 14570: CrunchyrollLinkSuccess ===
+// === Module 14603: CrunchyrollLinkSuccess ===
 
-// Module 14570 (CrunchyrollLinkSuccess)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7281 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9685 */;
-import _modDef14571 from "module_14571" /* 14571 */;
+// Module 14603 (CrunchyrollLinkSuccess)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7286 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9710 */;
+import _modDef14604 from "module_14604" /* 14604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_6 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CrunchyrollLinkDiscordSuccess(onClose) {
-  const cResult = c.c(26);
-  onClose = onClose.onClose;
-  const tmp4 = closure_6();
-  const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
-  ({ container, content } = twoWayLinkStyles);
-  if (cResult[0] !== tmp4.image) {
-    const obj3 = { source: _modDef14571, style: tmp4.image };
-    const tmp10 = React4(FastImageDefault, obj3);
-    cResult[0] = tmp4.image;
-    cResult[1] = tmp10;
-    let tmp6 = tmp10;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const stringResult = intl.string(util.t.Fnvxvk);
-    cResult[2] = stringResult;
-    let tmp11 = stringResult;
-  } else {
-    tmp11 = cResult[2];
-  }
-  if (cResult[3] !== twoWayLinkStyles.title) {
-    const obj4 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: tmp11 };
-    const tmp15 = React4(Text_Text.Text, obj4);
-    cResult[3] = twoWayLinkStyles.title;
-    cResult[4] = tmp15;
-    let tmp13 = tmp15;
-  } else {
-    tmp13 = cResult[4];
-  }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = util.intl;
-    const stringResult1 = intl2.string(util.t.YwXceg);
-    cResult[5] = stringResult1;
-    let tmp16 = stringResult1;
-  } else {
-    tmp16 = cResult[5];
-  }
-  if (cResult[6] !== twoWayLinkStyles.body) {
-    const obj5 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: tmp16 };
-    const tmp20 = React4(Text_Text.Text, obj5);
-    cResult[6] = twoWayLinkStyles.body;
-    cResult[7] = tmp20;
-    let tmp18 = tmp20;
-  } else {
-    tmp18 = cResult[7];
-  }
-  if (cResult[8] === twoWayLinkStyles.content) {
-    if (cResult[9] === tmp6) {
-      if (cResult[10] === tmp13) {
-        if (cResult[11] === tmp18) {
-          let tmp21 = cResult[12];
-        }
-        const _Symbol = Symbol;
-        ({ footerContainer, footerButton } = twoWayLinkStyles);
-        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = util.intl;
-          const stringResult2 = intl3.string(util.t.i4jeWR);
-          cResult[13] = stringResult2;
-          let tmp23 = stringResult2;
-        } else {
-          tmp23 = cResult[13];
-        }
-        if (cResult[14] !== onClose) {
-          const obj6 = { size: "md", text: tmp23, onPress: onClose };
-          const tmp27 = React4(components_Button_Button.Button, obj6);
-          cResult[14] = onClose;
-          cResult[15] = tmp27;
-          let tmp25 = tmp27;
-        } else {
-          tmp25 = cResult[15];
-        }
-        if (cResult[16] === twoWayLinkStyles.footerButton) {
-          if (cResult[17] === tmp25) {
-            let tmp28 = cResult[18];
-          }
-          if (cResult[19] === twoWayLinkStyles.footerContainer) {
-            if (cResult[20] === tmp28) {
-              let tmp32 = cResult[21];
-            }
-            if (cResult[22] === twoWayLinkStyles.container) {
-              if (cResult[23] === tmp21) {
-                if (cResult[24] === tmp32) {
-                  let tmp35 = cResult[25];
-                }
-                return tmp35;
-              }
-            }
-            const obj7 = { style: container, children: null };
-            const items = [tmp21, tmp32];
-            obj7.children = items;
-            const tmp38 = hasOwnProperty(View, obj7);
-            cResult[22] = twoWayLinkStyles.container;
-            cResult[23] = tmp21;
-            cResult[24] = tmp32;
-            cResult[25] = tmp38;
-            tmp35 = tmp38;
-          }
-          const obj8 = { bottom: true, style: footerContainer, children: tmp28 };
-          const tmp34 = React4(common_SafeAreaView.SafeAreaPaddingView, obj8);
-          cResult[19] = twoWayLinkStyles.footerContainer;
-          cResult[20] = tmp28;
-          cResult[21] = tmp34;
-          tmp32 = tmp34;
-        }
-        const obj9 = { style: footerButton, children: tmp25 };
-        const tmp31 = React4(View, obj9);
-        cResult[16] = twoWayLinkStyles.footerButton;
-        cResult[17] = tmp25;
-        cResult[18] = tmp31;
-        tmp28 = tmp31;
-      }
-    }
-  }
-  const obj10 = { style: content, children: null };
-  const items1 = [tmp6, tmp13, tmp18];
-  obj10.children = items1;
-  const tmp22 = hasOwnProperty(View, obj10);
-  cResult[8] = twoWayLinkStyles.content;
-  cResult[9] = tmp6;
-  cResult[10] = tmp13;
-  cResult[11] = tmp18;
-  cResult[12] = tmp22;
-  tmp21 = tmp22;
-}) : (function CrunchyrollLinkDiscordSuccess(onClose) {
+export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const tmp = closure_6();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14571;
+  obj4.source = _modDef14604;
   obj4.style = tmp.image;
   const items = [React4(FastImageDefault, obj4), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
@@ -177,4 +49,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   items1[1] = React4(common_SafeAreaView.SafeAreaPaddingView, obj7);
   obj2.children = items1;
   return hasOwnProperty(View, obj2);
-});
+};

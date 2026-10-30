@@ -1,9 +1,9 @@
-// === Module 14984: CollectiblesRecommendationStore ===
+// === Module 15028: CollectiblesRecommendationStore ===
 
-// Module 14984 (CollectiblesRecommendationStore)
+// Module 15028 (CollectiblesRecommendationStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
 
 const DAY = DurationsDefault.Millis.DAY;
 let c1 = null;

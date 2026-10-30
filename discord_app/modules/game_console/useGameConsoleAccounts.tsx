@@ -1,37 +1,19 @@
-// === Module 11744: useGameConsoleAccounts ===
+// === Module 11937: useGameConsoleAccounts ===
 
-// Module 11744 (useGameConsoleAccounts)
+// Module 11937 (useGameConsoleAccounts)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6559 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
 
 require = fn;
-const PlatformTypes = fn(1084).PlatformTypes;
-const ReactCompilerGating = fn(558);
+const PlatformTypes = fn(1072).PlatformTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameConsoleAccounts() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [ConnectedAccountsStore];
-    const fn = function l() {
-      const items = [ConnectedAccountsStore.getAccount(null, constants.XBOX), ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION), ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION_STAGING)];
-      return items.filter(GlobalUtils.isNotNullish);
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  return initialize.useStateFromStoresArray(tmp4, tmp5);
-}) : (function useGameConsoleAccounts() {
+export default function useGameConsoleAccounts() {
   let items = [ConnectedAccountsStore];
   return initialize.useStateFromStoresArray(items, () => {
     const items = [ConnectedAccountsStore.getAccount(null, constants.XBOX), ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION), ConnectedAccountsStore.getAccount(null, constants.PLAYSTATION_STAGING)];
     return items.filter(GlobalUtils.isNotNullish);
   });
-});
+};

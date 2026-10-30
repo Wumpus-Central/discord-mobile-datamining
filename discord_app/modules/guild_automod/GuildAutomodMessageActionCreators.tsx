@@ -1,7 +1,7 @@
-// === Module 10103: GuildAutomodMessageActionCreators ===
+// === Module 10130: GuildAutomodMessageActionCreators ===
 
-// Module 10103 (GuildAutomodMessageActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 10130 (GuildAutomodMessageActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");

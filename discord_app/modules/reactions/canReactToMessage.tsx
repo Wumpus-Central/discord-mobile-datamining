@@ -1,13 +1,13 @@
-// === Module 8383: canReactToMessage ===
+// === Module 8420: canReactToMessage ===
 
-// Module 8383 (canReactToMessage)
-import FlagUtils from "FlagUtils" /* 1402 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4924 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 8384 */;
-import GuildMemberStore from "GuildMemberStore" /* 4917 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6695 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 8420 (canReactToMessage)
+import FlagUtils from "FlagUtils" /* 1397 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4928 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 8421 */;
+import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6702 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
@@ -42,9 +42,8 @@ function canReactToMessageInternal(state, getGuildId, items) {
   }
   return tmp6;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ MessageStates: closure_7, MessageTypes: closure_8, MessageFlags: closure_9 } = Constants);
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
 
@@ -52,40 +51,7 @@ export function canReactToMessage(message, channel) {
   const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
   return canReactToMessageInternal(message, channel, items);
 }
-export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanReactToMessage(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === arg1) {
-    if (cResult[2] === arg0) {
-      let tmp9 = cResult[3];
-    }
-    return tmp(504).useStateFromStores(first, tmp9);
-  }
-  class M {
-    constructor() {
-      items = [, , , ];
-      items[0] = closure_6;
-      items[1] = closure_3;
-      items[2] = closure_4;
-      items[3] = closure_5;
-      return canReactToMessageInternal(closure_0, closure_1, items);
-    }
-  }
-  cResult[1] = arg1;
-  cResult[2] = arg0;
-  cResult[3] = M;
-  tmp9 = M;
-  const obj = require("c");
-  tmp = _require;
-}) : (function useCanReactToMessage(arg0, arg1) {
+export function useCanReactToMessage(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
   let items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
@@ -93,4 +59,4 @@ export const useCanReactToMessage = ReactCompilerGating.isReactCompilerEnabled()
     const items = [UserStore, GuildMemberStore, GuildVerificationStore, PermissionStore];
     return canReactToMessageInternal(closure_0, closure_1, items);
   });
-});
+}

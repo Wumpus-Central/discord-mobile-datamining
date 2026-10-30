@@ -1,780 +1,27 @@
-// === Module 10197: GIFPicker ===
+// === Module 10222: GIFPicker ===
 
-// Module 10197 (GIFPicker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10199 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10202 */;
-import GifPickerUtils from "GifPickerUtils" /* 10205 */;
-import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10207 */;
+// Module 10222 (GIFPicker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import GIFPickerActionCreatorsAll from "GIFPickerActionCreators" /* 10224 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10227 */;
+import GifPickerUtils from "GifPickerUtils" /* 10230 */;
+import GIFPickerSearchSuggestionsDefault from "GIFPickerSearchSuggestions" /* 10232 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10198 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10223 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9, GIF_FETCH_LIMIT_IOS: c10, GIFPickerResultTypes: closure_11, TooltipNames: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_15 = createStyles.createStyles({ container: { flex: 1 } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");
+const result = size.fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPicker(bottomSheetRef) {
-  const cResult = bottomSheetRef(initialQuery[8]).c(66);
-  bottomSheetRef = bottomSheetRef.bottomSheetRef;
-  const channelId = bottomSheetRef.channelId;
-  const guildId = bottomSheetRef.guildId;
-  ({ hideFavorites, initialQuery } = bottomSheetRef);
-  ({ inActionSheet, contentHorizontalPadding, selectedGifSrc, keyboardDismissMode, onPressGIF } = bottomSheetRef);
-  closure_15();
-  if (cResult[0] === channelId) {
-    if (cResult[1] === guildId) {
-      let tmp5 = cResult[2];
-      let tmp6 = cResult[3];
-    }
-    const effect = noop.useEffect(tmp5, tmp6);
-    const tmp11 = onPressGIF(noop.useState(0), 2);
-    noop = tmp11[1];
-    const _Symbol = Symbol;
-    if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      class Q {
-        constructor(arg0) {
-          tmp = closure_5(bottomSheetRef.nativeEvent.layout.width);
-          return;
-        }
-      }
-      cResult[4] = Q;
-    } else {
-      class Q {
-        constructor(arg0) {
-          tmp = closure_5(bottomSheetRef.nativeEvent.layout.width);
-          return;
-        }
-      }
-    }
-    if (tmp9) {
-      class Q {
-        constructor(arg0) {
-          tmp = closure_5(bottomSheetRef.nativeEvent.layout.width);
-          return;
-        }
-      }
-    }
-    if (contentHorizontalPadding == null) {
-      class Q {
-        constructor(arg0) {
-          tmp = closure_5(bottomSheetRef.nativeEvent.layout.width);
-          return;
-        }
-      }
-    }
-    const diff = tmp11[0] - 2 * contentHorizontalPadding;
-    const sum = diff + tmp(initialQuery[12]).GIF_PICKER_GUTTER_SPACING;
-    const bound = Math.max(num, sum / num4 - tmp(initialQuery[12]).GIF_PICKER_GUTTER_SPACING);
-    if (cResult[5] === bound) {
-      class Q {
-        constructor(arg0) {
-          tmp = closure_5(bottomSheetRef.nativeEvent.layout.width);
-          return;
-        }
-      }
-      ({ columns, columnWidth } = tmp19);
-      obj2.useRef(null);
-      [r10088, GIFPickerViewStore] = onPressGIF(obj2.useState(false), 2);
-      obj2.useRef("");
-      obj2.useRef(false);
-      const tmp10Result = onPressGIF(obj2.useState(false), 2);
-      [r10098, closure_10] = onPressGIF(obj2.useState(false), 2);
-      const tmp10Result5 = onPressGIF(obj2.useState(first.SEARCH), 2);
-      first = tmp10Result5[0];
-      closure_12 = tmp10Result5[1];
-      const tmp10Result4 = onPressGIF(obj2.useState(false), 2);
-      [tmp27, tmp28] = onPressGIF(obj2.useState(""), 2);
-      const _Symbol2 = Symbol;
-      if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class U {
-          constructor() {
-            tmp = closure_7(false);
-            tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-            tmp3 = closure_13("");
-            obj = closure_2(closure_3[9]);
-            resetSearchResult = obj.resetSearch();
-            current = closure_6.current;
-            if (current != null) {
-              blurResult = current.blur();
-            }
-            return;
-          }
-        }
-        cResult[8] = U;
-      } else {
-        class U {
-          constructor() {
-            tmp = closure_7(false);
-            tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-            tmp3 = closure_13("");
-            obj = closure_2(closure_3[9]);
-            resetSearchResult = obj.resetSearch();
-            current = closure_6.current;
-            if (current != null) {
-              blurResult = current.blur();
-            }
-            return;
-          }
-        }
-      }
-      const _Symbol3 = Symbol;
-      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        class U {
-          constructor() {
-            tmp = closure_7(false);
-            tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-            tmp3 = closure_13("");
-            obj = closure_2(closure_3[9]);
-            resetSearchResult = obj.resetSearch();
-            current = closure_6.current;
-            if (current != null) {
-              blurResult = current.blur();
-            }
-            return;
-          }
-        }
-        let debounceResult = obj4.debounce(guildId(initialQuery[9]).search, 200);
-        cResult[9] = debounceResult;
-        const tmp30 = debounceResult;
-      } else {
-        class U {
-          constructor() {
-            tmp = closure_7(false);
-            tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-            tmp3 = closure_13("");
-            obj = closure_2(closure_3[9]);
-            resetSearchResult = obj.resetSearch();
-            current = closure_6.current;
-            if (current != null) {
-              blurResult = current.blur();
-            }
-            return;
-          }
-        }
-      }
-      debounceResult = tmp30;
-      const tmp10Result6 = onPressGIF(obj2.useState(""), 2);
-      const favoriteGIFsMobile = tmp(initialQuery[12]).useFavoriteGIFsMobile();
-      ({ favorites, favoritesCategory } = favoriteGIFsMobile);
-      if (cResult[10] === favorites) {
-        class U {
-          constructor() {
-            tmp = closure_7(false);
-            tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-            tmp3 = closure_13("");
-            obj = closure_2(closure_3[9]);
-            resetSearchResult = obj.resetSearch();
-            current = closure_6.current;
-            if (current != null) {
-              blurResult = current.blur();
-            }
-            return;
-          }
-        }
-        closure_15 = tmp34;
-        const _Symbol4 = Symbol;
-        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          class U {
-            constructor() {
-              tmp = closure_7(false);
-              tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-              tmp3 = closure_13("");
-              obj = closure_2(closure_3[9]);
-              resetSearchResult = obj.resetSearch();
-              current = closure_6.current;
-              if (current != null) {
-                blurResult = current.blur();
-              }
-              return;
-            }
-          }
-          const items = [GIFPickerViewStore];
-          cResult[13] = items;
-          const tmp36 = items;
-        } else {
-          class U {
-            constructor() {
-              tmp = closure_7(false);
-              tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-              tmp3 = closure_13("");
-              obj = closure_2(closure_3[9]);
-              resetSearchResult = obj.resetSearch();
-              current = closure_6.current;
-              if (current != null) {
-                blurResult = current.blur();
-              }
-              return;
-            }
-          }
-        }
-        if (cResult[14] === first) {
-          class U {
-            constructor() {
-              tmp = closure_7(false);
-              tmp2 = closure_12(GIFPickerResultTypes.SEARCH);
-              tmp3 = closure_13("");
-              obj = closure_2(closure_3[9]);
-              resetSearchResult = obj.resetSearch();
-              current = closure_6.current;
-              if (current != null) {
-                blurResult = current.blur();
-              }
-              return;
-            }
-          }
-          const stateFromStoresObject = tmp(initialQuery[15]).useStateFromStoresObject(tmp36, Fe);
-          let resultItems = stateFromStoresObject.resultItems;
-          const resultQuery = stateFromStoresObject.resultQuery;
-          class Fe {
-            constructor() {
-              if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
-                tmp2 = closure_7;
-                resultItems = closure_7.getResultItems();
-              } else {
-                resultItems = closure_15;
-              }
-              obj = { resultItems, resultQuery: closure_7.getResultQuery() };
-              return obj;
-            }
-          }
-          if (cResult[17] !== resultQuery) {
-            class Re {
-              constructor(arg0, arg1) {
-                tmp = undefined === arg1 || arg1;
-                if (closure_8.current !== bottomSheetRef) {
-                  closure_8.current = bottomSheetRef;
-                  tmp19 = closure_12;
-                  tmp20 = GIFPickerResultTypes;
-                  tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
-                  num = 0;
-                  tmp22 = bottomSheetRef.trim().length > 0;
-                  tmp3 = tmp22;
-                  tmp23 = closure_10;
-                  if (tmp3) {
-                    tmp2 = resultQuery;
-                    tmp3 = resultQuery !== bottomSheetRef;
-                  }
-                  tmp23Result = tmp23(tmp3);
-                  tmp5 = closure_7;
-                  tmp6 = closure_7(tmp22);
-                  tmp7 = !tmp;
-                  if (tmp) {
-                    search = closure_14;
-                  } else {
-                    tmp8 = closure_2;
-                    tmp9 = closure_3;
-                    search = closure_2(closure_3[9]).search;
-                  }
-                  tmp10 = null;
-                  str = "";
-                  SEARCH = null;
-                  if ("" !== bottomSheetRef) {
-                    SEARCH = tmp20.SEARCH;
-                  }
-                  tmp12 = GIF_FETCH_LIMIT_IOS;
-                  tmp13 = bottomSheetRef;
-                  tmp14 = SEARCH;
-                  tmp15 = tmp7;
-                  searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
-                  if (!tmp) {
-                    tmp17 = closure_6;
-                    current = closure_6.current;
-                    if (current != null) {
-                      setTextResult = current.setText(bottomSheetRef);
-                    }
-                  }
-                }
-                return;
-              }
-            }
-            cResult[17] = resultQuery;
-            cResult[18] = Re;
-          } else {
-            class Re {
-              constructor(arg0, arg1) {
-                tmp = undefined === arg1 || arg1;
-                if (closure_8.current !== bottomSheetRef) {
-                  closure_8.current = bottomSheetRef;
-                  tmp19 = closure_12;
-                  tmp20 = GIFPickerResultTypes;
-                  tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
-                  num = 0;
-                  tmp22 = bottomSheetRef.trim().length > 0;
-                  tmp3 = tmp22;
-                  tmp23 = closure_10;
-                  if (tmp3) {
-                    tmp2 = resultQuery;
-                    tmp3 = resultQuery !== bottomSheetRef;
-                  }
-                  tmp23Result = tmp23(tmp3);
-                  tmp5 = closure_7;
-                  tmp6 = closure_7(tmp22);
-                  tmp7 = !tmp;
-                  if (tmp) {
-                    search = closure_14;
-                  } else {
-                    tmp8 = closure_2;
-                    tmp9 = closure_3;
-                    search = closure_2(closure_3[9]).search;
-                  }
-                  tmp10 = null;
-                  str = "";
-                  SEARCH = null;
-                  if ("" !== bottomSheetRef) {
-                    SEARCH = tmp20.SEARCH;
-                  }
-                  tmp12 = GIF_FETCH_LIMIT_IOS;
-                  tmp13 = bottomSheetRef;
-                  tmp14 = SEARCH;
-                  tmp15 = tmp7;
-                  searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
-                  if (!tmp) {
-                    tmp17 = closure_6;
-                    current = closure_6.current;
-                    if (current != null) {
-                      setTextResult = current.setText(bottomSheetRef);
-                    }
-                  }
-                }
-                return;
-              }
-            }
-          }
-          Re = tmp39;
-          if (cResult[19] === tmp39) {
-            class Re {
-              constructor(arg0, arg1) {
-                tmp = undefined === arg1 || arg1;
-                if (closure_8.current !== bottomSheetRef) {
-                  closure_8.current = bottomSheetRef;
-                  tmp19 = closure_12;
-                  tmp20 = GIFPickerResultTypes;
-                  tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
-                  num = 0;
-                  tmp22 = bottomSheetRef.trim().length > 0;
-                  tmp3 = tmp22;
-                  tmp23 = closure_10;
-                  if (tmp3) {
-                    tmp2 = resultQuery;
-                    tmp3 = resultQuery !== bottomSheetRef;
-                  }
-                  tmp23Result = tmp23(tmp3);
-                  tmp5 = closure_7;
-                  tmp6 = closure_7(tmp22);
-                  tmp7 = !tmp;
-                  if (tmp) {
-                    search = closure_14;
-                  } else {
-                    tmp8 = closure_2;
-                    tmp9 = closure_3;
-                    search = closure_2(closure_3[9]).search;
-                  }
-                  tmp10 = null;
-                  str = "";
-                  SEARCH = null;
-                  if ("" !== bottomSheetRef) {
-                    SEARCH = tmp20.SEARCH;
-                  }
-                  tmp12 = GIF_FETCH_LIMIT_IOS;
-                  tmp13 = bottomSheetRef;
-                  tmp14 = SEARCH;
-                  tmp15 = tmp7;
-                  searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
-                  if (!tmp) {
-                    tmp17 = closure_6;
-                    current = closure_6.current;
-                    if (current != null) {
-                      setTextResult = current.setText(bottomSheetRef);
-                    }
-                  }
-                }
-                return;
-              }
-            }
-            const effect1 = obj2.useEffect(tmp42, tmp41);
-            const _Symbol5 = Symbol;
-            if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-              class Re {
-                constructor(arg0, arg1) {
-                  tmp = undefined === arg1 || arg1;
-                  if (closure_8.current !== bottomSheetRef) {
-                    closure_8.current = bottomSheetRef;
-                    tmp19 = closure_12;
-                    tmp20 = GIFPickerResultTypes;
-                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
-                    num = 0;
-                    tmp22 = bottomSheetRef.trim().length > 0;
-                    tmp3 = tmp22;
-                    tmp23 = closure_10;
-                    if (tmp3) {
-                      tmp2 = resultQuery;
-                      tmp3 = resultQuery !== bottomSheetRef;
-                    }
-                    tmp23Result = tmp23(tmp3);
-                    tmp5 = closure_7;
-                    tmp6 = closure_7(tmp22);
-                    tmp7 = !tmp;
-                    if (tmp) {
-                      search = closure_14;
-                    } else {
-                      tmp8 = closure_2;
-                      tmp9 = closure_3;
-                      search = closure_2(closure_3[9]).search;
-                    }
-                    tmp10 = null;
-                    str = "";
-                    SEARCH = null;
-                    if ("" !== bottomSheetRef) {
-                      SEARCH = tmp20.SEARCH;
-                    }
-                    tmp12 = GIF_FETCH_LIMIT_IOS;
-                    tmp13 = bottomSheetRef;
-                    tmp14 = SEARCH;
-                    tmp15 = tmp7;
-                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
-                    if (!tmp) {
-                      tmp17 = closure_6;
-                      current = closure_6.current;
-                      if (current != null) {
-                        setTextResult = current.setText(bottomSheetRef);
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-              const items1 = [];
-              cResult[23] = tmp46;
-              cResult[24] = items1;
-              class Fe {
-                constructor() {
-                  if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
-                    tmp2 = closure_7;
-                    resultItems = closure_7.getResultItems();
-                  } else {
-                    resultItems = closure_15;
-                  }
-                  obj = { resultItems, resultQuery: closure_7.getResultQuery() };
-                  return obj;
-                }
-              }
-            } else {
-              class Re {
-                constructor(arg0, arg1) {
-                  tmp = undefined === arg1 || arg1;
-                  if (closure_8.current !== bottomSheetRef) {
-                    closure_8.current = bottomSheetRef;
-                    tmp19 = closure_12;
-                    tmp20 = GIFPickerResultTypes;
-                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
-                    num = 0;
-                    tmp22 = bottomSheetRef.trim().length > 0;
-                    tmp3 = tmp22;
-                    tmp23 = closure_10;
-                    if (tmp3) {
-                      tmp2 = resultQuery;
-                      tmp3 = resultQuery !== bottomSheetRef;
-                    }
-                    tmp23Result = tmp23(tmp3);
-                    tmp5 = closure_7;
-                    tmp6 = closure_7(tmp22);
-                    tmp7 = !tmp;
-                    if (tmp) {
-                      search = closure_14;
-                    } else {
-                      tmp8 = closure_2;
-                      tmp9 = closure_3;
-                      search = closure_2(closure_3[9]).search;
-                    }
-                    tmp10 = null;
-                    str = "";
-                    SEARCH = null;
-                    if ("" !== bottomSheetRef) {
-                      SEARCH = tmp20.SEARCH;
-                    }
-                    tmp12 = GIF_FETCH_LIMIT_IOS;
-                    tmp13 = bottomSheetRef;
-                    tmp14 = SEARCH;
-                    tmp15 = tmp7;
-                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
-                    if (!tmp) {
-                      tmp17 = closure_6;
-                      current = closure_6.current;
-                      if (current != null) {
-                        setTextResult = current.setText(bottomSheetRef);
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-              const tmp45 = cResult[24];
-            }
-            const effect2 = obj2.useEffect(tmp46, tmp45);
-            class Fe {
-              constructor() {
-                if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
-                  tmp2 = closure_7;
-                  resultItems = closure_7.getResultItems();
-                } else {
-                  resultItems = closure_15;
-                }
-                obj = { resultItems, resultQuery: closure_7.getResultQuery() };
-                return obj;
-              }
-            }
-            const effect3 = obj2.useEffect(tmp48, tmp49);
-            if (cResult[28] !== tmp39) {
-              class Re {
-                constructor(arg0, arg1) {
-                  tmp = undefined === arg1 || arg1;
-                  if (closure_8.current !== bottomSheetRef) {
-                    closure_8.current = bottomSheetRef;
-                    tmp19 = closure_12;
-                    tmp20 = GIFPickerResultTypes;
-                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
-                    num = 0;
-                    tmp22 = bottomSheetRef.trim().length > 0;
-                    tmp3 = tmp22;
-                    tmp23 = closure_10;
-                    if (tmp3) {
-                      tmp2 = resultQuery;
-                      tmp3 = resultQuery !== bottomSheetRef;
-                    }
-                    tmp23Result = tmp23(tmp3);
-                    tmp5 = closure_7;
-                    tmp6 = closure_7(tmp22);
-                    tmp7 = !tmp;
-                    if (tmp) {
-                      search = closure_14;
-                    } else {
-                      tmp8 = closure_2;
-                      tmp9 = closure_3;
-                      search = closure_2(closure_3[9]).search;
-                    }
-                    tmp10 = null;
-                    str = "";
-                    SEARCH = null;
-                    if ("" !== bottomSheetRef) {
-                      SEARCH = tmp20.SEARCH;
-                    }
-                    tmp12 = GIF_FETCH_LIMIT_IOS;
-                    tmp13 = bottomSheetRef;
-                    tmp14 = SEARCH;
-                    tmp15 = tmp7;
-                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
-                    if (!tmp) {
-                      tmp17 = closure_6;
-                      current = closure_6.current;
-                      if (current != null) {
-                        setTextResult = current.setText(bottomSheetRef);
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-              let obj3 = {
-                onClickSuggestion(arg0) {
-                              return Re(arg0, false);
-                            }
-              };
-              const tmp52 = tmp28(tmp8(initialQuery[17]), obj3);
-              cResult[28] = tmp39;
-              class Fe {
-                constructor() {
-                  if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
-                    tmp2 = closure_7;
-                    resultItems = closure_7.getResultItems();
-                  } else {
-                    resultItems = closure_15;
-                  }
-                  obj = { resultItems, resultQuery: closure_7.getResultQuery() };
-                  return obj;
-                }
-              }
-              cResult[29] = tmp52;
-            } else {
-              class Re {
-                constructor(arg0, arg1) {
-                  tmp = undefined === arg1 || arg1;
-                  if (closure_8.current !== bottomSheetRef) {
-                    closure_8.current = bottomSheetRef;
-                    tmp19 = closure_12;
-                    tmp20 = GIFPickerResultTypes;
-                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
-                    num = 0;
-                    tmp22 = bottomSheetRef.trim().length > 0;
-                    tmp3 = tmp22;
-                    tmp23 = closure_10;
-                    if (tmp3) {
-                      tmp2 = resultQuery;
-                      tmp3 = resultQuery !== bottomSheetRef;
-                    }
-                    tmp23Result = tmp23(tmp3);
-                    tmp5 = closure_7;
-                    tmp6 = closure_7(tmp22);
-                    tmp7 = !tmp;
-                    if (tmp) {
-                      search = closure_14;
-                    } else {
-                      tmp8 = closure_2;
-                      tmp9 = closure_3;
-                      search = closure_2(closure_3[9]).search;
-                    }
-                    tmp10 = null;
-                    str = "";
-                    SEARCH = null;
-                    if ("" !== bottomSheetRef) {
-                      SEARCH = tmp20.SEARCH;
-                    }
-                    tmp12 = GIF_FETCH_LIMIT_IOS;
-                    tmp13 = bottomSheetRef;
-                    tmp14 = SEARCH;
-                    tmp15 = tmp7;
-                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
-                    if (!tmp) {
-                      tmp17 = closure_6;
-                      current = closure_6.current;
-                      if (current != null) {
-                        setTextResult = current.setText(bottomSheetRef);
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-            }
-            if (cResult[30] === onPressGIF) {
-              class Re {
-                constructor(arg0, arg1) {
-                  tmp = undefined === arg1 || arg1;
-                  if (closure_8.current !== bottomSheetRef) {
-                    closure_8.current = bottomSheetRef;
-                    tmp19 = closure_12;
-                    tmp20 = GIFPickerResultTypes;
-                    tmp21 = closure_12(GIFPickerResultTypes.SEARCH);
-                    num = 0;
-                    tmp22 = bottomSheetRef.trim().length > 0;
-                    tmp3 = tmp22;
-                    tmp23 = closure_10;
-                    if (tmp3) {
-                      tmp2 = resultQuery;
-                      tmp3 = resultQuery !== bottomSheetRef;
-                    }
-                    tmp23Result = tmp23(tmp3);
-                    tmp5 = closure_7;
-                    tmp6 = closure_7(tmp22);
-                    tmp7 = !tmp;
-                    if (tmp) {
-                      search = closure_14;
-                    } else {
-                      tmp8 = closure_2;
-                      tmp9 = closure_3;
-                      search = closure_2(closure_3[9]).search;
-                    }
-                    tmp10 = null;
-                    str = "";
-                    SEARCH = null;
-                    if ("" !== bottomSheetRef) {
-                      SEARCH = tmp20.SEARCH;
-                    }
-                    tmp12 = GIF_FETCH_LIMIT_IOS;
-                    tmp13 = bottomSheetRef;
-                    tmp14 = SEARCH;
-                    tmp15 = tmp7;
-                    searchResult = search(bottomSheetRef, SEARCH, tmp7, GIF_FETCH_LIMIT_IOS);
-                    if (!tmp) {
-                      tmp17 = closure_6;
-                      current = closure_6.current;
-                      if (current != null) {
-                        setTextResult = current.setText(bottomSheetRef);
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-            }
-            class Ne {
-              constructor(arg0, arg1) {
-                obj = closure_2(closure_3[9]);
-                obj1 = { type: GIFPickerResultTypes.SEARCH, index: arg1, offset: 0, limit: GIF_FETCH_LIMIT_IOS, results: resultItems.length, totalResults: resultItems.length, query: resultQuery, gifId: bottomSheetRef.id };
-                trackSelectGIFResult = obj.trackSelectGIF(obj1);
-                tmp2 = onPressGIF(bottomSheetRef);
-                return;
-              }
-            }
-            cResult[30] = onPressGIF;
-            cResult[31] = resultItems.length;
-            cResult[32] = resultQuery;
-            cResult[33] = Ne;
-          }
-          const items2 = [tmp39, initialQuery];
-          cResult[19] = tmp39;
-          cResult[20] = initialQuery;
-          cResult[21] = tmp42;
-          cResult[22] = items2;
-          tmp41 = items2;
-          const tmpResult3 = tmp(initialQuery[15]);
-        }
-        class Fe {
-          constructor() {
-            if (closure_11 !== GIFPickerResultTypes.FAVORITES) {
-              tmp2 = closure_7;
-              resultItems = closure_7.getResultItems();
-            } else {
-              resultItems = closure_15;
-            }
-            obj = { resultItems, resultQuery: closure_7.getResultQuery() };
-            return obj;
-          }
-        }
-        cResult[14] = first;
-        cResult[16] = Fe;
-      }
-      const tmpResult = tmp(initialQuery[12]);
-      const result = tmp(initialQuery[14]).filterFavoriteGIFsByQuery(favorites, tmp27);
-      cResult[10] = favorites;
-      cResult[11] = tmp27;
-      cResult[12] = result;
-      tmp34 = result;
-      const tmpResult4 = tmp(initialQuery[14]);
-    }
-    const obj5 = { columns: 2, columnWidth: bound };
-    cResult[5] = bound;
-    cResult[6] = 2;
-    cResult[7] = obj5;
-    tmp19 = obj5;
-    tmp8 = channelId;
-    tmp9 = channelId(initialQuery[11])();
-  }
-  const fn = function f() {
-    GIFPickerActionCreatorsAll.initializeSearch();
-    GIFPickerActionCreatorsAll.resetSearch();
-    if (null != channelId) {
-      const obj4 = { type: constants.GIF, channel_id: tmp4, guild_id: guildId };
-      AnalyticsUtilsDefault.track(closure_2_8.CHAT_INPUT_COMPONENT_VIEWED, obj4);
-    }
-  };
-  const items3 = [channelId, guildId];
-  cResult[0] = channelId;
-  cResult[1] = guildId;
-  cResult[2] = fn;
-  cResult[3] = items3;
-  tmp6 = items3;
-  tmp5 = fn;
-  let obj = bottomSheetRef(initialQuery[8]);
-}) : (function GIFPicker(bottomSheetRef) {
+export default noop.memo(function GIFPicker(bottomSheetRef) {
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const channelId = bottomSheetRef.channelId;
   const guildId = bottomSheetRef.guildId;
@@ -793,13 +40,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     GIFPickerActionCreatorsAll.initializeSearch();
     GIFPickerActionCreatorsAll.resetSearch();
     if (null != channelId) {
-      const obj4 = { type: constants.GIF, channel_id: tmp4, guild_id: guildId };
-      AnalyticsUtilsDefault.track(closure_2_8.CHAT_INPUT_COMPONENT_VIEWED, obj4);
+      const obj4 = { type: constants2.GIF, channel_id: tmp4, guild_id: guildId };
+      AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj4);
     }
   }, items);
   let tmp3 = channelId;
   let obj = initialQuery;
-  const tmp4 = channelId(initialQuery[11])();
+  const tmp4 = channelId(initialQuery[9])();
   closure_6 = tmp4;
   const tmp5 = contentHorizontalPadding(onPressGIF.useState(0), 2);
   const first = tmp5[0];
@@ -827,11 +74,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const ref = onPressGIF.useRef(null);
   const tmp10 = contentHorizontalPadding(onPressGIF.useState(false), 2);
   closure_10 = tmp10[1];
-  constants2 = onPressGIF.useRef("");
+  constants3 = onPressGIF.useRef("");
   onPressGIF.useRef(false);
   const tmp = closure_15();
   [tmp12, c13] = contentHorizontalPadding(onPressGIF.useState(false), 2);
-  const tmp14 = contentHorizontalPadding(onPressGIF.useState(constants2.SEARCH), 2);
+  const tmp14 = contentHorizontalPadding(onPressGIF.useState(constants3.SEARCH), 2);
   const first1 = tmp14[0];
   closure_15 = tmp14[1];
   const tmp16 = contentHorizontalPadding(onPressGIF.useState(""), 2);
@@ -840,7 +87,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items2 = [ref];
   const callback1 = onPressGIF.useCallback(() => {
     closure_10(false);
-    closure_15(constants2.SEARCH);
+    closure_15(constants3.SEARCH);
     closure_17("");
     GIFPickerActionCreatorsAll.resetSearch();
     const current = ref.current;
@@ -848,16 +95,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       current.blur();
     }
   }, items2);
-  const memo1 = onPressGIF.useMemo(() => bottomSheetRef(initialQuery[13]).debounce(guildId(initialQuery[9]).search, 200), []);
+  const memo1 = onPressGIF.useMemo(() => bottomSheetRef(initialQuery[11]).debounce(guildId(initialQuery[7]).search, 200), []);
   const tmp11 = contentHorizontalPadding(onPressGIF.useState(false), 2);
-  const favoriteGIFsMobile = bottomSheetRef(initialQuery[12]).useFavoriteGIFsMobile();
+  const favoriteGIFsMobile = bottomSheetRef(initialQuery[10]).useFavoriteGIFsMobile();
   const favorites = favoriteGIFsMobile.favorites;
   const items3 = [favorites, first2];
   closure_20 = onPressGIF.useMemo(() => GifPickerUtils.filterFavoriteGIFsByQuery(favorites, first2), items3);
-  let obj2 = bottomSheetRef(initialQuery[12]);
+  let obj2 = bottomSheetRef(initialQuery[10]);
   const items4 = [first];
-  const stateFromStoresObject = bottomSheetRef(initialQuery[15]).useStateFromStoresObject(items4, () => {
-    if (first1 !== constants2.FAVORITES) {
+  const stateFromStoresObject = bottomSheetRef(initialQuery[13]).useStateFromStoresObject(items4, () => {
+    if (first1 !== constants3.FAVORITES) {
       resultItems = GIFPickerViewStore.getResultItems();
     } else {
       resultItems = closure_20;
@@ -874,7 +121,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (ref.current !== current) {
       ref.current = current;
-      closure_15(constants2.SEARCH);
+      closure_15(constants3.SEARCH);
       const tmp21 = current.trim().length > 0;
       let tmp2 = tmp21;
       if (tmp2) {
@@ -889,7 +136,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       let SEARCH = null;
       if ("" !== current) {
-        SEARCH = constants2.SEARCH;
+        SEARCH = constants3.SEARCH;
       }
       search(current, SEARCH, !flag, limit);
       if (!flag) {
@@ -914,9 +161,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }, items6);
   const effect2 = onPressGIF.useEffect(() => {
-    channelId(initialQuery[16]).acknowledgeTooltip(ref2.GIF_PICKER_TOOLTIP);
-    const obj = channelId(initialQuery[16]);
-    const trendingSearchTerms = guildId(initialQuery[9]).fetchTrendingSearchTerms();
+    channelId(initialQuery[14]).acknowledgeTooltip(ref2.GIF_PICKER_TOOLTIP);
+    const obj = channelId(initialQuery[14]);
+    const trendingSearchTerms = guildId(initialQuery[7]).fetchTrendingSearchTerms();
   }, []);
   const items7 = [resultQuery, ref];
   const effect3 = onPressGIF.useEffect(() => {
@@ -933,17 +180,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items8 = [callback2];
   const items9 = [onPressGIF, resultItems.length, resultQuery];
   const memo2 = onPressGIF.useMemo(() => map1(GIFPickerSearchSuggestionsDefault, {
-    onClickSuggestion(arg0) {
-      return callback2(arg0, false);
+    onClickSuggestion(dependencyMap) {
+      return callback2(dependencyMap, false);
     }
   }), items8);
   const items10 = [bottomSheetRef, callback2];
   const callback3 = onPressGIF.useCallback((gifId, index) => {
-    GIFPickerActionCreatorsAll.trackSelectGIF({ type: constants2.SEARCH, index, offset: 0, limit, results: resultItems.length, totalResults: resultItems.length, query: resultQuery, gifId: gifId.id });
+    GIFPickerActionCreatorsAll.trackSelectGIF({ type: constants3.SEARCH, index, offset: 0, limit, results: resultItems.length, totalResults: resultItems.length, query: resultQuery, gifId: gifId.id });
     onPressGIF(gifId);
   }, items9);
   const callback4 = onPressGIF.useCallback((arg0, arg1) => {
-    if (arg0 === constants2.TRENDING_GIFS) {
+    if (arg0 === constants3.TRENDING_GIFS) {
       closure_10(false);
       closure_15(arg0);
       const trendingGIFs = GIFPickerActionCreatorsAll.fetchTrendingGIFs(limit);
@@ -967,7 +214,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   items11[1] = tmp31;
   obj4.style = items11;
-  const items12 = [c13(tmp3(obj[18]), { categoryType: first1, columnWidth, onQueryClear: callback1, onQueryChange: callback2, onFavoritesQueryChange: tmp16[1], searchInputRef: ref }), ];
+  const items12 = [c13(tmp3(obj[16]), { categoryType: first1, columnWidth, onQueryClear: callback1, onQueryChange: callback2, onFavoritesQueryChange: tmp16[1], searchInputRef: ref }), ];
   if (resultItems.length <= 0) {
     if (!tmp10[0]) {
       if (first2.length <= 0) {
@@ -978,7 +225,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         obj6.favoritesCategory = favoritesCategory;
         obj6.inActionSheet = flag;
-        items12[1] = tmp32(tmp3(obj[21]), obj6);
+        items12[1] = tmp32(tmp3(obj[19]), obj6);
         obj4.children = items12;
         return first1(closure_6, obj4);
       }
@@ -987,10 +234,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (0 === resultItems.length) {
     if (!tmp12) {
       const obj7 = { categoryType: first1, inActionSheet: flag };
-      let tmp32Result = tmp32(tmp3(obj[19]), obj7);
+      let tmp32Result = tmp32(tmp3(obj[17]), obj7);
     }
   }
-  tmp3 = tmp3(obj[20]);
+  tmp3 = tmp3(obj[18]);
   obj = { columns, columnWidth, loading: tmp12, inActionSheet: flag, resultItems, onPressGIF: callback3, selectedGifSrc, keyboardDismissMode, ListFooterComponent: memo2 };
   tmp32Result = tmp32(tmp3, obj);
-}));
+});

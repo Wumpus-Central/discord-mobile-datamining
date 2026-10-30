@@ -1,120 +1,20 @@
-// === Module 18207: useShouldRenderChannelList ===
+// === Module 18267: useShouldRenderChannelList ===
 
-// Module 18207 (useShouldRenderChannelList)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5187 */;
-import RootNavigationRef from "RootNavigationRef" /* 5188 */;
+// Module 18267 (useShouldRenderChannelList)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import RootNavigationRef from "RootNavigationRef" /* 5194 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7643 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
+import CacheStore from "CacheStore" /* 7648 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
 
 require = fn;
-const ComponentActions = fn(1084).ComponentActions;
+const ComponentActions = fn(1072).ComponentActions;
 let c7 = false;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/native/useShouldRenderChannelList.tsx");
 
-export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldRenderChannelList() {
-  const cResult = first(576).c(3);
-  [first, dependencyMap] = noop.useState(c7);
-  if (cResult[0] !== first) {
-    class R {
-      constructor() {
-        if (allowRender) {
-          return;
-        } else {
-          allowRender = function allowRender() { ... };
-          checkGatewayConnection = function checkGatewayConnection() { ... };
-          checkCacheLoadStatus = function checkCacheLoadStatus() { ... };
-          checkNavigationState = function checkNavigationState() { ... };
-          obj = closure_1_5;
-          result = closure_1_5.addReactChangeListener(checkGatewayConnection);
-          obj2 = closure_1_4;
-          result1 = closure_1_4.addReactChangeListener(checkCacheLoadStatus);
-          tmp3 = closure_0;
-          tmp4 = closure_1;
-          ComponentDispatch = closure_0(closure_1[9]).ComponentDispatch;
-          tmp5 = closure_1_6;
-          subscription = ComponentDispatch.subscribe(closure_1_6.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-          obj3 = closure_0(closure_1[8]);
-          rootNavigationRef = obj3.getRootNavigationRef();
-          tmp7 = null;
-          if (rootNavigationRef != null) {
-            str = "state";
-            addListenerResult = rootNavigationRef.addListener("state", checkNavigationState);
-          }
-          if (obj.isConnected()) {
-            flag = true;
-            c7 = true;
-            tmp9 = checkGatewayConnection;
-            tmp10 = checkGatewayConnection(true);
-          }
-          str2 = "cache-loaded";
-          if ("cache-loaded" === obj2.getLazyCacheStatus()) {
-            flag2 = true;
-            c7 = true;
-            tmp11 = checkGatewayConnection;
-            tmp12 = checkGatewayConnection(true);
-          }
-          return /* F156869 */ function() { ... };
-        }
-      }
-    }
-    const items = [first];
-    cResult[0] = first;
-    cResult[1] = R;
-    cResult[2] = items;
-    let tmp5 = items;
-  } else {
-    class R {
-      constructor() {
-        if (allowRender) {
-          return;
-        } else {
-          allowRender = function allowRender() { ... };
-          checkGatewayConnection = function checkGatewayConnection() { ... };
-          checkCacheLoadStatus = function checkCacheLoadStatus() { ... };
-          checkNavigationState = function checkNavigationState() { ... };
-          obj = closure_1_5;
-          result = closure_1_5.addReactChangeListener(checkGatewayConnection);
-          obj2 = closure_1_4;
-          result1 = closure_1_4.addReactChangeListener(checkCacheLoadStatus);
-          tmp3 = closure_0;
-          tmp4 = closure_1;
-          ComponentDispatch = closure_0(closure_1[9]).ComponentDispatch;
-          tmp5 = closure_1_6;
-          subscription = ComponentDispatch.subscribe(closure_1_6.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-          obj3 = closure_0(closure_1[8]);
-          rootNavigationRef = obj3.getRootNavigationRef();
-          tmp7 = null;
-          if (rootNavigationRef != null) {
-            str = "state";
-            addListenerResult = rootNavigationRef.addListener("state", checkNavigationState);
-          }
-          if (obj.isConnected()) {
-            flag = true;
-            c7 = true;
-            tmp9 = checkGatewayConnection;
-            tmp10 = checkGatewayConnection(true);
-          }
-          str2 = "cache-loaded";
-          if ("cache-loaded" === obj2.getLazyCacheStatus()) {
-            flag2 = true;
-            c7 = true;
-            tmp11 = checkGatewayConnection;
-            tmp12 = checkGatewayConnection(true);
-          }
-          return /* F156869 */ function() { ... };
-        }
-      }
-    }
-    tmp5 = cResult[2];
-  }
-  const effect = noop.useEffect(R, tmp5);
-  return first;
-}) : (function useShouldRenderChannelList() {
+export function useShouldRenderChannelList() {
   [first, dependencyMap] = noop.useState(c7);
   const items = [first];
   const effect = noop.useEffect(() => {
@@ -135,8 +35,8 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
       }
     }
     function checkNavigationState() {
-      const obj = first(5187);
-      const rootNavigationRef = first(5188).getRootNavigationRef();
+      const obj = first(5193);
+      const rootNavigationRef = first(5194).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -145,14 +45,14 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5188);
+      const obj2 = first(5194);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
-      let ComponentDispatch = first(1120).ComponentDispatch;
+      let ComponentDispatch = first(1109).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5188).getRootNavigationRef();
+      let rootNavigationRef = first(5194).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }
@@ -177,4 +77,4 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
     }
   }, items);
   return first;
-});
+}

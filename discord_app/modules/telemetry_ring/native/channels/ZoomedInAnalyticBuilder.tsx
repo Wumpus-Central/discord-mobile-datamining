@@ -1,10 +1,10 @@
-// === Module 2009: ZoomedInAnalyticBuilder ===
+// === Module 2004: ZoomedInAnalyticBuilder ===
 
-// Module 2009 (ZoomedInAnalyticBuilder)
-import Constants from "Constants" /* 1084 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1375 */;
-import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2010 */;
-import RTCControlSocket from "RTCControlSocket" /* 2011 */;
+// Module 2004 (ZoomedInAnalyticBuilder)
+import Constants from "Constants" /* 1072 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1370 */;
+import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2005 */;
+import RTCControlSocket from "RTCControlSocket" /* 2006 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -522,7 +522,7 @@ const dependencyMap2 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "application" };
+      let obj = { message_identity: "unknown", socket_kind: "applicationId" };
     } else {
       const url = data.url;
       let tmp61 = null;

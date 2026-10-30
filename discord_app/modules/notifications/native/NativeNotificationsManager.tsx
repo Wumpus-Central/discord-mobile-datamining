@@ -1,16 +1,16 @@
-// === Module 19894: NativeNotificationsManager ===
+// === Module 19957: NativeNotificationsManager ===
 
-// Module 19894 (NativeNotificationsManager)
+// Module 19957 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import PushNotificationDefault from "PushNotification" /* 10866 */;
-import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10869 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import PushNotificationDefault from "PushNotification" /* 10889 */;
+import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10892 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6873 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6880 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 let closure_6 = new LoggerDefault("NativeNotificationsManager");
 const prototype = function NativeNotificationsManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -35,7 +35,7 @@ const prototype = function NativeNotificationsManager() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -160,7 +160,7 @@ const prototype = function NativeNotificationsManager() {
                 if (null == closure_131_3) {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const _Map = Map;
                   const map = new Map();

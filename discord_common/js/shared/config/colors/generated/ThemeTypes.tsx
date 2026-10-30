@@ -1,6 +1,6 @@
-// === Module 1097: generated/ThemeTypes ===
+// === Module 1085: generated/ThemeTypes ===
 
-// Module 1097 (generated/ThemeTypes)
+// Module 1085 (generated/ThemeTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { ASH: "dark", LIGHT: "light", ONYX: "midnight", DARK: "darker" };

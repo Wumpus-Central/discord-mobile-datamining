@@ -1,66 +1,17 @@
-// === Module 16630: DirectMessageSafetyAlertsSetting ===
+// === Module 16683: DirectMessageSafetyAlertsSetting ===
 
-// Module 16630 (DirectMessageSafetyAlertsSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import SettingsConstants from "SettingsConstants" /* 8387 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11007 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11008 */;
-import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 11009 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 13104 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 16631 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 16683 (DirectMessageSafetyAlertsSetting)
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 8424 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11237 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11238 */;
+import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 11239 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 13255 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 16684 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasDmSafetyAlertsSetting() {
-  const cResult = c.c(2);
-  let flag = useUserIsConsideredAdultDefault();
-  if (flag == null) {
-    flag = true;
-  }
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { location: "user_settings_mobile_redesign" };
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning(first);
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { location: "user_settings_mobile_redesign" };
-    cResult[1] = obj3;
-    let tmp6 = obj3;
-  } else {
-    tmp6 = cResult[1];
-  }
-  const tmpResult = SelfModInappropriateConversationExperiment;
-  let tmp8 = !flag;
-  const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn(tmp6);
-  if (!flag) {
-    tmp8 = isEligibleForInappropriateConversationWarning;
-  }
-  if (tmp8) {
-    tmp8 = !isEligibleForInappropriateConversationDefaultOn;
-  }
-  return tmp8;
-}) : (function useHasDmSafetyAlertsSetting() {
-  let flag = useUserIsConsideredAdultDefault();
-  if (flag == null) {
-    flag = true;
-  }
-  const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-  let tmp4 = !flag;
-  const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
-  if (!flag) {
-    tmp4 = isEligibleForInappropriateConversationWarning;
-  }
-  if (tmp4) {
-    tmp4 = !isEligibleForInappropriateConversationDefaultOn;
-  }
-  return tmp4;
-});
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -71,38 +22,7 @@ const toggle = SettingBuilders.createToggle({
   },
   useValue: useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault,
   onValueChange: updateDmSafetyAlertsSetting.updateDmSafetyAlertsSetting,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasDmSafetyAlertsSetting() {
-    const cResult = c.c(2);
-    let flag = useUserIsConsideredAdultDefault();
-    if (flag == null) {
-      flag = true;
-    }
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { location: "user_settings_mobile_redesign" };
-      cResult[0] = obj2;
-      let first = obj2;
-    } else {
-      first = cResult[0];
-    }
-    const isEligibleForInappropriateConversationWarning = SelfModInappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning(first);
-    if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { location: "user_settings_mobile_redesign" };
-      cResult[1] = obj3;
-      let tmp6 = obj3;
-    } else {
-      tmp6 = cResult[1];
-    }
-    const tmpResult = SelfModInappropriateConversationExperiment;
-    let tmp8 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn(tmp6);
-    if (!flag) {
-      tmp8 = isEligibleForInappropriateConversationWarning;
-    }
-    if (tmp8) {
-      tmp8 = !isEligibleForInappropriateConversationDefaultOn;
-    }
-    return tmp8;
-  }) : (function useHasDmSafetyAlertsSetting() {
+  usePredicate: function useHasDmSafetyAlertsSetting() {
     let flag = useUserIsConsideredAdultDefault();
     if (flag == null) {
       flag = true;
@@ -117,7 +37,7 @@ const toggle = SettingBuilders.createToggle({
       tmp4 = !isEligibleForInappropriateConversationDefaultOn;
     }
     return tmp4;
-  })
+  }
 });
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx");
 

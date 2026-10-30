@@ -1,8 +1,8 @@
-// === Module 5231: GuildMemberCountStore ===
+// === Module 5237: GuildMemberCountStore ===
 
-// Module 5231 (GuildMemberCountStore)
+// Module 5237 (GuildMemberCountStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 function handleInviteData(invite) {
   ({ guild, approximate_presence_count } = invite.invite);

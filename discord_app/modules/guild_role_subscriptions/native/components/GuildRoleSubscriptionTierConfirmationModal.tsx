@@ -1,25 +1,25 @@
-// === Module 19853: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 19916: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 19853 (GuildRoleSubscriptionTierConfirmationModal)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import FastImageDefault from "FastImage" /* 5707 */;
-import FormHeaderDefault from "FormHeader" /* 9080 */;
-import FormStylesDefault from "FormStyles" /* 15640 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19824 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19839 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 19854 */;
+// Module 19916 (GuildRoleSubscriptionTierConfirmationModal)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import FastImageDefault from "FastImage" /* 5712 */;
+import FormHeaderDefault from "FormHeader" /* 9093 */;
+import FormStylesDefault from "FormStyles" /* 15680 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19887 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 19895 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 19917 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 19822 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19885 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;
@@ -53,7 +53,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
           c3 = 0;
           closure_128_1(false);
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp22) {
         closure_2 = tmp22;
@@ -122,13 +122,13 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       let obj4 = { style: tmp5.header, children: null };
       const intl3 = util.intl;
       obj4.children = intl3.string(util.t["3S8gA7"]);
-      const items1 = [closure_1_8(FormHeaderDefault, obj4), ];
+      const items1 = [React6(FormHeaderDefault, obj4), ];
       const obj5 = { style: tmp2.coverPhotoContainer, children: null };
       const obj6 = { style: tmp2.coverPhoto, resizeMode: "cover", source: first };
-      obj5.children = closure_1_8(FastImageDefault, obj6);
-      items1[1] = closure_1_8(View, obj5);
+      obj5.children = React6(FastImageDefault, obj6);
+      items1[1] = React6(View, obj5);
       obj3.children = items1;
-      tmp13Result = v65535(React6, obj3);
+      tmp13Result = closure_1_10(React7, obj3);
       const tmp3Result = FormHeaderDefault;
     }
     const obj7 = { children: null };
@@ -136,14 +136,14 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     const obj8 = { style: tmp5.header, children: null };
     const intl4 = util.intl;
     obj8.children = intl4.string(util.t["74JctW"]);
-    items2[1] = closure_1_8(FormHeaderDefault, obj8);
+    items2[1] = React6(FormHeaderDefault, obj8);
     const obj9 = { style: tmp2.description, variant: "text-md/medium", color: "interactive-text-active", children: _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 1)[0] };
-    items2[2] = closure_1_8(Text_Text.Text, obj9);
+    items2[2] = React6(Text_Text.Text, obj9);
     obj7.children = items2;
-    flag = v65535(React6, obj7);
+    flag = closure_1_10(React7, obj7);
     const tmp3Result2 = FormHeaderDefault;
   }
-  const items3 = [flag, closure_1_8(GuildRoleSubscriptionListingPreview.GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
+  const items3 = [flag, React6(GuildRoleSubscriptionListingPreview.GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
   obj2.children = items3;
-  return v65535(GuildRoleSubscriptionTierEditStepDefault, obj2);
+  return closure_1_10(GuildRoleSubscriptionTierEditStepDefault, obj2);
 };

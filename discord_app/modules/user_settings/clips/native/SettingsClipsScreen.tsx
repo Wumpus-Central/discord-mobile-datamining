@@ -1,43 +1,17 @@
-// === Module 16772: SettingsClipsScreen ===
+// === Module 16826: SettingsClipsScreen ===
 
-// Module 16772 (SettingsClipsScreen)
-import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
-import SettingLayoutDefault from "SettingLayout" /* 16482 */;
+// Module 16826 (SettingsClipsScreen)
+import SettingBuilders from "SettingBuilders" /* 11505 */;
+import SettingLayoutDefault from "SettingLayout" /* 16533 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8387).MobileUserSettings;
+const MobileUserSettings = fn(8424).MobileUserSettings;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClipsSettingsScreen() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { settings: null };
-    const items = [MobileUserSettings.CLIPS_OPT_OUT_OF_VOICE_RECORDING];
-    obj2.settings = items;
-    const items1 = [obj2];
-    const obj3 = { sections: items1 };
-    const list = SettingBuilders.createList(obj3);
-    cResult[0] = list;
-    let first = list;
-    const tmpResult = SettingBuilders;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { node: first };
-    const tmp10 = jsx(SettingLayoutDefault, { node: first });
-    cResult[1] = tmp10;
-    let tmp7 = tmp10;
-  } else {
-    tmp7 = cResult[1];
-  }
-  return tmp7;
-}) : (function ClipsSettingsScreen() {
+export default function ClipsSettingsScreen() {
   const node = noop.useMemo(() => {
     const obj = { settings: null };
     const items = [constants.CLIPS_OPT_OUT_OF_VOICE_RECORDING];
@@ -46,4 +20,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ClipsSet
     return SettingBuilders.createList({ sections });
   }, []);
   return jsx(SettingLayoutDefault, { node });
-});
+};

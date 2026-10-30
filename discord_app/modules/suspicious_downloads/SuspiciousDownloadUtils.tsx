@@ -1,10 +1,10 @@
-// === Module 8669: SuspiciousDownloadUtils ===
+// === Module 8703: SuspiciousDownloadUtils ===
 
-// Module 8669 (SuspiciousDownloadUtils)
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import _modDef8670 from "module_8670" /* 8670 */;
+// Module 8703 (SuspiciousDownloadUtils)
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import _modDef8704 from "module_8704" /* 8704 */;
 
-const set = new Set(_modDef8670);
+const set = new Set(_modDef8704);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj["github.com"] = regExp;
@@ -15,9 +15,9 @@ obj["gitlab.com"] = regExp2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadUtils.tsx");
 
-export function isSuspiciousDownload(url) {
+export function isSuspiciousDownload(localUri) {
   obj = URLUtilsDefault;
-  let toURLSafeResult = obj.toURLSafe(url);
+  let toURLSafeResult = obj.toURLSafe(localUri);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};
   }

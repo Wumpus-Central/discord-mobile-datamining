@@ -1,6 +1,6 @@
-// === Module 18092: SortableChannels ===
+// === Module 18153: SortableChannels ===
 
-// Module 18092 (SortableChannels)
+// Module 18153 (SortableChannels)
 import noop from "module_19" /* 19 */;
 import apply from "module_12" /* 12 */;
 
@@ -143,7 +143,7 @@ SortRow.prototype["render"] = function render() {
   items[2] = pan.getLayout();
   obj.style = items;
   obj.children = renderItem(rowData.data, true);
-  return closure_1_8(RN.View, obj);
+  return React6(RN.View, obj);
 };
 const Component3 = noop.Component;
 class SortableChannels extends Component3 {
@@ -300,7 +300,7 @@ class SortableChannels extends Component3 {
           obj = { style: null };
           const obj2 = { height: frameHeight };
           obj.style = obj2;
-          renderActiveDividerResult = closure_2_8(React3, obj);
+          renderActiveDividerResult = React6(React3, obj);
         }
         return renderActiveDividerResult;
       }
@@ -636,7 +636,7 @@ prototype["render"] = function render() {
     return key.key;
   };
   obj3.getItemLayout = self.getItemLayout;
-  const items = [closure_1_8(timestampProducer, obj3), self.renderActive()];
+  const items = [React6(timestampProducer, obj3), self.renderActive()];
   obj.children = items;
   return React5(React3, obj);
 };

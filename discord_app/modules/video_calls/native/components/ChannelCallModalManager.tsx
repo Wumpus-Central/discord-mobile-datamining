@@ -1,10 +1,10 @@
-// === Module 11607: ChannelCallModalManager ===
+// === Module 11807: ChannelCallModalManager ===
 
-// Module 11607 (ChannelCallModalManager)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7925 */;
-import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5668 */;
-import LifecycleManager from "LifecycleManager" /* 2002 */;
+// Module 11807 (ChannelCallModalManager)
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7931 */;
+import UserStore from "UserStore" /* 1384 */;
+import VoiceStateStore from "VoiceStateStore" /* 5674 */;
+import LifecycleManager from "LifecycleManager" /* 1997 */;
 
 require = fn;
 class ChannelCallModalManager extends tmp2 {

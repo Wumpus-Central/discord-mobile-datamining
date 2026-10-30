@@ -1,21 +1,20 @@
-// === Module 6537: StripeUtils ===
+// === Module 6544: StripeUtils ===
 
-// Module 6537 (StripeUtils)
+// Module 6544 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import _mod6538 from "module_6538" /* 6538 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import _mod6545 from "module_6545" /* 6545 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2066 */;
+import LocaleStore from "LocaleStore" /* 2063 */;
 
 require = fn;
 function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod6538.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod6545.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -34,7 +33,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -201,20 +200,11 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
     }
   }
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: metroRequire, PaymentSettings: closure_7 } = Constants);
 const logger = new LoggerDefault("StripeUtils");
 let closure_9 = { REQUIRES_PAYMENT_METHOD: "requires_payment_method", REQUIRES_CONFIRMATION: "requires_confirmation", REQUIRES_ACTION: "requires_action", PROCESSING: "processing", CANCELED: "canceled", SUCCEEDED: "succeeded" };
 let closure_12 = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
-const ReactCompilerGating = fn(558);
-const tmp3 = new LoggerDefault("StripeUtils");
-function getStripeElementLocale(arg0) {
-  let tmp = closure_12[arg0];
-  if (tmp == null) {
-    tmp = arg0;
-  }
-  return tmp;
-}
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/StripeUtils.tsx");
 
@@ -362,28 +352,14 @@ export function authenticatePaymentIntentForPaymentId() {
   }
   return applyArgumentsResult;
 }
-export { getStripeElementLocale };
-export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled() ? (function useStripeLocale() {
-  const cResult = c.c(2);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [LocaleStore];
-    const fn = function t() {
-      locale = locale.locale;
-      let tmp = closure_1_12[locale];
-      if (tmp == null) {
-        tmp = locale;
-      }
-      return tmp;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
+export function getStripeElementLocale(arg0) {
+  let tmp = closure_12[arg0];
+  if (tmp == null) {
+    tmp = arg0;
   }
-  return initialize.useStateFromStores(tmp4, tmp5);
-}) : (function useStripeLocale() {
+  return tmp;
+}
+export function useStripeLocale() {
   const items = [LocaleStore];
   return initialize.useStateFromStores(items, () => {
     locale = locale.locale;
@@ -393,4 +369,4 @@ export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled() ? (f
     }
     return tmp;
   });
-});
+}

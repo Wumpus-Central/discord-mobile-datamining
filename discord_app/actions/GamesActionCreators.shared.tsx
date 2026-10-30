@@ -1,14 +1,14 @@
-// === Module 11457: _tryJoinAsFrame ===
+// === Module 11658: _tryJoinAsFrame ===
 
-// Module 11457 (_tryJoinAsFrame)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7471 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11451 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11456 */;
+// Module 11658 (_tryJoinAsFrame)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11652 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11657 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PresenceStore from "PresenceStore" /* 5750 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PresenceStore from "PresenceStore" /* 5756 */;
 
 require = fn;
 let closure_10 = async function _tryJoinAsFrame(arg0) {
@@ -25,7 +25,7 @@ let closure_10 = async function _tryJoinAsFrame(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_11 = async function _tryStartAsEmbeddedApp(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -220,7 +220,7 @@ let closure_12 = async function _startFrame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -265,7 +265,7 @@ let closure_12 = async function _startFrame(arg0) {
           let frameParticipantId;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -366,7 +366,7 @@ let closure_13 = async function _startActivity(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -468,8 +468,8 @@ let closure_13 = async function _startActivity(arg0, arg1) {
     }
   })();
 };
-const ActivityFlags = fn(1084).ActivityFlags;
-const MAIN_SURFACE = fn(6834).MAIN_SURFACE;
+const ActivityFlags = fn(1072).ActivityFlags;
+const MAIN_SURFACE = fn(6841).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.shared.tsx");
 

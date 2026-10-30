@@ -1,146 +1,21 @@
-// === Module 19004: FramePanelController ===
+// === Module 19098: FramePanelController ===
 
-// Module 19004 (FramePanelController)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10880 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18561 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19005 */;
+// Module 19098 (FramePanelController)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10903 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18620 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19099 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2043 */;
-import FramesStore from "FramesStore" /* 6833 */;
+import ApplicationStore from "ApplicationStore" /* 2040 */;
+import FramesStore from "FramesStore" /* 6840 */;
 
 require = fn;
-const asLaunched = fn(6834).asLaunched;
-const ActivityPanelModes = fn(5646).ActivityPanelModes;
+const asLaunched = fn(6841).asLaunched;
+const ActivityPanelModes = fn(5652).ActivityPanelModes;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function FramePanelController(children) {
-  const cResult = mainFrameId(576).c(13);
-  children = children.children;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [FramesStore, ApplicationStore];
-    class A {
-      constructor() {
-        tmp = closure_1_6(closure_1_5.getMainFrame());
-        activityPanelMode = undefined;
-        if (tmp != null) {
-          activityPanelMode = tmp.data.activityPanelMode;
-        }
-        if (activityPanelMode == null) {
-          tmp3 = closure_1_7;
-          activityPanelMode = closure_1_7.DISCONNECTED;
-        }
-        applicationId = undefined;
-        if (tmp != null) {
-          applicationId = tmp.applicationId;
-        }
-        application = undefined;
-        if (null != applicationId) {
-          tmp6 = closure_1_4;
-          application = closure_1_4.getApplication(applicationId);
-        }
-        orientationLock = undefined;
-        if (tmp != null) {
-          orientationLock = tmp.data.orientationLock;
-        }
-        id = undefined;
-        if (tmp != null) {
-          id = tmp.id;
-        }
-        return { mainFrameId: id, mode: activityPanelMode, connectedActivityAppId: applicationId, currentApp: application, orientationLockStateForApp: orientationLock };
-      }
-    }
-    const items1 = [];
-    cResult[0] = items;
-    cResult[1] = A;
-    cResult[2] = items1;
-    tmp4 = items;
-    tmp6 = items1;
-  } else {
-    [tmp4, tmp5, tmp6] = cResult;
-  }
-  let obj = mainFrameId(576);
-  const stateFromStoresObject = mainFrameId(504).useStateFromStoresObject(tmp4, A, tmp6);
-  mainFrameId = stateFromStoresObject.mainFrameId;
-  ({ mode, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
-  if (cResult[3] !== mainFrameId) {
-    const fn = function y(PIP) {
-      if (null != mainFrameId) {
-        const frame = FramesStore.getFrame(mainFrameId);
-        let result = PIP === ActivityPanelModes.PANEL && null != frame;
-        if (result) {
-          result = conjureBackgroundFrames.returnToConjureFrameSurface(frame);
-        }
-        if (!result) {
-          FramesActionCreatorsDefault.updateFramePanelMode(mainFrameId, PIP);
-        }
-      }
-    };
-    cResult[3] = mainFrameId;
-    cResult[4] = fn;
-    class A {
-      constructor() {
-        tmp = closure_1_6(closure_1_5.getMainFrame());
-        activityPanelMode = undefined;
-        if (tmp != null) {
-          activityPanelMode = tmp.data.activityPanelMode;
-        }
-        if (activityPanelMode == null) {
-          tmp3 = closure_1_7;
-          activityPanelMode = closure_1_7.DISCONNECTED;
-        }
-        applicationId = undefined;
-        if (tmp != null) {
-          applicationId = tmp.applicationId;
-        }
-        application = undefined;
-        if (null != applicationId) {
-          tmp6 = closure_1_4;
-          application = closure_1_4.getApplication(applicationId);
-        }
-        orientationLock = undefined;
-        if (tmp != null) {
-          orientationLock = tmp.data.orientationLock;
-        }
-        id = undefined;
-        if (tmp != null) {
-          id = tmp.id;
-        }
-        return { mainFrameId: id, mode: activityPanelMode, connectedActivityAppId: applicationId, currentApp: application, orientationLockStateForApp: orientationLock };
-      }
-    }
-  }
-  if (cResult[5] === children) {
-    if (cResult[6] === connectedActivityAppId) {
-      if (cResult[7] === currentApp) {
-        if (cResult[8] === mode) {
-          if (cResult[9] === orientationLockStateForApp) {
-            if (cResult[10] === tmp11) {
-              if (cResult[11] === tmp10) {
-                let tmp12 = cResult[12];
-              }
-              return tmp12;
-            }
-          }
-        }
-      }
-    }
-  }
-  const tmpResult = mainFrameId(504);
-  const tmp13 = jsx(mainFrameId(18977).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: tmp10, children });
-  cResult[5] = children;
-  cResult[6] = connectedActivityAppId;
-  cResult[7] = currentApp;
-  cResult[8] = mode;
-  cResult[9] = orientationLockStateForApp;
-  cResult[10] = null != mainFrameId;
-  cResult[11] = tmp10;
-  cResult[12] = tmp13;
-  tmp12 = tmp13;
-  let obj2 = { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: tmp10, children };
-}) : (function FramePanelController(children) {
+export default function FramePanelController(children) {
   let mainFrameId;
   const items = [FramesStore, ApplicationStore];
   const stateFromStoresObject = mainFrameId(504).useStateFromStoresObject(items, () => {
@@ -186,5 +61,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FramePan
     }
   }, items1);
   let obj = mainFrameId(504);
-  return jsx(mainFrameId(18977).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
-});
+  return jsx(mainFrameId(19071).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
+};

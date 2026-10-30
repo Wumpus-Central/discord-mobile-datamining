@@ -1,57 +1,20 @@
-// === Module 5066: NitroFileUploadExperiments ===
+// === Module 5070: NitroFileUploadExperiments ===
 
-// Module 5066 (NitroFileUploadExperiments)
-import c from "c" /* 576 */;
-import PremiumConstants from "PremiumConstants" /* 1391 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1453 */;
-import "ReactCompilerGating";
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+// Module 5070 (NitroFileUploadExperiments)
+import PremiumConstants from "PremiumConstants" /* 1386 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
-({ MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE: c2, MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE_1GB: c3 } = PremiumConstants);
+({ MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE: closure_0, MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE_1GB: closure_1 } = PremiumConstants);
 const NitroFileUploadRollout = "NitroFileUploadRollout";
 let ApexExperiment = ApexExperiment_mod;
 let obj = { name: "2026-09-nitro-file-upload-rollout", kind: "user", defaultConfig: { enabled: false }, variations: null };
-let obj2 = { 1: null };
+const obj2 = { 1: null };
 obj2[1] = { enabled: true };
 obj.variations = obj2;
-let closure_5 = ApexExperiment.createApexExperiment(obj);
+let closure_3 = ApexExperiment.createApexExperiment(obj);
 let ApexExperiment = ApexExperiment_mod;
-let closure_6 = ApexExperiment.createApexExperiment({ name: "2026-09-non-nitro-file-upload-marketing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const obj3 = { name: "2026-09-non-nitro-file-upload-marketing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } };
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNitroFileUploadRolloutEnabled(arg0) {
-  let tmp = arg0;
-  const cResult = c.c(2);
-  if (arg0 == null) {
-    tmp = NitroFileUploadRollout;
-  }
-  if (cResult[0] !== tmp) {
-    const obj2 = { location: tmp };
-    cResult[0] = tmp;
-    cResult[1] = obj2;
-    let tmp3 = obj2;
-  } else {
-    tmp3 = cResult[1];
-  }
-  return closure_5.useConfig(tmp3).enabled;
-}) : (function useNitroFileUploadRolloutEnabled(arg0) {
-  let _location = arg0;
-  if (arg0 == null) {
-    _location = NitroFileUploadRollout;
-  }
-  return closure_5.useConfig({ location: _location }).enabled;
-});
-function getNitroFileUploadRolloutConfig(arg0) {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let _location = obj.location;
-  if (_location == null) {
-    _location = NitroFileUploadRollout;
-  }
-  return closure_5.getConfig({ location: _location });
-}
+let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-09-non-nitro-file-upload-marketing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = size.fileFinishedImporting("modules/premium/experiments/NitroFileUploadExperiments.tsx");
 
 export function getNitroFileUploadLimitBytes(arg0) {
@@ -63,32 +26,37 @@ export function getNitroFileUploadLimitBytes(arg0) {
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  return closure_5.getConfig({ location: _location }).enabled ? React3 : React2;
+  return closure_3.getConfig({ location: _location }).enabled ? framebus : React;
 }
-export { getNitroFileUploadRolloutConfig };
+export function getNitroFileUploadRolloutConfig(arg0) {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let _location = obj.location;
+  if (_location == null) {
+    _location = NitroFileUploadRollout;
+  }
+  return closure_3.getConfig({ location: _location });
+}
 export function getNitroFileUploadRolloutCopy(legacyCopy) {
   let rolloutCopy = legacyCopy.legacyCopy;
   let _location = {}.location;
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  if (closure_5.getConfig({ location: _location }).enabled) {
+  if (closure_3.getConfig({ location: _location }).enabled) {
     rolloutCopy = legacyCopy.rolloutCopy;
   }
   return rolloutCopy;
 }
-export const useNitroFileUploadRolloutEnabled = tmp3;
-export const useNonNitroFileUploadMarketingEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useNonNitroFileUploadMarketingEnabled(location) {
-  const cResult = c.c(2);
-  if (cResult[0] !== location) {
-    const obj2 = { location };
-    cResult[0] = location;
-    cResult[1] = obj2;
-    let tmp2 = obj2;
-  } else {
-    tmp2 = cResult[1];
+export function useNitroFileUploadRolloutEnabled(MainViewTooltipActionSheets) {
+  let _location = MainViewTooltipActionSheets;
+  if (MainViewTooltipActionSheets == null) {
+    _location = NitroFileUploadRollout;
   }
-  return closure_6.useConfig(tmp2).enabled;
-}) : (function useNonNitroFileUploadMarketingEnabled(location) {
-  return closure_6.useConfig({ location }).enabled;
-});
+  return closure_3.useConfig({ location: _location }).enabled;
+}
+export function useNonNitroFileUploadMarketingEnabled(location) {
+  return closure_4.useConfig({ location }).enabled;
+}

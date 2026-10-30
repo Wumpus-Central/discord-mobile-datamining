@@ -1,10 +1,10 @@
-// === Module 13249: CheckpointStatsUtils ===
+// === Module 13399: CheckpointStatsUtils ===
 
-// Module 13249 (CheckpointStatsUtils)
+// Module 13399 (CheckpointStatsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1125 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4871 */;
-import UserRecord from "UserRecord" /* 1403 */;
+import util from "util" /* 1114 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4872 */;
+import UserRecord from "UserRecord" /* 1398 */;
 
 require = fn;
 let closure_4 = { hour: "numeric", minute: "2-digit", numberingSystem: "latn" };
@@ -28,6 +28,9 @@ export function getCheckpointTopPercent(prop) {
 export function formatCheckpointCompactNumber(stateFromStores1) {
   const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "long" });
   return numberFormat.format(stateFromStores1);
+}
+export function getCheckpointOdysseyCopies(stateFromStores1) {
+  return stateFromStores1 / 87765;
 }
 export function formatCheckpointPeakHour(stateFromStores1) {
   if (null == stateFromStores1) {

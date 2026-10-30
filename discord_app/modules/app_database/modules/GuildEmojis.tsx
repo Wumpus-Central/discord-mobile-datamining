@@ -1,8 +1,8 @@
-// === Module 6787: GuildEmojis ===
+// === Module 6794: GuildEmojis ===
 
-// Module 6787 (GuildEmojis)
+// Module 6794 (GuildEmojis)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4883 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4887 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = new LoggerDefault("GuildEmojis");

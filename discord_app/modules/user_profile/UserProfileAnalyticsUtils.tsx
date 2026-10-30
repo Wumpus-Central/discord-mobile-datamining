@@ -1,20 +1,21 @@
-// === Module 8720: UserProfileAnalyticsUtils ===
+// === Module 8754: UserProfileAnalyticsUtils ===
 
-// Module 8720 (UserProfileAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import useDisplayProfile from "useDisplayProfile" /* 8715 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8727 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8721 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7263 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7789 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6701 */;
-import GuildMemberStore from "GuildMemberStore" /* 4917 */;
-import PresenceStore from "PresenceStore" /* 5750 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
-import UserProfileStore from "UserProfileStore" /* 7760 */;
+// Module 8754 (UserProfileAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import AvatarUtils from "AvatarUtils" /* 1410 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import ActivityTypes from "ActivityTypes" /* 5757 */;
+import useDisplayProfile from "useDisplayProfile" /* 8749 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8761 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8755 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7270 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7794 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6708 */;
+import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import PresenceStore from "PresenceStore" /* 5756 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
+import UserProfileStore from "UserProfileStore" /* 7765 */;
 
 require = fn;
 function getProfileProperties(guildMemberProfile) {
@@ -257,13 +258,12 @@ function trackUserProfileAction(dependencyMap) {
   obj2.source_message_id = messageId;
   obj2.source_role_id = roleId;
   obj2.widget_type = widgetType;
-  obj.track(constants3.USER_PROFILE_ACTION, obj2);
+  obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7263).FetchState;
-const constants = fn(8712).TrackUserProfileProperties;
-const Constants = fn(1084);
-({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = Constants);
-const StatusTypes = fn(1095).StatusTypes;
+const FetchState = fn(7270).FetchState;
+const constants = fn(8746).TrackUserProfileProperties;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const StatusTypes = fn(1083).StatusTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
 
@@ -290,8 +290,8 @@ export function getActivityType(arg0) {
     if ("VOICE" !== arg0) {
       const _Object = Object;
       const _Object2 = Object;
-      const keys = Object.keys(constants2);
-      const values = Object.values(constants2);
+      const keys = Object.keys(ActivityTypes.ActivityTypes);
+      const values = Object.values(ActivityTypes.ActivityTypes);
       str = keys[values.indexOf(values, arg0)];
     }
     tmp = str;
@@ -386,7 +386,7 @@ export function maybeTrackUserProfileUiViewed(userId) {
       obj3.time_to_interactive_ms = timeToInteractiveMs;
       obj3.time_to_load_ms = timeToLoadMs;
       obj3.time_to_fetch_ms = timeToFetchMs;
-      obj3 = obj2.track(constants3.USER_PROFILE_UI_VIEWED, obj3);
+      obj3 = obj2.track(AnalyticEvents.USER_PROFILE_UI_VIEWED, obj3);
       const tmpResult2 = AppAnalyticsUtils;
     }
   }
@@ -427,19 +427,19 @@ export function trackUserProfileActivityJoined(userId) {
   obj2.location_stack = analyticsLocations;
   let str = "VOICE";
   if (null == voiceChannelId) {
-    let tmp8 = activityType;
+    let tmp10 = activityType;
     if (null != activityType) {
       let str2 = "VOICE";
       if ("VOICE" !== activityType) {
         const _Object = Object;
         const _Object2 = Object;
-        const keys = Object.keys(constants2);
-        const values = Object.values(constants2);
+        const keys = Object.keys(ActivityTypes.ActivityTypes);
+        const values = Object.values(ActivityTypes.ActivityTypes);
         str2 = keys[values.indexOf(values, activityType)];
       }
-      tmp8 = str2;
+      tmp10 = str2;
     }
-    str = tmp8;
+    str = tmp10;
   }
   obj2.activity_type = str;
   obj2.activity_name = activityName;
@@ -447,7 +447,7 @@ export function trackUserProfileActivityJoined(userId) {
   obj2.activity_session_id = activitySessionId;
   obj2.application_id = applicationId;
   obj2.voice_channel_id = voiceChannelId;
-  obj.track(constants3.USER_PROFILE_ACTIVITY_JOINED, obj2);
+  obj.track(AnalyticEvents.USER_PROFILE_ACTIVITY_JOINED, obj2);
 }
 export function trackUserProfileActivityAction(userId) {
   ({ activity, entry, outbox } = userId);
@@ -485,23 +485,23 @@ export function trackUserProfileActivityAction(userId) {
   obj2.activity_action = action;
   obj2.activity_display = display;
   if (null != stream) {
-    let type = constants2.STREAMING;
+    let type = ActivityTypes.ActivityTypes.STREAMING;
   } else if (activity != null) {
     type = activity.type;
   }
-  let tmp9 = type;
+  let tmp10 = type;
   if (null != type) {
     let str = "VOICE";
     if ("VOICE" !== type) {
       const _Object = Object;
       const _Object2 = Object;
-      const keys = Object.keys(constants2);
-      const values = Object.values(constants2);
+      const keys = Object.keys(ActivityTypes.ActivityTypes);
+      const values = Object.values(ActivityTypes.ActivityTypes);
       str = keys[values.indexOf(values, type)];
     }
-    tmp9 = str;
+    tmp10 = str;
   }
-  obj2.activity_type = tmp9;
+  obj2.activity_type = tmp10;
   let name;
   if (activity != null) {
     name = activity.name;
@@ -545,7 +545,7 @@ export function trackUserProfileActivityAction(userId) {
   }
   obj2.author_ids_v2 = mapped1;
   obj2.voice_channel_id = voiceChannelId;
-  obj.track(constants3.USER_PROFILE_ACTIVITY_ACTION, obj2);
+  obj.track(AnalyticEvents.USER_PROFILE_ACTIVITY_ACTION, obj2);
 }
 export function trackUserProfileBadgeAction(userId) {
   ({ badgeId, userId } = userId);
@@ -595,7 +595,7 @@ export function trackUserProfileBadgeAction(userId) {
   obj2.badge_id = badgeId;
   obj2.badge_tier = tmp;
   obj2.position = position;
-  obj.track(constants3.USER_PROFILE_BADGE_ACTION, obj2);
+  obj.track(AnalyticEvents.USER_PROFILE_BADGE_ACTION, obj2);
 }
 export function trackDmProfileToggled(displayProfile) {
   displayProfile = displayProfile.displayProfile;
@@ -608,11 +608,11 @@ export function trackDmProfileToggled(displayProfile) {
     findActivityResult = PresenceStore.findActivity(userId, (type) => {
       type = type.type;
       if (null != ApplicationStreamingStore.getAnyStreamForUser(userId)) {
-        let tmp2 = type === constants2.PLAYING;
+        let tmp3 = type === ActivityTypes.ActivityTypes.PLAYING;
       } else {
-        tmp2 = type !== constants2.CUSTOM_STATUS;
+        tmp3 = type !== ActivityTypes.ActivityTypes.CUSTOM_STATUS;
       }
-      return tmp2;
+      return tmp3;
     });
   }
   const obj2 = {};
@@ -653,7 +653,7 @@ export function trackDmProfileToggled(displayProfile) {
     prop = displayProfile.popoutAnimationParticleType;
   }
   obj2.profile_has_theme_animation = null != prop;
-  AnalyticsUtilsDefault.track(constants3.DM_PROFILE_TOGGLED, obj2);
+  AnalyticsUtilsDefault.track(AnalyticEvents.DM_PROFILE_TOGGLED, obj2);
 }
 export function trackUserProfileEditAction(dependencyMap) {
   ({ action, applicationId } = dependencyMap);
@@ -684,7 +684,7 @@ export function trackUserProfileEditAction(dependencyMap) {
   obj3.num_results = numResults;
   obj3.num_characters = numCharacters;
   obj3.application_id = applicationId;
-  obj2.track(constants3.USER_PROFILE_EDIT_ACTION, obj3);
+  obj2.track(AnalyticEvents.USER_PROFILE_EDIT_ACTION, obj3);
 }
 export function trackUserProfileEditSaved(dependencyMap) {
   const obj = {};
@@ -703,7 +703,7 @@ export function trackUserProfileEditSaved(dependencyMap) {
   obj3.tags = tags;
   obj3.num_characters_commentary = numCharactersCommentary;
   obj3.is_widget_removed = isWidgetRemoved;
-  obj2.track(constants3.USER_PROFILE_EDIT_SAVED, obj3);
+  obj2.track(AnalyticEvents.USER_PROFILE_EDIT_SAVED, obj3);
 }
 export function trackUserProfileWishlistAction(dependencyMap) {
   ({ action, productLines } = dependencyMap);
@@ -728,5 +728,5 @@ export function trackUserProfileWishlistAction(dependencyMap) {
     items = [];
   }
   obj3.product_lines = items;
-  obj2.track(constants3.USER_PROFILE_WISHLIST_ACTION, obj3);
+  obj2.track(AnalyticEvents.USER_PROFILE_WISHLIST_ACTION, obj3);
 }

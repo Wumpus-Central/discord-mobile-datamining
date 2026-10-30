@@ -1,7 +1,7 @@
-// === Module 5260: getDeviceSpecificString ===
+// === Module 5266: getDeviceSpecificString ===
 
-// Module 5260 (getDeviceSpecificString)
-import util from "util" /* 1125 */;
+// Module 5266 (getDeviceSpecificString)
+import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");

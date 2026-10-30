@@ -1,112 +1,42 @@
-// === Module 18696: useAutoSearchPeopleTab ===
+// === Module 18755: useAutoSearchPeopleTab ===
 
-// Module 18696 (useAutoSearchPeopleTab)
+// Module 18755 (useAutoSearchPeopleTab)
 import _mod12 from "module_12" /* 12 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9119 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13689 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13714 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9132 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13836 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13861 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13703 */;
-
-const require = globalThis.__r;
+import SearchQueryStore from "SearchQueryStore" /* 13850 */;
 
 require = fn;
-let closure_5 = fn(13705).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
-const ReactCompilerGating = fn(558);
+let closure_5 = fn(13852).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
 
-export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoSearchPeopleTab(arg0, arg1) {
-  _require = arg0;
+export function useAutoSearchPeopleTab(searchContext, arg1) {
+  closure_0 = searchContext;
   closure_1 = arg1;
-  const cResult = require("c").c(11);
-  if (cResult[0] === arg1) {
-    if (cResult[1] === arg0) {
-      let tmp2 = cResult[2];
-      let tmp3 = cResult[3];
-    }
-    const effect = noop.useEffect(tmp2, tmp3);
-    if (cResult[4] === arg1) {
-      if (cResult[5] === arg0) {
-        let tmp5 = cResult[6];
-        let tmp6 = cResult[7];
-      }
-      const effect1 = noop.useEffect(tmp5, tmp6);
-      if (cResult[8] !== arg0) {
-        const fn3 = function p() {
-          return () => {
-            closure_1(13714).cleanupPeopleTab(closure_1_0);
-          };
-        };
-        const items = [arg0];
-        cResult[8] = arg0;
-        cResult[9] = fn3;
-        cResult[10] = items;
-        let tmp9 = items;
-        let tmp8 = fn3;
-      } else {
-        tmp8 = cResult[9];
-        tmp9 = cResult[10];
-      }
-      const effect2 = noop.useEffect(tmp8, tmp9);
-    }
-    const fn2 = function n() {
-      if (!closure_1) {
-        const debounceResult = _mod12.debounce((searchQueryString) => {
-          if (!autocompleteVisible.isAutocompleteVisible(closure_1_0)) {
-            closure_1(13714).searchPeopleTab(closure_1_0, searchQueryString);
-            const obj = closure_1(13714);
-          }
-        }, closure_5);
-        return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
-      }
-    };
-    const items1 = [arg0, arg1];
-    cResult[4] = arg1;
-    cResult[5] = arg0;
-    cResult[6] = fn2;
-    cResult[7] = items1;
-    tmp6 = items1;
-    tmp5 = fn2;
-  }
-  const fn = function f() {
-    if (!closure_1) {
-      const userAffinitiesV2 = UserAffinitiesActionCreators.fetchUserAffinitiesV2();
-      SearchPlatformActionCreatorsDefault.searchPeopleTab(closure_0, "");
-    }
-  };
-  const items2 = [arg1, arg0];
-  cResult[0] = arg1;
-  cResult[1] = arg0;
-  cResult[2] = fn;
-  cResult[3] = items2;
-  tmp3 = items2;
-  tmp2 = fn;
-  let obj = require("c");
-}) : (function useAutoSearchPeopleTab(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  const items = [arg1, arg0];
+  const items = [arg1, searchContext];
   const effect = noop.useEffect(() => {
     if (!closure_1) {
       const userAffinitiesV2 = UserAffinitiesActionCreators.fetchUserAffinitiesV2();
       SearchPlatformActionCreatorsDefault.searchPeopleTab(closure_0, "");
     }
   }, items);
-  const items1 = [arg0, arg1];
+  const items1 = [searchContext, arg1];
   const effect1 = noop.useEffect(() => {
     if (!closure_1) {
       const debounceResult = _mod12.debounce((searchQueryString) => {
-        if (!autocompleteVisible.isAutocompleteVisible(closure_1_0)) {
-          closure_1(13714).searchPeopleTab(closure_1_0, searchQueryString);
-          const obj = closure_1(13714);
+        if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
+          closure_1(13861).searchPeopleTab(searchContext, searchQueryString);
+          const obj = closure_1(13861);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
     }
   }, items1);
-  const items2 = [arg0];
+  const items2 = [searchContext];
   const effect2 = noop.useEffect(() => () => {
-    closure_1(13714).cleanupPeopleTab(closure_1_0);
+    closure_1(13861).cleanupPeopleTab(searchContext);
   }, items2);
-});
+}

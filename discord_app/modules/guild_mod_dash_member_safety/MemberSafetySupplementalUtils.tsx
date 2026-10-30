@@ -1,13 +1,11 @@
-// === Module 7669: MemberSafetySupplementalUtils ===
+// === Module 7674: MemberSafetySupplementalUtils ===
 
-// Module 7669 (MemberSafetySupplementalUtils)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import shared from "shared" /* 5012 */;
-import useThemeDefault from "useTheme" /* 5242 */;
-import PlatformsDefault from "Platforms" /* 6561 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7670 */;
+// Module 7674 (MemberSafetySupplementalUtils)
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import shared from "shared" /* 5016 */;
+import PlatformsDefault from "Platforms" /* 6568 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7675 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -38,7 +36,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -135,12 +133,11 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
     }
   }
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 let closure_5 = {};
 let closure_6 = { FAILED: 0, [0]: "FAILED", UNFETCHED: 1, [1]: "UNFETCHED", PENDING: 2, [2]: "PENDING", SUCCEEDED: 3, [3]: "SUCCEEDED", FAILED_NO_RETRY: 4, [4]: "FAILED_NO_RETRY" };
 const JoinSourceType = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", BOT: 1, [1]: "BOT", INTEGRATION: 2, [2]: "INTEGRATION", DISCOVERY: 3, [3]: "DISCOVERY", HUB: 4, [4]: "HUB", INVITE: 5, [5]: "INVITE", VANITY_URL: 6, [6]: "VANITY_URL", MANUAL_MEMBER_VERIFICATION: 7, [7]: "MANUAL_MEMBER_VERIFICATION", SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8, [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL" };
 let obj2 = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
@@ -210,39 +207,7 @@ export function getIntegrationLabel(arg0) {
     return intl.string(util.t.gmCUFw);
   }
 }
-export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetIntegrationIconString(arg0) {
-  let str2 = c.c(4);
-  obj2 = PlatformsDefault;
-  let lightSVG = obj2.get(ConnectionsHooks.useLegacyPlatformType(arg0));
-  const tmp2 = useThemeDefault();
-  let tmp3 = null;
-  if (null != lightSVG) {
-    const items = [, ];
-    ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
-    tmp3 = null;
-    if (items.includes(arg0)) {
-      if (str2[0] === lightSVG.icon.darkSVG) {
-        if (str2[1] === lightSVG.icon.lightSVG) {
-          if (str2[2] === tmp2) {
-            const _HermesInternal = HermesInternal;
-            str2 = "')";
-            const combined = "url('" + str2[3] + "')";
-          }
-        }
-      }
-      let darkSVG = lightSVG.icon;
-      const tmp5 = shared.isThemeDark(tmp2) ? darkSVG.darkSVG : darkSVG.lightSVG;
-      darkSVG = lightSVG.icon.darkSVG;
-      str2[0] = darkSVG;
-      lightSVG = lightSVG.icon.lightSVG;
-      str2[1] = lightSVG;
-      str2[2] = tmp2;
-      str2[3] = tmp5;
-      const tmpResult = shared;
-    }
-  }
-  return tmp3;
-}) : (function useGetIntegrationIconString(arg0) {
+export function useGetIntegrationIconString(arg0) {
   obj2 = ConnectionsHooks;
   value = PlatformsDefault.get(obj2.useLegacyPlatformType(arg0));
   let tmp5 = null;
@@ -259,7 +224,7 @@ export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEn
     }
   }
   return tmp5;
-});
+}
 export function fetchMemberSupplemental() {
   const self = this;
   const apply = closure_13.apply;

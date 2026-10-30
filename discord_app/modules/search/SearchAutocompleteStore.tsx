@@ -1,23 +1,23 @@
-// === Module 18699: SearchAutocompleteStore ===
+// === Module 18758: SearchAutocompleteStore ===
 
-// Module 18699 (SearchAutocompleteStore)
+// Module 18758 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserUtilsDefault from "UserUtils" /* 5059 */;
-import _modDef5842 from "module_5842" /* 5842 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6766 */;
-import GuildUtilsDefault from "GuildUtils" /* 6888 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9106 */;
-import SearchUtils from "SearchUtils" /* 13696 */;
-import SearchTokens from "SearchTokens" /* 13697 */;
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 13700 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildMemberStore from "GuildMemberStore" /* 4917 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import StreamerModeStore from "StreamerModeStore" /* 5060 */;
-import UserStore from "UserStore" /* 1389 */;
-import SelectedSearchContextStore from "SelectedSearchContextStore" /* 13699 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import UserUtilsDefault from "UserUtils" /* 5063 */;
+import _modDef5849 from "module_5849" /* 5849 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6773 */;
+import GuildUtilsDefault from "GuildUtils" /* 6895 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9119 */;
+import SearchUtils from "SearchUtils" /* 13843 */;
+import SearchTokens from "SearchTokens" /* 13844 */;
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 13847 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import StreamerModeStore from "StreamerModeStore" /* 5064 */;
+import UserStore from "UserStore" /* 1384 */;
+import SelectedSearchContextStore from "SelectedSearchContextStore" /* 13846 */;
 
 const SearchTokensDefault = SearchTokens;
 
@@ -25,7 +25,7 @@ require = fn;
 function handleUserSearchResults(searchContext, results) {
   const searchContextId = SearchUtils.getSearchContextId(searchContext);
   value = map1.get(searchContextId);
-  value3 = map.get(searchContextId);
+  const value3 = map.get(searchContextId);
   if (null != value) {
     if (null != value3) {
       const mode1 = value3.mode;
@@ -76,7 +76,7 @@ function handleUserSearchResults(searchContext, results) {
         ({ query, cursorScope } = value3);
         let tmp10 = getAutocompleteList(searchContext, mode, tokens);
         const searchContextId1 = SearchUtils.getSearchContextId(searchContext);
-        value4 = map1.get(searchContextId1);
+        let value4 = map1.get(searchContextId1);
         if (value4 == null) {
           const obj4 = { results: [], context: UserSearchManagerDefault.getUserSearchContext(handleUserSearchResults.bind(null, searchContext)) };
           value4 = obj4;
@@ -218,10 +218,10 @@ function rebuildAutocompleteResults(c14) {
     const tmpResult = SearchUtils;
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ SearchPopoutModes: c10, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(6884).AutocompleterResultTypes;
+fn(6891).AutocompleterResultTypes;
 let c14 = null;
 let closure_15 = [];
 const map = new Map();
@@ -253,7 +253,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef5842(c14, searchContext)) {
+    if (!_modDef5849(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -261,7 +261,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef5842(c14, searchContext)) {
+    if (!_modDef5849(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -275,7 +275,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
         let flag = false;
       }
       const searchContextId1 = SearchUtils.getSearchContextId(searchContext);
-      value4 = map1.get(searchContextId1);
+      let value4 = map1.get(searchContextId1);
       if (value4 == null) {
         const obj6 = { results: [], context: UserSearchManagerDefault.getUserSearchContext(handleUserSearchResults.bind(null, searchContext)) };
         value4 = obj6;

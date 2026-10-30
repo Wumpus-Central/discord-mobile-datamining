@@ -1,164 +1,26 @@
-// === Module 8794: useVideoControls ===
+// === Module 8828: useVideoControls ===
 
-// Module 8794 (useVideoControls)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8792 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8795 */;
+// Module 8828 (useVideoControls)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8826 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8829 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5006 */;
+import AccessibilityStore from "AccessibilityStore" /* 5010 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const module_570 = fn(570);
-const obj5 = module_570.create(() => ({ controls: "Reflect", paused: null }));
-const createStyles = fn(5005);
+const module_560 = fn(560);
+let obj4 = module_560.create(() => ({ controls: "flexDirection", paused: true }));
+const createStyles = fn(5009);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoControls(arg0, portal, controls) {
-  _require = arg0;
-  importDefault = controls;
-  const cResult = require("c").c(19);
-  const tmp4 = closure_8();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [useReducedMotion];
-    const fn = function f() {
-      return useReducedMotion.useReducedMotion;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
-  } else {
-    [tmp5, tmp6] = cResult;
-  }
-  const obj = require("c");
-  stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
-  const obj3 = mediaItemHasSpoiler;
-  const tmpResult = require("initialize");
-  [tmp10, tmp11] = mediaItemHasSpoiler.useState(false);
-  _slicedToArray = tmp11;
-  const tmp9 = _slicedToArray(mediaItemHasSpoiler.useState(false), 2);
-  mediaItemHasSpoiler = require("useMediaItemHasSpoiler").useMediaItemHasSpoiler(arg0);
-  const tmp14 = require("usePrevious")(arg0);
-  useReducedMotion = tmp14;
-  let result = null != controls;
-  if (result) {
-    result = tmp(tmp2[13]).supportOverlayVideoControls(portal);
-    const tmpResult4 = tmp(tmp2[13]);
-  }
-  let videoURI = portal.portal;
-  if (videoURI == null) {
-    videoURI = portal.videoURI;
-  }
-  const tmp16 = require("usePrevious")(videoURI);
-  closure_7 = tmp16;
-  if (cResult[2] === controls) {
-    if (cResult[3] === mediaItemHasSpoiler) {
-      if (cResult[4] === arg0) {
-        if (cResult[5] === tmp14) {
-          if (cResult[6] === tmp16) {
-            if (cResult[7] === videoURI) {
-              if (cResult[8] === stateFromStores) {
-                let tmp17 = cResult[9];
-                let tmp18 = cResult[10];
-              }
-              const effect = obj3.useEffect(tmp17, tmp18);
-              if (cResult[11] !== arg0) {
-                class C {
-                  constructor() {
-                    obj = closure_0(closure_2[14]);
-                    removeSpoilerResult = obj.removeSpoiler(closure_0);
-                    return;
-                  }
-                }
-                cResult[11] = arg0;
-                cResult[12] = C;
-              } else {
-                class C {
-                  constructor() {
-                    obj = closure_0(closure_2[14]);
-                    removeSpoilerResult = obj.removeSpoiler(closure_0);
-                    return;
-                  }
-                }
-              }
-              if (result) {
-                class C {
-                  constructor() {
-                    obj = closure_0(closure_2[14]);
-                    removeSpoilerResult = obj.removeSpoiler(closure_0);
-                    return;
-                  }
-                }
-                const obj2 = { style: tmp4.slider, controls, paused: tmp10, setPaused: tmp11, onPlayPress: C };
-                const tmp23 = videoURI(tmp13(tmp2[15]), obj2, videoURI);
-                cResult[13] = controls;
-                cResult[14] = C;
-                cResult[15] = tmp10;
-                cResult[16] = tmp4.slider;
-                cResult[17] = videoURI;
-                cResult[18] = tmp23;
-              } else {
-                class C {
-                  constructor() {
-                    obj = closure_0(closure_2[14]);
-                    removeSpoilerResult = obj.removeSpoiler(closure_0);
-                    return;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  class V {
-    constructor() {
-      if (closure_5 !== closure_0) {
-        tmp2 = null;
-        if (null != tmp) {
-          if (null != videoURI) {
-            tmp4 = closure_7;
-            if (closure_7 !== tmp3) {
-              obj = closure_1;
-              num = 0;
-              seekResult = closure_1.seek(0);
-              tmp6 = closure_4;
-              if (!closure_4) {
-                tmp6 = closure_2;
-              }
-              pauseResult = obj.pause(tmp6);
-              tmp8 = closure_3;
-              tmp9 = closure_3(tmp6);
-            }
-          }
-        }
-      }
-      return;
-    }
-  }
-  const items1 = [controls, videoURI, stateFromStores, tmp16, mediaItemHasSpoiler, tmp14, arg0];
-  cResult[2] = controls;
-  cResult[3] = mediaItemHasSpoiler;
-  cResult[4] = arg0;
-  cResult[5] = tmp14;
-  cResult[6] = tmp16;
-  cResult[7] = videoURI;
-  cResult[8] = stateFromStores;
-  cResult[9] = V;
-  cResult[10] = items1;
-  tmp18 = items1;
-  tmp17 = V;
-  const tmpResult3 = require("useMediaItemHasSpoiler");
-}) : (function useVideoControls(arg0, portal, controls) {
-  _require = arg0;
+export default function useVideoControls(index, portal, controls) {
+  _require = index;
   importDefault = controls;
   const tmp = closure_8();
   const tmp2 = _require;
@@ -168,13 +30,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
   _slicedToArray = tmp6;
   const obj = require("initialize");
   const obj2 = mediaItemHasSpoiler;
-  mediaItemHasSpoiler = require("useMediaItemHasSpoiler").useMediaItemHasSpoiler(arg0);
-  const tmp9 = require("usePrevious")(arg0);
+  mediaItemHasSpoiler = require("useMediaItemHasSpoiler").useMediaItemHasSpoiler(index);
+  const tmp9 = require("usePrevious")(index);
   useReducedMotion = tmp9;
   let result = null != controls;
   if (result) {
-    result = tmp2(tmp3[13]).supportOverlayVideoControls(portal);
-    const tmp2Result = tmp2(tmp3[13]);
+    result = tmp2(tmp3[11]).supportOverlayVideoControls(portal);
+    const tmp2Result = tmp2(tmp3[11]);
   }
   let videoURI = portal.portal;
   if (videoURI == null) {
@@ -182,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
   }
   const tmp11 = require("usePrevious")(videoURI);
   closure_7 = tmp11;
-  const items1 = [controls, videoURI, stateFromStores, tmp11, mediaItemHasSpoiler, tmp9, arg0];
+  const items1 = [controls, videoURI, stateFromStores, tmp11, mediaItemHasSpoiler, tmp9, index];
   const effect = obj2.useEffect(() => {
     if (closure_5 !== closure_0) {
       if (null != tmp) {
@@ -200,17 +62,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
       }
     }
   }, items1);
-  [][0] = arg0;
+  [][0] = index;
   if (result) {
-    const obj4 = { style: tmp.slider, controls, paused: tmp5[0], setPaused: tmp6, onPlayPress: tmp13 };
-    return videoURI(tmp8(tmp3[15]), obj4, videoURI);
+    obj4 = { style: tmp.slider, controls, paused: tmp5[0], setPaused: tmp6, onPlayPress: tmp13 };
+    return videoURI(tmp8(tmp3[13]), obj4, videoURI);
   }
   const obj3 = require("useMediaItemHasSpoiler");
-});
-export const useVideoStateStore = obj5;
+};
+export const useVideoStateStore = obj4;
 export function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "Reflect", paused: null });
+    state.setState({ controls: "flexDirection", paused: true });
   });
 }
 export function setMuted(isMuted) {
@@ -228,21 +90,21 @@ export function toggleMuted() {
 }
 export function setVideoStateControls(videoControls) {
   _require = videoControls;
-  require("ReactBatchUpdates").batchUpdates(() => obj5.setState({ controls }));
+  require("ReactBatchUpdates").batchUpdates(() => obj4.setState({ controls }));
 }
 export function setPausedState(paused) {
   _require = paused;
-  require("ReactBatchUpdates").batchUpdates(() => obj5.setState({ paused }));
+  require("ReactBatchUpdates").batchUpdates(() => obj4.setState({ paused }));
 }
 export function tryPauseCurrentVideo() {
-  const controls = obj5.getState().controls;
+  const controls = obj4.getState().controls;
   if (controls != null) {
     controls.pause(true);
   }
 }
 export function unpauseCurrentVideoIfNeeded() {
-  if (!obj5.getState().paused) {
-    const controls = obj5.getState().controls;
+  if (!obj4.getState().paused) {
+    const controls = obj4.getState().controls;
     if (controls != null) {
       controls.pause(false);
     }

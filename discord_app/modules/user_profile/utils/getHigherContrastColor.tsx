@@ -1,7 +1,7 @@
-// === Module 7360: getHigherContrastColor ===
+// === Module 7367: getHigherContrastColor ===
 
-// Module 7360 (getHigherContrastColor)
-import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
+// Module 7367 (getHigherContrastColor)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

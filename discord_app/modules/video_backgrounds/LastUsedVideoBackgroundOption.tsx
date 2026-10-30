@@ -1,19 +1,16 @@
-// === Module 5904: LastUsedVideoBackgroundOption ===
+// === Module 5911: LastUsedVideoBackgroundOption ===
 
-// Module 5904 (LastUsedVideoBackgroundOption)
-import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
+// Module 5911 (LastUsedVideoBackgroundOption)
+import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 5912 */;
 import noop from "module_19" /* 19 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import UserStore from "UserStore" /* 1389 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
+import UserStore from "UserStore" /* 1384 */;
 
-const initialize = obj(504);
-const VideoBackgroundUtils = obj(5905);
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
+const result = size.fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
 
 export function getLastUsedVideoBackgroundOption(currentUser) {
   const videoBackground = UnsyncedUserSettingsStore.videoBackground;
@@ -31,95 +28,7 @@ export function getLastUsedVideoBackgroundOption(currentUser) {
   }
   return tmp5;
 }
-export const useLastUsedVideoBackgroundOption = ReactCompilerGating.isReactCompilerEnabled() ? (function useLastUsedVideoBackgroundOption() {
-  let obj = require;
-  let result = dependencyMap;
-  const cResult = c.c(12);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UnsyncedUserSettingsStore];
-    const fn = function u() {
-      return videoBackground.videoBackground;
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp3 = items;
-    tmp4 = fn;
-  } else {
-    [tmp3, tmp4] = cResult;
-  }
-  const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [UserSettingsProtoStore];
-    const fn2 = function v() {
-      return settings.settings;
-    };
-    cResult[2] = items1;
-    cResult[3] = fn2;
-    let tmp8 = fn2;
-    let tmp7 = items1;
-  } else {
-    tmp7 = cResult[2];
-    tmp8 = cResult[3];
-  }
-  const objResult = initialize;
-  const stateFromStores1 = initialize.useStateFromStores(tmp7, tmp8);
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const items2 = [UserStore];
-    class S {
-      constructor() {
-        return closure_1_6.getCurrentUser();
-      }
-    }
-    cResult[4] = items2;
-    cResult[5] = S;
-    let tmp12 = S;
-    let tmp11 = items2;
-  } else {
-    tmp11 = cResult[4];
-    tmp12 = cResult[5];
-  }
-  const objResult4 = initialize;
-  const stateFromStores2 = initialize.useStateFromStores(tmp11, tmp12);
-  if (null == stateFromStores2) {
-    return null;
-  } else {
-    if (cResult[6] === stateFromStores) {
-    }
-    if (!objResult6.isCustomBackgroundOption(stateFromStores)) {
-      if (typeof stateFromStores !== "number") {
-        let tmp19 = stateFromStores;
-      } else {
-        obj = VideoBackgroundUtils;
-        result = obj.isDefaultBackgroundOption(stateFromStores);
-        tmp19 = null;
-        class S {
-          constructor() {
-            return closure_1_6.getCurrentUser();
-          }
-        }
-      }
-      let tmp18 = tmp19;
-    } else {
-      PremiumUtilsDefault;
-      tmp18 = null;
-      class S {
-        constructor() {
-          return closure_1_6.getCurrentUser();
-        }
-      }
-    }
-    class S {
-      constructor() {
-        return closure_1_6.getCurrentUser();
-      }
-    }
-    cResult[6] = stateFromStores;
-    cResult[7] = stateFromStores2;
-    cResult[8] = tmp18;
-    objResult6 = VideoBackgroundUtils;
-  }
-  const objResult5 = initialize;
-}) : (function useLastUsedVideoBackgroundOption() {
+export function useLastUsedVideoBackgroundOption() {
   const items = [UnsyncedUserSettingsStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => videoBackground.videoBackground);
   let obj = stateFromStores(504);
@@ -154,4 +63,4 @@ export const useLastUsedVideoBackgroundOption = ReactCompilerGating.isReactCompi
     }
     return tmp2;
   }, items3);
-});
+}

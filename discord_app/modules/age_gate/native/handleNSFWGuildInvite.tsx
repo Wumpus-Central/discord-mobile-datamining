@@ -1,15 +1,15 @@
-// === Module 10081: handleNSFWGuildInvite ===
+// === Module 10108: handleNSFWGuildInvite ===
 
-// Module 10081 (handleNSFWGuildInvite)
-import Constants from "Constants" /* 1084 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import GuildRecord from "GuildRecord" /* 4875 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5682 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 6724 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6725 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10082 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10083 */;
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 10108 (handleNSFWGuildInvite)
+import Constants from "Constants" /* 1072 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import GuildRecord from "GuildRecord" /* 4876 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5688 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 6731 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6732 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 10109 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 10110 */;
+import GuildStore from "GuildStore" /* 4880 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -39,7 +39,7 @@ export function handleNSFWGuildInvite(invite, arg1) {
   ({ onConfirm: require, onCancel } = arg1);
   c2 = undefined;
   if (invite != null) {
-    guild = invite.guild;
+    const guild = invite.guild;
     if (guild != null) {
       const id = guild.id;
     }

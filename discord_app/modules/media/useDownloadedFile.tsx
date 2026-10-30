@@ -1,8 +1,8 @@
-// === Module 11379: useDownloadedFile ===
+// === Module 11582: useDownloadedFile ===
 
-// Module 11379 (useDownloadedFile)
-import util from "util" /* 1125 */;
-import FileSizeUtils from "FileSizeUtils" /* 6438 */;
+// Module 11582 (useDownloadedFile)
+import util from "util" /* 1114 */;
+import FileSizeUtils from "FileSizeUtils" /* 6445 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,11 +12,11 @@ let c5 = "utf-8";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media/useDownloadedFile.tsx");
 
-export function getBytesLeftNotice(bytesLeft) {
+export function getBytesLeftNotice(MAX_STICKER_FILE_SIZE) {
   let str = "";
-  if (bytesLeft > 0) {
+  if (MAX_STICKER_FILE_SIZE > 0) {
     const intl = util.intl;
-    const obj = { formattedBytes: FileSizeUtils.formatKbSize(bytesLeft) };
+    const obj = { formattedBytes: FileSizeUtils.formatKbSize(MAX_STICKER_FILE_SIZE) };
     const _HermesInternal = HermesInternal;
     str = "... " + intl.formatToPlainString(util.t["1+gGcK"], obj);
   }

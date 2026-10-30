@@ -1,7 +1,7 @@
-// === Module 1987: CollectiblesAssetUtils ===
+// === Module 1982: CollectiblesAssetUtils ===
 
-// Module 1987 (CollectiblesAssetUtils)
-import mappers from "mappers" /* 1986 */;
+// Module 1982 (CollectiblesAssetUtils)
+import mappers from "mappers" /* 1981 */;
 import size from "module_2" /* 2 */;
 
 let str = "https://cdn.discordapp.com";

@@ -1,253 +1,23 @@
-// === Module 9284: useShouldOpenGameProfileModal ===
+// === Module 9297: useShouldOpenGameProfileModal ===
 
-// Module 9284 (useShouldOpenGameProfileModal)
+// Module 9297 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import utils from "utils" /* 5649 */;
-import GameFlags from "GameFlags" /* 9285 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import FlagUtilsAll from "FlagUtils" /* 1397 */;
+import utils from "utils" /* 5655 */;
+import GameFlags from "GameFlags" /* 9298 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2020 */;
+import GameStore from "GameStore" /* 2015 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const RejectionReason = { NoMatch: "no match", NSFW: "nsfw", Disabled: "profile disabled", Obscured: "obscured" };
-const ReactCompilerGating = fn(558);
-function trackEntryPoint(game_profile_available, id) {
-  if (items === undefined) {
-    items = [];
-  }
-  AnalyticsUtilsDefault.track(AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE, { game_profile_available, application_id: id, rejection_reason: items, source: CallTile });
-}
-function isGameDisabled(gameFlags) {
-  return FlagUtilsAll.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED);
-}
-function gameIsAcceptable(gameFlags) {
-  if (null == gameFlags) {
-    const items = [obj.NoMatch];
-    let arr = items;
-  } else {
-    const items1 = [];
-    if (obj2.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED)) {
-      items1.push(obj.Disabled);
-    }
-    obj2 = FlagUtilsAll;
-    arr = items1;
-    if (tmp8Result.isAgeRestrictedContentClassification(gameFlags.contentClassification)) {
-      items1.push(obj.NSFW);
-      arr = items1;
-    }
-    tmp8Result = utils;
-  }
-  return 0 === arr.length;
-}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useShouldOpenGameProfileModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldOpenGameProfileModal(trackEntryPointImpression) {
-  const cResult = source(gameRecord[8]).c(15);
-  ({ applicationId, gameId, source } = trackEntryPointImpression);
-  trackEntryPointImpression = trackEntryPointImpression.trackEntryPointImpression;
-  let str = "";
-  if (undefined !== applicationId) {
-    str = applicationId;
-  }
-  importDefault = tmp4;
-  importAll = isLoading.useRef(false);
-  if (cResult[0] === str) {
-    if (cResult[1] === gameId) {
-      let tmp5 = cResult[2];
-    }
-    const tmp7 = require("useResolveGame")(tmp5);
-    ({ gameId: gameId2, gameRecord } = tmp7);
-    isLoading = tmp7.isLoading;
-    if (cResult[3] !== gameRecord) {
-      let tmp10 = null != gameRecord;
-      if (tmp10) {
-        tmp10 = !require("FlagUtils").hasFlag(gameRecord.gameFlags, source(tmp2[5]).GameFlags.GAME_DISABLED);
-        const obj4 = require("FlagUtils");
-      }
-      cResult[3] = gameRecord;
-      cResult[4] = tmp10;
-      let tmp8 = tmp10;
-    } else {
-      tmp8 = cResult[4];
-    }
-    const game_profile_available = tmp8;
-    if (cResult[5] === gameRecord) {
-      if (cResult[6] === tmp8) {
-        if (cResult[7] === isLoading) {
-          if (cResult[8] === source) {
-            if (cResult[9] === tmp4) {
-              let tmp12 = cResult[10];
-              let tmp13 = cResult[11];
-            }
-            const effect = isLoading.useEffect(tmp12, tmp13);
-            if (cResult[12] === gameId2) {
-              if (cResult[13] === tmp8) {
-                let tmp15 = cResult[14];
-              }
-              return tmp15;
-            }
-            let obj3 = { shouldOpenGameProfile: tmp8, gameId: gameId2 };
-            cResult[12] = gameId2;
-            cResult[13] = tmp8;
-            class A {
-              constructor() {
-                current = closure_2.current;
-                tmp = closure_2;
-                if (!current) {
-                  tmp2 = trackEntryPointImpression;
-                  current = !trackEntryPointImpression;
-                }
-                if (!current) {
-                  current = isLoading;
-                }
-                if (!current) {
-                  tmp3 = gameRecord;
-                  tmp4 = null;
-                  current = null == gameRecord;
-                }
-                if (current) {
-                  return;
-                } else {
-                  track = closure_1;
-                  GAME_PROFILE_ENTRY_POINT_AVAILABLE = closure_3;
-                  flag = undefined;
-                  tmp6 = null;
-                  str = "Cannot track a Game Profile Entry Point Impressions without a source.";
-                  tmp5 = source;
-                  tmp7 = closure_1(closure_3[10])(null != source, "Cannot track a Game Profile Entry Point Impressions without a source.");
-                  tmp9 = gameRecord;
-                  tmp8 = closure_5;
-                  if (null == gameRecord) {
-                    tmp15 = closure_7;
-                    items = [];
-                    items[0] = closure_7.NoMatch;
-                    tmp12 = items;
-                  } else {
-                    items1 = [];
-                    tmp19 = closure_2;
-                    obj3 = closure_2(GAME_PROFILE_ENTRY_POINT_AVAILABLE[4]);
-                    tmp20 = closure_0;
-                    if (obj3.hasFlag(tmp9.gameFlags, closure_0(GAME_PROFILE_ENTRY_POINT_AVAILABLE[5]).GameFlags.GAME_DISABLED)) {
-                      tmp10 = closure_7;
-                      arr1 = items1.push(closure_7.Disabled);
-                    }
-                    tmp20Result = tmp20(GAME_PROFILE_ENTRY_POINT_AVAILABLE[6]);
-                    tmp12 = items1;
-                    if (tmp20Result.isAgeRestrictedContentClassification(tmp9.contentClassification)) {
-                      tmp13 = closure_7;
-                      arr3 = items1.push(closure_7.NSFW);
-                      tmp12 = items1;
-                    }
-                  }
-                  trackResult = track(GAME_PROFILE_ENTRY_POINT_AVAILABLE[3]);
-                  track = trackResult.track;
-                  tmp17 = AnalyticEvents;
-                  GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
-                  obj1 = { game_profile_available: null, application_id: null, rejection_reason: null, source: null };
-                  obj1.game_profile_available = tmp8;
-                  obj1.application_id = gameRecord.id;
-                  obj1.rejection_reason = tmp12;
-                  obj1.source = tmp5;
-                  trackResult1 = track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj1);
-                  flag = true;
-                  tmp.current = true;
-                }
-                return;
-              }
-            }
-            tmp15 = obj3;
-          }
-        }
-      }
-    }
-    class A {
-      constructor() {
-        current = closure_2.current;
-        tmp = closure_2;
-        if (!current) {
-          tmp2 = trackEntryPointImpression;
-          current = !trackEntryPointImpression;
-        }
-        if (!current) {
-          current = isLoading;
-        }
-        if (!current) {
-          tmp3 = gameRecord;
-          tmp4 = null;
-          current = null == gameRecord;
-        }
-        if (current) {
-          return;
-        } else {
-          track = closure_1;
-          GAME_PROFILE_ENTRY_POINT_AVAILABLE = closure_3;
-          flag = undefined;
-          tmp6 = null;
-          str = "Cannot track a Game Profile Entry Point Impressions without a source.";
-          tmp5 = source;
-          tmp7 = closure_1(closure_3[10])(null != source, "Cannot track a Game Profile Entry Point Impressions without a source.");
-          tmp9 = gameRecord;
-          tmp8 = closure_5;
-          if (null == gameRecord) {
-            tmp15 = closure_7;
-            items = [];
-            items[0] = closure_7.NoMatch;
-            tmp12 = items;
-          } else {
-            items1 = [];
-            tmp19 = closure_2;
-            obj3 = closure_2(GAME_PROFILE_ENTRY_POINT_AVAILABLE[4]);
-            tmp20 = closure_0;
-            if (obj3.hasFlag(tmp9.gameFlags, closure_0(GAME_PROFILE_ENTRY_POINT_AVAILABLE[5]).GameFlags.GAME_DISABLED)) {
-              tmp10 = closure_7;
-              arr1 = items1.push(closure_7.Disabled);
-            }
-            tmp20Result = tmp20(GAME_PROFILE_ENTRY_POINT_AVAILABLE[6]);
-            tmp12 = items1;
-            if (tmp20Result.isAgeRestrictedContentClassification(tmp9.contentClassification)) {
-              tmp13 = closure_7;
-              arr3 = items1.push(closure_7.NSFW);
-              tmp12 = items1;
-            }
-          }
-          trackResult = track(GAME_PROFILE_ENTRY_POINT_AVAILABLE[3]);
-          track = trackResult.track;
-          tmp17 = AnalyticEvents;
-          GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
-          obj1 = { game_profile_available: null, application_id: null, rejection_reason: null, source: null };
-          obj1.game_profile_available = tmp8;
-          obj1.application_id = gameRecord.id;
-          obj1.rejection_reason = tmp12;
-          obj1.source = tmp5;
-          trackResult1 = track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj1);
-          flag = true;
-          tmp.current = true;
-        }
-        return;
-      }
-    }
-    let items = [gameRecord, tmp8, isLoading, source, tmp4];
-    cResult[5] = gameRecord;
-    cResult[6] = tmp8;
-    cResult[7] = isLoading;
-    cResult[8] = source;
-    cResult[9] = tmp4;
-    cResult[10] = A;
-    cResult[11] = items;
-    tmp13 = items;
-    tmp12 = A;
-  }
-  const obj5 = { applicationId: str, gameId };
-  cResult[0] = str;
-  cResult[1] = gameId;
-  cResult[2] = obj5;
-  tmp5 = obj5;
-}) : (function useShouldOpenGameProfileModal(applicationId) {
+export default function useShouldOpenGameProfileModal(applicationId) {
   let str = applicationId.applicationId;
   if (str === undefined) {
     str = "";
@@ -260,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShoul
   let gameRecord;
   let isLoading;
   importAll = isLoading.useRef(false);
-  const gameId2 = trackEntryPointImpression(gameRecord[9])({ applicationId: str, gameId });
+  const gameId2 = trackEntryPointImpression(gameRecord[7])({ applicationId: str, gameId });
   gameRecord = gameId2.gameRecord;
   isLoading = gameId2.isLoading;
   let shouldOpenGameProfile = null != gameRecord;
@@ -301,21 +71,46 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShoul
         }
         tmp19Result = utils;
       }
-      track = track(1264).track;
+      track = track(1253).track;
       GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
       obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
       track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
       flag = true;
       ref.current = true;
-      const trackResult = track(1264);
+      const trackResult = track(1253);
     }
   }, items);
   return { shouldOpenGameProfile, gameId: gameId2.gameId };
-});
+};
 export { RejectionReason };
-export { trackEntryPoint };
-export { isGameDisabled };
-export { gameIsAcceptable };
+export function trackEntryPoint(game_profile_available, id) {
+  if (items === undefined) {
+    items = [];
+  }
+  AnalyticsUtilsDefault.track(AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE, { game_profile_available, application_id: id, rejection_reason: items, source: CallTile });
+}
+export function isGameDisabled(gameFlags) {
+  return FlagUtilsAll.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED);
+}
+export function gameIsAcceptable(gameFlags) {
+  if (null == gameFlags) {
+    const items = [obj.NoMatch];
+    let arr = items;
+  } else {
+    const items1 = [];
+    if (obj2.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED)) {
+      items1.push(obj.Disabled);
+    }
+    obj2 = FlagUtilsAll;
+    arr = items1;
+    if (tmp8Result.isAgeRestrictedContentClassification(gameFlags.contentClassification)) {
+      items1.push(obj.NSFW);
+      arr = items1;
+    }
+    tmp8Result = utils;
+  }
+  return 0 === arr.length;
+}
 export function gameIdIsAcceptable(arg0) {
   const game = GameStore.getGame(arg0);
   if (null == game) {

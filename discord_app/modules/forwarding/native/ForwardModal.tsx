@@ -1,206 +1,44 @@
-// === Module 13182: ForwardModal ===
+// === Module 13332: ForwardModal ===
 
-// Module 13182 (ForwardModal)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import HapticUtils from "HapticUtils" /* 5249 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5250 */;
-import ToastUtils from "ToastUtils" /* 5700 */;
-import LinkIcon from "LinkIcon" /* 5716 */;
-import ChannelUtils from "ChannelUtils" /* 6034 */;
-import ClipboardUtils from "ClipboardUtils" /* 7345 */;
-import HeaderActionButton from "HeaderActionButton" /* 7544 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 13179 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 13180 */;
-import formatResults from "formatResults" /* 13184 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 13186 */;
+// Module 13332 (ForwardModal)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import HapticUtils from "HapticUtils" /* 5255 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
+import ToastUtils from "ToastUtils" /* 5706 */;
+import LinkIcon from "LinkIcon" /* 5722 */;
+import ChannelUtils from "ChannelUtils" /* 6041 */;
+import ClipboardUtils from "ClipboardUtils" /* 7352 */;
+import HeaderActionButton from "HeaderActionButton" /* 7552 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 13329 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 13330 */;
+import formatResults from "formatResults" /* 13334 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 13336 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7755 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7758 */;
-import ICYMIStore from "ICYMIStore" /* 8863 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import MessageStore from "MessageStore" /* 6049 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8887 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7760 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7763 */;
+import ICYMIStore from "ICYMIStore" /* 8897 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import MessageStore from "MessageStore" /* 6056 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8921 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(13183).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10684).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(13333).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10707).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_17 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/native/ForwardModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardModal(message) {
-  const cResult = message(source[16]).c(96);
-  message = message.message;
-  let forwardOptions = message.forwardOptions;
-  ({ initialSelectedDestinations, source } = message);
-  if (cResult[0] !== initialSelectedDestinations) {
-    let items = initialSelectedDestinations;
-    if (undefined === initialSelectedDestinations) {
-      items = [];
-    }
-    cResult[0] = initialSelectedDestinations;
-    cResult[1] = items;
-  }
-  length();
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { ignoreKeyboard: true };
-    cResult[2] = obj2;
-    let tmp6 = obj2;
-  } else {
-    tmp6 = cResult[2];
-  }
-  const height = forwardOptions(tmp2[17])(tmp6).height;
-  const channel_id = message.channel_id;
-  const id = message.id;
-  if (cResult[3] !== channel_id) {
-    const destinationIdFromChannelId = tmp(tmp2[18]).getDestinationIdFromChannelId(channel_id);
-    cResult[3] = channel_id;
-    cResult[4] = destinationIdFromChannelId;
-    const tmpResult = tmp(tmp2[18]);
-  }
-  let obj = message(source[16]);
-  const tmp9 = channel_id;
-  [r10052, View] = channel_id(id.useState(false), 2);
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [trackForwardEditSearchOnce, ICYMIStore, MessagePreviewStore, stateFromStores, stateFromStores1];
-    cResult[5] = items1;
-    let tmp11 = items1;
-  } else {
-    tmp11 = cResult[5];
-  }
-  if (cResult[6] === channel_id) {
-    if (cResult[7] === id) {
-      if (cResult[8] === source) {
-        if (cResult[9] === message) {
-          let tmp17 = cResult[10];
-          let tmp18 = cResult[11];
-        }
-        stateFromStores = tmp(tmp2[19]).useStateFromStores(tmp11, tmp17, tmp18);
-        const _Symbol = Symbol;
-        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-          const items2 = [trackForwardAddRecipientOnce];
-          cResult[12] = items2;
-          let tmp20 = items2;
-        } else {
-          tmp20 = cResult[12];
-        }
-        if (cResult[13] !== channel_id) {
-          class Y {
-            constructor() {
-              return closure_10.getChannel(channel_id);
-            }
-          }
-          const items3 = [channel_id];
-          cResult[13] = channel_id;
-          cResult[14] = items3;
-          cResult[15] = Y;
-          let tmp23 = Y;
-          const tmp22 = items3;
-        } else {
-          class Y {
-            constructor() {
-              return closure_10.getChannel(channel_id);
-            }
-          }
-          tmp23 = cResult[15];
-        }
-        const tmpResult5 = tmp(tmp2[19]);
-        stateFromStores1 = tmp(tmp2[19]).useStateFromStores(tmp20, tmp23, tmp22);
-        if (stateFromStores != null) {
-          class Y {
-            constructor() {
-              return closure_10.getChannel(channel_id);
-            }
-          }
-        }
-        ICYMIStore = null != tmp26;
-        const tmpResult6 = tmp(tmp2[19]);
-        trackForwardAddRecipientOnce = tmp(tmp2[20]).useTrackForwardAddRecipientOnce();
-        const tmpResult7 = tmp(tmp2[20]);
-        trackForwardEditSearchOnce = tmp(tmp2[20]).useTrackForwardEditSearchOnce();
-        MessagePreviewStore = obj4.useRef(0);
-        obj4.useRef(0);
-        const tmp9Result = tmp9(obj4.useState(""), 2);
-        closure_14 = tmp9Result[0];
-        closure_15 = tmp9Result[1];
-        obj4.useRef("");
-        if (cResult[16] === channel_id) {
-          class Y {
-            constructor() {
-              return closure_10.getChannel(channel_id);
-            }
-          }
-        }
-        const fn = function q(current) {
-          closure_15(current);
-          if (current !== ref3.current) {
-            ref2.current = ref2.current + 1;
-            if ("" !== current) {
-              trackForwardEditSearchOnce(channel_id, id);
-            }
-          }
-          ref3.current = current;
-        };
-        cResult[16] = channel_id;
-        cResult[17] = id;
-        cResult[18] = trackForwardEditSearchOnce;
-        cResult[19] = fn;
-        const tmpResult8 = tmp(tmp2[20]);
-      }
-    }
-  }
-  class U {
-    constructor() {
-      if ("checkpoint" === source) {
-        message = closure_0;
-      } else {
-        tmp = closure_11;
-        tmp3 = id;
-        tmp2 = channel_id;
-        message = closure_11.getMessage(channel_id, id);
-        tmp5 = null;
-        if (message == null) {
-          tmp6 = closure_12;
-          message = closure_12.getMessage(tmp3);
-        }
-        if (message == null) {
-          tmp7 = closure_9;
-          message = closure_9.getMessage(tmp3);
-        }
-        if (message == null) {
-          tmp8 = closure_7;
-          message = closure_7.getMessage(tmp2, tmp3);
-        }
-        if (message == null) {
-          tmp9 = closure_8;
-          message = closure_8.getMessage(tmp3);
-        }
-      }
-      return message;
-    }
-  }
-  const items4 = [channel_id, id, source, message];
-  cResult[6] = channel_id;
-  cResult[7] = id;
-  cResult[8] = source;
-  cResult[9] = message;
-  cResult[10] = U;
-  cResult[11] = items4;
-  tmp18 = items4;
-  tmp17 = U;
-}) : (function ForwardModal(message) {
+export default function ForwardModal(message) {
   message = message.message;
   _require = message;
   let forwardOptions = message.forwardOptions;
@@ -226,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
   let callback4;
   let onPress;
   let tmp = ref3();
-  let height = forwardOptions(source[17])({ ignoreKeyboard: true }).height;
+  let height = forwardOptions(source[15])({ ignoreKeyboard: true }).height;
   const channel_id = message.channel_id;
   const id = message.id;
   const items = [channel_id];
@@ -331,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -356,14 +194,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
                 _undefined(true);
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: Promise.all(first1.map(closure_0(source[18]).getOrResolveChannelIdFromDestinationId)), done: false };
+                const obj6 = { value: Promise.all(first1.map(closure_0(source[16]).getOrResolveChannelIdFromDestinationId)), done: false };
                 return obj6;
               } else {
                 const obj7 = { text: null };
-                const intl2 = closure_0(source[25]).intl;
-                obj7.text = intl2.string(closure_0(source[25]).t.R0RpRX);
-                forwardOptions(source[24]).open("FORWARD_ERROR", obj7);
-                const obj27 = forwardOptions(source[24]);
+                const intl2 = closure_0(source[23]).intl;
+                obj7.text = intl2.string(closure_0(source[23]).t.R0RpRX);
+                forwardOptions(source[22]).open("FORWARD_ERROR", obj7);
+                const obj27 = forwardOptions(source[22]);
               }
             } else {
               const obj8 = { withMessage: tmp116 };
@@ -393,11 +231,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
                 const obj12 = { value, done: true };
                 return obj12;
               } else {
-                closure_129_1 = value.filter(closure_0(source[26]).isNotNullish);
-                if (forwardOptions(source[27])(message, closure_129_1)) {
+                closure_129_1 = value.filter(closure_0(source[24]).isNotNullish);
+                if (forwardOptions(source[25])(message, closure_129_1)) {
                   const promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    closure_1_0(5948).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(13189), {
+                    closure_1_0(5955).openAlert("staff-to-non-staff-forward", closure_1_15(forwardOptions(13339), {
                       onConfirm() {
                         return closure_0(true);
                       },
@@ -432,15 +270,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
                   c4 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
-                  closure_0(source[31]).transitionToChannel(closure_129_1[0], { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
-                  const obj9 = closure_0(source[31]);
+                  closure_0(source[29]).transitionToChannel(closure_129_1[0], { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
+                  const obj9 = closure_0(source[29]);
                   const obj19 = {};
                   const merged = Object.assign(forwardOptions);
                   obj19.withMessage = closure_129_0;
-                  forwardOptions(source[32]).sendForwards(message, closure_129_1, obj19);
+                  forwardOptions(source[30]).sendForwards(message, closure_129_1, obj19);
                   c3 = 5;
                   c4 = 1;
-                  const obj14 = forwardOptions(source[32]);
+                  const obj14 = forwardOptions(source[30]);
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
@@ -465,24 +303,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
                   obj28.trackForwardSent(obj);
                   closure_129_3 = first1.filter((item, index) => "rejected" === dependencyMap[index].status);
                   const obj21 = { message, failedDestinations: closure_129_3, forwardOptions };
-                  const result = closure_0(source[21]).showForwardFailedAlertModal(obj21);
-                  const obj2 = closure_0(source[21]);
+                  const result = closure_0(source[19]).showForwardFailedAlertModal(obj21);
+                  const obj2 = closure_0(source[19]);
                 }
-                obj28 = closure_0(source[20]);
+                obj28 = closure_0(source[18]);
               }
               c4 = 3;
               const obj22 = { value, done: true };
               return obj22;
             }
-            closure_0(source[21]).closeForwardModal();
+            closure_0(source[19]).closeForwardModal();
             if (1 === closure_129_1.length) {
               const obj23 = { channelId: closure_129_1[0] };
               c3 = 4;
               c4 = 1;
-              const obj24 = { value: forwardOptions(source[30]).fetchMessages(obj23), done: false };
+              const obj24 = { value: forwardOptions(source[28]).fetchMessages(obj23), done: false };
               return obj24;
             }
-            const obj13 = closure_0(source[21]);
+            const obj13 = closure_0(source[19]);
           }
           const obj25 = { channelId, messageId, hasError: false, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null, source: null };
           let tmp31 = null != closure_129_0;
@@ -496,10 +334,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
           obj25.source = source;
           obj7(obj25);
           const obj26 = { text: null, icon: null };
-          const intl = closure_0(source[25]).intl;
-          obj26.text = intl.string(closure_0(source[25]).t.kwmYkt);
-          obj26.icon = forwardOptions(source[33]);
-          forwardOptions(source[24]).open("FORWARD_SUCCESS", obj26);
+          const intl = closure_0(source[23]).intl;
+          obj26.text = intl.string(closure_0(source[23]).t.kwmYkt);
+          obj26.icon = forwardOptions(source[31]);
+          forwardOptions(source[22]).open("FORWARD_SUCCESS", obj26);
           c4 = 3;
           const obj29 = { value: undefined, done: true };
           return obj29;
@@ -545,23 +383,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
     return { height };
   }, items12);
   if (first1.length <= 1) {
-    let intl2 = tmp8(tmp3[25]).intl;
-    let stringResult = intl2.string(tmp8(tmp3[25]).t.TXNS7S);
+    let intl2 = tmp8(tmp3[23]).intl;
+    let stringResult = intl2.string(tmp8(tmp3[23]).t.TXNS7S);
   } else {
-    let intl = tmp8(tmp3[25]).intl;
+    let intl = tmp8(tmp3[23]).intl;
     let obj4 = { count: length };
-    stringResult = intl.formatToPlainString(tmp8(tmp3[25]).t.jWtYUm, obj4);
+    stringResult = intl.formatToPlainString(tmp8(tmp3[23]).t.jWtYUm, obj4);
   }
   let obj5 = { style: memo1, children: null };
   let obj6 = { title: null, subtitleColor: "text-feedback-warning", subtitle: null, headerRight: null, onClose: null };
   const tmp8Result4 = require("useNavigatorBackPressHandler");
-  const intl3 = tmp8(tmp3[25]).intl;
+  const intl3 = tmp8(tmp3[23]).intl;
   obj6.title = intl3.string(require("util").t["+SkRRj"]);
   let formatToPlainStringResult;
   if (first1.length >= ref) {
-    const intl4 = tmp8(tmp3[25]).intl;
+    const intl4 = tmp8(tmp3[23]).intl;
     let obj7 = { count: tmp18 };
-    formatToPlainStringResult = intl4.formatToPlainString(tmp8(tmp3[25]).t["3Fbkir"], obj7);
+    formatToPlainStringResult = intl4.formatToPlainString(tmp8(tmp3[23]).t["3Fbkir"], obj7);
   }
   obj6.subtitle = formatToPlainStringResult;
   obj6.headerRight = function headerRight(arg0) {
@@ -573,26 +411,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.Xrt5Po);
       obj.IconComponent = LinkIcon.LinkIcon;
-      tmp = value2(HeaderActionButton.HeaderActionButton, obj);
+      tmp = __initData(HeaderActionButton.HeaderActionButton, obj);
     }
     return tmp;
   };
   obj6.onClose = callback2;
-  const items13 = [first(forwardOptions(source[42]), obj6), ];
+  const items13 = [first(forwardOptions(source[38]), obj6), ];
   let obj8 = { style: tmp.container, children: null };
-  const items14 = [first(forwardOptions(source[43]), { absolute: true }), first(forwardOptions(source[44]), { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: prop, onSelectedDestinationChange: callback1, onSearchTextChange: callback, getRowIsUnavailable: callback3, originDestination: memo, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first1.length >= ref }), ];
+  const items14 = [first(forwardOptions(source[41]), { absolute: true }), first(forwardOptions(source[42]), { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: prop, onSelectedDestinationChange: callback1, onSearchTextChange: callback, getRowIsUnavailable: callback3, originDestination: memo, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: first1.length >= ref }), ];
   if (null != stateFromStores) {
     let obj10 = { message: stateFromStores, forwardOptions, sendLabel: stringResult, canSend: length > 0, selectedDestinations: first1, isSending: tmp7, onSend: callback4 };
-    let tmp31Result = tmp31(tmp8(tmp3[45]).ForwardMessageFooter, obj10);
+    let tmp31Result = tmp31(tmp8(tmp3[43]).ForwardMessageFooter, obj10);
   } else {
     let obj11 = { isVisible: length > 0, floatingBackgroundColor: tmp.container.backgroundColor, text: null, onPress: null, loading: null };
     if (1 === length) {
-      const intl6 = tmp8(tmp3[25]).intl;
-      let stringResult1 = intl6.string(tmp8(tmp3[25]).t.TXNS7S);
+      const intl6 = tmp8(tmp3[23]).intl;
+      let stringResult1 = intl6.string(tmp8(tmp3[23]).t.TXNS7S);
     } else {
-      const intl5 = tmp8(tmp3[25]).intl;
+      const intl5 = tmp8(tmp3[23]).intl;
       let obj12 = { count: length };
-      stringResult1 = intl5.formatToPlainString(tmp8(tmp3[25]).t.jWtYUm, obj12);
+      stringResult1 = intl5.formatToPlainString(tmp8(tmp3[23]).t.jWtYUm, obj12);
     }
     obj11.text = stringResult1;
     let tmp35;
@@ -601,11 +439,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForwardM
     }
     obj11.onPress = tmp35;
     obj11.loading = tmp7;
-    tmp31Result = tmp31(tmp8(tmp3[46]).ModalFloatingAction, obj11);
+    tmp31Result = tmp31(tmp8(tmp3[44]).ModalFloatingAction, obj11);
   }
   items14[2] = tmp31Result;
   obj8.children = items14;
   items13[1] = closure_16(id, obj8);
   obj5.children = items13;
   return closure_16(id, obj5);
-});
+};

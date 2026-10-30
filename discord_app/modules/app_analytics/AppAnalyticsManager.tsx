@@ -1,24 +1,24 @@
-// === Module 19273: AppAnalyticsManager ===
+// === Module 19336: AppAnalyticsManager ===
 
-// Module 19273 (AppAnalyticsManager)
-import DurationsDefault from "Durations" /* 1101 */;
-import Timers from "Timers" /* 4852 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5749 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7878 */;
-import getGamePlatformDefault from "getGamePlatform" /* 18718 */;
-import RunningGameStore from "RunningGameStore" /* 2019 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5752 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6557 */;
-import SpeakingStore from "SpeakingStore" /* 6743 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5755 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+// Module 19336 (AppAnalyticsManager)
+import DurationsDefault from "Durations" /* 1090 */;
+import Timers from "Timers" /* 4853 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import ActivityTypes from "ActivityTypes" /* 5757 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7884 */;
+import getGamePlatformDefault from "getGamePlatform" /* 18777 */;
+import RunningGameStore from "RunningGameStore" /* 2014 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
+import SpeakingStore from "SpeakingStore" /* 6750 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5762 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 require = fn;
-const Constants = fn(1084);
-({ AnalyticEvents: closure_9, ActivityTypes: c10 } = Constants);
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const MINUTE = DurationsDefault.Millis.MINUTE;
-class AppAnalyticsManager extends tmp3 {
+class AppAnalyticsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
@@ -83,7 +83,7 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
     const obj2 = { mode: MediaEngineStore.getMode(), priority: SpeakingStore.isCurrentUserPrioritySpeaking(), channel: channelId, server: guildId, channel_id: channelId, guild_id: guildId, rtc_connection_id: RTCConnectionStore.getRTCConnectionId(), media_session_id: RTCConnectionStore.getMediaSessionId(), voice_state_count: SortedVoiceStateStore.countVoiceStatesForChannel(self._voiceChannelId) };
     const merged = Object.assign(self.getGameMetadata());
     const merged1 = Object.assign(RTCConnectionStore.getPacketStats());
-    AppAnalyticsUtils.trackWithMetadata(constants.START_SPEAKING, obj2);
+    AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.START_SPEAKING, obj2);
   }
 };
 prototype["_trackStartListening"] = function _trackStartListening() {
@@ -94,7 +94,7 @@ prototype["_trackStartListening"] = function _trackStartListening() {
       const guildId = RTCConnectionStore.getGuildId();
       const obj3 = { mute: MediaEngineStore.isMute(), anyone_priority: SpeakingStore.isAnyonePrioritySpeaking(), channel: channelId, server: guildId, channel_id: channelId, guild_id: guildId, rtc_connection_id: RTCConnectionStore.getRTCConnectionId(), media_session_id: RTCConnectionStore.getMediaSessionId(), voice_state_count: SortedVoiceStateStore.countVoiceStatesForChannel(self._voiceChannelId) };
       const merged = Object.assign(self.getGameMetadata());
-      AppAnalyticsUtils.trackWithMetadata(constants.START_LISTENING, obj3);
+      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.START_LISTENING, obj3);
     }
   }
 };
@@ -104,7 +104,7 @@ prototype["_terminate"] = function _terminate() {
   RTCConnectionStore.removeChangeListener(this._handleRTCConnectionStoreChanged);
 };
 prototype["getGameMetadata"] = function getGameMetadata() {
-  const findActivityResult = SelfPresenceStore.findActivity((type) => type.type === constants.PLAYING);
+  const findActivityResult = SelfPresenceStore.findActivity((type) => type.type === ActivityTypes.ActivityTypes.PLAYING);
   const currentGameForAnalytics = RunningGameStore.getCurrentGameForAnalytics();
   const obj = { game_platform: getGamePlatformDefault(findActivityResult), game_name: null, game_exe_name: null, game_id: null, game_distributor: null, game_distributor_game_id: null, game_metadata: null };
   let name = null;

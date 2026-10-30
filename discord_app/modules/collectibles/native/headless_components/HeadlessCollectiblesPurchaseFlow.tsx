@@ -1,137 +1,26 @@
-// === Module 14978: HeadlessCollectiblesPurchaseFlow ===
+// === Module 15022: HeadlessCollectiblesPurchaseFlow ===
 
-// Module 14978 (HeadlessCollectiblesPurchaseFlow)
-import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2063 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9496 */;
-import ACOMExperiments from "ACOMExperiments" /* 9862 */;
-import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10630 */;
-import NativePaymentContext from "NativePaymentContext" /* 10643 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 14344 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 14979 */;
+// Module 15022 (HeadlessCollectiblesPurchaseFlow)
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2060 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8739 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9515 */;
+import ACOMExperiments from "ACOMExperiments" /* 9888 */;
+import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10656 */;
+import NativePaymentContext from "NativePaymentContext" /* 10669 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 14377 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 15023 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
 require = fn;
-const application_id = fn(1084).COLLECTIBLES_APPLICATION_ID;
-const PaymentGateways = fn(1095).PaymentGateways;
+const application_id = fn(1072).COLLECTIBLES_APPLICATION_ID;
+const PaymentGateways = fn(1083).PaymentGateways;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseFlow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeadlessCollectiblesPurchaseFlow(arg0) {
-  const cResult = c.c(24);
-  ({ product, attempt, analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { location: "CollectiblesPurchaseFlow" };
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  const OTPACOMOrderExperiment = ACOMExperiments.OTPACOMOrderExperiment;
-  const enabled = OTPACOMOrderExperiment.useConfig(first).enabled;
-  const isPurchased = useProductPurchaseState.useProductPurchaseState(product).isPurchased;
-  useCollectiblesExternalGatewayFacetDefault(product);
-  const tmpResult = useProductPurchaseState;
-  if (tmpResult2.isIOS()) {
-    let GOOGLE = PaymentGateways.APPLE_ADVANCED_COMMERCE;
-  } else {
-    GOOGLE = PaymentGateways.GOOGLE;
-  }
-  if (cResult[1] === isPurchased) {
-    const _Symbol = Symbol;
-    if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [];
-      cResult[4] = items;
-    }
-    if (cResult[5] !== product.skuId) {
-      const items1 = [product.skuId];
-      cResult[5] = product.skuId;
-      cResult[6] = items1;
-    }
-    const _Symbol2 = Symbol;
-    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      class S {
-        constructor() {
-          obj = closure_1_1(closure_1_2[11]);
-          return obj.hideActionSheet(closure_1_0(closure_1_2[12]).PRODUCT_DETAILS_ACTION_SHEET_KEY);
-        }
-      }
-      cResult[7] = S;
-    } else {
-      class S {
-        constructor() {
-          obj = closure_1_1(closure_1_2[11]);
-          return obj.hideActionSheet(closure_1_0(closure_1_2[12]).PRODUCT_DETAILS_ACTION_SHEET_KEY);
-        }
-      }
-    }
-    if (cResult[8] === analyticsLocations) {
-      class S {
-        constructor() {
-          obj = closure_1_1(closure_1_2[11]);
-          return obj.hideActionSheet(closure_1_0(closure_1_2[12]).PRODUCT_DETAILS_ACTION_SHEET_KEY);
-        }
-      }
-      if (cResult[11] === analyticsLocations) {
-        class S {
-          constructor() {
-            obj = closure_1_1(closure_1_2[11]);
-            return obj.hideActionSheet(closure_1_0(closure_1_2[12]).PRODUCT_DETAILS_ACTION_SHEET_KEY);
-          }
-        }
-      }
-      const obj3 = { product, attempt, analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile };
-      const tmp19 = jsx(HeadlessCollectiblesPurchaseRunner.HeadlessCollectiblesPurchaseRunner, { product, attempt, analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile });
-      cResult[11] = analyticsLocations;
-      cResult[12] = attempt;
-      cResult[13] = onBuySettled;
-      cResult[14] = product;
-      cResult[15] = stageCollectibleChangeForEditProfile;
-      cResult[16] = tmp19;
-    }
-    const obj4 = { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id };
-    cResult[8] = analyticsLocations;
-    cResult[9] = product.skuId;
-    cResult[10] = obj4;
-  }
-  let tmp9 = !isPurchased;
-  if (!isPurchased) {
-    class S {
-      constructor() {
-        obj = closure_1_1(closure_1_2[11]);
-        return obj.hideActionSheet(closure_1_0(closure_1_2[12]).PRODUCT_DETAILS_ACTION_SHEET_KEY);
-      }
-    }
-    if (!tmp10) {
-      class S {
-        constructor() {
-          obj = closure_1_1(closure_1_2[11]);
-          return obj.hideActionSheet(closure_1_0(closure_1_2[12]).PRODUCT_DETAILS_ACTION_SHEET_KEY);
-        }
-      }
-      if (result) {
-        class S {
-          constructor() {
-            obj = closure_1_1(closure_1_2[11]);
-            return obj.hideActionSheet(closure_1_0(closure_1_2[12]).PRODUCT_DETAILS_ACTION_SHEET_KEY);
-          }
-        }
-        result = obj5.isGooglePlayBillingSupported();
-      }
-    }
-    tmp9 = tmp10;
-  }
-  cResult[1] = isPurchased;
-  cResult[2] = enabled;
-  cResult[3] = tmp9;
-  tmpResult2 = PlatformUtils;
-}) : (function HeadlessCollectiblesPurchaseFlow(arg0) {
+export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   ({ product, analyticsLocations } = arg0);
   ({ attempt, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
   const OTPACOMOrderExperiment = ACOMExperiments.OTPACOMOrderExperiment;
@@ -167,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Headless
     activeSubscription: null,
     initialExternalGatewayFacet: tmp4,
     onOrderRetryCancellation() {
-      return ActionSheetActionCreatorsDefault.hideActionSheet(require("openProductDetailsActionSheet").PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return ActionSheetActionCreatorsDefault.hideActionSheet(openProductDetailsActionSheet.PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id },
     children: null
@@ -186,10 +75,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Headless
     activeSubscription: null,
     initialExternalGatewayFacet: tmp4,
     onOrderRetryCancellation() {
-      return ActionSheetActionCreatorsDefault.hideActionSheet(require("openProductDetailsActionSheet").PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return ActionSheetActionCreatorsDefault.hideActionSheet(openProductDetailsActionSheet.PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
     checkoutAnalyticsFields: { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id },
     children: null
   }, product.skuId);
   return jsx(NativePaymentContext.NativePaymentContextProvider, { skuIDs: [], activeSubscription: null, children: null });
-});
+};

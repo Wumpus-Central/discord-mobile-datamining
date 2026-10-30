@@ -1,12 +1,12 @@
-// === Module 13530: TypingStore ===
+// === Module 13679: TypingStore ===
 
-// Module 13530 (TypingStore)
+// Module 13679 (TypingStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
 
 require = fn;
 function handleTypingStart(arg0) {
@@ -106,8 +106,8 @@ function handleConnectionOpen() {
   closure_11 = {};
   closure_12 = {};
 }
-const SlowmodeType = fn(7818).SlowmodeType;
-const Endpoints = fn(1084).Endpoints;
+const SlowmodeType = fn(7823).SlowmodeType;
+const Endpoints = fn(1072).Endpoints;
 let closure_8 = 10 * DurationsDefault.Millis.SECOND;
 let closure_9 = 1.5 * DurationsDefault.Millis.SECOND;
 const dependencyMap = {};
@@ -136,12 +136,12 @@ prototype["getTypingUsersByGuild"] = function getTypingUsersByGuild(arg0) {
   }
   return tmp;
 };
-prototype["isTyping"] = function isTyping(id, id2) {
-  let tmp = dependencyMap[id];
+prototype["isTyping"] = function isTyping(isStage, id) {
+  let tmp = dependencyMap[isStage];
   if (tmp == null) {
     tmp = closure_13;
   }
-  return null != tmp[id2];
+  return null != tmp[id];
 };
 prototype["getCustomTypingIndicatorConfig"] = function getCustomTypingIndicatorConfig(arg0) {
   let tmp = closure_12[arg0];
@@ -159,7 +159,7 @@ const typingStore = new TypingStore(DispatcherDefault, {
     const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
-    } else if (channelId === channelId(7383).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+    } else if (channelId === channelId(7390).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       return false;
     } else {
       let tmp3 = null != obj;
@@ -224,13 +224,13 @@ const typingStore = new TypingStore(DispatcherDefault, {
                     }
                     if (num > 0) {
                       const obj2 = { type: "SLOWMODE_SET_COOLDOWN", channelId, slowmodeType: SlowmodeType.SendMessage, cooldownMs: num };
-                      id(584).dispatch(obj2);
-                      obj = id(584);
+                      id(572).dispatch(obj2);
+                      obj = id(572);
                     }
                     if (num2 > 0) {
                       const obj4 = { type: "SLOWMODE_SET_COOLDOWN", channelId, slowmodeType: SlowmodeType.CreateThread, cooldownMs: num2 };
-                      id(584).dispatch(obj4);
-                      const obj3 = id(584);
+                      id(572).dispatch(obj4);
+                      const obj3 = id(572);
                     }
                   }
                 });

@@ -1,83 +1,24 @@
-// === Module 14457: useEmojisForReactionRow ===
+// === Module 14489: useEmojisForReactionRow ===
 
-// Module 14457 (useEmojisForReactionRow)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4955 */;
+// Module 14489 (useEmojisForReactionRow)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1392).EmojiIntention;
-const ReactCompilerGating = fn(558);
+const EmojiIntention = fn(1387).EmojiIntention;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
 
-export const useEmojisForReactionRow = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojisForReactionRow(getGuildId, arg1, arg2) {
-  let length;
-  _require = getGuildId;
-  const cResult = require("c").c(11);
-  if (cResult[0] !== getGuildId) {
-    const guildId = getGuildId.getGuildId();
-    cResult[0] = getGuildId;
-    cResult[1] = guildId;
-    let tmp4 = guildId;
-  } else {
-    tmp4 = cResult[1];
-  }
-  const obj = require("c");
-  const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(tmp4);
-  const rounded = Math.floor(Math.min(useWindowDimensionsDefault().width, arg1) / arg2);
-  if (cResult[2] === getGuildId) {
-    if (cResult[3] === frequentlyUsedReactionEmojis) {
-      if (cResult[4] === rounded) {
-        let arr2 = cResult[5];
-      }
-      if (cResult[8] === arr2) {
-        if (cResult[9] === rounded) {
-          let tmp9 = cResult[10];
-        }
-        return tmp9;
-      }
-      const substr = arr2.slice(0, rounded - 1);
-      cResult[8] = arr2;
-      cResult[9] = rounded;
-      cResult[10] = substr;
-      tmp9 = substr;
-    }
-  }
-  if (cResult[6] !== getGuildId) {
-    const fn = function v(emoji) {
-      return !EmojiUtilsDefault.isEmojiFilteredOrLocked({ emoji, channel, intention: EmojiIntention.REACTION });
-    };
-    cResult[6] = getGuildId;
-    cResult[7] = fn;
-    let tmp7 = fn;
-  } else {
-    tmp7 = cResult[7];
-  }
-  const found = frequentlyUsedReactionEmojis.filter(tmp7);
-  if (found.length < rounded) {
-    do {
-      let arr = found.push(null);
-      length = found.length;
-    } while (length < rounded);
-  }
-  cResult[2] = getGuildId;
-  cResult[3] = frequentlyUsedReactionEmojis;
-  cResult[4] = rounded;
-  cResult[5] = found;
-  arr2 = found;
-  const tmpResult = require("EmojiPickerUtils");
-}) : (function useEmojisForReactionRow(getGuildId, arg1, arg2) {
-  _require = getGuildId;
-  const guildId = getGuildId.getGuildId();
+export function useEmojisForReactionRow(channel, emojiLineHeight, arg2) {
+  _require = channel;
+  const guildId = channel.getGuildId();
   const frequentlyUsedReactionEmojis = require("EmojiPickerUtils").useFrequentlyUsedReactionEmojis(guildId);
-  rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[5])().width, arg1) / arg2);
-  const items = [frequentlyUsedReactionEmojis, getGuildId, rounded];
+  rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, emojiLineHeight) / arg2);
+  const items = [frequentlyUsedReactionEmojis, channel, rounded];
   const memo = noop.useMemo(() => {
     let length;
-    const found = frequentlyUsedReactionEmojis.filter((emoji) => !frequentlyUsedReactionEmojis(rounded[6]).isEmojiFilteredOrLocked({ emoji, channel, intention: constants.REACTION }));
+    const found = frequentlyUsedReactionEmojis.filter((emoji) => !frequentlyUsedReactionEmojis(rounded[4]).isEmojiFilteredOrLocked({ emoji, channel, intention: constants.REACTION }));
     if (found.length < rounded) {
       do {
         let arr = found.push(null);
@@ -87,4 +28,4 @@ export const useEmojisForReactionRow = ReactCompilerGating.isReactCompilerEnable
     return found;
   }, items);
   return memo.slice(0, rounded - 1);
-});
+}

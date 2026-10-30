@@ -1,6 +1,6 @@
-// === Module 15736: PassthroughTouchNativeComponent ===
+// === Module 15776: PassthroughTouchNativeComponent ===
 
-// Module 15736 (PassthroughTouchNativeComponent)
+// Module 15776 (PassthroughTouchNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

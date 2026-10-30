@@ -1,8 +1,8 @@
-// === Module 5769: MediaEngineStatsStore ===
+// === Module 5776: MediaEngineStatsStore ===
 
-// Module 5769 (MediaEngineStatsStore)
+// Module 5776 (MediaEngineStatsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function updateAveragedStatsHelper(minVersion, arr2, arg2, arr, arr2) {

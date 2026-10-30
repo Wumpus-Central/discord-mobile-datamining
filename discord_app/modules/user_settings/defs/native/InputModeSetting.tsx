@@ -1,95 +1,19 @@
-// === Module 17115: InputModeSetting ===
+// === Module 17169: InputModeSetting ===
 
-// Module 17115 (InputModeSetting)
-import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+// Module 17169 (InputModeSetting)
+import util from "util" /* 1114 */;
+import MediaEngineStore from "MediaEngineStore" /* 2007 */;
 
 require = fn;
-const InputModes = fn(5756).InputModes;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputModeSettingTrailing() {
-  let Q8gkVL = dependencyMap;
-  const cResult = c.c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [MediaEngineStore];
-    const fn = function o() {
-      return mode.getMode();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp3 = items;
-    tmp4 = fn;
-  } else {
-    [tmp3, tmp4] = cResult;
-  }
-  const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
-  if (cResult[2] !== stateFromStores) {
-    if (stateFromStores === InputModes.PUSH_TO_TALK) {
-      const intl2 = util.intl;
-      Q8gkVL = util.t.Q8gkVL;
-      let stringResult = intl2.string(Q8gkVL);
-    } else {
-      const intl = util.intl;
-      stringResult = intl.string(util.t.cHCEOJ);
-    }
-    cResult[2] = stateFromStores;
-    cResult[3] = stringResult;
-  } else {
-    return cResult[3];
-  }
-  const tmpResult = initialize;
-}) : (function useInputModeSettingTrailing() {
-  const items = [MediaEngineStore];
-  if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
-    const intl2 = util.intl;
-    let stringResult = intl2.string(util.t.Q8gkVL);
-  } else {
-    const intl = util.intl;
-    stringResult = intl.string(util.t.cHCEOJ);
-  }
-  return stringResult;
-});
+const InputModes = fn(5763).InputModes;
+const SettingBuilders = fn(11505);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["pS+K2L"]);
   },
-  parent: fn(8387).MobileUserSettings.VOICE,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useInputModeSettingTrailing() {
-    let Q8gkVL = dependencyMap;
-    const cResult = c.c(4);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [MediaEngineStore];
-      const fn = function o() {
-        return mode.getMode();
-      };
-      cResult[0] = items;
-      cResult[1] = fn;
-      tmp3 = items;
-      tmp4 = fn;
-    } else {
-      [tmp3, tmp4] = cResult;
-    }
-    const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
-    if (cResult[2] !== stateFromStores) {
-      if (stateFromStores === InputModes.PUSH_TO_TALK) {
-        const intl2 = util.intl;
-        Q8gkVL = util.t.Q8gkVL;
-        let stringResult = intl2.string(Q8gkVL);
-      } else {
-        const intl = util.intl;
-        stringResult = intl.string(util.t.cHCEOJ);
-      }
-      cResult[2] = stateFromStores;
-      cResult[3] = stringResult;
-    } else {
-      return cResult[3];
-    }
-    const tmpResult = initialize;
-  }) : (function useInputModeSettingTrailing() {
+  parent: fn(8424).MobileUserSettings.VOICE,
+  useTrailing: function useInputModeSettingTrailing() {
     const items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
       const intl2 = util.intl;
@@ -99,8 +23,8 @@ const pressable = SettingBuilders.createPressable({
       stringResult = intl.string(util.t.cHCEOJ);
     }
     return stringResult;
-  }),
-  onPress: fn(11714).handleInputModePress,
+  },
+  onPress: fn(11907).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t.nuFtHH)];

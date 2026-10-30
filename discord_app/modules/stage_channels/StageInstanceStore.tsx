@@ -1,9 +1,9 @@
-// === Module 4862: StageInstanceStore ===
+// === Module 4863: StageInstanceStore ===
 
-// Module 4862 (StageInstanceStore)
+// Module 4863 (StageInstanceStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4863 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 4864 */;
 import size from "module_2" /* 2 */;
 
 function handleStageInstanceCreateOrUpdate(instance) {
@@ -35,8 +35,8 @@ prototype["getStageInstanceByChannel"] = function getStageInstanceByChannel(id) 
     return closure_2[id];
   }
 };
-prototype["isLive"] = function isLive(first1) {
-  return null != this.getStageInstanceByChannel(first1);
+prototype["isLive"] = function isLive(id) {
+  return null != this.getStageInstanceByChannel(id);
 };
 prototype["isPublic"] = function isPublic(id) {
   const stageInstanceByChannel = this.getStageInstanceByChannel(id);

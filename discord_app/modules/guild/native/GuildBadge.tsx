@@ -1,16 +1,14 @@
-// === Module 6947: GuildBadge ===
+// === Module 6955: GuildBadge ===
 
-// Module 6947 (GuildBadge)
-import c from "c" /* 576 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4871 */;
-import _modDef6948 from "module_6948" /* 6948 */;
-import _modDef6949 from "module_6949" /* 6949 */;
-import _modDef6950 from "module_6950" /* 6950 */;
-import _modDef6951 from "module_6951" /* 6951 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+// Module 6955 (GuildBadge)
+import native from "native" /* 1188 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4872 */;
+import _modDef6956 from "module_6956" /* 6956 */;
+import _modDef6957 from "module_6957" /* 6957 */;
+import _modDef6958 from "module_6958" /* 6958 */;
+import _modDef6959 from "module_6959" /* 6959 */;
 import noop from "module_19" /* 19 */;
 
-const native = Icon(1199);
 require = fn;
 function getGuildBadgeSource(guild, flag) {
   let has = guild;
@@ -67,177 +65,41 @@ function getGuildBadgeSource(guild, flag) {
     }
   }
 }
-let closure_2 = ["guild", "monocolored", "size"];
-const GuildFeatures = fn(1084).GuildFeatures;
-const jsx = fn(21).jsx;
-let obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", PARTNERED_BLACK: 2, [2]: "PARTNERED_BLACK", VERIFIED_BLACK: 3, [3]: "VERIFIED_BLACK", NONE: 4, [4]: "NONE" };
-let obj2 = { [VERIFIED]: _modDef6948, [PARTNERED]: _modDef6949, [VERIFIED_BLACK]: _modDef6950, [PARTNERED_BLACK]: _modDef6951, [obj.NONE]: null };
-({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
-const ReactCompilerGating = fn(558);
-if (ReactCompilerGating.isReactCompilerEnabled()) {
-  class GuildBadge {
-    constructor(arg0) {
-      Icon = closure_0;
-      tmp = closure_1;
-      obj = closure_0(closure_1[10]);
-      cResult = obj.c(12);
-      if (cResult[0] !== global) {
-        ({ guild, monocolored, size } = global);
-        tmp6 = closure_3;
-        tmp7 = closure_2;
-        tmp8 = closure_3(global, closure_2);
-        num = 0;
-        cResult[0] = global;
-        num2 = 1;
-        cResult[1] = guild;
-        num3 = 2;
-        cResult[2] = tmp8;
-        num4 = 3;
-        cResult[3] = monocolored;
-        num5 = 4;
-        cResult[4] = size;
-        MEDIUM = size;
-        tmp5 = monocolored;
-        tmp4 = tmp8;
-        tmp3 = guild;
-      } else {
-        tmp3 = cResult[1];
-        tmp4 = cResult[2];
-        tmp5 = cResult[3];
-        MEDIUM = cResult[4];
-      }
-      tmp9 = undefined !== tmp5 && tmp5;
-      if (undefined === MEDIUM) {
-        tmp10 = GuildBadge;
-        MEDIUM = GuildBadge.Sizes.MEDIUM;
-      }
-      if (cResult[5] === tmp3) {
-        if (cResult[6] === tmp9) {
-          tmp11 = cResult[7];
-        }
-        tmp13 = null;
-        if (null == tmp11) {
-          return null;
-        } else {
-          if (cResult[8] === tmp4) {
-            if (cResult[9] === MEDIUM) {
-              if (cResult[10] === tmp11) {
-                tmp14 = cResult[11];
-              }
-              tmp19 = tmp14;
-            }
-          }
-          tmp15 = jsx;
-          Icon = Icon(tmp[11]).Icon;
-          obj1 = {};
-          tmp16 = obj1;
-          tmp17 = tmp4;
-          merged = Object.assign(tmp4);
-          obj1.size = MEDIUM;
-          obj1.source = tmp11;
-          tmp = jsx(Icon, obj1);
-          num6 = 8;
-          cResult[8] = tmp4;
-          num7 = 9;
-          cResult[9] = MEDIUM;
-          num8 = 10;
-          cResult[10] = tmp11;
-          num9 = 11;
-          cResult[11] = tmp;
-          tmp14 = tmp;
-        }
-      }
-      tmp12 = getGuildBadgeSource(tmp3, tmp9);
-      cResult[5] = tmp3;
-      cResult[6] = tmp9;
-      cResult[7] = tmp12;
-      tmp11 = tmp12;
-      return;
+class GuildBadge {
+  constructor(arg0) {
+    flag = global.monocolored;
+    if (flag === undefined) {
+      flag = false;
     }
-  }
-} else {
-  class GuildBadge {
-    constructor(arg0) {
-      Icon = closure_0;
-      tmp = closure_1;
-      obj = closure_0(closure_1[10]);
-      cResult = obj.c(12);
-      if (cResult[0] !== global) {
-        ({ guild, monocolored, size } = global);
-        tmp6 = closure_3;
-        tmp7 = closure_2;
-        tmp8 = closure_3(global, closure_2);
-        num = 0;
-        cResult[0] = global;
-        num2 = 1;
-        cResult[1] = guild;
-        num3 = 2;
-        cResult[2] = tmp8;
-        num4 = 3;
-        cResult[3] = monocolored;
-        num5 = 4;
-        cResult[4] = size;
-        MEDIUM = size;
-        tmp5 = monocolored;
-        tmp4 = tmp8;
-        tmp3 = guild;
-      } else {
-        tmp3 = cResult[1];
-        tmp4 = cResult[2];
-        tmp5 = cResult[3];
-        MEDIUM = cResult[4];
-      }
-      tmp9 = undefined !== tmp5 && tmp5;
-      if (undefined === MEDIUM) {
-        tmp10 = GuildBadge;
-        MEDIUM = GuildBadge.Sizes.MEDIUM;
-      }
-      if (cResult[5] === tmp3) {
-        if (cResult[6] === tmp9) {
-          tmp11 = cResult[7];
-        }
-        tmp13 = null;
-        if (null == tmp11) {
-          return null;
-        } else {
-          if (cResult[8] === tmp4) {
-            if (cResult[9] === MEDIUM) {
-              if (cResult[10] === tmp11) {
-                tmp14 = cResult[11];
-              }
-              tmp19 = tmp14;
-            }
-          }
-          tmp15 = jsx;
-          Icon = Icon(tmp[11]).Icon;
-          obj1 = {};
-          tmp16 = obj1;
-          tmp17 = tmp4;
-          merged = Object.assign(tmp4);
-          obj1.size = MEDIUM;
-          obj1.source = tmp11;
-          tmp = jsx(Icon, obj1);
-          num6 = 8;
-          cResult[8] = tmp4;
-          num7 = 9;
-          cResult[9] = MEDIUM;
-          num8 = 10;
-          cResult[10] = tmp11;
-          num9 = 11;
-          cResult[11] = tmp;
-          tmp14 = tmp;
-        }
-      }
-      tmp12 = getGuildBadgeSource(tmp3, tmp9);
-      cResult[5] = tmp3;
-      cResult[6] = tmp9;
-      cResult[7] = tmp12;
-      tmp11 = tmp12;
-      return;
+    MEDIUM = global.size;
+    if (MEDIUM === undefined) {
+      tmp = GuildBadge;
+      MEDIUM = GuildBadge.Sizes.MEDIUM;
     }
+    tmp2 = null;
+    merged = Object.assign(global, Object.assign({ guild: 0, monocolored: 0, size: 0 }));
+    tmp4 = getGuildBadgeSource(global.guild, flag);
+    if (null != tmp4) {
+      tmp5 = jsx;
+      tmp6 = closure_0;
+      tmp7 = closure_1;
+      obj = {};
+      tmp8 = obj;
+      tmp9 = merged;
+      merged1 = Object.assign(merged);
+      obj.size = MEDIUM;
+      obj.source = tmp4;
+      tmp2 = jsx(closure_0(closure_1[8]).Icon, obj);
+    }
+    return tmp2;
   }
 }
-GuildBadge.Sizes = fn(1199).Icon.Sizes;
+const GuildFeatures = fn(1072).GuildFeatures;
+const jsx = fn(21).jsx;
+let obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", PARTNERED_BLACK: 2, [2]: "PARTNERED_BLACK", VERIFIED_BLACK: 3, [3]: "VERIFIED_BLACK", NONE: 4, [4]: "NONE" };
+let obj2 = { [VERIFIED]: _modDef6956, [PARTNERED]: _modDef6957, [VERIFIED_BLACK]: _modDef6958, [PARTNERED_BLACK]: _modDef6959, [obj.NONE]: null };
+({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
+GuildBadge.Sizes = fn(1188).Icon.Sizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadge.tsx");
 

@@ -1,13 +1,14 @@
-// === Module 10976: VoicePanelCardLayoutManager ===
+// === Module 11206: VoicePanelCardLayoutManager ===
 
-// Module 10976 (VoicePanelCardLayoutManager)
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10978 */;
+// Module 11206 (VoicePanelCardLayoutManager)
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6830 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function getTargetCardSize(windowWidth) {
@@ -17,174 +18,28 @@ function getTargetCardSize(windowWidth) {
   if (windowWidth > windowWidth.windowHeight) {
     num = 4;
   }
-  return Math.max(closure_1_8, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
+  return Math.max(React6, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(10974);
+const VoicePanelConstants = fn(11204);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({ BASE_TARGET_CARD_SIZE: closure_8, VoicePanelCTACardDimensionKeys: closure_9, VoicePanelCTACardDimensions: c10, VOICE_PANEL_CHUNK_DIVISOR: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(10977);
+const VoicePanelCardConstants = fn(11207);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(5670).ParticipantTypes;
+const ParticipantTypes = fn(5676).ParticipantTypes;
 let closure_15 = { id: "invalid", type: VoicePanelCardItemType.PARTICIPANT, x: 0, y: 0, width: 0, height: 0, zIndex: 0 };
-fn(558);
-let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCardLayoutCoordsSubscription(arg0, getCardCoords) {
-  _require = arg0;
-  const cResult = require("c").c(5);
-  const obj = require("c");
-  let cardCoords = getCardCoords.getCardCoords(arg0);
-  if (cardCoords == null) {
-    cardCoords = closure_15;
-  }
-  const merged = Object.assign(cardCoords);
-  sharedValue = require("ReanimatedRexport").useSharedValue({});
-  if (cResult[0] === sharedValue) {
-    if (cResult[1] === arg0) {
-      if (cResult[2] === getCardCoords) {
-        let tmp5 = cResult[3];
-        let tmp6 = cResult[4];
-      }
-      const layoutEffect = noop.useLayoutEffect(tmp5, tmp6);
-      return sharedValue;
-    }
-  }
-  const fn = function o() {
-    let cardCoords = getCardCoords.getCardCoords(closure_0);
-    if (null != cardCoords) {
-      updateSharedValueIfChangedDefault(sharedValue, cardCoords);
-    }
-    return getCardCoords.subscribeFromItem(function updateSharedValues() {
-      cardCoords = cardCoords.getCardCoords(closure_1_0);
-      if (null != cardCoords) {
-        cardCoords(sharedValue[10])(closure_1_2, cardCoords);
-      }
-    });
-  };
-  const items = [arg0, getCardCoords, sharedValue];
-  cResult[0] = sharedValue;
-  cResult[1] = arg0;
-  cResult[2] = getCardCoords;
-  cResult[3] = fn;
-  cResult[4] = items;
-  tmp6 = items;
-  tmp5 = fn;
-  const obj2 = require("ReanimatedRexport");
-  const obj3 = {};
-}) : (function useCardLayoutCoordsSubscription(arg0, getCardCoords) {
-  _require = arg0;
-  let cardCoords = getCardCoords.getCardCoords(arg0);
-  if (cardCoords == null) {
-    cardCoords = closure_15;
-  }
-  const merged = Object.assign(cardCoords);
-  sharedValue = require("ReanimatedRexport").useSharedValue({});
-  const items = [arg0, getCardCoords, sharedValue];
-  const layoutEffect = noop.useLayoutEffect(() => {
-    let cardCoords = getCardCoords.getCardCoords(closure_0);
-    if (null != cardCoords) {
-      updateSharedValueIfChangedDefault(sharedValue, cardCoords);
-    }
-    return getCardCoords.subscribeFromItem(function updateSharedValues() {
-      cardCoords = cardCoords.getCardCoords(closure_1_0);
-      if (null != cardCoords) {
-        cardCoords(sharedValue[10])(closure_1_2, cardCoords);
-      }
-    });
-  }, items);
-  return sharedValue;
-});
-ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTargetDimensionsSubscription(id, getTargetDimensions) {
-  _require = id;
-  const cResult = require("c").c(5);
-  const obj = require("c");
-  const merged = Object.assign(getTargetDimensions.getTargetDimensions(id));
-  sharedValue = require("ReanimatedRexport").useSharedValue({});
-  if (cResult[0] === id) {
-    if (cResult[1] === getTargetDimensions) {
-      if (cResult[2] === sharedValue) {
-        let tmp4 = cResult[3];
-        let tmp5 = cResult[4];
-      }
-      const layoutEffect = noop.useLayoutEffect(tmp4, tmp5);
-      return sharedValue;
-    }
-  }
-  const fn = function o() {
-    let targetDimensions = getTargetDimensions.getTargetDimensions(closure_0);
-    updateSharedValueIfChangedDefault(sharedValue, targetDimensions);
-    return getTargetDimensions.subscribeFromItem(function updateSharedValues() {
-      targetDimensions = targetDimensions.getTargetDimensions(id);
-      targetDimensions(sharedValue[10])(closure_1_2, targetDimensions);
-    });
-  };
-  const items = [id, getTargetDimensions, sharedValue];
-  cResult[0] = id;
-  cResult[1] = getTargetDimensions;
-  cResult[2] = sharedValue;
-  cResult[3] = fn;
-  cResult[4] = items;
-  tmp5 = items;
-  tmp4 = fn;
-  const obj2 = require("ReanimatedRexport");
-  const obj3 = {};
-}) : (function useTargetDimensionsSubscription(id, getTargetDimensions) {
-  _require = id;
-  const merged = Object.assign(getTargetDimensions.getTargetDimensions(id));
-  sharedValue = require("ReanimatedRexport").useSharedValue({});
-  const items = [id, getTargetDimensions, sharedValue];
-  const layoutEffect = noop.useLayoutEffect(() => {
-    let targetDimensions = getTargetDimensions.getTargetDimensions(closure_0);
-    updateSharedValueIfChangedDefault(sharedValue, targetDimensions);
-    return getTargetDimensions.subscribeFromItem(function updateSharedValues() {
-      targetDimensions = targetDimensions.getTargetDimensions(id);
-      targetDimensions(sharedValue[10])(closure_1_2, targetDimensions);
-    });
-  }, items);
-  return sharedValue;
-});
 let set = new Set();
 let closure_17 = { enlargeSquare: false, fillAspectRatio: false };
-let obj4 = { match: null, layouts: null, global: true };
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useManagerSubscription(getLayoutKey) {
-  const cResult = c.c(4);
-  if (cResult[0] !== getLayoutKey) {
-    const layoutKey = getLayoutKey.getLayoutKey();
-    cResult[0] = getLayoutKey;
-    cResult[1] = layoutKey;
-    let tmp2 = layoutKey;
-  } else {
-    tmp2 = cResult[1];
-  }
-  [tmp5, importDefault] = noop.useState(tmp2);
-  if (cResult[2] !== getLayoutKey) {
-    const fn = function h() {
-      return getLayoutKey.subscribeToManager(() => closure_1_1(layoutKey.getLayoutKey()));
-    };
-    cResult[2] = getLayoutKey;
-    cResult[3] = fn;
-    let tmp6 = fn;
-  } else {
-    tmp6 = cResult[3];
-  }
-  const layoutEffect = noop.useLayoutEffect(tmp6);
-  return tmp5;
-}) : (function useManagerSubscription(getLayoutKey) {
-  [tmp2, importDefault] = noop.useState(getLayoutKey.getLayoutKey());
-  const layoutEffect = noop.useLayoutEffect(() => getLayoutKey.subscribeToManager(() => closure_1_1(layoutKey.getLayoutKey())));
-  return tmp2;
-});
-obj4.match = new Set(["1,camera", "2,camera", "2,camera,camera"]);
+let obj = { match: new Set(["1,camera", "2,camera", "2,camera,camera"]), layouts: null, global: true };
 let items = [{ enlargeSquare: true, fillAspectRatio: false }];
-obj4.layouts = items;
-let items1 = [obj4, ];
-let obj5 = { match: null, layouts: null };
+obj.layouts = items;
+let items1 = [obj, ];
+let obj2 = { match: null, layouts: null };
 let set1 = new Set(["1,camera", "2,camera", "2,camera,camera"]);
-obj5.match = new Set(["1,stream", "2,stream", "3,stream", "2,stream,camera", "3,stream,camera", "3,stream,camera,camera", "3,camera", "3,camera,stream"]);
+obj2.match = new Set(["1,stream", "2,stream", "3,stream", "2,stream,camera", "3,stream,camera", "3,stream,camera,camera", "3,camera", "3,camera,stream"]);
 let items2 = [{ enlargeSquare: true, fillAspectRatio: true }, { enlargeSquare: false, fillAspectRatio: false }, { enlargeSquare: false, fillAspectRatio: false }];
-obj5.layouts = items2;
-items1[1] = obj5;
+obj2.layouts = items2;
+items1[1] = obj2;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardLayoutManager.tsx");
 class VoicePanelCardLayoutManager {
@@ -230,7 +85,7 @@ prototype["cleanUp"] = function cleanUp() {
 prototype["updateState"] = function updateState(arr, windowHeight) {
   const self = this;
   windowHeight = windowHeight.windowHeight;
-  const obj = { windowHeight, windowWidth: windowHeight.windowWidth, chunkSize: windowHeight / closure_1_11, safeAreaLeft: Math.max(windowHeight.safeAreaLeft, __initData), safeAreaRight: Math.max(safeAreaRight, __initData), safeAreaBottom: Math.max(safeAreaBottom, __initData), safeAreaTop, gutter, controlBarSize };
+  const obj = { windowHeight, windowWidth: windowHeight.windowWidth, chunkSize: windowHeight / closure_1_11, safeAreaLeft: Math.max(windowHeight.safeAreaLeft, closure_1_12), safeAreaRight: Math.max(safeAreaRight, closure_1_12), safeAreaBottom: Math.max(safeAreaBottom, closure_1_12), safeAreaTop, gutter, controlBarSize };
   ({ safeAreaRight, safeAreaTop, safeAreaBottom, controlBarSize } = windowHeight);
   if (!discord_common_shallowEqualDefault(obj, this.props)) {
     self.props = obj;
@@ -260,10 +115,10 @@ prototype["getContentDimensions"] = function getContentDimensions() {
   const cardsLayout = this.computeCardsLayout();
   return this.contentDimensions;
 };
-prototype["getCardCoords"] = function getCardCoords(arg0) {
+prototype["getCardCoords"] = function getCardCoords(id) {
   const cardsLayout = this.computeCardsLayout();
   const cardCoords = this.cardCoords;
-  return cardCoords.get(arg0);
+  return cardCoords.get(id);
 };
 prototype["getCardCoordsMap"] = function getCardCoordsMap() {
   const cardsLayout = this.computeCardsLayout();
@@ -277,7 +132,7 @@ prototype["getTargetDimensions"] = function getTargetDimensions(id) {
   if (null == id) {
     let defaultTargetCoords = self.defaultTargetCoords;
   } else if (set.has(id)) {
-    defaultTargetCoords = v65535[id];
+    defaultTargetCoords = closure_1_10[id];
   } else {
     const targetDimensions = self.targetDimensions;
     defaultTargetCoords = targetDimensions.get(id);
@@ -287,13 +142,13 @@ prototype["getTargetDimensions"] = function getTargetDimensions(id) {
   }
   return defaultTargetCoords;
 };
-prototype["setTargetDimensions"] = function setTargetDimensions(participantId, width, height) {
+prototype["setTargetDimensions"] = function setTargetDimensions(stateFromStores, width, height) {
   const self = this;
-  const size = this.getTargetDimensions(participantId);
+  const size = this.getTargetDimensions(stateFromStores);
   if (!tmp) {
     const targetDimensions = self.targetDimensions;
     const size1 = { width, height };
-    const result = targetDimensions.set(participantId, size1);
+    const result = targetDimensions.set(stateFromStores, size1);
     self.setDirty(true);
     self.deferredLayoutChange();
   }
@@ -401,7 +256,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
       let tmp32 = self;
       let tmp33 = windowWidth;
       let rect = { top: safeAreaTop, left: safeAreaLeft, right: safeAreaRight, bottom: safeAreaBottom };
-      let bound = Math.max(120, windowHeight - self(windowWidth[13])(rect, found).height - found - controlBarSize - safeAreaBottom);
+      let bound = Math.max(120, windowHeight - self(windowWidth[11])(rect, found).height - found - controlBarSize - safeAreaBottom);
       let _Math2 = Math;
       if (null == found) {
         if (set.size <= 0) {
@@ -410,7 +265,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
           if (self.items.length < 7) {
             if (0 !== self.items.length) {
               let obj3 = { cardCount: self.items.length, gutterSize: gutter, availableWidth: tmp36, availableHeight: bound };
-              let tmp37 = tmp32(tmp33[14])(obj3);
+              let tmp37 = tmp32(tmp33[12])(obj3);
               bound2 = tmp37.columns;
               let cardSize = tmp37.cardSize;
             }
@@ -464,7 +319,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
           }
         }
         size.height = tmp49;
-        if (!tmp32(tmp33[11])(size, self.defaultTargetCoords)) {
+        if (!tmp32(tmp33[9])(size, self.defaultTargetCoords)) {
           self.defaultTargetCoords = size;
         }
         let obj4 = { cardWidth: self.defaultTargetCoords.width, cardHeight: self.defaultTargetCoords.height, gutter, totalItems: self.items.length, windowWidth };
@@ -904,6 +759,47 @@ prototype["checkDimensionsMismatch"] = function checkDimensionsMismatch(width, h
 };
 
 export default VoicePanelCardLayoutManager;
-export const useCardLayoutCoordsSubscription = tmp4;
-export const useTargetDimensionsSubscription = tmp5;
-export const useManagerSubscription = tmp6;
+export function useCardLayoutCoordsSubscription(id, layoutManager) {
+  _require = id;
+  let cardCoords = layoutManager.getCardCoords(id);
+  if (cardCoords == null) {
+    cardCoords = closure_15;
+  }
+  const merged = Object.assign(cardCoords);
+  sharedValue = require("ReanimatedRexport").useSharedValue({});
+  const items = [id, layoutManager, sharedValue];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    let cardCoords = layoutManager.getCardCoords(closure_0);
+    if (null != cardCoords) {
+      updateSharedValueIfChangedDefault(sharedValue, cardCoords);
+    }
+    return layoutManager.subscribeFromItem(function updateSharedValues() {
+      cardCoords = cardCoords.getCardCoords(id);
+      if (null != cardCoords) {
+        cardCoords(sharedValue[8])(closure_1_2, cardCoords);
+      }
+    });
+  }, items);
+  return sharedValue;
+}
+export function useTargetDimensionsSubscription(participantId, layoutManager) {
+  _require = participantId;
+  const merged = Object.assign(layoutManager.getTargetDimensions(participantId));
+  sharedValue = require("ReanimatedRexport").useSharedValue({});
+  const items = [participantId, layoutManager, sharedValue];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    let targetDimensions = layoutManager.getTargetDimensions(closure_0);
+    updateSharedValueIfChangedDefault(sharedValue, targetDimensions);
+    return layoutManager.subscribeFromItem(function updateSharedValues() {
+      targetDimensions = targetDimensions.getTargetDimensions(participantId);
+      targetDimensions(sharedValue[8])(closure_1_2, targetDimensions);
+    });
+  }, items);
+  return sharedValue;
+}
+export function useManagerSubscription(first2) {
+  closure_0 = first2;
+  [tmp2, importDefault] = noop.useState(first2.getLayoutKey());
+  const layoutEffect = noop.useLayoutEffect(() => layoutKey.subscribeToManager(() => closure_1_1(layoutKey.getLayoutKey())));
+  return tmp2;
+}

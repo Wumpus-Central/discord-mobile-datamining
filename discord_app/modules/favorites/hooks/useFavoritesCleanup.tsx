@@ -1,14 +1,14 @@
-// === Module 18083: useFavoritesCleanup ===
+// === Module 18144: useFavoritesCleanup ===
 
-// Module 18083 (useFavoritesCleanup)
-import FavoritesCleanup from "FavoritesCleanup" /* 10801 */;
+// Module 18144 (useFavoritesCleanup)
+import FavoritesCleanup from "FavoritesCleanup" /* 10824 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import ReadStateStore from "ReadStateStore" /* 6829 */;
-import FavoriteStore from "FavoriteStore" /* 4860 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import ReadStateStore from "ReadStateStore" /* 6836 */;
+import FavoriteStore from "FavoriteStore" /* 4861 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ export default function useFavoritesCleanup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ export default function useFavoritesCleanup(arg0) {
               closure_129_4(false);
             }
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
           c3 = 0;
           closure_129_11.current = false;
@@ -143,7 +143,7 @@ export default function useFavoritesCleanup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

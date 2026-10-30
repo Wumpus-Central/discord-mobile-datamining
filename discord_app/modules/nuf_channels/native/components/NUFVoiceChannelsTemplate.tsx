@@ -1,86 +1,32 @@
-// === Module 15106: NUFVoiceChannelsTemplate ===
+// === Module 15146: NUFVoiceChannelsTemplate ===
 
-// Module 15106 (NUFVoiceChannelsTemplate)
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6693 */;
-import NUFChannelsManagerDefault from "NUFChannelsManager" /* 15099 */;
-import NUFTemplateDefault from "NUFTemplate" /* 15107 */;
-import _modDef15108 from "module_15108" /* 15108 */;
+// Module 15146 (NUFVoiceChannelsTemplate)
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1889 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6700 */;
+import NUFChannelsManagerDefault from "NUFChannelsManager" /* 15139 */;
+import NUFTemplateDefault from "NUFTemplate" /* 15147 */;
+import _modDef15148 from "module_15148" /* 15148 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFVoiceChannelsTemplate(channel) {
-  const cResult = channel(576).c(5);
-  channel = channel.channel;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1125).intl;
-    const stringResult = intl.string(tmp(1125).t.w5HAll);
-    const intl2 = tmp(1125).intl;
-    const stringResult1 = intl2.string(tmp(1125).t.Ww4hhq);
-    cResult[0] = stringResult;
-    cResult[1] = stringResult1;
-    tmp4 = stringResult;
-    tmp5 = stringResult1;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = tmp(1125).intl;
-    const stringResult2 = intl3.string(tmp(1125).t.eIi3Om);
-    cResult[2] = stringResult2;
-    let tmp8 = stringResult2;
-  } else {
-    tmp8 = cResult[2];
-  }
-  if (cResult[3] !== channel.id) {
-    let obj2 = {
-      title: tmp4,
-      description: tmp5,
-      imageSrc: _modDef15108,
-      CTALabel: tmp8,
-      onCTAPress() {
-          const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
-          const result1 = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
-          const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
-        }
-    };
-    const tmp14 = jsx(NUFTemplateDefault, {
-      title: tmp4,
-      description: tmp5,
-      imageSrc: _modDef15108,
-      CTALabel: tmp8,
-      onCTAPress() {
-          const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
-          const result1 = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
-          const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
-        }
-    });
-    cResult[3] = channel.id;
-    cResult[4] = tmp14;
-    let tmp10 = tmp14;
-  } else {
-    tmp10 = cResult[4];
-  }
-  return tmp10;
-}) : (function NUFVoiceChannelsTemplate(channel) {
+export default function NUFVoiceChannelsTemplate(channel) {
   channel = channel.channel;
   let obj = { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null };
-  const intl = channel(1125).intl;
-  obj.title = intl.string(channel(1125).t.w5HAll);
-  const intl2 = channel(1125).intl;
-  obj.description = intl2.string(channel(1125).t.Ww4hhq);
-  obj.imageSrc = _modDef15108;
-  const intl3 = channel(1125).intl;
-  obj.CTALabel = intl3.string(channel(1125).t.eIi3Om);
+  const intl = channel(1114).intl;
+  obj.title = intl.string(channel(1114).t.w5HAll);
+  const intl2 = channel(1114).intl;
+  obj.description = intl2.string(channel(1114).t.Ww4hhq);
+  obj.imageSrc = _modDef15148;
+  const intl3 = channel(1114).intl;
+  obj.CTALabel = intl3.string(channel(1114).t.eIi3Om);
   obj.onCTAPress = function onCTAPress() {
     const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
     const result1 = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   };
   return jsx(NUFTemplateDefault, { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null });
-});
+};

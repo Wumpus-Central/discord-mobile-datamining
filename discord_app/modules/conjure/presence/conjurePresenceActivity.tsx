@@ -1,10 +1,9 @@
-// === Module 10714: conjurePresenceActivity ===
+// === Module 10737: conjurePresenceActivity ===
 
-// Module 10714 (conjurePresenceActivity)
-import Constants from "Constants" /* 1084 */;
+// Module 10737 (conjurePresenceActivity)
+import ActivityTypes from "ActivityTypes" /* 5757 */;
 import size from "module_2" /* 2 */;
 
-const ActivityTypes = Constants.ActivityTypes;
 const Conjuring = "Conjuring";
 const result = size.fileFinishedImporting("modules/conjure/presence/conjurePresenceActivity.tsx");
 
@@ -15,7 +14,7 @@ export function isConjurePresenceActivity(activity) {
   if (activity != null) {
     type = activity.type;
   }
-  let tmp2 = type === ActivityTypes.PLAYING;
+  let tmp2 = type === ActivityTypes.ActivityTypes.PLAYING;
   if (tmp2) {
     tmp2 = activity.name === Conjuring;
   }

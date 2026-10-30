@@ -1,25 +1,36 @@
-// === Module 16778: PremiumSetting ===
+// === Module 16832: PremiumSetting ===
 
-// Module 16778 (PremiumSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import PremiumUtils from "PremiumUtils" /* 2051 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7587 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11132 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 15202 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16779 */;
+// Module 16832 (PremiumSetting)
+import util from "util" /* 1114 */;
+import PremiumUtils from "PremiumUtils" /* 2048 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7595 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11337 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 16833 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
-import SubscriptionStore from "SubscriptionStore" /* 2056 */;
+import UserStore from "UserStore" /* 1384 */;
+import SubscriptionStore from "SubscriptionStore" /* 2053 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavigateToPaymentSetting() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t() {
+const SettingBuilders = fn(11505);
+const route = SettingBuilders.createRoute({
+  useTitle: function getPremiumSettingTitle() {
+    const currentUser = UserStore.getCurrentUser();
+    const result = PremiumUtils.hasPremiumSubscriptionToDisplay(currentUser, SubscriptionStore.getPremiumTypeSubscription());
+    const intl = util.intl;
+    const string = intl.string;
+    const t = util.t;
+    if (result) {
+      let stringResult = string(t["4gwVVn"]);
+    } else {
+      stringResult = string(t["8x0jKT"]);
+    }
+    return stringResult;
+  },
+  parent: null,
+  IconComponent: fn(9506).NitroWheelIcon,
+  usePreNavigationAction: function useCanNavigateToPaymentSetting() {
+    return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
       let flag = !isPaymentsBlocked;
       if (isPaymentsBlocked) {
@@ -27,75 +38,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavi
         flag = false;
       }
       return flag;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return first;
-}) : (function useCanNavigateToPaymentSetting() {
-  return noop.useCallback(() => {
-    const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-    let flag = !isPaymentsBlocked;
-    if (isPaymentsBlocked) {
-      openBlockedPaymentsCountryActionSheetDefault();
-      flag = false;
-    }
-    return flag;
-  }, []);
-});
-const SettingBuilders = fn(11302);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSettingTrailing() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp6 = jsx(PremiumTabBadgeDefault, {});
-    cResult[0] = tmp6;
-    let first = tmp6;
-  } else {
-    first = cResult[0];
-  }
-  return first;
-}) : (function usePremiumSettingTrailing() {
-  return jsx(PremiumTabBadgeDefault, {});
-});
-const route = SettingBuilders.createRoute({
-  useTitle: function getPremiumSettingTitle() {
-    const mobileNitroManageSubscriptionsSettingsExperiment = MobileNitroManageSubscriptionsSettingsExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
-    const currentUser = UserStore.getCurrentUser();
-    const result = PremiumUtils.hasPremiumSubscriptionToDisplay(currentUser, SubscriptionStore.getPremiumTypeSubscription());
-    const intl = util.intl;
-    const string = intl.string;
-    let t = util.t;
-    if (result) {
-      if (mobileNitroManageSubscriptionsSettingsExperiment) {
-        t = t["4gwVVn"];
-        let stringResult = string(t);
-      } else {
-        stringResult = string(t["8jmdON"]);
-      }
-    } else {
-      return string(t["8x0jKT"]);
-    }
+    }, []);
   },
-  parent: null,
-  IconComponent: fn(9487).NitroWheelIcon,
-  usePreNavigationAction: tmp2,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSettingTrailing() {
-    const cResult = c.c(1);
-    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp6 = jsx(PremiumTabBadgeDefault, {});
-      cResult[0] = tmp6;
-      let first = tmp6;
-    } else {
-      first = cResult[0];
-    }
-    return first;
-  }) : (function usePremiumSettingTrailing() {
+  useTrailing: function usePremiumSettingTrailing() {
     return jsx(PremiumTabBadgeDefault, {});
-  }),
+  },
   screen: {
-    route: fn(1084).UserSettingsSections.PREMIUM,
+    route: fn(1072).UserSettingsSections.PREMIUM,
     getComponent() {
       return require("PremiumSettingScreen").default;
     }

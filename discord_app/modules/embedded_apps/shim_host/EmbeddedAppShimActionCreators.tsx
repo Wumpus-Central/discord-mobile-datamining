@@ -1,7 +1,7 @@
-// === Module 11563: EmbeddedAppShimActionCreators ===
+// === Module 11764: EmbeddedAppShimActionCreators ===
 
-// Module 11563 (EmbeddedAppShimActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 11764 (EmbeddedAppShimActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/shim_host/EmbeddedAppShimActionCreators.tsx");

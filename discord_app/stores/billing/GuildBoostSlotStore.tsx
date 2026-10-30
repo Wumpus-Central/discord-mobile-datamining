@@ -1,9 +1,9 @@
-// === Module 7570: GuildBoostSlotStore ===
+// === Module 7578: GuildBoostSlotStore ===
 
-// Module 7570 (GuildBoostSlotStore)
+// Module 7578 (GuildBoostSlotStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import SubscriptionStore from "SubscriptionStore" /* 2056 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import SubscriptionStore from "SubscriptionStore" /* 2053 */;
 
 function handleGuildBoostsUpdate(guildBoostSlot) {
   guildBoostSlot = guildBoostSlot.guildBoostSlot;

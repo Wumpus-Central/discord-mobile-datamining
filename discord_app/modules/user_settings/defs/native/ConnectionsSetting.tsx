@@ -1,10 +1,10 @@
-// === Module 16752: ConnectionsSetting ===
+// === Module 16806: ConnectionsSetting ===
 
-// Module 16752 (ConnectionsSetting)
-import Constants from "Constants" /* 1084 */;
-import util from "util" /* 1125 */;
-import PuzzlePieceIcon from "PuzzlePieceIcon" /* 16753 */;
-import SettingBuilders from "SettingBuilders" /* 11302 */;
+// Module 16806 (ConnectionsSetting)
+import Constants from "Constants" /* 1072 */;
+import util from "util" /* 1114 */;
+import PuzzlePieceIcon from "PuzzlePieceIcon" /* 16807 */;
+import SettingBuilders from "SettingBuilders" /* 11505 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

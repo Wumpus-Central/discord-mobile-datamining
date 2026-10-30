@@ -1,12 +1,12 @@
-// === Module 8789: isStreaming ===
+// === Module 8823: isStreaming ===
 
-// Module 8789 (isStreaming)
-import Constants from "Constants" /* 1084 */;
-import Constants2 from "Constants" /* 2024 */;
+// Module 8823 (isStreaming)
+import Constants from "Constants" /* 2019 */;
+import ActivityTypes from "ActivityTypes" /* 5757 */;
 import size from "module_2" /* 2 */;
 
 function _isStreaming(type) {
-  let tmp = type.type === ActivityTypes.STREAMING;
+  let tmp = type.type === ActivityTypes.ActivityTypes.STREAMING;
   if (tmp) {
     let isMatch = null != type.url;
     if (isMatch) {
@@ -16,23 +16,22 @@ function _isStreaming(type) {
   }
   return tmp;
 }
-const validStreamURL = Constants2.validStreamURL;
-const ActivityTypes = Constants.ActivityTypes;
+const validStreamURL = Constants.validStreamURL;
 const result = size.fileFinishedImporting("modules/activities/utils/isStreaming.tsx");
 
-export default function isStreaming(noop) {
-  if (null == noop) {
+export default function isStreaming(activeSourceId) {
+  if (null == activeSourceId) {
     return tmp;
   } else {
     const _Array = Array;
-    if (Array.isArray(noop)) {
-      let someResult = noop.some(_isStreaming);
+    if (Array.isArray(activeSourceId)) {
+      let someResult = activeSourceId.some(_isStreaming);
     } else {
-      someResult = noop.type === ActivityTypes.STREAMING;
+      someResult = activeSourceId.type === ActivityTypes.ActivityTypes.STREAMING;
       if (someResult) {
-        let isMatch = null != noop.url;
+        let isMatch = null != activeSourceId.url;
         if (isMatch) {
-          isMatch = validStreamURL.test(noop.url);
+          isMatch = validStreamURL.test(activeSourceId.url);
         }
         someResult = isMatch;
       }

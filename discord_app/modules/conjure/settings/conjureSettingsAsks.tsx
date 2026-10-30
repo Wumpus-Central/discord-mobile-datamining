@@ -1,15 +1,14 @@
-// === Module 12468: conjureSettingsAsks ===
+// === Module 12619: conjureSettingsAsks ===
 
-// Module 12468 (conjureSettingsAsks)
-import c from "c" /* 576 */;
-import conjureChatTurns from "conjureChatTurns" /* 10809 */;
-import conjureSettingsRequest from "conjureSettingsRequest" /* 12464 */;
-import conjureSettingsSummary from "conjureSettingsSummary" /* 12469 */;
+// Module 12619 (conjureSettingsAsks)
+import conjureChatTurns from "conjureChatTurns" /* 10832 */;
+import conjureSettingsRequest from "conjureSettingsRequest" /* 12580 */;
+import conjureSettingsSummary from "conjureSettingsSummary" /* 12620 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import ConjureChatStore from "ConjureChatStore" /* 10808 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10826 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import ConjureChatStore from "ConjureChatStore" /* 10831 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10849 */;
 
 const require = globalThis.__r;
 
@@ -92,25 +91,15 @@ function supersededSettingsRequests(messages) {
 }
 let set = new Set();
 const set1 = new Set();
-let ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSavedSettingsRequests() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t() {
-      return set;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return noop.useSyncExternalStore(subscribe, first);
-}) : (function useSavedSettingsRequests() {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsAsks.tsx");
+
+export { markSettingsRequestSaved };
+export function useSavedSettingsRequests() {
   return noop.useSyncExternalStore(subscribe, () => set);
-});
-let closure_11 = tmp4;
-ReactCompilerGating = fn(558);
-function conjureSettingsRequestDone(settingsRequest, settings, arg2) {
+}
+export { supersededSettingsRequests };
+export function conjureSettingsRequestDone(settingsRequest, settings, arg2) {
   if (arg2) {
     if (null != settings) {
       const result = conjureSettingsRequest.conjureSettingsRequestKeys(settingsRequest, settings);
@@ -125,13 +114,6 @@ function conjureSettingsRequestDone(settingsRequest, settings, arg2) {
   }
   return false;
 }
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsAsks.tsx");
-
-export { markSettingsRequestSaved };
-export const useSavedSettingsRequests = tmp4;
-export { supersededSettingsRequests };
-export { conjureSettingsRequestDone };
 export function hasOtherOpenSetupAsk(arr, arg1, secrets, arg3) {
   _require = arg1;
   dependencyMap = secrets;
@@ -184,334 +166,17 @@ export function hasOtherOpenSetupAsk(arr, arg1, secrets, arg3) {
     return tmp5;
   });
 }
-export const useConjureSettingsAsk = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureSettingsAsk(arg0, arg1, arg2) {
-  _require = arg0;
-  dependencyMap = arg1;
-  _slicedToArray = arg2;
-  const cResult = require("c").c(27);
-  let obj2 = closure_11();
-  let obj = require("c");
-  [tmp5, noop] = noop.useState(false);
-  if (cResult[0] === arg2) {
-    if (cResult[1] === obj2) {
-      if (cResult[2] === tmp5) {
-        let tmp6 = cResult[3];
-      }
-      closure_4 = tmp6;
-      if (cResult[4] !== arg2) {
-        const fn = function y() {
-          if (null != closure_2) {
-            markSettingsRequestSaved(tmp);
-          } else {
-            noop(true);
-          }
-        };
-        cResult[4] = arg2;
-        cResult[5] = fn;
-        let tmp8 = fn;
-      } else {
-        tmp8 = cResult[5];
-      }
-      const _Symbol = Symbol;
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [ConjureSettingsStore];
-        cResult[6] = items;
-        let tmp10 = items;
-      } else {
-        tmp10 = cResult[6];
-      }
-      if (cResult[7] === arg0) {
-        if (cResult[8] === arg1) {
-          if (cResult[9] === tmp6) {
-            let tmp12 = cResult[10];
-            let tmp13 = cResult[11];
-          }
-          const stateFromStores = tmp(504).useStateFromStores(tmp10, tmp12, tmp13);
-          const _Symbol2 = Symbol;
-          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const items1 = [ConjureChatStore];
-            cResult[12] = items1;
-            let tmp15 = items1;
-          } else {
-            tmp15 = cResult[12];
-          }
-          if (cResult[13] === arg2) {
-            if (cResult[14] === arg0) {
-              let tmp17 = cResult[15];
-              let tmp18 = cResult[16];
-            }
-            const stateFromStores1 = tmp(504).useStateFromStores(tmp15, tmp17, tmp18);
-            const _Symbol3 = Symbol;
-            if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-              const items2 = [ConjureSettingsStore, closure_4];
-              cResult[17] = items2;
-              class B {
-                constructor() {
-                  settings = closure_6.getSettings(closure_0);
-                  if (null == settings) {
-                    items = [];
-                  } else {
-                    tmp2 = closure_0;
-                    tmp3 = closure_1;
-                    obj = closure_0(closure_1[11]);
-                    tmp4 = closure_1;
-                    result = obj.conjureSettingsSummary(closure_1, settings, (arg0) => {
-                      channel = channel.getChannel(arg0);
-                      let name;
-                      if (channel != null) {
-                        name = channel.name;
-                      }
-                      if (name == null) {
-                        name = null;
-                      }
-                      return name;
-                    });
-                    items = result.map((text) => text.text);
-                  }
-                  return items;
-                }
-              }
-            } else {
-              const tmp21 = cResult[17];
-            }
-            if (cResult[18] === arg0) {
-              if (cResult[19] === arg1) {
-                let tmp24 = cResult[20];
-                let tmp25 = cResult[21];
-              }
-              const stateFromStoresArray = tmp(504).useStateFromStoresArray(tmp21, tmp25, tmp24);
-              if (cResult[22] === stateFromStores) {
-                if (cResult[23] === tmp8) {
-                  if (cResult[24] === stateFromStoresArray) {
-                    if (cResult[25] === stateFromStores1) {
-                      let tmp27 = cResult[26];
-                    }
-                    return tmp27;
-                  }
-                }
-              }
-              const obj3 = { done: stateFromStores, superseded: stateFromStores1, summary: null, markSaved: null };
-              class B {
-                constructor() {
-                  settings = closure_6.getSettings(closure_0);
-                  if (null == settings) {
-                    items = [];
-                  } else {
-                    tmp2 = closure_0;
-                    tmp3 = closure_1;
-                    obj = closure_0(closure_1[11]);
-                    tmp4 = closure_1;
-                    result = obj.conjureSettingsSummary(closure_1, settings, (arg0) => {
-                      channel = channel.getChannel(arg0);
-                      let name;
-                      if (channel != null) {
-                        name = channel.name;
-                      }
-                      if (name == null) {
-                        name = null;
-                      }
-                      return name;
-                    });
-                    items = result.map((text) => text.text);
-                  }
-                  return items;
-                }
-              }
-              obj3.markSaved = tmp8;
-              class A {
-                constructor() {
-                  tmp = closure_1;
-                  settings = closure_6.getSettings(closure_0);
-                  flag = false;
-                  if (closure_4) {
-                    tmp3 = null;
-                    flag = false;
-                    if (null != settings) {
-                      tmp4 = closure_0;
-                      tmp5 = closure_1;
-                      obj = closure_0(closure_1[8]);
-                      result = obj.conjureSettingsRequestKeys(tmp, settings);
-                      num = 0;
-                      tmp6 = result.length > 0;
-                      if (tmp6) {
-                        tmp4Result = tmp4(tmp5[8]);
-                        obj1 = { keys: null };
-                        obj1.keys = result;
-                        tmp6 = !tmp4Result.conjureSettingsRequestBlocks(obj1, settings);
-                      }
-                      flag = tmp6;
-                    }
-                  }
-                  return flag;
-                }
-              }
-              cResult[22] = stateFromStores;
-              cResult[23] = tmp8;
-              cResult[24] = stateFromStoresArray;
-              cResult[25] = stateFromStores1;
-              cResult[26] = obj3;
-              tmp27 = obj3;
-              const tmpResult4 = tmp(504);
-            }
-            class B {
-              constructor() {
-                settings = closure_6.getSettings(closure_0);
-                if (null == settings) {
-                  items = [];
-                } else {
-                  tmp2 = closure_0;
-                  tmp3 = closure_1;
-                  obj = closure_0(closure_1[11]);
-                  tmp4 = closure_1;
-                  result = obj.conjureSettingsSummary(closure_1, settings, (arg0) => {
-                    channel = channel.getChannel(arg0);
-                    let name;
-                    if (channel != null) {
-                      name = channel.name;
-                    }
-                    if (name == null) {
-                      name = null;
-                    }
-                    return name;
-                  });
-                  items = result.map((text) => text.text);
-                }
-                return items;
-              }
-            }
-            const items3 = [, ];
-            class A {
-              constructor() {
-                tmp = closure_1;
-                settings = closure_6.getSettings(closure_0);
-                flag = false;
-                if (closure_4) {
-                  tmp3 = null;
-                  flag = false;
-                  if (null != settings) {
-                    tmp4 = closure_0;
-                    tmp5 = closure_1;
-                    obj = closure_0(closure_1[8]);
-                    result = obj.conjureSettingsRequestKeys(tmp, settings);
-                    num = 0;
-                    tmp6 = result.length > 0;
-                    if (tmp6) {
-                      tmp4Result = tmp4(tmp5[8]);
-                      obj1 = { keys: null };
-                      obj1.keys = result;
-                      tmp6 = !tmp4Result.conjureSettingsRequestBlocks(obj1, settings);
-                    }
-                    flag = tmp6;
-                  }
-                }
-                return flag;
-              }
-            }
-            items3[1] = arg1;
-            cResult[18] = arg0;
-            cResult[19] = arg1;
-            cResult[20] = items3;
-            cResult[21] = B;
-            tmp25 = B;
-            tmp24 = items3;
-            const tmpResult3 = tmp(504);
-          }
-          const items4 = [, ];
-          class A {
-            constructor() {
-              tmp = closure_1;
-              settings = closure_6.getSettings(closure_0);
-              flag = false;
-              if (closure_4) {
-                tmp3 = null;
-                flag = false;
-                if (null != settings) {
-                  tmp4 = closure_0;
-                  tmp5 = closure_1;
-                  obj = closure_0(closure_1[8]);
-                  result = obj.conjureSettingsRequestKeys(tmp, settings);
-                  num = 0;
-                  tmp6 = result.length > 0;
-                  if (tmp6) {
-                    tmp4Result = tmp4(tmp5[8]);
-                    obj1 = { keys: null };
-                    obj1.keys = result;
-                    tmp6 = !tmp4Result.conjureSettingsRequestBlocks(obj1, settings);
-                  }
-                  flag = tmp6;
-                }
-              }
-              return flag;
-            }
-          }
-          items4[1] = arg2;
-          cResult[13] = arg2;
-          cResult[14] = arg0;
-          cResult[15] = tmp19;
-          cResult[16] = items4;
-          tmp18 = items4;
-          tmp17 = tmp19;
-          const tmpResult = tmp(504);
-        }
-      }
-      class A {
-        constructor() {
-          tmp = closure_1;
-          settings = closure_6.getSettings(closure_0);
-          flag = false;
-          if (closure_4) {
-            tmp3 = null;
-            flag = false;
-            if (null != settings) {
-              tmp4 = closure_0;
-              tmp5 = closure_1;
-              obj = closure_0(closure_1[8]);
-              result = obj.conjureSettingsRequestKeys(tmp, settings);
-              num = 0;
-              tmp6 = result.length > 0;
-              if (tmp6) {
-                tmp4Result = tmp4(tmp5[8]);
-                obj1 = { keys: null };
-                obj1.keys = result;
-                tmp6 = !tmp4Result.conjureSettingsRequestBlocks(obj1, settings);
-              }
-              flag = tmp6;
-            }
-          }
-          return flag;
-        }
-      }
-      const items5 = [arg0, arg1, tmp6];
-      cResult[7] = arg0;
-      cResult[8] = arg1;
-      cResult[9] = tmp6;
-      cResult[10] = A;
-      cResult[11] = items5;
-      tmp13 = items5;
-      tmp12 = A;
-    }
-  }
-  let hasItem = tmp5;
-  if (null != arg2) {
-    hasItem = obj2.has(arg2);
-  }
-  cResult[0] = arg2;
-  cResult[1] = obj2;
-  cResult[2] = tmp5;
-  cResult[3] = hasItem;
-  tmp6 = hasItem;
-  const tmp4 = _slicedToArray(noop.useState(false), 2);
-}) : (function useConjureSettingsAsk(arg0, arg1, arg2) {
-  _require = arg0;
-  dependencyMap = arg1;
-  _slicedToArray = arg2;
-  let obj = closure_11();
+export function useConjureSettingsAsk(projectId, request, askId) {
+  _require = projectId;
+  dependencyMap = request;
+  _slicedToArray = askId;
+  const syncExternalStore = noop.useSyncExternalStore(subscribe, () => set);
   [tmp2, noop] = noop.useState(false);
-  if (null != arg2) {
-    let hasItem = obj.has(arg2);
+  if (null != askId) {
+    let hasItem = syncExternalStore.has(askId);
   }
-  let items = [arg2];
-  const obj3 = { done: null, superseded: null, summary: null, markSaved: null };
+  let items = [askId];
+  let obj2 = { done: null, superseded: null, summary: null, markSaved: null };
   const callback = noop.useCallback(() => {
     if (null != closure_2) {
       markSettingsRequestSaved(tmp);
@@ -521,8 +186,8 @@ export const useConjureSettingsAsk = ReactCompilerGating.isReactCompilerEnabled(
   }, items);
   const tmp = _slicedToArray(noop.useState(false), 2);
   const items1 = [ConjureSettingsStore];
-  const items2 = [arg0, arg1, hasItem];
-  obj3.done = require("initialize").useStateFromStores(items1, () => {
+  const items2 = [projectId, request, hasItem];
+  obj2.done = require("initialize").useStateFromStores(items1, () => {
     const settings = ConjureSettingsStore.getSettings(closure_0);
     let flag = false;
     if (hasItem) {
@@ -542,8 +207,8 @@ export const useConjureSettingsAsk = ReactCompilerGating.isReactCompilerEnabled(
   }, items2);
   const obj4 = require("initialize");
   const items3 = [ConjureChatStore];
-  const items4 = [arg0, arg2];
-  obj3.superseded = require("initialize").useStateFromStores(items3, () => {
+  const items4 = [projectId, askId];
+  obj2.superseded = require("initialize").useStateFromStores(items3, () => {
     hasItem = null != closure_2;
     if (hasItem) {
       hasItem = supersededSettingsRequests(ConjureChatStore.getMessages(closure_0)).has(tmp);
@@ -553,8 +218,8 @@ export const useConjureSettingsAsk = ReactCompilerGating.isReactCompilerEnabled(
   }, items4);
   const obj5 = require("initialize");
   const items5 = [ConjureSettingsStore, hasItem];
-  const items6 = [arg0, arg1];
-  obj3.summary = require("initialize").useStateFromStoresArray(items5, () => {
+  const items6 = [projectId, request];
+  obj2.summary = require("initialize").useStateFromStoresArray(items5, () => {
     const settings = ConjureSettingsStore.getSettings(closure_0);
     if (null == settings) {
       let items = [];
@@ -574,6 +239,6 @@ export const useConjureSettingsAsk = ReactCompilerGating.isReactCompilerEnabled(
     }
     return items;
   }, items6);
-  obj3.markSaved = callback;
-  return obj3;
-});
+  obj2.markSaved = callback;
+  return obj2;
+}

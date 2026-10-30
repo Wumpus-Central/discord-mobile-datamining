@@ -1,29 +1,29 @@
-// === Module 7379: getGuildTransitionRoute ===
+// === Module 7386: getGuildTransitionRoute ===
 
-// Module 7379 (getGuildTransitionRoute)
-import FavoritesUtils from "FavoritesUtils" /* 4882 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7384 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7390 */;
-import ConjureUtils from "ConjureUtils" /* 7405 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7380 */;
-import FavoriteStore from "FavoriteStore" /* 4860 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7251 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildChannelStore from "GuildChannelStore" /* 4935 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7382 */;
+// Module 7386 (getGuildTransitionRoute)
+import FavoritesUtils from "FavoritesUtils" /* 4883 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7391 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7398 */;
+import ConjureUtils from "ConjureUtils" /* 7413 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7387 */;
+import FavoriteStore from "FavoriteStore" /* 4861 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7258 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildChannelStore from "GuildChannelStore" /* 4939 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7389 */;
 
 require = fn;
-const ME = fn(1084).ME;
-const StaticChannelRoute = fn(4864).StaticChannelRoute;
+const ME = fn(1072).ME;
+const StaticChannelRoute = fn(4865).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 
 export function getGuildTransitionRoute(id) {
   const lastProjectId = ConjureBuilderRouteStore.getLastProjectId(id);
   if (null != lastProjectId) {
-    guild = GuildStore.getGuild(id);
+    const guild = GuildStore.getGuild(id);
     let canAccessConjureResult = null != guild;
     if (canAccessConjureResult) {
       canAccessConjureResult = ConjureUtils.canAccessConjure(guild, "getChannelIdForGuildTransition");

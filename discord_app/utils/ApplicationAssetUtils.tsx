@@ -1,13 +1,13 @@
-// === Module 8679: ApplicationAssetUtils ===
+// === Module 8713: ApplicationAssetUtils ===
 
-// Module 8679 (ApplicationAssetUtils)
+// Module 8713 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1445 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8680 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8714 */;
 
 require = fn;
 function updateAssets() {
@@ -71,7 +71,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -137,7 +137,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
         throw closure_1_6;
       }
       c9 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   }
 };
@@ -235,145 +235,92 @@ function fetchAssetIds() {
   return applyArgumentsResult;
 }
 let closure_22 = async function _fetchAssetIds(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
+  if (1 === tmp5) {
     if (arg0 === 1) {
+      c6 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
+      c6 = 3;
+      return { value, done: true };
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_4 = tmp5;
-          closure_3 = tmp2;
-          closure_131_2 = undefined;
-          closure_131_0 = closure_0;
-          closure_131_1 = closure_1;
-          let num13 = closure_2;
-          if (closure_2 === undefined) {
-            num13 = 1;
-          }
-          closure_131_2 = num13;
-          closure_131_3 = undefined;
-          closure_131_4 = undefined;
-          closure_131_5 = undefined;
-          c5 = 1;
-          c6 = 1;
-          return { value: "Reflect", done: null };
+      closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_FETCH", applicationId: closure_131_0 });
+      closure_131_3 = [];
+      closure_131_4 = closure_131_1.filter((item) => {
+        let startsWithResult;
+        if (item != null) {
+          startsWithResult = item.startsWith("http:");
         }
-      } else {
-        if (1 === tmp5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            const obj7 = { type: "APPLICATION_ASSETS_FETCH", applicationId: closure_131_0 };
-            closure_132_1(closure_132_2[7]).dispatch(obj7);
-            closure_131_3 = [];
-            closure_131_4 = closure_131_1.filter((item) => {
-              let startsWithResult;
-              if (item != null) {
-                startsWithResult = item.startsWith("http:");
-              }
-              if (!startsWithResult) {
-                let startsWithResult1;
-                if (item != null) {
-                  startsWithResult1 = item.startsWith("https:");
-                }
-                startsWithResult = startsWithResult1;
-              }
-              return startsWithResult;
-            });
-            if (closure_131_4.length > 0) {
-              c5 = 3;
-              c6 = 1;
-              const obj8 = {
-                value: (function resolveExternalAssets() {
-                              const self = this;
-                              const apply = closure_1_18.apply;
-                              if (typeof apply === "unknown") {
-                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                              } else {
-                                applyArgumentsResult = apply(self, arguments);
-                              }
-                              return applyArgumentsResult;
-                            })(closure_131_0, closure_131_4),
-                done: false
-              };
-              return obj8;
-            }
-            const obj15 = closure_132_1(closure_132_2[7]);
+        if (!startsWithResult) {
+          let startsWithResult1;
+          if (item != null) {
+            startsWithResult1 = item.startsWith("https:");
           }
-        } else if (2 === tmp5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj9 = { value, done: true };
-            return obj9;
-          } else {
-            closure_131_5 = value;
-            const obj10 = { type: "APPLICATION_ASSETS_UPDATE", applicationId: closure_131_0, assets: closure_131_5 };
-            closure_132_1(closure_132_2[7]).dispatch(obj10);
-            if (closure_132_20(closure_131_1, closure_131_3, closure_131_5, closure_131_2)) {
-              closure_132_13(closure_131_0).then(() => closure_2_21(closure_1_0, closure_1_1, closure_1_2 - 1));
-              const promise = closure_132_13(closure_131_0);
-            } else {
-              const obj11 = { type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 };
-              closure_132_1(closure_132_2[7]).dispatch(obj11);
-              const obj2 = closure_132_1(closure_132_2[7]);
-            }
-            c6 = 3;
-            const obj13 = closure_132_1(closure_132_2[7]);
-          }
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj = { value, done: true };
-          return obj;
+          startsWithResult = startsWithResult1;
         }
-        if (closure_132_19(closure_131_1, closure_131_3)) {
-          const obj12 = { type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 };
-          closure_132_1(closure_132_2[7]).dispatch(obj12);
-          c6 = 3;
-          const obj14 = { value: closure_131_3, done: true };
-          return obj14;
-        } else {
-          c5 = 2;
-          c6 = 1;
-          const obj16 = { value: closure_132_16(closure_131_0), done: false };
-          return obj16;
-        }
+        return startsWithResult;
+      });
+      if (closure_131_4.length > 0) {
+        c5 = 3;
+        c6 = 1;
+        return {
+          value: (function resolveExternalAssets() {
+                  const self = this;
+                  const apply = closure_1_18.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_131_0, closure_131_4),
+          done: false
+        };
       }
-    } catch (tmp32) {
-      c6 = tmp;
-      throw tmp32;
+      closure_132_1(closure_132_2[7]);
     }
+  } else if (2 === tmp5) {
+    if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c6 = 3;
+      return { value, done: true };
+    } else {
+      closure_131_5 = value;
+      closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: closure_131_0, assets: closure_131_5 });
+      if (closure_132_20(closure_131_1, closure_131_3, closure_131_5, closure_131_2)) {
+        closure_132_13(closure_131_0).then(() => closure_2_21(closure_1_0, closure_1_1, closure_1_2 - 1));
+        closure_132_13(closure_131_0);
+      } else {
+        closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 });
+        closure_132_1(closure_132_2[7]);
+      }
+      c6 = 3;
+      closure_132_1(closure_132_2[7]);
+    }
+  } else if (arg0 === 1) {
+    c6 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c6 = 3;
+    return { value, done: true };
   }
+  if (closure_132_19(closure_131_1, closure_131_3)) {
+    closure_132_1(closure_132_2[7]).dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: closure_131_0 });
+    return closure_131_3;
+  }
+  await closure_132_16(closure_131_0);
+  closure_3 = tmp2;
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  let num13 = closure_2;
+  if (closure_2 === undefined) {
+    num13 = 1;
+  }
+  closure_131_2 = num13;
+  return "flexDirection";
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: metroRequire, PlatformTypes } = Constants);
 let c8 = "https://i.scdn.co/image/";
 const re9 = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/;
@@ -472,14 +419,14 @@ export function getAssetFromImageURL(SPOTIFY, url) {
   }
   return combined;
 }
-export function getAssetImage(application_id, large_image, items) {
-  let str = format;
-  if (format === undefined) {
+export function getAssetImage(application_id, media_assets_large_image, items) {
+  let str = png;
+  if (png === undefined) {
     str = "png";
   }
-  if (null != large_image) {
-    if (large_image.includes(":")) {
-      [tmp21, tmp22] = large_image.split(":");
+  if (null != media_assets_large_image) {
+    if (media_assets_large_image.includes(":")) {
+      [tmp21, tmp22] = media_assets_large_image.split(":");
       const _Object = Object;
       hasOwnProperty = Object.prototype.hasOwnProperty;
       const call = hasOwnProperty.call;
@@ -498,11 +445,11 @@ export function getAssetImage(application_id, large_image, items) {
           return deserializer.deserialize(tmp22);
         }
       }
-      const tmp20 = _slicedToArray(large_image.split(":"), 2);
+      const tmp20 = _slicedToArray(media_assets_large_image.split(":"), 2);
     }
   }
   if (null != application_id) {
-    if (null != large_image) {
+    if (null != media_assets_large_image) {
       const _Array = Array;
       let applyResult = items;
       if (Array.isArray(items)) {
@@ -522,10 +469,10 @@ export function getAssetImage(application_id, large_image, items) {
         const _location = location;
         const _window2 = window;
         const _HermesInternal2 = HermesInternal;
-        let combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/app-assets/" + application_id + "/" + large_image + "." + str + str4;
+        let combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/app-assets/" + application_id + "/" + media_assets_large_image + "." + str + str4;
       } else {
         const _HermesInternal = HermesInternal;
-        combined = "" + HTTPUtils.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + large_image + "." + str + str4;
+        combined = "" + HTTPUtils.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
       }
       return combined;
     }

@@ -1,15 +1,14 @@
-// === Module 17396: AppIconRow ===
+// === Module 17450: AppIconRow ===
 
-// Module 17396 (AppIconRow)
+// Module 17450 (AppIconRow)
 import _modDef12 from "module_12" /* 12 */;
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5073 */;
-import TableRow from "TableRow" /* 6963 */;
-import FormRadio from "FormRadio" /* 7048 */;
-import AppIconTypes from "AppIconTypes" /* 9932 */;
-import AppIconDefault from "AppIcon" /* 16889 */;
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5077 */;
+import TableRow from "TableRow" /* 6969 */;
+import FormRadio from "FormRadio" /* 7056 */;
+import AppIconTypes from "AppIconTypes" /* 9959 */;
+import AppIconDefault from "AppIcon" /* 16943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,160 +38,13 @@ const items = [
     return intl.string(util.t.RnMLvl);
   }
 ];
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIconRow(onLongPress) {
-  const cResult = c.c(26);
-  ({ icon, onSelect } = onLongPress);
-  onLongPress = onLongPress.onLongPress;
-  ({ hasNitro, currentAppIcon, showEasterEgg } = onLongPress);
-  const tmp4 = closure_7();
-  const id = icon.id;
-  if (cResult[0] === icon.name) {
-    if (cResult[1] === id) {
-      const first = _slicedToArray(noop.useState(cResult[2]), 1)[0];
-      if (cResult[3] !== (currentAppIcon === id)) {
-        const obj3 = { selected: tmp11 };
-        cResult[3] = tmp11;
-        cResult[4] = obj3;
-        let tmp12 = obj3;
-      } else {
-        tmp12 = cResult[4];
-      }
-      const radioA11yNative = useA11yRolesNative.useRadioA11yNative(tmp12);
-      ({ accessibilityRole, accessibilityState } = radioA11yNative);
-      if (id === AppIconTypes.PremiumAppIconIds.BRAND_INVERTED) {
-        return null;
-      }
-      if (!icon.isHidden) {
-        let tmp14 = tmp11;
-        if (!tmp11) {
-          tmp14 = !tmp5;
-        }
-        if (!tmp14) {
-          tmp14 = hasNitro;
-        }
-        if (cResult[5] === id) {
-          if (cResult[6] === tmp4.icon) {
-            let tmp15 = cResult[7];
-          }
-          if (cResult[8] === id) {
-            if (cResult[9] === onLongPress) {
-              let tmp19 = cResult[10];
-            }
-            if (cResult[11] === id) {
-              if (cResult[12] === onSelect) {
-                let tmp20 = cResult[13];
-              }
-              if (cResult[14] === tmp11) {
-                if (cResult[15] === tmp14) {
-                  let tmp21 = cResult[16];
-                }
-                if (cResult[17] === accessibilityRole) {
-                  if (cResult[18] === accessibilityState) {
-                    if (cResult[19] === id) {
-                      if (cResult[20] === first) {
-                        if (cResult[21] === tmp15) {
-                          if (cResult[22] === tmp19) {
-                            if (cResult[23] === tmp20) {
-                              if (cResult[24] === tmp21) {
-                                let tmp24 = cResult[25];
-                              }
-                              return tmp24;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                class F {
-                  constructor() {
-                    return onSelect(id);
-                  }
-                }
-                const obj4 = { icon: tmp15, label: first, onLongPress: tmp19, onPress: tmp20, accessibilityRole, accessibilityState, trailing: tmp21 };
-                const tmp25 = jsx(TableRow.TableRow, { icon: tmp15, label: first, onLongPress: tmp19, onPress: tmp20, accessibilityRole, accessibilityState, trailing: tmp21 }, id);
-                cResult[17] = accessibilityRole;
-                cResult[18] = accessibilityState;
-                cResult[19] = id;
-                cResult[20] = first;
-                cResult[21] = tmp15;
-                cResult[22] = tmp19;
-                cResult[23] = tmp20;
-                cResult[24] = tmp21;
-                cResult[25] = tmp25;
-                tmp24 = tmp25;
-              }
-              class F {
-                constructor() {
-                  return onSelect(id);
-                }
-              }
-              if (tmp14) {
-                class F {
-                  constructor() {
-                    return onSelect(id);
-                  }
-                }
-                const tmp22 = jsx(FormRadio.FormRadio, { selected: null });
-                const obj5 = { selected: null };
-              }
-              cResult[14] = tmp11;
-              cResult[15] = tmp14;
-              cResult[16] = tmp22;
-              tmp21 = tmp22;
-            }
-            class F {
-              constructor() {
-                return onSelect(id);
-              }
-            }
-            cResult[11] = id;
-            cResult[12] = onSelect;
-            cResult[13] = F;
-            tmp20 = F;
-          }
-          class B {
-            constructor() {
-              return onLongPress(id);
-            }
-          }
-          cResult[8] = id;
-          cResult[9] = onLongPress;
-          cResult[10] = B;
-          tmp19 = B;
-        }
-        const obj6 = { id, style: tmp4.icon };
-        const tmp18 = jsx(AppIconDefault, { id, style: tmp4.icon });
-        cResult[5] = id;
-        cResult[6] = tmp4.icon;
-        cResult[7] = tmp18;
-        tmp15 = tmp18;
-      }
-      const tmpResult = useA11yRolesNative;
-    }
-  }
-  if (id === AppIconTypes.PremiumAppIconIds.PIRATE) {
-    class F {
-      constructor() {
-        return onSelect(id);
-      }
-    }
-    let name = items[obj2.random(obj2, 0, items.length - 1)]();
-  } else {
-    name = icon.name;
-  }
-  cResult[0] = icon.name;
-  cResult[1] = id;
-  cResult[2] = name;
-}) : (function AppIconRow(arg0) {
+export default function AppIconRow(arg0) {
   ({ icon, onSelect: require, onLongPress: importDefault } = arg0);
   ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
   const id = icon.id;
@@ -236,4 +88,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIconR
     tmp10Result2 = jsx(FormRadio.FormRadio, { selected: tmp7 });
   }
   const tmp3Result = useA11yRolesNative;
-});
+};

@@ -1,25 +1,25 @@
-// === Module 19696: GuildSettingsModalBans ===
+// === Module 19759: GuildSettingsModalBans ===
 
-// Module 19696 (GuildSettingsModalBans)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6886 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6889 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7350 */;
+// Module 19759 (GuildSettingsModalBans)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6893 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6896 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7357 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import UserStore from "UserStore" /* 1389 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9043 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import UserStore from "UserStore" /* 1384 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9056 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Permissions = fn(1084).Permissions;
+const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchField: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj2.searchField = { paddingVertical: nativeDefault.space.PX_16 };

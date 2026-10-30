@@ -1,171 +1,35 @@
-// === Module 16241: ActivityShareLinkModal ===
+// === Module 16281: ActivityShareLinkModal ===
 
-// Module 16241 (ActivityShareLinkModal)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import ToastUtils from "ToastUtils" /* 5700 */;
-import LinkIcon from "LinkIcon" /* 5716 */;
-import ClipboardUtils from "ClipboardUtils" /* 7345 */;
-import HeaderActionButton from "HeaderActionButton" /* 7544 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12108 */;
-import formatResults from "formatResults" /* 13184 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16240 */;
+// Module 16281 (ActivityShareLinkModal)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import ToastUtils from "ToastUtils" /* 5706 */;
+import LinkIcon from "LinkIcon" /* 5722 */;
+import ClipboardUtils from "ClipboardUtils" /* 7352 */;
+import HeaderActionButton from "HeaderActionButton" /* 7552 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12284 */;
+import formatResults from "formatResults" /* 13334 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16280 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import UserStore from "UserStore" /* 1389 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4856 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import UserStore from "UserStore" /* 1384 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
 
 require = fn;
 const View = fn(17).View;
-let UserRowModes = fn(10684).UserRowModes;
-const MessageSendLocation = fn(5010).MessageSendLocation;
+const UserRowModes = fn(10707).UserRowModes;
+const MessageSendLocation = fn(5014).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_14 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj3 = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/ActivityShareLinkModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityShareLinkModal(applicationId) {
-  const cResult = applicationId(linkId[13]).c(66);
-  applicationId = applicationId.applicationId;
-  const customId = applicationId.customId;
-  linkId = applicationId.linkId;
-  const channelId = applicationId.channelId;
-  const message = applicationId.message;
-  const onShare = applicationId.onShare;
-  closure_14();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [connectedActivityChannelId];
-    const fn = function b() {
-      return connectedActivityChannelId.getConnectedActivityChannelId();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp5 = items;
-    tmp6 = fn;
-  } else {
-    [tmp5, tmp6] = cResult;
-  }
-  let obj = applicationId(linkId[13]);
-  const stateFromStores = applicationId(linkId[14]).useStateFromStores(tmp5, tmp6);
-  if (cResult[2] !== stateFromStores) {
-    let destinationIdFromChannelId;
-    if (null != stateFromStores) {
-      destinationIdFromChannelId = tmp(tmp2[15]).getDestinationIdFromChannelId(stateFromStores);
-      const tmpResult3 = tmp(tmp2[15]);
-    }
-    cResult[2] = stateFromStores;
-    cResult[3] = destinationIdFromChannelId;
-  }
-  const tmpResult = applicationId(linkId[14]);
-  [r10051, View] = message(onShare.useState(false), 2);
-  const tmp14 = message(onShare.useState(false), 2);
-  closure_7 = tmp14[0];
-  UserStore = tmp14[1];
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [];
-    cResult[4] = items1;
-    let tmp15 = items1;
-  } else {
-    tmp15 = cResult[4];
-  }
-  const tmp12Result = message(onShare.useState(tmp15), 2);
-  connectedActivityChannelId = tmp12Result[0];
-  UserRowModes = tmp12Result[1];
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    class V {
-      constructor(arg0) {
-        tmp = closure_10(applicationId);
-        return;
-      }
-    }
-    cResult[5] = V;
-  } else {
-    class V {
-      constructor(arg0) {
-        tmp = closure_10(applicationId);
-        return;
-      }
-    }
-  }
-  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    class V {
-      constructor(arg0) {
-        tmp = closure_10(applicationId);
-        return;
-      }
-    }
-    const items2 = [UserStore];
-    class W {
-      constructor() {
-        return closure_8.getCurrentUser();
-      }
-    }
-    cResult[6] = items2;
-    cResult[7] = W;
-    let tmp19 = W;
-    const tmp18 = items2;
-  } else {
-    class V {
-      constructor(arg0) {
-        tmp = closure_10(applicationId);
-        return;
-      }
-    }
-    tmp19 = cResult[7];
-  }
-  const tmp13 = message(onShare.useState(false), 2);
-  const stateFromStores1 = applicationId(linkId[14]).useStateFromStores(tmp18, tmp19);
-  const tmp12Result2 = message(onShare.useState(""), 2);
-  closure_12 = tmp12Result2[0];
-  closure_13 = tmp12Result2[1];
-  if (cResult[8] === applicationId) {
-    class V {
-      constructor(arg0) {
-        tmp = closure_10(applicationId);
-        return;
-      }
-    }
-  }
-  cResult[8] = applicationId;
-  cResult[9] = channelId;
-  cResult[10] = customId;
-  cResult[11] = linkId;
-  if (stateFromStores1 != null) {
-    class V {
-      constructor(arg0) {
-        tmp = closure_10(applicationId);
-        return;
-      }
-    }
-  }
-  class J {
-    constructor() {
-      tmp = closure_13;
-      obj = closure_0(closure_2[16]);
-      obj1 = { applicationId: closure_0, referrerId: null, customId: null, linkId: null, channelId: null };
-      id = undefined;
-      if (closure_11 != null) {
-        id = closure_11.id;
-      }
-      obj1.referrerId = id;
-      obj1.customId = customId;
-      obj1.linkId = linkId;
-      obj1.channelId = channelId;
-      tmpResult = tmp(obj.getActivityLaunchURL(obj1));
-      return;
-    }
-  }
-  cResult[12] = undefined;
-  cResult[13] = J;
-  const tmpResult4 = applicationId(linkId[14]);
-}) : (function ActivityShareLinkModal(applicationId) {
+export default function ActivityShareLinkModal(applicationId) {
   applicationId = applicationId.applicationId;
   const customId = applicationId.customId;
   const linkId = applicationId.linkId;
@@ -177,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   closure_14 = undefined;
   const tmp = closure_14();
   const items = [connectedActivityChannelId];
-  const stateFromStores = applicationId(linkId[14]).useStateFromStores(items, () => connectedActivityChannelId.getConnectedActivityChannelId());
+  const stateFromStores = applicationId(linkId[12]).useStateFromStores(items, () => connectedActivityChannelId.getConnectedActivityChannelId());
   const items1 = [stateFromStores];
   const memo = onShare.useMemo(() => {
     let destinationIdFromChannelId;
@@ -186,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     }
     return destinationIdFromChannelId;
   }, items1);
-  let obj = applicationId(linkId[14]);
+  let obj = applicationId(linkId[12]);
   [tmp7, c7] = message(onShare.useState(false), 2);
   const tmp8 = message(onShare.useState(false), 2);
   const first = tmp8[0];
@@ -199,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   }, []);
   const tmp6 = message(onShare.useState(false), 2);
   const items2 = [first];
-  const stateFromStores1 = applicationId(linkId[14]).useStateFromStores(items2, () => first.getCurrentUser());
+  const stateFromStores1 = applicationId(linkId[12]).useStateFromStores(items2, () => first.getCurrentUser());
   const tmp13 = message(onShare.useState(""), 2);
   const first2 = tmp13[0];
   closure_14 = tmp15;
@@ -222,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     const result = openActivityShareLinkModal.closeActivityShareLinkModal();
   }, items4);
   const items5 = [applicationId];
-  const first3 = message(customId(linkId[18])(items5), 1)[0];
+  const first3 = message(customId(linkId[16])(items5), 1)[0];
   const items6 = [first3, first, first2, message, onShare, first1];
   const items7 = [first2];
   const callback2 = onShare.useCallback(channelId(function*() {
@@ -236,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -255,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(13184).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(13334).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -265,8 +129,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
           c3 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          closure_128_0 = value.filter(tmp2(1385).isNotNullish);
-          closure_128_1 = tmp2(16242).resolveActivityShareMessageContent(closure_129_4, closure_129_15, closure_129_13);
+          closure_128_0 = value.filter(tmp2(1380).isNotNullish);
+          closure_128_1 = tmp2(16282).resolveActivityShareMessageContent(closure_129_4, closure_129_15, closure_129_13);
           closure_129_7(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -280,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -296,11 +160,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
                     } else {
                       channel = channel.getChannel(closure_0);
                       if (null != channel) {
-                        const obj2 = closure_2_1(7624);
+                        const obj2 = closure_2_1(7629);
                         const obj6 = { location: constants.ACTIVITY_SHARE };
                         c2 = 1;
                         c1 = 1;
-                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7812).parse(channel, c1), false, obj6), done: false };
+                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7817).parse(channel, c1), false, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -313,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
                     return obj;
                   }
                   c1 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp12) {
                   c1 = tmp;
                   throw tmp12;
@@ -331,16 +195,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(16242);
+          let obj5 = tmp2(16282);
           let obj7 = { text: null };
-          const intl = tmp2(1125).intl;
+          const intl = tmp2(1114).intl;
           const obj8 = { applicationName: closure_129_15.name };
-          obj7.text = intl.formatToPlainString(tmp2(1125).t.jQULqL, obj8);
-          tmp3(5701).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
+          obj7.text = intl.formatToPlainString(tmp2(1114).t.jQULqL, obj8);
+          tmp3(5707).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
           closure_129_5(true, closure_129_8);
-          let obj6 = tmp3(5701);
-          const result = tmp2(16240).closeActivityShareLinkModal();
-          const obj9 = tmp2(16240);
+          let obj6 = tmp3(5707);
+          const result = tmp2(16280).closeActivityShareLinkModal();
+          const obj9 = tmp2(16280);
         }
         c3 = 3;
         let obj = { value, done: true };
@@ -356,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     connectedActivityChannelId(true);
     ToastUtils.presentLinkCopied();
   }, items7);
-  let height = customId(linkId[29])({ ignoreKeyboard: true }).height;
+  let height = customId(linkId[25])({ ignoreKeyboard: true }).height;
   const items8 = [height];
   let obj3 = {
     style: onShare.useMemo(() => {
@@ -366,10 +230,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     children: null
   };
   let obj4 = { title: null, subtitle: null, headerRight: null, onClose: null };
-  let obj2 = applicationId(linkId[14]);
+  let obj2 = applicationId(linkId[12]);
   const tmp22 = stateFromStores1;
-  let intl = applicationId(linkId[24]).intl;
-  obj4.title = intl.string(applicationId(linkId[24]).t.r9qKow);
+  let intl = applicationId(linkId[22]).intl;
+  obj4.title = intl.string(applicationId(linkId[22]).t.r9qKow);
   obj4.subtitle = message;
   obj4.headerRight = function headerRight(arg0) {
     const obj = {};
@@ -378,12 +242,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t.Xrt5Po);
     obj.IconComponent = LinkIcon.LinkIcon;
-    return __initData(HeaderActionButton.HeaderActionButton, obj);
+    return closure_2_12(HeaderActionButton.HeaderActionButton, obj);
   };
   obj4.onClose = callback1;
-  const items9 = [stateFromStores1(customId(linkId[31]), obj4), ];
+  const items9 = [stateFromStores1(customId(linkId[27]), obj4), ];
   let obj5 = { style: tmp.container, children: null };
-  const items10 = [stateFromStores1(customId(linkId[32]), { absolute: true }), stateFromStores1(customId(linkId[33]), { disableGradient: true, disableStickySections: true, initialSelectedDestinations: [], insetEnd: 0, onSelectedDestinationChange: callback, originDestination: memo, rowMode: first1.TOGGLE }), ];
+  const items10 = [stateFromStores1(customId(linkId[30]), { absolute: true }), stateFromStores1(customId(linkId[31]), { disableGradient: true, disableStickySections: true, initialSelectedDestinations: [], insetEnd: 0, onSelectedDestinationChange: callback, originDestination: memo, rowMode: first1.TOGGLE }), ];
   let obj7 = { disabled: tmp7, floatingBackgroundColor: tmp.container.backgroundColor, isVisible: first1.length > 0, loading: tmp7, onPress: null, text: null };
   let tmp24;
   if (!tmp7) {
@@ -391,17 +255,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   }
   obj7.onPress = tmp24;
   if (1 === first1.length) {
-    const intl3 = tmp2(tmp3[24]).intl;
-    let stringResult = intl3.string(tmp2(tmp3[24]).t.TXNS7S);
+    const intl3 = tmp2(tmp3[22]).intl;
+    let stringResult = intl3.string(tmp2(tmp3[22]).t.TXNS7S);
   } else {
-    const intl2 = tmp2(tmp3[24]).intl;
+    const intl2 = tmp2(tmp3[22]).intl;
     let obj8 = { count: length };
-    stringResult = intl2.formatToPlainString(tmp2(tmp3[24]).t.jWtYUm, obj8);
+    stringResult = intl2.formatToPlainString(tmp2(tmp3[22]).t.jWtYUm, obj8);
   }
   obj7.text = stringResult;
-  items10[2] = tmp22(applicationId(linkId[34]).ModalFloatingAction, obj7);
+  items10[2] = tmp22(applicationId(linkId[32]).ModalFloatingAction, obj7);
   obj5.children = items10;
   items9[1] = first2(stateFromStores, obj5);
   obj3.children = items9;
   return first2(stateFromStores, obj3);
-});
+};

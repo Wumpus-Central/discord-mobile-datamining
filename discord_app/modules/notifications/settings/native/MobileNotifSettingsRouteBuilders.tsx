@@ -1,9 +1,9 @@
-// === Module 17836: MobileNotifSettingsRouteBuilders ===
+// === Module 17907: MobileNotifSettingsRouteBuilders ===
 
-// Module 17836 (MobileNotifSettingsRouteBuilders)
-import util from "util" /* 1125 */;
-import _modDef2866 from "module_2866" /* 2866 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17355 */;
+// Module 17907 (MobileNotifSettingsRouteBuilders)
+import util from "util" /* 1114 */;
+import _modDef2867 from "module_2867" /* 2867 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17409 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx");
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/notifications/settings/native
 export function buildOverviewCategoriesSection() {
   const obj = { label: null, settings: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef2866["/UdAvP"]);
+  obj.label = intl.string(_modDef2867["/UdAvP"]);
   const items = [MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES, MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS, MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY, MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS];
   obj.settings = items;
   return obj;

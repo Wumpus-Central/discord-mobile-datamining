@@ -1,16 +1,16 @@
-// === Module 5858: RTCMediaSinkWantsManager ===
+// === Module 5865: RTCMediaSinkWantsManager ===
 
-// Module 5858 (RTCMediaSinkWantsManager)
+// Module 5865 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5777 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5861 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5784 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 5868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5780 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5787 */;
 
 require = fn;
 function getDefaultWants(wantsLevel) {
@@ -24,13 +24,13 @@ function getDefaultWants(wantsLevel) {
   }
   return obj3;
 }
-const VideoToggleState = fn(1084).VideoToggleState;
-const SimulcastOverrideQuality = fn(5756).SimulcastOverrideQuality;
+const VideoToggleState = fn(1072).VideoToggleState;
+const SimulcastOverrideQuality = fn(5763).SimulcastOverrideQuality;
 let c7 = 100;
 const DEFAULT_WANTS_DISABLED = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(5859);
+const BrowserUtils = fn(5866);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 let obj3 = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {

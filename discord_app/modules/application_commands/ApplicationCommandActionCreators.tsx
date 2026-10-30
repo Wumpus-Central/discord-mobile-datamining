@@ -1,18 +1,18 @@
-// === Module 8359: ApplicationCommandActionCreators ===
+// === Module 8336: ApplicationCommandActionCreators ===
 
-// Module 8359 (ApplicationCommandActionCreators)
+// Module 8336 (ApplicationCommandActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5672 */;
-import InteractionTypes from "InteractionTypes" /* 6058 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7688 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5678 */;
+import InteractionTypes from "InteractionTypes" /* 6065 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7693 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8360 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8337 */;
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandActionCreators.tsx");
 
@@ -84,7 +84,7 @@ export function performAutocomplete(applicationId, autocomplete, data) {
       const HTTP = HTTPUtils.HTTP;
       const request = { url: Endpoints.INTERACTIONS, body: null, timeout: 3000, rejectWithError: true };
       const obj4 = { type: InteractionTypes.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: applicationId.applicationId, guild_id: null, channel_id: null, session_id: null, data: null, nonce: null };
-      guild = autocomplete.guild;
+      const guild = autocomplete.guild;
       let id;
       if (guild != null) {
         id = guild.id;

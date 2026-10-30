@@ -1,6 +1,6 @@
-// === Module 14598: IosAttributionSignRequest ===
+// === Module 14631: IosAttributionSignRequest ===
 
-// Module 14598 (IosAttributionSignRequest)
+// Module 14631 (IosAttributionSignRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -38,7 +38,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
           ({ metadataSealed: closure_130_0, impressionId: closure_130_1, specs: closure_130_2, signal: closure_130_3 } = closure_0);
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -97,7 +97,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
     }
   }
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionSignRequest.tsx");
 

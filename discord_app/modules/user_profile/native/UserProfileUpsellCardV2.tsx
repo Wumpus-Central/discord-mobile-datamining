@@ -1,154 +1,31 @@
-// === Module 16443: UserProfileUpsellCardV2 ===
+// === Module 16486: UserProfileUpsellCardV2 ===
 
-// Module 16443 (UserProfileUpsellCardV2)
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import ConstantsIOS from "ConstantsIOS" /* 1104 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import components_Button_Button from "components/Button/Button" /* 5281 */;
-import LinearGradientDefault from "LinearGradient" /* 5295 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9487 */;
+// Module 16486 (UserProfileUpsellCardV2)
+import nativeDefault from "native" /* 575 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import LinearGradientDefault from "LinearGradient" /* 5582 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import components_Button_Button from "components/Button/Button" /* 5629 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9506 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7602).Gradients;
+const Gradients = fn(7610).Gradients;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { outer: { borderRadius: nativeDefault.radii.lg, padding: 1 }, inner: null, text: null, textCenter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, padding: 1 };
 obj2.inner = { borderRadius: nativeDefault.radii.lg - 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 };
-let obj4 = { borderRadius: nativeDefault.radii.lg - 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 };
+const obj4 = { borderRadius: nativeDefault.radii.lg - 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 };
 obj2.text = { marginBottom: nativeDefault.space.PX_12 };
 obj2.textCenter = { textAlign: "center" };
 let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let obj5 = { marginBottom: nativeDefault.space.PX_12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCardV2.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileUpsellCardV2(arg0) {
-  const cResult = c.c(28);
-  ({ text, textAlign, buttonText, onButtonPress, buttonVariant, disabled, loading, children, style, innerStyle, onLayout } = arg0);
-  let str = "left";
-  if (undefined !== textAlign) {
-    str = textAlign;
-  }
-  let str2 = "primary";
-  if (undefined !== buttonVariant) {
-    str2 = buttonVariant;
-  }
-  let tmp4 = undefined !== disabled && disabled;
-  const tmp6 = closure_7();
-  if (cResult[0] === style) {
-    if (cResult[1] === tmp6.outer) {
-      let tmp7 = cResult[2];
-    }
-    if (cResult[3] === innerStyle) {
-      if (cResult[4] === tmp6.inner) {
-        let tmp8 = cResult[5];
-      }
-      if (cResult[6] === tmp6.text) {
-        if (cResult[7] === tmp9) {
-          let tmp10 = cResult[8];
-        }
-        if (cResult[9] === tmp10) {
-          if (cResult[10] === text) {
-            let tmp11 = cResult[11];
-          }
-          const _Symbol = Symbol;
-          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { color: nativeDefault.colors.WHITE, size: "xs" };
-            const tmp18 = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, obj2);
-            cResult[12] = tmp18;
-            let tmp15 = tmp18;
-          } else {
-            tmp15 = cResult[12];
-          }
-          if (!tmp4) {
-            tmp4 = tmp5;
-          }
-          if (cResult[13] === buttonText) {
-            if (cResult[14] === str2) {
-              if (cResult[15] === tmp5) {
-                if (cResult[16] === onButtonPress) {
-                  if (cResult[17] === tmp4) {
-                    let tmp19 = cResult[18];
-                  }
-                  if (cResult[19] === children) {
-                    if (cResult[20] === tmp19) {
-                      if (cResult[21] === tmp8) {
-                        if (cResult[22] === tmp11) {
-                          let tmp22 = cResult[23];
-                        }
-                        if (cResult[24] === onLayout) {
-                          if (cResult[25] === tmp22) {
-                            if (cResult[26] === tmp7) {
-                              let tmp26 = cResult[27];
-                            }
-                            return tmp26;
-                          }
-                        }
-                        const obj3 = { start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: Gradients.PREMIUM_TIER_2, style: tmp7, onLayout, children: tmp22 };
-                        const tmp31 = hasOwnProperty(LinearGradientDefault, obj3);
-                        cResult[24] = onLayout;
-                        cResult[25] = tmp22;
-                        cResult[26] = tmp7;
-                        cResult[27] = tmp31;
-                        tmp26 = tmp31;
-                      }
-                    }
-                  }
-                  const obj4 = { style: tmp8, children: null };
-                  const items = [tmp11, tmp19, children];
-                  obj4.children = items;
-                  const tmp25 = timestampProducer(View, obj4);
-                  cResult[19] = children;
-                  cResult[20] = tmp19;
-                  cResult[21] = tmp8;
-                  cResult[22] = tmp11;
-                  cResult[23] = tmp25;
-                  tmp22 = tmp25;
-                }
-              }
-            }
-          }
-          const obj5 = { icon: tmp15, text: buttonText, onPress: onButtonPress, variant: str2, loading: tmp5, disabled: tmp4, grow: true };
-          const tmp21 = hasOwnProperty(components_Button_Button.Button, obj5);
-          cResult[13] = buttonText;
-          cResult[14] = str2;
-          cResult[15] = tmp5;
-          cResult[16] = onButtonPress;
-          cResult[17] = tmp4;
-          cResult[18] = tmp21;
-          tmp19 = tmp21;
-        }
-        const obj6 = { style: tmp10, variant: "text-md/normal", color: "text-default", maxFontSizeMultiplier: 2.5, children: text };
-        const tmp13 = hasOwnProperty(Text_Text.Text, obj6);
-        cResult[9] = tmp10;
-        cResult[10] = text;
-        cResult[11] = tmp13;
-        tmp11 = tmp13;
-      }
-      const items1 = [tmp6.text, "center" === str && tmp6.textCenter];
-      cResult[6] = tmp6.text;
-      cResult[7] = "center" === str && tmp6.textCenter;
-      cResult[8] = items1;
-      tmp10 = items1;
-    }
-    const items2 = [tmp6.inner, innerStyle];
-    cResult[3] = innerStyle;
-    cResult[4] = tmp6.inner;
-    cResult[5] = items2;
-    tmp8 = items2;
-  }
-  const items3 = [tmp6.outer, style];
-  cResult[0] = style;
-  cResult[1] = tmp6.outer;
-  cResult[2] = items3;
-  tmp7 = items3;
-}) : (function UserProfileUpsellCardV2(children) {
+export default function UserProfileUpsellCardV2(children) {
   let str = children.textAlign;
   if (str === undefined) {
     str = "left";
@@ -196,5 +73,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   obj2.children = items3;
   obj.children = timestampProducer(View, obj2);
   return hasOwnProperty(tmp5, obj);
-});
+};
 export const GRADIENT_BORDER_WIDTH = 1;

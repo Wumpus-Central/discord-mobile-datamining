@@ -1,11 +1,11 @@
-// === Module 7510: searchSounds ===
+// === Module 7518: searchSounds ===
 
-// Module 7510 (searchSounds)
+// Module 7518 (searchSounds)
 import debounceDefault from "debounce" /* 551 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4951 */;
-import SoundboardUtils from "SoundboardUtils" /* 7511 */;
-import EmojiStore from "EmojiStore" /* 6783 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4955 */;
+import SoundboardUtils from "SoundboardUtils" /* 7519 */;
+import EmojiStore from "EmojiStore" /* 6790 */;
 
 require = fn;
 function trackSearchStart(location_stack, channel_id) {
@@ -14,7 +14,7 @@ function trackSearchStart(location_stack, channel_id) {
 function trackSearchResultViewed(total_results, location_stack, channel_id, query) {
   AnalyticsUtilsDefault.track(constants.SEARCH_RESULT_VIEWED, { search_type: constants2.SOUNDBOARD, channel_id, query, total_results: total_results.length, location_stack });
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, SearchTypes: hasOwnProperty } = Constants);
 let closure_6 = debounceDefault(trackSearchStart, 350);
 let closure_7 = debounceDefault(trackSearchResultViewed, 350);

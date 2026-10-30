@@ -1,10 +1,10 @@
-// === Module 5661: getURLForApplication ===
+// === Module 5667: getURLForApplication ===
 
-// Module 5661 (getURLForApplication)
-import URLUtilsDefault from "URLUtils" /* 1383 */;
+// Module 5667 (getURLForApplication)
+import URLUtilsDefault from "URLUtils" /* 1378 */;
 import _slicedToArray from "module_32" /* 32 */;
-import TestModeStore from "TestModeStore" /* 5662 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5663 */;
+import TestModeStore from "TestModeStore" /* 5668 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5669 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");
@@ -60,8 +60,8 @@ export function getNonTestModeUrlForApplication(arg0) {
     return "https://" + arg0 + "." + ACTIVITY_APPLICATION_HOST;
   }
 }
-export function getApplicationRouterOrigin(embeddedAppUrl) {
-  const toURLSafeResult = URLUtilsDefault.toURLSafe(embeddedAppUrl);
+export function getApplicationRouterOrigin(assetURL) {
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
   if (null == toURLSafeResult) {
     return null;
   } else {

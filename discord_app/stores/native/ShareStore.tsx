@@ -1,25 +1,25 @@
-// === Module 16142: ShareStore ===
+// === Module 16182: ShareStore ===
 
-// Module 16142 (ShareStore)
+// Module 16182 (ShareStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8889 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8923 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 function handleTokenUpdated(token) {
   token = token.token;
   return false;
 }
-const AppStates = fn(1084).AppStates;
+const AppStates = fn(1072).AppStates;
 const Store = initializeDefault.Store;
 class ShareStore extends Store {
 }
@@ -50,7 +50,7 @@ const shareStore = new ShareStore(DispatcherDefault, {
     state = state.state;
     if (state === AppStates.INACTIVE) {
       if (null != c4) {
-        guild = GuildStore.getGuild(c3);
+        const guild = GuildStore.getGuild(c3);
         let json = null;
         if (null != guild) {
           const _JSON = JSON;

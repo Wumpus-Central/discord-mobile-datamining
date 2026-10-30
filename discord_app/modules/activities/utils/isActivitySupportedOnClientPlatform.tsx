@@ -1,18 +1,18 @@
-// === Module 11552: isActivitySupportedOnClientPlatform ===
+// === Module 11753: isActivitySupportedOnClientPlatform ===
 
-// Module 11552 (isActivitySupportedOnClientPlatform)
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Server from "Server" /* 1998 */;
+// Module 11753 (isActivitySupportedOnClientPlatform)
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import EmbeddedActivitySupportedPlatforms2 from "EmbeddedActivitySupportedPlatforms" /* 2022 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {
   if (obj.isIOS()) {
-    let IOS = Server.EmbeddedActivitySupportedPlatforms.IOS;
+    let IOS = EmbeddedActivitySupportedPlatforms2.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
     const tmpResult = PlatformUtils;
-    const EmbeddedActivitySupportedPlatforms = Server.EmbeddedActivitySupportedPlatforms;
+    const EmbeddedActivitySupportedPlatforms = EmbeddedActivitySupportedPlatforms2.EmbeddedActivitySupportedPlatforms;
     IOS = PlatformUtils.isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
     const isAndroidResult = PlatformUtils.isAndroid();
   }

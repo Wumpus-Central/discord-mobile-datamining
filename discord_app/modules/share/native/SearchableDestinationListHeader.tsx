@@ -1,114 +1,28 @@
-// === Module 13194: SearchableDestinationListHeader ===
+// === Module 13344: SearchableDestinationListHeader ===
 
-// Module 13194 (SearchableDestinationListHeader)
-import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Link from "Link" /* 1504 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import NavigatorHeader from "NavigatorHeader" /* 6984 */;
-import _mod6993 from "module_6993" /* 6993 */;
-import HeaderShared from "HeaderShared" /* 9765 */;
+// Module 13344 (SearchableDestinationListHeader)
+import nativeDefault from "native" /* 575 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import Link from "Link" /* 1499 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
+import NavigatorHeader from "NavigatorHeader" /* 6992 */;
+import _mod6999 from "module_6999" /* 6999 */;
+import HeaderShared from "HeaderShared" /* 9791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
-let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
+const createStyles = fn(5009);
+const obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
 const obj4 = { paddingRight: nativeDefault.space.PX_16 };
 obj2.header = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_5 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj5 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/SearchableDestinationListHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchableDestinationListHeader(subtitleColor) {
-  const cResult = subtitle(576).c(14);
-  ({ title, subtitle } = subtitleColor);
-  subtitleColor = subtitleColor.subtitleColor;
-  ({ headerRight, headerStatusBarHeight, onClose } = subtitleColor);
-  const tmp4 = closure_5();
-  const context = noop.useContext(subtitle(1504).NavigationRouteContext);
-  const obj = subtitle(576);
-  const tmp5 = subtitleColor;
-  let isIOSResult = subtitle(1381).isIOS();
-  if (isIOSResult) {
-    let presentation;
-    if (context != null) {
-      const params = context.params;
-      if (params != null) {
-        presentation = params.presentation;
-      }
-    }
-    isIOSResult = "modal" === presentation;
-  }
-  if (cResult[0] === subtitle) {
-    if (cResult[1] === subtitleColor) {
-      let tmp10 = cResult[2];
-    }
-    if (cResult[3] !== onClose) {
-      let headerCloseButton;
-      if (null != onClose) {
-        headerCloseButton = subtitle(6984).getHeaderCloseButton(onClose);
-        const tmpResult = subtitle(6984);
-      }
-      cResult[3] = onClose;
-      cResult[4] = headerCloseButton;
-      let tmp11 = headerCloseButton;
-    } else {
-      tmp11 = cResult[4];
-    }
-    if (headerStatusBarHeight == null) {
-      let num3 = 0;
-      if (!isIOSResult) {
-        num3 = subtitleColor(1631)().top;
-      }
-      headerStatusBarHeight = num3 + tmp5(587).space.PX_8;
-    }
-    if (cResult[5] === headerRight) {
-      if (cResult[6] === tmp4.header) {
-        if (cResult[7] === tmp4.headerLeftContainer) {
-          if (cResult[8] === tmp4.headerRightContainer) {
-            if (cResult[9] === tmp10) {
-              if (cResult[10] === tmp11) {
-                if (cResult[11] === headerStatusBarHeight) {
-                  if (cResult[12] === title) {
-                    let tmp15 = cResult[13];
-                  }
-                  return tmp15;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    const obj3 = { headerStyle: tmp4.header, title, headerTitle: tmp10, headerTitleAlign: "center", headerLeft: tmp11, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
-    ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp4);
-    obj3.headerStatusBarHeight = headerStatusBarHeight;
-    const tmp17 = jsx(subtitle(6993).Header, { headerStyle: tmp4.header, title, headerTitle: tmp10, headerTitleAlign: "center", headerLeft: tmp11, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
-    cResult[5] = headerRight;
-    cResult[6] = tmp4.header;
-    cResult[7] = tmp4.headerLeftContainer;
-    cResult[8] = tmp4.headerRightContainer;
-    cResult[9] = tmp10;
-    cResult[10] = tmp11;
-    cResult[11] = headerStatusBarHeight;
-    cResult[12] = title;
-    cResult[13] = tmp17;
-    tmp15 = tmp17;
-  }
-  const fn = function l(children) {
-    return jsx(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle, subtitleColor, variant: "redesign/heading-18/bold" });
-  };
-  cResult[0] = subtitle;
-  cResult[1] = subtitleColor;
-  cResult[2] = fn;
-  tmp10 = fn;
-  const obj2 = subtitle(1381);
-}) : (function SearchableDestinationListHeader(arg0) {
+export default function SearchableDestinationListHeader(arg0) {
   ({ subtitle: require, subtitleColor: importDefault, headerStatusBarHeight, onClose } = arg0);
   ({ title, headerRight } = arg0);
   const tmp = closure_5();
@@ -153,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     headerStatusBarHeight = num + nativeDefault.space.PX_8;
   }
   obj3.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod6993.Header, {
+  return jsx(_mod6999.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {
@@ -166,4 +80,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     headerRightContainerStyle: null,
     headerStatusBarHeight: null
   });
-});
+};

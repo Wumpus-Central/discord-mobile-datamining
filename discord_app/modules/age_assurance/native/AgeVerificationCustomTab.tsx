@@ -1,10 +1,9 @@
-// === Module 7974: AgeVerificationCustomTab ===
+// === Module 7980: AgeVerificationCustomTab ===
 
-// Module 7974 (AgeVerificationCustomTab)
+// Module 7980 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
-import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5732 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5738 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -53,7 +52,7 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -135,7 +134,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -180,7 +179,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
           } else {
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         }
         c3 = 0;
@@ -212,28 +211,10 @@ function getIsAgeVerificationCustomTabOpen() {
   return closure_6.getState().isOpen;
 }
 let closure_4 = new LoggerDefault("AgeVerificationCustomTab");
-const module_570 = fn(570);
-let closure_6 = module_570.create(() => ({ isOpen: false, copy: null }));
+const module_560 = fn(560);
+let closure_6 = module_560.create(() => ({ isOpen: false, copy: null }));
 let c7 = false;
 let c8 = null;
-fn(558);
-const tmp2 = new LoggerDefault("AgeVerificationCustomTab");
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAgeVerificationCustomTabOpen() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t(isOpen) {
-      return isOpen.isOpen;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return closure_6(first);
-}) : (function useIsAgeVerificationCustomTabOpen() {
-  return closure_6((isOpen) => isOpen.isOpen);
-});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationCustomTab.tsx");
 
@@ -267,20 +248,10 @@ export { releaseAgeVerificationCustomTab };
 export function getIsAgeVerificationCustomTabAwaitingResult() {
   return c7;
 }
-export const useIsAgeVerificationCustomTabOpen = tmp3;
-export const useAgeVerificationCustomTabCopy = ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVerificationCustomTabCopy() {
-  const cResult = c.c(1);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t(copy) {
-      return copy.copy;
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  return closure_6(first);
-}) : (function useAgeVerificationCustomTabCopy() {
+export function useIsAgeVerificationCustomTabOpen() {
+  return closure_6((isOpen) => isOpen.isOpen);
+}
+export function useAgeVerificationCustomTabCopy() {
   return closure_6((copy) => copy.copy);
-});
+}
 export { getIsAgeVerificationCustomTabOpen };

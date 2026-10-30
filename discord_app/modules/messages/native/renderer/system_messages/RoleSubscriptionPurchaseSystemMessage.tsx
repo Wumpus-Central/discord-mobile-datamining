@@ -1,21 +1,21 @@
-// === Module 8448: RoleSubscriptionPurchaseSystemMessage ===
+// === Module 8482: RoleSubscriptionPurchaseSystemMessage ===
 
-// Module 8448 (RoleSubscriptionPurchaseSystemMessage)
-import util from "util" /* 1125 */;
-import AvatarUtils from "AvatarUtils" /* 1415 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
-import useMessageAuthor from "useMessageAuthor" /* 6425 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8373 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8375 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8404 */;
-import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8412 */;
-import transformSticker from "transformSticker" /* 8413 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 8482 (RoleSubscriptionPurchaseSystemMessage)
+import util from "util" /* 1114 */;
+import AvatarUtils from "AvatarUtils" /* 1410 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1413 */;
+import useMessageAuthor from "useMessageAuthor" /* 6432 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8410 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8412 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8414 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8441 */;
+import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8446 */;
+import transformSticker from "transformSticker" /* 8447 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 require = fn;
-const SystemChannelFlags = fn(1084).SystemChannelFlags;
+const SystemChannelFlags = fn(1072).SystemChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx");
 
@@ -31,7 +31,7 @@ export function createRoleSubscriptionPurchaseSystemMessage(message) {
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     const guildMemberAvatar = useMessageAuthor.getMessageAuthor(message).guildMemberAvatar;
     const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
     if (null != guildId) {

@@ -1,8 +1,8 @@
-// === Module 19545: AutomodStore ===
+// === Module 19608: AutomodStore ===
 
-// Module 19545 (AutomodStore)
-import _mod4920 from "module_4920" /* 4920 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 19546 */;
+// Module 19608 (AutomodStore)
+import _mod4924 from "module_4924" /* 4924 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 19609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,10 +10,10 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(13091).AutomodTriggerType;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1084).EMPTY_STRING_SNOWFLAKE_ID;
+const AutomodTriggerType = fn(13242).AutomodTriggerType;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
-const identity = fn(1266);
+const identity = fn(1255);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
@@ -54,7 +54,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
       someResult = items.some((id) => id.id === closure_1_2);
-      guildId(1271).batchUpdates(() => {
+      guildId(1260).batchUpdates(() => {
         obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -81,7 +81,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
         return acc;
       }, {});
-      closure_0(1271).batchUpdates(() => {
+      closure_0(1260).batchUpdates(() => {
         const obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -103,7 +103,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -205,23 +205,34 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-fn(558);
-const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutomodRulesEffect(arg0) {
-  const cResult = require("c").c(8);
-  _require = arg0;
-  let first;
-  const tmp2 = first(noop.useState(false), 2);
-  dependencyMap = tmp2[1];
-  const tmp3 = first(withEqualityFn((arg0) => {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
+
+export const useAutomodStore = withEqualityFn;
+export function getRuleCountByTriggerType(guildId, triggerType) {
+  const tmp = withEqualityFn.getState().rules[guildId];
+  let items;
+  if (tmp != null) {
+    items = tmp[triggerType];
+  }
+  if (items == null) {
+    items = [];
+  }
+  return items.length;
+}
+export function useSyncAutomodRules(arg0) {
+  closure_0 = arg0;
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp[1];
+  const tmp2 = _slicedToArray(withEqualityFn((arg0) => {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_4920").shallow), 2);
-  first = tmp3[0];
-  asyncGeneratorStep = tmp5;
-  const items = [tmp2[0], ];
-  const items1 = [arg0, tmp3[1], first];
+  }, _mod4924.shallow), 2);
+  const first = tmp2[0];
+  closure_3 = tmp4;
+  const items = [tmp[0], ];
+  const items1 = [arg0, tmp2[1], first];
   items[1] = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
@@ -233,7 +244,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -287,89 +298,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
       }
     }
   }), items1);
-  let obj = require("c");
-  [tmp7, tmp8] = first(items, 2);
-  _require = tmp8;
-  if (cResult[0] !== tmp8) {
-    const fn = function o() {
-      (async () => {
-        if (c0 === 2) {
-          c0 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: "IconComponent" };
-          }
-        } else {
-          try {
-            c0 = 2;
-            if (0 === c1) {
-              if (arg0 === 1) {
-                c0 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c0 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                c1 = 1;
-                c0 = 1;
-                const obj4 = { value: closure_2_0(), done: false };
-                return obj4;
-              }
-            } else if (arg0 === 1) {
-              c0 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c0 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              c0 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
-            }
-          } catch (tmp6) {
-            c0 = tmp;
-            throw tmp6;
-          }
-        }
-      })();
-    };
-    cResult[0] = tmp8;
-    cResult[1] = fn;
-    let tmp9 = fn;
-  } else {
-    tmp9 = cResult[1];
-  }
-  if (cResult[2] === arg0) {
-    if (cResult[3] === tmp8) {
-      let tmp10 = cResult[4];
-    }
-    const effect = noop.useEffect(tmp9, tmp10);
-    if (cResult[5] === tmp7) {
-      if (cResult[6] === tmp8) {
-        let tmp12 = cResult[7];
-      }
-      return tmp12;
-    }
-    const items2 = [tmp7, tmp8];
-    cResult[5] = tmp7;
-    cResult[6] = tmp8;
-    cResult[7] = items2;
-    tmp12 = items2;
-  }
-  const items3 = [arg0, tmp8];
-  cResult[2] = arg0;
-  cResult[3] = tmp8;
-  cResult[4] = items3;
-  tmp10 = items3;
-  const tmp6 = first(items, 2);
-}) : (function useSyncAutomodRulesEffect(arg0) {
+  return items;
+}
+export function useSyncAutomodRulesEffect(arg0) {
   _require = arg0;
   const tmp = first(noop.useState(false), 2);
   dependencyMap = tmp[1];
@@ -377,7 +308,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_4920").shallow), 2);
+  }, require("module_4924").shallow), 2);
   first = tmp2[0];
   asyncGeneratorStep = tmp4;
   let items = [tmp[0], ];
@@ -393,7 +324,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -462,7 +393,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -490,7 +421,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp6) {
           c0 = tmp;
@@ -501,127 +432,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncAutom
   }, items2);
   const items3 = [tmp5[0], tmp5[1]];
   return items3;
-});
-function useSyncAutomodRules(arg0) {
-  closure_0 = arg0;
-  const tmp = _slicedToArray(noop.useState(false), 2);
-  closure_1 = tmp[1];
-  const tmp2 = _slicedToArray(withEqualityFn((arg0) => {
-    const items = [, ];
-    ({ syncRules: arr[0], fetching: arr[1] } = arg0);
-    return items;
-  }, _mod4920.shallow), 2);
-  const first = tmp2[0];
-  closure_3 = tmp4;
-  const items = [tmp[0], ];
-  const items1 = [arg0, tmp2[1], first];
-  items[1] = noop.useCallback(asyncGeneratorStep(async () => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: "IconComponent" };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_0 = tmp3;
-            if (!closure_3) {
-              if (null != closure_0) {
-                c3 = 1;
-                v2(true);
-                c1 = 2;
-                c4 = 1;
-                const obj4 = { value: first(tmp20), done: false };
-                return obj4;
-              }
-            }
-            c4 = 3;
-          }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          closure_128_1(false);
-          throw closure_2;
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          c3 = 0;
-          closure_128_1(false);
-        }
-        c3 = 0;
-        closure_128_1(false);
-        c4 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } catch (tmp24) {
-        closure_2 = tmp24;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp24;
-        } else {
-          c1 = tmp;
-        }
-      }
-    }
-  }), items1);
-  return items;
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
-
-export const useAutomodStore = withEqualityFn;
-export function getRuleCountByTriggerType(guildId, triggerType) {
-  const tmp = withEqualityFn.getState().rules[guildId];
-  let items;
-  if (tmp != null) {
-    items = tmp[triggerType];
-  }
-  if (items == null) {
-    items = [];
-  }
-  return items.length;
-}
-export { useSyncAutomodRules };
-export const useSyncAutomodRulesEffect = tmp3;
-export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutomodRulesList(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(2);
-  if (cResult[0] !== arg0) {
-    const fn = function u(updateRule) {
-      let tmp = closure_0;
-      if (closure_0 == null) {
-        tmp = EMPTY_STRING_SNOWFLAKE_ID;
-      }
-      let obj = updateRule.rules[tmp];
-      if (obj == null) {
-        obj = {};
-      }
-      return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-    };
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-  }
-  return withEqualityFn(tmp4, require("module_4920").shallow);
-}) : (function useAutomodRulesList(arg0) {
+export function useAutomodRulesList(arg0) {
   _require = arg0;
   return withEqualityFn((updateRule) => {
     let tmp = closure_0;
@@ -633,5 +445,5 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled() 
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("module_4920").shallow);
-});
+  }, require("module_4924").shallow);
+}

@@ -1,8 +1,8 @@
-// === Module 6920: NewUserStore ===
+// === Module 6927: NewUserStore ===
 
-// Module 6920 (NewUserStore)
+// Module 6927 (NewUserStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let c0 = null;
 const PersistedStore = initializeDefault.PersistedStore;

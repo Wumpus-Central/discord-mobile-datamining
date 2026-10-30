@@ -1,8 +1,8 @@
-// === Module 18167: GuildBoostingProgressBarPersistedStore ===
+// === Module 18227: GuildBoostingProgressBarPersistedStore ===
 
-// Module 18167 (GuildBoostingProgressBarPersistedStore)
+// Module 18227 (GuildBoostingProgressBarPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let closure_0 = {};
 const PersistedStore = initializeDefault.PersistedStore;

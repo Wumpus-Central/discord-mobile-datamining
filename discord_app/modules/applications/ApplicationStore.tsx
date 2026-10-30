@@ -1,10 +1,10 @@
-// === Module 2043: ApplicationStore ===
+// === Module 2040: ApplicationStore ===
 
-// Module 2043 (ApplicationStore)
+// Module 2040 (ApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationRecord from "ApplicationRecord" /* 2022 */;
+import ApplicationRecord from "ApplicationRecord" /* 2017 */;
 
 function addApplication(fromServer) {
   value = map.get(fromServer.id);
@@ -212,8 +212,8 @@ prototype["isFetchingApplication"] = function isFetchingApplication(application_
 prototype["isHydrated"] = function isHydrated(applicationId) {
   return set.has(applicationId);
 };
-prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(application_id) {
-  return false === map5.get(application_id);
+prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(applicationId) {
+  return false === map5.get(applicationId);
 };
 prototype["getFetchingOrFailedFetchingIds"] = function getFetchingOrFailedFetchingIds() {
   return Array.from(map5.keys());

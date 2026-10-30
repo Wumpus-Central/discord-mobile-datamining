@@ -1,7 +1,7 @@
-// === Module 5878: getMediaPerformanceClass ===
+// === Module 5885: getMediaPerformanceClass ===
 
-// Module 5878 (getMediaPerformanceClass)
-import DeviceUtils from "DeviceUtils" /* 4962 */;
+// Module 5885 (getMediaPerformanceClass)
+import DeviceUtils from "DeviceUtils" /* 4966 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/device/getMediaPerformanceClass.android.tsx");

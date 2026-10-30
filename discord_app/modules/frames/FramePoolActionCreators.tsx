@@ -1,7 +1,7 @@
-// === Module 11877: FramePoolActionCreators ===
+// === Module 12073: FramePoolActionCreators ===
 
-// Module 11877 (FramePoolActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 12073 (FramePoolActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/FramePoolActionCreators.tsx");

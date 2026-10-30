@@ -1,11 +1,11 @@
-// === Module 9110: GameAutocompleteActionCreators ===
+// === Module 9123: GameAutocompleteActionCreators ===
 
-// Module 9110 (GameAutocompleteActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8639 */;
+// Module 9123 (GameAutocompleteActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8673 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8638 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8672 */;
 
 require = fn;
 let closure_6 = async function _fetchGameAutocomplete(arg0) {
@@ -19,7 +19,7 @@ let closure_6 = async function _fetchGameAutocomplete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_6 = async function _fetchGameAutocomplete(arg0) {
     }
   }
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteActionCreators.tsx");
 

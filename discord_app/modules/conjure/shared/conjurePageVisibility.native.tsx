@@ -1,9 +1,9 @@
-// === Module 12345: conjurePageVisibility ===
+// === Module 12507: conjurePageVisibility ===
 
-// Module 12345 (conjurePageVisibility)
-import AppStateStore from "AppStateStore" /* 1999 */;
+// Module 12507 (conjurePageVisibility)
+import AppStateStore from "AppStateStore" /* 1994 */;
 
-const AppStates = fn(1084).AppStates;
+const AppStates = fn(1072).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/conjurePageVisibility.native.tsx");
 

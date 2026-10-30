@@ -1,6 +1,6 @@
-// === Module 11568: RPCOpcodes ===
+// === Module 11769: RPCOpcodes ===
 
-// Module 11568 (RPCOpcodes)
+// Module 11769 (RPCOpcodes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/RPCOpcodes.tsx");

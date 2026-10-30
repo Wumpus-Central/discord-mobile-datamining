@@ -1,13 +1,13 @@
-// === Module 8676: utils ===
+// === Module 8710: utils ===
 
-// Module 8676 (utils)
+// Module 8710 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DurationsDefault from "Durations" /* 1101 */;
-import util from "util" /* 1125 */;
-import _modDef2047 from "module_2047" /* 2047 */;
-import _mod4434 from "module_4434" /* 4434 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8672 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8677 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import util from "util" /* 1114 */;
+import _modDef2044 from "module_2044" /* 2044 */;
+import _mod4435 from "module_4435" /* 4435 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8706 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8711 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {
@@ -88,7 +88,7 @@ function formatTimestampToA11yLabel(time) {
   items.push(intl3.formatToPlainString(util.t.geSp4K, { seconds }));
   return items.join(", ");
 }
-function formatEndedTimestamp(entry, stateFromStores, timestamp, arg3) {
+function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
   let obj = arg3;
   if (arg3 === undefined) {
     obj = {};
@@ -97,8 +97,8 @@ function formatEndedTimestamp(entry, stateFromStores, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = _modDef2047(timestamp);
-  const tmp3 = _modDef2047;
+  const obj2 = _modDef2044(timestamp);
+  const tmp3 = _modDef2044;
   const diffResult = obj2.diff(tmp3(SnowflakeUtilsDefault.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
   if (absolute < DurationsDefault.Seconds.MINUTE) {
@@ -375,9 +375,9 @@ export function isEntryMarathon(entry) {
   }
   return marathon;
 }
-export function getResurrectedEntryLastPlayTime(traits) {
+export function getResurrectedEntryLastPlayTime(entry) {
   const RESURRECTED = ContentInventoryTraitType.ContentInventoryTraitType.RESURRECTED;
-  traits = traits.traits;
+  const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let prop;
   if (found != null) {
@@ -392,7 +392,7 @@ export function getResurrectedEntryLastPlayTime(traits) {
 }
 export function getFullResurrectedBadgeText(start) {
   const obj2 = { start, end: null };
-  const obj = _mod4434;
+  const obj = _mod4435;
   obj2.end = new Date();
   const intervalToDurationResult = obj.intervalToDuration(obj2);
   const months = intervalToDurationResult.months;
@@ -563,9 +563,9 @@ export function getMarathonDescription(entry) {
     return obj;
   }
 }
-export function getTrendingType(traits) {
+export function getTrendingType(entry) {
   const TRENDING_CONTENT = ContentInventoryTraitType.ContentInventoryTraitType.TRENDING_CONTENT;
-  traits = traits.traits;
+  const traits = entry.traits;
   const found = traits.find((type) => type.type === TRENDING_CONTENT);
   let trending;
   if (found != null) {

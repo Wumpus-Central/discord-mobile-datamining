@@ -1,7 +1,7 @@
-// === Module 1102: utils/ColorUtils ===
+// === Module 1091: utils/ColorUtils ===
 
-// Module 1102 (utils/ColorUtils)
-import _modDef683 from "module_683" /* 683 */;
+// Module 1091 (utils/ColorUtils)
+import _modDef671 from "module_671" /* 671 */;
 import size from "module_2" /* 2 */;
 
 function int2hslRaw(initialColor) {
@@ -41,8 +41,8 @@ function int2hslRaw(initialColor) {
 const re2 = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?/;
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
 
-export function hex2int(PRIMARY_530) {
-  return _modDef683(PRIMARY_530).num();
+export function hex2int(c8) {
+  return _modDef671(c8).num();
 }
 export function int2hex(color) {
   if (color <= 16777215) {
@@ -155,12 +155,12 @@ export function int2hsl(color, arg1) {
   }
   return combined;
 }
-export function hex2rgb(gradientValue) {
+export function hex2rgb(PRIMARY_200) {
   if (alphaResult === undefined) {
     alphaResult = null;
   }
-  if (obj.valid(gradientValue)) {
-    const obj2 = _modDef683(gradientValue);
+  if (obj.valid(PRIMARY_200)) {
+    const obj2 = _modDef671(PRIMARY_200);
     if (alphaResult == null) {
       alphaResult = obj2.alpha();
     }
@@ -168,7 +168,7 @@ export function hex2rgb(gradientValue) {
   } else {
     return null;
   }
-  obj = _modDef683;
+  obj = _modDef671;
 }
 export function int2rgba(primaryColor, arg1) {
   let result = arg1;
@@ -177,8 +177,8 @@ export function int2rgba(primaryColor, arg1) {
   }
   return "rgba(" + primaryColor >> 16 & 255 + ", " + primaryColor >> 8 & 255 + ", " + 255 & primaryColor + ", " + result + ")";
 }
-export function rgb2int(dominantColorFromImage) {
-  const match = dominantColorFromImage.match(re2);
+export function rgb2int(tmp2Result5) {
+  const match = tmp2Result5.match(re2);
   if (null != match) {
     const color1 = { red: null, green: null, blue: null };
     const _parseInt = parseInt;
@@ -230,7 +230,7 @@ export function getDarkness(hex2intResult) {
   return 1 - (0.299 * (hex2intResult >> 16 & 255) + 0.587 * (hex2intResult >> 8 & 255) + 0.114 * (255 & hex2intResult)) / 255;
 }
 export function isValidHex(variantValue) {
-  return _modDef683.valid(variantValue);
+  return _modDef671.valid(variantValue);
 }
 export function int2rgbArray(modalV2BackgroundColor) {
   const items = [modalV2BackgroundColor >> 16 & 255, modalV2BackgroundColor >> 8 & 255, 255 & modalV2BackgroundColor];

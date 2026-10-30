@@ -1,22 +1,22 @@
-// === Module 17614: DevToolsInAppNotificationTestingScreen ===
+// === Module 17685: DevToolsInAppNotificationTestingScreen ===
 
-// Module 17614 (DevToolsInAppNotificationTestingScreen)
+// Module 17685 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1199 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5701 */;
-import StickersTypes from "StickersTypes" /* 6548 */;
-import TableRowGroup from "TableRowGroup" /* 7047 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 14223 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 14225 */;
+import nativeDefault from "native" /* 575 */;
+import native from "native" /* 1188 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+import StickersTypes from "StickersTypes" /* 6555 */;
+import TableRowGroup from "TableRowGroup" /* 7054 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11003 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11005 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6824 */;
-import MessageRecord from "MessageRecord" /* 4948 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
-import UserStore from "UserStore" /* 1389 */;
+import StickersStore from "StickersStore" /* 6831 */;
+import MessageRecord from "MessageRecord" /* 4952 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import UserStore from "UserStore" /* 1384 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ function getSelectedGuildChannel() {
   } else {
     const guildId = channel.getGuildId();
     obj = { channel, guild: null };
-    guild = undefined;
+    let guild;
     if (null != guildId) {
       guild = GuildStore.getGuild(guildId);
     }
@@ -63,7 +63,7 @@ function buildTestMessageData(arg0) {
   } else {
     const guildId = channel.getGuildId();
     obj = { channel, guild: null };
-    guild = undefined;
+    let guild;
     if (null != guildId) {
       guild = GuildStore.getGuild(guildId);
     }
@@ -178,12 +178,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(4861).createChannelRecord;
-const Constants = fn(1084);
+const createChannelRecord = fn(4862).createChannelRecord;
+const Constants = fn(1072);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -297,7 +297,7 @@ const items3 = [
       } else {
         const guildId = channel.getGuildId();
         obj = { channel, guild: null };
-        guild = undefined;
+        let guild;
         if (null != guildId) {
           guild = GuildStore.getGuild(guildId);
         }
@@ -472,188 +472,10 @@ const items3 = [
     }
   }
 ];
-const ReactCompilerGating = fn(558);
-let obj4 = { padding: nativeDefault.space.PX_16 };
-let obj5 = {
-  type: InAppNotificationTypes.MESSAGE,
-  label: "Message",
-  build: function buildMessageNotification(arg0) {
-    const tmp = buildTestMessageData(arg0);
-    if (null == tmp) {
-      return null;
-    } else {
-      ({ channel, message } = tmp);
-      const obj4 = { type: InAppNotificationTypes.MESSAGE, channel, guild: tmp.guild, parentChannel: null, message: null, mentionCount: 1 };
-      let channel1;
-      if (null != channel.parent_id) {
-        channel1 = ChannelStore.getChannel(channel.parent_id);
-      }
-      obj4.parentChannel = channel1;
-      obj4.message = message;
-      const obj = {
-        key: message.id,
-        duration: InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.MESSAGE),
-        onDismiss() {
-            return InAppNotificationActionCreatorsDefault.clearNotification();
-          },
-        inAppNotificationId: null
-      };
-      obj.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-      const merged = Object.assign(obj);
-      return obj4;
-    }
-  }
-};
-let obj6 = {
-  type: InAppNotificationTypes.MESSAGE_FAILED_TO_SEND,
-  label: "Message Failed To Send",
-  subLabel: "Enqueues notification using the currently selected channel.",
-  build: function buildMessageFailedToSendNotification() {
-    const channelId = SelectedChannelStore.getChannelId();
-    let channel;
-    if (null != channelId) {
-      channel = ChannelStore.getChannel(channelId);
-    }
-    if (null == channel) {
-      ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
-      let obj = null;
-    } else {
-      const guildId = channel.getGuildId();
-      obj = { channel, guild: null };
-      guild = undefined;
-      if (null != guildId) {
-        guild = GuildStore.getGuild(guildId);
-      }
-      obj.guild = guild;
-    }
-    if (null == obj) {
-      return null;
-    } else {
-      const obj3 = SnowflakeUtilsDefault;
-      const _Date = Date;
-      const castResult = obj3.cast(SnowflakeUtilsDefault.fromTimestamp(Date.now()));
-      const obj5 = { type: InAppNotificationTypes.MESSAGE_FAILED_TO_SEND, channelId: obj.channel.id, messageId: castResult };
-      const obj6 = { key: castResult, duration: null, onDismiss: null, inAppNotificationId: null };
-      obj6.duration = InAppNotificationUtils.getNotificationDuration(InAppNotificationTypes.MESSAGE_FAILED_TO_SEND);
-      obj6.onDismiss = function onDismiss() {
-        return InAppNotificationActionCreatorsDefault.clearNotification();
-      };
-      obj6.inAppNotificationId = InAppNotificationUtils.generateInAppNotificationId();
-      const merged = Object.assign(obj6);
-      return obj5;
-    }
-  }
-};
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsInAppNotificationTestingScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevToolsInAppNotificationTestingScreen() {
-  const cResult = first(576).c(12);
-  const tmp4 = closure_16();
-  let obj = first(576);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l(build) {
-      const buildResult = build.build();
-      if (null != buildResult) {
-        InAppNotificationActionCreatorsDefault.enqueueNotification(buildResult);
-      }
-    };
-    cResult[0] = fn;
-    first = fn;
-  } else {
-    first = cResult[0];
-  }
-  const sum = tmp4.content.padding + useSafeAreaInsetsDefault().bottom;
-  if (cResult[1] !== sum) {
-    let obj2 = { paddingBottom: sum };
-    cResult[1] = sum;
-    cResult[2] = obj2;
-    let tmp9 = obj2;
-  } else {
-    tmp9 = cResult[2];
-  }
-  if (cResult[3] === tmp4.content) {
-    if (cResult[4] === tmp9) {
-      let tmp10 = cResult[5];
-    }
-    const _Symbol = Symbol;
-    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { size: nativeDefault.space.PX_16 };
-      const tmp14 = closure_14(tmp(1199).Spacer, obj3);
-      const mapped = closure_25.map((title) => {
-        const obj = { children: null };
-        const obj2 = { title: title.title, description: "Enqueues notification using the currently selected channel.", hasIcons: true, children: null };
-        const options = title.options;
-        obj2.children = options.map((label) => {
-          closure_0 = label;
-          return closure_1_14(first(6963).TableRow, {
-            label: label.label,
-            subLabel: label.subLabel,
-            icon: closure_1_14(first(17457).BeakerIcon, {}),
-            onPress() {
-              return first(closure_0);
-            },
-            trailing: closure_1_14(first(6972).TableRowArrow, {})
-          }, label.label);
-        });
-        items = [closure_2_14(TableRowGroup.TableRowGroup, obj2), closure_2_14(native.Spacer, { size: nativeDefault.space.PX_16 })];
-        obj.children = items;
-        return value2(noop.Fragment, obj, title.title);
-      });
-      cResult[6] = tmp14;
-      cResult[7] = mapped;
-      let tmp12 = mapped;
-      let tmp11 = tmp14;
-    } else {
-      tmp11 = cResult[6];
-      tmp12 = cResult[7];
-    }
-    const _Symbol2 = Symbol;
-    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = {
-        title: "Other Notification Types",
-        hasIcons: true,
-        children: items3.map((label) => {
-              closure_0 = label;
-              return closure_1_14(first(6963).TableRow, {
-                label: label.label,
-                subLabel: label.subLabel,
-                icon: closure_1_14(first(17457).BeakerIcon, {}),
-                onPress() {
-                  return first(closure_0);
-                },
-                trailing: closure_1_14(first(6972).TableRowArrow, {})
-              }, label.label);
-            })
-      };
-      const tmp20 = closure_14(tmp(7047).TableRowGroup, obj4);
-      cResult[8] = tmp20;
-      let tmp17 = tmp20;
-    } else {
-      tmp17 = cResult[8];
-    }
-    if (cResult[9] === tmp4.container) {
-      if (cResult[10] === tmp10) {
-        let tmp21 = cResult[11];
-      }
-      return tmp21;
-    }
-    const obj5 = { style: tmp4.container, contentContainerStyle: tmp10, children: null };
-    items = [tmp11, tmp12, tmp17];
-    obj5.children = items;
-    const tmp24 = closure_15(ScrollView, obj5);
-    cResult[9] = tmp4.container;
-    cResult[10] = tmp10;
-    cResult[11] = tmp24;
-    tmp21 = tmp24;
-  }
-  items1 = [tmp4.content, tmp9];
-  cResult[3] = tmp4.content;
-  cResult[4] = tmp9;
-  cResult[5] = items1;
-  tmp10 = items1;
-  const tmp6 = useSafeAreaInsetsDefault();
-}) : (function DevToolsInAppNotificationTestingScreen() {
+export default function DevToolsInAppNotificationTestingScreen() {
   const tmp = closure_16();
   _require = noop.useCallback((build) => {
     const buildResult = build.build();
@@ -673,19 +495,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       const options = title.options;
       obj2.children = options.map((label) => {
         closure_0 = label;
-        return closure_1_14(closure_1_0(6963).TableRow, {
+        return closure_1_14(closure_1_0(6969).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(17457).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(17511).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
-          trailing: closure_1_14(closure_1_0(6972).TableRowArrow, {})
+          trailing: closure_1_14(closure_1_0(6978).TableRowArrow, {})
         }, label.label);
       });
       items = [closure_2_14(TableRowGroup.TableRowGroup, obj2), closure_2_14(native.Spacer, { size: nativeDefault.space.PX_16 })];
       obj.children = items;
-      return value2(noop.Fragment, obj, title.title);
+      return __initData(noop.Fragment, obj, title.title);
     }),
 
   ];
@@ -693,16 +515,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   items1[2] = closure_14(require("TableRowGroup").TableRowGroup, {
     title: "Other Notification Types",
     hasIcons: true,
-    children: items3.map((label) => closure_1_14(label(6963).TableRow, {
+    children: items3.map((label) => closure_1_14(label(6969).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(17457).BeakerIcon, {}),
+      icon: closure_1_14(label(17511).BeakerIcon, {}),
       onPress() {
         return label(label);
       },
-      trailing: closure_1_14(label(6972).TableRowArrow, {})
+      trailing: closure_1_14(label(6978).TableRowArrow, {})
     }, label.label))
   });
   obj.children = items1;
   return closure_15(ScrollView, obj);
-});
+};

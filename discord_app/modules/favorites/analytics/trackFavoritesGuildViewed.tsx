@@ -1,15 +1,15 @@
-// === Module 18715: trackFavoritesGuildViewed ===
+// === Module 18774: trackFavoritesGuildViewed ===
 
-// Module 18715 (trackFavoritesGuildViewed)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1989 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10798 */;
-import UserStore from "UserStore" /* 1389 */;
-import FavoriteStore from "FavoriteStore" /* 4860 */;
+// Module 18774 (trackFavoritesGuildViewed)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1984 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10822 */;
+import UserStore from "UserStore" /* 1384 */;
+import FavoriteStore from "FavoriteStore" /* 4861 */;
 
 require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const PremiumTypes = fn(1391).PremiumTypes;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const PremiumTypes = fn(1386).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/trackFavoritesGuildViewed.tsx");
 

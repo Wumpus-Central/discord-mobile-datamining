@@ -2,8 +2,8 @@
 
 // Module 501 (DerivedQosDataStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import DerivedQosDataStorage from "DerivedQosDataStorage" /* 15940 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import DerivedQosDataStorage from "DerivedQosDataStorage" /* 15980 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

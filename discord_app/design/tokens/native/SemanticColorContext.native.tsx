@@ -1,22 +1,22 @@
-// === Module 5175: SemanticColorContext ===
+// === Module 5181: SemanticColorContext ===
 
-// Module 5175 (SemanticColorContext)
-import _modDef683 from "module_683" /* 683 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
-import native from "native" /* 5176 */;
-import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 5180 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5181 */;
+// Module 5181 (SemanticColorContext)
+import _modDef671 from "module_671" /* 671 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import native from "native" /* 5182 */;
+import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 5186 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5187 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
-export function getSemanticColorContextFromThemeContext(primaryColor) {
-  primaryColor = primaryColor.primaryColor;
-  const gradientThemeFromFlags = getGradientThemeFromFlags.getGradientThemeFromFlags(primaryColor);
-  ({ contrast, saturation, enabledExperiments } = primaryColor);
-  let gradientThemeMetadata = client_themes_ClientThemesUtils.getGradientThemeMetadata(gradientThemeFromFlags, primaryColor.gradient);
+export function getSemanticColorContextFromThemeContext(themeContext) {
+  const primaryColor = themeContext.primaryColor;
+  const gradientThemeFromFlags = getGradientThemeFromFlags.getGradientThemeFromFlags(themeContext);
+  ({ contrast, saturation, enabledExperiments } = themeContext);
+  let gradientThemeMetadata = client_themes_ClientThemesUtils.getGradientThemeMetadata(gradientThemeFromFlags, themeContext.gradient);
   if (null != primaryColor) {
-    ({ primaryColor: primaryColor2, secondaryColor } = primaryColor);
+    ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
     let tmp9 = null;
     if (null != primaryColor2) {
       const int2hexResult = utils_ColorUtils.int2hex(primaryColor2);
@@ -26,9 +26,9 @@ export function getSemanticColorContextFromThemeContext(primaryColor) {
       }
       const int2hexResult1 = utils_ColorUtils.int2hex(secondaryColor);
       const tmpResult3 = utils_ColorUtils;
-      const obj5 = _modDef683(int2hexResult);
-      const mixResult = _modDef683(int2hexResult).mix(int2hexResult1, 0.5);
-      const hexResult = _modDef683(int2hexResult).mix(int2hexResult1, 0.5).hex();
+      const obj5 = _modDef671(int2hexResult);
+      const mixResult = _modDef671(int2hexResult).mix(int2hexResult1, 0.5);
+      const hexResult = _modDef671(int2hexResult).mix(int2hexResult1, 0.5).hex();
       let str = "dark";
       if (tmpResult4.isThemeLight(tmp10)) {
         str = "light";

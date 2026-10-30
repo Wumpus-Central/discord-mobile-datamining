@@ -1,11 +1,11 @@
-// === Module 10798: FavoritesGuildAnalytics ===
+// === Module 10822: FavoritesGuildAnalytics ===
 
-// Module 10798 (FavoritesGuildAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
+// Module 10822 (FavoritesGuildAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
 
 const require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 let manual_browsing = "manual_browsing";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/FavoritesGuildAnalytics.tsx");

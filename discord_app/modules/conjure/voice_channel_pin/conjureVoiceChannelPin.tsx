@@ -1,12 +1,12 @@
-// === Module 10917: conjureVoiceChannelPin ===
+// === Module 10940: conjureVoiceChannelPin ===
 
-// Module 10917 (conjureVoiceChannelPin)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 10160 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
+// Module 10940 (conjureVoiceChannelPin)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 8191 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10854 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
 
 require = fn;
 function canPinVoiceChannel(arg0) {
@@ -36,7 +36,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -99,7 +99,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
     }
   })();
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: metroRequire, Permissions: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/voice_channel_pin/conjureVoiceChannelPin.tsx");

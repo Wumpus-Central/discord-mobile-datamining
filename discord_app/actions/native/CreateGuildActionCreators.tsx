@@ -1,10 +1,10 @@
-// === Module 14158: CreateGuildActionCreators ===
+// === Module 14305: CreateGuildActionCreators ===
 
-// Module 14158 (CreateGuildActionCreators)
-import GuildChannelStore from "GuildChannelStore" /* 4935 */;
+// Module 14305 (CreateGuildActionCreators)
+import GuildChannelStore from "GuildChannelStore" /* 4939 */;
 
 const require = fn;
-const InstantInviteSources = fn(1084).InstantInviteSources;
+const InstantInviteSources = fn(1072).InstantInviteSources;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/native/CreateGuildActionCreators.tsx");
 

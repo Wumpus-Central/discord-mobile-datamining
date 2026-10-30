@@ -1,11 +1,9 @@
-// === Module 14956: useProductDescription ===
+// === Module 14999: useProductDescription ===
 
-// Module 14956 (useProductDescription)
+// Module 14999 (useProductDescription)
 import _mod19 from "module_19" /* 19 */;
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import util from "util" /* 1114 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1988 */;
 import size from "module_2" /* 2 */;
 
 function getBundleDescription(bundledProducts) {
@@ -103,25 +101,12 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
 
 export { getProductDescription };
-export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled() ? (function useProductDescription(summary, arg1) {
-  const cResult = c.c(3);
-  if (cResult[0] === summary) {
-    if (cResult[1] === tmp2) {
-      let tmp3 = cResult[2];
-    }
-    return tmp3;
-  }
-  const tmp4 = getProductDescription(summary, undefined !== arg1 && arg1);
-  cResult[0] = summary;
-  cResult[1] = undefined !== arg1 && arg1;
-  cResult[2] = tmp4;
-  tmp3 = tmp4;
-}) : (function useProductDescription(arg0) {
-  closure_0 = arg0;
+export function useProductDescription(product) {
+  closure_0 = product;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [arg0, flag];
+  const items = [product, flag];
   return useMemo(() => getProductDescription(closure_0, flag), items);
-});
+}

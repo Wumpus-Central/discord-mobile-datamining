@@ -1,18 +1,15 @@
-// === Module 16518: DismissibleBadgeUtils ===
+// === Module 16569: DismissibleBadgeUtils ===
 
-// Module 16518 (DismissibleBadgeUtils)
-import c from "c" /* 576 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 16517 */;
+// Module 16569 (DismissibleBadgeUtils)
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 16568 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
-require = fn;
+const require = fn;
 function useAlwaysShow() {
   return true;
 }
-const ContentDismissActionType = fn(4854).ContentDismissActionType;
+const ContentDismissActionType = fn(4855).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_7 = [];
 const size = fn(2);
@@ -46,25 +43,13 @@ export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS) 
   };
 }
 export function createDismissibleBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
-  _require = CUSTOM_APP_ICONS_NEW_BADGE;
-  const obj = require("ReactCompilerGating");
+  const dismissibleContent = CUSTOM_APP_ICONS_NEW_BADGE;
   closure_129_0 = CUSTOM_APP_ICONS_NEW_BADGE;
   closure_129_1 = useAlwaysShow;
   return {
-    useTrailing: require("ReactCompilerGating").isReactCompilerEnabled() ? (function useTrailing() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { dismissibleContent, newPremiumStyle: true };
-        const tmp7 = jsx(DismissiblePremiumNewBadgeDefault, { dismissibleContent, newPremiumStyle: true });
-        cResult[0] = tmp7;
-        let first = tmp7;
-      } else {
-        first = cResult[0];
-      }
-      return first;
-    }) : (function useTrailing() {
+    useTrailing() {
       return jsx(DismissiblePremiumNewBadgeDefault, { dismissibleContent, newPremiumStyle: true });
-    }),
+    },
     usePreNavigationAction() {
       const tmp = closure_1();
       if (tmp) {

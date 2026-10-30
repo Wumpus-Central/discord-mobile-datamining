@@ -1,133 +1,27 @@
-// === Module 18185: DMChannel ===
+// === Module 18245: DMChannel ===
 
-// Module 18185 (DMChannel)
-import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5745 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9054 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10759 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 17973 */;
-import ChannelItemDefault from "ChannelItem" /* 18069 */;
+// Module 18245 (DMChannel)
+import nativeDefault from "native" /* 575 */;
+import transitionToChannel from "transitionToChannel" /* 5751 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9066 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10782 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 18034 */;
+import ChannelItemDefault from "ChannelItem" /* 18118 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6829 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6762 */;
+import ReadStateStore from "ReadStateStore" /* 6836 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
 
 require = fn;
-const UnreadSetting = fn(6763).UnreadSetting;
+const UnreadSetting = fn(6770).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
-let obj = { container: { marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5009);
+let obj = { container: { marginVertical: fn(11027).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(12046).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11027).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function DMChannel(channel) {
-  const cResult = channel(576).c(31);
-  channel = channel.channel;
-  closure_8();
-  if (cResult[0] !== channel.id) {
-    const fn = function s() {
-      const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
-    };
-    cResult[0] = channel.id;
-    cResult[1] = fn;
-  }
-  if (cResult[2] !== channel.id) {
-    const fn2 = function _() {
-      transitionToChannel.transitionToChannel(channel.id);
-    };
-    cResult[2] = channel.id;
-    cResult[3] = fn2;
-  }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ReadStateStore];
-    cResult[4] = items;
-    let tmp7 = items;
-  } else {
-    tmp7 = cResult[4];
-  }
-  if (cResult[5] !== channel.id) {
-    class L {
-      constructor() {
-        obj = { hasUnread: closure_4.hasUnread(channel.id), mentionCount: closure_4.getMentionCount(channel.id) };
-        return obj;
-      }
-    }
-    const items1 = [channel.id];
-    cResult[5] = channel.id;
-    cResult[6] = L;
-    cResult[7] = items1;
-    let tmp10 = items1;
-  } else {
-    class L {
-      constructor() {
-        obj = { hasUnread: closure_4.hasUnread(channel.id), mentionCount: closure_4.getMentionCount(channel.id) };
-        return obj;
-      }
-    }
-    tmp10 = cResult[7];
-  }
-  const obj = channel(576);
-  const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp7, L, tmp10);
-  ({ hasUnread, mentionCount } = stateFromStoresObject);
-  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    class L {
-      constructor() {
-        obj = { hasUnread: closure_4.hasUnread(channel.id), mentionCount: closure_4.getMentionCount(channel.id) };
-        return obj;
-      }
-    }
-    const items2 = [UserGuildSettingsStore];
-    cResult[8] = items2;
-    const tmp12 = items2;
-  } else {
-    class L {
-      constructor() {
-        obj = { hasUnread: closure_4.hasUnread(channel.id), mentionCount: closure_4.getMentionCount(channel.id) };
-        return obj;
-      }
-    }
-  }
-  if (cResult[9] !== channel) {
-    class U {
-      constructor() {
-        return closure_5.isChannelMuted(channel.getGuildId(), channel.id);
-      }
-    }
-    const items3 = [channel];
-    cResult[9] = channel;
-    cResult[10] = U;
-    cResult[11] = items3;
-    let tmp14 = items3;
-  } else {
-    class U {
-      constructor() {
-        return closure_5.isChannelMuted(channel.getGuildId(), channel.id);
-      }
-    }
-    tmp14 = cResult[11];
-  }
-  const tmpResult = channel(504);
-  const stateFromStores = channel(504).useStateFromStores(tmp12, U, tmp14);
-  const tmpResult2 = channel(504);
-  ({ isIncomingCall, isOngoingCall } = useCallA11yStateDefault(channel.id));
-  if (cResult[12] === channel) {
-    class U {
-      constructor() {
-        return closure_5.isChannelMuted(channel.getGuildId(), channel.id);
-      }
-    }
-  }
-  const tmp17 = useCallA11yStateDefault(channel.id);
-  cResult[12] = channel;
-  cResult[13] = hasUnread;
-  cResult[14] = isIncomingCall;
-  cResult[15] = isOngoingCall;
-  cResult[16] = mentionCount;
-  cResult[17] = getChannelA11yLabelDefault({ channel, unread: hasUnread, mentionCount, isIncomingCall, isOngoingCall });
-  const tmp18 = getChannelA11yLabelDefault({ channel, unread: hasUnread, mentionCount, isIncomingCall, isOngoingCall });
-}) : (function DMChannel(channel) {
+export default noop.memo(function DMChannel(channel) {
   channel = channel.channel;
   const selected = channel.selected;
   const items = [channel.id];
@@ -160,4 +54,4 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj3.mentionCount = mentionCount;
   obj3.muted = stateFromStores;
   return jsx(ChannelItemDefault, { onPress: callback1, onLongPress: callback, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, unread: null, resolvedUnreadSetting: null, mentionCount: null, muted: null });
-}));
+});

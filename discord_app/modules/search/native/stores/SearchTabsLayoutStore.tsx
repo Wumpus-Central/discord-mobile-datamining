@@ -1,18 +1,18 @@
-// === Module 13715: SearchTabsLayoutStore ===
+// === Module 13862: SearchTabsLayoutStore ===
 
-// Module 13715 (SearchTabsLayoutStore)
+// Module 13862 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13692 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13693 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13694 */;
-import SearchUtils from "SearchUtils" /* 13696 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import SearchMessageStore from "SearchMessageStore" /* 6850 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13716 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 13717 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13718 */;
-import SearchQueryStore from "SearchQueryStore" /* 13703 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13839 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13840 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 13841 */;
+import SearchUtils from "SearchUtils" /* 13843 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import SearchMessageStore from "SearchMessageStore" /* 6857 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13863 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 13864 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13865 */;
+import SearchQueryStore from "SearchQueryStore" /* 13850 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -159,7 +159,7 @@ function computeLayoutForState(value) {
     if (!tmp18) {
       let tmp19 = null != visibleTabCounts2 && null != visibleTabCounts;
       if (tmp19) {
-        tmp19 = searchContext(568)(visibleTabCounts2, visibleTabCounts);
+        tmp19 = searchContext(558)(visibleTabCounts2, visibleTabCounts);
       }
       tmp18 = tmp19;
     }
@@ -194,7 +194,7 @@ function computeLayoutForAll() {
   return flag;
 }
 SmartSearchResultsStoreDefault;
-const SearchConstants = fn(9780);
+const SearchConstants = fn(9806);
 ({ SearchTabs: c10, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_12 } = SearchConstants);
 let closure_13 = [];
 const map = new Map();

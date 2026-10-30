@@ -1,48 +1,23 @@
-// === Module 5746: useGuildIdForChannelRoute ===
+// === Module 5752: useGuildIdForChannelRoute ===
 
-// Module 5746 (useGuildIdForChannelRoute)
+// Module 5752 (useGuildIdForChannelRoute)
 import initialize from "initialize" /* 504 */;
-import c from "c" /* 576 */;
-import FavoriteStore from "FavoriteStore" /* 4860 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5036 */;
+import FavoriteStore from "FavoriteStore" /* 4861 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
 
 require = fn;
-const FAVORITES = fn(1084).FAVORITES;
-const ReactCompilerGating = fn(558);
+const FAVORITES = fn(1072).FAVORITES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildIdForChannelRoute(getGuildId) {
-  const cResult = c.c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [SelectedGuildStore];
-    const fn = function l() {
-      return guildId.getGuildId();
-    };
-    cResult[0] = items;
-    cResult[1] = fn;
-    tmp4 = items;
-    tmp5 = fn;
-  } else {
-    [tmp4, tmp5] = cResult;
-  }
-  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-  if (null != stateFromStores) {
-    return stateFromStores;
-  } else if (cResult[2] !== getGuildId) {
-    const guildId = getGuildId.getGuildId();
-    cResult[2] = getGuildId;
-    cResult[3] = guildId;
-  }
-  const tmpResult = initialize;
-}) : (function useGuildIdForChannelRoute(getGuildId) {
+export default function useGuildIdForChannelRoute(getGuildId) {
   const items = [SelectedGuildStore];
   let stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
   if (null == stateFromStores) {
     stateFromStores = getGuildId.getGuildId();
   }
   return stateFromStores;
-});
+};
 export function getGuildIdForGenericRedirect(channel) {
   if (!obj.isFavoritesGuildId(SelectedGuildStore.getGuildId())) {
     let guildId = channel.getGuildId();

@@ -1,8 +1,8 @@
-// === Module 7637: SkippedClientHeartbeatUtil ===
+// === Module 7642: SkippedClientHeartbeatUtil ===
 
-// Module 7637 (SkippedClientHeartbeatUtil)
-import sampleWithUserId from "sampleWithUserId" /* 7638 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 7642 (SkippedClientHeartbeatUtil)
+import sampleWithUserId from "sampleWithUserId" /* 7643 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 const size = fn(2);

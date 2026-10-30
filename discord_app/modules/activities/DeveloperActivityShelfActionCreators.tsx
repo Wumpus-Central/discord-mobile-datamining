@@ -1,7 +1,7 @@
-// === Module 12118: DeveloperActivityShelfActionCreators ===
+// === Module 12294: DeveloperActivityShelfActionCreators ===
 
-// Module 12118 (DeveloperActivityShelfActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 12294 (DeveloperActivityShelfActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/DeveloperActivityShelfActionCreators.tsx");

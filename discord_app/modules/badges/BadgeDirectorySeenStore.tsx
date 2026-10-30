@@ -1,8 +1,8 @@
-// === Module 11220: BadgeDirectorySeenStore ===
+// === Module 11425: BadgeDirectorySeenStore ===
 
-// Module 11220 (BadgeDirectorySeenStore)
+// Module 11425 (BadgeDirectorySeenStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let obj = { seenBadgeIndicatorIds: new Set() };
 const PersistedStore = initializeDefault.PersistedStore;

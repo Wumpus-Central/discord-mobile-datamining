@@ -1,6 +1,6 @@
-// === Module 10918: ConjurePublishTypes ===
+// === Module 10941: ConjurePublishTypes ===
 
-// Module 10918 (ConjurePublishTypes)
+// Module 10941 (ConjurePublishTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/ConjurePublishTypes.tsx");
@@ -22,4 +22,4 @@ export function canPublish(publishState) {
   }
   return tmp;
 }
-export const CONJURE_PUBLISH_PROGRESS_STAGES = ["preparing", "approval", "setup", "build", "deploy", "discord", "activating"];
+export const CONJURE_PUBLISH_PROGRESS_STAGES = ["preparing", "approval", "approved_by_grant", "setup", "build", "deploy", "discord", "activating"];

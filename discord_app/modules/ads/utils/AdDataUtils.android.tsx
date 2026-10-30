@@ -1,16 +1,13 @@
-// === Module 7860: AdDataUtils ===
+// === Module 7865: AdDataUtils ===
 
-// Module 7860 (AdDataUtils)
-import AdUserActionCreators from "AdUserActionCreators" /* 7863 */;
+// Module 7865 (AdDataUtils)
+import AdUserActionCreators from "AdUserActionCreators" /* 7868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AdUserStore from "AdUserStore" /* 7861 */;
-
-const require = globalThis.__r;
+import AdUserStore from "AdUserStore" /* 7866 */;
 
 require = fn;
-const DEFAULT_TIMEOUT_MS = fn(7862).DEFAULT_TIMEOUT_MS;
-const ReactCompilerGating = fn(558);
+const DEFAULT_TIMEOUT_MS = fn(7867).DEFAULT_TIMEOUT_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
 
@@ -52,46 +49,7 @@ export function getAdUser(questContentName) {
   }
   resolved = Promise.resolve(adUser);
 }
-export const useAdUser = ReactCompilerGating.isReactCompilerEnabled() ? (function useAdUser(arg0) {
-  _require = arg0;
-  const cResult = require("c").c(3);
-  const obj = require("c");
-  [tmp3, dependencyMap] = noop.useState(AdUserStore.adUser);
-  if (cResult[0] !== arg0) {
-    const fn = function h() {
-      let hasFetchFailed = null != AdUserStore.adUser;
-      if (!hasFetchFailed) {
-        hasFetchFailed = AdUserStore.isFetching;
-      }
-      if (!hasFetchFailed) {
-        hasFetchFailed = AdUserStore.hasFetchFailed;
-      }
-      if (!hasFetchFailed) {
-        const adUser = closure_0(dependencyMap[4]).fetchAdUser(handleStoreChange);
-        const obj2 = closure_0(dependencyMap[4]);
-      }
-      handleStoreChange = function handleStoreChange() {
-        if (tmp2) {
-          closure_1_1(AdUserStore.adUser);
-        }
-        tmp2 = null != AdUserStore.adUser || AdUserStore.hasFetchFailed;
-      };
-      AdUserStore.addChangeListener(handleStoreChange);
-      return () => AdUserStore.removeChangeListener(handleStoreChange);
-    };
-    const items = [arg0];
-    cResult[0] = arg0;
-    cResult[1] = fn;
-    cResult[2] = items;
-    let tmp5 = items;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-    tmp5 = cResult[2];
-  }
-  const effect = noop.useEffect(tmp4, tmp5);
-  return tmp3;
-}) : (function useAdUser(arg0) {
+export function useAdUser(arg0) {
   closure_0 = arg0;
   const tmp = _slicedToArray(noop.useState(AdUserStore.adUser), 2);
   dependencyMap = tmp[1];
@@ -118,4 +76,4 @@ export const useAdUser = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return () => AdUserStore.removeChangeListener(handleStoreChange);
   }, items);
   return tmp[0];
-});
+}

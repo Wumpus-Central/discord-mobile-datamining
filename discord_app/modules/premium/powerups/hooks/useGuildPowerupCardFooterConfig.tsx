@@ -1,100 +1,26 @@
-// === Module 13925: useGuildPowerupCardFooterConfig ===
+// === Module 14057: useGuildPowerupCardFooterConfig ===
 
-// Module 13925 (useGuildPowerupCardFooterConfig)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 13888 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13892 */;
-import GuildStore from "GuildStore" /* 4879 */;
+// Module 14057 (useGuildPowerupCardFooterConfig)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 14022 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 14026 */;
+import GuildStore from "GuildStore" /* 4880 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5219);
+const GuildPowerupsConstants = fn(5225);
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4, PowerupActiveStatusType: hasOwnProperty } = GuildPowerupsConstants);
-const GuildFeatures = fn(1084).GuildFeatures;
-const ReactCompilerGating = fn(558);
+const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildPowerupCardFooterConfig(arg0, skuId) {
-  _require = arg0;
-  const cResult = require("c").c(11);
-  const tmp5 = usePowerupActiveStatusDefault(arg0, skuId);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] !== arg0) {
-    const fn = function n() {
-      guild = GuildStore.getGuild(closure_0);
-      let hasItem;
-      if (guild != null) {
-        const features = guild.features;
-        hasItem = features.has(GuildFeatures.GUILD_THEME);
-      }
-      return true === hasItem;
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp9 = items1;
-    let tmp8 = fn;
-  } else {
-    tmp8 = cResult[2];
-    tmp9 = cResult[3];
-  }
-  const obj = require("c");
-  const stateFromStores = require("initialize").useStateFromStores(first, tmp8, tmp9);
-  let tmp12 = tmp5.type !== constants.INACTIVE;
-  if (!tmp12) {
-    tmp12 = skuId.skuId === tmp(5222).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-    const tmp13 = skuId.skuId === tmp(5222).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-  }
-  let tmp14 = tmp12;
-  if (!tmp12) {
-    tmp14 = !useGuildPowerupRollbackEnabledDefault(arg0, skuId, "GuildPowerupCardFooterAdmin");
-  }
-  if (tmp14) {
-    tmp14 = tmp5.type !== constants.TIER_OVERRIDE_ACTIVATED;
-  }
-  if (cResult[4] === tmp12) {
-    if (cResult[5] === skuId.skuId) {
-      let tmp15 = cResult[6];
-    }
-    if (cResult[7] === tmp12) {
-      if (cResult[8] === tmp15) {
-        if (cResult[9] === tmp14) {
-          let tmp17 = cResult[10];
-        }
-        return tmp17;
-      }
-    }
-    const obj2 = { showToggleButton: tmp14, showConfigureButton: tmp15, isPowerupActive: tmp12 };
-    cResult[7] = tmp12;
-    cResult[8] = tmp15;
-    cResult[9] = tmp14;
-    cResult[10] = obj2;
-    tmp17 = obj2;
-  }
-  let hasItem = tmp12;
-  if (tmp12) {
-    hasItem = set.has(skuId.skuId);
-  }
-  cResult[4] = tmp12;
-  cResult[5] = skuId.skuId;
-  cResult[6] = hasItem;
-  tmp15 = hasItem;
-  const tmpResult = require("initialize");
-}) : (function useGuildPowerupCardFooterConfig(arg0, skuId) {
+export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   _require = arg0;
   const tmp3 = usePowerupActiveStatusDefault(arg0, skuId);
   const items = [GuildStore];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
-    guild = GuildStore.getGuild(closure_0);
+    const guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -122,4 +48,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   obj2.showConfigureButton = hasItem;
   obj2.isPowerupActive = tmp6;
   return obj2;
-});
+};

@@ -1,10 +1,10 @@
-// === Module 11434: canEditMessage ===
+// === Module 11635: canEditMessage ===
 
-// Module 11434 (canEditMessage)
-import isForwardMessageDefault from "isForwardMessage" /* 5639 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6051 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6875 */;
-import Constants from "Constants" /* 1084 */;
+// Module 11635 (canEditMessage)
+import isForwardMessageDefault from "isForwardMessage" /* 5645 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6058 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6882 */;
+import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
 ({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);

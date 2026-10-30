@@ -1,9 +1,9 @@
-// === Module 14523: HexagonCampaignEntitlements ===
+// === Module 14556: HexagonCampaignEntitlements ===
 
-// Module 14523 (HexagonCampaignEntitlements)
-import PremiumUtilsDefault from "PremiumUtils" /* 2051 */;
-import HexagonCampaignConstants from "HexagonCampaignConstants" /* 5030 */;
-import ProductCatalog from "ProductCatalog" /* 5062 */;
+// Module 14556 (HexagonCampaignEntitlements)
+import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
+import HexagonCampaignConstants from "HexagonCampaignConstants" /* 5034 */;
+import ProductCatalog from "ProductCatalog" /* 5066 */;
 import size from "module_2" /* 2 */;
 
 const HexagonCampaignPerk = HexagonCampaignConstants.HexagonCampaignPerk;

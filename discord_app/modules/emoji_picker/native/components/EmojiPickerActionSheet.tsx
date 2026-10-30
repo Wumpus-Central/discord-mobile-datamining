@@ -1,28 +1,28 @@
-// === Module 9893: EmojiPickerActionSheet ===
+// === Module 9920: EmojiPickerActionSheet ===
 
-// Module 9893 (EmojiPickerActionSheet)
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import Text_Text from "Text/Text" /* 5271 */;
-import Search_SearchBar from "Search/SearchBar" /* 7205 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9891 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9895 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9902 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 9904 */;
+// Module 9920 (EmojiPickerActionSheet)
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import Text_Text from "Text/Text" /* 5619 */;
+import Search_SearchBar from "Search/SearchBar" /* 7212 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9918 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 9922 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9929 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 9931 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9894).EmojiPickerSource;
-const EXPRESSION_FOOTER_HEIGHT = fn(1084).EXPRESSION_FOOTER_HEIGHT;
-let EmojiIntention = fn(1392).EmojiIntention;
+const EmojiPickerSource = fn(9921).EmojiPickerSource;
+const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
+let EmojiIntention = fn(1387).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { header: { flexDirection: "column" }, searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 }, content: null, background: null, headerText: null, headerSpacer: null, burstReaction: null };
 let obj3 = { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
@@ -153,11 +153,11 @@ export default function EmojiPickerActionSheet(onClose) {
       const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.wHTk2C);
-      const items = [v65535(Text_Text.Text, obj2), ];
+      const items = [closure_2_10(Text_Text.Text, obj2), ];
       const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t.VrWSNn);
-      items[1] = v65535(Text_Text.Text, obj3);
+      items[1] = closure_2_10(Text_Text.Text, obj3);
       obj.children = items;
       tmp = closure_2_11(View, obj);
     }
@@ -175,7 +175,7 @@ export default function EmojiPickerActionSheet(onClose) {
     const obj2 = { style: items1, children: null };
     items1[1] = headerSpacer;
     const obj3 = { ref, size: "md", round: true, onChange: handleTextChange, placeholder: EmojiPickerUtils.getSearchPlaceholder(pickerIntention, currentUser) };
-    const items2 = [v65535(Search_SearchBar.SearchBar, obj3), ];
+    const items2 = [closure_2_10(Search_SearchBar.SearchBar, obj3), ];
     let tmp4Result = pickerIntention === EmojiIntention.REACTION;
     if (tmp4Result) {
       tmp4Result = source !== EmojiPickerSource.NOTIFICATION;
@@ -195,7 +195,7 @@ export default function EmojiPickerActionSheet(onClose) {
           },
         isActive: currentUser
       };
-      tmp4Result = v65535(BurstReactionToggleDefault, obj5);
+      tmp4Result = closure_2_10(BurstReactionToggleDefault, obj5);
     }
     items2[1] = tmp4Result;
     obj2.children = items2;

@@ -1,16 +1,16 @@
-// === Module 8471: JoinRequestNotificationSystemMessage ===
+// === Module 8505: JoinRequestNotificationSystemMessage ===
 
-// Module 8471 (JoinRequestNotificationSystemMessage)
+// Module 8505 (JoinRequestNotificationSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1125 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8377 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6904 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5037 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import UserStore from "UserStore" /* 1389 */;
+import util from "util" /* 1114 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8414 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6911 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5041 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
-const MessageTypes = fn(1084).MessageTypes;
+const MessageTypes = fn(1072).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");
 
@@ -19,7 +19,7 @@ export function createJoinRequestNotificationSystemMessage(message) {
   const request = GuildJoinRequestStore.getRequest(SnowflakeUtilsDefault.cast(message.channel_id));
   let tmp4;
   if (null != request) {
-    guild = GuildStore.getGuild(request.guildId);
+    let guild = GuildStore.getGuild(request.guildId);
     if (guild == null) {
       guild = UserGuildJoinRequestStore.getJoinRequestGuild(request.guildId);
     }

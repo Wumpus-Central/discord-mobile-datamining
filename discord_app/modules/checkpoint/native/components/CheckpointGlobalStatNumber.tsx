@@ -1,20 +1,27 @@
-// === Module 13449: CheckpointGlobalStatNumber ===
+// === Module 13599: CheckpointGlobalStatNumber ===
 
-// Module 13449 (CheckpointGlobalStatNumber)
+// Module 13599 (CheckpointGlobalStatNumber)
 import _mod17 from "module_17" /* 17 */;
-import c from "c" /* 576 */;
-import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1125 */;
-import CheckpointStatNumber from "CheckpointStatNumber" /* 13440 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13441 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13450 */;
+import nativeDefault from "native" /* 575 */;
+import util from "util" /* 1114 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13590 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13591 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13600 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5005 */;
-import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import createStyles from "createStyles" /* 5009 */;
 import size from "module_2" /* 2 */;
 
-const CheckpointStatNumberDefault = CheckpointStatNumber;
-
+function GlobalStatValue(value) {
+  value = value.value;
+  if (typeof value === "string") {
+    const obj = { value, size: 96 };
+    let tmp4 = React4(CheckpointStatNumberDefault, obj);
+  } else {
+    const obj2 = { end: value, size: 96 };
+    tmp4 = React4(CheckpointCountUpStatNumberDefault, obj2);
+  }
+  return tmp4;
+}
 const View = _mod17.View;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { container: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", columnGap: nativeDefault.space.PX_8 }, croppedContainer: null, uncroppedContainer: null, clip: null, value: null, globe: null };
@@ -28,186 +35,9 @@ let obj5 = { height: 96 - 2 * nativeDefault.space.PX_24, marginVertical: nativeD
 obj.value = { marginTop: -nativeDefault.space.PX_24 };
 obj.globe = { width: 75, height: 56 };
 let closure_6 = createStyles.createStyles(obj);
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalStatValue(value) {
-  let tmp = dependencyMap;
-  const cResult = c.c(4);
-  value = value.value;
-  if (typeof value === "string") {
-    if (cResult[0] !== value) {
-      const obj2 = { value, size: 96 };
-      tmp = React4(CheckpointStatNumberDefault, obj2);
-      cResult[0] = value;
-      cResult[1] = tmp;
-    }
-  } else {
-    if (cResult[2] !== value) {
-      const obj3 = { end: value, size: 96 };
-      const tmp6 = React4(CheckpointCountUpStatNumberDefault, obj3);
-      cResult[2] = value;
-      cResult[3] = tmp6;
-      let tmp3 = tmp6;
-    } else {
-      tmp3 = cResult[3];
-    }
-    return tmp3;
-  }
-}) : (function GlobalStatValue(value) {
-  value = value.value;
-  if (typeof value === "string") {
-    const obj = { value, size: 96 };
-    let tmp4 = React4(CheckpointStatNumberDefault, obj);
-  } else {
-    const obj2 = { end: value, size: 96 };
-    tmp4 = React4(CheckpointCountUpStatNumberDefault, obj2);
-  }
-  return tmp4;
-});
-let ReactCompilerGating = ReactCompilerGating_mod;
-let obj6 = { marginTop: -nativeDefault.space.PX_24 };
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointGlobalStatNumber.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointGlobalStatNumber(arg0) {
-  const cResult = c.c(33);
-  ({ value, accessibilityLabel } = arg0);
-  const iter = closure_6();
-  if (cResult[0] === accessibilityLabel) {
-    if (cResult[1] === value) {
-      let tmp4 = cResult[2];
-    }
-    if (tmpResult.isCheckpointStatNumberShrunk(value)) {
-      if (cResult[3] === iter.container) {
-        if (cResult[4] === iter.croppedContainer) {
-          let tmp20 = cResult[5];
-        }
-        if (cResult[6] !== value) {
-          const obj2 = { value };
-          const tmp24 = React4(closure_7, obj2);
-          cResult[6] = value;
-          cResult[7] = tmp24;
-          let tmp21 = tmp24;
-        } else {
-          tmp21 = cResult[7];
-        }
-        if (cResult[8] === iter.value) {
-          if (cResult[9] === tmp21) {
-            let tmp25 = cResult[10];
-          }
-          if (cResult[11] === iter.clip) {
-            if (cResult[12] === tmp25) {
-              let tmp29 = cResult[13];
-            }
-            if (cResult[14] !== iter.globe) {
-              const obj3 = { style: iter.globe };
-              const tmp36 = React4(CheckpointGlobeAnimationDefault, obj3);
-              cResult[14] = iter.globe;
-              cResult[15] = tmp36;
-              let tmp33 = tmp36;
-            } else {
-              tmp33 = cResult[15];
-            }
-            if (cResult[16] === tmp4) {
-              if (cResult[17] === tmp20) {
-                if (cResult[18] === tmp29) {
-                }
-              }
-            }
-            const obj4 = { accessible: true, accessibilityLabel: tmp4, style: tmp20, children: null };
-            const items = [tmp29, tmp33];
-            obj4.children = items;
-            const tmp40 = hasOwnProperty(View, obj4);
-            cResult[16] = tmp4;
-            cResult[17] = tmp20;
-            cResult[18] = tmp29;
-            cResult[19] = tmp33;
-            cResult[20] = tmp40;
-          }
-          const obj5 = { style: iter.clip, children: tmp25 };
-          const tmp32 = React4(View, obj5);
-          cResult[11] = iter.clip;
-          cResult[12] = tmp25;
-          cResult[13] = tmp32;
-          tmp29 = tmp32;
-        }
-        const obj6 = { style: iter.value, children: tmp21 };
-        const tmp28 = React4(View, obj6);
-        cResult[8] = iter.value;
-        cResult[9] = tmp21;
-        cResult[10] = tmp28;
-        tmp25 = tmp28;
-      }
-      const items1 = [, ];
-      ({ container: arr3[0], croppedContainer: arr3[1] } = iter);
-      cResult[3] = iter.container;
-      cResult[4] = iter.croppedContainer;
-      cResult[5] = items1;
-      tmp20 = items1;
-    } else {
-      if (cResult[21] === iter.container) {
-        if (cResult[22] === iter.uncroppedContainer) {
-          let tmp7 = cResult[23];
-        }
-        if (cResult[24] !== value) {
-          const obj7 = { value };
-          const tmp11 = React4(closure_7, obj7);
-          cResult[24] = value;
-          cResult[25] = tmp11;
-          let tmp8 = tmp11;
-        } else {
-          tmp8 = cResult[25];
-        }
-        if (cResult[26] !== iter.globe) {
-          const obj8 = { style: iter.globe };
-          const tmp15 = React4(CheckpointGlobeAnimationDefault, obj8);
-          cResult[26] = iter.globe;
-          cResult[27] = tmp15;
-          let tmp12 = tmp15;
-        } else {
-          tmp12 = cResult[27];
-        }
-        if (cResult[28] === tmp4) {
-          if (cResult[29] === tmp7) {
-            if (cResult[30] === tmp8) {
-              if (cResult[31] === tmp12) {
-                let tmp16 = cResult[32];
-              }
-              return tmp16;
-            }
-          }
-        }
-        const obj9 = { accessible: true, accessibilityLabel: tmp4, style: tmp7, children: null };
-        const items2 = [tmp8, tmp12];
-        obj9.children = items2;
-        const tmp19 = hasOwnProperty(View, obj9);
-        cResult[28] = tmp4;
-        cResult[29] = tmp7;
-        cResult[30] = tmp8;
-        cResult[31] = tmp12;
-        cResult[32] = tmp19;
-        tmp16 = tmp19;
-      }
-      const items3 = [, ];
-      ({ container: arr[0], uncroppedContainer: arr[1] } = iter);
-      cResult[21] = iter.container;
-      cResult[22] = iter.uncroppedContainer;
-      cResult[23] = items3;
-      tmp7 = items3;
-    }
-    tmpResult = CheckpointStatNumber;
-  }
-  let tmp5 = accessibilityLabel;
-  if (accessibilityLabel == null) {
-    let toLocaleStringResult = value;
-    if (typeof value === "number") {
-      toLocaleStringResult = value.toLocaleString(util.intl.currentLocale);
-    }
-    tmp5 = toLocaleStringResult;
-  }
-  cResult[0] = accessibilityLabel;
-  cResult[1] = value;
-  cResult[2] = tmp5;
-  tmp4 = tmp5;
-}) : (function CheckpointGlobalStatNumber(arg0) {
+export default function CheckpointGlobalStatNumber(arg0) {
   ({ value, accessibilityLabel } = arg0);
   const iter = closure_6();
   if (accessibilityLabel == null) {
@@ -225,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     const obj3 = { style: iter.clip, children: null };
     const obj4 = { style: iter.value, children: null };
     const obj5 = { value };
-    obj4.children = React4(closure_7, obj5);
+    obj4.children = React4(GlobalStatValue, obj5);
     obj3.children = React4(View, obj4);
     const items1 = [React4(View, obj3), ];
     const obj6 = { style: iter.globe };
@@ -236,11 +66,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     items[1] = iter.uncroppedContainer;
     obj2.style = items;
     const obj7 = { value };
-    const items2 = [React4(closure_7, obj7), ];
+    const items2 = [React4(GlobalStatValue, obj7), ];
     const obj8 = { style: iter.globe };
     items2[1] = React4(CheckpointGlobeAnimationDefault, obj8);
     obj2.children = items2;
     tmp3Result = hasOwnProperty(View, obj2);
   }
   return tmp3Result;
-});
+};

@@ -1,15 +1,15 @@
-// === Module 6025: MarkupLinkRule ===
+// === Module 6032: MarkupLinkRule ===
 
-// Module 6025 (MarkupLinkRule)
+// Module 6032 (MarkupLinkRule)
 import _modDef12 from "module_12" /* 12 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import GlobalUtils from "GlobalUtils" /* 1385 */;
-import privDefault from "priv" /* 1457 */;
-import _modDef1949 from "module_1949" /* 1949 */;
-import findCodedLinks from "findCodedLinks" /* 5737 */;
-import MarkupTypes from "MarkupTypes" /* 6020 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6026 */;
-import errorDefault from "error" /* 6027 */;
+import URLUtilsDefault from "URLUtils" /* 1378 */;
+import GlobalUtils from "GlobalUtils" /* 1380 */;
+import privDefault from "priv" /* 1452 */;
+import _modDef1944 from "module_1944" /* 1944 */;
+import findCodedLinks from "findCodedLinks" /* 5743 */;
+import MarkupTypes from "MarkupTypes" /* 6027 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6033 */;
+import errorDefault from "error" /* 6034 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const findCodedLinksDefault = findCodedLinks;
@@ -106,24 +106,24 @@ function getRawText(content) {
   }
   return str;
 }
-function isSuspiciousUrl(src) {
-  if (obj.isSuspiciousCodedLink(src)) {
+function isSuspiciousUrl(assetURL) {
+  if (obj.isSuspiciousCodedLink(assetURL)) {
     return true;
   } else {
-    value = closure_4.get(src);
+    value = closure_4.get(assetURL);
     if (null == value) {
-      const sanitizeWhitespaceResult = UnicodeSanitizationUtils.sanitizeWhitespace(src);
+      const sanitizeWhitespaceResult = UnicodeSanitizationUtils.sanitizeWhitespace(assetURL);
       const obj3 = { whitespaceSanitized: sanitizeWhitespaceResult, fullySanitized: null };
       const tmpResult = UnicodeSanitizationUtils;
       obj3.fullySanitized = UnicodeSanitizationUtils.sanitizeUnicodeConfusables(sanitizeWhitespaceResult);
-      const result = closure_4.set(src, obj3);
+      const result = closure_4.set(assetURL, obj3);
       value = obj3;
       const tmpResult2 = UnicodeSanitizationUtils;
     }
-    if (value.whitespaceSanitized !== src) {
+    if (value.whitespaceSanitized !== assetURL) {
       return true;
     } else {
-      const toURLSafeResult = URLUtilsDefault.toURLSafe(src);
+      const toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
       if (null == toURLSafeResult) {
         return true;
       } else {
@@ -132,7 +132,7 @@ function isSuspiciousUrl(src) {
             return false;
           }
         }
-        const parts = src.split("/");
+        const parts = assetURL.split("/");
         let tmp7 = parts.length < 3;
         if (!tmp7) {
           let tmp8 = "" !== parts[1];
@@ -148,16 +148,16 @@ function isSuspiciousUrl(src) {
   }
   obj = findCodedLinks;
 }
-function punycodeLink(src) {
+function punycodeLink(assetURL) {
   try {
-    if (isSuspiciousUrl(src)) {
+    if (isSuspiciousUrl(assetURL)) {
       const _Error3 = Error;
       const _JSON = JSON;
-      const error = new Error("Rejected due to suspicious characters in URL: " + JSON.stringify(src));
+      const error = new Error("Rejected due to suspicious characters in URL: " + JSON.stringify(assetURL));
       throw error;
     } else {
       const _URL = URL;
-      const uRL = new URL(src);
+      const uRL = new URL(assetURL);
       let str = uRL.protocol;
       if (str == null) {
         str = "";
@@ -186,13 +186,13 @@ function punycodeLink(src) {
 }
 let closure_4 = new privDefault({ max: 50 });
 let items = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"];
-let items1 = [fn(6020).AST_KEY.TEXT, fn(6020).AST_KEY.UNDERLINE, fn(6020).AST_KEY.STRONG, fn(6020).AST_KEY.ITALICS, fn(6020).AST_KEY.STRIKETHROUGH, fn(6020).AST_KEY.INLINE_CODE, fn(6020).AST_KEY.SPOILER, fn(6020).AST_KEY.LINE_BREAK, fn(6020).AST_KEY.TIMESTAMP];
-let items2 = [...items1, fn(6020).AST_KEY.EMOJI, fn(6020).AST_KEY.CUSTOM_EMOJI];
-let items3 = [fn(6020).AST_KEY.LIST, fn(6020).AST_KEY.HEADING, fn(6020).AST_KEY.BLOCK_QUOTE, fn(6020).AST_KEY.SUBTEXT];
-const items4 = [fn(6020).AST_KEY.TEXT];
-const items5 = [fn(6020).AST_KEY.UNDERLINE, fn(6020).AST_KEY.STRONG, fn(6020).AST_KEY.ITALICS, fn(6020).AST_KEY.STRIKETHROUGH, fn(6020).AST_KEY.INLINE_CODE, fn(6020).AST_KEY.SPOILER, fn(6020).AST_KEY.LINE_BREAK, fn(6020).AST_KEY.TIMESTAMP, fn(6020).AST_KEY.EMOJI, fn(6020).AST_KEY.CUSTOM_EMOJI, fn(6020).AST_KEY.LIST, fn(6020).AST_KEY.HEADING, fn(6020).AST_KEY.BLOCK_QUOTE, fn(6020).AST_KEY.SUBTEXT];
+let items1 = [fn(6027).AST_KEY.TEXT, fn(6027).AST_KEY.UNDERLINE, fn(6027).AST_KEY.STRONG, fn(6027).AST_KEY.ITALICS, fn(6027).AST_KEY.STRIKETHROUGH, fn(6027).AST_KEY.INLINE_CODE, fn(6027).AST_KEY.SPOILER, fn(6027).AST_KEY.LINE_BREAK, fn(6027).AST_KEY.TIMESTAMP];
+let items2 = [...items1, fn(6027).AST_KEY.EMOJI, fn(6027).AST_KEY.CUSTOM_EMOJI];
+let items3 = [fn(6027).AST_KEY.LIST, fn(6027).AST_KEY.HEADING, fn(6027).AST_KEY.BLOCK_QUOTE, fn(6027).AST_KEY.SUBTEXT];
+const items4 = [fn(6027).AST_KEY.TEXT];
+const items5 = [fn(6027).AST_KEY.UNDERLINE, fn(6027).AST_KEY.STRONG, fn(6027).AST_KEY.ITALICS, fn(6027).AST_KEY.STRIKETHROUGH, fn(6027).AST_KEY.INLINE_CODE, fn(6027).AST_KEY.SPOILER, fn(6027).AST_KEY.LINE_BREAK, fn(6027).AST_KEY.TIMESTAMP, fn(6027).AST_KEY.EMOJI, fn(6027).AST_KEY.CUSTOM_EMOJI, fn(6027).AST_KEY.LIST, fn(6027).AST_KEY.HEADING, fn(6027).AST_KEY.BLOCK_QUOTE, fn(6027).AST_KEY.SUBTEXT];
 let obj = {};
-let merged = Object.assign(_modDef1949.defaultRules.link);
+let merged = Object.assign(_modDef1944.defaultRules.link);
 obj.match = function match(arr, allowLinks, arg2) {
   if (allowLinks.allowLinks) {
     if (-1 === arr.indexOf("](")) {
@@ -243,7 +243,7 @@ obj.match = function match(arr, allowLinks, arg2) {
         }
         return null;
       }
-      return _modDef1949.defaultRules.link.match(arr, allowLinks, arg2);
+      return _modDef1944.defaultRules.link.match(arr, allowLinks, arg2);
     }
   } else {
     return null;
@@ -267,7 +267,7 @@ obj.parse = function parse(arg0, rules, maskedLinkValidation) {
       const result = closure_4.set(tmp4, obj9);
       value = obj9;
     }
-    value3 = closure_4.get(tmp3);
+    let value3 = closure_4.get(tmp3);
     if (null == value3) {
       const sanitizeWhitespaceResult1 = UnicodeSanitizationUtils.sanitizeWhitespace(tmp3);
       const obj11 = { whitespaceSanitized: sanitizeWhitespaceResult1, fullySanitized: null };
@@ -279,7 +279,7 @@ obj.parse = function parse(arg0, rules, maskedLinkValidation) {
     if (null != tmp5) {
       str = tmp5;
     }
-    value4 = closure_4.get(str);
+    let value4 = closure_4.get(str);
     if (null == value4) {
       const sanitizeWhitespaceResult2 = UnicodeSanitizationUtils.sanitizeWhitespace(str);
       const obj12 = { whitespaceSanitized: sanitizeWhitespaceResult2, fullySanitized: null };
@@ -291,7 +291,7 @@ obj.parse = function parse(arg0, rules, maskedLinkValidation) {
     const trimmed = str3.trim();
     if (0 !== str2.trim().length) {
       if (0 !== trimmed.length) {
-        const tmp59 = punycodeLink(_modDef1949.unescapeUrl(tmp4));
+        const tmp59 = punycodeLink(_modDef1944.unescapeUrl(tmp4));
         if (null != tmp59) {
           if (!obj30.containsCodedLink(tmp5)) {
             const obj13 = {};
@@ -346,7 +346,7 @@ obj.parse = function parse(arg0, rules, maskedLinkValidation) {
                       }
                       const tmp57Result = _modDef12;
                       const pickResult = _modDef12.pick(rules.rules, tmp28);
-                      const obj23 = { content: _modDef1949.parserFor(pickResult)(value3.whitespaceSanitized, obj13), target: tmp59.target, title: value4.whitespaceSanitized };
+                      const obj23 = { content: _modDef1944.parserFor(pickResult)(value3.whitespaceSanitized, obj13), target: tmp59.target, title: value4.whitespaceSanitized };
                       return obj23;
                     }
                   }

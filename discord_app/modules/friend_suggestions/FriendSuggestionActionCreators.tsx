@@ -1,11 +1,11 @@
-// === Module 7793: FriendSuggestionActionCreators ===
+// === Module 7798: FriendSuggestionActionCreators ===
 
-// Module 7793 (FriendSuggestionActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+// Module 7798 (FriendSuggestionActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
 

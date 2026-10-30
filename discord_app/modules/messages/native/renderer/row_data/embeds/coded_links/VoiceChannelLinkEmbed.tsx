@@ -1,31 +1,31 @@
-// === Module 15042: VoiceChannelLinkEmbed ===
+// === Module 15086: VoiceChannelLinkEmbed ===
 
-// Module 15042 (VoiceChannelLinkEmbed)
-import util from "util" /* 1125 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import useChannelName from "useChannelName" /* 5641 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8329 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8561 */;
+// Module 15086 (VoiceChannelLinkEmbed)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1376 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
+import useChannelName from "useChannelName" /* 5647 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8386 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8595 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import PermissionStore from "PermissionStore" /* 4937 */;
-import RelationshipStore from "RelationshipStore" /* 4947 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import PermissionStore from "PermissionStore" /* 4941 */;
+import RelationshipStore from "RelationshipStore" /* 4951 */;
+import UserStore from "UserStore" /* 1384 */;
 
 require = fn;
 const Image = fn(17).Image;
-const getGuildAcronym = fn(4875).getGuildAcronym;
-const Permissions = fn(1084).Permissions;
-const InviteTypes = fn(7867).InviteTypes;
+const getGuildAcronym = fn(4876).getGuildAcronym;
+const Permissions = fn(1072).Permissions;
+const InviteTypes = fn(7872).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");
 
 export function createVoiceChannelLinkEmbed(code, theme) {
   const tmp = _slicedToArray(code.split("/"), 2);
   const channel = ChannelStore.getChannel(tmp[1]);
-  guild = GuildStore.getGuild(tmp[0]);
+  const guild = GuildStore.getGuild(tmp[0]);
   if (null != channel) {
     if (channel.isGuildVocal()) {
       if (null != guild) {

@@ -1,7 +1,7 @@
-// === Module 14601: VQRemainingTimeTruncationExperiment ===
+// === Module 14634: VQRemainingTimeTruncationExperiment ===
 
-// Module 14601 (VQRemainingTimeTruncationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1453 */;
+// Module 14634 (VQRemainingTimeTruncationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1448 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-vq-remaining-time-truncation", kind: "user", defaultConfig: { truncateMoreThanSeconds: null }, variations: null };

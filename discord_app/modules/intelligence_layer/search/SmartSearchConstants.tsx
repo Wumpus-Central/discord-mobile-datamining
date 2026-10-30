@@ -1,7 +1,7 @@
-// === Module 13691: SmartSearchConstants ===
+// === Module 13838: SmartSearchConstants ===
 
-// Module 13691 (SmartSearchConstants)
-import DurationsDefault from "Durations" /* 1101 */;
+// Module 13838 (SmartSearchConstants)
+import DurationsDefault from "Durations" /* 1090 */;
 
 const result = 60 * DurationsDefault.Millis.MINUTE;
 const size = fn(2);

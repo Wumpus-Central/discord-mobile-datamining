@@ -1,7 +1,7 @@
-// === Module 15662: getTransformedBadgeColors ===
+// === Module 15702: getTransformedBadgeColors ===
 
-// Module 15662 (getTransformedBadgeColors)
-import _modDef683 from "module_683" /* 683 */;
+// Module 15702 (getTransformedBadgeColors)
+import _modDef671 from "module_671" /* 671 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
@@ -16,7 +16,7 @@ export function getTransformedBadgeColors(arg0) {
       } else {
         let map2 = dependencyMap;
         if (obj2.valid(secondaryTintColor)) {
-          secondaryTintColor = _modDef683(secondaryTintColor);
+          secondaryTintColor = _modDef671(secondaryTintColor);
           primaryTintColor = secondaryTintColor;
           closure_2 = secondaryTintColor.luminance();
           map2 = secondaryTintLuminances.map;
@@ -24,7 +24,7 @@ export function getTransformedBadgeColors(arg0) {
         } else {
           map2Result = secondaryTintLuminances.map(() => "#000000");
         }
-        obj2 = _modDef683;
+        obj2 = _modDef671;
       }
     }
     const obj3 = { primaryColorsTransformed: tmp, secondaryColorsTransformed: items };
@@ -33,13 +33,13 @@ export function getTransformedBadgeColors(arg0) {
     secondaryLuminanceWeights = tmp2;
     let map = dependencyMap;
     if (obj.valid(primaryTintColor)) {
-      primaryTintColor = _modDef683(primaryTintColor);
+      primaryTintColor = _modDef671(primaryTintColor);
       closure_2 = primaryTintColor.luminance();
       map = primaryTintLuminances.map;
       let mapped = map((arg0, arg1) => primaryTintColor.luminance((arg0 * secondaryLuminanceWeights[arg1].base + closure_2 * secondaryLuminanceWeights[arg1].tint) / (secondaryLuminanceWeights[arg1].base + secondaryLuminanceWeights[arg1].tint)).hex());
     } else {
       mapped = primaryTintLuminances.map(() => "#000000");
     }
-    obj = _modDef683;
+    obj = _modDef671;
   }
 }

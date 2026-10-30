@@ -1,31 +1,25 @@
-// === Module 16979: VideoQuestModal ===
+// === Module 17033: VideoQuestModal ===
 
-// Module 16979 (VideoQuestModal)
-import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5086 */;
-import spring from "spring" /* 5284 */;
-import QuestTypes from "QuestTypes" /* 6771 */;
-import AnalyticsActions from "AnalyticsActions" /* 7850 */;
-import QuestUtils from "QuestUtils" /* 9633 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 14614 */;
-import applyOrientationLock2 from "applyOrientationLock" /* 14620 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 16948 */;
-import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 16980 */;
+// Module 17033 (VideoQuestModal)
+import nativeDefault from "native" /* 575 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+import spring from "spring" /* 5632 */;
+import AnalyticsActions from "AnalyticsActions" /* 7855 */;
+import QuestUtils from "QuestUtils" /* 9658 */;
+import applyOrientationLock2 from "applyOrientationLock" /* 14653 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(16947).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
-const AnalyticEvents = fn(1084).AnalyticEvents;
+let closure_6 = fn(17001).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let c10 = -100;
-let c11 = 0.5625;
-let top = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
+let closure_10 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 const VideoQuestModalSteps = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, pillarboxed: { alignSelf: "center" }, wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 }, contentWrapper: { flex: 1 }, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -41,389 +35,13 @@ obj6.overflow = "hidden";
 obj6.pointerEvents = "none";
 obj6.zIndex = 1;
 obj2.backgroundWrapper = obj6;
-let closure_14 = createStyles.createStyles(obj2);
+let top = createStyles.createStyles(obj2);
 const __initData = { code: "function VideoQuestModalTsx1(){const{withSpring,clamp,postWatchAnimationState,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG,interpolate,CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y}=this.__closure;return{opacity:withSpring(clamp(postWatchAnimationState.get(),0,1),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG),transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}]};}" };
 const __initData2 = { code: "function VideoQuestModalTsx2(){const{withSpring,interpolate,postWatchAnimationState,safeAreaInsets,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG}=this.__closure;return{transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[safeAreaInsets.top,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}],opacity:withSpring(postWatchAnimationState.get(),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)};}" };
-const __initData3 = { code: "function VideoQuestModalTsx3(){const{withSpring,clamp,postWatchAnimationState,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG,interpolate,CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y}=this.__closure;return{opacity:withSpring(clamp(postWatchAnimationState.get(),0,1),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG),transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}]};}" };
-const __initData4 = { code: "function VideoQuestModalTsx4(){const{withSpring,interpolate,postWatchAnimationState,safeAreaInsets,BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG}=this.__closure;return{transform:[{translateY:withSpring(interpolate(postWatchAnimationState.get(),[0,1],[safeAreaInsets.top,0]),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)}],opacity:withSpring(postWatchAnimationState.get(),BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG)};}" };
-let ReactCompilerGating = fn(558);
-let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestModalContent(sourceQuestContent) {
-  let obj = initialStep(quest[9]);
-  const cResult = obj.c(73);
+let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
   ({ onClose, initialStep } = sourceQuestContent);
   sourceQuestContent = sourceQuestContent.sourceQuestContent;
-  const videoQuestModalContext = initialStep(quest[10]).useVideoQuestModalContext();
-  quest = videoQuestModalContext.quest;
-  const videoSessionId = videoQuestModalContext.videoSessionId;
-  const userStatus = quest.userStatus;
-  let completedAt;
-  if (userStatus != null) {
-    completedAt = userStatus.completedAt;
-  }
-  noop = tmp6;
-  if (initialStep != null) {
-    const tmp10 = videoSessionId(noop.useState(initialStep), 2);
-    const first = tmp10[0];
-    closure_6 = tmp10[1];
-    [tmp13, AnalyticEvents] = videoSessionId(obj3.useState(false), 2);
-    if (cResult[0] === quest.id) {
-      if (cResult[1] === sourceQuestContent) {
-        if (cResult[2] === videoSessionId) {
-          let tmp14 = cResult[3];
-        }
-        closure_8 = tmp14;
-        const tmp16 = closure_14();
-        const tmp18 = sourceQuestContent(tmp2[14])(obj3.useContext(initialStep(tmp2[13]).QuestDockGestureContext).windowDimensions);
-        ({ width, height } = tmp18);
-        let bound = null;
-        if (tmp18.landscape) {
-          bound = null;
-          if (!tmp13) {
-            const _Math = Math;
-            const _Math2 = Math;
-            bound = Math.min(width, Math.floor(height * c11));
-          }
-        }
-        if (cResult[4] === bound) {
-          if (cResult[5] === tmp16.pillarboxed) {
-            let tmp22 = cResult[6];
-          }
-          if (bound == null) {
-            bound = width;
-          }
-          if (cResult[7] === initialStep) {
-            if (cResult[8] === tmp6) {
-              let tmp25 = cResult[9];
-              let tmp26 = cResult[10];
-            }
-            const layoutEffect = obj3.useLayoutEffect(tmp25, tmp26);
-            const _Symbol = Symbol;
-            if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              const fn3 = function j() {
-                closure_6(obj.WATCH_VIDEO);
-              };
-              cResult[11] = fn3;
-            }
-            if (cResult[12] !== tmp14) {
-              class J {
-                constructor() {
-                  tmp = closure_8(false);
-                  tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                  return;
-                }
-              }
-              cResult[12] = tmp14;
-              cResult[13] = J;
-            } else {
-              class J {
-                constructor() {
-                  tmp = closure_8(false);
-                  tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                  return;
-                }
-              }
-            }
-            if (first === obj.POST_WATCH_VIDEO) {
-              class J {
-                constructor() {
-                  tmp = closure_8(false);
-                  tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                  return;
-                }
-              }
-            }
-            const sharedValue = initialStep(tmp2[15]).useSharedValue(num15);
-            const tmpResult = initialStep(tmp2[15]);
-            const fn4 = function $() {
-              const obj = { opacity: null, transform: null };
-              const obj2 = spring;
-              obj.opacity = obj2.withSpring(ReanimatedRexport.clamp(sharedValue.get(), 0, 1), closure_12);
-              const obj4 = { translateY: null };
-              const obj5 = spring;
-              const items = [c10, 0];
-              obj4.translateY = obj5.withSpring(ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], items), closure_12);
-              const items1 = [obj4];
-              obj.transform = items1;
-              return obj;
-            };
-            let obj4 = { withSpring: initialStep(tmp2[16]).withSpring, clamp: initialStep(tmp2[15]).clamp, postWatchAnimationState: sharedValue, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: top, interpolate: initialStep(tmp2[15]).interpolate, CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y };
-            fn4.__closure = obj4;
-            fn4.__workletHash = 11571705142399;
-            fn4.__initData = __initData;
-            const animatedStyle = initialStep(tmp2[15]).useAnimatedStyle(fn4);
-            const tmp37 = tmp17(tmp2[17])();
-            CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y = tmp37;
-            const tmpResult3 = initialStep(tmp2[15]);
-            function ee() {
-              const obj = { transform: null, opacity: null };
-              const obj2 = { translateY: null };
-              const obj3 = spring;
-              const items = [top.top, 0];
-              obj2.translateY = obj3.withSpring(ReanimatedRexport.interpolate(sharedValue.get(), [0, 1], items), closure_12);
-              const items1 = [obj2];
-              obj.transform = items1;
-              obj.opacity = spring.withSpring(sharedValue.get(), closure_12);
-              return obj;
-            }
-            let obj5 = { withSpring: initialStep(tmp2[16]).withSpring, interpolate: initialStep(tmp2[15]).interpolate, postWatchAnimationState: sharedValue, safeAreaInsets: tmp37, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: top };
-            ee.__closure = obj5;
-            ee.__workletHash = 9769051401109;
-            ee.__initData = __initData2;
-            const animatedStyle1 = initialStep(tmp2[15]).useAnimatedStyle(ee);
-            if (cResult[14] === sharedValue) {
-              class J {
-                constructor() {
-                  tmp = closure_8(false);
-                  tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                  return;
-                }
-              }
-              const effect = obj3.useEffect(tmp40, tmp41);
-              if (cResult[18] === tmp22) {
-                class J {
-                  constructor() {
-                    tmp = closure_8(false);
-                    tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                    return;
-                  }
-                }
-                if (cResult[21] !== height) {
-                  class J {
-                    constructor() {
-                      tmp = closure_8(false);
-                      tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                      return;
-                    }
-                  }
-                  tmp45[0] = height;
-                  cResult[21] = height;
-                  cResult[22] = tmp45;
-                } else {
-                  class J {
-                    constructor() {
-                      tmp = closure_8(false);
-                      tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                      return;
-                    }
-                  }
-                }
-                if (cResult[23] === tmp16.backgroundWrapper) {
-                  class J {
-                    constructor() {
-                      tmp = closure_8(false);
-                      tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                      return;
-                    }
-                  }
-                  if (cResult[26] !== tmp37.top) {
-                    class J {
-                      constructor() {
-                        tmp = closure_8(false);
-                        tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                        return;
-                      }
-                    }
-                    tmp48[0] = tmp37.top;
-                    cResult[26] = tmp37.top;
-                    cResult[27] = tmp48;
-                  } else {
-                    class J {
-                      constructor() {
-                        tmp = closure_8(false);
-                        tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                        return;
-                      }
-                    }
-                  }
-                  if (cResult[28] === tmp16.contentBackground) {
-                    class J {
-                      constructor() {
-                        tmp = closure_8(false);
-                        tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                        return;
-                      }
-                    }
-                    if (cResult[31] === animatedStyle1) {
-                      class J {
-                        constructor() {
-                          tmp = closure_8(false);
-                          tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                          return;
-                        }
-                      }
-                      const _Symbol2 = Symbol;
-                      if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
-                        class J {
-                          constructor() {
-                            tmp = closure_8(false);
-                            tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                            return;
-                          }
-                        }
-                        const tmp56 = closure_8(tmp17(tmp2[19]), { align: "top" });
-                        cResult[34] = tmp56;
-                        const tmp55 = tmp56;
-                      } else {
-                        class J {
-                          constructor() {
-                            tmp = closure_8(false);
-                            tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                            return;
-                          }
-                        }
-                      }
-                      if (cResult[35] !== animatedStyle) {
-                        class J {
-                          constructor() {
-                            tmp = closure_8(false);
-                            tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                            return;
-                          }
-                        }
-                        const obj6 = { style: animatedStyle, children: tmp55 };
-                        const tmp58 = closure_8(tmp17(tmp2[18]), obj6);
-                        cResult[35] = animatedStyle;
-                        cResult[36] = tmp58;
-                      } else {
-                        class J {
-                          constructor() {
-                            tmp = closure_8(false);
-                            tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                            return;
-                          }
-                        }
-                      }
-                      if (cResult[37] === tmp46) {
-                        class J {
-                          constructor() {
-                            tmp = closure_8(false);
-                            tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-                            return;
-                          }
-                        }
-                      }
-                      const obj7 = { style: tmp46, children: null };
-                      let items = [tmp49, tmp52, tmp57];
-                      obj7.children = items;
-                      const tmp62 = sharedValue(first, obj7);
-                      cResult[37] = tmp46;
-                      cResult[38] = tmp49;
-                      cResult[39] = tmp52;
-                      cResult[40] = tmp57;
-                      cResult[41] = tmp62;
-                    }
-                    const obj8 = { style: null };
-                    let items1 = [tmp16.contentBackground, animatedStyle1];
-                    obj8.style = items1;
-                    const tmp54 = closure_8(tmp17(tmp2[18]), obj8);
-                    cResult[31] = animatedStyle1;
-                    cResult[32] = tmp16.contentBackground;
-                    cResult[33] = tmp54;
-                  }
-                  const obj9 = { style: null };
-                  const items2 = [tmp16.contentBackground, tmp48];
-                  obj9.style = items2;
-                  const tmp51 = closure_8(tmp17(tmp2[18]), obj9);
-                  cResult[28] = tmp16.contentBackground;
-                  cResult[29] = tmp48;
-                  cResult[30] = tmp51;
-                }
-                const items3 = [tmp16.backgroundWrapper, tmp45];
-                cResult[23] = tmp16.backgroundWrapper;
-                cResult[24] = tmp45;
-                cResult[25] = items3;
-              }
-              const items4 = [tmp16.modalContentWrapper, tmp22];
-              cResult[18] = tmp22;
-              cResult[19] = tmp16.modalContentWrapper;
-              cResult[20] = items4;
-            }
-            function te() {
-              let num = 0;
-              if (first === obj.POST_WATCH_VIDEO) {
-                num = 1;
-              }
-              const result = sharedValue.set(num);
-            }
-            const items5 = [sharedValue, first];
-            cResult[14] = sharedValue;
-            cResult[15] = first;
-            cResult[16] = te;
-            cResult[17] = items5;
-            tmp40 = te;
-            tmp41 = items5;
-            const tmpResult4 = initialStep(tmp2[15]);
-          }
-          const fn2 = function q() {
-            let tmp = closure_4;
-            if (closure_4) {
-              tmp = null == initialStep;
-            }
-            if (tmp) {
-              closure_6(obj.POST_WATCH_VIDEO);
-            }
-          };
-          const items6 = [tmp6, initialStep];
-          cResult[7] = initialStep;
-          cResult[8] = tmp6;
-          cResult[9] = fn2;
-          cResult[10] = items6;
-          tmp26 = items6;
-          tmp25 = fn2;
-        }
-        let tmp23 = null;
-        if (null != bound) {
-          class J {
-            constructor() {
-              tmp = closure_8(false);
-              tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-              return;
-            }
-          }
-          tmp24[0] = tmp16.pillarboxed;
-          const obj10 = { width: bound };
-          tmp24[1] = obj10;
-          tmp23 = tmp24;
-        }
-        cResult[4] = bound;
-        cResult[5] = tmp16.pillarboxed;
-        cResult[6] = tmp23;
-        tmp22 = tmp23;
-      }
-    }
-    const fn = function l(arg0) {
-      const applyOrientationLock = applyOrientationLock2.applyOrientationLock;
-      if (arg0) {
-        applyOrientationLock("LANDSCAPE");
-      } else {
-        applyOrientationLock("PORTRAIT");
-      }
-      closure_1_7(arg0);
-      const obj2 = { questId: quest.id, event: arg0 ? AnalyticEvents.QUEST_VIDEO_FULLSCREEN_ENTERED : AnalyticEvents.QUEST_VIDEO_FULLSCREEN_EXITED, properties: { video_session_id: videoSessionId }, sourceQuestContent };
-      AnalyticsActions.trackQuestEvent(obj2);
-      const obj3 = { video_session_id: videoSessionId };
-    };
-    cResult[0] = quest.id;
-    cResult[1] = sourceQuestContent;
-    cResult[2] = videoSessionId;
-    cResult[3] = fn;
-    tmp14 = fn;
-    const tmp12 = videoSessionId(obj3.useState(false), 2);
-  } else {
-    class J {
-      constructor() {
-        tmp = closure_8(false);
-        tmp2 = closure_6(closure_13.POST_WATCH_VIDEO);
-        return;
-      }
-    }
-  }
-  let obj2 = initialStep(quest[10]);
-}) : (function VideoQuestModalContent(sourceQuestContent) {
-  ({ onClose, initialStep } = sourceQuestContent);
-  sourceQuestContent = sourceQuestContent.sourceQuestContent;
-  let obj = initialStep(quest[10]);
-  const videoQuestModalContext = obj.useVideoQuestModalContext();
+  const videoQuestModalContext = initialStep(quest[8]).useVideoQuestModalContext();
   quest = videoQuestModalContext.quest;
   const videoSessionId = videoQuestModalContext.videoSessionId;
   const userStatus = quest.userStatus;
@@ -450,9 +68,9 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       AnalyticsActions.trackQuestEvent(obj2);
       const obj3 = { video_session_id: videoSessionId };
     }, items);
-    const tmp15 = closure_14();
+    const tmp15 = top();
     const pillarboxed = tmp15;
-    const tmp17 = sourceQuestContent(tmp2[14])(obj2.useContext(initialStep(tmp2[13]).QuestDockGestureContext).windowDimensions);
+    const tmp17 = sourceQuestContent(tmp2[12])(obj2.useContext(initialStep(tmp2[11]).QuestDockGestureContext).windowDimensions);
     ({ width, height } = tmp17);
     let bound = null;
     if (tmp17.landscape) {
@@ -460,7 +78,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       if (!tmp12) {
         const _Math = Math;
         const _Math2 = Math;
-        bound = Math.min(width, Math.floor(height * sharedValue));
+        bound = Math.min(width, Math.floor(0.5625 * height));
       }
     }
     let items1 = [bound, tmp15.pillarboxed];
@@ -493,63 +111,60 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       closure_6(obj.POST_WATCH_VIDEO);
     }, items3);
     const tmp11 = videoSessionId(obj2.useState(false), 2);
-    let num2 = 0;
-    if (first === obj.POST_WATCH_VIDEO) {
-      num2 = 1;
+    let num3 = 0;
+    if (first === sharedValue.POST_WATCH_VIDEO) {
+      num3 = 1;
     }
-    sharedValue = initialStep(tmp2[15]).useSharedValue(num2);
-    const tmpResult = initialStep(tmp2[15]);
-    class H {
+    sharedValue = initialStep(tmp2[13]).useSharedValue(num3);
+    const tmpResult = initialStep(tmp2[13]);
+    class U {
       constructor() {
         obj = { opacity: null, transform: null };
-        obj2 = closure_0(closure_2[16]);
-        obj3 = closure_0(closure_2[15]);
-        obj.opacity = obj2.withSpring(obj3.clamp(closure_11.get(), 0, 1), closure_12);
+        obj2 = closure_0(closure_2[14]);
+        obj3 = closure_0(closure_2[13]);
+        obj.opacity = obj2.withSpring(obj3.clamp(closure_11.get(), 0, 1), closure_10);
         obj1 = { translateY: null };
-        obj5 = closure_0(closure_2[16]);
-        obj6 = closure_0(closure_2[15]);
-        items = [, ];
-        items[0] = c10;
-        items[1] = 0;
-        obj1.translateY = obj5.withSpring(obj6.interpolate(closure_11.get(), [0, 1], items), closure_12);
-        items1 = [];
-        items1[0] = obj1;
-        obj.transform = items1;
+        obj5 = closure_0(closure_2[14]);
+        obj6 = closure_0(closure_2[13]);
+        obj1.translateY = obj5.withSpring(obj6.interpolate(closure_11.get(), [0, 1], [-100, 0]), closure_10);
+        items = [];
+        items[0] = obj1;
+        obj.transform = items;
         return obj;
       }
     }
-    let obj3 = { withSpring: initialStep(tmp2[16]).withSpring, clamp: initialStep(tmp2[15]).clamp, postWatchAnimationState: sharedValue, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: top, interpolate: initialStep(tmp2[15]).interpolate, CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y: bound };
-    H.__closure = obj3;
-    H.__workletHash = 15031671874877;
-    H.__initData = __initData3;
-    const animatedStyle = initialStep(tmp2[15]).useAnimatedStyle(H);
-    const tmp31 = sourceQuestContent(tmp2[17])();
-    top = tmp31;
-    const tmpResult3 = initialStep(tmp2[15]);
-    class K {
+    let obj3 = { withSpring: initialStep(tmp2[14]).withSpring, clamp: initialStep(tmp2[13]).clamp, postWatchAnimationState: sharedValue, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: bound, interpolate: initialStep(tmp2[13]).interpolate, CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y: -100 };
+    U.__closure = obj3;
+    U.__workletHash = 11571705142399;
+    U.__initData = __initData;
+    const animatedStyle = initialStep(tmp2[13]).useAnimatedStyle(U);
+    const tmp29 = sourceQuestContent(tmp2[15])();
+    top = tmp29;
+    const tmpResult3 = initialStep(tmp2[13]);
+    class F {
       constructor() {
         obj = { transform: null, opacity: null };
         obj1 = { translateY: null };
-        obj3 = closure_0(closure_2[16]);
-        obj4 = closure_0(closure_2[15]);
+        obj3 = closure_0(closure_2[14]);
+        obj4 = closure_0(closure_2[13]);
         items = [, ];
         items[0] = closure_12.top;
         items[1] = 0;
-        obj1.translateY = obj3.withSpring(obj4.interpolate(closure_11.get(), [0, 1], items), closure_12);
+        obj1.translateY = obj3.withSpring(obj4.interpolate(closure_11.get(), [0, 1], items), closure_10);
         items1 = [];
         items1[0] = obj1;
         obj.transform = items1;
-        obj5 = closure_0(closure_2[16]);
-        obj.opacity = obj5.withSpring(closure_11.get(), closure_12);
+        obj5 = closure_0(closure_2[14]);
+        obj.opacity = obj5.withSpring(closure_11.get(), closure_10);
         return obj;
       }
     }
-    let obj4 = { withSpring: initialStep(tmp2[16]).withSpring, interpolate: initialStep(tmp2[15]).interpolate, postWatchAnimationState: sharedValue, safeAreaInsets: tmp31, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: top };
-    K.__closure = obj4;
-    K.__workletHash = 11085432861267;
-    K.__initData = __initData4;
+    let obj4 = { withSpring: initialStep(tmp2[14]).withSpring, interpolate: initialStep(tmp2[13]).interpolate, postWatchAnimationState: sharedValue, safeAreaInsets: tmp29, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: bound };
+    F.__closure = obj4;
+    F.__workletHash = 9769051401109;
+    F.__initData = __initData2;
     const items4 = [sharedValue, first];
-    const animatedStyle1 = initialStep(tmp2[15]).useAnimatedStyle(K);
+    const animatedStyle1 = initialStep(tmp2[13]).useAnimatedStyle(F);
     const effect = obj2.useEffect(() => {
       let num = 0;
       if (first === obj.POST_WATCH_VIDEO) {
@@ -566,21 +181,21 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const obj8 = { height };
     items6[1] = obj8;
     obj7.style = items6;
-    const tmpResult4 = initialStep(tmp2[15]);
+    const tmpResult4 = initialStep(tmp2[13]);
     const obj9 = { style: null };
     const items7 = [tmp15.contentBackground, ];
-    const obj10 = { top: tmp31.top };
+    const obj10 = { top: tmp29.top };
     items7[1] = obj10;
     obj9.style = items7;
-    const items8 = [setIsFullscreen(sourceQuestContent(tmp2[18]), obj9), , ];
+    const items8 = [setIsFullscreen(sourceQuestContent(tmp2[16]), obj9), , ];
     const obj11 = { style: null };
     const items9 = [tmp15.contentBackground, animatedStyle1];
     obj11.style = items9;
-    items8[1] = setIsFullscreen(sourceQuestContent(tmp2[18]), obj11);
+    items8[1] = setIsFullscreen(sourceQuestContent(tmp2[16]), obj11);
     const obj12 = { style: animatedStyle, children: null };
-    const tmp16Result = sourceQuestContent(tmp2[18]);
-    obj12.children = setIsFullscreen(sourceQuestContent(tmp2[19]), { align: "top" });
-    items8[2] = setIsFullscreen(sourceQuestContent(tmp2[18]), obj12);
+    const tmp16Result = sourceQuestContent(tmp2[16]);
+    obj12.children = setIsFullscreen(sourceQuestContent(tmp2[17]), { align: "top" });
+    items8[2] = setIsFullscreen(sourceQuestContent(tmp2[16]), obj12);
     obj7.children = items8;
     const items10 = [pillarboxed(first, obj7), ];
     const obj13 = { top: true, style: null, children: null };
@@ -589,180 +204,37 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     items11[1] = obj14;
     obj13.style = items11;
     const obj15 = { style: tmp15.contentWrapper, children: null };
-    let tmp35Result = first === tmp25.WATCH_VIDEO;
-    if (tmp35Result) {
+    let tmp33Result = first === tmp24.WATCH_VIDEO;
+    if (tmp33Result) {
       if (bound == null) {
         bound = width;
       }
       const obj16 = { contentWidth: bound, isFullscreen: tmp12, onNavigateToPostWatchVideo: callback2, onClose, onEnd: callback2, setIsFullscreen, sourceQuestContent };
-      tmp35Result = tmp35(tmp16(tmp2[20]), obj16);
-      const tmp16Result4 = tmp16(tmp2[20]);
+      tmp33Result = tmp33(tmp16(tmp2[19]), obj16);
+      const tmp16Result4 = tmp16(tmp2[19]);
     }
-    const items12 = [tmp35Result, ];
-    let tmp35Result2 = first === tmp25.POST_WATCH_VIDEO;
-    if (tmp35Result2) {
+    const items12 = [tmp33Result, ];
+    let tmp33Result2 = first === tmp24.POST_WATCH_VIDEO;
+    if (tmp33Result2) {
       const obj17 = { onClose, onRestartVideo: callback1, sourceQuestContent };
-      tmp35Result2 = tmp35(tmp16(tmp2[21]), obj17);
+      tmp33Result2 = tmp33(tmp16(tmp2[20]), obj17);
     }
-    items12[1] = tmp35Result2;
+    items12[1] = tmp33Result2;
     obj15.children = items12;
     obj13.children = pillarboxed(first, obj15);
-    items10[1] = setIsFullscreen(initialStep(tmp2[22]).SafeAreaPaddingView, obj13);
+    items10[1] = setIsFullscreen(initialStep(tmp2[18]).SafeAreaPaddingView, obj13);
     obj6.children = items10;
     obj5.children = pillarboxed(tmp16Result, obj6);
     return setIsFullscreen(first, obj5);
   }
-}));
+  let obj = initialStep(quest[8]);
+});
 const watch_mobile_video_quest = "watch_mobile_video_quest";
-ReactCompilerGating = fn(558);
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModal.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestModal(questContentPosition) {
-  const cResult = questContentPosition(initialStep[9]).c(17);
-  questContentPosition = questContentPosition.questContentPosition;
-  const onClose = questContentPosition.onClose;
-  ({ videoSessionId, initialStep } = questContentPosition);
-  const sourceQuestContent = questContentPosition.sourceQuestContent;
-  if (cResult[0] !== onClose) {
-    const fn = function o() {
-      const result = QuestUtils.showQuestUnavailableAlert();
-      onClose();
-    };
-    cResult[0] = onClose;
-    cResult[1] = fn;
-    let tmp4 = fn;
-  } else {
-    tmp4 = cResult[1];
-  }
-  let obj = questContentPosition(initialStep[9]);
-  const nonNullableQuest = questContentPosition(initialStep[24]).useNonNullableQuest(questContentPosition.questId, tmp4);
-  if (cResult[2] === nonNullableQuest) {
-    if (cResult[3] === videoSessionId) {
-      let tmp6 = cResult[4];
-    }
-    value = tmp6;
-    let tmp10 = null;
-    if (null != nonNullableQuest) {
-      tmp10 = null;
-      if (null != tmp6) {
-        const _Symbol = Symbol;
-        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function h() {
-            return null;
-          };
-          cResult[5] = fn2;
-          let tmp12 = fn2;
-        } else {
-          tmp12 = cResult[5];
-        }
-        if (cResult[6] === initialStep) {
-          if (cResult[7] === onClose) {
-            if (cResult[8] === nonNullableQuest) {
-              if (cResult[9] === questContentPosition) {
-                if (cResult[10] === sourceQuestContent) {
-                }
-              }
-            }
-          }
-        }
-        let obj2 = {};
-        const obj3 = {
-          fullscreen: true,
-          headerLeft: tmp12,
-          render() {
-                  const obj = { value, children: null };
-                  const obj2 = {
-                    expandedHeight,
-                    children: closure_2_8(QuestContentImpressionTracker.BillableAdPlacementImpressionTrackerNative, {
-                      overrideVisibility: true,
-                      questContent: QuestTypes.QuestContent.VIDEO_MODAL_MOBILE,
-                      questOrQuests: nonNullableQuest,
-                      questContentPosition,
-                      sourceQuestContent,
-                      children: function renderVideoQuestModal() {
-                        return closure_2_8(closure_2_19, { initialStep, onClose, sourceQuestContent });
-                      }
-                    })
-                  };
-                  obj.children = closure_2_8(QuestDockGestureContext.QuestDockGestureContextProvider, obj2);
-                  return closure_2_8(VideoQuestModalContextDefault.Provider, obj);
-                }
-        };
-        obj2[watch_mobile_video_quest] = obj3;
-        cResult[6] = initialStep;
-        cResult[7] = onClose;
-        cResult[8] = nonNullableQuest;
-        cResult[9] = questContentPosition;
-        cResult[10] = sourceQuestContent;
-        cResult[11] = tmp6;
-        cResult[12] = obj2;
-      }
-    }
-    const _Symbol2 = Symbol;
-    if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      class G {
-        constructor() {
-          obj = questContentPosition(initialStep[11]);
-          applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-          return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
-        }
-      }
-      const items = [];
-      cResult[13] = G;
-      cResult[14] = items;
-      let tmp18 = items;
-    } else {
-      class G {
-        constructor() {
-          obj = questContentPosition(initialStep[11]);
-          applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-          return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
-        }
-      }
-      tmp18 = cResult[14];
-    }
-    const layoutEffect = nonNullableQuest.useLayoutEffect(G, tmp18);
-    if (null != nonNullableQuest) {
-      class G {
-        constructor() {
-          obj = questContentPosition(initialStep[11]);
-          applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-          return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
-        }
-      }
-      if (null != tmp10) {
-        class G {
-          constructor() {
-            obj = questContentPosition(initialStep[11]);
-            applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-            return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
-          }
-        }
-      }
-    }
-    return null;
-  }
-  let tmp7 = null;
-  if (null != nonNullableQuest) {
-    class G {
-      constructor() {
-        obj = questContentPosition(initialStep[11]);
-        applyOrientationLockResult = obj.applyOrientationLock("PORTRAIT");
-        return questContentPosition(initialStep[11]).restoreDefaultOrientationLock;
-      }
-    }
-    tmp8[0] = nonNullableQuest;
-    tmp8[1] = videoSessionId;
-    tmp7 = tmp8;
-  }
-  cResult[2] = nonNullableQuest;
-  cResult[3] = videoSessionId;
-  cResult[4] = tmp7;
-  tmp6 = tmp7;
-  const tmpResult = questContentPosition(initialStep[24]);
-}) : (function VideoQuestModal(questContentPosition) {
+export default noop.memo(function VideoQuestModal(questContentPosition) {
   questContentPosition = questContentPosition.questContentPosition;
   const onClose = questContentPosition.onClose;
   const videoSessionId = questContentPosition.videoSessionId;
@@ -773,7 +245,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const result = QuestUtils.showQuestUnavailableAlert();
     onClose();
   }, items);
-  const nonNullableQuest = questContentPosition(videoSessionId[24]).useNonNullableQuest(questContentPosition.questId, callback);
+  const nonNullableQuest = questContentPosition(videoSessionId[22]).useNonNullableQuest(questContentPosition.questId, callback);
   const items1 = [nonNullableQuest, videoSessionId];
   const memo = sourceQuestContent.useMemo(() => {
     let tmp2 = null;
@@ -799,19 +271,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 const obj = { value, children: null };
                 const obj2 = {
                   expandedHeight: memo,
-                  children: closure_2_8(questContentPosition(videoSessionId[25]).BillableAdPlacementImpressionTrackerNative, {
+                  children: closure_2_8(questContentPosition(videoSessionId[23]).BillableAdPlacementImpressionTrackerNative, {
                     overrideVisibility: true,
-                    questContent: questContentPosition(videoSessionId[26]).QuestContent.VIDEO_MODAL_MOBILE,
+                    questContent: questContentPosition(videoSessionId[24]).QuestContent.VIDEO_MODAL_MOBILE,
                     questOrQuests,
                     questContentPosition,
                     sourceQuestContent,
                     children: function renderVideoQuestModal() {
-                      return closure_2_8(closure_2_19, { initialStep, onClose, sourceQuestContent });
+                      return closure_2_8(closure_2_15, { initialStep, onClose, sourceQuestContent });
                     }
                   })
                 };
-                obj.children = closure_2_8(questContentPosition(videoSessionId[13]).QuestDockGestureContextProvider, obj2);
-                return closure_2_8(onClose(videoSessionId[10]).Provider, obj);
+                obj.children = closure_2_8(questContentPosition(videoSessionId[11]).QuestDockGestureContextProvider, obj2);
+                return closure_2_8(onClose(videoSessionId[8]).Provider, obj);
               }
         };
         obj[watch_mobile_video_quest] = obj2;
@@ -821,17 +293,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return tmp;
   }, items2);
   const layoutEffect = sourceQuestContent.useLayoutEffect(() => {
-    questContentPosition(videoSessionId[11]).applyOrientationLock("PORTRAIT");
-    return questContentPosition(videoSessionId[11]).restoreDefaultOrientationLock;
+    questContentPosition(videoSessionId[9]).applyOrientationLock("PORTRAIT");
+    return questContentPosition(videoSessionId[9]).restoreDefaultOrientationLock;
   }, []);
   let tmp8 = null;
   if (null != nonNullableQuest) {
     tmp8 = null;
     if (null != memo1) {
       let obj2 = { hideTitle: true, initialRouteName: watch_mobile_video_quest, screens: memo1 };
-      tmp8 = closure_8(questContentPosition(videoSessionId[27]).Modal, obj2);
+      tmp8 = closure_8(questContentPosition(videoSessionId[25]).Modal, obj2);
     }
   }
   return tmp8;
-}));
+});
 export { VideoQuestModalSteps };

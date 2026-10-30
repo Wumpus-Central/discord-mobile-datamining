@@ -1,25 +1,25 @@
-// === Module 5189: getInitialNavigationState ===
+// === Module 5195: getInitialNavigationState ===
 
-// Module 5189 (getInitialNavigationState)
+// Module 5195 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
-import router_utils from "router_utils" /* 1111 */;
-import matchPathCompat from "matchPathCompat" /* 5041 */;
-import RouteUtils from "RouteUtils" /* 5054 */;
-import useChatLayout from "useChatLayout" /* 5190 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5193 */;
+import router_utils from "router_utils" /* 1100 */;
+import matchPathCompat from "matchPathCompat" /* 5045 */;
+import RouteUtils from "RouteUtils" /* 5058 */;
+import useChatLayout from "useChatLayout" /* 5196 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5199 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5040 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4908 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5044 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
 
 require = fn;
-function getInitialGuildState(id, channelId, flag) {
+function getInitialGuildState(guildId, channelId, flag) {
   flag = flag2;
   if (flag2 === undefined) {
     flag = false;
   }
   if (channelId == null) {
-    channelId = SelectedChannelStore.getChannelId(id);
+    channelId = SelectedChannelStore.getChannelId(guildId);
   }
   const isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
   if (flag) {
@@ -31,14 +31,14 @@ function getInitialGuildState(id, channelId, flag) {
           const obj3 = { name: "tabs", state: null };
           const obj4 = { routes: null, index: 0 };
           const obj5 = { name: "guilds", params: null };
-          const obj6 = { guildId: id, channelId };
+          const obj6 = { guildId, channelId };
           obj5.params = obj6;
           const items1 = [obj5];
           obj4.routes = items1;
           obj3.state = obj4;
           const items2 = [obj3, ];
           const obj7 = { name: "channel", params: null };
-          const obj8 = { guildId: id, channelId };
+          const obj8 = { guildId, channelId };
           obj7.params = obj8;
           items2[1] = obj7;
           const obj9 = { name: "main", state: null };
@@ -56,7 +56,7 @@ function getInitialGuildState(id, channelId, flag) {
   const obj11 = { index: 0, routes: null };
   const obj12 = { name: "tabs", state: null };
   const obj13 = { routes: null, index: 0 };
-  const items5 = [{ name: "guilds", params: { guildId: id, channelId, drawerOpen: flag } }];
+  const items5 = [{ name: "guilds", params: { guildId, channelId, drawerOpen: flag } }];
   obj13.routes = items5;
   obj12.state = obj13;
   const items6 = [obj12];
@@ -65,7 +65,7 @@ function getInitialGuildState(id, channelId, flag) {
   obj11.routes = items7;
   items4[1] = obj11;
   items = items4;
-  const obj14 = { name: "guilds", params: { guildId: id, channelId, drawerOpen: flag } };
+  const obj14 = { name: "guilds", params: { guildId, channelId, drawerOpen: flag } };
   const obj16 = { routes: items6, index: items6.length - 1 };
   const tmp3 = isChatLockedOpen && null != channelId;
 }
@@ -145,7 +145,7 @@ function computeInitialNavigationStateWithoutLogging() {
     return items3;
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
 const logger = new LoggerDefault("getInitialNavigationState");
 const size = fn(2);

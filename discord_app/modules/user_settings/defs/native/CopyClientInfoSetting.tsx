@@ -1,21 +1,19 @@
-// === Module 17427: CopyClientInfoSetting ===
+// === Module 17481: CopyClientInfoSetting ===
 
-// Module 17427 (CopyClientInfoSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import DeviceUtils from "DeviceUtils" /* 4962 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5247 */;
-import ToastUtils from "ToastUtils" /* 5700 */;
-import CopyIcon from "CopyIcon" /* 5720 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7308 */;
-import ClipboardUtils from "ClipboardUtils" /* 7345 */;
-import ActionSheetRow from "ActionSheetRow" /* 7354 */;
-import ActionSheet from "ActionSheet" /* 7358 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7805 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12991 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11120 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
+// Module 17481 (CopyClientInfoSetting)
+import util from "util" /* 1114 */;
+import DeviceUtils from "DeviceUtils" /* 4966 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import ToastUtils from "ToastUtils" /* 5706 */;
+import CopyIcon from "CopyIcon" /* 5726 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7315 */;
+import ClipboardUtils from "ClipboardUtils" /* 7352 */;
+import ActionSheet from "ActionSheet" /* 7360 */;
+import ActionSheetRow from "ActionSheetRow" /* 7362 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7810 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 13142 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11325 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1375 */;
 
 require = fn;
 function getClientInfo() {
@@ -67,57 +65,14 @@ function getClientInfo() {
   obj.releaseChannel = str10;
   return obj;
 }
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const Manifest = ClientInfoUtils.getConstants();
-let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IOSAnchoredChatScrollerRow() {
-  const cResult = subLabel(576).c(3);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1125).intl;
-    let result = tmp(7805).isIOSAnchoredChatScrollerEnabled();
-    const t = tmp(1125).t;
-    const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
-    cResult[0] = stringResult;
-    const tmpResult = tmp(7805);
-  } else {
-    subLabel = cResult[0];
-    const _Symbol = Symbol;
-    if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = tmp(1125).intl;
-      const stringResult1 = intl2.string(tmp(1125).t.iNGJNe);
-      cResult[1] = stringResult1;
-      let tmp8 = stringResult1;
-    } else {
-      tmp8 = cResult[1];
-    }
-    const _Symbol2 = Symbol;
-    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = {
-        label: tmp8,
-        subLabel,
-        onPress() {
-              ClipboardUtils.copy(first);
-              const result = ToastUtils.presentCopiedToClipboard();
-            }
-      };
-      const tmp12 = closure_4(tmp(7354).ActionSheetRow, obj2);
-      cResult[2] = tmp12;
-      let tmp10 = tmp12;
-    } else {
-      tmp10 = cResult[2];
-    }
-    return tmp10;
-  }
-  let obj = subLabel(576);
-}) : (function IOSAnchoredChatScrollerRow() {
+function IOSAnchoredChatScrollerRow() {
   const intl = util.intl;
   let result = IOSAnchoredChatScrollerExperiment.isIOSAnchoredChatScrollerEnabled();
   const t = util.t;
   const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
   require = stringResult;
   const obj2 = { label: null, subLabel: null, onPress: null };
-  const intl2 = tmp(1125).intl;
+  const intl2 = tmp(1114).intl;
   obj2.label = intl2.string(util.t.iNGJNe);
   obj2.subLabel = stringResult;
   obj2.onPress = function onPress() {
@@ -125,192 +80,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IOSAnch
     const result = ToastUtils.presentCopiedToClipboard();
   };
   return closure_4(ActionSheetRow.ActionSheetRow, obj2);
-});
-ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClientClientInfoActionSheet() {
-  const cResult = c.c(17);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { title: null };
-    const intl = util.intl;
-    obj2.title = intl.string(util.t.Na2lF9);
-    const tmp6 = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
-    cResult[0] = tmp6;
-    let first = tmp6;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = util.intl;
-    const stringResult = intl2.string(util.t.H66MEk);
-    const tmp11 = getClientInfo();
-    cResult[1] = stringResult;
-    cResult[2] = tmp11;
-    let tmp8 = tmp11;
-    let tmp7 = stringResult;
-  } else {
-    tmp7 = cResult[1];
-    tmp8 = cResult[2];
-  }
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj3 = {
-      label: tmp7,
-      subLabel: tmp8.appVersion,
-      onPress() {
-          ClipboardUtils.copy(getClientInfo().appVersion);
-          const result = ToastUtils.presentCopiedToClipboard();
-        }
-    };
-    const tmp14 = React4(ActionSheetRow.ActionSheetRow, obj3);
-    cResult[3] = tmp14;
-    let tmp12 = tmp14;
-  } else {
-    tmp12 = cResult[3];
-  }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = util.intl;
-    const stringResult1 = intl3.string(util.t.zuaWIt);
-    const tmp19 = getClientInfo();
-    cResult[4] = stringResult1;
-    cResult[5] = tmp19;
-    let tmp16 = tmp19;
-    let tmp15 = stringResult1;
-  } else {
-    tmp15 = cResult[4];
-    tmp16 = cResult[5];
-  }
-  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = {
-      label: tmp15,
-      subLabel: tmp16.buildNumber,
-      onPress() {
-          ClipboardUtils.copy(getClientInfo().buildNumber);
-          const result = ToastUtils.presentCopiedToClipboard();
-        }
-    };
-    const tmp22 = React4(ActionSheetRow.ActionSheetRow, obj4);
-    cResult[6] = tmp22;
-    let tmp20 = tmp22;
-  } else {
-    tmp20 = cResult[6];
-  }
-  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl4 = util.intl;
-    const stringResult2 = intl4.string(util.t["YD/2+H"]);
-    const tmp27 = getClientInfo();
-    cResult[7] = stringResult2;
-    cResult[8] = tmp27;
-    let tmp24 = tmp27;
-    let tmp23 = stringResult2;
-  } else {
-    tmp23 = cResult[7];
-    tmp24 = cResult[8];
-  }
-  if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = {
-      label: tmp23,
-      subLabel: tmp24.releaseChannel,
-      onPress() {
-          ClipboardUtils.copy(getClientInfo().releaseChannel);
-          const result = ToastUtils.presentCopiedToClipboard();
-        }
-    };
-    const tmp30 = React4(ActionSheetRow.ActionSheetRow, obj5);
-    cResult[9] = tmp30;
-    let tmp28 = tmp30;
-  } else {
-    tmp28 = cResult[9];
-  }
-  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl5 = util.intl;
-    const stringResult3 = intl5.string(util.t["4bhpIV"]);
-    const tmp35 = getClientInfo();
-    cResult[10] = stringResult3;
-    cResult[11] = tmp35;
-    let tmp32 = tmp35;
-    let tmp31 = stringResult3;
-  } else {
-    tmp31 = cResult[10];
-    tmp32 = cResult[11];
-  }
-  if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj6 = {
-      label: tmp31,
-      subLabel: tmp32.manifest,
-      onPress() {
-          ClipboardUtils.copy(getClientInfo().manifest);
-          const result = ToastUtils.presentCopiedToClipboard();
-        }
-    };
-    const tmp38 = React4(ActionSheetRow.ActionSheetRow, obj6);
-    cResult[12] = tmp38;
-    let tmp36 = tmp38;
-  } else {
-    tmp36 = cResult[12];
-  }
-  if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl6 = util.intl;
-    const stringResult4 = intl6.string(util.t.Wj3LW4);
-    const tmp43 = getClientInfo();
-    cResult[13] = stringResult4;
-    cResult[14] = tmp43;
-    let tmp40 = tmp43;
-    let tmp39 = stringResult4;
-  } else {
-    tmp39 = cResult[13];
-    tmp40 = cResult[14];
-  }
-  if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [tmp12, tmp20, tmp28, tmp36, , ];
-    const obj7 = {
-      label: tmp39,
-      subLabel: tmp40.buildOverride,
-      onPress() {
-          ClipboardUtils.copy(getClientInfo().buildOverride);
-          const result = ToastUtils.presentCopiedToClipboard();
-        }
-    };
-    items[4] = React4(ActionSheetRow.ActionSheetRow, obj7);
-    let tmp46Result = null;
-    if (tmpResult.isIOS()) {
-      tmp46Result = React4(closure_8, {});
-    }
-    const obj8 = { hasIcons: false, children: null };
-    items[5] = tmp46Result;
-    obj8.children = items;
-    const tmp45Result = hasOwnProperty(ActionSheetRow.ActionSheetRow.Group, obj8);
-    cResult[15] = tmp45Result;
-    let tmp44 = tmp45Result;
-    tmpResult = PlatformUtils;
-  } else {
-    tmp44 = cResult[15];
-  }
-  if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj9 = { header: first, startExpanded: true, children: null };
-    const items1 = [tmp44, ];
-    const obj10 = { hasIcons: true, children: null };
-    const obj11 = { icon: React4(CopyIcon.CopyIcon, {}), label: null, onPress: null };
-    const intl7 = util.intl;
-    obj11.label = intl7.string(util.t["7dqZ6H"]);
-    obj11.onPress = function onPress() {
-      const tmp = getClientInfo();
-      ({ appVersion, buildNumber } = tmp);
-      ({ releaseChannel, buildOverride, manifest } = tmp);
-      const deviceInfo = DeviceUtils.getDeviceInfo();
-      const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + DeviceUtils.getSystemVersion() + ";";
-      ClipboardUtils.copy(combined);
-      const result = ToastUtils.presentCopiedToClipboard();
-    };
-    obj10.children = React4(ActionSheetRow.ActionSheetRow, obj11);
-    items1[1] = React4(ActionSheetRow.ActionSheetRow.Group, obj10);
-    obj9.children = items1;
-    const tmp53 = hasOwnProperty(ActionSheet.ActionSheet, obj9);
-    cResult[16] = tmp53;
-    let tmp50 = tmp53;
-  } else {
-    tmp50 = cResult[16];
-  }
-  return tmp50;
-}) : (function ClientClientInfoActionSheet() {
+}
+function ClientClientInfoActionSheet() {
   let obj = { header: null, startExpanded: true, children: null };
   let obj2 = { title: null };
   const intl = util.intl;
@@ -363,7 +134,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClientC
   items[4] = React4(ActionSheetRow.ActionSheetRow, obj7);
   let tmp4Result = null;
   if (obj8.isIOS()) {
-    tmp4Result = React4(closure_8, {});
+    tmp4Result = React4(IOSAnchoredChatScrollerRow, {});
   }
   items[5] = tmp4Result;
   const items1 = [hasOwnProperty(ActionSheetRow.ActionSheetRow.Group, { hasIcons: false, children: items }), ];
@@ -384,8 +155,29 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClientC
   items1[1] = React4(ActionSheetRow.ActionSheetRow.Group, obj9);
   obj.children = items1;
   return hasOwnProperty(ActionSheet.ActionSheet, obj);
+}
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const Manifest = ClientInfoUtils.getConstants();
+const SettingBuilders = fn(11505);
+const pressable = SettingBuilders.createPressable({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.Na2lF9);
+  },
+  parent: null,
+  IconComponent: fn(6907).ClipboardListIcon,
+  onPress: function handleClientInfoPress() {
+    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ClientClientInfoActionSheet }), "ClientClientInfoActionSheet");
+  },
+  usePredicate: fn(4834).DeveloperMode.useSetting,
+  withArrow: true
 });
-function getClientInfoString(ReleaseChannel) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
+
+export default pressable;
+export function getClientInfoString(ReleaseChannel) {
   let str = "N/A";
   if (null != ReleaseChannel) {
     str = "N/A";
@@ -395,22 +187,3 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11302);
-const pressable = SettingBuilders.createPressable({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.Na2lF9);
-  },
-  parent: null,
-  IconComponent: fn(6900).ClipboardListIcon,
-  onPress: function handleClientInfoPress() {
-    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_9 }), "ClientClientInfoActionSheet");
-  },
-  usePredicate: fn(4833).DeveloperMode.useSetting,
-  withArrow: true
-});
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
-
-export default pressable;
-export { getClientInfoString };

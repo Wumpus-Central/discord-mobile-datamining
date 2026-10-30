@@ -1,15 +1,15 @@
-// === Module 2031: StringUtils ===
+// === Module 2028: StringUtils ===
 
-// Module 2031 (StringUtils)
-import utils_StringUtils from "utils/StringUtils" /* 2032 */;
+// Module 2028 (StringUtils)
+import utils_StringUtils from "utils/StringUtils" /* 2029 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/StringUtils.tsx");
 
-export function isNullOrEmpty(trimmed) {
-  let tmp = null == trimmed;
+export function isNullOrEmpty(application_id) {
+  let tmp = null == application_id;
   if (!tmp) {
-    tmp = 0 === trimmed.length;
+    tmp = 0 === application_id.length;
   }
   return tmp;
 }

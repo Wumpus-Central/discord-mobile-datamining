@@ -1,23 +1,23 @@
-// === Module 10851: conjurePreviewConnection ===
+// === Module 10874: conjurePreviewConnection ===
 
-// Module 10851 (conjurePreviewConnection)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureChatConnection from "conjureChatConnection" /* 10829 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10831 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10832 */;
-import conjurePreviewTicket from "conjurePreviewTicket" /* 10839 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10852 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10854 */;
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10875 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 10898 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10899 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 10903 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 10905 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10906 */;
-import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 10907 */;
+// Module 10874 (conjurePreviewConnection)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import conjureChatConnection from "conjureChatConnection" /* 10852 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10854 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
+import conjurePreviewTicket from "conjurePreviewTicket" /* 10862 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10875 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10877 */;
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10898 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 10921 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10922 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 10926 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 10928 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10929 */;
+import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 10930 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1389 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6831 */;
+import UserStore from "UserStore" /* 1384 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
 
 require = fn;
 let closure_6 = async function _refetchWidgetData() {
@@ -31,7 +31,7 @@ let closure_6 = async function _refetchWidgetData() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ let closure_8 = async function _uploadOverlayBackground(arg0) {
           closure_130_0 = value;
           if (closure_130_0.ok) {
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -171,7 +171,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -203,7 +203,7 @@ let closure_9 = async function _resetOverlayBackground(arg0) {
         closure_129_0 = value;
         if (closure_129_0.ok) {
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;

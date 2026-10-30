@@ -1,66 +1,28 @@
-// === Module 16774: FriendRequestsEveryoneSetting ===
+// === Module 16828: FriendRequestsEveryoneSetting ===
 
-// Module 16774 (FriendRequestsEveryoneSetting)
-import c from "c" /* 576 */;
-import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4833 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7151 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16613 */;
+// Module 16828 (FriendRequestsEveryoneSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 4834 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7159 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16666 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
-fn(558);
-let ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11302);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
-  const cResult = c.c(2);
-  const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
-  const setting = FriendSourceFlagsSetting.useSetting();
-  if (cResult[0] !== setting) {
-    const flags = UserSettingsUtils.computeFlags(setting);
-    cResult[0] = setting;
-    cResult[1] = flags;
-    let tmp5 = flags;
-    const tmpResult = UserSettingsUtils;
-  } else {
-    tmp5 = cResult[1];
-  }
-  return tmp5.all;
-}) : (function useFriendRequestsEveryoneSettingValue() {
-  const FriendSourceFlagsSetting = setting(4833).FriendSourceFlagsSetting;
-  setting = FriendSourceFlagsSetting.useSetting();
-  const items = [setting];
-  return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;
-});
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(8387).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
-    const cResult = c.c(2);
-    const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
-    const setting = FriendSourceFlagsSetting.useSetting();
-    if (cResult[0] !== setting) {
-      const flags = UserSettingsUtils.computeFlags(setting);
-      cResult[0] = setting;
-      cResult[1] = flags;
-      let tmp5 = flags;
-      const tmpResult = UserSettingsUtils;
-    } else {
-      tmp5 = cResult[1];
-    }
-    return tmp5.all;
-  }) : (function useFriendRequestsEveryoneSettingValue() {
-    const FriendSourceFlagsSetting = setting(4833).FriendSourceFlagsSetting;
+  parent: fn(8424).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: function useFriendRequestsEveryoneSettingValue() {
+    const FriendSourceFlagsSetting = setting(4834).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;
-  }),
+  },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
     if (arg0) {
@@ -75,6 +37,6 @@ const toggle = SettingBuilders.createToggle({
   }
 });
 const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");
 
 export default toggle;

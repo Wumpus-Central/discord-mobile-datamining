@@ -1,7 +1,7 @@
-// === Module 15459: GatewayZstdUtils ===
+// === Module 15499: GatewayZstdUtils ===
 
-// Module 15459 (GatewayZstdUtils)
-import NativeCompressionModuleDefault from "NativeCompressionModule" /* 15460 */;
+// Module 15499 (GatewayZstdUtils)
+import NativeCompressionModuleDefault from "NativeCompressionModule" /* 15500 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");

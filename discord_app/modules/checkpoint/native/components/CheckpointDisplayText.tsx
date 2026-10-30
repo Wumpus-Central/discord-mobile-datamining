@@ -1,62 +1,20 @@
-// === Module 13456: CheckpointDisplayText ===
+// === Module 13606: CheckpointDisplayText ===
 
-// Module 13456 (CheckpointDisplayText)
-import c from "c" /* 576 */;
-import CheckpointTextDefault from "CheckpointText" /* 13436 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+// Module 13606 (CheckpointDisplayText)
+import CheckpointTextDefault from "CheckpointText" /* 13587 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-let closure_3 = ["style"];
 const jsx = fn(21).jsx;
-let closure_6 = { fontSize: 56, lineHeight: 72, letterSpacing: -2.24, marginTop: -15, marginBottom: -16 };
-const ReactCompilerGating = fn(558);
+let closure_3 = { fontSize: 56, lineHeight: 72, letterSpacing: -2.24, marginTop: -15, marginBottom: -16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointDisplayText.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function CheckpointDisplayText(style) {
-  const cResult = c.c(8);
-  if (cResult[0] !== style) {
-    style = style.style;
-    const tmp7 = _objectWithoutProperties(style, closure_3);
-    cResult[0] = style;
-    cResult[1] = tmp7;
-    cResult[2] = style;
-    let tmp4 = style;
-    let tmp3 = tmp7;
-  } else {
-    tmp3 = cResult[1];
-    tmp4 = cResult[2];
-  }
-  if (cResult[3] !== tmp4) {
-    const items = [closure_6, tmp4];
-    cResult[3] = tmp4;
-    cResult[4] = items;
-    let tmp8 = items;
-  } else {
-    tmp8 = cResult[4];
-  }
-  if (cResult[5] === tmp3) {
-    if (cResult[6] === tmp8) {
-      let tmp10 = cResult[7];
-    }
-    return tmp10;
-  }
-  const obj2 = {};
-  const merged = Object.assign(tmp3);
-  obj2.variant = "display-lg";
-  obj2.style = tmp8;
-  const tmp13 = jsx(CheckpointTextDefault, {});
-  cResult[5] = tmp3;
-  cResult[6] = tmp8;
-  cResult[7] = tmp13;
-  tmp10 = tmp13;
-}) : (function CheckpointDisplayText(style) {
+export default function CheckpointDisplayText(style) {
   const merged = Object.assign(style, Object.assign({ style: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.variant = "display-lg";
-  const items = [closure_6, style.style];
+  const items = [closure_3, style.style];
   obj.style = items;
   return jsx(CheckpointTextDefault, {});
-});
+};

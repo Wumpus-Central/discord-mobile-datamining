@@ -1,19 +1,19 @@
-// === Module 10565: PremiumGiftingIntentActionCreators ===
+// === Module 10591: PremiumGiftingIntentActionCreators ===
 
-// Module 10565 (PremiumGiftingIntentActionCreators)
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7789 */;
+// Module 10591 (PremiumGiftingIntentActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import SentryUtilsDefault from "SentryUtils" /* 1243 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+import HTTPUtils from "HTTPUtils" /* 1283 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7794 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 6049 */;
+import MessageStore from "MessageStore" /* 6056 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GiftIntentType = fn(1391).GiftIntentType;
-const Constants = fn(1084);
+const GiftIntentType = fn(1386).GiftIntentType;
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx");
@@ -35,9 +35,9 @@ export function fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs
       DispatcherDefault.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     }
   }, (arg0) => {
-    closure_1(1254).captureException(arg0, { tags: { feature: "gift_intent" } });
-    const obj = closure_1(1254);
-    closure_1(584).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+    closure_1(1243).captureException(arg0, { tags: { feature: "gift_intent" } });
+    const obj = closure_1(1243);
+    closure_1(572).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
   });
 }
 export function logFriendsListGiftIntentsShown() {

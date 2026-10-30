@@ -1,10 +1,10 @@
-// === Module 559: libdiscoreExperiments ===
+// === Module 4884: libdiscoreExperiments ===
 
-// Module 559 (libdiscoreExperiments)
+// Module 4884 (libdiscoreExperiments)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import BridgedStore from "BridgedStore" /* 560 */;
-import js_shim_shim from "js_shim/shim" /* 562 */;
+import js_shim_shim from "js_shim/shim" /* 1362 */;
+import BridgedStore from "BridgedStore" /* 4885 */;
 import size from "module_2" /* 2 */;
 
 const ensureValidMode = BridgedStore.ensureValidMode;

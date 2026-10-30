@@ -1,8 +1,8 @@
-// === Module 5935: AVError ===
+// === Module 5942: AVError ===
 
-// Module 5935 (AVError)
+// Module 5942 (AVError)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 let closure_2 = ["type"];
@@ -67,8 +67,8 @@ if (mapped.length !== set.size) {
     logger.error("AV error reported: " + type + " " + JSON.stringify(_objectWithoutProperties(context, closure_2)));
     DispatcherDefault.dispatch({ type: "REPORT_AV_ERROR", error: type, errorCode: obj4[type].errorCode, severity: obj4[type].severity, category: obj4[type].category, context });
   };
-  exports.getErrorInfo = function getErrorInfo(STREAM_FAILED_TO_START) {
-    return obj4[STREAM_FAILED_TO_START];
+  exports.getErrorInfo = function getErrorInfo(avError) {
+    return obj4[avError];
   };
 }
 set = new Set(mapped);

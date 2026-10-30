@@ -1,22 +1,22 @@
-// === Module 19322: EntityVersionsManager ===
+// === Module 19385: EntityVersionsManager ===
 
-// Module 19322 (EntityVersionsManager)
+// Module 19385 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 7781 */;
-import EmojiStore from "EmojiStore" /* 6783 */;
-import StickersStore from "StickersStore" /* 6824 */;
-import ChannelStore from "ChannelStore" /* 4857 */;
-import GuildRoleStore from "GuildRoleStore" /* 4911 */;
-import GuildStore from "GuildStore" /* 4879 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6555 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7274 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 7786 */;
+import EmojiStore from "EmojiStore" /* 6790 */;
+import StickersStore from "StickersStore" /* 6831 */;
+import ChannelStore from "ChannelStore" /* 4858 */;
+import GuildRoleStore from "GuildRoleStore" /* 4915 */;
+import GuildStore from "GuildStore" /* 4880 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
 
 function handleDeletedEntityIds(guild_id) {
   importDefault = guild_id;
-  guild = GuildStore.getGuild(guild_id.guild_id);
+  const guild = GuildStore.getGuild(guild_id.guild_id);
   let name;
   if (guild != null) {
     name = guild.name;
@@ -36,10 +36,10 @@ function handleDeletedEntityIds(guild_id) {
       const item = keys.forEach((id) => {
         if (!set1.has(id)) {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
-          const obj3 = { guild_id: set3, id, parent_id: "Array" };
+          const obj3 = { guild_id: set3, id, parent_id: "r" };
           obj2.channel = obj3;
-          set3(584).dispatch(obj2);
-          const obj = set3(584);
+          set3(572).dispatch(obj2);
+          const obj = set3(572);
         }
       });
     }
@@ -52,8 +52,8 @@ function handleDeletedEntityIds(guild_id) {
       const item1 = keys1.forEach((roleId) => {
         if (!set1.has(roleId)) {
           const obj2 = { type: "GUILD_ROLE_DELETE", guildId: set3, roleId };
-          set3(584).dispatch(obj2);
-          const obj = set3(584);
+          set3(572).dispatch(obj2);
+          const obj = set3(572);
         }
       });
     }
@@ -99,20 +99,20 @@ function handleConnectionOpen() {
         closure_2_8.fileOnly("requesting deleted guild entities (id: " + closure_0 + ", name: " + name + ")");
         const keys = Object.keys(mutableBasicGuildChannelsForGuild.getMutableBasicGuildChannelsForGuild(closure_0));
         const sorted = keys.sort();
-        const obj2 = closure_2_0(1263);
-        const str = closure_2_0(1263).v3(sorted.join(","));
+        const obj2 = closure_2_0(1252);
+        const str = closure_2_0(1252).v3(sorted.join(","));
         sortedRoles = sortedRoles.getSortedRoles(closure_0);
         const mapped = sortedRoles.map((id) => id.id);
-        const str1 = closure_2_0(1263).v3(sorted.join(",")).toString();
+        const str1 = closure_2_0(1252).v3(sorted.join(",")).toString();
         const sorted1 = mapped.sort();
-        const obj5 = closure_2_0(1263);
-        const str2 = closure_2_0(1263).v3(sorted1.join(","));
+        const obj5 = closure_2_0(1252);
+        const str2 = closure_2_0(1252).v3(sorted1.join(","));
         guildEmoji = guildEmoji.getGuildEmoji(closure_0);
         const mapped1 = guildEmoji.map((id) => id.id);
-        const str5 = closure_2_0(1263).v3(sorted1.join(",")).toString();
+        const str5 = closure_2_0(1252).v3(sorted1.join(",")).toString();
         const sorted2 = mapped1.sort();
-        const obj8 = closure_2_0(1263);
-        const str3 = closure_2_0(1263).v3(sorted2.join(","));
+        const obj8 = closure_2_0(1252);
+        const str3 = closure_2_0(1252).v3(sorted2.join(","));
         stickersByGuildId = stickersByGuildId.getStickersByGuildId(closure_0);
         let mapped2;
         if (stickersByGuildId != null) {
@@ -121,13 +121,13 @@ function handleConnectionOpen() {
         if (mapped2 == null) {
           mapped2 = [];
         }
-        const str6 = closure_2_0(1263).v3(sorted2.join(",")).toString();
+        const str6 = closure_2_0(1252).v3(sorted2.join(",")).toString();
         const sorted3 = mapped2.sort();
-        const tmp5Result = closure_2_0(1263);
-        const str4 = closure_2_0(1263).v3(sorted3.join(","));
+        const tmp5Result = closure_2_0(1252);
+        const str4 = closure_2_0(1252).v3(sorted3.join(","));
         socket = socket.getSocket();
-        const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(closure_0, str1, str5, str6, closure_2_0(1263).v3(sorted3.join(",")).toString());
-        const str7 = closure_2_0(1263).v3(sorted3.join(",")).toString();
+        const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(closure_0, str1, str5, str6, closure_2_0(1252).v3(sorted3.join(",")).toString());
+        const str7 = closure_2_0(1252).v3(sorted3.join(",")).toString();
       }, Math.ceil(2000 * Math.random()));
     });
   });
@@ -148,20 +148,20 @@ function handleGuildCreate(guild) {
       closure_2_8.fileOnly("requesting deleted guild entities (id: " + closure_0 + ", name: " + name + ")");
       const keys = Object.keys(mutableBasicGuildChannelsForGuild.getMutableBasicGuildChannelsForGuild(closure_0));
       const sorted = keys.sort();
-      const obj2 = closure_2_0(1263);
-      const str = closure_2_0(1263).v3(sorted.join(","));
+      const obj2 = closure_2_0(1252);
+      const str = closure_2_0(1252).v3(sorted.join(","));
       sortedRoles = sortedRoles.getSortedRoles(closure_0);
       const mapped = sortedRoles.map((id) => id.id);
-      const str1 = closure_2_0(1263).v3(sorted.join(",")).toString();
+      const str1 = closure_2_0(1252).v3(sorted.join(",")).toString();
       const sorted1 = mapped.sort();
-      const obj5 = closure_2_0(1263);
-      const str2 = closure_2_0(1263).v3(sorted1.join(","));
+      const obj5 = closure_2_0(1252);
+      const str2 = closure_2_0(1252).v3(sorted1.join(","));
       guildEmoji = guildEmoji.getGuildEmoji(closure_0);
       const mapped1 = guildEmoji.map((id) => id.id);
-      const str5 = closure_2_0(1263).v3(sorted1.join(",")).toString();
+      const str5 = closure_2_0(1252).v3(sorted1.join(",")).toString();
       const sorted2 = mapped1.sort();
-      const obj8 = closure_2_0(1263);
-      const str3 = closure_2_0(1263).v3(sorted2.join(","));
+      const obj8 = closure_2_0(1252);
+      const str3 = closure_2_0(1252).v3(sorted2.join(","));
       stickersByGuildId = stickersByGuildId.getStickersByGuildId(closure_0);
       let mapped2;
       if (stickersByGuildId != null) {
@@ -170,13 +170,13 @@ function handleGuildCreate(guild) {
       if (mapped2 == null) {
         mapped2 = [];
       }
-      const str6 = closure_2_0(1263).v3(sorted2.join(",")).toString();
+      const str6 = closure_2_0(1252).v3(sorted2.join(",")).toString();
       const sorted3 = mapped2.sort();
-      const tmp5Result = closure_2_0(1263);
-      const str4 = closure_2_0(1263).v3(sorted3.join(","));
+      const tmp5Result = closure_2_0(1252);
+      const str4 = closure_2_0(1252).v3(sorted3.join(","));
       socket = socket.getSocket();
-      const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(closure_0, str1, str5, str6, closure_2_0(1263).v3(sorted3.join(",")).toString());
-      const str7 = closure_2_0(1263).v3(sorted3.join(",")).toString();
+      const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(closure_0, str1, str5, str6, closure_2_0(1252).v3(sorted3.join(",")).toString());
+      const str7 = closure_2_0(1252).v3(sorted3.join(",")).toString();
     }, Math.ceil(2000 * Math.random()));
   }
 }

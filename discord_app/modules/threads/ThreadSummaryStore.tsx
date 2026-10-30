@@ -1,8 +1,8 @@
-// === Module 8357: ThreadSummaryStore ===
+// === Module 8334: ThreadSummaryStore ===
 
-// Module 8357 (ThreadSummaryStore)
+// Module 8334 (ThreadSummaryStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import DispatcherDefault from "Dispatcher" /* 572 */;
 
 function handleSummarizeThreadFinish() {
   c0 = false;

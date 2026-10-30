@@ -1,297 +1,38 @@
-// === Module 11681: StageActionBar ===
+// === Module 11874: StageActionBar ===
 
-// Module 11681 (StageActionBar)
-import StageActionBarButtons from "StageActionBarButtons" /* 11616 */;
-import ChannelCallActionBar from "ChannelCallActionBar" /* 11682 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 11737 */;
+// Module 11874 (StageActionBar)
+import StageActionBarButtons from "StageActionBarButtons" /* 11835 */;
+import ChannelCallActionBar from "ChannelCallActionBar" /* 11875 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 11930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 12, justifyContent: "center", alignItems: "center", flexDirection: "row", position: "relative" } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageActionBar.tsx");
 
-export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function StageActionBar(channel) {
-  const cResult = channel(576).c(61);
-  channel = channel.channel;
-  let tmp4 = closure_8();
-  let obj = channel(576);
-  const canModerateRequestToSpeak = channel(6697).useCanModerateRequestToSpeak(channel.id);
-  if (cResult[0] !== channel) {
-    const obj3 = { channel };
-    cResult[0] = channel;
-    cResult[1] = obj3;
-    let tmp6 = obj3;
-  } else {
-    tmp6 = cResult[1];
-  }
-  let obj2 = channel(6697);
-  const actionBarPrimaryButton = channel(11682).useActionBarPrimaryButton(tmp6);
-  const tmpResult = channel(11682);
-  const getActionBarHeight = channel(11660).useGetActionBarHeight(channel.id);
-  const tmp9 = actionBarPrimaryButton(11484)(channel.id);
-  const tmpResult5 = channel(11660);
-  const tmp10 = channel(11619).useShowStageMusicMuteButton(channel.id) && !tmp9;
-  if (cResult[2] !== channel.guild_id) {
-    const isStageVideoEnabledResult = tmp(6699).isStageVideoEnabled(channel.guild_id);
-    cResult[2] = channel.guild_id;
-    cResult[3] = isStageVideoEnabledResult;
-    let tmp11 = isStageVideoEnabledResult;
-    const tmpResult7 = tmp(6699);
-  } else {
-    tmp11 = cResult[3];
-  }
-  if (cResult[4] === channel) {
-    if (cResult[5] === actionBarPrimaryButton) {
-      let tmp13 = cResult[6];
-    }
-    if (tmp9) {
-      if (cResult[7] === channel) {
-        if (cResult[8] === tmp11) {
-          if (cResult[9] === tmp11) {
-            let tmp33 = cResult[10];
-          }
-          if (cResult[11] === channel) {
-            if (cResult[12] === tmp11) {
-              let tmp36 = cResult[13];
-            }
-            if (cResult[14] === channel) {
-              if (cResult[15] === canModerateRequestToSpeak) {
-                if (cResult[16] === tmp11) {
-                  if (cResult[18] === channel) {
-                    if (cResult[19] === tmp11) {
-                      let tmp43 = cResult[20];
-                    }
-                    if (cResult[21] === tmp13) {
-                      if (cResult[22] === tmp11) {
-                        let tmp46 = cResult[23];
-                      }
-                      if (cResult[24] === tmp33) {
-                        if (cResult[25] === tmp36) {
-                          if (cResult[26] === tmp39) {
-                            if (cResult[27] === tmp43) {
-                            }
-                          }
-                        }
-                      }
-                      const obj4 = { children: null };
-                      const items = [tmp33, tmp36, tmp39, tmp43, tmp46];
-                      obj4.children = items;
-                      const tmp51 = closure_7(closure_6, obj4);
-                      cResult[24] = tmp33;
-                      cResult[25] = tmp36;
-                      cResult[26] = tmp39;
-                      cResult[27] = tmp43;
-                      cResult[28] = tmp46;
-                      cResult[29] = tmp51;
-                    }
-                    const tmp13Result = tmp13(tmp11);
-                    cResult[21] = tmp13;
-                    cResult[22] = tmp11;
-                    cResult[23] = tmp13Result;
-                    tmp46 = tmp13Result;
-                  }
-                  const obj5 = { channel, isSmallSize: tmp11 };
-                  const tmp45 = closure_5(tmp(11616).ChatButton, obj5);
-                  cResult[18] = channel;
-                  cResult[19] = tmp11;
-                  cResult[20] = tmp45;
-                  tmp43 = tmp45;
-                }
-              }
-            }
-            let tmpResult8 = tmp(11616);
-            const obj6 = { channel, isSmallSize: tmp11 };
-            tmpResult8 = closure_5(canModerateRequestToSpeak ? tmpResult8.RequestToSpeakListButton : tmpResult8.MoveToAudienceButton, obj6);
-            cResult[14] = channel;
-            cResult[15] = canModerateRequestToSpeak;
-            cResult[16] = tmp11;
-            cResult[17] = tmpResult8;
-          }
-          const obj7 = { channel, isSmallSize: tmp11 };
-          const tmp38 = closure_5(tmp(11737).ChannelCallMicButton, obj7);
-          cResult[11] = channel;
-          cResult[12] = tmp11;
-          cResult[13] = tmp38;
-          tmp36 = tmp38;
-        }
-      }
-      let tmp34 = tmp11;
-      if (tmp11) {
-        const obj8 = { channel, isSmallSize: tmp11 };
-        tmp34 = closure_5(tmp(11682).VideoButton, obj8);
-      }
-      cResult[7] = channel;
-      cResult[8] = tmp11;
-      cResult[9] = tmp11;
-      cResult[10] = tmp34;
-      tmp33 = tmp34;
-    } else {
-      let tmp14 = tmp10;
-      if (tmp10) {
-        tmp14 = canModerateRequestToSpeak;
-      }
-      if (cResult[30] === channel) {
-        if (cResult[31] === tmp14) {
-          if (cResult[32] === tmp10) {
-            let tmp15 = cResult[33];
-          }
-          if (cResult[34] === channel) {
-            if (cResult[35] === tmp14) {
-              let tmp18 = cResult[36];
-            }
-            if (cResult[37] === channel) {
-              if (cResult[38] === canModerateRequestToSpeak) {
-                if (cResult[39] === tmp14) {
-                  let tmp21 = cResult[40];
-                }
-                if (cResult[41] === channel) {
-                  if (cResult[42] === tmp14) {
-                    let tmp24 = cResult[43];
-                  }
-                  if (cResult[44] === tmp13) {
-                    if (cResult[45] === tmp14) {
-                      let tmp27 = cResult[46];
-                    }
-                    if (cResult[47] === tmp15) {
-                      if (cResult[48] === tmp18) {
-                        if (cResult[49] === tmp21) {
-                          if (cResult[50] === tmp24) {
-                            if (cResult[51] === tmp27) {
-                              let tmp29 = cResult[52];
-                            }
-                            if (cResult[53] !== getActionBarHeight) {
-                              const obj9 = { height: getActionBarHeight };
-                              cResult[53] = getActionBarHeight;
-                              cResult[54] = obj9;
-                              let tmp53 = obj9;
-                            } else {
-                              tmp53 = cResult[54];
-                            }
-                            if (cResult[55] === tmp4.container) {
-                              if (cResult[56] === tmp53) {
-                                let tmp54 = cResult[57];
-                              }
-                              if (cResult[58] === tmp29) {
-                                if (cResult[59] === tmp54) {
-                                  let tmp55 = cResult[60];
-                                }
-                                return tmp55;
-                              }
-                              const obj10 = { pointerEvents: "box-none", style: tmp54, children: tmp29 };
-                              const tmp58 = closure_5(View, obj10);
-                              cResult[58] = tmp29;
-                              cResult[59] = tmp54;
-                              cResult[60] = tmp58;
-                              tmp55 = tmp58;
-                            }
-                            const items1 = [tmp4.container, tmp53];
-                            cResult[55] = tmp4.container;
-                            cResult[56] = tmp53;
-                            cResult[57] = items1;
-                            tmp54 = items1;
-                          }
-                        }
-                      }
-                    }
-                    const obj11 = { children: null };
-                    const items2 = [tmp15, tmp18, tmp21, tmp24, tmp27];
-                    obj11.children = items2;
-                    const tmp32 = closure_7(closure_6, obj11);
-                    cResult[47] = tmp15;
-                    cResult[48] = tmp18;
-                    cResult[49] = tmp21;
-                    cResult[50] = tmp24;
-                    cResult[51] = tmp27;
-                    cResult[52] = tmp32;
-                    tmp29 = tmp32;
-                  }
-                  const tmp13Result2 = tmp13(tmp14);
-                  cResult[44] = tmp13;
-                  cResult[45] = tmp14;
-                  cResult[46] = tmp13Result2;
-                  tmp27 = tmp13Result2;
-                }
-                const obj12 = { channel, isSmallSize: tmp14 };
-                const tmp26 = closure_5(tmp(11616).ChatButton, obj12);
-                cResult[41] = channel;
-                cResult[42] = tmp14;
-                cResult[43] = tmp26;
-                tmp24 = tmp26;
-              }
-            }
-            let tmp22 = canModerateRequestToSpeak;
-            if (canModerateRequestToSpeak) {
-              const obj13 = { channel, isSmallSize: tmp14 };
-              tmp22 = closure_5(tmp(11616).RequestToSpeakListButton, obj13);
-            }
-            cResult[37] = channel;
-            cResult[38] = canModerateRequestToSpeak;
-            cResult[39] = tmp14;
-            cResult[40] = tmp22;
-            tmp21 = tmp22;
-          }
-          const obj14 = { channel, isSmallSize: tmp14 };
-          const tmp20 = closure_5(tmp(11616).RequestToSpeakButton, obj14);
-          cResult[34] = channel;
-          cResult[35] = tmp14;
-          cResult[36] = tmp20;
-          tmp18 = tmp20;
-        }
-      }
-      let tmp16 = tmp10;
-      if (tmp10) {
-        const obj15 = { channel, isSmallSize: tmp14 };
-        tmp16 = closure_5(tmp(11616).MusicMuteButton, obj15);
-      }
-      cResult[30] = channel;
-      cResult[31] = tmp14;
-      cResult[32] = tmp10;
-      cResult[33] = tmp16;
-      tmp15 = tmp16;
-    }
-  }
-  const fn = function _(isSmallSize) {
-    if (actionBarPrimaryButton === ChannelCallActionBar.ActionBarPrimaryButton.END_STREAM) {
-      const obj2 = { channel, isSmallSize };
-      let tmp4 = hasOwnProperty(ChannelCallActionBar.DisconnectStreamButton, obj2);
-    } else {
-      tmp4 = null;
-      if (actionBarPrimaryButton === ChannelCallActionBar.ActionBarPrimaryButton.END_CALL) {
-        const obj = { channel, isSmallSize };
-        tmp4 = hasOwnProperty(StageActionBarButtons.DisconnectStageButton, obj);
-      }
-    }
-    return tmp4;
-  };
-  cResult[4] = channel;
-  cResult[5] = actionBarPrimaryButton;
-  cResult[6] = fn;
-  tmp13 = fn;
-  const tmpResult6 = channel(11619);
-}) : (function StageActionBar(channel) {
+export default noop.memo(function StageActionBar(channel) {
   channel = channel.channel;
   let actionBarPrimaryButton;
   let tmp = closure_8();
   let tmp2 = channel;
   const tmp3 = actionBarPrimaryButton;
-  const canModerateRequestToSpeak = channel(actionBarPrimaryButton[6]).useCanModerateRequestToSpeak(channel.id);
-  let obj = channel(actionBarPrimaryButton[6]);
-  actionBarPrimaryButton = channel(actionBarPrimaryButton[7]).useActionBarPrimaryButton({ channel });
-  let obj2 = channel(actionBarPrimaryButton[7]);
-  const getActionBarHeight = channel(actionBarPrimaryButton[8]).useGetActionBarHeight(channel.id);
-  const tmp7 = canModerateRequestToSpeak(actionBarPrimaryButton[9])(channel.id);
+  const canModerateRequestToSpeak = channel(actionBarPrimaryButton[4]).useCanModerateRequestToSpeak(channel.id);
+  let obj = channel(actionBarPrimaryButton[4]);
+  actionBarPrimaryButton = channel(actionBarPrimaryButton[5]).useActionBarPrimaryButton({ channel });
+  let obj2 = channel(actionBarPrimaryButton[5]);
+  const getActionBarHeight = channel(actionBarPrimaryButton[6]).useGetActionBarHeight(channel.id);
+  const tmp7 = canModerateRequestToSpeak(actionBarPrimaryButton[7])(channel.id);
   noop = tmp7;
-  let obj3 = channel(actionBarPrimaryButton[8]);
-  const tmp8 = channel(actionBarPrimaryButton[10]).useShowStageMusicMuteButton(channel.id) && !tmp7;
+  let obj3 = channel(actionBarPrimaryButton[6]);
+  const tmp8 = channel(actionBarPrimaryButton[8]).useShowStageMusicMuteButton(channel.id) && !tmp7;
   closure_4 = tmp8;
-  let obj4 = channel(actionBarPrimaryButton[10]);
-  const isStageVideoEnabledResult = tmp2(tmp3[11]).isStageVideoEnabled(channel.guild_id);
+  let obj4 = channel(actionBarPrimaryButton[8]);
+  const isStageVideoEnabledResult = tmp2(tmp3[9]).isStageVideoEnabled(channel.guild_id);
   c5 = isStageVideoEnabledResult;
   let items = [actionBarPrimaryButton, channel];
   const callback = noop.useCallback((isSmallSize) => {
@@ -361,4 +102,4 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items2 = [tmp.container, { height: getActionBarHeight }];
   obj5.style = items2;
   return c5(closure_4, obj5);
-}));
+});

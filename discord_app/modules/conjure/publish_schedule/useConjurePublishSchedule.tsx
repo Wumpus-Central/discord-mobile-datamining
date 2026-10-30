@@ -1,17 +1,17 @@
-// === Module 12305: useConjurePublishSchedule ===
+// === Module 12466: useConjurePublishSchedule ===
 
-// Module 12305 (useConjurePublishSchedule)
-import util from "util" /* 1125 */;
-import _modDef3864 from "module_3864" /* 3864 */;
+// Module 12466 (useConjurePublishSchedule)
+import util from "util" /* 1114 */;
+import _modDef3865 from "module_3865" /* 3865 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10807 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10830 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ensureConnection = fn(10807).ensureConnection;
+const ensureConnection = fn(10830).ensureConnection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishSchedule.tsx");
 
@@ -60,7 +60,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
         }).catch(() => {
           if (ref.current.value === sum) {
             const intl = util.intl;
-            closure_2_8(intl.string(_modDef3864.n25haz));
+            closure_2_8(intl.string(_modDef3865.n25haz));
             closure_4(false);
           }
         });
@@ -96,7 +96,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -120,7 +120,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
                     ref2.current.value = sum;
                     closure_128_0 = sum;
                     ensureConnection(true);
-                    closure_2_8(null);
+                    React6(null);
                     closure_9(null);
                     c3 = 2;
                     c4 = 3;
@@ -166,7 +166,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
                   closure_129_7(false);
                 }
                 c5 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "HermesInternal", done: null };
               } else {
                 closure_129_3(closure_128_1);
                 const intl = tmp6(tmp80[6]).intl;

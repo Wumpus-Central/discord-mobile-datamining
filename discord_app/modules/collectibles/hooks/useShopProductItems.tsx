@@ -1,10 +1,9 @@
-// === Module 8700: useShopProductItems ===
+// === Module 8734: useShopProductItems ===
 
-// Module 8700 (useShopProductItems)
-import c from "c" /* 576 */;
+// Module 8734 (useShopProductItems)
 import noop from "module_19" /* 19 */;
 
-require = fn;
+const require = fn;
 class ItemsSortingHat {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -58,8 +57,11 @@ prototype["sortByTypes"] = function sortByTypes(arr) {
     return get;
   }, new Map());
 };
-const ReactCompilerGating = fn(558);
-function getProductItems(product) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
+
+export { ItemsSortingHat };
+export function getProductItems(product) {
   if (typeof ItemsSortingHat === "function") {
     const obj = Object.create(ItemsSortingHat.prototype);
     obj.itemsByTypes = obj.sortByTypes(tmp);
@@ -69,11 +71,6 @@ function getProductItems(product) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
-
-export { ItemsSortingHat };
-export { getProductItems };
 export function getPurchasedItem(arg0, firstAvatarDecoration) {
   let tmp;
   if (null != arg0) {
@@ -89,27 +86,9 @@ export function getPurchasedItem(arg0, firstAvatarDecoration) {
   }
   return tmp;
 }
-export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled() ? (function useShopProductItems(arg0) {
-  const cResult = c.c(2);
-  if (cResult[0] !== arg0) {
-    if (typeof ItemsSortingHat === "function") {
-      const obj2 = Object.create(ItemsSortingHat.prototype);
-      obj2.itemsByTypes = obj2.sortByTypes(tmp3);
-      const obj5 = { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
-      ({ firstProfileEffect: obj3.firstProfileEffect, firstAvatarDecoration: obj3.firstAvatarDecoration, firstNameplate: obj3.firstNameplate, firstProfileFrame: obj3.firstProfileFrame } = obj2);
-      cResult[0] = arg0;
-      cResult[1] = obj5;
-      let tmp2 = obj5;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    tmp2 = cResult[1];
-  }
-  return tmp2;
-}) : (function useShopProductItems(arg0) {
-  closure_0 = arg0;
-  const items = [arg0];
+export function useShopProductItems(product) {
+  closure_0 = product;
+  const items = [product];
   return noop.useMemo(() => {
     if (typeof ItemsSortingHat === "function") {
       const obj = Object.create(ItemsSortingHat.prototype);
@@ -120,4 +99,4 @@ export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled() 
       throw new TypeError("Trying to call a non-function");
     }
   }, items);
-});
+}

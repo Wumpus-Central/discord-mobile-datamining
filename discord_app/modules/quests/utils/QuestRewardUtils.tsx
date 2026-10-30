@@ -1,18 +1,18 @@
-// === Module 9655: QuestRewardUtils ===
+// === Module 9680: QuestRewardUtils ===
 
-// Module 9655 (QuestRewardUtils)
-import util from "util" /* 1125 */;
-import _mod4434 from "module_4434" /* 4434 */;
-import QuestTypes from "QuestTypes" /* 6771 */;
-import QuestDataUtils from "QuestDataUtils" /* 7830 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7839 */;
-import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9656 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9657 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9658 */;
-import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9659 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9660 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9661 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7708 */;
+// Module 9680 (QuestRewardUtils)
+import util from "util" /* 1114 */;
+import _mod4435 from "module_4435" /* 4435 */;
+import QuestTypes from "QuestTypes" /* 6778 */;
+import QuestDataUtils from "QuestDataUtils" /* 7835 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7844 */;
+import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 9681 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 9682 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9683 */;
+import FractionalPremiumUtils from "FractionalPremiumUtils" /* 9684 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9685 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 9686 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7713 */;
 
 require = fn;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
@@ -75,7 +75,7 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
     }
   }
 }
-let items = [fn(9656).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(9656).QuestRewardExpirationMode.PREMIUM_PERMANENT];
+let items = [fn(9681).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(9681).QuestRewardExpirationMode.PREMIUM_PERMANENT];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestRewardUtils.tsx");
@@ -135,7 +135,7 @@ export function getCollectibleQuestRewardDuration(config) {
         const date = new Date(config.expiresAt);
         const _Date2 = Date;
         const date1 = new Date(tmp5.expiresAt);
-        const differenceInDaysResult = _mod4434.differenceInDays(date1, date);
+        const differenceInDaysResult = _mod4435.differenceInDays(date1, date);
         const _Math3 = Math;
         let num = 0;
         const rounded = Math.floor(differenceInDaysResult / 30);
@@ -154,7 +154,7 @@ export function getCollectibleQuestRewardDuration(config) {
           const obj3 = { months: sum };
           return intl3.formatToPlainString(util.t.kridzK, obj3);
         } else {
-          const differenceInDaysResult1 = _mod4434.differenceInDays(date1, date);
+          const differenceInDaysResult1 = _mod4435.differenceInDays(date1, date);
           if (differenceInDaysResult1 >= 7) {
             const _Math = Math;
             const rounded2 = Math.ceil(differenceInDaysResult1 / 7);
@@ -166,9 +166,9 @@ export function getCollectibleQuestRewardDuration(config) {
             const obj = { days: differenceInDaysResult1 };
             return intl.formatToPlainString(util.t["k2UNz+"], obj);
           }
-          const tmp3Result2 = _mod4434;
+          const tmp3Result2 = _mod4435;
         }
-        const tmp3Result = _mod4434;
+        const tmp3Result = _mod4435;
       }
     }
   }
@@ -418,16 +418,16 @@ export function getQuestOrbMultiplierForUser(rewardsConfig, isFractionalPremiumW
     return num6;
   }
 }
-export function getQuestOrbRewardQuantityForUser(config, stateFromStores2) {
+export function getQuestOrbRewardQuantityForUser(config, stateFromStores) {
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
   if (null == found) {
     return null;
-  } else if (null == stateFromStores2) {
+  } else if (null == stateFromStores) {
     return found.orbQuantity;
   } else {
     const rewards1 = config.rewardsConfig.rewards;
-    const questOrbMultiplierEligibilityForUser = QuestOrbMultiplierHooks.getQuestOrbMultiplierEligibilityForUser(stateFromStores2);
+    const questOrbMultiplierEligibilityForUser = QuestOrbMultiplierHooks.getQuestOrbMultiplierEligibilityForUser(stateFromStores);
     const found1 = rewards1.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
     let premiumOrbQuantity;
     if (found1 != null) {
