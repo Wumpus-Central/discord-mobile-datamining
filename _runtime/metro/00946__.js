@@ -1,8 +1,64 @@
 // _runtime/metro/00946__.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import registerSpanErrorInstrumentation from "00681__.js";
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+const weakMap = new WeakMap();
+
+export const reportingObserverIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  function handler(arg0) {
+    if (map.has(obj.getClient())) {
+      function _loop(iter) {
+        iter(681).withScope((setExtra) => {
+          setExtra.setExtra("url", iter.url);
+          let str = "No details available";
+          const combined = "ReportingObserver [" + iter.type + "]";
+          if (iter.body) {
+            const obj = {};
+            for (const key10019 in tmp.body) {
+              obj[key10019] = iter.body[key10019];
+              continue;
+            }
+            setExtra.setExtra("body", obj);
+            if ("crash" === iter.type) {
+              const body = iter.body;
+              const items = [body.crashId || "", body.reason || ""];
+              const str5 = items.join(" ");
+              const tmp7 = body.crashId || "";
+              str = items.join(" ").trim() || "No details available";
+              const tmp8 = items.join(" ").trim() || "No details available";
+            } else {
+              str = iter.body.message || "No details available";
+              const tmp6 = iter.body.message || "No details available";
+            }
+          }
+          types(681).captureMessage("" + combined + ": " + str);
+          const obj2 = types(681);
+        });
+      }
+      const iter = arg0[Symbol.iterator]();
+      while (iter !== undefined) {
+        let _loopResult = _loop(iter.next());
+        continue;
+      }
+    }
+  }
+  const types = obj.types || ["crash", "deprecation", "intervention"];
+  return {
+    name: "ReportingObserver",
+    setupOnce() {
+      if (obj.supportsReportingObserver()) {
+        const obj2 = { buffered: true, types };
+        const reportingObserver = new registerSpanErrorInstrumentation.GLOBAL_OBJ.ReportingObserver(handler, obj2);
+        reportingObserver.observe();
+      }
+      obj = registerSpanErrorInstrumentation;
+    },
+    setup(arg0) {
+      const result = map.set(arg0, true);
+    },
+  };
+});

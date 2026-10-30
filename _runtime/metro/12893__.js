@@ -1,43 +1,88 @@
 // _runtime/metro/12893__.js
-import _mod12853 from "12853__.js";
-import _mod12881 from "12881__.js";
+import _mod12798 from "12798__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
+function consumeRaw() {
+  return this.createSingleNodeList(this.Raw(this.scanner.tokenIndex, null, false));
+}
+function parentheses() {
+  const self = this;
+  const scanner = this.scanner;
+  scanner.skipSC();
+  if (this.scanner.tokenType === Ident) {
+    if (self.lookupNonWSType(1) === Colon) {
+      let singleNodeList = self.createSingleNodeList(self.Declaration());
     }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
+    return singleNodeList;
+  }
+  const call = readSequence.call;
+  singleNodeList = typeof call === "unknown" ? readSequence() : call(self);
+}
+function readSequence() {
+  const self = this;
+  const list = this.createList();
+  const scanner = this.scanner;
+  scanner.skipSC();
+  let tmp2 = null;
+  if (!this.scanner.eof) {
+    while (true) {
+      let tokenType = self.scanner.tokenType;
+      if (WhiteSpace === tokenType) {
+        let WhiteSpaceResult = self.WhiteSpace();
+      } else {
+        if (Comment === tokenType) {
+          let iter = self.scanner;
+          let nextResult = iter.next();
+          WhiteSpaceResult = tmp2;
+        } else {
+          if (Function === tokenType) {
+            let FunctionResult = self.Function(consumeRaw, self.scope.AtrulePrelude);
+          } else {
+            if (Ident === tokenType) {
+              FunctionResult = self.Identifier();
+            } else if (LeftParenthesis !== tokenType) {
+              break;
+            } else {
+              FunctionResult = self.Parentheses(parentheses, self.scope.AtrulePrelude);
+            }
+            break;
           }
+          WhiteSpaceResult = tmp2;
+          if (null !== tmp2) {
+            let arr = list.push(tmp2);
+            WhiteSpaceResult = null;
+          }
+          let arr3 = list.push(FunctionResult);
         }
+        break;
+      }
+      tmp2 = WhiteSpaceResult;
+      if (self.scanner.eof) {
+        break;
       }
     }
-    if (_mod12881.DEBUG_BUILD) {
-      const logger = _mod12853.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn(
-        "[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " +
-          json +
-          " of type " +
-          JSON.stringify(typeof flag) +
-          ".",
-      );
-    }
   }
+  return list;
 }
+const WhiteSpace = _mod12798.TYPE.WhiteSpace;
+const Comment = _mod12798.TYPE.Comment;
+const Ident = _mod12798.TYPE.Ident;
+const Function = _mod12798.TYPE.Function;
+const Colon = _mod12798.TYPE.Colon;
+const LeftParenthesis = _mod12798.TYPE.LeftParenthesis;
+
+export default {
+  parse: {
+    prelude() {
+      const self = this;
+      const call = readSequence.call;
+      const tmp2 = typeof call === "unknown" ? readSequence() : call(self);
+      if (null === self.getFirstListNode(tmp2)) {
+        self.error("Condition is expected");
+      }
+      return tmp2;
+    },
+    block() {
+      return this.Block(false);
+    },
+  },
+};

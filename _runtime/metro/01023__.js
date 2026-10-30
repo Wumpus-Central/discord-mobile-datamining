@@ -1,0 +1,233 @@
+// _runtime/metro/01023__.js
+import _mod17 from "00017__.js";
+import _mod681 from "00681__.js";
+
+const require = globalThis.__r;
+
+const AppState = _mod17.AppState;
+
+export function onThisSpanEnd(on, arg1, arg2) {
+  closure_0 = arg1;
+  closure_1 = arg2;
+  on.on("spanEnd", (arg0) => {
+    if (closure_0 === arg0) {
+      closure_1(arg0);
+    }
+  });
+}
+export (client, activeSpan, finalTimeout) => {
+  _require = activeSpan;
+  dependencyMap = finalTimeout;
+  if (obj.isRootSpan(activeSpan)) {
+    client.on("spanEnd", (arg0) => {
+      if (arg0 === activeSpan) {
+        let timestamp = _mod681.spanToJSON(activeSpan).timestamp;
+        const start_timestamp = _mod681.spanToJSON(activeSpan).start_timestamp;
+        if (timestamp) {
+          if (start_timestamp) {
+            const diff = timestamp - start_timestamp;
+            if (timestamp) {
+              let tmp3 = diff > closure_1;
+              if (!tmp3) {
+                tmp3 = diff < 0;
+              }
+              timestamp = tmp3;
+            }
+            if (timestamp) {
+              const obj2 = { code: _mod681.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
+              activeSpan.setStatus(obj2);
+              const attr = activeSpan.setAttribute("maxTransactionDurationExceeded", "true");
+            }
+          }
+        }
+      }
+    });
+  } else {
+    const debug = require("00681__.js").debug;
+    debug.warn("Not sampling empty back spans only works for Sentry Transactions (Root Spans).");
+  }
+}
+export (client, c4) => {
+  const f80023 = (arg0) => {
+    const data = c4(f80023[2]).spanToJSON(arg0).data;
+    let prop;
+    if (null !== data) {
+      if (undefined !== data) {
+        prop = data["route.has_been_seen"];
+      }
+    }
+    return true === prop;
+  };
+  const f80024 = () => {
+    const debug = c4(f80023[2]).debug;
+    debug.log("Not sampling transaction as route has been seen before. Pass ignoreEmptyBackNavigationTransactions = false to disable this feature.");
+  };
+  if (client) {
+    if (c4) {
+      if (tmpResult.isRootSpan(c4)) {
+        if (tmpResult2.isSentrySpan(c4)) {
+          client.on("spanEnd", (arg0) => {
+            if (arg0 === closure_0) {
+              if (DEFAULT_NAVIGATION_SPAN_NAME(tmp)) {
+                closure_0 = tmp;
+                const spanDescendants = _mod681.getSpanDescendants(tmp);
+                if (spanDescendants.filter((spanContext) => {
+                  let tmp = spanContext.spanContext().spanId !== closure_0.spanContext().spanId;
+                  if (tmp) {
+                    tmp = "ui.load.initial_display" !== closure_0(681).spanToJSON(spanContext).op;
+                    const obj = closure_0(681);
+                  }
+                  if (tmp) {
+                    tmp = "navigation.processing" !== closure_0(681).spanToJSON(spanContext).op;
+                    const obj2 = closure_0(681);
+                  }
+                  return tmp;
+                }).length <= 0) {
+                  closure_2(tmp);
+                  tmp._sampled = false;
+                }
+              }
+            }
+          });
+        }
+        tmpResult2 = tmp(tmp2[1]);
+      }
+      const debug3 = tmp(tmp2[2]).debug;
+      debug3.warn("Not sampling empty navigation spans only works for Sentry Transactions (Root Spans).");
+      tmpResult = tmp(tmp2[1]);
+    } else {
+      const debug2 = tmp(tmp2[2]).debug;
+      debug2.warn("Could not hook on spanEnd event because span is not defined.");
+    }
+  } else {
+    let debug = tmp(tmp2[2]).debug;
+    debug.warn("Could not hook on spanEnd event because client is not defined.");
+  }
+}
+export (client, c4, DEFAULT_NAVIGATION_SPAN_NAME, arg3) => {
+  closure_2 = arg3;
+  closure_129_0 = c4;
+  closure_129_1 = (arg0) => {
+    const spanToJSONResult = _mod681.spanToJSON(arg0);
+    let tmp2 = spanToJSONResult.description === closure_1;
+    if (tmp2) {
+      const data = spanToJSONResult.data;
+      let prop;
+      if (null !== data) {
+        if (undefined !== data) {
+          prop = data["route.name"];
+        }
+      }
+      tmp2 = !prop;
+    }
+    if (tmp2) {
+      tmp2 = closure_2();
+    }
+    return tmp2;
+  };
+  closure_129_2 = (arg0) => {
+    const debug = _mod681.debug;
+    debug.log("Discarding empty \"" + closure_1 + "\" transaction that never received route information.");
+    if (null != client) {
+      client.recordDroppedEvent("sample_rate", "transaction");
+    }
+  };
+  if (client) {
+    if (c4) {
+      if (tmpResult.isRootSpan(c4)) {
+        if (tmpResult2.isSentrySpan(c4)) {
+          client.on("spanEnd", (arg0) => {
+            if (arg0 === closure_0) {
+              if (DEFAULT_NAVIGATION_SPAN_NAME(tmp)) {
+                closure_0 = tmp;
+                const spanDescendants = _mod681.getSpanDescendants(tmp);
+                if (spanDescendants.filter((spanContext) => {
+                  let tmp = spanContext.spanContext().spanId !== closure_0.spanContext().spanId;
+                  if (tmp) {
+                    tmp = "ui.load.initial_display" !== closure_0(681).spanToJSON(spanContext).op;
+                    const obj = closure_0(681);
+                  }
+                  if (tmp) {
+                    tmp = "navigation.processing" !== closure_0(681).spanToJSON(spanContext).op;
+                    const obj2 = closure_0(681);
+                  }
+                  return tmp;
+                }).length <= 0) {
+                  closure_2(tmp);
+                  tmp._sampled = false;
+                }
+              }
+            }
+          });
+        }
+        tmpResult2 = tmp(tmp2[1]);
+      }
+      const debug3 = tmp(tmp2[2]).debug;
+      debug3.warn("Not sampling empty navigation spans only works for Sentry Transactions (Root Spans).");
+      tmpResult = tmp(tmp2[1]);
+    } else {
+      const debug2 = tmp(tmp2[2]).debug;
+      debug2.warn("Could not hook on spanEnd event because span is not defined.");
+    }
+  } else {
+    let debug = tmp(tmp2[2]).debug;
+    debug.warn("Could not hook on spanEnd event because client is not defined.");
+  }
+}
+export (client, startIdleSpanResult) => {
+  _require = startIdleSpanResult;
+  if (obj.isRootSpan(startIdleSpanResult)) {
+    if (tmpResult.isSentrySpan(startIdleSpanResult)) {
+      client.on("spanEnd", (arg0) => {
+        if (arg0 === closure_0) {
+          if (obj2.getSpanDescendants(closure_0).length <= 1) {
+            const debug = _mod681.debug;
+            const _HermesInternal = HermesInternal;
+            debug.log("Not sampling as " + _mod681.spanToJSON(closure_0).op + " transaction has no child spans.");
+            closure_0._sampled = false;
+            const tmp4Result = _mod681;
+          }
+          obj2 = _mod681;
+        }
+      });
+    }
+    tmpResult = tmp(984);
+  }
+  let debug = tmp(681).debug;
+  debug.warn("Not sampling childless spans only works for Sentry Transactions (Root Spans).");
+  obj = require("00984__.js");
+}
+export (client, startIdleSpanResult) => {
+  const listener = AppState.addEventListener("change", (event) => {
+    if ("background" === event) {
+      const debug = _mod681.debug;
+      const _HermesInternal = HermesInternal;
+      debug.log("Setting " + _mod681.spanToJSON(startIdleSpanResult).op + " transaction to cancelled because the app is in the background.");
+      const obj2 = { code: _mod681.SPAN_STATUS_ERROR, message: "cancelled" };
+      startIdleSpanResult.setStatus(obj2);
+      startIdleSpanResult.end();
+    }
+  });
+  if (listener) {
+    client.on("spanEnd", (arg0) => {
+      if (arg0 === closure_0) {
+        const debug = _mod681.debug;
+        const _HermesInternal = HermesInternal;
+        debug.log("Removing AppState listener for " + _mod681.spanToJSON(tmp).op + " transaction.");
+        let remove;
+        if (null != listener) {
+          remove = listener.remove;
+        }
+        if (!tmp3) {
+          const call = remove.call;
+          if (typeof call === "unknown") {
+            remove();
+          } else {
+            call(listener);
+          }
+        }
+        tmp3 = null === remove || undefined === remove;
+      }
+    });
+  }
+}

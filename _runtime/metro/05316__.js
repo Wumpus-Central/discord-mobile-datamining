@@ -1,14 +1,11 @@
 // _runtime/metro/05316__.js
+import _mod17 from "00017__.js";
 import _mod19 from "00019__.js";
-import BottomSheetContext from "../05317_BottomSheetContext.js";
+import _modDef5317 from "05317__.js";
 
-const useContext = _mod19.useContext;
+const use = _mod19.use;
+const Platform = _mod17.Platform;
 
-export () => {
-  const tmp = useContext(BottomSheetContext.BottomSheetModalContext);
-  if (null === tmp) {
-    throw "'BottomSheetModalContext' cannot be null!";
-  } else {
-    return tmp;
-  }
+export function useEnsureGestureHandlerRootView() {
+  use(_modDef5317);
 }

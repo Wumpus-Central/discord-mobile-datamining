@@ -1,13 +1,6 @@
 // _runtime/metro/13125__.js
-import registerAsset from "01131__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/safety_hub/images",
-  width: 350,
-  height: 350,
-  scales: [1],
-  hash: "ebaa362a049339e084011170417c750e",
-  name: "video_light",
-  type: "png",
-});
+export function escapeStringForRegex(str) {
+  str = str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
+  return str.replace(/-/g, "\\x2d");
+}

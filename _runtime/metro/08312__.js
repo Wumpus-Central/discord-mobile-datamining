@@ -1,79 +1,253 @@
 // _runtime/metro/08312__.js
-import _mod8268 from "08268__.js";
-import _modDef8273 from "08273__.js";
-import get0thIfdOffset from "../08288_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../08289_IFD_TYPE_0TH.js";
+import _mod8271 from "08271__.js";
+import iccTags from "../08313_iccTags.js";
 
 require = arg1;
-importDefault = arg2;
 const dependencyMap = arg6;
-const MODEL_ID = { K3_III: 78420 };
-let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
+function parseTags(buffer) {
+  buffer = buffer.buffer;
+  if (buffer.byteLength !== buffer.getUint32()) {
+    const _Error3 = Error;
+    const error = new Error("ICC profile length not matching");
+    throw error;
+  } else if (buffer.byteLength < c2) {
+    const _Error2 = Error;
+    const error1 = new Error("ICC profile too short");
+    throw error1;
+  } else {
+    const obj2 = {};
+    const _Object = Object;
+    const keys = Object.keys(iccTags.iccProfile);
+    for (let num = 0; num < keys.length; num = num + 1) {
+      let tmp = keys[num];
+      let iter = iccTags.iccProfile[tmp];
+      let _parseInt = parseInt;
+      let valueResult = iter.value(buffer, parseInt(tmp, 10));
+      let descriptionResult = valueResult;
+      if (iter.description) {
+        descriptionResult = iter.description(valueResult);
+      }
+      let obj = { value: valueResult, description: descriptionResult };
+      obj2[iter.name] = obj;
+    }
+    const _String = String;
+    const _Uint8Array = Uint8Array;
+    const uint8Array = new Uint8Array(buffer.slice(36, 40));
+    if (fromCharCode.apply(null, uint8Array) !== acsp) {
+      const _Error = Error;
+      const error2 = new Error("ICC profile: missing signature");
+      throw error2;
+    } else {
+      let num6 = 132;
+      if (buffer.length < 132) {
+        return obj2;
+      } else {
+        const uint32 = buffer.getUint32(128);
+        let num7 = 0;
+        if (0 < uint32) {
+          while (buffer.length >= num6 + c8) {
+            let obj17 = _mod8271;
+            let stringFromDataView = obj17.getStringFromDataView(buffer, num6, 4);
+            let uint321 = buffer.getUint32(num6 + 4);
+            let uint322 = buffer.getUint32(num6 + 8);
+            if (uint321 > buffer.length) {
+              return obj2;
+            } else {
+              let tmp55Result = _mod8271;
+              let stringFromDataView1 = tmp55Result.getStringFromDataView(buffer, uint321, 4);
+              if (stringFromDataView1 === desc) {
+                let uint323 = buffer.getUint32(uint321 + 8);
+                if (uint323 > uint322) {
+                  return obj2;
+                } else {
+                  let _String4 = String;
+                  let _Uint8Array4 = Uint8Array;
+                  let tmp70 = new.target;
+                  let tmp71 = new.target;
+                  let uint8Array1 = new Uint8Array(buffer.slice(uint321 + 12, uint321 + uint323 + 11));
+                  let applyResult = fromCharCode4.apply(null, uint8Array1);
+                  if (iccTags.iccTags[stringFromDataView]) {
+                    let obj3 = { value: applyResult, description: applyResult };
+                    obj2[iccTags.iccTags[stringFromDataView].name] = obj3;
+                  } else {
+                    let obj4 = { value: applyResult, description: applyResult };
+                    obj2[stringFromDataView] = obj4;
+                  }
+                }
+              } else if (stringFromDataView1 === mluc) {
+                let uint324 = buffer.getUint32(uint321 + 8);
+                let sum = uint321 + 16;
+                let items = [];
+                let num4 = 0;
+                let tmp25 = require;
+                if (0 < uint324) {
+                  do {
+                    let obj6 = _mod8271;
+                    let stringFromDataView2 = obj6.getStringFromDataView(buffer, sum, 2);
+                    let obj7 = _mod8271;
+                    let stringFromDataView3 = obj7.getStringFromDataView(buffer, sum + 2, 2);
+                    let uint325 = buffer.getUint32(sum + 4);
+                    let uint326 = buffer.getUint32(sum + 8);
+                    let obj8 = _mod8271;
+                    let obj5 = {
+                      languageCode: stringFromDataView2,
+                      countryCode: stringFromDataView3,
+                      text: obj8.getUnicodeStringFromDataView(buffer, uint321 + uint326, uint325),
+                    };
+                    let arr = items.push(obj5);
+                    sum = sum + tmp22;
+                    num4 = num4 + 1;
+                    tmp25 = require;
+                  } while (num4 < uint324);
+                }
+                if (1 === uint324) {
+                  text = items[0].text;
+                  if (tmp25(8313).iccTags[stringFromDataView]) {
+                    let obj9 = { value: text, description: text };
+                    obj2[tmp25(8313).iccTags[stringFromDataView].name] = obj9;
+                  } else {
+                    let obj10 = { value: text, description: text };
+                    obj2[stringFromDataView] = obj10;
+                  }
+                } else {
+                  let obj11 = {};
+                  let num5 = 0;
+                  if (0 < items.length) {
+                    do {
+                      let _HermesInternal = HermesInternal;
+                      obj11["" + items[num5].languageCode + "-" + items[num5].countryCode] = items[num5].text;
+                      num5 = num5 + 1;
+                      length = items.length;
+                    } while (num5 < length);
+                  }
+                  if (iccTags.iccTags[stringFromDataView]) {
+                    let obj12 = { value: obj11, description: obj11 };
+                    obj2[iccTags.iccTags[stringFromDataView].name] = obj12;
+                  } else {
+                    let obj13 = { value: obj11, description: obj11 };
+                    obj2[stringFromDataView] = obj13;
+                  }
+                }
+              } else if (stringFromDataView1 === text) {
+                let _String2 = String;
+                let _Uint8Array2 = Uint8Array;
+                let tmp16 = new.target;
+                let tmp17 = new.target;
+                let uint8Array2 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + uint322 - 7));
+                let applyResult1 = fromCharCode2.apply(null, uint8Array2);
+                if (iccTags.iccTags[stringFromDataView]) {
+                  let obj14 = { value: applyResult1, description: applyResult1 };
+                  obj2[iccTags.iccTags[stringFromDataView].name] = obj14;
+                } else {
+                  let obj15 = { value: applyResult1, description: applyResult1 };
+                  obj2[stringFromDataView] = obj15;
+                }
+              } else if (stringFromDataView1 === c7) {
+                let _String3 = String;
+                let _Uint8Array3 = Uint8Array;
+                let tmp65 = new.target;
+                let tmp66 = new.target;
+                let uint8Array3 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + 12));
+                let applyResult2 = fromCharCode3.apply(null, uint8Array3);
+                if (iccTags.iccTags[stringFromDataView]) {
+                  let obj16 = { value: applyResult2, description: applyResult2 };
+                  obj2[iccTags.iccTags[stringFromDataView].name] = obj16;
+                } else {
+                  let obj18 = { value: applyResult2, description: applyResult2 };
+                  obj2[stringFromDataView] = obj18;
+                }
+              }
+              num6 = num6 + 12;
+              num7 = num7 + 1;
+            }
+          }
+          return obj2;
+        }
+        return obj2;
+      }
+    }
+  }
+}
+let c2 = 84;
+const acsp = "acsp";
+const desc = "desc";
+const mluc = "mluc";
+let text = "text";
+let c7 = "sig ";
+let c8 = 12;
 
 export default {
-  read(byteLength, arg1, arg2, arg3) {
-    const obj = _modDef8273;
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    let LevelInfo = ifd.PentaxModelID;
-    if (LevelInfo) {
-      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
-    }
-    if (LevelInfo) {
-      LevelInfo = ifd.LevelInfo;
-    }
-    let tmp10 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
-      const obj3 = {};
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
-        const obj4 = { value: int8, description: null };
-        let str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
-            }
-            str = str2;
-          }
-          str6 = str;
+  read(buffer, arr, arg2) {
+    if (arg2) {
+      if (arr[0].compressionMethod !== _mod8271.COMPRESSION_METHOD_NONE) {
+        if (arr[0].compressionMethod === _mod8271.COMPRESSION_METHOD_DEFLATE) {
+          let _DataView = DataView;
+          buffer = buffer.buffer;
+          let dataView = new DataView(buffer.slice(arr[0].offset, arr[0].offset + arr[0].length));
+          const tmpResult = _mod8271;
+          const decompressResult = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview");
+          let catchPromise = tmpResult
+            .decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview")
+            .then(parseTags)
+            .catch(() => ({}));
+          const nextPromise = tmpResult
+            .decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview")
+            .then(parseTags);
+        } else {
+          catchPromise = {};
         }
-        obj4.description = str6;
-        obj3.CameraOrientation = obj4;
-        const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef8273.LITTLE_ENDIAN);
-        const obj5 = { value: int16, description: "" + -0.5 * int16 };
-        obj3.RollAngle = obj5;
-        const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef8273.LITTLE_ENDIAN);
-        const obj6 = { value: int161, description: "" + -0.5 * int161 };
-        obj3.PitchAngle = obj6;
+        return catchPromise;
       }
-      const tmp7Result = _mod8268;
-      delete tmp[tmp2];
-      tmp10 = _mod8268.objectAssign({}, ifd, obj3);
-      const objectAssignResult = _mod8268.objectAssign({}, ifd, obj3);
     }
-    return tmp10;
+    return (function readIcc(buffer, arr) {
+      let length;
+      let sum;
+      closure_0 = arr;
+      try {
+        let _Uint8Array = Uint8Array;
+        let uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
+        closure_2 = 0;
+        closure_3 = (function getBuffer(buffer) {
+          if (Array.isArray(buffer)) {
+            const _DataView = DataView;
+            const _Uint8Array = Uint8Array;
+            const dataView = new DataView(Uint8Array.from(buffer).buffer);
+            return dataView.buffer;
+          } else {
+            return buffer.buffer;
+          }
+        })(buffer);
+        function _loop(arg0) {
+          closure_0 = arg0;
+          const found = closure_0.find((chunkNumber) => chunkNumber.chunkNumber === closure_0);
+          if (found) {
+            const _Uint8Array = Uint8Array;
+            uint8Array = new Uint8Array(closure_3.slice(found.offset, found.offset + found.length));
+            const result = uint8Array.set(uint8Array, closure_2);
+            closure_2 = closure_2 + uint8Array.length;
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("ICC chunk " + arg0 + " not found");
+            throw error;
+          }
+        }
+        let num3 = 1;
+        if (1 <= arr.length) {
+          do {
+            let _loopResult = _loop(num3);
+            sum = num3 + 1;
+            num3 = sum;
+            length = arr.length;
+          } while (sum <= length);
+        }
+        let _DataView = DataView;
+        let dataView = new DataView(uint8Array.buffer);
+        return parseTags(dataView);
+      } catch (err) {
+        return {};
+      }
+    })(buffer, arr);
   },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID,
-  LIK3III: obj2,
 };
+export { parseTags };

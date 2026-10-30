@@ -1,12 +1,6 @@
 // _runtime/metro/05328__.js
-const fn = function o() {
+import _mod17 from "00017__.js";
 
-};
-fn.__closure = {};
-fn.__workletHash = 16791771801238;
-fn.__initData = { code: "function pnpm_noopTs1(){}" };
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export () => {
-
-}
-export const workletNoop = fn;
+export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");

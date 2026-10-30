@@ -1,13 +1,13 @@
 // _runtime/metro/10258__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
-  width: 90,
-  height: 90,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 12,
+  height: 12,
   scales: [2, 3],
-  hash: "5decb69ef43f8e7b31fcaaf11b388fe1",
-  name: "sticker_search_empty",
+  hash: "91cf7e45c8979413a0ad2486eb772598",
+  name: "ic_nitro_wheel",
   type: "png",
 });

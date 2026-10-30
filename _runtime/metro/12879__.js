@@ -1,19 +1,18 @@
 // _runtime/metro/12879__.js
-import _mod12854 from "12854__.js";
-import ScopeClass from "../12874_ScopeClass.js";
+import _mod12798 from "12798__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const WhiteSpace = _mod12798.TYPE.WhiteSpace;
+let closure_1 = Object.freeze({ type: "WhiteSpace", loc: null, value: " " });
+const obj = {
+  name: "WhiteSpace",
+  structure: { value: String },
+  parse() {
+    this.eat(WhiteSpace);
+    return closure_1;
+  },
+  generate(value) {
+    this.chunk(value.value);
+  },
+};
 
-export function getDefaultCurrentScope() {
-  return _mod12854.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
-export function getDefaultIsolationScope() {
-  return _mod12854.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
+export default obj;

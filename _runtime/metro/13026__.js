@@ -1,13 +1,17 @@
 // _runtime/metro/13026__.js
-import registerAsset from "01131__.js";
+import _mod13010 from "13010__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "5870bc3ada01ff369d707eaeba6296c2",
-  name: "camera_upload_light",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
+
+export function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
+}
+export function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod13010.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+  } else {
+    delete tmp2[tmp];
+  }
+}

@@ -1,52 +1,89 @@
 // _runtime/metro/08317__.js
-import _modDef8285 from "08285__.js";
+import _modDef8288 from "08288__.js";
 
 importDefault = arg2;
 const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
 
 export default {
-  read(getUint8, sum) {
-    const byteAt = _modDef8285.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+  read(byteLength, sum) {
+    let tmp;
+    if (sum + 4 <= byteLength.byteLength) {
+      const longAt = _modDef8288.getLongAt(byteLength, sum);
+      const obj2 = { value: longAt, description: null };
+      const _HermesInternal = HermesInternal;
+      obj2.description = "" + longAt + "px";
+      tmp = obj2;
     }
-    const obj2 = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
+    const obj3 = {
+      "Image Width": tmp,
+      "Image Height": null,
+      "Bit Depth": null,
+      "Color Type": null,
+      Compression: null,
+      Filter: null,
+      Interlace: null,
+    };
+    let tmp6;
+    if (sum + 4 + 4 <= byteLength.byteLength) {
+      const longAt1 = _modDef8288.getLongAt(byteLength, sum + 4);
+      const obj5 = { value: longAt1, description: null };
+      const _HermesInternal2 = HermesInternal;
+      obj5.description = "" + longAt1 + "px";
+      tmp6 = obj5;
     }
-    const obj3 = { Alpha: obj2 };
-    obj2.description = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
+    obj3["Image Height"] = tmp6;
+    let tmp11;
+    if (sum + 8 + 1 <= byteLength.byteLength) {
+      const byteAt = _modDef8288.getByteAt(byteLength, sum + 8);
+      const obj7 = { value: byteAt, description: null };
+      const _HermesInternal3 = HermesInternal;
+      obj7.description = "" + byteAt;
+      tmp11 = obj7;
     }
-    const obj4 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
+    obj3["Bit Depth"] = tmp11;
+    let tmp16;
+    if (sum + 9 + 1 <= byteLength.byteLength) {
+      const byteAt1 = _modDef8288.getByteAt(byteLength, sum + 9);
+      const obj9 = {
+        value: byteAt1,
+        description:
+          { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] ||
+          "Unknown",
+      };
+      tmp16 = obj9;
     }
-    obj4.description = str;
-    obj3.Animation = obj4;
-    sum = sum + c2;
-    const byteAt1 = _modDef8285.getByteAt(getUint8, sum);
-    const tmpResult = _modDef8285;
-    const sum1 = byteAt1 + 256 * _modDef8285.getByteAt(getUint8, sum + 1);
-    const tmpResult6 = _modDef8285;
-    const sum2 = sum1 + 65536 * _modDef8285.getByteAt(getUint8, sum + 2) + 1;
-    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj5 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult7 = _modDef8285;
-    const byteAt2 = _modDef8285.getByteAt(getUint8, sum3);
-    const tmpResult8 = _modDef8285;
-    const sum4 = byteAt2 + 256 * _modDef8285.getByteAt(getUint8, sum3 + 1);
-    const tmpResult9 = _modDef8285;
-    const sum5 = sum4 + 65536 * _modDef8285.getByteAt(getUint8, sum3 + 2) + 1;
-    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
+    obj3["Color Type"] = tmp16;
+    let tmp20;
+    if (sum + 10 + 1 <= byteLength.byteLength) {
+      const byteAt2 = _modDef8288.getByteAt(byteLength, sum + 10);
+      const obj11 = { value: byteAt2, description: null };
+      let str6 = "Unknown";
+      if (0 === byteAt2) {
+        str6 = "Deflate/Inflate";
+      }
+      obj11.description = str6;
+      tmp20 = obj11;
+    }
+    obj3.Compression = tmp20;
+    let tmp24;
+    if (sum + 11 + 1 <= byteLength.byteLength) {
+      const byteAt3 = _modDef8288.getByteAt(byteLength, sum + 11);
+      const obj13 = { value: byteAt3, description: null };
+      let str7 = "Unknown";
+      if (0 === byteAt3) {
+        str7 = "Adaptive";
+      }
+      obj13.description = str7;
+      tmp24 = obj13;
+    }
+    obj3.Filter = tmp24;
+    let tmp28;
+    if (sum + 12 + 1 <= byteLength.byteLength) {
+      const byteAt4 = _modDef8288.getByteAt(byteLength, sum + 12);
+      const obj15 = { value: byteAt4, description: { 0: "Noninterlaced", 1: "Adam7 Interlace" }[byteAt4] || "Unknown" };
+      tmp28 = obj15;
+    }
+    obj3.Interlace = tmp28;
     return obj3;
   },
 };

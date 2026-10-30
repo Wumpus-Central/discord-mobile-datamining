@@ -1,13 +1,13 @@
 // _runtime/metro/09989__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 80,
-  height: 64,
+  httpServerLocation: "/assets/modules/stickers/native/images",
+  width: 77.5,
+  height: 72,
   scales: [2, 3],
-  hash: "c274903a313d0e918f497d328c38b8dd",
-  name: "img_search_empty_light",
+  hash: "215c6cf6cc2b74cad508b12b0e602266",
+  name: "empty",
   type: "png",
 });

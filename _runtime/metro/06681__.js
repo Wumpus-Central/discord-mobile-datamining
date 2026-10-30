@@ -1,5 +1,5 @@
 // _runtime/metro/06681__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "e3f87032d39c6463934b80bdbb1aa83c",
-  name: "img_domain_light",
+  hash: "39595ed126e57294bab83f7792a4b2ff",
+  name: "img_account_sync_mastodon_light_and_dark",
   type: "svg",
 });

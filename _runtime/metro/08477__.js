@@ -1,5 +1,5 @@
 // _runtime/metro/08477__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3eb74a78606f69449db155f70f2ac217",
-  name: "NitroWheelIcon",
+  hash: "421762234dc1c14955fde3d3dd6a6217",
+  name: "ChatWarningIcon",
   type: "png",
 });

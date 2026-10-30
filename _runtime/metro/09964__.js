@@ -1,13 +1,13 @@
 // _runtime/metro/09964__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 261.5,
-  height: 152,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "5691c33dd2c3544121435e1c3a569b50",
-  name: "img_nitro_longer_message_upsell_light",
+  hash: "f385b38a044809a0b451d707fc7cd058",
+  name: "BlurpleTwilightIcon",
   type: "png",
 });

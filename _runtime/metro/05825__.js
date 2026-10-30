@@ -1,9 +1,20 @@
 // _runtime/metro/05825__.js
-import shortOut from "../05826_shortOut.js";
-import overRest from "../05830_overRest.js";
-import flatten from "../05832_flatten.js";
+import _mod523 from "00523__.js";
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
+let prototype;
+if (_mod523) {
+  prototype = _mod523.prototype;
+}
+let valueOf;
+if (prototype) {
+  valueOf = prototype.valueOf;
+}
+
+export default function cloneSymbol(arg0) {
+  if (valueOf) {
+    const call = valueOf.call;
+    Object(typeof call === "unknown" ? valueOf() : call(arg0));
+  } else {
+    return {};
+  }
 }

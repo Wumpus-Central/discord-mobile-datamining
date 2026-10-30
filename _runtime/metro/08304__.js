@@ -1,21 +1,37 @@
 // _runtime/metro/08304__.js
+import _modDef8305 from "08305__.js";
+
+importDefault = arg2;
+const dependencyMap = arg6;
 
 export default {
-  get(arg0) {
-    if (arg0) {
-      return arg0;
-    } else {
-      if (typeof globalThis.DOMParser !== "undefined") {
-        const dOMParser = new globalThis.DOMParser();
-        return dOMParser;
-      } else {
+  decode(arg0, buffer) {
+    value = _modDef8305.get();
+    if (undefined !== value) {
+      if (undefined !== arg0) {
         try {
-          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
-          const obj = { onError: result.onErrorStopParsing };
-          const dOMParser1 = new result.DOMParser(obj);
-          return dOMParser1;
+          const decoder = new value(arg0);
+          const _DataView = DataView;
+          if (buffer instanceof DataView) {
+            buffer = buffer.buffer;
+          } else {
+            const _Uint8Array = Uint8Array;
+            buffer = Uint8Array.from(buffer);
+          }
+          decoder.decode(buffer);
         } catch (err) {}
       }
     }
+    const mapped = buffer.map((item) => String.fromCharCode(item));
+    return (function decodeAsciiValue(arg0) {
+      try {
+        const _decodeURIComponent = decodeURIComponent;
+        const _escape = escape;
+        return decodeURIComponent(escape(arg0));
+      } catch (err) {
+        return tmp;
+      }
+    })(mapped.join(""));
   },
+  TAG_HEADER_SIZE: 5,
 };

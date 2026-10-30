@@ -1,29 +1,21 @@
 // _runtime/metro/05124__.js
-import _mod5119 from "05119__.js";
+import _mod5125 from "05125__.js";
 import _slicedToArray from "00032__.js";
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 
-export function useRiveTrigger(arg0, arg1, cResult) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  let obj = cResult;
-  if (cResult == null) {
-    obj = {};
-  }
-  const onTrigger = obj.onTrigger;
+export function useRiveProperty(instance, device, f34157) {
+  closure_0 = instance;
+  closure_1 = device;
+  closure_2 = f34157;
   let tmp = hasOwnProperty(undefined);
-  const tmp2 = hasOwnProperty(false);
-  const tmp3 = hasOwnProperty(onTrigger);
-  closure_4 = tmp3;
-  tmp3.current = onTrigger;
-  const items = [arg1, arg0];
-  const disposableMemo = _mod5119.useDisposableMemo(
+  const items = [instance, device];
+  const disposableMemo = _mod5125.useDisposableMemo(
     () => {
-      if (closure_1) {
-        return closure_1.triggerProperty(closure_0);
+      if (closure_0) {
+        return closure_2(tmp, closure_1);
       }
     },
     (dispose) => {
@@ -36,36 +28,32 @@ export function useRiveTrigger(arg0, arg1, cResult) {
     items,
     tmp,
   );
-  if (tmp.current) {
-    tmp2.current = true;
-  }
+  [first, closure_6] = timestampProducer(undefined);
   const tmp5 = _slicedToArray(timestampProducer(null), 2);
-  closure_6 = tmp5[1];
-  const items1 = [arg0, arg1];
+  closure_7 = tmp5[1];
+  const items1 = [device, instance];
   React4(() => {
-    closure_6(null);
+    closure_7(null);
   }, items1);
-  const items2 = [arg1, disposableMemo, arg0];
+  const items2 = [instance, disposableMemo, device];
   React4(() => {
-    let tmp = closure_1;
-    if (closure_1) {
+    let tmp = closure_0;
+    if (closure_0) {
       tmp = !disposableMemo;
     }
     if (tmp) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error('Property "' + closure_0 + '" not found in the ViewModel instance');
-      closure_6(error);
+      const error = new Error('Property "' + closure_1 + '" not found in the ViewModel instance');
+      closure_7(error);
     }
   }, items2);
   const items3 = [disposableMemo];
   React4(() => {
     if (disposableMemo) {
-      closure_0 = disposableMemo.addListener(() => {
-        const current = ref.current;
-        if (current != null) {
-          current();
-        }
+      closure_6(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
+        closure_1_6(arg0);
       });
       return () => {
         try {
@@ -74,31 +62,21 @@ export function useRiveTrigger(arg0, arg1, cResult) {
       };
     }
   }, items3);
-  const obj3 = { trigger: null, error: tmp5[0] };
-  const items4 = [arg0];
-  obj3.trigger = React3(() => {
-    if (ref.current) {
+  const items4 = [disposableMemo, first];
+  const items5 = [
+    first,
+    React3((fn) => {
       const current = ref.current;
-      current.trigger();
-    } else {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      if (ref2.current) {
-        warn(
-          concat(
-            closure_0,
-            "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount.",
-          ),
-        );
-      } else {
-        warn(
-          concat(
-            closure_0,
-            "') called but the property is not available yet. The viewModelInstance may still be loading.",
-          ),
-        );
+      if (current) {
+        let tmp2 = fn;
+        if (typeof fn === "function") {
+          tmp2 = fn(first);
+        }
+        current.value = tmp2;
       }
-    }
-  }, items4);
-  return obj3;
+    }, items4),
+    tmp5[0],
+    disposableMemo,
+  ];
+  return items5;
 }

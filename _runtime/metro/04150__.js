@@ -1,11 +1,11 @@
 // _runtime/metro/04150__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/intelligence_layer/search",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRlbGxpZ2VuY2VfbGF5ZXIvc2VhcmNo",
   scales: [1],
-  hash: "60af52011985d9b9d318df776245f864",
-  name: "SmartSearch.compiled.messages",
+  hash: "af131d29644815eb11bf8a2b719545c5",
+  name: "zh-TW.messages.af131d29644815eb11bf8a2b719545c5.compiled.messages",
   type: "jsona",
 });

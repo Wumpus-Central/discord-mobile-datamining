@@ -1,46 +1,125 @@
 // _runtime/metro/04436__.js
-import module_4292_mod from "04292__.js";
-import _typeof_mod from "04288__.js";
-import requiredArgs_mod from "../04289_requiredArgs.js";
+import module_4437_mod from "04437__.js";
+import module_4438_mod from "04438__.js";
+import _typeof_mod from "04289__.js";
+import requiredArgs_mod from "../04290_requiredArgs.js";
+import module_4293_mod from "04293__.js";
 
-let module_4292 = module_4292_mod;
-if (!module_4292) {
-  const obj = { default: module_4292 };
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let module_4437 = module_4437_mod;
+if (!module_4437) {
+  const obj = { default: module_4437 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4292;
+  tmp3 = module_4437;
 }
-module_4292 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_4437 = tmp3;
+let module_4438 = module_4438_mod;
+if (!module_4438) {
+  const obj2 = { default: module_4438 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4438;
 }
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+module_4438 = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = _typeof;
 }
-requiredArgs = tmp7;
+_typeof = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let module_4293 = module_4293_mod;
+if (!module_4293) {
+  const obj5 = { default: module_4293 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4293;
+}
+module_4293 = tmp11;
 
-export default function addDays(arg0, arg1) {
+export default function add(arg0, years) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = module_4292.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else if (defaultResult2) {
-    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
-    return defaultResult1;
-  } else {
-    return defaultResult1;
+  if (years) {
+    if ("object" === _typeof(years)) {
+      let num = 0;
+      if (years.years) {
+        num = module_4293.default(years.years);
+      }
+      let num2 = 0;
+      if (years.months) {
+        num2 = module_4293.default(years.months);
+      }
+      let num3 = 0;
+      if (years.weeks) {
+        num3 = module_4293.default(years.weeks);
+      }
+      let num4 = 0;
+      if (years.days) {
+        num4 = module_4293.default(years.days);
+      }
+      let num5 = 0;
+      if (years.hours) {
+        num5 = module_4293.default(years.hours);
+      }
+      let num6 = 0;
+      if (years.minutes) {
+        num6 = module_4293.default(years.minutes);
+      }
+      let num7 = 0;
+      if (years.seconds) {
+        num7 = module_4293.default(years.seconds);
+      }
+      const defaultResult1 = _typeof.default(arg0);
+      if (num2) {
+        let defaultResult2 = module_4438.default(defaultResult1, num2 + 12 * num);
+      } else {
+        defaultResult2 = defaultResult1;
+      }
+      if (num4) {
+        let defaultResult3 = module_4437.default(defaultResult2, num4 + 7 * num3);
+      } else {
+        defaultResult3 = defaultResult2;
+      }
+      const _Date = Date;
+      const sum = num7 + 60 * (num6 + 60 * num5);
+      const date = new Date(defaultResult3.getTime() + 1000 * sum);
+      return date;
+    }
   }
+  return new Date(NaN);
 };
 export default exports.default;

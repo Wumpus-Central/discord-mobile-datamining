@@ -1,11 +1,11 @@
 // _runtime/metro/05614__.js
-import _mod17 from "00017__.js";
+import _mod5615 from "05615__.js";
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { backdrop: null };
-const obj2 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.backgroundColor = "black";
-obj.backdrop = obj2;
+const require = globalThis.__r;
 
-export const styles = StyleSheet.create(obj);
+for (const key10016 in require("05618__.js")) {
+  arg5[key10016] = require("05618__.js")[key10016];
+  continue;
+}
+
+export default _mod5615.LottieView;

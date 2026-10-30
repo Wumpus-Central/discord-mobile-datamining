@@ -1,14 +1,57 @@
 // _runtime/metro/00882__.js
-import _mod693 from "00693__.js";
+import _mod176 from "../00176_finally.js";
+import RN_GLOBAL_OBJ from "../00680_RN_GLOBAL_OBJ.js";
+import _mod681 from "00681__.js";
+import TurboModuleRegistry from "../00862_TurboModuleRegistry.js";
+import done from "../00883_done.js";
+
+const require = globalThis.__r;
 
 require = arg1;
 const dependencyMap = arg6;
+function getPromisePolyfill() {
+  return require("00178__.js");
+}
 
-export () => {
-  const mainCarrier = _mod693.getMainCarrier();
-  const tmp4 = mainCarrier.__SENTRY__ || {};
-  mainCarrier.__SENTRY__ = tmp4;
-  const tmp5 = tmp4[_mod693.SDK_VERSION] || {};
-  tmp4[_mod693.SDK_VERSION] = tmp5;
-  return tmp5;
+export function polyfillPromise() {
+  if (TurboModuleRegistry.ReactNativeLibraries.Utilities) {
+    closure_0 = require("00178__.js");
+    done;
+    _mod176;
+    const Utilities = TurboModuleRegistry.ReactNativeLibraries.Utilities;
+    Utilities.polyfillGlobal("Promise", () => closure_0);
+  } else {
+    const debug = _mod681.debug;
+    debug.warn("Could not polyfill Promise. React Native Libraries Utilities not found.");
+  }
+}
+export { getPromisePolyfill };
+export function requireRejectionTracking() {
+  return require("disable");
+}
+export function checkPromiseAndWarn() {
+  try {
+    const tmp8 = getPromisePolyfill();
+    if (TurboModuleRegistry.ReactNativeLibraries.Promise !== tmp6) {
+      const debug = _mod681.debug;
+      debug.warn(
+        'You appear to have multiple versions of the "promise" package installed. This may cause unexpected behavior like undefined `Promise.allSettled`. Please install the `promise` package manually using the exact version as the React Native package. See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.',
+      );
+    }
+    if (tmp8 !== RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.Promise) {
+      const debug3 = _mod681.debug;
+      debug3.warn(
+        "Unhandled promise rejections will not be caught by Sentry. See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.",
+      );
+    } else {
+      const debug2 = _mod681.debug;
+      debug2.log("Unhandled promise rejections will be caught by Sentry.");
+    }
+    tmp6 = require("00178__.js");
+  } catch (err) {
+    const debug4 = _mod681.debug;
+    debug4.warn(
+      "Unhandled promise rejections will not be caught by Sentry. See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.",
+    );
+  }
 }

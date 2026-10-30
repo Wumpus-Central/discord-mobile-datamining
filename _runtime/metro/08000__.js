@@ -1,5 +1,5 @@
 // _runtime/metro/08000__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b04e363869889767a126da0fcdcaf9c8",
-  name: "AppleNeutralIcon",
+  hash: "7b2d2e9a77a15fa8da20d6c6b46e3600",
+  name: "VideoSelfieIcon",
   type: "png",
 });

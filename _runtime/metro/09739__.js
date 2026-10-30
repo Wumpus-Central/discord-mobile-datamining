@@ -1,13 +1,13 @@
 // _runtime/metro/09739__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "e92f31ca34ceaeec68c2321f683014ca",
-  name: "img_nitro_global_emoji",
+  hash: "5bfdb70bf70b33af737927fefb52cdba",
+  name: "ServerIcon",
   type: "png",
 });

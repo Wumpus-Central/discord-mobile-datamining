@@ -1,13 +1,13 @@
 // _runtime/metro/18202__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/tabs/guilds/empty_states/images",
-  width: 148,
-  height: 107,
-  scales: [2, 3, 4],
-  hash: "0068bea3a7b26b1d06c599bf3096c534",
-  name: "channels-empty",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "734b87c0c83fffbdb266c05473eedb57",
+  name: "ic_wand",
   type: "png",
 });

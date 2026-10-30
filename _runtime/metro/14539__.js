@@ -1,5 +1,5 @@
 // _runtime/metro/14539__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "231cc2e45d7613cf5eb4ce4ba6961f0d",
-  name: "EmbedIcon",
+  hash: "6fb23e8fddb36af1d7c8748104537e96",
+  name: "VideoDenyIcon",
   type: "png",
 });

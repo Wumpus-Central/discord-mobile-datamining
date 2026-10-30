@@ -1,147 +1,138 @@
 // _runtime/metro/10354__.js
-import now from "../10306_now.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 
-const self = this;
-const JPCasualDateParser = require;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const DESpecificTimeExpressionParser = require;
+const regExp = new RegExp(
+  "(^|\\s|T)(?:(?:um|von)\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
+  "i",
+);
+const regExp1 = new RegExp(
+  "^\\s*(\\-|\\\u2013|\\~|\\\u301C|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
+  "i",
+);
+class DESpecificTimeExpressionParser {
+  constructor() {
+    tmp = c2(this, DESpecificTimeExpressionParser);
+    return;
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function t(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
+}
+const entry = {
+  key: "pattern",
+  value: function pattern(arg0) {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(createParsingResult, index) {
+      const sum = index.index + index[1].length;
+      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
+      if (str2.match(/^\d{4}$/)) {
+        index.index = index.index + index[0].length;
+        return null;
+      } else {
+        const start = parsingResult.start;
+        parsingResult.start = DESpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
+        if (parsingResult.start) {
+          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
+          if (match) {
+            const start2 = parsingResult.start;
+            parsingResult.end = DESpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
+            if (parsingResult.end) {
+              parsingResult.text = parsingResult.text + match[0];
             }
           }
+          return parsingResult;
+        } else {
+          index.index = index.index + index[0].length;
+          return null;
         }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
+      }
+      str2 = parsingResult.text;
+    },
+  },
+];
+const entry1 = {
+  key: "extractTimeComponent",
+  value: function extractTimeComponent(assign, arg1) {
+    const parsed = parseInt(arg1[2]);
+    let num = 0;
+    if (null != arg1[3]) {
+      const _parseInt = parseInt;
+      num = parseInt(arg1[3]);
     }
-    const _Object3 = Object;
-    let closure_6 = fn(now);
-    const re7 = /今日|きょう|本日|ほんじつ|昨日|きのう|明日|あした|今夜|こんや|今夕|こんゆう|今晩|こんばん|今朝|けさ/i;
-    class JPCasualDateParser {
-      constructor() {
-        tmp = closure_3(this, JPCasualDateParser);
-        return;
+    if (num < 60) {
+      if (parsed <= 24) {
+        let PM1 = null;
+        if (parsed >= 12) {
+          PM1 = DESpecificTimeExpressionParser(10312).Meridiem.PM;
+        }
+        let tmp5 = PM1;
+        let tmp6 = parsed;
+        if (null != arg1[5]) {
+          if (parsed > 12) {
+            return null;
+          } else {
+            const str8 = arg1[5].toLowerCase();
+            let tmp9 = parsed;
+            if (str8.match(/morgen|vormittag/)) {
+              let num2 = parsed;
+              if (12 == parsed) {
+                num2 = 0;
+              }
+              tmp9 = num2;
+              PM1 = DESpecificTimeExpressionParser(10312).Meridiem.AM;
+            }
+            let tmp10 = tmp9;
+            if (str8.match(/nachmittag|abend/)) {
+              let sum = tmp9;
+              if (12 != tmp9) {
+                sum = tmp9 + 12;
+              }
+              tmp10 = sum;
+              PM1 = DESpecificTimeExpressionParser(10312).Meridiem.PM;
+            }
+            tmp5 = PM1;
+            tmp6 = tmp10;
+            if (str8.match(/nacht/)) {
+              if (12 == tmp10) {
+                let PM = DESpecificTimeExpressionParser(10312).Meridiem.AM;
+              } else if (tmp10 < 6) {
+                PM = DESpecificTimeExpressionParser(10312).Meridiem.AM;
+              } else {
+                PM = DESpecificTimeExpressionParser(10312).Meridiem.PM;
+                const num4 = tmp10 + 12;
+              }
+            }
+          }
+        }
+        assign.assign("hour", tmp6);
+        assign.assign("minute", num);
+        if (null !== tmp5) {
+          assign.assign("meridiem", tmp5);
+        } else if (tmp6 < 12) {
+          assign.imply("meridiem", DESpecificTimeExpressionParser(10312).Meridiem.AM);
+        } else {
+          assign.imply("meridiem", DESpecificTimeExpressionParser(10312).Meridiem.PM);
+        }
+        if (null != arg1[4]) {
+          const _parseInt2 = parseInt;
+          const parsed1 = parseInt(arg1[4]);
+          if (parsed1 >= 60) {
+            return null;
+          } else {
+            assign.assign("second", parsed1);
+          }
+        }
+        return assign;
       }
     }
-    const entry = {
-      key: "pattern",
-      value: function pattern() {
-        return re7;
-      },
-    };
-    let items = [entry];
-    const entry1 = {
-      key: "extract",
-      value: function extract(createParsingComponents, arg1) {
-        const first = arg1[0];
-        if ("\u304D\u3087\u3046" === first) {
-          let str6 = "\u4ECA\u65E5";
-        } else if ("\u307B\u3093\u3058\u3064" === first) {
-          str6 = "\u672C\u65E5";
-        } else if ("\u304D\u306E\u3046" === first) {
-          str6 = "\u6628\u65E5";
-        } else if ("\u3042\u3057\u305F" === first) {
-          str6 = "\u660E\u65E5";
-        } else if ("\u3053\u3093\u3084" === first) {
-          str6 = "\u4ECA\u591C";
-        } else if ("\u3053\u3093\u3086\u3046" === first) {
-          str6 = "\u4ECA\u5915";
-        } else if ("\u3053\u3093\u3070\u3093" === first) {
-          str6 = "\u4ECA\u6669";
-        } else {
-          str6 = "\u4ECA\u671D";
-          if ("\u3051\u3055" !== first) {
-            str6 = first;
-          }
-        }
-        const parsingComponents = createParsingComponents.createParsingComponents();
-        if ("\u6628\u65E5" === str6) {
-          return closure_6.yesterday(createParsingComponents.reference);
-        } else if ("\u660E\u65E5" === str6) {
-          return closure_6.tomorrow(createParsingComponents.reference);
-        } else {
-          if ("\u672C\u65E5" !== str6) {
-            if ("\u4ECA\u65E5" !== str6) {
-              if ("\u4ECA\u591C" != str6) {
-                if ("\u4ECA\u5915" != str6) {
-                  if ("\u4ECA\u6669" != str6) {
-                    if (str6.match("\u4ECA\u671D")) {
-                      parsingComponents.imply("hour", 6);
-                      parsingComponents.assign("meridiem", JPCasualDateParser(10287).Meridiem.AM);
-                    }
-                  }
-                  const refDate = createParsingComponents.refDate;
-                  parsingComponents.assign("day", refDate.getDate());
-                  parsingComponents.assign("month", refDate.getMonth() + 1);
-                  parsingComponents.assign("year", refDate.getFullYear());
-                  return parsingComponents;
-                }
-              }
-              parsingComponents.imply("hour", 22);
-              parsingComponents.assign("meridiem", JPCasualDateParser(10287).Meridiem.PM);
-            }
-          }
-          return closure_6.today(createParsingComponents.reference);
-        }
-      },
-    };
-    items[1] = entry1;
-    exports.default = _createClass(JPCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
-}
+    return null;
+  },
+};
+const items1 = [entry1];
+
+export default _createClass(DESpecificTimeExpressionParser, items, items1);

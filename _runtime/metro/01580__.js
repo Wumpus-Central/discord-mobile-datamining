@@ -1,16 +1,28 @@
 // _runtime/metro/01580__.js
-import NavigationBuilderContext from "../01533_NavigationBuilderContext.js";
-import _mod1581 from "01581__.js";
+import NavigationBuilderContext from "../01528_NavigationBuilderContext.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export function useScheduleUpdate(arg0) {
-  closure_0 = arg0;
-  const context = noop.useContext(NavigationBuilderContext.NavigationBuilderContext);
-  ({ scheduleUpdate: dependencyMap, flushUpdates } = context);
-  const insertionEffect = noop.useInsertionEffect(() => {
-    dependencyMap(closure_0);
-  });
-  const clientLayoutEffect = _mod1581.useClientLayoutEffect(flushUpdates);
+export function useOnRouteFocus(router) {
+  router = router.router;
+  const getState = router.getState;
+  const key = router.key;
+  const setState = router.setState;
+  const onRouteFocus = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).onRouteFocus;
+  const items = [getState, onRouteFocus, router, setState, key];
+  return noop.useCallback((arg0) => {
+    const tmp = getState();
+    const stateForRouteFocus = router.getStateForRouteFocus(tmp, arg0);
+    if (stateForRouteFocus !== tmp) {
+      setState(stateForRouteFocus);
+    }
+    let tmp6 = undefined !== onRouteFocus;
+    if (tmp6) {
+      tmp6 = undefined !== key;
+    }
+    if (tmp6) {
+      onRouteFocus(key);
+    }
+  }, items);
 }

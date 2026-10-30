@@ -1,23 +1,13 @@
 // _runtime/metro/15945__.js
-const weakMap = new WeakMap();
+import registerAsset from "01120__.js";
 
-export default function getInternalSlots(arg0, arg1) {
-  let items = arg1;
-  if (undefined === arg1) {
-    items = [];
-  }
-  value = weakMap.get(arg0);
-  if (!value) {
-    const _Object = Object;
-    const obj2 = Object.create(
-      null,
-      items.reduce((acc, item) => {
-        acc[item] = { enumerable: false, writable: true, configurable: true };
-        return acc;
-      }, {}),
-    );
-    const result = weakMap.set(arg0, obj2);
-    value = obj2;
-  }
-  return value;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "12a800ef241b26f28e2697e2835bd1ab",
+  name: "StatusStreaming",
+  type: "png",
+});

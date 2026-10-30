@@ -1,7 +1,16 @@
 // _runtime/metro/15856__.js
-import _mod15845 from "15845__.js";
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
 
-export default (arg0, arg1, arg2) => {
-  const obj = new _mod15845(arg0, arg2);
-  return obj.intersects(new _mod15845(arg1, arg2), arg2);
+export default (arg0) => {
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
+    }
+    let tmp2 = tmp;
+  } else {
+    tmp2 = closure_1;
+  }
+  return tmp2;
 };

@@ -1,14 +1,13 @@
 // _runtime/metro/15469__.js
-let num = 0;
-let num2 = 0;
-let tmp2 = num;
-do {
-  do {
-    let tmp3 = tmp2 >>> 1;
-    let tmp5 = 1 & tmp2 ? 3988292384 ^ tmp3 : tmp3;
-    num2 = num2 + 1;
-    tmp2 = tmp5;
-  } while (num2 < 8);
-  tmp[num] = tmp5;
-  num = num + 1;
-} while (num < 256);
+import registerAsset from "01120__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting",
+  width: 203,
+  height: 120,
+  scales: [1, 2, 3],
+  hash: "0c52217e1b36f758b126e56747a120ea",
+  name: "guild_subscription_removal_light",
+  type: "png",
+});

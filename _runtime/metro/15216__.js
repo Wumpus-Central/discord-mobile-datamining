@@ -1,13 +1,13 @@
 // _runtime/metro/15216__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 155,
+  height: 16,
   scales: [2, 3],
-  hash: "9fd167b3326279649df94a86f059e292",
-  name: "large_uploads",
+  hash: "f1a4755bd0ec77fe9aa6ee1c38735df7",
+  name: "img_logo_nitro_classic_horizontal_light",
   type: "png",
 });

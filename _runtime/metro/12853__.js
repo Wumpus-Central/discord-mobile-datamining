@@ -1,72 +1,51 @@
 // _runtime/metro/12853__.js
-import GLOBAL_OBJ from "12854__.js";
+import _mod12798 from "12798__.js";
+import _mod12842 from "12842__.js";
 
-const require = globalThis.__r;
-
-function consoleSandbox(fn) {
-  if ("console" in console(12854).GLOBAL_OBJ) {
-    console = tmp(12854).GLOBAL_OBJ.console;
-    dependencyMap = {};
-    const _Object = Object;
-    const keys = Object.keys(obj);
-    const item = keys.forEach((item) => {
-      closure_1[item] = console[item];
-      console[item] = obj[item];
-    });
-    try {
-      const item1 = keys.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      return fn();
-    } catch (tmp8) {
-      const item2 = arr.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      throw tmp8;
-    }
-  } else {
-    return fn();
-  }
-  tmp = console;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod12842.mode.semicolonIncluded, true);
 }
-let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
-const originalConsoleMethods = {};
-
-export const CONSOLE_LEVELS = items;
-export { consoleSandbox };
-export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
-  _require = false;
-  const obj = {
-    enable() {
-      c0 = true;
-    },
-    disable() {
-      c0 = false;
-    },
-    isEnabled() {
-      return c0;
-    },
-  };
-  const forEach = items.forEach;
-  if (require("12852__.js").DEBUG_BUILD) {
-    const item = forEach((arg0) => {
-      closure_0 = arg0;
-      obj[arg0] = () => {
-        const args = [...arguments];
-        if (args) {
-          consoleSandbox(() => {
-            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
-            items = ["Sentry Logger [" + args + "]:", ...closure_0];
-            _console[args].apply(items);
-          });
+const WhiteSpace = _mod12798.TYPE.WhiteSpace;
+const Comment = _mod12798.TYPE.Comment;
+const Semicolon = _mod12798.TYPE.Semicolon;
+const obj = {
+  name: "DeclarationList",
+  structure: null,
+  parse() {
+    const self = this;
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      while (true) {
+        let tokenType = self.scanner.tokenType;
+        if (WhiteSpace !== tokenType) {
+          if (Comment !== tokenType) {
+            if (Semicolon !== tokenType) {
+              let arr = list.push(self.parseWithFallback(self.Declaration, consumeRaw));
+            }
+            if (self.scanner.eof) {
+              break;
+            }
+          }
         }
-      };
+        let iter = self.scanner;
+        let nextResult = iter.next();
+      }
+    }
+    const element = { type: "DeclarationList", loc: self.getLocationFromList(list), children: list };
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0, function (type) {
+      if ("Declaration" === type.type) {
+        const self = this;
+        this.chunk(";");
+      }
     });
-  } else {
-    const item1 = forEach((arg0) => {
-      obj[arg0] = () => {};
-    });
-  }
-  return obj;
-});
-export { originalConsoleMethods };
+  },
+};
+const obj2 = { children: null };
+const items = [["Declaration"]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

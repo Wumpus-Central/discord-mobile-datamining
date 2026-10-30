@@ -1,13 +1,10 @@
 // _runtime/metro/10554__.js
-import registerAsset from "01131__.js";
+import _slicedToArray from "00032__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 277,
-  height: 44,
-  scales: [2, 3],
-  hash: "80b2b0d70a370a3545b5c6b85cfa62d7",
-  name: "img_boost_activated_border",
-  type: "png",
-});
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
+
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return framebus(() => closure_0({}), []);
+}

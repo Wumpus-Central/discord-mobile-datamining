@@ -1,85 +1,54 @@
 // _runtime/metro/12870__.js
+import _mod12798 from "12798__.js";
+import _mod12842 from "12842__.js";
 
-export const SPAN_STATUS_ERROR = 2;
-export const SPAN_STATUS_OK = 1;
-export const SPAN_STATUS_UNSET = 0;
-export function getSpanStatusFromHttpCode(arg0) {
-  if (arg0 < 400) {
-    if (arg0 >= 100) {
-      return { code: 1 };
-    }
-  }
-  if (arg0 >= 400) {
-    if (arg0 < 500) {
-      if (401 === arg0) {
-        return { code: 2, message: "unauthenticated" };
-      } else if (403 === arg0) {
-        return { code: 2, message: "permission_denied" };
-      } else if (404 === arg0) {
-        return { code: 2, message: "not_found" };
-      } else if (409 === arg0) {
-        return { code: 2, message: "already_exists" };
-      } else if (413 === arg0) {
-        return { code: 2, message: "failed_precondition" };
-      } else if (429 === arg0) {
-        return { code: 2, message: "resource_exhausted" };
-      } else {
-        return 499 === arg0 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
-      }
-    }
-  }
-  if (arg0 >= 500) {
-    if (arg0 < 600) {
-      if (501 === arg0) {
-        return { code: 2, message: "unimplemented" };
-      } else if (503 === arg0) {
-        return { code: 2, message: "unavailable" };
-      } else {
-        return 504 === arg0 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
-      }
-    }
-  }
-  return { code: 2, message: "unknown_error" };
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod12842.mode.leftCurlyBracket, true);
 }
-export function setHttpStatus(setAttribute, arg1) {
-  const attr = setAttribute.setAttribute("http.response.status_code", arg1);
-  if (arg1 < 400) {
-    if (arg1 >= 100) {
-      let obj = { code: 1 };
-    }
-    if ("unknown_error" !== obj.message) {
-      setAttribute.setStatus(obj);
-    }
+function consumePrelude() {
+  const self = this;
+  const SelectorListResult = this.SelectorList();
+  let tmp2 = "Raw" !== SelectorListResult.type;
+  if (tmp2) {
+    tmp2 = false === self.scanner.eof;
   }
-  if (arg1 >= 400) {
-    if (arg1 < 500) {
-      if (401 === arg1) {
-        obj = { code: 2, message: "unauthenticated" };
-      } else if (403 === arg1) {
-        obj = { code: 2, message: "permission_denied" };
-      } else if (404 === arg1) {
-        obj = { code: 2, message: "not_found" };
-      } else if (409 === arg1) {
-        obj = { code: 2, message: "already_exists" };
-      } else if (413 === arg1) {
-        obj = { code: 2, message: "failed_precondition" };
-      } else if (429 === arg1) {
-        obj = { code: 2, message: "resource_exhausted" };
-      } else {
-        obj = 499 === arg1 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
-      }
-    }
+  if (tmp2) {
+    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
   }
-  if (arg1 >= 500) {
-    if (arg1 < 600) {
-      if (501 === arg1) {
-        obj = { code: 2, message: "unimplemented" };
-      } else if (503 === arg1) {
-        obj = { code: 2, message: "unavailable" };
-      } else {
-        obj = 504 === arg1 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
-      }
-    }
+  if (tmp2) {
+    self.error();
   }
-  obj = { code: 2, message: "unknown_error" };
+  return SelectorListResult;
 }
+const LeftCurlyBracket = _mod12798.TYPE.LeftCurlyBracket;
+
+export default {
+  name: "Rule",
+  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
+  parse() {
+    const self = this;
+    const tokenIndex = this.scanner.tokenIndex;
+    if (this.parseRulePrelude) {
+      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
+    } else {
+      const call = consumeRaw.call;
+      if (typeof call === "unknown") {
+        parseWithFallbackResult = self.Raw(tokenIndex, _mod12842.mode.leftCurlyBracket, true);
+      } else {
+        parseWithFallbackResult = call(self, tokenIndex);
+      }
+    }
+    const obj = {
+      type: "Rule",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      prelude: parseWithFallbackResult,
+      block: self.Block(true),
+    };
+    return obj;
+  },
+  generate(prelude) {
+    this.node(prelude.prelude);
+    this.node(prelude.block);
+  },
+  walkContext: "rule",
+};

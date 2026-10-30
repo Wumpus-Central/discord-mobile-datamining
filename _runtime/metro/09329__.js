@@ -1,5 +1,5 @@
 // _runtime/metro/09329__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8490caddc6d6fe2d04f984b90b4d2807",
-  name: "XboxNeutralIcon",
+  hash: "d6b6d301228ff846f051730b4a535337",
+  name: "SteamNeutralIcon",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/09852__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "1f7ad1fdc74f906f486dc69b445bb809",
-  name: "wumpus-wump",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "dc76a43601a93031b91e3ad463d63b85",
+  name: "ThumbsDownIcon",
   type: "png",
 });

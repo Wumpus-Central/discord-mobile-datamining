@@ -1,13 +1,13 @@
 // _runtime/metro/15401__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_boosting/native/images",
-  width: 18,
-  height: 15,
-  scales: [2, 3],
-  hash: "dc018ce302b0357451a31422d7180d84",
-  name: "sparkle_star_pointed",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 200,
+  height: 90,
+  scales: [1],
+  hash: "d354a91b7a8b3b1cf9e4de447250911f",
+  name: "yearly_upsell_wumpus",
   type: "png",
 });

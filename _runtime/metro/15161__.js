@@ -1,13 +1,13 @@
 // _runtime/metro/15161__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 52,
-  height: 46,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5dd914546a21d2f37ba762b2209e8ec8",
-  name: "img_bundle_mobile",
+  hash: "cc65a5f47aada2d48ca57f930a5ac833",
+  name: "camera",
   type: "png",
 });

@@ -6,7 +6,7 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKTimeUnitAgoFormatParser = require;
+const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKTimeUnitAgoFormatParser {
+class RUTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitAgoFormatParser);
+    tmp = c2(this, RUTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitAgoFormatParser);
+    obj = closure_4(RUTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,11 +45,13 @@ class UKTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitAgoFormatParser, _mod10438.AbstractParserWithLeftBoundaryChecking);
+_inherits(RUTimeUnitAgoFormatParser, _mod10438.AbstractParserWithLeftBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
-    return "(" + UKTimeUnitAgoFormatParser(10436).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+    return (
+      "(" + RUTimeUnitAgoFormatParser(10436).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))"
+    );
   },
 };
 const items = [
@@ -57,14 +59,14 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = UKTimeUnitAgoFormatParser(10436).parseDuration(arg1[1]);
-      const ParsingComponents = UKTimeUnitAgoFormatParser(10285).ParsingComponents;
+      const parseDurationResult = RUTimeUnitAgoFormatParser(10436).parseDuration(arg1[1]);
+      const ParsingComponents = RUTimeUnitAgoFormatParser(10310).ParsingComponents;
       return ParsingComponents.createRelativeFromReference(
         reference.reference,
-        UKTimeUnitAgoFormatParser(10284).reverseDuration(UKTimeUnitAgoFormatParser(10436).parseDuration(arg1[1])),
+        RUTimeUnitAgoFormatParser(10309).reverseDuration(RUTimeUnitAgoFormatParser(10436).parseDuration(arg1[1])),
       );
     },
   },
 ];
 
-export default _createClass(UKTimeUnitAgoFormatParser, items);
+export default _createClass(RUTimeUnitAgoFormatParser, items);

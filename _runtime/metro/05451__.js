@@ -1,7 +1,4 @@
 // _runtime/metro/05451__.js
-import 00065__ from "00065__.js";
+import _modDef5452 from "05452__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { moduleId: true, unstable_forceActive: true } };
-
-export default module_65.get("RNGestureHandlerRootView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default _modDef5452;

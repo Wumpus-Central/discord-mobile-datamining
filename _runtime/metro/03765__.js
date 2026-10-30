@@ -1,11 +1,11 @@
 // _runtime/metro/03765__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/slayer_storefront/intl",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zbGF5ZXJfc3RvcmVmcm9udC9pbnRs",
   scales: [1],
-  hash: "4aa45f97f3a65e88a0016505c9909e3c",
-  name: "SlayerStorefront.compiled.messages",
+  hash: "065deee7abd9eae080b291d5c8033ff0",
+  name: "zh-TW.messages.065deee7abd9eae080b291d5c8033ff0.compiled.messages",
   type: "jsona",
 });

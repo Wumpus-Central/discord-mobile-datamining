@@ -1,11 +1,11 @@
 // _runtime/metro/02204__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz",
+  httpServerLocation: "/assets/modules/virtual_currency/messages",
   scales: [1],
-  hash: "109931ebceae370a2fc0a92339e6dc94",
-  name: "zh-TW.messages.109931ebceae370a2fc0a92339e6dc94.compiled.messages",
+  hash: "8b07771c6b1630545b39fe9ca8d05b07",
+  name: "OrbWallet.compiled.messages",
   type: "jsona",
 });

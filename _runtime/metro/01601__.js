@@ -1,92 +1,128 @@
 // _runtime/metro/01601__.js
-import BaseNavigationContainer from "../01506_BaseNavigationContainer.js";
-import _mod1602 from "01602__.js";
-import _mod1604 from "01604__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _slicedToArray from "00032__.js";
 import noop from "00019__.js";
 
-const require = globalThis.__r;
-
-require = fn;
-let closure_2 = [
-  "children",
-  "id",
-  "initialRouteName",
-  "layout",
-  "screenLayout",
-  "screenListeners",
-  "screenOptions",
-  "UNSTABLE_routeNamesChangeBehavior",
-  "UNSTABLE_router",
-];
+const require = fn;
+const I18nManager = fn(17).I18nManager;
 const jsx = fn(21).jsx;
+const weakMap = new WeakMap();
+globalThis.REACT_NAVIGATION_DEVTOOLS = weakMap;
 
-export function createStandardNavigationFactories(arg0, arg1, arg2) {
-  _require = arg1;
-  dependencyMap = arg2;
-  ({ type, version, NavigatorContent: closure_2 } = arg0);
-  if ("standard" !== type) {
-    let str3 = "unknown type.";
-    if (typeof type === "string") {
-      const _HermesInternal2 = HermesInternal;
-      str3 = 'type "' + type + '".';
+export const NavigationContainer = noop.forwardRef(function NavigationContainerInner(direction, arg1) {
+  direction = direction.direction;
+  if (direction === undefined) {
+    let str = "ltr";
+    if (I18nManager.getConstants().isRTL) {
+      str = "rtl";
     }
-    const error = new Error(
-      "createStandardNavigationFactories only works with standard navigator objects, but got navigator of " + str3,
-    );
-    throw error;
-  } else if (1 !== version) {
-    const _Error = Error;
-    const _HermesInternal = HermesInternal;
-    const error1 = new Error(
-      "createStandardNavigationFactories only works with version 1 of standard navigator objects, but got version " +
-        version +
-        ".",
-    );
-    throw error1;
-  } else {
-    let obj = {
-      createNavigator: require("BaseNavigationContainer").createNavigatorFactory(
-        function StandardNavigationNavigator(UNSTABLE_routeNamesChangeBehavior) {
-          const navigationBuilder = BaseNavigationContainer.useNavigationBuilder(
-            closure_0,
-            UNSTABLE_routeNamesChangeBehavior,
-          );
-          closure_1 = _mod1602.useBuildHref();
-          let tmp2 = _mod1604;
-          let flag = tmp2.useMemoArray;
-          if (!("preloadedRoutes" in navigationBuilder.state)) {
-            let routes1 = navigationBuilder.state.routes;
-            const flagResult = flag(
-              routes1.map((key) => {
-                const tmp = closure_1(key.name, key.params);
-                const items = [{ key: key.key, name: key.name, params: key.params, href: tmp }];
-                const items1 = [, , ,];
-                ({ key: arr2[0], name: arr2[1], params: arr2[2] } = key);
-                items1[3] = tmp;
-                items[1] = items1;
-                return items;
-              }),
-            );
-            closure_2 = flagResult;
-            let items = [navigationBuilder.state.index, flagResult];
-            const routes2 = noop.useMemo(
-              () => ({ index: navigationBuilder.state.index, routes: flagResult }),
-              items,
-            ).routes;
-            tmp2 = routes2[Symbol.iterator]();
-            flag = true;
-          } else {
-            const _Array = Array;
-          }
-          const routes = navigationBuilder.state.routes;
-          routes1 = routes.concat(navigationBuilder.state.preloadedRoutes);
-        },
-      ),
-      createScreen: null,
-    };
-    let obj2 = require("BaseNavigationContainer");
-    obj.createScreen = require("BaseNavigationContainer").createScreenFactory();
-    return obj;
+    direction = str;
   }
-}
+  let DefaultTheme = direction.theme;
+  if (DefaultTheme === undefined) {
+    DefaultTheme = linking(1602).DefaultTheme;
+  }
+  linking = direction.linking;
+  let fallback = direction.fallback;
+  if (fallback === undefined) {
+    fallback = null;
+  }
+  let merged = Object.assign(
+    direction,
+    Object.assign({ direction: 0, theme: 0, linking: 0, fallback: 0, documentTitle: 0 }),
+  );
+  dependencyMap = undefined;
+  let ref;
+  let tmp6 = linking;
+  if (tmp6) {
+    tmp6 = false !== linking.enabled;
+  }
+  dependencyMap = tmp6;
+  let config;
+  if (linking != null) {
+    config = linking.config;
+  }
+  if (config) {
+    linking(1501).validatePathConfig(linking.config);
+    let obj = linking(1501);
+  }
+  ref = noop.useRef(null);
+  const backButton = linking(1604).useBackButton(ref);
+  const obj2 = linking(1604);
+  const documentTitle = linking(1605).useDocumentTitle(ref, direction.documentTitle);
+  const obj3 = linking(1605);
+  const merged1 = Object.assign(linking);
+  const items = [linking];
+  const memo = noop.useMemo(() => ({ options: linking }), items);
+  const effect = noop.useEffect(() => {
+    if (ref.current) {
+      let obj = {};
+      Object.defineProperty(obj, "linking", {
+        get: () => {
+          const obj = {};
+          const merged = Object.assign(closure_1_0);
+          obj.enabled = enabled;
+          let prefixes;
+          if (closure_1_0 != null) {
+            prefixes = closure_1_0.prefixes;
+          }
+          if (prefixes == null) {
+            prefixes = [];
+          }
+          obj.prefixes = prefixes;
+          let getStateFromPath;
+          if (closure_1_0 != null) {
+            getStateFromPath = closure_1_0.getStateFromPath;
+          }
+          if (getStateFromPath == null) {
+            getStateFromPath = linking(enabled[5]).getStateFromPath;
+          }
+          obj.getStateFromPath = getStateFromPath;
+          let getPathFromState;
+          if (closure_1_0 != null) {
+            getPathFromState = closure_1_0.getPathFromState;
+          }
+          if (getPathFromState == null) {
+            getPathFromState = linking(enabled[5]).getPathFromState;
+          }
+          obj.getPathFromState = getPathFromState;
+          let getActionFromState;
+          if (closure_1_0 != null) {
+            getActionFromState = closure_1_0.getActionFromState;
+          }
+          if (getActionFromState == null) {
+            getActionFromState = linking(enabled[5]).getActionFromState;
+          }
+          obj.getActionFromState = getActionFromState;
+          return obj;
+        },
+        set: undefined,
+      });
+      const result = globalThis.REACT_NAVIGATION_DEVTOOLS.set(tmp.current, obj);
+    }
+  });
+  const obj4 = linking(1606);
+  const obj5 = { enabled: tmp6, prefixes: [] };
+  const obj6 = linking(1608);
+  [tmp20, initialState] = ref(linking(1608).useThenable(obj4.useLinking(ref, obj5).getInitialState), 2);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current);
+  const obj7 = { value: direction, children: null };
+  if (tmp22) {
+    const obj8 = { value: memo, children: null };
+    const obj9 = {};
+    const merged2 = Object.assign(merged);
+    obj9.theme = DefaultTheme;
+    if (null != merged.initialState) {
+      initialState = merged.initialState;
+    }
+    obj9.initialState = initialState;
+    obj9.ref = ref;
+    obj8.children = jsx(tmp12(1501).BaseNavigationContainer, {});
+    obj7.children = jsx(tmp12(1598).LinkingContext.Provider, { value: memo, children: null });
+    let tmp24 = obj7;
+  } else {
+    const obj10 = { value: DefaultTheme, children: fallback };
+    obj7.children = jsx(tmp12(1501).ThemeProvider, { value: DefaultTheme, children: fallback });
+    tmp24 = obj7;
+  }
+  return jsx(linking(1609).LocaleDirContext.Provider, tmp24);
+});

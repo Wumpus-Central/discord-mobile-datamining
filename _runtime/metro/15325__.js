@@ -1,13 +1,13 @@
 // _runtime/metro/15325__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 375,
-  height: 301,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 51,
+  height: 13,
   scales: [2, 3],
-  hash: "7326675c9312971f0f528c74fa69a335",
-  name: "img_top_pattern_darker",
+  hash: "224e933808a00a22a9d03c8af389d91f",
+  name: "img_logo_basic_small_dark",
   type: "png",
 });

@@ -1,51 +1,38 @@
 // _runtime/metro/00918__.js
-import _mod913 from "00913__.js";
-import _mod916 from "00916__.js";
-import _mod917 from "00917__.js";
-import generateUniqueID from "../00919_generateUniqueID.js";
+import observe from "../00908_observe.js";
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-
-export (CLS, arg1) => {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = -1;
-  }
-  const navigationEntry = _mod917.getNavigationEntry();
-  let str = "navigate";
-  let str2 = "navigate";
-  if (navigationEntry) {
-    const _document = _mod913.WINDOW.document;
-    let prerendering;
-    if (_document != null) {
-      prerendering = _document.prerendering;
-    }
-    let str4 = "prerender";
-    if (!prerendering) {
-      str4 = "prerender";
-      if (tmpResult.getActivationStart() <= 0) {
-        const _document2 = _mod913.WINDOW.document;
-        let wasDiscarded;
-        if (_document2 != null) {
-          wasDiscarded = _document2.wasDiscarded;
-        }
-        let str5 = "restore";
-        if (!wasDiscarded) {
-          if (navigationEntry.type) {
-            str = navigationEntry.type.replace(/_/g, "-");
-          }
-          str5 = str;
-        }
-        str4 = str5;
+let c3 = 0;
+const Infinity = Infinity;
+let c5 = 0;
+function updateEstimate(arr) {
+  const item = arr.forEach((interactionId) => {
+    if (interactionId.interactionId) {
+      const _Math = Math;
+      closure_4 = Math.min(closure_4, interactionId.interactionId);
+      const _Math2 = Math;
+      bound = Math.max(bound, interactionId.interactionId);
+      if (bound) {
+        num = (bound - closure_4) / 7 + 1;
       }
-      tmpResult = _mod916;
     }
-    str2 = str4;
+  });
+}
+
+export () => {
+  if (closure_2) {
+    let tmp2 = c3;
+  } else {
+    const _performance = performance;
+    tmp2 = performance.interactionCount || 0;
   }
-  const obj2 = { name: CLS, value: num, rating: "good", delta: 0, entries: [], id: null, navigationType: null };
-  obj2.id = generateUniqueID.generateUniqueID();
-  obj2.navigationType = str2;
-  return obj2;
+  return tmp2;
+}
+export () => {
+  if (!tmp) {
+    closure_2 = observe.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
+  }
+  tmp = "interactionCount" in performance || closure_2;
 }

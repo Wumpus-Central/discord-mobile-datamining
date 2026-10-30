@@ -74,7 +74,7 @@ function processColor(arg0) {
   }
 }
 _possibleConstructorReturnDefault;
-const rgbaValue = { r: 0, g: 0, b: 0, a: 1 };
+const React6 = { r: 0, g: 0, b: 0, a: 1 };
 class AnimatedColor {
   constructor(arg0, arg1) {
     self = this;

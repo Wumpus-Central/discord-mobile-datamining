@@ -1,39 +1,16 @@
 // _runtime/metro/01538__.js
+import _mod1539 from "01539__.js";
 import noop from "00019__.js";
 
-const jsx = fn(21).jsx;
-const context = noop.createContext(undefined);
+require = arg1;
 
-export const SingleNavigatorContext = context;
-export function EnsureSingleNavigator(children) {
-  closure_0 = noop.useRef(undefined);
-  return (
-    <context.Provider
-      value={noop.useMemo(
-        () => ({
-          register(current) {
-            current = ref.current;
-            if (undefined !== current) {
-              if (current !== current) {
-                const _Error = Error;
-                const error = new Error(
-                  'Another navigator is already registered for this container. You likely have multiple navigators under a single "NavigationContainer" or "Screen". Make sure each navigator is under a separate "Screen" container. See https://reactnavigation.org/docs/nesting-navigators for a guide on nesting.',
-                );
-                throw error;
-              }
-            }
-            ref.current = current;
-          },
-          unregister(arg0) {
-            if (arg0 === ref.current) {
-              tmp.current = undefined;
-            }
-          },
-        }),
-        [],
-      )}
-    >
-      {children.children}
-    </context.Provider>
-  );
+export function useRoute() {
+  const context = noop.useContext(_mod1539.NavigationRouteContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find a route object. Is your component inside a screen in a navigator?");
+    throw error;
+  } else {
+    return context;
+  }
 }

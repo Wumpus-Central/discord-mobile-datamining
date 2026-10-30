@@ -190,7 +190,7 @@ function mapIntoArray(element, items, arg2, arg3, fn) {
         num7 = 0;
         if (!iter2.done) {
           while (true) {
-            value3 = iter2.value;
+            let value3 = iter2.value;
             if (typeof value3 === "object") {
               if (null !== value3) {
                 if (null != value3.key) {
@@ -321,7 +321,7 @@ let closure_8 = {
 
   }
 };
-const v65535 = {};
+const refs = {};
 Component.prototype.isReactComponent = {};
 ComponentDummy.prototype = Component.prototype;
 const forResult3 = Symbol.for("react.suspense");
@@ -362,13 +362,13 @@ let closure_18 = typeof reportError === "function" ? reportError : ((message) =>
     }
   }
 });
-function isValidElement(label) {
-  let tmp = typeof label === "object";
-  if (typeof label === "object") {
-    tmp = null !== label;
+function isValidElement(icon) {
+  let tmp = typeof icon === "object";
+  if (typeof icon === "object") {
+    tmp = null !== icon;
   }
   if (tmp) {
-    tmp = label.$$typeof === closure_0;
+    tmp = icon.$$typeof === closure_0;
   }
   return tmp;
 }
@@ -389,17 +389,17 @@ export const Children = {
       const items = [];
       c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f86252.call;
+        const call = f77043.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f86252(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f77043(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element, arg1, arg2) {
-    const f86250 = function() {
+    const f77041 = function() {
       const self = this;
-      const apply = f86250.apply;
+      const apply = f77041.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -410,9 +410,9 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f86252.call;
+        const call = f77043.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f86252(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f77043(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
   },
@@ -423,23 +423,23 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f86252.call;
+        const call = f77043.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f86252(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f77043(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
     return closure_0;
   },
   toArray(element) {
-    const f86252 = (arg0) => arg0;
+    const f77043 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
       const items = [];
       closure_2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f86252.call;
+        const call = f77043.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f86252(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f77043(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       items1 = items;
     }
@@ -485,17 +485,17 @@ export (arg0) => {
   };
 }
 export () => null
-export (onlyResult, cResult, children) => {
+export (onlyResult, key, children) => {
   if (null == onlyResult) {
     const _Error = Error;
     throw Error("The argument must be a React element, but you passed " + onlyResult + ".");
   } else {
     const tmp18 = assign({}, onlyResult.props);
-    let key = onlyResult.key;
+    key = onlyResult.key;
     let tmp3 = key;
-    if (null != cResult) {
-      if (undefined !== cResult.key) {
-        key = `${cResult.key}`;
+    if (null != key) {
+      if (undefined !== key.key) {
+        key = `${key.key}`;
       }
       tmp3 = key;
       const keys = Object.keys();
@@ -503,7 +503,7 @@ export (onlyResult, cResult, children) => {
         tmp3 = key;
         while (keys[tmp] !== undefined) {
           let call = hasOwnProperty.call;
-          let tmp6 = typeof call === "unknown" ? hasOwnProperty(tmp5) : call(cResult, tmp5);
+          let tmp6 = typeof call === "unknown" ? hasOwnProperty(tmp5) : call(key, tmp5);
           let tmp7 = !tmp6;
           if (tmp6) {
             tmp7 = "key" === tmp5;
@@ -515,13 +515,13 @@ export (onlyResult, cResult, children) => {
             tmp7 = "__source" === tmp5;
           }
           if (!tmp7) {
-            let tmp8 = "ref" === tmp5 && undefined === cResult.ref;
+            let tmp8 = "ref" === tmp5 && undefined === key.ref;
             tmp7 = tmp8;
           }
           if (tmp7) {
             continue;
           } else {
-            tmp18[tmp5] = cResult[tmp5];
+            tmp18[tmp5] = key[tmp5];
             continue;
           }
           continue;
@@ -630,8 +630,8 @@ export (_result) => {
   obj = { $$typeof: _typeof6, _payload: { _status: -1, _result }, _init: lazyInitializer };
   return obj;
 }
-export (stateFromStores, size3) => {
-  obj = { $$typeof: _typeof5, type: stateFromStores, compare: null };
+export (dependencyMap, size3) => {
+  obj = { $$typeof: _typeof5, type: dependencyMap, compare: null };
   let tmp = null;
   if (undefined !== size3) {
     tmp = size3;
@@ -705,9 +705,9 @@ export (arg0, arg1) => {
   const H = obj.H;
   return H.useDeferredValue(arg0, arg1);
 }
-export (cResult, items) => {
+export (arg0, items) => {
   const H = obj.H;
-  return H.useEffect(cResult, items);
+  return H.useEffect(arg0, items);
 }
 export (arg0) => {
   const H = obj.H;

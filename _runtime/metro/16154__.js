@@ -1,14 +1,30 @@
 // _runtime/metro/16154__.js
-import _mod16155 from "16155__.js";
-import get_ActivityIndicator from "00017__.js";
+import _mod17 from "00017__.js";
+import replaceByteInByteSequence from "../16155_replaceByteInByteSequence.js";
 
-export default function getReactNativeDimensions() {
-  try {
-    const Dimensions = get_ActivityIndicator.Dimensions;
-    try {
-      const Dimensions2 = get_ActivityIndicator.Dimensions;
-      value = Dimensions2.get("window");
-      return _mod16155.getReactNativeDimensionsWithDimensions(tmp2, value);
-    } catch (err) {}
-  } catch (err) {}
+let closure_0 = null;
+const BlobModule = _mod17.NativeModules.BlobModule;
+let tmp2 = BlobModule;
+if (BlobModule) {
+  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
 }
+if (tmp2) {
+  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
+  if (typeof BlobModule.BLOB_URI_HOST === "string") {
+    let _HermesInternal = HermesInternal;
+    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
+  }
+}
+replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
+  if (null === closure_0) {
+    const _Error = Error;
+    const error = new Error("Cannot create URL for blob!");
+    throw error;
+  } else {
+    const _HermesInternal = HermesInternal;
+    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+  }
+};
+replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
+
+export const URL = replaceByteInByteSequence.URL;

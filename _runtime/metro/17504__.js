@@ -1,11 +1,13 @@
 // _runtime/metro/17504__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "15e2770ff873ff5fbea525f59a114fa0",
-  name: "es-419.messages.15e2770ff873ff5fbea525f59a114fa0.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "16aad056858b421d37d14aba161c7c8a",
+  name: "StaffBadgeIcon",
+  type: "png",
 });

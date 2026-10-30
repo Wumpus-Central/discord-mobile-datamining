@@ -1,111 +1,81 @@
 // _runtime/metro/05421__.js
-import _mod5377 from "05377__.js";
-import eventHandler from "../05420_eventHandler.js";
-import noop from "00019__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const require = globalThis.__r;
-
-({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
-let closure_5 = [
-  "onGestureHandlerReanimatedEvent",
-  "onGestureHandlerReanimatedStateChange",
-  "onGestureHandlerReanimatedTouchEvent",
-];
-const onUpdate = function n() {};
-onUpdate.__closure = {};
-onUpdate.__workletHash = 763644533783;
-onUpdate.__initData = { code: "function pnpm_useReanimatedEventHandlerTs1(){}" };
-let Reanimated = _mod5377.Reanimated;
-let mutable;
-if (Reanimated != null) {
-  mutable = Reanimated.makeMutable({});
-}
-function deleteHandlerEventEntry(arg0) {
-  delete tmp2[tmp];
-}
-deleteHandlerEventEntry.__closure = { lastUpdateEventMap: mutable };
-deleteHandlerEventEntry.__workletHash = 8348834805583;
-deleteHandlerEventEntry.__initData = {
-  code: "function deleteHandlerEventEntry_Pnpm_useReanimatedEventHandlerTs2(handlerTag){const{lastUpdateEventMap}=this.__closure;delete lastUpdateEventMap.value[handlerTag];}",
-};
-const __initData = {
-  code: "function pnpm_useReanimatedEventHandlerTs3(event){const{lastUpdateEventMap,eventHandler,handlerTag,workletizedHandlers,changeEventCalculator,fillInDefaultValues}=this.__closure;let context=lastUpdateEventMap.value[event.handlerTag];if(context===undefined){context={lastUpdateEvent:undefined};lastUpdateEventMap.value[event.handlerTag]=context;}eventHandler(handlerTag,event,workletizedHandlers,changeEventCalculator,context,false,fillInDefaultValues);}",
-};
-
-export function useReanimatedEventHandler(
-  handlerTag,
-  memoizedGestureCallbacks,
-  handler,
-  changeEventCalculator,
-  fillInDefaultValues,
-) {
-  _require = handlerTag;
-  dependencyMap = memoizedGestureCallbacks;
-  closure_2 = changeEventCalculator;
-  closure_3 = fillInDefaultValues;
-  const items = [memoizedGestureCallbacks];
-  let tmp = closure_3(() => {
-    const Reanimated = _mod5377.Reanimated;
-    let isWorkletFunctionResult;
-    if (Reanimated != null) {
-      isWorkletFunctionResult = Reanimated.isWorkletFunction(memoizedGestureCallbacks.onUpdate);
-    }
-    if (isWorkletFunctionResult) {
-      let obj = memoizedGestureCallbacks;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      obj = {};
-      const merged = Object.assign(memoizedGestureCallbacks);
-      obj.onUpdate = onUpdate;
+      callResult = call(constructResult);
     }
-    return obj;
-  }, items);
-  closure_4 = tmp;
-  const fn = function h(handlerTag) {
-    let tmp = mutable.value[handlerTag.handlerTag];
-    if (undefined === tmp) {
-      const obj = { lastUpdateEvent: "r" };
-      iter.value[handlerTag.handlerTag] = obj;
-      tmp = obj;
-    }
-    eventHandler.eventHandler(closure_0, handlerTag, closure_4, closure_2, tmp, false, closure_3);
-  };
-  fn.__closure = {
-    lastUpdateEventMap: mutable,
-    eventHandler: require("eventHandler").eventHandler,
-    handlerTag,
-    workletizedHandlers: tmp,
-    changeEventCalculator,
-    fillInDefaultValues,
-  };
-  fn.__workletHash = 3272953373395;
-  fn.__initData = __initData;
-  const tmp2 = closure_4(handlerTag);
-  closure_5 = tmp2;
-  const items1 = [handlerTag];
-  closure_2(() => {
-    closure_5.current = current;
-    return () => {
-      const Reanimated = closure_0(closure_1[1]).Reanimated;
-      if (Reanimated != null) {
-        const runOnUI = Reanimated.runOnUI;
-        if (runOnUI != null) {
-          runOnUI(deleteHandlerEventEntry)(current);
-        }
-      }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
-  }, items1);
-  let Reanimated = require("05377__.js").Reanimated;
-  let event;
-  if (Reanimated != null) {
-    let tmp5 = tmp2.current !== handlerTag;
-    if (!tmp5) {
-      let doDependenciesDiffer;
-      if (handler != null) {
-        doDependenciesDiffer = handler.doDependenciesDiffer;
-      }
-      tmp5 = doDependenciesDiffer;
-    }
-    event = Reanimated.useEvent(fn, closure_5, tmp5);
-  }
-  return event;
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(scale, scale2) {
+  if (undefined === scale2) {
+    const obj2 = { scaleChange: scale.scale };
+    let obj = obj2;
+  } else {
+    obj = { scaleChange: scale.scale / scale2.scale };
+  }
+  const merged = Object.assign(scale);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 9876979738005;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}",
+};
+class PinchGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, PinchGesture);
+    tmp2 = c2;
+    obj = c2(PinchGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.handlerName = "PinchGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = PinchGesture;
+_inherits(PinchGesture, fn(5319).ContinousBaseGesture);
+const entry = {
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    const items = [arg0];
+    return fn(items);
+  },
+};
+let items = [entry];
+
+export const PinchGesture = _createClass(PinchGesture, items);

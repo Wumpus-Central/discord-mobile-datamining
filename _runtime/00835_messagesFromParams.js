@@ -1,0 +1,79 @@
+// _runtime/00835_messagesFromParams.js
+import SPAN_STATUS_ERROR from "00704_SPAN_STATUS_ERROR.js";
+import captureCheckIn from "00733_captureCheckIn.js";
+import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "00824_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
+import extractSystemInstructions from "00825_extractSystemInstructions.js";
+import ANTHROPIC_AI_INSTRUMENTED_METHODS2 from "00836_ANTHROPIC_AI_INSTRUMENTED_METHODS.js";
+
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+
+export function handleResponseError(setStatus, error) {
+  if (error.error) {
+    const obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: error.error.type || "internal_error" };
+    setStatus.setStatus(obj);
+    const obj2 = { mechanism: { handled: false, type: "auto.ai.anthropic.anthropic_error" } };
+    captureCheckIn.captureException(error.error, obj2);
+    const tmp2Result = captureCheckIn;
+  }
+}
+export function messagesFromParams(system) {
+  ({ messages, input } = system);
+  if (typeof system.system === "string") {
+    const obj = { role: "system", content: system.system };
+    const items = [obj];
+    let items1 = items;
+  } else {
+    items1 = [];
+  }
+  let tmp = input;
+  if (!Array.isArray(input)) {
+    let tmp3;
+    if (null != input) {
+      const items2 = [input];
+      tmp3 = items2;
+    }
+    tmp = tmp3;
+  }
+  if (Array.isArray(messages)) {
+    const items3 = [];
+    const arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
+    if (tmp == null) {
+      tmp = messages;
+    }
+    HermesBuiltin.arraySpread(tmp, arraySpreadResult);
+    return items3;
+  } else if (null != messages) {
+    const items4 = [messages];
+    let items5 = items4;
+  } else {
+    items5 = [];
+  }
+}
+export function setMessagesAttribute(setAttributes, messagesFromParamsResult) {
+  if (!Array.isArray(messagesFromParamsResult)) {
+    const result = extractSystemInstructions.extractSystemInstructions(messagesFromParamsResult);
+    ({ systemInstructions, filteredMessages } = result);
+    if (systemInstructions) {
+      const obj2 = {};
+      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_SYSTEM_INSTRUCTIONS_ATTRIBUTE] = systemInstructions;
+      setAttributes.setAttributes(obj2);
+    }
+    const _Array = Array;
+    let num2 = 1;
+    if (Array.isArray(filteredMessages)) {
+      num2 = filteredMessages.length;
+    }
+    const obj3 = {};
+    obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_INPUT_MESSAGES_ATTRIBUTE] =
+      extractSystemInstructions.getTruncatedJsonString(filteredMessages);
+    obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_INPUT_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = num2;
+    setAttributes.setAttributes(obj3);
+    const tmp2Result = extractSystemInstructions;
+  }
+}
+export function shouldInstrument(arg0) {
+  const ANTHROPIC_AI_INSTRUMENTED_METHODS = ANTHROPIC_AI_INSTRUMENTED_METHODS2.ANTHROPIC_AI_INSTRUMENTED_METHODS;
+  return ANTHROPIC_AI_INSTRUMENTED_METHODS.includes(arg0);
+}

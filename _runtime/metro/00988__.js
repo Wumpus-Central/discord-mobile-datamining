@@ -1,117 +1,177 @@
 // _runtime/metro/00988__.js
-import _mod879 from "00879__.js";
-
-require = arg1;
-const dependencyMap = arg6;
-function processEvent(tags, originalException) {
-  originalException = undefined;
-  if (null != originalException) {
-    originalException = originalException.originalException;
-  }
-  let tmp2;
-  if (originalException) {
-    let originalException1;
-    if (null != originalException) {
-      originalException1 = originalException.originalException;
-    }
-    tmp2 = originalException1;
-  }
-  const obj = { turbo_module: _mod879.isTurboModuleEnabled(), fabric: null, react_native_version: null, expo: null };
-  obj.fabric = _mod879.isFabricEnabled();
-  obj.react_native_version = _mod879.getReactNativeVersion();
-  obj.expo = _mod879.isExpo();
-  if (obj6.isHermesEnabled()) {
-    obj.js_engine = "hermes";
-    const hermesVersion = _mod879.getHermesVersion();
-    if (hermesVersion) {
-      obj.hermes_version = hermesVersion;
-    }
-    obj.hermes_debug_info = !(function isEventWithHermesBytecodeFrames(exception) {
-      exception = exception.exception;
-      let items;
-      if (null !== exception) {
-        if (undefined !== exception) {
-          items = exception.values;
-        }
+const require = arg1;
+let dependencyMap = arg6;
+function processEvent(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return fn(this, undefined, undefined, function*() {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
       }
-      if (!items) {
-        const threads = exception.threads;
-        let values2;
-        if (null !== threads) {
-          if (undefined !== threads) {
-            values2 = threads.values;
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp3;
+            dependencyMap = tmp7;
+            closure_129_0 = undefined;
+            const exception = value.exception;
+            let values;
+            if (null !== exception) {
+              if (undefined !== exception) {
+                values = exception.values;
+              }
+            }
+            if (values) {
+              if (value.exception.values.length > 0) {
+                closure_129_0 = null;
+                c4 = 1;
+                const NATIVE = value(866).NATIVE;
+                c5 = 2;
+                c6 = 1;
+                const obj4 = { value: NATIVE.fetchViewHierarchy(), done: false };
+                return obj4;
+              }
+            }
+            c6 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
           }
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            closure_129_1 = closure_3;
+            const debug = value(681).debug;
+            debug.error("Failed to get view hierarchy from native.", closure_129_1);
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_129_0 = value;
+            c4 = 0;
+          }
+          if (closure_129_0) {
+            const obj6 = { filename: "view-hierarchy.json", contentType: "application/json", attachmentType: "event.view_hierarchy", data: closure_129_0 };
+            const items = [obj6];
+            value = 1;
+            let attachments;
+            if (null != closure_130_1) {
+              attachments = closure_130_1.attachments;
+            }
+            if (!attachments) {
+              attachments = [];
+            }
+            value = HermesBuiltin.arraySpread(attachments, value);
+            closure_130_1.attachments = items;
+          }
+          c6 = 3;
+          const obj7 = { value: closure_130_0, done: true };
+          return obj7;
         }
-        items = values2;
+      } catch (tmp33) {
+        closure_3 = tmp33;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp33;
+        } else {
+          c5 = tmp;
+        }
       }
-      if (!items) {
+    }
+  });
+}
+let fn = this;
+if (this) {
+  fn = this.__awaiter;
+}
+if (!fn) {
+  fn = (arg0, arg1, arg2, arg3) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    let _Promise = arg2;
+    closure_3 = arg3;
+    if (!arg2) {
+      _Promise = Promise;
+    }
+    return new _Promise((fn, arg1) => {
+      closure_0 = fn;
+      closure_1 = arg1;
+      function fulfilled(result) {
+        try {
+          step(iter.next(result));
+        } catch (tmp5) {
+          closure_1(tmp5);
+        }
+      }
+      function rejected(arg0) {
+        try {
+          step(iter.throw(arg0));
+        } catch (tmp5) {
+          closure_1(tmp5);
+        }
+      }
+      let iter = rejected;
+      function step(done) {
+        if (done.done) {
+          closure_0(done.value);
+        } else {
+          let tmp1 = done.value;
+          closure_0 = tmp1;
+          if (!(tmp1 instanceof Promise)) {
+            tmp1 = new tmp((fn) => {
+              fn(value);
+            });
+          }
+          tmp1.then(fulfilled, iter);
+        }
+      }
+      let items = closure_1;
+      if (!closure_1) {
         items = [];
       }
-      const iter = items[Symbol.iterator]();
-      while (iter !== undefined) {
-        let stacktrace = iter.next().stacktrace;
-        let tmp2 = stacktrace;
-        let frames;
-        if (null !== stacktrace) {
-          if (undefined !== tmp2) {
-            frames = tmp2.frames;
-          }
+      iter = iter.apply(closure_0, items);
+      const iter2 = iter.next();
+      value = iter2.value;
+      if (iter2.done) {
+        fn(value);
+      } else {
+        closure_0 = value;
+        let tmp32 = value;
+        if (!(value instanceof fulfilled)) {
+          tmp32 = new tmp3((fn) => {
+            fn(value);
+          });
         }
-        if (!frames) {
-          frames = [];
-        }
-        for (const item10023 of frames) {
-          if (undefined === item10023.platform) {
-            if (1 === tmp7.lineno) {
-              obj.return();
-              iter.return();
-              let flag = true;
-              return true;
-            }
-          }
-          continue;
-        }
-        continue;
+        tmp32.then(fulfilled, rejected);
       }
-      return false;
-    })(tags);
-    const tmp4Result = _mod879;
-  } else {
-    let jsEngine;
-    if (null != tmp2) {
-      jsEngine = tmp2.jsEngine;
-    }
-    if (jsEngine) {
-      obj.js_engine = tmp2.jsEngine;
-    }
-  }
-  if ("hermes" === obj.js_engine) {
-    const _Object = Object;
-    tags.tags = Object.assign({ hermes: true }, tags.tags);
-  }
-  let componentStack;
-  if (null != tmp2) {
-    componentStack = tmp2.componentStack;
-  }
-  if (componentStack) {
-    obj.component_stack = tmp2.componentStack;
-  }
-  obj6 = _mod879;
-  const expoGoVersion = _mod879.getExpoGoVersion();
-  if (expoGoVersion) {
-    obj.expo_go_version = expoGoVersion;
-  }
-  const tmp4Result3 = _mod879;
-  const expoSdkVersion = _mod879.getExpoSdkVersion();
-  if (expoSdkVersion) {
-    obj.expo_sdk_version = expoSdkVersion;
-  }
-  tags.contexts = Object.assign({ react_native_context: obj }, tags.contexts);
-  return tags;
+    });
+  };
 }
 
 export () => ({
-  name: "ReactNativeInfo",
+  name: "ViewHierarchy",
   setupOnce() {
 
   },

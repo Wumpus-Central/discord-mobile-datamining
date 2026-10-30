@@ -1,13 +1,13 @@
 // _runtime/metro/11178__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 57,
-  height: 56.666666666666664,
-  scales: [3],
-  hash: "1df6ee7cceb670ae2dfd3feed8d2acfc",
-  name: "asset_bronze_badge_small",
+  httpServerLocation: "/assets/images/channel_following",
+  width: 400,
+  height: 96,
+  scales: [1, 2, 3],
+  hash: "6d4af89335f89fb4d2742f6a0658e9cc",
+  name: "channel-following-backdrop-dark",
   type: "png",
 });

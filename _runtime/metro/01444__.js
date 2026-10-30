@@ -1,13 +1,13 @@
 // _runtime/metro/01444__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/group_dms",
-  width: 96,
-  height: 96,
+  httpServerLocation: "/assets/images/native",
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "3cb840d03313467838d658bbec801fcd",
-  name: "icon7",
+  hash: "c3359f2e4aef01a86f637754d719562b",
+  name: "icon-group",
   type: "png",
 });

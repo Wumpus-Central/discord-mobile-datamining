@@ -1,104 +1,105 @@
 // _runtime/metro/08284__.js
-import _modDef8285 from "08285__.js";
+import _mod8271 from "08271__.js";
+import _modDef8274 from "08274__.js";
 
+require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  read(dataView, sum) {
-    const shortAt = _modDef8285.getShortAt(dataView, sum);
-    let tmp4;
-    if (8 <= shortAt) {
-      const byteAt = _modDef8285.getByteAt(dataView, sum + 7);
-      const obj2 = { value: byteAt, description: "" + byteAt };
-      tmp4 = obj2;
-      const tmpResult = _modDef8285;
+  isWebpFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod8271.getStringFromDataView(dataView, 0, 4) === "RIFF";
     }
-    let tmp6;
-    if (3 <= shortAt) {
-      const byteAt1 = _modDef8285.getByteAt(dataView, sum + 2);
-      const obj3 = { value: byteAt1, description: "" + byteAt1 };
-      tmp6 = obj3;
-      const tmpResult4 = _modDef8285;
+    if (tmp) {
+      tmp = _mod8271.getStringFromDataView(dataView, 8, 4) === "WEBP";
     }
-    const obj4 = {
-      "Bits Per Sample": tmp6,
-      "Image Height": null,
-      "Image Width": null,
-      "Color Components": null,
-      Subsampling: null,
-    };
-    let tmp8;
-    if (5 <= shortAt) {
-      const shortAt1 = _modDef8285.getShortAt(dataView, sum + 3);
-      const obj5 = { value: shortAt1, description: null };
-      const _HermesInternal = HermesInternal;
-      obj5.description = "" + shortAt1 + "px";
-      tmp8 = obj5;
-      const tmpResult5 = _modDef8285;
-    }
-    obj4["Image Height"] = tmp8;
-    let tmp11;
-    if (7 <= shortAt) {
-      const shortAt2 = _modDef8285.getShortAt(dataView, sum + 5);
-      const obj6 = { value: shortAt2, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj6.description = "" + shortAt2 + "px";
-      tmp11 = obj6;
-      const tmpResult6 = _modDef8285;
-    }
-    obj4["Image Width"] = tmp11;
-    obj4["Color Components"] = tmp4;
-    let tmp14 = tmp4;
-    if (tmp4) {
-      value = tmp4.value;
-      let tmp15;
-      if (8 + 3 * value <= shortAt) {
-        const items = [];
-        for (let num6 = 0; num6 < value; num6 = num6 + 1) {
-          sum = sum + 8 + 3 * num6;
-          let obj11 = _modDef8285;
-          let items1 = [obj11.getByteAt(dataView, sum), ,];
-          let obj12 = _modDef8285;
-          items1[1] = obj12.getByteAt(dataView, sum + 1);
-          let obj13 = _modDef8285;
-          items1[2] = obj13.getByteAt(dataView, sum + 2);
-          let arr = items.push(items1);
-        }
-        const obj7 = { value: items, description: null };
-        let str6 = "";
-        if (items.length > 1) {
-          closure_0 = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
-          const mapped = items.map((item) => closure_0[item[0]]);
-          let str7 = "";
-          const joined = mapped.join("");
-          if (0 !== items.length) {
-            str7 = "";
-            if (undefined !== items[0][1]) {
-              const obj8 = {
-                17: "4:4:4 (1 1)",
-                18: "4:4:0 (1 2)",
-                20: "4:4:1 (1 4)",
-                33: "4:2:2 (2 1)",
-                34: "4:2:0 (2 2)",
-                36: "4:2:1 (2 4)",
-                65: "4:1:1 (4 1)",
-                66: "4:1:0 (4 2)",
-              };
-              str7 = "";
-              if (undefined !== obj8[items[0][1]]) {
-                str7 = obj8[items[0][1]];
-              }
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    let flag = false;
+    let num = 12;
+    let hasAppMarkers = false;
+    let vp8xChunkOffset;
+    let iccChunks;
+    let xmpChunks;
+    let tiffHeaderOffset;
+    if (20 < byteLength.byteLength) {
+      while (true) {
+        let obj = _mod8271;
+        let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
+        let uint32 = byteLength.getUint32(num + 4, true);
+        let flag3 = flag;
+        if (_modDef8274.USE_EXIF) {
+          if ("EXIF" === stringFromDataView) {
+            let tmp9Result = _mod8271;
+            let sum = num + 8;
+            let sum1 = sum;
+            if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
+              sum1 = sum + 6;
+            }
+            let tmp22 = sum1;
+            flag3 = true;
+            let sum4 = tmp;
+            let tmp20 = tmp2;
+            let tmp21 = tmp3;
+            let sum2 = uint32;
+            if (uint32 % 2 !== 0) {
+              sum2 = uint32 + 1;
+            }
+            let sum3 = num + (8 + sum2);
+            flag = flag3;
+            num = sum3;
+            tmp = sum4;
+            tmp2 = tmp20;
+            tmp3 = tmp21;
+            let tmp4 = tmp22;
+            hasAppMarkers = flag3;
+            vp8xChunkOffset = sum4;
+            iccChunks = tmp20;
+            xmpChunks = tmp21;
+            tiffHeaderOffset = tmp22;
+            if (sum3 + 8 >= byteLength.byteLength) {
+              break;
             }
           }
-          str6 = joined + str7;
         }
-        obj7.description = str6;
-        tmp15 = obj7;
+        if (_modDef8274.USE_XMP) {
+          if ("XMP " === stringFromDataView) {
+            let obj2 = { dataOffset: num + 8, length: uint32 };
+            let items = [obj2];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = tmp2;
+            tmp21 = items;
+            tmp22 = tmp4;
+          }
+        }
+        if (_modDef8274.USE_ICC) {
+          if ("ICCP" === stringFromDataView) {
+            let obj3 = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
+            let items1 = [obj3];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = items1;
+            tmp21 = tmp3;
+            tmp22 = tmp4;
+          }
+        }
+        sum4 = tmp;
+        tmp20 = tmp2;
+        tmp21 = tmp3;
+        tmp22 = tmp4;
+        if ("VP8X" === stringFromDataView) {
+          sum4 = num + 8;
+          flag3 = true;
+          tmp20 = tmp2;
+          tmp21 = tmp3;
+          tmp22 = tmp4;
+        }
       }
-      tmp14 = tmp15;
     }
-    obj4.Subsampling = tmp14;
-    return obj4;
+    return { hasAppMarkers, tiffHeaderOffset, xmpChunks, iccChunks, vp8xChunkOffset };
   },
 };

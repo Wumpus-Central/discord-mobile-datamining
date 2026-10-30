@@ -1,89 +1,199 @@
 // _runtime/metro/10303__.js
-import Filter from "../10301_Filter.js";
+import ENDefaultConfiguration2 from "../10304_ENDefaultConfiguration.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const AbstractMergeDateTimeRefiner = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
+let ParsingContext = require;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
 }
-class AbstractMergeDateTimeRefiner {
-  constructor() {
-    self = this;
-    tmp = c2(this, AbstractMergeDateTimeRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(AbstractMergeDateTimeRefiner);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      tmp = __esModule;
     }
-    return tmp3(self, constructResult);
+    return tmp;
+  };
+}
+const ENDefaultConfiguration = fn(ENDefaultConfiguration2);
+class Chrono {
+  constructor(arg0) {
+    self = this;
+    casualConfiguration = global;
+    tmp2 = c2(this, ParsingContext);
+    _default = new closure_3.default();
+    this.defaultConfig = _default;
+    if (!global) {
+      defaultConfig = self.defaultConfig;
+      casualConfiguration = defaultConfig.createCasualConfiguration();
+    }
+    items = [...casualConfiguration.parsers];
+    self.parsers = items;
+    self.refiners = [...casualConfiguration.refiners];
+    return;
   }
 }
-_inherits(AbstractMergeDateTimeRefiner, Filter.MergingRefiner);
+ParsingContext = Chrono;
 const entry = {
-  key: "shouldMergeResults",
-  value: function shouldMergeResults(str, start, start2) {
-    start = start.start;
-    let isOnlyDateResult = start.isOnlyDate();
-    if (isOnlyDateResult) {
-      start2 = start2.start;
-      isOnlyDateResult = start2.isOnlyTime();
-    }
-    if (!isOnlyDateResult) {
-      const start3 = start2.start;
-      let isOnlyDateResult1 = start3.isOnlyDate();
-      if (isOnlyDateResult1) {
-        const start4 = start.start;
-        isOnlyDateResult1 = start4.isOnlyTime();
-      }
-      isOnlyDateResult = isOnlyDateResult1;
-    }
-    if (isOnlyDateResult) {
-      const self = this;
-      isOnlyDateResult = null != str.match(this.patternBetween());
-    }
-    return isOnlyDateResult;
+  key: "clone",
+  value: function clone() {
+    const obj = { parsers: null, refiners: [...this.refiners] };
+    const items = [...this.parsers];
+    obj.parsers = items;
+    const obj2 = Object.create(ParsingContext.prototype);
+    _classCallCheck(obj2, ParsingContext);
+    obj2.defaultConfig = new ENDefaultConfiguration.default();
+    obj2.parsers = [...obj.parsers];
+    obj2.refiners = [...obj.refiners];
+    return obj2;
   },
 };
-const items = [
+let items = [
   entry,
   {
-    key: "mergeResults",
-    value: function mergeResults(arg0, start, text) {
-      start = start.start;
-      const mergeDateTimeResult = AbstractMergeDateTimeRefiner(10304).mergeDateTimeResult;
-      const tmp2 = start.isOnlyDate() ? mergeDateTimeResult(start, text) : mergeDateTimeResult(text, start);
-      tmp2.index = start.index;
-      tmp2.text = start.text + arg0 + text.text;
-      return tmp2;
+    key: "parseDate",
+    value: function parseDate(arg0, arg1, arg2) {
+      const parsed = this.parse(arg0, arg1, arg2);
+      let dateResult = null;
+      if (parsed.length > 0) {
+        const start = parsed[0].start;
+        dateResult = start.date();
+      }
+      return dateResult;
+    },
+  },
+  {
+    key: "parse",
+    value: function parse(arg0, arg1, arg2) {
+      closure_0 = new _moduleResult(arg0, arg1, arg2);
+      dependencyMap = [];
+      const parsers = this.parsers;
+      const item = parsers.forEach((item) => {
+        closure_1 = closure_1.concat(ParsingContext.executeParser(closure_0, item));
+      });
+      const sorted = dependencyMap.sort((index, index2) => index.index - index2.index);
+      const refiners = this.refiners;
+      const item1 = refiners.forEach((refine) => {
+        closure_1 = refine.refine(closure_0, closure_1);
+      });
+      return dependencyMap;
     },
   },
 ];
+const entry1 = {
+  key: "executeParser",
+  value: function executeParser(debug, pattern) {
+    let index = pattern;
+    const items = [];
+    const patternResult = pattern.pattern(debug);
+    ({ text, text: text2 } = debug);
+    let match = patternResult.exec(text2);
+    if (match) {
+      match.index = match.index + text.length - text2.length;
+      const extractResult = pattern.extract(debug, match);
+      while (!extractResult) {
+        let substr = text.substring(match.index + 1);
+        let match1 = patternResult.exec(substr);
+        match = match1;
+        text2 = substr;
+      }
+      let parsingResult = extractResult;
+      if (extractResult instanceof ParsingContext(10310).ParsingResult) {
+        index = parsingResult.index;
+        const text1 = parsingResult.text;
+        debug.debug(() =>
+          console.log("" + ParsingContext.constructor.name + " extracted (at index=" + index + ") '" + text1 + "'"),
+        );
+        items.push(parsingResult);
+        const substr1 = text.substring(index + text1.length);
+        const match2 = patternResult.exec(substr1);
+      } else if (!(extractResult instanceof ParsingContext(10310).ParsingComponents)) {
+        parsingResult = debug.createParsingResult(match.index, match[0], extractResult);
+      }
+      const tmp9Result = tmp9(index, substr1);
+      tmp9Result.start = extractResult;
+      parsingResult = tmp9Result;
+    }
+    return items;
+  },
+};
+const items1 = [entry1];
+class ParsingContext {
+  constructor(arg0, arg1, arg2) {
+    self = this;
+    obj = importDefault;
+    tmp = c2(this, ParsingContext);
+    this.text = global;
+    if (null == importDefault) {
+      obj = {};
+    }
+    self.option = obj;
+    ReferenceWithTimezone = closure_0(closure_1[3]).ReferenceWithTimezone;
+    self.reference = ReferenceWithTimezone.fromInput(require, self.option.timezones);
+    self.refDate = self.reference.instant;
+    return;
+  }
+}
+const entry2 = {
+  key: "createParsingComponents",
+  value: function createParsingComponents(date) {
+    let parsingComponents = date;
+    if (!(date instanceof ParsingContext(10310).ParsingComponents)) {
+      const self = this;
+      parsingComponents = new ParsingContext(10310).ParsingComponents(this.reference, date);
+    }
+    return parsingComponents;
+  },
+};
+const items2 = [
+  entry2,
+  {
+    key: "createParsingResult",
+    value: function createParsingResult(sum, match, extractResult, date) {
+      const self = this;
+      let substr = match;
+      if (typeof match !== "string") {
+        substr = self.text.substring(sum, match);
+      }
+      let parsingComponents = null;
+      if (extractResult) {
+        parsingComponents = self.createParsingComponents(extractResult);
+      }
+      let parsingComponents1 = null;
+      if (date) {
+        parsingComponents1 = self.createParsingComponents(date);
+      }
+      return new ParsingContext(10310).ParsingResult(
+        self.reference,
+        sum,
+        substr,
+        parsingComponents,
+        parsingComponents1,
+      );
+    },
+  },
+  {
+    key: "debug",
+    value: function debug(arg0) {
+      const self = this;
+      if (this.option.debug) {
+        const _Function = Function;
+        const option = self.option;
+        const debug = option.debug;
+        if (self.option.debug instanceof Function) {
+          debug(arg0);
+        } else {
+          debug.debug(arg0);
+        }
+      }
+    },
+  },
+];
+const _moduleResult = _createClass(ParsingContext, items2);
 
-export default _createClass(AbstractMergeDateTimeRefiner, items);
+export const Chrono = _createClass(Chrono, items, items1);
+export const ParsingContext = _moduleResult;

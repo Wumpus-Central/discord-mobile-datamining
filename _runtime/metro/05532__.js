@@ -1,31 +1,29 @@
 // _runtime/metro/05532__.js
-import _mod17 from "00017__.js";
+import _mod5530 from "05530__.js";
 
-const Platform = _mod17.Platform;
-
-export function isNewArch() {
-  if (undefined !== c1) {
-    return c1;
-  } else {
-    try {
-      let prop;
-      if (global != null) {
-        prop = global.nativeFabricUIManager;
+export default function _superPropBase(arg0, key10009) {
+  hasOwnProperty = {}.hasOwnProperty;
+  const call = hasOwnProperty.call;
+  let tmp = arg0;
+  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
+    let tmp4 = _mod5530(arg0);
+    tmp = tmp4;
+    if (null !== tmp4) {
+      while (true) {
+        let hasOwnProperty2 = {}.hasOwnProperty;
+        let call2 = hasOwnProperty2.call;
+        tmp = tmp4;
+        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
+          break;
+        } else {
+          tmp4 = _mod5530(tmp4);
+          tmp = tmp4;
+          if (null === tmp4) {
+            break;
+          }
+        }
       }
-      let flag = Boolean(prop);
-      if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
-      }
-      if (!flag) {
-        flag = Boolean(__turboModuleProxy);
-      }
-      if (!flag) {
-        flag = false;
-      }
-      c1 = flag;
-      return c1;
-    } catch (err) {
-      c1 = true;
     }
   }
+  return tmp;
 }

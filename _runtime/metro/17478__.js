@@ -1,13 +1,7 @@
 // _runtime/metro/17478__.js
-import registerAsset from "01131__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "9e0f7ca920e7d55418409ccf322d663c",
-  name: "BurgerIcon",
-  type: "png",
-});
+const require = arg1;
+const dependencyMap = arg6;
+
+export const WebView = require("WebView").WebView;

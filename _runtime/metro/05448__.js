@@ -1,71 +1,47 @@
 // _runtime/metro/05448__.js
-import nativeViewGestureHandlerProps from "../05376_nativeViewGestureHandlerProps.js";
-import "module_19";
+import noop from "00019__.js";
 
-require = fn;
-const noop = fn(19);
-({ useImperativeHandle: c2, useRef: c3 } = noop);
-const jsx = fn(21).jsx;
-let items = [...fn(5376).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
+const require = globalThis.__r;
 
-export default function createNativeWrapper(displayName, arg1) {
-  _require = displayName;
-  if (arg1 === undefined) {
-    let obj = {};
+({ useEffect: c2, useRef: c3 } = noop);
+
+export (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
   }
-  let str;
-  if (displayName != null) {
-    str = displayName.displayName;
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
   }
-  if (!str) {
-    let name;
-    if (displayName != null) {
-      const render = displayName.render;
-      if (render != null) {
-        name = render.name;
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("cancelAnimation").makeMutable(obj2);
+        let obj = require("cancelAnimation");
+      } else {
+        mutable = require("cancelAnimation").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("cancelAnimation");
       }
-    }
-    str = name;
-  }
-  if (!str) {
-    let tmp2 = typeof displayName === "string";
-    if (typeof displayName === "string") {
-      tmp2 = displayName;
-    }
-    str = tmp2;
-  }
-  if (!str) {
-    str = "ComponentWrapper";
-  }
-  class ComponentWrapper {
-    constructor(arg0) {
-      closure_0 = displayName;
-      keys = Object.keys(displayName);
-      obj = { gestureHandlerProps: null, childProps: null };
-      obj1 = {};
-      merged = Object.assign(closure_1);
-      obj.gestureHandlerProps = obj1;
-      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
-      reduced = keys.reduce(/* F146541 */ function() { ... }, obj);
-      ({ gestureHandlerProps, childProps } = reduced);
-      tmp3 = useRef(null);
-      closure_1 = tmp3;
-      tmp4 = useRef(null);
-      closure_2 = tmp4;
-      items = [, ];
-      items[0] = tmp3;
-      items[1] = tmp4;
-      tmp5 = useImperativeHandle(displayName.ref, /* F146542 */ function() { ... }, items);
-      obj5 = {};
-      merged1 = Object.assign(gestureHandlerProps);
-      obj5.ref = tmp4;
-      obj6 = {};
-      merged2 = Object.assign(childProps);
-      obj6.ref = tmp3;
-      obj5.children = jsx(closure_0, obj6);
-      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj5);
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
     }
   }
-  ComponentWrapper.displayName = str;
-  return ComponentWrapper;
-};
+  closure_2(() => () => {
+    if (ref.current) {
+      ref(dependencyMap[1]).cancelAnimation(tmp.current);
+      const obj = ref(dependencyMap[1]);
+    }
+  }, []);
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
+}

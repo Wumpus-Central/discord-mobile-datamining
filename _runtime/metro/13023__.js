@@ -1,13 +1,21 @@
 // _runtime/metro/13023__.js
-import registerAsset from "01131__.js";
+import _mod13022 from "13022__.js";
+import _mod13024 from "13024__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 200,
-  height: 104,
-  scales: [2, 3],
-  hash: "1659789d77f59f81faaeb051e5b4088e",
-  name: "img_invalid_link_darker",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod13022.getSentryCarrier(mainCarrier);
+  if (sentryCarrier.acs) {
+    let acs = sentryCarrier.acs;
+  } else {
+    acs = _mod13024.getStackAsyncContextStrategy();
+    const tmpResult = _mod13024;
+  }
+  return acs;
+}
+export function setAsyncContextStrategy(acs) {
+  const mainCarrier = _mod13022.getMainCarrier();
+  _mod13022.getSentryCarrier(mainCarrier).acs = acs;
+}

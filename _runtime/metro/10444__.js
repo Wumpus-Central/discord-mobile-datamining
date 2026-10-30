@@ -1,6 +1,6 @@
 // _runtime/metro/10444__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import now from "../10306_now.js";
+import now from "../10331_now.js";
 import _mod10438 from "10438__.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -91,12 +91,12 @@ if (self2) {
     }
     const _Object3 = Object;
     let closure_7 = fn(now);
-    class UKCasualDateParser {
+    class RUCasualDateParser {
       constructor() {
         self = this;
-        tmp = closure_0(this, UKCasualDateParser);
+        tmp = closure_0(this, RUCasualDateParser);
         tmp2 = c2;
-        obj = c2(UKCasualDateParser);
+        obj = c2(RUCasualDateParser);
         tmp3 = closure_1;
         if (closure_3()) {
           tmp7 = globalThis;
@@ -111,12 +111,12 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _classCallCheck = UKCasualDateParser;
-    _inherits(UKCasualDateParser, _mod10438.AbstractParserWithLeftRightBoundaryChecking);
+    _classCallCheck = RUCasualDateParser;
+    _inherits(RUCasualDateParser, _mod10438.AbstractParserWithLeftRightBoundaryChecking);
     const entry = {
       key: "innerPatternString",
       value: function innerPatternString(arg0) {
-        return "(?:\u0437|\u0456\u0437|\u0432\u0456\u0434)?\\s*(\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456|\u0432\u0447\u043E\u0440\u0430|\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u0456\u0441\u043B\u044F\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430|\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430)";
+        return "(?:\u0441|\u0441\u043E)?\\s*(\u0441\u0435\u0433\u043E\u0434\u043D\u044F|\u0432\u0447\u0435\u0440\u0430|\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430|\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430)";
       },
     };
     let items = [entry];
@@ -124,22 +124,22 @@ if (self2) {
       key: "innerExtract",
       value: function innerExtract(reference, arg1) {
         const formatted = arg1[1].toLowerCase();
-        if ("\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456" === formatted) {
+        if ("\u0441\u0435\u0433\u043E\u0434\u043D\u044F" === formatted) {
           return closure_7.today(reference.reference);
-        } else if ("\u0432\u0447\u043E\u0440\u0430" === formatted) {
+        } else if ("\u0432\u0447\u0435\u0440\u0430" === formatted) {
           return closure_7.yesterday(reference.reference);
         } else if ("\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
           return closure_7.tomorrow(reference.reference);
-        } else if ("\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+        } else if ("\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
           return closure_7.theDayAfter(reference.reference, 2);
         } else if (
-          "\u043F\u0456\u0441\u043B\u044F\u043F\u0456\u0441\u043B\u044F\u0437\u0430\u0432\u0442\u0440\u0430" ===
+          "\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" ===
           formatted
         ) {
           return closure_7.theDayAfter(reference.reference, 3);
-        } else if ("\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430" === formatted) {
+        } else if ("\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
           return closure_7.theDayBefore(reference.reference, 2);
-        } else if ("\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u043E\u0440\u0430" === formatted) {
+        } else if ("\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
           return closure_7.theDayBefore(reference.reference, 3);
         } else {
           return tmp2;
@@ -147,7 +147,7 @@ if (self2) {
       },
     };
     items[1] = entry1;
-    exports.default = _createClass(UKCasualDateParser, items);
+    exports.default = _createClass(RUCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

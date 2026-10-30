@@ -1,5 +1,5 @@
 // _runtime/metro/07122__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "14a4fdad987e2761599ba055042fdafa",
-  name: "EyeSlashIcon",
+  hash: "69dddc8653cca8ffd8b6435928647a3f",
+  name: "MobilePhoneIcon",
   type: "png",
 });

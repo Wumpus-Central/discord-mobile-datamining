@@ -1,3 +1,6 @@
 // _runtime/metro/16080__.js
+import _mod16149 from "16149__.js";
+import 16081__ from "16081__.js";
 
-export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });
+
+export default _mod16149.Object.assign;

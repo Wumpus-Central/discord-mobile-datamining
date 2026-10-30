@@ -1,13 +1,13 @@
 // _runtime/metro/15018__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/seasonal",
-  width: 144,
-  height: 150,
+  httpServerLocation: "/assets/modules/quests/images",
+  width: 435,
+  height: 218,
   scales: [1],
-  hash: "fb690a4c8c2a3f037f38e87a73eb44db",
-  name: "chest_idle",
+  hash: "92f827adadc1f86811fd4e36c86fdf27",
+  name: "nitro_modal_header_background",
   type: "png",
 });

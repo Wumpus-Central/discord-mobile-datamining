@@ -1,13 +1,9 @@
 // _runtime/metro/00601__.js
-import baseGet from "../00602_baseGet.js";
 
-export default function get(arg0, arg1, arg2) {
+export default function getValue(arg0, arg1) {
   let tmp;
   if (null != arg0) {
-    tmp = baseGet(arg0, arg1);
-  }
-  if (undefined === tmp) {
-    tmp = arg2;
+    tmp = arg0[arg1];
   }
   return tmp;
 }

@@ -1,5 +1,5 @@
 // _runtime/metro/08569__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "36842ff43e56d815a37333dfec1ce713",
-  name: "AnnouncementsIcon",
+  hash: "06dd03fc60ccef8d12f4f7cb6c5d239c",
+  name: "XNeutralIcon",
   type: "png",
 });

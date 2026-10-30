@@ -1,89 +1,37 @@
 // _runtime/metro/08846__.js
-import _mod8844 from "08844__.js";
-import _mod8849 from "08849__.js";
-import _mod8853 from "08853__.js";
-import flattenStyle from "08847__.js";
-import emptyFunction_mod from "05044__.js";
+import processColor from "../00050_processColor.js";
+import get_ActivityIndicator from "00017__.js";
+import resolveAssetSource_mod from "../00081_resolveAssetSource.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-const obj = {
-  accessible: null,
-  accessibilityLabel: null,
-  accessibilityHint: null,
-  accessibilityActions: null,
-  accessibilityIgnoresInvertColors: null,
-  accessibilityRole: null,
-  accessibilityState: null,
-  accessibilityValue: null,
-  accessibilityLiveRegion: null,
-  importantForAccessibility: null,
-  accessibilityViewIsModal: null,
-  accessibilityElementsHidden: null,
-  onAccessibilityAction: null,
-  onAccessibilityTap: null,
-  onMagicTap: null,
-  testID: null,
-  nativeID: null,
-  onResponderGrant: null,
-  onResponderMove: null,
-  onResponderReject: null,
-  onResponderRelease: null,
-  onResponderTerminate: null,
-  onResponderTerminationRequest: null,
-  onStartShouldSetResponder: null,
-  onStartShouldSetResponderCapture: null,
-  onMoveShouldSetResponder: null,
-  onMoveShouldSetResponderCapture: null,
-  hitSlop: null,
-  onLayout: null,
-  pointerEvents: null,
-  style: null,
-  removeClippedSubviews: null,
-  renderToHardwareTextureAndroid: null,
-  shouldRasterizeIOS: null,
-  collapsable: null,
-  needsOffscreenAlphaCompositing: null,
-};
-const module_8849 = flattenStyle(_mod8849);
-obj.accessible = emptyFunction.bool;
-obj.accessibilityLabel = emptyFunction.node;
-obj.accessibilityHint = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.accessibilityActions = emptyFunction.arrayOf(emptyFunction.string);
-obj.accessibilityIgnoresInvertColors = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.accessibilityRole = emptyFunction.oneOf(_mod8853.DeprecatedAccessibilityRoles);
-obj.accessibilityState = emptyFunction.object;
-obj.accessibilityValue = emptyFunction.object;
-let emptyFunction = emptyFunction_mod;
-obj.accessibilityLiveRegion = emptyFunction.oneOf(["none", "polite", "assertive"]);
-let emptyFunction = emptyFunction_mod;
-obj.importantForAccessibility = emptyFunction.oneOf(["auto", "yes", "no", "no-hide-descendants"]);
-obj.accessibilityViewIsModal = emptyFunction.bool;
-obj.accessibilityElementsHidden = emptyFunction.bool;
-obj.onAccessibilityAction = emptyFunction.func;
-obj.onAccessibilityTap = emptyFunction.func;
-obj.onMagicTap = emptyFunction.func;
-obj.testID = emptyFunction.string;
-obj.nativeID = emptyFunction.string;
-obj.onResponderGrant = emptyFunction.func;
-obj.onResponderMove = emptyFunction.func;
-obj.onResponderReject = emptyFunction.func;
-obj.onResponderRelease = emptyFunction.func;
-obj.onResponderTerminate = emptyFunction.func;
-obj.onResponderTerminationRequest = emptyFunction.func;
-obj.onStartShouldSetResponder = emptyFunction.func;
-obj.onStartShouldSetResponderCapture = emptyFunction.func;
-obj.onMoveShouldSetResponder = emptyFunction.func;
-obj.onMoveShouldSetResponderCapture = emptyFunction.func;
-obj.hitSlop = _mod8844;
-obj.onLayout = emptyFunction.func;
-let emptyFunction = emptyFunction_mod;
-obj.pointerEvents = emptyFunction.oneOf(["box-none", "none", "box-only", "auto"]);
-obj.style = module_8849;
-obj.removeClippedSubviews = emptyFunction.bool;
-obj.renderToHardwareTextureAndroid = emptyFunction.bool;
-obj.shouldRasterizeIOS = emptyFunction.bool;
-obj.collapsable = emptyFunction.bool;
-obj.needsOffscreenAlphaCompositing = emptyFunction.bool;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSlider", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } }, directEventTypes: { topRNCSliderSlidingStart: { registrationName: "onRNCSliderSlidingStart" }, topRNCSliderSlidingComplete: { registrationName: "onRNCSliderSlidingComplete" } }, validAttributes: null };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+const obj3 = { accessibilityUnits: true, accessibilityIncrements: true, disabled: true, inverted: true, vertical: true, tapToSeek: true, maximumTrackImage: { process: resolveAssetSource }, maximumTrackTintColor: { process: processColor.default }, maximumValue: true, minimumTrackImage: null, minimumTrackTintColor: null, minimumValue: true, step: true, testID: true, thumbImage: null, thumbTintColor: null, thumbSize: true, trackImage: null, value: true, lowerLimit: true, upperLimit: true };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.minimumTrackImage = { process: resolveAssetSource };
+const obj2 = { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } };
+const obj4 = { process: processColor.default };
+obj3.minimumTrackTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.thumbImage = { process: resolveAssetSource };
+const obj5 = { process: processColor.default };
+obj3.thumbTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.trackImage = { process: resolveAssetSource };
+__INTERNAL_VIEW_CONFIG.validAttributes = Object.assign(obj3, weakSet.ConditionallyIgnoredEventHandlers({ onChange: true, onRNCSliderSlidingStart: true, onRNCSliderSlidingComplete: true, onRNCSliderValueChange: true }));
 
-export default obj;
+export { __INTERNAL_VIEW_CONFIG };
+export default module_65.get("RNCSlider", () => obj);

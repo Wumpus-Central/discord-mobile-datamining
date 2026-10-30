@@ -1,21 +1,39 @@
 // _runtime/metro/12872__.js
-import _mod12871 from "12871__.js";
-import _mod12873 from "12873__.js";
+import _mod12798 from "12798__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const Comma = _mod12798.TYPE.Comma;
+const obj = {
+  name: "SelectorList",
+  structure: null,
+  parse() {
+    const self = this;
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      list.push(self.Selector());
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.Selector());
+          if (self.scanner.tokenType !== Comma) {
+            break;
+          }
+        }
+        const iter = self.scanner;
+      }
+    }
+    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0, function () {
+      this.chunk(",");
+    });
+  },
+  walkContext: "selector",
+};
+const obj2 = { children: null };
+const items = [["Selector", "Raw"]];
+obj2.children = items;
+obj.structure = obj2;
 
-export function getAsyncContextStrategy(mainCarrier) {
-  const sentryCarrier = _mod12871.getSentryCarrier(mainCarrier);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod12873.getStackAsyncContextStrategy();
-    const tmpResult = _mod12873;
-  }
-  return acs;
-}
-export function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod12871.getMainCarrier();
-  _mod12871.getSentryCarrier(mainCarrier).acs = acs;
-}
+export default obj;

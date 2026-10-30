@@ -1,13 +1,13 @@
 // _runtime/metro/15395__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ffb75c82f97e39285286ef89f1767a3c",
-  name: "ServerGridIcon",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
+  scales: [1],
+  hash: "e2676a24ea3247f11452fad9b442341d",
+  name: "img_wumpus_nitro",
   type: "png",
 });

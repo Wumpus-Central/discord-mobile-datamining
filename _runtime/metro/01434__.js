@@ -1,13 +1,13 @@
 // _runtime/metro/01434__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/provisional_account_avatars",
-  width: 320,
-  height: 320,
+  httpServerLocation: "/assets/images/group_dms",
+  width: 96,
+  height: 96,
   scales: [1],
-  hash: "a596b7b1c5591bc84dec5104138dc6b9",
-  name: "default_provisional_avatar_3",
+  hash: "7ba11ffb1900fa2b088cb31324242047",
+  name: "icon2",
   type: "png",
 });

@@ -1,82 +1,51 @@
 // _runtime/metro/08247__.js
-import _mod8240 from "08240__.js";
-import _mod8241 from "08241__.js";
+import _mod8243 from "08243__.js";
+import _mod8244 from "08244__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function isBLEND(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "blend");
+export function isAAC(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod8243.getFileChunk(fileChunk);
+  const FileTypes = _mod8244.FileTypes;
+  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
+  if (!checkByFileTypeResult1) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+    }
+    let checkByFileTypeResult = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod8243.getFileChunk(fileChunk);
+      const FileTypes2 = _mod8244.FileTypes;
+      checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
+    }
+    checkByFileTypeResult1 = checkByFileTypeResult;
+  }
+  return checkByFileTypeResult1;
 }
-export function isELF(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "elf");
+export function isAMR(fileChunk) {
+  fileChunk = _mod8243.getFileChunk(fileChunk);
+  const FileTypes = _mod8244.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "amr");
 }
-export function isEXE(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "exe");
+export function isFLAC(fileChunk) {
+  fileChunk = _mod8243.getFileChunk(fileChunk);
+  const FileTypes = _mod8244.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flac");
 }
-export function isMACHO(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "macho");
+export function isM4A(fileChunk) {
+  fileChunk = _mod8243.getFileChunk(fileChunk);
+  const FileTypes = _mod8244.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4a");
 }
-export function isINDD(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "indd");
+export function isMP3(fileChunk) {
+  fileChunk = _mod8243.getFileChunk(fileChunk);
+  const FileTypes = _mod8244.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mp3");
 }
-export function isORC(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "orc");
-}
-export function isPARQUET(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "parquet");
-}
-export function isPDF(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pdf");
-}
-export function isPS(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ps");
-}
-export function isRTF(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "rtf");
-}
-export function isSQLITE(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "sqlite");
-}
-export function isSTL(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "stl");
-}
-export function isTTF(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ttf");
-}
-export function isDOC(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "doc");
-}
-export function isPCAP(fileChunk) {
-  fileChunk = _mod8240.getFileChunk(fileChunk);
-  const FileTypes = _mod8241.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pcap");
+export function isWAV(fileChunk) {
+  fileChunk = _mod8243.getFileChunk(fileChunk);
+  const FileTypes = _mod8244.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "wav");
 }

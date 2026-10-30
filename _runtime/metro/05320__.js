@@ -1,7 +1,7 @@
 // _runtime/metro/05320__.js
-import _mod19 from "00019__.js";
+let closure_0 = 1;
 
-const context = _mod19.createContext(null);
-
-export const BottomSheetModalInternalContext = context;
-export const BottomSheetModalInternalProvider = context.Provider;
+export function getNextHandlerTag() {
+  closure_0 = tmp + 1;
+  return +closure_0;
+}

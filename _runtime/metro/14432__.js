@@ -1,13 +1,19 @@
 // _runtime/metro/14432__.js
-import registerAsset from "01131__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CircleQuestionIcon-secondary",
-  type: "png",
-});
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
+}
+for (const key10017 in require("14425__.js")) {
+  arg5[key10017] = require("14425__.js")[key10017];
+  continue;
+}
+for (const key10021 in require("14426__.js")) {
+  arg5[key10021] = require("14426__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("14433__.js")) {
+  arg5[key10025] = require("14433__.js")[key10025];
+  continue;
+}

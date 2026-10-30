@@ -1,13 +1,13 @@
 // _runtime/metro/15206__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300.5,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 36,
   scales: [2, 3],
-  hash: "c407143bbf75b6a7311c87db68c9cbca",
-  name: "custom_profile",
+  hash: "24a795d24a7018dbf13e204b38f24588",
+  name: "img_classic_resubscribe_mobile",
   type: "png",
 });

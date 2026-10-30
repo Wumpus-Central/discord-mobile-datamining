@@ -1,13 +1,13 @@
 // _runtime/metro/17220__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ce6df62bb592b89e09867505a632d8fe",
-  name: "EyeDropperIcon",
+  hash: "714bfdcefc91a8c05361da54def8f212",
+  name: "ic_voice_channel_24px",
   type: "png",
 });

@@ -1,7 +1,6 @@
 // _runtime/metro/12881__.js
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import defaultRecognizer from "../12882_defaultRecognizer.js";
+import _mod12884 from "12884__.js";
+import _mod12885 from "12885__.js";
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+export default { AtrulePrelude: defaultRecognizer, Selector: _mod12884, Value: _mod12885 };

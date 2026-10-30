@@ -1,5 +1,5 @@
 // _runtime/metro/08598__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9f19e3d7e93bc823e490a582e66b0758",
-  name: "LockIcon",
+  hash: "8aacc7898585bec38aca6cf682c01533",
+  name: "FolderIcon",
   type: "png",
 });

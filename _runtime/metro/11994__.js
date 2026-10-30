@@ -1,13 +1,13 @@
 // _runtime/metro/11994__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "8b4b2bddd719de3088e180cf9d96ecec",
-  name: "RetryIcon",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 20,
+  height: 20,
+  scales: [1, 2, 3],
+  hash: "d3638c1d3e13cd543d354bc72debe331",
+  name: "ic_block",
   type: "png",
 });

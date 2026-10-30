@@ -1,13 +1,13 @@
 // _runtime/metro/10059__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 18,
-  height: 18,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b979d6fc20f59ff3d9b456c0fcc05d95",
-  name: "ic_add_super_reaction",
+  hash: "26998a89da8a094ca27d79afeba3b61f",
+  name: "FoodIcon",
   type: "png",
 });

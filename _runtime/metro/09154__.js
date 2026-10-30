@@ -1,13 +1,3 @@
 // _runtime/metro/09154__.js
-import registerAsset from "01131__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
-  scales: [2, 3],
-  hash: "1d1181e321dc8059ed1b1ce7cbbde121",
-  name: "ic_chat_bubble_32px",
-  type: "png",
-});
+export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };

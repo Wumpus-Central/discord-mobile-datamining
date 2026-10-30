@@ -1,25 +1,13 @@
 // _runtime/metro/12725__.js
-import _mod12653 from "12653__.js";
-import _mod12657 from "12657__.js";
+import registerAsset from "01120__.js";
 
-const Percentage = _mod12657.TYPE.Percentage;
-let obj = {
-  name: "Percentage",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Percentage);
-    const obj2 = {
-      type: "Percentage",
-      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
-      value: this.scanner.source.substring(tokenStart, _mod12653.consumeNumber(this.scanner.source, tokenStart)),
-    };
-    return obj2;
-  },
-  generate(value) {
-    this.chunk(value.value);
-    this.chunk("%");
-  },
-};
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "60fba9c9fcd0898552f16b04c6dc8ed1",
+  name: "MaximizeIcon",
+  type: "png",
+});

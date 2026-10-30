@@ -1,99 +1,19 @@
 // _runtime/metro/16089__.js
-let c0 = false;
+import _mod16087 from "16087__.js";
+import _mod16090 from "16090__.js";
+import _mod16092 from "16092__.js";
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(16048)(arg0);
-    const tmp4 = closure_0(16090)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
+let fn = Object;
+let closure_3 = _mod16090("".split);
+if (_mod16087(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod16092(arg0)) {
+      let tmp2 = closure_3(arg0, "");
     } else {
-      let sum = closure_0(16094)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+      tmp2 = Object(arg0);
     }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(16048)(arg0);
-    const tmp4 = closure_0(16090)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(16094)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-  },
-};
+    return tmp2;
+  };
+}
+
+export default fn;

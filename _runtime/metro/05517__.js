@@ -1,25 +1,10 @@
 // _runtime/metro/05517__.js
-import _mod19 from "00019__.js";
-import value2 from "../05307_value2.js";
+import PlatformConfig2 from "../05515_PlatformConfig.js";
 
-const useMemo = _mod19.useMemo;
+require = arg1;
+const dependencyMap = arg6;
 
-export (arg0) => {
-  const easing = arg0;
-  const items = [, , ];
-  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
-  return useMemo(() => {
-    let ANIMATION_EASING = easing.easing;
-    if (!ANIMATION_EASING) {
-      ANIMATION_EASING = value2.ANIMATION_EASING;
-    }
-    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
-    let ANIMATION_DURATION = easing.duration;
-    if (!ANIMATION_DURATION) {
-      ANIMATION_DURATION = value2.ANIMATION_DURATION;
-    }
-    obj.duration = ANIMATION_DURATION;
-    obj.reduceMotion = easing.reduceMotion;
-    return obj;
-  }, items);
+export function getInvertedTransformStyle(horizontal) {
+  const PlatformConfig = PlatformConfig2.PlatformConfig;
+  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
 }

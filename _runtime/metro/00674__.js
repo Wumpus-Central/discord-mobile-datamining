@@ -1,20 +1,99 @@
 // _runtime/metro/00674__.js
-import _mod531 from "00531__.js";
-import _mod598 from "00598__.js";
+import _mod681 from "00681__.js";
+import NativeModules from "../00866_NativeModules.js";
+import feedbackAsyncIntegration from "../00886_feedbackAsyncIntegration.js";
+import SDK_PACKAGE_NAME from "../00975_SDK_PACKAGE_NAME.js";
+import init from "../00997_init.js";
+import _mod1038 from "01038__.js";
+import _mod1042 from "01042__.js";
+import reactNativeTracingIntegration from "../01049_reactNativeTracingIntegration.js";
+import _mod1057 from "01057__.js";
+import _mod1060 from "01060__.js";
+import _mod1063 from "01063__.js";
+import _mod1068 from "01068__.js";
+import warn from "../01070_warn.js";
 
-export default function getMatchData(arg0) {
-  let tmp7;
-  const arr = _mod531(arg0);
-  let diff = tmp - 1;
-  if (+arr.length) {
-    do {
-      let tmp3 = arr[diff];
-      let tmp4 = arg0[tmp3];
-      let items = [tmp3, tmp4, _mod598(tmp4)];
-      arr[diff] = items;
-      tmp7 = +diff;
-      diff = tmp7 - 1;
-    } while (tmp7);
-  }
-  return arr;
+const require = globalThis.__r;
+
+for (const key10013 in require("debugSymbolicatorIntegration")) {
+  arg5[key10013] = require("debugSymbolicatorIntegration")[key10013];
+  continue;
 }
+
+export const addBreadcrumb = _mod681.addBreadcrumb;
+export const addIntegration = _mod681.addIntegration;
+export const captureException = _mod681.captureException;
+export const captureEvent = _mod681.captureEvent;
+export const captureFeedback = _mod681.captureFeedback;
+export const captureMessage = _mod681.captureMessage;
+export const Scope = _mod681.Scope;
+export const setContext = _mod681.setContext;
+export const setExtra = _mod681.setExtra;
+export const setExtras = _mod681.setExtras;
+export const setTag = _mod681.setTag;
+export const setTags = _mod681.setTags;
+export const setUser = _mod681.setUser;
+export const startInactiveSpan = _mod681.startInactiveSpan;
+export const startSpan = _mod681.startSpan;
+export const startSpanManual = _mod681.startSpanManual;
+export const getActiveSpan = _mod681.getActiveSpan;
+export const getRootSpan = _mod681.getRootSpan;
+export const withActiveSpan = _mod681.withActiveSpan;
+export const suppressTracing = _mod681.suppressTracing;
+export const spanToJSON = _mod681.spanToJSON;
+export const spanIsSampled = _mod681.spanIsSampled;
+export const setMeasurement = _mod681.setMeasurement;
+export const getCurrentScope = _mod681.getCurrentScope;
+export const getGlobalScope = _mod681.getGlobalScope;
+export const getIsolationScope = _mod681.getIsolationScope;
+export const getClient = _mod681.getClient;
+export const setCurrentClient = _mod681.setCurrentClient;
+export const addEventProcessor = _mod681.addEventProcessor;
+export const lastEventId = _mod681.lastEventId;
+export const ErrorBoundary = init.ErrorBoundary;
+export const withErrorBoundary = init.withErrorBoundary;
+export const createReduxEnhancer = init.createReduxEnhancer;
+export const Profiler = init.Profiler;
+export const useProfiler = init.useProfiler;
+export const withProfiler = init.withProfiler;
+export const logger = feedbackAsyncIntegration.logger;
+export const consoleLoggingIntegration = feedbackAsyncIntegration.consoleLoggingIntegration;
+export const featureFlagsIntegration = feedbackAsyncIntegration.featureFlagsIntegration;
+export const metrics = feedbackAsyncIntegration.metrics;
+export const SDK_NAME = SDK_PACKAGE_NAME.SDK_NAME;
+export const SDK_VERSION = SDK_PACKAGE_NAME.SDK_VERSION;
+export const ReactNativeClient = _mod1038.ReactNativeClient;
+export const init = _mod1042.init;
+export const wrap = _mod1042.wrap;
+export const nativeCrash = _mod1042.nativeCrash;
+export const flush = _mod1042.flush;
+export const close = _mod1042.close;
+export const withScope = _mod1042.withScope;
+export const crashedLastRun = _mod1042.crashedLastRun;
+export const TouchEventBoundary = _mod1057.TouchEventBoundary;
+export const withTouchEventBoundary = _mod1057.withTouchEventBoundary;
+export const reactNativeTracingIntegration = reactNativeTracingIntegration.reactNativeTracingIntegration;
+export const getCurrentReactNativeTracingIntegration =
+  reactNativeTracingIntegration.getCurrentReactNativeTracingIntegration;
+export const getReactNativeTracingIntegration = reactNativeTracingIntegration.getReactNativeTracingIntegration;
+export const reactNavigationIntegration = reactNativeTracingIntegration.reactNavigationIntegration;
+export const reactNativeNavigationIntegration = reactNativeTracingIntegration.reactNativeNavigationIntegration;
+export const sentryTraceGesture = reactNativeTracingIntegration.sentryTraceGesture;
+export const TimeToInitialDisplay = reactNativeTracingIntegration.TimeToInitialDisplay;
+export const TimeToFullDisplay = reactNativeTracingIntegration.TimeToFullDisplay;
+export const startTimeToInitialDisplaySpan = reactNativeTracingIntegration.startTimeToInitialDisplaySpan;
+export const startTimeToFullDisplaySpan = reactNativeTracingIntegration.startTimeToFullDisplaySpan;
+export const startIdleNavigationSpan = reactNativeTracingIntegration.startIdleNavigationSpan;
+export const startIdleSpan = reactNativeTracingIntegration.startIdleSpan;
+export const getDefaultIdleNavigationSpanOptions = reactNativeTracingIntegration.getDefaultIdleNavigationSpanOptions;
+export const createTimeToFullDisplay = reactNativeTracingIntegration.createTimeToFullDisplay;
+export const createTimeToInitialDisplay = reactNativeTracingIntegration.createTimeToInitialDisplay;
+export const wrapExpoRouter = reactNativeTracingIntegration.wrapExpoRouter;
+export const Mask = warn.Mask;
+export const Unmask = warn.Unmask;
+export const FeedbackButton = _mod1063.FeedbackButton;
+export const FeedbackWidget = _mod1068.FeedbackWidget;
+export const showFeedbackWidget = _mod1060.showFeedbackWidget;
+export const showFeedbackButton = _mod1060.showFeedbackButton;
+export const hideFeedbackButton = _mod1060.hideFeedbackButton;
+export const getDataFromUri = NativeModules.getDataFromUri;

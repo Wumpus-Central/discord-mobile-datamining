@@ -1,24 +1,17 @@
 // _runtime/metro/05386__.js
-import noop from "00019__.js";
+import ComposedGestureName from "../05357_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../05366_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod5381 from "05381__.js";
 
-let tmp3 = typeof window === "undefined";
-if (typeof window !== "undefined") {
-  const _window2 = window;
-  tmp3 = undefined === window.document;
-}
-if (!tmp3) {
-  const _window = window;
-  tmp3 = undefined === window.document.createElement;
-}
-let tmp4 = typeof navigator !== "undefined";
-if (typeof navigator !== "undefined") {
-  const _navigator = navigator;
-  tmp4 = "ReactNative" === navigator.product;
-}
-if (tmp3) {
-  if (!tmp4) {
-    let useLayoutEffect = noop.useEffect;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
   }
-  exports.useIsomorphicLayoutEffect = useLayoutEffect;
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod5381.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
 }
-useLayoutEffect = noop.useLayoutEffect;

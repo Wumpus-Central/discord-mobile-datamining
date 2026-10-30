@@ -1,54 +1,17 @@
 // _runtime/metro/01588__.js
+import CurrentRenderContext from "../01547_CurrentRenderContext.js";
 import noop from "00019__.js";
 
-const require = arg1;
+require = arg1;
 
-export function useOnGetState(getState) {
-  getState = getState.getState;
-  const getStateListeners = getState.getStateListeners;
-  let addKeyedListener;
-  let callback;
-  addKeyedListener = addKeyedListener.useContext(
-    getState(getStateListeners[1]).NavigationBuilderContext,
-  ).addKeyedListener;
-  const context = addKeyedListener.useContext(getState(getStateListeners[2]).NavigationRouteContext);
-  let str = "root";
+export function useCurrentRender(arg0) {
+  ({ state, navigation } = arg0);
+  const context = noop.useContext(CurrentRenderContext.CurrentRenderContext);
+  let isFocusedResult = context;
   if (context) {
-    str = context.key;
+    isFocusedResult = navigation.isFocused();
   }
-  const items = [getState, getStateListeners];
-  callback = obj.useCallback(() => {
-    const tmp = getState();
-    const routes = tmp.routes;
-    const mapped = routes.map((state) => {
-      let tmpResult;
-      if (getStateListeners[state.key] != null) {
-        tmpResult = tmp();
-      }
-      let tmp3 = state;
-      if (state.state !== tmpResult) {
-        const obj = {};
-        const merged = Object.assign(state);
-        obj.state = tmpResult;
-        tmp3 = obj;
-      }
-      return tmp3;
-    });
-    let tmp3 = tmp;
-    if (!obj.isArrayEqual(tmp.routes, mapped)) {
-      const obj2 = {};
-      let merged = Object.assign(tmp);
-      obj2.routes = mapped;
-      tmp3 = obj2;
-    }
-    return tmp3;
-  }, items);
-  const items1 = [addKeyedListener, callback, str];
-  const effect = obj.useEffect(() => {
-    let tmpResult;
-    if (addKeyedListener != null) {
-      tmpResult = tmp("getState", str, callback);
-    }
-    return tmpResult;
-  }, items1);
+  if (isFocusedResult) {
+    context.options = arg0.descriptors[state.routes[state.index].key].options;
+  }
 }

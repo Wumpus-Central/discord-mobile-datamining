@@ -1,14 +1,14 @@
 // _runtime/metro/05443__.js
-import ComposedGestureName from "../05393_ComposedGestureName.js";
-import _mod5442 from "05442__.js";
+import _mod19 from "00019__.js";
+import _mod5282 from "05282__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const useContext = _mod19.useContext;
 
-export function useExclusiveGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod5442.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
+export () => {
+  const tmp = useContext(_mod5282.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
 }

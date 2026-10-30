@@ -1,16 +1,17 @@
 // _runtime/metro/07189__.js
-import GestureHandlerRefContext from "../07162_GestureHandlerRefContext.js";
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-require = arg1;
-
-export function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
-  }
+const constants = _mod17.Platform.constants;
+if (constants != null) {
+  const reactNativeVersion = constants.reactNativeVersion;
 }
+try {
+  let major;
+  if (reactNativeVersion != null) {
+    major = reactNativeVersion.major;
+  }
+  if (0 !== major) {
+    const InteractionManager = _mod17.InteractionManager;
+  }
+  exports.InteractionManager = InteractionManager;
+} catch (err) {}

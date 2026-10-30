@@ -1,13 +1,13 @@
 // _runtime/metro/15065__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_channel/native/images",
-  width: 284,
-  height: 189,
+  httpServerLocation: "/assets/images/native/gifting",
+  width: 270,
+  height: 134,
   scales: [2, 3],
-  hash: "8c2bdea51e6ab077ef729f3b6fe02c7a",
-  name: "asset_blurred_media_post_preview",
+  hash: "05b73f8565eab54ae61e59eb9ff991a8",
+  name: "img_premium_embed_background_dark",
   type: "png",
 });

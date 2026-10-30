@@ -1,126 +1,45 @@
 // _runtime/metro/00750__.js
-import _mod709 from "00709__.js";
+import _mod701 from "00701__.js";
+import forEachEnvelopeItem from "../00728_forEachEnvelopeItem.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function getFilenameToDebugIdMap(arg0) {
-  _require = arg0;
-  const _sentryDebugIds = require("00697__.js").GLOBAL_OBJ._sentryDebugIds;
-  const _debugIds = require("00697__.js").GLOBAL_OBJ._debugIds;
-  if (!_sentryDebugIds) {
-    if (!_debugIds) {
-      return {};
-    }
-  }
-  if (_sentryDebugIds) {
-    const _Object = Object;
-    let keys = Object.keys(_sentryDebugIds);
-  } else {
-    keys = [];
-  }
-  if (_debugIds) {
-    const _Object2 = Object;
-    let keys1 = Object.keys(_debugIds);
-  } else {
-    keys1 = [];
-  }
-  if (closure_5) {
-    if (keys.length === length) {
-      if (keys1.length === length) {
-        return closure_5;
-      }
-    }
-  }
-  length = keys1.length;
-  closure_5 = {};
-  if (!closure_2) {
-    closure_2 = {};
-  }
-  function processDebugIds(keys, _debugIds) {
-    const iter = keys[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp2 = nextResult;
-      let tmp3 = _debugIds[nextResult];
-      let tmp5;
-      if (React2 != null) {
-        tmp5 = tmp4[tmp2];
-      }
-      let tmp7 = tmp5;
-      if (tmp5) {
-        if (hasOwnProperty) {
-          if (tmp3) {
-            tmp8[tmp7[0]] = tmp3;
-            if (React2) {
-              let items = [tmp7[0]];
-              items[1] = tmp3;
-              tmp31[tmp2] = items;
-            }
-            continue;
-          }
-        }
-      }
-      if (tmp3) {
-        let arr = closure_0(tmp2);
-        let diff = arr.length - 1;
-        let tmp15 = diff;
-        if (0 <= diff) {
-          while (true) {
-            let tmp18 = tmp13[tmp15];
-            let filename;
-            if (tmp18 != null) {
-              filename = tmp18.filename;
-            }
-            let tmp20 = filename;
-            if (filename) {
-              if (hasOwnProperty) {
-                if (React2) {
-                  break;
-                }
-              }
-            }
-            let diff1 = tmp15 - 1;
-            tmp15 = diff1;
-          }
-          hasOwnProperty[tmp20] = tmp3;
-          let items1 = [tmp20, tmp3];
-          React2[tmp2] = items1;
-        }
-      }
-    }
-  }
-  if (_sentryDebugIds) {
-    processDebugIds(keys, _sentryDebugIds);
-  }
-  if (_debugIds) {
-    processDebugIds(keys1, _debugIds);
-  }
-  return closure_5;
-}
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export function getDebugImagesForResources(arg0, arg1) {
-  const tmp = getFilenameToDebugIdMap(arg0);
-  const items = [];
-  if (tmp) {
-    const iter = arg1[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp7 = nextResult;
-      let obj = _mod709;
-      let result = obj.normalizeStackTracePath(nextResult);
-      let tmp11 = result;
-      if (result) {
-        let obj2 = { type: "sourcemap", code_file: null, debug_id: null };
-        obj2.code_file = tmp7;
-        obj2.debug_id = tmp[tmp11];
-        let arr = items.push(obj2);
-      }
-      continue;
-    }
-    return items;
-  } else {
-    return items;
-  }
+export function createMetricContainerEnvelopeItem(items) {
+  items = [,];
+  items[0] = {
+    type: "trace_metric",
+    item_count: items.length,
+    content_type: "application/vnd.sentry.items.trace-metric+json",
+  };
+  items[1] = { items };
+  return items;
 }
-export { getFilenameToDebugIdMap };
+export function createMetricEnvelope(items, sdk, tunnel, dsn) {
+  sdk = undefined;
+  if (sdk != null) {
+    sdk = sdk.sdk;
+  }
+  const obj = {};
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp2 = tunnel;
+  if (tunnel) {
+    tmp2 = dsn;
+  }
+  if (tmp2) {
+    obj.dsn = _mod701.dsnToString(dsn);
+  }
+  items = [,];
+  items[0] = {
+    type: "trace_metric",
+    item_count: items.length,
+    content_type: "application/vnd.sentry.items.trace-metric+json",
+  };
+  items[1] = { items };
+  const items1 = [items];
+  return forEachEnvelopeItem.createEnvelope(obj, items1);
+}

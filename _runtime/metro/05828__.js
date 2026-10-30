@@ -1,15 +1,13 @@
 // _runtime/metro/05828__.js
-import identity from "../00549_identity.js";
-import _mod680 from "00680__.js";
-import constant from "../05829_constant.js";
+import _process from "../00539__process.js";
+import baseUnary from "../00540_baseUnary.js";
+import baseIsMap from "../05829_baseIsMap.js";
 
-if (_mod680) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod680(arg0, "toString", obj);
-  };
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
 } else {
-  fn = identity;
+  _module = baseIsMap;
 }
 
-export default fn;
+export default _module;

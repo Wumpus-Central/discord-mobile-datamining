@@ -1,99 +1,1222 @@
 // _runtime/metro/00686__.js
-import _mod693 from "00693__.js";
-import NativeModules from "../00878_NativeModules.js";
-import feedbackAsyncIntegration from "../00898_feedbackAsyncIntegration.js";
-import SDK_PACKAGE_NAME from "../00987_SDK_PACKAGE_NAME.js";
-import init from "../01009_init.js";
-import _mod1050 from "01050__.js";
-import _mod1054 from "01054__.js";
-import reactNativeTracingIntegration from "../01061_reactNativeTracingIntegration.js";
-import _mod1069 from "01069__.js";
-import _mod1072 from "01072__.js";
-import _mod1075 from "01075__.js";
-import _mod1080 from "01080__.js";
-import warn from "../01082_warn.js";
+import _mod687 from "00687__.js";
+import consoleSandbox from "../00688_consoleSandbox.js";
+import _mod691 from "00691__.js";
+import _htmlElementAsString from "../00692__htmlElementAsString.js";
 
-const require = globalThis.__r;
-
-for (const key10013 in require("debugSymbolicatorIntegration")) {
-  arg5[key10013] = require("debugSymbolicatorIntegration")[key10013];
-  continue;
+require = arg1;
+const dependencyMap = arg6;
+function addNonEnumerableProperty(arg0, arg1, value) {
+  try {
+    const _Object = Object;
+    const obj = { value, writable: true, configurable: true };
+    Object.defineProperty(arg0, arg1, obj);
+  } catch (err) {
+    if (_mod687.DEBUG_BUILD) {
+      const debug = consoleSandbox.debug;
+      const _HermesInternal = HermesInternal;
+      debug.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
+    }
+  }
 }
+function markFunctionWrapped(arg0, arg1) {
+  try {
+    let prototype = arg1.prototype;
+    if (!prototype) {
+      prototype = {};
+    }
+    arg1.prototype = prototype;
+    arg0.prototype = prototype;
+    addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
+  } catch (err) {
+  }
+}
+function convertToPlainObject(type) {
+  if (obj.isError(type)) {
+    const error = { message: null, name: null, stack: null };
+    ({ message: obj6.message, name: obj6.name, stack: obj6.stack } = type);
+    if (typeof type === "object") {
+      if (null !== type) {
+        const obj2 = {};
+        let obj3 = obj2;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          obj3 = obj2;
+          while (keys[tmp] !== undefined) {
+            let _Object2 = Object;
+            let call2 = hasOwnProperty2.call;
+            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
+              continue;
+            } else {
+              obj2[tmp17] = type[tmp17];
+              continue;
+            }
+            continue;
+          }
+        }
+      }
+      const merged = Object.assign(obj3);
+      return error;
+    }
+    obj3 = {};
+  } else {
+    if (tmp2Result.isEvent(type)) {
+      const obj4 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
+      if (typeof type === "object") {
+        if (null !== type) {
+          const obj5 = {};
+          let obj7 = obj5;
+          const keys1 = Object.keys();
+          if (keys1 !== undefined) {
+            obj7 = obj5;
+            while (keys1[tmp] !== undefined) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
+                continue;
+              } else {
+                obj5[tmp8] = type[tmp8];
+                continue;
+              }
+              continue;
+            }
+          }
+        }
+        const merged1 = Object.assign(obj7);
+        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
+        if (typeof globalThis.CustomEvent !== "undefined") {
+          isInstanceOfResult = _mod691.isInstanceOf(type, globalThis.CustomEvent);
+          const tmp2Result2 = _mod691;
+        }
+        if (isInstanceOfResult) {
+          obj4.detail = type.detail;
+        }
+        return obj4;
+      }
+      obj7 = {};
+    } else {
+      return type;
+    }
+    tmp2Result = _mod691;
+  }
+  obj = _mod691;
+}
+function serializeEventTarget(arg0) {
+  try {
+    if (obj.isElement(arg0)) {
+      let htmlTreeAsStringResult = _htmlElementAsString.htmlTreeAsString(arg0);
+      const tmp2Result = _htmlElementAsString;
+    } else {
+      const _Object = Object;
+      const call = toString.call;
+      if (typeof call === "unknown") {
+        htmlTreeAsStringResult = toString();
+      } else {
+        htmlTreeAsStringResult = call(arg0);
+      }
+    }
+    return htmlTreeAsStringResult;
+  } catch (err) {
+    return "<unknown>";
+  }
+}
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const addBreadcrumb = _mod693.addBreadcrumb;
-export const addIntegration = _mod693.addIntegration;
-export const captureException = _mod693.captureException;
-export const captureEvent = _mod693.captureEvent;
-export const captureFeedback = _mod693.captureFeedback;
-export const captureMessage = _mod693.captureMessage;
-export const Scope = _mod693.Scope;
-export const setContext = _mod693.setContext;
-export const setExtra = _mod693.setExtra;
-export const setExtras = _mod693.setExtras;
-export const setTag = _mod693.setTag;
-export const setTags = _mod693.setTags;
-export const setUser = _mod693.setUser;
-export const startInactiveSpan = _mod693.startInactiveSpan;
-export const startSpan = _mod693.startSpan;
-export const startSpanManual = _mod693.startSpanManual;
-export const getActiveSpan = _mod693.getActiveSpan;
-export const getRootSpan = _mod693.getRootSpan;
-export const withActiveSpan = _mod693.withActiveSpan;
-export const suppressTracing = _mod693.suppressTracing;
-export const spanToJSON = _mod693.spanToJSON;
-export const spanIsSampled = _mod693.spanIsSampled;
-export const setMeasurement = _mod693.setMeasurement;
-export const getCurrentScope = _mod693.getCurrentScope;
-export const getGlobalScope = _mod693.getGlobalScope;
-export const getIsolationScope = _mod693.getIsolationScope;
-export const getClient = _mod693.getClient;
-export const setCurrentClient = _mod693.setCurrentClient;
-export const addEventProcessor = _mod693.addEventProcessor;
-export const lastEventId = _mod693.lastEventId;
-export const ErrorBoundary = init.ErrorBoundary;
-export const withErrorBoundary = init.withErrorBoundary;
-export const createReduxEnhancer = init.createReduxEnhancer;
-export const Profiler = init.Profiler;
-export const useProfiler = init.useProfiler;
-export const withProfiler = init.withProfiler;
-export const logger = feedbackAsyncIntegration.logger;
-export const consoleLoggingIntegration = feedbackAsyncIntegration.consoleLoggingIntegration;
-export const featureFlagsIntegration = feedbackAsyncIntegration.featureFlagsIntegration;
-export const metrics = feedbackAsyncIntegration.metrics;
-export const SDK_NAME = SDK_PACKAGE_NAME.SDK_NAME;
-export const SDK_VERSION = SDK_PACKAGE_NAME.SDK_VERSION;
-export const ReactNativeClient = _mod1050.ReactNativeClient;
-export const init = _mod1054.init;
-export const wrap = _mod1054.wrap;
-export const nativeCrash = _mod1054.nativeCrash;
-export const flush = _mod1054.flush;
-export const close = _mod1054.close;
-export const withScope = _mod1054.withScope;
-export const crashedLastRun = _mod1054.crashedLastRun;
-export const TouchEventBoundary = _mod1069.TouchEventBoundary;
-export const withTouchEventBoundary = _mod1069.withTouchEventBoundary;
-export const reactNativeTracingIntegration = reactNativeTracingIntegration.reactNativeTracingIntegration;
-export const getCurrentReactNativeTracingIntegration =
-  reactNativeTracingIntegration.getCurrentReactNativeTracingIntegration;
-export const getReactNativeTracingIntegration = reactNativeTracingIntegration.getReactNativeTracingIntegration;
-export const reactNavigationIntegration = reactNativeTracingIntegration.reactNavigationIntegration;
-export const reactNativeNavigationIntegration = reactNativeTracingIntegration.reactNativeNavigationIntegration;
-export const sentryTraceGesture = reactNativeTracingIntegration.sentryTraceGesture;
-export const TimeToInitialDisplay = reactNativeTracingIntegration.TimeToInitialDisplay;
-export const TimeToFullDisplay = reactNativeTracingIntegration.TimeToFullDisplay;
-export const startTimeToInitialDisplaySpan = reactNativeTracingIntegration.startTimeToInitialDisplaySpan;
-export const startTimeToFullDisplaySpan = reactNativeTracingIntegration.startTimeToFullDisplaySpan;
-export const startIdleNavigationSpan = reactNativeTracingIntegration.startIdleNavigationSpan;
-export const startIdleSpan = reactNativeTracingIntegration.startIdleSpan;
-export const getDefaultIdleNavigationSpanOptions = reactNativeTracingIntegration.getDefaultIdleNavigationSpanOptions;
-export const createTimeToFullDisplay = reactNativeTracingIntegration.createTimeToFullDisplay;
-export const createTimeToInitialDisplay = reactNativeTracingIntegration.createTimeToInitialDisplay;
-export const wrapExpoRouter = reactNativeTracingIntegration.wrapExpoRouter;
-export const Mask = warn.Mask;
-export const Unmask = warn.Unmask;
-export const FeedbackButton = _mod1075.FeedbackButton;
-export const FeedbackWidget = _mod1080.FeedbackWidget;
-export const showFeedbackWidget = _mod1072.showFeedbackWidget;
-export const showFeedbackButton = _mod1072.showFeedbackButton;
-export const hideFeedbackButton = _mod1072.hideFeedbackButton;
-export const getDataFromUri = NativeModules.getDataFromUri;
+export { addNonEnumerableProperty };
+export { convertToPlainObject };
+export function dropUndefinedKeys(obj) {
+  const map = new Map();
+  closure_0 = obj;
+  let items;
+  obj = undefined;
+  value = obj;
+  if (null !== obj) {
+    value = obj;
+    if (typeof obj === "object") {
+      value = map.get(obj);
+      if (undefined === value) {
+        const _Array = Array;
+        if (Array.isArray(obj)) {
+          items = [];
+          const result = map.set(obj, items);
+          const item = obj.forEach((item) => {
+            closure_0 = item;
+            items = undefined;
+            let obj2;
+            let value = item;
+            if (null !== item) {
+              value = item;
+              if (typeof item === "object") {
+                value = obj.get(item);
+                if (undefined === value) {
+                  const _Array = Array;
+                  if (Array.isArray(item)) {
+                    items = [];
+                    const result = obj.set(item, items);
+                    item = item.forEach((item) => {
+                      closure_0 = item;
+                      items = undefined;
+                      let obj2;
+                      let value = item;
+                      if (null !== item) {
+                        value = item;
+                        if (typeof item === "object") {
+                          value = obj.get(item);
+                          if (undefined === value) {
+                            const _Array = Array;
+                            if (Array.isArray(item)) {
+                              items = [];
+                              const result = obj.set(item, items);
+                              item = item.forEach((item) => {
+                                closure_0 = item;
+                                items = undefined;
+                                let obj2;
+                                let value = item;
+                                if (null !== item) {
+                                  value = item;
+                                  if (typeof item === "object") {
+                                    value = obj.get(item);
+                                    if (undefined === value) {
+                                      const _Array = Array;
+                                      if (Array.isArray(item)) {
+                                        items = [];
+                                        const result = obj.set(item, items);
+                                        item = item.forEach((item) => {
+                                          closure_0 = item;
+                                          items = undefined;
+                                          let obj2;
+                                          let value = item;
+                                          if (null !== item) {
+                                            value = item;
+                                            if (typeof item === "object") {
+                                              value = obj.get(item);
+                                              if (undefined === value) {
+                                                const _Array = Array;
+                                                if (Array.isArray(item)) {
+                                                  items = [];
+                                                  const result = obj.set(item, items);
+                                                  item = item.forEach(/* F78837 */ function() { ... });
+                                                  value = items;
+                                                } else {
+                                                  const constructor = item.constructor;
+                                                  const _Object = Object;
+                                                  value = item;
+                                                  if (tmp3) {
+                                                    obj2 = {};
+                                                    const result1 = obj.set(item, obj2);
+                                                    const _Object2 = Object;
+                                                    const keys = Object.keys(item);
+                                                    const item1 = keys.forEach(/* F78838 */ function() { ... });
+                                                    value = obj2;
+                                                  }
+                                                  tmp3 = constructor === Object || undefined === constructor;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          items.push(value);
+                                        });
+                                        value = items;
+                                      } else {
+                                        const constructor = item.constructor;
+                                        const _Object = Object;
+                                        value = item;
+                                        if (tmp3) {
+                                          obj2 = {};
+                                          const result1 = obj.set(item, obj2);
+                                          const _Object2 = Object;
+                                          const keys = Object.keys(item);
+                                          const item1 = keys.forEach((item) => {
+                                            if (undefined !== closure_1_0[item]) {
+                                              closure_1 = closure_1_1;
+                                              let value = arr;
+                                              if (null !== arr) {
+                                                value = arr;
+                                                if (typeof arr === "object") {
+                                                  value = closure_1_1.get(arr);
+                                                  if (undefined === value) {
+                                                    let _Array = Array;
+                                                    if (!Array.isArray(arr)) {
+                                                      let constructor = arr.constructor;
+                                                      let _Object = Object;
+                                                      value = arr;
+                                                      if (tmp) {
+                                                        obj = {};
+                                                        let result = closure_1_1.set(arr, obj);
+                                                        let _Object2 = Object;
+                                                        let keys = Object.keys(arr);
+                                                        item = keys.forEach(/* F78838 */ function() { ... });
+                                                        value = obj;
+                                                      }
+                                                      tmp = constructor === Object || undefined === constructor;
+                                                    }
+                                                  }
+                                                  items = [];
+                                                  let result1 = closure_1_1.set(arr, items);
+                                                  let item1 = arr.forEach(/* F78837 */ function() { ... });
+                                                  value = items;
+                                                }
+                                              }
+                                              closure_1_3[item] = value;
+                                            }
+                                          });
+                                          value = obj2;
+                                        }
+                                        tmp3 = constructor === Object || undefined === constructor;
+                                      }
+                                    }
+                                  }
+                                }
+                                items.push(value);
+                              });
+                              value = items;
+                            } else {
+                              const constructor = item.constructor;
+                              const _Object = Object;
+                              value = item;
+                              if (tmp3) {
+                                obj2 = {};
+                                const result1 = obj.set(item, obj2);
+                                const _Object2 = Object;
+                                const keys = Object.keys(item);
+                                const item1 = keys.forEach((item) => {
+                                  if (undefined !== closure_1_0[item]) {
+                                    closure_1 = closure_1_1;
+                                    let value = arr;
+                                    if (null !== arr) {
+                                      value = arr;
+                                      if (typeof arr === "object") {
+                                        value = closure_1_1.get(arr);
+                                        if (undefined === value) {
+                                          let _Array = Array;
+                                          if (!Array.isArray(arr)) {
+                                            let constructor = arr.constructor;
+                                            let _Object = Object;
+                                            value = arr;
+                                            if (tmp) {
+                                              obj = {};
+                                              let result = closure_1_1.set(arr, obj);
+                                              let _Object2 = Object;
+                                              let keys = Object.keys(arr);
+                                              item = keys.forEach((item) => {
+                                                if (undefined !== closure_1_0[item]) {
+                                                  closure_1 = closure_1_1;
+                                                  let value = arr;
+                                                  if (null !== arr) {
+                                                    value = arr;
+                                                    if (typeof arr === "object") {
+                                                      value = closure_1_1.get(arr);
+                                                      if (undefined === value) {
+                                                        let _Array = Array;
+                                                        if (!Array.isArray(arr)) {
+                                                          let constructor = arr.constructor;
+                                                          let _Object = Object;
+                                                          value = arr;
+                                                          if (tmp) {
+                                                            obj = {};
+                                                            let result = closure_1_1.set(arr, obj);
+                                                            let _Object2 = Object;
+                                                            let keys = Object.keys(arr);
+                                                            item = keys.forEach(/* F78838 */ function() { ... });
+                                                            value = obj;
+                                                          }
+                                                          tmp = constructor === Object || undefined === constructor;
+                                                        }
+                                                      }
+                                                      items = [];
+                                                      let result1 = closure_1_1.set(arr, items);
+                                                      let item1 = arr.forEach(/* F78837 */ function() { ... });
+                                                      value = items;
+                                                    }
+                                                  }
+                                                  closure_1_3[item] = value;
+                                                }
+                                              });
+                                              value = obj;
+                                            }
+                                            tmp = constructor === Object || undefined === constructor;
+                                          }
+                                        }
+                                        items = [];
+                                        let result1 = closure_1_1.set(arr, items);
+                                        let item1 = arr.forEach((item) => {
+                                          closure_0 = item;
+                                          items = undefined;
+                                          let obj2;
+                                          let value = item;
+                                          if (null !== item) {
+                                            value = item;
+                                            if (typeof item === "object") {
+                                              value = obj.get(item);
+                                              if (undefined === value) {
+                                                const _Array = Array;
+                                                if (Array.isArray(item)) {
+                                                  items = [];
+                                                  const result = obj.set(item, items);
+                                                  item = item.forEach(/* F78837 */ function() { ... });
+                                                  value = items;
+                                                } else {
+                                                  const constructor = item.constructor;
+                                                  const _Object = Object;
+                                                  value = item;
+                                                  if (tmp3) {
+                                                    obj2 = {};
+                                                    const result1 = obj.set(item, obj2);
+                                                    const _Object2 = Object;
+                                                    const keys = Object.keys(item);
+                                                    const item1 = keys.forEach(/* F78838 */ function() { ... });
+                                                    value = obj2;
+                                                  }
+                                                  tmp3 = constructor === Object || undefined === constructor;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          items.push(value);
+                                        });
+                                        value = items;
+                                      }
+                                    }
+                                    closure_1_3[item] = value;
+                                  }
+                                });
+                                value = obj2;
+                              }
+                              tmp3 = constructor === Object || undefined === constructor;
+                            }
+                          }
+                        }
+                      }
+                      items.push(value);
+                    });
+                    value = items;
+                  } else {
+                    const constructor = item.constructor;
+                    const _Object = Object;
+                    value = item;
+                    if (tmp3) {
+                      obj2 = {};
+                      const result1 = obj.set(item, obj2);
+                      const _Object2 = Object;
+                      const keys = Object.keys(item);
+                      const item1 = keys.forEach((item) => {
+                        if (undefined !== closure_1_0[item]) {
+                          closure_1 = closure_1_1;
+                          let value = arr;
+                          if (null !== arr) {
+                            value = arr;
+                            if (typeof arr === "object") {
+                              value = closure_1_1.get(arr);
+                              if (undefined === value) {
+                                let _Array = Array;
+                                if (!Array.isArray(arr)) {
+                                  let constructor = arr.constructor;
+                                  let _Object = Object;
+                                  value = arr;
+                                  if (tmp) {
+                                    obj = {};
+                                    let result = closure_1_1.set(arr, obj);
+                                    let _Object2 = Object;
+                                    let keys = Object.keys(arr);
+                                    item = keys.forEach((item) => {
+                                      if (undefined !== closure_1_0[item]) {
+                                        closure_1 = closure_1_1;
+                                        let value = arr;
+                                        if (null !== arr) {
+                                          value = arr;
+                                          if (typeof arr === "object") {
+                                            value = closure_1_1.get(arr);
+                                            if (undefined === value) {
+                                              let _Array = Array;
+                                              if (!Array.isArray(arr)) {
+                                                let constructor = arr.constructor;
+                                                let _Object = Object;
+                                                value = arr;
+                                                if (tmp) {
+                                                  obj = {};
+                                                  let result = closure_1_1.set(arr, obj);
+                                                  let _Object2 = Object;
+                                                  let keys = Object.keys(arr);
+                                                  item = keys.forEach((item) => {
+                                                    if (undefined !== closure_1_0[item]) {
+                                                      closure_1 = closure_1_1;
+                                                      let value = arr;
+                                                      if (null !== arr) {
+                                                        value = arr;
+                                                        if (typeof arr === "object") {
+                                                          value = closure_1_1.get(arr);
+                                                          if (undefined === value) {
+                                                            let _Array = Array;
+                                                            if (!Array.isArray(arr)) {
+                                                              let constructor = arr.constructor;
+                                                              let _Object = Object;
+                                                              value = arr;
+                                                              if (tmp) {
+                                                                obj = {};
+                                                                let result = closure_1_1.set(arr, obj);
+                                                                let _Object2 = Object;
+                                                                let keys = Object.keys(arr);
+                                                                item = keys.forEach(/* F78838 */ function() { ... });
+                                                                value = obj;
+                                                              }
+                                                              tmp = constructor === Object || undefined === constructor;
+                                                            }
+                                                          }
+                                                          items = [];
+                                                          let result1 = closure_1_1.set(arr, items);
+                                                          let item1 = arr.forEach(/* F78837 */ function() { ... });
+                                                          value = items;
+                                                        }
+                                                      }
+                                                      closure_1_3[item] = value;
+                                                    }
+                                                  });
+                                                  value = obj;
+                                                }
+                                                tmp = constructor === Object || undefined === constructor;
+                                              }
+                                            }
+                                            items = [];
+                                            let result1 = closure_1_1.set(arr, items);
+                                            let item1 = arr.forEach((item) => {
+                                              closure_0 = item;
+                                              items = undefined;
+                                              let obj2;
+                                              let value = item;
+                                              if (null !== item) {
+                                                value = item;
+                                                if (typeof item === "object") {
+                                                  value = obj.get(item);
+                                                  if (undefined === value) {
+                                                    const _Array = Array;
+                                                    if (Array.isArray(item)) {
+                                                      items = [];
+                                                      const result = obj.set(item, items);
+                                                      item = item.forEach(/* F78837 */ function() { ... });
+                                                      value = items;
+                                                    } else {
+                                                      const constructor = item.constructor;
+                                                      const _Object = Object;
+                                                      value = item;
+                                                      if (tmp3) {
+                                                        obj2 = {};
+                                                        const result1 = obj.set(item, obj2);
+                                                        const _Object2 = Object;
+                                                        const keys = Object.keys(item);
+                                                        const item1 = keys.forEach(/* F78838 */ function() { ... });
+                                                        value = obj2;
+                                                      }
+                                                      tmp3 = constructor === Object || undefined === constructor;
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                              items.push(value);
+                                            });
+                                            value = items;
+                                          }
+                                        }
+                                        closure_1_3[item] = value;
+                                      }
+                                    });
+                                    value = obj;
+                                  }
+                                  tmp = constructor === Object || undefined === constructor;
+                                }
+                              }
+                              items = [];
+                              let result1 = closure_1_1.set(arr, items);
+                              let item1 = arr.forEach((item) => {
+                                closure_0 = item;
+                                items = undefined;
+                                let obj2;
+                                let value = item;
+                                if (null !== item) {
+                                  value = item;
+                                  if (typeof item === "object") {
+                                    value = obj.get(item);
+                                    if (undefined === value) {
+                                      const _Array = Array;
+                                      if (Array.isArray(item)) {
+                                        items = [];
+                                        const result = obj.set(item, items);
+                                        item = item.forEach((item) => {
+                                          closure_0 = item;
+                                          items = undefined;
+                                          let obj2;
+                                          let value = item;
+                                          if (null !== item) {
+                                            value = item;
+                                            if (typeof item === "object") {
+                                              value = obj.get(item);
+                                              if (undefined === value) {
+                                                const _Array = Array;
+                                                if (Array.isArray(item)) {
+                                                  items = [];
+                                                  const result = obj.set(item, items);
+                                                  item = item.forEach(/* F78837 */ function() { ... });
+                                                  value = items;
+                                                } else {
+                                                  const constructor = item.constructor;
+                                                  const _Object = Object;
+                                                  value = item;
+                                                  if (tmp3) {
+                                                    obj2 = {};
+                                                    const result1 = obj.set(item, obj2);
+                                                    const _Object2 = Object;
+                                                    const keys = Object.keys(item);
+                                                    const item1 = keys.forEach(/* F78838 */ function() { ... });
+                                                    value = obj2;
+                                                  }
+                                                  tmp3 = constructor === Object || undefined === constructor;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          items.push(value);
+                                        });
+                                        value = items;
+                                      } else {
+                                        const constructor = item.constructor;
+                                        const _Object = Object;
+                                        value = item;
+                                        if (tmp3) {
+                                          obj2 = {};
+                                          const result1 = obj.set(item, obj2);
+                                          const _Object2 = Object;
+                                          const keys = Object.keys(item);
+                                          const item1 = keys.forEach((item) => {
+                                            if (undefined !== closure_1_0[item]) {
+                                              closure_1 = closure_1_1;
+                                              let value = arr;
+                                              if (null !== arr) {
+                                                value = arr;
+                                                if (typeof arr === "object") {
+                                                  value = closure_1_1.get(arr);
+                                                  if (undefined === value) {
+                                                    let _Array = Array;
+                                                    if (!Array.isArray(arr)) {
+                                                      let constructor = arr.constructor;
+                                                      let _Object = Object;
+                                                      value = arr;
+                                                      if (tmp) {
+                                                        obj = {};
+                                                        let result = closure_1_1.set(arr, obj);
+                                                        let _Object2 = Object;
+                                                        let keys = Object.keys(arr);
+                                                        item = keys.forEach(/* F78838 */ function() { ... });
+                                                        value = obj;
+                                                      }
+                                                      tmp = constructor === Object || undefined === constructor;
+                                                    }
+                                                  }
+                                                  items = [];
+                                                  let result1 = closure_1_1.set(arr, items);
+                                                  let item1 = arr.forEach(/* F78837 */ function() { ... });
+                                                  value = items;
+                                                }
+                                              }
+                                              closure_1_3[item] = value;
+                                            }
+                                          });
+                                          value = obj2;
+                                        }
+                                        tmp3 = constructor === Object || undefined === constructor;
+                                      }
+                                    }
+                                  }
+                                }
+                                items.push(value);
+                              });
+                              value = items;
+                            }
+                          }
+                          closure_1_3[item] = value;
+                        }
+                      });
+                      value = obj2;
+                    }
+                    tmp3 = constructor === Object || undefined === constructor;
+                  }
+                }
+              }
+            }
+            items.push(value);
+          });
+          value = items;
+        } else {
+          const constructor = obj.constructor;
+          const _Object = Object;
+          value = obj;
+          if (tmp2) {
+            obj = {};
+            const result1 = map.set(obj, obj);
+            const _Object2 = Object;
+            const keys = Object.keys(obj);
+            const item1 = keys.forEach((item) => {
+              if (undefined !== closure_1_0[item]) {
+                closure_1 = closure_1_1;
+                let value = arr;
+                if (null !== arr) {
+                  value = arr;
+                  if (typeof arr === "object") {
+                    value = closure_1_1.get(arr);
+                    if (undefined === value) {
+                      let _Array = Array;
+                      if (!Array.isArray(arr)) {
+                        let constructor = arr.constructor;
+                        let _Object = Object;
+                        value = arr;
+                        if (tmp) {
+                          obj = {};
+                          let result = closure_1_1.set(arr, obj);
+                          let _Object2 = Object;
+                          let keys = Object.keys(arr);
+                          item = keys.forEach((item) => {
+                            if (undefined !== closure_1_0[item]) {
+                              closure_1 = closure_1_1;
+                              let value = arr;
+                              if (null !== arr) {
+                                value = arr;
+                                if (typeof arr === "object") {
+                                  value = closure_1_1.get(arr);
+                                  if (undefined === value) {
+                                    let _Array = Array;
+                                    if (!Array.isArray(arr)) {
+                                      let constructor = arr.constructor;
+                                      let _Object = Object;
+                                      value = arr;
+                                      if (tmp) {
+                                        obj = {};
+                                        let result = closure_1_1.set(arr, obj);
+                                        let _Object2 = Object;
+                                        let keys = Object.keys(arr);
+                                        item = keys.forEach((item) => {
+                                          if (undefined !== closure_1_0[item]) {
+                                            closure_1 = closure_1_1;
+                                            let value = arr;
+                                            if (null !== arr) {
+                                              value = arr;
+                                              if (typeof arr === "object") {
+                                                value = closure_1_1.get(arr);
+                                                if (undefined === value) {
+                                                  let _Array = Array;
+                                                  if (!Array.isArray(arr)) {
+                                                    let constructor = arr.constructor;
+                                                    let _Object = Object;
+                                                    value = arr;
+                                                    if (tmp) {
+                                                      obj = {};
+                                                      let result = closure_1_1.set(arr, obj);
+                                                      let _Object2 = Object;
+                                                      let keys = Object.keys(arr);
+                                                      item = keys.forEach((item) => {
+                                                        if (undefined !== closure_1_0[item]) {
+                                                          closure_1 = closure_1_1;
+                                                          let value = arr;
+                                                          if (null !== arr) {
+                                                            value = arr;
+                                                            if (typeof arr === "object") {
+                                                              value = closure_1_1.get(arr);
+                                                              if (undefined === value) {
+                                                                let _Array = Array;
+                                                                if (!Array.isArray(arr)) {
+                                                                  let constructor = arr.constructor;
+                                                                  let _Object = Object;
+                                                                  value = arr;
+                                                                  if (tmp) {
+                                                                    obj = {};
+                                                                    let result = closure_1_1.set(arr, obj);
+                                                                    let _Object2 = Object;
+                                                                    let keys = Object.keys(arr);
+                                                                    item = keys.forEach(/* F78838 */ function() { ... });
+                                                                    value = obj;
+                                                                  }
+                                                                  tmp = constructor === Object || undefined === constructor;
+                                                                }
+                                                              }
+                                                              items = [];
+                                                              let result1 = closure_1_1.set(arr, items);
+                                                              let item1 = arr.forEach(/* F78837 */ function() { ... });
+                                                              value = items;
+                                                            }
+                                                          }
+                                                          closure_1_3[item] = value;
+                                                        }
+                                                      });
+                                                      value = obj;
+                                                    }
+                                                    tmp = constructor === Object || undefined === constructor;
+                                                  }
+                                                }
+                                                items = [];
+                                                let result1 = closure_1_1.set(arr, items);
+                                                let item1 = arr.forEach((item) => {
+                                                  closure_0 = item;
+                                                  items = undefined;
+                                                  let obj2;
+                                                  let value = item;
+                                                  if (null !== item) {
+                                                    value = item;
+                                                    if (typeof item === "object") {
+                                                      value = obj.get(item);
+                                                      if (undefined === value) {
+                                                        const _Array = Array;
+                                                        if (Array.isArray(item)) {
+                                                          items = [];
+                                                          const result = obj.set(item, items);
+                                                          item = item.forEach(/* F78837 */ function() { ... });
+                                                          value = items;
+                                                        } else {
+                                                          const constructor = item.constructor;
+                                                          const _Object = Object;
+                                                          value = item;
+                                                          if (tmp3) {
+                                                            obj2 = {};
+                                                            const result1 = obj.set(item, obj2);
+                                                            const _Object2 = Object;
+                                                            const keys = Object.keys(item);
+                                                            const item1 = keys.forEach(/* F78838 */ function() { ... });
+                                                            value = obj2;
+                                                          }
+                                                          tmp3 = constructor === Object || undefined === constructor;
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                  items.push(value);
+                                                });
+                                                value = items;
+                                              }
+                                            }
+                                            closure_1_3[item] = value;
+                                          }
+                                        });
+                                        value = obj;
+                                      }
+                                      tmp = constructor === Object || undefined === constructor;
+                                    }
+                                  }
+                                  items = [];
+                                  let result1 = closure_1_1.set(arr, items);
+                                  let item1 = arr.forEach((item) => {
+                                    closure_0 = item;
+                                    items = undefined;
+                                    let obj2;
+                                    let value = item;
+                                    if (null !== item) {
+                                      value = item;
+                                      if (typeof item === "object") {
+                                        value = obj.get(item);
+                                        if (undefined === value) {
+                                          const _Array = Array;
+                                          if (Array.isArray(item)) {
+                                            items = [];
+                                            const result = obj.set(item, items);
+                                            item = item.forEach((item) => {
+                                              closure_0 = item;
+                                              items = undefined;
+                                              let obj2;
+                                              let value = item;
+                                              if (null !== item) {
+                                                value = item;
+                                                if (typeof item === "object") {
+                                                  value = obj.get(item);
+                                                  if (undefined === value) {
+                                                    const _Array = Array;
+                                                    if (Array.isArray(item)) {
+                                                      items = [];
+                                                      const result = obj.set(item, items);
+                                                      item = item.forEach(/* F78837 */ function() { ... });
+                                                      value = items;
+                                                    } else {
+                                                      const constructor = item.constructor;
+                                                      const _Object = Object;
+                                                      value = item;
+                                                      if (tmp3) {
+                                                        obj2 = {};
+                                                        const result1 = obj.set(item, obj2);
+                                                        const _Object2 = Object;
+                                                        const keys = Object.keys(item);
+                                                        const item1 = keys.forEach(/* F78838 */ function() { ... });
+                                                        value = obj2;
+                                                      }
+                                                      tmp3 = constructor === Object || undefined === constructor;
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                              items.push(value);
+                                            });
+                                            value = items;
+                                          } else {
+                                            const constructor = item.constructor;
+                                            const _Object = Object;
+                                            value = item;
+                                            if (tmp3) {
+                                              obj2 = {};
+                                              const result1 = obj.set(item, obj2);
+                                              const _Object2 = Object;
+                                              const keys = Object.keys(item);
+                                              const item1 = keys.forEach((item) => {
+                                                if (undefined !== closure_1_0[item]) {
+                                                  closure_1 = closure_1_1;
+                                                  let value = arr;
+                                                  if (null !== arr) {
+                                                    value = arr;
+                                                    if (typeof arr === "object") {
+                                                      value = closure_1_1.get(arr);
+                                                      if (undefined === value) {
+                                                        let _Array = Array;
+                                                        if (!Array.isArray(arr)) {
+                                                          let constructor = arr.constructor;
+                                                          let _Object = Object;
+                                                          value = arr;
+                                                          if (tmp) {
+                                                            obj = {};
+                                                            let result = closure_1_1.set(arr, obj);
+                                                            let _Object2 = Object;
+                                                            let keys = Object.keys(arr);
+                                                            item = keys.forEach(/* F78838 */ function() { ... });
+                                                            value = obj;
+                                                          }
+                                                          tmp = constructor === Object || undefined === constructor;
+                                                        }
+                                                      }
+                                                      items = [];
+                                                      let result1 = closure_1_1.set(arr, items);
+                                                      let item1 = arr.forEach(/* F78837 */ function() { ... });
+                                                      value = items;
+                                                    }
+                                                  }
+                                                  closure_1_3[item] = value;
+                                                }
+                                              });
+                                              value = obj2;
+                                            }
+                                            tmp3 = constructor === Object || undefined === constructor;
+                                          }
+                                        }
+                                      }
+                                    }
+                                    items.push(value);
+                                  });
+                                  value = items;
+                                }
+                              }
+                              closure_1_3[item] = value;
+                            }
+                          });
+                          value = obj;
+                        }
+                        tmp = constructor === Object || undefined === constructor;
+                      }
+                    }
+                    items = [];
+                    let result1 = closure_1_1.set(arr, items);
+                    let item1 = arr.forEach((item) => {
+                      closure_0 = item;
+                      items = undefined;
+                      let obj2;
+                      let value = item;
+                      if (null !== item) {
+                        value = item;
+                        if (typeof item === "object") {
+                          value = obj.get(item);
+                          if (undefined === value) {
+                            const _Array = Array;
+                            if (Array.isArray(item)) {
+                              items = [];
+                              const result = obj.set(item, items);
+                              item = item.forEach((item) => {
+                                closure_0 = item;
+                                items = undefined;
+                                let obj2;
+                                let value = item;
+                                if (null !== item) {
+                                  value = item;
+                                  if (typeof item === "object") {
+                                    value = obj.get(item);
+                                    if (undefined === value) {
+                                      const _Array = Array;
+                                      if (Array.isArray(item)) {
+                                        items = [];
+                                        const result = obj.set(item, items);
+                                        item = item.forEach((item) => {
+                                          closure_0 = item;
+                                          items = undefined;
+                                          let obj2;
+                                          let value = item;
+                                          if (null !== item) {
+                                            value = item;
+                                            if (typeof item === "object") {
+                                              value = obj.get(item);
+                                              if (undefined === value) {
+                                                const _Array = Array;
+                                                if (Array.isArray(item)) {
+                                                  items = [];
+                                                  const result = obj.set(item, items);
+                                                  item = item.forEach(/* F78837 */ function() { ... });
+                                                  value = items;
+                                                } else {
+                                                  const constructor = item.constructor;
+                                                  const _Object = Object;
+                                                  value = item;
+                                                  if (tmp3) {
+                                                    obj2 = {};
+                                                    const result1 = obj.set(item, obj2);
+                                                    const _Object2 = Object;
+                                                    const keys = Object.keys(item);
+                                                    const item1 = keys.forEach(/* F78838 */ function() { ... });
+                                                    value = obj2;
+                                                  }
+                                                  tmp3 = constructor === Object || undefined === constructor;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          items.push(value);
+                                        });
+                                        value = items;
+                                      } else {
+                                        const constructor = item.constructor;
+                                        const _Object = Object;
+                                        value = item;
+                                        if (tmp3) {
+                                          obj2 = {};
+                                          const result1 = obj.set(item, obj2);
+                                          const _Object2 = Object;
+                                          const keys = Object.keys(item);
+                                          const item1 = keys.forEach((item) => {
+                                            if (undefined !== closure_1_0[item]) {
+                                              closure_1 = closure_1_1;
+                                              let value = arr;
+                                              if (null !== arr) {
+                                                value = arr;
+                                                if (typeof arr === "object") {
+                                                  value = closure_1_1.get(arr);
+                                                  if (undefined === value) {
+                                                    let _Array = Array;
+                                                    if (!Array.isArray(arr)) {
+                                                      let constructor = arr.constructor;
+                                                      let _Object = Object;
+                                                      value = arr;
+                                                      if (tmp) {
+                                                        obj = {};
+                                                        let result = closure_1_1.set(arr, obj);
+                                                        let _Object2 = Object;
+                                                        let keys = Object.keys(arr);
+                                                        item = keys.forEach(/* F78838 */ function() { ... });
+                                                        value = obj;
+                                                      }
+                                                      tmp = constructor === Object || undefined === constructor;
+                                                    }
+                                                  }
+                                                  items = [];
+                                                  let result1 = closure_1_1.set(arr, items);
+                                                  let item1 = arr.forEach(/* F78837 */ function() { ... });
+                                                  value = items;
+                                                }
+                                              }
+                                              closure_1_3[item] = value;
+                                            }
+                                          });
+                                          value = obj2;
+                                        }
+                                        tmp3 = constructor === Object || undefined === constructor;
+                                      }
+                                    }
+                                  }
+                                }
+                                items.push(value);
+                              });
+                              value = items;
+                            } else {
+                              const constructor = item.constructor;
+                              const _Object = Object;
+                              value = item;
+                              if (tmp3) {
+                                obj2 = {};
+                                const result1 = obj.set(item, obj2);
+                                const _Object2 = Object;
+                                const keys = Object.keys(item);
+                                const item1 = keys.forEach((item) => {
+                                  if (undefined !== closure_1_0[item]) {
+                                    closure_1 = closure_1_1;
+                                    let value = arr;
+                                    if (null !== arr) {
+                                      value = arr;
+                                      if (typeof arr === "object") {
+                                        value = closure_1_1.get(arr);
+                                        if (undefined === value) {
+                                          let _Array = Array;
+                                          if (!Array.isArray(arr)) {
+                                            let constructor = arr.constructor;
+                                            let _Object = Object;
+                                            value = arr;
+                                            if (tmp) {
+                                              obj = {};
+                                              let result = closure_1_1.set(arr, obj);
+                                              let _Object2 = Object;
+                                              let keys = Object.keys(arr);
+                                              item = keys.forEach((item) => {
+                                                if (undefined !== closure_1_0[item]) {
+                                                  closure_1 = closure_1_1;
+                                                  let value = arr;
+                                                  if (null !== arr) {
+                                                    value = arr;
+                                                    if (typeof arr === "object") {
+                                                      value = closure_1_1.get(arr);
+                                                      if (undefined === value) {
+                                                        let _Array = Array;
+                                                        if (!Array.isArray(arr)) {
+                                                          let constructor = arr.constructor;
+                                                          let _Object = Object;
+                                                          value = arr;
+                                                          if (tmp) {
+                                                            obj = {};
+                                                            let result = closure_1_1.set(arr, obj);
+                                                            let _Object2 = Object;
+                                                            let keys = Object.keys(arr);
+                                                            item = keys.forEach(/* F78838 */ function() { ... });
+                                                            value = obj;
+                                                          }
+                                                          tmp = constructor === Object || undefined === constructor;
+                                                        }
+                                                      }
+                                                      items = [];
+                                                      let result1 = closure_1_1.set(arr, items);
+                                                      let item1 = arr.forEach(/* F78837 */ function() { ... });
+                                                      value = items;
+                                                    }
+                                                  }
+                                                  closure_1_3[item] = value;
+                                                }
+                                              });
+                                              value = obj;
+                                            }
+                                            tmp = constructor === Object || undefined === constructor;
+                                          }
+                                        }
+                                        items = [];
+                                        let result1 = closure_1_1.set(arr, items);
+                                        let item1 = arr.forEach((item) => {
+                                          closure_0 = item;
+                                          items = undefined;
+                                          let obj2;
+                                          let value = item;
+                                          if (null !== item) {
+                                            value = item;
+                                            if (typeof item === "object") {
+                                              value = obj.get(item);
+                                              if (undefined === value) {
+                                                const _Array = Array;
+                                                if (Array.isArray(item)) {
+                                                  items = [];
+                                                  const result = obj.set(item, items);
+                                                  item = item.forEach(/* F78837 */ function() { ... });
+                                                  value = items;
+                                                } else {
+                                                  const constructor = item.constructor;
+                                                  const _Object = Object;
+                                                  value = item;
+                                                  if (tmp3) {
+                                                    obj2 = {};
+                                                    const result1 = obj.set(item, obj2);
+                                                    const _Object2 = Object;
+                                                    const keys = Object.keys(item);
+                                                    const item1 = keys.forEach(/* F78838 */ function() { ... });
+                                                    value = obj2;
+                                                  }
+                                                  tmp3 = constructor === Object || undefined === constructor;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          items.push(value);
+                                        });
+                                        value = items;
+                                      }
+                                    }
+                                    closure_1_3[item] = value;
+                                  }
+                                });
+                                value = obj2;
+                              }
+                              tmp3 = constructor === Object || undefined === constructor;
+                            }
+                          }
+                        }
+                      }
+                      items.push(value);
+                    });
+                    value = items;
+                  }
+                }
+                closure_1_3[item] = value;
+              }
+            });
+            value = obj;
+          }
+          tmp2 = constructor === Object || undefined === constructor;
+        }
+      }
+    }
+  }
+  return value;
+}
+export function extractExceptionKeysForMessage(name) {
+  const keys = Object.keys(convertToPlainObject(name));
+  const sorted = keys.sort();
+  let str = "[object has no keys]";
+  if (keys[0]) {
+    str = keys.join(", ");
+  }
+  return str;
+}
+export function fill(prototype, fetch, fn) {
+  if (fetch in prototype) {
+    if (typeof prototype[fetch] === "function") {
+      const tmp10 = fn(tmp4);
+      if (typeof tmp10 === "function") {
+        markFunctionWrapped(tmp10, tmp4);
+      }
+      try {
+        prototype[fetch] = tmp10;
+      } catch (err) {
+        if (_mod687.DEBUG_BUILD) {
+          const debug = consoleSandbox.debug;
+          const _HermesInternal = HermesInternal;
+          debug.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
+        }
+      }
+    }
+  }
+}
+export function getOriginalFunction(__sentry_original__) {
+  return __sentry_original__.__sentry_original__;
+}
+export { markFunctionWrapped };
+export function objectify(item) {
+  if (null == item === true) {
+    const _String = String;
+    let string = new String(item);
+  } else {
+    let tmp = typeof item === "symbol";
+    if (typeof item !== "symbol") {
+      tmp = typeof item === "bigint";
+    }
+    if (tmp === true) {
+      const _Object = Object;
+      string = Object(item);
+    } else {
+      string = item;
+      if (obj.isPrimitive(item) === true) {
+        string = new item.constructor(item);
+      }
+      obj = _mod691;
+    }
+  }
+  return string;
+}

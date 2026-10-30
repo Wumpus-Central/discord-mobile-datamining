@@ -1,13 +1,13 @@
 // _runtime/metro/09207__.js
-import registerAsset from "01131__.js";
+import registerAsset from "01120__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons/voice_calls",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "841d46455ae53fb7e7901a2d793c8d1a",
-  name: "HeadphonesSlashIcon",
+  hash: "6ac82e47fbd4ea8331f749e0f8f68b4b",
+  name: "voice_bar_bluetooth",
   type: "png",
 });

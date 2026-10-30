@@ -1,71 +1,40 @@
 // _runtime/metro/15821__.js
-const re0 = /^[0-9]+$/;
+import _mod518 from "00518__.js";
+import baseKeys from "../00544_baseKeys.js";
+import _mod545 from "00545__.js";
+import _mod633 from "00633__.js";
 
-export default {
-  compareIdentifiers(major, major2) {
-    const isMatch = re0.test(major);
-    const isMatch1 = re0.test(major2);
-    let tmp3 = isMatch;
-    if (isMatch) {
-      tmp3 = isMatch1;
+export default function isEmpty(size) {
+  if (null == size) {
+    return true;
+  } else {
+    if (_mod518(size)) {
+      return !size.length;
     }
-    let tmp4 = major2;
-    let tmp5 = major;
-    if (tmp3) {
-      tmp5 = +major;
-      tmp4 = +major2;
-    }
-    let num = 0;
-    if (tmp5 !== tmp4) {
-      if (!isMatch) {
-        if (!isMatch1) {
-          let num4 = 1;
-          if (tmp5 < tmp4) {
-            num4 = -1;
-          }
-          let num3 = num4;
+    const tmp = _mod633(size);
+    if ("[object Map]" != tmp) {
+      if ("[object Set]" != tmp) {
+        if (_mod545(size)) {
+          return !baseKeys(size).length;
         } else {
-          num3 = 1;
-        }
-        let num2 = num3;
-      } else {
-        num2 = -1;
-      }
-      num = num2;
-    }
-    return num;
-  },
-  rcompareIdentifiers(arg0, arg1) {
-    const isMatch = re0.test(arg1);
-    const isMatch1 = re0.test(arg0);
-    let tmp3 = isMatch;
-    if (isMatch) {
-      tmp3 = isMatch1;
-    }
-    let tmp4 = arg0;
-    let tmp5 = arg1;
-    if (tmp3) {
-      tmp5 = +arg1;
-      tmp4 = +arg0;
-    }
-    let num = 0;
-    if (tmp5 !== tmp4) {
-      if (!isMatch) {
-        if (!isMatch1) {
-          let num4 = 1;
-          if (tmp5 < tmp4) {
-            num4 = -1;
+          for (const key10021 in arg0) {
+            let call = hasOwnProperty.call;
+            if (typeof call === "unknown") {
+              let callResult = hasOwnProperty(key10021);
+            } else {
+              callResult = call(arg0, key10021);
+            }
+            if (!callResult) {
+              continue;
+            } else {
+              let flag = false;
+              return false;
+            }
           }
-          let num3 = num4;
-        } else {
-          num3 = 1;
+          return true;
         }
-        let num2 = num3;
-      } else {
-        num2 = -1;
       }
-      num = num2;
     }
-    return num;
-  },
-};
+    return !size.size;
+  }
+}

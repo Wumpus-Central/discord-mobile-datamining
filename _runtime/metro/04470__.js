@@ -1,36 +1,28 @@
 // _runtime/metro/04470__.js
-import _typeof_mod from "04471__.js";
-import _typeof_mod from "04288__.js";
-import requiredArgs_mod from "../04289_requiredArgs.js";
+import startOfDay_mod from "../04453_startOfDay.js";
+import requiredArgs_mod from "../04290_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+let startOfDay = startOfDay_mod;
+if (!startOfDay) {
+  const obj = { default: startOfDay };
+  let tmp3 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp3 = startOfDay;
 }
-_typeof = tmp5;
+startOfDay = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
+export default function isSameDay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfDay.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfDay.default(arg1).getTime();
 };
 export default exports.default;
