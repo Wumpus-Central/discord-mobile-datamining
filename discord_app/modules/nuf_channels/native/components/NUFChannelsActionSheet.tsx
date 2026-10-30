@@ -4,143 +4,61 @@ import NUFTemplateV2Default from "NUFTemplateV2.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ContentDismissActionType = fn(4854).ContentDismissActionType;
+const ContentDismissActionType = fn(4855).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf_channels/native/components/NUFChannelsActionSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function NUFChannelsActionSheet(markAsDismissed) {
-      const cResult = markAsDismissed(576).c(13);
-      markAsDismissed = markAsDismissed.markAsDismissed;
-      if (cResult[0] !== markAsDismissed) {
-        const fn = function l() {
-          ActionSheetActionCreatorsDefault.hideActionSheet();
-          if (markAsDismissed != null) {
-            tmp2(ContentDismissActionType.UNKNOWN);
-          }
-        };
-        cResult[0] = markAsDismissed;
-        cResult[1] = fn;
-        let tmp4 = fn;
-      } else {
-        tmp4 = cResult[1];
-      }
-      if (cResult[2] !== markAsDismissed) {
-        const fn2 = function h() {
-          let tmpResult;
-          if (markAsDismissed != null) {
-            tmpResult = tmp(ContentDismissActionType.UNKNOWN);
-          }
-          return tmpResult;
-        };
-        cResult[2] = markAsDismissed;
-        cResult[3] = fn2;
-        let tmp5 = fn2;
-      } else {
-        tmp5 = cResult[3];
-      }
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = jsx(tmp(15101).ServerChannelsAbstractUI, {});
-        const intl = tmp(1125).intl;
-        const stringResult = intl.string(tmp(1125).t.Ay9424);
-        const intl2 = tmp(1125).intl;
-        const stringResult1 = intl2.string(tmp(1125).t.mufH2P);
-        const intl3 = tmp(1125).intl;
-        const stringResult2 = intl3.string(tmp(1125).t.BddRzS);
-        cResult[4] = tmp11;
-        cResult[5] = stringResult;
-        cResult[6] = stringResult1;
-        cResult[7] = stringResult2;
-        let tmp9 = stringResult2;
-        let tmp8 = stringResult1;
-        let tmp7 = stringResult;
-        let tmp6 = tmp11;
-      } else {
-        tmp6 = cResult[4];
-        tmp7 = cResult[5];
-        tmp8 = cResult[6];
-        tmp9 = cResult[7];
-      }
-      if (cResult[8] !== tmp4) {
-        const obj2 = { illustration: tmp6, title: tmp7, description: tmp8, CTALabel: tmp9, onCTAPress: tmp4 };
-        const tmp18 = jsx(NUFTemplateV2Default, {
-          illustration: tmp6,
-          title: tmp7,
-          description: tmp8,
-          CTALabel: tmp9,
-          onCTAPress: tmp4,
-        });
-        cResult[8] = tmp4;
-        cResult[9] = tmp18;
-        let tmp15 = tmp18;
-      } else {
-        tmp15 = cResult[9];
-      }
-      if (cResult[10] === tmp5) {
-        if (cResult[11] === tmp15) {
-          let tmp19 = cResult[12];
-        }
-        return tmp19;
-      }
-      const tmp20 = jsx(markAsDismissed(5302).BottomSheet, { onDismiss: tmp5, startExpanded: true, children: tmp15 });
-      cResult[10] = tmp5;
-      cResult[11] = tmp15;
-      cResult[12] = tmp20;
-      tmp19 = tmp20;
-      let obj = markAsDismissed(576);
+export default function NUFChannelsActionSheet(markAsDismissed) {
+  markAsDismissed = markAsDismissed.markAsDismissed;
+  const items = [markAsDismissed];
+  const callback = noop.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    if (markAsDismissed != null) {
+      tmp2(ContentDismissActionType.UNKNOWN);
     }
-  : function NUFChannelsActionSheet(markAsDismissed) {
-      markAsDismissed = markAsDismissed.markAsDismissed;
-      const items = [markAsDismissed];
-      const callback = noop.useCallback(() => {
-        ActionSheetActionCreatorsDefault.hideActionSheet();
-        if (markAsDismissed != null) {
-          tmp2(ContentDismissActionType.UNKNOWN);
-        }
-      }, items);
-      let obj = {
-        onDismiss() {
-          let tmpResult;
-          if (markAsDismissed != null) {
-            tmpResult = tmp(ContentDismissActionType.UNKNOWN);
-          }
-          return tmpResult;
-        },
-        startExpanded: true,
-        children: null,
-      };
-      const obj2 = {
-        illustration: jsx(markAsDismissed(15101).ServerChannelsAbstractUI, {}),
-        title: null,
-        description: null,
-        CTALabel: null,
-        onCTAPress: null,
-      };
-      const intl = markAsDismissed(1125).intl;
-      obj2.title = intl.string(markAsDismissed(1125).t.Ay9424);
-      const intl2 = markAsDismissed(1125).intl;
-      obj2.description = intl2.string(markAsDismissed(1125).t.mufH2P);
-      const intl3 = markAsDismissed(1125).intl;
-      obj2.CTALabel = intl3.string(markAsDismissed(1125).t.BddRzS);
-      obj2.onCTAPress = callback;
-      obj.children = jsx(NUFTemplateV2Default, {
-        illustration: jsx(markAsDismissed(15101).ServerChannelsAbstractUI, {}),
-        title: null,
-        description: null,
-        CTALabel: null,
-        onCTAPress: null,
-      });
-      return jsx(markAsDismissed(5302).BottomSheet, {
-        onDismiss() {
-          let tmpResult;
-          if (markAsDismissed != null) {
-            tmpResult = tmp(ContentDismissActionType.UNKNOWN);
-          }
-          return tmpResult;
-        },
-        startExpanded: true,
-        children: null,
-      });
-    };
+  }, items);
+  let obj = {
+    onDismiss() {
+      let tmpResult;
+      if (markAsDismissed != null) {
+        tmpResult = tmp(ContentDismissActionType.UNKNOWN);
+      }
+      return tmpResult;
+    },
+    startExpanded: true,
+    children: null,
+  };
+  const obj2 = {
+    illustration: jsx(markAsDismissed(15142).ServerChannelsAbstractUI, {}),
+    title: null,
+    description: null,
+    CTALabel: null,
+    onCTAPress: null,
+  };
+  const intl = markAsDismissed(1114).intl;
+  obj2.title = intl.string(markAsDismissed(1114).t.Ay9424);
+  const intl2 = markAsDismissed(1114).intl;
+  obj2.description = intl2.string(markAsDismissed(1114).t.mufH2P);
+  const intl3 = markAsDismissed(1114).intl;
+  obj2.CTALabel = intl3.string(markAsDismissed(1114).t.BddRzS);
+  obj2.onCTAPress = callback;
+  obj.children = jsx(NUFTemplateV2Default, {
+    illustration: jsx(markAsDismissed(15142).ServerChannelsAbstractUI, {}),
+    title: null,
+    description: null,
+    CTALabel: null,
+    onCTAPress: null,
+  });
+  return jsx(markAsDismissed(5267).BottomSheet, {
+    onDismiss() {
+      let tmpResult;
+      if (markAsDismissed != null) {
+        tmpResult = tmp(ContentDismissActionType.UNKNOWN);
+      }
+      return tmpResult;
+    },
+    startExpanded: true,
+    children: null,
+  });
+}

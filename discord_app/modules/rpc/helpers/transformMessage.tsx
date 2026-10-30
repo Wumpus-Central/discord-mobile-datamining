@@ -463,7 +463,7 @@ function transformInteractionMetadata(triggering_interaction_metadata) {
   obj.triggering_interaction_metadata = tmp14;
   return obj;
 }
-const MessageEmbedTypes = fn(1084).MessageEmbedTypes;
+const MessageEmbedTypes = fn(1072).MessageEmbedTypes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/transformMessage.tsx");
 

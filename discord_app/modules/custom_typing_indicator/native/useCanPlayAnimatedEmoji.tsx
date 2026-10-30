@@ -4,22 +4,13 @@ import AccessibilityPreferencesContext from "../../../../discord_common/js/packa
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/useCanPlayAnimatedEmoji.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useCanPlayAnimatedEmoji() {
-      const AnimateEmoji = UserSettings.AnimateEmoji;
-      return (
-        AnimateEmoji.useSetting() &&
-        !noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled
-      );
-    }
-  : function useCanPlayAnimatedEmoji() {
-      const AnimateEmoji = UserSettings.AnimateEmoji;
-      return (
-        AnimateEmoji.useSetting() &&
-        !noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled
-      );
-    };
+export default function useCanPlayAnimatedEmoji() {
+  const AnimateEmoji = UserSettings.AnimateEmoji;
+  return (
+    AnimateEmoji.useSetting() &&
+    !noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled
+  );
+}

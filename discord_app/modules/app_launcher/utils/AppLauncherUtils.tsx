@@ -64,9 +64,9 @@ function getShelfBadgeTypeIfActive(application) {
   NONE = Server.EmbeddedActivityLabelTypes.NONE;
 }
 let closure_3 = ["fakeAppIconURL"];
-const ApplicationFlags = fn(1084).ApplicationFlags;
-const BuiltInSectionId = fn(6023).BuiltInSectionId;
-const MessageSendLocation = fn(5010).MessageSendLocation;
+const ApplicationFlags = fn(1072).ApplicationFlags;
+const BuiltInSectionId = fn(6030).BuiltInSectionId;
+const MessageSendLocation = fn(5014).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -83,9 +83,9 @@ export function getSectionName(FAKE_BUILT_IN_APP) {
   }
   return name;
 }
-export function getSectionDescription(application) {
-  if (application.id !== BuiltInSectionId.BUILT_IN) {
-    let description = application.description;
+export function getSectionDescription(FAKE_BUILT_IN_APP) {
+  if (FAKE_BUILT_IN_APP.id !== BuiltInSectionId.BUILT_IN) {
+    let description = FAKE_BUILT_IN_APP.description;
   } else {
     const intl = util.intl;
     description = intl.string(util.t.X9fusn);
@@ -158,7 +158,7 @@ export function executeAppLauncherCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -235,7 +235,7 @@ export function executeAppLauncherCommand(arg0) {
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;
@@ -303,8 +303,8 @@ export function isApplicationAdSupported(application) {
   }
   return null != tmp2 && tmp2.displays_advertisements;
 }
-export function appLauncherShowsRecommendations(entrypoint) {
-  return entrypoint === AppLauncherTypes.AppLauncherEntrypoint.TEXT;
+export function appLauncherShowsRecommendations(initialSearchQuery) {
+  return initialSearchQuery === AppLauncherTypes.AppLauncherEntrypoint.TEXT;
 }
 export function formatPrimaryEntryPointCommandName(displayName) {
   let str = "";
@@ -316,9 +316,9 @@ export function formatPrimaryEntryPointCommandName(displayName) {
   }
   return str;
 }
-export function ensureRecommendationSectionsOnlyContainActivities(stateFromStores) {
+export function ensureRecommendationSectionsOnlyContainActivities(entrypoint) {
   const items = [];
-  const iter = stateFromStores[Symbol.iterator]();
+  const iter = entrypoint[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let prop = nextResult.application_directory_collection_items;

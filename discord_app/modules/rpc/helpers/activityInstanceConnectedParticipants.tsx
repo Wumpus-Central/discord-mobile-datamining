@@ -6,12 +6,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(6437);
+const Constants = fn(6444);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_AUTHENTICATED_SCOPE];
-const CONTEXT_MENU_ICON_NAMES = fn(16215);
-const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1084).RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {
+const CONTEXT_MENU_ICON_NAMES = fn(16255);
+const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1072).RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {
   scope: obj,
   handler() {
     return (arg0) => {
@@ -23,16 +23,16 @@ const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1084).RPCEvents.ACTIV
         const obj = { participants: [] };
         let obj2 = obj;
       } else {
-        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4926).getEmbeddedActivityLocationGuildId(
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4930).getEmbeddedActivityLocationGuildId(
           currentEmbeddedActivity.location,
         );
-        const obj4 = embeddedActivityLocationGuildId(4926);
-        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4926).getEmbeddedActivityLocationChannelId(
+        const obj4 = embeddedActivityLocationGuildId(4930);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4930).getEmbeddedActivityLocationChannelId(
           currentEmbeddedActivity.location,
         );
         obj2 = { participants: null };
         const _Array = Array;
-        const obj5 = embeddedActivityLocationGuildId(4926);
+        const obj5 = embeddedActivityLocationGuildId(4930);
         obj2.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {
@@ -42,7 +42,7 @@ const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1084).RPCEvents.ACTIV
             obj2.nickname = nickname;
             return obj2;
           }
-        }).filter(embeddedActivityLocationGuildId(1385).isNotNullish);
+        }).filter(embeddedActivityLocationGuildId(1380).isNotNullish);
         const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {

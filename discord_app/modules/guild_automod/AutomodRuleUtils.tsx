@@ -8,8 +8,8 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(19545).getRuleCountByTriggerType;
-const Constants = fn(13091);
+const getRuleCountByTriggerType = fn(19608).getRuleCountByTriggerType;
+const Constants = fn(13242);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
@@ -45,10 +45,10 @@ export function isRegexSupported(arg0) {
 export function getNewAutomodRuleMockId(arg0, arg1) {
   return "" + arg0 + "-" + arg1 + "-new-rule";
 }
-export function isRuleKeywordFilter(rule) {
+export function isRuleKeywordFilter(length) {
   let triggerType;
-  if (rule != null) {
-    triggerType = rule.triggerType;
+  if (length != null) {
+    triggerType = length.triggerType;
   }
   return triggerType === constants.KEYWORD;
 }
@@ -87,10 +87,10 @@ export function isRuleUserProfileFilter(rule) {
   }
   return triggerType === constants.USER_PROFILE;
 }
-export function isRuleApplicationFilter(rule) {
+export function isRuleApplicationFilter(editingRule) {
   let triggerType;
-  if (rule != null) {
-    triggerType = rule.triggerType;
+  if (editingRule != null) {
+    triggerType = editingRule.triggerType;
   }
   return triggerType === constants.APPLICATION;
 }
@@ -145,11 +145,11 @@ export function createDefaultRule(guildId, triggerType) {
   }
   obj5 = ApplicationCommandUtils;
 }
-export function validateKeywordsOrThrow(arr, maxWordCount) {
-  if (arr.length > maxWordCount) {
+export function validateKeywordsOrThrow(arr, limit) {
+  if (arr.length > limit) {
     const _Error = Error;
     const intl = util.intl;
-    const obj = { limit: maxWordCount };
+    const obj = { limit };
     const error = new Error(intl.formatToPlainString(util.t.mee4qd, obj));
     throw error;
   } else {

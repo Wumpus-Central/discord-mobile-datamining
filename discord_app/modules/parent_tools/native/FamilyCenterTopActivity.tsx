@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/FamilyCenterTopActivity.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 const obj2 = {
   container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
   section: { flex: 1 },
@@ -64,7 +64,7 @@ export default function FamilyCenterTopActivity() {
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16693, dependencyMap.paths), "FamilyCenterTopUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16746, dependencyMap.paths), "FamilyCenterTopUsers", {
       topUserActivities: stateFromStores,
     });
   }, items2);
@@ -92,7 +92,7 @@ export default function FamilyCenterTopActivity() {
           user = user.getUser(user_id.user_id);
           let tmp2 = null;
           if (null != user) {
-            const obj = { user, size: closure_0(stateFromStores1[16]).AvatarSizes.SMALL, guildId: "Array" };
+            const obj = { user, size: closure_0(stateFromStores1[16]).AvatarSizes.SMALL, guildId: "r" };
             tmp2 = closure_1_7(closure_0(stateFromStores1[16]).Avatar, obj, user.id);
           }
           return tmp2;
@@ -124,7 +124,7 @@ export default function FamilyCenterTopActivity() {
       const obj11 = {
         style: tmp.avatarList,
         children: stateFromStores1.map((guild_id) => {
-          guild = FamilyCenterStore.getGuild(guild_id.guild_id);
+          const guild = FamilyCenterStore.getGuild(guild_id.guild_id);
           let tmp2 = null;
           if (null != guild) {
             const obj = { style: null, textStyle: null, guild: null, size: null };

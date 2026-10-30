@@ -1,7 +1,7 @@
 // discord_app/modules/replies/ReferencedMessageStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01457_priv.js";
+import privDefault from "../../../_runtime/01452_priv.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import handleExplicitMediaScanTimeoutForMessage from "../explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -95,7 +95,7 @@ function handleLoadThreadsSuccess(firstMessages) {
   }
   return tmp;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ MessageTypes: closure_8, MessageTypesWithLazyLoadedReferences: closure_9 } = Constants);
 const ReferencedMessageState = {
   LOADED: 0,

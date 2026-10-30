@@ -61,25 +61,24 @@ export function buildMediaEntries(game) {
   }
   return items;
 }
-export function buildMediaViewerSources(arr2, cResult) {
-  const styles = cResult;
+export function buildMediaViewerSources(memo1, memo) {
   let map = dimensions;
   if (dimensions === undefined) {
     const _Map = Map;
     map = new Map();
   }
-  return arr2.map((uri, mediaIndex) => {
+  return memo1.map((uri, mediaIndex) => {
     value = undefined;
     if ("image" === uri.type) {
       value = map.get(uri.originalUrl);
     }
     if (null == value) {
-      let height = styles.height;
-      let tmp4 = styles;
+      let height = memo.height;
+      let tmp4 = memo;
     } else {
       const _Math = Math;
-      tmp4 = styles;
-      height = Math.round((styles.width * value.height) / value.width);
+      tmp4 = memo;
+      height = Math.round((memo.width * value.height) / value.width);
     }
     const obj = { uri: uri.originalUrl, videoURI: null, mediaIndex: null };
     let originalUrl;

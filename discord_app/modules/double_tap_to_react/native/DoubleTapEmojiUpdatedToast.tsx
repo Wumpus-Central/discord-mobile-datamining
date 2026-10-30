@@ -7,7 +7,7 @@ import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.t
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1387).EMOJI_URL_BASE_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 

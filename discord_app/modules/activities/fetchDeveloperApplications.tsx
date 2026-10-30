@@ -40,7 +40,7 @@ let closure_6 = async function _fetchDeveloperApplications() {
   }
   return value;
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/fetchDeveloperApplications.tsx");
 

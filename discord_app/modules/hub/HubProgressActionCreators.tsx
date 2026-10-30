@@ -5,22 +5,22 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9099).HUB_PROGRESS_STEP_ORDER;
-const GuildFeatures = fn(1084).GuildFeatures;
+const HUB_PROGRESS_STEP_ORDER = fn(9112).HUB_PROGRESS_STEP_ORDER;
+const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
 
-export function setHubProgressActionComplete(guildId, INVITE_USER) {
+export function setHubProgressActionComplete(guildId, JOIN_GUILD) {
   if (null != guildId) {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
       hasItem = features.has(GuildFeatures.HUB);
     }
     if (hasItem) {
-      const items = [INVITE_USER];
-      const result = items(4838).updateUserGuildSettings(
+      const items = [JOIN_GUILD];
+      const result = items(4839).updateUserGuildSettings(
         guildId,
         (hubProgress) => {
           let flag = false;
@@ -35,9 +35,9 @@ export function setHubProgressActionComplete(guildId, INVITE_USER) {
           }
           return flag;
         },
-        items(4838).UserSettingsDelay.INFREQUENT_USER_ACTION,
+        items(4839).UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
-      const obj = items(4838);
+      const obj = items(4839);
     }
   }
 }

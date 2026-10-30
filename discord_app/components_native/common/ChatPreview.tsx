@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8189);
+const RowGeneratorConstants = fn(8370);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -283,11 +283,11 @@ class ChatPreviewBase extends PureComponent {
           rows: previousRows,
           scrollToMessageId: jumpTargetId,
           jumpTargetId,
-          jumpType: "Set",
+          jumpType: "PX_8",
           shouldInitialScroll: "Array",
-          animated: "2026-01-wmf-gpu-encode-intel",
-          scrollPosition: "user",
-          focusTargetId: null,
+          animated: 87.283,
+          scrollPosition: 87.283,
+          focusTargetId: 100,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -319,12 +319,12 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9802).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9828).setSelectedConversation(closure_1_0, roleStyle, {
             cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9802);
-          applyArgumentsResult(5745).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(9828);
+          applyArgumentsResult(5751).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -357,14 +357,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5745).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5745);
+            applyArgumentsResult(5751).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5751);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "mindre end \u00E9t sekund",
-        selectedChannelId: "mindre end {{count}} sekunder",
-        tapLinkData: "1 sekund",
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -480,7 +480,7 @@ class ChatPreviewBase extends PureComponent {
             allowWithinModal: true,
             message,
             messageChannel: channel,
-            selectedChannelId: "IconComponent",
+            selectedChannelId: "HermesInternal",
             showContextName: null,
           };
           const result = handleMessagesTapImage.handleMessagesTapImage(obj);
@@ -642,166 +642,46 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(5071).ThemeContext;
+ChatPreviewBase.contextType = fn(5075).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
-const ReactCompilerGating = fn(558);
-let obj5 = { height: 44, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
 
-export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ChatPreview(channelId) {
-      const cResult = channelId(576).c(19);
-      channelId = channelId.channelId;
-      const InlineAttachmentMedia = channelId(4833).InlineAttachmentMedia;
-      const setting = InlineAttachmentMedia.useSetting();
-      const InlineEmbedMedia = channelId(4833).InlineEmbedMedia;
-      const setting1 = InlineEmbedMedia.useSetting();
-      const RenderEmbeds = channelId(4833).RenderEmbeds;
-      const setting2 = RenderEmbeds.useSetting();
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [AccessibilityStore];
-        const fn = function s() {
-          return roleStyle.roleStyle;
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp7 = items;
-        tmp8 = fn;
-      } else {
-        [tmp7, tmp8] = cResult;
-      }
-      const obj = channelId(576);
-      const stateFromStores = channelId(504).useStateFromStores(tmp7, tmp8);
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [ChannelStore];
-        cResult[2] = items1;
-        let tmp11 = items1;
-      } else {
-        tmp11 = cResult[2];
-      }
-      if (cResult[3] !== channelId) {
-        class C {
-          constructor() {
-            return closure_8.getChannel(channelId);
-          }
-        }
-        cResult[3] = channelId;
-        cResult[4] = C;
-      } else {
-        class C {
-          constructor() {
-            return closure_8.getChannel(channelId);
-          }
-        }
-      }
-      const tmpResult = channelId(504);
-      const stateFromStores1 = channelId(504).useStateFromStores(tmp11, C);
-      const width = useWindowDimensionsDefault().width;
-      const tmpResult5 = channelId(504);
-      const isChannelSpoilerGated = channelId(6740).useIsChannelSpoilerGated(stateFromStores1);
-      const tmpResult6 = channelId(6740);
-      const isChannelContentGated = channelId(6721).useIsChannelContentGated(stateFromStores1);
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor() {
-            return closure_8.getChannel(channelId);
-          }
-        }
-        const items2 = [ActionSheetStore];
-        const fn2 = function f() {
-          return null != content.getContent();
-        };
-        cResult[5] = items2;
-        cResult[6] = fn2;
-        let tmp18 = fn2;
-        const tmp17 = items2;
-      } else {
-        class C {
-          constructor() {
-            return closure_8.getChannel(channelId);
-          }
-        }
-        tmp18 = cResult[6];
-      }
-      const tmpResult7 = channelId(6721);
-      const stateFromStores2 = channelId(504).useStateFromStores(tmp17, tmp18);
-      if (!isChannelSpoilerGated) {
-        class C {
-          constructor() {
-            return closure_8.getChannel(channelId);
-          }
-        }
-      }
-      if (cResult[7] === stateFromStores1) {
-        class C {
-          constructor() {
-            return closure_8.getChannel(channelId);
-          }
-        }
-      }
-      const obj2 = {};
-      const merged = Object.assign(channelId);
-      obj2.inlineAttachmentMedia = setting;
-      obj2.inlineEmbedMedia = setting1;
-      obj2.renderEmbeds = setting2;
-      obj2.roleStyle = stateFromStores;
-      obj2.channel = stateFromStores1;
-      obj2.width = width;
-      obj2.isSpoilerHidden = isChannelSpoilerGated;
-      obj2.isNSFWHidden = isChannelContentGated;
-      obj2.canAccessChannel = !isChannelSpoilerGated;
-      obj2.hasActionSheetOpen = stateFromStores2;
-      const tmpResult8 = channelId(504);
-      cResult[7] = stateFromStores1;
-      cResult[8] = stateFromStores2;
-      cResult[9] = setting;
-      cResult[10] = setting1;
-      cResult[11] = isChannelContentGated;
-      cResult[12] = isChannelSpoilerGated;
-      cResult[13] = channelId;
-      cResult[14] = setting2;
-      cResult[15] = stateFromStores;
-      cResult[16] = !isChannelSpoilerGated;
-      cResult[17] = width;
-      cResult[18] = closure_13(ChatPreviewBase, obj2);
-      const tmp22 = closure_13(ChatPreviewBase, obj2);
-    }
-  : function ChatPreview(channelId) {
-      channelId = channelId.channelId;
-      const InlineAttachmentMedia = channelId(4833).InlineAttachmentMedia;
-      const setting = InlineAttachmentMedia.useSetting();
-      const InlineEmbedMedia = channelId(4833).InlineEmbedMedia;
-      const setting1 = InlineEmbedMedia.useSetting();
-      const RenderEmbeds = channelId(4833).RenderEmbeds;
-      const setting2 = RenderEmbeds.useSetting();
-      const items = [AccessibilityStore];
-      const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
-      const obj = channelId(504);
-      const items1 = [ChannelStore];
-      const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
-      const obj2 = channelId(504);
-      const isChannelSpoilerGated = channelId(6740).useIsChannelSpoilerGated(stateFromStores1);
-      const obj3 = channelId(6740);
-      const isChannelContentGated = channelId(6721).useIsChannelContentGated(stateFromStores1);
-      const obj4 = channelId(6721);
-      const items2 = [ActionSheetStore];
-      const obj6 = {};
-      const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());
-      const merged = Object.assign(channelId);
-      obj6.inlineAttachmentMedia = setting;
-      obj6.inlineEmbedMedia = setting1;
-      obj6.renderEmbeds = setting2;
-      obj6.roleStyle = stateFromStores;
-      obj6.channel = stateFromStores1;
-      obj6.width = useWindowDimensionsDefault().width;
-      obj6.isSpoilerHidden = isChannelSpoilerGated;
-      obj6.isNSFWHidden = isChannelContentGated;
-      let tmp12 = !isChannelSpoilerGated;
-      if (!isChannelSpoilerGated) {
-        tmp12 = !isChannelContentGated;
-      }
-      obj6.canAccessChannel = tmp12;
-      obj6.hasActionSheetOpen = stateFromStores2;
-      return closure_13(ChatPreviewBase, obj6);
-    };
+export function ChatPreview(channelId) {
+  channelId = channelId.channelId;
+  const InlineAttachmentMedia = channelId(4834).InlineAttachmentMedia;
+  const setting = InlineAttachmentMedia.useSetting();
+  const InlineEmbedMedia = channelId(4834).InlineEmbedMedia;
+  const setting1 = InlineEmbedMedia.useSetting();
+  const RenderEmbeds = channelId(4834).RenderEmbeds;
+  const setting2 = RenderEmbeds.useSetting();
+  const items = [AccessibilityStore];
+  const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
+  const obj = channelId(504);
+  const items1 = [ChannelStore];
+  const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
+  const obj2 = channelId(504);
+  const isChannelSpoilerGated = channelId(6747).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6747);
+  const isChannelContentGated = channelId(6728).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(6728);
+  const items2 = [ActionSheetStore];
+  const obj6 = {};
+  const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());
+  const merged = Object.assign(channelId);
+  obj6.inlineAttachmentMedia = setting;
+  obj6.inlineEmbedMedia = setting1;
+  obj6.renderEmbeds = setting2;
+  obj6.roleStyle = stateFromStores;
+  obj6.channel = stateFromStores1;
+  obj6.width = useWindowDimensionsDefault().width;
+  obj6.isSpoilerHidden = isChannelSpoilerGated;
+  obj6.isNSFWHidden = isChannelContentGated;
+  let tmp12 = !isChannelSpoilerGated;
+  if (!isChannelSpoilerGated) {
+    tmp12 = !isChannelContentGated;
+  }
+  obj6.canAccessChannel = tmp12;
+  obj6.hasActionSheetOpen = stateFromStores2;
+  return closure_13(ChatPreviewBase, obj6);
+}

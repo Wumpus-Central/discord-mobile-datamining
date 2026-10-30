@@ -60,7 +60,7 @@ function handleLoadMessages(messages) {
     return flag;
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AbortCodes: hasOwnProperty, MessageEmbedTypes: metroRequire, MessageTypes: closure_7 } = Constants);
 const automodFailedMessages = {};
 let closure_9 = 0;
@@ -147,7 +147,7 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(DispatcherDefault,
     message = message.message;
     let flag = null != message;
     if (flag) {
-      const obj = { id: message.id, messageData: "Reflect", isBlockedEdit: null, errorMessage: tmp };
+      const obj = { id: message.id, messageData: "flexDirection", isBlockedEdit: null, errorMessage: tmp };
       closure_8[message.id] = obj;
       closure_9 = closure_9 + 1;
       flag = true;

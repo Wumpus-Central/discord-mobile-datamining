@@ -6,7 +6,7 @@ import UserSettings from "../user_settings/UserSettings.tsx";
 import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 
 require = fn;
-const StatusTypes = fn(1084).StatusTypes;
+const StatusTypes = fn(1072).StatusTypes;
 let sessionStartsWithDND = [];
 let c6 = false;
 const PersistedStore = initializeDefault.PersistedStore;

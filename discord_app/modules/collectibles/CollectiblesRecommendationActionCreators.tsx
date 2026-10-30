@@ -40,7 +40,7 @@ let closure_5 = async function _maybeFetchCollectiblesRecommendations() {
   }
   return value;
 };
-let closure_4 = fn(1084).COLLECTIBLES_APPLICATION_ID;
+let closure_4 = fn(1072).COLLECTIBLES_APPLICATION_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesRecommendationActionCreators.tsx");
 

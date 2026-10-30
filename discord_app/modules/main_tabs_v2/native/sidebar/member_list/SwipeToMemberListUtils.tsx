@@ -2,14 +2,9 @@
 import preloaded_user_settings from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import hasSecondaryViewChatDefault from "../../../../app_channels/hasSecondaryViewChat.tsx";
 import ChatGestureSettings from "../../../../user_settings/defs/native/ChatGestureSettings.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting(
-  "modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx",
-);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
 
 export function useIsSwipeToMemberListEnabled() {
   const swipeToReplySettingValue = ChatGestureSettings.useSwipeToReplySettingValue();

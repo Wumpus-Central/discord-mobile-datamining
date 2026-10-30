@@ -14,7 +14,7 @@ let closure_3 = async function _fetchProjectMcpConnection(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_3 = async function _fetchProjectMcpConnection(arg0) {
           closure_130_4 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -131,7 +131,7 @@ let closure_4 = async function _requestExternalAuthorizeUrl(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

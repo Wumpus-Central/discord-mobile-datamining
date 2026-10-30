@@ -7,7 +7,7 @@ import postConnectionCallback from "../modules/connections/postConnectionCallbac
 import ConnectedAccountRecord from "../records/ConnectedAccountRecord.tsx";
 
 require = fn;
-const items = [fn(1084).PlatformTypes.CONTACTS];
+const items = [fn(1072).PlatformTypes.CONTACTS];
 const set = new Set(items);
 let c5 = true;
 let closure_6 = [];
@@ -34,9 +34,9 @@ prototype["getAccounts"] = function getAccounts() {
 prototype["getLocalAccounts"] = function getLocalAccounts() {
   return closure_7;
 };
-prototype["getAccount"] = function getAccount(accountId, provider_id) {
+prototype["getAccount"] = function getAccount(accountId, SPOTIFY) {
   closure_0 = accountId;
-  closure_1 = provider_id;
+  closure_1 = SPOTIFY;
   return closure_6.find((id) => {
     let tmp2 = null == closure_0 || id.id === tmp;
     if (tmp2) {

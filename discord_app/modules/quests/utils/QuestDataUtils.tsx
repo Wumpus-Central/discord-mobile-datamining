@@ -98,7 +98,7 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
     }
   }
 }
-const QuestConstants = fn(6768);
+const QuestConstants = fn(6775);
 ({
   DismissibleQuestContentFlags: closure_7,
   BILLABLE_PLACEMENTS: closure_8,
@@ -107,14 +107,14 @@ const QuestConstants = fn(6768);
 } = QuestConstants);
 let c11 = 2592000000;
 let obj = {};
-obj[fn(6771).QuestContent.QUEST_BAR] = fn(6771).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6771).QuestContent.QUEST_BAR_V2] = fn(6771).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6771).QuestContent.QUEST_BAR_MOBILE] = fn(6771).AdPlacement.MOBILE_HOME_DOCK_AREA;
-obj[fn(6771).QuestContent.QUEST_HOME_HERO] = fn(6771).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6771).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6771).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6771).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6771).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6771).QuestContent.VIDEO_MODAL_MOBILE] = fn(6771).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(6771).AdPlacement.VIDEO_MODAL_MOBILE];
+obj[fn(6778).QuestContent.QUEST_BAR] = fn(6778).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6778).QuestContent.QUEST_BAR_V2] = fn(6778).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6778).QuestContent.QUEST_BAR_MOBILE] = fn(6778).AdPlacement.MOBILE_HOME_DOCK_AREA;
+obj[fn(6778).QuestContent.QUEST_HOME_HERO] = fn(6778).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6778).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6778).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6778).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6778).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6778).QuestContent.VIDEO_MODAL_MOBILE] = fn(6778).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(6778).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
@@ -129,7 +129,7 @@ export function earnedDecisionIsValid(value) {
   }
   return tmp;
 }
-export function findQuestOrReplacement(scrollToQuestId, quests, excludedQuests) {
+export function findQuestOrReplacement(questId, quests, excludedQuests) {
   let map = quests;
   if (Array.isArray(quests)) {
     const _Map = Map;
@@ -150,16 +150,16 @@ export function findQuestOrReplacement(scrollToQuestId, quests, excludedQuests) 
       }),
     );
   }
-  value = map.get(scrollToQuestId);
+  value = map.get(questId);
   if (null != value) {
     return value;
   } else {
-    value3 = map1.get(scrollToQuestId);
+    const value3 = map1.get(questId);
     let replacementId;
     if (value3 != null) {
       replacementId = value3.replacementId;
     }
-    value4 = undefined;
+    let value4;
     if (null != replacementId) {
       value4 = map.get(replacementId);
     }
@@ -266,7 +266,7 @@ export function getBountyByPlacementAndId(questPlacementFromQuestContent, bounty
 }
 export function getAdDecisionData(adContentId, questContent) {
   if (null == obj[questContent]) {
-    return v65535;
+    return closure_1_10;
   } else {
     obj = getQuestDeliveryDataForPlacement(tmp, adContentId);
     if (obj == null) {
@@ -274,7 +274,7 @@ export function getAdDecisionData(adContentId, questContent) {
     }
     const adDecisionData = obj.adDecisionData;
     if (null == adDecisionData) {
-      let tmp6 = v65535;
+      let tmp6 = closure_1_10;
     } else {
       tmp6 = adDecisionData;
       if (tmp4 !== adContentId) {

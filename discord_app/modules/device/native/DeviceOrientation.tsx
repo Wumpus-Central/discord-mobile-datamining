@@ -3,9 +3,7 @@ import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactB
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import get_ActivityIndicator_mod from "../../../../_runtime/metro/08861__.js";
-
-const require = globalThis.__r;
+import get_ActivityIndicator_mod from "../../../../_runtime/metro/08895__.js";
 
 require = fn;
 function handleOrientationChange(initialOrientation) {
@@ -121,8 +119,8 @@ function lockOrientationForiOS(PORTRAIT) {
 const AppState = fn(17).AppState;
 const OrientationType = { PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
 let closure_5 = ["PORTRAIT", "PORTRAITUPSIDEDOWN"];
-const module_570 = fn(570);
-let obj3 = module_570.create(() => {
+const module_560 = fn(560);
+let obj3 = module_560.create(() => {
   obj = { orientation: obj.PORTRAIT, orientationLock: null };
   return obj;
 });
@@ -200,10 +198,13 @@ const listener = AppState.addEventListener("change", function applyLockStateOnAp
     }
   }
 });
-let ReactCompilerGating = fn(558);
-ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
-function unlockOrientation(unlockAfterRotatingToPreviousLock) {
+const size = fn(2);
+const result3 = size.fileFinishedImporting("modules/device/native/DeviceOrientation.tsx");
+
+export { OrientationType };
+export const useStore = obj3;
+export { handleOrientationChange };
+export function unlockOrientation(unlockAfterRotatingToPreviousLock) {
   if (obj.isAndroid()) {
     if (unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock) {
       if (null != obj3.getState().orientationLock) {
@@ -224,7 +225,7 @@ function unlockOrientation(unlockAfterRotatingToPreviousLock) {
   });
   const tmpResult4 = ReactBatchUpdates;
 }
-function lockOrientation(PORTRAIT, flag) {
+export function lockOrientation(PORTRAIT, flag) {
   if (flag == null) {
     flag = false;
   }
@@ -244,17 +245,6 @@ function lockOrientation(PORTRAIT, flag) {
     });
   }
 }
-function useOrientation() {
-  return obj3().orientation;
-}
-const size = fn(2);
-const result4 = size.fileFinishedImporting("modules/device/native/DeviceOrientation.tsx");
-
-export { OrientationType };
-export const useStore = obj3;
-export { handleOrientationChange };
-export { unlockOrientation };
-export { lockOrientation };
 export { lockOrientationForiOS };
 export function getOrientation() {
   return obj3.getState().orientation;
@@ -262,32 +252,14 @@ export function getOrientation() {
 export function getOrientationLock() {
   return obj3.getState().orientationLock;
 }
-export { useOrientation };
-export const useOrientationListener = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useOrientationListener(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(3);
-      if (cResult[0] !== arg0) {
-        const fn = function o() {
-          return obj3.subscribe(closure_0);
-        };
-        const items = [arg0];
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-        tmp3 = cResult[2];
-      }
-      const effect = noop.useEffect(tmp2, tmp3);
-    }
-  : function useOrientationListener(arg0) {
-      closure_0 = arg0;
-      const items = [arg0];
-      const effect = noop.useEffect(() => obj3.subscribe(closure_0), items);
-    };
+export function useOrientation() {
+  return obj3().orientation;
+}
+export function useOrientationListener(callback2) {
+  closure_0 = callback2;
+  const items = [callback2];
+  const effect = noop.useEffect(() => obj3.subscribe(closure_0), items);
+}
 export function restoreDefaultOrientation() {
   if (obj.isIOS()) {
     const tmpResult = DeviceUtils;

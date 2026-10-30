@@ -1,6 +1,5 @@
 // discord_app/modules/user_settings/account/native/UserSettingsConfirmPassword.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -18,10 +17,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const UserSettingsSections = fn(1084).UserSettingsSections;
+const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },
@@ -37,8 +36,7 @@ obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
 obj2.button = { marginTop: 16 };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
-const __initData = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
+let closure_12 = createStyles.createStyles(obj2);
 class UserSettingsConfirmPasswordInner {
   constructor(arg0) {
     ({ onSubmit, onSuccess, onError, parentLoading } = global);
@@ -63,7 +61,7 @@ class UserSettingsConfirmPasswordInner {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -94,16 +92,16 @@ class UserSettingsConfirmPasswordInner {
             if (2 === tmp8) {
               c3 = 1;
               closure_128_1 = tmp75;
-              tmp4(tmp75[15]).captureException(closure_128_1);
-              const intl = closure_0(tmp75[16]).intl;
-              if (closure_128_1.message !== intl.string(closure_0(tmp75[16]).t.N2yb9a)) {
-                const v6OrEarlierAPIError = new closure_0(tmp75[14]).V6OrEarlierAPIError(closure_128_1);
+              tmp4(tmp75[13]).captureException(closure_128_1);
+              const intl = closure_0(tmp75[14]).intl;
+              if (closure_128_1.message !== intl.string(closure_0(tmp75[14]).t.N2yb9a)) {
+                const v6OrEarlierAPIError = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_1);
                 closure_129_5(v6OrEarlierAPIError);
               }
               if (closure_129_2 != null) {
                 closure_129_2();
               }
-              const obj4 = tmp4(tmp75[15]);
+              const obj4 = tmp4(tmp75[13]);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -129,7 +127,7 @@ class UserSettingsConfirmPasswordInner {
                   closure_129_1();
                   c3 = 1;
                 }
-                const v6OrEarlierAPIError1 = new closure_0(tmp75[14]).V6OrEarlierAPIError(closure_128_0);
+                const v6OrEarlierAPIError1 = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_0);
                 closure_129_5(v6OrEarlierAPIError1);
                 if (closure_129_2 != null) {
                   closure_129_2();
@@ -161,7 +159,7 @@ class UserSettingsConfirmPasswordInner {
     imperativeHandle = closure_5.useImperativeHandle(global.ref, () => ({}));
     tmp3 = onSubmit;
     tmp4 = onError;
-    obj = onSubmit(onError[12]);
+    obj = onSubmit(onError[10]);
     items = [];
     items[0] = closure_8;
     stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -190,7 +188,7 @@ class UserSettingsConfirmPasswordInner {
       if (!hideUnverifiedBanner) {
         tmp16 = jsx;
         tmp17 = onSuccess;
-        tmp15 = jsx(onSuccess(tmp4[17]), {});
+        tmp15 = jsx(onSuccess(tmp4[15]), {});
       }
       handleSubmit = function handleSubmit() {
         const self = this;
@@ -216,15 +214,15 @@ class UserSettingsConfirmPasswordInner {
         children: null,
       };
       obj12.style = tmp.title;
-      intl = tmp3(tmp4[16]).intl;
-      obj12.children = intl.string(tmp3(tmp4[16]).t["x+d9t3"]);
+      intl = tmp3(tmp4[14]).intl;
+      obj12.children = intl.string(tmp3(tmp4[14]).t["x+d9t3"]);
       items3 = [, , , ,];
-      items3[0] = jsx(tmp3(tmp4[18]).Text, obj12);
+      items3[0] = jsx(tmp3(tmp4[16]).Text, obj12);
       obj13 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj13.style = tmp.prompt;
-      intl2 = tmp3(tmp4[16]).intl;
-      obj13.children = intl2.string(tmp3(tmp4[16]).t.vaZmAx);
-      items3[1] = jsx(tmp3(tmp4[18]).Text, obj13);
+      intl2 = tmp3(tmp4[14]).intl;
+      obj13.children = intl2.string(tmp3(tmp4[14]).t.vaZmAx);
+      items3[1] = jsx(tmp3(tmp4[16]).Text, obj13);
       tmp20 = onSuccess;
       obj14 = {
         style: null,
@@ -242,9 +240,9 @@ class UserSettingsConfirmPasswordInner {
         autoFocus: true,
       };
       ({ input: obj7.style, redesignInput: obj7.textStyle } = tmp);
-      tmp21 = onSuccess(tmp4[19]);
-      intl3 = tmp3(tmp4[16]).intl;
-      obj14.label = intl3.string(tmp3(tmp4[16]).t["CIGa+7"]);
+      tmp21 = onSuccess(tmp4[17]);
+      intl3 = tmp3(tmp4[14]).intl;
+      obj14.label = intl3.string(tmp3(tmp4[14]).t["CIGa+7"]);
       obj14.value = first;
       obj14.onChangeText = tmp8[1];
       obj14.onSubmitEditing = handleSubmit;
@@ -263,21 +261,21 @@ class UserSettingsConfirmPasswordInner {
           obj15 = { style: null, children: null };
           obj15.style = tmp.hint;
           obj15.children = obj2.message;
-          tmp19Result = tmp19(tmp20(tmp4[20]), obj15);
+          tmp19Result = tmp19(tmp20(tmp4[18]), obj15);
         }
       }
       items3[3] = tmp19Result;
       obj16 = { style: null, children: null };
       obj16.style = tmp.button;
       obj17 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
-      intl4 = tmp3(tmp4[16]).intl;
-      obj17.text = intl4.string(tmp3(tmp4[16]).t.i4jeWR);
+      intl4 = tmp3(tmp4[14]).intl;
+      obj17.text = intl4.string(tmp3(tmp4[14]).t.i4jeWR);
       obj17.onPress = handleSubmit;
       if (!tmp7) {
         tmp7 = parentLoading;
       }
       obj17.loading = tmp7;
-      obj16.children = tmp19(tmp3(tmp4[21]).Button, obj17);
+      obj16.children = tmp19(tmp3(tmp4[19]).Button, obj17);
       items3[4] = tmp19(tmp18, obj16);
       obj11.children = items3;
       items2[1] = tmp13(tmp18, obj11);
@@ -287,28 +285,11 @@ class UserSettingsConfirmPasswordInner {
     return tmp13Result;
   }
 }
-let obj5 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsConfirmPassword.tsx");
 
 export default UserSettingsConfirmPasswordInner;
-export const UserSettingsConfirmPasswordWrapped = ReactCompilerGating.isReactCompilerEnabled()
-  ? function UserSettingsConfirmPasswordWrapped() {
-      const cResult = c.c(2);
-      const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
-      if (cResult[0] !== settingNavigationRoute.params) {
-        const obj3 = {};
-        const merged = Object.assign(settingNavigationRoute.params);
-        const tmp8 = v65535(UserSettingsConfirmPasswordInner, obj3);
-        cResult[0] = settingNavigationRoute.params;
-        cResult[1] = tmp8;
-        let tmp3 = tmp8;
-      } else {
-        tmp3 = cResult[1];
-      }
-      return tmp3;
-    }
-  : function UserSettingsConfirmPasswordWrapped() {
-      const merged = Object.assign(useSettingNavigationRoute.useSettingNavigationRoute().params);
-      return v65535(UserSettingsConfirmPasswordInner, {});
-    };
+export function UserSettingsConfirmPasswordWrapped() {
+  const merged = Object.assign(useSettingNavigationRoute.useSettingNavigationRoute().params);
+  return closure_1_10(UserSettingsConfirmPasswordInner, {});
+}

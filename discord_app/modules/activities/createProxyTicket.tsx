@@ -15,7 +15,7 @@ let closure_7 = async function _createProxyTicket(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -147,7 +147,7 @@ let closure_10 = async function _mintProxyTicket(arg0) {
     return value.body.ticket;
   })();
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/createProxyTicket.tsx");

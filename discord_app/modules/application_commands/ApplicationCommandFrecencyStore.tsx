@@ -26,9 +26,9 @@ function handleUserSettingsProtoStoreChange() {
     global.pendingUsages,
   );
 }
-const ApplicationCommandConstants = fn(6023);
+const ApplicationCommandConstants = fn(6030);
 ({ DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: c3, SUB_COMMAND_KEY_SEPARATOR: closure_4 } = ApplicationCommandConstants);
-const UserSettingsTypes = fn(1094).UserSettingsTypes;
+const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let global = { pendingUsages: [] };
 let obj = {
   computeBonus() {
@@ -38,7 +38,7 @@ let obj = {
     return arg0;
   },
   afterCompute() {},
-  numFrequentlyItems: fn(1372).FREQUENCY_ITEM_LIMIT,
+  numFrequentlyItems: fn(1361).FREQUENCY_ITEM_LIMIT,
 };
 let closure_7 = new FrecencyDefault({
   computeBonus() {
@@ -48,7 +48,7 @@ let closure_7 = new FrecencyDefault({
     return arg0;
   },
   afterCompute() {},
-  numFrequentlyItems: fn(1372).FREQUENCY_ITEM_LIMIT,
+  numFrequentlyItems: fn(1361).FREQUENCY_ITEM_LIMIT,
 });
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationCommandFrecencyStore extends PersistedStore {}
@@ -102,7 +102,7 @@ const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(Disp
     if (Number(command.id) < 0) {
       let id = command.id;
     } else {
-      guild = undefined;
+      let guild;
       if (context != null) {
         guild = context.guild;
       }
@@ -158,7 +158,7 @@ export function getFilteredTopCommands(arr, arg1) {
     const hasItem = arr.includes(":");
     let tmp2 = !hasItem;
     if (hasItem) {
-      guild = undefined;
+      let guild;
       if (closure_0 != null) {
         guild = closure_0.guild;
       }

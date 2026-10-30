@@ -207,7 +207,6 @@ const obj = {
   COLLECTIBLES_SHOP_GAME_SHOP: null,
   COLLECTIBLES_SHOP_WITH_TAB: null,
   COLLECTIBLES_SHOP_COLLECTION_DETAIL: null,
-  COLLECTIBLES_SHOP_PRODUCT_DETAIL: null,
   NITRO_HOME: "/store",
   ACCOUNT_STANDING: "/account-standing",
   CHANNEL_SUMMARIES: null,
@@ -583,9 +582,6 @@ obj.COLLECTIBLES_SHOP_WITH_TAB = function COLLECTIBLES_SHOP_WITH_TAB(arg0) {
 };
 obj.COLLECTIBLES_SHOP_COLLECTION_DETAIL = function COLLECTIBLES_SHOP_COLLECTION_DETAIL(arg0) {
   return "/shop/collection/" + arg0;
-};
-obj.COLLECTIBLES_SHOP_PRODUCT_DETAIL = function COLLECTIBLES_SHOP_PRODUCT_DETAIL(arg0) {
-  return "/shop/product/" + arg0;
 };
 obj.CHANNEL_SUMMARIES = function CHANNEL_SUMMARIES(channelId) {
   return "/channels/" + channelId + "/summaries";

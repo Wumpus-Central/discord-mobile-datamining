@@ -35,16 +35,16 @@ export const CallMenuEntrypoint = {
   CARET: "Caret",
   OTHER_BUTTON: "Other Button",
 };
-export function isStreamParticipant(stateFromStores) {
+export function isStreamParticipant(selectedParticipant) {
   let type;
-  if (stateFromStores != null) {
-    type = stateFromStores.type;
+  if (selectedParticipant != null) {
+    type = selectedParticipant.type;
   }
   let tmp3 = type === obj.STREAM;
   if (!tmp3) {
     let type1;
-    if (stateFromStores != null) {
-      type1 = stateFromStores.type;
+    if (selectedParticipant != null) {
+      type1 = selectedParticipant.type;
     }
     tmp3 = type1 === tmp2.HIDDEN_STREAM;
   }

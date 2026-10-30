@@ -1,9 +1,8 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureLayout.tsx
-import Constants from "../../../activities/Constants.tsx";
+import EmbeddedActivityOrientationLockState from "../../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import MorphablePanelConstants from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const OrientationLockState = Constants.OrientationLockState;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 function clamp(arg0, arg1, arg2) {
   return Math.min(Math.max(arg0, arg1), arg2);
@@ -16,7 +15,7 @@ clamp.__initData = {
 function getPictureInPictureSize(windowWidth, stateFromStores) {
   const rounded = Math.round(0.3 * windowWidth);
   const size = { width: rounded, height: null };
-  if (stateFromStores === OrientationLockState.LANDSCAPE) {
+  if (stateFromStores === EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.LANDSCAPE) {
     let result = (9 * rounded) / 16;
   } else {
     result = (16 * rounded) / 9;
@@ -24,10 +23,13 @@ function getPictureInPictureSize(windowWidth, stateFromStores) {
   size.height = Math.round(result);
   return size;
 }
-getPictureInPictureSize.__closure = { PICTURE_IN_PICTURE_WIDTH_RATIO: 0.3, OrientationLockState };
-getPictureInPictureSize.__workletHash = 17003003333267;
+getPictureInPictureSize.__closure = {
+  PICTURE_IN_PICTURE_WIDTH_RATIO: 0.3,
+  EmbeddedActivityOrientationLockState: EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState,
+};
+getPictureInPictureSize.__workletHash = 3721909897491;
 getPictureInPictureSize.__initData = {
-  code: "function getPictureInPictureSize_conjureAppPictureInPictureLayoutTsx2(windowWidth,orientationLock){const{PICTURE_IN_PICTURE_WIDTH_RATIO,OrientationLockState}=this.__closure;const width=Math.round(windowWidth*PICTURE_IN_PICTURE_WIDTH_RATIO);const height=Math.round(orientationLock===OrientationLockState.LANDSCAPE?width*9/16:width*16/9);return{width:width,height:height};}",
+  code: "function getPictureInPictureSize_conjureAppPictureInPictureLayoutTsx2(windowWidth,orientationLock){const{PICTURE_IN_PICTURE_WIDTH_RATIO,EmbeddedActivityOrientationLockState}=this.__closure;const width=Math.round(windowWidth*PICTURE_IN_PICTURE_WIDTH_RATIO);const height=Math.round(orientationLock===EmbeddedActivityOrientationLockState.LANDSCAPE?width*9/16:width*16/9);return{width:width,height:height};}",
 };
 function getPictureInPictureBounds(arg0) {
   ({ safeArea, size } = arg0);

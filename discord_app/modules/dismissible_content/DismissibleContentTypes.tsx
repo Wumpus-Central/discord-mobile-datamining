@@ -2,15 +2,26 @@
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-function isSingleUseDismissibleContent(item10020) {
-  let hasItem = items1.includes(item10020);
+function isSingleUseDismissibleContent(item) {
+  let hasItem = items1.includes(item);
   if (!hasItem) {
-    hasItem = items.includes(item10020);
+    hasItem = items.includes(item);
   }
   if (!hasItem) {
-    hasItem = items2.includes(item10020);
+    hasItem = items2.includes(item);
   }
-  return !hasItem;
+  let tmp4 = !hasItem;
+  if (!hasItem) {
+    let hasItem1 = items4.includes(item);
+    if (!hasItem1) {
+      hasItem1 = items5.includes(item);
+    }
+    if (!hasItem1) {
+      hasItem1 = items3.includes(item);
+    }
+    tmp4 = !hasItem1;
+  }
+  return tmp4;
 }
 const items = [
   dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING,
@@ -86,6 +97,7 @@ const items2 = [
 const items3 = [
   dismissible_content.DismissibleContent.GAME_SHOP_NEW_BADGE,
   dismissible_content.DismissibleContent.GAME_SHOP_NEW_DROP_POPOVER,
+  dismissible_content.DismissibleContent.SOUNDBOARD_NEW_SOUNDS_BADGE,
 ];
 const items4 = [
   dismissible_content.DismissibleContent.GAME_SERVER_HOSTING_NEW_BADGE,
@@ -122,13 +134,13 @@ export function isVersionedDismissibleContent(id) {
 export function isSnowflakeBoundDismissibleContent(id) {
   return items2.includes(id);
 }
-export function isRecurringDismissibleContent(arg0) {
-  let hasItem = items1.includes(arg0);
+export function isRecurringDismissibleContent(item10020) {
+  let hasItem = items1.includes(item10020);
   if (!hasItem) {
-    hasItem = items.includes(arg0);
+    hasItem = items.includes(item10020);
   }
   if (!hasItem) {
-    hasItem = items2.includes(arg0);
+    hasItem = items2.includes(item10020);
   }
   return hasItem;
 }

@@ -2,7 +2,7 @@
 import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCreators.tsx";
 import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 
-const ChannelLayouts = fn(1084).ChannelLayouts;
+const ChannelLayouts = fn(1072).ChannelLayouts;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/focusVoiceChannelActivity.tsx");
 

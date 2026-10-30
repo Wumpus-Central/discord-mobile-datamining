@@ -7,7 +7,7 @@ import IAPStoreDefault from "../../../stores/native/IAPStore.android.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import types from "../../virtual_currency/types.tsx";
-import _modDef9511 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
+import _modDef9530 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -24,7 +24,7 @@ function hasAtLeastOneGPlaySynced(nextResult) {
               let everyResult = variants.every((variants) => {
                 if (obj.getIsVariantProduct(variants)) {
                   variants = variants.variants;
-                  let everyResult = variants.every(/* F105557 */ function() { ... });
+                  let everyResult = variants.every(/* F94664 */ function() { ... });
                 } else {
                   const googleSkuIds = variants.googleSkuIds;
                   let tmp4;
@@ -148,17 +148,17 @@ export function getFormattedPriceForCollectiblesProduct(googleSkuIds, hasShopDis
     obj = BillingPlatformUtils;
   }
 }
-export function extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType) {
+export function extractPriceByPurchaseTypes(googleSkuIds, DEFAULT) {
   if (obj.isGooglePlayBillingSupported()) {
-    if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE) {
-      if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE_PREMIUM_TIER_2) {
+    if (DEFAULT !== closure_3.MOBILE) {
+      if (DEFAULT !== closure_3.MOBILE_PREMIUM_TIER_2) {
         return null;
       }
     }
     googleSkuIds = googleSkuIds.googleSkuIds;
     let tmp5;
     if (googleSkuIds != null) {
-      tmp5 = googleSkuIds[defaultPriceSetAssignmentPurchaseType];
+      tmp5 = googleSkuIds[DEFAULT];
     }
     const product = IAPStoreDefault.getProduct(tmp5);
     let tmp7;
@@ -169,16 +169,16 @@ export function extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignm
     }
     return tmp7;
   } else {
-    return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType);
+    return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
   }
   obj = BillingPlatformUtils;
 }
-export function getCollectibleGoogleSkuId(cResult, stateFromStores) {
+export function getCollectibleGoogleSkuId(product, stateFromStores) {
   if (null == stateFromStores) {
     return null;
   } else {
     const obj = PremiumUtilsDefault;
-    const googleSkuIds = cResult.googleSkuIds;
+    const googleSkuIds = product.googleSkuIds;
     let tmp5;
     if (googleSkuIds != null) {
       tmp5 = googleSkuIds[obj.canUseShopDiscounts(obj, stateFromStores) ? closure_3.MOBILE_PREMIUM_TIER_2 : closure_3.MOBILE];
@@ -189,9 +189,9 @@ export function getCollectibleGoogleSkuId(cResult, stateFromStores) {
     return tmp5;
   }
 }
-export function getGoogleSkuIds(products) {
-  let items = [];
-  let item = products.forEach((googleSkuIds) => {
+export function getGoogleSkuIds(items) {
+  items = [];
+  let item = items.forEach((googleSkuIds) => {
     let tmp = undefined !== googleSkuIds.googleSkuIds;
     if (tmp) {
       tmp = null !== googleSkuIds.googleSkuIds;
@@ -237,7 +237,7 @@ export function isGPlaySynced(variants) {
                 let everyResult = variants.every((variants) => {
                   if (obj.getIsVariantProduct(variants)) {
                     variants = variants.variants;
-                    let everyResult = variants.every(/* F105557 */ function() { ... });
+                    let everyResult = variants.every(/* F94664 */ function() { ... });
                   } else {
                     const googleSkuIds = variants.googleSkuIds;
                     let tmp4;
@@ -360,5 +360,5 @@ export function filterHiddenCategories(result1) {
   });
 }
 export function createOrbProfileBadge() {
-  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9511, description: "", isPreviewMode: true };
+  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9530, description: "", isPreviewMode: true };
 }

@@ -19,7 +19,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -35,7 +35,7 @@ export default {
             } else {
               dependencyMap = 1;
               c2 = 1;
-              const obj5 = { value: tmp4(7881).canOpenUrlScheme("roblox"), done: false };
+              const obj5 = { value: tmp4(7887).canOpenUrlScheme("roblox"), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -46,7 +46,7 @@ export default {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            const obj = tmp4(7879);
+            const obj = tmp4(7885);
             if (value) {
               obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {

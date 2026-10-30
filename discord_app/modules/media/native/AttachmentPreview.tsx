@@ -1,5 +1,4 @@
 // discord_app/modules/media/native/AttachmentPreview.tsx
-import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
@@ -7,27 +6,103 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef12158 from "../../../../_runtime/metro/12158__.js";
-import _modDef12159 from "../../../../_runtime/metro/12159__.js";
-import _modDef12160 from "../../../../_runtime/metro/12160__.js";
-import _modDef12161 from "../../../../_runtime/metro/12161__.js";
-import _modDef12162 from "../../../../_runtime/metro/12162__.js";
-import _modDef12163 from "../../../../_runtime/metro/12163__.js";
-import _modDef12164 from "../../../../_runtime/metro/12164__.js";
-import _modDef12165 from "../../../../_runtime/metro/12165__.js";
-import _modDef12166 from "../../../../_runtime/metro/12166__.js";
-import _modDef12167 from "../../../../_runtime/metro/12167__.js";
-import _modDef12168 from "../../../../_runtime/metro/12168__.js";
-import _modDef12169 from "../../../../_runtime/metro/12169__.js";
-import _modDef12170 from "../../../../_runtime/metro/12170__.js";
-import _modDef12171 from "../../../../_runtime/metro/12171__.js";
+import _modDef11093 from "../../../../_runtime/metro/11093__.js";
+import _modDef11094 from "../../../../_runtime/metro/11094__.js";
+import _modDef11095 from "../../../../_runtime/metro/11095__.js";
+import _modDef11096 from "../../../../_runtime/metro/11096__.js";
+import _modDef11097 from "../../../../_runtime/metro/11097__.js";
+import _modDef11098 from "../../../../_runtime/metro/11098__.js";
+import _modDef11099 from "../../../../_runtime/metro/11099__.js";
+import _modDef11100 from "../../../../_runtime/metro/11100__.js";
+import _modDef11101 from "../../../../_runtime/metro/11101__.js";
+import _modDef11102 from "../../../../_runtime/metro/11102__.js";
+import _modDef11103 from "../../../../_runtime/metro/11103__.js";
+import _modDef11104 from "../../../../_runtime/metro/11104__.js";
+import _modDef11105 from "../../../../_runtime/metro/11105__.js";
+import _modDef11106 from "../../../../_runtime/metro/11106__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
+class AttachmentIcon {
+  constructor(arg0) {
+    fileName = global.fileName;
+    items = [];
+    items[0] = fileName;
+    tmp = closure_7();
+    memo = closure_3.useMemo(() => {
+      const obj = FileUtils;
+      let str = fileName;
+      if (fileName == null) {
+        str = "";
+      }
+      let tmp2 = obj4[obj.classifyFileName(obj, str)];
+      if (tmp2 == null) {
+        tmp2 = _modDef11104;
+      }
+      return tmp2;
+    }, items);
+    obj = { style: tmp.attachmentFileIcon, source: memo };
+    return jsx(closure_1(closure_2[20]), obj);
+  }
+}
+function FilenameText(fileName) {
+  fileName = fileName.fileName;
+  const tmp = closure_7();
+  let str = fileName;
+  if (fileName == null) {
+    str = "";
+  }
+  const match = /(?:\.([^.]+))?$/.exec(str);
+  let tmp5 = null != fileName;
+  if (tmp5) {
+    tmp5 = "" !== fileName;
+  }
+  if (tmp5) {
+    const obj2 = {
+      style: tmp.attachmentFileName,
+      ellipsizeMode: "middle",
+      lineClamp: 1,
+      variant: "text-xs/medium",
+      color: "mobile-text-heading-primary",
+      children: fileName,
+    };
+    tmp5 = hasOwnProperty(Text_Text.Text, obj2);
+  }
+  const items = [tmp5];
+  const obj3 = {
+    style: tmp.attachmentFileName,
+    lineClamp: 1,
+    variant: "text-xs/medium",
+    color: "text-muted",
+    children: null,
+  };
+  let str3 = "UNKNOWN";
+  if (null != match) {
+    str3 = "UNKNOWN";
+    if (null != match[1]) {
+      str3 = match[1].toUpperCase();
+    }
+  }
+  obj4 = { children: null };
+  obj3.children = str3;
+  items[1] = hasOwnProperty(Text_Text.Text, obj3);
+  obj4.children = items;
+  return timestampProducer(View, obj4);
+}
+function DefaultAttachmentPreview(fileName) {
+  fileName = fileName.fileName;
+  ({ maxFileWidth, borderRadius } = fileName);
+  const obj = { style: null, children: null };
+  const items = [closure_7().fileInfoAttachmentPreviewFile, { maxWidth: maxFileWidth, borderRadius }];
+  obj.style = items;
+  const items1 = [hasOwnProperty(AttachmentIcon, { fileName }), hasOwnProperty(FilenameText, { fileName })];
+  obj.children = items1;
+  return timestampProducer(View, obj);
+}
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = {
   fileInfoAttachmentPreviewFile: {
     flexDirection: "row",
@@ -51,490 +126,72 @@ let obj = {
     justifyContent: "center",
   },
 };
-let closure_7 = createStyles.createStyles(obj);
+const React5 = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef12158,
-  acrobat: _modDef12159,
-  ae: _modDef12160,
-  ai: _modDef12161,
-  audio: _modDef12162,
-  code: _modDef12163,
-  document: _modDef12164,
-  image: _modDef12165,
-  photoshop: _modDef12166,
-  sketch: _modDef12167,
-  spreadsheet: _modDef12168,
-  unknown: _modDef12169,
-  video: _modDef12170,
-  webcode: _modDef12171,
+  archive: _modDef11093,
+  acrobat: _modDef11094,
+  ae: _modDef11095,
+  ai: _modDef11096,
+  audio: _modDef11097,
+  code: _modDef11098,
+  document: _modDef11099,
+  image: _modDef11100,
+  photoshop: _modDef11101,
+  sketch: _modDef11102,
+  spreadsheet: _modDef11103,
+  unknown: _modDef11104,
+  video: _modDef11105,
+  webcode: _modDef11106,
 };
-let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function AttachmentIcon(fileName) {
-      const cResult = c.c(3);
-      let str = fileName.fileName;
-      const tmp3 = closure_7();
-      const obj2 = FileUtils;
-      if (str == null) {
-        str = "";
-      }
-      let tmp4 = obj4[obj2.classifyFileName(obj2, str)];
-      if (tmp4 == null) {
-        tmp4 = _modDef12169;
-      }
-      if (cResult[0] === tmp4) {
-        if (cResult[1] === tmp3.attachmentFileIcon) {
-          let tmp6 = cResult[2];
-        }
-        return tmp6;
-      }
-      const tmp7 = hasOwnProperty(FastImageDefault, { style: tmp3.attachmentFileIcon, source: tmp4 });
-      cResult[0] = tmp4;
-      cResult[1] = tmp3.attachmentFileIcon;
-      cResult[2] = tmp7;
-      tmp6 = tmp7;
-      const obj3 = { style: tmp3.attachmentFileIcon, source: tmp4 };
+let closure_12 = noop.memo(function ImageThumbnail(borderRadius) {
+  ({ uri, width, height, style, fileName } = borderRadius);
+  const size = { uri, width, height };
+  const size1 = { width, height, borderRadius: borderRadius.borderRadius };
+  let isMatch = null != fileName;
+  if (isMatch) {
+    isMatch = "" !== fileName;
+  }
+  if (isMatch) {
+    isMatch = /\.gif$/i.test(fileName);
+    const obj3 = /\.gif$/i;
+  }
+  if (isMatch) {
+    let isIOSResult = PlatformUtils.isIOS();
+    if (isIOSResult) {
+      isIOSResult = uri.startsWith("ph://");
     }
-  : function AttachmentIcon(fileName) {
-      fileName = fileName.fileName;
-      const items = [fileName];
-      const memo = noop.useMemo(() => {
-        const obj = FileUtils;
-        let str = fileName;
-        if (fileName == null) {
-          str = "";
-        }
-        let tmp2 = obj4[obj.classifyFileName(obj, str)];
-        if (tmp2 == null) {
-          tmp2 = _modDef12169;
-        }
-        return tmp2;
-      }, items);
-      const tmp = closure_7();
-      return closure_5(FastImageDefault, { style: closure_7().attachmentFileIcon, source: memo });
-    };
-let closure_9 = tmp3;
-ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function FilenameText(fileName) {
-      const cResult = c.c(21);
-      fileName = fileName.fileName;
-      const tmp4 = closure_7();
-      if (cResult[0] === fileName) {
-        if (cResult[1] === tmp4.attachmentFileName) {
-          let tmp5 = cResult[2];
-          let tmp6 = cResult[3];
-          let tmp7 = cResult[4];
-          let num = cResult[5];
-          let str = cResult[6];
-          let str2 = cResult[7];
-          let tmp8 = cResult[8];
-          let tmp9 = cResult[9];
-        }
-        if (cResult[10] === tmp5) {
-          if (cResult[11] === tmp7) {
-            if (cResult[12] === num) {
-              if (cResult[13] === str) {
-                if (cResult[14] === str2) {
-                  if (cResult[15] === tmp8) {
-                    let tmp14 = cResult[16];
-                  }
-                  if (cResult[17] === tmp6) {
-                    if (cResult[18] === tmp9) {
-                      if (cResult[19] === tmp14) {
-                        let tmp17 = cResult[20];
-                      }
-                      return tmp17;
-                    }
-                  }
-                  const obj3 = { children: null };
-                  const items = [tmp9, tmp14];
-                  obj3.children = items;
-                  const tmp19 = timestampProducer(tmp6, obj3);
-                  cResult[17] = tmp6;
-                  cResult[18] = tmp9;
-                  cResult[19] = tmp14;
-                  cResult[20] = tmp19;
-                  tmp17 = tmp19;
-                }
-              }
-            }
-          }
-        }
-        obj4 = { style: tmp7, lineClamp: num, variant: str, color: str2, children: tmp8 };
-        const tmp16 = hasOwnProperty(tmp5, obj4);
-        cResult[10] = tmp5;
-        cResult[11] = tmp7;
-        cResult[12] = num;
-        cResult[13] = str;
-        cResult[14] = str2;
-        cResult[15] = tmp8;
-        cResult[16] = tmp16;
-        tmp14 = tmp16;
+    if (!isIOSResult) {
+      let isAndroidResult = PlatformUtils.isAndroid();
+      if (isAndroidResult) {
+        isAndroidResult = uri.startsWith("content://");
       }
-      let str3 = fileName;
-      if (fileName == null) {
-        str3 = "";
-      }
-      const match = /(?:\.([^.]+))?$/.exec(str3);
-      let tmp12 = null != fileName;
-      if (tmp12) {
-        tmp12 = "" !== fileName;
-      }
-      if (tmp12) {
-        const obj5 = {
-          style: tmp4.attachmentFileName,
-          ellipsizeMode: "middle",
-          lineClamp: 1,
-          variant: "text-xs/medium",
-          color: "mobile-text-heading-primary",
-          children: fileName,
-        };
-        tmp12 = hasOwnProperty(Text_Text.Text, obj5);
-      }
-      const Text = Text_Text.Text;
-      const attachmentFileName = tmp4.attachmentFileName;
-      let str5 = "UNKNOWN";
-      if (null != match) {
-        str5 = "UNKNOWN";
-        if (null != match[1]) {
-          str5 = match[1].toUpperCase();
-        }
-      }
-      cResult[0] = fileName;
-      cResult[1] = tmp4.attachmentFileName;
-      cResult[2] = Text;
-      cResult[3] = View;
-      cResult[4] = attachmentFileName;
-      cResult[5] = 1;
-      cResult[6] = "text-xs/medium";
-      cResult[7] = "text-muted";
-      cResult[8] = str5;
-      cResult[9] = tmp12;
-      tmp8 = str5;
-      tmp9 = tmp12;
-      str2 = "text-muted";
-      str = "text-xs/medium";
-      num = 1;
-      tmp7 = attachmentFileName;
-      tmp6 = View;
-      tmp5 = Text;
-      const obj2 = /(?:\.([^.]+))?$/;
+      isIOSResult = isAndroidResult;
+      const tmp2Result = PlatformUtils;
     }
-  : function FilenameText(fileName) {
-      fileName = fileName.fileName;
-      const tmp = closure_7();
-      let str = fileName;
-      if (fileName == null) {
-        str = "";
-      }
-      const match = /(?:\.([^.]+))?$/.exec(str);
-      let tmp5 = null != fileName;
-      if (tmp5) {
-        tmp5 = "" !== fileName;
-      }
-      if (tmp5) {
-        const obj2 = {
-          style: tmp.attachmentFileName,
-          ellipsizeMode: "middle",
-          lineClamp: 1,
-          variant: "text-xs/medium",
-          color: "mobile-text-heading-primary",
-          children: fileName,
-        };
-        tmp5 = hasOwnProperty(Text_Text.Text, obj2);
-      }
-      const items = [tmp5];
-      const obj3 = {
-        style: tmp.attachmentFileName,
-        lineClamp: 1,
-        variant: "text-xs/medium",
-        color: "text-muted",
-        children: null,
-      };
-      let str3 = "UNKNOWN";
-      if (null != match) {
-        str3 = "UNKNOWN";
-        if (null != match[1]) {
-          str3 = match[1].toUpperCase();
-        }
-      }
-      obj4 = { children: null };
-      obj3.children = str3;
-      items[1] = hasOwnProperty(Text_Text.Text, obj3);
-      obj4.children = items;
-      return timestampProducer(View, obj4);
-    };
-ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function DefaultAttachmentPreview(arg0) {
-      const cResult = c.c(13);
-      ({ fileName, maxFileWidth, borderRadius } = arg0);
-      const tmp2 = closure_7();
-      if (cResult[0] === borderRadius) {
-        if (cResult[1] === maxFileWidth) {
-          let tmp3 = cResult[2];
-        }
-        if (cResult[3] === tmp2.fileInfoAttachmentPreviewFile) {
-          if (cResult[4] === tmp3) {
-            let tmp4 = cResult[5];
-          }
-          if (cResult[6] !== fileName) {
-            const obj2 = { fileName };
-            const tmp9 = hasOwnProperty(closure_9, obj2);
-            const obj3 = { fileName };
-            const tmp11 = hasOwnProperty(closure_10, obj3);
-            cResult[6] = fileName;
-            cResult[7] = tmp9;
-            cResult[8] = tmp11;
-            let tmp6 = tmp11;
-            let tmp5 = tmp9;
-          } else {
-            tmp5 = cResult[7];
-            tmp6 = cResult[8];
-          }
-          if (cResult[9] === tmp4) {
-            if (cResult[10] === tmp5) {
-              if (cResult[11] === tmp6) {
-                let tmp12 = cResult[12];
-              }
-              return tmp12;
-            }
-          }
-          obj4 = { style: tmp4, children: null };
-          const items = [tmp5, tmp6];
-          obj4.children = items;
-          const tmp15 = timestampProducer(View, obj4);
-          cResult[9] = tmp4;
-          cResult[10] = tmp5;
-          cResult[11] = tmp6;
-          cResult[12] = tmp15;
-          tmp12 = tmp15;
-        }
-        const items1 = [tmp2.fileInfoAttachmentPreviewFile, tmp3];
-        cResult[3] = tmp2.fileInfoAttachmentPreviewFile;
-        cResult[4] = tmp3;
-        cResult[5] = items1;
-        tmp4 = items1;
-      }
-      const obj5 = { maxWidth: maxFileWidth, borderRadius };
-      cResult[0] = borderRadius;
-      cResult[1] = maxFileWidth;
-      cResult[2] = obj5;
-      tmp3 = obj5;
-    }
-  : function DefaultAttachmentPreview(fileName) {
-      fileName = fileName.fileName;
-      ({ maxFileWidth, borderRadius } = fileName);
-      const obj = { style: null, children: null };
-      const items = [closure_7().fileInfoAttachmentPreviewFile, { maxWidth: maxFileWidth, borderRadius }];
-      obj.style = items;
-      const items1 = [hasOwnProperty(closure_9, { fileName }), hasOwnProperty(closure_10, { fileName })];
-      obj.children = items1;
-      return timestampProducer(View, obj);
-    };
-ReactCompilerGating = fn(558);
-let closure_12 = noop.memo(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? function ImageThumbnail(arg0) {
-        const cResult = c.c(36);
-        ({ uri, width, height, borderRadius, style, fileName } = arg0);
-        if (cResult[0] === height) {
-          if (cResult[1] === uri) {
-            if (cResult[2] === width) {
-              let tmp4 = cResult[3];
-            }
-            if (cResult[4] === borderRadius) {
-              if (cResult[5] === height) {
-                if (cResult[6] === width) {
-                  let tmp5 = cResult[7];
-                }
-                let isMatch = null != fileName;
-                if (isMatch) {
-                  isMatch = "" !== fileName;
-                }
-                if (isMatch) {
-                  isMatch = /\.gif$/i.test(fileName);
-                  obj4 = /\.gif$/i;
-                }
-                if (isMatch) {
-                  if (!tmpResult.isIOS()) {
-                    const tmpResult2 = PlatformUtils;
-                  }
-                  const _Symbol2 = Symbol;
-                  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-                    const obj2 = { overflow: "hidden" };
-                    cResult[8] = obj2;
-                    let tmp20 = obj2;
-                  } else {
-                    tmp20 = cResult[8];
-                  }
-                  if (cResult[9] === style) {
-                    if (cResult[10] === tmp5) {
-                      let tmp21 = cResult[11];
-                    }
-                    if (cResult[12] === style) {
-                      if (cResult[13] === tmp5) {
-                        let tmp22 = cResult[14];
-                      }
-                      if (cResult[15] !== uri) {
-                        const obj3 = { uri };
-                        cResult[15] = uri;
-                        cResult[16] = obj3;
-                        let tmp23 = obj3;
-                      } else {
-                        tmp23 = cResult[16];
-                      }
-                      if (cResult[17] === tmp22) {
-                        if (cResult[18] === tmp23) {
-                          let tmp24 = cResult[19];
-                        }
-                        if (cResult[20] === tmp21) {
-                        }
-                        const obj5 = { style: tmp21, children: tmp24 };
-                        const tmp31 = hasOwnProperty(View, obj5);
-                        cResult[20] = tmp21;
-                        cResult[21] = tmp24;
-                        cResult[22] = tmp31;
-                      }
-                      const obj6 = { style: tmp22, source: tmp23, resizeMode: "cover", enableAnimation: true };
-                      const tmp27 = hasOwnProperty(FastImageDefault, obj6);
-                      cResult[17] = tmp22;
-                      cResult[18] = tmp23;
-                      cResult[19] = tmp27;
-                      tmp24 = tmp27;
-                    }
-                    const items = [tmp5, style];
-                    cResult[12] = style;
-                    cResult[13] = tmp5;
-                    cResult[14] = items;
-                    tmp22 = items;
-                  }
-                  const items1 = [tmp5, style, tmp20];
-                  cResult[9] = style;
-                  cResult[10] = tmp5;
-                  cResult[11] = items1;
-                  tmp21 = items1;
-                  tmpResult = PlatformUtils;
-                }
-                const _Symbol = Symbol;
-                if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                  const obj7 = { overflow: "hidden" };
-                  cResult[23] = obj7;
-                  let tmp9 = obj7;
-                } else {
-                  tmp9 = cResult[23];
-                }
-                if (cResult[24] === style) {
-                  if (cResult[25] === tmp5) {
-                    let tmp10 = cResult[26];
-                  }
-                  if (cResult[27] === style) {
-                    if (cResult[28] === tmp5) {
-                      let tmp11 = cResult[29];
-                    }
-                    if (cResult[30] === tmp4) {
-                      if (cResult[31] === tmp11) {
-                        let tmp12 = cResult[32];
-                      }
-                      if (cResult[33] === tmp10) {
-                        if (cResult[34] === tmp12) {
-                          let tmp15 = cResult[35];
-                        }
-                        return tmp15;
-                      }
-                      const obj8 = { style: tmp10, children: tmp12 };
-                      const tmp18 = hasOwnProperty(View, obj8);
-                      cResult[33] = tmp10;
-                      cResult[34] = tmp12;
-                      cResult[35] = tmp18;
-                      tmp15 = tmp18;
-                    }
-                    const obj9 = { style: tmp11, source: tmp4, localImageSource: tmp4 };
-                    const tmp14 = hasOwnProperty(native.ThumbnailImage, obj9);
-                    cResult[30] = tmp4;
-                    cResult[31] = tmp11;
-                    cResult[32] = tmp14;
-                    tmp12 = tmp14;
-                  }
-                  const items2 = [tmp5, style];
-                  cResult[27] = style;
-                  cResult[28] = tmp5;
-                  cResult[29] = items2;
-                  tmp11 = items2;
-                }
-                const items3 = [tmp5, style, tmp9];
-                cResult[24] = style;
-                cResult[25] = tmp5;
-                cResult[26] = items3;
-                tmp10 = items3;
-              }
-            }
-            const size = { width, height, borderRadius };
-            cResult[4] = borderRadius;
-            cResult[5] = height;
-            cResult[6] = width;
-            cResult[7] = size;
-            tmp5 = size;
-          }
-        }
-        const size1 = { uri, width, height };
-        cResult[0] = height;
-        cResult[1] = uri;
-        cResult[2] = width;
-        cResult[3] = size1;
-        tmp4 = size1;
-      }
-    : function ImageThumbnail(borderRadius) {
-        ({ uri, width, height, style, fileName } = borderRadius);
-        const size = { uri, width, height };
-        const size1 = { width, height, borderRadius: borderRadius.borderRadius };
-        let isMatch = null != fileName;
-        if (isMatch) {
-          isMatch = "" !== fileName;
-        }
-        if (isMatch) {
-          isMatch = /\.gif$/i.test(fileName);
-          const obj3 = /\.gif$/i;
-        }
-        if (isMatch) {
-          let isIOSResult = PlatformUtils.isIOS();
-          if (isIOSResult) {
-            isIOSResult = uri.startsWith("ph://");
-          }
-          if (!isIOSResult) {
-            let isAndroidResult = PlatformUtils.isAndroid();
-            if (isAndroidResult) {
-              isAndroidResult = uri.startsWith("content://");
-            }
-            isIOSResult = isAndroidResult;
-            const tmp2Result = PlatformUtils;
-          }
-          isMatch = isIOSResult;
-        }
-        const obj = { style: null, children: null };
-        const items = [size1, style, { overflow: "hidden" }];
-        obj.style = items;
-        if (isMatch) {
-          const obj2 = { style: null, source: null, resizeMode: "cover", enableAnimation: true };
-          const items1 = [size1, style];
-          obj2.style = items1;
-          const obj5 = { uri };
-          obj2.source = obj5;
-          obj.children = hasOwnProperty(FastImageDefault, obj2);
-          let tmp10 = obj;
-        } else {
-          const obj6 = { style: null, source: null, localImageSource: null };
-          const items2 = [size1, style];
-          obj6.style = items2;
-          obj6.source = size;
-          obj6.localImageSource = size;
-          obj.children = hasOwnProperty(native.ThumbnailImage, obj6);
-          tmp10 = obj;
-        }
-        return hasOwnProperty(View, tmp10);
-      },
-);
+    isMatch = isIOSResult;
+  }
+  const obj = { style: null, children: null };
+  const items = [size1, style, { overflow: "hidden" }];
+  obj.style = items;
+  if (isMatch) {
+    const obj2 = { style: null, source: null, resizeMode: "cover", enableAnimation: true };
+    const items1 = [size1, style];
+    obj2.style = items1;
+    const obj5 = { uri };
+    obj2.source = obj5;
+    obj.children = hasOwnProperty(FastImageDefault, obj2);
+    let tmp10 = obj;
+  } else {
+    const obj6 = { style: null, source: null, localImageSource: null };
+    const items2 = [size1, style];
+    obj6.style = items2;
+    obj6.source = size;
+    obj6.localImageSource = size;
+    obj.children = hasOwnProperty(native.ThumbnailImage, obj6);
+    tmp10 = obj;
+  }
+  return hasOwnProperty(View, tmp10);
+});
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/media/native/AttachmentPreview.tsx");
 
@@ -558,7 +215,7 @@ export default function AttachmentPreview(height) {
   let defaultPreview = height.defaultPreview;
   if (defaultPreview === undefined) {
     const obj = { fileName, maxFileWidth, borderRadius };
-    defaultPreview = hasOwnProperty(closure_11, obj);
+    defaultPreview = hasOwnProperty(DefaultAttachmentPreview, obj);
   }
   const style = height.style;
   let videoIcon = closure_7();
@@ -606,7 +263,7 @@ export default function AttachmentPreview(height) {
       const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj8.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(9348).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(9362).CirclePlayIcon;
       tmp6 = hasOwnProperty(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj8.children = tmp6;
       items[1] = hasOwnProperty(View, obj8);
@@ -619,4 +276,4 @@ export default function AttachmentPreview(height) {
   }
   return tmp9;
 }
-export const AttachmentIcon = tmp3;
+export { AttachmentIcon };

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_tag/badges/getTransformedBadgeColors.tsx
-import _modDef683 from "../../../../_runtime/metro/00683__.js";
+import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
@@ -21,7 +21,7 @@ export function getTransformedBadgeColors(arg0) {
       } else {
         let map2 = dependencyMap;
         if (obj2.valid(secondaryTintColor)) {
-          secondaryTintColor = _modDef683(secondaryTintColor);
+          secondaryTintColor = _modDef671(secondaryTintColor);
           primaryTintColor = secondaryTintColor;
           closure_2 = secondaryTintColor.luminance();
           map2 = secondaryTintLuminances.map;
@@ -36,7 +36,7 @@ export function getTransformedBadgeColors(arg0) {
         } else {
           map2Result = secondaryTintLuminances.map(() => "#000000");
         }
-        obj2 = _modDef683;
+        obj2 = _modDef671;
       }
     }
     const obj3 = { primaryColorsTransformed: tmp, secondaryColorsTransformed: items };
@@ -45,7 +45,7 @@ export function getTransformedBadgeColors(arg0) {
     secondaryLuminanceWeights = tmp2;
     let map = dependencyMap;
     if (obj.valid(primaryTintColor)) {
-      primaryTintColor = _modDef683(primaryTintColor);
+      primaryTintColor = _modDef671(primaryTintColor);
       closure_2 = primaryTintColor.luminance();
       map = primaryTintLuminances.map;
       let mapped = map((arg0, arg1) =>
@@ -59,6 +59,6 @@ export function getTransformedBadgeColors(arg0) {
     } else {
       mapped = primaryTintLuminances.map(() => "#000000");
     }
-    obj = _modDef683;
+    obj = _modDef671;
   }
 }

@@ -51,7 +51,7 @@ function handleAppStateUpdate(state) {
     );
   }
 }
-const UserSettingsTypes = fn(1094).UserSettingsTypes;
+const UserSettingsTypes = fn(1082).UserSettingsTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoManager.tsx");
 

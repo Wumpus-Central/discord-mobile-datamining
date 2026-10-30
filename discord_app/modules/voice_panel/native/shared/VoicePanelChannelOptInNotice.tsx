@@ -4,120 +4,33 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelChannelOptInNotice.tsx");
 
-export default noop.memo(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? function VoicePanelChannelOptInNotice(analyticsSection) {
-        const cResult = channel(576).c(12);
-        ({ style, channel } = analyticsSection);
-        analyticsSection = analyticsSection.analyticsSection;
-        if (cResult[0] === analyticsSection) {
-          if (cResult[1] === channel.guild_id) {
-            if (cResult[2] === channel.id) {
-              let tmp4 = cResult[3];
-            }
-            const _Symbol = Symbol;
-            if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = channel(1125).intl;
-              const stringResult = intl.string(channel(1125).t["9mysCh"]);
-              const intl2 = channel(1125).intl;
-              const stringResult1 = intl2.string(channel(1125).t.PDUCIN);
-              const obj2 = { IconComponent: channel(15580).ChannelListMagnifyingGlassIcon };
-              const tmp12 = jsx(channel(6971).TableRowIcon, {
-                IconComponent: channel(15580).ChannelListMagnifyingGlassIcon,
-              });
-              cResult[4] = stringResult;
-              cResult[5] = stringResult1;
-              cResult[6] = tmp12;
-              let tmp8 = tmp12;
-              let tmp7 = stringResult1;
-              let tmp6 = stringResult;
-            } else {
-              tmp6 = cResult[4];
-              tmp7 = cResult[5];
-              tmp8 = cResult[6];
-            }
-            if (cResult[7] !== tmp4) {
-              const obj3 = {
-                label: tmp6,
-                subLabel: tmp7,
-                icon: tmp8,
-                onPress: tmp4,
-                start: true,
-                end: true,
-                arrow: true,
-              };
-              const tmp15 = jsx(channel(6963).TableRow, {
-                label: tmp6,
-                subLabel: tmp7,
-                icon: tmp8,
-                onPress: tmp4,
-                start: true,
-                end: true,
-                arrow: true,
-              });
-              cResult[7] = tmp4;
-              cResult[8] = tmp15;
-              let tmp13 = tmp15;
-            } else {
-              tmp13 = cResult[8];
-            }
-            if (cResult[9] === style) {
-              if (cResult[10] === tmp13) {
-                let tmp16 = cResult[11];
-              }
-              return tmp16;
-            }
-            const obj4 = { style, children: tmp13 };
-            const tmp19 = jsx(analyticsSection(6946), { style, children: tmp13 });
-            cResult[9] = style;
-            cResult[10] = tmp13;
-            cResult[11] = tmp19;
-            tmp16 = tmp19;
-          }
-        }
-        const fn = function l() {
-          OptInChannelsActionCreators.setOptInChannel(channel.guild_id, channel.id, true, {
-            section: analyticsSection,
-          });
-        };
-        cResult[0] = analyticsSection;
-        cResult[1] = channel.guild_id;
-        cResult[2] = channel.id;
-        cResult[3] = fn;
-        tmp4 = fn;
-        const obj = channel(576);
-      }
-    : function VoicePanelChannelOptInNotice(channel) {
-        channel = channel.channel;
-        const analyticsSection = channel.analyticsSection;
-        const items = [channel, analyticsSection];
-        const callback = noop.useCallback(() => {
-          OptInChannelsActionCreators.setOptInChannel(channel.guild_id, channel.id, true, {
-            section: analyticsSection,
-          });
-        }, items);
-        const obj = { style: channel.style, children: null };
-        const obj2 = { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true };
-        const intl = channel(1125).intl;
-        obj2.label = intl.string(channel(1125).t["9mysCh"]);
-        const intl2 = channel(1125).intl;
-        obj2.subLabel = intl2.string(channel(1125).t.PDUCIN);
-        const tmp2 = analyticsSection(6946);
-        obj2.icon = jsx(channel(6971).TableRowIcon, { IconComponent: channel(15580).ChannelListMagnifyingGlassIcon });
-        obj2.onPress = callback;
-        obj.children = jsx(channel(6963).TableRow, {
-          label: null,
-          subLabel: null,
-          icon: null,
-          onPress: null,
-          start: true,
-          end: true,
-          arrow: true,
-        });
-        return <tmp2 style={channel.style}>{null}</tmp2>;
-      },
-);
+export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
+  channel = channel.channel;
+  const analyticsSection = channel.analyticsSection;
+  const items = [channel, analyticsSection];
+  const callback = noop.useCallback(() => {
+    OptInChannelsActionCreators.setOptInChannel(channel.guild_id, channel.id, true, { section: analyticsSection });
+  }, items);
+  const obj = { style: channel.style, children: null };
+  const obj2 = { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true };
+  const intl = channel(1114).intl;
+  obj2.label = intl.string(channel(1114).t["9mysCh"]);
+  const intl2 = channel(1114).intl;
+  obj2.subLabel = intl2.string(channel(1114).t.PDUCIN);
+  const tmp2 = analyticsSection(6954);
+  obj2.icon = jsx(channel(6977).TableRowIcon, { IconComponent: channel(15620).ChannelListMagnifyingGlassIcon });
+  obj2.onPress = callback;
+  obj.children = jsx(channel(6969).TableRow, {
+    label: null,
+    subLabel: null,
+    icon: null,
+    onPress: null,
+    start: true,
+    end: true,
+    arrow: true,
+  });
+  return <tmp2 style={channel.style}>{null}</tmp2>;
+});

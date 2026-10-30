@@ -1,12 +1,12 @@
 // discord_app/modules/reanimated/native/cheapWorkletShallowEqual.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-function cheapWorkletShallowEqual(safeAreaState, safeAreaState2) {
-  if (safeAreaState === safeAreaState2) {
+function cheapWorkletShallowEqual(safeAreaState, current) {
+  if (safeAreaState === current) {
     return true;
   } else {
     if (null != safeAreaState) {
-      if (null != safeAreaState2) {
+      if (null != current) {
         for (const key10005 in arg0) {
           if (arg0[key10005] === arg1[key10005]) {
             continue;

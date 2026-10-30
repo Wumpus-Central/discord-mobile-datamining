@@ -1,5 +1,5 @@
 // discord_app/modules/polls/PollInteractionUtils.native.tsx
-import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01995_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/polls/PollInteractionUtils.na
 
 export function showVotesForAnswer(initialAnswerId) {
   const message = initialAnswerId.message;
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12210, dependencyMap.paths), "PollVotesActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12366, dependencyMap.paths), "PollVotesActionSheet", {
     channelId: message.channel_id,
     messageId: message.id,
     initialAnswerId: initialAnswerId.initialAnswerId,

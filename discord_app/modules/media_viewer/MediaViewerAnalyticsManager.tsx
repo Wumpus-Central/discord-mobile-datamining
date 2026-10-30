@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 let obj = {
   VIEWER_SWIPE: "number_viewer_swipes",
@@ -21,13 +21,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "duration",
-  channelId: "toCharArray$esjava$1",
-  channelType: "toCharArray$esjava$1",
+  guildId: "sa",
+  channelId: "isArray",
+  channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "application",
-  source: "Boolean",
-  incrementableActions: "toCharArray$esjava$1",
+  hasMediaOptions: "id",
+  source: 225509649,
+  incrementableActions: 1107296256,
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(
@@ -36,8 +36,8 @@ obj2.incrementableActions = Object.fromEntries(
     return items;
   }),
 );
-const module_570 = fn(570);
-let closure_6 = module_570.create(() => obj2);
+const module_560 = fn(560);
+let closure_6 = module_560.create(() => obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/MediaViewerAnalyticsManager.tsx");
 

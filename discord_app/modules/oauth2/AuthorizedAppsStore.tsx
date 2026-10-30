@@ -40,10 +40,10 @@ const prototype = AuthorizedAppsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore, ConnectedAppsStore, MessageStore);
 };
-prototype["getNewestTokenForApplication"] = function getNewestTokenForApplication(application_id) {
+prototype["getNewestTokenForApplication"] = function getNewestTokenForApplication(id) {
   let tmp = null;
-  if (null != application_id) {
-    value = map.get(application_id);
+  if (null != id) {
+    value = map.get(id);
     if (value == null) {
       value = null;
     }

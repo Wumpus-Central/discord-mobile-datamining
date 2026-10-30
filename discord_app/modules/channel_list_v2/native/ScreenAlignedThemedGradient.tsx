@@ -1,13 +1,10 @@
 // discord_app/modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import c from "../../../../_runtime/00576_c.js";
 import useActiveTheme from "../../client_themes/native/useActiveTheme.tsx";
 import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import "ReactCompilerGating";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
@@ -26,174 +23,49 @@ let closure_6 = createStyles.createStyles((arg0, arg1) => {
 const __initData = {
   code: "function ScreenAlignedThemedGradientTsx1(){const{roundToNearestPixel,offsetX,panelTranslateX,offsetY}=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-panelTranslateX.get())},{translateY:roundToNearestPixel(-offsetY)}]};}",
 };
-const __initData2 = {
-  code: "function ScreenAlignedThemedGradientTsx2(){const{roundToNearestPixel,offsetX,panelTranslateX,offsetY}=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-panelTranslateX.get())},{translateY:roundToNearestPixel(-offsetY)}]};}",
-};
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ScreenAlignedThemedGradient(arg0) {
-      const cResult = c.c(5);
-      ({ offsetX, offsetY } = arg0);
-      const isClientThemeOrCustomThemeActive = useActiveTheme.useIsClientThemeOrCustomThemeActive();
-      const tmp4 = closure_6(offsetX, offsetY);
-      if (cResult[0] !== isClientThemeOrCustomThemeActive) {
-        const obj3 = { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive };
-        const tmp8 = jsx(ThemedGradientDefault, {
-          absolute: true,
-          tall: true,
-          wide: true,
-          mix: isClientThemeOrCustomThemeActive,
-        });
-        cResult[0] = isClientThemeOrCustomThemeActive;
-        cResult[1] = tmp8;
-        let tmp5 = tmp8;
-      } else {
-        tmp5 = cResult[1];
-      }
-      if (cResult[2] === tmp4.container) {
-        if (cResult[3] === tmp5) {
-          let tmp9 = cResult[4];
-        }
-        return tmp9;
-      }
-      const tmp10 = (
-        <React4 pointerEvents="none" style={tmp4.container}>
-          {tmp5}
-        </React4>
-      );
-      cResult[2] = tmp4.container;
-      cResult[3] = tmp5;
-      cResult[4] = tmp10;
-      tmp9 = tmp10;
-      const obj4 = { pointerEvents: "none", style: tmp4.container, children: tmp5 };
-    }
-  : function ScreenAlignedThemedGradient(arg0) {
-      ({ offsetX, offsetY } = arg0);
-      const isClientThemeOrCustomThemeActive = useActiveTheme.useIsClientThemeOrCustomThemeActive();
-      return (
-        <React4 pointerEvents="none" style={closure_6(offsetX, offsetY).container}>
-          {jsx(ThemedGradientDefault, {
-            absolute: true,
-            tall: true,
-            wide: true,
-            mix: isClientThemeOrCustomThemeActive,
-          })}
-        </React4>
-      );
-    };
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx");
 
-export default tmp3;
-export const ScreenAlignedThemedGradientSliding = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ScreenAlignedThemedGradientSliding(offsetX) {
-      const cResult = offsetX(panelTranslateX[5]).c(11);
-      offsetX = offsetX.offsetX;
-      const offsetY = offsetX.offsetY;
-      let obj = offsetX(panelTranslateX[5]);
-      let tmp = offsetX;
-      const isClientThemeOrCustomThemeActive = offsetX(panelTranslateX[6]).useIsClientThemeOrCustomThemeActive();
-      let obj2 = offsetX(panelTranslateX[6]);
-      panelTranslateX = offsetX(panelTranslateX[8]).useHomeDrawerState().panelTranslateX;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { ignoreKeyboard: true };
-        cResult[0] = obj4;
-        let first = obj4;
-      } else {
-        first = cResult[0];
-      }
-      const height = offsetY(tmp2[9])(first).height;
-      const obj3 = offsetX(panelTranslateX[8]);
-      const fn = function _() {
-        const obj = { transform: null };
-        const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - panelTranslateX.get()) };
-        const items = [obj2];
-        const tmp2 = -offsetX;
-        items[1] = { translateY: roundToNearestPixelDefault(-offsetY) };
-        obj.transform = items;
-        return obj;
-      };
-      const tmpResult = tmp(panelTranslateX[10]);
-      fn.__closure = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
-      fn.__workletHash = 14168713340122;
-      fn.__initData = __initData;
-      const animatedStyle = tmpResult.useAnimatedStyle(fn);
-      if (cResult[1] !== animatedStyle) {
-        let items = [closure_3.absoluteFill, animatedStyle];
-        cResult[1] = animatedStyle;
-        cResult[2] = items;
-        let tmp8 = items;
-      } else {
-        tmp8 = cResult[2];
-      }
-      if (cResult[3] !== height) {
-        const obj6 = { height };
-        cResult[3] = height;
-        cResult[4] = obj6;
-        let tmp10 = obj6;
-      } else {
-        tmp10 = cResult[4];
-      }
-      if (cResult[5] === isClientThemeOrCustomThemeActive) {
-        if (cResult[6] === tmp10) {
-          let tmp11 = cResult[7];
-        }
-        if (cResult[8] === tmp8) {
-          if (cResult[9] === tmp11) {
-            let tmp13 = cResult[10];
-          }
-          return tmp13;
-        }
-        const obj7 = { pointerEvents: "none", style: tmp8, children: tmp11 };
-        const tmp15 = jsx(tmp6(tmp2[10]).View, { pointerEvents: "none", style: tmp8, children: tmp11 });
-        cResult[8] = tmp8;
-        cResult[9] = tmp11;
-        cResult[10] = tmp15;
-        tmp13 = tmp15;
-      }
-      const tmp12 = jsx(offsetY(panelTranslateX[7]), {
-        absolute: true,
-        tall: true,
-        wide: true,
-        mix: isClientThemeOrCustomThemeActive,
-        componentStyles: tmp10,
-      });
-      cResult[5] = isClientThemeOrCustomThemeActive;
-      cResult[6] = tmp10;
-      cResult[7] = tmp12;
-      tmp11 = tmp12;
-      const obj5 = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
-    }
-  : function ScreenAlignedThemedGradientSliding(offsetX) {
-      offsetX = offsetX.offsetX;
-      const offsetY = offsetX.offsetY;
-      let panelTranslateX;
-      const isClientThemeOrCustomThemeActive = offsetX(panelTranslateX[6]).useIsClientThemeOrCustomThemeActive();
-      let obj = offsetX(panelTranslateX[6]);
-      panelTranslateX = offsetX(panelTranslateX[8]).useHomeDrawerState().panelTranslateX;
-      let obj2 = offsetX(panelTranslateX[8]);
-      const fn = function o() {
-        const obj = { transform: null };
-        const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - panelTranslateX.get()) };
-        const items = [obj2];
-        const tmp2 = -offsetX;
-        items[1] = { translateY: roundToNearestPixelDefault(-offsetY) };
-        obj.transform = items;
-        return obj;
-      };
-      const obj3 = offsetX(panelTranslateX[10]);
-      fn.__closure = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
-      fn.__workletHash = 9060649492153;
-      fn.__initData = __initData2;
-      const animatedStyle = obj3.useAnimatedStyle(fn);
-      const obj5 = { pointerEvents: "none", style: null, children: null };
-      let items = [closure_3.absoluteFill, animatedStyle];
-      obj5.style = items;
-      const obj4 = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
-      obj5.children = jsx(offsetY(panelTranslateX[7]), {
-        absolute: true,
-        tall: true,
-        wide: true,
-        mix: isClientThemeOrCustomThemeActive,
-        componentStyles: { height: offsetY(panelTranslateX[9])({ ignoreKeyboard: true }).height },
-      });
-      return jsx(offsetY(panelTranslateX[10]).View, { pointerEvents: "none", style: null, children: null });
-    };
+export default function ScreenAlignedThemedGradient(arg0) {
+  ({ offsetX, offsetY } = arg0);
+  const isClientThemeOrCustomThemeActive = useActiveTheme.useIsClientThemeOrCustomThemeActive();
+  return (
+    <React4 pointerEvents="none" style={closure_6(offsetX, offsetY).container}>
+      {jsx(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive })}
+    </React4>
+  );
+}
+export function ScreenAlignedThemedGradientSliding(offsetX) {
+  offsetX = offsetX.offsetX;
+  const offsetY = offsetX.offsetY;
+  let panelTranslateX;
+  const isClientThemeOrCustomThemeActive = offsetX(panelTranslateX[4]).useIsClientThemeOrCustomThemeActive();
+  let obj = offsetX(panelTranslateX[4]);
+  panelTranslateX = offsetX(panelTranslateX[6]).useHomeDrawerState().panelTranslateX;
+  let obj2 = offsetX(panelTranslateX[6]);
+  const fn = function o() {
+    const obj = { transform: null };
+    const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - panelTranslateX.get()) };
+    const items = [obj2];
+    const tmp2 = -offsetX;
+    items[1] = { translateY: roundToNearestPixelDefault(-offsetY) };
+    obj.transform = items;
+    return obj;
+  };
+  const obj3 = offsetX(panelTranslateX[8]);
+  fn.__closure = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
+  fn.__workletHash = 14168713340122;
+  fn.__initData = __initData;
+  const animatedStyle = obj3.useAnimatedStyle(fn);
+  const obj5 = { pointerEvents: "none", style: null, children: null };
+  let items = [absoluteFill.absoluteFill, animatedStyle];
+  obj5.style = items;
+  const obj4 = { roundToNearestPixel: offsetY(panelTranslateX[3]), offsetX, panelTranslateX, offsetY };
+  obj5.children = jsx(offsetY(panelTranslateX[5]), {
+    absolute: true,
+    tall: true,
+    wide: true,
+    mix: isClientThemeOrCustomThemeActive,
+    componentStyles: { height: offsetY(panelTranslateX[7])({ ignoreKeyboard: true }).height },
+  });
+  return jsx(offsetY(panelTranslateX[8]).View, { pointerEvents: "none", style: null, children: null });
+}

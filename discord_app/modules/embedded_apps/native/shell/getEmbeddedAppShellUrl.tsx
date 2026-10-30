@@ -5,14 +5,14 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/shell/getEmbeddedAppShellUrl.tsx");
 
-export function getEmbeddedAppShellUrl(embeddedAppUrl) {
+export function getEmbeddedAppShellUrl(assetURL) {
   const nativeShellOriginForEmbeddedApp =
-    getNativeShellOriginForEmbeddedApp.getNativeShellOriginForEmbeddedApp(embeddedAppUrl);
+    getNativeShellOriginForEmbeddedApp.getNativeShellOriginForEmbeddedApp(assetURL);
   if (null != nativeShellOriginForEmbeddedApp) {
     const _HermesInternal = HermesInternal;
     return "" + nativeShellOriginForEmbeddedApp + "/";
   } else {
-    const toURLSafeResult = URLUtilsDefault.toURLSafe(embeddedAppUrl);
+    const toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
     let protocol;
     if (toURLSafeResult != null) {
       protocol = toURLSafeResult.protocol;

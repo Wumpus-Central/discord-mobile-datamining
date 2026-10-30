@@ -2,10 +2,10 @@
 import getPricesFromServerDefault from "../../skus/utils/getPricesFromServer.tsx";
 import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.tsx";
 
-let closure_3 = fn(7712).createCollectiblesItemsFromServerResponse;
-const fromServer = fn(7710).CollectiblesVariantProductRecord;
-let closure_5 = fn(1086).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
-const PREMIUM_TYPE_NONE = fn(1084).PREMIUM_TYPE_NONE;
+let closure_3 = fn(7717).createCollectiblesItemsFromServerResponse;
+const fromServer = fn(7715).CollectiblesVariantProductRecord;
+let closure_5 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const PREMIUM_TYPE_NONE = fn(1072).PREMIUM_TYPE_NONE;
 const prototype = function CollectiblesPurchaseRecord(arg0) {
   ({
     skuId: tmp.skuId,

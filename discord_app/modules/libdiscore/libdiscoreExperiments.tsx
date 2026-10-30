@@ -1,8 +1,8 @@
 // discord_app/modules/libdiscore/libdiscoreExperiments.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import BridgedStore from "stores/BridgedStore.tsx";
 import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import BridgedStore from "stores/BridgedStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ensureValidMode = BridgedStore.ensureValidMode;

@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx
-import flattenDefault from "../../../../_runtime/05832_flatten.js";
+import flattenDefault from "../../../../_runtime/05839_flatten.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function matchesDeep(item10014, item10021) {
@@ -104,14 +104,14 @@ export function sortEntries(entries, memo1) {
     return title.localeCompare(id2.experiment.title);
   });
 }
-export function getBestMatches(tmpResult3, str) {
+export function getBestMatches(arg0, str) {
   const parts = str.split(/\s+/g);
   const found = parts.filter((item) => "" !== item);
   if (0 === found.length) {
-    return tmpResult3;
+    return arg0;
   } else {
     const items = [];
-    const iter = tmpResult3[Symbol.iterator]();
+    const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;

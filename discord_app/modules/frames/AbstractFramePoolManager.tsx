@@ -38,9 +38,9 @@ prototype["emitChange"] = function emitChange() {
     continue;
   }
 };
-prototype["registerFrameEntry"] = function registerFrameEntry(id, first1) {
+prototype["registerFrameEntry"] = function registerFrameEntry(id, arg1) {
   const entries = this.entries;
-  const result = entries.set(id, first1);
+  const result = entries.set(id, arg1);
   this.reconcile(id);
 };
 prototype["removeFrameEntry"] = function removeFrameEntry(id) {

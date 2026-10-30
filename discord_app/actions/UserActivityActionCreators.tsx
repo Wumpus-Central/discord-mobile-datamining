@@ -47,7 +47,7 @@ let closure_6 = async function _getMetadata(arg0, arg1) {
     return body;
   })();
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
@@ -56,11 +56,11 @@ export function sync(activity, userId) {
 }
 export function play(activity, userId) {
   _require = activity;
-  const promise = require("asyncRequireImpl")(11437, dependencyMap.paths);
-  const nextPromise = require("asyncRequireImpl")(11437, dependencyMap.paths).then((getSpotifyMetadataFromActivity) =>
+  const promise = require("asyncRequireImpl")(11638, dependencyMap.paths);
+  const nextPromise = require("asyncRequireImpl")(11638, dependencyMap.paths).then((getSpotifyMetadataFromActivity) =>
     getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1),
   );
-  require("asyncRequireImpl")(11437, dependencyMap.paths)
+  require("asyncRequireImpl")(11638, dependencyMap.paths)
     .then((getSpotifyMetadataFromActivity) =>
       getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1),
     )

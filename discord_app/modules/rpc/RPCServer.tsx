@@ -8,8 +8,8 @@ import RpcCommandInterception from "RpcCommandInterception.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(6437).TransportTypes;
-const Constants = fn(1084);
+const TransportTypes = fn(6444).TransportTypes;
+const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
   RPCCloseCodes: metroRequire,
@@ -115,7 +115,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

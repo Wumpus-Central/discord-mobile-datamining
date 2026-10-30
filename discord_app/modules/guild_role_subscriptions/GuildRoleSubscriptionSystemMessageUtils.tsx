@@ -17,10 +17,10 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
   }
   let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
   if (roleSubscriptionOnClickHandler === undefined) {
-    roleSubscriptionOnClickHandler = React6;
+    roleSubscriptionOnClickHandler = React7;
   }
   const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
-  guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
+  const guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
   let num;
   if (roleSubscriptionData != null) {
     num = roleSubscriptionData.total_months_subscribed;
@@ -62,13 +62,13 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(8405);
+const GuildRoleSubscriptionSystemMessageConstants = fn(8442);
 ({
   getJoinButtonLabels: hasOwnProperty,
   getRenewButtonLabels: metroRequire,
   STICKERS: closure_7,
 } = GuildRoleSubscriptionSystemMessageConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -126,10 +126,10 @@ export function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOn
   }
   let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
   if (roleSubscriptionOnClickHandler === undefined) {
-    roleSubscriptionOnClickHandler = React6;
+    roleSubscriptionOnClickHandler = React7;
   }
   const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
-  guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
+  const guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
   let num;
   if (roleSubscriptionData != null) {
     num = roleSubscriptionData.total_months_subscribed;
@@ -159,7 +159,7 @@ export function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOn
       OxP1NC = t["6Z1E+7"];
       tmp7 = require;
     }
-    const intl = tmp7(1125).intl;
+    const intl = tmp7(1114).intl;
     let name;
     if (guild != null) {
       name = guild.name;

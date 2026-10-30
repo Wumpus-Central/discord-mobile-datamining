@@ -42,9 +42,9 @@ prototype["setWebViewLoaded"] = function setWebViewLoaded(id, iframeId) {
     self.emitChange();
   }
 };
-prototype["isWebViewLoaded"] = function isWebViewLoaded(frameId, arg1) {
+prototype["isWebViewLoaded"] = function isWebViewLoaded(layoutMode, arg1) {
   const loadedWebViewKeys = this.loadedWebViewKeys;
-  return loadedWebViewKeys.get(frameId) === arg1;
+  return loadedWebViewKeys.get(layoutMode) === arg1;
 };
 prototype["place"] = function place(id, target, level) {
   let str = "hidden";

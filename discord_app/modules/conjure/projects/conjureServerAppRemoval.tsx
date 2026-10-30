@@ -24,7 +24,7 @@ function conjureApplicationIdForBot(userId) {
   return appIdForBotUserId;
 }
 function readConjureServerApp(arg0, arg1) {
-  guild = null;
+  let guild = null;
   if (null != arg0) {
     guild = GuildStore.getGuild(arg0);
   }
@@ -50,8 +50,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           let items = [];
         } else {
-          items = guild(10843).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(10843);
+          items = guild(10866).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(10866);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -60,8 +60,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(10843).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(10843);
+          canRemoveConjureBotResult = guild(10866).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(10866);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -69,8 +69,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(10843).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(10843);
+          canRemoveConjureBotResult = guild(10866).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(10866);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;
@@ -161,7 +161,7 @@ let closure_17 = async function _loadConjureServerApp(arg0) {
       } else {
         c4 = 2;
         c5 = 1;
-        return { value: Promise.all(closure_131_19(closure_130_0).map(closure_131_21)), done: false };
+        return { value: Promise.all(closure_131_18(closure_130_0).map(closure_131_20)), done: false };
       }
     }
   } else if (arg0 === 1) {
@@ -195,7 +195,7 @@ function fetchMissingApplication(item10010) {
 }
 function loadMissingApplication() {
   const self = this;
-  const apply = closure_22.apply;
+  const apply = closure_21.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -203,7 +203,7 @@ function loadMissingApplication() {
   }
   return applyArgumentsResult;
 }
-let closure_22 = async function _loadMissingApplication(arg0) {
+let closure_21 = async function _loadMissingApplication(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -214,7 +214,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -246,622 +246,170 @@ let closure_22 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
     }
   }
 };
-let closure_7 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
-const Permissions = fn(1084).Permissions;
+let closure_7 = fn(4939).GUILD_SELECTABLE_CHANNELS_KEY;
+const Permissions = fn(1072).Permissions;
 let c14 = " (Preview)";
-fn(558);
-const ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureBotMembers(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(16);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ApplicationStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg1) {
-        const fn = function c() {
-          let application = null;
-          if (null != closure_1) {
-            application = ApplicationStore.getApplication(tmp);
-          }
-          let conjureProjectId;
-          if (application != null) {
-            conjureProjectId = application.conjureProjectId;
-          }
-          if (null == conjureProjectId) {
-            return null;
-          } else {
-            const bot = application.bot;
-            let username;
-            if (bot != null) {
-              username = bot.username;
-            }
-            if (username == null) {
-              username = application.name;
-            }
-            let str = username;
-            if (username.endsWith(c14)) {
-              str = username.slice(0, -10);
-            }
-            return str.toLowerCase();
-          }
-        };
-        const items1 = [arg1];
-        cResult[1] = arg1;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-        tmp7 = cResult[3];
-      }
-      let obj = require("c");
-      stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      if (cResult[4] === arg0) {
-        if (cResult[5] === stateFromStores) {
-          let tmp9 = cResult[6];
-          let tmp10 = cResult[7];
-        }
-        const effect = noop.useEffect(tmp9, tmp10);
-        const _Symbol = Symbol;
-        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const items2 = [GuildMemberStore, UserStore, ApplicationStore];
-          class I {
-            constructor() {
-              if (null != closure_0) {
-                tmp2 = closure_2;
-                if (null != closure_2) {
-                  tmp3 = closure_8;
-                  memberIds = closure_8.getMemberIds(tmp);
-                  found = memberIds.filter((item) => {
-                    user = user.getUser(item);
-                    let bot;
-                    if (user != null) {
-                      bot = user.bot;
-                    }
-                    let startsWithResult = true === bot;
-                    if (startsWithResult) {
-                      const formatted = user.username.toLowerCase();
-                      startsWithResult = formatted.startsWith(stateFromStores);
-                    }
-                    return startsWithResult;
-                  });
-                  tmp4 = conjureApplicationIdForBot;
-                  mapped = found.map(conjureApplicationIdForBot);
-                  found1 = mapped.filter((item) => null == application.getApplication(item));
-                }
-                return [];
-              }
-              return;
-            }
-          }
-          cResult[8] = items2;
-        }
-        if (cResult[9] === arg0) {
-          const tmpResult2 = tmp(tmp2[14]);
-          const useStateFromStores = tmpResult2.useStateFromStores;
-          class I {
-            constructor() {
-              if (null != closure_0) {
-                tmp2 = closure_2;
-                if (null != closure_2) {
-                  tmp3 = closure_8;
-                  memberIds = closure_8.getMemberIds(tmp);
-                  found = memberIds.filter((item) => {
-                    user = user.getUser(item);
-                    let bot;
-                    if (user != null) {
-                      bot = user.bot;
-                    }
-                    let startsWithResult = true === bot;
-                    if (startsWithResult) {
-                      const formatted = user.username.toLowerCase();
-                      startsWithResult = formatted.startsWith(stateFromStores);
-                    }
-                    return startsWithResult;
-                  });
-                  tmp4 = conjureApplicationIdForBot;
-                  mapped = found.map(conjureApplicationIdForBot);
-                  found1 = mapped.filter((item) => null == application.getApplication(item));
-                }
-                return [];
-              }
-              return;
-            }
-          }
-          asyncGeneratorStep = tmp23;
-          if (cResult[13] !== tmp23) {
-            class M {
-              constructor() {
-                tmp = closure_3;
-                tmp2 = closure_3[Symbol.iterator]();
-                while (tmp2 !== undefined) {
-                  tmp4 = fetchMissingApplication;
-                  tmp5 = fetchMissingApplication(tmp3);
-                  continue;
-                }
-                return;
-              }
-            }
-            const items3 = [tmp23];
-            cResult[13] = tmp23;
-            cResult[14] = M;
-            class I {
-              constructor() {
-                if (null != closure_0) {
-                  tmp2 = closure_2;
-                  if (null != closure_2) {
-                    tmp3 = closure_8;
-                    memberIds = closure_8.getMemberIds(tmp);
-                    found = memberIds.filter((item) => {
-                      user = user.getUser(item);
-                      let bot;
-                      if (user != null) {
-                        bot = user.bot;
-                      }
-                      let startsWithResult = true === bot;
-                      if (startsWithResult) {
-                        const formatted = user.username.toLowerCase();
-                        startsWithResult = formatted.startsWith(stateFromStores);
-                      }
-                      return startsWithResult;
-                    });
-                    tmp4 = conjureApplicationIdForBot;
-                    mapped = found.map(conjureApplicationIdForBot);
-                    found1 = mapped.filter((item) => null == application.getApplication(item));
-                  }
-                  return [];
-                }
-                return;
-              }
-            }
-            cResult[15] = items3;
-            let tmp25 = items3;
-          } else {
-            class M {
-              constructor() {
-                tmp = closure_3;
-                tmp2 = closure_3[Symbol.iterator]();
-                while (tmp2 !== undefined) {
-                  tmp4 = fetchMissingApplication;
-                  tmp5 = fetchMissingApplication(tmp3);
-                  continue;
-                }
-                return;
-              }
-            }
-            tmp25 = cResult[15];
-          }
-          const effect1 = noop.useEffect(M, tmp25);
-        }
-        class I {
-          constructor() {
-            if (null != closure_0) {
-              tmp2 = closure_2;
-              if (null != closure_2) {
-                tmp3 = closure_8;
-                memberIds = closure_8.getMemberIds(tmp);
-                found = memberIds.filter((item) => {
-                  user = user.getUser(item);
-                  let bot;
-                  if (user != null) {
-                    bot = user.bot;
-                  }
-                  let startsWithResult = true === bot;
-                  if (startsWithResult) {
-                    const formatted = user.username.toLowerCase();
-                    startsWithResult = formatted.startsWith(stateFromStores);
-                  }
-                  return startsWithResult;
-                });
-                tmp4 = conjureApplicationIdForBot;
-                mapped = found.map(conjureApplicationIdForBot);
-                found1 = mapped.filter((item) => null == application.getApplication(item));
-              }
-              return [];
-            }
-            return;
-          }
-        }
-        const items4 = [arg0, stateFromStores];
-        cResult[9] = arg0;
-        cResult[10] = stateFromStores;
-        cResult[11] = I;
-        cResult[12] = items4;
-      }
-      const fn2 = function v() {
-        let tmp2 = null != closure_0;
-        if (tmp2) {
-          tmp2 = null != stateFromStores;
-        }
-        if (tmp2) {
-          const obj = GuildActionCreatorsDefault;
-          const members = obj.requestMembers(closure_0, stateFromStores, 10, false);
-        }
-      };
-      const items5 = [arg0, stateFromStores];
-      cResult[4] = arg0;
-      cResult[5] = stateFromStores;
-      cResult[6] = fn2;
-      cResult[7] = items5;
-      tmp10 = items5;
-      tmp9 = fn2;
-      const tmpResult = require("initialize");
-    }
-  : function useConjureBotMembers(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const items = [ApplicationStore];
-      const items1 = [arg1];
-      stateFromStores = require("initialize").useStateFromStores(
-        items,
-        () => {
-          let application = null;
-          if (null != closure_1) {
-            application = ApplicationStore.getApplication(tmp);
-          }
-          let conjureProjectId;
-          if (application != null) {
-            conjureProjectId = application.conjureProjectId;
-          }
-          if (null == conjureProjectId) {
-            return null;
-          } else {
-            const bot = application.bot;
-            let username;
-            if (bot != null) {
-              username = bot.username;
-            }
-            if (username == null) {
-              username = application.name;
-            }
-            let str = username;
-            if (username.endsWith(c14)) {
-              str = username.slice(0, -10);
-            }
-            return str.toLowerCase();
-          }
-        },
-        items1,
-      );
-      const items2 = [arg0, stateFromStores];
-      const effect = noop.useEffect(() => {
-        let tmp2 = null != closure_0;
-        if (tmp2) {
-          tmp2 = null != stateFromStores;
-        }
-        if (tmp2) {
-          const obj = GuildActionCreatorsDefault;
-          const members = obj.requestMembers(closure_0, stateFromStores, 10, false);
-        }
-      }, items2);
-      let obj = require("initialize");
-      const items3 = [GuildMemberStore, UserStore, ApplicationStore];
-      const items4 = [arg0, stateFromStores];
-      const stateFromStores1 = require("initialize").useStateFromStores(
-        items3,
-        () => {
-          if (null != closure_0) {
-            if (null != stateFromStores) {
-              const memberIds = GuildMemberStore.getMemberIds(tmp);
-              const found = memberIds.filter((item) => {
-                user = user.getUser(item);
-                let bot;
-                if (user != null) {
-                  bot = user.bot;
-                }
-                let startsWithResult = true === bot;
-                if (startsWithResult) {
-                  const formatted = user.username.toLowerCase();
-                  startsWithResult = formatted.startsWith(stateFromStores);
-                }
-                return startsWithResult;
-              });
-              const mapped = found.map(conjureApplicationIdForBot);
-              const found1 = mapped.filter((item) => null == application.getApplication(item));
-            }
-            return [];
-          }
-        },
-        items4,
-        require("../../../../_runtime/metro/00012__.js").isEqual,
-      );
-      const items5 = [stateFromStores1];
-      const effect1 = noop.useEffect(() => {
-        while (tmp2 !== undefined) {
-          let tmp5 = fetchMissingApplication(tmp3);
-          continue;
-        }
-        tmp2 = stateFromStores1[Symbol.iterator]();
-      }, items5);
-    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureServerAppRemoval.tsx");
 
 export { conjureApplicationIdForBot };
 export { readConjureServerApp };
-export const useConjureServerApp = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureServerApp(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(16);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ApplicationStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
+export function useConjureServerApp(guildId, applicationId) {
+  _require = guildId;
+  closure_1 = applicationId;
+  const items = [ApplicationStore];
+  const items1 = [applicationId];
+  stateFromStores = require("initialize").useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null != closure_1;
+      if (tmp2) {
+        const application = ApplicationStore.getApplication(tmp);
+        let conjureProjectId;
+        if (application != null) {
+          conjureProjectId = application.conjureProjectId;
+        }
+        tmp2 = null != conjureProjectId;
       }
-      if (cResult[1] !== arg1) {
-        const fn = function j() {
-          let tmp2 = null != closure_1;
-          if (tmp2) {
-            const application = ApplicationStore.getApplication(tmp);
-            let conjureProjectId;
-            if (application != null) {
-              conjureProjectId = application.conjureProjectId;
-            }
-            tmp2 = null != conjureProjectId;
-          }
-          return tmp2;
-        };
-        const items1 = [arg1];
-        cResult[1] = arg1;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-        tmp7 = cResult[3];
+      return tmp2;
+    },
+    items1,
+  );
+  const items2 = [applicationId];
+  const effect = noop.useEffect(() => {
+    if (null != closure_1) {
+      if (!tmp2) {
+        const application = ApplicationActionCreators.fetchApplication(closure_1);
+        application.catch(() => {});
       }
-      const obj = require("c");
-      stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      if (cResult[4] !== arg1) {
-        class S {
-          constructor() {
-            tmp = closure_1;
-            if (null != closure_1) {
-              obj = closure_5;
-              tmp2 = null != closure_5.getApplication(tmp) || obj.isFetchingApplication(tmp);
-              if (!tmp2) {
-                tmp3 = closure_0;
-                tmp4 = closure_2;
-                obj2 = closure_0(closure_2[18]);
-                application = obj2.fetchApplication(tmp);
-                catchPromise = application.catch(() => {});
-              }
-            }
-            return;
-          }
-        }
-        const items2 = [arg1];
-        cResult[4] = arg1;
-        cResult[5] = S;
-        cResult[6] = items2;
-        let tmp10 = items2;
-      } else {
-        class S {
-          constructor() {
-            tmp = closure_1;
-            if (null != closure_1) {
-              obj = closure_5;
-              tmp2 = null != closure_5.getApplication(tmp) || obj.isFetchingApplication(tmp);
-              if (!tmp2) {
-                tmp3 = closure_0;
-                tmp4 = closure_2;
-                obj2 = closure_0(closure_2[18]);
-                application = obj2.fetchApplication(tmp);
-                catchPromise = application.catch(() => {});
-              }
-            }
-            return;
-          }
-        }
-        tmp10 = cResult[6];
-      }
-      const effect = noop.useEffect(S, tmp10);
-      if (cResult[7] === arg0) {
-        class S {
-          constructor() {
-            tmp = closure_1;
-            if (null != closure_1) {
-              obj = closure_5;
-              tmp2 = null != closure_5.getApplication(tmp) || obj.isFetchingApplication(tmp);
-              if (!tmp2) {
-                tmp3 = closure_0;
-                tmp4 = closure_2;
-                obj2 = closure_0(closure_2[18]);
-                application = obj2.fetchApplication(tmp);
-                catchPromise = application.catch(() => {});
-              }
-            }
-            return;
-          }
-        }
-        const effect1 = noop.useEffect(M, items5);
-        closure_18(arg0, arg1);
-        const _Symbol = Symbol;
-        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          class S {
-            constructor() {
-              tmp = closure_1;
-              if (null != closure_1) {
-                obj = closure_5;
-                tmp2 = null != closure_5.getApplication(tmp) || obj.isFetchingApplication(tmp);
-                if (!tmp2) {
-                  tmp3 = closure_0;
-                  tmp4 = closure_2;
-                  obj2 = closure_0(closure_2[18]);
-                  application = obj2.fetchApplication(tmp);
-                  catchPromise = application.catch(() => {});
-                }
-              }
-              return;
-            }
-          }
-          const items3 = [
-            ApplicationStore,
-            GuildStore,
-            GuildChannelStore,
-            GuildMemberStore,
-            PermissionStore,
-            UserStore,
-            RelationshipStore,
-          ];
-          cResult[11] = items3;
-        } else {
-          class S {
-            constructor() {
-              tmp = closure_1;
-              if (null != closure_1) {
-                obj = closure_5;
-                tmp2 = null != closure_5.getApplication(tmp) || obj.isFetchingApplication(tmp);
-                if (!tmp2) {
-                  tmp3 = closure_0;
-                  tmp4 = closure_2;
-                  obj2 = closure_0(closure_2[18]);
-                  application = obj2.fetchApplication(tmp);
-                  catchPromise = application.catch(() => {});
-                }
-              }
-              return;
-            }
-          }
-        }
-        if (cResult[12] === arg1) {
-          class S {
-            constructor() {
-              tmp = closure_1;
-              if (null != closure_1) {
-                obj = closure_5;
-                tmp2 = null != closure_5.getApplication(tmp) || obj.isFetchingApplication(tmp);
-                if (!tmp2) {
-                  tmp3 = closure_0;
-                  tmp4 = closure_2;
-                  obj2 = closure_0(closure_2[18]);
-                  application = obj2.fetchApplication(tmp);
-                  catchPromise = application.catch(() => {});
-                }
-              }
-              return;
-            }
-          }
-          const tmpResult2 = tmp(tmp2[14]);
-          return tmpResult2.useStateFromStores(tmp15, tmp22, tmp23, tmp(tmp2[15]).isEqual);
-        }
-        const fn2 = function y() {
-          return readConjureServerApp(closure_0, closure_1);
-        };
-        const items4 = [arg0, arg1];
-        cResult[12] = arg1;
-        cResult[13] = arg0;
-        cResult[14] = fn2;
-        cResult[15] = items4;
-      }
-      class M {
-        constructor() {
-          if (null != closure_0) {
-            tmp2 = closure_2;
-            if (closure_2) {
-              tmp3 = appChannelApplicationIds;
-              num = 0;
-              tmp4 = appChannelApplicationIds(tmp);
-              tmp5 = tmp4;
-              tmp6 = tmp4;
-              for (const item10010 of tmp4) {
-                tmp7 = fetchMissingApplication;
-                tmp8 = fetchMissingApplication(item10010);
-                continue;
-              }
-            }
-          }
-          return;
-        }
-      }
-      items5 = [arg0, stateFromStores];
-      cResult[7] = arg0;
-      cResult[8] = stateFromStores;
-      cResult[9] = M;
-      cResult[10] = items5;
-      const tmpResult = require("initialize");
+      tmp2 = null != ApplicationStore.getApplication(closure_1) || ApplicationStore.isFetchingApplication(closure_1);
     }
-  : function useConjureServerApp(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const items = [ApplicationStore];
-      const items1 = [arg1];
-      stateFromStores = require("initialize").useStateFromStores(
-        items,
-        () => {
-          let tmp2 = null != closure_1;
-          if (tmp2) {
-            const application = ApplicationStore.getApplication(tmp);
-            let conjureProjectId;
-            if (application != null) {
-              conjureProjectId = application.conjureProjectId;
-            }
-            tmp2 = null != conjureProjectId;
-          }
-          return tmp2;
-        },
-        items1,
-      );
-      const items2 = [arg1];
-      const effect = noop.useEffect(() => {
-        if (null != closure_1) {
-          if (!tmp2) {
-            const application = ApplicationActionCreators.fetchApplication(closure_1);
-            application.catch(() => {});
-          }
-          tmp2 =
-            null != ApplicationStore.getApplication(closure_1) || ApplicationStore.isFetchingApplication(closure_1);
+  }, items2);
+  const items3 = [guildId, stateFromStores];
+  const effect1 = noop.useEffect(() => {
+    if (null != closure_0) {
+      if (stateFromStores) {
+        const tmp4 = appChannelApplicationIds(tmp);
+        for (const item10010 of tmp4) {
+          let tmp8 = fetchMissingApplication(item10010);
+          continue;
         }
-      }, items2);
-      const items3 = [arg0, stateFromStores];
-      const effect1 = noop.useEffect(() => {
-        if (null != closure_0) {
-          if (stateFromStores) {
-            const tmp4 = appChannelApplicationIds(tmp);
-            for (const item10010 of tmp4) {
-              let tmp8 = fetchMissingApplication(item10010);
-              continue;
-            }
-          }
+      }
+    }
+  }, items3);
+  closure_129_0 = guildId;
+  closure_129_1 = applicationId;
+  let obj = require("initialize");
+  const items4 = [ApplicationStore];
+  const items5 = [applicationId];
+  const stateFromStores1 = require("initialize").useStateFromStores(
+    items4,
+    () => {
+      let application = null;
+      if (null != closure_1) {
+        application = ApplicationStore.getApplication(tmp);
+      }
+      let conjureProjectId;
+      if (application != null) {
+        conjureProjectId = application.conjureProjectId;
+      }
+      if (null == conjureProjectId) {
+        return null;
+      } else {
+        const bot = application.bot;
+        let username;
+        if (bot != null) {
+          username = bot.username;
         }
-      }, items3);
-      closure_18(arg0, arg1);
-      const obj = require("initialize");
-      const items4 = [
-        ApplicationStore,
-        GuildStore,
-        GuildChannelStore,
-        GuildMemberStore,
-        PermissionStore,
-        UserStore,
-        RelationshipStore,
-      ];
-      const items5 = [arg0, arg1];
-      return require("initialize").useStateFromStores(
-        items4,
-        () => readConjureServerApp(closure_0, closure_1),
-        items5,
-        require("../../../../_runtime/metro/00012__.js").isEqual,
-      );
-    };
+        if (username == null) {
+          username = application.name;
+        }
+        let str = username;
+        if (username.endsWith(c14)) {
+          str = username.slice(0, -10);
+        }
+        return str.toLowerCase();
+      }
+    },
+    items5,
+  );
+  closure_129_2 = stateFromStores1;
+  const items6 = [guildId, stateFromStores1];
+  const effect2 = noop.useEffect(() => {
+    let tmp2 = null != closure_0;
+    if (tmp2) {
+      tmp2 = null != stateFromStores;
+    }
+    if (tmp2) {
+      const obj = GuildActionCreatorsDefault;
+      const members = obj.requestMembers(closure_0, stateFromStores, 10, false);
+    }
+  }, items6);
+  let obj2 = require("initialize");
+  const items7 = [GuildMemberStore, UserStore, ApplicationStore];
+  const items8 = [guildId, stateFromStores1];
+  const stateFromStores2 = require("initialize").useStateFromStores(
+    items7,
+    () => {
+      if (null != closure_0) {
+        if (null != stateFromStores) {
+          const memberIds = GuildMemberStore.getMemberIds(tmp);
+          const found = memberIds.filter((item) => {
+            user = user.getUser(item);
+            let bot;
+            if (user != null) {
+              bot = user.bot;
+            }
+            let startsWithResult = true === bot;
+            if (startsWithResult) {
+              const formatted = user.username.toLowerCase();
+              startsWithResult = formatted.startsWith(stateFromStores);
+            }
+            return startsWithResult;
+          });
+          const mapped = found.map(conjureApplicationIdForBot);
+          const found1 = mapped.filter((item) => null == application.getApplication(item));
+        }
+        return [];
+      }
+    },
+    items8,
+    require("../../../../_runtime/metro/00012__.js").isEqual,
+  );
+  closure_129_3 = stateFromStores2;
+  const items9 = [stateFromStores2];
+  const effect3 = noop.useEffect(() => {
+    while (tmp2 !== undefined) {
+      let tmp5 = fetchMissingApplication(tmp3);
+      continue;
+    }
+    tmp2 = dependencyMap[Symbol.iterator]();
+  }, items9);
+  const obj3 = require("initialize");
+  const items10 = [
+    ApplicationStore,
+    GuildStore,
+    GuildChannelStore,
+    GuildMemberStore,
+    PermissionStore,
+    UserStore,
+    RelationshipStore,
+  ];
+  const items11 = [guildId, applicationId];
+  return require("initialize").useStateFromStores(
+    items10,
+    () => readConjureServerApp(closure_0, closure_1),
+    items11,
+    require("../../../../_runtime/metro/00012__.js").isEqual,
+  );
+}
 export function loadConjureServerApp() {
   const self = this;
   const apply = closure_17.apply;

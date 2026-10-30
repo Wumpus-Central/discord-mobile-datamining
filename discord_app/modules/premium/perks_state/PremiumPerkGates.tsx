@@ -35,8 +35,8 @@ export function canUseEmojisEverywhere(currentUser) {
 export function canUseSoundboardEverywhere(currentUser) {
   return ProductCatalog.canUserUse(ProductCatalog.SOUNDBOARD_EVERYWHERE, currentUser);
 }
-export function canUseCustomCallSounds(stateFromStores) {
-  return ProductCatalog.canUserUse(ProductCatalog.CUSTOM_CALL_SOUNDS, stateFromStores);
+export function canUseCustomCallSounds(currentUser) {
+  return ProductCatalog.canUserUse(ProductCatalog.CUSTOM_CALL_SOUNDS, currentUser);
 }
 export function canUploadLargeFiles(currentUser) {
   return ProductCatalog.canUserUse(ProductCatalog.UPLOAD_LARGE_FILES, currentUser);
@@ -80,12 +80,12 @@ export function canUsePremiumGuildMemberProfile(currentUser) {
 export function canUseClientThemes(currentUser) {
   return ProductCatalog.canUserUse(ProductCatalog.CLIENT_THEMES, currentUser);
 }
-export function canStreamQuality(MID, user) {
+export function canStreamQuality(MID, currentUser) {
   if (MID === obj.HIGH) {
-    let canUserUseResult = ProductCatalog.canUserUse(ProductCatalog.STREAM_HIGH_QUALITY, user);
+    let canUserUseResult = ProductCatalog.canUserUse(ProductCatalog.STREAM_HIGH_QUALITY, currentUser);
   } else {
     obj = ProductCatalog;
-    canUserUseResult = obj.canUserUse(ProductCatalog.STREAM_MID_QUALITY, user);
+    canUserUseResult = obj.canUserUse(ProductCatalog.STREAM_MID_QUALITY, currentUser);
   }
   return canUserUseResult;
 }

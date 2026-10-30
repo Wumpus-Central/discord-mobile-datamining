@@ -1,5 +1,4 @@
 // discord_app/modules/icymi/native/info_modal/ICYMITopicsScreen.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
@@ -25,43 +24,72 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildDiscoveryCategoryStore from "../../../global_discovery_servers/GuildDiscoveryCategoryStore.tsx";
 
 require = fn;
-function primaryCategoryToEmojiIcon(categoryid) {
+function WordTopic(categoryid) {
+  categoryid = categoryid.categoryid;
+  ({ selected, handlePress: importDefault } = categoryid);
   if (GuildPrimaryCategory.GAMING === categoryid) {
-    return v65535(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    let tmp2 = closure_1_10(GameControllerIcon.GameControllerIcon, {
+      size: "md",
+      color: "redesign-button-tertiary-text",
+    });
   } else if (GuildPrimaryCategory.ENTERTAINMENT === categoryid) {
-    return v65535(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.GENERAL_CHATTING === categoryid) {
-    return v65535(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SCIENCE_AND_TECH === categoryid) {
-    return v65535(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.MUSIC === categoryid) {
-    return v65535(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.EDUCATION === categoryid) {
-    return v65535(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.CREATIVE_ARTS === categoryid) {
-    return v65535(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FINANCE === categoryid) {
-    return v65535(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.BOTS === categoryid) {
-    return v65535(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SPORTS === categoryid) {
-    return v65535(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.TRAVEL_AND_FOOD === categoryid) {
-    return v65535(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FASHION_AND_BEAUTY === categoryid) {
-    return v65535(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FITNESS_AND_HEALTH === categoryid) {
-    return v65535(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
-    return v65535(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: selected });
+  let tmp48Result = null;
+  if (null != tmp2) {
+    const obj2 = {
+      accessibilityRole: tmp45,
+      accessibilityState: tmp46,
+      variant: null,
+      text: null,
+      onPress: null,
+      icon: null,
+    };
+    let str = "tertiary";
+    if (selected) {
+      str = "primary";
+    }
+    obj2.variant = str;
+    obj2.text = categoryid.topic;
+    obj2.onPress = function onPress() {
+      return importDefault(categoryid);
+    };
+    obj2.icon = tmp2;
+    tmp48Result = closure_1_10(components_Button_Button.Button, obj2);
+  }
+  return tmp48Result;
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(18440).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(18499).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   footer: null,
@@ -109,117 +137,18 @@ let obj6 = {
   gap: nativeDefault.space.PX_12,
 };
 obj2.scrollContentContainer = { paddingTop: nativeDefault.space.PX_24 };
-let closure_14 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function WordTopic(arg0) {
-      const cResult = c.c(14);
-      ({ topic, categoryid } = arg0);
-      ({ selected, handlePress } = arg0);
-      if (cResult[0] !== categoryid) {
-        const tmp6 = primaryCategoryToEmojiIcon(categoryid);
-        cResult[0] = categoryid;
-        cResult[1] = tmp6;
-        let tmp4 = tmp6;
-      } else {
-        tmp4 = cResult[1];
-      }
-      if (cResult[2] !== selected) {
-        const obj2 = { checked: selected };
-        cResult[2] = selected;
-        cResult[3] = obj2;
-        let tmp7 = obj2;
-      } else {
-        tmp7 = cResult[3];
-      }
-      const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative(tmp7);
-      ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-      if (null == tmp4) {
-        return null;
-      } else {
-        let str = "tertiary";
-        if (selected) {
-          str = "primary";
-        }
-        if (cResult[4] === categoryid) {
-          if (cResult[5] === handlePress) {
-            let tmp9 = cResult[6];
-          }
-          if (cResult[7] === accessibilityRole) {
-            if (cResult[8] === accessibilityState) {
-              if (cResult[9] === tmp4) {
-                if (cResult[10] === str) {
-                  if (cResult[11] === tmp9) {
-                    if (cResult[12] === topic) {
-                      let tmp10 = cResult[13];
-                    }
-                    return tmp10;
-                  }
-                }
-              }
-            }
-          }
-          const obj3 = { accessibilityRole, accessibilityState, variant: str, text: topic, onPress: tmp9, icon: tmp4 };
-          const tmp12 = v65535(components_Button_Button.Button, obj3);
-          cResult[7] = accessibilityRole;
-          cResult[8] = accessibilityState;
-          cResult[9] = tmp4;
-          cResult[10] = str;
-          cResult[11] = tmp9;
-          cResult[12] = topic;
-          cResult[13] = tmp12;
-          tmp10 = tmp12;
-        }
-        const fn = function x() {
-          return handlePress(categoryid);
-        };
-        cResult[4] = categoryid;
-        cResult[5] = handlePress;
-        cResult[6] = fn;
-        tmp9 = fn;
-      }
-      const tmpResult = useA11yRolesNative;
-    }
-  : function WordTopic(categoryid) {
-      categoryid = categoryid.categoryid;
-      ({ selected, handlePress: importDefault } = categoryid);
-      const tmp = primaryCategoryToEmojiIcon(categoryid);
-      const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: selected });
-      let tmp8Result = null;
-      if (null != tmp) {
-        const obj2 = {
-          accessibilityRole: tmp5,
-          accessibilityState: tmp6,
-          variant: null,
-          text: null,
-          onPress: null,
-          icon: null,
-        };
-        let str = "tertiary";
-        if (selected) {
-          str = "primary";
-        }
-        obj2.variant = str;
-        obj2.text = categoryid.topic;
-        obj2.onPress = function onPress() {
-          return importDefault(categoryid);
-        };
-        obj2.icon = tmp;
-        tmp8Result = v65535(components_Button_Button.Button, obj2);
-      }
-      return tmp8Result;
-    };
+let closure_13 = createStyles.createStyles(obj2);
 size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
 
 export default function ICYMITopicsScreen() {
-  const tmp = closure_14();
+  const tmp = closure_13();
   const bottom = useSafeAreaInsetsDefault().bottom;
   [first, importDefault] = noop.useState(new Set());
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp6[1];
   const set = new Set();
-  const navigation = first(1503).useNavigation();
+  const navigation = first(1498).useNavigation();
   const items = [navigation, first];
   const callback = noop.useCallback(
     navigation(function* () {
@@ -233,7 +162,7 @@ export default function ICYMITopicsScreen() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -252,7 +181,7 @@ export default function ICYMITopicsScreen() {
               v2(true);
               v2 = 1;
               c3 = 1;
-              const obj5 = { value: closure_0(v2[30])(v2[29], v2.paths), done: false };
+              const obj5 = { value: closure_0(v2[28])(v2[27], v2.paths), done: false };
               return obj5;
             }
           } else if (1 === tmp4) {
@@ -268,7 +197,7 @@ export default function ICYMITopicsScreen() {
               v2 = 2;
               c3 = 1;
               const obj7 = {
-                value: closure_1(v2[31]).fetchPopularGuildsFromCategories(Array.from(closure_129_0), 0),
+                value: closure_1(v2[29]).fetchPopularGuildsFromCategories(Array.from(closure_129_0), 0),
                 done: false,
               };
               return obj7;
@@ -285,10 +214,10 @@ export default function ICYMITopicsScreen() {
               closure_129_3.push("join_guilds");
             } else {
               const obj9 = { text: null };
-              const intl = closure_0(v2[33]).intl;
-              obj9.text = intl.string(closure_0(v2[33]).t.CG4Hks);
-              closure_1(v2[32]).open("ICYMIInfoModal", obj9);
-              const obj = closure_1(v2[32]);
+              const intl = closure_0(v2[31]).intl;
+              obj9.text = intl.string(closure_0(v2[31]).t.CG4Hks);
+              closure_1(v2[30]).open("ICYMIInfoModal", obj9);
+              const obj = closure_1(v2[30]);
             }
             const _setTimeout = setTimeout;
             const timerId = setTimeout(() => v2(false), 500);
@@ -302,7 +231,7 @@ export default function ICYMITopicsScreen() {
     }),
     items,
   );
-  let obj = first(1503);
+  let obj = first(1498);
   const items1 = [GuildDiscoveryCategoryStore];
   const stateFromStoresArray = first(504).useStateFromStoresArray(items1, () => allCategories.getAllCategories());
   const items2 = [first];
@@ -324,13 +253,13 @@ export default function ICYMITopicsScreen() {
     const obj = { categoryId, toggled: !first.has(categoryId) };
   }, items2);
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
-  let intl = first(1125).intl;
-  obj3.children = intl.string(first(1125).t.Y5d99L);
-  const children = [closure_10(first(5271).Text, obj3), , , ,];
+  let intl = first(1114).intl;
+  obj3.children = intl.string(first(1114).t.Y5d99L);
+  const children = [closure_10(first(5619).Text, obj3), , , ,];
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
-  const intl2 = first(1125).intl;
-  obj4.children = intl2.string(first(1125).t.MGZsfv);
-  children[1] = closure_10(first(5271).Text, obj4);
+  const intl2 = first(1114).intl;
+  obj4.children = intl2.string(first(1114).t.MGZsfv);
+  children[1] = closure_10(first(5619).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = {
     showsVerticalScrollIndicator: false,
@@ -345,8 +274,8 @@ export default function ICYMITopicsScreen() {
   obj6.children = closure_10(closure_6, {
     style: tmp.topicsContainer,
     children: stateFromStoresArray.map((categoryId) =>
-      v65535(
-        closure_15,
+      closure_2_10(
+        WordTopic,
         {
           selected: first.has(categoryId.categoryId),
           topic: categoryId.name,
@@ -365,10 +294,10 @@ export default function ICYMITopicsScreen() {
     const items4 = [obj10, tmp.footer];
     obj9.style = items4;
     const obj11 = { loading: tmp6[0], size: "lg", text: null, onPress: null };
-    const intl3 = tmp7(1125).intl;
-    obj11.text = intl3.string(tmp7(1125).t.PDTjLN);
+    const intl3 = tmp7(1114).intl;
+    obj11.text = intl3.string(tmp7(1114).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5281).Button, obj11);
+    obj9.children = closure_10(tmp7(5629).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

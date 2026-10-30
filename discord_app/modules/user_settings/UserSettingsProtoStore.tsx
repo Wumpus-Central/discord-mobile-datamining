@@ -169,7 +169,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
       if (guildIds.id != null) {
         value = iter.value;
       }
-      value3 = undefined;
+      let value3;
       if (guildIds.color != null) {
         value3 = iter2.value;
       }
@@ -180,7 +180,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
         NumberResult = Number(value);
       }
       obj.folderId = NumberResult;
-      value4 = undefined;
+      let value4;
       if (guildIds.name != null) {
         value4 = iter3.value;
       }

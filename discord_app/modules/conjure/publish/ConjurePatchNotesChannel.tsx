@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/ConjurePatchNotesChannel.tsx
 import Storage3 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const ConjurePatchNotesLastChannelsByApp = "ConjurePatchNotesLastChannelsByApp";
@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/conjure/publish/ConjurePatchNot
 export const PLAY_LINE_CHANNEL_PLACEHOLDER = combined;
 export function formatPlaySuffix(PLAY_LINE_CHANNEL_PLACEHOLDER) {
   const intl = util.intl;
-  return "\n\n" + intl.formatToPlainString(_modDef3864["2ECgBx"], { channel: PLAY_LINE_CHANNEL_PLACEHOLDER });
+  return "\n\n" + intl.formatToPlainString(_modDef3865["2ECgBx"], { channel: PLAY_LINE_CHANNEL_PLACEHOLDER });
 }
 export function lastPatchNotesChannel(applicationId) {
   const Storage = Storage3.Storage;

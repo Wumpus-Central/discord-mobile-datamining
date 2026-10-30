@@ -57,7 +57,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
     }
   }
 }
-const UserSettingsTypes = fn(1094).UserSettingsTypes;
+const UserSettingsTypes = fn(1082).UserSettingsTypes;
 const PersistedStore = initializeDefault.PersistedStore;
 class CustomThemeMobileStore extends PersistedStore {}
 const prototype = CustomThemeMobileStore.prototype;
@@ -93,7 +93,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "Array", customTheme: "Reflect" };
+    obj = { theme: "color", customTheme: "Error" };
   }
   return obj;
 };

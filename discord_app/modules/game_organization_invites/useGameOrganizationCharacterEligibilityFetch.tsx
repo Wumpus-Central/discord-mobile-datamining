@@ -7,7 +7,7 @@ import GameOrganizationCharacterEligibilityStore from "GameOrganizationCharacter
 
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1084).QueryIds.GAME_ORGANIZATION_CHARACTER_ELIGIBILITY,
+  getQueryId: fn(1072).QueryIds.GAME_ORGANIZATION_CHARACTER_ELIGIBILITY,
   staleAfter: DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   retryConfig: { retryableErrors: isRetryableFetchErrorDefault },
@@ -31,7 +31,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

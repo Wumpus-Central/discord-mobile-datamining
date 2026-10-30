@@ -12,10 +12,10 @@ export function isPlayedGameEntry(content_type) {
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
 }
-export function isTopGameEntry(badgeCell) {
+export function isTopGameEntry(entry) {
   let content_type;
-  if (badgeCell != null) {
-    content_type = badgeCell.content_type;
+  if (entry != null) {
+    content_type = entry.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
 }
@@ -49,17 +49,17 @@ export function isApplicationEntry(extra) {
   }
   return tmp2;
 }
-export function isListenedSessionEntry(length) {
+export function isListenedSessionEntry(entry) {
   let content_type;
-  if (length != null) {
-    content_type = length.content_type;
+  if (entry != null) {
+    content_type = entry.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LISTENED_SESSION;
 }
-export function isTopArtistEntry(content_type) {
-  content_type = undefined;
-  if (content_type != null) {
-    content_type = content_type.content_type;
+export function isTopArtistEntry(entry) {
+  let content_type;
+  if (entry != null) {
+    content_type = entry.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_ARTIST;
 }
@@ -161,10 +161,10 @@ export function isConsoleEntry(content_type) {
   }
   return tmp6;
 }
-export function isLaunchedActivityEntry(content_type) {
-  content_type = undefined;
-  if (content_type != null) {
-    content_type = content_type.content_type;
+export function isLaunchedActivityEntry(entry) {
+  let content_type;
+  if (entry != null) {
+    content_type = entry.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LAUNCHED_ACTIVITY;
 }

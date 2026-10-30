@@ -2,6 +2,7 @@
 import _mod12 from "../../../_runtime/metro/00012__.js";
 import ContentClassificationEmbeddedActivityFilterExperiment2 from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
 import ContentClassificationReference from "../content_classification/ContentClassificationReference.tsx";
+import ActivityTypes from "../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import getParticipantUserKeyDefault from "getParticipantUserKey.tsx";
@@ -61,14 +62,13 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5670);
+const CallConstants = fn(5676);
 ({ isStreamParticipant: closure_15, ParticipantTypes: closure_16 } = CallConstants);
-let Constants = fn(1084);
-({ ActivityTypes: closure_17, ChannelTypes: closure_18 } = Constants);
-const FramesConstants = fn(6834);
+const ChannelTypes = fn(1072).ChannelTypes;
+const FramesConstants = fn(6841);
 ({ asLaunched, getFrameLaunchChannelId } = FramesConstants);
-Constants = fn(5756);
-({ MediaEngineContextTypes: closure_19, Features: closure_20 } = Constants);
+const Constants = fn(5763);
+({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
   VIDEO: "VIDEO",
@@ -128,7 +128,7 @@ class ChannelRTCParticipants {
         }
         return items;
       }
-      if (value2(type)) {
+      if (__initData(type)) {
         items.push(obj.STREAM);
         let isPoppedOut = type.type === constants.HIDDEN_STREAM;
         if (!isPoppedOut) {
@@ -167,7 +167,7 @@ prototype["rebuild"] = function rebuild() {
   const self = this;
   const channel = ChannelStore.getChannel(this.channelId);
   if (null != channel) {
-    if (channel.type !== constants3.GUILD_TEXT) {
+    if (channel.type !== ChannelTypes.GUILD_TEXT) {
       self.call = CallStore.getCall(self.channelId);
       if (channel.isPrivate()) {
         return false;
@@ -256,11 +256,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f98649) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f89212) {
   const self = this;
-  const userId = f98649;
+  const userId = f89212;
   let flag;
-  if (this.participants[f98649] != null) {
+  if (this.participants[f89212] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -302,10 +302,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f986
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f98655, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f89218, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f98655] != null) {
+  if (this.participants[f89218] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {
@@ -388,7 +388,7 @@ prototype["_getParticipantsForEmbeddedActivities"] = function _getParticipantsFo
     }
     obj.id = combined;
     obj.applicationId = applicationId.applicationId;
-    obj.activityType = constants2.PLAYING;
+    obj.activityType = ActivityTypes.ActivityTypes.PLAYING;
     ({ url: obj.activityUrl, participants } = applicationId);
     if (participants == null) {
       participants = [];
@@ -462,7 +462,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
     if (streamForUser == null) {
       streamForUser = ApplicationStreamingStore.getActiveStreamForUser(userId, guildId);
     }
-    if (MediaEngineStore.supports(constants5.VIDEO)) {
+    if (MediaEngineStore.supports(constants3.VIDEO)) {
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
           const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(streamForUser);
@@ -483,7 +483,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
             tmp21 = obj7;
           }
           const obj8 = {};
-          const merged2 = Object.assign(VideoStreamStore.getUserStreamData(userId, guildId, constants4.STREAM));
+          const merged2 = Object.assign(VideoStreamStore.getUserStreamData(userId, guildId, constants2.STREAM));
           const merged3 = Object.assign(tmp21);
           obj8.type =
             streamForUser.ownerId === AuthenticationStore.getId() &&

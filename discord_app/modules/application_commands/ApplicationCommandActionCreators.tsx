@@ -10,7 +10,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore.tsx";
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandActionCreators.tsx");
 
@@ -144,7 +144,7 @@ export function performAutocomplete(applicationId, autocomplete, data) {
         data: null,
         nonce: null,
       };
-      guild = autocomplete.guild;
+      const guild = autocomplete.guild;
       let id;
       if (guild != null) {
         id = guild.id;

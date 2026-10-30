@@ -1,118 +1,45 @@
 // discord_app/modules/games/native/GamePlatformBadgeRow.tsx
-import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import GamePlatformBadges from "../GamePlatformBadges.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(13752).GamePlatformAvailability.DESKTOP] = fn(9546).ScreenIcon;
-obj[fn(13752).GamePlatformAvailability.MOBILE] = fn(7113).MobilePhoneIcon;
-obj[fn(13752).GamePlatformAvailability.CONSOLE] = fn(9682).GameControllerIcon;
-obj[fn(13752).GamePlatformAvailability.ROBLOX] = fn(9318).RobloxNeutralIcon;
-const createStyles = fn(5005);
+obj[fn(13899).GamePlatformAvailability.DESKTOP] = fn(9565).ScreenIcon;
+obj[fn(13899).GamePlatformAvailability.MOBILE] = fn(7121).MobilePhoneIcon;
+obj[fn(13899).GamePlatformAvailability.CONSOLE] = fn(9707).GameControllerIcon;
+obj[fn(13899).GamePlatformAvailability.ROBLOX] = fn(9332).RobloxNeutralIcon;
+const createStyles = fn(5009);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/games/native/GamePlatformBadgeRow.tsx");
+const result = size.fileFinishedImporting("modules/games/native/GamePlatformBadgeRow.tsx");
 
-export default noop.memo(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? function GamePlatformBadgeRow(platforms) {
-        const cResult = c.c(8);
-        platforms = platforms.platforms;
-        const tmp4 = closure_6();
-        if (cResult[0] !== platforms) {
-          const result = GamePlatformBadges.sortGamePlatformAvailability(platforms);
-          cResult[0] = platforms;
-          cResult[1] = result;
-          let arr = result;
-          const tmpResult = GamePlatformBadges;
-        } else {
-          arr = cResult[1];
-        }
-        if (cResult[2] !== arr) {
-          const _Symbol = Symbol;
-          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function u(item) {
-              obj = {
-                size: "xs",
-                color: "icon-muted",
-                accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item),
-              };
-              return jsx(
-                obj[item],
-                {
-                  size: "xs",
-                  color: "icon-muted",
-                  accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item),
-                },
-                item,
-              );
-            };
-            cResult[4] = fn;
-            let tmp9 = fn;
-          } else {
-            tmp9 = cResult[4];
-          }
-          const mapped = arr.map(tmp9);
-          cResult[2] = arr;
-          cResult[3] = mapped;
-        } else {
-          if (cResult[5] === tmp4.row) {
-            if (cResult[6] === tmp7) {
-              let tmp12 = cResult[7];
-            }
-            return tmp12;
-          }
-          const obj2 = {
-            direction: "horizontal",
-            align: "center",
-            spacing: nativeDefault.space.PX_4,
-            style: tmp6,
-            children: cResult[3],
-          };
-          const tmp15 = jsx(Stack_Stack.Stack, {
-            direction: "horizontal",
-            align: "center",
-            spacing: nativeDefault.space.PX_4,
-            style: tmp6,
-            children: cResult[3],
-          });
-          cResult[5] = tmp4.row;
-          cResult[6] = cResult[3];
-          cResult[7] = tmp15;
-          tmp12 = tmp15;
-        }
-      }
-    : function GamePlatformBadgeRow(platforms) {
-        platforms = platforms.platforms;
-        const items = [platforms];
-        const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
-        const tmp = closure_6();
-        return jsx(platforms(6015).Stack, {
-          direction: "horizontal",
-          align: "center",
-          spacing: nativeDefault.space.PX_4,
-          style: closure_6().row,
-          children: memo.map((item) => {
-            obj = {
-              size: "xs",
-              color: "icon-muted",
-              accessibilityLabel: platforms(dependencyMap[10]).getGamePlatformAvailabilityLabel(item),
-            };
-            return jsx(
-              obj[item],
-              {
-                size: "xs",
-                color: "icon-muted",
-                accessibilityLabel: platforms(dependencyMap[10]).getGamePlatformAvailabilityLabel(item),
-              },
-              item,
-            );
-          }),
-        });
-      },
-);
+export default noop.memo(function GamePlatformBadgeRow(platforms) {
+  platforms = platforms.platforms;
+  const items = [platforms];
+  const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
+  const tmp = closure_6();
+  return jsx(platforms(6022).Stack, {
+    direction: "horizontal",
+    align: "center",
+    spacing: nativeDefault.space.PX_4,
+    style: closure_6().row,
+    children: memo.map((item) => {
+      obj = {
+        size: "xs",
+        color: "icon-muted",
+        accessibilityLabel: platforms(dependencyMap[8]).getGamePlatformAvailabilityLabel(item),
+      };
+      return jsx(
+        obj[item],
+        {
+          size: "xs",
+          color: "icon-muted",
+          accessibilityLabel: platforms(dependencyMap[8]).getGamePlatformAvailabilityLabel(item),
+        },
+        item,
+      );
+    }),
+  });
+});

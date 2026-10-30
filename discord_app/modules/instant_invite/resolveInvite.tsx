@@ -2,17 +2,22 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import TypeUtils from "../../../discord_common/js/packages/type-utils/TypeUtils.tsx";
 import InviteTypeUtils from "InviteTypeUtils.tsx";
+import InviteTargetTypes from "../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(6734);
+const TrackedHTTPUtilsDefault = tmp4(6741);
 require = fn;
-let Constants = fn(7867);
-({ InviteTargetTypes: hasOwnProperty, InviteTypes: metroRequire } = Constants);
-Constants = fn(1084);
-({ Endpoints: closure_7, AnalyticEvents: closure_8, LoggingInviteTypes: closure_9, AbortCodes: c10 } = Constants);
+const InviteTypes = fn(7872).InviteTypes;
+const Constants = fn(1072);
+({
+  Endpoints: metroRequire,
+  AnalyticEvents: closure_7,
+  LoggingInviteTypes: closure_8,
+  AbortCodes: closure_9,
+} = Constants);
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/instant_invite/resolveInvite.tsx");
@@ -32,7 +37,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
     inviteInstanceId = inviteInstanceId.inviteInstanceId;
   }
   obj3.invite_instance_id = inviteInstanceId;
-  AnalyticsUtilsDefault.track(constants3.INVITE_OPENED, obj3);
+  AnalyticsUtilsDefault.track(constants.INVITE_OPENED, obj3);
   if (map.has(inviteKey)) {
     return map.get(inviteKey);
   } else {
@@ -62,14 +67,14 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
     }
     obj5.with_guild_experiments = withGuildExperiments || undefined;
     const request = {
-      url: closure_7.INVITE(baseCode),
+      url: closure_6.INVITE(baseCode),
       query: obj5,
       oldFormErrors: true,
       trackedActionData: null,
       rejectWithError: false,
     };
     const obj6 = {
-      event: tmp(1272).NetworkActionNames.INVITE_RESOLVE,
+      event: tmp(1261).NetworkActionNames.INVITE_RESOLVE,
       properties(ok) {
         let body1 = null;
         if (ok.ok) {
@@ -99,7 +104,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
         };
         let id;
         if (body1 != null) {
-          guild = body1.guild;
+          const guild = body1.guild;
           if (guild != null) {
             id = guild.id;
           }
@@ -157,18 +162,18 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
         obj2.destination_user_id = id3;
         let STREAM = null;
         if (null != body1) {
-          if (body1.target_type === constants.STREAM) {
-            STREAM = constants4.STREAM;
-          } else if (body1.target_type === tmp14.EMBEDDED_APPLICATION) {
-            STREAM = constants4.APPLICATION;
+          if (body1.target_type === InviteTargetTypes.InviteTargetTypes.STREAM) {
+            STREAM = constants2.STREAM;
+          } else if (body1.target_type === InviteTargetTypes.InviteTargetTypes.EMBEDDED_APPLICATION) {
+            STREAM = constants2.APPLICATION;
           } else {
             const inviteType = InviteTypeUtils.getInviteType(body1);
-            if (constants2.FRIEND === inviteType) {
-              STREAM = constants4.FRIEND_INVITE;
-            } else if (constants2.GROUP_DM === inviteType) {
-              STREAM = constants4.GDM_INVITE;
-            } else if (constants2.GUILD === inviteType) {
-              STREAM = constants4.SERVER_INVITE;
+            if (InviteTypes.FRIEND === inviteType) {
+              STREAM = constants2.FRIEND_INVITE;
+            } else if (InviteTypes.GROUP_DM === inviteType) {
+              STREAM = constants2.GDM_INVITE;
+            } else if (InviteTypes.GUILD === inviteType) {
+              STREAM = constants2.SERVER_INVITE;
             } else {
               const _String = String;
               STREAM = String(inviteType);
@@ -177,7 +182,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
           }
         }
         obj2.invite_type = STREAM;
-        obj2.user_banned = code === constants5.USER_BANNED;
+        obj2.user_banned = code === constants3.USER_BANNED;
         let id4;
         if (body1 != null) {
           const guild2 = body1.guild;
@@ -249,28 +254,29 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
             obj.destination_user_id = id3;
             let STREAM = null;
             if (null != body) {
-              if (body.target_type === constants.STREAM) {
-                STREAM = constants4.STREAM;
-              } else if (body.target_type === tmp12.EMBEDDED_APPLICATION) {
-                STREAM = constants4.APPLICATION;
+              if (body.target_type === InviteTargetTypes.InviteTargetTypes.STREAM) {
+                STREAM = constants2.STREAM;
+              } else if (body.target_type === InviteTargetTypes.InviteTargetTypes.EMBEDDED_APPLICATION) {
+                STREAM = constants2.APPLICATION;
               } else {
                 const inviteType = InviteTypeUtils.getInviteType(body);
-                if (constants2.FRIEND === inviteType) {
-                  STREAM = constants4.FRIEND_INVITE;
-                } else if (constants2.GROUP_DM === inviteType) {
-                  STREAM = constants4.GDM_INVITE;
-                } else if (constants2.GUILD === inviteType) {
-                  STREAM = constants4.SERVER_INVITE;
+                if (InviteTypes.FRIEND === inviteType) {
+                  STREAM = constants2.FRIEND_INVITE;
+                } else if (InviteTypes.GROUP_DM === inviteType) {
+                  STREAM = constants2.GDM_INVITE;
+                } else if (InviteTypes.GUILD === inviteType) {
+                  STREAM = constants2.SERVER_INVITE;
                 } else {
                   const _String = String;
                   STREAM = String(inviteType);
                 }
+                const tmp12Result = InviteTypeUtils;
               }
             }
             obj.invite_type = STREAM;
             let id4;
             if (body != null) {
-              guild = body.guild;
+              const guild = body.guild;
               if (guild != null) {
                 id4 = guild.id;
               }
@@ -284,14 +290,14 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
               inviteInstanceId = null;
             }
             obj.invite_instance_id = inviteInstanceId;
-            AnalyticsUtilsDefault.track(constants3.INVITE_RESOLVED, obj, { flush: true });
+            AnalyticsUtilsDefault.track(constants.INVITE_RESOLVED, obj, { flush: true });
           }
           return { invite: body, code };
         },
         (body) => {
           let tmp = null != body.body;
           if (tmp) {
-            tmp = body.body.code === constants5.USER_BANNED;
+            tmp = body.body.code === constants3.USER_BANNED;
           }
           if (null != closure_1) {
             const obj3 = {
@@ -324,7 +330,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
               message = body2.message;
             }
             obj3.error_message = message;
-            AnalyticsUtilsDefault.track(constants3.INVITE_RESOLVED, obj3, { flush: true });
+            AnalyticsUtilsDefault.track(constants.INVITE_RESOLVED, obj3, { flush: true });
           }
           return { invite: null, code, banned: tmp };
         },

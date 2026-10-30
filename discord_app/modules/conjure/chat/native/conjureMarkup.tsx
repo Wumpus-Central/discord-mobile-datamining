@@ -11,8 +11,8 @@ let closure_4 = apply.once(() => {
   const obj2 = {};
   const merged = Object.assign(MarkupUtilsDefault.defaultRules);
   const obj = MarkupUtilsDefault;
-  obj2.conjureFile = conjureFileMentions.createConjureFileMentionRule((attachmentId, id) =>
-    jsx(ConjureFileMentionDefault, { attachmentId }, id),
+  obj2.conjureFile = conjureFileMentions.createConjureFileMentionRule((attachmentId, key) =>
+    jsx(ConjureFileMentionDefault, { attachmentId }, key),
   );
   return obj.reactParserFor(obj2);
 });

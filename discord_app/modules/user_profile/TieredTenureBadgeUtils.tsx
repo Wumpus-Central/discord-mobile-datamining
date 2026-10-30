@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/TieredTenureBadgeUtils.tsx
-import _modDef2047 from "../../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../../_runtime/metro/02044__.js";
 import PremiumConstants from "../premium/PremiumConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -16,13 +16,13 @@ export function getTieredTenureBadge(badgeId) {
   }
   return tmp;
 }
-export function getEarnedOnDate(earnedOnDate2, premiumSince) {
+export function getEarnedOnDate(earnedTenureBadge, premiumSince) {
   if (null == premiumSince) {
     return null;
-  } else if (null == dependencyMap[earnedOnDate2]) {
+  } else if (null == dependencyMap[earnedTenureBadge]) {
     return null;
   } else {
-    const obj = _modDef2047(premiumSince);
+    const obj = _modDef2044(premiumSince);
     obj.add(tmp3.tenureReqNumMonths, "months");
     obj.add(1, "days");
     return obj.toDate();
@@ -41,7 +41,7 @@ export function getEarnedTenureBadge(premiumSince) {
           let tmp6 = dependencyMap[length[diff]];
           toDateResult = null;
           if (null != tmp6) {
-            let obj = _modDef2047(premiumSince);
+            let obj = _modDef2044(premiumSince);
             let addResult = obj.add(tmp6.tenureReqNumMonths, "months");
             let addResult1 = obj.add(1, "days");
             toDateResult = obj.toDate();

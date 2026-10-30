@@ -1,55 +1,22 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2536 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2537 from "../../../parent_tools/FamilyCenter.messages.js";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useDataToSupportQuestsSettingValue() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
-        cResult[0] = selectedTeenId;
-        let first = selectedTeenId;
-      } else {
-        first = cResult[0];
-      }
-      const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
-      return !ParentalControlledDropsOptedOut.useControlledSetting(first);
-    }
-  : function useDataToSupportQuestsSettingValue() {
-      const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
-      const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
-      return !ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
-    };
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2536.ZhaNu8);
+    return intl.string(_modDef2537.ZhaNu8);
   },
-  parent: fn(8387).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? function useDataToSupportQuestsSettingValue() {
-        const cResult = c.c(1);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
-          cResult[0] = selectedTeenId;
-          let first = selectedTeenId;
-        } else {
-          first = cResult[0];
-        }
-        const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
-        return !ParentalControlledDropsOptedOut.useControlledSetting(first);
-      }
-    : function useDataToSupportQuestsSettingValue() {
-        const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
-        const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
-        return !ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
-      },
+  parent: fn(8424).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: function useDataToSupportQuestsSettingValue() {
+    const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
+    const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
+    return !ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
+  },
   onValueChange: function onDataToSupportQuestsSettingValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;

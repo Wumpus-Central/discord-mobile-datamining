@@ -23,7 +23,7 @@ prototype["isAFKChannel"] = function isAFKChannel() {
   if (null == channel) {
     return false;
   } else {
-    guild = GuildStore.getGuild(channel.getGuildId());
+    const guild = GuildStore.getGuild(channel.getGuildId());
     return null != guild && channel.id === guild.afkChannelId;
   }
 };

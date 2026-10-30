@@ -8,11 +8,11 @@ import MessageStore from "../stores/MessageStore.tsx";
 import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4950).NotificationSettingsUpdateType;
-const UnreadSetting = fn(6763).UnreadSetting;
-const UserSettingsConstants = fn(1094);
+const constants2 = fn(4954).NotificationSettingsUpdateType;
+const UnreadSetting = fn(6770).UnreadSetting;
+const UserSettingsConstants = fn(1082);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = {
   ForumThreadsCreatedOn: "enabled forum thread created notifs",
@@ -40,9 +40,7 @@ const NotificationLabels = {
   Unmuted: "unmuted",
   MutedScheduledEvents: "muted scheduled events",
   UnmutedScheduledEvents: "unmuted scheduled events",
-  OverrideCreated: "channel override created",
   OverrideDeleted: "channel override deleted",
-  AnnouncementAutoEnable: "announcement channels auto set to all messages",
 };
 const frozen = Object.freeze({
   [UserNotificationSettings.ALL_MESSAGES]: "All",
@@ -76,8 +74,8 @@ export const NotificationLabel = {
   favorited(setting) {
     return setting ? obj.Favorited : obj.UnFavorited;
   },
-  muted(isModerator) {
-    return isModerator ? obj.Muted : obj.Unmuted;
+  muted(muted) {
+    return muted ? obj.Muted : obj.Unmuted;
   },
   mutedEvents(arg0) {
     return arg0 ? obj.MutedScheduledEvents : obj.UnmutedScheduledEvents;
@@ -377,7 +375,7 @@ export function trackChannelNotificationSettingsUpdate(updateType) {
   }
   const isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, channelId);
   const tmp12 = num2 ^ num;
-  const obj4 = guildId(1402);
+  const obj4 = guildId(1397);
   const lastMessage = MessageStore.getLastMessage(channelId);
   let type;
   if (lastMessage != null) {
@@ -386,7 +384,7 @@ export function trackChannelNotificationSettingsUpdate(updateType) {
   if (type == null) {
     type = null;
   }
-  const removeFlagsResult = guildId(1402).removeFlags(tmp12, constants3.FAVORITED, constants3.OPT_IN_ENABLED);
+  const removeFlagsResult = guildId(1397).removeFlags(tmp12, constants3.FAVORITED, constants3.OPT_IN_ENABLED);
   const obj3 = {};
   const merged = Object.assign(computeResult1);
   const merged1 = Object.assign(LastMentionTimestampStore.getStats(guildId));

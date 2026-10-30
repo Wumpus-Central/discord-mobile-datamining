@@ -7,292 +7,60 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4923).GuildMemberFlags;
+const GuildMemberFlags = fn(4927).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx",
 );
 
-export default noop.memo(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? function ChatInputGuardAutomodUserProfileQuarantine(guildId) {
-        const cResult = guildId(576).c(17);
-        guildId = guildId.guildId;
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [AuthenticationStore, GuildMemberStore];
-          cResult[0] = items;
-          let first = items;
-        } else {
-          first = cResult[0];
-        }
-        if (cResult[1] !== guildId) {
-          class A {
-            constructor() {
-              if (null == guildId) {
-                tmp7 = globalThis;
-                _Set = Set;
-                tmp8 = new.target;
-                tmp9 = new.target;
-                set = new Set();
-                tmp11 = set;
-                return set;
-              } else {
-                tmp2 = closure_4;
-                tmp4 = closure_0;
-                tmp5 = closure_2;
-                id = closure_4.getId();
-                obj = closure_0(closure_2[7]);
-                tmp6 = closure_5;
-                return obj.getAutomodQuarantinedGuildMemberFlags(closure_5.getMember(tmp, id));
-              }
-            }
-          }
-          const items1 = [guildId];
-          cResult[1] = guildId;
-          cResult[2] = A;
-          cResult[3] = items1;
-          let tmp8 = items1;
-        } else {
-          class A {
-            constructor() {
-              if (null == guildId) {
-                tmp7 = globalThis;
-                _Set = Set;
-                tmp8 = new.target;
-                tmp9 = new.target;
-                set = new Set();
-                tmp11 = set;
-                return set;
-              } else {
-                tmp2 = closure_4;
-                tmp4 = closure_0;
-                tmp5 = closure_2;
-                id = closure_4.getId();
-                obj = closure_0(closure_2[7]);
-                tmp6 = closure_5;
-                return obj.getAutomodQuarantinedGuildMemberFlags(closure_5.getMember(tmp, id));
-              }
-            }
-          }
-          tmp8 = cResult[3];
-        }
-        const obj = guildId(576);
-        const stateFromStores = guildId(504).useStateFromStores(first, A, tmp8);
-        if (cResult[4] !== guildId) {
-          class R {
-            constructor() {
-              obj = closure_0(closure_2[9]);
-              result = obj.openAutomodProfileQuarantineAlert(guildId);
-              return;
-            }
-          }
-          cResult[4] = guildId;
-          cResult[5] = R;
-        } else {
-          class R {
-            constructor() {
-              obj = closure_0(closure_2[9]);
-              result = obj.openAutomodProfileQuarantineAlert(guildId);
-              return;
-            }
-          }
-        }
-        if (cResult[6] !== stateFromStores) {
-          class R {
-            constructor() {
-              obj = closure_0(closure_2[9]);
-              result = obj.openAutomodProfileQuarantineAlert(guildId);
-              return;
-            }
-          }
-          const automodReason = obj3.getAutomodReason(stateFromStores);
-          cResult[6] = stateFromStores;
-          cResult[7] = automodReason;
-        } else {
-          class R {
-            constructor() {
-              obj = closure_0(closure_2[9]);
-              result = obj.openAutomodProfileQuarantineAlert(guildId);
-              return;
-            }
-          }
-        }
-        if (cResult[8] !== tmp11) {
-          class R {
-            constructor() {
-              obj = closure_0(closure_2[9]);
-              result = obj.openAutomodProfileQuarantineAlert(guildId);
-              return;
-            }
-          }
-          if (tmp11 === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
-            class R {
-              constructor() {
-                obj = closure_0(closure_2[9]);
-                result = obj.openAutomodProfileQuarantineAlert(guildId);
-                return;
-              }
-            }
-            let stringResult = obj5.string(tmp(1125).t.Viksoo);
-          } else {
-            class R {
-              constructor() {
-                obj = closure_0(closure_2[9]);
-                result = obj.openAutomodProfileQuarantineAlert(guildId);
-                return;
-              }
-            }
-            stringResult = obj4.string(tmp(1125).t["/PGQf0"]);
-          }
-          cResult[8] = tmp11;
-          cResult[9] = stringResult;
-        } else {
-          class R {
-            constructor() {
-              obj = closure_0(closure_2[9]);
-              result = obj.openAutomodProfileQuarantineAlert(guildId);
-              return;
-            }
-          }
-          if (cResult[10] !== tmp11) {
-            class R {
-              constructor() {
-                obj = closure_0(closure_2[9]);
-                result = obj.openAutomodProfileQuarantineAlert(guildId);
-                return;
-              }
-            }
-            if (tmp11 === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
-              class R {
-                constructor() {
-                  obj = closure_0(closure_2[9]);
-                  result = obj.openAutomodProfileQuarantineAlert(guildId);
-                  return;
-                }
-              }
-              let stringResult1 = obj7.string(tmp(1125).t.ml72ZU);
-            } else {
-              class R {
-                constructor() {
-                  obj = closure_0(closure_2[9]);
-                  result = obj.openAutomodProfileQuarantineAlert(guildId);
-                  return;
-                }
-              }
-              stringResult1 = obj6.string(tmp(1125).t["8HW7r9"]);
-            }
-            cResult[10] = tmp11;
-            cResult[11] = stringResult1;
-          } else {
-            class R {
-              constructor() {
-                obj = closure_0(closure_2[9]);
-                result = obj.openAutomodProfileQuarantineAlert(guildId);
-                return;
-              }
-            }
-            const _Symbol = Symbol;
-            if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-              class R {
-                constructor() {
-                  obj = closure_0(closure_2[9]);
-                  result = obj.openAutomodProfileQuarantineAlert(guildId);
-                  return;
-                }
-              }
-              const tmp20 = jsx(tmp(13854).ChatXIcon, {});
-              cResult[12] = tmp20;
-              const tmp19 = tmp20;
-            } else {
-              class R {
-                constructor() {
-                  obj = closure_0(closure_2[9]);
-                  result = obj.openAutomodProfileQuarantineAlert(guildId);
-                  return;
-                }
-              }
-            }
-            if (cResult[13] === tmp13) {
-              class R {
-                constructor() {
-                  obj = closure_0(closure_2[9]);
-                  result = obj.openAutomodProfileQuarantineAlert(guildId);
-                  return;
-                }
-              }
-            }
-            const obj2 = { type: "simple-action", actionOnPress: R, actionLabel: tmp13, icon: tmp19, message: tmp16 };
-            const tmp24 = jsx(ChatInputGuardDefault, {
-              type: "simple-action",
-              actionOnPress: R,
-              actionLabel: tmp13,
-              icon: tmp19,
-              message: tmp16,
-            });
-            cResult[13] = tmp13;
-            cResult[14] = R;
-            cResult[15] = tmp16;
-            cResult[16] = tmp24;
-          }
-        }
-        const tmpResult = guildId(504);
+export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(guildId) {
+  guildId = guildId.guildId;
+  const items = [AuthenticationStore, GuildMemberStore];
+  const items1 = [guildId];
+  const items2 = [guildId];
+  const stateFromStores = guildId(504).useStateFromStores(
+    items,
+    () => {
+      if (null == guildId) {
+        const _Set = Set;
+        const set = new Set();
+        return set;
+      } else {
+        const id = AuthenticationStore.getId();
+        return AutomodPermissionUtils.getAutomodQuarantinedGuildMemberFlags(GuildMemberStore.getMember(tmp, id));
       }
-    : function ChatInputGuardAutomodUserProfileQuarantine(guildId) {
-        guildId = guildId.guildId;
-        const items = [AuthenticationStore, GuildMemberStore];
-        const items1 = [guildId];
-        const items2 = [guildId];
-        const stateFromStores = guildId(504).useStateFromStores(
-          items,
-          () => {
-            if (null == guildId) {
-              const _Set = Set;
-              const set = new Set();
-              return set;
-            } else {
-              const id = AuthenticationStore.getId();
-              return AutomodPermissionUtils.getAutomodQuarantinedGuildMemberFlags(GuildMemberStore.getMember(tmp, id));
-            }
-          },
-          items1,
-        );
-        const callback = noop.useCallback(() => {
-          const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
-        }, items2);
-        const obj = guildId(504);
-        const automodReason = guildId(4943).getAutomodReason(stateFromStores);
-        if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
-          const intl2 = tmp(1125).intl;
-          let stringResult = intl2.string(tmp(1125).t.Viksoo);
-        } else {
-          const intl = tmp(1125).intl;
-          stringResult = intl.string(tmp(1125).t["/PGQf0"]);
-        }
-        if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
-          const intl4 = tmp(1125).intl;
-          let stringResult1 = intl4.string(tmp(1125).t.ml72ZU);
-        } else {
-          const intl3 = tmp(1125).intl;
-          stringResult1 = intl3.string(tmp(1125).t["8HW7r9"]);
-        }
-        const obj3 = {
-          type: "simple-action",
-          actionOnPress: callback,
-          actionLabel: stringResult,
-          icon: null,
-          message: null,
-        };
-        const obj2 = guildId(4943);
-        obj3.icon = jsx(guildId(13854).ChatXIcon, {});
-        obj3.message = stringResult1;
-        return jsx(ChatInputGuardDefault, {
-          type: "simple-action",
-          actionOnPress: callback,
-          actionLabel: stringResult,
-          icon: null,
-          message: null,
-        });
-      },
-);
+    },
+    items1,
+  );
+  const callback = noop.useCallback(() => {
+    const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
+  }, items2);
+  const obj = guildId(504);
+  const automodReason = guildId(4947).getAutomodReason(stateFromStores);
+  if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
+    const intl2 = tmp(1114).intl;
+    let stringResult = intl2.string(tmp(1114).t.Viksoo);
+  } else {
+    const intl = tmp(1114).intl;
+    stringResult = intl.string(tmp(1114).t["/PGQf0"]);
+  }
+  if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
+    const intl4 = tmp(1114).intl;
+    let stringResult1 = intl4.string(tmp(1114).t.ml72ZU);
+  } else {
+    const intl3 = tmp(1114).intl;
+    stringResult1 = intl3.string(tmp(1114).t["8HW7r9"]);
+  }
+  const obj3 = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
+  const obj2 = guildId(4947);
+  obj3.icon = jsx(guildId(13988).ChatXIcon, {});
+  obj3.message = stringResult1;
+  return jsx(ChatInputGuardDefault, {
+    type: "simple-action",
+    actionOnPress: callback,
+    actionLabel: stringResult,
+    icon: null,
+    message: null,
+  });
+});

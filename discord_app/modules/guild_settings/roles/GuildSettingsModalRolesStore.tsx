@@ -15,7 +15,7 @@ function handleGuildRoleCreateOrUpdate(arg0) {
     c9 = sortedRoles.map((id) => id.id);
   }
 }
-const FormStates = fn(1084).FormStates;
+const FormStates = fn(1072).FormStates;
 let OPEN = FormStates.CLOSED;
 let c8 = false;
 let c9 = null;
@@ -94,7 +94,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(Dispatcher
     c8 = true;
     const sortedRoles = GuildRoleStore.getSortedRoles(guildId);
     c9 = sortedRoles.map((id) => id.id);
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     clearTimeout(closure_15);
   },
   GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER: function handleStopReorder() {
@@ -138,7 +138,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(Dispatcher
     }
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_START_EDITING: function handleStartEditingPermissions(guildId) {
-    guild = GuildStore.getGuild(guildId.guildId);
+    const guild = GuildStore.getGuild(guildId.guildId);
     _null2 = guild;
     let role;
     if (null != guild) {

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/native/useJoinRequestButtonActions.tsx
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -7,12 +7,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-const Routes = fn(1084).Routes;
+const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/useJoinRequestButtonActions.tsx");
 
-export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cResult) {
-  const onDismiss = cResult;
+export function useJoinRequestButtonActions(joinRequest, interviewChannelId, callback) {
+  const onDismiss = callback;
   let obj = joinRequest;
   if (joinRequest == null) {
     obj = {};
@@ -43,7 +43,7 @@ export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cRe
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -186,7 +186,7 @@ export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cRe
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -270,7 +270,7 @@ export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cRe
     }),
     items1,
   );
-  const items2 = [guildId, joinRequestId, joinRequest, cResult, onError, userId];
+  const items2 = [guildId, joinRequestId, joinRequest, callback, onError, userId];
   obj2.rejectRequest = joinRequestId.useCallback(() => {
     let tmp2 = null != joinRequest;
     if (tmp2) {
@@ -286,8 +286,8 @@ export function useJoinRequestButtonActions(joinRequest, interviewChannelId, cRe
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(14026, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(14026, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(14158, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(14158, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

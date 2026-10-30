@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import FreeFormInputGroupDefault from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import HubEmailConnectionModal from "HubEmailConnectionModal.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -15,14 +15,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(14128).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14276).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   title: {
-    fontFamily: fn(1084).Fonts.PRIMARY_BOLD,
+    fontFamily: fn(1072).Fonts.PRIMARY_BOLD,
     color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
     fontSize: 24,
     textAlign: "center",
@@ -36,7 +36,7 @@ let obj2 = {
   redesignSubmit: null,
 };
 let obj3 = {
-  fontFamily: fn(1084).Fonts.PRIMARY_BOLD,
+  fontFamily: fn(1072).Fonts.PRIMARY_BOLD,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   fontSize: 24,
   textAlign: "center",
@@ -67,7 +67,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

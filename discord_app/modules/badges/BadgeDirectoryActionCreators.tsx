@@ -28,7 +28,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -60,7 +60,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
           closure_131_8 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -186,7 +186,7 @@ let closure_11 = async function _fetchBadge(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -307,7 +307,7 @@ let closure_12 = async function _requestBadgeSummary(arg0) {
   }
   return value;
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: hasOwnProperty, ME: metroRequire } = Constants);
 const map = new Map();
 const map1 = new Map();

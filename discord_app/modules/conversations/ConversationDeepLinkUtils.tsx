@@ -13,34 +13,98 @@ function resolveConversationFocusLink() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = async function _resolveConversationFocusLink() {
-  closure_1 = tmp2;
-  ({ channelId: closure_129_0, conversationId: closure_129_1, messageId: closure_129_2 } = closure_0);
-  await "Reflect";
-  await closure_130_0(closure_130_2[4]).fetchConversation(closure_129_0, closure_129_1);
-  const conversation = closure_130_5.getConversation(closure_129_1);
-  let tmp8 = null == conversation;
-  if (!tmp8) {
-    tmp8 = conversation.messageCount <= 1;
-  }
-  let tmp9 = !tmp8;
-  if (!tmp8) {
-    const messageIds = conversation.messageIds;
-    let flag = messageIds.includes(closure_129_2);
-    if (flag) {
-      const result = closure_130_0(closure_130_2[4]).setSelectedConversation(closure_129_0, conversation.id, {
-        cacheType: "preview",
-        shouldJump: false,
-      });
-      flag = true;
-      closure_130_0(closure_130_2[4]);
+let closure_8 = async function _resolveConversationFocusLink(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
     }
-    tmp9 = flag;
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          ({ channelId: closure_129_0, conversationId: closure_129_1, messageId: closure_129_2 } = closure_0);
+          let conversation;
+          c3 = 1;
+          c4 = 1;
+          return { value: "flexDirection", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          c3 = 2;
+          c4 = 1;
+          const obj6 = {
+            value: closure_130_0(closure_130_2[4]).fetchConversation(closure_129_0, closure_129_1),
+            done: false,
+          };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        conversation = closure_130_5.getConversation(closure_129_1);
+        let tmp8 = null == conversation;
+        if (!tmp8) {
+          tmp8 = conversation.messageCount <= 1;
+        }
+        let tmp9 = !tmp8;
+        if (!tmp8) {
+          const messageIds = conversation.messageIds;
+          let flag = messageIds.includes(closure_129_2);
+          if (flag) {
+            const result = closure_130_0(closure_130_2[4]).setSelectedConversation(closure_129_0, conversation.id, {
+              cacheType: "preview",
+              shouldJump: false,
+            });
+            flag = true;
+            const obj = closure_130_0(closure_130_2[4]);
+          }
+          tmp9 = flag;
+        }
+        c4 = 3;
+        const obj8 = { value: tmp9, done: true };
+        return obj8;
+      }
+    } catch (tmp27) {
+      c4 = tmp;
+      throw tmp27;
+    }
   }
-  return tmp9;
 };
-fn(6919).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5644).CONVERSATION_QUERY_PARAM;
+fn(6926).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5650).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
@@ -84,7 +148,7 @@ export function consumeConversationFocusParam(state) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } else {
                   try {
@@ -101,7 +165,7 @@ export function consumeConversationFocusParam(state) {
                         channelId = tmp4;
                         v2 = 1;
                         dependencyMap = 1;
-                        const obj4 = { value: v2(10139)(guildId), done: false };
+                        const obj4 = { value: v2(10166)(guildId), done: false };
                         return obj4;
                       }
                     } else if (1 === tmp4) {
@@ -132,11 +196,11 @@ export function consumeConversationFocusParam(state) {
                       return obj8;
                     } else {
                       if (value) {
-                        const conversationFocus = channelId(9802).requestConversationFocus();
-                        const obj = channelId(9802);
+                        const conversationFocus = channelId(9828).requestConversationFocus();
+                        const obj = channelId(9828);
                       }
                       dependencyMap = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } catch (tmp17) {
                     dependencyMap = tmp;

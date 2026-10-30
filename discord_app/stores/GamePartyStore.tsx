@@ -61,7 +61,7 @@ function updateParty(id, id2, activities, status) {
       tmp19[id] = id;
       if (!RelationshipStore.isBlocked(id2)) {
         if (!RelationshipStore.isIgnored(id2)) {
-          value3 = map.get(id);
+          let value3 = map.get(id);
           if (value3 == null) {
             const _Set = Set;
             value3 = new Set();
@@ -85,7 +85,7 @@ function updateParty(id, id2, activities, status) {
       if (obj9.isEmpty(dependencyMap[id2])) {
         delete tmp[tmp3];
       }
-      value4 = map.get(tmp29);
+      const value4 = map.get(tmp29);
       flag3 = true;
       if (null != value4) {
         value4.delete(id2);
@@ -136,7 +136,7 @@ function handleRelationshipAddOrUpdate(relationship) {
     }
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ StatusTypes: hasOwnProperty, ME: metroRequire } = Constants);
 const dependencyMap = {};
 let map = new Map();

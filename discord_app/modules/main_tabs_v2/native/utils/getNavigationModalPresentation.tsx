@@ -32,7 +32,7 @@ if (!PlatformUtils) {
 obj.lockOrientation = tmp3;
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
-export default function getNavigationModalPresentation(arg0) {
+export default function getNavigationModalPresentation() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = obj;

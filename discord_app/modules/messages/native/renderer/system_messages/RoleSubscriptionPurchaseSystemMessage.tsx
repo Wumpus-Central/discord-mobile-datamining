@@ -13,7 +13,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const SystemChannelFlags = fn(1084).SystemChannelFlags;
+const SystemChannelFlags = fn(1072).SystemChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/RoleSubscriptionPurchaseSystemMessage.tsx",
@@ -31,7 +31,7 @@ export function createRoleSubscriptionPurchaseSystemMessage(message) {
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     const guildMemberAvatar = useMessageAuthor.getMessageAuthor(message).guildMemberAvatar;
     const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
     if (null != guildId) {

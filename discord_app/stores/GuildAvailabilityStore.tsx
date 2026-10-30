@@ -66,7 +66,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(DispatcherDefault, {
     if (set.has(guildId.guildId)) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId.guildId);
+      const guild = GuildStore.getGuild(guildId.guildId);
       let str = "???";
       if (tmp4) {
         str = guild.name;

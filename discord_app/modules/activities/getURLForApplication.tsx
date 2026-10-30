@@ -58,8 +58,8 @@ export function getNonTestModeUrlForApplication(arg0) {
     return "https://" + arg0 + "." + ACTIVITY_APPLICATION_HOST;
   }
 }
-export function getApplicationRouterOrigin(embeddedAppUrl) {
-  const toURLSafeResult = URLUtilsDefault.toURLSafe(embeddedAppUrl);
+export function getApplicationRouterOrigin(assetURL) {
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(assetURL);
   if (null == toURLSafeResult) {
     return null;
   } else {

@@ -5,9 +5,9 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import StageChannelRoleStore from "StageChannelRoleStore.tsx";
 
-function unpackStageChannelParty(activity) {
-  if (null != activity) {
-    if (null != activity.party) {
+function unpackStageChannelParty(party) {
+  if (null != party) {
+    if (null != party.party) {
       try {
         if (null != str) {
           if (str.startsWith(c7)) {
@@ -32,8 +32,8 @@ function unpackStageChannelParty(activity) {
     }
   }
 }
-const STAGE_APPLICATION_ID = fn(6696).STAGE_APPLICATION_ID;
-const GuildFeatures = fn(1084).GuildFeatures;
+const STAGE_APPLICATION_ID = fn(6703).STAGE_APPLICATION_ID;
+const GuildFeatures = fn(1072).GuildFeatures;
 let c7 = "stage:";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");
@@ -43,7 +43,7 @@ export function packStageChannelPartyId(channel, stageInstanceByChannel) {
   if (StageChannelRoleStore.isSpeaker(AuthenticationStore.getId(), channel.id)) {
     num = 1;
   }
-  guild = GuildStore.getGuild(channel.getGuildId());
+  const guild = GuildStore.getGuild(channel.getGuildId());
   let str = num;
   if (null != guild) {
     const features = guild.features;
@@ -61,15 +61,15 @@ export function packStageChannelPartyId(channel, stageInstanceByChannel) {
   return "" + c7 + channel.guild_id + ":" + channel.id + ":" + str.toString(16) + ":" + stageInstanceByChannel.id;
 }
 export { unpackStageChannelParty };
-export function isStageActivity(activity) {
-  let application_id;
-  if (activity != null) {
-    application_id = activity.application_id;
+export function isStageActivity(application_id) {
+  application_id = undefined;
+  if (application_id != null) {
+    application_id = application_id.application_id;
   }
   return application_id === STAGE_APPLICATION_ID;
 }
-export function shouldShowActivity(activity) {
-  const tmp = unpackStageChannelParty(activity);
+export function shouldShowActivity(party) {
+  const tmp = unpackStageChannelParty(party);
   if (null == tmp) {
     return false;
   } else {

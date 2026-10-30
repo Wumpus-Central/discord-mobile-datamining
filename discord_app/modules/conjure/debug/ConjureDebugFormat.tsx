@@ -12,15 +12,15 @@ export function debugLogEnv(source) {
   }
   str2 = source;
 }
-export function formatBytes(r2_bytes) {
-  if (Number.isFinite(r2_bytes)) {
-    if (r2_bytes >= 0) {
-      if (r2_bytes < 1024) {
+export function formatBytes(looseBytes) {
+  if (Number.isFinite(looseBytes)) {
+    if (looseBytes >= 0) {
+      if (looseBytes < 1024) {
         const _Math4 = Math;
         const _HermesInternal4 = HermesInternal;
-        return "" + Math.round(r2_bytes) + " B";
+        return "" + Math.round(looseBytes) + " B";
       } else {
-        const result = r2_bytes / 1024;
+        const result = looseBytes / 1024;
         if (result < 1024) {
           if (100 <= result) {
             const _Math3 = Math;
@@ -58,23 +58,23 @@ export function formatBytes(r2_bytes) {
   }
   return "\u2014";
 }
-export function formatMs(wall_ms_total) {
-  if (Number.isFinite(wall_ms_total)) {
-    if (wall_ms_total >= 0) {
-      if (wall_ms_total < 1) {
+export function formatMs(cpu_ms) {
+  if (Number.isFinite(cpu_ms)) {
+    if (cpu_ms >= 0) {
+      if (cpu_ms < 1) {
         const _HermesInternal4 = HermesInternal;
-        return "" + wall_ms_total.toFixed(2) + " ms";
-      } else if (wall_ms_total < 1000) {
-        if (wall_ms_total >= 100) {
+        return "" + cpu_ms.toFixed(2) + " ms";
+      } else if (cpu_ms < 1000) {
+        if (cpu_ms >= 100) {
           const _Math4 = Math;
-          let rounded = Math.round(wall_ms_total);
+          let rounded = Math.round(cpu_ms);
         } else {
-          rounded = wall_ms_total.toFixed(1);
+          rounded = cpu_ms.toFixed(1);
         }
         const _HermesInternal3 = HermesInternal;
         return "" + rounded + " ms";
       } else {
-        const result = wall_ms_total / 1000;
+        const result = cpu_ms / 1000;
         if (result < 60) {
           if (10 <= result) {
             const _Math3 = Math;

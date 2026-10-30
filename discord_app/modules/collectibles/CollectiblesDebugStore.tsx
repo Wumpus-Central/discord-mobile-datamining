@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/CollectiblesDebugStore.tsx
-import 00570__ from "../../../_runtime/metro/00570__.js";
+import 00560__ from "../../../_runtime/metro/00560__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const useCollectiblesDebugStore = module_570.create((arg0) => {
+const useCollectiblesDebugStore = module_560.create((arg0) => {
   closure_0 = arg0;
   return {
     logs: [],

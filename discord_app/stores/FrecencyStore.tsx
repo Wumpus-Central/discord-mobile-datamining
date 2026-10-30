@@ -80,8 +80,8 @@ function initFrecency() {
     );
   }
 }
-const ID_REGEX = fn(1084).ID_REGEX;
-const UserSettingsTypes = fn(1094).UserSettingsTypes;
+const ID_REGEX = fn(1072).ID_REGEX;
+const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let closure_9 = new FrecencyDefault({
   computeBonus() {
     return 100;
@@ -109,7 +109,7 @@ let closure_9 = new FrecencyDefault({
     return num;
   },
   lookupKey(id) {
-    guild = GuildStore.getGuild(id);
+    let guild = GuildStore.getGuild(id);
     if (guild == null) {
       guild = ChannelStore.getChannel(id);
     }

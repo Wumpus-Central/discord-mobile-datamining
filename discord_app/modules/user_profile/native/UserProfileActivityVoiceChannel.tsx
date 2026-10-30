@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
 import GuildRecord from "../../../records/GuildRecord.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -105,7 +105,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
     obj10.accessibilityLabel = tmp2(tmp3[21])(obj11);
     const intl2 = tmp4(tmp3[15]).intl;
     obj10.accessibilityHint = intl2.string(tmp4(tmp3[15]).t["9C444m"]);
-    obj10.onPress = function handlePress_0() {
+    obj10.onPress = function handlePress() {
       onAction({ action: "OPEN_VOICE_CHANNEL" });
       PrivateChannelCallUtils.openGuildVoiceModal(channel, newestAnalyticsLocation);
       ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -130,7 +130,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14805, dependencyMap.paths),
+      asyncRequireImpl(14840, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,

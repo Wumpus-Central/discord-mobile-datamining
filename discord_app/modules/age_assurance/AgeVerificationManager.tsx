@@ -1,12 +1,12 @@
 // discord_app/modules/age_assurance/AgeVerificationManager.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import MessageEmbedTypes from "../../../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx";
-import Server from "../../flow/Server.tsx";
-import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import ChannelMessagesDefault from "../../lib/ChannelMessages.tsx";
-import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import AgeVerificationUtils from "AgeVerificationUtils.tsx";
+import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import ManualReviewActionCreators from "ManualReviewActionCreators.tsx";
 import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils.tsx";
+import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -57,11 +57,14 @@ function handleMessageCreate(channelId) {
     }
   }
 }
-const transformUser = fn(1389).transformUser;
-const Constants = fn(1084);
-({ ChannelTypes: closure_8, MAX_MESSAGES_PER_CHANNEL: closure_9 } = Constants);
-const SafetyToastType = fn(7476).SafetyToastType;
-let closure_10 = new LoggerDefault("AgeVerificationManager");
+function handleLoadChannelMessages(channelId) {
+  const messages = MessageActionCreatorsDefault.fetchMessages({ channelId, limit });
+}
+const transformUser = fn(1384).transformUser;
+const Constants = fn(1072);
+({ ChannelTypes: closure_9, MAX_MESSAGES_PER_CHANNEL: c10 } = Constants);
+const SafetyToastType = fn(7484).SafetyToastType;
+let closure_11 = new LoggerDefault("AgeVerificationManager");
 const prototype = function AgeVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -78,50 +81,23 @@ const prototype = function AgeVerificationManager() {
     applyArgumentsResult._previousAgeVerificationStatus = prop;
   };
   applyArgumentsResult.handleCurrentUserUpdate = function handleCurrentUserUpdate(user) {
-    let channelId;
-    c1 = undefined;
     let prop = transformUser(user.user).ageVerificationStatus;
     if (prop == null) {
       prop = null;
     }
-    let isFeatureAgeGatedResult = tmp5;
+    let isAdultStatusResult = tmp5;
     if (applyArgumentsResult._previousAgeVerificationStatus !== prop) {
-      isFeatureAgeGatedResult = prop === Server.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
-    }
-    if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = RegionalFeatureConfigUtils.isFeatureAgeGated(
-        AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES,
-      );
+      isAdultStatusResult = AgeVerificationUtils.isAdultStatus(prop);
     }
     if (applyArgumentsResult._previousAgeVerificationStatus !== prop) {
       const result = ManualReviewActionCreators.invalidateManualReviewCache();
     }
     try {
-      if (isFeatureAgeGatedResult) {
-        channelId = SelectedChannelStore.getChannelId();
-        c1 = false;
-        const item = ChannelMessagesDefault.forEach((channelId) => {
-          channelId = channelId.channelId;
-          channel = channel.getChannel(channelId);
-          let nsfw;
-          if (channel != null) {
-            nsfw = channel.nsfw;
-          }
-          if (nsfw) {
-            ChannelMessagesDefault.clear(channelId);
-            if (channelId === channelId) {
-              c1 = true;
-            }
-          }
-        });
-        let tmp20 = c1;
-        if (c1) {
-          tmp20 = null != tmp16;
-        }
-        if (tmp20) {
-          (function handleLoadChannelMessages(channelId) {
-            const messages = _true(7624).fetchMessages({ channelId, limit });
-          })(tmp16);
+      if (isAdultStatusResult) {
+        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6557).clear(channelId.channelId));
+        const channelId = SelectedChannelStore.getChannelId();
+        if (null != channelId) {
+          handleLoadChannelMessages(tmp17);
           (function handleLoadForumPosts(arg0) {
             channel = channel.getChannel(arg0);
             let type;
@@ -137,16 +113,20 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              channelId(7461).preloadForumThreads(channel);
-              const obj = channelId(7461);
+              closure_1_0(7469).preloadForumThreads(channel);
+              const obj = closure_1_0(7469);
             }
-          })(tmp16);
+          })(tmp17);
+          const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(tmp17);
+          if (null != currentSidebarChannelId) {
+            handleLoadChannelMessages(currentSidebarChannelId);
+          }
         }
       }
       applyArgumentsResult._previousAgeVerificationStatus = prop;
-    } catch (tmp25) {
+    } catch (tmp26) {
       tmp._previousAgeVerificationStatus = tmp2;
-      throw tmp25;
+      throw tmp26;
     }
   };
   applyArgumentsResult.actions = {

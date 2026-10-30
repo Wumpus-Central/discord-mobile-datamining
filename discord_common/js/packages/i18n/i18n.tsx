@@ -1,11 +1,16 @@
 // discord_common/js/packages/i18n/i18n.tsx
 import getSystemLocale from "getSystemLocale.tsx";
-import _modDef1905 from "../../../../_runtime/metro/01905__.js";
-import _mod1946 from "../../../../_runtime/metro/01946__.js";
+import _modDef1900 from "../../../../_runtime/metro/01900__.js";
+import _mod1941 from "../../../../_runtime/metro/01941__.js";
 import parse from "parse.tsx";
 
 require = fn;
-global.IntlMessageFormat = _modDef1905;
+global.IntlMessageFormat = _modDef1900;
+const module_1909 = fn(1909);
+const module_1910 = fn(1910);
+const module_1911 = fn(1911);
+const module_1912 = fn(1912);
+const module_1913 = fn(1913);
 const module_1914 = fn(1914);
 const module_1915 = fn(1915);
 const module_1916 = fn(1916);
@@ -29,14 +34,9 @@ const module_1933 = fn(1933);
 const module_1934 = fn(1934);
 const module_1935 = fn(1935);
 const module_1936 = fn(1936);
-const module_1937 = fn(1937);
-const module_1938 = fn(1938);
-const module_1939 = fn(1939);
-const module_1940 = fn(1940);
-const module_1941 = fn(1941);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(1942);
+  fn(1937);
 }
 const React2 = "en-US";
 class Provider {
@@ -125,7 +125,7 @@ ProxyProvider.prototype["refresh"] = function refresh(arg0) {
     delete tmp2[tmp];
   });
 };
-const EventEmitter = fn(580).EventEmitter;
+const EventEmitter = fn(568).EventEmitter;
 _instance_members_initializer_I18N_ = function () {
   const self = this;
   this.loadPromise = Promise.resolve();
@@ -139,10 +139,10 @@ _instance_members_initializer_I18N_ = function () {
       return _createProxy(obj3);
     } else {
       try {
-        return self(1947).getMessage(tmp4, locale);
+        return self(1942).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(1947).getMessage(tmp7, tmp);
+          return self(1942).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -342,5 +342,5 @@ prototype["_fetchMessages"] = function _fetchMessages(c2) {
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
-export const getSystemLocale = fn(1360).getSystemLocale;
+export const getSystemLocale = fn(1349).getSystemLocale;
 export { I18N };

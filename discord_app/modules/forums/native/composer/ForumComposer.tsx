@@ -1,11 +1,10 @@
 // discord_app/modules/forums/native/composer/ForumComposer.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import KeyboardUIStore from "../../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import useKeyboardTypeDefault from "../../../keyboard/native/useKeyboardType.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -39,6 +38,32 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
+function Tags(tags) {
+  tags = tags.tags;
+  const tmp = closure_33();
+  let tmp2 = null;
+  if (0 !== tags.length) {
+    let obj = { style: tmp.tags, children: null };
+    let obj2 = { size: "sm", style: tmp.tagIcon };
+    let items = [
+      __initData7(TagIcon.TagIcon, obj2),
+      tags.map((tag, index) => {
+        let tmp2 = 0 !== index;
+        if (tmp2) {
+          const obj = { style: { width: 4 } };
+          tmp2 = closure_1_29(closure_1_9, obj);
+        }
+        const obj2 = { children: null };
+        const items = [tmp2, closure_1_29(require("AppliedForumTag").AppliedForumTagPill, { tag })];
+        obj2.children = items;
+        return closure_1_30(React.Fragment, obj2, tag.id);
+      }),
+    ];
+    obj.children = items;
+    tmp2 = __initData8(React7, obj);
+  }
+  return tmp2;
+}
 function ActionBar(channel) {
   channel = channel.channel;
   ({ tags: importDefault, onTagsSave: dependencyMap, canPost } = channel);
@@ -61,7 +86,7 @@ function ActionBar(channel) {
   const tmp6 = useKeyboardTypeDefault();
   closure_7 = tmp6;
   let isMediaChannelResult = channel.isMediaChannel();
-  const tmp8 = tmp6 === channel(1629).KeyboardTypes.MEDIA;
+  const tmp8 = tmp6 === channel(1624).KeyboardTypes.MEDIA;
   closure_8 = tmp8;
   if (!isMediaChannelResult) {
     let tmp9 = stateFromStores1;
@@ -101,12 +126,12 @@ function ActionBar(channel) {
         onPress: null,
         foregroundRipple: true,
       };
-      const intl2 = tmp2(1125).intl;
-      obj6.accessibilityLabel = intl2.string(tmp2(1125).t["112vVE"]);
+      const intl2 = tmp2(1114).intl;
+      obj6.accessibilityLabel = intl2.string(tmp2(1114).t["112vVE"]);
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(9525).TagIcon;
+      obj6.IconComponent = tmp2(9544).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -117,8 +142,8 @@ function ActionBar(channel) {
               closure_1_5();
             }
             tmp5 =
-              closure_1_7 !== channel(1629).KeyboardTypes.SYSTEM &&
-              closure_1_7 !== channel(1629).KeyboardTypes.EXPRESSION;
+              closure_1_7 !== channel(1624).KeyboardTypes.SYSTEM &&
+              closure_1_7 !== channel(1624).KeyboardTypes.EXPRESSION;
           },
           title: null,
           tags: null,
@@ -133,15 +158,15 @@ function ActionBar(channel) {
             closure_1_5();
           }
           tmp4 =
-            closure_1_7 !== channel(1629).KeyboardTypes.SYSTEM &&
-            closure_1_7 !== channel(1629).KeyboardTypes.EXPRESSION;
+            closure_1_7 !== channel(1624).KeyboardTypes.SYSTEM &&
+            closure_1_7 !== channel(1624).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11098, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11120, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(7544).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7552).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10176).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10201).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -150,18 +175,18 @@ function ActionBar(channel) {
         onPress: null,
         foregroundRipple: true,
       };
-      const intl3 = tmp2(1125).intl;
-      obj7.accessibilityLabel = intl3.string(tmp2(1125).t.iZ7Mz9);
+      const intl3 = tmp2(1114).intl;
+      obj7.accessibilityLabel = intl3.string(tmp2(1114).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9413).ReactionIcon;
+      obj7.IconComponent = tmp2(9430).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7544).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7552).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
-    const intl4 = tmp2(1125).intl;
+    const intl4 = tmp2(1114).intl;
     const string = intl4.string;
-    const t = tmp2(1125).t;
+    const t = tmp2(1114).t;
     if (isEdit) {
       let stringResult = string(t["R3BPH+"]);
     } else {
@@ -173,13 +198,13 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(8601).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(8635).ChatIcon, obj10);
     obj9.onPress = function handleSubmit() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj8.children = closure_29(tmp2(5281).Button, obj9);
+    obj8.children = closure_29(tmp2(5629).Button, obj9);
     items4[3] = closure_29(closure_9, obj8);
     obj5.children = items4;
     items3[1] = closure_30(closure_9, obj5);
@@ -187,15 +212,15 @@ function ActionBar(channel) {
     return closure_30(closure_9, obj3);
   } else {
     const obj11 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
-    let intl = tmp2(1125).intl;
-    obj11.accessibilityLabel = intl.string(tmp2(1125).t.aDZSuz);
+    let intl = tmp2(1114).intl;
+    obj11.accessibilityLabel = intl.string(tmp2(1114).t.aDZSuz);
     const items6 = [,];
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(14444).KeyboardIcon;
+      let ImageIcon = tmp2(14477).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(8617).ImageIcon;
+      ImageIcon = tmp2(8651).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function handlePressMediaButton() {
@@ -207,7 +232,7 @@ function ActionBar(channel) {
       }
       const result1 = Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7544).HeaderActionButton, obj11);
+    closure_29(tmp2(7552).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
@@ -219,20 +244,20 @@ get_ActivityIndicator = fn(17);
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(7689).DraftType;
-const SlowmodeType = fn(7818).SlowmodeType;
-let Constants = fn(1084);
+const DraftType = fn(7694).DraftType;
+const SlowmodeType = fn(7823).SlowmodeType;
+let Constants = fn(1072);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
-const ChannelFlags = fn(4864).ChannelFlags;
-const ContentDismissActionType = fn(4854).ContentDismissActionType;
-const ExpressionPickerViewType = fn(1240).ExpressionPickerViewType;
-let closure_27 = fn(1124).OpenThreadAnalyticsLocations;
-Constants = fn(1095);
+const ChannelFlags = fn(4865).ChannelFlags;
+const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+let closure_27 = fn(1113).OpenThreadAnalyticsLocations;
+Constants = fn(1083);
 ({ NOOP: closure_28, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "relative" },
   scrollViewContentContainer: { paddingBottom: 16 },
@@ -326,93 +351,6 @@ let closure_33 = createStyles.createStyles(obj2);
 let __initData = {
   code: "function ForumComposerTsx1({contentOffset:{y:y}}){const{scrollTopValue}=this.__closure;return scrollTopValue.set(y);}",
 };
-const ReactCompilerGating = fn(558);
-let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function Tags(tags) {
-      const cResult = c.c(9);
-      tags = tags.tags;
-      const tmp4 = closure_33();
-      if (0 === tags.length) {
-        return null;
-      } else {
-        if (cResult[0] !== tmp4.tagIcon) {
-          let obj2 = { size: "sm", style: tmp4.tagIcon };
-          const tmp7 = closure_1_29(TagIcon.TagIcon, obj2);
-          cResult[0] = tmp4.tagIcon;
-          cResult[1] = tmp7;
-          let tmp5 = tmp7;
-        } else {
-          tmp5 = cResult[1];
-        }
-        if (cResult[2] !== tags) {
-          const _Symbol = Symbol;
-          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function u(tag, arg1) {
-              let tmp2 = 0 !== arg1;
-              if (tmp2) {
-                const obj = { style: { width: 4 } };
-                tmp2 = closure_1_29(closure_1_9, obj);
-              }
-              const obj2 = { children: null };
-              const items = [tmp2, closure_1_29(require("AppliedForumTag").AppliedForumTagPill, { tag })];
-              obj2.children = items;
-              return closure_1_30(React.Fragment, obj2, tag.id);
-            };
-            cResult[4] = fn;
-            let tmp10 = fn;
-          } else {
-            tmp10 = cResult[4];
-          }
-          const mapped = tags.map(tmp10);
-          cResult[2] = tags;
-          cResult[3] = mapped;
-        } else {
-          if (cResult[5] === tmp4.tags) {
-            if (cResult[6] === tmp5) {
-              if (cResult[7] === tmp8) {
-                let tmp13 = cResult[8];
-              }
-              return tmp13;
-            }
-          }
-          const obj3 = { style: tmp4.tags, children: null };
-          let items = [tmp5, cResult[3]];
-          obj3.children = items;
-          const tmp16 = __initData2(React6, obj3);
-          cResult[5] = tmp4.tags;
-          cResult[6] = tmp5;
-          cResult[7] = cResult[3];
-          cResult[8] = tmp16;
-          tmp13 = tmp16;
-        }
-      }
-    }
-  : function Tags(tags) {
-      tags = tags.tags;
-      const tmp = closure_33();
-      let tmp2 = null;
-      if (0 !== tags.length) {
-        let obj = { style: tmp.tags, children: null };
-        let obj2 = { size: "sm", style: tmp.tagIcon };
-        let items = [
-          closure_1_29(TagIcon.TagIcon, obj2),
-          tags.map((tag, index) => {
-            let tmp2 = 0 !== index;
-            if (tmp2) {
-              const obj = { style: { width: 4 } };
-              tmp2 = closure_1_29(closure_1_9, obj);
-            }
-            const obj2 = { children: null };
-            const items = [tmp2, closure_1_29(require("AppliedForumTag").AppliedForumTagPill, { tag })];
-            obj2.children = items;
-            return closure_1_30(React.Fragment, obj2, tag.id);
-          }),
-        ];
-        obj.children = items;
-        tmp2 = __initData2(React6, obj);
-      }
-      return tmp2;
-    };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposer.tsx");
 
@@ -676,7 +614,7 @@ export default function ForumComposer(parentChannel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -827,7 +765,7 @@ export default function ForumComposer(parentChannel) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -848,7 +786,7 @@ export default function ForumComposer(parentChannel) {
             let content;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else {
           if (1 === tmp8) {
@@ -1433,7 +1371,7 @@ export default function ForumComposer(parentChannel) {
             actionSheetKey: "ThumbnailBottomSheet",
             importer: MediaPostMultipleThumbnailActionSheetImporter,
           };
-          tmp3 = closure_2_29(DismissibleActionSheet.DismissibleActionSheet, obj);
+          tmp3 = __initData7(DismissibleActionSheet.DismissibleActionSheet, obj);
         }
         return tmp3;
       },

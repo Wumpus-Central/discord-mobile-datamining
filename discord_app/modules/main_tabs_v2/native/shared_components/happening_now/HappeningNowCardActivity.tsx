@@ -1,74 +1,218 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx
-import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
-import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import ApplicationAssetUtils from "../../../../../utils/ApplicationAssetUtils.tsx";
-import VideoBackground from "../../../../calls/native/VideoBackground.tsx";
-import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
-import StreamPreviewDefault from "../../../../../components_native/StreamPreview.tsx";
+import ActivityTypes from "../../../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPreview.tsx";
-import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef18015 from "../../../../../../_runtime/metro/18015__.js";
-import _modDef18016 from "../../../../../../_runtime/metro/18016__.js";
+import _modDef18078 from "../../../../../../_runtime/metro/18078__.js";
+import _modDef18079 from "../../../../../../_runtime/metro/18079__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const _modDef18025 = tmp4(18025);
 require = fn;
-function getActivityA11yLabel(activity) {
-  if (isListeningOnSpotifyDefault(activity)) {
-    const intl4 = util.intl;
-    let stringResult = intl4.string(util.t.rmnkz4);
-  } else {
-    let type;
+function IconOrPreview(arg0) {
+  ({ userId, activity, stream, game } = arg0);
+  importDefault = undefined;
+  dependencyMap = undefined;
+  const tmp = closure_15();
+  _require = tmp;
+  let guildId;
+  if (stream != null) {
+    guildId = stream.guildId;
+  }
+  let channelId;
+  if (stream != null) {
+    channelId = stream.channelId;
+  }
+  let ownerId;
+  if (stream != null) {
+    ownerId = stream.ownerId;
+  }
+  const previewUrl = useFetchStreamPreviewDefault(guildId, channelId, ownerId).previewUrl;
+  let assetImage;
+  if (null != previewUrl) {
+    assetImage = previewUrl;
+  }
+  let tmp9 = null == assetImage;
+  if (tmp9) {
+    let large_image;
     if (activity != null) {
-      type = activity.type;
+      const assets = activity.assets;
+      if (assets != null) {
+        large_image = assets.large_image;
+      }
     }
-    if (type === constants2.LISTENING) {
-      const intl3 = util.intl;
-      stringResult = intl3.string(util.t.kUEnxN);
-    } else if (isOnXboxDefault(activity)) {
-      const intl2 = util.intl;
-      stringResult = intl2.string(util.t.T0uYK9);
+    tmp9 = null != large_image;
+  }
+  if (tmp9) {
+    let application_id;
+    if (activity != null) {
+      application_id = activity.application_id;
+    }
+    let large_image1;
+    if (activity != null) {
+      large_image1 = activity.assets.large_image;
+    }
+    items = [closure_13, closure_13];
+    assetImage = require("ApplicationAssetUtils").getAssetImage(application_id, large_image1, items);
+    const obj = require("ApplicationAssetUtils");
+  }
+  if (null == assetImage) {
+    let iconURL;
+    if (game != null) {
+      iconURL = game.getIconURL(closure_13);
+    }
+    assetImage = iconURL;
+  }
+  let tmp17 = null == assetImage;
+  if (tmp17) {
+    let small_image;
+    if (activity != null) {
+      const assets2 = activity.assets;
+      if (assets2 != null) {
+        small_image = assets2.small_image;
+      }
+    }
+    tmp17 = null != small_image;
+  }
+  if (tmp17) {
+    let application_id1;
+    if (activity != null) {
+      application_id1 = activity.application_id;
+    }
+    let small_image1;
+    if (activity != null) {
+      small_image1 = activity.assets.small_image;
+    }
+    let items1 = [closure_13, closure_13];
+    assetImage = require("ApplicationAssetUtils").getAssetImage(application_id1, small_image1, items1);
+    let obj2 = require("ApplicationAssetUtils");
+  }
+  if (null != assetImage) {
+    const memoizedImageSourceResult = require("VideoBackground").memoizedImageSource(assetImage);
+    let obj4 = require("VideoBackground");
+    const dominantRGBFromImage = require("VideoBackground").useDominantRGBFromImage(
+      assetImage,
+      memoizedImageSourceResult,
+    );
+    ({ r, g, b } = dominantRGBFromImage);
+    const obj5 = require("VideoBackground");
+    const rgbToHexResult = require("ColorUtils").rgbToHex(r, g, b);
+    importDefault = rgbToHexResult;
+    const obj6 = require("ColorUtils");
+    const hexWithOpacityResult = require("ColorUtils").hexWithOpacity(rgbToHexResult, 0.2);
+    dependencyMap = hexWithOpacityResult;
+    const items2 = [rgbToHexResult, tmp.cardImageAssetContainer];
+    const memo = noop.useMemo(() => {
+      items = [closure_0.cardImageAssetContainer];
+      if (obj.isAndroid()) {
+        const obj2 = { boxShadow: null };
+        const obj3 = { offsetX: 0, offsetY: 0, blurRadius: 5, color: ColorUtils.hexWithOpacity(shadowColor, 0.32) };
+        const items1 = [obj3];
+        obj2.boxShadow = items1;
+        let obj4 = obj2;
+        const tmpResult = ColorUtils;
+      } else {
+        obj4 = { shadowColor };
+      }
+      items[1] = obj4;
+      return items;
+    }, items2);
+    const items3 = [hexWithOpacityResult, tmp.cardImageAssetBackground];
+    if (null != stream) {
+      let obj3 = { style: memo, children: null };
+      const obj8 = { stream, children: null, style: null, ctaText: null, disabled: true };
+      ({ cardImageStreamLive: obj13.style, stageStreamLiveText: obj13.textStyle } = tmp);
+      obj8.children = closure_10(tmp28(1188).LiveTag, { style: null, textStyle: null, allowFontScaling: false });
+      obj8.style = tmp.cardImageStreamPreview;
+      const intl5 = tmp28(1114).intl;
+      obj8.ctaText = intl5.string(tmp28(1114).t["7Xq/nV"]);
+      obj3.children = closure_10(tmp2(12000), obj8);
+      return closure_10(closure_4, obj3);
     } else {
-      let type1;
-      if (activity != null) {
-        type1 = activity.type;
+      if (tmp2(10742)(activity)) {
+        const intl4 = tmp28(1114).intl;
+        let stringResult = intl4.string(tmp28(1114).t.rmnkz4);
+      } else {
+        let type;
+        if (activity != null) {
+          type = activity.type;
+        }
+        if (type === tmp28(5757).ActivityTypes.LISTENING) {
+          const intl3 = tmp28(1114).intl;
+          stringResult = intl3.string(tmp28(1114).t.kUEnxN);
+        } else if (tmp2(14810)(activity)) {
+          const intl2 = tmp28(1114).intl;
+          stringResult = intl2.string(tmp28(1114).t.T0uYK9);
+        } else {
+          let type1;
+          if (activity != null) {
+            type1 = activity.type;
+          }
+          if (type1 !== tmp28(5757).ActivityTypes.CUSTOM_STATUS) {
+            const intl = tmp28(1114).intl;
+            stringResult = intl.string(tmp28(1114).t["2TbM/G"]);
+          }
+        }
       }
-      if (type1 !== tmp5.CUSTOM_STATUS) {
-        const intl = util.intl;
-        stringResult = intl.string(util.t["2TbM/G"]);
-      }
+      const obj10 = { style: memo, accessibilityLabel: stringResult, children: null };
+      const obj11 = { style: tmp35, children: null };
+      const obj12 = { style: tmp.cardImageAsset, source: memoizedImageSourceResult };
+      obj11.children = closure_10(tmp2(5712), obj12);
+      obj10.children = closure_10(closure_4, obj11);
+      return closure_10(closure_4, obj10);
+    }
+    const obj7 = require("ColorUtils");
+  } else {
+    let type2;
+    if (activity != null) {
+      type2 = activity.type;
+    }
+    if (type2 === require("ActivityTypes").ActivityTypes.PLAYING) {
+      const substr = userId.slice(-1);
+      userId = substr.charCodeAt(0);
+      let tmp2Result4 = items[userId % items.length];
+    } else {
+      tmp2Result4 = tmp2(18088);
     }
   }
-  return stringResult;
+}
+function StageStreamAvatars(stage) {
+  stage = stage.stage;
+  const tmp = closure_15();
+  const liveStageData = useLiveStageData.useLiveStageData(stage);
+  const obj2 = { style: tmp.avatarStackContainer, children: null };
+  ({ audienceCount, audienceFriends } = liveStageData);
+  const obj3 = { users: null, guildId: null, userCount: null, isStage: true, avatarSize: null };
+  items = [stage.user];
+  HermesBuiltin.arraySpread(audienceFriends, 1);
+  obj3.users = items;
+  obj3.guildId = stage.guild_id;
+  obj3.userCount = audienceCount + 1;
+  obj3.avatarSize = native.AvatarSizes.SIZE_16;
+  obj2.children = closure_1_10(HappeningNowAvatarStack.HappeningNowAvatarStack, obj3);
+  return closure_1_10(React4, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17163);
+const HappeningNowConstants = fn(17217);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
   STATUS_CUTOUT_SMALL: closure_8,
   HAPPENING_NOW_STAGE_PREVIEW_HEIGHT,
 } = HappeningNowConstants);
-const Constants = fn(1084);
-({ ActivityTypes: closure_9, AnalyticEvents: c10 } = Constants);
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef18015, _modDef18016];
-let c16 = 0.32;
-const createStyles = fn(5005);
+let items = [_modDef18078, _modDef18079];
+const createStyles = fn(5009);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   avatarStackContainer: {
@@ -135,553 +279,10 @@ let obj5 = {
 };
 obj.cardImageStreamPreview = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.cardImageStreamLive = { top: 4, left: 4, position: "absolute" };
-obj.stageStreamLiveText = { fontSize: 10, lineHeight: 13, fontFamily: fn(1095).Fonts.PRIMARY_BOLD };
+obj.stageStreamLiveText = { fontSize: 10, lineHeight: 13, fontFamily: fn(1083).Fonts.PRIMARY_BOLD };
 obj.stagePreviewWrapper = { marginRight: 12, flexDirection: "column", height: "100%" };
-let closure_17 = createStyles.createStyles(obj);
+let closure_15 = createStyles.createStyles(obj);
 let obj6 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function IconOrPreview(arg0) {
-      const cResult = c.c(43);
-      ({ userId, activity, stream, game } = arg0);
-      const tmp4 = closure_17();
-      if (cResult[0] === activity) {
-        if (cResult[1] === game) {
-          if (cResult[2] === stream) {
-            if (cResult[3] === userId) {
-              let tmp5 = cResult[4];
-            }
-            ({ source, accentColor } = closure_21(tmp5));
-            ({ r, g, b } = accentColor);
-            if (cResult[5] === b) {
-              if (cResult[6] === g) {
-                if (cResult[7] === r) {
-                  let tmp8 = cResult[8];
-                  let tmp9 = cResult[9];
-                }
-                if (cResult[10] !== tmp8) {
-                  if (tmpResult.isAndroid()) {
-                    const obj2 = { boxShadow: null };
-                    const obj3 = { offsetX: 0, offsetY: 0, blurRadius: 5, color: ColorUtils.hexWithOpacity(tmp8, c16) };
-                    items = [obj3];
-                    obj2.boxShadow = items;
-                    let obj4 = obj2;
-                    const tmpResult4 = ColorUtils;
-                  } else {
-                    obj4 = { shadowColor: tmp8 };
-                  }
-                  cResult[10] = tmp8;
-                  cResult[11] = obj4;
-                  tmpResult = PlatformUtils;
-                } else {
-                  if (cResult[12] === tmp4.cardImageAssetContainer) {
-                    if (cResult[13] === tmp12) {
-                      let tmp15 = cResult[14];
-                    }
-                    if (cResult[15] !== tmp9) {
-                      const obj5 = { backgroundColor: tmp9 };
-                      cResult[15] = tmp9;
-                      cResult[16] = obj5;
-                      let tmp16 = obj5;
-                    } else {
-                      tmp16 = cResult[16];
-                    }
-                    if (cResult[17] === tmp4.cardImageAssetBackground) {
-                      if (cResult[18] === tmp16) {
-                        let tmp17 = cResult[19];
-                      }
-                      if (null != stream) {
-                        if (cResult[20] === tmp4.cardImageStreamLive) {
-                          if (cResult[21] === tmp4.stageStreamLiveText) {
-                            let tmp34 = cResult[22];
-                          }
-                          const _Symbol = Symbol;
-                          if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                            const intl = util.intl;
-                            const stringResult = intl.string(util.t["7Xq/nV"]);
-                            cResult[23] = stringResult;
-                            let tmp38 = stringResult;
-                          } else {
-                            tmp38 = cResult[23];
-                          }
-                          if (cResult[24] === stream) {
-                            if (cResult[25] === tmp4.cardImageStreamPreview) {
-                              if (cResult[26] === tmp34) {
-                                let tmp40 = cResult[27];
-                              }
-                              if (cResult[28] === tmp15) {
-                                if (cResult[29] === tmp40) {
-                                  let tmp44 = cResult[30];
-                                }
-                                return tmp44;
-                              }
-                              const obj6 = { style: tmp15, children: tmp40 };
-                              const tmp47 = closure_1_11(React4, obj6);
-                              cResult[28] = tmp15;
-                              cResult[29] = tmp40;
-                              cResult[30] = tmp47;
-                              tmp44 = tmp47;
-                            }
-                          }
-                          const obj7 = {
-                            stream,
-                            children: tmp34,
-                            style: tmp4.cardImageStreamPreview,
-                            ctaText: tmp38,
-                            disabled: true,
-                          };
-                          const tmp43 = closure_1_11(StreamPreviewDefault, obj7);
-                          cResult[24] = stream;
-                          cResult[25] = tmp4.cardImageStreamPreview;
-                          cResult[26] = tmp34;
-                          cResult[27] = tmp43;
-                          tmp40 = tmp43;
-                        }
-                        ({ cardImageStreamLive: obj14.style, stageStreamLiveText: obj14.textStyle } = tmp4);
-                        const tmp36 = closure_1_11(native.LiveTag, {
-                          style: null,
-                          textStyle: null,
-                          allowFontScaling: false,
-                        });
-                        cResult[20] = tmp4.cardImageStreamLive;
-                        cResult[21] = tmp4.stageStreamLiveText;
-                        cResult[22] = tmp36;
-                        tmp34 = tmp36;
-                        const obj8 = { style: null, textStyle: null, allowFontScaling: false };
-                      } else {
-                        if (cResult[31] !== activity) {
-                          const tmp21 = getActivityA11yLabel(activity);
-                          cResult[31] = activity;
-                          cResult[32] = tmp21;
-                          let tmp19 = tmp21;
-                        } else {
-                          tmp19 = cResult[32];
-                        }
-                        if (cResult[33] === tmp4.cardImageAsset) {
-                          if (cResult[34] === source) {
-                            let tmp22 = cResult[35];
-                          }
-                          if (cResult[36] === tmp17) {
-                            if (cResult[37] === tmp22) {
-                              let tmp26 = cResult[38];
-                            }
-                            if (cResult[39] === tmp19) {
-                              if (cResult[40] === tmp15) {
-                                if (cResult[41] === tmp26) {
-                                  let tmp30 = cResult[42];
-                                }
-                                return tmp30;
-                              }
-                            }
-                            const obj9 = { style: tmp15, accessibilityLabel: tmp19, children: tmp26 };
-                            const tmp33 = closure_1_11(React4, obj9);
-                            cResult[39] = tmp19;
-                            cResult[40] = tmp15;
-                            cResult[41] = tmp26;
-                            cResult[42] = tmp33;
-                            tmp30 = tmp33;
-                          }
-                          const obj10 = { style: tmp17, children: tmp22 };
-                          const tmp29 = closure_1_11(React4, obj10);
-                          cResult[36] = tmp17;
-                          cResult[37] = tmp22;
-                          cResult[38] = tmp29;
-                          tmp26 = tmp29;
-                        }
-                        const obj11 = { style: tmp4.cardImageAsset, source };
-                        const tmp25 = closure_1_11(FastImageDefault, obj11);
-                        cResult[33] = tmp4.cardImageAsset;
-                        cResult[34] = source;
-                        cResult[35] = tmp25;
-                        tmp22 = tmp25;
-                      }
-                    }
-                    const items1 = [tmp4.cardImageAssetBackground, tmp16];
-                    cResult[17] = tmp4.cardImageAssetBackground;
-                    cResult[18] = tmp16;
-                    cResult[19] = items1;
-                    tmp17 = items1;
-                  }
-                  const items2 = [tmp4.cardImageAssetContainer, cResult[11]];
-                  cResult[12] = tmp4.cardImageAssetContainer;
-                  cResult[13] = cResult[11];
-                  cResult[14] = items2;
-                  tmp15 = items2;
-                }
-              }
-            }
-            const tmp7 = closure_21(tmp5);
-            const rgbToHexResult = ColorUtils.rgbToHex(r, g, b);
-            const tmpResult5 = ColorUtils;
-            const hexWithOpacityResult = ColorUtils.hexWithOpacity(rgbToHexResult, 0.2);
-            cResult[5] = b;
-            cResult[6] = g;
-            cResult[7] = r;
-            cResult[8] = rgbToHexResult;
-            cResult[9] = hexWithOpacityResult;
-            tmp9 = hexWithOpacityResult;
-            tmp8 = rgbToHexResult;
-            const tmpResult6 = ColorUtils;
-          }
-        }
-      }
-      const obj12 = { userId, activity, game, stream };
-      cResult[0] = activity;
-      cResult[1] = game;
-      cResult[2] = stream;
-      cResult[3] = userId;
-      cResult[4] = obj12;
-      tmp5 = obj12;
-    }
-  : function IconOrPreview(arg0) {
-      ({ activity, stream } = arg0);
-      ({ userId, game } = arg0);
-      const tmp = closure_17();
-      _require = tmp;
-      ({ source, accentColor } = closure_21({ userId, activity, game, stream }));
-      ({ r, g, b } = accentColor);
-      const tmp2 = closure_21({ userId, activity, game, stream });
-      const rgbToHexResult = require("ColorUtils").rgbToHex(r, g, b);
-      importDefault = rgbToHexResult;
-      const obj = require("ColorUtils");
-      const hexWithOpacityResult = require("ColorUtils").hexWithOpacity(rgbToHexResult, 0.2);
-      dependencyMap = hexWithOpacityResult;
-      items = [rgbToHexResult, tmp.cardImageAssetContainer];
-      const memo = noop.useMemo(() => {
-        items = [closure_0.cardImageAssetContainer];
-        if (obj.isAndroid()) {
-          const obj2 = { boxShadow: null };
-          const obj3 = { offsetX: 0, offsetY: 0, blurRadius: 5, color: ColorUtils.hexWithOpacity(shadowColor, c16) };
-          const items1 = [obj3];
-          obj2.boxShadow = items1;
-          let obj4 = obj2;
-          const tmpResult = ColorUtils;
-        } else {
-          obj4 = { shadowColor };
-        }
-        items[1] = obj4;
-        return items;
-      }, items);
-      let items1 = [hexWithOpacityResult, tmp.cardImageAssetBackground];
-      if (null != stream) {
-        let obj3 = { style: memo, children: null };
-        let obj4 = { stream, children: null, style: null, ctaText: null, disabled: true };
-        ({ cardImageStreamLive: obj5.style, stageStreamLiveText: obj5.textStyle } = tmp);
-        obj4.children = closure_11(tmp3(1199).LiveTag, { style: null, textStyle: null, allowFontScaling: false });
-        obj4.style = tmp.cardImageStreamPreview;
-        const intl = tmp3(1125).intl;
-        obj4.ctaText = intl.string(tmp3(1125).t["7Xq/nV"]);
-        obj3.children = closure_11(StreamPreviewDefault, obj4);
-        return closure_11(closure_4, obj3);
-      } else {
-        const obj7 = { style: memo, accessibilityLabel: getActivityA11yLabel(activity), children: null };
-        const obj8 = { style: tmp8, children: null };
-        const obj14 = { style: tmp.cardImageAsset, source };
-        obj8.children = closure_11(FastImageDefault, obj14);
-        obj7.children = closure_11(closure_4, obj8);
-        return closure_11(closure_4, obj7);
-      }
-      let obj2 = require("ColorUtils");
-    };
-ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function StageStreamAvatars(arg0) {
-      const cResult = c.c(10);
-      ({ user, stage } = arg0);
-      const tmp4 = closure_17();
-      const liveStageData = useLiveStageData.useLiveStageData(stage);
-      const audienceFriends = liveStageData.audienceFriends;
-      if (cResult[0] === audienceFriends) {
-        if (cResult[1] === user) {
-          let tmp7 = cResult[2];
-        }
-        const sum = tmp6 + 1;
-        if (cResult[3] === stage.guild_id) {
-          if (cResult[4] === tmp7) {
-            if (cResult[5] === sum) {
-              let tmp9 = cResult[6];
-            }
-            if (cResult[7] === tmp4.avatarStackContainer) {
-              if (cResult[8] === tmp9) {
-                let tmp12 = cResult[9];
-              }
-              return tmp12;
-            }
-            const obj3 = { style: tmp4.avatarStackContainer, children: tmp9 };
-            const tmp15 = closure_1_11(React4, obj3);
-            cResult[7] = tmp4.avatarStackContainer;
-            cResult[8] = tmp9;
-            cResult[9] = tmp15;
-            tmp12 = tmp15;
-          }
-        }
-        const obj4 = {
-          users: tmp7,
-          guildId: stage.guild_id,
-          userCount: sum,
-          isStage: true,
-          avatarSize: native.AvatarSizes.SIZE_16,
-        };
-        const tmp11 = closure_1_11(HappeningNowAvatarStack.HappeningNowAvatarStack, obj4);
-        cResult[3] = stage.guild_id;
-        cResult[4] = tmp7;
-        cResult[5] = sum;
-        cResult[6] = tmp11;
-        tmp9 = tmp11;
-      }
-      items = [user, ...audienceFriends];
-      cResult[0] = audienceFriends;
-      cResult[1] = user;
-      cResult[2] = items;
-      tmp7 = items;
-    }
-  : function StageStreamAvatars(stage) {
-      stage = stage.stage;
-      const tmp = closure_17();
-      const liveStageData = useLiveStageData.useLiveStageData(stage);
-      const obj2 = { style: tmp.avatarStackContainer, children: null };
-      ({ audienceCount, audienceFriends } = liveStageData);
-      const obj3 = { users: null, guildId: null, userCount: null, isStage: true, avatarSize: null };
-      items = [stage.user];
-      HermesBuiltin.arraySpread(audienceFriends, 1);
-      obj3.users = items;
-      obj3.guildId = stage.guild_id;
-      obj3.userCount = audienceCount + 1;
-      obj3.avatarSize = native.AvatarSizes.SIZE_16;
-      obj2.children = closure_1_11(HappeningNowAvatarStack.HappeningNowAvatarStack, obj3);
-      return closure_1_11(React4, obj2);
-    };
-ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useActivityIcon(arg0) {
-      const cResult = c.c(16);
-      ({ userId, activity, game, stream } = arg0);
-      let tmp6 = null;
-      let guildId;
-      if (stream != null) {
-        guildId = stream.guildId;
-      }
-      let channelId;
-      if (stream != tmp6) {
-        channelId = stream.channelId;
-      }
-      let ownerId;
-      if (stream != tmp6) {
-        ownerId = stream.ownerId;
-      }
-      const previewUrl = useFetchStreamPreviewDefault(guildId, channelId, ownerId).previewUrl;
-      let tmp10;
-      if (tmp6 != previewUrl) {
-        tmp10 = previewUrl;
-      }
-      let tmp11 = tmp10;
-      if (tmp6 == tmp10) {
-        let large_image;
-        if (activity != tmp6) {
-          const assets = activity.assets;
-          if (assets != tmp6) {
-            large_image = assets.large_image;
-          }
-        }
-        tmp11 = tmp10;
-        if (tmp6 != large_image) {
-          let application_id;
-          if (activity != tmp6) {
-            application_id = activity.application_id;
-          }
-          let large_image1;
-          if (activity != tmp6) {
-            large_image1 = activity.assets.large_image;
-          }
-          if (cResult[0] === application_id) {
-          }
-          items = [closure_14, closure_14];
-          const assetImage = ApplicationAssetUtils.getAssetImage(application_id, large_image1, items);
-          cResult[0] = application_id;
-          cResult[1] = large_image1;
-          cResult[2] = assetImage;
-          const tmpResult = ApplicationAssetUtils;
-        }
-      }
-      if (tmp6 != tmp11) {
-        let tmp23 = tmp11;
-        if (tmp6 == tmp11) {
-          let small_image;
-          if (activity != tmp6) {
-            const assets2 = activity.assets;
-            if (assets2 != tmp6) {
-              small_image = assets2.small_image;
-            }
-          }
-          tmp23 = tmp11;
-          if (tmp6 != small_image) {
-            let application_id1;
-            if (activity != tmp6) {
-              application_id1 = activity.application_id;
-            }
-            let small_image1;
-            if (activity != tmp6) {
-              small_image1 = activity.assets.small_image;
-            }
-            if (cResult[5] === application_id1) {
-            }
-            const items1 = [closure_14, closure_14];
-            const assetImage1 = ApplicationAssetUtils.getAssetImage(application_id1, small_image1, items1);
-            cResult[5] = application_id1;
-            cResult[6] = small_image1;
-            cResult[7] = assetImage1;
-            const tmpResult4 = ApplicationAssetUtils;
-          }
-        }
-        if (tmp6 != tmp23) {
-          if (cResult[11] !== tmp23) {
-            const memoizedImageSourceResult = VideoBackground.memoizedImageSource(tmp23);
-            cResult[11] = tmp23;
-            cResult[12] = memoizedImageSourceResult;
-            let tmp38 = memoizedImageSourceResult;
-            const tmpResult5 = VideoBackground;
-          } else {
-            tmp38 = cResult[12];
-          }
-          const dominantRGBFromImage = VideoBackground.useDominantRGBFromImage(tmp23, tmp38);
-          if (cResult[13] === dominantRGBFromImage) {
-            if (cResult[14] === tmp38) {
-              let tmp42 = cResult[15];
-            }
-            return tmp42;
-          }
-          const obj2 = { source: tmp38, accentColor: dominantRGBFromImage };
-          cResult[13] = dominantRGBFromImage;
-          cResult[14] = tmp38;
-          cResult[15] = obj2;
-          tmp42 = obj2;
-          const tmpResult6 = VideoBackground;
-        } else {
-          let type;
-          if (activity != tmp6) {
-            type = activity.type;
-          }
-          if (cResult[8] === type) {
-          }
-          let type1;
-          if (activity != tmp6) {
-            type1 = activity.type;
-          }
-          if (type1 === constants2.PLAYING) {
-            const substr = userId.slice(-1);
-            let tmp4Result = items[substr.charCodeAt(substr, 0) % items.length];
-          } else {
-            tmp4Result = _modDef18025;
-          }
-          tmp6 = activity == tmp6;
-          let type2;
-          if (!tmp6) {
-            type2 = activity.type;
-          }
-          cResult[8] = type2;
-          cResult[9] = userId;
-          cResult[10] = tmp4Result;
-        }
-      } else if (cResult[3] !== game) {
-        let iconURL;
-        if (game != tmp6) {
-          iconURL = game.getIconURL(closure_14);
-        }
-        cResult[3] = game;
-        cResult[4] = iconURL;
-      }
-    }
-  : function useActivityIcon(arg0) {
-      ({ userId, activity, game, stream } = arg0);
-      let guildId;
-      if (stream != null) {
-        guildId = stream.guildId;
-      }
-      let channelId;
-      if (stream != null) {
-        channelId = stream.channelId;
-      }
-      let ownerId;
-      if (stream != null) {
-        ownerId = stream.ownerId;
-      }
-      const previewUrl = useFetchStreamPreviewDefault(guildId, channelId, ownerId).previewUrl;
-      let assetImage;
-      if (null != previewUrl) {
-        assetImage = previewUrl;
-      }
-      let tmp8 = null == assetImage;
-      if (tmp8) {
-        let large_image;
-        if (activity != null) {
-          const assets = activity.assets;
-          if (assets != null) {
-            large_image = assets.large_image;
-          }
-        }
-        tmp8 = null != large_image;
-      }
-      if (tmp8) {
-        let application_id;
-        if (activity != null) {
-          application_id = activity.application_id;
-        }
-        let large_image1;
-        if (activity != null) {
-          large_image1 = activity.assets.large_image;
-        }
-        items = [closure_14, closure_14];
-        assetImage = ApplicationAssetUtils.getAssetImage(application_id, large_image1, items);
-      }
-      if (null == assetImage) {
-        let iconURL;
-        if (game != null) {
-          iconURL = game.getIconURL(closure_14);
-        }
-        assetImage = iconURL;
-      }
-      let tmp16 = null == assetImage;
-      if (tmp16) {
-        let small_image;
-        if (activity != null) {
-          const assets2 = activity.assets;
-          if (assets2 != null) {
-            small_image = assets2.small_image;
-          }
-        }
-        tmp16 = null != small_image;
-      }
-      if (tmp16) {
-        let application_id1;
-        if (activity != null) {
-          application_id1 = activity.application_id;
-        }
-        let small_image1;
-        if (activity != null) {
-          small_image1 = activity.assets.small_image;
-        }
-        const items1 = [closure_14, closure_14];
-        assetImage = ApplicationAssetUtils.getAssetImage(application_id1, small_image1, items1);
-      }
-      if (null != assetImage) {
-        const memoizedImageSourceResult = VideoBackground.memoizedImageSource(assetImage);
-        const obj3 = { source: memoizedImageSourceResult, accentColor: null };
-        obj3.accentColor = VideoBackground.useDominantRGBFromImage(assetImage, memoizedImageSourceResult);
-        return obj3;
-      } else {
-        let type;
-        if (activity != null) {
-          type = activity.type;
-        }
-        if (type === constants2.PLAYING) {
-          const substr = userId.slice(-1);
-          userId = substr.charCodeAt(0);
-          let tmpResult = items[userId % items.length];
-        } else {
-          tmpResult = _modDef18025;
-        }
-      }
-    };
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx",
@@ -699,7 +300,7 @@ export default noop.memo(function ActivityCard(userId) {
     panelVariant = false;
   }
   let stateFromStores;
-  const tmp = closure_17();
+  const tmp = closure_15();
   const analyticsLocations = guildId(index[12])().analyticsLocations;
   items = [stateFromStores];
   stateFromStores = userId(index[13]).useStateFromStores(items, () => UserStore.getUser(userId));
@@ -718,27 +319,27 @@ export default noop.memo(function ActivityCard(userId) {
     }
     return StageInstanceStore.getStageInstanceByChannel(channelId);
   });
-  if (guildId(index[26])(activity)) {
-    let GameControllerIcon = tmp4(tmp3[27]).SpotifyNeutralIcon;
+  if (guildId(index[27])(activity)) {
+    let GameControllerIcon = tmp4(tmp3[28]).SpotifyNeutralIcon;
   } else {
     let type;
     if (activity != null) {
       type = activity.type;
     }
-    if (type === constants2.LISTENING) {
-      GameControllerIcon = tmp4(tmp3[28]).MusicIcon;
-    } else if (tmp2(tmp3[29])(activity)) {
-      GameControllerIcon = tmp4(tmp3[30]).XboxNeutralIcon;
+    if (type === tmp4(tmp3[15]).ActivityTypes.LISTENING) {
+      GameControllerIcon = tmp4(tmp3[29]).MusicIcon;
+    } else if (tmp2(tmp3[30])(activity)) {
+      GameControllerIcon = tmp4(tmp3[31]).XboxNeutralIcon;
     } else {
       let type1;
       if (activity != null) {
         type1 = activity.type;
       }
-      if (type1 !== tmp10.CUSTOM_STATUS) {
+      if (type1 !== tmp4(tmp3[15]).ActivityTypes.CUSTOM_STATUS) {
         if (null != stateFromStores1) {
-          GameControllerIcon = tmp4(tmp3[31]).StageIcon;
+          GameControllerIcon = tmp4(tmp3[32]).StageIcon;
         } else {
-          GameControllerIcon = tmp4(tmp3[32]).GameControllerIcon;
+          GameControllerIcon = tmp4(tmp3[33]).GameControllerIcon;
         }
       }
     }
@@ -749,7 +350,7 @@ export default noop.memo(function ActivityCard(userId) {
       let STATUS_CARD = constants.STREAM_CARD;
     } else {
       if (null != activity) {
-        if (activity.type !== constants2.CUSTOM_STATUS) {
+        if (activity.type !== ActivityTypes.ActivityTypes.CUSTOM_STATUS) {
           STATUS_CARD = constants.ACTIVITY_CARD;
         }
       }
@@ -769,20 +370,20 @@ export default noop.memo(function ActivityCard(userId) {
       channelId = stream.channelId;
     }
     obj2.destination_channel_id = channelId;
-    AnalyticsUtilsDefault.track(constants3.ACTIVITY_CARD_CLICKED, obj2);
+    AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(12983, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(12983, dependencyMap.paths);
+      asyncRequireImpl(13134, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(13134, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8708, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8742, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8708, dependencyMap.paths);
+      const promise = asyncRequireImpl(8742, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {
     const obj3 = { panelVariant };
-    return closure_11(tmp4(tmp3[19]).HappeningNowCardPlaceholder, obj3);
+    return closure_10(tmp4(tmp3[20]).HappeningNowCardPlaceholder, obj3);
   } else {
     let str2 = "full";
     if (!fullwidth) {
@@ -792,12 +393,12 @@ export default noop.memo(function ActivityCard(userId) {
       }
       str2 = str;
     }
-    const name = tmp2(tmp3[20]).getName(guildId, null, stateFromStores);
+    const name = tmp2(tmp3[21]).getName(guildId, null, stateFromStores);
     let type2;
     if (activity != null) {
       type2 = activity.type;
     }
-    if (type2 === constants2.CUSTOM_STATUS) {
+    if (type2 === tmp4(tmp3[15]).ActivityTypes.CUSTOM_STATUS) {
       const obj4 = {
         fullwidth,
         user: stateFromStores,
@@ -807,58 +408,58 @@ export default noop.memo(function ActivityCard(userId) {
         onPress: callback,
         panelVariant,
       };
-      let tmp23Result2 = closure_11(tmp4(tmp3[21]).CustomStatusActivityCard, obj4);
+      let tmp21Result2 = closure_10(tmp4(tmp3[22]).CustomStatusActivityCard, obj4);
     } else {
       const obj5 = { onPress: callback, width: str2, IconComponent: GameControllerIcon, panelVariant, children: null };
       if (null != stateFromStores1) {
         const obj6 = { style: tmp.stagePreviewWrapper, children: null };
         const obj7 = { style: tmp.cardImageStream, children: null };
         const obj8 = { userId: stateFromStores.id, activity, game: getOrFetchApplication, stream };
-        obj7.children = closure_11(closure_19, obj8);
-        const items3 = [closure_11(stream, obj7)];
-        let tmp23Result = null;
+        obj7.children = closure_10(IconOrPreview, obj8);
+        const items3 = [closure_10(stream, obj7)];
+        let tmp21Result = null;
         if (null != stateFromStores1) {
           const obj9 = { user: stateFromStores, stage: stateFromStores1 };
-          tmp23Result = closure_11(closure_20, obj9);
+          tmp21Result = closure_10(StageStreamAvatars, obj9);
         }
         const obj10 = { children: null };
-        items3[1] = tmp23Result;
+        items3[1] = tmp21Result;
         obj6.children = items3;
-        const items4 = [closure_12(stream, obj6)];
+        const items4 = [closure_11(stream, obj6)];
         const obj11 = { stage: stateFromStores1, renderingContext, guildId, streamingUser: stateFromStores };
-        items4[1] = closure_11(tmp4(tmp3[23]).HappeningNowLiveStageContent, obj11);
+        items4[1] = closure_10(tmp4(tmp3[24]).HappeningNowLiveStageContent, obj11);
         obj10.children = items4;
         let obj12 = obj10;
       } else {
         obj12 = { children: null };
         const obj13 = { style: tmp.cardImage, children: null };
         const obj14 = { userId: stateFromStores.id, activity, game: getOrFetchApplication, stream };
-        obj13.children = closure_11(closure_19, obj14);
-        const items5 = [closure_11(stream, obj13)];
+        obj13.children = closure_10(IconOrPreview, obj14);
+        const items5 = [closure_10(stream, obj13)];
         const obj15 = { style: tmp.content, children: null };
         const obj16 = {
           user: stateFromStores,
           avatarDecoration: stateFromStores.avatarDecoration,
-          size: tmp4(tmp3[24]).AvatarSizes.XSMALL,
+          size: tmp4(tmp3[25]).AvatarSizes.XSMALL,
           guildId,
           status,
           style: tmp.cardAvatar,
           autoStatusCutout,
         };
-        const items6 = [closure_11(tmp4(tmp3[24]).Avatar, obj16), ,];
+        const items6 = [closure_10(tmp4(tmp3[25]).Avatar, obj16), ,];
         const obj17 = { noMargin: true, children: name };
-        items6[1] = closure_11(tmp4(tmp3[22]).HappeningNowCardHeader, obj17);
+        items6[1] = closure_10(tmp4(tmp3[23]).HappeningNowCardHeader, obj17);
         const obj18 = { activity, stream };
-        items6[2] = closure_11(tmp4(tmp3[25]).HappeningNowActivityCardSubtitle, obj18);
+        items6[2] = closure_10(tmp4(tmp3[26]).HappeningNowActivityCardSubtitle, obj18);
         obj15.children = items6;
-        items5[1] = closure_12(stream, obj15);
+        items5[1] = closure_11(stream, obj15);
         obj12.children = items5;
       }
-      obj5.children = closure_12(closure_13, obj12);
-      tmp23Result2 = closure_11(tmp2(tmp3[22]), obj5);
-      const tmp2Result2 = tmp2(tmp3[22]);
+      obj5.children = closure_11(closure_12, obj12);
+      tmp21Result2 = closure_10(tmp2(tmp3[23]), obj5);
+      const tmp2Result2 = tmp2(tmp3[23]);
     }
-    return tmp23Result2;
+    return tmp21Result2;
   }
   const tmp4Result = userId(index[13]);
 });

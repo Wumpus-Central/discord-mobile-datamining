@@ -1,8 +1,7 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
-import _mod4920 from "../../../_runtime/metro/04920__.js";
+import _mod4924 from "../../../_runtime/metro/04924__.js";
 import CollectiblesProductUtils from "utils/CollectiblesProductUtils.tsx";
-import identity from "../../../_runtime/metro/01266__.js";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
+import identity from "../../../_runtime/metro/01255__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -10,72 +9,35 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod4920.shallow);
+}, _mod4924.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
-export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useSelectedVariantIndex(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(2);
-      let obj = require("c");
-      let defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(arg0);
-      if (cResult[0] !== arg0) {
-        const fn = function s(selectionStates) {
-          let tmp2 = null;
-          if (null != storeListingId) {
-            tmp2 = null;
-            if (obj.getIsVariantProduct(storeListingId)) {
-              selectionStates = selectionStates.selectionStates;
-              value = selectionStates.get(storeListingId.storeListingId);
-              let selectedVariantIndex;
-              if (value != null) {
-                selectedVariantIndex = value.selectedVariantIndex;
-              }
-              tmp2 = selectedVariantIndex;
-            }
-            obj = CollectiblesProductUtils;
-          }
-          return tmp2;
-        };
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        let tmp3 = fn;
-      } else {
-        tmp3 = cResult[1];
-      }
-      const tmp4 = state(tmp3);
-      if (null != tmp4) {
-        const _Math = Math;
-        defaultVariantIndex = Math.max(0, tmp4);
-      }
-      return defaultVariantIndex;
-    }
-  : function useSelectedVariantIndex(arg0) {
-      _require = arg0;
-      let defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(arg0);
-      let tmp2 = state((selectionStates) => {
-        let tmp2 = null;
-        if (null != storeListingId) {
-          tmp2 = null;
-          if (obj.getIsVariantProduct(storeListingId)) {
-            selectionStates = selectionStates.selectionStates;
-            value = selectionStates.get(storeListingId.storeListingId);
-            let selectedVariantIndex;
-            if (value != null) {
-              selectedVariantIndex = value.selectedVariantIndex;
-            }
-            tmp2 = selectedVariantIndex;
-          }
-          obj = CollectiblesProductUtils;
+export function useSelectedVariantIndex(product) {
+  _require = product;
+  let defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(product);
+  let tmp2 = state((selectionStates) => {
+    let tmp2 = null;
+    if (null != product) {
+      tmp2 = null;
+      if (obj.getIsVariantProduct(product)) {
+        selectionStates = selectionStates.selectionStates;
+        value = selectionStates.get(product.storeListingId);
+        let selectedVariantIndex;
+        if (value != null) {
+          selectedVariantIndex = value.selectedVariantIndex;
         }
-        return tmp2;
-      });
-      if (null != tmp2) {
-        const _Math = Math;
-        defaultVariantIndex = Math.max(0, tmp2);
+        tmp2 = selectedVariantIndex;
       }
-      return defaultVariantIndex;
-    };
+      obj = CollectiblesProductUtils;
+    }
+    return tmp2;
+  });
+  if (null != tmp2) {
+    const _Math = Math;
+    defaultVariantIndex = Math.max(0, tmp2);
+  }
+  return defaultVariantIndex;
+}
 export function setSelectedVariantIndex(arg0, arg1) {
   const storeListingId = arg0;
   closure_1 = arg1;

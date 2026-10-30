@@ -7,10 +7,9 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/OverridePremiumTypeActions.tsx");
 
-export function updateClientPremiumTypeOverride(premiumType, stateFromStores) {
-  let currentUser = stateFromStores;
+export function updateClientPremiumTypeOverride(premiumType, currentUser) {
   DispatcherDefault.dispatch({ type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType });
-  if (stateFromStores == null) {
+  if (currentUser == null) {
     currentUser = UserStore.getCurrentUser();
   }
   if (null != currentUser) {

@@ -1,12 +1,11 @@
 // discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
 import UserStore from "../../stores/UserStore.tsx";
 import SubscriptionStore from "../../stores/billing/SubscriptionStore.tsx";
 import UserOfferStore from "../../stores/billing/UserOfferStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: hasOwnProperty,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: metroRequire,
@@ -14,45 +13,20 @@ const PremiumConstants = fn(1391);
   PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8,
   PREMIUM_TRIAL_IDS_ALL: closure_9,
 } = PremiumConstants);
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useHasActiveTrial() {
-      const cResult = c.c(2);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [SubscriptionStore];
-        const fn = function l() {
-          return premiumTypeSubscription.getPremiumTypeSubscription();
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-      let hasActiveTrial;
-      if (stateFromStores != null) {
-        hasActiveTrial = stateFromStores.hasActiveTrial;
-      }
-      return hasActiveTrial;
-    }
-  : function useHasActiveTrial() {
-      const items = [SubscriptionStore];
-      const stateFromStores = initialize.useStateFromStores(items, () =>
-        premiumTypeSubscription.getPremiumTypeSubscription(),
-      );
-      let hasActiveTrial;
-      if (stateFromStores != null) {
-        hasActiveTrial = stateFromStores.hasActiveTrial;
-      }
-      return hasActiveTrial;
-    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
 
-export const useHasActiveTrial = tmp3;
+export function useHasActiveTrial() {
+  const items = [SubscriptionStore];
+  const stateFromStores = initialize.useStateFromStores(items, () =>
+    premiumTypeSubscription.getPremiumTypeSubscription(),
+  );
+  let hasActiveTrial;
+  if (stateFromStores != null) {
+    hasActiveTrial = stateFromStores.hasActiveTrial;
+  }
+  return hasActiveTrial;
+}
 export function hasActiveTrial() {
   const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
   let trialId;
@@ -76,82 +50,35 @@ export function isEligibleTrialSub(trialId) {
       tmp4 = trialId.trialId === React5;
     }
     if (!tmp4) {
-      tmp4 = trialId.trialId === closure_1_8;
+      tmp4 = trialId.trialId === React6;
     }
     tmp2 = tmp4;
   }
   return tmp2;
 }
-export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useCurrentPremiumTrialTier() {
-      const cResult = c.c(4);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [SubscriptionStore];
-        const fn = function s() {
-          return premiumTypeSubscription.getPremiumTypeSubscription();
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [UserStore];
-        class T {
-          constructor() {
-            return closure_1_2.getCurrentUser();
-          }
-        }
-        cResult[2] = items1;
-        cResult[3] = T;
-        let tmp9 = T;
-        let tmp8 = items1;
-      } else {
-        tmp8 = cResult[2];
-        tmp9 = cResult[3];
-      }
-      const tmpResult = initialize;
-      const stateFromStores1 = initialize.useStateFromStores(tmp8, tmp9);
-      let hasActiveTrial;
-      if (stateFromStores != null) {
-        hasActiveTrial = stateFromStores.hasActiveTrial;
-      }
-      let tmp13 = null;
-      if (hasActiveTrial) {
-        let premiumType;
-        if (stateFromStores1 != null) {
-          premiumType = stateFromStores1.premiumType;
-        }
-        tmp13 = premiumType;
-      }
-      return tmp13;
+export function useCurrentPremiumTrialTier() {
+  const items = [SubscriptionStore];
+  const stateFromStores = initialize.useStateFromStores(items, () =>
+    premiumTypeSubscription.getPremiumTypeSubscription(),
+  );
+  const items1 = [UserStore];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
+  let hasActiveTrial;
+  if (stateFromStores != null) {
+    hasActiveTrial = stateFromStores.hasActiveTrial;
+  }
+  let tmp4 = null;
+  if (hasActiveTrial) {
+    let premiumType;
+    if (stateFromStores1 != null) {
+      premiumType = stateFromStores1.premiumType;
     }
-  : function useCurrentPremiumTrialTier() {
-      const items = [SubscriptionStore];
-      const stateFromStores = initialize.useStateFromStores(items, () =>
-        premiumTypeSubscription.getPremiumTypeSubscription(),
-      );
-      const items1 = [UserStore];
-      const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
-      let hasActiveTrial;
-      if (stateFromStores != null) {
-        hasActiveTrial = stateFromStores.hasActiveTrial;
-      }
-      let tmp4 = null;
-      if (hasActiveTrial) {
-        let premiumType;
-        if (stateFromStores1 != null) {
-          premiumType = stateFromStores1.premiumType;
-        }
-        tmp4 = premiumType;
-      }
-      return tmp4;
-    };
+    tmp4 = premiumType;
+  }
+  return tmp4;
+}
 export function getPremiumTrialOffer() {
-  const mapped = React6.map((item) => userTrialOffer.getUserTrialOffer(item));
+  const mapped = React7.map((item) => userTrialOffer.getUserTrialOffer(item));
   const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
 }

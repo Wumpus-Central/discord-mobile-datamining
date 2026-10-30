@@ -25,7 +25,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -168,7 +168,7 @@ function getGiftCodeRedeemError(error, currentUser) {
     return intl.string(util.t["s9+XlB"]);
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({
   Endpoints: closure_7,
   AnalyticEvents: closure_8,
@@ -177,7 +177,7 @@ const Constants = fn(1084);
   MessageEmbedTypes: closure_11,
   MessageTypes: closure_12,
 } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 ({ PremiumTypes: map1, SubscriptionIntervalTypes: closure_14 } = PremiumConstants);
 let items = [RegexUtils.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((item) => RegexUtils.escape(item))];
 items1 = ["discordapp.com/gifts", "discord.com/gifts"];
@@ -215,9 +215,11 @@ const GiftExperience = {
   CUSTOM_MESSAGE_EMOJI_SOUNDBOARD: 2,
   [2]: "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD",
 };
-const ReactCompilerGating = fn(558);
-const fillResult2 = Array(3).fill(undefined);
-function getGiftExperience(arg0, arg1) {
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/GiftCodeUtils.tsx");
+
+export { GiftExperience };
+export function getGiftExperience(arg0, arg1) {
   if (!shared_PlatformUtils.isMobile) {
     if (!shared_PlatformUtils.isTablet) {
       if (null == arg0) {
@@ -231,88 +233,6 @@ function getGiftExperience(arg0, arg1) {
   }
   DEFAULT = obj.DEFAULT;
 }
-function cleanCode(str) {
-  return str.replace(/[^A-Za-z0-9]/g, "");
-}
-function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
-  _require = getOrFetchSubscriptionPlan;
-  const match = require("module_6543").match(getOrFetchSubscriptionPlan);
-  const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_6543");
-  const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
-  const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
-    const intl = util.intl;
-    return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-  });
-  const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 };
-  const withResult1 = match
-    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-    })
-    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-    });
-  const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 };
-  const withResult2 = match
-    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-    })
-    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-    })
-    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
-    });
-  return match
-    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
-    })
-    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
-    })
-    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
-    })
-    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 }, () => {
-      const intl = util.intl;
-      return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
-    })
-    .otherwise(() => {
-      const intl = subscriptionPlan(1125).intl;
-      return intl.string(subscriptionPlan(1125).t["5ayf7w"]);
-    });
-}
-function getErrorMessage(arg0, error, arg2, arg3, onGoToLibrary) {
-  let tmp;
-  if (!arg2) {
-    if (!arg3) {
-      tmp = arg0;
-    }
-  }
-  const intl = util.intl;
-  let formatResult = intl.format(util.t["5zyz9y"], { onGoToLibrary });
-  if (null == tmp) {
-    let tmp5 = null;
-    if (null != error) {
-      tmp5 = getGiftCodeRedeemError(error, UserStore.getCurrentUser());
-    }
-    formatResult = tmp5;
-  }
-  return formatResult;
-}
-const size = fn(2);
-const result = size.fileFinishedImporting("utils/GiftCodeUtils.tsx");
-
-export { GiftExperience };
-export { getGiftExperience };
 export function shouldShowCustomGiftExperience(arg0) {
   if (!shared_PlatformUtils.isMobile) {
     if (!shared_PlatformUtils.isTablet) {
@@ -361,7 +281,9 @@ export function parseComboId(item) {
   obj.giftStyle = parsed;
   return obj;
 }
-export { cleanCode };
+export function cleanCode(str) {
+  return str.replace(/[^A-Za-z0-9]/g, "");
+}
 export function isGiftCodeEmbed(type) {
   type = undefined;
   if (type != null) {
@@ -437,9 +359,9 @@ export function resolveGiftCode() {
   }
   return applyArgumentsResult;
 }
-export function trackGiftCodeCopy(giftCodeRecord, value) {
-  const merged = Object.assign(getAnalyticsDataForSKUDefault(value, false, false));
-  const merged1 = Object.assign(giftCodeRecord.analyticsData);
+export function trackGiftCodeCopy(giftCode, sku) {
+  const merged = Object.assign(getAnalyticsDataForSKUDefault(sku, false, false));
+  const merged1 = Object.assign(giftCode.analyticsData);
   AnalyticsUtilsDefault.track(constants.GIFT_CODE_COPIED, {});
 }
 export function getStep(arg0, isSubscription, error) {
@@ -533,8 +455,63 @@ export function getButtonText(arg0, giftStyle, isCustomGift) {
     }
   }
 }
-export { getSubscriptionGiftSuccessText };
-export function getSubscriptionGiftStartHeaderText(subscriptionPlan, sender, name) {
+export function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
+  _require = getOrFetchSubscriptionPlan;
+  const match = require("module_6550").match(getOrFetchSubscriptionPlan);
+  const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
+  const str = require("module_6550");
+  const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
+  const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
+  });
+  const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 };
+  const withResult1 = match
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
+    })
+    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
+    });
+  const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 };
+  const withResult2 = match
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
+    })
+    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
+    })
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
+    });
+  return match
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.O2bEOt, { intervalCount: subscriptionPlan.intervalCount });
+    })
+    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t["ZEvHF+"], { intervalCount: subscriptionPlan.intervalCount });
+    })
+    .with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_1 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.gjKbF4, { intervalCount: subscriptionPlan.intervalCount });
+    })
+    .with({ interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_1 }, () => {
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
+    })
+    .otherwise(() => {
+      const intl = subscriptionPlan(1114).intl;
+      return intl.string(subscriptionPlan(1114).t["5ayf7w"]);
+    });
+}
+export function getSubscriptionGiftStartHeaderText(getOrFetchSubscriptionPlan, sender, name) {
   _require = sender;
   const skuName = name;
   if (null == name) {
@@ -548,11 +525,11 @@ export function getSubscriptionGiftStartHeaderText(subscriptionPlan, sender, nam
     }
     return formatToPlainStringResult;
   } else {
-    intervalCount = subscriptionPlan.intervalCount;
+    intervalCount = getOrFetchSubscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_6543").match(subscriptionPlan);
+      const match = require("module_6550").match(getOrFetchSubscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_6543");
+      const str = require("module_6550");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -581,9 +558,9 @@ export function getSubscriptionGiftStartHeaderText(subscriptionPlan, sender, nam
           return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
         });
     } else {
-      const match1 = require("module_6543").match(subscriptionPlan);
+      const match1 = require("module_6550").match(getOrFetchSubscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_6543");
+      const str2 = require("module_6550");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -628,9 +605,9 @@ export function getBodyText(arg0) {
         tmp17 = libraryApplication;
       }
     }
-    const intl4 = subscriptionPlan(1125).intl;
+    const intl4 = subscriptionPlan(1114).intl;
     const obj2 = { onGoToLibrary };
-    let formatResult = intl4.format(subscriptionPlan(1125).t["5zyz9y"], obj2);
+    let formatResult = intl4.format(subscriptionPlan(1114).t["5zyz9y"], obj2);
     if (null == tmp17) {
       let tmp22 = null;
       if (null != error) {
@@ -641,9 +618,9 @@ export function getBodyText(arg0) {
     return formatResult;
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(6543).match(subscriptionPlan);
+      const match = subscriptionPlan(6550).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(6543);
+      const str = subscriptionPlan(6550);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;
@@ -691,8 +668,8 @@ export function getBodyText(arg0) {
           return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
         })
         .otherwise(() => {
-          const intl = subscriptionPlan(1125).intl;
-          return intl.string(subscriptionPlan(1125).t["5ayf7w"]);
+          const intl = subscriptionPlan(1114).intl;
+          return intl.string(subscriptionPlan(1114).t["5ayf7w"]);
         });
       const withResult3 = match
         .with(obj3, () => {
@@ -712,32 +689,49 @@ export function getBodyText(arg0) {
           return intl.formatToPlainString(util.t.GIe7Bw, { intervalCount: subscriptionPlan.intervalCount });
         });
     } else {
-      const intl3 = subscriptionPlan(1125).intl;
+      const intl3 = subscriptionPlan(1114).intl;
       const obj7 = { skuName: sku.name };
-      otherwiseResult = intl3.formatToPlainString(subscriptionPlan(1125).t["3CPsbo"], obj7);
+      otherwiseResult = intl3.formatToPlainString(subscriptionPlan(1114).t["3CPsbo"], obj7);
     }
     return otherwiseResult;
   } else {
     const CONFIRM = constants3.CONFIRM;
     if (null != subscriptionPlan) {
       if (subscriptionPlan.interval === constants6.MONTH) {
-        let d8rUdy = subscriptionPlan(1125).t.P9eTKt;
+        let d8rUdy = subscriptionPlan(1114).t.P9eTKt;
         let tmp5 = subscriptionPlan;
       } else {
         tmp5 = subscriptionPlan;
-        d8rUdy = subscriptionPlan(1125).t.d8rUdy;
+        d8rUdy = subscriptionPlan(1114).t.d8rUdy;
       }
-      const intl2 = tmp5(1125).intl;
+      const intl2 = tmp5(1114).intl;
       const obj8 = { skuName: sku.name, intervalCount: subscriptionPlan.intervalCount };
       return intl2.format(d8rUdy, obj8);
     } else {
-      let intl = subscriptionPlan(1125).intl;
+      let intl = subscriptionPlan(1114).intl;
       const obj = { skuName: sku.name };
-      return intl.formatToPlainString(subscriptionPlan(1125).t.l6Ea4Z, obj);
+      return intl.formatToPlainString(subscriptionPlan(1114).t.l6Ea4Z, obj);
     }
   }
 }
-export { getErrorMessage };
+export function getErrorMessage(arg0, error, arg2, arg3, onGoToLibrary) {
+  let tmp;
+  if (!arg2) {
+    if (!arg3) {
+      tmp = arg0;
+    }
+  }
+  const intl = util.intl;
+  let formatResult = intl.format(util.t["5zyz9y"], { onGoToLibrary });
+  if (null == tmp) {
+    let tmp5 = null;
+    if (null != error) {
+      tmp5 = getGiftCodeRedeemError(error, UserStore.getCurrentUser());
+    }
+    formatResult = tmp5;
+  }
+  return formatResult;
+}
 export function firstLibraryApplicationForGiftCode(arg0, applicationId, arg2) {
   let arr = arg0;
   const libraryApplication = arg2;
@@ -775,68 +769,27 @@ export function processGiftCodeInput(str) {
     return replaced;
   }
 }
-export const useGetGiftCode = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useGetGiftCode(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(4);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [PremiumPaymentModalStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === arg1) {
-        if (cResult[2] === arg0) {
-          let tmp6 = cResult[3];
-        }
-        return tmp(504).useStateFromStores(first, tmp6);
-      }
-      const fn = function l() {
-        if (null != closure_0) {
-          if (closure_1) {
-            const giftCode = PremiumPaymentModalStore.getGiftCode(tmp);
-            let tmp5 = null;
-            if (null != giftCode) {
-              tmp5 = null;
-              if ("" !== giftCode) {
-                tmp5 = giftCode;
-              }
-            }
-            return tmp5;
+export function useGetGiftCode(arg0, arg1) {
+  _require = arg0;
+  closure_1 = arg1;
+  const items = [PremiumPaymentModalStore];
+  return require("initialize").useStateFromStores(items, () => {
+    if (null != closure_0) {
+      if (closure_1) {
+        const giftCode = PremiumPaymentModalStore.getGiftCode(tmp);
+        let tmp5 = null;
+        if (null != giftCode) {
+          tmp5 = null;
+          if ("" !== giftCode) {
+            tmp5 = giftCode;
           }
         }
-        return null;
-      };
-      cResult[1] = arg1;
-      cResult[2] = arg0;
-      cResult[3] = fn;
-      tmp6 = fn;
-      const obj = require("c");
-      tmp = _require;
+        return tmp5;
+      }
     }
-  : function useGetGiftCode(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const items = [PremiumPaymentModalStore];
-      return require("initialize").useStateFromStores(items, () => {
-        if (null != closure_0) {
-          if (closure_1) {
-            const giftCode = PremiumPaymentModalStore.getGiftCode(tmp);
-            let tmp5 = null;
-            if (null != giftCode) {
-              tmp5 = null;
-              if ("" !== giftCode) {
-                tmp5 = giftCode;
-              }
-            }
-            return tmp5;
-          }
-        }
-        return null;
-      });
-    };
+    return null;
+  });
+}
 export function trackStep(giftCode) {
   giftCode = giftCode.giftCode;
   ({ step, customMessage, emojiName, soundId, productLine } = giftCode);

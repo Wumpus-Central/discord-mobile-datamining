@@ -1,5 +1,4 @@
 // discord_app/components_native/common/Alert.tsx
-import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
@@ -18,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = {
   alert: {
     borderRadius: nativeDefault.radii.sm,
@@ -157,7 +156,7 @@ prototype["renderHeader"] = function renderHeader() {
       const obj3 = { style: tmp.divider };
       items[1] = React5(hasOwnProperty, obj3);
       obj.children = items;
-      tmp3Result = closure_1_8(hasOwnProperty, obj);
+      tmp3Result = React6(hasOwnProperty, obj);
     }
   }
   return tmp3Result;
@@ -183,7 +182,7 @@ prototype["renderBody"] = function renderBody() {
   const obj4 = { children: null };
   const items = [tmp5Result, props.children];
   obj4.children = items;
-  return closure_1_8(React6, obj4);
+  return React6(React7, obj4);
 };
 prototype["renderButtons"] = function renderButtons() {
   const self = this;
@@ -286,7 +285,7 @@ prototype["renderButtons"] = function renderButtons() {
     }
     const items = [renderConfirmButtonResult, tmp6, tmp11];
     obj5.children = items;
-    tmp15Result = closure_1_8(hasOwnProperty, obj5);
+    tmp15Result = React6(hasOwnProperty, obj5);
   }
   return tmp15Result;
 };
@@ -311,9 +310,9 @@ prototype["render"] = function render() {
   obj3.style = items1;
   const items2 = [this.renderHeader(), this.renderBody(), this.renderButtons(), this.renderFooter()];
   obj3.children = items2;
-  items[1] = closure_1_8(hasOwnProperty, obj3);
+  items[1] = React6(hasOwnProperty, obj3);
   obj.children = items;
-  const tmp3 = closure_1_8(React6, obj);
+  const tmp3 = React6(React7, obj);
   let tmp2Result = tmp3;
   if (isLandscape) {
     const obj4 = { style: null, children: null };
@@ -324,11 +323,25 @@ prototype["render"] = function render() {
   }
   return tmp2Result;
 };
-Alert.contextType = fn(5071).ThemeContext;
+Alert.contextType = fn(5075).ThemeContext;
 const obj7 = { borderRadius: nativeDefault.radii.sm };
-Alert.defaultProps = { confirmColor: fn(1199).ButtonColors.BRAND, autoCloseOnConfirm: true };
-const ReactCompilerGating = fn(558);
-function getAlertButtonVariant(confirmColor) {
+Alert.defaultProps = { confirmColor: fn(1188).ButtonColors.BRAND, autoCloseOnConfirm: true };
+const memoResult = noop.memo(function AlertConnected(arg0) {
+  const size = useWindowDimensionsDefault();
+  const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
+  const merged = Object.assign(arg0);
+  return React5(Alert, {
+    width: Math.min(0.9 * Math.min(size.width, size.height), 400),
+    contentHeight: 0.7 * size.height,
+    isLandscape: isScreenLandscape,
+  });
+});
+memoResult.Colors = fn(1188).ButtonColors;
+let size = fn(2);
+let result = size.fileFinishedImporting("components_native/common/Alert.tsx");
+
+export default memoResult;
+export function getAlertButtonVariant(confirmColor) {
   if (native.ButtonColors.GREEN === confirmColor) {
     return "active";
   } else if (native.ButtonColors.RED === confirmColor) {
@@ -348,47 +361,3 @@ function getAlertButtonVariant(confirmColor) {
     return "secondary";
   }
 }
-const memoResult = noop.memo(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? function AlertConnected(arg0) {
-        const cResult = c.c(5);
-        const size = useWindowDimensionsDefault();
-        const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
-        const bound = Math.min(0.9 * Math.min(size.width, size.height), 400);
-        const result = 0.7 * size.height;
-        if (cResult[0] === result) {
-          if (cResult[1] === isScreenLandscape) {
-            if (cResult[2] === arg0) {
-              if (cResult[3] === bound) {
-                let tmp5 = cResult[4];
-              }
-              return tmp5;
-            }
-          }
-        }
-        const merged = Object.assign(arg0);
-        const tmp7 = React5(Alert, { width: bound, contentHeight: result, isLandscape: isScreenLandscape });
-        cResult[0] = result;
-        cResult[1] = isScreenLandscape;
-        cResult[2] = arg0;
-        cResult[3] = bound;
-        cResult[4] = tmp7;
-        tmp5 = tmp7;
-      }
-    : function AlertConnected(arg0) {
-        const size = useWindowDimensionsDefault();
-        const isScreenLandscape = useIsScreenLandscape.useIsScreenLandscape();
-        const merged = Object.assign(arg0);
-        return React5(Alert, {
-          width: Math.min(0.9 * Math.min(size.width, size.height), 400),
-          contentHeight: 0.7 * size.height,
-          isLandscape: isScreenLandscape,
-        });
-      },
-);
-memoResult.Colors = fn(1199).ButtonColors;
-let size = fn(2);
-let result = size.fileFinishedImporting("components_native/common/Alert.tsx");
-
-export default memoResult;
-export { getAlertButtonVariant };

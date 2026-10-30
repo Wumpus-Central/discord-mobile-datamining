@@ -1,15 +1,13 @@
 // discord_app/design/components/TagListInput/native/TagListInput.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedRexport.tsx";
+import LinearGradientDefault from "../../../../../_runtime/05582_LinearGradient.js";
 import Text_Text from "../../Text/native/Text.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05295_LinearGradient.js";
-import _modDef7026 from "../../../../../_runtime/metro/07026__.js";
-import useInputClearButton from "../../Input/native/useInputClearButton.native.tsx";
+import _modDef7032 from "../../../../../_runtime/metro/07032__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5005);
+let createStyles = fn(5009);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     placeholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
@@ -66,10 +64,10 @@ let closure_10 = createStyles.createStyles(() => {
   obj.horizontalSearchInput = { minWidth: nativeDefault.space.PX_64 };
   return obj;
 });
-const start = { x: 0, y: 0.5 };
-const end = { x: 1, y: 0.5 };
-const colors = ["transparent", "black"];
-createStyles = fn(5005);
+let closure_11 = { x: 0, y: 0.5 };
+let closure_12 = { x: 1, y: 0.5 };
+let closure_13 = ["transparent", "black"];
+createStyles = fn(5009);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   const obj2 = {};
@@ -84,543 +82,9 @@ let closure_14 = createStyles.createStyles(() => {
   obj.maskRemainder = { flex: 1, backgroundColor: "black" };
   return obj;
 });
-const __initData = {
-  code: 'function TagListInputNativeTsx1(){const{withSpring,scrolled,springStandard}=this.__closure;return{opacity:withSpring(scrolled.get()?0:1,springStandard,"animate-always")};}',
+let __initData = {
+  code: "function TagListInputNativeTsx1(){const{withSpring,scrolled,springStandard}=this.__closure;return{opacity:withSpring(scrolled.get()?0:1,springStandard,'animate-always')};}",
 };
-const __initData2 = {
-  code: "function TagListInputNativeTsx2(){const{withSpring,scrolled,springStandard}=this.__closure;return{opacity:withSpring(scrolled.get()?0:1,springStandard,'animate-always')};}",
-};
-let ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useLeadingFade(leadingFade) {
-      const cResult = onScroll(horizontal[8]).c(13);
-      ({ horizontal, onScroll } = leadingFade);
-      const tmp4 = closure_14();
-      importDefault = tmp4;
-      if (horizontal) {
-        horizontal = leadingFade.leadingFade;
-      }
-      let obj = onScroll(horizontal[8]);
-      const sharedValue = onScroll(horizontal[9]).useSharedValue(false);
-      if (cResult[0] === horizontal) {
-        if (cResult[1] === onScroll) {
-          if (cResult[2] === sharedValue) {
-            let tmp6 = cResult[3];
-          }
-          const fn2 = function x() {
-            let num = 1;
-            if (sharedValue.get()) {
-              num = 0;
-            }
-            return { opacity: spring.withSpring(num, springPresets.springStandard, "animate-always") };
-          };
-          let obj2 = {
-            withSpring: onScroll(tmp2[10]).withSpring,
-            scrolled: sharedValue,
-            springStandard: onScroll(tmp2[11]).springStandard,
-          };
-          fn2.__closure = obj2;
-          fn2.__workletHash = 4094668912184;
-          fn2.__initData = __initData;
-          const animatedStyle = onScroll(tmp2[9]).useAnimatedStyle(fn2);
-          if (cResult[4] === animatedStyle) {
-            if (cResult[5] === horizontal) {
-              if (cResult[6] === tmp4) {
-                let tmp9 = cResult[7];
-              }
-              let tmp10 = horizontal;
-              if (!horizontal) {
-                tmp10 = null != onScroll;
-              }
-              let tmp12;
-              if (tmp10) {
-                tmp12 = tmp6;
-              }
-              let num6;
-              if (tmp10) {
-                num6 = 16;
-              }
-              let fill;
-              if (horizontal) {
-                fill = tmp4.fill;
-              }
-              if (cResult[8] === tmp12) {
-                if (cResult[9] === num6) {
-                  if (cResult[10] === fill) {
-                    if (cResult[11] === tmp9) {
-                      let tmp14 = cResult[12];
-                    }
-                    return tmp14;
-                  }
-                }
-              }
-              let obj3 = { onScroll: tmp12, scrollEventThrottle: num6, scrollerStyle: fill, wrap: tmp9 };
-              class F {
-                constructor(arg0) {
-                  tmp = leadingFade;
-                  if (leadingFade) {
-                    tmp2 = jsx;
-                    tmp3 = closure_1;
-                    tmp4 = closure_2;
-                    obj = { style: null, androidRenderingMode: "software", maskElement: null, children: null };
-                    tmp6 = closure_1;
-                    obj.style = closure_1.fill;
-                    tmp7 = jsxs;
-                    tmp8 = View;
-                    obj1 = { style: null, children: null };
-                    obj1.style = closure_1.mask;
-                    obj7 = { style: null, children: null };
-                    obj7.style = closure_1.leadingFade;
-                    tmp5 = closure_1(closure_2[12]);
-                    obj8 = { start: null, end: null, colors: null, style: null };
-                    tmp9 = closure_11;
-                    obj8.start = closure_11;
-                    tmp10 = closure_12;
-                    obj8.end = closure_12;
-                    tmp11 = closure_13;
-                    obj8.colors = closure_13;
-                    tmp12 = StyleSheet;
-                    obj8.style = StyleSheet.absoluteFill;
-                    items = [,];
-                    items[0] = jsx(closure_1(closure_2[13]), obj8);
-                    obj9 = { style: null };
-                    items1 = [,];
-                    items1[0] = closure_1.leadingCover;
-                    tmp13 = closure_4;
-                    items1[1] = closure_4;
-                    obj9.style = items1;
-                    items[1] = jsx(closure_1(closure_2[9]).View, obj9);
-                    obj7.children = items;
-                    items2 = [,];
-                    items2[0] = jsxs(View, obj7);
-                    obj10 = { style: null };
-                    obj10.style = closure_1.maskRemainder;
-                    items2[1] = jsx(View, obj10);
-                    obj1.children = items2;
-                    obj.maskElement = jsxs(View, obj1);
-                    obj.children = leadingFade;
-                    tmp = jsx(tmp5, obj);
-                  }
-                  return tmp;
-                }
-              }
-              cResult[9] = num6;
-              cResult[10] = fill;
-              cResult[11] = tmp9;
-              cResult[12] = obj3;
-              tmp14 = obj3;
-            }
-          }
-          class F {
-            constructor(arg0) {
-              tmp = leadingFade;
-              if (leadingFade) {
-                tmp2 = jsx;
-                tmp3 = closure_1;
-                tmp4 = closure_2;
-                obj = { style: null, androidRenderingMode: "software", maskElement: null, children: null };
-                tmp6 = closure_1;
-                obj.style = closure_1.fill;
-                tmp7 = jsxs;
-                tmp8 = View;
-                obj1 = { style: null, children: null };
-                obj1.style = closure_1.mask;
-                obj7 = { style: null, children: null };
-                obj7.style = closure_1.leadingFade;
-                tmp5 = closure_1(closure_2[12]);
-                obj8 = { start: null, end: null, colors: null, style: null };
-                tmp9 = closure_11;
-                obj8.start = closure_11;
-                tmp10 = closure_12;
-                obj8.end = closure_12;
-                tmp11 = closure_13;
-                obj8.colors = closure_13;
-                tmp12 = StyleSheet;
-                obj8.style = StyleSheet.absoluteFill;
-                items = [,];
-                items[0] = jsx(closure_1(closure_2[13]), obj8);
-                obj9 = { style: null };
-                items1 = [,];
-                items1[0] = closure_1.leadingCover;
-                tmp13 = closure_4;
-                items1[1] = closure_4;
-                obj9.style = items1;
-                items[1] = jsx(closure_1(closure_2[9]).View, obj9);
-                obj7.children = items;
-                items2 = [,];
-                items2[0] = jsxs(View, obj7);
-                obj10 = { style: null };
-                obj10.style = closure_1.maskRemainder;
-                items2[1] = jsx(View, obj10);
-                obj1.children = items2;
-                obj.maskElement = jsxs(View, obj1);
-                obj.children = leadingFade;
-                tmp = jsx(tmp5, obj);
-              }
-              return tmp;
-            }
-          }
-          cResult[4] = animatedStyle;
-          cResult[5] = horizontal;
-          cResult[6] = tmp4;
-          cResult[7] = F;
-          tmp9 = F;
-          const tmpResult2 = onScroll(tmp2[9]);
-        }
-      }
-      const fn = function t(nativeEvent) {
-        if (horizontal) {
-          const result = sharedValue.set(nativeEvent.nativeEvent.contentOffset.x > 1);
-        }
-        if (onScroll != null) {
-          tmp3(nativeEvent);
-        }
-      };
-      cResult[0] = horizontal;
-      cResult[1] = onScroll;
-      cResult[2] = sharedValue;
-      cResult[3] = fn;
-      tmp6 = fn;
-      const tmpResult = onScroll(horizontal[9]);
-    }
-  : function useLeadingFade(leadingFade) {
-      ({ horizontal, onScroll } = leadingFade);
-      horizontal = undefined;
-      let sharedValue;
-      let animatedStyle;
-      let tmp = closure_14();
-      closure_1 = tmp;
-      if (horizontal) {
-        horizontal = leadingFade.leadingFade;
-      }
-      sharedValue = onScroll(horizontal[9]).useSharedValue(false);
-      let items = [horizontal, onScroll, sharedValue];
-      const callback = animatedStyle.useCallback((nativeEvent) => {
-        if (horizontal) {
-          const result = sharedValue.set(nativeEvent.nativeEvent.contentOffset.x > 1);
-        }
-        if (onScroll != null) {
-          tmp3(nativeEvent);
-        }
-      }, items);
-      let obj = onScroll(horizontal[9]);
-      const fn = function u() {
-        let num = 1;
-        if (sharedValue.get()) {
-          num = 0;
-        }
-        return { opacity: spring.withSpring(num, springPresets.springStandard, "animate-always") };
-      };
-      let obj2 = onScroll(horizontal[9]);
-      fn.__closure = {
-        withSpring: onScroll(horizontal[10]).withSpring,
-        scrolled: sharedValue,
-        springStandard: onScroll(horizontal[11]).springStandard,
-      };
-      fn.__workletHash = 3038650900571;
-      fn.__initData = __initData2;
-      animatedStyle = obj2.useAnimatedStyle(fn);
-      let items1 = [horizontal, tmp, animatedStyle];
-      let tmp6 = horizontal;
-      const callback1 = animatedStyle.useCallback((children) => {
-        let tmp = children;
-        if (horizontal) {
-          const obj = { style: closure_1.fill, androidRenderingMode: "software", maskElement: null, children: null };
-          const obj2 = { style: closure_1.mask, children: null };
-          const obj3 = { style: closure_1.leadingFade, children: null };
-          const obj4 = { start, end, colors, style: React5.absoluteFill };
-          const items = [closure_2_8(LinearGradientDefault, obj4)];
-          const obj5 = { style: null };
-          const items1 = [closure_1.leadingCover, animatedStyle];
-          obj5.style = items1;
-          items[1] = closure_2_8(ReanimatedRexportDefault.View, obj5);
-          obj3.children = items;
-          const items2 = [React6(hasOwnProperty, obj3)];
-          const obj6 = { style: closure_1.maskRemainder };
-          items2[1] = closure_2_8(hasOwnProperty, obj6);
-          obj2.children = items2;
-          obj.maskElement = React6(hasOwnProperty, obj2);
-          obj.children = children;
-          tmp = closure_2_8(_modDef7026, obj);
-        }
-        return tmp;
-      }, items1);
-      if (!horizontal) {
-        tmp6 = null != onScroll;
-      }
-      let tmp8;
-      if (tmp6) {
-        tmp8 = callback;
-      }
-      let obj4 = { onScroll: tmp8, scrollEventThrottle: null, scrollerStyle: null, wrap: null };
-      let num;
-      if (tmp6) {
-        num = 16;
-      }
-      obj4.scrollEventThrottle = num;
-      let fill;
-      if (horizontal) {
-        fill = tmp.fill;
-      }
-      obj4.scrollerStyle = fill;
-      obj4.wrap = callback1;
-      return obj4;
-    };
-ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useTagListInputState(arg0, arg1) {
-      closure_0 = arg1;
-      const cResult = c.c(15);
-      noop.useRef(null);
-      noop.useRef("");
-      noop.useRef(false);
-      [tmp6, noop] = noop.useState(false);
-      if (cResult[0] !== arg1) {
-        const fn = function o(current, arg1) {
-          ref2.current = true;
-          ref1.current = current;
-          noop(current.length > 0);
-          if (closure_0 != null) {
-            closure_0(current);
-          }
-          if (tmp) {
-            current = ref.current;
-            if (current != null) {
-              const obj = { text: current };
-              current.setNativeProps(obj);
-            }
-          }
-          tmp = undefined !== arg1 && arg1;
-        };
-        cResult[0] = arg1;
-        cResult[1] = fn;
-        let tmp7 = fn;
-      } else {
-        tmp7 = cResult[1];
-      }
-      closure_5 = tmp7;
-      if (cResult[2] !== tmp7) {
-        const fn2 = function v() {
-          return {
-            blur() {
-              const current = ref.current;
-              let blurResult;
-              if (current != null) {
-                blurResult = current.blur();
-              }
-              return blurResult;
-            },
-            focus() {
-              const current = ref.current;
-              let focusResult;
-              if (current != null) {
-                focusResult = current.focus();
-              }
-              return focusResult;
-            },
-            setText(arg0) {
-              return closure_1_5(arg0, true);
-            },
-            getText() {
-              return ref.current;
-            },
-            isFocused() {
-              const current = ref.current;
-              let flag;
-              if (current != null) {
-                flag = current.isFocused();
-              }
-              if (flag == null) {
-                flag = false;
-              }
-              return flag;
-            },
-            measure(arg0) {
-              const current = ref.current;
-              let measureResult;
-              if (current != null) {
-                measureResult = current.measure(arg0);
-              }
-              return measureResult;
-            },
-            measureInWindow(arg0) {
-              const current = ref.current;
-              let measureInWindowResult;
-              if (current != null) {
-                measureInWindowResult = current.measureInWindow(arg0);
-              }
-              return measureInWindowResult;
-            },
-            measureLayout(arg0, arg1, arg2) {
-              const current = ref.current;
-              let measureLayoutResult;
-              if (current != null) {
-                measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-              }
-              return measureLayoutResult;
-            },
-          };
-        };
-        cResult[2] = tmp7;
-        cResult[3] = fn2;
-        let tmp8 = fn2;
-      } else {
-        tmp8 = cResult[3];
-      }
-      const imperativeHandle = noop.useImperativeHandle(arg0, tmp8);
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { clearable: true };
-        cResult[4] = obj3;
-        let tmp10 = obj3;
-      } else {
-        tmp10 = cResult[4];
-      }
-      if (cResult[5] !== tmp7) {
-        class I {
-          constructor() {
-            return closure_5("", true);
-          }
-        }
-        const fn3 = function b(arg0) {
-          return closure_5(arg0, true);
-        };
-        cResult[5] = tmp7;
-        cResult[6] = I;
-        cResult[7] = fn3;
-        let tmp12 = fn3;
-      } else {
-        class I {
-          constructor() {
-            return closure_5("", true);
-          }
-        }
-        tmp12 = cResult[7];
-      }
-      if (cResult[8] === tmp6) {
-        class I {
-          constructor() {
-            return closure_5("", true);
-          }
-        }
-      }
-      cResult[8] = tmp6;
-      cResult[9] = I;
-      cResult[10] = tmp12;
-      cResult[11] = { clearProps: tmp10, clearState: { hasValue: tmp6, clear: I, setTextValue: tmp12 } };
-      const obj4 = { clearProps: tmp10, clearState: { hasValue: tmp6, clear: I, setTextValue: tmp12 } };
-      const tmp5 = _slicedToArray(noop.useState(false), 2);
-    }
-  : function useTagListInputState(arg0, arg1) {
-      closure_0 = arg1;
-      const ref = noop.useRef(null);
-      const ref1 = noop.useRef("");
-      const ref2 = noop.useRef(false);
-      [hasValue, closure_5] = noop.useState(false);
-      const items = [arg1];
-      const inputUpdate = noop.useCallback((current) => {
-        let flag = arg1;
-        if (arg1 === undefined) {
-          flag = false;
-        }
-        ref2.current = true;
-        ref1.current = current;
-        closure_5(current.length > 0);
-        if (closure_0 != null) {
-          closure_0(current);
-        }
-        if (flag) {
-          current = ref.current;
-          if (current != null) {
-            const obj = { text: current };
-            current.setNativeProps(obj);
-          }
-        }
-      }, items);
-      const imperativeHandle = noop.useImperativeHandle(arg0, () => ({
-        blur() {
-          const current = ref.current;
-          let blurResult;
-          if (current != null) {
-            blurResult = current.blur();
-          }
-          return blurResult;
-        },
-        focus() {
-          const current = ref.current;
-          let focusResult;
-          if (current != null) {
-            focusResult = current.focus();
-          }
-          return focusResult;
-        },
-        setText(arg0) {
-          return inputUpdate(arg0, true);
-        },
-        getText() {
-          return ref.current;
-        },
-        isFocused() {
-          const current = ref.current;
-          let flag;
-          if (current != null) {
-            flag = current.isFocused();
-          }
-          if (flag == null) {
-            flag = false;
-          }
-          return flag;
-        },
-        measure(arg0) {
-          const current = ref.current;
-          let measureResult;
-          if (current != null) {
-            measureResult = current.measure(arg0);
-          }
-          return measureResult;
-        },
-        measureInWindow(arg0) {
-          const current = ref.current;
-          let measureInWindowResult;
-          if (current != null) {
-            measureInWindowResult = current.measureInWindow(arg0);
-          }
-          return measureInWindowResult;
-        },
-        measureLayout(arg0, arg1, arg2) {
-          const current = ref.current;
-          let measureLayoutResult;
-          if (current != null) {
-            measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
-          }
-          return measureLayoutResult;
-        },
-      }));
-      const items1 = [hasValue, inputUpdate];
-      const memo = noop.useMemo(() => {
-        const obj = {
-          clearProps: { clearable: true },
-          clearState: {
-            hasValue,
-            clear() {
-              return inputUpdate("", true);
-            },
-            setTextValue(text) {
-              return inputUpdate(text, true);
-            },
-          },
-        };
-        return obj;
-      }, items1);
-      let obj = {
-        clearButton: useInputClearButton.useInputClearButton(clearProps, clearState),
-        inputRef: ref,
-        inputValueRef: ref1,
-        inputUpdate,
-        inputInitializedRef: ref2,
-      };
-      ({ clearProps, clearState } = memo);
-      return obj;
-    };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TagListInput/native/TagListInput.native.tsx");
 
@@ -629,12 +93,13 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   if (disabled === undefined) {
     disabled = false;
   }
-  ({ placeholder, accessibilityLabel, icon, returnKeyType, onChangeText, onBlur, onFocus, onScroll, style } =
+  ({ placeholder, accessibilityLabel, icon, onChangeText, onScroll, returnKeyType, onBlur, onFocus, style } =
     accessibilityHint);
   if (returnKeyType === undefined) {
     returnKeyType = "search";
   }
-  let tags = accessibilityHint.tags;
+  const tags = accessibilityHint.tags;
+  onChangeText = tags;
   let flag = accessibilityHint.horizontal;
   if (flag === undefined) {
     flag = false;
@@ -643,14 +108,18 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   if (focusOnAdd === undefined) {
     focusOnAdd = true;
   }
-  ({ inActionSheet, onRemove: dependencyMap, autoClearInputOnTagAdd, onSubmitEditing, autoFocus } = accessibilityHint);
+  let ref = focusOnAdd;
+  ({ inActionSheet, onRemove: ref1, autoClearInputOnTagAdd, onSubmitEditing, autoFocus } = accessibilityHint);
   if (autoClearInputOnTagAdd === undefined) {
     autoClearInputOnTagAdd = true;
   }
+  let ref2 = autoClearInputOnTagAdd;
   let flag2 = accessibilityHint.leadingFade;
   if (flag2 === undefined) {
     flag2 = false;
   }
+  ref1 = undefined;
+  onChangeText = undefined;
   c8 = undefined;
   c9 = undefined;
   c10 = undefined;
@@ -658,37 +127,141 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   c13 = undefined;
   c14 = undefined;
   c17 = undefined;
-  const tmp = c10();
-  const bound = Math.min(2, tags(5290).useFontScale());
-  const result = tags(7084).InputHeights.MD * bound;
-  let tmp6 = closure_18(accessibilityHint.ref, onChangeText);
-  const inputRef = tmp6.inputRef;
-  const inputValueRef = tmp6.inputValueRef;
-  const inputUpdate = tmp6.inputUpdate;
-  const clearButton = tmp6.clearButton;
-  inputRef.useRef({ start: 0, end: 0 });
-  let obj = tags(5290);
-  const keyboardBlurring = tags(7086).useKeyboardBlurring(inputRef);
-  const obj3 = tags(7086);
-  const focus = tags(5179).useFocus();
+  let tmp = c10();
+  const bound = Math.min(2, onChangeText(ref1[13]).useFontScale());
+  ref = undefined;
+  ref1 = undefined;
+  onChangeText = undefined;
+  let result = onChangeText(ref1[14]).InputHeights.MD * bound;
+  ref = ref.useRef(null);
+  ref.useRef("");
+  ref2 = ref.useRef(false);
+  const tmp10 = ref2(ref.useState(false), 2);
+  const first = tmp10[0];
+  ref = first;
+  ref1 = tmp10[1];
+  let items = [onChangeText];
+  onChangeText = ref.useCallback((current) => {
+    let flag = arg1;
+    if (arg1 === undefined) {
+      flag = false;
+    }
+    ref2.current = true;
+    ref1.current = current;
+    ref1(current.length > 0);
+    if (onChangeText != null) {
+      onChangeText(current);
+    }
+    if (flag) {
+      current = ref.current;
+      if (current != null) {
+        const obj = { text: current };
+        current.setNativeProps(obj);
+      }
+    }
+  }, items);
+  const imperativeHandle = ref.useImperativeHandle(accessibilityHint.ref, () => ({
+    blur() {
+      const current = ref.current;
+      let blurResult;
+      if (current != null) {
+        blurResult = current.blur();
+      }
+      return blurResult;
+    },
+    focus() {
+      const current = ref.current;
+      let focusResult;
+      if (current != null) {
+        focusResult = current.focus();
+      }
+      return focusResult;
+    },
+    setText(arg0) {
+      return onChangeText(arg0, true);
+    },
+    getText() {
+      return ref.current;
+    },
+    isFocused() {
+      const current = ref.current;
+      let flag;
+      if (current != null) {
+        flag = current.isFocused();
+      }
+      if (flag == null) {
+        flag = false;
+      }
+      return flag;
+    },
+    measure(arg0) {
+      const current = ref.current;
+      let measureResult;
+      if (current != null) {
+        measureResult = current.measure(arg0);
+      }
+      return measureResult;
+    },
+    measureInWindow(arg0) {
+      const current = ref.current;
+      let measureInWindowResult;
+      if (current != null) {
+        measureInWindowResult = current.measureInWindow(arg0);
+      }
+      return measureInWindowResult;
+    },
+    measureLayout(arg0, arg1, arg2) {
+      const current = ref.current;
+      let measureLayoutResult;
+      if (current != null) {
+        measureLayoutResult = current.measureLayout(arg0, arg1, arg2);
+      }
+      return measureLayoutResult;
+    },
+  }));
+  let items1 = [first, onChangeText];
+  const memo = ref.useMemo(() => {
+    const obj = {
+      clearProps: { clearable: true },
+      clearState: {
+        hasValue: ref,
+        clear() {
+          return onChangeText("", true);
+        },
+        setTextValue(text) {
+          return onChangeText(text, true);
+        },
+      },
+    };
+    return obj;
+  }, items1);
+  ({ clearProps, clearState } = memo);
+  let obj = onChangeText(ref1[13]);
+  const tmp9 = ref2;
+  const inputClearButton = onChangeText(ref1[12]).useInputClearButton(clearProps, clearState);
+  ref = ref.useRef({ start: 0, end: 0 });
+  let obj3 = onChangeText(ref1[12]);
+  const keyboardBlurring = onChangeText(ref1[15]).useKeyboardBlurring(ref);
+  let obj4 = onChangeText(ref1[15]);
+  const focus = onChangeText(ref1[16]).useFocus();
   ({ focusProps: c8, isFocused } = focus);
-  const obj4 = tags(5179);
-  const tmp9 = focusOnAdd;
-  ({ onFocus: c9, onBlur: c10 } = focusOnAdd(7088)({ onFocus, onBlur }));
-  const ref = inputRef.useRef(null);
-  const tmp10 = focusOnAdd(7088)({ onFocus, onBlur });
-  let tmp12 = autoClearInputOnTagAdd;
-  [c12, c13] = autoClearInputOnTagAdd(inputRef.useState(null), 2);
-  const tmp13 = autoClearInputOnTagAdd(inputRef.useState(null), 2);
-  [tmp15, c14] = autoClearInputOnTagAdd(inputRef.useState(false), 2);
-  const tmp16 = focusOnAdd(5636)(tags);
-  const ref1 = inputRef.useRef(tags);
-  const items = [focusOnAdd, inputUpdate, ref1, tags, inputRef, inputValueRef, autoClearInputOnTagAdd];
-  const layoutEffect = inputRef.useLayoutEffect(() => {
-    if (ref1.current.length < tags.length) {
-      let tmp6 = focusOnAdd;
-      if (focusOnAdd) {
-        let current = inputRef.current;
+  let obj5 = onChangeText(ref1[16]);
+  const tmp18 = ref;
+  ({ onFocus: c9, onBlur: c10 } = ref(ref1[17])({ onFocus, onBlur }));
+  const ref3 = ref.useRef(null);
+  const tmp19 = ref(ref1[17])({ onFocus, onBlur });
+  [c12, c13] = ref2(ref.useState(null), 2);
+  const tmp21 = ref2(ref.useState(null), 2);
+  [tmp23, c14] = ref2(ref.useState(false), 2);
+  const tmp24 = ref(ref1[18])(tags);
+  __initData = tmp24;
+  const ref4 = ref.useRef(tags);
+  let items2 = [focusOnAdd, onChangeText, ref4, tags, ref, ref1, autoClearInputOnTagAdd];
+  const layoutEffect = ref.useLayoutEffect(() => {
+    if (ref4.current.length < onChangeText.length) {
+      let tmp6 = ref;
+      if (ref) {
+        let current = ref.current;
         let isFocusedResult;
         if (current != null) {
           isFocusedResult = current.isFocused();
@@ -696,7 +269,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
         tmp6 = false === isFocusedResult;
       }
       if (tmp6) {
-        const current2 = inputRef.current;
+        const current2 = ref.current;
         if (current2 != null) {
           current2.focus();
         }
@@ -710,58 +283,139 @@ export default noop.memo(function TagListInput(accessibilityHint) {
         }
         return scrollToEndResult;
       }, 10);
-      let tmp12 = autoClearInputOnTagAdd;
-      if (autoClearInputOnTagAdd) {
-        tmp12 = inputValueRef.current.length > 0;
+      let tmp12 = ref2;
+      if (ref2) {
+        tmp12 = ref1.current.length > 0;
       }
       if (tmp12) {
-        inputUpdate("", true);
+        callback("", true);
       }
-      if (0 === inputValueRef.current.length) {
-        const current3 = inputRef.current;
+      if (0 === ref1.current.length) {
+        const current3 = ref.current;
         if (current3 != null) {
           current3.setSelection(0, 0);
         }
         closure_7.current = { start: 0, end: 0 };
       }
     }
-    ref1.current = tags;
-  }, items);
-  const items1 = [tmp16];
-  const layoutEffect1 = inputRef.useLayoutEffect(() => {
+    ref4.current = onChangeText;
+  }, items2);
+  const items3 = [tmp24];
+  const layoutEffect1 = ref.useLayoutEffect(() => {
     if (0 !== length.length) {
-      const current = ref.current;
+      const current = ref3.current;
       if (current != null) {
         current.scrollToEnd({ animated: false });
       }
     }
-  }, items1);
+  }, items3);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(5306).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(tmp3[19]).BottomSheetScrollView;
   } else {
-    BottomSheetScrollView = inputUpdate;
+    BottomSheetScrollView = onChangeText;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(9031).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(tmp3[20]).BottomSheetTextInput;
   } else {
-    BottomSheetTextInput = tmp9(9032);
+    BottomSheetTextInput = tmp18(tmp3[21]);
   }
   const result1 = 33 * bound;
-  const tmp14 = autoClearInputOnTagAdd(inputRef.useState(false), 2);
-  [tmp22, c17] = tmp12(inputRef.useState(0), 2);
-  const callback = obj2.useCallback((nativeEvent) => {
-    _undefined4(nativeEvent.nativeEvent.layout.width);
+  const tmp22 = ref2(ref.useState(false), 2);
+  [tmp30, c17] = tmp9(ref.useState(0), 2);
+  const callback1 = obj2.useCallback((nativeEvent) => {
+    _undefined3(nativeEvent.nativeEvent.layout.width);
   }, []);
   if (placeholder == null) {
-    let intl = tmp2(1125).intl;
-    placeholder = intl.string(tmp2(1125).t["5h0QOP"]);
+    let intl = tmp2(tmp3[22]).intl;
+    placeholder = intl.string(tmp2(tmp3[22]).t["5h0QOP"]);
   }
   if (accessibilityLabel == null) {
-    const intl2 = tmp2(1125).intl;
-    accessibilityLabel = intl2.string(tmp2(1125).t["5h0QOP"]);
+    const intl2 = tmp2(tmp3[22]).intl;
+    accessibilityLabel = intl2.string(tmp2(tmp3[22]).t["5h0QOP"]);
   }
-  const obj5 = c17({ horizontal: flag, leadingFade: flag2, onScroll });
-  const obj6 = {
+  closure_129_0 = onScroll;
+  const tmp33 = c14();
+  closure_129_1 = tmp33;
+  let tmp34 = flag;
+  if (flag) {
+    tmp34 = flag2;
+  }
+  closure_129_2 = tmp34;
+  const tmp9Result = tmp9(ref.useState(0), 2);
+  const sharedValue = onChangeText(ref1[7]).useSharedValue(false);
+  closure_129_3 = sharedValue;
+  const items4 = [tmp34, onScroll, sharedValue];
+  const callback2 = obj2.useCallback((nativeEvent) => {
+    if (ref1) {
+      const result = ref2.set(nativeEvent.nativeEvent.contentOffset.x > 1);
+    }
+    if (onChangeText != null) {
+      tmp3(nativeEvent);
+    }
+  }, items4);
+  const tmp2Result = onChangeText(ref1[7]);
+  const fn = function u() {
+    let num = 1;
+    if (ref2.get()) {
+      num = 0;
+    }
+    return { opacity: spring.withSpring(num, springPresets.springStandard, "animate-always") };
+  };
+  const tmp2Result2 = onChangeText(ref1[7]);
+  fn.__closure = {
+    withSpring: onChangeText(ref1[8]).withSpring,
+    scrolled: sharedValue,
+    springStandard: onChangeText(ref1[9]).springStandard,
+  };
+  fn.__workletHash = 11561232362008;
+  fn.__initData = __initData;
+  const animatedStyle = tmp2Result2.useAnimatedStyle(fn);
+  closure_129_4 = animatedStyle;
+  const items5 = [tmp34, tmp33, animatedStyle];
+  let tmp39 = tmp34;
+  const callback3 = obj2.useCallback((children) => {
+    let tmp = children;
+    if (ref1) {
+      const obj = { style: ref.fill, androidRenderingMode: "software", maskElement: null, children: null };
+      const obj2 = { style: ref.mask, children: null };
+      const obj3 = { style: ref.leadingFade, children: null };
+      const obj4 = { start, end, colors, style: React5.absoluteFill };
+      const items = [React6(LinearGradientDefault, obj4)];
+      const obj5 = { style: null };
+      const items1 = [ref.leadingCover, ref];
+      obj5.style = items1;
+      items[1] = React6(ReanimatedRexportDefault.View, obj5);
+      obj3.children = items;
+      const items2 = [React7(hasOwnProperty, obj3)];
+      const obj6 = { style: ref.maskRemainder };
+      items2[1] = React6(hasOwnProperty, obj6);
+      obj2.children = items2;
+      obj.maskElement = React7(hasOwnProperty, obj2);
+      obj.children = children;
+      tmp = React6(_modDef7032, obj);
+    }
+    return tmp;
+  }, items5);
+  if (!tmp34) {
+    tmp39 = null != onScroll;
+  }
+  let tmp40;
+  if (tmp39) {
+    tmp40 = callback2;
+  }
+  const obj7 = { onScroll: tmp40, scrollEventThrottle: null, scrollerStyle: null, wrap: null };
+  let num;
+  if (tmp39) {
+    num = 16;
+  }
+  obj7.scrollEventThrottle = num;
+  let fill;
+  if (tmp34) {
+    fill = tmp33.fill;
+  }
+  obj7.scrollerStyle = fill;
+  obj7.wrap = callback3;
+  const obj8 = {
     style: null,
     contentContainerStyle: null,
     ref: null,
@@ -775,38 +429,38 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     keyboardShouldPersistTaps: "handled",
     children: null,
   };
-  const items2 = [{ maxHeight: 3 * result1 }, obj5.scrollerStyle];
-  obj6.style = items2;
-  const items3 = [tmp.scrollViewContent];
+  const items6 = [{ maxHeight: 3 * result1 }, obj7.scrollerStyle];
+  obj8.style = items6;
+  const items7 = [tmp.scrollViewContent];
   let prop;
   if (flag) {
     prop = tmp.horizontalScrollViewContent;
   }
-  items3[1] = prop;
-  obj6.contentContainerStyle = items3;
-  obj6.ref = ref;
-  obj6.onScroll = obj5.onScroll;
-  let tmp27;
+  items7[1] = prop;
+  obj8.contentContainerStyle = items7;
+  obj8.ref = ref3;
+  obj8.onScroll = obj7.onScroll;
+  let tmp44;
   if (flag) {
-    tmp27 = callback;
+    tmp44 = callback1;
   }
-  obj6.onLayout = tmp27;
-  obj6.scrollEventThrottle = obj5.scrollEventThrottle;
-  obj6.horizontal = flag;
-  obj6.snapToInterval = result1;
-  const items4 = [tmp.inputInner];
+  obj8.onLayout = tmp44;
+  obj8.scrollEventThrottle = obj7.scrollEventThrottle;
+  obj8.horizontal = flag;
+  obj8.snapToInterval = result1;
+  const items8 = [tmp.inputInner];
   let horizontalInputInner = flag;
   if (flag) {
     horizontalInputInner = tmp.horizontalInputInner;
   }
-  const obj8 = { style: items4, children: null };
-  items4[1] = horizontalInputInner;
-  const items5 = [
+  const obj10 = { style: items8, children: null };
+  items8[1] = horizontalInputInner;
+  const items9 = [
     tags.map((tag, index) => {
-      tags = tag;
+      onChangeText = tag;
       closure_1 = index;
       return _undefined(
-        tags(9033).TagListInputTagComponent,
+        onChangeText(ref1[23]).TagListInputTagComponent,
         {
           tag,
           selected: tag.id === c12,
@@ -815,30 +469,30 @@ export default noop.memo(function TagListInput(accessibilityHint) {
               if (c12 !== tag.id) {
                 c13(tmp5.id);
               }
-              const current = inputRef.current;
+              const current = ref.current;
               if (current != null) {
                 current.focus();
               }
               c14(true);
-              const current2 = inputRef.current;
+              const current2 = ref.current;
               if (current2 != null) {
                 current2.setSelection(0, 0);
               }
               closure_7.current = { start: 0, end: 0 };
-            } else if (dependencyMap != null) {
+            } else if (ref1 != null) {
               const tmpResult = tmp(closure_1);
             }
             return tmpResult;
           },
           start: 0 === index,
-          end: index === tags.length - 1,
+          end: index === onChangeText.length - 1,
         },
         index,
       );
     }),
   ];
-  const obj9 = {
-    ref: inputRef,
+  const obj11 = {
+    ref,
     accessibilityHint: accessibilityHint.accessibilityHint,
     accessibilityRole: "search",
     defaultValue: null,
@@ -861,61 +515,61 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     maxFontSizeMultiplier: 2,
     onSelectionChange: null,
   };
-  if (tmp6.inputInitializedRef.current) {
-    defaultValue = inputValueRef.current;
+  if (ref2.current) {
+    defaultValue = ref1.current;
   }
-  obj9.defaultValue = defaultValue;
-  const items6 = [tmp.searchInput, ,];
+  obj11.defaultValue = defaultValue;
+  const items10 = [tmp.searchInput, ,];
   let horizontalSearchInput = flag;
   if (flag) {
     horizontalSearchInput = tmp.horizontalSearchInput;
   }
-  items6[1] = horizontalSearchInput;
-  let tmp30;
+  items10[1] = horizontalSearchInput;
+  let tmp47;
   if (flag) {
-    if (tmp24) {
-      const obj10 = { maxWidth: tmp22 - 16 };
-      tmp30 = obj10;
+    if (tmp32) {
+      const obj12 = { maxWidth: tmp30 - 16 };
+      tmp47 = obj12;
     }
   }
-  items6[2] = tmp30;
-  obj9.style = items6;
-  obj9.onChangeText = inputUpdate;
-  obj9.onKeyPress = function handleKeyPress(nativeEvent) {
-    _undefined3(false);
+  items10[2] = tmp47;
+  obj11.style = items10;
+  obj11.onChangeText = onChangeText;
+  obj11.onKeyPress = function handleKeyPress(nativeEvent) {
+    _undefined2(false);
     let tmp4 = 0 === ref.current.start;
     if (tmp4) {
       tmp4 = 0 === ref.current.end;
     }
     if ("Backspace" === nativeEvent.nativeEvent.key) {
       if (null != c12) {
-        const findIndexResult = tags.findIndex((id) => id.id === closure_1_12);
+        const findIndexResult = onChangeText.findIndex((id) => id.id === end);
         if (findIndexResult > -1) {
-          if (dependencyMap != null) {
-            dependencyMap(findIndexResult);
+          if (ref1 != null) {
+            ref1(findIndexResult);
           }
         }
-        _undefined2(null);
+        colors(null);
       }
     }
     if ("Backspace" === nativeEvent.nativeEvent.key) {
       if (tmp4) {
-        if (0 !== tags.length) {
-          _undefined2(tags[tags.length - 1].id);
-          _undefined3(true);
+        if (0 !== onChangeText.length) {
+          colors(onChangeText[onChangeText.length - 1].id);
+          _undefined2(true);
           const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
           const intl = util.intl;
-          const obj = { text: tags[tags.length - 1].text };
+          const obj = { text: onChangeText[onChangeText.length - 1].text };
           AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.QymItZ, obj));
         }
       }
     }
     if (null != c12) {
-      _undefined2(null);
+      colors(null);
     } else {
       let tmp8 = null != ref.current && ref.current.start === ref.current.end;
       if (tmp8) {
-        tmp8 = ref.current.start === inputValueRef.current.length;
+        tmp8 = ref.current.start === ref1.current.length;
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
@@ -930,65 +584,69 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       }
     }
   };
-  obj9.onFocus = function onFocus(arg0) {
+  obj11.onFocus = function onFocus(arg0) {
     _undefined.onFocus();
     if (c9 != null) {
       tmp2(arg0);
     }
   };
-  obj9.onBlur = function onBlur(arg0) {
+  obj11.onBlur = function onBlur(arg0) {
     _undefined.onBlur();
     if (c10 != null) {
       tmp2(arg0);
     }
   };
-  obj9.onPressIn = function handlePressIn() {
-    _undefined3(false);
-    _undefined2(null);
+  obj11.onPressIn = function handlePressIn() {
+    _undefined2(false);
+    colors(null);
   };
-  obj9["aria-label"] = accessibilityLabel;
-  let tmp31;
+  obj11["aria-label"] = accessibilityLabel;
+  let tmp48;
   if (0 === tags.length) {
-    if (tmp24) {
-      tmp31 = placeholder;
+    if (tmp32) {
+      tmp48 = placeholder;
     }
   }
-  obj9.placeholder = tmp31;
-  obj9.placeholderTextColor = tmp.placeholder.color;
-  obj9.autoFocus = autoFocus;
-  obj9.returnKeyType = returnKeyType;
-  obj9.accessibilityLabel = accessibilityLabel;
-  obj9.caretHidden = tmp15;
-  obj9.onSubmitEditing = onSubmitEditing;
-  obj9.onSelectionChange = function onSelectionChange(nativeEvent) {
+  obj11.placeholder = tmp48;
+  obj11.placeholderTextColor = tmp.placeholder.color;
+  obj11.autoFocus = autoFocus;
+  obj11.returnKeyType = returnKeyType;
+  obj11.accessibilityLabel = accessibilityLabel;
+  obj11.caretHidden = tmp23;
+  obj11.onSubmitEditing = onSubmitEditing;
+  obj11.onSelectionChange = function onSelectionChange(nativeEvent) {
     const selection = nativeEvent.nativeEvent.selection;
     closure_7.current = selection;
     return selection;
   };
-  items5[1] = c8(BottomSheetTextInput, obj9);
-  obj8.children = items5;
-  obj6.children = c9(inputValueRef, obj8);
-  const obj11 = { style: null, children: null };
-  const items7 = [{ minHeight: result, overflow: "hidden" }, style];
-  obj11.style = items7;
-  const obj7 = { maxHeight: 3 * result1 };
-  const tmp12Result = tmp12(inputRef.useState(0), 2);
-  const obj12 = { size: "sm", disabled, isFocused, children: null };
+  items9[1] = c8(BottomSheetTextInput, obj11);
+  obj10.children = items9;
+  obj8.children = c9(ref1, obj10);
+  const obj13 = { style: null, children: null };
+  const items11 = [{ minHeight: result, overflow: "hidden" }, style];
+  obj13.style = items11;
+  let obj6 = {
+    withSpring: onChangeText(ref1[8]).withSpring,
+    scrolled: sharedValue,
+    springStandard: onChangeText(ref1[9]).springStandard,
+  };
+  const obj9 = { maxHeight: 3 * result1 };
+  const obj14 = { size: "sm", disabled, isFocused, children: null };
   if (null == icon) {
-    const obj13 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp25(tmp2(7206).MagnifyingGlassIcon, obj13);
+    const obj15 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
+    icon = tmp42(tmp2(tmp3[26]).MagnifyingGlassIcon, obj15);
   }
-  const items8 = [icon, obj5.wrap(c8(BottomSheetScrollView, obj6))];
+  const items12 = [icon, obj7.wrap(c8(BottomSheetScrollView, obj8))];
   if (null == footer) {
-    let tmp25Result2 = null;
-    if (null != clearButton) {
-      const obj14 = { style: tmp.iconContainer, children: clearButton };
-      tmp25Result2 = tmp25(tmp29, obj14);
+    let tmp42Result2 = null;
+    if (null != inputClearButton) {
+      const obj16 = { style: tmp.iconContainer, children: inputClearButton };
+      tmp42Result2 = tmp42(tmp46, obj16);
     }
-    footer = tmp25Result2;
+    footer = tmp42Result2;
   }
-  items8[2] = footer;
-  obj12.children = items8;
-  obj11.children = c9(tags(7083).InputFieldContainer, obj12);
-  return c8(inputValueRef, obj11);
+  items12[2] = footer;
+  obj14.children = items12;
+  obj13.children = c9(onChangeText(ref1[25]).InputFieldContainer, obj14);
+  return c8(ref1, obj13);
 });

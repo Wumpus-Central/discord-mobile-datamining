@@ -8,7 +8,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");
@@ -262,14 +262,14 @@ export default function getChannelA11yLabel(mentionCount) {
     }
   }
 }
-export function getStatusLabel(value) {
-  if (constants2.ONLINE === value) {
+export function getStatusLabel(status) {
+  if (constants2.ONLINE === status) {
     return UserUtils.humanizeStatus(constants2.ONLINE);
-  } else if (constants2.IDLE === value) {
+  } else if (constants2.IDLE === status) {
     return UserUtils.humanizeStatus(constants2.IDLE);
-  } else if (constants2.DND === value) {
+  } else if (constants2.DND === status) {
     return UserUtils.humanizeStatus(constants2.DND);
-  } else if (constants2.INVISIBLE === value) {
+  } else if (constants2.INVISIBLE === status) {
     return UserUtils.humanizeStatus(constants2.INVISIBLE);
   } else {
     return "";

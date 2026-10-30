@@ -5,8 +5,8 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-let closure_5 = fn(7198).PHONE_VERIFICATION_MODAL_KEY;
-const Endpoints = fn(1084).Endpoints;
+let closure_5 = fn(7205).PHONE_VERIFICATION_MODAL_KEY;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");
 
@@ -52,11 +52,11 @@ export default {
     };
     return HTTP.post(request);
   },
-  addPhone(phoneToken, password, CONTACT_SYNC) {
+  addPhone(phoneToken, password, reason) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: Endpoints.PHONE,
-      body: { phone_token: phoneToken, password, change_phone_reason: CONTACT_SYNC },
+      body: { phone_token: phoneToken, password, change_phone_reason: reason },
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -131,18 +131,18 @@ export default {
         headers: obj4,
         body: { phone, code },
         oldFormErrors: true,
-        trackedActionData: { event: phone(1272).NetworkActionNames.USER_VERIFY_PHONE },
+        trackedActionData: { event: phone(1261).NetworkActionNames.USER_VERIFY_PHONE },
         rejectWithError: null,
       };
       {
-        event: phone(1272).NetworkActionNames.USER_VERIFY_PHONE;
+        event: phone(1261).NetworkActionNames.USER_VERIFY_PHONE;
       }
-      request.rejectWithError = phone(1294).rejectWithMigratedError();
-      yield code(6734).post(request);
+      request.rejectWithError = phone(1283).rejectWithMigratedError();
+      yield code(6741).post(request);
       closure_128_0 = value;
       if (closure_129_2) {
-        code(584).dispatch({ type: "MODAL_POP", key });
-        code(584);
+        code(572).dispatch({ type: "MODAL_POP", key });
+        code(572);
       }
       return closure_128_0.body;
     })();

@@ -1,13 +1,10 @@
 // discord_app/modules/user_profile/hooks/useUserProfileActivity.tsx
 import _mod19 from "../../../../_runtime/metro/00019__.js";
 import Constants from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
-import utils from "../../content_inventory/utils.tsx";
-import ContentInventoryTypes from "../../content_inventory/ContentInventoryTypes.tsx";
 import UserProfileStackedActivityCardUtils from "../utils/UserProfileStackedActivityCardUtils.tsx";
 import ContentInventoryOutboxStore from "../../content_inventory/ContentInventoryOutboxStore.tsx";
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -18,302 +15,87 @@ let closure_8 = [];
 let closure_9 = [];
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useUserProfileActivity(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(20);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [MediaEngineStore];
-        const fn = function y() {
-          return MediaEngineStore.supports(constants.VIDEO);
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
-      let tmp8 = null;
-      if (stateFromStores) {
-        tmp8 = userProfileLiveActivities(10704)(arg0);
-      }
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [PresenceStore];
-        cResult[2] = items1;
-        let tmp9 = items1;
-      } else {
-        tmp9 = cResult[2];
-      }
-      if (cResult[3] !== arg0) {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
-        }
-        cResult[3] = arg0;
-        cResult[4] = S;
-      } else {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
-        }
-      }
-      let tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, S);
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
-        }
-        const items2 = [ContentInventoryOutboxStore];
-        cResult[5] = items2;
-        const tmp13 = items2;
-      } else {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
-        }
-      }
-      if (cResult[6] !== arg0) {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
-        }
-        cResult[6] = arg0;
-        cResult[7] = tmp15;
-      } else {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
-        }
-      }
-      let tmpResult4 = require("initialize");
-      const stateFromStores2 = require("initialize").useStateFromStores(tmp13, tmp15);
-      if (cResult[8] === stateFromStores1) {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
-        }
-        if (stateFromStores2 != null) {
-          class S {
-            constructor() {
-              return closure_6.getActivities(closure_0);
-            }
-          }
-        }
-        if (cResult[9] === tmp17) {
-          class S {
-            constructor() {
-              return closure_6.getActivities(closure_0);
-            }
-          }
-          userProfileLiveActivities = arr4;
-          let tmp18 = cResult[11];
-        }
-        if (0 === arr4.length) {
-          class S {
-            constructor() {
-              return closure_6.getActivities(closure_0);
-            }
-          }
-        }
-        if (null == tmp18) {
-          class S {
-            constructor() {
-              return closure_6.getActivities(closure_0);
-            }
-          }
+export default function useUserProfileActivity(arg0) {
+  _require = arg0;
+  const items = [MediaEngineStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    MediaEngineStore.supports(constants.VIDEO),
+  );
+  let tmp4 = null;
+  if (stateFromStores) {
+    tmp4 = stateFromStores1(stateFromStores2[6])(arg0);
+  }
+  let obj = require("initialize");
+  const items1 = [PresenceStore];
+  stateFromStores1 = require("initialize").useStateFromStores(items1, () => PresenceStore.getActivities(closure_0));
+  let tmpResult = require("initialize");
+  const items2 = [ContentInventoryOutboxStore];
+  stateFromStores2 = require("initialize").useStateFromStores(items2, () =>
+    ContentInventoryOutboxStore.getUserOutbox(closure_0),
+  );
+  const items3 = [stateFromStores1];
+  let entries;
+  if (stateFromStores2 != null) {
+    entries = stateFromStores2.entries;
+  }
+  items3[1] = entries;
+  const tmp7Result = useMemo(() => {
+    let userProfileLiveActivities = UserProfileStackedActivityCardUtils.getUserProfileLiveActivities(stateFromStores1);
+    let found;
+    if (stateFromStores2 != null) {
+      const entries = stateFromStores2.entries;
+      found = entries.filter((item) => {
+        let length = item;
+        userProfileLiveActivities = item;
+        const isEntryLiveResult = userProfileLiveActivities(stateFromStores2[8]).isEntryLive(item);
+        if (isEntryLiveResult) {
+          return !isEntryLiveResult;
         } else {
-          class S {
-            constructor() {
-              return closure_6.getActivities(closure_0);
+          if (tmpResult.isListenedSessionEntry(length)) {
+            length = length.extra.entries.length;
+            let tmp6 = length > 0;
+            if (tmp6) {
+              length = userProfileLiveActivities;
+              tmp6 = !userProfileLiveActivities.some((item) => {
+                let result = null != item;
+                if (result) {
+                  result = userProfileLiveActivities(8899).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8899);
+                }
+                return result;
+              });
             }
-          }
-        }
-        if (cResult[12] === arr4) {
-          class S {
-            constructor() {
-              return closure_6.getActivities(closure_0);
-            }
-          }
-          ({ live, recent } = tmp21);
-          if (cResult[15] === live) {
-            class S {
-              constructor() {
-                return closure_6.getActivities(closure_0);
-              }
-            }
-          }
-          const obj2 = { live, recent, stream: tmp8, outbox: stateFromStores2 };
-          cResult[15] = live;
-          cResult[16] = stateFromStores2;
-          cResult[17] = recent;
-          cResult[18] = tmp8;
-          cResult[19] = obj2;
-        }
-        const obj3 = { live: arr4, recent: tmp18 };
-        cResult[12] = arr4;
-        cResult[13] = tmp18;
-        cResult[14] = obj3;
-        tmp21 = obj3;
-      }
-      const tmpResult5 = require("initialize");
-      userProfileLiveActivities = require("UserProfileStackedActivityCardUtils").getUserProfileLiveActivities(
-        stateFromStores1,
-      );
-      let found;
-      if (stateFromStores2 != null) {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
-        }
-        found = arr5.filter((item) => {
-          let length = item;
-          const isEntryLiveResult = utils.isEntryLive(item);
-          if (isEntryLiveResult) {
-            return !isEntryLiveResult;
+            let result = tmp6;
           } else {
-            if (tmpResult.isListenedSessionEntry(length)) {
-              length = length.extra.entries.length;
-              let tmp6 = length > 0;
-              if (tmp6) {
-                length = userProfileLiveActivities;
-                tmp6 = !userProfileLiveActivities.some((item) => {
-                  let result = null != item;
-                  if (result) {
-                    result = item(8865).isMatchingListeningActivity(item, item);
-                    const obj = item(8865);
-                  }
-                  return result;
-                });
-              }
-              let result = tmp6;
+            if (tmpResult3.isWatchedMediaEntry(length)) {
+              result = !userProfileLiveActivities.some((item) => {
+                let result = null != item;
+                if (result) {
+                  result = userProfileLiveActivities(8899).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8899);
+                }
+                return result;
+              });
             } else {
-              if (tmpResult3.isWatchedMediaEntry(length)) {
-                result = !userProfileLiveActivities.some((item) => {
-                  let result = null != item;
-                  if (result) {
-                    result = item(8865).isMatchingWatchActivity(item, item);
-                    const obj = item(8865);
-                  }
-                  return result;
-                });
-              } else {
-                result = ContentInventoryTypes.isRecentActivityEntry(length);
-                const tmpResult4 = ContentInventoryTypes;
-              }
-              tmpResult3 = ContentInventoryTypes;
+              result = tmp(stateFromStores2[9]).isRecentActivityEntry(length);
+              const tmpResult4 = tmp(stateFromStores2[9]);
             }
-            tmpResult = ContentInventoryTypes;
+            tmpResult3 = tmp(stateFromStores2[9]);
           }
-        });
-      }
-      cResult[8] = stateFromStores1;
-      if (stateFromStores2 != null) {
-        class S {
-          constructor() {
-            return closure_6.getActivities(closure_0);
-          }
+          tmpResult = tmp(stateFromStores2[9]);
         }
-      }
-      cResult[9] = undefined;
-      cResult[10] = userProfileLiveActivities;
-      cResult[11] = found;
-      tmp18 = found;
-      const tmpResult6 = require("UserProfileStackedActivityCardUtils");
+        let obj = userProfileLiveActivities(stateFromStores2[8]);
+      });
     }
-  : function useUserProfileActivity(arg0) {
-      _require = arg0;
-      const items = [MediaEngineStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        MediaEngineStore.supports(constants.VIDEO),
-      );
-      let tmp4 = null;
-      if (stateFromStores) {
-        tmp4 = stateFromStores1(stateFromStores2[8])(arg0);
-      }
-      let obj = require("initialize");
-      const items1 = [PresenceStore];
-      stateFromStores1 = require("initialize").useStateFromStores(items1, () => PresenceStore.getActivities(closure_0));
-      let tmpResult = require("initialize");
-      const items2 = [ContentInventoryOutboxStore];
-      stateFromStores2 = require("initialize").useStateFromStores(items2, () =>
-        ContentInventoryOutboxStore.getUserOutbox(closure_0),
-      );
-      const items3 = [stateFromStores1];
-      let entries;
-      if (stateFromStores2 != null) {
-        entries = stateFromStores2.entries;
-      }
-      items3[1] = entries;
-      const tmp7Result = useMemo(() => {
-        let userProfileLiveActivities =
-          UserProfileStackedActivityCardUtils.getUserProfileLiveActivities(stateFromStores1);
-        let found;
-        if (stateFromStores2 != null) {
-          const entries = stateFromStores2.entries;
-          found = entries.filter((item) => {
-            let length = item;
-            userProfileLiveActivities = item;
-            const isEntryLiveResult = userProfileLiveActivities(stateFromStores2[10]).isEntryLive(item);
-            if (isEntryLiveResult) {
-              return !isEntryLiveResult;
-            } else {
-              if (tmpResult.isListenedSessionEntry(length)) {
-                length = length.extra.entries.length;
-                let tmp6 = length > 0;
-                if (tmp6) {
-                  length = userProfileLiveActivities;
-                  tmp6 = !userProfileLiveActivities.some((item) => {
-                    let result = null != item;
-                    if (result) {
-                      result = userProfileLiveActivities(8865).isMatchingListeningActivity(closure_0, item);
-                      const obj = userProfileLiveActivities(8865);
-                    }
-                    return result;
-                  });
-                }
-                let result = tmp6;
-              } else {
-                if (tmpResult3.isWatchedMediaEntry(length)) {
-                  result = !userProfileLiveActivities.some((item) => {
-                    let result = null != item;
-                    if (result) {
-                      result = userProfileLiveActivities(8865).isMatchingWatchActivity(closure_0, item);
-                      const obj = userProfileLiveActivities(8865);
-                    }
-                    return result;
-                  });
-                } else {
-                  result = tmp(stateFromStores2[11]).isRecentActivityEntry(length);
-                  const tmpResult4 = tmp(stateFromStores2[11]);
-                }
-                tmpResult3 = tmp(stateFromStores2[11]);
-              }
-              tmpResult = tmp(stateFromStores2[11]);
-            }
-            let obj = userProfileLiveActivities(stateFromStores2[10]);
-          });
-        }
-        if (0 === userProfileLiveActivities.length) {
-          userProfileLiveActivities = closure_8;
-        }
-        const obj2 = { live: userProfileLiveActivities, recent: null };
-        if (null == found) {
-          found = closure_9;
-        }
-        obj2.recent = found;
-        return obj2;
-      }, items3);
-      return { live: tmp7Result.live, recent: tmp7Result.recent, stream: tmp4, outbox: stateFromStores2 };
-    };
+    if (0 === userProfileLiveActivities.length) {
+      userProfileLiveActivities = closure_8;
+    }
+    const obj2 = { live: userProfileLiveActivities, recent: null };
+    if (null == found) {
+      found = closure_9;
+    }
+    obj2.recent = found;
+    return obj2;
+  }, items3);
+  return { live: tmp7Result.live, recent: tmp7Result.recent, stream: tmp4, outbox: stateFromStores2 };
+}

@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2047 from "../../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../../_runtime/metro/02044__.js";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -26,7 +26,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -78,17 +78,17 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
             if (null == closure_130_2.recipients) {
               c5 = 0;
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             } else if (closure_130_2.recipients.length > 1) {
               c5 = 0;
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             } else {
               const recipients = closure_130_2.recipients;
               c6 = 3;
               c7 = 1;
               const obj9 = {
-                value: closure_131_1(closure_131_2[10]).ensurePrivateChannel(recipients.map((id) => id.id)),
+                value: closure_131_1(closure_131_2[8]).ensurePrivateChannel(recipients.map((id) => id.id)),
                 done: false,
               };
               return obj9;
@@ -109,12 +109,12 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
         if (closure_130_1 != null) {
           guildId = closure_130_1.getGuildId();
         }
-        closure_131_1(closure_131_2[11])(
+        closure_131_1(closure_131_2[9])(
           closure_131_8.CHANNEL(guildId, closure_130_0.saveData.channelId, closure_130_0.saveData.messageId),
           { openChannel: true },
         );
         c7 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       } catch (tmp30) {
         closure_4 = tmp30;
         if (tmp4 === c5) {
@@ -127,11 +127,10 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const UnknownChannelRecord = fn(4861).UnknownChannelRecord;
-const Constants = fn(1084);
+const UnknownChannelRecord = fn(4862).UnknownChannelRecord;
+const Constants = fn(1072);
 ({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageUtils.tsx");
 
@@ -149,92 +148,51 @@ export function useDueInString(arg0) {
       H4gnX9 = util.t.H4gnX9;
     }
     if (type === tmp9.LONG) {
-      let haia16 = tmp(1125).t.haia16;
+      let haia16 = tmp(1114).t.haia16;
     } else {
-      haia16 = tmp(1125).t["Uq7Y+7"];
+      haia16 = tmp(1114).t["Uq7Y+7"];
     }
     if (now > dueAt) {
       H4gnX9 = haia16;
     }
     obj = { dueInText: null, isOverdue: null };
-    const intl = tmp(1125).intl;
+    const intl = tmp(1114).intl;
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef2047.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef2044.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;
   }
 }
-export const useSavedMessageChannel = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useSavedMessageChannel(arg0) {
-      let channelId = arg0;
-      _require = arg0;
-      const cResult = require("c").c(6);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ChannelStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== channelId.saveData.channelId) {
-        const fn = function l() {
-          return ChannelStore.getChannel(saveData.saveData.channelId);
+export function useSavedMessageChannel(savedMessage) {
+  _require = savedMessage;
+  const items = [ChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () =>
+    ChannelStore.getChannel(savedMessage.saveData.channelId),
+  );
+  const items1 = [stateFromStores, savedMessage];
+  return noop.useMemo(() => {
+    let tmp = stateFromStores;
+    if (null == stateFromStores) {
+      let tmp9;
+      if (null != savedMessage.message) {
+        const obj = {
+          id: savedMessage.saveData.channelId,
+          guild_id: savedMessage.saveData.guildId,
+          type: constants.UNKNOWN,
+          name: null,
         };
-        cResult[1] = channelId.saveData.channelId;
-        cResult[2] = fn;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
+        const intl = util.intl;
+        obj.name = intl.string(util.t.J90oLW);
+        tmp9 = new UnknownChannelRecord(obj);
       }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
-      if (null == stateFromStores) {
-        if (null != channelId.message) {
-          const guildId = channelId.saveData.guildId;
-          if (cResult[3] === channelId.saveData.channelId) {
-          }
-          const obj2 = { id: channelId.saveData.channelId, guild_id: guildId, type: constants.UNKNOWN, name: null };
-          const intl = tmp(1125).intl;
-          obj2.name = intl.string(tmp(1125).t.J90oLW);
-          const tmp13 = new UnknownChannelRecord(obj2);
-          channelId = channelId.saveData.channelId;
-          cResult[3] = channelId;
-          cResult[4] = guildId;
-          cResult[5] = tmp13;
-        }
-      }
-      return stateFromStores;
+      tmp = tmp9;
     }
-  : function useSavedMessageChannel(arg0) {
-      _require = arg0;
-      const items = [ChannelStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () =>
-        ChannelStore.getChannel(closure_0.saveData.channelId),
-      );
-      const items1 = [stateFromStores, arg0];
-      return noop.useMemo(() => {
-        let tmp = stateFromStores;
-        if (null == stateFromStores) {
-          let tmp9;
-          if (null != closure_0.message) {
-            const obj = {
-              id: closure_0.saveData.channelId,
-              guild_id: closure_0.saveData.guildId,
-              type: constants.UNKNOWN,
-              name: null,
-            };
-            const intl = util.intl;
-            obj.name = intl.string(util.t.J90oLW);
-            tmp9 = new UnknownChannelRecord(obj);
-          }
-          tmp = tmp9;
-        }
-        return tmp;
-      }, items1);
-    };
+    return tmp;
+  }, items1);
+}
 export function savedMessageJumpToMessage() {
   const self = this;
   const apply = closure_10.apply;

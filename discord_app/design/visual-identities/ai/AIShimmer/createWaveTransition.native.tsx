@@ -34,7 +34,7 @@ export function createWaveTransition(duration) {
   }
   let DEFAULT_PASS_DURATION = duration.duration;
   if (DEFAULT_PASS_DURATION == null) {
-    DEFAULT_PASS_DURATION = obj(12599).DEFAULT_PASS_DURATION;
+    DEFAULT_PASS_DURATION = obj(12749).DEFAULT_PASS_DURATION;
   }
   obj = {
     duration: DEFAULT_PASS_DURATION,
@@ -86,7 +86,7 @@ export function createWaveTransition(duration) {
   let str2 = "";
   if (0 < glyphCountResult) {
     do {
-      let GLYPH_PEAK = obj(12599).GLYPH_PEAK;
+      let GLYPH_PEAK = obj(12749).GLYPH_PEAK;
       let tmp5Result = tmp5();
       str = `${tmp8((tmp9 * obj(c1[0]).GLYPH_PEAK.length) | 0)}`;
       num = num + 1;
@@ -131,7 +131,7 @@ export function createWaveTransition(duration) {
       c6 = closure_4;
     },
     stop,
-    setTransition(current2, current) {
+    setTransition(current, current2) {
       if (null != closure_7) {
         const _clearTimeout = clearTimeout;
         clearTimeout(closure_7);
@@ -154,16 +154,16 @@ export function createWaveTransition(duration) {
         if (result2 === 0) {
           str2 = "B";
         }
-        if (current2 !== ("A" === str2 ? slotB : slotA)) {
+        if (current !== ("A" === str2 ? slotB : slotA)) {
           if (typeof incomingSlotForPass === "function") {
             let str3 = "A";
             if (result2 === 0) {
               str3 = "B";
             }
             if ("A" === str3) {
-              slotB = current2;
+              slotB = current;
             } else {
-              slotA = current2;
+              slotA = current;
             }
           } else {
             throw new TypeError("Trying to call a non-function");
@@ -175,9 +175,9 @@ export function createWaveTransition(duration) {
             str4 = "B";
           }
           if ("A" === str4) {
-            slotA = current;
+            slotA = current2;
           } else {
-            slotB = current;
+            slotB = current2;
           }
           id = id + 1;
           const obj3 = { id, slotA, slotB, band: null };

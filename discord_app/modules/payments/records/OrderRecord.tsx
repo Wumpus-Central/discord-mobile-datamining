@@ -3,8 +3,8 @@ import Record from "../../../lib/Record.tsx";
 import CheckoutContextRecord from "CheckoutContextRecord.tsx";
 import SubscriptionFacetRecord from "SubscriptionFacetRecord.tsx";
 
-const BaseInvoiceRecord = fn(2059).BaseInvoiceRecord;
-const PaymentGateways = fn(1095).PaymentGateways;
+const BaseInvoiceRecord = fn(2056).BaseInvoiceRecord;
+const PaymentGateways = fn(1083).PaymentGateways;
 let BillingFacetRecord;
 class BillingFacetRecord extends tmp2 {
   constructor(arg0) {
@@ -110,6 +110,11 @@ class OrderRecord extends tmp2 {
       subscriptionFacet = null;
     }
     tmp.subscriptionFacet = subscriptionFacet;
+    promotionsFacet = global.promotionsFacet;
+    if (promotionsFacet == null) {
+      promotionsFacet = null;
+    }
+    tmp.promotionsFacet = promotionsFacet;
     prop = global.checkoutContextRecord;
     if (prop == null) {
       prop = null;
@@ -137,6 +142,7 @@ OrderRecord["createFromServer"] = function createFromServer(id) {
     createdAt: null,
     unsatisfiedConstraints: null,
     subscriptionFacet: null,
+    promotionsFacet: null,
   };
   let prop = id.external_gateway_facet;
   if (prop == null) {
@@ -155,6 +161,11 @@ OrderRecord["createFromServer"] = function createFromServer(id) {
   }
   obj.unsatisfiedConstraints = unsatisfied_constraints;
   obj.subscriptionFacet = SubscriptionFacetRecord.createFromServer(id.subscription_facet);
+  let promotions_facet = id.promotions_facet;
+  if (promotions_facet == null) {
+    promotions_facet = null;
+  }
+  obj.promotionsFacet = promotions_facet;
   return new OrderRecord(obj);
 };
 prototype["getInvoicePreview"] = function getInvoicePreview() {
@@ -163,6 +174,25 @@ prototype["getInvoicePreview"] = function getInvoicePreview() {
     invoicePreview = this.billingFacetRecord.invoicePreview;
   }
   return invoicePreview;
+};
+prototype["getGoogleOfferId"] = function getGoogleOfferId() {
+  const promotionsFacet = this.promotionsFacet;
+  let applied_promotions;
+  if (promotionsFacet != null) {
+    applied_promotions = promotionsFacet.applied_promotions;
+  }
+  if (applied_promotions == null) {
+    applied_promotions = [];
+  }
+  const found = applied_promotions.find((google_offer_id) => null != google_offer_id.google_offer_id);
+  let google_offer_id;
+  if (found != null) {
+    google_offer_id = found.google_offer_id;
+  }
+  if (google_offer_id == null) {
+    google_offer_id = null;
+  }
+  return google_offer_id;
 };
 prototype["firstUnsatisfiedConstraintReasonCode"] = function firstUnsatisfiedConstraintReasonCode() {
   let reason_code = null;

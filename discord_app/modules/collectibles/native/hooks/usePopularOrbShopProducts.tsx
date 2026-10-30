@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let constants = fn(1086).CollectiblesMobileShopScreen;
+let constants = fn(1074).CollectiblesMobileShopScreen;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 let closure_7 = 10 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
@@ -51,7 +51,7 @@ export function usePopularOrbShopProducts(enabled) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -73,16 +73,16 @@ export function usePopularOrbShopProducts(enabled) {
                   colors: [],
                   themes: [],
                   orbs_eligible: true,
-                  currency: _true(16867).CollectibleSearchCurrencyFilter.ORBS,
+                  currency: _true(16921).CollectibleSearchCurrencyFilter.ORBS,
                   offset: 0,
                   limit: 10,
                   sort_type,
-                  sort_direction: _true(1090).CollectibleSearchSortDirection.DESC,
+                  sort_direction: _true(1078).CollectibleSearchSortDirection.DESC,
                 };
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(16866).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(16920).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {
@@ -125,7 +125,7 @@ export function usePopularOrbShopProducts(enabled) {
                 v0(true);
               }
               sort_type = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp34) {
             closure_3 = tmp34;

@@ -2,7 +2,7 @@
 import getChannelIdForEmbeddedSurfaceDefault from "../../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-const ChannelTypes = fn(1084).ChannelTypes;
+const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getFrameChannelId.tsx");
 

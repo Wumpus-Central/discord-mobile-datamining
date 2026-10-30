@@ -5,8 +5,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/shell/getNativeShellOriginForEmbeddedApp.tsx");
 
-export function getNativeShellOriginForEmbeddedApp(embeddedAppUrl) {
-  const applicationRouterOrigin = getURLForApplication.getApplicationRouterOrigin(embeddedAppUrl);
+export function getNativeShellOriginForEmbeddedApp(assetURL) {
+  const applicationRouterOrigin = getURLForApplication.getApplicationRouterOrigin(assetURL);
   let nativeShellOrigin = null;
   if (null != applicationRouterOrigin) {
     nativeShellOrigin = null;

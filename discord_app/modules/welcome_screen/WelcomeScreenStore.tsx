@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 
 function handleInviteData(invite) {
-  guild = invite.invite.guild;
+  const guild = invite.invite.guild;
   let welcome_screen;
   if (guild != null) {
     welcome_screen = guild.welcome_screen;

@@ -7,7 +7,7 @@ function handleFormClose() {
   OPEN = FormStates.CLOSED;
   closure_3 = {};
 }
-const FormStates = fn(1084).FormStates;
+const FormStates = fn(1072).FormStates;
 let OPEN = FormStates.CLOSED;
 let closure_3 = {};
 let obj = null;

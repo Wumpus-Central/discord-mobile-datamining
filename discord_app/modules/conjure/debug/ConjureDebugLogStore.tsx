@@ -41,7 +41,7 @@ function handleHistoryLoadSettle(status) {
     const result1 = value.set(scope, obj2);
     obj4 = map1;
   } else {
-    value4 = map1.get(projectId);
+    const value4 = map1.get(projectId);
     let value5;
     if (value4 != null) {
       value5 = value4.get(scope);

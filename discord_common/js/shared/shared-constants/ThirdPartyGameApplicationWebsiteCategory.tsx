@@ -51,6 +51,6 @@ export const ThirdPartyGameApplicationWebsiteCategory = {
   MINECRAFT: 23,
   [23]: "MINECRAFT",
 };
-export const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = [1, 4, 5, 8, 9, 19, 14, 6, 22, 10, 11, 12];
+export const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = [1, 4, 5, 8, 9, 19, 14, 6, 22, 15, 2, 10, 11, 12];
 export const APP_STORE_WEBSITE_HOSTNAMES = ["apps.apple.com", "itunes.apple.com"];
 export const GOOGLE_PLAY_WEBSITE_HOSTNAMES = ["play.google.com"];

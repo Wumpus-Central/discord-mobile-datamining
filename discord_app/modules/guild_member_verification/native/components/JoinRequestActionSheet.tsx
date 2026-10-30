@@ -8,422 +8,199 @@ import UserRecord from "../../../../records/UserRecord.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const View = fn(17).View;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1084).EMPTY_STRING_SNOWFLAKE_ID;
-const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5005);
-let closure_11 = createStyles.createStyles({
-  container: { flex: 1 },
-  profileContainer: { position: "relative" },
-  noPadding: { paddingHorizontal: 0 },
-});
-const ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function JoinRequestActionSheet(joinRequest) {
-      const cResult = joinRequest(userId[9]).c(59);
-      joinRequest = joinRequest.joinRequest;
-      closure_11();
-      let user = joinRequest.user;
-      userId = joinRequest.userId;
-      const guildId = joinRequest.guildId;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [UserStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === user) {
-        if (cResult[2] === userId) {
-          let tmp7 = cResult[3];
-          let tmp8 = cResult[4];
-        }
-        const stateFromStores = tmp(tmp2[10]).useStateFromStores(first, tmp7, tmp8);
-        let id;
-        const tmpResult = tmp(tmp2[10]);
-        if (user != null) {
-          id = user.id;
-        }
-        if (id == null) {
-          id = EMPTY_STRING_SNOWFLAKE_ID;
-        }
-        const tmp11Result = user(tmp2[11])(id);
-        const tmp11 = user(tmp2[11]);
-        const bottomSheetRef1 = tmp(tmp2[12]).useBottomSheetRef();
-        ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
-        guildId.useRef(null);
-        const obj4 = guildId;
-        const tmpResult8 = tmp(tmp2[12]);
-        const sharedValue = tmp(tmp2[13]).useSharedValue(0);
-        if (cResult[5] !== sharedValue) {
-          const fn2 = function b(nativeEvent) {
-            const result = sharedValue.set(nativeEvent.nativeEvent.contentOffset.y);
-          };
-          cResult[5] = sharedValue;
-          cResult[6] = fn2;
-        }
-        if (cResult[7] === tmp11Result) {
-          if (cResult[8] === stateFromStores) {
-            let tmp19 = cResult[9];
-          }
-          ({ theme, primaryColor, secondaryColor } = tmp10(tmp2[14])(tmp19));
-          const _Symbol = Symbol;
-          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const items1 = [sharedValue];
-            class F {
-              constructor() {
-                return closure_5.syncProfileThemeWithUserTheme;
-              }
-            }
-            cResult[10] = items1;
-            cResult[11] = F;
-            let tmp22 = F;
-            let tmp21 = items1;
-          } else {
-            tmp21 = cResult[10];
-            tmp22 = cResult[11];
-          }
-          const tmp20 = tmp10(tmp2[14])(tmp19);
-          const stateFromStores1 = tmp(tmp2[10]).useStateFromStores(tmp21, tmp22);
-          const tmpResult10 = tmp(tmp2[10]);
-          const tmp25 = tmp10(tmp2[15])();
-          const profileThemeValues = tmp(tmp2[16]).useProfileThemeValues(theme);
-          const tmpResult11 = tmp(tmp2[16]);
-          const token = tmp(tmp2[17]).useToken(tmp10(tmp2[18]).colors.INTERACTIVE_TEXT_HOVER, theme);
-          if (stateFromStores1) {
-            let prop;
-            if (!tmp28) {
-              prop = profileThemeValues.overlaySyncedWithUserTheme;
-            }
-            let overlay = prop;
-          } else if (!tmp28) {
-            overlay = profileThemeValues.overlay;
-          }
-          const tmpResult12 = tmp(tmp2[17]);
-          const token1 = tmp(tmp2[17]).useToken(
-            tmp10(tmp2[18]).colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT,
-            tmp25,
-          );
-          if (cResult[12] === token1) {
-            if (cResult[13] === profileThemeValues) {
-              if (cResult[14] === secondaryColor) {
-                if (cResult[17] === guildId) {
-                  if (cResult[18] === joinRequest.applicationStatus) {
-                    if (cResult[19] === joinRequest.userId) {
-                      let tmp34 = cResult[20];
-                      let tmp35 = cResult[21];
-                    }
-                    const effect = obj4.useEffect(tmp35, tmp34);
-                    class Y {
-                      constructor() {
-                        obj = closure_0(closure_2[21]);
-                        obj1 = {
-                          guildId,
-                          applicationStatus: joinRequest.applicationStatus,
-                          applicationUserId: joinRequest.userId,
-                        };
-                        result = obj.trackMemberApplicationViewed(obj1);
-                        return;
-                      }
-                    }
-                    class Q {
-                      constructor() {
-                        obj = closure_4;
-                        tmp = null == closure_4;
-                        if (!tmp) {
-                          isNonUserBotResult = obj.isNonUserBot();
-                          if (isNonUserBotResult) {
-                            tmp3 = closure_1;
-                            tmp4 = closure_2;
-                            isNonUserBotResult = !closure_1(closure_2[22])(obj.id);
-                          }
-                          tmp = isNonUserBotResult;
-                        }
-                        if (!tmp) {
-                          tmp5 = closure_1;
-                          tmp6 = closure_2;
-                          tmp8 = guildId;
-                          num = 80;
-                          tmp7 = closure_1(closure_2[23]);
-                          obj1 = {
-                            type: "action_sheet",
-                            withMutualGuilds: true,
-                            withMutualFriends: true,
-                            guildId: null,
-                          };
-                          obj1.guildId = guildId;
-                          tmp7Result = tmp7(obj.id, obj.getAvatarURL(guildId, 80), obj1);
-                        }
-                        return;
-                      }
-                    }
-                    const items2 = [guildId, stateFromStores];
-                    cResult[22] = guildId;
-                    cResult[23] = stateFromStores;
-                    cResult[24] = Q;
-                    cResult[25] = items2;
-                  }
-                }
-                class Y {
-                  constructor() {
-                    obj = closure_0(closure_2[21]);
-                    obj1 = {
-                      guildId,
-                      applicationStatus: joinRequest.applicationStatus,
-                      applicationUserId: joinRequest.userId,
-                    };
-                    result = obj.trackMemberApplicationViewed(obj1);
-                    return;
-                  }
-                }
-                class F {
-                  constructor() {
-                    return closure_5.syncProfileThemeWithUserTheme;
-                  }
-                }
-                tmp36[0] = guildId;
-                ({ applicationStatus: tmp36[1], userId: tmp36[2] } = joinRequest);
-                cResult[17] = guildId;
-                cResult[18] = joinRequest.applicationStatus;
-                cResult[19] = joinRequest.userId;
-                cResult[20] = tmp36;
-                cResult[21] = Y;
-                tmp35 = Y;
-                tmp34 = tmp36;
-              }
-            }
-          }
-          let tmp32 = token1;
-          if (null != secondaryColor) {
-            tmp32 = token1;
-            if (null != profileThemeValues) {
-              tmp32 = token1;
-              if (null != overlay) {
-                const int2hex = tmp(tmp2[19]).int2hex;
-                class Y {
-                  constructor() {
-                    obj = closure_0(closure_2[21]);
-                    obj1 = {
-                      guildId,
-                      applicationStatus: joinRequest.applicationStatus,
-                      applicationUserId: joinRequest.userId,
-                    };
-                    result = obj.trackMemberApplicationViewed(obj1);
-                    return;
-                  }
-                }
-                class Q {
-                  constructor() {
-                    obj = closure_4;
-                    tmp = null == closure_4;
-                    if (!tmp) {
-                      isNonUserBotResult = obj.isNonUserBot();
-                      if (isNonUserBotResult) {
-                        tmp3 = closure_1;
-                        tmp4 = closure_2;
-                        isNonUserBotResult = !closure_1(closure_2[22])(obj.id);
-                      }
-                      tmp = isNonUserBotResult;
-                    }
-                    if (!tmp) {
-                      tmp5 = closure_1;
-                      tmp6 = closure_2;
-                      tmp8 = guildId;
-                      num = 80;
-                      tmp7 = closure_1(closure_2[23]);
-                      obj1 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, guildId: null };
-                      obj1.guildId = guildId;
-                      tmp7Result = tmp7(obj.id, obj.getAvatarURL(guildId, 80), obj1);
-                    }
-                    return;
-                  }
-                }
-                const tmpResult14 = tmp(tmp2[19]);
-              }
-            }
-          }
-          cResult[12] = token1;
-          cResult[13] = profileThemeValues;
-          cResult[14] = secondaryColor;
-          cResult[15] = overlay;
-          cResult[16] = tmp32;
-          const tmpResult13 = tmp(tmp2[17]);
-        }
-        let obj2 = { user: stateFromStores, displayProfile: tmp11Result };
-        cResult[7] = tmp11Result;
-        cResult[8] = stateFromStores;
-        cResult[9] = obj2;
-        tmp19 = obj2;
-        const tmpResult9 = tmp(tmp2[13]);
-      }
-      const fn = function y() {
+class JoinRequestActionSheet {
+  constructor(arg0) {
+    joinRequest = global.joinRequest;
+    user = undefined;
+    userId = undefined;
+    guildId = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    tmp = closure_11();
+    user = joinRequest.user;
+    userId = joinRequest.userId;
+    guildId = joinRequest.guildId;
+    tmp2 = joinRequest;
+    tmp3 = userId;
+    obj = joinRequest(userId[8]);
+    items = [];
+    items[0] = closure_7;
+    items1 = [,];
+    items1[0] = user;
+    items1[1] = userId;
+    stateFromStores = obj.useStateFromStores(
+      items,
+      () => {
         user = UserStore.getUser(userId);
         if (null == user) {
           user = new UserRecord(user);
         }
         return user;
-      };
-      const items3 = [user, userId];
-      cResult[1] = user;
-      cResult[2] = userId;
-      cResult[3] = fn;
-      cResult[4] = items3;
-      tmp8 = items3;
-      tmp7 = fn;
-      const obj = joinRequest(userId[9]);
+      },
+      items1,
+    );
+    closure_4 = stateFromStores;
+    tmp5 = user;
+    id = undefined;
+    tmp6 = user(userId[9]);
+    if (user != null) {
+      id = user.id;
     }
-  : function JoinRequestActionSheet(joinRequest) {
-      joinRequest = joinRequest.joinRequest;
-      let sharedValue;
-      let tmp = closure_11();
-      let user = joinRequest.user;
-      const userId = joinRequest.userId;
-      const guildId = joinRequest.guildId;
-      const items = [UserStore];
-      const items1 = [user, userId];
-      const stateFromStores = joinRequest(userId[10]).useStateFromStores(
-        items,
-        () => {
-          user = UserStore.getUser(userId);
-          if (null == user) {
-            user = new UserRecord(user);
-          }
-          return user;
-        },
-        items1,
-      );
-      let id;
-      const obj = joinRequest(userId[10]);
-      if (user != null) {
-        id = user.id;
+    if (id == null) {
+      id = EMPTY_STRING_SNOWFLAKE_ID;
+    }
+    tmp6Result = tmp6(id);
+    tmp2Result = tmp2(tmp3[10]);
+    bottomSheetRef1 = tmp2Result.useBottomSheetRef();
+    obj3 = guildId;
+    ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
+    ref = guildId.useRef(null);
+    tmp2Result1 = tmp2(tmp3[11]);
+    sharedValue = tmp2Result1.useSharedValue(0);
+    closure_5 = sharedValue;
+    items2 = [];
+    items2[0] = sharedValue;
+    callback = guildId.useCallback((nativeEvent) => {
+      const result = sharedValue.set(nativeEvent.nativeEvent.contentOffset.y);
+    }, items2);
+    tmp13 = tmp5(tmp3[12])({ user: stateFromStores, displayProfile: tmp6Result });
+    ({ theme, secondaryColor, primaryColor } = tmp13);
+    tmp2Result2 = tmp2(tmp3[8]);
+    items3 = [];
+    items3[0] = closure_5;
+    stateFromStores1 = tmp2Result2.useStateFromStores(items3, () => sharedValue.syncProfileThemeWithUserTheme);
+    tmp15 = tmp5(tmp3[13])();
+    tmp2Result3 = tmp2(tmp3[14]);
+    profileThemeValues = tmp2Result3.useProfileThemeValues(theme);
+    tmp2Result4 = tmp2(tmp3[15]);
+    tmp18 = profileThemeValues == null;
+    token = tmp2Result4.useToken(tmp5(tmp3[16]).colors.INTERACTIVE_TEXT_HOVER, theme);
+    if (stateFromStores1) {
+      prop = undefined;
+      if (!tmp18) {
+        prop = profileThemeValues.overlaySyncedWithUserTheme;
       }
-      if (id == null) {
-        id = EMPTY_STRING_SNOWFLAKE_ID;
-      }
-      const tmp6Result = user(userId[11])(id);
-      const tmp6 = user(userId[11]);
-      const bottomSheetRef1 = joinRequest(userId[12]).useBottomSheetRef();
-      ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
-      const tmp2Result = joinRequest(userId[12]);
-      const ref = guildId.useRef(null);
-      sharedValue = joinRequest(userId[13]).useSharedValue(0);
-      const items2 = [sharedValue];
-      const callback = guildId.useCallback((nativeEvent) => {
-        const result = sharedValue.set(nativeEvent.nativeEvent.contentOffset.y);
-      }, items2);
-      const tmp2Result8 = joinRequest(userId[13]);
-      ({ theme, secondaryColor, primaryColor } = user(userId[14])({
-        user: stateFromStores,
-        displayProfile: tmp6Result,
-      }));
-      const tmp13 = user(userId[14])({ user: stateFromStores, displayProfile: tmp6Result });
-      const items3 = [sharedValue];
-      const stateFromStores1 = joinRequest(userId[10]).useStateFromStores(
-        items3,
-        () => sharedValue.syncProfileThemeWithUserTheme,
-      );
-      const tmp2Result9 = joinRequest(userId[10]);
-      const tmp15 = user(userId[15])();
-      const profileThemeValues = joinRequest(userId[16]).useProfileThemeValues(theme);
-      const tmp2Result10 = joinRequest(userId[16]);
-      const token = joinRequest(userId[17]).useToken(tmp5(tmp3[18]).colors.INTERACTIVE_TEXT_HOVER, theme);
-      if (stateFromStores1) {
-        let prop;
-        if (!tmp18) {
-          prop = profileThemeValues.overlaySyncedWithUserTheme;
-        }
-        let overlay = prop;
-      } else if (!tmp18) {
-        overlay = profileThemeValues.overlay;
-      }
-      const tmp2Result11 = joinRequest(userId[17]);
-      const token1 = joinRequest(userId[17]).useToken(
-        tmp5(tmp3[18]).colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT,
-        tmp15,
-      );
-      let int2hexResult = token1;
-      if (null != secondaryColor) {
+      overlay = prop;
+    } else if (!tmp18) {
+      overlay = profileThemeValues.overlay;
+    }
+    tmp2Result5 = tmp2(tmp3[15]);
+    token1 = tmp2Result5.useToken(tmp5(tmp3[16]).colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT, tmp15);
+    int2hexResult = token1;
+    if (null != secondaryColor) {
+      int2hexResult = token1;
+      if (null != profileThemeValues) {
         int2hexResult = token1;
-        if (null != profileThemeValues) {
-          int2hexResult = token1;
-          if (null != overlay) {
-            const tmp2Result13 = tmp2(tmp3[19]);
-            int2hexResult = tmp2Result13.int2hex(tmp2(tmp3[20]).calculateOverlayedColor(secondaryColor, overlay));
-            const tmp2Result14 = tmp2(tmp3[20]);
-          }
+        if (null != overlay) {
+          tmp2Result6 = tmp2(tmp3[17]);
+          tmp2Result7 = tmp2(tmp3[18]);
+          int2hexResult = tmp2Result6.int2hex(tmp2Result7.calculateOverlayedColor(secondaryColor, overlay));
         }
       }
-      const items4 = [guildId, ,];
-      ({ applicationStatus: arr5[1], userId: arr5[2] } = joinRequest);
-      const effect = obj3.useEffect(() => {
-        const result = GuildJoinRequestAnalyticUtils.trackMemberApplicationViewed({
-          guildId,
-          applicationStatus: joinRequest.applicationStatus,
-          applicationUserId: joinRequest.userId,
-        });
-      }, items4);
-      const items5 = [guildId, stateFromStores];
-      const effect1 = obj3.useEffect(() => {
-        let tmp = null == stateFromStores;
-        if (!tmp) {
-          let isNonUserBotResult = stateFromStores.isNonUserBot();
-          if (isNonUserBotResult) {
-            isNonUserBotResult = !isChangelogUserDefault(stateFromStores.id);
-          }
-          tmp = isNonUserBotResult;
+    }
+    items4 = [, ,];
+    items4[0] = guildId;
+    ({ applicationStatus: arr5[1], userId: arr5[2] } = joinRequest);
+    effect = obj3.useEffect(() => {
+      const result = GuildJoinRequestAnalyticUtils.trackMemberApplicationViewed({
+        guildId,
+        applicationStatus: joinRequest.applicationStatus,
+        applicationUserId: joinRequest.userId,
+      });
+    }, items4);
+    items5 = [,];
+    items5[0] = guildId;
+    items5[1] = stateFromStores;
+    effect1 = obj3.useEffect(() => {
+      let tmp = null == stateFromStores;
+      if (!tmp) {
+        let isNonUserBotResult = stateFromStores.isNonUserBot();
+        if (isNonUserBotResult) {
+          isNonUserBotResult = !isChangelogUserDefault(stateFromStores.id);
         }
-        if (!tmp) {
-          const obj2 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, guildId };
-          maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(guildId, 80), obj2);
-        }
-      }, items5);
-      if (null == user) {
-        let obj2 = { children: null };
-        const obj4 = { style: { marginTop: 42 }, Illustration: tmp2(tmp3[26]).NoResults, body: null };
-        const intl = tmp2(tmp3[27]).intl;
-        obj4.body = intl.string(tmp2(tmp3[27]).t.eAn6z2);
-        obj2.children = closure_9(tmp2(tmp3[25]).EmptyState, obj4);
-        let tmp25 = closure_9(tmp2(tmp3[24]).BottomSheet, obj2);
-      } else {
-        const obj5 = { theme, primaryColor, secondaryColor, children: null };
-        const obj6 = {
-          ref: bottomSheetRef,
-          handleDisabled: true,
-          scrollable: true,
-          startExpanded: true,
-          contentStyles: tmp.noPadding,
-          children: null,
-        };
-        const obj7 = { scrollsToTop: false, style: null, ref: null, onScroll: null, children: null };
-        const items6 = [tmp.container];
-        const obj8 = { backgroundColor: int2hexResult };
-        items6[1] = obj8;
-        obj7.style = items6;
-        obj7.ref = ref;
-        obj7.onScroll = callback;
-        const obj9 = { children: null };
-        const obj10 = { style: tmp.profileContainer, children: null };
-        const obj11 = { joinRequest, user: stateFromStores, displayProfile: tmp6Result };
-        obj10.children = closure_9(tmp5(tmp3[28]), obj11);
-        obj9.children = closure_9(stateFromStores, obj10);
-        obj7.children = closure_9(stateFromStores, obj9);
-        const items7 = [closure_9(tmp2(tmp3[29]).BottomSheetScrollView, obj7)];
-        const obj12 = { variant: "floating", tabStyle: null, onPress: null };
-        const obj13 = { backgroundColor: token };
-        obj12.tabStyle = obj13;
-        obj12.onPress = bottomSheetClose;
-        items7[1] = closure_9(tmp2(tmp3[30]).ActionSheetHeaderBar, obj12);
-        obj6.children = items7;
-        obj5.children = closure_10(tmp2(tmp3[24]).BottomSheet, obj6);
-        tmp25 = closure_9(tmp2(tmp3[31]).ThemeContextProvider, obj5);
+        tmp = isNonUserBotResult;
       }
-      return tmp25;
-    };
+      if (!tmp) {
+        const obj2 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, guildId };
+        maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(guildId, 80), obj2);
+      }
+    }, items5);
+    if (null == user) {
+      tmp24 = jsx;
+      obj1 = { children: null };
+      obj22 = { style: null, Illustration: null, body: null };
+      obj22.style = { marginTop: 42 };
+      obj22.Illustration = tmp2(tmp3[24]).NoResults;
+      intl = tmp2(tmp3[25]).intl;
+      obj22.body = intl.string(tmp2(tmp3[25]).t.eAn6z2);
+      obj1.children = jsx(tmp2(tmp3[23]).EmptyState, obj22);
+      tmp25 = jsx(tmp2(tmp3[22]).BottomSheet, obj1);
+    } else {
+      tmp26 = jsx;
+      obj23 = { theme: null, primaryColor: null, secondaryColor: null, children: null };
+      obj23.theme = theme;
+      obj23.primaryColor = primaryColor;
+      obj23.secondaryColor = secondaryColor;
+      tmp27 = jsxs;
+      obj24 = {
+        ref: null,
+        handleDisabled: true,
+        scrollable: true,
+        startExpanded: true,
+        contentStyles: null,
+        children: null,
+      };
+      obj24.ref = bottomSheetRef;
+      obj24.contentStyles = tmp.noPadding;
+      obj25 = { scrollsToTop: false, style: null, ref: null, onScroll: null, children: null };
+      items6 = [,];
+      items6[0] = tmp.container;
+      obj26 = { backgroundColor: null };
+      obj26.backgroundColor = int2hexResult;
+      items6[1] = obj26;
+      obj25.style = items6;
+      obj25.ref = ref;
+      obj25.onScroll = callback;
+      tmp28 = closure_4;
+      obj27 = { children: null };
+      obj28 = { style: null, children: null };
+      obj28.style = tmp.profileContainer;
+      obj29 = { joinRequest: null, user: null, displayProfile: null };
+      obj29.joinRequest = joinRequest;
+      obj29.user = stateFromStores;
+      obj29.displayProfile = tmp6Result;
+      obj28.children = jsx(tmp5(tmp3[28]), obj29);
+      obj27.children = jsx(closure_4, obj28);
+      obj25.children = jsx(closure_4, obj27);
+      items7 = [,];
+      items7[0] = jsx(tmp2(tmp3[27]).BottomSheetScrollView, obj25);
+      obj30 = { variant: "floating", tabStyle: null, onPress: null };
+      obj31 = { backgroundColor: null };
+      obj31.backgroundColor = token;
+      obj30.tabStyle = obj31;
+      obj30.onPress = bottomSheetClose;
+      items7[1] = jsx(tmp2(tmp3[29]).ActionSheetHeaderBar, obj30);
+      obj24.children = items7;
+      obj23.children = jsxs(tmp2(tmp3[22]).BottomSheet, obj24);
+      tmp25 = jsx(tmp2(tmp3[26]).ThemeContextProvider, obj23);
+    }
+    return tmp25;
+  }
+}
+const View = fn(17).View;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5009);
+let closure_11 = createStyles.createStyles({
+  container: { flex: 1 },
+  profileContainer: { position: "relative" },
+  noPadding: { paddingHorizontal: 0 },
+});
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx",
 );
 
-export default noop.memo(tmp3);
-export const JoinRequestActionSheet = tmp3;
+export default noop.memo(JoinRequestActionSheet);
+export { JoinRequestActionSheet };

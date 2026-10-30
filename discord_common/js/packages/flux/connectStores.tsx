@@ -1,11 +1,9 @@
 // discord_common/js/packages/flux/connectStores.tsx
 import BatchedStoreListener from "BatchedStoreListener.tsx";
-import c from "../../../../_runtime/00576_c.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = ["ref"];
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/flux/connectStores.tsx");
@@ -23,6 +21,15 @@ export default function connectStores(items, arg1, arg2) {
         }
         if (str == null) {
           str = "<Unknown>";
+        }
+        class ForwardRef {
+          constructor(arg0) {
+            obj = {
+              childProps: Object.assign(displayName, Object.assign({ ref: 0 })),
+              forwardedConnectStoresRef: displayName.ref,
+            };
+            return jsx(FluxContainer, obj);
+          }
         }
         const combined = "FluxContainer(" + str + ")";
         const Component = noop.Component;
@@ -126,42 +133,8 @@ export default function connectStores(items, arg1, arg2) {
           return <closure_0 ref={forwardedConnectStoresRef} />;
         };
         FluxContainer.displayName = combined;
-        let tmp2 = items(558).isReactCompilerEnabled()
-          ? function ForwardRef(ref) {
-              const cResult = c.c(6);
-              if (cResult[0] !== ref) {
-                const tmp6 = _objectWithoutProperties(ref.ref, closure_3);
-                cResult[0] = ref.ref;
-                cResult[1] = tmp6;
-                cResult[2] = ref.ref;
-                let tmp3 = ref;
-                let tmp2 = tmp6;
-              } else {
-                tmp2 = cResult[1];
-                tmp3 = cResult[2];
-              }
-              if (cResult[3] === tmp2) {
-                if (cResult[4] === tmp3) {
-                  let tmp7 = cResult[5];
-                }
-                return tmp7;
-              }
-              const tmp8 = <FluxContainer childProps={tmp2} forwardedConnectStoresRef={tmp3} />;
-              cResult[3] = tmp2;
-              cResult[4] = tmp3;
-              cResult[5] = tmp8;
-              tmp7 = tmp8;
-            }
-          : function ForwardRef(forwardedConnectStoresRef) {
-              return (
-                <FluxContainer
-                  childProps={Object.assign(forwardedConnectStoresRef, Object.assign({ ref: 0 }))}
-                  forwardedConnectStoresRef={forwardedConnectStoresRef.ref}
-                />
-              );
-            };
-        tmp2.displayName = "ForwardRef(" + combined + ")";
-        return tmp2;
+        ForwardRef.displayName = "ForwardRef(" + combined + ")";
+        return ForwardRef;
       };
     }
     return fn;

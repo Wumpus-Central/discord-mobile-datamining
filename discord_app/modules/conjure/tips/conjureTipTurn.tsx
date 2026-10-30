@@ -34,6 +34,15 @@ export function newestSettledTurn(arr) {
   }
   return null;
 }
+export function hasRunningTurn(arr) {
+  const findOpenTurnResult = conjureChatTurns.findOpenTurn(arr);
+  let tmp4 = null != findOpenTurnResult;
+  if (tmp4) {
+    tmp4 = !conjureChatTurns.isStrandedSegment(arr, arr.lastIndexOf(findOpenTurnResult));
+    const tmpResult = conjureChatTurns;
+  }
+  return tmp4;
+}
 export function newestPublish(arr) {
   let tmp2;
   let diff = arr.length - 1;
@@ -83,6 +92,18 @@ export function hasOpenAsk(newestSettledTurnResult) {
       num = 0;
     }
     tmp = num > 0;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.clarification;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.appBuildRequest;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.restoreProposal;
+  }
+  if (!tmp) {
+    tmp = null != newestSettledTurnResult.publishScheduleProposal;
   }
   return tmp;
 }

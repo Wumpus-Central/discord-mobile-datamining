@@ -134,13 +134,14 @@ export const COLLECTIBLES_SHOP_CACHE_DURATION_MS = 600000;
 export const COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS = 600000;
 export const ViewState = { VISIBLE: 0, [0]: "VISIBLE", HIDDEN: 1, [1]: "HIDDEN", IN: 2, [2]: "IN", OUT: 3, [3]: "OUT" };
 export const SEARCH_BAR_ICON_WIDTH_PX = 24;
-export const SEARCH_BAR_WIDTH_PX = 225;
+export const CollectiblesUpgradedSearchBarWidthPx = { DEFAULT: 182, [182]: "DEFAULT", WIDE: 256, [256]: "WIDE" };
 export const STATE_TRANSITION_THRESHOLD_PX = 20;
 export const CollectiblesSearchBarCTAName = {
   SEARCH_ICON: "search icon",
   SEARCH_BAR: "search bar",
   SEARCH_BAR_CLEAR: "search bar clear",
 };
+export const CollectiblesSearchBarTileType = { SEARCH: "SEARCH", SEARCH_SUGGESTION: "search suggestion" };
 export const BROWSE_CATEGORY_QUERY_PARAM = "category";
 export const GAME_SERVER_GAME_ID_QUERY_PARAM = "game_server_game_id";
 export { CollectibleShopTab };

@@ -46,7 +46,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -96,7 +96,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           closure_145_20 = undefined;
           c21 = 1;
           c22 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -162,8 +162,8 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
         } else {
           closure_145_10 = value;
           closure_6 = closure_145_10;
-          subscriptionId = closure_145_10[Symbol.iterator]();
-          while (subscriptionId !== undefined) {
+          closure_5 = closure_145_10[Symbol.iterator]();
+          while (closure_5 !== undefined) {
             c20 = 2;
             closure_145_11 = tmp16;
             closure_10 = closure_145_11;
@@ -308,7 +308,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
         }
       } else if (4 === tmp4) {
         c20 = 0;
-        subscriptionId.return();
+        closure_5.return();
         throw closure_1_19;
       } else if (5 === tmp4) {
         c20 = 2;
@@ -400,7 +400,7 @@ let closure_38 = async function _loadUserCountry() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -434,7 +434,7 @@ let closure_38 = async function _loadUserCountry() {
         const obj6 = { type: "GPLAY_SET_USER_COUNTRY", countryCode: closure_128_0 };
         closure_129_1(closure_129_2[14]).dispatch(obj6);
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -499,7 +499,7 @@ let closure_40 = async function _verifyPurchase(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -524,7 +524,7 @@ let closure_40 = async function _verifyPurchase(arg0) {
             const tmp75 = state.getState().analyticsByProductId[closure_0.productId];
             closure_131_1 = tmp75;
             id = id.getId();
-            const SubscriptionProductIds = closure_2_0(7578).SubscriptionProductIds;
+            const SubscriptionProductIds = closure_2_0(7586).SubscriptionProductIds;
             const hasItem = SubscriptionProductIds.includes(closure_0.productId);
             let tmp53 = !hasItem;
             closure_131_2 = tmp53;
@@ -544,11 +544,11 @@ let closure_40 = async function _verifyPurchase(arg0) {
             }
             if (tmp53) {
               const obj4 = { source: "verifyPurchase", sku_id: closure_0.productId };
-              _true(1264).track(constants.GIFT_INFO_OPTIONS_MISSING, obj4);
-              const obj8 = _true(1264);
+              _true(1253).track(constants.GIFT_INFO_OPTIONS_MISSING, obj4);
+              const obj8 = _true(1253);
             }
             c6 = 1;
-            const HTTP = closure_2_0(1294).HTTP;
+            const HTTP = closure_2_0(1283).HTTP;
             const request = { url: constants2.VERIFY_PURCHASE, body: null, rejectWithError: false };
             const obj5 = {
               purchase_token: closure_0.purchaseToken,
@@ -684,18 +684,18 @@ function captureGPlayBillingException(code, merged) {
 }
 let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
-let subscriptionId = ["succeededOnlyFields"];
+let closure_5 = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
-const GPlayAnalyticsStore = fn(9865);
+const GPlayAnalyticsStore = fn(9891);
 ({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: c10 } = GPlayAnalyticsStore);
-let Constants = fn(1084);
+let Constants = fn(1072);
 ({ AnalyticEvents: map1, Endpoints: closure_14, PriceSetAssignmentPurchaseTypes: closure_15 } = Constants);
-Constants = fn(7583);
+Constants = fn(7591);
 const GPlayBillingResult = Constants.GPlayBillingResult;
 const GPlaySkusType = Constants.GPlaySkusType;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 ({ PremiumSubscriptionSKUs: closure_18, SubscriptionPlanInfo: closure_19 } = PremiumConstants);
-const PaymentGateways = fn(1095).PaymentGateways;
+const PaymentGateways = fn(1083).PaymentGateways;
 const BillingManager = fn(17).NativeModules.BillingManager;
 let closure_22 = new LoggerDefault("GPlayActionCreators");
 asyncGeneratorStep(async () => {
@@ -709,7 +709,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -734,7 +734,7 @@ asyncGeneratorStep(async () => {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -833,7 +833,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -852,7 +852,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -885,7 +885,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -926,7 +926,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -951,7 +951,7 @@ asyncGeneratorStep(async () => {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -1071,7 +1071,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1090,7 +1090,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1123,7 +1123,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1164,7 +1164,7 @@ asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1193,7 +1193,7 @@ asyncGeneratorStep(async () => {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -1218,7 +1218,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1237,7 +1237,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1270,7 +1270,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1328,7 +1328,7 @@ asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1345,10 +1345,11 @@ asyncGeneratorStep(async (arg0, arg1, arg2) => {
           closure_5 = tmp3;
           closure_4 = tmp5;
           closure_132_0 = closure_0;
-          closure_132_1 = undefined;
+          closure_132_1 = closure_2;
           closure_132_2 = undefined;
           closure_132_3 = undefined;
-          closure_132_1 = state.getState().analyticsByProductId[closure_0];
+          closure_132_4 = undefined;
+          closure_132_2 = state.getState().analyticsByProductId[closure_0];
           let v0 = 1;
           c8 = 2;
           c9 = 1;
@@ -1357,25 +1358,26 @@ asyncGeneratorStep(async (arg0, arg1, arg2) => {
         }
       } else if (1 === tmp8) {
         v0 = 0;
-        closure_132_4 = closure_6;
+        closure_132_5 = closure_6;
         const obj6 = { tags: null };
         const obj7 = { productId: closure_132_0 };
         obj6.tags = obj7;
-        captureGPlayBillingException(closure_132_4, obj6);
-        closure_3 = closure_132_1;
-        if (closure_132_1 == null) {
+        captureGPlayBillingException(closure_132_5, obj6);
+        closure_3 = closure_132_2;
+        if (closure_132_2 == null) {
           closure_3 = {};
         }
-        closure_132_2 = closure_3;
-        const succeededOnlyFields = closure_132_2.succeededOnlyFields;
-        closure_132_3 = v0(closure_132_2, closure_3);
+        closure_132_3 = closure_3;
+        const succeededOnlyFields = closure_132_3.succeededOnlyFields;
+        closure_132_4 = v0(closure_132_3, closure_3);
         const obj8 = {};
-        const merged = Object.assign(closure_132_3);
+        const merged = Object.assign(closure_132_4);
         obj8.location = "purchase";
         obj8.product_id = closure_132_0;
-        obj8.error = closure_132_4.message;
+        obj8.offer_id = closure_132_1;
+        obj8.error = closure_132_5.message;
         _true(closure_2[19]).track(constants.GPLAY_PURCHASE_FAILED, obj8);
-        throw closure_132_4;
+        throw closure_132_5;
       } else if (arg0 === 1) {
         c9 = 3;
         throw value;
@@ -1387,13 +1389,13 @@ asyncGeneratorStep(async (arg0, arg1, arg2) => {
       } else {
         v0 = 0;
         c9 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
-    } catch (tmp40) {
-      closure_6 = tmp40;
+    } catch (tmp36) {
+      closure_6 = tmp36;
       if (tmp4 === v0) {
         c9 = tmp2;
-        throw tmp40;
+        throw tmp36;
       } else {
         c8 = tmp;
       }
@@ -1411,7 +1413,7 @@ let closure_0 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -1521,7 +1523,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1540,7 +1542,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             closure_129_0 = closure_0;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1573,7 +1575,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1647,7 +1649,7 @@ export function ensureSkusLoaded(items) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -1886,12 +1888,12 @@ export function sendPaymentCompleteAnalytics(productId) {
     const merged = Object.assign(tmp4);
     const merged1 = Object.assign(succeededOnlyFields);
     _true(getUserCountry[19]).track(constants.PAYMENT_FLOW_SUCCEEDED, obj3);
-    React6(productId.productId);
+    React7(productId.productId);
     const obj2 = _true(getUserCountry[19]);
   }
 }
-export function updatePendingDowngrade(arg0, c6, c7, c5) {
-  const items = [IAPStore.getProduct(arg0), IAPStore.getProduct(c6)];
+export function updatePendingDowngrade(arg0, arg1, c7, subscriptionId) {
+  const items = [IAPStore.getProduct(arg0), IAPStore.getProduct(arg1)];
   [tmp, tmp2] = items;
   if (null != tmp2) {
     if (null != tmp) {

@@ -16,7 +16,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = { switch: null, unselectedIcon: null, selectedIcon: null, knob: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: nativeDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: nativeDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: nativeDefault.radii.lg, borderWidth: 1, backgroundColor: nativeDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.SWITCH_BORDER_DEFAULT };
 obj.switch = size;
@@ -29,8 +29,8 @@ let closure_7 = createStyles.createStyles(obj);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
 let closure_9 = { code: "function FormSwitchNativeTsx1(){const{progress,interpolateColor,trackColor,trackSelectedColor,trackBorderColor,trackBorderSelectedColor}=this.__closure;const t=progress.get();return{backgroundColor:interpolateColor(t,[0,1],[trackColor,trackSelectedColor]),borderColor:interpolateColor(t,[0,1],[trackBorderColor,trackBorderSelectedColor])};}" };
-let closure_10 = { code: "function FormSwitchNativeTsx2(){const{progress,interpolate,knobCheckedLeft,interpolateColor,knobBackgroundColor,knobSelectedBackgroundColor}=this.__closure;const t_0=progress.get();return{left:interpolate(t_0,[0,1],[0,knobCheckedLeft]),backgroundColor:interpolateColor(t_0,[0,1],[knobBackgroundColor,knobSelectedBackgroundColor])};}" };
-let closure_11 = { code: "function FormSwitchNativeTsx3(){const{progress,interpolate,off,on,useReducedMotion}=this.__closure;const t_1=progress.get();const opacity=interpolate(t_1,[0,1],[off,on]);const scale=useReducedMotion?1:interpolate(t_1,[0,1],[off,on]);return{opacity:opacity,transform:[{scale:scale}]};}" };
+let closure_10 = { code: "function FormSwitchNativeTsx2(){const{progress,interpolate,knobCheckedLeft,interpolateColor,knobBackgroundColor,knobSelectedBackgroundColor}=this.__closure;const t=progress.get();return{left:interpolate(t,[0,1],[0,knobCheckedLeft]),backgroundColor:interpolateColor(t,[0,1],[knobBackgroundColor,knobSelectedBackgroundColor])};}" };
+let closure_11 = { code: "function FormSwitchNativeTsx3(){const{progress,interpolate,off,on,useReducedMotion}=this.__closure;const t=progress.get();const opacity=interpolate(t,[0,1],[off,on]);const scale=useReducedMotion?1:interpolate(t,[0,1],[off,on]);return{opacity:opacity,transform:[{scale:scale}]};}" };
 size = fn(2);
 let result = size.fileFinishedImporting("design/components/Forms/native/FormSwitch.native.tsx");
 
@@ -107,7 +107,7 @@ export function FormSwitch(onValueChange) {
   }
   const tmp2Result18 = require("ReanimatedRexport");
   D.__closure = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, knobCheckedLeft: token4, interpolateColor: require("ReanimatedRexport").interpolateColor, knobBackgroundColor: token5, knobSelectedBackgroundColor: token6 };
-  D.__workletHash = 10509423128696;
+  D.__workletHash = 7732502313271;
   D.__initData = token5;
   _require = 1;
   const animatedStyle1 = tmp2Result18.useAnimatedStyle(D);
@@ -129,7 +129,7 @@ export function FormSwitch(onValueChange) {
   };
   const tmp2Result19 = require("ReanimatedRexport");
   fn2.__closure = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, off: 0, on: 1, useReducedMotion: enabled };
-  fn2.__workletHash = 12609192900422;
+  fn2.__workletHash = 12190941017160;
   fn2.__initData = token6;
   _require = 0;
   importDefault = 1;
@@ -152,7 +152,7 @@ export function FormSwitch(onValueChange) {
   };
   const obj5 = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, off: 0, on: 1, useReducedMotion: enabled };
   fn3.__closure = { progress: sharedValue, interpolate: require("ReanimatedRexport").interpolate, off: 1, on: 0, useReducedMotion: enabled };
-  fn3.__workletHash = 12609192900422;
+  fn3.__workletHash = 12190941017160;
   fn3.__initData = token6;
   if (!context.switchIconsEnabled) {
     if (tmp) {

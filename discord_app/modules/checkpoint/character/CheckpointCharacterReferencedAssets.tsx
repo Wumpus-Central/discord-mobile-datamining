@@ -4,7 +4,7 @@ import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets.t
 import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let set = new Set([1, 8]);
+let set = new Set([1]);
 const keys = Object.keys(CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
 let closure_3 = keys.map((name) => {
   const obj = { name, role: CheckpointCharacterTextureUtils.getCheckpointCharacterTextureRole(name), swapKey: null };
@@ -19,10 +19,10 @@ let closure_3 = keys.map((name) => {
 });
 const result = size.fileFinishedImporting("modules/checkpoint/character/CheckpointCharacterReferencedAssets.tsx");
 
-export function getCheckpointCharacterVisibleTextureNames(arg0, chapterID, MobileLandscape) {
+export function getCheckpointCharacterVisibleTextureNames(arg0, chapterID, arg2) {
   closure_0 = arg0;
   closure_1 = chapterID;
-  closure_2 = MobileLandscape;
+  closure_2 = arg2;
   set = new Set();
   const item = set.forEach((item) => {
     ({ name, role } = item);

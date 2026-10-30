@@ -45,7 +45,7 @@ function getStickerSendability(item10030, currentUser, channel) {
     obj5 = StickersUtils;
   }
 }
-const Permissions = fn(1084).Permissions;
+const Permissions = fn(1072).Permissions;
 const StickerSendability = {
   SENDABLE: 0,
   [0]: "SENDABLE",

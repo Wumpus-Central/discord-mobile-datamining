@@ -29,7 +29,7 @@ function updateUserGuildSettingsInternal(guild_id, channel_overrides) {
   if (channel_overrides1 instanceof Array) {
     keyByResult = _modDef12.keyBy(channel_overrides1, "channel_id");
   }
-  guild = GuildStore.getGuild(guild_id);
+  const guild = GuildStore.getGuild(guild_id);
   if (null != guild) {
     let ALL_MESSAGES = guild.defaultMessageNotifications;
   } else {
@@ -210,13 +210,13 @@ function updateUserGuildChannelSettingsBulk(guildId, channel_overrides) {
 function handleGuildUpdate() {
   return true;
 }
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ THREAD_CHANNEL_TYPES: metroRequire, isPrivate: closure_7 } = ChannelRecord);
-const Constants = fn(1084);
+const Constants = fn(1072);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(4950).AccountNotificationFlags;
-const UnreadSetting = fn(6763).UnreadSetting;
-const UserSettingsConstants = fn(1094);
+const AccountNotificationFlags = fn(4954).AccountNotificationFlags;
+const UnreadSetting = fn(6770).UnreadSetting;
+const UserSettingsConstants = fn(1082);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};
 let dependencyMap = {};
@@ -303,7 +303,7 @@ prototype["isSuppressEveryoneEnabled"] = function isSuppressEveryoneEnabled(guil
   if (userGuildSettings[guildId] != null) {
     return tmp.suppress_everyone;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -315,7 +315,7 @@ prototype["isSuppressRolesEnabled"] = function isSuppressRolesEnabled(guildId) {
   if (userGuildSettings[guildId] != null) {
     return tmp.suppress_roles;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -327,7 +327,7 @@ prototype["isMuteScheduledEventsEnabled"] = function isMuteScheduledEventsEnable
   if (userGuildSettings[guildId] != null) {
     return tmp.mute_scheduled_events;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -335,11 +335,11 @@ prototype["isMuteScheduledEventsEnabled"] = function isMuteScheduledEventsEnable
     }
   }
 };
-prototype["isMobilePushEnabled"] = function isMobilePushEnabled(guildId) {
-  if (userGuildSettings[guildId] != null) {
+prototype["isMobilePushEnabled"] = function isMobilePushEnabled(c2) {
+  if (userGuildSettings[c2] != null) {
     return tmp.mobile_push;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(c2);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -351,7 +351,7 @@ prototype["isMuted"] = function isMuted(arg0) {
   if (userGuildSettings[arg0] != null) {
     return MuteTimers.computeIsMuted(tmp);
   } else {
-    guild = GuildStore.getGuild(arg0);
+    let guild = GuildStore.getGuild(arg0);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -364,7 +364,7 @@ prototype["isTemporarilyMuted"] = function isTemporarilyMuted(arg0) {
   if (userGuildSettings[arg0] != null) {
     return MuteTimers.isTemporarilyMuted(tmp);
   } else {
-    guild = GuildStore.getGuild(arg0);
+    let guild = GuildStore.getGuild(arg0);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -377,7 +377,7 @@ prototype["getMuteConfig"] = function getMuteConfig(arg0) {
   if (userGuildSettings[arg0] != null) {
     return tmp.mute_config;
   } else {
-    guild = GuildStore.getGuild(arg0);
+    const guild = GuildStore.getGuild(arg0);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -389,7 +389,7 @@ prototype["getMessageNotifications"] = function getMessageNotifications(guildId)
   if (userGuildSettings[guildId] != null) {
     return tmp.message_notifications;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -397,15 +397,15 @@ prototype["getMessageNotifications"] = function getMessageNotifications(guildId)
     }
   }
 };
-prototype["getChannelOverrides"] = function getChannelOverrides(guildId) {
-  if (userGuildSettings[guildId] != null) {
+prototype["getChannelOverrides"] = function getChannelOverrides(c2) {
+  if (userGuildSettings[c2] != null) {
     let channel_overrides = tmp.channel_overrides;
     if (channel_overrides == null) {
       channel_overrides = {};
     }
     return channel_overrides;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(c2);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -417,7 +417,7 @@ prototype["getNotifyHighlights"] = function getNotifyHighlights(guildId) {
   if (userGuildSettings[guildId] != null) {
     return tmp.notify_highlights;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -429,7 +429,7 @@ prototype["getGuildFlags"] = function getGuildFlags(guildId) {
   if (userGuildSettings[guildId] != null) {
     return tmp.flags;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let ALL_MESSAGES = guild.defaultMessageNotifications;
     } else {
@@ -1039,7 +1039,7 @@ const userGuildSettingsStoreClass = new UserGuildSettingsStoreClass(DispatcherDe
   GUILD_TOGGLE_COLLAPSE_MUTED: function handleToggleCollapseMuted(guildId) {
     guildId = guildId.guildId;
     if (null == userGuildSettings[guildId]) {
-      guild = GuildStore.getGuild(guildId);
+      let guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         let ALL_MESSAGES = guild.defaultMessageNotifications;
       } else {
@@ -1100,7 +1100,7 @@ let result = size.fileFinishedImporting("stores/UserGuildSettingsStore.tsx");
 
 export default userGuildSettingsStoreClass;
 export function getGuildDefaults(arg0) {
-  guild = GuildStore.getGuild(arg0);
+  const guild = GuildStore.getGuild(arg0);
   if (null != guild) {
     let ALL_MESSAGES = guild.defaultMessageNotifications;
   } else {

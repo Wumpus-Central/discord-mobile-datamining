@@ -27,6 +27,9 @@ export function formatCheckpointCompactNumber(stateFromStores1) {
   const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "long" });
   return numberFormat.format(stateFromStores1);
 }
+export function getCheckpointOdysseyCopies(stateFromStores1) {
+  return stateFromStores1 / 87765;
+}
 export function formatCheckpointPeakHour(stateFromStores1) {
   if (null == stateFromStores1) {
     return null;

@@ -2,7 +2,7 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import Dispatcher2 from "../../../Dispatcher.tsx";
-import _mod4884 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import _mod4888 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import StartupDataAll from "StartupData.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -24,7 +24,7 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -163,7 +163,7 @@ prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
             }
           }
         })(50, () => {
-          const Database = _mod4884.Database;
+          const Database = _mod4888.Database;
           return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
         });
         const _HermesInternal3 = HermesInternal;
@@ -231,7 +231,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== _mod4884.DatabaseState.Open;
+    tmp3 = stateResult !== _mod4888.DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);
@@ -270,7 +270,7 @@ function carefullySpeculativelyOpen(userId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -362,7 +362,7 @@ let obj = {
 let tmp2 = new tmp(
   Dispatcher,
   obj,
-  fn(584).DispatchBand.Early,
+  fn(572).DispatchBand.Early,
   DatabaseManager,
   tmp,
   Dispatcher,

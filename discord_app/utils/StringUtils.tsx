@@ -4,10 +4,10 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/StringUtils.tsx");
 
-export function isNullOrEmpty(trimmed) {
-  let tmp = null == trimmed;
+export function isNullOrEmpty(application_id) {
+  let tmp = null == application_id;
   if (!tmp) {
-    tmp = 0 === trimmed.length;
+    tmp = 0 === application_id.length;
   }
   return tmp;
 }

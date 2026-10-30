@@ -6,7 +6,6 @@ import CollectiblesItemType from "../../../../discord_common/js/shared/shared-co
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 import PremiumConstants from "../../premium/PremiumConstants.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -26,77 +25,28 @@ let obj = {
 };
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackCollectiblesItemTryOut.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useTrackCollectiblesItemTryOut(location_stack) {
-      _require = location_stack;
-      const cResult = require("c").c(5);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [CollectiblesCategoryStore];
-        const fn = function c() {
-          return products.products;
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      obj = require("c");
-      const stateFromStores = require("useStateFromStores").useStateFromStores(tmp4, tmp5);
-      if (cResult[2] === location_stack) {
-        if (cResult[3] === stateFromStores) {
-          let tmp8 = cResult[4];
-        }
-        return tmp8;
-      }
-      const fn2 = function _(skuId) {
-        value = stateFromStores.get(skuId.skuId);
-        obj = AnalyticsUtilsDefault;
-        const obj2 = {
-          feature_name: obj[skuId.type],
-          feature_tier: CollectiblesUtils.isPremiumCollectiblesProduct(value)
-            ? timestampProducer.FREE
-            : timestampProducer.PREMIUM_STANDARD,
-          feature_selection: null,
-          location_stack: null,
-        };
-        let name;
-        if (value != null) {
-          name = value.name;
-        }
-        obj2.feature_selection = name;
-        obj2.location_stack = location_stack;
-        obj.track(AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, obj2);
-      };
-      cResult[2] = location_stack;
-      cResult[3] = stateFromStores;
-      cResult[4] = fn2;
-      tmp8 = fn2;
-      const tmpResult = require("useStateFromStores");
-    }
-  : function useTrackCollectiblesItemTryOut(location_stack) {
-      _require = location_stack;
-      const items = [CollectiblesCategoryStore];
-      const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => products.products);
-      const items1 = [stateFromStores, location_stack];
-      return useCallback((skuId) => {
-        value = stateFromStores.get(skuId.skuId);
-        obj = AnalyticsUtilsDefault;
-        const obj2 = {
-          feature_name: obj[skuId.type],
-          feature_tier: CollectiblesUtils.isPremiumCollectiblesProduct(value)
-            ? timestampProducer.FREE
-            : timestampProducer.PREMIUM_STANDARD,
-          feature_selection: null,
-          location_stack: null,
-        };
-        let name;
-        if (value != null) {
-          name = value.name;
-        }
-        obj2.feature_selection = name;
-        obj2.location_stack = location_stack;
-        obj.track(AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, obj2);
-      }, items1);
+export default function useTrackCollectiblesItemTryOut(location_stack) {
+  _require = location_stack;
+  const items = [CollectiblesCategoryStore];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => products.products);
+  const items1 = [stateFromStores, location_stack];
+  return useCallback((skuId) => {
+    value = stateFromStores.get(skuId.skuId);
+    obj = AnalyticsUtilsDefault;
+    const obj2 = {
+      feature_name: obj[skuId.type],
+      feature_tier: CollectiblesUtils.isPremiumCollectiblesProduct(value)
+        ? timestampProducer.FREE
+        : timestampProducer.PREMIUM_STANDARD,
+      feature_selection: null,
+      location_stack: null,
     };
+    let name;
+    if (value != null) {
+      name = value.name;
+    }
+    obj2.feature_selection = name;
+    obj2.location_stack = location_stack;
+    obj.track(AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, obj2);
+  }, items1);
+}

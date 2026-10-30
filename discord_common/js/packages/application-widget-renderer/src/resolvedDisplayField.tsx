@@ -73,7 +73,7 @@ export function resolveTextComponentValues(subtitle_1, resolveFieldValue, number
     return obj;
   }
 }
-export function resolveStatComponentValues(fields, resolveFieldValue, numberFormat, formatDurationNarrow, arg4) {
+export function resolveStatComponentValues(fields, fn, format, formatDurationNarrow, arg4) {
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
@@ -87,11 +87,11 @@ export function resolveStatComponentValues(fields, resolveFieldValue, numberForm
     return tmp4;
   } else {
     const items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
-    const iter = resolveFieldValue(fields.fields.value, items);
+    const iter = fn(fields.fields.value, items);
     const items1 = [resolvedValues.ResolvedValueType.STRING];
-    const iter2 = resolveFieldValue(fields.fields.label, items1);
+    const iter2 = fn(fields.fields.label, items1);
     const items2 = [resolvedValues.ResolvedValueType.MEDIA];
-    const tmp8 = resolveFieldValue(fields.fields.icon, items2);
+    const tmp8 = fn(fields.fields.icon, items2);
     if (null == iter) {
       let obj = { status: "skeleton" };
     } else {
@@ -102,7 +102,7 @@ export function resolveStatComponentValues(fields, resolveFieldValue, numberForm
       ) {
         formatResult = formatDurationNarrow(iter.value);
       } else {
-        formatResult = numberFormat.format(iter.value);
+        formatResult = format.format(iter.value);
       }
       obj = { status: "value", text: formatResult, icon: null };
       let media;

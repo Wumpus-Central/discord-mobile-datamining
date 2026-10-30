@@ -6,6 +6,7 @@ import UserAffinitiesV2Store from "../modules/user_affinities/UserAffinitiesV2St
 import PresenceStore from "PresenceStore.tsx";
 import UserStore from "UserStore.tsx";
 
+const require = fn;
 function _handlePresenceUpdate(user) {
   user = user.user;
   const activities = user.activities;
@@ -13,7 +14,7 @@ function _handlePresenceUpdate(user) {
   if (null == user) {
     return false;
   } else {
-    const found = activities.filter((type) => type.type !== constants.CUSTOM_STATUS);
+    const found = activities.filter((type) => type.type !== user(dependencyMap[3]).ActivityTypes.CUSTOM_STATUS);
     if (0 === found.length) {
       let flag2 = false;
       if (null != obj2[user.id]) {
@@ -129,7 +130,6 @@ function handleUserAffinitiesV2StoreUpdate() {
   closure_6 = !UserAffinitiesV2Store.shouldFetch();
   return flag;
 }
-const ActivityTypes = fn(1084).ActivityTypes;
 let c6 = false;
 const Store = initializeDefault.Store;
 class NowPlayingStore extends Store {}

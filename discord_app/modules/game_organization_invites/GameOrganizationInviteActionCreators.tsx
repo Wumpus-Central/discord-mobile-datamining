@@ -2,8 +2,8 @@
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_4 = fn(11122).GameOrganizationInviteAcceptStatus;
-const Endpoints = fn(1084).Endpoints;
+let closure_4 = fn(11327).GameOrganizationInviteAcceptStatus;
+const Endpoints = fn(1072).Endpoints;
 let obj = {
   resolveGameOrganizationInvite(arg0) {
     closure_0 = arg0;
@@ -18,7 +18,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -90,7 +90,7 @@ let obj = {
             tmp3(tmp44[3]).dispatch(obj15);
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp44) {
           if (tmp4 === c3) {
@@ -116,7 +116,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -132,7 +132,7 @@ let obj = {
             } else {
               const guild_ids = tmp5;
               let body;
-              const HTTP = guild_ids(1294).HTTP;
+              const HTTP = guild_ids(1283).HTTP;
               const request = { url: constants.GAME_ORGANIZATIONS_INVITABLE, query: null, rejectWithError: true };
               const obj4 = { guild_ids };
               request.query = obj4;
@@ -155,9 +155,9 @@ let obj = {
               guildIds: closure_129_0,
               gameOrganizations: body,
             };
-            tmp2(584).dispatch(obj7);
+            tmp2(572).dispatch(obj7);
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -179,7 +179,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -194,7 +194,7 @@ let obj = {
               return obj3;
             } else {
               let body;
-              const HTTP = tmp5(1294).HTTP;
+              const HTTP = tmp5(1283).HTTP;
               const obj4 = { url: Endpoints.GAME_ORGANIZATION_INVITE_CHARACTERS(tmp5), rejectWithError: true };
               dependencyMap = 1;
               c3 = 1;
@@ -215,9 +215,9 @@ let obj = {
               code: closure_129_0,
               characters: body.characters,
             };
-            tmp2(584).dispatch(obj7);
+            tmp2(572).dispatch(obj7);
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp17) {
           c3 = tmp;
@@ -239,7 +239,7 @@ let obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

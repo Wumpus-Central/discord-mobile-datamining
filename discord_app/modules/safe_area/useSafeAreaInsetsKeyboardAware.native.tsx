@@ -11,61 +11,6 @@ import noop from "../../../_runtime/metro/00019__.js";
 import subscribeToKeyboardUIStore from "../keyboard/native/subscribeToKeyboardUIStore.tsx";
 
 require = fn;
-const ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAnimateChanges(arg0) {
-      const cResult = disabled(576).c(5);
-      ({ keyboardHeight, disabled } = arg0);
-      noop.useRef(false);
-      if (cResult[0] !== disabled) {
-        const fn = function u() {
-          const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
-          if (ref.current) {
-            if (0 !== keyboardDuration) {
-              if (!disabled) {
-                const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
-                const tmpResult = DeprecatedLayoutAnimation;
-              }
-            }
-          }
-          ref.current = true;
-        };
-        cResult[0] = disabled;
-        cResult[1] = fn;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      if (cResult[2] === disabled) {
-        if (cResult[3] === keyboardHeight) {
-          let tmp3 = cResult[4];
-        }
-        const effect = noop.useEffect(tmp2, tmp3);
-      }
-      const items = [keyboardHeight, disabled];
-      cResult[2] = disabled;
-      cResult[3] = keyboardHeight;
-      cResult[4] = items;
-      tmp3 = items;
-      let obj = disabled(576);
-    }
-  : function useAnimateChanges(disabled) {
-      disabled = disabled.disabled;
-      noop.useRef(false);
-      const items = [disabled.keyboardHeight, disabled];
-      const effect = noop.useEffect(() => {
-        const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
-        if (ref.current) {
-          if (0 !== keyboardDuration) {
-            if (!disabled) {
-              const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
-              const tmpResult = DeprecatedLayoutAnimation;
-            }
-          }
-        }
-        ref.current = true;
-      }, items);
-    };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");
 
@@ -92,8 +37,8 @@ export default function useSafeAreaInsetsKeyboardAware() {
   }
   let callback;
   c6 = undefined;
-  const tmp2 = flag2(flag3[7])();
-  const appEntryKey = flag(flag3[8]).useAppEntryKey();
+  const tmp2 = flag2(flag3[5])();
+  const appEntryKey = flag(flag3[6]).useAppEntryKey();
   const items = [appEntryKey, flag3, flag, flag2];
   callback = callback.useCallback(() => {
     if (obj.isIOS()) {
@@ -125,7 +70,7 @@ export default function useSafeAreaInsetsKeyboardAware() {
     return systemKeyboardHeight;
   }, items);
   const ref = callback.useRef(callback());
-  const obj2 = flag(flag3[8]);
+  const obj2 = flag(flag3[6]);
   let tmp = flag3;
   const tmp3 = flag;
   [tmp8, c6] = appEntryKey(callback.useState(ref.current), 2);
@@ -141,17 +86,29 @@ export default function useSafeAreaInsetsKeyboardAware() {
       }),
     items1,
   );
-  const obj3 = { keyboardHeight: tmp8, disabled: null };
   let isAndroidResult = !flag;
   if (flag) {
     isAndroidResult = !flag4;
   }
   if (!isAndroidResult) {
-    isAndroidResult = tmp3(tmp[9]).isAndroid();
-    const tmp3Result = tmp3(tmp[9]);
+    isAndroidResult = tmp3(tmp[7]).isAndroid();
+    const tmp3Result = tmp3(tmp[7]);
   }
-  obj3.disabled = isAndroidResult;
-  c6(obj3);
+  closure_129_0 = isAndroidResult;
+  closure_129_1 = obj3.useRef(false);
+  const items2 = [tmp8, isAndroidResult];
+  const effect1 = obj3.useEffect(() => {
+    const keyboardDuration = useKeyboardDuration.getKeyboardDuration();
+    if (flag2.current) {
+      if (0 !== keyboardDuration) {
+        if (!flag) {
+          const result = DeprecatedLayoutAnimation.DeprecatedLayoutAnimationKeyboard(keyboardDuration);
+          const tmpResult = DeprecatedLayoutAnimation;
+        }
+      }
+    }
+    flag2.current = true;
+  }, items2);
   let num = 0;
   if (flag4) {
     num = tmp8;

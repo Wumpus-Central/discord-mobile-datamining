@@ -282,7 +282,7 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
     const obj7 = { applicationId: null, gameOrganizationId: null };
   }
   obj.linkedGameOrganization = tmp43;
-  return timestampProducer(closure_1_8, guildTheme, obj);
+  return timestampProducer(React6, guildTheme, obj);
 }
 ({
   constructInPlace: c3,
@@ -295,7 +295,7 @@ const GuildNSFWContentLevel = Constants.GuildNSFWContentLevel;
 const result = size.fileFinishedImporting("utils/GuildRecordUtils.tsx");
 
 export function isGuildRecord(has) {
-  return hasOwnProperty(closure_1_8, has);
+  return hasOwnProperty(React6, has);
 }
 export { fromGuildPropertiesWithAdditionalFields };
 export function fromServer(joined_at, joinedAt) {
@@ -405,7 +405,7 @@ export function fromInviteGuild(guild) {
   } = guild);
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }
 export function fromGuildProfile(profile) {
   const obj = {
@@ -430,7 +430,7 @@ export function fromGuildProfile(profile) {
   obj.features = SetUtils.toSetInplace(profile.features);
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }
 export function fromStoreListingGuild(id) {
   const obj = { id: id.id, name: id.name, icon: null };
@@ -441,7 +441,7 @@ export function fromStoreListingGuild(id) {
   obj.icon = icon;
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }
 export function fromDirectoryGuild(id) {
   const obj = { id: id.id, name: id.name, icon: null, description: null, splash: null, features: null };
@@ -463,7 +463,7 @@ export function fromDirectoryGuild(id) {
   obj.features = SetUtils.toSetInplace(id.features);
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }
 export function fromGuildDirectoryEntry(entry) {
   const obj = { id: entry.guildId, name: null, icon: null, description: null, splash: null, features: null };
@@ -490,7 +490,7 @@ export function fromGuildDirectoryEntry(entry) {
   obj.features = SetUtils.toSetInplace(entry.features);
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }
 export function fromVerificationGateGuild(stateFromStores1) {
   const obj = {
@@ -525,7 +525,7 @@ export function fromVerificationGateGuild(stateFromStores1) {
   obj.verificationLevel = verificationLevel;
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }
 export function fromClientDiscoverableGuild(guild) {
   const obj = {
@@ -578,7 +578,7 @@ export function fromClientDiscoverableGuild(guild) {
   obj.discoverySplash = discoverySplash;
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }
 export function fromGuildBasic(guild) {
   const obj = {
@@ -613,7 +613,7 @@ export function fromGuildBasic(guild) {
   obj.features = SetUtils.toSetInplace(guild.features);
   const merged = Object.assign(React5);
   const merged1 = Object.assign(obj);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }
 export function dangerouslyConstructGuildRecordFromUntypedObject(id) {
   const obj = {
@@ -815,7 +815,7 @@ export function dangerouslyConstructGuildRecordFromUntypedObject(id) {
     prop1 = null;
   }
   obj.linkedGameOrganization = prop1;
-  return React3(closure_1_8, obj);
+  return React3(React6, obj);
 }
 export function toGuildProperties(id) {
   const obj = {
@@ -974,10 +974,10 @@ export function fromSerializedGuildRecord(item10009) {
   obj.premiumProgressBarEnabledUserUpdatedAt = date1;
   delete tmp2[tmp];
   delete tmp2[tmp];
-  return React3(closure_1_8, obj);
+  return React3(React6, obj);
 }
 export function constructFromPartialGuildRecord(arg0) {
   const merged = Object.assign(React5);
   const merged1 = Object.assign(arg0);
-  return React3(closure_1_8, {});
+  return React3(React6, {});
 }

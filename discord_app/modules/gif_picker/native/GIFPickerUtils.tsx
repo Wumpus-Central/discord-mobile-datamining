@@ -1,15 +1,13 @@
 // discord_app/modules/gif_picker/native/GIFPickerUtils.tsx
-import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import AttachmentUrlUtilsAll from "../../messages/AttachmentUrlUtils.tsx";
-import FavoriteGIFHooks from "../FavoriteGIFHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function transformFavoriteGifUrl(src, arg1) {
-  let combined = src;
-  const str = URLUtilsDefault.toURLSafe(src);
+function transformFavoriteGifUrl(assetURL, arg1) {
+  let combined = assetURL;
+  const str = URLUtilsDefault.toURLSafe(assetURL);
   if (null != str) {
     if (obj6.isExternalProxiedAttachmentUrl(str)) {
       const formatted = str.pathname.toLowerCase();
@@ -51,69 +49,34 @@ function transformFavoriteGifUrl(src, arg1) {
     return combined;
   }
 }
-fn(1084).GIFPickerResultTypes;
+fn(1072).GIFPickerResultTypes;
 const re6 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
 const re7 = /(tenor\.com)/;
 const re8 = /-(?:.(?!-))+$/;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerUtils.tsx");
 
 export const GIF_HEADER_HEIGHT = 56;
-export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useFavoriteGIFsMobile() {
-      const cResult = c.c(6);
-      const sortedFavoriteGIFs = FavoriteGIFHooks.useSortedFavoriteGIFs(transformFavoriteGifUrl);
-      if (cResult[0] === sortedFavoriteGIFs[0]) {
-        if (cResult[1] === sortedFavoriteGIFs.length) {
-          let tmp4 = cResult[2];
-        }
-        if (cResult[3] === sortedFavoriteGIFs) {
-          if (cResult[4] === tmp4) {
-            let tmp7 = cResult[5];
-          }
-          return tmp7;
-        }
-        const obj3 = { favorites: sortedFavoriteGIFs, favoritesCategory: tmp4 };
-        cResult[3] = sortedFavoriteGIFs;
-        cResult[4] = tmp4;
-        cResult[5] = obj3;
-        tmp7 = obj3;
-      }
-      let tmp5;
+export function useFavoriteGIFsMobile() {
+  sortedFavoriteGIFs = sortedFavoriteGIFs(10228).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+  const items = [sortedFavoriteGIFs];
+  let obj = sortedFavoriteGIFs(10228);
+  return {
+    favorites: sortedFavoriteGIFs,
+    favoritesCategory: noop.useMemo(() => {
+      let tmp2;
       if (sortedFavoriteGIFs.length > 0) {
-        const obj4 = { type: GIFPickerResultTypes.FAVORITES, name: null, src: null, format: null };
+        const obj = { type: GIFPickerResultTypes.FAVORITES, name: null, src: null, format: null };
         const intl = util.intl;
-        obj4.name = intl.string(util.t.k8fFjp);
-        obj4.src = sortedFavoriteGIFs[0].src;
-        obj4.format = sortedFavoriteGIFs[0].format;
-        tmp5 = obj4;
+        obj.name = intl.string(util.t.k8fFjp);
+        obj.src = sortedFavoriteGIFs[0].src;
+        obj.format = sortedFavoriteGIFs[0].format;
+        tmp2 = obj;
       }
-      cResult[0] = sortedFavoriteGIFs[0];
-      cResult[1] = sortedFavoriteGIFs.length;
-      cResult[2] = tmp5;
-      tmp4 = tmp5;
-    }
-  : function useFavoriteGIFsMobile() {
-      sortedFavoriteGIFs = sortedFavoriteGIFs(10203).useSortedFavoriteGIFs(transformFavoriteGifUrl);
-      const items = [sortedFavoriteGIFs];
-      let obj = sortedFavoriteGIFs(10203);
-      return {
-        favorites: sortedFavoriteGIFs,
-        favoritesCategory: noop.useMemo(() => {
-          let tmp2;
-          if (sortedFavoriteGIFs.length > 0) {
-            const obj = { type: GIFPickerResultTypes.FAVORITES, name: null, src: null, format: null };
-            const intl = util.intl;
-            obj.name = intl.string(util.t.k8fFjp);
-            obj.src = sortedFavoriteGIFs[0].src;
-            obj.format = sortedFavoriteGIFs[0].format;
-            tmp2 = obj;
-          }
-          return tmp2;
-        }, items),
-      };
-    };
+      return tmp2;
+    }, items),
+  };
+}
 export const GIF_PICKER_ITEM_ESIMTATED_HEIGHT = 180;
 export const GIF_PICKER_GUTTER_SPACING = 8;
 export const DEFAULT_CATEGORY_ROWS = 20;

@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/content_inventory/useReplyActions.tsx
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
@@ -13,14 +13,14 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7689).DraftType;
-const EmojiIntention = fn(1392).EmojiIntention;
-const MessageSendLocation = fn(5010).MessageSendLocation;
+const DraftType = fn(7694).DraftType;
+const EmojiIntention = fn(1387).EmojiIntention;
+const MessageSendLocation = fn(5014).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
-export function useReplyActions(cResult) {
-  const content = cResult.content;
+export function useReplyActions(content) {
+  content = content.content;
   _require = content;
   let hotwheels_gaming_activity;
   let stateFromStores1;
@@ -78,7 +78,7 @@ export function useReplyActions(cResult) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -275,7 +275,7 @@ export function useReplyActions(cResult) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18466, dependencyMap.paths),
+          asyncRequireImpl(18525, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

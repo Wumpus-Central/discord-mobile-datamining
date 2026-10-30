@@ -6,7 +6,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import VirtualCurrencyStore from "../virtual_currency/stores/VirtualCurrencyStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-const orbs_arcade_game_state = tmp(16902);
+const orbs_arcade_game_state = tmp(16956);
 require = fn;
 function handleBalanceChange(balance) {
   balance = balance.balance;

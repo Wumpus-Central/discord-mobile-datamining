@@ -3,9 +3,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesRecommendationUtils.tsx");
 
-export function reorderCollectiblesByRecommendation(items, arr) {
+export function reorderCollectiblesByRecommendation(items, length) {
   if (items.length > 1) {
-    if (0 !== arr.length) {
+    if (0 !== length.length) {
       const _Map = Map;
       const map = new Map(
         items.map((skuId) => {
@@ -14,13 +14,13 @@ export function reorderCollectiblesByRecommendation(items, arr) {
         }),
       );
       items = [];
-      const iter = arr[Symbol.iterator]();
+      const iter = length[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp4 = nextResult;
         value = map.get(nextResult);
         if (null != value) {
-          arr = items.push(tmp6);
+          let arr = items.push(tmp6);
           let deleteResult = map.delete(tmp4);
         }
         continue;

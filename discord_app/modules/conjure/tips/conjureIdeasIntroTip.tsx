@@ -2,20 +2,23 @@
 import conjureBotPermissionsTip from "conjureBotPermissionsTip.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-function resolveIdeasIntroTip(ideasIntroAnchorId) {
+function resolveIdeasIntroTip(agentIdle) {
   let tmp5 = null;
-  if (null != ideasIntroAnchorId.ideasIntroAnchorId) {
+  if (agentIdle.agentIdle) {
     tmp5 = null;
-    if (!obj.isBotPermissionsReviewPending(tmp2)) {
-      if (null == tmp) {
-        if (!tmp3) {
-          let str = null;
+    if (null != agentIdle.ideasIntroAnchorId) {
+      tmp5 = null;
+      if (!obj.isBotPermissionsReviewPending(tmp2)) {
+        if (null == tmp) {
+          if (!tmp3) {
+            let str = null;
+          }
+          tmp5 = str;
         }
-        tmp5 = str;
+        str = "card";
       }
-      str = "card";
+      obj = conjureBotPermissionsTip;
     }
-    obj = conjureBotPermissionsTip;
   }
   return tmp5;
 }

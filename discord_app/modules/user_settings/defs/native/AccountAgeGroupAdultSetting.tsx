@@ -4,43 +4,9 @@ import RegionalFeatureConfigUtils from "../../../regional_feature_config/Regiona
 import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAccountAgeGroupAdultSettingPredicate() {
-      const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
-      const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
-      let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-      const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
-      if (hasAgeGatedFeatures) {
-        hasAgeGatedFeatures = isAgeVerified;
-      }
-      if (hasAgeGatedFeatures) {
-        hasAgeGatedFeatures = !isVerifiedTeen;
-      }
-      if (hasAgeGatedFeatures) {
-        hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
-      }
-      return hasAgeGatedFeatures;
-    }
-  : function useAccountAgeGroupAdultSettingPredicate() {
-      const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
-      const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
-      let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-      const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
-      if (hasAgeGatedFeatures) {
-        hasAgeGatedFeatures = isAgeVerified;
-      }
-      if (hasAgeGatedFeatures) {
-        hasAgeGatedFeatures = !isVerifiedTeen;
-      }
-      if (hasAgeGatedFeatures) {
-        hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
-      }
-      return hasAgeGatedFeatures;
-    };
 let obj = {
   useTitle() {
     const intl = util.intl;
@@ -51,39 +17,22 @@ let obj = {
     const intl = util.intl;
     return intl.string(util.t.XxRj7f);
   },
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? function useAccountAgeGroupAdultSettingPredicate() {
-        const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
-        const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
-        let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-        const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = isAgeVerified;
-        }
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = !isVerifiedTeen;
-        }
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
-        }
-        return hasAgeGatedFeatures;
-      }
-    : function useAccountAgeGroupAdultSettingPredicate() {
-        const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
-        const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
-        let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-        const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = isAgeVerified;
-        }
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = !isVerifiedTeen;
-        }
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
-        }
-        return hasAgeGatedFeatures;
-      },
+  usePredicate: function useAccountAgeGroupAdultSettingPredicate() {
+    const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
+    const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
+    let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
+    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = isAgeVerified;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isVerifiedTeen;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
+    }
+    return hasAgeGatedFeatures;
+  },
 };
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx");
 
@@ -97,37 +46,20 @@ export default SettingBuilders.createStatic({
     const intl = util.intl;
     return intl.string(util.t.XxRj7f);
   },
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? function useAccountAgeGroupAdultSettingPredicate() {
-        const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
-        const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
-        let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-        const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = isAgeVerified;
-        }
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = !isVerifiedTeen;
-        }
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
-        }
-        return hasAgeGatedFeatures;
-      }
-    : function useAccountAgeGroupAdultSettingPredicate() {
-        const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
-        const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
-        let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
-        const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = isAgeVerified;
-        }
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = !isVerifiedTeen;
-        }
-        if (hasAgeGatedFeatures) {
-          hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
-        }
-        return hasAgeGatedFeatures;
-      },
+  usePredicate: function useAccountAgeGroupAdultSettingPredicate() {
+    const isAgeVerified = AgeVerificationUtils.useIsAgeVerified();
+    const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
+    let hasAgeGatedFeatures = RegionalFeatureConfigUtils.useHasAgeGatedFeatures();
+    const isTinyBroncoSettingsEnabled = TinyBroncoSettingsPredicate.useIsTinyBroncoSettingsEnabled();
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = isAgeVerified;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isVerifiedTeen;
+    }
+    if (hasAgeGatedFeatures) {
+      hasAgeGatedFeatures = !isTinyBroncoSettingsEnabled;
+    }
+    return hasAgeGatedFeatures;
+  },
 });

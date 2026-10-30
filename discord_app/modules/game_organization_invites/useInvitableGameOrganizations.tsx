@@ -8,7 +8,7 @@ import InvitableGameOrganizationStore from "InvitableGameOrganizationStore.tsx";
 
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1084).QueryIds.INVITABLE_GAME_ORGANIZATIONS,
+  getQueryId: fn(1072).QueryIds.INVITABLE_GAME_ORGANIZATIONS,
   staleAfter: DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   retryConfig: { retryableErrors: isRetryableFetchErrorDefault },
@@ -28,7 +28,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c1 = tmp;
@@ -78,10 +78,8 @@ obj2.load = function load() {
   return applyArgumentsResult;
 };
 const fetchStore = initialize.createFetchStore(InvitableGameOrganizationStore, obj2);
-let ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result1 = size.fileFinishedImporting("modules/game_organization_invites/useInvitableGameOrganizations.tsx");
+const result = size.fileFinishedImporting("modules/game_organization_invites/useInvitableGameOrganizations.tsx");
 
 export default function useInvitableGameOrganizations(arg0) {
   return fetchStore(useCanInviteGuildIdsDefault(arg0));

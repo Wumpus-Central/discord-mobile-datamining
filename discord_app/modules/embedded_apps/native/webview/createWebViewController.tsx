@@ -7,9 +7,9 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(10873).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
-let ComponentActions = fn(1084).ComponentActions;
-const TransportTypes = fn(6437).TransportTypes;
+let closure_4 = fn(10896).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
+let ComponentActions = fn(1072).ComponentActions;
+const TransportTypes = fn(6444).TransportTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/native/webview/createWebViewController.tsx");
 
@@ -28,13 +28,13 @@ export default function createWebViewController(id, contextSource) {
   }
   ComponentActions = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(10872)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(10895)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;
-      closure_1(1254).captureException(closure_130_0);
+      closure_1(1243).captureException(closure_130_0);
       c7 = 3;
-      closure_1(1254);
+      closure_1(1243);
     } else if (arg0 === 1) {
       c7 = 3;
       throw value;

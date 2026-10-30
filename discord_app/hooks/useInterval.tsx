@@ -1,83 +1,31 @@
 // discord_app/hooks/useInterval.tsx
 import noop from "../../_runtime/metro/00019__.js";
-import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-
-({ useEffect: c3, useRef: closure_4 } = noop);
+({ useEffect: c2, useRef: c3 } = noop);
 const result = size.fileFinishedImporting("hooks/useInterval.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useInterval(current, arg1) {
-      _require = current;
-      closure_1 = arg1;
-      const cResult = require("c").c(6);
-      dependencyMap = closure_4(current);
-      const ref = closure_4(null);
-      if (cResult[0] !== current) {
-        const fn = function c() {
-          closure_2.current = current;
-        };
-        const items = [current];
-        cResult[0] = current;
-        cResult[1] = fn;
-        cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-        tmp3 = cResult[2];
-      }
-      ref(tmp2, tmp3);
-      if (cResult[3] !== arg1) {
-        const fn2 = function f() {
-          if (null !== closure_1) {
-            const _setInterval = setInterval;
-            ref.current = setInterval(function tick() {
-              closure_1(ref[3])(null != ref.current, "Missing callback");
-              ref.current();
-            }, tmp);
-            return () => clearInterval(ref2.current);
-          } else if (null !== ref.current) {
-            const _clearInterval = clearInterval;
-            clearInterval(ref.current);
-            ref.current = null;
-          }
-        };
-        const items1 = [arg1];
-        cResult[3] = arg1;
-        cResult[4] = fn2;
-        cResult[5] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn2;
-      } else {
-        tmp6 = cResult[4];
-        tmp7 = cResult[5];
-      }
-      ref(tmp6, tmp7);
+export default function useInterval(current, SECOND) {
+  closure_1 = SECOND;
+  closure_2 = ref(current);
+  ref = ref(null);
+  const items = [current];
+  closure_2(() => {
+    closure_2.current = current;
+  }, items);
+  const items1 = [SECOND];
+  closure_2(() => {
+    if (null !== closure_1) {
+      const _setInterval = setInterval;
+      ref.current = setInterval(function tick() {
+        closure_0(closure_1[1])(null != ref.current, "Missing callback");
+        ref.current();
+      }, tmp);
+      return () => clearInterval(ref2.current);
+    } else if (null !== ref.current) {
+      const _clearInterval = clearInterval;
+      clearInterval(ref.current);
+      ref.current = null;
     }
-  : function useInterval(current, arg1) {
-      closure_1 = arg1;
-      closure_2 = closure_4(current);
-      const ref = closure_4(null);
-      const items = [current];
-      ref(() => {
-        closure_2.current = current;
-      }, items);
-      const items1 = [arg1];
-      ref(() => {
-        if (null !== closure_1) {
-          const _setInterval = setInterval;
-          ref.current = setInterval(function tick() {
-            closure_1(ref[3])(null != ref.current, "Missing callback");
-            ref.current();
-          }, tmp);
-          return () => clearInterval(ref2.current);
-        } else if (null !== ref.current) {
-          const _clearInterval = clearInterval;
-          clearInterval(ref.current);
-          ref.current = null;
-        }
-      }, items1);
-    };
+  }, items1);
+}

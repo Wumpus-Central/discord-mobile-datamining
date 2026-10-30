@@ -4,6 +4,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/conjure/history/ConjureRestorePanelOp.tsx");
 
 export const RESTORE_WINDOW_DAYS = 30;
-export function restorePanelEnvironments(arg0) {
-  return "user" === arg0 ? ["stable"] : ["stable", "preview"];
+export function restorePanelEnvironments(c1) {
+  return "user" === c1 ? ["stable"] : ["stable", "preview"];
 }

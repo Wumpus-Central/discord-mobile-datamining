@@ -3,7 +3,7 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_apps/applicationDirectoryAnalytics.tsx");
 

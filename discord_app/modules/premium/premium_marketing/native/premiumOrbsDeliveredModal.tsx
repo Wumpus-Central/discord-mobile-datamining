@@ -1,14 +1,17 @@
 // discord_app/modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx
+import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
+import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
+import NitroOrbsDeliveredModalDefault from "NitroOrbsDeliveredModal.tsx";
 import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EntitlementStore from "../../../../stores/game_store/EntitlementStore.tsx";
 
+const require = fn;
 function getCoinEntitlements() {
   return EntitlementStore.getForSku(SINGLE_ORB_SKU_ID);
 }
-const EntitlementTypes = fn(1084).EntitlementTypes;
 const jsx = fn(21).jsx;
-const SINGLE_ORB_SKU_ID = fn(15145).SINGLE_ORB_SKU_ID;
+const SINGLE_ORB_SKU_ID = fn(15185).SINGLE_ORB_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx");
 
@@ -33,10 +36,10 @@ export function openOrbsModalIfDelivered() {
           return null;
         } else {
           for (const item10008 of tmp) {
-            if (item10008.type === constants.PURCHASE_REWARD) {
+            if (item10008.type === closure_0(1086).EntitlementTypes.PURCHASE_REWARD) {
               knownCoinEntitlementIds = arg0.knownCoinEntitlementIds;
               if (!knownCoinEntitlementIds.has(item10008.id)) {
-                obj = closure_0(11);
+                obj = SnowflakeUtilsDefault;
                 if (obj.extractTimestamp(item10008.id) >= arg0.startedAt) {
                   if (null != item10008.orbsReward) {
                     if (item10008.orbsReward > 0) {
@@ -53,18 +56,19 @@ export function openOrbsModalIfDelivered() {
         }
       })(tmp);
       if (null != tmp4) {
-        importDefault = tmp4;
+        closure_0 = tmp4;
         const obj2 = {
           importer() {
-            return Promise.resolve((onClose) => jsx(orbsAmount(15146), { orbsAmount, onClose: onClose.onClose }));
+            return Promise.resolve((onClose) =>
+              jsx(NitroOrbsDeliveredModalDefault, { orbsAmount, onClose: onClose.onClose }),
+            );
           },
           isDismissable: false,
         };
-        tmp2(5947).openLazy(obj2);
-        const tmp2Result = tmp2(5947);
+        actions_AlertActionCreatorsDefault.openLazy(obj2);
+        const tmp2Result = actions_AlertActionCreatorsDefault;
       }
     }
     obj = PremiumOrbsDeliveredModalExperimentDefault;
-    tmp2 = importDefault;
   }
 }

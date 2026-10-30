@@ -5,8 +5,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const HexagonCampaignConstants = fn(5030);
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const HexagonCampaignConstants = fn(5034);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: closure_8, HexagonCampaignPerk: closure_9 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
@@ -58,7 +58,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -100,7 +100,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -118,8 +118,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             closure_0 = tmp8;
                             closure_128_0 = undefined;
                             if (closure_2_1) {
-                              const result = displayNameStyles(16357).saveHexagonCampaignPreviousDisplayNameStyles();
-                              const obj4 = displayNameStyles(16357);
+                              const result = displayNameStyles(16410).saveHexagonCampaignPreviousDisplayNameStyles();
+                              const obj4 = displayNameStyles(16410);
                             }
                             if (closure_1_10) {
                               closure_1_12.current = true;
@@ -128,17 +128,17 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                               colors = 3;
                               c5 = 1;
                               const obj6 = {
-                                value: displayNameStyles(7138).saveProfileAndAccountChanges(obj5),
+                                value: displayNameStyles(7146).saveProfileAndAccountChanges(obj5),
                                 done: false,
                               };
                               return obj6;
                             } else if (closure_1_7) {
-                              const result1 = displayNameStyles(8696).setTryItOutDisplayNameStyles(displayNameStyles);
-                              const tmp31Result = displayNameStyles(8696);
+                              const result1 = displayNameStyles(8730).setTryItOutDisplayNameStyles(displayNameStyles);
+                              const tmp31Result = displayNameStyles(8730);
                             } else {
                               const obj7 = { guildId, displayNameStyles };
-                              displayNameStyles(8693).setPendingChanges(obj7);
-                              const tmp31Result2 = displayNameStyles(8693);
+                              displayNameStyles(8727).setPendingChanges(obj7);
+                              const tmp31Result2 = displayNameStyles(8727);
                             }
                           }
                         } else if (1 === tmp8) {
@@ -185,23 +185,23 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           }
                         }
                         const obj13 = {
-                          font_name: displayNameStyles(1409).DisplayNameFont[closure_2],
-                          effect_name: displayNameStyles(1408).DisplayNameEffect[c3],
+                          font_name: displayNameStyles(1404).DisplayNameFont[closure_2],
+                          effect_name: displayNameStyles(1403).DisplayNameEffect[c3],
                           colors,
                           entry_point,
                         };
-                        closure_2_1(1264).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
+                        closure_2_1(1253).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                         if (closure_129_1) {
-                          const result2 = displayNameStyles(16357).markHexagonCampaignPerkApplied(
+                          const result2 = displayNameStyles(16410).markHexagonCampaignPerkApplied(
                             constants2.DISPLAY_NAME_STYLE,
                           );
-                          const obj10 = displayNameStyles(16357);
+                          const obj10 = displayNameStyles(16410);
                         }
                         if (closure_1_8 != null) {
                           closure_1_8();
                         }
                         c5 = 3;
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "HermesInternal", done: null };
                       } catch (tmp63) {
                         closure_2 = tmp63;
                         if (tmp5 === c3) {

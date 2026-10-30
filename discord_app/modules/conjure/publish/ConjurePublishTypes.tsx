@@ -23,6 +23,7 @@ export function canPublish(publishState) {
 export const CONJURE_PUBLISH_PROGRESS_STAGES = [
   "preparing",
   "approval",
+  "approved_by_grant",
   "setup",
   "build",
   "deploy",

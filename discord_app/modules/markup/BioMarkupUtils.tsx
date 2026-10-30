@@ -1,6 +1,6 @@
 // discord_app/modules/markup/BioMarkupUtils.tsx
-import privDefault from "../../../_runtime/01457_priv.js";
-import _modDef1949 from "../../../_runtime/metro/01949__.js";
+import privDefault from "../../../_runtime/01452_priv.js";
+import _modDef1944 from "../../../_runtime/metro/01944__.js";
 import MarkupReactRulesDefault from "MarkupReactRules.native.tsx";
 import MarkupRulesDefault from "MarkupRules.tsx";
 import combineMarkupRules_mod from "combineMarkupRules.tsx";
@@ -13,7 +13,7 @@ const items = [
   MarkupRulesDefault.PROFILE_BIO_RULES,
   MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }),
 ];
-const MarkupReactRules = fn(5744);
+const MarkupReactRules = fn(5750);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;
@@ -65,8 +65,8 @@ export function getOrParseBioAST(arg0, guildId) {
   }
   return value;
 }
-export function parseBioReactWithCachedAST(cResult, guildId) {
-  if (0 === cResult.trim().length) {
+export function parseBioReactWithCachedAST(description, guildId) {
+  if (0 === description.trim().length) {
     return null;
   } else {
     let str = guildId;
@@ -74,16 +74,16 @@ export function parseBioReactWithCachedAST(cResult, guildId) {
       str = "";
     }
     const _HermesInternal = HermesInternal;
-    const combined = "" + str + ":" + cResult;
+    const combined = "" + str + ":" + description;
     value = closure_3.get(combined);
     if (null == value) {
       const obj2 = { guildId };
-      const tmp5 = closure_6(cResult, true, obj2);
+      const tmp5 = closure_6(description, true, obj2);
       const result = closure_3.set(combined, tmp5);
       value = tmp5;
     }
-    const obj3 = _modDef1949;
-    return obj3.reactFor(_modDef1949.ruleOutput(importDefaultResultResult, "react"))(value);
+    const obj3 = _modDef1944;
+    return obj3.reactFor(_modDef1944.ruleOutput(importDefaultResultResult, "react"))(value);
   }
 }
 export const parseBioReactWithoutScrolling = MarkupParser.reactParserFor(combineMarkupRules(items1));

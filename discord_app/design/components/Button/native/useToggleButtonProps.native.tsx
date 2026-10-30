@@ -3,16 +3,16 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");
 
-export function useToggleButtonProps(cResult, cResult2) {
+export function useToggleButtonProps(on, pressed) {
   const obj = {};
-  const merged = Object.assign(cResult2 ? cResult.on : cResult.off);
+  const merged = Object.assign(pressed ? on.on : on.off);
   obj.accessibilityRole = "togglebutton";
-  obj.accessibilityState = { checked: cResult2 };
+  obj.accessibilityState = { checked: pressed };
   return obj;
 }
-export function useToggleIconButtonProps(first1, flag) {
+export function useToggleIconButtonProps(on, flag) {
   const obj = {};
-  const merged = Object.assign(flag ? first1.on : first1.off);
+  const merged = Object.assign(flag ? on.on : on.off);
   obj.accessibilityRole = "togglebutton";
   obj.accessibilityState = { checked: flag };
   return obj;

@@ -6,17 +6,16 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = tmp5(5086);
+const ReanimatedRexportDefault = ReanimatedRexport;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ACTION_SHEET_START_HEIGHT_RATIO = fn(5303).ACTION_SHEET_START_HEIGHT_RATIO;
+const ACTION_SHEET_START_HEIGHT_RATIO = fn(5268).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsx = fn(21).jsx;
-let c7 = 24;
-let c8 = 200;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1376);
 const isInIOS = PlatformUtils.isIOS();
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj3 = { container: null, toast: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -33,398 +32,102 @@ obj3.toast = {
   paddingBottom: 8,
   paddingHorizontal: 16,
 };
-let closure_10 = createStyles.createStyles(obj3);
+let closure_8 = createStyles.createStyles(obj3);
 const __initData = {
   code: "function ActionSheetBackdropToastTsx1(){const{isInIOS,isExpanded,maxDynamicContentSize,TOAST_BOTTOM_MARGIN,nonExpandedHeight,ACTION_SHEET_START_HEIGHT_RATIO,TOAST_BOTTOM_GAP,positionDelta,TOAST_ANIMATION_Y_DELTA,opacity}=this.__closure;return{bottom:(isInIOS?isExpanded?maxDynamicContentSize+TOAST_BOTTOM_MARGIN:nonExpandedHeight+TOAST_BOTTOM_MARGIN:isExpanded?maxDynamicContentSize+TOAST_BOTTOM_MARGIN:ACTION_SHEET_START_HEIGHT_RATIO*maxDynamicContentSize+TOAST_BOTTOM_GAP)+ +(1-positionDelta.get())*TOAST_ANIMATION_Y_DELTA,opacity:opacity.get()};}",
-};
-const __initData2 = {
-  code: "function ActionSheetBackdropToastTsx2(){const{isInIOS,isExpanded,maxDynamicContentSize,TOAST_BOTTOM_MARGIN,nonExpandedHeight,ACTION_SHEET_START_HEIGHT_RATIO,TOAST_BOTTOM_GAP,positionDelta,TOAST_ANIMATION_Y_DELTA,opacity}=this.__closure;return{bottom:(isInIOS?isExpanded?maxDynamicContentSize+TOAST_BOTTOM_MARGIN:nonExpandedHeight+TOAST_BOTTOM_MARGIN:isExpanded?maxDynamicContentSize+TOAST_BOTTOM_MARGIN:ACTION_SHEET_START_HEIGHT_RATIO*maxDynamicContentSize+TOAST_BOTTOM_GAP)+ +(1-positionDelta.get())*TOAST_ANIMATION_Y_DELTA,opacity:opacity.get()};}",
-};
-const ReactCompilerGating = fn(558);
-let obj5 = {
-  position: "absolute",
-  bottom: 16,
-  backgroundColor: nativeDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT,
-  borderRadius: nativeDefault.radii.round,
-  paddingTop: 6,
-  paddingBottom: 8,
-  paddingHorizontal: 16,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/ActionSheetBackdropToast.tsx");
 
-export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ActionSheetBackdropToast(arg0) {
-      const cResult = isExpanded(576).c(15);
-      ({ text, isExpanded } = arg0);
-      const tmp4 = closure_10();
-      const height = useWindowDimensionsDefault().height;
-      let result = height * ACTION_SHEET_START_HEIGHT_RATIO;
-      importDefault = result;
-      const diff = height - isExpanded(5305).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
-      dependencyMap = diff;
-      let obj = isExpanded(576);
-      const sharedValue = isExpanded(5086).useSharedValue(0);
-      let obj2 = isExpanded(5086);
-      const sharedValue1 = isExpanded(5086).useSharedValue(0);
-      if (cResult[0] === sharedValue1) {
-        if (cResult[1] === sharedValue) {
-          let tmp11 = cResult[2];
-          let tmp12 = cResult[3];
-        }
-        const effect = sharedValue.useEffect(tmp11, tmp12);
-        class D {
-          constructor() {
-            tmp = isExpanded;
-            if (closure_9) {
-              if (tmp) {
-                tmp10 = closure_2;
-                tmp11 = c7;
-                sum = closure_2 + c7;
-              } else {
-                tmp7 = closure_1;
-                tmp8 = c7;
-                sum = closure_1 + c7;
-              }
-              tmp12 = sum;
-            } else {
-              if (tmp) {
-                tmp5 = closure_2;
-                tmp6 = c7;
-                sum1 = closure_2 + c7;
-              } else {
-                tmp2 = closure_5;
-                tmp3 = closure_2;
-                num = 46;
-                sum1 = closure_5 * closure_2 + 46;
-              }
-              obj = { bottom: null, opacity: null };
-              tmp13 = closure_3;
-              num2 = 1;
-              num3 = 15;
-              obj.bottom = sum1 + 15 * (1 - closure_3.get());
-              tmp14 = closure_4;
-              obj.opacity = closure_4.get();
-              return obj;
-            }
-            return;
-          }
-        }
-        let obj4 = {
-          isInIOS,
-          isExpanded,
-          maxDynamicContentSize: diff,
-          TOAST_BOTTOM_MARGIN,
-          nonExpandedHeight: result,
-          ACTION_SHEET_START_HEIGHT_RATIO,
-          TOAST_BOTTOM_GAP: 46,
-          positionDelta: sharedValue,
-          TOAST_ANIMATION_Y_DELTA: 15,
-          opacity: sharedValue1,
-        };
-        D.__closure = obj4;
-        D.__workletHash = 9630436597435;
-        D.__initData = __initData;
-        const animatedStyle = isExpanded(5086).useAnimatedStyle(D);
-        if (cResult[4] === tmp4.toast) {
-          if (cResult[5] === animatedStyle) {
-            let tmp19 = cResult[6];
-          }
-          if (cResult[7] !== text) {
-            let obj5 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: text };
-            const tmp22 = jsx(isExpanded(5271).Text, {
-              variant: "text-sm/medium",
-              color: "mobile-text-heading-primary",
-              children: text,
-            });
-            class D {
-              constructor() {
-                tmp = isExpanded;
-                if (closure_9) {
-                  if (tmp) {
-                    tmp10 = closure_2;
-                    tmp11 = c7;
-                    sum = closure_2 + c7;
-                  } else {
-                    tmp7 = closure_1;
-                    tmp8 = c7;
-                    sum = closure_1 + c7;
-                  }
-                  tmp12 = sum;
-                } else {
-                  if (tmp) {
-                    tmp5 = closure_2;
-                    tmp6 = c7;
-                    sum1 = closure_2 + c7;
-                  } else {
-                    tmp2 = closure_5;
-                    tmp3 = closure_2;
-                    num = 46;
-                    sum1 = closure_5 * closure_2 + 46;
-                  }
-                  obj = { bottom: null, opacity: null };
-                  tmp13 = closure_3;
-                  num2 = 1;
-                  num3 = 15;
-                  obj.bottom = sum1 + 15 * (1 - closure_3.get());
-                  tmp14 = closure_4;
-                  obj.opacity = closure_4.get();
-                  return obj;
-                }
-                return;
-              }
-            }
-            cResult[7] = text;
-            cResult[8] = tmp22;
-            let tmp20 = tmp22;
-          } else {
-            tmp20 = cResult[8];
-          }
-          if (cResult[9] === tmp19) {
-            if (cResult[10] === tmp20) {
-              let tmp23 = cResult[11];
-            }
-            if (cResult[12] === tmp4.container) {
-              if (cResult[13] === tmp23) {
-                let tmp27 = cResult[14];
-              }
-              return tmp27;
-            }
-            class D {
-              constructor() {
-                tmp = isExpanded;
-                if (closure_9) {
-                  if (tmp) {
-                    tmp10 = closure_2;
-                    tmp11 = c7;
-                    sum = closure_2 + c7;
-                  } else {
-                    tmp7 = closure_1;
-                    tmp8 = c7;
-                    sum = closure_1 + c7;
-                  }
-                  tmp12 = sum;
-                } else {
-                  if (tmp) {
-                    tmp5 = closure_2;
-                    tmp6 = c7;
-                    sum1 = closure_2 + c7;
-                  } else {
-                    tmp2 = closure_5;
-                    tmp3 = closure_2;
-                    num = 46;
-                    sum1 = closure_5 * closure_2 + 46;
-                  }
-                  obj = { bottom: null, opacity: null };
-                  tmp13 = closure_3;
-                  num2 = 1;
-                  num3 = 15;
-                  obj.bottom = sum1 + 15 * (1 - closure_3.get());
-                  tmp14 = closure_4;
-                  obj.opacity = closure_4.get();
-                  return obj;
-                }
-                return;
-              }
-            }
-            tmp30[0] = tmp4.container;
-            tmp30[2] = tmp23;
-            const tmp31 = <sharedValue1 {...tmp30} />;
-            cResult[12] = tmp4.container;
-            cResult[13] = tmp23;
-            cResult[14] = tmp31;
-            tmp27 = tmp31;
-          }
-          class D {
-            constructor() {
-              tmp = isExpanded;
-              if (closure_9) {
-                if (tmp) {
-                  tmp10 = closure_2;
-                  tmp11 = c7;
-                  sum = closure_2 + c7;
-                } else {
-                  tmp7 = closure_1;
-                  tmp8 = c7;
-                  sum = closure_1 + c7;
-                }
-                tmp12 = sum;
-              } else {
-                if (tmp) {
-                  tmp5 = closure_2;
-                  tmp6 = c7;
-                  sum1 = closure_2 + c7;
-                } else {
-                  tmp2 = closure_5;
-                  tmp3 = closure_2;
-                  num = 46;
-                  sum1 = closure_5 * closure_2 + 46;
-                }
-                obj = { bottom: null, opacity: null };
-                tmp13 = closure_3;
-                num2 = 1;
-                num3 = 15;
-                obj.bottom = sum1 + 15 * (1 - closure_3.get());
-                tmp14 = closure_4;
-                obj.opacity = closure_4.get();
-                return obj;
-              }
-              return;
-            }
-          }
-          tmp25[0] = tmp19;
-          tmp25[2] = tmp20;
-          const tmp26 = jsx(ReanimatedRexportDefault.View, tmp25);
-          cResult[9] = tmp19;
-          cResult[10] = tmp20;
-          cResult[11] = tmp26;
-          tmp23 = tmp26;
-        }
-        const items = [tmp4.toast, animatedStyle];
-        cResult[4] = tmp4.toast;
-        cResult[5] = animatedStyle;
-        cResult[6] = items;
-        tmp19 = items;
-        const tmpResult = isExpanded(5086);
-      }
-      const fn = function o() {
-        let obj = ReanimatedRexport;
-        const obj3 = { duration, easing: null };
-        let Easing = ReanimatedRexport.Easing;
-        obj3.easing = Easing.in(ReanimatedRexport.Easing.ease);
-        result = sharedValue.set(obj.withDelay(100, timing.withTiming(1, obj3)));
-        const obj5 = { duration: 300, easing: null };
-        const Easing2 = ReanimatedRexport.Easing;
-        obj5.easing = Easing2.in(ReanimatedRexport.Easing.linear);
-        let result1 = sharedValue1.set(timing.withTiming(1, obj5));
-        return () => {
-          const obj = isExpanded(diff[12]);
-          result = sharedValue.set(obj.withDelay(duration, isExpanded(diff[13]).withTiming(0)));
-          const obj2 = isExpanded(diff[13]);
-          const obj4 = { duration, easing: null };
-          const Easing = isExpanded(diff[12]).Easing;
-          obj4.easing = Easing.out(isExpanded(diff[12]).Easing.exp);
-          const result1 = sharedValue1.set(isExpanded(diff[13]).withTiming(0, obj4));
-        };
-      };
-      const items1 = [sharedValue, sharedValue1];
-      cResult[0] = sharedValue1;
-      cResult[1] = sharedValue;
-      cResult[2] = fn;
-      cResult[3] = items1;
-      tmp12 = items1;
-      tmp11 = fn;
-      let obj3 = isExpanded(5086);
-    }
-  : function ActionSheetBackdropToast(children) {
-      const isExpanded = children.isExpanded;
-      const tmp = closure_10();
-      const height = useWindowDimensionsDefault().height;
-      let result = height * ACTION_SHEET_START_HEIGHT_RATIO;
-      importDefault = result;
-      const diff = height - isExpanded(5305).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
-      dependencyMap = diff;
-      const sharedValue = isExpanded(5086).useSharedValue(0);
-      let obj = isExpanded(5086);
-      const sharedValue1 = isExpanded(5086).useSharedValue(0);
-      const items = [sharedValue, sharedValue1];
-      const effect = sharedValue.useEffect(() => {
-        let obj = ReanimatedRexport;
-        const obj3 = { duration, easing: null };
-        let Easing = ReanimatedRexport.Easing;
-        obj3.easing = Easing.in(ReanimatedRexport.Easing.ease);
-        let result = sharedValue.set(obj.withDelay(100, timing.withTiming(1, obj3)));
-        const obj5 = { duration: 300, easing: null };
-        const Easing2 = ReanimatedRexport.Easing;
-        obj5.easing = Easing2.in(ReanimatedRexport.Easing.linear);
-        let result1 = sharedValue1.set(timing.withTiming(1, obj5));
-        return () => {
-          const obj = isExpanded(5086);
-          const result = sharedValue.set(obj.withDelay(duration, isExpanded(5243).withTiming(0)));
-          const obj2 = isExpanded(5243);
-          const obj4 = { duration, easing: null };
-          const Easing = isExpanded(5086).Easing;
-          obj4.easing = Easing.out(isExpanded(5086).Easing.exp);
-          const result1 = sharedValue1.set(isExpanded(5243).withTiming(0, obj4));
-        };
-      }, items);
-      let obj2 = isExpanded(5086);
-      class M {
-        constructor() {
-          tmp = isExpanded;
-          if (closure_9) {
-            if (tmp) {
-              tmp10 = closure_2;
-              tmp11 = c7;
-              sum = closure_2 + c7;
-            } else {
-              tmp7 = closure_1;
-              tmp8 = c7;
-              sum = closure_1 + c7;
-            }
-            tmp12 = sum;
-          } else {
-            if (tmp) {
-              tmp5 = closure_2;
-              tmp6 = c7;
-              sum1 = closure_2 + c7;
-            } else {
-              tmp2 = closure_5;
-              tmp3 = closure_2;
-              num = 46;
-              sum1 = closure_5 * closure_2 + 46;
-            }
-            obj = { bottom: null, opacity: null };
-            tmp13 = closure_3;
-            num2 = 1;
-            num3 = 15;
-            obj.bottom = sum1 + 15 * (1 - closure_3.get());
-            tmp14 = closure_4;
-            obj.opacity = closure_4.get();
-            return obj;
-          }
-          return;
-        }
-      }
-      M.__closure = {
-        isInIOS,
-        isExpanded,
-        maxDynamicContentSize: diff,
-        TOAST_BOTTOM_MARGIN,
-        nonExpandedHeight: result,
-        ACTION_SHEET_START_HEIGHT_RATIO,
-        TOAST_BOTTOM_GAP: 46,
-        positionDelta: sharedValue,
-        TOAST_ANIMATION_Y_DELTA: 15,
-        opacity: sharedValue1,
-      };
-      M.__workletHash = 16641609709624;
-      M.__initData = __initData2;
-      let obj5 = { style: tmp.container, pointerEvents: "none", children: null };
-      const animatedStyle = isExpanded(5086).useAnimatedStyle(M);
-      const obj6 = {
-        style: null,
-        accessibilityLiveRegion: "polite",
-        children: jsx(isExpanded(5271).Text, {
-          variant: "text-sm/medium",
-          color: "mobile-text-heading-primary",
-          children: children.text,
-        }),
-      };
-      const items1 = [tmp.toast, animatedStyle];
-      obj6.style = items1;
-      obj5.children = jsx(ReanimatedRexportDefault.View, {
-        style: null,
-        accessibilityLiveRegion: "polite",
-        children: jsx(isExpanded(5271).Text, {
-          variant: "text-sm/medium",
-          color: "mobile-text-heading-primary",
-          children: children.text,
-        }),
-      });
-      return (
-        <sharedValue1 style={tmp.container} pointerEvents="none">
-          {null}
-        </sharedValue1>
-      );
+export function ActionSheetBackdropToast(children) {
+  const isExpanded = children.isExpanded;
+  const tmp = closure_8();
+  const height = useWindowDimensionsDefault().height;
+  let result = height * ACTION_SHEET_START_HEIGHT_RATIO;
+  importDefault = result;
+  const diff = height - isExpanded(5581).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+  dependencyMap = diff;
+  const sharedValue = isExpanded(5090).useSharedValue(0);
+  let obj = isExpanded(5090);
+  const sharedValue1 = isExpanded(5090).useSharedValue(0);
+  const items = [sharedValue, sharedValue1];
+  const effect = sharedValue.useEffect(() => {
+    let obj = ReanimatedRexport;
+    const obj3 = { duration: 200, easing: null };
+    let Easing = ReanimatedRexport.Easing;
+    obj3.easing = Easing.in(ReanimatedRexport.Easing.ease);
+    let result = sharedValue.set(obj.withDelay(100, timing.withTiming(1, obj3)));
+    const obj5 = { duration: 300, easing: null };
+    const Easing2 = ReanimatedRexport.Easing;
+    obj5.easing = Easing2.in(ReanimatedRexport.Easing.linear);
+    let result1 = sharedValue1.set(timing.withTiming(1, obj5));
+    return () => {
+      const obj = isExpanded(5090);
+      const result = sharedValue.set(obj.withDelay(200, isExpanded(5249).withTiming(0)));
+      const obj2 = isExpanded(5249);
+      const obj4 = { duration: 200, easing: null };
+      const Easing = isExpanded(5090).Easing;
+      obj4.easing = Easing.out(isExpanded(5090).Easing.exp);
+      const result1 = sharedValue1.set(isExpanded(5249).withTiming(0, obj4));
     };
+  }, items);
+  let obj2 = isExpanded(5090);
+  const fn = function x() {
+    if (closure_7) {
+      if (isExpanded) {
+        let sum = c2 + 24;
+      } else {
+        sum = c1 + 24;
+      }
+    } else {
+      if (isExpanded) {
+        let sum1 = c2 + 24;
+      } else {
+        sum1 = closure_5 * c2 + 46;
+      }
+      const obj = { bottom: sum1 + 15 * (1 - sharedValue.get()), opacity: sharedValue1.get() };
+      return obj;
+    }
+  };
+  fn.__closure = {
+    isInIOS,
+    isExpanded,
+    maxDynamicContentSize: diff,
+    TOAST_BOTTOM_MARGIN: 24,
+    nonExpandedHeight: result,
+    ACTION_SHEET_START_HEIGHT_RATIO,
+    TOAST_BOTTOM_GAP: 46,
+    positionDelta: sharedValue,
+    TOAST_ANIMATION_Y_DELTA: 15,
+    opacity: sharedValue1,
+  };
+  fn.__workletHash = 9630436597435;
+  fn.__initData = __initData;
+  let obj5 = { style: tmp.container, pointerEvents: "none", children: null };
+  const animatedStyle = isExpanded(5090).useAnimatedStyle(fn);
+  const obj6 = {
+    style: null,
+    accessibilityLiveRegion: "polite",
+    children: jsx(isExpanded(5619).Text, {
+      variant: "text-sm/medium",
+      color: "mobile-text-heading-primary",
+      children: children.text,
+    }),
+  };
+  const items1 = [tmp.toast, animatedStyle];
+  obj6.style = items1;
+  obj5.children = jsx(ReanimatedRexportDefault.View, {
+    style: null,
+    accessibilityLiveRegion: "polite",
+    children: jsx(isExpanded(5619).Text, {
+      variant: "text-sm/medium",
+      color: "mobile-text-heading-primary",
+      children: children.text,
+    }),
+  });
+  return (
+    <sharedValue1 style={tmp.container} pointerEvents="none">
+      {null}
+    </sharedValue1>
+  );
+}

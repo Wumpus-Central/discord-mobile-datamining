@@ -5,6 +5,7 @@ import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
 import clipPOVOverlap from "clipPOVOverlap.tsx";
 import DistributedClipsExperimentDefault from "DistributedClipsExperiment.tsx";
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -21,7 +22,7 @@ let closure_37 = async function _migrateDefaultStorage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -39,7 +40,7 @@ let closure_37 = async function _migrateDefaultStorage() {
           closure_0 = tmp7;
           closure_128_0 = undefined;
           closure_128_1 = undefined;
-          if (clipsSettings.clipsSettings.storageLocation === constants) {
+          if (clipsSettings.clipsSettings.storageLocation === closure_2_17) {
             if (null != DiscordNativeDefault) {
               if (null != DiscordNativeDefault.app) {
                 c3 = 1;
@@ -216,7 +217,7 @@ function trackClipMessage(message) {
         if (items1 == null) {
           items1 = [];
         }
-        value3 = map2.get(message_id1);
+        let value3 = map2.get(message_id1);
         if (value3 == null) {
           value3 = [];
         }
@@ -226,7 +227,7 @@ function trackClipMessage(message) {
         flag3 = recordPOVMatches(items1, tmp3);
         const tmp13Result = recordPOVMatches(items1, tmp3);
       }
-      value4 = map2.get(message.id);
+      let value4 = map2.get(message.id);
       if (value4 == null) {
         value4 = [];
       }
@@ -237,7 +238,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8203);
+const ClipsConstants = fn(8206);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
   ClipSaveTypes: closure_7,
@@ -249,9 +250,9 @@ const ClipsConstants = fn(8203);
   ClipsLengthSettings,
   DEFAULT_CLIPS_BITRATE_PERCENT,
 } = ClipsConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(5852);
+const StreamSettingsConstants = fn(5859);
 const ApplicationStreamFPS = StreamSettingsConstants.ApplicationStreamFPS;
 let c17 = "default";
 let c18 = "Discord Clips";
@@ -285,7 +286,7 @@ let obj = {
   maxAutoClips: 20,
   clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
   debugTooltipsEnabled: false,
-  enableAutoclipping: "Reflect",
+  enableAutoclipping: "flexDirection",
   showPovClipsInGallery: true,
 };
 obj = {
@@ -348,6 +349,18 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 prototype["getSettings"] = function getSettings() {
   return obj.clipsSettings;
 };
+prototype["getEnableAutoclipping"] = function getEnableAutoclipping() {
+  enabled = obj.clipsSettings.enableAutoclipping;
+  if (enabled == null) {
+    const AutoclippingDefaultOverrideExperiment =
+      AutoclippingDefaultOverrideExperiment2.AutoclippingDefaultOverrideExperiment;
+    enabled = AutoclippingDefaultOverrideExperiment.getConfig({ location: "getAutoclippingDefault" }).enabled;
+  }
+  return enabled;
+};
+prototype["hasUserSetAutoclippingSettings"] = function hasUserSetAutoclippingSettings() {
+  return null != obj.clipsSettings.enableAutoclipping;
+};
 prototype["getLastClipsSession"] = function getLastClipsSession() {
   return c25;
 };
@@ -371,7 +384,7 @@ prototype["getHardwareClassificationVersion"] = function getHardwareClassificati
   return obj.hardwareClassificationVersion;
 };
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
-  return closure_22 >= v65535;
+  return closure_22 >= closure_1_10;
 };
 prototype["getLastClipsError"] = function getLastClipsError() {
   return c27;
@@ -625,19 +638,7 @@ let items = [
     obj.clipsSettings = obj2;
     return obj;
   },
-  (clipsSettings) => {
-    let tmp = clipsSettings;
-    if (false === clipsSettings.clipsSettings.enableAutoclipping) {
-      obj = {};
-      const merged = Object.assign(clipsSettings);
-      const obj2 = {};
-      const merged1 = Object.assign(clipsSettings.clipsSettings);
-      obj2.clipsEnabled = false;
-      obj.clipsSettings = obj2;
-      tmp = obj;
-    }
-    return tmp;
-  },
+  (arg0) => arg0,
   (clipsSettings) => {
     let tmp2 = clipsSettings;
     if (clipsSettings.clipsSettings.clipsQuality.frameRate === ApplicationStreamFPS.FPS_15) {

@@ -5,8 +5,8 @@ import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
 import InteractionComponentTypes from "../InteractionComponentTypes.tsx";
 import RoleIconUtils from "../../guild_boosting/RoleIconUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
-import _modDef8665 from "../../../../_runtime/metro/08665__.js";
-import _modDef8666 from "../../../../_runtime/metro/08666__.js";
+import _modDef8699 from "../../../../_runtime/metro/08699__.js";
+import _modDef8700 from "../../../../_runtime/metro/08700__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: closure_7, DEFAULT_ROLE_COLOR: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting(
 
 export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId) {
   _require = guildId;
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   const mapped = initialSnowflakeSelectOptions.map((type) => {
     type = type.type;
     if (InteractionComponentTypes.SelectOptionType.USER === type) {
@@ -55,12 +55,12 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
           if (null == roleIconData) {
             const obj2 = {};
             const merged1 = Object.assign(type);
-            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8665).uri;
+            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8699).uri;
             if (null != role.colorString) {
               let hex2intResult = utils_ColorUtils.hex2int(role.colorString);
               const tmpResult10 = utils_ColorUtils;
             } else {
-              hex2intResult = closure_2_8;
+              hex2intResult = React6;
             }
             obj2.iconColor = 4278190080 | hex2intResult;
             tmp18 = obj2;
@@ -101,7 +101,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
         let tmpResult11 = utils_AvatarUtils;
         let hex2int = tmpResult11.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8666;
+          let channelIconWithGuild = _modDef8700;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
           const tmpResult12 = utils_ChannelUtils;
@@ -119,7 +119,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
 }
 export function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8666;
+    let channelIconWithGuild = _modDef8700;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }

@@ -1,8 +1,8 @@
 // discord_app/modules/libdiscore/LibdiscoreExperimentManager.tsx
-import libdiscoreExperiments from "libdiscoreExperiments.tsx";
-import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
+import libdiscoreExperiments from "libdiscoreExperiments.tsx";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 

@@ -90,10 +90,10 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
     return {
       colorString: null,
       colorStrings: null,
-      colorRoleId: "application",
-      hoistRoleId: "guild",
-      iconRoleId: "jsxs",
-      highestRoleId: "Array",
+      colorRoleId: "id",
+      hoistRoleId: "Math",
+      iconRoleId: "next",
+      highestRoleId: "y",
     };
   } else {
     const iter = roles[Symbol.iterator]();
@@ -313,7 +313,7 @@ function handleGuildMemberUpdate(arg0) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -378,7 +378,7 @@ function batchUpdateGuildMembers(guildId, members) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during batchUpdateGuildMembers.");
@@ -544,7 +544,7 @@ function handleGuildRoleUpdateOrDelete(guildId) {
   if (null == obj[guildId.guildId]) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId.guildId);
+    const guild = GuildStore.getGuild(guildId.guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId.guildId + " not found during " + guildId.type + ".");
@@ -617,7 +617,7 @@ function handleImpersonateUpdate(guildId) {
   if (null == obj[guildId]) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild " + guildId + " not found during IMPERSONATE_UPDATE.");
@@ -1043,11 +1043,11 @@ prototype["getCachedSelfMember"] = function getCachedSelfMember(id) {
   }
   return tmp;
 };
-prototype["getNick"] = function getNick(guildId, id) {
-  if (null != guildId) {
-    if (null != id) {
+prototype["getNick"] = function getNick(id, id2) {
+  if (null != id) {
+    if (null != id2) {
       const self = this;
-      const member = this.getMember(guildId, id);
+      const member = this.getMember(id, id2);
       let nick = null;
       if (null != member) {
         nick = member.nick;
@@ -1156,7 +1156,7 @@ obj = {
     if (null == tmp3) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         return false;
       } else {
@@ -1449,7 +1449,7 @@ obj = {
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function handleLoadArchivedThreadsSuccess(arg0) {
     ({ guildId, owners } = arg0);
-    guild = undefined;
+    let guild;
     closure_1 = tmp;
     if (null == obj[guildId]) {
       return false;
@@ -1574,7 +1574,7 @@ obj = {
       }
       return arr;
     }, []);
-    guild = undefined;
+    let guild;
     closure_1 = tmp2;
     if (null == obj[guildId]) {
       return false;
@@ -1669,7 +1669,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1698,7 +1698,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1728,7 +1728,7 @@ obj = {
     if (null == obj[guildId]) {
       return false;
     } else {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null == guild) {
         const _HermesInternal = HermesInternal;
         logger.warn("Guild " + guildId + " not found during GUILD_MEMBER_UPDATE.");
@@ -1800,7 +1800,7 @@ obj = {
     let flag = members.members.length > 0;
     if (flag) {
       ({ guildId, members } = members);
-      guild = undefined;
+      let guild;
       closure_1 = tmp2;
       if (null == obj[guildId]) {
         flag = false;
@@ -1943,7 +1943,7 @@ obj = {
   MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function hangdleMemberSafetyGuildMemberSearchSuccess(arg0) {
     ({ guildId, members } = arg0);
     const mapped = members.map((member) => member.member);
-    guild = undefined;
+    let guild;
     dependencyMap = tmp;
     if (null == obj[guildId]) {
       return false;

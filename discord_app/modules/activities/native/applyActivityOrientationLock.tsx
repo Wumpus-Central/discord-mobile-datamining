@@ -1,17 +1,19 @@
 // discord_app/modules/activities/native/applyActivityOrientationLock.tsx
-import Constants from "../Constants.tsx";
+import EmbeddedActivityOrientationLockState from "../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import applyOrientationLock from "../../device/native/applyOrientationLock.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const OrientationLockState = Constants.OrientationLockState;
 let result = size.fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");
 
 export default function applyActivityOrientationLock(arg0) {
-  if (OrientationLockState.UNLOCKED === arg0) {
+  if (EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.UNLOCKED === arg0) {
     const result = applyOrientationLock.releaseOrientationLock({ unlockAfterRotatingToPreviousLock: true });
-  } else if (OrientationLockState.PORTRAIT === arg0) {
+    const tmpResult = applyOrientationLock;
+  } else if (EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.PORTRAIT === arg0) {
     applyOrientationLock.applyOrientationLock("PORTRAIT");
-  } else if (OrientationLockState.LANDSCAPE === arg0) {
+    const tmpResult3 = applyOrientationLock;
+  } else if (EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.LANDSCAPE === arg0) {
     applyOrientationLock.applyOrientationLock("LANDSCAPE");
+    const tmpResult4 = applyOrientationLock;
   }
 }

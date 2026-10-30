@@ -146,7 +146,7 @@ export default function getActivityJoinability(arg0) {
                 const type = channel1.type;
                 if (constants2.DM !== type) {
                   if (constants2.GROUP_DM !== type) {
-                    guild = GuildStore.getGuild(channel1.getGuildId());
+                    const guild = GuildStore.getGuild(channel1.getGuildId());
                     if (null != guild) {
                       const features = guild.features;
                       if (!features.has(constants3.COMMUNITY)) {

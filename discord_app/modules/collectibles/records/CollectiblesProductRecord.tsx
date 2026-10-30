@@ -5,11 +5,11 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7712);
+const CollectiblesItemRecord = fn(7717);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
-let closure_7 = fn(1086).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
-const Constants = fn(1084);
+let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const Constants = fn(1072);
 ({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: closure_9 } = Constants);
 let CollectiblesProductRecord;
 class CollectiblesProductRecord extends tmp3 {
@@ -59,7 +59,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   const merged2 = Object.assign(fromServerResult);
   obj.type = type;
   let tmp8 = null;
-  if (premium_type !== closure_1_8) {
+  if (premium_type !== React6) {
     tmp8 = premium_type;
   }
   obj.premiumType = tmp8;
@@ -95,7 +95,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.hideBadge = hide_badge;
   obj.isFirstParty = is_first_party;
   if (typeof CollectiblesProductRecord === "function") {
-    const tmp42 = new CollectiblesProductRecord(obj, fromServerResult, merged, this, closure_1_8);
+    const tmp42 = new CollectiblesProductRecord(obj, fromServerResult, merged, this, React6);
     ({
       summary: tmp17.summary,
       type: tmp17.type,
@@ -260,18 +260,18 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "t",
                 type: "Array",
-                premiumType: "unicodeVersion",
-                items: null,
-                categorySkuId: null,
-                categoryWillUnpublishAt: null,
-                isCategoryReward: null,
-                prices: null,
-                previewAssets: null,
-                googleSkuIds: null,
-                eligibleOffers: null,
-                variants: null,
-                bundledProducts: null,
-                isFirstParty: null,
+                premiumType: "id",
+                items: "<string:2363442349>",
+                categorySkuId: "<string:2510225411>",
+                categoryWillUnpublishAt: "<string:3679256578>",
+                isCategoryReward: "<string:4125097985>",
+                prices: "<string:826343425>",
+                previewAssets: "<string:1358954863>",
+                googleSkuIds: "<string:1212276081>",
+                eligibleOffers: "<string:1358954838>",
+                variants: "<string:7807684>",
+                bundledProducts: "isArray",
+                isFirstParty: "isArray",
               };
               let str;
               if (first != null) {
@@ -288,9 +288,9 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               obj3.variantValue = str2;
               ({ id: obj2.storeListingId, id: obj2.skuId, name: obj2.name, summary: obj2.summary } = tenantMetadata);
               ({ type: obj2.type, premiumType } = collectibles);
-              let items1 = closure_2_8;
+              let items1 = React6;
               let premiumType1 = null;
-              if (premiumType !== closure_2_8) {
+              if (premiumType !== React6) {
                 premiumType1 = collectibles.premiumType;
               }
               obj3.premiumType = premiumType1;
@@ -316,8 +316,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               if (googleSkuIds == null) {
                 const obj5 = {};
                 item = "";
-                obj5[React6.MOBILE] = "";
-                obj5[React6.MOBILE_PREMIUM_TIER_2] = "";
+                obj5[React7.MOBILE] = "";
+                obj5[React7.MOBILE_PREMIUM_TIER_2] = "";
                 googleSkuIds = obj5;
               }
               obj3.googleSkuIds = googleSkuIds;

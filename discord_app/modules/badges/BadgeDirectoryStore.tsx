@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01457_priv.js";
+import privDefault from "../../../_runtime/01452_priv.js";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -65,9 +65,9 @@ prototype["isCatalogStaleFor"] = function isCatalogStaleFor(id) {
   }
   return tmp3;
 };
-prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(targetUserId) {
-  let tmp = targetUserId;
-  if (targetUserId == null) {
+prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(displayedUserId) {
+  let tmp = displayedUserId;
+  if (displayedUserId == null) {
     const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {

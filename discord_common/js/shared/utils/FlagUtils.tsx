@@ -9,8 +9,8 @@ export function hasFlag(flags, IS_ANIMATED) {
 export function hasAnyFlag(flags, arg1) {
   return flags & arg1;
 }
-export function addFlag(setting, SUPPRESS_NOTIFICATIONS) {
-  return setting | SUPPRESS_NOTIFICATIONS;
+export function addFlag(flags, SUPPRESS_NOTIFICATIONS) {
+  return flags | SUPPRESS_NOTIFICATIONS;
 }
 export function removeFlag(flags, OBFUSCATED) {
   return flags & ~OBFUSCATED;

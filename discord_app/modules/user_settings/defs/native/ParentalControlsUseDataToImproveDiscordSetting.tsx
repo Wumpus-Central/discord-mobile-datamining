@@ -5,16 +5,14 @@ import useParentalControlSettings from "../../../parent_tools/hooks/useParentalC
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const Consents = fn(1084).Consents;
-let ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11302);
+const Consents = fn(1072).Consents;
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(8387).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8424).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToImproveDiscordSettingValue() {
     return useParentalControlSettings.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
   },
@@ -38,7 +36,7 @@ const toggle = SettingBuilders.createToggle({
   unsearchable: true,
 });
 const size = fn(2);
-const result1 = size.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsUseDataToImproveDiscordSetting.tsx",
 );
 

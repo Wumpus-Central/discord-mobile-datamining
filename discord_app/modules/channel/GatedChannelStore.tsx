@@ -101,7 +101,7 @@ function computeForChannel(guild_id, id) {
     if (null == channel) {
       return false;
     } else {
-      guild = GuildStore.getGuild(channel.getGuildId());
+      const guild = GuildStore.getGuild(channel.getGuildId());
       if (null == guild) {
         return false;
       } else {
@@ -142,7 +142,7 @@ function handleChannelUpdate(channel) {
       const channel1 = ChannelStore.getChannel(id);
       flag = false;
       if (null != channel1) {
-        guild = GuildStore.getGuild(channel1.getGuildId());
+        const guild = GuildStore.getGuild(channel1.getGuildId());
         flag = false;
         if (null != guild) {
           const hasItem = obj.has(id);
@@ -163,9 +163,9 @@ function handleChannelUpdate(channel) {
   }
   return tmp;
 }
-const THREAD_CHANNEL_TYPES = fn(4861).THREAD_CHANNEL_TYPES;
-const hasPermission = fn(4912).hasPermission;
-const Constants = fn(1084);
+const THREAD_CHANNEL_TYPES = fn(4862).THREAD_CHANNEL_TYPES;
+const hasPermission = fn(4916).hasPermission;
+const Constants = fn(1072);
 ({ Permissions: c10, GuildFeatures: closure_11 } = Constants);
 const dependencyMap = {};
 let set = new Set();
@@ -181,7 +181,7 @@ prototype["isChannelGated"] = function isChannelGated(guildId, channelId) {
   } else {
     let obj = dependencyMap[guildId];
     if (null == obj) {
-      guild = GuildStore.getGuild(guildId);
+      const guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         const _Set = Set;
         set = new Set();

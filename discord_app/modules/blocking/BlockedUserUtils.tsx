@@ -5,12 +5,12 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocking/BlockedUserUtils.tsx");
 
-export function filterOutBlockedOrIgnoredUsers(mapped, afkChannelId) {
-  const found = mapped.filter((item) => afkChannelId(dependencyMap[1]).isNotNullish(item));
+export function filterOutBlockedOrIgnoredUsers(mapped, stateFromStores1) {
+  const found = mapped.filter((item) => stateFromStores1(dependencyMap[1]).isNotNullish(item));
   return found.filter((id) => {
     id = id.id;
-    if (null != afkChannelId) {
-      let hasItem = afkChannelId.has(id);
+    if (null != stateFromStores1) {
+      let hasItem = stateFromStores1.has(id);
     } else {
       hasItem = RelationshipStore.isBlockedOrIgnored(id);
     }

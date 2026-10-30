@@ -89,7 +89,7 @@ function conjureLocation(projectId, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
 

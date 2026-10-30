@@ -1,22 +1,24 @@
 // discord_app/modules/user_profile/utils/shouldShowActivityTimeBar.tsx
-import Constants from "../../../Constants.tsx";
+import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");
 
 export default function shouldShowActivityTimeBar(type) {
-  let tmp2 = type.type === ActivityTypes.LISTENING || type.type === tmp.WATCHING;
-  if (tmp2) {
+  let tmp3 = type.type === ActivityTypes.ActivityTypes.LISTENING;
+  if (!tmp3) {
+    tmp3 = type.type === ActivityTypes.ActivityTypes.WATCHING;
+  }
+  if (tmp3) {
     const timestamps = type.timestamps;
     let start;
     if (timestamps != null) {
       start = timestamps.start;
     }
-    tmp2 = null != start;
+    tmp3 = null != start;
   }
-  if (tmp2) {
-    tmp2 = null != type.timestamps.end;
+  if (tmp3) {
+    tmp3 = null != type.timestamps.end;
   }
-  return tmp2;
+  return tmp3;
 }

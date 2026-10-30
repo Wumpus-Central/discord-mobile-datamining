@@ -1,12 +1,12 @@
 // discord_app/intl/native/IntlLink.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1949 from "../../../_runtime/metro/01949__.js";
+import _modDef1944 from "../../../_runtime/metro/01944__.js";
 import LinkingDefault from "../../lib/native/Linking.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -16,99 +16,40 @@ let closure_5 = createStyles.createStyles((arg0) => {
   link.textDecorationLine = str;
   return { link };
 });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/native/IntlLink.tsx");
 
-export const IntlLink = ReactCompilerGating.isReactCompilerEnabled()
-  ? function IntlLink(target) {
-      const cResult = target(576).c(7);
-      target = target.target;
-      const children = target.children;
-      const tmp4 = closure_5(noop.useContext(target(5019).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-      if (typeof target === "string") {
-        if (cResult[0] !== target) {
-          const fn = function s() {
-            const obj = LinkingDefault;
-            return obj.openURL(_modDef1949.sanitizeUrl(target));
-          };
-          cResult[0] = target;
-          cResult[1] = fn;
-        }
-      } else {
-        let str = "link";
-        let tmp5 = target;
-        if (typeof target === "object") {
-          str = "link";
-          tmp5 = target;
-          if (null != target.onClick) {
-            ({ accessibilityRole, onClick } = target);
-            if (accessibilityRole == null) {
-              accessibilityRole = "link";
-            }
-            str = accessibilityRole;
-            tmp5 = onClick;
-          }
-        }
-        if (cResult[2] === str) {
-          if (cResult[3] === children) {
-            if (cResult[4] === tmp5) {
-              if (cResult[5] === tmp4.link) {
-                let tmp8 = cResult[6];
-              }
-              return tmp8;
-            }
-          }
-        }
-        const obj2 = { accessible: true, accessibilityRole: str, onPress: tmp5, style: tmp4.link, children };
-        const tmp10 = jsx(tmp(1199).LegacyText, {
-          accessible: true,
-          accessibilityRole: str,
-          onPress: tmp5,
-          style: tmp4.link,
-          children,
-        });
-        cResult[2] = str;
-        cResult[3] = children;
-        cResult[4] = tmp5;
-        cResult[5] = tmp4.link;
-        cResult[6] = tmp10;
-        tmp8 = tmp10;
-      }
-      let obj = target(576);
-      tmp = target;
-    }
-  : function IntlLink(children) {
-      const target = children.target;
-      if (typeof target === "string") {
-        let fn = function y() {
-          const obj = LinkingDefault;
-          return obj.openURL(_modDef1949.sanitizeUrl(target));
-        };
-        let str = "link";
-      } else {
-        str = "link";
-        fn = target;
-        if (typeof target === "object") {
-          str = "link";
-          fn = target;
-          if (null != target.onClick) {
-            ({ accessibilityRole, onClick } = target);
-            if (accessibilityRole == null) {
-              accessibilityRole = "link";
-            }
-            str = accessibilityRole;
-            fn = onClick;
-          }
-        }
-      }
-      const tmp = target;
-      const tmp3 = closure_5(noop.useContext(target(5019).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-      return jsx(tmp(1199).LegacyText, {
-        accessible: true,
-        accessibilityRole: str,
-        onPress: fn,
-        style: closure_5(noop.useContext(target(5019).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
-        children: children.children,
-      });
+export function IntlLink(children) {
+  const target = children.target;
+  if (typeof target === "string") {
+    let fn = function y() {
+      const obj = LinkingDefault;
+      return obj.openURL(_modDef1944.sanitizeUrl(target));
     };
+    let str = "link";
+  } else {
+    str = "link";
+    fn = target;
+    if (typeof target === "object") {
+      str = "link";
+      fn = target;
+      if (null != target.onClick) {
+        ({ accessibilityRole, onClick } = target);
+        if (accessibilityRole == null) {
+          accessibilityRole = "link";
+        }
+        str = accessibilityRole;
+        fn = onClick;
+      }
+    }
+  }
+  const tmp = target;
+  const tmp3 = closure_5(noop.useContext(target(5023).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1188).LegacyText, {
+    accessible: true,
+    accessibilityRole: str,
+    onPress: fn,
+    style: closure_5(noop.useContext(target(5023).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
+    children: children.children,
+  });
+}

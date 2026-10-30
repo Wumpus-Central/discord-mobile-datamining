@@ -3,13 +3,13 @@ import ProductIds from "ProductIds.android.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-function getPremiumBundledItemsFromProductId(paymentGatewayPlanId) {
-  if (paymentGatewayPlanId in ProductIds.AppStorePremiumProductIdsToPremiumBundledItems) {
-    return ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[paymentGatewayPlanId];
+function getPremiumBundledItemsFromProductId(toggledIntervalProduct) {
+  if (toggledIntervalProduct in ProductIds.AppStorePremiumProductIdsToPremiumBundledItems) {
+    return ProductIds.AppStorePremiumProductIdsToPremiumBundledItems[toggledIntervalProduct];
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Invalid bundled product ID " + paymentGatewayPlanId);
+    const error = new Error("Invalid bundled product ID " + toggledIntervalProduct);
     throw error;
   }
 }
@@ -84,7 +84,7 @@ function getProductIdFromSubscriptionItems(subscriptionItemsForProduct) {
   const error = new Error("No App Store bundled product matches the subscription items");
   throw error;
 }
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 ({
   PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3,
   PremiumTypes: closure_4,
@@ -248,11 +248,11 @@ export function excludeNitroOnlyPlansForActiveTrial(premiumTier) {
 }
 export { getSubscriptionItemsForProduct };
 export function getModifySubscriptionItemsForProduct(productId, subscription) {
-  if (productId in found(7578).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(7578).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(7586).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(7586).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
-        const itemsWithUpsertedPremiumPlanId = tmp(2051).getItemsWithUpsertedPremiumPlanId(
+        const itemsWithUpsertedPremiumPlanId = tmp(2048).getItemsWithUpsertedPremiumPlanId(
           subscription,
           tmp8.basePlanId,
         );
@@ -274,7 +274,7 @@ export function getModifySubscriptionItemsForProduct(productId, subscription) {
         }
         return mapped;
       }
-      tmpResult = tmp(2051);
+      tmpResult = tmp(2048);
     }
     return getSubscriptionItemsForProduct(productId);
   } else {

@@ -5,150 +5,31 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/UnsupportedFeatureModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function UnsupportedFeatureModal(arg0) {
-      const cResult = onDismiss(576).c(7);
-      ({ title, onDismiss } = arg0);
-      if (cResult[0] !== onDismiss) {
-        function handleClose() {
-          ModalActionCreatorsDefault.pop();
-          if (onDismiss != null) {
-            onDismiss();
-          }
-        }
-        cResult[0] = onDismiss;
-        cResult[1] = handleClose;
-        let tmp4 = handleClose;
-      } else {
-        tmp4 = cResult[1];
+export default function UnsupportedFeatureModal(onDismiss) {
+  onDismiss = onDismiss.onDismiss;
+  let obj = { initialRouteName: "Unsupported", screens: null };
+  let obj2 = { Unsupported: null };
+  const obj3 = {
+    title: onDismiss.title,
+    headerLeft: onDismiss(6992).getHeaderCloseButton(function handleClose() {
+      ModalActionCreatorsDefault.pop();
+      if (onDismiss != null) {
+        onDismiss();
       }
-      if (cResult[2] !== tmp4) {
-        const headerCloseButton = onDismiss(6984).getHeaderCloseButton(tmp4);
-        cResult[2] = tmp4;
-        cResult[3] = headerCloseButton;
-        let tmp5 = headerCloseButton;
-        const tmpResult = onDismiss(6984);
-      } else {
-        tmp5 = cResult[3];
-      }
-      if (cResult[4] === tmp5) {
-        if (cResult[5] === title) {
-          let tmp7 = cResult[6];
-        }
-        return tmp7;
-      }
-      let obj2 = {
-        initialRouteName: "Unsupported",
-        screens: {
-          Unsupported: {
-            title,
-            headerLeft: tmp5,
-            render() {
-              const obj = {
-                style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 },
-                children: null,
-              };
-              const obj2 = { variant: "text-lg/normal", color: "text-default", children: null };
-              const intl = onDismiss(1125).intl;
-              obj2.children = intl.string(onDismiss(1125).t.I22zuX);
-              obj.children = jsx(onDismiss(5271).Text, {
-                variant: "text-lg/normal",
-                color: "text-default",
-                children: null,
-              });
-              return (
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }}>{null}</View>
-              );
-            },
-          },
-        },
-      };
-      const tmp8 = jsx(onDismiss(7155).Navigator, {
-        initialRouteName: "Unsupported",
-        screens: {
-          Unsupported: {
-            title,
-            headerLeft: tmp5,
-            render() {
-              const obj = {
-                style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 },
-                children: null,
-              };
-              const obj2 = { variant: "text-lg/normal", color: "text-default", children: null };
-              const intl = onDismiss(1125).intl;
-              obj2.children = intl.string(onDismiss(1125).t.I22zuX);
-              obj.children = jsx(onDismiss(5271).Text, {
-                variant: "text-lg/normal",
-                color: "text-default",
-                children: null,
-              });
-              return (
-                <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }}>{null}</View>
-              );
-            },
-          },
-        },
-      });
-      cResult[4] = tmp5;
-      cResult[5] = title;
-      cResult[6] = tmp8;
-      tmp7 = tmp8;
-      let obj = onDismiss(576);
-      const obj3 = {
-        Unsupported: {
-          title,
-          headerLeft: tmp5,
-          render() {
-            const obj = {
-              style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 },
-              children: null,
-            };
-            const obj2 = { variant: "text-lg/normal", color: "text-default", children: null };
-            const intl = onDismiss(1125).intl;
-            obj2.children = intl.string(onDismiss(1125).t.I22zuX);
-            obj.children = jsx(onDismiss(5271).Text, {
-              variant: "text-lg/normal",
-              color: "text-default",
-              children: null,
-            });
-            return <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }}>{null}</View>;
-          },
-        },
-      };
-    }
-  : function UnsupportedFeatureModal(onDismiss) {
-      onDismiss = onDismiss.onDismiss;
-      let obj = { initialRouteName: "Unsupported", screens: null };
-      let obj2 = { Unsupported: null };
-      const obj3 = {
-        title: onDismiss.title,
-        headerLeft: onDismiss(6984).getHeaderCloseButton(function handleClose() {
-          ModalActionCreatorsDefault.pop();
-          if (onDismiss != null) {
-            onDismiss();
-          }
-        }),
-        render() {
-          const obj = {
-            style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 },
-            children: null,
-          };
-          const obj2 = { variant: "text-lg/normal", color: "text-default", children: null };
-          const intl = onDismiss(1125).intl;
-          obj2.children = intl.string(onDismiss(1125).t.I22zuX);
-          obj.children = jsx(onDismiss(5271).Text, {
-            variant: "text-lg/normal",
-            color: "text-default",
-            children: null,
-          });
-          return <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }}>{null}</View>;
-        },
-      };
-      obj2.Unsupported = obj3;
-      obj.screens = obj2;
-      return jsx(onDismiss(7155).Navigator, { initialRouteName: "Unsupported", screens: null });
-    };
+    }),
+    render() {
+      const obj = { style: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }, children: null };
+      const obj2 = { variant: "text-lg/normal", color: "text-default", children: null };
+      const intl = onDismiss(1114).intl;
+      obj2.children = intl.string(onDismiss(1114).t.I22zuX);
+      obj.children = jsx(onDismiss(5619).Text, { variant: "text-lg/normal", color: "text-default", children: null });
+      return <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 24 }}>{null}</View>;
+    },
+  };
+  obj2.Unsupported = obj3;
+  obj.screens = obj2;
+  return jsx(onDismiss(7163).Navigator, { initialRouteName: "Unsupported", screens: null });
+}

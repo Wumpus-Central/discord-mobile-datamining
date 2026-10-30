@@ -5,7 +5,7 @@ import HotspotStore from "../../modules/hotspot/HotspotStore.tsx";
 import GuildStore from "../GuildStore.tsx";
 
 function checkGuildIsHub(id) {
-  guild = GuildStore.getGuild(id);
+  const guild = GuildStore.getGuild(id);
   let tmp2 = null != guild;
   if (tmp2) {
     const features = guild.features;
@@ -21,7 +21,7 @@ function checkGuildIsHub(id) {
 function handleHotspotUpdates() {
   return true;
 }
-const GuildFeatures = fn(1084).GuildFeatures;
+const GuildFeatures = fn(1072).GuildFeatures;
 let c3 = false;
 const Store = initializeDefault.Store;
 class HubLinkNoticeStore extends Store {}

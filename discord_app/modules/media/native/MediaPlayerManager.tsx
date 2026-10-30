@@ -17,7 +17,7 @@ import MessageStore from "../../../stores/MessageStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 import MediaPlaybackPanelConstants from "../../media_panel/native/MediaPlaybackPanelConstants.tsx";
-import 00570__ from "../../../../_runtime/metro/00570__.js";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -29,22 +29,22 @@ const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 ({ PLAYBACK_COMPLETION_DETECTION_TOLERANCE: map1, PLAYBACK_PROGRESS_UPDATE_INTERVAL: closure_14 } = MediaPlaybackPanelConstants);
 const Permissions = Constants2.Permissions;
 let closure_16 = new LoggerDefault("MediaPlayerManager");
-const useMediaPlayerManagerStore = module_570.create((arg0) => {
+const useMediaPlayerManagerStore = module_560.create((arg0) => {
   closure_0 = arg0;
   const obj = {
-    activeMediaPlayerSource: "IconComponent",
-    mediaSourceMessage: "Set",
-    canAccessMedia: "duration",
+    activeMediaPlayerSource: "HermesInternal",
+    mediaSourceMessage: "PX_8",
+    canAccessMedia: "sa",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
-    rate: "Reflect",
-    showPip: "PLAY_ON_PLAYSTATION",
+    rate: "flexDirection",
+    showPip: 199.002,
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 44
+    currentlyDisplayedChannelId: "acked_disclosures"
   };
   return obj;
 });
@@ -115,7 +115,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(1271).batchUpdates(() => {
+  self(1260).batchUpdates(() => {
     const activeMediaPlayerSource = obj.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -171,7 +171,7 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(1271).batchUpdates(() => {
+  self(1260).batchUpdates(() => {
     self.pauseCurrentPlayer();
     obj.setState({ wasPipClosedByUser: true, showPip: false });
   });
@@ -275,7 +275,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(1271).batchUpdates(() => {
+  source(1260).batchUpdates(() => {
     let id;
     const state = obj.getState();
     if (source != null) {
@@ -284,7 +284,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "duration", rate: false, isPlaying: false, wasPipClosedByUser: "identity" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "sa", rate: false, isPlaying: false, wasPipClosedByUser: "KeyboardBackgroundView" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

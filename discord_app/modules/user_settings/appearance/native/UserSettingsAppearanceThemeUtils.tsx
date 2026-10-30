@@ -12,9 +12,9 @@ import CustomThemeMobileStore from "../../../client_themes/native/CustomThemeMob
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SystemThemeState = fn(1207).SystemThemeState;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const constants = fn(1391).AnalyticsPremiumFeatureNames;
+const SystemThemeState = fn(1196).SystemThemeState;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const constants = fn(1386).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
@@ -117,8 +117,8 @@ export function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations
     }
   }
 }
-export function getSyncedModeThemeIndex(memo2, stateFromStores) {
-  const syncedClientTheme = ThemeStore.getSyncedClientTheme(stateFromStores);
+export function getSyncedModeThemeIndex(memo2, systemTheme) {
+  const syncedClientTheme = ThemeStore.getSyncedClientTheme(systemTheme);
   let prop;
   if (syncedClientTheme != null) {
     prop = syncedClientTheme.customUserThemeSettings;
@@ -147,7 +147,7 @@ export function getSyncedModeThemeIndex(memo2, stateFromStores) {
       return findIndexResult1;
     }
   }
-  closure_1 = ThemeStore.themePreferenceForSystemTheme(stateFromStores);
+  closure_1 = ThemeStore.themePreferenceForSystemTheme(systemTheme);
   const findIndexResult2 = memo2.findIndex((theme) => theme.theme === closure_1);
   let num3 = 0;
   if (findIndexResult2 >= 0) {
@@ -189,7 +189,7 @@ export function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
   } else {
     if (c4) {
       if (tmp >= 0) {
-        return memo1.findIndex((type) => type.type === userPreset(1253).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+        return memo1.findIndex((type) => type.type === userPreset(1242).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
       }
     }
     const str = "system";

@@ -1,5 +1,4 @@
 // discord_app/modules/conjure/shared/ConjureUtils.tsx
-import c from "../../../../_runtime/00576_c.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
 import useAppChannelApplication from "../../app_channels/useAppChannelApplication.tsx";
@@ -25,54 +24,14 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4935);
+let GuildChannelStore = fn(4939);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Permissions: closure_9, ChannelTypes } = Constants);
 let items = [,];
 ({ GUILD_DIRECTORY: arr[0], GUILD_STORE: arr[1] } = ChannelTypes);
 const set = new Set(items);
-fn(558);
-const ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useCanAccessConjure(guildId, location) {
-      const cResult = c.c(3);
-      if (cResult[0] === guildId.id) {
-        if (cResult[1] === location) {
-          let tmp4 = cResult[2];
-        }
-        return ConjureGuildExperiment.useIsConjureGuildEnabled(tmp4);
-      }
-      const obj2 = { guildId: guildId.id, location };
-      cResult[0] = guildId.id;
-      cResult[1] = location;
-      cResult[2] = obj2;
-      tmp4 = obj2;
-    }
-  : function useCanAccessConjure(guildId, location) {
-      return ConjureGuildExperiment.useIsConjureGuildEnabled({ guildId: guildId.id, location });
-    };
-function isConjureGuildEligible(guildId, ConjureRemixSheet) {
-  return ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location: ConjureRemixSheet });
-}
-function eligibleConjureGuilds(arr, arg1) {
-  closure_0 = arg1;
-  const found = arr.filter((guildId) =>
-    ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location: _location }),
-  );
-  return found.sort((id, id2) => {
-    let num = -1;
-    if (id.id >= id2.id) {
-      let num2 = 0;
-      if (id.id > id2.id) {
-        num2 = 1;
-      }
-      num = num2;
-    }
-    return num;
-  });
-}
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureUtils.tsx");
 
@@ -119,10 +78,10 @@ export function getConjureProjectAccessSettings(flags) {
   };
 }
 export { conjureChannelAppId };
-export function isConjureProjectInGuild(item10020, guildId) {
+export function isConjureProjectInGuild(item10020, arg1) {
   let tmp = null != item10020;
   if (tmp) {
-    let tmp3 = item10020.guild_id === guildId || item10020.preview_guild_id === guildId;
+    let tmp3 = item10020.guild_id === arg1 || item10020.preview_guild_id === arg1;
     if (!tmp3) {
       tmp3 = null == item10020.guild_id && null == item10020.preview_guild_id;
       const tmp4 = null == item10020.guild_id && null == item10020.preview_guild_id;
@@ -141,8 +100,26 @@ export function findConjureChannelId(guild_id, application_id) {
   }
   return null;
 }
-export { isConjureGuildEligible };
-export { eligibleConjureGuilds };
+export function isConjureGuildEligible(guildId, ConjureRemixSheet) {
+  return ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location: ConjureRemixSheet });
+}
+export function eligibleConjureGuilds(arr, arg1) {
+  closure_0 = arg1;
+  const found = arr.filter((guildId) =>
+    ConjureGuildExperiment.isConjureGuildEnabled({ guildId: guildId.id, location: _location }),
+  );
+  return found.sort((id, id2) => {
+    let num = -1;
+    if (id.id >= id2.id) {
+      let num2 = 0;
+      if (id.id > id2.id) {
+        num2 = 1;
+      }
+      num = num2;
+    }
+    return num;
+  });
+}
 export function hasEligibleConjureGuild(guildsArray, useIsOwnedConjureApplication) {
   const _location = useIsOwnedConjureApplication;
   return guildsArray.some((guildId) =>
@@ -151,7 +128,7 @@ export function hasEligibleConjureGuild(guildsArray, useIsOwnedConjureApplicatio
 }
 export function resolveConjureWorkspaceGuildId(ConjureChatStore) {
   const guildId = SelectedGuildStore.getGuildId();
-  guild = null;
+  let guild = null;
   if (null != guildId) {
     guild = GuildStore.getGuild(guildId);
   }
@@ -197,7 +174,9 @@ export function canStartConjureProject(id, location) {
   }
   return result;
 }
-export const useCanAccessConjure = tmp5;
+export function useCanAccessConjure(guildId, useGuildActionRows) {
+  return ConjureGuildExperiment.useIsConjureGuildEnabled({ guildId: guildId.id, location: useGuildActionRows });
+}
 export function isConjureChannelCandidate(channel, ActivitySounds) {
   let type;
   if (channel != null) {
@@ -240,76 +219,30 @@ export function isConjureChannelCandidate(channel, ActivitySounds) {
   }
   return result;
 }
-export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsConjureChannelCandidate(guild_id, location) {
-      const cResult = c.c(7);
-      const appChannelApplication = useAppChannelApplication.useAppChannelApplication(guild_id);
-      guild_id = undefined;
-      if (guild_id != null) {
-        guild_id = guild_id.guild_id;
-      }
-      if (cResult[0] === location) {
-        if (cResult[1] === guild_id) {
-          let tmp6 = cResult[2];
-        }
-        const isConjureGuildEnabled = ConjureGuildExperiment.useIsConjureGuildEnabled(tmp6);
-        if (cResult[3] === appChannelApplication) {
-          if (cResult[4] === guild_id) {
-            if (cResult[5] === isConjureGuildEnabled) {
-              let tmp8 = cResult[6];
-            }
-            return tmp8;
-          }
-        }
-        let type;
-        if (guild_id != null) {
-          type = guild_id.type;
-        }
-        let tmp11 = type === ChannelTypes.GUILD_APP;
-        if (tmp11) {
-          let conjureProjectId;
-          if (appChannelApplication != null) {
-            conjureProjectId = appChannelApplication.conjureProjectId;
-          }
-          tmp11 = null != conjureProjectId;
-        }
-        if (tmp11) {
-          tmp11 = isConjureGuildEnabled;
-        }
-        cResult[3] = appChannelApplication;
-        cResult[4] = guild_id;
-        cResult[5] = isConjureGuildEnabled;
-        cResult[6] = tmp11;
-        tmp8 = tmp11;
-        const tmpResult = ConjureGuildExperiment;
-      }
-      const obj3 = { guildId: guild_id, location };
-      cResult[0] = location;
-      cResult[1] = guild_id;
-      cResult[2] = obj3;
-      tmp6 = obj3;
+export function useIsConjureChannelCandidate(channel, AppChannel) {
+  const appChannelApplication = useAppChannelApplication.useAppChannelApplication(channel);
+  let guild_id;
+  if (channel != null) {
+    guild_id = channel.guild_id;
+  }
+  let type;
+  const isConjureGuildEnabled = ConjureGuildExperiment.useIsConjureGuildEnabled({
+    guildId: guild_id,
+    location: AppChannel,
+  });
+  if (channel != null) {
+    type = channel.type;
+  }
+  let tmp5 = type === ChannelTypes.GUILD_APP;
+  if (tmp5) {
+    let conjureProjectId;
+    if (appChannelApplication != null) {
+      conjureProjectId = appChannelApplication.conjureProjectId;
     }
-  : function useIsConjureChannelCandidate(guild_id, location) {
-      const appChannelApplication = useAppChannelApplication.useAppChannelApplication(guild_id);
-      guild_id = undefined;
-      if (guild_id != null) {
-        guild_id = guild_id.guild_id;
-      }
-      let type;
-      const isConjureGuildEnabled = ConjureGuildExperiment.useIsConjureGuildEnabled({ guildId: guild_id, location });
-      if (guild_id != null) {
-        type = guild_id.type;
-      }
-      let tmp5 = type === ChannelTypes.GUILD_APP;
-      if (tmp5) {
-        let conjureProjectId;
-        if (appChannelApplication != null) {
-          conjureProjectId = appChannelApplication.conjureProjectId;
-        }
-        tmp5 = null != conjureProjectId;
-      }
-      if (tmp5) {
-        tmp5 = isConjureGuildEnabled;
-      }
-      return tmp5;
-    };
+    tmp5 = null != conjureProjectId;
+  }
+  if (tmp5) {
+    tmp5 = isConjureGuildEnabled;
+  }
+  return tmp5;
+}

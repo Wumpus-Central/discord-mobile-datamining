@@ -15,5 +15,7 @@ export const EmbeddedSurfaceType = {
   [3]: "INTERACTION_MODAL",
   OVERLAY: 4,
   [4]: "OVERLAY",
+  GUILD_SPACE: 5,
+  [5]: "GUILD_SPACE",
 };
 export const EmbeddedSurfaceTypeSets = obj;

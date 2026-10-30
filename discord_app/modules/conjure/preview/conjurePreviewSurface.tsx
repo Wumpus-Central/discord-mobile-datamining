@@ -6,7 +6,7 @@ import FramesStore from "../../frames/FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(6834);
+const FramesConstants = fn(6841);
 ({
   getFrameHostWindowKey: c3,
   isLaunched: closure_4,
@@ -14,7 +14,7 @@ const FramesConstants = fn(6834);
   OVERLAY_SURFACE: metroRequire,
 } = FramesConstants);
 let c7 = "0";
-const CONJURE_PREVIEW_SURFACE = { type: fn(5664).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
+const CONJURE_PREVIEW_SURFACE = { type: fn(5670).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewSurface.tsx");
 
@@ -41,7 +41,7 @@ export function getConjurePreviewGuildId(project) {
   }
   return guild_id;
 }
-export function getConjurePreviewSurface(stateFromStores) {
+export function getConjurePreviewSurface(conjurePreviewGuildId) {
   let APP_CHANNEL = frameSurface;
   if (frameSurface === undefined) {
     APP_CHANNEL = EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL;
@@ -49,16 +49,16 @@ export function getConjurePreviewSurface(stateFromStores) {
   const obj = conjurePreviewFrameSurfaces;
   const result = obj.previewFrameLaunchType(APP_CHANNEL);
   if (result === EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL) {
-    if (null == stateFromStores) {
+    if (null == conjurePreviewGuildId) {
       let obj3 = obj;
     }
     return obj3;
   }
-  if (null == stateFromStores) {
+  if (null == conjurePreviewGuildId) {
     const obj2 = { type: result, channelId };
     obj3 = obj2;
   } else {
-    obj3 = { type: result, channelId, guildId: stateFromStores };
+    obj3 = { type: result, channelId, guildId: conjurePreviewGuildId };
   }
 }
 export function getConjureBuilderPreviewFrames(previewAppId) {

@@ -15,9 +15,9 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_9 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5281).Button);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5629).Button);
 const OPACITY_TIMING = { duration: 200 };
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = {
   position: "absolute",
@@ -46,325 +46,119 @@ obj.ownStreamText = {
 };
 let closure_12 = createStyles.createStyles(obj);
 const __initData = {
-  code: 'function VoicePanelStreamPreviewTsx1(){const{mode,withTiming,OPACITY_TIMING}=this.__closure;if(mode==null){return{opacity:1};}return{opacity:withTiming(mode.get()==="pip"?0:1,OPACITY_TIMING)};}',
-};
-const __initData2 = {
-  code: "function VoicePanelStreamPreviewTsx2(){const{mode,withTiming,OPACITY_TIMING}=this.__closure;if(mode==null){return{opacity:1};}return{opacity:withTiming(mode.get()==='pip'?0:1,OPACITY_TIMING)};}",
-};
-const ReactCompilerGating = fn(558);
-let obj4 = {
-  textAlign: "center",
-  paddingHorizontal: nativeDefault.space.PX_16,
-  paddingVertical: nativeDefault.space.PX_16,
+  code: "function VoicePanelStreamPreviewTsx1(){const{mode,withTiming,OPACITY_TIMING}=this.__closure;if(mode==null){return{opacity:1};}return{opacity:withTiming(mode.get()==='pip'?0:1,OPACITY_TIMING)};}",
 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelStreamPreview.tsx");
 
-export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnabled()
-  ? function VoicePanelStreamPreview(mode) {
-      const cResult = mode(576).c(28);
-      mode = mode.mode;
-      const stream = mode.stream;
-      ({ disabled, onPress, layout } = mode);
-      const tmp4 = closure_12();
-      let guildId;
-      let obj = mode(576);
-      if (stream != null) {
-        guildId = stream.guildId;
+export function VoicePanelStreamPreview(mode) {
+  mode = mode.mode;
+  const stream = mode.stream;
+  ({ disabled, onPress, layout } = mode);
+  const tmp = closure_12();
+  let guildId;
+  if (stream != null) {
+    guildId = stream.guildId;
+  }
+  let channelId;
+  if (stream != null) {
+    channelId = stream.channelId;
+  }
+  let ownerId;
+  if (stream != null) {
+    ownerId = stream.ownerId;
+  }
+  const previewUrl = stream(12003)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(12003);
+  const items = [ApplicationStreamingStore, AuthenticationStore];
+  const items1 = [stream];
+  const stateFromStores = mode(504).useStateFromStores(
+    items,
+    () => {
+      let tmp2 = null != stream;
+      if (tmp2) {
+        tmp2 = stream.ownerId === AuthenticationStore.getId();
       }
-      let channelId;
-      if (stream != null) {
-        channelId = stream.channelId;
+      if (tmp2) {
+        tmp2 =
+          null ==
+          ApplicationStreamingStore.getStreamerActiveStreamMetadataForStream(StreamKeyUtils.encodeStreamKey(stream));
       }
-      let ownerId;
-      if (stream != null) {
-        ownerId = stream.ownerId;
-      }
-      const previewUrl = stream(11810)(guildId, channelId, ownerId).previewUrl;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ApplicationStreamingStore, AuthenticationStore];
-        cResult[0] = items;
-        let first = items;
+      return tmp2;
+    },
+    items1,
+  );
+  let obj = mode(504);
+  class T {
+    constructor() {
+      obj = mode;
+      if (null == mode) {
+        obj1 = { opacity: 1 };
       } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== stream) {
-        const fn = function u() {
-          let tmp2 = null != stream;
-          if (tmp2) {
-            tmp2 = stream.ownerId === AuthenticationStore.getId();
-          }
-          if (tmp2) {
-            tmp2 =
-              null ==
-              ApplicationStreamingStore.getStreamerActiveStreamMetadataForStream(
-                StreamKeyUtils.encodeStreamKey(stream),
-              );
-          }
-          return tmp2;
-        };
-        const items1 = [stream];
-        cResult[1] = stream;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp14 = items1;
-        let tmp13 = fn;
-      } else {
-        tmp13 = cResult[2];
-        tmp14 = cResult[3];
-      }
-      const tmp6 = stream(11810);
-      ownStreamTextContainer = mode(504).useStateFromStores(first, tmp13, tmp14);
-      const tmpResult = mode(504);
-      class M {
-        constructor() {
-          obj = mode;
-          if (null == mode) {
-            obj1 = { opacity: 1 };
-          } else {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj2 = closure_0(closure_2[14]);
-            num = 1;
-            str = "pip";
-            if ("pip" === obj.get()) {
-              num = 0;
-            }
-            obj1 = { opacity: null };
-            tmp3 = closure_11;
-            obj1.opacity = obj2.withTiming(num, closure_11);
-          }
-          return obj1;
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj2 = closure_0(closure_2[12]);
+        num = 1;
+        str = "pip";
+        if ("pip" === obj.get()) {
+          num = 0;
         }
+        obj1 = { opacity: null };
+        tmp3 = closure_11;
+        obj1.opacity = obj2.withTiming(num, closure_11);
       }
-      const tmpResult2 = mode(5086);
-      M.__closure = { mode, withTiming: mode(5243).withTiming, OPACITY_TIMING };
-      M.__workletHash = 8648991604611;
-      M.__initData = __initData;
-      const animatedStyle = tmpResult2.useAnimatedStyle(M);
-      let tmp16 = disabled;
-      if (!disabled) {
-        tmp16 = ownStreamTextContainer;
-      }
-      if (cResult[4] === layout) {
-        if (cResult[5] === tmp4.streamPreviewImage) {
-          if (cResult[6] === previewUrl) {
-            let tmp17 = cResult[7];
-          }
-          if (cResult[8] === disabled) {
-            if (cResult[9] === ownStreamTextContainer) {
-              if (cResult[10] === layout) {
-                if (cResult[11] === onPress) {
-                  if (cResult[12] === tmp4.ownStreamText) {
-                    if (cResult[13] === tmp4.ownStreamTextContainer) {
-                      if (cResult[15] === animatedStyle) {
-                        if (cResult[16] === tmp22) {
-                          let tmp28 = cResult[17];
-                        }
-                        if (cResult[18] === layout) {
-                          if (cResult[19] === tmp28) {
-                            let tmp31 = cResult[20];
-                          }
-                          if (cResult[21] === layout) {
-                            if (cResult[22] === onPress) {
-                              if (cResult[23] === tmp4.roundedCard) {
-                                if (cResult[24] === tmp16) {
-                                  if (cResult[25] === tmp17) {
-                                    if (cResult[26] === tmp31) {
-                                      let tmp34 = cResult[27];
-                                    }
-                                    return tmp34;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          let obj3 = {
-                            layout,
-                            onPress,
-                            style: tmp4.roundedCard,
-                            disabled: tmp16,
-                            accessible: false,
-                            children: null,
-                          };
-                          const items2 = [tmp17, tmp31];
-                          obj3.children = items2;
-                          const tmp37 = closure_8(closure_9, obj3);
-                          cResult[21] = layout;
-                          cResult[22] = onPress;
-                          cResult[23] = tmp4.roundedCard;
-                          cResult[24] = tmp16;
-                          cResult[25] = tmp17;
-                          cResult[26] = tmp31;
-                          cResult[27] = tmp37;
-                          tmp34 = tmp37;
-                        }
-                        const obj4 = { layout, children: tmp28 };
-                        const tmp33 = closure_7(tmp5(7228), obj4);
-                        cResult[18] = layout;
-                        cResult[19] = tmp28;
-                        cResult[20] = tmp33;
-                        tmp31 = tmp33;
-                      }
-                      const obj5 = { style: animatedStyle, children: cResult[14] };
-                      const tmp30 = closure_7(tmp5(7228), obj5);
-                      cResult[15] = animatedStyle;
-                      cResult[16] = cResult[14];
-                      cResult[17] = tmp30;
-                      tmp28 = tmp30;
-                    }
-                  }
-                }
-              }
-            }
-          }
-          if (ownStreamTextContainer) {
-            const obj6 = { style: tmp4.ownStreamTextContainer, children: null };
-            const obj7 = {
-              variant: "text-sm/semibold",
-              color: "text-overlay-light",
-              style: tmp4.ownStreamText,
-              children: null,
-            };
-            const intl2 = tmp(1125).intl;
-            obj7.children = intl2.string(tmp(1125).t["ro/HN8"]);
-            obj6.children = closure_7(tmp(5271).Text, obj7);
-            let tmp23Result = closure_7(closure_4, obj6);
-          } else {
-            const obj8 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
-            const intl = tmp(1125).intl;
-            obj8.text = intl.string(tmp(1125).t["7Xq/nV"]);
-            obj8.onPress = onPress;
-            tmp23Result = closure_7(closure_10, obj8);
-          }
-          cResult[8] = disabled;
-          cResult[9] = ownStreamTextContainer;
-          cResult[10] = layout;
-          cResult[11] = onPress;
-          ({ ownStreamText: tmp3[12], ownStreamTextContainer } = tmp4);
-          cResult[13] = ownStreamTextContainer;
-          cResult[14] = tmp23Result;
-        }
-      }
-      let tmp18 = null;
-      if (null != previewUrl) {
-        const obj9 = { layout, style: tmp4.streamPreviewImage, children: null };
-        const obj10 = { source: null, style: null, resizeMode: "cover" };
-        const obj11 = { uri: previewUrl };
-        obj10.source = obj11;
-        obj10.style = closure_3.absoluteFill;
-        obj9.children = closure_7(tmp5(5707), obj10);
-        tmp18 = closure_7(tmp5(7228), obj9);
-        const tmp5Result = tmp5(7228);
-      }
-      cResult[4] = layout;
-      cResult[5] = tmp4.streamPreviewImage;
-      cResult[6] = previewUrl;
-      cResult[7] = tmp18;
-      tmp17 = tmp18;
-      let obj2 = { mode, withTiming: mode(5243).withTiming, OPACITY_TIMING };
+      return obj1;
     }
-  : function VoicePanelStreamPreview(mode) {
-      mode = mode.mode;
-      const stream = mode.stream;
-      ({ disabled, onPress, layout } = mode);
-      const tmp = closure_12();
-      let guildId;
-      if (stream != null) {
-        guildId = stream.guildId;
-      }
-      let channelId;
-      if (stream != null) {
-        channelId = stream.channelId;
-      }
-      let ownerId;
-      if (stream != null) {
-        ownerId = stream.ownerId;
-      }
-      const previewUrl = stream(11810)(guildId, channelId, ownerId).previewUrl;
-      const tmp4 = stream(11810);
-      const items = [ApplicationStreamingStore, AuthenticationStore];
-      const items1 = [stream];
-      const stateFromStores = mode(504).useStateFromStores(
-        items,
-        () => {
-          let tmp2 = null != stream;
-          if (tmp2) {
-            tmp2 = stream.ownerId === AuthenticationStore.getId();
-          }
-          if (tmp2) {
-            tmp2 =
-              null ==
-              ApplicationStreamingStore.getStreamerActiveStreamMetadataForStream(
-                StreamKeyUtils.encodeStreamKey(stream),
-              );
-          }
-          return tmp2;
-        },
-        items1,
-      );
-      let obj = mode(504);
-      const fn = function v() {
-        if (null == mode) {
-          let obj3 = { opacity: 1 };
-        } else {
-          let num = 1;
-          if ("pip" === mode.get()) {
-            num = 0;
-          }
-          obj3 = { opacity: timing.withTiming(num, closure_11) };
-        }
-        return obj3;
-      };
-      let obj2 = mode(5086);
-      fn.__closure = { mode, withTiming: mode(5243).withTiming, OPACITY_TIMING };
-      fn.__workletHash = 1723503693792;
-      fn.__initData = __initData2;
-      const obj4 = { layout, onPress, style: tmp.roundedCard, disabled: null, accessible: false, children: null };
-      let tmp13 = disabled;
-      const animatedStyle = obj2.useAnimatedStyle(fn);
-      if (!disabled) {
-        tmp13 = stateFromStores;
-      }
-      obj4.disabled = tmp13;
-      let tmp14 = null;
-      if (null != previewUrl) {
-        const obj5 = { layout, style: tmp.streamPreviewImage, children: null };
-        const obj6 = { source: null, style: null, resizeMode: "cover" };
-        const obj7 = { uri: previewUrl };
-        obj6.source = obj7;
-        obj6.style = closure_3.absoluteFill;
-        obj5.children = closure_7(tmp2(5707), obj6);
-        tmp14 = closure_7(tmp2(7228), obj5);
-        const tmp2Result = tmp2(7228);
-      }
-      const items2 = [tmp14];
-      const obj8 = { layout, children: null };
-      let obj3 = { mode, withTiming: mode(5243).withTiming, OPACITY_TIMING };
-      const obj9 = { style: animatedStyle, children: null };
-      const tmp2Result3 = stream(7228);
-      if (stateFromStores) {
-        const obj10 = { style: tmp.ownStreamTextContainer, children: null };
-        const obj11 = {
-          variant: "text-sm/semibold",
-          color: "text-overlay-light",
-          style: tmp.ownStreamText,
-          children: null,
-        };
-        const intl2 = tmp8(1125).intl;
-        obj11.children = intl2.string(tmp8(1125).t["ro/HN8"]);
-        obj10.children = closure_7(tmp8(5271).Text, obj11);
-        let tmp18Result = closure_7(closure_4, obj10);
-      } else {
-        const obj12 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
-        const intl = tmp8(1125).intl;
-        obj12.text = intl.string(tmp8(1125).t["7Xq/nV"]);
-        obj12.onPress = onPress;
-        tmp18Result = closure_7(closure_10, obj12);
-      }
-      obj9.children = tmp18Result;
-      obj8.children = closure_7(stream(7228), obj9);
-      items2[1] = closure_7(tmp2Result3, obj8);
-      obj4.children = items2;
-      return closure_8(closure_9, obj4);
+  }
+  let obj2 = mode(5090);
+  T.__closure = { mode, withTiming: mode(5249).withTiming, OPACITY_TIMING };
+  T.__workletHash = 15496474861955;
+  T.__initData = __initData;
+  const obj4 = { layout, onPress, style: tmp.roundedCard, disabled: null, accessible: false, children: null };
+  let tmp13 = disabled;
+  const animatedStyle = obj2.useAnimatedStyle(T);
+  if (!disabled) {
+    tmp13 = stateFromStores;
+  }
+  obj4.disabled = tmp13;
+  let tmp14 = null;
+  if (null != previewUrl) {
+    const obj5 = { layout, style: tmp.streamPreviewImage, children: null };
+    const obj6 = { source: null, style: null, resizeMode: "cover" };
+    const obj7 = { uri: previewUrl };
+    obj6.source = obj7;
+    obj6.style = absoluteFill.absoluteFill;
+    obj5.children = closure_7(tmp2(5712), obj6);
+    tmp14 = closure_7(tmp2(7235), obj5);
+    const tmp2Result = tmp2(7235);
+  }
+  const items2 = [tmp14];
+  const obj8 = { layout, children: null };
+  let obj3 = { mode, withTiming: mode(5249).withTiming, OPACITY_TIMING };
+  const obj9 = { style: animatedStyle, children: null };
+  const tmp2Result3 = stream(7235);
+  if (stateFromStores) {
+    const obj10 = { style: tmp.ownStreamTextContainer, children: null };
+    const obj11 = {
+      variant: "text-sm/semibold",
+      color: "text-overlay-light",
+      style: tmp.ownStreamText,
+      children: null,
     };
+    const intl2 = tmp8(1114).intl;
+    obj11.children = intl2.string(tmp8(1114).t["ro/HN8"]);
+    obj10.children = closure_7(tmp8(5619).Text, obj11);
+    let tmp18Result = closure_7(closure_4, obj10);
+  } else {
+    const obj12 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
+    const intl = tmp8(1114).intl;
+    obj12.text = intl.string(tmp8(1114).t["7Xq/nV"]);
+    obj12.onPress = onPress;
+    tmp18Result = closure_7(closure_10, obj12);
+  }
+  obj9.children = tmp18Result;
+  obj8.children = closure_7(stream(7235), obj9);
+  items2[1] = closure_7(tmp2Result3, obj8);
+  obj4.children = items2;
+  return closure_8(closure_9, obj4);
+}

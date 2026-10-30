@@ -26,7 +26,6 @@ export const GameCompanyRole = {
   DEVELOPER: 2,
   [2]: "DEVELOPER",
 };
-export const EmbeddedActivitySupportedPlatforms = { IOS: "ios", ANDROID: "android", WEB: "web" };
 export const EmbeddedActivityLabelTypes = { NONE: 0, [0]: "NONE", NEW: 1, [1]: "NEW", UPDATED: 2, [2]: "UPDATED" };
 export const EmbeddedActivitySurfaces = { VOICE_LAUNCHER: "voice_launcher", TEXT_LAUNCHER: "text_launcher" };
 export const GameLinkTypes = { LINKED: 1, [1]: "LINKED", OFFICIAL: 2, [2]: "OFFICIAL", NVIDIA: 3, [3]: "NVIDIA" };

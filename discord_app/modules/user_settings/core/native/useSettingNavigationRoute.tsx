@@ -1,11 +1,8 @@
 // discord_app/modules/user_settings/core/native/useSettingNavigationRoute.tsx
-import Link from "../../../../../_runtime/01504_Link.js";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
+import Link from "../../../../../_runtime/01499_Link.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/user_settings/core/native/useSettingNavigationRoute.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/core/native/useSettingNavigationRoute.tsx");
 
 export function useSettingNavigationRoute() {
   return Link.useRoute();

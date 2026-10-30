@@ -19,7 +19,7 @@ export function useRedeemVirtualCurrency(order) {
   const isSubmitting = _slicedToArray(enabled(false), 2);
   _slicedToArray = isSubmitting[1];
   const tmp5 = _slicedToArray(enabled(null), 2);
-  enabled = entitlements(9519).useConfig({ location: "orb_checkout_modal" }).enabled;
+  enabled = entitlements(9538).useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {
     order = order.order;
@@ -31,7 +31,7 @@ export function useRedeemVirtualCurrency(order) {
   if (order != null) {
     onSignFailure = order.onSignFailure;
   }
-  let obj = entitlements(9519);
+  let obj = entitlements(9538);
   const orderSigning = require("useOrderSigning").useOrderSigning({
     order,
     errorSource: "orb_redeem_orders_api",
@@ -42,6 +42,18 @@ export function useRedeemVirtualCurrency(order) {
   if (enabled) {
     error = orderSigning.error;
   }
+  let onSetIsSubmitting = null;
+  if (null != order) {
+    onSetIsSubmitting = order.onSetIsSubmitting;
+  }
+  const items = [onSetIsSubmitting];
+  const tmp12 = _reportError((arg0) => {
+    closure_4(arg0);
+    if (null != onSetIsSubmitting) {
+      onSetIsSubmitting(arg0);
+    }
+  }, items);
+  closure_10 = tmp12;
   _require = asyncGeneratorStep(async (skuId, loadId, arg2) => {
     dependencyMap = arg2;
     c7 = 0;
@@ -58,7 +70,7 @@ export function useRedeemVirtualCurrency(order) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -72,13 +84,14 @@ export function useRedeemVirtualCurrency(order) {
               const obj4 = { value, done: true };
               return obj4;
             } else {
+              closure_4 = tmp4;
               closure_3 = tmp8;
               closure_131_0 = skuId;
               closure_131_1 = loadId;
               closure_131_2 = dependencyMap;
               closure_131_3 = undefined;
               closure_131_4 = undefined;
-              tmp4(true);
+              closure_1_10(true);
               const obj5 = { loadId, errorExtra: null };
               const obj6 = { skuId, loadId };
               obj5.errorExtra = obj6;
@@ -103,12 +116,12 @@ export function useRedeemVirtualCurrency(order) {
                   v4 = 4;
                   c8 = 1;
                   const obj9 = {
-                    value: skuId(7404).fetchOrderEntitlementsWithRetry(closure_131_3.order.id),
+                    value: skuId(7412).fetchOrderEntitlementsWithRetry(closure_131_3.order.id),
                     done: false,
                   };
                   return obj9;
                 } else {
-                  tmp4(false);
+                  closure_1_10(false);
                   c8 = 3;
                 }
               }
@@ -122,14 +135,14 @@ export function useRedeemVirtualCurrency(order) {
                 throw value;
               } else if (arg0 === 2) {
                 v0 = 0;
-                tmp4(false);
+                closure_1_10(false);
                 c8 = 3;
                 const obj = { value, done: true };
                 return obj;
               } else {
                 closure_131_4 = value;
                 if (0 === closure_131_4.length) {
-                  const orderProcessingPendingError = new skuId(7404).OrderProcessingPendingError();
+                  const orderProcessingPendingError = new skuId(7412).OrderProcessingPendingError();
                   throw orderProcessingPendingError;
                 } else {
                   dependencyMap(closure_131_4);
@@ -140,10 +153,10 @@ export function useRedeemVirtualCurrency(order) {
                 }
               }
               v0 = 0;
-              tmp4(false);
+              closure_1_10(false);
             }
             v0 = 0;
-            tmp4(false);
+            closure_1_10(false);
             throw closure_5;
           }
         } catch (tmp53) {
@@ -160,8 +173,8 @@ export function useRedeemVirtualCurrency(order) {
       }
     })();
   });
-  const items = [signOrder, _reportError];
-  const tmp11 = _reportError(function () {
+  const items1 = [signOrder, _reportError, tmp12];
+  const tmp13 = _reportError(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -170,40 +183,41 @@ export function useRedeemVirtualCurrency(order) {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }, items);
-  closure_9 = tmp11;
-  const tmp12 = _reportError((skuId, loadId, arg2) => {
+  }, items1);
+  closure_11 = tmp13;
+  const items2 = [tmp12];
+  const tmp14 = _reportError((skuId, loadId, arg2) => {
     closure_0 = arg2;
     return closure_0(closure_2[6]).redeemVirtualCurrencyForSKU({
       skuId,
       loadId,
       onRedeemStart() {
-        closure_1_4(true);
+        closure_1_10(true);
         closure_1_3(null);
       },
       onRedeemSucceed(arg0) {
         closure_2(arg0);
-        closure_4(false);
+        closure_10(false);
         if (closure_0 != null) {
           closure_0(arg0);
         }
       },
       onRedeemFail(arg0) {
         closure_1_3(arg0);
-        closure_1_4(false);
+        closure_1_10(false);
       },
     });
-  }, []);
-  closure_10 = tmp12;
-  const items1 = [enabled, tmp11, tmp12];
-  const items2 = [entitlements, error];
+  }, items2);
+  closure_12 = tmp14;
+  const items3 = [enabled, tmp13, tmp14];
+  const items4 = [entitlements, error];
   const redeemVirtualCurrency = _reportError((arg0, arg1, arg2) => {
     if (enabled) {
-      closure_9(arg0, arg1, arg2);
+      closure_11(arg0, arg1, arg2);
     } else {
-      closure_10(arg0, arg1, arg2);
+      closure_12(arg0, arg1, arg2);
     }
-  }, items1);
+  }, items3);
   signOrder(() => {
     if (null == error) {
       if (null != entitlements) {
@@ -240,6 +254,6 @@ export function useRedeemVirtualCurrency(order) {
       const obj = { amount: "1 orb", errorMessage: tmp.message };
       closure_0(intl.format(util.t["7gHWrd"], obj));
     }
-  }, items2);
+  }, items4);
   return { entitlements, error, isSubmitting: isSubmitting[0], responseMessage, redeemVirtualCurrency };
 }

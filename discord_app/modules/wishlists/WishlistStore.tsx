@@ -23,8 +23,8 @@ prototype["get"] = function get(arg0) {
 prototype["getWishlist"] = function getWishlist(wishlistId) {
   return this.get(wishlistId).data;
 };
-prototype["getWishlistItems"] = function getWishlistItems(arg0) {
-  const data = this.get(arg0).data;
+prototype["getWishlistItems"] = function getWishlistItems(firstWishlistId) {
+  const data = this.get(firstWishlistId).data;
   if (null != data) {
     let items = React3(data);
   } else {

@@ -24,7 +24,7 @@ const SearchFilterAddLocations = TrackingConstants.SearchFilterAddLocations;
 ({ SEARCH_DATE_FORMAT: metroRequire, SearchTokenTypes: closure_7, SearchTypes: closure_8 } = Constants);
 let result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx");
 
-export function getSearchTokenLabel(searchContext, item) {
+export function getSearchTokenLabel(type, item) {
   if (constants.FILTER_FROM === item) {
     const intl9 = util.intl;
     return intl9.string(util.t["6iuVMn"]);
@@ -35,7 +35,7 @@ export function getSearchTokenLabel(searchContext, item) {
     const intl7 = util.intl;
     return intl7.string(util.t.CMKzQx);
   } else if (constants.FILTER_IN === item) {
-    if (searchContext.type === constants2.DMS) {
+    if (type.type === constants2.DMS) {
       const intl6 = util.intl;
       let stringResult = intl6.string(util.t["8Fmo42"]);
     } else {
@@ -62,64 +62,64 @@ export function getSearchTokenLabel(searchContext, item) {
     throw error;
   }
 }
-export function getSearchTokenSubLabel(cResult) {
-  if (constants.FILTER_FROM === cResult) {
+export function getSearchTokenSubLabel(searchTokenType) {
+  if (constants.FILTER_FROM === searchTokenType) {
     const intl8 = util.intl;
     return intl8.string(util.t.kkGlww);
-  } else if (constants.FILTER_HAS === cResult) {
+  } else if (constants.FILTER_HAS === searchTokenType) {
     const intl7 = util.intl;
     return intl7.string(util.t.gUfZa2);
-  } else if (constants.FILTER_IN === cResult) {
+  } else if (constants.FILTER_IN === searchTokenType) {
     const intl6 = util.intl;
     return intl6.string(util.t.qDUdlT);
-  } else if (constants.FILTER_MENTIONS === cResult) {
+  } else if (constants.FILTER_MENTIONS === searchTokenType) {
     const intl5 = util.intl;
     return intl5.string(util.t.ILtwK5);
-  } else if (constants.FILTER_ON === cResult) {
+  } else if (constants.FILTER_ON === searchTokenType) {
     const intl4 = util.intl;
     return intl4.string(util.t.t8bWvr);
-  } else if (constants.FILTER_BEFORE === cResult) {
+  } else if (constants.FILTER_BEFORE === searchTokenType) {
     const intl3 = util.intl;
     return intl3.string(util.t.YEN3uU);
-  } else if (constants.FILTER_AFTER === cResult) {
+  } else if (constants.FILTER_AFTER === searchTokenType) {
     const intl2 = util.intl;
     return intl2.string(util.t.hwbB7s);
-  } else if (constants.FILTER_AUTHOR_TYPE === cResult) {
+  } else if (constants.FILTER_AUTHOR_TYPE === searchTokenType) {
     const intl = util.intl;
     return intl.string(util.t.tJPdhZ);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("[getSearchTokenSubLabel] Unhandled search token type: " + cResult);
+    const error = new Error("[getSearchTokenSubLabel] Unhandled search token type: " + searchTokenType);
     throw error;
   }
 }
-export function getSearchTokenIcon(cResult) {
-  if (constants.FILTER_FROM === cResult) {
+export function getSearchTokenIcon(searchTokenType) {
+  if (constants.FILTER_FROM === searchTokenType) {
     return UserIcon.UserIcon;
-  } else if (constants.FILTER_HAS === cResult) {
+  } else if (constants.FILTER_HAS === searchTokenType) {
     return AttachmentIcon.AttachmentIcon;
-  } else if (constants.FILTER_IN === cResult) {
+  } else if (constants.FILTER_IN === searchTokenType) {
     return ChannelListMagnifyingGlassIcon.ChannelListMagnifyingGlassIcon;
-  } else if (constants.FILTER_MENTIONS === cResult) {
+  } else if (constants.FILTER_MENTIONS === searchTokenType) {
     return AtIcon.AtIcon;
-  } else if (constants.FILTER_ON === cResult) {
+  } else if (constants.FILTER_ON === searchTokenType) {
     return CalendarIcon.CalendarIcon;
-  } else if (constants.FILTER_BEFORE === cResult) {
+  } else if (constants.FILTER_BEFORE === searchTokenType) {
     return CalendarMinusIcon.CalendarMinusIcon;
-  } else if (constants.FILTER_AFTER === cResult) {
+  } else if (constants.FILTER_AFTER === searchTokenType) {
     return CalendarPlusIcon.CalendarPlusIcon;
-  } else if (constants.FILTER_AUTHOR_TYPE === cResult) {
+  } else if (constants.FILTER_AUTHOR_TYPE === searchTokenType) {
     return RobotIcon.RobotIcon;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("[getSearchTokenIcon] Unhandled search token type: " + cResult);
+    const error = new Error("[getSearchTokenIcon] Unhandled search token type: " + searchTokenType);
     throw error;
   }
 }
-export function getSearchTokenPressHandler(searchContext, token, CONTEXT_MENU) {
-  closure_0 = searchContext;
+export function getSearchTokenPressHandler(arg0, token, CONTEXT_MENU) {
+  closure_0 = arg0;
   closure_1 = token;
   closure_2 = CONTEXT_MENU;
   if (constants.FILTER_FROM !== token) {
@@ -215,7 +215,7 @@ export function getSearchTokenPressHandler(searchContext, token, CONTEXT_MENU) {
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(13697));
+  const keys = Object.keys(items(13844));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

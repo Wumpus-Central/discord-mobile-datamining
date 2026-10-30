@@ -3,14 +3,14 @@ import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTP
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import KeyboardAwareViewDefault from "../../../keyboard/native/KeyboardAwareView.tsx";
+import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "unicodeVersion" };
+const hasOwnProperty = { input: "", error: "children" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {

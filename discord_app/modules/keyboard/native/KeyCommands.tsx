@@ -2,9 +2,6 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 import NativeKeyCommandsModule_mod from "../../../../discord_common/js/packages/rtn-codegen/js/NativeKeyCommandsModule.tsx";
 
-const require = globalThis.__r;
-
-const require = fn;
 function toNativeKeyCommand(eventName) {
   return {
     eventName: eventName.eventName,
@@ -15,10 +12,10 @@ function toNativeKeyCommand(eventName) {
 }
 function registerKeyCommand(arg0) {
   const items = [];
-  items[HermesBuiltin.arraySpread(closure_4, 0)] = arg0;
-  closure_4 = items;
-  if (null == closure_6) {
-    closure_6 = NativeKeyCommandsModule.onKeyCommand((eventName) => {
+  items[HermesBuiltin.arraySpread(closure_3, 0)] = arg0;
+  closure_3 = items;
+  if (null == closure_5) {
+    closure_5 = NativeKeyCommandsModule.onKeyCommand((eventName) => {
       let diff = items.length - 1;
       if (0 <= diff) {
         while (true) {
@@ -33,56 +30,55 @@ function registerKeyCommand(arg0) {
       }
     });
   }
-  if (!c5) {
-    c5 = true;
+  if (!c4) {
+    c4 = true;
     const _queueMicrotask = queueMicrotask;
     queueMicrotask(() => {
-      c5 = false;
+      c4 = false;
       const map = new Map();
-      for (const item10012 of closure_1_4) {
+      for (const item10012 of closure_1_3) {
         let result = map.set(item10012.eventName, item10012);
         continue;
       }
       items = [...map.values()];
-      closure_1_1(closure_1_2[1]).setKeyCommands(items.map(closure_1_7));
+      closure_0(closure_1_1[1]).setKeyCommands(items.map(closure_1_6));
     });
   }
 }
 function unregisterKeyCommand(arg0) {
   closure_0 = arg0;
-  closure_4 = closure_4.filter((item) => item !== closure_0);
-  if (!c5) {
-    c5 = true;
+  closure_3 = closure_3.filter((item) => item !== closure_0);
+  if (!c4) {
+    c4 = true;
     const _queueMicrotask = queueMicrotask;
     queueMicrotask(() => {
-      c5 = false;
+      c4 = false;
       const map = new Map();
-      for (const item10012 of closure_1_4) {
+      for (const item10012 of closure_1_3) {
         let result = map.set(item10012.eventName, item10012);
         continue;
       }
       items = [...map.values()];
-      closure_1_1(closure_1_2[1]).setKeyCommands(items.map(closure_1_7));
+      closure_0(closure_1_1[1]).setKeyCommands(items.map(closure_1_6));
     });
   }
 }
 let NativeKeyCommandsModule = NativeKeyCommandsModule_mod;
-let closure_4 = [];
-let c5 = false;
-let closure_6 = null;
+let closure_3 = [];
+let c4 = false;
+let closure_5 = null;
 NativeKeyCommandsModule = NativeKeyCommandsModule.getConstants();
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/keyboard/native/KeyCommands.tsx");
 
 export const KeyModifierFlags = NativeKeyCommandsModule;
 export const KeyInputs = { ESCAPE: "UIKeyInputEscape" };
 export function subscribeKeyCommand(arg0) {
-  closure_0 = arg0;
+  importDefault = arg0;
   let items = [];
   items[HermesBuiltin.arraySpread(items, 0)] = arg0;
-  if (null == closure_6) {
-    closure_6 = NativeKeyCommandsModule.onKeyCommand((eventName) => {
+  if (null == closure_5) {
+    closure_5 = NativeKeyCommandsModule.onKeyCommand((eventName) => {
       let diff = items.length - 1;
       if (0 <= diff) {
         while (true) {
@@ -97,82 +93,51 @@ export function subscribeKeyCommand(arg0) {
       }
     });
   }
-  if (!c5) {
-    c5 = true;
+  if (!c4) {
+    c4 = true;
     let _queueMicrotask = queueMicrotask;
     queueMicrotask(() => {
-      c5 = false;
+      c4 = false;
       const map = new Map();
-      for (const item10012 of closure_1_4) {
+      for (const item10012 of closure_1_3) {
         let result = map.set(item10012.eventName, item10012);
         continue;
       }
       items = [...map.values()];
-      closure_1_1(closure_1_2[1]).setKeyCommands(items.map(closure_1_7));
+      closure_0(closure_1_1[1]).setKeyCommands(items.map(closure_1_6));
     });
   }
   return () => {
     items = items.filter((item) => item !== closure_0);
-    if (!c5) {
-      c5 = true;
+    if (!c4) {
+      c4 = true;
       const _queueMicrotask = queueMicrotask;
       queueMicrotask(() => {
-        c5 = false;
+        c4 = false;
         const map = new Map();
-        for (const item10012 of closure_1_4) {
+        for (const item10012 of closure_1_3) {
           let result = map.set(item10012.eventName, item10012);
           continue;
         }
         items = [...map.values()];
-        closure_1_1(closure_1_2[1]).setKeyCommands(items.map(closure_1_7));
+        closure_0(closure_1_1[1]).setKeyCommands(items.map(closure_1_6));
       });
     }
   };
 }
-export const useKeyCommands = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useKeyCommands(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(3);
-      if (cResult[0] !== arg0) {
-        const fn = function o() {
-          while (tmp2 !== undefined) {
-            let tmp5 = registerKeyCommand(tmp3);
-            continue;
-          }
-          return () => {
-            while (tmp2 !== undefined) {
-              let tmp5 = unregisterKeyCommand(tmp3);
-              continue;
-            }
-            tmp2 = dependencyMap[Symbol.iterator]();
-          };
-        };
-        const items = [arg0];
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-        tmp3 = cResult[2];
-      }
-      const effect = noop.useEffect(tmp2, tmp3);
+export function useKeyCommands(memo) {
+  const items = [memo];
+  const effect = noop.useEffect(() => {
+    while (tmp2 !== undefined) {
+      let tmp5 = registerKeyCommand(tmp3);
+      continue;
     }
-  : function useKeyCommands(arg0) {
-      dependencyMap = arg0;
-      const items = [arg0];
-      const effect = noop.useEffect(() => {
-        while (tmp2 !== undefined) {
-          let tmp5 = registerKeyCommand(tmp3);
-          continue;
-        }
-        return () => {
-          while (tmp2 !== undefined) {
-            let tmp5 = unregisterKeyCommand(tmp3);
-            continue;
-          }
-          tmp2 = dependencyMap[Symbol.iterator]();
-        };
-      }, items);
+    return () => {
+      while (tmp2 !== undefined) {
+        let tmp5 = unregisterKeyCommand(tmp3);
+        continue;
+      }
+      tmp2 = dependencyMap[Symbol.iterator]();
     };
+  }, items);
+}

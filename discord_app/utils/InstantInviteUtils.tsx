@@ -1,6 +1,7 @@
 // discord_app/utils/InstantInviteUtils.tsx
 import util from "../intl/index.native.tsx";
 import AutocompleteUtilsDefault from "AutocompleteUtils.tsx";
+import InviteTargetTypes from "../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
 import EmbeddedActivitiesStore from "../modules/activities/EmbeddedActivitiesStore.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import GuildMemberStore from "../stores/GuildMemberStore.tsx";
@@ -89,32 +90,31 @@ function addDmUsers(arg0) {
     continue;
   }
 }
-const ChannelTypes = fn(1084).ChannelTypes;
-const InviteTargetTypes = fn(7867).InviteTargetTypes;
+const ChannelTypes = fn(1072).ChannelTypes;
 const RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
 const dependencyMap = {
-  [fn(9089).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
-  [fn(9089).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
-  [fn(9089).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
-  [fn(9089).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
-  [fn(9089).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
-  [fn(9089).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
-  [fn(9089).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
-  [fn(9089).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
-  [fn(9089).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
-  [fn(9089).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
+  [fn(9102).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
+  [fn(9102).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
+  [fn(9102).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
+  [fn(9102).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
+  [fn(9102).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
+  [fn(9102).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
+  [fn(9102).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
+  [fn(9102).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
+  [fn(9102).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
+  [fn(9102).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
 };
-let items = [fn(9089).INVITE_OPTIONS_14_DAYS, fn(9089).INVITE_OPTIONS_30_DAYS, fn(9089).INVITE_OPTIONS_60_DAYS];
+let items = [fn(9102).INVITE_OPTIONS_14_DAYS, fn(9102).INVITE_OPTIONS_30_DAYS, fn(9102).INVITE_OPTIONS_60_DAYS];
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
 
 export default {
-  getMaxAgeOptionByValue(maxAge) {
-    closure_0 = maxAge;
+  getMaxAgeOptionByValue(label) {
+    closure_0 = label;
     items = [...items];
     let found = items.find((value) => value.value === closure_0);
     if (found == null) {
@@ -144,25 +144,25 @@ export default {
       return tmp2;
     });
   },
-  getMaxUsesOptions: fn(9089).MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: fn(9089).INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: fn(9089).INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: fn(9089).INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: fn(9089).INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: fn(9089).INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: fn(9089).INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: fn(9089).INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: fn(9089).INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: fn(9089).INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: fn(9089).INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: fn(9089).INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: fn(9089).INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: fn(9089).INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: fn(9089).INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: fn(9089).INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: fn(9089).INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: fn(9089).INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: fn(9089).INVITE_OPTIONS_100_TIMES,
+  getMaxUsesOptions: fn(9102).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(9102).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(9102).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(9102).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(9102).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(9102).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(9102).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(9102).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(9102).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(9102).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(9102).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(9102).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(9102).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(9102).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(9102).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(9102).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(9102).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(9102).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(9102).INVITE_OPTIONS_100_TIMES,
 };
 export { RowTypes };
 export function generateRowsForQuery(arg0) {
@@ -173,7 +173,7 @@ export function generateRowsForQuery(arg0) {
   const counts = { numFriends: 0, numDms: 0, numGroupDms: 0, numGuildMembers: 0, numChannels: 0 };
   if ("" === query) {
     obj = { omitUserIds, maxRowsWithoutQuery, omitGuildId, shownUserIds: set, rows, counts };
-    if (inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
+    if (inviteTargetType === require("InviteTargetTypes").InviteTargetTypes.EMBEDDED_APPLICATION) {
       const obj3 = {};
       const merged = Object.assign(obj);
       obj3.includeGroupDms = false;
@@ -289,15 +289,15 @@ export function generateRowsForQuery(arg0) {
     })(obj);
   } else {
     const obj9 = { query, rows, counts };
-    if (inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
+    if (inviteTargetType === require("InviteTargetTypes").InviteTargetTypes.EMBEDDED_APPLICATION) {
       const obj10 = {};
       const merged4 = Object.assign(obj9);
       obj10.inviteTargetType = inviteTargetType;
-      c0 = undefined;
+      _require = undefined;
       importDefault = undefined;
-      ({ rows: c0, counts: c1 } = obj10);
-      if (obj10.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        const obj12 = { query: tmp44, limit: 3, guildId: "ix" };
+      ({ rows: c0, counts: c1, query: query4, inviteTargetType: inviteTargetType2 } = obj10);
+      if (inviteTargetType2 === tmp39(7873).InviteTargetTypes.EMBEDDED_APPLICATION) {
+        const obj12 = { query: query4, limit: 3, guildId: "id" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);
@@ -329,8 +329,8 @@ export function generateRowsForQuery(arg0) {
           continue;
         }
         const obj2 = { query: tmp, members: items, limit: 10 };
-        obj = _undefined2(set[9]);
-        const item = _undefined2(set[9])
+        obj = _undefined2(set[8]);
+        const item = _undefined2(set[8])
           .queryMemberList(obj2)
           .forEach((record) => {
             record = record.record;
@@ -344,7 +344,7 @@ export function generateRowsForQuery(arg0) {
             _undefined.push(obj);
             numFriends.numFriends = numFriends.numFriends + 1;
           });
-        const queryMemberListResult = _undefined2(set[9]).queryMemberList(obj2);
+        const queryMemberListResult = _undefined2(set[8]).queryMemberList(obj2);
       }
     })(obj13);
     const obj14 = {};
@@ -365,6 +365,7 @@ export function generateRowsForQuery(arg0) {
       counts: closure_129_4,
     } = obj14);
     const obj15 = { query: obj14.query, limit: 50 };
+    tmp39 = _require;
     const item1 = AutocompleteUtilsDefault.queryDMUsers(obj15).forEach((record) => {
       record = record.record;
       if (!_undefined.has(record.id)) {
@@ -504,16 +505,17 @@ export function getMostRecentDMedUser(has, dependencyMap) {
 }
 export function getUsersAlreadyJoined(channel) {
   channel = channel.channel;
-  if (channel.inviteTargetType === InviteTargetTypes.EMBEDDED_APPLICATION) {
+  ({ inviteTargetType, applicationId } = channel);
+  if (inviteTargetType === InviteTargetTypes.InviteTargetTypes.EMBEDDED_APPLICATION) {
     if (null != channel) {
       const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channel.id);
-      for (const item10016 of embeddedActivitiesForChannel) {
-        if (item10016.applicationId === tmp) {
-          let tmp8 = globalThis;
+      for (const item10020 of embeddedActivitiesForChannel) {
+        if (item10020.applicationId === applicationId) {
+          let tmp7 = globalThis;
           let _Set = Set;
+          let tmp8 = new.target;
           let tmp9 = new.target;
-          let tmp10 = new.target;
-          let set = new Set(item10016.userIds);
+          let set = new Set(item10020.userIds);
           obj.return();
           return set;
         }

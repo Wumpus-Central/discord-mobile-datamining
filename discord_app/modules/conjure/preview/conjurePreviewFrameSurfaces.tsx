@@ -57,10 +57,10 @@ export function previewFrameSurfaceOptions(previewSupportedSurfaces) {
   }
   return mapped;
 }
-export function resolvePreviewFrameSurface(first1, cResult) {
+export function resolvePreviewFrameSurface(first1, memo) {
   let tmp = first1;
   if (null == first1) {
-    let APP_CHANNEL = cResult[0];
+    let APP_CHANNEL = memo[0];
     if (APP_CHANNEL == null) {
       APP_CHANNEL = EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL;
     }

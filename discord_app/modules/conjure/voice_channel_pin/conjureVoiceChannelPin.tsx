@@ -34,7 +34,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -97,7 +97,7 @@ let closure_9 = async function _pinVoiceChannel(arg0) {
     }
   })();
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: metroRequire, Permissions: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/voice_channel_pin/conjureVoiceChannelPin.tsx");

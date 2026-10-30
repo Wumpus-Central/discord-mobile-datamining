@@ -1,7 +1,6 @@
 // discord_app/modules/notifications/NotificationTextUtils.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Server from "../../flow/Server.tsx";
@@ -162,9 +161,9 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_21,
   ChannelTypes: closure_22,
@@ -174,9 +173,8 @@ const Constants = fn(1084);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(5646).ActivityPanelModes;
-const ThreadMemberFlags = fn(1124).ThreadMemberFlags;
-const ReactCompilerGating = fn(558);
+const ActivityPanelModes = fn(5652).ActivityPanelModes;
+const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");
 
@@ -710,46 +708,18 @@ export function allowInAppNotifications() {
     return setting;
   }
 }
-export const useAllowInAppNotifications = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAllowInAppNotifications() {
-      const cResult = c.c(2);
-      const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
-      const setting = ShowInAppNotifications.useSetting();
-      const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [UserRequiredActionStore];
-        const fn = function t() {
-          return UserRequiredActionStore.hasAction();
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp6 = items;
-        tmp7 = fn;
-      } else {
-        [tmp6, tmp7] = cResult;
-      }
-      const stateFromStores = initialize.useStateFromStores(tmp6, tmp7);
-      let tmp10 = !stateFromStores;
-      if (!stateFromStores) {
-        tmp10 = setting;
-      }
-      if (tmp10) {
-        tmp10 = !focusModeEnabled;
-      }
-      return tmp10;
-    }
-  : function useAllowInAppNotifications() {
-      const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
-      const setting = ShowInAppNotifications.useSetting();
-      const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
-      const items = [UserRequiredActionStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => UserRequiredActionStore.hasAction());
-      let tmp4 = !stateFromStores;
-      if (!stateFromStores) {
-        tmp4 = setting;
-      }
-      if (tmp4) {
-        tmp4 = !focusModeEnabled;
-      }
-      return tmp4;
-    };
+export function useAllowInAppNotifications() {
+  const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
+  const setting = ShowInAppNotifications.useSetting();
+  const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
+  const items = [UserRequiredActionStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => UserRequiredActionStore.hasAction());
+  let tmp4 = !stateFromStores;
+  if (!stateFromStores) {
+    tmp4 = setting;
+  }
+  if (tmp4) {
+    tmp4 = !focusModeEnabled;
+  }
+  return tmp4;
+}

@@ -2,121 +2,48 @@
 import GuildMemberCountStore from "../../stores/GuildMemberCountStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
+const require = globalThis.__r;
+
 const require = fn;
-const Permissions = fn(1095).Permissions;
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useCanSendStageStartNotification(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(4);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [PermissionStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function l() {
-          let canResult = null != closure_0;
-          if (canResult) {
-            canResult = PermissionStore.can(Permissions.MENTION_EVERYONE, tmp);
-          }
-          return canResult;
-        };
-        const items1 = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-        tmp7 = cResult[3];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6, tmp7);
-    }
-  : function useCanSendStageStartNotification(arg0) {
-      _require = arg0;
-      const items = [PermissionStore];
-      const items1 = [arg0];
-      return require("initialize").useStateFromStores(
-        items,
-        () => {
-          let canResult = null != closure_0;
-          if (canResult) {
-            canResult = PermissionStore.can(Permissions.MENTION_EVERYONE, tmp);
-          }
-          return canResult;
-        },
-        items1,
-      );
-    };
+const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
 
-export const useCanSendStageStartNotification = tmp2;
-export const useDefaultSendStartStageNotificationToggle = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useDefaultSendStartStageNotificationToggle(guild_id) {
-      const cResult = guild_id(576).c(4);
-      guild_id = undefined;
-      if (guild_id != null) {
-        guild_id = guild_id.guild_id;
+export function useCanSendStageStartNotification(channel) {
+  _require = channel;
+  const items = [PermissionStore];
+  const items1 = [channel];
+  return require("initialize").useStateFromStores(
+    items,
+    () => {
+      let canResult = null != closure_0;
+      if (canResult) {
+        canResult = PermissionStore.can(Permissions.MENTION_EVERYONE, tmp);
       }
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildMemberCountStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== guild_id) {
-        const fn = function u() {
-          return GuildMemberCountStore.getMemberCount(guild_id);
-        };
-        const items1 = [guild_id];
-        cResult[1] = guild_id;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
-      } else {
-        tmp7 = cResult[2];
-        tmp8 = cResult[3];
-      }
-      const obj = guild_id(576);
-      const stateFromStores = guild_id(504).useStateFromStores(first, tmp7, tmp8);
-      let tmp10 = null == guild_id;
-      if (!tmp10) {
-        let tmp11 = null == stateFromStores;
-        if (!tmp11) {
-          tmp11 = stateFromStores > 50000;
-        }
-        tmp10 = !tmp11;
-      }
-      return tmp10;
+      return canResult;
+    },
+    items1,
+  );
+}
+export function useDefaultSendStartStageNotificationToggle(guild_id) {
+  guild_id = undefined;
+  if (guild_id != null) {
+    guild_id = guild_id.guild_id;
+  }
+  const items = [GuildMemberCountStore];
+  const items1 = [guild_id];
+  const stateFromStores = guild_id(504).useStateFromStores(
+    items,
+    () => GuildMemberCountStore.getMemberCount(guild_id),
+    items1,
+  );
+  let tmp3 = null == guild_id;
+  if (!tmp3) {
+    let tmp4 = null == stateFromStores;
+    if (!tmp4) {
+      tmp4 = stateFromStores > 50000;
     }
-  : function useDefaultSendStartStageNotificationToggle(guild_id) {
-      guild_id = undefined;
-      if (guild_id != null) {
-        guild_id = guild_id.guild_id;
-      }
-      const items = [GuildMemberCountStore];
-      const items1 = [guild_id];
-      const stateFromStores = guild_id(504).useStateFromStores(
-        items,
-        () => GuildMemberCountStore.getMemberCount(guild_id),
-        items1,
-      );
-      let tmp3 = null == guild_id;
-      if (!tmp3) {
-        let tmp4 = null == stateFromStores;
-        if (!tmp4) {
-          tmp4 = stateFromStores > 50000;
-        }
-        tmp3 = !tmp4;
-      }
-      return tmp3;
-    };
+    tmp3 = !tmp4;
+  }
+  return tmp3;
+}

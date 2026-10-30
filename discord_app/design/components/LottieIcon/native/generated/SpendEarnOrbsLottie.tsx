@@ -1,59 +1,20 @@
 // discord_app/design/components/LottieIcon/native/generated/SpendEarnOrbsLottie.tsx
-import c from "../../../../../../_runtime/00576_c.js";
 import LottieIcon from "../LottieIcon.tsx";
-import _mod14423 from "../../../../../../_runtime/metro/14423__.js";
-import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _mod14456 from "../../../../../../_runtime/metro/14456__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_2 = ["ref"];
 const jsx = fn(21).jsx;
 const layers = ["Orbs-Spend_DarkTheme", "Orbs-Earn_DarkTheme"];
 const items = [
   { name: "earn", start: 0, duration: 180 },
   { name: "spend", start: 240, duration: 180 },
 ];
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/SpendEarnOrbsLottie.tsx");
 
-export const SpendEarnOrbsLottie = ReactCompilerGating.isReactCompilerEnabled()
-  ? function SpendEarnOrbsLottie(ref) {
-      const cResult = c.c(7);
-      if (cResult[0] !== ref) {
-        const tmp8 = _objectWithoutProperties(ref.ref, closure_2);
-        cResult[0] = ref.ref;
-        cResult[1] = tmp8;
-        cResult[2] = ref.ref;
-        let tmp5 = ref;
-        let tmp4 = tmp8;
-      } else {
-        tmp4 = cResult[1];
-        tmp5 = cResult[2];
-      }
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod14423;
-        cResult[3] = tmpResult;
-        let tmp9 = tmpResult;
-      } else {
-        tmp9 = cResult[3];
-      }
-      if (cResult[4] === tmp4) {
-        if (cResult[5] === tmp5) {
-          let tmp11 = cResult[6];
-        }
-        return tmp11;
-      }
-      const merged = Object.assign(tmp4);
-      const tmp13 = jsx(LottieIcon.LottieIcon, { dotLottie: tmp9, ref: tmp5, layers, markers: items });
-      cResult[4] = tmp4;
-      cResult[5] = tmp5;
-      cResult[6] = tmp13;
-      tmp11 = tmp13;
-      const obj2 = { dotLottie: tmp9, ref: tmp5, layers, markers: items };
-    }
-  : function SpendEarnOrbsLottie(ref) {
-      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-      const merged1 = Object.assign(merged);
-      return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14423, ref: ref.ref, layers, markers: items });
-    };
+export function SpendEarnOrbsLottie(ref) {
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14456, ref: ref.ref, layers, markers: items });
+}

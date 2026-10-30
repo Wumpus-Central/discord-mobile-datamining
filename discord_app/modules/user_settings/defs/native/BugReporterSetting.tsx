@@ -1,47 +1,33 @@
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import BugReporterExperimentDefault from "../../../bug_reporter/BugReporterExperiment.tsx";
 import BugReportStore from "../../../bug_reporter/BugReportStore.tsx";
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useBugReporterExperimentSettingPredicate() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { location: "native-settings" };
-        cResult[0] = obj2;
-        let first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      return BugReporterExperimentDefault.useConfig(first).hasBugReporterAccess;
-    }
-  : function useBugReporterExperimentSettingPredicate() {
-      return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
-    };
-const SettingBuilders = fn(11302);
+function useBugReporterExperimentSettingPredicate() {
+  return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
+}
+const SettingBuilders = fn(11505);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(12377).BugIcon,
+  IconComponent: fn(12527).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14252, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11069, dependencyMap.paths));
     }
   },
   withArrow: true,
-  usePredicate: tmp2,
+  usePredicate: useBugReporterExperimentSettingPredicate,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
 
 export default pressable;
-export const useBugReporterExperimentSettingPredicate = tmp2;
+export { useBugReporterExperimentSettingPredicate };

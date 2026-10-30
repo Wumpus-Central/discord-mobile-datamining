@@ -16,7 +16,7 @@ import MessageStore from "../../stores/MessageStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReportToModPermissions = fn(7445).ReportToModPermissions;
+const ReportToModPermissions = fn(7453).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 
@@ -26,7 +26,7 @@ export function canReportMessageToMods(message) {
     if (null == channel) {
       return false;
     } else {
-      guild = GuildStore.getGuild(channel.guild_id);
+      const guild = GuildStore.getGuild(channel.guild_id);
       if (null == guild) {
         return false;
       } else {
@@ -50,7 +50,7 @@ export function canAccessReportsChannel(arg0) {
   if (null == contextForPermission) {
     return false;
   } else {
-    guild = contextForPermission.guild;
+    const guild = contextForPermission.guild;
     let tmp7 = null == guild;
     if (!tmp7) {
       tmp7 = !getGuildModeratorReportingEnabledDefault(guild);
@@ -68,7 +68,7 @@ export function canAccessReportsChannel(arg0) {
   }
 }
 export function getReportToModChannelId(arg0) {
-  guild = GuildStore.getGuild(arg0);
+  const guild = GuildStore.getGuild(arg0);
   let tmp2 = null;
   if (null != guild) {
     tmp2 = getGuildModeratorReportChannelIdDefault(guild);

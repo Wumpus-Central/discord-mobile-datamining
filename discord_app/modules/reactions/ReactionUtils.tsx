@@ -7,9 +7,9 @@ import MessageReactionsTypes from "../messages/MessageReactionsTypes.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const constants3 = fn(4950).NotificationSettingsUpdateType;
+const constants3 = fn(4954).NotificationSettingsUpdateType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 
@@ -23,23 +23,23 @@ export function getReactionEmojiName(emoji) {
   }
   return result;
 }
-export function getAccessibleEmojiDisplayName(selected, count, emoji, arg3) {
+export function getAccessibleEmojiDisplayName(me, count, emoji, arg3) {
   const t = util.t;
   if (arg3) {
-    if (selected) {
+    if (me) {
       let i9DXqM = t.i9DXqM;
     } else {
       i9DXqM = t["Z/l+qu"];
     }
   } else {
-    if (selected) {
+    if (me) {
       let PirBBE = t.CLuzw5;
       let tmp5 = require;
     } else {
       PirBBE = t.PirBBE;
       tmp5 = require;
     }
-    const intl = tmp5(1125).intl;
+    const intl = tmp5(1114).intl;
     const obj = { reactions: count, emojiName: null };
     if (null == emoji.id) {
       let str2 = UnicodeEmojisDefault.convertSurrogateToName(emoji.name);

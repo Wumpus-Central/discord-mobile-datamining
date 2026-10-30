@@ -17,7 +17,7 @@ let closure_6 = async function _getSystemLocale() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -99,9 +99,9 @@ function handleUpdate() {
   }
   return flag;
 }
-const setAppLocale = fn(2067).setAppLocale;
-let locale = fn(1125).intl.currentLocale;
-let global = fn(1125).systemLocale;
+const setAppLocale = fn(2064).setAppLocale;
+let locale = fn(1114).intl.currentLocale;
+let global = fn(1114).systemLocale;
 (function getSystemLocale() {
   const self = this;
   const apply = closure_6.apply;

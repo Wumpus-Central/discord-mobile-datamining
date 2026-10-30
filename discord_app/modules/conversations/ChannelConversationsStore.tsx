@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01457_priv.js";
+import privDefault from "../../../_runtime/01452_priv.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ConversationMessageCacheUtils from "ConversationMessageCacheUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -160,7 +160,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(5644);
+const ConversationConstants = fn(5650);
 ({
   CONVERSATION_COLORS: closure_8,
   CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: closure_9,
@@ -463,8 +463,8 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7757).mapConversation);
-      const found = mapped.filter(set(1385).isNotNullish);
+      const mapped = rawConversations.map(set(7762).mapConversation);
+      const found = mapped.filter(set(1380).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
         let tmp5 = null;
@@ -649,7 +649,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
               let result = map.set(tmp9.id, obj);
               let messageIds = tmp9.messageIds;
               for (const item10064 of messageIds) {
-                value3 = undefined;
+                let value3;
                 if (arg2 != null) {
                   let messageMetadataByMessageId = arg2.messageMetadataByMessageId;
                   value3 = messageMetadataByMessageId.get(item10064);
@@ -678,7 +678,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
                 }
                 let tmp33 = message_id;
                 if (null != message_id) {
-                  value4 = undefined;
+                  let value4;
                   if (arg2 != null) {
                     let messageMetadataByMessageId2 = arg2.messageMetadataByMessageId;
                     value4 = messageMetadataByMessageId2.get(tmp33);

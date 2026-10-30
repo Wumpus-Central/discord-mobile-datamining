@@ -9,14 +9,14 @@ import Record from "../lib/Record.tsx";
 const AvatarUtilsDefault = AvatarUtils;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({
   LOCAL_BOT_ID: closure_4,
   NON_USER_BOT_DISCRIMINATOR: hasOwnProperty,
   PREMIUM_TYPE_NONE: metroRequire,
   UserFlags: closure_7,
 } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 ({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: closure_9, PurchasedFlags: c10 } = PremiumConstants);
 class UserRecord extends tmp2 {
   constructor(arg0) {
@@ -366,8 +366,7 @@ prototype["removeGuildAvatarHash"] = function removeGuildAvatarHash(guildId) {
 prototype["getAvatarSource"] = function getAvatarSource(guildId) {
   const self = this;
   importDefault = guildId;
-  let flag = hasItem;
-  if (hasItem === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
   let avatar;
@@ -425,14 +424,14 @@ prototype["hasHadPremium"] = function hasHadPremium(arg0) {
   if (arg0 === undefined) {
     tmp = null;
   }
-  const hasPurchasedFlagResult = this.hasPurchasedFlag(v65535.PREMIUM_TIER_0);
-  const hasPurchasedFlagResult1 = this.hasPurchasedFlag(v65535.PREMIUM_TIER_1);
-  const hasPurchasedFlagResult2 = this.hasPurchasedFlag(v65535.PREMIUM_TIER_2);
-  if (React6.TIER_0 === tmp) {
+  const hasPurchasedFlagResult = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_0);
+  const hasPurchasedFlagResult1 = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_1);
+  const hasPurchasedFlagResult2 = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_2);
+  if (React7.TIER_0 === tmp) {
     return hasPurchasedFlagResult;
-  } else if (React6.TIER_1 === tmp) {
+  } else if (React7.TIER_1 === tmp) {
     return hasPurchasedFlagResult1;
-  } else if (React6.TIER_2 === tmp) {
+  } else if (React7.TIER_2 === tmp) {
     return hasPurchasedFlagResult2;
   } else {
     let tmp6 = hasPurchasedFlagResult;
@@ -482,7 +481,7 @@ prototype["isOnReverseTrial"] = function isOnReverseTrial() {
   return isPremiumResult;
 };
 prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
@@ -494,7 +493,7 @@ prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
   return isPremiumResult;
 };
 prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let prop;
@@ -507,7 +506,7 @@ prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
 };
 prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFractionalPremiumOnly() {
   const self = this;
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let prop;
@@ -537,7 +536,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
 };
 prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremiumWithNoStandardSub() {
   const self = this;
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let premiumSource;
@@ -552,7 +551,7 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
   return isPremiumResult;
 };
 prototype["isFractionalPremium"] = function isFractionalPremium() {
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React7.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;

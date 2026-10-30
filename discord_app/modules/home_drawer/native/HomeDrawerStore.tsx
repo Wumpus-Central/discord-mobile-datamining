@@ -1,9 +1,9 @@
 // discord_app/modules/home_drawer/native/HomeDrawerStore.tsx
 import Constants from "../../../Constants.tsx";
-import _mod4920 from "../../../../_runtime/metro/04920__.js";
+import _mod4924 from "../../../../_runtime/metro/04924__.js";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
-import identity from "../../../../_runtime/metro/01266__.js";
+import identity from "../../../../_runtime/metro/01255__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -33,10 +33,10 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj.lastInteractionAt = { current: 0 };
   const obj5 = require("ReanimatedRexport");
   obj.isPanelTouchActive = require("ReanimatedRexport").makeMutable(false);
-  obj.setPanelX = function setPanelX(open) {
+  obj.setPanelX = function setPanelX(arg0) {
     const tmp = closure_1();
     ({ panelX, snapX, isOpenTarget, gestureState } = tmp);
-    if ((isOpenTarget.get() !== "open") === open) {
+    if ((isOpenTarget.get() !== "open") === arg0) {
       const result = isOpenTarget.set(tmp2);
       let num = 0;
       if (tmp2) {
@@ -60,7 +60,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     closure_1().lastInteractionAt.current = Date.now();
   };
   return obj;
-}, _mod4920.shallow);
+}, _mod4924.shallow);
 let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;

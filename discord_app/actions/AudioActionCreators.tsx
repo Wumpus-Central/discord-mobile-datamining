@@ -62,10 +62,10 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
     AnalyticsUtilsDefault.track(constants2.MEDIA_DEVICE_CHANGED, obj);
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5894).SoundOutputChannel;
-const MediaEngineContextTypes = fn(5756).MediaEngineContextTypes;
+const SoundOutputChannel = fn(5901).SoundOutputChannel;
+const MediaEngineContextTypes = fn(5763).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
 let closure_16 = debounceDefault((target_user_id, context, volume) => {
@@ -670,7 +670,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -689,7 +689,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(5869)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
+                value: v1(5876)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
                 done: false,
               };
               return obj4;
@@ -703,9 +703,9 @@ export default {
             return obj5;
           } else {
             const obj6 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: closure_128_0 };
-            v1(584).dispatch(obj6);
+            v1(572).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -762,7 +762,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -781,7 +781,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(5869)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
+                value: v1(5876)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
                 done: false,
               };
               return obj4;
@@ -795,9 +795,9 @@ export default {
             return obj5;
           } else {
             const obj6 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: closure_128_0 };
-            v1(584).dispatch(obj6);
+            v1(572).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } catch (tmp18) {
           dependencyMap = tmp;

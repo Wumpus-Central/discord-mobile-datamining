@@ -30,7 +30,7 @@ prototype["mostRecentLurkedGuildId"] = function mostRecentLurkedGuildId() {
   return tmp;
 };
 prototype["isLurking"] = function isLurking(guildId) {
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   if (null == guild) {
     return false;
   } else {

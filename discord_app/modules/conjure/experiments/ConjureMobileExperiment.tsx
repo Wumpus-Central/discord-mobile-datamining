@@ -1,6 +1,5 @@
 // discord_app/modules/conjure/experiments/ConjureMobileExperiment.tsx
 import ApexExperiment from "../../experiments/apex/index.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -13,59 +12,24 @@ const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/conjure/experiments/ConjureMobileExperiment.tsx");
 
 export default apexExperiment;
-export const useIsConjureMobileEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsConjureMobileEnabled(arg0, _location) {
-      _require = arg0;
-      dependencyMap = _location;
-      const cResult = require("c").c(5);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [tmp(1453).ApexExperimentStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
+export function useIsConjureMobileEnabled(canConjureCustomWidget, ConjureAppChannelSheet) {
+  _require = canConjureCustomWidget;
+  dependencyMap = ConjureAppChannelSheet;
+  const items = [require("ApexExperiment").ApexExperimentStore];
+  const items1 = [canConjureCustomWidget, ConjureAppChannelSheet];
+  return require("initialize").useStateFromStores(
+    items,
+    () => {
+      let enabled = closure_0;
+      if (closure_0) {
+        const obj = { location: _location };
+        enabled = apexExperiment.getConfig(obj).enabled;
       }
-      if (cResult[1] === arg0) {
-        if (cResult[2] === _location) {
-          let tmp5 = cResult[3];
-          let tmp6 = cResult[4];
-        }
-        return tmp(504).useStateFromStores(first, tmp5, tmp6);
-      }
-      const fn = function u() {
-        let enabled = closure_0;
-        if (closure_0) {
-          const obj = { location: _location };
-          enabled = apexExperiment.getConfig(obj).enabled;
-        }
-        return enabled;
-      };
-      const items1 = [arg0, _location];
-      cResult[1] = arg0;
-      cResult[2] = _location;
-      cResult[3] = fn;
-      cResult[4] = items1;
-      tmp6 = items1;
-      tmp5 = fn;
-    }
-  : function useIsConjureMobileEnabled(arg0, _location) {
-      _require = arg0;
-      dependencyMap = _location;
-      const items = [require("ApexExperiment").ApexExperimentStore];
-      const items1 = [arg0, _location];
-      return require("initialize").useStateFromStores(
-        items,
-        () => {
-          let enabled = closure_0;
-          if (closure_0) {
-            const obj = { location: _location };
-            enabled = apexExperiment.getConfig(obj).enabled;
-          }
-          return enabled;
-        },
-        items1,
-      );
-    };
+      return enabled;
+    },
+    items1,
+  );
+}
 export function isConjureMobileEnabled(openConjureHomeScreen) {
   return apexExperiment.getConfig({ location: openConjureHomeScreen }).enabled;
 }

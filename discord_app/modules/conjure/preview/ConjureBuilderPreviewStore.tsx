@@ -1,12 +1,13 @@
 // discord_app/modules/conjure/preview/ConjureBuilderPreviewStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import EmbeddedActivityOrientationLockState from "../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import FramesStore from "../../frames/FramesStore.tsx";
 
-const OrientationLockState = fn(2024).OrientationLockState;
+require = fn;
 let applicationId = null;
 let enabled = false;
-let closure_5 = false;
+let closure_6 = false;
 const Store = initializeDefault.Store;
 class ConjureBuilderPreviewStore extends Store {}
 const prototype = ConjureBuilderPreviewStore.prototype;
@@ -26,14 +27,14 @@ prototype["isBuilderPreviewMobile"] = function isBuilderPreviewMobile() {
   return enabled;
 };
 prototype["isBuilderPreviewLandscape"] = function isBuilderPreviewLandscape() {
-  return closure_5;
+  return closure_6;
 };
 const conjureBuilderPreviewStore = new ConjureBuilderPreviewStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     if (null == applicationId) {
       if (null == applicationId) {
         if (!enabled) {
-          if (!closure_5) {
+          if (!closure_6) {
             return false;
           }
         }
@@ -41,7 +42,7 @@ const conjureBuilderPreviewStore = new ConjureBuilderPreviewStore(DispatcherDefa
     }
     applicationId = null;
     enabled = false;
-    closure_5 = false;
+    closure_6 = false;
   },
   CONJURE_BUILDER_PREVIEW_APPLICATION_SET: function handleBuilderPreviewApplicationSet(applicationId) {
     applicationId = applicationId.applicationId;
@@ -57,26 +58,27 @@ const conjureBuilderPreviewStore = new ConjureBuilderPreviewStore(DispatcherDefa
   },
   CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET: function handleBuilderPreviewLandscapeSet(landscape) {
     landscape = landscape.landscape;
-    if (closure_5 === landscape) {
+    if (closure_6 === landscape) {
       return false;
     } else {
-      closure_5 = landscape;
+      closure_6 = landscape;
     }
   },
   FRAME_SET_ORIENTATION_LOCK_STATE: function handleFrameSetOrientationLockState(lockState) {
     lockState = lockState.lockState;
-    if (lockState !== OrientationLockState.LANDSCAPE) {
-      if (lockState !== OrientationLockState.PORTRAIT) {
+    if (lockState !== EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.LANDSCAPE) {
+      if (lockState !== EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.PORTRAIT) {
         return false;
       }
     }
     const frame = FramesStore.getFrame(lockState.frameId);
     if (null != frame) {
       if (frame.applicationId === applicationId) {
-        if (closure_5 === (lockState === OrientationLockState.LANDSCAPE)) {
+        const tmp5 = lockState === EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.LANDSCAPE;
+        if (closure_6 === tmp5) {
           return false;
         } else {
-          closure_5 = tmp4;
+          closure_6 = tmp5;
         }
       }
     }

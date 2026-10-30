@@ -1,5 +1,5 @@
 // discord_common/js/packages/tokens/transforms.tsx
-import _modDef683 from "../../../../_runtime/metro/00683__.js";
+import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function interpolate(arg0, arg1, arg2) {
@@ -55,7 +55,7 @@ export function transformColorForReducedContrast(arg0, arg1, arg2) {
             constants.TEXT_LIGHTNESS_MAX_DARK_THEME,
           );
         }
-        const result = _modDef683(arg0).set("hsl.l", TEXT_LIGHTNESS_LIGHT_THEME);
+        const result = _modDef671(arg0).set("hsl.l", TEXT_LIGHTNESS_LIGHT_THEME);
         return result.hex();
       } else {
         return arg0;
@@ -69,7 +69,7 @@ export function transformColorForReducedContrast(arg0, arg1, arg2) {
     tmp7 = constants;
     BACKGROUND_LIGHTNESS_LIGHT_THEME = constants.BACKGROUND_LIGHTNESS_LIGHT_THEME;
   }
-  const result1 = _modDef683(arg0).set("hsl.l", BACKGROUND_LIGHTNESS_LIGHT_THEME);
+  const result1 = _modDef671(arg0).set("hsl.l", BACKGROUND_LIGHTNESS_LIGHT_THEME);
   const result2 = result1.set("hsl.s", tmp7.BACKGROUND_SATURATION);
   return result2.hex();
 }
@@ -78,7 +78,7 @@ export function transformColorForIncreasedContrast(arg0, arg1, arg2, arg3) {
     const items = [arg0, constants2.BORDER_MIN_OPACITY + arg1];
     let items3 = items;
   } else if ("text" === arg2) {
-    let set = _modDef683(arg0).set;
+    let set = _modDef671(arg0).set;
     if ("light" === arg3) {
       let TEXT_LIGHTNESS_DARK_THEME = constants2.TEXT_LIGHTNESS_LIGHT_THEME;
       let tmp7 = constants2;
@@ -89,14 +89,14 @@ export function transformColorForIncreasedContrast(arg0, arg1, arg2, arg3) {
     set = set("hsl.l", TEXT_LIGHTNESS_DARK_THEME);
     const result = set.set("hsl.s", tmp7.TEXT_SATURATION);
     const items1 = [result.hex(), arg1];
-    const tmp6 = _modDef683(arg0);
+    const tmp6 = _modDef671(arg0);
   } else {
     if ("background" === arg2) {
       if ("light" !== arg3) {
-        const result1 = _modDef683(arg0).set("hsl.l", constants2.BACKGROUND_LIGHTNESS_DARK_THEME);
+        const result1 = _modDef671(arg0).set("hsl.l", constants2.BACKGROUND_LIGHTNESS_DARK_THEME);
         const items2 = [result1.hex(), arg1];
         items3 = items2;
-        const obj = _modDef683(arg0);
+        const obj = _modDef671(arg0);
       }
     }
     items3 = [arg0, arg1];
@@ -104,7 +104,7 @@ export function transformColorForIncreasedContrast(arg0, arg1, arg2, arg3) {
   return items3;
 }
 export function transformColorForReducedSaturation(result, category, saturation) {
-  const obj = _modDef683(result);
+  const obj = _modDef671(result);
   if ("background" === category) {
     [tmp2, tmp3] = [0, 1];
     const items = [0.25, 1];
@@ -123,7 +123,7 @@ export function transformColorContrast(result, category, theme, contrast) {
     if ("border" !== category) {
       if ("text" === category) {
         const _HermesInternal = HermesInternal;
-        result = _modDef683(result).set(
+        result = _modDef671(result).set(
           "hsl.l",
           "*" + interpolate(closure_5, "light" === theme ? closure_9 : closure_8, contrast),
         );
@@ -133,7 +133,7 @@ export function transformColorContrast(result, category, theme, contrast) {
       }
     }
   }
-  const result1 = _modDef683(result).set(
+  const result1 = _modDef671(result).set(
     "hsl.l",
     "*" + interpolate(closure_5, "light" === theme ? closure_7 : closure_6, contrast),
   );

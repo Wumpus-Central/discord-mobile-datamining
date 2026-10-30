@@ -24,13 +24,13 @@ function upsertRelationship(id, type) {
   value = map.get(id);
   if (value !== type) {
     if (null != value) {
-      value3 = map1.get(value);
+      const value3 = map1.get(value);
       if (value3 != null) {
         value3.delete(id);
       }
     }
     const result = map.set(id, type);
-    value4 = map1.get(type);
+    const value4 = map1.get(type);
     if (null != value4) {
       value4.add(id);
     } else {
@@ -85,7 +85,7 @@ function recountPending() {
   closure_17 = Math.max(num - size - size, 0);
   closure_15 = closure_15 + 1;
 }
-const RelationshipTypes = fn(1084).RelationshipTypes;
+const RelationshipTypes = fn(1072).RelationshipTypes;
 const map = new Map();
 let set = new Set();
 const set1 = new Set();
@@ -94,7 +94,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = { friends: "toCharArray$esjava$1", blocked: "Symbol", ignored: "ix", blockedOrIgnored: "min" };
+let closure_20 = { friends: "Array", blocked: "Path", ignored: "y", blockedOrIgnored: "HermesInternal" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -515,7 +515,7 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     value = map.get(id);
     if (null != value) {
       map.delete(id);
-      value3 = map1.get(value);
+      const value3 = map1.get(value);
       if (value3 != null) {
         value3.delete(id);
       }
@@ -561,7 +561,7 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     set.delete(relationship.relationship.id);
     flushStaleUserIdLists();
     size = set2.size;
-    value4 = map1.get(RelationshipTypes.PENDING_INCOMING);
+    const value4 = map1.get(RelationshipTypes.PENDING_INCOMING);
     let num;
     if (value4 != null) {
       num = value4.size;

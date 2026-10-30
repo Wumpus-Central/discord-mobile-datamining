@@ -13,7 +13,7 @@ import UserStore from "../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7, ChannelTypesSets: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/CallActionCreators.tsx");
@@ -78,7 +78,7 @@ export default {
       }
     }
   },
-  ring(channelId, items, voice_panel_floating_cta) {
+  ring(channelId, items, gdm_invite) {
     const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
       const CALLABLE = constants2.CALLABLE;
@@ -91,7 +91,7 @@ export default {
           oldFormErrors: true,
           rejectWithError: true,
         };
-        const obj2 = { recipients: items, analytics_location: voice_panel_floating_cta };
+        const obj2 = { recipients: items, analytics_location: gdm_invite };
         request.body = obj2;
         HTTP.post(request);
       } else if (tmp12) {

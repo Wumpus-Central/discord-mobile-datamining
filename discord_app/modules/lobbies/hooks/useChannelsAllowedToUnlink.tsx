@@ -5,9 +5,11 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
-const ReactCompilerGating = fn(558);
-function getChannelsAllowedToUnlink(arg0) {
+let closure_3 = fn(4939).GUILD_SELECTABLE_CHANNELS_KEY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");
+
+export function getChannelsAllowedToUnlink(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = GuildChannelStore;
@@ -28,66 +30,24 @@ function getChannelsAllowedToUnlink(arg0) {
   }
   return items;
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");
-
-export { getChannelsAllowedToUnlink };
-export const useChannelsAllowedToUnlink = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useChannelsAllowedToUnlink(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(3);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [PermissionStore, GuildChannelStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function s() {
-          if (GuildChannelStore !== undefined) {
-            if (PermissionStore !== undefined) {
-              closure_0 = PermissionStore;
-              if (null == tmp) {
-                let items = [];
-              } else {
-                const found = GuildChannelStore.getChannels(tmp)[closure_3].filter((channel) =>
-                  closure_0(dependencyMap[2]).canUnlinkLobbyChannel(channel.channel, closure_0),
-                );
-                items = found.map((channel) => channel.channel);
-                const arr = GuildChannelStore.getChannels(tmp)[closure_3];
-              }
-              return items;
-            }
-          }
-        };
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        let tmp7 = fn;
-      } else {
-        tmp7 = cResult[2];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStoresArray(first, tmp7);
-    }
-  : function useChannelsAllowedToUnlink(arg0) {
-      _require = arg0;
-      let items = [PermissionStore, GuildChannelStore];
-      return require("initialize").useStateFromStoresArray(items, () => {
-        if (GuildChannelStore !== undefined) {
-          if (PermissionStore !== undefined) {
-            closure_0 = PermissionStore;
-            if (null == tmp) {
-              let items = [];
-            } else {
-              const found = GuildChannelStore.getChannels(tmp)[closure_3].filter((channel) =>
-                closure_0(dependencyMap[2]).canUnlinkLobbyChannel(channel.channel, closure_0),
-              );
-              items = found.map((channel) => channel.channel);
-              const arr = GuildChannelStore.getChannels(tmp)[closure_3];
-            }
-            return items;
-          }
+export function useChannelsAllowedToUnlink(id) {
+  _require = id;
+  let items = [PermissionStore, GuildChannelStore];
+  return require("initialize").useStateFromStoresArray(items, () => {
+    if (GuildChannelStore !== undefined) {
+      if (PermissionStore !== undefined) {
+        closure_0 = PermissionStore;
+        if (null == tmp) {
+          let items = [];
+        } else {
+          const found = GuildChannelStore.getChannels(tmp)[closure_3].filter((channel) =>
+            closure_0(dependencyMap[2]).canUnlinkLobbyChannel(channel.channel, closure_0),
+          );
+          items = found.map((channel) => channel.channel);
+          const arr = GuildChannelStore.getChannels(tmp)[closure_3];
         }
-      });
-    };
+        return items;
+      }
+    }
+  });
+}

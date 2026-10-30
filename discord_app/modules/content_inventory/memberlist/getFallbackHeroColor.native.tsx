@@ -4,9 +4,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx");
 
-export function getFallbackHeroColor(stateFromStores1, stateFromStores) {
+export function getFallbackHeroColor(stateFromStores1, saturation) {
   const internal = nativeDefault.internal;
-  return internal.resolveSemanticColor(stateFromStores1, nativeDefault.colors.BACKGROUND_SURFACE_HIGH, {
-    saturation: stateFromStores,
-  });
+  return internal.resolveSemanticColor(stateFromStores1, nativeDefault.colors.BACKGROUND_SURFACE_HIGH, { saturation });
 }

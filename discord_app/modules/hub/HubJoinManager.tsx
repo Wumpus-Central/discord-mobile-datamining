@@ -5,7 +5,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
 
 require = fn;
-const GuildFeatures = fn(1084).GuildFeatures;
+const GuildFeatures = fn(1072).GuildFeatures;
 class HubJoinManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

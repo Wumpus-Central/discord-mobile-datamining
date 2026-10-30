@@ -15,7 +15,7 @@ let closure_5 = async function _readFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -37,16 +37,16 @@ let closure_5 = async function _readFile(arg0) {
           const tmp41 = (function getBaseDirectory(arg0) {
             if ("shared" === arg0) {
               if (!obj.isAndroid()) {
-                return closure_1_1(1161).getConstants().SharedDirPath;
+                return closure_1_1(1150).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1381);
+              obj = closure_1_0(1376);
             }
             if ("cache" === arg0) {
-              let DocumentsDirPath = closure_1_1(1161).getConstants().CacheDirPath;
-              const obj4 = closure_1_1(1161);
+              let DocumentsDirPath = closure_1_1(1150).getConstants().CacheDirPath;
+              const obj4 = closure_1_1(1150);
             } else {
-              DocumentsDirPath = closure_1_1(1161).getConstants().DocumentsDirPath;
-              const obj3 = closure_1_1(1161);
+              DocumentsDirPath = closure_1_1(1150).getConstants().DocumentsDirPath;
+              const obj3 = closure_1_1(1150);
             }
           })(closure_0);
           closure_131_2 = tmp41;
@@ -121,8 +121,8 @@ let closure_4 = new LoggerDefault("FileManagerUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/FileManagerUtils.native.tsx");
 
-export function writeFile(cache, combined2, arg2, utf8) {
-  return NativeFileModuleDefault.writeFile(cache, combined2, arg2, utf8).then((result) => {
+export function writeFile(cache, combined2, arg2, base64) {
+  return NativeFileModuleDefault.writeFile(cache, combined2, arg2, base64).then((result) => {
     let combined = result;
     if (obj.isAndroid()) {
       const _HermesInternal = HermesInternal;

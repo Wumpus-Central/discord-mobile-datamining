@@ -11,9 +11,9 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
-const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4865).isStaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedMetadata.tsx");
 
@@ -27,7 +27,7 @@ export function getChannelOpenedMetadata(selectedChannelId) {
       const obj2 = { channel_id: selectedChannelId };
       return obj2;
     } else {
-      guild = GuildStore.getGuild(channel.guild_id);
+      const guild = GuildStore.getGuild(channel.guild_id);
       if (null == guild) {
         let flag = false;
         if (channel.isDM()) {

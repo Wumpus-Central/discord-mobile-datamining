@@ -1,102 +1,44 @@
 // discord_app/modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx
-import useNavigatorBackHandlerDefault from "../../../../design/components/Navigator/native/useNavigatorBackHandler.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = fn;
 const Keyboard = fn(17).Keyboard;
-const NOOP = fn(1084).NOOP;
-const ReactCompilerGating = fn(558);
+const NOOP = fn(1072).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useNavigatorConfirmChangesOnBack() {
-      const cResult = ref(576).c(4);
-      ref = noop.useRef(null);
-      importDefault = noop.useRef(false);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        function onBeforeGoBack(preventable) {
-          if (preventable.preventable) {
-            let current = ref2.current;
-            if (!current) {
-              const current2 = ref.current;
-              let hasUnsavedChangesResult;
-              if (current2 != null) {
-                hasUnsavedChangesResult = current2.hasUnsavedChanges();
-              }
-              current = true !== hasUnsavedChangesResult;
+export default function useNavigatorConfirmChangesOnBack() {
+  const ref = noop.useRef(null);
+  dependencyMap = noop.useRef(false);
+  let obj = {
+    onGoBack: ref(10121)({
+      onBeforeGoBack(navigation) {
+        if (navigation.preventable) {
+          let current = ref2.current;
+          if (!current) {
+            const current2 = ref.current;
+            let hasUnsavedChangesResult;
+            if (current2 != null) {
+              hasUnsavedChangesResult = current2.hasUnsavedChanges();
             }
-            if (!current) {
-              preventable.preventDefault();
-              Keyboard.dismiss();
-              const obj = {
-                hasEdits: true,
-                resetPending,
-                onConfirm() {
-                  closure_1.current = true;
-                  preventable.goBack();
-                },
-              };
-              ref2(dependencyMap[5])(obj);
-            }
+            current = true !== hasUnsavedChangesResult;
+          }
+          if (!current) {
+            navigation.preventDefault();
+            Keyboard.dismiss();
+            const obj = {
+              hasEdits: true,
+              resetPending,
+              onConfirm() {
+                closure_1.current = true;
+                navigation.goBack();
+              },
+            };
+            ref(ref2[4])(obj);
           }
         }
-        cResult[0] = onBeforeGoBack;
-        let first = onBeforeGoBack;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { onBeforeGoBack: first };
-        cResult[1] = obj2;
-        let tmp5 = obj2;
-      } else {
-        tmp5 = cResult[1];
-      }
-      const onGoBack = useNavigatorBackHandlerDefault(tmp5).onGoBack;
-      if (cResult[2] !== onGoBack) {
-        const obj3 = { onGoBack, ref };
-        cResult[2] = onGoBack;
-        cResult[3] = obj3;
-        let tmp6 = obj3;
-      } else {
-        tmp6 = cResult[3];
-      }
-      return tmp6;
-    }
-  : function useNavigatorConfirmChangesOnBack() {
-      const ref = noop.useRef(null);
-      importDefault = noop.useRef(false);
-      let obj = {
-        onGoBack: useNavigatorBackHandlerDefault({
-          onBeforeGoBack(preventable) {
-            if (preventable.preventable) {
-              let current = ref2.current;
-              if (!current) {
-                const current2 = ref.current;
-                let hasUnsavedChangesResult;
-                if (current2 != null) {
-                  hasUnsavedChangesResult = current2.hasUnsavedChanges();
-                }
-                current = true !== hasUnsavedChangesResult;
-              }
-              if (!current) {
-                preventable.preventDefault();
-                Keyboard.dismiss();
-                const obj = {
-                  hasEdits: true,
-                  resetPending,
-                  onConfirm() {
-                    closure_1.current = true;
-                    preventable.goBack();
-                  },
-                };
-                ref2(dependencyMap[5])(obj);
-              }
-            }
-          },
-        }).onGoBack,
-        ref,
-      };
-      return obj;
-    };
+      },
+    }).onGoBack,
+    ref,
+  };
+  return obj;
+}

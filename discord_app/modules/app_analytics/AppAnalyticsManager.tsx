@@ -2,6 +2,7 @@
 import DurationsDefault from "../../utils/Durations.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
+import ActivityTypes from "../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import RobloxSubgameUtils from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
 import getGamePlatformDefault from "../activities/utils/getGamePlatform.tsx";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
@@ -13,10 +14,9 @@ import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx"
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const Constants = fn(1084);
-({ AnalyticEvents: closure_9, ActivityTypes: c10 } = Constants);
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const MINUTE = DurationsDefault.Millis.MINUTE;
-class AppAnalyticsManager extends tmp3 {
+class AppAnalyticsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
@@ -91,7 +91,7 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
     };
     const merged = Object.assign(self.getGameMetadata());
     const merged1 = Object.assign(RTCConnectionStore.getPacketStats());
-    AppAnalyticsUtils.trackWithMetadata(constants.START_SPEAKING, obj2);
+    AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.START_SPEAKING, obj2);
   }
 };
 prototype["_trackStartListening"] = function _trackStartListening() {
@@ -112,7 +112,7 @@ prototype["_trackStartListening"] = function _trackStartListening() {
         voice_state_count: SortedVoiceStateStore.countVoiceStatesForChannel(self._voiceChannelId),
       };
       const merged = Object.assign(self.getGameMetadata());
-      AppAnalyticsUtils.trackWithMetadata(constants.START_LISTENING, obj3);
+      AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.START_LISTENING, obj3);
     }
   }
 };
@@ -122,7 +122,9 @@ prototype["_terminate"] = function _terminate() {
   RTCConnectionStore.removeChangeListener(this._handleRTCConnectionStoreChanged);
 };
 prototype["getGameMetadata"] = function getGameMetadata() {
-  const findActivityResult = SelfPresenceStore.findActivity((type) => type.type === constants.PLAYING);
+  const findActivityResult = SelfPresenceStore.findActivity(
+    (type) => type.type === ActivityTypes.ActivityTypes.PLAYING,
+  );
   const currentGameForAnalytics = RunningGameStore.getCurrentGameForAnalytics();
   const obj = {
     game_platform: getGamePlatformDefault(findActivityResult),

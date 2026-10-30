@@ -1,6 +1,6 @@
 // discord_app/modules/badges/native/openBadgeDirectoryScreen.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -24,7 +24,7 @@ export function openBadgeDirectoryScreen(arg0) {
   }
   const obj2 = ModalActionCreatorsDefault;
   const obj3 = { targetUserId: obj.targetUserId };
-  const tmp3 = asyncRequireImpl(11215, dependencyMap.paths);
+  const tmp3 = asyncRequireImpl(11420, dependencyMap.paths);
   if (!obj4.isIOS()) {
     const obj5 = { presentation: "modal" };
   } else {

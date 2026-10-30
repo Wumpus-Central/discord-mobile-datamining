@@ -3,11 +3,11 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
 
-export function getEmbeddedActivityLocationChannelId(connectedActivityLocation) {
-  if (null != connectedActivityLocation) {
+export function getEmbeddedActivityLocationChannelId(_location) {
+  if (null != _location) {
     let channel_id;
-    if ("channel_id" in connectedActivityLocation) {
-      channel_id = connectedActivityLocation.channel_id;
+    if ("channel_id" in _location) {
+      channel_id = _location.channel_id;
     }
     return channel_id;
   }

@@ -2,8 +2,8 @@
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "AttachmentImageLadder.tsx";
-import privDefault from "../../../_runtime/01457_priv.js";
-import _modDef1491 from "../../../_runtime/metro/01491__.js";
+import privDefault from "../../../_runtime/01452_priv.js";
+import _modDef1486 from "../../../_runtime/metro/01486__.js";
 import ImageUtils from "../../utils/ImageUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -42,8 +42,8 @@ function getSrcWithWidthAndHeight(quality) {
       const items = [, ];
       [arr[0], tmp6] = src.split("?");
       let tmp5 = _slicedToArray(src.split("?"), 2);
-      items[1] = _modDef1491.parse(tmp6);
-      const tmp2Result = _modDef1491;
+      items[1] = _modDef1486.parse(tmp6);
+      const tmp2Result = _modDef1486;
       [tmp8, tmp9] = items;
       if (null != format) {
         tmp9.format = format;
@@ -101,7 +101,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp8;
       if (!tmp2Result3.isEmpty(tmp9)) {
-        _modDef1491;
+        _modDef1486;
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -110,7 +110,7 @@ function getSrcWithWidthAndHeight(quality) {
   }
   return src;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ NOOP: hasOwnProperty, MEDIA_PROXY_MAX_TARGET_RESOLUTION: metroRequire } = Constants);
 const re7 = /\.webp($|\?|#)/i;
 const re8 = /\.avif($|\?|#)/i;
@@ -174,7 +174,7 @@ export function loadImage(url, bind) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -222,7 +222,7 @@ export function loadImage(url, bind) {
                       let obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "HermesInternal", done: null };
                     }
                   } else {
                     try {
@@ -259,7 +259,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F144867 */ function() { ... });
+                            image.onerror = closure_2_4(/* F120831 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

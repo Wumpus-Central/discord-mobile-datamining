@@ -3,7 +3,7 @@ import LoggerDefault from "../debug/Logger.tsx";
 import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
 import GatewayZstdUtils from "GatewayZstdUtils.native.tsx";
 import NativeCompressionModule from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
-import _mod15461 from "../../../_runtime/metro/15461__.js";
+import _mod15501 from "../../../_runtime/metro/15501__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [];
@@ -49,7 +49,7 @@ prototype2["getAlgorithm"] = function getAlgorithm() {
 prototype2["usesLegacyCompression"] = function usesLegacyCompression() {
   return false;
 };
-prototype2["feed"] = function feed(dataView) {
+prototype2["feed"] = function feed(arg0) {
   const self = this;
   if (null == this._stream) {
     const _Error2 = Error;
@@ -57,9 +57,9 @@ prototype2["feed"] = function feed(dataView) {
     throw error;
   } else {
     const _ArrayBuffer = ArrayBuffer;
-    if (dataView instanceof ArrayBuffer) {
+    if (arg0 instanceof ArrayBuffer) {
       const _stream = self._stream;
-      const decompressResult = _stream.decompress(dataView);
+      const decompressResult = _stream.decompress(arg0);
       let decodeResult = decompressResult;
       if (null != self._decoder) {
         const _decoder = self._decoder;
@@ -70,7 +70,7 @@ prototype2["feed"] = function feed(dataView) {
       }
     } else {
       const _Error = Error;
-      const error1 = new Error("Expected array buffer, but got " + typeof dataView);
+      const error1 = new Error("Expected array buffer, but got " + typeof arg0);
       throw error1;
     }
   }
@@ -79,7 +79,7 @@ prototype2["close"] = function close() {};
 items.push(fn);
 const fn2 = (arg0) => {
   const tmp2 = new tmp(arg0, new.target, tmp, new.target);
-  tmp2._pako = _mod15461;
+  tmp2._pako = _mod15501;
   tmp2._usesZstd = false;
   tmp2._zstdDecoder = null;
   tmp2._zstdStream = null;
@@ -206,7 +206,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod15461;
+  applyArgumentsResult._pako = _mod15501;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;

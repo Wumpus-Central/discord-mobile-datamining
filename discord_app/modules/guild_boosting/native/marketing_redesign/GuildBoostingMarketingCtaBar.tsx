@@ -12,28 +12,63 @@ import GuildBoostSlotStore from "../../../../stores/billing/GuildBoostSlotStore.
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
-const FractionalPremiumStates = fn(1391).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1386).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = 10 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(5005);
-let obj2 = { heading: { alignSelf: "center", marginBottom: 24, maxWidth: 395, paddingHorizontal: 16, textAlign: "center" }, headerContent: { paddingHorizontal: 16, paddingTop: 32, position: "relative", zIndex: 2 }, guildIcon: null, guildIconText: null, guildName: null, guildBoostCountWrapper: null, totalBoostCountWrapper: null, guildBoostCountIcon: null, guildBoostCount: null, guildBoostCurrentUserCountWrapper: null, guildBoostCurrentUserCount: null, cta: null, ctaPrimary: null, ctaSecondary: null, giftIcon: null, gradient: null, headerWave: null, headerStars: null, boostingUnavailablePill: null };
-let size = { alignSelf: "center", borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 10, height: 48, width: 48 };
+const createStyles = fn(5009);
+let obj2 = {
+  heading: { alignSelf: "center", marginBottom: 24, maxWidth: 395, paddingHorizontal: 16, textAlign: "center" },
+  headerContent: { paddingHorizontal: 16, paddingTop: 32, position: "relative", zIndex: 2 },
+  guildIcon: null,
+  guildIconText: null,
+  guildName: null,
+  guildBoostCountWrapper: null,
+  totalBoostCountWrapper: null,
+  guildBoostCountIcon: null,
+  guildBoostCount: null,
+  guildBoostCurrentUserCountWrapper: null,
+  guildBoostCurrentUserCount: null,
+  cta: null,
+  ctaPrimary: null,
+  ctaSecondary: null,
+  giftIcon: null,
+  gradient: null,
+  headerWave: null,
+  headerStars: null,
+  boostingUnavailablePill: null,
+};
+let size = {
+  alignSelf: "center",
+  borderRadius: 24,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  marginBottom: 10,
+  height: 48,
+  width: 48,
+};
 obj2.guildIcon = size;
 obj2.guildIconText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.guildName = { alignSelf: "center", maxWidth: "50%", textAlign: "center" };
 obj2.guildBoostCountWrapper = { position: "relative" };
-obj2.totalBoostCountWrapper = { display: "flex", flexDirection: "row", justifyContent: "center", marginBottom: 16, paddingBottom: 16, paddingTop: 3, position: "relative" };
+obj2.totalBoostCountWrapper = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  marginBottom: 16,
+  paddingBottom: 16,
+  paddingTop: 3,
+  position: "relative",
+};
 obj2.guildBoostCountIcon = { flexGrow: 0, flexShrink: 0, marginRight: 3 };
 obj2.guildBoostCount = { flexGrow: 0, flexShrink: 1, opacity: 0.6 };
 obj2.guildBoostCurrentUserCountWrapper = { position: "absolute", top: 3, width: "100%" };
 obj2.guildBoostCurrentUserCount = { alignSelf: "center" };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.cta = { alignSelf: "center", borderRadius: nativeDefault.radii.xl, maxWidth: 300, width: "90%" };
-const native = fn(1199);
-const merged = Object.assign(native.generateBoxShadowStyle(fn(1199).EIGHT_DP_ELEVATION_SHADOW_PARAMS));
+const native = fn(1188);
+const merged = Object.assign(native.generateBoxShadowStyle(fn(1188).EIGHT_DP_ELEVATION_SHADOW_PARAMS));
 obj2.ctaPrimary = {};
 obj2.ctaSecondary = { marginTop: 10 };
 obj2.giftIcon = { marginRight: 8 };
@@ -42,857 +77,29 @@ obj2.headerWave = { bottom: -1, left: "-20%", position: "absolute", height: 125,
 obj2.headerStars = { height: "75%", left: "5%", opacity: 0.9, position: "absolute", top: 0, width: "90%", zIndex: 1 };
 obj2.boostingUnavailablePill = { marginTop: -13, marginBottom: 23 };
 let closure_15 = createStyles.createStyles(obj2);
-const __initData = { code: "function GuildBoostingMarketingCtaBarTsx1(){const{withTiming,isVisible}=this.__closure;return{opacity:withTiming(isVisible?1:0,{duration:250})};}" };
-const __initData2 = { code: "function GuildBoostingMarketingCtaBarTsx2(){const{withTiming,isVisible}=this.__closure;return{opacity:withTiming(isVisible?1:0,{duration:250})};}" };
-let ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBoostCountAnimatedStyles(isVisible) {
-  _require = isVisible;
-  const fn = function o() {
-    let num = 0;
-    if (closure_0) {
-      num = 1;
-    }
-    return { opacity: timing.withTiming(num, { duration: 250 }) };
-  };
-  let obj = require("ReanimatedRexport");
-  fn.__closure = { withTiming: require("timing").withTiming, isVisible };
-  fn.__workletHash = 6895237370657;
-  fn.__initData = __initData;
-  return obj.useAnimatedStyle(fn);
-}) : (function useBoostCountAnimatedStyles(isVisible) {
-  _require = isVisible;
-  const fn = function o() {
-    let num = 0;
-    if (closure_0) {
-      num = 1;
-    }
-    return { opacity: timing.withTiming(num, { duration: 250 }) };
-  };
-  let obj = require("ReanimatedRexport");
-  fn.__closure = { withTiming: require("timing").withTiming, isVisible };
-  fn.__workletHash = 11947887687010;
-  fn.__initData = __initData2;
-  return obj.useAnimatedStyle(fn);
-});
-ReactCompilerGating = fn(558);
-let obj4 = { alignSelf: "center", borderRadius: nativeDefault.radii.xl, maxWidth: 300, width: "90%" };
-let obj5 = {};
+const __initData = {
+  code: "function GuildBoostingMarketingCtaBarTsx1(){const{withTiming,isVisible}=this.__closure;return{opacity:withTiming(isVisible?1:0,{duration:250})};}",
+};
 size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingCtaBar.tsx");
+const result = size.fileFinishedImporting(
+  "modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingCtaBar.tsx",
+);
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoostingMarketingCtaBar(guild) {
-  const cResult = guild(576).c(126);
-  const tmp4 = closure_15();
-  ({ fractionalPremiumInfo, guild } = guild);
-  ({ previousGuildSubscriptionSlot, onLayout, premiumGroupRole, intent, onResult } = guild);
-  const tmp5 = analyticsLocations(stateFromStores1.useState(false), 2);
-  const first = tmp5[0];
-  dependencyMap = tmp5[1];
-  let obj = guild(576);
-  analyticsLocations = first(7313)(first(7338).BOOSTED_GUILD_PERKS_MODAL).analyticsLocations;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [UserStore];
-    class C {
-      constructor() {
-        return closure_6.getCurrentUser();
-      }
-    }
-    cResult[0] = items;
-    cResult[1] = C;
-    tmp9 = items;
-  } else {
-    [tmp9, tmp10] = cResult;
-  }
-  const tmp8 = first(7313);
-  const stateFromStores = guild(573).useStateFromStores(tmp9, C);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [GuildBoostSlotStore];
-    class H {
-      constructor() {
-        return closure_1_7.boostSlots;
-      }
-    }
-    cResult[2] = items1;
-    cResult[3] = H;
-    let tmp14 = H;
-    let tmp13 = items1;
-  } else {
-    tmp13 = cResult[2];
-    tmp14 = cResult[3];
-  }
-  const tmpResult = guild(573);
-  stateFromStores1 = guild(573).useStateFromStores(tmp13, tmp14);
-  if (cResult[4] !== stateFromStores1) {
-    const _Object = Object;
-    const keys = Object.keys(stateFromStores1);
-    class H {
-      constructor() {
-        return closure_1_7.boostSlots;
-      }
-    }
-    cResult[5] = keys;
-    let arr3 = keys;
-  } else {
-    arr3 = cResult[5];
-  }
-  if (cResult[6] === stateFromStores1) {
-    if (cResult[7] === guild.id) {
-      if (cResult[8] === arr3) {
-        let arr4 = cResult[9];
-      }
-      class H {
-        constructor() {
-          return closure_1_7.boostSlots;
-        }
-      }
-      const tmp19 = closure_18(first);
-      const tmp20 = closure_18(!first);
-      const tmp7ResultResult = tmp7(15267)(fractionalPremiumInfo.endsAt, guild(15267).CountDownMessageTypes.LONG_TIME_LEFT);
-      const tmp7Result = tmp7(15267);
-      const isInReverseTrial = guild(8491).useIsInReverseTrial();
-      const total = tmp7(8426)(guild.guild.id).total;
-      UserStore = obj2.useRef(-1);
-      if (cResult[10] === first) {
-        if (cResult[11] === length) {
-          let tmp24 = cResult[12];
-          let tmp25 = cResult[13];
-        }
-        const effect = obj2.useEffect(tmp24, tmp25);
-        if (cResult[14] !== stateFromStores) {
-          const isPremiumResult = tmp7(2051).isPremium(stateFromStores);
-          class H {
-            constructor() {
-              return closure_1_7.boostSlots;
-            }
-          }
-          cResult[15] = isPremiumResult;
-          const tmp7Result3 = tmp7(2051);
-        }
-        class H {
-          constructor() {
-            return closure_1_7.boostSlots;
-          }
-        }
-        if (cResult[18] !== analyticsLocations) {
-          function handleNavigateToPremium() {
-            const obj = { analyticsLocation: { page: constants2.PREMIUM_GUILD_USER_MODAL, section: constants3.HEADER, object: constants.BUTTON_CTA }, analyticsLocations };
-            openPremiumModalDefault(obj);
-          }
-          cResult[18] = analyticsLocations;
-          class H {
-            constructor() {
-              return closure_1_7.boostSlots;
-            }
-          }
-          cResult[19] = handleNavigateToPremium;
-        }
-        const _Symbol = Symbol;
-        if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-          function handleBoostCountPress() {
-            window.clearTimeout(ref.current);
-            closure_2((arg0) => !arg0);
-          }
-          cResult[20] = handleBoostCountPress;
-          class H {
-            constructor() {
-              return closure_1_7.boostSlots;
-            }
-          }
-        } else {
-          const tmp30 = cResult[20];
-        }
-        if (premiumGroupRole === guild(1397).PremiumSubscriptionGroupRole.MEMBER) {
-          if (cResult[21] !== tmp4.boostingUnavailablePill) {
-            { style: null }.style = tmp4.boostingUnavailablePill;
-            class H {
-              constructor() {
-                return closure_1_7.boostSlots;
-              }
-            }
-            cResult[21] = tmp4.boostingUnavailablePill;
-            cResult[22] = tmp37;
-            let obj3 = { style: null };
-          }
-        } else {
-          let tmp34 = null;
-          if (fractionalPremiumInfo.fractionalState !== FractionalPremiumStates.NONE) {
-            if (cResult[23] === tmp7ResultResult) {
-              if (cResult[24] === isInReverseTrial) {
-                if (cResult[25] === tmp4.boostingUnavailablePill) {
-                  const tmp31 = cResult[26];
-                }
-                tmp34 = tmp31;
-              }
-            }
-            const obj4 = { fpDurationText: null, isInReverseTrial: null, style: null };
-            class H {
-              constructor() {
-                return closure_1_7.boostSlots;
-              }
-            }
-            obj4.isInReverseTrial = isInReverseTrial;
-            obj4.style = tmp4.boostingUnavailablePill;
-            cResult[23] = tmp7ResultResult;
-            cResult[24] = isInReverseTrial;
-            cResult[25] = tmp4.boostingUnavailablePill;
-            cResult[26] = closure_12(tmp7(15321), obj4);
-            class V {
-              constructor() {
-                tmp = length > 0 || closure_1;
-                if (tmp) {
-                  tmp2 = closure_6;
-                  tmp3 = globalThis;
-                  _window = window;
-                  tmp4 = closure_14;
-                  closure_6.current = window.setTimeout(() => {
-                    closure_1_2((arg0) => !arg0);
-                  }, closure_14);
-                }
-                return () => {
-                  window.clearTimeout(ref.current);
-                };
-              }
-            }
-            const tmp33 = closure_12(tmp7(15321), obj4);
-          }
-          class H {
-            constructor() {
-              return closure_1_7.boostSlots;
-            }
-          }
-          if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-            const point = { x: 0.5, y: 0.5 };
-            const items2 = [tmp7(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_1, , , , ];
-            class H {
-              constructor() {
-                return closure_1_7.boostSlots;
-              }
-            }
-            items2[2] = tmp7(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_3;
-            items2[3] = tmp7(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_4;
-            items2[4] = tmp7(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_5;
-            const items3 = [0, 0.3221, 0.429, 0.7606, 1];
-            cResult[27] = point;
-            cResult[28] = items2;
-            cResult[29] = items3;
-            class V {
-              constructor() {
-                tmp = length > 0 || closure_1;
-                if (tmp) {
-                  tmp2 = closure_6;
-                  tmp3 = globalThis;
-                  _window = window;
-                  tmp4 = closure_14;
-                  closure_6.current = window.setTimeout(() => {
-                    closure_1_2((arg0) => !arg0);
-                  }, closure_14);
-                }
-                return () => {
-                  window.clearTimeout(ref.current);
-                };
-              }
-            }
-          }
-          const _Symbol2 = Symbol;
-          const gradient = tmp4.gradient;
-          if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
-            const point1 = { x: 0.5, y: 0.5 };
-            const items4 = ["rgba(0, 0, 0, 0.7)", "rgba(0, 0, 0, 0)"];
-            const items5 = [0.12, 0.5];
-            class H {
-              constructor() {
-                return closure_1_7.boostSlots;
-              }
-            }
-            cResult[30] = point1;
-            cResult[31] = items4;
-            cResult[32] = items5;
-            let tmp44 = items5;
-            let tmp43 = items4;
-            let tmp42 = point1;
-          } else {
-            tmp42 = cResult[30];
-            tmp43 = cResult[31];
-            tmp44 = cResult[32];
-          }
-          if (cResult[33] !== guild) {
-            { guild: null }.guild = guild;
-            class H {
-              constructor() {
-                return closure_1_7.boostSlots;
-              }
-            }
-            cResult[33] = guild;
-            cResult[34] = tmp47;
-            let tmp45 = tmp47;
-            const obj5 = { guild: null };
-          } else {
-            tmp45 = cResult[34];
-          }
-          const _Symbol3 = Symbol;
-          ({ headerContent, heading } = tmp4);
-          class V {
-            constructor() {
-              tmp = length > 0 || closure_1;
-              if (tmp) {
-                tmp2 = closure_6;
-                tmp3 = globalThis;
-                _window = window;
-                tmp4 = closure_14;
-                closure_6.current = window.setTimeout(() => {
-                  closure_1_2((arg0) => !arg0);
-                }, closure_14);
-              }
-              return () => {
-                window.clearTimeout(ref.current);
-              };
-            }
-          }
-          if (tmp48 === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = guild(1125).intl;
-            const stringResult = intl.string(guild(1125).t["AF+Tyh"]);
-            class H {
-              constructor() {
-                return closure_1_7.boostSlots;
-              }
-            }
-            cResult[35] = stringResult;
-          }
-          if (cResult[36] !== tmp4.heading) {
-            const obj6 = { style: heading, color: "text-overlay-light", variant: "display-sm", children: null };
-            class H {
-              constructor() {
-                return closure_1_7.boostSlots;
-              }
-            }
-            const tmp53 = closure_12(guild(5271).Heading, obj6);
-            cResult[36] = tmp4.heading;
-            cResult[37] = tmp53;
-            let tmp51 = tmp53;
-          } else {
-            tmp51 = cResult[37];
-          }
-          if (cResult[38] === guild) {
-            if (cResult[39] === tmp4.guildIcon) {
-              if (cResult[40] === tmp4.guildIconText) {
-                let tmp54 = cResult[41];
-              }
-              if (cResult[42] === guild.name) {
-                if (cResult[43] === tmp4.guildName) {
-                  let tmp58 = cResult[44];
-                }
-                if (cResult[45] === tmp4.totalBoostCountWrapper) {
-                  if (cResult[46] === tmp20) {
-                    let tmp63 = cResult[47];
-                  }
-                  if (cResult[48] !== tmp4.guildBoostCountIcon) {
-                    const obj7 = { style: tmp4.guildBoostCountIcon, source: null, color: null, size: null };
-                    class H {
-                      constructor() {
-                        return closure_1_7.boostSlots;
-                      }
-                    }
-                    obj7.source = tmp7(15306);
-                    obj7.color = tmp7(587).unsafe_rawColors.GUILD_BOOSTING_PINK;
-                    obj7.size = guild(1199).Icon.Sizes.SMALL;
-                    const tmp67 = closure_12(tmp66, obj7);
-                    cResult[48] = tmp4.guildBoostCountIcon;
-                    cResult[49] = tmp67;
-                    let tmp64 = tmp67;
-                  } else {
-                    tmp64 = cResult[49];
-                  }
-                  class H {
-                    constructor() {
-                      return closure_1_7.boostSlots;
-                    }
-                  }
-                  if (cResult[52] === tmp4.guildBoostCount) {
-                    if (cResult[53] === tmp68) {
-                      let tmp69 = cResult[54];
-                    }
-                    if (cResult[55] === tmp63) {
-                      if (cResult[56] === tmp64) {
-                        if (cResult[57] === tmp69) {
-                          let tmp72 = cResult[58];
-                        }
-                        if (cResult[59] === tmp19) {
-                          if (cResult[60] === tmp4.guildBoostCurrentUserCountWrapper) {
-                            let tmp76 = cResult[61];
-                          }
-                          if (cResult[62] === tmp4.guildBoostCount) {
-                            if (cResult[63] === tmp4.guildBoostCurrentUserCount) {
-                              let tmp77 = cResult[64];
-                            }
-                            if (cResult[65] !== length) {
-                              const intl2 = guild(1125).intl;
-                              class H {
-                                constructor() {
-                                  return closure_1_7.boostSlots;
-                                }
-                              }
-                              const formatResult = intl2.format(guild(1125).t.xXb78j, { numSubscriptions: null });
-                              cResult[65] = length;
-                              cResult[66] = formatResult;
-                              let tmp78 = formatResult;
-                              const obj8 = { numSubscriptions: null };
-                            } else {
-                              tmp78 = cResult[66];
-                            }
-                            if (cResult[67] === tmp77) {
-                              if (cResult[68] === tmp78) {
-                                let tmp80 = cResult[69];
-                              }
-                              if (cResult[70] === tmp76) {
-                                if (cResult[71] === tmp80) {
-                                  let tmp82 = cResult[72];
-                                }
-                                if (cResult[73] === tmp4.guildBoostCountWrapper) {
-                                  if (cResult[74] === tmp72) {
-                                    if (cResult[75] === tmp82) {
-                                      let tmp86 = cResult[76];
-                                    }
-                                    if (cResult[77] === tmp58) {
-                                      if (cResult[78] === tmp86) {
-                                        let tmp89 = cResult[79];
-                                      }
-                                      if (cResult[80] === tmp4.cta) {
-                                        if (cResult[81] === tmp4.ctaPrimary) {
-                                          let tmp93 = cResult[82];
-                                        }
-                                        if (cResult[83] === fractionalPremiumInfo.fractionalState) {
-                                          if (cResult[84] === guild) {
-                                            if (cResult[85] === intent) {
-                                              if (cResult[86] === onResult) {
-                                                if (cResult[87] === premiumGroupRole) {
-                                                  if (cResult[88] === previousGuildSubscriptionSlot) {
-                                                    if (cResult[89] === tmp93) {
-                                                      let tmp94 = cResult[90];
-                                                    }
-                                                    if (cResult[91] === tmp34) {
-                                                      if (cResult[92] === tmp4.headerContent) {
-                                                        if (cResult[93] === tmp51) {
-                                                          if (cResult[94] === tmp54) {
-                                                            if (cResult[95] === tmp89) {
-                                                              if (cResult[96] === tmp94) {
-                                                                let tmp99 = cResult[97];
-                                                              }
-                                                              if (cResult[98] !== tmp4.headerStars) {
-                                                                { style: null }.style = tmp4.headerStars;
-                                                                class H {
-                                                                  constructor() {
-                                                                    return closure_1_7.boostSlots;
-                                                                  }
-                                                                }
-                                                                cResult[98] = tmp4.headerStars;
-                                                                cResult[99] = tmp104;
-                                                                let tmp102 = tmp104;
-                                                                const obj9 = { style: null };
-                                                              } else {
-                                                                tmp102 = cResult[99];
-                                                              }
-                                                              if (cResult[100] !== tmp4.headerWave) {
-                                                                { style: null }.style = tmp4.headerWave;
-                                                                class H {
-                                                                  constructor() {
-                                                                    return closure_1_7.boostSlots;
-                                                                  }
-                                                                }
-                                                                cResult[100] = tmp4.headerWave;
-                                                                cResult[101] = tmp107;
-                                                                let tmp105 = tmp107;
-                                                                const obj10 = { style: null };
-                                                              } else {
-                                                                tmp105 = cResult[101];
-                                                              }
-                                                              class H {
-                                                                constructor() {
-                                                                  return closure_1_7.boostSlots;
-                                                                }
-                                                              }
-                                                              const obj11 = { angle: 0, angleCenter: tmp42, colors: tmp43, locations: tmp44, useAngle: true, style: tmp4.gradient, children: null };
-                                                              const items6 = [tmp45, tmp99, tmp102, tmp105];
-                                                              class V {
-                                                                constructor() {
-                                                                  tmp = length > 0 || closure_1;
-                                                                  if (tmp) {
-                                                                    tmp2 = closure_6;
-                                                                    tmp3 = globalThis;
-                                                                    _window = window;
-                                                                    tmp4 = closure_14;
-                                                                    closure_6.current = window.setTimeout(() => {
-                                                                      closure_1_2((arg0) => !arg0);
-                                                                    }, closure_14);
-                                                                  }
-                                                                  return () => {
-                                                                    window.clearTimeout(ref.current);
-                                                                  };
-                                                                }
-                                                              }
-                                                              const tmp110 = closure_13(tmp7(5295), obj11);
-                                                              cResult[102] = tmp4.gradient;
-                                                              cResult[103] = tmp45;
-                                                              cResult[104] = tmp99;
-                                                              cResult[105] = tmp102;
-                                                              cResult[106] = tmp105;
-                                                              cResult[107] = tmp110;
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                    class H {
-                                                      constructor() {
-                                                        return closure_1_7.boostSlots;
-                                                      }
-                                                    }
-                                                    const obj12 = { style: headerContent, children: null };
-                                                    const items7 = [tmp51, tmp54, tmp89, tmp34, tmp94];
-                                                    obj12.children = items7;
-                                                    const tmp101 = closure_13(length, obj12);
-                                                    class V {
-                                                      constructor() {
-                                                        tmp = length > 0 || closure_1;
-                                                        if (tmp) {
-                                                          tmp2 = closure_6;
-                                                          tmp3 = globalThis;
-                                                          _window = window;
-                                                          tmp4 = closure_14;
-                                                          closure_6.current = window.setTimeout(() => {
-                                                            closure_1_2((arg0) => !arg0);
-                                                          }, closure_14);
-                                                        }
-                                                        return () => {
-                                                          window.clearTimeout(ref.current);
-                                                        };
-                                                      }
-                                                    }
-                                                    cResult[92] = tmp4.headerContent;
-                                                    cResult[93] = tmp51;
-                                                    cResult[94] = tmp54;
-                                                    cResult[95] = tmp89;
-                                                    cResult[96] = tmp94;
-                                                    cResult[97] = tmp101;
-                                                    tmp99 = tmp101;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                        class H {
-                                          constructor() {
-                                            return closure_1_7.boostSlots;
-                                          }
-                                        }
-                                        tmp96[0] = tmp93;
-                                        tmp96[1] = guild;
-                                        tmp96[2] = previousGuildSubscriptionSlot;
-                                        tmp96[3] = constants3.HEADER;
-                                        tmp96[4] = fractionalPremiumInfo.fractionalState;
-                                        tmp96[5] = premiumGroupRole;
-                                        tmp96[6] = intent;
-                                        tmp96[7] = onResult;
-                                        const tmp98 = closure_12(tmp7(7569), tmp96);
-                                        class V {
-                                          constructor() {
-                                            tmp = length > 0 || closure_1;
-                                            if (tmp) {
-                                              tmp2 = closure_6;
-                                              tmp3 = globalThis;
-                                              _window = window;
-                                              tmp4 = closure_14;
-                                              closure_6.current = window.setTimeout(() => {
-                                                closure_1_2((arg0) => !arg0);
-                                              }, closure_14);
-                                            }
-                                            return () => {
-                                              window.clearTimeout(ref.current);
-                                            };
-                                          }
-                                        }
-                                        cResult[84] = guild;
-                                        cResult[85] = intent;
-                                        cResult[86] = onResult;
-                                        cResult[87] = premiumGroupRole;
-                                        cResult[88] = previousGuildSubscriptionSlot;
-                                        cResult[89] = tmp93;
-                                        cResult[90] = tmp98;
-                                        tmp94 = tmp98;
-                                      }
-                                      const items8 = [, ];
-                                      class H {
-                                        constructor() {
-                                          return closure_1_7.boostSlots;
-                                        }
-                                      }
-                                      items8[1] = tmp4.ctaPrimary;
-                                      cResult[80] = tmp4.cta;
-                                      cResult[81] = tmp4.ctaPrimary;
-                                      cResult[82] = items8;
-                                      tmp93 = items8;
-                                    }
-                                    class H {
-                                      constructor() {
-                                        return closure_1_7.boostSlots;
-                                      }
-                                    }
-                                    tmp91[0] = tmp30;
-                                    const items9 = [tmp58, tmp86];
-                                    tmp91[1] = items9;
-                                    cResult[77] = tmp58;
-                                    cResult[78] = tmp86;
-                                    class V {
-                                      constructor() {
-                                        tmp = length > 0 || closure_1;
-                                        if (tmp) {
-                                          tmp2 = closure_6;
-                                          tmp3 = globalThis;
-                                          _window = window;
-                                          tmp4 = closure_14;
-                                          closure_6.current = window.setTimeout(() => {
-                                            closure_1_2((arg0) => !arg0);
-                                          }, closure_14);
-                                        }
-                                        return () => {
-                                          window.clearTimeout(ref.current);
-                                        };
-                                      }
-                                    }
-                                    tmp89 = closure_13(guild(6968).PressableOpacity, tmp91);
-                                    const tmp92 = closure_13(guild(6968).PressableOpacity, tmp91);
-                                  }
-                                }
-                                class H {
-                                  constructor() {
-                                    return closure_1_7.boostSlots;
-                                  }
-                                }
-                                const obj14 = { style: tmp62, children: null };
-                                const items10 = [tmp72, tmp82];
-                                obj14.children = items10;
-                                const tmp88 = closure_13(length, obj14);
-                                cResult[73] = tmp4.guildBoostCountWrapper;
-                                cResult[74] = tmp72;
-                                class V {
-                                  constructor() {
-                                    tmp = length > 0 || closure_1;
-                                    if (tmp) {
-                                      tmp2 = closure_6;
-                                      tmp3 = globalThis;
-                                      _window = window;
-                                      tmp4 = closure_14;
-                                      closure_6.current = window.setTimeout(() => {
-                                        closure_1_2((arg0) => !arg0);
-                                      }, closure_14);
-                                    }
-                                    return () => {
-                                      window.clearTimeout(ref.current);
-                                    };
-                                  }
-                                }
-                                cResult[75] = tmp82;
-                                cResult[76] = tmp88;
-                                tmp86 = tmp88;
-                              }
-                              class H {
-                                constructor() {
-                                  return closure_1_7.boostSlots;
-                                }
-                              }
-                              tmp84[0] = tmp76;
-                              tmp84[1] = tmp80;
-                              const tmp85 = closure_12(tmp7(5086).View, tmp84);
-                              cResult[70] = tmp76;
-                              cResult[71] = tmp80;
-                              cResult[72] = tmp85;
-                              tmp82 = tmp85;
-                            }
-                            class H {
-                              constructor() {
-                                return closure_1_7.boostSlots;
-                              }
-                            }
-                            const obj15 = { style: tmp77, variant: "text-sm/bold", color: "text-overlay-light", children: tmp78 };
-                            const tmp81 = closure_12(guild(5271).Text, obj15);
-                            cResult[67] = tmp77;
-                            cResult[68] = tmp78;
-                            cResult[69] = tmp81;
-                            tmp80 = tmp81;
-                          }
-                          const items11 = [, ];
-                          class H {
-                            constructor() {
-                              return closure_1_7.boostSlots;
-                            }
-                          }
-                          items11[1] = tmp4.guildBoostCurrentUserCount;
-                          cResult[62] = tmp4.guildBoostCount;
-                          cResult[63] = tmp4.guildBoostCurrentUserCount;
-                          cResult[64] = items11;
-                          tmp77 = items11;
-                        }
-                        const items12 = [, ];
-                        class H {
-                          constructor() {
-                            return closure_1_7.boostSlots;
-                          }
-                        }
-                        items12[1] = tmp4.guildBoostCurrentUserCountWrapper;
-                        cResult[59] = tmp19;
-                        cResult[60] = tmp4.guildBoostCurrentUserCountWrapper;
-                        cResult[61] = items12;
-                        tmp76 = items12;
-                      }
-                    }
-                    class H {
-                      constructor() {
-                        return closure_1_7.boostSlots;
-                      }
-                    }
-                    tmp74[0] = tmp63;
-                    const items13 = [tmp64, tmp69];
-                    tmp74[1] = items13;
-                    const tmp75 = closure_13(tmp7(5086).View, tmp74);
-                    cResult[55] = tmp63;
-                    cResult[56] = tmp64;
-                    class V {
-                      constructor() {
-                        tmp = length > 0 || closure_1;
-                        if (tmp) {
-                          tmp2 = closure_6;
-                          tmp3 = globalThis;
-                          _window = window;
-                          tmp4 = closure_14;
-                          closure_6.current = window.setTimeout(() => {
-                            closure_1_2((arg0) => !arg0);
-                          }, closure_14);
-                        }
-                        return () => {
-                          window.clearTimeout(ref.current);
-                        };
-                      }
-                    }
-                    cResult[58] = tmp75;
-                    tmp72 = tmp75;
-                  }
-                  const obj16 = { style: tmp4.guildBoostCount, accessibilityRole: "header", variant: "text-sm/bold", color: "text-overlay-light", children: tmp68 };
-                  cResult[52] = tmp4.guildBoostCount;
-                  cResult[53] = tmp68;
-                  class V {
-                    constructor() {
-                      tmp = length > 0 || closure_1;
-                      if (tmp) {
-                        tmp2 = closure_6;
-                        tmp3 = globalThis;
-                        _window = window;
-                        tmp4 = closure_14;
-                        closure_6.current = window.setTimeout(() => {
-                          closure_1_2((arg0) => !arg0);
-                        }, closure_14);
-                      }
-                      return () => {
-                        window.clearTimeout(ref.current);
-                      };
-                    }
-                  }
-                  tmp69 = closure_12(guild(5271).Text, obj16);
-                  const tmp71 = closure_12(guild(5271).Text, obj16);
-                }
-                const items14 = [, ];
-                class H {
-                  constructor() {
-                    return closure_1_7.boostSlots;
-                  }
-                }
-                items14[1] = tmp4.totalBoostCountWrapper;
-                cResult[45] = tmp4.totalBoostCountWrapper;
-                cResult[46] = tmp20;
-                cResult[47] = items14;
-                tmp63 = items14;
-              }
-              class H {
-                constructor() {
-                  return closure_1_7.boostSlots;
-                }
-              }
-              tmp60[0] = tmp4.guildName;
-              tmp60[3] = guild.name;
-              const tmp61 = closure_12(guild(5271).Text, tmp60);
-              cResult[42] = guild.name;
-              cResult[43] = tmp4.guildName;
-              cResult[44] = tmp61;
-              tmp58 = tmp61;
-            }
-          }
-          const obj17 = { style: null, textStyle: null, guild: null, size: null };
-          ({ guildIcon: obj13.style, guildIconText: obj13.textStyle } = tmp4);
-          obj17.guild = guild;
-          obj17.size = guild(6943).GuildIconSizes.LARGE;
-          const tmp57 = closure_12(tmp7(6943), obj17);
-          cResult[38] = guild;
-          cResult[39] = tmp4.guildIcon;
-          cResult[40] = tmp4.guildIconText;
-          cResult[41] = tmp57;
-          tmp54 = tmp57;
-          const tmp7Result4 = tmp7(6943);
-        }
-      }
-      class V {
-        constructor() {
-          tmp = length > 0 || closure_1;
-          if (tmp) {
-            tmp2 = closure_6;
-            tmp3 = globalThis;
-            _window = window;
-            tmp4 = closure_14;
-            closure_6.current = window.setTimeout(() => {
-              closure_1_2((arg0) => !arg0);
-            }, closure_14);
-          }
-          return () => {
-            window.clearTimeout(ref.current);
-          };
-        }
-      }
-      const items15 = [first, arr4.length];
-      cResult[10] = first;
-      cResult[11] = arr4.length;
-      cResult[12] = V;
-      cResult[13] = items15;
-      tmp25 = items15;
-      tmp24 = V;
-      const tmpResult4 = guild(8491);
-    }
-  }
-  const found = arr3.filter((item) => {
-    let tmp2 = null != tmp.premiumGuildSubscription;
-    if (tmp2) {
-      tmp2 = tmp.premiumGuildSubscription.guildId === guild.id;
-    }
-    return tmp2;
-  });
-  cResult[6] = stateFromStores1;
-  cResult[7] = guild.id;
-  cResult[8] = arr3;
-  cResult[9] = found;
-  arr4 = found;
-  const tmpResult3 = guild(573);
-}) : (function GuildBoostingMarketingCtaBar(premiumGroupRole) {
+export default function GuildBoostingMarketingCtaBar(premiumGroupRole) {
   const tmp = closure_15();
   ({ fractionalPremiumInfo, guild } = premiumGroupRole);
   premiumGroupRole = premiumGroupRole.premiumGroupRole;
   ({ previousGuildSubscriptionSlot, onLayout, intent, onResult } = premiumGroupRole);
   let tmp2 = analyticsLocations(stateFromStores1.useState(false), 2);
-  const first = tmp2[0];
+  const isVisible = tmp2[0];
   dependencyMap = tmp2[1];
-  analyticsLocations = first(7313)(first(7338).BOOSTED_GUILD_PERKS_MODAL).analyticsLocations;
-  const tmp6 = first(7313);
+  analyticsLocations = isVisible(7320)(isVisible(7345).BOOSTED_GUILD_PERKS_MODAL).analyticsLocations;
+  const tmp6 = isVisible(7320);
   const items = [ref];
-  const stateFromStores = guild(573).useStateFromStores(items, () => ref.getCurrentUser());
-  let obj = guild(573);
+  const stateFromStores = guild(563).useStateFromStores(items, () => ref.getCurrentUser());
+  let obj = guild(563);
   const items1 = [GuildBoostSlotStore];
-  stateFromStores1 = guild(573).useStateFromStores(items1, () => boostSlots.boostSlots);
+  stateFromStores1 = guild(563).useStateFromStores(items1, () => boostSlots.boostSlots);
   const items2 = [stateFromStores1, guild.id];
   const memo = stateFromStores1.useMemo(() => {
     const keys = Object.keys(stateFromStores1);
@@ -904,14 +111,40 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
       return tmp2;
     }).length;
   }, items2);
-  const obj2 = guild(573);
-  const tmp11 = closure_18(first);
-  const tmp12 = closure_18(!first);
-  const tmp13 = first(15267);
-  const tmp13Result = first(15267)(fractionalPremiumInfo.endsAt, guild(15267).CountDownMessageTypes.LONG_TIME_LEFT);
-  const isInReverseTrial = guild(8491).useIsInReverseTrial();
-  let obj3 = guild(8491);
-  const items3 = [first, memo];
+  closure_129_0 = isVisible;
+  const obj2 = guild(563);
+  const fn = function o() {
+    let num = 0;
+    if (guild) {
+      num = 1;
+    }
+    return { opacity: timing.withTiming(num, { duration: 250 }) };
+  };
+  let obj3 = guild(5090);
+  fn.__closure = { withTiming: guild(5249).withTiming, isVisible };
+  fn.__workletHash = 6895237370657;
+  fn.__initData = __initData;
+  closure_130_0 = tmp12;
+  const animatedStyle = obj3.useAnimatedStyle(fn);
+  const obj4 = { withTiming: guild(5249).withTiming, isVisible };
+  const fn2 = function o() {
+    let num = 0;
+    if (guild) {
+      num = 1;
+    }
+    return { opacity: timing.withTiming(num, { duration: 250 }) };
+  };
+  const obj5 = guild(5090);
+  fn2.__closure = { withTiming: guild(5249).withTiming, isVisible: !isVisible };
+  fn2.__workletHash = 6895237370657;
+  fn2.__initData = __initData;
+  const animatedStyle1 = obj5.useAnimatedStyle(fn2);
+  const obj6 = { withTiming: guild(5249).withTiming, isVisible: !isVisible };
+  const tmp14 = isVisible(15307);
+  const tmp14Result = isVisible(15307)(fractionalPremiumInfo.endsAt, guild(15307).CountDownMessageTypes.LONG_TIME_LEFT);
+  const isInReverseTrial = guild(8525).useIsInReverseTrial();
+  const obj7 = guild(8525);
+  const items3 = [isVisible, memo];
   const effect = stateFromStores1.useEffect(() => {
     if (tmp) {
       const _window = window;
@@ -924,112 +157,180 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
     };
   }, items3);
   ref = stateFromStores1.useRef(-1);
-  const obj4 = first(2051);
-  if (premiumGroupRole === guild(1397).PremiumSubscriptionGroupRole.MEMBER) {
-    const obj5 = { style: tmp.boostingUnavailablePill };
-    let tmp19 = closure_12(tmp4(15319), obj5);
+  const obj8 = isVisible(2048);
+  if (premiumGroupRole === guild(1392).PremiumSubscriptionGroupRole.MEMBER) {
+    const obj9 = { style: tmp.boostingUnavailablePill };
+    let tmp20 = closure_12(tmp4(15359), obj9);
   } else {
-    tmp19 = null;
+    tmp20 = null;
     if (fractionalPremiumInfo.fractionalState !== FractionalPremiumStates.NONE) {
-      const obj6 = { fpDurationText: tmp13Result, isInReverseTrial, style: tmp.boostingUnavailablePill };
-      tmp19 = closure_12(tmp4(15321), obj6);
+      const obj10 = { fpDurationText: tmp14Result, isInReverseTrial, style: tmp.boostingUnavailablePill };
+      tmp20 = closure_12(tmp4(15361), obj10);
     }
   }
-  const obj7 = { onLayout, angle: 160, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, useAngle: true, style: null, children: null };
-  const isPremiumResult = first(2051).isPremium(stateFromStores);
-  const items4 = [first(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_1, first(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_2, first(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_3, first(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_4, first(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_5];
-  obj7.colors = items4;
-  obj7.locations = [0, 0.3221, 0.429, 0.7606, 1];
-  obj7.style = tmp.gradient;
-  const obj8 = { angle: 0, angleCenter: { x: 0.5, y: 0.5 }, colors: ["rgba(0, 0, 0, 0.7)", "rgba(0, 0, 0, 0)"], locations: [0.12, 0.5], useAngle: true, style: tmp.gradient, children: null };
-  const tmp4Result = first(5295);
-  const items5 = [closure_12(first(15382), { guild }), , , ];
-  const obj9 = { style: tmp.headerContent, children: null };
-  const obj10 = { style: tmp.heading, color: "text-overlay-light", variant: "display-sm", children: null };
-  const intl = guild(1125).intl;
-  obj10.children = intl.string(guild(1125).t["AF+Tyh"]);
-  const items6 = [closure_12(guild(5271).Heading, obj10), , , , ];
-  const obj11 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4Result3 = first(5295);
-  obj11.size = guild(6943).GuildIconSizes.LARGE;
-  items6[1] = closure_12(first(6943), obj11);
+  const obj11 = {
+    onLayout,
+    angle: 160,
+    angleCenter: { x: 0.5, y: 0.5 },
+    colors: null,
+    locations: null,
+    useAngle: true,
+    style: null,
+    children: null,
+  };
+  const isPremiumResult = isVisible(2048).isPremium(stateFromStores);
+  const items4 = [
+    isVisible(575).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_1,
+    isVisible(575).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_2,
+    isVisible(575).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_3,
+    isVisible(575).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_4,
+    isVisible(575).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_5,
+  ];
+  obj11.colors = items4;
+  obj11.locations = [0, 0.3221, 0.429, 0.7606, 1];
+  obj11.style = tmp.gradient;
   const obj12 = {
+    angle: 0,
+    angleCenter: { x: 0.5, y: 0.5 },
+    colors: ["rgba(0, 0, 0, 0.7)", "rgba(0, 0, 0, 0)"],
+    locations: [0.12, 0.5],
+    useAngle: true,
+    style: tmp.gradient,
+    children: null,
+  };
+  const tmp4Result = isVisible(5582);
+  const items5 = [closure_12(isVisible(15422), { guild }), , ,];
+  const obj13 = { style: tmp.headerContent, children: null };
+  const obj14 = { style: tmp.heading, color: "text-overlay-light", variant: "display-sm", children: null };
+  const intl = guild(1114).intl;
+  obj14.children = intl.string(guild(1114).t["AF+Tyh"]);
+  const items6 = [closure_12(guild(5619).Heading, obj14), , , ,];
+  const obj15 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
+  const tmp4Result3 = isVisible(5582);
+  obj15.size = guild(6951).GuildIconSizes.LARGE;
+  items6[1] = closure_12(isVisible(6951), obj15);
+  const obj16 = {
     onPress: function handleBoostCountPress() {
       window.clearTimeout(ref.current);
       closure_2((arg0) => !arg0);
     },
-    children: null
+    children: null,
   };
-  const items7 = [closure_12(guild(5271).Text, { style: tmp.guildName, color: "text-overlay-light", variant: "text-md/bold", children: guild.name }), ];
-  const obj14 = { style: tmp.guildBoostCountWrapper, children: null };
-  const obj15 = { style: null, children: null };
-  const items8 = [tmp12, tmp.totalBoostCountWrapper];
-  obj15.style = items8;
-  const obj13 = { style: tmp.guildName, color: "text-overlay-light", variant: "text-md/bold", children: guild.name };
-  const tmp4Result4 = first(6943);
-  const items9 = [closure_12(guild(1199).Icon, { style: tmp.guildBoostCountIcon, source: first(15306), color: first(587).unsafe_rawColors.GUILD_BOOSTING_PINK, size: guild(1199).Icon.Sizes.SMALL }), ];
-  const obj17 = { style: tmp.guildBoostCount, accessibilityRole: "header", variant: "text-sm/bold", color: "text-overlay-light", children: null };
-  const intl2 = guild(1125).intl;
-  obj17.children = intl2.format(guild(1125).t["pob/cL"], { subscriptions: first(8426)(premiumGroupRole.guild.id).total });
-  items9[1] = closure_12(guild(5271).Text, obj17);
-  obj15.children = items9;
-  const items10 = [closure_13(first(5086).View, obj15), ];
-  const obj18 = { style: null, children: null };
-  const items11 = [tmp11, tmp.guildBoostCurrentUserCountWrapper];
-  obj18.style = items11;
-  const obj19 = { style: null, variant: "text-sm/bold", color: "text-overlay-light", children: null };
-  const items12 = [, ];
+  const items7 = [
+    closure_12(guild(5619).Text, {
+      style: tmp.guildName,
+      color: "text-overlay-light",
+      variant: "text-md/bold",
+      children: guild.name,
+    }),
+  ];
+  const obj18 = { style: tmp.guildBoostCountWrapper, children: null };
+  const obj19 = { style: null, children: null };
+  const items8 = [animatedStyle1, tmp.totalBoostCountWrapper];
+  obj19.style = items8;
+  const obj17 = { style: tmp.guildName, color: "text-overlay-light", variant: "text-md/bold", children: guild.name };
+  const tmp4Result4 = isVisible(6951);
+  const items9 = [
+    closure_12(guild(1188).Icon, {
+      style: tmp.guildBoostCountIcon,
+      source: isVisible(15346),
+      color: isVisible(575).unsafe_rawColors.GUILD_BOOSTING_PINK,
+      size: guild(1188).Icon.Sizes.SMALL,
+    }),
+  ];
+  const obj21 = {
+    style: tmp.guildBoostCount,
+    accessibilityRole: "header",
+    variant: "text-sm/bold",
+    color: "text-overlay-light",
+    children: null,
+  };
+  const intl2 = guild(1114).intl;
+  obj21.children = intl2.format(guild(1114).t["pob/cL"], {
+    subscriptions: isVisible(8460)(premiumGroupRole.guild.id).total,
+  });
+  items9[1] = closure_12(guild(5619).Text, obj21);
+  obj19.children = items9;
+  const items10 = [closure_13(isVisible(5090).View, obj19)];
+  const obj22 = { style: null, children: null };
+  const items11 = [animatedStyle, tmp.guildBoostCurrentUserCountWrapper];
+  obj22.style = items11;
+  const obj23 = { style: null, variant: "text-sm/bold", color: "text-overlay-light", children: null };
+  const items12 = [,];
   ({ guildBoostCount: arr13[0], guildBoostCurrentUserCount: arr13[1] } = tmp);
-  obj19.style = items12;
-  const intl3 = guild(1125).intl;
-  obj19.children = intl3.format(guild(1125).t.xXb78j, { numSubscriptions: memo });
-  obj18.children = closure_12(guild(5271).Text, obj19);
-  items10[1] = closure_12(first(5086).View, obj18);
-  obj14.children = items10;
-  items7[1] = closure_13(memo, obj14);
-  obj12.children = items7;
-  items6[2] = closure_13(guild(6968).PressableOpacity, obj12);
-  items6[3] = tmp19;
-  const obj20 = { styles: null, guild, previousGuildSubscriptionSlot, analyticsSection: constants3.HEADER, fractionalPremiumState: fractionalPremiumInfo.fractionalState, premiumGroupRole, intent, onResult };
-  const items13 = [, ];
+  obj23.style = items12;
+  const intl3 = guild(1114).intl;
+  obj23.children = intl3.format(guild(1114).t.xXb78j, { numSubscriptions: memo });
+  obj22.children = closure_12(guild(5619).Text, obj23);
+  items10[1] = closure_12(isVisible(5090).View, obj22);
+  obj18.children = items10;
+  items7[1] = closure_13(memo, obj18);
+  obj16.children = items7;
+  items6[2] = closure_13(guild(6974).PressableOpacity, obj16);
+  items6[3] = tmp20;
+  const obj24 = {
+    styles: null,
+    guild,
+    previousGuildSubscriptionSlot,
+    analyticsSection: constants3.HEADER,
+    fractionalPremiumState: fractionalPremiumInfo.fractionalState,
+    premiumGroupRole,
+    intent,
+    onResult,
+  };
+  const items13 = [,];
   ({ cta: arr14[0], ctaPrimary: arr14[1] } = tmp);
-  obj20.styles = items13;
-  items6[4] = closure_12(first(7569), obj20);
-  obj9.children = items6;
-  items5[1] = closure_13(memo, obj9);
-  items5[2] = closure_12(first(15385), { style: tmp.headerStars });
-  items5[3] = closure_12(first(15386), { style: tmp.headerWave });
-  obj8.children = items5;
-  obj7.children = closure_13(tmp4Result3, obj8);
-  const items14 = [closure_12(tmp4Result, obj7), ];
-  const obj23 = { style: null, children: null };
-  const items15 = [, ];
+  obj24.styles = items13;
+  items6[4] = closure_12(isVisible(7577), obj24);
+  obj13.children = items6;
+  items5[1] = closure_13(memo, obj13);
+  items5[2] = closure_12(isVisible(15425), { style: tmp.headerStars });
+  items5[3] = closure_12(isVisible(15426), { style: tmp.headerWave });
+  obj12.children = items5;
+  obj11.children = closure_13(tmp4Result3, obj12);
+  const items14 = [closure_12(tmp4Result, obj11)];
+  const obj27 = { style: null, children: null };
+  const items15 = [,];
   ({ cta: arr16[0], ctaSecondary: arr16[1] } = tmp);
-  obj23.style = items15;
+  obj27.style = items15;
   if (isPremiumResult) {
-    const obj24 = { variant: "secondary", text: null, onPress: null, icon: null, grow: true };
-    const intl5 = guild(1125).intl;
-    obj24.text = intl5.string(guild(1125).t["8MYSQw"]);
-    obj24.onPress = function handleGiftPress() {
+    const obj28 = { variant: "secondary", text: null, onPress: null, icon: null, grow: true };
+    const intl5 = guild(1114).intl;
+    obj28.text = intl5.string(guild(1114).t["8MYSQw"]);
+    obj28.onPress = function handleGiftPress() {
       BoostingActionCreators.closeApplyBoostModal();
-      const obj3 = { analyticsLocation: { page: constants2.PREMIUM_GUILD_USER_MODAL, section: constants3.HEADER, object: constants.BUTTON_CTA }, analyticsLocations };
+      const obj3 = {
+        analyticsLocation: {
+          page: constants2.PREMIUM_GUILD_USER_MODAL,
+          section: constants3.HEADER,
+          object: constants.BUTTON_CTA,
+        },
+        analyticsLocations,
+      };
       utils_openGiftModal.openGiftModal(obj3);
     };
-    const obj25 = { size: guild(1199).Icon.Sizes.SMALL, source: tmp4(15387), style: tmp.giftIcon };
-    obj24.icon = closure_12(guild(1199).Icon, obj25);
-    let obj26 = obj24;
+    const obj29 = { size: guild(1188).Icon.Sizes.SMALL, source: tmp4(15427), style: tmp.giftIcon };
+    obj28.icon = closure_12(guild(1188).Icon, obj29);
+    let obj30 = obj28;
   } else {
-    obj26 = { variant: "secondary", text: null, onPress: null, grow: true };
-    const intl4 = guild(1125).intl;
-    obj26.text = intl4.string(guild(1125).t.pj0XBN);
-    obj26.onPress = function handleNavigateToPremium() {
-      const obj = { analyticsLocation: { page: constants2.PREMIUM_GUILD_USER_MODAL, section: constants3.HEADER, object: constants.BUTTON_CTA }, analyticsLocations };
+    obj30 = { variant: "secondary", text: null, onPress: null, grow: true };
+    const intl4 = guild(1114).intl;
+    obj30.text = intl4.string(guild(1114).t.pj0XBN);
+    obj30.onPress = function handleNavigateToPremium() {
+      const obj = {
+        analyticsLocation: {
+          page: constants2.PREMIUM_GUILD_USER_MODAL,
+          section: constants3.HEADER,
+          object: constants.BUTTON_CTA,
+        },
+        analyticsLocations,
+      };
       openPremiumModalDefault(obj);
     };
   }
-  const obj27 = { children: null };
-  obj23.children = closure_12(guild(5281).Button, obj26);
-  items14[1] = closure_12(memo, obj23);
-  obj27.children = items14;
-  return closure_13(memo, obj27);
-});
+  const obj31 = { children: null };
+  obj27.children = closure_12(guild(5629).Button, obj30);
+  items14[1] = closure_12(memo, obj27);
+  obj31.children = items14;
+  return closure_13(memo, obj31);
+}

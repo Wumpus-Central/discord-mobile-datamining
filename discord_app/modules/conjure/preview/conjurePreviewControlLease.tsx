@@ -1,9 +1,6 @@
 // discord_app/modules/conjure/preview/conjurePreviewControlLease.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-
-const require = fn;
 function emit() {
   const items = [...set];
   const iter = items[Symbol.iterator]();
@@ -34,43 +31,12 @@ let set = new Set();
 let set1 = new Set();
 const map1 = new Map();
 const set2 = new Set();
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureControlTuning(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(2);
-      if (cResult[0] !== arg0) {
-        const fn = function t() {
-          let hasItem = null != closure_0;
-          if (hasItem) {
-            hasItem = set2.has(tmp);
-          }
-          return hasItem;
-        };
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return noop.useSyncExternalStore(subscribeConjureControl, tmp2, tmp2);
-    }
-  : function useConjureControlTuning(arg0) {
-      closure_0 = arg0;
-      const items = [arg0];
-      const callback = noop.useCallback(() => {
-        let hasItem = null != closure_0;
-        if (hasItem) {
-          hasItem = set2.has(tmp);
-        }
-        return hasItem;
-      }, items);
-      return noop.useSyncExternalStore(subscribeConjureControl, callback, callback);
-    };
-function acquireConjureControlLease(arg0) {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewControlLease.tsx");
+
+export function acquireConjureControlLease(arg0) {
   closure_0 = arg0;
-  value = timerId.get(arg0);
+  value = map.get(arg0);
   if (value == null) {
     const obj2 = { holders: 0, timers: null };
     const _Set = Set;
@@ -78,43 +44,42 @@ function acquireConjureControlLease(arg0) {
     obj2.timers = set;
     value = obj2;
   }
-  dependencyMap = value;
   value.holders = value.holders + 1;
   function release() {
     if (!c2) {
       c2 = true;
       const _clearTimeout = clearTimeout;
-      clearTimeout(closure_1_3);
-      if (map.get(closure_0) === dependencyMap) {
-        const timers = dependencyMap.timers;
-        timers.delete(closure_1_3);
-        dependencyMap.holders = dependencyMap.holders - 1;
-        if (dependencyMap.holders <= 0) {
+      clearTimeout(set1);
+      if (map.get(closure_0) === closure_1_1) {
+        const timers = closure_1_1.timers;
+        timers.delete(set1);
+        closure_1_1.holders = closure_1_1.holders - 1;
+        if (closure_1_1.holders <= 0) {
           map.delete(closure_0);
         }
         emit();
-        if (dependencyMap.holders <= 0) {
+        if (closure_1_1.holders <= 0) {
           emitReleased(closure_0);
         }
       }
     }
   }
-  const result = timerId.set(arg0, value);
+  const result = map.set(arg0, value);
   c2 = false;
-  timerId = setTimeout(() => {
+  const timerId = setTimeout(() => {
     if (!c2) {
       c2 = true;
       const _clearTimeout = clearTimeout;
-      clearTimeout(closure_1_3);
-      if (map.get(closure_0) === dependencyMap) {
-        const timers = dependencyMap.timers;
-        timers.delete(closure_1_3);
-        dependencyMap.holders = dependencyMap.holders - 1;
-        if (dependencyMap.holders <= 0) {
+      clearTimeout(set1);
+      if (map.get(closure_0) === closure_1_1) {
+        const timers = closure_1_1.timers;
+        timers.delete(set1);
+        closure_1_1.holders = closure_1_1.holders - 1;
+        if (closure_1_1.holders <= 0) {
           map.delete(closure_0);
         }
         emit();
-        if (dependencyMap.holders <= 0) {
+        if (closure_1_1.holders <= 0) {
           emitReleased(closure_0);
         }
       }
@@ -125,30 +90,6 @@ function acquireConjureControlLease(arg0) {
   emit();
   return release;
 }
-function endConjureControlOperation(openResult) {
-  value = map1.get(openResult);
-  if (null != value) {
-    map1.delete(openResult);
-    const _clearTimeout = clearTimeout;
-    clearTimeout(value.timer);
-    value.release();
-  }
-}
-function isConjureControlActive(openResult) {
-  value = map.get(openResult);
-  let num;
-  if (value != null) {
-    num = value.holders;
-  }
-  if (num == null) {
-    num = 0;
-  }
-  return num > 0;
-}
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewControlLease.tsx");
-
-export { acquireConjureControlLease };
 export const CONTROL_OPERATION_IDLE_MS = 20000;
 export function beginConjureControlOperation(TableRowGroup) {
   closure_0 = TableRowGroup;
@@ -169,7 +110,7 @@ export function beginConjureControlOperation(TableRowGroup) {
     closure_130_1 = undefined;
     closure_130_2 = undefined;
     closure_130_3 = undefined;
-    value3 = map.get(TableRowGroup);
+    let value3 = map.get(TableRowGroup);
     if (value3 == null) {
       const obj2 = { holders: 0, timers: null };
       const _Set2 = Set;
@@ -183,16 +124,16 @@ export function beginConjureControlOperation(TableRowGroup) {
       if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_1_3);
-        if (map.get(closure_0) === dependencyMap) {
-          const timers = dependencyMap.timers;
-          timers.delete(closure_1_3);
-          dependencyMap.holders = dependencyMap.holders - 1;
-          if (dependencyMap.holders <= 0) {
+        clearTimeout(set1);
+        if (map.get(closure_0) === closure_1_1) {
+          const timers = closure_1_1.timers;
+          timers.delete(set1);
+          closure_1_1.holders = closure_1_1.holders - 1;
+          if (closure_1_1.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
-          if (dependencyMap.holders <= 0) {
+          if (closure_1_1.holders <= 0) {
             emitReleased(closure_0);
           }
         }
@@ -205,16 +146,16 @@ export function beginConjureControlOperation(TableRowGroup) {
       if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_1_3);
-        if (map.get(closure_0) === dependencyMap) {
-          const timers = dependencyMap.timers;
-          timers.delete(closure_1_3);
-          dependencyMap.holders = dependencyMap.holders - 1;
-          if (dependencyMap.holders <= 0) {
+        clearTimeout(set1);
+        if (map.get(closure_0) === closure_1_1) {
+          const timers = closure_1_1.timers;
+          timers.delete(set1);
+          closure_1_1.holders = closure_1_1.holders - 1;
+          if (closure_1_1.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
-          if (dependencyMap.holders <= 0) {
+          if (closure_1_1.holders <= 0) {
             emitReleased(closure_0);
           }
         }
@@ -232,7 +173,7 @@ export function beginConjureControlOperation(TableRowGroup) {
     closure_129_1 = undefined;
     closure_129_2 = undefined;
     closure_129_3 = undefined;
-    value4 = map.get(TableRowGroup);
+    let value4 = map.get(TableRowGroup);
     if (value4 == null) {
       const obj4 = { holders: 0, timers: null };
       const _Set = Set;
@@ -247,16 +188,16 @@ export function beginConjureControlOperation(TableRowGroup) {
       if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_1_3);
-        if (map.get(closure_0) === dependencyMap) {
-          const timers = dependencyMap.timers;
-          timers.delete(closure_1_3);
-          dependencyMap.holders = dependencyMap.holders - 1;
-          if (dependencyMap.holders <= 0) {
+        clearTimeout(set1);
+        if (map.get(closure_0) === closure_1_1) {
+          const timers = closure_1_1.timers;
+          timers.delete(set1);
+          closure_1_1.holders = closure_1_1.holders - 1;
+          if (closure_1_1.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
-          if (dependencyMap.holders <= 0) {
+          if (closure_1_1.holders <= 0) {
             emitReleased(closure_0);
           }
         }
@@ -269,16 +210,16 @@ export function beginConjureControlOperation(TableRowGroup) {
       if (!c2) {
         c2 = true;
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_1_3);
-        if (map.get(closure_0) === dependencyMap) {
-          const timers = dependencyMap.timers;
-          timers.delete(closure_1_3);
-          dependencyMap.holders = dependencyMap.holders - 1;
-          if (dependencyMap.holders <= 0) {
+        clearTimeout(set1);
+        if (map.get(closure_0) === closure_1_1) {
+          const timers = closure_1_1.timers;
+          timers.delete(set1);
+          closure_1_1.holders = closure_1_1.holders - 1;
+          if (closure_1_1.holders <= 0) {
             map.delete(closure_0);
           }
           emit();
-          if (dependencyMap.holders <= 0) {
+          if (closure_1_1.holders <= 0) {
             emitReleased(closure_0);
           }
         }
@@ -293,7 +234,15 @@ export function beginConjureControlOperation(TableRowGroup) {
     const result3 = map1.set(TableRowGroup, obj6);
   }
 }
-export { endConjureControlOperation };
+export function endConjureControlOperation(openResult) {
+  value = map1.get(openResult);
+  if (null != value) {
+    map1.delete(openResult);
+    const _clearTimeout = clearTimeout;
+    clearTimeout(value.timer);
+    value.release();
+  }
+}
 export function releaseConjureControlLeases(projectId) {
   set2.delete(projectId);
   value = map1.get(projectId);
@@ -326,8 +275,29 @@ export function setConjureControlTuning(projectId, arg1) {
     emit();
   }
 }
-export const useConjureControlTuning = tmp7;
-export { isConjureControlActive };
+export function useConjureControlTuning(projectId) {
+  noop = projectId;
+  const items = [projectId];
+  const callback = noop.useCallback(() => {
+    let hasItem = null != closure_0;
+    if (hasItem) {
+      hasItem = set2.has(tmp);
+    }
+    return hasItem;
+  }, items);
+  return noop.useSyncExternalStore(subscribeConjureControl, callback, callback);
+}
+export function isConjureControlActive(openResult) {
+  value = map.get(openResult);
+  let num;
+  if (value != null) {
+    num = value.holders;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  return num > 0;
+}
 export function getConjureControlActiveProjectIds() {
   const items = [...map.keys()];
   return items;
@@ -340,51 +310,23 @@ export function subscribeConjureControlReleased(arg0) {
     set1.delete(closure_0);
   };
 }
-export const useConjureControlActive = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureControlActive(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(2);
-      if (cResult[0] !== arg0) {
-        const fn = function t() {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            value = map.get(tmp);
-            let num;
-            if (value != null) {
-              num = value.holders;
-            }
-            if (num == null) {
-              num = 0;
-            }
-            tmp2 = num > 0;
-          }
-          return tmp2;
-        };
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
+export function useConjureControlActive(projectId) {
+  noop = projectId;
+  const items = [projectId];
+  const callback = noop.useCallback(() => {
+    let tmp2 = null != closure_0;
+    if (tmp2) {
+      value = map.get(tmp);
+      let num;
+      if (value != null) {
+        num = value.holders;
       }
-      return noop.useSyncExternalStore(subscribeConjureControl, tmp2, tmp2);
+      if (num == null) {
+        num = 0;
+      }
+      tmp2 = num > 0;
     }
-  : function useConjureControlActive(arg0) {
-      closure_0 = arg0;
-      const items = [arg0];
-      const callback = noop.useCallback(() => {
-        let tmp2 = null != closure_0;
-        if (tmp2) {
-          value = map.get(tmp);
-          let num;
-          if (value != null) {
-            num = value.holders;
-          }
-          if (num == null) {
-            num = 0;
-          }
-          tmp2 = num > 0;
-        }
-        return tmp2;
-      }, items);
-      return noop.useSyncExternalStore(subscribeConjureControl, callback, callback);
-    };
+    return tmp2;
+  }, items);
+  return noop.useSyncExternalStore(subscribeConjureControl, callback, callback);
+}

@@ -15,11 +15,11 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ GuildFeatures: c10, JoinGuildSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,
@@ -197,7 +197,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -431,12 +431,12 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
         const obj = { ref: ref.ref };
         const merged1 = Object.assign(merged);
-        obj.icon = __initData(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm" });
+        obj.icon = closure_2_12(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm" });
         obj.size = "sm";
         obj.variant = "secondary-overlay";
         const intl = util.intl;
         obj.accessibilityLabel = intl.formatToPlainString(util.t.nosl52, { guildName: name });
-        return __initData(IconButton.IconButton, obj);
+        return closure_2_12(IconButton.IconButton, obj);
       },
     };
     obj30.children = closure_12(tmp4(tmp5[26]).ContextMenu, obj31);

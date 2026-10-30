@@ -194,8 +194,8 @@ const frozen2 = Object.freeze({
   GUILD_ROLE_MEMBERS(id, id2) {
     return "/guilds/" + id + "/roles/" + id2 + "/members";
   },
-  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, roleId) {
-    return "/guilds/" + guildId + "/roles/" + roleId + "/connections/eligibility";
+  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id) {
+    return "/guilds/" + guildId + "/roles/" + id + "/connections/eligibility";
   },
   GUILD_ROLE_CONNECTIONS_ASSIGN(arg0, arg1) {
     return "/guilds/" + arg0 + "/roles/" + arg1 + "/connections/assign";
@@ -1970,8 +1970,8 @@ const frozen2 = Object.freeze({
   VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
   VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED: "/users/@me/virtual-currency/total-redeemed",
   ORB_USER_CHALLENGES_LIST: "/users/@me/achievements/list?reward_type=orbs",
-  ORB_USER_CHALLENGE_CLAIM(arg0) {
-    return "/users/@me/achievements/" + arg0 + "/claim";
+  ORB_USER_CHALLENGE_CLAIM(achievementIdentifier) {
+    return "/users/@me/achievements/" + achievementIdentifier + "/claim";
   },
   ORB_USER_CHALLENGES_UNREAD_STATE: "/users/@me/achievements/unread-state",
   ORB_USER_CHALLENGES_UNREAD_STATE_ACK: "/users/@me/achievements/unread-ack",
@@ -2263,8 +2263,8 @@ const obj2 = {
   GUILD_ROLE_MEMBERS(id, id2) {
     return "/guilds/" + id + "/roles/" + id2 + "/members";
   },
-  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, roleId) {
-    return "/guilds/" + guildId + "/roles/" + roleId + "/connections/eligibility";
+  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id) {
+    return "/guilds/" + guildId + "/roles/" + id + "/connections/eligibility";
   },
   GUILD_ROLE_CONNECTIONS_ASSIGN(arg0, arg1) {
     return "/guilds/" + arg0 + "/roles/" + arg1 + "/connections/assign";
@@ -4039,8 +4039,8 @@ const obj2 = {
   VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
   VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED: "/users/@me/virtual-currency/total-redeemed",
   ORB_USER_CHALLENGES_LIST: "/users/@me/achievements/list?reward_type=orbs",
-  ORB_USER_CHALLENGE_CLAIM(arg0) {
-    return "/users/@me/achievements/" + arg0 + "/claim";
+  ORB_USER_CHALLENGE_CLAIM(achievementIdentifier) {
+    return "/users/@me/achievements/" + achievementIdentifier + "/claim";
   },
   ORB_USER_CHALLENGES_UNREAD_STATE: "/users/@me/achievements/unread-state",
   ORB_USER_CHALLENGES_UNREAD_STATE_ACK: "/users/@me/achievements/unread-ack",

@@ -2,7 +2,6 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "Constants.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({
@@ -51,9 +50,7 @@ let closure_9 = createStyles.createStyles(() => {
   };
   return obj;
 });
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result1 = size.fileFinishedImporting("modules/user_profile/native/UserProfileSharedStyles.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileSharedStyles.tsx");
 
 export default function useSharedStyles() {
   return closure_9();

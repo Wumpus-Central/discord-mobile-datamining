@@ -63,7 +63,7 @@ function isUserSettingsOpen() {
                             let someResult = null != routes1;
                             if (someResult) {
                               const routes = state.routes;
-                              someResult = routes.some(/* F125910 */ function() { ... });
+                              someResult = routes.some(/* F108448 */ function() { ... });
                             }
                             tmp = someResult;
                           }
@@ -89,84 +89,11 @@ function isUserSettingsOpen() {
   }
   return tmp2;
 }
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/core/isUserSettingsOpen.native.tsx");
 
 export { isUserSettingsOpen };
-export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsUserSettingsOpen() {
-  const cResult = require("c").c(2);
-  const tmp2 = _slicedToArray(noop.useState(isUserSettingsOpen), 2);
-  _require = tmp2[1];
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function s() {
-      const rootNavigationRef = closure_0(dependencyMap[2]).getRootNavigationRef();
-      if (null != rootNavigationRef) {
-        function handleStateChange() {
-          if (null != rootNavigationRef) {
-            const rootState = rootNavigationRef.getRootState();
-            let routes1;
-            if (rootState != null) {
-              routes1 = rootState.routes;
-            }
-            let someResult = null != routes1;
-            if (someResult) {
-              const routes = rootState.routes;
-              someResult = routes.some((name) => {
-                let tmp = "settings" === name.name;
-                if (!tmp) {
-                  const state = name.state;
-                  let routes1;
-                  if (state != null) {
-                    routes1 = state.routes;
-                  }
-                  let someResult = null != routes1;
-                  if (someResult) {
-                    const routes = state.routes;
-                    someResult = routes.some((name) => {
-                      let tmp = "settings" === name.name;
-                      if (!tmp) {
-                        const state = name.state;
-                        let routes1;
-                        if (state != null) {
-                          routes1 = state.routes;
-                        }
-                        let someResult = null != routes1;
-                        if (someResult) {
-                          const routes = state.routes;
-                          someResult = routes.some(/* F125910 */ function() { ... });
-                        }
-                        tmp = someResult;
-                      }
-                      return tmp;
-                    });
-                  }
-                  tmp = someResult;
-                }
-                return tmp;
-              });
-            }
-            closure_0(someResult);
-          }
-        }
-        rootNavigationRef.addListener("state", handleStateChange);
-        return () => {
-          rootNavigationRef.removeListener("state", handleStateChange);
-        };
-      }
-      const obj = closure_0(dependencyMap[2]);
-    };
-    const items = [];
-    cResult[0] = fn;
-    cResult[1] = items;
-    tmp3 = fn;
-    tmp4 = items;
-  } else {
-    [tmp3, tmp4] = cResult;
-  }
-  const effect = noop.useEffect(tmp3, tmp4);
-  return tmp2[0];
-}) : (function useIsUserSettingsOpen() {
+export function useIsUserSettingsOpen() {
   [tmp2, require] = noop.useState(isUserSettingsOpen);
   const effect = noop.useEffect(() => {
     function handleStateChange() {
@@ -201,7 +128,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                     let someResult = null != routes1;
                     if (someResult) {
                       const routes = state.routes;
-                      someResult = routes.some(/* F125910 */ function() { ... });
+                      someResult = routes.some(/* F108448 */ function() { ... });
                     }
                     tmp = someResult;
                   }
@@ -213,17 +140,16 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
             return tmp;
           });
         }
-        _require(someResult);
+        require(someResult);
       }
     }
-    const rootNavigationRef = require("RootNavigationRef").getRootNavigationRef();
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = require("RootNavigationRef");
   }, []);
   return tmp2;
-});
+}

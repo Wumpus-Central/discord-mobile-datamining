@@ -2,6 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import ActivityTypes from "../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import utils from "utils.tsx";
 import matchUtils from "matchUtils.tsx";
 import ContentInventoryTypes from "ContentInventoryTypes.tsx";
@@ -18,29 +19,31 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8884).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8918).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
-          if (type.type === ActivityTypes.PLAYING) {
-            if (obj.isApplicationEntry(closure_0)) {
+          if (type.type === ActivityTypes.ActivityTypes.PLAYING) {
+            if (tmpResult.isApplicationEntry(closure_0)) {
               let result = matchUtils.isMatchingApplicationActivity(closure_0, type);
-              const tmp2Result = matchUtils;
+              const tmpResult4 = matchUtils;
             }
             return result;
           }
-          let tmp5 = type.type !== ActivityTypes.LISTENING;
-          if (!tmp5) {
-            tmp5 = !ContentInventoryTypes.isListenedSessionEntry(closure_0);
+          let tmp4 = type.type !== ActivityTypes.ActivityTypes.LISTENING;
+          if (!tmp4) {
+            tmp4 = !ContentInventoryTypes.isListenedSessionEntry(closure_0);
+            const tmpResult5 = ContentInventoryTypes;
           }
-          result = !tmp5;
-          if (!tmp5) {
+          result = !tmp4;
+          if (!tmp4) {
             result = matchUtils.isMatchingListeningActivity(closure_0, type);
+            const tmpResult6 = matchUtils;
           }
         });
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8676);
+    tmpResult = tmp(8710);
   }
   return tmp3;
 }
@@ -106,8 +109,7 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-const ActivityTypes = fn(1084).ActivityTypes;
-let items = [fn(8672).ContentInventoryEntryType.LISTENED_SESSION];
+let items = [fn(8706).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;

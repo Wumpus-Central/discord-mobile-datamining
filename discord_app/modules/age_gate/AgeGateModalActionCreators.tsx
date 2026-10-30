@@ -27,6 +27,9 @@ export function closeAgeGateModal(source) {
     const tmpResult = AnalyticsUtilsDefault;
   }
 }
+export function closeAgeGateModalAfterSubmit() {
+  DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_CLOSE", submitted: true });
+}
 export function openSuccessAgeGateModal(source) {
   DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN", source });
   const obj2 = { type: "AGE_GATE_SUCCESS_MODAL_OPEN", source };

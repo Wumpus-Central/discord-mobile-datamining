@@ -5,8 +5,7 @@ import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const UnreadSetting = fn(6763).UnreadSetting;
-const ReactCompilerGating = fn(558);
+const UnreadSetting = fn(6770).UnreadSetting;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");
 
@@ -17,42 +16,14 @@ export function getHasImportantUnread(channel) {
   }
   return hasUnreadResult;
 }
-export const useHasImportantUnread = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useHasImportantUnread(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(3);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ReadStateStore, UserGuildSettingsStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function u() {
-          let hasUnreadResult = ReadStateStore.hasUnread(id.id);
-          if (hasUnreadResult) {
-            hasUnreadResult = UserGuildSettingsStore.resolveUnreadSetting(id) === UnreadSetting.ALL_MESSAGES;
-          }
-          return hasUnreadResult;
-        };
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        let tmp7 = fn;
-      } else {
-        tmp7 = cResult[2];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp7);
+export function useHasImportantUnread(arg0) {
+  _require = arg0;
+  const items = [ReadStateStore, UserGuildSettingsStore];
+  return require("initialize").useStateFromStores(items, () => {
+    let hasUnreadResult = ReadStateStore.hasUnread(id.id);
+    if (hasUnreadResult) {
+      hasUnreadResult = UserGuildSettingsStore.resolveUnreadSetting(id) === UnreadSetting.ALL_MESSAGES;
     }
-  : function useHasImportantUnread(arg0) {
-      _require = arg0;
-      const items = [ReadStateStore, UserGuildSettingsStore];
-      return require("initialize").useStateFromStores(items, () => {
-        let hasUnreadResult = ReadStateStore.hasUnread(id.id);
-        if (hasUnreadResult) {
-          hasUnreadResult = UserGuildSettingsStore.resolveUnreadSetting(id) === UnreadSetting.ALL_MESSAGES;
-        }
-        return hasUnreadResult;
-      });
-    };
+    return hasUnreadResult;
+  });
+}

@@ -13,7 +13,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -41,7 +41,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
           } = closure_0);
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -107,7 +107,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
     }
   }
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionSignRequest.tsx");
 

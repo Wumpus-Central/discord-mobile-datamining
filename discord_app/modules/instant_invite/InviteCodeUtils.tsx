@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/InviteCodeUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef1491 from "../../../_runtime/metro/01491__.js";
+import _modDef1486 from "../../../_runtime/metro/01486__.js";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
@@ -27,7 +27,7 @@ function generateInviteKeyFromExtraData(arg0) {
       obj[message] = targetMessageId;
     }
   }
-  const json = _modDef1491.stringify(obj);
+  const json = _modDef1486.stringify(obj);
   let combined = baseCode;
   if ("" !== json) {
     const _HermesInternal = HermesInternal;
@@ -51,7 +51,7 @@ export function generateInviteKeyFromUrlParams(match2, search) {
       substr = search.substring(1);
     }
     try {
-      const parsed = _modDef1491.parse(substr);
+      const parsed = _modDef1486.parse(substr);
       const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
       const tmp12 = readSnowflake(QueryStringUtils.getFirstQueryStringValue(parsed[channel]));
       const obj4 = {
@@ -79,7 +79,7 @@ export function parseExtraDataFromInviteKey(inviteKey) {
     const obj2 = { baseCode: tmp2 };
     return obj2;
   } else {
-    const parsed = _modDef1491.parse(tmp3);
+    const parsed = _modDef1486.parse(tmp3);
     const firstQueryStringValue = QueryStringUtils.getFirstQueryStringValue(parsed[event]);
     const firstQueryStringValue1 = QueryStringUtils.getFirstQueryStringValue(parsed[channel]);
     let tmp4;

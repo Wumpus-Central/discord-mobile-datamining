@@ -5,23 +5,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const ReactCompilerGating = fn(558);
-function trackAppEmbedViewed(arg0) {
-  ({ appId, linkType, referrerId, customId, guildId, channelId, messageId, appEmbedState } = arg0);
-  AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_VIEWED, {
-    application_id: appId,
-    link_type: linkType,
-    referrer_id: referrerId,
-    custom_id: customId,
-    guild_id: guildId,
-    channel_id: channelId,
-    message_id: messageId,
-    app_embed_state: appEmbedState,
-  });
-}
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTracking.tsx");
+const result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTracking.tsx");
 
 export const ClickArea = {
   VIEW: "view",
@@ -50,88 +36,50 @@ export function trackAppEmbedClick(arg0) {
     location_stack: analyticsLocations,
   });
 }
-export { trackAppEmbedViewed };
-export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useTrackAppEmbedViewed(id) {
-      const cResult = require("c").c(4);
-      if (cResult[0] !== id) {
-        const result = tmp(7826).trackingConfigWithDefaults(id);
-        cResult[0] = id;
-        cResult[1] = result;
-        let tmp4 = result;
-        const tmpResult = tmp(7826);
-      } else {
-        tmp4 = cResult[1];
-      }
-      _require = tmp4;
-      noop.useRef(false);
-      if (cResult[2] !== tmp4) {
-        const fn = function s(arg0) {
-          const current = ref.current;
-          let tmp2 = !current;
-          if (!current) {
-            tmp2 = arg0;
-          }
-          if (tmp2) {
-            ref.current = true;
-            onView = onView.onView;
-            if (onView != null) {
-              onView();
-            }
-            ({ id, linkType, referrerId, activityCustomId, guildId, channelId, messageId, appEmbedState } = onView);
-            const obj2 = {
-              application_id: id,
-              link_type: linkType,
-              referrer_id: referrerId,
-              custom_id: activityCustomId,
-              guild_id: guildId,
-              channel_id: channelId,
-              message_id: messageId,
-              app_embed_state: appEmbedState,
-            };
-            AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_VIEWED, obj2);
-          }
-        };
-        cResult[2] = tmp4;
-        cResult[3] = fn;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[3];
-      }
-      let obj = require("c");
-      return require("useIntersectionObserver").useIsVisible(tmp6, undefined);
+export function trackAppEmbedViewed(arg0) {
+  ({ appId, linkType, referrerId, customId, guildId, channelId, messageId, appEmbedState } = arg0);
+  AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_VIEWED, {
+    application_id: appId,
+    link_type: linkType,
+    referrer_id: referrerId,
+    custom_id: customId,
+    guild_id: guildId,
+    channel_id: channelId,
+    message_id: messageId,
+    app_embed_state: appEmbedState,
+  });
+}
+export function useTrackAppEmbedViewed(id) {
+  _require = require("appMessageEmbedTrackingConfig").trackingConfigWithDefaults(id);
+  noop.useRef(false);
+  let obj = require("appMessageEmbedTrackingConfig");
+  return require("useIntersectionObserver").useIsVisible((arg0) => {
+    const current = ref.current;
+    let tmp2 = !current;
+    if (!current) {
+      tmp2 = arg0;
     }
-  : function useTrackAppEmbedViewed(id) {
-      _require = require("appMessageEmbedTrackingConfig").trackingConfigWithDefaults(id);
-      noop.useRef(false);
-      let obj = require("appMessageEmbedTrackingConfig");
-      return require("useIntersectionObserver").useIsVisible((arg0) => {
-        const current = ref.current;
-        let tmp2 = !current;
-        if (!current) {
-          tmp2 = arg0;
-        }
-        if (tmp2) {
-          ref.current = true;
-          onView = onView.onView;
-          if (onView != null) {
-            onView();
-          }
-          ({ id, linkType, referrerId, activityCustomId, guildId, channelId, messageId, appEmbedState } = onView);
-          const obj2 = {
-            application_id: id,
-            link_type: linkType,
-            referrer_id: referrerId,
-            custom_id: activityCustomId,
-            guild_id: guildId,
-            channel_id: channelId,
-            message_id: messageId,
-            app_embed_state: appEmbedState,
-          };
-          AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_VIEWED, obj2);
-        }
-      }, undefined);
-    };
+    if (tmp2) {
+      ref.current = true;
+      onView = onView.onView;
+      if (onView != null) {
+        onView();
+      }
+      ({ id, linkType, referrerId, activityCustomId, guildId, channelId, messageId, appEmbedState } = onView);
+      const obj2 = {
+        application_id: id,
+        link_type: linkType,
+        referrer_id: referrerId,
+        custom_id: activityCustomId,
+        guild_id: guildId,
+        channel_id: channelId,
+        message_id: messageId,
+        app_embed_state: appEmbedState,
+      };
+      AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_VIEWED, obj2);
+    }
+  }, undefined);
+}
 export function trackAppEmbedLinkSent(applicationId, ACTIVITY_INVITE, id, customId) {
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_LINK_SENT, {
     application_id: applicationId,

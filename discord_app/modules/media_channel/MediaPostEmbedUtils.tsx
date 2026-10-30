@@ -12,7 +12,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ GuildFeatures: metroRequire, MessageAttachmentFlags: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
@@ -179,7 +179,7 @@ export function getMediaPostEmbedChannelPath(url) {
   }
 }
 export function canUseMediaPostEmbed(guildId, isMediaChannel) {
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != isMediaChannel) {
       const features = guild.features;

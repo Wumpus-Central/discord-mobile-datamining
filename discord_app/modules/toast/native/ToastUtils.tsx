@@ -1,7 +1,7 @@
 // discord_app/modules/toast/native/ToastUtils.tsx
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
-import v1 from "../../../../_runtime/01278_v1.js";
+import v1 from "../../../../_runtime/01267_v1.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ToastActionCreatorsDefault from "ToastActionCreators.tsx";
 import FriendsIcon from "../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
@@ -26,24 +26,24 @@ export function presentAddedFriendToast() {
   obj2.icon = FriendsIcon.FriendsIcon;
   ToastActionCreatorsDefault.open("TOAST_ADD_FRIEND", obj2);
 }
-export function presentFriendRequestAcceptedToast(username) {
-  if (null == username) {
+export function presentFriendRequestAcceptedToast(dependencyMap) {
+  if (null == dependencyMap) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.UhJna5);
     let tmp2 = require;
   } else {
     tmp2 = require;
     const intl = util.intl;
-    const obj2 = { username: username.username };
+    const obj2 = { username: dependencyMap.username };
     stringResult = intl.formatToPlainString(util.t.b3eoD4, obj2);
   }
   const obj = ToastActionCreatorsDefault;
   obj.open("TOAST_FRIEND_REQUEST_ACCEPTED", {
     text: stringResult,
-    icon: tmp2(5710).UserPlusIcon,
+    icon: tmp2(5716).UserPlusIcon,
     iconColor: "status-positive",
   });
-  const obj3 = { text: stringResult, icon: tmp2(5710).UserPlusIcon, iconColor: "status-positive" };
+  const obj3 = { text: stringResult, icon: tmp2(5716).UserPlusIcon, iconColor: "status-positive" };
 }
 export function presentGameFriendRequestAcceptedToast() {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };
@@ -344,8 +344,8 @@ export function showTransferOwnershipSuccess() {
   obj2.text = intl.string(util.t["2Eyydu"]);
   ToastActionCreatorsDefault.open("TRANSFER_OWNERSHIP_SUCCESS", obj2);
 }
-export function showSafetySuccess(IAR_SHARE_WITH_PARENT_SUCCESS, safetyToastTypeContent) {
-  ToastActionCreatorsDefault.open(IAR_SHARE_WITH_PARENT_SUCCESS, { text: safetyToastTypeContent, variant: "success" });
+export function showSafetySuccess(BLOCK_SUCCESS, safetyToastTypeContent) {
+  ToastActionCreatorsDefault.open(BLOCK_SUCCESS, { text: safetyToastTypeContent, variant: "success" });
 }
 export function showVerificationSent() {
   const obj2 = { text: null, variant: "success" };

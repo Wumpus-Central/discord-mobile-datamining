@@ -4,11 +4,11 @@ import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 
-export function categoryCollapse(id) {
-  DispatcherDefault.dispatch({ type: "CATEGORY_COLLAPSE", id });
+export function categoryCollapse(channel) {
+  DispatcherDefault.dispatch({ type: "CATEGORY_COLLAPSE", id: channel });
 }
-export function categoryExpand(id) {
-  DispatcherDefault.dispatch({ type: "CATEGORY_EXPAND", id });
+export function categoryExpand(channel) {
+  DispatcherDefault.dispatch({ type: "CATEGORY_EXPAND", id: channel });
 }
 export function categoryCollapseAll(guildId) {
   DispatcherDefault.dispatch({ type: "CATEGORY_COLLAPSE_ALL", guildId });

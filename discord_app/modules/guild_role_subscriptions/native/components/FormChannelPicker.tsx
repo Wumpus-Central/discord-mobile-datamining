@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import FormStylesDefault from "FormStyles.tsx";
@@ -21,25 +21,25 @@ export default function FormChannelPicker(channelId) {
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp6Result = useChannelNameDefault(stateFromStores);
   if (null != stateFromStores) {
-    let TextIcon = tmp3(17109).getChannelIconComponentOrDefault(stateFromStores);
-    const tmp3Result = tmp3(17109);
+    let TextIcon = tmp3(17163).getChannelIconComponentOrDefault(stateFromStores);
+    const tmp3Result = tmp3(17163);
   } else {
-    TextIcon = tmp3(8610).TextIcon;
+    TextIcon = tmp3(8644).TextIcon;
   }
   let obj2 = { style: tmp2.inputContainer, children: null };
   const obj3 = {
     start: true,
     end: true,
-    icon: jsx(channelId(6963).TableRow.Icon, { IconComponent: TextIcon }),
+    icon: jsx(channelId(6969).TableRow.Icon, { IconComponent: TextIcon }),
     label: null,
     arrow: true,
     onPress: null,
   };
   if (tmp6Result == null) {
     const obj4 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const intl = tmp3(1125).intl;
-    obj4.children = intl.string(tmp3(1125).t.r2ptsz);
-    tmp6Result = jsx(tmp3(5271).Text, { variant: "text-md/medium", color: "text-muted", children: null });
+    const intl = tmp3(1114).intl;
+    obj4.children = intl.string(tmp3(1114).t.r2ptsz);
+    tmp6Result = jsx(tmp3(5619).Text, { variant: "text-md/medium", color: "text-muted", children: null });
   }
   obj3.label = tmp6Result;
   obj3.onPress = function handleSelectChannel() {
@@ -51,12 +51,12 @@ export default function FormChannelPicker(channelId) {
     }
     obj2.selectedChannelId = id;
     obj2.onChannelSelected = onChannelSelected;
-    obj.openLazy(asyncRequireImpl(19845, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(19908, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
   };
-  obj2.children = jsx(channelId(6963).TableRow, {
+  obj2.children = jsx(channelId(6969).TableRow, {
     start: true,
     end: true,
-    icon: jsx(channelId(6963).TableRow.Icon, { IconComponent: TextIcon }),
+    icon: jsx(channelId(6969).TableRow.Icon, { IconComponent: TextIcon }),
     label: null,
     arrow: true,
     onPress: null,

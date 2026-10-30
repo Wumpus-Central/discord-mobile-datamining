@@ -1,13 +1,14 @@
 // discord_app/modules/user_profile/utils/getActivityHeader.tsx
+import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
+import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import StageChannelRichPresenceUtils from "../../stage_channels/StageChannelRichPresenceUtils.tsx";
 import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId.tsx";
 import getActivityPlatformDefault from "getActivityPlatform.tsx";
 import getActivityPlatformDisplayNameDefault from "getActivityPlatformDisplayName.tsx";
-import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-({ ActivityTypes: c3, PlatformTypes: closure_4 } = Constants);
+const PlatformTypes = Constants.PlatformTypes;
 const result = size.fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");
 
 export default function getActivityHeader(session_id) {
@@ -23,12 +24,12 @@ export default function getActivityHeader(session_id) {
   if (str == null) {
     str = "";
   }
-  if (session_id.type === constants.PLAYING) {
+  if (session_id.type === ActivityTypes.ActivityTypes.PLAYING) {
     let type1;
     if (tmp4 != null) {
       type1 = tmp4.type;
     }
-    if (type1 === constants2.XBOX) {
+    if (type1 === PlatformTypes.XBOX) {
       const obj2 = { text: null, platformIcon: null, platformLabel: null };
       const intl21 = util.intl;
       const obj3 = { platform: null };
@@ -40,12 +41,12 @@ export default function getActivityHeader(session_id) {
       return obj2;
     }
   }
-  if (session_id.type === constants.PLAYING) {
+  if (session_id.type === ActivityTypes.ActivityTypes.PLAYING) {
     let type2;
     if (tmp4 != null) {
       type2 = tmp4.type;
     }
-    if (type2 === constants2.PLAYSTATION) {
+    if (type2 === PlatformTypes.PLAYSTATION) {
       const obj4 = { text: null, platformIcon: null, platformLabel: null };
       const intl19 = util.intl;
       const obj5 = { platform: null };
@@ -57,17 +58,17 @@ export default function getActivityHeader(session_id) {
       return obj4;
     }
   }
-  if (session_id.type === constants.PLAYING) {
+  if (session_id.type === ActivityTypes.ActivityTypes.PLAYING) {
     let type3;
     if (tmp4 != null) {
       type3 = tmp4.type;
     }
-    if (type3 === constants2.META_QUEST_OR_HORIZON) {
+    if (type3 === PlatformTypes.META_QUEST_OR_HORIZON) {
       const intl17 = util.intl;
       const intl18 = util.intl;
       const string2 = intl18.string;
       const t2 = util.t;
-      if (tmp31) {
+      if (tmp20) {
         let string2Result = string2(t2.BrHQaq);
       } else {
         string2Result = string2(t2.p6vL0e);
@@ -80,17 +81,17 @@ export default function getActivityHeader(session_id) {
       return obj6;
     }
   }
-  if (session_id.type === constants.WATCHING) {
+  if (session_id.type === ActivityTypes.ActivityTypes.WATCHING) {
     let type4;
     if (tmp4 != null) {
       type4 = tmp4.type;
     }
-    if (type4 === constants2.META_QUEST_OR_HORIZON) {
+    if (type4 === PlatformTypes.META_QUEST_OR_HORIZON) {
       const intl15 = util.intl;
       const intl16 = util.intl;
       const string = intl16.string;
       const t = util.t;
-      if (tmp28) {
+      if (tmp18) {
         let stringResult = string(t.BrHQaq);
       } else {
         stringResult = string(t.p6vL0e);
@@ -103,12 +104,12 @@ export default function getActivityHeader(session_id) {
       return obj8;
     }
   }
-  if (session_id.type === constants.STREAMING) {
+  if (session_id.type === ActivityTypes.ActivityTypes.STREAMING) {
     let type5;
     if (tmp4 != null) {
       type5 = tmp4.type;
     }
-    if (type5 === constants2.TWITCH) {
+    if (type5 === PlatformTypes.TWITCH) {
       const obj10 = { text: null, platformIcon: null, platformLabel: null };
       const intl13 = util.intl;
       const obj11 = { name: null };
@@ -120,12 +121,12 @@ export default function getActivityHeader(session_id) {
       return obj10;
     }
   }
-  if (session_id.type === constants.STREAMING) {
+  if (session_id.type === ActivityTypes.ActivityTypes.STREAMING) {
     let type6;
     if (tmp4 != null) {
       type6 = tmp4.type;
     }
-    if (type6 === constants2.YOUTUBE) {
+    if (type6 === PlatformTypes.YOUTUBE) {
       const obj12 = { text: null, platformIcon: null, platformLabel: null };
       const intl11 = util.intl;
       const obj13 = { name: null };
@@ -139,36 +140,36 @@ export default function getActivityHeader(session_id) {
   }
   if (null != tmp3) {
     const type = session_id.type;
-    if (constants.PLAYING === type) {
+    if (ActivityTypes.ActivityTypes.PLAYING === type) {
       let Dzgz4u = util.t.A17aM8;
-    } else if (constants.WATCHING === type) {
+    } else if (ActivityTypes.ActivityTypes.WATCHING === type) {
       Dzgz4u = util.t.ENbTKQ;
-    } else if (constants.LISTENING === type) {
+    } else if (ActivityTypes.ActivityTypes.LISTENING === type) {
       Dzgz4u = util.t.EcHzWI;
-    } else if (constants.COMPETING === type) {
+    } else if (ActivityTypes.ActivityTypes.COMPETING === type) {
       Dzgz4u = util.t.ikpHeS;
-    } else if (constants.STREAMING === type) {
+    } else if (ActivityTypes.ActivityTypes.STREAMING === type) {
       Dzgz4u = util.t.Dzgz4u;
     }
     if (undefined !== Dzgz4u) {
       const obj14 = { text: null, platformIcon: null, platformLabel: null };
       const intl10 = util.intl;
-      const obj15 = { platform: tmp35 };
+      const obj15 = { platform: tmp22 };
       obj14.text = intl10.formatToPlainString(Dzgz4u, obj15);
       obj14.platformIcon = icon;
       obj14.platformLabel = str;
       return obj14;
     }
-    tmp35 = getActivityPlatformDisplayNameDefault(tmp3, session_id);
+    tmp22 = getActivityPlatformDisplayNameDefault(tmp3, session_id);
   }
-  if (session_id.type === constants.PLAYING) {
+  if (session_id.type === ActivityTypes.ActivityTypes.PLAYING) {
     const obj16 = { text: null, platformIcon: null, platformLabel: null };
     const intl9 = util.intl;
     obj16.text = intl9.string(util.t.BMTj28);
     obj16.platformIcon = icon;
     obj16.platformLabel = str;
     let obj = obj16;
-  } else if (session_id.type === constants.STREAMING) {
+  } else if (session_id.type === ActivityTypes.ActivityTypes.STREAMING) {
     const obj17 = { text: null, platformIcon: null, platformLabel: null };
     const intl8 = util.intl;
     obj17.text = intl8.string(util.t["Jpkr/q"]);
@@ -176,14 +177,14 @@ export default function getActivityHeader(session_id) {
     obj17.platformLabel = str;
     obj = obj17;
   } else {
-    if (obj29.isStageActivity(session_id)) {
+    if (tmp5Result.isStageActivity(session_id)) {
       const obj18 = { text: null };
       const intl7 = util.intl;
       const obj19 = { name: session_id.name };
       obj18.text = intl7.formatToPlainString(util.t.pW3Ip3, obj19);
       obj = obj18;
     } else {
-      if (session_id.type === constants.LISTENING) {
+      if (session_id.type === ActivityTypes.ActivityTypes.LISTENING) {
         if (null != session_id.details) {
           const obj20 = { text: null, platformIcon: null, platformLabel: null };
           const intl6 = util.intl;
@@ -194,7 +195,7 @@ export default function getActivityHeader(session_id) {
           obj = obj20;
         }
       }
-      if (session_id.type === constants.LISTENING) {
+      if (session_id.type === ActivityTypes.ActivityTypes.LISTENING) {
         const obj22 = { text: null, platformIcon: null, platformLabel: null };
         const intl5 = util.intl;
         obj22.text = intl5.string(util.t.dBISa6);
@@ -202,7 +203,7 @@ export default function getActivityHeader(session_id) {
         obj22.platformLabel = str;
         obj = obj22;
       } else {
-        if (session_id.type === constants.WATCHING) {
+        if (session_id.type === ActivityTypes.ActivityTypes.WATCHING) {
           if (null != session_id.details) {
             const obj23 = { text: null, platformIcon: null, platformLabel: null };
             const intl4 = util.intl;
@@ -213,7 +214,7 @@ export default function getActivityHeader(session_id) {
             obj = obj23;
           }
         }
-        if (session_id.type === constants.WATCHING) {
+        if (session_id.type === ActivityTypes.ActivityTypes.WATCHING) {
           const obj25 = { text: null, platformIcon: null, platformLabel: null };
           const intl3 = util.intl;
           obj25.text = intl3.string(util.t.GpNXjC);
@@ -221,7 +222,7 @@ export default function getActivityHeader(session_id) {
           obj25.platformLabel = str;
           obj = obj25;
         } else {
-          if (session_id.type === constants.COMPETING) {
+          if (session_id.type === ActivityTypes.ActivityTypes.COMPETING) {
             if (null != session_id.details) {
               const obj26 = { text: null, platformIcon: null, platformLabel: null };
               const intl2 = util.intl;
@@ -232,7 +233,7 @@ export default function getActivityHeader(session_id) {
               obj = obj26;
             }
           }
-          if (session_id.type === constants.COMPETING) {
+          if (session_id.type === ActivityTypes.ActivityTypes.COMPETING) {
             const obj28 = { text: null, platformIcon: null, platformLabel: null };
             const intl = util.intl;
             obj28.text = intl.string(util.t.OzCsIA);
@@ -245,7 +246,7 @@ export default function getActivityHeader(session_id) {
         }
       }
     }
-    obj29 = StageChannelRichPresenceUtils;
+    tmp5Result = StageChannelRichPresenceUtils;
   }
   return obj;
 }

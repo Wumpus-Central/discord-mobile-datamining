@@ -6,96 +6,35 @@ import ChannelCallLifecycleStore from "ChannelCallLifecycleStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const ReactCompilerGating = fn(558);
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/useTrackActivityVideoPip.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useTrackActivityPip(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(8);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ChannelCallLifecycleStore];
-        const fn = function _() {
-          return pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream();
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      let obj = require("c");
-      const stateFromStores = require("useStateFromStores").useStateFromStores(tmp4, tmp5);
-      const tmp8 = stateFromStores(6719)(stateFromStores);
-      dependencyMap = tmp8;
-      const tmp9 = stateFromStores(11550)();
-      noop = tmp9;
-      if (cResult[2] === arg0) {
-        if (cResult[3] === tmp9) {
-          if (cResult[4] === stateFromStores) {
-            if (cResult[5] === tmp8) {
-              let tmp10 = cResult[6];
-              let tmp11 = cResult[7];
-            }
-            const effect = noop.useEffect(tmp10, tmp11);
-          }
+export default function useTrackActivityPip(arg0) {
+  _require = arg0;
+  const items = [ChannelCallLifecycleStore];
+  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
+    pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
+  );
+  let tmp2 = stateFromStores(6726)(stateFromStores);
+  dependencyMap = tmp2;
+  const tmp3 = stateFromStores(11751)();
+  noop = tmp3;
+  const items1 = [stateFromStores, tmp2, arg0, tmp3];
+  const effect = noop.useEffect(() => {
+    compositeInstanceId = closure_3;
+    if (null != closure_3) {
+      if (null != closure_2) {
+        if (stateFromStores !== tmp8) {
+          const track = AnalyticsUtilsDefault.track;
+          const obj = { channel_id: null, guild_id: null, application_id: null, activity_session_id: null };
+          ({ id: obj.channel_id, guild_id: obj.guild_id } = closure_0);
+          ({ applicationId: obj.application_id, compositeInstanceId } = compositeInstanceId);
+          obj.activity_session_id = compositeInstanceId;
+          track(tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN, obj);
+          const tmp2 = tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN;
         }
       }
-      const fn2 = function u() {
-        compositeInstanceId = closure_3;
-        if (null != closure_3) {
-          if (null != closure_2) {
-            if (stateFromStores !== tmp8) {
-              const track = AnalyticsUtilsDefault.track;
-              const obj = { channel_id: null, guild_id: null, application_id: null, activity_session_id: null };
-              ({ id: obj.channel_id, guild_id: obj.guild_id } = closure_0);
-              ({ applicationId: obj.application_id, compositeInstanceId } = compositeInstanceId);
-              obj.activity_session_id = compositeInstanceId;
-              track(tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN, obj);
-              const tmp2 = tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN;
-            }
-          }
-        }
-      };
-      const items1 = [stateFromStores, tmp8, arg0, tmp9];
-      cResult[2] = arg0;
-      cResult[3] = tmp9;
-      cResult[4] = stateFromStores;
-      cResult[5] = tmp8;
-      cResult[6] = fn2;
-      cResult[7] = items1;
-      tmp11 = items1;
-      tmp10 = fn2;
-      const tmpResult = require("useStateFromStores");
     }
-  : function useTrackActivityPip(arg0) {
-      _require = arg0;
-      const items = [ChannelCallLifecycleStore];
-      const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
-        pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
-      );
-      let tmp2 = stateFromStores(6719)(stateFromStores);
-      dependencyMap = tmp2;
-      const tmp3 = stateFromStores(11550)();
-      noop = tmp3;
-      const items1 = [stateFromStores, tmp2, arg0, tmp3];
-      const effect = noop.useEffect(() => {
-        compositeInstanceId = closure_3;
-        if (null != closure_3) {
-          if (null != closure_2) {
-            if (stateFromStores !== tmp8) {
-              const track = AnalyticsUtilsDefault.track;
-              const obj = { channel_id: null, guild_id: null, application_id: null, activity_session_id: null };
-              ({ id: obj.channel_id, guild_id: obj.guild_id } = closure_0);
-              ({ applicationId: obj.application_id, compositeInstanceId } = compositeInstanceId);
-              obj.activity_session_id = compositeInstanceId;
-              track(tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN, obj);
-              const tmp2 = tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN;
-            }
-          }
-        }
-      }, items1);
-    };
+  }, items1);
+}

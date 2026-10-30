@@ -26,7 +26,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -115,7 +115,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -156,7 +156,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj9 = { value: { customId: "r" }, done: true };
+        const obj9 = { value: { customId: "getCurrentUser" }, done: true };
         return obj9;
       } else if (arg0 === 1) {
         c7 = 3;
@@ -201,7 +201,7 @@ let closure_10 = async function _loadCustomActivityLink() {
     return Promise.reject("fetchCustomActivityLink body is null");
   }
   closure_131_1(closure_131_2[5]).dispatch({ type: "CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS", applicationId: closure_130_0, link: closure_130_1 });
-  await "IconComponent";
+  await "HermesInternal";
   closure_3 = tmp5;
   closure_2 = tmp2;
   closure_130_0 = closure_0;
@@ -214,7 +214,7 @@ let closure_10 = async function _loadCustomActivityLink() {
   }
   return Promise.reject("appId or linkId null");
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/CustomActivityLinkUtils.tsx");

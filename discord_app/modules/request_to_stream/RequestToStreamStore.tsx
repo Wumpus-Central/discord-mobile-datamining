@@ -9,7 +9,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 require = fn;
-const ActivityActionTypes = fn(1084).ActivityActionTypes;
+const ActivityActionTypes = fn(1072).ActivityActionTypes;
 let closure_8 = {};
 const dependencyMap = {};
 let c10 = null;

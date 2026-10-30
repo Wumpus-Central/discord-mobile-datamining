@@ -1,11 +1,7 @@
 // discord_app/design/mana/components/Toast/Toast.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Text_Text from "../../../components/Text/native/Text.tsx";
-import useToken from "../../../tokens/native/useToken.tsx";
-import _mod15781 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
+import _mod15819 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
 import ToastEntity from "ToastEntity.native.tsx";
-import _modDef15783 from "../../../../../_runtime/metro/15783__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,12 +10,12 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let wrapper = {
-  success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7327).CircleCheckIcon },
+  success: { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7334).CircleCheckIcon },
   critical: null,
 };
-let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7327).CircleCheckIcon };
-wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7072).CircleErrorIcon };
-const createStyles = fn(5005);
+let obj2 = { color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, icon: fn(7334).CircleCheckIcon };
+wrapper.critical = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7080).CircleErrorIcon };
+const createStyles = fn(5009);
 let closure_9 = createStyles.createStyles((arg0) => {
   wrapper = {
     flexDirection: "row",
@@ -61,220 +57,77 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj2.text = { flexShrink: 1 };
   return obj2;
 });
-const ReactCompilerGating = fn(558);
-let obj3 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, icon: fn(7072).CircleErrorIcon };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/mana/components/Toast/Toast.native.tsx");
 
-export const Toast = ReactCompilerGating.isReactCompilerEnabled()
-  ? function Toast(iconColor) {
-      const obj = c;
-      const cResult = obj.c(21);
-      ({ variant, text, icon, secondaryIconColor } = iconColor);
-      let str = "default";
-      if (undefined !== variant) {
-        str = variant;
+export function Toast(variant) {
+  let str = variant.variant;
+  if (str === undefined) {
+    str = "default";
+  }
+  ({ text, icon } = variant);
+  const iconColor = variant.iconColor;
+  const secondaryIconColor = variant.secondaryIconColor;
+  const tmp = closure_9(str);
+  icon = tmp;
+  const items = [icon, iconColor, secondaryIconColor, tmp.icon, str];
+  const token = str(iconColor[7]).useToken(icon(iconColor[3]).modules.toast.TEXT_LINE_COUNT);
+  let obj2 = { style: tmp.wrapper, children: null };
+  let obj3 = { style: null };
+  const items1 = [tmp.baselayer, tmp[str]];
+  obj3.style = items1;
+  const memo = secondaryIconColor.useMemo(() => {
+    if (null == obj[str]) {
+      obj = _mod15819;
+      if (obj.isToastEntity(icon)) {
+        const obj3 = { entity: tmp4 };
+        return timestampProducer(ToastEntity.ToastEntity, obj3);
       }
-      const tmp4 = closure_9(str);
-      const token = useToken.useToken(nativeDefault.modules.toast.TEXT_LINE_COUNT);
-      if (null == obj[str]) {
-        if (tmpResult3.isToastEntity(icon)) {
-          if (cResult[0] !== icon) {
-            const obj2 = { entity: icon };
-            const tmp21 = timestampProducer(ToastEntity.ToastEntity, obj2);
-            cResult[0] = icon;
-            cResult[1] = tmp21;
-          }
-        }
-        tmpResult3 = _mod15781;
-      }
-      let icon1;
-      if (obj[str] != null) {
-        icon1 = tmp7.icon;
-      }
-      if (icon1 == null) {
-        let tmp9;
-        if (!tmpResult4.isToastEntity(icon)) {
-          tmp9 = icon;
-        }
-        icon1 = tmp9;
-        tmpResult4 = _mod15781;
-      }
-      let tmp10 = null;
-      if (null != icon1) {
-        let color;
-        if (tmp7 != null) {
-          color = tmp7.color;
-        }
-        if (color == null) {
-          color = iconColor.iconColor;
-        }
-        if (color == null) {
-          color = nativeDefault.colors.ICON_DEFAULT;
-        }
-        if (cResult[2] === secondaryIconColor) {
-          if (cResult[3] === color) {
-            let tmp12 = cResult[4];
-          }
-          if (cResult[5] === icon1) {
-            if (cResult[6] === tmp12) {
-              if (cResult[7] === tmp4.icon) {
-                let tmp13 = cResult[8];
-              }
-              tmp10 = tmp13;
-            }
-          }
-          const obj3 = { style: tmp4.icon, size: "sm" };
-          const merged = Object.assign(tmp12);
-          const tmp18 = timestampProducer(icon1, obj3);
-          cResult[5] = icon1;
-          cResult[6] = tmp12;
-          cResult[7] = tmp4.icon;
-          cResult[8] = tmp18;
-          tmp13 = tmp18;
-        }
-        const obj4 = { color };
-        if (null != secondaryIconColor) {
-          obj4.secondaryColor = secondaryIconColor;
-        }
-        cResult[2] = secondaryIconColor;
-        cResult[3] = color;
-        cResult[4] = obj4;
-        tmp12 = obj4;
-      }
-      if (cResult[9] === tmp4.baselayer) {
-        if (cResult[10] === tmp23) {
-          let tmp24 = cResult[11];
-        }
-        if (cResult[12] === tmp4.text) {
-          if (cResult[13] === text) {
-            if (cResult[14] === token) {
-              let tmp26 = cResult[15];
-            }
-            if (cResult[16] === tmp10) {
-              if (cResult[17] === tmp4.wrapper) {
-                if (cResult[18] === tmp24) {
-                  if (cResult[19] === tmp26) {
-                    let tmp30 = cResult[20];
-                  }
-                  return tmp30;
-                }
-              }
-            }
-            const obj5 = { style: tmp4.wrapper, children: null };
-            const items = [tmp24, tmp10, tmp26];
-            obj5.children = items;
-            const tmp33 = React5(hasOwnProperty, obj5);
-            cResult[16] = tmp10;
-            cResult[17] = tmp4.wrapper;
-            cResult[18] = tmp24;
-            cResult[19] = tmp26;
-            cResult[20] = tmp33;
-            tmp30 = tmp33;
-          }
-        }
-        const tmp27 = _modDef15783(text);
-        let tmp28 = !tmp27;
-        if (!tmp27) {
-          const obj6 = {
-            variant: "text-md/normal",
-            color: "text-strong",
-            lineClamp: token,
-            style: tmp4.text,
-            children: text,
-          };
-          tmp28 = timestampProducer(Text_Text.Text, obj6);
-        }
-        cResult[12] = tmp4.text;
-        cResult[13] = text;
-        cResult[14] = token;
-        cResult[15] = tmp28;
-        tmp26 = tmp28;
-      }
-      const obj7 = { style: null };
-      const items1 = [tmp4.baselayer, tmp4[str]];
-      obj7.style = items1;
-      const tmp25 = timestampProducer(hasOwnProperty, obj7);
-      cResult[9] = tmp4.baselayer;
-      cResult[10] = tmp4[str];
-      cResult[11] = tmp25;
-      tmp24 = tmp25;
-      const tmpResult = useToken;
+      tmp4 = icon;
     }
-  : function Toast(variant) {
-      let str = variant.variant;
-      if (str === undefined) {
-        str = "default";
+    icon = undefined;
+    if (obj[str] != null) {
+      icon = tmp.icon;
+    }
+    if (icon == null) {
+      let tmp9;
+      if (!obj2.isToastEntity(icon)) {
+        tmp9 = tmp8;
       }
-      ({ text, icon } = variant);
-      const iconColor = variant.iconColor;
-      const secondaryIconColor = variant.secondaryIconColor;
-      const tmp = closure_9(str);
-      icon = tmp;
-      const items = [icon, iconColor, secondaryIconColor, tmp.icon, str];
-      const token = str(iconColor[9]).useToken(icon(iconColor[3]).modules.toast.TEXT_LINE_COUNT);
-      let obj2 = { style: tmp.wrapper, children: null };
-      let obj3 = { style: null };
-      const items1 = [tmp.baselayer, tmp[str]];
-      obj3.style = items1;
-      const memo = secondaryIconColor.useMemo(() => {
-        if (null == obj[str]) {
-          obj = _mod15781;
-          if (obj.isToastEntity(icon)) {
-            const obj3 = { entity: tmp4 };
-            return timestampProducer(ToastEntity.ToastEntity, obj3);
-          }
-          tmp4 = icon;
-        }
-        icon = undefined;
-        if (obj[str] != null) {
-          icon = tmp.icon;
-        }
-        if (icon == null) {
-          let tmp9;
-          if (!obj2.isToastEntity(icon)) {
-            tmp9 = tmp8;
-          }
-          icon = tmp9;
-          obj2 = _mod15781;
-          tmp8 = icon;
-        }
-        if (null == icon) {
-          return null;
-        } else {
-          let color;
-          if (tmp != null) {
-            color = tmp.color;
-          }
-          if (color == null) {
-            color = iconColor;
-          }
-          if (color == null) {
-            color = nativeDefault.colors.ICON_DEFAULT;
-          }
-          const obj4 = { color };
-          if (null != secondaryIconColor) {
-            obj4.secondaryColor = secondaryIconColor;
-          }
-          const obj5 = { style: icon.icon, size: "sm" };
-          const merged = Object.assign(obj4);
-          return timestampProducer(icon, obj5);
-        }
-      }, items);
-      const items2 = [closure_6(closure_5, obj3), memo];
-      let tmp9 = icon(iconColor[12])(text);
-      let tmp8Result = !tmp9;
-      if (!tmp9) {
-        let obj4 = {
-          variant: "text-md/normal",
-          color: "text-strong",
-          lineClamp: token,
-          style: tmp.text,
-          children: text,
-        };
-        tmp8Result = closure_6(str(iconColor[13]).Text, obj4);
+      icon = tmp9;
+      obj2 = _mod15819;
+      tmp8 = icon;
+    }
+    if (null == icon) {
+      return null;
+    } else {
+      let color;
+      if (tmp != null) {
+        color = tmp.color;
       }
-      items2[2] = tmp8Result;
-      obj2.children = items2;
-      return closure_7(closure_5, obj2);
-    };
+      if (color == null) {
+        color = iconColor;
+      }
+      if (color == null) {
+        color = nativeDefault.colors.ICON_DEFAULT;
+      }
+      const obj4 = { color };
+      if (null != secondaryIconColor) {
+        obj4.secondaryColor = secondaryIconColor;
+      }
+      const obj5 = { style: icon.icon, size: "sm" };
+      const merged = Object.assign(obj4);
+      return timestampProducer(icon, obj5);
+    }
+  }, items);
+  const items2 = [closure_6(closure_5, obj3), memo];
+  let tmp9 = icon(iconColor[10])(text);
+  let tmp8Result = !tmp9;
+  if (!tmp9) {
+    let obj4 = { variant: "text-md/normal", color: "text-strong", lineClamp: token, style: tmp.text, children: text };
+    tmp8Result = closure_6(str(iconColor[11]).Text, obj4);
+  }
+  items2[2] = tmp8Result;
+  obj2.children = items2;
+  return closure_7(closure_5, obj2);
+}

@@ -18,9 +18,9 @@ import Dispatcher from "../Dispatcher.tsx";
 const StreamRTCConnectionDefault = StreamRTCConnection;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6702).StreamTypes;
+const StreamTypes = fn(6709).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};
@@ -314,7 +314,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
       appContext = appContext.appContext;
       const streamKey = appContext.streamKey;
-      closure_11[streamKey] = { appContext, analyticsLocations: "a" };
+      closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
       const item = _modDef12.forEach(closure_18, (analyticsContext) => {
         analyticsContext = analyticsContext.analyticsContext;
         analyticsContext.setActionContext(appContext);

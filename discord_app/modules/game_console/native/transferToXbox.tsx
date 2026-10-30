@@ -15,7 +15,7 @@ let closure_8 = async function _transferToXbox(arg0) {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_8 = async function _transferToXbox(arg0) {
         closure_130_2(closure_130_3[12]).stopOwnStream(false);
         closure_130_5.openURL(closure_129_2);
         c4 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       } else {
         const obj17 = {
           importer() {
@@ -123,7 +123,7 @@ let closure_8 = async function _transferToXbox(arg0) {
   }
 };
 const Linking = fn(17).Linking;
-const PlatformTypes = fn(1084).PlatformTypes;
+const PlatformTypes = fn(1072).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");

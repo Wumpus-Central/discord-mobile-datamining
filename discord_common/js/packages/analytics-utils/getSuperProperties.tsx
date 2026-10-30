@@ -5,7 +5,7 @@ import getSystemLocale2 from "../i18n/getSystemLocale.tsx";
 import NativeDeviceModule from "../rtn-codegen/js/NativeDeviceModule.tsx";
 import ClientModDetectionUtils from "../../shared/utils/ClientModDetectionUtils.tsx";
 import clientLaunchId from "clientLaunchId.tsx";
-import formatDefault from "../../../../_runtime/01364_format.js";
+import formatDefault from "../../../../_runtime/01353_format.js";
 import NativeMetaQuestModule from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
 import NativeClientInfoModule from "../rtn-codegen/js/NativeClientInfoModule.tsx";
 import DesignIds from "../../shared/shared-constants/DesignIds.tsx";
@@ -195,7 +195,7 @@ if (null == obj) {
         tmp7 = tmp9;
       }
       const Storage5 = Storage7.Storage;
-      value3 = Storage5.get(referralProperties);
+      let value3 = Storage5.get(referralProperties);
       if (null == value3) {
         obj = {};
         const Storage6 = Storage7.Storage;
@@ -203,7 +203,7 @@ if (null == obj) {
         value3 = obj;
       }
       const SessionStorage = SessionStorage3.SessionStorage;
-      value4 = SessionStorage.get(referralProperties);
+      let value4 = SessionStorage.get(referralProperties);
       if (null == value4) {
         const obj3 = {};
         const _Object = Object;
@@ -230,6 +230,7 @@ if (null == obj) {
         const obj6 = {};
         const merged1 = Object.assign(obj5);
         obj6.os_version = tmp24.systemVersion || "";
+        obj6.os_sdk_version = tmp24.osSdkVersion || undefined;
         let obj7 = obj6;
       } else {
         obj7 = {};
@@ -264,7 +265,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("35320300000000", 10) };
+    obj = { client_build_number: parseInt("35320400000000", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;

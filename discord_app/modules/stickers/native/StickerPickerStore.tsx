@@ -1,10 +1,10 @@
 // discord_app/modules/stickers/native/StickerPickerStore.tsx
-import 00570__ from "../../../../_runtime/metro/00570__.js";
+import 00560__ from "../../../../_runtime/metro/00560__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPickerStore.tsx");
 
-export const useStickerPickerStore = module_570.create((arg0) => {
+export const useStickerPickerStore = module_560.create((arg0) => {
   closure_0 = arg0;
   return {
     packToScrollTo: null,

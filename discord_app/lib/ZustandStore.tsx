@@ -1,5 +1,4 @@
 // discord_app/lib/ZustandStore.tsx
-import c from "../../_runtime/00576_c.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -11,10 +10,9 @@ const result = size.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export function createZustandStore(arg0) {
   _require = arg0;
-  let obj = require("../../_runtime/metro/01266__.js");
-  let tmp = _require;
+  let obj = require("../../_runtime/metro/01255__.js");
   dependencyMap = obj.createWithEqualityFn(
-    require("../../_runtime/metro/05201__.js").subscribeWithSelector((arg0, arg1, arg2) => {
+    require("../../_runtime/metro/05207__.js").subscribeWithSelector((arg0, arg1, arg2) => {
       closure_0 = arg0;
       return closure_0(
         (arg0) => {
@@ -26,30 +24,18 @@ export function createZustandStore(arg0) {
       );
     }),
   );
-  const obj2 = require("../../_runtime/metro/05201__.js");
-  let tmp3 = require("ReactCompilerGating").isReactCompilerEnabled()
-    ? function useState(arg0, arg1) {
-        let tmp = arg1;
-        if (undefined === arg1) {
-          tmp = defaultStatesAreEqual;
-        }
-        return closure_1(arg0, tmp);
-      }
-    : function useState(arg0) {
-        let tmp = arg1;
-        if (arg1 === undefined) {
-          tmp = defaultStatesAreEqual;
-        }
-        return closure_1(arg0, tmp);
-      };
-  closure_2 = tmp3;
-  const obj3 = require("ReactCompilerGating");
   function setState(arg0) {
     closure_0 = arg0;
     closure_0(closure_1[2]).batchUpdates(() => state.setState(closure_0));
   }
   const store = {
-    useState: tmp3,
+    useState(arg0) {
+      let tmp = arg1;
+      if (arg1 === undefined) {
+        tmp = defaultStatesAreEqual;
+      }
+      return closure_1(arg0, tmp);
+    },
     getState(fn) {
       const state = closure_1.getState();
       let tmp2 = state;
@@ -58,36 +44,19 @@ export function createZustandStore(arg0) {
       }
       return tmp2;
     },
-    useField: tmp(558).isReactCompilerEnabled()
-      ? function useField(arg0, arg1) {
-          closure_0 = arg0;
-          let tmp = arg1;
-          const cResult = c.c(2);
-          if (undefined === arg1) {
-            tmp = defaultStatesAreEqual;
-          }
-          if (cResult[0] !== arg0) {
-            const fn = function s(arg0) {
-              return arg0[closure_0];
-            };
-            cResult[0] = arg0;
-            cResult[1] = fn;
-            let tmp3 = fn;
-          } else {
-            tmp3 = cResult[1];
-          }
-          return closure_2(tmp3, tmp);
-        }
-      : function useField(arg0) {
-          closure_0 = arg0;
-          let tmp = arg1;
-          if (arg1 === undefined) {
-            tmp = defaultStatesAreEqual;
-          }
-          return closure_2((arg0) => arg0[closure_0], tmp);
-        },
-    getField(keyboard) {
-      return closure_1.getState()[keyboard];
+    useField(blocklist) {
+      closure_0 = blocklist;
+      let tmp = arg1;
+      if (arg1 === undefined) {
+        tmp = defaultStatesAreEqual;
+      }
+      if (tmp === undefined) {
+        tmp = defaultStatesAreEqual;
+      }
+      return closure_1((arg0) => arg0[closure_0], tmp);
+    },
+    getField(blocklist) {
+      return closure_1.getState()[blocklist];
     },
     subscribe(arg0, arg1, arg2) {
       return closure_1.subscribe(arg0, arg1, arg2);

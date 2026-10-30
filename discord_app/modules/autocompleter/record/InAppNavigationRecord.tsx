@@ -3,9 +3,9 @@ import UserSettingsURLUtils from "../../user_settings/UserSettingsURLUtils.tsx";
 import Record from "../../../lib/Record.tsx";
 
 require = fn;
-const Routes = fn(1084).Routes;
-const RewardFilterTypes = fn(6768).RewardFilterTypes;
-const UserSettingsPath = fn(1094).UserSettingsPath;
+const Routes = fn(1072).Routes;
+const RewardFilterTypes = fn(6775).RewardFilterTypes;
+const UserSettingsPath = fn(1082).UserSettingsPath;
 const InAppNavigationType = {
   SHOP: "SHOP",
   SHOP_ORBS_TAB: "SHOP_ORBS_TAB",

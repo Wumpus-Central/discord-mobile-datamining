@@ -13,15 +13,15 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import PrivateChannelSortStore from "../../stores/views/PrivateChannelSortStore.tsx";
 
 require = fn;
-const ME = fn(1084).ME;
-const StaticChannelRoute = fn(4864).StaticChannelRoute;
+const ME = fn(1072).ME;
+const StaticChannelRoute = fn(4865).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 
 export function getGuildTransitionRoute(id) {
   const lastProjectId = ConjureBuilderRouteStore.getLastProjectId(id);
   if (null != lastProjectId) {
-    guild = GuildStore.getGuild(id);
+    const guild = GuildStore.getGuild(id);
     let canAccessConjureResult = null != guild;
     if (canAccessConjureResult) {
       canAccessConjureResult = ConjureUtils.canAccessConjure(guild, "getChannelIdForGuildTransition");

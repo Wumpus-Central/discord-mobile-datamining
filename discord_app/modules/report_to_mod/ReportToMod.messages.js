@@ -1,18 +1,18 @@
 // discord_app/modules/report_to_mod/ReportToMod.messages.js
 import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
-import _mod2673 from "../../../_runtime/metro/02673__.js";
-import module_1164_mod from "../../../_runtime/metro/01164__.js";
+import _mod2674 from "../../../_runtime/metro/02674__.js";
+import module_1153_mod from "../../../_runtime/metro/01153__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let module_1164 = module_1164_mod;
-const loader = module_1164.createLoader({
+let module_1153 = module_1153_mod;
+const loader = module_1153.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2673);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2674);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1164 = module_1164_mod;
-const messagesProxy = module_1164.makeMessagesProxy(loader);
+let module_1153 = module_1153_mod;
+const messagesProxy = module_1153.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/report_to_mod/ReportToMod.messages.js");
 
 export default messagesProxy;

@@ -1,12 +1,10 @@
 // discord_app/modules/conjure/chat/conjureAttachmentDrafts.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import ConjureAttachmentTypes from "ConjureAttachmentTypes.tsx";
 import conjureAttachmentRequests from "conjureAttachmentRequests.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import Dispatcher_mod from "../../../Dispatcher.tsx";
-
-const require = globalThis.__r;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -127,18 +125,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10807).sendUserMessage;
+const sendUserMessage = fn(10830).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5200).createZustandStore(() => ({ draftsByProject: {} }));
-const ReactCompilerGating = fn(558);
-function conjureAttachmentTooLargeText(contentType) {
-  const intl = util.intl;
-  const obj = { size: null };
-  const obj2 = ConjureAttachmentTypes;
-  obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3864.JZ59Bo, obj);
-}
+const zustandStore = fn(5206).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);
@@ -157,7 +147,13 @@ let result = size.fileFinishedImporting("modules/conjure/chat/conjureAttachmentD
 
 export const ConjureAttachmentDraftStore = zustandStore;
 export { getConjureAttachmentDrafts };
-export { conjureAttachmentTooLargeText };
+export function conjureAttachmentTooLargeText(contentType) {
+  const intl = util.intl;
+  const obj = { size: null };
+  const obj2 = ConjureAttachmentTypes;
+  obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
+  return intl.formatToPlainString(_modDef3865.JZ59Bo, obj);
+}
 export function uploadConjureAttachment(arg0, size, name, contentType) {
   if (obj.isConjureAttachmentWithinLimit(size.size, contentType)) {
     const tmpResult = conjureAttachmentRequests;
@@ -168,53 +164,26 @@ export function uploadConjureAttachment(arg0, size, name, contentType) {
     const obj3 = { size: null };
     const tmpResult3 = ConjureAttachmentTypes;
     obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef3864.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef3865.JZ59Bo, obj3);
     result = Promise.resolve(obj2);
     const tmpResult4 = ConjureAttachmentTypes;
   }
   return result;
 }
-export const useConjureAttachmentDraftList = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureAttachmentDraftList(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(3);
-      if (cResult[0] === arg0) {
-        if (cResult[1] === arg1) {
-          let tmp2 = cResult[2];
-        }
-        return zustandStore.useState(tmp2);
-      }
-      const fn = function r(arg0) {
-        let tmp2;
-        if (arg0.draftsByProject[closure_0] != null) {
-          tmp2 = tmp[closure_1];
-        }
-        if (tmp2 == null) {
-          tmp2 = closure_7;
-        }
-        return tmp2;
-      };
-      cResult[0] = arg0;
-      cResult[1] = arg1;
-      cResult[2] = fn;
-      tmp2 = fn;
-      const obj = require("c");
+export function useConjureAttachmentDraftList(projectId, chat) {
+  closure_0 = projectId;
+  closure_1 = chat;
+  return zustandStore.useState((arg0) => {
+    let tmp2;
+    if (arg0.draftsByProject[closure_0] != null) {
+      tmp2 = tmp[closure_1];
     }
-  : function useConjureAttachmentDraftList(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      return zustandStore.useState((arg0) => {
-        let tmp2;
-        if (arg0.draftsByProject[closure_0] != null) {
-          tmp2 = tmp[closure_1];
-        }
-        if (tmp2 == null) {
-          tmp2 = closure_7;
-        }
-        return tmp2;
-      });
-    };
+    if (tmp2 == null) {
+      tmp2 = closure_7;
+    }
+    return tmp2;
+  });
+}
 export function addConjureAttachmentDrafts(substr, chat, mapped) {
   closure_0 = substr;
   closure_1 = chat;

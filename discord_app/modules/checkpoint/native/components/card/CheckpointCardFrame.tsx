@@ -12,11 +12,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 284;
 let c10 = 43.5;
-let c11 = 40;
-let c12 = "M0 40H30L40 30V0H10L0 10V40Z";
-let c13 = 150;
-const createStyles = fn(5005);
-let closure_14 = createStyles.createStyles({
+const createStyles = fn(5009);
+let closure_11 = createStyles.createStyles({
   canvas: { overflow: "hidden", transformOrigin: "top left" },
   layer: { position: "absolute", top: 0, left: 0 },
   logo: {
@@ -29,751 +26,217 @@ let closure_14 = createStyles.createStyles({
     justifyContent: "center",
   },
 });
-const __initData = {
+let __initData = {
   code: "function CheckpointCardFrameTsx1(){const{isArtLoaded,withTiming,CARD_ART_FADE_IN_DURATION_MS}=this.__closure;return{opacity:isArtLoaded?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};}",
 };
-const __initData2 = {
-  code: "function CheckpointCardFrameTsx2(){const{isArtLoaded,withTiming,CARD_ART_FADE_IN_DURATION_MS}=this.__closure;return{opacity:isArtLoaded?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};}",
-};
-const ReactCompilerGating = fn(558);
 let size = fn(2);
-let result = size.fileFinishedImporting("modules/checkpoint/native/components/card/CheckpointCardFrame.tsx");
+const result = size.fileFinishedImporting("modules/checkpoint/native/components/card/CheckpointCardFrame.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function CheckpointCardFrame(arg0) {
-      const cResult = recapCardBackgroundImage(joined[6]).c(92);
-      ({ character, cardColorPalette, canvasWidth, canvasHeight, scale, clydeSize, characterLayout, children } = arg0);
-      if (undefined === canvasHeight) {
-        canvasHeight = height;
-      }
-      let num = 1;
-      if (undefined !== scale) {
-        num = scale;
-      }
-      const tmp4 = closure_14();
-      const id = noop.useId();
-      if (cResult[0] !== cardColorPalette) {
-        const cardColors = recapCardBackgroundImage(tmp2[7]).getCardColors(cardColorPalette);
-        cResult[0] = cardColorPalette;
-        cResult[1] = cardColors;
-        let tmp6 = cardColors;
-        const tmpResult = recapCardBackgroundImage(tmp2[7]);
-      } else {
-        tmp6 = cResult[1];
-      }
-      ({ primaryBackgroundColor, secondaryBackgroundColor, recapCardBackgroundImage } = tmp6);
-      if (cResult[2] !== canvasWidth) {
-        const _HermesInternal = HermesInternal;
-        const combined = "M44 34V0H" + canvasWidth + "V284H0V43.5H34L38 38L44 34Z";
-        cResult[2] = canvasWidth;
-        cResult[3] = combined;
-        let tmp8 = combined;
-      } else {
-        tmp8 = cResult[3];
-      }
-      if (cResult[4] === canvasHeight) {
-        if (cResult[5] === canvasWidth) {
-          let tmp11 = cResult[6];
-        }
-        let size;
-        if (characterLayout != null) {
-          size = characterLayout.size;
-        }
-        if (cResult[7] === character) {
-          if (cResult[8] === size) {
-            if (cResult[10] === cResult[9]) {
-              if (cResult[11] === recapCardBackgroundImage) {
-                let obj6 = cResult[12];
-              }
-              joined = obj6.join("\n");
-              const _Symbol = Symbol;
-              if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-                let _Set = Set;
-                let set = new Set();
-                cResult[13] = set;
-                let tmp20 = set;
-              } else {
-                tmp20 = cResult[13];
-              }
-              if (cResult[14] !== joined) {
-                const obj3 = { artKey: joined, urls: tmp20 };
-                cResult[14] = joined;
-                cResult[15] = obj3;
-                let tmp25 = obj3;
-              } else {
-                tmp25 = cResult[15];
-              }
-              _slicedToArray = obj2.useRef(tmp25);
-              const tmp27 = _slicedToArray(obj2.useState(null), 2);
-              noop = tmp27[1];
-              absoluteFill = tmp28;
-              const fn = function q() {
-                let opacity = 0;
-                if (closure_5) {
-                  const obj2 = { duration };
-                  opacity = timing.withTiming(1, obj2);
-                }
-                return { opacity };
-              };
-              const obj4 = {
-                isArtLoaded: tmp27[0] === joined,
-                withTiming: recapCardBackgroundImage(tmp2[11]).withTiming,
-                CARD_ART_FADE_IN_DURATION_MS: v150,
-              };
-              fn.__closure = obj4;
-              fn.__workletHash = 7810000693516;
-              fn.__initData = __initData;
-              const animatedStyle = recapCardBackgroundImage(tmp2[10]).useAnimatedStyle(fn);
-              const result = canvasWidth * num;
-              const result1 = canvasHeight * num;
-              if (cResult[16] === result) {
-                if (cResult[17] === result1) {
-                  let tmp34 = cResult[18];
-                }
-                if (cResult[19] !== num) {
-                  const obj5 = { scale: num };
-                  const items = [obj5];
-                  cResult[19] = num;
-                  cResult[20] = items;
-                  let tmp35 = items;
-                } else {
-                  tmp35 = cResult[20];
-                }
-                if (cResult[21] === canvasHeight) {
-                  if (cResult[22] === canvasWidth) {
-                    if (cResult[23] === tmp35) {
-                      let tmp36 = cResult[24];
-                    }
-                    if (cResult[25] !== clydeSize) {
-                      const size1 = { width: clydeSize, height: clydeSize };
-                      cResult[25] = clydeSize;
-                      cResult[26] = size1;
-                      let tmp37 = size1;
-                    } else {
-                      tmp37 = cResult[26];
-                    }
-                    if (cResult[27] !== characterLayout) {
-                      let tmp39;
-                      if (null != characterLayout) {
-                        const size2 = { position: "absolute", top: null, left: null, width: null, height: null };
-                        ({ top: obj14.top, left: obj14.left, size: obj14.width, size: obj14.height } = characterLayout);
-                        tmp39 = size2;
-                      }
-                      cResult[27] = characterLayout;
-                      cResult[28] = tmp39;
-                      let tmp38 = tmp39;
-                    } else {
-                      tmp38 = cResult[28];
-                    }
-                    if (cResult[29] === joined) {
-                      if (cResult[30] === obj6) {
-                        let tmp40 = cResult[31];
-                      }
-                      closure_6 = tmp40;
-                      if (cResult[32] === tmp36) {
-                        if (cResult[33] === tmp4.canvas) {
-                          let tmp41 = cResult[34];
-                        }
-                        if (cResult[35] === tmp8) {
-                          if (cResult[36] === secondaryBackgroundColor) {
-                            let tmp42 = cResult[37];
-                          }
-                          if (cResult[38] === canvasWidth) {
-                            if (cResult[39] === tmp4.layer) {
-                              if (cResult[40] === tmp42) {
-                                let tmp45 = cResult[41];
-                              }
-                              const _HermesInternal2 = HermesInternal;
-                              const combined1 = "texture-" + joined;
-                              if (cResult[42] === animatedStyle) {
-                                if (cResult[43] === tmp4.layer) {
-                                  let tmp50 = cResult[44];
-                                }
-                                if (cResult[45] !== tmp8) {
-                                  const obj7 = { d: tmp8 };
-                                  const tmp53 = closure_7(recapCardBackgroundImage(tmp2[12]).Path, obj7);
-                                  cResult[45] = tmp8;
-                                  cResult[46] = tmp53;
-                                  let tmp51 = tmp53;
-                                } else {
-                                  tmp51 = cResult[46];
-                                }
-                                if (cResult[47] === id) {
-                                  if (cResult[48] === tmp51) {
-                                    let tmp54 = cResult[49];
-                                  }
-                                  if (cResult[50] !== recapCardBackgroundImage) {
-                                    const obj8 = { uri: recapCardBackgroundImage };
-                                    cResult[50] = recapCardBackgroundImage;
-                                    cResult[51] = obj8;
-                                    let tmp57 = obj8;
-                                  } else {
-                                    tmp57 = cResult[51];
-                                  }
-                                  const _HermesInternal3 = HermesInternal;
-                                  const combined2 = "url(#" + id + ")";
-                                  if (cResult[52] === tmp40) {
-                                    if (cResult[53] === recapCardBackgroundImage) {
-                                      let tmp59 = cResult[54];
-                                    }
-                                    if (cResult[55] === tmp57) {
-                                      if (cResult[56] === combined2) {
-                                        if (cResult[57] === tmp59) {
-                                          if (cResult[58] === tmp11) {
-                                            let tmp60 = cResult[59];
-                                          }
-                                          if (cResult[60] === canvasWidth) {
-                                            if (cResult[61] === tmp54) {
-                                              if (cResult[62] === tmp60) {
-                                                let tmp67 = cResult[63];
-                                              }
-                                              if (cResult[64] === combined1) {
-                                                if (cResult[65] === tmp50) {
-                                                  if (cResult[66] === tmp67) {
-                                                    let tmp72 = cResult[67];
-                                                  }
-                                                  if (cResult[68] !== primaryBackgroundColor) {
-                                                    const size3 = {
-                                                      style: absoluteFill.absoluteFill,
-                                                      width: v40,
-                                                      height: null,
-                                                      children: null,
-                                                    };
-                                                    class Ie {
-                                                      constructor() {
-                                                        return closure_6(recapCardBackgroundImage);
-                                                      }
-                                                    }
-                                                    const obj9 = { d, fill: primaryBackgroundColor };
-                                                    size3.children = closure_7(
-                                                      recapCardBackgroundImage(tmp2[12]).Path,
-                                                      obj9,
-                                                    );
-                                                    const tmp83 = closure_7(obj6(tmp2[12]), size3);
-                                                    cResult[68] = primaryBackgroundColor;
-                                                    cResult[69] = tmp83;
-                                                    let tmp76 = tmp83;
-                                                    const tmp79 = obj6(tmp2[12]);
-                                                  } else {
-                                                    tmp76 = cResult[69];
-                                                  }
-                                                  if (cResult[70] !== tmp37) {
-                                                    const obj10 = {
-                                                      size: "custom",
-                                                      color: obj6(tmp2[14]).colors.BLACK,
-                                                      style: tmp37,
-                                                    };
-                                                    const tmp87 = closure_7(
-                                                      recapCardBackgroundImage(tmp2[13]).ClydeIcon,
-                                                      obj10,
-                                                    );
-                                                    class Ie {
-                                                      constructor() {
-                                                        return closure_6(recapCardBackgroundImage);
-                                                      }
-                                                    }
-                                                    cResult[70] = tmp37;
-                                                    cResult[71] = tmp87;
-                                                    let tmp84 = tmp87;
-                                                  } else {
-                                                    tmp84 = cResult[71];
-                                                  }
-                                                  if (cResult[72] === tmp4.logo) {
-                                                    if (cResult[73] === tmp76) {
-                                                      if (cResult[74] === tmp84) {
-                                                        let tmp88 = cResult[75];
-                                                      }
-                                                      if (cResult[76] === animatedStyle) {
-                                                        if (cResult[77] === joined) {
-                                                          if (cResult[78] === tmp38) {
-                                                            if (cResult[79] === tmp40) {
-                                                              if (cResult[80] === arr) {
-                                                                let tmp92 = cResult[81];
-                                                              }
-                                                              if (cResult[82] === children) {
-                                                                if (cResult[83] === tmp41) {
-                                                                  if (cResult[84] === tmp45) {
-                                                                    if (cResult[85] === tmp72) {
-                                                                      if (cResult[86] === tmp88) {
-                                                                        if (cResult[87] === tmp92) {
-                                                                          let tmp97 = cResult[88];
-                                                                        }
-                                                                        if (cResult[89] === tmp34) {
-                                                                          if (cResult[90] === tmp97) {
-                                                                            let tmp101 = cResult[91];
-                                                                          }
-                                                                          return tmp101;
-                                                                        }
-                                                                        const obj11 = { style: tmp34, children: tmp97 };
-                                                                        class Ie {
-                                                                          constructor() {
-                                                                            return closure_6(recapCardBackgroundImage);
-                                                                          }
-                                                                        }
-                                                                        cResult[89] = tmp34;
-                                                                        cResult[90] = tmp97;
-                                                                        cResult[91] = tmp104;
-                                                                        tmp101 = tmp104;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                              const obj12 = { style: tmp41, children: null };
-                                                              const items1 = [, , , ,];
-                                                              class Ie {
-                                                                constructor() {
-                                                                  return closure_6(recapCardBackgroundImage);
-                                                                }
-                                                              }
-                                                              items1[1] = tmp72;
-                                                              items1[2] = tmp88;
-                                                              items1[3] = children;
-                                                              items1[4] = tmp92;
-                                                              obj12.children = items1;
-                                                              const tmp100 = closure_8(closure_6, obj12);
-                                                              cResult[82] = children;
-                                                              cResult[83] = tmp41;
-                                                              cResult[84] = tmp45;
-                                                              cResult[85] = tmp72;
-                                                              cResult[86] = tmp88;
-                                                              cResult[87] = tmp92;
-                                                              cResult[88] = tmp100;
-                                                              tmp97 = tmp100;
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                      let tmp93 = null != tmp38;
-                                                      if (tmp93) {
-                                                        tmp93 = arr.length > 0;
-                                                      }
-                                                      if (tmp93) {
-                                                        const obj13 = { style: null, children: null };
-                                                        const items2 = [tmp38, animatedStyle];
-                                                        obj13.style = items2;
-                                                        class Ie {
-                                                          constructor() {
-                                                            return closure_6(recapCardBackgroundImage);
-                                                          }
-                                                        }
-                                                        obj13.children = arr.map((uri) => {
-                                                          closure_0 = uri;
-                                                          return closure_1_7(
-                                                            obj6(joined[15]),
-                                                            {
-                                                              source: { uri },
-                                                              style: absoluteFill.absoluteFill,
-                                                              onLoad() {
-                                                                return closure_6(closure_0);
-                                                              },
-                                                            },
-                                                            uri,
-                                                          );
-                                                        });
-                                                        const _HermesInternal4 = HermesInternal;
-                                                        tmp93 = closure_7(tmp96, obj13, "character-" + joined);
-                                                      }
-                                                      cResult[76] = animatedStyle;
-                                                      class Ie {
-                                                        constructor() {
-                                                          return closure_6(recapCardBackgroundImage);
-                                                        }
-                                                      }
-                                                      cResult[77] = joined;
-                                                      cResult[78] = tmp38;
-                                                      cResult[79] = tmp40;
-                                                      cResult[80] = arr;
-                                                      cResult[81] = tmp93;
-                                                      tmp92 = tmp93;
-                                                    }
-                                                  }
-                                                  const obj15 = { style: null, children: null };
-                                                  class Ie {
-                                                    constructor() {
-                                                      return closure_6(recapCardBackgroundImage);
-                                                    }
-                                                  }
-                                                  const items3 = [tmp76, tmp84];
-                                                  obj15.children = items3;
-                                                  const tmp91 = closure_8(closure_6, obj15);
-                                                  cResult[72] = tmp4.logo;
-                                                  cResult[73] = tmp76;
-                                                  cResult[74] = tmp84;
-                                                  cResult[75] = tmp91;
-                                                  tmp88 = tmp91;
-                                                }
-                                              }
-                                              const obj16 = { style: tmp50, children: tmp67 };
-                                              class Ie {
-                                                constructor() {
-                                                  return closure_6(recapCardBackgroundImage);
-                                                }
-                                              }
-                                              cResult[64] = combined1;
-                                              cResult[65] = tmp50;
-                                              cResult[66] = tmp67;
-                                              cResult[67] = tmp75;
-                                              tmp72 = tmp75;
-                                            }
-                                          }
-                                          const size4 = { width: canvasWidth, height: null, children: null };
-                                          class Ie {
-                                            constructor() {
-                                              return closure_6(recapCardBackgroundImage);
-                                            }
-                                          }
-                                          const items4 = [tmp54, tmp60];
-                                          size4.children = items4;
-                                          const tmp71 = closure_8(obj6(tmp2[12]), size4);
-                                          cResult[60] = canvasWidth;
-                                          cResult[61] = tmp54;
-                                          cResult[62] = tmp60;
-                                          cResult[63] = tmp71;
-                                          tmp67 = tmp71;
-                                        }
-                                      }
-                                    }
-                                    const obj17 = { href: tmp57 };
-                                    class Ie {
-                                      constructor() {
-                                        return closure_6(recapCardBackgroundImage);
-                                      }
-                                    }
-                                    const merged = Object.assign(tmp11);
-                                    obj17.preserveAspectRatio = "xMidYMid slice";
-                                    obj17.clipPath = combined2;
-                                    obj17.onLoad = tmp59;
-                                    const tmp66 = closure_7(tmp62, obj17);
-                                    cResult[55] = tmp57;
-                                    cResult[56] = combined2;
-                                    cResult[57] = tmp59;
-                                    cResult[58] = tmp11;
-                                    cResult[59] = tmp66;
-                                    tmp60 = tmp66;
-                                  }
-                                  class Ie {
-                                    constructor() {
-                                      return closure_6(recapCardBackgroundImage);
-                                    }
-                                  }
-                                  cResult[52] = tmp40;
-                                  cResult[53] = recapCardBackgroundImage;
-                                  cResult[54] = Ie;
-                                  tmp59 = Ie;
-                                }
-                                const obj18 = { children: null };
-                                const obj19 = { id: null, children: tmp51 };
-                                obj18.children = closure_7(recapCardBackgroundImage(tmp2[12]).ClipPath, obj19);
-                                const tmp56 = closure_7(recapCardBackgroundImage(tmp2[12]).Defs, obj18);
-                                cResult[47] = id;
-                                cResult[48] = tmp51;
-                                cResult[49] = tmp56;
-                                tmp54 = tmp56;
-                              }
-                              const items5 = [tmp4.layer];
-                              cResult[42] = animatedStyle;
-                              cResult[43] = tmp4.layer;
-                              cResult[44] = items5;
-                              tmp50 = items5;
-                            }
-                          }
-                          const size5 = { style: tmp4.layer, width: canvasWidth, height, children: tmp42 };
-                          const tmp48 = closure_7(obj6(tmp2[12]), size5);
-                          cResult[38] = canvasWidth;
-                          cResult[39] = tmp4.layer;
-                          cResult[40] = tmp42;
-                          cResult[41] = tmp48;
-                          tmp45 = tmp48;
-                        }
-                        const obj20 = { d: tmp8, fill: secondaryBackgroundColor };
-                        const tmp44 = closure_7(recapCardBackgroundImage(tmp2[12]).Path, obj20);
-                        cResult[35] = tmp8;
-                        cResult[36] = secondaryBackgroundColor;
-                        cResult[37] = tmp44;
-                        tmp42 = tmp44;
-                      }
-                      const items6 = [tmp4.canvas, tmp36];
-                      cResult[33] = tmp4.canvas;
-                      cResult[34] = items6;
-                      tmp41 = items6;
-                    }
-                    function handleArtLoad(arg0) {
-                      if (ref.current.artKey !== joined) {
-                        const obj = { artKey: joined, urls: null };
-                        const _Set = Set;
-                        const set = new Set();
-                        obj.urls = set;
-                        ref.current = obj;
-                      }
-                      const urls = ref.current.urls;
-                      urls.add(arg0);
-                      if (obj6.every((item) => urls.has(item))) {
-                        closure_4(joined);
-                      }
-                    }
-                    cResult[29] = joined;
-                    cResult[30] = obj6;
-                    cResult[31] = handleArtLoad;
-                    tmp40 = handleArtLoad;
-                  }
-                }
-                const size6 = { width: canvasWidth, height: canvasHeight, transform: tmp35 };
-                cResult[21] = canvasHeight;
-                cResult[22] = canvasWidth;
-                cResult[23] = tmp35;
-                cResult[24] = size6;
-                tmp36 = size6;
-              }
-              const size7 = { width: result, height: result1 };
-              cResult[16] = result;
-              cResult[17] = result1;
-              cResult[18] = size7;
-              tmp34 = size7;
-              const tmpResult3 = recapCardBackgroundImage(tmp2[10]);
-            }
-            const items7 = [recapCardBackgroundImage];
-            cResult[10] = cResult[9];
-            cResult[11] = recapCardBackgroundImage;
-            cResult[12] = items7;
-            obj6 = items7;
-          }
-        }
-        if (null == character) {
-          let items8 = [];
-          cResult[7] = character;
-          cResult[8] = size;
-          cResult[9] = items8;
-          class Ie {
-            constructor() {
-              return closure_6(recapCardBackgroundImage);
-            }
-          }
-        }
+export default function CheckpointCardFrame(character) {
+  character = character.character;
+  const canvasWidth = character.canvasWidth;
+  let num = character.canvasHeight;
+  if (num === undefined) {
+    num = 284;
+  }
+  let num2 = character.scale;
+  if (num2 === undefined) {
+    num2 = 1;
+  }
+  const clydeSize = character.clydeSize;
+  const characterLayout = character.characterLayout;
+  let memo;
+  let memo1;
+  let joined;
+  let ref;
+  __initData = undefined;
+  closure_13 = undefined;
+  const tmp = ref();
+  const id = clydeSize.useId();
+  const cardColors = character(num[5]).getCardColors(character.cardColorPalette);
+  const recapCardBackgroundImage = cardColors.recapCardBackgroundImage;
+  ({ primaryBackgroundColor, secondaryBackgroundColor } = cardColors);
+  const combined = "M44 34V0H" + canvasWidth + "V284H0V43.5H34L38 38L44 34Z";
+  const bound = Math.max(1, (canvasWidth - 44) / 156, (num - joined) / 224.5);
+  let size = { x: 44 * (1 - bound), y: joined * (1 - bound), width: 200 * bound, height: 268 * bound };
+  let size1;
+  if (characterLayout != null) {
+    size1 = characterLayout.size;
+  }
+  let items = [character, size1];
+  memo = obj.useMemo(() => {
+    if (null != character) {
+      if (null != size1) {
         const _Math = Math;
-        items8 = recapCardBackgroundImage(tmp2[8]).getCharacterLayerUrls(character, Math.round(size * obj6(tmp2[9])()));
-        const tmpResult4 = recapCardBackgroundImage(tmp2[8]);
+        const characterLayerUrls = checkpoint_CheckpointMessageComponentUtils.getCharacterLayerUrls(
+          tmp,
+          Math.round(tmp2 * getDevicePixelRatioDefault()),
+        );
       }
-      const bound = Math.max(1, (canvasWidth - 44) / 156, (canvasHeight - c10) / 224.5);
-      const size8 = { x: 44 * (1 - bound), y: c10 * (1 - bound), width: 200 * bound, height: 268 * bound };
-      cResult[4] = canvasHeight;
-      cResult[5] = canvasWidth;
-      cResult[6] = size8;
-      tmp11 = size8;
-      let obj = recapCardBackgroundImage(joined[6]);
+      return [];
     }
-  : function CheckpointCardFrame(character) {
-      character = character.character;
-      const canvasWidth = character.canvasWidth;
-      let num = character.canvasHeight;
-      if (num === undefined) {
-        num = 284;
-      }
-      let num2 = character.scale;
-      if (num2 === undefined) {
+  }, items);
+  const items1 = [recapCardBackgroundImage, memo];
+  memo1 = obj.useMemo(() => {
+    const items = [recapCardBackgroundImage, ...memo];
+    return items;
+  }, items1);
+  joined = memo1.join("\n");
+  const obj3 = { artKey: joined, urls: null };
+  const obj2 = character(num[5]);
+  obj3.urls = new Set();
+  ref = obj.useRef(obj3);
+  const tmp11 = num2(clydeSize.useState(null), 2);
+  __initData = tmp11[1];
+  closure_13 = tmp12;
+  let set = new Set();
+  class T {
+    constructor() {
+      opacity = 0;
+      if (closure_13) {
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj = closure_0(closure_2[9]);
         num2 = 1;
+        opacity = obj.withTiming(1, { duration: 150 });
       }
-      const clydeSize = character.clydeSize;
-      const characterLayout = character.characterLayout;
-      let memo;
-      let memo1;
-      let joined;
-      v40 = undefined;
-      let d;
-      let v150;
-      const tmp = closure_14();
-      const id = clydeSize.useId();
-      const cardColors = character(num[7]).getCardColors(character.cardColorPalette);
-      const recapCardBackgroundImage = cardColors.recapCardBackgroundImage;
-      ({ primaryBackgroundColor, secondaryBackgroundColor } = cardColors);
-      const combined = "M44 34V0H" + canvasWidth + "V284H0V43.5H34L38 38L44 34Z";
-      const bound = Math.max(1, (canvasWidth - 44) / 156, (num - joined) / 224.5);
-      let size = { x: 44 * (1 - bound), y: joined * (1 - bound), width: 200 * bound, height: 268 * bound };
-      let size1;
-      if (characterLayout != null) {
-        size1 = characterLayout.size;
-      }
-      let items = [character, size1];
-      memo = obj.useMemo(() => {
-        if (null != character) {
-          if (null != size1) {
-            const _Math = Math;
-            const characterLayerUrls = checkpoint_CheckpointMessageComponentUtils.getCharacterLayerUrls(
-              tmp,
-              Math.round(tmp2 * getDevicePixelRatioDefault()),
-            );
-          }
-          return [];
-        }
-      }, items);
-      const items1 = [recapCardBackgroundImage, memo];
-      memo1 = obj.useMemo(() => {
-        const items = [recapCardBackgroundImage, ...memo];
-        return items;
-      }, items1);
-      joined = memo1.join("\n");
-      const obj3 = { artKey: joined, urls: null };
-      let obj2 = character(num[7]);
-      obj3.urls = new Set();
-      v40 = obj.useRef(obj3);
-      const tmp11 = num2(clydeSize.useState(null), 2);
-      d = tmp11[1];
-      v150 = tmp12;
-      let set = new Set();
-      class D {
-        constructor() {
-          opacity = 0;
-          if (closure_13) {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[11]);
-            obj1 = { duration: null };
-            tmp3 = c13;
-            obj1.duration = c13;
-            num2 = 1;
-            opacity = obj.withTiming(1, obj1);
-          }
-          return { opacity };
-        }
-      }
-      const tmp3Result = character(num[10]);
-      D.__closure = {
-        isArtLoaded: tmp11[0] === joined,
-        withTiming: character(num[11]).withTiming,
-        CARD_ART_FADE_IN_DURATION_MS: v150,
-      };
-      D.__workletHash = 11056092560943;
-      D.__initData = __initData2;
-      const animatedStyle = tmp3Result.useAnimatedStyle(D);
-      const items2 = [canvasWidth, num, num2];
-      const items3 = [canvasWidth, num, num2];
-      const memo2 = obj.useMemo(() => {
-        const size = { width: canvasWidth * num2, height: num * num2 };
-        return size;
-      }, items2);
-      const items4 = [clydeSize];
-      const memo3 = obj.useMemo(() => {
-        const size = { width: canvasWidth, height: num, transform: null };
-        const items = [{ scale: num2 }];
-        size.transform = items;
-        return size;
-      }, items3);
-      const items5 = [characterLayout];
-      const memo4 = obj.useMemo(() => {
-        const size = { width: clydeSize, height: clydeSize };
-        return size;
-      }, items4);
-      const memo5 = obj.useMemo(() => {
-        let tmp2;
-        if (null != characterLayout) {
-          const size = { position: "absolute", top: null, left: null, width: null, height: null };
-          ({ top: obj.top, left: obj.left, size: obj.width, size: obj.height } = characterLayout);
-          tmp2 = size;
-        }
-        return tmp2;
-      }, items5);
-      const obj5 = { style: memo2, children: null };
-      const obj6 = { style: null, children: null };
-      const items6 = [tmp.canvas, memo3];
-      obj6.style = items6;
-      const size2 = { style: tmp.layer, width: canvasWidth, height: memo1, children: null };
-      const obj4 = {
-        isArtLoaded: tmp11[0] === joined,
-        withTiming: character(num[11]).withTiming,
-        CARD_ART_FADE_IN_DURATION_MS: v150,
-      };
-      const tmp20 = memo;
-      const tmp21 = canvasWidth;
-      size2.children = size1(character(num[12]).Path, { d: combined, fill: secondaryBackgroundColor });
-      const items7 = [size1(canvasWidth(num[12]), size2), , , ,];
-      const obj7 = { style: null, children: null };
-      const items8 = [tmp.layer, animatedStyle];
-      obj7.style = items8;
-      const size3 = { width: canvasWidth, height: memo1, children: null };
-      const tmp22 = canvasWidth(num[12]);
-      const obj8 = { children: null };
-      const tmp23 = canvasWidth(num[12]);
-      obj8.children = size1(character(num[12]).ClipPath, {
-        id,
-        children: size1(character(num[12]).Path, { d: combined }),
-      });
-      const items9 = [size1(character(num[12]).Defs, obj8)];
-      const obj10 = { href: { uri: recapCardBackgroundImage } };
-      const merged = Object.assign(size);
-      obj10.preserveAspectRatio = "xMidYMid slice";
-      obj10.clipPath = "url(#" + id + ")";
-      obj10.onLoad = function onLoad() {
-        if (ref.current.artKey !== joined) {
-          const obj = { artKey: joined, urls: null };
-          const _Set = Set;
-          const set = new Set();
-          obj.urls = set;
-          ref.current = obj;
-        }
-        const urls = ref.current.urls;
-        urls.add(recapCardBackgroundImage);
-        if (memo1.every((item) => urls.has(item))) {
-          closure_12(joined);
-        }
-      };
-      items9[1] = size1(character(num[12]).Image, obj10);
-      size3.children = items9;
-      obj7.children = memo(tmp23, size3);
-      items7[1] = size1(canvasWidth(num[10]).View, obj7, "texture-" + joined);
-      const obj11 = { style: tmp.logo, children: null };
-      const size4 = { style: characterLayout.absoluteFill, width: v40, height: v40, children: null };
-      const obj9 = { id, children: size1(character(num[12]).Path, { d: combined }) };
-      size4.children = size1(character(num[12]).Path, { d, fill: primaryBackgroundColor });
-      const items10 = [size1(canvasWidth(num[12]), size4)];
-      const obj12 = { d, fill: primaryBackgroundColor };
-      const tmp25 = canvasWidth(num[12]);
-      items10[1] = size1(character(num[13]).ClydeIcon, {
-        size: "custom",
-        color: canvasWidth(num[14]).colors.BLACK,
-        style: memo4,
-      });
-      obj11.children = items10;
-      items7[2] = memo(recapCardBackgroundImage, obj11);
-      items7[3] = character.children;
-      let tmp18Result = null != memo5;
-      if (tmp18Result) {
-        tmp18Result = memo.length > 0;
-      }
-      if (tmp18Result) {
-        const obj14 = { style: null, children: null };
-        const items11 = [memo5, animatedStyle];
-        obj14.style = items11;
-        obj14.children = memo.map((uri) => {
-          closure_0 = uri;
-          return size1(
-            canvasWidth(num[15]),
-            {
-              source: { uri },
-              style: characterLayout.absoluteFill,
-              onLoad() {
-                if (ref.current.artKey !== joined) {
-                  const obj = { artKey: joined, urls: null };
-                  const _Set = Set;
-                  const set = new Set();
-                  obj.urls = set;
-                  ref.current = obj;
-                }
-                const urls = ref.current.urls;
-                urls.add(closure_0);
-                if (memo1.every((item) => urls.has(item))) {
-                  closure_12(joined);
-                }
-              },
-            },
-            uri,
-          );
-        });
-        const _HermesInternal = HermesInternal;
-        tmp18Result = tmp18(tmp21(tmp4[10]).View, obj14, "character-" + joined);
-      }
-      items7[4] = tmp18Result;
-      obj6.children = items7;
-      obj5.children = tmp20(recapCardBackgroundImage, obj6);
-      return size1(recapCardBackgroundImage, obj5);
-    };
+      return { opacity };
+    }
+  }
+  const tmp3Result = character(num[8]);
+  T.__closure = {
+    isArtLoaded: tmp11[0] === joined,
+    withTiming: character(num[9]).withTiming,
+    CARD_ART_FADE_IN_DURATION_MS: 150,
+  };
+  T.__workletHash = 7810000693516;
+  T.__initData = __initData;
+  const animatedStyle = tmp3Result.useAnimatedStyle(T);
+  const items2 = [canvasWidth, num, num2];
+  const items3 = [canvasWidth, num, num2];
+  const memo2 = obj.useMemo(() => {
+    const size = { width: canvasWidth * num2, height: num * num2 };
+    return size;
+  }, items2);
+  const items4 = [clydeSize];
+  const memo3 = obj.useMemo(() => {
+    const size = { width: canvasWidth, height: num, transform: null };
+    const items = [{ scale: num2 }];
+    size.transform = items;
+    return size;
+  }, items3);
+  const items5 = [characterLayout];
+  const memo4 = obj.useMemo(() => {
+    const size = { width: clydeSize, height: clydeSize };
+    return size;
+  }, items4);
+  const memo5 = obj.useMemo(() => {
+    let tmp2;
+    if (null != characterLayout) {
+      const size = { position: "absolute", top: null, left: null, width: null, height: null };
+      ({ top: obj.top, left: obj.left, size: obj.width, size: obj.height } = characterLayout);
+      tmp2 = size;
+    }
+    return tmp2;
+  }, items5);
+  const obj5 = { style: memo2, children: null };
+  const obj6 = { style: null, children: null };
+  const items6 = [tmp.canvas, memo3];
+  obj6.style = items6;
+  const size2 = { style: tmp.layer, width: canvasWidth, height: memo1, children: null };
+  const obj4 = {
+    isArtLoaded: tmp11[0] === joined,
+    withTiming: character(num[9]).withTiming,
+    CARD_ART_FADE_IN_DURATION_MS: 150,
+  };
+  const tmp20 = memo;
+  const tmp21 = canvasWidth;
+  size2.children = size1(character(num[10]).Path, { d: combined, fill: secondaryBackgroundColor });
+  const items7 = [size1(canvasWidth(num[10]), size2), , , ,];
+  const obj7 = { style: null, children: null };
+  const items8 = [tmp.layer, animatedStyle];
+  obj7.style = items8;
+  const size3 = { width: canvasWidth, height: memo1, children: null };
+  const tmp22 = canvasWidth(num[10]);
+  const obj8 = { children: null };
+  const tmp23 = canvasWidth(num[10]);
+  obj8.children = size1(character(num[10]).ClipPath, { id, children: size1(character(num[10]).Path, { d: combined }) });
+  const items9 = [size1(character(num[10]).Defs, obj8)];
+  const obj10 = { href: { uri: recapCardBackgroundImage } };
+  const merged = Object.assign(size);
+  obj10.preserveAspectRatio = "xMidYMid slice";
+  obj10.clipPath = "url(#" + id + ")";
+  obj10.onLoad = function onLoad() {
+    if (ref.current.artKey !== joined) {
+      const obj = { artKey: joined, urls: null };
+      const _Set = Set;
+      const set = new Set();
+      obj.urls = set;
+      ref.current = obj;
+    }
+    const urls = ref.current.urls;
+    urls.add(recapCardBackgroundImage);
+    if (memo1.every((item) => urls.has(item))) {
+      closure_12(joined);
+    }
+  };
+  items9[1] = size1(character(num[10]).Image, obj10);
+  size3.children = items9;
+  obj7.children = memo(tmp23, size3);
+  items7[1] = size1(canvasWidth(num[8]).View, obj7, "texture-" + joined);
+  const obj11 = { style: tmp.logo, children: null };
+  const size4 = { style: characterLayout.absoluteFill, width: 40, height: 40, children: null };
+  const obj9 = { id, children: size1(character(num[10]).Path, { d: combined }) };
+  size4.children = size1(character(num[10]).Path, { d: "M0 40H30L40 30V0H10L0 10V40Z", fill: primaryBackgroundColor });
+  const items10 = [size1(canvasWidth(num[10]), size4)];
+  const tmp25 = canvasWidth(num[10]);
+  items10[1] = size1(character(num[11]).ClydeIcon, {
+    size: "custom",
+    color: canvasWidth(num[12]).colors.BLACK,
+    style: memo4,
+  });
+  obj11.children = items10;
+  items7[2] = memo(recapCardBackgroundImage, obj11);
+  items7[3] = character.children;
+  let tmp18Result = null != memo5;
+  if (tmp18Result) {
+    tmp18Result = memo.length > 0;
+  }
+  if (tmp18Result) {
+    const obj13 = { style: null, children: null };
+    const items11 = [memo5, animatedStyle];
+    obj13.style = items11;
+    obj13.children = memo.map((uri) => {
+      closure_0 = uri;
+      return size1(
+        canvasWidth(num[13]),
+        {
+          source: { uri },
+          style: characterLayout.absoluteFill,
+          onLoad() {
+            if (ref.current.artKey !== joined) {
+              const obj = { artKey: joined, urls: null };
+              const _Set = Set;
+              const set = new Set();
+              obj.urls = set;
+              ref.current = obj;
+            }
+            const urls = ref.current.urls;
+            urls.add(closure_0);
+            if (memo1.every((item) => urls.has(item))) {
+              closure_12(joined);
+            }
+          },
+        },
+        uri,
+      );
+    });
+    const _HermesInternal = HermesInternal;
+    tmp18Result = tmp18(tmp21(tmp4[8]).View, obj13, "character-" + joined);
+  }
+  items7[4] = tmp18Result;
+  obj6.children = items7;
+  obj5.children = tmp20(recapCardBackgroundImage, obj6);
+  return size1(recapCardBackgroundImage, obj5);
+}
 export const CHECKPOINT_CARD_HEIGHT = 284;

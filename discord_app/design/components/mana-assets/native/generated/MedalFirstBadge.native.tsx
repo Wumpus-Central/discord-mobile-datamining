@@ -1,140 +1,42 @@
 // discord_app/design/components/mana-assets/native/generated/MedalFirstBadge.native.tsx
-import c from "../../../../../../_runtime/00576_c.js";
-import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef10743 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-1x.png.js";
-import _modDef10744 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-2x.png.js";
-import _modDef10745 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-3x.png.js";
+import _modDef10766 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-1x.png.js";
+import _modDef10767 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-2x.png.js";
+import _modDef10768 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MedalFirstBadge-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10743 }, 3: null };
-let obj2 = { uri: _modDef10743 };
-obj[2] = { uri: _modDef10744 };
-const obj3 = { uri: _modDef10744 };
-obj[3] = { uri: _modDef10745 };
-const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef10745 };
+let obj = { 1: null, 2: { uri: _modDef10766 }, 3: null };
+let obj2 = { uri: _modDef10766 };
+obj[2] = { uri: _modDef10767 };
+const obj3 = { uri: _modDef10767 };
+obj[3] = { uri: _modDef10768 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MedalFirstBadge.native.tsx");
 
-export const MedalFirstBadge = ReactCompilerGating.isReactCompilerEnabled()
-  ? function MedalFirstBadge(arg0) {
-      obj = c;
-      const cResult = obj.c(12);
-      ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
-      let num = 1;
-      if (undefined !== scale) {
-        num = scale;
-      }
-      if (cResult[0] === height) {
-        if (cResult[1] === num) {
-          if (cResult[2] === width) {
-            let tmp4 = cResult[3];
-          }
-          const _Symbol = Symbol;
-          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-            const assetSource = assetHelpers.getAssetSource(obj);
-            cResult[4] = assetSource;
-            let tmp7 = assetSource;
-            const tmpResult = assetHelpers;
-          } else {
-            tmp7 = cResult[4];
-          }
-          if (cResult[5] !== resizeMode) {
-            const assetResizeMode = assetHelpers.getAssetResizeMode(resizeMode);
-            cResult[5] = resizeMode;
-            cResult[6] = assetResizeMode;
-            let tmp10 = assetResizeMode;
-            const tmpResult3 = assetHelpers;
-          } else {
-            tmp10 = cResult[6];
-          }
-          if (cResult[7] === accessibilityLabel) {
-            if (cResult[8] === accessible) {
-              if (cResult[9] === tmp4) {
-                if (cResult[10] === tmp10) {
-                  let tmp12 = cResult[11];
-                }
-                return tmp12;
-              }
-            }
-          }
-          const obj2 = {
-            fadeDuration: 0,
-            source: tmp7,
-            style: tmp4,
-            accessible,
-            accessibilityLabel,
-            resizeMode: tmp10,
-          };
-          const tmp15 = jsx(FastImageDefault, {
-            fadeDuration: 0,
-            source: tmp7,
-            style: tmp4,
-            accessible,
-            accessibilityLabel,
-            resizeMode: tmp10,
-          });
-          cResult[7] = accessibilityLabel;
-          cResult[8] = accessible;
-          cResult[9] = tmp4;
-          cResult[10] = tmp10;
-          cResult[11] = tmp15;
-          tmp12 = tmp15;
-        }
-      }
-      const assetSizeStyle = assetHelpers.getAssetSizeStyle({
-        width,
-        height,
-        scale: num,
-        intrinsicWidth: 24,
-        intrinsicHeight: 24,
-      });
-      cResult[0] = height;
-      cResult[1] = num;
-      cResult[2] = width;
-      cResult[3] = assetSizeStyle;
-      tmp4 = assetSizeStyle;
-      const tmpResult4 = assetHelpers;
-    }
-  : function MedalFirstBadge(width) {
-      width = width.width;
-      const height = width.height;
-      let num = width.scale;
-      ({ accessible, accessibilityLabel, resizeMode } = width);
-      if (num === undefined) {
-        num = 1;
-      }
-      const items = [width, height, num];
-      const memo = noop.useMemo(() => {
-        const size = { width, height, scale: num, intrinsicWidth: 24, intrinsicHeight: 24 };
-        return assetHelpers.getAssetSizeStyle(size);
-      }, items);
-      obj = {
-        fadeDuration: 0,
-        source: null,
-        style: null,
-        accessible: null,
-        accessibilityLabel: null,
-        resizeMode: null,
-      };
-      const tmp2 = height(num[8]);
-      obj.source = width(num[7]).getAssetSource(obj);
-      obj.style = memo;
-      obj.accessible = accessible;
-      obj.accessibilityLabel = accessibilityLabel;
-      const obj2 = width(num[7]);
-      obj.resizeMode = width(num[7]).getAssetResizeMode(resizeMode);
-      return (
-        <tmp2
-          fadeDuration={0}
-          source={null}
-          style={null}
-          accessible={null}
-          accessibilityLabel={null}
-          resizeMode={null}
-        />
-      );
-    };
+export function MedalFirstBadge(width) {
+  width = width.width;
+  const height = width.height;
+  let num = width.scale;
+  ({ accessible, accessibilityLabel, resizeMode } = width);
+  if (num === undefined) {
+    num = 1;
+  }
+  const items = [width, height, num];
+  const memo = noop.useMemo(() => {
+    const size = { width, height, scale: num, intrinsicWidth: 24, intrinsicHeight: 24 };
+    return assetHelpers.getAssetSizeStyle(size);
+  }, items);
+  obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const tmp2 = height(num[6]);
+  obj.source = width(num[5]).getAssetSource(obj);
+  obj.style = memo;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  const obj2 = width(num[5]);
+  obj.resizeMode = width(num[5]).getAssetResizeMode(resizeMode);
+  return (
+    <tmp2 fadeDuration={0} source={null} style={null} accessible={null} accessibilityLabel={null} resizeMode={null} />
+  );
+}

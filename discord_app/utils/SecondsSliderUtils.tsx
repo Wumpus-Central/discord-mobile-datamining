@@ -1,6 +1,6 @@
 // discord_app/utils/SecondsSliderUtils.tsx
 import util from "../intl/index.native.tsx";
-import _modDef2047 from "../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../_runtime/metro/02044__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
@@ -15,7 +15,7 @@ export function getSecondsSliderLabel(length, arg1) {
     intl = util.intl;
     stringResult = intl.string(util.t.Yl1D84);
   }
-  const time = _modDef2047.duration(length, "seconds");
+  const time = _modDef2044.duration(length, "seconds");
   if (time.days() > 0) {
     const intl6 = util.intl;
     const t = { days: time.days() };

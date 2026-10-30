@@ -4,9 +4,9 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionCreators.tsx";
 import AccessibilityStore from "AccessibilityStore.tsx";
 
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const StickerAnimationSettings = fn(4836).StickerAnimationSettings;
-const constants = fn(1094).SettingsOverrideReasonKeys;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const StickerAnimationSettings = fn(4837).StickerAnimationSettings;
+const constants = fn(1082).SettingsOverrideReasonKeys;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/AccessibilityActionCreators.tsx");
 

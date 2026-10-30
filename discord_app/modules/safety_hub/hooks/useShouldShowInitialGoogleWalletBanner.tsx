@@ -7,7 +7,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AgeCheckStatus = fn(7956).AgeCheckStatus;
+const AgeCheckStatus = fn(7962).AgeCheckStatus;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useShouldShowInitialGoogleWalletBanner.tsx");
 
@@ -50,7 +50,7 @@ export function useShouldShowInitialGoogleWalletBanner() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -71,7 +71,7 @@ export function useShouldShowInitialGoogleWalletBanner() {
                 c2 = 1;
                 c3 = 2;
                 c4 = 1;
-                const obj6 = { value: _true(7987).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
+                const obj6 = { value: _true(7993).fetchAgeVerificationMethodsV2SuspendedUser(), done: false };
                 return obj6;
               }
             } else {
@@ -121,7 +121,7 @@ export function useShouldShowInitialGoogleWalletBanner() {
               }
               c3 = 3;
               c4 = 1;
-              const obj8 = { value: _true(7990).checkGoogleWalletAvailable(), done: false };
+              const obj8 = { value: _true(7996).checkGoogleWalletAvailable(), done: false };
               return obj8;
             }
           } catch (tmp27) {

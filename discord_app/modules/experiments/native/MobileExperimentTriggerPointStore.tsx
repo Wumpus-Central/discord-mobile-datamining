@@ -33,7 +33,7 @@ const result = size.fileFinishedImporting("modules/experiments/native/MobileExpe
 export default new "initialize"(
   Dispatcher,
   obj,
-  fn(584).DispatchBand.Early,
+  fn(572).DispatchBand.Early,
   prototype,
   MobileExperimentTriggerPointStore,
   "initialize",

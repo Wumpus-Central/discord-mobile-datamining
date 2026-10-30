@@ -24,21 +24,21 @@ function allowChannelAccess(id, channelType, ROLE) {
   const NONE = PermissionUtilsAll.NONE;
   let tmp3 = React4(channelType);
   if (!tmp3) {
-    tmp3 = channelType === closure_1_22;
+    tmp3 = channelType === __initData2;
   }
   let addResult = NONE;
   if (tmp3) {
     addResult = BigFlagUtilsAll.add(NONE, constants.VIEW_CHANNEL);
     const tmpResult = BigFlagUtilsAll;
   }
-  let tmp7 = channelType === guild;
+  let tmp7 = channelType === __initData;
   if (!tmp7) {
-    tmp7 = channelType === closure_1_22;
+    tmp7 = channelType === __initData2;
   }
   if (!tmp7) {
-    let tmp10 = channelType === closure_1_23;
+    let tmp10 = channelType === __initData3;
     if (!tmp10) {
-      tmp10 = channelType === closure_1_22;
+      tmp10 = channelType === __initData2;
     }
     tmp7 = tmp10;
   }
@@ -141,7 +141,7 @@ export function permissionOverwritesForAnnouncement(id) {
 }
 export function isChannelFull(channel, VoiceStateStore, GuildStore) {
   const guildId = channel.getGuildId();
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   let num;
   if (guild != null) {
     num = guild.maxVideoChannelUsers;
@@ -159,7 +159,7 @@ export function isChannelFull(channel, VoiceStateStore, GuildStore) {
   const result = SortedVoiceStateStore.countVoiceStatesForChannel(channel.id);
   const voiceStatesForChannel = SortedVoiceStateStore.getVoiceStatesForChannel(channel);
   const tmp6 = PermissionStore.can(constants.MOVE_MEMBERS, channel) && PermissionStore.can(constants.CONNECT, channel);
-  if (channel.type === closure_1_23) {
+  if (channel.type === __initData3) {
     let tmp8 = null != guildId;
     if (tmp8) {
       let hasVideoResult = VoiceStateStore.hasVideo(channel.id);
@@ -200,15 +200,15 @@ export function isChannelFull(channel, VoiceStateStore, GuildStore) {
 export const sanitizeGuildTextChannelName = sanitizeGuildTextChannelNameDefault;
 export function getBitrateLimit(guild, channel) {
   if (channel.isGuildStageVoice()) {
-    let bound = constants;
+    let bound = closure_1_17;
   } else if (null == guild) {
-    bound = value3;
+    bound = __initData2;
   } else {
     const features = guild.features;
     if (features.has(constants2.VIP_REGIONS)) {
       let bitrate = BoostedGuildFeatures[TIER_3.TIER_3].limits.bitrate;
     } else {
-      bitrate = value3;
+      bitrate = __initData2;
     }
     bound = Math.max(bitrate, BoostedGuildFeatures[guild.premiumTier].limits.bitrate);
   }

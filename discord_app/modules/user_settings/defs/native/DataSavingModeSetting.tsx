@@ -1,62 +1,22 @@
 // discord_app/modules/user_settings/defs/native/DataSavingModeSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useDataSavingModeSettingValue() {
-      const cResult = c.c(2);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [UnsyncedUserSettingsStore];
-        const fn = function o() {
-          return dataSavingMode.dataSavingMode;
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      return initialize.useStateFromStores(tmp4, tmp5);
-    }
-  : function useDataSavingModeSettingValue() {
-      const items = [UnsyncedUserSettingsStore];
-      return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
-    };
+const SettingBuilders = fn(11505);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
   },
-  parent: fn(8387).MobileUserSettings.CHAT,
-  useValue: ReactCompilerGating.isReactCompilerEnabled()
-    ? function useDataSavingModeSettingValue() {
-        const cResult = c.c(2);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [UnsyncedUserSettingsStore];
-          const fn = function o() {
-            return dataSavingMode.dataSavingMode;
-          };
-          cResult[0] = items;
-          cResult[1] = fn;
-          tmp4 = items;
-          tmp5 = fn;
-        } else {
-          [tmp4, tmp5] = cResult;
-        }
-        return initialize.useStateFromStores(tmp4, tmp5);
-      }
-    : function useDataSavingModeSettingValue() {
-        const items = [UnsyncedUserSettingsStore];
-        return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
-      },
+  parent: fn(8424).MobileUserSettings.CHAT,
+  useValue: function useDataSavingModeSettingValue() {
+    const items = [UnsyncedUserSettingsStore];
+    return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
+  },
   onValueChange: function onDataSavingModeSettingValueChange(dataSavingMode) {
     const obj2 = {
       videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality,

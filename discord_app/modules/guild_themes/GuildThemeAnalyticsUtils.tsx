@@ -8,7 +8,7 @@ export function collectGuildThemeAnalyticsMetadata(selectedGuildId) {
   if (null == selectedGuildId) {
     return null;
   } else {
-    guild = GuildStore.getGuild(selectedGuildId);
+    const guild = GuildStore.getGuild(selectedGuildId);
     if (null == guild) {
       return null;
     } else {

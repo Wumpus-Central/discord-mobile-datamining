@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/native/ShopNitroUpsellBanner.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef683 from "../../../../_runtime/metro/00683__.js";
+import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
+import LinearGradientDefault from "../../../../_runtime/05582_LinearGradient.js";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import useToken from "../../../design/tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../_runtime/05295_LinearGradient.js";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -96,7 +96,7 @@ class ShopNitroUpsellBanner {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   card: {
     overflow: "hidden",

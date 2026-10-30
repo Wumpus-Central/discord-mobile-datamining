@@ -1,24 +1,11 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItemPresenter.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
+import MediaViewerEntranceJankExperiment from "../MediaViewerEntranceJankExperiment.tsx";
+import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
-const PlatformUtils = fn(1381);
-if (PlatformUtils.isAndroid()) {
-  const _parseInt = parseInt;
-  obj2 = fn(4962);
-}
-let closure_9 = {
-  code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,BORDER_RADIUS_END,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,BORDER_RADIUS_END]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}",
-};
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
-
-export default function MediaViewerItemPresenter(windowHeight) {
+function MediaViewerItemPresenter(windowHeight) {
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
   windowHeight = windowHeight.windowHeight;
   const entranceAnimationDriver = windowHeight.entranceAnimationDriver;
@@ -157,7 +144,7 @@ export default function MediaViewerItemPresenter(windowHeight) {
   let obj2 = windowWidth(entranceAnimationDriver[6]);
   let obj3 = width;
   const tmp5 = windowHeight;
-  class F {
+  class G {
     constructor() {
       value = entranceAnimationDriver.get();
       size = { height: null, width: null, top: null, left: null, borderRadius: null, transform: null };
@@ -198,7 +185,7 @@ export default function MediaViewerItemPresenter(windowHeight) {
     }
   }
   const tmpResult = windowWidth(entranceAnimationDriver[8]);
-  F.__closure = {
+  G.__closure = {
     entranceAnimationDriver,
     interpolate: windowWidth(entranceAnimationDriver[8]).interpolate,
     Extrapolation: windowWidth(entranceAnimationDriver[8]).Extrapolation,
@@ -211,10 +198,10 @@ export default function MediaViewerItemPresenter(windowHeight) {
     BORDER_RADIUS_END: diff3,
     startScale: num3,
   };
-  F.__workletHash = 2455267388296;
-  F.__initData = width2;
+  G.__workletHash = 2455267388296;
+  G.__initData = width2;
   let items2 = [windowWidth, windowHeight, width, height];
-  const animatedStyle = tmpResult.useAnimatedStyle(F);
+  const animatedStyle = tmpResult.useAnimatedStyle(G);
   const memo = obj3.useMemo(() => {
     const obj = { container: null, child: null, presenter: { position: "relative", overflow: "hidden", opacity: 1 } };
     const size = { width: windowWidth, height: windowHeight, alignItems: "center", justifyContent: "center" };
@@ -231,4 +218,33 @@ export default function MediaViewerItemPresenter(windowHeight) {
   obj9.children = num3(tmp5(entranceAnimationDriver[9]), obj10);
   obj8.children = num3(height, obj9);
   return num3(height, obj8);
+}
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
+const PlatformUtils = fn(1376);
+if (PlatformUtils.isAndroid()) {
+  const _parseInt = parseInt;
+  obj2 = fn(4966);
+}
+let closure_9 = {
+  code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,BORDER_RADIUS_END,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,BORDER_RADIUS_END]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}",
+};
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
+
+export default function MediaViewerItemPresenterGuard(source) {
+  if (obj.useIsMediaViewerEntranceJankFixEnabled()) {
+    if (tmpResult.canPresentWithTransforms(source)) {
+      const obj2 = {};
+      const merged = Object.assign(source);
+      let tmp4 = jsx(MediaViewerItemTransformPresenterDefault, {});
+    }
+    return tmp4;
+  }
+  const merged1 = Object.assign(source);
+  tmp4 = <MediaViewerItemPresenter />;
+  obj = MediaViewerEntranceJankExperiment;
+  const obj3 = {};
 }

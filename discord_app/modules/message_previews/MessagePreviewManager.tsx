@@ -11,8 +11,8 @@ import MessagePreviewStore from "MessagePreviewStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const isThread = fn(4861).isThread;
-const Endpoints = fn(1084).Endpoints;
+const isThread = fn(4862).isThread;
+const Endpoints = fn(1072).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
   constructor() {
@@ -73,7 +73,7 @@ class MessagePreviewManager extends tmp3 {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           while (true) {
@@ -102,7 +102,7 @@ class MessagePreviewManager extends tmp3 {
                 closure_131_4 = undefined;
                 c7 = 1;
                 c8 = 1;
-                return { value: "Reflect", done: null };
+                return { value: "flexDirection", done: true };
               }
             } else {
               if (1 === tmp4) {
@@ -217,7 +217,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -355,7 +355,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -374,7 +374,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
                 closure_1_11.verbose(
                   "fetching dm previews (via: http, channel_ids: " + nextWantsResult.join(", ") + ")",
                 );
-                const HTTP = tmp2(1294).HTTP;
+                const HTTP = tmp2(1283).HTTP;
                 const request = { url: constants.MESSAGE_PREVIEWS, body: null, rejectWithError: false };
                 const obj4 = { channel_ids: nextWantsResult };
                 request.body = obj4;
@@ -393,9 +393,9 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
             } else {
               body = value.body;
               const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
-              tmp5(584).dispatch(obj7);
+              tmp5(572).dispatch(obj7);
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             }
           } catch (tmp12) {
             c3 = tmp;

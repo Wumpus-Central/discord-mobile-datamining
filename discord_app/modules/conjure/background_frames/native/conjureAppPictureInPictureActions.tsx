@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx
-import _modDef3864 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
 import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
 import EmbeddedAppShimExperiment from "../../../activities/experiments/EmbeddedAppShimExperiment.tsx";
 import getConjureAppSoundButtonDefault from "../../app_channel/native/getConjureAppSoundButton.tsx";
@@ -8,30 +8,30 @@ import conjureBackgroundFrames from "../conjureBackgroundFrames.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 
 require = fn;
-function getConjureAppPictureInPictureActions(stateFromStores, appName, arg2) {
-  _require = stateFromStores;
+function getConjureAppPictureInPictureActions(id, appName, arg2) {
+  _require = id;
   const obj = { label: null, IconComponent: null, onPress: null };
   const intl = require("util").intl;
-  obj.label = intl.formatToPlainString(_modDef3864.dPf03z, { appName });
+  obj.label = intl.formatToPlainString(_modDef3865.dPf03z, { appName });
   obj.IconComponent = require("WindowLaunchIcon").WindowLaunchIcon;
   obj.onPress = function onPress() {
     return conjureBackgroundFrames.returnToConjureFrameSurface(closure_0);
   };
   const items = [obj];
   if (arg2) {
-    items.push(getConjureAppSoundButtonDefault(stateFromStores.id, stateFromStores.data.userMuted));
+    items.push(getConjureAppSoundButtonDefault(id.id, id.data.userMuted));
   }
   const obj3 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
-  const intl2 = tmp(1125).intl;
+  const intl2 = tmp(1114).intl;
   obj3.label = intl2.string(require("util").t.VkMnR2);
   obj3.IconComponent = require("DoorExitIcon").DoorExitIcon;
   obj3.onPress = function onPress() {
-    return closeFrameDefault(stateFromStores.id);
+    return closeFrameDefault(id.id);
   };
   items.push(obj3);
   return items;
 }
-const asLaunched = fn(6834).asLaunched;
+const asLaunched = fn(6841).asLaunched;
 const ConjureAppPictureInPicture = "ConjureAppPictureInPicture";
 const size = fn(2);
 let result = size.fileFinishedImporting(

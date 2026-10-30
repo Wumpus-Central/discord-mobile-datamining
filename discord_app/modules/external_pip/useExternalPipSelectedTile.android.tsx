@@ -4,76 +4,12 @@ import ChannelRTCStore from "../calls/ChannelRTCStore.tsx";
 import PIPSpeakerStore from "../voice_panel/native/pip/PIPSpeakerStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
-const require = globalThis.__r;
-
 const require = fn;
-const VoicePanelPIPModes = fn(18965).VoicePanelPIPModes;
-const ReactCompilerGating = fn(558);
+const VoicePanelPIPModes = fn(19059).VoicePanelPIPModes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipSelectedTile.android.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExternalPipSelectedTile(arg0, arg1, arg2) {
-  _require = arg0;
-  importDefault = arg1;
-  const cResult = require("c").c(7);
-  str = "card";
-  if (arg2 === VoicePanelPIPModes.IN_APP) {
-    str = "pip";
-  }
-  if (cResult[0] === arg0) {
-    if (cResult[1] === arg1) {
-      if (cResult[2] === str) {
-        let tmp2 = cResult[3];
-        let tmp3 = cResult[4];
-      }
-      const effect = noop.useEffect(tmp2, tmp3);
-      const _Symbol = Symbol;
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
-          constructor() {
-            return /* F159279 */ function() { ... };
-          }
-        }
-        let items = [];
-        cResult[5] = E;
-        cResult[6] = items;
-        let tmp7 = items;
-      } else {
-        class E {
-          constructor() {
-            return /* F159279 */ function() { ... };
-          }
-        }
-        tmp7 = cResult[6];
-      }
-      const effect1 = noop.useEffect(E, tmp7);
-    }
-  }
-  class S {
-    constructor() {
-      update = function update() { ... };
-      items = [, ];
-      items[0] = closure_1_6;
-      items[1] = closure_1_5;
-      arraySpreadResult = HermesBuiltin.arraySpread(closure_0(pip[7]).EXTERNAL_PIP_SELECTED_PARTICIPANT_STORES, 2);
-      batchedStoreListener = new closure_0(pip[9]).BatchedStoreListener(items, update);
-      closure_0 = batchedStoreListener;
-      attachResult = batchedStoreListener.attach("useExternalPipSelectedTile");
-      closure_1 = closure_1.subscribeFromItem(update);
-      updateResult = update();
-      return /* F159278 */ function() { ... };
-    }
-  }
-  const items1 = [arg0, arg1, str];
-  cResult[0] = arg0;
-  cResult[1] = arg1;
-  cResult[2] = str;
-  cResult[3] = S;
-  cResult[4] = items1;
-  tmp3 = items1;
-  tmp2 = S;
-  let obj = require("c");
-}) : (function useExternalPipSelectedTile(arg0, arg1, arg2) {
+export default function useExternalPipSelectedTile(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   let str = "card";
@@ -86,7 +22,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExter
       if (channelId.getChannelId() === batchedStoreListener) {
         const selectedParticipantId1 = selectedParticipantId.getSelectedParticipantId(batchedStoreListener);
         speakerId = speakerId.getSpeakerId(batchedStoreListener);
-        const externalPipSelectedParticipant = batchedStoreListener(str[7]).getExternalPipSelectedParticipant(batchedStoreListener, selectedParticipantId1, speakerId);
+        const externalPipSelectedParticipant = batchedStoreListener(str[5]).getExternalPipSelectedParticipant(
+          batchedStoreListener,
+          selectedParticipantId1,
+          speakerId,
+        );
         ({ selectedParticipantId, selectedParticipantStreamId } = externalPipSelectedParticipant);
         if (null != selectedParticipantId) {
           targetDimensions = targetDimensions.getTargetDimensions(selectedParticipantId1);
@@ -99,18 +39,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExter
           const size = { width, height };
           obj4.pipDimensions = size;
           obj4.surface = surface;
-          targetDimensions(str[8]).setSelectedTile(obj4);
-          const obj3 = targetDimensions(str[8]);
+          targetDimensions(str[6]).setSelectedTile(obj4);
+          const obj3 = targetDimensions(str[6]);
         } else {
-          targetDimensions(str[8]).setSelectedTile(null);
-          const obj2 = targetDimensions(str[8]);
+          targetDimensions(str[6]).setSelectedTile(null);
+          const obj2 = targetDimensions(str[6]);
         }
-        const obj = batchedStoreListener(str[7]);
+        const obj = batchedStoreListener(str[5]);
       }
     }
     const items = [channelId, speakerId];
-    HermesBuiltin.arraySpread(batchedStoreListener(str[7]).EXTERNAL_PIP_SELECTED_PARTICIPANT_STORES, 2);
-    batchedStoreListener = new batchedStoreListener(str[9]).BatchedStoreListener(items, update);
+    HermesBuiltin.arraySpread(batchedStoreListener(str[5]).EXTERNAL_PIP_SELECTED_PARTICIPANT_STORES, 2);
+    batchedStoreListener = new batchedStoreListener(str[7]).BatchedStoreListener(items, update);
     batchedStoreListener.attach("useExternalPipSelectedTile");
     targetDimensions = targetDimensions.subscribeFromItem(update);
     update();
@@ -119,5 +59,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useExter
       targetDimensions();
     };
   }, items);
-  const effect1 = noop.useEffect(() => () => closure_1_1(str[8]).setSelectedTile(null), []);
-});
+  const effect1 = noop.useEffect(() => () => closure_1_1(str[6]).setSelectedTile(null), []);
+}

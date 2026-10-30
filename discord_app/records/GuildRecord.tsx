@@ -80,8 +80,7 @@ export function getGuildIconURL(id, size) {
 export function getGuildIconSource(arg0, size) {
   closure_0 = arg0;
   importDefault = size;
-  let flag = hasItem;
-  if (hasItem === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
   return AvatarUtilsDefault.getAnimatableSourceWithFallback(flag, (canAnimate) =>

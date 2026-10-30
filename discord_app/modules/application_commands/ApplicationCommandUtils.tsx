@@ -120,13 +120,13 @@ function buildCommand(arg0) {
                     choices = choices.choices;
                     let mapped;
                     if (choices != null) {
-                      mapped = choices.map(/* F147897 */ function() { ... });
+                      mapped = choices.map(/* F123716 */ function() { ... });
                     }
                     obj.choices = mapped;
                     let options = choices.options;
                     let mapped1;
                     if (options != null) {
-                      mapped1 = options.map(/* F101015 */ function() { ... });
+                      mapped1 = options.map(/* F91064 */ function() { ... });
                     }
                     obj.options = mapped1;
                     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
@@ -434,8 +434,7 @@ export { buildCommand };
 export function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
   return _modDef12.flatMap(uniqByResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
-    return buildSubCommands(obj);
+    return buildSubCommands({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions });
   });
 }
 export function applicationPermissionsList(arr) {
@@ -474,16 +473,16 @@ export function getMatchingGroupCommands(contextCommands, regExp, arg2, arg3) {
   });
   return items.slice(0, arg3);
 }
-export function getApplicationCommandOptionQueryOptions(option) {
-  let tmp3 = option.type === Server.ApplicationCommandOptionType.USER;
+export function getApplicationCommandOptionQueryOptions(activeOption) {
+  let tmp3 = activeOption.type === Server.ApplicationCommandOptionType.USER;
   if (!tmp3) {
-    tmp3 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
+    tmp3 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  let tmp4 = option.type === Server.ApplicationCommandOptionType.ROLE;
+  let tmp4 = activeOption.type === Server.ApplicationCommandOptionType.ROLE;
   if (!tmp4) {
-    tmp4 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
+    tmp4 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  const tmp5 = option.type === Server.ApplicationCommandOptionType.STRING;
+  const tmp5 = activeOption.type === Server.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;
   if (!tmp5) {
     tmp6 = tmp4;
@@ -491,7 +490,7 @@ export function getApplicationCommandOptionQueryOptions(option) {
   const obj = { canMentionEveryone: tmp6, canMentionHere: tmp5, canMentionChannels: null, canMentionUsers: null, canMentionRoles: null, canMentionAnyGuildUser: null, canMentionNonMentionableRoles: null, canMentionOtherGlobals: null };
   let tmp7 = tmp5;
   if (!tmp5) {
-    tmp7 = option.type === Server.ApplicationCommandOptionType.CHANNEL;
+    tmp7 = activeOption.type === Server.ApplicationCommandOptionType.CHANNEL;
   }
   obj.canMentionChannels = tmp7;
   let tmp8 = tmp5;

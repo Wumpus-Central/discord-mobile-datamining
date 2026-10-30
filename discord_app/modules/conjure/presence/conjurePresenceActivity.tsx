@@ -1,8 +1,7 @@
 // discord_app/modules/conjure/presence/conjurePresenceActivity.tsx
-import Constants from "../../../Constants.tsx";
+import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = Constants.ActivityTypes;
 const Conjuring = "Conjuring";
 const result = size.fileFinishedImporting("modules/conjure/presence/conjurePresenceActivity.tsx");
 
@@ -20,7 +19,7 @@ export function isConjurePresenceActivity(activity) {
   if (activity != null) {
     type = activity.type;
   }
-  let tmp2 = type === ActivityTypes.PLAYING;
+  let tmp2 = type === ActivityTypes.ActivityTypes.PLAYING;
   if (tmp2) {
     tmp2 = activity.name === Conjuring;
   }

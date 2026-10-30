@@ -20,8 +20,8 @@ prototype["getState"] = function getState() {
 prototype["getExpandedFolders"] = function getExpandedFolders() {
   return set;
 };
-prototype["isFolderExpanded"] = function isFolderExpanded(PENDING_JOIN_REQUESTS_FOLDER) {
-  return set.has(PENDING_JOIN_REQUESTS_FOLDER);
+prototype["isFolderExpanded"] = function isFolderExpanded(folderId) {
+  return set.has(folderId);
 };
 ExpandedGuildFolderStore.displayName = "ExpandedGuildFolderStore";
 ExpandedGuildFolderStore.persistKey = "ExpandedGuildFolderStore";

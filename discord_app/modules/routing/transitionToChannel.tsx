@@ -7,7 +7,7 @@ import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreat
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-const Routes = fn(1084).Routes;
+const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToChannel.tsx");
 
@@ -84,15 +84,15 @@ export function tryTransitionToThreadMessage(parentChannelId, threadId, messageI
     }
   }
 }
-export function transitionToMessage(channelId, messageId, arg2) {
-  const channel = ChannelStore.getChannel(channelId);
+export function transitionToMessage(id, id2, arg2) {
+  const channel = ChannelStore.getChannel(id);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     const obj3 = { openChannel: true };
     const obj2 = router_utils;
     const merged = Object.assign(arg2);
-    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId), obj3);
-    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
+    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id2), obj3);
+    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id2);
   }
 }
 export function transitionToStaticChannelRoute(arg0, arg1, arg2) {

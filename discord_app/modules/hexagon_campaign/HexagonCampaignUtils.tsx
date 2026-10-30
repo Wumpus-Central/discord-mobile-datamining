@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampa
 export function getHexagonCampaignPerkCutoffMs(item, stateFromStores) {
   if (null != stateFromStores) {
     if (obj.isPremiumAtLeast(stateFromStores, dependencyMap[item])) {
-      let tmp5 = closure_1_8;
+      let tmp5 = React6;
     }
     return tmp5;
   }
@@ -42,7 +42,7 @@ export function isHexagonCampaignOver() {
     const _Date = Date;
     timestamp = Date.now();
   }
-  return timestamp >= closure_1_8;
+  return timestamp >= React6;
 }
 export function isHexagonCampaignPerkExpired(CLIENT_THEME, premiumType, arg2) {
   let timestamp = arg2;
@@ -52,7 +52,7 @@ export function isHexagonCampaignPerkExpired(CLIENT_THEME, premiumType, arg2) {
   }
   if (null != premiumType) {
     if (obj.isPremiumAtLeast(premiumType, dependencyMap[CLIENT_THEME])) {
-      let tmp7 = closure_1_8;
+      let tmp7 = React6;
     }
     return timestamp >= tmp7;
   }
@@ -132,8 +132,8 @@ export function getHexagonCampaignPerkAvailability(arg0) {
       const _Date2 = Date;
       timestamp = Date.now();
     }
-    let tmp5 = closure_1_8;
-    if (timestamp < closure_1_8) {
+    let tmp5 = React6;
+    if (timestamp < React6) {
       if (!tmp2) {
         const _Date3 = Date;
         now = Date.now();

@@ -1,20 +1,17 @@
 // discord_app/utils/SystemMessageUtils.tsx
 import SnowflakeUtilsDefault from "SnowflakeUtils.tsx";
 import util from "../intl/index.native.tsx";
-import GuildLeaderboardTypes from "../modules/guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import NicknameUtilsDefault from "NicknameUtils.tsx";
 import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
 import useMessageAuthor from "../modules/messages/useMessageAuthor.tsx";
+import GuildSpaceSystemMessageUtils from "../modules/guild_space/GuildSpaceSystemMessageUtils.tsx";
 import MarkupParser from "../../discord_common/js/packages/markup/MarkupParser.tsx";
 import AutomodNotificationEmbedTypeKeys from "../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import GuildRoleSubscriptionSystemMessageUtils from "../modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx";
 import GuildProductSystemMessageUtils from "../modules/guild_products/GuildProductSystemMessageUtils.tsx";
 import ApplicationSubscriptionSystemMessageUtils from "../modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx";
 import PrivateChannelIntegrationSystemMessageUtils from "../modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx";
-import PopularMusicSystemMessageTypes from "../modules/guild_space/popular_music/PopularMusicSystemMessageTypes.tsx";
-import PopularMusicSystemMessageCopy from "../modules/guild_space/popular_music/PopularMusicSystemMessageCopy.tsx";
-import GuildLeaderboardSystemMessageCopy from "../modules/guild_space/gaming_leaderboard/GuildLeaderboardSystemMessageCopy.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import MessageRecord from "../records/MessageRecord.tsx";
 import AuthenticationStore from "../stores/AuthenticationStore.tsx";
@@ -45,7 +42,7 @@ function getSystemMessageUserJoinMobile(id) {
   const obj = SnowflakeUtilsDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ MessageEmbedTypes: c10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = {
   "234395307759108106": "https://groovy.bot/commands",
@@ -53,7 +50,7 @@ let closure_13 = {
   "512412940897484800": "http://jameslantz.net/smilebot",
 };
 const size = fn(2);
-let result = size.fileFinishedImporting("utils/SystemMessageUtils.tsx");
+const result = size.fileFinishedImporting("utils/SystemMessageUtils.tsx");
 
 export default {
   stringify(mentions, isForumPost) {
@@ -68,31 +65,31 @@ export default {
       const type = mentions.type;
       if (constants.RECIPIENT_ADD === type) {
         if (null != null) {
-          const intl22 = util.intl;
+          const intl20 = util.intl;
           const obj3 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
-          const obj78 = MarkupParser;
+          const obj67 = MarkupParser;
           obj3.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
           obj3.otherUsernameOnClick = usernameOnClick;
-          return obj78.astToString(intl22.formatToParts(util.t["7/Xl0S"], obj3));
+          return obj67.astToString(intl20.formatToParts(util.t["7/Xl0S"], obj3));
         }
       } else if (constants.RECIPIENT_REMOVE === type) {
         if (null != null) {
           const author2 = mentions.author;
           if (null != author2) {
             if (author2.id !== null.id) {
-              const intl21 = util.intl;
+              const intl19 = util.intl;
               const obj5 = { username: name, usernameOnClick, otherUsername: null, otherUsernameOnClick: null };
-              const obj75 = MarkupParser;
+              const obj64 = MarkupParser;
               obj5.otherUsername = NicknameUtilsDefault.getName(null, channel_id, null);
               obj5.otherUsernameOnClick = usernameOnClick;
-              let astToStringResult = obj75.astToString(intl21.formatToParts(util.t.QtZ0RD, obj5));
-              const tmp6Result6 = NicknameUtilsDefault;
+              let astToStringResult = obj64.astToString(intl19.formatToParts(util.t.QtZ0RD, obj5));
+              const tmp6Result3 = NicknameUtilsDefault;
             }
             return astToStringResult;
           }
-          const intl20 = util.intl;
+          const intl18 = util.intl;
           const obj6 = { username: name, usernameOnClick };
-          astToStringResult = MarkupParser.astToString(intl20.formatToParts(util.t["Qn5+Lf"], obj6));
+          astToStringResult = MarkupParser.astToString(intl18.formatToParts(util.t["Qn5+Lf"], obj6));
         }
       } else if (constants.CALL === type) {
         const call = mentions.call;
@@ -100,26 +97,26 @@ export default {
         if (null != call) {
           const participants = call.participants;
           if (-1 === participants.indexOf(AuthenticationStore.getId())) {
-            const intl19 = util.intl;
-            const obj7 = { username: name, usernameOnClick };
-            astToStringResult1 = MarkupParser.astToString(intl19.formatToParts(util.t.DbgSA0, obj7));
+            const intl17 = util.intl;
+            const obj8 = { username: name, usernameOnClick };
+            astToStringResult1 = MarkupParser.astToString(intl17.formatToParts(util.t.DbgSA0, obj8));
           }
         }
         return astToStringResult1;
       } else if (constants.CHANNEL_NAME_CHANGE === type) {
-        const intl18 = util.intl;
-        const obj65 = MarkupParser;
-        const t = util.t;
-        const obj8 = { username: name, usernameOnClick, channelName: mentions.content };
-        return obj65.astToString(intl18.formatToParts(isForumPost.isForumPost() ? t["qa0e/n"] : t.XCPMEG, obj8));
-      } else if (constants.CHANNEL_ICON_CHANGE === type) {
-        const intl17 = util.intl;
-        const obj9 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl17.formatToParts(util.t.wypJZ0, obj9));
-      } else if (constants.CHANNEL_PINNED_MESSAGE === type) {
         const intl16 = util.intl;
+        const obj58 = MarkupParser;
+        const t = util.t;
+        const obj9 = { username: name, usernameOnClick, channelName: mentions.content };
+        return obj58.astToString(intl16.formatToParts(isForumPost.isForumPost() ? t["qa0e/n"] : t.XCPMEG, obj9));
+      } else if (constants.CHANNEL_ICON_CHANGE === type) {
+        const intl15 = util.intl;
         const obj10 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl16.formatToParts(util.t["/M60j0"], obj10));
+        return MarkupParser.astToString(intl15.formatToParts(util.t.wypJZ0, obj10));
+      } else if (constants.CHANNEL_PINNED_MESSAGE === type) {
+        const intl14 = util.intl;
+        const obj11 = { username: name, usernameOnClick };
+        return MarkupParser.astToString(intl14.formatToParts(util.t["/M60j0"], obj11));
       } else if (constants.USER_JOIN === type) {
         const author = mentions.author;
         let bot;
@@ -130,52 +127,52 @@ export default {
           let name1 = null;
           if (null != mentions.actor) {
             name1 = NicknameUtilsDefault.getName(null, channel_id, mentions.actor);
-            const tmp6Result7 = NicknameUtilsDefault;
+            const tmp6Result4 = NicknameUtilsDefault;
           }
           if (null == name1) {
-            const intl15 = util.intl;
+            const intl13 = util.intl;
             const obj12 = { appName: name, appNameOnClick: usernameOnClick };
-            let astToStringResult2 = MarkupParser.astToString(intl15.formatToParts(util.t.EAkHd2, obj12));
+            let astToStringResult2 = MarkupParser.astToString(intl13.formatToParts(util.t.EAkHd2, obj12));
           } else {
-            const intl14 = util.intl;
+            const intl12 = util.intl;
             const obj13 = { username: name1, usernameOnClick, appName: name, appNameOnClick: usernameOnClick };
-            astToStringResult2 = MarkupParser.astToString(intl14.formatToParts(util.t["x6G/Rr"], obj13));
+            astToStringResult2 = MarkupParser.astToString(intl12.formatToParts(util.t["x6G/Rr"], obj13));
           }
         } else {
-          const intl13 = util.intl;
-          const obj15 = { username: name, usernameOnClick };
-          return MarkupParser.astToString(intl13.formatToParts(getSystemMessageUserJoinMobile(mentions.id), obj15));
+          const intl11 = util.intl;
+          const obj14 = { username: name, usernameOnClick };
+          return MarkupParser.astToString(intl11.formatToParts(getSystemMessageUserJoinMobile(mentions.id), obj14));
         }
       } else if (constants.GUILD_BOOST === type) {
-        const intl12 = util.intl;
-        const obj16 = { username: name, usernameOnClick };
-        return MarkupParser.astToString(intl12.formatToParts(util.t.ihxM9x, obj16));
+        const intl10 = util.intl;
+        const obj15 = { username: name, usernameOnClick };
+        return MarkupParser.astToString(intl10.formatToParts(util.t.ihxM9x, obj15));
       } else {
         if (constants.GUILD_BOOST_TIER_1 !== type) {
           if (constants.GUILD_BOOST_TIER_2 !== type) {
             if (constants.GUILD_BOOST_TIER_3 !== type) {
               if (constants.GUILD_INVITE_REMINDER === type) {
-                const intl9 = util.intl;
-                return intl9.string(util.t.gxyKvr);
+                const intl7 = util.intl;
+                return intl7.string(util.t.gxyKvr);
               } else if (constants.THREAD_STARTER_MESSAGE === type) {
-                const intl8 = util.intl;
-                const obj17 = {
+                const intl6 = util.intl;
+                const obj16 = {
                   username: name,
                   threadName: useChannelName.computeChannelName(isForumPost, UserStore, RelationshipStore),
                 };
-                return intl8.formatToPlainString(util.t["B8H+Cl"], obj17);
+                return intl6.formatToPlainString(util.t["B8H+Cl"], obj16);
               } else if (constants.ROLE_SUBSCRIPTION_PURCHASE === type) {
                 let astToStringResult3 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj42 = MarkupParser;
-                  const obj18 = {
+                  const obj35 = MarkupParser;
+                  const obj19 = {
                     username: name,
                     guildId: isForumPost.guild_id,
                     roleSubscriptionData: mentions.role_subscription_data,
                   };
-                  astToStringResult3 = obj42.astToString(
+                  astToStringResult3 = obj35.astToString(
                     GuildRoleSubscriptionSystemMessageUtils.getRoleSubscriptionPurchaseSystemMessageContentMobile(
-                      obj18,
+                      obj19,
                     ),
                   );
                 }
@@ -193,13 +190,13 @@ export default {
                   }
                   astToStringResult4 = null;
                   if (null != product_name) {
-                    const obj39 = MarkupParser;
-                    const obj19 = {
+                    const obj32 = MarkupParser;
+                    const obj24 = {
                       username: name,
                       productName: mentions.purchase_notification.guild_product_purchase.product_name,
                     };
-                    astToStringResult4 = obj39.astToString(
-                      GuildProductSystemMessageUtils.getGuildProductPurchaseSystemMessageContentMobile(obj19),
+                    astToStringResult4 = obj32.astToString(
+                      GuildProductSystemMessageUtils.getGuildProductPurchaseSystemMessageContentMobile(obj24),
                     );
                   }
                 }
@@ -208,37 +205,37 @@ export default {
                 if (mentions instanceof MessageRecord) {
                   return null;
                 } else {
-                  const obj34 = useMessageAuthor;
-                  const messageAuthor = obj34.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions));
-                  const obj36 = MarkupParser;
-                  const obj20 = { application: mentions.application, username: messageAuthor.nick };
-                  return obj36.astToString(
-                    ApplicationSubscriptionSystemMessageUtils.getApplicationSubscriptionSystemMessageASTContent(obj20),
+                  const obj27 = useMessageAuthor;
+                  const messageAuthor = obj27.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions));
+                  const obj29 = MarkupParser;
+                  const obj31 = { application: mentions.application, username: messageAuthor.nick };
+                  return obj29.astToString(
+                    ApplicationSubscriptionSystemMessageUtils.getApplicationSubscriptionSystemMessageASTContent(obj31),
                   );
                 }
               } else if (constants.PRIVATE_CHANNEL_INTEGRATION_ADDED === type) {
                 let astToStringResult5 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj29 = MarkupParser;
-                  const obj21 = { application: mentions.application, username: null };
-                  const obj30 = PrivateChannelIntegrationSystemMessageUtils;
-                  const obj32 = useMessageAuthor;
-                  obj21.username = obj32.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
-                  astToStringResult5 = obj29.astToString(
-                    obj30.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj21),
+                  const obj22 = MarkupParser;
+                  const obj34 = { application: mentions.application, username: null };
+                  const obj23 = PrivateChannelIntegrationSystemMessageUtils;
+                  const obj25 = useMessageAuthor;
+                  obj34.username = obj25.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
+                  astToStringResult5 = obj22.astToString(
+                    obj23.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj34),
                   );
                 }
                 return astToStringResult5;
               } else if (constants.PRIVATE_CHANNEL_INTEGRATION_REMOVED === type) {
                 let astToStringResult6 = null;
                 if (!(mentions instanceof MessageRecord)) {
-                  const obj24 = MarkupParser;
-                  const obj22 = { application: mentions.application, username: null };
-                  const obj25 = PrivateChannelIntegrationSystemMessageUtils;
-                  const obj27 = useMessageAuthor;
-                  obj22.username = obj27.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
-                  astToStringResult6 = obj24.astToString(
-                    obj25.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj22),
+                  const obj17 = MarkupParser;
+                  const obj37 = { application: mentions.application, username: null };
+                  const obj18 = PrivateChannelIntegrationSystemMessageUtils;
+                  const obj20 = useMessageAuthor;
+                  obj37.username = obj20.getMessageAuthor(MessageRecordUtils.createMessageRecord(mentions)).nick;
+                  astToStringResult6 = obj17.astToString(
+                    obj18.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj37),
                   );
                 }
                 return astToStringResult6;
@@ -274,29 +271,29 @@ export default {
                   const channel = ChannelStore.getChannel(channel_id);
                   let astToStringResult7 = null;
                   if (null != channel) {
-                    guild = GuildStore.getGuild(channel.getGuildId());
+                    const guild = GuildStore.getGuild(channel.getGuildId());
                     astToStringResult7 = null;
                     if (null != guild) {
                       if (
                         AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED ===
                         value
                       ) {
-                        const intl7 = util.intl;
-                        const obj23 = { guildName: guild.name };
-                        astToStringResult7 = MarkupParser.astToString(intl7.formatToParts(util.t.wt3ZUM, obj23));
-                        const tmp53Result = MarkupParser;
+                        const intl5 = util.intl;
+                        const obj38 = { guildName: guild.name };
+                        astToStringResult7 = MarkupParser.astToString(intl5.formatToParts(util.t.wt3ZUM, obj38));
+                        const tmp35Result = MarkupParser;
                       } else if (
                         AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.INTERACTION_BLOCKED === value
                       ) {
-                        const intl6 = util.intl;
-                        const obj26 = { guildName: guild.name };
-                        astToStringResult7 = MarkupParser.astToString(intl6.formatToParts(util.t.AkqI0g, obj26));
-                        const tmp53Result3 = MarkupParser;
+                        const intl4 = util.intl;
+                        const obj40 = { guildName: guild.name };
+                        astToStringResult7 = MarkupParser.astToString(intl4.formatToParts(util.t.AkqI0g, obj40));
+                        const tmp35Result3 = MarkupParser;
                       } else {
-                        const intl5 = util.intl;
-                        const obj31 = { guildName: guild.name };
-                        astToStringResult7 = MarkupParser.astToString(intl5.formatToParts(util.t["a+lJKl"], obj31));
-                        const tmp53Result4 = MarkupParser;
+                        const intl3 = util.intl;
+                        const obj42 = { guildName: guild.name };
+                        astToStringResult7 = MarkupParser.astToString(intl3.formatToParts(util.t["a+lJKl"], obj42));
+                        const tmp35Result4 = MarkupParser;
                       }
                     }
                   }
@@ -305,153 +302,43 @@ export default {
                   return mentions.content;
                 }
               } else if (constants.GUILD_INCIDENT_ALERT_MODE_ENABLED === type) {
-                const content3 = mentions.content;
+                const content = mentions.content;
                 const channel1 = ChannelStore.getChannel(channel_id);
-                let tmp36 = null;
+                let tmp18 = null;
                 if (null != channel1) {
                   const guild1 = GuildStore.getGuild(channel1.getGuildId());
                   let astToStringResult8 = null;
                   if (null != guild1) {
-                    const intl4 = util.intl;
-                    const obj38 = { username: name, guildName: guild1.name, time: null };
-                    let str2 = "";
-                    if ("" !== content3) {
+                    const intl2 = util.intl;
+                    const obj44 = { username: name, guildName: guild1.name, time: null };
+                    let str = "";
+                    if ("" !== content) {
                       const _Date = Date;
-                      const date = new Date(content3);
-                      str2 = date.toLocaleString(util.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
+                      const date = new Date(content);
+                      str = date.toLocaleString(util.intl.currentLocale, { hour: "numeric", minute: "2-digit" });
                     }
-                    obj38.time = str2;
-                    astToStringResult8 = MarkupParser.astToString(intl4.formatToParts(util.t.iOuWPk, obj38));
+                    obj44.time = str;
+                    astToStringResult8 = MarkupParser.astToString(intl2.formatToParts(util.t.iOuWPk, obj44));
                   }
-                  tmp36 = astToStringResult8;
+                  tmp18 = astToStringResult8;
                 }
-                return tmp36;
+                return tmp18;
               } else if (constants.GUILD_INCIDENT_ALERT_MODE_DISABLED === type) {
                 const channel2 = ChannelStore.getChannel(channel_id);
-                let tmp30 = null;
+                let tmp12 = null;
                 if (null != channel2) {
                   const guild2 = GuildStore.getGuild(channel2.getGuildId());
                   let astToStringResult9 = null;
                   if (null != guild2) {
-                    const intl3 = util.intl;
-                    const obj41 = { username: name, guildName: guild2.name };
-                    astToStringResult9 = MarkupParser.astToString(intl3.formatToParts(util.t.axmbpm, obj41));
+                    const intl = util.intl;
+                    const obj46 = { username: name, guildName: guild2.name };
+                    astToStringResult9 = MarkupParser.astToString(intl.formatToParts(util.t.axmbpm, obj46));
                   }
-                  tmp30 = astToStringResult9;
+                  tmp12 = astToStringResult9;
                 }
-                return tmp30;
+                return tmp12;
               } else if (constants.GUILD_SPACE_MESSAGE === type) {
-                if (mentions instanceof MessageRecord) {
-                  const guildSpaceData = mentions.guildSpaceData;
-                  let music1;
-                  if (guildSpaceData != null) {
-                    music1 = guildSpaceData.music;
-                  }
-                  let music = music1;
-                } else {
-                  const guild_space_data = mentions.guild_space_data;
-                  if (guild_space_data != null) {
-                    music = guild_space_data.music;
-                  }
-                }
-                const result = PopularMusicSystemMessageTypes.parseGuildSpaceMusicMessageData(music);
-                if (null != result) {
-                  const user = UserStore.getUser(result.userId);
-                  let name2 = null;
-                  if (null != user) {
-                    name2 = NicknameUtilsDefault.getName(isForumPost.getGuildId(), channel_id, user);
-                    const tmp6Result8 = NicknameUtilsDefault;
-                  }
-                  const musicSystemMessage = PopularMusicSystemMessageCopy.getMusicSystemMessage(result, name2);
-                  if (null == musicSystemMessage) {
-                    let content2 = mentions.content;
-                  } else {
-                    const intl2 = util.intl;
-                    const obj44 = {};
-                    const merged = Object.assign(musicSystemMessage.values);
-                    obj44.usernameHook = function usernameHook(arg0) {
-                      return arg0;
-                    };
-                    content2 = intl2.formatToPlainString(musicSystemMessage.message, obj44);
-                  }
-                  return content2;
-                } else {
-                  if (mentions instanceof MessageRecord) {
-                    const guildSpaceData2 = mentions.guildSpaceData;
-                    let leaderboard1;
-                    if (guildSpaceData2 != null) {
-                      leaderboard1 = guildSpaceData2.leaderboard;
-                    }
-                    let leaderboard = leaderboard1;
-                  } else {
-                    const guild_space_data2 = mentions.guild_space_data;
-                    if (guild_space_data2 != null) {
-                      leaderboard = guild_space_data2.leaderboard;
-                    }
-                  }
-                  const result1 = GuildLeaderboardTypes.parseGuildSpaceLeaderboardMessageData(leaderboard);
-                  const tmp10Result4 = GuildLeaderboardTypes;
-                  let userId;
-                  if (result1 != null) {
-                    userId = result1.userId;
-                  }
-                  let secondaryUserId;
-                  const user1 = UserStore.getUser(userId);
-                  if (result1 != null) {
-                    secondaryUserId = result1.secondaryUserId;
-                  }
-                  const guildSpaceLeaderboardMessage =
-                    GuildLeaderboardSystemMessageCopy.resolveGuildSpaceLeaderboardMessage(
-                      result1,
-                      user1,
-                      UserStore.getUser(secondaryUserId),
-                    );
-                  if (null == guildSpaceLeaderboardMessage) {
-                    return mentions.content;
-                  } else {
-                    const guildId = isForumPost.getGuildId();
-                    const obj45 = { username: null, previousUsername: null };
-                    const tmp10Result6 = GuildLeaderboardSystemMessageCopy;
-                    obj45.username = NicknameUtilsDefault.getName(
-                      guildId,
-                      channel_id,
-                      guildSpaceLeaderboardMessage.subject,
-                    );
-                    let str = "";
-                    if (
-                      guildSpaceLeaderboardMessage.data.event ===
-                      GuildLeaderboardTypes.GuildSpaceLeaderboardEvent.LEADER_CHANGED
-                    ) {
-                      str = NicknameUtilsDefault.getName(
-                        guildId,
-                        channel_id,
-                        guildSpaceLeaderboardMessage.previousLeader,
-                      );
-                      const tmp6Result10 = NicknameUtilsDefault;
-                    }
-                    obj45.previousUsername = str;
-                    const leaderboardSystemMessage = tmp10Result6.getLeaderboardSystemMessage(
-                      guildSpaceLeaderboardMessage.data,
-                      obj45,
-                    );
-                    if (null == leaderboardSystemMessage) {
-                      let content = mentions.content;
-                    } else {
-                      const intl = util.intl;
-                      const obj47 = {};
-                      const merged1 = Object.assign(leaderboardSystemMessage.values);
-                      obj47.usernameHook = function usernameHook(arg0) {
-                        return arg0;
-                      };
-                      obj47.previousUsernameHook = function previousUsernameHook(arg0) {
-                        return arg0;
-                      };
-                      content = intl.formatToPlainString(leaderboardSystemMessage.message, obj47);
-                    }
-                    return content;
-                  }
-                  const tmp10Result5 = GuildLeaderboardSystemMessageCopy;
-                }
+                return GuildSpaceSystemMessageUtils.stringifyGuildSpaceSystemMessage(mentions, isForumPost);
               } else {
                 return mentions.content;
               }
@@ -461,15 +348,15 @@ export default {
         const channel3 = ChannelStore.getChannel(channel_id);
         if (null != channel3) {
           if (null != GuildStore.getGuild(channel3.getGuildId())) {
-            const intl10 = util.intl;
-            const obj49 = { username: name, usernameOnClick };
-            let astToStringResult10 = MarkupParser.astToString(intl10.formatToParts(util.t.ihxM9x, obj49));
+            const intl8 = util.intl;
+            const obj48 = { username: name, usernameOnClick };
+            let astToStringResult10 = MarkupParser.astToString(intl8.formatToParts(util.t.ihxM9x, obj48));
           }
           return astToStringResult10;
         }
-        const intl11 = util.intl;
-        const obj51 = { username: name, usernameOnClick };
-        astToStringResult10 = MarkupParser.astToString(intl11.formatToParts(util.t.ihxM9x, obj51));
+        const intl9 = util.intl;
+        const obj49 = { username: name, usernameOnClick };
+        astToStringResult10 = MarkupParser.astToString(intl9.formatToParts(util.t.ihxM9x, obj49));
       }
     } else if (typeof first === "object") {
       first = UserStore.getUser(first.id);
@@ -477,9 +364,9 @@ export default {
         first = null;
       }
     } else if (typeof first === "string") {
-      let user2 = UserStore.getUser(first);
-      if (user2 == null) {
-        user2 = null;
+      let user = UserStore.getUser(first);
+      if (user == null) {
+        user = null;
       }
     }
   },

@@ -8,9 +8,9 @@ require = fn;
 function defaultAreStatesEqual(arg0, arg1) {
   return arg0 === arg1;
 }
-function useStateFromStores(items, cResult, items1) {
+function useStateFromStores(items, getCurrentUser, items1) {
   _require = items;
-  const getStateFromStores = cResult;
+  const getStateFromStores = getCurrentUser;
   dependencyMap = items1;
   let tmp = isVersionEqual;
   if (isVersionEqual === undefined) {
@@ -25,16 +25,16 @@ function useStateFromStores(items, cResult, items1) {
     const obj = {
       stores: items,
       areStatesEqual: tmp,
-      getStateFromStores: cResult,
+      getStateFromStores: getCurrentUser,
       prevDeps: "Boolean",
-      state: "toCharArray$esjava$1",
+      state: "isArray",
     };
     tmp2.current = obj;
   }
   current = tmp2.current;
   state = current.state;
   if (null == items1) {
-    const tmp6 = cResult();
+    const tmp6 = getCurrentUser();
     let tmp5 = state;
     if (!tmp7) {
       state = tmp6;
@@ -67,20 +67,16 @@ function useStateFromStores(items, cResult, items1) {
 }
 const noop = fn(19);
 ({ useState: closure_4, useRef: hasOwnProperty, useInsertionEffect: metroRequire } = noop);
-let ReactCompilerGating = fn(558);
-ReactCompilerGating.isReactCompilerEnabled();
-ReactCompilerGating = fn(558);
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result2 = size.fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
 
 export function statesWillNeverBeEqual() {
   return false;
 }
 export { useStateFromStores };
-export function useStateFromStoresObject(items, cResult, items1) {
-  return useStateFromStores(items, cResult, items1, discord_common_shallowEqualDefault);
+export function useStateFromStoresObject(items, getLocalSelfMuteDeaf, items1) {
+  return useStateFromStores(items, getLocalSelfMuteDeaf, items1, discord_common_shallowEqualDefault);
 }
-export function useStateFromStoresArray(items, cResult, items1) {
-  return useStateFromStores(items, cResult, items1, discord_common_shallowEqual.areArraysShallowEqual);
+export function useStateFromStoresArray(items, getChannelIds, items1) {
+  return useStateFromStores(items, getChannelIds, items1, discord_common_shallowEqual.areArraysShallowEqual);
 }

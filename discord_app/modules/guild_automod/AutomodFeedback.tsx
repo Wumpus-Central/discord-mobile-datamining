@@ -29,13 +29,13 @@ export function generateFeedbackOptions() {
 }
 export const RaidAlertType = { JOIN_RAID: "JOIN_RAID", MENTION_RAID: "MENTION_RAID" };
 export const RaidResolutionType = obj2;
-export function getMostImportantRaidResolutionType(c3) {
-  if (obj2.includes(obj2.LEGITIMATE_ACTIVITY)) {
+export function getMostImportantRaidResolutionType(arr) {
+  if (arr.includes(obj2.LEGITIMATE_ACTIVITY)) {
     let DM_SPAM = obj2.LEGITIMATE_ACTIVITY;
-  } else if (obj2.includes(obj2.DM_SPAM)) {
+  } else if (arr.includes(obj2.DM_SPAM)) {
     DM_SPAM = obj2.DM_SPAM;
   } else {
-    DM_SPAM = obj2.includes(obj2.JOIN_RAID) ? obj2.JOIN_RAID : obj2.OTHER;
+    DM_SPAM = arr.includes(obj2.JOIN_RAID) ? obj2.JOIN_RAID : obj2.OTHER;
   }
   return DM_SPAM;
 }

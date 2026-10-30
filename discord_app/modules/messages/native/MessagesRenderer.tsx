@@ -52,10 +52,10 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9848).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(4917).getUserCommunicationDisabledVersion;
-const Changeset = fn(8189).Changeset;
-const Constants = fn(1084);
+let closure_6 = fn(9874).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(4921).getUserCommunicationDisabledVersion;
+const Changeset = fn(8370).Changeset;
+const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_12,
   MAX_MESSAGES_PER_CHANNEL: map1,
@@ -171,7 +171,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -204,7 +204,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "HermesInternal", done: null };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);
@@ -1188,7 +1188,7 @@ class MessagesRenderer {
                 if (closure_5) {
                   const interactionComponentStates = props.interactionComponentStates;
                   const interactionComponentStates2 = merged.interactionComponentStates;
-                  value3 = interactionComponentStates.get(author.id);
+                  const value3 = interactionComponentStates.get(author.id);
                   if (value3 !== interactionComponentStates2.get(author.id)) {
                     set.add(author.id);
                   }
@@ -1278,7 +1278,7 @@ class MessagesRenderer {
                           let addResult20 = set.add(author.id);
                           iter2.return();
                         } else {
-                          value4 = SKUStore.get(tmp97);
+                          let value4 = SKUStore.get(tmp97);
                           if (null != value4) {
                             let invalidApplicationIds = props.invalidApplicationIds;
                             if (invalidApplicationIds.includes(tmp103.applicationId)) {

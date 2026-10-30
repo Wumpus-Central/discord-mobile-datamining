@@ -6,7 +6,7 @@ import MFAStore from "../stores/MFAStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/MFAActionCreators.tsx");
 
@@ -31,7 +31,7 @@ export default {
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
-    HTTP.post(obj).then((token) =>
+    return HTTP.post(obj).then((token) =>
       DispatcherDefault.dispatch({ type: "MFA_DISABLE_SUCCESS", token: token.body.token }),
     );
   },

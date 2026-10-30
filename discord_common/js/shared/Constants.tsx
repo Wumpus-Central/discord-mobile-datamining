@@ -528,11 +528,11 @@ obj8.QUEST_BAR_PREVIEW = function QUEST_BAR_PREVIEW(arg0) {
   return "" + sum + "/quest-bar-preview?ad_creative_ids=" + arg0;
 };
 const frozen7 = Object.freeze(obj8);
-fn(1093);
+fn(1081);
 const obj7 = {
   TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
 };
-const PathUtils = fn(1093);
+const PathUtils = fn(1081);
 const wrapPathsResult = PathUtils.wrapPaths(frozen7);
 const frozen8 = Object.freeze({
   FACEBOOK_URL: "https://www.facebook.com/discord/",
@@ -543,8 +543,8 @@ const frozen8 = Object.freeze({
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/Constants.tsx");
 
-export const ThemeExtends = fn(1097).ThemeExtends;
-export const ThemeTypes = fn(1097).ThemeTypes;
+export const ThemeExtends = fn(1085).ThemeExtends;
+export const ThemeTypes = fn(1085).ThemeTypes;
 export const APP_URL_PREFIX = sum;
 export const VANITY_URL_PREFIX = text;
 export const PRIMARY_DOMAIN = "discord.com";
@@ -576,33 +576,7 @@ export const Fonts = {
   GINTO_DISCORD_NORD_BOLD_ITALIC: "ABCGintoDiscordNord-BoldItalic",
   GINTO_DISCORD_NORD_BLACK_ITALIC: "ABCGintoDiscordNord-BlackItalic",
 };
-export const ActivityTypes = {
-  PLAYING: 0,
-  [0]: "PLAYING",
-  STREAMING: 1,
-  [1]: "STREAMING",
-  LISTENING: 2,
-  [2]: "LISTENING",
-  WATCHING: 3,
-  [3]: "WATCHING",
-  CUSTOM_STATUS: 4,
-  [4]: "CUSTOM_STATUS",
-  COMPETING: 5,
-  [5]: "COMPETING",
-  HANG_STATUS: 6,
-  [6]: "HANG_STATUS",
-};
-export const ActivityGamePlatforms = {
-  DESKTOP: "desktop",
-  XBOX: "xbox",
-  SAMSUNG: "samsung",
-  IOS: "ios",
-  ANDROID: "android",
-  EMBEDDED: "embedded",
-  PS4: "ps4",
-  PS5: "ps5",
-  META_QUEST: "meta_quest",
-};
+export const EntitlementTypes = fn(1086).EntitlementTypes;
 export const ActivityPartyPrivacy = { PRIVATE: 0, [0]: "PRIVATE", PUBLIC: 1, [1]: "PUBLIC" };
 export const StatusTypes = {
   ONLINE: "online",
@@ -663,42 +637,6 @@ export const SubscriptionTypes = {
   GIFT: 5,
   [5]: "GIFT",
 };
-export const InviteTargetTypes = {
-  STREAM: 1,
-  [1]: "STREAM",
-  EMBEDDED_APPLICATION: 2,
-  [2]: "EMBEDDED_APPLICATION",
-  ROLE_SUBSCRIPTIONS_PURCHASE: 3,
-  [3]: "ROLE_SUBSCRIPTIONS_PURCHASE",
-};
-export const EntitlementTypes = {
-  PURCHASE: 1,
-  [1]: "PURCHASE",
-  PREMIUM_SUBSCRIPTION: 2,
-  [2]: "PREMIUM_SUBSCRIPTION",
-  DEVELOPER_GIFT: 3,
-  [3]: "DEVELOPER_GIFT",
-  TEST_MODE_PURCHASE: 4,
-  [4]: "TEST_MODE_PURCHASE",
-  FREE_PURCHASE: 5,
-  [5]: "FREE_PURCHASE",
-  USER_GIFT: 6,
-  [6]: "USER_GIFT",
-  PREMIUM_PURCHASE: 7,
-  [7]: "PREMIUM_PURCHASE",
-  APPLICATION_SUBSCRIPTION: 8,
-  [8]: "APPLICATION_SUBSCRIPTION",
-  FREE_STAFF_PURCHASE: 9,
-  [9]: "FREE_STAFF_PURCHASE",
-  QUEST_REWARD: 10,
-  [10]: "QUEST_REWARD",
-  FRACTIONAL_REDEMPTION: 11,
-  [11]: "FRACTIONAL_REDEMPTION",
-  VIRTUAL_CURRENCY_REDEMPTION: 12,
-  [12]: "VIRTUAL_CURRENCY_REDEMPTION",
-  PURCHASE_REWARD: 16,
-  [16]: "PURCHASE_REWARD",
-};
 export const BraintreeErrors = {
   PAYPAL_POPUP_CLOSED: "PAYPAL_POPUP_CLOSED",
   VENMO_APP_CANCELED: "VENMO_APP_CANCELED",
@@ -725,10 +663,10 @@ export const BasicPermissions = {
   [1048576]: "CONNECT",
 };
 export const Permissions = frozen5;
-export const NOOP = fn(1098).NOOP;
-export const NOOP_NULL = fn(1098).NOOP_NULL;
-export const NOOP_PROMISE = fn(1098).NOOP_PROMISE;
-export const NOOP_TRUE = fn(1098).NOOP_TRUE;
+export const NOOP = fn(1087).NOOP;
+export const NOOP_NULL = fn(1087).NOOP_NULL;
+export const NOOP_PROMISE = fn(1087).NOOP_PROMISE;
+export const NOOP_TRUE = fn(1087).NOOP_TRUE;
 export const ElevatedPermissionsList = items23;
 export const ElevatedPermissions = applyResult;
 export const RPC_VERSION = 1;
@@ -1368,7 +1306,7 @@ export const SKUFeatureTypes = {
   SECURE_NETWORKING: 13,
   [13]: "SECURE_NETWORKING",
 };
-export const GameGenres = fn(1099).GameGenres;
+export const GameGenres = fn(1088).GameGenres;
 export const PriceTierTypes = {
   GUILD_ROLE_SUBSCRIPTIONS: 1,
   [1]: "GUILD_ROLE_SUBSCRIPTIONS",

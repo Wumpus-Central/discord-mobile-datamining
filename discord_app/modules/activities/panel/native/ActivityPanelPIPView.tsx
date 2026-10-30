@@ -1,5 +1,4 @@
 // discord_app/modules/activities/panel/native/ActivityPanelPIPView.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
@@ -18,9 +17,297 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
+class BaseActivityPanelPIPView {
+  constructor(arg0) {
+    transitionState = global.transitionState;
+    transitionCleanUp = global.transitionCleanUp;
+    ({ hasActivity, context } = global);
+    closure_2 = undefined;
+    closure_3 = undefined;
+    closure_4 = undefined;
+    wrapperOffset = undefined;
+    setMode = undefined;
+    pipState = undefined;
+    pipAvoidanceSpecs = undefined;
+    shown = undefined;
+    closure_10 = undefined;
+    width = undefined;
+    height = undefined;
+    ({ children, pipOrientationLockState } = global);
+    tmp = closure_20();
+    obj = transitionState(closure_2[16]);
+    items = [];
+    items[0] = wrapperOffset;
+    stateFromStores = obj.useStateFromStores(items, () => wrapperOffset.useReducedMotion);
+    closure_2 = stateFromStores;
+    tmp3 = transitionCleanUp(closure_2[17])();
+    closure_3 = tmp3;
+    tmp4 = transitionCleanUp(closure_2[15])();
+    closure_4 = tmp4;
+    context1 = closure_3.useContext(context);
+    wrapperOffset = context1.wrapperOffset;
+    setMode = context1.setMode;
+    pipState = context1.pipState;
+    pipAvoidanceSpecs = context1.pipAvoidanceSpecs;
+    obj2 = transitionState(closure_2[18]);
+    lockedWebView = obj2.useLockedWebView({ transitionState, hasActivity, context });
+    shown = lockedWebView.shown;
+    renderWebView = lockedWebView.renderWebView;
+    items1 = [];
+    items1[0] = wrapperOffset;
+    effect = closure_3.useEffect(() => {
+      updateSharedValueIfChangedDefault(wrapperOffset, { gestureActive: false });
+    }, items1);
+    tmp8 = setMode((shouldDisableSafeAreas) => shouldDisableSafeAreas.shouldDisableSafeAreas());
+    closure_10 = tmp8;
+    obj3 = transitionState(closure_2[20]);
+    class J {
+      constructor() {
+        point = pipState.get();
+        x = point.x;
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj = closure_0(closure_2[21]);
+        size = {
+          pipX: x,
+          pipY: point.y,
+          width: ACTIVITY_PIP_SIZE.width,
+          height: ACTIVITY_PIP_SIZE.height,
+          windowDimensions: closure_3,
+          safeArea: closure_4,
+          bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom,
+          topAvoidanceRegion: pipAvoidanceSpecs.get().top,
+          positionOffset: null,
+          disableHorizontalSafeAreas: null,
+        };
+        width = ACTIVITY_PIP_SIZE;
+        sum1 = closure_4;
+        tmp3 = closure_3;
+        obj3 = wrapperOffset;
+        value = undefined;
+        if (wrapperOffset.get().gestureActive) {
+          value = obj3.get();
+        }
+        size.positionOffset = value;
+        size.disableHorizontalSafeAreas = closure_10;
+        point2 = obj.getClampedPIPPosition(size);
+        x2 = point2.x;
+        obj4 = shown;
+        tmp6 = shown.get() || closure_2;
+        if (tmp6) {
+          transitionComplete = function transitionComplete() {
+            let flag = arg0;
+            if (arg0 === undefined) {
+              flag = false;
+            }
+            if (flag) {
+              flag = closure_1_0 === transitionState(stateFromStores[22]).TransitionStates.YEETED;
+            }
+            if (flag) {
+              transitionState(stateFromStores[20]).runOnJS(transitionCleanUp)();
+              const obj = transitionState(stateFromStores[20]);
+            }
+          };
+          obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
+          tmp13 = transitionState;
+          obj1.transitionState = transitionState;
+          obj1.TransitionStates = tmp(tmp2[22]).TransitionStates;
+          obj1.runOnJS = tmp(tmp2[20]).runOnJS;
+          tmp14 = transitionCleanUp;
+          obj1.transitionCleanUp = transitionCleanUp;
+          transitionComplete.__closure = obj1;
+          num3 = 7625774548373;
+          transitionComplete.__workletHash = 7625774548373;
+          tmp15 = closure_22;
+          transitionComplete.__initData = closure_22;
+          num4 = 1;
+          num5 = 1;
+          tmp16 = closure_2;
+          if (closure_2) {
+            tmpResult = tmp(tmp2[23]);
+            num6 = 0;
+            if (obj4.get()) {
+              num6 = 1;
+            }
+            tmp17 = closure_19;
+            str = "animate-always";
+            tmp18 = tmpResult;
+            tmp19 = num6;
+            tmp20 = transitionComplete;
+            num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
+          }
+          obj12 = { opacity: null, transform: null };
+          obj12.opacity = num5;
+          tmpResult1 = tmp(tmp2[24]);
+          obj13 = { translateY: null };
+          str2 = "animate-always";
+          obj13.translateY = tmpResult1.withSpring(
+            point2.y,
+            obj3.get().gestureActive ? closure_12 : closure_13,
+            "animate-always",
+          );
+          items = [,];
+          items[0] = obj13;
+          tmpResult2 = tmp(tmp2[24]);
+          tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
+          tmp22 = undefined;
+          if (!tmp16) {
+            tmp22 = transitionComplete;
+          }
+          obj14 = { translateX: null };
+          tmp23 = tmpResult2;
+          tmp24 = x2;
+          tmp25 = tmp21;
+          str3 = "animate-always";
+          tmp26 = tmp22;
+          obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
+          items[1] = obj14;
+          obj12.transform = items;
+          return obj12;
+        } else {
+          num = 0.5;
+          if (x >= 0.5) {
+            tmp7 = globalThis;
+            _Math = Math;
+            tmp8 = PIP_WINDOW_OFFSET;
+            sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
+            tmp12 = sum;
+          } else {
+            num2 = 0;
+          }
+          width = width.width;
+          tmp10 = globalThis;
+          _Math2 = Math;
+          tmp11 = PIP_WINDOW_OFFSET;
+          sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
+          sum = -sum1;
+        }
+        return;
+      }
+    }
+    obj1 = {
+      pipState,
+      getClampedPIPPosition: transitionState(closure_2[21]).getClampedPIPPosition,
+      ACTIVITY_PIP_SIZE: closure_10,
+      windowDimensions: tmp3,
+      safeArea: tmp4,
+      pipAvoidanceSpecs,
+      wrapperOffset,
+      disableHorizontalSafeAreas: tmp8,
+      shown,
+      reduceMotion: stateFromStores,
+      PIP_WINDOW_OFFSET,
+      transitionState,
+      TransitionStates: transitionState(closure_2[22]).TransitionStates,
+      runOnJS: transitionState(closure_2[20]).runOnJS,
+      transitionCleanUp,
+      withTiming: transitionState(closure_2[23]).withTiming,
+      REDUCED_MOTION_TIMING: closure_19,
+      withSpring: transitionState(closure_2[24]).withSpring,
+      ACTIVITY_LAYOUT_PHYSICS_GESTURE: height,
+      ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_13,
+    };
+    J.__closure = obj1;
+    J.__workletHash = 14326479117867;
+    J.__initData = closure_21;
+    animatedStyle = obj3.useAnimatedStyle(J);
+    obj13 = {
+      pipWidth: closure_10.width,
+      pipHeight: closure_10.height,
+      pipOrientationLockState,
+      isLandscape: context1.wrapperDimensions.isLandscape,
+    };
+    size = transitionCleanUp(closure_2[25])(obj13);
+    width = size.width;
+    height = size.height;
+    items2 = [,];
+    items2[0] = width;
+    items2[1] = height;
+    class W {
+      constructor() {
+        obj = closure_0(closure_2[20]);
+        tmp = obj.runOnJS(setMode)(ActivityPanelModes.PANEL);
+        return;
+      }
+    }
+    obj14 = { runOnJS: null, setMode: null, ActivityPanelModes: null };
+    memo = closure_3.useMemo(() => {
+      const size = { width, height, pointerEvents: "none" };
+      return size;
+    }, items2);
+    obj14.runOnJS = transitionState(closure_2[20]).runOnJS;
+    obj14.setMode = setMode;
+    obj14.ActivityPanelModes = width;
+    W.__closure = obj14;
+    W.__workletHash = 2951177166574;
+    W.__initData = closure_23;
+    items3 = [];
+    items3[0] = setMode;
+    callback = closure_3.useCallback(W, items3);
+    obj15 = {
+      panGestureEnabled: true,
+      onTapGestureStart: callback,
+      mode: null,
+      pipState: null,
+      wrapperOffset: null,
+      disableHorizontalSafeAreas: false,
+    };
+    tmp12 = transitionCleanUp(closure_2[26]);
+    obj15.mode = transitionState(closure_2[26]).MorphablePanelModes.PIP;
+    obj15.pipState = pipState;
+    obj15.wrapperOffset = wrapperOffset;
+    items4 = [];
+    items4[0] = setMode;
+    tmp12Result = tmp12(obj15);
+    tmp15 = jsx;
+    memo1 = closure_3.useMemo(() => {
+      const obj = {
+        accessible: true,
+        accessibilityLabel: null,
+        accessibilityRole: "button",
+        accessibilityActions: null,
+        onAccessibilityAction: null,
+      };
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t["3ejJer"]);
+      const items = [{ name: "activate" }];
+      obj.accessibilityActions = items;
+      obj.onAccessibilityAction = function onAccessibilityAction() {
+        setMode(width.PANEL);
+      };
+      return obj;
+    }, items4);
+    obj16 = { theme: ThemeTypes.DARK, children: null };
+    obj17 = { style: null };
+    items5 = [,];
+    items5[0] = tmp.wrapper;
+    items5[1] = animatedStyle;
+    obj17.style = items5;
+    merged = Object.assign(memo1);
+    obj18 = { gesture: tmp12Result, children: null };
+    tmp17 = closure_4;
+    obj19 = { style: tmp.mask, children: null };
+    tmp18 = !renderWebView;
+    if (renderWebView) {
+      tmp18 = !hasActivity;
+    }
+    tmp15Result = !tmp18;
+    if (!tmp18) {
+      obj20 = { style: null, children: null };
+      obj20.style = memo;
+      obj20.children = children;
+      tmp15Result = tmp15(tmp17, obj20);
+    }
+    obj19.children = tmp15Result;
+    obj18.children = tmp15(tmp17, obj19);
+    obj17.children = tmp15(transitionState(closure_2[28]).GestureDetector, obj18);
+    obj16.children = tmp15(transitionCleanUp(closure_2[20]).View, obj17);
+    return tmp15(transitionState(closure_2[22]).ThemeContextProvider, obj16);
+  }
+}
 const View = fn(17).View;
-const ActivityLayoutMode = fn(2024).ActivityLayoutMode;
-const ActivityPanelConstants = fn(5646);
+const ActivityLayoutMode = fn(2019).ActivityLayoutMode;
+const ActivityPanelConstants = fn(5652);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_11,
@@ -28,14 +315,14 @@ let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14,
 } = ActivityPanelConstants);
-const portraitSafeAreasConfig = fn(18884).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
-const ThemeTypes = fn(1084).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(10975).PIP_WINDOW_OFFSET;
+let closure_15 = fn(18944).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const ThemeTypes = fn(1072).ThemeTypes;
+const PIP_WINDOW_OFFSET = fn(11205).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
-const native = fn(1199);
-const boxShadowStyle = native.generateBoxShadowStyle(fn(1199).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(5005);
+const native = fn(1188);
+const boxShadowStyle = native.generateBoxShadowStyle(fn(1188).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
+const createStyles = fn(5009);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
@@ -50,734 +337,16 @@ obj.mask = {
   borderRadius: nativeDefault.radii.lg,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-let closure_20 = createStyles.createStyles(obj);
-let ReactCompilerGating = fn(558);
-const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useBaseActivityPanelPIPView() {
-      const cResult = c.c(4);
-      const tmp2 = useSafeAreaInsetsDefault();
-      let num;
-      if (tmp2 != null) {
-        num = tmp2.right;
-      }
-      if (num == null) {
-        num = 0;
-      }
-      const bound = Math.max(closure_1_14, num);
-      if (cResult[0] !== bound) {
-        const obj2 = { right: null };
-        const obj3 = { disable: false, override: bound };
-        obj2.right = obj3;
-        cResult[0] = bound;
-        cResult[1] = obj2;
-        let tmp5 = obj2;
-      } else {
-        tmp5 = cResult[1];
-      }
-      if (cResult[2] !== tmp5) {
-        const obj4 = { landscapeSafeAreasConfig: tmp5 };
-        cResult[2] = tmp5;
-        cResult[3] = obj4;
-        let tmp6 = obj4;
-      } else {
-        tmp6 = cResult[3];
-      }
-      return tmp6;
-    }
-  : function useBaseActivityPanelPIPView() {
-      const tmp = useSafeAreaInsetsDefault();
-      const right = tmp;
-      let obj = { landscapeSafeAreasConfig: null };
-      const items = [tmp.right];
-      obj.landscapeSafeAreasConfig = noop.useMemo(() => {
-        let num;
-        if (right != null) {
-          num = right.right;
-        }
-        if (num == null) {
-          num = 0;
-        }
-        const obj = { right: { disable: false, override: Math.max(closure_2_14, num) } };
-        return obj;
-      }, items);
-      return obj;
-    };
-let closure_21 = tmp7;
+let dependencyMap = createStyles.createStyles(obj);
 const __initData = {
-  code: 'function ActivityPanelPIPViewTsx1(){const{pipState,getClampedPIPPosition,ACTIVITY_PIP_SIZE,windowDimensions,safeArea,pipAvoidanceSpecs,wrapperOffset,disableHorizontalSafeAreas,shown,reduceMotion,PIP_WINDOW_OFFSET,transitionState,TransitionStates,runOnJS,transitionCleanUp,withTiming,REDUCED_MOTION_TIMING,withSpring,ACTIVITY_LAYOUT_PHYSICS_GESTURE,ACTIVITY_LAYOUT_PHYSICS_DEFAULT}=this.__closure;const{x:pipX,y:pipY}=pipState.get();let{x:x,y:y}=getClampedPIPPosition({pipX:pipX,pipY:pipY,width:ACTIVITY_PIP_SIZE.width,height:ACTIVITY_PIP_SIZE.height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top,positionOffset:wrapperOffset.get().gestureActive?wrapperOffset.get():undefined,disableHorizontalSafeAreas:disableHorizontalSafeAreas});if(!shown.get()&&!reduceMotion){if(pipX<0.5&&pipX>=0){x=-(ACTIVITY_PIP_SIZE.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET));}else{x=windowDimensions.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET);}}const transitionComplete=function transitionComplete(t6){const finished=t6===undefined?false:t6;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}};return{opacity:reduceMotion?withTiming(shown.get()?1:0,REDUCED_MOTION_TIMING,"animate-always",transitionComplete):1,transform:[{translateY:withSpring(y,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,"animate-always")},{translateX:withSpring(x,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,"animate-always",!reduceMotion?transitionComplete:undefined)}]};}',
-};
-let closure_23 = {
-  code: "function transitionComplete_ActivityPanelPIPViewTsx2(t6){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;var finished=t6===undefined?false:t6;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}",
+  code: "function ActivityPanelPIPViewTsx1(){const{pipState,getClampedPIPPosition,ACTIVITY_PIP_SIZE,windowDimensions,safeArea,pipAvoidanceSpecs,wrapperOffset,disableHorizontalSafeAreas,shown,reduceMotion,PIP_WINDOW_OFFSET,transitionState,TransitionStates,runOnJS,transitionCleanUp,withTiming,REDUCED_MOTION_TIMING,withSpring,ACTIVITY_LAYOUT_PHYSICS_GESTURE,ACTIVITY_LAYOUT_PHYSICS_DEFAULT}=this.__closure;const{x:pipX,y:pipY}=pipState.get();let{x:x,y:y}=getClampedPIPPosition({pipX:pipX,pipY:pipY,width:ACTIVITY_PIP_SIZE.width,height:ACTIVITY_PIP_SIZE.height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top,positionOffset:wrapperOffset.get().gestureActive?wrapperOffset.get():undefined,disableHorizontalSafeAreas:disableHorizontalSafeAreas});if(!shown.get()&&!reduceMotion){if(pipX<0.5&&pipX>=0){x=-(ACTIVITY_PIP_SIZE.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET));}else{x=windowDimensions.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET);}}function transitionComplete(finished=false){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}return{opacity:reduceMotion?withTiming(shown.get()?1:0,REDUCED_MOTION_TIMING,'animate-always',transitionComplete):1,transform:[{translateY:withSpring(y,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,'animate-always')},{translateX:withSpring(x,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,'animate-always',!reduceMotion?transitionComplete:undefined)}]};}",
 };
 const __initData2 = {
-  code: "function ActivityPanelPIPViewTsx3(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PANEL);}",
+  code: "function transitionComplete_ActivityPanelPIPViewTsx2(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}",
 };
 const __initData3 = {
-  code: "function ActivityPanelPIPViewTsx4(){const{pipState,getClampedPIPPosition,ACTIVITY_PIP_SIZE,windowDimensions,safeArea,pipAvoidanceSpecs,wrapperOffset,disableHorizontalSafeAreas,shown,reduceMotion,PIP_WINDOW_OFFSET,transitionState,TransitionStates,runOnJS,transitionCleanUp,withTiming,REDUCED_MOTION_TIMING,withSpring,ACTIVITY_LAYOUT_PHYSICS_GESTURE,ACTIVITY_LAYOUT_PHYSICS_DEFAULT}=this.__closure;const{x:pipX,y:pipY}=pipState.get();let{x:x,y:y}=getClampedPIPPosition({pipX:pipX,pipY:pipY,width:ACTIVITY_PIP_SIZE.width,height:ACTIVITY_PIP_SIZE.height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion:pipAvoidanceSpecs.get().bottom,topAvoidanceRegion:pipAvoidanceSpecs.get().top,positionOffset:wrapperOffset.get().gestureActive?wrapperOffset.get():undefined,disableHorizontalSafeAreas:disableHorizontalSafeAreas});if(!shown.get()&&!reduceMotion){if(pipX<0.5&&pipX>=0){x=-(ACTIVITY_PIP_SIZE.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET));}else{x=windowDimensions.width+Math.max(safeArea.right,PIP_WINDOW_OFFSET);}}function transitionComplete(finished=false){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}return{opacity:reduceMotion?withTiming(shown.get()?1:0,REDUCED_MOTION_TIMING,'animate-always',transitionComplete):1,transform:[{translateY:withSpring(y,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,'animate-always')},{translateX:withSpring(x,wrapperOffset.get().gestureActive?ACTIVITY_LAYOUT_PHYSICS_GESTURE:ACTIVITY_LAYOUT_PHYSICS_DEFAULT,'animate-always',!reduceMotion?transitionComplete:undefined)}]};}",
+  code: "function ActivityPanelPIPViewTsx3(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PANEL);}",
 };
-const __initData4 = {
-  code: "function transitionComplete_ActivityPanelPIPViewTsx5(finished=false){const{transitionState,TransitionStates,runOnJS,transitionCleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(transitionCleanUp)();}}",
-};
-const __initData5 = {
-  code: "function ActivityPanelPIPViewTsx6(){const{runOnJS,setMode,ActivityPanelModes}=this.__closure;runOnJS(setMode)(ActivityPanelModes.PANEL);}",
-};
-ReactCompilerGating = fn(558);
-let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function BaseActivityPanelPIPView(transitionCleanUp) {
-      const cResult = transitionState(stateFromStores[16]).c(42);
-      ({ children, transitionState } = transitionCleanUp);
-      transitionCleanUp = transitionCleanUp.transitionCleanUp;
-      ({ pipOrientationLockState, hasActivity, context } = transitionCleanUp);
-      const tmp4 = closure_20();
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [wrapperOffset];
-        const fn = function l() {
-          return wrapperOffset.useReducedMotion;
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp5 = items;
-        tmp6 = fn;
-      } else {
-        [tmp5, tmp6] = cResult;
-      }
-      let obj = transitionState(stateFromStores[16]);
-      stateFromStores = transitionState(stateFromStores[18]).useStateFromStores(tmp5, tmp6);
-      const tmp10 = transitionCleanUp(stateFromStores[19])();
-      windowDimensions = tmp10;
-      const tmp11 = transitionCleanUp(stateFromStores[17])();
-      safeArea = tmp11;
-      const context1 = windowDimensions.useContext(context);
-      wrapperOffset = context1.wrapperOffset;
-      const setMode = context1.setMode;
-      const pipState = context1.pipState;
-      const pipAvoidanceSpecs = context1.pipAvoidanceSpecs;
-      const wrapperDimensions = context1.wrapperDimensions;
-      if (cResult[2] === context) {
-        if (cResult[3] === hasActivity) {
-          if (cResult[4] === transitionState) {
-            let tmp13 = cResult[5];
-          }
-          const lockedWebView = transitionState(tmp2[20]).useLockedWebView(tmp13);
-          const shown = lockedWebView.shown;
-          const renderWebView = lockedWebView.renderWebView;
-          if (cResult[6] !== wrapperOffset) {
-            const fn2 = function k() {
-              updateSharedValueIfChangedDefault(wrapperOffset, { gestureActive: false });
-            };
-            const items1 = [wrapperOffset];
-            cResult[6] = wrapperOffset;
-            cResult[7] = fn2;
-            cResult[8] = items1;
-            let tmp16 = items1;
-            let tmp15 = fn2;
-          } else {
-            tmp15 = cResult[7];
-            tmp16 = cResult[8];
-          }
-          const effect = obj3.useEffect(tmp15, tmp16);
-          const tmp19 = setMode((shouldDisableSafeAreas) => shouldDisableSafeAreas.shouldDisableSafeAreas());
-          const ACTIVITY_PIP_SIZE = tmp19;
-          const tmpResult3 = transitionState(tmp2[20]);
-          const fn3 = function j() {
-            const point = pipState.get();
-            const x = point.x;
-            const size = {
-              pipX: x,
-              pipY: point.y,
-              width: ACTIVITY_PIP_SIZE.width,
-              height: ACTIVITY_PIP_SIZE.height,
-              windowDimensions,
-              safeArea,
-              bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom,
-              topAvoidanceRegion: pipAvoidanceSpecs.get().top,
-              positionOffset: null,
-              disableHorizontalSafeAreas: null,
-            };
-            let width = ACTIVITY_PIP_SIZE;
-            let sum1 = safeArea;
-            value = undefined;
-            if (wrapperOffset.get().gestureActive) {
-              value = wrapperOffset.get();
-            }
-            size.positionOffset = value;
-            size.disableHorizontalSafeAreas = disableHorizontalSafeAreas;
-            const point2 = MorphablePanelUtils.getClampedPIPPosition(size);
-            const x2 = point2.x;
-            if (tmp6) {
-              function transitionComplete(arg0) {
-                let tmp = undefined !== arg0 && arg0;
-                if (tmp) {
-                  tmp = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-                }
-                if (tmp) {
-                  transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                  const obj = transitionState(stateFromStores[22]);
-                }
-              }
-              const obj2 = {
-                transitionState,
-                TransitionStates: native2.TransitionStates,
-                runOnJS: ReanimatedRexport.runOnJS,
-                transitionCleanUp,
-              };
-              transitionComplete.__closure = obj2;
-              transitionComplete.__workletHash = 11561549591243;
-              transitionComplete.__initData = __initData;
-              let num5 = 1;
-              if (stateFromStores) {
-                const tmpResult = timing;
-                let num6 = 0;
-                if (shown.get()) {
-                  num6 = 1;
-                }
-                num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-              }
-              const obj5 = { opacity: num5, transform: null };
-              const obj6 = {
-                translateY: spring.withSpring(
-                  point2.y,
-                  wrapperOffset.get().gestureActive ? ACTIVITY_LAYOUT_PHYSICS_GESTURE : ACTIVITY_LAYOUT_PHYSICS_DEFAULT,
-                  "animate-always",
-                ),
-              };
-              const items = [obj6];
-              const tmpResult4 = spring;
-              const tmp21 = wrapperOffset.get().gestureActive
-                ? ACTIVITY_LAYOUT_PHYSICS_GESTURE
-                : ACTIVITY_LAYOUT_PHYSICS_DEFAULT;
-              let tmp22;
-              if (!stateFromStores) {
-                tmp22 = transitionComplete;
-              }
-              const obj7 = { translateX: tmpResult4.withSpring(x2, tmp21, "animate-always", tmp22) };
-              items[1] = obj7;
-              obj5.transform = items;
-              return obj5;
-            } else {
-              if (x >= 0.5) {
-                const _Math = Math;
-                let sum = windowDimensions.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-              }
-              width = width.width;
-              const _Math2 = Math;
-              sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-              sum = -sum1;
-            }
-            tmp6 = shown.get() || stateFromStores;
-          };
-          let obj2 = {
-            pipState,
-            getClampedPIPPosition: transitionState(tmp2[23]).getClampedPIPPosition,
-            ACTIVITY_PIP_SIZE,
-            windowDimensions: tmp10,
-            safeArea: tmp11,
-            pipAvoidanceSpecs,
-            wrapperOffset,
-            disableHorizontalSafeAreas: tmp19,
-            shown,
-            reduceMotion: stateFromStores,
-            PIP_WINDOW_OFFSET,
-            transitionState,
-            TransitionStates: transitionState(tmp2[24]).TransitionStates,
-            runOnJS: transitionState(tmp2[22]).runOnJS,
-            transitionCleanUp,
-            withTiming: transitionState(tmp2[25]).withTiming,
-            REDUCED_MOTION_TIMING,
-            withSpring: transitionState(tmp2[26]).withSpring,
-            ACTIVITY_LAYOUT_PHYSICS_GESTURE,
-            ACTIVITY_LAYOUT_PHYSICS_DEFAULT,
-          };
-          fn3.__closure = obj2;
-          fn3.__workletHash = 6614930197456;
-          fn3.__initData = __initData;
-          const animatedStyle = transitionState(tmp2[22]).useAnimatedStyle(fn3);
-          if (cResult[9] === pipOrientationLockState) {
-            if (cResult[10] === wrapperDimensions.isLandscape) {
-              let tmp27 = cResult[11];
-            }
-            ({ width, height } = tmp27);
-            if (cResult[12] === height) {
-              if (cResult[13] === width) {
-                let tmp29 = cResult[14];
-              }
-              if (cResult[15] !== setMode) {
-                function ae() {
-                  ReanimatedRexport.runOnJS(setMode)(ActivityPanelModes.PANEL);
-                }
-                const obj4 = { runOnJS: transitionState(tmp2[22]).runOnJS, setMode, ActivityPanelModes };
-                ae.__closure = obj4;
-                ae.__workletHash = 2951177166574;
-                ae.__initData = __initData2;
-                cResult[15] = setMode;
-                cResult[16] = ae;
-                let tmp30 = ae;
-              } else {
-                tmp30 = cResult[16];
-              }
-              if (cResult[17] === tmp30) {
-                if (cResult[18] === pipState) {
-                  if (cResult[19] === wrapperOffset) {
-                    let tmp33 = cResult[20];
-                  }
-                  const tmp34 = tmp9(tmp2[28])(tmp33);
-                  let tmp35 = !renderWebView;
-                  if (renderWebView) {
-                    tmp35 = !hasActivity;
-                  }
-                  const _Symbol = Symbol;
-                  if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl = transitionState(tmp2[29]).intl;
-                    const stringResult = intl.string(transitionState(tmp2[29]).t["3ejJer"]);
-                    cResult[21] = stringResult;
-                    let tmp36 = stringResult;
-                  } else {
-                    tmp36 = cResult[21];
-                  }
-                  const _Symbol2 = Symbol;
-                  if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                    const items2 = [{ name: "activate" }];
-                    cResult[22] = items2;
-                    let tmp38 = items2;
-                  } else {
-                    tmp38 = cResult[22];
-                  }
-                  if (cResult[23] !== setMode) {
-                    let obj5 = {
-                      accessible: true,
-                      accessibilityLabel: tmp36,
-                      accessibilityRole: "button",
-                      accessibilityActions: tmp38,
-                      onAccessibilityAction() {
-                        setMode(ActivityPanelModes.PANEL);
-                      },
-                    };
-                    cResult[23] = setMode;
-                    cResult[24] = obj5;
-                    let tmp39 = obj5;
-                  } else {
-                    tmp39 = cResult[24];
-                  }
-                  if (cResult[25] === tmp4.wrapper) {
-                    if (cResult[26] === animatedStyle) {
-                      let tmp40 = cResult[27];
-                    }
-                    if (cResult[28] === tmp29) {
-                      if (cResult[29] === children) {
-                        if (cResult[30] === tmp35) {
-                          let tmp41 = cResult[31];
-                        }
-                        if (cResult[32] === tmp4.mask) {
-                          if (cResult[33] === tmp41) {
-                            let tmp45 = cResult[34];
-                          }
-                          if (cResult[35] === tmp34) {
-                            if (cResult[36] === tmp45) {
-                              let tmp49 = cResult[37];
-                            }
-                            if (cResult[38] === tmp39) {
-                              if (cResult[39] === tmp40) {
-                                if (cResult[40] === tmp49) {
-                                  let tmp52 = cResult[41];
-                                }
-                                return tmp52;
-                              }
-                            }
-                            let obj6 = { theme: ThemeTypes.DARK, children: null };
-                            let obj7 = { style: tmp40 };
-                            const merged = Object.assign(tmp39);
-                            obj7.children = tmp49;
-                            obj6.children = jsx(tmp9(tmp2[22]).View, { style: tmp40 });
-                            const tmp58 = jsx(transitionState(tmp2[24]).ThemeContextProvider, {
-                              theme: ThemeTypes.DARK,
-                              children: null,
-                            });
-                            cResult[38] = tmp39;
-                            cResult[39] = tmp40;
-                            cResult[40] = tmp49;
-                            cResult[41] = tmp58;
-                            tmp52 = tmp58;
-                          }
-                          const obj9 = { gesture: tmp34, children: tmp45 };
-                          const tmp51 = jsx(transitionState(tmp2[30]).GestureDetector, {
-                            gesture: tmp34,
-                            children: tmp45,
-                          });
-                          cResult[35] = tmp34;
-                          cResult[36] = tmp45;
-                          cResult[37] = tmp51;
-                          tmp49 = tmp51;
-                        }
-                        const obj10 = { style: tmp4.mask, children: tmp41 };
-                        const tmp48 = <safeArea style={tmp4.mask}>{tmp41}</safeArea>;
-                        cResult[32] = tmp4.mask;
-                        cResult[33] = tmp41;
-                        cResult[34] = tmp48;
-                        tmp45 = tmp48;
-                      }
-                    }
-                    let tmp42 = !tmp35;
-                    if (!tmp35) {
-                      const obj11 = { style: tmp29, children };
-                      tmp42 = <safeArea style={tmp29}>{children}</safeArea>;
-                    }
-                    cResult[28] = tmp29;
-                    cResult[29] = children;
-                    cResult[30] = tmp35;
-                    cResult[31] = tmp42;
-                    tmp41 = tmp42;
-                  }
-                  const items3 = [tmp4.wrapper, animatedStyle];
-                  cResult[25] = tmp4.wrapper;
-                  cResult[26] = animatedStyle;
-                  cResult[27] = items3;
-                  tmp40 = items3;
-                }
-              }
-              const obj12 = {
-                panGestureEnabled: true,
-                onTapGestureStart: tmp30,
-                mode: transitionState(tmp2[28]).MorphablePanelModes.PIP,
-                pipState,
-                wrapperOffset,
-                disableHorizontalSafeAreas: false,
-              };
-              cResult[17] = tmp30;
-              cResult[18] = pipState;
-              cResult[19] = wrapperOffset;
-              cResult[20] = obj12;
-              tmp33 = obj12;
-            }
-            let size = { width, height, pointerEvents: "none" };
-            cResult[12] = height;
-            cResult[13] = width;
-            cResult[14] = size;
-            tmp29 = size;
-          }
-          const obj13 = { pipWidth: null, pipHeight: null, pipOrientationLockState: null, isLandscape: null };
-          ({ width: obj8.pipWidth, height: obj8.pipHeight } = ACTIVITY_PIP_SIZE);
-          obj13.pipOrientationLockState = pipOrientationLockState;
-          obj13.isLandscape = wrapperDimensions.isLandscape;
-          const tmp28 = tmp9(tmp2[27])(obj13);
-          cResult[9] = pipOrientationLockState;
-          cResult[10] = wrapperDimensions.isLandscape;
-          cResult[11] = tmp28;
-          tmp27 = tmp28;
-          let tmpResult4 = transitionState(tmp2[22]);
-        }
-      }
-      const obj14 = { transitionState, hasActivity, context };
-      cResult[2] = context;
-      cResult[3] = hasActivity;
-      cResult[4] = transitionState;
-      cResult[5] = obj14;
-      tmp13 = obj14;
-      obj3 = windowDimensions;
-      let tmpResult = transitionState(stateFromStores[18]);
-    }
-  : function BaseActivityPanelPIPView(transitionState) {
-      transitionState = transitionState.transitionState;
-      const transitionCleanUp = transitionState.transitionCleanUp;
-      ({ hasActivity, context } = transitionState);
-      let stateFromStores;
-      let wrapperOffset;
-      let width;
-      let height;
-      ({ children, pipOrientationLockState } = transitionState);
-      const tmp = closure_20();
-      let items = [wrapperOffset];
-      stateFromStores = transitionState(stateFromStores[18]).useStateFromStores(
-        items,
-        () => wrapperOffset.useReducedMotion,
-      );
-      const tmp3 = transitionCleanUp(stateFromStores[19])();
-      windowDimensions = tmp3;
-      const tmp4 = transitionCleanUp(stateFromStores[17])();
-      safeArea = tmp4;
-      const context1 = windowDimensions.useContext(context);
-      wrapperOffset = context1.wrapperOffset;
-      const setMode = context1.setMode;
-      const pipState = context1.pipState;
-      const pipAvoidanceSpecs = context1.pipAvoidanceSpecs;
-      let obj = transitionState(stateFromStores[18]);
-      const lockedWebView = transitionState(stateFromStores[20]).useLockedWebView({
-        transitionState,
-        hasActivity,
-        context,
-      });
-      const shown = lockedWebView.shown;
-      const renderWebView = lockedWebView.renderWebView;
-      const items1 = [wrapperOffset];
-      const effect = windowDimensions.useEffect(() => {
-        updateSharedValueIfChangedDefault(wrapperOffset, { gestureActive: false });
-      }, items1);
-      const tmp8 = setMode((shouldDisableSafeAreas) => shouldDisableSafeAreas.shouldDisableSafeAreas());
-      const ACTIVITY_PIP_SIZE = tmp8;
-      let obj2 = transitionState(stateFromStores[20]);
-      class W {
-        constructor() {
-          point = pipState.get();
-          x = point.x;
-          tmp = closure_0;
-          tmp2 = closure_2;
-          obj = closure_0(closure_2[23]);
-          size = {
-            pipX: x,
-            pipY: point.y,
-            width: ACTIVITY_PIP_SIZE.width,
-            height: ACTIVITY_PIP_SIZE.height,
-            windowDimensions: closure_3,
-            safeArea: closure_4,
-            bottomAvoidanceRegion: pipAvoidanceSpecs.get().bottom,
-            topAvoidanceRegion: pipAvoidanceSpecs.get().top,
-            positionOffset: null,
-            disableHorizontalSafeAreas: null,
-          };
-          width = ACTIVITY_PIP_SIZE;
-          sum1 = closure_4;
-          tmp3 = closure_3;
-          obj3 = wrapperOffset;
-          value = undefined;
-          if (wrapperOffset.get().gestureActive) {
-            value = obj3.get();
-          }
-          size.positionOffset = value;
-          size.disableHorizontalSafeAreas = closure_10;
-          point2 = obj.getClampedPIPPosition(size);
-          x2 = point2.x;
-          obj4 = shown;
-          tmp6 = shown.get() || closure_2;
-          if (tmp6) {
-            transitionComplete = function transitionComplete() {
-              let flag = arg0;
-              if (arg0 === undefined) {
-                flag = false;
-              }
-              if (flag) {
-                flag = closure_1_0 === transitionState(stateFromStores[24]).TransitionStates.YEETED;
-              }
-              if (flag) {
-                transitionState(stateFromStores[22]).runOnJS(transitionCleanUp)();
-                const obj = transitionState(stateFromStores[22]);
-              }
-            };
-            obj1 = { transitionState: null, TransitionStates: null, runOnJS: null, transitionCleanUp: null };
-            tmp13 = transitionState;
-            obj1.transitionState = transitionState;
-            obj1.TransitionStates = tmp(tmp2[24]).TransitionStates;
-            obj1.runOnJS = tmp(tmp2[22]).runOnJS;
-            tmp14 = transitionCleanUp;
-            obj1.transitionCleanUp = transitionCleanUp;
-            transitionComplete.__closure = obj1;
-            num3 = 1100699381874;
-            transitionComplete.__workletHash = 1100699381874;
-            tmp15 = closure_26;
-            transitionComplete.__initData = closure_26;
-            num4 = 1;
-            num5 = 1;
-            tmp16 = closure_2;
-            if (closure_2) {
-              tmpResult = tmp(tmp2[25]);
-              num6 = 0;
-              if (obj4.get()) {
-                num6 = 1;
-              }
-              tmp17 = closure_19;
-              str = "animate-always";
-              tmp18 = tmpResult;
-              tmp19 = num6;
-              tmp20 = transitionComplete;
-              num5 = tmpResult.withTiming(num6, closure_19, "animate-always", transitionComplete);
-            }
-            obj12 = { opacity: null, transform: null };
-            obj12.opacity = num5;
-            tmpResult1 = tmp(tmp2[26]);
-            obj13 = { translateY: null };
-            str2 = "animate-always";
-            obj13.translateY = tmpResult1.withSpring(
-              point2.y,
-              obj3.get().gestureActive ? closure_12 : closure_13,
-              "animate-always",
-            );
-            items = [,];
-            items[0] = obj13;
-            tmpResult2 = tmp(tmp2[26]);
-            tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
-            tmp22 = undefined;
-            if (!tmp16) {
-              tmp22 = transitionComplete;
-            }
-            obj14 = { translateX: null };
-            tmp23 = tmpResult2;
-            tmp24 = x2;
-            tmp25 = tmp21;
-            str3 = "animate-always";
-            tmp26 = tmp22;
-            obj14.translateX = tmpResult2.withSpring(x2, tmp21, "animate-always", tmp22);
-            items[1] = obj14;
-            obj12.transform = items;
-            return obj12;
-          } else {
-            num = 0.5;
-            if (x >= 0.5) {
-              tmp7 = globalThis;
-              _Math = Math;
-              tmp8 = PIP_WINDOW_OFFSET;
-              sum = tmp3.width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-              tmp12 = sum;
-            } else {
-              num2 = 0;
-            }
-            width = width.width;
-            tmp10 = globalThis;
-            _Math2 = Math;
-            tmp11 = PIP_WINDOW_OFFSET;
-            sum1 = width + Math.max(sum1.right, PIP_WINDOW_OFFSET);
-            sum = -sum1;
-          }
-          return;
-        }
-      }
-      const obj3 = transitionState(stateFromStores[22]);
-      W.__closure = {
-        pipState,
-        getClampedPIPPosition: transitionState(stateFromStores[23]).getClampedPIPPosition,
-        ACTIVITY_PIP_SIZE,
-        windowDimensions: tmp3,
-        safeArea: tmp4,
-        pipAvoidanceSpecs,
-        wrapperOffset,
-        disableHorizontalSafeAreas: tmp8,
-        shown,
-        reduceMotion: stateFromStores,
-        PIP_WINDOW_OFFSET,
-        transitionState,
-        TransitionStates: transitionState(stateFromStores[24]).TransitionStates,
-        runOnJS: transitionState(stateFromStores[22]).runOnJS,
-        transitionCleanUp,
-        withTiming: transitionState(stateFromStores[25]).withTiming,
-        REDUCED_MOTION_TIMING,
-        withSpring: transitionState(stateFromStores[26]).withSpring,
-        ACTIVITY_LAYOUT_PHYSICS_GESTURE: height,
-        ACTIVITY_LAYOUT_PHYSICS_DEFAULT,
-      };
-      W.__workletHash = 17034982412398;
-      W.__initData = __initData3;
-      const animatedStyle = obj3.useAnimatedStyle(W);
-      let size = transitionCleanUp(stateFromStores[27])({
-        pipWidth: ACTIVITY_PIP_SIZE.width,
-        pipHeight: ACTIVITY_PIP_SIZE.height,
-        pipOrientationLockState,
-        isLandscape: context1.wrapperDimensions.isLandscape,
-      });
-      width = size.width;
-      height = size.height;
-      const items2 = [width, height];
-      class G {
-        constructor() {
-          obj = closure_0(closure_2[22]);
-          tmp = obj.runOnJS(setMode)(ActivityPanelModes.PANEL);
-          return;
-        }
-      }
-      let obj6 = { runOnJS: null, setMode: null, ActivityPanelModes: null };
-      const memo = windowDimensions.useMemo(() => {
-        const size = { width, height, pointerEvents: "none" };
-        return size;
-      }, items2);
-      obj6.runOnJS = transitionState(stateFromStores[22]).runOnJS;
-      obj6.setMode = setMode;
-      obj6.ActivityPanelModes = width;
-      G.__closure = obj6;
-      G.__workletHash = 1507841633451;
-      G.__initData = __initData5;
-      const items3 = [setMode];
-      const callback = windowDimensions.useCallback(G, items3);
-      let obj7 = {
-        panGestureEnabled: true,
-        onTapGestureStart: callback,
-        mode: null,
-        pipState: null,
-        wrapperOffset: null,
-        disableHorizontalSafeAreas: false,
-      };
-      const obj4 = {
-        pipState,
-        getClampedPIPPosition: transitionState(stateFromStores[23]).getClampedPIPPosition,
-        ACTIVITY_PIP_SIZE,
-        windowDimensions: tmp3,
-        safeArea: tmp4,
-        pipAvoidanceSpecs,
-        wrapperOffset,
-        disableHorizontalSafeAreas: tmp8,
-        shown,
-        reduceMotion: stateFromStores,
-        PIP_WINDOW_OFFSET,
-        transitionState,
-        TransitionStates: transitionState(stateFromStores[24]).TransitionStates,
-        runOnJS: transitionState(stateFromStores[22]).runOnJS,
-        transitionCleanUp,
-        withTiming: transitionState(stateFromStores[25]).withTiming,
-        REDUCED_MOTION_TIMING,
-        withSpring: transitionState(stateFromStores[26]).withSpring,
-        ACTIVITY_LAYOUT_PHYSICS_GESTURE: height,
-        ACTIVITY_LAYOUT_PHYSICS_DEFAULT,
-      };
-      let obj5 = {
-        pipWidth: ACTIVITY_PIP_SIZE.width,
-        pipHeight: ACTIVITY_PIP_SIZE.height,
-        pipOrientationLockState,
-        isLandscape: context1.wrapperDimensions.isLandscape,
-      };
-      obj7.mode = transitionState(stateFromStores[28]).MorphablePanelModes.PIP;
-      obj7.pipState = pipState;
-      obj7.wrapperOffset = wrapperOffset;
-      const items4 = [setMode];
-      const tmp12 = transitionCleanUp(stateFromStores[28]);
-      const memo1 = windowDimensions.useMemo(() => {
-        const obj = {
-          accessible: true,
-          accessibilityLabel: null,
-          accessibilityRole: "button",
-          accessibilityActions: null,
-          onAccessibilityAction: null,
-        };
-        const intl = util.intl;
-        obj.accessibilityLabel = intl.string(util.t["3ejJer"]);
-        const items = [{ name: "activate" }];
-        obj.accessibilityActions = items;
-        obj.onAccessibilityAction = function onAccessibilityAction() {
-          setMode(width.PANEL);
-        };
-        return obj;
-      }, items4);
-      const obj8 = { theme: ThemeTypes.DARK, children: null };
-      const obj9 = { style: null };
-      const items5 = [tmp.wrapper, animatedStyle];
-      obj9.style = items5;
-      const merged = Object.assign(memo1);
-      const obj10 = { gesture: transitionCleanUp(stateFromStores[28])(obj7), children: null };
-      const obj11 = { style: tmp.mask, children: null };
-      let tmp18 = !renderWebView;
-      if (renderWebView) {
-        tmp18 = !hasActivity;
-      }
-      let tmp15Result = !tmp18;
-      if (!tmp18) {
-        const obj12 = { style: memo, children };
-        tmp15Result = <tmp17 style={memo}>{children}</tmp17>;
-      }
-      obj11.children = tmp15Result;
-      obj10.children = <safeArea style={tmp.mask}>{null}</safeArea>;
-      obj9.children = jsx(transitionState(stateFromStores[30]).GestureDetector, {
-        gesture: transitionCleanUp(stateFromStores[28])(obj7),
-        children: null,
-      });
-      obj8.children = jsx(transitionCleanUp(stateFromStores[22]).View, { style: null });
-      return jsx(transitionState(stateFromStores[24]).ThemeContextProvider, { theme: ThemeTypes.DARK, children: null });
-    };
-let closure_28 = tmp8;
-ReactCompilerGating = fn(558);
 let obj5 = {
   flexDirection: "row",
   alignItems: "center",
@@ -789,245 +358,103 @@ let obj5 = {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelPIPView.tsx");
 
-export default noop.memo(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? function ActivityPanelPIPView(arg0) {
-        const cResult = channelId(576).c(17);
-        ({ transitionState, transitionCleanUp } = arg0);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [EmbeddedActivitiesStore];
-          const fn = function o() {
-            const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-            const obj = {
-              channelId: channelId(dependencyMap[31]).getEmbeddedActivityLocationChannelId(connectedActivityLocation),
-              activity: EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation),
-            };
-            return obj;
-          };
-          cResult[0] = items;
-          cResult[1] = fn;
-          tmp4 = items;
-          tmp5 = fn;
-        } else {
-          [tmp4, tmp5] = cResult;
-        }
-        let obj = channelId(576);
-        const stateFromStoresObject = channelId(504).useStateFromStoresObject(tmp4, tmp5);
-        channelId = stateFromStoresObject.channelId;
-        const activity = stateFromStoresObject.activity;
-        let applicationId;
-        if (activity != null) {
-          applicationId = activity.applicationId;
-        }
-        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const items1 = [EmbeddedActivitiesStore];
-          cResult[2] = items1;
-          let tmp9 = items1;
-        } else {
-          tmp9 = cResult[2];
-        }
-        if (cResult[3] !== applicationId) {
-          class I {
-            constructor() {
-              pipOrientationLockStateForApp = undefined;
-              if (null != applicationId) {
-                tmp3 = closure_8;
-                pipOrientationLockStateForApp = closure_8.getPipOrientationLockStateForApp(tmp);
-              }
-              return pipOrientationLockStateForApp;
-            }
-          }
-          cResult[3] = applicationId;
-          cResult[4] = I;
-        } else {
-          class I {
-            constructor() {
-              pipOrientationLockStateForApp = undefined;
-              if (null != applicationId) {
-                tmp3 = closure_8;
-                pipOrientationLockStateForApp = closure_8.getPipOrientationLockStateForApp(tmp);
-              }
-              return pipOrientationLockStateForApp;
-            }
-          }
-        }
-        const tmpResult = channelId(504);
-        const stateFromStores = channelId(504).useStateFromStores(tmp9, I);
-        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          class I {
-            constructor() {
-              pipOrientationLockStateForApp = undefined;
-              if (null != applicationId) {
-                tmp3 = closure_8;
-                pipOrientationLockStateForApp = closure_8.getPipOrientationLockStateForApp(tmp);
-              }
-              return pipOrientationLockStateForApp;
-            }
-          }
-          const items2 = [ChannelStore];
-          cResult[5] = items2;
-          const tmp13 = items2;
-        } else {
-          class I {
-            constructor() {
-              pipOrientationLockStateForApp = undefined;
-              if (null != applicationId) {
-                tmp3 = closure_8;
-                pipOrientationLockStateForApp = closure_8.getPipOrientationLockStateForApp(tmp);
-              }
-              return pipOrientationLockStateForApp;
-            }
-          }
-        }
-        if (cResult[6] !== channelId) {
-          class C {
-            constructor() {
-              return closure_7.getChannel(channelId);
-            }
-          }
-          cResult[6] = channelId;
-          cResult[7] = C;
-        } else {
-          class C {
-            constructor() {
-              return closure_7.getChannel(channelId);
-            }
-          }
-        }
-        const tmpResult3 = channelId(504);
-        const stateFromStores1 = channelId(504).useStateFromStores(tmp13, C);
-        const landscapeSafeAreasConfig = closure_21().landscapeSafeAreasConfig;
-        if (cResult[8] === stateFromStores1) {
-          class C {
-            constructor() {
-              return closure_7.getChannel(channelId);
-            }
-          }
-          if (cResult[11] === stateFromStores) {
-            class C {
-              constructor() {
-                return closure_7.getChannel(channelId);
-              }
-            }
-          }
-          const obj2 = {
-            transitionState,
-            transitionCleanUp,
-            pipOrientationLockState: stateFromStores,
-            hasActivity: tmp16,
-            context: applicationId(18981),
-            children: tmp17,
-          };
-          const tmp23 = (
-            <closure_28
-              transitionState={transitionState}
-              transitionCleanUp={transitionCleanUp}
-              pipOrientationLockState={stateFromStores}
-              hasActivity={tmp16}
-              context={applicationId(18981)}
-            >
-              {tmp17}
-            </closure_28>
-          );
-          cResult[11] = stateFromStores;
-          cResult[12] = tmp16;
-          cResult[13] = tmp17;
-          cResult[14] = transitionCleanUp;
-          cResult[15] = transitionState;
-          cResult[16] = tmp23;
-        }
-        const tmp18 = jsx(applicationId(11555), {
+export default noop.memo(function ActivityPanelPIPView(transitionState) {
+  transitionState = transitionState.transitionState;
+  const transitionCleanUp = transitionState.transitionCleanUp;
+  dependencyMap = undefined;
+  activity = undefined;
+  let stateFromStores;
+  let stateFromStores1;
+  let memo;
+  const items = [EmbeddedActivitiesStore];
+  const stateFromStoresObject = transitionState(504).useStateFromStoresObject(items, () => {
+    const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
+    const obj = {
+      channelId: transitionState(_undefined[29]).getEmbeddedActivityLocationChannelId(connectedActivityLocation),
+      activity: EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation),
+    };
+    return obj;
+  });
+  ({ channelId: c2, activity } = stateFromStoresObject);
+  let applicationId;
+  if (activity != null) {
+    applicationId = activity.applicationId;
+  }
+  let obj = transitionState(504);
+  const items1 = [EmbeddedActivitiesStore];
+  stateFromStores = transitionState(504).useStateFromStores(items1, () => {
+    let pipOrientationLockStateForApp;
+    if (null != applicationId) {
+      pipOrientationLockStateForApp = EmbeddedActivitiesStore.getPipOrientationLockStateForApp(tmp);
+    }
+    return pipOrientationLockStateForApp;
+  });
+  const tmpResult = transitionState(504);
+  const items2 = [memo];
+  stateFromStores1 = transitionState(504).useStateFromStores(items2, () => ChannelStore.getChannel(c2));
+  const tmp8 = transitionCleanUp(1626)();
+  closure_129_0 = tmp8;
+  const items3 = [tmp8.right];
+  memo = activity.useMemo(() => {
+    let num;
+    if (transitionState != null) {
+      num = transitionState.right;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    const obj = { right: { disable: false, override: Math.max(closure_2_14, num) } };
+    return obj;
+  }, items3);
+  const items4 = [activity, stateFromStores1, memo, stateFromStores, transitionCleanUp, transitionState];
+  return activity.useMemo(() => {
+    const obj = {
+      transitionState,
+      transitionCleanUp,
+      pipOrientationLockState: stateFromStores,
+      hasActivity: null != activity,
+      context: ActivityPanelStateContextDefault,
+      children: jsx(EmbeddedActivityViewDefault, {
+        channel: stateFromStores1,
+        layoutMode: ActivityLayoutMode.PIP,
+        portraitSafeAreasConfig,
+        landscapeSafeAreasConfig: memo,
+      }),
+    };
+    return (
+      <BaseActivityPanelPIPView
+        transitionState={transitionState}
+        transitionCleanUp={transitionCleanUp}
+        pipOrientationLockState={stateFromStores}
+        hasActivity={null != activity}
+        context={ActivityPanelStateContextDefault}
+      >
+        {jsx(EmbeddedActivityViewDefault, {
           channel: stateFromStores1,
           layoutMode: ActivityLayoutMode.PIP,
           portraitSafeAreasConfig,
-          landscapeSafeAreasConfig,
-        });
-        cResult[8] = stateFromStores1;
-        cResult[9] = landscapeSafeAreasConfig;
-        cResult[10] = tmp18;
-        const obj3 = {
-          channel: stateFromStores1,
-          layoutMode: ActivityLayoutMode.PIP,
-          portraitSafeAreasConfig,
-          landscapeSafeAreasConfig,
-        };
-        const tmpResult4 = channelId(504);
-      }
-    : function ActivityPanelPIPView(transitionState) {
-        transitionState = transitionState.transitionState;
-        const transitionCleanUp = transitionState.transitionCleanUp;
-        dependencyMap = undefined;
-        activity = undefined;
-        let stateFromStores;
-        let stateFromStores1;
-        let landscapeSafeAreasConfig;
-        const items = [EmbeddedActivitiesStore];
-        const stateFromStoresObject = transitionState(504).useStateFromStoresObject(items, () => {
-          const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-          const obj = {
-            channelId: transitionState(_undefined[31]).getEmbeddedActivityLocationChannelId(connectedActivityLocation),
-            activity: EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation),
-          };
-          return obj;
-        });
-        ({ channelId: c2, activity } = stateFromStoresObject);
-        let applicationId;
-        if (activity != null) {
-          applicationId = activity.applicationId;
-        }
-        let obj = transitionState(504);
-        const items1 = [EmbeddedActivitiesStore];
-        stateFromStores = transitionState(504).useStateFromStores(items1, () => {
-          let pipOrientationLockStateForApp;
-          if (null != applicationId) {
-            pipOrientationLockStateForApp = EmbeddedActivitiesStore.getPipOrientationLockStateForApp(tmp);
-          }
-          return pipOrientationLockStateForApp;
-        });
-        const tmpResult = transitionState(504);
-        const items2 = [landscapeSafeAreasConfig];
-        stateFromStores1 = transitionState(504).useStateFromStores(items2, () => ChannelStore.getChannel(c2));
-        landscapeSafeAreasConfig = closure_21().landscapeSafeAreasConfig;
-        const items3 = [
-          activity,
-          stateFromStores1,
-          landscapeSafeAreasConfig,
-          stateFromStores,
-          transitionCleanUp,
-          transitionState,
-        ];
-        return activity.useMemo(() => {
-          const obj = {
-            transitionState,
-            transitionCleanUp,
-            pipOrientationLockState: stateFromStores,
-            hasActivity: null != activity,
-            context: ActivityPanelStateContextDefault,
-            children: jsx(EmbeddedActivityViewDefault, {
-              channel: stateFromStores1,
-              layoutMode: ActivityLayoutMode.PIP,
-              portraitSafeAreasConfig,
-              landscapeSafeAreasConfig,
-            }),
-          };
-          return (
-            <closure_28
-              transitionState={transitionState}
-              transitionCleanUp={transitionCleanUp}
-              pipOrientationLockState={stateFromStores}
-              hasActivity={null != activity}
-              context={ActivityPanelStateContextDefault}
-            >
-              {jsx(EmbeddedActivityViewDefault, {
-                channel: stateFromStores1,
-                layoutMode: ActivityLayoutMode.PIP,
-                portraitSafeAreasConfig,
-                landscapeSafeAreasConfig,
-              })}
-            </closure_28>
-          );
-        }, items3);
-      },
-);
-export const useBaseActivityPanelPIPView = tmp7;
-export const BaseActivityPanelPIPView = tmp8;
+          landscapeSafeAreasConfig: memo,
+        })}
+      </BaseActivityPanelPIPView>
+    );
+  }, items4);
+});
+export function useBaseActivityPanelPIPView() {
+  const tmp = useSafeAreaInsetsDefault();
+  closure_0 = tmp;
+  const obj = { landscapeSafeAreasConfig: null };
+  const items = [tmp.right];
+  obj.landscapeSafeAreasConfig = noop.useMemo(() => {
+    let num;
+    if (transitionState != null) {
+      num = transitionState.right;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    const obj = { right: { disable: false, override: Math.max(closure_2_14, num) } };
+    return obj;
+  }, items);
+  return obj;
+}
+export { BaseActivityPanelPIPView };

@@ -64,7 +64,7 @@ let closure_22 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_22 = async function _saveProtos(arg0) {
         } else {
           closure_2 = tmp2;
           closure_1 = tmp2;
-          resetTimer(value2, false);
+          resetTimer(__initData, false);
           if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
             let hasPendingUsageResult = StickersPersistedStore.hasPendingUsage();
             if (!hasPendingUsageResult) {
@@ -128,7 +128,7 @@ let closure_22 = async function _saveProtos(arg0) {
         },
       );
       c4 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp25) {
       c4 = tmp;
       throw tmp25;
@@ -143,9 +143,9 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6882).MAX_NUM_SELECTED_ITEMS;
-const UserSettingsTypes = fn(1094).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1372).FREQUENCY_ITEM_LIMIT;
+const MAX_NUM_SELECTED_ITEMS = fn(6889).MAX_NUM_SELECTED_ITEMS;
+const UserSettingsTypes = fn(1082).UserSettingsTypes;
+const FREQUENCY_ITEM_LIMIT = fn(1361).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;

@@ -1,28 +1,27 @@
 // discord_app/modules/activities/native/doesOrientationMatchLockState.tsx
-import Constants from "../Constants.tsx";
+import EmbeddedActivityOrientationLockState from "../../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const OrientationLockState = Constants.OrientationLockState;
 const result = size.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");
 
 export default function doesOrientationMatchLockState(arg0, arg1) {
   let tmp = null == arg1;
   if (!tmp) {
-    tmp = arg1 === OrientationLockState.UNLOCKED;
+    tmp = arg1 === EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.UNLOCKED;
   }
-  let tmp3 = arg0;
+  let tmp4 = arg0;
   if (!tmp) {
-    let tmp4 = !tmp3;
-    if (!tmp3) {
-      tmp4 = arg1 === OrientationLockState.PORTRAIT;
+    let tmp5 = !tmp4;
+    if (!tmp4) {
+      tmp5 = arg1 === EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.PORTRAIT;
+    }
+    tmp = tmp5;
+  }
+  if (!tmp) {
+    if (tmp4) {
+      tmp4 = arg1 === EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.LANDSCAPE;
     }
     tmp = tmp4;
-  }
-  if (!tmp) {
-    if (tmp3) {
-      tmp3 = arg1 === OrientationLockState.LANDSCAPE;
-    }
-    tmp = tmp3;
   }
   return tmp;
 }

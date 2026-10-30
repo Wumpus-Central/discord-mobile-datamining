@@ -30,7 +30,7 @@ export function getBrandSafetyContext(surfaceId) {
       if (undefined !== tmp4) {
         if (undefined !== tmp5) {
           const guildId = SelectedGuildStore.getGuildId();
-          guild = null;
+          let guild = null;
           if (null != guildId) {
             guild = GuildStore.getGuild(guildId);
           }

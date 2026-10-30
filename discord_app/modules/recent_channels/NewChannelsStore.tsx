@@ -17,7 +17,7 @@ import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
 function guildHasCommunity(nextResult) {
-  guild = GuildStore.getGuild(nextResult);
+  const guild = GuildStore.getGuild(nextResult);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
@@ -42,7 +42,7 @@ function seedCommunityBaseline() {
 function maybeAckViewedChannel(guildId, channelId) {
   let tmp = null != obj && null != channelId && obj.has(channelId);
   if (tmp) {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -127,8 +127,8 @@ function pruneNewChannels() {
     );
   });
 }
-let closure_7 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
-const Constants = fn(1084);
+let closure_7 = fn(4939).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1072);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();
 const dependencyMap = {};
@@ -183,7 +183,7 @@ prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_
   if (null == guild_id) {
     return false;
   } else {
-    guild = GuildStore.getGuild(guild_id);
+    const guild = GuildStore.getGuild(guild_id);
     let tmp2 = null == guild;
     if (!tmp2) {
       const features = guild.features;

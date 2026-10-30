@@ -1,16 +1,16 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _mod6543 from "module_6543" /* 6543 */;
+import _mod6550 from "module_6550" /* 6550 */;
 import UniqueUsernamesTypes from "UniqueUsernamesTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
-export function formatUsernameLiveCheckValidation(first1) {
-  const match = _mod6543.match(first1);
+export function formatUsernameLiveCheckValidation(config) {
+  const match = _mod6550.match(config);
   let obj = { error: null };
-  const P = _mod6543.P;
-  obj.error = P.not(_mod6543.P.nullish);
+  const P = _mod6550.P;
+  obj.error = P.not(_mod6550.P.nullish);
   const withResult = match.with({ rateLimited: true }, () => {
     const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
     const intl = util.intl;
@@ -59,9 +59,9 @@ export function formatUsernameLiveCheckValidation(first1) {
       obj.message = intl.string(util.t.mCrAUb);
       return obj;
     });
-  const obj2 = { error: _mod6543.P.nullish };
+  const obj2 = { error: _mod6550.P.nullish };
   return withResult3
-    .with({ error: _mod6543.P.nullish }, () => ({
+    .with({ error: _mod6550.P.nullish }, () => ({
       type: UniqueUsernamesTypes.NameValidationState.INTERNAL_ERROR,
       message: "",
     }))

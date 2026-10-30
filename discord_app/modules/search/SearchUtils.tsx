@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2047 from "../../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../../_runtime/metro/02044__.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import QueryTokenizerDefault from "../../lib/QueryTokenizer.tsx";
@@ -20,8 +20,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9780).SearchTabs;
-const Constants = fn(1084);
+const SearchTabs = fn(9806).SearchTabs;
+const Constants = fn(1072);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({
   SearchPopoutModes: map1,
@@ -77,7 +77,7 @@ export function getSearchHistoryStateId(type) {
   }
   return channelId;
 }
-export function getSearchTabFetchId(searchContext, tab, searchResultsQuery) {
+export function getSearchTabFetchId(searchContext, MESSAGES, searchResultsQuery) {
   const type = searchContext.type;
   if (constants.GUILD === type) {
     let channelId = searchContext.guildId;
@@ -93,10 +93,10 @@ export function getSearchTabFetchId(searchContext, tab, searchResultsQuery) {
     }
     channelId = searchContext.channelId;
   }
-  return "" + channelId + "-" + tab + "-" + searchResultsQuery;
+  return "" + channelId + "-" + MESSAGES + "-" + searchResultsQuery;
 }
-export function getChannelActiveAgoTimestamp(cResult) {
-  const diffResult = _modDef2047().diff(_modDef2047(cResult), "s");
+export function getChannelActiveAgoTimestamp(arg0) {
+  const diffResult = _modDef2044().diff(_modDef2044(arg0), "s");
   if (diffResult > c19) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -134,7 +134,7 @@ export function getChannelActiveAgoTimestamp(cResult) {
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef2047();
+  const obj = _modDef2044();
 }
 export function getIndexingErrorText(searchContext) {
   const type = searchContext.type;
@@ -678,7 +678,7 @@ export function removeInvalidPrivateChannelSearchTokens(arg0) {
 }
 export function getSearchAnalyticsIds(guildId, getSessionId) {
   if (obj.isGuildLikeSearchContext(guildId)) {
-    guild = GuildStore.getGuild(guildId.guildId);
+    const guild = GuildStore.getGuild(guildId.guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;

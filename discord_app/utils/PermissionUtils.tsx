@@ -104,7 +104,7 @@ function computePermissionsForMember(excludeGuildPermissions) {
     } else {
       unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guild.id);
     }
-    const tmp11 = unsafeMutableRoles[React6(undefined, guild)];
+    const tmp11 = unsafeMutableRoles[React7(undefined, guild)];
     const tmp12 = null != tmp11 ? tmp11.permissions : combineResult;
     let tmp13 = tmp12;
     if (null != member) {
@@ -190,7 +190,7 @@ function computePermissions(excludeGuildPermissions) {
     if (typeof user !== "string") {
       id = user.id;
     }
-    if (context instanceof closure_1_8) {
+    if (context instanceof React6) {
       if (context.isScheduledForDeletion()) {
         return deserializeResult;
       } else if (set.has(context.type)) {
@@ -230,7 +230,7 @@ function computePermissions(excludeGuildPermissions) {
           permissionOverwrites = context.permissionOverwrites;
         }
         const guildId = context.getGuildId();
-        guild = null;
+        let guild = null;
         if (null != guildId) {
           guild = GuildStore.getGuild(guildId);
         }
@@ -255,7 +255,7 @@ function computePermissions(excludeGuildPermissions) {
         id2 = currentUser1.id;
       }
       if (id !== id2) {
-        if (v65535(tmp4, id)) {
+        if (closure_1_10(tmp4, id)) {
           let flag2 = checkElevated;
           if (checkElevated === undefined) {
             flag2 = true;
@@ -314,17 +314,17 @@ function applyThreadPermissions(context, permissions, hasJoinedResult, GuildMemb
     let combine = dependencyMap;
     let SEND_MESSAGES = Permissions;
     if (!obj2.has(permissions, Permissions.SEND_MESSAGES_IN_THREADS)) {
-      tmp8(1096).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
-      const tmp8Result = tmp8(1096);
+      tmp8(1084).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
+      const tmp8Result = tmp8(1084);
     }
     if (context.isLockedThread()) {
       if (!tmp8Result3.has(permissions, SEND_MESSAGES.MANAGE_THREADS)) {
-        let removeResult1 = tmp8(1096).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
-        const tmp8Result4 = tmp8(1096);
+        let removeResult1 = tmp8(1084).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
+        const tmp8Result4 = tmp8(1084);
       }
-      tmp8Result3 = tmp8(1096);
+      tmp8Result3 = tmp8(1084);
     }
-    tmp8 = tmp8(1096);
+    tmp8 = tmp8(1084);
     combine = tmp8.combine;
     SEND_MESSAGES = SEND_MESSAGES.SEND_MESSAGES;
     removeResult1 = combine(permissions, SEND_MESSAGES);
@@ -368,12 +368,12 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(4875);
+const GuildRecord = fn(4876);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
-const hasPermission = fn(4912).hasPermission;
-const Constants = fn(1084);
+const hasPermission = fn(4916).hasPermission;
+const Constants = fn(1072);
 const Permissions = Constants.Permissions;
 ({
   ElevatedPermissions: closure_19,
@@ -453,7 +453,7 @@ function computePermissionsForRoles(excludeGuildPermissions) {
     checkElevated = true;
   }
   excludeGuildPermissions = excludeGuildPermissions.excludeGuildPermissions;
-  if (context instanceof closure_1_8) {
+  if (context instanceof React6) {
     if (context.isScheduledForDeletion()) {
       return deserializeResult;
     } else if (set.has(context.type)) {
@@ -479,7 +479,7 @@ function computePermissionsForRoles(excludeGuildPermissions) {
         permissionOverwrites = context.permissionOverwrites;
       }
       const guildId = context.getGuildId();
-      guild = null;
+      let guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }
@@ -563,7 +563,7 @@ export function areChannelsLocked(c18, c19, appChannelBotUserId) {
           if (null == obj2[guild_id]) {
             let obj = {
               id: guild_id,
-              type: obj2(1998).PermissionOverwriteType.ROLE,
+              type: obj2(1993).PermissionOverwriteType.ROLE,
               allow: deserializeResult,
               deny: deserializeResult,
             };
@@ -613,7 +613,7 @@ export function getGuildVisualOwnerId(guild) {
 export function isRoleHigher(guild, id, guildId, id) {
   let tmp = null == id;
   if (!tmp) {
-    tmp = !v65535(guild, id);
+    tmp = !closure_1_10(guild, id);
   }
   let tmp4 = !tmp;
   if (tmp) {
@@ -649,7 +649,7 @@ export function getHighestHoistedRole(id, hoistRoleId) {
 export function makeEveryoneOverwrite(guildId1) {
   return { id: guildId1, type: Server.PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
 }
-export function canManageACategory(currentUser, guild, categories) {
+export function canManageACategory(currentUser, guild, _categories) {
   user = currentUser;
   ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = {
     permission: Permissions.MANAGE_CHANNELS,
@@ -661,7 +661,7 @@ export function canManageACategory(currentUser, guild, categories) {
     permission,
   );
   if (!someResult) {
-    someResult = categories.some((channel) => {
+    someResult = _categories.some((channel) => {
       channel = channel.channel;
       let hasItem = "null" !== channel.id;
       if (hasItem) {
@@ -687,7 +687,7 @@ export const DENY = "DENY";
 export const PASSTHROUGH = "PASSTHROUGH";
 export function canEveryoneRole(VIEW_CHANNEL, channel) {
   let tmp = channel;
-  if (channel instanceof closure_1_8) {
+  if (channel instanceof React6) {
     if (channel.type === constants2.PRIVATE_THREAD) {
       return false;
     } else {
@@ -698,7 +698,7 @@ export function canEveryoneRole(VIEW_CHANNEL, channel) {
         }
       }
       const guildId = channel.getGuildId();
-      guild = null;
+      let guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }
@@ -733,7 +733,7 @@ export function canEveryone(VIEW_CHANNEL, channel) {
         }
       }
       const guildId = channel.getGuildId();
-      guild = null;
+      let guild = null;
       if (null != guildId) {
         guild = GuildStore.getGuild(guildId);
       }

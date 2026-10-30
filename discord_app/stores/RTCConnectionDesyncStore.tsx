@@ -33,7 +33,7 @@ function retryFailedUsers() {
           const tmp23 = new VoiceStateRecord(obj4);
           let tmp6 = guildId;
           if (guildId == null) {
-            tmp6 = React6;
+            tmp6 = React7;
           }
           const result = closure_12.set(user.id, makeSortedVoiceState(tmp23, tmp6, user.id));
           const obj = {
@@ -63,10 +63,10 @@ function retryFailedUsers() {
     return c2;
   }
 }
-const makeSortedVoiceState = fn(5755).makeSortedVoiceState;
-const Constants = fn(1084);
+const makeSortedVoiceState = fn(5762).makeSortedVoiceState;
+const Constants = fn(1072);
 ({ ME: closure_9, RTCConnectionStates: c10 } = Constants);
-const ParticipantTypes = fn(5670).ParticipantTypes;
+const ParticipantTypes = fn(5676).ParticipantTypes;
 new CachedEntriesMapDefault();
 const tmp3 = new CachedEntriesMapDefault();
 const set = new Set();
@@ -163,7 +163,7 @@ const rTCConnectionDesyncStore = new RTCConnectionDesyncStore(DispatcherDefault,
             const tmp21 = new VoiceStateRecord(obj4);
             let tmp2 = closure_1_0;
             if (closure_1_0 == null) {
-              tmp2 = React6;
+              tmp2 = React7;
             }
             const result = closure_12.set(user.id, makeSortedVoiceState(tmp21, tmp2, user.id));
             const obj = {

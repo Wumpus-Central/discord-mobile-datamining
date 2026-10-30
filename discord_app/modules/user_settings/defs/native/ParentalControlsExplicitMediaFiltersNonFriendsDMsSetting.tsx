@@ -1,57 +1,35 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
+import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCenterControlledSettingsUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
-const ExplicitMediaRedactionUtils = obj(8645);
 require = fn;
-const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useObscuredContentNonFriendsDmSettingValue() {
-      let obj = require;
-      let tmp = dependencyMap;
-      const cResult = c.c(2);
-      const parentalControlledExplicitContentSettings =
-        useParentalControlSettings.useParentalControlledExplicitContentSettings();
-      let prop;
-      if (parentalControlledExplicitContentSettings != null) {
-        prop = parentalControlledExplicitContentSettings.explicitContentNonFriendDm;
-      }
-      if (null == prop) {
-        return null;
-      } else if (cResult[0] !== prop) {
-        obj = ExplicitMediaRedactionUtils;
-        tmp = obj.redactionSettingToRenderedString(prop)();
-        cResult[0] = prop;
-        cResult[1] = tmp;
-      }
-    }
-  : function useObscuredContentNonFriendsDmSettingValue() {
-      const parentalControlledExplicitContentSettings =
-        useParentalControlSettings.useParentalControlledExplicitContentSettings();
-      let prop;
-      if (parentalControlledExplicitContentSettings != null) {
-        prop = parentalControlledExplicitContentSettings.explicitContentNonFriendDm;
-      }
-      let tmp5 = null;
-      if (null != prop) {
-        tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(prop)();
-        const tmpResult = ExplicitMediaRedactionUtils;
-      }
-      return tmp5;
-    };
+function useObscuredContentNonFriendsDmSettingValue() {
+  const parentalControlledExplicitContentSettings =
+    useParentalControlSettings.useParentalControlledExplicitContentSettings();
+  let prop;
+  if (parentalControlledExplicitContentSettings != null) {
+    prop = parentalControlledExplicitContentSettings.explicitContentNonFriendDm;
+  }
+  let tmp5 = null;
+  if (null != prop) {
+    tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(prop)();
+    const tmpResult = ExplicitMediaRedactionUtils;
+  }
+  return tmp5;
+}
 function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const intl = selectedTeenId(1125).intl;
-    const obj = selectedTeenId(16617);
-    const stringResult = intl.string(selectedTeenId(1125).t.GYpoAq);
+    const intl = selectedTeenId(1114).intl;
+    const obj = selectedTeenId(16670);
+    const stringResult = intl.string(selectedTeenId(1114).t.GYpoAq);
     const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
-    const intl2 = selectedTeenId(1125).intl;
-    obj3.subtitle = intl2.string(selectedTeenId(1125).t["Yh+HX1"]);
-    const items = [selectedTeenId(1208).ExplicitContentRedaction.SHOW];
+    const intl2 = selectedTeenId(1114).intl;
+    obj3.subtitle = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
+    const items = [selectedTeenId(1197).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
     obj3.handlePress = function handlePress(explicitContentNonFriendDm) {
       const result = FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, {
@@ -59,19 +37,18 @@ function onObscuredContentNonFriendsDmOnPress() {
       });
     };
     obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(16622).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(16622);
+    let result = selectedTeenId(16675).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(16675);
   }
 }
-function getTitle() {
-  const intl = util.intl;
-  return intl.string(util.t["Yh+HX1"]);
-}
-const SettingBuilders = fn(11302);
+const SettingBuilders = fn(11505);
 const pressable = SettingBuilders.createPressable({
-  useTitle: getTitle,
-  parent: fn(8387).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
-  useTrailing: tmp2,
+  useTitle: function getTitle() {
+    const intl = util.intl;
+    return intl.string(util.t["Yh+HX1"]);
+  },
+  parent: fn(8424).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  useTrailing: useObscuredContentNonFriendsDmSettingValue,
   onPress: onObscuredContentNonFriendsDmOnPress,
   unsearchable: true,
 });
@@ -81,5 +58,5 @@ let result = size.fileFinishedImporting(
 );
 
 export default pressable;
-export const useObscuredContentNonFriendsDmSettingValue = tmp2;
+export { useObscuredContentNonFriendsDmSettingValue };
 export { onObscuredContentNonFriendsDmOnPress };

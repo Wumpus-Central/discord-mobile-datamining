@@ -1,7 +1,7 @@
 // discord_app/modules/links/native/handleSupportedURL.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
@@ -14,8 +14,8 @@ import AnalyticsActions from "../../quests/lib/analytics/AnalyticsActions.tsx";
 import GuildSettingsActionCreatorsDefault from "../../guild_settings/GuildSettingsActionCreators.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import SecureFramesPlatformUtilsDefault from "../../rtc/SecureFramesPlatformUtils.native.tsx";
-import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtils.tsx";
 import GameProfileActionCreators from "../../game_profile/GameProfileActionCreators.native.tsx";
+import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtils.tsx";
 import DisplayedInviteActionCreators from "../../../actions/native/DisplayedInviteActionCreators.tsx";
 import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
 import ApplicationUtils from "../../../utils/native/ApplicationUtils.tsx";
@@ -36,9 +36,9 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6919).addPostConnectionCallback;
-let closure_9 = fn(7591).handleMobileWebCheckoutStatus;
-const Constants = fn(1084);
+fn(6926).addPostConnectionCallback;
+let closure_9 = fn(7599).handleMobileWebCheckoutStatus;
+const Constants = fn(1072);
 ({
   AnalyticEvents: closure_12,
   LinkingTypes: map1,
@@ -47,14 +47,14 @@ const Constants = fn(1084);
   PlatformTypes: closure_16,
   ME: closure_17,
 } = Constants);
-const StaticChannelRoute = fn(4864).StaticChannelRoute;
-const StreamTypes = fn(6702).StreamTypes;
-const NativePermissionTypes = fn(7926).NativePermissionTypes;
-let closure_21 = fn(10862).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(7704).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_23 = fn(5736).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15590).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8387).MobileUserSettings;
+const StaticChannelRoute = fn(4865).StaticChannelRoute;
+const StreamTypes = fn(6709).StreamTypes;
+const NativePermissionTypes = fn(7932).NativePermissionTypes;
+let closure_21 = fn(10885).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7709).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(5742).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(15630).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8424).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -215,7 +215,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: 1818230785 };
+      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: 62 };
       const obj26 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj21.navigationSettings = obj26;
       rootNavigationRef1(inviteCode[30])(obj21);
@@ -306,7 +306,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15601, dependencyMap.paths),
+                    asyncRequireImpl(15641, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -375,7 +375,7 @@ export default function handleSupportedURL(payload) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -444,7 +444,7 @@ export default function handleSupportedURL(payload) {
                       const obj3 = payload(paths[48]);
                     }
                     c4 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp35) {
                   c4 = tmp;
@@ -478,7 +478,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -537,7 +537,7 @@ export default function handleSupportedURL(payload) {
                     const obj4 = tmp4(paths[51]);
                   }
                   c2 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 } catch (tmp37) {
                   c2 = tmp;
                   throw tmp37;
@@ -581,7 +581,7 @@ export default function handleSupportedURL(payload) {
             let hasItem = null != payload.callbackCode && null != payload.callbackState && null != payload.provider;
             if (hasItem) {
               const items = [, , ,];
-              ({ XBOX: arr[0], PLAYSTATION: arr[1], PLAYSTATION_STAGING: arr[2], CRUNCHYROLL: arr[3] } = value3);
+              ({ XBOX: arr[0], PLAYSTATION: arr[1], PLAYSTATION_STAGING: arr[2], CRUNCHYROLL: arr[3] } = __initData2);
               hasItem = items.includes(payload.provider);
             }
             if (hasItem) {
@@ -618,7 +618,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
@@ -643,7 +643,7 @@ export default function handleSupportedURL(payload) {
                         closure_1 = tmp50;
                         const keys = Object.keys();
                         if (keys === undefined) {
-                          let dependencyMap2 = tmp12;
+                          dependencyMap2 = tmp12;
                           closure_2 = tmp11;
                           closure_1 = tmp50;
                           dependencyMap = keys;
@@ -677,15 +677,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(6731).popAll();
-                        const obj5 = closure_1(6731);
+                        closure_1(6738).popAll();
+                        const obj5 = closure_1(6738);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7549).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7549);
+                        dependencyMap(7557).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7557);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(7334).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(7341).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -701,12 +701,12 @@ export default function handleSupportedURL(payload) {
                     if (body != null) {
                       redirect = body.redirect;
                     }
-                    closure_133_1 = closure_1(1383).toURLSafe(redirect);
+                    closure_133_1 = closure_1(1378).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(5698).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(5698);
+                      closure_1(5704).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(5704);
                     }
-                    const obj12 = closure_1(1383);
+                    const obj12 = closure_1(1378);
                   }
                   c8 = 3;
                   const obj = { value, done: true };
@@ -795,7 +795,7 @@ export default function handleSupportedURL(payload) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "HermesInternal", done: null };
                       }
                     } else {
                       try {
@@ -810,7 +810,7 @@ export default function handleSupportedURL(payload) {
                             return obj4;
                           } else {
                             guildId = undefined;
-                            guild = undefined;
+                            let guild;
                             if (deepLinkAction === constants.PREMIUM_CHECKOUT_SUCCESS) {
                               deepLinkAction("succeeded");
                             } else if (deepLinkAction === constants.PREMIUM_SUBSCRIPTION_UPDATE) {

@@ -12,39 +12,124 @@ import PromotionsStore from "PromotionsStore.tsx";
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
-  return { code: code.code, userId: code.user_id, claimedAt: code.claimed_at, promotion: PromotionRecord.createFromServer(code.promotion) };
+  return {
+    code: code.code,
+    userId: code.user_id,
+    claimedAt: code.claimed_at,
+    promotion: PromotionRecord.createFromServer(code.promotion),
+  };
 }
-let closure_12 = async function _claimOutboundPromotion() {
-  closure_3 = tmp2;
-  ({ promotionId: closure_131_0, promotionTitle: closure_131_1, partnerId: closure_131_2, analyticsLocations: closure_131_3 } = closure_0);
-  await "Reflect";
-  const HTTP = closure_132_0(closure_132_2[7]).HTTP;
-  await HTTP.post({ url: closure_132_9.CLAIM_OUTBOUND_PROMOTION_CODE(closure_131_0), rejectWithError: closure_132_0(closure_132_2[7]).rejectWithMigratedError() });
-  closure_131_4 = value;
-  const body = closure_131_4.body;
-  if (obj9.isIOS()) {
-    let ANDROID = closure_132_10.IOS;
+let closure_12 = async function _claimOutboundPromotion(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    ANDROID = closure_132_10.ANDROID;
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          ({
+            promotionId: closure_131_0,
+            promotionTitle: closure_131_1,
+            partnerId: closure_131_2,
+            analyticsLocations: closure_131_3,
+          } = closure_0);
+          closure_131_4 = undefined;
+          let body;
+          closure_131_6 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "flexDirection", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const HTTP = closure_132_0(closure_132_2[7]).HTTP;
+          const obj5 = {
+            url: closure_132_9.CLAIM_OUTBOUND_PROMOTION_CODE(closure_131_0),
+            rejectWithError: closure_132_0(closure_132_2[7]).rejectWithMigratedError(),
+          };
+          c5 = 2;
+          c6 = 1;
+          const obj6 = { value: HTTP.post(obj5), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_131_4 = value;
+        body = closure_131_4.body;
+        if (obj9.isIOS()) {
+          let ANDROID = closure_132_10.IOS;
+        } else {
+          ANDROID = closure_132_10.ANDROID;
+        }
+        closure_131_6 = ANDROID;
+        obj9 = closure_132_0(closure_132_2[8]);
+        const obj8 = {
+          platform: closure_131_6,
+          status: closure_131_4.status,
+          location_stack: closure_131_3,
+          promotion_id: closure_131_0,
+          name: null,
+          partner: null,
+        };
+        let name = closure_131_1;
+        if (closure_131_1 == null) {
+          name = null;
+        }
+        obj8.name = name;
+        let partner = closure_131_2;
+        if (closure_131_2 == null) {
+          partner = null;
+        }
+        obj8.partner = partner;
+        closure_132_1(closure_132_2[9]).track(closure_132_8.OUTBOUND_PROMOTION_CLAIMED, obj8);
+        c6 = 3;
+        const obj10 = { value: closure_132_11(body), done: true };
+        return obj10;
+      }
+    } catch (tmp27) {
+      c6 = tmp;
+      throw tmp27;
+    }
   }
-  closure_131_6 = ANDROID;
-  { url: closure_132_9.CLAIM_OUTBOUND_PROMOTION_CODE(closure_131_0), rejectWithError: closure_132_0(closure_132_2[7]).rejectWithMigratedError() };
-  const obj8 = { platform: closure_131_6, status: closure_131_4.status, location_stack: closure_131_3, promotion_id: closure_131_0, name: null, partner: null };
-  let name = closure_131_1;
-  if (closure_131_1 == null) {
-    name = null;
-  }
-  obj8.name = name;
-  let partner = closure_131_2;
-  if (closure_131_2 == null) {
-    partner = null;
-  }
-  obj8.partner = partner;
-  closure_132_1(closure_132_2[9]).track(closure_132_8.OUTBOUND_PROMOTION_CLAIMED, obj8);
-  return closure_132_11(body);
 };
-const PromotionFlags = fn(1391).PromotionFlags;
-const Constants = fn(1084);
+const PromotionFlags = fn(1386).PromotionFlags;
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
@@ -109,7 +194,10 @@ export function getNextUnseenOutboundPromotionId() {
   const userContent = UserSettingsProtoStore.settings.userContent;
   let prop;
   if (userContent != null) {
-    const tmp4 = userContent.recurringDismissibleContentStates[dismissible_content.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
+    const tmp4 =
+      userContent.recurringDismissibleContentStates[
+        dismissible_content.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR
+      ];
     if (tmp4 != null) {
       prop = tmp4.lastDismissedObjectId;
     }
@@ -151,7 +239,10 @@ export function shouldShowOutboundPromotionNotice() {
   const userContent = UserSettingsProtoStore.settings.userContent;
   let prop;
   if (userContent != null) {
-    const tmp4 = userContent.recurringDismissibleContentStates[dismissible_content.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
+    const tmp4 =
+      userContent.recurringDismissibleContentStates[
+        dismissible_content.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR
+      ];
     if (tmp4 != null) {
       prop = tmp4.lastDismissedObjectId;
     }
@@ -173,7 +264,11 @@ export function shouldShowOutboundPromotionNotice() {
   }
   let tmp6 = null != id;
   if (tmp6) {
-    tmp6 = !DismissibleContentUtils.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, { cooldownDurationMs: 259200000 });
+    tmp6 = !DismissibleContentUtils.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
+      dismissible_content.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
+      id,
+      { cooldownDurationMs: 259200000 },
+    );
   }
   return tmp6;
 }

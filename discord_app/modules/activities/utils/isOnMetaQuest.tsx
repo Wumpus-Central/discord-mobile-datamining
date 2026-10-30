@@ -1,8 +1,7 @@
 // discord_app/modules/activities/utils/isOnMetaQuest.tsx
-import Constants from "../../../Constants.tsx";
+import ActivityGamePlatforms from "../../../../discord_common/js/shared/shared-constants/ActivityGamePlatforms.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
 const result = size.fileFinishedImporting("modules/activities/utils/isOnMetaQuest.tsx");
 
 export default function isOnMetaQuest(platform) {
@@ -10,5 +9,5 @@ export default function isOnMetaQuest(platform) {
   if (platform != null) {
     platform = platform.platform;
   }
-  return platform === ActivityGamePlatforms.META_QUEST;
+  return platform === ActivityGamePlatforms.ActivityGamePlatforms.META_QUEST;
 }

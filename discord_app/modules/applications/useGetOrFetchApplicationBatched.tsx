@@ -69,7 +69,7 @@ prototype["_flush"] = function _flush() {
     const chunkResult = items(items1[3]).chunk(items1, 20);
   }
   if (items2.length > 0) {
-    const obj2 = items(items1[3]);
+    obj2 = items(items1[3]);
     const item3 = items(items1[3])
       .chunk(items2, 20)
       .forEach((item) => {
@@ -78,113 +78,56 @@ prototype["_flush"] = function _flush() {
     const chunkResult1 = items(items1[3]).chunk(items2, 20);
   }
 };
-const obj4 = Object.create(ApplicationFetchManager.prototype);
-let closure_129_0 = obj4;
-obj4._lastFetchedAttempted = new Map();
+let obj2 = Object.create(ApplicationFetchManager.prototype);
+let closure_129_0 = obj2;
+obj2._lastFetchedAttempted = new Map();
 let map = new Map();
-obj4._pending = new Set();
-let delayedCall = new fn(4852).DelayedCall(32, () => obj._flush());
-obj4._flushHandler = delayedCall;
-let ReactCompilerGating = fn(558);
-const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useRequestApplication(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(3);
-      if (cResult[0] !== arg0) {
-        const fn = function c() {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            tmp2 = "" !== closure_0;
-          }
-          if (tmp2) {
-            obj4.request(closure_0);
-          }
-        };
-        const items = [arg0];
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-        tmp3 = cResult[2];
-      }
-      const effect = noop.useEffect(tmp2, tmp3);
-    }
-  : function useRequestApplication(arg0) {
-      closure_0 = arg0;
-      const items = [arg0];
-      const effect = noop.useEffect(() => {
-        let tmp2 = null != closure_0;
-        if (tmp2) {
-          tmp2 = "" !== closure_0;
-        }
-        if (tmp2) {
-          obj4.request(closure_0);
-        }
-      }, items);
-    };
-let closure_6 = tmp6;
-ReactCompilerGating = fn(558);
-const set = new Set();
+obj2._pending = new Set();
+let delayedCall = new fn(4853).DelayedCall(32, () => obj._flush());
+obj2._flushHandler = delayedCall;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/useGetOrFetchApplicationBatched.tsx");
 
-export const useRequestApplication = tmp6;
-export const useGetOrFetchApplicationBatched = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useGetOrFetchApplicationBatched(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(4);
-      closure_6(arg0);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ApplicationStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function s() {
-          let application = null;
-          if (null != closure_0) {
-            application = null;
-            if ("" !== closure_0) {
-              application = ApplicationStore.getApplication(closure_0);
-            }
-          }
-          return application;
-        };
-        const items1 = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
-      } else {
-        tmp7 = cResult[2];
-        tmp8 = cResult[3];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp7, tmp8);
+export function useRequestApplication(arg0) {
+  closure_0 = arg0;
+  const items = [arg0];
+  const effect = noop.useEffect(() => {
+    let tmp2 = null != closure_0;
+    if (tmp2) {
+      tmp2 = "" !== closure_0;
     }
-  : function useGetOrFetchApplicationBatched(arg0) {
-      _require = arg0;
-      closure_6(arg0);
-      const items = [ApplicationStore];
-      const items1 = [arg0];
-      return require("initialize").useStateFromStores(
-        items,
-        () => {
-          let application = null;
-          if (null != closure_0) {
-            application = null;
-            if ("" !== closure_0) {
-              application = ApplicationStore.getApplication(closure_0);
-            }
-          }
-          return application;
-        },
-        items1,
-      );
-    };
+    if (tmp2) {
+      obj2.request(closure_0);
+    }
+  }, items);
+}
+export function useGetOrFetchApplicationBatched(applicationId) {
+  _require = applicationId;
+  closure_129_0 = applicationId;
+  const items = [applicationId];
+  const effect = noop.useEffect(() => {
+    let tmp2 = null != closure_0;
+    if (tmp2) {
+      tmp2 = "" !== closure_0;
+    }
+    if (tmp2) {
+      obj2.request(closure_0);
+    }
+  }, items);
+  const items1 = [ApplicationStore];
+  const items2 = [applicationId];
+  return require("initialize").useStateFromStores(
+    items1,
+    () => {
+      let application = null;
+      if (null != closure_0) {
+        application = null;
+        if ("" !== closure_0) {
+          application = ApplicationStore.getApplication(closure_0);
+        }
+      }
+      return application;
+    },
+    items2,
+  );
+}

@@ -34,7 +34,7 @@ let closure_6 = async function _logOutSessions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_6 = async function _logOutSessions(arg0) {
             let items = length;
             if (num2 === length.length) {
               c4 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             items = [length];
@@ -95,7 +95,7 @@ let closure_6 = async function _logOutSessions(arg0) {
     }
   }
 };
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth_sessions/AuthSessionsActionCreators.tsx");
 

@@ -1,7 +1,6 @@
 // discord_app/modules/media_viewer/native/components/MediaShareActions.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
@@ -10,8 +9,8 @@ import DownloadIcon from "../../../../design/components/Icon/native/redesign/gen
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
-import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import ImageWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import MediaViewerAnalyticsManager from "../../MediaViewerAnalyticsManager.tsx";
 import MediaSourceUtil from "../MediaSourceUtil.tsx";
@@ -87,7 +86,7 @@ function useMediaShareActions(source) {
         source.contentType,
       );
     } else if (null != source.sourceURI) {
-      const result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, React6);
+      const result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, React7);
       const result2 = MediaSourceUtil.downloadMediaAssetWithContentType(
         source.sourceURI,
         result1 ? constants2.GIF : constants2.IMAGE,
@@ -144,7 +143,7 @@ function useMediaShareActions(source) {
             message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
-            forwardOptions: "app-channel",
+            forwardOptions: "icon-only",
           };
           const obj4 = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -157,7 +156,7 @@ function useMediaShareActions(source) {
           message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
-          forwardOptions: "app-channel",
+          forwardOptions: "icon-only",
         };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
@@ -188,7 +187,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13105, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13256, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;
@@ -289,107 +288,45 @@ function useMediaShareActions(source) {
     return items;
   }, items9);
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: c10 } = Constants);
-let closure_11 = fn(7452).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_11 = fn(7460).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function MediaShareActionSheet(arg0) {
-      const cResult = c.c(9);
-      ({ source, disableDownload, shareable } = arg0);
-      if (cResult[0] === disableDownload) {
-        if (cResult[1] === shareable) {
-          if (cResult[2] === source) {
-            let tmp4 = cResult[3];
-          }
-          const arr = useMediaShareActions(tmp4);
-          if (cResult[4] !== arr) {
-            const _Symbol = Symbol;
-            if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-              const fn = function u(IconComponent, id) {
-                const obj = {
-                  icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
-                  onPress: null,
-                  label: null,
-                };
-                ({ action: obj.onPress, label: obj.label } = IconComponent);
-                return jsx(
-                  ActionSheetRow.ActionSheetRow,
-                  {
-                    icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
-                    onPress: null,
-                    label: null,
-                  },
-                  id,
-                );
-              };
-              cResult[6] = fn;
-              let tmp8 = fn;
-            } else {
-              tmp8 = cResult[6];
-            }
-            const mapped = arr.map(tmp8);
-            cResult[4] = arr;
-            cResult[5] = mapped;
-          } else {
-            if (cResult[7] !== cResult[5]) {
-              const obj2 = { children: null };
-              const obj3 = { hasIcons: true, children: tmp6 };
-              obj2.children = jsx(ActionSheetRow.ActionSheetRow.Group, { hasIcons: true, children: tmp6 });
-              const tmp13 = jsx(ActionSheet.ActionSheet, { children: null });
-              cResult[7] = tmp6;
-              cResult[8] = tmp13;
-              let tmp11 = tmp13;
-            } else {
-              tmp11 = cResult[8];
-            }
-            return tmp11;
-          }
-        }
-      }
-      const obj4 = { source, disableDownload, shareable };
-      cResult[0] = disableDownload;
-      cResult[1] = shareable;
-      cResult[2] = source;
-      cResult[3] = obj4;
-      tmp4 = obj4;
-    }
-  : function MediaShareActionSheet(source) {
-      const obj2 = { children: null };
-      const arr = useMediaShareActions({
-        source: source.source,
-        disableDownload: source.disableDownload,
-        shareable: source.shareable,
-      });
-      let obj = { source: source.source, disableDownload: source.disableDownload, shareable: source.shareable };
-      obj2.children = jsx(ActionSheetRow.ActionSheetRow.Group, {
-        hasIcons: true,
-        children: useMediaShareActions({
-          source: source.source,
-          disableDownload: source.disableDownload,
-          shareable: source.shareable,
-        }).map((IconComponent, index) => {
-          const obj = {
-            icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
-            onPress: null,
-            label: null,
-          };
-          ({ action: obj.onPress, label: obj.label } = IconComponent);
-          return jsx(
-            ActionSheetRow.ActionSheetRow,
-            {
-              icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
-              onPress: null,
-              label: null,
-            },
-            index,
-          );
-        }),
-      });
-      return jsx(ActionSheet.ActionSheet, { children: null });
-    };
+export default function MediaShareActionSheet(source) {
+  const obj2 = { children: null };
+  const arr = useMediaShareActions({
+    source: source.source,
+    disableDownload: source.disableDownload,
+    shareable: source.shareable,
+  });
+  let obj = { source: source.source, disableDownload: source.disableDownload, shareable: source.shareable };
+  obj2.children = jsx(ActionSheetRow.ActionSheetRow.Group, {
+    hasIcons: true,
+    children: useMediaShareActions({
+      source: source.source,
+      disableDownload: source.disableDownload,
+      shareable: source.shareable,
+    }).map((IconComponent, index) => {
+      const obj = {
+        icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
+        onPress: null,
+        label: null,
+      };
+      ({ action: obj.onPress, label: obj.label } = IconComponent);
+      return jsx(
+        ActionSheetRow.ActionSheetRow,
+        {
+          icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
+          onPress: null,
+          label: null,
+        },
+        index,
+      );
+    }),
+  });
+  return jsx(ActionSheet.ActionSheet, { children: null });
+}
 export { useMediaShareActions };

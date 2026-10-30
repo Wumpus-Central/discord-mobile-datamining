@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/useConjurePublishProgressLabel.tsx
-import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
@@ -8,187 +8,53 @@ const require = globalThis.__r;
 
 const require = fn;
 let obj = {
-  preparing: _modDef3864.GQeas1,
-  approval: _modDef3864["TkHHD+"],
-  setup: _modDef3864["F+AxgM"],
-  build: _modDef3864.oQeMIy,
-  deploy: _modDef3864.LqZvZ2,
-  discord: _modDef3864.LFcGAT,
-  activating: _modDef3864.ff1Fq1,
+  preparing: _modDef3865.GQeas1,
+  approval: _modDef3865["TkHHD+"],
+  approved_by_grant: _modDef3865["9+kNt8"],
+  setup: _modDef3865["F+AxgM"],
+  build: _modDef3865.oQeMIy,
+  deploy: _modDef3865.LqZvZ2,
+  discord: _modDef3865.LFcGAT,
+  activating: _modDef3865.ff1Fq1,
 };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishProgressLabel.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjurePublishProgressLabel(arg0) {
-      _require = arg0;
-      let formatElapsed = _require;
-      let formatElapsedResult2 = dependencyMap;
-      obj = require("c");
-      const cResult = obj.c(11);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ConjurePublishStatusStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function c() {
-          let publishProgress = null;
-          if (null != closure_0) {
-            publishProgress = ConjurePublishStatusStore.getPublishProgress(tmp);
-          }
-          return publishProgress;
-        };
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        let tmp5 = fn;
-      } else {
-        tmp5 = cResult[2];
-      }
-      let stageStartedAt = formatElapsed(504).useStateFromStores(first, tmp5);
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function v() {
-          return Date.now();
-        };
-        cResult[3] = fn2;
-        let tmp6 = fn2;
-      } else {
-        tmp6 = cResult[3];
-      }
-      const formatElapsedResult = formatElapsed(504);
-      [stage, dependencyMap] = noop.useState(tmp6);
-      if (cResult[4] !== stageStartedAt) {
-        class S {
-          constructor() {
-            if (null != closure_1) {
-              tmp = closure_2;
-              tmp2 = globalThis;
-              _Date = Date;
-              tmp3 = closure_2(Date.now());
-              _setInterval = setInterval;
-              num = 1000;
-              closure_0 = setInterval(() => closure_1_2(Date.now()), 1000);
-              return () => clearInterval(closure_0);
-            } else {
-              return;
-            }
-          }
-        }
-        const items1 = [stageStartedAt];
-        cResult[4] = stageStartedAt;
-        cResult[5] = S;
-        cResult[6] = items1;
-        let tmp9 = items1;
-      } else {
-        class S {
-          constructor() {
-            if (null != closure_1) {
-              tmp = closure_2;
-              tmp2 = globalThis;
-              _Date = Date;
-              tmp3 = closure_2(Date.now());
-              _setInterval = setInterval;
-              num = 1000;
-              closure_0 = setInterval(() => closure_1_2(Date.now()), 1000);
-              return () => clearInterval(closure_0);
-            } else {
-              return;
-            }
-          }
-        }
-        tmp9 = cResult[6];
-      }
-      const effect = noop.useEffect(S, tmp9);
-      if (null == stageStartedAt) {
-        class S {
-          constructor() {
-            if (null != closure_1) {
-              tmp = closure_2;
-              tmp2 = globalThis;
-              _Date = Date;
-              tmp3 = closure_2(Date.now());
-              _setInterval = setInterval;
-              num = 1000;
-              closure_0 = setInterval(() => closure_1_2(Date.now()), 1000);
-              return () => clearInterval(closure_0);
-            } else {
-              return;
-            }
-          }
-        }
-      } else {
-        class S {
-          constructor() {
-            if (null != closure_1) {
-              tmp = closure_2;
-              tmp2 = globalThis;
-              _Date = Date;
-              tmp3 = closure_2(Date.now());
-              _setInterval = setInterval;
-              num = 1000;
-              closure_0 = setInterval(() => closure_1_2(Date.now()), 1000);
-              return () => clearInterval(closure_0);
-            } else {
-              return;
-            }
-          }
-        }
-        const intl = formatElapsed(1125).intl;
-        const obj2 = { action: null, detail: null };
-        const intl2 = formatElapsed(1125).intl;
-        obj2.action = intl2.string(obj[stageStartedAt.stage]);
-        formatElapsed = formatElapsed(11861).formatElapsed;
-        formatElapsedResult2 = formatElapsed(stage - stageStartedAt.stageStartedAt);
-        obj2.detail = formatElapsedResult2;
-        const formatToPlainStringResult = intl.formatToPlainString(stageStartedAt(3864)["ndkR+x"], obj2);
-        cResult[7] = stage;
-        stage = stageStartedAt.stage;
-        cResult[8] = stage;
-        stageStartedAt = stageStartedAt.stageStartedAt;
-        cResult[9] = stageStartedAt;
-        cResult[10] = formatToPlainStringResult;
-        const formatElapsedResult1 = formatElapsed(11861);
-      }
-      const tmp7 = _slicedToArray(noop.useState(tmp6), 2);
+export default function useConjurePublishProgressLabel(arg0) {
+  _require = arg0;
+  obj = require("initialize");
+  const items = [ConjurePublishStatusStore];
+  const stateFromStores = obj.useStateFromStores(items, () => {
+    let publishProgress = null;
+    if (null != closure_0) {
+      publishProgress = ConjurePublishStatusStore.getPublishProgress(tmp);
     }
-  : function useConjurePublishProgressLabel(arg0) {
-      _require = arg0;
-      obj = require("initialize");
-      const items = [ConjurePublishStatusStore];
-      const stateFromStores = obj.useStateFromStores(items, () => {
-        let publishProgress = null;
-        if (null != closure_0) {
-          publishProgress = ConjurePublishStatusStore.getPublishProgress(tmp);
-        }
-        return publishProgress;
-      });
-      const tmp4 = _slicedToArray(
-        noop.useState(() => Date.now()),
-        2,
-      );
-      dependencyMap = tmp4[1];
-      const items1 = [stateFromStores];
-      const effect = noop.useEffect(() => {
-        if (null != stateFromStores) {
-          const _Date = Date;
-          closure_2(Date.now());
-          const _setInterval = setInterval;
-          const interval = setInterval(() => closure_1_2(Date.now()), 1000);
-          return () => clearInterval(closure_0);
-        }
-      }, items1);
-      let formatToPlainStringResult = null;
-      if (null != stateFromStores) {
-        const intl = tmp(1125).intl;
-        const obj2 = { action: null, detail: null };
-        const intl2 = tmp(1125).intl;
-        obj2.action = intl2.string(obj[stateFromStores.stage]);
-        obj2.detail = tmp(11861).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
-        formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3864)["ndkR+x"], obj2);
-        const tmpResult = tmp(11861);
-      }
-      return formatToPlainStringResult;
-    };
+    return publishProgress;
+  });
+  const tmp4 = _slicedToArray(
+    noop.useState(() => Date.now()),
+    2,
+  );
+  dependencyMap = tmp4[1];
+  const items1 = [stateFromStores];
+  const effect = noop.useEffect(() => {
+    if (null != stateFromStores) {
+      const _Date = Date;
+      closure_2(Date.now());
+      const _setInterval = setInterval;
+      const interval = setInterval(() => closure_1_2(Date.now()), 1000);
+      return () => clearInterval(closure_0);
+    }
+  }, items1);
+  let formatToPlainStringResult = null;
+  if (null != stateFromStores) {
+    const intl = tmp(1114).intl;
+    const obj2 = { action: null, detail: null };
+    const intl2 = tmp(1114).intl;
+    obj2.action = intl2.string(obj[stateFromStores.stage]);
+    obj2.detail = tmp(12404).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3865)["ndkR+x"], obj2);
+    const tmpResult = tmp(12404);
+  }
+  return formatToPlainStringResult;
+}

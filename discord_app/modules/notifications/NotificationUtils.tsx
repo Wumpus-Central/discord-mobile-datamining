@@ -1,18 +1,16 @@
 // discord_app/modules/notifications/NotificationUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
 import FlagUtilsAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MuteTimers from "../../lib/MuteTimers.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const UserNotificationSettings = fn(1084).UserNotificationSettings;
-const UserSettingsConstants = fn(1094);
+const UserNotificationSettings = fn(1072).UserNotificationSettings;
+const UserSettingsConstants = fn(1082);
 ({ MuteUntilSeconds: metroRequire, ChannelNotificationSettingsFlags: closure_7 } = UserSettingsConstants);
 let closure_8 = { ignoreMute: false, ignoreUnreadSetting: true, ignoreNotificationSetting: false };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/NotificationUtils.tsx");
 
@@ -95,27 +93,7 @@ export function filterOverrides(channelOverrides, arg1) {
     return tmp7;
   });
 }
-export const useShouldUseNewNotificationSystem = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useShouldUseNewNotificationSystem() {
-      const cResult = c.c(2);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [UserGuildSettingsStore];
-        const fn = function o() {
-          return useNewNotifications.useNewNotifications;
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      return initialize.useStateFromStores(tmp4, tmp5);
-    }
-  : function useShouldUseNewNotificationSystem() {
-      const items = [UserGuildSettingsStore];
-      return initialize.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
-    };
-export function shouldShowUseNewNotificationSystem() {
-  return UserGuildSettingsStore.useNewNotifications;
+export function useShouldUseNewNotificationSystem() {
+  const items = [UserGuildSettingsStore];
+  return initialize.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
 }

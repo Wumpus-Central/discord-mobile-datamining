@@ -46,10 +46,10 @@ function resourceChannelFromServer(channelId) {
   obj.icon = icon;
   return obj;
 }
-function isSettingsEmpty(welcomeMessage) {
-  let tmp = null == welcomeMessage;
+function isSettingsEmpty(settings) {
+  let tmp = null == settings;
   if (!tmp) {
-    welcomeMessage = welcomeMessage.welcomeMessage;
+    const welcomeMessage = settings.welcomeMessage;
     let tmp2 = null == welcomeMessage;
     if (!tmp2) {
       let tmp3 = null != welcomeMessage.message;
@@ -68,15 +68,15 @@ function isSettingsEmpty(welcomeMessage) {
     }
     let tmp6 = tmp2;
     if (tmp6) {
-      let tmp7 = null != welcomeMessage.newMemberActions;
+      let tmp7 = null != settings.newMemberActions;
       if (tmp7) {
-        tmp7 = welcomeMessage.newMemberActions.length > 0;
+        tmp7 = settings.newMemberActions.length > 0;
       }
       let tmp8 = !tmp7;
       if (!tmp7) {
-        let tmp9 = null != welcomeMessage.resourceChannels;
+        let tmp9 = null != settings.resourceChannels;
         if (tmp9) {
-          tmp9 = welcomeMessage.resourceChannels.length > 0;
+          tmp9 = settings.resourceChannels.length > 0;
         }
         tmp8 = !tmp9;
       }
@@ -86,7 +86,7 @@ function isSettingsEmpty(welcomeMessage) {
   }
   return tmp;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeTypes.tsx");
@@ -95,7 +95,6 @@ export const WELCOME_MESSAGE_MIN_LENGTH = 7;
 export const WELCOME_MESSAGE_MAX_LENGTH = 300;
 export const NEW_MEMBER_ACTION_TITLE_MIN_LENGTH = 7;
 export const NEW_MEMBER_ACTION_TITLE_MAX_LENGTH = 60;
-export const NEW_MEMBER_ACTION_MIN = 3;
 export const NEW_MEMBER_ACTION_MAX = 5;
 export const RESOURCE_CHANNEL_TITLE_MIN_LENGTH = 1;
 export const RESOURCE_CHANNEL_TITLE_MAX_LENGTH = 30;
@@ -281,20 +280,15 @@ export function isSettingsValid(welcomeMessage) {
         if (null != authorIds) {
           if (0 !== welcomeMessage.welcomeMessage.authorIds.length) {
             if (null != welcomeMessage.newMemberActions) {
-              if (welcomeMessage.newMemberActions.length >= 3) {
-                if (null != welcomeMessage.newMemberActions) {
-                  const newMemberActions = welcomeMessage.newMemberActions;
-                  for (const item10012 of newMemberActions) {
-                    let channel = ChannelStore.getChannel(item10012.channelId);
-                    obj.return();
-                    let flag = false;
-                    return false;
-                  }
-                }
-                return true;
+              const newMemberActions = welcomeMessage.newMemberActions;
+              for (const item10012 of newMemberActions) {
+                let channel = ChannelStore.getChannel(item10012.channelId);
+                obj.return();
+                let flag = false;
+                return false;
               }
             }
-            return false;
+            return true;
           }
         }
         return false;

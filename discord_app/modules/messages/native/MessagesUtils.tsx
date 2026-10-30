@@ -29,9 +29,9 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
-import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import Tracking from "../../forums/tracking/Tracking.tsx";
+import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import PopularMusicSystemMessageTypes from "../../guild_space/popular_music/PopularMusicSystemMessageTypes.tsx";
 import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
@@ -126,7 +126,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -163,7 +163,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 );
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -217,10 +217,10 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9848).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8189);
+let closure_5 = fn(9874).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8370);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({
   AnalyticEvents: closure_17,
   MessageEmbedTypes: closure_18,
@@ -485,10 +485,10 @@ export function handleAddOrRemoveReaction(messageId, channel, reaction) {
     const result4 = tmp12Result16.handleAddNewReactions(channel, messageId, MESSAGE, obj6);
   }
 }
-export function handleToggleFollowForumPost(channel, stateFromStores1) {
+export function handleToggleFollowForumPost(channel, JoinedThreadsStore) {
   const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   const obj2 = ThreadActionCreatorsDefault;
-  if (stateFromStores1) {
+  if (JoinedThreadsStore) {
     obj2.leaveThread(channel, "iOS Forum Toolbar");
   } else {
     obj2.joinThread(channel, "iOS Forum Toolbar");
@@ -540,10 +540,10 @@ export function findMessageIndex(previousRows, startMessageId) {
   }
 }
 export { getVisibleMessages };
-export function shouldJumpToOriginalPost(first1, id, arg2, arg3) {
-  let isForumPostResult = first1.isForumPost();
+export function shouldJumpToOriginalPost(isForumPost, id, jumpTargetId, arg3) {
+  let isForumPostResult = isForumPost.isForumPost();
   if (isForumPostResult) {
-    isForumPostResult = SnowflakeUtilsDefault.castChannelIdAsMessageId(id) === arg2.jumpTargetId;
+    isForumPostResult = SnowflakeUtilsDefault.castChannelIdAsMessageId(id) === jumpTargetId.jumpTargetId;
   }
   if (isForumPostResult) {
     isForumPostResult = !arg3;

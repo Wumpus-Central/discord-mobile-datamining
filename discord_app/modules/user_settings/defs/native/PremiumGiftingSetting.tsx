@@ -1,5 +1,4 @@
 // discord_app/modules/user_settings/defs/native/PremiumGiftingSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import BillingPlatformUtils from "../../../device/BillingPlatformUtils.tsx";
@@ -10,91 +9,34 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(558);
-const ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useCanNavigateToPaymentSetting() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t() {
-          const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-          let flag = !isPaymentsBlocked;
-          if (isPaymentsBlocked) {
-            openBlockedPaymentsCountryActionSheetDefault();
-            flag = false;
-          }
-          return flag;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return first;
-    }
-  : function useCanNavigateToPaymentSetting() {
-      return noop.useCallback(() => {
-        const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-        let flag = !isPaymentsBlocked;
-        if (isPaymentsBlocked) {
-          openBlockedPaymentsCountryActionSheetDefault();
-          flag = false;
-        }
-        return flag;
-      }, []);
-    };
-const SettingBuilders = fn(11302);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function usePremiumGiftingSettingTrailing() {
-      const cResult = c.c(2);
-      const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
-      if (cResult[0] !== unseenOutboundPromotions.length) {
-        const obj3 = { value: unseenOutboundPromotions.length };
-        const tmp6 = jsx(native.Badge, { value: unseenOutboundPromotions.length });
-        cResult[0] = unseenOutboundPromotions.length;
-        cResult[1] = tmp6;
-        let tmp4 = tmp6;
-      } else {
-        tmp4 = cResult[1];
-      }
-      return tmp4;
-    }
-  : function usePremiumGiftingSettingTrailing() {
-      const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
-      return jsx(native.Badge, { value: unseenOutboundPromotions.length });
-    };
+const SettingBuilders = fn(11505);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(13165).GiftIcon,
+  IconComponent: fn(13315).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },
-  usePreNavigationAction: tmp2,
-  useTrailing: ReactCompilerGating.isReactCompilerEnabled()
-    ? function usePremiumGiftingSettingTrailing() {
-        const cResult = c.c(2);
-        const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
-        if (cResult[0] !== unseenOutboundPromotions.length) {
-          const obj3 = { value: unseenOutboundPromotions.length };
-          const tmp6 = jsx(native.Badge, { value: unseenOutboundPromotions.length });
-          cResult[0] = unseenOutboundPromotions.length;
-          cResult[1] = tmp6;
-          let tmp4 = tmp6;
-        } else {
-          tmp4 = cResult[1];
-        }
-        return tmp4;
+  usePreNavigationAction: function useCanNavigateToPaymentSetting() {
+    return noop.useCallback(() => {
+      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+      let flag = !isPaymentsBlocked;
+      if (isPaymentsBlocked) {
+        openBlockedPaymentsCountryActionSheetDefault();
+        flag = false;
       }
-    : function usePremiumGiftingSettingTrailing() {
-        const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
-        return jsx(native.Badge, { value: unseenOutboundPromotions.length });
-      },
+      return flag;
+    }, []);
+  },
+  useTrailing: function usePremiumGiftingSettingTrailing() {
+    const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
+    return jsx(native.Badge, { value: unseenOutboundPromotions.length });
+  },
   screen: {
-    route: fn(1084).UserSettingsSections.PREMIUM_GIFTING,
+    route: fn(1072).UserSettingsSections.PREMIUM_GIFTING,
     getComponent() {
       return require("UserSettingsPremiumGifting").default;
     },

@@ -21,12 +21,12 @@ function b64ToProto(arg0, arg1) {
     }
   }
 }
-const ZERO_STRING_GUILD_ID = fn(1084).ZERO_STRING_GUILD_ID;
+const ZERO_STRING_GUILD_ID = fn(1072).ZERO_STRING_GUILD_ID;
 let obj = {
-  [PRELOADED_USER_SETTINGS]: fn(1208).PreloadedUserSettings,
-  [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1244).FrecencyUserSettings,
+  [PRELOADED_USER_SETTINGS]: fn(1197).PreloadedUserSettings,
+  [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1233).FrecencyUserSettings,
 };
-({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = fn(1094).UserSettingsTypes);
+({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = fn(1082).UserSettingsTypes);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
 

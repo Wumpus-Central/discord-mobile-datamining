@@ -2,18 +2,18 @@
 import inject from "inject.tsx";
 import VideoQualityManager from "../VideoQualityManager.tsx";
 import discord_common_BaseConnectionEvent from "../BaseConnectionEvent.tsx";
-import _modDef5795 from "../../../../../_runtime/metro/05795__.js";
+import _modDef5802 from "../../../../../_runtime/metro/05802__.js";
 import VideoCodecUtils from "../utils/VideoCodecUtils.tsx";
-import _modDef5842 from "../../../../../_runtime/metro/05842__.js";
+import _modDef5849 from "../../../../../_runtime/metro/05849__.js";
 import discord_common_VoiceEngine from "VoiceEngine.tsx";
-import reduceDefault from "../../../../../_runtime/05844_reduce.js";
-import _modDef5847 from "../../../../../_runtime/metro/05847__.js";
+import reduceDefault from "../../../../../_runtime/05851_reduce.js";
+import _modDef5854 from "../../../../../_runtime/metro/05854__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import BaseConnection from "../BaseConnection.tsx";
 
 require = fn;
-let Constants = fn(5756);
+let Constants = fn(5763);
 ({
   StatsFilter: hasOwnProperty,
   ExperimentFlags: metroRequire,
@@ -23,7 +23,7 @@ let Constants = fn(5756);
   MediaTypes: c10,
   SIMULCAST_HQ_QUALITY: closure_11,
 } = Constants);
-Constants = fn(5779);
+Constants = fn(5786);
 ({
   NATIVE_MODE_VALUES: closure_12,
   InputModes: map1,
@@ -250,7 +250,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5795(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5802(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -349,7 +349,7 @@ class Connection extends tmp4 {
         const conn = closure_0.conn;
         const obj = { encodingVoiceBitRate: null };
         const _Math = Math;
-        obj.encodingVoiceBitRate = Math.max(closure_2_23, closure_0.voiceBitrate);
+        obj.encodingVoiceBitRate = Math.max(__initData3, closure_0.voiceBitrate);
         conn.setTransportOptions(obj);
         closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.SoundshareAttached);
       }
@@ -420,9 +420,9 @@ class Connection extends tmp4 {
               if (diff1 >= 0) {
                 closure_0.emit(
                   discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate,
-                  100 * _modDef5847(diff1 / (diff + diff1), 0, 1),
+                  100 * _modDef5854(diff1 / (diff + diff1), 0, 1),
                 );
-                const tmp6 = _modDef5847(diff1 / (diff + diff1), 0, 1);
+                const tmp6 = _modDef5854(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -610,7 +610,7 @@ prototype["initialize"] = function initialize(address) {
   ];
   address.streamParameters = items;
   address.context = this.context;
-  const voiceEngine = createVoiceConnection(2014).getVoiceEngine();
+  const voiceEngine = createVoiceConnection(2009).getVoiceEngine();
   if (null != voiceEngine.createOwnStreamConnectionWithOptions) {
     if (self.context !== constants5.STREAM) {
       const createVoiceConnectionWithOptions = voiceEngine.createVoiceConnectionWithOptions;
@@ -985,7 +985,7 @@ prototype["initialize"] = function initialize(address) {
     maxBitrate: 64000,
     soundshare: this.context === constants5.STREAM,
   };
-  let obj2 = createVoiceConnection(2014);
+  let obj2 = createVoiceConnection(2009);
 };
 prototype["setCodecs"] = function setCodecs(OPUS, H264, context) {
   const self = this;
@@ -1019,7 +1019,7 @@ prototype["getStats"] = function getStats() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -1131,7 +1131,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef5842(sorted, sorted1);
+  _modDef5849(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1334,9 +1334,9 @@ prototype["getLocalVolume"] = function getLocalVolume(arg0) {
   let tmp2 = this.localVolumes[arg0];
   if (null != tmp2) {
     if (null == tmp2) {
-      tmp2 = guild;
+      tmp2 = __initData;
     }
-    return tmp2 / guild;
+    return tmp2 / __initData;
   }
 };
 prototype["setLocalVolume"] = function setLocalVolume(arg0, arg1) {
@@ -1384,7 +1384,7 @@ prototype["setVoiceBitRate"] = function setVoiceBitRate(voiceBitrate) {
     let bound = voiceBitrate;
     if (self.soundshareActive) {
       const _Math = Math;
-      bound = Math.max(closure_1_23, voiceBitrate);
+      bound = Math.max(__initData3, voiceBitrate);
     }
     const conn = self.conn;
     const obj = { encodingVoiceBitRate: bound };
@@ -1899,7 +1899,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(widt
 prototype["setSDP"] = function setSDP() {};
 prototype["setRemoteVideoSinkWants"] = function setRemoteVideoSinkWants(_remoteVideoSinkWants) {
   this.remoteVideoSinkWants = _remoteVideoSinkWants;
-  this.updateVideoQuality(React6);
+  this.updateVideoQuality(React7);
 };
 prototype["setLocalVideoSinkWants"] = function setLocalVideoSinkWants(localVideoSinkWants) {
   const self = this;
@@ -2012,10 +2012,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "r" };
+        return { v: "getCurrentUser" };
       } else {
         const items = [];
-        if (!_modDef5842(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5849(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;

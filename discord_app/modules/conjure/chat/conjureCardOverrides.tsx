@@ -3,8 +3,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureCardOverrides.tsx");
 
-export function conjureCardExpanded(c14, render_id, set) {
-  value = c14.get(render_id);
+export function conjureCardExpanded(c15, render_id, set) {
+  value = c15.get(render_id);
   if (value == null) {
     value = !set;
   }

@@ -1,5 +1,7 @@
 // discord_app/modules/html_parser/index.tsx
-import _mod9371 from "../../../_runtime/metro/09371__.js";
+import _mod9386 from "../../../_runtime/metro/09386__.js";
+import HTMLParserRunUtils from "HTMLParserRunUtils.tsx";
+import HTMLParserLinkUtils from "HTMLParserLinkUtils.tsx";
 import HTMLParserConstants from "HTMLParserConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -198,19 +200,30 @@ function trimTrailingLineIndentation(runs) {
     }
   }
 }
-function appendRun(trailingNewlines, text) {
-  let tmp = item10025;
-  if (item10025 === undefined) {
-    tmp = React6;
+function getBreakStyle(spacingLink) {
+  if (null != spacingLink) {
+    const obj = {};
+    const merged = Object.assign(React7);
+    obj.link = spacingLink;
+    let tmp = obj;
+  } else {
+    tmp = React7;
   }
-  const index = text.indexOf("\n");
+  return tmp;
+}
+function appendRun(trailingNewlines, repeatResult) {
+  let tmp = breakStyle;
+  if (breakStyle === undefined) {
+    tmp = React7;
+  }
+  const index = repeatResult.indexOf("\n");
   if (trailingNewlines.trailingNewlines > 0) {
     if (-1 !== index) {
       let num3 = 0;
       let flag = true;
       if (0 < index) {
         while (true) {
-          let charCodeAtResult = text.charCodeAt(num3);
+          let charCodeAtResult = repeatResult.charCodeAt(num3);
           let tmp5 = charCodeAtResult === constants2.SPACE;
           if (!tmp5) {
             tmp5 = charCodeAtResult === constants2.TAB;
@@ -236,67 +249,50 @@ function appendRun(trailingNewlines, text) {
       }
     }
   }
-  const arr = collapseBlankLines(text, trailingNewlines.trailingNewlines);
+  const arr = collapseBlankLines(repeatResult, trailingNewlines.trailingNewlines);
   let substr = arr;
   if (0 === trailingNewlines.runs.length) {
     substr = arr.slice(findTextStart(arr));
   }
   if (0 !== substr.length) {
-    if (null != trailingNewlines.runs[trailingNewlines.runs.length - 1]) {
-      if (tmp26.bold === tmp.bold) {
-        if (tmp26.italic === tmp.italic) {
-          if (tmp26.underline === tmp.underline) {
-            if (tmp26.heading === tmp.heading) {
-              if (tmp26.link === tmp.link) {
-                tmp26.text = tmp26.text + substr;
-              }
-              let diff = substr.length - 1;
-              let num4 = 0;
-              let num5 = 0;
-              if (0 <= diff) {
-                while (true) {
-                  if (substr.charCodeAt(diff) === constants2.LINE_FEED) {
-                    let sum1 = num4 + 1;
-                  } else {
-                    let charCodeAtResult1 = substr.charCodeAt(diff);
-                    let tmp20 =
-                      charCodeAtResult1 === constants2.SPACE ||
-                      charCodeAtResult1 === constants2.TAB ||
-                      charCodeAtResult1 === constants2.FORM_FEED;
-                    sum1 = num4;
-                    num5 = num4;
-                    if (!tmp20) {
-                      break;
-                    }
-                  }
-                  diff = diff - 1;
-                  num4 = sum1;
-                  num5 = sum1;
-                }
-              }
-              let bound = num5;
-              if (findTextStart(substr) === substr.length) {
-                const _Math = Math;
-                bound = Math.min(constants.PARAGRAPH, trailingNewlines.trailingNewlines + num5);
-              }
-              trailingNewlines.trailingNewlines = bound;
-            }
+    HTMLParserRunUtils.mergeRun(trailingNewlines.runs, substr, tmp);
+    let diff = substr.length - 1;
+    let num5 = 0;
+    let num4 = 0;
+    if (0 <= diff) {
+      while (true) {
+        if (substr.charCodeAt(diff) === constants2.LINE_FEED) {
+          let sum1 = num5 + 1;
+        } else {
+          let charCodeAtResult1 = substr.charCodeAt(diff);
+          let tmp15 =
+            charCodeAtResult1 === constants2.SPACE ||
+            charCodeAtResult1 === constants2.TAB ||
+            charCodeAtResult1 === constants2.FORM_FEED;
+          sum1 = num5;
+          num4 = num5;
+          if (!tmp15) {
+            break;
           }
         }
+        diff = diff - 1;
+        num5 = sum1;
+        num4 = sum1;
       }
     }
-    const runs = trailingNewlines.runs;
-    const obj = {};
-    const merged = Object.assign(tmp);
-    obj.text = substr;
-    runs.push(obj);
+    let bound = num4;
+    if (findTextStart(substr) === substr.length) {
+      const _Math = Math;
+      bound = Math.min(constants.PARAGRAPH, trailingNewlines.trailingNewlines + num4);
+    }
+    trailingNewlines.trailingNewlines = bound;
   }
 }
 function flushSpacing(pendingBreaks) {
   if (0 === pendingBreaks.pendingBreaks) {
     const held = pendingBreaks.held;
-    for (const item10025 of held) {
-      let tmp9 = appendRun(arg0, item10025.text, item10025);
+    for (const item10026 of held) {
+      let tmp11 = appendRun(arg0, item10026.text, item10026);
       continue;
     }
   } else if (pendingBreaks.runs.length > 0) {
@@ -305,7 +301,12 @@ function flushSpacing(pendingBreaks) {
     }
     const repeat = "\n".repeat;
     const _Math = Math;
-    appendRun(pendingBreaks, "\n".repeat(Math.max(0, pendingBreaks.pendingBreaks - pendingBreaks.trailingNewlines)));
+    appendRun(
+      pendingBreaks,
+      "\n".repeat(Math.max(0, pendingBreaks.pendingBreaks - pendingBreaks.trailingNewlines)),
+      getBreakStyle(pendingBreaks.spacingLink),
+    );
+    const repeatResult = "\n".repeat(Math.max(0, pendingBreaks.pendingBreaks - pendingBreaks.trailingNewlines));
   }
   pendingBreaks.held = [];
   pendingBreaks.pendingBreaks = 0;
@@ -338,6 +339,7 @@ function appendText(atBoundary, substr) {
   if (tmp2 > num) {
     flushSpacing(atBoundary);
     appendRun(atBoundary, substr.slice(num, tmp2), obj);
+    atBoundary.spacingLink = obj.link;
     atBoundary.afterMarker = false;
     atBoundary.atBoundary = false;
   }
@@ -349,88 +351,43 @@ function appendText(atBoundary, substr) {
     held.push(obj6);
   }
 }
-({
-  BARE_UNKNOWN_TAG: c2,
-  BLOCK_BREAKS: c3,
-  BULLET: closure_4,
-  DEFAULT_MAX_HTML_LENGTH: hasOwnProperty,
-  HIGH_SURROGATE: metroRequire,
-  HTML_WHITESPACE_CODES: closure_7,
-  KNOWN_UNSUPPORTED_HTML_TAGS: closure_8,
-  PLAIN_STYLE: closure_9,
-  SLASH_PREFIXED_MARKER: c10,
-  SLASH_SEPARATED_UNKNOWN_TAG: closure_11,
-  TAG_BEHAVIORS: closure_12,
-  TAG_NAME: map1,
-  VOID_HTML_TAGS: closure_14,
-} = HTMLParserConstants);
-let result = size.fileFinishedImporting("modules/html_parser/index.tsx");
-
-export const DEFAULT_MAX_HTML_LENGTH = HTMLParserConstants.DEFAULT_MAX_HTML_LENGTH;
-export function parseHTMLFromText(summaryLocalized) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  let maxLength = obj.maxLength;
-  if (maxLength === undefined) {
-    maxLength = closure_5;
-  }
-  if (!summaryLocalized.includes("<")) {
-    if (!summaryLocalized.includes("&")) {
-      let replaced = summaryLocalized;
-      if (summaryLocalized.includes("\r")) {
-        replaced = summaryLocalized.replace(/\r\n?/g, "\n");
-      }
-      const tmpResult = collapseBlankLines(replaced, 0);
-      const tmp4 = findTextStart(tmpResult);
-      const tmp6 = findTextEnd(tmpResult, tmp4);
-      if (tmp6 > tmp4) {
-        let obj2 = { text: tmpResult.slice(tmp4, tmp6) };
-        let merged = Object.assign(closure_9);
-        let items = [obj2];
-        let items1 = items;
-      } else {
-        items1 = [];
-      }
-      return items1;
-    }
-  }
-  const bound = Math.max(0, Math.floor(maxLength));
-  let diff = bound;
-  if (regex2.test(summaryLocalized.charAt(bound - 1))) {
-    diff = bound - 1;
-  }
-  const str4 = summaryLocalized.slice(0, diff);
-  let replaced1 = str4;
-  if (str4.includes("\r")) {
-    replaced1 = str4.replace(/\r\n?/g, "\n");
-  }
-  let obj3 = {
-    markup: replaced1,
-    runs: [],
-    styles: { bold: 0, italic: 0, underline: 0 },
-    links: [],
-    lists: [],
+function parseMarkupRuns(markup, keepInvalidAnchors) {
+  let obj = {
+    markup,
+    keepInvalidAnchors: null,
+    runs: null,
+    styles: null,
+    links: null,
+    lists: null,
     itemDepth: 0,
     hiddenDepth: 0,
     ending: false,
-    held: [],
+    held: null,
     pendingBreaks: 0,
     atBoundary: true,
     afterMarker: false,
     trailingNewlines: 0,
   };
-  const Parser = obj3(9371).Parser;
+  keepInvalidAnchors = undefined;
+  if (keepInvalidAnchors != null) {
+    keepInvalidAnchors = keepInvalidAnchors.keepInvalidAnchors;
+  }
+  obj.keepInvalidAnchors = true === keepInvalidAnchors;
+  obj.runs = [];
+  obj.styles = { bold: 0, italic: 0, underline: 0 };
+  obj.links = [];
+  obj.lists = [];
+  obj.held = [];
+  const Parser = obj(9386).Parser;
   const fn = () => HermesBuiltin.applyArguments(new.target, new.target);
   class fn extends Parser {
     onclosetag(arg0, arg1) {
       tmp = closure_0;
       markup = closure_0.markup;
-      str = markup.slice(summaryLocalized, arg1);
+      str = markup.slice(markup, keepInvalidAnchors);
       str2 = str.toLowerCase();
       closure_1 = undefined;
-      onclosetagResult = super.onclosetag(summaryLocalized, arg1);
+      onclosetagResult = super.onclosetag(markup, keepInvalidAnchors);
       replaced = str2.replace(/\/+$/, "");
       if (closure_0.hiddenDepth <= 0) {
         tmp10 = closure_1;
@@ -443,7 +400,7 @@ export function parseHTMLFromText(summaryLocalized) {
               if (!closure_8.has(replaced)) {
                 markup1 = tmp.markup;
                 str3 = ">";
-                index = markup1.indexOf(">", arg1);
+                index = markup1.indexOf(">", keepInvalidAnchors);
                 num = -1;
                 if (-1 !== index) {
                   tmp8 = appendText;
@@ -463,12 +420,12 @@ export function parseHTMLFromText(summaryLocalized) {
   const fn1 = new fn(
     {
       onopentagname() {
-        obj3.unfinishedTag = fn1.startIndex;
+        obj.unfinishedTag = fn1.startIndex;
       },
       onopentag(br, attribs) {
-        obj3.unfinishedTag = undefined;
-        value = __initData.get(br);
-        if (obj3.hiddenDepth <= 0) {
+        obj.unfinishedTag = undefined;
+        value = closure_2_12.get(br);
+        if (obj.hiddenDepth <= 0) {
           let hidden;
           if (value != null) {
             hidden = value.hidden;
@@ -492,24 +449,16 @@ export function parseHTMLFromText(summaryLocalized) {
               }
               if (true === value.link) {
                 const links = tmp.links;
-                links.push(
-                  (function getLink(href) {
-                    if (null != href) {
-                      try {
-                        const _URL = URL;
-                        const uRL = new URL(href);
-                        const items = ["http:", "https:", "mailto:"];
-                        href = undefined;
-                        if (items.includes(uRL.protocol)) {
-                          href = uRL.href;
-                        }
-                        return href;
-                      } catch (err) {
-                        return tmp;
-                      }
-                    }
-                  })(attribs.href),
-                );
+                let link = HTMLParserLinkUtils.getLink(attribs.href);
+                if (link == null) {
+                  let str;
+                  if (tmp.keepInvalidAnchors) {
+                    str = "";
+                  }
+                  link = str;
+                }
+                links.push(link);
+                tmp.spacingLink = undefined;
               }
               if (null != value.heading) {
                 tmp.heading = value.heading;
@@ -524,12 +473,12 @@ export function parseHTMLFromText(summaryLocalized) {
                   flushSpacing(tmp);
                   let ordered;
                   if (tmp.lists[tmp.lists.length - 1] != null) {
-                    ordered = tmp58.ordered;
+                    ordered = tmp66.ordered;
                   }
                   if (true === ordered) {
-                    const sum = tmp58.index + 1;
-                    tmp58.index = sum;
-                    let text = `${tmp48}. `;
+                    const sum = tmp66.index + 1;
+                    tmp66.index = sum;
+                    let text = `${tmp56}. `;
                   } else {
                     text = React4;
                   }
@@ -540,30 +489,38 @@ export function parseHTMLFromText(summaryLocalized) {
               } else {
                 flushSpacing(tmp);
                 if (null == tmp.heading) {
-                  tmp55(tmp, "\n", React6);
+                  if (null != tmp.links[tmp.links.length - 1]) {
+                    const obj4 = {};
+                    const merged = Object.assign(React7);
+                    obj4.link = tmp39;
+                    let tmp40 = obj4;
+                  } else {
+                    tmp40 = React7;
+                  }
+                  tmp63(tmp, "\n", tmp40);
                   tmp.atBoundary = true;
                   tmp.afterMarker = false;
                 }
-                obj3 = {
+                const obj5 = {
                   bold: tmp.styles.bold > 0 || null != tmp.heading,
                   italic: tmp.styles.italic > 0,
                   underline: tmp.styles.underline > 0,
                 };
                 if (null != tmp.heading) {
-                  const obj4 = { heading: tmp.heading };
-                  let obj5 = obj4;
-                } else {
-                  obj5 = {};
-                }
-                const merged = Object.assign(obj5);
-                if (null != tmp.links[tmp.links.length - 1]) {
-                  const obj6 = { link: tmp36 };
+                  const obj6 = { heading: tmp.heading };
                   let obj7 = obj6;
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp37 = tmp.styles.bold > 0 || null != tmp.heading;
+                if (null != tmp.links[tmp.links.length - 1]) {
+                  const obj8 = { link: tmp44 };
+                  let obj9 = obj8;
+                } else {
+                  obj9 = {};
+                }
+                const merged2 = Object.assign(obj9);
+                const tmp45 = tmp.styles.bold > 0 || null != tmp.heading;
               }
             } else {
               const markup1 = tmp.markup;
@@ -592,10 +549,10 @@ export function parseHTMLFromText(summaryLocalized) {
                   } else {
                     const markup2 = tmp.markup;
                     if (markup2.includes("</")) {
-                      const markup = tmp.markup;
+                      markup = tmp.markup;
                       const _Map2 = Map;
                       const map = new Map();
-                      const obj = {
+                      obj = {
                         onclosetag(arg0) {
                           const startIndex = parser.startIndex;
                           const formatted = markup.slice(startIndex, startIndex + arg0.length + 2).toLowerCase();
@@ -605,7 +562,7 @@ export function parseHTMLFromText(summaryLocalized) {
                           const str = markup.slice(startIndex, startIndex + arg0.length + 2);
                         },
                       };
-                      const parser = new _mod9371.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
+                      const parser = new _mod9386.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
                       parser.end(markup);
                       map1 = map;
                     } else {
@@ -623,97 +580,98 @@ export function parseHTMLFromText(summaryLocalized) {
             }
           }
         }
-        obj3.hiddenDepth = obj3.hiddenDepth + 1;
+        obj.hiddenDepth = obj.hiddenDepth + 1;
       },
       onclosetag(arg0, arg1) {
         if (!arg1) {
           closure_1 = arg0;
         }
-        if (!obj3.ending) {
-          if (obj3.hiddenDepth > 0) {
-            obj3.hiddenDepth = obj3.hiddenDepth - 1;
+        if (!obj.ending) {
+          if (obj.hiddenDepth > 0) {
+            obj.hiddenDepth = obj.hiddenDepth - 1;
           } else {
-            value = __initData.get(arg0);
+            value = closure_2_12.get(arg0);
             if (null != value) {
               let LINE = value.breaks;
               if (null != LINE) {
                 {
-                  if (obj3.itemDepth > 0) {
+                  if (obj.itemDepth > 0) {
                     LINE = constants.LINE;
                   }
-                  obj3.pendingBreaks = Math.max(obj3.pendingBreaks, LINE);
+                  obj.pendingBreaks = Math.max(obj.pendingBreaks, LINE);
                 }
-                obj3.atBoundary = true;
-                obj3.afterMarker = false;
+                obj.atBoundary = true;
+                obj.afterMarker = false;
               }
               if (null != value.style) {
-                const styles = obj3.styles;
+                const styles = obj.styles;
                 const style = value.style;
                 styles[style] = styles[style] - 1;
               }
               if (true === value.link) {
-                const links = obj3.links;
+                const links = obj.links;
                 links.pop();
+                obj.spacingLink = undefined;
               }
               if (null != value.heading) {
-                obj3.heading = undefined;
+                obj.heading = undefined;
               }
               if (null != value.list) {
-                const lists = obj3.lists;
+                const lists = obj.lists;
                 lists.pop();
               }
               if (true === value.item) {
-                obj3.itemDepth = obj3.itemDepth - 1;
+                obj.itemDepth = obj.itemDepth - 1;
               }
             }
           }
         }
       },
       oncomment() {
-        const markup = obj3.markup;
+        markup = obj.markup;
         const substr = markup.slice(fn1.startIndex, fn1.endIndex + 1);
-        let isMatch = 0 === obj3.hiddenDepth;
+        let isMatch = 0 === obj.hiddenDepth;
         if (isMatch) {
           isMatch = regex3.test(substr);
         }
         if (isMatch) {
-          appendText(obj3, substr);
+          appendText(obj, substr);
         }
       },
       ontext(substr) {
-        if (0 === obj3.hiddenDepth) {
+        if (0 === obj.hiddenDepth) {
           appendText(tmp, substr);
         }
       },
     },
     { decodeEntities: true, recognizeSelfClosing: true },
   );
-  fn1.write(obj3.markup);
-  obj3.ending = true;
+  fn1.write(markup);
+  obj.ending = true;
   fn1.end();
-  closure_129_0 = obj3;
-  ({ markup, unfinishedTag } = obj3);
+  closure_129_0 = obj;
+  ({ markup, unfinishedTag } = obj);
   if (unfinishedTag == null) {
     unfinishedTag = fn1.startIndex;
   }
-  const str6 = markup.slice(unfinishedTag);
-  let isMatch = "" === str6;
+  let str = markup.slice(unfinishedTag);
+  let isMatch = "" === str;
   if (!isMatch) {
-    isMatch = /^<\/?br\/?$/i.test(str6);
-    let obj6 = /^<\/?br\/?$/i;
+    isMatch = /^<\/?br\/?$/i.test(str);
+    let obj4 = /^<\/?br\/?$/i;
   }
   if (!isMatch) {
-    let obj5 = {
+    let obj3 = {
       ontext(substr) {
-        appendText(obj3, substr);
+        appendText(obj, substr);
       },
     };
-    let parser = new obj3(9371).Parser(obj5, { decodeEntities: true });
-    parser.end(str6.replace(/</g, "&lt;"));
+    let parser = new obj(9386).Parser(obj3, { decodeEntities: true });
+    parser.end(str.replace(/</g, "&lt;"));
   }
-  const runs = obj3.runs;
+  const runs = obj.runs;
   if (runs.length > 0) {
-    let text = tmp23.text;
+    let text = tmp12.text;
     runs[runs.length - 1].text = text.slice(0, findTextEnd(runs[runs.length - 1].text));
     while (runs[runs.length - 1].text.length <= 0) {
       let arr = runs.pop();
@@ -723,4 +681,107 @@ export function parseHTMLFromText(summaryLocalized) {
     }
   }
   return runs;
+}
+({
+  BARE_UNKNOWN_TAG: c2,
+  BLOCK_BREAKS: c3,
+  BULLET: closure_4,
+  DEFAULT_MAX_HTML_LENGTH: hasOwnProperty,
+  HIGH_SURROGATE: metroRequire,
+  HTML_WHITESPACE_CODES: closure_7,
+  KNOWN_UNSUPPORTED_HTML_TAGS: closure_8,
+  PLAIN_STYLE: closure_9,
+  SLASH_PREFIXED_MARKER: c10,
+  SLASH_SEPARATED_UNKNOWN_TAG: closure_11,
+  TAG_BEHAVIORS: closure_12,
+  TAG_NAME: map1,
+  VOID_HTML_TAGS: closure_14,
+} = HTMLParserConstants);
+let result = size.fileFinishedImporting("modules/html_parser/index.tsx");
+
+export const DEFAULT_MAX_HTML_LENGTH = HTMLParserConstants.DEFAULT_MAX_HTML_LENGTH;
+export function parseHTMLFromText(arr, arg1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let maxLength = obj.maxLength;
+  if (maxLength === undefined) {
+    maxLength = hasOwnProperty;
+  }
+  let flag = obj.parseTextLinks;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let hasItem = arr.includes("<");
+  if (!hasItem) {
+    hasItem = arr.includes("&");
+  }
+  if (flag) {
+    const _Math3 = Math;
+    const _Math4 = Math;
+    const bound = Math.max(0, Math.floor(maxLength));
+    let diff = bound;
+    if (regex2.test(arr.charAt(bound - 1))) {
+      diff = bound - 1;
+    }
+    const str7 = arr.slice(0, diff);
+    let str9 = str7;
+    if (str7.includes("\r")) {
+      str9 = str7.replace(/\r\n?/g, "\n");
+    }
+    if (hasItem) {
+      let items1 = parseMarkupRuns(str9, { keepInvalidAnchors: true });
+    } else {
+      let replaced = str9;
+      if (str9.includes("\r")) {
+        replaced = str9.replace(/\r\n?/g, "\n");
+      }
+      const tmp21Result = collapseBlankLines(replaced, 0);
+      const tmp24 = findTextStart(tmp21Result);
+      const tmp26 = findTextEnd(tmp21Result, tmp24);
+      if (tmp26 > tmp24) {
+        const obj2 = { text: tmp21Result.slice(tmp24, tmp26) };
+        const merged = Object.assign(React7);
+        const items = [obj2];
+        items1 = items;
+      } else {
+        items1 = [];
+      }
+    }
+    return HTMLParserLinkUtils.addTextLinks(items1);
+  } else {
+    if (hasItem) {
+      const _Math = Math;
+      const _Math2 = Math;
+      const bound1 = Math.max(0, Math.floor(maxLength));
+      let diff1 = bound1;
+      if (regex2.test(arr.charAt(bound1 - 1))) {
+        diff1 = bound1 - 1;
+      }
+      const str4 = arr.slice(0, diff1);
+      let replaced1 = str4;
+      if (str4.includes("\r")) {
+        replaced1 = str4.replace(/\r\n?/g, "\n");
+      }
+      let items3 = parseMarkupRuns(replaced1);
+    } else {
+      let replaced2 = arr;
+      if (arr.includes("\r")) {
+        replaced2 = arr.replace(/\r\n?/g, "\n");
+      }
+      const tmp2Result = collapseBlankLines(replaced2, 0);
+      const tmp5 = findTextStart(tmp2Result);
+      const tmp7 = findTextEnd(tmp2Result, tmp5);
+      if (tmp7 > tmp5) {
+        const obj3 = { text: tmp2Result.slice(tmp5, tmp7) };
+        const merged1 = Object.assign(React7);
+        const items2 = [obj3];
+        items3 = items2;
+      } else {
+        items3 = [];
+      }
+    }
+    return items3;
+  }
 }

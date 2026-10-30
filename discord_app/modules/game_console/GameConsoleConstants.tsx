@@ -1,6 +1,6 @@
 // discord_app/modules/game_console/GameConsoleConstants.tsx
-import Constants from "../../Constants.tsx";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import ActivityGamePlatforms from "../../../discord_common/js/shared/shared-constants/ActivityGamePlatforms.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [OAuth2Scopes.OAuth2Scopes.VOICE, OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_READ, OAuth2Scopes.OAuth2Scopes.GUILDS, OAuth2Scopes.OAuth2Scopes.GUILDS_MEMBERS_READ, OAuth2Scopes.OAuth2Scopes.IDENTIFY, OAuth2Scopes.OAuth2Scopes.CONNECTIONS, OAuth2Scopes.OAuth2Scopes.ACTIVITIES_READ];
@@ -8,8 +8,7 @@ const items1 = [OAuth2Scopes.OAuth2Scopes.VOICE, OAuth2Scopes.OAuth2Scopes.DM_CH
 let obj = { PLAYSTATION: "playstation", XBOX: "xbox" };
 const items2 = [, ];
 ({ XBOX: arr3[0], PLAYSTATION: arr3[1] } = obj);
-const items3 = [, ];
-({ XBOX: arr4[0], PS5: arr4[1] } = Constants.ActivityGamePlatforms);
+const items3 = [ActivityGamePlatforms.ActivityGamePlatforms.XBOX, ActivityGamePlatforms.ActivityGamePlatforms.PLAYSTATION_5];
 const set = new Set(items2);
 const obj2 = { CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED: 270000, [270000]: "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED", CONSOLE_DEVICE_UNAVAILABLE: 270001, [270001]: "CONSOLE_DEVICE_UNAVAILABLE", CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS: 270002, [270002]: "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS", CONSOLE_DEVICE_COMMUNICATION_RESTRICTED: 270003, [270003]: "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED", CONSOLE_DEVICE_INVALID_POWER_MODE: 270004, [270004]: "CONSOLE_DEVICE_INVALID_POWER_MODE", CONSOLE_DEVICE_ACCOUNT_LINK_ERROR: 270005, [270005]: "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR", CONSOLE_DEVICE_MAX_MEMBERS_REACHED: 270006, [270006]: "CONSOLE_DEVICE_MAX_MEMBERS_REACHED", CONSOLE_DEVICE_BAD_COMMAND: 270007, [270007]: "CONSOLE_DEVICE_BAD_COMMAND" };
 const items4 = [obj2.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED];

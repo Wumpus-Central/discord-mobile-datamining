@@ -6,11 +6,13 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const ContentDismissActionType = fn(4854).ContentDismissActionType;
-const UserSettingsDelay = fn(1094).UserSettingsDelay;
-const ReactCompilerGating = fn(558);
-function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const UserSettingsDelay = fn(1082).UserSettingsDelay;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
+
+export function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
   const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(guildId);
   let hasBitResult = null != dismissedGuildContent;
   if (hasBitResult) {
@@ -18,59 +20,22 @@ function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildI
   }
   return hasBitResult;
 }
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
-
-export { isContentDismissed };
-export const useIsContentDismissed = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsContentDismissed(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(4);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [UserSettingsProtoStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === arg0) {
-        if (cResult[2] === arg1) {
-          let tmp6 = cResult[3];
-        }
-        return tmp(504).useStateFromStores(first, tmp6);
-      }
-      const fn = function u() {
-        const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_1);
-        let hasBitResult = null != dismissedGuildContent;
-        if (hasBitResult) {
-          hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, closure_0);
-        }
-        return hasBitResult;
-      };
-      cResult[1] = arg0;
-      cResult[2] = arg1;
-      cResult[3] = fn;
-      tmp6 = fn;
-      let obj = require("c");
-      tmp = _require;
+export function useIsContentDismissed(arg0, arg1) {
+  _require = arg0;
+  closure_1 = arg1;
+  const items = [UserSettingsProtoStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_1);
+    let hasBitResult = null != dismissedGuildContent;
+    if (hasBitResult) {
+      hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, closure_0);
     }
-  : function useIsContentDismissed(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const items = [UserSettingsProtoStore];
-      return require("initialize").useStateFromStores(items, () => {
-        const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_1);
-        let hasBitResult = null != dismissedGuildContent;
-        if (hasBitResult) {
-          hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, closure_0);
-        }
-        return hasBitResult;
-      });
-    };
-export function markContentAsDismissed(dc, guildId, arg2, AUTO_DISMISS) {
+    return hasBitResult;
+  });
+}
+export function markContentAsDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId, arg2, AUTO_DISMISS) {
   _require = true;
-  importDefault = dc;
+  importDefault = GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK;
   dependencyMap = guildId;
   const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(
     guildId,
@@ -92,7 +57,11 @@ export function markContentAsDismissed(dc, guildId, arg2, AUTO_DISMISS) {
   );
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    const obj3 = { type: tmp(4841).DismissibleGuildContent[dc], guild_id: guildId, action: null };
+    const obj3 = {
+      type: tmp(4842).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK],
+      guild_id: guildId,
+      action: null,
+    };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }

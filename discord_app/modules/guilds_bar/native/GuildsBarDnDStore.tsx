@@ -1,12 +1,9 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
-import c from "../../../../_runtime/00576_c.js";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4920 from "../../../../_runtime/metro/04920__.js";
+import _mod4924 from "../../../../_runtime/metro/04924__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
-import identity from "../../../../_runtime/metro/01266__.js";
-import "ReactCompilerGating";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import identity from "../../../../_runtime/metro/01255__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -19,17 +16,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "duration",
-    dropSpecs: "toCharArray$esjava$1",
+    overSpecs: "sa",
+    dropSpecs: "isArray",
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: 12,
-    scrollPosition: 12,
-    windowSize: null,
-    setStateShallow: null,
-    dropStart: 0,
-    dropComplete: "No Output Devices",
+    listInsets: 500,
+    scrollPosition: 1000,
+    windowSize: 60000,
+    setStateShallow: 3600000,
+    dropStart: 86400000,
+    dropComplete: 604800000,
   };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
@@ -47,7 +44,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (tmp[key10006] === arg0[key10006]) {
         continue;
       } else {
-        obj = closure_0(1271);
+        obj = closure_0(1260);
         let batchUpdatesResult = obj.batchUpdates(() => {
           const merged = Object.assign(closure_1);
           const merged1 = Object.assign(closure_0);
@@ -61,7 +58,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     ({ dropSpecs, gestureState } = gestureState());
     const tmp = gestureState();
     let obj2 = { category: "GuildsBarGesture", message: "dropStart started", data: null };
-    const obj = closure_1(1254);
+    const obj = closure_1(1243);
     obj2.data = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
@@ -71,9 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1271).batchUpdates(() =>
-        dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" }),
-      );
+      dropSpecs(1260).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "applicationId" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -86,7 +81,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           const result = gestureState.set(obj2);
         }
       }, 0);
-      const obj4 = dropSpecs(1271);
+      const obj4 = dropSpecs(1260);
     }
     const obj3 = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
   };
@@ -98,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "getCurrentUser" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -116,304 +111,138 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useItemDragState(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      const cResult = c.c(3);
-      if (cResult[0] === arg0) {
-        if (cResult[1] === arg1) {
-          let tmp4 = cResult[2];
-        }
-        return withEqualityFn(tmp4, _mod4920.shallow);
-      }
-      const fn = function s(arg0) {
-        ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
-        if (null == dragSpecs) {
-          if (null == dropSpecs) {
-            const obj2 = {
-              isDragTarget: false,
-              dragState: "duration",
-              overState: "toCharArray$esjava$1",
-              itemSize: null,
-              dragDropInProgress,
-            };
-            return obj2;
-          }
-        }
-        let tmp2 = !closure_1;
-        if (!closure_1) {
-          let id;
-          if (dragSpecs != null) {
-            id = dragSpecs.node.id;
-          }
-          let tmp5 = id === closure_0;
-          if (tmp5) {
-            let node;
-            if (overSpecs != null) {
-              node = overSpecs.node;
-            }
-            tmp5 = null != node;
-          }
-          if (!tmp5) {
-            let id1;
-            if (dropSpecs != null) {
-              id1 = dropSpecs.dragNode.id;
-            }
-            tmp5 = id1 === closure_0;
-          }
-          tmp2 = tmp5;
-        }
-        let tmp8 = !closure_1;
-        if (!closure_1) {
-          let id2;
-          if (overSpecs != null) {
-            id2 = overSpecs.node.id;
-          }
-          let tmp11 = id2 === closure_0;
-          if (!tmp11) {
-            let id3;
-            if (dropSpecs != null) {
-              id3 = dropSpecs.overNode.id;
-            }
-            tmp11 = id3 === tmp10;
-          }
-          tmp8 = tmp11;
-        }
-        const obj = { isDragTarget: tmp2, dragState: null, overState: null, itemSize: null, dragDropInProgress: null };
-        if (tmp2) {
-          let str = "dropping";
-          if (null == dropSpecs) {
-            str = "dragging";
-          }
-          const tmp13 = str;
-        }
-        obj.dragState = tmp13;
-        let tmp14;
-        if (tmp8) {
-          let overState;
-          if (dropSpecs != null) {
-            overState = dropSpecs.overState;
-          }
-          if (overState == null) {
-            let state;
-            if (overSpecs != null) {
-              state = overSpecs.state;
-            }
-            overState = state;
-          }
-          tmp14 = overState;
-        }
-        obj.overState = tmp14;
-        let num = 0;
-        if (tmp8) {
-          let num2;
-          if (dropSpecs != null) {
-            num2 = dropSpecs.itemSize;
-          }
-          if (num2 == null) {
-            let itemSize;
-            if (dragSpecs != null) {
-              itemSize = dragSpecs.itemSize;
-            }
-            num2 = itemSize;
-          }
-          if (num2 == null) {
-            num2 = 0;
-          }
-          num = num2;
-        }
-        obj.itemSize = num;
-        obj.dragDropInProgress = dragDropInProgress;
-        return obj;
-      };
-      cResult[0] = arg0;
-      cResult[1] = arg1;
-      cResult[2] = fn;
-      tmp4 = fn;
-    }
-  : function useItemDragState(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      return withEqualityFn((arg0) => {
-        ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
-        if (null == dragSpecs) {
-          if (null == dropSpecs) {
-            const obj2 = {
-              isDragTarget: false,
-              dragState: "duration",
-              overState: "toCharArray$esjava$1",
-              itemSize: null,
-              dragDropInProgress,
-            };
-            return obj2;
-          }
-        }
-        let tmp2 = !closure_1;
-        if (!closure_1) {
-          let id;
-          if (dragSpecs != null) {
-            id = dragSpecs.node.id;
-          }
-          let tmp5 = id === closure_0;
-          if (tmp5) {
-            let node;
-            if (overSpecs != null) {
-              node = overSpecs.node;
-            }
-            tmp5 = null != node;
-          }
-          if (!tmp5) {
-            let id1;
-            if (dropSpecs != null) {
-              id1 = dropSpecs.dragNode.id;
-            }
-            tmp5 = id1 === closure_0;
-          }
-          tmp2 = tmp5;
-        }
-        let tmp8 = !closure_1;
-        if (!closure_1) {
-          let id2;
-          if (overSpecs != null) {
-            id2 = overSpecs.node.id;
-          }
-          let tmp11 = id2 === closure_0;
-          if (!tmp11) {
-            let id3;
-            if (dropSpecs != null) {
-              id3 = dropSpecs.overNode.id;
-            }
-            tmp11 = id3 === tmp10;
-          }
-          tmp8 = tmp11;
-        }
-        const obj = { isDragTarget: tmp2, dragState: null, overState: null, itemSize: null, dragDropInProgress: null };
-        if (tmp2) {
-          let str = "dropping";
-          if (null == dropSpecs) {
-            str = "dragging";
-          }
-          const tmp13 = str;
-        }
-        obj.dragState = tmp13;
-        let tmp14;
-        if (tmp8) {
-          let overState;
-          if (dropSpecs != null) {
-            overState = dropSpecs.overState;
-          }
-          if (overState == null) {
-            let state;
-            if (overSpecs != null) {
-              state = overSpecs.state;
-            }
-            overState = state;
-          }
-          tmp14 = overState;
-        }
-        obj.overState = tmp14;
-        let num = 0;
-        if (tmp8) {
-          let num2;
-          if (dropSpecs != null) {
-            num2 = dropSpecs.itemSize;
-          }
-          if (num2 == null) {
-            let itemSize;
-            if (dragSpecs != null) {
-              itemSize = dragSpecs.itemSize;
-            }
-            num2 = itemSize;
-          }
-          if (num2 == null) {
-            num2 = 0;
-          }
-          num = num2;
-        }
-        obj.itemSize = num;
-        obj.dragDropInProgress = dragDropInProgress;
-        return obj;
-      }, _mod4920.shallow);
-    };
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 
 export default withEqualityFn;
 export { INITIAL_GESTURE_STATE };
-export const useItemDragState = tmp3;
-export const useFolderBGHeightOffset = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useFolderBGHeightOffset(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(2);
-      if (cResult[0] !== arg0) {
-        const fn = function s(dropSpecs) {
-          ({ dragSpecs, overSpecs } = dropSpecs);
-          let num = 0;
-          if (null == dropSpecs.dropSpecs) {
-            num = 0;
-            if (null != overSpecs) {
-              num = 0;
-              if (null != dragSpecs) {
-                num = 0;
-                if ("self" !== overSpecs.state) {
-                  num = 0;
-                  if (dragSpecs.node.type === GuildsNodeType.GUILD) {
-                    if (dragSpecs.node.parentId === closure_0) {
-                      if (overSpecs.node.parentId !== closure_0) {
-                        if (overSpecs.node.id !== closure_0) {
-                          dragSpecs = dragSpecs.itemSize;
-                          const num3 = -1 * dragSpecs;
-                        } else {
-                          overSpecs = "after";
-                        }
-                      }
-                    } else if (overSpecs.node.parentId === closure_0) {
-                    }
-                  }
-                }
-              }
-            }
-          }
-          return num;
-        };
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
+export function useItemDragState(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return withEqualityFn((arg0) => {
+    ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
+    if (null == dragSpecs) {
+      if (null == dropSpecs) {
+        const obj2 = { isDragTarget: false, dragState: "sa", overState: "isArray", itemSize: null, dragDropInProgress };
+        return obj2;
       }
-      return withEqualityFn(tmp2);
     }
-  : function useFolderBGHeightOffset(arg0) {
-      closure_0 = arg0;
-      return withEqualityFn((dropSpecs) => {
-        ({ dragSpecs, overSpecs } = dropSpecs);
-        let num = 0;
-        if (null == dropSpecs.dropSpecs) {
+    let tmp2 = !closure_1;
+    if (!closure_1) {
+      let id;
+      if (dragSpecs != null) {
+        id = dragSpecs.node.id;
+      }
+      let tmp5 = id === closure_0;
+      if (tmp5) {
+        let node;
+        if (overSpecs != null) {
+          node = overSpecs.node;
+        }
+        tmp5 = null != node;
+      }
+      if (!tmp5) {
+        let id1;
+        if (dropSpecs != null) {
+          id1 = dropSpecs.dragNode.id;
+        }
+        tmp5 = id1 === closure_0;
+      }
+      tmp2 = tmp5;
+    }
+    let tmp8 = !closure_1;
+    if (!closure_1) {
+      let id2;
+      if (overSpecs != null) {
+        id2 = overSpecs.node.id;
+      }
+      let tmp11 = id2 === closure_0;
+      if (!tmp11) {
+        let id3;
+        if (dropSpecs != null) {
+          id3 = dropSpecs.overNode.id;
+        }
+        tmp11 = id3 === tmp10;
+      }
+      tmp8 = tmp11;
+    }
+    const obj = { isDragTarget: tmp2, dragState: null, overState: null, itemSize: null, dragDropInProgress: null };
+    if (tmp2) {
+      let str = "dropping";
+      if (null == dropSpecs) {
+        str = "dragging";
+      }
+      const tmp13 = str;
+    }
+    obj.dragState = tmp13;
+    let tmp14;
+    if (tmp8) {
+      let overState;
+      if (dropSpecs != null) {
+        overState = dropSpecs.overState;
+      }
+      if (overState == null) {
+        let state;
+        if (overSpecs != null) {
+          state = overSpecs.state;
+        }
+        overState = state;
+      }
+      tmp14 = overState;
+    }
+    obj.overState = tmp14;
+    let num = 0;
+    if (tmp8) {
+      let num2;
+      if (dropSpecs != null) {
+        num2 = dropSpecs.itemSize;
+      }
+      if (num2 == null) {
+        let itemSize;
+        if (dragSpecs != null) {
+          itemSize = dragSpecs.itemSize;
+        }
+        num2 = itemSize;
+      }
+      if (num2 == null) {
+        num2 = 0;
+      }
+      num = num2;
+    }
+    obj.itemSize = num;
+    obj.dragDropInProgress = dragDropInProgress;
+    return obj;
+  }, _mod4924.shallow);
+}
+export function useFolderBGHeightOffset(arg0) {
+  closure_0 = arg0;
+  return withEqualityFn((dropSpecs) => {
+    ({ dragSpecs, overSpecs } = dropSpecs);
+    let num = 0;
+    if (null == dropSpecs.dropSpecs) {
+      num = 0;
+      if (null != overSpecs) {
+        num = 0;
+        if (null != dragSpecs) {
           num = 0;
-          if (null != overSpecs) {
+          if ("self" !== overSpecs.state) {
             num = 0;
-            if (null != dragSpecs) {
-              num = 0;
-              if ("self" !== overSpecs.state) {
-                num = 0;
-                if (dragSpecs.node.type === GuildsNodeType.GUILD) {
-                  if (dragSpecs.node.parentId === closure_0) {
-                    if (overSpecs.node.parentId !== closure_0) {
-                      if (overSpecs.node.id !== closure_0) {
-                        dragSpecs = dragSpecs.itemSize;
-                        const num3 = -1 * dragSpecs;
-                      } else {
-                        overSpecs = "after";
-                      }
-                    }
-                  } else if (overSpecs.node.parentId === closure_0) {
+            if (dragSpecs.node.type === GuildsNodeType.GUILD) {
+              if (dragSpecs.node.parentId === closure_0) {
+                if (overSpecs.node.parentId !== closure_0) {
+                  if (overSpecs.node.id !== closure_0) {
+                    dragSpecs = dragSpecs.itemSize;
+                    const num3 = -1 * dragSpecs;
+                  } else {
+                    overSpecs = "after";
                   }
                 }
+              } else if (overSpecs.node.parentId === closure_0) {
               }
             }
           }
         }
-        return num;
-      });
-    };
+      }
+    }
+    return num;
+  });
+}

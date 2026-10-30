@@ -4,8 +4,8 @@ import ConjureTimeFormat from "../ConjureTimeFormat.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-function formatPerfMs(totalMs) {
-  const rounded = Math.round(totalMs);
+function formatPerfMs(start) {
+  const rounded = Math.round(start);
   if (rounded < 1000) {
     const _HermesInternal2 = HermesInternal;
     let combined = "" + rounded + "ms";

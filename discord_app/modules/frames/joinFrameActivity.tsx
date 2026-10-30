@@ -18,7 +18,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -73,7 +73,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             };
             c9 = 1;
             c10 = 1;
-            return { value: "Reflect", done: null };
+            return { value: "flexDirection", done: true };
           }
           break;
         case 1:
@@ -448,7 +448,7 @@ let closure_13 = async function _getVoiceChannelAppChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -523,7 +523,7 @@ let closure_13 = async function _getVoiceChannelAppChannelId(arg0) {
 };
 let closure_14 = async function _getActivityChannelId() {
   await UserActivityActionCreators.getMetadata(closure_0, closure_1);
-  await "IconComponent";
+  await "HermesInternal";
   closure_130_0 = value;
   if (closure_130_0 != null) {
     const channel_id = closure_130_0.channel_id;
@@ -533,10 +533,10 @@ let closure_14 = async function _getActivityChannelId() {
   }
   return channel_id1;
 };
-const makeFrameId = fn(6834).makeFrameId;
-const Constants = fn(1084);
+const makeFrameId = fn(6841).makeFrameId;
+const Constants = fn(1072);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: c10 } = Constants);
-const ActivityIntent = fn(2024).ActivityIntent;
+const ActivityIntent = fn(2019).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

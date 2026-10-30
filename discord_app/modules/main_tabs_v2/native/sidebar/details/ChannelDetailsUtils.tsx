@@ -23,6 +23,6 @@ export function getChannelDetailsButtons(channel) {
   }
   return found;
 }
-export function navigateToChannelDetailsScreen(navigation, PERMISSIONS, channelId, source) {
-  navigation.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
+export function navigateToChannelDetailsScreen(navigate, PERMISSIONS, channelId, source) {
+  navigate.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
 }

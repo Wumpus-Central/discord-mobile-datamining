@@ -1,7 +1,7 @@
 // discord_app/lib/WindowVisibilityUtils.native.tsx
 import AppStateStore from "../stores/native/AppStateStore.tsx";
 
-const AppStates = fn(1084).AppStates;
+const AppStates = fn(1072).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/WindowVisibilityUtils.native.tsx");
 

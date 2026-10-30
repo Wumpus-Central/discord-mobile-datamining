@@ -6,7 +6,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4863);
+const GuildScheduledEventsConstants = fn(4864);
 ({ GuildScheduledEventStatus: closure_4, UpcomingGuildEventNoticeTypes: hasOwnProperty } =
   GuildScheduledEventsConstants);
 let upcomingEventSeenTimestamps = {};

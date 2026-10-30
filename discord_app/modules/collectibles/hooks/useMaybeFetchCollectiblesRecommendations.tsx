@@ -3,126 +3,41 @@ import _mod19 from "../../../../_runtime/metro/00019__.js";
 import CollectiblesRecommendationActionCreators from "../CollectiblesRecommendationActionCreators.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import CollectiblesRecommendationStore from "../CollectiblesRecommendationStore.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const useEffect = _mod19.useEffect;
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesRecommendations.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useMaybeFetchCollectiblesRecommendations() {
-      const cResult = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]).c(9);
-      let obj = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]);
-      isEditProfileCollectiblesOrderingEnabled = isEditProfileCollectiblesOrderingEnabled(
-        stateFromStores[5],
-      ).useIsEditProfileCollectiblesOrderingEnabled("edit_profile_preload");
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [UserStore];
-        const fn = function c() {
-          currentUser = currentUser.getCurrentUser();
-          let id;
-          if (currentUser != null) {
-            id = currentUser.id;
-          }
-          return id;
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp5 = items;
-        tmp6 = fn;
-      } else {
-        [tmp5, tmp6] = cResult;
-      }
-      const obj2 = isEditProfileCollectiblesOrderingEnabled(stateFromStores[5]);
-      stateFromStores = isEditProfileCollectiblesOrderingEnabled(stateFromStores[6]).useStateFromStores(tmp5, tmp6);
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [CollectiblesRecommendationStore];
-        const fn2 = function f() {
-          return CollectiblesRecommendationStore.shouldFetch();
-        };
-        cResult[2] = items1;
-        cResult[3] = fn2;
-        let tmp10 = fn2;
-        let tmp9 = items1;
-      } else {
-        tmp9 = cResult[2];
-        tmp10 = cResult[3];
-      }
-      const tmpResult = isEditProfileCollectiblesOrderingEnabled(stateFromStores[6]);
-      const stateFromStores1 = isEditProfileCollectiblesOrderingEnabled(stateFromStores[6]).useStateFromStores(
-        tmp9,
-        tmp10,
-      );
-      if (cResult[4] === stateFromStores) {
-        if (cResult[5] === isEditProfileCollectiblesOrderingEnabled) {
-          if (cResult[6] === stateFromStores1) {
-            let tmp13 = cResult[7];
-            let tmp14 = cResult[8];
-          }
-          stateFromStores1(tmp13, tmp14);
-        }
-      }
-      class F {
-        constructor() {
-          tmp = closure_0;
-          if (closure_0) {
-            tmp2 = closure_1;
-            tmp3 = null;
-            tmp = null != closure_1;
-          }
-          if (tmp) {
-            tmp = closure_2;
-          }
-          if (tmp) {
-            tmp4 = closure_0;
-            tmp5 = closure_1;
-            obj = closure_0(closure_1[7]);
-            result = obj.maybeFetchCollectiblesRecommendations();
-          }
-          return;
-        }
-      }
-      const items2 = [isEditProfileCollectiblesOrderingEnabled, stateFromStores, stateFromStores1];
-      cResult[4] = stateFromStores;
-      cResult[5] = isEditProfileCollectiblesOrderingEnabled;
-      cResult[6] = stateFromStores1;
-      cResult[7] = F;
-      cResult[8] = items2;
-      tmp14 = items2;
-      tmp13 = F;
-      const tmpResult2 = isEditProfileCollectiblesOrderingEnabled(stateFromStores[6]);
+export default function useMaybeFetchCollectiblesRecommendations() {
+  isEditProfileCollectiblesOrderingEnabled = isEditProfileCollectiblesOrderingEnabled(
+    stateFromStores[3],
+  ).useIsEditProfileCollectiblesOrderingEnabled("edit_profile_preload");
+  let obj = isEditProfileCollectiblesOrderingEnabled(stateFromStores[3]);
+  const items = [UserStore];
+  stateFromStores = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]).useStateFromStores(items, () => {
+    currentUser = currentUser.getCurrentUser();
+    let id;
+    if (currentUser != null) {
+      id = currentUser.id;
     }
-  : function useMaybeFetchCollectiblesRecommendations() {
-      isEditProfileCollectiblesOrderingEnabled = isEditProfileCollectiblesOrderingEnabled(
-        stateFromStores[5],
-      ).useIsEditProfileCollectiblesOrderingEnabled("edit_profile_preload");
-      let obj = isEditProfileCollectiblesOrderingEnabled(stateFromStores[5]);
-      const items = [UserStore];
-      stateFromStores = isEditProfileCollectiblesOrderingEnabled(stateFromStores[6]).useStateFromStores(items, () => {
-        currentUser = currentUser.getCurrentUser();
-        let id;
-        if (currentUser != null) {
-          id = currentUser.id;
-        }
-        return id;
-      });
-      const obj2 = isEditProfileCollectiblesOrderingEnabled(stateFromStores[6]);
-      const items1 = [CollectiblesRecommendationStore];
-      const stateFromStores1 = isEditProfileCollectiblesOrderingEnabled(stateFromStores[6]).useStateFromStores(
-        items1,
-        () => CollectiblesRecommendationStore.shouldFetch(),
-      );
-      const items2 = [isEditProfileCollectiblesOrderingEnabled, stateFromStores, stateFromStores1];
-      stateFromStores1(() => {
-        let tmp = isEditProfileCollectiblesOrderingEnabled;
-        if (isEditProfileCollectiblesOrderingEnabled) {
-          tmp = null != stateFromStores;
-        }
-        if (tmp) {
-          tmp = stateFromStores1;
-        }
-        if (tmp) {
-          const result = CollectiblesRecommendationActionCreators.maybeFetchCollectiblesRecommendations();
-        }
-      }, items2);
-    };
+    return id;
+  });
+  const obj2 = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]);
+  const items1 = [CollectiblesRecommendationStore];
+  const stateFromStores1 = isEditProfileCollectiblesOrderingEnabled(stateFromStores[4]).useStateFromStores(items1, () =>
+    CollectiblesRecommendationStore.shouldFetch(),
+  );
+  const items2 = [isEditProfileCollectiblesOrderingEnabled, stateFromStores, stateFromStores1];
+  stateFromStores1(() => {
+    let tmp = isEditProfileCollectiblesOrderingEnabled;
+    if (isEditProfileCollectiblesOrderingEnabled) {
+      tmp = null != stateFromStores;
+    }
+    if (tmp) {
+      tmp = stateFromStores1;
+    }
+    if (tmp) {
+      const result = CollectiblesRecommendationActionCreators.maybeFetchCollectiblesRecommendations();
+    }
+  }, items2);
+}

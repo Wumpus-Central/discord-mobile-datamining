@@ -94,7 +94,7 @@ function isCountableChannel(channel) {
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
-            let result2 = v65535(channel.type);
+            let result2 = closure_1_10(channel.type);
             if (!result2) {
               result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(channel);
             }
@@ -523,19 +523,19 @@ function recountGuild(guildId, hasItem) {
             tmp37 = tmp34;
           }
           if (tmp37) {
-            let tmp40 = React6(obj14.type);
+            let tmp40 = React7(obj14.type);
             let tmp41 = !tmp40;
             if (tmp40) {
               tmp41 = 0 !== mentionCount;
             }
             if (tmp41) {
-              let canBasicChannelResult = PermissionStore.canBasicChannel(closure_1_8(obj14.type), obj14);
+              let canBasicChannelResult = PermissionStore.canBasicChannel(React6(obj14.type), obj14);
               if (canBasicChannelResult) {
                 let tmp45 = null != obj14.guild_id;
                 if (tmp45) {
                   let tmp46 = result;
                   if (result) {
-                    let result2 = v65535(obj14.type);
+                    let result2 = closure_1_10(obj14.type);
                     if (!result2) {
                       result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj14);
                     }
@@ -1064,13 +1064,13 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: c10 } = ChannelRecord);
-const isGuildNSFW = fn(4875).isGuildNSFW;
-const ChannelFlags = fn(4864).ChannelFlags;
-const ReadStateConstants = fn(6763);
+const isGuildNSFW = fn(4876).isGuildNSFW;
+const ChannelFlags = fn(4865).ChannelFlags;
+const ReadStateConstants = fn(6770);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
-const NULL_STRING_GUILD_ID = fn(1084).NULL_STRING_GUILD_ID;
+const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
 let guilds = {};
 let set = new Set();
 let closure_26 = 0;

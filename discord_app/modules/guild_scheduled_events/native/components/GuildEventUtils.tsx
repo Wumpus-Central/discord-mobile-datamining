@@ -1,6 +1,6 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventUtils.tsx
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef8966 from "../../../../../_runtime/metro/08966__.js";
+import _modDef8997 from "../../../../../_runtime/metro/08997__.js";
 import LocationIcon2 from "../../../../design/components/Icon/native/redesign/generated/LocationIcon.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/native
 
 export function getEventLocationIconSource(event, channel, stateFromStores2) {
   if (null != obj.getLocationFromEvent(event)) {
-    let tmp4 = _modDef8966;
+    let tmp4 = _modDef8997;
   } else {
     tmp4 = null;
     if (null != channel) {
@@ -22,17 +22,17 @@ export function getEventLocationIconSource(event, channel, stateFromStores2) {
   }
   return tmp4;
 }
-export function getEventLocationIconComponent(event, stateFromStores, stateFromStores1) {
+export function getEventLocationIconComponent(event, channel, stateFromStores1) {
   if (null != obj.getLocationFromEvent(event)) {
     let LocationIcon = LocationIcon2.LocationIcon;
   } else {
     LocationIcon = null;
-    if (null != stateFromStores) {
+    if (null != channel) {
       const tmpResult = utils_ChannelUtils;
       if (stateFromStores1) {
-        let channelIconComponent = tmpResult.getChannelIconComponent(stateFromStores);
+        let channelIconComponent = tmpResult.getChannelIconComponent(channel);
       } else {
-        channelIconComponent = tmpResult.getSimpleChannelIconComponent(stateFromStores);
+        channelIconComponent = tmpResult.getSimpleChannelIconComponent(channel);
       }
       if (channelIconComponent == null) {
         channelIconComponent = null;

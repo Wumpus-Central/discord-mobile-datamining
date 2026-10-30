@@ -9,8 +9,14 @@ const result = size.fileFinishedImporting("modules/guild_automod/AutomodActionUt
 
 export function getRuleDefaultActionsFromConfig(defaultActionTypes) {
   closure_0 = {
-    [closure_1_2.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "r" } },
-    [closure_1_2.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "r" } },
+    [closure_1_2.BLOCK_MESSAGE]: {
+      type: AutomodActionType.BLOCK_MESSAGE,
+      metadata: { customMessage: "getCurrentUser" },
+    },
+    [closure_1_2.FLAG_TO_CHANNEL]: {
+      type: AutomodActionType.FLAG_TO_CHANNEL,
+      metadata: { channelId: "getCurrentUser" },
+    },
     [closure_1_2.USER_COMMUNICATION_DISABLED]: {
       type: AutomodActionType.USER_COMMUNICATION_DISABLED,
       metadata: { durationSeconds: 60 },
@@ -29,12 +35,12 @@ export function getRuleActionsInOrder(rule) {
   });
   return mapped.filter(GlobalUtils.isNotNullish);
 }
-export function setRuleAction(rule, BLOCK_MESSAGE, arg2) {
+export function setRuleAction(actions, BLOCK_MESSAGE, arg2) {
   closure_0 = BLOCK_MESSAGE;
-  const actions = rule.actions;
+  actions = actions.actions;
   const found = actions.filter((type) => type.type !== closure_0);
   const obj = {};
-  const merged = Object.assign(rule);
+  const merged = Object.assign(actions);
   let tmp3 = found;
   if (null != arg2) {
     const items = [];
@@ -58,8 +64,14 @@ export function isActionQuarantineUser(type) {
 }
 export function getDefaultActions() {
   return {
-    [closure_1_2.BLOCK_MESSAGE]: { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "r" } },
-    [closure_1_2.FLAG_TO_CHANNEL]: { type: AutomodActionType.FLAG_TO_CHANNEL, metadata: { channelId: "r" } },
+    [closure_1_2.BLOCK_MESSAGE]: {
+      type: AutomodActionType.BLOCK_MESSAGE,
+      metadata: { customMessage: "getCurrentUser" },
+    },
+    [closure_1_2.FLAG_TO_CHANNEL]: {
+      type: AutomodActionType.FLAG_TO_CHANNEL,
+      metadata: { channelId: "getCurrentUser" },
+    },
     [closure_1_2.USER_COMMUNICATION_DISABLED]: {
       type: AutomodActionType.USER_COMMUNICATION_DISABLED,
       metadata: { durationSeconds: 60 },

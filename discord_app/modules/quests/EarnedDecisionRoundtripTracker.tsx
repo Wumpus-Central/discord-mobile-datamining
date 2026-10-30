@@ -35,7 +35,7 @@ function trackRoundtrip(apiResponseTimestamp) {
     const tmp2Result = SessionForegroundUtils;
   }
 }
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 class EarnedDecisionRoundtripTracker {
   constructor() {
     merged = Object.assign({ pendingRequests: null });

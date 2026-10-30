@@ -5,7 +5,7 @@ import RouteUtils from "../modules/routing/RouteUtils.tsx";
 import LurkingStore from "../modules/lurker_mode/LurkingStore.tsx";
 
 require = fn;
-const Routes = fn(1084).Routes;
+const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 

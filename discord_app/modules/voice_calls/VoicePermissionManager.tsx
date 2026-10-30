@@ -10,8 +10,8 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const InputModes = fn(1084).InputModes;
-const NativePermissionTypes = fn(7926).NativePermissionTypes;
+const InputModes = fn(1072).InputModes;
+const NativePermissionTypes = fn(7932).NativePermissionTypes;
 let c11 = null;
 class VoicePermissionManager extends tmp2 {
   constructor() {

@@ -4,7 +4,7 @@ import util from "../intl/index.native.tsx";
 import PremiumUtils from "PremiumUtils.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import UploadUtils from "UploadUtils.tsx";
-import noConflictDefault from "../../_runtime/08206_noConflict.js";
+import noConflictDefault from "../../_runtime/08209_noConflict.js";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
@@ -19,9 +19,9 @@ function getUploadFileSizeSum(arg0) {
   }
   return num;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ GuildFeatures, MAX_ATTACHMENT_SIZE: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 const PremiumTypes = PremiumConstants.PremiumTypes;
 let items = [
   { reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" },
@@ -102,11 +102,11 @@ export function classifyFile(file) {
   }
   return str3;
 }
-export function classifyFileName(fileName, arg1) {
+export function classifyFileName(str, arg1) {
   closure_1 = arg1;
-  let str;
-  if (fileName != null) {
-    str = fileName.toLowerCase();
+  str = undefined;
+  if (str != null) {
+    str = str.toLowerCase();
   }
   if (str == null) {
     str = "";
@@ -134,8 +134,8 @@ export function classifyFileName(fileName, arg1) {
   }
   return str2;
 }
-export function sizeString(size) {
-  return noConflictDefault.filesize(size);
+export function sizeString(currentSize) {
+  return noConflictDefault.filesize(currentSize);
 }
 export function maxFileSize(guildId) {
   const currentUser = UserStore.getCurrentUser();
@@ -143,7 +143,7 @@ export function maxFileSize(guildId) {
   if (null == guildId) {
     return userMaxFileSize;
   } else {
-    guild = GuildStore.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let reduced = items2.reduce((acc, item) => {
         [tmp, tmp2] = item;

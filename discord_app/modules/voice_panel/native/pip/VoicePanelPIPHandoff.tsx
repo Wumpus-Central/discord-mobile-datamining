@@ -1,32 +1,6 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPHandoff.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = fn;
-fn(558);
-const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function usePIPCardsSettled(subscribe) {
-      const cResult = c.c(2);
-      if (cResult[0] !== subscribe) {
-        const fn = function n() {
-          return subscribe.arePIPCardsSettled();
-        };
-        cResult[0] = subscribe;
-        cResult[1] = fn;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return noop.useSyncExternalStore(subscribe.subscribe, tmp2);
-    }
-  : function usePIPCardsSettled(subscribe) {
-      const items = [subscribe];
-      return noop.useSyncExternalStore(
-        subscribe.subscribe,
-        noop.useCallback(() => subscribe.arePIPCardsSettled(), items),
-      );
-    };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPHandoff.tsx");
 class VoicePanelPIPHandoff {
@@ -123,26 +97,17 @@ prototype["recount"] = function recount() {
 };
 
 export default VoicePanelPIPHandoff;
-export const usePIPCardsSettled = tmp2;
-export const usePIPPanelLayoutCommitted = ReactCompilerGating.isReactCompilerEnabled()
-  ? function usePIPPanelLayoutCommitted(subscribe) {
-      const cResult = c.c(2);
-      if (cResult[0] !== subscribe) {
-        const fn = function n() {
-          return subscribe.isPanelLayoutCommitted();
-        };
-        cResult[0] = subscribe;
-        cResult[1] = fn;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return noop.useSyncExternalStore(subscribe.subscribe, tmp2);
-    }
-  : function usePIPPanelLayoutCommitted(subscribe) {
-      const items = [subscribe];
-      return noop.useSyncExternalStore(
-        subscribe.subscribe,
-        noop.useCallback(() => subscribe.isPanelLayoutCommitted(), items),
-      );
-    };
+export function usePIPCardsSettled(pipHandoff) {
+  const items = [pipHandoff];
+  return noop.useSyncExternalStore(
+    pipHandoff.subscribe,
+    noop.useCallback(() => pipHandoff.arePIPCardsSettled(), items),
+  );
+}
+export function usePIPPanelLayoutCommitted(pipHandoff) {
+  const items = [pipHandoff];
+  return noop.useSyncExternalStore(
+    pipHandoff.subscribe,
+    noop.useCallback(() => pipHandoff.isPanelLayoutCommitted(), items),
+  );
+}

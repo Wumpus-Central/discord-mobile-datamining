@@ -216,7 +216,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -245,7 +245,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                             return { value: false, done: true };
                           } else {
                             ref2.current = true;
-                            closure_2_22(true);
+                            __initData4(true);
                             c3 = 1;
                             c4 = 2;
                             c5 = 1;
@@ -367,7 +367,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -518,7 +518,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -577,8 +577,8 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
                         obj6.guild_id = guild_id;
                       }
                       closure_17(true);
-                      closure_2_20(null);
-                      guild(null);
+                      dependencyMap(null);
+                      __initData3(null);
                       c3 = 2;
                       if (changed) {
                         guild_id = 3;

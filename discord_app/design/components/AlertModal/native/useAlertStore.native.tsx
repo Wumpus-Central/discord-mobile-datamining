@@ -5,8 +5,8 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const module_570 = fn(570);
-const obj3 = module_570.create(() => ({ alerts: [] }));
+const module_560 = fn(560);
+const obj3 = module_560.create(() => ({ alerts: [] }));
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/AlertModal/native/useAlertStore.native.tsx");
 
@@ -26,7 +26,7 @@ export function dismissAlerts() {
     2,
   );
   const first = tmp[0];
-  first(1271).batchUpdates(() => {
+  first(1260).batchUpdates(() => {
     obj3.setState({ alerts: arr4 });
     const item = first.forEach((onDismiss) => {
       onDismiss = onDismiss.onDismiss;
@@ -38,24 +38,24 @@ export function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(5949)();
+    arr4(5956)();
   }
-  const obj = first(1271);
+  const obj = first(1260);
   tmp4 = 0 === tmp[1].length && first.length > 0;
 }
-export function dismissAlert(key) {
-  _require = key;
+export function dismissAlert(c6) {
+  _require = c6;
   let alerts = obj3.getState().alerts;
   const found = alerts.find((key) => key.key === closure_0);
   if (null != found) {
     let tmp2 = 1 === alerts.length;
     if (tmp2) {
       const first = alerts[0];
-      key = undefined;
+      let key;
       if (first != null) {
         key = first.key;
       }
-      tmp2 = key === key;
+      tmp2 = key === c6;
     }
     require("ReactBatchUpdates").batchUpdates(() => {
       obj3.setState((alerts) => {
@@ -70,13 +70,13 @@ export function dismissAlert(key) {
       }
     });
     if (tmp2) {
-      found(5949)();
+      found(5956)();
     }
     let obj = require("ReactBatchUpdates");
   }
 }
-export function openAlert(VOICE_PANEL_VIDEO_GUARD_ERROR_KEY, arg1, onCloseCallback, arg3) {
-  _require = VOICE_PANEL_VIDEO_GUARD_ERROR_KEY;
+export function openAlert(DeleteEventAlert, arg1, onCloseCallback, arg3) {
+  _require = DeleteEventAlert;
   importDefault = arg1;
   dependencyMap = onCloseCallback;
   closure_3 = arg3;

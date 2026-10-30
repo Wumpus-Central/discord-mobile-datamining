@@ -58,7 +58,7 @@ function handleGuildRoleUpdateOrDelete(arg0) {
   }
   return flag2;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ StatusTypes: closure_11, Permissions: closure_12 } = Constants);
 const dependencyMap = {};
 class MemberList {

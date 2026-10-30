@@ -94,11 +94,11 @@ prototype["getProduct"] = function getProduct(arg0) {
   }
   return product;
 };
-prototype["getProductsForSku"] = function getProductsForSku(skuId) {
+prototype["getProductsForSku"] = function getProductsForSku(nextResult) {
   let tmp;
-  if (null != skuId) {
+  if (null != nextResult) {
     let products;
-    if (dependencyMap2[skuId] != null) {
+    if (dependencyMap2[nextResult] != null) {
       products = tmp3.products;
     }
     tmp = products;

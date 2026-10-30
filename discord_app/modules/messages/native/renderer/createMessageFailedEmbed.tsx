@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import FileUtils from "../../../../utils/FileUtils.tsx";
+import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import _modDef8684 from "../../../../../_runtime/metro/08684__.js";
-import _modDef8685 from "../../../../../_runtime/metro/08685__.js";
+import _modDef8718 from "../../../../../_runtime/metro/08718__.js";
+import _modDef8719 from "../../../../../_runtime/metro/08719__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const MessageFailureState = RowGeneratorConstants.MessageFailureState;
@@ -29,7 +29,7 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       obj2.failureState = MessageFailureState.UNSPECIFIED;
       obj2.bodyTextColor = colors.failedMessageBodyTextColor;
       colors = renderer_EmbedUtils.getAssetUriForEmbed;
-      obj2.iconURL = colors(_modDef8685);
+      obj2.iconURL = colors(_modDef8719);
       let obj3 = obj2;
     } else {
       obj3 = {
@@ -74,7 +74,7 @@ export function createAutomodBlockedMessageEmbed(errorMessage) {
     failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE,
     disableBackgroundColor: true,
     bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor,
-    iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8684),
+    iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8718),
   };
   return obj;
 }

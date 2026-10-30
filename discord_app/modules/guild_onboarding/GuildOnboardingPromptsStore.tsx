@@ -79,8 +79,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(7251).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(7256).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(7258).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(7263).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -181,9 +181,9 @@ prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(
   }
   return tmp2;
 };
-prototype["getDefaultChannelIds"] = function getDefaultChannelIds(guildId) {
+prototype["getDefaultChannelIds"] = function getDefaultChannelIds(id) {
   let defaultChannelIds;
-  if (dependencyMap[guildId] != null) {
+  if (dependencyMap[id] != null) {
     defaultChannelIds = tmp.defaultChannelIds;
   }
   if (defaultChannelIds == null) {
@@ -205,8 +205,8 @@ prototype["getEnabled"] = function getEnabled(id) {
   }
   return flag;
 };
-prototype["getOnboardingPrompt"] = function getOnboardingPrompt(promptId) {
-  closure_0 = promptId;
+prototype["getOnboardingPrompt"] = function getOnboardingPrompt(targetId13) {
+  closure_0 = targetId13;
   const values = Object.values(closure_8);
   const mapped = values.map((prompts) => prompts.prompts);
   return mapped.flat().find((id) => id.id === closure_0);

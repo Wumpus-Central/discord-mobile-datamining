@@ -33,7 +33,7 @@ function workerTicket(ticket) {
   obj.baseUrl = url;
   return obj;
 }
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const map = new Map();
 let closure_5 = [];
 const size = fn(2);

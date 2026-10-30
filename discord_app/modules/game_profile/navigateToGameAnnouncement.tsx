@@ -14,7 +14,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
           let guild3;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: null };
+          return { value: "flexDirection", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -66,7 +66,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
             closure_129_5 = closure_129_4[closure_129_4.length - 1];
             closure_129_6 = null;
             if (null != closure_129_0) {
-              guild = closure_129_0.guild;
+              const guild = closure_129_0.guild;
               let id;
               if (guild != null) {
                 id = guild.id;
@@ -114,7 +114,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
               }
             }
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -150,7 +150,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
     }
   }
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ GuildFeatures: hasOwnProperty, JoinGuildSources: metroRequire, Routes: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");

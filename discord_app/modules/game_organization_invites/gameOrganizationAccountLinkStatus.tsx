@@ -46,57 +46,24 @@ function getGameOrganizationAccountLinkStatus(id) {
     return str;
   }
 }
-const FetchState = fn(7263).FetchState;
-const ReactCompilerGating = fn(558);
+const FetchState = fn(7270).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/gameOrganizationAccountLinkStatus.tsx");
 
 export { getGameOrganizationAccountLinkStatus };
-export const useGameOrganizationAccountLinkStatus = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useGameOrganizationAccountLinkStatus(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(4);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ApplicationStore, AuthorizedAppsStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
+export function useGameOrganizationAccountLinkStatus(id) {
+  _require = id;
+  const items = [ApplicationStore, AuthorizedAppsStore];
+  const items1 = [id];
+  return require("initialize").useStateFromStores(
+    items,
+    () => {
+      let str = "loading";
+      if (null != closure_0) {
+        str = getGameOrganizationAccountLinkStatus(tmp, ApplicationStore, AuthorizedAppsStore);
       }
-      if (cResult[1] !== arg0) {
-        const fn = function c() {
-          let str = "loading";
-          if (null != closure_0) {
-            str = getGameOrganizationAccountLinkStatus(tmp, ApplicationStore, AuthorizedAppsStore);
-          }
-          return str;
-        };
-        const items1 = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
-      } else {
-        tmp7 = cResult[2];
-        tmp8 = cResult[3];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp7, tmp8);
-    }
-  : function useGameOrganizationAccountLinkStatus(arg0) {
-      _require = arg0;
-      const items = [ApplicationStore, AuthorizedAppsStore];
-      const items1 = [arg0];
-      return require("initialize").useStateFromStores(
-        items,
-        () => {
-          let str = "loading";
-          if (null != closure_0) {
-            str = getGameOrganizationAccountLinkStatus(tmp, ApplicationStore, AuthorizedAppsStore);
-          }
-          return str;
-        },
-        items1,
-      );
-    };
+      return str;
+    },
+    items1,
+  );
+}

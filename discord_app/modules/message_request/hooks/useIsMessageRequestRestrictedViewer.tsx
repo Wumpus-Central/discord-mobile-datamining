@@ -1,29 +1,17 @@
 // discord_app/modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx
 import SettingsDefaultFeature from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
 import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 
-export const useIsMessageRequestRestrictedViewer = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsMessageRequestRestrictedViewer() {
-      const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
-      let isSettingTeenByDefault = !isVerifiedAdult;
-      if (!isVerifiedAdult) {
-        isSettingTeenByDefault = obj2.useIsSettingTeenByDefault(
-          SettingsDefaultFeature.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS,
-        );
-      }
-      return isSettingTeenByDefault;
-    }
-  : function useIsMessageRequestRestrictedViewer() {
-      const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
-      let isSettingTeenByDefault = !isVerifiedAdult;
-      if (!isVerifiedAdult) {
-        isSettingTeenByDefault = obj2.useIsSettingTeenByDefault(
-          SettingsDefaultFeature.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS,
-        );
-      }
-      return isSettingTeenByDefault;
-    };
+export function useIsMessageRequestRestrictedViewer() {
+  const isVerifiedAdult = AgeVerificationUtils.useIsVerifiedAdult();
+  let isSettingTeenByDefault = !isVerifiedAdult;
+  if (!isVerifiedAdult) {
+    isSettingTeenByDefault = obj2.useIsSettingTeenByDefault(
+      SettingsDefaultFeature.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS,
+    );
+  }
+  return isSettingTeenByDefault;
+}

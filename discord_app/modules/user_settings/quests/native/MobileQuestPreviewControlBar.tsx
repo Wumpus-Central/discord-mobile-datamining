@@ -104,7 +104,7 @@ class MobileQuestPreviewControlBar {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -172,7 +172,7 @@ class MobileQuestPreviewControlBar {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -240,7 +240,7 @@ class MobileQuestPreviewControlBar {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -409,10 +409,10 @@ class MobileQuestPreviewControlBar {
   }
 }
 const View = fn(17).View;
-const AppRoutes = fn(1095).AppRoutes;
+const AppRoutes = fn(1083).AppRoutes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   container: { overflow: "visible", zIndex: 1 },
   questInputContainer: {

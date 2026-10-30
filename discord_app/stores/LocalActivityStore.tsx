@@ -1,8 +1,10 @@
 // discord_app/stores/LocalActivityStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1354 from "../../_runtime/metro/01354__.js";
+import _modDef1343 from "../../_runtime/metro/01343__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import ActivityTypes from "../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
+import ActivityGamePlatforms from "../../discord_common/js/shared/shared-constants/ActivityGamePlatforms.tsx";
 import ActivityFlagUtils from "../modules/activities/utils/ActivityFlagUtils.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import EmbeddedActivitiesStore from "../modules/activities/EmbeddedActivitiesStore.tsx";
@@ -46,77 +48,77 @@ function updateActivities() {
   items.push.apply(items1);
   const stream = ExternalStreamingStore.getStream();
   if (null != stream) {
-    const obj = { type: constants.STREAMING };
+    const obj = { type: tmp(tmp2[17]).ActivityTypes.STREAMING };
     const merged = Object.assign(stream);
     items.push(obj);
   }
   const set = new Set();
-  const item = set(streamerActiveStreamMetadata[17]).forEach(closure_21, (arg0) => {
+  const item = set(streamerActiveStreamMetadata[18]).forEach(closure_19, (arg0) => {
     [, tmp] = arg0;
     if (null != tmp.application_id) {
       set.add(tmp.name);
       items.push(tmp);
     }
   });
-  const arr3 = set(streamerActiveStreamMetadata[17]);
-  const tmp22 = set;
+  const arr3 = set(streamerActiveStreamMetadata[18]);
+  const tmp21 = set;
   const visibleGame = RunningGameStore.getVisibleGame();
-  if (tmp24) {
+  if (tmp23) {
     streamerActiveStreamMetadata = ApplicationStreamingStore.getStreamerActiveStreamMetadata();
     const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
     let pid;
     if (streamerActiveStreamMetadata != null) {
       pid = streamerActiveStreamMetadata.pid;
     }
-    let tmp29 = null;
+    let tmp28 = null;
     if (null != pid) {
       let found = visibleRunningGames.find((pid) => pid.pid === streamerActiveStreamMetadata.pid);
       if (found == null) {
         found = null;
       }
-      tmp29 = found;
+      tmp28 = found;
     }
-    let tmp31 = null == tmp29;
-    if (tmp31) {
+    let tmp30 = null == tmp28;
+    if (tmp30) {
       let id1;
       if (streamerActiveStreamMetadata != null) {
         id1 = streamerActiveStreamMetadata.id;
       }
-      tmp31 = null != id1;
+      tmp30 = null != id1;
     }
-    if (tmp31) {
+    if (tmp30) {
       let found1 = visibleRunningGames.find((id) => id.id === streamerActiveStreamMetadata.id);
       if (found1 == null) {
         found1 = null;
       }
-      tmp29 = found1;
+      tmp28 = found1;
     }
-    if (null != tmp29) {
-      let tmp26 = tmp29;
-      if (null == c22) {
-        let start = tmp29.start;
+    if (null != tmp28) {
+      let tmp25 = tmp28;
+      if (null == c20) {
+        let start = tmp28.start;
         if (start == null) {
           const _Date3 = Date;
           start = Date.now();
         }
-        c22 = start;
-        tmp26 = tmp29;
+        c20 = start;
+        tmp25 = tmp28;
       }
     } else {
-      c22 = null;
-      tmp26 = visibleGame;
+      c20 = null;
+      tmp25 = visibleGame;
     }
   } else {
-    c22 = null;
-    tmp26 = visibleGame;
+    c20 = null;
+    tmp25 = visibleGame;
   }
   let sdkResolutionForPID;
-  if (null != tmp26) {
-    sdkResolutionForPID = RunningGameStore.getSdkResolutionForPID(tmp26.pid);
+  if (null != tmp25) {
+    sdkResolutionForPID = RunningGameStore.getSdkResolutionForPID(tmp25.pid);
   }
   let id2;
   if (null != sdkResolutionForPID) {
-    if (sdkResolutionForPID.type !== tmp(tmp2[18]).SdkCanonicalGameResolutionType.UNRESOLVED) {
+    if (sdkResolutionForPID.type !== tmp(tmp2[19]).SdkCanonicalGameResolutionType.UNRESOLVED) {
       id2 = sdkResolutionForPID.game.id;
     }
   }
@@ -139,26 +141,31 @@ function updateActivities() {
       return tmp2;
     });
   }
-  let tmp44 = null != tmp26 && null != tmp26.name;
-  if (tmp44) {
+  let tmp43 = null != tmp25 && null != tmp25.name;
+  if (tmp43) {
     if (!someResult) {
-      someResult = set.has(tmp26.name);
+      someResult = set.has(tmp25.name);
     }
     if (!someResult) {
       const items3 = [];
       HermesBuiltin.arraySpread(remoteActivities, HermesBuiltin.arraySpread(items, 0));
-      someResult = tmp(tmp2[19]).doesGameHaveRichPresence(tmp26, items3);
-      const tmpResult3 = tmp(tmp2[19]);
+      someResult = tmp(tmp2[20]).doesGameHaveRichPresence(tmp25, items3);
+      const tmpResult3 = tmp(tmp2[20]);
     }
-    tmp44 = someResult;
+    tmp43 = someResult;
   }
-  if (null != tmp26) {
-    if (null != tmp26.name) {
-      if (!tmp44) {
-        if (!tmp50) {
-          const findGameResult = DetectableGameStore.findGame(tmp26);
-          const obj2 = { type: constants.PLAYING, name: null, application_id: null, timestamps: null };
-          ({ name: obj9.name, id } = tmp26);
+  if (null != tmp25) {
+    if (null != tmp25.name) {
+      if (!tmp43) {
+        if (!tmp49) {
+          const findGameResult = DetectableGameStore.findGame(tmp25);
+          const obj2 = {
+            type: tmp(tmp2[17]).ActivityTypes.PLAYING,
+            name: null,
+            application_id: null,
+            timestamps: null,
+          };
+          ({ name: obj9.name, id } = tmp25);
           if (id == null) {
             let id3;
             if (findGameResult != null) {
@@ -167,37 +174,36 @@ function updateActivities() {
             id = id3;
           }
           obj2.application_id = id;
-          let start2 = c22;
-          if (c22 == null) {
-            start2 = tmp26.start;
+          let start2 = c20;
+          if (c20 == null) {
+            start2 = tmp25.start;
           }
           const obj3 = { start: start2 };
           obj2.timestamps = obj3;
-          const merged1 = Object.assign(tmp(tmp2[20]).maybeAddAdditionalGameMetadata(tmp26));
+          const merged1 = Object.assign(tmp(tmp2[21]).maybeAddAdditionalGameMetadata(tmp25));
           items.push(obj2);
-          const tmpResult4 = tmp(tmp2[20]);
+          const tmpResult4 = tmp(tmp2[21]);
         }
       }
     }
   }
   const activity = SpotifyStore.getActivity();
   if (null != activity) {
-    const obj4 = { type: constants.LISTENING };
+    const obj4 = { type: tmp(tmp2[17]).ActivityTypes.LISTENING };
     const merged2 = Object.assign(activity);
     items.push(obj4);
   }
-  const tmp64 = tmp22(streamerActiveStreamMetadata[21])(items, items);
-  let flag = !tmp64;
-  if (!tmp64) {
+  const tmp61 = tmp21(streamerActiveStreamMetadata[22])(items, items);
+  let flag = !tmp61;
+  if (!tmp61) {
     flag = true;
   }
   return flag;
 }
-const Constants = fn(1084);
-({ ActivityFlags: closure_17, ActivityGamePlatforms: closure_18, ActivityTypes: closure_19 } = Constants);
-let closure_20 = [];
+const ActivityFlags = fn(1072).ActivityFlags;
+let closure_18 = [];
 const dependencyMap = {};
-let c22 = null;
+let c20 = null;
 const Store = initializeDefault.Store;
 class LocalActivityStore extends Store {}
 const prototype = LocalActivityStore.prototype;
@@ -221,26 +227,26 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, () => updateActivities());
 };
 prototype["getActivities"] = function getActivities() {
-  return closure_20;
+  return closure_18;
 };
 prototype["getPrimaryActivity"] = function getPrimaryActivity() {
-  return closure_20[0];
+  return closure_18[0];
 };
 prototype["getApplicationActivity"] = function getApplicationActivity(arg0) {
   closure_0 = arg0;
   return this.findActivity((application_id) => application_id.application_id === closure_0);
 };
 prototype["getCustomStatusActivity"] = function getCustomStatusActivity() {
-  return this.findActivity((type) => type.type === constants.CUSTOM_STATUS);
+  return this.findActivity((type) => type.type === ActivityTypes.ActivityTypes.CUSTOM_STATUS);
 };
 prototype["findActivity"] = function findActivity(arg0) {
-  return closure_20.find(arg0);
+  return closure_18.find(arg0);
 };
 prototype["getApplicationActivities"] = function getApplicationActivities() {
-  return closure_21;
+  return closure_19;
 };
 prototype["getActivityForPID"] = function getActivityForPID(arg0) {
-  const values = Object.values(closure_21);
+  const values = Object.values(closure_19);
   const obj = values[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp4 = _slicedToArray(tmp2, 2);
@@ -257,11 +263,11 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
   ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: updateActivities,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(localActivities) {
     const merged = Object.assign(localActivities.localActivities);
-    closure_21 = {};
+    closure_19 = {};
     updateActivities();
   },
   START_SESSION: function handleStartSession() {
-    closure_21 = {};
+    closure_19 = {};
     updateActivities();
   },
   LOCAL_ACTIVITY_UPDATE: function handleLocalActivityUpdate(arg0) {
@@ -270,7 +276,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
       let tmp6 = null == dependencyMap[socketId];
     } else {
       const items = [pid, activity, partyPrivacy];
-      tmp6 = _modDef1354(dependencyMap[socketId], items);
+      tmp6 = _modDef1343(dependencyMap[socketId], items);
     }
     if (!tmp6) {
       if (null != activity) {
@@ -332,7 +338,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
         let activityFlags = obj2.computeActivityFlags(
           tmp9,
           hasFlagResult,
-          tmp9.platform === constants2.EMBEDDED,
+          tmp9.platform === ActivityGamePlatforms.ActivityGamePlatforms.EMBEDDED,
           tmp13Result.isContextlessEmbeddedActivity(tmp9),
           tmp11,
         );
@@ -340,7 +346,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
           let items = [tmp8, ,];
           let obj4 = {};
           let merged = Object.assign(tmp9);
-          obj4.flags = tmp24;
+          obj4.flags = tmp23;
           items[1] = obj4;
           items[2] = tmp11;
           obj[first] = items;

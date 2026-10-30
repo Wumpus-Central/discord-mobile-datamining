@@ -328,8 +328,8 @@ export function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPer
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1125).intl;
-      stringResult = intl.string(tmp4(1125).t["gnsna/"]);
+      const intl = tmp4(1114).intl;
+      stringResult = intl.string(tmp4(1114).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
     const items = [obj];
@@ -395,8 +395,8 @@ export function getExistingRolesRowWithPermissionDisabled(
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1125).intl;
-      stringResult = intl.string(tmp4(1125).t["gnsna/"]);
+      const intl = tmp4(1114).intl;
+      stringResult = intl.string(tmp4(1114).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
     const items = [obj];
@@ -490,7 +490,7 @@ export function getExistingMembers(memberIds, channel, guild, accessPermissions,
     return tmp10;
   });
 }
-export function getExistingMembersRows(memberIds, channel, guild, MODERATE_STAGE_CHANNEL_PERMISSIONS, arg4) {
+export function getExistingMembersRows(memberIds, channel, guild, accessPermissions, arg4) {
   _require = guild;
   let obj = arg4;
   if (arg4 === undefined) {
@@ -499,7 +499,7 @@ export function getExistingMembersRows(memberIds, channel, guild, MODERATE_STAGE
   const appChannelBotUserId = obj.appChannelBotUserId;
   closure_129_0 = channel;
   closure_129_1 = guild;
-  closure_129_2 = MODERATE_STAGE_CHANNEL_PERMISSIONS;
+  closure_129_2 = accessPermissions;
   const permissionUpdates = obj.permissionUpdates;
   const mapped = memberIds.map(UserStore.getUser);
   const found = mapped.filter(require("GlobalUtils").isNotNullish);
@@ -664,7 +664,7 @@ export function isPrivateTextChannel(type) {
   }
   return hasItem;
 }
-export function canCreatePrivateChannel(GUILD_APP, canResult, canResult1) {
+export function canCreatePrivateChannel(GUILD_APP, canResult, PermissionStore) {
   let tmp2 = canResult;
   if (GUILD_APP !== constants2.GUILD_TEXT) {
     tmp2 = canResult;
@@ -679,7 +679,7 @@ export function canCreatePrivateChannel(GUILD_APP, canResult, canResult1) {
         if (!tmp5) {
           let tmp6 = canResult;
           if (canResult) {
-            tmp6 = canResult1;
+            tmp6 = PermissionStore;
           }
           tmp5 = tmp6;
         }

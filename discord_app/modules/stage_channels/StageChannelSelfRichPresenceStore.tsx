@@ -1,9 +1,10 @@
 // discord_app/modules/stage_channels/StageChannelSelfRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1354 from "../../../_runtime/metro/01354__.js";
+import _modDef1343 from "../../../_runtime/metro/01343__.js";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
+import ActivityTypes2 from "../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import StageMediaHooks from "StageMediaHooks.tsx";
 import StageChannelParticipants from "StageChannelParticipants.tsx";
 import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils.tsx";
@@ -29,7 +30,7 @@ function handleUpdateActivity() {
       if (null != channel) {
         tmp2 = null;
         if (obj2.canEveryone(constants2.VIEW_CHANNEL, channel)) {
-          guild = GuildStore.getGuild(channel.getGuildId());
+          const guild = GuildStore.getGuild(channel.getGuildId());
           tmp2 = null;
           if (null != guild) {
             const features = guild.features;
@@ -84,7 +85,9 @@ function handleUpdateActivity() {
                 const tmp12Result = useChannelName;
               }
               obj.name = topic;
-              obj.type = StageMediaHooks.getStageHasMedia(channel.id) ? map1.WATCHING : map1.LISTENING;
+              const stageHasMedia = StageMediaHooks.getStageHasMedia(channel.id);
+              const ActivityTypes = ActivityTypes2.ActivityTypes;
+              obj.type = stageHasMedia ? ActivityTypes.WATCHING : ActivityTypes.LISTENING;
               let start;
               if (tmp15 != null) {
                 const timestamps = tmp15.timestamps;
@@ -117,7 +120,7 @@ function handleUpdateActivity() {
       }
     }
   }
-  const tmp30 = _modDef1354(tmp2, obj);
+  const tmp30 = _modDef1343(tmp2, obj);
   let flag = !tmp30;
   if (!tmp30) {
     obj = tmp2;
@@ -125,14 +128,9 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(6696).STAGE_APPLICATION_ID;
-const Constants = fn(1084);
-({
-  ActivityTypes: map1,
-  GuildFeatures: closure_14,
-  Permissions: closure_15,
-  RTCConnectionStates: closure_16,
-} = Constants);
+const STAGE_APPLICATION_ID = fn(6703).STAGE_APPLICATION_ID;
+const Constants = fn(1072);
+({ GuildFeatures: map1, Permissions: closure_14, RTCConnectionStates: closure_15 } = Constants);
 let obj = null;
 const Store = initializeDefault.Store;
 class StageChannelSelfRichPresenceStore extends Store {}

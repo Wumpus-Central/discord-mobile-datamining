@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_6 = createStyles.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, top: 0 } });
 let obj = { items: [], keys: new Map(), keyIndex: 0 };
 let map = new Map();
@@ -164,7 +164,7 @@ export default noop.memo(function FastestListChildren(listFooterAlwaysMounted) {
                 }
                 let _HermesInternal2 = HermesInternal;
                 let combined = "" + listId + "-" + first1;
-                value3 = map.get(combined);
+                let value3 = map.get(combined);
                 if (null != value3) {
                   let result = map1.set(combined, value3);
                   let deleteResult = map.delete(combined);
@@ -190,7 +190,7 @@ export default noop.memo(function FastestListChildren(listFooterAlwaysMounted) {
         if (map.size > 0) {
           let iter2 = map.keys();
           value = iter2.next().value;
-          value4 = map.get(value);
+          let value4 = map.get(value);
           let result1 = map1.set(keyId, value4);
           let deleteResult1 = map.delete(value);
           let obj3 = { portalId: keyId, children: null };

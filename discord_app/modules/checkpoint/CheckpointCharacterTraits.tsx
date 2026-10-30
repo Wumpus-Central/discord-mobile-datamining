@@ -15,10 +15,10 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 let closure_129_0 = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
-let f97944 = (arg0) => require.has(arg0);
+let f88554 = (arg0) => require.has(arg0);
 const set = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
 let closure_130_0 = new Set(Object.values(CheckpointTrait.CheckpointTrait));
-f97944 = (arg0) => require.has(arg0);
+f88554 = (arg0) => require.has(arg0);
 let obj = {};
 obj[CheckpointTrait.CheckpointTrait.FACE] = CheckpointTraitConfig.CHECKPOINT_FACE_OPTION_TO_RARITY;
 obj[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointTraitConfig.CHECKPOINT_OUTFIT_OPTION_TO_RARITY;
@@ -244,7 +244,7 @@ export function getVisibleTraitRarities(item, c4) {
         prop = null;
       }
       tmp = prop;
-    } else if (tmp3(6100).CheckpointTrait.OUTFIT === item) {
+    } else if (tmp3(6107).CheckpointTrait.OUTFIT === item) {
       const messages = c4.messages;
       let prop1;
       if (messages != null) {
@@ -254,7 +254,7 @@ export function getVisibleTraitRarities(item, c4) {
         prop1 = null;
       }
       tmp = prop1;
-    } else if (tmp3(6100).CheckpointTrait.HAT === item) {
+    } else if (tmp3(6107).CheckpointTrait.HAT === item) {
       const guilds = c4.guilds;
       let prop2;
       if (guilds != null) {
@@ -267,7 +267,7 @@ export function getVisibleTraitRarities(item, c4) {
         prop2 = null;
       }
       tmp = prop2;
-    } else if (tmp3(6100).CheckpointTrait.SHOES === item) {
+    } else if (tmp3(6107).CheckpointTrait.SHOES === item) {
       const emojis = c4.emojis;
       let prop3;
       if (emojis != null) {
@@ -277,7 +277,7 @@ export function getVisibleTraitRarities(item, c4) {
         prop3 = null;
       }
       tmp = prop3;
-    } else if (tmp3(6100).CheckpointTrait.WEARABLE === item) {
+    } else if (tmp3(6107).CheckpointTrait.WEARABLE === item) {
       const games2 = c4.games;
       let prop4;
       if (games2 != null) {
@@ -287,7 +287,7 @@ export function getVisibleTraitRarities(item, c4) {
         prop4 = null;
       }
       tmp = prop4;
-    } else if (tmp3(6100).CheckpointTrait.AURA === item) {
+    } else if (tmp3(6107).CheckpointTrait.AURA === item) {
       const games = c4.games;
       let prop5;
       if (games != null) {
@@ -297,7 +297,7 @@ export function getVisibleTraitRarities(item, c4) {
         prop5 = null;
       }
       tmp = prop5;
-    } else if (tmp3(6100).CheckpointTrait.BASE === item) {
+    } else if (tmp3(6107).CheckpointTrait.BASE === item) {
       tmp = null;
     }
   }
@@ -328,7 +328,7 @@ export function getCharacterLayerOrdering(wearable) {
   const tmp2 = CheckpointTraitConfig;
   return hasItem
     ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING
-    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f97944);
+    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f88554);
 }
 export const CHECKPOINT_TRAIT_TO_OPTION_ASSETS = obj2;
 export const CHECKPOINT_TRAIT_TO_OPTION_IDS = obj3;
@@ -338,10 +338,10 @@ export const OUTFIT_VARIANT_TO_DEFAULT = obj5;
 export function getOutfitDefaultOptionId(character) {
   return obj5[character];
 }
-export function getTraitOptionRarity(item, selectedCharacterTraits) {
+export function getTraitOptionRarity(item, item10034) {
   let tmp2;
-  if (null != obj[item][selectedCharacterTraits]) {
-    if (typeof f97944 === "function") {
+  if (null != obj[item][item10034]) {
+    if (typeof f88554 === "function") {
       if (closure_130_0.has(tmp)) {
         tmp2 = tmp;
       }

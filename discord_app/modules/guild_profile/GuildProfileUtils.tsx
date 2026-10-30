@@ -8,7 +8,7 @@ let closure_2 = ChannelRecord.createChannelRecordFromInvite;
 const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
-export function getEstablishedDate(tmpResult4, stateFromStores) {
+export function getEstablishedDate(tmpResult4, locale) {
   if (null != tmpResult4) {
     if ("" !== tmpResult4) {
       const _Date = Date;
@@ -19,7 +19,7 @@ export function getEstablishedDate(tmpResult4, stateFromStores) {
         const _isNaN = isNaN;
         toLocaleDateStringResult = null;
         if (!isNaN(date.getTime())) {
-          toLocaleDateStringResult = date.toLocaleDateString(stateFromStores, { year: "numeric", month: "short" });
+          toLocaleDateStringResult = date.toLocaleDateString(locale, { year: "numeric", month: "short" });
         }
       }
       return toLocaleDateStringResult;

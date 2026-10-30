@@ -4,7 +4,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 require = fn;
-let closure_4 = fn(15540).userBlockedWarningInCooldown;
+let closure_4 = fn(15580).userBlockedWarningInCooldown;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/shared_space_warnings/handleBlockedOrIgnoredUserVoiceChannelJoin.tsx");
 

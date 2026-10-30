@@ -19,7 +19,7 @@ const prototype = function ConjureHomeUploadError() {
 class prototype extends Error {
 }
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, content: null, hero: null, carousel: null, showcase: null, showcaseTitle: null, error: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_32, gap: PX_32 };
@@ -27,7 +27,7 @@ let obj4 = { paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault
 obj2.hero = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_32 };
 let obj6 = { marginBottom: null };
 const diff = nativeDefault.space.PX_48 - PX_32;
-obj6.marginBottom = diff - fn(12633).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
+obj6.marginBottom = diff - fn(12782).CONJURE_HOME_CAROUSEL_ROOM_BELOW;
 obj2.carousel = obj6;
 let obj5 = { gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_32 };
 obj2.showcase = { gap: nativeDefault.space.PX_16 };
@@ -60,8 +60,8 @@ export default function ConjureHomeLanding(focusRequest) {
   const tmp2 = closure_13();
   const navigation = require("useNavigation").useNavigation();
   _require = navigation;
-  bottom = bottom(1631)().bottom;
-  const tmp7 = bottom(11843)();
+  bottom = bottom(1626)().bottom;
+  const tmp7 = bottom(12036)();
   dependencyMap = tmp7;
   let obj = require("useNavigation");
   class E {
@@ -82,7 +82,7 @@ export default function ConjureHomeLanding(focusRequest) {
   if (first !== require("conjureTarget").CONJURE_TARGET_USER) {
     CONJURE_TARGET_USER = first;
     if (!conjureEligibleGuilds.some((id) => id.id === first)) {
-      CONJURE_TARGET_USER = tmp3(12789).CONJURE_TARGET_USER;
+      CONJURE_TARGET_USER = tmp3(12938).CONJURE_TARGET_USER;
     }
   }
   str = "guild";
@@ -135,7 +135,7 @@ export default function ConjureHomeLanding(focusRequest) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -163,12 +163,12 @@ export default function ConjureHomeLanding(focusRequest) {
               ref2.current = true;
               closure_1_8(true);
               _undefined(null);
-              closure_0(12397).setComposerDraft(closure_11, "");
+              closure_0(12547).setComposerDraft(closure_11, "");
               let guildId = 2;
               const obj4 = { guildId, installScope, modelSettings: null };
               c6 = 3;
               c7 = 1;
-              const obj5 = { value: bottom(12790)(obj4), done: false };
+              const obj5 = { value: bottom(12939)(obj4), done: false };
               return obj5;
             }
           }
@@ -180,27 +180,27 @@ export default function ConjureHomeLanding(focusRequest) {
         } else if (2 === tmp10) {
           guildId = 1;
           closure_130_5 = installScope;
-          closure_0(12397).setComposerDraft(closure_11, closure_130_0);
+          closure_0(12547).setComposerDraft(closure_11, closure_130_0);
           if (closure_130_5 instanceof closure_12) {
-            const intl = closure_0(1125).intl;
-            let stringResult = intl.string(bottom(3864)["903H7m"]);
+            const intl = closure_0(1114).intl;
+            let stringResult = intl.string(bottom(3865)["903H7m"]);
           } else {
-            stringResult = closure_0(10836).getConjureCreateErrorMessage(closure_130_5);
-            const obj12 = closure_0(10836);
+            stringResult = closure_0(10859).getConjureCreateErrorMessage(closure_130_5);
+            const obj12 = closure_0(10859);
           }
           closure_130_4 = stringResult;
           if (ref.current) {
             _undefined(closure_130_4);
           } else {
             const obj7 = { text: closure_130_4, variant: "critical" };
-            bottom(5701).open("CONJURE_HOME_CREATE_FAILED", obj7);
-            const obj13 = bottom(5701);
+            bottom(5707).open("CONJURE_HOME_CREATE_FAILED", obj7);
+            const obj13 = bottom(5707);
           }
           guildId = 0;
           ref2.current = false;
           closure_1_8(false);
           c7 = 3;
-          const obj11 = closure_0(12397);
+          const obj11 = closure_0(12547);
         } else {
           if (3 === tmp10) {
             if (arg0 === 1) {
@@ -223,14 +223,14 @@ export default function ConjureHomeLanding(focusRequest) {
                 const obj10 = { value: Promise.all(closure_130_1.map((item) => closure_0(closure_2[17]).uploadConjurePickedFile(dependencyMap, item))), done: false };
                 return obj10;
               } else {
-                closure_0(12395).startConjurePrompt(closure_130_2, closure_130_0.trim(), closure_130_3);
+                closure_0(12545).startConjurePrompt(closure_130_2, closure_130_0.trim(), closure_130_3);
                 (function whenFirstPromptShown(arg0) {
                   closure_0 = arg0;
                   return new Promise((fn) => {
                     closure_0 = fn;
                     function check() {
                       const messages = closure_3_8.getMessages(closure_0);
-                      if (messages.some(/* F166805 */ function() { ... })) {
+                      if (messages.some(/* F139952 */ function() { ... })) {
                         closure_3_8.removeChangeListener(check);
                         const _clearTimeout = clearTimeout;
                         clearTimeout(timerId);
@@ -254,14 +254,14 @@ export default function ConjureHomeLanding(focusRequest) {
                 })(closure_130_2);
                 c6 = 5;
                 c7 = 1;
-                const obj8 = closure_0(12395);
+                const obj8 = closure_0(12545);
               }
             }
           } else if (4 === tmp10) {
             guildId = 4;
             c6 = 8;
             c7 = 1;
-            const obj14 = { value: closure_0(10832).deleteProject(closure_130_2), done: false };
+            const obj14 = { value: closure_0(10855).deleteProject(closure_130_2), done: false };
             return obj14;
           } else if (5 === tmp10) {
             if (arg0 === 1) {
@@ -281,8 +281,8 @@ export default function ConjureHomeLanding(focusRequest) {
               }
               if (current) {
                 const obj17 = { projectId: closure_130_2 };
-                closure_0.dispatch(closure_0(1504).StackActions.replace(closure_0(11854).ConjureScreenScenes.CHAT, obj17));
-                str = closure_0(1504).StackActions;
+                closure_0.dispatch(closure_0(1499).StackActions.replace(closure_0(12047).ConjureScreenScenes.CHAT, obj17));
+                str = closure_0(1499).StackActions;
               }
               guildId = 0;
               ref2.current = false;
@@ -361,27 +361,27 @@ export default function ConjureHomeLanding(focusRequest) {
   let obj5 = { style: null, children: null };
   const items1 = [tmp2.root, animatedStyle];
   obj5.style = items1;
-  const items2 = [c9(bottom(12792), {}), , , ];
+  const items2 = [c9(bottom(12941), {}), , , ];
   const obj6 = { style: tmp2.scroll, contentContainerStyle: tmp2.content, keyboardShouldPersistTaps: "handled", onScrollBeginDrag: callback2, onTouchEnd: callback2, onScroll: callback, scrollEventThrottle: 100, children: null };
   let obj7 = { style: tmp2.hero, children: null };
   let obj8 = { variant: "display-md", color: "text-strong", accessibilityRole: "header", children: null };
-  let intl = tmp3(1125).intl;
-  obj8.children = intl.string(bottom(3864).doYpEy);
+  let intl = tmp3(1114).intl;
+  obj8.children = intl.string(bottom(3865).doYpEy);
   const items3 = [c9(require("Text/Text").Text, obj8), ];
   let obj9 = { variant: "text-sm/normal", color: "text-strong", children: null };
-  const intl2 = tmp3(1125).intl;
-  obj9.children = intl2.string(bottom(3864).BH58fD);
+  const intl2 = tmp3(1114).intl;
+  obj9.children = intl2.string(bottom(3865).BH58fD);
   items3[1] = c9(require("Text/Text").Text, obj9);
   obj7.children = items3;
   const items4 = [c10(c7, obj7), , ];
   const tmp24 = c10;
   const tmp9Result6 = str(forMeGuildId.useState(null), 2);
-  items4[1] = c9(c7, { style: tmp2.carousel, onLayout: callback1, children: c9(bottom(12633), { onScreen: tmp13 }) });
+  items4[1] = c9(c7, { style: tmp2.carousel, onLayout: callback1, children: c9(bottom(12782), { onScreen: tmp13 }) });
   let obj11 = { style: tmp2.showcase, children: null };
   let obj12 = { variant: "heading-lg/medium", color: "text-strong", accessibilityRole: "header", style: tmp2.showcaseTitle, children: null };
-  const intl3 = tmp3(1125).intl;
-  obj12.children = intl3.string(bottom(3864).IiQEVd);
-  const items5 = [c9(require("Text/Text").Text, obj12), c9(bottom(12793), {})];
+  const intl3 = tmp3(1114).intl;
+  obj12.children = intl3.string(bottom(3865).IiQEVd);
+  const items5 = [c9(require("Text/Text").Text, obj12), c9(bottom(12942), {})];
   obj11.children = items5;
   items4[2] = c10(c7, obj11);
   obj6.children = items4;
@@ -389,15 +389,15 @@ export default function ConjureHomeLanding(focusRequest) {
   let tmp25Result = null;
   if (null != tmp18) {
     let obj13 = { variant: "text-sm/normal", color: "text-feedback-critical", style: tmp2.error, children: tmp18 };
-    tmp25Result = tmp25(tmp3(5271).Text, obj13);
+    tmp25Result = tmp25(tmp3(5619).Text, obj13);
   }
   items2[2] = tmp25Result;
   let obj14 = { projectId, canSend: true, running: false, onSendFiles: callback3, sending: tmp9Result4[0], focusRequest, blurRequest: tmp20, placeholder: null, stackedAccessory: null };
-  let obj10 = { style: tmp2.carousel, onLayout: callback1, children: c9(bottom(12633), { onScreen: tmp13 }) };
-  const intl4 = tmp3(1125).intl;
-  obj14.placeholder = intl4.string(bottom(3864).Hy0OLY);
-  obj14.stackedAccessory = c9(bottom(12795), { target: CONJURE_TARGET_USER, guilds: conjureEligibleGuilds, onChange: tmp10[1] });
-  items2[3] = c9(bottom(12606), obj14);
+  let obj10 = { style: tmp2.carousel, onLayout: callback1, children: c9(bottom(12782), { onScreen: tmp13 }) };
+  const intl4 = tmp3(1114).intl;
+  obj14.placeholder = intl4.string(bottom(3865).Hy0OLY);
+  obj14.stackedAccessory = c9(bottom(12944), { target: CONJURE_TARGET_USER, guilds: conjureEligibleGuilds, onChange: tmp10[1] });
+  items2[3] = c9(bottom(12757), obj14);
   obj5.children = items2;
-  return tmp24(bottom(5086).View, obj5);
+  return tmp24(bottom(5090).View, obj5);
 };

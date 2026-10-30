@@ -12,9 +12,9 @@ import InviteStore from "../../../../../../../stores/InviteStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ InviteStates: closure_4, AbortCodes: hasOwnProperty } = Constants);
-const InviteTypes = fn(7867).InviteTypes;
+const InviteTypes = fn(7872).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx",
@@ -61,7 +61,7 @@ export function createInviteEmbed(author, code, theme) {
               } else if (InviteTypeUtils.GuildInviteExtendedType.PROFILE === guildInviteExtendedType) {
                 return GuildProfileInvite.createGuildProfileInvite(invite, theme);
               } else if (InviteTypeUtils.GuildInviteExtendedType.VOICE_CHANNEL === guildInviteExtendedType) {
-                guild = invite.guild;
+                const guild = invite.guild;
                 let id1;
                 if (guild != null) {
                   id1 = guild.id;

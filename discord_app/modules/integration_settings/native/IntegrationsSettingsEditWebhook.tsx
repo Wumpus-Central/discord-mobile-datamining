@@ -1,5 +1,4 @@
 // discord_app/modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx
-import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -20,8 +19,8 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_3 = fn(4935).GUILD_SELECTABLE_CHANNELS_KEY;
-const Constants = fn(1084);
+let closure_3 = fn(4939).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1072);
 ({
   Endpoints: closure_7,
   NON_USER_BOT_DISCRIMINATOR: closure_8,
@@ -30,7 +29,7 @@ const Constants = fn(1084);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, row: null, channelIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.row = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -129,11 +128,11 @@ class EditWebhook extends PureComponent {
         })
         .catch(() => {
           const obj2 = { title: null, body: null };
-          const intl = navigation(1125).intl;
-          obj2.title = intl.string(navigation(1125).t.N5riYn);
-          const intl2 = navigation(1125).intl;
-          obj2.body = intl2.string(navigation(1125).t["/4TwKf"]);
-          closure_1_1(5947).show(obj2);
+          const intl = navigation(1114).intl;
+          obj2.title = intl.string(navigation(1114).t.N5riYn);
+          const intl2 = navigation(1114).intl;
+          obj2.body = intl2.string(navigation(1114).t["/4TwKf"]);
+          closure_1_1(5954).show(obj2);
         });
     };
     applyArgumentsResult.handleDeleteWebhook = function handleDeleteWebhook() {
@@ -242,9 +241,9 @@ prototype["render"] = function render() {
   const state = this.state;
   ({ name, channel, errors } = state);
   ({ avatar, copied } = state);
-  const intl = webhookId(1125).intl;
+  const intl = webhookId(1114).intl;
   const string = intl.string;
-  const t = webhookId(1125).t;
+  const t = webhookId(1114).t;
   if (copied) {
     let stringResult = string(t.t5VZ88);
   } else {
@@ -268,15 +267,15 @@ prototype["render"] = function render() {
       disabled: false,
     };
     obj3.iconProps = obj4;
-    const intl2 = tmp3(1125).intl;
-    obj3.label = intl2.string(tmp3(1125).t["7+5GQa"]);
+    const intl2 = tmp3(1114).intl;
+    obj3.label = intl2.string(tmp3(1114).t["7+5GQa"]);
     tmp2Result3 = closure_11(IconLabelBlockDefault, obj3);
     const tmp8Result = IconLabelBlockDefault;
   }
   const items1 = [tmp2Result3, , , ,];
   const obj5 = { label: null, value: null, onChange: null, errorMessage: null };
-  const intl3 = tmp3(1125).intl;
-  obj5.label = intl3.string(webhookId(1125).t.ukdxuo);
+  const intl3 = tmp3(1114).intl;
+  obj5.label = intl3.string(webhookId(1114).t.ukdxuo);
   obj5.value = name;
   obj5.onChange = self.handleNameChange;
   let first;
@@ -286,101 +285,62 @@ prototype["render"] = function render() {
     }
   }
   obj5.errorMessage = first;
-  items1[1] = closure_11(webhookId(7068).TextInput, obj5);
+  items1[1] = closure_11(webhookId(7076).TextInput, obj5);
   const obj6 = { title: null, hasIcons: true, children: null };
-  const intl4 = tmp3(1125).intl;
-  obj6.title = intl4.string(webhookId(1125).t.GK18KJ);
+  const intl4 = tmp3(1114).intl;
+  obj6.title = intl4.string(webhookId(1114).t.GK18KJ);
   const obj7 = { label: null, arrow: true, onPress: null, icon: null };
-  const tmp2Result = closure_11(webhookId(5271).Text, {
+  const tmp2Result = closure_11(webhookId(5619).Text, {
     variant: "text-sm/medium",
     color: "text-link",
     children: stringResult,
   });
-  obj7.label = webhookId(5641).computeChannelName(channel, UserStore, RelationshipStore);
+  obj7.label = webhookId(5647).computeChannelName(channel, UserStore, RelationshipStore);
   obj7.onPress = self.handleChannelChange;
-  const obj8 = { size: webhookId(1199).Icon.Sizes.CUSTOM, source: null, style: null };
-  const tmp3Result = webhookId(5641);
-  obj8.source = webhookId(8561).getChannelIcon(channel);
+  const obj8 = { size: webhookId(1188).Icon.Sizes.CUSTOM, source: null, style: null };
+  const tmp3Result = webhookId(5647);
+  obj8.source = webhookId(8595).getChannelIcon(channel);
   obj8.style = tmp.channelIcon;
-  obj7.icon = closure_11(webhookId(1199).Icon, obj8);
-  obj6.children = closure_11(webhookId(6963).TableRow, obj7);
-  items1[2] = closure_11(webhookId(7047).TableRowGroup, obj6);
+  obj7.icon = closure_11(webhookId(1188).Icon, obj8);
+  obj6.children = closure_11(webhookId(6969).TableRow, obj7);
+  items1[2] = closure_11(webhookId(7054).TableRowGroup, obj6);
   let tmp2Result4 = null;
   if (null != token) {
     const obj9 = { title: null, hasIcons: false, children: null };
-    const intl5 = tmp3(1125).intl;
-    obj9.title = intl5.string(tmp3(1125).t.SFdvF1);
+    const intl5 = tmp3(1114).intl;
+    obj9.title = intl5.string(tmp3(1114).t.SFdvF1);
     const obj10 = { label: null, onPress: null, trailing: null };
-    const aPIBaseURL = tmp3(1294).getAPIBaseURL(false);
+    const aPIBaseURL = tmp3(1283).getAPIBaseURL(false);
     const _HermesInternal = HermesInternal;
     obj10.label = "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token);
     obj10.onPress = self.handleCopyUrl;
     obj10.trailing = tmp2Result;
-    obj9.children = closure_11(tmp3(6963).TableRow, obj10);
-    tmp2Result4 = closure_11(tmp3(7047).TableRowGroup, obj9);
-    const tmp3Result4 = tmp3(1294);
+    obj9.children = closure_11(tmp3(6969).TableRow, obj10);
+    tmp2Result4 = closure_11(tmp3(7054).TableRowGroup, obj9);
+    const tmp3Result4 = tmp3(1283);
   }
   items1[3] = tmp2Result4;
   const obj11 = { hasIcons: false, children: null };
   const obj12 = { variant: "danger", onPress: self.handleDeleteWebhook, label: null };
-  const intl6 = tmp3(1125).intl;
-  obj12.label = intl6.string(webhookId(1125).t.oyYWHE);
-  obj11.children = closure_11(webhookId(6963).TableRow, obj12);
-  items1[4] = closure_11(webhookId(7047).TableRowGroup, obj11);
+  const intl6 = tmp3(1114).intl;
+  obj12.label = intl6.string(webhookId(1114).t.oyYWHE);
+  obj11.children = closure_11(webhookId(6969).TableRow, obj12);
+  items1[4] = closure_11(webhookId(7054).TableRowGroup, obj11);
   obj2.children = items1;
-  obj.children = closure_12(webhookId(6015).Stack, obj2);
-  return closure_11(webhookId(8988).Form, obj);
+  obj.children = closure_12(webhookId(6022).Stack, obj2);
+  return closure_11(webhookId(8169).Form, obj);
 };
-EditWebhook.contextType = fn(5071).ThemeContext;
-const ReactCompilerGating = fn(558);
-let obj4 = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+EditWebhook.contextType = fn(5075).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function ConnectedEditWebhook(arg0) {
-      const cResult = c.c(6);
-      const navigation = useNavigation.useNavigation();
-      if (cResult[0] === navigation) {
-        if (cResult[1] === arg0) {
-          let tmp5 = cResult[2];
-        }
-        const _Symbol = Symbol;
-        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp11 = closure_1_11(NavScrim.NavScrim, {});
-          cResult[3] = tmp11;
-          let tmp9 = tmp11;
-        } else {
-          tmp9 = cResult[3];
-        }
-        if (cResult[4] !== tmp5) {
-          const obj3 = { children: null };
-          const items = [tmp5, tmp9];
-          obj3.children = items;
-          const tmp15 = __initData(map1, obj3);
-          cResult[4] = tmp5;
-          cResult[5] = tmp15;
-          let tmp12 = tmp15;
-        } else {
-          tmp12 = cResult[5];
-        }
-        return tmp12;
-      }
-      const merged = Object.assign(arg0);
-      const tmp7 = closure_1_11(EditWebhook, { navigation });
-      cResult[0] = navigation;
-      cResult[1] = arg0;
-      cResult[2] = tmp7;
-      tmp5 = tmp7;
-      const obj4 = { navigation };
-    }
-  : function ConnectedEditWebhook(arg0) {
-      const obj2 = { children: null };
-      const merged = Object.assign(arg0);
-      const items = [
-        closure_1_11(EditWebhook, { navigation: useNavigation.useNavigation() }),
-        closure_1_11(NavScrim.NavScrim, {}),
-      ];
-      obj2.children = items;
-      return __initData(map1, obj2);
-    };
+export default function ConnectedEditWebhook(arg0) {
+  const obj2 = { children: null };
+  const merged = Object.assign(arg0);
+  const items = [
+    closure_1_11(EditWebhook, { navigation: useNavigation.useNavigation() }),
+    closure_1_11(NavScrim.NavScrim, {}),
+  ];
+  obj2.children = items;
+  return closure_1_12(map1, obj2);
+}

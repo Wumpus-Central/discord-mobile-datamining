@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(17163).HappeningNowCardTrackingType;
-const AnalyticEvents = fn(1084).AnalyticEvents;
+let closure_7 = fn(17217).HappeningNowCardTrackingType;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const LARGE = fn(1199).AvatarSizes.LARGE;
-const createStyles = fn(5005);
+const LARGE = fn(1188).AvatarSizes.LARGE;
+const createStyles = fn(5009);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -39,10 +39,10 @@ export default noop.memo(function HappeningNowCardUser(index) {
     obj2.highlighted_user_ids = items;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
-      asyncRequireImpl(8708, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8742, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8708, dependencyMap.paths);
+      const promise = asyncRequireImpl(8742, dependencyMap.paths);
     }
   }, items2);
   let obj = index(guildId[10]);

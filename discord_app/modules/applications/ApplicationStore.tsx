@@ -209,8 +209,8 @@ prototype["isFetchingApplication"] = function isFetchingApplication(application_
 prototype["isHydrated"] = function isHydrated(applicationId) {
   return set.has(applicationId);
 };
-prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(application_id) {
-  return false === map5.get(application_id);
+prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(applicationId) {
+  return false === map5.get(applicationId);
 };
 prototype["getFetchingOrFailedFetchingIds"] = function getFetchingOrFailedFetchingIds() {
   return Array.from(map5.keys());

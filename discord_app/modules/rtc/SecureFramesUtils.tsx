@@ -3,12 +3,12 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2047 from "../../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../../_runtime/metro/02044__.js";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
-import _mod9218 from "../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9231 from "../../../discord_common/js/packages/libdave/index.tsx";
 import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators.tsx";
 import SecureFramesTracking from "SecureFramesTracking.tsx";
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils.native.tsx";
@@ -71,7 +71,7 @@ let closure_21 = async function _isPublicKeyMatch(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -217,7 +217,7 @@ let closure_23 = async function _uploadCurrentUserPublicKey(arg0) {
         const result = closure_130_1(closure_130_2[11]).addUploadedKeyVersion(closure_129_0);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -245,7 +245,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -273,7 +273,7 @@ let closure_25 = async function _ensureCurrentUserPublicKey(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -291,7 +291,7 @@ let closure_26 = async function _isCurrentUserPublicKeyMatch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -421,10 +421,10 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(9234);
+const SecureFramesConstants = fn(9247);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } =
   SecureFramesConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
@@ -452,7 +452,7 @@ export function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod9218.serializeKey(uint8Array);
+    const serializeKeyResult = _mod9231.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);
@@ -488,8 +488,8 @@ export function deleteUserPersistentVerifications(userId) {
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj3);
 }
 export function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  const tmp3 = _modDef2047(timestamp);
-  const diffResult = _modDef2047().diff(tmp3, "s");
+  const tmp3 = _modDef2044(timestamp);
+  const diffResult = _modDef2044().diff(tmp3, "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
@@ -531,7 +531,7 @@ export function getSecureFramesUserVerifiedTimestamp(timestamp) {
     const obj8 = { count: diffResult };
     return intl.formatToPlainString(util.t["/w0Qpw"], obj8);
   }
-  const obj = _modDef2047();
+  const obj = _modDef2044();
 }
 export function getUserVerificationDeeplink(userId, arg1) {
   return (
@@ -546,49 +546,49 @@ export function getUserVerificationDeeplink(userId, arg1) {
     encodeURIComponent(arg1)
   );
 }
-export function getUserVerifyStateText(CURRENT_USER_DISCONNECTED, name) {
-  if (constants.OTHER_USER_DISCONNECTED === CURRENT_USER_DISCONNECTED) {
+export function getUserVerifyStateText(memo, name) {
+  if (constants.OTHER_USER_DISCONNECTED === memo) {
     const intl13 = util.intl;
     const items = [intl13.string(util.t.ZBHDM9)];
     const intl14 = util.intl;
     const obj2 = { username: name };
     items[1] = intl14.format(util.t["+rIdOd"], obj2);
     return items;
-  } else if (constants.CURRENT_USER_DISCONNECTED === CURRENT_USER_DISCONNECTED) {
+  } else if (constants.CURRENT_USER_DISCONNECTED === memo) {
     const intl11 = util.intl;
     const items1 = [intl11.string(util.t["5ICxE6"])];
     const intl12 = util.intl;
     items1[1] = intl12.string(util.t["v1eXp/"]);
     return items1;
-  } else if (constants.UNABLE_TO_VERIFY === CURRENT_USER_DISCONNECTED) {
+  } else if (constants.UNABLE_TO_VERIFY === memo) {
     const intl9 = util.intl;
     const items2 = [intl9.string(util.t["+no/a7"])];
     const intl10 = util.intl;
     const obj3 = { username: name };
     items2[1] = intl10.format(util.t.Mft7iJ, obj3);
     return items2;
-  } else if (constants.FINGERPRINT_MISMATCH === CURRENT_USER_DISCONNECTED) {
+  } else if (constants.FINGERPRINT_MISMATCH === memo) {
     const intl7 = util.intl;
     const items3 = [intl7.string(util.t.HTJ76H)];
     const intl8 = util.intl;
     const obj4 = { username: name };
     items3[1] = intl8.format(util.t.tc6aAc, obj4);
     return items3;
-  } else if (constants.OTHER_USER_ALREADY_VERIFIED === CURRENT_USER_DISCONNECTED) {
+  } else if (constants.OTHER_USER_ALREADY_VERIFIED === memo) {
     const intl5 = util.intl;
     const items4 = [intl5.string(util.t["9lw+J+"])];
     const intl6 = util.intl;
     const obj5 = { username: name };
     items4[1] = intl6.format(util.t.TvBS1w, obj5);
     return items4;
-  } else if (constants.MATCH === CURRENT_USER_DISCONNECTED) {
+  } else if (constants.MATCH === memo) {
     const intl3 = util.intl;
     const items5 = [intl3.string(util.t["xyE+Dn"])];
     const intl4 = util.intl;
     const obj6 = { username: name };
     items5[1] = intl4.format(util.t.znsPl5, obj6);
     return items5;
-  } else if (constants.OTHER_USER_INCONSISTENT_KEYS === CURRENT_USER_DISCONNECTED) {
+  } else if (constants.OTHER_USER_INCONSISTENT_KEYS === memo) {
     const intl = util.intl;
     const items6 = [intl.string(util.t.im1uUi)];
     const intl2 = util.intl;

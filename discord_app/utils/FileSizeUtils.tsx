@@ -56,7 +56,7 @@ let result = size.fileFinishedImporting("utils/FileSizeUtils.tsx");
 export const BYTE_IN_KB = 1024;
 export const KB_IN_MB = 1024;
 export { formatSize };
-export function formatKbSize(bytes, arg1) {
+export function formatKbSize(MAX_STICKER_FILE_SIZE, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = closure_3;
@@ -66,7 +66,7 @@ export function formatKbSize(bytes, arg1) {
   if (tmp.useKibibytes) {
     num2 = 1024;
   }
-  const result = bytes / num2;
+  const result = MAX_STICKER_FILE_SIZE / num2;
   if (tmp.useKibibytes) {
     num = c2;
   }

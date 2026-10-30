@@ -1,6 +1,5 @@
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
-import c from "../../../../../../_runtime/00576_c.js";
-import _mod4920 from "../../../../../../_runtime/metro/04920__.js";
+import _mod4924 from "../../../../../../_runtime/metro/04924__.js";
 import PushNotificationDefault from "../../../../../lib/pushnotification/PushNotification.tsx";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -18,7 +17,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -125,68 +124,13 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
     }
   }
 };
-const identity = fn(1266);
+const identity = fn(1255);
 let closure_4 = identity.createWithEqualityFn(() => ({
-  isLightsEnabled: "toCharArray$esjava$1",
-  isVibrationsEnabled: "Symbol",
-  isSoundsEnabled: "ix",
-  isNotifyEveryTime: "min",
+  isLightsEnabled: "Array",
+  isVibrationsEnabled: "Path",
+  isSoundsEnabled: "y",
+  isNotifyEveryTime: "HermesInternal",
 }));
-fn(558);
-let ReactCompilerGating = fn(558);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAndroidNotificationLightsEnabled() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(isLightsEnabled) {
-          return isLightsEnabled.isLightsEnabled;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return closure_4(first, _mod4920.shallow);
-    }
-  : function useAndroidNotificationLightsEnabled() {
-      return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4920.shallow);
-    };
-ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAndroidNotificationVibrationsEnabled() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(isVibrationsEnabled) {
-          return isVibrationsEnabled.isVibrationsEnabled;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return closure_4(first, _mod4920.shallow);
-    }
-  : function useAndroidNotificationVibrationsEnabled() {
-      return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4920.shallow);
-    };
-ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAndroidNotificationSoundsEnabled() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(isSoundsEnabled) {
-          return isSoundsEnabled.isSoundsEnabled;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return closure_4(first, _mod4920.shallow);
-    }
-  : function useAndroidNotificationSoundsEnabled() {
-      return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4920.shallow);
-    };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx",
@@ -202,44 +146,36 @@ export function initializeAndroidNotificationSettingsStore() {
   }
   return applyArgumentsResult;
 }
-export const useAndroidNotificationLightsEnabled = tmp2;
+export function useAndroidNotificationLightsEnabled() {
+  return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4924.shallow);
+}
 export function setAndroidNotificationLightsEnabled(isLightsEnabled) {
   _require = isLightsEnabled;
   require("ReactBatchUpdates").batchUpdates(() => state.setState({ isLightsEnabled }));
   const obj = require("ReactBatchUpdates");
   PushNotificationDefault.setLightsEnabled(isLightsEnabled);
 }
-export const useAndroidNotificationVibrationsEnabled = tmp3;
+export function useAndroidNotificationVibrationsEnabled() {
+  return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4924.shallow);
+}
 export function setAndroidNotificationVibrationsEnabled(isVibrationsEnabled) {
   _require = isVibrationsEnabled;
   require("ReactBatchUpdates").batchUpdates(() => state.setState({ isVibrationsEnabled }));
   const obj = require("ReactBatchUpdates");
   PushNotificationDefault.setVibrationsEnabled(isVibrationsEnabled);
 }
-export const useAndroidNotificationSoundsEnabled = tmp4;
+export function useAndroidNotificationSoundsEnabled() {
+  return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4924.shallow);
+}
 export function setAndroidNotificationSoundsEnabled(isSoundsEnabled) {
   _require = isSoundsEnabled;
   require("ReactBatchUpdates").batchUpdates(() => state.setState({ isSoundsEnabled }));
   const obj = require("ReactBatchUpdates");
   PushNotificationDefault.setSoundsEnabled(isSoundsEnabled);
 }
-export const useAndroidMessageNotificationsEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAndroidMessageNotificationsEnabled() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(isNotifyEveryTime) {
-          return isNotifyEveryTime.isNotifyEveryTime;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return closure_4(first, _mod4920.shallow);
-    }
-  : function useAndroidMessageNotificationsEnabled() {
-      return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4920.shallow);
-    };
+export function useAndroidMessageNotificationsEnabled() {
+  return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4924.shallow);
+}
 export function setAndroidMessageNotificationsEnabled(isNotifyEveryTime) {
   _require = isNotifyEveryTime;
   require("ReactBatchUpdates").batchUpdates(() => state.setState({ isNotifyEveryTime }));

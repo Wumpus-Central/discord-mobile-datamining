@@ -16,3 +16,12 @@ export function queuedMessageActionHandler(projectId, message, stateFromStores) 
     }
   }
 }
+export function queuedUserMessages(stateFromStores) {
+  return stateFromStores.filter((role) => {
+    let tmp = "user" === role.role;
+    if (tmp) {
+      tmp = "queued" === role.disposition;
+    }
+    return tmp;
+  });
+}

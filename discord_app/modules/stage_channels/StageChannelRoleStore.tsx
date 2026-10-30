@@ -29,7 +29,7 @@ function buildStageChannelUserRoles(user, id2) {
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  guild = GuildStore.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != channel) {
       if (channel.isGuildStageVoice()) {
@@ -120,8 +120,8 @@ prototype["initialize"] = function initialize() {
 prototype["isSpeaker"] = function isSpeaker(id, channelId) {
   return this.getPermissionsForUser(id, channelId)[obj.SPEAKER];
 };
-prototype["isModerator"] = function isModerator(id, channelId) {
-  let flag = this.getPermissionsForUser(id, channelId, true)[obj.MODERATOR];
+prototype["isModerator"] = function isModerator(id, id2) {
+  let flag = this.getPermissionsForUser(id, id2, true)[obj.MODERATOR];
   if (flag == null) {
     flag = false;
   }

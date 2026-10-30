@@ -1,5 +1,5 @@
 // discord_app/intl/preloader.tsx
-import asyncRequireImpl from "../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/01995_asyncRequireImpl.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -14,7 +14,7 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -113,6 +113,8 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
           asyncRequireImpl(dependencyMap[84], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[85], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[86], dependencyMap.paths),
+          asyncRequireImpl(dependencyMap[87], dependencyMap.paths),
+          asyncRequireImpl(dependencyMap[88], dependencyMap.paths),
         ];
         c0 = 3;
         const obj = { value: Promise.all(items), done: true };

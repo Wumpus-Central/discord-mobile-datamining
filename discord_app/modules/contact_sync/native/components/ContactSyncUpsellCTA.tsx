@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef15596 from "../../../../../_runtime/metro/15596__.js";
+import _modDef15636 from "../../../../../_runtime/metro/15636__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const dismissUpsellCTA = fn(14049).dismissUpsellCTA;
-const Constants = fn(1084);
+const dismissUpsellCTA = fn(14197).dismissUpsellCTA;
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj = {
   container: {
     padding: 12,
@@ -19,7 +19,6 @@ let obj = {
   },
 };
 let closure_7 = createStyles.createStyles(obj);
-const ReactCompilerGating = fn(558);
 let obj3 = {
   padding: 12,
   borderRadius: nativeDefault.radii.sm,
@@ -28,174 +27,76 @@ let obj3 = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");
 
-export default noop.memo(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? function ContactSyncUpsellCTA(arg0) {
-        const cResult = _location(576).c(11);
-        ({ style, location: _location } = arg0);
-        const tmp4 = closure_7();
-        if (cResult[0] !== _location) {
-          function handleOpen() {
-            const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
-            let str = _location;
-            let str2 = _location;
-            if (_location == null) {
-              str2 = "Friends List Upsell";
-            }
-            obj2.location = { page: str2 };
-            AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
-            if (str == null) {
-              str = "Friends List Upsell";
-            }
-            ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
-          }
-          cResult[0] = _location;
-          cResult[1] = handleOpen;
-          let tmp5 = handleOpen;
-        } else {
-          tmp5 = cResult[1];
-        }
-        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          function openDismissOption() {
-            const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-            const obj3 = { label: null, onPress: null };
-            const intl = _location(1125).intl;
-            obj3.label = intl.string(_location(1125).t.WAI6xu);
-            obj3.onPress = function onPress() {
-              closure_1_3();
-            };
-            const items = [obj3];
-            obj2.options = items;
-            const result = _location(7350).showSimpleActionSheet(obj2);
-          }
-          cResult[2] = openDismissOption;
-          let tmp6 = openDismissOption;
-        } else {
-          tmp6 = cResult[2];
-        }
-        if (cResult[3] === style) {
-          if (cResult[4] === tmp4.container) {
-            let tmp7 = cResult[5];
-          }
-          const _Symbol = Symbol;
-          if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            let intl = _location(1125).intl;
-            const stringResult = intl.string(_location(1125).t.T6Rfd9);
-            const intl2 = _location(1125).intl;
-            const stringResult1 = intl2.string(_location(1125).t.c6KIpg);
-            cResult[6] = stringResult;
-            cResult[7] = stringResult1;
-            let tmp9 = stringResult1;
-            let tmp8 = stringResult;
-          } else {
-            tmp8 = cResult[6];
-            tmp9 = cResult[7];
-          }
-          if (cResult[8] === tmp5) {
-            if (cResult[9] === tmp7) {
-              let tmp12 = cResult[10];
-            }
-            return tmp12;
-          }
-          let obj2 = {
-            onPress: tmp5,
-            onLongPress: tmp6,
-            style: tmp7,
-            iconSource: _modDef15596,
-            title: tmp8,
-            subtitle: tmp9,
-          };
-          const tmp15 = jsx(_location(8988).FormCTA, {
-            onPress: tmp5,
-            onLongPress: tmp6,
-            style: tmp7,
-            iconSource: _modDef15596,
-            title: tmp8,
-            subtitle: tmp9,
-          });
-          cResult[8] = tmp5;
-          cResult[9] = tmp7;
-          cResult[10] = tmp15;
-          tmp12 = tmp15;
-        }
-        let items = [tmp4.container, style];
-        cResult[3] = style;
-        cResult[4] = tmp4.container;
-        cResult[5] = items;
-        tmp7 = items;
-        let obj = _location(576);
+export default noop.memo(function ContactSyncUpsellCTA(location) {
+  location = location.location;
+  let obj = {
+    onPress: function handleOpen() {
+      const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
+      let str = location;
+      let str2 = location;
+      if (location == null) {
+        str2 = "Friends List Upsell";
       }
-    : function ContactSyncUpsellCTA(location) {
-        location = location.location;
-        let obj = {
-          onPress: function handleOpen() {
-            const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
-            let str = location;
-            let str2 = location;
-            if (location == null) {
-              str2 = "Friends List Upsell";
-            }
-            obj2.location = { page: str2 };
-            AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
-            if (str == null) {
-              str = "Friends List Upsell";
-            }
-            ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
-          },
-          onLongPress: function openDismissOption() {
-            const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-            const obj3 = { label: null, onPress: null };
-            const intl = location(1125).intl;
-            obj3.label = intl.string(location(1125).t.WAI6xu);
-            obj3.onPress = function onPress() {
-              closure_1_3();
-            };
-            const items = [obj3];
-            obj2.options = items;
-            const result = location(7350).showSimpleActionSheet(obj2);
-          },
-          style: null,
-          iconSource: _modDef15596,
-          title: null,
-          subtitle: null,
-        };
-        let items = [closure_7().container, location.style];
-        obj.style = items;
-        let intl = location(1125).intl;
-        obj.title = intl.string(location(1125).t.T6Rfd9);
-        const intl2 = location(1125).intl;
-        obj.subtitle = intl2.string(location(1125).t.c6KIpg);
-        return jsx(location(8988).FormCTA, {
-          onPress: function handleOpen() {
-            const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
-            let str = location;
-            let str2 = location;
-            if (location == null) {
-              str2 = "Friends List Upsell";
-            }
-            obj2.location = { page: str2 };
-            AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
-            if (str == null) {
-              str = "Friends List Upsell";
-            }
-            ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
-          },
-          onLongPress: function openDismissOption() {
-            const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
-            const obj3 = { label: null, onPress: null };
-            const intl = location(1125).intl;
-            obj3.label = intl.string(location(1125).t.WAI6xu);
-            obj3.onPress = function onPress() {
-              closure_1_3();
-            };
-            const items = [obj3];
-            obj2.options = items;
-            const result = location(7350).showSimpleActionSheet(obj2);
-          },
-          style: null,
-          iconSource: _modDef15596,
-          title: null,
-          subtitle: null,
-        });
-      },
-);
+      obj2.location = { page: str2 };
+      AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
+      if (str == null) {
+        str = "Friends List Upsell";
+      }
+      ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
+    },
+    onLongPress: function openDismissOption() {
+      const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+      const obj3 = { label: null, onPress: null };
+      const intl = location(1114).intl;
+      obj3.label = intl.string(location(1114).t.WAI6xu);
+      obj3.onPress = function onPress() {
+        closure_1_3();
+      };
+      const items = [obj3];
+      obj2.options = items;
+      const result = location(7357).showSimpleActionSheet(obj2);
+    },
+    style: null,
+    iconSource: _modDef15636,
+    title: null,
+    subtitle: null,
+  };
+  let items = [closure_7().container, location.style];
+  obj.style = items;
+  let intl = location(1114).intl;
+  obj.title = intl.string(location(1114).t.T6Rfd9);
+  const intl2 = location(1114).intl;
+  obj.subtitle = intl2.string(location(1114).t.c6KIpg);
+  return jsx(location(8169).FormCTA, {
+    onPress: function handleOpen() {
+      const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
+      let str = location;
+      let str2 = location;
+      if (location == null) {
+        str2 = "Friends List Upsell";
+      }
+      obj2.location = { page: str2 };
+      AnalyticsUtilsDefault.track(constants.OPEN_MODAL, obj2);
+      if (str == null) {
+        str = "Friends List Upsell";
+      }
+      ContactSyncModalActionCreators.openContactSyncModal({}, { page: str });
+    },
+    onLongPress: function openDismissOption() {
+      const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
+      const obj3 = { label: null, onPress: null };
+      const intl = location(1114).intl;
+      obj3.label = intl.string(location(1114).t.WAI6xu);
+      obj3.onPress = function onPress() {
+        closure_1_3();
+      };
+      const items = [obj3];
+      obj2.options = items;
+      const result = location(7357).showSimpleActionSheet(obj2);
+    },
+    style: null,
+    iconSource: _modDef15636,
+    title: null,
+    subtitle: null,
+  });
+});

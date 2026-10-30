@@ -232,20 +232,20 @@ function shouldShowInRecents(guild, record, initializationData) {
     return false;
   }
 }
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({
   ChannelRecordBase: closure_14,
   isGuildReadableType: closure_15,
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7701).ChannelListGuildActionRow;
-const Constants = fn(1084);
+const ChannelListGuildActionRow = fn(7706).ChannelListGuildActionRow;
+const Constants = fn(1072);
 ({ ChannelTypes: closure_30, GuildFeatures: closure_31 } = Constants);
-const ChannelFlags = fn(4864).ChannelFlags;
-const Permissions = fn(1095).Permissions;
+const ChannelFlags = fn(4865).ChannelFlags;
+const Permissions = fn(1083).Permissions;
 let c34 = "placeholder-channel-id";
-const __initData7 = {
+const __initData13 = {
   CannotShow: 1,
   [1]: "CannotShow",
   DoNotShow: 2,
@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "mindre end \u00E9t sekund",
+      version: "asc",
     });
     merged.id = global;
     obj = closure_25;
@@ -1428,9 +1428,9 @@ prototype5["updateAllChannels"] = function updateAllChannels(arg0) {
 prototype5["updateChannel"] = function updateChannel(type, initializationData) {
   const self = this;
   if (this.enabled) {
-    if (value3(type.type)) {
+    if (__initData2(type.type)) {
       return null != self.channels[type.parent_id] && self.updateShownChannelIds(self.channels[type.parent_id]);
-    } else if (value2(type.type)) {
+    } else if (__initData(type.type)) {
       if (null == self.channels[type.id]) {
         self.channels[type.id] = new RecentlyActiveChannelListChannel(self, type, initializationData);
         self.invalidate();
@@ -1978,7 +1978,7 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
     }
   }
   const parent_id = self.record.parent_id;
-  guild = self.category.guild;
+  const guild = self.category.guild;
   const favoriteChannelIds = guild.favoriteChannelIds;
   if (favoriteChannelIds.has(self.record.id)) {
     const obj3 = { renderLevel: closure_35.CannotShow, threadIds: [] };
@@ -2046,7 +2046,7 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
                     const record2 = self.record;
                     if (!record2.isGuildVocal()) {
                       if (self.record.type !== constants.GUILD_STORE) {
-                        if (value2(self.record.type)) {
+                        if (__initData(self.record.type)) {
                           if (!ReadStateStore.hasUnread(self.record.id)) {
                             const obj11 = { renderLevel: closure_35.WouldShowIfUncollapsed, threadIds: tmp12 };
                             return obj11;

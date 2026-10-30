@@ -5,7 +5,7 @@ import ImpersonateActionCreators from "../impersonate/ImpersonateActionCreators.
 import ImpersonateStore from "../impersonate/ImpersonateStore.tsx";
 
 require = fn;
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
 

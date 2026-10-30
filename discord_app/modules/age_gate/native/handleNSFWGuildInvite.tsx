@@ -37,7 +37,7 @@ export function handleNSFWGuildInvite(invite, arg1) {
   ({ onConfirm: require, onCancel } = arg1);
   c2 = undefined;
   if (invite != null) {
-    guild = invite.guild;
+    const guild = invite.guild;
     if (guild != null) {
       const id = guild.id;
     }

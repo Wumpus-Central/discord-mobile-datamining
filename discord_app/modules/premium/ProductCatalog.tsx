@@ -6,7 +6,7 @@ import OverridePremiumTypeStore from "OverridePremiumTypeStore.tsx";
 import PremiumSKUFeature_mod from "PremiumSKUFeature.tsx";
 
 let closure_0 = fn;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 ({ PremiumSubscriptionSKUs, PremiumTypeToActivePremiumSubscriptionSKU: closure_4 } = PremiumConstants);
 let closure_5 = new LoggerDefault("ProductCatalog.tsx");
 let PremiumSKUFeature = PremiumSKUFeature_mod;
@@ -66,7 +66,7 @@ class ProductCatalogFeature extends tmp36 {
   }
 }
 const object = new Object(
-  fn(5064).EntitlementFeatureNames.ANIMATED_EMOJIS,
+  fn(5068).EntitlementFeatureNames.ANIMATED_EMOJIS,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -148,7 +148,7 @@ const object = new Object(
   tmp,
 );
 const object16 = new Object(
-  fn(5064).EntitlementFeatureNames.EMOJIS_EVERYWHERE,
+  fn(5068).EntitlementFeatureNames.EMOJIS_EVERYWHERE,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -230,7 +230,7 @@ const object16 = new Object(
   tmp,
 );
 const object17 = new Object(
-  fn(5064).EntitlementFeatureNames.STICKERS_EVERYWHERE,
+  fn(5068).EntitlementFeatureNames.STICKERS_EVERYWHERE,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -312,7 +312,7 @@ const object17 = new Object(
   tmp,
 );
 const object18 = new Object(
-  fn(5064).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE,
+  fn(5068).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -394,7 +394,7 @@ const object18 = new Object(
   tmp,
 );
 const object19 = new Object(
-  fn(5064).EntitlementFeatureNames.CUSTOM_CALL_SOUNDS,
+  fn(5068).EntitlementFeatureNames.CUSTOM_CALL_SOUNDS,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -476,7 +476,7 @@ const object19 = new Object(
   tmp,
 );
 const object20 = new Object(
-  fn(5064).EntitlementFeatureNames.PREMIUM_VOICE_FILTERS,
+  fn(5068).EntitlementFeatureNames.PREMIUM_VOICE_FILTERS,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -558,7 +558,7 @@ const object20 = new Object(
   tmp,
 );
 const object21 = new Object(
-  fn(5064).EntitlementFeatureNames.ANIMATED_AVATAR,
+  fn(5068).EntitlementFeatureNames.ANIMATED_AVATAR,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -640,7 +640,7 @@ const object21 = new Object(
   tmp,
 );
 const object22 = new Object(
-  fn(5064).EntitlementFeatureNames.CUSTOM_DISCRIMINATOR,
+  fn(5068).EntitlementFeatureNames.CUSTOM_DISCRIMINATOR,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -722,7 +722,7 @@ const object22 = new Object(
   tmp,
 );
 const object23 = new Object(
-  fn(5064).EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE,
+  fn(5068).EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -886,7 +886,7 @@ const tmp33 = new tmp(
   tmp,
 );
 const tmp36 = new tmp(
-  fn(5064).EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES,
+  fn(5068).EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -1132,7 +1132,7 @@ const tmp38 = new tmp(
   tmp,
 );
 const object24 = new Object(
-  fn(5064).EntitlementFeatureNames.CLIENT_THEMES,
+  fn(5068).EntitlementFeatureNames.CLIENT_THEMES,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -1378,7 +1378,7 @@ const tmp40 = new tmp(
   tmp,
 );
 const object25 = new Object(
-  fn(5064).EntitlementFeatureNames.STREAM_MID_QUALITY,
+  fn(5068).EntitlementFeatureNames.STREAM_MID_QUALITY,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -1460,7 +1460,7 @@ const object25 = new Object(
   tmp,
 );
 const object26 = new Object(
-  fn(5064).EntitlementFeatureNames.STREAM_HIGH_QUALITY,
+  fn(5068).EntitlementFeatureNames.STREAM_HIGH_QUALITY,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -1542,7 +1542,7 @@ const object26 = new Object(
   tmp,
 );
 const object27 = new Object(
-  fn(5064).EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS,
+  fn(5068).EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -1870,7 +1870,7 @@ const tmp43 = new tmp(
   tmp,
 );
 const object28 = new Object(
-  fn(5064).EntitlementFeatureNames.VIDEO_FILTER_ASSETS,
+  fn(5068).EntitlementFeatureNames.VIDEO_FILTER_ASSETS,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -1953,11 +1953,11 @@ const object28 = new Object(
 );
 let PremiumSKUFeature = PremiumSKUFeature_mod;
 const importDefaultResult11 = new PremiumSKUFeature(
-  fn(5064).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE,
-  fn(5065).getUserMaxFileSize,
+  fn(5068).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE,
+  fn(5069).getUserMaxFileSize,
 );
 const object29 = new Object(
-  fn(5064).EntitlementFeatureNames.INCREASED_GUILD_LIMIT,
+  fn(5068).EntitlementFeatureNames.INCREASED_GUILD_LIMIT,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -2039,7 +2039,7 @@ const object29 = new Object(
   tmp,
 );
 const object30 = new Object(
-  fn(5064).EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH,
+  fn(5068).EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -2285,7 +2285,7 @@ const tmp293 = new tmp29(
   object30,
 );
 const tmp294 = new tmp29(
-  fn(5064).EntitlementFeatureNames.QUEST_ORB_MULTIPLIER,
+  fn(5068).EntitlementFeatureNames.QUEST_ORB_MULTIPLIER,
   (premiumType) =>
     (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
@@ -2410,53 +2410,53 @@ const frozen = Object.freeze(obj);
 const items3 = [tmp39, tmp40];
 const items4 = [tmp294];
 let closure_9 = [];
-const items5 = [object, fn(1397).Perk.ANIMATED_EMOJIS];
+const items5 = [object, fn(1392).Perk.ANIMATED_EMOJIS];
 const items6 = [items5, , , , , , , , , , , , , , , , , , , , , , ,];
-const items7 = [object16, fn(1397).Perk.EMOJIS_EVERYWHERE];
+const items7 = [object16, fn(1392).Perk.EMOJIS_EVERYWHERE];
 items6[1] = items7;
-const items8 = [object17, fn(1397).Perk.STICKERS_EVERYWHERE];
+const items8 = [object17, fn(1392).Perk.STICKERS_EVERYWHERE];
 items6[2] = items8;
-const items9 = [object18, fn(1397).Perk.SOUNDBOARD_EVERYWHERE];
+const items9 = [object18, fn(1392).Perk.SOUNDBOARD_EVERYWHERE];
 items6[3] = items9;
-const items10 = [object19, fn(1397).Perk.CUSTOM_CALL_SOUNDS];
+const items10 = [object19, fn(1392).Perk.CUSTOM_CALL_SOUNDS];
 items6[4] = items10;
-const items11 = [object20, fn(1397).Perk.PREMIUM_VOICE_FILTERS];
+const items11 = [object20, fn(1392).Perk.PREMIUM_VOICE_FILTERS];
 items6[5] = items11;
-const items12 = [object21, fn(1397).Perk.ANIMATED_AVATAR];
+const items12 = [object21, fn(1392).Perk.ANIMATED_AVATAR];
 items6[6] = items12;
-const items13 = [object22, fn(1397).Perk.CUSTOM_DISCRIMINATOR];
+const items13 = [object22, fn(1392).Perk.CUSTOM_DISCRIMINATOR];
 items6[7] = items13;
-const items14 = [object23, fn(1397).Perk.PREMIUM_GUILD_MEMBER_PROFILE];
+const items14 = [object23, fn(1392).Perk.PREMIUM_GUILD_MEMBER_PROFILE];
 items6[8] = items14;
-const items15 = [tmp36, fn(1397).Perk.PROFILE_PREMIUM_FEATURES];
+const items15 = [tmp36, fn(1392).Perk.PROFILE_PREMIUM_FEATURES];
 items6[9] = items15;
-const items16 = [tmp37, fn(1397).Perk.PREMIUM_COLLECTIBLES];
+const items16 = [tmp37, fn(1392).Perk.PREMIUM_COLLECTIBLES];
 items6[10] = items16;
-const items17 = [object24, fn(1397).Perk.CLIENT_THEMES];
+const items17 = [object24, fn(1392).Perk.CLIENT_THEMES];
 items6[11] = items17;
-const items18 = [object25, fn(1397).Perk.STREAM_MID_QUALITY];
+const items18 = [object25, fn(1392).Perk.STREAM_MID_QUALITY];
 items6[12] = items18;
-const items19 = [object26, fn(1397).Perk.STREAM_HIGH_QUALITY];
+const items19 = [object26, fn(1392).Perk.STREAM_HIGH_QUALITY];
 items6[13] = items19;
-const items20 = [object28, fn(1397).Perk.VIDEO_FILTER_ASSETS];
+const items20 = [object28, fn(1392).Perk.VIDEO_FILTER_ASSETS];
 items6[14] = items20;
-const items21 = [object29, fn(1397).Perk.INCREASED_GUILD_LIMIT];
+const items21 = [object29, fn(1392).Perk.INCREASED_GUILD_LIMIT];
 items6[15] = items21;
-const items22 = [object30, fn(1397).Perk.INCREASED_MESSAGE_LENGTH];
+const items22 = [object30, fn(1392).Perk.INCREASED_MESSAGE_LENGTH];
 items6[16] = items22;
-const items23 = [tmp293, fn(1397).Perk.INCREASED_FILE_UPLOAD_SIZE];
+const items23 = [tmp293, fn(1392).Perk.INCREASED_FILE_UPLOAD_SIZE];
 items6[17] = items23;
-const items24 = [tmp33, fn(1397).Perk.PROFILE_BADGES];
+const items24 = [tmp33, fn(1392).Perk.PROFILE_BADGES];
 items6[18] = items24;
-const items25 = [tmp38, fn(1397).Perk.APP_ICONS];
+const items25 = [tmp38, fn(1392).Perk.APP_ICONS];
 items6[19] = items25;
-const items26 = [tmp39, fn(1397).Perk.BOOST_DISCOUNT];
+const items26 = [tmp39, fn(1392).Perk.BOOST_DISCOUNT];
 items6[20] = items26;
-const items27 = [tmp40, fn(1397).Perk.FREE_BOOSTS];
+const items27 = [tmp40, fn(1392).Perk.FREE_BOOSTS];
 items6[21] = items27;
-const items28 = [tmp42, fn(1397).Perk.INSTALL_PREMIUM_APPLICATIONS];
+const items28 = [tmp42, fn(1392).Perk.INSTALL_PREMIUM_APPLICATIONS];
 items6[22] = items28;
-const items29 = [tmp282, fn(1397).Perk.INCREASED_VIDEO_UPLOAD_QUALITY];
+const items29 = [tmp282, fn(1392).Perk.INCREASED_VIDEO_UPLOAD_QUALITY];
 items6[23] = items29;
 const map = new Map(items6);
 const size = fn(2);
@@ -2523,14 +2523,14 @@ export function canUserUse(COLLECTIBLES, isPremiumWithFractionalPremiumOnly, arg
       }
       if (null != perks) {
         const config = DenormalizedPerksReadExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-        if (config !== closure_0(5068).DenormalizedPerksReadConfig.CONTROL) {
+        if (config !== closure_0(5072).DenormalizedPerksReadConfig.CONTROL) {
           let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
           let perks1;
           if (isPremiumWithFractionalPremiumOnly != null) {
             perks1 = isPremiumWithFractionalPremiumOnly.perks;
           }
-          const tmp10Result = closure_0(1395);
-          if (config === closure_0(5068).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+          const tmp10Result = closure_0(1390);
+          if (config === closure_0(5072).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
             featureValue = hasPerkResult;
           }
           return featureValue;

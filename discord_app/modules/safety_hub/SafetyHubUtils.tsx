@@ -1,10 +1,9 @@
 // discord_app/modules/safety_hub/SafetyHubUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../_runtime/00576_c.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2047 from "../../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../../_runtime/metro/02044__.js";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -53,22 +52,21 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(7956);
+const SafetyHubConstants = fn(7962);
 ({
   AppealIngestionSignal: closure_4,
   SafetySystemNotificationCtaType: hasOwnProperty,
   SafetySystemNotificationEmbedKeys: metroRequire,
 } = SafetyHubConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
 const result = 182 * DurationsDefault.Millis.DAY;
 let c10 = result;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef2047().to(_modDef2047(timestamp));
+  return _modDef2044().to(_modDef2044(timestamp));
 }
 export function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -185,27 +183,10 @@ export function getClassificationAccountStatusExpiration(classification) {
     return null;
   }
 }
-export const useIsSuspendedUser = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsSuspendedUser() {
-      const cResult = c.c(2);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [AuthenticationStore];
-        const fn = function s() {
-          return suspendedUserToken.getSuspendedUserToken();
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      return null != initialize.useStateFromStores(tmp4, tmp5);
-    }
-  : function useIsSuspendedUser() {
-      const items = [AuthenticationStore];
-      return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
-    };
+export function useIsSuspendedUser() {
+  const items = [AuthenticationStore];
+  return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
+}
 export function isCurrentUserSuspended() {
   return null != AuthenticationStore.getSuspendedUserToken();
 }

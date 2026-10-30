@@ -56,14 +56,14 @@ export function createFriendInvite(inviter, arg1, id, theme) {
   }
   if (id1 === id) {
     ({ acceptLabelDisabledColor, acceptLabelDisabledBackgroundColor } = colors);
-    const intl3 = tmp5(1125).intl;
-    let stringResult = intl3.string(tmp5(1125).t.ib7Ng1);
+    const intl3 = tmp5(1114).intl;
+    let stringResult = intl3.string(tmp5(1114).t.ib7Ng1);
     let flag = false;
   } else {
     ({ acceptLabelGreenColor, acceptLabelGreenBackgroundColor } = colors);
-    const intl2 = tmp5(1125).intl;
+    const intl2 = tmp5(1114).intl;
     const string2 = intl2.string;
-    const t2 = tmp5(1125).t;
+    const t2 = tmp5(1114).t;
     if (isFriendResult) {
       stringResult = string2(t2.xhxnPn);
       flag = true;

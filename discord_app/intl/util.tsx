@@ -1,27 +1,22 @@
 // discord_app/intl/util.tsx
-import c from "../../_runtime/00576_c.js";
-import _mod1164 from "../../_runtime/metro/01164__.js";
-import _Parser from "../../_runtime/01187__Parser.js";
+import _mod1153 from "../../_runtime/metro/01153__.js";
+import _Parser from "../../_runtime/01176__Parser.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = { es: "es-ES", nb: "no", nn: "no" };
-const ReactCompilerGating = fn(558);
-function getLanguages() {
-  return require("../../_runtime/metro/01186__.js");
-}
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/util.tsx");
 
 export function getAvailableLocales() {
   _require = require("messages/en-US.messages.js").default;
-  const found = require("../../_runtime/metro/01186__.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01175__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
-    const obj2 = _mod1164;
+    const obj2 = _mod1153;
     obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
   });
@@ -39,9 +34,11 @@ export function getAvailableLocales() {
     return num;
   });
 }
-export { getLanguages };
+export function getLanguages() {
+  return require("../../_runtime/metro/01175__.js");
+}
 export function getNormalizedLocale(Language, arg1) {
-  const found = require("../../_runtime/metro/01186__.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01175__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
     return Language;
@@ -72,47 +69,18 @@ export function getNormalizedLocale(Language, arg1) {
       }
     }
   }
-  const arr = require("../../_runtime/metro/01186__.js");
+  const arr = require("../../_runtime/metro/01175__.js");
 }
 export function parseRuntimeIcuAsIntlMessage(acknowledgedBadgeLabel, currentLocale) {
   const parsed = _Parser.parse(acknowledgedBadgeLabel, { ignoreTag: true });
-  const internalIntlMessage = new _mod1164.InternalIntlMessage(parsed, currentLocale);
+  const internalIntlMessage = new _mod1153.InternalIntlMessage(parsed, currentLocale);
   return internalIntlMessage;
 }
-export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useSyncMessages(arg0, arg1) {
-      closure_0 = arg0;
-      const currentLocale = arg1;
-      const cResult = c.c(5);
-      if (cResult[0] !== arg0) {
-        const fn = function s(arg0) {
-          return closure_0.onChange(arg0);
-        };
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      if (cResult[2] === arg1) {
-        if (cResult[3] === arg0) {
-          let tmp3 = cResult[4];
-        }
-        const syncExternalStore = noop.useSyncExternalStore(tmp2, tmp3);
-      }
-      const fn2 = function l() {
-        return closure_0.isLocaleLoaded(currentLocale.currentLocale);
-      };
-      cResult[2] = arg1;
-      cResult[3] = arg0;
-      cResult[4] = fn2;
-      tmp3 = fn2;
-    }
-  : function useSyncMessages(arg0, arg1) {
-      closure_0 = arg0;
-      const currentLocale = arg1;
-      const syncExternalStore = noop.useSyncExternalStore(
-        (arg0) => closure_0.onChange(arg0),
-        () => closure_0.isLocaleLoaded(currentLocale.currentLocale),
-      );
-    };
+export function useSyncMessages(arg0, withFormattersResult) {
+  closure_0 = arg0;
+  const currentLocale = withFormattersResult;
+  const syncExternalStore = noop.useSyncExternalStore(
+    (arg0) => closure_0.onChange(arg0),
+    () => closure_0.isLocaleLoaded(currentLocale.currentLocale),
+  );
+}

@@ -51,7 +51,7 @@ let closure_10 = async function _fetchAuthorizedApps() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -127,9 +127,9 @@ let closure_10 = async function _fetchAuthorizedApps() {
     }
   })();
 };
-const FetchState = fn(7263).FetchState;
-const Endpoints = fn(1084).Endpoints;
-const batchInvocationManager = new fn(4852).BatchInvocationManager(fetchAuthorizedApps, {
+const FetchState = fn(7270).FetchState;
+const Endpoints = fn(1072).Endpoints;
+const batchInvocationManager = new fn(4853).BatchInvocationManager(fetchAuthorizedApps, {
   predicate(arg0) {
     return AuthorizedAppsStore.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },

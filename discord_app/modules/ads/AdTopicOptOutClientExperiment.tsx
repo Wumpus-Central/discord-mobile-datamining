@@ -1,7 +1,5 @@
 // discord_app/modules/ads/AdTopicOptOutClientExperiment.tsx
-import c from "../../../_runtime/00576_c.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
@@ -10,28 +8,16 @@ const obj = {
   defaultConfig: { enabled: false },
   variations: null,
 };
-let obj2 = { 1: null, 2: { enabled: false }, 3: { enabled: true }, 4: { enabled: true }, 5: { enabled: true } };
+const obj2 = { 1: null, 2: { enabled: false }, 3: { enabled: true }, 4: { enabled: true }, 5: { enabled: true } };
 obj2[5] = { enabled: true };
 obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/ads/AdTopicOptOutClientExperiment.tsx");
 
 export const AdTopicOptOutClientExperiment = apexExperiment;
-export const useIsAdTopicOptOutClientEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsAdTopicOptOutClientEnabled() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { location: "useIsAdTopicOptOutClientEnabled" };
-        cResult[0] = obj2;
-        let first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      return apexExperiment.useConfig(first).enabled;
-    }
-  : function useIsAdTopicOptOutClientEnabled() {
-      return apexExperiment.useConfig({ location: "useIsAdTopicOptOutClientEnabled" }).enabled;
-    };
+export function useIsAdTopicOptOutClientEnabled() {
+  return apexExperiment.useConfig({ location: "useIsAdTopicOptOutClientEnabled" }).enabled;
+}
 export function isAdTopicOptOutClientEnabled() {
   return apexExperiment.getConfig({ location: "isAdTopicOptOutClientEnabled" }).enabled;
 }

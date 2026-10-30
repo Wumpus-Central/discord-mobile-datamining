@@ -95,7 +95,7 @@ let closure_12 = async function _getConnectNonce() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -120,7 +120,7 @@ let closure_12 = async function _getConnectNonce() {
             CREATE_NEW_CALL = ConsoleHandoffType.ConsoleHandoffType.CREATE_NEW_CALL;
             tmp21 = require;
           }
-          const HTTP = tmp21(1294).HTTP;
+          const HTTP = tmp21(1283).HTTP;
           const request = { url: constants.CONNECT_REQUEST_CREATE, body: null, rejectWithError: false };
           const obj5 = { analytics_properties: null };
           const obj6 = { handoff_type: CREATE_NEW_CALL };
@@ -162,7 +162,7 @@ let closure_12 = async function _getConnectNonce() {
 };
 function cancelConnectRequest(nonce) {
   const HTTP = HTTPUtils.HTTP;
-  return HTTP.del({ url: closure_1_8.CONNECT_REQUEST(nonce), rejectWithError: false });
+  return HTTP.del({ url: React6.CONNECT_REQUEST(nonce), rejectWithError: false });
 }
 let closure_14 = async function _fetchDevices() {
   c5 = 0;
@@ -179,7 +179,7 @@ let closure_14 = async function _fetchDevices() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -269,7 +269,7 @@ let closure_16 = async function _cancelCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -331,7 +331,7 @@ let closure_16 = async function _cancelCommand() {
           };
           closure_132_1(closure_132_2[6]).dispatch(obj11);
           c8 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp28) {
         closure_5 = tmp28;
@@ -345,7 +345,7 @@ let closure_16 = async function _cancelCommand() {
     }
   })();
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8, PlatformTypes: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");

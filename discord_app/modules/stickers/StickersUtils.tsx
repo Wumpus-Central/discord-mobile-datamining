@@ -25,14 +25,14 @@ function getStickerExtensionFromFormatType(format_type) {
     throw error;
   }
 }
-const StickersConstants = fn(4836);
+const StickersConstants = fn(4837);
 ({ DEFAULT_STICKER_DIMENSIONS: closure_4, STICKER_APPLICATION_ID: hasOwnProperty, StickerAnimationSettings: metroRequire } = StickersConstants);
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: c10, ASSET_ENDPOINT } = GLOBAL_ENV);
 const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-const values = Object.values(fn(6548).StickerExtensions);
+const values = Object.values(fn(6555).StickerExtensions);
 const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\d]+", "(" + values.join("|") + ")"));
 const regExp = new RegExp("(" + location.protocol + ASSET_ENDPOINT + "|" + location.protocol + MEDIA_PROXY_ENDPOINT + ")(" + decodeURIComponentResult + ")", "ig");
 const regExp1 = new RegExp("" + location.protocol + API_ENDPOINT + "(" + decodeURIComponentResult + ")", "ig");
@@ -116,7 +116,7 @@ export (format_type, arg1) => {
       if (tmp3 === StickersTypes.StickerExtensions.WEBP) {
         str3 = "&quality=lossless";
       }
-      if ("development" !== v65535) {
+      if ("development" !== closure_1_10) {
         if (format_type.format_type === StickersTypes.StickerFormat.LOTTIE) {
           const _location3 = location;
           const _HermesInternal4 = HermesInternal;
@@ -189,7 +189,7 @@ export function getStickerPackBannerAssetUrl(stickerPack, size) {
   }
 }
 export function isStickerAssetUrl(str) {
-  return null != str.match("development" !== v65535 ? regExp : regExp1);
+  return null != str.match("development" !== closure_1_10 ? regExp : regExp1);
 }
 export function isStickerPackAnimated(stickerPack) {
   const stickers = stickerPack.stickers;
@@ -210,8 +210,8 @@ export function createStickerPackCategory(id) {
   obj.previewSticker = first;
   return obj;
 }
-export function shouldAnimateSticker(setting, dependencyMap) {
-  let tmp = dependencyMap;
+export function shouldAnimateSticker(setting, isFocused) {
+  let tmp = isFocused;
   if (setting !== constants.ANIMATE_ON_INTERACTION) {
     tmp = setting !== constants.NEVER_ANIMATE;
   }

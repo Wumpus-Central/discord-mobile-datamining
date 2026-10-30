@@ -1,12 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx
-import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import AvatarUtilsDefault from "../../../../../utils/AvatarUtils.tsx";
-import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -15,7 +14,7 @@ import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import BotTagDefault from "../../../../applications/native/BotTag.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef11080 from "../../../../../../_runtime/metro/11080__.js";
+import _modDef11306 from "../../../../../../_runtime/metro/11306__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -23,13 +22,271 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
+function TitleWrapper(headerAccessibilityLabel) {
+  ({ children, onPress, titleContentHeight } = headerAccessibilityLabel);
+  c1 = undefined;
+  const tmp = closure_11();
+  [tmp3, c1] = noop.useState(undefined);
+  [][0] = titleContentHeight;
+  const callback = noop.useCallback((nativeEvent) => {
+    _undefined({ borderless: true, radius: nativeEvent.nativeEvent.layout.width });
+  }, []);
+  if (null == onPress) {
+    const obj2 = { style: tmp.wrapper, accessibilityRole: "header", children };
+    let tmp6Result = React6(hasOwnProperty, obj2);
+  } else {
+    let tmp9;
+    if (obj.isAndroid()) {
+      tmp9 = callback;
+    }
+    const obj3 = {
+      onLayout: tmp9,
+      onPress,
+      androidRippleConfig: tmp3,
+      accessibilityRole: "header",
+      accessibilityLabel: headerAccessibilityLabel.headerAccessibilityLabel,
+      hitSlop: tmp5,
+      style: tmp.wrapper,
+      children,
+    };
+    tmp6Result = React6(Pressables.PressableOpacity, obj3);
+    obj = PlatformUtils;
+  }
+  return tmp6Result;
+}
+function ChannelTitle(guildId) {
+  ({ title, accessibleTitle, subtitle, disableArrow } = guildId);
+  if (disableArrow === undefined) {
+    disableArrow = false;
+  }
+  ({ userId, icon } = guildId);
+  const tmp = closure_11();
+  const obj = { style: tmp.channelContent, children: null };
+  const obj2 = { style: tmp.nameWithArrow, children: null };
+  let tmp4 = null;
+  if (null != icon) {
+    tmp4 = icon;
+  }
+  const items = [tmp4, ,];
+  if (null != userId) {
+    const obj3 = {
+      userId,
+      guildId: guildId.guildId,
+      userName: title,
+      variant: "redesign/heading-18/semibold",
+      defaultColor: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: null,
+      containerStyle: null,
+      accessibilityLabel: null,
+      accessibilityRole: "header",
+      maxFontSizeMultiplier: 2,
+    };
+    ({ channelName: obj4.style, channelNameContainer: obj4.containerStyle } = tmp);
+    obj3.accessibilityLabel = accessibleTitle;
+    let tmp8 = React6(UsernameWithEffectsDefault, obj3);
+    let tmp5 = React6;
+  } else {
+    tmp5 = React6;
+    const obj5 = {
+      variant: "redesign/heading-18/semibold",
+      color: "mobile-text-heading-primary",
+      lineClamp: 1,
+      style: tmp.channelName,
+      accessibilityLabel: accessibleTitle,
+      accessibilityRole: "header",
+      maxFontSizeMultiplier: 2,
+      children: title,
+    };
+    tmp8 = React6(Text_Text.Text, obj5);
+  }
+  items[1] = tmp8;
+  let tmp5Result = !disableArrow;
+  if (!disableArrow) {
+    const obj6 = { source: _modDef11306, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    tmp5Result = tmp5(native.Icon, obj6);
+  }
+  items[2] = tmp5Result;
+  obj2.children = items;
+  const items1 = [React7(hasOwnProperty, obj2)];
+  let tmp5Result2 = null != subtitle;
+  if (tmp5Result2) {
+    const obj11 = { style: tmp.subTitleContainer, children: subtitle };
+    tmp5Result2 = tmp5(hasOwnProperty, obj11);
+  }
+  items1[1] = tmp5Result2;
+  obj.children = items1;
+  return React7(hasOwnProperty, obj);
+}
+function GroupDMIcon(channel) {
+  const obj = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel: channel.channel };
+  return React6(GroupDMAvatarDefault, obj);
+}
+function UserAvatar(user) {
+  user = user.user;
+  ({ status, isMobileOnline, isVROnline } = user);
+  const obj = {
+    user,
+    avatarDecoration: user.avatarDecoration,
+    guildId: "Boolean",
+    size: native.AvatarSizes.REFRESH_MEDIUM_32,
+    status: "done",
+    isMobileOnline: true,
+    isVROnline: null,
+    style: "sku",
+    autoStatusCutout: null,
+  };
+  let tmp3 = null;
+  if (!user.isSystemUser()) {
+    tmp3 = status;
+  }
+  obj.status = tmp3;
+  obj.isMobileOnline = isMobileOnline;
+  obj.isVROnline = isVROnline;
+  obj.style = closure_11().channelIcon;
+  return React6(native.Avatar, obj);
+}
+function ChannelIconRaw(IconComponent) {
+  IconComponent = IconComponent.IconComponent;
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  if (null != IconComponent) {
+    const obj2 = { size: token, color: "icon-strong", style: { marginEnd: 4 } };
+    let tmp6 = React6(IconComponent, obj2);
+  } else {
+    const obj3 = {
+      size: native.Icon.Sizes.SMALL_20,
+      source: IconComponent.icon,
+      color: tmp4.guildChannelIcon.tintColor,
+    };
+    tmp6 = React6(native.Icon, obj3);
+  }
+  return tmp6;
+}
+function MemberCountText(arg0) {
+  ({ presenceCount, memberCount } = arg0);
+  let str = "online";
+  ({ withSeparator, leadingAccessoryWidth } = arg0);
+  if (0 === presenceCount) {
+    str = "online";
+    if (null !== memberCount) {
+      str = "total";
+    }
+  }
+  let str2 = "text-sm/normal";
+  if (obj.useManaTypeConsolidationExperiment("ChannelHeaderMemberCount")) {
+    str2 = "text-xs/normal";
+  }
+  const obj2 = { type: str, count: null, color: "text-subtle", dotContainerWidth: null, textVariant: null };
+  obj = ManaTypeConsolidationExperiment;
+  if ("online" === str) {
+    memberCount = presenceCount;
+  }
+  obj2.count = memberCount;
+  obj2.dotContainerWidth = leadingAccessoryWidth;
+  obj2.textVariant = str2;
+  const children = [React6(GuildActionSheetMemberCountDefault, obj2)];
+  let tmp6Result = null;
+  if (withSeparator) {
+    const obj3 = { variant: str2, color: "text-subtle", children: "\u2022" };
+    tmp6Result = React6(Text_Text.Text, obj3);
+  }
+  children[1] = tmp6Result;
+  return React7(closure_1_10, { children });
+}
+class SubtitleText {
+  constructor(arg0) {
+    obj = {};
+    merged = Object.assign(global);
+    obj.variant = "text-sm/medium";
+    obj.color = "text-subtle";
+    obj.maxFontSizeMultiplier = 2;
+    return jsx(closure_0(closure_2[11]).Text, obj);
+  }
+}
+function ParentChannelSubTitle(channel) {
+  channel = channel.channel;
+  const obj = { lineClamp: 1, accessibilityLabel: null, style: null, children: null };
+  const intl = util.intl;
+  const obj2 = { channelName: null };
+  const tmp = closure_11();
+  obj2.channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+  obj.accessibilityLabel = intl.formatToPlainString(util.t.BjYvHO, obj2);
+  obj.style = tmp.parentChannelName;
+  obj.children = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
+  return React6(SubtitleText, obj);
+}
+function AppSubTitle(application) {
+  application = application.application;
+  const tmp = closure_11();
+  const obj2 = { style: tmp.appSubTitle, children: null };
+  let tmp7 = null;
+  const manaTypeConsolidationExperiment =
+    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle");
+  if (null != application.icon) {
+    const obj3 = { source: null, style: null };
+    const tmp10 = FastImageDefault;
+    ({ id: obj5.id, icon: obj5.icon } = application);
+    obj3.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null, size: 16 });
+    obj3.style = tmp.appIcon;
+    tmp7 = React6(tmp10, obj3);
+    const obj6 = { id: null, icon: null, size: 16 };
+  }
+  const items = [tmp7, ,];
+  let str = "text-sm/normal";
+  if (manaTypeConsolidationExperiment) {
+    str = "text-xs/normal";
+  }
+  items[1] = React6(Text_Text.Text, {
+    lineClamp: 1,
+    maxFontSizeMultiplier: 2,
+    variant: str,
+    color: "text-subtle",
+    style: tmp.appName,
+    children: application.name,
+  });
+  items[2] = React6(BotTagDefault, { verified: application.isVerified, size: "sm" });
+  obj2.children = items;
+  return React7(hasOwnProperty, obj2);
+}
+function AppSubTitleSkeleton() {
+  const tmp = closure_11();
+  const obj = { style: tmp.appSubTitle, "aria-hidden": true, children: null };
+  const items = [
+    React6(hasOwnProperty, { style: tmp.skeletonIcon }),
+    React6(hasOwnProperty, { style: tmp.skeletonName }),
+  ];
+  obj.children = items;
+  return React7(hasOwnProperty, obj);
+}
+function NoAppSubTitle() {
+  const tmp = closure_11();
+  const manaTypeConsolidationExperiment =
+    ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle");
+  let str = "text-sm/normal";
+  if (manaTypeConsolidationExperiment) {
+    str = "text-xs/normal";
+  }
+  const obj2 = {
+    lineClamp: 1,
+    maxFontSizeMultiplier: 2,
+    variant: str,
+    color: "text-subtle",
+    style: tmp.noApp,
+    children: null,
+  };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t.tU5fiM);
+  return React6(Text_Text.Text, obj2);
+}
+function EmptyIcon() {
+  return React6(hasOwnProperty, { style: closure_11().channelIconWrapper });
+}
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-let c11 = 16;
-const createStyles = fn(5005);
-let closure_12 = createStyles.createStyles(() => {
+const createStyles = fn(5009);
+let closure_11 = createStyles.createStyles(() => {
   const obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },
     channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 },
@@ -66,13 +323,13 @@ let closure_12 = createStyles.createStyles(() => {
   obj.subTitleContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
   const obj3 = { tintColor: nativeDefault.colors.TEXT_STRONG };
   obj.appSubTitle = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flexShrink: 1 };
-  const size = { width: v16, height: v16, borderRadius: nativeDefault.radii.xs };
+  const size = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs };
   obj.appIcon = size;
   obj.appName = { flexShrink: 1 };
   obj.noApp = { fontStyle: "italic" };
   const size1 = {
-    width: v16,
-    height: v16,
+    width: 16,
+    height: 16,
     borderRadius: nativeDefault.radii.xs,
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
   };
@@ -87,894 +344,18 @@ let closure_12 = createStyles.createStyles(() => {
   obj.parentChannelName = { lineHeight: 20, flexShrink: 1 };
   return obj;
 });
-let ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function TitleWrapper(arg0) {
-      const cResult = c.c(14);
-      ({ children, onPress, headerAccessibilityLabel, titleContentHeight } = arg0);
-      let wrapper = closure_12();
-      [tmp5, require] = noop.useState(undefined);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c(nativeEvent) {
-          require({ borderless: true, radius: nativeEvent.nativeEvent.layout.width });
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      if (null == titleContentHeight) {
-        if (null == onPress) {
-          if (cResult[3] === children) {
-          }
-          const obj2 = { style: wrapper.wrapper, accessibilityRole: "header", children };
-          const tmp18 = closure_1_8(hasOwnProperty, obj2);
-          cResult[3] = children;
-          wrapper = wrapper.wrapper;
-          cResult[4] = wrapper;
-          cResult[5] = tmp18;
-        } else {
-          const _Symbol = Symbol;
-          if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            let tmp11;
-            if (tmpResult.isAndroid()) {
-              tmp11 = first;
-            }
-            cResult[6] = tmp11;
-            let tmp10 = tmp11;
-            tmpResult = PlatformUtils;
-          } else {
-            tmp10 = cResult[6];
-          }
-          if (cResult[7] === tmp5) {
-            if (cResult[8] === children) {
-              if (cResult[9] === headerAccessibilityLabel) {
-                if (cResult[10] === onPress) {
-                  if (cResult[11] === wrapper.wrapper) {
-                    if (cResult[12] === undefined) {
-                      let tmp12 = cResult[13];
-                    }
-                    return tmp12;
-                  }
-                }
-              }
-            }
-          }
-          const obj3 = {
-            onLayout: tmp10,
-            onPress,
-            androidRippleConfig: tmp5,
-            accessibilityRole: "header",
-            accessibilityLabel: headerAccessibilityLabel,
-            hitSlop: undefined,
-            style: wrapper.wrapper,
-            children,
-          };
-          const tmp14 = closure_1_8(Pressables.PressableOpacity, obj3);
-          cResult[7] = tmp5;
-          cResult[8] = children;
-          cResult[9] = headerAccessibilityLabel;
-          cResult[10] = onPress;
-          cResult[11] = wrapper.wrapper;
-          cResult[12] = undefined;
-          cResult[13] = tmp14;
-          tmp12 = tmp14;
-        }
-      } else {
-        const _Math = Math;
-        const bound = Math.max(0, (64 - titleContentHeight) / 2);
-        if (cResult[1] !== bound) {
-          const rect = { top: bound, bottom: bound };
-          cResult[1] = bound;
-          cResult[2] = rect;
-        }
-      }
-      const tmp4 = _slicedToArray(noop.useState(undefined), 2);
-    }
-  : function TitleWrapper(headerAccessibilityLabel) {
-      ({ children, onPress, titleContentHeight } = headerAccessibilityLabel);
-      c1 = undefined;
-      const tmp = closure_12();
-      [tmp3, c1] = noop.useState(undefined);
-      [][0] = titleContentHeight;
-      const callback = noop.useCallback((nativeEvent) => {
-        _undefined({ borderless: true, radius: nativeEvent.nativeEvent.layout.width });
-      }, []);
-      if (null == onPress) {
-        const obj2 = { style: tmp.wrapper, accessibilityRole: "header", children };
-        let tmp6Result = closure_1_8(hasOwnProperty, obj2);
-      } else {
-        let tmp9;
-        if (obj.isAndroid()) {
-          tmp9 = callback;
-        }
-        const obj3 = {
-          onLayout: tmp9,
-          onPress,
-          androidRippleConfig: tmp3,
-          accessibilityRole: "header",
-          accessibilityLabel: headerAccessibilityLabel.headerAccessibilityLabel,
-          hitSlop: tmp5,
-          style: tmp.wrapper,
-          children,
-        };
-        tmp6Result = closure_1_8(Pressables.PressableOpacity, obj3);
-        obj = PlatformUtils;
-      }
-      return tmp6Result;
-    };
-ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ChannelTitle(arg0) {
-      const cResult = c.c(22);
-      ({ title, accessibleTitle, subtitle, disableArrow, userId, guildId: channelNameContainer, icon } = arg0);
-      const tmp5 = closure_12();
-      let tmp6 = null;
-      if (null != icon) {
-        tmp6 = icon;
-      }
-      if (cResult[0] === accessibleTitle) {
-        if (cResult[1] === channelNameContainer) {
-          if (cResult[2] === tmp5.channelName) {
-            if (cResult[3] === tmp5.channelNameContainer) {
-              if (cResult[4] === title) {
-                if (cResult[5] === userId) {
-                  if (cResult[7] === tmp4) {
-                    if (cResult[8] === tmp5.arrowIcon) {
-                      let tmp12 = cResult[9];
-                    }
-                    if (cResult[10] === tmp5.nameWithArrow) {
-                      if (cResult[11] === tmp6) {
-                        if (cResult[12] === tmp7) {
-                          if (cResult[13] === tmp12) {
-                            let tmp16 = cResult[14];
-                          }
-                          if (cResult[15] === tmp5.subTitleContainer) {
-                            if (cResult[16] === subtitle) {
-                              let tmp20 = cResult[17];
-                            }
-                            if (cResult[18] === tmp5.channelContent) {
-                              if (cResult[19] === tmp16) {
-                                if (cResult[20] === tmp20) {
-                                  let tmp24 = cResult[21];
-                                }
-                                return tmp24;
-                              }
-                            }
-                            const obj2 = { style: tmp5.channelContent, children: null };
-                            const items = [tmp16, tmp20];
-                            obj2.children = items;
-                            const tmp27 = React6(hasOwnProperty, obj2);
-                            cResult[18] = tmp5.channelContent;
-                            cResult[19] = tmp16;
-                            cResult[20] = tmp20;
-                            cResult[21] = tmp27;
-                            tmp24 = tmp27;
-                          }
-                          let tmp21 = null != subtitle;
-                          if (tmp21) {
-                            const obj4 = { style: tmp5.subTitleContainer, children: subtitle };
-                            tmp21 = closure_1_8(hasOwnProperty, obj4);
-                          }
-                          cResult[15] = tmp5.subTitleContainer;
-                          cResult[16] = subtitle;
-                          cResult[17] = tmp21;
-                          tmp20 = tmp21;
-                        }
-                      }
-                    }
-                    const obj5 = { style: tmp5.nameWithArrow, children: null };
-                    const items1 = [tmp6, tmp7, tmp12];
-                    obj5.children = items1;
-                    const tmp19 = React6(hasOwnProperty, obj5);
-                    cResult[10] = tmp5.nameWithArrow;
-                    cResult[11] = tmp6;
-                    cResult[12] = tmp7;
-                    cResult[13] = tmp12;
-                    cResult[14] = tmp19;
-                    tmp16 = tmp19;
-                  }
-                  let tmp13 = !tmp4;
-                  if (!tmp4) {
-                    const obj6 = {
-                      source: _modDef11080,
-                      size: native.Icon.Sizes.REFRESH_SMALL_16,
-                      style: tmp5.arrowIcon,
-                    };
-                    tmp13 = closure_1_8(native.Icon, obj6);
-                  }
-                  cResult[7] = tmp4;
-                  cResult[8] = tmp5.arrowIcon;
-                  cResult[9] = tmp13;
-                  tmp12 = tmp13;
-                }
-              }
-            }
-          }
-        }
-      }
-      if (null != userId) {
-        const obj7 = {
-          userId,
-          guildId: channelNameContainer,
-          userName: title,
-          variant: "redesign/heading-18/semibold",
-          defaultColor: "mobile-text-heading-primary",
-          lineClamp: 1,
-          style: null,
-          containerStyle: null,
-          accessibilityLabel: null,
-          accessibilityRole: "header",
-          maxFontSizeMultiplier: 2,
-        };
-        ({ channelName: obj3.style, channelNameContainer: obj3.containerStyle } = tmp5);
-        obj7.accessibilityLabel = accessibleTitle;
-        let tmp9 = closure_1_8(UsernameWithEffectsDefault, obj7);
-      } else {
-        const obj13 = {
-          variant: "redesign/heading-18/semibold",
-          color: "mobile-text-heading-primary",
-          lineClamp: 1,
-          style: tmp5.channelName,
-          accessibilityLabel: accessibleTitle,
-          accessibilityRole: "header",
-          maxFontSizeMultiplier: 2,
-          children: title,
-        };
-        tmp9 = closure_1_8(Text_Text.Text, obj13);
-      }
-      cResult[0] = accessibleTitle;
-      cResult[1] = channelNameContainer;
-      ({ channelName: tmp3[2], channelNameContainer } = tmp5);
-      cResult[3] = channelNameContainer;
-      cResult[4] = title;
-      cResult[5] = userId;
-      cResult[6] = tmp9;
-    }
-  : function ChannelTitle(guildId) {
-      ({ title, accessibleTitle, subtitle, disableArrow } = guildId);
-      if (disableArrow === undefined) {
-        disableArrow = false;
-      }
-      ({ userId, icon } = guildId);
-      const tmp = closure_12();
-      const obj = { style: tmp.channelContent, children: null };
-      const obj2 = { style: tmp.nameWithArrow, children: null };
-      let tmp4 = null;
-      if (null != icon) {
-        tmp4 = icon;
-      }
-      const items = [tmp4, ,];
-      if (null != userId) {
-        const obj3 = {
-          userId,
-          guildId: guildId.guildId,
-          userName: title,
-          variant: "redesign/heading-18/semibold",
-          defaultColor: "mobile-text-heading-primary",
-          lineClamp: 1,
-          style: null,
-          containerStyle: null,
-          accessibilityLabel: null,
-          accessibilityRole: "header",
-          maxFontSizeMultiplier: 2,
-        };
-        ({ channelName: obj4.style, channelNameContainer: obj4.containerStyle } = tmp);
-        obj3.accessibilityLabel = accessibleTitle;
-        let tmp8 = closure_1_8(UsernameWithEffectsDefault, obj3);
-        let tmp5 = closure_1_8;
-      } else {
-        tmp5 = closure_1_8;
-        const obj5 = {
-          variant: "redesign/heading-18/semibold",
-          color: "mobile-text-heading-primary",
-          lineClamp: 1,
-          style: tmp.channelName,
-          accessibilityLabel: accessibleTitle,
-          accessibilityRole: "header",
-          maxFontSizeMultiplier: 2,
-          children: title,
-        };
-        tmp8 = closure_1_8(Text_Text.Text, obj5);
-      }
-      items[1] = tmp8;
-      let tmp5Result = !disableArrow;
-      if (!disableArrow) {
-        const obj6 = { source: _modDef11080, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
-        tmp5Result = tmp5(native.Icon, obj6);
-      }
-      items[2] = tmp5Result;
-      obj2.children = items;
-      const items1 = [React6(hasOwnProperty, obj2)];
-      let tmp5Result2 = null != subtitle;
-      if (tmp5Result2) {
-        const obj11 = { style: tmp.subTitleContainer, children: subtitle };
-        tmp5Result2 = tmp5(hasOwnProperty, obj11);
-      }
-      items1[1] = tmp5Result2;
-      obj.children = items1;
-      return React6(hasOwnProperty, obj);
-    };
-ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function GroupDMIcon(channel) {
-      const cResult = c.c(2);
-      channel = channel.channel;
-      if (cResult[0] !== channel) {
-        const obj2 = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel };
-        const tmp8 = closure_1_8(GroupDMAvatarDefault, obj2);
-        cResult[0] = channel;
-        cResult[1] = tmp8;
-        let tmp4 = tmp8;
-      } else {
-        tmp4 = cResult[1];
-      }
-      return tmp4;
-    }
-  : function GroupDMIcon(channel) {
-      const obj = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel: channel.channel };
-      return closure_1_8(GroupDMAvatarDefault, obj);
-    };
-ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function UserAvatar(status) {
-      const cResult = c.c(6);
-      ({ user, isMobileOnline, isVROnline } = status);
-      const tmp4 = closure_12();
-      status = null;
-      if (!user.isSystemUser()) {
-        status = status.status;
-      }
-      if (cResult[0] === isMobileOnline) {
-        if (cResult[1] === isVROnline) {
-          if (cResult[2] === tmp4.channelIcon) {
-            if (cResult[3] === status) {
-              if (cResult[4] === user) {
-                let tmp6 = cResult[5];
-              }
-              return tmp6;
-            }
-          }
-        }
-      }
-      const obj2 = {
-        user,
-        avatarDecoration: user.avatarDecoration,
-        guildId: "Boolean",
-        size: native.AvatarSizes.REFRESH_MEDIUM_32,
-        status,
-        isMobileOnline,
-        isVROnline,
-        style: tmp4.channelIcon,
-        autoStatusCutout: null,
-      };
-      const tmp7 = closure_1_8(native.Avatar, obj2);
-      cResult[0] = isMobileOnline;
-      cResult[1] = isVROnline;
-      cResult[2] = tmp4.channelIcon;
-      cResult[3] = status;
-      cResult[4] = user;
-      cResult[5] = tmp7;
-      tmp6 = tmp7;
-    }
-  : function UserAvatar(user) {
-      user = user.user;
-      ({ status, isMobileOnline, isVROnline } = user);
-      const obj = {
-        user,
-        avatarDecoration: user.avatarDecoration,
-        guildId: "Boolean",
-        size: native.AvatarSizes.REFRESH_MEDIUM_32,
-        status: "done",
-        isMobileOnline: true,
-        isVROnline: null,
-        style: "sku",
-        autoStatusCutout: null,
-      };
-      let tmp3 = null;
-      if (!user.isSystemUser()) {
-        tmp3 = status;
-      }
-      obj.status = tmp3;
-      obj.isMobileOnline = isMobileOnline;
-      obj.isVROnline = isVROnline;
-      obj.style = closure_12().channelIcon;
-      return closure_1_8(native.Avatar, obj);
-    };
-ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ChannelIconRaw(arg0) {
-      const cResult = c.c(5);
-      ({ icon, IconComponent } = arg0);
-      const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-      const tmp5 = closure_12();
-      if (cResult[0] === IconComponent) {
-        if (cResult[1] === icon) {
-          if (cResult[2] === token) {
-            if (cResult[3] === tmp5) {
-              return cResult[4];
-            }
-          }
-        }
-      }
-      if (null != IconComponent) {
-        const obj3 = { size: token, color: "icon-strong", style: { marginEnd: 4 } };
-        let tmp7 = closure_1_8(IconComponent, obj3);
-      } else {
-        const obj4 = { size: native.Icon.Sizes.SMALL_20, source: icon, color: tmp5.guildChannelIcon.tintColor };
-        tmp7 = closure_1_8(native.Icon, obj4);
-      }
-      cResult[0] = IconComponent;
-      cResult[1] = icon;
-      cResult[2] = token;
-      cResult[3] = tmp5;
-      cResult[4] = tmp7;
-    }
-  : function ChannelIconRaw(IconComponent) {
-      IconComponent = IconComponent.IconComponent;
-      const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-      if (null != IconComponent) {
-        const obj2 = { size: token, color: "icon-strong", style: { marginEnd: 4 } };
-        let tmp6 = closure_1_8(IconComponent, obj2);
-      } else {
-        const obj3 = {
-          size: native.Icon.Sizes.SMALL_20,
-          source: IconComponent.icon,
-          color: tmp4.guildChannelIcon.tintColor,
-        };
-        tmp6 = closure_1_8(native.Icon, obj3);
-      }
-      return tmp6;
-    };
-ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function MemberCountText(arg0) {
-      const cResult = c.c(11);
-      ({ presenceCount, memberCount, withSeparator, leadingAccessoryWidth } = arg0);
-      let str = "online";
-      if (0 === presenceCount) {
-        str = "online";
-        if (null !== memberCount) {
-          str = "total";
-        }
-      }
-      let str2 = "text-sm/normal";
-      if (tmpResult.useManaTypeConsolidationExperiment("ChannelHeaderMemberCount")) {
-        str2 = "text-xs/normal";
-      }
-      if ("online" === str) {
-        memberCount = presenceCount;
-      }
-      if (cResult[0] === leadingAccessoryWidth) {
-        if (cResult[1] === memberCount) {
-          if (cResult[2] === str2) {
-            if (cResult[3] === str) {
-              let tmp5 = cResult[4];
-            }
-            if (cResult[5] === str2) {
-              if (cResult[6] === withSeparator) {
-                let tmp7 = cResult[7];
-              }
-              if (cResult[8] === tmp5) {
-                if (cResult[9] === tmp7) {
-                  let tmp10 = cResult[10];
-                }
-                return tmp10;
-              }
-              const obj2 = { children: null };
-              const items = [tmp5, tmp7];
-              obj2.children = items;
-              const tmp13 = React6(v65535, obj2);
-              cResult[8] = tmp5;
-              cResult[9] = tmp7;
-              cResult[10] = tmp13;
-              tmp10 = tmp13;
-            }
-            let tmp8 = null;
-            if (withSeparator) {
-              const obj3 = { variant: str2, color: "text-subtle", children: "\u2022" };
-              tmp8 = closure_1_8(Text_Text.Text, obj3);
-            }
-            cResult[5] = str2;
-            cResult[6] = withSeparator;
-            cResult[7] = tmp8;
-            tmp7 = tmp8;
-          }
-        }
-      }
-      const tmp6 = closure_1_8(GuildActionSheetMemberCountDefault, {
-        type: str,
-        count: memberCount,
-        color: "text-subtle",
-        dotContainerWidth: leadingAccessoryWidth,
-        textVariant: str2,
-      });
-      cResult[0] = leadingAccessoryWidth;
-      cResult[1] = memberCount;
-      cResult[2] = str2;
-      cResult[3] = str;
-      cResult[4] = tmp6;
-      tmp5 = tmp6;
-      tmpResult = ManaTypeConsolidationExperiment;
-    }
-  : function MemberCountText(arg0) {
-      ({ presenceCount, memberCount } = arg0);
-      let str = "online";
-      ({ withSeparator, leadingAccessoryWidth } = arg0);
-      if (0 === presenceCount) {
-        str = "online";
-        if (null !== memberCount) {
-          str = "total";
-        }
-      }
-      let str2 = "text-sm/normal";
-      if (obj.useManaTypeConsolidationExperiment("ChannelHeaderMemberCount")) {
-        str2 = "text-xs/normal";
-      }
-      const obj2 = { type: str, count: null, color: "text-subtle", dotContainerWidth: null, textVariant: null };
-      obj = ManaTypeConsolidationExperiment;
-      if ("online" === str) {
-        memberCount = presenceCount;
-      }
-      obj2.count = memberCount;
-      obj2.dotContainerWidth = leadingAccessoryWidth;
-      obj2.textVariant = str2;
-      const children = [closure_1_8(GuildActionSheetMemberCountDefault, obj2)];
-      let tmp6Result = null;
-      if (withSeparator) {
-        const obj3 = { variant: str2, color: "text-subtle", children: "\u2022" };
-        tmp6Result = closure_1_8(Text_Text.Text, obj3);
-      }
-      children[1] = tmp6Result;
-      return React6(v65535, { children });
-    };
-ReactCompilerGating = fn(558);
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function SubtitleText(arg0) {
-      const cResult = c.c(2);
-      if (cResult[0] !== arg0) {
-        const obj2 = {};
-        const merged = Object.assign(arg0);
-        obj2.variant = "text-sm/medium";
-        obj2.color = "text-subtle";
-        obj2.maxFontSizeMultiplier = 2;
-        const tmp9 = closure_1_8(Text_Text.Text, obj2);
-        cResult[0] = arg0;
-        cResult[1] = tmp9;
-        let tmp4 = tmp9;
-      } else {
-        tmp4 = cResult[1];
-      }
-      return tmp4;
-    }
-  : function SubtitleText(arg0) {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      obj.variant = "text-sm/medium";
-      obj.color = "text-subtle";
-      obj.maxFontSizeMultiplier = 2;
-      return closure_1_8(Text_Text.Text, obj);
-    };
-let closure_19 = tmp4;
-ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ParentChannelSubTitle(channel) {
-      const cResult = c.c(8);
-      channel = channel.channel;
-      const tmp4 = closure_12();
-      if (cResult[0] !== channel) {
-        const intl = util.intl;
-        const obj2 = { channelName: useChannelName.computeChannelName(channel, UserStore, RelationshipStore) };
-        const formatToPlainStringResult = intl.formatToPlainString(util.t.BjYvHO, obj2);
-        cResult[0] = channel;
-        cResult[1] = formatToPlainStringResult;
-        let tmp5 = formatToPlainStringResult;
-        const tmpResult = useChannelName;
-      } else {
-        tmp5 = cResult[1];
-      }
-      if (cResult[2] !== channel) {
-        const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
-        cResult[2] = channel;
-        cResult[3] = channelName;
-        let tmp9 = channelName;
-        const tmpResult2 = useChannelName;
-      } else {
-        tmp9 = cResult[3];
-      }
-      if (cResult[4] === tmp4.parentChannelName) {
-        if (cResult[5] === tmp5) {
-          if (cResult[6] === tmp9) {
-            let tmp13 = cResult[7];
-          }
-          return tmp13;
-        }
-      }
-      const tmp14 = closure_1_8(closure_19, {
-        lineClamp: 1,
-        accessibilityLabel: tmp5,
-        style: tmp4.parentChannelName,
-        children: tmp9,
-      });
-      cResult[4] = tmp4.parentChannelName;
-      cResult[5] = tmp5;
-      cResult[6] = tmp9;
-      cResult[7] = tmp14;
-      tmp13 = tmp14;
-    }
-  : function ParentChannelSubTitle(channel) {
-      channel = channel.channel;
-      const obj = { lineClamp: 1, accessibilityLabel: null, style: null, children: null };
-      const intl = util.intl;
-      const obj2 = { channelName: null };
-      const tmp = closure_12();
-      obj2.channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
-      obj.accessibilityLabel = intl.formatToPlainString(util.t.BjYvHO, obj2);
-      obj.style = tmp.parentChannelName;
-      obj.children = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
-      return closure_1_8(closure_19, obj);
-    };
-ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function AppSubTitle(application) {
-      const cResult = c.c(15);
-      application = application.application;
-      const tmp4 = closure_12();
-      ManaTypeConsolidationExperiment;
-      if (cResult[0] === application.icon) {
-        if (cResult[1] === application.id) {
-          if (cResult[2] === tmp4.appIcon) {
-            let tmp7 = cResult[3];
-          }
-          let str = "text-sm/normal";
-          if (tmp6) {
-            str = "text-xs/normal";
-          }
-          if (cResult[4] === application.name) {
-            if (cResult[5] === tmp4.appName) {
-              if (cResult[6] === str) {
-                let tmp13 = cResult[7];
-              }
-              if (cResult[8] !== application.isVerified) {
-                const obj2 = { verified: application.isVerified, size: "sm" };
-                const tmp19 = closure_1_8(BotTagDefault, obj2);
-                cResult[8] = application.isVerified;
-                cResult[9] = tmp19;
-                let tmp16 = tmp19;
-              } else {
-                tmp16 = cResult[9];
-              }
-              if (cResult[10] === tmp4.appSubTitle) {
-                if (cResult[11] === tmp7) {
-                  if (cResult[12] === tmp13) {
-                    if (cResult[13] === tmp16) {
-                      let tmp20 = cResult[14];
-                    }
-                    return tmp20;
-                  }
-                }
-              }
-              const obj5 = { style: tmp4.appSubTitle, children: null };
-              const items = [tmp7, tmp13, tmp16];
-              obj5.children = items;
-              const tmp23 = React6(hasOwnProperty, obj5);
-              cResult[10] = tmp4.appSubTitle;
-              cResult[11] = tmp7;
-              cResult[12] = tmp13;
-              cResult[13] = tmp16;
-              cResult[14] = tmp23;
-              tmp20 = tmp23;
-            }
-          }
-          const obj6 = {
-            lineClamp: 1,
-            maxFontSizeMultiplier: 2,
-            variant: str,
-            color: "text-subtle",
-            style: tmp4.appName,
-            children: application.name,
-          };
-          const tmp15 = closure_1_8(Text_Text.Text, obj6);
-          cResult[4] = application.name;
-          cResult[5] = tmp4.appName;
-          cResult[6] = str;
-          cResult[7] = tmp15;
-          tmp13 = tmp15;
-        }
-      }
-      let tmp8 = null;
-      if (null != application.icon) {
-        const obj7 = { source: null, style: null };
-        const tmp11 = FastImageDefault;
-        const obj12 = { id: null, icon: null, size: null };
-        ({ id: obj4.id, icon: obj4.icon } = application);
-        obj12.size = v16;
-        obj7.source = AvatarUtilsDefault.getApplicationIconSource(obj12);
-        obj7.style = tmp4.appIcon;
-        tmp8 = closure_1_8(tmp11, obj7);
-      }
-      cResult[0] = application.icon;
-      cResult[1] = application.id;
-      cResult[2] = tmp4.appIcon;
-      cResult[3] = tmp8;
-      tmp7 = tmp8;
-    }
-  : function AppSubTitle(application) {
-      application = application.application;
-      const tmp = closure_12();
-      const obj2 = { style: tmp.appSubTitle, children: null };
-      let tmp7 = null;
-      const manaTypeConsolidationExperiment =
-        ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle");
-      if (null != application.icon) {
-        const obj3 = { source: null, style: null };
-        const tmp10 = FastImageDefault;
-        const obj6 = { id: null, icon: null, size: null };
-        ({ id: obj5.id, icon: obj5.icon } = application);
-        obj6.size = v16;
-        obj3.source = AvatarUtilsDefault.getApplicationIconSource(obj6);
-        obj3.style = tmp.appIcon;
-        tmp7 = closure_1_8(tmp10, obj3);
-      }
-      const items = [tmp7, ,];
-      let str = "text-sm/normal";
-      if (manaTypeConsolidationExperiment) {
-        str = "text-xs/normal";
-      }
-      items[1] = closure_1_8(Text_Text.Text, {
-        lineClamp: 1,
-        maxFontSizeMultiplier: 2,
-        variant: str,
-        color: "text-subtle",
-        style: tmp.appName,
-        children: application.name,
-      });
-      items[2] = closure_1_8(BotTagDefault, { verified: application.isVerified, size: "sm" });
-      obj2.children = items;
-      return React6(hasOwnProperty, obj2);
-    };
-ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function AppSubTitleSkeleton() {
-      const cResult = c.c(8);
-      const tmp2 = closure_12();
-      if (cResult[0] !== tmp2.skeletonIcon) {
-        const obj2 = { style: tmp2.skeletonIcon };
-        const tmp6 = closure_1_8(hasOwnProperty, obj2);
-        cResult[0] = tmp2.skeletonIcon;
-        cResult[1] = tmp6;
-        let tmp3 = tmp6;
-      } else {
-        tmp3 = cResult[1];
-      }
-      if (cResult[2] !== tmp2.skeletonName) {
-        const obj3 = { style: tmp2.skeletonName };
-        const tmp10 = closure_1_8(hasOwnProperty, obj3);
-        cResult[2] = tmp2.skeletonName;
-        cResult[3] = tmp10;
-        let tmp7 = tmp10;
-      } else {
-        tmp7 = cResult[3];
-      }
-      if (cResult[4] === tmp2.appSubTitle) {
-        if (cResult[5] === tmp3) {
-          if (cResult[6] === tmp7) {
-            let tmp11 = cResult[7];
-          }
-          return tmp11;
-        }
-      }
-      const obj4 = { style: tmp2.appSubTitle, "aria-hidden": true, children: null };
-      const items = [tmp3, tmp7];
-      obj4.children = items;
-      const tmp12 = React6(hasOwnProperty, obj4);
-      cResult[4] = tmp2.appSubTitle;
-      cResult[5] = tmp3;
-      cResult[6] = tmp7;
-      cResult[7] = tmp12;
-      tmp11 = tmp12;
-    }
-  : function AppSubTitleSkeleton() {
-      const tmp = closure_12();
-      const obj = { style: tmp.appSubTitle, "aria-hidden": true, children: null };
-      const items = [
-        closure_1_8(hasOwnProperty, { style: tmp.skeletonIcon }),
-        closure_1_8(hasOwnProperty, { style: tmp.skeletonName }),
-      ];
-      obj.children = items;
-      return React6(hasOwnProperty, obj);
-    };
-ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function NoAppSubTitle() {
-      const cResult = c.c(4);
-      const tmp4 = closure_12();
-      let str = "text-sm/normal";
-      if (obj2.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle")) {
-        str = "text-xs/normal";
-      }
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.tU5fiM);
-        cResult[0] = stringResult;
-        let first = stringResult;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === tmp4.noApp) {
-        if (cResult[2] === str) {
-          let tmp7 = cResult[3];
-        }
-        return tmp7;
-      }
-      const tmp8 = closure_1_8(Text_Text.Text, {
-        lineClamp: 1,
-        maxFontSizeMultiplier: 2,
-        variant: str,
-        color: "text-subtle",
-        style: tmp4.noApp,
-        children: first,
-      });
-      cResult[1] = tmp4.noApp;
-      cResult[2] = str;
-      cResult[3] = tmp8;
-      tmp7 = tmp8;
-      obj2 = ManaTypeConsolidationExperiment;
-    }
-  : function NoAppSubTitle() {
-      const tmp = closure_12();
-      const manaTypeConsolidationExperiment =
-        ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle");
-      let str = "text-sm/normal";
-      if (manaTypeConsolidationExperiment) {
-        str = "text-xs/normal";
-      }
-      const obj2 = {
-        lineClamp: 1,
-        maxFontSizeMultiplier: 2,
-        variant: str,
-        color: "text-subtle",
-        style: tmp.noApp,
-        children: null,
-      };
-      const intl = util.intl;
-      obj2.children = intl.string(util.t.tU5fiM);
-      return closure_1_8(Text_Text.Text, obj2);
-    };
-ReactCompilerGating = fn(558);
-let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function EmptyIcon() {
-      const cResult = c.c(2);
-      const tmp2 = closure_12();
-      if (cResult[0] !== tmp2.channelIconWrapper) {
-        const obj2 = { style: tmp2.channelIconWrapper };
-        const tmp6 = closure_1_8(hasOwnProperty, obj2);
-        cResult[0] = tmp2.channelIconWrapper;
-        cResult[1] = tmp6;
-        let tmp3 = tmp6;
-      } else {
-        tmp3 = cResult[1];
-      }
-      return tmp3;
-    }
-  : function EmptyIcon() {
-      return closure_1_8(hasOwnProperty, { style: closure_12().channelIconWrapper });
-    };
-function renderChannelIconRaw(icon, IconComponent) {
-  return closure_1_8(closure_17, { icon, IconComponent });
-}
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx");
 
-export function renderTitleWrapper(tmp20Result, callback, joined, titleContentHeight) {
-  return closure_1_8(closure_13, {
+export function renderTitleWrapper(tmp33Result, callback, joined, titleContentHeight) {
+  return React6(TitleWrapper, {
     onPress: callback,
     headerAccessibilityLabel: joined,
     titleContentHeight,
-    children: tmp20Result,
+    children: tmp33Result,
   });
 }
-export function renderChannelTitle(visibleChannelName, arg1) {
+export function renderChannelTitle(channelName, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -985,8 +366,8 @@ export function renderChannelTitle(visibleChannelName, arg1) {
   if (tmp) {
     tmp = disableArrow;
   }
-  return closure_1_8(closure_14, {
-    title: visibleChannelName,
+  return React6(ChannelTitle, {
+    title: channelName,
     accessibleTitle,
     subtitle,
     disableArrow: tmp,
@@ -996,12 +377,14 @@ export function renderChannelTitle(visibleChannelName, arg1) {
   });
 }
 export function renderGroupDMIcon(stateFromStores) {
-  return closure_1_8(closure_15, { channel: stateFromStores });
+  return React6(GroupDMIcon, { channel: stateFromStores });
 }
 export function renderUserAvatar(stateFromStores1, status, isMobileOnline, isVROnline) {
-  return closure_1_8(closure_16, { user: stateFromStores1, status, isMobileOnline, isVROnline });
+  return React6(UserAvatar, { user: stateFromStores1, status, isMobileOnline, isVROnline });
 }
-export { renderChannelIconRaw };
+export function renderChannelIconRaw(icon, IconComponent) {
+  return React6(ChannelIconRaw, { icon, IconComponent });
+}
 export function renderChannelIcon(id, rulesChannelId) {
   const channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(id, rulesChannelId);
   rulesChannelId = undefined;
@@ -1009,36 +392,36 @@ export function renderChannelIcon(id, rulesChannelId) {
     rulesChannelId = rulesChannelId.rulesChannelId;
   }
   const obj3 = { isRulesChannel: rulesChannelId === id.id };
-  return closure_1_8(closure_17, {
+  return React6(ChannelIconRaw, {
     icon: channelIconWithGuild,
     IconComponent: utils_ChannelUtils.getChannelIconComponent(id, { isRulesChannel: rulesChannelId === id.id }),
   });
 }
-export function renderMemberCountText(online, total) {
+export function renderMemberCountText(online, memberCount) {
   if (flag === undefined) {
     flag = false;
   }
   if (null != online) {
-    const obj = { presenceCount: online, memberCount: total, withSeparator: flag, leadingAccessoryWidth };
-    let tmp = closure_1_8(closure_18, obj);
+    const obj = { presenceCount: online, memberCount, withSeparator: flag, leadingAccessoryWidth };
+    let tmp = React6(MemberCountText, obj);
   } else {
     tmp = null;
   }
   return tmp;
 }
-export const SubtitleText = tmp4;
-export function renderParentChannelSubTitle(parentChannel) {
-  return closure_1_8(closure_20, { channel: parentChannel });
+export { SubtitleText };
+export function renderParentChannelSubTitle(stateFromStores2) {
+  return React6(ParentChannelSubTitle, { channel: stateFromStores2 });
 }
 export function renderAppSubTitle(appChannelApplication, arg1) {
   if (null != appChannelApplication) {
     const obj = { application: appChannelApplication };
-    let tmp2 = closure_1_8(closure_21, obj);
+    let tmp2 = React6(AppSubTitle, obj);
   } else {
-    tmp2 = closure_1_8(arg1 ? closure_22 : closure_23, {});
+    tmp2 = React6(arg1 ? AppSubTitleSkeleton : NoAppSubTitle, {});
   }
   return tmp2;
 }
 export function renderEmptyIcon() {
-  return closure_1_8(closure_24, {});
+  return React6(EmptyIcon, {});
 }

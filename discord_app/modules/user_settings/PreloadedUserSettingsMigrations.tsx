@@ -38,7 +38,7 @@ function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NO
   }
   return hasHiddenHotspotResult;
 }
-const ChannelNoticeTypes = fn(1084).ChannelNoticeTypes;
+const ChannelNoticeTypes = fn(1072).ChannelNoticeTypes;
 let items = [
   {
     version: 2,
@@ -489,7 +489,7 @@ let items = [
         flag2 = true;
       }
       const Storage2 = Storage4.Storage;
-      value3 = Storage2.get("hidePremiumTier2TrialEnding");
+      let value3 = Storage2.get("hidePremiumTier2TrialEnding");
       if (value3) {
         const NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING =
           dismissible_content.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING;
@@ -520,7 +520,7 @@ let items = [
         flag2 = true;
       }
       const Storage3 = Storage4.Storage;
-      value4 = Storage3.get("hidePremiumReactivateNotice");
+      let value4 = Storage3.get("hidePremiumReactivateNotice");
       if (value4) {
         const NAGBAR_NOTICE_PREMIUM_REACTIVATE =
           dismissible_content.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE;

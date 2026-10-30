@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/clarification/ConjureImageOptions.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import MaskedLinkStoreMethodsAdditional from "../../../stores/MaskedLinkStoreMethodsAdditional.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
@@ -34,13 +34,13 @@ export function viewableImageOptions(items) {
     return items1;
   });
 }
-export function answeredOptionIds(first1) {
-  let kind;
-  if (first1 != null) {
-    kind = first1.kind;
+export function answeredOptionIds(kind) {
+  kind = undefined;
+  if (kind != null) {
+    kind = kind.kind;
   }
   if ("option" === kind) {
-    const items = [first1.optionId];
+    const items = [kind.optionId];
     let tmp2 = items;
   } else {
     tmp2 = closure_4;
@@ -55,7 +55,7 @@ export function imageOptionViewerSize(value) {
 export function ownImageOption(image) {
   const obj = { id: "own:" + image.attachment.id, label: null, image: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef3864.SUdqCQ);
+  obj.label = intl.string(_modDef3865.SUdqCQ);
   obj.image = { attachment_id: image.attachment.id };
   return obj;
 }
@@ -139,6 +139,6 @@ export function imageOptionCaption(option) {
 export function ownImageUploadText(question) {
   const intl = util.intl;
   const isMatch = /\bicons?\b/i.test(question.question);
-  const tmp2 = _modDef3864;
+  const tmp2 = _modDef3865;
   return intl.string(isMatch ? tmp2.qU4WN6 : tmp2.cbMDDB);
 }

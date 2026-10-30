@@ -47,7 +47,7 @@ const navigation = {
     if (null != value2) {
       if ("foreground" === str) {
         const request2 = value2.request;
-        value3 = map6.get(combined);
+        let value3 = map6.get(combined);
         map6.delete(combined);
         let request1;
         if (value3 != null) {
@@ -62,7 +62,7 @@ const navigation = {
         }
         let result = map6.set(combined, value3);
         if (map6.size > map6) {
-          value4 = map6.keys().next().value;
+          const value4 = map6.keys().next().value;
           while (null != value4) {
             let deleteResult1 = map6.delete(value4);
             if (map6.size <= map6) {
@@ -389,7 +389,7 @@ let obj = {
     if (null != value2) {
       if ("foreground" === str) {
         const request2 = value2.request;
-        value3 = map6.get(combined);
+        let value3 = map6.get(combined);
         map6.delete(combined);
         let request1;
         if (value3 != null) {
@@ -404,7 +404,7 @@ let obj = {
         }
         let result = map6.set(combined, value3);
         if (map6.size > map6) {
-          value4 = map6.keys().next().value;
+          const value4 = map6.keys().next().value;
           while (null != value4) {
             let deleteResult1 = map6.delete(value4);
             if (map6.size <= map6) {

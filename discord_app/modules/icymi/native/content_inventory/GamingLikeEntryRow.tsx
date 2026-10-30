@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import utils from "../../../content_inventory/utils.tsx";
 import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8676).isEntryNew }, , , ,];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8676).isEntryNew };
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8710).isEntryNew }, , , ,];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8710).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -37,15 +37,15 @@ let obj2 = {
 };
 items[2] = {
   Badge: BadgesAll.TrendingBadge,
-  predicate(traits) {
-    const trendingType = utils.getTrendingType(traits);
+  predicate(entry) {
+    const trendingType = utils.getTrendingType(entry);
     return null != trendingType && trendingType !== TrendingType.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   },
 };
 let obj3 = {
   Badge: BadgesAll.TrendingBadge,
-  predicate(traits) {
-    const trendingType = utils.getTrendingType(traits);
+  predicate(entry) {
+    const trendingType = utils.getTrendingType(entry);
     return null != trendingType && trendingType !== TrendingType.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   },
 };
@@ -67,7 +67,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   },
 };
-const createICYMIStyles = fn(18413);
+const createICYMIStyles = fn(18472);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -173,7 +173,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(18463, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(18522, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");

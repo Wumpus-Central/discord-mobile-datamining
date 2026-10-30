@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/conjurePublishFailureMessage.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishFailureMessage.tsx");
@@ -17,10 +17,10 @@ export default function conjurePublishFailureMessage(detail) {
   }
   if (20088 === detail.code) {
     const intl2 = util.intl;
-    intl2.string(_modDef3864.UXEDPw);
+    intl2.string(_modDef3865.UXEDPw);
   } else {
     const intl = util.intl;
-    intl.string(_modDef3864.gMWZeG);
+    intl.string(_modDef3865.gMWZeG);
   }
 }
 export const PREVIEW_BOT_NOT_INSTALLED_CODE = 20088;

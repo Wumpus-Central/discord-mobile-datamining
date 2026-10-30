@@ -1,5 +1,4 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx
-import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
@@ -9,41 +8,19 @@ import MetricEvents from "../../../discord_common/js/shared/shared-constants/Met
 import AgeVerificationUtils from "../age_assurance/AgeVerificationUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import SelfModUtils from "../self_mod/SelfModUtils.tsx";
+import ObscureMediaModels from "ObscureMediaModels.tsx";
 import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
-const ObscureMediaModels = AGE_VERIFICATION_OBSCURABLE_REASONS(7454);
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7452);
+const ExplicitMediaRedactionConstants = fn(7460);
 ({
   EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire,
   EXPLICIT_MEDIA_MIN_WIDTH: closure_7,
   MESSAGE_SCAN_TIMEOUT: closure_8,
 } = ExplicitMediaRedactionConstants);
-const AnalyticEvents = fn(1084).AnalyticEvents;
-let ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useShouldAgeVerifyForExplicitMedia() {
-      let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(
-        AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
-      );
-      if (isFeatureAgeGated) {
-        isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
-      }
-      return isFeatureAgeGated;
-    }
-  : function useShouldAgeVerifyForExplicitMedia() {
-      let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(
-        AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
-      );
-      if (isFeatureAgeGated) {
-        isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
-      }
-      return isFeatureAgeGated;
-    };
-let closure_10 = tmp3;
-ReactCompilerGating = fn(558);
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 
@@ -352,39 +329,33 @@ export function shouldAgeVerifyForExplicitMedia() {
   }
   return isFeatureAgeGatedResult;
 }
-export const useShouldAgeVerifyForExplicitMedia = tmp3;
-export const useShouldAgeVerifyForReason = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useShouldAgeVerifyForReason(arg0) {
-      let AGE_VERIFICATION_OBSCURABLE_REASONS = require;
-      let hasItem = dependencyMap;
-      const cResult = c.c(2);
-      const tmp3 = closure_10();
-      let tmp4 = !tmp3;
-      if (tmp3) {
-        tmp4 = null == arg0;
-      }
-      if (tmp4) {
-        return !tmp4;
-      } else if (cResult[0] !== arg0) {
-        AGE_VERIFICATION_OBSCURABLE_REASONS = ObscureMediaModels.AGE_VERIFICATION_OBSCURABLE_REASONS;
-        hasItem = AGE_VERIFICATION_OBSCURABLE_REASONS.has(arg0);
-        cResult[0] = arg0;
-        cResult[1] = hasItem;
-      }
-    }
-  : function useShouldAgeVerifyForReason(arg0) {
-      const tmp = closure_10();
-      let tmp2 = !tmp;
-      if (tmp) {
-        tmp2 = null == arg0;
-      }
-      let hasItem = !tmp2;
-      if (!tmp2) {
-        const AGE_VERIFICATION_OBSCURABLE_REASONS = ObscureMediaModels.AGE_VERIFICATION_OBSCURABLE_REASONS;
-        hasItem = AGE_VERIFICATION_OBSCURABLE_REASONS.has(arg0);
-      }
-      return hasItem;
-    };
+export function useShouldAgeVerifyForExplicitMedia() {
+  let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
+  );
+  if (isFeatureAgeGated) {
+    isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
+  }
+  return isFeatureAgeGated;
+}
+export function useShouldAgeVerifyForReason(obscureReason) {
+  let isFeatureAgeGated = RegionalFeatureConfigUtils.useIsFeatureAgeGated(
+    AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING,
+  );
+  if (isFeatureAgeGated) {
+    isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
+  }
+  let tmp4 = !isFeatureAgeGated;
+  if (isFeatureAgeGated) {
+    tmp4 = null == obscureReason;
+  }
+  let hasItem = !tmp4;
+  if (!tmp4) {
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = ObscureMediaModels.AGE_VERIFICATION_OBSCURABLE_REASONS;
+    hasItem = AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason);
+  }
+  return hasItem;
+}
 export function trackToggleMediaObscurityV2(obscure) {
   if (obj.isVerifiedAdult()) {
     let str = "show";

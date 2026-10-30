@@ -13,7 +13,7 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -28,7 +28,7 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
       } else {
         require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[3], paths.paths), closure_0, React4);
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp10) {
       c1 = tmp;
@@ -36,7 +36,7 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
     }
   }
 };
-let closure_4 = fn(19380).INTERACTION_IFRAME_MODAL_KEY;
+let closure_4 = fn(19443).INTERACTION_IFRAME_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 

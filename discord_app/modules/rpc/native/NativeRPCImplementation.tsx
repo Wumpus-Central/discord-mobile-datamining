@@ -10,11 +10,14 @@ import frameRelaunchDeepLinkDefault from "../server/commands/frameRelaunchDeepLi
 import voiceSettingsDefault from "server/commands/voiceSettings.tsx";
 import unsupportedDefault from "server/commands/unsupported.tsx";
 import crossPlatformRPCEventHandlersDefault from "../server/events/crossPlatformRPCEventHandlers.tsx";
+import getNativeDiscordCustomThemeDefault from "../../activities/native/getNativeDiscordCustomTheme.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
+import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgroundStore.tsx";
+import CustomThemeMobileStore from "../../client_themes/native/CustomThemeMobileStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 
-const merged = Object.assign(fn(16221).crossPlatformCommands);
+const merged = Object.assign(fn(16261).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const audioSession = Object.assign(audioSessionDefault);
 const auth = Object.assign(authDefault);
@@ -24,10 +27,12 @@ const frameRelaunchDeepLink = Object.assign(frameRelaunchDeepLinkDefault);
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(16284);
-const merged10 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true));
-const merged11 = Object.assign(fn(16285).screenCaptureEvents);
-const merged12 = Object.assign(fn(16286).voiceSettingsEventHandlers);
+const discordEnvironmentEvents = fn(16324);
+const merged10 = Object.assign(
+  discordEnvironmentEvents.createDiscordEnvironmentEvents(true, getNativeDiscordCustomThemeDefault),
+);
+const merged11 = Object.assign(fn(16326).screenCaptureEvents);
+const merged12 = Object.assign(fn(16327).voiceSettingsEventHandlers);
 const obj4 = {
   server: NativeRPCServerDefault,
   commands: {},
@@ -36,7 +41,13 @@ const obj4 = {
   transports: null,
   registerTransportsForEmbeddedPlatform: null,
 };
-const items = [ThemeStore, AccessibilityStore, UserSettingsProtoStore];
+const items = [
+  ThemeStore,
+  AccessibilityStore,
+  UserSettingsProtoStore,
+  ClientThemesBackgroundStore,
+  CustomThemeMobileStore,
+];
 obj4.stores = items;
 const items1 = [WebViewPostMessageTransportDefault];
 obj4.transports = items1;

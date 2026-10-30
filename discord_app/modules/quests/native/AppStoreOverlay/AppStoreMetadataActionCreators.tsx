@@ -15,7 +15,7 @@ function clearRetryState(arg0) {
   map2.delete(arg0);
   map3.delete(arg0);
 }
-const Endpoints = fn(1084).Endpoints;
+const Endpoints = fn(1072).Endpoints;
 let closure_5 = 10 * DurationsDefault.Millis.SECOND;
 let closure_6 = 5 * DurationsDefault.Millis.MINUTE;
 const map = new Map();
@@ -41,11 +41,11 @@ export function fetchAppStoreMetadata(os) {
     }
     return Promise.resolve(value);
   } else {
-    value3 = map1.get(combined);
+    const value3 = map1.get(combined);
     if (null != value3) {
       return value3;
     } else {
-      value4 = map3.get(combined);
+      const value4 = map3.get(combined);
       if (null != value4) {
         let _Date = Date;
         if (Date.now() < value4.retryAt) {
@@ -63,7 +63,7 @@ export function fetchAppStoreMetadata(os) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {

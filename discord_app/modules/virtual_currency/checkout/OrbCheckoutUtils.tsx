@@ -12,8 +12,8 @@ const EXTERNAL_PRODUCT_SKU_IDS = CollectiblesShopConstants.EXTERNAL_PRODUCT_SKU_
 const ConstraintReasonCode = OrderConstants.ConstraintReasonCode;
 const result = size.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutUtils.tsx");
 
-export function getOrbPriceFromPrices(prices, cResult) {
-  if (cResult) {
+export function getOrbPriceFromPrices(prices, memo1) {
+  if (memo1) {
     if (null != prices[React4.PREMIUM_TIER_2]) {
       let tmp2 = prices[React4.PREMIUM_TIER_2];
     }

@@ -4,8 +4,12 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/client_themes/native/CustomThemeMobileActionCreators.tsx");
 
-export function updateCustomTheme(customThemeSettings, first1) {
-  DispatcherDefault.dispatch({ type: "UPDATE_CUSTOM_THEME", customTheme: customThemeSettings, theme: first1 });
+export function updateCustomTheme(customThemeSettings, customThemeBaseTheme) {
+  DispatcherDefault.dispatch({
+    type: "UPDATE_CUSTOM_THEME",
+    customTheme: customThemeSettings,
+    theme: customThemeBaseTheme,
+  });
 }
 export function resetCustomTheme() {
   DispatcherDefault.dispatch({ type: "RESET_CUSTOM_THEME" });

@@ -1,6 +1,6 @@
 // discord_app/lib/uploader/UploadUtils.tsx
-import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import AttachmentFile from "../../utils/AttachmentFile.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";

@@ -3,8 +3,6 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-
 const require = fn;
 let closure_5 = {
   setTimeout(arg0, arg1) {
@@ -49,7 +47,7 @@ prototype["mint"] = function mint(dependencyMap) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -89,7 +87,7 @@ prototype["mint"] = function mint(dependencyMap) {
           c2 = 0;
           if (closure_129_1.isStale(closure_128_1)) {
             c4 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           } else {
             let connection = null;
             if (!closure_129_0) {
@@ -184,116 +182,44 @@ prototype["update"] = function update(state) {
     self.onChange(state);
   }
 };
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/external_connections/ConjureMcpConnectionPanel.tsx");
 
 export const MCP_CONNECTION_MIN_REFETCH_MS = 15000;
 export { McpConnectionPanel };
-export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useMcpConnectionPanel(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(7);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { connection: null, loading: true, failed: false };
-        cResult[0] = obj2;
-        let first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      const obj = require("c");
-      [tmp4, dependencyMap] = noop.useState(first);
-      _slicedToArray = noop.useRef(null);
-      if (cResult[1] !== arg0) {
-        let fn = function l() {
-          if (typeof McpConnectionPanel === "function") {
-            const fn = (regenerate) => merged(dependencyMap[5]).fetchProjectMcpConnection(merged, { regenerate });
-            const merged = Object.assign({ state: null, generation: 0, timer: null, disposed: false });
-            merged[0] = { connection: null, loading: true, failed: false };
-            merged.fetchConnection = fn;
-            merged.onChange = tmp2;
-            merged.timers = timers;
-            ref.current = merged;
-            merged.mint(false).catch(() => {});
-            return () => {
-              merged.dispose();
-              if (ref.current === merged) {
-                tmp2.current = null;
-              }
-            };
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        };
-        const items = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        cResult[3] = items;
-        let tmp6 = items;
-        let tmp5 = fn;
-      } else {
-        tmp5 = cResult[2];
-        tmp6 = cResult[3];
-      }
-      const effect = noop.useEffect(tmp5, tmp6);
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function h(dependencyMap) {
-          const current = ref.current;
-          if (current != null) {
-            current.mint(dependencyMap).catch(() => {});
-            const mintResult = current.mint(dependencyMap);
-          }
-        };
-        cResult[4] = fn2;
-        let tmp8 = fn2;
-      } else {
-        tmp8 = cResult[4];
-      }
-      if (cResult[5] !== tmp4) {
-        const obj4 = {};
-        let merged = Object.assign(tmp4);
-        obj4.mint = tmp8;
-        cResult[5] = tmp4;
-        cResult[6] = obj4;
-        let tmp9 = obj4;
-      } else {
-        tmp9 = cResult[6];
-      }
-      return tmp9;
+export function useMcpConnectionPanel(projectId) {
+  closure_0 = projectId;
+  [tmp2, dependencyMap] = noop.useState({ connection: null, loading: true, failed: false });
+  _slicedToArray = noop.useRef(null);
+  const items = [projectId];
+  const effect = noop.useEffect(() => {
+    if (typeof McpConnectionPanel === "function") {
+      const fn = (regenerate) => merged(dependencyMap[3]).fetchProjectMcpConnection(merged, { regenerate });
+      const merged = Object.assign({ state: null, generation: 0, timer: null, disposed: false });
+      merged[0] = { connection: null, loading: true, failed: false };
+      merged.fetchConnection = fn;
+      merged.onChange = tmp2;
+      merged.timers = timers;
+      ref.current = merged;
+      merged.mint(false).catch(() => {});
+      return () => {
+        merged.dispose();
+        if (ref.current === merged) {
+          tmp2.current = null;
+        }
+      };
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-  : function useMcpConnectionPanel(arg0) {
-      closure_0 = arg0;
-      [tmp2, dependencyMap] = noop.useState({ connection: null, loading: true, failed: false });
-      _slicedToArray = noop.useRef(null);
-      const items = [arg0];
-      const effect = noop.useEffect(() => {
-        if (typeof McpConnectionPanel === "function") {
-          const fn = (regenerate) => merged(dependencyMap[5]).fetchProjectMcpConnection(merged, { regenerate });
-          const merged = Object.assign({ state: null, generation: 0, timer: null, disposed: false });
-          merged[0] = { connection: null, loading: true, failed: false };
-          merged.fetchConnection = fn;
-          merged.onChange = tmp2;
-          merged.timers = timers;
-          ref.current = merged;
-          merged.mint(false).catch(() => {});
-          return () => {
-            merged.dispose();
-            if (ref.current === merged) {
-              tmp2.current = null;
-            }
-          };
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }, items);
-      const obj = {};
-      let merged = Object.assign(tmp2);
-      obj.mint = noop.useCallback((dependencyMap) => {
-        const current = ref.current;
-        if (current != null) {
-          current.mint(dependencyMap).catch(() => {});
-          const mintResult = current.mint(dependencyMap);
-        }
-      }, []);
-      return obj;
-    };
+  }, items);
+  const obj = {};
+  let merged = Object.assign(tmp2);
+  obj.mint = noop.useCallback((dependencyMap) => {
+    const current = ref.current;
+    if (current != null) {
+      current.mint(dependencyMap).catch(() => {});
+      const mintResult = current.mint(dependencyMap);
+    }
+  }, []);
+  return obj;
+}

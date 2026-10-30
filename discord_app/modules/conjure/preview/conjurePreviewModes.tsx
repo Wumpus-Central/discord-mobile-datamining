@@ -1,11 +1,14 @@
 // discord_app/modules/conjure/preview/conjurePreviewModes.tsx
+import Constants from "../../../Constants.tsx";
+import BigFlagUtilsAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
+import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
 import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-let obj = {
+let closure_3 = {
   frame(hasFrame) {
     return hasFrame.hasFrame;
   },
@@ -19,6 +22,12 @@ let obj = {
     return true === hasBotDm.hasBotDm;
   },
 };
+const items = [, ,];
+({
+  GATEWAY_PRESENCE_LIMITED: arr[0],
+  GATEWAY_GUILD_MEMBERS_LIMITED: arr[1],
+  GATEWAY_MESSAGE_CONTENT_LIMITED: arr[2],
+} = Constants.ApplicationFlags);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewModes.tsx");
 
 export function previewCapabilitiesFromSurfaces(previewSupportedSurfaces, arg1) {
@@ -27,7 +36,7 @@ export function previewCapabilitiesFromSurfaces(previewSupportedSurfaces, arg1) 
   if (null != previewSupportedSurfaces) {
     tmp = legacy;
     if (0 !== previewSupportedSurfaces.length) {
-      obj = {
+      const obj = {
         hasFrame: conjurePreviewFrameSurfaces.declaresPreviewFrame(previewSupportedSurfaces),
         hasProfileWidget: null,
         hasBotDm: null,
@@ -54,8 +63,8 @@ export function previewCapabilitiesFromSurfaces(previewSupportedSurfaces, arg1) 
 export function previewModeAvailability(installScope) {
   _require = installScope;
   const prop = require("ConjurePreviewMode").CONJURE_PREVIEW_MODE_ORDER;
-  const found = prop.filter((item) => obj[item](closure_0));
-  obj = { modes: found, defaultMode: null, showModeSwitch: null, profileState: null };
+  const found = prop.filter((item) => dependencyMap[item](closure_0));
+  const obj = { modes: found, defaultMode: null, showModeSwitch: null, profileState: null };
   let first = found[0];
   if (first == null) {
     first = null;
@@ -105,7 +114,7 @@ export function showsFramePreview(modes, arg1) {
 export function profileSurfaceAvailability(widgetTop) {
   let tmp = widgetTop.widgetTop && widgetTop.widgetBottom;
   const miniProfile = widgetTop.miniProfile;
-  obj = { hasMainCard: tmp, hasPopoutCard: miniProfile, hasAny: null };
+  const obj = { hasMainCard: tmp, hasPopoutCard: miniProfile, hasAny: null };
   if (!tmp) {
     tmp = miniProfile;
   }
@@ -130,21 +139,67 @@ export function requiresPermissionReview(arg0) {
   }
   return tmp3;
 }
+export function previewNeedsAppConsent(data) {
+  _require = data;
+  if (null == data) {
+    return false;
+  } else {
+    const integrationTypesConfig = data.integrationTypesConfig;
+    let permissions;
+    if (integrationTypesConfig != null) {
+      const tmp3 =
+        integrationTypesConfig[require("ApplicationIntegrationType").ApplicationIntegrationType.GUILD_INSTALL];
+      if (tmp3 != null) {
+        const oauth2InstallParams = tmp3.oauth2InstallParams;
+        if (oauth2InstallParams != null) {
+          permissions = oauth2InstallParams.permissions;
+        }
+      }
+    }
+    if (permissions == null) {
+      const installParams = data.installParams;
+      let permissions1;
+      if (installParams != null) {
+        permissions1 = installParams.permissions;
+      }
+      permissions = permissions1;
+    }
+    let someResult = null != permissions;
+    if (someResult) {
+      const deserializer = BigFlagUtilsAll;
+      const obj = BigFlagUtilsAll;
+      someResult = !obj.equals(deserializer.deserialize(permissions), BigFlagUtilsAll.EMPTY_FLAG);
+      const deserializeResult = deserializer.deserialize(permissions);
+    }
+    if (!someResult) {
+      someResult = items.some((item) => ApplicationFlagUtils.hasApplicationFlag(closure_0, item));
+    }
+    return someResult;
+  }
+}
 export function permissionReviewBlocksMode(activeMode, result, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
+  let flag2 = tmpResult31;
+  if (tmpResult31 === undefined) {
+    flag2 = false;
+  }
   let tmp = result;
   if (tmp) {
-    let tmp3 = "bot" === activeMode;
-    if (!tmp3) {
-      if (flag) {
-        flag = "frame" === activeMode;
+    let tmp2 = flag2;
+    if (!tmp2) {
+      let tmp4 = "bot" === activeMode;
+      if (!tmp4) {
+        if (flag) {
+          flag = "frame" === activeMode;
+        }
+        tmp4 = flag;
       }
-      tmp3 = flag;
+      tmp2 = tmp4;
     }
-    tmp = tmp3;
+    tmp = tmp2;
   }
   return tmp;
 }

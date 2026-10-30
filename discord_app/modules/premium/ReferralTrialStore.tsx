@@ -41,7 +41,7 @@ function handleLoadMessages(messages) {
     return false;
   });
 }
-const NOOP_NULL = fn(1084).NOOP_NULL;
+const NOOP_NULL = fn(1072).NOOP_NULL;
 let c4 = null;
 let set = new Set();
 let map = new Map();

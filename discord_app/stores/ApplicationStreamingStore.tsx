@@ -2,7 +2,7 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
-import asyncRequireImpl from "../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/01995_asyncRequireImpl.js";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import windowSourceMatchesDefault from "../modules/go_live/utils/windowSourceMatches.tsx";
 import getTitleFromPickedStreamContentDefault from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
@@ -45,7 +45,7 @@ function handleStreamUpdate(streamKey) {
   const result = map.set(streamKey, obj);
   closure_5[streamKey] = { streamKey, region, viewerIds };
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({
   ApplicationStreamStates: closure_18,
   RTCConnectionStates: closure_19,
@@ -53,7 +53,7 @@ const Constants = fn(1084);
   NULL_STRING_GUILD_ID: closure_21,
   BasicPermissions: closure_22,
 } = Constants);
-const StreamTypes = fn(6702).StreamTypes;
+const StreamTypes = fn(6709).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -93,8 +93,8 @@ prototype["initialize"] = function initialize(selfStreamParticipantsHidden) {
 prototype["getState"] = function getState() {
   return { selfStreamParticipantsHidden };
 };
-prototype["isSelfStreamHidden"] = function isSelfStreamHidden(id) {
-  let flag = selfStreamParticipantsHidden[id];
+prototype["isSelfStreamHidden"] = function isSelfStreamHidden(channelId) {
+  let flag = selfStreamParticipantsHidden[channelId];
   if (flag == null) {
     flag = false;
   }
@@ -313,13 +313,13 @@ prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStream
     return null;
   }
 };
-prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
+prototype["getStreamForUser"] = function getStreamForUser(userId, guildId) {
   if (canSpectateDefault(MediaEngineStore)) {
     let tmp5;
-    if (streamsByUserAndGuild[id] != null) {
+    if (streamsByUserAndGuild[userId] != null) {
       let tmp6 = guildId;
       if (guildId == null) {
-        tmp6 = guild;
+        tmp6 = __initData;
       }
       tmp5 = tmp4[tmp6];
     }
@@ -700,7 +700,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(6704);
+    const obj = sourceId(6711);
     const encodeStreamKeyResult = obj.encodeStreamKey({
       streamType,
       guildId,
@@ -792,11 +792,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(6707, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(6714, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(6707, dependencyMap.paths);
+        const promise = asyncRequireImpl(6714, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

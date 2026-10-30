@@ -19,9 +19,9 @@ const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 const VoiceChatDrawerState = ChannelCallConstants.VoiceChatDrawerState;
 let result = size.fileFinishedImporting("modules/activities/utils/transitionToActivity.native.tsx");
 
-export default function transitionToActivity(guild_id, connectedActivityLocation) {
+export default function transitionToActivity(guild_id, _location) {
   const embeddedActivityLocationChannelId =
-    embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+    embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location);
   if (null != embeddedActivityLocationChannelId) {
     const isModalOpenResult = NavigationRouteUtils.isModalOpen(ChannelCallModalDefault);
     let tmp4 = !isModalOpenResult;
@@ -31,8 +31,7 @@ export default function transitionToActivity(guild_id, connectedActivityLocation
     if (tmp4) {
       openChannelCallModalForChannelIdDefault(embeddedActivityLocationChannelId);
     }
-    const selfEmbeddedActivityForLocation =
-      EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+    const selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(_location);
     if (null != selfEmbeddedActivityForLocation) {
       if (isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId)) {
         const tmp15Result = ChannelRTCActionCreatorsDefault;

@@ -20,8 +20,8 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(5771).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8203);
+const getSystemAnalyticsInfo = fn(5778).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8206);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1,
@@ -29,10 +29,10 @@ const ClipsConstants = fn(8203);
   ClipsHardwareClassification: closure_15,
   CLIP_RUNTIME: closure_16,
 } = ClipsConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(6702).StreamTypes;
-const Features = fn(5756).Features;
+const StreamTypes = fn(6709).StreamTypes;
+const Features = fn(5763).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -236,7 +236,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {

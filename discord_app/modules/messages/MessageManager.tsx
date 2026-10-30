@@ -379,7 +379,7 @@ function handleChannelSectionStoreChange() {
 }
 function handleChannelPreload(context) {
   ({ guildId, channelId } = context);
-  if (context.context === value2) {
+  if (context.context === __initData) {
     const obj = { guildId, channelId };
     fetchMessages(obj);
     const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(channelId);
@@ -485,8 +485,8 @@ function handleAppWillBecomeActive() {
     const newLocalMessages = MessageActionCreatorsDefault.fetchNewLocalMessages(channelId, closure_1_14);
   }
 }
-const isTextChannel = fn(4861).isTextChannel;
-const Constants = fn(1084);
+const isTextChannel = fn(4862).isTextChannel;
+const Constants = fn(1072);
 ({
   MAX_MESSAGES_PER_CHANNEL: closure_14,
   CURRENT_APP_CONTEXT: closure_15,
@@ -495,7 +495,7 @@ const Constants = fn(1084);
   Routes: closure_18,
   ChannelTypesSets: closure_19,
 } = Constants);
-const isStaticChannelRoute = fn(4864).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4865).isStaticChannelRoute;
 let closure_21 = 10 * DurationsDefault.Millis.SECOND;
 const logger = new LoggerDefault("MessageManager");
 let closure_25 = 90 * DurationsDefault.Millis.DAY;

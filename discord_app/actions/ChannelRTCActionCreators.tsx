@@ -56,9 +56,9 @@ export default {
       dismissed,
     });
   },
-  updateChatOpen(id, shown) {
-    _require = id;
-    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown });
+  updateChatOpen(channelId, shown) {
+    _require = channelId;
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId, chatOpen: shown });
     if (shown) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
@@ -69,7 +69,7 @@ export default {
       let ComponentDispatch = require("ComponentDispatchUtils").ComponentDispatch;
       ComponentDispatch.dispatch(constants3.FOCUS_CHAT_BUTTON);
     }
-    const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown };
+    const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId, chatOpen: shown };
   },
   updateStageAudienceSidebarOpen(channelId, open) {
     DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_AUDIENCE_SIDEBAR_OPEN", channelId, open });

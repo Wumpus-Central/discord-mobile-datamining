@@ -3,7 +3,7 @@ import PremiumSubscriptionInvoiceItem from "../modules/premium/PremiumSubscripti
 import Record from "../lib/Record.tsx";
 
 require = fn;
-const PaymentGateways = fn(1084).PaymentGateways;
+const PaymentGateways = fn(1072).PaymentGateways;
 let BaseInvoiceRecord;
 class BaseInvoiceRecord extends tmp2 {
   constructor(arg0) {

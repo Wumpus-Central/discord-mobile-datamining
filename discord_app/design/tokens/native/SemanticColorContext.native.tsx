@@ -1,5 +1,5 @@
 // discord_app/design/tokens/native/SemanticColorContext.native.tsx
-import _modDef683 from "../../../../_runtime/metro/00683__.js";
+import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import native from "../../utils/native.tsx";
 import getGradientThemeFromFlags from "../../components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx";
@@ -8,16 +8,16 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
-export function getSemanticColorContextFromThemeContext(primaryColor) {
-  primaryColor = primaryColor.primaryColor;
-  const gradientThemeFromFlags = getGradientThemeFromFlags.getGradientThemeFromFlags(primaryColor);
-  ({ contrast, saturation, enabledExperiments } = primaryColor);
+export function getSemanticColorContextFromThemeContext(themeContext) {
+  const primaryColor = themeContext.primaryColor;
+  const gradientThemeFromFlags = getGradientThemeFromFlags.getGradientThemeFromFlags(themeContext);
+  ({ contrast, saturation, enabledExperiments } = themeContext);
   let gradientThemeMetadata = client_themes_ClientThemesUtils.getGradientThemeMetadata(
     gradientThemeFromFlags,
-    primaryColor.gradient,
+    themeContext.gradient,
   );
   if (null != primaryColor) {
-    ({ primaryColor: primaryColor2, secondaryColor } = primaryColor);
+    ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
     let tmp9 = null;
     if (null != primaryColor2) {
       const int2hexResult = utils_ColorUtils.int2hex(primaryColor2);
@@ -27,9 +27,9 @@ export function getSemanticColorContextFromThemeContext(primaryColor) {
       }
       const int2hexResult1 = utils_ColorUtils.int2hex(secondaryColor);
       const tmpResult3 = utils_ColorUtils;
-      const obj5 = _modDef683(int2hexResult);
-      const mixResult = _modDef683(int2hexResult).mix(int2hexResult1, 0.5);
-      const hexResult = _modDef683(int2hexResult).mix(int2hexResult1, 0.5).hex();
+      const obj5 = _modDef671(int2hexResult);
+      const mixResult = _modDef671(int2hexResult).mix(int2hexResult1, 0.5);
+      const hexResult = _modDef671(int2hexResult).mix(int2hexResult1, 0.5).hex();
       let str = "dark";
       if (tmpResult4.isThemeLight(tmp10)) {
         str = "light";

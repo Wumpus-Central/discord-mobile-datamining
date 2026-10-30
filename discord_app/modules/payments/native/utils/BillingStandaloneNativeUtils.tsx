@@ -47,7 +47,7 @@ export function goToStandalonePremiumCheckoutFromMobileApp(premium_plan_selectio
     obj3.flowType = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
     let tmp5 = obj3;
   } else {
-    obj3.deepLinkType = tmp(1104).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    obj3.deepLinkType = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
     tmp5 = obj3;
   }
   return obj.goToStandalonePremiumCheckout(
@@ -79,7 +79,7 @@ export function goToStandaloneNitroManagementFromMobileApp(premium_external_mana
     );
   } else {
     result = Routes.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(
-      tmp(1104).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT,
+      tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT,
       loadId,
     );
   }
@@ -105,7 +105,7 @@ export function goToStandaloneGuildBoostCheckoutFromMobileApp(args, guild_id, ne
   CustomCheckoutFlow = arg4;
   let prop;
   if (!obj.isMetaQuest()) {
-    prop = tmp(1104).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
+    prop = tmp(1093).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
   }
   obj = require("MetaQuestUtils");
   let prop1;

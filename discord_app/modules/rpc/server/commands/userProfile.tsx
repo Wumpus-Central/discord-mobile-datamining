@@ -2,12 +2,12 @@
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-const RPCCommands = fn(1084).RPCCommands;
+const RPCCommands = fn(1072).RPCCommands;
 const weakMap = new WeakMap();
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16215);
+const CONTEXT_MENU_ICON_NAMES = fn(16255);
 obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_USER_PROFILE, {
-  scope: fn(6437).RPC_EMBEDDED_APP_SCOPE,
+  scope: fn(6444).RPC_EMBEDDED_APP_SCOPE,
   handler(socket) {
     socket = socket.socket;
     const user_id = socket.args.user_id;
@@ -22,7 +22,7 @@ obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

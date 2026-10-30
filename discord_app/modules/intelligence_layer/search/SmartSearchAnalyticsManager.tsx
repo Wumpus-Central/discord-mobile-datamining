@@ -34,7 +34,7 @@ function getCitationCompositionProperties(citations) {
     citation_message_ids: items2,
   };
 }
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const re5 = /\s+/;
 class SmartSearchAnalyticsManager {
   constructor() {
@@ -62,8 +62,8 @@ prototype["setIsRowViewable"] = function setIsRowViewable(someResult, getSession
 prototype["setIsTabActive"] = function setIsTabActive(isTabActive, getSessionId) {
   this.updateVisibility({ isTabActive }, getSessionId);
 };
-prototype["setIsNavigationFocused"] = function setIsNavigationFocused(isNavigationFocused, getSessionId) {
-  this.updateVisibility({ isNavigationFocused }, getSessionId);
+prototype["setIsNavigationFocused"] = function setIsNavigationFocused(stateFromStores, getSessionId) {
+  this.updateVisibility({ isNavigationFocused: stateFromStores }, getSessionId);
 };
 prototype["setIsAppActive"] = function setIsAppActive(stateFromStores, getSessionId) {
   this.updateVisibility({ isAppActive: stateFromStores }, getSessionId);

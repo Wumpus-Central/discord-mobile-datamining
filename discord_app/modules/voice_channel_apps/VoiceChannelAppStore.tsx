@@ -5,14 +5,14 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 const dependencyMap = {};
 const Store = initializeDefault.Store;
 class VoiceChannelAppStore extends Store {}
-VoiceChannelAppStore.prototype["isAppVisible"] = function isAppVisible(id, arg1) {
+VoiceChannelAppStore.prototype["isAppVisible"] = function isAppVisible(channelId, arg1) {
   let tmp = arg1;
   if (arg1) {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = true;
     }
-    let tmp4 = dependencyMap[id];
+    let tmp4 = dependencyMap[channelId];
     if (tmp4 == null) {
       tmp4 = flag;
     }

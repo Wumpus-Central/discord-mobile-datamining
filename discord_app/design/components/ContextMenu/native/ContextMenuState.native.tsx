@@ -1,5 +1,4 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuState.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
@@ -8,9 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const module_570 = fn(570);
-let obj3 = module_570.create(() => ({ menu: null }));
-fn(558);
+const module_560 = fn(560);
+let obj2 = module_560.create(() => ({ menu: null }));
 function updateContextMenuState(absoluteX, absoluteY, callback1) {
   ({ pan, itemMeasurements, activeIndex } = callback1);
   const result = pan.set(absoluteY);
@@ -40,39 +38,20 @@ function updateContextMenuState(absoluteX, absoluteY, callback1) {
   }
   const result3 = activeIndex.set(-1);
 }
-const obj7 = {
+updateContextMenuState.__closure = {
   INDEX_BOUNDS_WIDTH_OFFSET: 2,
   INDEX_BOUNDS_HEIGHT_OFFSET: 3,
   INDEX_BOUNDS_PAGE_Y_OFFSET: 1,
   INDEX_BOUNDS_PAGE_X_OFFSET: 0,
   INDEX_BOUNDS_OFFSET: 4,
-  runOnJS: fn(5086).runOnJS,
-  triggerHapticFeedback: fn(5249).triggerHapticFeedback,
-  HapticFeedbackTypes: fn(5249).HapticFeedbackTypes,
+  runOnJS: fn(5090).runOnJS,
+  triggerHapticFeedback: fn(5255).triggerHapticFeedback,
+  HapticFeedbackTypes: fn(5255).HapticFeedbackTypes,
 };
-updateContextMenuState.__closure = obj7;
 updateContextMenuState.__workletHash = 10158111154044;
 updateContextMenuState.__initData = {
   code: "function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){const{INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);}",
 };
-const ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useActiveContextMenu() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(menu) {
-          return menu.menu;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return obj3(first);
-    }
-  : function useActiveContextMenu() {
-      return obj3((menu) => menu.menu);
-    };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuState.native.tsx");
 
@@ -81,10 +60,10 @@ export const INDEX_BOUNDS_PAGE_X_OFFSET = 0;
 export const INDEX_BOUNDS_PAGE_Y_OFFSET = 1;
 export const INDEX_BOUNDS_WIDTH_OFFSET = 2;
 export const INDEX_BOUNDS_HEIGHT_OFFSET = 3;
-export const ContextMenuStore = obj3;
+export const ContextMenuStore = obj2;
 export function showContextMenu(size) {
   _require = size;
-  require("ReactBatchUpdates").batchUpdates(() => obj3.setState({ menu }));
+  require("ReactBatchUpdates").batchUpdates(() => obj2.setState({ menu }));
 }
 export function hideContextMenu() {
   ReactBatchUpdates.batchUpdates(() => {
@@ -97,39 +76,17 @@ export function hideContextMenu() {
     });
   });
 }
-export const useActiveContextMenu = tmp3;
+export function useActiveContextMenu() {
+  return obj2((menu) => menu.menu);
+}
 export { updateContextMenuState };
-export const useContextMenuState = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useContextMenuState() {
-      const cResult = c.c(4);
-      const sharedValue = ReanimatedRexport.useSharedValue(-1);
-      const sharedValue1 = ReanimatedRexport.useSharedValue([]);
-      const sharedValue2 = ReanimatedRexport.useSharedValue(-1);
-      if (cResult[0] === sharedValue2) {
-        if (cResult[1] === sharedValue1) {
-          if (cResult[2] === sharedValue) {
-            let tmp5 = cResult[3];
-          }
-          return tmp5;
-        }
-      }
-      const obj5 = { pan: sharedValue, itemMeasurements: sharedValue1, activeIndex: sharedValue2 };
-      cResult[0] = sharedValue2;
-      cResult[1] = sharedValue1;
-      cResult[2] = sharedValue;
-      cResult[3] = obj5;
-      tmp5 = obj5;
-    }
-  : function useContextMenuState() {
-      const sharedValue = ReanimatedRexport.useSharedValue(-1);
-      const sharedValue1 = ReanimatedRexport.useSharedValue([]);
-      const sharedValue2 = ReanimatedRexport.useSharedValue(-1);
-      const items = [sharedValue, sharedValue1, sharedValue2];
-      return noop.useMemo(
-        () => ({ pan: sharedValue, itemMeasurements: sharedValue1, activeIndex: sharedValue2 }),
-        items,
-      );
-    };
+export function useContextMenuState() {
+  const sharedValue = ReanimatedRexport.useSharedValue(-1);
+  const sharedValue1 = ReanimatedRexport.useSharedValue([]);
+  const sharedValue2 = ReanimatedRexport.useSharedValue(-1);
+  const items = [sharedValue, sharedValue1, sharedValue2];
+  return noop.useMemo(() => ({ pan: sharedValue, itemMeasurements: sharedValue1, activeIndex: sharedValue2 }), items);
+}
 export function resetContextMenuState(contextMenuState) {
   ({ activeIndex, pan, itemMeasurements } = contextMenuState);
   const result = activeIndex.set(-1);

@@ -26,7 +26,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp25) {
         c3 = tmp;
@@ -93,16 +93,16 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(14047);
+const ContactSyncModalStore = fn(14195);
 ({
   setAllowEmail: closure_4,
   setAllowSync: hasOwnProperty,
   setName: metroRequire,
   useContactSyncModalStore: closure_7,
 } = ContactSyncModalStore);
-let closure_10 = fn(14076).NUF_DISCOVERABILITY_MODAL_KEY;
-const PlatformTypes = fn(1084).PlatformTypes;
-let closure_12 = fn(7133).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_10 = fn(14224).NUF_DISCOVERABILITY_MODAL_KEY;
+const PlatformTypes = fn(1072).PlatformTypes;
+let closure_12 = fn(7141).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 
@@ -144,8 +144,8 @@ export function transitionToHubEmailConnectionModal(SLIDE_IN, arg1) {
   }
   HubEmailConnectionModalActionCreatorsDefault.open(
     {
-      onCloseExtra(invite) {
-        if (invite) {
+      onCloseExtra(arg0) {
+        if (arg0) {
           const result = nuf_NUFActionCreators.setNewUserFlowCompleted();
         } else {
           DispatcherDefault.dispatch({ type: "ONBOARDING_STEP" });

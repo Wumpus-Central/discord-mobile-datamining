@@ -58,7 +58,7 @@ function comparisonRow(local) {
   if (num6 == null) {
     num6 = 0;
   }
-  const obj = { label: closure_13[local.ref], icon: "remote", hint: combined };
+  const obj = { label: closure_9[local.ref], icon: "remote", hint: combined };
   const state = local.state;
   if ("in_sync" === state) {
     const obj2 = {};
@@ -112,80 +112,10 @@ function comparisonRow(local) {
     return obj12;
   }
 }
-let c6 = 2000;
-let c7 = 60000;
-let c8 = 10000;
-let c9 = 5000;
-let c10 = "Restart Agent";
-const dependencyMap2 = { ok: ["OK", "ok"], near: ["Near the Limit", "warning"], over: ["Over the Limit", "error"] };
-let closure_13 = { main: "Main vs Remote", wip: "WIP vs Remote" };
-let closure_15 = ["main", "wip"];
-fn(558);
-const ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureDebugGitInfo(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(9);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ConjureDebugStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function s() {
-          return ConjureDebugStore.getGitInfoState(closure_0);
-        };
-        const items1 = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-        tmp7 = cResult[3];
-      }
-      const obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      if (cResult[4] !== arg0) {
-        const fn2 = function c() {
-          return conjureDebugConnection.requestConjureDebugGitInfo(closure_0);
-        };
-        cResult[4] = arg0;
-        cResult[5] = fn2;
-        let tmp9 = fn2;
-      } else {
-        tmp9 = cResult[5];
-      }
-      if (cResult[6] === tmp9) {
-        if (cResult[7] === stateFromStores) {
-          let tmp10 = cResult[8];
-        }
-        return tmp10;
-      }
-      const obj2 = { state: stateFromStores, load: tmp9 };
-      cResult[6] = tmp9;
-      cResult[7] = stateFromStores;
-      cResult[8] = obj2;
-      tmp10 = obj2;
-      const tmpResult = require("initialize");
-    }
-  : function useConjureDebugGitInfo(arg0) {
-      _require = arg0;
-      const obj = { state: null, load: null };
-      const items = [ConjureDebugStore];
-      const items1 = [arg0];
-      obj.state = require("initialize").useStateFromStores(
-        items,
-        () => ConjureDebugStore.getGitInfoState(closure_0),
-        items1,
-      );
-      const items2 = [arg0];
-      obj.load = noop.useCallback(() => conjureDebugConnection.requestConjureDebugGitInfo(closure_0), items2);
-      return obj;
-    };
+let c6 = "Restart Agent";
+const dependencyMap = { ok: ["OK", "ok"], near: ["Near the Limit", "warning"], over: ["Over the Limit", "error"] };
+let closure_9 = { main: "Main vs Remote", wip: "WIP vs Remote" };
+let closure_11 = ["main", "wip"];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugGit.tsx");
 
@@ -214,7 +144,7 @@ export function gitInfoRows(info) {
           obj2.hint = str7;
           items.push(obj2);
         }
-        const flatMapResult = closure_15.flatMap((item) => {
+        const flatMapResult = closure_11.flatMap((item) => {
           info = item;
           const comparisons = info.comparisons;
           let found;
@@ -346,13 +276,13 @@ export function gitInfoRows(info) {
               icon: "size",
               state: null,
             };
-            [tmp74, tmp75] = dependencyMap2[localBytes.status];
+            [tmp74, tmp75] = dependencyMap[localBytes.status];
             const tmp77 = decimalBytes(localBytes.bytes);
             const _HermesInternal11 = HermesInternal;
             obj16.value = "" + tmp77 + " of " + decimalBytes(localBytes.max) + " \u00B7 " + tmp74;
             obj16.state = tmp75;
             items.push(obj16);
-            const tmp73 = _slicedToArray(dependencyMap2[localBytes.status], 2);
+            const tmp73 = _slicedToArray(dependencyMap[localBytes.status], 2);
           }
           if (null === info.largestFile) {
             items.push({
@@ -370,13 +300,13 @@ export function gitInfoRows(info) {
               icon: "file",
               state: null,
             };
-            [tmp84, tmp85] = dependencyMap2[largestFile.status];
+            [tmp84, tmp85] = dependencyMap[largestFile.status];
             const tmp87 = decimalBytes(largestFile.bytes);
             const _HermesInternal12 = HermesInternal;
             obj21.value = "" + tmp87 + " of " + decimalBytes(largestFile.max) + " \u00B7 " + tmp84;
             obj21.state = tmp85;
             items.push(obj21);
-            const tmp83 = _slicedToArray(dependencyMap2[largestFile.status], 2);
+            const tmp83 = _slicedToArray(dependencyMap[largestFile.status], 2);
           }
           return items;
         } else {
@@ -536,305 +466,128 @@ export function restartAgentStatusLine(state) {
     return "Failed: " + state.reason + " \u00B7 " + ConjureDebugFormat.formatObservedAt(state.observedAt);
   }
 }
-export const useConjureDebugGitInfo = tmp2;
-export const useConjureRestartAgent = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureRestartAgent(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(23);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ConjureDebugStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function v() {
-          return ConjureDebugStore.getRestartAgentState(closure_0);
-        };
-        const items1 = [arg0];
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        cResult[3] = items1;
-        let tmp7 = items1;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-        tmp7 = cResult[3];
-      }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      const tmp9 = instanceSince(noop.useState(false), 2);
-      const first1 = tmp9[0];
-      startedAt = null;
-      if ("restarting" === stateFromStores.phase) {
-        startedAt = stateFromStores.startedAt;
-      }
-      instanceSince = null;
-      if ("restarted" === stateFromStores.phase) {
-        instanceSince = stateFromStores.instanceSince;
-      }
-      noop = obj3.useRef(instanceSince);
-      if (cResult[4] === arg0) {
-        if (cResult[5] === instanceSince) {
-          let tmp13 = cResult[6];
-          let tmp14 = cResult[7];
-        }
-        const effect = obj3.useEffect(tmp13, tmp14);
-        if (cResult[8] === arg0) {
-          if (cResult[9] === startedAt) {
-            let tmp16 = cResult[10];
-            let tmp17 = cResult[11];
-          }
-          const effect1 = obj3.useEffect(tmp16, tmp17);
-          if (cResult[12] === first1) {
-            if (cResult[13] === arg0) {
-              let tmp19 = cResult[14];
-            }
-            class C {
-              constructor() {
-                obj = closure_0(closure_2[7]);
-                return obj.restartConjureAgent(closure_0, closure_1);
-              }
-            }
-            if (cResult[17] === first1) {
-              if (cResult[18] === tmp19) {
-                if (cResult[19] === stateFromStores) {
-                  if (cResult[20] === tmp20) {
-                    if (cResult[21] === tmp21) {
-                      let tmp22 = cResult[22];
-                    }
-                    return tmp22;
-                  }
-                }
-              }
-            }
-            let obj2 = {
-              state: stateFromStores,
-              busy: "pending" === stateFromStores.phase || "restarting" === stateFromStores.phase,
-              clearAlarm: first1,
-              setClearAlarm: tmp9[1],
-              confirmCopy: tmp21,
-              restart: tmp19,
-            };
-            cResult[17] = first1;
-            cResult[18] = tmp19;
-            cResult[19] = stateFromStores;
-            cResult[20] = "pending" === stateFromStores.phase || "restarting" === stateFromStores.phase;
-            cResult[21] = tmp21;
-            cResult[22] = obj2;
-            tmp22 = obj2;
-          }
-          class C {
-            constructor() {
-              obj = closure_0(closure_2[7]);
-              return obj.restartConjureAgent(closure_0, closure_1);
-            }
-          }
-          cResult[12] = first1;
-          cResult[13] = arg0;
-          cResult[14] = C;
-          tmp19 = C;
-        }
-        class A {
-          constructor() {
-            if (null != startedAt) {
-              tmp2 = closure_1_5;
-              tmp3 = closure_0;
-              instancePollRequestedAt = closure_1_5.getInstancePollRequestedAt(closure_0);
-              tmp5 = null != instancePollRequestedAt;
-              if (tmp5) {
-                tmp6 = globalThis;
-                _Date = Date;
-                tmp7 = closure_1_8;
-                tmp5 = Date.now() - instancePollRequestedAt < closure_1_8;
-              }
-              if (!tmp5) {
-                tmp8 = closure_0;
-                tmp9 = startedAt;
-                obj = closure_0(startedAt[7]);
-                result = obj.pollConjureDebugInstance(tmp3);
-              }
-              tmp11 = globalThis;
-              _setInterval = setInterval;
-              tmp12 = closure_1_6;
-              closure_0 = setInterval(function poll() {
-                const instancePollRequestedAt = ConjureDebugStore.getInstancePollRequestedAt(projectId);
-                let tmp3 = null != instancePollRequestedAt;
-                if (tmp3) {
-                  const _Date = Date;
-                  tmp3 = Date.now() - instancePollRequestedAt < closure_2_8;
-                }
-                if (!tmp3) {
-                  const result = projectId(startedAt[7]).pollConjureDebugInstance(projectId);
-                  const obj = projectId(startedAt[7]);
-                }
-              }, closure_1_6);
-              _setTimeout = setTimeout;
-              _Math = Math;
-              tmp13 = closure_1_9;
-              tmp14 = closure_1_7;
-              _Date2 = Date;
-              sum = tmp + closure_1_7;
-              closure_1 = setTimeout(
-                () => {
-                  const obj2 = {
-                    type: "CONJURE_RESTART_AGENT_RESULT",
-                    projectId,
-                    outcome: "timed_out",
-                    reason: "No new agent instance answered within 60 s",
-                    observedAt: null,
-                  };
-                  const obj = first1(startedAt[8]);
-                  obj2.observedAt = new Date().toISOString();
-                  return obj.dispatch(obj2);
-                },
-                Math.max(closure_1_9, sum - Date.now()),
-              );
-              return () => {
-                clearInterval(closure_0);
-                clearTimeout(closure_1);
-              };
-            } else {
-              return;
-            }
-          }
-        }
-        const items2 = [arg0, startedAt];
-        cResult[8] = arg0;
-        cResult[9] = startedAt;
-        cResult[10] = A;
-        cResult[11] = items2;
-        tmp17 = items2;
-        tmp16 = A;
-      }
-      const fn2 = function b() {
-        let tmp2 = null != instanceSince;
-        if (tmp2) {
-          tmp2 = instanceSince !== ref.current;
-        }
-        if (tmp2) {
-          ref.current = instanceSince;
-          const conjureDebugGitInfo = conjureDebugConnection.requestConjureDebugGitInfo(closure_0);
-        }
-      };
-      const items3 = [arg0, instanceSince];
-      cResult[4] = arg0;
-      cResult[5] = instanceSince;
-      cResult[6] = fn2;
-      cResult[7] = items3;
-      tmp14 = items3;
-      tmp13 = fn2;
-      const tmpResult = require("initialize");
+export function useConjureDebugGitInfo(projectId) {
+  _require = projectId;
+  const obj = { state: null, load: null };
+  const items = [ConjureDebugStore];
+  const items1 = [projectId];
+  obj.state = require("initialize").useStateFromStores(
+    items,
+    () => ConjureDebugStore.getGitInfoState(closure_0),
+    items1,
+  );
+  const items2 = [projectId];
+  obj.load = noop.useCallback(() => conjureDebugConnection.requestConjureDebugGitInfo(closure_0), items2);
+  return obj;
+}
+export function useConjureRestartAgent(projectId) {
+  _require = projectId;
+  const items = [ConjureDebugStore];
+  const items1 = [projectId];
+  const stateFromStores = require("initialize").useStateFromStores(
+    items,
+    () => ConjureDebugStore.getRestartAgentState(closure_0),
+    items1,
+  );
+  let tmp2 = instanceSince(noop.useState(false), 2);
+  const clearAlarm = tmp2[0];
+  startedAt = null;
+  if ("restarting" === stateFromStores.phase) {
+    startedAt = stateFromStores.startedAt;
+  }
+  instanceSince = null;
+  if ("restarted" === stateFromStores.phase) {
+    instanceSince = stateFromStores.instanceSince;
+  }
+  noop = obj2.useRef(instanceSince);
+  const items2 = [projectId, instanceSince];
+  const effect = obj2.useEffect(() => {
+    let tmp2 = null != instanceSince;
+    if (tmp2) {
+      tmp2 = instanceSince !== ref.current;
     }
-  : function useConjureRestartAgent(arg0) {
-      _require = arg0;
-      const items = [ConjureDebugStore];
-      const items1 = [arg0];
-      const stateFromStores = require("initialize").useStateFromStores(
-        items,
-        () => ConjureDebugStore.getRestartAgentState(closure_0),
-        items1,
-      );
-      let tmp2 = instanceSince(noop.useState(false), 2);
-      const clearAlarm = tmp2[0];
-      startedAt = null;
-      if ("restarting" === stateFromStores.phase) {
-        startedAt = stateFromStores.startedAt;
+    if (tmp2) {
+      ref.current = instanceSince;
+      const conjureDebugGitInfo = conjureDebugConnection.requestConjureDebugGitInfo(closure_0);
+    }
+  }, items2);
+  const items3 = [projectId, startedAt];
+  const effect1 = obj2.useEffect(() => {
+    if (null != startedAt) {
+      let instancePollRequestedAt = ConjureDebugStore.getInstancePollRequestedAt(projectId);
+      let tmp5 = null != instancePollRequestedAt;
+      if (tmp5) {
+        let _Date = Date;
+        tmp5 = Date.now() - instancePollRequestedAt < 10000;
       }
-      instanceSince = null;
-      if ("restarted" === stateFromStores.phase) {
-        instanceSince = stateFromStores.instanceSince;
+      if (!tmp5) {
+        let result = projectId(startedAt[5]).pollConjureDebugInstance(projectId);
+        let obj = projectId(startedAt[5]);
       }
-      noop = obj2.useRef(instanceSince);
-      const items2 = [arg0, instanceSince];
-      const effect = obj2.useEffect(() => {
-        let tmp2 = null != instanceSince;
-        if (tmp2) {
-          tmp2 = instanceSince !== ref.current;
+      const _setInterval = setInterval;
+      projectId = setInterval(function poll() {
+        const instancePollRequestedAt = ConjureDebugStore.getInstancePollRequestedAt(projectId);
+        let tmp3 = null != instancePollRequestedAt;
+        if (tmp3) {
+          const _Date = Date;
+          tmp3 = Date.now() - instancePollRequestedAt < 10000;
         }
-        if (tmp2) {
-          ref.current = instanceSince;
-          const conjureDebugGitInfo = conjureDebugConnection.requestConjureDebugGitInfo(closure_0);
+        if (!tmp3) {
+          const result = projectId(startedAt[5]).pollConjureDebugInstance(projectId);
+          const obj = projectId(startedAt[5]);
         }
-      }, items2);
-      const items3 = [arg0, startedAt];
-      const effect1 = obj2.useEffect(() => {
-        if (null != startedAt) {
-          let instancePollRequestedAt = ConjureDebugStore.getInstancePollRequestedAt(projectId);
-          let tmp5 = null != instancePollRequestedAt;
-          if (tmp5) {
-            let _Date = Date;
-            tmp5 = Date.now() - instancePollRequestedAt < closure_1_8;
-          }
-          if (!tmp5) {
-            let result = projectId(startedAt[7]).pollConjureDebugInstance(projectId);
-            let obj = projectId(startedAt[7]);
-          }
-          const _setInterval = setInterval;
-          projectId = setInterval(function poll() {
-            const instancePollRequestedAt = ConjureDebugStore.getInstancePollRequestedAt(projectId);
-            let tmp3 = null != instancePollRequestedAt;
-            if (tmp3) {
-              const _Date = Date;
-              tmp3 = Date.now() - instancePollRequestedAt < closure_2_8;
-            }
-            if (!tmp3) {
-              const result = projectId(startedAt[7]).pollConjureDebugInstance(projectId);
-              const obj = projectId(startedAt[7]);
-            }
-          }, closure_1_6);
-          const _setTimeout = setTimeout;
-          const _Math = Math;
-          const _Date2 = Date;
-          const sum = tmp + closure_1_7;
-          const timeout = setTimeout(
-            () => {
-              const obj2 = {
-                type: "CONJURE_RESTART_AGENT_RESULT",
-                projectId,
-                outcome: "timed_out",
-                reason: "No new agent instance answered within 60 s",
-                observedAt: null,
-              };
-              const obj = first(startedAt[8]);
-              obj2.observedAt = new Date().toISOString();
-              return obj.dispatch(obj2);
-            },
-            Math.max(closure_1_9, sum - Date.now()),
-          );
-          return () => {
-            clearInterval(closure_0);
-            clearTimeout(closure_1);
+      }, 2000);
+      const _setTimeout = setTimeout;
+      const _Math = Math;
+      const _Date2 = Date;
+      const sum = tmp + 60000;
+      const timeout = setTimeout(
+        () => {
+          const obj2 = {
+            type: "CONJURE_RESTART_AGENT_RESULT",
+            projectId,
+            outcome: "timed_out",
+            reason: "No new agent instance answered within 60 s",
+            observedAt: null,
           };
-        }
-      }, items3);
-      const items4 = [arg0, clearAlarm];
-      const obj3 = {
-        state: stateFromStores,
-        busy: null,
-        clearAlarm: null,
-        setClearAlarm: null,
-        confirmCopy: null,
-        restart: null,
+          const obj = first(startedAt[6]);
+          obj2.observedAt = new Date().toISOString();
+          return obj.dispatch(obj2);
+        },
+        Math.max(5000, sum - Date.now()),
+      );
+      return () => {
+        clearInterval(closure_0);
+        clearTimeout(closure_1);
       };
-      let tmp9 = "pending" === stateFromStores.phase;
-      const callback = obj2.useCallback(() => conjureDebugConnection.restartConjureAgent(closure_0, first), items4);
-      if (!tmp9) {
-        tmp9 = "restarting" === stateFromStores.phase;
-      }
-      obj3.busy = tmp9;
-      obj3.clearAlarm = clearAlarm;
-      obj3.setClearAlarm = tmp2[1];
-      let str = "The pending alarm is kept.";
-      if (clearAlarm) {
-        str = "The pending alarm is cleared, so scheduled wakeups wait until something sets it again.";
-      }
-      obj3.confirmCopy = {
-        title: "Restart Agent?",
-        body: `Ends this project's agent instance; the next request starts a new one. Lost: in-memory state and any running turn. Kept: saved data (conversation, settings, storage) and the container disk. ${str}`,
-        confirm: _confirm,
-      };
-      obj3.restart = callback;
-      return obj3;
-    };
+    }
+  }, items3);
+  const items4 = [projectId, clearAlarm];
+  const obj3 = {
+    state: stateFromStores,
+    busy: null,
+    clearAlarm: null,
+    setClearAlarm: null,
+    confirmCopy: null,
+    restart: null,
+  };
+  let tmp9 = "pending" === stateFromStores.phase;
+  const callback = obj2.useCallback(() => conjureDebugConnection.restartConjureAgent(closure_0, first), items4);
+  if (!tmp9) {
+    tmp9 = "restarting" === stateFromStores.phase;
+  }
+  obj3.busy = tmp9;
+  obj3.clearAlarm = clearAlarm;
+  obj3.setClearAlarm = tmp2[1];
+  let str = "The pending alarm is kept.";
+  if (clearAlarm) {
+    str = "The pending alarm is cleared, so scheduled wakeups wait until something sets it again.";
+  }
+  obj3.confirmCopy = {
+    title: "Restart Agent?",
+    body: `Ends this project's agent instance; the next request starts a new one. Lost: in-memory state and any running turn. Kept: saved data (conversation, settings, storage) and the container disk. ${str}`,
+    confirm: _confirm,
+  };
+  obj3.restart = callback;
+  return obj3;
+}

@@ -69,10 +69,10 @@ export function hasOrbsArcadeUnlockedRewards(stateFromStores1) {
   const values = Object.values(rewardGrants);
   return values.some((pendingAt) => null != pendingAt.pendingAt);
 }
-export function hasOrbsArcadeUnclaimedRewards(stateFromStores1) {
+export function hasOrbsArcadeUnclaimedRewards(gameState) {
   let rewardGrants;
-  if (stateFromStores1 != null) {
-    rewardGrants = stateFromStores1.rewardGrants;
+  if (gameState != null) {
+    rewardGrants = gameState.rewardGrants;
   }
   if (rewardGrants == null) {
     rewardGrants = {};

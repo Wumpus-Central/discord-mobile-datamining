@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01278_v1.js";
+import v1 from "../../../_runtime/01267_v1.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(8879).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8913).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -106,6 +106,12 @@ export const GameProfileTrackActionActions = {
   [45]: "AppStoreLink",
   GooglePlayStoreLink: 46,
   [46]: "GooglePlayStoreLink",
+  ItchLink: 47,
+  [47]: "ItchLink",
+  FandomLink: 48,
+  [48]: "FandomLink",
+  ClickDescriptionLink: 49,
+  [49]: "ClickDescriptionLink",
 };
 export const GameProfileSources = {
   ActivityCard: "activity_card",
@@ -149,7 +155,7 @@ export const GameProfileTypes = { FullProfile: "full_profile", MiniProfile: "min
 export function getGuildIdAndVerifiedFromInvite(current) {
   let id;
   if (current != null) {
-    guild = current.guild;
+    const guild = current.guild;
     if (guild != null) {
       id = guild.id;
     }

@@ -4,8 +4,6 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-
 const require = fn;
 function conjureLinkUrls(arr) {
   if (arr.includes("http")) {
@@ -43,7 +41,7 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     while (true) {
@@ -243,7 +241,6 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
 };
 let map = new Map();
 let set = new Set();
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureLinkEmbeds.tsx");
 
@@ -274,167 +271,80 @@ export function readyConjureLinkEmbeds(trimmed) {
   }
   return tmp12;
 }
-export const useConjureLinkPrefetch = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureLinkPrefetch(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(3);
-      if (cResult[0] !== arg0) {
-        const fn = function l() {
-          if (timeout.includes("http")) {
-            let match = str.match(URLUtilsDefault.URL_REGEX);
-            if (match == null) {
-              match = [];
-            }
-            const _Set = Set;
-            set = new Set(match.filter((item) => /^https?:\/\//i.test(item)));
-            const items = [];
-            HermesBuiltin.arraySpread(set, 0);
-            let substr = items.slice(0, 4);
-          } else {
-            substr = [];
-          }
-          if (0 !== substr.length) {
-            const _setTimeout = setTimeout;
-            timeout = setTimeout(
-              asyncGeneratorStep(async () => {
-                if (c0 === 2) {
-                  c0 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "IconComponent", done: "IconComponent" };
-                  }
-                } else {
-                  try {
-                    c0 = 2;
-                    if (0 === c1) {
-                      if (arg0 === 1) {
-                        c0 = 3;
-                        throw value;
-                      } else if (arg0 === 2) {
-                        c0 = 3;
-                        const obj3 = { value, done: true };
-                        return obj3;
-                      } else {
-                        c1 = 1;
-                        c0 = 1;
-                        const obj4 = { value: prefetchConjureLinkEmbeds(c0), done: false };
-                        return obj4;
-                      }
-                    } else if (arg0 === 1) {
-                      c0 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c0 = 3;
-                      const obj = { value, done: true };
-                      return obj;
-                    } else {
-                      c0 = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
-                    }
-                  } catch (tmp7) {
-                    c0 = tmp;
-                    throw tmp7;
-                  }
-                }
-              }),
-              300,
-            );
-            return () => clearTimeout(closure_0);
-          }
-          str = timeout;
-        };
-        let items = [arg0];
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        cResult[2] = items;
-        let tmp3 = items;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-        tmp3 = cResult[2];
+export function useConjureLinkPrefetch(arg0) {
+  closure_0 = arg0;
+  let items = [arg0];
+  const effect = noop.useEffect(() => {
+    if (timeout.includes("http")) {
+      let match = str.match(URLUtilsDefault.URL_REGEX);
+      if (match == null) {
+        match = [];
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const _Set = Set;
+      set = new Set(match.filter((item) => /^https?:\/\//i.test(item)));
+      const items = [];
+      HermesBuiltin.arraySpread(set, 0);
+      let substr = items.slice(0, 4);
+    } else {
+      substr = [];
     }
-  : function useConjureLinkPrefetch(arg0) {
-      closure_0 = arg0;
-      let items = [arg0];
-      const effect = noop.useEffect(() => {
-        if (timeout.includes("http")) {
-          let match = str.match(URLUtilsDefault.URL_REGEX);
-          if (match == null) {
-            match = [];
-          }
-          const _Set = Set;
-          set = new Set(match.filter((item) => /^https?:\/\//i.test(item)));
-          const items = [];
-          HermesBuiltin.arraySpread(set, 0);
-          let substr = items.slice(0, 4);
-        } else {
-          substr = [];
-        }
-        if (0 !== substr.length) {
-          const _setTimeout = setTimeout;
-          timeout = setTimeout(
-            asyncGeneratorStep(async () => {
-              if (c0 === 2) {
-                c0 = 3;
-                throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp3 === 3) {
+    if (0 !== substr.length) {
+      const _setTimeout = setTimeout;
+      timeout = setTimeout(
+        asyncGeneratorStep(async () => {
+          if (c0 === 2) {
+            c0 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c0 = 2;
+              if (0 === c1) {
                 if (arg0 === 1) {
+                  c0 = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  const obj2 = { value, done: true };
-                  return obj2;
+                  c0 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  c1 = 1;
+                  c0 = 1;
+                  const obj4 = { value: prefetchConjureLinkEmbeds(c0), done: false };
+                  return obj4;
                 }
+              } else if (arg0 === 1) {
+                c0 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c0 = 3;
+                const obj = { value, done: true };
+                return obj;
               } else {
-                try {
-                  c0 = 2;
-                  if (0 === c1) {
-                    if (arg0 === 1) {
-                      c0 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c0 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else {
-                      c1 = 1;
-                      c0 = 1;
-                      const obj4 = { value: prefetchConjureLinkEmbeds(c0), done: false };
-                      return obj4;
-                    }
-                  } else if (arg0 === 1) {
-                    c0 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c0 = 3;
-                    const obj = { value, done: true };
-                    return obj;
-                  } else {
-                    c0 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
-                  }
-                } catch (tmp7) {
-                  c0 = tmp;
-                  throw tmp7;
-                }
+                c0 = 3;
+                return { value: "HermesInternal", done: null };
               }
-            }),
-            300,
-          );
-          return () => clearTimeout(closure_0);
-        }
-        str = timeout;
-      }, items);
-    };
+            } catch (tmp7) {
+              c0 = tmp;
+              throw tmp7;
+            }
+          }
+        }),
+        300,
+      );
+      return () => clearTimeout(closure_0);
+    }
+    str = timeout;
+  }, items);
+}
 export function resetConjureLinkEmbedsForTests() {
   map.clear();
   set.clear();

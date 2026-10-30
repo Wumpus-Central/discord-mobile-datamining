@@ -7,7 +7,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
-const AppStates = fn(1084).AppStates;
+const AppStates = fn(1072).AppStates;
 class TelemetryRingLifecycleImpl extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,9 +18,9 @@ class TelemetryRingLifecycleImpl extends tmp2 {
       const result = applyArgumentsResult._updateZoomedInExport();
     };
     applyArgumentsResult._handleLogout = function _handleLogout() {
-      applyArgumentsResult(2007).clear();
-      const obj = applyArgumentsResult(2007);
-      applyArgumentsResult(2003).reset();
+      applyArgumentsResult(2002).clear();
+      const obj = applyArgumentsResult(2002);
+      applyArgumentsResult(1998).reset();
     };
     return applyArgumentsResult;
   }
@@ -45,17 +45,17 @@ prototype["_initialize"] = function _initialize() {
   const self = this;
   if (!this._initialized) {
     self._initialized = true;
-    const subscription = self(584).subscribe("LOGOUT", self._handleLogout);
+    const subscription = self(572).subscribe("LOGOUT", self._handleLogout);
     AppStateStore.addChangeListener(self._handleEligibilityChange);
     UserStore.addChangeListener(self._handleEligibilityChange);
     ApexExperimentStore.addChangeListener(self._handleEligibilityChange);
     self._experimentUnsubscribe = () => {
       ApexExperimentStore.removeChangeListener(self._handleEligibilityChange);
     };
-    const obj = self(584);
-    self(2003).initialize();
+    const obj = self(572);
+    self(1998).initialize();
     const result = self._updateZoomedInExport();
-    const obj2 = self(2003);
+    const obj2 = self(1998);
   }
 };
 prototype["_terminate"] = function _terminate() {

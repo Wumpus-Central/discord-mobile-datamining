@@ -17,7 +17,7 @@ function handleTokenUpdated(token) {
   token = token.token;
   return false;
 }
-const AppStates = fn(1084).AppStates;
+const AppStates = fn(1072).AppStates;
 const Store = initializeDefault.Store;
 class ShareStore extends Store {}
 ShareStore.prototype["initialize"] = function initialize() {
@@ -47,7 +47,7 @@ const shareStore = new ShareStore(DispatcherDefault, {
     state = state.state;
     if (state === AppStates.INACTIVE) {
       if (null != c4) {
-        guild = GuildStore.getGuild(c3);
+        const guild = GuildStore.getGuild(c3);
         let json = null;
         if (null != guild) {
           const _JSON = JSON;

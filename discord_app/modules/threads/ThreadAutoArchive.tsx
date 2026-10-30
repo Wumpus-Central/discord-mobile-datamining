@@ -1,9 +1,9 @@
 // discord_app/modules/threads/ThreadAutoArchive.tsx
-import memoizeDefault from "../../../_runtime/00606_memoize.js";
+import memoizeDefault from "../../../_runtime/00594_memoize.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import ThreadConstants from "ThreadConstants.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2047 from "../../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../../_runtime/metro/02044__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getAutoArchiveOptions() {
@@ -49,8 +49,8 @@ export function getAutoArchiveDurationText(arg0) {
     label = found.label;
   }
   if (label == null) {
-    label = _modDef2047.duration(arg0, "minutes").humanize();
-    const durationResult = _modDef2047.duration(arg0, "minutes");
+    label = _modDef2044.duration(arg0, "minutes").humanize();
+    const durationResult = _modDef2044.duration(arg0, "minutes");
   }
   return label;
 }

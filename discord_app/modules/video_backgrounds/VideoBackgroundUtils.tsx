@@ -90,13 +90,13 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(5901);
+const VideoBackgroundConstants = fn(5908);
 ({
   DefaultVideoBackground: hasOwnProperty,
   VideoFilterType: metroRequire,
   ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7,
 } = VideoBackgroundConstants);
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
 
@@ -184,7 +184,7 @@ export function trackBackgroundOptionDeleted(type) {
 }
 export function getVideoBackgroundProtoFromOption(type) {
   if (null == type) {
-    let obj = { oneofKind: "r" };
+    let obj = { oneofKind: "getCurrentUser" };
   } else {
     let tmp = null != type && typeof type === "object";
     if (tmp) {

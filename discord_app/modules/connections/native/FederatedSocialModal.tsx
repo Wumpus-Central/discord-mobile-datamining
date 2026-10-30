@@ -23,7 +23,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -156,109 +156,38 @@ function FederatedSocialModalScreen(onClose) {
   obj4.children = items;
   return closure_8(require("common/SafeAreaView").SafeAreaPaddingView, obj4);
 }
-const WebBrowserType = fn(1084).WebBrowserType;
+const WebBrowserType = fn(1072).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_9 = createStyles.createStyles({
   container: { padding: 16 },
   description: { textAlign: "center" },
   input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 },
 });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/FederatedSocialModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function FederatedSocialModal(platformType) {
-      _require = platformType;
-      const cResult = require("c").c(8);
-      if (cResult[0] !== platformType.platformType) {
-        value = PlatformsDefault.get(platformType.platformType);
-        let name;
-        if (value != null) {
-          name = value.name;
-        }
-        if (name == null) {
-          const intl = tmp(1125).intl;
-          name = intl.string(tmp(1125).t["bU/GZm"]);
-        }
-        const intl2 = tmp(1125).intl;
-        const obj3 = { serviceName: name };
-        const formatToPlainStringResult = intl2.formatToPlainString(tmp(1125).t["ImMhq+"], obj3);
-        cResult[0] = platformType.platformType;
-        cResult[1] = formatToPlainStringResult;
-        let tmp4 = formatToPlainStringResult;
-      } else {
-        tmp4 = cResult[1];
-      }
-      if (cResult[2] !== platformType.onClose) {
-        const headerBackButton = tmp(6984).getHeaderBackButton(platformType.onClose);
-        cResult[2] = platformType.onClose;
-        cResult[3] = headerBackButton;
-        let tmp10 = headerBackButton;
-        const tmpResult = tmp(6984);
-      } else {
-        tmp10 = cResult[3];
-      }
-      if (cResult[4] === platformType) {
-        if (cResult[5] === tmp4) {
-          if (cResult[6] === tmp10) {
-            let tmp12 = cResult[7];
-          }
-          return tmp12;
-        }
-      }
-      const tmp13 = closure_7(require("Navigator").Navigator, {
-        initialRouteName: "root",
-        screens: {
-          root: {
-            headerTitle: tmp4,
-            headerLeft: tmp10,
-            render() {
-              const merged = Object.assign(closure_0);
-              return React5(FederatedSocialModalScreen, {});
-            },
-          },
-        },
-      });
-      cResult[4] = platformType;
-      cResult[5] = tmp4;
-      cResult[6] = tmp10;
-      cResult[7] = tmp13;
-      tmp12 = tmp13;
-      const obj = require("c");
-      const obj4 = {
-        root: {
-          headerTitle: tmp4,
-          headerLeft: tmp10,
-          render() {
-            const merged = Object.assign(closure_0);
-            return React5(FederatedSocialModalScreen, {});
-          },
-        },
-      };
-    }
-  : function FederatedSocialModal(platformType) {
-      _require = platformType;
-      value = PlatformsDefault.get(platformType.platformType);
-      let name;
-      if (value != null) {
-        name = value.name;
-      }
-      if (name == null) {
-        const intl = require("util").intl;
-        name = intl.string(require("util").t["bU/GZm"]);
-      }
-      const obj2 = { root: null };
-      const obj3 = { headerTitle: null, headerLeft: null, render: null };
-      const intl2 = require("util").intl;
-      obj3.headerTitle = intl2.formatToPlainString(require("util").t["ImMhq+"], { serviceName: name });
-      obj3.headerLeft = require("NavigatorHeader").getHeaderBackButton(platformType.onClose);
-      obj3.render = function render() {
-        const merged = Object.assign(closure_0);
-        return React5(FederatedSocialModalScreen, {});
-      };
-      obj2.root = obj3;
-      return closure_7(require("Navigator").Navigator, { initialRouteName: "root", screens: obj2 });
-    };
+export default function FederatedSocialModal(platformType) {
+  _require = platformType;
+  value = PlatformsDefault.get(platformType.platformType);
+  let name;
+  if (value != null) {
+    name = value.name;
+  }
+  if (name == null) {
+    const intl = require("util").intl;
+    name = intl.string(require("util").t["bU/GZm"]);
+  }
+  const obj2 = { root: null };
+  const obj3 = { headerTitle: null, headerLeft: null, render: null };
+  const intl2 = require("util").intl;
+  obj3.headerTitle = intl2.formatToPlainString(require("util").t["ImMhq+"], { serviceName: name });
+  obj3.headerLeft = require("NavigatorHeader").getHeaderBackButton(platformType.onClose);
+  obj3.render = function render() {
+    const merged = Object.assign(closure_0);
+    return React5(FederatedSocialModalScreen, {});
+  };
+  obj2.root = obj3;
+  return closure_7(require("Navigator").Navigator, { initialRouteName: "root", screens: obj2 });
+}

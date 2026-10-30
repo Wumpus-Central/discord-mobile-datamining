@@ -32,7 +32,8 @@ obj.googlePlay = {
 };
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
 
-export function getMobileStoreReviews(reviews) {
+export function getMobileStoreReviews(game) {
+  let reviews = game;
   const entries = Object.entries(obj);
   return entries.flatMap((item) => {
     [tmp, obj] = item;

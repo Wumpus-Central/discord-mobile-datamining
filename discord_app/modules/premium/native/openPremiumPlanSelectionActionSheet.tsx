@@ -9,9 +9,9 @@ const require = globalThis.__r;
 let closure_3 = PremiumConstants.PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY;
 let result = size.fileFinishedImporting("modules/premium/native/openPremiumPlanSelectionActionSheet.tsx");
 
-export default function openPremiumPlanSelectionActionSheet(arg0, arg1) {
+export default function openPremiumPlanSelectionActionSheet(arg0, stack) {
   _require = arg0;
-  if (null == arg1) {
+  if (null == stack) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }
   const obj2 = ActionSheetActionCreatorsDefault;
@@ -33,6 +33,6 @@ export default function openPremiumPlanSelectionActionSheet(arg0, arg1) {
       const result = premiumOrbsDeliveredModal.openOrbsModalIfDelivered();
     }
   };
-  obj2.openLazy(require("asyncRequireImpl")(7593, dependencyMap.paths), closure_3, obj3, arg1);
-  const tmp4 = require("asyncRequireImpl")(7593, dependencyMap.paths);
+  obj2.openLazy(require("asyncRequireImpl")(7601, dependencyMap.paths), closure_3, obj3, stack);
+  const tmp4 = require("asyncRequireImpl")(7601, dependencyMap.paths);
 }

@@ -2,17 +2,17 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2568 from "../GuildPowerups.messages.js";
+import _modDef2569 from "../GuildPowerups.messages.js";
 import EnhancedRoleColorUtils from "../../enhanced_role_colors/EnhancedRoleColorUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useHasEnhancedRoleColors from "../hooks/useHasEnhancedRoleColors.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import _modDef14304 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef11168 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import GuildSettingsRoleConstants from "../../../guild_settings/roles/GuildSettingsRoleConstants.tsx";
 import GuildSettingsRolesStore from "../../../guild_settings/roles/GuildSettingsRolesStore.tsx";
 import EnhancedRoleColorConstants from "../constants/EnhancedRoleColorConstants.tsx";
@@ -20,7 +20,6 @@ import useGuildSettingsRoleExampleMessage from "../../../guild_settings/roles/ho
 import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -114,132 +113,26 @@ let closure_11 = createStyles.createStyles((arg0) => {
 });
 let result = size.fileFinishedImporting("modules/premium/powerups/native/EnhancedRoleColorsSelectStyleModal.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function EnhancedRoleColorsSelectStyleModal(roleStyle) {
-      const cResult = roleStyle(576).c(24);
-      roleStyle = roleStyle.roleStyle;
-      const onStyleChanged = roleStyle.onStyleChanged;
-      ({ guildId, role } = roleStyle);
-      const tmp5 = closure_11(onStyleChanged(5242)());
-      dependencyMap = tmp5;
-      let obj = roleStyle(576);
-      const hasEnhancedRoleColorsForRole = roleStyle(6028).useHasEnhancedRoleColorsForRole(guildId, role);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let intl = tmp(1125).intl;
-        const stringResult = intl.string(tmp(1125).t.Mi9Kbe);
-        cResult[0] = stringResult;
-        let first = stringResult;
-      } else {
-        first = cResult[0];
-      }
-      const obj2 = roleStyle(6028);
-      const guildSettingsRoleExampleMessage = roleStyle(19672).useGuildSettingsRoleExampleMessage(first);
-      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = new tmp4(8188)();
-        cResult[1] = tmp13;
-        let tmp10 = tmp13;
-      } else {
-        tmp10 = cResult[1];
-      }
-      const rowGenerator = tmp10;
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj3 = { title: null };
-        const intl2 = tmp(1125).intl;
-        obj3.title = intl2.string(tmp(1125).t["9wVJRB"]);
-        const tmp17 = closure_9(tmp(7308).BottomSheetTitleHeader, obj3);
-        cResult[2] = tmp17;
-        let tmp15 = tmp17;
-      } else {
-        tmp15 = cResult[2];
-      }
-      if (cResult[3] === hasEnhancedRoleColorsForRole) {
-        if (cResult[4] === guildSettingsRoleExampleMessage) {
-          if (cResult[5] === onStyleChanged) {
-            if (cResult[6] === roleStyle) {
-              if (cResult[7] === tmp5.button) {
-                if (cResult[8] === tmp5.disabled) {
-                  if (cResult[9] === tmp5.message) {
-                    if (cResult[10] === tmp5.selected) {
-                      if (cResult[11] === tmp5.text) {
-                        let tmp20 = cResult[12];
-                      }
-                      if (cResult[13] === tmp5.stylesContainer) {
-                        if (cResult[14] === tmp20) {
-                          let tmp22 = cResult[15];
-                        }
-                        if (cResult[16] === hasEnhancedRoleColorsForRole) {
-                          if (cResult[17] === tmp5.upsellContainer) {
-                            if (cResult[18] === tmp5.upsellText) {
-                              let tmp26 = cResult[19];
-                            }
-                            if (cResult[20] === tmp5.container) {
-                              if (cResult[21] === tmp22) {
-                                if (cResult[22] === tmp26) {
-                                  let tmp32 = cResult[23];
-                                }
-                                return tmp32;
-                              }
-                            }
-                            const obj4 = { header: tmp15, children: null };
-                            const obj5 = { style: tmp18, children: null };
-                            let items = [tmp22, tmp26];
-                            obj5.children = items;
-                            obj4.children = closure_10(guildSettingsRoleExampleMessage, obj5);
-                            const tmp36 = closure_9(tmp(5302).BottomSheet, obj4);
-                            cResult[20] = tmp5.container;
-                            cResult[21] = tmp22;
-                            cResult[22] = tmp26;
-                            cResult[23] = tmp36;
-                            tmp32 = tmp36;
-                          }
-                        }
-                        let tmp27 = !hasEnhancedRoleColorsForRole;
-                        if (!hasEnhancedRoleColorsForRole) {
-                          const obj6 = { style: tmp5.upsellContainer, children: null };
-                          const obj7 = { style: tmp5.upsellText, variant: "text-sm/semibold", children: null };
-                          const intl3 = tmp(1125).intl;
-                          const obj8 = { magical: null };
-                          const obj9 = { gradientColors: null, variant: "text-sm/semibold", children: null };
-                          let items1 = [, ,];
-                          ({
-                            primary_color: arr[0],
-                            secondary_color: arr[1],
-                            tertiary_color: arr[2],
-                          } = HOLOGRAPHIC_ROLE_COLORS);
-                          obj9.gradientColors = items1;
-                          const intl4 = tmp(1125).intl;
-                          obj9.children = intl4.string(tmp4(2568)["+/IHLl"]);
-                          obj8.magical = closure_9(tmp(5271).Text, obj9);
-                          obj7.children = intl3.format(tmp4(2568).VpEDJc, obj8);
-                          const items2 = [closure_9(tmp(5271).Text, obj7)];
-                          const obj10 = { style: tmp5.upsellText, variant: "text-sm/normal", children: null };
-                          const intl5 = tmp(1125).intl;
-                          obj10.children = intl5.string(tmp4(2568).FJZeZF);
-                          items2[1] = closure_9(tmp(5271).Text, obj10);
-                          obj6.children = items2;
-                          tmp27 = closure_10(guildSettingsRoleExampleMessage, obj6);
-                        }
-                        cResult[16] = hasEnhancedRoleColorsForRole;
-                        cResult[17] = tmp5.upsellContainer;
-                        cResult[18] = tmp5.upsellText;
-                        cResult[19] = tmp27;
-                        tmp26 = tmp27;
-                      }
-                      const obj11 = { style: tmp19, children: tmp20 };
-                      const tmp25 = closure_9(guildSettingsRoleExampleMessage, obj11);
-                      cResult[13] = tmp5.stylesContainer;
-                      cResult[14] = tmp20;
-                      cResult[15] = tmp25;
-                      tmp22 = tmp25;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      const mapped = STYLE_CONFIGS.map((id) => {
+export default function EnhancedRoleColorsSelectStyleModal(arg0) {
+  ({ roleStyle: require, onStyleChanged: importDefault } = arg0);
+  ({ guildId, role } = arg0);
+  const tmp3 = closure_11(useThemeDefault());
+  dependencyMap = tmp3;
+  const hasEnhancedRoleColorsForRole = useHasEnhancedRoleColors.useHasEnhancedRoleColorsForRole(guildId, role);
+  let intl = util.intl;
+  const message = useGuildSettingsRoleExampleMessage.useGuildSettingsRoleExampleMessage(intl.string(util.t.Mi9Kbe));
+  const rowGenerator = new RowGeneratorDefault();
+  let obj3 = { header: null, children: null };
+  const obj4 = { title: null };
+  const intl2 = util.intl;
+  obj4.title = intl2.string(util.t["9wVJRB"]);
+  obj3.header = closure_9(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4);
+  const obj5 = { style: tmp3.container, children: null };
+  const tmp6 = new RowGeneratorDefault();
+  let items = [
+    closure_9(message, {
+      style: tmp3.stylesContainer,
+      children: STYLE_CONFIGS.map((id) => {
         let tmp = !hasEnhancedRoleColorsForRole;
         if (!hasEnhancedRoleColorsForRole) {
           tmp = id.id !== rowGenerator.SOLID;
@@ -258,139 +151,60 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: items,
           disabled: tmp,
           onPress() {
-            onStyleChanged(id.id);
+            closure_2_1(id.id);
             ActionSheetActionCreatorsDefault.hideActionSheet();
           },
           children: null,
         };
         items[2] = disabled;
         const items1 = [
-          closure_1_9(onStyleChanged(button[17]), {
+          closure_1_9(require("ChatItem"), {
             style: button.message,
             pointerEvents: "none",
-            message: guildSettingsRoleExampleMessage,
+            message,
             rowGenerator,
             modifyRow(message) {
               message.message.roleColor = undefined;
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef14304;
+              message.message.avatarURL = _modDef11168;
             },
           }),
         ];
         const obj3 = { style: button.text, variant: "text-sm/normal", children: null };
-        const intl = roleStyle(button[12]).intl;
+        const intl = require("util").intl;
         obj3.children = intl.string(id.labelString);
-        items1[1] = closure_1_9(roleStyle(button[21]).Text, obj3);
+        items1[1] = closure_1_9(require("Text/Text").Text, obj3);
         obj.children = items1;
         return closure_1_10(hasEnhancedRoleColorsForRole, obj, id.id);
-      });
-      cResult[3] = hasEnhancedRoleColorsForRole;
-      cResult[4] = guildSettingsRoleExampleMessage;
-      cResult[5] = onStyleChanged;
-      cResult[6] = roleStyle;
-      cResult[7] = tmp5.button;
-      cResult[8] = tmp5.disabled;
-      cResult[9] = tmp5.message;
-      cResult[10] = tmp5.selected;
-      cResult[11] = tmp5.text;
-      cResult[12] = mapped;
-      tmp20 = mapped;
-      const tmpResult = roleStyle(19672);
-    }
-  : function EnhancedRoleColorsSelectStyleModal(arg0) {
-      ({ roleStyle: require, onStyleChanged: importDefault } = arg0);
-      ({ guildId, role } = arg0);
-      const tmp3 = closure_11(useThemeDefault());
-      dependencyMap = tmp3;
-      const hasEnhancedRoleColorsForRole = useHasEnhancedRoleColors.useHasEnhancedRoleColorsForRole(guildId, role);
-      let intl = util.intl;
-      const message = useGuildSettingsRoleExampleMessage.useGuildSettingsRoleExampleMessage(intl.string(util.t.Mi9Kbe));
-      const rowGenerator = new RowGeneratorDefault();
-      let obj3 = { header: null, children: null };
-      const obj4 = { title: null };
-      const intl2 = util.intl;
-      obj4.title = intl2.string(util.t["9wVJRB"]);
-      obj3.header = closure_9(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4);
-      const obj5 = { style: tmp3.container, children: null };
-      const tmp6 = new RowGeneratorDefault();
-      let items = [
-        closure_9(message, {
-          style: tmp3.stylesContainer,
-          children: STYLE_CONFIGS.map((id) => {
-            let tmp = !hasEnhancedRoleColorsForRole;
-            if (!hasEnhancedRoleColorsForRole) {
-              tmp = id.id !== rowGenerator.SOLID;
-            }
-            const items = [button.button, ,];
-            let selected = id === id.id;
-            if (selected) {
-              selected = button.selected;
-            }
-            items[1] = selected;
-            let disabled = tmp;
-            if (tmp) {
-              disabled = button.disabled;
-            }
-            let obj = {
-              style: items,
-              disabled: tmp,
-              onPress() {
-                closure_2_1(id.id);
-                ActionSheetActionCreatorsDefault.hideActionSheet();
-              },
-              children: null,
-            };
-            items[2] = disabled;
-            const items1 = [
-              closure_1_9(require("ChatItem"), {
-                style: button.message,
-                pointerEvents: "none",
-                message,
-                rowGenerator,
-                modifyRow(message) {
-                  message.message.roleColor = undefined;
-                  const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
-                  message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
-                  message.message.shouldShowRoleOnName = true;
-                  message.message.avatarURL = _modDef14304;
-                },
-              }),
-            ];
-            const obj3 = { style: button.text, variant: "text-sm/normal", children: null };
-            const intl = require("util").intl;
-            obj3.children = intl.string(id.labelString);
-            items1[1] = closure_1_9(require("Text/Text").Text, obj3);
-            obj.children = items1;
-            return closure_1_10(hasEnhancedRoleColorsForRole, obj, id.id);
-          }),
-        }),
-      ];
-      let tmp8Result = !hasEnhancedRoleColorsForRole;
-      if (!hasEnhancedRoleColorsForRole) {
-        const obj7 = { style: tmp3.upsellContainer, children: null };
-        const obj8 = { style: tmp3.upsellText, variant: "text-sm/semibold", children: null };
-        const intl3 = util.intl;
-        const obj9 = { magical: null };
-        const obj10 = { gradientColors: null, variant: "text-sm/semibold", children: null };
-        let items1 = [, ,];
-        ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
-        obj10.gradientColors = items1;
-        const intl4 = util.intl;
-        obj10.children = intl4.string(_modDef2568["+/IHLl"]);
-        obj9.magical = closure_9(Text_Text.Text, obj10);
-        obj8.children = intl3.format(_modDef2568.VpEDJc, obj9);
-        const items2 = [closure_9(Text_Text.Text, obj8)];
-        const obj11 = { style: tmp3.upsellText, variant: "text-sm/normal", children: null };
-        const intl5 = util.intl;
-        obj11.children = intl5.string(_modDef2568.FJZeZF);
-        items2[1] = closure_9(Text_Text.Text, obj11);
-        obj7.children = items2;
-        tmp8Result = closure_10(tmp9, obj7);
-      }
-      items[1] = tmp8Result;
-      obj5.children = items;
-      obj3.children = closure_10(message, obj5);
-      return closure_9(Sheet_BottomSheet.BottomSheet, obj3);
-    };
+      }),
+    }),
+  ];
+  let tmp8Result = !hasEnhancedRoleColorsForRole;
+  if (!hasEnhancedRoleColorsForRole) {
+    const obj7 = { style: tmp3.upsellContainer, children: null };
+    const obj8 = { style: tmp3.upsellText, variant: "text-sm/semibold", children: null };
+    const intl3 = util.intl;
+    const obj9 = { magical: null };
+    const obj10 = { gradientColors: null, variant: "text-sm/semibold", children: null };
+    let items1 = [, ,];
+    ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
+    obj10.gradientColors = items1;
+    const intl4 = util.intl;
+    obj10.children = intl4.string(_modDef2569["+/IHLl"]);
+    obj9.magical = closure_9(Text_Text.Text, obj10);
+    obj8.children = intl3.format(_modDef2569.VpEDJc, obj9);
+    const items2 = [closure_9(Text_Text.Text, obj8)];
+    const obj11 = { style: tmp3.upsellText, variant: "text-sm/normal", children: null };
+    const intl5 = util.intl;
+    obj11.children = intl5.string(_modDef2569.FJZeZF);
+    items2[1] = closure_9(Text_Text.Text, obj11);
+    obj7.children = items2;
+    tmp8Result = closure_10(tmp9, obj7);
+  }
+  items[1] = tmp8Result;
+  obj5.children = items;
+  obj3.children = closure_10(message, obj5);
+  return closure_9(Sheet_BottomSheet.BottomSheet, obj3);
+}

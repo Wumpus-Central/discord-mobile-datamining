@@ -4,13 +4,13 @@ import validateConjureAppFrameDefault from "../../helpers/validateConjureAppFram
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const Constants = fn(6437);
+const Constants = fn(6444);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
-const RPCCommands = fn(1084).RPCCommands;
+const RPCCommands = fn(1072).RPCCommands;
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_EMBEDDED_APP_SCOPE, RPC_AUTHENTICATED_SCOPE];
 const obj2 = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16215);
+let CONTEXT_MENU_ICON_NAMES = fn(16255);
 obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.GET_DEVICE_PERMISSIONS,
   {
@@ -18,7 +18,7 @@ obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCComm
     handler(socket) {
       const frame = validateConjureAppFrameDefault(socket.socket).frame;
       const obj = { permissions: null };
-      const prop = frame(10911).CONJURE_DEVICE_PERMISSION_NAMES;
+      const prop = frame(10934).CONJURE_DEVICE_PERMISSION_NAMES;
       obj.permissions = prop.map((item) =>
         requestConjureDevicePermissions.getConjureDevicePermissionStatus(frame.applicationId, item),
       );
@@ -26,7 +26,7 @@ obj2[RPCCommands.GET_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCComm
     },
   },
 );
-CONTEXT_MENU_ICON_NAMES = fn(16215);
+CONTEXT_MENU_ICON_NAMES = fn(16255);
 obj2[RPCCommands.REQUEST_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.REQUEST_DEVICE_PERMISSIONS,
   {
@@ -35,8 +35,8 @@ obj2[RPCCommands.REQUEST_DEVICE_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPC
       ({ socket: require, args: importDefault } = arg0);
       return (async () => {
         value = {};
-        ({ frame, iframeId } = v1(16207)(require));
-        await v1(10909)({ applicationId: frame.applicationId, iframeId, permissions: permissions.permissions });
+        ({ frame, iframeId } = v1(16247)(require));
+        await v1(10932)({ applicationId: frame.applicationId, iframeId, permissions: permissions.permissions });
         value.permissions = value;
         return value;
       })();

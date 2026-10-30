@@ -1062,8 +1062,8 @@ export function getDefaultCountryCode() {
   _modDef38(null != tmp4, "Default country code cannot be missing.");
   return tmp4;
 }
-export function getI18NCountryName(alpha2) {
-  return dependencyMap[alpha2]();
+export function getI18NCountryName(arg0) {
+  return dependencyMap[arg0]();
 }
 export function getI18NCountryNameSafe(arg0) {
   let tmp = arg0;

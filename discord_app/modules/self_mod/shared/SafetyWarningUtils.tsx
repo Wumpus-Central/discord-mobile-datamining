@@ -2,11 +2,11 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 
-export function trackViewedEvent(SAFETY_WARNING_MODAL_VIEWED, warningId) {
+export function trackViewedEvent(SAFETY_WARNING_VIEWED, warningId) {
   warningId = warningId.warningId;
   ({ channelId, senderId, warningType } = warningId);
   const obj2 = { channel_id: channelId, warning_id: null, warning_type: null, other_user_id: null };
@@ -18,7 +18,7 @@ export function trackViewedEvent(SAFETY_WARNING_MODAL_VIEWED, warningId) {
   obj2.warning_id = parsed;
   obj2.warning_type = warningType;
   obj2.other_user_id = senderId;
-  AnalyticsUtilsDefault.track(SAFETY_WARNING_MODAL_VIEWED, obj2);
+  AnalyticsUtilsDefault.track(SAFETY_WARNING_VIEWED, obj2);
 }
 export const ViewNameTypes = {
   SAFETY_WARNING_BANNER: "safety_warning_banner",

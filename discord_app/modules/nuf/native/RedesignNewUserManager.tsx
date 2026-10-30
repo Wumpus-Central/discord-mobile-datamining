@@ -35,7 +35,7 @@ function isNewUserModalInStack() {
   }
   return someResult;
 }
-const ContactSyncModalStore = fn(14047);
+const ContactSyncModalStore = fn(14195);
 ({ initialize: closure_4, ContactSyncModes: hasOwnProperty } = ContactSyncModalStore);
 const prototype = function RedesignNewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -95,7 +95,7 @@ const prototype = function RedesignNewUserManager() {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "HermesInternal", done: null };
               }
             } else {
               try {
@@ -158,7 +158,7 @@ const prototype = function RedesignNewUserManager() {
                           c3 = 0;
                           closure_0._isStartingOnboarding = false;
                           c5 = 3;
-                          return { value: "IconComponent", done: "IconComponent" };
+                          return { value: "HermesInternal", done: null };
                         } else {
                           keyForOnboardingStep = closure_0(paths[11]).getKeyForOnboardingStep(onboardingStepIndex);
                           if (null != keyForOnboardingStep) {
@@ -189,7 +189,7 @@ const prototype = function RedesignNewUserManager() {
                         c3 = 0;
                         closure_0._isStartingOnboarding = false;
                         c5 = 3;
-                        return { value: "IconComponent", done: "IconComponent" };
+                        return { value: "HermesInternal", done: null };
                       }
                     }
                   } else if (arg0 === 1) {
@@ -205,7 +205,7 @@ const prototype = function RedesignNewUserManager() {
                   c3 = 0;
                   closure_0._isStartingOnboarding = false;
                   c5 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "HermesInternal", done: null };
                 }
               } catch (tmp58) {
                 closure_2 = tmp58;

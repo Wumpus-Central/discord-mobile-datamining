@@ -1,13 +1,13 @@
 // discord_app/modules/activities/utils/getRemoteJoinableActivityPlatform.tsx
 import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import ActivityGamePlatforms from "../../../../discord_common/js/shared/shared-constants/ActivityGamePlatforms.tsx";
 import ActivityFlagUtils from "ActivityFlagUtils.tsx";
 import ConnectedAppsStore from "../../../stores/ConnectedAppsStore.tsx";
 import SessionsStore from "../../../stores/SessionsStore.tsx";
 
 require = fn;
-const Constants = fn(1084);
-({ ActivityFlags: closure_4, ActivityGamePlatforms: hasOwnProperty } = Constants);
+const ActivityFlags = fn(1072).ActivityFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");
 
@@ -21,46 +21,43 @@ export function getRemoteJoinableActivityPlatform(presenceActivity) {
       if (num == null) {
         num = 0;
       }
-      if (obj5.hasFlag(num, constants.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
+      if (obj5.hasFlag(num, ActivityFlags.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
         const remoteApplicationActivity = SessionsStore.getRemoteApplicationActivity(application_id);
         let tmp4 = null;
         if (null != remoteApplicationActivity) {
           tmp4 = null;
-          if (!tmp11Result.isContextlessEmbeddedActivity(remoteApplicationActivity)) {
+          if (!tmp8Result.isContextlessEmbeddedActivity(remoteApplicationActivity)) {
             if (null == remoteApplicationActivity.application_id) {
               let num2 = remoteApplicationActivity.flags;
               if (num2 == null) {
                 num2 = 0;
               }
-              let tmp9 = null;
-              if (tmp11Result4.hasFlag(num2, constants.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
+              let tmp6 = null;
+              if (tmp8Result4.hasFlag(num2, ActivityFlags.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN)) {
                 let platform1 = remoteApplicationActivity.platform;
                 if (platform1 == null) {
                   platform1 = null;
                 }
-                tmp9 = platform1;
+                tmp6 = platform1;
               }
-              tmp4 = tmp9;
-              tmp11Result4 = FlagUtils;
+              tmp4 = tmp6;
+              tmp8Result4 = FlagUtils;
             } else {
               tmp4 = null;
               if (!ConnectedAppsStore.isConnected(remoteApplicationActivity.application_id)) {
                 const platform = remoteApplicationActivity.platform;
-                if (tmp11Result5.isAndroid()) {
-                  let isIOSResult = platform === constants2.ANDROID;
+                if (tmp8Result5.isAndroid()) {
+                  platform === ActivityGamePlatforms.ActivityGamePlatforms.ANDROID;
                 } else {
-                  isIOSResult = utils_PlatformUtils.isIOS();
-                  if (isIOSResult) {
-                    isIOSResult = platform === constants2.IOS;
-                  }
-                  const tmp11Result6 = utils_PlatformUtils;
+                  utils_PlatformUtils.isIOS() && platform === ActivityGamePlatforms.ActivityGamePlatforms.IOS;
+                  const tmp8Result6 = utils_PlatformUtils;
                 }
                 tmp4 = null;
-                tmp11Result5 = utils_PlatformUtils;
+                tmp8Result5 = utils_PlatformUtils;
               }
             }
           }
-          tmp11Result = ActivityFlagUtils;
+          tmp8Result = ActivityFlagUtils;
         }
         return tmp4;
       }

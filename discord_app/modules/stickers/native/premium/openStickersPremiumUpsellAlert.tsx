@@ -20,7 +20,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
           };
           closure_130_1(closure_130_2[7]).openLazy(obj8);
           c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp11) {
         c4 = tmp;
@@ -79,7 +79,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
     }
   })();
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);

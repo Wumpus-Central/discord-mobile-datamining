@@ -16,34 +16,34 @@ const obj = {
   lockScrolling: null,
   wrapperOffset: null,
 };
-let ReanimatedHelperTypes = fn(7229);
-obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(16303).MediaPlaybackPanelModes.PIP);
+let ReanimatedHelperTypes = fn(7236);
+obj.mode = ReanimatedHelperTypes.createFakeSharedValue(fn(16344).MediaPlaybackPanelModes.PIP);
 obj.setMode = function setMode() {
   const error = new Error("MediaPlaybackPanelModes.Provider.setMode: not called within a context provider");
   throw error;
 };
-ReanimatedHelperTypes = fn(7229);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(10975).MorphablePanelModes.PIP);
-ReanimatedHelperTypes = fn(7229);
+ReanimatedHelperTypes = fn(7236);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11205).MorphablePanelModes.PIP);
+ReanimatedHelperTypes = fn(7236);
 obj.wrapperDimensions = ReanimatedHelperTypes.createFakeSharedValue({ width: 0, height: 0 });
-ReanimatedHelperTypes = fn(7229);
+ReanimatedHelperTypes = fn(7236);
 obj.useReducedMotion = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7229);
+ReanimatedHelperTypes = fn(7236);
 obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
-ReanimatedHelperTypes = fn(7229);
+ReanimatedHelperTypes = fn(7236);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-obj.dismissToPipGestureRef = { current: "r" };
+obj.dismissToPipGestureRef = { current: "getCurrentUser" };
 obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-ReanimatedHelperTypes = fn(7229);
+ReanimatedHelperTypes = fn(7236);
 obj.scrollPosition = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7229);
+ReanimatedHelperTypes = fn(7236);
 obj.canShowPIP = ReanimatedHelperTypes.createFakeSharedValue(true);
-ReanimatedHelperTypes = fn(7229);
+ReanimatedHelperTypes = fn(7236);
 obj.lockScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
-ReanimatedHelperTypes = fn(7229);
+ReanimatedHelperTypes = fn(7236);
 obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
 const context = noop.createContext(obj);
 const size = fn(2);

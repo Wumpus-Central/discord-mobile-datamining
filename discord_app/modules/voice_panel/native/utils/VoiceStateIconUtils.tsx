@@ -4,6 +4,8 @@ import useLocalSelfMuteDeaf from "../../../video_calls/useLocalSelfMuteDeaf.tsx"
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function isStableVoiceStateEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
@@ -36,239 +38,150 @@ let obj2 = {
   VIDEO_ACTIVE: 2,
   [2]: "VIDEO_ACTIVE",
 };
-let ReactCompilerGating = fn(558);
-let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useStableVoiceParticipant(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(5);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [VoiceStateStore, MediaEngineStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === arg1) {
-        if (cResult[2] === arg0) {
-          let tmp7 = cResult[3];
-          let tmp8 = cResult[4];
-        }
-        const tmpResult = tmp(504);
-        return tmpResult.useStateFromStores(first, tmp7, tmp8, isStableVoiceStateEqual);
-      }
-      const fn = function s() {
-        if (null != closure_0) {
-          const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
-          const obj = useLocalSelfMuteDeaf;
-          const result = obj.withLocalSelfMuteDeaf(voiceState, useLocalSelfMuteDeaf.getLocalSelfMuteDeaf());
-          if (null != result) {
-            const obj4 = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
-            ({ deaf: obj3.deaf, selfDeaf: obj3.selfDeaf, mute: obj3.mute } = result);
-            obj4.isLocalMute = MediaEngineStore.isLocalMute(result.userId);
-            obj4.selfMute = result.selfMute;
-            return obj4;
-          }
-        }
-      };
-      const items1 = [arg0, arg1];
-      cResult[1] = arg1;
-      cResult[2] = arg0;
-      cResult[3] = fn;
-      cResult[4] = items1;
-      tmp8 = items1;
-      tmp7 = fn;
-      let obj = require("c");
-      tmp = _require;
-    }
-  : function useStableVoiceParticipant(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const items = [VoiceStateStore, MediaEngineStore];
-      const items1 = [arg0, arg1];
-      return require("initialize").useStateFromStores(
-        items,
-        () => {
-          if (null != closure_0) {
-            const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
-            const obj = useLocalSelfMuteDeaf;
-            const result = obj.withLocalSelfMuteDeaf(voiceState, useLocalSelfMuteDeaf.getLocalSelfMuteDeaf());
-            if (null != result) {
-              const obj4 = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
-              ({ deaf: obj3.deaf, selfDeaf: obj3.selfDeaf, mute: obj3.mute } = result);
-              obj4.isLocalMute = MediaEngineStore.isLocalMute(result.userId);
-              obj4.selfMute = result.selfMute;
-              return obj4;
-            }
-          }
-        },
-        items1,
-        isStableVoiceStateEqual,
-      );
-    };
-let closure_8 = tmp2;
-fn(558);
-ReactCompilerGating = fn(558);
-const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useStableVideoState(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const cResult = require("c").c(5);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [MediaEngineStore, VoiceStateStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] === arg1) {
-        if (cResult[2] === arg0) {
-          let tmp7 = cResult[3];
-          let tmp8 = cResult[4];
-        }
-        return tmp(504).useStateFromStoresObject(first, tmp7, tmp8);
-      }
-      const fn = function s() {
-        if (null != closure_0) {
-          const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
-        }
-        if (null != closure_0) {
-          if (null != voiceState) {
-            obj2 = { selfVideo: voiceState.selfVideo, localVideoDisabledState: null };
-            let tmp5 = null;
-            if (MediaEngineStore.isLocalVideoDisabled(voiceState.userId)) {
-              let str = "manual";
-              if (MediaEngineStore.isLocalVideoAutoDisabled(voiceState.userId)) {
-                str = "auto";
-              }
-              tmp5 = str;
-            }
-            obj2.localVideoDisabledState = tmp5;
-            return obj2;
-          }
-        }
-        return { selfVideo: false, localVideoDisabledState: null };
-      };
-      const items1 = [arg1, arg0];
-      cResult[1] = arg1;
-      cResult[2] = arg0;
-      cResult[3] = fn;
-      cResult[4] = items1;
-      tmp8 = items1;
-      tmp7 = fn;
-      const obj = require("c");
-      tmp = _require;
-    }
-  : function useStableVideoState(arg0, arg1) {
-      _require = arg0;
-      closure_1 = arg1;
-      const items = [MediaEngineStore, VoiceStateStore];
-      const items1 = [arg1, arg0];
-      return require("initialize").useStateFromStoresObject(
-        items,
-        () => {
-          if (null != closure_0) {
-            const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
-          }
-          if (null != closure_0) {
-            if (null != voiceState) {
-              obj2 = { selfVideo: voiceState.selfVideo, localVideoDisabledState: null };
-              let tmp5 = null;
-              if (MediaEngineStore.isLocalVideoDisabled(voiceState.userId)) {
-                let str = "manual";
-                if (MediaEngineStore.isLocalVideoAutoDisabled(voiceState.userId)) {
-                  str = "auto";
-                }
-                tmp5 = str;
-              }
-              obj2.localVideoDisabledState = tmp5;
-              return obj2;
-            }
-          }
-          return { selfVideo: false, localVideoDisabledState: null };
-        },
-        items1,
-      );
-    };
-let closure_9 = tmp4;
-ReactCompilerGating = fn(558);
-let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useMuteDeafenIconState(arg0, arg1) {
-      const tmp = closure_8(arg0, arg1);
-      if (null == tmp) {
-        return null;
-      } else if (tmp.deaf) {
-        let DEAFENED_SERVER = obj.DEAFENED_SERVER;
-      } else if (tmp.selfDeaf) {
-        DEAFENED_SERVER = obj.DEAFENED;
-      } else if (tmp.mute) {
-        DEAFENED_SERVER = obj.MUTED_SERVER;
-      } else if (tmp.isLocalMute) {
-        DEAFENED_SERVER = obj.MUTED_LOCAL;
-      } else {
-        DEAFENED_SERVER = null;
-        if (tmp.selfMute) {
-          DEAFENED_SERVER = obj.MUTED;
-        }
-      }
-    }
-  : function useMuteDeafenIconState(arg0, arg1) {
-      const tmp = closure_8(arg0, arg1);
-      if (null == tmp) {
-        return null;
-      } else if (tmp.deaf) {
-        let DEAFENED_SERVER = obj.DEAFENED_SERVER;
-      } else if (tmp.selfDeaf) {
-        DEAFENED_SERVER = obj.DEAFENED;
-      } else if (tmp.mute) {
-        DEAFENED_SERVER = obj.MUTED_SERVER;
-      } else if (tmp.isLocalMute) {
-        DEAFENED_SERVER = obj.MUTED_LOCAL;
-      } else {
-        DEAFENED_SERVER = null;
-        if (tmp.selfMute) {
-          DEAFENED_SERVER = obj.MUTED;
-        }
-      }
-    };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/utils/VoiceStateIconUtils.tsx");
 
 export { MuteDeafenIconState };
 export const VideoIconState = obj2;
-export const useStableVoiceParticipant = tmp2;
-export const useMuteDeafenIconState = tmp3;
-export const useStableVideoState = tmp4;
-export const useVideoIconState = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useVideoIconState(arg0, arg1) {
-      const tmp = closure_9(arg0, arg1);
-      let tmp2 = null;
-      if (null != tmp) {
-        if (!tmp.selfVideo) {
-          tmp2 = null;
-        } else if ("auto" === tmp.localVideoDisabledState) {
-          let VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL_AUTO;
-        } else if ("manual" === tmp.localVideoDisabledState) {
-          VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL;
-        } else {
-          VIDEO_ACTIVE = obj2.VIDEO_ACTIVE;
+export function useStableVoiceParticipant(arg0, arg1) {
+  _require = arg0;
+  closure_1 = arg1;
+  const items = [VoiceStateStore, MediaEngineStore];
+  const items1 = [arg0, arg1];
+  return require("initialize").useStateFromStores(
+    items,
+    () => {
+      if (null != closure_0) {
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
+        const obj = useLocalSelfMuteDeaf;
+        const result = obj.withLocalSelfMuteDeaf(voiceState, useLocalSelfMuteDeaf.getLocalSelfMuteDeaf());
+        if (null != result) {
+          const obj4 = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
+          ({ deaf: obj3.deaf, selfDeaf: obj3.selfDeaf, mute: obj3.mute } = result);
+          obj4.isLocalMute = MediaEngineStore.isLocalMute(result.userId);
+          obj4.selfMute = result.selfMute;
+          return obj4;
         }
       }
-      return tmp2;
+    },
+    items1,
+    isStableVoiceStateEqual,
+  );
+}
+export function useMuteDeafenIconState(id, guildId) {
+  _require = id;
+  closure_1 = guildId;
+  let obj = require("initialize");
+  const items = [VoiceStateStore, MediaEngineStore];
+  const items1 = [id, guildId];
+  const stateFromStores = obj.useStateFromStores(
+    items,
+    () => {
+      if (null != closure_0) {
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, tmp);
+        const obj = useLocalSelfMuteDeaf;
+        const result = obj.withLocalSelfMuteDeaf(voiceState, useLocalSelfMuteDeaf.getLocalSelfMuteDeaf());
+        if (null != result) {
+          const obj4 = { deaf: null, selfDeaf: null, mute: null, isLocalMute: null, selfMute: null };
+          ({ deaf: obj3.deaf, selfDeaf: obj3.selfDeaf, mute: obj3.mute } = result);
+          obj4.isLocalMute = MediaEngineStore.isLocalMute(result.userId);
+          obj4.selfMute = result.selfMute;
+          return obj4;
+        }
+      }
+    },
+    items1,
+    isStableVoiceStateEqual,
+  );
+  if (null == stateFromStores) {
+    return null;
+  } else if (stateFromStores.deaf) {
+    let DEAFENED_SERVER = obj.DEAFENED_SERVER;
+  } else if (stateFromStores.selfDeaf) {
+    DEAFENED_SERVER = obj.DEAFENED;
+  } else if (stateFromStores.mute) {
+    DEAFENED_SERVER = obj.MUTED_SERVER;
+  } else if (stateFromStores.isLocalMute) {
+    DEAFENED_SERVER = obj.MUTED_LOCAL;
+  } else {
+    DEAFENED_SERVER = null;
+    if (stateFromStores.selfMute) {
+      DEAFENED_SERVER = obj.MUTED;
     }
-  : function useVideoIconState(arg0, arg1) {
-      const tmp = closure_9(arg0, arg1);
-      let tmp2 = null;
-      if (null != tmp) {
-        if (!tmp.selfVideo) {
-          tmp2 = null;
-        } else if ("auto" === tmp.localVideoDisabledState) {
-          let VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL_AUTO;
-        } else if ("manual" === tmp.localVideoDisabledState) {
-          VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL;
-        } else {
-          VIDEO_ACTIVE = obj2.VIDEO_ACTIVE;
+  }
+}
+export function useStableVideoState(arg0, arg1) {
+  _require = arg0;
+  closure_1 = arg1;
+  const items = [MediaEngineStore, VoiceStateStore];
+  const items1 = [arg1, arg0];
+  return require("initialize").useStateFromStoresObject(
+    items,
+    () => {
+      if (null != closure_0) {
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
+      }
+      if (null != closure_0) {
+        if (null != voiceState) {
+          obj2 = { selfVideo: voiceState.selfVideo, localVideoDisabledState: null };
+          let tmp5 = null;
+          if (MediaEngineStore.isLocalVideoDisabled(voiceState.userId)) {
+            let str = "manual";
+            if (MediaEngineStore.isLocalVideoAutoDisabled(voiceState.userId)) {
+              str = "auto";
+            }
+            tmp5 = str;
+          }
+          obj2.localVideoDisabledState = tmp5;
+          return obj2;
         }
       }
-      return tmp2;
-    };
+      return { selfVideo: false, localVideoDisabledState: null };
+    },
+    items1,
+  );
+}
+export function useVideoIconState(id, guildId) {
+  _require = id;
+  closure_1 = guildId;
+  const items = [MediaEngineStore, VoiceStateStore];
+  const items1 = [guildId, id];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(
+    items,
+    () => {
+      if (null != closure_0) {
+        const voiceState = VoiceStateStore.getVoiceState(closure_1, closure_0);
+      }
+      if (null != closure_0) {
+        if (null != voiceState) {
+          obj2 = { selfVideo: voiceState.selfVideo, localVideoDisabledState: null };
+          let tmp5 = null;
+          if (MediaEngineStore.isLocalVideoDisabled(voiceState.userId)) {
+            let str = "manual";
+            if (MediaEngineStore.isLocalVideoAutoDisabled(voiceState.userId)) {
+              str = "auto";
+            }
+            tmp5 = str;
+          }
+          obj2.localVideoDisabledState = tmp5;
+          return obj2;
+        }
+      }
+      return { selfVideo: false, localVideoDisabledState: null };
+    },
+    items1,
+  );
+  let tmp2 = null;
+  if (null != stateFromStoresObject) {
+    if (!stateFromStoresObject.selfVideo) {
+      tmp2 = null;
+    } else if ("auto" === stateFromStoresObject.localVideoDisabledState) {
+      let VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL_AUTO;
+    } else if ("manual" === stateFromStoresObject.localVideoDisabledState) {
+      VIDEO_ACTIVE = obj2.VIDEO_DISABLED_LOCAL;
+    } else {
+      VIDEO_ACTIVE = obj2.VIDEO_ACTIVE;
+    }
+  }
+  return tmp2;
+}

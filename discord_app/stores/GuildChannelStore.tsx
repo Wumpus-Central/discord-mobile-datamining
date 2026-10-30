@@ -73,14 +73,14 @@ function rebuildGuildChannels(guildId) {
       }
     }
   }
-  obj2 = obj(4882);
+  obj2 = obj(4883);
   const item = id(12).forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj.count = obj.count + 1;
     let type = channel.type;
     if (React5(type)) {
       type = SELECTABLE;
-    } else if (React6(type)) {
+    } else if (React7(type)) {
       type = VOCAL;
     }
     if (channel.type === ChannelTypes.GUILD_DIRECTORY) {
@@ -187,20 +187,20 @@ function handleGuildRoleUpdate(guildId) {
 }
 function hasElevatedPermissions(user, context) {
   obj = BigFlagUtilsAll;
-  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), closure_1_20);
+  return obj.hasAny(PermissionUtilsAll.computePermissions({ user, context, checkElevated: false }), dependencyMap);
 }
 function handleFavoritesUpdate() {
-  rebuildGuildChannels(constants);
+  rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(4936).createFavoritesGuildChannelRecord;
-const ChannelRecord = fn(4861);
+let closure_6 = fn(4940).createFavoritesGuildChannelRecord;
+const ChannelRecord = fn(4862);
 ({
   isGuildSelectableChannelType: closure_7,
   GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8,
   isGuildVocalChannelType: closure_9,
   createChannelRecord,
 } = ChannelRecord);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ FAVORITES: closure_17, ChannelTypes } = Constants);
 ({ Permissions: closure_19, ElevatedPermissions: closure_20 } = Constants);
 const SELECTABLE = "SELECTABLE";
@@ -304,8 +304,8 @@ prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id) {
     flag,
   );
 };
-prototype["getSelectableChannelIds"] = function getSelectableChannelIds(id) {
-  return this.getChannels(id)[SELECTABLE].map((channel) => channel.channel.id);
+prototype["getSelectableChannelIds"] = function getSelectableChannelIds(guildId) {
+  return this.getChannels(guildId)[SELECTABLE].map((channel) => channel.channel.id);
 };
 prototype["getSelectableChannels"] = function getSelectableChannels(id) {
   return this.getChannels(id)[SELECTABLE];
@@ -323,8 +323,8 @@ prototype["getDirectoryChannelIds"] = function getDirectoryChannelIds(guildId) {
   }
   return mapped;
 };
-prototype["hasSelectableChannel"] = function hasSelectableChannel(id, arg1) {
-  const selectableChannelIds = this.getSelectableChannelIds(id);
+prototype["hasSelectableChannel"] = function hasSelectableChannel(guildId, arg1) {
+  const selectableChannelIds = this.getSelectableChannelIds(guildId);
   return selectableChannelIds.includes(arg1);
 };
 prototype["hasElevatedPermissions"] = function hasElevatedPermissions(arg0) {

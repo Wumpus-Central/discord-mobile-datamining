@@ -1,21 +1,17 @@
 // discord_app/actions/ActivitiesActionCreators.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
+import ActivityTypes from "../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import ChannelActionCreatorsDefault from "ChannelActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
 
 const require = globalThis.__r;
 
-const require = fn;
-const Constants = fn(1084);
-({
-  Endpoints: hasOwnProperty,
-  ActivityTypes: metroRequire,
-  AnalyticEvents: closure_7,
-  LoggingInviteTypes: closure_8,
-} = Constants);
-const MessageSendLocation = fn(5010).MessageSendLocation;
+require = fn;
+const Constants = fn(1072);
+({ Endpoints: hasOwnProperty, AnalyticEvents: metroRequire, LoggingInviteTypes: closure_7 } = Constants);
+const MessageSendLocation = fn(5014).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -119,10 +115,10 @@ export default {
           if (activity != null) {
             type = activity.type;
           }
-          if (type === constants2.LISTENING) {
-            let APPLICATION = constants4.SPOTIFY;
+          if (type === ActivityTypes.ActivityTypes.LISTENING) {
+            let APPLICATION = constants3.SPOTIFY;
           } else {
-            APPLICATION = constants4.APPLICATION;
+            APPLICATION = constants3.APPLICATION;
           }
           obj2.invite_type = APPLICATION;
           let application_id;
@@ -137,7 +133,7 @@ export default {
             id = body.body.id;
           }
           obj2.message_id = id;
-          AppAnalyticsUtilsDefault.trackWithMetadata(constants3.INVITE_SENT, obj2);
+          AppAnalyticsUtilsDefault.trackWithMetadata(constants2.INVITE_SENT, obj2);
           return Promise.resolve(channel);
         },
         (arg0) => Promise.reject(arg0),
@@ -165,12 +161,12 @@ export default {
       if (null != message_id) {
         obj4.message_id = message_id;
       }
-      const HTTP = tmp4(1294).HTTP;
+      const HTTP = tmp4(1283).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2),
         retries: 3,
         query: obj4,
-        rejectWithError: tmp4(1294).rejectWithMigratedError(),
+        rejectWithError: tmp4(1283).rejectWithMigratedError(),
       };
       await HTTP.get(request);
       closure_128_0 = value;
@@ -187,12 +183,12 @@ export default {
         message_id: userId.messageId,
         channel_id: userId.channelId,
       }));
-      const HTTP = v3(1294).HTTP;
+      const HTTP = v3(1283).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_SUBSCRIBE,
         body: { subscriptions: mapped },
         retries: 1,
-        rejectWithError: v3(1294).rejectWithMigratedError(),
+        rejectWithError: v3(1283).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       return value.body;

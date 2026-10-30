@@ -82,13 +82,13 @@ const set = new Set(items);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanBot.tsx");
 
 export { isAppCommand };
-export function getConjurePlanBotInteraction(supported_surfaces) {
-  bot = supported_surfaces;
+export function getConjurePlanBotInteraction(proposal) {
+  bot = proposal;
   const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(
-    supported_surfaces,
+    proposal,
     ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS,
   );
-  if (!obj2.planDeclaresSurface(supported_surfaces, ConjureProjectTypes.ConjureSupportedSurface.BOT)) {
+  if (!obj2.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.BOT)) {
     if (!planDeclaresSurfaceResult) {
       return null;
     }

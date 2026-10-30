@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import UrlDefault from "../../../_runtime/01386_Url.js";
+import UrlDefault from "../../../_runtime/01381_Url.js";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
@@ -35,7 +35,7 @@ function validateOrigin(arg0) {
 }
 function fetchApplicationRPC(arg0) {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: constants.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true });
+  value = HTTP.get({ url: closure_1_17.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true });
   return value.then(
     (body) => body.body,
     () => {
@@ -60,7 +60,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -185,7 +185,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -232,7 +232,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -245,10 +245,10 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4861).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6437);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4862).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6444);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
-Constants = fn(1084);
+Constants = fn(1072);
 ({
   ActivityActionTypes: closure_15,
   ChannelTypes: closure_16,
@@ -481,7 +481,7 @@ export function transformChannel(channel, result) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(6029).getName(dependencyMap, id.id, user),
+            nick: closure_1(6036).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -490,7 +490,7 @@ export function transformChannel(channel, result) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9298)(user);
+          obj.user = closure_1(9311)(user);
           return obj;
         }
       });
@@ -565,7 +565,7 @@ export function isMatchingOrigin(str) {
   }
 }
 export function hasMessageReadPermission(channel, id, scopes) {
-  guild = GuildStore.getGuild(channel.getGuildId());
+  const guild = GuildStore.getGuild(channel.getGuildId());
   if (null != guild) {
     let application_id = guild.application_id;
   } else {

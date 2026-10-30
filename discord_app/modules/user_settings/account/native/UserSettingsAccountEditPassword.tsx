@@ -13,7 +13,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef16547 from "../../../../../_runtime/metro/16547__.js";
+import _modDef16598 from "../../../../../_runtime/metro/16598__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -24,11 +24,11 @@ const UserSettingsAccountUnverifiedHeaderDefault = UserSettingsAccountUnverified
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, LoginRequiredActions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   onePass: { width: 20, height: 20 },
   unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 },
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef16547, style: tmp.image };
+    const obj4 = { source: _modDef16598, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,
@@ -179,7 +179,7 @@ prototype["render"] = function render() {
     obj6.children = intl2.string(util.t["37iHbZ"]);
     items1[2] = closure_1_11(Text_Text.Text, obj6);
     obj3.children = items1;
-    tmp4Result = __initData(React4, obj3);
+    tmp4Result = closure_1_12(React4, obj3);
   }
   items[1] = tmp4Result;
   let tmp4Result2 = !showForcedPasswordUpdate;
@@ -204,7 +204,7 @@ prototype["render"] = function render() {
     obj9.children = intl4.string(util.t.x5tG4V);
     items2[1] = closure_1_11(Text_Text.Text, obj9);
     obj7.children = items2;
-    tmp4Result2 = __initData(React4, obj7);
+    tmp4Result2 = closure_1_12(React4, obj7);
   }
   items[2] = tmp4Result2;
   const items3 = [
@@ -255,169 +255,75 @@ prototype["render"] = function render() {
   obj12.disabled = submitting;
   items3[2] = closure_1_11(components_Button_Button.Button, obj12);
   obj14.children = items3;
-  items[3] = __initData(Stack_Stack.Stack, obj14);
+  items[3] = closure_1_12(Stack_Stack.Stack, obj14);
   obj.children = items;
-  obj13.children = __initData(React4, obj);
+  obj13.children = closure_1_12(React4, obj);
   return closure_1_11(hasOwnProperty, obj13);
 };
-EditPassword.contextType = fn(5071).ThemeContext;
-const ReactCompilerGating = fn(558);
-let obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 };
+EditPassword.contextType = fn(5075).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function EditPasswordWrapper() {
-      const cResult = flag(576).c(6);
-      let obj = flag(576);
-      const params = flag(7150).useSettingNavigationRoute().params;
-      flag = undefined;
-      if (params != null) {
-        flag = params.isLoginRequiredAction;
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== flag) {
-        const fn = function s() {
-          const currentUser = UserStore.getCurrentUser();
-          const errors = UserSettingsAccountStore.getErrors();
-          const submitting = UserSettingsAccountStore.getSubmitting();
-          const settings = UserSettingsAccountStore.getSettings();
-          if (!flag) {
-            _modDef38(null != currentUser, "EditPasswordWrapper: user cannot be undefined");
-          }
-          let id;
-          if (currentUser != null) {
-            id = currentUser.id;
-          }
-          let result = null != id;
-          if (result) {
-            const items = [constants2.UPDATE_PASSWORD];
-            result = LoginRequiredActionStore.requiredActionsIncludes(id, items);
-          }
-          const obj2 = {
-            errors,
-            submitting,
-            settings,
-            user: currentUser,
-            verified: null,
-            passwordLabel: null,
-            newPasswordLabel: null,
-            showForcedPasswordUpdate: null,
-            hasBannerText: null,
-          };
-          flag = undefined;
-          if (currentUser != null) {
-            flag = currentUser.verified;
-          }
-          if (flag == null) {
-            flag = false;
-          }
-          obj2.verified = flag;
-          const intl = util.intl;
-          obj2.passwordLabel = intl.string(util.t.WBqMRQ);
-          const intl2 = util.intl;
-          obj2.newPasswordLabel = intl2.string(util.t["8dM4FO"]);
-          if (result) {
-            result = flag;
-          }
-          obj2.showForcedPasswordUpdate = result;
-          obj2.hasBannerText = null != UserSettingsAccountUnverifiedHeader.getBannerText(currentUser);
-          return obj2;
-        };
-        cResult[1] = flag;
-        cResult[2] = fn;
-        let tmp8 = fn;
-      } else {
-        tmp8 = cResult[2];
-      }
-      let obj2 = flag(7150);
-      const stateFromStoresObject = flag(504).useStateFromStoresObject(first, tmp8);
-      const tmpResult = flag(504);
-      const navigation = flag(1503).useNavigation();
-      if (cResult[3] === navigation) {
-        if (cResult[4] === stateFromStoresObject) {
-          let tmp11 = cResult[5];
-        }
-        return tmp11;
-      }
-      const merged = Object.assign(stateFromStoresObject);
-      const tmp13 = closure_11(EditPassword, { navigation });
-      cResult[3] = navigation;
-      cResult[4] = stateFromStoresObject;
-      cResult[5] = tmp13;
-      tmp11 = tmp13;
-      const obj3 = { navigation };
-      const tmpResult2 = flag(1503);
+export default function EditPasswordWrapper() {
+  const params = flag(7158).useSettingNavigationRoute().params;
+  flag = undefined;
+  if (params != null) {
+    flag = params.isLoginRequiredAction;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  let obj = flag(7158);
+  let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
+  const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
+    const currentUser = UserStore.getCurrentUser();
+    const errors = UserSettingsAccountStore.getErrors();
+    const submitting = UserSettingsAccountStore.getSubmitting();
+    const settings = UserSettingsAccountStore.getSettings();
+    if (!flag) {
+      _modDef38(null != currentUser, "EditPasswordWrapper: user cannot be undefined");
     }
-  : function EditPasswordWrapper() {
-      const params = flag(7150).useSettingNavigationRoute().params;
-      flag = undefined;
-      if (params != null) {
-        flag = params.isLoginRequiredAction;
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      let obj = flag(7150);
-      let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
-      const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
-        const currentUser = UserStore.getCurrentUser();
-        const errors = UserSettingsAccountStore.getErrors();
-        const submitting = UserSettingsAccountStore.getSubmitting();
-        const settings = UserSettingsAccountStore.getSettings();
-        if (!flag) {
-          _modDef38(null != currentUser, "EditPasswordWrapper: user cannot be undefined");
-        }
-        let id;
-        if (currentUser != null) {
-          id = currentUser.id;
-        }
-        let result = null != id;
-        if (result) {
-          const items = [constants2.UPDATE_PASSWORD];
-          result = LoginRequiredActionStore.requiredActionsIncludes(id, items);
-        }
-        const obj2 = {
-          errors,
-          submitting,
-          settings,
-          user: currentUser,
-          verified: null,
-          passwordLabel: null,
-          newPasswordLabel: null,
-          showForcedPasswordUpdate: null,
-          hasBannerText: null,
-        };
-        flag = undefined;
-        if (currentUser != null) {
-          flag = currentUser.verified;
-        }
-        if (flag == null) {
-          flag = false;
-        }
-        obj2.verified = flag;
-        const intl = util.intl;
-        obj2.passwordLabel = intl.string(util.t.WBqMRQ);
-        const intl2 = util.intl;
-        obj2.newPasswordLabel = intl2.string(util.t["8dM4FO"]);
-        if (result) {
-          result = flag;
-        }
-        obj2.showForcedPasswordUpdate = result;
-        obj2.hasBannerText = null != UserSettingsAccountUnverifiedHeader.getBannerText(currentUser);
-        return obj2;
-      });
-      const tmpResult = flag(504);
-      const tmpResult2 = flag(1503);
-      const merged = Object.assign(stateFromStoresObject);
-      return closure_11(EditPassword, { navigation: flag(1503).useNavigation() });
+    let id;
+    if (currentUser != null) {
+      id = currentUser.id;
+    }
+    let result = null != id;
+    if (result) {
+      const items = [constants2.UPDATE_PASSWORD];
+      result = LoginRequiredActionStore.requiredActionsIncludes(id, items);
+    }
+    const obj2 = {
+      errors,
+      submitting,
+      settings,
+      user: currentUser,
+      verified: null,
+      passwordLabel: null,
+      newPasswordLabel: null,
+      showForcedPasswordUpdate: null,
+      hasBannerText: null,
     };
+    flag = undefined;
+    if (currentUser != null) {
+      flag = currentUser.verified;
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    obj2.verified = flag;
+    const intl = util.intl;
+    obj2.passwordLabel = intl.string(util.t.WBqMRQ);
+    const intl2 = util.intl;
+    obj2.newPasswordLabel = intl2.string(util.t["8dM4FO"]);
+    if (result) {
+      result = flag;
+    }
+    obj2.showForcedPasswordUpdate = result;
+    obj2.hasBannerText = null != UserSettingsAccountUnverifiedHeader.getBannerText(currentUser);
+    return obj2;
+  });
+  const tmpResult = flag(504);
+  const tmpResult2 = flag(1498);
+  const merged = Object.assign(stateFromStoresObject);
+  return closure_11(EditPassword, { navigation: flag(1498).useNavigation() });
+}

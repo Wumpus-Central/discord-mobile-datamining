@@ -12,7 +12,7 @@ function handleConnectionOpen() {
   const ConnectionOpenTriggerPoint = ConnectionOpenTriggerPoint2.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
-const DebugExperiment = fn(15498);
+const DebugExperiment = fn(15538);
 const Store = initializeDefault.Store;
 class ExperimentTriggerPointStore extends Store {
   constructor() {
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/experiments/ExperimentTrigger
 export default new "initialize"(
   Dispatcher,
   obj,
-  fn(584).DispatchBand.Early,
+  fn(572).DispatchBand.Early,
   prototype,
   ExperimentTriggerPointStore,
   "initialize",

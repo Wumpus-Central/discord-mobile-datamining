@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsQuickActionsScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
 import UserSettings from "../../../../user_settings/UserSettings.tsx";
 import UserSettingsProtoActionCreators from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
@@ -41,13 +41,13 @@ function handleReducedMotionChange(arg0) {
 }
 function launchPasskeyPromoSheet() {
   ModalActionCreatorsDefault.pop();
-  asyncRequireImpl(17557, dependencyMap.paths).then((result) => {
+  asyncRequireImpl(17611, dependencyMap.paths).then((result) => {
     result = result.default.openPasskeyUpsellPromoSheet();
   });
 }
 function showVibingWumpus() {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(11053, dependencyMap.paths),
+    asyncRequireImpl(11281, dependencyMap.paths),
     {
       onClose() {},
     },
@@ -72,7 +72,7 @@ function handleResetDoubleTapState() {
 }
 function launchTotpSetupSuccess() {
   ModalActionCreatorsDefault.pop();
-  const items = [asyncRequireImpl(16550, dependencyMap.paths), asyncRequireImpl(16552, dependencyMap.paths)];
+  const items = [asyncRequireImpl(16601, dependencyMap.paths), asyncRequireImpl(16603, dependencyMap.paths)];
   Promise.all(items).then((result) => {
     const iter = result[Symbol.iterator]();
     let nextResult;
@@ -115,7 +115,7 @@ let closure_34 = async function _handleShowAppRatingModal() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ let closure_34 = async function _handleShowAppRatingModal() {
         const obj = { text: str2, icon: closure_129_0(closure_129_2[35]).WrenchIcon };
         closure_129_1(closure_129_2[34]).open("DEV_APP_RATING_REQUEST", obj);
         c3 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -163,22 +163,22 @@ let closure_34 = async function _handleShowAppRatingModal() {
   }
 };
 const ScrollView = fn(17).ScrollView;
-const ThemeTypes = fn(1084).ThemeTypes;
-const NewUserTypes = fn(14076).NewUserTypes;
-const PremiumConstants = fn(1391);
+const ThemeTypes = fn(1072).ThemeTypes;
+const NewUserTypes = fn(14224).NewUserTypes;
+const PremiumConstants = fn(1386);
 ({ PREMIUM_TYPE_OVERRIDE_OPTIONS: closure_17, UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_18 } = PremiumConstants);
-const VIBING_WUMPUS_MODAL_KEY = fn(11000).VIBING_WUMPUS_MODAL_KEY;
-const SystemThemeState = fn(1207).SystemThemeState;
+const VIBING_WUMPUS_MODAL_KEY = fn(11230).VIBING_WUMPUS_MODAL_KEY;
+const SystemThemeState = fn(1196).SystemThemeState;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
 let closure_24 = createStyles.createStyles(obj2);
 function launchMFA() {
   ModalActionCreatorsDefault.pop();
-  asyncRequireImpl(17541, dependencyMap.paths).then((openMFAModal) => {
+  asyncRequireImpl(17595, dependencyMap.paths).then((openMFAModal) => {
     const obj = { ticket: "ticket", methods: null };
     const items = [
       { type: "webauthn", challenge: "{}" },
@@ -195,732 +195,414 @@ function launchMFA() {
     );
   });
 }
-const ReactCompilerGating = fn(558);
-let obj4 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsQuickActionsScreen.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function DevToolsQuickActionsScreen() {
-      const cResult = locale(stateFromStores[37]).c(102);
-      const tmp4 = closure_24();
-      let obj = locale(stateFromStores[37]);
-      const isCheckpointEnabled = locale(stateFromStores[38]).useIsCheckpointEnabled("DevToolsQuickActionsScreen");
-      showDevWidget(stateFromStores[39])();
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ThemeStore, LocaleStore, UnsyncedUserSettingsStore, DevToolsSettingsStore];
-        class R {
-          constructor() {
-            obj = {
-              theme: closure_1_11.theme,
-              usingSystemTheme: closure_1_12.useSystemTheme === closure_1_20.ON,
-              locale: closure_1_10.locale,
-              showDevWidget: closure_1_14.showDevWidget,
-            };
-            return obj;
-          }
-        }
-        cResult[0] = items;
-        cResult[1] = R;
-        tmp7 = items;
-      } else {
-        [tmp7, tmp8] = cResult;
-      }
-      let obj2 = locale(stateFromStores[38]);
-      const stateFromStoresObject = locale(stateFromStores[40]).useStateFromStoresObject(tmp7, R);
-      ({ theme, usingSystemTheme, locale } = stateFromStoresObject);
-      showDevWidget = stateFromStoresObject.showDevWidget;
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [UserStore];
-        class O {
-          constructor() {
-            return closure_1_13.getCurrentUser();
-          }
-        }
-        cResult[2] = items1;
-        cResult[3] = O;
-        let tmp15 = O;
-        class R {
-          constructor() {
-            obj = {
-              theme: closure_1_11.theme,
-              usingSystemTheme: closure_1_12.useSystemTheme === closure_1_20.ON,
-              locale: closure_1_10.locale,
-              showDevWidget: closure_1_14.showDevWidget,
-            };
-            return obj;
-          }
-        }
-      } else {
-        tmp15 = cResult[3];
-        const tmp14 = cResult[2];
-      }
-      const tmpResult = locale(stateFromStores[40]);
-      stateFromStores = locale(stateFromStores[40]).useStateFromStores(tmp14, tmp15);
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const items2 = [OverridePremiumTypeStore];
-        class B {
-          constructor() {
-            return closure_1_9.getPremiumTypeOverride();
-          }
-        }
-        cResult[4] = items2;
-        cResult[5] = B;
-        let tmp19 = B;
-        class R {
-          constructor() {
-            obj = {
-              theme: closure_1_11.theme,
-              usingSystemTheme: closure_1_12.useSystemTheme === closure_1_20.ON,
-              locale: closure_1_10.locale,
-              showDevWidget: closure_1_14.showDevWidget,
-            };
-            return obj;
-          }
-        }
-      } else {
-        tmp19 = cResult[5];
-        const tmp18 = cResult[4];
-      }
-      const tmpResult4 = locale(stateFromStores[40]);
-      const stateFromStores1 = locale(stateFromStores[40]).useStateFromStores(tmp18, tmp19);
-      const tmpResult5 = locale(stateFromStores[40]);
-      [tmp23, asyncGeneratorStep] = stateFromStores1(setting.useState(false), 2);
-      let IgnoreProfileSpeedbumpDisabled = locale(tmp2[41]).IgnoreProfileSpeedbumpDisabled;
-      setting = IgnoreProfileSpeedbumpDisabled.useSetting();
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const items3 = [AccessibilityStore];
-        class X {
-          constructor() {
-            return closure_1_7.useReducedMotion;
-          }
-        }
-        cResult[6] = items3;
-        cResult[7] = X;
-        let tmp26 = X;
-        class R {
-          constructor() {
-            obj = {
-              theme: closure_1_11.theme,
-              usingSystemTheme: closure_1_12.useSystemTheme === closure_1_20.ON,
-              locale: closure_1_10.locale,
-              showDevWidget: closure_1_14.showDevWidget,
-            };
-            return obj;
-          }
-        }
-      } else {
-        tmp26 = cResult[7];
-        const tmp25 = cResult[6];
-      }
-      const tmp22 = stateFromStores1(setting.useState(false), 2);
-      const stateFromStores2 = locale(stateFromStores[40]).useStateFromStores(tmp25, tmp26);
-      if (cResult[8] !== locale) {
-        class J {
-          constructor() {
-            if ("en-US" !== locale) {
-              tmp4 = closure_1;
-              tmp5 = closure_2;
-              obj2 = closure_1(closure_2[22]);
-              updateLocaleResult = obj2.updateLocale("en-US");
-            } else {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              obj = closure_1(closure_2[22]);
-              str = "pt-BR";
-              updateLocaleResult1 = obj.updateLocale("pt-BR");
-            }
-            return;
-          }
-        }
-        cResult[8] = locale;
-        class X {
-          constructor() {
-            return closure_1_7.useReducedMotion;
-          }
-        }
-        cResult[9] = J;
-      } else {
-        class J {
-          constructor() {
-            if ("en-US" !== locale) {
-              tmp4 = closure_1;
-              tmp5 = closure_2;
-              obj2 = closure_1(closure_2[22]);
-              updateLocaleResult = obj2.updateLocale("en-US");
-            } else {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              obj = closure_1(closure_2[22]);
-              str = "pt-BR";
-              updateLocaleResult1 = obj.updateLocale("pt-BR");
-            }
-            return;
-          }
-        }
-      }
-      if (tmp23) {
-        class J {
-          constructor() {
-            if ("en-US" !== locale) {
-              tmp4 = closure_1;
-              tmp5 = closure_2;
-              obj2 = closure_1(closure_2[22]);
-              updateLocaleResult = obj2.updateLocale("en-US");
-            } else {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              obj = closure_1(closure_2[22]);
-              str = "pt-BR";
-              updateLocaleResult1 = obj.updateLocale("pt-BR");
-            }
-            return;
-          }
-        }
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          class J {
-            constructor() {
-              if ("en-US" !== locale) {
-                tmp4 = closure_1;
-                tmp5 = closure_2;
-                obj2 = closure_1(closure_2[22]);
-                updateLocaleResult = obj2.updateLocale("en-US");
-              } else {
-                tmp = closure_1;
-                tmp2 = closure_2;
-                obj = closure_1(closure_2[22]);
-                str = "pt-BR";
-                updateLocaleResult1 = obj.updateLocale("pt-BR");
-              }
-              return;
-            }
-          }
-          class X {
-            constructor() {
-              return closure_1_7.useReducedMotion;
-            }
-          }
-          const tmp35 = closure_21(locale(tmp2[42]).default, {});
-        } else {
-          class J {
-            constructor() {
-              if ("en-US" !== locale) {
-                tmp4 = closure_1;
-                tmp5 = closure_2;
-                obj2 = closure_1(closure_2[22]);
-                updateLocaleResult = obj2.updateLocale("en-US");
-              } else {
-                tmp = closure_1;
-                tmp2 = closure_2;
-                obj = closure_1(closure_2[22]);
-                str = "pt-BR";
-                updateLocaleResult1 = obj.updateLocale("pt-BR");
-              }
-              return;
-            }
-          }
-        }
-        class X {
-          constructor() {
-            return closure_1_7.useReducedMotion;
-          }
-        }
-      } else {
-        class J {
-          constructor() {
-            if ("en-US" !== locale) {
-              tmp4 = closure_1;
-              tmp5 = closure_2;
-              obj2 = closure_1(closure_2[22]);
-              updateLocaleResult = obj2.updateLocale("en-US");
-            } else {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              obj = closure_1(closure_2[22]);
-              str = "pt-BR";
-              updateLocaleResult1 = obj.updateLocale("pt-BR");
-            }
-            return;
-          }
-        }
-        const container = tmp4.container;
-        if (cResult[11] !== tmp30) {
-          class J {
-            constructor() {
-              if ("en-US" !== locale) {
-                tmp4 = closure_1;
-                tmp5 = closure_2;
-                obj2 = closure_1(closure_2[22]);
-                updateLocaleResult = obj2.updateLocale("en-US");
-              } else {
-                tmp = closure_1;
-                tmp2 = closure_2;
-                obj = closure_1(closure_2[22]);
-                str = "pt-BR";
-                updateLocaleResult1 = obj.updateLocale("pt-BR");
-              }
-              return;
-            }
-          }
-          tmp32[0] = tmp30;
-          class X {
-            constructor() {
-              return closure_1_7.useReducedMotion;
-            }
-          }
-          cResult[12] = tmp32;
-        } else {
-          class J {
-            constructor() {
-              if ("en-US" !== locale) {
-                tmp4 = closure_1;
-                tmp5 = closure_2;
-                obj2 = closure_1(closure_2[22]);
-                updateLocaleResult = obj2.updateLocale("en-US");
-              } else {
-                tmp = closure_1;
-                tmp2 = closure_2;
-                obj = closure_1(closure_2[22]);
-                str = "pt-BR";
-                updateLocaleResult1 = obj.updateLocale("pt-BR");
-              }
-              return;
-            }
-          }
-        }
-        class X {
-          constructor() {
-            return closure_1_7.useReducedMotion;
-          }
-        }
-        const items4 = [tmp4.content, tmp32];
-        cResult[13] = tmp4.content;
-        class R {
-          constructor() {
-            obj = {
-              theme: closure_1_11.theme,
-              usingSystemTheme: closure_1_12.useSystemTheme === closure_1_20.ON,
-              locale: closure_1_10.locale,
-              showDevWidget: closure_1_14.showDevWidget,
-            };
-            return obj;
-          }
-        }
-        cResult[14] = tmp32;
-        cResult[15] = items4;
-      }
-      const tmpResult6 = locale(stateFromStores[40]);
+export default function DevToolsQuickActionsScreen() {
+  const tmp = closure_24();
+  let isCheckpointEnabled = locale(6083).useIsCheckpointEnabled("DevToolsQuickActionsScreen");
+  let obj = locale(6083);
+  const tmp6 = showDevWidget(1626)();
+  const items = [ThemeStore, LocaleStore, UnsyncedUserSettingsStore, DevToolsSettingsStore];
+  const stateFromStoresObject = locale(504).useStateFromStoresObject(items, () => ({
+    theme: theme.theme,
+    usingSystemTheme: useSystemTheme.useSystemTheme === constants.ON,
+    locale: locale.locale,
+    showDevWidget: showDevWidget.showDevWidget,
+  }));
+  ({ usingSystemTheme, locale } = stateFromStoresObject);
+  showDevWidget = stateFromStoresObject.showDevWidget;
+  let obj2 = locale(504);
+  const items1 = [UserStore];
+  dependencyMap = locale(504).useStateFromStores(items1, () => currentUser.getCurrentUser());
+  let obj3 = locale(504);
+  const items2 = [OverridePremiumTypeStore];
+  _slicedToArray = locale(504).useStateFromStores(items2, () => premiumTypeOverride.getPremiumTypeOverride());
+  const obj4 = locale(504);
+  [tmp9, asyncGeneratorStep] = setting.useState(false);
+  let IgnoreProfileSpeedbumpDisabled = locale(4834).IgnoreProfileSpeedbumpDisabled;
+  setting = IgnoreProfileSpeedbumpDisabled.useSetting();
+  const tmp8 = _slicedToArray(setting.useState(false), 2);
+  const items3 = [AccessibilityStore];
+  [][0] = locale;
+  const stateFromStores = locale(504).useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
+  if (tmp9) {
+    return closure_21(locale(17615).default, {});
+  } else {
+    let obj6 = { style: tmp.container, contentContainerStyle: null, children: null };
+    const items4 = [tmp.content];
+    let obj7 = { paddingBottom: tmp.content.padding + tmp6.bottom };
+    items4[1] = obj7;
+    obj6.contentContainerStyle = items4;
+    const obj8 = { title: "General", hasIcons: false, children: null };
+    const obj9 = {
+      label: "Show Dev Widget",
+      value: showDevWidget,
+      onValueChange() {
+        return DevToolsActionCreators.updateDevToolsSettings({ showDevWidget: !showDevWidget });
+      },
+    };
+    obj8.children = closure_21(locale(7363).TableSwitchRow, obj9);
+    const items5 = [closure_21(locale(7054).TableRowGroup, obj8), , , , , , , , ,];
+    const obj10 = { size: tmp5(575).space.PX_16 };
+    items5[1] = closure_21(locale(1188).Spacer, obj10);
+    let str = "Light Theme";
+    if (usingSystemTheme) {
+      str = "(using system theme)";
     }
-  : function DevToolsQuickActionsScreen() {
-      const tmp = closure_24();
-      let isCheckpointEnabled = locale(6076).useIsCheckpointEnabled("DevToolsQuickActionsScreen");
-      let obj = locale(6076);
-      const tmp6 = showDevWidget(1631)();
-      const items = [ThemeStore, LocaleStore, UnsyncedUserSettingsStore, DevToolsSettingsStore];
-      const stateFromStoresObject = locale(504).useStateFromStoresObject(items, () => ({
-        theme: theme.theme,
-        usingSystemTheme: useSystemTheme.useSystemTheme === constants.ON,
-        locale: locale.locale,
-        showDevWidget: showDevWidget.showDevWidget,
-      }));
-      ({ usingSystemTheme, locale } = stateFromStoresObject);
-      showDevWidget = stateFromStoresObject.showDevWidget;
-      let obj2 = locale(504);
-      const items1 = [UserStore];
-      dependencyMap = locale(504).useStateFromStores(items1, () => currentUser.getCurrentUser());
-      let obj3 = locale(504);
-      const items2 = [OverridePremiumTypeStore];
-      _slicedToArray = locale(504).useStateFromStores(items2, () => premiumTypeOverride.getPremiumTypeOverride());
-      const obj4 = locale(504);
-      [tmp9, asyncGeneratorStep] = setting.useState(false);
-      let IgnoreProfileSpeedbumpDisabled = locale(4833).IgnoreProfileSpeedbumpDisabled;
-      setting = IgnoreProfileSpeedbumpDisabled.useSetting();
-      const tmp8 = _slicedToArray(setting.useState(false), 2);
-      const items3 = [AccessibilityStore];
-      [][0] = locale;
-      const stateFromStores = locale(504).useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
-      if (tmp9) {
-        return closure_21(locale(17561).default, {});
-      } else {
-        let obj6 = { style: tmp.container, contentContainerStyle: null, children: null };
-        const items4 = [tmp.content];
-        let obj7 = { paddingBottom: tmp.content.padding + tmp6.bottom };
-        items4[1] = obj7;
-        obj6.contentContainerStyle = items4;
-        const obj8 = { title: "General", hasIcons: false, children: null };
-        const obj9 = {
-          label: "Show Dev Widget",
-          value: showDevWidget,
-          onValueChange() {
-            return DevToolsActionCreators.updateDevToolsSettings({ showDevWidget: !showDevWidget });
-          },
-        };
-        obj8.children = closure_21(locale(7355).TableSwitchRow, obj9);
-        const items5 = [closure_21(locale(7047).TableRowGroup, obj8), , , , , , , , ,];
-        const obj10 = { size: tmp5(587).space.PX_16 };
-        items5[1] = closure_21(locale(1199).Spacer, obj10);
-        let str = "Light Theme";
-        if (usingSystemTheme) {
-          str = "(using system theme)";
-        }
-        const obj11 = { title: "Appearance", hasIcons: true, children: null };
-        const obj12 = {
-          label: str,
-          disabled: usingSystemTheme,
-          icon: closure_21(locale(17136).ThemeLightIcon, {}),
-          value: locale(5012).isThemeLight(stateFromStoresObject.theme),
-          onValueChange: handleThemeChange,
-        };
-        const items6 = [closure_21(locale(7355).TableSwitchRow, obj12)];
-        const obj13 = {
-          label: "Reduced Motion",
-          icon: closure_21(locale(17196).AccessibilityIcon, {}),
-          value: stateFromStores,
-          onValueChange: handleReducedMotionChange,
-        };
-        items6[1] = closure_21(locale(7355).TableSwitchRow, obj13);
-        obj11.children = items6;
-        items5[2] = closure_22(locale(7047).TableRowGroup, obj11);
-        const obj14 = { size: tmp5(587).space.PX_16 };
-        items5[3] = closure_21(locale(1199).Spacer, obj14);
-        const obj15 = {
-          title: "Override Client-Side Premium Type",
-          hasIcons: true,
-          children: closure_17.map((item) => {
-            ({ label, value } = item);
-            locale = value;
-            return closure_1_21(
-              locale(7355).TableSwitchRow,
-              {
-                onValueChange(arg0) {
-                  const result = OverridePremiumTypeActions.updateClientPremiumTypeOverride(
-                    arg0 ? value : collapsedCategories,
-                    closure_2,
-                  );
-                },
-                label,
-                icon: closure_1_21(locale(10187).PencilIcon, {}),
-                value: value === closure_3,
-              },
-              label,
-            );
-          }),
-        };
-        items5[4] = closure_21(locale(7047).TableRowGroup, obj15);
-        const obj16 = { size: tmp5(587).space.PX_16 };
-        items5[5] = closure_21(locale(1199).Spacer, obj16);
-        const obj17 = { title: null, hasIcons: true, children: null };
-        const intl = locale(1125).intl;
-        obj17.title = intl.string(locale(1125).t["Aojq+L"]);
-        let str2 = "Change to en-US";
-        if ("en-US" === locale) {
-          str2 = "Change to pt-BR";
-        }
-        const obj18 = {
-          label: str2,
-          subLabel: "Toggle to a non-english locale for change log testing, etc.",
-          onPress: tmp12,
-          icon: closure_21(locale(9577).LanguageIcon, {}),
-          trailing: closure_21(locale(6972).TableRowArrow, {}),
-        };
-        const items7 = [closure_21(locale(6963).TableRow, obj18), , , , , , , , , , , , , ,];
-        const obj19 = {
-          label: "Reset Double Tap Emoji State",
-          subLabel: "Clears double tap emoji and resets dismissible content.",
-          onPress: handleResetDoubleTapState,
-          icon: closure_21(locale(7111).KeyIcon, {}),
-          trailing: closure_21(locale(6972).TableRowArrow, {}),
-        };
-        items7[1] = closure_21(locale(6963).TableRow, obj19);
-        const obj20 = {
-          label: null,
-          subLabel: "Dismisses dev tools when launching.",
-          onPress: null,
-          icon: null,
-          trailing: null,
-        };
-        const intl2 = locale(1125).intl;
-        obj20.label = intl2.string(locale(1125).t.yoWDXU);
-        obj20.onPress = handleNewUserOnboarding;
-        obj20.icon = closure_21(locale(17432).WrenchIcon, {});
-        obj20.trailing = closure_21(locale(6972).TableRowArrow, {});
-        items7[2] = closure_21(locale(6963).TableRow, obj20);
-        const obj21 = {
-          label: "Launch MFA Challenge Modal",
-          subLabel: "Dismisses dev tools when launching.",
-          onPress: launchMFA,
-          icon: closure_21(locale(7111).KeyIcon, {}),
-          trailing: closure_21(locale(6972).TableRowArrow, {}),
-        };
-        items7[3] = closure_21(locale(6963).TableRow, obj21);
-        const obj22 = {
-          label: "Show Passkey Promo Sheet",
-          subLabel: "Skips eligibility checks. Dismisses dev tools when launching.",
-          onPress: launchPasskeyPromoSheet,
-          icon: closure_21(locale(7111).KeyIcon, {}),
-          trailing: closure_21(locale(6972).TableRowArrow, {}),
-        };
-        items7[4] = closure_21(locale(6963).TableRow, obj22);
-        const obj23 = {
-          label: "Show TOTP Setup Success",
-          subLabel: "Dismisses dev tools when launching.",
-          onPress: launchTotpSetupSuccess,
-          icon: closure_21(locale(7111).KeyIcon, {}),
-          trailing: closure_21(locale(6972).TableRowArrow, {}),
-        };
-        items7[5] = closure_21(locale(6963).TableRow, obj23);
-        const obj24 = {
-          label: "Launch Vibing Wumpus",
-          subLabel: "Vibe with the one and only",
-          onPress: showVibingWumpus,
-          icon: closure_21(locale(7111).KeyIcon, {}),
-          trailing: closure_21(locale(6972).TableRowArrow, {}),
-        };
-        items7[6] = closure_21(locale(6963).TableRow, obj24);
-        let tmp15Result = isCheckpointEnabled;
-        if (isCheckpointEnabled) {
-          const obj25 = {
-            label: "Launch Checkpoint",
-            subLabel: "Look back at your year on Discord",
-            onPress() {
-              const checkpointData = locale(13247).fetchCheckpointData();
-              const obj = locale(13247);
-              locale(13234).openCheckpoint("devtools");
+    const obj11 = { title: "Appearance", hasIcons: true, children: null };
+    const obj12 = {
+      label: str,
+      disabled: usingSystemTheme,
+      icon: closure_21(locale(17190).ThemeLightIcon, {}),
+      value: locale(5016).isThemeLight(stateFromStoresObject.theme),
+      onValueChange: handleThemeChange,
+    };
+    const items6 = [closure_21(locale(7363).TableSwitchRow, obj12)];
+    const obj13 = {
+      label: "Reduced Motion",
+      icon: closure_21(locale(17250).AccessibilityIcon, {}),
+      value: stateFromStores,
+      onValueChange: handleReducedMotionChange,
+    };
+    items6[1] = closure_21(locale(7363).TableSwitchRow, obj13);
+    obj11.children = items6;
+    items5[2] = closure_22(locale(7054).TableRowGroup, obj11);
+    const obj14 = { size: tmp5(575).space.PX_16 };
+    items5[3] = closure_21(locale(1188).Spacer, obj14);
+    const obj15 = {
+      title: "Override Client-Side Premium Type",
+      hasIcons: true,
+      children: closure_17.map((item) => {
+        ({ label, value } = item);
+        locale = value;
+        return closure_1_21(
+          locale(7363).TableSwitchRow,
+          {
+            onValueChange(arg0) {
+              const result = OverridePremiumTypeActions.updateClientPremiumTypeOverride(
+                arg0 ? value : collapsedCategories,
+                closure_2,
+              );
             },
-            icon: closure_21(locale(7111).KeyIcon, {}),
-            trailing: closure_21(locale(6972).TableRowArrow, {}),
-          };
-          tmp15Result = closure_21(locale(6963).TableRow, obj25);
-        }
-        items7[7] = tmp15Result;
-        let tmp15Result4 = isCheckpointEnabled;
-        if (isCheckpointEnabled) {
-          const obj26 = {
-            label: "Reset Checkpoint",
-            onPress: asyncGeneratorStep(async () => {
-              if (dependencyMap === 2) {
-                dependencyMap = 3;
-                throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp3 === 3) {
+            label,
+            icon: closure_1_21(locale(10212).PencilIcon, {}),
+            value: value === closure_3,
+          },
+          label,
+        );
+      }),
+    };
+    items5[4] = closure_21(locale(7054).TableRowGroup, obj15);
+    const obj16 = { size: tmp5(575).space.PX_16 };
+    items5[5] = closure_21(locale(1188).Spacer, obj16);
+    const obj17 = { title: null, hasIcons: true, children: null };
+    const intl = locale(1114).intl;
+    obj17.title = intl.string(locale(1114).t["Aojq+L"]);
+    let str2 = "Change to en-US";
+    if ("en-US" === locale) {
+      str2 = "Change to pt-BR";
+    }
+    const obj18 = {
+      label: str2,
+      subLabel: "Toggle to a non-english locale for change log testing, etc.",
+      onPress: tmp12,
+      icon: closure_21(locale(9600).LanguageIcon, {}),
+      trailing: closure_21(locale(6978).TableRowArrow, {}),
+    };
+    const items7 = [closure_21(locale(6969).TableRow, obj18), , , , , , , , , , , , , ,];
+    const obj19 = {
+      label: "Reset Double Tap Emoji State",
+      subLabel: "Clears double tap emoji and resets dismissible content.",
+      onPress: handleResetDoubleTapState,
+      icon: closure_21(locale(7119).KeyIcon, {}),
+      trailing: closure_21(locale(6978).TableRowArrow, {}),
+    };
+    items7[1] = closure_21(locale(6969).TableRow, obj19);
+    const obj20 = {
+      label: null,
+      subLabel: "Dismisses dev tools when launching.",
+      onPress: null,
+      icon: null,
+      trailing: null,
+    };
+    const intl2 = locale(1114).intl;
+    obj20.label = intl2.string(locale(1114).t.yoWDXU);
+    obj20.onPress = handleNewUserOnboarding;
+    obj20.icon = closure_21(locale(17486).WrenchIcon, {});
+    obj20.trailing = closure_21(locale(6978).TableRowArrow, {});
+    items7[2] = closure_21(locale(6969).TableRow, obj20);
+    const obj21 = {
+      label: "Launch MFA Challenge Modal",
+      subLabel: "Dismisses dev tools when launching.",
+      onPress: launchMFA,
+      icon: closure_21(locale(7119).KeyIcon, {}),
+      trailing: closure_21(locale(6978).TableRowArrow, {}),
+    };
+    items7[3] = closure_21(locale(6969).TableRow, obj21);
+    const obj22 = {
+      label: "Show Passkey Promo Sheet",
+      subLabel: "Skips eligibility checks. Dismisses dev tools when launching.",
+      onPress: launchPasskeyPromoSheet,
+      icon: closure_21(locale(7119).KeyIcon, {}),
+      trailing: closure_21(locale(6978).TableRowArrow, {}),
+    };
+    items7[4] = closure_21(locale(6969).TableRow, obj22);
+    const obj23 = {
+      label: "Show TOTP Setup Success",
+      subLabel: "Dismisses dev tools when launching.",
+      onPress: launchTotpSetupSuccess,
+      icon: closure_21(locale(7119).KeyIcon, {}),
+      trailing: closure_21(locale(6978).TableRowArrow, {}),
+    };
+    items7[5] = closure_21(locale(6969).TableRow, obj23);
+    const obj24 = {
+      label: "Launch Vibing Wumpus",
+      subLabel: "Vibe with the one and only",
+      onPress: showVibingWumpus,
+      icon: closure_21(locale(7119).KeyIcon, {}),
+      trailing: closure_21(locale(6978).TableRowArrow, {}),
+    };
+    items7[6] = closure_21(locale(6969).TableRow, obj24);
+    let tmp15Result = isCheckpointEnabled;
+    if (isCheckpointEnabled) {
+      const obj25 = {
+        label: "Launch Checkpoint",
+        subLabel: "Look back at your year on Discord",
+        onPress() {
+          const checkpointData = locale(13397).fetchCheckpointData();
+          const obj = locale(13397);
+          locale(13384).openCheckpoint("devtools");
+        },
+        icon: closure_21(locale(7119).KeyIcon, {}),
+        trailing: closure_21(locale(6978).TableRowArrow, {}),
+      };
+      tmp15Result = closure_21(locale(6969).TableRow, obj25);
+    }
+    items7[7] = tmp15Result;
+    let tmp15Result4 = isCheckpointEnabled;
+    if (isCheckpointEnabled) {
+      const obj26 = {
+        label: "Reset Checkpoint",
+        onPress: asyncGeneratorStep(async () => {
+          if (dependencyMap === 2) {
+            dependencyMap = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              dependencyMap = 2;
+              if (0 === v1) {
                 if (arg0 === 1) {
+                  dependencyMap = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  const obj3 = { value, done: true };
-                  return obj3;
+                  dependencyMap = 3;
+                  const obj5 = { value, done: true };
+                  return obj5;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  v1 = 1;
+                  dependencyMap = 1;
+                  const obj6 = { value: tmp4(13397).resetCheckpoint(), done: false };
+                  return obj6;
                 }
+              } else if (arg0 === 1) {
+                dependencyMap = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                dependencyMap = 3;
+                const obj7 = { value, done: true };
+                return obj7;
               } else {
-                try {
-                  dependencyMap = 2;
-                  if (0 === v1) {
-                    if (arg0 === 1) {
-                      dependencyMap = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      dependencyMap = 3;
-                      const obj5 = { value, done: true };
-                      return obj5;
-                    } else {
-                      v1 = 1;
-                      dependencyMap = 1;
-                      const obj6 = { value: tmp4(13247).resetCheckpoint(), done: false };
-                      return obj6;
-                    }
-                  } else if (arg0 === 1) {
-                    dependencyMap = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    dependencyMap = 3;
-                    const obj7 = { value, done: true };
-                    return obj7;
-                  } else {
-                    if (value) {
-                      v1(5701).open("CHECKPOINT_RESET", { text: "success" });
-                      const obj2 = v1(5701);
-                    } else {
-                      tmp4(5700).presentError("error");
-                      const obj = tmp4(5700);
-                    }
-                    dependencyMap = 3;
-                  }
-                } catch (tmp14) {
-                  dependencyMap = tmp;
-                  throw tmp14;
+                if (value) {
+                  v1(5707).open("CHECKPOINT_RESET", { text: "success" });
+                  const obj2 = v1(5707);
+                } else {
+                  tmp4(5706).presentError("error");
+                  const obj = tmp4(5706);
                 }
+                dependencyMap = 3;
               }
-            }),
-            icon: closure_21(locale(7111).KeyIcon, {}),
-            trailing: closure_21(locale(6972).TableRowArrow, {}),
-          };
-          tmp15Result4 = closure_21(locale(6963).TableRow, obj26);
-        }
-        items7[8] = tmp15Result4;
-        let tmp15Result5 = isCheckpointEnabled;
-        if (isCheckpointEnabled) {
-          const obj27 = {
-            label: "Launch Checkpoint with fake data",
-            subLabel: "Use mock stats in place of your own",
-            onPress() {
-              const checkpointData = locale(13247).fetchCheckpointData(locale(13248).CheckpointMockStats.DEFAULT);
-              const obj = locale(13247);
-              locale(13234).openCheckpoint("devtools");
-            },
-            icon: closure_21(locale(7111).KeyIcon, {}),
-            trailing: closure_21(locale(6972).TableRowArrow, {}),
-          };
-          tmp15Result5 = closure_21(locale(6963).TableRow, obj27);
-        }
-        items7[9] = tmp15Result5;
-        let tmp15Result6 = isCheckpointEnabled;
-        if (isCheckpointEnabled) {
-          const obj28 = {
-            label: "Launch Checkpoint with No Personal Data",
-            subLabel: "Use the no-shared-data flow with null stats",
-            onPress() {
-              const checkpointData = locale(13247).fetchCheckpointData(
-                locale(13248).CheckpointMockStats.NO_PERSONAL_DATA,
-              );
-              const obj = locale(13247);
-              locale(13234).openCheckpoint("devtools", false);
-            },
-            icon: closure_21(locale(7111).KeyIcon, {}),
-            trailing: closure_21(locale(6972).TableRowArrow, {}),
-          };
-          tmp15Result6 = closure_21(locale(6963).TableRow, obj28);
-        }
-        items7[10] = tmp15Result6;
-        if (isCheckpointEnabled) {
-          const obj29 = {
-            label: "Launch Checkpoint with Zero Data",
-            subLabel: "Use mock stats with every stat at zero",
-            onPress() {
-              const checkpointData = locale(13247).fetchCheckpointData(locale(13248).CheckpointMockStats.ZERO_DATA);
-              const obj = locale(13247);
-              locale(13234).openCheckpoint("devtools");
-            },
-            icon: closure_21(locale(7111).KeyIcon, {}),
-            trailing: closure_21(locale(6972).TableRowArrow, {}),
-          };
-          isCheckpointEnabled = closure_21(locale(6963).TableRow, obj29);
-        }
-        items7[11] = isCheckpointEnabled;
-        const obj30 = {
-          label: "Test captcha",
-          onPress: locale(17563).showCaptchaTestModal,
-          icon: closure_21(locale(7111).KeyIcon, {}),
-          trailing: closure_21(locale(6972).TableRowArrow, {}),
-        };
-        items7[12] = closure_21(locale(6963).TableRow, obj30);
-        const obj31 = {
-          label: "Ignored Profile Speedbump Suppression",
-          subLabel: "Suppresses the speedbump for ignored profiles.",
-          icon: closure_21(locale(7121).EyeSlashIcon, {}),
-          value: setting,
-          onValueChange() {
-            const IgnoreProfileSpeedbumpDisabled = UserSettings.IgnoreProfileSpeedbumpDisabled;
-            return IgnoreProfileSpeedbumpDisabled.updateSetting(!setting);
-          },
-        };
-        items7[13] = closure_21(locale(7355).TableSwitchRow, obj31);
-        const obj32 = {
-          label: "Show App Rating Modal",
-          subLabel:
-            "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.",
-          onPress: handleShowAppRatingModal,
-          icon: closure_21(locale(17432).WrenchIcon, {}),
-        };
-        items7[14] = closure_21(locale(6963).TableRow, obj32);
-        obj17.children = items7;
-        items5[6] = closure_22(locale(7047).TableRowGroup, obj17);
-        const obj33 = { size: tmp5(587).space.PX_16 };
-        items5[7] = closure_21(locale(1199).Spacer, obj33);
-        const obj34 = { title: "Crash Actions", hasIcons: true, children: null };
-        const obj35 = {
-          icon: closure_21(locale(17432).WrenchIcon, {}),
-          label: "Force Native Crash",
-          onPress() {
-            return showDevWidget(1254).crash();
-          },
-        };
-        const items8 = [closure_21(locale(6963).TableRow, obj35), , , , ,];
-        const obj36 = {
-          icon: closure_21(locale(17432).WrenchIcon, {}),
-          label: "Force JS Crash",
-          onPress() {
-            const error = new Error("Force JS Crash");
-            throw error;
-          },
-        };
-        items8[1] = closure_21(locale(6963).TableRow, obj36);
-        const obj37 = {
-          icon: closure_21(locale(17432).WrenchIcon, {}),
-          label: "Force JS Boundary Crash",
-          onPress() {
-            asyncGeneratorStep(true);
-          },
-        };
-        items8[2] = closure_21(locale(6963).TableRow, obj37);
-        const obj38 = {
-          icon: closure_21(locale(17432).WrenchIcon, {}),
-          label: "Force libdiscore Crash",
-          onPress() {
-            locale(562).crash();
-          },
-        };
-        items8[3] = closure_21(locale(6963).TableRow, obj38);
-        const obj39 = {
-          icon: closure_21(locale(17432).WrenchIcon, {}),
-          label: "Force libdiscore Store Crash",
-          subLabel: "Dispatches LIBDISCORE_SIMULATE_CRASH to NoteStore",
-          onPress() {
-            showDevWidget(584).dispatch({ type: "LIBDISCORE_SIMULATE_CRASH" });
-          },
-        };
-        items8[4] = closure_21(locale(6963).TableRow, obj39);
-        const obj40 = {
-          icon: closure_21(locale(17432).WrenchIcon, {}),
-          label: "Force libdiscore Store Error",
-          subLabel: "Dispatches LIBDISCORE_SIMULATE_STORE_ERROR with socket reset",
-          onPress() {
-            const socket2 = socket.getSocket();
-            const obj = showDevWidget(584);
-            showDevWidget(584)
-              .dispatch({ type: "LIBDISCORE_SIMULATE_STORE_ERROR" })
-              .catch((error) => {
-                const result = closure_0.resetSocketOnDispatchError({
-                  error,
-                  action: "LIBDISCORE_SIMULATE_STORE_ERROR",
-                });
-              });
-          },
-        };
-        items8[5] = closure_21(locale(6963).TableRow, obj40);
-        obj34.children = items8;
-        items5[8] = closure_22(locale(7047).TableRowGroup, obj34);
-        const tmp2Result = locale(5012);
-        let isIOSResult = locale(1381).isIOS();
-        if (isIOSResult) {
-          const obj41 = { children: null };
-          const obj42 = { size: tmp5(587).space.PX_16 };
-          const items9 = [closure_21(locale(1199).Spacer, obj42)];
-          const obj43 = { title: "Memory Actions", hasIcons: true, children: null };
-          const obj44 = {
-            icon: closure_21(locale(17432).WrenchIcon, {}),
-            label: "Trigger Memory Warning",
-            subLabel: "Simulates a memory warning to test cache-eviction behavior (e.g. SDWebImage).",
-            onPress() {
-              return showDevWidget(1254).triggerMemoryWarning();
-            },
-          };
-          obj43.children = closure_21(locale(6963).TableRow, obj44);
-          items9[1] = closure_21(locale(7047).TableRowGroup, obj43);
-          obj41.children = items9;
-          isIOSResult = closure_22(closure_23, obj41);
-        }
-        items5[9] = isIOSResult;
-        obj6.children = items5;
-        return closure_22(ScrollView, obj6);
-      }
-      let obj5 = locale(504);
+            } catch (tmp14) {
+              dependencyMap = tmp;
+              throw tmp14;
+            }
+          }
+        }),
+        icon: closure_21(locale(7119).KeyIcon, {}),
+        trailing: closure_21(locale(6978).TableRowArrow, {}),
+      };
+      tmp15Result4 = closure_21(locale(6969).TableRow, obj26);
+    }
+    items7[8] = tmp15Result4;
+    let tmp15Result5 = isCheckpointEnabled;
+    if (isCheckpointEnabled) {
+      const obj27 = {
+        label: "Launch Checkpoint with fake data",
+        subLabel: "Use mock stats in place of your own",
+        onPress() {
+          const checkpointData = locale(13397).fetchCheckpointData(locale(13398).CheckpointMockStats.DEFAULT);
+          const obj = locale(13397);
+          locale(13384).openCheckpoint("devtools");
+        },
+        icon: closure_21(locale(7119).KeyIcon, {}),
+        trailing: closure_21(locale(6978).TableRowArrow, {}),
+      };
+      tmp15Result5 = closure_21(locale(6969).TableRow, obj27);
+    }
+    items7[9] = tmp15Result5;
+    let tmp15Result6 = isCheckpointEnabled;
+    if (isCheckpointEnabled) {
+      const obj28 = {
+        label: "Launch Checkpoint with No Personal Data",
+        subLabel: "Use the no-shared-data flow with null stats",
+        onPress() {
+          const checkpointData = locale(13397).fetchCheckpointData(locale(13398).CheckpointMockStats.NO_PERSONAL_DATA);
+          const obj = locale(13397);
+          locale(13384).openCheckpoint("devtools", false);
+        },
+        icon: closure_21(locale(7119).KeyIcon, {}),
+        trailing: closure_21(locale(6978).TableRowArrow, {}),
+      };
+      tmp15Result6 = closure_21(locale(6969).TableRow, obj28);
+    }
+    items7[10] = tmp15Result6;
+    if (isCheckpointEnabled) {
+      const obj29 = {
+        label: "Launch Checkpoint with Zero Data",
+        subLabel: "Use mock stats with every stat at zero",
+        onPress() {
+          const checkpointData = locale(13397).fetchCheckpointData(locale(13398).CheckpointMockStats.ZERO_DATA);
+          const obj = locale(13397);
+          locale(13384).openCheckpoint("devtools");
+        },
+        icon: closure_21(locale(7119).KeyIcon, {}),
+        trailing: closure_21(locale(6978).TableRowArrow, {}),
+      };
+      isCheckpointEnabled = closure_21(locale(6969).TableRow, obj29);
+    }
+    items7[11] = isCheckpointEnabled;
+    const obj30 = {
+      label: "Test captcha",
+      onPress: locale(17617).showCaptchaTestModal,
+      icon: closure_21(locale(7119).KeyIcon, {}),
+      trailing: closure_21(locale(6978).TableRowArrow, {}),
     };
+    items7[12] = closure_21(locale(6969).TableRow, obj30);
+    const obj31 = {
+      label: "Ignored Profile Speedbump Suppression",
+      subLabel: "Suppresses the speedbump for ignored profiles.",
+      icon: closure_21(locale(7129).EyeSlashIcon, {}),
+      value: setting,
+      onValueChange() {
+        const IgnoreProfileSpeedbumpDisabled = UserSettings.IgnoreProfileSpeedbumpDisabled;
+        return IgnoreProfileSpeedbumpDisabled.updateSetting(!setting);
+      },
+    };
+    items7[13] = closure_21(locale(7363).TableSwitchRow, obj31);
+    const obj32 = {
+      label: "Show App Rating Modal",
+      subLabel:
+        "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.",
+      onPress: handleShowAppRatingModal,
+      icon: closure_21(locale(17486).WrenchIcon, {}),
+    };
+    items7[14] = closure_21(locale(6969).TableRow, obj32);
+    obj17.children = items7;
+    items5[6] = closure_22(locale(7054).TableRowGroup, obj17);
+    const obj33 = { size: tmp5(575).space.PX_16 };
+    items5[7] = closure_21(locale(1188).Spacer, obj33);
+    const obj34 = { title: "Crash Actions", hasIcons: true, children: null };
+    const obj35 = {
+      icon: closure_21(locale(17486).WrenchIcon, {}),
+      label: "Force Native Crash",
+      onPress() {
+        return showDevWidget(1243).crash();
+      },
+    };
+    const items8 = [closure_21(locale(6969).TableRow, obj35), , , , ,];
+    const obj36 = {
+      icon: closure_21(locale(17486).WrenchIcon, {}),
+      label: "Force JS Crash",
+      onPress() {
+        const error = new Error("Force JS Crash");
+        throw error;
+      },
+    };
+    items8[1] = closure_21(locale(6969).TableRow, obj36);
+    const obj37 = {
+      icon: closure_21(locale(17486).WrenchIcon, {}),
+      label: "Force JS Boundary Crash",
+      onPress() {
+        asyncGeneratorStep(true);
+      },
+    };
+    items8[2] = closure_21(locale(6969).TableRow, obj37);
+    const obj38 = {
+      icon: closure_21(locale(17486).WrenchIcon, {}),
+      label: "Force libdiscore Crash",
+      onPress() {
+        locale(1362).crash();
+      },
+    };
+    items8[3] = closure_21(locale(6969).TableRow, obj38);
+    const obj39 = {
+      icon: closure_21(locale(17486).WrenchIcon, {}),
+      label: "Force libdiscore Store Crash",
+      subLabel: "Dispatches LIBDISCORE_SIMULATE_CRASH to NoteStore",
+      onPress() {
+        showDevWidget(572).dispatch({ type: "LIBDISCORE_SIMULATE_CRASH" });
+      },
+    };
+    items8[4] = closure_21(locale(6969).TableRow, obj39);
+    const obj40 = {
+      icon: closure_21(locale(17486).WrenchIcon, {}),
+      label: "Force libdiscore Store Error",
+      subLabel: "Dispatches LIBDISCORE_SIMULATE_STORE_ERROR with socket reset",
+      onPress() {
+        const socket2 = socket.getSocket();
+        const obj = showDevWidget(572);
+        showDevWidget(572)
+          .dispatch({ type: "LIBDISCORE_SIMULATE_STORE_ERROR" })
+          .catch((error) => {
+            const result = closure_0.resetSocketOnDispatchError({ error, action: "LIBDISCORE_SIMULATE_STORE_ERROR" });
+          });
+      },
+    };
+    items8[5] = closure_21(locale(6969).TableRow, obj40);
+    obj34.children = items8;
+    items5[8] = closure_22(locale(7054).TableRowGroup, obj34);
+    const tmp2Result = locale(5016);
+    let isIOSResult = locale(1376).isIOS();
+    if (isIOSResult) {
+      const obj41 = { children: null };
+      const obj42 = { size: tmp5(575).space.PX_16 };
+      const items9 = [closure_21(locale(1188).Spacer, obj42)];
+      const obj43 = { title: "Memory Actions", hasIcons: true, children: null };
+      const obj44 = {
+        icon: closure_21(locale(17486).WrenchIcon, {}),
+        label: "Trigger Memory Warning",
+        subLabel: "Simulates a memory warning to test cache-eviction behavior (e.g. SDWebImage).",
+        onPress() {
+          return showDevWidget(1243).triggerMemoryWarning();
+        },
+      };
+      obj43.children = closure_21(locale(6969).TableRow, obj44);
+      items9[1] = closure_21(locale(7054).TableRowGroup, obj43);
+      obj41.children = items9;
+      isIOSResult = closure_22(closure_23, obj41);
+    }
+    items5[9] = isIOSResult;
+    obj6.children = items5;
+    return closure_22(ScrollView, obj6);
+  }
+  let obj5 = locale(504);
+}

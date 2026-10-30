@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const RPCErrors = fn(1084).RPCErrors;
+const RPCErrors = fn(1072).RPCErrors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
@@ -38,7 +38,7 @@ export function validateOpenInviteDialog(socket) {
         const tmp48 = new RPCErrorDefault(obj3, "Invalid channel");
         throw tmp48;
       } else {
-        guild = GuildStore.getGuild(channel1.getGuildId());
+        const guild = GuildStore.getGuild(channel1.getGuildId());
         if (null == guild) {
           const obj4 = { errorCode: RPCErrors.INVALID_CHANNEL };
           const _HermesInternal3 = HermesInternal;

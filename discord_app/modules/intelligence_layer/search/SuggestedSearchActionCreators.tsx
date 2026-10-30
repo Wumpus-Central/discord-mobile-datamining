@@ -29,99 +29,164 @@ function performSuggestedSearchesFetch() {
   return applyArgumentsResult;
 }
 let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
-  closure_5 = tmp3;
-  closure_132_0 = closure_0;
-  closure_132_1 = closure_1;
-  let tmp30 = closure_2;
-  if (closure_2 === undefined) {
-    tmp30 = null;
-  }
-  closure_132_2 = tmp30;
-  await "Reflect";
-  const guildId = closure_132_0.guildId;
-  const channelIds = closure_132_0.channelIds;
-  const contextualProperties = closure_133_1(closure_133_2[6]).getContextualProperties(closure_132_0, closure_132_1);
-  closure_133_1(closure_133_2[6]);
-  closure_133_1(closure_133_2[7]).dispatch({ type: "SUGGESTED_SEARCHES_FETCH_START", scope: closure_132_0 });
-  const _performance3 = performance;
-  closure_132_6 = performance.now();
-  const HTTP = closure_133_0(closure_133_2[8]).HTTP;
-  const request = {
-    url: closure_133_6.SUGGESTED_SEARCHES(guildId),
-    body: { channel_ids: channelIds, limit: closure_133_5 },
-    oldFormErrors: true,
-    rejectWithError: true,
-  };
-  await HTTP.post(request);
-  if (2 === tmp7) {
-    c7 = 0;
-    closure_132_9 = closure_6;
-    closure_133_8.fail(closure_133_7);
-    closure_133_1(closure_133_2[7]).dispatch({
-      type: "SUGGESTED_SEARCHES_FETCH_FAILURE",
-      scope: closure_132_0,
-      windowSize: closure_132_2,
-    });
-    closure_133_1(closure_133_2[7]);
-    const obj13 = {
-      requestId: null,
-      durationMs: null,
-      responseStatusCode: null,
-      suggestedSearches: null,
-      contextualProperties: null,
-    };
-    const _performance = performance;
-    obj13.durationMs = performance.now() - closure_132_6;
-    let status;
-    if (closure_132_9 != null) {
-      status = closure_132_9.status;
-    }
-    let responseStatusCode = status;
-    if (status == null) {
-      responseStatusCode = null;
-    }
-    obj13.responseStatusCode = responseStatusCode;
-    obj13.suggestedSearches = [];
-    obj13.contextualProperties = contextualProperties;
-    const result = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj13);
+  if (c9 === 2) {
     c9 = 3;
-    closure_133_1(closure_133_2[6]);
-  } else if (arg0 === 1) {
-    c9 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    closure_132_7 = value;
-    closure_133_8.succeed();
-    const suggestions = closure_132_7.body.suggestions;
-    closure_132_8 = suggestions.map((suggestionId) => ({
-      suggestionId: suggestionId.suggestion_id,
-      suggestedSearchText: suggestionId.suggested_search_text,
-    }));
-    closure_133_1(closure_133_2[7]).dispatch({
-      type: "SUGGESTED_SEARCHES_FETCH_SUCCESS",
-      scope: closure_132_0,
-      requestId: closure_132_7.body.request_id,
-      suggestedSearches: closure_132_8,
-      windowSize: closure_132_2,
-    });
-    closure_133_1(closure_133_2[7]);
-    const obj17 = {
-      requestId: closure_132_7.body.request_id,
-      durationMs: null,
-      responseStatusCode: null,
-      suggestedSearches: null,
-      contextualProperties: null,
-    };
-    const _performance2 = performance;
-    obj17.durationMs = performance.now() - closure_132_6;
-    obj17.responseStatusCode = closure_132_7.status;
-    obj17.suggestedSearches = closure_132_8;
-    obj17.contextualProperties = contextualProperties;
-    const result1 = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj17);
-    c7 = 0;
-    closure_133_1(closure_133_2[6]);
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c9 = 2;
+      if (0 === c8) {
+        if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c9 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_5 = tmp3;
+          closure_4 = tmp7;
+          closure_132_2 = undefined;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_1;
+          let tmp30 = closure_2;
+          if (closure_2 === undefined) {
+            tmp30 = null;
+          }
+          closure_132_2 = tmp30;
+          let guildId;
+          let channelIds;
+          let contextualProperties;
+          closure_132_6 = undefined;
+          closure_132_7 = undefined;
+          closure_132_8 = undefined;
+          c8 = 1;
+          c9 = 1;
+          return { value: "flexDirection", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c9 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          guildId = closure_132_0.guildId;
+          channelIds = closure_132_0.channelIds;
+          contextualProperties = closure_133_1(closure_133_2[6]).getContextualProperties(closure_132_0, closure_132_1);
+          const obj14 = closure_133_1(closure_133_2[6]);
+          const obj7 = { type: "SUGGESTED_SEARCHES_FETCH_START", scope: closure_132_0 };
+          closure_133_1(closure_133_2[7]).dispatch(obj7);
+          const _performance3 = performance;
+          closure_132_6 = performance.now();
+          c7 = 1;
+          const HTTP = closure_133_0(closure_133_2[8]).HTTP;
+          const request = {
+            url: closure_133_6.SUGGESTED_SEARCHES(guildId),
+            body: null,
+            oldFormErrors: true,
+            rejectWithError: true,
+          };
+          const obj8 = { channel_ids: channelIds, limit: closure_133_5 };
+          request.body = obj8;
+          c8 = 3;
+          c9 = 1;
+          const obj9 = { value: HTTP.post(request), done: false };
+          return obj9;
+        }
+      } else {
+        if (2 === tmp7) {
+          c7 = 0;
+          closure_132_9 = closure_6;
+          closure_133_8.fail(closure_133_7);
+          const obj11 = { type: "SUGGESTED_SEARCHES_FETCH_FAILURE", scope: closure_132_0, windowSize: closure_132_2 };
+          closure_133_1(closure_133_2[7]).dispatch(obj11);
+          const obj2 = closure_133_1(closure_133_2[7]);
+          const obj13 = {
+            requestId: null,
+            durationMs: null,
+            responseStatusCode: null,
+            suggestedSearches: null,
+            contextualProperties: null,
+          };
+          const _performance = performance;
+          obj13.durationMs = performance.now() - closure_132_6;
+          let status;
+          if (closure_132_9 != null) {
+            status = closure_132_9.status;
+          }
+          let responseStatusCode = status;
+          if (status == null) {
+            responseStatusCode = null;
+          }
+          obj13.responseStatusCode = responseStatusCode;
+          obj13.suggestedSearches = [];
+          obj13.contextualProperties = contextualProperties;
+          const result = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj13);
+          c9 = 3;
+          const obj4 = closure_133_1(closure_133_2[6]);
+        } else if (arg0 === 1) {
+          c9 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_132_7 = value;
+          closure_133_8.succeed();
+          const suggestions = closure_132_7.body.suggestions;
+          closure_132_8 = suggestions.map((suggestionId) => ({
+            suggestionId: suggestionId.suggestion_id,
+            suggestedSearchText: suggestionId.suggested_search_text,
+          }));
+          const obj16 = {
+            type: "SUGGESTED_SEARCHES_FETCH_SUCCESS",
+            scope: closure_132_0,
+            requestId: closure_132_7.body.request_id,
+            suggestedSearches: closure_132_8,
+            windowSize: closure_132_2,
+          };
+          closure_133_1(closure_133_2[7]).dispatch(obj16);
+          const obj10 = closure_133_1(closure_133_2[7]);
+          const obj17 = {
+            requestId: closure_132_7.body.request_id,
+            durationMs: null,
+            responseStatusCode: null,
+            suggestedSearches: null,
+            contextualProperties: null,
+          };
+          const _performance2 = performance;
+          obj17.durationMs = performance.now() - closure_132_6;
+          obj17.responseStatusCode = closure_132_7.status;
+          obj17.suggestedSearches = closure_132_8;
+          obj17.contextualProperties = contextualProperties;
+          const result1 = closure_133_1(closure_133_2[6]).trackSuggestedSearchesReturned(obj17);
+          c7 = 0;
+          const obj12 = closure_133_1(closure_133_2[6]);
+        }
+        c7 = 0;
+        c9 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp31) {
+      closure_6 = tmp31;
+      if (tmp4 === c7) {
+        c9 = tmp2;
+        throw tmp31;
+      } else {
+        c8 = tmp;
+      }
+    }
   }
-  return value;
 };
 let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
   if (c2 === 2) {
@@ -134,7 +199,7 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -164,20 +229,20 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp10) {
       c2 = tmp;
       throw tmp10;
     }
   }
 };
-const SmartSearchConstants = fn(13691);
+const SmartSearchConstants = fn(13838);
 ({
   SUGGESTED_SEARCHES_REQUEST_LIMIT: hasOwnProperty,
   SUGGESTED_SEARCHES_RETRY_MIN_MS,
   SUGGESTED_SEARCHES_RETRY_MAX_MS,
 } = SmartSearchConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: metroRequire, NOOP: closure_7 } = Constants);
 let closure_8 = new BackoffDefault(SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS, true);
 const size = fn(2);

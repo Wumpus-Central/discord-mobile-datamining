@@ -170,7 +170,7 @@ function setChannelActivity(channelId) {
       channel = ChannelStore.getChannel(channelId);
     }
     if (null != channel) {
-      guild = GuildStore.getGuild(channel.guild_id);
+      const guild = GuildStore.getGuild(channel.guild_id);
       const obj5 = useChannelName;
       const channelName = obj5.computeChannelName(channel, UserStore, RelationshipStore, true);
       let str2 = "";
@@ -253,7 +253,7 @@ function indexChannelUpdates(items) {
     while (iter !== undefined) {
       let tmp7 = nextResult;
       if (PermissionStore.can(constants3.VIEW_CHANNEL, nextResult)) {
-        guild = GuildStore.getGuild(tmp7.guild_id);
+        let guild = GuildStore.getGuild(tmp7.guild_id);
         let tmp15 = guild;
         id = undefined;
         if (guild != null) {
@@ -290,7 +290,7 @@ function indexChannelUpdates(items) {
     }
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ME: c10, ChannelTypes: closure_11, Links: closure_12, Permissions: map1, Routes: closure_14 } = Constants);
 const constants4 = { GUILD: 100, [100]: "GUILD", DM: 75, [75]: "DM", OTHER_CHANNEL: 50, [50]: "OTHER_CHANNEL" };
 class NativeIntentsManager extends tmp3 {
@@ -370,7 +370,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   obj2.disable = !IntentsBindingsDefault.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj2).searchEnabled) {
     if (PermissionStore.can(constants3.VIEW_CHANNEL, channel)) {
-      guild = GuildStore.getGuild(channel.guild_id);
+      const guild = GuildStore.getGuild(channel.guild_id);
       if (null != guild) {
         if (null == guild) {
           id = undefined;

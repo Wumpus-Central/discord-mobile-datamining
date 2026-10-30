@@ -1,15 +1,15 @@
 // discord_app/modules/activities/utils/getPlatform.tsx
-import Server from "../../../flow/Server.tsx";
+import EmbeddedActivitySupportedPlatforms from "../../../../discord_common/js/shared/shared-constants/EmbeddedActivitySupportedPlatforms.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 
 export default function getPlatform(oS) {
   if ("android" === oS) {
-    return Server.EmbeddedActivitySupportedPlatforms.ANDROID;
+    return EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.ANDROID;
   } else if ("ios" === oS) {
-    return Server.EmbeddedActivitySupportedPlatforms.IOS;
+    return EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
-    return Server.EmbeddedActivitySupportedPlatforms.WEB;
+    return EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.WEB;
   }
 }

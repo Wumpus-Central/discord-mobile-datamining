@@ -134,7 +134,7 @@ function handleChannelRTCUpdate() {
   closure_11();
   return false;
 }
-const ParticipantTypes = fn(5670).ParticipantTypes;
+const ParticipantTypes = fn(5676).ParticipantTypes;
 let closure_11 = apply.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
 class VideoSpeakerStoreClass extends Store {}
@@ -144,9 +144,9 @@ prototype["initialize"] = function initialize() {
   const items = [ChannelRTCStore, ApplicationStreamingStore];
   this.syncWith(items, handleChannelRTCUpdate);
 };
-prototype["getSpeaker"] = function getSpeaker(_undefined) {
-  if (global !== _undefined) {
-    global = _undefined;
+prototype["getSpeaker"] = function getSpeaker(isActivityViewFocused) {
+  if (global !== isActivityViewFocused) {
+    global = isActivityViewFocused;
     c3 = null;
     updateSpeaker(false);
   }

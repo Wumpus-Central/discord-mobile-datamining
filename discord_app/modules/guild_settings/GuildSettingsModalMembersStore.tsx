@@ -13,7 +13,7 @@ function handleStopEditingRoles() {
 function handleChangeNicknameSuccess() {
   error = null;
 }
-const FormStates = fn(1084).FormStates;
+const FormStates = fn(1072).FormStates;
 let SUBMITTING = null;
 let c3 = false;
 let error = null;

@@ -4,7 +4,7 @@ import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Record from "../lib/Record.tsx";
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ IRREDEEMABLE_PAYMENT_SOURCES: c2, PaymentGateways: c3, PaymentSourceTypes: closure_4 } = Constants);
 class PaymentSourceRecord extends tmp2 {
   constructor(arg0) {

@@ -65,54 +65,22 @@ function getMuteStates(voiceStateStore) {
   obj.mute = flag;
   return obj;
 }
-const Permissions = fn(1084).Permissions;
-const ReactCompilerGating = fn(558);
+const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useMuteStates(channel) {
-      _require = channel;
-      const cResult = require("c").c(3);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== channel) {
-        const fn = function l() {
-          return getMuteStates({
-            channel,
-            authenticationStore: AuthenticationStore,
-            voiceStateStore: VoiceStateStore,
-            mediaEngineStore: MediaEngineStore,
-            permissionStore: PermissionStore,
-            impersonateStore: ImpersonateStore,
-          });
-        };
-        cResult[1] = channel;
-        cResult[2] = fn;
-        let tmp10 = fn;
-      } else {
-        tmp10 = cResult[2];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStoresObject(first, tmp10);
-    }
-  : function useMuteStates(channel) {
-      _require = channel;
-      const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
-      return require("initialize").useStateFromStoresObject(items, () =>
-        getMuteStates({
-          channel,
-          authenticationStore: AuthenticationStore,
-          voiceStateStore: VoiceStateStore,
-          mediaEngineStore: MediaEngineStore,
-          permissionStore: PermissionStore,
-          impersonateStore: ImpersonateStore,
-        }),
-      );
-    };
+export default function useMuteStates(channel) {
+  _require = channel;
+  const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
+  return require("initialize").useStateFromStoresObject(items, () =>
+    getMuteStates({
+      channel,
+      authenticationStore: AuthenticationStore,
+      voiceStateStore: VoiceStateStore,
+      mediaEngineStore: MediaEngineStore,
+      permissionStore: PermissionStore,
+      impersonateStore: ImpersonateStore,
+    }),
+  );
+}
 export { getMuteStates };

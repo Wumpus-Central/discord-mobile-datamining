@@ -1,13 +1,13 @@
 // discord_app/utils/ColorUtils.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
-import _modDef683 from "../../_runtime/metro/00683__.js";
+import _modDef671 from "../../_runtime/metro/00671__.js";
 import util from "../intl/index.native.tsx";
 import utils_ColorDefault from "Color.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 
 require = fn;
 function hexToRgba(PRIMARY_760) {
-  const tmp = _slicedToArray(_modDef683(PRIMARY_760).rgba(), 4);
+  const tmp = _slicedToArray(_modDef671(PRIMARY_760).rgba(), 4);
   return { r: tmp[0], g: tmp[1], b: tmp[2], a: tmp[3] };
 }
 function rgbToHslObject(items, items2, items3) {
@@ -241,15 +241,15 @@ function sortColors(hsv, hsv2) {
   hsv2 = hsv2.hsv;
   return hsv2.s + hsv2.v - (hsv.s + hsv.v);
 }
-function hexWithOpacity(color, c3) {
-  if (7 === color.length) {
+function hexWithOpacity(BLACK, c3) {
+  if (7 === BLACK.length) {
     const str1 = 255 * c3 | 0.toString(16);
     const str14 = 255 * c3 | 0;
-    return color + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
+    return BLACK + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
   } else {
-    let substr = color;
-    if ("#" === color.charAt(0)) {
-      substr = color.slice(1);
+    let substr = BLACK;
+    if ("#" === BLACK.charAt(0)) {
+      substr = BLACK.slice(1);
     }
     if (3 === substr.length) {
       const charAtResult = substr.charAt(0);
@@ -294,9 +294,9 @@ function hexWithOpacity(color, c3) {
 hexWithOpacity.__closure = {};
 hexWithOpacity.__workletHash = 1677228068105;
 hexWithOpacity.__initData = { code: "function hexWithOpacity_ColorUtilsTsx1(color,value){if(color.length===7){const alpha=value*255|0;return color+alpha.toString(16).padStart(2,'0').toUpperCase();}const hex=color.charAt(0)==='#'?color.slice(1):color;let r;let g;let b;let a;switch(hex.length){case 3:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);r+=r;g+=g;b+=b;a=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+a;case 4:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);a=hex.charAt(3);r+=r;g+=g;b+=b;a+=a;const alpha4=parseInt(a,16)/255*value;const alpha4Hex=(alpha4*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+alpha4Hex;case 6:const alpha6=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+hex+alpha6;case 8:const baseColor='#'+hex.slice(0,6);const existingAlpha=parseInt(hex.slice(6),16)/255;const alpha8=(existingAlpha*value*255|0).toString(16).padStart(2,'0').toUpperCase();return baseColor+alpha8;default:throw new Error('Invalid hex color format');}}" };
-function hexToRgbaString(tmpResult13, opacity) {
+function hexToRgbaString(colorHex, opacity) {
   let tmp = opacity;
-  const tmp2 = _slicedToArray(_modDef683(tmpResult13).rgba(), 4);
+  const tmp2 = _slicedToArray(_modDef671(colorHex).rgba(), 4);
   [tmp3, tmp4, tmp5] = tmp2;
   if (opacity == null) {
     tmp = tmp2[3];
@@ -402,20 +402,20 @@ let result = size.fileFinishedImporting("utils/ColorUtils.tsx");
 
 export { hexWithOpacity };
 export function hexToRgb(PRIMARY_800) {
-  const tmp = _slicedToArray(_modDef683(PRIMARY_800).rgb(), 3);
+  const tmp = _slicedToArray(_modDef671(PRIMARY_800).rgb(), 3);
   return { r: tmp[0], g: tmp[1], b: tmp[2] };
 }
 export function hexToRgbArray(arg0) {
-  obj = _modDef683(arg0);
+  obj = _modDef671(arg0);
   const items = [, , ];
-  [arr[0], arr[1], arr[2]] = _modDef683(arg0).rgb();
+  [arr[0], arr[1], arr[2]] = _modDef671(arg0).rgb();
   return items;
 }
 export { hexToRgba };
 export { hexToRgbaString };
-export function hexOpacityToRgba(backgroundColor, dividerOpacity) {
-  const tmp = _slicedToArray(_modDef683(backgroundColor).rgb(), 3);
-  return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + dividerOpacity + ")";
+export function hexOpacityToRgba(backgroundColor, c6) {
+  const tmp = _slicedToArray(_modDef671(backgroundColor).rgb(), 3);
+  return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + c6 + ")";
 }
 export { rgbToHslObject };
 export function hslToString(arg0, arg1, arg2) {
@@ -490,7 +490,7 @@ export function getComplimentaryPaletteForColor(items, arg1) {
         sum2 = diff1 + 360;
       }
       let tmp8 = hslToHex(sum2, sum, sum1);
-      obj = _modDef683(tmp8);
+      obj = _modDef671(tmp8);
       let tmp12 = _slicedToArray(obj.rgb(), 3);
       let items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = tmp12;

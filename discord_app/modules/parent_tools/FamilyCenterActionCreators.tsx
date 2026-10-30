@@ -27,7 +27,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -100,7 +100,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -139,7 +139,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -161,7 +161,7 @@ let closure_12 = async function _updateLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -205,7 +205,7 @@ let closure_12 = async function _updateLinkForUserId() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -228,7 +228,7 @@ let closure_13 = async function _removeLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -273,7 +273,7 @@ let closure_13 = async function _removeLinkForUserId() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -293,7 +293,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -339,7 +339,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -358,7 +358,7 @@ let closure_15 = async function _shareIarWithParents() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -388,7 +388,7 @@ let closure_15 = async function _shareIarWithParents() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -396,14 +396,22 @@ let closure_15 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(7704).FamilyCenterAction;
-const Constants = fn(1084);
+const FamilyCenterAction = fn(7709).FamilyCenterAction;
+const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActionCreators.tsx");
 
 export default {
-  initialPageLoad() {
+  initialPageLoad(arg0) {
+    let obj = arg0;
+    if (arg0 === undefined) {
+      obj = {};
+    }
+    let flag = obj.showLoading;
+    if (flag === undefined) {
+      flag = true;
+    }
     return (async () => {
       if (c16 === 2) {
         c16 = 3;
@@ -415,7 +423,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -438,11 +446,16 @@ export default {
               let users2;
               let age_group;
               closure_140_6 = undefined;
-              DispatcherDefault.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+              if (flag) {
+                actions(users[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+                const obj13 = actions(users[5]);
+              }
               c14 = 1;
-              const HTTP = require("HTTPUtils").HTTP;
-              const obj5 = { url: constants.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: null };
-              obj5.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+              const HTTP = totals(users[6]).HTTP;
+              const obj5 = {
+                url: totalSpendCurrency.FAMILY_CENTER_TEEN_ACTIVITY_ME,
+                rejectWithError: totals(users[6]).rejectWithMigratedError(),
+              };
               c15 = 2;
               c16 = 1;
               const obj7 = { value: HTTP.get(obj5), done: false };
@@ -450,7 +463,7 @@ export default {
             }
           } else if (1 === tmp7) {
             c14 = 0;
-            closure_141_1(closure_141_2[5]).dispatch({ type: "FAMILY_CENTER_INITIAL_LOAD_FAILURE" });
+            actions(users[5]).dispatch({ type: "FAMILY_CENTER_INITIAL_LOAD_FAILURE" });
             c16 = 3;
             return { value: null, done: true };
           } else {
@@ -496,7 +509,7 @@ export default {
                   range_start_id = teen_audit_log.range_start_id;
                 }
                 obj9.rangeStartId = range_start_id;
-                let totals;
+                totals = undefined;
                 if (teen_audit_log != null) {
                   totals = teen_audit_log.totals;
                 }
@@ -504,7 +517,7 @@ export default {
                   totals = {};
                 }
                 obj9.totals = totals;
-                let actions;
+                actions = undefined;
                 if (teen_audit_log != null) {
                   actions = teen_audit_log.actions;
                 }
@@ -512,7 +525,7 @@ export default {
                   actions = [];
                 }
                 obj9.actions = actions;
-                let users;
+                users = undefined;
                 if (teen_audit_log != null) {
                   users = teen_audit_log.users;
                 }
@@ -565,7 +578,7 @@ export default {
                     currency = total_spend2.currency;
                   }
                 }
-                let totalSpendCurrency = currency;
+                totalSpendCurrency = currency;
                 if (currency == null) {
                   totalSpendCurrency = null;
                 }
@@ -606,7 +619,7 @@ export default {
                 if (tmp49) {
                   c15 = 3;
                   c16 = 1;
-                  const obj10 = { value: closure_141_8(closure_140_6.invoices), done: false };
+                  const obj10 = { value: spendingLimit(closure_140_6.invoices), done: false };
                   return obj10;
                 }
               }
@@ -628,30 +641,30 @@ export default {
                 const obj = { value, done: true };
                 return obj;
               }
-              const obj13 = {
+              const obj14 = {
                 type: "FAMILY_CENTER_INITIAL_LOAD",
                 familyCenterTeenActivity: closure_140_6,
                 linkedUsers: linked_users,
                 users: users2,
                 ageGroup: age_group,
               };
-              closure_141_1(closure_141_2[5]).dispatch(obj13);
+              actions(users[5]).dispatch(obj14);
               let tmp67 = null != body.restricted_schedule;
               if (tmp67) {
                 tmp67 = null != closure_140_6.teenId;
               }
               if (tmp67) {
-                const obj14 = {
+                const obj16 = {
                   type: "USER_RESTRICTED_SCHEDULE_UPDATE",
                   userId: closure_140_6.teenId,
                   restrictedSchedule: body.restricted_schedule,
                 };
-                closure_141_1(closure_141_2[5]).dispatch(obj14);
-                const obj6 = closure_141_1(closure_141_2[5]);
+                actions(users[5]).dispatch(obj16);
+                const obj6 = actions(users[5]);
               }
               c16 = 3;
-              const obj15 = { value: closure_140_6, done: true };
-              return obj15;
+              const obj17 = { value: closure_140_6, done: true };
+              return obj17;
             }
             let tmp54 = null != closure_140_6.gifts;
             if (tmp54) {
@@ -660,14 +673,14 @@ export default {
             if (tmp54) {
               c15 = 4;
               c16 = 1;
-              const obj17 = { value: closure_141_10(closure_140_6.gifts), done: false };
-              return obj17;
+              const obj18 = { value: invoices(closure_140_6.gifts), done: false };
+              return obj18;
             }
           }
-        } catch (tmp90) {
+        } catch (tmp97) {
           if (tmp4 === c14) {
             c16 = tmp2;
-            throw tmp90;
+            throw tmp97;
           } else {
             c15 = tmp;
           }
@@ -717,17 +730,17 @@ export default {
     return (async () => {
       const code = tmp2;
       const recipient_id = tmp5;
-      const HTTP = recipient_id(1294).HTTP;
+      const HTTP = recipient_id(1283).HTTP;
       const request = {
         url: constants.FAMILY_CENTER_LINKED_USERS,
         body: { recipient_id, code },
-        rejectWithError: recipient_id(1294).rejectWithMigratedError(),
+        rejectWithError: recipient_id(1283).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       const body = value.body;
       closure_128_1 = { linkedUsers: body.linked_users, users: body.users };
       const merged = Object.assign(closure_128_1);
-      code(584).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" });
+      code(572).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" });
       return closure_128_1;
     })();
   },
@@ -744,7 +757,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1071,7 +1084,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -1086,31 +1099,31 @@ export default {
               return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(4839).getProtoFieldClass(tmp5(1208).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(4840).getProtoFieldClass(tmp5(1197).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              const tmp33Result = tmp5(4839);
+              const tmp33Result = tmp5(4840);
               const modifiedProto = tmp33Result.createModifiedProto(
                 tmp13,
                 closure_2,
                 protoFieldClass,
-                tmp5(1208).PreloadedUserSettings,
+                tmp5(1197).PreloadedUserSettings,
                 tmp2,
               );
               if (null != modifiedProto) {
-                const HTTP = tmp5(1294).HTTP;
+                const HTTP = tmp5(1283).HTTP;
                 const request = {
                   url: closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(tmp5),
                   body: null,
                   rejectWithError: null,
                 };
-                const obj4 = { settings: tmp5(1245).protoToB64(tmp5(1208).PreloadedUserSettings, modifiedProto) };
+                const obj4 = { settings: tmp5(1234).protoToB64(tmp5(1197).PreloadedUserSettings, modifiedProto) };
                 request.body = obj4;
-                const tmp33Result3 = tmp5(1245);
-                request.rejectWithError = tmp5(1294).rejectWithMigratedError();
+                const tmp33Result3 = tmp5(1234);
+                request.rejectWithError = tmp5(1283).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
                 const obj5 = { value: HTTP.patch(request), done: false };
@@ -1118,7 +1131,7 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = tmp5(4839);
+              const obj12 = tmp5(4840);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -1130,8 +1143,8 @@ export default {
               userId: closure_129_0,
               settings: settings2,
             };
-            tmp2(584).dispatch(obj6);
-            const obj = tmp2(584);
+            tmp2(572).dispatch(obj6);
+            const obj = tmp2(572);
           }
           c3 = 3;
           const obj7 = { value, done: true };

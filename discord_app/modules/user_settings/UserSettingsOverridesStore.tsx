@@ -16,7 +16,7 @@ function updateExistingSettings() {
   }
   obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
   const textAndImages2 = settings.textAndImages;
-  value3 = undefined;
+  let value3;
   if (textAndImages2 != null) {
     if (textAndImages2.animateEmoji != null) {
       value3 = iter2.value;
@@ -24,7 +24,7 @@ function updateExistingSettings() {
   }
   obj.animateEmoji = value3;
   const textAndImages3 = settings.textAndImages;
-  value4 = undefined;
+  let value4;
   if (textAndImages3 != null) {
     if (textAndImages3.animateStickers != null) {
       value4 = iter3.value;
@@ -87,7 +87,7 @@ obj = {
     }
     obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
     const textAndImages2 = settings.textAndImages;
-    value3 = undefined;
+    let value3;
     if (textAndImages2 != null) {
       if (textAndImages2.animateEmoji != null) {
         value3 = iter2.value;
@@ -95,7 +95,7 @@ obj = {
     }
     obj.animateEmoji = value3;
     const textAndImages3 = settings.textAndImages;
-    value4 = undefined;
+    let value4;
     if (textAndImages3 != null) {
       if (textAndImages3.animateStickers != null) {
         value4 = iter3.value;

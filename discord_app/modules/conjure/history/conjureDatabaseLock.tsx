@@ -2,9 +2,6 @@
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-
-const require = fn;
 function notify() {
   for (const item10005 of set1) {
     let item10005Result = item10005();
@@ -18,7 +15,7 @@ function subscribe(arg0) {
     set1.delete(closure_0);
   };
 }
-let closure_8 = async function _withConjureDatabaseLock(arg0) {
+let closure_6 = async function _withConjureDatabaseLock(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -29,7 +26,7 @@ let closure_8 = async function _withConjureDatabaseLock(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -55,29 +52,29 @@ let closure_8 = async function _withConjureDatabaseLock(arg0) {
             c5 = 1;
             c6 = 2;
             c7 = 1;
-            const obj4 = { value: dependencyMap(), done: false };
+            const obj4 = { value: noop(), done: false };
             return obj4;
           }
         }
       } else if (1 === tmp7) {
         c5 = 0;
-        closure_131_4.delete(closure_130_0);
-        closure_131_6();
+        closure_131_2.delete(closure_130_0);
+        closure_131_4();
         throw closure_4;
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 0;
-        closure_131_4.delete(closure_130_0);
-        closure_131_6();
+        closure_131_2.delete(closure_130_0);
+        closure_131_4();
         c7 = 3;
         const obj5 = { value, done: true };
         return obj5;
       } else {
         c5 = 0;
-        closure_131_4.delete(closure_130_0);
-        closure_131_6();
+        closure_131_2.delete(closure_130_0);
+        closure_131_4();
         c7 = 3;
         const obj = { value, done: true };
         return obj;
@@ -95,13 +92,12 @@ let closure_8 = async function _withConjureDatabaseLock(arg0) {
 };
 const set = new Set();
 const set1 = new Set();
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/conjureDatabaseLock.tsx");
 
 export function withConjureDatabaseLock() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -109,27 +105,11 @@ export function withConjureDatabaseLock() {
   }
   return applyArgumentsResult;
 }
-export const useConjureDatabaseBusy = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureDatabaseBusy(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(2);
-      if (cResult[0] !== arg0) {
-        const fn = function o() {
-          return set.has(closure_0);
-        };
-        cResult[0] = arg0;
-        cResult[1] = fn;
-        let tmp2 = fn;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return noop.useSyncExternalStore(subscribe, tmp2);
-    }
-  : function useConjureDatabaseBusy(arg0) {
-      closure_0 = arg0;
-      const items = [arg0];
-      return noop.useSyncExternalStore(
-        subscribe,
-        noop.useCallback(() => set.has(closure_0), items),
-      );
-    };
+export function useConjureDatabaseBusy(projectId) {
+  closure_0 = projectId;
+  const items = [projectId];
+  return noop.useSyncExternalStore(
+    subscribe,
+    noop.useCallback(() => set.has(closure_0), items),
+  );
+}

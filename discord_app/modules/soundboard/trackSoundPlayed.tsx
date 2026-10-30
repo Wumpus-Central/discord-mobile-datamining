@@ -7,9 +7,9 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(6048).DEFAULT_SOUND_GUILD_ID;
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const PremiumConstants = fn(1391);
+const DEFAULT_SOUND_GUILD_ID = fn(6055).DEFAULT_SOUND_GUILD_ID;
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const PremiumConstants = fn(1386);
 ({ AnalyticsPremiumFeatureNames: closure_9, AnalyticsPremiumFeatureTiers: c10 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");
@@ -44,7 +44,7 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId, so
   }
   const obj = {
     feature_name: constants.SOUNDBOARD_PLAY,
-    feature_tier: tmp6 ? v65535.PREMIUM_STANDARD : v65535.FREE,
+    feature_tier: tmp6 ? constants.PREMIUM_STANDARD : constants.FREE,
     guild_id: guildId,
     home_guild_id: guildId.guildId,
     location_stack,

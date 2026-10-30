@@ -8,7 +8,7 @@ import ConjureDebugStore from "ConjureDebugStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let obj3 = { web: { location: "runtime_frame", code: fn(10830).ConjureErrorCodes.RUNTIME_FRAME_ERROR }, preview: null };
+let obj3 = { web: { location: "runtime_frame", code: fn(10853).ConjureErrorCodes.RUNTIME_FRAME_ERROR }, preview: null };
 let obj = {
   log(log, projectId) {
     projectId = projectId.projectId;
@@ -255,8 +255,8 @@ let obj2 = {
     }
   },
 };
-let obj4 = { location: "runtime_frame", code: fn(10830).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
-obj3.preview = { location: "runtime_worker", code: fn(10830).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
+let obj4 = { location: "runtime_frame", code: fn(10853).ConjureErrorCodes.RUNTIME_FRAME_ERROR };
+obj3.preview = { location: "runtime_worker", code: fn(10853).ConjureErrorCodes.RUNTIME_WORKER_ERROR };
 let c5 = 10;
 const map = new Map();
 let set = new Set();
@@ -375,7 +375,7 @@ export function requestConjureDebugGitInfo(projectId) {
     const obj5 = require("Dispatcher");
   }
 }
-export function restartConjureAgent(projectId, first1) {
+export function restartConjureAgent(projectId, clear_alarm) {
   DispatcherDefault.dispatch({ type: "CONJURE_RESTART_AGENT_REQUESTED", projectId });
   const obj2 = { type: "CONJURE_RESTART_AGENT_REQUESTED", projectId };
   const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
@@ -385,7 +385,7 @@ export function restartConjureAgent(projectId, first1) {
       const error = new Error("Not connected");
       throw error;
     } else {
-      conjureSocket.sendRestartAgent(first1);
+      conjureSocket.sendRestartAgent(clear_alarm);
     }
   } catch (err) {
     const obj4 = {

@@ -1,8 +1,5 @@
 // discord_app/modules/conjure/title_bar/useConjureTitleBarStatus.tsx
-import conjureUnread from "../chat/conjureUnread.tsx";
-import conjureHomeProjectState2 from "../home/conjureHomeProjectState.tsx";
 import useConjureHomeOwnProjectsDefault from "../home/useConjureHomeOwnProjects.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -20,82 +17,55 @@ function summaryEqual(status, status2) {
   }
   return kind === kind1 && status.hasUnread === status2.hasUnread;
 }
-function summarize(arg0) {
-  let flag = false;
-  let flag2 = false;
-  let flag3 = false;
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let obj = conjureHomeProjectState2;
-    let conjureHomeProjectState = obj.readConjureHomeProjectState(nextResult.id);
-    if ("in_progress" === conjureHomeProjectState) {
-      flag = true;
-    } else if ("unread" === tmp6) {
-      let tmp3Result = conjureUnread;
-      if (tmp3Result.getConjureProjectMentionCount(tmp2.id) > 0) {
-        flag2 = true;
-      } else {
-        flag3 = true;
-      }
-    }
-    continue;
-  }
-  if (flag) {
-    let obj2 = { kind: "working" };
-  } else if (flag2) {
-    obj2 = { kind: "needs_input" };
-  } else {
-    obj2 = null;
-    if (flag3) {
-      obj2 = { kind: "unread" };
-    }
-  }
-  const obj3 = { status: obj2, hasUnread: null };
-  if (!flag2) {
-    flag2 = flag3;
-  }
-  obj3.hasUnread = flag2;
-  return obj3;
-}
 const result = size.fileFinishedImporting("modules/conjure/title_bar/useConjureTitleBarStatus.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureTitleBarStatus() {
-      const cResult = require("c").c(3);
-      const tmp4 = useConjureHomeOwnProjectsDefault();
-      _require = tmp4;
-      if (cResult[0] !== tmp4) {
-        const fn = function t() {
-          return summarize(closure_0);
-        };
-        const items = [tmp4];
-        cResult[0] = tmp4;
-        cResult[1] = fn;
-        cResult[2] = items;
-        let tmp6 = items;
-        let tmp5 = fn;
-      } else {
-        tmp5 = cResult[1];
-        tmp6 = cResult[2];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(
-        require("conjureHomeProjectState").CONJURE_HOME_PROJECT_STATE_STORES,
-        tmp5,
-        tmp6,
-        summaryEqual,
-      );
-    }
-  : function useConjureTitleBarStatus() {
-      const tmp = useConjureHomeOwnProjectsDefault();
-      _require = tmp;
-      const items = [tmp];
-      return require("initialize").useStateFromStores(
-        require("conjureHomeProjectState").CONJURE_HOME_PROJECT_STATE_STORES,
-        () => summarize(closure_0),
-        items,
-        summaryEqual,
-      );
-    };
+export default function useConjureTitleBarStatus() {
+  const tmp = useConjureHomeOwnProjectsDefault();
+  _require = tmp;
+  const items = [tmp];
+  return require("initialize").useStateFromStores(
+    require("conjureHomeProjectState").CONJURE_HOME_PROJECT_STATE_STORES,
+    () =>
+      (function summarize(arg0) {
+        let flag = false;
+        let flag2 = false;
+        let flag3 = false;
+        const iter = arg0[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp2 = nextResult;
+          let obj = closure_1_0(dependencyMap[0]);
+          let conjureHomeProjectState = obj.readConjureHomeProjectState(nextResult.id);
+          if ("in_progress" === conjureHomeProjectState) {
+            flag = true;
+          } else if ("unread" === tmp6) {
+            let tmp3Result = closure_1_0(dependencyMap[1]);
+            if (tmp3Result.getConjureProjectMentionCount(tmp2.id) > 0) {
+              flag2 = true;
+            } else {
+              flag3 = true;
+            }
+          }
+          continue;
+        }
+        if (flag) {
+          let obj2 = { kind: "working" };
+        } else if (flag2) {
+          obj2 = { kind: "needs_input" };
+        } else {
+          obj2 = null;
+          if (flag3) {
+            obj2 = { kind: "unread" };
+          }
+        }
+        const obj3 = { status: obj2, hasUnread: null };
+        if (!flag2) {
+          flag2 = flag3;
+        }
+        obj3.hasUnread = flag2;
+        return obj3;
+      })(closure_0),
+    items,
+    summaryEqual,
+  );
+}

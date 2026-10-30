@@ -20,10 +20,10 @@ function handleThemeChange() {
   }
   return flag;
 }
-const ThemeConstants = fn(1207);
+const ThemeConstants = fn(1196);
 ({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
-const UserSettingsDelay = fn(1094).UserSettingsDelay;
-const ThemeTypes = fn(1084).ThemeTypes;
+const UserSettingsDelay = fn(1082).UserSettingsDelay;
+const ThemeTypes = fn(1072).ThemeTypes;
 let obj = { UNSET: 0, [0]: "UNSET", SET: 1, [1]: "SET" };
 let SET = obj.UNSET;
 obj = THEME_PREFERENCES_MOBILE;
@@ -69,8 +69,8 @@ Object.defineProperty(prototype, "systemTheme", {
   },
   set: undefined,
 });
-prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(stateFromStores) {
-  return obj[stateFromStores];
+prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(systemTheme) {
+  return obj[systemTheme];
 };
 prototype["getSyncedClientTheme"] = function getSyncedClientTheme(systemTheme) {
   return syncedClientThemes[systemTheme];

@@ -1,6 +1,5 @@
 // discord_app/modules/age_assurance/native/AgeVerificationAuthSession.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import c from "../../../../_runtime/00576_c.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import NativeBrowserManagerModuleIOSDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModuleIOS.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -32,7 +31,7 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -110,15 +109,10 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
   }
 };
 let closure_4 = new LoggerDefault("AgeVerificationAuthSession");
-const module_570 = fn(570);
-let closure_5 = module_570.create(() => ({ isOpen: false }));
+const module_560 = fn(560);
+let closure_5 = module_560.create(() => ({ isOpen: false }));
 let c6 = false;
 let c7 = null;
-const ReactCompilerGating = fn(558);
-const tmp2 = new LoggerDefault("AgeVerificationAuthSession");
-function getIsAgeVerificationAuthSessionOpen() {
-  return closure_5.getState().isOpen;
-}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationAuthSession.tsx");
 
@@ -147,21 +141,9 @@ export function closeAgeVerificationAuthSession() {
 export function getIsAgeVerificationAuthSessionAwaitingResult() {
   return c6;
 }
-export const useIsAgeVerificationAuthSessionOpen = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsAgeVerificationAuthSessionOpen() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function n(isOpen) {
-          return isOpen.isOpen;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return closure_5(first);
-    }
-  : function useIsAgeVerificationAuthSessionOpen() {
-      return closure_5((isOpen) => isOpen.isOpen);
-    };
-export { getIsAgeVerificationAuthSessionOpen };
+export function useIsAgeVerificationAuthSessionOpen() {
+  return closure_5((isOpen) => isOpen.isOpen);
+}
+export function getIsAgeVerificationAuthSessionOpen() {
+  return closure_5.getState().isOpen;
+}

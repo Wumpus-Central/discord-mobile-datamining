@@ -170,7 +170,7 @@ function handleUpdateOptionStates(channelId) {
           lastValidationResult: null,
           optionValue: null,
           location: "r",
-          length: "IconComponent",
+          length: "HermesInternal",
         };
         if (tmp.activeOptionName === tmp9) {
           tmp.activeOptionName = null;

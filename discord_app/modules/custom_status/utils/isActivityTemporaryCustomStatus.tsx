@@ -1,12 +1,11 @@
 // discord_app/modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx
-import Constants from "../../../Constants.tsx";
+import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");
 
 export function isActivityTemporaryCustomStatus(type) {
-  let tmp = type.type === ActivityTypes.CUSTOM_STATUS;
+  let tmp = type.type === ActivityTypes.ActivityTypes.CUSTOM_STATUS;
   if (tmp) {
     const timestamps = type.timestamps;
     let end;

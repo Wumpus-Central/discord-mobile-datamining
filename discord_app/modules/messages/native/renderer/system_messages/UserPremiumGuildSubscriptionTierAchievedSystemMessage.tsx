@@ -21,7 +21,7 @@ export function createUserPremiumGuildSubscriptionTierAchievedSystemMessage(mess
   if (null == channel) {
     return UserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
   } else {
-    guild = GuildStore.getGuild(channel.getGuildId());
+    const guild = GuildStore.getGuild(channel.getGuildId());
     if (null == guild) {
       return UserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
     } else {

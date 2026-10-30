@@ -7,10 +7,10 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1386);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const module_570 = fn(570);
-const obj3 = module_570.create(() => ({
+const module_560 = fn(560);
+const obj3 = module_560.create(() => ({
   productId: "",
   initiatedPurchaseFromNewFlow: false,
   isPaymentSuccess: false,
@@ -23,7 +23,7 @@ export const usePremiumPlanPurchasedStore = obj3;
 export function setInitiatedPurchaseFromNewFlow(productId) {
   productId = productId.productId;
   ({ onPaymentStart, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = productId);
-  productId(1271).batchUpdates(() => {
+  productId(1260).batchUpdates(() => {
     obj3.setState({ productId, initiatedPurchaseFromNewFlow: true, onPaymentSuccess, onPaymentDismiss });
   });
   if (onPaymentStart != null) {
@@ -94,8 +94,8 @@ export function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "ix",
-      onPaymentDismiss: "then",
+      onPaymentSuccess: "applicationId",
+      onPaymentDismiss: "paddingHorizontal",
     });
   });
 }

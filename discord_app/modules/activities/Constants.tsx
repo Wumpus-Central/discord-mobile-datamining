@@ -1,12 +1,13 @@
 // discord_app/modules/activities/Constants.tsx
 import Constants2 from "../../Constants.tsx";
 import Server from "../../flow/Server.tsx";
+import EmbeddedActivityOrientationLockState from "../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
+import EmbeddedActivitySupportedPlatforms from "../../../discord_common/js/shared/shared-constants/EmbeddedActivitySupportedPlatforms.tsx";
 import ActivityApplications from "../../../discord_common/js/shared/shared-constants/ActivityApplications.tsx";
 import Constants from "../../../discord_common/js/shared/activities/Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ChannelTypes = Constants2.ChannelTypes;
-const OrientationLockState = Constants.OrientationLockState;
 const items = [
   "1037680572660727838",
   "235088799074484224",
@@ -34,8 +35,9 @@ const obj2 = {
   application_id: "",
   requires_age_gate: false,
   legacy_responsive_aspect_ratio: false,
-  default_orientation_lock_state: OrientationLockState.UNLOCKED,
-  tablet_default_orientation_lock_state: OrientationLockState.UNLOCKED,
+  default_orientation_lock_state: EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.UNLOCKED,
+  tablet_default_orientation_lock_state:
+    EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState.UNLOCKED,
   supported_platforms: null,
   client_platform_config: null,
   has_csp_exception: false,
@@ -43,12 +45,12 @@ const obj2 = {
   blocked_locales: null,
   supported_locales: null,
 };
-const items3 = [Server.EmbeddedActivitySupportedPlatforms.WEB];
+const items3 = [EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.WEB];
 obj2.supported_platforms = items3;
 obj2.client_platform_config = {
-  [Server.EmbeddedActivitySupportedPlatforms.WEB]: obj,
-  [Server.EmbeddedActivitySupportedPlatforms.IOS]: obj,
-  [Server.EmbeddedActivitySupportedPlatforms.ANDROID]: obj,
+  [EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.WEB]: obj,
+  [EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.IOS]: obj,
+  [EmbeddedActivitySupportedPlatforms.EmbeddedActivitySupportedPlatforms.ANDROID]: obj,
 };
 obj2.blocked_locales = [];
 obj2.supported_locales = [];
@@ -127,7 +129,6 @@ export const ActivityTooltipName = {
 };
 export { ActivityIntent };
 export { ActivityLayoutMode };
-export { OrientationLockState };
 export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = {
   UNHANDLED: -1,

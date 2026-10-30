@@ -41,8 +41,8 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   }
   return utils_PriceUtils.formatPrice(result, BGN, localeOverride, obj2);
 }
-const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
-const CurrencyCodes = fn(1095).CurrencyCodes;
+const SubscriptionIntervalTypes = fn(1386).SubscriptionIntervalTypes;
+const CurrencyCodes = fn(1083).CurrencyCodes;
 let closure_5 = Object.freeze(["en-CA", "en-AU", "en-NZ"]);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/PriceUtils.tsx");

@@ -1,184 +1,72 @@
 // discord_app/modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import native from "../../../../design/void/native.tsx";
 import MFAActionCreatorsDefault from "../../../../actions/MFAActionCreators.tsx";
-import showUserSettingsInputAlertDefault from "../../account/native/showUserSettingsInputAlert.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function onConfirmBackups(onSuccess) {
-  const obj = {
-    onSubmit(verificationKey) {
-      return MFAActionCreatorsDefault.confirmViewBackupCodes(verificationKey, false);
-    },
-    title: null,
-    helpText: null,
-    inputLabel: null,
-    closeOnSuccess: true,
-    onSuccess: null,
-    secureTextEntry: false,
-    actionText: null,
-    confirmColor: null,
-    useKeyboardAwareWrapper: true,
-  };
-  const intl = util.intl;
-  obj.title = intl.string(util.t["mGppp/"]);
-  const intl2 = util.intl;
-  obj.helpText = intl2.string(util.t["37S9yU"]);
-  const intl3 = util.intl;
-  obj.inputLabel = intl3.string(util.t.TjGb4Q);
-  obj.onSuccess = onSuccess;
-  const intl4 = util.intl;
-  obj.actionText = intl4.string(util.t.geKm7t);
-  obj.confirmColor = native.ButtonColors.BRAND;
-  showUserSettingsInputAlertDefault(obj);
-}
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useOnViewBackups() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t(arg0) {
-          closure_0 = arg0;
-          const obj = {
-            onSubmit(password) {
-              const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
-              return result.then(() => {
-                closure_2_5(closure_1_0);
-              });
-            },
-            onSuccess,
-            title: null,
-            inputLabel: null,
-            closeOnSuccess: false,
-            actionText: null,
-            confirmColor: null,
-            useKeyboardAwareWrapper: true,
-          };
-          const intl = closure_0(1125).intl;
-          obj.title = intl.string(closure_0(1125).t.PsQmzU);
-          const intl2 = closure_0(1125).intl;
-          obj.inputLabel = intl2.string(closure_0(1125).t["CIGa+7"]);
-          const intl3 = closure_0(1125).intl;
-          obj.actionText = intl3.string(closure_0(1125).t.PDTjLN);
-          obj.confirmColor = closure_0(1199).ButtonColors.BRAND;
-          closure_1(16566)(obj);
-          return false;
-        };
-        cResult[0] = fn;
-        let first = fn;
-      } else {
-        first = cResult[0];
-      }
-      return first;
-    }
-  : function useOnViewBackups() {
-      return noop.useCallback((arg0) => {
-        closure_0 = arg0;
-        const obj = {
-          onSubmit(password) {
-            const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
-            return result.then(() => {
-              closure_2_5(closure_1_0);
-            });
-          },
-          onSuccess,
-          title: null,
-          inputLabel: null,
-          closeOnSuccess: false,
-          actionText: null,
-          confirmColor: null,
-          useKeyboardAwareWrapper: true,
-        };
-        const intl = closure_0(1125).intl;
-        obj.title = intl.string(closure_0(1125).t.PsQmzU);
-        const intl2 = closure_0(1125).intl;
-        obj.inputLabel = intl2.string(closure_0(1125).t["CIGa+7"]);
-        const intl3 = closure_0(1125).intl;
-        obj.actionText = intl3.string(closure_0(1125).t.PDTjLN);
-        obj.confirmColor = closure_0(1199).ButtonColors.BRAND;
-        closure_1(16566)(obj);
-        return false;
-      }, []);
-    };
+const SettingBuilders = fn(11505);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(8387).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(16477).useIs2FAEnabled,
-  usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
-    ? function useOnViewBackups() {
-        const cResult = c.c(1);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function t(arg0) {
-            closure_0 = arg0;
+  parent: fn(8424).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(16528).useIs2FAEnabled,
+  usePreNavigationAction: function useOnViewBackups() {
+    return noop.useCallback((arg0) => {
+      closure_0 = arg0;
+      let obj = {
+        onSubmit(password) {
+          const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
+          return result.then(() => {
             const obj = {
-              onSubmit(password) {
-                const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
-                return result.then(() => {
-                  closure_2_5(closure_1_0);
-                });
+              onSubmit(verificationKey) {
+                return closure_1_1(closure_1_2[3]).confirmViewBackupCodes(verificationKey, false);
               },
-              onSuccess,
               title: null,
+              helpText: null,
               inputLabel: null,
-              closeOnSuccess: false,
+              closeOnSuccess: true,
+              onSuccess: null,
+              secureTextEntry: false,
               actionText: null,
               confirmColor: null,
               useKeyboardAwareWrapper: true,
             };
-            const intl = closure_0(1125).intl;
-            obj.title = intl.string(closure_0(1125).t.PsQmzU);
-            const intl2 = closure_0(1125).intl;
-            obj.inputLabel = intl2.string(closure_0(1125).t["CIGa+7"]);
-            const intl3 = closure_0(1125).intl;
-            obj.actionText = intl3.string(closure_0(1125).t.PDTjLN);
-            obj.confirmColor = closure_0(1199).ButtonColors.BRAND;
-            closure_1(16566)(obj);
-            return false;
-          };
-          cResult[0] = fn;
-          let first = fn;
-        } else {
-          first = cResult[0];
-        }
-        return first;
-      }
-    : function useOnViewBackups() {
-        return noop.useCallback((arg0) => {
-          closure_0 = arg0;
-          const obj = {
-            onSubmit(password) {
-              const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
-              return result.then(() => {
-                closure_2_5(closure_1_0);
-              });
-            },
-            onSuccess,
-            title: null,
-            inputLabel: null,
-            closeOnSuccess: false,
-            actionText: null,
-            confirmColor: null,
-            useKeyboardAwareWrapper: true,
-          };
-          const intl = closure_0(1125).intl;
-          obj.title = intl.string(closure_0(1125).t.PsQmzU);
-          const intl2 = closure_0(1125).intl;
-          obj.inputLabel = intl2.string(closure_0(1125).t["CIGa+7"]);
-          const intl3 = closure_0(1125).intl;
-          obj.actionText = intl3.string(closure_0(1125).t.PDTjLN);
-          obj.confirmColor = closure_0(1199).ButtonColors.BRAND;
-          closure_1(16566)(obj);
-          return false;
-        }, []);
-      },
+            const intl = onSuccess(1114).intl;
+            obj.title = intl.string(onSuccess(1114).t["mGppp/"]);
+            const intl2 = onSuccess(1114).intl;
+            obj.helpText = intl2.string(onSuccess(1114).t["37S9yU"]);
+            const intl3 = onSuccess(1114).intl;
+            obj.inputLabel = intl3.string(onSuccess(1114).t.TjGb4Q);
+            obj.onSuccess = onSuccess;
+            const intl4 = onSuccess(1114).intl;
+            obj.actionText = intl4.string(onSuccess(1114).t.geKm7t);
+            obj.confirmColor = onSuccess(1188).ButtonColors.BRAND;
+            closure_2_1(16618)(obj);
+          });
+        },
+        onSuccess,
+        title: null,
+        inputLabel: null,
+        closeOnSuccess: false,
+        actionText: null,
+        confirmColor: null,
+        useKeyboardAwareWrapper: true,
+      };
+      let intl = closure_0(1114).intl;
+      obj.title = intl.string(closure_0(1114).t.PsQmzU);
+      let intl2 = closure_0(1114).intl;
+      obj.inputLabel = intl2.string(closure_0(1114).t["CIGa+7"]);
+      let intl3 = closure_0(1114).intl;
+      obj.actionText = intl3.string(closure_0(1114).t.PDTjLN);
+      obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
+      closure_1(16618)(obj);
+      return false;
+    }, []);
+  },
   screen: {
     route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
     getComponent() {

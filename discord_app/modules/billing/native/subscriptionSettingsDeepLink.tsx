@@ -34,7 +34,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       let obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
         closure_130_11();
         closure_130_8();
         c5 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
@@ -89,27 +89,27 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       if (closure_129_0) {
         if (closure_129_1) {
           (function showSubscriptionPicker() {
-            closure_0 = closure_0(5247).default;
+            closure_0 = closure_0(5253).default;
             const obj = { key, hasIcons: false, header: null, options: null };
             const obj2 = { title: null, onClose: null };
-            const intl = closure_0(1125).intl;
-            obj2.title = intl.string(closure_0(1125).t["z5YcJ+"]);
+            const intl = closure_0(1114).intl;
+            obj2.title = intl.string(closure_0(1114).t["z5YcJ+"]);
             obj2.onClose = function onClose() {
               closure_0.hideActionSheet(key);
             };
             obj.header = obj2;
             const obj3 = { label: null, onPress: null };
-            const intl2 = closure_0(1125).intl;
-            obj3.label = intl2.string(closure_0(1125).t["8jmdON"]);
+            const intl2 = closure_0(1114).intl;
+            obj3.label = intl2.string(closure_0(1114).t["8jmdON"]);
             obj3.onPress = onPress;
             const items = [obj3];
             const obj4 = { label: null, onPress: null };
-            const intl3 = closure_0(1125).intl;
-            obj4.label = intl3.string(closure_0(1125).t["KzCF/6"]);
+            const intl3 = closure_0(1114).intl;
+            obj4.label = intl3.string(closure_0(1114).t["KzCF/6"]);
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(15730).showSimpleActionSheet(obj);
+            const result = closure_0(15770).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;
@@ -130,7 +130,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
     }
   }
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 let c7 = "subscription-settings-deep-link";
 const size = fn(2);

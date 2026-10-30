@@ -1,74 +1,48 @@
 // discord_app/modules/chat/SlowmodeUtils.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2047 from "../../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../../_runtime/metro/02044__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1084).Permissions;
-const ReactCompilerGating = fn(558);
-function canBypassSlowmodeHelper(rateLimitPerUser, can) {
-  return can.can(Permissions.BYPASS_SLOWMODE, rateLimitPerUser);
-}
+const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");
 
-export { canBypassSlowmodeHelper };
+export function canBypassSlowmodeHelper(rateLimitPerUser, can) {
+  return can.can(Permissions.BYPASS_SLOWMODE, rateLimitPerUser);
+}
 export function canBypassSlowmode(channel) {
   return PermissionStore.can(Permissions.BYPASS_SLOWMODE, channel);
 }
-export const useCanBypassSlowmode = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useCanBypassSlowmode(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(3);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [PermissionStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function s() {
-          return PermissionStore.can(Permissions.BYPASS_SLOWMODE, closure_0);
-        };
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-      }
-      const obj = require("c");
-      return require("initialize").useStateFromStores(first, tmp6);
-    }
-  : function useCanBypassSlowmode(arg0) {
-      _require = arg0;
-      const items = [PermissionStore];
-      return require("initialize").useStateFromStores(items, () =>
-        PermissionStore.can(Permissions.BYPASS_SLOWMODE, closure_0),
-      );
-    };
+export function useCanBypassSlowmode(channel) {
+  _require = channel;
+  const items = [PermissionStore];
+  return require("initialize").useStateFromStores(items, () =>
+    PermissionStore.can(Permissions.BYPASS_SLOWMODE, closure_0),
+  );
+}
 export function getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode) {
   if (canBypassSlowmode) {
     const intl2 = util.intl;
     return intl2.string(util.t["8+NidX"]);
   } else if (stateFromStores >= DurationsDefault.Millis.HOUR) {
-    const time2 = _modDef2047.duration(stateFromStores);
+    const time2 = _modDef2044.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + time2.minutes();
-    const tmp2Result = _modDef2047;
+    const tmp2Result = _modDef2044;
     const _HermesInternal4 = HermesInternal;
     const combined1 = "" + time2.seconds();
     const padStartResult = combined.padStart(2, "0");
     const _HermesInternal5 = HermesInternal;
     return "" + time2.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    const time = _modDef2047.duration(stateFromStores);
+    const time = _modDef2044.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + time.seconds();
-    const tmp2Result2 = _modDef2047;
+    const tmp2Result2 = _modDef2044;
     const _HermesInternal2 = HermesInternal;
     return "" + time.minutes() + ":" + combined2.padStart(2, "0");
   } else {

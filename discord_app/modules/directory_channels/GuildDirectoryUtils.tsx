@@ -88,9 +88,9 @@ export function orderByTotalMemberCount(found) {
   const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
   return _modDef12.orderBy(found, items, ["desc"]);
 }
-export function orderByDateAdded(items) {
-  items = [(createdAt) => createdAt.createdAt];
-  return _modDef12.orderBy(items, items, ["desc"]);
+export function orderByDateAdded(reactions) {
+  const items = [(createdAt) => createdAt.createdAt];
+  return _modDef12.orderBy(reactions, items, ["desc"]);
 }
 export function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);

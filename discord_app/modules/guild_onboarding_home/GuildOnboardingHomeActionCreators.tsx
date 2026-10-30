@@ -22,7 +22,7 @@ let closure_10 = async function _fetchGuildHomeSettings() {
     const HTTP = HTTPUtils.HTTP;
     await HTTP.get({ url: closure_2_9.GUILD_HOME_SETTINGS(guildId), oldFormErrors: true, rejectWithError: true });
     closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: closure_129_0 });
-    await "IconComponent";
+    await "HermesInternal";
     closure_129_1 = value;
     closure_129_2 = closure_130_0(closure_130_2[8]).settingsFromServer(closure_129_1.body);
     closure_130_0(closure_130_2[8]);
@@ -49,7 +49,7 @@ let closure_11 = async function _fetchNewMemberActions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -158,7 +158,7 @@ let closure_12 = async function _clearNewMemberActions() {
     return value;
   })();
 };
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx");
@@ -193,17 +193,17 @@ export function clearNewMemberActions() {
   }
   return applyArgumentsResult;
 }
-export function selectHomeResourceChannel(guild_id, channelId) {
+export function selectHomeResourceChannel(guildId, channelId) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
   }
   if (null != channelId) {
     const channel = ChannelStore.getChannel(channelId);
-    let isFullServerPreviewResult = null == guild_id;
-    const resourceForChannel = GuildOnboardingHomeSettingsStore.getResourceForChannel(guild_id, channelId);
+    let isFullServerPreviewResult = null == guildId;
+    const resourceForChannel = GuildOnboardingHomeSettingsStore.getResourceForChannel(guildId, channelId);
     if (!isFullServerPreviewResult) {
-      isFullServerPreviewResult = ImpersonateStore.isFullServerPreview(guild_id);
+      isFullServerPreviewResult = ImpersonateStore.isFullServerPreview(guildId);
     }
     if (!isFullServerPreviewResult) {
       isFullServerPreviewResult = null == channel;
@@ -212,7 +212,12 @@ export function selectHomeResourceChannel(guild_id, channelId) {
       isFullServerPreviewResult = null == resourceForChannel;
     }
     if (!isFullServerPreviewResult) {
-      const obj2 = { guild_id, channel_id: channel.id, server_guide_channel_type: "resource", channel_action_type: -1 };
+      const obj2 = {
+        guild_id: guildId,
+        channel_id: channel.id,
+        server_guide_channel_type: "resource",
+        channel_action_type: -1,
+      };
       AnalyticsUtilsDefault.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj2);
     }
     if (flag) {
@@ -276,7 +281,7 @@ export function completeNewMemberAction(guildId, channelId) {
       }
     }
     const HTTP = HTTPUtils.HTTP;
-    const obj5 = { url: React6.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
+    const obj5 = { url: React7.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
     HTTP.post(obj5);
   }
   const obj2 = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId };

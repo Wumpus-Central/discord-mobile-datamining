@@ -1,0 +1,45 @@
+// discord_common/js/shared/shared-constants/EntitlementTypes.tsx
+import size from "../../../../_runtime/metro/00002__.js";
+
+const obj = { GIFTS: new Set([3, 6]), PREMIUM_APPS: null };
+const set = new Set([3, 6]);
+obj.PREMIUM_APPS = new Set([1, 3, 4, 5, 6, 8]);
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/EntitlementTypes.tsx");
+
+export const EntitlementTypes = {
+  PURCHASE: 1,
+  [1]: "PURCHASE",
+  PREMIUM_SUBSCRIPTION: 2,
+  [2]: "PREMIUM_SUBSCRIPTION",
+  DEVELOPER_GIFT: 3,
+  [3]: "DEVELOPER_GIFT",
+  TEST_MODE_PURCHASE: 4,
+  [4]: "TEST_MODE_PURCHASE",
+  FREE_PURCHASE: 5,
+  [5]: "FREE_PURCHASE",
+  USER_GIFT: 6,
+  [6]: "USER_GIFT",
+  PREMIUM_PURCHASE: 7,
+  [7]: "PREMIUM_PURCHASE",
+  APPLICATION_SUBSCRIPTION: 8,
+  [8]: "APPLICATION_SUBSCRIPTION",
+  FREE_STAFF_PURCHASE: 9,
+  [9]: "FREE_STAFF_PURCHASE",
+  QUEST_REWARD: 10,
+  [10]: "QUEST_REWARD",
+  FRACTIONAL_REDEMPTION: 11,
+  [11]: "FRACTIONAL_REDEMPTION",
+  VIRTUAL_CURRENCY_REDEMPTION: 12,
+  [12]: "VIRTUAL_CURRENCY_REDEMPTION",
+  POWERUP_REDEMPTION: 13,
+  [13]: "POWERUP_REDEMPTION",
+  PARTIAL_RETURN: 14,
+  [14]: "PARTIAL_RETURN",
+  CATEGORY_REWARD: 15,
+  [15]: "CATEGORY_REWARD",
+  PURCHASE_REWARD: 16,
+  [16]: "PURCHASE_REWARD",
+  ORBS_ARCADE_REWARD: 17,
+  [17]: "ORBS_ARCADE_REWARD",
+};
+export const EntitlementTypesSets = obj;

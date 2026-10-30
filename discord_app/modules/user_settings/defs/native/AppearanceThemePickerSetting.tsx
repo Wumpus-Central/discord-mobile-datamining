@@ -1,63 +1,23 @@
 // discord_app/modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11302);
-const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsSingleThemePickerVisible() {
-      const cResult = c.c(2);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ThemeStore];
-        const fn = function n() {
-          return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      return !initialize.useStateFromStores(tmp4, tmp5);
-    }
-  : function useIsSingleThemePickerVisible() {
-      const items = [ThemeStore];
-      return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-    };
+const SettingBuilders = fn(11505);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Ksh3ik);
   },
-  parent: fn(8387).MobileUserSettings.APPEARANCE,
-  usePredicate: ReactCompilerGating.isReactCompilerEnabled()
-    ? function useIsSingleThemePickerVisible() {
-        const cResult = c.c(2);
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const items = [ThemeStore];
-          const fn = function n() {
-            return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
-          };
-          cResult[0] = items;
-          cResult[1] = fn;
-          tmp4 = items;
-          tmp5 = fn;
-        } else {
-          [tmp4, tmp5] = cResult;
-        }
-        return !initialize.useStateFromStores(tmp4, tmp5);
-      }
-    : function useIsSingleThemePickerVisible() {
-        const items = [ThemeStore];
-        return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-      },
-  useTrailing: fn(17128).useAppearanceSettingTrailing,
+  parent: fn(8424).MobileUserSettings.APPEARANCE,
+  usePredicate: function useIsSingleThemePickerVisible() {
+    const items = [ThemeStore];
+    return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
+  },
+  useTrailing: fn(17182).useAppearanceSettingTrailing,
   screen: {
-    route: fn(1084).UserSettingsSections.APPEARANCE_THEME_PICKER,
+    route: fn(1072).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {
       return require("SettingsAppearanceThemePickerScreen").default;
     },

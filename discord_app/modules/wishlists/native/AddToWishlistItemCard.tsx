@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1084).AnalyticEvents;
+const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = { heartOverlay: null };
 const rect = {
   position: "absolute",
@@ -43,18 +43,18 @@ export default function AddToWishlistItemCard(sku) {
   let items = [sku, tmp2.heartOverlay, merged.size];
   const callback = wishlistAnalyticsContext.useCallback(() => {
     const obj = { children: null };
-    const items = [closure_2_8(SKUPreviewDefault, { sku, size: merged.size })];
+    const items = [React6(SKUPreviewDefault, { sku, size: merged.size })];
     const obj3 = {
       style: heartOverlay.heartOverlay,
       pointerEvents: "none",
-      children: closure_2_8(HeartOutlineIcon.HeartOutlineIcon, {
+      children: React6(HeartOutlineIcon.HeartOutlineIcon, {
         size: "sm",
         color: nativeDefault.colors.ICON_OVERLAY_LIGHT,
       }),
     };
-    items[1] = closure_2_8(View, obj3);
+    items[1] = React6(View, obj3);
     obj.children = items;
-    return v65535(React6, obj);
+    return closure_2_10(React7, obj);
   }, items);
   const items1 = [first, wishlistAnalyticsContext, , , ,];
   ({ id: arr2[2], productLine: arr2[3] } = sku);
@@ -72,7 +72,7 @@ export default function AddToWishlistItemCard(sku) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {

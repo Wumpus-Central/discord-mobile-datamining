@@ -9,142 +9,54 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1084).GuildFeatures;
-const GuildPrompts = fn(14192).GuildPrompts;
-const ReactCompilerGating = fn(558);
+const GuildFeatures = fn(1072).GuildFeatures;
+const GuildPrompts = fn(14175).GuildPrompts;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/useIsHubRealNamePromptShowing.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsHubRealNamePromptShowing(arg0) {
-      _require = arg0;
-      const cResult = require("c").c(7);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== arg0) {
-        const fn = function _() {
-          guild = GuildStore.getGuild(closure_0);
-          let hasItem;
-          if (guild != null) {
-            const features = guild.features;
-            hasItem = features.has(GuildFeatures.HUB);
-          }
-          if (true !== hasItem) {
-            return null;
-          } else if (true === GuildPromptsStore.hasViewedPrompt(GuildPrompts.REAL_NAME_PROMPT, guild.id)) {
-            return null;
-          } else {
-            const currentUser = UserStore.getCurrentUser();
-            if (null == currentUser) {
-              return null;
-            } else {
-              let id;
-              if (currentUser != null) {
-                id = currentUser.id;
-              }
-              const member = GuildMemberStore.getMember(guild.id, id);
-              let nick;
-              if (member != null) {
-                nick = member.nick;
-              }
-              return null == nick;
-            }
-          }
-        };
-        cResult[1] = arg0;
-        cResult[2] = fn;
-        let tmp9 = fn;
-      } else {
-        tmp9 = cResult[2];
-      }
-      let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp9);
-      if (cResult[3] === arg0) {
-        if (cResult[4] === stateFromStores) {
-          let tmp11 = cResult[5];
-          let tmp12 = cResult[6];
-        }
-        const effect = noop.useEffect(tmp11, tmp12);
-        return true === stateFromStores;
-      }
-      class R {
-        constructor() {
-          tmp2 = null != closure_0;
-          tmp = closure_0;
-          if (tmp2) {
-            tmp3 = closure_1;
-            tmp2 = null != closure_1;
-          }
-          if (tmp2) {
-            tmp4 = closure_1;
-            if (!closure_1) {
-              tmp5 = closure_1;
-              tmp6 = closure_2;
-              obj = closure_1(closure_2[10]);
-              tmp7 = GuildPrompts;
-              viewPromptResult = obj.viewPrompt(GuildPrompts.REAL_NAME_PROMPT, tmp);
-            }
-          }
-          return;
-        }
-      }
-      const items1 = [stateFromStores, arg0];
-      cResult[3] = arg0;
-      cResult[4] = stateFromStores;
-      cResult[5] = R;
-      cResult[6] = items1;
-      tmp12 = items1;
-      tmp11 = R;
-      const tmpResult = require("initialize");
+export default function useIsHubRealNamePromptShowing(arg0) {
+  _require = arg0;
+  const items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
+    let hasItem;
+    if (guild != null) {
+      const features = guild.features;
+      hasItem = features.has(GuildFeatures.HUB);
     }
-  : function useIsHubRealNamePromptShowing(arg0) {
-      _require = arg0;
-      const items = [GuildStore, GuildPromptsStore, UserStore, GuildMemberStore];
-      const stateFromStores = require("initialize").useStateFromStores(items, () => {
-        guild = GuildStore.getGuild(closure_0);
-        let hasItem;
-        if (guild != null) {
-          const features = guild.features;
-          hasItem = features.has(GuildFeatures.HUB);
+    if (true !== hasItem) {
+      return null;
+    } else if (true === GuildPromptsStore.hasViewedPrompt(GuildPrompts.REAL_NAME_PROMPT, guild.id)) {
+      return null;
+    } else {
+      const currentUser = UserStore.getCurrentUser();
+      if (null == currentUser) {
+        return null;
+      } else {
+        let id;
+        if (currentUser != null) {
+          id = currentUser.id;
         }
-        if (true !== hasItem) {
-          return null;
-        } else if (true === GuildPromptsStore.hasViewedPrompt(GuildPrompts.REAL_NAME_PROMPT, guild.id)) {
-          return null;
-        } else {
-          const currentUser = UserStore.getCurrentUser();
-          if (null == currentUser) {
-            return null;
-          } else {
-            let id;
-            if (currentUser != null) {
-              id = currentUser.id;
-            }
-            const member = GuildMemberStore.getMember(guild.id, id);
-            let nick;
-            if (member != null) {
-              nick = member.nick;
-            }
-            return null == nick;
-          }
+        const member = GuildMemberStore.getMember(guild.id, id);
+        let nick;
+        if (member != null) {
+          nick = member.nick;
         }
-      });
-      const items1 = [stateFromStores, arg0];
-      const effect = noop.useEffect(() => {
-        let tmp2 = null != closure_0;
-        if (tmp2) {
-          tmp2 = null != stateFromStores;
-        }
-        if (tmp2) {
-          if (!stateFromStores) {
-            GuildPromptsActionCreatorsDefault.viewPrompt(GuildPrompts.REAL_NAME_PROMPT, closure_0);
-          }
-        }
-      }, items1);
-      return true === stateFromStores;
-    };
+        return null == nick;
+      }
+    }
+  });
+  const items1 = [stateFromStores, arg0];
+  const effect = noop.useEffect(() => {
+    let tmp2 = null != closure_0;
+    if (tmp2) {
+      tmp2 = null != stateFromStores;
+    }
+    if (tmp2) {
+      if (!stateFromStores) {
+        GuildPromptsActionCreatorsDefault.viewPrompt(GuildPrompts.REAL_NAME_PROMPT, closure_0);
+      }
+    }
+  }, items1);
+  return true === stateFromStores;
+}

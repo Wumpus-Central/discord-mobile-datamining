@@ -34,14 +34,14 @@ function remove(arg0, arg1) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-const RelationshipTypes = fn(1084).RelationshipTypes;
+const RelationshipTypes = fn(1072).RelationshipTypes;
 function GAME_RELATIONSHIP_KEY(arg0, arg1) {}
 function GameRelationshipIndexes_BY_APPLICATION_ID(nextResult) {
   return "application-id-" + nextResult;
 }
 function GameRelationshipIndexes_BY_USER_ID(arg0) {}
 function GameRelationshipIndexes_BY_RELATIONSHIP_TYPE(arg0) {}
-const secondaryIndexMap = new fn(4932).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4936).SecondaryIndexMap(
   function gameRelationshipsIndex(arg0) {
     const items = [];
     if (typeof GameRelationshipIndexes_BY_APPLICATION_ID === "function") {

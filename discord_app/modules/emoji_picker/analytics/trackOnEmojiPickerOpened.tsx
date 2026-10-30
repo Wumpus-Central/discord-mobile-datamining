@@ -8,8 +8,6 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
 function trackOnEmojiPickerOpened(current) {
   ({ intention, analyticsObject } = current);
@@ -143,40 +141,18 @@ function trackOnEmojiPickerOpened(current) {
     num_animated_expressions_newly_added: visibleNewlyAddedEmojis.filter((animated) => animated.animated).length,
   };
 }
-const AnalyticEvents = fn(1084).AnalyticEvents;
-const EmojiIntention = fn(1392).EmojiIntention;
-const ExpressionPickerViewType = fn(1240).ExpressionPickerViewType;
-const ReactCompilerGating = fn(558);
+const AnalyticEvents = fn(1072).AnalyticEvents;
+const EmojiIntention = fn(1387).EmojiIntention;
+const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");
 
 export default trackOnEmojiPickerOpened;
-export const useTrackOnEmojiPickerOpenedForReactions = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useTrackOnEmojiPickerOpenedForReactions(arg0) {
-      const cResult = require("c").c(2);
-      _require = noop.useRef(arg0);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function s() {
-          if (ref.current.intention === EmojiIntention.REACTION) {
-            trackOnEmojiPickerOpened(tmp.current);
-          }
-        };
-        const items = [];
-        cResult[0] = fn;
-        cResult[1] = items;
-        tmp2 = fn;
-        tmp3 = items;
-      } else {
-        [tmp2, tmp3] = cResult;
-      }
-      const effect = noop.useEffect(tmp2, tmp3);
-      const obj = require("c");
+export function useTrackOnEmojiPickerOpenedForReactions(arg0) {
+  noop.useRef(arg0);
+  const effect = noop.useEffect(() => {
+    if (ref.current.intention === EmojiIntention.REACTION) {
+      trackOnEmojiPickerOpened(tmp.current);
     }
-  : function useTrackOnEmojiPickerOpenedForReactions(arg0) {
-      noop.useRef(arg0);
-      const effect = noop.useEffect(() => {
-        if (ref.current.intention === EmojiIntention.REACTION) {
-          trackOnEmojiPickerOpened(tmp.current);
-        }
-      }, []);
-    };
+  }, []);
+}

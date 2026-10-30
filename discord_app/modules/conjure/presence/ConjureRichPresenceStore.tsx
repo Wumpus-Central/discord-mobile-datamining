@@ -1,7 +1,8 @@
 // discord_app/modules/conjure/presence/ConjureRichPresenceStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
 import conjurePresenceActivity from "conjurePresenceActivity.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -25,16 +26,16 @@ function updateActivity(withGracePeriod) {
       clearTimeout(timeout2);
       timeout2 = null;
     }
-    c12 = null;
-    let flag4 = null != c13;
+    c11 = null;
+    let flag4 = null != c12;
     if (flag4) {
-      c13 = null;
+      c12 = null;
       flag4 = true;
     }
     return flag4;
   } else {
-    if (null != c12) {
-      if (null == ConjureProjectStore.getProject(c12)) {
+    if (null != c11) {
+      if (null == ConjureProjectStore.getProject(c11)) {
         if (null != timeout) {
           const _clearTimeout5 = clearTimeout;
           clearTimeout(timeout);
@@ -45,10 +46,10 @@ function updateActivity(withGracePeriod) {
           clearTimeout(timeout2);
           timeout2 = null;
         }
-        c12 = null;
-        let flag3 = null != c13;
+        c11 = null;
+        let flag3 = null != c12;
         if (flag3) {
-          c13 = null;
+          c12 = null;
           flag3 = true;
         }
         return flag3;
@@ -83,7 +84,7 @@ function updateActivity(withGracePeriod) {
       }
     }
     if (null == tmp13) {
-      if (null == c13) {
+      if (null == c12) {
         if (null != timeout) {
           const _clearTimeout3 = clearTimeout;
           clearTimeout(timeout);
@@ -94,10 +95,10 @@ function updateActivity(withGracePeriod) {
           clearTimeout(timeout2);
           timeout2 = null;
         }
-        c12 = null;
-        let flag2 = null != c13;
+        c11 = null;
+        let flag2 = null != c12;
         if (flag2) {
-          c13 = null;
+          c12 = null;
           flag2 = true;
         }
       }
@@ -105,16 +106,16 @@ function updateActivity(withGracePeriod) {
       if (null == timeout) {
         const _setTimeout2 = setTimeout;
         timeout = setTimeout(() => {
-          c14 = null;
-          if (null != c15) {
+          c13 = null;
+          if (null != c14) {
             const _clearTimeout = clearTimeout;
-            clearTimeout(c15);
-            c15 = null;
+            clearTimeout(c14);
+            c14 = null;
           }
-          c12 = null;
-          let flag = null != c13;
+          c11 = null;
+          let flag = null != c12;
           if (flag) {
-            c13 = null;
+            c12 = null;
             flag = true;
           }
           if (flag) {
@@ -129,13 +130,13 @@ function updateActivity(withGracePeriod) {
         clearTimeout(timeout);
         timeout = null;
       }
-      let flag = tmp13 !== c12;
+      let flag = tmp13 !== c11;
       if (!flag) {
-        flag = null == c13;
+        flag = null == c12;
       }
       if (flag) {
-        c12 = tmp13;
-        const obj2 = { type: ActivityTypes.PLAYING, name: conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_NAME, details: null, timestamps: null };
+        c11 = tmp13;
+        const obj2 = { type: ActivityTypes.ActivityTypes.PLAYING, name: conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_NAME, details: null, timestamps: null };
         c0 = undefined;
         const prop = conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_LINES;
         const found = prop.filter((item) => item !== details);
@@ -146,7 +147,7 @@ function updateActivity(withGracePeriod) {
         const _Date = Date;
         obj3.start = Date.now();
         obj2.timestamps = obj3;
-        c13 = obj2;
+        c12 = obj2;
         if (null != timeout2) {
           const _clearTimeout2 = clearTimeout;
           clearTimeout(timeout2);
@@ -155,16 +156,16 @@ function updateActivity(withGracePeriod) {
         const _setTimeout = setTimeout;
         timeout2 = setTimeout(() => {
           let timeout = null;
-          if (null != closure_1_13) {
+          if (null != closure_1_12) {
             let obj = {};
-            let merged = Object.assign(closure_1_13);
-            details = closure_1_13.details;
-            let prop = closure_1_0(closure_1_1[9]).CONJURE_PRESENCE_ACTIVITY_LINES;
+            let merged = Object.assign(closure_1_12);
+            details = closure_1_12.details;
+            let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
             let found = prop.filter((item) => item !== details);
             let _Math = Math;
             let _Math2 = Math;
             obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
-            closure_1_13 = obj;
+            closure_1_12 = obj;
             if (null != timeout) {
               let _clearTimeout = clearTimeout;
               clearTimeout(timeout);
@@ -173,16 +174,16 @@ function updateActivity(withGracePeriod) {
             let _setTimeout = setTimeout;
             timeout = setTimeout(() => {
               let timeout = null;
-              if (null != closure_1_13) {
+              if (null != closure_1_12) {
                 let obj = {};
-                let merged = Object.assign(closure_1_13);
-                details = closure_1_13.details;
-                let prop = closure_1_0(closure_1_1[9]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                let merged = Object.assign(closure_1_12);
+                details = closure_1_12.details;
+                let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
                 let found = prop.filter((item) => item !== details);
                 let _Math = Math;
                 let _Math2 = Math;
                 obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
-                closure_1_13 = obj;
+                closure_1_12 = obj;
                 if (null != timeout) {
                   let _clearTimeout = clearTimeout;
                   clearTimeout(timeout);
@@ -191,16 +192,16 @@ function updateActivity(withGracePeriod) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
                   let timeout = null;
-                  if (null != closure_1_13) {
+                  if (null != closure_1_12) {
                     let obj = {};
-                    let merged = Object.assign(closure_1_13);
-                    details = closure_1_13.details;
-                    let prop = closure_1_0(closure_1_1[9]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                    let merged = Object.assign(closure_1_12);
+                    details = closure_1_12.details;
+                    let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
                     let found = prop.filter((item) => item !== details);
                     let _Math = Math;
                     let _Math2 = Math;
                     obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
-                    closure_1_13 = obj;
+                    closure_1_12 = obj;
                     if (null != timeout) {
                       let _clearTimeout = clearTimeout;
                       clearTimeout(timeout);
@@ -209,35 +210,35 @@ function updateActivity(withGracePeriod) {
                     let _setTimeout = setTimeout;
                     timeout = setTimeout(() => {
                       let timeout = null;
-                      if (null != closure_1_13) {
+                      if (null != closure_1_12) {
                         let obj = {};
-                        let merged = Object.assign(closure_1_13);
-                        details = closure_1_13.details;
-                        let prop = closure_1_0(closure_1_1[9]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F111587 */ function() { ... });
+                        let merged = Object.assign(closure_1_12);
+                        details = closure_1_12.details;
+                        let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                        let found = prop.filter(/* F99227 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
-                        closure_1_13 = obj;
+                        closure_1_12 = obj;
                         if (null != timeout) {
                           let _clearTimeout = clearTimeout;
                           clearTimeout(timeout);
                           timeout = null;
                         }
                         let _setTimeout = setTimeout;
-                        timeout = setTimeout(/* F111588 */ function() { ... }, closure_1_11);
-                        closure_1_21.emitChange();
+                        timeout = setTimeout(/* F99228 */ function() { ... }, closure_1_10);
+                        closure_1_20.emitChange();
                       }
-                    }, closure_1_11);
-                    closure_1_21.emitChange();
+                    }, closure_1_10);
+                    closure_1_20.emitChange();
                   }
-                }, closure_1_11);
-                closure_1_21.emitChange();
+                }, closure_1_10);
+                closure_1_20.emitChange();
               }
-            }, closure_1_11);
-            closure_1_21.emitChange();
+            }, closure_1_10);
+            closure_1_20.emitChange();
           }
-        }, c11);
+        }, c10);
         flag = true;
       }
       return flag;
@@ -246,7 +247,7 @@ function updateActivity(withGracePeriod) {
 }
 function fetchOwnedProjects() {
   const self = this;
-  const apply = closure_19.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -254,7 +255,7 @@ function fetchOwnedProjects() {
   }
   return applyArgumentsResult;
 }
-let closure_19 = async function _fetchOwnedProjects() {
+let closure_18 = async function _fetchOwnedProjects() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -265,7 +266,7 @@ let closure_19 = async function _fetchOwnedProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -316,27 +317,27 @@ let closure_19 = async function _fetchOwnedProjects() {
           c2 = 3;
           c3 = 1;
           const obj8 = {
-            value: (function projectListsSettled() {
+            value: (function ownedProjectsSettled() {
                       return new Promise((fn) => {
                         closure_0 = fn;
                         function check() {
-                          const projectsFetchState = closure_2_8.getProjectsFetchState();
-                          let type;
-                          if (projectsFetchState != null) {
-                            type = projectsFetchState.type;
+                          ownedProjectsFetchState = closure_2_8.getOwnedProjectsFetchState();
+                          let tmp2 = "success" !== ownedProjectsFetchState;
+                          if (tmp2) {
+                            tmp2 = "error" !== ownedProjectsFetchState;
                           }
-                          if ("loading" !== type) {
+                          if (!tmp2) {
                             closure_2_8.removeChangeListener(check);
                             closure_0();
                           }
                         }
                         closure_8.addChangeListener(check);
-                        let projectsFetchState = closure_8.getProjectsFetchState();
-                        let type;
-                        if (projectsFetchState != null) {
-                          type = projectsFetchState.type;
+                        ownedProjectsFetchState = closure_8.getOwnedProjectsFetchState();
+                        let tmp3 = "success" !== ownedProjectsFetchState;
+                        if (tmp3) {
+                          tmp3 = "error" !== ownedProjectsFetchState;
                         }
-                        if ("loading" !== type) {
+                        if (!tmp3) {
                           closure_8.removeChangeListener(check);
                           fn();
                         }
@@ -369,7 +370,7 @@ let closure_19 = async function _fetchOwnedProjects() {
     }
   }
 };
-let closure_20 = async function _resumeRunningProjects() {
+let closure_19 = async function _resumeRunningProjects() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -380,7 +381,7 @@ let closure_20 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -400,8 +401,8 @@ let closure_20 = async function _resumeRunningProjects() {
           closure_128_1 = undefined;
           closure_128_2 = undefined;
           let ensureConnection;
-          if (!c16) {
-            c16 = true;
+          if (!c15) {
+            c15 = true;
             if (obj2.hasConjureGuildWithoutExposure("conjure_resume")) {
               c2 = 1;
               const items = [fetchOwnedProjects(), asyncRequireImpl(dependencyMap[13], dependencyMap.paths)];
@@ -416,7 +417,7 @@ let closure_20 = async function _resumeRunningProjects() {
       } else {
         if (1 === tmp7) {
           c2 = 0;
-          closure_129_16 = false;
+          closure_129_15 = false;
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -446,14 +447,13 @@ let closure_20 = async function _resumeRunningProjects() {
     }
   }
 };
-const ActivityTypes = fn(1084).ActivityTypes;
-const StaticChannelRoute = fn(4864).StaticChannelRoute;
-let c11 = 300000;
+const StaticChannelRoute = fn(4865).StaticChannelRoute;
+let c10 = 300000;
+let c11 = null;
 let c12 = null;
 let c13 = null;
 let c14 = null;
-let c15 = null;
-let c16 = false;
+let c15 = false;
 const Store = initializeDefault.Store;
 class ConjureRichPresenceStore extends Store {
 }
@@ -463,7 +463,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, () => updateActivity({ withGracePeriod: true }));
 };
 prototype["getActivity"] = function getActivity() {
-  return c13;
+  return c12;
 };
 ConjureRichPresenceStore.displayName = "ConjureRichPresenceStore";
 const conjureRichPresenceStore = new ConjureRichPresenceStore(DispatcherDefault, {
@@ -473,7 +473,7 @@ const conjureRichPresenceStore = new ConjureRichPresenceStore(DispatcherDefault,
   POST_CONNECTION_OPEN() {
     (function resumeRunningProjects() {
       const self = this;
-      const apply = closure_1_20.apply;
+      const apply = closure_1_19.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -484,21 +484,21 @@ const conjureRichPresenceStore = new ConjureRichPresenceStore(DispatcherDefault,
     return false;
   },
   LOGOUT() {
-    c16 = false;
-    if (null != c14) {
+    c15 = false;
+    if (null != c13) {
       const _clearTimeout = clearTimeout;
+      clearTimeout(c13);
+      c13 = null;
+    }
+    if (null != c14) {
+      const _clearTimeout2 = clearTimeout;
       clearTimeout(c14);
       c14 = null;
     }
-    if (null != c15) {
-      const _clearTimeout2 = clearTimeout;
-      clearTimeout(c15);
-      c15 = null;
-    }
-    c12 = null;
-    let flag = null != c13;
+    c11 = null;
+    let flag = null != c12;
     if (flag) {
-      c13 = null;
+      c12 = null;
       flag = true;
     }
     return flag;

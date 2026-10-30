@@ -78,7 +78,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4852).Interval();
+    const interval = new obj(4853).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -529,7 +529,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8868);
+const SpotifyConstants = fn(8902);
 ({
   getSpotifyResourceType: map1,
   isSpotifyParty: closure_14,
@@ -537,7 +537,7 @@ const SpotifyConstants = fn(8868);
   SpotifyEndpoints: closure_16,
   SpotifyResourceTypes: closure_17,
 } = SpotifyConstants);
-const Constants = fn(1084);
+const Constants = fn(1072);
 const PlatformTypes = Constants.PlatformTypes;
 ({ ActivityFlags: closure_19, AnalyticEvents: closure_20 } = Constants);
 const user = Platforms.get(PlatformTypes.SPOTIFY);
@@ -554,11 +554,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4852).Timeout();
-const timeout1 = new fn(4852).Timeout();
-const timeout2 = new fn(4852).Timeout();
-const timeout3 = new fn(4852).Timeout();
-const timeout4 = new fn(4852).Timeout();
+const timeout = new fn(4853).Timeout();
+const timeout1 = new fn(4853).Timeout();
+const timeout2 = new fn(4853).Timeout();
+const timeout3 = new fn(4853).Timeout();
+const timeout4 = new fn(4853).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -649,7 +649,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11439).SpotifyAPI;
+    const SpotifyAPI = self(11640).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1204,7 +1204,7 @@ prototype2["getActivity"] = function getActivity() {
       return obj4;
     }
     const _HermesInternal = HermesInternal;
-    partyId = "" + value2 + AuthenticationStore.getId();
+    partyId = "" + __initData + AuthenticationStore.getId();
     tmp6 = null != album.image && null != assetFromImageURL;
   }
 };
@@ -1260,7 +1260,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           let flag2 = true;
         } else {
           flag2 = false;
-          if (!account(568)(found, device)) {
+          if (!account(558)(found, device)) {
             const _Object = Object;
             const merged = Object.assign(found, device);
             flag2 = true;
@@ -1338,7 +1338,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6839);
+        obj9 = device(6846);
       }
       if (null != tmp10) {
         if (!tmp22) {
@@ -1392,8 +1392,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
             }
             if (null != tmp10) {
               const obj6 = { type: "SPOTIFY_NEW_TRACK", track: tmp10, connectionId: accountId };
-              tmp25(584).dispatch(obj6);
-              const tmp25Result = tmp25(584);
+              tmp25(572).dispatch(obj6);
+              const tmp25Result = tmp25(572);
               const obj7 = {
                 party_platform: PlatformTypes.SPOTIFY,
                 track_id: tmp10.id,
@@ -1408,8 +1408,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
               obj7.author_ids = artists.map((id) => id.id);
               const artists1 = tmp10.artists;
               obj7.author_names = artists1.map((name) => name.name);
-              tmp25(1264).track(constants4.ACTIVITY_UPDATED, obj7);
-              const tmp25Result2 = tmp25(1264);
+              tmp25(1253).track(constants4.ACTIVITY_UPDATED, obj7);
+              const tmp25Result2 = tmp25(1253);
             }
           } else {
             tmp55 = flag;

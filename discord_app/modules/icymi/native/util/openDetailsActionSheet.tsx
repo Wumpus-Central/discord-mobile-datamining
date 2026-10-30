@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/util/openDetailsActionSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -20,7 +20,7 @@ export function openDetailsActionSheet(arg0) {
       actionDestinationType: null,
     },
   });
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18421, dependencyMap.paths), "ItemDetailsActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18480, dependencyMap.paths), "ItemDetailsActionSheet", {
     guildId,
     channelId,
     id,

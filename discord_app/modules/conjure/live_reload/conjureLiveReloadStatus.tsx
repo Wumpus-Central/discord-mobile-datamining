@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/live_reload/conjureLiveReloadStatus.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3864 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function liveReloadProgress(phase, step) {
@@ -39,9 +39,9 @@ function liveReloadProgress(phase, step) {
     obj = { direction: tmp4, title: null, stepLabel: null, stepIndex: null, stepCount: null };
     const intl = util.intl;
     if ("enable" === tmp4) {
-      let NeoP8L = _modDef3864.NeoP8L;
+      let NeoP8L = _modDef3865.NeoP8L;
     } else {
-      NeoP8L = _modDef3864["3+DCLs"];
+      NeoP8L = _modDef3865["3+DCLs"];
     }
     obj.title = intl.string(NeoP8L);
     let stringResult = null;
@@ -65,15 +65,15 @@ let closure_3 = {
   disable: ["snapshot", "stopping", "reload"],
 };
 let obj = {
-  sandbox: _modDef3864.wYBwzU,
-  files: _modDef3864["5hvVF1"],
-  packages: _modDef3864.DKR23W,
-  prepare: _modDef3864.qc4VkW,
-  build: _modDef3864.ZcJIE6,
-  server: _modDef3864.mAXkyS,
-  stopping: _modDef3864.dI8HGD,
-  snapshot: _modDef3864.E3ZRQo,
-  reload: _modDef3864.ZWcCXh,
+  sandbox: _modDef3865.wYBwzU,
+  files: _modDef3865["5hvVF1"],
+  packages: _modDef3865.DKR23W,
+  prepare: _modDef3865.qc4VkW,
+  build: _modDef3865.ZcJIE6,
+  server: _modDef3865.mAXkyS,
+  stopping: _modDef3865.dI8HGD,
+  snapshot: _modDef3865.E3ZRQo,
+  reload: _modDef3865.ZWcCXh,
 };
 const result = size.fileFinishedImporting("modules/conjure/live_reload/conjureLiveReloadStatus.tsx");
 
@@ -107,7 +107,7 @@ export function liveReloadSettledDirection(arg0, arg1) {
 export { liveReloadProgress };
 export function liveReloadDescription(stateFromStores) {
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3864.xjblZt);
+  const stringResult = intl.string(_modDef3865.xjblZt);
   if ("error" !== stateFromStores.phase) {
     const tmp6 = liveReloadProgress(stateFromStores.phase, stateFromStores.step);
     if (null != tmp6) {
@@ -124,14 +124,14 @@ export function liveReloadDescription(stateFromStores) {
         if (stateFromStores.enabled) {
           const intl2 = util.intl;
           const _HermesInternal = HermesInternal;
-          combined = "" + intl2.string(_modDef3864.gCey7s) + " \u00B7 " + stringResult;
+          combined = "" + intl2.string(_modDef3865.gCey7s) + " \u00B7 " + stringResult;
         }
       }
       return combined;
     }
   }
   const intl3 = util.intl;
-  const tmp3Result = _modDef3864;
+  const tmp3Result = _modDef3865;
   let error = stateFromStores.error;
   if (error == null) {
     error = "";

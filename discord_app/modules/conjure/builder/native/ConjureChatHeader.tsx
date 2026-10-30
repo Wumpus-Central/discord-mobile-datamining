@@ -1,17 +1,17 @@
 // discord_app/modules/conjure/builder/native/ConjureChatHeader.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import PressableNavigatorBackIcon from "../../../main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx";
+import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9766).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9792).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = {
     header: {
@@ -50,108 +50,32 @@ let closure_8 = createStyles.createStyles((paddingTop) => {
   obj.border = obj5;
   return obj;
 });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/builder/native/ConjureChatHeader.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function ConjureChatHeader(arg0) {
-      const cResult = c.c(17);
-      ({ title, actions, onBack, showBorder } = arg0);
-      const tmp4 = closure_8(useSafeAreaInsetsDefault().top);
-      if (cResult[0] === showBorder) {
-        if (cResult[1] === tmp4.border) {
-          let tmp5 = cResult[2];
-        }
-        if (cResult[3] !== onBack) {
-          const obj2 = { onPress: onBack };
-          const tmp11 = timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj2);
-          cResult[3] = onBack;
-          cResult[4] = tmp11;
-          let tmp9 = tmp11;
-        } else {
-          tmp9 = cResult[4];
-        }
-        if (cResult[5] === tmp4.title) {
-          if (cResult[6] === title) {
-            let tmp12 = cResult[7];
-          }
-          if (cResult[8] === actions) {
-            if (cResult[9] === tmp4.actions) {
-              let tmp16 = cResult[10];
-            }
-            if (cResult[11] === tmp4.header) {
-              if (cResult[12] === tmp5) {
-                if (cResult[13] === tmp9) {
-                  if (cResult[14] === tmp12) {
-                    if (cResult[15] === tmp16) {
-                      let tmp20 = cResult[16];
-                    }
-                    return tmp20;
-                  }
-                }
-              }
-            }
-            const obj3 = { style: tmp4.header, children: null };
-            const items = [tmp5, tmp9, tmp12, tmp16];
-            obj3.children = items;
-            const tmp23 = React5(React4, obj3);
-            cResult[11] = tmp4.header;
-            cResult[12] = tmp5;
-            cResult[13] = tmp9;
-            cResult[14] = tmp12;
-            cResult[15] = tmp16;
-            cResult[16] = tmp23;
-            tmp20 = tmp23;
-          }
-          let tmp17 = null;
-          if (null != actions) {
-            const obj4 = { style: tmp4.actions, children: actions };
-            tmp17 = timestampProducer(React4, obj4);
-          }
-          cResult[8] = actions;
-          cResult[9] = tmp4.actions;
-          cResult[10] = tmp17;
-          tmp16 = tmp17;
-        }
-        const obj5 = { style: tmp4.title, children: title };
-        const tmp15 = timestampProducer(React4, obj5);
-        cResult[5] = tmp4.title;
-        cResult[6] = title;
-        cResult[7] = tmp15;
-        tmp12 = tmp15;
-      }
-      let tmp6 = null;
-      if (showBorder) {
-        const obj6 = { style: tmp4.border };
-        tmp6 = timestampProducer(React4, obj6);
-      }
-      cResult[0] = showBorder;
-      cResult[1] = tmp4.border;
-      cResult[2] = tmp6;
-      tmp5 = tmp6;
-    }
-  : function ConjureChatHeader(actions) {
-      actions = actions.actions;
-      ({ title, onBack, showBorder } = actions);
-      const tmp2 = closure_8(useSafeAreaInsetsDefault().top);
-      const obj = { style: tmp2.header, children: null };
-      let tmp5 = null;
-      if (showBorder) {
-        const obj2 = { style: tmp2.border };
-        tmp5 = timestampProducer(React4, obj2);
-      }
-      const items = [
-        tmp5,
-        timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, { onPress: onBack }),
-        timestampProducer(React4, { style: tmp2.title, children: title }),
-      ];
-      let tmp7Result = null;
-      if (null != actions) {
-        const obj4 = { style: tmp2.actions, children: actions };
-        tmp7Result = timestampProducer(React4, obj4);
-      }
-      items[3] = tmp7Result;
-      obj.children = items;
-      return React5(React4, obj);
-    };
+export default function ConjureChatHeader(actions) {
+  actions = actions.actions;
+  ({ title, onBack, showBorder } = actions);
+  const tmp2 = closure_8(useSafeAreaInsetsDefault().top);
+  const obj2 = { style: null, children: null };
+  const items = [tmp2.header, ClientThemesOverrides.useGradientTop()];
+  obj2.style = items;
+  let tmp6 = null;
+  if (showBorder) {
+    const obj3 = { style: tmp2.border };
+    tmp6 = timestampProducer(React4, obj3);
+  }
+  const items1 = [
+    tmp6,
+    timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, { onPress: onBack }),
+    timestampProducer(React4, { style: tmp2.title, children: title }),
+  ];
+  let tmp8Result = null;
+  if (null != actions) {
+    const obj5 = { style: tmp2.actions, children: actions };
+    tmp8Result = timestampProducer(React4, obj5);
+  }
+  items1[3] = tmp8Result;
+  obj2.children = items1;
+  return React5(React4, obj2);
+}

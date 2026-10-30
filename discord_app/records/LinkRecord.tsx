@@ -1,7 +1,7 @@
 // discord_app/records/LinkRecord.tsx
 import Record from "../lib/Record.tsx";
 
-const Routes = fn(1084).Routes;
+const Routes = fn(1072).Routes;
 const prototype = function LinkRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   ({ id: tmp.id, path: tmp.path, inviteCode: tmp.inviteCode } = arg0);

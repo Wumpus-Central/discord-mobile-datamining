@@ -1,157 +1,50 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef14557 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef14590 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const constants = fn(14553).PlayStationLinkModalScenes;
+let closure_4 = fn(14586).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx",
 );
 
-export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
-  ? function PlayStationLinkPreConnect(platformType) {
-      const cResult = navigation(576).c(12);
-      platformType = platformType.platformType;
-      const tmp4 = closure_6();
-      const obj = navigation(576);
-      navigation = navigation(1503).useNavigation();
-      if (cResult[0] !== navigation) {
-        const fn = function s(arg0) {
-          navigation.push(constants.DISCORD_CONSENT, arg0);
-        };
-        cResult[0] = navigation;
-        cResult[1] = fn;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[1];
-      }
-      if (cResult[2] !== navigation) {
-        class S {
-          constructor() {
-            arr = closure_0.push(closure_4.ERROR, {});
-            return;
-          }
-        }
-        cResult[2] = navigation;
-        cResult[3] = S;
-      } else {
-        class S {
-          constructor() {
-            arr = closure_0.push(closure_4.ERROR, {});
-            return;
-          }
-        }
-      }
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            arr = closure_0.push(closure_4.ERROR, {});
-            return;
-          }
-        }
-        tmp9[0] = _modDef14557;
-        cResult[4] = tmp9;
-      } else {
-        class S {
-          constructor() {
-            arr = closure_0.push(closure_4.ERROR, {});
-            return;
-          }
-        }
-      }
-      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            arr = closure_0.push(closure_4.ERROR, {});
-            return;
-          }
-        }
-        const stringResult = obj3.string(tmp(1125).t["6n+UPR"]);
-        const intl = tmp(1125).intl;
-        const stringResult1 = intl.string(tmp(1125).t.JaaqIf);
-        cResult[5] = stringResult;
-        cResult[6] = stringResult1;
-        let tmp12 = stringResult1;
-        const tmp11 = stringResult;
-      } else {
-        class S {
-          constructor() {
-            arr = closure_0.push(closure_4.ERROR, {});
-            return;
-          }
-        }
-        tmp12 = cResult[6];
-      }
-      if (cResult[7] === S) {
-        class S {
-          constructor() {
-            arr = closure_0.push(closure_4.ERROR, {});
-            return;
-          }
-        }
-      }
-      const obj2 = navigation(1503);
-      cResult[7] = S;
-      cResult[8] = tmp6;
-      cResult[9] = platformType;
-      cResult[10] = tmp4.image;
-      cResult[11] = jsx(navigation(9689).TwoWayLinkPreConnect, {
-        platformType,
-        onError: S,
-        onNext: tmp6,
-        img: tmp9,
-        imgStyle: tmp4.image,
-        title: tmp11,
-        body: tmp12,
-      });
-      const tmp15 = jsx(navigation(9689).TwoWayLinkPreConnect, {
-        platformType,
-        onError: S,
-        onNext: tmp6,
-        img: tmp9,
-        imgStyle: tmp4.image,
-        title: tmp11,
-        body: tmp12,
-      });
-    }
-  : function PlayStationLinkPreConnect(platformType) {
-      let navigation;
-      const tmp = closure_6();
-      navigation = navigation(1503).useNavigation();
-      const items = [navigation];
-      const items1 = [navigation];
-      const callback = noop.useCallback((arg0) => {
-        navigation.push(constants.DISCORD_CONSENT, arg0);
-      }, items);
-      const callback1 = noop.useCallback(() => {
-        navigation.push(constants.ERROR, {});
-      }, items1);
-      const memo = noop.useMemo(() => ({ uri: _modDef14557 }), []);
-      const obj2 = {
-        platformType: platformType.platformType,
-        onError: callback1,
-        onNext: callback,
-        img: memo,
-        imgStyle: tmp.image,
-        title: null,
-        body: null,
-      };
-      const intl = navigation(1125).intl;
-      obj2.title = intl.string(navigation(1125).t["6n+UPR"]);
-      const intl2 = navigation(1125).intl;
-      obj2.body = intl2.string(navigation(1125).t.JaaqIf);
-      return jsx(navigation(9689).TwoWayLinkPreConnect, {
-        platformType: platformType.platformType,
-        onError: callback1,
-        onNext: callback,
-        img: memo,
-        imgStyle: tmp.image,
-        title: null,
-        body: null,
-      });
-    };
+export function PlayStationLinkPreConnect(platformType) {
+  let navigation;
+  const tmp = closure_6();
+  navigation = navigation(1498).useNavigation();
+  const items = [navigation];
+  const items1 = [navigation];
+  const callback = noop.useCallback((arg0) => {
+    navigation.push(constants.DISCORD_CONSENT, arg0);
+  }, items);
+  const callback1 = noop.useCallback(() => {
+    navigation.push(constants.ERROR, {});
+  }, items1);
+  const memo = noop.useMemo(() => ({ uri: _modDef14590 }), []);
+  const obj2 = {
+    platformType: platformType.platformType,
+    onError: callback1,
+    onNext: callback,
+    img: memo,
+    imgStyle: tmp.image,
+    title: null,
+    body: null,
+  };
+  const intl = navigation(1114).intl;
+  obj2.title = intl.string(navigation(1114).t["6n+UPR"]);
+  const intl2 = navigation(1114).intl;
+  obj2.body = intl2.string(navigation(1114).t.JaaqIf);
+  return jsx(navigation(9714).TwoWayLinkPreConnect, {
+    platformType: platformType.platformType,
+    onError: callback1,
+    onNext: callback,
+    img: memo,
+    imgStyle: tmp.image,
+    title: null,
+    body: null,
+  });
+}

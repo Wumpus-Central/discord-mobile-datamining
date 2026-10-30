@@ -146,12 +146,12 @@ function handleLocalActivityUpdate() {
   }
   return tmp5;
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ ChannelTypes: closure_11, ActivityActionTypes: closure_12 } = Constants);
 let items = [
-  fn(9103).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(9103).AutocompleterResultTypes.GROUP_DM,
-  fn(9103).AutocompleterResultTypes.USER,
+  fn(9116).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(9116).AutocompleterResultTypes.GROUP_DM,
+  fn(9116).AutocompleterResultTypes.USER,
 ];
 let c14 = null;
 let c15 = null;
@@ -314,8 +314,8 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           activity,
           location: "Channel Text Area - Invite to Join Modal",
         };
-        let obj = userId(11306);
-        userId(11306)
+        let obj = userId(11509);
+        userId(11509)
           .sendActivityInvite(obj2)
           .then(() => {
             items = [];
@@ -333,10 +333,10 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
             closure_18 = withSameGameSection(mapped);
             activityInviteModalStoreClass.emitChange();
           });
-        const sendActivityInviteResult = userId(11306).sendActivityInvite(obj2);
+        const sendActivityInviteResult = userId(11509).sendActivityInvite(obj2);
       } else if (null != userId) {
         const obj4 = { userId, type: constants.JOIN, activity, location: "Channel Text Area - Invite to Join Modal" };
-        const result = userId(11306).sendActivityInviteUser(obj4);
+        const result = userId(11509).sendActivityInviteUser(obj4);
         result.then(() => {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = userId;
@@ -353,7 +353,7 @@ const activityInviteModalStoreClass = new ActivityInviteModalStoreClass(Dispatch
           closure_18 = withSameGameSection(mapped);
           activityInviteModalStoreClass.emitChange();
         });
-        const obj3 = userId(11306);
+        const obj3 = userId(11509);
       }
       return false;
     }

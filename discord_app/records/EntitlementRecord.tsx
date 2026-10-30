@@ -6,7 +6,6 @@ import SKURecord from "../modules/skus/SKURecord.tsx";
 import UserRecord from "UserRecord.tsx";
 
 require = fn;
-const EntitlementTypes = fn(1084).EntitlementTypes;
 let EntitlementRecord;
 class EntitlementRecord extends tmp2 {
   constructor(arg0) {
@@ -150,7 +149,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
 };
 Object.defineProperty(prototype, "isGiftable", {
   get: function isGiftable() {
-    let tmp = this.type === EntitlementTypes.USER_GIFT;
+    let tmp = this.type === require("EntitlementTypes").EntitlementTypes.USER_GIFT;
     if (tmp) {
       tmp = null == this.gifterId;
     }
@@ -166,7 +165,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
   const self = this;
   if (!this.isGiftable) {
     if (!self.deleted) {
-      if (self.type === EntitlementTypes.PREMIUM_SUBSCRIPTION) {
+      if (self.type === require("EntitlementTypes").EntitlementTypes.PREMIUM_SUBSCRIPTION) {
         value = get.get(self.skuId);
         if (null != value) {
           if (!value.premium) {

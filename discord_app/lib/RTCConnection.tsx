@@ -5,9 +5,9 @@ import BackoffDefault from "../../discord_common/js/packages/backoff/Backoff.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import MurmurHashV3Default from "../../_runtime/01263_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01252_MurmurHashV3.js";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
-import v1 from "../../_runtime/01278_v1.js";
+import v1 from "../../_runtime/01267_v1.js";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -105,8 +105,8 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5771).getSystemAnalyticsInfo;
-let Constants = fn(1084);
+const getSystemAnalyticsInfo = fn(5778).getSystemAnalyticsInfo;
+let Constants = fn(1072);
 ({
   AnalyticEvents: closure_17,
   ChannelTypes: closure_18,
@@ -114,10 +114,10 @@ let Constants = fn(1084);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(5852);
+const StreamSettingsConstants = fn(5859);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(5853).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5756);
+let closure_24 = fn(5860).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5763);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -133,7 +133,7 @@ if (obj.test("https:")) {
   str = "wss:";
 }
 let closure_34 = null;
-const __initData9 = {
+const __initData15 = {
   CONNECTION_CREATE: 0,
   [0]: "CONNECTION_CREATE",
   CONNECTION_DESTROY: 1,
@@ -1970,7 +1970,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } else {
       try {
@@ -2008,7 +2008,7 @@ prototype["_setAvx512EntropyHistogramIfSupported"] = function _setAvx512EntropyH
             const obj = tmp2(dependencyMap[52]);
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -2115,7 +2115,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     const obj8 = require("SentryUtils");
   }
   connectResult.setUseElectronVideo(mediaEngine.supports(constants5.ELECTRON_VIDEO));
-  guild = null;
+  let guild = null;
   if (null != self.guildId) {
     guild = GuildStore.getGuild(self.guildId);
   }
@@ -2135,7 +2135,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     if (tmp) {
       tmp = height <= 720;
     }
-    if (height === closure_2_23.RESOLUTION_1080) {
+    if (height === __initData3.RESOLUTION_1080) {
       if (framerate === FPS_30.FPS_30) {
         const tmp6Result = getFrontierTuningConfigIfEligibleDefault(
           "RTCConnection",
@@ -2184,7 +2184,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
         maxResolution = tmp19ResultResult.maxResolution;
       }
       let num = null;
-      if (maxResolution === closure_23.RESOLUTION_1080) {
+      if (maxResolution === RESOLUTION_1080.RESOLUTION_1080) {
         num = 921600;
       }
       const result1 = connectResult.setFakeGoLiveEncodePixelCount(num);
@@ -3071,10 +3071,10 @@ prototype["_handleCodecs"] = function _handleCodecs(OPUS, H264) {
   if (null != _connection) {
     if (null != self.protocol) {
       if (null == OPUS) {
-        OPUS = closure_1_28.OPUS;
+        OPUS = __initData6.OPUS;
       }
       if (null == H264) {
-        H264 = closure_1_28.H264;
+        H264 = __initData6.H264;
       }
       _connection.setCodecs(OPUS, H264, self.context);
       self._hasCodecs = true;
@@ -3132,7 +3132,7 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
         obj6.participant_type = self.getVoiceParticipantType();
         obj6.join_voice_id = self.joinVoiceId;
         const mediaEngine2 = MediaEngineStore.getMediaEngine();
-        let tmp17 = mediaEngine2.getVideoInputDeviceId() !== __initData3;
+        let tmp17 = mediaEngine2.getVideoInputDeviceId() !== __initData9;
         if (tmp17) {
           tmp17 = _connection.context === constants6.DEFAULT;
         }
@@ -3801,7 +3801,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5760).now();
+  const commitReceivedTime = _connection(5767).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3841,7 +3841,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5760).now();
+  const welcomeReceivedTime = _connection(5767).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

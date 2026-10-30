@@ -1,5 +1,4 @@
 // discord_app/modules/calls/native/useVideoTileGradientColors.tsx
-import c from "../../../../_runtime/00576_c.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import UserProfileGradientUtils from "../../user_profile/UserProfileGradientUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -57,30 +56,14 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
   }
   return null;
 }
-const ThemeTypes = fn(1084).ThemeTypes;
-const ReactCompilerGating = fn(558);
+const ThemeTypes = fn(1072).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
 
 export { computeVideoTileGradientStops };
-export const useVideoTileGradientColors = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useVideoTileGradientColors(modalV2BackgroundColor, modalV2BackgroundColor) {
-      const cResult = c.c(3);
-      if (cResult[0] === modalV2BackgroundColor) {
-        if (cResult[1] === modalV2BackgroundColor) {
-          let tmp2 = cResult[2];
-        }
-        return tmp2;
-      }
-      const tmp3 = computeVideoTileGradientStops(modalV2BackgroundColor, modalV2BackgroundColor);
-      cResult[0] = modalV2BackgroundColor;
-      cResult[1] = modalV2BackgroundColor;
-      cResult[2] = tmp3;
-      tmp2 = tmp3;
-    }
-  : function useVideoTileGradientColors(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      const items = [arg0, arg1];
-      return noop.useMemo(() => computeVideoTileGradientStops(closure_0, closure_1), items);
-    };
+export function useVideoTileGradientColors(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  const items = [arg0, arg1];
+  return noop.useMemo(() => computeVideoTileGradientStops(closure_0, closure_1), items);
+}

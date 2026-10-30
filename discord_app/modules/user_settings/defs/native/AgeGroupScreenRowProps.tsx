@@ -1,45 +1,22 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3092 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3093 from "../../../age_assurance/AgeAssurance.messages.js";
 import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import TinyBroncoSettingsPredicate from "../../../tiny_bronco/native/TinyBroncoSettingsPredicate.tsx";
-import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let ReactCompilerGating = ReactCompilerGating_mod;
-let closure_3 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAgeGroupRowPredicate(arg0) {
-      let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
-      TinyBroncoSettingsPredicate;
-      if (showAssignedAgeGroupSettings) {
-        showAssignedAgeGroupSettings = tmp3 === arg0;
-      }
-      return showAssignedAgeGroupSettings;
-    }
-  : function useAgeGroupRowPredicate(arg0) {
-      let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
-      TinyBroncoSettingsPredicate;
-      if (showAssignedAgeGroupSettings) {
-        showAssignedAgeGroupSettings = tmp3 === arg0;
-      }
-      return showAssignedAgeGroupSettings;
-    };
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating.isReactCompilerEnabled();
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const result2 = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
 
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3092.SH6Tcv);
+    return intl.string(_modDef3093.SH6Tcv);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3092.rJiO86);
+    return intl.string(_modDef3093.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     const obj = AgeVerificationActionCreatorsDefault;
@@ -50,8 +27,18 @@ export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   withArrow: true,
 };
 export function useShowAssignedAdultAgeGroupRow() {
-  return closure_3(false);
+  let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
+  TinyBroncoSettingsPredicate;
+  if (showAssignedAgeGroupSettings) {
+    showAssignedAgeGroupSettings = tmp3 === false;
+  }
+  return showAssignedAgeGroupSettings;
 }
 export function useShowAccountStatusAgeGroupRow() {
-  return closure_3(true);
+  let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
+  TinyBroncoSettingsPredicate;
+  if (showAssignedAgeGroupSettings) {
+    showAssignedAgeGroupSettings = tmp3 === true;
+  }
+  return showAssignedAgeGroupSettings;
 }

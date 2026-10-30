@@ -2,9 +2,9 @@
 import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../../../Constants.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef2047 from "../../../../../../../_runtime/metro/02047__.js";
+import _modDef2044 from "../../../../../../../_runtime/metro/02044__.js";
 import SafetyHubConstants from "../../../../../safety_hub/SafetyHubConstants.tsx";
-import _modDef8013 from "../../../../../../../_runtime/metro/08013__.js";
+import _modDef8019 from "../../../../../../../_runtime/metro/08019__.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
@@ -62,11 +62,11 @@ export function createSafetyPolicyNoticeEmbed(message) {
             };
             const intl = util.intl;
             obj.titleText = intl.string(util.t["4CxGXi"]);
-            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8013));
+            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8019));
             const intl2 = util.intl;
             const obj3 = { daysAgo: null };
-            const obj4 = _modDef2047();
-            obj3.daysAgo = obj4.diff(_modDef2047.unix(parsed), "days");
+            const obj4 = _modDef2044();
+            obj3.daysAgo = obj4.diff(_modDef2044.unix(parsed), "days");
             obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj3);
             const intl3 = util.intl;
             obj.descriptionText = intl3.string(util.t["5CLb0A"]);

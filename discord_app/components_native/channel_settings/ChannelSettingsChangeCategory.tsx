@@ -11,7 +11,7 @@ import TableRow from "../../design/components/TableRow/native/TableRow.native.ts
 import TableRowGroup from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import _toArray from "../../../_runtime/00729__toArray.js";
+import _toArray from "../../../_runtime/00717__toArray.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildCategoryStore from "../../stores/GuildCategoryStore.tsx";
@@ -21,10 +21,10 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Permissions = fn(1084).Permissions;
+const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5005);
+const createStyles = fn(5009);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -313,68 +313,18 @@ prototype["render"] = function render() {
   obj.children = closure_1_14(Stack_Stack.Stack, obj2);
   return map1(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(5071).ThemeContext;
-const ReactCompilerGating = fn(558);
-let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+ChannelSettingsChangeCategory.contextType = fn(5075).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function ConnectedChannelSettingsChangeCategory(channelId) {
-      const cResult = channelId(576).c(7);
-      channelId = channelId.channelId;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ChannelStore];
-        cResult[0] = items;
-        let first = items;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== channelId) {
-        const fn = function l() {
-          return ChannelStore.getChannel(channelId);
-        };
-        cResult[1] = channelId;
-        cResult[2] = fn;
-        let tmp6 = fn;
-      } else {
-        tmp6 = cResult[2];
-      }
-      const obj = channelId(576);
-      const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
-      const tmpResult = channelId(504);
-      const navigation = channelId(1503).useNavigation();
-      const tmpResult3 = channelId(1503);
-      const appChannelBotUserId = channelId(11406).useAppChannelBotUserId(stateFromStores);
-      _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
-      if (cResult[3] === appChannelBotUserId) {
-        if (cResult[4] === stateFromStores) {
-          if (cResult[5] === navigation) {
-            let tmp11 = cResult[6];
-          }
-          return tmp11;
-        }
-      }
-      const tmp12 = closure_13(ChannelSettingsChangeCategory, {
-        channel: stateFromStores,
-        navigation,
-        appChannelBotUserId,
-      });
-      cResult[3] = appChannelBotUserId;
-      cResult[4] = stateFromStores;
-      cResult[5] = navigation;
-      cResult[6] = tmp12;
-      tmp11 = tmp12;
-      const tmpResult4 = channelId(11406);
-    }
-  : function ConnectedChannelSettingsChangeCategory(channelId) {
-      channelId = channelId.channelId;
-      const items = [ChannelStore];
-      const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-      const obj = channelId(504);
-      const navigation = channelId(1503).useNavigation();
-      const obj2 = channelId(1503);
-      const appChannelBotUserId = channelId(11406).useAppChannelBotUserId(channel);
-      _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
-      return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
-    };
+export default function ConnectedChannelSettingsChangeCategory(channelId) {
+  channelId = channelId.channelId;
+  const items = [ChannelStore];
+  const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const obj = channelId(504);
+  const navigation = channelId(1498).useNavigation();
+  const obj2 = channelId(1498);
+  const appChannelBotUserId = channelId(11609).useAppChannelBotUserId(channel);
+  _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
+  return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
+}

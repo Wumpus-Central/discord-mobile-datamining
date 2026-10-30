@@ -4,10 +4,10 @@ import AnalyticsUtilsDefault from "../AnalyticsUtils.tsx";
 import FingerprintUtils from "../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
 import PlatformUtils from "../PlatformUtils.tsx";
 import URLUtilsDefault from "../URLUtils.tsx";
-import UrlDefault from "../../../_runtime/01386_Url.js";
-import _modDef1491 from "../../../_runtime/metro/01491__.js";
+import UrlDefault from "../../../_runtime/01381_Url.js";
+import _modDef1486 from "../../../_runtime/metro/01486__.js";
 import MetaQuestUtils from "../../modules/device/MetaQuestUtils.android.tsx";
-import _modDef1949 from "../../../_runtime/metro/01949__.js";
+import _modDef1944 from "../../../_runtime/metro/01944__.js";
 import LinkUtils from "../../modules/links/LinkUtils.tsx";
 import findCodedLinks from "../../modules/coded_links/findCodedLinks.tsx";
 import CodedLink from "../../modules/coded_links/CodedLink.tsx";
@@ -25,7 +25,7 @@ function parseQuery(arg0) {
   try {
     const _Object = Object;
     const _Object2 = Object;
-    const entries = Object.entries(_modDef1491.parse(arg0));
+    const entries = Object.entries(_modDef1486.parse(arg0));
     return Object.fromEntries(
       entries.map((item) => {
         [tmp, tmp2] = item;
@@ -42,18 +42,18 @@ function parseQuery(arg0) {
     return {};
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({
   AnalyticEvents: closure_4,
   GuildSettingsSections: hasOwnProperty,
   GuildSettingsSubsections: metroRequire,
   LinkingTypes: closure_7,
 } = Constants);
-const CollectiblesShopConstants = fn(1086);
+const CollectiblesShopConstants = fn(1074);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const CONVERSATION_QUERY_PARAM = fn(5644).CONVERSATION_QUERY_PARAM;
-const UPDATE_CONFIG = fn(5735).UPDATE_CONFIG;
-const PaymentConstants = fn(5736);
+const CONVERSATION_QUERY_PARAM = fn(5650).CONVERSATION_QUERY_PARAM;
+const UPDATE_CONFIG = fn(5741).UPDATE_CONFIG;
+const PaymentConstants = fn(5742);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_12, MobileWebRedirectCheckoutDeepLinkQueryKeys: map1 } =
   PaymentConstants);
 const re14 = /feature\/([\w-]+)/;
@@ -80,7 +80,7 @@ export default function parseURL(ctaLink) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const sanitizeUrlResult = _modDef1949.sanitizeUrl(ctaLink);
+  const sanitizeUrlResult = _modDef1944.sanitizeUrl(ctaLink);
   if (null == sanitizeUrlResult) {
     const obj3 = { payload: null };
     const obj4 = { type: React5.NONE };
@@ -318,7 +318,7 @@ export default function parseURL(ctaLink) {
               if (query == null) {
                 str5 = "";
               }
-              let ad_creative_ids = _modDef1491.parse(str5).ad_creative_ids;
+              let ad_creative_ids = _modDef1486.parse(str5).ad_creative_ids;
               if (ad_creative_ids == null) {
                 ad_creative_ids = [];
               }
@@ -330,14 +330,14 @@ export default function parseURL(ctaLink) {
                 obj37.payload = obj39;
                 return obj37;
               }
-              const tmpResult13 = _modDef1491;
+              const tmpResult13 = _modDef1486;
             }
             if (null != pathname.match(re27)) {
               let str27 = query;
               if (query == null) {
                 str27 = "";
               }
-              let ad_creative_ids1 = _modDef1491.parse(str27).ad_creative_ids;
+              let ad_creative_ids1 = _modDef1486.parse(str27).ad_creative_ids;
               if (ad_creative_ids1 == null) {
                 ad_creative_ids1 = [];
               }

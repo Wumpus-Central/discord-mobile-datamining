@@ -95,12 +95,12 @@ prototype["getFrameByEmbeddedContext"] = function getFrameByEmbeddedContext(cont
   }
 };
 prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
-  return map.get(closure_1_8(arg0, arg1));
+  return map.get(React6(arg0, arg1));
 };
 prototype["getFramesForSurface"] = function getFramesForSurface(arg0) {
   closure_0 = arg0;
   return Array.from(map.values()).filter(
-    (applicationId) => closure_2_8(applicationId.applicationId, closure_0) === applicationId.id,
+    (applicationId) => React6(applicationId.applicationId, closure_0) === applicationId.id,
   );
 };
 prototype["getFramesForChannel"] = function getFramesForChannel(id) {

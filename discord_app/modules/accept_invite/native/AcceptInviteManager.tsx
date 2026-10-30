@@ -1,6 +1,6 @@
 // discord_app/modules/accept_invite/native/AcceptInviteManager.tsx
 import router_utils from "../../routing/router_utils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
@@ -15,8 +15,8 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7801).ACCEPT_INVITE_MODAL_KEY;
-const Constants = fn(1084);
+const ACCEPT_INVITE_MODAL_KEY = fn(7806).ACCEPT_INVITE_MODAL_KEY;
+const Constants = fn(1072);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -94,7 +94,7 @@ const prototype = function AcceptInviteManager() {
         if (invite.state === constants.RESOLVED) {
           flag2 = false;
           if (!obj9.isStreamInvite(invite)) {
-            guild = invite.guild;
+            const guild = invite.guild;
             let id;
             if (guild != null) {
               id = guild.id;
@@ -124,7 +124,7 @@ const prototype = function AcceptInviteManager() {
                   let flag3 = PermissionStore.can(constants2.VIEW_CHANNEL, ChannelStore.getChannel(target_channel_id));
                   if (flag3) {
                     const target_message_id = invite.target_message_id;
-                    router_utils.transitionTo(__initData.CHANNEL(id, target_channel_id, target_message_id), {
+                    router_utils.transitionTo(closure_3_12.CHANNEL(id, target_channel_id, target_message_id), {
                       navigationReplace: true,
                       openChannel: true,
                     });
@@ -150,7 +150,7 @@ const prototype = function AcceptInviteManager() {
             inviteInstanceId,
           };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(19263, dependencyMap.paths),
+            asyncRequireImpl(19324, dependencyMap.paths),
             obj4,
             ACCEPT_INVITE_MODAL_KEY,
           );

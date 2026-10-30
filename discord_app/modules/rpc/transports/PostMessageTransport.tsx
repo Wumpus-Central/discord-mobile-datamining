@@ -8,8 +8,8 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import FramesStore from "../../frames/FramesStore.tsx";
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6437).RPC_EMBEDDED_APP_SCOPE;
-const Constants = fn(1084);
+const RPC_EMBEDDED_APP_SCOPE = fn(6444).RPC_EMBEDDED_APP_SCOPE;
+const Constants = fn(1072);
 ({
   AnalyticEvents: closure_8,
   ComponentActions: closure_9,
@@ -17,7 +17,7 @@ const Constants = fn(1084);
   RPCErrors: closure_11,
   RPCCommands: closure_12,
 } = Constants);
-const asLaunched = fn(6834).asLaunched;
+const asLaunched = fn(6841).asLaunched;
 let closure_14 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
 const map1 = new Map();
@@ -26,7 +26,7 @@ function postClose(source, arg1, postMessageToRPCClient) {
   const items = [RPCOpcodesDefault.CLOSE, arg1];
   postMessageToRPCClient(items, source.origin);
 }
-const EventEmitter = fn(580).EventEmitter;
+const EventEmitter = fn(568).EventEmitter;
 class PostMessageTransport extends EventEmitter {
   constructor(arg0, arg1, arg2, arg3) {
     tmp4 = new PostMessageTransport(tmp3, tmp2, tmp);
@@ -61,10 +61,10 @@ class PostMessageTransport extends EventEmitter {
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((item) => {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
-          const obj = closure_1_1(1264);
-          obj2.channel_id = closure_1_0(4926).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(4926);
-          obj2.guild_id = closure_1_0(4926).getEmbeddedActivityLocationGuildId(tmp2.location);
+          const obj = closure_1_1(1253);
+          obj2.channel_id = closure_1_0(4930).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4930);
+          obj2.guild_id = closure_1_0(4930).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
@@ -145,7 +145,7 @@ class PostMessageTransport extends EventEmitter {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
@@ -322,7 +322,7 @@ class PostMessageTransport extends EventEmitter {
               logger2.info("Socket Validated: " + closure_132_7.id);
               c7 = 0;
               c9 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
@@ -371,7 +371,7 @@ class PostMessageTransport extends EventEmitter {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -418,7 +418,7 @@ class PostMessageTransport extends EventEmitter {
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             c5 = 0;
@@ -581,7 +581,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                   const obj2 = { value, done: true };
                                   return obj2;
                                 } else {
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "HermesInternal", done: null };
                                 }
                               } else {
                                 try {
@@ -676,7 +676,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                                         const pendingTicketRefreshes2 = tmp60.pendingTicketRefreshes;
                                         pendingTicketRefreshes2.delete(source.iframeId);
                                         c5 = 3;
-                                        return { value: "IconComponent", done: "IconComponent" };
+                                        return { value: "HermesInternal", done: null };
                                       }
                                     } else if (arg0 === 1) {
                                       c5 = 3;

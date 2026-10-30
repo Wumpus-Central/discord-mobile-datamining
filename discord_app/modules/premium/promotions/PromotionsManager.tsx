@@ -1,4 +1,5 @@
 // discord_app/modules/premium/promotions/PromotionsManager.tsx
+import EntitlementTypes from "../../../../discord_common/js/shared/shared-constants/EntitlementTypes.tsx";
 import PromotionsActionCreators from "PromotionsActionCreators.tsx";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
@@ -6,8 +7,7 @@ import PromotionsStore from "PromotionsStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const EntitlementTypes = fn(1084).EntitlementTypes;
-const SubscriptionTypes = fn(1095).SubscriptionTypes;
+const SubscriptionTypes = fn(1083).SubscriptionTypes;
 class PromotionsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -111,7 +111,7 @@ prototype["onOfferUpdated"] = function onOfferUpdated() {
 };
 prototype["onVCRedeemed"] = function onVCRedeemed(entitlements) {
   entitlements = entitlements.entitlements;
-  if (entitlements.some((type) => type.type === constants.FRACTIONAL_REDEMPTION)) {
+  if (entitlements.some((type) => type.type === EntitlementTypes.EntitlementTypes.FRACTIONAL_REDEMPTION)) {
     const result = PromotionsActionCreators.maybeFetchActivePromotions(false);
   }
 };

@@ -2,7 +2,7 @@
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import _mod17 from "../../_runtime/metro/00017__.js";
 import addSentryBreadcrumbDefault from "../modules/sentry/addSentryBreadcrumb.native.tsx";
-import _modAll686 from "../../_runtime/metro/00686__.js";
+import _modAll674 from "../../_runtime/metro/00674__.js";
 import SentryInitUtils_mod from "../modules/errors/native/SentryInitUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
@@ -17,30 +17,30 @@ let result = size.fileFinishedImporting("utils/SentryUtils.native.tsx");
 export default {
   setUser(id, username, email, staff) {
     const user = { id, username, email, staff };
-    const currentScope = _modAll686.getCurrentScope();
+    const currentScope = _modAll674.getCurrentScope();
     currentScope.setUser(user);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser(user);
   },
   clearUser() {
-    const currentScope = _modAll686.getCurrentScope();
+    const currentScope = _modAll674.getCurrentScope();
     currentScope.setUser(null);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser({ staff: false });
   },
   setTags(arg0) {
-    const currentScope = _modAll686.getCurrentScope();
+    const currentScope = _modAll674.getCurrentScope();
     currentScope.setTags(arg0);
   },
   setExtra(arg0) {
-    const currentScope = _modAll686.getCurrentScope();
+    const currentScope = _modAll674.getCurrentScope();
     currentScope.setExtras(arg0);
   },
   captureException(arg0, extra) {
     _require = arg0;
     importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
     let obj = require("ErrorCommonUtils");
-    _modAll686.withScope((setTags) => {
+    _modAll674.withScope((setTags) => {
       if (null != closure_2) {
         if (null != closure_2.tags) {
           setTags.setTags(closure_2.tags);
@@ -49,7 +49,7 @@ export default {
           setTags.setExtras(closure_2.extra);
         }
       }
-      closure_1 = _modAll686.captureException(closure_0);
+      closure_1 = _modAll674.captureException(closure_0);
     });
     return closure_1;
   },
@@ -68,7 +68,7 @@ export default {
     }
     dependencyMap = Object.assign({ crash: "true" }, {});
     let obj = require("ErrorCommonUtils");
-    updatedOptions(686).withScope((setExtras) => {
+    updatedOptions(674).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(updatedOptions.extra);
       }
@@ -91,7 +91,7 @@ export default {
         }
         return exception;
       });
-      closure_1 = _modAll686.captureException(closure_0);
+      closure_1 = _modAll674.captureException(closure_0);
       tmp2 = null != updatedOptions && null != updatedOptions.extra;
     });
     return closure_1;
@@ -101,7 +101,7 @@ export default {
     closure_1 = arg2;
     importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
     let obj = require("ErrorCommonUtils");
-    _modAll686.withScope((setExtras) => {
+    _modAll674.withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(closure_2.extra);
       }
@@ -115,14 +115,14 @@ export default {
           return arg0;
         });
       }
-      _modAll686.captureMessage(closure_0, closure_1);
+      _modAll674.captureMessage(closure_0, closure_1);
       tmp2 = null != closure_2 && null != closure_2.extra;
       tmp4 = null != closure_2 && null != closure_2.tags;
       tmp6 = null != closure_2 && null != closure_2.fingerprint;
     });
   },
   addFeatureFlag(arg0, arg1) {
-    const getClient = _modAll686.getClient;
+    const getClient = _modAll674.getClient;
     let client;
     if (getClient != null) {
       client = getClient();
@@ -148,8 +148,8 @@ export default {
   profiledRootComponent(displayName) {
     let withProfilerResult = displayName;
     if ("canaryRelease" === obj.getConstants().ReleaseChannel) {
-      withProfilerResult = _modAll686.withProfiler(displayName, { includeRender: true, includeUpdates: true });
-      const tmpResult = _modAll686;
+      withProfilerResult = _modAll674.withProfiler(displayName, { includeRender: true, includeUpdates: true });
+      const tmpResult = _modAll674;
     }
     return withProfilerResult;
   },
@@ -213,7 +213,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: 24.359,
+                  tags: null,
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

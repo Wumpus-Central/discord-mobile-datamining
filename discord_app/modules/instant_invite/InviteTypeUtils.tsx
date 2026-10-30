@@ -1,13 +1,14 @@
 // discord_app/modules/instant_invite/InviteTypeUtils.tsx
 import GuildScheduledEventStore from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import Constants from "Constants.tsx";
+import InviteTargetTypes from "../../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
 import GuildProfileUtils from "../guild_profile/GuildProfileUtils.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
-import Constants from "Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const isEventUpcoming = GuildScheduledEventStore.isEventUpcoming;
 ({ isGuildVocalChannelType: c3, isMultiUserDM: closure_4 } = ChannelRecord);
-({ InviteTargetTypes: hasOwnProperty, InviteTypes: metroRequire } = Constants);
+const InviteTypes = Constants.InviteTypes;
 const GuildInviteExtendedType = {
   EVENT: "event",
   APPLICATION: "application",
@@ -19,7 +20,7 @@ const result = size.fileFinishedImporting("modules/instant_invite/InviteTypeUtil
 
 export const InviteTypes = Constants.InviteTypes;
 export function isGroupDMInvite(invite) {
-  let tmp = invite.type === constants2.GROUP_DM;
+  let tmp = invite.type === InviteTypes.GROUP_DM;
   if (!tmp) {
     let tmp3 = null != invite.channel;
     if (tmp3) {
@@ -38,17 +39,17 @@ export function isGuildScheduledEventInviteEmbed(invite) {
   return tmp;
 }
 export function isRoleSubscriptionInvite(target_type) {
-  return target_type.target_type === constants.ROLE_SUBSCRIPTIONS_PURCHASE;
+  return target_type.target_type === InviteTargetTypes.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE;
 }
 export function isStreamInvite(invite) {
-  let tmp = invite.target_type === constants.STREAM;
+  let tmp = invite.target_type === InviteTargetTypes.InviteTargetTypes.STREAM;
   if (tmp) {
     tmp = null != invite.target_user;
   }
   return tmp;
 }
 export function isFriendInvite(invite) {
-  let tmp = invite.type === constants2.FRIEND;
+  let tmp = invite.type === InviteTypes.FRIEND;
   if (!tmp) {
     tmp = null == invite.guild && null != invite.inviter;
     const tmp3 = null == invite.guild && null != invite.inviter;
@@ -56,7 +57,7 @@ export function isFriendInvite(invite) {
   return tmp;
 }
 export function isEmbeddedApplicationInvite(invite) {
-  return invite.target_type === constants.EMBEDDED_APPLICATION;
+  return invite.target_type === InviteTargetTypes.InviteTargetTypes.EMBEDDED_APPLICATION;
 }
 export function isVoiceChannelInvite(channel) {
   let tmp = null != channel.channel;
@@ -69,7 +70,7 @@ export function getInviteType(body) {
   if (typeof body.type === "number") {
     let GROUP_DM = body.type;
   } else {
-    let tmp4 = body.type === constants2.GROUP_DM;
+    let tmp4 = body.type === InviteTypes.GROUP_DM;
     if (!tmp4) {
       let tmp2 = null != body.channel;
       if (tmp2) {
@@ -78,14 +79,14 @@ export function getInviteType(body) {
       tmp4 = tmp2;
     }
     if (tmp4) {
-      GROUP_DM = constants2.GROUP_DM;
+      GROUP_DM = InviteTypes.GROUP_DM;
     } else {
-      let tmp5 = body.type === constants2.FRIEND;
+      let tmp5 = body.type === InviteTypes.FRIEND;
       if (!tmp5) {
         tmp5 = null == body.guild && null != body.inviter;
         const tmp7 = null == body.guild && null != body.inviter;
       }
-      GROUP_DM = tmp5 ? constants2.FRIEND : constants2.GUILD;
+      GROUP_DM = tmp5 ? InviteTypes.FRIEND : InviteTypes.GUILD;
     }
   }
   return GROUP_DM;
@@ -99,19 +100,19 @@ export function getGuildInviteExtendedType(invite) {
   }
   if (tmp) {
     let PROFILE = obj.EVENT;
-  } else if (invite.target_type === constants.EMBEDDED_APPLICATION) {
+  } else if (invite.target_type === InviteTargetTypes.InviteTargetTypes.EMBEDDED_APPLICATION) {
     PROFILE = obj.APPLICATION;
   } else {
-    obj = GuildProfileUtils;
-    if (obj.guildInviteCanEmbedProfile(invite)) {
+    if (tmp3Result.guildInviteCanEmbedProfile(invite)) {
       PROFILE = obj.PROFILE;
     } else {
-      let tmp6 = null != invite.channel;
-      if (tmp6) {
-        tmp6 = React3(invite.channel.type);
+      let tmp5 = null != invite.channel;
+      if (tmp5) {
+        tmp5 = React3(invite.channel.type);
       }
-      PROFILE = tmp6 ? tmp8.VOICE_CHANNEL : tmp8.DEFAULT;
+      PROFILE = tmp5 ? obj.VOICE_CHANNEL : obj.DEFAULT;
     }
+    tmp3Result = GuildProfileUtils;
   }
   return PROFILE;
 }

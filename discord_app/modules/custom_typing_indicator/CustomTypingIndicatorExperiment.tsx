@@ -1,7 +1,5 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx
-import c from "../../../_runtime/00576_c.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
-import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
@@ -18,22 +16,9 @@ const apexExperiment = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorExperiment.tsx");
 
 export const CustomTypingIndicatorExperiment = apexExperiment;
-export const useCustomTypingIndicatorConfig = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useCustomTypingIndicatorConfig(location) {
-      const cResult = c.c(2);
-      if (cResult[0] !== location) {
-        const obj2 = { location };
-        cResult[0] = location;
-        cResult[1] = obj2;
-        let tmp2 = obj2;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return apexExperiment.useConfig(tmp2);
-    }
-  : function useCustomTypingIndicatorConfig(location) {
-      return apexExperiment.useConfig({ location });
-    };
+export function useCustomTypingIndicatorConfig(TypingIndicatorInner) {
+  return apexExperiment.useConfig({ location: TypingIndicatorInner });
+}
 export function getCustomTypingIndicatorConfig(location) {
   return apexExperiment.getConfig({ location });
 }

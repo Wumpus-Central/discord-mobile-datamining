@@ -9,8 +9,8 @@ import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 require = fn;
-const GuildSettingsSections = fn(1084).GuildSettingsSections;
-let closure_7 = fn(1094).ChannelNotificationSettingsFlags;
+const GuildSettingsSections = fn(1072).GuildSettingsSections;
+let closure_7 = fn(1082).ChannelNotificationSettingsFlags;
 const dependencyMap = {};
 const Store = initializeDefault.Store;
 class ImpersonateStore extends Store {}
@@ -188,7 +188,7 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp6.type === overrides(4916).ImpersonateType.NEW_MEMBER) {
+          if (tmp6.type === overrides(4920).ImpersonateType.NEW_MEMBER) {
             optInChannels = tmp6.optInChannels;
             if (optInChannels == null) {
               const _Set = Set;
@@ -268,7 +268,7 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
         }
         let tmp3 = null != flags;
         if (tmp3) {
-          tmp3 = tmp2.type === guildId(4916).ImpersonateType.NEW_MEMBER;
+          tmp3 = tmp2.type === guildId(4920).ImpersonateType.NEW_MEMBER;
         }
         flag = true;
         if (tmp3) {

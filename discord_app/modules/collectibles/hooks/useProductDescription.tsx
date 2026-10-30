@@ -1,9 +1,7 @@
 // discord_app/modules/collectibles/hooks/useProductDescription.tsx
 import _mod19 from "../../../../_runtime/metro/00019__.js";
-import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function getBundleDescription(bundledProducts) {
@@ -101,27 +99,12 @@ const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
 
 export { getProductDescription };
-export const useProductDescription = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useProductDescription(summary, arg1) {
-      const cResult = c.c(3);
-      if (cResult[0] === summary) {
-        if (cResult[1] === tmp2) {
-          let tmp3 = cResult[2];
-        }
-        return tmp3;
-      }
-      const tmp4 = getProductDescription(summary, undefined !== arg1 && arg1);
-      cResult[0] = summary;
-      cResult[1] = undefined !== arg1 && arg1;
-      cResult[2] = tmp4;
-      tmp3 = tmp4;
-    }
-  : function useProductDescription(arg0) {
-      closure_0 = arg0;
-      let flag = arg1;
-      if (arg1 === undefined) {
-        flag = false;
-      }
-      const items = [arg0, flag];
-      return useMemo(() => getProductDescription(closure_0, flag), items);
-    };
+export function useProductDescription(product) {
+  closure_0 = product;
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  const items = [product, flag];
+  return useMemo(() => getProductDescription(closure_0, flag), items);
+}

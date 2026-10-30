@@ -8,7 +8,7 @@ import SoundboardStore from "../../../../soundboard/SoundboardStore.tsx";
 import MessageStore from "../../../../../stores/MessageStore.tsx";
 
 require = fn;
-const MessageStates = fn(1084).MessageStates;
+const MessageStates = fn(1072).MessageStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
 

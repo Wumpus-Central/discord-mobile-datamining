@@ -1,16 +1,13 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx
-import c from "../../../../_runtime/00576_c.js";
 import apex_ApexExperimentDefault from "../../experiments/apex/ApexExperiment.tsx";
 
-require = fn;
-let tmp2 = apex_ApexExperimentDefault({
+const tmp2 = apex_ApexExperimentDefault({
   name: "2026-04-inappropriate-conversations-default-on",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-let closure_2 = tmp2;
-const ReactCompilerGating = fn(558);
+let closure_0 = tmp2;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx",
@@ -18,22 +15,8 @@ const result = size.fileFinishedImporting(
 
 export const InappropriateConversationsDefaultOn = tmp2;
 export function isEligibleForInappropriateConversationDefaultOn(location) {
-  return closure_2.getConfig({ location: location.location }).enabled;
+  return closure_0.getConfig({ location: location.location }).enabled;
 }
-export const useIsEligibleForInappropriateConversationDefaultOn = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsEligibleForInappropriateConversationDefaultOn(location) {
-      const cResult = c.c(2);
-      const _location = location.location;
-      if (cResult[0] !== _location) {
-        const obj2 = { location: _location };
-        cResult[0] = _location;
-        cResult[1] = obj2;
-        let tmp2 = obj2;
-      } else {
-        tmp2 = cResult[1];
-      }
-      return closure_2.useConfig(tmp2).enabled;
-    }
-  : function useIsEligibleForInappropriateConversationDefaultOn(location) {
-      return closure_2.useConfig({ location: location.location }).enabled;
-    };
+export function useIsEligibleForInappropriateConversationDefaultOn(location) {
+  return closure_0.useConfig({ location: location.location }).enabled;
+}

@@ -1,88 +1,45 @@
 // discord_app/modules/game_profile/hooks/useGameProfilePlatforms.tsx
-import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import PlatformType from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let items = [
-  fn(8870).PlatformType.DESKTOP,
+  fn(8904).PlatformType.DESKTOP,
   "mobile",
-  fn(8870).PlatformType.XBOX,
-  fn(8870).PlatformType.PLAYSTATION,
-  fn(8870).PlatformType.NINTENDO,
-  fn(8870).PlatformType.ROBLOX,
+  fn(8904).PlatformType.XBOX,
+  fn(8904).PlatformType.PLAYSTATION,
+  fn(8904).PlatformType.NINTENDO,
+  fn(8904).PlatformType.ROBLOX,
 ];
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfilePlatforms.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useGameProfilePlatforms(platforms) {
-      const cResult = c.c(5);
-      if (cResult[0] !== platforms.platforms) {
-        const _Set = Set;
-        let set = new Set(platforms.platforms);
-        let hasItem = set.has(PlatformType.PlatformType.MACOS);
-        if (!hasItem) {
-          hasItem = set.has(PlatformType.PlatformType.LINUX);
-        }
-        if (hasItem) {
-          set.add(PlatformType.PlatformType.DESKTOP);
-        }
-        cResult[0] = platforms.platforms;
-        cResult[1] = set;
-      } else {
-        set = cResult[1];
-      }
-      let hasItem1 = obj2.has(PlatformType.PlatformType.IOS);
-      if (!hasItem1) {
-        hasItem1 = obj2.has(PlatformType.PlatformType.ANDROID);
-      }
-      if (cResult[2] === obj2) {
-        if (cResult[3] === hasItem1) {
-          let tmp11 = cResult[4];
-        }
-        return tmp11;
-      }
-      const found = items.filter((item) => {
-        if ("mobile" === item) {
-          let hasItem = hasItem1;
-        } else {
-          hasItem = set.has(item);
-        }
-        return hasItem;
-      });
-      cResult[2] = obj2;
-      cResult[3] = hasItem1;
-      cResult[4] = found;
-      tmp11 = found;
+export default function useGameProfilePlatforms(platforms) {
+  items = [platforms.platforms];
+  return noop.useMemo(() => {
+    const set = new Set(platforms.platforms);
+    let hasItem = set.has(PlatformType.PlatformType.MACOS);
+    if (!hasItem) {
+      hasItem = set.has(PlatformType.PlatformType.LINUX);
     }
-  : function useGameProfilePlatforms(platforms) {
-      items = [platforms.platforms];
-      return noop.useMemo(() => {
-        const set = new Set(platforms.platforms);
-        let hasItem = set.has(PlatformType.PlatformType.MACOS);
-        if (!hasItem) {
-          hasItem = set.has(PlatformType.PlatformType.LINUX);
-        }
-        if (hasItem) {
-          set.add(PlatformType.PlatformType.DESKTOP);
-        }
-        let hasItem1 = set.has(PlatformType.PlatformType.IOS);
-        if (!hasItem1) {
-          hasItem1 = set.has(PlatformType.PlatformType.ANDROID);
-        }
-        return items.filter((item) => {
-          if ("mobile" === item) {
-            let hasItem = hasItem1;
-          } else {
-            hasItem = set.has(item);
-          }
-          return hasItem;
-        });
-      }, items);
-    };
+    if (hasItem) {
+      set.add(PlatformType.PlatformType.DESKTOP);
+    }
+    let hasItem1 = set.has(PlatformType.PlatformType.IOS);
+    if (!hasItem1) {
+      hasItem1 = set.has(PlatformType.PlatformType.ANDROID);
+    }
+    return items.filter((item) => {
+      if ("mobile" === item) {
+        let hasItem = hasItem1;
+      } else {
+        hasItem = set.has(item);
+      }
+      return hasItem;
+    });
+  }, items);
+}
 export function getGameProfilePlatformText(item) {
   if (PlatformType.PlatformType.DESKTOP === item) {
     const intl6 = util.intl;

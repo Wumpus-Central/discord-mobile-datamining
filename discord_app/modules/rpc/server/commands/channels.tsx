@@ -15,108 +15,43 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-let closure_15 = async function _validateUserAllowsJoiningVoice(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: "IconComponent" };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          ({ frame: closure_129_0, iframeId: closure_129_1 } = closure_0);
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "Reflect", done: null };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const obj5 = {
-            applicationId: closure_129_0.applicationId,
-            iframeId: closure_129_1,
-            permissions: ["connect_user_to_voice"],
-          };
-          c3 = 2;
-          c4 = 1;
-          const obj6 = { value: closure_130_1(closure_130_2[13])(obj5), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_129_2 = value;
-        closure_129_3 = closure_130_3(closure_129_2, 1)[0];
-        let state;
-        if (closure_129_3 != null) {
-          state = closure_129_3.state;
-        }
-        if ("granted" !== state) {
-          const obj = { errorCode: closure_130_14.UNAUTHORIZED_FOR_APPLICATION };
-          const tmp14 = new closure_130_1(closure_130_2[12])(
-            obj,
-            "The user has not allowed this app to join voice channels",
-          );
-          throw tmp14;
-        } else {
-          c4 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
-        }
-      }
-    } catch (tmp23) {
-      c4 = tmp;
-      throw tmp23;
-    }
+let closure_15 = async function _validateUserAllowsJoiningVoice() {
+  await closure_130_1(closure_130_2[13])({
+    applicationId: closure_129_0.applicationId,
+    iframeId: closure_129_1,
+    permissions: ["connect_user_to_voice"],
+  });
+  closure_129_2 = value;
+  closure_129_3 = closure_130_3(closure_129_2, 1)[0];
+  if (closure_129_3 != null) {
+    const state = closure_129_3.state;
   }
+  if ("granted" !== state) {
+    throw new closure_130_1(closure_130_2[12])(
+      { errorCode: closure_130_14.UNAUTHORIZED_FOR_APPLICATION },
+      "The user has not allowed this app to join voice channels",
+    );
+  }
+  await "HermesInternal";
+  closure_1 = tmp2;
+  ({ frame: closure_129_0, iframeId: closure_129_1 } = closure_0);
+  return "flexDirection";
 };
-const ChannelRecord = fn(4861);
+const ChannelRecord = fn(4862);
 ({ isVoiceChannel: hasOwnProperty, isTextChannel: metroRequire } = ChannelRecord);
-let Constants = fn(6437);
+let Constants = fn(6444);
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1084);
+Constants = fn(1072);
 ({ Routes: closure_12, Permissions: map1, RPCCommands, RPCErrors: closure_14 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16215);
+let CONTEXT_MENU_ICON_NAMES = fn(16255);
 let obj3 = { scope: null, validateAccess: null, handler: null };
 let obj4 = {};
 let items = [
-  fn(8867).OAuth2Scopes.RPC,
-  fn(8867).OAuth2Scopes.GUILDS,
-  fn(8867).OAuth2Scopes.GUILDS_CHANNELS_READ,
-  fn(8867).OAuth2Scopes.BOT,
+  fn(8901).OAuth2Scopes.RPC,
+  fn(8901).OAuth2Scopes.GUILDS,
+  fn(8901).OAuth2Scopes.GUILDS_CHANNELS_READ,
+  fn(8901).OAuth2Scopes.BOT,
 ];
 obj4[RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
@@ -156,10 +91,10 @@ obj3.handler = function handler(args) {
   }
 };
 obj[RPCCommands.GET_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNEL, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(16215);
+CONTEXT_MENU_ICON_NAMES = fn(16255);
 let obj6 = { scope: null, validateAccess: null, handler: null };
 let obj7 = {};
-const items1 = [fn(8867).OAuth2Scopes.RPC, fn(8867).OAuth2Scopes.BOT];
+const items1 = [fn(8901).OAuth2Scopes.RPC, fn(8901).OAuth2Scopes.BOT];
 obj7[RPC_SCOPE_CONFIG.ANY] = items1;
 obj6.scope = obj7;
 obj6.validateAccess = function validateAccess(args) {
@@ -181,7 +116,7 @@ obj6.validateAccess = function validateAccess(args) {
 obj6.handler = function handler(args) {
   const guild_id = args.args.guild_id;
   const socket = args.socket;
-  guild = undefined;
+  let guild;
   const values = guild(12).values(ChannelStore.loadAllGuildAndPrivateChannelsFromDisk());
   let found = values;
   if (null != guild_id) {
@@ -191,7 +126,7 @@ obj6.handler = function handler(args) {
       if (null == guild) {
         const obj2 = { errorCode: constants2.INVALID_GUILD };
         const _HermesInternal = HermesInternal;
-        const tmpResult1 = new guild(9300)(obj2, "Invalid guild id: " + guild_id);
+        const tmpResult1 = new guild(9313)(obj2, "Invalid guild id: " + guild_id);
         throw tmpResult1;
       } else {
         found = values.filter((guild_id) => guild_id.guild_id === guild.id);
@@ -208,13 +143,13 @@ obj6.handler = function handler(args) {
   return obj3;
 };
 obj[RPCCommands.GET_CHANNELS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNELS, obj6);
-CONTEXT_MENU_ICON_NAMES = fn(16215);
+CONTEXT_MENU_ICON_NAMES = fn(16255);
 let obj9 = { scope: null, validateAccess: null, handler: null };
-const obj10 = {};
+let obj10 = {};
 const items2 = [
-  fn(8867).OAuth2Scopes.GUILDS_MEMBERS_READ,
-  fn(8867).OAuth2Scopes.GUILDS_CHANNELS_READ,
-  fn(8867).OAuth2Scopes.BOT,
+  fn(8901).OAuth2Scopes.GUILDS_MEMBERS_READ,
+  fn(8901).OAuth2Scopes.GUILDS_CHANNELS_READ,
+  fn(8901).OAuth2Scopes.BOT,
 ];
 obj10[RPC_SCOPE_CONFIG.ANY] = items2;
 obj9.scope = obj10;
@@ -258,10 +193,10 @@ obj[RPCCommands.GET_CHANNEL_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCComm
   RPCCommands.GET_CHANNEL_PERMISSIONS,
   obj9,
 );
-CONTEXT_MENU_ICON_NAMES = fn(16215);
+CONTEXT_MENU_ICON_NAMES = fn(16255);
 let obj12 = { scope: null, handler: null };
 const obj13 = {};
-const items3 = [fn(8867).OAuth2Scopes.RPC, RPC_EMBEDDED_APP_SCOPE];
+const items3 = [fn(8901).OAuth2Scopes.RPC, RPC_EMBEDDED_APP_SCOPE];
 obj13[RPC_SCOPE_CONFIG.ANY] = items3;
 obj12.scope = obj13;
 obj12.handler = function handler(args) {
@@ -344,7 +279,7 @@ obj12.handler = function handler(args) {
             }
             if ("guild" === obj.kind) {
               if (guildId2 !== obj.guildId) {
-                const obj6 = { errorCode: constants2.INVALID_CHANNEL };
+                let obj6 = { errorCode: constants2.INVALID_CHANNEL };
                 const tmp24 = new channel_id(tmp2[12])(
                   obj6,
                   "This app can only select a voice channel in the server it is installed in",
@@ -369,79 +304,125 @@ obj12.handler = function handler(args) {
         c5 = 0;
         c6 = 0;
         let iter = (function* (arg0) {
-          closure_3 = tmp2;
-          const iter = dependencyMap[Symbol.iterator]();
-          closure_1 = dependencyMap;
-          let tmp54 = iter === undefined;
-          if (!tmp54) {
-            closure_2 = iter.next();
-          }
-          closure_131_0 = closure_2;
-          let obj9 = tmp73;
-          if (!tmp54) {
-            tmp54 = tmp53;
-            obj9 = iter2;
-            if (iter2 !== undefined) {
-              closure_2 = iter2.next();
-              tmp54 = tmp53;
-              obj9 = iter2;
-            }
-          }
-          closure_131_1 = closure_2;
-          if (!tmp54) {
-            obj9.return();
-          }
-          yield "Reflect";
-          if (1 === tmp5) {
+          if (c6 === 2) {
+            c6 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
             if (arg0 === 1) {
-              c6 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c6 = 3;
-              return { value, done: true };
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
-              if (null != closure_131_1.guild_id) {
-                if (obj12.isChannelFull(closure_131_0, VoiceStateStore, GuildStore)) {
-                  throw new channel_id(flag2[12])({ errorCode: constants2.INVALID_CHANNEL }, "Channel is full");
-                } else if (!PermissionStore.can(constants.CONNECT, closure_131_0)) {
-                  throw new channel_id(flag2[12])(
-                    { errorCode: constants2.INVALID_PERMISSIONS },
-                    "Connect permission required to join channel",
-                  );
-                }
-                obj12 = dependencyMap(flag2[22]);
-              }
-              if (null != closure_3) {
-                c5 = 2;
-                c6 = 1;
-                return {
-                  value: (function validateUserAllowsJoiningVoice() {
-                    const self = this;
-                    const apply = closure_1_15.apply;
-                    if (typeof apply === "unknown") {
-                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                    } else {
-                      applyArgumentsResult = apply(self, arguments);
-                    }
-                    return applyArgumentsResult;
-                  })(closure_3),
-                  done: false,
-                };
-              }
+              return { value: "HermesInternal", done: null };
             }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            return { value, done: true };
+          } else {
+            try {
+              c6 = 2;
+              if (0 === c5) {
+                if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  const obj5 = { value, done: true };
+                  return obj5;
+                } else {
+                  closure_4 = tmp5;
+                  closure_3 = tmp2;
+                  closure_131_0 = undefined;
+                  closure_131_1 = undefined;
+                  closure_1 = dependencyMap;
+                  const iter = dependencyMap[Symbol.iterator]();
+                  closure_1 = dependencyMap;
+                  closure_2 = undefined;
+                  let tmp54 = iter === undefined;
+                  if (!tmp54) {
+                    closure_2 = iter.next();
+                  }
+                  closure_131_0 = closure_2;
+                  closure_2 = undefined;
+                  let obj9 = tmp73;
+                  if (!tmp54) {
+                    tmp54 = tmp53;
+                    obj9 = iter2;
+                    if (iter2 !== undefined) {
+                      closure_2 = iter2.next();
+                      tmp54 = tmp53;
+                      obj9 = iter2;
+                    }
+                  }
+                  closure_131_1 = closure_2;
+                  if (!tmp54) {
+                    obj9.return();
+                  }
+                  c5 = 1;
+                  c6 = 1;
+                  return { value: "flexDirection", done: true };
+                }
+              } else {
+                if (1 === tmp5) {
+                  if (arg0 === 1) {
+                    c6 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c6 = 3;
+                    const obj6 = { value, done: true };
+                    return obj6;
+                  } else {
+                    if (null != closure_131_1.guild_id) {
+                      if (obj12.isChannelFull(closure_131_0, VoiceStateStore, GuildStore)) {
+                        const obj7 = { errorCode: constants2.INVALID_CHANNEL };
+                        const tmp48 = new channel_id(flag2[12])(obj7, "Channel is full");
+                        throw tmp48;
+                      } else if (!PermissionStore.can(constants.CONNECT, closure_131_0)) {
+                        const obj8 = { errorCode: constants2.INVALID_PERMISSIONS };
+                        const tmp18 = new channel_id(flag2[12])(obj8, "Connect permission required to join channel");
+                        throw tmp18;
+                      }
+                      obj12 = dependencyMap(flag2[22]);
+                    }
+                    if (null != closure_3) {
+                      c5 = 2;
+                      c6 = 1;
+                      const obj10 = {
+                        value: (function validateUserAllowsJoiningVoice() {
+                          const self = this;
+                          const apply = closure_1_15.apply;
+                          if (typeof apply === "unknown") {
+                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                          } else {
+                            applyArgumentsResult = apply(self, arguments);
+                          }
+                          return applyArgumentsResult;
+                        })(closure_3),
+                        done: false,
+                      };
+                      return obj10;
+                    }
+                  }
+                } else if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  obj = { value, done: true };
+                  return obj;
+                }
+                const voiceChannel = channel_id(flag2[21]).selectVoiceChannel(closure_131_0.id);
+                if (closure_2) {
+                  dependencyMap(flag2[23]).replaceWith(closure_2_12.CHANNEL(closure_131_0.guild_id, closure_131_0.id));
+                  const obj4 = dependencyMap(flag2[23]);
+                }
+                c6 = 3;
+                const obj11 = { value: closure_131_1, done: true };
+                return obj11;
+              }
+            } catch (tmp56) {
+              c6 = tmp;
+              throw tmp56;
+            }
           }
-          const voiceChannel = channel_id(flag2[21]).selectVoiceChannel(closure_131_0.id);
-          if (closure_2) {
-            dependencyMap(flag2[23]).replaceWith(closure_2_12.CHANNEL(closure_131_0.guild_id, closure_131_0.id));
-            dependencyMap(flag2[23]);
-          }
-          return closure_131_1;
         })();
         iter.next();
         return iter;
@@ -502,10 +483,10 @@ obj[RPCCommands.SELECT_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand
   RPCCommands.SELECT_VOICE_CHANNEL,
   obj12,
 );
-CONTEXT_MENU_ICON_NAMES = fn(16215);
+CONTEXT_MENU_ICON_NAMES = fn(16255);
 const obj15 = { scope: null, handler: null };
 const obj16 = {};
-const items4 = [fn(8867).OAuth2Scopes.RPC, fn(8867).OAuth2Scopes.RPC_VOICE_READ];
+const items4 = [fn(8901).OAuth2Scopes.RPC, fn(8901).OAuth2Scopes.RPC_VOICE_READ];
 obj16[RPC_SCOPE_CONFIG.ANY] = items4;
 obj15.scope = obj16;
 obj15.handler = function handler(socket) {
@@ -529,9 +510,9 @@ obj[RPCCommands.GET_SELECTED_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCC
   RPCCommands.GET_SELECTED_VOICE_CHANNEL,
   obj15,
 );
-CONTEXT_MENU_ICON_NAMES = fn(16215);
+CONTEXT_MENU_ICON_NAMES = fn(16255);
 obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SELECT_TEXT_CHANNEL, {
-  scope: fn(8867).OAuth2Scopes.RPC,
+  scope: fn(8901).OAuth2Scopes.RPC,
   handler(args) {
     ({ server, socket } = args);
     args = args.args;
@@ -541,15 +522,15 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
       num = 0;
     }
     if (null == channel_id) {
-      socket(1111).transitionTo(constants.ME);
+      socket(1100).transitionTo(constants.ME);
       let nextPromise1 = null;
-      let obj = socket(1111);
+      let obj = socket(1100);
     } else {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9300)(
+          throw new channel_id(9313)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -557,7 +538,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
       nextPromise1 = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9300)(
+          throw new channel_id(9313)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -585,14 +566,14 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
         .then((result) => {
           [tmp, tmp2] = result;
           if (null == tmp2.guild_id) {
-            const privateChannel = channel_id(6693).selectPrivateChannel(tmp.id);
-            const obj3 = channel_id(6693);
+            const privateChannel = channel_id(6700).selectPrivateChannel(tmp.id);
+            const obj3 = channel_id(6700);
           } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
-            socket(1111).replaceWith(closure_1_12.CHANNEL(tmp2.guild_id, tmp.id));
-            const obj2 = socket(1111);
+            socket(1100).replaceWith(closure_1_12.CHANNEL(tmp2.guild_id, tmp.id));
+            const obj2 = socket(1100);
           } else {
             const obj = { errorCode: constants2.INVALID_CHANNEL };
-            const tmp9 = new channel_id(9300)(obj, "No permission to see channel");
+            const tmp9 = new channel_id(9313)(obj, "No permission to see channel");
             throw tmp9;
           }
           return tmp2;
@@ -600,7 +581,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
       const nextPromise = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9300)(
+          throw new channel_id(9313)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -629,9 +610,9 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
     return nextPromise1;
   },
 });
-CONTEXT_MENU_ICON_NAMES = fn(16215);
+CONTEXT_MENU_ICON_NAMES = fn(16255);
 const obj18 = {
-  scope: fn(8867).OAuth2Scopes.RPC,
+  scope: fn(8901).OAuth2Scopes.RPC,
   handler(args) {
     ({ server, socket } = args);
     args = args.args;
@@ -641,15 +622,15 @@ const obj18 = {
       num = 0;
     }
     if (null == channel_id) {
-      socket(1111).transitionTo(constants.ME);
+      socket(1100).transitionTo(constants.ME);
       let nextPromise1 = null;
-      let obj = socket(1111);
+      let obj = socket(1100);
     } else {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9300)(
+          throw new channel_id(9313)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -657,7 +638,7 @@ const obj18 = {
       nextPromise1 = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9300)(
+          throw new channel_id(9313)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -685,14 +666,14 @@ const obj18 = {
         .then((result) => {
           [tmp, tmp2] = result;
           if (null == tmp2.guild_id) {
-            const privateChannel = channel_id(6693).selectPrivateChannel(tmp.id);
-            const obj3 = channel_id(6693);
+            const privateChannel = channel_id(6700).selectPrivateChannel(tmp.id);
+            const obj3 = channel_id(6700);
           } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
-            socket(1111).replaceWith(closure_1_12.CHANNEL(tmp2.guild_id, tmp.id));
-            const obj2 = socket(1111);
+            socket(1100).replaceWith(closure_1_12.CHANNEL(tmp2.guild_id, tmp.id));
+            const obj2 = socket(1100);
           } else {
             const obj = { errorCode: constants2.INVALID_CHANNEL };
-            const tmp9 = new channel_id(9300)(obj, "No permission to see channel");
+            const tmp9 = new channel_id(9313)(obj, "No permission to see channel");
             throw tmp9;
           }
           return tmp2;
@@ -700,7 +681,7 @@ const obj18 = {
       const nextPromise = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9300)(
+          throw new channel_id(9313)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -730,7 +711,7 @@ const obj18 = {
   },
 };
 obj[RPCCommands.CREATE_CHANNEL_INVITE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.CREATE_CHANNEL_INVITE, {
-  scope: fn(8867).OAuth2Scopes.RPC,
+  scope: fn(8901).OAuth2Scopes.RPC,
   handler(args) {
     args = args.args;
     const channel_id = args.channel_id;

@@ -11,7 +11,7 @@ import WebAuthnStore from "../WebAuthnStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const LoginStates = fn(1084).LoginStates;
+const LoginStates = fn(1072).LoginStates;
 let c7 = false;
 let c8 = false;
 class PasskeyUpsellManager extends tmp2 {

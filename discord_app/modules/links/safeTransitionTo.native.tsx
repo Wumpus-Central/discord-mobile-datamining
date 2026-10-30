@@ -18,7 +18,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -37,7 +37,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
           closure_131_0 = closure_0;
           closure_131_1 = closure_1;
           closure_131_2 = undefined;
-          guild = undefined;
+          let guild;
           let channelId2;
           const tryParseDiceRollLinkResult = LinkUtils.tryParseDiceRollLink(closure_0);
           if (null != tryParseDiceRollLinkResult) {
@@ -139,7 +139,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "r" };
+        closure_2 = { guildId: "getCurrentUser" };
       }
       c5 = 2;
       c6 = 1;
@@ -154,7 +154,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
     }
   }
 };
-const Routes = fn(1084).Routes;
+const Routes = fn(1072).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/safeTransitionTo.native.tsx");
 

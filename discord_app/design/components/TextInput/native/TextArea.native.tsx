@@ -1,98 +1,33 @@
 // discord_app/design/components/TextInput/native/TextArea.native.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import useFieldLabelA11yNative from "../../../../../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx";
-import Input2 from "../../Input/native/Input.native.tsx";
+import Input from "../../Input/native/Input.native.tsx";
 import getRequiredFieldA11yName from "../../Input/native/getRequiredFieldA11yName.native.tsx";
-import TextAreaField2 from "../../TextField/native/TextAreaField.native.tsx";
+import TextAreaField from "../../TextField/native/TextAreaField.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_2 = ["ref"];
-let closure_3 = ["labelId", "accessibilityLabel"];
-let closure_4 = ["labelId", "accessibilityLabel"];
+let closure_2 = ["labelId", "accessibilityLabel"];
 const jsx = fn(21).jsx;
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TextInput/native/TextArea.native.tsx");
 
-export const TextArea = ReactCompilerGating.isReactCompilerEnabled()
-  ? function TextArea(ref) {
-      const cResult = c.c(11);
-      const tmp2 = _objectWithoutProperties(ref.ref, closure_2);
-      const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(tmp2);
-      ({ labelId, accessibilityLabel } = fieldLabelA11yNative);
-      const tmp4 = _objectWithoutProperties(fieldLabelA11yNative, closure_3);
-      const Input = Input2.Input;
-      const TextAreaField = TextAreaField2.TextAreaField;
-      let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(accessibilityLabel, tmp2.required);
-      if (requiredFieldA11yName == null) {
-        requiredFieldA11yName = accessibilityLabel;
-      }
-      if (cResult[0] === TextAreaField) {
-        if (cResult[1] === tmp4) {
-          if (cResult[2] === tmp2) {
-            if (cResult[3] === ref) {
-              if (cResult[4] === requiredFieldA11yName) {
-                let tmp6 = cResult[5];
-              }
-              if (cResult[6] === Input) {
-                if (cResult[7] === labelId) {
-                  if (cResult[8] === tmp2) {
-                    if (cResult[9] === tmp6) {
-                      let tmp10 = cResult[10];
-                    }
-                    return tmp10;
-                  }
-                }
-              }
-              const obj4 = {};
-              const merged = Object.assign(tmp2);
-              obj4.labelId = labelId;
-              obj4.children = tmp6;
-              const tmp15 = <Input />;
-              cResult[6] = Input;
-              cResult[7] = labelId;
-              cResult[8] = tmp2;
-              cResult[9] = tmp6;
-              cResult[10] = tmp15;
-              tmp10 = tmp15;
-            }
-          }
-        }
-      }
-      const obj5 = { ref: ref.ref };
-      const merged1 = Object.assign(tmp2);
-      const merged2 = Object.assign(tmp4);
-      obj5.accessibilityLabel = requiredFieldA11yName;
-      const tmp9 = <TextAreaField ref={ref.ref} />;
-      cResult[0] = TextAreaField;
-      cResult[1] = tmp4;
-      cResult[2] = tmp2;
-      cResult[3] = ref.ref;
-      cResult[4] = requiredFieldA11yName;
-      cResult[5] = tmp9;
-      tmp6 = tmp9;
-    }
-  : function TextArea(ref) {
-      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-      const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(merged);
-      const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
-      const obj2 = {};
-      const merged1 = Object.assign(merged);
-      obj2.labelId = fieldLabelA11yNative.labelId;
-      const obj3 = { ref: ref.ref };
-      const merged2 = Object.assign(merged);
-      const merged3 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_4));
-      const tmp3 = _objectWithoutProperties(fieldLabelA11yNative, closure_4);
-      let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(
-        accessibilityLabel,
-        merged.required,
-      );
-      if (requiredFieldA11yName == null) {
-        requiredFieldA11yName = accessibilityLabel;
-      }
-      obj3.accessibilityLabel = requiredFieldA11yName;
-      obj2.children = jsx(TextAreaField2.TextAreaField, { ref: ref.ref });
-      return jsx(Input2.Input, {});
-    };
+export function TextArea(ref) {
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+  const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(merged);
+  const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
+  const obj2 = {};
+  const merged1 = Object.assign(merged);
+  obj2.labelId = fieldLabelA11yNative.labelId;
+  const obj3 = { ref: ref.ref };
+  const merged2 = Object.assign(merged);
+  const merged3 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_2));
+  const tmp3 = _objectWithoutProperties(fieldLabelA11yNative, closure_2);
+  let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(accessibilityLabel, merged.required);
+  if (requiredFieldA11yName == null) {
+    requiredFieldA11yName = accessibilityLabel;
+  }
+  obj3.accessibilityLabel = requiredFieldA11yName;
+  obj2.children = jsx(TextAreaField.TextAreaField, { ref: ref.ref });
+  return jsx(Input.Input, {});
+}

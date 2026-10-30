@@ -1,11 +1,9 @@
 // discord_app/modules/experiments/apex/DebugExperiment.tsx
-import c from "../../../../_runtime/00576_c.js";
 import ApexExperiment from "index.tsx";
-import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = { name: "2026-03-debug-experiment", kind: "user", defaultConfig: {}, variations: null };
-let obj2 = { 1: null, 2: {} };
+const obj2 = { 1: null, 2: {} };
 obj2[2] = {};
 obj.variations = obj2;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
@@ -13,18 +11,6 @@ const result = size.fileFinishedImporting("modules/experiments/apex/DebugExperim
 
 export default apexExperiment;
 export const DebugExperiment = apexExperiment;
-export const useDebugExperiment = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useDebugExperiment() {
-      const cResult = c.c(1);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { location: "debug_experiment" };
-        cResult[0] = obj2;
-        let first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      return apexExperiment.useConfig(first);
-    }
-  : function useDebugExperiment() {
-      return apexExperiment.useConfig({ location: "debug_experiment" });
-    };
+export function useDebugExperiment() {
+  return apexExperiment.useConfig({ location: "debug_experiment" });
+}

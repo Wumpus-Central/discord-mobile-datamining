@@ -1,5 +1,5 @@
 // discord_app/modules/reactions/native/ReactionUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
 import ReactionUtils from "../ReactionUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
@@ -7,8 +7,8 @@ import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackType
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ReactionActionCreators from "../ReactionActionCreators.tsx";
-import _modDef10058 from "../../../../_runtime/metro/10058__.js";
-import _modDef10059 from "../../../../_runtime/metro/10059__.js";
+import _modDef10085 from "../../../../_runtime/metro/10085__.js";
+import _modDef10086 from "../../../../_runtime/metro/10086__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -17,16 +17,16 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, AnalyticsPages: closure_8, AnalyticsSections: closure_9 } = Constants);
-const EmojiIntention = fn(1392).EmojiIntention;
+const EmojiIntention = fn(1387).EmojiIntention;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(5262).ReactionTypes.NORMAL] = _modDef10058;
-obj[fn(5262).ReactionTypes.BURST] = _modDef10059;
+obj[fn(5610).ReactionTypes.NORMAL] = _modDef10085;
+obj[fn(5610).ReactionTypes.BURST] = _modDef10086;
 let obj2 = {};
-obj2[fn(5262).ReactionTypes.NORMAL] = fn(9413).ReactionIcon;
-obj2[fn(5262).ReactionTypes.BURST] = fn(9872).SuperReactionIcon;
+obj2[fn(5610).ReactionTypes.NORMAL] = fn(9430).ReactionIcon;
+obj2[fn(5610).ReactionTypes.BURST] = fn(9897).SuperReactionIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 
@@ -37,7 +37,7 @@ export function handleOutOfSuperReactions(onDismiss) {
     if (!obj.isPremium(currentUser)) {
       const obj3 = { onDismiss };
       openLazyResult = ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(9850, dependencyMap.paths),
+        asyncRequireImpl(9876, dependencyMap.paths),
         "SuperReactionUpsellActionSheet",
         obj3,
       );
@@ -69,7 +69,7 @@ export function handleAddNewReactions(channel, id) {
           require("ActionSheetActionCreators").openLazy(
             tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths),
             "SuperReactionUpsellActionSheet",
-            { onDismiss: "r" },
+            { onDismiss: "getCurrentUser" },
           );
           const obj3 = require("ActionSheetActionCreators");
         }
@@ -159,14 +159,14 @@ export function handleViewReactions(isPoll) {
     const obj4 = { messageId, channelId, emoji: isPoll.emoji };
     const obj6 = ActionSheetActionCreatorsDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(10046, dependencyMap.paths), "MessageReactions", obj4);
-    const tmp19 = asyncRequireImpl(10046, dependencyMap.paths);
+    obj6.openLazy(asyncRequireImpl(10073, dependencyMap.paths), "MessageReactions", obj4);
+    const tmp19 = asyncRequireImpl(10073, dependencyMap.paths);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
-  tmp4 = isPrivateResult ? constants.DM_CHANNEL : constants.GUILD_CHANNEL;
+  tmp4 = isPrivateResult ? React6.DM_CHANNEL : React6.GUILD_CHANNEL;
 }
 export function handleViewPreviewReactions(id2, id, emoji) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10057, dependencyMap.paths), "MessagePreviewReactions", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10084, dependencyMap.paths), "MessagePreviewReactions", {
     messageId: id2,
     channelId: id,
     emoji,

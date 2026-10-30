@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
-import _modDef4151 from "../emojis/default_emojis/DefaultEmojis.messages.js";
+import _modDef4152 from "../emojis/default_emojis/DefaultEmojis.messages.js";
 import ExpressionSourceRecord from "../emojis/records/ExpressionSourceRecord.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -26,7 +26,7 @@ export function getEmojiPopoutData(sourceType) {
     const obj2 = { type: obj.UNAVAILABLE, text: null, description: null, emojiDescription: null, analyticsType: null };
     const intl11 = util.intl;
     const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
-    obj2.emojiDescription = intl11.format(_modDef4151["/jdd/7"], obj3);
+    obj2.emojiDescription = intl11.format(_modDef4152["/jdd/7"], obj3);
     obj2.analyticsType = constants.NITRO_EMOJI_PACK;
     return obj2;
   } else {
@@ -64,8 +64,8 @@ export function getEmojiPopoutData(sourceType) {
           if (isPremium2) {
             if (isDiscoverable2) {
               const obj5 = { type: obj.JOIN_GUILD, text: null, description: null };
-              const intl10 = tmp7(1125).intl;
-              obj5.text = intl10.string(tmp7(1125).t.riu2R5);
+              const intl10 = tmp7(1114).intl;
+              obj5.text = intl10.string(tmp7(1114).t.riu2R5);
               let obj7 = obj5;
             }
             const obj6 = {};
@@ -76,8 +76,8 @@ export function getEmojiPopoutData(sourceType) {
           }
           if (!isPremium2) {
             obj7 = { type: obj.GET_PREMIUM, text: null, description: null };
-            const intl9 = tmp7(1125).intl;
-            obj7.text = intl9.string(tmp7(1125).t["gl/XHJ"]);
+            const intl9 = tmp7(1114).intl;
+            obj7.text = intl9.string(tmp7(1114).t["gl/XHJ"]);
           }
           const obj8 = { type: obj.UNAVAILABLE, text: null, description: null };
           obj7 = obj8;

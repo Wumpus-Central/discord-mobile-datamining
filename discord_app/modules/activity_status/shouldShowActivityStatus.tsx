@@ -1,10 +1,9 @@
 // discord_app/modules/activity_status/shouldShowActivityStatus.tsx
-import Constants from "../../Constants.tsx";
-import Constants2 from "../../../discord_common/js/shared/Constants.tsx";
+import Constants from "../../../discord_common/js/shared/Constants.tsx";
+import ActivityTypes from "../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const ActivityTypes = Constants.ActivityTypes;
-const StatusTypes = Constants2.StatusTypes;
+const StatusTypes = Constants.StatusTypes;
 const result = size.fileFinishedImporting("modules/activity_status/shouldShowActivityStatus.tsx");
 
 export default function shouldShowActivityStatus(arg0) {
@@ -12,7 +11,7 @@ export default function shouldShowActivityStatus(arg0) {
   if (status !== StatusTypes.OFFLINE) {
     if (status !== StatusTypes.INVISIBLE) {
       if (activities != null) {
-        const found = activities.filter((type) => type.type !== constants.HANG_STATUS);
+        const found = activities.filter((type) => type.type !== ActivityTypes.ActivityTypes.HANG_STATUS);
       }
       let tmp4 = null != tmp || null != tmp2;
       if (!tmp4) {

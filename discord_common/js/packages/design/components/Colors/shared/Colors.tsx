@@ -1,5 +1,5 @@
 // discord_common/js/packages/design/components/Colors/shared/Colors.tsx
-import _modDef683 from "../../../../../../../_runtime/metro/00683__.js";
+import _modDef671 from "../../../../../../../_runtime/metro/00671__.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 const WCAGContrastRatios = { NonText: 3, Text: 4.5, HighContrastText: 7 };
@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Colors/shared/Colors.tsx");
 
 export { WCAGContrastRatios };
-export function getContrastingColor(primaryColor, arg1) {
+export function getContrastingColor(memo, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -22,12 +22,12 @@ export function getContrastingColor(primaryColor, arg1) {
   }
   let base = obj.base;
   if (base == null) {
-    base = primaryColor;
+    base = memo;
   }
-  const tmp4Result = _modDef683(base);
-  let obj3 = _modDef683(primaryColor);
+  const tmp4Result = _modDef671(base);
+  let obj3 = _modDef671(memo);
   const luminanceResult = tmp4Result.luminance();
-  let contrastResult = _modDef683.contrast(tmp4Result, obj3);
+  let contrastResult = _modDef671.contrast(tmp4Result, obj3);
   let num2 = 99;
   while (true) {
     let tmp7 = contrastResult < NonText;
@@ -37,7 +37,7 @@ export function getContrastingColor(primaryColor, arg1) {
       if (!tmp8) {
         if (!tmp7) {
           let brightenResult = obj3.brighten();
-          let obj6 = _modDef683;
+          let obj6 = _modDef671;
           contrastResult = obj6.contrast(tmp4Result, brightenResult);
           num2 = num2 - 1;
           obj3 = brightenResult;
@@ -65,20 +65,20 @@ export function getContrastingColor(primaryColor, arg1) {
     let str6 = ", ";
     return "rgba(" + tmp16[0] + ", " + tmp16[1] + ", " + tmp16[2] + ", " + tmp16[3] + ")";
   }
-  const tmp2Result = _modDef683;
+  const tmp2Result = _modDef671;
 }
 export function darkenColor(contrastingColor, arg1) {
-  const obj = _modDef683(contrastingColor);
-  const tmp = _slicedToArray(_modDef683(contrastingColor).darken(arg1).rgba(), 4);
+  const obj = _modDef671(contrastingColor);
+  const tmp = _slicedToArray(_modDef671(contrastingColor).darken(arg1).rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 }
 export function brightenColor(profilePrimaryColor, arg1) {
-  const obj = _modDef683(profilePrimaryColor);
-  const tmp = _slicedToArray(_modDef683(profilePrimaryColor).brighten(arg1).rgba(), 4);
+  const obj = _modDef671(profilePrimaryColor);
+  const tmp = _slicedToArray(_modDef671(profilePrimaryColor).brighten(arg1).rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 }
 export function setColorOpacity(white, alphaResult) {
-  alphaResult = _modDef683(white).alpha(alphaResult);
+  alphaResult = _modDef671(white).alpha(alphaResult);
   const tmp = _slicedToArray(alphaResult.rgba(), 4);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + tmp[3] + ")";
 }

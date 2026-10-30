@@ -6,10 +6,11 @@ import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import errors_V6OrEarlierAPIErrorDefault from "../errors/V6OrEarlierAPIError.tsx";
 import InviteCodeUtils from "../modules/instant_invite/InviteCodeUtils.tsx";
-import _modDef5860 from "../../_runtime/metro/05860__.js";
+import _modDef5867 from "../../_runtime/metro/05867__.js";
 import AgeGateModalActionCreators from "../modules/age_gate/AgeGateModalActionCreators.tsx";
 import GuildActionCreatorsDefault from "GuildActionCreators.tsx";
 import showNSFWGuildJoinGate from "../modules/age_gate/showNSFWGuildJoinGate.native.tsx";
+import InviteTargetTypes from "../../discord_common/js/shared/shared-constants/InviteTargetTypes.tsx";
 import GuildInviteFlags from "../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
 import CodedLinkActionCreatorsDefault from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
 import generateDynamicLinkDefault from "../../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx";
@@ -34,37 +35,37 @@ require = fn;
 function generateAcceptInviteOptions(target_type) {
   const obj = {};
   target_type = target_type.target_type;
-  if (InviteTargetTypes.STREAM === target_type) {
+  if (InviteTargetTypes.InviteTargetTypes.STREAM === target_type) {
     ({ target_type: obj.targetType, target_user } = target_type);
     let id;
     if (target_user != null) {
       id = target_user.id;
     }
     obj.targetUserId = id;
-  } else if (InviteTargetTypes.EMBEDDED_APPLICATION === target_type) {
+  } else if (InviteTargetTypes.InviteTargetTypes.EMBEDDED_APPLICATION === target_type) {
     ({ target_type: obj.targetType, target_application } = target_type);
     let id1;
     if (target_application != null) {
       id1 = target_application.id;
     }
     obj.targetApplicationId = id1;
-  } else if (InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE === target_type) {
+  } else if (InviteTargetTypes.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE === target_type) {
     obj.targetType = target_type.target_type;
   }
-  guild = target_type.guild;
+  const guild = target_type.guild;
   let id2;
   if (guild != null) {
     id2 = guild.id;
   }
-  const tmp8 = null == GuildStore.getGuild(id2) || target_type.new_member;
-  let tmp9 = tmp8;
-  if (tmp8) {
-    tmp9 = null != target_type.channel;
-  }
+  const tmp9 = null == GuildStore.getGuild(id2) || target_type.new_member;
+  let tmp10 = tmp9;
   if (tmp9) {
-    tmp9 = inviteCode(target_type.channel.type);
+    tmp10 = null != target_type.channel;
   }
-  if (tmp9) {
+  if (tmp10) {
+    tmp10 = React6(target_type.channel.type);
+  }
+  if (tmp10) {
     obj.welcomeModalChannelId = target_type.channel.id;
   }
   if (null != target_type.guild_scheduled_event) {
@@ -75,6 +76,7 @@ function generateAcceptInviteOptions(target_type) {
     num = 0;
   }
   obj.isGuestInvite = FlagUtils.hasFlag(num, GuildInviteFlags.GuildInviteFlags.IS_GUEST_INVITE);
+  const tmpResult = FlagUtils;
   let num2 = target_type.flags;
   if (num2 == null) {
     num2 = 0;
@@ -86,7 +88,7 @@ function generateAcceptInviteOptions(target_type) {
     id3 = inviter.id;
   }
   obj.inviterUserId = id3;
-  if (!tmp8) {
+  if (!tmp9) {
     obj.forceTransition = true;
   }
   if (null != target_type.target_channel_id) {
@@ -245,11 +247,11 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                       function connect() {
                         if (closure_2_9) {
                           if (closure_2_1 instanceof closure_3_11) {
-                            let tmp43 = closure_2_1;
+                            let tmp46 = closure_2_1;
                           } else {
-                            tmp43 = c10(closure_2_1);
+                            tmp46 = c10(closure_2_1);
                           }
-                          guildId(items[29]).connectAndOpen(tmp43);
+                          guildId(items[29]).connectAndOpen(tmp46);
                           const obj5 = guildId(items[29]);
                           guildId(items[25]).transitionTo(closure_2_10);
                           const obj6 = guildId(items[25]);
@@ -262,25 +264,25 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                             nextResult1.setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
                           }
                           const voiceChannel = nextResult.selectVoiceChannel(GUILD_HOME);
-                          let tmp13 = targetType === constants2.STREAM;
-                          if (tmp13) {
-                            tmp13 = null != ownerId;
+                          let tmp14 = targetType === guildId(items[20]).InviteTargetTypes.STREAM;
+                          if (tmp14) {
+                            tmp14 = null != ownerId;
                           }
-                          if (tmp13) {
+                          if (tmp14) {
                             const obj2 = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
                             const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj2);
                             obj = closure_2(items[31]);
                           }
-                          let tmp21 = targetType === constants2.EMBEDDED_APPLICATION;
-                          if (tmp21) {
-                            tmp21 = null != applicationId;
+                          let tmp24 = targetType === guildId(items[20]).InviteTargetTypes.EMBEDDED_APPLICATION;
+                          if (tmp24) {
+                            tmp24 = null != applicationId;
                           }
-                          if (tmp21) {
-                            let tmp26 = guildId;
+                          if (tmp24) {
+                            let tmp29 = guildId;
                             if (guildId == null) {
-                              tmp26 = closure_3_27;
+                              tmp29 = closure_3_27;
                             }
-                            guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp26, GUILD_HOME));
+                            guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp29, GUILD_HOME));
                             const obj4 = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                             let intent;
                             const obj3 = guildId(items[25]);
@@ -296,7 +298,7 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                             obj4.analyticsLocations = analyticsLocations;
                             obj4.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
                             transitionTo(items[32])(obj4);
-                            const tmp30 = transitionTo(items[32]);
+                            const tmp33 = transitionTo(items[32]);
                           }
                         }
                       }
@@ -374,19 +376,13 @@ function transitionToInviteChannelSync(channel_id, arg1) {
                 }
               }
             }
-            let result = require("ActivitiesInTextUtils").isActivityInTextSupportedForChannel(channel);
-            if (result) {
-              result = targetType === constants5.EMBEDDED_APPLICATION;
-            }
-            if (result) {
-              result = null != targetApplicationId;
-            }
-            if (result) {
-              let tmp47 = guildId;
+            const obj8 = require("ActivitiesInTextUtils");
+            if (tmp45) {
+              let tmp46 = guildId;
               if (guildId == null) {
-                tmp47 = closure_2_27;
+                tmp46 = closure_2_27;
               }
-              require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp47, GUILD_HOME));
+              require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp46, GUILD_HOME));
               const obj10 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
               let intent;
               const tmp43Result = require("router_utils");
@@ -402,9 +398,9 @@ function transitionToInviteChannelSync(channel_id, arg1) {
               obj10.analyticsLocations = items;
               obj10.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
               require("deferJoinActivityInChannel")(obj10);
-              const tmp50 = require("deferJoinActivityInChannel");
+              const tmp49 = require("deferJoinActivityInChannel");
             }
-            const obj8 = require("ActivitiesInTextUtils");
+            tmp45 = require("ActivitiesInTextUtils").isActivityInTextSupportedForChannel(channel) && targetType === require("InviteTargetTypes").InviteTargetTypes.EMBEDDED_APPLICATION && null != targetApplicationId;
           }
           let targetType1;
           if (tmp10 != null) {
@@ -436,7 +432,7 @@ function transitionToInviteChannelSync(channel_id, arg1) {
     }
   });
 }
-let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
+let closure_42 = async function _transitionToGuildFromEventInvite(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -447,7 +443,7 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -481,7 +477,7 @@ let closure_43 = async function _transitionToGuildFromEventInvite(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     } catch (tmp12) {
       c1 = tmp;
       throw tmp12;
@@ -497,19 +493,18 @@ function trackInviteServerClicked(id5, accept, items2) {
   obj2.location_stack = tmp;
   AnalyticsUtilsDefault.track(constants3.INVITE_SERVER_CLICKED, obj2);
 }
-fn(6919).addPostConnectionCallback;
-let closure_7 = fn(6842).isGuildScheduledEventActive;
-const ChannelRecord = fn(4861);
+fn(6926).addPostConnectionCallback;
+let closure_7 = fn(6849).isGuildScheduledEventActive;
+const ChannelRecord = fn(4862);
 ({ isGuildTextChannelType: closure_8, isGuildVocalChannelOrVocalThreadType: closure_9, createChannelRecord: c10, ChannelRecordBase: closure_11, getAccessPermissions: closure_12 } = ChannelRecord);
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ Endpoints: closure_24, ChannelTypes: closure_25, Routes: closure_26, ME: closure_27, RPCCommands: closure_28, GuildFeatures: closure_29, AnalyticEvents: closure_30, UserFlags: closure_31, Permissions: closure_32, AbortCodes: items } = Constants);
-const AgeGateSource = fn(1109).AgeGateSource;
-const StaticChannelRoute = fn(4864).StaticChannelRoute;
-const StreamTypes = fn(6702).StreamTypes;
-const InviteTargetTypes = fn(7867).InviteTargetTypes;
-const STAGE_INVITE_STATE_KEY = fn(6696).STAGE_INVITE_STATE_KEY;
+const AgeGateSource = fn(1098).AgeGateSource;
+const StaticChannelRoute = fn(4865).StaticChannelRoute;
+const StreamTypes = fn(6709).StreamTypes;
+const STAGE_INVITE_STATE_KEY = fn(6703).STAGE_INVITE_STATE_KEY;
 let invite = "invite";
-let c40 = null;
+let c39 = null;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/InstantInviteActionCreators.tsx");
 
@@ -544,12 +539,12 @@ export default {
                     closure_2 = closure_1_2;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F103699 */ function() { ... });
+                      let nextPromise = resolved.then(/* F93357 */ function() { ... });
                     } else {
                       let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
                       closure_2_1(closure_2_3[39]).dispatch(obj2);
                       let tmp4Result = closure_2_1(closure_2_3[39]);
-                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F103700 */ function() { ... });
+                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F93358 */ function() { ... });
                       let promise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2);
                     }
                     return nextPromise;
@@ -619,9 +614,9 @@ export default {
       });
     } else {
       const obj2 = { type: "INVITE_RESOLVE", code };
-      tmp(584).dispatch(obj2);
-      const tmpResult = tmp(584);
-      nextPromise = tmp(14669)(code, arg1, arg2).then((result) => {
+      tmp(572).dispatch(obj2);
+      const tmpResult = tmp(572);
+      nextPromise = tmp(14702)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -634,7 +629,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(14669)(code, arg1, arg2);
+      const promise = tmp(14702)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -686,7 +681,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -713,7 +708,7 @@ export default {
               if (0 === length) {
                 delete tmp6[tmp4];
               }
-              const HTTP = closure_0(1294).HTTP;
+              const HTTP = closure_0(1283).HTTP;
               const request = { url: closure_1_24.INSTANT_INVITES(closure_0), body: obj4, context: null, rejectWithError: true };
               const obj6 = { location: _location };
               request.context = obj6;
@@ -726,8 +721,8 @@ export default {
             dependencyMap = 0;
             closure_128_1 = _location;
             const obj8 = { type: "INSTANT_INVITE_CREATE_FAILURE", channelId: closure_129_0 };
-            tmp3(584).dispatch(obj8);
-            const tmp30 = new tmp3(6434)(closure_128_1);
+            tmp3(572).dispatch(obj8);
+            const tmp30 = new tmp3(6441)(closure_128_1);
             throw tmp30;
           } else if (arg0 === 1) {
             c5 = 3;
@@ -739,7 +734,7 @@ export default {
             return obj9;
           } else {
             body = value.body;
-            obj = tmp3(584);
+            obj = tmp3(572);
             const obj10 = { type: "INSTANT_INVITE_CREATE_SUCCESS", channelId: closure_129_0, invite: body };
             obj.dispatch(obj10);
             dependencyMap = 0;
@@ -793,7 +788,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "HermesInternal", done: null };
         }
       } else {
         try {
@@ -819,18 +814,18 @@ export default {
                 }
                 dependencyMap = 3;
               } else {
-                const HTTP = _location(1294).HTTP;
+                const HTTP = _location(1283).HTTP;
                 const obj4 = { url: constants.FRIEND_INVITES, context: null, rejectWithError: null };
                 const obj7 = { location: _location };
                 obj4.context = obj7;
-                obj4.rejectWithError = _location(1294).rejectWithMigratedError();
+                obj4.rejectWithError = _location(1283).rejectWithMigratedError();
                 value = HTTP.get(obj4);
-                const obj5 = _location(1294);
+                const obj5 = _location(1283);
                 const obj8 = { type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: null };
                 const _Date = Date;
                 const date = new Date();
                 obj8.requestedAt = date;
-                tmp3(584).dispatch(obj8);
+                tmp3(572).dispatch(obj8);
                 c2 = 1;
                 dependencyMap = 1;
                 const obj9 = { value, done: false };
@@ -852,7 +847,7 @@ export default {
             const date1 = new Date();
             obj12.receivedAt = date1;
             obj12.invites = body;
-            tmp3(584).dispatch(obj12);
+            tmp3(572).dispatch(obj12);
             dependencyMap = 3;
             const obj = { value: body, done: true };
             return obj;
@@ -868,7 +863,7 @@ export default {
     let obj = arg0;
     DispatcherDefault.dispatch({ type: "FRIEND_INVITE_CREATE_REQUEST" });
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: dependencyMap.FRIEND_INVITES, body: null, context: null, rejectWithError: null };
+    const request = { url: dependencyMap2.FRIEND_INVITES, body: null, context: null, rejectWithError: null };
     if (arg0 == null) {
       obj = {};
     }
@@ -888,7 +883,7 @@ export default {
   revokeFriendInvites() {
     DispatcherDefault.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" });
     const HTTP = HTTPUtils.HTTP;
-    const obj2 = { url: dependencyMap.FRIEND_INVITES, context: { location: location }, rejectWithError: null };
+    const obj2 = { url: dependencyMap2.FRIEND_INVITES, context: { location: location }, rejectWithError: null };
     const obj3 = { location: location };
     obj2.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.del(obj2).then((invites) => {
@@ -897,16 +892,16 @@ export default {
   },
   revokeFriendInvite(arg0) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: dependencyMap.INVITE(arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: dependencyMap2.INVITE(arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
   fetchFriendMembers(arg0) {
     closure_0 = arg0;
     return (async () => {
-      await tmp3(6734).get({
+      await tmp3(6741).get({
         url: closure_1_24.INVITE_FRIEND_MEMBERS(code),
         trackedActionData: {
-          event: code(1272).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
+          event: code(1261).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
           properties(body) {
             const obj2 = { code, friend_count: null };
             let num;
@@ -930,17 +925,17 @@ export default {
       });
       if (1 === tmp7) {
         dependencyMap = 0;
-        tmp3(584).dispatch({ type: "INVITE_FRIEND_MEMBERS_FETCH_FAILURE", code: closure_129_0 });
+        tmp3(572).dispatch({ type: "INVITE_FRIEND_MEMBERS_FETCH_FAILURE", code: closure_129_0 });
         c5 = 3;
-        tmp3(584);
+        tmp3(572);
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
       } else if (arg0 !== 2) {
         let body = value.body;
-        tmp3(584).dispatch({ type: "INVITE_FRIEND_MEMBERS_FETCH_SUCCESS", code: closure_129_0, friendMemberIds: body.friend_member_ids });
+        tmp3(572).dispatch({ type: "INVITE_FRIEND_MEMBERS_FETCH_SUCCESS", code: closure_129_0, friendMemberIds: body.friend_member_ids });
         dependencyMap = 0;
-        tmp3(584);
+        tmp3(572);
       }
       return value;
     })();
@@ -952,11 +947,11 @@ export default {
     const code = invite.code;
     const channel = invite.channel;
     const obj2 = { url: closure_24.INVITE(code), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    const obj = channel(6734);
-    obj2.trackedActionData = { event: code(1272).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
-    const obj3 = { event: code(1272).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
-    obj2.rejectWithError = code(1294).rejectWithMigratedError();
-    const obj4 = code(1294);
+    const obj = channel(6741);
+    obj2.trackedActionData = { event: code(1261).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
+    const obj3 = { event: code(1261).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
+    obj2.rejectWithError = code(1283).rejectWithMigratedError();
+    const obj4 = code(1283);
     return obj.delete(obj2).then(() => {
       DispatcherDefault.dispatch({ type: "INSTANT_INVITE_REVOKE_SUCCESS", code, channelId: channel.id });
     });
@@ -1029,7 +1024,7 @@ export default {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "HermesInternal", done: null };
             }
           } else {
             try {
@@ -1075,7 +1070,7 @@ export default {
                   const guild_id = obj6.guild_id;
                   id = guild_id;
                   if (guild_id == null) {
-                    guild = obj6.guild;
+                    const guild = obj6.guild;
                     id = undefined;
                     if (guild != null) {
                       id = guild.id;
@@ -1168,7 +1163,7 @@ export default {
         if (code1 === constants5.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED) {
           let id;
           if (invite != null) {
-            guild = invite.guild;
+            const guild = invite.guild;
             if (guild != null) {
               id = guild.id;
             }
@@ -1432,19 +1427,13 @@ export default {
                         }
                       }
                     }
-                    let result = require("ActivitiesInTextUtils").isActivityInTextSupportedForChannel(channel);
-                    if (result) {
-                      result = targetType === constants5.EMBEDDED_APPLICATION;
-                    }
-                    if (result) {
-                      result = null != targetApplicationId;
-                    }
-                    if (result) {
-                      let tmp47 = guildId;
+                    const obj8 = require("ActivitiesInTextUtils");
+                    if (tmp45) {
+                      let tmp46 = guildId;
                       if (guildId == null) {
-                        tmp47 = closure_2_27;
+                        tmp46 = closure_2_27;
                       }
-                      require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp47, GUILD_HOME));
+                      require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp46, GUILD_HOME));
                       const obj10 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                       let intent;
                       const tmp43Result = require("router_utils");
@@ -1460,9 +1449,9 @@ export default {
                       obj10.analyticsLocations = items;
                       obj10.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
                       require("deferJoinActivityInChannel")(obj10);
-                      const tmp50 = require("deferJoinActivityInChannel");
+                      const tmp49 = require("deferJoinActivityInChannel");
                     }
-                    const obj8 = require("ActivitiesInTextUtils");
+                    tmp45 = require("ActivitiesInTextUtils").isActivityInTextSupportedForChannel(channel) && targetType === require("InviteTargetTypes").InviteTargetTypes.EMBEDDED_APPLICATION && null != targetApplicationId;
                   }
                   let targetType1;
                   if (tmp10 != null) {
@@ -1661,11 +1650,11 @@ export default {
                                 function connect() {
                                   if (closure_2_9) {
                                     if (closure_2_1 instanceof closure_3_11) {
-                                      let tmp43 = closure_2_1;
+                                      let tmp46 = closure_2_1;
                                     } else {
-                                      tmp43 = c10(closure_2_1);
+                                      tmp46 = c10(closure_2_1);
                                     }
-                                    guildId(items[29]).connectAndOpen(tmp43);
+                                    guildId(items[29]).connectAndOpen(tmp46);
                                     const obj5 = guildId(items[29]);
                                     guildId(items[25]).transitionTo(closure_2_10);
                                     const obj6 = guildId(items[25]);
@@ -1678,25 +1667,25 @@ export default {
                                       nextResult1.setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
                                     }
                                     const voiceChannel = nextResult.selectVoiceChannel(GUILD_HOME);
-                                    let tmp13 = targetType === constants2.STREAM;
-                                    if (tmp13) {
-                                      tmp13 = null != ownerId;
+                                    let tmp14 = targetType === guildId(items[20]).InviteTargetTypes.STREAM;
+                                    if (tmp14) {
+                                      tmp14 = null != ownerId;
                                     }
-                                    if (tmp13) {
+                                    if (tmp14) {
                                       const obj2 = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
                                       const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj2);
                                       obj = closure_2(items[31]);
                                     }
-                                    let tmp21 = targetType === constants2.EMBEDDED_APPLICATION;
-                                    if (tmp21) {
-                                      tmp21 = null != applicationId;
+                                    let tmp24 = targetType === guildId(items[20]).InviteTargetTypes.EMBEDDED_APPLICATION;
+                                    if (tmp24) {
+                                      tmp24 = null != applicationId;
                                     }
-                                    if (tmp21) {
-                                      let tmp26 = guildId;
+                                    if (tmp24) {
+                                      let tmp29 = guildId;
                                       if (guildId == null) {
-                                        tmp26 = closure_3_27;
+                                        tmp29 = closure_3_27;
                                       }
-                                      guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp26, GUILD_HOME));
+                                      guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp29, GUILD_HOME));
                                       const obj4 = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                                       let intent;
                                       const obj3 = guildId(items[25]);
@@ -1712,7 +1701,7 @@ export default {
                                       obj4.analyticsLocations = analyticsLocations;
                                       obj4.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
                                       transitionTo(items[32])(obj4);
-                                      const tmp30 = transitionTo(items[32]);
+                                      const tmp33 = transitionTo(items[32]);
                                     }
                                   }
                                 }
@@ -1790,19 +1779,13 @@ export default {
                           }
                         }
                       }
-                      let result = require("ActivitiesInTextUtils").isActivityInTextSupportedForChannel(channel);
-                      if (result) {
-                        result = targetType === constants5.EMBEDDED_APPLICATION;
-                      }
-                      if (result) {
-                        result = null != targetApplicationId;
-                      }
-                      if (result) {
-                        let tmp47 = guildId;
+                      const obj8 = require("ActivitiesInTextUtils");
+                      if (tmp45) {
+                        let tmp46 = guildId;
                         if (guildId == null) {
-                          tmp47 = closure_2_27;
+                          tmp46 = closure_2_27;
                         }
-                        require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp47, GUILD_HOME));
+                        require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp46, GUILD_HOME));
                         const obj10 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                         let intent;
                         const tmp43Result = require("router_utils");
@@ -1818,9 +1801,9 @@ export default {
                         obj10.analyticsLocations = items;
                         obj10.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
                         require("deferJoinActivityInChannel")(obj10);
-                        const tmp50 = require("deferJoinActivityInChannel");
+                        const tmp49 = require("deferJoinActivityInChannel");
                       }
-                      const obj8 = require("ActivitiesInTextUtils");
+                      tmp45 = require("ActivitiesInTextUtils").isActivityInTextSupportedForChannel(channel) && targetType === require("InviteTargetTypes").InviteTargetTypes.EMBEDDED_APPLICATION && null != targetApplicationId;
                     }
                     let targetType1;
                     if (tmp10 != null) {
@@ -1862,27 +1845,27 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(14672).onOpenHubInvite(flags);
-        const obj6 = obj(14672);
+        obj(14705).onOpenHubInvite(flags);
+        const obj6 = obj(14705);
       }
     }
     let num = flags.flags;
     if (num == null) {
       num = 0;
     }
-    let hasFlagResult = dMFromUserId(1402).hasFlag(num, dMFromUserId(8917).GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = dMFromUserId(1397).hasFlag(num, dMFromUserId(8950).GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp6(1402).hasFlag(num, tmp6(8917).GuildInviteFlags.IS_APPLICATION_BYPASS);
-      const tmp6Result = tmp6(1402);
+      hasFlagResult = tmp6(1397).hasFlag(num, tmp6(8950).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      const tmp6Result = tmp6(1397);
     }
     if (null != guild) {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(14673).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(14673);
+            const result1 = tmp6(14706).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(14706);
           }
-          tmp6Result3 = tmp6(14673);
+          tmp6Result3 = tmp6(14706);
         }
       }
     }
@@ -2048,11 +2031,11 @@ export default {
                           function connect() {
                             if (closure_2_9) {
                               if (closure_2_1 instanceof closure_3_11) {
-                                let tmp43 = closure_2_1;
+                                let tmp46 = closure_2_1;
                               } else {
-                                tmp43 = c10(closure_2_1);
+                                tmp46 = c10(closure_2_1);
                               }
-                              guildId(items[29]).connectAndOpen(tmp43);
+                              guildId(items[29]).connectAndOpen(tmp46);
                               const obj5 = guildId(items[29]);
                               guildId(items[25]).transitionTo(closure_2_10);
                               const obj6 = guildId(items[25]);
@@ -2065,25 +2048,25 @@ export default {
                                 nextResult1.setSelfMute(guildId(items[30]).MediaEngineContextTypes.DEFAULT, true);
                               }
                               const voiceChannel = nextResult.selectVoiceChannel(GUILD_HOME);
-                              let tmp13 = targetType === constants2.STREAM;
-                              if (tmp13) {
-                                tmp13 = null != ownerId;
+                              let tmp14 = targetType === guildId(items[20]).InviteTargetTypes.STREAM;
+                              if (tmp14) {
+                                tmp14 = null != ownerId;
                               }
-                              if (tmp13) {
+                              if (tmp14) {
                                 const obj2 = { streamType: constants.GUILD, ownerId, guildId, channelId: GUILD_HOME };
                                 const result = closure_2(items[31]).watchStreamAndTransitionToStream(obj2);
                                 obj = closure_2(items[31]);
                               }
-                              let tmp21 = targetType === constants2.EMBEDDED_APPLICATION;
-                              if (tmp21) {
-                                tmp21 = null != applicationId;
+                              let tmp24 = targetType === guildId(items[20]).InviteTargetTypes.EMBEDDED_APPLICATION;
+                              if (tmp24) {
+                                tmp24 = null != applicationId;
                               }
-                              if (tmp21) {
-                                let tmp26 = guildId;
+                              if (tmp24) {
+                                let tmp29 = guildId;
                                 if (guildId == null) {
-                                  tmp26 = closure_3_27;
+                                  tmp29 = closure_3_27;
                                 }
-                                guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp26, GUILD_HOME));
+                                guildId(items[25]).transitionTo(closure_3_26.CHANNEL(tmp29, GUILD_HOME));
                                 const obj4 = { channelId: GUILD_HOME, applicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                                 let intent;
                                 const obj3 = guildId(items[25]);
@@ -2099,7 +2082,7 @@ export default {
                                 obj4.analyticsLocations = analyticsLocations;
                                 obj4.commandOrigin = guildId(items[33]).CommandOrigin.CHAT;
                                 transitionTo(items[32])(obj4);
-                                const tmp30 = transitionTo(items[32]);
+                                const tmp33 = transitionTo(items[32]);
                               }
                             }
                           }
@@ -2177,19 +2160,13 @@ export default {
                     }
                   }
                 }
-                let result = require("ActivitiesInTextUtils").isActivityInTextSupportedForChannel(channel);
-                if (result) {
-                  result = targetType === constants5.EMBEDDED_APPLICATION;
-                }
-                if (result) {
-                  result = null != targetApplicationId;
-                }
-                if (result) {
-                  let tmp47 = guildId;
+                const obj8 = require("ActivitiesInTextUtils");
+                if (tmp45) {
+                  let tmp46 = guildId;
                   if (guildId == null) {
-                    tmp47 = closure_2_27;
+                    tmp46 = closure_2_27;
                   }
-                  require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp47, GUILD_HOME));
+                  require("router_utils").transitionTo(closure_2_26.CHANNEL(tmp46, GUILD_HOME));
                   const obj10 = { channelId: GUILD_HOME, applicationId: targetApplicationId, intent: null, inviterUserId: null, analyticsLocations: null, commandOrigin: null };
                   let intent;
                   const tmp43Result = require("router_utils");
@@ -2205,9 +2182,9 @@ export default {
                   obj10.analyticsLocations = items;
                   obj10.commandOrigin = require("ApplicationCommandTypes").CommandOrigin.CHAT;
                   require("deferJoinActivityInChannel")(obj10);
-                  const tmp50 = require("deferJoinActivityInChannel");
+                  const tmp49 = require("deferJoinActivityInChannel");
                 }
-                const obj8 = require("ActivitiesInTextUtils");
+                tmp45 = require("ActivitiesInTextUtils").isActivityInTextSupportedForChannel(channel) && targetType === require("InviteTargetTypes").InviteTargetTypes.EMBEDDED_APPLICATION && null != targetApplicationId;
               }
               let targetType1;
               if (tmp10 != null) {
@@ -2239,7 +2216,7 @@ export default {
         }
       });
     }
-    const obj2 = dMFromUserId(1402);
+    const obj2 = dMFromUserId(1397);
   },
   openNativeAppModal(inviteKey) {
     const result = InviteCodeUtils.parseExtraDataFromInviteKey(inviteKey);
@@ -2293,21 +2270,21 @@ export default {
       targetChannelId = result.targetChannelId;
     }
     DispatcherDefault.dispatch({ type: "INVITE_APP_OPENING", code });
-    if (null != _modDef5860.ua) {
-      const formatted = _modDef5860.ua.toLowerCase();
+    if (null != _modDef5867.ua) {
+      const formatted = _modDef5867.ua.toLowerCase();
       if (formatted.indexOf("googlebot") > -1) {
         const obj6 = { type: "INVITE_APP_NOT_OPENED", code };
         DispatcherDefault.dispatch(obj6);
         const tmp7Result = DispatcherDefault;
       }
     }
-    const os = _modDef5860.os;
+    const os = _modDef5867.os;
     let family;
     if (os != null) {
       family = os.family;
     }
     if ("Android" !== family) {
-      const os2 = _modDef5860.os;
+      const os2 = _modDef5867.os;
       let family1;
       if (os2 != null) {
         family1 = os2.family;
@@ -2351,9 +2328,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(14675).generateAttemptId();
+    const attemptId = tmp18(14708).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(14675);
+    const tmp18Result = tmp18(14708);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }
@@ -2383,12 +2360,12 @@ export default {
     const tmp7Result5 = generateDynamicLinkDefault;
     const obj8 = { fingerprint: null, attempt_id: null, source: null, invite_code: null };
     const tmp7Result6 = AnalyticsUtilsDefault;
-    obj8.fingerprint = tmp18(1277).maybeExtractId(fingerprint);
+    obj8.fingerprint = tmp18(1266).maybeExtractId(fingerprint);
     obj8.attempt_id = attemptId;
     obj8.source = invite;
     obj8.invite_code = baseCode;
     tmp7Result6.track(constants3.DEEP_LINK_CLICKED, obj8);
-    const tmp18Result2 = tmp18(1277);
+    const tmp18Result2 = tmp18(1266);
   },
   setReceivedInstallationIdForInviteCode(inviteCode, receivedInstallationId) {
     DispatcherDefault.dispatch({ type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET", inviteCode, receivedInstallationId });
@@ -2400,7 +2377,7 @@ export default {
 };
 export function transitionToGuildFromEventInvite() {
   const self = this;
-  const apply = closure_43.apply;
+  const apply = closure_42.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

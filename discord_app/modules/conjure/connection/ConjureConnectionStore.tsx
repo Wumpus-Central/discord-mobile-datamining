@@ -1,20 +1,16 @@
 // discord_app/modules/conjure/connection/ConjureConnectionStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
-import BackoffDefault from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import createNonce from "../../messages/createNonce.tsx";
 import conjureChatConnection from "../chat/conjureChatConnection.tsx";
-import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import conjureProjectSockets from "conjureProjectSockets.tsx";
-import ConjureWorkerTickets from "ConjureWorkerTickets.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import conjurePreviewClaims from "../preview/conjurePreviewClaims.tsx";
 import conjureMediaTickets from "conjureMediaTickets.tsx";
 import conjurePublishConnection from "../publish/conjurePublishConnection.tsx";
 import conjurePublishScheduleRequests from "../publish_schedule/conjurePublishScheduleRequests.tsx";
-import conjureKnownStepKinds from "conjureKnownStepKinds.tsx";
-import ConjureWebSocket from "ConjureWebSocket.tsx";
 import conjureLinkEmbeds from "../chat/conjureLinkEmbeds.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
@@ -74,7 +70,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     userId: null,
     timestamp: null,
     attachments: null,
-    held: "duration",
+    held: "sa",
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
@@ -89,13 +85,13 @@ function appendFailedUserMessage(projectId, nonce, message) {
   const date = new Date();
   conjureChatConnection.sendFailedStep(projectId, message);
 }
-function failPendingSends(projectId, arg1, message) {
-  arg1.pendingSends = [];
+function failPendingSends(projectId, value, message) {
+  value.pendingSends = [];
   while (tmp !== undefined) {
     let tmp4 = appendFailedUserMessage(projectId, tmp2, message);
     continue;
   }
-  tmp = arg1.pendingSends[Symbol.iterator]();
+  tmp = value.pendingSends[Symbol.iterator]();
 }
 function handleEvent(projectId, pendingEvents, type) {
   if (!set1.has(type.type)) {
@@ -116,15 +112,15 @@ function handleEvent(projectId, pendingEvents, type) {
           messages = [];
         }
         obj3.entries = messages.slice();
-        let tmp34 = null;
+        let tmp35 = null;
         if (true === type.has_more) {
           let cursor = type.cursor;
           if (cursor == null) {
             cursor = null;
           }
-          tmp34 = cursor;
+          tmp35 = cursor;
         }
-        obj3.cursor = tmp34;
+        obj3.cursor = tmp35;
         DispatcherDefault.dispatch(obj3);
       }
     }
@@ -134,6 +130,10 @@ function handleEvent(projectId, pendingEvents, type) {
     pendingEvents.debugOnDemand = true === type.debug_on_demand;
     const backoff = pendingEvents.backoff;
     backoff.succeed();
+    if (true === type.heartbeat) {
+      const heartbeat = pendingEvents.heartbeat;
+      heartbeat.start();
+    }
   } else if ("history" === type) {
     let messages1 = type.messages;
     if (messages1 == null) {
@@ -206,7 +206,8 @@ function handleEvent(projectId, pendingEvents, type) {
           if (tmp18 instanceof tmp3.Error) {
             message = tmp18.message;
           }
-          conjureChatConnection.sendFailedStep(tmp4, message);
+          require("conjureChatConnection").sendFailedStep(tmp4, message);
+          obj2 = require("conjureChatConnection");
         }
       }
     })(projectId, pendingEvents);
@@ -251,7 +252,7 @@ function handleEvent(projectId, pendingEvents, type) {
     (function handleStep(kind, projectId) {
       projectId = projectId.projectId;
       if ("turn_result" === kind.kind) {
-        const result = ConjureAnalytics.trackConjureTurnResulted(projectId, kind);
+        const result = require("ConjureAnalytics").trackConjureTurnResulted(projectId, kind);
         if ("deployed" === kind.result) {
           obj2 = {
             type: "CONJURE_CHAT_TURN_PATCH",
@@ -261,6 +262,7 @@ function handleEvent(projectId, pendingEvents, type) {
           };
           DispatcherDefault.dispatch(obj2);
         }
+        const obj3 = require("ConjureAnalytics");
         const obj5 = { type: "CONJURE_CHAT_TURN_FINISHED", projectId, turnId: null, summary: null };
         ({ turn_id: obj7.turnId, summary: obj7.summary } = kind);
         DispatcherDefault.dispatch(obj5);
@@ -273,14 +275,14 @@ function handleEvent(projectId, pendingEvents, type) {
           DispatcherDefault.dispatch(obj8);
           const tmp13Result = DispatcherDefault;
         }
-      } else if (null != closure_1_18[kind.kind]) {
+      } else if (null != closure_1_19[kind.kind]) {
         tmp2(kind, projectId);
       } else {
         if (obj.isKnownStepKind(kind.kind)) {
-          conjureChatConnection.appendTurnStep(projectId, kind);
-          const tmp4Result = conjureChatConnection;
+          require("conjureChatConnection").appendTurnStep(projectId, kind);
+          const tmp4Result = require("conjureChatConnection");
         }
-        obj = conjureKnownStepKinds;
+        obj = require("conjureKnownStepKinds");
       }
     })(type, obj);
   } else {
@@ -293,7 +295,44 @@ function handleEvent(projectId, pendingEvents, type) {
     }
   }
 }
-let closure_21 = async function _openWithFreshTicket(arg0) {
+function handleSocketClosed(projectId, value) {
+  _require = projectId;
+  const heartbeat = value.heartbeat;
+  heartbeat.stop();
+  require("conjurePublishConnection").rejectPendingPublish(
+    projectId,
+    "Connection closed before the publish result arrived",
+  );
+  obj = require("conjurePublishConnection");
+  const result = require("conjurePublishScheduleRequests").rejectPendingPublishSchedule(projectId);
+  obj2 = require("conjurePublishScheduleRequests");
+  const result1 = require("conjurePublishConnection").rejectPendingPatchNotesDraft(
+    projectId,
+    "Connection closed before the draft arrived",
+  );
+  const obj3 = require("conjurePublishConnection");
+  const result2 = require("conjurePreviewClaims").clearConjurePreviewClaims(projectId);
+  if (value.disposed) {
+    const obj6 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
+    DispatcherDefault.dispatch(obj6);
+  } else if (value.helloSeen) {
+    value.reconnectPending = true;
+    const obj8 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "connecting" };
+    DispatcherDefault.dispatch(obj8);
+    const backoff = value.backoff;
+    backoff.fail(() => {
+      connect(closure_0);
+    });
+  } else {
+    const obj10 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
+    DispatcherDefault.dispatch(obj10);
+    failPendingSends(projectId, value, "Connection closed before the message was sent");
+    value.pendingModelSettings = null;
+    value.pendingTemplatePrep = null;
+  }
+  const obj4 = require("conjurePreviewClaims");
+}
+let closure_23 = async function _openWithFreshTicket(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -304,7 +343,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "HermesInternal", done: null };
     }
   } else {
     try {
@@ -315,12 +354,12 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          let obj7 = { value, done: true };
+          const obj7 = { value, done: true };
           return obj7;
         } else {
           closure_4 = tmp3;
           closure_3 = tmp5;
-          closure_131_0 = projectId;
+          closure_131_0 = closure_0;
           closure_131_1 = importDefault;
           closure_131_2 = undefined;
           let ticket;
@@ -328,12 +367,13 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
           const ws2 = importDefault.ws;
           ws2.close();
           if (importDefault.helloSeen) {
-            ConjureWorkerTickets.forgetEarlyTicket(projectId);
+            require("ConjureWorkerTickets").forgetEarlyTicket(closure_0);
+            const obj8 = require("ConjureWorkerTickets");
           }
           c6 = 1;
           c7 = 2;
           c8 = 1;
-          let obj10 = { value: ConjureWorkerTickets.mintWorkerTicket(projectId), done: false };
+          const obj10 = { value: require("ConjureWorkerTickets").mintWorkerTicket(closure_0), done: false };
           return obj10;
         }
       } else {
@@ -342,32 +382,32 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
           closure_131_5 = closure_5;
           if (closure_131_1.disposed) {
             c8 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           } else {
-            closure_132_12(closure_131_0, "failed");
+            closure_132_13(closure_131_0, "failed");
             const _Error = Error;
             let str = "ws open failed";
             if (closure_131_5 instanceof Error) {
               str = closure_131_5.message;
             }
-            closure_132_16(closure_131_0, closure_131_1, str);
+            closure_132_17(closure_131_0, closure_131_1, str);
             closure_131_1.pendingModelSettings = null;
             closure_131_1.pendingTemplatePrep = null;
-            closure_132_0(closure_132_2[24]).rejectPendingPublish(
+            closure_132_0(closure_132_2[25]).rejectPendingPublish(
               closure_131_0,
               "Connection failed before the publish result arrived",
             );
-            let obj3 = closure_132_0(closure_132_2[24]);
-            let result = closure_132_0(closure_132_2[25]).rejectPendingPublishSchedule(closure_131_0);
-            let obj4 = closure_132_0(closure_132_2[25]);
-            let result1 = closure_132_0(closure_132_2[24]).rejectPendingPatchNotesDraft(
+            const obj3 = closure_132_0(closure_132_2[25]);
+            const result = closure_132_0(closure_132_2[26]).rejectPendingPublishSchedule(closure_131_0);
+            const obj4 = closure_132_0(closure_132_2[26]);
+            const result1 = closure_132_0(closure_132_2[25]).rejectPendingPatchNotesDraft(
               closure_131_0,
               "Connection failed before the draft arrived",
             );
-            let obj5 = closure_132_0(closure_132_2[24]);
+            const obj5 = closure_132_0(closure_132_2[25]);
             const obj11 = {
               location: "connection",
-              code: closure_132_0(closure_132_2[32]).ConjureErrorCodes.WS_OPEN_FAILED,
+              code: closure_132_0(closure_132_2[33]).ConjureErrorCodes.WS_OPEN_FAILED,
               message: null,
             };
             const _Error2 = Error;
@@ -376,9 +416,9 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
               str2 = closure_131_5.message;
             }
             obj11.message = str2;
-            closure_132_0(closure_132_2[32]).trackConjureErrored(closure_131_0, obj11);
+            closure_132_0(closure_132_2[33]).trackConjureErrored(closure_131_0, obj11);
             c8 = 3;
-            let obj6 = closure_132_0(closure_132_2[32]);
+            const obj6 = closure_132_0(closure_132_2[33]);
           }
         } else if (arg0 === 1) {
           c8 = 3;
@@ -394,7 +434,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
           baseUrl = closure_131_2.baseUrl;
           if (!closure_131_1.disposed) {
             const ws = closure_131_1.ws;
-            obj = { url: baseUrl, ticket, templateId: null, onEvent: null, onClose: null, onError: null };
+            obj = { url: baseUrl, ticket, templateId: null, onEvent: null, onPong: null, onClose: null, onError: null };
             const warmTemplateId = closure_131_1.warmTemplateId;
             let templateId = warmTemplateId;
             if (warmTemplateId == null) {
@@ -402,41 +442,16 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
             }
             obj.templateId = templateId;
             obj.onEvent = function onEvent(arg0) {
-              return closure_2_20(projectId, closure_1_1, arg0);
+              const heartbeat = closure_1_1.heartbeat;
+              heartbeat.received();
+              closure_2_21(closure_1_0, closure_1_1, arg0);
+            };
+            obj.onPong = function onPong() {
+              const heartbeat = closure_1_1.heartbeat;
+              return heartbeat.pong();
             };
             obj.onClose = function onClose() {
-              projectId(10908).rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
-              obj = projectId(10908);
-              const result = projectId(10919).rejectPendingPublishSchedule(projectId);
-              obj2 = projectId(10919);
-              const result1 = projectId(10908).rejectPendingPatchNotesDraft(
-                projectId,
-                "Connection closed before the draft arrived",
-              );
-              const obj3 = projectId(10908);
-              const result2 = projectId(10898).clearConjurePreviewClaims(projectId);
-              if (closure_1_1.disposed) {
-                const obj6 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
-                closure_1(584).dispatch(obj6);
-                const obj9 = closure_1(584);
-              } else if (closure_1_1.helloSeen) {
-                closure_1_1.reconnectPending = true;
-                const obj8 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "connecting" };
-                closure_1(584).dispatch(obj8);
-                const backoff = closure_1_1.backoff;
-                backoff.fail(() => {
-                  closure_2_22(projectId);
-                });
-                const obj7 = closure_1(584);
-              } else {
-                const obj10 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "closed" };
-                closure_1(584).dispatch(obj10);
-                closure_2_16(projectId, closure_1_1, "Connection closed before the message was sent");
-                closure_1_1.pendingModelSettings = null;
-                closure_1_1.pendingTemplatePrep = null;
-                const obj5 = closure_1(584);
-              }
-              const obj4 = projectId(10898);
+              closure_2_22(closure_1_0, closure_1_1);
             };
             obj.onError = function onError() {};
             ws.open(obj);
@@ -445,7 +460,7 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "HermesInternal", done: null };
       }
     } catch (tmp63) {
       closure_5 = tmp63;
@@ -459,15 +474,19 @@ let closure_21 = async function _openWithFreshTicket(arg0) {
   }
 };
 function connect(projectId) {
+  _require = projectId;
   let warmTemplateId = arg1;
   if (arg1 === undefined) {
     warmTemplateId = null;
   }
+  let conjureWebSocket;
   value = map.get(projectId);
   if (null == value) {
+    conjureWebSocket = new require("ConjureWebSocket").ConjureWebSocket();
     const obj3 = {
-      ws: null,
+      ws: conjureWebSocket,
       backoff: null,
+      heartbeat: null,
       helloSeen: false,
       disposed: false,
       reconnectPending: false,
@@ -478,15 +497,28 @@ function connect(projectId) {
       warmTemplateId: null,
       debugOnDemand: false,
     };
-    const conjureWebSocket = new ConjureWebSocket.ConjureWebSocket();
-    obj3.ws = conjureWebSocket;
-    const tmp14 = new BackoffDefault(1000, 30000);
-    obj3.backoff = tmp14;
+    const tmp15 = new conjureWebSocket(559)(1000, 30000);
+    obj3.backoff = tmp15;
+    const conjureSocketHeartbeat = new require("ConjureSocketHeartbeat").ConjureSocketHeartbeat(
+      () => conjureWebSocket.sendPing(),
+      () => {
+        value = map.get(closure_0);
+        if (null != value) {
+          const ws = value.ws;
+          ws.close();
+          handleSocketClosed(closure_0, value);
+        }
+      },
+    );
+    obj3.heartbeat = conjureSocketHeartbeat;
     obj3.pendingSends = [];
     obj3.pendingEvents = [];
     const result = map.set(projectId, obj3);
-    conjureProjectSockets.setConjureSocket(projectId, obj3.ws);
+    require("conjureProjectSockets").setConjureSocket(projectId, obj3.ws);
+    const obj5 = require("conjureProjectSockets");
+    require("conjureWakeSignals").listenForConjureWake(handleWake);
     value = obj3;
+    const obj6 = require("conjureWakeSignals");
   }
   if (warmTemplateId == null) {
     warmTemplateId = value.warmTemplateId;
@@ -497,10 +529,12 @@ function connect(projectId) {
   value.debugOnDemand = false;
   value.disposed = false;
   value.reconnectPending = false;
-  DispatcherDefault.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "connecting" });
+  const heartbeat = value.heartbeat;
+  heartbeat.stop();
+  conjureWebSocket(572).dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "connecting" });
   (function openWithFreshTicket() {
     const self = this;
-    const apply = closure_1_21.apply;
+    const apply = closure_1_23.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -508,7 +542,25 @@ function connect(projectId) {
     }
     return applyArgumentsResult;
   })(projectId, value);
+  obj2 = conjureWebSocket(572);
   const obj4 = { type: "CONJURE_CHAT_CONN_STATE", projectId, connState: "connecting" };
+}
+function handleWake() {
+  const arr = Array.from(map.entries());
+  while (tmp2 !== undefined) {
+    let tmp5 = _slicedToArray(tmp3, 2);
+    [tmp6, tmp7] = tmp5;
+    if (tmp7.reconnectPending) {
+      let backoff = tmp7.backoff;
+      let succeedResult = backoff.succeed();
+      let tmp14 = connect(tmp6);
+    } else {
+      let heartbeat = tmp7.heartbeat;
+      let expediteResult = heartbeat.expedite();
+    }
+    continue;
+  }
+  tmp2 = Array.from(map.entries())[Symbol.iterator]();
 }
 function requestDebugBacklog(arg0, debugOnDemand) {
   if (debugOnDemand.debugOnDemand) {
@@ -523,6 +575,8 @@ function teardown(projectId) {
     value.disposed = true;
     const backoff = value.backoff;
     backoff.cancel();
+    const heartbeat = value.heartbeat;
+    heartbeat.stop();
     conjurePublishConnection.rejectPendingPublish(projectId, "Connection closed before the publish result arrived");
     const result = conjurePublishScheduleRequests.rejectPendingPublishSchedule(projectId);
     const result1 = conjurePublishConnection.rejectPendingPatchNotesDraft(
@@ -558,43 +612,43 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(10808).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(10817);
-const ConjureSmartContextStore = fn(10818);
-const ConjureDebugLogStore = fn(10819);
-const ConjureLiveReloadStore = fn(10821);
-const ConjureModelSettingsStore = fn(10822);
-const ConjureOverlayBackgroundStore = fn(10823);
-const ConjurePublishStatusStore = fn(10824);
-const ConjureRemixStore = fn(10825);
-const ConjureSettingsStore = fn(10826);
-const ConjureSpendLimitStore = fn(10827);
-const ConjureVoiceChannelPinStore = fn(10828);
+const getOlderHistoryCursor = fn(10831).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10840);
+const ConjureSmartContextStore = fn(10841);
+const ConjureDebugLogStore = fn(10842);
+const ConjureLiveReloadStore = fn(10844);
+const ConjureModelSettingsStore = fn(10845);
+const ConjureOverlayBackgroundStore = fn(10846);
+const ConjurePublishStatusStore = fn(10847);
+const ConjureRemixStore = fn(10848);
+const ConjureSettingsStore = fn(10849);
+const ConjureSpendLimitStore = fn(10850);
+const ConjureVoiceChannelPinStore = fn(10851);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(10844).browserSessionsFrameHandlers);
-let merged1 = Object.assign(fn(10829).chatFrameHandlers);
-const merged2 = Object.assign(fn(10845).debugFrameHandlers);
-const merged3 = Object.assign(fn(10847).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(10849).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(10850).modelSettingsFrameHandlers);
-const merged6 = Object.assign(fn(10851).previewFrameHandlers);
-const merged7 = Object.assign(fn(10908).publishFrameHandlers);
-const merged8 = Object.assign(fn(10919).publishScheduleFrameHandlers);
-const merged9 = Object.assign(fn(10921).remixFrameHandlers);
-const merged10 = Object.assign(fn(10922).settingsFrameHandlers);
-const merged11 = Object.assign(fn(10924).smartContextFrameHandlers);
+let merged = Object.assign(fn(10867).browserSessionsFrameHandlers);
+let merged1 = Object.assign(fn(10852).chatFrameHandlers);
+const merged2 = Object.assign(fn(10868).debugFrameHandlers);
+const merged3 = Object.assign(fn(10870).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(10872).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(10873).modelSettingsFrameHandlers);
+const merged6 = Object.assign(fn(10874).previewFrameHandlers);
+const merged7 = Object.assign(fn(10931).publishFrameHandlers);
+const merged8 = Object.assign(fn(10942).publishScheduleFrameHandlers);
+const merged9 = Object.assign(fn(10944).remixFrameHandlers);
+const merged10 = Object.assign(fn(10945).settingsFrameHandlers);
+const merged11 = Object.assign(fn(10947).smartContextFrameHandlers);
 let obj2 = {};
-const merged12 = Object.assign(fn(10925).appBuildRequestStepHandlers);
-const merged13 = Object.assign(fn(10829).chatStepHandlers);
-const merged14 = Object.assign(fn(10845).debugStepHandlers);
-const merged15 = Object.assign(fn(10851).previewStepHandlers);
-const merged16 = Object.assign(fn(10926).projectStepHandlers);
-const merged17 = Object.assign(fn(10908).publishStepHandlers);
-const merged18 = Object.assign(fn(10927).usageStepHandlers);
+const merged12 = Object.assign(fn(10948).appBuildRequestStepHandlers);
+const merged13 = Object.assign(fn(10852).chatStepHandlers);
+const merged14 = Object.assign(fn(10868).debugStepHandlers);
+const merged15 = Object.assign(fn(10874).previewStepHandlers);
+const merged16 = Object.assign(fn(10949).projectStepHandlers);
+const merged17 = Object.assign(fn(10931).publishStepHandlers);
+const merged18 = Object.assign(fn(10950).usageStepHandlers);
 const set1 = new Set([
   "hello",
   "history",
@@ -623,6 +677,12 @@ prototype["getConnState"] = function getConnState(projectId) {
   return str;
 };
 const conjureConnectionStore = new ConjureConnectionStore(DispatcherDefault, {
+  APP_STATE_UPDATE: function handleAppStateUpdate(state) {
+    if ("active" === state.state) {
+      handleWake();
+    }
+    return false;
+  },
   CONJURE_CHAT_CONN_STATE: function handleChatConnState(arg0) {
     ({ projectId, connState } = arg0);
     if (map1.get(projectId) === connState) {
@@ -812,8 +872,8 @@ export function sendUserMessage(projectId, trimmed, arg2) {
       str3 = tmp30.message;
     }
     if (tmp5 == tmp6) {
-      tmp2(tmp[17]).sendFailedStep(tmp3, str3);
-      const tmp2Result = tmp2(tmp[17]);
+      tmp2(tmp[18]).sendFailedStep(tmp3, str3);
+      const tmp2Result = tmp2(tmp[18]);
     }
     return false;
   }

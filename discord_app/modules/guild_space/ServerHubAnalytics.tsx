@@ -18,8 +18,12 @@ export const ServerHubVisitSource = {
   LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",
   MUSIC_SYSTEM_MESSAGE: "music_system_message",
 };
-export function trackServerHubToggleSetting(id, settingType, value) {
-  AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_TOGGLE_SETTING, { guild_id: id, type: settingType, value });
+export function trackServerHubToggleSetting(id, ALL_SYSTEM_MESSAGES, value) {
+  AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_TOGGLE_SETTING, {
+    guild_id: id,
+    type: ALL_SYSTEM_MESSAGES,
+    value,
+  });
 }
 export function trackServerHubVisit(guild_id, source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_VISIT, { guild_id, source });

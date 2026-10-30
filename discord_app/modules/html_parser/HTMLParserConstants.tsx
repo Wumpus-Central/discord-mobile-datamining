@@ -1,6 +1,11 @@
 // discord_app/modules/html_parser/HTMLParserConstants.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
+const rawResult = String.raw(
+  HermesBuiltin.getTemplateObject(false, "https?:\\/\\/[^\\s<]+[^<.,:;\"'\\]\\s]", "https?://[^s<]+[^<.,:;\"']s]"),
+);
+const regExp = new RegExp("^(" + rawResult + ")", "i");
+const regExp1 = new RegExp(rawResult, "gi");
 const obj = { LINE: 1, PARAGRAPH: 2 };
 const map = new Map(
   Object.entries({
@@ -78,6 +83,12 @@ const set = new Set([
 const result = size.fileFinishedImporting("modules/html_parser/HTMLParserConstants.tsx");
 
 export const DEFAULT_MAX_HTML_LENGTH = 10000;
+export const ASCII_CONTROL_CHARACTERS = /[\u0000-\u001f\u007f]/;
+export const HTTP_URL_SCHEME = /https?:\/\//i;
+export const URL_MATCH = regExp;
+export const URL_IN_LABEL = regExp1;
+export const URL_AT_RUN_END = /https?:\/\/\S+$/i;
+export const URL_CONTINUATION_AT_RUN_START = /^(?:[a-z0-9_/?#&=%-]|\.[a-z0-9])/i;
 export const HTML_WHITESPACE_CODES = { SPACE: 32, TAB: 9, LINE_FEED: 10, FORM_FEED: 12, CARRIAGE_RETURN: 13 };
 export const BLOCK_BREAKS = obj;
 export const TAG_BEHAVIORS = map;

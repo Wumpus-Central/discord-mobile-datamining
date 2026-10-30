@@ -16,7 +16,7 @@ function removePendingSubscription(arg0, arg1) {
     }
   }
 }
-const Constants = fn(1084);
+const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 const weakMap = new WeakMap();
 const size = fn(2);
@@ -37,7 +37,7 @@ export default {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "HermesInternal", done: null };
           }
         } else {
           try {
