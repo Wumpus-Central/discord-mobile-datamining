@@ -1,13 +1,13 @@
 // _runtime/metro/06696__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 1505,
-  height: 1505,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "dad08de0f63cac4aff0fb523b64af317",
-  name: "img_meta_quest",
-  type: "svg",
+  hash: "18bf95267062a719213a10081e62b607",
+  name: "img_amazon_music",
+  type: "png",
 });

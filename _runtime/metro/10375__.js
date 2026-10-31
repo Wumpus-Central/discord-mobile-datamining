@@ -1,45 +1,31 @@
 // _runtime/metro/10375__.js
-import includeCommonConfiguration from "../10343_includeCommonConfiguration.js";
-import _mod10349 from "10349__.js";
-import JPStandardParser2 from "../10376_JPStandardParser.js";
-import _mod10378 from "10378__.js";
-import _mod10379 from "10379__.js";
-import _mod10380 from "10380__.js";
-import _mod10381 from "10381__.js";
-import _mod10382 from "10382__.js";
-import _mod10383 from "10383__.js";
-import _mod10384 from "10384__.js";
-import _mod10385 from "10385__.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod10345 from "10345__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new JPStandardParser.default(), , , ,];
-  const _default = new JPStandardParser.default();
-  items[1] = new regExp.default();
-  const _default1 = new regExp.default();
-  items[2] = new regExp.default();
-  const _default2 = new regExp.default();
-  items[3] = new regExp.default();
-  const _default3 = new regExp.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default4 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ,];
-  const _default5 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  const _default6 = new _isNativeReflectConstruct.default();
-  items1[2] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  const result = includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-  const refiners = result.refiners;
-  result.refiners = refiners.filter((item) => !(item instanceof _isNativeReflectConstruct.default));
-  return result;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
 let fn = this;
 if (this) {
   fn = this.__importDefault;
@@ -55,43 +41,34 @@ if (!fn) {
     return tmp;
   };
 }
-function createCasualConfiguration() {
-  const tmp = createConfiguration(false);
-  const parsers = tmp.parsers;
-  parsers.unshift(new module_10379.default());
-  return tmp;
+class DEMergeDateRangeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, DEMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(DEMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
 }
-const JPStandardParser = fn(JPStandardParser2);
-fn(_mod10378);
-const module_10379 = fn(_mod10379);
-fn(_mod10380);
-fn(_mod10381);
-fn(_mod10382);
-fn(_mod10383);
-fn(_mod10384);
-const regExp = fn(_mod10385);
-const _isNativeReflectConstruct = fn(_mod10349);
-const configuration = createConfiguration(false);
-let parsers = configuration.parsers;
-parsers.unshift(new module_10379.default());
-const chrono = new require("10303__.js").Chrono(configuration);
-const chrono1 = new require("10303__.js").Chrono(createConfiguration(true));
+_classCallCheck = DEMergeDateRangeRefiner;
+_inherits(DEMergeDateRangeRefiner, fn(_mod10345).default);
+const entry = {
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(bis(?:\s*(?:am|zum))?|-)\s*$/i;
+  },
+};
+const items = [entry];
 
-export function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-}
-export function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-}
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("10303__.js").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(DEMergeDateRangeRefiner, items);

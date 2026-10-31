@@ -1,16 +1,16 @@
 // _runtime/metro/04710__.js
-import module_4293_mod from "04293__.js";
-import _typeof_mod from "04289__.js";
-import requiredArgs_mod from "../04290_requiredArgs.js";
+import module_4298_mod from "04298__.js";
+import _typeof_mod from "04294__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
-let module_4293 = module_4293_mod;
-if (!module_4293) {
-  const obj = { default: module_4293 };
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj = { default: module_4298 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4293;
+  tmp3 = module_4298;
 }
-module_4293 = tmp3;
+module_4298 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -28,10 +28,11 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setMilliseconds(module_4293, arg1) {
+export default function setDayOfYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4293);
-  defaultResult1.setMilliseconds(module_4293.default(arg1));
+  const defaultResult1 = _typeof.default(arg0);
+  defaultResult1.setMonth(0);
+  defaultResult1.setDate(module_4298.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

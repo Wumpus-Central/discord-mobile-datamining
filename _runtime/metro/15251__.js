@@ -1,13 +1,13 @@
 // _runtime/metro/15251__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 185,
+  height: 32,
   scales: [2, 3],
-  hash: "67d5ffa8705bc838eb19bd17c2eff4ab",
-  name: "custom_sounds",
+  hash: "e0f9d218f8abae1fb9b3c6aeee68fd32",
+  name: "img_logo_bundle_horizontal",
   type: "png",
 });

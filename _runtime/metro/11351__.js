@@ -1,13 +1,13 @@
 // _runtime/metro/11351__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/standard",
-  width: 380,
-  height: 242,
-  scales: [1],
-  hash: "20a937ca7af234a5d3bd2269cf0e9463",
-  name: "confetti",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "8f839a723b53700388132c9e91d8b71b",
+  name: "ArrowLargeUpIcon",
   type: "png",
 });

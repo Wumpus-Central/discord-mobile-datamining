@@ -1,566 +1,329 @@
 // _runtime/metro/13070__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _mod13039 from "13039__.js";
+import spanTimeInputToSeconds from "../13044_spanTimeInputToSeconds.js";
+import _mod13053 from "13053__.js";
+import _mod13056 from "13056__.js";
+import _mod13067 from "13067__.js";
+import _toArray from "../00717__toArray.js";
 
-let c3 = 100;
-let c4 = 5000;
+const require = globalThis.__r;
 
-export const MIN_DELAY = 100;
-export const START_DELAY = 5000;
-export function makeOfflineTransport(arg0) {
-  closure_0 = arg0;
-  function log() {
-    const items = [...arguments];
-    if (closure_0(log[1]).DEBUG_BUILD) {
-      const logger = closure_0(log[2]).logger;
-      const info = logger.info;
-      const items1 = ["[Offline]:"];
-      HermesBuiltin.arraySpread(items, 1);
-      HermesBuiltin.apply(items1, logger);
-    }
+const TRACING_DEFAULTS = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
+
+export { TRACING_DEFAULTS };
+export function startIdleSpan(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  return (createStore) => {
-    closure_0 = createStore;
-    function flushIn(arg0) {
-      if (timerId) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(timerId);
+  _require = undefined;
+  let finalTimeout;
+  let childSpanTimeout;
+  let beforeSpanEnd;
+  let currentScope;
+  let activeSpan;
+  c12 = undefined;
+  function onIdleSpanEnded(arg0) {
+    closure_0 = arg0;
+    c2 = true;
+    map.clear();
+    const item = items.forEach((fn) => fn());
+    closure_0(map[6])._setSpanForScope(closure_10, closure_11);
+    let obj = closure_0(map[6]);
+    let spanToJSONResult = closure_0(map[4]).spanToJSON(c12);
+    if (spanToJSONResult.start_timestamp) {
+      if (!tmp7[tmp3(undefined, tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
+        const attr = c12.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
       }
-      timerId = setTimeout(
-        asyncGeneratorStep(async () => {
-          if (c3 === 2) {
-            c3 = 3;
-            throw new TypeError("Generator functions may not be called on executing generators");
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw value;
-            } else if (arg0 === 2) {
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
+      let logger = tmp3(tmp4[8]).logger;
+      const _HermesInternal = HermesInternal;
+      logger.log('[Tracing] Idle span "' + spanToJSONResult.op + '" finished');
+      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(c12);
+      const found = spanDescendants.filter((item) => item !== _undefined);
+      const item1 = found.forEach((isRecording) => {
+        if (isRecording.isRecording()) {
+          const obj = { code: _mod13056.SPAN_STATUS_ERROR, message: "cancelled" };
+          isRecording.setStatus(obj);
+          isRecording.end(closure_0);
+          if (_mod13067.DEBUG_BUILD) {
+            const logger = _mod13039.logger;
+            const _JSON = JSON;
+            logger.log("[Tracing] Cancelling span since span ended early", JSON.stringify(isRecording, undefined, 2));
+          }
+        }
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(isRecording);
+        const timestamp = spanToJSONResult.timestamp;
+        let num2 = 0;
+        if (undefined !== timestamp) {
+          num2 = timestamp;
+        }
+        const start_timestamp = spanToJSONResult.start_timestamp;
+        let num3 = 0;
+        if (undefined !== start_timestamp) {
+          num3 = start_timestamp;
+        }
+        let tmp14 = num2 - num3 <= (finalTimeout + idleTimeout) / 1000;
+        if (_mod13067.DEBUG_BUILD) {
+          const _JSON2 = JSON;
+          const json = JSON.stringify(isRecording, undefined, 2);
+          if (tmp13) {
+            if (!tmp14) {
+              const logger3 = _mod13039.logger;
+              logger3.log("[Tracing] Discarding span since it finished after idle span final timeout", json);
             }
           } else {
-            try {
-              c3 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj2 = { value, done: true };
-                  return obj2;
-                } else {
-                  closure_0 = tmp2;
-                  closure_128_0 = undefined;
-                  c2 = undefined;
-                  c2 = 1;
-                  c3 = 1;
-                  const obj3 = { value: closure_2_3.shift(), done: false };
-                  return obj3;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj4 = { value, done: true };
-                return obj4;
-              } else {
-                closure_128_0 = value;
-                if (closure_128_0) {
-                  tmp5("Attempting to send previously queued event");
-                  const _Date = Date;
-                  const date = new Date();
-                  closure_128_0[0].sent_at = date.toISOString();
-                  closure_129_7(closure_128_0, true).catch((error) => {
-                    closure_1_1("Failed to retry sending", error);
-                  });
-                  const promise = closure_129_7(closure_128_0, true);
-                }
-                c3 = 3;
-                return { value: "HermesInternal", done: null };
+            const logger2 = _mod13039.logger;
+            logger2.log("[Tracing] Discarding span since it happened after idle span was finished", json);
+          }
+        }
+        if (tmp14) {
+          tmp14 = tmp13;
+        }
+        if (!tmp14) {
+          const result = spanTimeInputToSeconds.removeChildSpanFromSpan(c12, isRecording);
+          closure_1 = closure_1 + 1;
+        }
+      });
+      if (0 > 0) {
+        const attr1 = c12.setAttribute("sentry.idle_span_discarded_spans", map);
+      }
+      const tmp3Result = tmp3(tmp4[4]);
+      tmp7 = spanToJSONResult.data || {};
+    }
+    let obj2 = closure_0(map[4]);
+  }
+  const map = new Map();
+  c2 = false;
+  let heartbeatFailed = "externalFinish";
+  closure_4 = !obj.disableAutoFinish;
+  let items = [];
+  let idleTimeout = obj.idleTimeout;
+  if (undefined === idleTimeout) {
+    idleTimeout = heartbeatFailed.idleTimeout;
+  }
+  finalTimeout = obj.finalTimeout;
+  if (undefined === finalTimeout) {
+    finalTimeout = heartbeatFailed.finalTimeout;
+  }
+  childSpanTimeout = obj.childSpanTimeout;
+  if (undefined === childSpanTimeout) {
+    childSpanTimeout = heartbeatFailed.childSpanTimeout;
+  }
+  beforeSpanEnd = obj.beforeSpanEnd;
+  const client = require("13066__.js").getClient();
+  if (client) {
+    if (tmp5Result.hasTracingEnabled()) {
+      currentScope = tmp5(tmp6[1]).getCurrentScope();
+      const tmp5Result6 = tmp5(tmp6[1]);
+      activeSpan = tmp5(tmp6[4]).getActiveSpan();
+      const tmp5Result7 = tmp5(tmp6[4]);
+      const startInactiveSpanResult = tmp5(tmp6[11]).startInactiveSpan(arg0);
+      const tmp5Result8 = tmp5(tmp6[11]);
+      const tmp5Result9 = tmp5(tmp6[6]);
+      tmp5Result9._setSpanForScope(tmp5(tmp6[1]).getCurrentScope(), startInactiveSpanResult);
+      if (tmp5(tmp6[10]).DEBUG_BUILD) {
+        let logger = tmp5(tmp6[8]).logger;
+        logger.log("[Tracing] Started span is an idle span");
+      }
+      c12 = startInactiveSpanResult;
+      const _Proxy = Proxy;
+      let obj3 = {
+        apply(arg0, arg1, current) {
+          if (beforeSpanEnd) {
+            tmp(c12);
+          }
+          const arr = _toArray(current);
+          let first = arr[0];
+          const substr = arr.slice(1);
+          if (!first) {
+            first = _mod13053.timestampInSeconds();
+          }
+          const result = spanTimeInputToSeconds.spanTimeInputToSeconds(first);
+          const spanDescendants = spanTimeInputToSeconds.getSpanDescendants(c12);
+          const found = spanDescendants.filter((item) => item !== _undefined);
+          if (found.length) {
+            const mapped = found.map((item) => closure_1_0(map[4]).spanToJSON(item).timestamp);
+            const found1 = mapped.filter((item) => item);
+            let num2;
+            if (found1.length) {
+              const _Math = Math;
+              items = [];
+              HermesBuiltin.arraySpread(found1, 0);
+              const _Math2 = Math;
+              num2 = HermesBuiltin.apply(items, Math);
+            }
+            let num4 = spanTimeInputToSeconds.spanToJSON(c12).start_timestamp;
+            let num6 = Infinity;
+            if (num4) {
+              num6 = num4 + finalTimeout / 1000;
+            }
+            if (!num4) {
+              num4 = -Infinity;
+            }
+            if (!num2) {
+              num2 = Infinity;
+            }
+            const bound = Math.min(num6, Math.max(num4, Math.min(result, num2)));
+            onIdleSpanEnded(bound);
+            const _Reflect2 = Reflect;
+            const items1 = [bound];
+            HermesBuiltin.arraySpread(substr, 1);
+            return Reflect.apply(arg0, arg1, items1);
+          } else {
+            onIdleSpanEnded(result);
+            const _Reflect = Reflect;
+            const items2 = [result];
+            HermesBuiltin.arraySpread(substr, 1);
+            return Reflect.apply(arg0, arg1, items2);
+          }
+        },
+      };
+      const proxy = new Proxy(startInactiveSpanResult.end, obj3);
+      startInactiveSpanResult.end = proxy;
+      items.push(
+        client.on("spanStart", (spanContext) => {
+          let timestamp = c2;
+          if (!c2) {
+            timestamp = spanContext === c12;
+          }
+          if (!timestamp) {
+            timestamp = timeout(map[4]).spanToJSON(spanContext).timestamp;
+            const obj = timeout(map[4]);
+          }
+          if (!timestamp) {
+            const spanDescendants = timeout(map[4]).getSpanDescendants(c12);
+            if (spanDescendants.includes(spanContext)) {
+              if (timeout) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(timeout);
+                timeout = undefined;
               }
-            } catch (tmp18) {
-              c3 = tmp;
-              throw tmp18;
+              const result = map.set(spanContext.spanContext().spanId, true);
+              timeout(map[5]).timestampInSeconds() + childSpanTimeout / 1000;
+              const _setTimeout = setTimeout;
+              timeout = setTimeout(() => {
+                let tmp = !c2;
+                if (!c2) {
+                  tmp = closure_4;
+                }
+                if (tmp) {
+                  heartbeatFailed = "heartbeatFailed";
+                  c12.end(closure_0);
+                }
+              }, childSpanTimeout);
+              const obj4 = timeout(map[5]);
+            }
+            const obj2 = timeout(map[4]);
+          }
+        }),
+      );
+      items.push(
+        client.on("spanEnd", (spanContext) => {
+          if (!c2) {
+            const spanId = spanContext.spanContext().spanId;
+            if (map.has(spanId)) {
+              map.delete(spanId);
+            }
+            if (0 === map.size) {
+              timeout = timeout(map[5]).timestampInSeconds() + idleTimeout / 1000;
+              if (timeout) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(timeout);
+                timeout = undefined;
+              }
+              const _setTimeout = setTimeout;
+              timeout = setTimeout(() => {
+                let tmp = !c2;
+                if (!c2) {
+                  tmp = 0 === map.size;
+                }
+                if (tmp) {
+                  tmp = closure_4;
+                }
+                if (tmp) {
+                  heartbeatFailed = "idleTimeout";
+                  c12.end(closure_0);
+                }
+              }, idleTimeout);
+              const obj2 = timeout(map[5]);
             }
           }
         }),
-        arg0,
       );
-      let unref = typeof timerId !== "number";
-      if (typeof timerId !== "number") {
-        unref = timerId.unref;
-      }
-      if (unref) {
-        timerId.unref();
-      }
-    }
-    function flushWithBackOff() {
-      if (!timerId) {
-        if (tmp) {
-          const _clearTimeout = clearTimeout;
-          clearTimeout(timerId);
-        }
-        const _setTimeout = setTimeout;
-        timerId = setTimeout(
-          asyncGeneratorStep(async () => {
-            if (c3 === 2) {
-              c3 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === c2) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    closure_0 = tmp2;
-                    closure_128_0 = undefined;
-                    c2 = undefined;
-                    c2 = 1;
-                    c3 = 1;
-                    const obj3 = { value: closure_2_3.shift(), done: false };
-                    return obj3;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  const obj4 = { value, done: true };
-                  return obj4;
-                } else {
-                  closure_128_0 = value;
-                  if (closure_128_0) {
-                    tmp5("Attempting to send previously queued event");
-                    const _Date = Date;
-                    const date = new Date();
-                    closure_128_0[0].sent_at = date.toISOString();
-                    closure_129_7(closure_128_0, true).catch((error) => {
-                      closure_1_1("Failed to retry sending", error);
-                    });
-                    const promise = closure_129_7(closure_128_0, true);
-                  }
-                  c3 = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-              } catch (tmp18) {
-                c3 = tmp;
-                throw tmp18;
-              }
-            }
-          }),
-          closure_4,
-        );
-        let unref = typeof timerId !== "number";
-        if (typeof timerId !== "number") {
-          unref = timerId.unref;
-        }
-        if (unref) {
-          timerId.unref();
-        }
-        const _Math = Math;
-        closure_4 = Math.min(2 * closure_4, 3600000);
-      }
-    }
-    function send(arg0) {
-      const self = this;
-      const apply = closure_8.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    }
-    closure_8 = async function _send(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_3 = tmp2;
-              closure_2 = tmp6;
-              closure_130_1 = undefined;
-              closure_130_0 = shouldStore;
-              let flag = closure_1;
-              if (closure_1 === undefined) {
-                flag = false;
-              }
-              closure_130_1 = flag;
-              closure_130_2 = undefined;
-              closure_130_3 = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "flexDirection", done: true };
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              if (!closure_130_1) {
-                if (obj13.envelopeContainsItemType(closure_130_0, ["replay_event", "replay_recording"])) {
-                  c6 = 2;
-                  c7 = 1;
-                  const obj6 = { value: closure_131_3.push(closure_130_0), done: false };
-                  return obj6;
-                }
-                obj13 = createStore(13048);
-              }
-              c5 = 1;
-              c6 = 5;
-              c7 = 1;
-              const obj7 = { value: closure_131_1.send(closure_130_0), done: false };
-              return obj7;
-            }
-          } else if (2 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj8 = { value, done: true };
-              return obj8;
-            } else {
-              closure_131_5(closure_2_3);
-              c7 = 3;
-              const obj9 = { value: {}, done: true };
-              return obj9;
-            }
-          } else if (3 === tmp6) {
-            c5 = 0;
-            closure_130_4 = closure_4;
-            c6 = 4;
-            c7 = 1;
-            const obj10 = {
-              value: (function shouldQueue(arg0, arg1, arg2) {
-                const result = createStore(13048).envelopeContainsItemType(arg0, ["client_report"]);
-                let tmp2 = !result;
-                if (!result) {
-                  shouldStore = shouldStore.shouldStore;
-                  let shouldStoreResult = !shouldStore;
-                  if (shouldStore) {
-                    shouldStoreResult = obj2.shouldStore(arg0, arg1, arg2);
-                  }
-                  tmp2 = shouldStoreResult;
-                  obj2 = shouldStore;
-                }
-                return tmp2;
-              })(closure_130_0, closure_130_4, closure_131_4),
-              done: false,
-            };
-            return obj10;
-          } else if (4 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj11 = { value, done: true };
-              return obj11;
-            } else if (value) {
-              if (closure_130_1) {
-                c6 = 7;
-                c7 = 1;
-                const obj12 = { value: closure_131_3.unshift(closure_130_0), done: false };
-                return obj12;
-              } else {
-                c6 = 6;
-                c7 = 1;
-                const obj14 = { value: closure_131_3.push(closure_130_0), done: false };
-                return obj14;
-              }
-            } else {
-              throw closure_130_4;
-            }
-          } else if (5 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              const obj15 = { value, done: true };
-              return obj15;
-            } else {
-              closure_130_2 = value;
-              closure_130_3 = closure_2_3;
-              if (!closure_130_2) {
-                closure_131_5(closure_130_3);
-                closure_131_4 = closure_2_4;
-                c5 = 0;
-                c7 = 3;
-              } else if (!closure_130_2.headers) {
-                if (closure_130_2.headers) {
-                  if (closure_130_2.headers["x-sentry-rate-limits"]) {
-                    closure_130_3 = 60000;
-                  }
-                }
-                let num7 = closure_130_2.statusCode;
-                if (!num7) {
-                  num7 = 0;
-                }
-                if (num7 >= 400) {
-                  c5 = 0;
-                  c7 = 3;
-                  const obj16 = { value: closure_130_2, done: true };
-                  return obj16;
-                }
-              }
-              closure_130_3 = createStore(13069).parseRetryAfterHeader(closure_130_2.headers["retry-after"]);
-              const obj5 = createStore(13069);
-            }
-          } else {
-            if (6 === tmp6) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                const obj17 = { value, done: true };
-                return obj17;
-              }
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj = { value, done: true };
-              return obj;
-            }
-            closure_131_6();
-            closure_1("Error sending. Event queued.", closure_130_4);
-            c7 = 3;
-            const obj18 = { value: {}, done: true };
-            return obj18;
-          }
-        } catch (tmp67) {
-          closure_4 = tmp67;
-          if (tmp3 === c5) {
-            c7 = tmp;
-            throw tmp67;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    };
-    closure_1 = closure_0(createStore);
-    if (createStore.createStore) {
-      closure_3 = createStore.createStore(createStore);
-      closure_4 = closure_1_4;
-      if (createStore.flushAtStartup) {
-        if (!timerId) {
-          if (tmp7) {
-            let _clearTimeout = clearTimeout;
-            clearTimeout(timerId);
-          }
-          let _setTimeout = setTimeout;
-          timerId = setTimeout(
-            asyncGeneratorStep(async () => {
-              if (c3 === 2) {
-                c3 = 3;
-                throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp4 === 3) {
-                if (arg0 === 1) {
-                  throw value;
-                } else if (arg0 === 2) {
-                  const obj = { value, done: true };
-                  return obj;
-                } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  c3 = 2;
-                  if (0 === c2) {
-                    if (arg0 === 1) {
-                      c3 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c3 = 3;
-                      const obj2 = { value, done: true };
-                      return obj2;
-                    } else {
-                      closure_0 = tmp2;
-                      closure_128_0 = undefined;
-                      c2 = undefined;
-                      c2 = 1;
-                      c3 = 1;
-                      const obj3 = { value: closure_2_3.shift(), done: false };
-                      return obj3;
-                    }
-                  } else if (arg0 === 1) {
-                    c3 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else {
-                    closure_128_0 = value;
-                    if (closure_128_0) {
-                      tmp5("Attempting to send previously queued event");
-                      const _Date = Date;
-                      const date = new Date();
-                      closure_128_0[0].sent_at = date.toISOString();
-                      closure_129_7(closure_128_0, true).catch((error) => {
-                        closure_1_1("Failed to retry sending", error);
-                      });
-                      const promise = closure_129_7(closure_128_0, true);
-                    }
-                    c3 = 3;
-                    return { value: "HermesInternal", done: null };
-                  }
-                } catch (tmp18) {
-                  c3 = tmp;
-                  throw tmp18;
-                }
-              }
-            }),
-            closure_4,
-          );
-          let unref = typeof timerId !== "number";
-          if (typeof timerId !== "number") {
-            unref = timerId.unref;
-          }
-          if (unref) {
-            timerId.unref();
-          }
-          let _Math = Math;
-          closure_4 = Math.min(2 * closure_4, 3600000);
-        }
-      }
-      let obj = {
-        send,
-        flush(arg0) {
-          if (undefined === arg0) {
-            closure_4 = c4;
-            if (timerId) {
+      items.push(
+        client.on("idleSpanEnableAutoFinish", (arg0) => {
+          if (arg0 === c12) {
+            c4 = true;
+            let timeout;
+            if (timeout) {
               const _clearTimeout = clearTimeout;
-              clearTimeout(timerId);
+              clearTimeout(timeout);
+              timeout = undefined;
             }
             const _setTimeout = setTimeout;
-            timerId = setTimeout(
-              asyncGeneratorStep(async () => {
-                if (c3 === 2) {
-                  c3 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp4 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj = { value, done: true };
-                    return obj;
-                  } else {
-                    return { value: "HermesInternal", done: null };
-                  }
-                } else {
-                  try {
-                    c3 = 2;
-                    if (0 === c2) {
-                      if (arg0 === 1) {
-                        c3 = 3;
-                        throw value;
-                      } else if (arg0 === 2) {
-                        c3 = 3;
-                        const obj2 = { value, done: true };
-                        return obj2;
-                      } else {
-                        closure_0 = tmp2;
-                        closure_128_0 = undefined;
-                        c2 = undefined;
-                        c2 = 1;
-                        c3 = 1;
-                        const obj3 = { value: closure_2_3.shift(), done: false };
-                        return obj3;
-                      }
-                    } else if (arg0 === 1) {
-                      c3 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c3 = 3;
-                      const obj4 = { value, done: true };
-                      return obj4;
-                    } else {
-                      closure_128_0 = value;
-                      if (closure_128_0) {
-                        tmp5("Attempting to send previously queued event");
-                        const _Date = Date;
-                        const date = new Date();
-                        closure_128_0[0].sent_at = date.toISOString();
-                        closure_129_7(closure_128_0, true).catch((error) => {
-                          closure_1_1("Failed to retry sending", error);
-                        });
-                        const promise = closure_129_7(closure_128_0, true);
-                      }
-                      c3 = 3;
-                      return { value: "HermesInternal", done: null };
-                    }
-                  } catch (tmp18) {
-                    c3 = tmp;
-                    throw tmp18;
-                  }
+            timeout = setTimeout(() => {
+              let tmp = !c2;
+              if (!c2) {
+                tmp = 0 === map.size;
+              }
+              if (tmp) {
+                tmp = closure_4;
+              }
+              if (tmp) {
+                heartbeatFailed = "idleTimeout";
+                c12.end(closure_0);
+              }
+            }, idleTimeout);
+            if (map.size) {
+              const _setTimeout2 = setTimeout;
+              timeout = setTimeout(() => {
+                let tmp = !c2;
+                if (!c2) {
+                  tmp = closure_4;
                 }
-              }),
-              c3,
-            );
-            let unref = typeof timerId !== "number";
-            if (typeof timerId !== "number") {
-              unref = timerId.unref;
-            }
-            if (unref) {
-              timerId.unref();
+                if (tmp) {
+                  heartbeatFailed = "heartbeatFailed";
+                  c12.end(closure_0);
+                }
+              }, childSpanTimeout);
             }
           }
-          return closure_1.flush(arg0);
-        },
-      };
-      return obj;
-    } else {
-      const _Error = Error;
-      const error = new Error("No `createStore` function was provided");
-      throw error;
+        }),
+      );
+      if (!obj.disableAutoFinish) {
+        if (_require) {
+          let _clearTimeout = clearTimeout;
+          clearTimeout(_require);
+          _require = undefined;
+        }
+        let _setTimeout = setTimeout;
+        _require = setTimeout(() => {
+          let tmp = !c2;
+          if (!c2) {
+            tmp = 0 === map.size;
+          }
+          if (tmp) {
+            tmp = closure_4;
+          }
+          if (tmp) {
+            heartbeatFailed = "idleTimeout";
+            c12.end(closure_0);
+          }
+        }, idleTimeout);
+      }
+      let _setTimeout2 = setTimeout;
+      const timerId = setTimeout(() => {
+        if (!c2) {
+          const obj = { code: _mod13056.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
+          _undefined.setStatus(obj);
+          heartbeatFailed = "finalTimeout";
+          _undefined.end();
+        }
+      }, finalTimeout);
+      return startInactiveSpanResult;
     }
-  };
+    tmp5Result = tmp5(tmp6[2]);
+  }
+  const sentryNonRecordingSpan = new tmp5(tmp6[3]).SentryNonRecordingSpan();
+  return sentryNonRecordingSpan;
 }

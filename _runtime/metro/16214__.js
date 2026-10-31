@@ -1,139 +1,107 @@
 // _runtime/metro/16214__.js
-import _slicedToArray from "00032__.js";
+import _createClassDefault from "00042__createClass.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 
-const re3 = /^(image)\/.*$/i;
-let closure_4 = {};
-
-export default () => {
-  if (arg0 === undefined) {
-    let obj = {};
+function monadic(call, get, fn, num) {
+  let tmp2 = num;
+  if (!tmp) {
+    tmp2 = fn(num);
   }
-  return (arg0) => {
-    closure_0 = arg0;
-    function onSend(data, _url) {
-      if (merged.ignoreUrls) {
-        const ignoreUrls = merged.ignoreUrls;
-        if (ignoreUrls.test(_url._url)) {
-          _url._skipReactotron = true;
-        }
-      }
-      const sum = c3 + 1;
-      c3 = sum;
-      _url._trackingName = sum;
-      closure_4[c3] = { data, xhr: _url, stopTimer: closure_0.startTimer() };
+  value = get.get(tmp2);
+  if (undefined !== value) {
+    return value;
+  } else {
+    const self = this;
+    let result = call;
+    call = call.call;
+    const tmp6 = typeof call === "unknown" ? result(num) : call(self, num);
+    result = get.set(tmp2, tmp6);
+  }
+}
+function variadic(apply, get, fn) {
+  const call = slice.call;
+  if (typeof call === "unknown") {
+    let substr = slice(3);
+  } else {
+    substr = call(arguments, 3);
+  }
+  const tmp3 = fn(substr);
+  value = get.get(tmp3);
+  if (undefined === value) {
+    const self = this;
+    const applyResult = apply.apply(this, substr);
+    const result = get.set(tmp3, applyResult);
+    value = applyResult;
+  }
+  return value;
+}
+function strategyDefault(c165, cache) {
+  cache = cache.cache;
+  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
+}
+let _classCallCheck = _classCallCheck_mod;
+function serializerDefault() {
+  return JSON.stringify(arguments);
+}
+class ObjectWithoutPrototypeCache {
+  constructor() {
+    tmp = closure_0(this, ObjectWithoutPrototypeCache);
+    this.cache = Object.create(null);
+    return;
+  }
+}
+_classCallCheck = ObjectWithoutPrototypeCache;
+const entry = {
+  key: "get",
+  value: function get(arg0) {
+    return this.cache[arg0];
+  },
+};
+const items = [
+  entry,
+  {
+    key: "set",
+    value: function set(arg0, arg1) {
+      this.cache[arg0] = arg1;
+    },
+  },
+];
+let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
+let closure_6 = {
+  create() {
+    return new closure_5();
+  },
+};
+
+export function memoize(arg0, cache) {
+  if (cache) {
+    if (cache.cache) {
+      cache = cache.cache;
     }
-    function onResponse(status, arg1, _bodyBlob, arg3, arg4, _skipReactotron) {
-      closure_1 = _bodyBlob;
-      regex = _skipReactotron;
-      if (!_skipReactotron._skipReactotron) {
-        let _url = arg3;
-        obj = null;
-        let num2 = -1;
-        if (arg3) {
-          num2 = _url.indexOf("?");
-        }
-        let tmp2 = null;
-        if (num2 > -1) {
-          obj = {};
-          const parts = _url.substr(num2 + 1).split("&");
-          const item = parts.forEach((item) => {
-            [tmp2, str] = item.split("=");
-            let tmp3 = tmp2;
-            if (tmp2) {
-              tmp3 = undefined !== str;
-            }
-            if (tmp3) {
-              const _decodeURIComponent = decodeURIComponent;
-              obj[tmp2] = decodeURIComponent(str.replace(/\+/g, " "));
-            }
-            const tmp = _slicedToArray(item.split("="), 2);
-          });
-          tmp2 = obj;
-          const str2 = _url.substr(num2 + 1);
-        }
-        const _trackingName = _skipReactotron._trackingName;
-        let tmp5 = closure_4[_trackingName];
-        if (!tmp5) {
-          const obj2 = { xhr: _skipReactotron };
-          tmp5 = obj2;
-        }
-        closure_4[_trackingName] = null;
-        ({ stopTimer: closure_4, data } = tmp5);
-        if (!_url) {
-          _url = tmp5.xhr._url;
-        }
-        const request = {
-          url: _url,
-          method: _skipReactotron._method || null,
-          data,
-          headers: _skipReactotron._headers || null,
-          params: tmp2,
-        };
-        let str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["content-type"];
-        if (!str4) {
-          str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
-          const tmp6 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
-        }
-        if (!str4) {
-          str4 = "";
-        }
-        function sendResponse(result) {
-          let str = "~~~ skipped ~~~";
-          if (result) {
-            try {
-              const _JSON = JSON;
-              str = JSON.parse(result);
-            } catch (err) {
-              str = closure_1;
-            }
-          }
-          const response = { body: str, status, headers: responseHeaders.responseHeaders || null };
-          let tmp4Result = null;
-          if (closure_1_4) {
-            tmp4Result = tmp4();
-          }
-          status.apiResponse(request, response, tmp4Result);
-        }
-        if (typeof _bodyBlob === "string") {
-          if (!str4) {
-            str4 = "";
-          }
-          if (!regex.test(str4)) {
-            if ("blob" === arg4) {
-              const _FileReader = FileReader;
-              if (typeof FileReader !== "undefined") {
-                if (_bodyBlob) {
-                  const _FileReader2 = FileReader;
-                  const fileReader = new FileReader();
-                  function brListener() {
-                    sendResponse(fileReader.result);
-                    const removed = fileReader.removeEventListener("loadend", brListener);
-                  }
-                  const listener = fileReader.addEventListener("loadend", brListener);
-                  const asText = fileReader.readAsText(_bodyBlob);
-                }
-              }
-            }
-            sendResponse(_bodyBlob);
-          }
-        }
-        sendResponse("");
+    if (cache) {
+      if (cache.serializer) {
+        let serializer = cache.serializer;
       }
+      if (cache) {
+        if (cache.strategy) {
+          let strategy = cache.strategy;
+        }
+        const obj = { cache, serializer };
+        return strategy(arg0, obj);
+      }
+      strategy = strategyDefault;
     }
-    const merged = Object.assign({}, closure_4, obj);
-    let regex = merged.ignoreContentTypes || re3;
-    c3 = 1000;
-    closure_4 = {};
-    obj = {
-      onConnect() {
-        const XHRInterceptor = obj(16215).XHRInterceptor;
-        XHRInterceptor.setSendCallback(onSend);
-        const XHRInterceptor2 = obj(16215).XHRInterceptor;
-        XHRInterceptor2.setResponseCallback(onResponse);
-        const XHRInterceptor3 = obj(16215).XHRInterceptor;
-        XHRInterceptor3.enableInterception();
-      },
-    };
-    return obj;
-  };
+    serializer = serializerDefault;
+  }
+  cache = closure_6;
+}
+export const strategies = {
+  variadic: function strategyVariadic(c165, cache) {
+    cache = cache.cache;
+    return variadic.bind(this, c165, cache.create(), cache.serializer);
+  },
+  monadic: function strategyMonadic(c165, cache) {
+    cache = cache.cache;
+    return monadic.bind(this, c165, cache.create(), cache.serializer);
+  },
 };

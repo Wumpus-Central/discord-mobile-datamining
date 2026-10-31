@@ -1,34 +1,31 @@
 // _runtime/metro/13036__.js
-import _mod13031 from "13031__.js";
+import _mod13037 from "13037__.js";
+import _mod13040 from "13040__.js";
 
 require = arg1;
 const dependencyMap = arg6;
+function instrumentError() {
+  onerror = _mod13040.GLOBAL_OBJ.onerror;
+  _mod13040.GLOBAL_OBJ.onerror = function (msg, url, line, column, error) {
+    _mod13037.triggerHandlers("error", { column, error, line, msg, url });
+    if (!onerror) {
+      return onerror;
+    } else {
+      const self = this;
+      const apply = onerror.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+    const obj = { column, error, line, msg, url };
+  };
+  _mod13040.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+}
+let onerror = null;
 
-export function hasTracingEnabled(tracesSampler) {
-  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
-    if (!globalThis.__SENTRY_TRACING__) {
-      return false;
-    }
-  }
-  let tmp = tracesSampler;
-  const client = _mod13031.getClient();
-  if (!tracesSampler) {
-    let options = client;
-    if (client) {
-      options = client.getOptions();
-    }
-    tmp = options;
-  }
-  let tmp3 = tmp;
-  if (tmp3) {
-    let enableTracing = tmp.enableTracing;
-    if (!enableTracing) {
-      enableTracing = "tracesSampleRate" in tmp;
-    }
-    if (!enableTracing) {
-      enableTracing = "tracesSampler" in tmp;
-    }
-    tmp3 = enableTracing;
-  }
-  return tmp3;
+export function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod13037.addHandler("error", errorCallback);
+  _mod13037.maybeInstrument("error", instrumentError);
 }

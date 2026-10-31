@@ -1,4 +1,20 @@
 // _runtime/metro/12908__.js
-import _mod12839 from "12839__.js";
+import _mod12833 from "12833__.js";
 
-export default { node: _mod12839 };
+const String = _mod12833.TYPE.String;
+const obj = {
+  name: "String",
+  structure: { value: String },
+  parse() {
+    return {
+      type: "String",
+      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
+      value: this.consume(String),
+    };
+  },
+  generate(value) {
+    this.chunk(value.value);
+  },
+};
+
+export default obj;

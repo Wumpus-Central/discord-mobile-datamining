@@ -1,103 +1,43 @@
 // _runtime/metro/05130__.js
-import _mod5125 from "05125__.js";
-import _slicedToArray from "00032__.js";
+import noop from "00019__.js";
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
+({ useRef: closure_0, useEffect: closure_1 } = noop);
+let deps = Symbol("UNINITIALIZED");
 
-export function useRiveTrigger(faceStateChange, instance, arg2) {
-  closure_0 = faceStateChange;
-  let obj = arg2;
-  if (arg2 == null) {
-    obj = {};
+export function useDisposableMemo(fn2, _temp, items, current2) {
+  const obj = { value: "r", deps, pendingDisposal: null };
+  const tmp2 = React(obj);
+  closure_0 = tmp2;
+  const obj2 = React(_temp);
+  obj2.current = _temp;
+  const tmp3 = React(current2);
+  deps = tmp3;
+  tmp3.current = current2;
+  if (tmp2.current.deps === deps) {
+    if (tmp2.current.deps !== deps) {
+      if (tmp3.current) {
+        tmp3.current.current = undefined;
+      }
+      try {
+        obj2.current(tmp2.current.value);
+      } catch (err) {}
+    }
+    const obj3 = { value: fn2(), deps: items, pendingDisposal: null };
+    tmp2.current = obj3;
+    if (tmp3.current) {
+      tmp3.current.current = tmp2.current.value;
+    }
   }
-  const onTrigger = obj.onTrigger;
-  let tmp = hasOwnProperty(undefined);
-  const tmp2 = hasOwnProperty(false);
-  const tmp3 = hasOwnProperty(onTrigger);
-  closure_4 = tmp3;
-  tmp3.current = onTrigger;
-  const items = [instance, faceStateChange];
-  const disposableMemo = _mod5125.useDisposableMemo(
-    () => {
-      if (instance) {
-        return instance.triggerProperty(closure_0);
+  framebus(
+    () => () => {
+      if (ref3.current) {
+        ref3.current.current = undefined;
       }
+      try {
+        ref2.current(ref.current.value);
+      } catch (err) {}
     },
-    (dispose) => {
-      let disposeResult;
-      if (dispose != null) {
-        disposeResult = dispose.dispose();
-      }
-      return disposeResult;
-    },
-    items,
-    tmp,
+    [],
   );
-  if (tmp.current) {
-    tmp2.current = true;
-  }
-  const tmp5 = _slicedToArray(timestampProducer(null), 2);
-  closure_6 = tmp5[1];
-  const items1 = [faceStateChange, instance];
-  React4(() => {
-    closure_6(null);
-  }, items1);
-  const items2 = [instance, disposableMemo, faceStateChange];
-  React4(() => {
-    let tmp = closure_1;
-    if (closure_1) {
-      tmp = !disposableMemo;
-    }
-    if (tmp) {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const error = new Error('Property "' + closure_0 + '" not found in the ViewModel instance');
-      closure_6(error);
-    }
-  }, items2);
-  const items3 = [disposableMemo];
-  React4(() => {
-    if (disposableMemo) {
-      closure_0 = disposableMemo.addListener(() => {
-        const current = ref.current;
-        if (current != null) {
-          current();
-        }
-      });
-      return () => {
-        try {
-          closure_0();
-        } catch (err) {}
-      };
-    }
-  }, items3);
-  const obj3 = { trigger: null, error: tmp5[0] };
-  const items4 = [faceStateChange];
-  obj3.trigger = React3(() => {
-    if (ref.current) {
-      const current = ref.current;
-      current.trigger();
-    } else {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      if (ref2.current) {
-        warn(
-          concat(
-            closure_0,
-            "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount.",
-          ),
-        );
-      } else {
-        warn(
-          concat(
-            closure_0,
-            "') called but the property is not available yet. The viewModelInstance may still be loading.",
-          ),
-        );
-      }
-    }
-  }, items4);
-  return obj3;
+  return tmp2.current.value;
 }

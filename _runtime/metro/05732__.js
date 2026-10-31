@@ -1,5 +1,5 @@
 // _runtime/metro/05732__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "37f98f48a96949a6d31455f4e1803024",
-  name: "CircleInformationIcon-primary",
+  hash: "8d98f50d9f8bc155689b81a44d8b38ff",
+  name: "CopyIcon",
   type: "png",
 });

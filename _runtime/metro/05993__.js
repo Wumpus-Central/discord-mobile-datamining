@@ -1,36 +1,63 @@
 // _runtime/metro/05993__.js
-import _mod26 from "00026__.js";
-import renderElement from "../00114_renderElement.js";
-import get_ActivityIndicator from "00017__.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import get_synchronousScreenUpdatesEnabled from "../05973_get_synchronousScreenUpdatesEnabled.js";
+import noop from "00019__.js";
 
-({ codegenNativeCommands, codegenNativeComponent } = get_ActivityIndicator);
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSSearchBar", directEventTypes: { topSearchFocus: { registrationName: "onSearchFocus" }, topSearchBlur: { registrationName: "onSearchBlur" }, topSearchButtonPress: { registrationName: "onSearchButtonPress" }, topCancelButtonPress: { registrationName: "onCancelButtonPress" }, topChangeText: { registrationName: "onChangeText" }, topClose: { registrationName: "onClose" }, topOpen: { registrationName: "onOpen" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSearchFocus: true, onSearchBlur: true, onSearchButtonPress: true, onCancelButtonPress: true, onChangeText: true, onClose: true, onOpen: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { hideWhenScrolling: true, autoCapitalize: true, placeholder: true, placement: true, allowToolbarIntegration: true, obscureBackground: true, hideNavigationBar: true, cancelButtonText: true, barTintColor: _mod26.colorAttribute, tintColor: _mod26.colorAttribute, textColor: _mod26.colorAttribute, autoFocus: true, disableBackButtonOverride: true, inputType: true, hintTextColor: _mod26.colorAttribute, headerIconColor: _mod26.colorAttribute, shouldShowHintSearchIcon: true };
+require = arg1;
+let context = noop.createContext({
+  topAlreadyApplied: false,
+  leftDisabled: false,
+  rightDisabled: false,
+  bottomDisabled: false,
+});
 
-export default module_65.get("RNSSearchBar", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
-export const Commands = {
-  blur(arg0) {
-    renderElement.dispatchCommand(arg0, "blur", []);
-  },
-  focus(arg0) {
-    renderElement.dispatchCommand(arg0, "focus", []);
-  },
-  clearText(arg0) {
-    renderElement.dispatchCommand(arg0, "clearText", []);
-  },
-  toggleCancelButton(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "toggleCancelButton", items);
-  },
-  setText(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "setText", items);
-  },
-  cancelSearch(arg0) {
-    renderElement.dispatchCommand(arg0, "cancelSearch", []);
+export const EdgeInsetApplicationContext = context;
+export function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
+  context = noop.useContext(context);
+  const topAlreadyApplied = context.topAlreadyApplied;
+  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
+  const experiment = get_synchronousScreenUpdatesEnabled.featureFlags.experiment;
+  flag = undefined;
+  if (experiment != null) {
+    flag = experiment.androidLegacyTopInsetBehavior;
   }
-};
+  if (flag == null) {
+    flag = false;
+  }
+  let tmp2 = flag;
+  if (!flag) {
+    let tmp3 = !topAlreadyApplied;
+    if (!topAlreadyApplied) {
+      tmp3 = arg0;
+    }
+    tmp2 = tmp3;
+  }
+  closure_1 = tmp2;
+  let tmp4 = tmp2;
+  if (tmp2) {
+    tmp4 = !flag;
+  }
+  if (!leftDisabled) {
+    leftDisabled = flag2;
+  }
+  if (!rightDisabled) {
+    rightDisabled = flag3;
+  }
+  if (!bottomDisabled) {
+    bottomDisabled = flag4;
+  }
+  const items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
+  return {
+    appliesTopInset: tmp4,
+    consumeLeftInset: !leftDisabled,
+    consumeRightInset: !rightDisabled,
+    consumeBottomInset: !bottomDisabled,
+    useLegacyBehavior: flag,
+    nextContextValue: noop.useMemo(() => {
+      let tmp = topAlreadyApplied;
+      if (!topAlreadyApplied) {
+        tmp = closure_1;
+      }
+      return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
+    }, items),
+  };
+}

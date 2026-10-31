@@ -1,55 +1,12 @@
 // _runtime/metro/04438__.js
-import module_4293_mod from "04293__.js";
-import _typeof_mod from "04289__.js";
-import requiredArgs_mod from "../04290_requiredArgs.js";
+import 02067__ from "02067__.js";
 
-let module_4293 = module_4293_mod;
-if (!module_4293) {
-  const obj = { default: module_4293 };
-  let tmp3 = obj;
+if (!module_2067) {
+  const obj2 = { default: module_2067 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4293;
+  obj = module_2067;
 }
-module_4293 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
 
-export default function addMonths(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(interval);
-  const defaultResult2 = module_4293.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date2 = Date;
-    const date = new Date(NaN);
-    return date;
-  } else if (defaultResult2) {
-    const date1 = defaultResult1.getDate();
-    const _Date = Date;
-    const date2 = new Date(defaultResult1.getTime());
-    date2.setMonth(defaultResult1.getMonth() + defaultResult2 + 1, 0);
-    let tmp8 = date2;
-    if (date1 < date2.getDate()) {
-      const fullYear = date2.getFullYear();
-      defaultResult1.setFullYear(fullYear, date2.getMonth(), date1);
-      tmp8 = defaultResult1;
-    }
-    return tmp8;
-  } else {
-    return defaultResult1;
-  }
-};
+export default { date: obj.default({ formats: { full: "EEEE, do MMMM y '\u0440.'", long: "do MMMM y '\u0440.'", medium: "d MMM y '\u0440.'", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u043E' {{time}}", long: "{{date}} '\u043E' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

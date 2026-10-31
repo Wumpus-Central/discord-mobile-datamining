@@ -1,5 +1,5 @@
 // _runtime/metro/19654__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "452e4649130bf55bccef66e38e059a6a",
-  name: "ListBulletsIcon",
+  hash: "0a9a387fb9d47e12759ef9517ca0c2ad",
+  name: "WalletIcon",
   type: "png",
 });

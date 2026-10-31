@@ -1,34 +1,7 @@
 // _runtime/metro/12865__.js
-import _mod12798 from "12798__.js";
+import _mod12850 from "12850__.js";
+import _mod12852 from "12852__.js";
+import _mod12853 from "12853__.js";
+import _mod12864 from "12864__.js";
 
-const LeftParenthesis = _mod12798.TYPE.LeftParenthesis;
-const RightParenthesis = _mod12798.TYPE.RightParenthesis;
-const obj = {
-  name: "Parentheses",
-  structure: null,
-  parse(call, arg1) {
-    const self = this;
-    this.eat(LeftParenthesis);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightParenthesis);
-    }
-    const element = {
-      type: "Parentheses",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
-    };
-    return element;
-  },
-  generate(arg0) {
-    this.chunk("(");
-    this.children(arg0);
-    this.chunk(")");
-  },
-};
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;
+export default { SyntaxError: _mod12852, parse: _mod12850, generate: _mod12853, walk: _mod12864 };

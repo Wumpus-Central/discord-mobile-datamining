@@ -1,10 +1,13 @@
 // _runtime/metro/11084__.js
-import _mod11083 from "11083__.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11083.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "8b4b2bddd719de3088e180cf9d96ecec",
+  name: "RetryIcon",
+  type: "png",
+});

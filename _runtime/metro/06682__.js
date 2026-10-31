@@ -1,13 +1,13 @@
 // _runtime/metro/06682__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 500,
+  height: 500,
   scales: [1],
-  hash: "16b0b46c160f5dbee25bcf55b1de2e19",
-  name: "img_account_sync_mastodon_white",
+  hash: "57552675781bb78988e96bf2a1886940",
+  name: "img_account_sync_letterboxd_light",
   type: "svg",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/13310__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/parent_tools/images",
-  width: 240,
-  height: 150,
-  scales: [1, 2, 3],
-  hash: "c4741f3af333f4c01fe224682f3a547f",
-  name: "family_center_activity_checklist_image",
+  httpServerLocation: "/assets/modules/safety_hub/images",
+  width: 350,
+  height: 350,
+  scales: [1],
+  hash: "ebaa362a049339e084011170417c750e",
+  name: "video_light",
   type: "png",
 });

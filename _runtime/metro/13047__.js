@@ -1,131 +1,190 @@
 // _runtime/metro/13047__.js
-import spanTimeInputToSeconds from "../13009_spanTimeInputToSeconds.js";
-import _mod13048 from "13048__.js";
-import _mod13051 from "13051__.js";
-import __SENTRY_DEBUG__ from "13003__.js";
-import consoleSandbox from "13004__.js";
+import _mod13040 from "13040__.js";
+import _mod13046 from "13046__.js";
 
-export function createEventEnvelope(type, url, sdk, arg3) {
-  const sdkMetadataForEnvelopeHeader = _mod13048.getSdkMetadataForEnvelopeHeader(sdk);
-  let str = "event";
-  if (type.type) {
-    str = "event";
-    if ("replay_event" !== type.type) {
-      str = type.type;
-    }
-  }
-  if (sdk) {
-    sdk = sdk.sdk;
-  }
-  if (sdk) {
-    type.sdk = type.sdk || {};
-    let name = type.sdk.name;
-    if (!name) {
-      name = sdk.name;
-    }
-    type.sdk.name = name;
-    let version = type.sdk.version;
-    if (!version) {
-      version = sdk.version;
-    }
-    type.sdk.version = version;
-    let integrations = type.sdk.integrations;
-    if (!integrations) {
-      integrations = [];
-    }
-    const items = [];
-    const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
-    const tmp9 = sdk.integrations || [];
-    HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
-    type.sdk.integrations = items;
-    let packages = type.sdk.packages;
-    if (!packages) {
-      packages = [];
-    }
-    const items1 = [];
-    const arraySpreadResult5 = HermesBuiltin.arraySpread(packages, 0);
-    const tmp17 = sdk.packages || [];
-    HermesBuiltin.arraySpread(tmp17, arraySpreadResult5);
-    type.sdk.packages = items1;
-  }
-  const eventEnvelopeHeaders = _mod13048.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
-  delete tmp[tmp2];
-  const items2 = [{ type: str }, type];
-  const tmp3Result = _mod13048;
-  const items3 = [items2];
-  return _mod13048.createEnvelope(eventEnvelopeHeaders, items3);
-}
-export function createSessionEnvelope(toJSON, url, sdk, arg3) {
-  const sdkMetadataForEnvelopeHeader = _mod13048.getSdkMetadataForEnvelopeHeader(sdk);
-  const obj2 = { sent_at: null };
-  obj2.sent_at = new Date().toISOString();
-  let tmp4 = sdkMetadataForEnvelopeHeader;
-  if (sdkMetadataForEnvelopeHeader) {
-    const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
-    tmp4 = obj3;
-  }
-  const merged = Object.assign(tmp4);
-  let tmp6 = arg3 && url;
-  if (tmp6) {
-    const obj4 = { dsn: _mod13051.dsnToString(url) };
-    tmp6 = obj4;
-    const tmpResult = _mod13051;
-  }
-  const merged1 = Object.assign(tmp6);
-  if ("aggregates" in toJSON) {
-    const items = [{ type: "sessions" }, toJSON];
-    let items1 = items;
-  } else {
-    items1 = [{ type: "session" }, toJSON.toJSON()];
-  }
-  const date = new Date();
-  const items2 = [items1];
-  return _mod13048.createEnvelope(obj2, items2);
-}
-export function createSpanEnvelope(arg0, getDsn) {
-  const dynamicSamplingContextFromSpan = beforeSendSpan(13040).getDynamicSamplingContextFromSpan(arg0[0]);
-  let dsn = getDsn;
-  if (getDsn) {
-    dsn = getDsn.getDsn();
-  }
-  let tunnel = getDsn;
-  if (getDsn) {
-    tunnel = getDsn.getOptions().tunnel;
-  }
-  const obj = beforeSendSpan(13040);
-  const obj2 = { sent_at: new Date().toISOString() };
-  const tmp2 = beforeSendSpan;
-  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
-    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
-  })(dynamicSamplingContextFromSpan);
-  if (tmp7) {
-    const obj3 = { trace: dynamicSamplingContextFromSpan };
-    tmp7 = obj3;
-  }
-  const merged = Object.assign(tmp7);
-  let tmp9 = tunnel && dsn;
-  if (tmp9) {
-    const obj4 = { dsn: tmp2(13051).dsnToString(dsn) };
-    tmp9 = obj4;
-    const tmp2Result = tmp2(13051);
-  }
-  const merged1 = Object.assign(tmp9);
-  beforeSendSpan = getDsn;
-  if (getDsn) {
-    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
-  }
-  if (beforeSendSpan) {
-    const fn2 = (arg0) => {
-      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
-      if (!tmp3) {
-        spanTimeInputToSeconds.showSpanDropWarning();
-        const tmpResult = spanTimeInputToSeconds;
+require = arg1;
+const dependencyMap = arg6;
+function _htmlElementAsString(tagName, arr) {
+  let items = [];
+  if (tagName) {
+    if (tagName.tagName) {
+      if (_mod13040.GLOBAL_OBJ.HTMLElement) {
+        if (tagName instanceof globalThis.HTMLElement) {
+          if (tagName.dataset) {
+            const dataset = tagName.dataset;
+            if (tagName.dataset.sentryComponent) {
+              return dataset.sentryComponent;
+            } else if (dataset.sentryElement) {
+              return tagName.dataset.sentryElement;
+            }
+          }
+        }
       }
-      return tmp3;
-    };
-  } else {
-    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
+      arr = items.push(tagName.tagName.toLowerCase());
+      let mapped = null;
+      if (arr) {
+        mapped = null;
+        if (arr.length) {
+          const found = arr.filter((item) => tagName.getAttribute(item));
+          mapped = found.map((item) => {
+            items = [item, tagName.getAttribute(item)];
+            return items;
+          });
+        }
+      }
+      if (mapped) {
+        if (mapped.length) {
+          const item = mapped.forEach((item) => {
+            items.push("[" + item[0] + '="' + item[1] + '"]');
+          });
+        }
+        const items1 = ["aria-label", "type", "name", "title", "alt"];
+        const iter = items1[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp22 = nextResult;
+          let attr = tagName.getAttribute(nextResult);
+          if (attr) {
+            let _HermesInternal3 = HermesInternal;
+            let str8 = "[";
+            let str9 = '="';
+            let str10 = '"]';
+            let arr2 = items.push("[" + tmp22 + '="' + tmp24 + '"]');
+          }
+          continue;
+        }
+        return items.join("");
+      }
+      if (tagName.id) {
+        const _HermesInternal = HermesInternal;
+        items.push("#" + tagName.id);
+      }
+      if (tagName.className) {
+        if (tmpResult.isString(str3)) {
+          const parts = str3.split(/\s+/);
+          const tmp11 = parts[Symbol.iterator]();
+          while (tmp11 !== undefined) {
+            let _HermesInternal2 = HermesInternal;
+            let arr7 = items.push("." + tmp14);
+            continue;
+          }
+        }
+        tmpResult = _mod13046;
+      }
+    }
   }
-  arg0[Symbol.iterator]();
-  const date = new Date();
+  return "";
+}
+
+export function getComponentName(arg0) {
+  let parentNode = arg0;
+  let num = 0;
+  if (_mod13040.GLOBAL_OBJ.HTMLElement) {
+    while (parentNode) {
+      if (parentNode instanceof globalThis.HTMLElement) {
+        let dataset = parentNode.dataset;
+        if (parentNode.dataset.sentryComponent) {
+          return dataset.sentryComponent;
+        } else if (dataset.sentryElement) {
+          return parentNode.dataset.sentryElement;
+        }
+      }
+      parentNode = parentNode.parentNode;
+      num = num + 1;
+      if (num < 5) {
+        continue;
+      } else {
+        return null;
+      }
+    }
+    return null;
+  } else {
+    return null;
+  }
+}
+export function getDomElement(arg0) {
+  let element = null;
+  if (_mod13040.GLOBAL_OBJ.document) {
+    element = null;
+    if (_mod13040.GLOBAL_OBJ.document.querySelector) {
+      const _document = _mod13040.GLOBAL_OBJ.document;
+      element = _document.querySelector(arg0);
+    }
+  }
+  return element;
+}
+export function getLocationHref() {
+  try {
+    return _mod13040.GLOBAL_OBJ.document.location.href;
+  } catch (err) {
+    return "";
+  }
+}
+export function htmlTreeAsString(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (arg0) {
+    try {
+      let tmp = arg0;
+      const items = [];
+      let num2 = 0;
+      const _Array = Array;
+      let keyAttrs = obj;
+      if (!Array.isArray(obj)) {
+        keyAttrs = obj.keyAttrs;
+      }
+      const _Array2 = Array;
+      const isArray = Array.isArray(obj);
+      let num3 = !isArray;
+      if (!isArray) {
+        num3 = obj.maxStringLength;
+      }
+      if (!num3) {
+        num3 = 80;
+      }
+      if (tmp) {
+        let sum = tmp7 + 1;
+        if (+0 < 5) {
+          const tmp33 = _htmlElementAsString(tmp, tmp3);
+          let arr2 = tmp33;
+          if ("html" !== tmp33) {
+            if (sum <= 1) {
+              items.push(arr2);
+              num2 = num2 + arr2.length;
+              const parentNode = tmp.parentNode;
+              tmp = parentNode;
+              while (parentNode) {
+                let tmp19 = +sum;
+                sum = tmp19 + 1;
+                if (tmp19 >= 5) {
+                  break;
+                } else {
+                  let tmp23 = _htmlElementAsString(tmp, tmp3);
+                  arr2 = tmp23;
+                  if ("html" === tmp23) {
+                    break;
+                  } else {
+                    if (sum <= 1) {
+                      continue;
+                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
+                      break;
+                    }
+                    continue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const reversed = items.reverse();
+      return reversed.join(" > ");
+    } catch (err) {
+      return "<unknown>";
+    }
+  } else {
+    return "<unknown>";
+  }
 }

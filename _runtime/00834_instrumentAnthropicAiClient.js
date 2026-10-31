@@ -215,7 +215,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               }
                             } else {
                               try {
@@ -430,7 +430,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                               }
                                               let obj2 = str(_function[4]);
                                             }
-                                            return str(_function[9]).handleCallbackErrors(/* F133728 */ function() { ... }, /* F133729 */ function() { ... }, /* F133730 */ function() { ... }, /* F133731 */ function() { ... });
+                                            return str(_function[9]).handleCallbackErrors(/* F134139 */ function() { ... }, /* F134140 */ function() { ... }, /* F134141 */ function() { ... }, /* F134142 */ function() { ... });
                                           });
                                         }
                                       }
@@ -460,7 +460,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                                 const obj2 = { value, done: true };
                                                 return obj2;
                                               } else {
-                                                return { value: "HermesInternal", done: null };
+                                                return { value: "HermesInternal", done: "HermesInternal" };
                                               }
                                             } else {
                                               try {
@@ -661,7 +661,7 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                                           const tmp2Result5 = tmp2(startSpanManual[7]);
                                                           obj3.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
                                                           obj3.attributes = obj;
-                                                          return tmp2Result5.startSpan(obj3, /* F120166 */ function() { ... });
+                                                          return tmp2Result5.startSpan(obj3, /* F120539 */ function() { ... });
                                                         }
                                                       }
                                                       dependencyMap = arr;
@@ -679,14 +679,14 @@ export function instrumentAnthropicAiClient(arg0, arg1) {
                                                       obj4.attributes = obj;
                                                       if (BooleanResult) {
                                                         if (!tmp12) {
-                                                          closure_0 = _self(/* F138233 */ function() { ... });
-                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, /* F138234 */ function() { ... });
+                                                          closure_0 = _self(/* F138649 */ function() { ... });
+                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, /* F138650 */ function() { ... });
                                                           const tmp2Result8 = tmp2(startSpanManual[7]);
                                                         }
                                                       }
                                                       tmp2 = tmp2(startSpanManual[7]);
                                                       startSpanManual = tmp2.startSpanManual;
-                                                      startSpanManualResult = startSpanManual(obj4, /* F133727 */ function() { ... });
+                                                      startSpanManualResult = startSpanManual(obj4, /* F134138 */ function() { ... });
                                                       const tmp2Result7 = tmp2(startSpanManual[2]);
                                                     }
                                                   }

@@ -1,30 +1,11 @@
 // _runtime/metro/16154__.js
-import _mod17 from "00017__.js";
-import replaceByteInByteSequence from "../16155_replaceByteInByteSequence.js";
+import _mod16135 from "16135__.js";
+import _mod16155 from "16155__.js";
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
+export default (arg0, arg1) => {
+  let tmp4;
+  if (!_mod16135(arg0[arg1])) {
+    tmp4 = _mod16155(tmp);
   }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
+  return tmp4;
 };
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
-
-export const URL = replaceByteInByteSequence.URL;

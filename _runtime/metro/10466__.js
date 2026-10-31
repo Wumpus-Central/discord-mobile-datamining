@@ -1,12 +1,12 @@
 // _runtime/metro/10466__.js
-import _mod10463 from "10463__.js";
+import _mod10458 from "10458__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKTimeUnitAgoFormatParser = require;
+const RUWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKTimeUnitAgoFormatParser {
+class RUWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitAgoFormatParser);
+    tmp = c2(this, RUWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitAgoFormatParser);
+    obj = closure_4(RUWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,11 +45,15 @@ class UKTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitAgoFormatParser, _mod10463.AbstractParserWithLeftBoundaryChecking);
+_inherits(RUWeekdayParser, _mod10458.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
-    return "(" + UKTimeUnitAgoFormatParser(10461).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+    return (
+      "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:(\u044D\u0442\u0443|\u044D\u0442\u043E\u0442|\u043F\u0440\u043E\u0448\u043B\u044B\u0439|\u043F\u0440\u043E\u0448\u043B\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E)\\s*)?(" +
+      RUWeekdayParser(10327).matchAnyPattern(RUWeekdayParser(10456).WEEKDAY_DICTIONARY) +
+      ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*\u043D\u0430\\s*(\u044D\u0442\u043E\u0439|\u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439)\\s*\u043D\u0435\u0434\u0435\u043B\u0435)?"
+    );
   },
 };
 const items = [
@@ -57,14 +61,54 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = UKTimeUnitAgoFormatParser(10461).parseDuration(arg1[1]);
-      const ParsingComponents = UKTimeUnitAgoFormatParser(10310).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
+      const formatted = arg1[2].toLowerCase();
+      let str2 = arg1[1];
+      if (!str2) {
+        str2 = arg1[3];
+      }
+      if (!str2) {
+        str2 = "";
+      }
+      const formatted1 = str2.toLowerCase();
+      let str3 = "last";
+      if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0439" != formatted1) {
+        str3 = "last";
+        if ("\u043F\u0440\u043E\u0448\u043B\u0443\u044E" != formatted1) {
+          str3 = "last";
+          if ("\u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted1) {
+            str3 = "next";
+            if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439" != formatted1) {
+              str3 = "next";
+              if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E" != formatted1) {
+                str3 = "next";
+                if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted1) {
+                  str3 = "next";
+                  if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E" != formatted1) {
+                    let tmp5 = "\u044D\u0442\u043E\u0442" != formatted1;
+                    if (tmp5) {
+                      tmp5 = "\u044D\u0442\u0443" != formatted1;
+                    }
+                    if (tmp5) {
+                      tmp5 = "\u044D\u0442\u043E\u0439" != formatted1;
+                    }
+                    str3 = null;
+                    if (!tmp5) {
+                      str3 = "this";
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      return RUWeekdayParser(10354).createParsingComponentsAtWeekday(
         reference.reference,
-        UKTimeUnitAgoFormatParser(10309).reverseDuration(UKTimeUnitAgoFormatParser(10461).parseDuration(arg1[1])),
+        RUWeekdayParser(10456).WEEKDAY_DICTIONARY[formatted],
+        str3,
       );
     },
   },
 ];
 
-export default _createClass(UKTimeUnitAgoFormatParser, items);
+export default _createClass(RUWeekdayParser, items);

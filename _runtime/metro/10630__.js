@@ -1,60 +1,27 @@
 // _runtime/metro/10630__.js
+import _mod10631 from "10631__.js";
+import _mod10634 from "10634__.js";
+import _mod10638 from "10638__.js";
+import _mod10639 from "10639__.js";
+import CarouselLayout from "../10640_CarouselLayout.js";
 import noop from "00019__.js";
 
-export function useAutoPlay(autoPlay) {
-  autoPlay = autoPlay.autoPlay;
-  closure_0 = tmp;
-  const autoPlayReverse = autoPlay.autoPlayReverse;
-  closure_1 = tmp2;
-  const autoPlayInterval = autoPlay.autoPlayInterval;
-  const prev = iter.prev;
-  const next = iter.next;
-  noop.useRef();
-  noop.useRef(!(undefined !== autoPlay && autoPlay));
-  const items = [undefined !== autoPlayReverse && autoPlayReverse, autoPlayInterval, prev, next];
-  const callback = noop.useCallback(() => {
-    if (!ref2.current) {
-      if (ref.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref.current);
-      }
-      const _setTimeout = setTimeout;
-      ref.current = setTimeout(() => {
-        if (closure_1_1) {
-          const obj2 = { onFinished };
-          prev(obj2);
-        } else {
-          const obj = { onFinished };
-          next(obj);
-        }
-      }, autoPlayInterval);
-    }
-  }, items);
-  const items1 = [undefined !== autoPlay && autoPlay];
-  const pause = noop.useCallback(() => {
-    if (closure_0) {
-      if (ref.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-      }
-      closure_6.current = true;
-    }
-  }, items1);
-  const items2 = [callback, undefined !== autoPlay && autoPlay];
-  const start = noop.useCallback(() => {
-    if (closure_0) {
-      closure_6.current = false;
-      callback();
-    }
-  }, items2);
-  const items3 = [pause, start, undefined !== autoPlay && autoPlay];
-  const effect = noop.useEffect(() => {
-    if (closure_0) {
-      start();
-    } else {
-      pause();
-    }
-    return pause;
-  }, items3);
-  return { pause, start };
-}
+require = fn;
+const jsx = fn(21).jsx;
+
+export default noop.forwardRef((defaultIndex, ref) => {
+  const initProps = _mod10631.useInitProps(defaultIndex);
+  const commonVariables = _mod10634.useCommonVariables(initProps);
+  const obj4 = {};
+  const merged = Object.assign(initProps);
+  obj4.dataLength = initProps.dataLength;
+  const propsErrorBoundary = _mod10638.usePropsErrorBoundary(obj4);
+  const obj5 = {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+  };
+  return jsx(_mod10639.GlobalStateProvider, {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+  });
+});

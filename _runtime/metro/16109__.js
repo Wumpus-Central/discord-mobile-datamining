@@ -1,19 +1,23 @@
 // _runtime/metro/16109__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+
+export const collations = [
+  "big5han",
+  "compat",
+  "dict",
+  "direct",
+  "ducet",
+  "emoji",
+  "eor",
+  "gb2312",
+  "phonebk",
+  "phonetic",
+  "pinyin",
+  "reformed",
+  "search",
+  "searchjl",
+  "standard",
+  "stroke",
+  "trad",
+  "unihan",
+  "zhuyin",
+];

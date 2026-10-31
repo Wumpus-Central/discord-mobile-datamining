@@ -1,13 +1,13 @@
 // _runtime/metro/13784__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "340e4913b9379af519610c863fe359dc",
-  name: "ic_arrow_forward_24px",
+  hash: "6ce1232e9332fee016b7141f4a140af2",
+  name: "ThreadPlusIcon",
   type: "png",
 });

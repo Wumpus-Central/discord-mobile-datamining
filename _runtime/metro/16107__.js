@@ -1,4 +1,23 @@
 // _runtime/metro/16107__.js
-import _mod16093 from "16093__.js";
 
-export default (arg0) => Object(_mod16093(arg0));
+export const calendars = [
+  "buddhist",
+  "chinese",
+  "coptic",
+  "dangi",
+  "ethioaa",
+  "ethiopic",
+  "gregory",
+  "hebrew",
+  "indian",
+  "islamic",
+  "islamic-civil",
+  "islamic-rgsa",
+  "islamic-tbla",
+  "islamic-umalqura",
+  "islamicc",
+  "iso8601",
+  "japanese",
+  "persian",
+  "roc",
+];

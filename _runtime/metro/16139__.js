@@ -1,11 +1,16 @@
 // _runtime/metro/16139__.js
-import _mod16086 from "16086__.js";
-import _mod16120 from "16120__.js";
-import _mod16137 from "16137__.js";
+import _mod16140 from "16140__.js";
 
-export default _mod16086
-  ? (arg0, arg1, arg2) => _mod16137.f(arg0, arg1, _mod16120(1, arg2))
-  : (arg0, arg1, arg2) => {
-      arg0[arg1] = arg2;
-      return arg0;
-    };
+export default (arg0, arg1) => {
+  let tmp3 = _mod16140[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod16140[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod16140;
+  }
+  return tmp3;
+};

@@ -1,13 +1,13 @@
 // _runtime/metro/11934__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons/voice_calls",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "06839429466f04b07ee5c7156e6fbf8c",
-  name: "MicrophoneIcon",
+  hash: "c9f854c83b9079fe0ab040df65e3caf2",
+  name: "nav_header_disconnect",
   type: "png",
 });

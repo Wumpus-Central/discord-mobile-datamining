@@ -1,13 +1,13 @@
 // _runtime/metro/19267__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/sidebar/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "288b36dcd0b5f7e0f151e7250c6cbc9d",
-  name: "MobilePhoneDenyIcon",
+  scales: [2, 3, 4],
+  hash: "5be7f14768f9acc824d9e93779c75d9c",
+  name: "icon-call",
   type: "png",
 });

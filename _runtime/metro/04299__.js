@@ -1,12 +1,9 @@
 // _runtime/metro/04299__.js
-import 02068__ from "02068__.js";
+let global = {};
 
-if (!module_2068) {
-  const obj2 = { default: module_2068 };
-  let obj = obj2;
-} else {
-  obj = module_2068;
+export function getDefaultOptions() {
+  return global;
 }
-
-export default { date: obj.default({ formats: { full: "EEEE, d. MMMM yyyy", long: "d. MMMM yyyy", medium: "d. M. yyyy", short: "dd.MM.yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'v' {{time}}", long: "{{date}} 'v' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
-export default exports.default;
+export function setDefaultOptions(arg0) {
+  global = arg0;
+}

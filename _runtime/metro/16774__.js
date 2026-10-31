@@ -1,13 +1,13 @@
 // _runtime/metro/16774__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 185,
+  height: 125,
   scales: [1, 2, 3],
-  hash: "cb49d7446dbcac5ce6ba16b6a9b83961",
-  name: "Small",
+  hash: "fa358a5ff3d1f49a00fc1180e0e601e5",
+  name: "family_center_activity_banner_image_parent",
   type: "png",
 });

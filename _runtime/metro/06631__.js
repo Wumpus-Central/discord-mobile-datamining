@@ -1,13 +1,13 @@
 // _runtime/metro/06631__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 228,
-  height: 60,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "5297c54e8d9a10bee3a01f60b91ba3ae",
-  name: "img_account_sync_samsung_white",
+  hash: "cfcfafbb4f4daed7fd4c8d1f431ce58f",
+  name: "img_account_sync_xbox_light",
   type: "png",
 });

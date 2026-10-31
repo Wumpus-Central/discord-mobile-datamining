@@ -1,29 +1,67 @@
 // _runtime/metro/01847__.js
+import _mod1842 from "01842__.js";
 import _slicedToArray from "00032__.js";
 
-const require = fn;
+require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useState: closure_4 } = noop);
-const Dimensions = fn(17).Dimensions;
-const size = Dimensions.get("window");
-let global = { width: size.width, height: size.height };
-let WindowDimensionsEvents = fn(1641).WindowDimensionsEvents;
-WindowDimensionsEvents.addListener("windowDidResize", (arg0) => {
-  global = arg0;
-});
+let closure_5 = ["keyboardWillShow", "keyboardDidHide"];
+function getLatestState() {}
+function defaultSelector(arg0) {
+  return arg0;
+}
 
-export () => {
-  const tmp = _slicedToArray(closure_4(global), 2);
-  closure_0 = tmp[1];
+export function useKeyboardState(arg0) {
+  let tmp = arg0;
+  if (arg0 === undefined) {
+    tmp = defaultSelector;
+  }
+  closure_0 = tmp;
+  const tmp2 = _slicedToArray(
+    closure_4(() => {
+      if (typeof getLatestState === "function") {
+        const obj = {};
+        const KeyboardController = _mod1842.KeyboardController;
+        const merged = Object.assign(KeyboardController.state());
+        const KeyboardController2 = _mod1842.KeyboardController;
+        obj.isVisible = KeyboardController2.isVisible();
+        return tmp(obj);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }),
+    2,
+  );
+  dependencyMap = tmp2[1];
   closure_3(() => {
-    const WindowDimensionsEvents = closure_0(dependencyMap[3]).WindowDimensionsEvents;
-    closure_0 = WindowDimensionsEvents.addListener("windowDidResize", (arg0) => {
-      closure_0(arg0);
+    closure_0 = closure_1_5.map((item) => {
+      const KeyboardEvents = closure_0(1640).KeyboardEvents;
+      return KeyboardEvents.addListener(item, () => {
+        if (typeof closure_2_6 === "function") {
+          const obj = {};
+          const KeyboardController = closure_0(1842).KeyboardController;
+          const merged = Object.assign(KeyboardController.state());
+          const KeyboardController2 = closure_0(1842).KeyboardController;
+          obj.isVisible = KeyboardController2.isVisible();
+          return tmp(tmp2(obj));
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      });
     });
-    closure_0(global);
-    return () => {
-      closure_0.remove();
-    };
+    if (typeof getLatestState === "function") {
+      let obj = {};
+      let KeyboardController = closure_0(1842).KeyboardController;
+      let merged = Object.assign(KeyboardController.state());
+      let KeyboardController2 = closure_0(1842).KeyboardController;
+      obj.isVisible = KeyboardController2.isVisible();
+      tmp(tmp2(obj));
+      return () => {
+        const item = closure_0.forEach((remove) => remove.remove());
+      };
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
   }, []);
-  return tmp[0];
+  return tmp2[0];
 }

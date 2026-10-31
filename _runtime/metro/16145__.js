@@ -1,12 +1,11 @@
 // _runtime/metro/16145__.js
-import _mod16083 from "16083__.js";
-import all from "16109__.js";
+import _mod16124 from "16124__.js";
 
-let _moduleResult = all(_mod16083.WeakMap);
-if (_moduleResult) {
+const tmp = _mod16124.navigator && _mod16124.navigator.userAgent;
+let str = "";
+if (tmp) {
   const _String = String;
-  _moduleResult = /native code/.test(String(_mod16083.WeakMap));
-  const obj = /native code/;
+  str = String(tmp);
 }
 
-export default _moduleResult;
+export default str;

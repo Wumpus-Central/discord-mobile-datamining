@@ -1,11 +1,14 @@
 // _runtime/metro/10427__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10325 from "10325__.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import repeatedTimeunitPattern from "../10327_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10334_AbstractParserWithWordBoundaryChecking.js";
+import _mod10421 from "10421__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const NLCasualYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,31 +27,20 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ZHHantMergeDateRangeRefiner {
+const regExp = new RegExp(
+  "([0-9]{4})[\\.\\/\\s](?:(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10421.MONTH_DICTIONARY) +
+    ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
+  "i",
+);
+class NLCasualYearMonthDayParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ZHHantMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(ZHHantMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, NLCasualYearMonthDayParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLCasualYearMonthDayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -61,14 +53,39 @@ class ZHHantMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ZHHantMergeDateRangeRefiner;
-_inherits(ZHHantMergeDateRangeRefiner, fn(_mod10325).default);
+_inherits(NLCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(至|到|\-|\~|～|－|ー)\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(arg0, arg1) {
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(arg1[3]);
+      } else {
+        parsed = NLCasualYearMonthDayParser(10421).MONTH_DICTIONARY[str.toLowerCase(str)];
+      }
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          const _parseInt2 = parseInt;
+          const date = { day: null, month: null, year: null };
+          const _parseInt3 = parseInt;
+          const parsed1 = parseInt(arg1[1]);
+          date.day = parseInt(arg1[4]);
+          date.month = parsed;
+          date.year = parsed1;
+          return date;
+        }
+      }
+      return null;
+    },
+  },
+];
 
-export default _createClass(ZHHantMergeDateRangeRefiner, items);
+export default _createClass(NLCasualYearMonthDayParser, items);

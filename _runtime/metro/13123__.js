@@ -1,89 +1,43 @@
 // _runtime/metro/13123__.js
-import _readOnlyError from "00377__readOnlyError.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
 
-let _classCallCheck = _classCallCheck_mod;
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
+export function parseCookie(arr) {
+  const obj = {};
+  let num = 0;
+  if (0 < arr.length) {
+    let index = arr.indexOf("=", num);
+    while (-1 !== index) {
+      let length = arr.indexOf(";", num);
+      if (-1 === length) {
+        length = arr.length;
+      } else if (length < index) {
+        let sum = arr.lastIndexOf(";", index - 1) + 1;
+        num = sum;
+        if (sum >= arr.length) {
+          break;
+        }
+      }
+      let str = arr.slice(num, index);
+      let trimmed = str.trim();
+      if (undefined === obj[trimmed]) {
+        let str2 = arr.slice(index + 1, length);
+        let trimmed1 = str2.trim();
+        index = trimmed1;
+        if (34 === trimmed1.charCodeAt(0)) {
+          index = trimmed1.slice(1, -1);
+        }
+        try {
+          let decodeURIComponentResult = index;
+          if (-1 !== index.indexOf("%")) {
+            let _decodeURIComponent = decodeURIComponent;
+            decodeURIComponentResult = decodeURIComponent(index);
+          }
+          obj[trimmed] = decodeURIComponentResult;
+        } catch (err) {
+          obj[trimmed] = index;
+        }
+      }
+      let sum1 = length + 1;
+    }
   }
+  return obj;
 }
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    },
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
-      }
-    },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
-    },
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    },
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    },
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    },
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    },
-  },
-];
-
-export const LRUMap = _createClass(LRUMap, items);

@@ -1,5 +1,5 @@
 // _runtime/metro/08615__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d91139b8e746209ecc3e711216b338c8",
-  name: "ChatIcon",
+  hash: "38f7d2f2d427a5f45efdf121101c72d6",
+  name: "VoiceLockIcon",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/09218__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0d58e61e562c5031f46b78cbe36725ec",
-  name: "HeadphonesDenyIcon",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "084857b96e411731cfaceba379b8db2a",
+  name: "ic_group",
   type: "png",
 });

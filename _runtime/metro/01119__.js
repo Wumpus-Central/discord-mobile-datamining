@@ -1,11 +1,5 @@
 // _runtime/metro/01119__.js
-import registerAsset from "01120__.js";
+import _mod84 from "00084__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/aW50bA==",
-  scales: [1],
-  hash: "d26c407d984ba4c5b6a5e352dcebf1c7",
-  name: "bg.messages.d26c407d984ba4c5b6a5e352dcebf1c7.compiled.messages",
-  type: "jsona",
-});
+export const registerAsset = _mod84.registerAsset;
+export const getAssetByID = _mod84.getAssetByID;

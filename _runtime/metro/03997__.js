@@ -1,11 +1,11 @@
 // _runtime/metro/03997__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zdGFnZV9jaGFubmVscw==",
+  httpServerLocation: "/assets/modules/voice_channel_apps",
   scales: [1],
-  hash: "3695a2ae72007107a16796679e73aea0",
-  name: "cs.messages.3695a2ae72007107a16796679e73aea0.compiled.messages",
+  hash: "ca7c02c6161e21c214b1c1c8fec19b73",
+  name: "VoiceChannelApps.compiled.messages",
   type: "jsona",
 });

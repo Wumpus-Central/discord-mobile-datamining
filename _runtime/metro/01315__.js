@@ -1,3 +1,3 @@
 // _runtime/metro/01315__.js
 
-export default SyntaxError;
+export default URIError;

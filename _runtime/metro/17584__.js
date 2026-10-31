@@ -1,11 +1,13 @@
 // _runtime/metro/17584__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/intl/messages",
-  scales: [1],
-  hash: "10b2c11f96663a832c7bc6992f4ab3f5",
-  name: "SecondTest.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "30f38e9cc06345b39ea1b73343d04289",
+  name: "CarIcon",
+  type: "png",
 });

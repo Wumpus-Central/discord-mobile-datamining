@@ -1,13 +1,13 @@
 // _runtime/metro/10148__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/stream_feedback",
-  width: 72,
-  height: 72,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 40,
+  height: 40,
   scales: [1, 2, 3],
-  hash: "a961e7716a9e5270654c872f10256829",
-  name: "feedback-modal-neutral",
+  hash: "55227139f1f67d25c138599e308898b1",
+  name: "ic_upload_image_40px",
   type: "png",
 });

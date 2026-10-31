@@ -1,13 +1,13 @@
 // _runtime/metro/17264__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hexagon_campaign/images",
-  width: 32,
-  height: 24,
-  scales: [2, 3, 4],
-  hash: "c20f5cd14c5f693d97dedff22cf6001d",
-  name: "hexagon_campaign_font_logo",
+  httpServerLocation: "/assets/images/native/main_tabs",
+  width: 216,
+  height: 216,
+  scales: [1],
+  hash: "e8cc96dfc04f2226c8870fdf46cc16af",
+  name: "ExampleVoiceChatActivity",
   type: "png",
 });

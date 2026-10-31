@@ -1,5 +1,5 @@
 // _runtime/metro/07088__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "737159bf8222c1bab03c6bbf25897f2f",
-  name: "CircleXIcon-primary",
+  hash: "db11ea9da81d79144310eac53428fbe9",
+  name: "CircleErrorIcon-primary",
   type: "png",
 });

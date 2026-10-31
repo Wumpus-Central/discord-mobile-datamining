@@ -1,26 +1,27 @@
 // _runtime/metro/08283__.js
-import findOffsets from "../08280_findOffsets.js";
+import _modDef8282 from "08282__.js";
+import _modDef8284 from "08284__.js";
 
-require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  isAvifFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          parseBoxResult = "avif" === parseBoxResult.majorBrand;
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
-    } else {
-      return false;
+  isTiffFile(byteLength) {
+    let tmp = byteLength;
+    if (tmp) {
+      tmp = byteLength.byteLength >= 4;
     }
+    if (tmp) {
+      const uint16 = byteLength.getUint16(0);
+      tmp = byteLength.getUint16(2, uint16 === _modDef8284.LITTLE_ENDIAN) === 42;
+    }
+    return tmp;
   },
-  findAvifOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
+  findTiffOffsets() {
+    if (_modDef8282.USE_EXIF) {
+      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
+    } else {
+      return {};
+    }
   },
 };

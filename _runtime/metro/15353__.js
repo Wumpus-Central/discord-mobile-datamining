@@ -1,13 +1,13 @@
 // _runtime/metro/15353__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored",
-  width: 48,
-  height: 48,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 134,
+  height: 56,
   scales: [2, 3],
-  hash: "61da0f232b2cca239e867e8e10712e2b",
-  name: "tier_0_48px_dark",
+  hash: "3d54a60f579be5dc72492b0eeac44a2b",
+  name: "img_discord_nitro_logo_centered_light",
   type: "png",
 });

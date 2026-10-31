@@ -1,73 +1,37 @@
 // _runtime/metro/05974__.js
-import RNSLog2 from "../05966_RNSLog.js";
+import _mod5972 from "05972__.js";
 import noop from "00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
 
-export function useTabsScreen(componentNodeRef) {
-  componentNodeRef = componentNodeRef.componentNodeRef;
-  const onDidAppear = componentNodeRef.onDidAppear;
-  const onDidDisappear = componentNodeRef.onDidDisappear;
-  const onWillAppear = componentNodeRef.onWillAppear;
-  const onWillDisappear = componentNodeRef.onWillDisappear;
-  const ref = onDidDisappear.useRef(-1);
-  const effect = onDidDisappear.useEffect(() => {
-    if (null != componentNodeRef.current) {
-      let num2 = findNodeHandle(tmp.current);
-      if (num2 == null) {
-        num2 = -1;
+export function useRenderDebugInfo(arg0) {
+  _require = arg0;
+  const ref = ref1.useRef(null);
+  ref1 = ref1.useRef(-1);
+  closure_3 = ref1.useEffectEvent((arg0) => {
+    const RNSLog = _mod5972.RNSLog;
+    RNSLog.log("" + closure_0 + " [" + ref1.current + "] " + arg0);
+  });
+  const effect = ref1.useEffect(() => {
+    if (null != ref.current) {
+      let num = findNodeHandle(tmp.current);
+      if (num == null) {
+        num = -1;
       }
-      ref.current = num2;
-    } else {
-      ref.current = -1;
+      ref1.current = num;
+      if (-1 === ref1.current) {
+        closure_3("failed to find node handle");
+      }
     }
+    closure_3("mounted");
+    return () => {
+      closure_1_3("unmounted");
+    };
   }, []);
-  const items = [onWillAppear];
-  const items1 = [onDidAppear];
-  const callback = onDidDisappear.useCallback((arg0) => {
-    const RNSLog = RNSLog2.RNSLog;
-    RNSLog.log("TabsScreen [" + ref.current + "] onWillAppear received");
-    if (onWillAppear != null) {
-      tmp2(arg0);
-    }
-  }, items);
-  const items2 = [onWillDisappear];
-  const callback1 = onDidDisappear.useCallback((arg0) => {
-    const RNSLog = RNSLog2.RNSLog;
-    RNSLog.log("TabsScreen [" + ref.current + "] onDidAppear received");
-    if (onDidAppear != null) {
-      tmp2(arg0);
-    }
-  }, items1);
-  const items3 = [onDidDisappear];
-  const callback2 = onDidDisappear.useCallback((arg0) => {
-    const RNSLog = RNSLog2.RNSLog;
-    RNSLog.log("TabsScreen [" + ref.current + "] onWillDisappear received");
-    if (onWillDisappear != null) {
-      tmp2(arg0);
-    }
-  }, items2);
-  const callback3 = onDidDisappear.useCallback((arg0) => {
-    const RNSLog = RNSLog2.RNSLog;
-    RNSLog.log("TabsScreen [" + ref.current + "] onDidDisappear received");
-    if (onDidDisappear != null) {
-      tmp2(arg0);
-    }
-  }, items3);
-  let RNSLog = componentNodeRef(onDidAppear[2]).RNSLog;
-  let num = ref.current;
-  if (num == null) {
-    num = -1;
-  }
-  RNSLog.log("TabsScreen [" + num + "] render; screenKey: " + componentNodeRef.screenKey);
-  return {
-    componentNodeRef,
-    lifecycleCallbacks: {
-      onWillAppear: callback,
-      onDidAppear: callback1,
-      onWillDisappear: callback2,
-      onDidDisappear: callback3,
-    },
-  };
+  let RNSLog = require("05972__.js").RNSLog;
+  RNSLog.log("" + arg0 + " [" + ref1.current + "] " + "rendered");
+  return ref;
 }

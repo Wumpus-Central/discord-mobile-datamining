@@ -1,312 +1,210 @@
 // _runtime/metro/13063__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod13059 from "13059__.js";
-import _slicedToArray from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
-import __SENTRY_DEBUG__ from "13003__.js";
-import dateTimestampInSeconds from "13018__.js";
 
-const ServerRuntimeClient = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-_possibleConstructorReturn;
-class ServerRuntimeClient {
+const SyncPromise = require;
+const obj = { PENDING: 0 };
+obj[0] = "PENDING";
+obj.RESOLVED = 1;
+obj[1] = "RESOLVED";
+obj.REJECTED = 2;
+obj[2] = "REJECTED";
+class SyncPromise {
   constructor(arg0) {
     self = this;
-    tmp = closure_3(this, ServerRuntimeClient);
-    obj = closure_0(closure_1[9]);
-    result = obj.registerSpanErrorInstrumentation();
-    items = [];
-    items[0] = global;
-    tmp3 = hasOwnProperty;
-    obj2 = hasOwnProperty(ServerRuntimeClient);
-    tmp4 = closure_4;
-    if (closure_7()) {
-      tmp6 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj2, items, tmp3(self).constructor);
+    tmp = SyncPromise;
+    tmp2 = closure_3(this, SyncPromise);
+    __init = SyncPromise.prototype.__init;
+    call = __init.call;
+    if (typeof call === "unknown") {
+      __initResult = __init();
     } else {
-      constructResult = obj2.apply(self, items);
+      callResult = call(self);
     }
-    return tmp4(self, constructResult);
+    __init2 = tmp.prototype.__init2;
+    call2 = __init2.call;
+    if (typeof call2 === "unknown") {
+      __init2Result = __init2();
+    } else {
+      call2Result = call2(self);
+    }
+    __init3 = tmp.prototype.__init3;
+    call3 = __init3.call;
+    if (typeof call3 === "unknown") {
+      __init3Result = __init3();
+    } else {
+      call3Result = call3(self);
+    }
+    __init4 = tmp.prototype.__init4;
+    call4 = __init4.call;
+    if (typeof call4 === "unknown") {
+      __init4 = __init4();
+    } else {
+      call4Result = call4(self);
+    }
+    self._state = c2.PENDING;
+    self._handlers = [];
+    return;
   }
 }
-_inherits(ServerRuntimeClient, _mod13059.BaseClient);
 const entry = {
-  key: "eventFromException",
-  value: function eventFromException(arg0, arg1) {
-    const result = ServerRuntimeClient(13064).eventFromUnknownInput(this, this._options.stackParser, arg0, arg1);
-    result.level = "error";
-    const obj = ServerRuntimeClient(13064);
-    return ServerRuntimeClient(13028).resolvedSyncPromise(result);
+  key: "then",
+  value: function then(arg0, arg1) {
+    const self = this;
+    closure_1 = arg0;
+    closure_0 = arg1;
+    SyncPromise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const _handlers = self._handlers;
+      const items = [
+        false,
+        (arg0) => {
+          if (closure_1) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_0(arg0);
+          }
+        },
+        (arg0) => {
+          if (closure_0) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_1(arg0);
+          }
+        },
+      ];
+      _handlers.push(items);
+      self._executeHandlers();
+    });
+    return Object.create(SyncPromise.prototype);
   },
 };
 let items = [
   entry,
   {
-    key: "eventFromMessage",
-    value: function eventFromMessage(arg0) {
-      let str = arg1;
-      if (arg1 === undefined) {
-        str = "info";
-      }
-      const obj = ServerRuntimeClient(13028);
-      return obj.resolvedSyncPromise(
-        ServerRuntimeClient(13064).eventFromMessage(
-          this._options.stackParser,
-          arg0,
-          str,
-          arg2,
-          this._options.attachStacktrace,
-        ),
-      );
+    key: "catch",
+    value: function _catch(arg0) {
+      return this.then((result) => result, arg0);
     },
   },
   {
-    key: "captureException",
-    value: function captureException(arg0, arg1, arg2) {
+    key: "finally",
+    value: function _finally(arg0) {
       const self = this;
-      if (this._options.autoSessionTracking) {
-        if (self._sessionFlusher) {
-          const isolationScope = ServerRuntimeClient(13031).getIsolationScope();
-          const requestSession = isolationScope.getRequestSession();
-          let tmp4 = requestSession;
-          if (requestSession) {
-            tmp4 = "ok" === requestSession.status;
-          }
-          if (tmp4) {
-            requestSession.status = "errored";
-          }
-          const obj = ServerRuntimeClient(13031);
-        }
-      }
-      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0, arg1, arg2];
-      return fn(items);
-    },
-  },
-  {
-    key: "captureEvent",
-    value: function captureEvent(type, arg1, arg2) {
-      const self = this;
-      if (this._options.autoSessionTracking) {
-        if (self._sessionFlusher) {
-          if ("exception" === tmp) {
-            if (type.exception) {
-              if (type.exception.values) {
-                if (type.exception.values.length > 0) {
-                  const isolationScope = ServerRuntimeClient(13031).getIsolationScope();
-                  const requestSession = isolationScope.getRequestSession();
-                  let tmp5 = requestSession;
-                  if (requestSession) {
-                    tmp5 = "ok" === requestSession.status;
-                  }
-                  if (tmp5) {
-                    requestSession.status = "errored";
-                  }
-                  const obj = ServerRuntimeClient(13031);
-                }
+      closure_0 = arg0;
+      SyncPromise((arg0, arg1) => {
+        closure_0 = arg0;
+        _self = arg1;
+        return _self
+          .then(
+            (result) => {
+              c3 = false;
+              closure_2 = result;
+              if (closure_0) {
+                tmp();
               }
+            },
+            (arg0) => {
+              c3 = true;
+              closure_2 = arg0;
+              if (closure_0) {
+                tmp();
+              }
+            },
+          )
+          .then(() => {
+            if (c3) {
+              closure_1(closure_2);
+            } else {
+              closure_0(closure_2);
             }
-          }
-          tmp = type.type || "exception";
-        }
-      }
-      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [type, arg1, arg2];
-      return fn(items);
+          });
+      });
+      return Object.create(SyncPromise.prototype);
     },
   },
   {
-    key: "close",
-    value: function close(arg0) {
+    key: "__init",
+    value: function __init() {
       const self = this;
-      if (this._sessionFlusher) {
-        const _sessionFlusher = self._sessionFlusher;
-        _sessionFlusher.close();
-      }
-      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "close", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
+      this._resolve = (arg0) => {
+        self._setResult(obj.RESOLVED, arg0);
+      };
     },
   },
   {
-    key: "initSessionFlusher",
-    value: function initSessionFlusher() {
+    key: "__init2",
+    value: function __init2() {
       const self = this;
-      const release = this._options.release;
-      if (release) {
-        const obj = { release, environment: tmp };
-        const sessionFlusher = new ServerRuntimeClient(13057).SessionFlusher(self, obj);
-        self._sessionFlusher = sessionFlusher;
-      } else if (ServerRuntimeClient(13032).DEBUG_BUILD) {
-        const logger = ServerRuntimeClient(13004).logger;
-        logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
-      }
+      this._reject = (arg0) => {
+        self._setResult(obj.REJECTED, arg0);
+      };
     },
   },
   {
-    key: "captureCheckIn",
-    value: function captureCheckIn(checkInId, arg1, arg2) {
-      if ("checkInId" in checkInId) {
-        if (checkInId.checkInId) {
-          checkInId = checkInId.checkInId;
-        }
-        const self = this;
-        if (this._isEnabled()) {
-          const options = self.getOptions();
-          const tunnel = options.tunnel;
-          const obj4 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
-          ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
-          ({ release: obj2.release, environment: obj2.environment } = options);
-          if ("duration" in checkInId) {
-            obj4.duration = checkInId.duration;
-          }
-          if (arg1) {
-            ({
-              schedule: obj3.schedule,
-              checkinMargin: obj3.checkin_margin,
-              maxRuntime: obj3.max_runtime,
-              timezone: obj3.timezone,
-              failureIssueThreshold: obj3.failure_issue_threshold,
-              recoveryThreshold: obj3.recovery_threshold,
-            } = arg1);
-            obj4.monitor_config = {
-              schedule: null,
-              checkin_margin: null,
-              max_runtime: null,
-              timezone: null,
-              failure_issue_threshold: null,
-              recovery_threshold: null,
-            };
-            const obj8 = {
-              schedule: null,
-              checkin_margin: null,
-              max_runtime: null,
-              timezone: null,
-              failure_issue_threshold: null,
-              recovery_threshold: null,
-            };
-          }
-          [tmp9, tmp10] = self._getTraceInfoFromScope(arg2);
-          if (tmp10) {
-            const obj9 = { trace: tmp10 };
-            obj4.contexts = obj9;
-          }
-          const obj5 = ServerRuntimeClient(13065);
-          const sdkMetadata = self.getSdkMetadata();
-          const checkInEnvelope = obj5.createCheckInEnvelope(obj4, tmp9, sdkMetadata, tunnel, self.getDsn());
-          if (ServerRuntimeClient(13032).DEBUG_BUILD) {
-            const logger2 = ServerRuntimeClient(13004).logger;
-            logger2.info("Sending checkin:", checkInId.monitorSlug, checkInId.status);
-          }
-          self.sendEnvelope(checkInEnvelope);
-          return checkInId;
-        } else {
-          if (ServerRuntimeClient(13032).DEBUG_BUILD) {
-            const logger = ServerRuntimeClient(13004).logger;
-            logger.warn("SDK not enabled, will not capture checkin.");
-          }
-          return checkInId;
-        }
-      }
-      checkInId = ServerRuntimeClient(13015).uuid4();
-      const obj = ServerRuntimeClient(13015);
-    },
-  },
-  {
-    key: "_captureRequestSession",
-    value: function _captureRequestSession() {
-      if (this._sessionFlusher) {
-        const _sessionFlusher = this._sessionFlusher;
-        const result = _sessionFlusher.incrementSessionStatusCount();
-      } else if (ServerRuntimeClient(13032).DEBUG_BUILD) {
-        const logger = ServerRuntimeClient(13004).logger;
-        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
-      }
-    },
-  },
-  {
-    key: "_prepareEvent",
-    value: function _prepareEvent(platform, arg1, arg2, arg3) {
+    key: "__init3",
+    value: function __init3() {
       const self = this;
-      if (this._options.platform) {
-        platform.platform = platform.platform || self._options.platform;
-      }
-      if (self._options.runtime) {
-        const obj = {};
-        const merged = Object.assign(platform.contexts);
-        obj.runtime = platform.contexts || {}.runtime || self._options.runtime;
-        platform.contexts = obj;
-        const tmp3 = platform.contexts || {};
-      }
-      if (self._options.serverName) {
-        platform.server_name = platform.server_name || self._options.serverName;
-      }
-      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [platform, arg1, arg2, arg3];
-      return fn(items);
+      this._setResult = (_state, _value) => {
+        if (self._state === self.PENDING) {
+          if (obj2.isThenable(_value)) {
+            _value.then(self._resolve, self._reject);
+          } else {
+            self._state = _state;
+            self._value = _value;
+            self._executeHandlers();
+          }
+          obj2 = SyncPromise(13046);
+        }
+      };
     },
   },
   {
-    key: "_getTraceInfoFromScope",
-    value: function _getTraceInfoFromScope(arg0) {
-      if (arg0) {
-        const _getSpanForScopeResult = ServerRuntimeClient(13026)._getSpanForScope(arg0);
-        if (_getSpanForScopeResult) {
-          let spanToTraceContextResult = ServerRuntimeClient(13009).spanToTraceContext(_getSpanForScopeResult);
-          const tmpResult = ServerRuntimeClient(13009);
-        } else {
-          spanToTraceContextResult = ServerRuntimeClient(13031).getTraceContextFromScope(arg0);
-          const tmpResult3 = ServerRuntimeClient(13031);
+    key: "__init4",
+    value: function __init4() {
+      const self = this;
+      this._executeHandlers = () => {
+        if (self._state !== obj.PENDING) {
+          const _handlers = self._handlers;
+          const substr = _handlers.slice();
+          self._handlers = [];
+          const item = substr.forEach((item) => {
+            if (!item[0]) {
+              if (_state._state === constants.RESOLVED) {
+                item[1](_state._value);
+              }
+              if (_state._state === constants.REJECTED) {
+                item[2](_state._value);
+              }
+              item[0] = true;
+            }
+          });
         }
-        const tmpResult4 = ServerRuntimeClient(13040);
-        if (_getSpanForScopeResult) {
-          let dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
-        } else {
-          const self = this;
-          dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromScope(this, arg0);
-        }
-        const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
-        return items;
-      } else {
-        const items1 = [undefined, undefined];
-        return items1;
-      }
+      };
     },
   },
 ];
+const _moduleResult = _createClass(SyncPromise, items);
 
-export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);
+export const SyncPromise = _moduleResult;
+export function rejectedSyncPromise(arg0) {
+  closure_0 = arg0;
+  return new _moduleResult((arg0, fn) => {
+    fn(closure_0);
+  });
+}
+export function resolvedSyncPromise(item) {
+  closure_0 = item;
+  return new _moduleResult((fn) => {
+    fn(closure_0);
+  });
+}

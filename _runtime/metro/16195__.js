@@ -1,32 +1,30 @@
 // _runtime/metro/16195__.js
+import _mod17 from "00017__.js";
+import replaceByteInByteSequence from "../16196_replaceByteInByteSequence.js";
 
-export function getReactNativeDimensionsWithDimensions(width, value) {
-  try {
-    let obj = {};
-    let obj2 = {};
-    if (width) {
-      const obj5 = { screenWidth: null, screenHeight: null, screenScale: null, screenFontScale: null };
-      const _Math = Math;
-      obj5.screenWidth = Math.ceil(width.width);
-      const _Math2 = Math;
-      obj5.screenHeight = Math.ceil(width.height);
-      ({ scale: obj3.screenScale, fontScale: obj3.screenFontScale } = width);
-      obj = obj5;
-    }
-    if (value) {
-      const obj9 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
-      const _Math3 = Math;
-      obj9.windowWidth = Math.ceil(value.width);
-      const _Math4 = Math;
-      obj9.windowHeight = Math.ceil(value.height);
-      ({ scale: obj4.windowScale, fontScale: obj4.windowFontScale } = value);
-      obj2 = obj9;
-    }
-    const obj10 = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(obj2);
-    return obj10;
-  } catch (err) {
-    return null;
+let closure_0 = null;
+const BlobModule = _mod17.NativeModules.BlobModule;
+let tmp2 = BlobModule;
+if (BlobModule) {
+  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
+}
+if (tmp2) {
+  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
+  if (typeof BlobModule.BLOB_URI_HOST === "string") {
+    let _HermesInternal = HermesInternal;
+    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
   }
 }
+replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
+  if (null === closure_0) {
+    const _Error = Error;
+    const error = new Error("Cannot create URL for blob!");
+    throw error;
+  } else {
+    const _HermesInternal = HermesInternal;
+    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+  }
+};
+replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
+
+export const URL = replaceByteInByteSequence.URL;

@@ -1,6 +1,6 @@
 // _runtime/metro/04565__.js
-import _typeof_mod from "04289__.js";
-import requiredArgs_mod from "../04290_requiredArgs.js";
+import _typeof_mod from "04294__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,8 +19,12 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getMonth(arg0) {
+export default function getISODay(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMonth();
+  let num = _typeof.default(arg0).getDay();
+  if (0 === num) {
+    num = 7;
+  }
+  return num;
 };
 export default exports.default;

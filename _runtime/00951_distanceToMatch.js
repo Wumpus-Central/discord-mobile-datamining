@@ -116,7 +116,7 @@ function hookSetter(headers, arg1, arg2, arg3) {
           let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(closure_1_0, closure_1_1);
           let _Object2 = window.Object;
           _Object2.defineProperty(closure_1_0, closure_1_1, obj);
-          return /* F79763 */ function() { ... };
+          return /* F79973 */ function() { ... };
         };
       };
     };

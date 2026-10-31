@@ -1,24 +1,67 @@
 // _runtime/metro/12894__.js
-import _mod12895 from "12895__.js";
-import _mod12896 from "12896__.js";
-import _mod12897 from "12897__.js";
-import _mod12898 from "12898__.js";
-import _mod12900 from "12900__.js";
-import _mod12901 from "12901__.js";
-import _mod12903 from "12903__.js";
-import _mod12904 from "12904__.js";
-import _mod12906 from "12906__.js";
-import _mod12907 from "12907__.js";
+import _mod12833 from "12833__.js";
 
-export default {
-  dir: _mod12895,
-  has: _mod12896,
-  lang: _mod12897,
-  matches: _mod12898,
-  not: _mod12900,
-  "nth-child": _mod12901,
-  "nth-last-child": _mod12903,
-  "nth-last-of-type": _mod12904,
-  "nth-of-type": _mod12906,
-  slotted: _mod12907,
+const Ident = _mod12833.TYPE.Ident;
+const Number = _mod12833.TYPE.Number;
+const Dimension = _mod12833.TYPE.Dimension;
+const LeftParenthesis = _mod12833.TYPE.LeftParenthesis;
+const RightParenthesis = _mod12833.TYPE.RightParenthesis;
+const Colon = _mod12833.TYPE.Colon;
+const Delim = _mod12833.TYPE.Delim;
+let obj = {
+  name: "MediaFeature",
+  structure: { name: String, value: ["Identifier", "Number", "Dimension", "Ratio", null] },
+  parse() {
+    const self = this;
+    this.eat(LeftParenthesis);
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const scanner2 = this.scanner;
+    scanner2.skipSC();
+    if (this.scanner.tokenType === RightParenthesis) {
+      self.eat(tmp6);
+      const obj = {
+        type: "MediaFeature",
+        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+        name: consumeResult,
+        value: null,
+      };
+      return obj;
+    } else {
+      self.eat(Colon);
+      const scanner4 = self.scanner;
+      scanner4.skipSC();
+      const tokenType = self.scanner.tokenType;
+      if (Number === tokenType) {
+        if (self.lookupNonWSType(1) === Delim) {
+          let RatioResult = self.Ratio();
+        } else {
+          RatioResult = self.Number();
+        }
+      } else {
+        if (Dimension === tokenType) {
+          let DimensionResult = self.Dimension();
+          const scanner3 = self.scanner;
+          scanner3.skipSC();
+        } else if (Ident !== tokenType) {
+          self.error("Number, dimension, ratio or identifier is expected");
+          DimensionResult = null;
+        }
+        DimensionResult = self.Identifier();
+      }
+    }
+    consumeResult = this.consume(Ident);
+  },
+  generate(name) {
+    const self = this;
+    this.chunk("(");
+    this.chunk(name.name);
+    if (null !== name.value) {
+      self.chunk(":");
+      self.node(name.value);
+    }
+    self.chunk(")");
+  },
 };
+
+export default obj;

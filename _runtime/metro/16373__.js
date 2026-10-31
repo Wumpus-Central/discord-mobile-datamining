@@ -1,16 +1,13 @@
 // _runtime/metro/16373__.js
-import _modDef16369 from "16369__.js";
-import noop from "00019__.js";
+import registerAsset from "01119__.js";
 
-export default function useReanimatedHeaderHeight() {
-  const context = noop.useContext(_modDef16369);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error(
-      "Couldn't find the header height using Reanimated. Are you inside a screen in a navigator with a header and your NavigationContainer is wrapped in ReanimatedScreenProvider?",
-    );
-    throw error;
-  } else {
-    return context;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "c9224fd30c3d577cc141b2b883b31e09",
+  name: "ic_call_status_red_24px",
+  type: "png",
+});

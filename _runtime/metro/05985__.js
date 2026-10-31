@@ -1,21 +1,13 @@
 // _runtime/metro/05985__.js
-import get_ActivityIndicator from "00017__.js";
+import _mod17 from "00017__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
-const items = ["ios", "android"];
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSModalScreen", directEventTypes: { topAppear: { registrationName: "onAppear" }, topDisappear: { registrationName: "onDisappear" }, topDismissed: { registrationName: "onDismissed" }, topNativeDismissCancelled: { registrationName: "onNativeDismissCancelled" }, topWillAppear: { registrationName: "onWillAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topHeaderHeightChange: { registrationName: "onHeaderHeightChange" }, topTransitionProgress: { registrationName: "onTransitionProgress" }, topGestureCancel: { registrationName: "onGestureCancel" }, topHeaderBackButtonClicked: { registrationName: "onHeaderBackButtonClicked" }, topSheetDetentChanged: { registrationName: "onSheetDetentChanged" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAppear: true, onDisappear: true, onDismissed: true, onNativeDismissCancelled: true, onWillAppear: true, onWillDisappear: true, onHeaderHeightChange: true, onTransitionProgress: true, onGestureCancel: true, onHeaderBackButtonClicked: true, onSheetDetentChanged: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { screenId: true, sheetAllowedDetents: true, sheetLargestUndimmedDetent: true, sheetGrabberVisible: true, sheetCornerRadius: true, sheetExpandsWhenScrolledToEdge: true, sheetInitialDetent: true, sheetElevation: true, sheetShouldOverflowTopInset: true, sheetDefaultResizeAnimationEnabled: true, customAnimationOnSwipe: true, fullScreenSwipeEnabled: true, fullScreenSwipeShadowEnabled: true, homeIndicatorHidden: true, preventNativeDismiss: true, gestureEnabled: true, statusBarColor: _mod26.colorAttribute, statusBarHidden: true, screenOrientation: true, statusBarAnimation: true, statusBarStyle: true, statusBarTranslucent: true, gestureResponseDistance: true, stackPresentation: true, stackAnimation: true, transitionDuration: true, replaceAnimation: true, swipeDirection: true, hideKeyboardOnSwipe: true, activityState: true, navigationBarColor: _mod26.colorAttribute, navigationBarTranslucent: true, navigationBarHidden: true, nativeBackButtonDismissalEnabled: true, bottomScrollEdgeEffect: true, leftScrollEdgeEffect: true, rightScrollEdgeEffect: true, topScrollEdgeEffect: true, synchronousShadowStateUpdatesEnabled: true, iosOrientationInheritanceFixEnabled: true };
 
-export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
-export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
-export function executeNativeBackPress() {
-  React.exitApp();
-  return true;
-}
-export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
-  if (undefined === fullScreenSwipeEnabled) {
-    return "undefined";
-  } else if (true === fullScreenSwipeEnabled) {
-    return "true";
-  } else if (false === fullScreenSwipeEnabled) {
-    return "false";
-  }
-}
+export default module_65.get("RNSModalScreen", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,15 +1,9 @@
 // _runtime/metro/05835__.js
-import identity from "../00549_identity.js";
-import _mod668 from "00668__.js";
-import constant from "../05836_constant.js";
+import baseGetAllKeys from "../00656_baseGetAllKeys.js";
+import _mod5818 from "05818__.js";
+import keysIn from "../05820_keysIn.js";
 
-if (_mod668) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod668(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
+export default function getAllKeysIn(arg0) {
+  const tmp = baseGetAllKeys;
+  return tmp(arg0, keysIn, _mod5818);
 }
-
-export default fn;

@@ -1,13 +1,13 @@
 // _runtime/metro/10806__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 256,
-  height: 128,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "766abd1bba5c776641397ceaa2b62b88",
-  name: "img_invite_empty_light",
+  hash: "aeb97360fc8a478ac4fc8b1c1de862ea",
+  name: "UserCircleIcon",
   type: "png",
 });

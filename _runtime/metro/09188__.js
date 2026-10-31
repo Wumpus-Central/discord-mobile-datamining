@@ -1,13 +1,13 @@
 // _runtime/metro/09188__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3badf2b48a53beb45ce4acb0a2b90dbd",
-  name: "MoreHorizontalIcon",
+  hash: "31fe21f79423d8afd3dcadd61d04938b",
+  name: "ic_mail",
   type: "png",
 });

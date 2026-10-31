@@ -1,13 +1,13 @@
 // _runtime/metro/11965__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f879d4980a2e6ef68873178eb4fe3d9c",
-  name: "voice_bar_deafen_on",
+  hash: "ac381080e803b7da0a8a3822cdf80aee",
+  name: "BlurBackgroundIcon",
   type: "png",
 });

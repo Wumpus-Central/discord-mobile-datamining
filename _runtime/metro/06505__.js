@@ -1,4 +1,11 @@
 // _runtime/metro/06505__.js
-import _mod1293 from "01293__.js";
+let setPrototypeOf = typeof Reflect !== "undefined";
+if (typeof Reflect !== "undefined") {
+  const _Reflect = Reflect;
+  setPrototypeOf = Reflect.setPrototypeOf;
+}
+if (!setPrototypeOf) {
+  setPrototypeOf = null;
+}
 
-export default _mod1293;
+export default setPrototypeOf;

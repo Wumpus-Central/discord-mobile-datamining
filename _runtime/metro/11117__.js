@@ -1,13 +1,13 @@
 // _runtime/metro/11117__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "faa248a786366f008b1ac80b3ae581a2",
-  name: "LockUnlockedIcon",
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "135884ac95baa487151d1a8517964199",
+  name: "ic_file_small_code",
   type: "png",
 });

@@ -1,119 +1,219 @@
 // _runtime/metro/13084__.js
-import extractRequestData from "../13085_extractRequestData.js";
+import stackParserFromStackParserOptions from "../13042_stackParserFromStackParserOptions.js";
+import _mod13045 from "13045__.js";
+import _mod13046 from "13046__.js";
+import memoBuilder from "../13085_memoBuilder.js";
 import _slicedToArray from "00032__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import setupIntegration from "13060__.js";
 
-let closure_4 = ["ip", "user"];
-let obj = {
-  include: {
-    cookies: true,
-    data: true,
-    headers: true,
-    ip: false,
-    query_string: true,
-    url: true,
-    user: { id: true, username: true, email: true },
-  },
-  transactionNamingScheme: "methodPath",
-};
-
-export const requestDataIntegration = setupIntegration.defineIntegration(() => {
-  obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+function normalize(arg0) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 100;
   }
-  let obj2 = {};
-  const merged = Object.assign(obj);
-  const merged1 = Object.assign(obj);
-  let obj3 = {};
-  const merged2 = Object.assign(obj.include);
-  const merged3 = Object.assign(obj.include);
-  if (obj.include) {
-    if (typeof obj.include.user === "boolean") {
-      let user = obj.include.user;
-    }
-    obj3.user = user;
-    obj2.include = obj3;
-    const obj4 = {
-      name: "RequestData",
-      processEvent(sdkProcessingMetadata) {
-        let prop = sdkProcessingMetadata.sdkProcessingMetadata;
-        if (undefined === prop) {
-          prop = {};
-        }
-        ({ request, normalizedRequest } = prop);
-        const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
-          include = include.include;
-          const user = include.user;
-          const items = ["method"];
-          const entries = Object.entries(closure_1_3(include, closure_1_4));
-          while (tmp2 !== undefined) {
-            let tmp5 = closure_1_2(tmp3, 2);
-            let first = tmp5[0];
-            if (tmp5[1]) {
-              let arr = items.push(first);
-            }
-            continue;
-          }
-          let flag = true;
-          if (undefined !== user) {
-            flag = user;
-            if (typeof user !== "boolean") {
-              const items1 = [];
-              const _Object = Object;
-              const entries1 = Object.entries(user);
-              flag = items1;
-              for (const item10032 of entries1) {
-                let tmp11 = closure_1_2(item10032, 2);
-                let first1 = tmp11[0];
-                if (tmp11[1]) {
-                  let arr2 = items1.push(first1);
+  let num2 = arg2;
+  if (arg2 === undefined) {
+    num2 = Infinity;
+  }
+  try {
+    return visit("", arg0, num, num2);
+  } catch (tmp5) {
+    const obj = { ERROR: null };
+    const _HermesInternal = HermesInternal;
+    obj.ERROR = "**non-serializable** (" + tmp5 + ")";
+    return obj;
+  }
+}
+function visit(arg0, __sentry_skip_normalization__) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = Infinity;
+  }
+  let num2 = arg3;
+  if (arg3 === undefined) {
+    num2 = Infinity;
+  }
+  let memoBuilderResult = arg4;
+  if (arg4 === undefined) {
+    memoBuilderResult = memoBuilder.memoBuilder();
+  }
+  _slicedToArray(memoBuilderResult, 2);
+  if (null != __sentry_skip_normalization__) {
+    const items = ["boolean", "string"];
+    if (!items.includes(typeof __sentry_skip_normalization__)) {
+      if (typeof __sentry_skip_normalization__ === "number") {
+        let _Number = Number;
+      }
+      let str = (function stringifyValue(arg0, _events) {
+        try {
+          if ("domain" === arg0) {
+            if (_events) {
+              if (typeof _events === "object") {
+                if (_events._events) {
+                  return "[Domain]";
                 }
-                continue;
               }
             }
           }
-          const include2 = { ip: include.ip, user: flag, request: null, transaction: null };
-          let tmp15;
-          if (0 !== items.length) {
-            tmp15 = items;
-          }
-          include2.request = tmp15;
-          include2.transaction = include.transactionNamingScheme;
-          return { include: include2 };
-        })(obj2);
-        if (normalizedRequest) {
-          let tmp5;
-          if (request) {
-            let ip = request.ip;
-            if (!ip) {
-              ip = request.socket && request.socket.remoteAddress;
-              const tmp6 = request.socket && request.socket.remoteAddress;
+          if ("domainEmitter" === arg0) {
+            return "[DomainEmitter]";
+          } else {
+            if (undefined !== global) {
+              if (_events === global) {
+                return "[Global]";
+              }
             }
-            tmp5 = ip;
+            const _window = window;
+            if (typeof window !== "undefined") {
+              const _window2 = window;
+              if (_events === window) {
+                return "[Window]";
+              }
+            }
+            const _document = document;
+            if (typeof document !== "undefined") {
+              const _document2 = document;
+              if (_events === document) {
+                return "[Document]";
+              }
+            }
+            if (obj.isVueViewModel(_events)) {
+              return "[VueViewModel]";
+            } else {
+              if (tmp4Result.isSyntheticEvent(_events)) {
+                return "[SyntheticEvent]";
+              } else {
+                if (typeof _events === "number") {
+                  const _Number = Number;
+                  if (!Number.isFinite(_events)) {
+                    const _HermesInternal = HermesInternal;
+                    return "[" + _events + "]";
+                  }
+                }
+                if (typeof _events === "function") {
+                  const _HermesInternal4 = HermesInternal;
+                  return "[Function: " + stackParserFromStackParserOptions.getFunctionName(_events) + "]";
+                } else if (typeof _events === "symbol") {
+                  const _String2 = String;
+                  const _HermesInternal3 = HermesInternal;
+                  return "[" + String(_events) + "]";
+                } else if (typeof _events === "bigint") {
+                  const _String = String;
+                  const _HermesInternal2 = HermesInternal;
+                  return "[BigInt: " + String(_events) + "]";
+                } else {
+                  const tmp9 = (function getConstructorName(_events) {
+                    const prototypeOf = Object.getPrototypeOf(_events);
+                    let str = "null prototype";
+                    if (prototypeOf) {
+                      str = prototypeOf.constructor.name;
+                    }
+                    return str;
+                  })(_events);
+                  const _HermesInternal6 = HermesInternal;
+                  if (obj4.test(tmp9)) {
+                    let combined = concat(tmp10, "]");
+                  } else {
+                    combined = concat(tmp10, "]");
+                  }
+                  return combined;
+                }
+              }
+              tmp4Result = _mod13046;
+            }
+            obj = _mod13046;
           }
-          let user;
-          if (request) {
-            user = request.user;
-          }
-          const obj3 = extractRequestData;
-          obj = { ipAddress: tmp5, user };
-          const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
-          return sdkProcessingMetadata;
-        } else {
-          let result1 = sdkProcessingMetadata;
-          if (request) {
-            obj2 = extractRequestData;
-            result1 = obj2.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
-          }
-          return result1;
+        } catch (tmp7) {
+          const _HermesInternal5 = HermesInternal;
+          return "**non-serializable** (" + tmp7 + ")";
         }
-      },
-    };
-    return obj4;
+      })(arg0, __sentry_skip_normalization__);
+      if (str.startsWith("[object ")) {
+        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
+          return __sentry_skip_normalization__;
+        } else {
+          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
+            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
+          }
+          if (0 === num) {
+            return str.replace("object ", "");
+          } else if (tmp6(__sentry_skip_normalization__)) {
+            return "[Circular ~]";
+          } else {
+            if (__sentry_skip_normalization__) {
+              if (typeof __sentry_skip_normalization__.toJSON === "function") {
+                try {
+                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
+                } catch (err) {}
+              }
+            }
+            const _Array = Array;
+            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
+            const convertToPlainObjectResult = _mod13045.convertToPlainObject(__sentry_skip_normalization__);
+            const keys = Object.keys();
+            if (keys !== undefined) {
+              while (keys[tmp] !== undefined) {
+                let _Object = Object;
+                hasOwnProperty = Object.prototype.hasOwnProperty;
+                let call = hasOwnProperty.call;
+                let tmp28 = tmp21;
+                if (!(typeof call === "unknown" ? hasOwnProperty(tmp21) : call(convertToPlainObjectResult, tmp21))) {
+                  continue;
+                } else {
+                  if (tmp20 >= num2) {
+                    let str4 = "[MaxProperties ~]";
+                    tmp14[tmp21] = "[MaxProperties ~]";
+                    break;
+                  } else {
+                    tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
+                    let num6 = tmp20 + 1;
+                    continue;
+                  }
+                  break;
+                }
+                break;
+              }
+            }
+            tmp7(__sentry_skip_normalization__);
+            return tmp14;
+          }
+        }
+      } else {
+        return str;
+      }
+    }
   }
-  user = {};
-  const merged4 = Object.assign(obj.include.user);
-  const merged5 = Object.assign(obj.include || {}.user);
-});
+  return __sentry_skip_normalization__;
+}
+function normalizeToSize(arg0) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 3;
+  }
+  let num2 = arg2;
+  if (arg2 === undefined) {
+    num2 = 102400;
+  }
+  let tmp = normalize(arg0, num);
+  if (~-str.split(/%..|./).length > num2) {
+    tmp = normalizeToSize(arg0, num - 1, num2);
+  }
+  return tmp;
+}
+
+export { normalize };
+export { normalizeToSize };
+export function normalizeUrlToBase(arg0, str) {
+  const replaced = str.replace(/\\/g, "/");
+  try {
+    const _decodeURI = decodeURI;
+    str = decodeURI(arg0);
+    const str2 = str.replace(/\\/g, "/");
+    const _RegExp = RegExp;
+    const _HermesInternal = HermesInternal;
+    const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
+    return str
+      .replace(/\\/g, "/")
+      .replace(/webpack:\/?/g, "")
+      .replace(regExp, "app:///");
+  } catch (err) {}
+}

@@ -1,17 +1,45 @@
 // _runtime/metro/04558__.js
-import _mod4294 from "04294__.js";
-import assign_mod from "../04539_assign.js";
+import _typeof_mod from "04294__.js";
+import startOfYear_mod from "../04513_startOfYear.js";
+import differenceInCalendarDays_mod from "../04456_differenceInCalendarDays.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
-let assign = assign_mod;
-if (!assign) {
-  const obj = { default: assign };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = assign;
+  tmp3 = _typeof;
 }
-assign = tmp3;
+_typeof = tmp3;
+let startOfYear = startOfYear_mod;
+if (!startOfYear) {
+  const obj2 = { default: startOfYear };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfYear;
+}
+startOfYear = tmp5;
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  const obj3 = { default: differenceInCalendarDays };
+  let tmp7 = obj3;
+} else {
+  tmp7 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function getDefaultOptions() {
-  return assign.default({}, _mod4294.getDefaultOptions());
+export default function getDayOfYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
 };
 export default exports.default;

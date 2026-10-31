@@ -1,13 +1,13 @@
 // _runtime/metro/11929__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "db76c9ef21a10a502ae95ae16e345521",
-  name: "add",
+  hash: "4f5dc667b92ff05a99d9028260a9bf5b",
+  name: "ImageSparkleIcon",
   type: "png",
 });

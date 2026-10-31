@@ -1,13 +1,13 @@
 // _runtime/metro/14317__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/directory_channels/native/images",
-  width: 32,
-  height: 32,
-  scales: [2, 3],
-  hash: "cf9fbd33b5f8251873e494b446828ceb",
-  name: "invite",
+  httpServerLocation: "/assets/images/native",
+  width: 121,
+  height: 80,
+  scales: [1, 2],
+  hash: "03d3616a833b9606b61838a277c7b0cf",
+  name: "link_expired",
   type: "png",
 });

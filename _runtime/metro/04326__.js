@@ -1,13 +1,42 @@
 // _runtime/metro/04326__.js
-let closure_0 = { lastWeek: "'el' eeee 'pasado a la' p", yesterday: "'ayer a la' p", today: "'hoy a la' p", tomorrow: "'ma\u00F1ana a la' p", nextWeek: "eeee 'a la' p", other: "P" };
-let closure_1 = { lastWeek: "'el' eeee 'pasado a las' p", yesterday: "'ayer a las' p", today: "'hoy a las' p", tomorrow: "'ma\u00F1ana a las' p", nextWeek: "eeee 'a las' p", other: "P" };
+import 02065__ from "02065__.js";
+import 02068__ from "02068__.js";
+import date_mod from "02069__.js";
+import date_mod from "02071__.js";
+import 04327__ from "04327__.js";
 
-export default function formatRelative(arg0, getUTCHours, arg2, arg3) {
-  if (1 !== getUTCHours.getUTCHours()) {
-    let tmp2 = closure_1[arg0];
-  } else {
-    tmp2 = closure_0[arg0];
-  }
-  return tmp2;
-};
+if (!module_2065) {
+  const obj = { default: module_2065 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_2065;
+}
+if (!module_2068) {
+  const obj2 = { default: module_2068 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_2068;
+}
+let date = date_mod;
+if (!date) {
+  const obj3 = { default: date };
+  let tmp7 = obj3;
+} else {
+  tmp7 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+if (!module_4327) {
+  const obj5 = { default: module_4327 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4327;
+}
+
+export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

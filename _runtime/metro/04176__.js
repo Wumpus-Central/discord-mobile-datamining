@@ -1,11 +1,11 @@
 // _runtime/metro/04176__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9lbW9qaXMvZGVmYXVsdF9lbW9qaXM=",
   scales: [1],
-  hash: "cb1edab3c3cb96d7aa137b325d2e8637",
-  name: "sv-SE.messages.cb1edab3c3cb96d7aa137b325d2e8637.compiled.messages",
+  hash: "81df1470d87ce2f4b04f9ecb5866442d",
+  name: "pt-BR.messages.81df1470d87ce2f4b04f9ecb5866442d.compiled.messages",
   type: "jsona",
 });

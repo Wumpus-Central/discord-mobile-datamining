@@ -1,13 +1,6 @@
 // _runtime/metro/05807__.js
-import _mod545 from "00545__.js";
-import object from "../05808_object.js";
-import _mod5809 from "05809__.js";
+import baseClone from "../05808_baseClone.js";
 
-export default function initCloneObject(arg0) {
-  if (typeof arg0.constructor === "function") {
-    if (!_mod545(arg0)) {
-      object(_mod5809(arg0));
-    }
-    return {};
-  }
+export default function cloneDeep(arg0) {
+  return baseClone(arg0, 5);
 }

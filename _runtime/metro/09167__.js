@@ -1,13 +1,13 @@
 // _runtime/metro/09167__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "1d1181e321dc8059ed1b1ce7cbbde121",
-  name: "ic_chat_bubble_32px",
+  hash: "a9bda86a153eecbc9eb21d6f5b6433f7",
+  name: "QrCodeIcon",
   type: "png",
 });

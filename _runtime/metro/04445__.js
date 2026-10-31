@@ -1,44 +1,31 @@
 // _runtime/metro/04445__.js
-import module_4293_mod from "04293__.js";
-import module_4446_mod from "04446__.js";
-import module_4449_mod from "04449__.js";
-import requiredArgs_mod from "../04290_requiredArgs.js";
+import _typeof_mod from "04294__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
-let module_4293 = module_4293_mod;
-if (!module_4293) {
-  const obj = { default: module_4293 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4293;
+  tmp3 = _typeof;
 }
-module_4293 = tmp3;
-let module_4446 = module_4446_mod;
-if (!module_4446) {
-  const obj2 = { default: module_4446 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4446;
-}
-module_4446 = tmp5;
-let module_4449 = module_4449_mod;
-if (!module_4449) {
-  const obj3 = { default: module_4449 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4449;
-}
-module_4449 = tmp7;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function addISOWeekYears(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4449.default(arg0, module_4446.default(arg0) + module_4293.default(arg1));
+export default function isWeekend(arg0) {
+  requiredArgs.default(1, arguments);
+  const day = _typeof.default(arg0).getDay();
+  let tmp3 = 0 === day;
+  if (!tmp3) {
+    tmp3 = 6 === day;
+  }
+  return tmp3;
 };
 export default exports.default;

@@ -1,32 +1,37 @@
 // _runtime/metro/05387__.js
-import ComposedGestureName from "../05357_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../05366_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod5381 from "05381__.js";
+import _mod5346 from "05346__.js";
+import DEFAULT_PROPS_TRANSFORMER from "../05371_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod5388 from "05388__.js";
+import _mod5390 from "05390__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function transformLongPressProps(shouldCancelWhenOutside) {
-  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
-    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
-  }
-  return shouldCancelWhenOutside;
-}
-const items = [
-  ["minDuration", "minDurationMs"],
-  ["maxDistance", "maxDist"],
-];
-const map = new Map(items);
-let closure_4 = {};
 
-export function useLongPressGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_4;
+export function useGestureCallbacks(handlerTag, disableReanimated) {
+  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
+  let reanimatedEventHandler;
+  if (!disableReanimated.disableReanimated) {
+    const Reanimated = _mod5346.Reanimated;
+    let handler;
+    if (Reanimated != null) {
+      handler = Reanimated.useHandler(memoizedGestureCallbacks);
+    }
+    const tmpResult = _mod5390;
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(
+      handlerTag,
+      memoizedGestureCallbacks,
+      handler,
+      disableReanimated.changeEventCalculator,
+      disableReanimated.fillInDefaultValues,
+    );
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(
-    tmp,
-    map,
-    transformLongPressProps,
-  );
-  return _mod5381.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
+  let animatedEventHandler;
+  if (disableReanimated.dispatchesAnimatedEvents) {
+    animatedEventHandler = disableReanimated.onUpdate;
+  }
+  return {
+    jsEventHandler: _mod5388.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated),
+    reanimatedEventHandler,
+    animatedEventHandler,
+  };
 }

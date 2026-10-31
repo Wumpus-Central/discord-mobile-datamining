@@ -1,13 +1,13 @@
 // _runtime/metro/16946__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hexagon_campaign/images",
-  width: 32,
-  height: 32,
-  scales: [2, 3, 4],
-  hash: "4135aa1407cb9dccb86248e1e9e37285",
-  name: "hexagon_campaign_legal_logo",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f8bf13e5289aa31d46196df3283f80c3",
+  name: "FullscreenEnterIcon",
   type: "png",
 });

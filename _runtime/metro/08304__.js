@@ -1,37 +1,28 @@
 // _runtime/metro/08304__.js
-import _modDef8305 from "08305__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  decode(arg0, buffer) {
-    value = _modDef8305.get();
-    if (undefined !== value) {
-      if (undefined !== arg0) {
-        try {
-          const decoder = new value(arg0);
-          const _DataView = DataView;
-          if (buffer instanceof DataView) {
-            buffer = buffer.buffer;
-          } else {
-            const _Uint8Array = Uint8Array;
-            buffer = Uint8Array.from(buffer);
-          }
-          decoder.decode(buffer);
-        } catch (err) {}
-      }
+export function getStringValue(value) {
+  const mapped = value.map((item) => String.fromCharCode(item));
+  return mapped.join("");
+}
+export function getEncodedString(arr) {
+  if (arr.length >= 8) {
+    const substr = arr.slice(0, 8);
+    const mapped = substr.map((item) => String.fromCharCode(item));
+    const joined = mapped.join("");
+    if ("ASCII\0\0\0" === joined) {
+      const substr1 = arr.slice(8);
+      const mapped1 = substr1.map((item) => String.fromCharCode(item));
+      return mapped1.join("");
+    } else if ("JIS\0\0\0\0\0" === joined) {
+      return "[JIS encoded text]";
+    } else if ("UNICODE\0" === joined) {
+      return "[Unicode encoded text]";
+    } else if ("\0\0\0\0\0\0\0\0" === joined) {
+      return "[Undefined encoding]";
     }
-    const mapped = buffer.map((item) => String.fromCharCode(item));
-    return (function decodeAsciiValue(arg0) {
-      try {
-        const _decodeURIComponent = decodeURIComponent;
-        const _escape = escape;
-        return decodeURIComponent(escape(arg0));
-      } catch (err) {
-        return tmp;
-      }
-    })(mapped.join(""));
-  },
-  TAG_HEADER_SIZE: 5,
-};
+  }
+  return "Undefined";
+}
+export function getCalculatedGpsValue(value) {
+  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
+}

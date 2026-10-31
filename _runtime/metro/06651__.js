@@ -1,13 +1,13 @@
 // _runtime/metro/06651__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "5de31cd2c9db12c0dfd39e4c1dd0eb1f",
-  name: "img_roblox_light",
-  type: "png",
+  hash: "604528a3bb006839cd94a191736eec62",
+  name: "img_account_sync_epic_dark_and_white",
+  type: "svg",
 });

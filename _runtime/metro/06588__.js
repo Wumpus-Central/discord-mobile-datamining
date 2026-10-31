@@ -1,13 +1,13 @@
 // _runtime/metro/06588__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "36aa11af17352d73b5ec4f98f307b37b",
-  name: "img_bungie_light",
-  type: "svg",
+  hash: "f42a65d76bbabdff3fd54cfb0d130cfb",
+  name: "img_account_sync_bluesky_white",
+  type: "png",
 });

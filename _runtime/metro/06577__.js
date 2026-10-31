@@ -1,13 +1,13 @@
 // _runtime/metro/06577__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "72952773756d8776abb1f02e0c8ab235",
-  name: "img_account_sync_battlenet_light_and_dark",
-  type: "png",
+  hash: "a5aa4e98136aaaae712a29ded608e4e5",
+  name: "img_account_sync_twitch_light_and_dark",
+  type: "svg",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/17211__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 161,
-  scales: [1],
-  hash: "f06539dd2236c72b26d5b18fa1a5f589",
-  name: "amanda_2",
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 99,
+  height: 70,
+  scales: [2, 3],
+  hash: "67e9bc8b12cbc0fed84dfc34cd178623",
+  name: "cactus",
   type: "png",
 });

@@ -1,34 +1,38 @@
 // _runtime/metro/12846__.js
-import _mod12798 from "12798__.js";
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split("");
 
-const LeftSquareBracket = _mod12798.TYPE.LeftSquareBracket;
-const RightSquareBracket = _mod12798.TYPE.RightSquareBracket;
-const obj = {
-  name: "Brackets",
-  structure: null,
-  parse(call, arg1) {
-    const self = this;
-    this.eat(LeftSquareBracket);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightSquareBracket);
+export (arg0) => {
+  if (0 <= arg0) {
+    if (arg0 < length.length) {
+      return length[arg0];
     }
-    const element = {
-      type: "Brackets",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
-    };
-    return element;
-  },
-  generate(arg0) {
-    this.chunk("[");
-    this.children(arg0);
-    this.chunk("]");
-  },
-};
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;
+  }
+  const typeError = new TypeError("Must be between 0 and 63: " + arg0);
+  throw typeError;
+}
+export (arg0) => {
+  if (65 <= arg0) {
+    if (arg0 <= 90) {
+      let num4 = arg0 - 65;
+    }
+    return num4;
+  }
+  if (97 <= arg0) {
+    if (arg0 <= 122) {
+      num4 = arg0 - 97 + 26;
+    }
+  }
+  if (48 <= arg0) {
+    if (arg0 <= 57) {
+      num4 = arg0 - 48 + 52;
+    }
+  }
+  num4 = 62;
+  if (43 != arg0) {
+    let num6 = -1;
+    if (47 == arg0) {
+      num6 = 63;
+    }
+    num4 = num6;
+  }
+}

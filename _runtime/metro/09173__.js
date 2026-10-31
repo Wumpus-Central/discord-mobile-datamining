@@ -1,13 +1,3 @@
 // _runtime/metro/09173__.js
-import registerAsset from "01120__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "a07985aa2246ccd4facb50f3c745ccda",
-  name: "twitter",
-  type: "png",
-});
+export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };

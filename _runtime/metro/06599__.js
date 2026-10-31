@@ -1,13 +1,13 @@
 // _runtime/metro/06599__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "2eb4a3a7eee9d2c37d6ab83a1bbe761d",
-  name: "img_account_sync_steam_light",
-  type: "png",
+  hash: "964ceb6798f932043a2351717bacaa2a",
+  name: "img_account_sync_skype_light_and_dark",
+  type: "svg",
 });

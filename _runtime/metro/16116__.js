@@ -1,18 +1,25 @@
 // _runtime/metro/16116__.js
-import _mod16091 from "16091__.js";
+const require = globalThis.__r;
 
-if (_mod16091) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
-  };
+const require = arg1;
+const dependencyMap = arg6;
+
+export function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("16117__.js").units;
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
 }
-
-export default fn;

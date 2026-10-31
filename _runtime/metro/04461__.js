@@ -1,79 +1,35 @@
 // _runtime/metro/04461__.js
-import _typeof_mod from "04289__.js";
-import requiredArgs_mod from "../04290_requiredArgs.js";
+import module_4298_mod from "04298__.js";
+import module_4449_mod from "04449__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj = { default: module_4298 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4298;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4298 = tmp3;
+let module_4449 = module_4449_mod;
+if (!module_4449) {
+  const obj2 = { default: module_4449 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4449;
 }
-requiredArgs = tmp5;
+module_4449 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function max(arg0) {
-  requiredArgs.default(1, arguments);
-  if (!arg0) {
-    if ("object" === _typeof(arg0)) {
-      if (null !== arg0) {
-        const _Array = Array;
-        const call = slice.call;
-        let arr = typeof call === "unknown" ? slice() : call(arg0);
-      }
-    }
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else {
-    arr = arg0;
-  }
-  const item = arr.forEach((item) => {
-    defaultResult = _typeof.default(item);
-    let isNaNResult = undefined === defaultResult || defaultResult < defaultResult;
-    if (!isNaNResult) {
-      const _isNaN = isNaN;
-      const _Number = Number;
-      isNaNResult = isNaN(Number(defaultResult));
-    }
-  });
-  let date1 = _typeof;
-  if (!_typeof) {
-    const _Date2 = Date;
-    date1 = new Date(NaN);
-  }
-  return date1;
+export default function addSeconds(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4449.default(interval, 1000 * module_4298.default(arg1));
 };
 export default exports.default;

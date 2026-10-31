@@ -1,5 +1,5 @@
 // _runtime/metro/11891__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4f5dc667b92ff05a99d9028260a9bf5b",
-  name: "ImageSparkleIcon",
+  hash: "c00f2cf86b7ac758e128c274c6adc688",
+  name: "MicrophoneArrowRightIcon",
   type: "png",
 });

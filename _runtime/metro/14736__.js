@@ -1,5 +1,5 @@
 // _runtime/metro/14736__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b7967e1c069a1d25ab22d1157c869621",
-  name: "MoreVerticalIcon",
+  hash: "000feaebcabc55e90b1dcd63e76aa1dd",
+  name: "ShieldLockIcon",
   type: "png",
 });

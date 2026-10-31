@@ -1,13 +1,13 @@
 // _runtime/metro/18921__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 414.5,
-  height: 200,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "98918a2680690cf1174a4749a18c1a4a",
-  name: "pending_dark",
+  hash: "c8f47b968e51eb4d5f2964cb9e696a2a",
+  name: "ChannelsFollowedIcon",
   type: "png",
 });

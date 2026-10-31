@@ -1,48 +1,28 @@
 // _runtime/metro/06480__.js
-import _mod1471 from "01471__.js";
-import defineDataProperty from "../01472_defineDataProperty.js";
-import keys2 from "../06481_keys2.js";
+import callBoundIntrinsic from "../01326_callBoundIntrinsic.js";
+import _mod1458 from "01458__.js";
 
-let tmp = typeof Symbol === "function";
-if (typeof Symbol === "function") {
-  const _Symbol = Symbol;
-  tmp = typeof Symbol("foo") === "symbol";
-}
-let closure_2 = tmp;
-const tmp2 = _mod1471();
-let closure_5 = tmp2;
-function defineProperty(arg0, arg1, arg2, arg3) {}
-function defineProperties(prototype, ownPropertyDescriptors) {
-  const arr = keys2(ownPropertyDescriptors);
-  if (!closure_2) {
-    let num = 0;
-    if (0 < arr.length) {
-      while (typeof defineProperty === "function") {
-        if (!(tmp7 in prototype)) {
-          let tmp14 = defineDataProperty;
-          if (closure_5) {
-            let flag2 = true;
-            let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
-          } else {
-            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
-          }
-        } else if (true !== tmp9) {
-          if (typeof tmp9 === "function") {
-            let call2 = toString.call;
-          }
-        }
-        num = num + 1;
-      }
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    const call = concat.call;
-    const _Object = Object;
-    const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
-    typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
+let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1458();
+
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
-  const tmp = arguments.length > 2 ? arguments[2] : {};
+  if (!tmp) {
+    return tmp;
+  } else if (closure_2) {
+    let tmp4 = (function tryDateGetDayCall(arg0) {
+      try {
+        closure_1_0(arg0);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    })(obj);
+  } else {
+    tmp4 = "[object Date]" === closure_1(obj);
+  }
 }
-defineProperties.supportsDescriptors = tmp2;
-
-export default defineProperties;

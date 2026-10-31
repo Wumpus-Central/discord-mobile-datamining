@@ -1,15 +1,15 @@
 // _runtime/metro/04647__.js
-import module_4639_mod from "04639__.js";
-import requiredArgs_mod from "../04290_requiredArgs.js";
+import startOfSecond_mod from "../04648_startOfSecond.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
-let module_4639 = module_4639_mod;
-if (!module_4639) {
-  const obj = { default: module_4639 };
+let startOfSecond = startOfSecond_mod;
+if (!startOfSecond) {
+  const obj = { default: startOfSecond };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4639;
+  tmp3 = startOfSecond;
 }
-module_4639 = tmp3;
+startOfSecond = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMinute(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4639.default(Date.now(), arg0);
+export default function isSameSecond(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfSecond.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfSecond.default(arg1).getTime();
 };
 export default exports.default;

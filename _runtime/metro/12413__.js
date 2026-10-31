@@ -1,13 +1,13 @@
 // _runtime/metro/12413__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/polls/native/images",
+  width: 140.5,
+  height: 131,
   scales: [2, 3],
-  hash: "9e19181651828ca952221179ae78d318",
-  name: "BadgeIcon",
+  hash: "2634e77a356f1f01c169d19e1ee5e0b0",
+  name: "load-issue-light",
   type: "png",
 });

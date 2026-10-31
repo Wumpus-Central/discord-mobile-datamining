@@ -1,19 +1,13 @@
 // _runtime/metro/13030__.js
-import _mod13005 from "13005__.js";
-import ScopeClass from "../13025_ScopeClass.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function getDefaultCurrentScope() {
-  return _mod13005.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
-export function getDefaultIsolationScope() {
-  return _mod13005.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "d6f5a76861191f4dd121da59ef71950f",
+  name: "ArrowSmallUpIcon",
+  type: "png",
+});

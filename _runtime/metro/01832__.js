@@ -1,5 +1,16 @@
 // _runtime/metro/01832__.js
+import configureProps from "../01749_configureProps.js";
 
-export function getUseOfValueInStyleWarning() {
-  return "It looks like you might be using shared value's .value inside reanimated inline style. If you want a component to update when shared value changes you should use the shared value directly instead of its current state represented by `.value`. See documentation here: https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/glossary/#animations-in-inline-styling";
+require = arg1;
+const dependencyMap = arg6;
+
+export function createAnimatedPropAdapter(arg0, arr) {
+  const obj = {};
+  if (arr != null) {
+    const item = arr.forEach((item) => {
+      obj[item] = true;
+    });
+  }
+  const result = configureProps.addWhitelistedNativeProps(obj);
+  return arg0;
 }

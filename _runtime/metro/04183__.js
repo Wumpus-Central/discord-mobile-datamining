@@ -1,11 +1,11 @@
 // _runtime/metro/04183__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/emojis/default_emojis",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9lbW9qaXMvZGVmYXVsdF9lbW9qaXM=",
   scales: [1],
-  hash: "42fa967858ccf5cd0fc49ce9badfefd4",
-  name: "DefaultEmojis.compiled.messages",
+  hash: "c46b9d87c19107b5642ca2d58bf77d32",
+  name: "vi.messages.c46b9d87c19107b5642ca2d58bf77d32.compiled.messages",
   type: "jsona",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/14537__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6fc18e0c40f0ce37259a8a45cc634c66",
-  name: "WindowLaunchIcon",
+  hash: "59c1068002b82917b518f48d03d4151e",
+  name: "BookmarkOutlineIcon",
   type: "png",
 });

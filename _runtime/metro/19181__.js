@@ -1,13 +1,13 @@
 // _runtime/metro/19181__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/voice_panel/native/images",
+  httpServerLocation: "/assets/images/native/main_tabs",
   width: 24,
   height: 24,
-  scales: [1, 2, 3, 4],
-  hash: "2e77386663ba77387d021543bdafafef",
-  name: "airplay",
+  scales: [2, 3],
+  hash: "a6de40e8388b714e9153c727bc648e49",
+  name: "Discord",
   type: "png",
 });

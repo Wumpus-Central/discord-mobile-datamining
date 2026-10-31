@@ -1,11 +1,11 @@
 // _runtime/metro/03869__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs",
+  httpServerLocation: "/assets/modules/conjure/intl",
   scales: [1],
-  hash: "92f2e3adde1e117db5e421322ce74ef5",
-  name: "cs.messages.92f2e3adde1e117db5e421322ce74ef5.compiled.messages",
+  hash: "596105f828bb4f9f17732dbcf5f1f212",
+  name: "ConjureUntranslated.compiled.messages",
   type: "jsona",
 });

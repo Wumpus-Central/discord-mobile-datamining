@@ -1,12 +1,11 @@
 // _runtime/metro/16134__.js
-import _mod16132 from "16132__.js";
+import _mod16135 from "16135__.js";
 
-export default (arg0, arg1) => {
-  const tmp = _mod16132(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
+export default (arg0) => {
+  if (_mod16135(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
   } else {
-    tmp3 = min(tmp, arg1);
+    return arg0;
   }
-  return tmp3;
 };

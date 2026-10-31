@@ -1,6 +1,23 @@
 // _runtime/metro/01286__.js
-import _mod1287 from "01287__.js";
-import interpretNumericEntities from "../01288_interpretNumericEntities.js";
-import pushToArray from "../01290_pushToArray.js";
+const re1 = /%20/g;
+const obj = {
+  default: "RFC3986",
+  formatters: {
+    RFC1738(arg0) {
+      const call = replace.call;
+      if (typeof call === "unknown") {
+        let callResult = replace(re1, "+");
+      } else {
+        callResult = call(arg0, re1, "+");
+      }
+      return callResult;
+    },
+    RFC3986(arg0) {
+      return String(arg0);
+    },
+  },
+  RFC1738: "RFC1738",
+  RFC3986: "RFC3986",
+};
 
-export default { formats: _mod1287, parse: interpretNumericEntities, stringify: pushToArray };
+export default obj;

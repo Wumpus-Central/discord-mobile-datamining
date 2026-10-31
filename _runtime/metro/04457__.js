@@ -1,35 +1,14 @@
 // _runtime/metro/04457__.js
-import module_4293_mod from "04293__.js";
-import module_4437_mod from "04437__.js";
-import requiredArgs_mod from "../04290_requiredArgs.js";
 
-let module_4293 = module_4293_mod;
-if (!module_4293) {
-  const obj = { default: module_4293 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4293;
-}
-module_4293 = tmp3;
-let module_4437 = module_4437_mod;
-if (!module_4437) {
-  const obj2 = { default: module_4437 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4437;
-}
-module_4437 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function addWeeks(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4437.default(arg0, 7 * module_4293.default(arg1));
+export default function getTimezoneOffsetInMilliseconds(getFullYear) {
+  const fullYear = getFullYear.getFullYear();
+  const month = getFullYear.getMonth();
+  const hours = getFullYear.getHours();
+  const minutes = getFullYear.getMinutes();
+  const seconds = getFullYear.getSeconds();
+  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
+  date1.setUTCFullYear(getFullYear.getFullYear());
+  const time = getFullYear.getTime();
+  return time - date1.getTime();
 };
 export default exports.default;

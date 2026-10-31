@@ -1,7 +1,7 @@
 // _runtime/metro/01877__.js
-import _mod1843 from "01843__.js";
-import disabledDefault from "../01870_disabled.js";
-import _modDef1871 from "01871__.js";
+import _mod1842 from "01842__.js";
+import disabledDefault from "../01869_disabled.js";
+import _modDef1870 from "01870__.js";
 import noop from "00019__.js";
 
 require = fn;
@@ -17,17 +17,17 @@ export default function _default(icon) {
   }
   icon = icon.icon;
   if (icon === undefined) {
-    icon = _modDef1871;
+    icon = _modDef1870;
   }
-  const toolbarContext = onPress(1876).useToolbarContext();
+  const toolbarContext = onPress(1875).useToolbarContext();
   const theme = toolbarContext.theme;
   if (disabled == null) {
-    disabled = toolbarContext.isNextDisabled;
+    disabled = toolbarContext.isPrevDisabled;
   }
   const items = [onPress];
   const obj2 = {
-    accessibilityHint: "Moves focus to the next field",
-    accessibilityLabel: "Next",
+    accessibilityHint: "Moves focus to the previous field",
+    accessibilityLabel: "Previous",
     disabled,
     rippleRadius,
     style,
@@ -36,27 +36,27 @@ export default function _default(icon) {
     onPress: null,
     children: null,
   };
-  const obj = onPress(1876);
-  obj2.testID = onPress(1869).TEST_ID_KEYBOARD_TOOLBAR_NEXT;
+  const obj = onPress(1875);
+  obj2.testID = onPress(1868).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS;
   obj2.theme = theme;
   obj2.onPress = useCallback((isDefaultPrevented) => {
     if (onPress != null) {
       tmp(isDefaultPrevented);
     }
     if (!isDefaultPrevented.isDefaultPrevented()) {
-      const KeyboardController = _mod1843.KeyboardController;
-      KeyboardController.setFocusTo("next");
+      const KeyboardController = _mod1842.KeyboardController;
+      KeyboardController.setFocusTo("prev");
     }
   }, items);
   if (children == null) {
-    const obj3 = { disabled, theme, type: "next" };
-    children = <icon disabled={disabled} theme={theme} type="next" />;
+    const obj3 = { disabled, theme, type: "prev" };
+    children = <icon disabled={disabled} theme={theme} type="prev" />;
   }
   obj2.children = children;
   return (
     <button
-      accessibilityHint="Moves focus to the next field"
-      accessibilityLabel="Next"
+      accessibilityHint="Moves focus to the previous field"
+      accessibilityLabel="Previous"
       disabled={disabled}
       rippleRadius={rippleRadius}
       style={style}

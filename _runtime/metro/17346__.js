@@ -1,13 +1,13 @@
 // _runtime/metro/17346__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "44a7840b2161275358742595c9257e76",
-  name: "cs",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "fdba56ceeef89e2b55cea1d13fce45dd",
+  name: "EmojiColdFaceIcon",
   type: "png",
 });

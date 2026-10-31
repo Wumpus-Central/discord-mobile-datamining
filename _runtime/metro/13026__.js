@@ -1,17 +1,13 @@
 // _runtime/metro/13026__.js
-import _mod13010 from "13010__.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const _sentrySpan = "_sentrySpan";
-
-export function _getSpanForScope(currentScope) {
-  return currentScope[_sentrySpan];
-}
-export function _setSpanForScope(arg0, arg1) {
-  if (arg1) {
-    const result = _mod13010.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
-  } else {
-    delete tmp2[tmp];
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "fd7a05931e4df085da6e8b62ffa48f48",
+  name: "SaveIcon",
+  type: "png",
+});

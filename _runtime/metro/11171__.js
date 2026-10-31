@@ -1,5 +1,5 @@
 // _runtime/metro/11171__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6fcffd29ade22a0f8e9e38ff473cdae7",
-  name: "ThemeDarkIcon",
+  hash: "bc64844a7a5a9a10abdcb24c54b2c7ef",
+  name: "ChatArrowRightIcon",
   type: "png",
 });

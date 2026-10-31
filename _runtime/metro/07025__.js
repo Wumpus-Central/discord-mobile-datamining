@@ -1,4 +1,10 @@
 // _runtime/metro/07025__.js
-import _mod7026 from "07026__.js";
 
-export default _mod7026;
+export (width) => {
+  width = width.width;
+  let num = 360;
+  if (width - 56 <= 360) {
+    num = width - 56;
+  }
+  return num;
+}

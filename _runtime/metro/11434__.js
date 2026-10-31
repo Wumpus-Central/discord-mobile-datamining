@@ -1,13 +1,13 @@
 // _runtime/metro/11434__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "eb549ee942b74daf232ce014560f92c6",
-  name: "ExperimentalCommonIcon",
+  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
+  width: 78,
+  height: 63.666666666666664,
+  scales: [3],
+  hash: "f5c4d9fde9a55ad09e91263f9bebf46a",
+  name: "asset_emerald_badge_small",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/06657__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 256,
+  height: 256,
   scales: [1],
-  hash: "e0fcff705b60ad228f8934b127b63657",
-  name: "img_account_sync_paypal_light_and_dark",
+  hash: "5de31cd2c9db12c0dfd39e4c1dd0eb1f",
+  name: "img_roblox_light",
   type: "png",
 });

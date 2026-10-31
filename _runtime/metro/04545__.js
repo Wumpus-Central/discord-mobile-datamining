@@ -1,125 +1,198 @@
 // _runtime/metro/04545__.js
-import _typeof_mod from "04289__.js";
-import module_4471_mod from "04471__.js";
-import module_4532_mod from "04532__.js";
+import _mod4299 from "04299__.js";
+import module_4457_mod from "04457__.js";
+import compareAsc_mod from "../04470_compareAsc.js";
+import _typeof_mod from "04294__.js";
+import cloneObject_mod from "../04543_cloneObject.js";
+import assign_mod from "../04544_assign.js";
+import code_mod from "04540__.js";
+import requiredArgs_mod from "../04295_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4457 = module_4457_mod;
+if (!module_4457) {
+  let obj = { default: module_4457 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4457;
 }
-_typeof = tmp3;
-let module_4471 = module_4471_mod;
-if (!module_4471) {
-  const obj2 = { default: module_4471 };
+module_4457 = tmp3;
+let compareAsc = compareAsc_mod;
+if (!compareAsc) {
+  const obj2 = { default: compareAsc };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4471;
+  tmp5 = compareAsc;
 }
-module_4471 = tmp5;
-let module_4532 = module_4532_mod;
-if (!module_4532) {
-  const obj3 = { default: module_4532 };
+compareAsc = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4532;
+  tmp7 = _typeof;
 }
-module_4532 = tmp7;
+_typeof = tmp7;
+let cloneObject = cloneObject_mod;
+if (!cloneObject) {
+  const obj4 = { default: cloneObject };
+  let tmp9 = obj4;
+} else {
+  tmp9 = cloneObject;
+}
+cloneObject = tmp9;
+let assign = assign_mod;
+if (!assign) {
+  const obj5 = { default: assign };
+  let tmp11 = obj5;
+} else {
+  tmp11 = assign;
+}
+assign = tmp11;
+let code = code_mod;
+if (!code) {
+  const obj6 = { default: code };
+  let tmp13 = obj6;
+} else {
+  tmp13 = code;
+}
+code = tmp13;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj7 = { default: requiredArgs };
+  let tmp15 = obj7;
+} else {
+  tmp15 = requiredArgs;
+}
+requiredArgs = tmp15;
+let c9 = 60000;
+let c10 = 1440;
+let c11 = 43200;
+let c12 = 525600;
 
-export default function formatISO9075(arg0, format) {
-  if (arguments.length < 1) {
-    const _TypeError = TypeError;
-    const concat2 = "1 argument required, but only ".concat;
-    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
-    throw typeError;
-  } else {
-    const defaultResult = _typeof.default(arg0);
-    if (module_4471.default(defaultResult)) {
-      format = undefined;
-      if (null != format) {
-        format = format.format;
+export default function formatDistanceStrict(arg0, arg1, locale) {
+  requiredArgs.default(2, arguments);
+  locale = undefined;
+  const defaultOptions = _mod4299.getDefaultOptions();
+  if (null != locale) {
+    locale = locale.locale;
+  }
+  if (null === locale) {
+    locale = defaultOptions.locale;
+  }
+  if (null === locale) {
+    locale = code.default;
+  }
+  if (locale.formatDistance) {
+    const defaultResult1 = compareAsc.default(arg0, arg1);
+    const _isNaN = isNaN;
+    if (isNaN(defaultResult1)) {
+      const _RangeError4 = RangeError;
+      const rangeError = new RangeError("Invalid time value");
+      throw rangeError;
+    } else {
+      let addSuffix;
+      if (null != locale) {
+        addSuffix = locale.addSuffix;
       }
-      let str3 = "extended";
-      if (null !== format) {
-        str3 = "extended";
-        if (undefined !== format) {
-          str3 = format;
+      const obj = { addSuffix: Boolean(addSuffix), comparison: defaultResult1 };
+      const defaultResult3 = assign.default(cloneObject.default(locale), obj);
+      if (defaultResult1 > 0) {
+        let defaultResult4 = _typeof.default(arg1);
+        let defaultResult5 = _typeof.default(arg0);
+      } else {
+        defaultResult4 = _typeof.default(arg0);
+        defaultResult5 = _typeof.default(arg1);
+      }
+      let roundingMethod;
+      if (null != locale) {
+        roundingMethod = locale.roundingMethod;
+      }
+      let str3 = "round";
+      if (null !== roundingMethod) {
+        str3 = "round";
+        if (undefined !== roundingMethod) {
+          str3 = roundingMethod;
         }
       }
       const StringResult = String(str3);
-      let representation;
-      if (null != format) {
-        representation = format.representation;
+      if ("floor" === StringResult) {
+        const _Math3 = Math;
+        let round = Math.floor;
+      } else if ("ceil" === StringResult) {
+        const _Math2 = Math;
+        round = Math.ceil;
+      } else if ("round" !== StringResult) {
+        const _RangeError2 = RangeError;
+        const rangeError1 = new RangeError("roundingMethod must be 'floor', 'ceil' or 'round'");
+        throw rangeError1;
+      } else {
+        const _Math = Math;
+        round = Math.round;
       }
-      let str5 = "complete";
-      if (null !== representation) {
-        str5 = "complete";
-        if (undefined !== representation) {
-          str5 = representation;
-        }
+      const time = defaultResult5.getTime();
+      const diff = time - defaultResult4.getTime();
+      const result = diff / c9;
+      const defaultResult2 = cloneObject.default(locale);
+      const result1 = (diff - (module_4457.default(defaultResult5) - module_4457.default(defaultResult4))) / c9;
+      let unit;
+      if (null != locale) {
+        unit = locale.unit;
       }
-      const StringResult1 = String(str5);
-      if ("extended" !== StringResult) {
-        if ("basic" !== StringResult) {
-          const _RangeError3 = RangeError;
-          const rangeError = new RangeError("format must be 'extended' or 'basic'");
-          throw rangeError;
-        }
-      }
-      if ("date" !== StringResult1) {
-        if ("time" !== StringResult1) {
-          if ("complete" !== StringResult1) {
-            const _RangeError2 = RangeError;
-            const rangeError1 = new RangeError("representation must be 'date', 'time', or 'complete'");
-            throw rangeError1;
+      if (unit) {
+        const _String = String;
+        let str7 = String(unit);
+      } else {
+        str7 = "second";
+        if (result >= 1) {
+          let str8 = "minute";
+          if (result >= 60) {
+            let str9 = "hour";
+            if (result >= c10) {
+              let str10 = "day";
+              if (result1 >= c11) {
+                let str11 = "year";
+                if (result1 < c12) {
+                  str11 = "month";
+                }
+                str10 = str11;
+              }
+              str9 = str10;
+            }
+            str8 = str9;
           }
+          str7 = str8;
         }
       }
-      let str10 = "";
-      if ("extended" === StringResult) {
-        str10 = "-";
-      }
-      let str11 = "";
-      if ("extended" === StringResult) {
-        str11 = ":";
-      }
-      let str13 = "";
-      if ("time" !== StringResult1) {
-        const defaultResult1 = module_4532.default(defaultResult.getDate(), 2);
-        const concat3 = "".concat;
-        const combined = "".concat(module_4532.default(defaultResult.getFullYear(), 4));
-        const combined1 = combined.concat(str10);
-        const combined2 = combined1.concat(module_4532.default(defaultResult.getMonth() + 1, 2));
-        const combined3 = combined2.concat(str10);
-        str13 = combined3.concat(defaultResult1);
-        const defaultResult2 = module_4532.default(defaultResult.getMonth() + 1, 2);
-      }
-      let combined10 = str13;
-      if ("date" !== StringResult1) {
-        const defaultResult3 = module_4532.default(defaultResult.getHours(), 2);
-        let str14 = " ";
-        const defaultResult4 = module_4532.default(defaultResult.getMinutes(), 2);
-        if ("" === str13) {
-          str14 = "";
+      if ("second" === str7) {
+        return locale.formatDistance("xSeconds", round(diff / 1000), defaultResult3);
+      } else if ("minute" === str7) {
+        return locale.formatDistance("xMinutes", round(result), defaultResult3);
+      } else if ("hour" === str7) {
+        return locale.formatDistance("xHours", round(result / 60), defaultResult3);
+      } else if ("day" === str7) {
+        return locale.formatDistance("xDays", round(result1 / c10), defaultResult3);
+      } else if ("month" === str7) {
+        const roundResult = round(result1 / c11);
+        if (12 === roundResult) {
+          if ("month" !== unit) {
+            let formatDistanceResult = locale.formatDistance("xYears", 1, defaultResult3);
+          }
+          return formatDistanceResult;
         }
-        const concat = "".concat;
-        const combined4 = "".concat(str13);
-        const combined5 = combined4.concat(str14);
-        const combined6 = combined5.concat(defaultResult3);
-        const combined7 = combined6.concat(str11);
-        const combined8 = combined7.concat(defaultResult4);
-        const combined9 = combined8.concat(str11);
-        combined10 = combined9.concat(module_4532.default(defaultResult.getSeconds(), 2));
-        const defaultResult5 = module_4532.default(defaultResult.getSeconds(), 2);
+        formatDistanceResult = locale.formatDistance("xMonths", roundResult, defaultResult3);
+      } else if ("year" === str7) {
+        return locale.formatDistance("xYears", round(result1 / c12), defaultResult3);
+      } else {
+        const _RangeError3 = RangeError;
+        const rangeError2 = new RangeError("unit must be 'second', 'minute', 'hour', 'day', 'month' or 'year'");
+        throw rangeError2;
       }
-      return combined10;
-    } else {
-      const _RangeError = RangeError;
-      const rangeError2 = new RangeError("Invalid time value");
-      throw rangeError2;
+      const defaultResult6 = module_4457.default(defaultResult5);
     }
+  } else {
+    const _RangeError = RangeError;
+    const rangeError3 = new RangeError("locale must contain localize.formatDistance property");
+    throw rangeError3;
   }
 };
 export default exports.default;

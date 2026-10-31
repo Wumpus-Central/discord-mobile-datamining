@@ -1,13 +1,13 @@
 // _runtime/metro/06689__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 500,
+  height: 500,
   scales: [1],
-  hash: "79308515b9134f67f900ad544808aa3a",
-  name: "img_domain_dark",
-  type: "svg",
+  hash: "df9cdfb6f7f1a0f370383360cce3dd97",
+  name: "img_account_sync_crunchyroll_light_and_dark",
+  type: "png",
 });

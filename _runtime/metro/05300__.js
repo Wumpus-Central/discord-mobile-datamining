@@ -1,9 +1,41 @@
 // _runtime/metro/05300__.js
-import _mod5301 from "05301__.js";
+import normalizeSnapPoint from "../05292_normalizeSnapPoint.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
 
-export function initialize() {
-  _mod5301.startListening();
+({ useCallback: c2, useEffect: c3 } = noop);
+
+export (scrollableRef, value, scrollableContentOffsetY, value2) => {
+  _require = scrollableRef;
+  dependencyMap = value;
+  let tmp = focusHook;
+  if (focusHook === undefined) {
+    tmp = value2;
+  }
+  const bottomSheetInternal = require("05283__.js").useBottomSheetInternal();
+  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
+  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
+  const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
+  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
+  const setScrollableRef = bottomSheetInternal.setScrollableRef;
+  const removeScrollableRef = bottomSheetInternal.removeScrollableRef;
+  const items = [scrollableRef, value, value2, animatedScrollableType, animatedScrollableContentOffsetY, scrollableContentOffsetY, isScrollableRefreshable, isContentHeightFixed, setScrollableRef, removeScrollableRef];
+  tmp(scrollableContentOffsetY(() => {
+    animatedScrollableContentOffsetY.value = scrollableContentOffsetY.value;
+    animatedScrollableType.value = value;
+    isScrollableRefreshable.value = value2;
+    isContentHeightFixed.value = false;
+    const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
+    if (findNodeHandleResult) {
+      const obj2 = { id: findNodeHandleResult, node: scrollableRef };
+      setScrollableRef(obj2);
+    } else {
+      const _console = console;
+      console.warn("Couldn't find the scrollable node handle id!");
+    }
+    return () => {
+      removeScrollableRef(scrollableRef);
+    };
+  }, items));
 }
