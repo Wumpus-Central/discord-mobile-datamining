@@ -1,25 +1,20 @@
 // === Module 5533: ? ===
 
 // Module 5533
+import _mod5518 from "module_5518" /* 5518 */;
 import _mod5534 from "module_5534" /* 5534 */;
 
 
-export default function _inherits(value, fn) {
-  if (typeof fn !== "function") {
-    if (null !== fn) {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Super expression must either be null or a function");
-      throw typeError;
-    }
-  }
-  let prototype = fn;
+export default function _possibleConstructorReturn(arg0, fn) {
   if (fn) {
-    prototype = fn.prototype;
+    _mod5518;
+    return fn;
   }
-  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
-  Object.defineProperty(value, "prototype", { writable: false });
-  if (fn) {
-    _mod5534(value, fn);
+  if (undefined !== fn) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Derived constructors may only return object or undefined");
+    throw typeError;
+  } else {
+    return _mod5534(arg0);
   }
-  const obj = { constructor: { value, writable: true, configurable: true } };
 };

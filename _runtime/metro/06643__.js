@@ -1,7 +1,7 @@
 // === Module 6643: ? ===
 
 // Module 6643
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "f0c9d04e77af1368c39d93a975075c0b", name: "img_account_sync_epic_dark_and_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "1e0df3230db3924611b6f5b8d19fe029", name: "img_account_sync_github_white", type: "svg" });

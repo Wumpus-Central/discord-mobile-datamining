@@ -1,7 +1,15 @@
 // === Module 10577: ? ===
 
 // Module 10577
-import registerAsset from "module_1120" /* 1120 */;
+import _mod19 from "module_19" /* 19 */;
 
+const useRef = _mod19.useRef;
+let closure_1 = {};
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 279, height: 48, scales: [2, 3], hash: "e03e83c5ddeddb7941bbe7457ccf1a98", name: "img_nitro_tier_2_activated_light", type: "png" });
+export default function useLazyValue(fn) {
+  const tmp = useRef(closure_1);
+  if (tmp.current === closure_1) {
+    tmp.current = fn();
+  }
+  return tmp.current;
+};

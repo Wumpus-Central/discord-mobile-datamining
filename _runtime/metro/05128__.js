@@ -1,18 +1,18 @@
 // === Module 5128: ? ===
 
 // Module 5128
-import c from "c" /* 5111 */;
-import _mod5124 from "module_5124" /* 5124 */;
+import c from "c" /* 5116 */;
+import _mod5129 from "module_5129" /* 5129 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
+function getNumberProperty(numberProperty, arg1) {
+  return numberProperty.numberProperty(arg1);
 }
 
-export function useRiveEnum(device, instance) {
+export function useRiveNumber(chapterID, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5124.useRiveProperty(instance, device, getEnumProperty);
+  [tmp3, tmp4, tmp5] = _mod5129.useRiveProperty(instance, chapterID, getNumberProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

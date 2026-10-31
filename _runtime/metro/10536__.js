@@ -1,7 +1,7 @@
 // === Module 10536: ? ===
 
 // Module 10536
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_keyboard/native/images", width: 173.5, height: 80, scales: [2, 3], hash: "bef971c8357e3a1bbe631b70aec03333", name: "empty_permission", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c5c262e40462204afd9dba1d0529e9ea", name: "AttachmentIcon", type: "png" });

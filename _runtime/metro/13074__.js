@@ -1,29 +1,40 @@
 // === Module 13074: ? ===
 
 // Module 13074
-import _mod13006 from "module_13006" /* 13006 */;
+import _mod13046 from "module_13046" /* 13046 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function applySdkMetadata(_metadata, arg1) {
-  let arr = arg2;
+export function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
   if (arg2 === undefined) {
-    const items = [arg1];
-    arr = items;
+    fn = function t() {
+
+    };
   }
-  let str = arg3;
-  if (arg3 === undefined) {
-    str = "npm";
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then((result) => {
+          closure_1();
+          return result;
+        }, (arg0) => {
+          closure_0(arg0);
+          closure_1();
+          throw arg0;
+        });
+      } else {
+        fn();
+        return promise;
+      }
+      obj = _mod13046;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
   }
-  const tmp = _metadata._metadata || {};
-  if (!tmp.sdk) {
-    const obj = { name: null, packages: null, version: null };
-    const _HermesInternal = HermesInternal;
-    obj.name = "sentry.javascript." + arg1;
-    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod13006.SDK_VERSION }));
-    obj.version = str(13006).SDK_VERSION;
-    tmp.sdk = obj;
-  }
-  _metadata._metadata = tmp;
 }

@@ -1,9 +1,9 @@
 // === Module 1877: ? ===
 
 // Module 1877
-import _mod1843 from "module_1843" /* 1843 */;
-import disabledDefault from "disabled" /* 1870 */;
-import _modDef1871 from "module_1871" /* 1871 */;
+import _mod1842 from "module_1842" /* 1842 */;
+import disabledDefault from "disabled" /* 1869 */;
+import _modDef1870 from "module_1870" /* 1870 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,31 +19,31 @@ export default function _default(icon) {
   }
   icon = icon.icon;
   if (icon === undefined) {
-    icon = _modDef1871;
+    icon = _modDef1870;
   }
-  const toolbarContext = onPress(1876).useToolbarContext();
+  const toolbarContext = onPress(1875).useToolbarContext();
   const theme = toolbarContext.theme;
   if (disabled == null) {
-    disabled = toolbarContext.isNextDisabled;
+    disabled = toolbarContext.isPrevDisabled;
   }
   const items = [onPress];
-  const obj2 = { accessibilityHint: "Moves focus to the next field", accessibilityLabel: "Next", disabled, rippleRadius, style, testID: null, theme: null, onPress: null, children: null };
-  const obj = onPress(1876);
-  obj2.testID = onPress(1869).TEST_ID_KEYBOARD_TOOLBAR_NEXT;
+  const obj2 = { accessibilityHint: "Moves focus to the previous field", accessibilityLabel: "Previous", disabled, rippleRadius, style, testID: null, theme: null, onPress: null, children: null };
+  const obj = onPress(1875);
+  obj2.testID = onPress(1868).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS;
   obj2.theme = theme;
   obj2.onPress = useCallback((isDefaultPrevented) => {
     if (onPress != null) {
       tmp(isDefaultPrevented);
     }
     if (!isDefaultPrevented.isDefaultPrevented()) {
-      const KeyboardController = _mod1843.KeyboardController;
-      KeyboardController.setFocusTo("next");
+      const KeyboardController = _mod1842.KeyboardController;
+      KeyboardController.setFocusTo("prev");
     }
   }, items);
   if (children == null) {
-    const obj3 = { disabled, theme, type: "next" };
-    children = <icon disabled={disabled} theme={theme} type="next" />;
+    const obj3 = { disabled, theme, type: "prev" };
+    children = <icon disabled={disabled} theme={theme} type="prev" />;
   }
   obj2.children = children;
-  return <button accessibilityHint="Moves focus to the next field" accessibilityLabel="Next" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={null} theme={null} onPress={null}>{null}</button>;
+  return <button accessibilityHint="Moves focus to the previous field" accessibilityLabel="Previous" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={null} theme={null} onPress={null}>{null}</button>;
 };

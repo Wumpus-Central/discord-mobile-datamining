@@ -132,7 +132,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                         debug.log("Event processor \"" + str + "\" dropped event");
                                       }
                                       if (tmp9Result.isThenable(tmp4Result)) {
-                                        let nextPromise = tmp4Result.then(/* F78997 */ function() { ... });
+                                        let nextPromise = tmp4Result.then(/* F79207 */ function() { ... });
                                       } else {
                                         sum1 = sum + 1;
                                         closure_0 = closure_1_0;
@@ -158,7 +158,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                               debug2.log("Event processor \"" + str4 + "\" dropped event");
                                             }
                                             if (tmp9Result2.isThenable(tmp15Result)) {
-                                              let nextPromise1 = tmp15Result.then(/* F78997 */ function() { ... });
+                                              let nextPromise1 = tmp15Result.then(/* F79207 */ function() { ... });
                                             } else {
                                               nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                             }
@@ -222,7 +222,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                               debug.log("Event processor \"" + str + "\" dropped event");
                                             }
                                             if (tmp9Result.isThenable(tmp4Result)) {
-                                              let nextPromise = tmp4Result.then(/* F78997 */ function() { ... });
+                                              let nextPromise = tmp4Result.then(/* F79207 */ function() { ... });
                                             } else {
                                               sum1 = sum + 1;
                                               closure_0 = closure_1_0;
@@ -248,7 +248,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                     debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                   }
                                                   if (tmp9Result2.isThenable(tmp15Result)) {
-                                                    let nextPromise1 = tmp15Result.then(/* F78997 */ function() { ... });
+                                                    let nextPromise1 = tmp15Result.then(/* F79207 */ function() { ... });
                                                   } else {
                                                     nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                   }
@@ -350,7 +350,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                               debug.log("Event processor \"" + str + "\" dropped event");
                                             }
                                             if (tmp9Result.isThenable(tmp4Result)) {
-                                              let nextPromise = tmp4Result.then(/* F78997 */ function() { ... });
+                                              let nextPromise = tmp4Result.then(/* F79207 */ function() { ... });
                                             } else {
                                               sum1 = sum + 1;
                                               closure_0 = closure_1_0;
@@ -376,7 +376,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                     debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                   }
                                                   if (tmp9Result2.isThenable(tmp15Result)) {
-                                                    let nextPromise1 = tmp15Result.then(/* F78997 */ function() { ... });
+                                                    let nextPromise1 = tmp15Result.then(/* F79207 */ function() { ... });
                                                   } else {
                                                     nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                   }
@@ -440,7 +440,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                     debug.log("Event processor \"" + str + "\" dropped event");
                                                   }
                                                   if (tmp9Result.isThenable(tmp4Result)) {
-                                                    let nextPromise = tmp4Result.then(/* F78997 */ function() { ... });
+                                                    let nextPromise = tmp4Result.then(/* F79207 */ function() { ... });
                                                   } else {
                                                     sum1 = sum + 1;
                                                     closure_0 = closure_1_0;
@@ -466,7 +466,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                           debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                         }
                                                         if (tmp9Result2.isThenable(tmp15Result)) {
-                                                          let nextPromise1 = tmp15Result.then(/* F78997 */ function() { ... });
+                                                          let nextPromise1 = tmp15Result.then(/* F79207 */ function() { ... });
                                                         } else {
                                                           nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                         }
@@ -606,7 +606,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                               debug.log("Event processor \"" + str + "\" dropped event");
                                             }
                                             if (tmp9Result.isThenable(tmp4Result)) {
-                                              let nextPromise = tmp4Result.then(/* F78997 */ function() { ... });
+                                              let nextPromise = tmp4Result.then(/* F79207 */ function() { ... });
                                             } else {
                                               sum1 = sum + 1;
                                               closure_0 = closure_1_0;
@@ -632,7 +632,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                     debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                   }
                                                   if (tmp9Result2.isThenable(tmp15Result)) {
-                                                    let nextPromise1 = tmp15Result.then(/* F78997 */ function() { ... });
+                                                    let nextPromise1 = tmp15Result.then(/* F79207 */ function() { ... });
                                                   } else {
                                                     nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                   }
@@ -696,7 +696,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                     debug.log("Event processor \"" + str + "\" dropped event");
                                                   }
                                                   if (tmp9Result.isThenable(tmp4Result)) {
-                                                    let nextPromise = tmp4Result.then(/* F78997 */ function() { ... });
+                                                    let nextPromise = tmp4Result.then(/* F79207 */ function() { ... });
                                                   } else {
                                                     sum1 = sum + 1;
                                                     closure_0 = closure_1_0;
@@ -722,7 +722,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                           debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                         }
                                                         if (tmp9Result2.isThenable(tmp15Result)) {
-                                                          let nextPromise1 = tmp15Result.then(/* F78997 */ function() { ... });
+                                                          let nextPromise1 = tmp15Result.then(/* F79207 */ function() { ... });
                                                         } else {
                                                           nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                         }
@@ -824,7 +824,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                     debug.log("Event processor \"" + str + "\" dropped event");
                                                   }
                                                   if (tmp9Result.isThenable(tmp4Result)) {
-                                                    let nextPromise = tmp4Result.then(/* F78997 */ function() { ... });
+                                                    let nextPromise = tmp4Result.then(/* F79207 */ function() { ... });
                                                   } else {
                                                     sum1 = sum + 1;
                                                     closure_0 = closure_1_0;
@@ -850,7 +850,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                           debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                         }
                                                         if (tmp9Result2.isThenable(tmp15Result)) {
-                                                          let nextPromise1 = tmp15Result.then(/* F78997 */ function() { ... });
+                                                          let nextPromise1 = tmp15Result.then(/* F79207 */ function() { ... });
                                                         } else {
                                                           nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                         }
@@ -914,7 +914,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                           debug.log("Event processor \"" + str + "\" dropped event");
                                                         }
                                                         if (tmp9Result.isThenable(tmp4Result)) {
-                                                          let nextPromise = tmp4Result.then(/* F78997 */ function() { ... });
+                                                          let nextPromise = tmp4Result.then(/* F79207 */ function() { ... });
                                                         } else {
                                                           sum1 = sum + 1;
                                                           closure_0 = closure_1_0;
@@ -940,7 +940,7 @@ function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
                                                                 debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                               }
                                                               if (tmp9Result2.isThenable(tmp15Result)) {
-                                                                let nextPromise1 = tmp15Result.then(/* F78997 */ function() { ... });
+                                                                let nextPromise1 = tmp15Result.then(/* F79207 */ function() { ... });
                                                               } else {
                                                                 nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                               }

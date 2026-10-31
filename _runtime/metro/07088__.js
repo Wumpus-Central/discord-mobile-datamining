@@ -1,7 +1,7 @@
 // === Module 7088: ? ===
 
 // Module 7088
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "737159bf8222c1bab03c6bbf25897f2f", name: "CircleXIcon-primary", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "db11ea9da81d79144310eac53428fbe9", name: "CircleErrorIcon-primary", type: "png" });

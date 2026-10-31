@@ -1,5 +1,61 @@
 // === Module 12909: ? ===
 
 // Module 12909
+import _mod12833 from "module_12833" /* 12833 */;
 
-export default { name: "css-tree", version: "1.1.3", description: "A tool set for CSS: fast detailed parser (CSS \u2192 AST), walker (AST traversal), generator (AST \u2192 CSS) and lexer (validation and matching) based on specs and browser implementations", author: "Roman Dvornov <rdvornov@gmail.com> (https://github.com/lahmatiy)", license: "MIT", repository: "csstree/csstree", keywords: ["css", "ast", "tokenizer", "parser", "walker", "lexer", "generator", "utils", "syntax", "validation"], main: "lib/index.js", unpkg: "dist/csstree.min.js", jsdelivr: "dist/csstree.min.js", scripts: { build: "rollup --config", lint: "eslint data lib scripts test && node scripts/review-syntax-patch --lint && node scripts/update-docs --lint", "lint-and-test": "npm run lint && npm test", "update:docs": "node scripts/update-docs", "review:syntax-patch": "node scripts/review-syntax-patch", test: "mocha --reporter progress", coverage: "nyc npm test", travis: "nyc npm run lint-and-test && npm run coveralls", coveralls: "nyc report --reporter=text-lcov | coveralls", prepublishOnly: "npm run build", hydrogen: "node --trace-hydrogen --trace-phase=Z --trace-deopt --code-comments --hydrogen-track-positions --redirect-code-traces --redirect-code-traces-to=code.asm --trace_hydrogen_file=code.cfg --print-opt-code bin/parse --stat -o /dev/null" }, dependencies: { "mdn-data": "2.0.14", "source-map": "^0.6.1" }, devDependencies: { "@rollup/plugin-commonjs": "^11.0.2", "@rollup/plugin-json": "^4.0.2", "@rollup/plugin-node-resolve": "^7.1.1", coveralls: "^3.0.9", eslint: "^6.8.0", "json-to-ast": "^2.1.0", mocha: "^6.2.3", nyc: "^14.1.1", rollup: "^1.32.1", "rollup-plugin-terser": "^5.3.0" }, engines: { node: ">=8.0.0" }, files: ["data", "dist", "lib"] };
+function consumeRaw(arg0) {
+  return this.Raw(arg0, null, false);
+}
+const WhiteSpace = _mod12833.TYPE.WhiteSpace;
+const Comment = _mod12833.TYPE.Comment;
+const AtKeyword = _mod12833.TYPE.AtKeyword;
+const CDO = _mod12833.TYPE.CDO;
+const CDC = _mod12833.TYPE.CDC;
+const obj = {
+  name: "StyleSheet",
+  structure: null,
+  parse() {
+    const self = this;
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      do {
+        let tokenType = self.scanner.tokenType;
+        if (WhiteSpace === tokenType) {
+          let iter2 = self.scanner;
+          let nextResult = iter2.next();
+        } else {
+          if (Comment === tokenType) {
+            let source = self.scanner.source;
+            if (33 !== source.charCodeAt(self.scanner.tokenStart + 2)) {
+              let iter = self.scanner;
+              let nextResult1 = iter.next();
+            } else {
+              let CommentResult = self.Comment();
+            }
+          } else if (CDO === tokenType) {
+            CommentResult = self.CDO();
+          } else if (CDC === tokenType) {
+            CommentResult = self.CDC();
+          } else if (AtKeyword === tokenType) {
+            CommentResult = self.parseWithFallback(self.Atrule, consumeRaw);
+          } else {
+            CommentResult = self.parseWithFallback(self.Rule, consumeRaw);
+          }
+          let arr = list.push(CommentResult);
+        }
+      } while (!self.scanner.eof);
+    }
+    const element = { type: "StyleSheet", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: list };
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0);
+  },
+  walkContext: "stylesheet"
+};
+const obj2 = { children: null };
+const items = [["Comment", "CDO", "CDC", "Atrule", "Rule", "Raw"]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

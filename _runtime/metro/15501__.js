@@ -1,12 +1,7 @@
 // === Module 15501: ? ===
 
 // Module 15501
-import _mod15515 from "module_15515" /* 15515 */;
-import assign from "module_15502" /* 15502 */;
-import Deflate from "Deflate" /* 15503 */;
-import Inflate from "Inflate" /* 15511 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod15515);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/light", width: 24, height: 23, scales: [2, 3], hash: "28792e38fe66a9bcb0dec80f42dff8d4", name: "tier_2_24px", type: "png" });

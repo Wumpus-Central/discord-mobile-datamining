@@ -1,20 +1,25 @@
 // === Module 16116: ? ===
 
 // Module 16116
-import _mod16091 from "module_16091" /* 16091 */;
+const require = globalThis.__r;
 
-if (_mod16091) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
+const require = arg1;
+const dependencyMap = arg6;
+
+export function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("module_16117").units;
+  return units.filter((item) => (function isSupported(unit, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
     }
-    return applyArgumentsResult;
-  };
+    try {
+      const obj = { style: "unit", unit };
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+      return memoizedNumberFormat.resolvedOptions().unit === unit;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
 }
-
-export default fn;

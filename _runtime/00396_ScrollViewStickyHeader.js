@@ -200,7 +200,7 @@ export default function ScrollViewStickyHeader(ref) {
     }, []), ref.ref),
     style: null,
     passthroughAnimatedPropExplicitValues: tmp24,
-    children: null
+    children: first(onlyResult, { onLayout: "Array", style: closure_12.fill })
   };
   const items4 = [onlyResult.props.style, closure_12.header, ];
   const obj5 = { transform: null };
@@ -208,7 +208,5 @@ export default function ScrollViewStickyHeader(ref) {
   obj5.transform = items5;
   items4[2] = obj5;
   obj4.style = items4;
-  const obj6 = { onLayout: "Array", style: closure_12.fill };
-  obj4.children = first(onlyResult, obj6);
   return first3(tmp15(tmp16[5]).View, obj4);
 };

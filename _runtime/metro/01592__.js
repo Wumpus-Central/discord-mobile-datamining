@@ -1,52 +1,18 @@
 // === Module 1592: ? ===
 
 // Module 1592
-import _slicedToArray from "module_32" /* 32 */;
+import PreventRemoveContext from "PreventRemoveContext" /* 1567 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+require = arg1;
 
-const require = arg1;
-
-export function usePreventRemove(arg0, arg1) {
-  _require = arg0;
-  importDefault = arg1;
-  const first = navigation(key.useState(() => closure_0(first[2]).nanoid()), 1)[0];
-  navigation = require("module_1541").useNavigation();
-  let obj = require("module_1541");
-  key = require("module_1538").useRoute().key;
-  const obj2 = require("module_1538");
-  const preventRemoveContext = require("module_1593").usePreventRemoveContext();
-  const setPreventRemove = preventRemoveContext.setPreventRemove;
-  const notifyPreventRemove = preventRemoveContext.notifyPreventRemove;
-  const items = [setPreventRemove, first, key, arg0];
-  const insertionEffect = key.useInsertionEffect(() => {
-    setPreventRemove(first, key, closure_0);
-    return () => {
-      setPreventRemove(first, key, false);
-    };
-  }, items);
-  const items1 = [first, key, arg0, notifyPreventRemove];
-  const effect = key.useEffect(() => {
-    notifyPreventRemove();
-    return () => {
-      notifyPreventRemove();
-    };
-  }, items1);
-  const tmp6 = require("module_1520")((preventDefault) => {
-    if (closure_0) {
-      preventDefault.preventDefault();
-      const obj = { data: preventDefault.data };
-      closure_1(obj);
-    }
-  });
-  closure_7 = tmp6;
-  const items2 = [navigation, tmp6];
-  const effect1 = key.useEffect(() => {
-    let addListenerResult;
-    if (navigation != null) {
-      addListenerResult = navigation.addListener("beforeRemove", closure_7);
-    }
-    return addListenerResult;
-  }, items2);
+export function usePreventRemoveContext() {
+  const context = noop.useContext(PreventRemoveContext.PreventRemoveContext);
+  if (null == context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the prevent remove context. Is your component inside NavigationContent?");
+    throw error;
+  } else {
+    return context;
+  }
 }

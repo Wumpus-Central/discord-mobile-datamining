@@ -1,32 +1,25 @@
 // === Module 6483: ? ===
 
 // Module 6483
+import _mod6484 from "module_6484" /* 6484 */;
 
-export default function isArguments(callee) {
-  const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(callee);
-  let tmp3 = "[object Arguments]" === tmp2;
-  if (!tmp3) {
-    let tmp4 = "[object Array]" !== tmp2;
-    if (tmp4) {
-      tmp4 = null !== callee;
-    }
-    if (tmp4) {
-      tmp4 = typeof callee === "object";
-    }
-    if (tmp4) {
-      tmp4 = typeof callee.length === "number";
-    }
-    if (tmp4) {
-      tmp4 = callee.length >= 0;
-    }
-    if (!tmp4) {
-      tmp3 = tmp4;
-    } else {
-      const call2 = toString.call;
-      const str2 = "[object Function]";
-      const tmp6 = typeof call2 === "unknown" ? toString() : call2(str2);
+
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
+          }
+          return trim5;
+        }
+      }
     }
   }
-  return tmp3;
+  trim5 = _mod6484;
 };

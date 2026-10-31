@@ -1,7 +1,12 @@
 // === Module 7025: ? ===
 
 // Module 7025
-import _mod7026 from "module_7026" /* 7026 */;
 
-
-export default _mod7026;
+export (width) => {
+  width = width.width;
+  let num = 360;
+  if (width - 56 <= 360) {
+    num = width - 56;
+  }
+  return num;
+}

@@ -1,12 +1,32 @@
 // === Module 5517: ? ===
 
 // Module 5517
-import PlatformConfig2 from "PlatformConfig" /* 5515 */;
+import _mod5518 from "module_5518" /* 5518 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = PlatformConfig2.PlatformConfig;
-  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
-}
+export default function toPrimitive(arg0, arg1) {
+  if ("object" == obj.default(arg0)) {
+    if (arg0) {
+      let str = arg1;
+      const _Symbol = Symbol;
+      if (undefined !== arg0[Symbol.toPrimitive]) {
+        const call = tmp4.call;
+        if (!str) {
+          str = "default";
+        }
+        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
+        if ("object" != tmpResult.default(tmp5)) {
+          return tmp5;
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
+          throw typeError;
+        }
+        tmpResult = _mod5518;
+      } else {
+        return "string" === str ? String : Number(arg0);
+      }
+    }
+  }
+  return arg0;
+};

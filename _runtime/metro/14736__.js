@@ -1,7 +1,7 @@
 // === Module 14736: ? ===
 
 // Module 14736
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b7967e1c069a1d25ab22d1157c869621", name: "MoreVerticalIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "000feaebcabc55e90b1dcd63e76aa1dd", name: "ShieldLockIcon", type: "png" });

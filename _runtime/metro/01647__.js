@@ -1,11 +1,9 @@
 // === Module 1647: ? ===
 
 // Module 1647
-import _mod17 from "module_17" /* 17 */;
 import module_65 from "module_65" /* 65 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "ClippingScrollViewDecoratorView", validAttributes: { contentInsetBottom: true, contentInsetTop: true, applyWorkaroundForContentInsetHitTestBug: true } };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "KeyboardToolbarGroupView", validAttributes: {} };
 
-export default module_65.get("ClippingScrollViewDecoratorView", () => obj);
+export default module_65.get("KeyboardToolbarGroupView", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

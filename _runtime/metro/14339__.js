@@ -1,7 +1,7 @@
 // === Module 14339: ? ===
 
 // Module 14339
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "9f983315273ecf4164927351f28f2400", name: "ic_premium_overview_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 119, height: 83, scales: [2, 3], hash: "0b100afac52015c470ea1ec3ef8acf50", name: "redesign_email_header", type: "png" });

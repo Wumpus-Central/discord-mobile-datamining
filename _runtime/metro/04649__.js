@@ -1,17 +1,17 @@
 // === Module 4649: ? ===
 
 // Module 4649
-import module_4641_mod from "module_4641" /* 4641 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
+import _typeof_mod from "module_4294" /* 4294 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-let module_4641 = module_4641_mod;
-if (!module_4641) {
-  const obj = { default: module_4641 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4641;
+  tmp3 = _typeof;
 }
-module_4641 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisQuarter(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4641.default(Date.now(), arg0);
+export default function isSameYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  return fullYear === _typeof.default(arg1).getFullYear();
 };
 export default exports.default;

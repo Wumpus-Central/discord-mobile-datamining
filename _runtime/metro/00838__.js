@@ -245,7 +245,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               }
                             } else {
                               try {
@@ -379,8 +379,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                     if (Array.isArray(modelVersion.candidates)) {
                                       if (modelVersion.candidates.length > 0) {
                                         const candidates = modelVersion.candidates;
-                                        let mapped = candidates.map(/* F139436 */ function() { ... });
-                                        let found = mapped.filter(/* F139437 */ function() { ... });
+                                        let mapped = candidates.map(/* F139855 */ function() { ... });
+                                        let found = mapped.filter(/* F139856 */ function() { ... });
                                         if (found.length > 0) {
                                           const obj5 = {};
                                           obj5[""(dependencyMap[1]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = found.join("");
@@ -491,8 +491,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                                       if (Array.isArray(config.tools)) {
                                                         const tools = config.tools;
                                                         let _JSON = JSON;
-                                                        obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(/* F79185 */ function() { ... }));
-                                                        const flatMapResult = tools.flatMap(/* F79185 */ function() { ... });
+                                                        obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(/* F79395 */ function() { ... }));
+                                                        const flatMapResult = tools.flatMap(/* F79395 */ function() { ... });
                                                       }
                                                     }
                                                     tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
@@ -564,8 +564,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                             obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
                                             obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                             obj5.attributes = obj;
-                                            closure_0 = closure_2(/* F133733 */ function() { ... });
-                                            let startSpanManualResult = tmp4Result6.startSpanManual(obj5, /* F133734 */ function() { ... });
+                                            closure_0 = closure_2(/* F134144 */ function() { ... });
+                                            let startSpanManualResult = tmp4Result6.startSpanManual(obj5, /* F134145 */ function() { ... });
                                             const tmp4Result7 = tmp4(tmp5[3]);
                                           } else {
                                             const _HermesInternal = HermesInternal;
@@ -575,7 +575,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                               combined = concat(finalOperationName, " ", str15);
                                             }
                                             let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                            startSpanManualResult = tmp4Result6.startSpan(obj6, /* F120169 */ function() { ... });
+                                            startSpanManualResult = tmp4Result6.startSpan(obj6, /* F120542 */ function() { ... });
                                             const tmp4Result8 = tmp4(tmp5[3]);
                                           }
                                           return startSpanManualResult;
@@ -658,8 +658,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                                       if (Array.isArray(config.tools)) {
                                                         const tools = config.tools;
                                                         let _JSON = JSON;
-                                                        obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(/* F79185 */ function() { ... }));
-                                                        const flatMapResult = tools.flatMap(/* F79185 */ function() { ... });
+                                                        obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(/* F79395 */ function() { ... }));
+                                                        const flatMapResult = tools.flatMap(/* F79395 */ function() { ... });
                                                       }
                                                     }
                                                     tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
@@ -731,8 +731,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                             obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
                                             obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                             obj5.attributes = obj;
-                                            closure_0 = closure_2(/* F133733 */ function() { ... });
-                                            let startSpanManualResult = tmp4Result6.startSpanManual(obj5, /* F133734 */ function() { ... });
+                                            closure_0 = closure_2(/* F134144 */ function() { ... });
+                                            let startSpanManualResult = tmp4Result6.startSpanManual(obj5, /* F134145 */ function() { ... });
                                             const tmp4Result7 = tmp4(tmp5[3]);
                                           } else {
                                             const _HermesInternal = HermesInternal;
@@ -742,7 +742,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                               combined = concat(finalOperationName, " ", str15);
                                             }
                                             let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                            startSpanManualResult = tmp4Result6.startSpan(obj6, /* F120169 */ function() { ... });
+                                            startSpanManualResult = tmp4Result6.startSpan(obj6, /* F120542 */ function() { ... });
                                             const tmp4Result8 = tmp4(tmp5[3]);
                                           }
                                           return startSpanManualResult;
@@ -969,7 +969,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               }
                             } else {
                               try {
@@ -1103,8 +1103,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                     if (Array.isArray(modelVersion.candidates)) {
                                       if (modelVersion.candidates.length > 0) {
                                         const candidates = modelVersion.candidates;
-                                        let mapped = candidates.map(/* F139436 */ function() { ... });
-                                        let found = mapped.filter(/* F139437 */ function() { ... });
+                                        let mapped = candidates.map(/* F139855 */ function() { ... });
+                                        let found = mapped.filter(/* F139856 */ function() { ... });
                                         if (found.length > 0) {
                                           const obj5 = {};
                                           obj5[""(dependencyMap[1]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = found.join("");
@@ -1294,7 +1294,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                           c5 = 0;
                                           c6 = 0;
                                           c4 = 0;
-                                          return (/* F138235 */ function*() { ... })();
+                                          return (/* F138651 */ function*() { ... })();
                                         });
                                         let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
                                           const self = this;
@@ -1319,7 +1319,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                           if (tmp) {
                                             closure_3(_function, first);
                                           }
-                                          return str(dependencyMap[11]).handleCallbackErrors(/* F133735 */ function() { ... }, /* F133736 */ function() { ... }, /* F133737 */ function() { ... }, /* F133738 */ function() { ... });
+                                          return str(dependencyMap[11]).handleCallbackErrors(/* F134146 */ function() { ... }, /* F134147 */ function() { ... }, /* F134148 */ function() { ... }, /* F134149 */ function() { ... });
                                         });
                                         const tmp4Result8 = tmp4(tmp5[3]);
                                       }
@@ -1527,7 +1527,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                           c5 = 0;
                                           c6 = 0;
                                           c4 = 0;
-                                          return (/* F138235 */ function*() { ... })();
+                                          return (/* F138651 */ function*() { ... })();
                                         });
                                         let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
                                           const self = this;
@@ -1552,7 +1552,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                           if (tmp) {
                                             closure_3(_function, first);
                                           }
-                                          return str(dependencyMap[11]).handleCallbackErrors(/* F133735 */ function() { ... }, /* F133736 */ function() { ... }, /* F133737 */ function() { ... }, /* F133738 */ function() { ... });
+                                          return str(dependencyMap[11]).handleCallbackErrors(/* F134146 */ function() { ... }, /* F134147 */ function() { ... }, /* F134148 */ function() { ... }, /* F134149 */ function() { ... });
                                         });
                                         const tmp4Result8 = tmp4(tmp5[3]);
                                       }
@@ -1637,8 +1637,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                                                   if (Array.isArray(config.tools)) {
                                                                     const tools = config.tools;
                                                                     let _JSON = JSON;
-                                                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(/* F79185 */ function() { ... }));
-                                                                    const flatMapResult = tools.flatMap(/* F79185 */ function() { ... });
+                                                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(/* F79395 */ function() { ... }));
+                                                                    const flatMapResult = tools.flatMap(/* F79395 */ function() { ... });
                                                                   }
                                                                 }
                                                                 tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
@@ -1710,8 +1710,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                                         obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
                                                         obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                                         obj5.attributes = obj;
-                                                        closure_0 = closure_2(/* F133733 */ function() { ... });
-                                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, /* F133734 */ function() { ... });
+                                                        closure_0 = closure_2(/* F134144 */ function() { ... });
+                                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, /* F134145 */ function() { ... });
                                                         const tmp4Result7 = tmp4(tmp5[3]);
                                                       } else {
                                                         const _HermesInternal = HermesInternal;
@@ -1721,7 +1721,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                                           combined = concat(finalOperationName, " ", str15);
                                                         }
                                                         let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                                        startSpanManualResult = tmp4Result6.startSpan(obj6, /* F120169 */ function() { ... });
+                                                        startSpanManualResult = tmp4Result6.startSpan(obj6, /* F120542 */ function() { ... });
                                                         const tmp4Result8 = tmp4(tmp5[3]);
                                                       }
                                                       return startSpanManualResult;
@@ -1804,8 +1804,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                                                   if (Array.isArray(config.tools)) {
                                                                     const tools = config.tools;
                                                                     let _JSON = JSON;
-                                                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(/* F79185 */ function() { ... }));
-                                                                    const flatMapResult = tools.flatMap(/* F79185 */ function() { ... });
+                                                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(/* F79395 */ function() { ... }));
+                                                                    const flatMapResult = tools.flatMap(/* F79395 */ function() { ... });
                                                                   }
                                                                 }
                                                                 tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
@@ -1877,8 +1877,8 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                                         obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
                                                         obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                                         obj5.attributes = obj;
-                                                        closure_0 = closure_2(/* F133733 */ function() { ... });
-                                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, /* F133734 */ function() { ... });
+                                                        closure_0 = closure_2(/* F134144 */ function() { ... });
+                                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, /* F134145 */ function() { ... });
                                                         const tmp4Result7 = tmp4(tmp5[3]);
                                                       } else {
                                                         const _HermesInternal = HermesInternal;
@@ -1888,7 +1888,7 @@ export function instrumentGoogleGenAIClient(arg0, arg1) {
                                                           combined = concat(finalOperationName, " ", str15);
                                                         }
                                                         let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                                        startSpanManualResult = tmp4Result6.startSpan(obj6, /* F120169 */ function() { ... });
+                                                        startSpanManualResult = tmp4Result6.startSpan(obj6, /* F120542 */ function() { ... });
                                                         const tmp4Result8 = tmp4(tmp5[3]);
                                                       }
                                                       return startSpanManualResult;

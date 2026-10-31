@@ -1,7 +1,7 @@
 // === Module 3095: ? ===
 
 // Module 3095
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "4722ed7425273b370050b5d7ce8dd3b5", name: "cs.messages.4722ed7425273b370050b5d7ce8dd3b5.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/checkpoint/testing", scales: [1], hash: "3f3f359f38a959a5522f67e558661790", name: "CheckpointTesting.compiled.messages", type: "jsona" });

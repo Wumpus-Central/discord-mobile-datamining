@@ -1,7 +1,7 @@
 // === Module 11190: ? ===
 
 // Module 11190
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/channel_following/dark", width: 280, height: 120, scales: [2, 3], hash: "902d26debf9cf5ba93edffb3d1cb9422", name: "channel_following_success_3", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "6fcffd29ade22a0f8e9e38ff473cdae7", name: "ThemeDarkIcon", type: "png" });

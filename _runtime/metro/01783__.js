@@ -1,13 +1,13 @@
 // === Module 1783: ? ===
 
 // Module 1783
+import _slicedToArray_mod from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import c2 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const JumpingTransition = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,18 +27,19 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_6 = { code: "function pnpm_JumpingTransitionTs1(values){const{delayFunction,delay,withTiming,config,withSequence,halfDuration,Easing,callback}=this.__closure;const d=Math.max(Math.abs(values.targetOriginX-values.currentOriginX),Math.abs(values.targetOriginY-values.currentOriginY));return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withTiming(values.targetOriginX,config)),originY:delayFunction(delay,withSequence(withTiming(Math.min(values.targetOriginY,values.currentOriginY)-d,{duration:halfDuration,easing:Easing.out(Easing.exp)}),withTiming(values.targetOriginY,{...config,duration:halfDuration,easing:Easing.bounce}))),width:delayFunction(delay,withTiming(values.targetWidth,config)),height:delayFunction(delay,withTiming(values.targetHeight,config))},callback:callback};}" };
-class JumpingTransition {
+let _slicedToArray = _slicedToArray_mod;
+let closure_5 = { code: "function pnpm_LinearTransitionTs1(values){const{delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,animation(values.targetOriginX,config)),originY:delayFunction(delay,animation(values.targetOriginY,config)),width:delayFunction(delay,animation(values.targetWidth,config)),height:delayFunction(delay,animation(values.targetHeight,config))},callback:callback};}" };
+class LinearTransition {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = c2(this, JumpingTransition);
+    tmp = closure_1(this, LinearTransition);
     items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(JumpingTransition);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp2 = closure_3;
+    obj = closure_3(LinearTransition);
+    tmp3 = c2;
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -48,60 +49,38 @@ class JumpingTransition {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const callbackV = delayFunction.callbackV;
-      const delay = delayFunction.getDelay();
-      let num = delayFunction.durationV;
-      if (num == null) {
-        num = 300;
-      }
-      const result = num / 2;
-      closure_3 = result;
-      const config = { duration: num };
-      const fn = function n(originX) {
-        const absolute = Math.abs(originX.targetOriginX - originX.currentOriginX);
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const callbackV = closure_0.callbackV;
+      const delay = closure_0.getDelay();
+      const fn = function t(originX) {
         const obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null, callback: null };
-        const size = { originX: null, originY: null, width: null, height: null };
-        const bound = Math.max(absolute, Math.abs(originX.targetOriginY - originX.currentOriginY));
-        size.originX = delayFunction(delay, delayFunction(1723).withTiming(originX.targetOriginX, obj));
-        const obj3 = delayFunction(1723);
-        const obj4 = delayFunction(1723);
-        const obj2 = { duration: result, easing: null };
-        const diff = Math.min(originX.targetOriginY, originX.currentOriginY) - bound;
-        const Easing = delayFunction(1703).Easing;
-        obj2.easing = Easing.out(delayFunction(1703).Easing.exp);
-        const obj5 = delayFunction(1723);
-        const withTimingResult = delayFunction(1723).withTiming(diff, obj2);
-        const obj6 = {};
-        const merged = Object.assign(obj);
-        obj6.duration = result;
-        obj6.easing = delayFunction(1703).Easing.bounce;
-        size.originY = delayFunction(delay, obj4.withSequence(withTimingResult, delayFunction(1723).withTiming(originX.targetOriginY, obj6)));
-        const obj7 = delayFunction(1723);
-        size.width = delayFunction(delay, delayFunction(1723).withTiming(originX.targetWidth, obj));
-        const obj9 = delayFunction(1723);
-        size.height = delayFunction(delay, delayFunction(1723).withTiming(originX.targetHeight, obj));
+        const size = { originX: delayFunction(delay, first(originX.targetOriginX, closure_2)), originY: delayFunction(delay, first(originX.targetOriginY, closure_2)), width: delayFunction(delay, first(originX.targetWidth, closure_2)), height: delayFunction(delay, first(originX.targetHeight, closure_2)) };
         obj.animations = size;
         obj.callback = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withTiming: JumpingTransition(1723).withTiming, config, withSequence: JumpingTransition(1723).withSequence, halfDuration: result, Easing: JumpingTransition(1703).Easing, callback: callbackV };
-      fn.__workletHash = 11549153259849;
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], callback: callbackV };
+      fn.__workletHash = 16224579837767;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_inherits(JumpingTransition, fn(1721).BaseAnimationBuilder);
+_slicedToArray = LinearTransition;
+_inherits(LinearTransition, fn(1720).ComplexAnimationBuilder);
 const entry = {
   key: "createInstance",
   value: function createInstance() {
-    return JumpingTransition();
+    return _slicedToArray();
   }
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(JumpingTransition, null, items);
-importDefaultResultResult.presetName = "JumpingTransition";
+const importDefaultResultResult = _createClass(LinearTransition, null, items);
+importDefaultResultResult.presetName = "LinearTransition";
 
-export const JumpingTransition = importDefaultResultResult;
+export const LinearTransition = importDefaultResultResult;
+export const Layout = importDefaultResultResult;

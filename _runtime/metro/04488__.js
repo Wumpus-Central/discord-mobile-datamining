@@ -1,49 +1,28 @@
 // === Module 4488: ? ===
 
 // Module 4488
-import _typeof_mod from "module_4289" /* 4289 */;
-import endOfDay_mod from "endOfDay" /* 4489 */;
-import endOfMonth_mod from "endOfMonth" /* 4490 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
-
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let endOfDay = endOfDay_mod;
-if (!endOfDay) {
-  const obj2 = { default: endOfDay };
-  let tmp5 = obj2;
-} else {
-  tmp5 = endOfDay;
-}
-endOfDay = tmp5;
-let endOfMonth = endOfMonth_mod;
-if (!endOfMonth) {
-  const obj3 = { default: endOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = endOfMonth;
-}
-endOfMonth = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-
-export default function isLastDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = endOfDay.default(defaultResult1).getTime();
-  const defaultResult2 = endOfDay.default(defaultResult1);
-  return time === endOfMonth.default(defaultResult1).getTime();
+const obj = {
+  ceil: Math.ceil,
+  round: Math.round,
+  floor: Math.floor,
+  trunc(arg0) {
+    if (arg0 < 0) {
+      const _Math2 = Math;
+      let rounded = Math.ceil(arg0);
+    } else {
+      const _Math = Math;
+      rounded = Math.floor(arg0);
+    }
+    return rounded;
+  }
 };
-export default exports.default;
+const trunc = "trunc";
+
+export function getRoundingMethod(roundingMethod) {
+  if (roundingMethod) {
+    let tmp3 = obj[roundingMethod];
+  } else {
+    tmp3 = obj[trunc];
+  }
+  return tmp3;
+}

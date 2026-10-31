@@ -1,7 +1,7 @@
 // === Module 19181: ? ===
 
 // Module 19181
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_panel/native/images", width: 24, height: 24, scales: [1, 2, 3, 4], hash: "2e77386663ba77387d021543bdafafef", name: "airplay", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 24, height: 24, scales: [2, 3], hash: "a6de40e8388b714e9153c727bc648e49", name: "Discord", type: "png" });

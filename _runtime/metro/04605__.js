@@ -1,8 +1,10 @@
 // === Module 4605: ? ===
 
 // Module 4605
-import _mod4595 from "module_4595" /* 4595 */;
+import _mod4600 from "module_4600" /* 4600 */;
+import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 4531 */;
 
+let _createSuperInternal = require;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -28,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(StandAloneMonthParser, Parser) {
+function _setPrototypeOf(ISOWeekYearParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(StandAloneMonthParser, Parser) {
-      StandAloneMonthParser.__proto__ = Parser;
-      return StandAloneMonthParser;
+    _setPrototypeOf = function _setPrototypeOf(ISOWeekYearParser, Parser) {
+      ISOWeekYearParser.__proto__ = Parser;
+      return ISOWeekYearParser;
     };
   }
-  return _setPrototypeOf(StandAloneMonthParser, Parser);
+  return _setPrototypeOf(ISOWeekYearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,9 +56,17 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4595.Parser;
-let _createSuperInternal;
-class StandAloneMonthParser {
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
+if (!startOfUTCISOWeek) {
+  let obj = { default: startOfUTCISOWeek };
+  let tmp3 = obj;
+} else {
+  tmp3 = startOfUTCISOWeek;
+}
+startOfUTCISOWeek = tmp3;
+const Parser = _mod4600.Parser;
+_createSuperInternal = undefined;
+class ISOWeekYearParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -92,10 +102,10 @@ class StandAloneMonthParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 110, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 110;
-          applyResult.priority = 110;
+          num3 = 130;
+          applyResult.priority = 130;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +116,7 @@ class StandAloneMonthParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["Y", "R", "q", "Q", "M", "w", "I", "D", "i", "e", "c", "t", "T"];
+          items1 = ["G", "y", "Y", "u", "Q", "q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +140,7 @@ class StandAloneMonthParser {
     }
   }
 }
-let dependencyMap = StandAloneMonthParser;
+let dependencyMap = ISOWeekYearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,9 +152,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-StandAloneMonthParser.prototype = Object.create(prototype, { constructor: { value: StandAloneMonthParser, writable: true, configurable: true } });
+ISOWeekYearParser.prototype = Object.create(prototype, { constructor: { value: ISOWeekYearParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(StandAloneMonthParser, Parser);
+  _setPrototypeOf(ISOWeekYearParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -181,10 +191,10 @@ dependencyMap = (function _isNativeReflectConstruct() {
 })();
 _createSuperInternal = function _createSuperInternal() {
   const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
+  const obj = hasOwnProperty(_createSuperInternal);
   if (closure_1) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
@@ -205,62 +215,43 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    function valueCallback(arg0) {
-      return arg0 - 1;
-    }
-    if ("L" === arg1) {
-      return _createSuperInternal(4597).mapValue(_createSuperInternal(4597).parseNumericPattern(_createSuperInternal(4598).numericPatterns.month, arg0), valueCallback);
-    } else if ("LL" === arg1) {
-      return _createSuperInternal(4597).mapValue(_createSuperInternal(4597).parseNDigits(2, arg0), valueCallback);
-    } else if ("Lo" === arg1) {
-      return _createSuperInternal(4597).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
-    } else if ("LLL" === arg1) {
-      return ordinalNumber.month(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
-    } else if ("LLLLL" === arg1) {
-      return ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
+  value: function parse(arg0, arg1) {
+    if ("R" === arg1) {
+      let parseNDigitsSignedResult = _createSuperInternal(4602).parseNDigitsSigned(4, arg0);
     } else {
-      return ordinalNumber.month(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.month(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.month(arg0, { width: "narrow", context: "standalone" });
+      parseNDigitsSignedResult = _createSuperInternal(4602).parseNDigitsSigned(arg1.length, arg0);
     }
+    return parseNDigitsSignedResult;
   }
 };
 let items = [
   entry,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 11;
-      }
-      return tmp;
-    }
-  },
-  {
     key: "set",
-    value: function set(setUTCMonth, arg1, arg2) {
-      setUTCMonth.setUTCMonth(arg2, 1);
-      setUTCMonth.setUTCHours(0, 0, 0, 0);
-      return setUTCMonth;
+    value: function set(arg0, arg1, arg2) {
+      const date = new Date(0);
+      date.setUTCFullYear(arg2, 0, 4);
+      date.setUTCHours(0, 0, 0, 0);
+      return startOfUTCISOWeek.default(date);
     }
   }
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
+    let tmp7 = items[num];
+    let flag = tmp7.enumerable;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp7.enumerable = flag;
+    tmp7.configurable = true;
+    if ("value" in tmp7) {
+      tmp7.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { StandAloneMonthParser };
+export { ISOWeekYearParser };

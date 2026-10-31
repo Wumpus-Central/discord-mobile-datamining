@@ -1,15 +1,7 @@
 // === Module 10557: ? ===
 
 // Module 10557
-import _mod19 from "module_19" /* 19 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const useRef = _mod19.useRef;
-let closure_1 = {};
 
-export default function useLazyValue(fn) {
-  const tmp = useRef(closure_1);
-  if (tmp.current === closure_1) {
-    tmp.current = fn();
-  }
-  return tmp.current;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_keyboard/native/images", width: 200, height: 80, scales: [2, 3], hash: "e341a934511095337dabafab8c60034b", name: "empty_photos", type: "png" });

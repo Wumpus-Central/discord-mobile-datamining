@@ -2,15 +2,15 @@
 
 // Module 8059
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8055 from "module_8055" /* 8055 */;
 import _modDef8060 from "module_8060" /* 8060 */;
-import _modDef8062 from "module_8062" /* 8062 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeBlend = fn;
+const Circle = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeBlend {
+class Circle {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeBlend);
+    tmp = closure_3(this, Circle);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeBlend);
+    obj = hasOwnProperty(Circle);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -52,32 +52,35 @@ class FeBlend {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeBlend, _modDef8062);
+_inherits(Circle, _modDef8055);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const obj = {
+    const props = this.props;
+    const obj = {};
+    ({ cx, cy, r } = props);
+    const merged = Object.assign(Circle(8046).extract(this, props));
+    obj.cx = cx;
+    obj.cy = cy;
+    obj.r = r;
+    const obj2 = Circle(8046);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(FeBlend(8061).extractFilter(this.props));
-    const obj2 = FeBlend(8061);
-    const merged1 = Object.assign(FeBlend(8061).extractIn(this.props));
-    const obj3 = FeBlend(8061);
-    const merged2 = Object.assign(FeBlend(8061).extractFeBlend(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8060, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeBlend, items);
-importDefaultResultResult.displayName = "FeBlend";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.mode = "normal";
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

@@ -1,45 +1,84 @@
 // === Module 8258: ? ===
 
 // Module 8258
-import _mod8259 from "module_8259" /* 8259 */;
+import _mod8251 from "module_8251" /* 8251 */;
+import _mod8252 from "module_8252" /* 8252 */;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
+require = arg1;
+const dependencyMap = arg6;
+
+export function isBLEND(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "blend");
 }
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
-    };
-  }
-  const _Object2 = Object;
-  fn(_mod8259, exports);
-} else {
-  let _Object = Object;
+export function isELF(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "elf");
+}
+export function isEXE(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exe");
+}
+export function isMACHO(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "macho");
+}
+export function isINDD(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "indd");
+}
+export function isORC(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "orc");
+}
+export function isPARQUET(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "parquet");
+}
+export function isPDF(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pdf");
+}
+export function isPS(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ps");
+}
+export function isRTF(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "rtf");
+}
+export function isSQLITE(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "sqlite");
+}
+export function isSTL(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "stl");
+}
+export function isTTF(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ttf");
+}
+export function isDOC(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "doc");
+}
+export function isPCAP(fileChunk) {
+  fileChunk = _mod8251.getFileChunk(fileChunk);
+  const FileTypes = _mod8252.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pcap");
 }

@@ -1,8 +1,8 @@
 // === Module 4589: ? ===
 
 // Module 4589
-import _typeof_mod from "module_4289" /* 4289 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
+import _typeof_mod from "module_4294" /* 4294 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,9 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFuture(arg0) {
-  requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
-  return time > Date.now();
+export default function isBefore(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time < _typeof.default(arg1).getTime();
 };
 export default exports.default;

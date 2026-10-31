@@ -1,73 +1,44 @@
 // === Module 13112: ? ===
 
 // Module 13112
-import _mod13031 from "module_13031" /* 13031 */;
-import _flush from "_flush" /* 13052 */;
-import _mod13077 from "module_13077" /* 13077 */;
+import _mod13039 from "module_13039" /* 13039 */;
+import _mod13053 from "module_13053" /* 13053 */;
+import _mod13066 from "module_13066" /* 13066 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod13031.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod13031.withScope,
-    getClient() {
-      return _mod13031.getClient();
-    },
-    getScope: _mod13031.getCurrentScope,
-    getIsolationScope: _mod13031.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod13031.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod13031.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod13077.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod13031.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod13031.getCurrentScope();
-        const tmpResult3 = _mod13031;
-        const client = _mod13031.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
-        }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod13031;
-      }
-    }
-  };
-}
 
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+export function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod13066.getClient();
+  const isolationScope = _mod13066.getIsolationScope();
+  if (client) {
+    const options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
+    }
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: _mod13053.dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = _mod13039.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = _mod13039;
+      }
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
+      }
+      const tmpResult = _mod13053;
+    }
+  }
+}

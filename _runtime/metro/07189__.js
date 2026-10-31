@@ -1,20 +1,23 @@
 // === Module 7189: ? ===
 
 // Module 7189
-import _mod17 from "module_17" /* 17 */;
 
-const constants = _mod17.Platform.constants;
-if (constants != null) {
-  const reactNativeVersion = constants.reactNativeVersion;
-}
-try {
-  let major;
-  if (reactNativeVersion != null) {
-    major = reactNativeVersion.major;
+export function getInvertedMultiplier(gestureDirection, arg1) {
+  if ("vertical" === gestureDirection) {
+    return 1;
+  } else if ("vertical-inverted" === gestureDirection) {
+    return -1;
+  } else if ("horizontal" === gestureDirection) {
+    let num2 = 1;
+    if (arg1) {
+      num2 = -1;
+    }
+    return num2;
+  } else if ("horizontal-inverted" === gestureDirection) {
+    let num = -1;
+    if (arg1) {
+      num = 1;
+    }
+    return num;
   }
-  if (0 !== major) {
-    const InteractionManager = _mod17.InteractionManager;
-  }
-  exports.InteractionManager = InteractionManager;
-} catch (err) {
 }

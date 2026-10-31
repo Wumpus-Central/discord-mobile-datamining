@@ -1,38 +1,62 @@
 // === Module 4454: ? ===
 
 // Module 4454
-import module_4293_mod from "module_4293" /* 4293 */;
-import module_4444_mod from "module_4444" /* 4444 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
+import module_4298_mod from "module_4298" /* 4298 */;
+import _typeof_mod from "module_4294" /* 4294 */;
+import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4455 */;
+import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 4456 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-let module_4293 = module_4293_mod;
-if (!module_4293) {
-  const obj = { default: module_4293 };
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj = { default: module_4298 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4293;
+  tmp3 = module_4298;
 }
-module_4293 = tmp3;
-let module_4444 = module_4444_mod;
-if (!module_4444) {
-  const obj2 = { default: module_4444 };
+module_4298 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4444;
+  tmp5 = _typeof;
 }
-module_4444 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+_typeof = tmp5;
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj3 = { default: startOfISOWeekYear };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = startOfISOWeekYear;
 }
-requiredArgs = tmp7;
-let c3 = 60000;
+startOfISOWeekYear = tmp7;
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  const obj4 = { default: differenceInCalendarDays };
+  let tmp9 = obj4;
+} else {
+  tmp9 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp9;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj5 = { default: requiredArgs };
+  let tmp11 = obj5;
+} else {
+  tmp11 = requiredArgs;
+}
+requiredArgs = tmp11;
 
-export default function addMinutes(interval, arg1) {
+export default function setISOWeekYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4444.default(interval, module_4293.default(arg1) * c3);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = module_4298.default(arg1);
+  const date = new Date(0);
+  date.setFullYear(defaultResult2, 0, 4);
+  date.setHours(0, 0, 0, 0);
+  const defaultResult4 = startOfISOWeekYear.default(date);
+  defaultResult4.setDate(defaultResult4.getDate() + differenceInCalendarDays.default(defaultResult1, startOfISOWeekYear.default(defaultResult1)));
+  return defaultResult4;
 };
 export default exports.default;

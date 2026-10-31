@@ -1,7 +1,7 @@
 // === Module 19267: ? ===
 
 // Module 19267
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "288b36dcd0b5f7e0f151e7250c6cbc9d", name: "MobilePhoneDenyIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/sidebar/images", width: 24, height: 24, scales: [2, 3, 4], hash: "5be7f14768f9acc824d9e93779c75d9c", name: "icon-call", type: "png" });

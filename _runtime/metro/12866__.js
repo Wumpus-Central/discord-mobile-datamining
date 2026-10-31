@@ -1,23 +1,30 @@
 // === Module 12866: ? ===
 
 // Module 12866
-import _mod12794 from "module_12794" /* 12794 */;
-import _mod12798 from "module_12798" /* 12798 */;
+import _mod12835 from "module_12835" /* 12835 */;
 
-const Percentage = _mod12798.TYPE.Percentage;
-let obj = {
-  name: "Percentage",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Percentage);
-    const obj2 = { type: "Percentage", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, _mod12794.consumeNumber(this.scanner.source, tokenStart)) };
-    return obj2;
-  },
-  generate(value) {
-    this.chunk(value.value);
-    this.chunk("%");
+function clone(obj) {
+  obj = {};
+  for (const key10006 in arg0) {
+    let arr = arg0[key10006];
+    if (!arr) {
+      obj[key10006] = arr;
+      continue;
+    } else {
+      let _Array = Array;
+      if (!Array.isArray(arr)) {
+        if (!(arr instanceof _mod12835)) {
+          let _Object = Object;
+          let mapped = arr;
+          if (arr.constructor === Object) {
+            mapped = clone(arr);
+          }
+        }
+      }
+      mapped = arr.map(clone);
+    }
   }
-};
+  return obj;
+}
 
-export default obj;
+export default clone;

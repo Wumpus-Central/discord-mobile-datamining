@@ -1,44 +1,81 @@
 // === Module 8323: ? ===
 
 // Module 8323
-const require = globalThis.__r;
+import _mod8279 from "module_8279" /* 8279 */;
+import _modDef8284 from "module_8284" /* 8284 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 8299 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 8300 */;
 
-const require = arg1;
+require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
-let closure_2 = [6, 7, 99];
+const MODEL_ID = { K3_III: 78420 };
+let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 
 export default {
-  get(buffer, Compression, arg2) {
-    let prop = Compression;
-    if (Compression) {
-      let hasItem = undefined === Compression.Compression;
-      if (!hasItem) {
-        hasItem = closure_2.includes(Compression.Compression.value);
+  read(byteLength, arg1, arg2, arg3) {
+    const obj = _modDef8284;
+    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
+    const sum = arg1 + arg2;
+    obj2 = get0thIfdOffset;
+    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
+    let LevelInfo = ifd.PentaxModelID;
+    if (LevelInfo) {
+      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
+    }
+    if (LevelInfo) {
+      LevelInfo = ifd.LevelInfo;
+    }
+    let tmp10 = ifd;
+    if (LevelInfo) {
+      const sum1 = sum + ifd.LevelInfo.__offset;
+      const obj3 = {};
+      if (sum1 + 7 <= byteLength.byteLength) {
+        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
+        const obj4 = { value: int8, description: null };
+        let str6 = "Horizontal (normal)";
+        if (0 !== int8) {
+          let str = "Rotate 270 CW";
+          if (1 !== int8) {
+            let str2 = "Rotate 180";
+            if (2 !== int8) {
+              let str3 = "Rotate 90 CW";
+              if (3 !== int8) {
+                let str4 = "Upwards";
+                if (4 !== int8) {
+                  let str5 = "Unknown";
+                  if (5 === int8) {
+                    str5 = "Downwards";
+                  }
+                  str4 = str5;
+                }
+                str3 = str4;
+              }
+              str2 = str3;
+            }
+            str = str2;
+          }
+          str6 = str;
+        }
+        obj4.description = str6;
+        obj3.CameraOrientation = obj4;
+        const sum2 = sum1 + tmp17.ROLL_ANGLE;
+        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef8284.LITTLE_ENDIAN);
+        const obj5 = { value: int16, description: "" + -0.5 * int16 };
+        obj3.RollAngle = obj5;
+        const sum3 = sum1 + tmp17.PITCH_ANGLE;
+        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef8284.LITTLE_ENDIAN);
+        const obj6 = { value: int161, description: "" + -0.5 * int161 };
+        obj3.PitchAngle = obj6;
       }
-      prop = hasItem;
+      const tmp7Result = _mod8279;
+      delete tmp[tmp2];
+      tmp10 = _mod8279.objectAssign({}, ifd, obj3);
+      const objectAssignResult = _mod8279.objectAssign({}, ifd, obj3);
     }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat.value;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength.value;
-    }
-    if (prop) {
-      Compression.type = "image/jpeg";
-      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
-      buffer = buffer.buffer;
-      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require("module_8271").deferInit(Compression, "base64", function() {
-        return require("module_8271").getBase64Image(this.image);
-      });
-      const obj = require("module_8271");
-    }
-    return Compression;
-  }
+    return tmp10;
+  },
+  PENTAX_IFD_OFFSET: 10,
+  MODEL_ID,
+  LIK3III: obj2
 };

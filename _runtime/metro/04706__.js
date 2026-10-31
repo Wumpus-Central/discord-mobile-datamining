@@ -1,61 +1,107 @@
 // === Module 4706: ? ===
 
 // Module 4706
-import _mod4294 from "module_4294" /* 4294 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
+import _typeof_mod from "module_4294" /* 4294 */;
+import module_4707_mod from "module_4707" /* 4707 */;
+import module_4298_mod from "module_4298" /* 4298 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = _typeof;
 }
-requiredArgs = tmp3;
+_typeof = tmp3;
+let module_4707 = module_4707_mod;
+if (!module_4707) {
+  const obj2 = { default: module_4707 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4707;
+}
+module_4707 = tmp5;
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj3 = { default: module_4298 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4298;
+}
+module_4298 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function setDefaultOptions(obj) {
-  requiredArgs.default(1, arguments);
-  obj = {};
-  const defaultOptions = _mod4294.getDefaultOptions();
-  for (const key10017 in defaultOptions) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10017);
-    } else {
-      hasOwnPropertyResult = call(defaultOptions, key10017);
-    }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      obj[key10017] = defaultOptions[key10017];
-      continue;
-    }
-    continue;
-  }
-  for (const key10023 in arg0) {
-    let _Object2 = Object;
-    let call2 = hasOwnProperty2.call;
-    if (typeof call2 === "unknown") {
-      let hasOwnProperty2Result = hasOwnProperty2(key10023);
-    } else {
-      hasOwnProperty2Result = call2(arg0, key10023);
-    }
-    if (!hasOwnProperty2Result) {
-      continue;
-    } else {
-      if (undefined === arg0[key10023]) {
-        delete tmp[tmp2];
-        continue;
+export default function set(arg0, year) {
+  requiredArgs.default(2, arguments);
+  if ("object" === _typeof(year)) {
+    if (null !== year) {
+      const defaultResult1 = _typeof.default(arg0);
+      const _isNaN = isNaN;
+      if (isNaN(defaultResult1.getTime())) {
+        const _Date = Date;
+        const date = new Date(NaN);
+        return date;
       } else {
-        obj[key10023] = arg0[key10023];
-        continue;
+        if (null != year.year) {
+          defaultResult1.setFullYear(year.year);
+        }
+        let defaultResult2 = defaultResult1;
+        if (null != year.month) {
+          defaultResult2 = module_4707.default(defaultResult1, year.month);
+        }
+        if (null != year.date) {
+          defaultResult2.setDate(module_4298.default(year.date));
+        }
+        if (null != year.hours) {
+          defaultResult2.setHours(module_4298.default(year.hours));
+        }
+        if (null != year.minutes) {
+          defaultResult2.setMinutes(module_4298.default(year.minutes));
+        }
+        if (null != year.seconds) {
+          defaultResult2.setSeconds(module_4298.default(year.seconds));
+        }
+        if (null != year.milliseconds) {
+          defaultResult2.setMilliseconds(module_4298.default(year.milliseconds));
+        }
+        return defaultResult2;
       }
-      continue;
     }
-    continue;
   }
-  _mod4294.setDefaultOptions(obj);
+  const rangeError = new RangeError("values parameter must be an object");
+  throw rangeError;
 };
 export default exports.default;

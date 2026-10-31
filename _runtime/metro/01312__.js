@@ -2,4 +2,4 @@
 
 // Module 1312
 
-export default EvalError;
+export default RangeError;

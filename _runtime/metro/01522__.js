@@ -4,25 +4,19 @@
 import noop from "module_19" /* 19 */;
 
 
-export function useChildListeners() {
-  const current = noop.useRef({ action: [], focus: [] }).current;
+export function useKeyedChildListeners() {
+  const current = noop.useRef(Object.assign(Object.create(null), { getState: {}, beforeRemove: {} })).current;
   const items = [current];
   return {
-    listeners: current,
-    addListener: noop.useCallback((arg0, arg1) => {
+    keyedListeners: current,
+    addKeyedListener: noop.useCallback((arg0, arg1, arg2) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      closure_0[arg0].push(arg1);
-      c2 = false;
+      closure_2 = arg2;
+      closure_0[arg0][arg1] = arg2;
       return () => {
-        const index = current[closure_0].indexOf(closure_1);
-        let tmp4 = !c2;
-        if (!c2) {
-          tmp4 = index > -1;
-        }
-        if (tmp4) {
-          c2 = true;
-          current[closure_0].splice(index, 1);
+        if (current[closure_0][closure_1] === closure_2) {
+          current[closure_0][tmp] = undefined;
         }
       };
     }, items)

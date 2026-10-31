@@ -1,32 +1,10 @@
 // === Module 12865: ? ===
 
 // Module 12865
-import _mod12798 from "module_12798" /* 12798 */;
+import _mod12850 from "module_12850" /* 12850 */;
+import _mod12852 from "module_12852" /* 12852 */;
+import _mod12853 from "module_12853" /* 12853 */;
+import _mod12864 from "module_12864" /* 12864 */;
 
-const LeftParenthesis = _mod12798.TYPE.LeftParenthesis;
-const RightParenthesis = _mod12798.TYPE.RightParenthesis;
-const obj = {
-  name: "Parentheses",
-  structure: null,
-  parse(call, arg1) {
-    const self = this;
-    this.eat(LeftParenthesis);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightParenthesis);
-    }
-    const element = { type: "Parentheses", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
-    return element;
-  },
-  generate(arg0) {
-    this.chunk("(");
-    this.children(arg0);
-    this.chunk(")");
-  }
-};
-const obj2 = { children: null };
-const items = [[]];
-obj2.children = items;
-obj.structure = obj2;
 
-export default obj;
+export default { SyntaxError: _mod12852, parse: _mod12850, generate: _mod12853, walk: _mod12864 };

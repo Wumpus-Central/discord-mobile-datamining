@@ -1,7 +1,7 @@
 // === Module 4626: ? ===
 
 // Module 4626
-import _mod4595 from "module_4595" /* 4595 */;
+import _mod4600 from "module_4600" /* 4600 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(SecondParser, Parser) {
+function _setPrototypeOf(Hour1to12Parser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(SecondParser, Parser) {
-      SecondParser.__proto__ = Parser;
-      return SecondParser;
+    _setPrototypeOf = function _setPrototypeOf(Hour1to12Parser, Parser) {
+      Hour1to12Parser.__proto__ = Parser;
+      return Hour1to12Parser;
     };
   }
-  return _setPrototypeOf(SecondParser, Parser);
+  return _setPrototypeOf(Hour1to12Parser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,9 +54,9 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4595.Parser;
+const Parser = _mod4600.Parser;
 let _createSuperInternal;
-class SecondParser {
+class Hour1to12Parser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -92,10 +92,10 @@ class SecondParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 50, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 50;
-          applyResult.priority = 50;
+          num3 = 70;
+          applyResult.priority = 70;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +106,7 @@ class SecondParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T"];
+          items1 = ["H", "K", "k", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +130,7 @@ class SecondParser {
     }
   }
 }
-let dependencyMap = SecondParser;
+let dependencyMap = Hour1to12Parser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,9 +142,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-SecondParser.prototype = Object.create(prototype, { constructor: { value: SecondParser, writable: true, configurable: true } });
+Hour1to12Parser.prototype = Object.create(prototype, { constructor: { value: Hour1to12Parser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(SecondParser, Parser);
+  _setPrototypeOf(Hour1to12Parser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -206,12 +206,12 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("s" === arg1) {
-      return _createSuperInternal(4597).parseNumericPattern(_createSuperInternal(4598).numericPatterns.second, arg0);
-    } else if ("so" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "second" });
+    if ("h" === arg1) {
+      return _createSuperInternal(4602).parseNumericPattern(_createSuperInternal(4603).numericPatterns.hour12h, arg0);
+    } else if ("ho" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
     } else {
-      return _createSuperInternal(4597).parseNDigits(arg1.length, arg0);
+      return _createSuperInternal(4602).parseNDigits(arg1.length, arg0);
     }
   }
 };
@@ -220,18 +220,29 @@ let items = [
   {
     key: "validate",
     value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
+      let tmp = arg1 >= 1;
       if (tmp) {
-        tmp = arg1 <= 59;
+        tmp = arg1 <= 12;
       }
       return tmp;
     }
   },
   {
     key: "set",
-    value: function set(setUTCSeconds, arg1, arg2) {
-      setUTCSeconds.setUTCSeconds(arg2, 0);
-      return setUTCSeconds;
+    value: function set(getUTCHours, arg1, arg2) {
+      const tmp = getUTCHours.getUTCHours() >= 12;
+      if (tmp) {
+        if (arg2 < 12) {
+          getUTCHours.setUTCHours(arg2 + 12, 0, 0, 0);
+        }
+        return getUTCHours;
+      }
+      if (!tmp) {
+        if (12 === arg2) {
+          getUTCHours.setUTCHours(0, 0, 0, 0);
+        }
+      }
+      getUTCHours.setUTCHours(arg2, 0, 0, 0);
     }
   }
 ];
@@ -253,4 +264,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { SecondParser };
+export { Hour1to12Parser };

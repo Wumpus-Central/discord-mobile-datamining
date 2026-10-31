@@ -1,17 +1,17 @@
 // === Module 4642: ? ===
 
 // Module 4642
-import startOfSecond_mod from "startOfSecond" /* 4643 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
+import startOfWeek_mod from "startOfWeek" /* 4453 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-let startOfSecond = startOfSecond_mod;
-if (!startOfSecond) {
-  const obj = { default: startOfSecond };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfSecond;
+  tmp3 = startOfWeek;
 }
-startOfSecond = tmp3;
+startOfWeek = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameSecond(arg0, arg1) {
+export default function isSameWeek(arg0, arg1, arg2) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfSecond.default(arg0);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
   const time = defaultResult1.getTime();
-  return time === startOfSecond.default(arg1).getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

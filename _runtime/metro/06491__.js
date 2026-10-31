@@ -1,7 +1,22 @@
 // === Module 6491: ? ===
 
 // Module 6491
-import _mod1468 from "module_1468" /* 1468 */;
+import _mod1324 from "module_1324" /* 1324 */;
 
 
-export default _mod1468;
+export default function isFinite(num) {
+  let tmp = typeof num === "number";
+  if (typeof num !== "number") {
+    tmp = typeof num === "bigint";
+  }
+  if (tmp) {
+    tmp = !_mod1324(num);
+  }
+  if (tmp) {
+    tmp = num !== Infinity;
+  }
+  if (tmp) {
+    tmp = num !== -Infinity;
+  }
+  return tmp;
+};

@@ -1,41 +1,43 @@
 // === Module 6507: ? ===
 
 // Module 6507
+import _mod1293 from "module_1293" /* 1293 */;
 import _mod1294 from "module_1294" /* 1294 */;
-import _mod1326 from "module_1326" /* 1326 */;
+import callBindBasic from "callBindBasic" /* 1303 */;
 
-let closure_2 = Object.assign({ "[[Configurable]]": true, "[[Enumerable]]": true, "[[Get]]": true, "[[Set]]": true, "[[Value]]": true, "[[Writable]]": true });
-
-export default function isPropertyDescriptor(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      for (const key10001 in arg0) {
-        if (!_mod1326(arg0, key10001)) {
-          continue;
-        } else if (closure_2[key10001]) {
-          continue;
-        } else {
-          let flag = false;
-          return false;
-        }
-        continue;
-      }
-      let tmp4 = _mod1326(obj, "[[Value]]");
-      if (!tmp4) {
-        tmp4 = _mod1326(obj, "[[Writable]]");
-      }
-      let tmp5 = _mod1326(obj, "[[Get]]");
-      if (!tmp5) {
-        tmp5 = _mod1326(obj, "[[Set]]");
-      }
-      if (tmp4) {
-        if (tmp5) {
-          const tmp8 = new _mod1294("Property Descriptors may not be both accessor and data descriptors");
-          throw tmp8;
-        }
-      }
-      return true;
-    }
+const obj = {};
+try {
+  obj.__proto__ = null;
+  let _module = _mod1294;
+  if (_module) {
+    const _Object = Object;
+    _module = _mod1294(Object.prototype, "__proto__");
   }
-  return false;
-};
+  let tmp6 = !("toString" in obj);
+  if (tmp6) {
+    let setDunder = _module;
+    if (setDunder) {
+      setDunder = typeof _module.set === "function";
+    }
+    if (setDunder) {
+      const items = [_module.set];
+      setDunder = callBindBasic(items);
+    }
+    if (!setDunder) {
+      setDunder = function setDunder(arg0, arg1) {
+        if (null == arg0) {
+          const tmp6 = new _mod1293("set Object.prototype.__proto__ called on null or undefined");
+          throw tmp6;
+        } else {
+          arg0.__proto__ = arg1;
+          return arg1;
+        }
+      };
+    }
+    tmp6 = setDunder;
+  }
+  module.exports = tmp6;
+  const tmp3 = "toString" in obj;
+} catch (tmp2) {
+  throw tmp2;
+}

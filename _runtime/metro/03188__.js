@@ -1,7 +1,7 @@
 // === Module 3188: ? ===
 
 // Module 3188
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/pinot", scales: [1], hash: "89c41fdc91a4232fc919cea96ca3974a", name: "Pinot.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "f55bd6cca8897e74166f77c31994119a", name: "vi.messages.f55bd6cca8897e74166f77c31994119a.compiled.messages", type: "jsona" });

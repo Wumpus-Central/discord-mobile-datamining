@@ -1,7 +1,7 @@
 // === Module 12933: ? ===
 
 // Module 12933
-import registerAsset from "module_1120" /* 1120 */;
+import _mod12934 from "module_12934" /* 12934 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/conjure/home/images", width: 640, height: 360, scales: [1], hash: "55bbcd85e5d3c90029435d0fc395829e", name: "conjure-home-trivia", type: "svg" });
+export default _mod12934;

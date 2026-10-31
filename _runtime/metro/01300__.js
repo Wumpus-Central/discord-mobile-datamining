@@ -1,13 +1,7 @@
 // === Module 1300: ? ===
 
 // Module 1300
-let getPrototypeOf = typeof Reflect !== "undefined";
-if (typeof Reflect !== "undefined") {
-  const _Reflect = Reflect;
-  getPrototypeOf = Reflect.getPrototypeOf;
-}
-if (!getPrototypeOf) {
-  getPrototypeOf = null;
-}
+import _mod1301 from "module_1301" /* 1301 */;
 
-export default getPrototypeOf;
+
+export default _mod1301.getPrototypeOf || null;

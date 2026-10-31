@@ -1,7 +1,8 @@
 // === Module 11102: ? ===
 
 // Module 11102
-import registerAsset from "module_1120" /* 1120 */;
+import _mod17 from "module_17" /* 17 */;
 
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 32, scales: [1, 2, 3], hash: "5740634dc33de72534d208b361b37df5", name: "ic_file_small_sketch", type: "png" });
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

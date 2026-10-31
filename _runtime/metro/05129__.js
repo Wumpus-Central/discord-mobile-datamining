@@ -1,59 +1,80 @@
 // === Module 5129: ? ===
 
 // Module 5129
-import c from "c" /* 5111 */;
-import _mod5124 from "module_5124" /* 5124 */;
+import _mod5130 from "module_5130" /* 5130 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-const RiveColor2 = tmp(5119);
 require = fn;
-fn(19).useCallback;
-const f34157 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+const noop = fn(19);
+({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 
-export function useRiveColor(FillColor, instance) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod5124.useRiveProperty(instance, FillColor, f34157), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
+export function useRiveProperty(instance, device, f34221) {
+  closure_0 = instance;
+  closure_1 = device;
+  closure_2 = f34221;
+  let tmp = hasOwnProperty(undefined);
+  const items = [instance, device];
+  const disposableMemo = _mod5130.useDisposableMemo(() => {
+    if (closure_0) {
+      return closure_2(tmp, closure_1);
     }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
-      }
-      tmp6(fromHexStringResult.toInt());
-    };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
+  }, (dispose) => {
+    let disposeResult;
+    if (dispose != null) {
+      disposeResult = dispose.dispose();
     }
-  }
-  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj3;
-  tmp11 = obj3;
+    return disposeResult;
+  }, items, tmp);
+  [first, closure_6] = timestampProducer(undefined);
+  const tmp5 = _slicedToArray(timestampProducer(null), 2);
+  closure_7 = tmp5[1];
+  const items1 = [device, instance];
+  React4(() => {
+    closure_7(null);
+  }, items1);
+  const items2 = [instance, disposableMemo, device];
+  React4(() => {
+    let tmp = closure_0;
+    if (closure_0) {
+      tmp = !disposableMemo;
+    }
+    if (tmp) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("Property \"" + closure_1 + "\" not found in the ViewModel instance");
+      closure_7(error);
+    }
+  }, items2);
+  const items3 = [disposableMemo];
+  React4(() => {
+    if (disposableMemo) {
+      closure_6(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
+        closure_1_6(arg0);
+      });
+      return () => {
+        try {
+          closure_0();
+        } catch (err) {
+        }
+      };
+    }
+  }, items3);
+  const items4 = [disposableMemo, first];
+  const items5 = [
+    first,
+    React3((fn) => {
+      const current = ref.current;
+      if (current) {
+        let tmp2 = fn;
+        if (typeof fn === "function") {
+          tmp2 = fn(first);
+        }
+        current.value = tmp2;
+      }
+    }, items4),
+    tmp5[0],
+    disposableMemo
+  ];
+  return items5;
 }

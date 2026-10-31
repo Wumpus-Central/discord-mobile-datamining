@@ -2,4 +2,4 @@
 
 // Module 1310
 
-export default Function.prototype.apply;
+export default Error;

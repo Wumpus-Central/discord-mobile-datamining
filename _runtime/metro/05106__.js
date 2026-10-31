@@ -1,39 +1,51 @@
 // === Module 5106: ? ===
 
 // Module 5106
-import _mod17 from "module_17" /* 17 */;
-import _modAll65 from "module_65" /* 65 */;
+import _mod5098 from "module_5098" /* 5098 */;
 
-const Platform = _mod17.Platform;
+require = arg1;
+const dependencyMap = arg6;
+const map = new Map();
 
-export function getHostComponent(RiveView, arg1) {
-  closure_0 = arg1;
-  if (null == _modAll65) {
-    const _Error = Error;
-    const error = new Error("NativeComponentRegistry is not available on android!");
-    throw error;
+export function getHybridObjectConstructor(arg0) {
+  closure_0 = arg0;
+  if (map.has(arg0)) {
+    return map.get(arg0);
   } else {
-    return _modAll65.get(RiveView, () => {
-      const tmp = closure_0();
-      const validAttributes = tmp.validAttributes;
-      (function wrapValidAttributes(validAttributes) {
-        const keys = Object.keys(validAttributes);
-        for (const item10009 of keys) {
-          let obj = {
-            diff(arg0, arg1) {
-                return arg0 !== arg1;
-              },
-            process(arg0) {
-                return arg0;
-              }
-          };
-          arg0[item10009] = obj;
-          continue;
+    function constructorFunc() {
+      const NitroModules = _mod5098.NitroModules;
+      const hybridObject = NitroModules.createHybridObject(closure_0);
+      const prototypeOf = Object.getPrototypeOf(hybridObject);
+      if (constructorFunc.prototype !== prototypeOf) {
+        constructorFunc.prototype = prototypeOf;
+        constructorFunc.prototypeInitialized = true;
+      }
+      return hybridObject;
+    }
+    constructorFunc.prototypeInitialized = false;
+    let _Object = Object;
+    const _Symbol = Symbol;
+    const obj2 = {
+      value(arg0) {
+          if (!constructorFunc.prototypeInitialized) {
+            const NitroModules = _mod5098.NitroModules;
+            const _Object = Object;
+            constructorFunc.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(closure_0));
+            constructorFunc.prototypeInitialized = true;
+          }
+          let prototypeOf = Object.getPrototypeOf(arg0);
+          if (null != prototypeOf) {
+            while (prototypeOf !== constructorFunc.prototype) {
+              let _Object2 = Object;
+              prototypeOf = Object.getPrototypeOf(prototypeOf);
+            }
+            return true;
+          }
+          return false;
         }
-        return validAttributes;
-      })(validAttributes);
-      tmp.validAttributes = validAttributes;
-      return tmp;
-    });
+    };
+    Object.defineProperty(constructorFunc, Symbol.hasInstance, obj2);
+    const result = map.set(arg0, constructorFunc);
+    return constructorFunc;
   }
 }

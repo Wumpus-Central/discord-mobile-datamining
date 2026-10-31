@@ -271,7 +271,7 @@ let closure_8 = async function _instrumentStream(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -295,7 +295,7 @@ let closure_8 = async function _instrumentStream(arg0) {
               closure_146_7 = undefined;
               let value4;
               closure_146_9 = undefined;
-              const obj5 = { eventTypes: [], responseTexts: [], finishReasons: [], responseId: "", responseModel: "", responseTimestamp: 0, promptTokens: "r", completionTokens: "__d", totalTokens: "fill", chatCompletionToolCalls: {}, responsesApiToolCalls: [] };
+              const obj5 = { eventTypes: [], responseTexts: [], finishReasons: [], responseId: "", responseModel: "", responseTimestamp: 0, promptTokens: "r", completionTokens: "__closure", totalTokens: "assign", chatCompletionToolCalls: {}, responsesApiToolCalls: [] };
               closure_146_2 = obj5;
               closure_146_4 = false;
               closure_146_5 = false;
@@ -475,7 +475,7 @@ let closure_8 = async function _instrumentStream(arg0) {
                 }
                 closure_146_0.end();
                 c22 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
           break;

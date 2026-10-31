@@ -1,19 +1,51 @@
 // === Module 1618: ? ===
 
 // Module 1618
-import _mod1609 from "module_1609" /* 1609 */;
+import BaseNavigationContainer from "BaseNavigationContainer" /* 1500 */;
+import get_options from "get options" /* 1597 */;
 import noop from "module_19" /* 19 */;
 
 require = arg1;
 
-export function useLocale() {
-  const context = noop.useContext(_mod1609.LocaleDirContext);
-  if (undefined === context) {
+export function useRoutePath() {
+  const options = noop.useContext(get_options.LinkingContext).options;
+  const stateForPath = BaseNavigationContainer.useStateForPath();
+  if (undefined === stateForPath) {
     const _Error = Error;
-    const error = new Error("Couldn't determine the text direction. Is your component inside NavigationContainer?");
+    const error = new Error("Couldn't find a state for the route object. Is your component inside a screen in a navigator?");
     throw error;
   } else {
-    const obj = { direction: context };
-    return obj;
+    let getPathFromState;
+    if (options != null) {
+      getPathFromState = options.getPathFromState;
+    }
+    if (getPathFromState == null) {
+      getPathFromState = BaseNavigationContainer.getPathFromState;
+    }
+    let enabled;
+    if (options != null) {
+      enabled = options.enabled;
+    }
+    const items = [enabled, , , ];
+    let config;
+    if (options != null) {
+      config = options.config;
+    }
+    items[1] = config;
+    items[2] = stateForPath;
+    items[3] = getPathFromState;
+    return noop.useMemo(() => {
+      let enabled;
+      if (options != null) {
+        enabled = options.enabled;
+      }
+      if (false !== enabled) {
+        let config;
+        if (options != null) {
+          config = options.config;
+        }
+        return getPathFromState(stateForPath, config);
+      }
+    }, items);
   }
 }

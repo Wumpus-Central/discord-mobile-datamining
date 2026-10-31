@@ -123,7 +123,7 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
               const found = _sentryWasmImages1.filter((code_file) => {
                 let tmp = closure_2_0(681).isPlainObject(code_file) && typeof code_file.code_file === "string";
                 if (tmp) {
-                  tmp = !code_file.some(/* F133890 */ function() { ... });
+                  tmp = !code_file.some(/* F134301 */ function() { ... });
                 }
                 return tmp;
               });

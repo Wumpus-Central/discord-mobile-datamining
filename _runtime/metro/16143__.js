@@ -1,30 +1,34 @@
 // === Module 16143: ? ===
 
 // Module 16143
-import _mod16106 from "module_16106" /* 16106 */;
-import getOwnPropertyDescriptor_mod from "module_16086" /* 16086 */;
+import _mod16124 from "module_16124" /* 16124 */;
+import _mod16128 from "module_16128" /* 16128 */;
+import _mod16144 from "module_16144" /* 16144 */;
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod16128(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod16124.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+    }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod16144;
+      }
+      if (tmp2Result) {
+        tmp2Result = _mod16144 < 41;
+      }
+      tmp5 = tmp2Result;
+    }
+    return tmp5;
+  });
 }
-const tmp = _mod16106(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {
 
-  }.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-  }
-  tmp3 = tmp5;
-}
-
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export default prop;

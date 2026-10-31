@@ -1,8 +1,21 @@
 // === Module 5572: ? ===
 
 // Module 5572
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod5524 from "module_5524" /* 5524 */;
 
-const StyleSheet = _mod17.StyleSheet;
+_mod19.useCallback;
 
-export const styles = StyleSheet.create({ container: {} });
+export () => {
+  const recyclerViewContext = _mod5524.useRecyclerViewContext();
+  const obj2 = { getMappingKey: null };
+  const items = [recyclerViewContext];
+  obj2.getMappingKey = useCallback((arg0, arg1) => {
+    let tmp = arg0;
+    if (recyclerViewContext) {
+      tmp = arg1;
+    }
+    return tmp;
+  }, items);
+  return obj2;
+}

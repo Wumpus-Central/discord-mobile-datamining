@@ -1,7 +1,7 @@
 // === Module 13310: ? ===
 
 // Module 13310
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 240, height: 150, scales: [1, 2, 3], hash: "c4741f3af333f4c01fe224682f3a547f", name: "family_center_activity_checklist_image", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/safety_hub/images", width: 350, height: 350, scales: [1], hash: "ebaa362a049339e084011170417c750e", name: "video_light", type: "png" });

@@ -1,11 +1,15 @@
 // === Module 1873: ? ===
 
 // Module 1873
+import TEST_ID_KEYBOARD_TOOLBAR from "TEST_ID_KEYBOARD_TOOLBAR" /* 1868 */;
 import noop from "module_19" /* 19 */;
 
-const jsxProd = fn(21);
-({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: c2 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
 
 export default function _default(children) {
-  return framebus(React, { children: children.children });
+  return <React2 style={styles.flex} testID={TEST_ID_KEYBOARD_TOOLBAR.TEST_ID_KEYBOARD_TOOLBAR_CONTENT}>{children.children}</React2>;
 };

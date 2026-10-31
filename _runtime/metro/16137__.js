@@ -1,73 +1,40 @@
 // === Module 16137: ? ===
 
 // Module 16137
-import _mod16086 from "module_16086" /* 16086 */;
-import text from "text" /* 16095 */;
-import _mod16118 from "module_16118" /* 16118 */;
-import _mod16135 from "module_16135" /* 16135 */;
-import _mod16138 from "module_16138" /* 16138 */;
+import withoutSetter from "withoutSetter" /* 16138 */;
+import _mod16149 from "module_16149" /* 16149 */;
+import _mod16151 from "module_16151" /* 16151 */;
+import _mod16154 from "module_16154" /* 16154 */;
+import _mod16157 from "module_16157" /* 16157 */;
+import _mod16158 from "module_16158" /* 16158 */;
 
-const enumerable = "enumerable";
-const configurable = "configurable";
-const writable = "writable";
-if (_mod16086) {
-  if (_mod16138) {
-    defineProperty = function defineProperty(fn, arg1, value) {
-      _mod16135(fn);
-      const tmp2 = text(arg1);
-      _mod16135(value);
-      let tmp4 = value;
-      if (typeof fn === "function") {
-        tmp4 = value;
-        if ("prototype" === tmp2) {
-          tmp4 = value;
-          if ("value" in value) {
-            tmp4 = value;
-            if (writable in value) {
-              tmp4 = value;
-              if (!value[writable]) {
-                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
-                let tmp8 = tmp7;
-                if (tmp7) {
-                  tmp8 = tmp7[writable];
-                }
-                tmp4 = value;
-                if (tmp8) {
-                  fn[tmp2] = value.value;
-                  const obj = { configurable: configurable in value ? value[configurable] : tmp7[configurable], enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable], writable: false };
-                }
-              }
-            }
+let closure_3 = withoutSetter("toPrimitive");
+
+export default (arg0, arg1) => {
+  if (_mod16149(arg0)) {
+    if (!_mod16151(arg0)) {
+      let str = arg1;
+      const tmp4 = _mod16154(arg0, closure_3);
+      if (tmp4) {
+        if (undefined === str) {
+          str = "default";
+        }
+        const tmp5 = _mod16157(tmp4, arg0, str);
+        if (_mod16149(tmp5)) {
+          if (!_mod16151(tmp5)) {
+            const tmp9 = new TypeError("Can't convert object to primitive value");
+            throw tmp9;
           }
         }
-      }
-      return defineProperty(fn, tmp2, tmp4);
-    };
-  }
-  let defineProperty2 = defineProperty;
-} else {
-  defineProperty2 = function defineProperty(arg0, arg1, value) {
-    _mod16135(arg0);
-    const tmp2 = text(arg1);
-    _mod16135(value);
-    if (!_mod16118) {
-      if (!("get" in value)) {
-        if (!("set" in value)) {
-          if ("value" in value) {
-            arg0[tmp2] = value.value;
-          }
-          return arg0;
+        return tmp5;
+      } else {
+        let str2 = str;
+        if (undefined === str) {
+          str2 = "number";
         }
-      }
-      const tmp8 = new TypeError("Accessors not supported");
-      throw tmp8;
-    } else {
-      try {
-        return defineProperty(arg0, tmp2, value);
-      } catch (err) {
+        return _mod16158(arg0, str2);
       }
     }
-  };
-}
-
-export const f = defineProperty2;
+  }
+  return arg0;
+};

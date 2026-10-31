@@ -1,16 +1,14 @@
 // === Module 8096: ? ===
 
 // Module 8096
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8047 from "module_8047" /* 8047 */;
-import _modDef8097 from "module_8097" /* 8097 */;
+import _modDef8070 from "module_8070" /* 8070 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Line = fn;
+const FeTile = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Line {
+class FeTile {
   constructor() {
     self = this;
-    tmp = closure_3(this, Line);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Line);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeTile);
+    tmp2 = closure_4;
+    obj = closure_4(FeTile);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,36 +48,18 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Line, _modDef8047);
+_inherits(FeTile, _modDef8070);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const obj = {};
-    ({ x1, y1, x2, y2 } = props);
-    const merged = Object.assign(Line(8038).extract(this, props));
-    obj.x1 = x1;
-    obj.y1 = y1;
-    obj.x2 = x2;
-    obj.y2 = y2;
-    const obj2 = Line(8038);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8097, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeTile(8047).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = _createClass(FeTile, items);
+importDefaultResultResult.displayName = "FeTile";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

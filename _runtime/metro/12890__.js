@@ -1,42 +1,39 @@
 // === Module 12890: ? ===
 
 // Module 12890
-import _mod12798 from "module_12798" /* 12798 */;
+import _mod12833 from "module_12833" /* 12833 */;
 
-const String = _mod12798.TYPE.String;
-const Ident = _mod12798.TYPE.Ident;
-const Url = _mod12798.TYPE.Url;
-const Function = _mod12798.TYPE.Function;
-const LeftParenthesis = _mod12798.TYPE.LeftParenthesis;
-
-export default {
-  parse: {
-    prelude() {
-      const self = this;
-      const list = this.createList();
-      const scanner = this.scanner;
-      scanner.skipSC();
-      const tokenType = this.scanner.tokenType;
-      if (String === tokenType) {
-        list.push(self.String());
-      } else {
-        if (Url !== tokenType) {
-          if (Function !== tokenType) {
-            self.error("String or url() is expected");
-          }
-        }
-        list.push(self.Url());
+const RightParenthesis = _mod12833.TYPE.RightParenthesis;
+const obj = {
+  name: "Function",
+  structure: null,
+  parse(call, arg1) {
+    const self = this;
+    const str = this.consumeFunctionName();
+    const formatted = str.toLowerCase();
+    if (arg1.hasOwnProperty(formatted)) {
+      const call2 = tmp4.call;
+      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
+    } else {
+      call = call.call;
+      if (!self.scanner.eof) {
+        self.eat(RightParenthesis);
       }
-      let tmp7 = self.lookupNonWSType(0) !== Ident;
-      if (tmp7) {
-        tmp7 = self.lookupNonWSType(0) !== LeftParenthesis;
-      }
-      if (!tmp7) {
-        list.push(self.WhiteSpace());
-        list.push(self.MediaQueryList());
-      }
-      return list;
-    },
-    block: null
-  }
+      const element = { type: "Function", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: str, children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
+      return element;
+    }
+  },
+  generate(name) {
+    this.chunk(name.name);
+    this.chunk("(");
+    this.children(name);
+    this.chunk(")");
+  },
+  walkContext: "function"
 };
+const obj2 = { name: String, children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

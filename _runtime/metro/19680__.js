@@ -1,7 +1,7 @@
 // === Module 19680: ? ===
 
 // Module 19680
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c993344d8197e11d62f0d0a7ef753412", name: "BoostGemOutlineIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_automod/native/images", width: 24, height: 24, scales: [2, 3], hash: "7508dd06eca0e95324ea1e11c69f1b63", name: "ic_emoji_zipper_24px", type: "png" });

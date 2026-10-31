@@ -1,531 +1,404 @@
 // === Module 8303: ? ===
 
 // Module 8303
-import _mod8296 from "module_8296" /* 8296 */;
+import _mod8304 from "module_8304" /* 8304 */;
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
-function getCreationDate(value) {
-  const stringValue = _mod8296.getStringValue(value);
-  let text2 = stringValue;
-  if (stringValue.length >= 8) {
-    const text = `${arr.substr(0, 4)}-`;
-    const text1 = `${arr.substr(0, 4)}-${arr.substr(4, 2)}`;
-    text2 = `${`${arr.substr(0, 4)}-${arr.substr(4, 2)}`}-${arr.substr(6, 2)}`;
+const obj = { 33434: null, 33437: null, 34850: null, 34852: "SpectralSensitivity", 34855: "ISOSpeedRatings", 34856: null, 34858: "TimeZoneOffset", 34859: "SelfTimerMode", 34864: null, 34865: "StandardOutputSensitivity", 34866: "RecommendedExposureIndex", 34867: "ISOSpeed", 34868: "ISOSpeedLatitudeyyy", 34869: "ISOSpeedLatitudezzz", 36864: null, 36867: "DateTimeOriginal", 36868: "DateTimeDigitized", 36873: "GooglePlusUploadCode", 36880: "OffsetTime", 36881: "OffsetTimeOriginal", 36882: "OffsetTimeDigitized", 37121: null, 37122: "CompressedBitsPerPixel", 37377: null, 37378: null, 37379: "BrightnessValue", 37380: "ExposureBiasValue", 37381: null, 37382: null, 37383: null, 37384: null, 37385: null, 37386: null, 37393: "ImageNumber", 37394: null, 37395: "ImageHistory", 37396: null, 37500: null, 37510: null, 37520: "SubSecTime", 37521: "SubSecTimeOriginal", 37522: "SubSecTimeDigitized", 37724: "ImageSourceData", 37888: null, 37889: null, 37890: null, 37891: null, 37892: null, 37893: null, 40960: null, 40961: null, 40962: "PixelXDimension", 40963: "PixelYDimension", 40964: "RelatedSoundFile", 40965: "Interoperability IFD Pointer", 41483: "FlashEnergy", 41484: null, 41486: "FocalPlaneXResolution", 41487: "FocalPlaneYResolution", 41488: null, 41492: null, 41493: "ExposureIndex", 41495: null, 41728: null, 41729: null, 41730: null, 41985: null, 41986: null, 41987: null, 41988: null, 41989: null, 41990: null, 41991: null, 41992: null, 41993: null, 41994: null, 41995: null, 41996: null, 42016: "ImageUniqueID", 42032: "CameraOwnerName", 42033: "BodySerialNumber", 42034: null, 42035: "LensMake", 42036: "LensModel", 42037: "LensSerialNumber", 42080: null, 42081: "SourceImageNumberOfCompositeImage", 42082: "SourceExposureTimesOfCompositeImage", 42240: "Gamma", 59932: "Padding", 59933: "OffsetSchema", 65000: "OwnerName", 65001: "SerialNumber", 65002: "Lens", 65100: "RawFile", 65101: "Converter", 65102: "WhiteBalance", 65105: "Exposure", 65106: "Shadows", 65107: "Brightness", 65108: "Contrast", 65109: "Saturation", 65110: "Sharpness", 65111: "Smoothness", 65112: "MoireFilter" };
+obj[33434] = { name: "ExposureTime", description: fn2(8302).ExposureTime };
+const obj2 = { name: "ExposureTime", description: fn2(8302).ExposureTime };
+obj[33437] = { name: "FNumber", description: fn2(8302).FNumber };
+const obj3 = { name: "FNumber", description: fn2(8302).FNumber };
+obj[34850] = { name: "ExposureProgram", description: fn2(8302).ExposureProgram };
+obj[34856] = {
+  name: "OECF",
+  description() {
+    return "[Raw OECF table data]";
   }
-  return text2;
-}
-function getCreationTime(value) {
-  const stringValue = _mod8296.getStringValue(value);
-  let tmp = stringValue;
-  if (stringValue.length >= 6) {
-    const text = `${arr.substr(0, 2)}:`;
-    const text1 = `${arr.substr(0, 2)}:${arr.substr(2, 2)}`;
-    const text2 = `${`${arr.substr(0, 2)}:${arr.substr(2, 2)}`}:${arr.substr(4, 2)}`;
-    let text3 = text2;
-    if (11 === stringValue.length) {
-      const substr = stringValue.substr(6, 1);
-      const sum = substr + stringValue.substr(7, 2);
-      text3 = `${tmp7}${tmp3}:${arr.substr(9, 2)}`;
-    }
-    tmp = text3;
-  }
-  return tmp;
-}
-function getEncodingName(value) {
-  const stringValue = _mod8296.getStringValue(value);
-  let str = "UTF-8";
-  if ("\u001B%G" !== stringValue) {
-    let str19 = "Windows-1252";
-    if ("\u001B%5" !== stringValue) {
-      let str18 = "UTF-8 Level 1";
-      if ("\u001B%/G" !== stringValue) {
-        let str17 = "UTF-8 Level 2";
-        if ("\u001B%/H" !== stringValue) {
-          let str16 = "UTF-8 Level 3";
-          if ("\u001B%/I" !== stringValue) {
-            let str15 = "ISO-8859-1";
-            if ("\u001B/A" !== stringValue) {
-              let str14 = "ISO-8859-2";
-              if ("\u001B/B" !== stringValue) {
-                let str2 = "ISO-8859-3";
-                if ("\u001B/C" !== stringValue) {
-                  let str4 = "ISO-8859-4";
-                  if ("\u001B/D" !== stringValue) {
-                    let str6 = "ISO-8859-5";
-                    if ("\u001B/@" !== stringValue) {
-                      let str8 = "ISO-8859-6";
-                      if ("\u001B/G" !== stringValue) {
-                        let str10 = "ISO-8859-7";
-                        if ("\u001B/F" !== stringValue) {
-                          let str12 = "Unknown";
-                          if ("\u001B/H" === stringValue) {
-                            str12 = "ISO-8859-8";
-                          }
-                          str10 = str12;
-                        }
-                        str8 = str10;
-                      }
-                      str6 = str8;
-                    }
-                    str4 = str6;
-                  }
-                  str2 = str4;
-                }
-                str14 = str2;
-              }
-              str15 = str14;
-            }
-            str16 = str15;
-          }
-          str17 = str16;
-        }
-        str18 = str17;
-      }
-      str19 = str18;
-    }
-    str = str19;
-  }
-  return str;
-}
-let obj = { iptc: null };
-const obj2 = { 256: null, 261: null, 276: null, 278: null, 286: "Service Identifier", 296: "Envelope Number", 306: "Product ID", 316: "Envelope Priority", 326: null, 336: null, 346: null, 356: "UNO", 376: null, 378: null, 512: null, 515: "Object Type Reference", 516: "Object Attribute Reference", 517: "Object Name", 519: "Edit Status", 520: null, 522: "Urgency", 524: null, 527: "Category", 532: null, 534: "Fixture Identifier", 537: null, 538: null, 539: null, 542: "Release Date", 547: "Release Time", 549: "Expiration Date", 550: "Expiration Time", 552: "Special Instructions", 554: null, 557: null, 559: null, 562: null, 567: null, 572: null, 574: null, 575: null, 577: "Originating Program", 582: "Program Version", 587: null, 592: null, 597: null, 602: "City", 604: "Sub-location", 607: "Province/State", 612: "Country/Primary Location Code", 613: "Country/Primary Location Name", 615: "Original Transmission Reference", 617: "Headline", 622: "Credit", 627: "Source", 628: "Copyright Notice", 630: null, 632: "Caption/Abstract", 634: null, 637: null, 642: "Image Type", 643: null, 647: "Language Identifier", 662: null, 663: null, 664: null, 665: null, 666: "Audio Outcue", 698: "Short Document ID", 699: "Unique Document ID", 700: "Owner ID", 712: null, 713: null, 714: "ObjectData Preview Data", 1802: null, 1812: null, 1882: null, 1887: null };
-obj2[256] = {
-  name: "Model Version",
+};
+obj[34864] = {
+  name: "SensitivityType",
   description(arg0) {
-    return (arg0[0] << 8) + arg0[1].toString();
+    return { 1: "Standard Output Sensitivity", 2: "Recommended Exposure Index", 3: "ISO Speed", 4: "Standard Output Sensitivity and Recommended Exposure Index", 5: "Standard Output Sensitivity and ISO Speed", 6: "Recommended Exposure Index and ISO Speed", 7: "Standard Output Sensitivity, Recommended Exposure Index and ISO Speed" }[arg0] || "Unknown";
   }
 };
-obj2[261] = { name: "Destination", repeatable: true };
-obj2[276] = {
-  name: "File Format",
+obj[36864] = {
+  name: "ExifVersion",
+  description(value) {
+    return _mod8304.getStringValue(value);
+  }
+};
+const obj4 = { name: "ExposureProgram", description: fn2(8302).ExposureProgram };
+obj[37121] = { name: "ComponentsConfiguration", description: fn2(8302).ComponentsConfiguration };
+const obj5 = { name: "ComponentsConfiguration", description: fn2(8302).ComponentsConfiguration };
+obj[37377] = { name: "ShutterSpeedValue", description: fn2(8302).ShutterSpeedValue };
+const obj6 = { name: "ShutterSpeedValue", description: fn2(8302).ShutterSpeedValue };
+obj[37378] = { name: "ApertureValue", description: fn2(8302).ApertureValue };
+obj[37381] = {
+  name: "MaxApertureValue",
   description(arg0) {
-    return (arg0[0] << 8) + arg0[1].toString();
+    return Math.pow(Math.sqrt(2), arg0[0] / arg0[1]).toFixed(2);
   }
 };
-obj2[278] = {
-  name: "File Format Version",
+obj[37382] = {
+  name: "SubjectDistance",
   description(arg0) {
-    return (arg0[0] << 8) + arg0[1].toString();
+    return arg0[0] / arg0[1] + " m";
   }
 };
-obj2[326] = { name: "Date Sent", description: getCreationDate };
-obj2[336] = { name: "Time Sent", description: getCreationTime };
-obj2[346] = { name: "Coded Character Set", description: getEncodingName, encoding_name: getEncodingName };
-obj2[376] = {
-  name: "ARM Identifier",
+const obj7 = { name: "ApertureValue", description: fn2(8302).ApertureValue };
+obj[37383] = { name: "MeteringMode", description: fn2(8302).MeteringMode };
+const obj8 = { name: "MeteringMode", description: fn2(8302).MeteringMode };
+obj[37384] = { name: "LightSource", description: fn2(8302).LightSource };
+obj[37385] = {
+  name: "Flash",
   description(arg0) {
-    return (arg0[0] << 8) + arg0[1].toString();
-  }
-};
-obj2[378] = {
-  name: "ARM Version",
-  description(arg0) {
-    return (arg0[0] << 8) + arg0[1].toString();
-  }
-};
-obj2[512] = {
-  name: "Record Version",
-  description(arg0) {
-    return (arg0[0] << 8) + arg0[1].toString();
-  }
-};
-obj2[520] = {
-  name: "Editorial Update",
-  description(value) {
-    let str = "Unknown";
-    if ("01" === obj.getStringValue(value)) {
-      str = "Additional Language";
-    }
-    return str;
-  }
-};
-obj2[524] = {
-  name: "Subject Reference",
-  repeatable: true,
-  description(value) {
-    const parts = _mod8296.getStringValue(value).split(":");
-    let str2 = "";
-    let str3 = "";
-    if (parts[3]) {
-      str3 = `/${tmp[3]}`;
-    }
-    const sum = parts[2] + str3;
-    if (parts[4]) {
-      str2 = `/${tmp[4]}`;
-    }
-    return sum + str2;
-  }
-};
-obj2[532] = { name: "Supplemental Category", repeatable: true };
-obj2[537] = { name: "Keywords", repeatable: true };
-obj2[538] = { name: "Content Location Code", repeatable: true };
-obj2[539] = { name: "Content Location Name", repeatable: true };
-obj2[554] = {
-  name: "Action Advised",
-  description(value) {
-    const stringValue = _mod8296.getStringValue(value);
-    let str = "Object Kill";
-    if ("01" !== stringValue) {
-      let str2 = "Object Replace";
-      if ("02" !== stringValue) {
-        let str4 = "Object Append";
-        if ("03" !== stringValue) {
-          let str6 = "Unknown";
-          if ("04" === stringValue) {
-            str6 = "Object Reference";
-          }
-          str4 = str6;
-        }
-        str2 = str4;
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj2[557] = { name: "Reference Service", repeatable: true };
-obj2[559] = { name: "Reference Date", repeatable: true };
-obj2[562] = { name: "Reference Number", repeatable: true };
-obj2[567] = { name: "Date Created", description: getCreationDate };
-obj2[572] = { name: "Time Created", description: getCreationTime };
-obj2[574] = { name: "Digital Creation Date", description: getCreationDate };
-obj2[575] = { name: "Digital Creation Time", description: getCreationTime };
-obj2[587] = {
-  name: "Object Cycle",
-  description(value) {
-    const stringValue = _mod8296.getStringValue(value);
-    let str = "morning";
-    if ("a" !== stringValue) {
-      let str2 = "evening";
-      if ("p" !== stringValue) {
-        let str4 = "Unknown";
-        if ("b" === stringValue) {
-          str4 = "both";
-        }
-        str2 = str4;
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj2[592] = { name: "By-line", repeatable: true };
-obj2[597] = { name: "By-line Title", repeatable: true };
-obj2[630] = { name: "Contact", repeatable: true };
-obj2[634] = { name: "Writer/Editor", repeatable: true };
-obj2[637] = {
-  name: "Rasterized Caption",
-  description(arg0) {
-    return arg0;
-  }
-};
-obj2[643] = {
-  name: "Image Orientation",
-  description(value) {
-    const stringValue = _mod8296.getStringValue(value);
-    let str = "Portrait";
-    if ("P" !== stringValue) {
-      let str2 = "Landscape";
-      if ("L" !== stringValue) {
-        let str4 = "Unknown";
-        if ("S" === stringValue) {
-          str4 = "Square";
-        }
-        str2 = str4;
-      }
-      str = str2;
-    }
-    return str;
-  }
-};
-obj2[662] = {
-  name: "Audio Type",
-  description(value) {
-    let str = _mod8296.getStringValue(value);
-    const charAtResult = str.charAt(0);
-    const charAtResult1 = str.charAt(1);
-    let str2 = "Mono";
-    if ("1" !== charAtResult) {
-      str2 = "";
-      if ("2" === charAtResult) {
-        str2 = "Stereo";
-      }
-    }
-    if ("A" === charAtResult1) {
-      let text = `${str2}, actuality`;
-    } else if ("C" === charAtResult1) {
-      text = `${str2}, question and answer session`;
-    } else if ("M" === charAtResult1) {
-      text = `${str2}, music, transmitted by itself`;
-    } else if ("Q" === charAtResult1) {
-      text = `${str2}, response to a question`;
-    } else if ("R" === charAtResult1) {
-      text = `${str2}, raw sound`;
-    } else if ("S" === charAtResult1) {
-      text = `${str2}, scener`;
-    } else if ("V" === charAtResult1) {
-      text = `${str2}, voicer`;
-    } else {
-      text = str2;
-      if ("W" === charAtResult1) {
-        text = `${str2}, wrap`;
-      }
-    }
-    if ("" !== text) {
-      str = text;
-    }
-    return str;
-  }
-};
-obj2[663] = {
-  name: "Audio Sampling Rate",
-  description(value) {
-    return parseInt(_mod8296.getStringValue(value), 10) + " Hz";
-  }
-};
-obj2[664] = {
-  name: "Audio Sampling Resolution",
-  description(value) {
-    const parsed = parseInt(_mod8296.getStringValue(value), 10);
-    let str = " bits";
-    if (1 === parsed) {
-      str = " bit";
-    }
-    return parsed + str;
-  }
-};
-obj2[665] = {
-  name: "Audio Duration",
-  description(value) {
-    const stringValue = _mod8296.getStringValue(value);
-    let text2 = stringValue;
-    if (stringValue.length >= 6) {
-      const text = `${arr.substr(0, 2)}:`;
-      const text1 = `${arr.substr(0, 2)}:${arr.substr(2, 2)}`;
-      text2 = `${`${arr.substr(0, 2)}:${arr.substr(2, 2)}`}:${arr.substr(4, 2)}`;
-    }
-    return text2;
-  }
-};
-obj2[712] = {
-  name(arg0) {
-    let str = "Record 2 destination";
-    if (2 === arg0.length) {
-      str = "ObjectData Preview File Format";
-    }
-    return str;
-  },
-  description(value) {
-    if (2 === value.length) {
-      const sum = (value[0] << 8) + value[1];
-      let str = "No ObjectData";
-      if (0 !== sum) {
-        let str31 = "IPTC-NAA Digital Newsphoto Parameter Record";
-        if (1 !== sum) {
-          let str30 = "IPTC7901 Recommended Message Format";
-          if (2 !== sum) {
-            let str29 = "Tagged Image File Format (Adobe/Aldus Image data)";
-            if (3 !== sum) {
-              let str28 = "Illustrator (Adobe Graphics data)";
-              if (4 !== sum) {
-                let str27 = "AppleSingle (Apple Computer Inc)";
-                if (5 !== sum) {
-                  let str26 = "NAA 89-3 (ANPA 1312)";
-                  if (6 !== sum) {
-                    let str25 = "MacBinary II";
-                    if (7 !== sum) {
-                      let str24 = "IPTC Unstructured Character Oriented File Format (UCOFF)";
-                      if (8 !== sum) {
-                        let str23 = "United Press International ANPA 1312 variant";
-                        if (9 !== sum) {
-                          let str22 = "United Press International Down-Load Message";
-                          if (10 !== sum) {
-                            let str21 = "JPEG File Interchange (JFIF)";
-                            if (11 !== sum) {
-                              let str20 = "Photo-CD Image-Pac (Eastman Kodak)";
-                              if (12 !== sum) {
-                                let str19 = "Microsoft Bit Mapped Graphics File [*.BMP]";
-                                if (13 !== sum) {
-                                  let str18 = "Digital Audio File [*.WAV] (Microsoft & Creative Labs)";
-                                  if (14 !== sum) {
-                                    let str17 = "Audio plus Moving Video [*.AVI] (Microsoft)";
-                                    if (15 !== sum) {
-                                      let str16 = "PC DOS/Windows Executable Files [*.COM][*.EXE]";
-                                      if (16 !== sum) {
-                                        let str15 = "Compressed Binary File [*.ZIP] (PKWare Inc)";
-                                        if (17 !== sum) {
-                                          let str14 = "Audio Interchange File Format AIFF (Apple Computer Inc)";
-                                          if (18 !== sum) {
-                                            let str13 = "RIFF Wave (Microsoft Corporation)";
-                                            if (19 !== sum) {
-                                              let str12 = "Freehand (Macromedia/Aldus)";
-                                              if (20 !== sum) {
-                                                let str11 = "Hypertext Markup Language \"HTML\" (The Internet Society)";
-                                                if (21 !== sum) {
-                                                  let str10 = "MPEG 2 Audio Layer 2 (Musicom), ISO/IEC";
-                                                  if (22 !== sum) {
-                                                    let str9 = "MPEG 2 Audio Layer 3, ISO/IEC";
-                                                    if (23 !== sum) {
-                                                      let str2 = "Portable Document File (*.PDF) Adobe";
-                                                      if (24 !== sum) {
-                                                        let str3 = "News Industry Text Format (NITF)";
-                                                        if (25 !== sum) {
-                                                          let str4 = "Tape Archive (*.TAR)";
-                                                          if (26 !== sum) {
-                                                            let str5 = "Tidningarnas Telegrambyr\u00E5 NITF version (TTNITF DTD)";
-                                                            if (27 !== sum) {
-                                                              let str6 = "Ritzaus Bureau NITF version (RBNITF DTD)";
-                                                              if (28 !== sum) {
-                                                                let str7 = "Corel Draw [*.CDR]";
-                                                                if (29 !== sum) {
-                                                                  const _HermesInternal = HermesInternal;
-                                                                  str7 = "Unknown format " + sum;
-                                                                }
-                                                                str6 = str7;
-                                                              }
-                                                              str5 = str6;
-                                                            }
-                                                            str4 = str5;
-                                                          }
-                                                          str3 = str4;
-                                                        }
-                                                        str2 = str3;
-                                                      }
-                                                      str9 = str2;
-                                                    }
-                                                    str10 = str9;
-                                                  }
-                                                  str11 = str10;
-                                                }
-                                                str12 = str11;
+    let str = "Flash did not fire";
+    if (0 !== arg0) {
+      let str22 = "Flash fired";
+      if (1 !== arg0) {
+        let str21 = "Strobe return light not detected";
+        if (5 !== arg0) {
+          let str20 = "Strobe return light detected";
+          if (7 !== arg0) {
+            let str19 = "Flash fired, compulsory flash mode";
+            if (9 !== arg0) {
+              let str18 = "Flash fired, compulsory flash mode, return light not detected";
+              if (13 !== arg0) {
+                let str17 = "Flash fired, compulsory flash mode, return light detected";
+                if (15 !== arg0) {
+                  let str16 = "Flash did not fire, compulsory flash mode";
+                  if (16 !== arg0) {
+                    let str15 = "Flash did not fire, auto mode";
+                    if (24 !== arg0) {
+                      let str14 = "Flash fired, auto mode";
+                      if (25 !== arg0) {
+                        let str13 = "Flash fired, auto mode, return light not detected";
+                        if (29 !== arg0) {
+                          let str12 = "Flash fired, auto mode, return light detected";
+                          if (31 !== arg0) {
+                            let str11 = "No flash function";
+                            if (32 !== arg0) {
+                              let str10 = "Flash fired, red-eye reduction mode";
+                              if (65 !== arg0) {
+                                let str9 = "Flash fired, red-eye reduction mode, return light not detected";
+                                if (69 !== arg0) {
+                                  let str2 = "Flash fired, red-eye reduction mode, return light detected";
+                                  if (71 !== arg0) {
+                                    let str3 = "Flash fired, compulsory flash mode, red-eye reduction mode";
+                                    if (73 !== arg0) {
+                                      let str4 = "Flash fired, compulsory flash mode, red-eye reduction mode, return light not detected";
+                                      if (77 !== arg0) {
+                                        let str5 = "Flash fired, compulsory flash mode, red-eye reduction mode, return light detected";
+                                        if (79 !== arg0) {
+                                          let str6 = "Flash fired, auto mode, red-eye reduction mode";
+                                          if (89 !== arg0) {
+                                            let str7 = "Flash fired, auto mode, return light not detected, red-eye reduction mode";
+                                            if (93 !== arg0) {
+                                              let str8 = "Unknown";
+                                              if (95 === arg0) {
+                                                str8 = "Flash fired, auto mode, return light detected, red-eye reduction mode";
                                               }
-                                              str13 = str12;
+                                              str7 = str8;
                                             }
-                                            str14 = str13;
+                                            str6 = str7;
                                           }
-                                          str15 = str14;
+                                          str5 = str6;
                                         }
-                                        str16 = str15;
+                                        str4 = str5;
                                       }
-                                      str17 = str16;
+                                      str3 = str4;
                                     }
-                                    str18 = str17;
+                                    str2 = str3;
                                   }
-                                  str19 = str18;
+                                  str9 = str2;
                                 }
-                                str20 = str19;
+                                str10 = str9;
                               }
-                              str21 = str20;
+                              str11 = str10;
                             }
-                            str22 = str21;
+                            str12 = str11;
                           }
-                          str23 = str22;
+                          str13 = str12;
                         }
-                        str24 = str23;
+                        str14 = str13;
                       }
-                      str25 = str24;
+                      str15 = str14;
                     }
-                    str26 = str25;
+                    str16 = str15;
                   }
-                  str27 = str26;
+                  str17 = str16;
                 }
-                str28 = str27;
+                str18 = str17;
               }
-              str29 = str28;
+              str19 = str18;
             }
-            str30 = str29;
+            str20 = str19;
           }
-          str31 = str30;
+          str21 = str20;
         }
-        str = str31;
+        str22 = str21;
       }
-      return str;
+      str = str22;
+    }
+    return str;
+  }
+};
+const obj9 = { name: "LightSource", description: fn2(8302).LightSource };
+obj[37386] = { name: "FocalLength", description: fn2(8302).FocalLength };
+obj[37394] = {
+  name: "SecurityClassification",
+  description(arg0) {
+    return { C: "Confidential", R: "Restricted", S: "Secret", T: "Top Secret", U: "Unclassified" }[arg0] || "Unknown";
+  }
+};
+obj[37396] = {
+  name: "SubjectArea",
+  description(arg0) {
+    if (2 === arg0.length) {
+      const _HermesInternal3 = HermesInternal;
+      let str = "Location; X: " + arg0[0] + ", Y: " + arg0[1];
+    } else if (3 === arg0.length) {
+      const _HermesInternal2 = HermesInternal;
+      str = "Circle; X: " + arg0[0] + ", Y: " + arg0[1] + ", diameter: " + arg0[2];
     } else {
-      return _mod8296.getStringValue(value);
-    }
-  }
-};
-obj2[713] = {
-  name: "ObjectData Preview File Format Version",
-  description(value, ObjectData_Preview_File_Format) {
-    const obj = { "00": { "00": "1" }, "01": { "01": "1", "02": "2", "03": "3", "04": "4" }, "02": { "04": "4" }, "03": { "01": "5.0", "02": "6.0" }, "04": { "01": "1.40" }, "05": { "01": "2" }, "06": { "01": "1" }, 11: null, 20: null, 21: null };
-    obj[11] = { "01": "1.02" };
-    obj[20] = { "01": "3.1", "02": "4.0", "03": "5.0", "04": "5.5" };
-    obj[21] = { "02": "2.0" };
-    const stringValue = _mod8296.getStringValue(value);
-    if (ObjectData_Preview_File_Format["ObjectData Preview File Format"]) {
-      const stringValue1 = _mod8296.getStringValue(ObjectData_Preview_File_Format["ObjectData Preview File Format"].value);
-      if (obj[stringValue1]) {
-        if (obj[stringValue1][stringValue]) {
-          return obj[stringValue1][stringValue];
-        }
+      str = "Unknown";
+      if (4 === arg0.length) {
+        const _HermesInternal = HermesInternal;
+        str = "Rectangle; X: " + arg0[0] + ", Y: " + arg0[1] + ", width: " + arg0[2] + ", height: " + arg0[3];
       }
-      const tmpResult = _mod8296;
     }
-    return stringValue;
+    return str;
   }
 };
-obj2[1802] = {
-  name: "Size Mode",
-  description(arg0) {
-    return arg0[0].toString();
+obj[37500] = {
+  name: "MakerNote",
+  description() {
+    return "[Raw maker note data]";
   }
 };
-obj2[1812] = {
-  name: "Max Subfile Size",
+const obj10 = { name: "FocalLength", description: fn2(8302).FocalLength };
+obj[37510] = { name: "UserComment", description: fn(8304).getEncodedString };
+obj[37888] = {
+  name: "AmbientTemperature",
   description(arg0) {
-    let length;
-    let num = 0;
-    let num2 = 0;
-    let num3 = 0;
-    if (0 < arg0.length) {
-      do {
-        num2 = (num2 << 8) + arg0[num];
-        num = num + 1;
-        num3 = num2;
-        length = arg0.length;
-      } while (num < length);
+    return arg0[0] / arg0[1] + " \u00B0C";
+  }
+};
+obj[37889] = {
+  name: "Humidity",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " %";
+  }
+};
+obj[37890] = {
+  name: "Pressure",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " hPa";
+  }
+};
+obj[37891] = {
+  name: "WaterDepth",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " m";
+  }
+};
+obj[37892] = {
+  name: "Acceleration",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " mGal";
+  }
+};
+obj[37893] = {
+  name: "CameraElevationAngle",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " \u00B0";
+  }
+};
+obj[40960] = {
+  name: "FlashpixVersion",
+  description(arr) {
+    const mapped = arr.map((item) => String.fromCharCode(item));
+    return mapped.join("");
+  }
+};
+const obj11 = { name: "UserComment", description: fn(8304).getEncodedString };
+obj[40961] = { name: "ColorSpace", description: fn2(8302).ColorSpace };
+obj[41484] = {
+  name: "SpatialFrequencyResponse",
+  description() {
+    return "[Raw SFR table data]";
+  }
+};
+const obj12 = { name: "ColorSpace", description: fn2(8302).ColorSpace };
+obj[41488] = { name: "FocalPlaneResolutionUnit", description: fn2(8302).FocalPlaneResolutionUnit };
+obj[41492] = {
+  name: "SubjectLocation",
+  description(arg0) {
+    [tmp, tmp2] = arg0;
+    return "X: " + tmp + ", Y: " + tmp2;
+  }
+};
+obj[41495] = {
+  name: "SensingMethod",
+  description(arg0) {
+    let str = "Undefined";
+    if (1 !== arg0) {
+      let str2 = "One-chip color area sensor";
+      if (2 !== arg0) {
+        let str3 = "Two-chip color area sensor";
+        if (3 !== arg0) {
+          let str4 = "Three-chip color area sensor";
+          if (4 !== arg0) {
+            let str5 = "Color sequential area sensor";
+            if (5 !== arg0) {
+              let str6 = "Trilinear sensor";
+              if (7 !== arg0) {
+                let str7 = "Unknown";
+                if (8 === arg0) {
+                  str7 = "Color sequential linear sensor";
+                }
+                str6 = str7;
+              }
+              str5 = str6;
+            }
+            str4 = str5;
+          }
+          str3 = str4;
+        }
+        str2 = str3;
+      }
+      str = str2;
     }
-    return num3.toString();
+    return str;
   }
 };
-obj2[1882] = {
-  name: "ObjectData Size Announced",
+obj[41728] = {
+  name: "FileSource",
   description(arg0) {
-    let length;
-    let num = 0;
-    let num2 = 0;
-    let num3 = 0;
-    if (0 < arg0.length) {
-      do {
-        num2 = (num2 << 8) + arg0[num];
-        num = num + 1;
-        num3 = num2;
-        length = arg0.length;
-      } while (num < length);
+    let str = "Unknown";
+    if (3 === arg0) {
+      str = "DSC";
     }
-    return num3.toString();
+    return str;
   }
 };
-obj2[1887] = {
-  name: "Maximum ObjectData Size",
+obj[41729] = {
+  name: "SceneType",
   description(arg0) {
-    let length;
-    let num = 0;
-    let num2 = 0;
-    let num3 = 0;
-    if (0 < arg0.length) {
-      do {
-        num2 = (num2 << 8) + arg0[num];
-        num = num + 1;
-        num3 = num2;
-        length = arg0.length;
-      } while (num < length);
+    let str = "Unknown";
+    if (1 === arg0) {
+      str = "A directly photographed image";
     }
-    return num3.toString();
+    return str;
   }
 };
-obj.iptc = obj2;
+obj[41730] = {
+  name: "CFAPattern",
+  description() {
+    return "[Raw CFA pattern table data]";
+  }
+};
+const obj13 = { name: "FocalPlaneResolutionUnit", description: fn2(8302).FocalPlaneResolutionUnit };
+obj[41985] = { name: "CustomRendered", description: fn2(8302).CustomRendered };
+const obj14 = { name: "CustomRendered", description: fn2(8302).CustomRendered };
+obj[41986] = { name: "ExposureMode", description: fn2(8302).ExposureMode };
+const obj15 = { name: "ExposureMode", description: fn2(8302).ExposureMode };
+obj[41987] = { name: "WhiteBalance", description: fn2(8302).WhiteBalance };
+obj[41988] = {
+  name: "DigitalZoomRatio",
+  description(arg0) {
+    let str = "Digital zoom was not used";
+    if (0 !== arg0[0]) {
+      str = `${arg0[0] / arg0[1]}`;
+    }
+    return str;
+  }
+};
+const obj16 = { name: "WhiteBalance", description: fn2(8302).WhiteBalance };
+obj[41989] = { name: "FocalLengthIn35mmFilm", description: fn2(8302).FocalLengthIn35mmFilm };
+const obj17 = { name: "FocalLengthIn35mmFilm", description: fn2(8302).FocalLengthIn35mmFilm };
+obj[41990] = { name: "SceneCaptureType", description: fn2(8302).SceneCaptureType };
+obj[41991] = {
+  name: "GainControl",
+  description(arg0) {
+    let str = "None";
+    if (0 !== arg0) {
+      let str2 = "Low gain up";
+      if (1 !== arg0) {
+        let str3 = "High gain up";
+        if (2 !== arg0) {
+          let str4 = "Low gain down";
+          if (3 !== arg0) {
+            let str5 = "Unknown";
+            if (4 === arg0) {
+              str5 = "High gain down";
+            }
+            str4 = str5;
+          }
+          str3 = str4;
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+const obj18 = { name: "SceneCaptureType", description: fn2(8302).SceneCaptureType };
+obj[41992] = { name: "Contrast", description: fn2(8302).Contrast };
+const obj19 = { name: "Contrast", description: fn2(8302).Contrast };
+obj[41993] = { name: "Saturation", description: fn2(8302).Saturation };
+const obj20 = { name: "Saturation", description: fn2(8302).Saturation };
+obj[41994] = { name: "Sharpness", description: fn2(8302).Sharpness };
+obj[41995] = {
+  name: "DeviceSettingDescription",
+  description() {
+    return "[Raw device settings table data]";
+  }
+};
+obj[41996] = {
+  name: "SubjectDistanceRange",
+  description(arg0) {
+    let str = "Macro";
+    if (1 !== arg0) {
+      let str2 = "Close view";
+      if (2 !== arg0) {
+        let str3 = "Unknown";
+        if (3 === arg0) {
+          str3 = "Distant view";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[42034] = {
+  name: "LensSpecification",
+  description(arg0) {
+    const result = arg0[0][0] / arg0[0][1];
+    const parsed = parseFloat(result.toFixed(5));
+    const result1 = arg0[1][0] / arg0[1][1];
+    const combined = "" + parsed + "-" + parseFloat(result1.toFixed(5)) + " mm";
+    if (0 === arg0[3][1]) {
+      const _HermesInternal2 = HermesInternal;
+      return "" + combined + " f/?";
+    } else {
+      const result2 = 1 / (arg0[2][1] / arg0[2][1] / (arg0[3][0] / arg0[3][1]));
+      const _parseFloat = parseFloat;
+      const _HermesInternal = HermesInternal;
+      return "" + combined + " f/" + parseFloat(result2.toFixed(5));
+    }
+  }
+};
+obj[42080] = {
+  name: "CompositeImage",
+  description(arg0) {
+    return { 1: "Not a Composite Image", 2: "General Composite Image", 3: "Composite Image Captured While Shooting" }[arg0] || "Unknown";
+  }
+};
 
 export default obj;

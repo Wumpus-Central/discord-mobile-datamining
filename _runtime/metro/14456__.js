@@ -1,7 +1,17 @@
 // === Module 14456: ? ===
 
 // Module 14456
-import registerAsset from "module_1120" /* 1120 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "3712e3aa74966ab918e86302cf0f502f", name: "SpendEarnOrbs", type: "lottie" });
+for (const key10013 in require("enhancedFetch")) {
+  arg5[key10013] = require("enhancedFetch")[key10013];
+  continue;
+}
+for (const key10017 in require("fillProductsWithAdditionalData")) {
+  arg5[key10017] = require("fillProductsWithAdditionalData")[key10017];
+  continue;
+}
+for (const key10021 in require("RNIapIos")) {
+  arg5[key10021] = require("RNIapIos")[key10021];
+  continue;
+}

@@ -1,43 +1,17 @@
 // === Module 6501: ? ===
 
 // Module 6501
-import _mod1294 from "module_1294" /* 1294 */;
-import _mod1295 from "module_1295" /* 1295 */;
-import callBindBasic from "callBindBasic" /* 1304 */;
+import _mod1292 from "module_1292" /* 1292 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1326 */;
 
-const obj = {};
-try {
-  obj.__proto__ = null;
-  let _module = _mod1295;
-  if (_module) {
-    const _Object = Object;
-    _module = _mod1295(Object.prototype, "__proto__");
-  }
-  let tmp6 = !("toString" in obj);
-  if (tmp6) {
-    let setDunder = _module;
-    if (setDunder) {
-      setDunder = typeof _module.set === "function";
-    }
-    if (setDunder) {
-      const items = [_module.set];
-      setDunder = callBindBasic(items);
-    }
-    if (!setDunder) {
-      setDunder = function setDunder(arg0, arg1) {
-        if (null == arg0) {
-          const tmp6 = new _mod1294("set Object.prototype.__proto__ called on null or undefined");
-          throw tmp6;
-        } else {
-          arg0.__proto__ = arg1;
-          return arg1;
-        }
-      };
-    }
-    tmp6 = setDunder;
-  }
-  module.exports = tmp6;
-  const tmp3 = "toString" in obj;
-} catch (tmp2) {
-  throw tmp2;
+const tmp = _mod1292("%Array%");
+const isArray = tmp.isArray;
+let tmp2 = !isArray;
+if (!isArray) {
+  tmp2 = callBoundIntrinsic("Object.prototype.toString");
 }
+let closure_0 = tmp2;
+
+export default tmp.isArray || (function IsArray(arg0) {
+  return "[object Array]" === closure_0(arg0);
+});

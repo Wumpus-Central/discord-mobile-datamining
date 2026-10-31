@@ -1,7 +1,7 @@
 // === Module 11351: ? ===
 
 // Module 11351
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/standard", width: 380, height: 242, scales: [1], hash: "20a937ca7af234a5d3bd2269cf0e9463", name: "confetti", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8f839a723b53700388132c9e91d8b71b", name: "ArrowLargeUpIcon", type: "png" });

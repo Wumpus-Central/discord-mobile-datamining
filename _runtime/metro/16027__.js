@@ -1,217 +1,142 @@
 // === Module 16027: ? ===
 
 // Module 16027
-import e from "e" /* 1160 */;
-import data from "data" /* 16028 */;
-import regions from "regions" /* 16029 */;
+import _mod16028 from "module_16028" /* 16028 */;
+import CanonicalizeTimeZoneName from "CanonicalizeTimeZoneName" /* 16029 */;
+import CoerceOptionsToObject from "CoerceOptionsToObject" /* 16030 */;
+import _mod16031 from "module_16031" /* 16031 */;
+import GetNumberOption from "GetNumberOption" /* 16036 */;
+import GetOption from "GetOption" /* 16038 */;
+import GetOptionsObject from "GetOptionsObject" /* 16039 */;
+import GetStringOrBooleanOption from "GetStringOrBooleanOption" /* 16040 */;
+import IsSanctionedSimpleUnitIdentifier from "IsSanctionedSimpleUnitIdentifier" /* 16041 */;
+import IsValidTimeZoneName from "IsValidTimeZoneName" /* 16042 */;
+import IsWellFormedCurrencyCode from "IsWellFormedCurrencyCode" /* 16043 */;
+import IsWellFormedUnitIdentifier from "IsWellFormedUnitIdentifier" /* 16044 */;
+import ApplyUnsignedRoundingMode from "ApplyUnsignedRoundingMode" /* 16045 */;
+import CollapseNumberRange from "CollapseNumberRange" /* 16046 */;
+import ComputeExponent from "ComputeExponent" /* 16047 */;
+import ComputeExponentForMagnitude from "ComputeExponentForMagnitude" /* 16048 */;
+import FormatNumericToString from "FormatNumericToString" /* 16049 */;
+import GetUnsignedRoundingMode from "GetUnsignedRoundingMode" /* 16050 */;
+import ToRawPrecision from "ToRawPrecision" /* 16051 */;
+import ToRawFixed from "ToRawFixed" /* 16052 */;
+import CurrencyDigits from "CurrencyDigits" /* 16053 */;
+import FormatApproximately from "FormatApproximately" /* 16057 */;
+import FormatNumeric from "FormatNumeric" /* 16058 */;
+import PartitionNumberPattern from "PartitionNumberPattern" /* 16059 */;
+import FormatNumericRange from "FormatNumericRange" /* 16060 */;
+import PartitionNumberRangePattern from "PartitionNumberRangePattern" /* 16061 */;
+import FormatNumericRangeToParts from "FormatNumericRangeToParts" /* 16062 */;
+import FormatNumericToParts from "FormatNumericToParts" /* 16063 */;
+import InitializeNumberFormat from "InitializeNumberFormat" /* 16064 */;
+import SetNumberFormatUnitOptions from "SetNumberFormatUnitOptions" /* 16079 */;
+import SetNumberFormatDigitOptions from "SetNumberFormatDigitOptions" /* 16080 */;
+import PartitionPattern from "PartitionPattern" /* 16081 */;
+import SupportedLocales from "SupportedLocales" /* 16082 */;
+import RangePatternType from "RangePatternType" /* 16084 */;
+import _mod16085 from "module_16085" /* 16085 */;
+import _mod16086 from "module_16086" /* 16086 */;
+import _mod16087 from "module_16087" /* 16087 */;
+import _mod16088 from "module_16088" /* 16088 */;
+import _mod16089 from "module_16089" /* 16089 */;
+import e_mod from "e" /* 1159 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function isMatched(region, str, arg2) {
-  const parts = str.split("-");
-  [tmp2, tmp3, arr] = parts;
-  if (arr) {
-    if ("$" === arr[0]) {
-      const slice = arr.slice;
-      if ("!" !== arr[1]) {
-        let arr2 = arg2[slice(arr, 1)];
-      } else {
-        arr2 = arg2[slice(arr, 2)];
-      }
-      const mapped = arr2.map((item) => {
-        let tmp = regions.regions[item];
-        if (!tmp) {
-          const items = [item];
-          tmp = items;
-        }
-        return tmp;
-      });
-      const reduced = mapped.reduce((acc, item) => {
-        const obj = e;
-        return obj.__spreadArray(e.__spreadArray([], acc, true), item, true);
-      }, []);
-      let str4 = region.region;
-      if (!str4) {
-        str4 = "";
-      }
-      let tmp4 = reduced.indexOf(str4) > -1 === tmp7;
-    }
-    if (tmp4) {
-      const script = region.script;
-      let tmp8 = !script;
-      if (script) {
-        tmp8 = "*" === tmp3 || tmp3 === region.script;
-        const tmp9 = "*" === tmp3 || tmp3 === region.script;
-      }
-      tmp4 = tmp8;
-    }
-    if (tmp4) {
-      const language = region.language;
-      let tmp10 = !language;
-      if (language) {
-        tmp10 = "*" === tmp2 || tmp2 === region.language;
-        const tmp11 = "*" === tmp2 || tmp2 === region.language;
-      }
-      tmp4 = tmp10;
-    }
-    return tmp4;
-  }
-  region = region.region;
-  tmp4 = !region;
-  if (region) {
-    tmp4 = "*" === arr || arr === region.region;
-    const tmp5 = "*" === arr || arr === region.region;
-  }
-}
-function findMatchingDistanceForLSR(arg0, arg1, matches) {
-  let tmp;
-  matches = matches.matches;
-  let num = 0;
-  if (0 < matches.length) {
-    while (true) {
-      tmp = matches[num];
-      let tmp2Result = isMatched(arg0, tmp.desired, matches.matchVariables);
-      if (tmp2Result) {
-        tmp2Result = isMatched(arg1, tmp.supported, matches.matchVariables);
-      }
-      let tmp5 = tmp.oneway || tmp2Result;
-      if (!tmp5) {
-        let tmp6 = isMatched(arg0, tmp.supported, matches.matchVariables) && isMatched(arg1, tmp.desired, matches.matchVariables);
-        tmp2Result = tmp6;
-      }
-      if (tmp2Result) {
-        break;
-      } else {
-        num = num + 1;
-      }
-    }
-    const result = 10 * tmp.distance;
-    const paradigmLocales = matches.paradigmLocales;
-    const items = [, , ];
-    ({ language: arr3[0], script: arr3[1], region: arr3[2] } = arg0);
-    const _Boolean = Boolean;
-    const found = items.filter(Boolean);
-    const paradigmLocales1 = matches.paradigmLocales;
-    const items1 = [, , ];
-    ({ language: arr5[0], script: arr5[1], region: arr5[2] } = arg1);
-    const _Boolean2 = Boolean;
-    const found1 = items1.filter(Boolean);
-    let diff = result;
-    if (tmp10 !== paradigmLocales1.indexOf(found1.join("-")) > -1) {
-      diff = result - 1;
-    }
-    return diff;
-  }
-  const error = new Error("No matching distance found");
-  throw error;
-}
-function findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) {
-  locale = new Intl.Locale(matchedDesiredLocale);
-  const maximizeResult = locale.maximize();
-  const locale1 = new Intl.Locale(matchedSupportedLocale);
-  const maximizeResult1 = locale1.maximize();
-  const obj = { language: maximizeResult.language, script: maximizeResult.script || "", region: maximizeResult.region || "" };
-  const obj2 = { language: maximizeResult1.language, script: maximizeResult1.script || "", region: maximizeResult1.region || "" };
-  let tmp3 = obj3;
-  if (!obj3) {
-    let first = data.data.supplemental.languageMatching["written-new"][0];
-    let paradigmLocales;
-    if (null !== first) {
-      if (undefined !== first) {
-        paradigmLocales = first.paradigmLocales;
-      }
-    }
-    let parts;
-    if (null !== paradigmLocales) {
-      if (undefined !== paradigmLocales) {
-        parts = paradigmLocales._locales.split(" ");
-      }
-    }
-    const prop = data.data.supplemental.languageMatching["written-new"];
-    let substr = prop.slice(1, 5);
-    const prop1 = data.data.supplemental.languageMatching["written-new"];
-    const substr1 = prop1.slice(5);
-    obj3 = {
-      matches: substr1.map((item) => {
-          const first = Object.keys(item)[0];
-          return { supported: first, desired: item[first]._desired, distance: +item[first]._distance, oneway: "true" === item[first].oneway };
-        }, {}),
-      matchVariables: substr.reduce((acc, item) => {
-          const first = Object.keys(item)[0];
-          const substr = first.slice(1);
-          acc[substr] = item[first]._value.split("+");
-          return acc;
-        }, {}),
-      paradigmLocales: null
-    };
-    const tmp4Result = e;
-    const tmp4Result2 = e;
-    obj3.paradigmLocales = tmp4Result.__spreadArray(e.__spreadArray([], parts, true), parts.map((item) => {
-      locale = new Intl.Locale(item.replace(/_/g, "-"));
-      return locale.maximize().toString();
-    }), true);
-    tmp3 = obj3;
-    const __spreadArrayResult = e.__spreadArray([], parts, true);
-  }
-  let num3 = 0;
-  if (obj.language !== obj2.language) {
-    const obj4 = { language: maximizeResult.language, script: "", region: "" };
-    const obj5 = { language: maximizeResult1.language, script: "", region: "" };
-    num3 = findMatchingDistanceForLSR(obj4, obj5, tmp3);
-  }
-  let sum = num3;
-  if (obj.script !== obj2.script) {
-    const obj6 = { language: maximizeResult.language, script: obj.script, region: "" };
-    const obj7 = { language: maximizeResult1.language, script: obj2.script, region: "" };
-    sum = num3 + findMatchingDistanceForLSR(obj6, obj7, tmp3);
-  }
-  let sum1 = sum;
-  if (obj.region !== obj2.region) {
-    sum1 = sum + findMatchingDistanceForLSR(obj, obj2, tmp3);
-  }
-  return sum1;
-}
-let c3 = 838;
+const require = globalThis.__r;
 
-export function invariant(arg0, arg1, arg2) {
-  let _Error = arg2;
-  if (undefined === arg2) {
-    _Error = Error;
-  }
-  if (!arg0) {
-    const _Error1 = new _Error(arg1);
-    throw _Error1;
-  }
-}
-export { findMatchingDistance };
-export function findBestMatch(arr, arg1, arg2) {
-  closure_0 = arg1;
-  let tmp = arg2;
-  if (undefined === arg2) {
-    tmp = c3;
-  }
-  let Infinity = Infinity;
-  const obj = { matchedDesiredLocale: "", distances: {} };
-  let item = arr.forEach((item, index) => {
-    const matchedDesiredLocale = item;
-    closure_1 = index;
-    if (!obj.distances[item]) {
-      obj.distances[item] = {};
-    }
-    item = matchedDesiredLocale.forEach((matchedSupportedLocale) => {
-      const sum = findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) + 40 * closure_1;
-      obj.distances[matchedDesiredLocale][matchedSupportedLocale] = sum;
-      if (sum < Infinity) {
-        Infinity = sum;
-        obj.matchedDesiredLocale = matchedDesiredLocale;
-        obj.matchedSupportedLocale = matchedSupportedLocale;
-      }
-    });
-  });
-  if (Infinity >= tmp) {
-    obj.matchedDesiredLocale = undefined;
-    obj.matchedSupportedLocale = undefined;
-  }
-  return obj;
-}
-export const UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;
+let e = e_mod;
+e.__exportStar(_mod16028, exports);
+let e = e_mod;
+e.__exportStar(CanonicalizeTimeZoneName, exports);
+let e = e_mod;
+e.__exportStar(CoerceOptionsToObject, exports);
+let e = e_mod;
+e.__exportStar(GetNumberOption, exports);
+let e = e_mod;
+e.__exportStar(GetOption, exports);
+let e = e_mod;
+e.__exportStar(GetOptionsObject, exports);
+let e = e_mod;
+e.__exportStar(GetStringOrBooleanOption, exports);
+let e = e_mod;
+e.__exportStar(IsSanctionedSimpleUnitIdentifier, exports);
+let e = e_mod;
+e.__exportStar(IsValidTimeZoneName, exports);
+let e = e_mod;
+e.__exportStar(IsWellFormedCurrencyCode, exports);
+let e = e_mod;
+e.__exportStar(IsWellFormedUnitIdentifier, exports);
+let e = e_mod;
+e.__exportStar(ApplyUnsignedRoundingMode, exports);
+let e = e_mod;
+e.__exportStar(CollapseNumberRange, exports);
+let e = e_mod;
+e.__exportStar(ComputeExponent, exports);
+let e = e_mod;
+e.__exportStar(ComputeExponentForMagnitude, exports);
+let e = e_mod;
+e.__exportStar(CurrencyDigits, exports);
+let e = e_mod;
+e.__exportStar(FormatApproximately, exports);
+let e = e_mod;
+e.__exportStar(FormatNumeric, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericRange, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericRangeToParts, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericToParts, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericToString, exports);
+let e = e_mod;
+e.__exportStar(GetUnsignedRoundingMode, exports);
+let e = e_mod;
+e.__exportStar(InitializeNumberFormat, exports);
+let e = e_mod;
+e.__exportStar(PartitionNumberPattern, exports);
+let e = e_mod;
+e.__exportStar(PartitionNumberRangePattern, exports);
+let e = e_mod;
+e.__exportStar(SetNumberFormatDigitOptions, exports);
+let e = e_mod;
+e.__exportStar(SetNumberFormatUnitOptions, exports);
+let e = e_mod;
+e.__exportStar(ToRawFixed, exports);
+let e = e_mod;
+e.__exportStar(ToRawPrecision, exports);
+let e = e_mod;
+e.__exportStar(PartitionPattern, exports);
+let e = e_mod;
+e.__exportStar(SupportedLocales, exports);
+let e = e_mod;
+e.__exportStar(_mod16031, exports);
+let e = e_mod;
+e.__exportStar(RangePatternType, exports);
+let e = e_mod;
+e.__exportStar(_mod16085, exports);
+let e = e_mod;
+e.__exportStar(_mod16086, exports);
+let e = e_mod;
+e.__exportStar(_mod16087, exports);
+let e = e_mod;
+e.__exportStar(_mod16088, exports);
+let e = e_mod;
+e.__exportStar(_mod16089, exports);
+
+export const _formatToParts = require("e").__importDefault(require("module_16054")).default;
+export const createDataProperty = require("module_16033").createDataProperty;
+export const defineProperty = require("module_16033").defineProperty;
+export const getInternalSlot = require("module_16033").getInternalSlot;
+export const getMultiInternalSlots = require("module_16033").getMultiInternalSlots;
+export const isLiteralPart = require("module_16033").isLiteralPart;
+export const setInternalSlot = require("module_16033").setInternalSlot;
+export const setMultiInternalSlots = require("module_16033").setMultiInternalSlots;
+export const isMissingLocaleDataError = require("module_16083").isMissingLocaleDataError;
+export const createMemoizedDateTimeFormat = require("module_16033").createMemoizedDateTimeFormat;
+export const createMemoizedListFormat = require("module_16033").createMemoizedListFormat;
+export const createMemoizedLocale = require("module_16033").createMemoizedLocale;
+export const createMemoizedNumberFormat = require("module_16033").createMemoizedNumberFormat;
+export const createMemoizedPluralRules = require("module_16033").createMemoizedPluralRules;
+export const invariant = require("module_16033").invariant;
+export const ZERO = require("TEN").ZERO;
+export const ToIntlMathematicalValue = require("ToIntlMathematicalValue").ToIntlMathematicalValue;

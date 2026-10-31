@@ -1,52 +1,30 @@
 // === Module 6480: ? ===
 
 // Module 6480
-import _mod1471 from "module_1471" /* 1471 */;
-import defineDataProperty from "defineDataProperty" /* 1472 */;
-import keys2 from "keys2" /* 6481 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1326 */;
+import _mod1458 from "module_1458" /* 1458 */;
 
-let tmp = typeof Symbol === "function";
-if (typeof Symbol === "function") {
-  const _Symbol = Symbol;
-  tmp = typeof Symbol("foo") === "symbol";
-}
-let closure_2 = tmp;
-const tmp2 = _mod1471();
-let closure_5 = tmp2;
-function defineProperty(arg0, arg1, arg2, arg3) {
+let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1458();
 
-}
-function defineProperties(prototype, ownPropertyDescriptors) {
-  const arr = keys2(ownPropertyDescriptors);
-  if (!closure_2) {
-    let num = 0;
-    if (0 < arr.length) {
-      while (typeof defineProperty === "function") {
-        if (!(tmp7 in prototype)) {
-          let tmp14 = defineDataProperty;
-          if (closure_5) {
-            let flag2 = true;
-            let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
-          } else {
-            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
-          }
-        } else if (true !== tmp9) {
-          if (typeof tmp9 === "function") {
-            let call2 = toString.call;
-          }
-        }
-        num = num + 1;
-      }
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    const call = concat.call;
-    const _Object = Object;
-    const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
-    typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
-  const tmp = arguments.length > 2 ? arguments[2] : {};
-}
-defineProperties.supportsDescriptors = tmp2;
-
-export default defineProperties;
+  if (!tmp) {
+    return tmp;
+  } else if (closure_2) {
+    let tmp4 = (function tryDateGetDayCall(arg0) {
+      try {
+        closure_1_0(arg0);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    })(obj);
+  } else {
+    tmp4 = "[object Date]" === closure_1(obj);
+  }
+};

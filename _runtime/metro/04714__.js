@@ -1,19 +1,19 @@
 // === Module 4714: ? ===
 
 // Module 4714
-import module_4570_mod from "module_4570" /* 4570 */;
-import _typeof_mod from "module_4289" /* 4289 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
-import module_4293_mod from "module_4293" /* 4293 */;
+import module_4298_mod from "module_4298" /* 4298 */;
+import _typeof_mod from "module_4294" /* 4294 */;
+import module_4566_mod from "module_4566" /* 4566 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-let module_4570 = module_4570_mod;
-if (!module_4570) {
-  const obj = { default: module_4570 };
+let module_4298 = module_4298_mod;
+if (!module_4298) {
+  const obj = { default: module_4298 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4570;
+  tmp3 = module_4298;
 }
-module_4570 = tmp3;
+module_4298 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -22,27 +22,27 @@ if (!_typeof) {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+let module_4566 = module_4566_mod;
+if (!module_4566) {
+  const obj3 = { default: module_4566 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_4566;
 }
-requiredArgs = tmp7;
-let module_4293 = module_4293_mod;
-if (!module_4293) {
-  const obj4 = { default: module_4293 };
+module_4566 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
   let tmp9 = obj4;
 } else {
-  tmp9 = module_4293;
+  tmp9 = requiredArgs;
 }
-module_4293 = tmp9;
+requiredArgs = tmp9;
 
-export default function setWeek(arg0, arg1, arg2) {
+export default function setISOWeek(arg0, arg1) {
   requiredArgs.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4570.default(defaultResult1, arg2) - module_4293.default(arg1);
+  const diff = module_4566.default(defaultResult1) - module_4298.default(arg1);
   defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
   return defaultResult1;
 };

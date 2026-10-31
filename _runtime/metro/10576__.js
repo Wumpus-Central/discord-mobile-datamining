@@ -1,7 +1,24 @@
 // === Module 10576: ? ===
 
 // Module 10576
-import registerAsset from "module_1120" /* 1120 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 275, height: 42, scales: [2, 3], hash: "ad7c8b7fe5cb5b3227b2fba22a45cc38", name: "img_nitro_tier_2_activated_dark", type: "png" });
+export default function areHookInputsEqual(arg0, arg1) {
+  if (arg0.length !== arg1.length) {
+    return false;
+  } else {
+    if (0 < arg1.length) {
+      let num3 = 0;
+      if (0 < arg0.length) {
+        const _Object = Object;
+        while (Object.is(arg0[num3], arg1[num3])) {
+          let sum = num3 + 1;
+          if (sum < arg1.length) {
+            num3 = sum;
+          }
+        }
+        return false;
+      }
+    }
+    return true;
+  }
+};

@@ -1,17 +1,17 @@
 // === Module 4657: ? ===
 
 // Module 4657
-import _typeof_mod from "module_4289" /* 4289 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
+import module_4649_mod from "module_4649" /* 4649 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4649 = module_4649_mod;
+if (!module_4649) {
+  const obj = { default: module_4649 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4649;
 }
-_typeof = tmp3;
+module_4649 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isWednesday(arg0) {
+export default function isThisYear(arg0) {
   requiredArgs.default(1, arguments);
-  return 3 === _typeof.default(arg0).getDay();
+  return module_4649.default(arg0, Date.now());
 };
 export default exports.default;

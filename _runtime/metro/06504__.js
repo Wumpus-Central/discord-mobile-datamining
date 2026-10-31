@@ -1,46 +1,32 @@
 // === Module 6504: ? ===
 
 // Module 6504
+import _mod1293 from "module_1293" /* 1293 */;
 import _mod6505 from "module_6505" /* 6505 */;
-import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 6506 */;
+import _mod6506 from "module_6506" /* 6506 */;
+import _mod6507 from "module_6507" /* 6507 */;
 
-const tmp = _mod6505("%Reflect.construct%", true);
-let closure_0 = tmp;
-try {
-  const obj = {
-    () => {
-
-      }
-  };
-  DefinePropertyOrThrow({}, "", obj);
-  let tmp4 = DefinePropertyOrThrow;
-  if (tmp4) {
-    if (tmp) {
-      let closure_1 = {};
-      const obj3 = {
-        () => {
-                throw closure_1;
-              },
-        "[[Enumerable]]": true
-      };
-      tmp4({}, "length", obj3);
-      module.exports = function IsConstructor(arg0) {
-        try {
-          closure_0(arg0, obj2);
-        } catch (tmp5) {
-          return tmp5 === closure_1;
-        }
-      };
-      const obj2 = {};
+if (_mod6505) {
+  function setProto(arg0, arg1) {
+    if (_mod6505(arg0, arg1)) {
+      return arg0;
+    } else {
+      const tmp5 = new _mod1293("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      throw tmp5;
     }
   }
-  module.exports = function IsConstructor(fn) {
-    let prototype = typeof fn === "function";
-    if (typeof fn === "function") {
-      prototype = fn.prototype;
+} else {
+  setProto = _mod6506;
+  if (!setProto) {
+    let setProto2 = null;
+    if (_mod6507) {
+      setProto2 = function setProto(arg0, arg1) {
+        _mod6507(arg0, arg1);
+        return arg0;
+      };
     }
-    return prototype;
-  };
-} catch (err) {
-  tmp4 = null;
+    setProto = setProto2;
+  }
 }
+
+export default setProto;

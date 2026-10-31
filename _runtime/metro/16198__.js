@@ -1,51 +1,527 @@
 // === Module 16198: ? ===
 
 // Module 16198
+import _mod16199 from "module_16199" /* 16199 */;
+import URLImpl from "URLImpl" /* 16200 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-export default (arg0) => {
-  let map = arg0;
-  if (!arg0) {
-    const _Map = Map;
-    map = new Map();
-  }
-  return {
-    all: map,
-    on(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        value.push(arg1);
-      } else {
-        const items = [arg1];
-        const result = map.set(arg0, items);
-      }
-    },
-    off(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        if (arg1) {
-          value.splice(value.indexOf(arg1) >>> 0, 1);
-        } else {
-          const result = map.set(arg0, []);
+const exports = {
+  _mixedIntoPredicates: [],
+  is(arg0) {
+    if (arg0) {
+      if (obj.hasOwn(arg0, _mod16199.implSymbol)) {
+        if (arg0[_mod16199.implSymbol] instanceof URLImpl.implementation) {
+          return true;
         }
       }
-    },
-    emit(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      value = map.get(arg0);
-      if (value) {
-        const substr = value.slice();
-        const mapped = substr.map((fn) => {
-          fn(closure_1);
-        });
+      const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
+      for (const item10025 of _mixedIntoPredicates) {
+        if (item10025(arg0)) {
+          obj2.return();
+          let flag = true;
+          return true;
+        }
       }
-      value2 = map.get("*");
-      if (value2) {
-        const substr1 = value2.slice();
-        const mapped1 = substr1.map((fn) => {
-          fn(closure_0, closure_1);
-        });
+      obj = _mod16199;
+    }
+    return false;
+  },
+  isImpl(arg0) {
+    if (arg0) {
+      if (arg0 instanceof URLImpl.implementation) {
+        return true;
+      } else {
+        const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
+        for (const item10018 of _mixedIntoPredicates) {
+          if (item10018(tmpResult.wrapperForImpl(arg0))) {
+            obj2.return();
+            let flag = true;
+            return true;
+          }
+        }
+        const tmpResult = _mod16199;
       }
     }
-  };
+    return false;
+  },
+  convert(arg0) {
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    let str = obj.context;
+    if (str === undefined) {
+      str = "The provided value";
+    }
+    const _exports = module.exports;
+    if (_exports.is(arg0)) {
+      return _mod16199.implForWrapper(arg0);
+    } else {
+      const _TypeError = TypeError;
+      const _HermesInternal = HermesInternal;
+      const typeError = new TypeError("" + str + " is not of type 'URL'.");
+      throw typeError;
+    }
+  },
+  create(arg0, arg1, arg2) {
+    if (undefined === arg0[_mod16199.ctorRegistrySymbol]) {
+      const _Error2 = Error;
+      const error = new Error("Internal error: invalid global object");
+      throw error;
+    } else {
+      const _URL = arg0[_mod16199.ctorRegistrySymbol].URL;
+      if (undefined === _URL) {
+        const _Error = Error;
+        const error1 = new Error("Internal error: constructor URL is not installed on the passed global object");
+        throw error1;
+      } else {
+        const _Object = Object;
+        return obj.setup(Object.create(_URL.prototype), arg0, arg1, arg2);
+      }
+    }
+  },
+  createImpl(arg0, arg1, arg2) {
+    const obj = _mod16199;
+    return obj.implForWrapper(obj.create(arg0, arg1, arg2));
+  },
+  _internalSetup(arg0) {
+
+  },
+  setup(wrapper, arg1) {
+    let items = arg2;
+    if (arg2 === undefined) {
+      items = [];
+    }
+    let obj = arg3;
+    if (arg3 === undefined) {
+      obj = {};
+    }
+    obj.wrapper = wrapper;
+    obj._internalSetup(wrapper);
+    const obj2 = { value: null, configurable: true };
+    const implementation = new URLImpl.implementation(arg1, items, obj);
+    obj2.value = implementation;
+    Object.defineProperty(wrapper, _mod16199.implSymbol, obj2);
+    wrapper[_mod16199.implSymbol][_mod16199.wrapperSymbol] = wrapper;
+    if (URLImpl.init) {
+      URLImpl.init(wrapper[_mod16199.implSymbol], obj);
+      const tmp2Result = URLImpl;
+    }
+    return wrapper;
+  },
+  install(arg0) {
+    const URL = arg0;
+    class URL {
+      constructor(arg0) {
+        tmp = closure_3(this, URL);
+        if (arguments.length < 1) {
+          tmp7 = globalThis;
+          _TypeError = TypeError;
+          str = "Failed to construct 'URL': 1 argument required, but only ";
+          tmp8 = new.target;
+          str2 = " present.";
+          tmp9 = new.target;
+          typeError = new TypeError("Failed to construct 'URL': 1 argument required, but only " + arguments.length + " present.");
+          tmp11 = typeError;
+          throw typeError;
+        } else {
+          items = [];
+          num = 0;
+          tmp12 = closure_0;
+          tmp13 = c2;
+          obj2 = closure_0(c2[4]);
+          arr1 = items.push(obj2.USVString(arguments[0], { context: "Failed to construct 'URL': parameter 1" }));
+          tmp15 = arguments[1];
+          USVStringResult = tmp15;
+          if (undefined !== tmp15) {
+            tmp12Result = tmp12(tmp13[4]);
+            USVStringResult = tmp12Result.USVString(tmp15, { context: "Failed to construct 'URL': parameter 2" });
+          }
+          arr2 = items.push(USVStringResult);
+          tmp4 = hasOwnProperty;
+          tmp5 = globalThis;
+          _Object = Object;
+          tmp6 = closure_0;
+          return hasOwnProperty.setup(Object.create(this.constructor.prototype), closure_0, items);
+        }
+      }
+    }
+    const entry = {
+      key: "toJSON",
+      value: function toJSON() {
+        const self = this;
+        if (this) {
+          _exports = module.exports;
+          if (_exports.is(self)) {
+            return self[URL(undefined, 16199).implSymbol].toJSON();
+          }
+        }
+        const typeError = new TypeError("Illegal invocation");
+        throw typeError;
+      }
+    };
+    let items = [
+      entry,
+      {
+        key: "href",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].href;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].href = URL(16207).USVString(item10103, { context: "Failed to set the 'href' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'href' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "toString",
+        value: function toString() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].href;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "origin",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].origin;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "protocol",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].protocol;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].protocol = URL(16207).USVString(item10103, { context: "Failed to set the 'protocol' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'protocol' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "username",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].username;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].username = URL(16207).USVString(item10103, { context: "Failed to set the 'username' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'username' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "password",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].password;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].password = URL(16207).USVString(item10103, { context: "Failed to set the 'password' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'password' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "host",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].host;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].host = URL(16207).USVString(item10103, { context: "Failed to set the 'host' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'host' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "hostname",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].hostname;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].hostname = URL(16207).USVString(item10103, { context: "Failed to set the 'hostname' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'hostname' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "port",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].port;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].port = URL(16207).USVString(item10103, { context: "Failed to set the 'port' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'port' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "pathname",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].pathname;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].pathname = URL(16207).USVString(item10103, { context: "Failed to set the 'pathname' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'pathname' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "search",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].search;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].search = URL(16207).USVString(item10103, { context: "Failed to set the 'search' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'search' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "searchParams",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = _exports.exports;
+            if (_exports.is(self)) {
+              return self(16199).getSameObject(self, "searchParams", () => URL(16199).tryWrapperForImpl(self[URL(undefined, 16199).implSymbol].searchParams));
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      },
+      {
+        key: "hash",
+        get() {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              return self[URL(undefined, 16199).implSymbol].hash;
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        },
+        set(item10103) {
+          const self = this;
+          if (this) {
+            _exports = module.exports;
+            if (_exports.is(self)) {
+              const obj = URL(16207);
+              self[URL(undefined, 16199).implSymbol].hash = URL(16207).USVString(item10103, { context: "Failed to set the 'hash' property on 'URL': The provided value" });
+              const USVStringResult = URL(16207).USVString(item10103, { context: "Failed to set the 'hash' property on 'URL': The provided value" });
+            }
+          }
+          const typeError = new TypeError("Illegal invocation");
+          throw typeError;
+        }
+      }
+    ];
+    const tmp = _createClass(URL, items);
+    const user = { toJSON: { enumerable: true }, href: { enumerable: true }, toString: { enumerable: true }, origin: { enumerable: true }, protocol: { enumerable: true }, username: { enumerable: true }, password: { enumerable: true }, host: { enumerable: true }, hostname: { enumerable: true }, port: { enumerable: true }, pathname: { enumerable: true }, search: { enumerable: true }, searchParams: { enumerable: true }, hash: { enumerable: true } };
+    user[Symbol.toStringTag] = { value: "URL", configurable: true };
+    Object.defineProperties(tmp.prototype, user);
+    if (undefined === arg0[URL(undefined, 16199).ctorRegistrySymbol]) {
+      let _Object = Object;
+      const ctorRegistrySymbol = tmp3(16199).ctorRegistrySymbol;
+      class URL {
+        constructor(arg0) {
+          tmp = closure_3(this, URL);
+          if (arguments.length < 1) {
+            tmp7 = globalThis;
+            _TypeError = TypeError;
+            str = "Failed to construct 'URL': 1 argument required, but only ";
+            tmp8 = new.target;
+            str2 = " present.";
+            tmp9 = new.target;
+            typeError = new TypeError("Failed to construct 'URL': 1 argument required, but only " + arguments.length + " present.");
+            tmp11 = typeError;
+            throw typeError;
+          } else {
+            items = [];
+            num = 0;
+            tmp12 = closure_0;
+            tmp13 = c2;
+            obj2 = closure_0(c2[4]);
+            arr1 = items.push(obj2.USVString(arguments[0], { context: "Failed to construct 'URL': parameter 1" }));
+            tmp15 = arguments[1];
+            USVStringResult = tmp15;
+            if (undefined !== tmp15) {
+              tmp12Result = tmp12(tmp13[4]);
+              USVStringResult = tmp12Result.USVString(tmp15, { context: "Failed to construct 'URL': parameter 2" });
+            }
+            arr2 = items.push(USVStringResult);
+            tmp4 = hasOwnProperty;
+            tmp5 = globalThis;
+            _Object = Object;
+            tmp6 = closure_0;
+            return hasOwnProperty.setup(Object.create(this.constructor.prototype), closure_0, items);
+          }
+        }
+      }
+    }
+    arg0[URL(undefined, 16199).ctorRegistrySymbol].URL = tmp;
+    Object.defineProperty(arg0, "URL", { configurable: true, writable: true, value: tmp });
+  }
 };
+
+export default exports;

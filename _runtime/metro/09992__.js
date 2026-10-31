@@ -1,7 +1,7 @@
 // === Module 9992: ? ===
 
 // Module 9992
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 240, height: 152, scales: [2, 3], hash: "99a0c83db7ec93ecc4f9138bd68cba05", name: "img_guild_cap_upsell_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CamoIcon", width: 60, height: 60, scales: [2, 3], hash: "4e81188cb8befe97a7c2fb2d0b3c1c42", name: "CamoIcon", type: "png" });

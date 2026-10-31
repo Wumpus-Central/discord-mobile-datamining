@@ -77,7 +77,7 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -225,7 +225,7 @@ function startTimeToFullDisplaySpan(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -332,7 +332,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -459,7 +459,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -600,7 +600,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -736,7 +736,7 @@ function startTimeToFullDisplaySpan(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -901,7 +901,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -1028,7 +1028,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -1182,7 +1182,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -1478,7 +1478,7 @@ export function updateInitialDisplaySpan(arg0) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -1605,7 +1605,7 @@ export function updateInitialDisplaySpan(arg0) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -1762,7 +1762,7 @@ export function updateInitialDisplaySpan(arg0) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -1916,7 +1916,7 @@ export function createTimeToFullDisplay(useFocusEffect) {
     constructor(arg0) {
       tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
-      tmp2 = useFocusEffect(/* F120643 */ function() { ... });
+      tmp2 = useFocusEffect(/* F121016 */ function() { ... });
       tmp3 = closure_3;
       tmp4 = closure_1;
       if (record) {
@@ -1935,7 +1935,7 @@ export function createTimeToInitialDisplay(useFocusEffect) {
     constructor(arg0) {
       tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
-      tmp2 = useFocusEffect(/* F120643 */ function() { ... });
+      tmp2 = useFocusEffect(/* F121016 */ function() { ... });
       tmp3 = closure_3;
       tmp4 = closure_1;
       if (record) {

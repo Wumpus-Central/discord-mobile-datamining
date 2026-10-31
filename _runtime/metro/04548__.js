@@ -1,62 +1,76 @@
 // === Module 4548: ? ===
 
 // Module 4548
-import _typeof_mod from "module_4289" /* 4289 */;
-import module_4471_mod from "module_4471" /* 4471 */;
-import module_4532_mod from "module_4532" /* 4532 */;
+import _mod4299 from "module_4299" /* 4299 */;
+import code_mod from "module_4540" /* 4540 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let code = code_mod;
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = code;
 }
-_typeof = tmp3;
-let module_4471 = module_4471_mod;
-if (!module_4471) {
-  const obj2 = { default: module_4471 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4471;
-}
-module_4471 = tmp5;
-let module_4532 = module_4532_mod;
-if (!module_4532) {
-  const obj3 = { default: module_4532 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4532;
-}
-module_4532 = tmp7;
-let closure_3 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let closure_4 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+code = tmp3;
+let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
 
-export default function formatRFC7231(arg0) {
+export default function formatDuration(arg0, locale) {
+  closure_0 = arg0;
   if (arguments.length < 1) {
     const _TypeError = TypeError;
-    const concat2 = "1 arguments required, but only ".concat;
-    const typeError = new TypeError("1 arguments required, but only ".concat(arguments.length, " present"));
+    const concat = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
     throw typeError;
   } else {
-    const defaultResult = _typeof.default(arg0);
-    if (module_4471.default(defaultResult)) {
-      const uTCFullYear = defaultResult.getUTCFullYear();
-      const defaultResult1 = module_4532.default(defaultResult.getUTCDate(), 2);
-      const defaultResult2 = module_4532.default(defaultResult.getUTCHours(), 2);
-      const concat = "".concat;
-      const defaultResult3 = module_4532.default(defaultResult.getUTCMinutes(), 2);
-      const combined = "".concat(closure_3[defaultResult.getUTCDay(defaultResult)], ", ");
-      const combined1 = combined.concat(defaultResult1, " ");
-      const combined2 = combined1.concat(closure_4[defaultResult.getUTCMonth(defaultResult)], " ");
-      const combined3 = combined2.concat(uTCFullYear, " ");
-      const combined4 = combined3.concat(defaultResult2, ":");
-      const combined5 = combined4.concat(defaultResult3, ":");
-      return combined5.concat(module_4532.default(defaultResult.getUTCSeconds(), 2), " GMT");
+    locale = undefined;
+    const defaultOptions = _mod4299.getDefaultOptions();
+    if (null != locale) {
+      locale = locale.locale;
+    }
+    if (null === locale) {
+      locale = defaultOptions.locale;
+    }
+    if (null === locale) {
+      locale = code.default;
+    }
+    let format;
+    if (null != locale) {
+      format = locale.format;
+    }
+    if (null === format) {
+      format = closure_3;
+    }
+    let zero;
+    if (null != locale) {
+      zero = locale.zero;
+    }
+    closure_2 = null !== zero && undefined !== zero && zero;
+    let delimiter;
+    if (null != locale) {
+      delimiter = locale.delimiter;
+    }
+    let str2 = " ";
+    if (null !== delimiter) {
+      str2 = " ";
+      if (undefined !== delimiter) {
+        str2 = delimiter;
+      }
+    }
+    if (locale.formatDistance) {
+      const reduced = format.reduce((arr, item) => {
+        let combined = arr;
+        if (typeof closure_0[item] === "number") {
+          if (closure_2) {
+            combined = arr.concat(locale.formatDistance(tmp, tmp3));
+          } else {
+            combined = arr;
+          }
+        }
+        return combined;
+      }, []);
+      return reduced.join(str2);
     } else {
-      const _RangeError = RangeError;
-      const rangeError = new RangeError("Invalid time value");
-      throw rangeError;
+      return "";
     }
   }
 };

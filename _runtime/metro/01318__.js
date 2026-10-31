@@ -2,4 +2,4 @@
 
 // Module 1318
 
-export default Math.abs;
+export default Math.floor;

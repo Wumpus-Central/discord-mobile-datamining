@@ -1,7 +1,7 @@
 // === Module 8629: ? ===
 
 // Module 8629
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d9312bb32f25ade901c17406f7f53267", name: "ImageLockIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d71daeef64b152476fb485143e6c3f6e", name: "TextLockIcon", type: "png" });

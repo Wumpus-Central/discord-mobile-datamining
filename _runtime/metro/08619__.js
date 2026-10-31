@@ -1,7 +1,7 @@
 // === Module 8619: ? ===
 
 // Module 8619
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3c1f2faaaf73c3a8bd052c79cfecb913", name: "ImageIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "4f055c482a5386d393f6b9bf8363f15e", name: "TextWarningIcon", type: "png" });

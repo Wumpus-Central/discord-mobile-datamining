@@ -1,9 +1,55 @@
 // === Module 12885: ? ===
 
 // Module 12885
-import _mod12883 from "module_12883" /* 12883 */;
-import _mod12886 from "module_12886" /* 12886 */;
-import _mod12887 from "module_12887" /* 12887 */;
+import _mod12833 from "module_12833" /* 12833 */;
 
+const Ident = _mod12833.TYPE.Ident;
+let obj = {
+  name: "Combinator",
+  structure: { name: String },
+  parse() {
+    const self = this;
+    const tokenStart = this.scanner.tokenStart;
+    const source = this.scanner.source;
+    const charCodeAtResult = source.charCodeAt(this.scanner.tokenStart);
+    if (62 !== charCodeAtResult) {
+      if (43 !== charCodeAtResult) {
+        if (126 !== charCodeAtResult) {
+          if (47 === charCodeAtResult) {
+            self.scanner.next();
+            let tmp5 = self.scanner.tokenType === Ident;
+            if (tmp5) {
+              const scanner = self.scanner;
+              tmp5 = false !== scanner.lookupValue(0, "deep");
+            }
+            if (!tmp5) {
+              self.error("Identifier `deep` is expected");
+            }
+            self.scanner.next();
+            const scanner2 = self.scanner;
+            if (!scanner2.isDelim(47)) {
+              self.error("Solidus is expected");
+            }
+            self.scanner.next();
+            const iter = self.scanner;
+            const iter2 = self.scanner;
+            const iter3 = self.scanner;
+          } else {
+            self.error("Combinator is expected");
+          }
+        }
+        const obj = { type: "Combinator", loc: self.getLocation(tokenStart, self.scanner.tokenStart), name: null };
+        const scanner3 = self.scanner;
+        obj.name = scanner3.substrToCursor(tokenStart);
+        return obj;
+      }
+    }
+    self.scanner.next();
+    const iter4 = self.scanner;
+  },
+  generate(name) {
+    this.chunk(name.name);
+  }
+};
 
-export default { getNode: _mod12883, expression: _mod12886, var: _mod12887 };
+export default obj;

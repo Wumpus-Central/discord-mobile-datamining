@@ -20,7 +20,7 @@ export (arg0) => {
   let merged1;
   let fn2;
   let url;
-  let obj2 = { currentRoute: "getCurrentUser" };
+  let obj2 = { currentRoute: "Array" };
   let fn = obj.beforeStartSpan;
   const merged = Object.assign(Object.assign({}, url), obj);
   if (null === fn) {

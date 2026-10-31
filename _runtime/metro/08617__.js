@@ -1,7 +1,7 @@
 // === Module 8617: ? ===
 
 // Module 8617
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "321fcdfdc6f79caac89fae29f0991750", name: "ForumWarningIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2007c026f7f9ad4b2d38f1d4bc513524", name: "VoiceNormalSpoilerIcon", type: "png" });

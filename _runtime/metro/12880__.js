@@ -1,40 +1,92 @@
 // === Module 12880: ? ===
 
 // Module 12880
-import _mod12839 from "module_12839" /* 12839 */;
-import _mod12881 from "module_12881" /* 12881 */;
-import _mod12888 from "module_12888" /* 12888 */;
-import _mod12894 from "module_12894" /* 12894 */;
+import _mod12833 from "module_12833" /* 12833 */;
+import _mod12877 from "module_12877" /* 12877 */;
 
+function consumeRaw(arg0) {
+  return this.Raw(arg0, null, true);
+}
+function consumeRule() {
+  return this.parseWithFallback(this.Rule, consumeRaw);
+}
+function consumeRawDeclaration(arg0) {
+  return this.Raw(arg0, _mod12877.mode.semicolonIncluded, true);
+}
+function consumeDeclaration() {
+  const self = this;
+  if (this.scanner.tokenType === Semicolon) {
+    const call = consumeRawDeclaration.call;
+    const tokenIndex = self.scanner.tokenIndex;
+    if (typeof call === "unknown") {
+      let RawResult = self.Raw(tokenIndex, _mod12877.mode.semicolonIncluded, true);
+    } else {
+      RawResult = call(self, tokenIndex);
+    }
+    return RawResult;
+  } else {
+    if (self.scanner.tokenType === tmp) {
+      self.scanner.next();
+      const iter = self.scanner;
+    }
+    return self.parseWithFallback(self.Declaration, consumeRawDeclaration);
+  }
+}
+const WhiteSpace = _mod12833.TYPE.WhiteSpace;
+const Comment = _mod12833.TYPE.Comment;
+const Semicolon = _mod12833.TYPE.Semicolon;
+const AtKeyword = _mod12833.TYPE.AtKeyword;
+const LeftCurlyBracket = _mod12833.TYPE.LeftCurlyBracket;
+const RightCurlyBracket = _mod12833.TYPE.RightCurlyBracket;
 const obj = {
-  parseContext: {
-    default: "StyleSheet",
-    stylesheet: "StyleSheet",
-    atrule: "Atrule",
-    atrulePrelude(atrule) {
-      let StringResult = null;
-      if (atrule.atrule) {
-        const _String = String;
-        StringResult = String(atrule.atrule);
+  name: "Block",
+  structure: null,
+  parse(arg0) {
+    const tmp = arg0 ? consumeDeclaration : consumeRule;
+    const self = this;
+    const list = this.createList();
+    this.eat(LeftCurlyBracket);
+    if (!this.scanner.eof) {
+      const tokenType = self.scanner.tokenType;
+      while (RightCurlyBracket !== tokenType) {
+        if (WhiteSpace !== tokenType) {
+          if (Comment !== tokenType) {
+            if (AtKeyword === tokenType) {
+              let arr = list.push(self.parseWithFallback(self.Atrule, consumeRaw));
+            } else {
+              let call = tmp.call;
+              let arr3 = list.push(typeof call === "unknown" ? tmp() : call(self));
+            }
+          }
+          if (self.scanner.eof) {
+            break;
+          }
+        }
+        let iter = self.scanner;
+        let nextResult = iter.next();
       }
-      return this.AtrulePrelude(StringResult);
-    },
-    mediaQueryList: "MediaQueryList",
-    mediaQuery: "MediaQuery",
-    rule: "Rule",
-    selectorList: "SelectorList",
-    selector: "Selector",
-    block() {
-      return this.Block(true);
-    },
-    declarationList: "DeclarationList",
-    declaration: "Declaration",
-    value: "Value"
+    }
+    if (!self.scanner.eof) {
+      self.eat(RightCurlyBracket);
+    }
+    const element = { type: "Block", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: list };
+    return element;
   },
-  scope: _mod12881,
-  atrule: _mod12888,
-  pseudo: _mod12894,
-  node: _mod12839
+  generate(arg0) {
+    this.chunk("{");
+    this.children(arg0, function(type) {
+      if ("Declaration" === type.type) {
+        const self = this;
+        this.chunk(";");
+      }
+    });
+    this.chunk("}");
+  },
+  walkContext: "block"
 };
+const obj2 = { children: null };
+const items = [["Atrule", "Rule", "Declaration"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

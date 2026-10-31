@@ -1,37 +1,28 @@
 // === Module 4659: ? ===
 
 // Module 4659
-import module_4470_mod from "module_4470" /* 4470 */;
-import subDays_mod from "subDays" /* 4660 */;
-import requiredArgs_mod from "requiredArgs" /* 4290 */;
+import module_4475_mod from "module_4475" /* 4475 */;
+import requiredArgs_mod from "requiredArgs" /* 4295 */;
 
-let module_4470 = module_4470_mod;
-if (!module_4470) {
-  const obj = { default: module_4470 };
+let module_4475 = module_4475_mod;
+if (!module_4475) {
+  const obj = { default: module_4475 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4470;
+  tmp3 = module_4475;
 }
-module_4470 = tmp3;
-let subDays = subDays_mod;
-if (!subDays) {
-  const obj2 = { default: subDays };
-  let tmp5 = obj2;
-} else {
-  tmp5 = subDays;
-}
-subDays = tmp5;
+module_4475 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isYesterday(arg0) {
+export default function isToday(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4470.default(arg0, subDays.default(Date.now(), 1));
+  return module_4475.default(arg0, Date.now());
 };
 export default exports.default;

@@ -1,12 +1,7 @@
 // === Module 11084: ? ===
 
 // Module 11084
-import _mod11083 from "module_11083" /* 11083 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11083.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8b4b2bddd719de3088e180cf9d96ecec", name: "RetryIcon", type: "png" });
