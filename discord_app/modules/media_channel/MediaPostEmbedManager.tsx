@@ -1,15 +1,15 @@
-// === Module 19953: MediaPostEmbedManager ===
+// === Module 20011: MediaPostEmbedManager ===
 
-// Module 19953 (MediaPostEmbedManager)
-import FlagUtils from "FlagUtils" /* 1397 */;
-import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 6044 */;
-import MediaChannelActionCreators from "MediaChannelActionCreators" /* 10956 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19470 */;
-import GatedChannelStore from "GatedChannelStore" /* 4913 */;
+// Module 20011 (MediaPostEmbedManager)
+import FlagUtils from "FlagUtils" /* 1396 */;
+import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 6049 */;
+import MediaChannelActionCreators from "MediaChannelActionCreators" /* 10975 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19527 */;
+import GatedChannelStore from "GatedChannelStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11329 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11365 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
 function resolveMediaPostEmbeds(embeds) {
@@ -78,7 +78,7 @@ function resolveMediaPostEmbeds(embeds) {
     });
   }
 }
-const FetchState = fn(11329).FetchState;
+const FetchState = fn(11365).FetchState;
 const MessageFlags = fn(1072).MessageFlags;
 const set = new Set();
 class MediaPostEmbedManager extends tmp7 {

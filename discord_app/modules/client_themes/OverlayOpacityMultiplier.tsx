@@ -1,6 +1,6 @@
-// === Module 5188: OverlayOpacityMultiplier ===
+// === Module 5193: OverlayOpacityMultiplier ===
 
-// Module 5188 (OverlayOpacityMultiplier)
+// Module 5193 (OverlayOpacityMultiplier)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/client_themes/OverlayOpacityMultiplier.tsx");

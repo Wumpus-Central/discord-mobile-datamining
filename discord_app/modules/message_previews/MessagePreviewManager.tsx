@@ -1,19 +1,19 @@
-// === Module 17242: MessagePreviewManager ===
+// === Module 17299: MessagePreviewManager ===
 
-// Module 17242 (MessagePreviewManager)
+// Module 17299 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 17243 */;
+import RemoteFetchData from "RemoteFetchData" /* 17300 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15564 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15603 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
-const isThread = fn(4862).isThread;
+const isThread = fn(4867).isThread;
 const Endpoints = fn(1072).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
@@ -74,7 +74,7 @@ class MessagePreviewManager extends tmp3 {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         while (true) {
@@ -214,7 +214,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -344,7 +344,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -361,7 +361,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
               let body;
               const _HermesInternal = HermesInternal;
               closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + nextWantsResult.join(", ") + ")");
-              const HTTP = tmp2(1283).HTTP;
+              const HTTP = tmp2(1282).HTTP;
               const request = { url: constants.MESSAGE_PREVIEWS, body: null, rejectWithError: false };
               const obj4 = { channel_ids: nextWantsResult };
               request.body = obj4;
@@ -382,7 +382,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
             const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
             tmp5(572).dispatch(obj7);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c3 = tmp;

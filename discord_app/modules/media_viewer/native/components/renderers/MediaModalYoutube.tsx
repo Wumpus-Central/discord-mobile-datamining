@@ -1,15 +1,17 @@
-// === Module 14745: MediaModalYoutube ===
+// === Module 14783: MediaModalYoutube ===
 
-// Module 14745 (MediaModalYoutube)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8827 */;
-import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8862 */;
+// Module 14783 (MediaModalYoutube)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8835 */;
+import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
+import AppStateStore from "AppStateStore" /* 1993 */;
 
 require = fn;
-const YOUTUBE_EMBED_PAGE_TYPE = fn(1072).YOUTUBE_EMBED_PAGE_TYPE;
+const Constants = fn(1072);
+({ AppStates: metroRequire, YOUTUBE_EMBED_PAGE_TYPE: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-let closure_7 = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT;
+let closure_9 = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/renderers/MediaModalYoutube.tsx");
 
@@ -21,16 +23,16 @@ export default noop.memo(function MediaModalYoutube(visible) {
   _slicedToArray = undefined;
   noop = undefined;
   ({ style, onError, onLoad, onLoadStart, onToggleOverlay } = visible);
-  [playerState, dependencyMap] = noop.useState(visible(8862).PlayerState.UNREADY);
+  [playerState, dependencyMap] = noop.useState(visible(8871).PlayerState.UNREADY);
   const tmp5 = _slicedToArray(noop.useState(undefined), 2);
   _slicedToArray = tmp5[1];
-  let tmp7 = playerState(6726)(playerState);
+  let tmp7 = playerState(6732)(playerState);
   noop = tmp7;
-  const tmp8 = playerState(6726)(visible);
+  const tmp8 = playerState(6732)(visible);
   closure_5 = tmp8;
   const ref = noop.useRef(null);
   const effect = noop.useEffect(() => {
-    const MediaViewerAnalytics = visible(8827).MediaViewerAnalytics;
+    const MediaViewerAnalytics = visible(8835).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "youtube", action: "attempted" });
   }, []);
   const items = [ref, visible, tmp8, tmp7, playerState];
@@ -121,26 +123,54 @@ export default noop.memo(function MediaModalYoutube(visible) {
       }
     }
   }, items);
-  let youtubeVideoIdFromURI = visible(8831).getYoutubeVideoIdFromURI(source.uri);
+  closure_129_0 = ref;
+  closure_129_1 = playerState;
+  closure_129_2 = visible;
+  closure_129_3 = noop.useRef(null);
+  const items1 = [ref, playerState, visible];
+  const effect2 = noop.useEffect(() => {
+    function handleAppStateChange() {
+      if (state.getState() === ref.ACTIVE) {
+        if (null != ref.current) {
+          ref.current = null;
+          if (ref.current) {
+            const current = handleAppStateChange.current;
+            if (current != null) {
+              current.injectJavaScript("window.player.playVideo();  true;");
+            }
+          }
+        }
+      } else if (null == ref.current) {
+        tmp.current = playerState === visible(dependencyMap[5]).PlayerState.PLAYING || playerState === visible(dependencyMap[5]).PlayerState.BUFFERING;
+        const tmp6 = playerState === visible(dependencyMap[5]).PlayerState.PLAYING || playerState === visible(dependencyMap[5]).PlayerState.BUFFERING;
+      }
+    }
+    if (dependencyMap) {
+      state.addChangeListener(handleAppStateChange);
+      return () => AppStateStore.removeChangeListener(handleAppStateChange);
+    } else {
+      ref.current = null;
+    }
+  }, items1);
+  let youtubeVideoIdFromURI = visible(8839).getYoutubeVideoIdFromURI(source.uri);
   if (youtubeVideoIdFromURI == null) {
-    youtubeVideoIdFromURI = tmp(8831).getYoutubeClipVideoIdFromURI(source.uri);
-    const tmpResult = tmp(8831);
+    youtubeVideoIdFromURI = tmp(8839).getYoutubeClipVideoIdFromURI(source.uri);
+    const tmpResult = tmp(8839);
   }
   if (null == youtubeVideoIdFromURI) {
     return null;
   } else {
-    if (playerState === tmp(8862).PlayerState.ERRORED) {
+    if (playerState === tmp(8871).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp5[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return ref(tmp6(14746), obj2);
+        return jsx(tmp6(14784), { videoId: youtubeVideoIdFromURI.videoId });
       }
     }
-    const isAndroidResult = tmp(1376).isAndroid();
+    const isAndroidResult = tmp(1375).isAndroid();
     const obj3 = { ref, style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, javaScriptCanOpenWindowsAutomatically: true, domStorageEnabled: null, mixedContentMode: null, nestedScrollEnabled: null, onError: null, onLoad: null, onLoadStart: null, overScrollMode: null };
     let str2 = "";
     let str3 = "";
-    let tmp15 = ref;
-    const tmpResult2 = tmp(1376);
+    const tmpResult2 = tmp(1375);
     if (null != youtubeVideoIdFromURI.start) {
       const _HermesInternal = HermesInternal;
       str3 = "'start': " + youtubeVideoIdFromURI.start + ",";
@@ -157,7 +187,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
     const obj4 = { html: null, baseUrl: null };
     const _HermesInternal4 = HermesInternal;
     const _HermesInternal5 = HermesInternal;
-    obj4.html = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n    </style>\n    <script>" + "\nconst tag = document.createElement('script');\ntag.setAttribute('src', \"https://www.youtube.com/iframe_api\");\ndocument.head.appendChild(tag);\n\nfunction onYouTubeIframeAPIReady() {\n  window.player = new YT.Player('player', {\n    height:     '100%',\n    width:      '100%',\n    videoId:    '" + youtubeVideoIdFromURI.videoId + "',\n    playerVars: {\n      'playsinline': 1,\n      'fs': 0,\n      'pageType': " + closure_5 + ",\n      " + str2 + "\n      " + combined + "\n      " + str3 + "\n    },\n    events: {\n      'onReady': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onReady', value: window.player.getPlayerState()})\n        );\n      },\n      'onError': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onError', value: e.data})\n        );\n      },\n      'onStateChange': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onStateChange', value: e.data})\n        );\n      }\n    }\n  });\n}\n" + "</script>\n  </head>\n  <body>\n    <div id=\"player\"></div>\n  </body>\n</html>\n";
+    obj4.html = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n    </style>\n    <script>" + "\nconst tag = document.createElement('script');\ntag.setAttribute('src', \"https://www.youtube.com/iframe_api\");\ndocument.head.appendChild(tag);\n\nfunction onYouTubeIframeAPIReady() {\n  window.player = new YT.Player('player', {\n    height:     '100%',\n    width:      '100%',\n    videoId:    '" + youtubeVideoIdFromURI.videoId + "',\n    playerVars: {\n      'playsinline': 1,\n      'fs': 0,\n      'pageType': " + closure_7 + ",\n      " + str2 + "\n      " + combined + "\n      " + str3 + "\n    },\n    events: {\n      'onReady': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onReady', value: window.player.getPlayerState()})\n        );\n      },\n      'onError': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onError', value: e.data})\n        );\n      },\n      'onStateChange': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onStateChange', value: e.data})\n        );\n      }\n    }\n  });\n}\n" + "</script>\n  </head>\n  <body>\n    <div id=\"player\"></div>\n  </body>\n</html>\n";
     obj4.baseUrl = baseURL;
     obj3.source = obj4;
     obj3.baseURL = baseURL;
@@ -179,7 +209,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
       str20 = "never";
     }
     obj3.overScrollMode = str20;
-    return tmp15(tmp6(8862), obj3, youtubeVideoIdFromURI.videoId);
+    return jsx(tmp6(8871), { ref, style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, javaScriptCanOpenWindowsAutomatically: true, domStorageEnabled: null, mixedContentMode: null, nestedScrollEnabled: null, onError: null, onLoad: null, onLoadStart: null, overScrollMode: null }, youtubeVideoIdFromURI.videoId);
   }
-  let obj = visible(8831);
+  let obj = visible(8839);
 });

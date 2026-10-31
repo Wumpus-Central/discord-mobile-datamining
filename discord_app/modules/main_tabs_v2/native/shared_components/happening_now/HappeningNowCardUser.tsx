@@ -1,19 +1,19 @@
-// === Module 18093: HappeningNowCardUser ===
+// === Module 18136: HappeningNowCardUser ===
 
-// Module 18093 (HappeningNowCardUser)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
+// Module 18136 (HappeningNowCardUser)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5756 */;
-import UserStore from "UserStore" /* 1384 */;
+import PresenceStore from "PresenceStore" /* 5761 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(17217).HappeningNowCardTrackingType;
+let closure_7 = fn(17274).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const LARGE = fn(1188).AvatarSizes.LARGE;
-const createStyles = fn(5009);
+const LARGE = fn(1187).AvatarSizes.LARGE;
+const createStyles = fn(5014);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");
@@ -39,8 +39,8 @@ export default noop.memo(function HappeningNowCardUser(index) {
     obj2.highlighted_user_ids = items;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
-      asyncRequireImpl(8742, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8742, dependencyMap.paths);
+      asyncRequireImpl(8750, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8750, dependencyMap.paths);
     }
   }, items2);
   let obj = index(guildId[10]);

@@ -1,26 +1,26 @@
-// === Module 16876: BountyVideo ===
+// === Module 16932: BountyVideo ===
 
-// Module 16876 (BountyVideo)
+// Module 16932 (BountyVideo)
 import nativeDefault from "native" /* 575 */;
-import timing from "timing" /* 5249 */;
-import timingPresets from "timingPresets" /* 5252 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import AssetUtils from "AssetUtils" /* 9675 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 16877 */;
-import pickBountyVideoRendition from "pickBountyVideoRendition" /* 16878 */;
+import timing from "timing" /* 5254 */;
+import timingPresets from "timingPresets" /* 5257 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import AssetUtils from "AssetUtils" /* 9695 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 16933 */;
+import pickBountyVideoRendition from "pickBountyVideoRendition" /* 16934 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import n_mod from "module_671" /* 671 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(16856);
+const BountiesModalConstants = fn(16912);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: c10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1376);
 let closure_15 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
@@ -33,7 +33,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0.4);
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.PLUM_23);
 items[1] = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0).hex();
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null, scrimGradient: null };
   const obj2 = {};

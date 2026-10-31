@@ -1,9 +1,9 @@
-// === Module 13149: GameOrganizationCharacterEligibilityStore ===
+// === Module 13184: GameOrganizationCharacterEligibilityStore ===
 
-// Module 13149 (GameOrganizationCharacterEligibilityStore)
+// Module 13184 (GameOrganizationCharacterEligibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import fromServerGameOrganization from "fromServerGameOrganization" /* 11328 */;
+import fromServerGameOrganization from "fromServerGameOrganization" /* 11364 */;
 
 require = fn;
 let map = new Map();

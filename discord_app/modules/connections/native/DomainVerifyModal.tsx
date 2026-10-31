@@ -1,15 +1,15 @@
-// === Module 14606: DomainVerifyModal ===
+// === Module 14644: DomainVerifyModal ===
 
-// Module 14606 (DomainVerifyModal)
+// Module 14644 (DomainVerifyModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import useNavigation from "useNavigation" /* 1498 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7286 */;
-import DomainVerifyUtils from "DomainVerifyUtils" /* 14607 */;
+import util from "util" /* 1113 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import useNavigation from "useNavigation" /* 1497 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
+import DomainVerifyUtils from "DomainVerifyUtils" /* 14645 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -312,7 +312,7 @@ const Constants = fn(1072);
 ({ Endpoints: metroRequire, PlatformTypes: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 }, dns: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 8, marginTop: 16 }, error: { marginTop: 16 }, code: { fontFamily: "monospace", marginBottom: 4 }, button: { marginTop: 16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const constants2 = { DOMAIN: "DOMAIN", PROOF_DNS: "PROOF_DNS", PROOF_HTTP: "PROOF_HTTP" };
@@ -328,34 +328,34 @@ export default function DomainVerifyModal(arg0) {
     }
     const obj = {};
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
-    const intl = onClose(1114).intl;
-    obj2.headerTitle = intl.string(onClose(1114).t["7lo8+e"]);
-    obj2.headerLeft = onClose(6992).getHeaderBackButton(onClose);
+    const intl = onClose(1113).intl;
+    obj2.headerTitle = intl.string(onClose(1113).t["7lo8+e"]);
+    obj2.headerLeft = onClose(6998).getHeaderBackButton(onClose);
     obj2.render = function render() {
       return React6(DomainScreen, { onClose });
     };
     obj[constants2.DOMAIN] = obj2;
     const obj4 = { headerTitle: null, headerLeft: null, render: null };
-    const intl2 = onClose(1114).intl;
-    obj4.headerTitle = intl2.string(onClose(1114).t["7lo8+e"]);
-    const obj3 = onClose(6992);
-    obj4.headerLeft = onClose(6992).getHeaderBackButton(onClose);
+    const intl2 = onClose(1113).intl;
+    obj4.headerTitle = intl2.string(onClose(1113).t["7lo8+e"]);
+    const obj3 = onClose(6998);
+    obj4.headerLeft = onClose(6998).getHeaderBackButton(onClose);
     obj4.render = function render(domain) {
       return React6(DNSProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
     obj[constants2.PROOF_DNS] = obj4;
     const obj6 = { headerTitle: null, headerLeft: null, render: null };
-    const intl3 = onClose(1114).intl;
-    obj6.headerTitle = intl3.string(onClose(1114).t["7lo8+e"]);
-    const obj5 = onClose(6992);
-    obj6.headerLeft = onClose(6992).getHeaderBackButton(onClose);
+    const intl3 = onClose(1113).intl;
+    obj6.headerTitle = intl3.string(onClose(1113).t["7lo8+e"]);
+    const obj5 = onClose(6998);
+    obj6.headerLeft = onClose(6998).getHeaderBackButton(onClose);
     obj6.render = function render(domain) {
       return React6(HTTPProofScreen, { domain: domain.domain, proof: domain.proof, onClose });
     };
     obj[constants2.PROOF_HTTP] = obj6;
     const obj8 = { screens: obj, initialRouteName: constants2.DOMAIN, headerBackTitle: null };
-    const intl4 = onClose(1114).intl;
-    obj8.headerBackTitle = intl4.string(onClose(1114).t["13/7kX"]);
-    return closure_8(onClose(7163).Navigator, obj8);
+    const intl4 = onClose(1113).intl;
+    obj8.headerBackTitle = intl4.string(onClose(1113).t["13/7kX"]);
+    return closure_8(onClose(7169).Navigator, obj8);
   }
 };

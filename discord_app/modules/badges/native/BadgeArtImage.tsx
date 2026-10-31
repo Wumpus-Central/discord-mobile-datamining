@@ -1,9 +1,9 @@
-// === Module 11415: BadgeArtImage ===
+// === Module 11451: BadgeArtImage ===
 
-// Module 11415 (BadgeArtImage)
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import APNGPlayer2 from "APNGPlayer" /* 9482 */;
+// Module 11451 (BadgeArtImage)
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import APNGPlayer2 from "APNGPlayer" /* 9504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,9 +44,9 @@ export default function BadgeArtImage(style) {
         obj2.enableAnimation = animated;
         let tmpResult2 = jsx(FastImageDefault, { source: null, style: null, resizeMode: "contain", enableAnimation: null });
       } else {
-        APNGPlayer(1376);
+        APNGPlayer(1375);
       }
-      APNGPlayer = APNGPlayer(9482).APNGPlayer;
+      APNGPlayer = APNGPlayer(9504).APNGPlayer;
       const obj5 = { url: fallbackUrl, style: size, autoplay: true };
       tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
     }

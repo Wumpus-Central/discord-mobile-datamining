@@ -1,17 +1,17 @@
-// === Module 13866: NewMessageUserList ===
+// === Module 13901: NewMessageUserList ===
 
-// Module 13866 (NewMessageUserList)
+// Module 13901 (NewMessageUserList)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import useChannelName from "useChannelName" /* 5647 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6893 */;
+import util from "util" /* 1113 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import useChannelName from "useChannelName" /* 5652 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6899 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function matchGroupDMRecipients(trimmed1, recipients) {
@@ -95,11 +95,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10707).UserRowModes;
+const UserRowModes = fn(10727).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -234,8 +234,8 @@ export default function NewMessageUserList(selectedUserIds) {
       obj2.title = intl.string(util.t.qGlQrW);
       obj2.items = _undefined2.map((data) => ({ type: "GroupDMChannelRecord", data }));
       const findIndexResult = closure_6.findIndex((title) => {
-        const intl = selectedUserIds(1114).intl;
-        return title.title === intl.string(selectedUserIds(1114).t.y29JXs);
+        const intl = selectedUserIds(1113).intl;
+        return title.title === intl.string(selectedUserIds(1113).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         let items = [];

@@ -1,8 +1,8 @@
-// === Module 14671: useConjureProjectShareTarget ===
+// === Module 14709: useConjureProjectShareTarget ===
 
-// Module 14671 (useConjureProjectShareTarget)
-import _modDef3865 from "module_3865" /* 3865 */;
-import GuildStore from "GuildStore" /* 4880 */;
+// Module 14709 (useConjureProjectShareTarget)
+import _modDef3868 from "module_3868" /* 3868 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 const require = fn;
 const size = fn(2);
@@ -35,8 +35,8 @@ export default function useConjureProjectShareTarget(guild_id) {
     tmp5 = null;
     if (null == guild_id.install_scope_setup) {
       if ("user" === guild_id.install_scope) {
-        const intl = guild_id(1114).intl;
-        stateFromStores = intl.string(_modDef3865.KxFFKT);
+        const intl = guild_id(1113).intl;
+        stateFromStores = intl.string(_modDef3868.KxFFKT);
       }
       tmp5 = stateFromStores;
     }

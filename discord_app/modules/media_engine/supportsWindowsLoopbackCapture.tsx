@@ -1,9 +1,9 @@
-// === Module 15852: supportsWindowsLoopbackCapture ===
+// === Module 15893: supportsWindowsLoopbackCapture ===
 
-// Module 15852 (supportsWindowsLoopbackCapture)
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import DiscordNativeDefault from "DiscordNative" /* 4820 */;
-import _modDef15853 from "module_15853" /* 15853 */;
+// Module 15893 (supportsWindowsLoopbackCapture)
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import DiscordNativeDefault from "DiscordNative" /* 4825 */;
+import _modDef15894 from "module_15894" /* 15894 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_engine/supportsWindowsLoopbackCapture.tsx");
@@ -16,7 +16,7 @@ export default function supportsWindowsLoopbackCapture() {
     if (tmp4 != null) {
       release = tmp4.os.release;
     }
-    isWindowsResult = _modDef15853.satisfies(release, ">=10.0.15063");
+    isWindowsResult = _modDef15894.satisfies(release, ">=10.0.15063");
   }
   return isWindowsResult;
 };

@@ -1,8 +1,8 @@
-// === Module 12342: AppLauncherUserListActionSheet ===
+// === Module 12380: AppLauncherUserListActionSheet ===
 
-// Module 12342 (AppLauncherUserListActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import TableRow from "TableRow" /* 6969 */;
+// Module 12380 (AppLauncherUserListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import TableRow from "TableRow" /* 6975 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
   };
   const items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(12321).AppLauncherList, {
+  return jsx(onPressRow(12359).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {
@@ -29,10 +29,10 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
     keyboardDismissMode: "on-drag"
   });
 }
-const DEFAULT_CONTENT_PADDING = fn(1497).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1496).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");

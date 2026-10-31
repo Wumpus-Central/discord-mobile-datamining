@@ -1,6 +1,6 @@
-// === Module 15921: ReactCompilerGating ===
+// === Module 15962: ReactCompilerGating ===
 
-// Module 15921 (ReactCompilerGating)
+// Module 15962 (ReactCompilerGating)
 import size from "module_2" /* 2 */;
 
 let c0 = false;

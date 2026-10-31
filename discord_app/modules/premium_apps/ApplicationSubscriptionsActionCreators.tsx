@@ -1,8 +1,8 @@
-// === Module 16291: ApplicationSubscriptionsActionCreators ===
+// === Module 16333: ApplicationSubscriptionsActionCreators ===
 
-// Module 16291 (ApplicationSubscriptionsActionCreators)
+// Module 16333 (ApplicationSubscriptionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ApplicationSubscriptionsHttpApiAll from "ApplicationSubscriptionsHttpApi" /* 11704 */;
+import ApplicationSubscriptionsHttpApiAll from "ApplicationSubscriptionsHttpApi" /* 11741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function transformSubscriptionListingToSku(id) {
@@ -104,7 +104,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -222,7 +222,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           return obj;
         }
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp33) {
       closure_5 = tmp33;

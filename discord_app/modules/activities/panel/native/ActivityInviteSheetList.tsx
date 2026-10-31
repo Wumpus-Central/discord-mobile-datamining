@@ -1,16 +1,16 @@
-// === Module 19087: ActivityInviteSheetList ===
+// === Module 19136: ActivityInviteSheetList ===
 
-// Module 19087 (ActivityInviteSheetList)
+// Module 19136 (ActivityInviteSheetList)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import RootNavigationRef from "RootNavigationRef" /* 5194 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Pressables from "Pressables" /* 6974 */;
-import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 19088 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Pressables from "Pressables" /* 6980 */;
+import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 19137 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6717 */;
+import TextStyles_mod from "TextStyles" /* 6723 */;
 
 require = fn;
 function keyExtractor(item) {
@@ -57,7 +57,7 @@ function FriendsEmptyComponent() {
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

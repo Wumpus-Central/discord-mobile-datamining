@@ -1,23 +1,23 @@
-// === Module 7440: ChannelMemberStore ===
+// === Module 7446: ChannelMemberStore ===
 
-// Module 7440 (ChannelMemberStore)
+// Module 7446 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1252 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
-import ExperimentStore from "ExperimentStore" /* 5233 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6708 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
+import ExperimentStore from "ExperimentStore" /* 5238 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5237 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildRoleStore from "GuildRoleStore" /* 4915 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PresenceStore from "PresenceStore" /* 5756 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildRoleStore from "GuildRoleStore" /* 4920 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PresenceStore from "PresenceStore" /* 5761 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
+import UserStore from "UserStore" /* 1383 */;
 
 let require = fn;
 function getMemberListId(arg0) {
@@ -138,14 +138,14 @@ prototype["setGroups"] = function setGroups(groups) {
     Object.defineProperty(obj2, "title", {
       get: () => {
         if (constants.ONLINE === id) {
-          const intl3 = id(1114).intl;
-          return intl3.string(id(1114).t.WbGtnH);
+          const intl3 = id(1113).intl;
+          return intl3.string(id(1113).t.WbGtnH);
         } else if (tmp2.OFFLINE === tmp) {
-          const intl2 = id(1114).intl;
-          return intl2.string(id(1114).t.Vv0abJ);
+          const intl2 = id(1113).intl;
+          return intl2.string(id(1113).t.Vv0abJ);
         } else {
-          const intl = id(1114).intl;
-          return intl.string(id(1114).t["UQMV/E"]);
+          const intl = id(1113).intl;
+          return intl.string(id(1113).t["UQMV/E"]);
         }
       },
       set: undefined
@@ -195,7 +195,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "children" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -211,14 +211,14 @@ prototype["insert"] = function insert(arg0, arg1) {
     Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1113).intl;
+            return intl3.string(id(1113).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1113).intl;
+            return intl2.string(id(1113).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1113).intl;
+            return intl.string(id(1113).t["UQMV/E"]);
           }
         },
       set: undefined
@@ -290,7 +290,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "children" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -306,14 +306,14 @@ prototype["update"] = function update(arg0, arg1) {
     Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1113).intl;
+            return intl3.string(id(1113).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1113).intl;
+            return intl2.string(id(1113).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1113).intl;
+            return intl.string(id(1113).t["UQMV/E"]);
           }
         },
       set: undefined
@@ -461,14 +461,14 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
     Object.defineProperty(obj2, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1113).intl;
+            return intl3.string(id(1113).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1113).intl;
+            return intl2.string(id(1113).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1113).intl;
+            return intl.string(id(1113).t["UQMV/E"]);
           }
         },
       set: undefined

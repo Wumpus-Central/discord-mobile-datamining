@@ -1,28 +1,28 @@
-// === Module 18230: TextChannel ===
+// === Module 18273: TextChannel ===
 
-// Module 18230 (TextChannel)
+// Module 18273 (TextChannel)
 import nativeDefault from "native" /* 575 */;
-import RoutingSourcesDefault from "RoutingSources" /* 1112 */;
-import transitionToChannel from "transitionToChannel" /* 5751 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 6040 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10782 */;
-import preloadChannelAppFrame from "preloadChannelAppFrame" /* 18231 */;
+import RoutingSourcesDefault from "RoutingSources" /* 1111 */;
+import transitionToChannel from "transitionToChannel" /* 5756 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 6045 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
+import preloadChannelAppFrame from "preloadChannelAppFrame" /* 18274 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
-import GatedChannelStore from "GatedChannelStore" /* 4913 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import GatedChannelStore from "GatedChannelStore" /* 4918 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11027);
+const RedesignChannelListConstants = fn(11046);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = { container: { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 }, selected: null, selectedBorder: null, row: null, rowWithSubtitle: null, appSoundIcon: null, channelLabel: null, channelLabelText: null };
   const obj2 = { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };

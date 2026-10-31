@@ -1,8 +1,8 @@
-// === Module 7397: GuildSpaceExperiment ===
+// === Module 7403: GuildSpaceExperiment ===
 
-// Module 7397 (GuildSpaceExperiment)
+// Module 7403 (GuildSpaceExperiment)
 import Constants from "Constants" /* 1072 */;
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;

@@ -1,19 +1,20 @@
-// === Module 16298: subscriptionHelpers ===
+// === Module 16340: subscriptionHelpers ===
 
-// Module 16298 (subscriptionHelpers)
-import QuestTaskUtils from "QuestTaskUtils" /* 7861 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8765 */;
-import getSocketFrameDefault from "getSocketFrame" /* 9306 */;
-import useThermalState from "useThermalState" /* 16252 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16254 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16249 */;
-import QuestStore from "QuestStore" /* 7839 */;
+// Module 16340 (subscriptionHelpers)
+import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8773 */;
+import getSocketFrameDefault from "getSocketFrame" /* 9326 */;
+import useThermalState from "useThermalState" /* 16294 */;
+import ThermalStates from "ThermalStates" /* 16295 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 16296 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16290 */;
+import QuestStore from "QuestStore" /* 7846 */;
 
 require = fn;
 const RPCEvents = fn(1072).RPCEvents;
-const Constants = fn(2019);
-({ ActivityLayoutMode: metroRequire, ActivityScreenOrientation: closure_7 } = Constants);
+const ActivityScreenOrientation = fn(2018).ActivityScreenOrientation;
+const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
@@ -30,7 +31,7 @@ export function getInitialSubscriptionPayload(application, arg1, quest_id) {
     }
     let tmp37 = null;
     if (null != layoutModeForApp) {
-      const obj2 = { is_pip_mode: layoutModeForApp !== constants.FOCUSED };
+      const obj2 = { is_pip_mode: layoutModeForApp !== ActivityLayoutMode.FOCUSED };
       tmp37 = obj2;
     }
     return tmp37;
@@ -61,13 +62,13 @@ export function getInitialSubscriptionPayload(application, arg1, quest_id) {
   } else if (RPCEvents.THERMAL_STATE_UPDATE === arg1) {
     const thermalState = useThermalState.getThermalState();
     let tmp23 = null;
-    if (thermalState !== useThermalState.ThermalStates.UNHANDLED) {
+    if (thermalState !== ThermalStates.ThermalStates.UNHANDLED) {
       const obj8 = { thermal_state: thermalState };
       tmp23 = obj8;
     }
     return tmp23;
   } else if (RPCEvents.ORIENTATION_UPDATE === arg1) {
-    const obj9 = { screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? React5.LANDSCAPE : React5.PORTRAIT };
+    const obj9 = { screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? ActivityScreenOrientation.LANDSCAPE : ActivityScreenOrientation.PORTRAIT };
     return obj9;
   } else if (RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === arg1) {
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();

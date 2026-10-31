@@ -1,18 +1,18 @@
-// === Module 9213: FormComponents ===
+// === Module 9232: FormComponents ===
 
-// Module 9213 (FormComponents)
+// Module 9232 (FormComponents)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import NativeViewDefault from "NativeView" /* 6954 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7481 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7875 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9214 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import NativeViewDefault from "NativeView" /* 6960 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7487 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7882 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9233 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5756 */;
+import PresenceStore from "PresenceStore" /* 5761 */;
 
 require = fn;
 function VoiceBadges(arg0) {
@@ -42,7 +42,7 @@ function VoiceBadges(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;

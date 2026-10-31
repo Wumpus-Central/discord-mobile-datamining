@@ -1,10 +1,10 @@
-// === Module 4822: BillingUtils ===
+// === Module 4827: BillingUtils ===
 
-// Module 4822 (BillingUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1243 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import BraintreeUtils from "BraintreeUtils" /* 4823 */;
-import BillingErrorDefault from "BillingError" /* 4829 */;
+// Module 4827 (BillingUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import BraintreeUtils from "BraintreeUtils" /* 4828 */;
+import BillingErrorDefault from "BillingError" /* 4834 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

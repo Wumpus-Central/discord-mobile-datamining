@@ -1,16 +1,16 @@
-// === Module 5944: VideoQuality ===
+// === Module 5949: VideoQuality ===
 
-// Module 5944 (VideoQuality)
+// Module 5949 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import TimeUtils from "TimeUtils" /* 5767 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5784 */;
-import Histogram from "Histogram" /* 5928 */;
-import NetworkQualityDefault from "NetworkQuality" /* 5934 */;
-import VideoQualityStats from "VideoQualityStats" /* 5945 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 5907 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5787 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import TimeUtils from "TimeUtils" /* 5772 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5789 */;
+import Histogram from "Histogram" /* 5894 */;
+import NetworkQualityDefault from "NetworkQuality" /* 5900 */;
+import VideoQualityStats from "VideoQualityStats" /* 5950 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 5926 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 5792 */;
 
 require = fn;
 function round(arg0) {
@@ -126,13 +126,72 @@ prototype["setOutboundSsrc"] = function setOutboundSsrc(ssrc) {
     self.outboundStats[ssrc] = outboundStats;
   }
 };
-prototype["getOrCreateInboundStats"] = function getOrCreateInboundStats(userId) {
+prototype["getOrCreateInboundStats"] = function getOrCreateInboundStats(item10064) {
   const self = this;
-  if (null == this.inboundStats[userId]) {
+  if (null == this.inboundStats[item10064]) {
     const inboundStats = new VideoQualityStats.InboundStats(self.timestampProducer);
-    self.inboundStats[userId] = inboundStats;
+    self.inboundStats[item10064] = inboundStats;
   }
-  return self.inboundStats[userId];
+  return self.inboundStats[item10064];
+};
+prototype["seedFrom"] = function seedFrom(callUserIdsCount) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let flag = obj.continueTimeline;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const self = this;
+  this.callUserIdsCount = callUserIdsCount.callUserIdsCount;
+  this.statCollectionPausedUsers = new Set(callUserIdsCount.statCollectionPausedUsers);
+  const keys = Object.keys(callUserIdsCount.outboundStats);
+  const iter = keys[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let _parseInt = parseInt;
+    let tmp4 = nextResult;
+    let setOutboundSsrcResult = self.setOutboundSsrc(parseInt(nextResult));
+    let _parseInt2 = parseInt;
+    let tmp6 = callUserIdsCount.outboundStats[parseInt(undefined, nextResult)];
+    let _parseInt3 = parseInt;
+    let tmp7 = tmp6;
+    let obj2 = self.outboundStats[parseInt(undefined, nextResult)];
+    let result = obj2.continueAggregationFrom(tmp6, flag);
+    if (tmp6.isVideoStopped) {
+      let _parseInt4 = parseInt;
+      let obj3 = self.outboundStats[parseInt(undefined, tmp4)];
+      let setVideoStoppedResult = obj3.setVideoStopped(true, tmp7.videoStoppedReasons);
+    }
+    continue;
+  }
+  const set = new Set(callUserIdsCount.statCollectionPausedUsers);
+  const keys1 = SnowflakeUtilsDefault.keys(callUserIdsCount.inboundStats);
+  for (const item10064 of keys1) {
+    let tmp13 = arg0.inboundStats[item10064];
+    let tmp14 = tmp13;
+    let orCreateInboundStats = self.getOrCreateInboundStats(item10064);
+    let obj6 = orCreateInboundStats;
+    let result1 = orCreateInboundStats.continueAggregationFrom(tmp13, flag);
+    if (tmp13.isVideoStopped) {
+      let setVideoStoppedResult1 = obj6.setVideoStopped(true, tmp14.videoStoppedReasons);
+    }
+    continue;
+  }
+  self.paused.value = callUserIdsCount.paused.value;
+  self.zeroReceivers.value = callUserIdsCount.zeroReceivers.value;
+  self.videoStopped.value = callUserIdsCount.videoStopped.value;
+  self.windowOccluded.value = callUserIdsCount.windowOccluded.value;
+  self.videoStoppedForOcclusion.value = callUserIdsCount.videoStoppedForOcclusion.value;
+  self.hqSimulcastStreamWatched.value = callUserIdsCount.hqSimulcastStreamWatched.value;
+  self.lqSimulcastStreamWatched.value = callUserIdsCount.lqSimulcastStreamWatched.value;
+  self.hqSimulcastStreamEligible.value = callUserIdsCount.hqSimulcastStreamEligible.value;
+  self.lqSimulcastStreamEligible.value = callUserIdsCount.lqSimulcastStreamEligible.value;
+  self.cameraDuration.value = callUserIdsCount.cameraDuration.value;
+  self.cameraOpportunityDuration.value = callUserIdsCount.cameraOpportunityDuration.value;
+  self.cameraSendDuration.value = callUserIdsCount.cameraSendDuration.value;
+  self.videoBackgroundEnabledDuration.value = callUserIdsCount.videoBackgroundEnabledDuration.value;
 };
 prototype["updateCallUserIdsCount"] = function updateCallUserIdsCount(size) {
   this.callUserIdsCount = size;
@@ -141,8 +200,8 @@ prototype["setInboundUser"] = function setInboundUser(userId, videoSsrc) {
   const orCreateInboundStats = this.getOrCreateInboundStats(userId);
   orCreateInboundStats.setVideoStopped(0 === videoSsrc, VideoQualityStats.VideoStoppedReasons.SenderStopped);
 };
-prototype["setUserVideoDisabled"] = function setUserVideoDisabled(userId, arg1) {
-  const orCreateInboundStats = this.getOrCreateInboundStats(userId);
+prototype["setUserVideoDisabled"] = function setUserVideoDisabled(item10064, arg1) {
+  const orCreateInboundStats = this.getOrCreateInboundStats(item10064);
   orCreateInboundStats.setVideoStopped(arg1, VideoQualityStats.VideoStoppedReasons.ClientSideDisableVideo);
   let tmp2 = !arg1;
   if (!arg1) {
@@ -1354,12 +1413,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     const set1 = new Set();
     const obj2 = { receivers: 1 };
     self.updateSendState(obj2);
-    let tmp23 = self.connection.context === tmp(5784).MediaEngineContextTypes.DEFAULT;
+    let tmp23 = self.connection.context === tmp(5789).MediaEngineContextTypes.DEFAULT;
     if (tmp23) {
       tmp23 = null != transport.camera;
     }
     self.cameraDuration.value = tmp23;
-    let tmp25 = self.connection.context === tmp(5784).MediaEngineContextTypes.DEFAULT;
+    let tmp25 = self.connection.context === tmp(5789).MediaEngineContextTypes.DEFAULT;
     if (tmp25) {
       tmp25 = null != transport.camera;
     }
@@ -1367,7 +1426,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       tmp25 = self.callUserIdsCount > 1;
     }
     self.cameraOpportunityDuration.value = tmp25;
-    let tmp27 = self.connection.context === tmp(5784).MediaEngineContextTypes.DEFAULT;
+    let tmp27 = self.connection.context === tmp(5789).MediaEngineContextTypes.DEFAULT;
     if (tmp27) {
       tmp27 = null != transport.camera;
     }
@@ -1378,7 +1437,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     if (tmp29) {
       self.cameraToggles = self.cameraToggles + 1;
     }
-    let liveBackgroundEnabled = self.connection.context === tmp(5784).MediaEngineContextTypes.DEFAULT;
+    let liveBackgroundEnabled = self.connection.context === tmp(5789).MediaEngineContextTypes.DEFAULT;
     if (liveBackgroundEnabled) {
       liveBackgroundEnabled = null != transport.camera;
     }
@@ -1710,7 +1769,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
       } else {
         self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
       }
-      tmpResult = tmp(4875);
+      tmpResult = tmp(4880);
     }
   } else {
     const receiverReports2 = receiverReports.receiverReports;

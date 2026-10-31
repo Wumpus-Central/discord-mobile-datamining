@@ -1,9 +1,9 @@
-// === Module 19506: InterestPickerCatalogs ===
+// === Module 19563: InterestPickerCatalogs ===
 
-// Module 19506 (InterestPickerCatalogs)
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import GuildProfileConstants from "GuildProfileConstants" /* 9278 */;
-import GameCommunityConfig from "GameCommunityConfig" /* 17549 */;
+// Module 19563 (InterestPickerCatalogs)
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GuildProfileConstants from "GuildProfileConstants" /* 9297 */;
+import GameCommunityConfig from "GameCommunityConfig" /* 17609 */;
 import size from "module_2" /* 2 */;
 
 const HOISTED_SEARCH_GAME_IDS = GuildProfileConstants.HOISTED_SEARCH_GAME_IDS;

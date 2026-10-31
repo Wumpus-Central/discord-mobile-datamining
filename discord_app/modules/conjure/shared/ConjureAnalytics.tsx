@@ -1,10 +1,11 @@
-// === Module 10853: ConjureAnalytics ===
+// === Module 10873: ConjureAnalytics ===
 
-// Module 10853 (ConjureAnalytics)
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
-import ConjureUtils from "ConjureUtils" /* 7413 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
+// Module 10873 (ConjureAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
+import ConjureUtils from "ConjureUtils" /* 7419 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 
 require = fn;
 function projectFields(projectId) {
@@ -85,6 +86,7 @@ function conjureLocation(projectId, isPreview) {
   obj.channel_id = findConjureChannelIdResult;
   return obj;
 }
+const isProjectOwner = fn(6844).isProjectOwner;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
@@ -277,5 +279,40 @@ export function trackConjureRatingFeedbackSubmitted(projectId, substr) {
   const merged2 = Object.assign(obj2);
   obj4.feedback_text = substr;
   obj.trackWithMetadata(AnalyticEvents.CONJURE_RATING_FEEDBACK_SUBMITTED, obj4);
+  obj3 = PlatformUtils;
+}
+export function trackConjureBuilderOpened(project_id, entry_point) {
+  const project = ConjureProjectStore.getProject(project_id);
+  const obj2 = { project_id, entry_point, is_owner: null, install_scope: null, client_platform: null };
+  let tmp3 = null;
+  if (null != project) {
+    tmp3 = isProjectOwner(project);
+  }
+  obj2.is_owner = tmp3;
+  let install_scope;
+  if (project != null) {
+    install_scope = project.install_scope;
+  }
+  if (install_scope == null) {
+    install_scope = null;
+  }
+  obj2.install_scope = install_scope;
+  const obj = AnalyticsUtilsDefault;
+  let str = "android";
+  if (!obj3.isAndroid()) {
+    let str2 = "ios";
+    if (!tmp6Result.isIOS()) {
+      let str3 = "web";
+      if (tmp6Result2.isDesktop()) {
+        str3 = "desktop";
+      }
+      str2 = str3;
+      tmp6Result2 = PlatformUtils;
+    }
+    str = str2;
+    tmp6Result = PlatformUtils;
+  }
+  obj2.client_platform = str;
+  obj.track(AnalyticEvents.CONJURE_BUILDER_OPENED, obj2);
   obj3 = PlatformUtils;
 }

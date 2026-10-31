@@ -1,27 +1,27 @@
-// === Module 16550: UserSettingsChangeUsername ===
+// === Module 16592: UserSettingsChangeUsername ===
 
-// Module 16550 (UserSettingsChangeUsername)
+// Module 16592 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(6550).match(showHint.usernameStatus);
-  let obj = { type: showHint(16551).NameValidationState.ERROR, message: null };
-  const P = showHint(6550).P;
+  const match = showHint(6556).match(showHint.usernameStatus);
+  let obj = { type: showHint(16593).NameValidationState.ERROR, message: null };
+  const P = showHint(6556).P;
   obj.message = P.select();
-  const str = showHint(6550);
-  const obj2 = { type: showHint(16551).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(6550).P;
+  const str = showHint(6556);
+  const obj2 = { type: showHint(16593).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(6556).P;
   obj2.message = P2.select();
-  const withResult = match.with(obj, (children) => closure_1_11(showHint(5619).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => closure_1_11(showHint(5619).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5619).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
+  const withResult = match.with(obj, (children) => closure_1_11(showHint(5624).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
+  return match.with(obj, (children) => closure_1_11(showHint(5624).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5624).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -37,7 +37,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 }, inputs: { flex: 1, flexDirection: "row", marginTop: 8 }, username: { flex: 2 }, discriminator: { flex: 1 }, divider: null, dividerInner: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.divider = { width: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -138,12 +138,12 @@ export default function UserSettingsChangeUsername() {
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(7146).saveAccountChanges(user, { close: false });
+        yield closure_2_2(7152).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
-          const v6OrEarlierAPIError = new closure_0(1283).V6OrEarlierAPIError(closure_129_0);
+          const v6OrEarlierAPIError = new closure_0(1282).V6OrEarlierAPIError(closure_129_0);
           closure_129_1 = v6OrEarlierAPIError;
-          const CommonActions = closure_0(1499).CommonActions;
+          const CommonActions = closure_0(1498).CommonActions;
           closure_0.dispatch(CommonActions.navigate(constants.ACCOUNT_CHANGE_USERNAME));
           closure_1_6(closure_129_1);
           c4 = 3;

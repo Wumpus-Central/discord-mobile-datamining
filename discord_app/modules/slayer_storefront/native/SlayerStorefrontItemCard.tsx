@@ -1,9 +1,9 @@
-// === Module 9499: SlayerStorefrontItemCard ===
+// === Module 9521: SlayerStorefrontItemCard ===
 
-// Module 9499 (SlayerStorefrontItemCard)
+// Module 9521 (SlayerStorefrontItemCard)
 import nativeDefault from "native" /* 575 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7398 */;
-import tinycolorDefault from "tinycolor" /* 7723 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
+import tinycolorDefault from "tinycolor" /* 7730 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { cardContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 }, cardImageBackground: { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, backgroundImage: null, cardImage: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

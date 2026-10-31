@@ -1,7 +1,7 @@
-// === Module 8986: Button/HeaderButton ===
+// === Module 8995: Button/HeaderButton ===
 
-// Module 8986 (Button/HeaderButton)
-import BaseTextButton from "BaseTextButton" /* 5630 */;
+// Module 8995 (Button/HeaderButton)
+import BaseTextButton from "BaseTextButton" /* 5635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,11 +19,11 @@ class HeaderButton {
 }
 const jsx = fn(21).jsx;
 const React3 = "heading-md/bold";
-const diff = fn(5635).SMALL_BUTTON_HEIGHT - 2 * fn(5635).BUTTON_BORDER_WIDTH;
-const diff1 = diff - fn(5619).TextStyleSheet["heading-md/bold"].lineHeight;
-const createStyles = fn(5009);
+const diff = fn(5640).SMALL_BUTTON_HEIGHT - 2 * fn(5640).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(5624).TextStyleSheet["heading-md/bold"].lineHeight;
+const createStyles = fn(5014);
 const React4 = createStyles.createStyles({ pill: { paddingVertical: diff1 / 2 } });
-HeaderButton.Icon = fn(5630).BaseTextButton.Icon;
+HeaderButton.Icon = fn(5635).BaseTextButton.Icon;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 

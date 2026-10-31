@@ -1,21 +1,21 @@
-// === Module 14581: TwoWayLinkError ===
+// === Module 14619: TwoWayLinkError ===
 
-// Module 14581 (TwoWayLinkError)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7286 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9710 */;
-import _modDef14582 from "module_14582" /* 14582 */;
+// Module 14619 (TwoWayLinkError)
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9730 */;
+import _modDef14620 from "module_14620" /* 14620 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
@@ -27,7 +27,7 @@ export function TwoWayLinkError(arg0) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14582;
+  obj4.source = _modDef14620;
   obj4.style = tmp.image;
   const items = [React4(FastImageDefault, obj4), React4(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), React4(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
   obj3.children = items;

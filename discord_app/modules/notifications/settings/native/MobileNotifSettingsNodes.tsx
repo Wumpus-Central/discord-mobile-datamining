@@ -1,22 +1,22 @@
-// === Module 17917: MobileNotifSettingsNodes ===
+// === Module 17960: MobileNotifSettingsNodes ===
 
-// Module 17917 (MobileNotifSettingsNodes)
-import util from "util" /* 1114 */;
-import _modDef2867 from "module_2867" /* 2867 */;
-import settings_NotifSettingsUtils from "settings/NotifSettingsUtils" /* 15527 */;
-import NotifSettings from "NotifSettings" /* 16232 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16236 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17409 */;
-import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17918 */;
-import useIsNotifSettingDisabledDefault from "useIsNotifSettingDisabled" /* 17919 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11505 */;
+// Module 17960 (MobileNotifSettingsNodes)
+import util from "util" /* 1113 */;
+import _modDef2868 from "module_2868" /* 2868 */;
+import settings_NotifSettingsUtils from "settings/NotifSettingsUtils" /* 15566 */;
+import NotifSettings from "NotifSettings" /* 16273 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16277 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17469 */;
+import NotifSettingsActionCreators from "NotifSettingsActionCreators" /* 17961 */;
+import useIsNotifSettingDisabledDefault from "useIsNotifSettingDisabled" /* 17962 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11539 */;
 import size from "module_2" /* 2 */;
 
 let SettingBuilders = SettingBuilders_mod;
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.NxgGZA);
+    return intl.string(_modDef2868.NxgGZA);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIEND_REQUESTS);
@@ -33,14 +33,14 @@ const toggle = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["4McnAv"]);
+    return intl.string(_modDef2868["4McnAv"]);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.NxgGZA);
+    return intl.string(_modDef2868.NxgGZA);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIEND_REQUESTS);
@@ -57,13 +57,13 @@ const obj = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["4McnAv"]);
+    return intl.string(_modDef2868["4McnAv"]);
   }
 };
 const toggle1 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["IUH/Oe"]);
+    return intl.string(_modDef2868["IUH/Oe"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.CALLS);
@@ -80,14 +80,14 @@ const toggle1 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.YvbYqb);
+    return intl.string(_modDef2868.YvbYqb);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj2 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["IUH/Oe"]);
+    return intl.string(_modDef2868["IUH/Oe"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.CALLS);
@@ -104,13 +104,13 @@ const obj2 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.YvbYqb);
+    return intl.string(_modDef2868.YvbYqb);
   }
 };
 const toggle2 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.n0Wp6j);
+    return intl.string(_modDef2868.n0Wp6j);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.MISSED_MESSAGES_LOW);
@@ -127,14 +127,14 @@ const toggle2 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.N14gsO);
+    return intl.string(_modDef2868.N14gsO);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj3 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.n0Wp6j);
+    return intl.string(_modDef2868.n0Wp6j);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.MISSED_MESSAGES_LOW);
@@ -151,13 +151,13 @@ const obj3 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.N14gsO);
+    return intl.string(_modDef2868.N14gsO);
   }
 };
 const toggle3 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.n0Wp6j);
+    return intl.string(_modDef2868.n0Wp6j);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT);
@@ -174,14 +174,14 @@ const toggle3 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.N14gsO);
+    return intl.string(_modDef2868.N14gsO);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj4 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.n0Wp6j);
+    return intl.string(_modDef2868.n0Wp6j);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT);
@@ -198,13 +198,13 @@ const obj4 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.N14gsO);
+    return intl.string(_modDef2868.N14gsO);
   }
 };
 const toggle4 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.S9Z8aG);
+    return intl.string(_modDef2868.S9Z8aG);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.INVITES_RECONNECTING);
@@ -221,14 +221,14 @@ const toggle4 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["70621N"]);
+    return intl.string(_modDef2868["70621N"]);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj5 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.S9Z8aG);
+    return intl.string(_modDef2868.S9Z8aG);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.INVITES_RECONNECTING);
@@ -245,13 +245,13 @@ const obj5 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["70621N"]);
+    return intl.string(_modDef2868["70621N"]);
   }
 };
 const toggle5 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.roU6W6);
+    return intl.string(_modDef2868.roU6W6);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.TRENDING_SUGGESTIONS);
@@ -268,14 +268,14 @@ const toggle5 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["AKm6+k"]);
+    return intl.string(_modDef2868["AKm6+k"]);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj6 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.roU6W6);
+    return intl.string(_modDef2868.roU6W6);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.TRENDING_SUGGESTIONS);
@@ -292,13 +292,13 @@ const obj6 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["AKm6+k"]);
+    return intl.string(_modDef2868["AKm6+k"]);
   }
 };
 const toggle6 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.nLISld);
+    return intl.string(_modDef2868.nLISld);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.UPDATES_OFFERS);
@@ -315,14 +315,14 @@ const toggle6 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.rCdFq6);
+    return intl.string(_modDef2868.rCdFq6);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj7 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.nLISld);
+    return intl.string(_modDef2868.nLISld);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.UPDATES_OFFERS);
@@ -339,13 +339,13 @@ const obj7 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.rCdFq6);
+    return intl.string(_modDef2868.rCdFq6);
   }
 };
 const toggle7 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.AAZKLL);
+    return intl.string(_modDef2868.AAZKLL);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.CUSTOM_STATUS_UPDATE);
@@ -362,14 +362,14 @@ const toggle7 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.ReIwY3);
+    return intl.string(_modDef2868.ReIwY3);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj8 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.AAZKLL);
+    return intl.string(_modDef2868.AAZKLL);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.CUSTOM_STATUS_UPDATE);
@@ -386,13 +386,13 @@ const obj8 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.ReIwY3);
+    return intl.string(_modDef2868.ReIwY3);
   }
 };
 const toggle8 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["/aEaD/"]);
+    return intl.string(_modDef2868["/aEaD/"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIEND_ONLINE);
@@ -409,14 +409,14 @@ const toggle8 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.UamA9K);
+    return intl.string(_modDef2868.UamA9K);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj9 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["/aEaD/"]);
+    return intl.string(_modDef2868["/aEaD/"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIEND_ONLINE);
@@ -433,13 +433,13 @@ const obj9 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.UamA9K);
+    return intl.string(_modDef2868.UamA9K);
   }
 };
 const toggle9 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.nDMkO6);
+    return intl.string(_modDef2868.nDMkO6);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIEND_REQUEST_REMINDER);
@@ -456,14 +456,14 @@ const toggle9 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.FpYT36);
+    return intl.string(_modDef2868.FpYT36);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj10 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.nDMkO6);
+    return intl.string(_modDef2868.nDMkO6);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIEND_REQUEST_REMINDER);
@@ -480,13 +480,13 @@ const obj10 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.FpYT36);
+    return intl.string(_modDef2868.FpYT36);
   }
 };
 const toggle10 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["8t+tz0"]);
+    return intl.string(_modDef2868["8t+tz0"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIEND_SUGGESTIONS);
@@ -503,14 +503,14 @@ const toggle10 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.AgSgnj);
+    return intl.string(_modDef2868.AgSgnj);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj11 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["8t+tz0"]);
+    return intl.string(_modDef2868["8t+tz0"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIEND_SUGGESTIONS);
@@ -527,13 +527,13 @@ const obj11 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.AgSgnj);
+    return intl.string(_modDef2868.AgSgnj);
   }
 };
 const toggle11 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.semyB9);
+    return intl.string(_modDef2868.semyB9);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.NUDGE_NEW_FRIEND_DM);
@@ -550,14 +550,14 @@ const toggle11 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.cmBiIi);
+    return intl.string(_modDef2868.cmBiIi);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj12 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.semyB9);
+    return intl.string(_modDef2868.semyB9);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.NUDGE_NEW_FRIEND_DM);
@@ -574,13 +574,13 @@ const obj12 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.cmBiIi);
+    return intl.string(_modDef2868.cmBiIi);
   }
 };
 const toggle12 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.tQCxJ5);
+    return intl.string(_modDef2868.tQCxJ5);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.PROFILE_UPDATES);
@@ -597,14 +597,14 @@ const toggle12 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.IvKJa3);
+    return intl.string(_modDef2868.IvKJa3);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj13 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.tQCxJ5);
+    return intl.string(_modDef2868.tQCxJ5);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.PROFILE_UPDATES);
@@ -621,138 +621,107 @@ const obj13 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.IvKJa3);
+    return intl.string(_modDef2868.IvKJa3);
   }
 };
 const toggle13 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.LjJQt7);
+    return intl.string(_modDef2868.LjJQt7);
   },
   useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING);
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
   },
   onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING, arg0);
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW, arg0);
   },
   useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING);
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
   },
   usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING);
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.BDz0u9);
+    return intl.string(_modDef2868.BDz0u9);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj14 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.LjJQt7);
+    return intl.string(_modDef2868.LjJQt7);
   },
   useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING);
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
   },
   onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING, arg0);
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW, arg0);
   },
   useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING);
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
   },
   usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING);
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.BDz0u9);
+    return intl.string(_modDef2868.BDz0u9);
   }
 };
 const toggle14 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["9EDo+/"]);
+    return intl.string(_modDef2868.LjJQt7);
   },
   useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
   },
   onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW, arg0);
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT, arg0);
   },
   useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
   },
   usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
   },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.BDz0u9);
+  }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj15 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["9EDo+/"]);
+    return intl.string(_modDef2868.LjJQt7);
   },
   useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
   },
   onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW, arg0);
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT, arg0);
   },
   useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
   },
   usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING_LOW);
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
   },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.BDz0u9);
+  }
 };
 const toggle15 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["9EDo+/"]);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
-});
-let SettingBuilders = SettingBuilders_mod;
-const obj16 = {
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867["9EDo+/"]);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
-};
-const toggle16 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867["9EDo+/"]);
+    return intl.string(_modDef2868["9EDo+/"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GAMING_OTHER);
@@ -769,84 +738,84 @@ const toggle16 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.Xb2n2D);
+    return intl.string(_modDef2868.Xb2n2D);
+  }
+});
+let SettingBuilders = SettingBuilders_mod;
+const obj16 = {
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868["9EDo+/"]);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GAMING_OTHER);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GAMING_OTHER, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GAMING_OTHER);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GAMING_OTHER);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.Xb2n2D);
+  }
+};
+const toggle16 = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.Yv02mS);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GO_LIVE);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GO_LIVE, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GO_LIVE);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GO_LIVE);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.bt8V96);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj17 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["9EDo+/"]);
+    return intl.string(_modDef2868.Yv02mS);
   },
   useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GAMING_OTHER);
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GO_LIVE);
   },
   onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GAMING_OTHER, arg0);
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GO_LIVE, arg0);
   },
   useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GAMING_OTHER);
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GO_LIVE);
   },
   usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GAMING_OTHER);
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GO_LIVE);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.Xb2n2D);
+    return intl.string(_modDef2868.bt8V96);
   }
 };
 const toggle17 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.Yv02mS);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GO_LIVE);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GO_LIVE, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GO_LIVE);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GO_LIVE);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.bt8V96);
-  }
-});
-let SettingBuilders = SettingBuilders_mod;
-const obj18 = {
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.Yv02mS);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GO_LIVE);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GO_LIVE, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GO_LIVE);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GO_LIVE);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.bt8V96);
-  }
-};
-const toggle18 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.Iy9grw);
+    return intl.string(_modDef2868.Iy9grw);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
@@ -859,6 +828,45 @@ const toggle18 = SettingBuilders.createToggle({
   },
   usePredicate() {
     return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
+});
+let SettingBuilders = SettingBuilders_mod;
+const obj18 = {
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.Iy9grw);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
+};
+const toggle18 = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.Iy9grw);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
 });
@@ -866,65 +874,26 @@ let SettingBuilders = SettingBuilders_mod;
 const obj19 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.Iy9grw);
+    return intl.string(_modDef2868.Iy9grw);
   },
   useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
   },
   onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW, arg0);
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT, arg0);
   },
   useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
   },
   usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW);
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
 };
 const toggle19 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.Iy9grw);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
-});
-let SettingBuilders = SettingBuilders_mod;
-const obj20 = {
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.Iy9grw);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY
-};
-const toggle20 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.DxG4wK);
+    return intl.string(_modDef2868.DxG4wK);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY);
@@ -941,37 +910,61 @@ const toggle20 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["0fxqGh"]);
+    return intl.string(_modDef2868["0fxqGh"]);
+  }
+});
+let SettingBuilders = SettingBuilders_mod;
+const obj20 = {
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.DxG4wK);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868["0fxqGh"]);
+  }
+};
+const toggle20 = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.MOjygY);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.POLLS);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.POLLS, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.POLLS);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.POLLS);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868["Rb3xh+"]);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj21 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.DxG4wK);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867["0fxqGh"]);
-  }
-};
-const toggle21 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.MOjygY);
+    return intl.string(_modDef2868.MOjygY);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.POLLS);
@@ -988,37 +981,37 @@ const toggle21 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["Rb3xh+"]);
+    return intl.string(_modDef2868["Rb3xh+"]);
+  }
+};
+const toggle21 = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.wv4QHR);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.REACTIONS);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.REACTIONS, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.REACTIONS);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.REACTIONS);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.wmNqrk);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj22 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.MOjygY);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.POLLS);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.POLLS, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.POLLS);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.POLLS);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867["Rb3xh+"]);
-  }
-};
-const toggle22 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.wv4QHR);
+    return intl.string(_modDef2868.wv4QHR);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.REACTIONS);
@@ -1035,37 +1028,37 @@ const toggle22 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.wmNqrk);
+    return intl.string(_modDef2868.wmNqrk);
+  }
+};
+const toggle22 = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868["40TIqW"]);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.nuXMqX);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj23 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.wv4QHR);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.REACTIONS);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.REACTIONS, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.REACTIONS);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.REACTIONS);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.wmNqrk);
-  }
-};
-const toggle23 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867["40TIqW"]);
+    return intl.string(_modDef2868["40TIqW"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS);
@@ -1082,37 +1075,37 @@ const toggle23 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.nuXMqX);
+    return intl.string(_modDef2868.nuXMqX);
+  }
+};
+const toggle23 = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.HibKoy);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.CHkkuK);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj24 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867["40TIqW"]);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.nuXMqX);
-  }
-};
-const toggle24 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.HibKoy);
+    return intl.string(_modDef2868.HibKoy);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS);
@@ -1129,37 +1122,37 @@ const toggle24 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.CHkkuK);
+    return intl.string(_modDef2868.CHkkuK);
+  }
+};
+const toggle24 = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.kIrLfg);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.OTHER_GUILD);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.OTHER_GUILD, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.OTHER_GUILD);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.OTHER_GUILD);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868["izT+u4"]);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj25 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.HibKoy);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.FORUM_NOTIFICATIONS);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.CHkkuK);
-  }
-};
-const toggle25 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.kIrLfg);
+    return intl.string(_modDef2868.kIrLfg);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.OTHER_GUILD);
@@ -1176,84 +1169,60 @@ const toggle25 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["izT+u4"]);
+    return intl.string(_modDef2868["izT+u4"]);
+  }
+};
+const toggle25 = SettingBuilders.createToggle({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.tP1neL);
+  },
+  useValue() {
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.SAFETY_ALERTS);
+  },
+  onValueChange(arg0) {
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.SAFETY_ALERTS, arg0);
+  },
+  useIsDisabled() {
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.SAFETY_ALERTS);
+  },
+  usePredicate() {
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.SAFETY_ALERTS);
+  },
+  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
+  useDescription() {
+    const intl = util.intl;
+    return intl.string(_modDef2868.F3W6x5);
   }
 });
 let SettingBuilders = SettingBuilders_mod;
 const obj26 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.kIrLfg);
+    return intl.string(_modDef2868.tP1neL);
   },
   useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.OTHER_GUILD);
+    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.SAFETY_ALERTS);
   },
   onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.OTHER_GUILD, arg0);
+    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.SAFETY_ALERTS, arg0);
   },
   useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.OTHER_GUILD);
+    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.SAFETY_ALERTS);
   },
   usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.OTHER_GUILD);
+    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.SAFETY_ALERTS);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867["izT+u4"]);
+    return intl.string(_modDef2868.F3W6x5);
   }
 };
 const toggle26 = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2867.tP1neL);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.SAFETY_ALERTS);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.SAFETY_ALERTS, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.SAFETY_ALERTS);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.SAFETY_ALERTS);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.F3W6x5);
-  }
-});
-let SettingBuilders = SettingBuilders_mod;
-const obj27 = {
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.tP1neL);
-  },
-  useValue() {
-    return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.SAFETY_ALERTS);
-  },
-  onValueChange(arg0) {
-    return NotifSettingsActionCreators.updateNotifSettingToggleValue(NotifSettings.NotifSettings.SAFETY_ALERTS, arg0);
-  },
-  useIsDisabled() {
-    return useIsNotifSettingDisabledDefault(NotifSettings.NotifSettings.SAFETY_ALERTS);
-  },
-  usePredicate() {
-    return notifications_NotificationSettingsUtils.useNotifSettingVisibility(NotifSettings.NotifSettings.SAFETY_ALERTS);
-  },
-  parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
-  useDescription() {
-    const intl = util.intl;
-    return intl.string(_modDef2867.F3W6x5);
-  }
-};
-const toggle27 = SettingBuilders.createToggle({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(_modDef2867["4n388K"]);
+    return intl.string(_modDef2868["4n388K"]);
   },
   useValue() {
     return settings_NotifSettingsUtils.useNotifSettingToggleValue(NotifSettings.NotifSettings.STAGE_NOTIFICATIONS);
@@ -1270,7 +1239,7 @@ const toggle27 = SettingBuilders.createToggle({
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_SERVERS,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2867.Pb4RGX);
+    return intl.string(_modDef2868.Pb4RGX);
   }
 });
 const result = size.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsNodes.tsx");
@@ -1288,18 +1257,17 @@ export const FriendRequestReminder = toggle9;
 export const FriendSuggestions = toggle10;
 export const NudgeNewFriendDm = toggle11;
 export const ProfileUpdates = toggle12;
-export const FriendsGaming = toggle13;
-export const FriendsGamingLow = toggle14;
-export const FriendsGamingDefault = toggle15;
-export const GamingOther = toggle16;
-export const GoLive = toggle17;
-export const VoiceActivityLow = toggle18;
-export const VoiceActivityDefault = toggle19;
-export const VoiceChannelActivity = toggle20;
-export const Polls = toggle21;
-export const Reactions = toggle22;
-export const GuildEventNotifications = toggle23;
-export const ForumNotifications = toggle24;
-export const OtherGuild = toggle25;
-export const SafetyAlerts = toggle26;
-export const StageNotifications = toggle27;
+export const FriendsGamingLow = toggle13;
+export const FriendsGamingDefault = toggle14;
+export const GamingOther = toggle15;
+export const GoLive = toggle16;
+export const VoiceActivityLow = toggle17;
+export const VoiceActivityDefault = toggle18;
+export const VoiceChannelActivity = toggle19;
+export const Polls = toggle20;
+export const Reactions = toggle21;
+export const GuildEventNotifications = toggle22;
+export const ForumNotifications = toggle23;
+export const OtherGuild = toggle24;
+export const SafetyAlerts = toggle25;
+export const StageNotifications = toggle26;

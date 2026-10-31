@@ -1,7 +1,7 @@
-// === Module 7864: AnalyticsTypes ===
+// === Module 7871: AnalyticsTypes ===
 
-// Module 7864 (AnalyticsTypes)
-import QuestTypes from "QuestTypes" /* 6778 */;
+// Module 7871 (AnalyticsTypes)
+import QuestTypes from "QuestTypes" /* 6784 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Object.keys(QuestTypes.QuestContent);

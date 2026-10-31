@@ -1,9 +1,9 @@
-// === Module 12477: TabItem ===
+// === Module 12512: TabItem ===
 
-// Module 12477 (TabItem)
+// Module 12512 (TabItem)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5090 */;
-import spring from "spring" /* 5632 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
+import spring from "spring" /* 5637 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -14,12 +14,12 @@ function TabItemCount(arg0) {
   let sharedValue;
   ({ count, variant } = arg0);
   const tmp = closure_10();
-  sharedValue = sharedValue(5090).useSharedValue(0);
+  sharedValue = sharedValue(5095).useSharedValue(0);
   let items = [sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(5090);
+  let obj = sharedValue(5095);
   class T {
     constructor() {
       obj = { opacity: null, transform: null };
@@ -35,8 +35,8 @@ function TabItemCount(arg0) {
       return obj;
     }
   }
-  let obj2 = sharedValue(5090);
-  T.__closure = { withSpring: sharedValue(5632).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(5090).interpolate };
+  let obj2 = sharedValue(5095);
+  T.__closure = { withSpring: sharedValue(5637).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(5095).interpolate };
   T.__workletHash = 16666672974627;
   T.__initData = __initData2;
   closure_129_0 = index;
@@ -49,7 +49,7 @@ function TabItemCount(arg0) {
     tmp7 = closure_12();
   }
   closure_129_3 = tmp7;
-  let obj3 = { withSpring: sharedValue(5632).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(5090).interpolate };
+  let obj3 = { withSpring: sharedValue(5637).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(5095).interpolate };
   const fn = function c() {
     let active = inactive.inactive;
     value = setItemDimensions.get();
@@ -65,12 +65,12 @@ function TabItemCount(arg0) {
     obj.color = spring.withSpring(active, closure_8, "animate-always");
     return obj;
   };
-  const tmp2Result = sharedValue(5090);
-  fn.__closure = { colors: tmp7, pressed, index, activeIndex, withSpring: sharedValue(5632).withSpring, TEXT_SPRING_CONFIG };
+  const tmp2Result = sharedValue(5095);
+  fn.__closure = { colors: tmp7, pressed, index, activeIndex, withSpring: sharedValue(5637).withSpring, TEXT_SPRING_CONFIG };
   fn.__workletHash = 11643476765161;
   fn.__initData = __initData;
   const animatedStyle1 = tmp2Result.useAnimatedStyle(fn);
-  const obj5 = { style: null, children: closure_5(sharedValue(5619).Text, { animated: true, variant: "text-sm/medium", style: animatedStyle1, lineClamp: 1, children: count }) };
+  const obj5 = { style: null, children: closure_5(sharedValue(5624).Text, { animated: true, variant: "text-sm/medium", style: animatedStyle1, lineClamp: 1, children: count }) };
   const items1 = [tmp.count, animatedStyle];
   obj5.style = items1;
   return closure_5(ReanimatedRexport.View, obj5);
@@ -82,15 +82,15 @@ const jsxProd = fn(21);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(Pressable);
 const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj = { item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" }, count: { marginLeft: nativeDefault.space.PX_8 }, indicatorDot: null };
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj.indicatorDot = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_10 = createStyles.createStyles(obj);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj4 = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_11 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj5 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND };
 let closure_12 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_STRONG, pressed: nativeDefault.colors.TEXT_STRONG });
 const __initData = { code: "function TabItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};}" };

@@ -1,10 +1,10 @@
-// === Module 15283: useReferralIncentiveEligibility ===
+// === Module 15322: useReferralIncentiveEligibility ===
 
-// Module 15283 (useReferralIncentiveEligibility)
+// Module 15322 (useReferralIncentiveEligibility)
 import initialize from "initialize" /* 504 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8516 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15280 */;
-import SubscriptionStore from "SubscriptionStore" /* 2053 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8524 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 15319 */;
+import SubscriptionStore from "SubscriptionStore" /* 2052 */;
 
 require = fn;
 const size = fn(2);

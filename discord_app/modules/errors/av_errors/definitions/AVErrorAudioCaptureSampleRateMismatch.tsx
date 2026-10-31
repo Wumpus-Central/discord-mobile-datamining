@@ -1,12 +1,12 @@
-// === Module 19996: AVErrorAudioCaptureSampleRateMismatch ===
+// === Module 20056: AVErrorAudioCaptureSampleRateMismatch ===
 
-// Module 19996 (AVErrorAudioCaptureSampleRateMismatch)
-import DurationsDefault from "Durations" /* 1090 */;
-import AVError from "AVError" /* 5942 */;
-import AVErrorContext from "AVErrorContext" /* 19984 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5776 */;
-import MediaEngineStore from "MediaEngineStore" /* 2007 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+// Module 20056 (AVErrorAudioCaptureSampleRateMismatch)
+import DurationsDefault from "Durations" /* 1089 */;
+import AVError from "AVError" /* 5947 */;
+import AVErrorContext from "AVErrorContext" /* 20044 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 5781 */;
+import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
 
 require = fn;
 let closure_5 = 10 * DurationsDefault.Millis.SECOND;

@@ -1,20 +1,21 @@
-// === Module 18616: AppChannel ===
+// === Module 18658: AppChannel ===
 
-// Module 18616 (AppChannel)
+// Module 18658 (AppChannel)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import transitionToChannel from "transitionToChannel" /* 5751 */;
-import conjureDMAppChannel from "conjureDMAppChannel" /* 6872 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6875 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9808 */;
-import useChannelContentGate from "useChannelContentGate" /* 11196 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12058 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 18629 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18631 */;
+import util from "util" /* 1113 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import transitionToChannel from "transitionToChannel" /* 5756 */;
+import conjureDMAppChannel from "conjureDMAppChannel" /* 6878 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9829 */;
+import useChannelContentGate from "useChannelContentGate" /* 11215 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11340 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 12096 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 18671 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 18673 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -102,28 +103,40 @@ function ClosedAppChannel(arg0) {
   if (data != null) {
     icon = data.icon;
   }
-  let tmp4Result = null;
   if (null != icon) {
     const obj2 = { source: null, style: null };
-    const tmp8 = FastImageDefault;
-    ({ id: obj4.id, icon: obj4.icon } = data);
+    const tmp11 = FastImageDefault;
+    ({ id: obj6.id, icon: obj6.icon } = data);
     obj2.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null, size: 64 });
     obj2.style = tmp.icon;
-    tmp4Result = hasOwnProperty(tmp8, obj2);
-    const obj5 = { id: null, icon: null, size: 64 };
+    let tmp4Result = hasOwnProperty(tmp11, obj2);
+    const obj4 = { id: null, icon: null, size: 64 };
+  } else {
+    let conjureProjectId;
+    if (data != null) {
+      conjureProjectId = data.conjureProjectId;
+    }
+    tmp4Result = null;
+    if (null != conjureProjectId) {
+      const obj7 = { style: tmp.icon, children: null };
+      ({ id: obj3.applicationId, name: obj3.name } = data);
+      obj7.children = hasOwnProperty(ConjureAppIconTileDefault, { applicationId: null, name: null, size: 64 });
+      tmp4Result = hasOwnProperty(View, obj7);
+      const obj8 = { applicationId: null, name: null, size: 64 };
+    }
   }
-  const obj6 = { icon: tmp4Result, heading: null, action: null };
+  const obj14 = { icon: tmp4Result, heading: null, action: null };
   let name;
   if (data != null) {
     name = data.name;
   }
-  obj6.heading = name;
-  const obj10 = { text: null, onPress: null };
+  obj14.heading = name;
+  const obj15 = { text: null, onPress: null };
   const intl = util.intl;
-  obj10.text = intl.string(util.t.PPYvuv);
-  obj10.onPress = onLaunch;
-  obj6.action = hasOwnProperty(components_Button_Button.Button, obj10);
-  return hasOwnProperty(FrameSurfaceState.FrameSurfaceExplanation, obj6);
+  obj15.text = intl.string(util.t.PPYvuv);
+  obj15.onPress = onLaunch;
+  obj14.action = hasOwnProperty(components_Button_Button.Button, obj15);
+  return hasOwnProperty(FrameSurfaceState.FrameSurfaceExplanation, obj14);
 }
 function AppChannel(arg0) {
   ({ applicationId, channel } = arg0);
@@ -144,12 +157,12 @@ function AppChannel(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { icon: null };
-let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg };
+let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_8 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;

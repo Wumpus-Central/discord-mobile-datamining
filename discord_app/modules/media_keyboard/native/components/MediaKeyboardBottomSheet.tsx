@@ -1,13 +1,13 @@
-// === Module 12394: MediaKeyboardBottomSheet ===
+// === Module 12432: MediaKeyboardBottomSheet ===
 
-// Module 12394 (MediaKeyboardBottomSheet)
+// Module 12432 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import ChatInputUtils from "ChatInputUtils" /* 5202 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
+import util from "util" /* 1113 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import ChatInputUtils from "ChatInputUtils" /* 5207 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,16 +22,16 @@ function MediaKeyboardBackground(arg0) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const MediaKeyboardConstants = fn(1622);
+const MediaKeyboardConstants = fn(1621);
 ({ HEADER_HANDLE_HEIGHT: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const MetaQuestUtils = fn(1623);
+const MetaQuestUtils = fn(1622);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
 const __initData = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };

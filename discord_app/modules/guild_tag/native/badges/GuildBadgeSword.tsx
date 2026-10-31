@@ -1,8 +1,8 @@
-// === Module 15700: GuildBadgeSword ===
+// === Module 15740: GuildBadgeSword ===
 
-// Module 15700 (GuildBadgeSword)
-import inlineStyles from "inlineStyles" /* 8023 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 15701 */;
+// Module 15740 (GuildBadgeSword)
+import inlineStyles from "inlineStyles" /* 8031 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 15741 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

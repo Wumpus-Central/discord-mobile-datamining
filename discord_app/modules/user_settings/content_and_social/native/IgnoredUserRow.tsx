@@ -1,17 +1,17 @@
-// === Module 16656: IgnoredUserRow ===
+// === Module 16698: IgnoredUserRow ===
 
-// Module 16656 (IgnoredUserRow)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7482 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
+// Module 16698 (IgnoredUserRow)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7320)().analyticsLocations;
-  const intl = userRecord(1114).intl;
+  analyticsLocations = analyticsLocations(7326)().analyticsLocations;
+  const intl = userRecord(1113).intl;
   let username = userRecord.globalName;
   if (username == null) {
     username = userRecord.username;
@@ -19,8 +19,8 @@ function IgnoredUserRow(userRecord) {
   function handleOpenProfile() {
     showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
   }
-  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1114).t.e3qAIz, { name: username });
-  let obj = { accessible: false, icon: jsx(userRecord(1188).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null };
+  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1113).t.e3qAIz, { name: username });
+  let obj = { accessible: false, icon: jsx(userRecord(1187).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null };
   const obj3 = {
     userRecord,
     accessibilityActions: null,
@@ -36,7 +36,7 @@ function IgnoredUserRow(userRecord) {
   };
   const items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16653).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16695).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -50,14 +50,14 @@ function IgnoredUserRow(userRecord) {
     }
   });
   const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
-  const intl2 = tmp2(1114).intl;
-  obj4.text = intl2.string(userRecord(1114).t["3GZE6a"]);
+  const intl2 = tmp2(1113).intl;
+  obj4.text = intl2.string(userRecord(1113).t["3GZE6a"]);
   obj4.accessibilityLabel = formatToPlainStringResult;
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(5629).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(6969).TableRow, { accessible: false, icon: jsx(userRecord(1188).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
+  obj.trailing = jsx(userRecord(5634).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(6975).TableRow, { accessible: false, icon: jsx(userRecord(1187).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

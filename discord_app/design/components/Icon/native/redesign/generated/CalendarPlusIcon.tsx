@@ -1,9 +1,9 @@
-// === Module 12382: CalendarPlusIcon ===
+// === Module 12420: CalendarPlusIcon ===
 
-// Module 12382 (CalendarPlusIcon)
+// Module 12420 (CalendarPlusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod12383 from "module_12383" /* 12383 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod12421 from "module_12421" /* 12421 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function CalendarPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12383, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12421, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

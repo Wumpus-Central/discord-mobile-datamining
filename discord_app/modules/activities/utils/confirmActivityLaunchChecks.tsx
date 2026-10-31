@@ -1,9 +1,9 @@
-// === Module 11701: confirmActivityLaunchChecks ===
+// === Module 11738: confirmActivityLaunchChecks ===
 
-// Module 11701 (confirmActivityLaunchChecks)
+// Module 11738 (confirmActivityLaunchChecks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 
 const require = fn;
 function getOrFetchApplicationForLaunch() {
@@ -27,7 +27,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
         obj7.locationKind = closure_131_3;
         closure_132_1(closure_132_2[6]).dispatch(obj7);
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } else if (arg0 === 1) {
         c8 = 3;
         throw value;
@@ -129,7 +129,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -171,20 +171,20 @@ let closure_9 = async function _confirmActivityChange(arg0) {
               if (value != null) {
                 _location = value.location;
               }
-              channel = channel.getChannel(closure_1_0(4930).getEmbeddedActivityLocationChannelId(_location));
+              channel = channel.getChannel(closure_1_0(4935).getEmbeddedActivityLocationChannelId(_location));
               if (null != value) {
                 if (null != channel) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(11705)(tmp, channel, () => {
+                  shouldClosePopout(11742)(tmp, channel, () => {
                     const result = closure_0(c2[10]).leaveEmbeddedActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
                     closure_0(true);
                   }, () => closure_0(false));
                 }
               }
               fn(true);
-              const obj2 = closure_1_0(4930);
+              const obj2 = closure_1_0(4935);
             });
             c2 = 2;
             c3 = 1;
@@ -222,7 +222,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -363,7 +363,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

@@ -1,13 +1,13 @@
-// === Module 7341: ConnectedAccountsActionCreators ===
+// === Module 7347: ConnectedAccountsActionCreators ===
 
-// Module 7341 (ConnectedAccountsActionCreators)
+// Module 7347 (ConnectedAccountsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6741 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6747 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");
 
 export default {
-  fetch: fn(6697).fetchConnectedAccounts,
+  fetch: fn(6703).fetchConnectedAccounts,
   authorize(arg0) {
     closure_0 = arg0;
     let obj = arg1;
@@ -69,7 +69,7 @@ export default {
       return closure_129_0;
     })();
   },
-  callback: fn(6698).postConnectionCallback,
+  callback: fn(6704).postConnectionCallback,
   connect(arg0, arg1, name, location, friend_sync) {
     const request = { url: timestampProducer.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj2 = { name, friend_sync: null };
@@ -168,7 +168,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -254,7 +254,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

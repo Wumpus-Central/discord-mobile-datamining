@@ -1,8 +1,8 @@
-// === Module 11712: selectAndWaitForVoiceChannelJoin ===
+// === Module 11749: selectAndWaitForVoiceChannelJoin ===
 
-// Module 11712 (selectAndWaitForVoiceChannelJoin)
+// Module 11749 (selectAndWaitForVoiceChannelJoin)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 
 let closure_5 = async function _selectAndWaitForVoiceChannelJoin(arg0) {
   if (c6 === 2) {
@@ -15,7 +15,7 @@ let closure_5 = async function _selectAndWaitForVoiceChannelJoin(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

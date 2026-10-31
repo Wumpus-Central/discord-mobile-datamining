@@ -1,7 +1,7 @@
-// === Module 5928: Histogram ===
+// === Module 5894: Histogram ===
 
-// Module 5928 (Histogram)
-import TDigest from "TDigest" /* 5929 */;
+// Module 5894 (Histogram)
+import TDigest from "TDigest" /* 5895 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/Histogram.tsx");

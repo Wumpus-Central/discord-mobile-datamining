@@ -1,13 +1,13 @@
-// === Module 5647: useChannelName ===
+// === Module 5652: useChannelName ===
 
-// Module 5647 (useChannelName)
-import util from "util" /* 1114 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
+// Module 5652 (useChannelName)
+import util from "util" /* 1113 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5233 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import ExperimentStore from "ExperimentStore" /* 5238 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -75,9 +75,9 @@ function computeChannelName(channel, UserStore, RelationshipStore) {
         if (mapped2.length > 0) {
           let joined = mapped2.join(", ");
         } else {
-          const intl2 = tmp25(1114).intl;
+          const intl2 = tmp25(1113).intl;
           const obj = { name: UserUtilsDefault.getName(UserStore.getCurrentUser()) };
-          joined = intl2.formatToPlainString(tmp25(1114).t["9Uk8PF"], obj);
+          joined = intl2.formatToPlainString(tmp25(1113).t["9Uk8PF"], obj);
         }
       }
     } else {
@@ -184,9 +184,9 @@ export function computeDefaultGroupDmNameFromUserIds(arr, getUser, arg2) {
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1114).intl;
+    const intl = tmp(1113).intl;
     const obj = { name: UserUtilsDefault.getName(getUser.getCurrentUser()) };
-    joined = intl.formatToPlainString(tmp(1114).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1113).t["9Uk8PF"], obj);
   }
   return joined;
 }
@@ -205,9 +205,9 @@ export function computeDefaultGroupDmName(recipients, getUser, arg2) {
   if (mapped1.length > 0) {
     let joined = mapped1.join(", ");
   } else {
-    const intl = tmp(1114).intl;
+    const intl = tmp(1113).intl;
     const obj = { name: UserUtilsDefault.getName(getUser.getCurrentUser()) };
-    joined = intl.formatToPlainString(tmp(1114).t["9Uk8PF"], obj);
+    joined = intl.formatToPlainString(tmp(1113).t["9Uk8PF"], obj);
   }
   return joined;
 }

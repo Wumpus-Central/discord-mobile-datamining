@@ -1,9 +1,9 @@
-// === Module 12422: ImagePlusIcon ===
+// === Module 12460: ImagePlusIcon ===
 
-// Module 12422 (ImagePlusIcon)
+// Module 12460 (ImagePlusIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod12423 from "module_12423" /* 12423 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod12461 from "module_12461" /* 12461 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ImagePlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12423, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12461, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

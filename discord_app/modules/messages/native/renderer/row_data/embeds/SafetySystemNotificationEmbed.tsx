@@ -1,12 +1,12 @@
-// === Module 15111: SafetySystemNotificationEmbed ===
+// === Module 15150: SafetySystemNotificationEmbed ===
 
-// Module 15111 (SafetySystemNotificationEmbed)
+// Module 15150 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1114 */;
-import _modDef2044 from "module_2044" /* 2044 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7961 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8388 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7969 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8396 */;
+import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 15148 */;
+import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 15149 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -41,7 +41,7 @@ export function createSafetySystemNotificationEmbed(message) {
               let mapCtaToNativeDataResult1;
               if (null != parseMessageForPropsResult.ctas[1]) {
                 mapCtaToNativeDataResult1 = SafetyHubUtils.mapCtaToNativeData(parseMessageForPropsResult.ctas[1], parseMessageForPropsResult.learn_more_link, parseMessageForPropsResult.classification_id);
-                const tmp6Result3 = SafetyHubUtils;
+                const tmp6Result6 = SafetyHubUtils;
               }
               tmp9 = mapCtaToNativeDataResult1;
               tmp10 = mapCtaToNativeDataResult;
@@ -50,17 +50,16 @@ export function createSafetySystemNotificationEmbed(message) {
             if (str == null) {
               str = "";
             }
-            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8019 : 8603))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
-            const intl = util.intl;
+            const obj2 = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8027 : 8611))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            const tmp6Result7 = renderer_EmbedUtils;
+            const tmp6Result8 = SafetyWarningAgeUtils;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {
               num = 0;
             }
-            const obj3 = { daysAgo: null };
-            const tmp6Result4 = renderer_EmbedUtils;
-            const obj7 = _modDef2044();
-            obj3.daysAgo = obj7.diff(_modDef2044.unix(num), "days");
-            obj2.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj3);
+            const daysAgo = SafetyWarningAgeUtils.getDaysAgo(num);
+            const tmp6Result9 = SafetyWarningAgeUtils;
+            obj2.subtitleText = tmp6Result8.formatSafetyWarningAge(daysAgo, SafetyWarningAgeTextExperiment.getIsSafetyWarningAgeTextEnabled("safety_warning_system_message"));
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {
               str4 = "";

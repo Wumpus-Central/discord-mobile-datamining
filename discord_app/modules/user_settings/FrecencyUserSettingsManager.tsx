@@ -1,19 +1,19 @@
-// === Module 19410: FrecencyUserSettingsManager ===
+// === Module 19467: FrecencyUserSettingsManager ===
 
-// Module 19410 (FrecencyUserSettingsManager)
-import DurationsDefault from "Durations" /* 1090 */;
-import frecency_user_settings from "frecency_user_settings" /* 1233 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1234 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4839 */;
+// Module 19467 (FrecencyUserSettingsManager)
+import DurationsDefault from "Durations" /* 1089 */;
+import frecency_user_settings from "frecency_user_settings" /* 1232 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4844 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9744 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9743 */;
-import EmojiStore from "EmojiStore" /* 6790 */;
-import SoundboardStore from "SoundboardStore" /* 6053 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6830 */;
-import FrecencyStore from "FrecencyStore" /* 6889 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9764 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9763 */;
+import EmojiStore from "EmojiStore" /* 6796 */;
+import SoundboardStore from "SoundboardStore" /* 6058 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6836 */;
+import FrecencyStore from "FrecencyStore" /* 6895 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -66,7 +66,7 @@ let closure_22 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -126,7 +126,7 @@ let closure_22 = async function _saveProtos(arg0) {
         const result = markDirtyIfHasPendingChange.markDirtyIfHasPendingChange();
       });
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp25) {
       c4 = tmp;
       throw tmp25;
@@ -141,9 +141,9 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6889).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6895).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1361).FREQUENCY_ITEM_LIMIT;
+const FREQUENCY_ITEM_LIMIT = fn(1360).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;

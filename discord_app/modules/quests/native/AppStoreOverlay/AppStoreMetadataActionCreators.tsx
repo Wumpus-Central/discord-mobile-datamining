@@ -1,9 +1,9 @@
-// === Module 14612: AppStoreMetadataActionCreators ===
+// === Module 14650: AppStoreMetadataActionCreators ===
 
-// Module 14612 (AppStoreMetadataActionCreators)
-import DurationsDefault from "Durations" /* 1090 */;
+// Module 14650 (AppStoreMetadataActionCreators)
+import DurationsDefault from "Durations" /* 1089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 const require = fn;
@@ -65,7 +65,7 @@ export function fetchAppStoreMetadata(os) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

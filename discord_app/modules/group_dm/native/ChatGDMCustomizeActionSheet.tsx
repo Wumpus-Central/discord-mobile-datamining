@@ -1,9 +1,9 @@
-// === Module 10119: ChatGDMCustomizeActionSheet ===
+// === Module 10139: ChatGDMCustomizeActionSheet ===
 
-// Module 10119 (ChatGDMCustomizeActionSheet)
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10120 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10123 */;
-import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10125 */;
+// Module 10139 (ChatGDMCustomizeActionSheet)
+import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10140 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10143 */;
+import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10145 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -18,8 +18,8 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   ({ onGoBack: c1, ref: c2 } = useNavigatorConfirmChangesOnBackDefault());
   const obj = { screenKey: "kick", title: null, render: null };
   const tmp = useNavigatorConfirmChangesOnBackDefault();
-  const intl = channelId(1114).intl;
-  obj.title = intl.string(channelId(1114).t["1r5E+m"]);
+  const intl = channelId(1113).intl;
+  obj.title = intl.string(channelId(1113).t["1r5E+m"]);
   obj.render = function render() {
     return jsx(ChatGDMCustomizeDefault, { ref, onFinish, channelId });
   };

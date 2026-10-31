@@ -1,11 +1,11 @@
-// === Module 18271: useDefaultAuthorizationNotifiers ===
+// === Module 18314: useDefaultAuthorizationNotifiers ===
 
-// Module 18271 (useDefaultAuthorizationNotifiers)
-import util from "util" /* 1114 */;
-import _modDef3317 from "module_3317" /* 3317 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
+// Module 18314 (useDefaultAuthorizationNotifiers)
+import util from "util" /* 1113 */;
+import _modDef3320 from "module_3320" /* 3320 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1994 */;
+import AppStateStore from "AppStateStore" /* 1993 */;
 
 const require = globalThis.__r;
 
@@ -56,7 +56,7 @@ export function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyL
             if (flag) {
               const obj2 = { text: null };
               const intl = util.intl;
-              obj2.text = intl.string(_modDef3317.uG6teD);
+              obj2.text = intl.string(_modDef3320.uG6teD);
               ToastActionCreatorsDefault.open("account-linked-toast", obj2);
             }
           }

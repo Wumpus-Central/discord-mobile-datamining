@@ -1,15 +1,15 @@
-// === Module 10233: GIFPickerHeader ===
+// === Module 10253: GIFPickerHeader ===
 
-// Module 10233 (GIFPickerHeader)
+// Module 10253 (GIFPickerHeader)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import timing from "timing" /* 5249 */;
-import timingPresets from "timingPresets" /* 5252 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Pressables from "Pressables" /* 6974 */;
-import Search_SearchBar from "Search/SearchBar" /* 7212 */;
-import GifProvider from "GifProvider" /* 10225 */;
-import ChevronLargeLeftIcon from "ChevronLargeLeftIcon" /* 10234 */;
+import util from "util" /* 1113 */;
+import timing from "timing" /* 5254 */;
+import timingPresets from "timingPresets" /* 5257 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Pressables from "Pressables" /* 6980 */;
+import Search_SearchBar from "Search/SearchBar" /* 7218 */;
+import GifProvider from "GifProvider" /* 10245 */;
+import ChevronLargeLeftIcon from "ChevronLargeLeftIcon" /* 10254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -123,17 +123,17 @@ const View = fn(17).View;
 fn(1072).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_8 }, headerContainer: null, header: null, favoritesSearch: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
-obj.headerContainer = { flexDirection: "row", justifyContent: "space-between", gap: fn(10227).GIF_PICKER_GUTTER_SPACING };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10227).GIF_PICKER_GUTTER_SPACING };
-obj.header = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7092).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj.headerContainer = { flexDirection: "row", justifyContent: "space-between", gap: fn(10247).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10247).GIF_PICKER_GUTTER_SPACING };
+obj.header = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7098).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj.favoritesSearch = { position: "absolute", top: 0, end: 0, overflow: "hidden" };
 let closure_10 = createStyles.createStyles(obj);
 const __initData = { code: "function GIFPickerHeaderTsx1(){const{progress}=this.__closure;return{opacity:1-progress.get()};}" };
 const __initData2 = { code: "function GIFPickerHeaderTsx2(){const{progress,columnWidth}=this.__closure;return{width:progress.get()*columnWidth,opacity:progress.get()};}" };
-let obj5 = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7092).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj5 = { borderWidth: 1, borderColor: "transparent", paddingHorizontal: nativeDefault.space.PX_8, height: fn(7098).InputHeights.MD, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerHeader.tsx");
 

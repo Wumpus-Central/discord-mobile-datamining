@@ -1,11 +1,11 @@
-// === Module 11652: getFrameSurfaces ===
+// === Module 11688: getFrameSurfaces ===
 
-// Module 11652 (getFrameSurfaces)
+// Module 11688 (getFrameSurfaces)
 import Constants from "Constants" /* 1072 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2026 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6877 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9741 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2024 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6883 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9761 */;
 import size from "module_2" /* 2 */;
 
 function getFrameSurfaces(application) {

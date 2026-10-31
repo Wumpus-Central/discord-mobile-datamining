@@ -1,18 +1,18 @@
-// === Module 13197: MessageGameIconActionSheet ===
+// === Module 13232: MessageGameIconActionSheet ===
 
-// Module 13197 (MessageGameIconActionSheet)
+// Module 13232 (MessageGameIconActionSheet)
 import nativeDefault from "native" /* 575 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
 
 const require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
-const PlatformUtils = fn(1376);
+const createStyles = fn(5014);
+const PlatformUtils = fn(1375);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -46,25 +46,25 @@ export default function MessageGameIconActionSheet(applicationId) {
     const obj5 = { startExpanded: true, children: null };
     const obj6 = { uri: str };
     obj4.source = obj6;
-    const items1 = [closure_6(tmp2(1188).Icon, obj4), ];
+    const items1 = [closure_6(tmp2(1187).Icon, obj4), ];
     const obj7 = { style: tmp.gameDescriptionWrapper, children: null };
     const obj8 = { style: tmp.timestamp, variant: "text-xs/medium", color: "text-muted", children: applicationId.messageTimestamp };
-    const items2 = [closure_6(tmp2(5619).Text, obj8), ];
+    const items2 = [closure_6(tmp2(5624).Text, obj8), ];
     const obj9 = { variant: "text-sm/medium", children: null };
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1113).intl;
     const obj10 = { applicationName: stateFromStores.name };
-    const items3 = [intl.format(tmp2(1114).t.J3s8JP, obj10), " ", ];
-    const intl2 = tmp2(1114).intl;
+    const items3 = [intl.format(tmp2(1113).t.J3s8JP, obj10), " ", ];
+    const intl2 = tmp2(1113).intl;
     const obj11 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
-    items3[2] = intl2.format(tmp2(1114).t.BPDKoA, obj11);
+    items3[2] = intl2.format(tmp2(1113).t.BPDKoA, obj11);
     obj9.children = items3;
-    items2[1] = closure_7(tmp2(5619).Text, obj9);
+    items2[1] = closure_7(tmp2(5624).Text, obj9);
     obj7.children = items2;
     items1[1] = closure_7(View, obj7);
     obj3.children = items1;
     obj2.children = closure_7(View, obj3);
     obj5.children = closure_6(View, obj2);
-    tmp5Result = closure_6(tmp2(5267).BottomSheet, obj5);
+    tmp5Result = closure_6(tmp2(5272).BottomSheet, obj5);
   }
   return tmp5Result;
 };

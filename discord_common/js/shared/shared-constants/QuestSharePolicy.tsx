@@ -1,6 +1,6 @@
-// === Module 7862: QuestSharePolicy ===
+// === Module 7869: QuestSharePolicy ===
 
-// Module 7862 (QuestSharePolicy)
+// Module 7869 (QuestSharePolicy)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx");

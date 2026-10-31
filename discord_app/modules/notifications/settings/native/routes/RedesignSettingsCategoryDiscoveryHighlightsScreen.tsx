@@ -1,9 +1,9 @@
-// === Module 17913: RedesignSettingsCategoryDiscoveryHighlightsScreen ===
+// === Module 17956: RedesignSettingsCategoryDiscoveryHighlightsScreen ===
 
-// Module 17913 (RedesignSettingsCategoryDiscoveryHighlightsScreen)
-import SettingBuilders from "SettingBuilders" /* 11505 */;
-import SettingLayoutDefault from "SettingLayout" /* 16533 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17907 */;
+// Module 17956 (RedesignSettingsCategoryDiscoveryHighlightsScreen)
+import SettingBuilders from "SettingBuilders" /* 11539 */;
+import SettingLayoutDefault from "SettingLayout" /* 16575 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

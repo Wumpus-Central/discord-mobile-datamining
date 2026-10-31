@@ -1,27 +1,27 @@
-// === Module 19734: EnhancedRoleColorsSelectStyleModal ===
+// === Module 19791: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 19734 (EnhancedRoleColorsSelectStyleModal)
+// Module 19791 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1083 */;
-import util from "util" /* 1114 */;
-import _modDef2569 from "module_2569" /* 2569 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4918 */;
-import useThemeDefault from "useTheme" /* 5248 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5267 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6035 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7315 */;
-import RowGeneratorDefault from "RowGenerator" /* 8369 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8411 */;
-import _modDef11168 from "module_11168" /* 11168 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 19713 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19714 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19716 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 19735 */;
+import util from "util" /* 1113 */;
+import _modDef2570 from "module_2570" /* 2570 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4923 */;
+import useThemeDefault from "useTheme" /* 5253 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6040 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import RowGeneratorDefault from "RowGenerator" /* 8377 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8419 */;
+import _modDef11187 from "module_11187" /* 11187 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 19770 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 19771 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19773 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 19792 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -117,7 +117,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef11168;
+              message.message.avatarURL = _modDef11187;
             }
           }),
 
@@ -143,13 +143,13 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
     ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
     obj10.gradientColors = items1;
     const intl4 = util.intl;
-    obj10.children = intl4.string(_modDef2569["+/IHLl"]);
+    obj10.children = intl4.string(_modDef2570["+/IHLl"]);
     obj9.magical = closure_9(Text_Text.Text, obj10);
-    obj8.children = intl3.format(_modDef2569.VpEDJc, obj9);
+    obj8.children = intl3.format(_modDef2570.VpEDJc, obj9);
     const items2 = [closure_9(Text_Text.Text, obj8), ];
     const obj11 = { style: tmp3.upsellText, variant: "text-sm/normal", children: null };
     const intl5 = util.intl;
-    obj11.children = intl5.string(_modDef2569.FJZeZF);
+    obj11.children = intl5.string(_modDef2570.FJZeZF);
     items2[1] = closure_9(Text_Text.Text, obj11);
     obj7.children = items2;
     tmp8Result = closure_10(tmp9, obj7);

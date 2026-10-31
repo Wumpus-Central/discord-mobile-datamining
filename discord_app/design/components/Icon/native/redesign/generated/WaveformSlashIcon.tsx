@@ -1,9 +1,9 @@
-// === Module 18232: WaveformSlashIcon ===
+// === Module 18275: WaveformSlashIcon ===
 
-// Module 18232 (WaveformSlashIcon)
+// Module 18275 (WaveformSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod18233 from "module_18233" /* 18233 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod18276 from "module_18276" /* 18276 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function WaveformSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18233, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18276, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,6 +1,6 @@
-// === Module 16429: hexagon_campaign/HexagonCampaignPromoGradient ===
+// === Module 16471: hexagon_campaign/HexagonCampaignPromoGradient ===
 
-// Module 16429 (hexagon_campaign/HexagonCampaignPromoGradient)
+// Module 16471 (hexagon_campaign/HexagonCampaignPromoGradient)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignPromoGradient.tsx");

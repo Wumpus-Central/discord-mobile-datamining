@@ -1,26 +1,26 @@
-// === Module 19752: GuildSettingsModalInstantInvites ===
+// === Module 19809: GuildSettingsModalInstantInvites ===
 
-// Module 19752 (GuildSettingsModalInstantInvites)
+// Module 19809 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6968 */;
-import TableRowIcon from "TableRowIcon" /* 6977 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8474 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8476 */;
-import InstantInvite from "InstantInvite" /* 10788 */;
-import _modDef15455 from "module_15455" /* 15455 */;
+import util from "util" /* 1113 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
+import TableRowIcon from "TableRowIcon" /* 6983 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8482 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8484 */;
+import InstantInvite from "InstantInvite" /* 10808 */;
+import _modDef15494 from "module_15494" /* 15494 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10991 */;
-import InviteRecord from "InviteRecord" /* 8193 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9056 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11010 */;
+import InviteRecord from "InviteRecord" /* 8201 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
 
 require = fn;
 function InviteSeparator() {
@@ -149,7 +149,7 @@ function GuildSettingsModalInstantInvites(invites) {
       try {
         const obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         const obj4 = { guild, analyticsData: obj };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13205, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13240, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         closure_7(false);
       } catch (tmp17) {
         tmp2(false);
@@ -205,7 +205,7 @@ const Constants = fn(1072);
 ({ GuildFeatures: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { content: { padding: 16 }, contentWithoutPause: { paddingTop: nativeDefault.space.PX_24 }, separator: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_24 };
 obj2.separator = { height: nativeDefault.space.PX_24 };
@@ -226,7 +226,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
   if (null != stateFromStores) {
     const obj2 = { children: null };
     const obj3 = { guild: stateFromStores, invites: tmp5, contentContainerStyle: guildId.contentContainerStyle, showChannel: true };
-    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5601).NavScrim, {})];
+    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5606).NavScrim, {})];
     obj2.children = items1;
     tmp6 = closure_14(closure_13, obj2);
   }

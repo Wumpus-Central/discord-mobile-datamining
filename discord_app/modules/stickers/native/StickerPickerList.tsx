@@ -1,31 +1,31 @@
-// === Module 10278: StickerPickerList ===
+// === Module 10298: StickerPickerList ===
 
-// Module 10278 (StickerPickerList)
+// Module 10298 (StickerPickerList)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7224 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10000 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10001 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10261 */;
-import _modDef10279 from "module_10279" /* 10279 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 10280 */;
-import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10281 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7230 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10021 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10022 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10281 */;
+import _modDef10299 from "module_10299" /* 10299 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 10300 */;
+import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10301 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6831 */;
+import StickersStore from "StickersStore" /* 6837 */;
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10249).useStickerPickerStore;
-const StickerPickerConstants = fn(10216);
+const useStickerPickerStore = fn(10269).useStickerPickerStore;
+const StickerPickerConstants = fn(10236);
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9, STICKER_SIZE: c10 } = StickerPickerConstants);
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { listPlaceholder: { color: nativeDefault.colors.BACKGROUND_MOD_MUTED }, section: null, sectionSticker: null, nsfwContainer: null, nsfwText: null };
 let obj3 = { color: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.section = { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -40,7 +40,7 @@ let closure_17 = noop.memo(function EmojiPickerListNSFWRow(height) {
   const obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  const items1 = [map1(native.Icon, { source: _modDef10279, size: native.Icon.Sizes.SMALL }), ];
+  const items1 = [map1(native.Icon, { source: _modDef10299, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.uy25Qz);

@@ -1,11 +1,11 @@
-// === Module 7868: AdUserActionCreators ===
+// === Module 7875: AdUserActionCreators ===
 
-// Module 7868 (AdUserActionCreators)
+// Module 7875 (AdUserActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import NativeAdsModuleDefault from "NativeAdsModule" /* 7869 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import NativeAdsModuleDefault from "NativeAdsModule" /* 7876 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdUserStore from "AdUserStore" /* 7866 */;
+import AdUserStore from "AdUserStore" /* 7873 */;
 
 let closure_6 = async function _fetchAdUser(arg0) {
   if (c6 === 2) {
@@ -18,7 +18,7 @@ let closure_6 = async function _fetchAdUser(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

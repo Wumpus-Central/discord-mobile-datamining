@@ -1,7 +1,7 @@
-// === Module 8444: ApplicationSubscriptionSystemMessageUtils ===
+// === Module 8452: ApplicationSubscriptionSystemMessageUtils ===
 
-// Module 8444 (ApplicationSubscriptionSystemMessageUtils)
-import util from "util" /* 1114 */;
+// Module 8452 (ApplicationSubscriptionSystemMessageUtils)
+import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");

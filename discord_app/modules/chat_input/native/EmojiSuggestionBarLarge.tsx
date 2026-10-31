@@ -1,12 +1,12 @@
-// === Module 13939: EmojiSuggestionBarLarge ===
+// === Module 13974: EmojiSuggestionBarLarge ===
 
-// Module 13939 (EmojiSuggestionBarLarge)
+// Module 13974 (EmojiSuggestionBarLarge)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5075 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10004 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10029 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13940 */;
+import native from "native" /* 5080 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10025 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10050 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 13975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -76,9 +76,9 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
   return <EmojiSuggestionBarLargeAnimated key={key} />;
 }
 const View = fn(17).View;
-const IMAGE_SIZE = fn(9921).IMAGE_SIZE;
+const IMAGE_SIZE = fn(9942).IMAGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { containerLargeWrapper: { overflow: "hidden" }, containerLarge: null, emptySlot: null };
   let str = "space-between";

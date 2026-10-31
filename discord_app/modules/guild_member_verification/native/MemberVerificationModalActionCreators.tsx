@@ -1,12 +1,12 @@
-// === Module 6939: guild_member_verification/MemberVerificationModalActionCreators ===
+// === Module 6945: guild_member_verification/MemberVerificationModalActionCreators ===
 
-// Module 6939 (guild_member_verification/MemberVerificationModalActionCreators)
+// Module 6945 (guild_member_verification/MemberVerificationModalActionCreators)
 import Constants from "Constants" /* 1072 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6916 */;
-import MemberVerificationConstants from "MemberVerificationConstants" /* 6940 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6922 */;
+import MemberVerificationConstants from "MemberVerificationConstants" /* 6946 */;
 import size from "module_2" /* 2 */;
 
 ({ MEMBER_VERIFICATION_TYPE: c3, IN_APP_MEMBER_VERIFICATION_MODAL_KEY: closure_4 } = MemberVerificationConstants);
@@ -18,7 +18,7 @@ export default {
     const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(guildId);
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id: guildId });
     const obj3 = { type, guild_id: guildId };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6941, dependencyMap.paths), { guildId, onClose: connect }, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6947, dependencyMap.paths), { guildId, onClose: connect }, React4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;

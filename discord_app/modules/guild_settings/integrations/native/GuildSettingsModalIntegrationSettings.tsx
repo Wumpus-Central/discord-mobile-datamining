@@ -1,18 +1,18 @@
-// === Module 19700: GuildSettingsModalIntegrationSettings ===
+// === Module 19757: GuildSettingsModalIntegrationSettings ===
 
-// Module 19700 (GuildSettingsModalIntegrationSettings)
+// Module 19757 (GuildSettingsModalIntegrationSettings)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import TableRow from "TableRow" /* 6969 */;
-import Pressables from "Pressables" /* 6974 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
-import TableRadioRow from "TableRadioRow" /* 7055 */;
-import TableSwitchRow from "TableSwitchRow" /* 7363 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9055 */;
-import _modDef19702 from "module_19702" /* 19702 */;
+import util from "util" /* 1113 */;
+import TableRow from "TableRow" /* 6975 */;
+import Pressables from "Pressables" /* 6980 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import TableRadioRow from "TableRadioRow" /* 7061 */;
+import TableSwitchRow from "TableSwitchRow" /* 7369 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
+import _modDef19759 from "module_19759" /* 19759 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4915 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9056 */;
+import GuildRoleStore from "GuildRoleStore" /* 4920 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
 
 require = fn;
 function GraceOption(option) {
@@ -35,7 +35,7 @@ function ForceSyncIcon(isSyncing) {
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t["+Josox"]);
     obj.onPress = tmp;
-    const obj2 = { source: _modDef19702 };
+    const obj2 = { source: _modDef19759 };
     obj.children = timestampProducer(TableRow.TableRow.Icon, obj2);
     tmp2Result = timestampProducer(Pressables.PressableOpacity, obj);
   }
@@ -58,7 +58,7 @@ function TwitchEmoticonsRow(integration) {
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { integrationLabel: { fontSize: 24 }, integrationIcon: { width: 48, height: 48, marginRight: 16 }, forceSyncIcon: { marginLeft: 10 }, value: { textAlign: "right" }, stackPadding: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_9 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
@@ -97,11 +97,11 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   }
   if (null != tmp) {
     let obj = { label: null, trailing: null };
-    let intl = integration(1114).intl;
-    obj.label = intl.string(integration(1114).t.eBtNBa);
+    let intl = integration(1113).intl;
+    obj.label = intl.string(integration(1113).t.eBtNBa);
     const obj2 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: tmp.name };
-    obj.trailing = closure_6(integration(5619).Text, obj2);
-    const tmp2 = closure_6(integration(6969).TableRow, obj);
+    obj.trailing = closure_6(integration(5624).Text, obj2);
+    const tmp2 = closure_6(integration(6975).TableRow, obj);
   }
   if ("youtube" === integration.type) {
     const account = integration.account;
@@ -109,34 +109,34 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     if (account != null) {
       name = account.name;
     }
-    const intl2 = integration(1114).intl;
-    let stringResult = intl2.string(integration(1114).t.A5MiqO);
-    let RdUTrl = integration(1114).t["7lNtce"];
+    const intl2 = integration(1113).intl;
+    let stringResult = intl2.string(integration(1113).t.A5MiqO);
+    let RdUTrl = integration(1113).t["7lNtce"];
     let combined = name;
     let tmp12 = integration;
     let tmp15 = integration;
   } else {
     const _HermesInternal = HermesInternal;
     combined = "twitch.tv/" + integration.name;
-    const intl9 = integration(1114).intl;
-    stringResult = intl9.string(integration(1114).t["S/WCrG"]);
-    RdUTrl = integration(1114).t.RdUTrl;
+    const intl9 = integration(1113).intl;
+    stringResult = intl9.string(integration(1113).t["S/WCrG"]);
+    RdUTrl = integration(1113).t.RdUTrl;
     const obj4 = { integration, onPress: self.handleToggleEmotes };
     tmp12 = integration;
     tmp15 = integration;
     const tmp13 = closure_6(TwitchEmoticonsRow, obj4);
   }
-  value = self(6568).get(integration.type);
+  value = self(6574).get(integration.type);
   if (null == value) {
     const _Object = Object;
-    const values = Object.values(tmp12(19701).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(19758).IntegrationExpireGracePeriodTypes);
     const found = values.filter(function isInteger(item) {
       return Number.isInteger(item);
     });
     const mapped = found.map((value) => {
       const obj = { value, label: null };
-      const intl = integration(1114).intl;
-      obj.label = intl.formatToPlainString(integration(1114).t.eGjmy5, { days: value });
+      const intl = integration(1113).intl;
+      obj.label = intl.formatToPlainString(integration(1113).t.eGjmy5, { days: value });
       return obj;
     });
     const obj5 = { style: { flex: 1 }, contentContainerStyle: null, children: null };
@@ -149,12 +149,12 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     }
     const obj7 = { hasIcons: true, children: null };
     const obj8 = { label: str1, subLabel: combined, icon: null };
-    obj7.children = closure_6(tmp15(6969).TableRow, obj8);
-    const items1 = [closure_6(tmp15(7054).TableRowGroup, obj7), , , , ];
+    obj7.children = closure_6(tmp15(6975).TableRow, obj8);
+    const items1 = [closure_6(tmp15(7060).TableRowGroup, obj7), , , , ];
     const obj9 = { title: null, hasIcons: false, children: null };
-    const intl3 = tmp15(1114).intl;
-    obj9.title = intl3.string(tmp15(1114).t.i17qFc);
-    const intl4 = tmp15(1114).intl;
+    const intl3 = tmp15(1113).intl;
+    obj9.title = intl3.string(tmp15(1113).t.i17qFc);
+    const intl4 = tmp15(1113).intl;
     let str2 = integration.subscriber_count;
     if (str2 == null) {
       str2 = "";
@@ -162,9 +162,9 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     const obj10 = { label: null, subLabel: null, trailing: null };
     const obj11 = { subscribers: str2 };
     obj10.label = intl4.format(RdUTrl, obj11);
-    const intl5 = tmp15(1114).intl;
-    const obj12 = { datetime: tmp16(2044)(integration.synced_at).calendar() };
-    obj10.subLabel = intl5.formatToPlainString(tmp15(1114).t["+42M+u"], obj12);
+    const intl5 = tmp15(1113).intl;
+    const obj12 = { datetime: tmp16(2042)(integration.synced_at).calendar() };
+    obj10.subLabel = intl5.formatToPlainString(tmp15(1113).t["+42M+u"], obj12);
     let flag = integration.syncing;
     if (flag == null) {
       flag = false;
@@ -172,44 +172,44 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     const obj13 = { children: null };
     const obj14 = { isSyncing: flag, onPress: self.handleSync };
     obj10.trailing = closure_6(ForceSyncIcon, obj14);
-    const items2 = [closure_6(tmp15(6969).TableRow, obj10), tmp2];
+    const items2 = [closure_6(tmp15(6975).TableRow, obj10), tmp2];
     obj9.children = items2;
-    items1[1] = closure_7(tmp15(7054).TableRowGroup, obj9);
+    items1[1] = closure_7(tmp15(7060).TableRowGroup, obj9);
     const obj16 = { title: stringResult, value: integration.expire_behavior, onChange: self.handleExpireBehaviorChange, hasIcons: false, children: null };
-    const obj17 = { value: tmp15(19703).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
-    const intl6 = tmp15(1114).intl;
-    obj17.label = intl6.string(tmp15(1114).t["6kpw4i"]);
-    const items3 = [closure_6(tmp15(7055).TableRadioRow, obj17), ];
-    const obj18 = { value: tmp15(19703).IntegrationExpireBehaviorTypes.KICK, label: null };
-    const intl7 = tmp15(1114).intl;
-    obj18.label = intl7.string(tmp15(1114).t.fQUQIJ);
-    items3[1] = closure_6(tmp15(7055).TableRadioRow, obj18);
+    const obj17 = { value: tmp15(19760).IntegrationExpireBehaviorTypes.REMOVE_ROLE, label: null };
+    const intl6 = tmp15(1113).intl;
+    obj17.label = intl6.string(tmp15(1113).t["6kpw4i"]);
+    const items3 = [closure_6(tmp15(7061).TableRadioRow, obj17), ];
+    const obj18 = { value: tmp15(19760).IntegrationExpireBehaviorTypes.KICK, label: null };
+    const intl7 = tmp15(1113).intl;
+    obj18.label = intl7.string(tmp15(1113).t.fQUQIJ);
+    items3[1] = closure_6(tmp15(7061).TableRadioRow, obj18);
     obj16.children = items3;
-    items1[2] = closure_7(tmp15(7052).TableRadioGroup, obj16);
+    items1[2] = closure_7(tmp15(7058).TableRadioGroup, obj16);
     const obj19 = { title: null, hasIcons: false, children: null };
-    const intl8 = tmp15(1114).intl;
-    obj19.title = intl8.string(tmp15(1114).t.uiXMow);
+    const intl8 = tmp15(1113).intl;
+    obj19.title = intl8.string(tmp15(1113).t.uiXMow);
     obj19.children = mapped.map((option, index) => timestampProducer(GraceOption, { integration, option, onPress: self.handleExpireGracePeriodChange }, index));
-    items1[3] = closure_6(tmp15(7054).TableRowGroup, obj19);
+    items1[3] = closure_6(tmp15(7060).TableRowGroup, obj19);
     items1[4] = tmp13;
     obj6.children = items1;
-    obj5.children = closure_7(tmp15(6022).Stack, obj6);
-    const items4 = [closure_6(tmp15(8169).Form, obj5), closure_6(tmp15(5601).NavScrim, {})];
+    obj5.children = closure_7(tmp15(6027).Stack, obj6);
+    const items4 = [closure_6(tmp15(8177).Form, obj5), closure_6(tmp15(5606).NavScrim, {})];
     obj13.children = items4;
     return closure_7(closure_8, obj13);
   } else {
-    const tmp16Result = tmp16(5712);
-    const tmp15Result = tmp15(1410);
-    const tmp15Result2 = tmp15(5016);
+    const tmp16Result = tmp16(5717);
+    const tmp15Result = tmp15(1409);
+    const tmp15Result2 = tmp15(5021);
     const icon = { source: null, style: null };
-    icon.source = tmp15Result.makeSource(tmp15(5016).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
+    icon.source = tmp15Result.makeSource(tmp15(5021).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
     icon.style = iter.integrationIcon;
     closure_6(tmp16Result, icon);
-    const tmp20 = tmp15(5016).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
+    const tmp20 = tmp15(5021).isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
   }
-  const obj3 = self(6568);
+  const obj3 = self(6574);
 };
-GuildSettingsModalIntegrationSettings.contextType = fn(5075).ThemeContext;
+GuildSettingsModalIntegrationSettings.contextType = fn(5080).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrationSettings.tsx");
 

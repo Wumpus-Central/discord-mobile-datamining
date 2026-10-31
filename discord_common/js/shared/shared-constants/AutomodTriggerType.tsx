@@ -1,6 +1,6 @@
-// === Module 13243: AutomodTriggerType ===
+// === Module 13278: AutomodTriggerType ===
 
-// Module 13243 (AutomodTriggerType)
+// Module 13278 (AutomodTriggerType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodTriggerType.tsx");

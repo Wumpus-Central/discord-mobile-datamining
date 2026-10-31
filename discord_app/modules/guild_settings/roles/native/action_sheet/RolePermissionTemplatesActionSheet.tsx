@@ -1,15 +1,15 @@
-// === Module 19739: RolePermissionTemplatesActionSheet ===
+// === Module 19796: RolePermissionTemplatesActionSheet ===
 
-// Module 19739 (RolePermissionTemplatesActionSheet)
+// Module 19796 (RolePermissionTemplatesActionSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import ToastUtils from "ToastUtils" /* 5706 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7315 */;
-import ActionSheet from "ActionSheet" /* 7360 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 19717 */;
+import util from "util" /* 1113 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import ToastUtils from "ToastUtils" /* 5711 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import ActionSheet from "ActionSheet" /* 7366 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 19774 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { templateContainer: { paddingVertical: 16, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -50,12 +50,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
           obj4.confirmText = intl4.string(util.t.p89ACt);
           obj4.onConfirm = function onConfirm() {
             importDefault(closure_0);
-            closure_1_1(5253).hideActionSheet();
-            const obj = closure_1_1(5253);
-            const result = closure_0(5706).roleTemplateAppliedToast();
+            closure_1_1(5258).hideActionSheet();
+            const obj = closure_1_1(5258);
+            const result = closure_0(5711).roleTemplateAppliedToast();
           };
           obj4.onCancel = function onCancel() {
-            closure_1_1(5253).hideActionSheet();
+            closure_1_1(5258).hideActionSheet();
           };
           AlertActionCreatorsDefault.show(obj4);
         } else {
@@ -83,12 +83,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
         obj4.confirmText = intl4.string(util.t.p89ACt);
         obj4.onConfirm = function onConfirm() {
           importDefault(closure_0);
-          closure_1_1(5253).hideActionSheet();
-          const obj = closure_1_1(5253);
-          const result = closure_0(5706).roleTemplateAppliedToast();
+          closure_1_1(5258).hideActionSheet();
+          const obj = closure_1_1(5258);
+          const result = closure_0(5711).roleTemplateAppliedToast();
         };
         obj4.onCancel = function onCancel() {
-          closure_1_1(5253).hideActionSheet();
+          closure_1_1(5258).hideActionSheet();
         };
         AlertActionCreatorsDefault.show(obj4);
       } else {

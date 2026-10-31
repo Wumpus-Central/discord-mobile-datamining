@@ -1,20 +1,20 @@
-// === Module 10036: EmojiActionCreators ===
+// === Module 10057: EmojiActionCreators ===
 
-// Module 10036 (EmojiActionCreators)
+// Module 10057 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1114 */;
-import wrappers from "wrappers" /* 1228 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4955 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6795 */;
-import InlineUploaderDefault from "InlineUploader" /* 7147 */;
+import util from "util" /* 1113 */;
+import wrappers from "wrappers" /* 1227 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6801 */;
+import InlineUploaderDefault from "InlineUploader" /* 7153 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 6790 */;
-import EmojiPackStore from "EmojiPackStore" /* 4960 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6768 */;
+import EmojiStore from "EmojiStore" /* 6796 */;
+import EmojiPackStore from "EmojiPackStore" /* 4965 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ let closure_11 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ export function uploadEmoji(guildId) {
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
   DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(1283).HTTP;
+  const HTTP = guildId(1282).HTTP;
   const request = { url: Endpoints.GUILD_EMOJIS(guildId), body: { image, name, roles }, headers: null, context: null, oldFormErrors: true, rejectWithError: null };
   const tmp3 = guildId;
   request.headers = InlineUploaderDefault.buildHeadersForMd5(originalMd5);
@@ -141,8 +141,8 @@ export function uploadEmoji(guildId) {
     page = analyticsLocation.page;
   }
   request.context = { client_event_source: page };
-  request.rejectWithError = tmp3(1283).rejectWithMigratedError();
-  const tmp3Result = tmp3(1283);
+  request.rejectWithError = tmp3(1282).rejectWithMigratedError();
+  const tmp3Result = tmp3(1282);
   return HTTP.post(request).then((body) => {
     DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId });
     return body.body;
@@ -199,7 +199,7 @@ export function favoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4839).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4844).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", async (emojis) => {
       const emojis1 = emojis.emojis;
       let tmp = emojis1;
@@ -267,7 +267,7 @@ export function unfavoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4839).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4844).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", async (emojis) => {
       const emojis1 = emojis.emojis;
       let tmp = emojis1;

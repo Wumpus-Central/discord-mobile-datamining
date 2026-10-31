@@ -1,11 +1,11 @@
-// === Module 15420: useFetchGuildBoostSlots ===
+// === Module 15459: useFetchGuildBoostSlots ===
 
-// Module 15420 (useFetchGuildBoostSlots)
+// Module 15459 (useFetchGuildBoostSlots)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7578 */;
-import AppStateStore from "AppStateStore" /* 1994 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7585 */;
+import AppStateStore from "AppStateStore" /* 1993 */;
 
 const require = fn;
 const size = fn(2);
@@ -33,7 +33,7 @@ export default function useFetchGuildBoostSlots() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -78,7 +78,7 @@ export default function useFetchGuildBoostSlots() {
             } else {
               v1(false);
               c2 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp13) {
             c2 = tmp;

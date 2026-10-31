@@ -1,21 +1,21 @@
-// === Module 11525: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11559: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11525 (createSocialLayerStorefrontProductDetailsEmbed)
-import util from "util" /* 1114 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import _modDef3735 from "module_3735" /* 3735 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7398 */;
-import StorefrontUtils from "StorefrontUtils" /* 7403 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8386 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11526 */;
+// Module 11559 (createSocialLayerStorefrontProductDetailsEmbed)
+import util from "util" /* 1113 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import _modDef3738 from "module_3738" /* 3738 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
+import StorefrontUtils from "StorefrontUtils" /* 7409 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8394 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11560 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import SKUStore from "SKUStore" /* 6890 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import SKUStore from "SKUStore" /* 6896 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7872).InviteTypes;
+const InviteTypes = fn(7879).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
@@ -76,7 +76,7 @@ export function createSocialLayerStorefrontProductDetailsEmbed(theme) {
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3735.BKf0MM);
+              stringResult = string(_modDef3738.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -133,5 +133,5 @@ export function useFetchSocialLayerStorefrontProductDetailsEmbedApplications(sta
     const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(7324)(stateFromStoresArray);
+  memo(7330)(stateFromStoresArray);
 }

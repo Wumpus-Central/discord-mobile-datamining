@@ -1,11 +1,11 @@
-// === Module 9046: TagListInputTag ===
+// === Module 9065: TagListInputTag ===
 
-// Module 9046 (TagListInputTag)
+// Module 9065 (TagListInputTag)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Pressables from "Pressables" /* 6974 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 9047 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Pressables from "Pressables" /* 6980 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9066 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles(() => {
   const obj = { tagWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, marginHorizontal: 2, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, overflow: "hidden", flexDirection: "row", alignItems: "center", flexShrink: 1 }, tagText: { flexShrink: 1 }, highlightedTagWrapper: null, tagIcon: null, start: null, end: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, marginHorizontal: 2, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, overflow: "hidden", flexDirection: "row", alignItems: "center", flexShrink: 1 };

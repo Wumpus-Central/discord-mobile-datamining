@@ -24,7 +24,7 @@ function useStateFromStores(items, getCurrentUser, items1) {
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentUser, prevDeps: "Boolean", state: "isArray" };
+    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentUser, prevDeps: "Boolean", state: "__d" };
     tmp2.current = obj;
   }
   current = tmp2.current;

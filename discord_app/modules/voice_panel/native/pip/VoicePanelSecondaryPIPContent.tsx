@@ -1,20 +1,20 @@
-// === Module 19229: VoicePanelSecondaryPIPContent ===
+// === Module 19285: VoicePanelSecondaryPIPContent ===
 
-// Module 19229 (VoicePanelSecondaryPIPContent)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12233 */;
-import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 19079 */;
+// Module 19285 (VoicePanelSecondaryPIPContent)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
+import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 19128 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
-import FramesStore from "FramesStore" /* 6840 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import FramesStore from "FramesStore" /* 6846 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 const require = fn;
-const ActivityLayoutMode = fn(2019).ActivityLayoutMode;
-const ActivityPanelModes = fn(5652).ActivityPanelModes;
-const FramesConstants = fn(6841);
-({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
+const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const FramesConstants = fn(6847);
+({ asLaunched: closure_8, FrameLayoutModes: closure_9, getPipOrientationLockStateForFrame: c10 } = FramesConstants);
+const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles({ activityContainer: { flex: 1 }, wrapper: { position: "absolute", left: "50%", top: "50%" } });
 const __initData = { code: "function VoicePanelSecondaryPIPContentTsx1(){const{pipState,roundToNearestPixel}=this.__closure;const scale=pipState.scale.get();const width=pipState.width*scale;const height=pipState.height*scale;return{width:width,height:height,marginLeft:roundToNearestPixel(width/2)*-1,marginTop:roundToNearestPixel(height/2)*-1};}" };
 const __initData2 = { code: "function VoicePanelSecondaryPIPContentTsx2(){const{pipState,getActivityContainerPipStylesSpec,activePipOrientationLockState,windowDimensions}=this.__closure;const scale=pipState.scale.get();const{width:width,height:height,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width*scale,pipHeight:pipState.height*scale,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width,height:height,left:shouldHorizontallyCenter?'50%':'0%',top:shouldVerticallyCenter?'50%':'0%',marginLeft:marginLeft,marginTop:marginTop};}" };
@@ -50,7 +50,7 @@ export default function VoicePanelSecondaryPIPContent() {
   const obj3 = windowDimensions(connectedEmbeddedActivityChannelId[11]);
   const items1 = [FramesStore];
   const stateFromStoresObject1 = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStoresObject(items1, () => {
-    const tmp = closure_1_9(mainFrame.getMainFrame());
+    const tmp = closure_1_8(mainFrame.getMainFrame());
     let id;
     if (tmp != null) {
       id = tmp.id;
@@ -64,7 +64,7 @@ export default function VoicePanelSecondaryPIPContent() {
       activityPanelMode = constants.DISCONNECTED;
     }
     obj.framePanelMode = activityPanelMode;
-    obj.framePipOrientationLockState = closure_1_11(tmp);
+    obj.framePipOrientationLockState = closure_1_10(tmp);
     return obj;
   });
   ({ mainFrameId, framePanelMode, framePipOrientationLockState } = stateFromStoresObject1);
@@ -72,7 +72,7 @@ export default function VoicePanelSecondaryPIPContent() {
   const items2 = [ChannelStore];
   const stateFromStores = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStores(items2, () => ChannelStore.getChannel(connectedEmbeddedActivityChannelId));
   const obj5 = windowDimensions(connectedEmbeddedActivityChannelId[11]);
-  const fn = function s() {
+  const fn = function p() {
     const scale = pIPState.scale;
     value = scale.get();
     const result = pIPState.width * value;

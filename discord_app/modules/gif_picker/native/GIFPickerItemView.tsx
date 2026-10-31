@@ -1,18 +1,18 @@
-// === Module 10238: GIFPickerItemView ===
+// === Module 10258: GIFPickerItemView ===
 
-// Module 10238 (GIFPickerItemView)
+// Module 10258 (GIFPickerItemView)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1889 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10227 */;
+import util from "util" /* 1113 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = { paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: nativeDefault.radii.xs, width: "100%", height, flex: 1 };
@@ -39,7 +39,7 @@ export default function GIFPickerItemView(onPressGIF) {
   }, items);
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10239, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10259, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
     const obj2 = { item };
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);

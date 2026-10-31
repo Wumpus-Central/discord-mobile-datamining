@@ -1,14 +1,14 @@
-// === Module 13193: GiftIntentGifModal ===
+// === Module 13228: GiftIntentGifModal ===
 
-// Module 13193 (GiftIntentGifModal)
+// Module 13228 (GiftIntentGifModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import NavigatorHeader from "NavigatorHeader" /* 6992 */;
+import util from "util" /* 1113 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import NavigatorHeader from "NavigatorHeader" /* 6998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_13 = async function _sendGiftIntentGif(arg0) {
     obj12.location_stack = items;
     closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj12);
     c4 = 3;
-    return { value: "HermesInternal", done: null };
+    return { value: "HermesInternal", done: "HermesInternal" };
   }
   const id = closure_129_0.id;
   await closure_130_1(closure_130_2[10]).sendMessage(id, closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_3.url), true, { location: closure_130_9.GIFTING });
@@ -170,10 +170,10 @@ function GiftIntentGifModalBody(channelId) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const MessageSendLocation = fn(5014).MessageSendLocation;
+const MessageSendLocation = fn(5019).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, messageContainer: null, pickerContainer: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.messageContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };

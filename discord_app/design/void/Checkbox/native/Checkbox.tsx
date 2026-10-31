@@ -1,9 +1,9 @@
-// === Module 15926: Checkbox/Checkbox ===
+// === Module 15967: Checkbox/Checkbox ===
 
-// Module 15926 (Checkbox/Checkbox)
-import FastImageDefault from "FastImage" /* 5712 */;
-import _modDef15927 from "module_15927" /* 15927 */;
-import _modDef15928 from "module_15928" /* 15928 */;
+// Module 15967 (Checkbox/Checkbox)
+import FastImageDefault from "FastImage" /* 5717 */;
+import _modDef15968 from "module_15968" /* 15968 */;
+import _modDef15969 from "module_15969" /* 15969 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -14,10 +14,10 @@ export default function Checkbox(arg0) {
   ({ style, selected } = arg0);
   const obj = { style, source: null };
   if (selected) {
-    obj.source = _modDef15927;
+    obj.source = _modDef15968;
     let tmp5 = obj;
   } else {
-    obj.source = _modDef15928;
+    obj.source = _modDef15969;
     tmp5 = obj;
   }
   return jsx(FastImageDefault, tmp5);

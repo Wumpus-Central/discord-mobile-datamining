@@ -1,9 +1,9 @@
-// === Module 11515: useLegacyExperiments ===
+// === Module 11549: useLegacyExperiments ===
 
-// Module 11515 (useLegacyExperiments)
-import ExperimentManager from "ExperimentManager" /* 5238 */;
+// Module 11549 (useLegacyExperiments)
+import ExperimentManager from "ExperimentManager" /* 5243 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5233 */;
+import ExperimentStore from "ExperimentStore" /* 5238 */;
 
 require = fn;
 function parseRegisteredExperiments(stateFromStoresObject) {
@@ -21,17 +21,17 @@ function parseRegisteredExperiments(stateFromStoresObject) {
       if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1(8578).getExperimentBucketName(item);
-        const obj3 = closure_1(8578);
+        experimentBucketName = closure_1(8586).getExperimentBucketName(item);
+        const obj3 = closure_1(8586);
       }
       obj.label = experimentBucketName;
-      obj.shortLabel = closure_1(8578).getExperimentBucketName(item);
+      obj.shortLabel = closure_1(8586).getExperimentBucketName(item);
       if (item === constants.CONTROL) {
-        let TREATMENT = obj(8580).Variation_Type.CONTROL;
+        let TREATMENT = obj(8588).Variation_Type.CONTROL;
       } else if (item === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = obj(8580).Variation_Type.UNSPECIFIED;
+        TREATMENT = obj(8588).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = obj(8580).Variation_Type.TREATMENT;
+        TREATMENT = obj(8588).Variation_Type.TREATMENT;
       }
       obj.type = TREATMENT;
       return obj;
@@ -63,7 +63,7 @@ function getLegacyOverridesInfo(stateFromStoresObject1) {
   return obj;
 }
 const useMemo = fn(19).useMemo;
-const ExperimentConstants = fn(5234);
+const ExperimentConstants = fn(5239);
 ({ ExperimentBuckets: metroRequire, ExperimentTypes: closure_7 } = ExperimentConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");

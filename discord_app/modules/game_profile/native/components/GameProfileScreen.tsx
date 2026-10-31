@@ -1,19 +1,19 @@
-// === Module 9301: GameProfileScreen ===
+// === Module 9321: GameProfileScreen ===
 
-// Module 9301 (GameProfileScreen)
+// Module 9321 (GameProfileScreen)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5253 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9300 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9320 */;
-import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 9327 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 9346 */;
+import util from "util" /* 1113 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9320 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
+import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 9347 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 9366 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 9302 */;
+import GameProfileStore from "GameProfileStore" /* 9322 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
 
@@ -31,7 +31,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { loadingContainer: { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, scrollView: null, stickyHeader: null };
 let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.scrollView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

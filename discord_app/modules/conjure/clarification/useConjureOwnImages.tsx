@@ -1,8 +1,8 @@
-// === Module 12722: useConjureOwnImages ===
+// === Module 12757: useConjureOwnImages ===
 
-// Module 12722 (useConjureOwnImages)
-import _modDef3865 from "module_3865" /* 3865 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12453 */;
+// Module 12757 (useConjureOwnImages)
+import _modDef3868 from "module_3868" /* 3868 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12488 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
   [first1, closure_6] = first1.useState({});
   [first2, closure_8] = first1.useState({});
   let intl = require("util").intl;
-  const stringResult = intl.string(_modDef3865.wTsP5l);
+  const stringResult = intl.string(_modDef3868.wTsP5l);
   let items = [first];
   const items1 = [arg1, first, first2];
   const callback = first1.useCallback((arg0) => {
@@ -236,7 +236,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
                 if (null != arg0[closure_0]) {
                   obj = closure_0(closure_2[5]);
                   const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                  result.catch(/* F139026 */ function() { ... });
+                  result.catch(/* F139441 */ function() { ... });
                 }
                 const obj2 = {};
                 const merged = Object.assign(arg0);
@@ -275,8 +275,8 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
           }, () => {
             const obj = { busy: null, error: null };
             const obj2 = { source: "upload", text: null };
-            const intl = id(1114).intl;
-            obj2.text = intl.string(closure_1(3865)["kUw/b1"]);
+            const intl = id(1113).intl;
+            obj2.text = intl.string(closure_1(3868)["kUw/b1"]);
             obj.error = obj2;
             return closure_1_6((arg0) => {
               obj = {};
@@ -300,7 +300,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
               if (null != arg0[closure_0]) {
                 obj = closure_0(closure_2[5]);
                 const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                result.catch(/* F139026 */ function() { ... });
+                result.catch(/* F139441 */ function() { ... });
               }
               const obj2 = {};
               const merged = Object.assign(arg0);
@@ -350,8 +350,8 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
               });
               return false;
             }
-            const intl = id(1114).intl;
-            message = intl.string(closure_1(3865).l79PMc);
+            const intl = id(1113).intl;
+            message = intl.string(closure_1(3868).l79PMc);
           });
         };
         return obj;

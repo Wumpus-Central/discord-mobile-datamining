@@ -1,29 +1,27 @@
-// === Module 17623: PremiumTrialOfferActionSheetContent ===
+// === Module 17683: PremiumTrialOfferActionSheetContent ===
 
-// Module 17623 (PremiumTrialOfferActionSheetContent)
+// Module 17683 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 2048 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5070 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import FolderIcon from "FolderIcon" /* 8638 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9506 */;
-import UserIcon from "UserIcon" /* 12431 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 14562 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 17624 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 17628 */;
+import util from "util" /* 1113 */;
+import PremiumUtils from "PremiumUtils" /* 2047 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5075 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import FolderIcon from "FolderIcon" /* 8646 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
+import UserIcon from "UserIcon" /* 12466 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 14600 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 17684 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 17688 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
-let obj = { contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } };
-let closure_7 = createStyles.createStyles(obj);
-let obj3 = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
+const createStyles = fn(5014);
+let closure_7 = createStyles.createStyles({ contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx");
 

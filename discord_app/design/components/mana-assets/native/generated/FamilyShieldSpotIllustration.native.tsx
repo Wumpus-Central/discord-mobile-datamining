@@ -1,19 +1,19 @@
-// === Module 13322: FamilyShieldSpotIllustration ===
+// === Module 13357: FamilyShieldSpotIllustration ===
 
-// Module 13322 (FamilyShieldSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7063 */;
-import _modDef13323 from "module_13323" /* 13323 */;
-import _modDef13324 from "module_13324" /* 13324 */;
-import _modDef13325 from "module_13325" /* 13325 */;
+// Module 13357 (FamilyShieldSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7069 */;
+import _modDef13358 from "module_13358" /* 13358 */;
+import _modDef13359 from "module_13359" /* 13359 */;
+import _modDef13360 from "module_13360" /* 13360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13323 }, 3: null };
-let obj2 = { uri: _modDef13323 };
-obj[2] = { uri: _modDef13324 };
-const obj3 = { uri: _modDef13324 };
-obj[3] = { uri: _modDef13325 };
+let obj = { 1: null, 2: { uri: _modDef13358 }, 3: null };
+let obj2 = { uri: _modDef13358 };
+obj[2] = { uri: _modDef13359 };
+const obj3 = { uri: _modDef13359 };
+obj[3] = { uri: _modDef13360 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FamilyShieldSpotIllustration.native.tsx");
 

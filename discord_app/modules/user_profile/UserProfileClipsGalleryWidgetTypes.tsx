@@ -1,8 +1,8 @@
-// === Module 7773: UserProfileClipsGalleryWidgetTypes ===
+// === Module 7780: UserProfileClipsGalleryWidgetTypes ===
 
-// Module 7773 (UserProfileClipsGalleryWidgetTypes)
-import _modDef1343 from "module_1343" /* 1343 */;
-import WidgetType from "WidgetType" /* 7766 */;
+// Module 7780 (UserProfileClipsGalleryWidgetTypes)
+import _modDef1342 from "module_1342" /* 1342 */;
+import WidgetType from "WidgetType" /* 7773 */;
 import size from "module_2" /* 2 */;
 
 function isUploadedWidgetClip(status) {
@@ -65,7 +65,7 @@ prototype["isEqual"] = function isEqual(getUploadedClips) {
   if (tmp) {
     const self = this;
     const uploadedClips = this.getUploadedClips();
-    tmp = _modDef1343(uploadedClips, getUploadedClips.getUploadedClips());
+    tmp = _modDef1342(uploadedClips, getUploadedClips.getUploadedClips());
   }
   return tmp;
 };

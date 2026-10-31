@@ -1,17 +1,17 @@
-// === Module 16652: BlockedUserRowV2 ===
+// === Module 16694: BlockedUserRowV2 ===
 
-// Module 16652 (BlockedUserRowV2)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7482 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
+// Module 16694 (BlockedUserRowV2)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7488 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7320)().analyticsLocations;
-  const intl = userRecord(1114).intl;
+  analyticsLocations = analyticsLocations(7326)().analyticsLocations;
+  const intl = userRecord(1113).intl;
   let username = userRecord.globalName;
   if (username == null) {
     username = userRecord.username;
@@ -19,10 +19,10 @@ function BlockedUserRow(userRecord) {
   function handleOpenProfile() {
     showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
   }
-  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1114).t.izBDZN, { name: username });
+  const formatToPlainStringResult = intl.formatToPlainString(userRecord(1113).t.izBDZN, { name: username });
   let obj = { accessible: false, icon: null, label: null, onPress: null, trailing: null };
-  let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 };
-  obj.icon = jsx(userRecord(1188).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 });
+  let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 };
+  obj.icon = jsx(userRecord(1187).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1187).AvatarSizes.REFRESH_MEDIUM_32 });
   const obj3 = {
     userRecord,
     accessibilityActions: null,
@@ -38,7 +38,7 @@ function BlockedUserRow(userRecord) {
   };
   const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16653).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16695).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -53,14 +53,14 @@ function BlockedUserRow(userRecord) {
   });
   obj.onPress = handleOpenProfile;
   const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
-  const intl2 = tmp2(1114).intl;
-  obj4.text = intl2.string(userRecord(1114).t["PR/xUz"]);
+  const intl2 = tmp2(1113).intl;
+  obj4.text = intl2.string(userRecord(1113).t["PR/xUz"]);
   obj4.accessibilityLabel = formatToPlainStringResult;
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5629).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(6969).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
+  obj.trailing = jsx(userRecord(5634).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(6975).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

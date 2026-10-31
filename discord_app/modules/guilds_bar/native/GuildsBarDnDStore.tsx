@@ -1,11 +1,11 @@
-// === Module 18305: GuildsBarDnDStore ===
+// === Module 18348: GuildsBarDnDStore ===
 
-// Module 18305 (GuildsBarDnDStore)
-import SentryUtilsDefault from "SentryUtils" /* 1243 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
-import _mod4924 from "module_4924" /* 4924 */;
-import SortedGuildStore from "SortedGuildStore" /* 6766 */;
-import identity from "module_1255" /* 1255 */;
+// Module 18348 (GuildsBarDnDStore)
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import _mod4929 from "module_4929" /* 4929 */;
+import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "sa", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 500, scrollPosition: 1000, windowSize: 60000, setStateShallow: 3600000, dropStart: 86400000, dropComplete: 604800000 };
+  let obj = { dragSpecs: "Boolean", overSpecs: "dispatch", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "sandal", scrollPosition: "womans_sandal", windowSize: 2054588530, setStateShallow: 322498560, dropStart: 327160704, dropComplete: 318798464 };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   let obj3 = require("ReanimatedRexport");
@@ -33,7 +33,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (tmp[key10006] === arg0[key10006]) {
         continue;
       } else {
-        obj = closure_0(1260);
+        obj = closure_0(1259);
         let batchUpdatesResult = obj.batchUpdates(() => {
           const merged = Object.assign(closure_1);
           const merged1 = Object.assign(closure_0);
@@ -47,7 +47,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     ({ dropSpecs, gestureState } = gestureState());
     const tmp = gestureState();
     let obj2 = { category: "GuildsBarGesture", message: "dropStart started", data: null };
-    const obj = closure_1(1243);
+    const obj = closure_1(1242);
     obj2.data = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1260).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "applicationId" }));
+      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "concat", overSpecs: "style" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           const result = gestureState.set(obj2);
         }
       }, 0);
-      const obj4 = dropSpecs(1260);
+      const obj4 = dropSpecs(1259);
     }
     const obj3 = { newDropSpec, dropSpecs, gestureState: gestureState.get() };
   };
@@ -80,7 +80,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "getCurrentUser" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -109,7 +109,7 @@ export function useItemDragState(arg0, arg1) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "sa", overState: "isArray", itemSize: null, dragDropInProgress };
+        const obj2 = { isDragTarget: false, dragState: "dispatch", overState: "isArray", itemSize: null, dragDropInProgress };
         return obj2;
       }
     }
@@ -198,7 +198,7 @@ export function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4924.shallow);
+  }, _mod4929.shallow);
 }
 export function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

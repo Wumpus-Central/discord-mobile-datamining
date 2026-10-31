@@ -1,33 +1,33 @@
-// === Module 19905: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 19963: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 19905 (GuildRoleSubscriptionBenefitEditorModalStateStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
-import _mod4924 from "module_4924" /* 4924 */;
-import identity from "module_1255" /* 1255 */;
+// Module 19963 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import _mod4929 from "module_4929" /* 4929 */;
+import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "id", emojiName: "skuId", description: "then", refId: "borderRadius" });
+let closure_2 = Object.freeze({ name: "", emojiId: "children", emojiName: "location", description: "then", refId: "ti" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
   const merged = Object.assign(closure_2);
   obj.setEmojiId = function setEmojiId(emoji_id) {
     const emojiId = emoji_id;
-    emojiId(1260).batchUpdates(() => emojiId({ emojiId }));
+    emojiId(1259).batchUpdates(() => emojiId({ emojiId }));
   };
   obj.setEmojiName = function setEmojiName(emoji_name) {
     const emojiName = emoji_name;
-    emojiName(1260).batchUpdates(() => emojiName({ emojiName }));
+    emojiName(1259).batchUpdates(() => emojiName({ emojiName }));
   };
   obj.setName = function setName(name) {
-    name(1260).batchUpdates(() => name({ name }));
+    name(1259).batchUpdates(() => name({ name }));
   };
   obj.setDescription = function setDescription(description) {
-    description(1260).batchUpdates(() => description({ description }));
+    description(1259).batchUpdates(() => description({ description }));
   };
   obj.setRefId = function setRefId(ref_id) {
     const refId = ref_id;
-    refId(1260).batchUpdates(() => refId({ refId }));
+    refId(1259).batchUpdates(() => refId({ refId }));
   };
   obj.reset = function reset() {
     ReactBatchUpdates.batchUpdates(() => closure_1_0(closure_2_2));
@@ -59,33 +59,33 @@ export function useDescriptionState() {
     const items = [, ];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, _mod4924.shallow);
+  }, _mod4929.shallow);
 }
 export function useEmojiIdState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, _mod4924.shallow);
+  }, _mod4929.shallow);
 }
 export function useEmojiNameState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, _mod4924.shallow);
+  }, _mod4929.shallow);
 }
 export function useNameState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, _mod4924.shallow);
+  }, _mod4929.shallow);
 }
 export function useRefIdState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, _mod4924.shallow);
+  }, _mod4929.shallow);
 }

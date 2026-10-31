@@ -1,22 +1,22 @@
-// === Module 16944: DisplayNameStylesEditPreview ===
+// === Module 17000: DisplayNameStylesEditPreview ===
 
-// Module 16944 (DisplayNameStylesEditPreview)
+// Module 17000 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import _modDef2931 from "module_2931" /* 2931 */;
-import DateUtils from "DateUtils" /* 4831 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6847 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8722 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8732 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8812 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10752 */;
-import types from "types" /* 10753 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import _modDef2932 from "module_2932" /* 2932 */;
+import DateUtils from "DateUtils" /* 4836 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6853 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8730 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8740 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8820 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10772 */;
+import types from "types" /* 10773 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8723 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
 
 require = fn;
 function ChatPreview(chatMessage) {
@@ -63,7 +63,7 @@ function ChatPreview(chatMessage) {
   const obj10 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
   if (chatMessage == null) {
     const intl = util.intl;
-    chatMessage = intl.string(_modDef2931.h5Cuej);
+    chatMessage = intl.string(_modDef2932.h5Cuej);
   }
   obj10.children = chatMessage;
   items3[1] = React5(Text_Text.Text, obj10);
@@ -75,7 +75,7 @@ function ChatPreview(chatMessage) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { previewSection: { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 }, previewSectionTilted: { marginBottom: 0 }, profilePreviewTilted: null, chatPreviewWrapper: null, chatPreviewWrapperTilted: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 let obj4 = { transform: null };
 let items = [{ rotate: "-2.63deg" }];
@@ -96,7 +96,7 @@ obj2.chatUsername = { flexShrink: 1, minWidth: 0 };
 obj2.chatTimestamp = { marginTop: -8, flexShrink: 0 };
 obj2.chatMessageText = {};
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_10 = createStyles.createStyles((scale) => {
   const obj = { appIconTilted: null };
   const rect = { position: "absolute", top: 64, right: 0, borderRadius: nativeDefault.radii.xl, borderCurve: "continuous", borderWidth: 0, transform: null };

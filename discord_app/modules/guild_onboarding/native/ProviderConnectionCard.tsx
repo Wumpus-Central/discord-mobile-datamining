@@ -1,11 +1,11 @@
-// === Module 7337: ProviderConnectionCard ===
+// === Module 7343: ProviderConnectionCard ===
 
-// Module 7337 (ProviderConnectionCard)
-import native from "native" /* 1188 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import shared from "shared" /* 5016 */;
-import LinkIcon from "LinkIcon" /* 5722 */;
-import PlatformsDefault from "Platforms" /* 6568 */;
+// Module 7343 (ProviderConnectionCard)
+import native from "native" /* 1187 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import shared from "shared" /* 5021 */;
+import LinkIcon from "LinkIcon" /* 5727 */;
+import PlatformsDefault from "Platforms" /* 6574 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,7 +56,7 @@ export default function ProviderConnectionCard(connection) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -71,8 +71,8 @@ export default function ProviderConnectionCard(connection) {
               return obj3;
             } else {
               const obj4 = {};
-              const obj5 = v3(1253);
-              const merged = Object.assign(provider_id(5755).collectGuildAnalyticsMetadata(guildId));
+              const obj5 = v3(1252);
+              const merged = Object.assign(provider_id(5760).collectGuildAnalyticsMetadata(guildId));
               obj4.connection_type = "provider";
               provider_id = connection.provider_id;
               if (provider_id == null) {
@@ -95,7 +95,7 @@ export default function ProviderConnectionCard(connection) {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           v3 = tmp;

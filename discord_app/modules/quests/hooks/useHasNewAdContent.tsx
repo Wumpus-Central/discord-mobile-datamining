@@ -1,11 +1,11 @@
-// === Module 9651: useHasNewAdContent ===
+// === Module 9671: useHasNewAdContent ===
 
-// Module 9651 (useHasNewAdContent)
-import DurationsDefault from "Durations" /* 1090 */;
-import AdCreativeType from "AdCreativeType" /* 6782 */;
+// Module 9671 (useHasNewAdContent)
+import DurationsDefault from "Durations" /* 1089 */;
+import AdCreativeType from "AdCreativeType" /* 6788 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 9652 */;
-import QuestStore from "QuestStore" /* 7839 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 9672 */;
+import QuestStore from "QuestStore" /* 7846 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
@@ -38,8 +38,8 @@ export default function useHasNewAdContent() {
   const obj2 = stateFromStoresArray(504);
   let prop = null;
   if (stateFromStores) {
-    prop = tmp(4842).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+    prop = tmp(4847).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
   }
-  const tmp6 = _slicedToArray(stateFromStoresArray(7563).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
+  const tmp6 = _slicedToArray(stateFromStoresArray(7569).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: DAY }, undefined, true), 2);
   return { showBadge: null != tmp6[0], dismissBadge: tmp6[1] };
 };

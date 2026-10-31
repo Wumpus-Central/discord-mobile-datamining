@@ -1,21 +1,21 @@
-// === Module 9664: captureAdUserAction ===
+// === Module 9684: captureAdUserAction ===
 
-// Module 9664 (captureAdUserAction)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import v1 from "v1" /* 1267 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import AdCreativeType from "AdCreativeType" /* 6782 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7812 */;
-import QuestDataUtils from "QuestDataUtils" /* 7835 */;
-import getQuestLogger from "getQuestLogger" /* 7846 */;
-import AnalyticsActions from "AnalyticsActions" /* 7855 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7864 */;
-import AdDataUtils from "AdDataUtils" /* 7865 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7870 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 9665 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9667 */;
+// Module 9684 (captureAdUserAction)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import v1 from "v1" /* 1266 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import AdCreativeType from "AdCreativeType" /* 6788 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7819 */;
+import QuestDataUtils from "QuestDataUtils" /* 7842 */;
+import getQuestLogger from "getQuestLogger" /* 7853 */;
+import AnalyticsActions from "AnalyticsActions" /* 7862 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
+import AdDataUtils from "AdDataUtils" /* 7872 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7877 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 9685 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7839 */;
+import QuestStore from "QuestStore" /* 7846 */;
 
 require = fn;
 function emitClickEventWithCreative() {
@@ -39,7 +39,7 @@ let closure_7 = async function _emitClickEventWithCreative(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -164,7 +164,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -212,7 +212,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -231,7 +231,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -259,7 +259,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -352,7 +352,7 @@ let closure_11 = async function _handleViewInternalSurfaceImpressionAction(arg0)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

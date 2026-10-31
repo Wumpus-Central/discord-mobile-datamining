@@ -1,12 +1,12 @@
-// === Module 19358: ChannelSafetyWarningsManager ===
+// === Module 19415: ChannelSafetyWarningsManager ===
 
-// Module 19358 (ChannelSafetyWarningsManager)
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11237 */;
-import InappropriateConversationUtils from "InappropriateConversationUtils" /* 11276 */;
-import showTakeoverModal from "showTakeoverModal" /* 19359 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+// Module 19415 (ChannelSafetyWarningsManager)
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11263 */;
+import InappropriateConversationUtils from "InappropriateConversationUtils" /* 11302 */;
+import showTakeoverModal from "showTakeoverModal" /* 19416 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
 function handleChannelSelect(channelId) {

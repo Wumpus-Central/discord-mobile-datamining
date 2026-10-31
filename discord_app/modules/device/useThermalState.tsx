@@ -1,9 +1,9 @@
-// === Module 16252: useThermalState ===
+// === Module 16294: useThermalState ===
 
-// Module 16252 (useThermalState)
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5949 */;
-import ThermalStates from "ThermalStates" /* 16253 */;
+// Module 16294 (useThermalState)
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5954 */;
+import ThermalStates from "ThermalStates" /* 16295 */;
 import size from "module_2" /* 2 */;
 
 function _getThermalState(rawThermalState) {
@@ -49,7 +49,6 @@ const result = size.fileFinishedImporting("modules/device/useThermalState.tsx");
 export default function useThermalState() {
   return _getThermalState(ThermalUtilsDefault.useRawThermalState());
 };
-export const ThermalStates = ThermalStates.ThermalStates;
 export { AndroidThermalStates };
 export function getThermalState() {
   return _getThermalState(ThermalUtilsDefault.getRawThermalState());

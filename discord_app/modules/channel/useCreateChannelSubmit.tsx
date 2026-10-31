@@ -1,7 +1,7 @@
-// === Module 9020: useCreateChannelSubmit ===
+// === Module 9029: useCreateChannelSubmit ===
 
-// Module 9020 (useCreateChannelSubmit)
-import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9021 */;
+// Module 9029 (useCreateChannelSubmit)
+import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ export default function useCreateChannelSubmit(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -53,9 +53,10 @@ export default function useCreateChannelSubmit(arg0) {
             closure_131_6 = undefined;
             closure_131_7 = undefined;
             closure_131_8 = undefined;
-            ({ overwrites: closure_131_0, bitrate: closure_131_1, userLimit: closure_131_2, createMode: closure_131_3, guildId: closure_131_4, name: closure_131_5, channelType: closure_131_6, categoryId: closure_131_7, applicationId: closure_131_8 } = closure_0);
             closure_131_9 = undefined;
+            ({ overwrites: closure_131_0, bitrate: closure_131_1, userLimit: closure_131_2, createMode: closure_131_3, guildId: closure_131_4, name: closure_131_5, channelType: closure_131_6, categoryId: closure_131_7, applicationId: closure_131_8, flags: closure_131_9 } = closure_0);
             closure_131_10 = undefined;
+            closure_131_11 = undefined;
             let id;
             let guild_id;
             c7 = 1;
@@ -72,19 +73,20 @@ export default function useCreateChannelSubmit(arg0) {
             return obj5;
           } else {
             if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
-              const obj6 = { id: closure_131_4, type: closure_0(1993).PermissionOverwriteType.ROLE, deny: constants2.VIEW_CHANNEL, allow: closure_2(1084).getFlag(0) };
+              const obj6 = { id: closure_131_4, type: closure_0(1992).PermissionOverwriteType.ROLE, deny: constants2.VIEW_CHANNEL, allow: closure_2(1084).getFlag(0) };
               closure_131_0.push(obj6);
               const obj10 = closure_2(1084);
             }
             closure_1(true);
             c6 = 2;
-            const obj7 = { guildId: closure_131_4, type: closure_131_6, name: closure_131_5, permissionOverwrites: closure_131_0, bitrate: closure_131_1, userLimit: closure_131_2, parentId: null, applicationId: null };
+            const obj7 = { guildId: closure_131_4, type: closure_131_6, name: closure_131_5, permissionOverwrites: closure_131_0, bitrate: closure_131_1, userLimit: closure_131_2, parentId: null, applicationId: null, flags: null };
             let tmp60 = null;
             if (closure_131_6 !== constants.GUILD_CATEGORY) {
               tmp60 = closure_131_7;
             }
             obj7.parentId = tmp60;
             obj7.applicationId = closure_131_8;
+            obj7.flags = closure_131_9;
             c7 = 4;
             c8 = 1;
             const obj8 = { value: CreateChannelActionCreatorsDefault.createChannel(obj7), done: false };
@@ -97,11 +99,11 @@ export default function useCreateChannelSubmit(arg0) {
         } else {
           if (3 === tmp8) {
             c6 = 1;
-            closure_131_13 = closure_5;
-            const AccessibilityAnnouncer = closure_0(5016).AccessibilityAnnouncer;
-            const intl = closure_0(1114).intl;
-            AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t["0SbUzm"]));
-            const body = closure_131_13.body;
+            closure_131_14 = closure_5;
+            const AccessibilityAnnouncer = closure_0(5021).AccessibilityAnnouncer;
+            const intl = closure_0(1113).intl;
+            AccessibilityAnnouncer.announce(intl.string(closure_0(1113).t["0SbUzm"]));
+            const body = closure_131_14.body;
             let errors;
             if (body != null) {
               errors = body.errors;
@@ -118,23 +120,23 @@ export default function useCreateChannelSubmit(arg0) {
             c8 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            closure_131_9 = value;
-            if (null != closure_131_9) {
-              const body2 = closure_131_9.body;
+            closure_131_10 = value;
+            if (null != closure_131_10) {
+              const body2 = closure_131_10.body;
               closure_2 = body2;
               if (body2 == null) {
                 closure_2 = {};
               }
-              closure_131_10 = closure_2;
-              id = closure_131_10.id;
-              guild_id = closure_131_10.guild_id;
+              closure_131_11 = closure_2;
+              id = closure_131_11.id;
+              guild_id = closure_131_11.guild_id;
               if (null != id) {
-                const AccessibilityAnnouncer2 = closure_0(5016).AccessibilityAnnouncer;
-                const intl2 = closure_0(1114).intl;
+                const AccessibilityAnnouncer2 = closure_0(5021).AccessibilityAnnouncer;
+                const intl2 = closure_0(1113).intl;
                 const obj9 = { name: closure_131_5 };
-                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1114).t.Wke70b, obj9));
+                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1113).t.Wke70b, obj9));
                 if (closure_0 != null) {
-                  tmp86(id, guild_id);
+                  tmp87(id, guild_id);
                 }
               }
             }
@@ -146,12 +148,12 @@ export default function useCreateChannelSubmit(arg0) {
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp64) {
-        closure_5 = tmp64;
+      } catch (tmp65) {
+        closure_5 = tmp65;
         if (tmp5 === c6) {
           c8 = tmp3;
-          throw tmp64;
-        } else if (tmp2 === tmp66) {
+          throw tmp65;
+        } else if (tmp2 === tmp67) {
           c7 = tmp;
         } else {
           c7 = tmp3;

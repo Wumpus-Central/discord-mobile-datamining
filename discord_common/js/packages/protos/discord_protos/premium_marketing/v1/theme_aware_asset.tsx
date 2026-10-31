@@ -1,11 +1,11 @@
-// === Module 9621: theme_aware_asset ===
+// === Module 9641: theme_aware_asset ===
 
-// Module 9621 (theme_aware_asset)
-import _mod1198 from "module_1198" /* 1198 */;
+// Module 9641 (theme_aware_asset)
+import _mod1197 from "module_1197" /* 1197 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1198).MessageType;
+const MessageType = fn(1197).MessageType;
 class ThemeAwareAsset$Type extends MessageType {
   constructor() {
     items = [, , , ];
@@ -21,10 +21,10 @@ const prototype = ThemeAwareAsset$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { lightUrl: "", darkUrl: "", lightStaticUrl: "", darkStaticUrl: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1198.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1198.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1198;
+    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1197;
   }
   return obj;
 };
@@ -64,7 +64,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1198.UnknownFieldHandler.onRead;
+              onRead = _mod1197.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -76,25 +76,25 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(lightUrl, tag, writeUnknownFields) {
   if ("" !== lightUrl.lightUrl) {
-    tag.tag(1, _mod1198.WireType.LengthDelimited).string(lightUrl.lightUrl);
-    const tagResult = tag.tag(1, _mod1198.WireType.LengthDelimited);
+    tag.tag(1, _mod1197.WireType.LengthDelimited).string(lightUrl.lightUrl);
+    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.darkUrl) {
-    tag.tag(2, _mod1198.WireType.LengthDelimited).string(lightUrl.darkUrl);
-    const tagResult1 = tag.tag(2, _mod1198.WireType.LengthDelimited);
+    tag.tag(2, _mod1197.WireType.LengthDelimited).string(lightUrl.darkUrl);
+    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.lightStaticUrl) {
-    tag.tag(3, _mod1198.WireType.LengthDelimited).string(lightUrl.lightStaticUrl);
-    const tagResult2 = tag.tag(3, _mod1198.WireType.LengthDelimited);
+    tag.tag(3, _mod1197.WireType.LengthDelimited).string(lightUrl.lightStaticUrl);
+    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.darkStaticUrl) {
-    tag.tag(4, _mod1198.WireType.LengthDelimited).string(lightUrl.darkStaticUrl);
-    const tagResult3 = tag.tag(4, _mod1198.WireType.LengthDelimited);
+    tag.tag(4, _mod1197.WireType.LengthDelimited).string(lightUrl.darkStaticUrl);
+    const tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1198.UnknownFieldHandler.onWrite;
+      onWrite = _mod1197.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, lightUrl, tag);

@@ -1,15 +1,15 @@
-// === Module 18632: SwipeForMemberListWrapper ===
+// === Module 18674: SwipeForMemberListWrapper ===
 
-// Module 18632 (SwipeForMemberListWrapper)
+// Module 18674 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
-import RootNavigationRef from "RootNavigationRef" /* 5194 */;
-import useChatLayout from "useChatLayout" /* 5196 */;
-import ChatInputUtils from "ChatInputUtils" /* 5202 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5755 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 18011 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
+import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+import useChatLayout from "useChatLayout" /* 5201 */;
+import ChatInputUtils from "ChatInputUtils" /* 5207 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 18054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,15 +17,15 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9804);
+const ChannelDetailsStore = fn(9825);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9792).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9813).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj2.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

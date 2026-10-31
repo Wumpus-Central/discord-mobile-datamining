@@ -1,16 +1,16 @@
-// === Module 20031: AgeUpdateFooter ===
+// === Module 20092: AgeUpdateFooter ===
 
-// Module 20031 (AgeUpdateFooter)
-import util from "util" /* 1114 */;
-import _modDef2835 from "module_2835" /* 2835 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6723 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7947 */;
+// Module 20092 (AgeUpdateFooter)
+import util from "util" /* 1113 */;
+import _modDef2836 from "module_2836" /* 2836 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUp
 export default function AgeUpdateFooter() {
   let obj = { variant: "text-md/medium", color: "text-muted", style: closure_4().text, children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef2835.ifObbX, {
+  obj.children = intl.format(_modDef2836.ifObbX, {
     handleAgeVerifyHook() {
       const obj = AgeVerificationActionCreatorsDefault;
       return obj.showAgeVerificationGetStartedModal({ entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT });

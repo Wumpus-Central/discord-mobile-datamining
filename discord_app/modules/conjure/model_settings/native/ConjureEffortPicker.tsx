@@ -1,13 +1,13 @@
-// === Module 12472: ConjureEffortPicker ===
+// === Module 12507: ConjureEffortPicker ===
 
-// Module 12472 (ConjureEffortPicker)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import TableRadioRow from "TableRadioRow" /* 7055 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7315 */;
-import ActionSheet from "ActionSheet" /* 7360 */;
-import ConjureEffortTiers from "ConjureEffortTiers" /* 12473 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 12474 */;
+// Module 12507 (ConjureEffortPicker)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import TableRadioRow from "TableRadioRow" /* 7061 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import ActionSheet from "ActionSheet" /* 7366 */;
+import ConjureEffortTiers from "ConjureEffortTiers" /* 12508 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 12509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -185,7 +185,7 @@ export function ConjureEffortPickerSheet(onChange) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3865.aBPQxX);
+  obj2.title = intl.string(_modDef3868.aBPQxX);
   obj.header = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = timestampProducer(View, { children: timestampProducer(ConjureEffortPicker, { settings: tmp[0], tiers, choices, disabled: false, onChange: callback, hideTitle: true }) });
   return timestampProducer(ActionSheet.ActionSheet, obj);

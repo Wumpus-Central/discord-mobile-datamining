@@ -1,12 +1,12 @@
-// === Module 9889: NativePaymentHooks ===
+// === Module 9910: NativePaymentHooks ===
 
-// Module 9889 (NativePaymentHooks)
+// Module 9910 (NativePaymentHooks)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IAPStore from "IAPStore" /* 7590 */;
+import IAPStore from "IAPStore" /* 7597 */;
 
 const require = fn;
 function notSupported() {
@@ -53,7 +53,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -82,7 +82,7 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
                       c3 = 1;
                       ref = 2;
                       v3 = 1;
-                      const obj7 = { value: memo2(9890).loadInAppSkus(differenceResult), done: false };
+                      const obj7 = { value: memo2(9911).loadInAppSkus(differenceResult), done: false };
                       return obj7;
                     }
                   }
@@ -98,8 +98,8 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v3("Unable to fetch");
-              const result = memo2(4822).captureBillingException(closure_128_1);
-              const obj3 = memo2(4822);
+              const result = memo2(4827).captureBillingException(closure_128_1);
+              const obj3 = memo2(4827);
             } else if (arg0 === 1) {
               v3 = 3;
               throw value;
@@ -156,8 +156,8 @@ function useLoadedGoogleSkuIds(memo1) {
   ];
   const effect = noop.useEffect(() => {
     c0 = true;
-    const obj = memo1(9890);
-    ({ settled, release: first } = memo1(9890).retainInAppSkus(c0));
+    const obj = memo1(9911);
+    ({ settled, release: first } = memo1(9911).retainInAppSkus(c0));
     settled.then(() => {
       if (c0) {
         closure_2((arg0) => {

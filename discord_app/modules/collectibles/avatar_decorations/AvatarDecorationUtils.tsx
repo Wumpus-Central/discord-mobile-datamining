@@ -1,8 +1,8 @@
-// === Module 1980: AvatarDecorationUtils ===
+// === Module 1979: AvatarDecorationUtils ===
 
-// Module 1980 (AvatarDecorationUtils)
+// Module 1979 (AvatarDecorationUtils)
 import _mod12 from "module_12" /* 12 */;
-import mappers from "mappers" /* 1981 */;
+import mappers from "mappers" /* 1980 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");

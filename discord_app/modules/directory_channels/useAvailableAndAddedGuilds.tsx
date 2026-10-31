@@ -1,13 +1,13 @@
-// === Module 13816: useAvailableAndAddedGuilds ===
+// === Module 13851: useAvailableAndAddedGuilds ===
 
-// Module 13816 (useAvailableAndAddedGuilds)
+// Module 13851 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import SortedGuildStore from "SortedGuildStore" /* 6766 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13810 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13845 */;
 
 const require = globalThis.__r;
 
@@ -56,7 +56,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -87,7 +87,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           } else {
             closure_128_2(false);
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp15) {
           v3 = tmp;

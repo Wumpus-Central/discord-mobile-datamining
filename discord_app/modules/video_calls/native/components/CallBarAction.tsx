@@ -1,11 +1,11 @@
-// === Module 11677: CallBarAction ===
+// === Module 11714: CallBarAction ===
 
-// Module 11677 (CallBarAction)
+// Module 11714 (CallBarAction)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import Pressables from "Pressables" /* 6974 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11679 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import Pressables from "Pressables" /* 6980 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 11716 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -121,15 +121,15 @@ class ActionButton {
   }
 }
 const View = fn(17).View;
-const resetFocusTimer = fn(10981).resetFocusTimer;
+const resetFocusTimer = fn(11000).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const ColorUtils = fn(5006);
+const ColorUtils = fn(5011);
 let closure_8 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let closure_9 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_11 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj3 = { buttonContainer: { position: "absolute" }, iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" }, badge: { backgroundColor: "white", position: "absolute" }, notificationArea: null, notificationText: null, notificationAreaMentioned: null, notificationAreaUnread: null };
 const rect = { position: "absolute", top: -4, right: -4, height: 24, minWidth: 24, paddingHorizontal: 4, borderRadius: 12, borderWidth: 4, borderColor: nativeDefault.unsafe_rawColors.PRIMARY_760, alignItems: "center", justifyContent: "center" };
 obj3.notificationArea = rect;

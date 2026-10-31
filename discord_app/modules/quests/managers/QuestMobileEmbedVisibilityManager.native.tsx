@@ -1,33 +1,33 @@
-// === Module 19966: QuestMobileEmbedVisibilityManager ===
+// === Module 20026: QuestMobileEmbedVisibilityManager ===
 
-// Module 19966 (QuestMobileEmbedVisibilityManager)
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import ChannelTypes from "ChannelTypes" /* 1094 */;
-import privDefault from "priv" /* 1452 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
-import RootNavigationRef from "RootNavigationRef" /* 5194 */;
-import useAlertStore2 from "useAlertStore" /* 5955 */;
-import QuestTypes from "QuestTypes" /* 6778 */;
-import AdCreativeType from "AdCreativeType" /* 6782 */;
-import getQuestLogger from "getQuestLogger" /* 7846 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7864 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 14648 */;
+// Module 20026 (QuestMobileEmbedVisibilityManager)
+import ConstantsIOS from "ConstantsIOS" /* 1092 */;
+import ChannelTypes from "ChannelTypes" /* 1093 */;
+import privDefault from "priv" /* 1451 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
+import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+import useAlertStore2 from "useAlertStore" /* 5960 */;
+import QuestTypes from "QuestTypes" /* 6784 */;
+import AdCreativeType from "AdCreativeType" /* 6788 */;
+import getQuestLogger from "getQuestLogger" /* 7853 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 14686 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ActionSheetStore from "ActionSheetStore" /* 5254 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
-import VoicePanelStore from "VoicePanelStore" /* 6869 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import AlertStore from "AlertStore" /* 10115 */;
-import AppStateStore from "AppStateStore" /* 1994 */;
-import QuestStore from "QuestStore" /* 7839 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import ActionSheetStore from "ActionSheetStore" /* 5259 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import VoicePanelStore from "VoicePanelStore" /* 6875 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import AlertStore from "AlertStore" /* 10135 */;
+import AppStateStore from "AppStateStore" /* 1993 */;
+import QuestStore from "QuestStore" /* 7846 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
-const ChannelDetailsStore = fn(9804);
+const ChannelDetailsStore = fn(9825);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const isTextChannel = fn(4862).isTextChannel;
-let closure_16 = fn(9666).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+const isTextChannel = fn(4867).isTextChannel;
+let closure_16 = fn(9686).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1072).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -82,7 +82,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(5747).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(5752).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           if (!set.has(code)) {
             const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
@@ -206,8 +206,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(6867).isChannelFocused();
-      applyArgumentsResult(5193);
+      let isChannelFocusedResult = applyArgumentsResult(6873).isChannelFocused();
+      applyArgumentsResult(5198);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

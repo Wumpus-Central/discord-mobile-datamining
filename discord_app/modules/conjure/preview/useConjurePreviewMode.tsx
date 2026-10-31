@@ -1,16 +1,16 @@
-// === Module 12040: useConjurePreviewMode ===
+// === Module 12079: useConjurePreviewMode ===
 
-// Module 12040 (useConjurePreviewMode)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10863 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10864 */;
-import leaveFrame from "leaveFrame" /* 10902 */;
+// Module 12079 (useConjurePreviewMode)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10883 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10884 */;
+import leaveFrame from "leaveFrame" /* 10927 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const isLaunched = fn(6841).isLaunched;
+const isLaunched = fn(6847).isLaunched;
 let closure_7 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/useConjurePreviewMode.tsx");

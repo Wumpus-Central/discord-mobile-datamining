@@ -1,6 +1,6 @@
-// === Module 10871: useToggleDraft ===
+// === Module 10896: useToggleDraft ===
 
-// Module 10871 (useToggleDraft)
+// Module 10896 (useToggleDraft)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

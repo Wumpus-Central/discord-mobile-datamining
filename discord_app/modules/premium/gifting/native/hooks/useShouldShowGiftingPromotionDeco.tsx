@@ -1,8 +1,8 @@
-// === Module 10602: useShouldShowGiftingPromotionDeco ===
+// === Module 10622: useShouldShowGiftingPromotionDeco ===
 
-// Module 10602 (useShouldShowGiftingPromotionDeco)
-import PremiumConstants from "PremiumConstants" /* 1386 */;
-import NativeGiftContext from "NativeGiftContext" /* 10542 */;
+// Module 10622 (useShouldShowGiftingPromotionDeco)
+import PremiumConstants from "PremiumConstants" /* 1385 */;
+import NativeGiftContext from "NativeGiftContext" /* 10562 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;

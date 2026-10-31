@@ -1,15 +1,15 @@
-// === Module 8791: useProfileEffect ===
+// === Module 8799: useProfileEffect ===
 
-// Module 8791 (useProfileEffect)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7712 */;
+// Module 8799 (useProfileEffect)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7713 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7728 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProfileEffectRecord = fn(7719).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
 

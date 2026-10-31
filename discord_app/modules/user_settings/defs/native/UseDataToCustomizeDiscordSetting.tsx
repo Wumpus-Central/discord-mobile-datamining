@@ -1,24 +1,24 @@
-// === Module 16706: UseDataToCustomizeDiscordSetting ===
+// === Module 16748: UseDataToCustomizeDiscordSetting ===
 
-// Module 16706 (UseDataToCustomizeDiscordSetting)
+// Module 16748 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import common_AlertDefault from "common/Alert" /* 6025 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16666 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 16704 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16705 */;
-import ConsentStore from "ConsentStore" /* 6736 */;
+import util from "util" /* 1113 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import common_AlertDefault from "common/Alert" /* 6030 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16708 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 16746 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 16747 */;
+import ConsentStore from "ConsentStore" /* 6742 */;
 
 require = fn;
 const Consents = fn(1072).Consents;
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(8424).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8432).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToCustomizeDiscordSettingValue() {
     const items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));

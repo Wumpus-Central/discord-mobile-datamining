@@ -1,19 +1,19 @@
-// === Module 10024: PremiumFeatureUpsell ===
+// === Module 10045: PremiumFeatureUpsell ===
 
-// Module 10024 (PremiumFeatureUpsell)
+// Module 10045 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 575 */;
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import native from "native" /* 1188 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import PremiumUtils from "PremiumUtils" /* 2048 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5068 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import spring from "spring" /* 5632 */;
-import springPresets from "springPresets" /* 5633 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9506 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9772 */;
+import ConstantsIOS from "ConstantsIOS" /* 1092 */;
+import native from "native" /* 1187 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import PremiumUtils from "PremiumUtils" /* 2047 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5073 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import spring from "spring" /* 5637 */;
+import springPresets from "springPresets" /* 5638 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9793 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
 
 require = fn;
 function PremiumFeatureUpsellPill(featureName) {
@@ -145,13 +145,13 @@ function PremiumFeatureUpsellPill(featureName) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const PremiumConstants = fn(1386);
+const PremiumConstants = fn(1385);
 ({ PremiumSubscriptionSKUs: closure_7, PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Gradients = fn(7610).Gradients;
+const Gradients = fn(7617).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_12, justifyContent: "space-between" }, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelIcon: null, nitroWheelDisabled: null, button: null, gradient: null };
   const obj3 = {};
@@ -189,7 +189,7 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5632).withSpring, springStandard: fn(5633).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5637).withSpring, springStandard: fn(5638).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = { code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}" };
 let size = fn(2);

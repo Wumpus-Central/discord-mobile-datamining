@@ -1,7 +1,7 @@
-// === Module 9656: ConjureMobileExperiment ===
+// === Module 9676: ConjureMobileExperiment ===
 
-// Module 9656 (ConjureMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 9676 (ConjureMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

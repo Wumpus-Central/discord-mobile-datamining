@@ -1,7 +1,7 @@
-// === Module 17973: usePromoEmailOptInLabel ===
+// === Module 18016: usePromoEmailOptInLabel ===
 
-// Module 17973 (usePromoEmailOptInLabel)
-import util from "util" /* 1114 */;
+// Module 18016 (usePromoEmailOptInLabel)
+import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/usePromoEmailOptInLabel.tsx");

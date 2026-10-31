@@ -1,12 +1,12 @@
-// === Module 18896: ChannelSecondaryViewChatNavigator ===
+// === Module 18945: ChannelSecondaryViewChatNavigator ===
 
-// Module 18896 (ChannelSecondaryViewChatNavigator)
+// Module 18945 (ChannelSecondaryViewChatNavigator)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import HeaderShared from "HeaderShared" /* 9791 */;
-import ChannelContainer from "ChannelContainer" /* 10988 */;
-import ChatViewDefault from "ChatView" /* 11195 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12183 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import HeaderShared from "HeaderShared" /* 9812 */;
+import ChannelContainer from "ChannelContainer" /* 11007 */;
+import ChatViewDefault from "ChatView" /* 11214 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 12221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,9 +28,9 @@ function ChannelSecondaryViewChatScreen(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9835);
+const NativeStackNavigator = fn(9856);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -41,8 +41,8 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
   const params = navigation.route.params;
   const tmp = closure_7();
   dependencyMap = tmp;
-  const tmp2 = params(5189)();
-  const accessibilityNativeStackOptions = navigation(7163).useAccessibilityNativeStackOptions();
+  const tmp2 = params(5194)();
+  const accessibilityNativeStackOptions = navigation(7169).useAccessibilityNativeStackOptions();
   const channelId = params.channelId;
   const items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
   const memo = accessibilityNativeStackOptions.useMemo(() => {
@@ -70,5 +70,5 @@ export default function ChannelSecondaryViewChatNavigator(navigation) {
     })
   };
   obj2.children = channelId(closure_6.Navigator, obj3);
-  return channelId(navigation(5075).ThemeContextProvider, obj2);
+  return channelId(navigation(5080).ThemeContextProvider, obj2);
 };

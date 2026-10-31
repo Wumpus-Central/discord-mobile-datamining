@@ -1,22 +1,22 @@
-// === Module 10051: EmojiPickerCategories ===
+// === Module 10071: EmojiPickerCategories ===
 
-// Module 10051 (EmojiPickerCategories)
+// Module 10071 (EmojiPickerCategories)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 10052 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 10072 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategoryTypes = fn(6793).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6799).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
-let ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+let ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, keyboardItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = { code: "function EmojiPickerCategoriesTsx1(){const{categoryIndexActive}=this.__closure;return categoryIndexActive.get();}" };

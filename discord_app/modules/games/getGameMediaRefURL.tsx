@@ -1,9 +1,9 @@
-// === Module 2027: getGameMediaRefURL ===
+// === Module 2025: getGameMediaRefURL ===
 
-// Module 2027 (getGameMediaRefURL)
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import StringUtils from "StringUtils" /* 2028 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2032 */;
+// Module 2025 (getGameMediaRefURL)
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import StringUtils from "StringUtils" /* 2026 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2030 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");

@@ -1,18 +1,18 @@
-// === Module 11472: NameplatePreview ===
+// === Module 11506: NameplatePreview ===
 
-// Module 11472 (NameplatePreview)
+// Module 11506 (NameplatePreview)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8812 */;
+import native from "native" /* 1187 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8820 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {

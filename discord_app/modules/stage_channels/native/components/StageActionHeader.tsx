@@ -1,34 +1,34 @@
-// === Module 11973: StageActionHeader ===
+// === Module 12011: StageActionHeader ===
 
-// Module 11973 (StageActionHeader)
+// Module 12011 (StageActionHeader)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import useChannelNameDefault from "useChannelName" /* 5647 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5754 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7931 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7933 */;
-import _modDef8166 from "module_8166" /* 8166 */;
-import _modDef8188 from "module_8188" /* 8188 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9099 */;
-import StatusBarDefault from "StatusBar" /* 11193 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 11843 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11857 */;
-import _modDef11974 from "module_11974" /* 11974 */;
-import _modDef11975 from "module_11975" /* 11975 */;
-import _modDef11976 from "module_11976" /* 11976 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11977 */;
-import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 11978 */;
+import util from "util" /* 1113 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import useChannelNameDefault from "useChannelName" /* 5652 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5759 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7941 */;
+import _modDef8174 from "module_8174" /* 8174 */;
+import _modDef8196 from "module_8196" /* 8196 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9118 */;
+import StatusBarDefault from "StatusBar" /* 11212 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11881 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11895 */;
+import _modDef12012 from "module_12012" /* 12012 */;
+import _modDef12013 from "module_12013" /* 12013 */;
+import _modDef12014 from "module_12014" /* 12014 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12015 */;
+import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 12016 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6880 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import StageInstanceStore from "StageInstanceStore" /* 4863 */;
-import StageMusicStore from "StageMusicStore" /* 11836 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6886 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import StageInstanceStore from "StageInstanceStore" /* 4868 */;
+import StageMusicStore from "StageMusicStore" /* 11874 */;
 
 require = fn;
 class HideStageChannelCallIcon {
@@ -272,18 +272,18 @@ const Constants = fn(1072);
 ({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
-let obj = { header: { height: fn(5581).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, overflow: "visible" }, leftTitleContainer: { marginLeft: 12, flex: 1 }, titleWrapper: { position: "relative", flex: 1, justifyContent: "center" }, linearGradient: { position: "absolute", zIndex: 1, left: 0, right: 0, top: 0, bottom: 0 }, iconBackground: null, iconContainer: null, settingsButton: null, stageInfo: null, stageInfoTopic: null, icon: null };
+const createStyles = fn(5014);
+let obj = { header: { height: fn(5586).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, overflow: "visible" }, leftTitleContainer: { marginLeft: 12, flex: 1 }, titleWrapper: { position: "relative", flex: 1, justifyContent: "center" }, linearGradient: { position: "absolute", zIndex: 1, left: 0, right: 0, top: 0, bottom: 0 }, iconBackground: null, iconContainer: null, settingsButton: null, stageInfo: null, stageInfoTopic: null, icon: null };
 let obj4 = { backgroundColor: null };
-let ColorUtils = fn(5006);
+let ColorUtils = fn(5011);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconBackground = obj4;
 let obj5 = { backgroundColor: null };
-ColorUtils = fn(5006);
+ColorUtils = fn(5011);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconContainer = obj5;
 obj.settingsButton = { marginRight: 4 };
-let obj3 = { height: fn(5581).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, overflow: "visible" };
+let obj3 = { height: fn(5586).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 12, overflow: "visible" };
 obj.stageInfo = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
 obj.stageInfoTopic = { marginLeft: 4 };
 let obj7 = { flex: 1, flexDirection: "row", alignItems: "center", color: nativeDefault.colors.TEXT_SUBTLE };
@@ -336,9 +336,9 @@ export function HideChannelCallButton(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let obj2 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   let obj = channel(504);
-  obj2.source = _modDef11974;
-  const intl = channel(1114).intl;
-  obj2.accessibilityLabel = intl.string(channel(1114).t.cpT0Cq);
+  obj2.source = _modDef12012;
+  const intl = channel(1113).intl;
+  obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
   obj2.onPress = function handleClose() {
     const obj = AnalyticsUtilsDefault;
     const obj2 = { video_layout: "pop out" };
@@ -350,7 +350,7 @@ export function HideChannelCallButton(channel) {
     const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
   };
   obj2.containerStyle = tmp.iconContainer;
-  obj2.children = closure_12(channel(1188).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  obj2.children = closure_12(channel(1187).MaskedBadge, { value: stateFromStores, maskStyle: {} });
   return closure_12(ChannelCallNavigatorIconDefault, obj2);
 }
 export { StageSettingsButton };

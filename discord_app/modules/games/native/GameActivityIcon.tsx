@@ -1,18 +1,18 @@
-// === Module 9275: GameActivityIcon ===
+// === Module 9294: GameActivityIcon ===
 
-// Module 9275 (GameActivityIcon)
+// Module 9294 (GameActivityIcon)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import shared from "shared" /* 5016 */;
-import native from "native" /* 5075 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8135 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import shared from "shared" /* 5021 */;
+import native from "native" /* 5080 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8143 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = { borderRadius: nativeDefault.radii.xs };

@@ -1,9 +1,9 @@
-// === Module 20062: reactAssetProvider ===
+// === Module 20123: reactAssetProvider ===
 
-// Module 20062 (reactAssetProvider)
+// Module 20123 (reactAssetProvider)
 import _mod17 from "module_17" /* 17 */;
-import NativeReactAssetModuleDefault from "NativeReactAssetModule" /* 20063 */;
-import native_required_assets from "native_required_assets" /* 20064 */;
+import NativeReactAssetModuleDefault from "NativeReactAssetModule" /* 20124 */;
+import native_required_assets from "native_required_assets" /* 20125 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/react_asset/native/reactAsset
 export default function reactAssetProvider() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1(20063).keysRequest((arr) => {
+    closure_1(20124).keysRequest((arr) => {
       const NATIVE_REQUIRED_ASSETS = native_required_assets.NATIVE_REQUIRED_ASSETS;
       const mapped = arr.map((item) => {
         let str = "";

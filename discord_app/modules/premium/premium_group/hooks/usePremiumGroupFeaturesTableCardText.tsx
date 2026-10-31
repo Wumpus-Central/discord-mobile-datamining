@@ -1,16 +1,16 @@
-// === Module 15330: usePremiumGroupFeaturesTableCardText ===
+// === Module 15369: usePremiumGroupFeaturesTableCardText ===
 
-// Module 15330 (usePremiumGroupFeaturesTableCardText)
+// Module 15369 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import user from "user" /* 1392 */;
-import _modDef3285 from "module_3285" /* 3285 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8509 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 15331 */;
-import SubscriptionStore from "SubscriptionStore" /* 2053 */;
+import util from "util" /* 1113 */;
+import user from "user" /* 1391 */;
+import _modDef3288 from "module_3288" /* 3288 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8517 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 15370 */;
+import SubscriptionStore from "SubscriptionStore" /* 2052 */;
 
 require = fn;
-const PremiumGroupConstants = fn(2061);
+const PremiumGroupConstants = fn(2060);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
@@ -31,7 +31,7 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
       if (null != tmp4) {
         const intl = util.intl;
         const obj3 = { primaryName: tmp4, premiumGroupProductName: React4() };
-        priceString = intl.format(_modDef3285.Nu9LNm, obj3);
+        priceString = intl.format(_modDef3288.Nu9LNm, obj3);
       }
     }
     let str = "...";
@@ -41,10 +41,10 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     if (arg0 === user.PremiumSubscriptionGroupRole.PRIMARY) {
       const intl3 = util.intl;
       const obj4 = { helpCenterLink, premiumGroupProductName: React4() };
-      let formatResult = intl3.format(_modDef3285["+R/K74"], obj4);
+      let formatResult = intl3.format(_modDef3288["+R/K74"], obj4);
     } else {
       const intl2 = util.intl;
-      const tmp3Result = _modDef3285;
+      const tmp3Result = _modDef3288;
       const obj5 = { helpCenterLink };
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj5);
     }

@@ -1,7 +1,7 @@
-// === Module 17106: BountiesAndroidQuestBarSmokeAnimationExperiment ===
+// === Module 17164: BountiesAndroidQuestBarSmokeAnimationExperiment ===
 
-// Module 17106 (BountiesAndroidQuestBarSmokeAnimationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 17164 (BountiesAndroidQuestBarSmokeAnimationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-bounties-android-quest-bar-smoke-animation", kind: "user", defaultConfig: { enabled: false }, variations: null };

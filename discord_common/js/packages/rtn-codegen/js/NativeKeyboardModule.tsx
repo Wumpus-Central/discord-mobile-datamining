@@ -1,6 +1,6 @@
-// === Module 1890: NativeKeyboardModule ===
+// === Module 1889: NativeKeyboardModule ===
 
-// Module 1890 (NativeKeyboardModule)
+// Module 1889 (NativeKeyboardModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

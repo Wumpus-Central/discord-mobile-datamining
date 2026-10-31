@@ -1,14 +1,14 @@
-// === Module 13651: CheckpointNavigationControls ===
+// === Module 13686: CheckpointNavigationControls ===
 
-// Module 13651 (CheckpointNavigationControls)
+// Module 13686 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
-import CheckpointTextDefault from "CheckpointText" /* 13587 */;
-import showNitroLockedToastDefault from "showNitroLockedToast" /* 13641 */;
+import CheckpointTextDefault from "CheckpointText" /* 13624 */;
+import showNitroLockedToastDefault from "showNitroLockedToast" /* 13676 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6061 */;
+import CheckpointConstants from "CheckpointConstants" /* 6066 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -102,8 +102,8 @@ export default function CheckpointNavigationControls(nextDisabled) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = flag(5704);
-              return obj.openURL(flag(2062).getArticleURL(constants.CHECKPOINT));
+              const obj = flag(5709);
+              return obj.openURL(flag(2061).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
             children

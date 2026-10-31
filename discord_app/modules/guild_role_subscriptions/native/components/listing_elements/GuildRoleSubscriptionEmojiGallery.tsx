@@ -1,13 +1,12 @@
-// === Module 17159: GuildRoleSubscriptionEmojiGallery ===
+// === Module 17216: GuildRoleSubscriptionEmojiGallery ===
 
-// Module 17159 (GuildRoleSubscriptionEmojiGallery)
-import chunkDefault from "chunk" /* 10048 */;
-import LayoutUtils from "LayoutUtils" /* 10050 */;
-import EmojiIconDefault from "EmojiIcon" /* 17160 */;
+// Module 17216 (GuildRoleSubscriptionEmojiGallery)
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import chunkDefault from "chunk" /* 10069 */;
+import EmojiIconDefault from "EmojiIcon" /* 17217 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const View = fn(17).View;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx");
@@ -17,14 +16,6 @@ export default function EmojiGallery(emojiIds) {
   if (maxPerRow === undefined) {
     maxPerRow = 9;
   }
-  let obj = { children: null };
   const arr = chunkDefault(emojiIds.emojiIds, maxPerRow);
-  obj.children = jsx(LayoutUtils.GappedList, {
-    gap: 8,
-    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
-      const obj = { style: { flexDirection: "row" }, children: jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) }) };
-      return <View key={index} style={{ flexDirection: "row" }}>{jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) })}</View>;
-    })
-  });
-  return <View>{null}</View>;
+  return jsx(Stack_Stack.Stack, { spacing: 8, children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => jsx(Stack_Stack.Stack, { direction: "horizontal", spacing: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) }, index)) });
 };

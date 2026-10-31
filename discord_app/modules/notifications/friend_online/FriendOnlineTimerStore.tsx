@@ -1,9 +1,9 @@
-// === Module 19959: FriendOnlineTimerStore ===
+// === Module 20019: FriendOnlineTimerStore ===
 
-// Module 19959 (FriendOnlineTimerStore)
+// Module 20019 (FriendOnlineTimerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
+import DurationsDefault from "Durations" /* 1089 */;
 
 const HOUR = DurationsDefault.Millis.HOUR;
 const obj = { lastReportedAtMs: null };

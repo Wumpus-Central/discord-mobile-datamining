@@ -1,6 +1,6 @@
-// === Module 2005: GatewaySocketOpcode ===
+// === Module 2004: GatewaySocketOpcode ===
 
-// Module 2005 (GatewaySocketOpcode)
+// Module 2004 (GatewaySocketOpcode)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/GatewaySocketOpcode.tsx");

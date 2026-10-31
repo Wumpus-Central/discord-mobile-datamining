@@ -1,7 +1,7 @@
-// === Module 7158: useSettingNavigationRoute ===
+// === Module 7164: useSettingNavigationRoute ===
 
-// Module 7158 (useSettingNavigationRoute)
-import Link from "Link" /* 1499 */;
+// Module 7164 (useSettingNavigationRoute)
+import Link from "Link" /* 1498 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/core/native/useSettingNavigationRoute.tsx");

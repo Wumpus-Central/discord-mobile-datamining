@@ -1,55 +1,55 @@
-// === Module 15629: handleSupportedURL ===
+// === Module 15670: handleSupportedURL ===
 
-// Module 15629 (handleSupportedURL)
+// Module 15670 (handleSupportedURL)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1889 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6762 */;
-import QuestContent from "QuestContent" /* 6780 */;
-import AdPlacement from "AdPlacement" /* 6781 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
-import openUserSettings from "openUserSettings" /* 7557 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7712 */;
-import AnalyticsActions from "AnalyticsActions" /* 7855 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9055 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9099 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9250 */;
-import GameProfileActionCreators from "GameProfileActionCreators" /* 9300 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9320 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9422 */;
-import QuestUtils from "QuestUtils" /* 9658 */;
-import ApplicationUtils from "ApplicationUtils" /* 10884 */;
-import authorizeCallbackDefault from "authorizeCallback" /* 10886 */;
-import closeVoicePanelsDefault from "closeVoicePanels" /* 10904 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13169 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13306 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14227 */;
-import BountyActionCreators from "BountyActionCreators" /* 14639 */;
-import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15637 */;
-import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15671 */;
-import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15767 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6768 */;
+import QuestContent from "QuestContent" /* 6786 */;
+import AdPlacement from "AdPlacement" /* 6787 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
+import openUserSettings from "openUserSettings" /* 7563 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
+import AnalyticsActions from "AnalyticsActions" /* 7862 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9118 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9269 */;
+import GameProfileActionCreators from "GameProfileActionCreators" /* 9320 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 9444 */;
+import QuestUtils from "QuestUtils" /* 9678 */;
+import ApplicationUtils from "ApplicationUtils" /* 10909 */;
+import authorizeCallbackDefault from "authorizeCallback" /* 10911 */;
+import closeVoicePanelsDefault from "closeVoicePanels" /* 10929 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13204 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13341 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14265 */;
+import BountyActionCreators from "BountyActionCreators" /* 14677 */;
+import MidjourneyOnboardingUtils from "MidjourneyOnboardingUtils" /* 15678 */;
+import GuildSettingsPickerActionCreators from "GuildSettingsPickerActionCreators" /* 15712 */;
+import AgeKeyReturnHandler from "AgeKeyReturnHandler" /* 15807 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6849 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15241 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 15280 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6926).addPostConnectionCallback;
-let closure_9 = fn(7599).handleMobileWebCheckoutStatus;
+fn(6932).addPostConnectionCallback;
+let closure_9 = fn(7606).handleMobileWebCheckoutStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, LinkingTypes: map1, Routes: closure_14, UserSettingsSections: closure_15, PlatformTypes: closure_16, ME: closure_17 } = Constants);
-const StaticChannelRoute = fn(4865).StaticChannelRoute;
-const StreamTypes = fn(6709).StreamTypes;
-const NativePermissionTypes = fn(7932).NativePermissionTypes;
-let closure_21 = fn(10885).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(7709).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_23 = fn(5742).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15630).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8424).MobileUserSettings;
+const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StreamTypes = fn(6715).StreamTypes;
+const NativePermissionTypes = fn(7940).NativePermissionTypes;
+let closure_21 = fn(10910).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7716).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(5747).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(15671).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8432).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -201,7 +201,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: 62 };
+      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: false };
       const obj26 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj21.navigationSettings = obj26;
       rootNavigationRef1(inviteCode[30])(obj21);
@@ -285,7 +285,7 @@ export default function handleSupportedURL(payload) {
         } else if (constants2.REMOTE_AUTH === type) {
           remoteAuthFingerprint = payload.remoteAuthFingerprint;
           pathname(null != remoteAuthFingerprint ? (() => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15641, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15682, dependencyMap.paths), { remoteAuthFingerprint }, "REMOTE_AUTH_MODAL");
           }) : (() => {
             let obj = payload(inviteCode[40]);
             const tmp3 = payload(inviteCode[40]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;
@@ -342,7 +342,7 @@ export default function handleSupportedURL(payload) {
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -409,7 +409,7 @@ export default function handleSupportedURL(payload) {
                     const obj3 = payload(paths[48]);
                   }
                   c4 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } catch (tmp35) {
                 c4 = tmp;
@@ -438,7 +438,7 @@ export default function handleSupportedURL(payload) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -492,7 +492,7 @@ export default function handleSupportedURL(payload) {
                   const obj4 = tmp4(paths[51]);
                 }
                 c2 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } catch (tmp37) {
                 c2 = tmp;
                 throw tmp37;
@@ -550,7 +550,7 @@ export default function handleSupportedURL(payload) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -609,15 +609,15 @@ export default function handleSupportedURL(payload) {
                       if (null != tmp19) {
                         obj7.openid_params = tmp19;
                       }
-                      closure_1(6738).popAll();
-                      const obj5 = closure_1(6738);
+                      closure_1(6744).popAll();
+                      const obj5 = closure_1(6744);
                       tmp10 = tmp50;
                       const obj10 = { screen: constants.CONNECTIONS };
-                      dependencyMap(7557).openUserSettings(obj10);
-                      const obj6 = dependencyMap(7557);
+                      dependencyMap(7563).openUserSettings(obj10);
+                      const obj6 = dependencyMap(7563);
                       c7 = 1;
                       c8 = 1;
-                      const obj11 = { value: closure_1(7341).callback(payload.provider, obj7), done: false };
+                      const obj11 = { value: closure_1(7347).callback(payload.provider, obj7), done: false };
                       return obj11;
                     } else {
                       c8 = 3;
@@ -633,12 +633,12 @@ export default function handleSupportedURL(payload) {
                   if (body != null) {
                     redirect = body.redirect;
                   }
-                  closure_133_1 = closure_1(1378).toURLSafe(redirect);
+                  closure_133_1 = closure_1(1377).toURLSafe(redirect);
                   if (null != closure_133_1) {
-                    closure_1(5704).openURL(closure_133_1.toString());
-                    const obj13 = closure_1(5704);
+                    closure_1(5709).openURL(closure_133_1.toString());
+                    const obj13 = closure_1(5709);
                   }
-                  const obj12 = closure_1(1378);
+                  const obj12 = closure_1(1377);
                 }
                 c8 = 3;
                 const obj = { value, done: true };
@@ -714,7 +714,7 @@ export default function handleSupportedURL(payload) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     try {

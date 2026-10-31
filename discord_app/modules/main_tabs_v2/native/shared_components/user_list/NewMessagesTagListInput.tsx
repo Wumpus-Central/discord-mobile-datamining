@@ -1,23 +1,23 @@
-// === Module 13867: NewMessagesTagListInput ===
+// === Module 13902: NewMessagesTagListInput ===
 
-// Module 13867 (NewMessagesTagListInput)
+// Module 13902 (NewMessagesTagListInput)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5018 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10710 */;
+import util from "util" /* 1113 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10730 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { searchBarContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, header: null, showSearchButton: null };
 let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;

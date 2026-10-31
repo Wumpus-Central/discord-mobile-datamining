@@ -1,16 +1,16 @@
-// === Module 12059: useInlineFrameOAuthNavigation ===
+// === Module 12097: useInlineFrameOAuthNavigation ===
 
-// Module 12059 (useInlineFrameOAuthNavigation)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+// Module 12097 (useInlineFrameOAuthNavigation)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6840 */;
+import FramesStore from "FramesStore" /* 6846 */;
 
 require = fn;
-const isLaunched = fn(6841).isLaunched;
+const isLaunched = fn(6847).isLaunched;
 const ComponentActions = fn(1072).ComponentActions;
-let closure_8 = fn(10885).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_8 = fn(10910).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 
@@ -49,7 +49,7 @@ export default function useInlineFrameOAuthNavigation(arg0) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

@@ -1,12 +1,12 @@
-// === Module 16623: PasskeyInitStep ===
+// === Module 16665: PasskeyInitStep ===
 
-// Module 16623 (PasskeyInitStep)
+// Module 16665 (PasskeyInitStep)
 import nativeDefault from "native" /* 575 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6742 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6748 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WebAuthnStore from "WebAuthnStore" /* 16526 */;
+import WebAuthnStore from "WebAuthnStore" /* 16568 */;
 
 require = fn;
 function CredentialList(navigation) {
@@ -21,17 +21,17 @@ function CredentialList(navigation) {
   [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
     let obj2 = { style: tmp3.upsellContainer, children: null };
-    const items1 = [closure_9(tmp(16624).PasskeysSpotIllustration, { scale: 0.6 }), ];
+    const items1 = [closure_9(tmp(16666).PasskeysSpotIllustration, { scale: 0.6 }), ];
     let obj3 = { variant: "text-md/normal", style: tmp3.upsellText, children: null };
-    let intl2 = tmp(1114).intl;
-    obj3.children = intl2.string(tmp(1114).t.FSNwFW);
-    items1[1] = closure_9(tmp(5619).Text, obj3);
+    let intl2 = tmp(1113).intl;
+    obj3.children = intl2.string(tmp(1113).t.FSNwFW);
+    items1[1] = closure_9(tmp(5624).Text, obj3);
     obj2.children = items1;
     return closure_10(View, obj2);
   } else {
     let obj4 = { title: null, hasIcons: false, children: null };
-    let intl = tmp(1114).intl;
-    obj4.title = intl.string(tmp(1114).t["4RIqrQ"]);
+    let intl = tmp(1113).intl;
+    obj4.title = intl.string(tmp(1113).t["4RIqrQ"]);
     obj4.children = credentials.map((label) => {
       let obj = { label: label.name, trailing: null, subLabel: null };
       const credential = label;
@@ -52,7 +52,7 @@ function CredentialList(navigation) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -107,7 +107,7 @@ function CredentialList(navigation) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     try {
@@ -145,7 +145,7 @@ function CredentialList(navigation) {
                         c3 = 0;
                         setDeleting(false);
                         c4 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } catch (tmp24) {
                       closure_2 = tmp24;
@@ -205,7 +205,7 @@ function CredentialList(navigation) {
       obj.subLabel = formatResult;
       return closure_1_9(navigation(_undefined[25]).TableRow, obj, label.id);
     });
-    return closure_9(tmp(7054).TableRowGroup, obj4);
+    return closure_9(tmp(7060).TableRowGroup, obj4);
   }
   const tmp4 = _slicedToArray(noop.useState(false), 2);
 }
@@ -213,7 +213,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8 }, upsellContainer: null, upsellText: null, iconButtonGroup: null, headerAddButton: null };
 let obj3 = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: nativeDefault.space.PX_16, marginRight: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8 };
 obj2.upsellContainer = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };

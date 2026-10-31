@@ -1,7 +1,7 @@
-// === Module 5005: BurstReactionEffectUtils ===
+// === Module 5010: BurstReactionEffectUtils ===
 
-// Module 5005 (BurstReactionEffectUtils)
-import ColorUtils from "ColorUtils" /* 5006 */;
+// Module 5010 (BurstReactionEffectUtils)
+import ColorUtils from "ColorUtils" /* 5011 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

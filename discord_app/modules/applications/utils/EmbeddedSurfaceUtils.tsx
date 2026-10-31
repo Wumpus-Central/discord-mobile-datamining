@@ -1,6 +1,6 @@
-// === Module 2026: EmbeddedSurfaceUtils ===
+// === Module 2024: EmbeddedSurfaceUtils ===
 
-// Module 2026 (EmbeddedSurfaceUtils)
+// Module 2024 (EmbeddedSurfaceUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/utils/EmbeddedSurfaceUtils.tsx");

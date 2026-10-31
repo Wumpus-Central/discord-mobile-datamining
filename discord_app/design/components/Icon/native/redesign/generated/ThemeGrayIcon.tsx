@@ -1,9 +1,9 @@
-// === Module 18390: ThemeGrayIcon ===
+// === Module 18433: ThemeGrayIcon ===
 
-// Module 18390 (ThemeGrayIcon)
+// Module 18433 (ThemeGrayIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod18391 from "module_18391" /* 18391 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod18434 from "module_18434" /* 18434 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ThemeGrayIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18391, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18434, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

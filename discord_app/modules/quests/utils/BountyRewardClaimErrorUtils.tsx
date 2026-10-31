@@ -1,7 +1,7 @@
-// === Module 16871: BountyRewardClaimErrorUtils ===
+// === Module 16927: BountyRewardClaimErrorUtils ===
 
-// Module 16871 (BountyRewardClaimErrorUtils)
-import util from "util" /* 1114 */;
+// Module 16927 (BountyRewardClaimErrorUtils)
+import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
 const set = new Set([260021]);

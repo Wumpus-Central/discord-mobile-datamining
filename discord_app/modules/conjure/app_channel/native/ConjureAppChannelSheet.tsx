@@ -1,21 +1,21 @@
-// === Module 14533: ConjureAppChannelSheet ===
+// === Module 14571: ConjureAppChannelSheet ===
 
-// Module 14533 (ConjureAppChannelSheet)
+// Module 14571 (ConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5253 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import useChannelNameDefault from "useChannelName" /* 5647 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7414 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8191 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9099 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 10828 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10957 */;
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14531 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import useChannelNameDefault from "useChannelName" /* 5652 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7420 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8199 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9118 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 10848 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10976 */;
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 14569 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14530 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14568 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
 
 const ConjureRemixSheetDefault = ConjureRemixSheet;
 
@@ -149,7 +149,7 @@ function ConjureAppChannelSheetContent(channel) {
         project: remixProject,
         currentGuildId: guild_id,
         onRemixed(arg0) {
-            return guild_id(remixProject[20])(arg0);
+            return guild_id(remixProject[20])(arg0, { entryPoint: "remix" });
           }
       };
       obj3.content = closure_2_10(ConjureRemixSheetDefault, obj4);
@@ -160,7 +160,7 @@ function ConjureAppChannelSheetContent(channel) {
   const callback1 = noop.useCallback(() => {
     if (null != closure_3) {
       const result = openConjureAppChannelSheet.closeConjureAppChannelSheet();
-      openConjureHomeScreenDefault(tmp.id);
+      openConjureHomeScreenDefault(tmp.id, { entryPoint: "app_channel" });
     }
   }, items11);
   const items13 = [channel.id];
@@ -319,7 +319,7 @@ const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_7, InstantInviteSources: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { content: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, centered: { textAlign: "center" } };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -346,10 +346,10 @@ export default noop.memo(function ConjureAppChannelSheet(channelId) {
     const obj5 = { spacing: stateFromStores(575).space.PX_24, children: null };
     const obj6 = { channel: stateFromStores };
     obj5.children = closure_10(ConjureAppChannelSheetContent, obj6);
-    obj4.children = closure_10(tmp2(6022).Stack, obj5);
-    obj3.children = closure_10(tmp2(7286).SafeAreaPaddingView, obj4);
-    obj2.children = closure_10(tmp2(5270).BottomSheetScrollView, obj3);
-    tmp6 = closure_10(tmp2(5267).BottomSheet, obj2);
+    obj4.children = closure_10(tmp2(6027).Stack, obj5);
+    obj3.children = closure_10(tmp2(7292).SafeAreaPaddingView, obj4);
+    obj2.children = closure_10(tmp2(5275).BottomSheetScrollView, obj3);
+    tmp6 = closure_10(tmp2(5272).BottomSheet, obj2);
   }
   return tmp6;
 });

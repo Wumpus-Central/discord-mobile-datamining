@@ -1,10 +1,10 @@
-// === Module 19340: AutomodRemovedContentSheet ===
+// === Module 19397: AutomodRemovedContentSheet ===
 
-// Module 19340 (AutomodRemovedContentSheet)
+// Module 19397 (AutomodRemovedContentSheet)
 import nativeDefault from "native" /* 575 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6058 */;
-import RowGeneratorDefault from "RowGenerator" /* 8369 */;
-import ChatItemDefault from "ChatItem" /* 9864 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
+import RowGeneratorDefault from "RowGenerator" /* 8377 */;
+import ChatItemDefault from "ChatItem" /* 9885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const MessageFlags = fn(1072).MessageFlags;
 const jsx = fn(21).jsx;
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { content: null, blockedMessage: null };
 const tmp2 = new RowGeneratorDefault();
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -35,8 +35,8 @@ export default function AutomodRemovedContentSheet(action) {
       ephemeralIndication = message.ephemeralIndication;
     }
     if (null != ephemeralIndication) {
-      const intl = message(1114).intl;
-      message.message.ephemeralIndication.content = intl.string(message(1114).t.Nb1EQx);
+      const intl = message(1113).intl;
+      message.message.ephemeralIndication.content = intl.string(message(1113).t.Nb1EQx);
     }
   }, []);
   const memo = noop.useMemo(() => {
@@ -53,18 +53,18 @@ export default function AutomodRemovedContentSheet(action) {
     }
     return messageRecord;
   }, items);
-  let intl = message(1114).intl;
+  let intl = message(1113).intl;
   if (null != thread) {
-    let StrErG = tmp5(1114).t["8czF24"];
+    let StrErG = tmp5(1113).t["8czF24"];
   } else {
-    StrErG = tmp5(1114).t.StrErG;
+    StrErG = tmp5(1113).t.StrErG;
   }
   let obj = { title: intl.string(StrErG), subtitle: null };
   let name;
   if (thread != null) {
     name = thread.name;
   }
-  let obj2 = { header: jsx(message(7315).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
+  let obj2 = { header: jsx(message(7321).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
   obj.subtitle = name;
   const obj3 = { style: tmp.content, children: null };
   if (null != memo) {
@@ -74,9 +74,9 @@ export default function AutomodRemovedContentSheet(action) {
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
     const obj6 = { variant: "text-md/normal", color: "text-default", children: action.notice };
-    tmp4Result = jsx(tmp5(5619).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
+    tmp4Result = jsx(tmp5(5624).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(7360).ActionSheet, { header: jsx(message(7315).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
+  return jsx(message(7366).ActionSheet, { header: jsx(message(7321).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
 };

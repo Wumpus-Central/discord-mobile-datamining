@@ -1,33 +1,34 @@
-// === Module 11305: ChannelHeaderShared ===
+// === Module 11337: ChannelHeaderShared ===
 
-// Module 11305 (ChannelHeaderShared)
+// Module 11337 (ChannelHeaderShared)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import useToken from "useToken" /* 5591 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import useChannelName from "useChannelName" /* 5647 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import Pressables from "Pressables" /* 6974 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7143 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8595 */;
-import BotTagDefault from "BotTag" /* 9183 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10752 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10779 */;
-import _modDef11306 from "module_11306" /* 11306 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 11307 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import useToken from "useToken" /* 5596 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import useChannelName from "useChannelName" /* 5652 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import Pressables from "Pressables" /* 6980 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7149 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
+import BotTagDefault from "BotTag" /* 9202 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10772 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10799 */;
+import _modDef11338 from "module_11338" /* 11338 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 11339 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 11340 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function TitleWrapper(headerAccessibilityLabel) {
   ({ children, onPress, titleContentHeight } = headerAccessibilityLabel);
   c1 = undefined;
-  const tmp = closure_11();
+  const tmp = closure_12();
   [tmp3, c1] = noop.useState(undefined);
   [][0] = titleContentHeight;
   const callback = noop.useCallback((nativeEvent) => {
@@ -53,7 +54,7 @@ function ChannelTitle(guildId) {
     disableArrow = false;
   }
   ({ userId, icon } = guildId);
-  const tmp = closure_11();
+  const tmp = closure_12();
   const obj = { style: tmp.channelContent, children: null };
   const obj2 = { style: tmp.nameWithArrow, children: null };
   let tmp4 = null;
@@ -75,7 +76,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef11306, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef11338, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -97,7 +98,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "done", isMobileOnline: true, isVROnline: null, style: "sku", autoStatusCutout: null };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "done", isMobileOnline: true, isVROnline: null, style: "button", autoStatusCutout: "Group DM" };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;
@@ -105,7 +106,7 @@ function UserAvatar(user) {
   obj.status = tmp3;
   obj.isMobileOnline = isMobileOnline;
   obj.isVROnline = isVROnline;
-  obj.style = closure_11().channelIcon;
+  obj.style = closure_12().channelIcon;
   return React6(native.Avatar, obj);
 }
 function ChannelIconRaw(IconComponent) {
@@ -166,7 +167,7 @@ function ParentChannelSubTitle(channel) {
   const obj = { lineClamp: 1, accessibilityLabel: null, style: null, children: null };
   const intl = util.intl;
   const obj2 = { channelName: null };
-  const tmp = closure_11();
+  const tmp = closure_12();
   obj2.channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   obj.accessibilityLabel = intl.formatToPlainString(util.t.BjYvHO, obj2);
   obj.style = tmp.parentChannelName;
@@ -175,18 +176,28 @@ function ParentChannelSubTitle(channel) {
 }
 function AppSubTitle(application) {
   application = application.application;
-  const tmp = closure_11();
+  const tmp = closure_12();
   const obj2 = { style: tmp.appSubTitle, children: null };
-  let tmp7 = null;
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle");
   if (null != application.icon) {
     const obj3 = { source: null, style: null };
-    const tmp10 = FastImageDefault;
-    ({ id: obj5.id, icon: obj5.icon } = application);
-    obj3.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null, size: 16 });
+    const tmp13 = FastImageDefault;
+    const obj5 = { id: null, icon: null, size: null };
+    ({ id: obj7.id, icon: obj7.icon } = application);
+    obj5.size = v16;
+    obj3.source = AvatarUtilsDefault.getApplicationIconSource(obj5);
     obj3.style = tmp.appIcon;
-    tmp7 = React6(tmp10, obj3);
-    const obj6 = { id: null, icon: null, size: 16 };
+    let tmp7 = React6(tmp13, obj3);
+  } else {
+    tmp7 = null;
+    if (null != application.conjureProjectId) {
+      const obj8 = { style: tmp.appIcon, children: null };
+      const obj9 = { applicationId: null, name: null, size: null };
+      ({ id: obj4.applicationId, name: obj4.name } = application);
+      obj9.size = v16;
+      obj8.children = React6(ConjureAppIconTileDefault, obj9);
+      tmp7 = React6(hasOwnProperty, obj8);
+    }
   }
   const items = [tmp7, , ];
   let str = "text-sm/normal";
@@ -199,14 +210,14 @@ function AppSubTitle(application) {
   return React7(hasOwnProperty, obj2);
 }
 function AppSubTitleSkeleton() {
-  const tmp = closure_11();
+  const tmp = closure_12();
   const obj = { style: tmp.appSubTitle, "aria-hidden": true, children: null };
   const items = [React6(hasOwnProperty, { style: tmp.skeletonIcon }), React6(hasOwnProperty, { style: tmp.skeletonName })];
   obj.children = items;
   return React7(hasOwnProperty, obj);
 }
 function NoAppSubTitle() {
-  const tmp = closure_11();
+  const tmp = closure_12();
   const manaTypeConsolidationExperiment = ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle");
   let str = "text-sm/normal";
   if (manaTypeConsolidationExperiment) {
@@ -218,25 +229,26 @@ function NoAppSubTitle() {
   return React6(Text_Text.Text, obj2);
 }
 function EmptyIcon() {
-  return React6(hasOwnProperty, { style: closure_11().channelIconWrapper });
+  return React6(hasOwnProperty, { style: closure_12().channelIconWrapper });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5009);
-let closure_11 = createStyles.createStyles(() => {
+let c11 = 16;
+const createStyles = fn(5014);
+let closure_12 = createStyles.createStyles(() => {
   const obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 }, channelIcon: { marginRight: 12, flexShrink: 0 }, channelIconWrapper: { width: 32, height: 32, justifyContent: "center", alignItems: "center" }, guildChannelIcon: null, subTitleContainer: null, appSubTitle: null, appIcon: null, appName: null, noApp: null, skeletonIcon: null, skeletonName: null, parentChannelName: null };
   const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };
   obj.guildChannelIcon = { tintColor: nativeDefault.colors.TEXT_STRONG };
   obj.subTitleContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
   const obj3 = { tintColor: nativeDefault.colors.TEXT_STRONG };
   obj.appSubTitle = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flexShrink: 1 };
-  const size = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs };
+  const size = { width: v16, height: v16, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
   obj.appIcon = size;
   obj.appName = { flexShrink: 1 };
   obj.noApp = { fontStyle: "italic" };
-  const size1 = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+  const size1 = { width: v16, height: v16, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
   obj.skeletonIcon = size1;
   const size2 = { width: 96, height: 10, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
   obj.skeletonName = size2;

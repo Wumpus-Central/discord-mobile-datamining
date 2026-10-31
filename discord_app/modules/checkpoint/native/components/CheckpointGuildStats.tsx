@@ -1,16 +1,16 @@
-// === Module 13607: CheckpointGuildStats ===
+// === Module 13644: CheckpointGuildStats ===
 
-// Module 13607 (CheckpointGuildStats)
+// Module 13644 (CheckpointGuildStats)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef3059 from "module_3059" /* 3059 */;
-import CheckpointConstants from "CheckpointConstants" /* 6061 */;
-import ChatIcon from "ChatIcon" /* 8635 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 11933 */;
-import CheckpointTextDefault from "CheckpointText" /* 13587 */;
+import util from "util" /* 1113 */;
+import _modDef3060 from "module_3060" /* 3060 */;
+import CheckpointConstants from "CheckpointConstants" /* 6066 */;
+import ChatIcon from "ChatIcon" /* 8643 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11971 */;
+import CheckpointTextDefault from "CheckpointText" /* 13624 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -30,13 +30,13 @@ export default function CheckpointGuildStats(arg0) {
   const rounded1 = Math.round(numMessagesSent);
   const intl = util.intl;
   const intl2 = util.intl;
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef3059.UZbUtl, { numMinutes: rounded });
+  const formatToPlainStringResult = intl.formatToPlainString(_modDef3060.UZbUtl, { numMinutes: rounded });
   const obj = { style: tmp.stats, children: null };
   const obj2 = { accessible: true, accessibilityLabel: "" + rounded + " " + formatToPlainStringResult.toLocaleLowerCase(), style: tmp.stat, children: null };
   const items = [hasOwnProperty(MicrophoneIcon.MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), hasOwnProperty(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.text, children: rounded })];
   obj2.children = items;
   const items1 = [timestampProducer(View, obj2), ];
-  const obj5 = { accessible: true, accessibilityLabel: "" + rounded1 + " " + intl2.string(_modDef3059.wWKySP).toLocaleLowerCase(), style: tmp.stat, children: null };
+  const obj5 = { accessible: true, accessibilityLabel: "" + rounded1 + " " + intl2.string(_modDef3060.wWKySP).toLocaleLowerCase(), style: tmp.stat, children: null };
   const items2 = [hasOwnProperty(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), hasOwnProperty(CheckpointTextDefault, { variant: "experimental/mono-md/bold", style: tmp.text, children: rounded1 })];
   obj5.children = items2;
   items1[1] = timestampProducer(View, obj5);

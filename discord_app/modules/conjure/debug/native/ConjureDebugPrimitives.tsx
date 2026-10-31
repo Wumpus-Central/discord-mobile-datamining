@@ -1,12 +1,12 @@
-// === Module 12980: ConjureDebugPrimitives ===
+// === Module 13015: ConjureDebugPrimitives ===
 
-// Module 12980 (ConjureDebugPrimitives)
+// Module 13015 (ConjureDebugPrimitives)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 12978 */;
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 13013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { toolbar: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 }, toolbarStatus: { flex: 1 }, section: null, statRow: null, statRowHead: null, statLabel: null, statValue: null, statGroup: null, statValueGroup: null, meterTrack: null, meterFill: null, meterFillCritical: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 };
 obj2.section = { gap: nativeDefault.space.PX_8 };
@@ -47,7 +47,7 @@ export function DebugSnapshotToolbar(onRefresh) {
   } else if ("failed" === fetchState) {
     const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3865.ZVByPX);
+    obj3.children = intl2.string(_modDef3868.ZVByPX);
     tmp4Result = hasOwnProperty(Text_Text.Text, obj3);
   } else {
     tmp4Result = null;
@@ -55,7 +55,7 @@ export function DebugSnapshotToolbar(onRefresh) {
       const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
       const obj6 = { time: ConjureDebugFormat.formatObservedAt(generatedAt) };
-      obj4.children = intl.formatToPlainString(_modDef3865.INVO50, obj6);
+      obj4.children = intl.formatToPlainString(_modDef3868.INVO50, obj6);
       tmp4Result = hasOwnProperty(Text_Text.Text, obj4);
     }
   }
@@ -63,7 +63,7 @@ export function DebugSnapshotToolbar(onRefresh) {
   const items = [hasOwnProperty(React4, obj2), ];
   const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
   const intl3 = util.intl;
-  obj7.text = intl3.string(_modDef3865.oKEgiu);
+  obj7.text = intl3.string(_modDef3868.oKEgiu);
   obj7.onPress = onRefresh.onRefresh;
   items[1] = hasOwnProperty(components_Button_Button.Button, obj7);
   obj.children = items;

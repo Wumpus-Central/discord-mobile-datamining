@@ -1,20 +1,20 @@
-// === Module 7855: AnalyticsActions ===
+// === Module 7862: AnalyticsActions ===
 
-// Module 7855 (AnalyticsActions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5755 */;
-import QuestTypes from "QuestTypes" /* 6778 */;
-import AdCreativeType from "AdCreativeType" /* 6782 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7634 */;
-import QuestDataUtils from "QuestDataUtils" /* 7835 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7858 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7859 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7861 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7864 */;
+// Module 7862 (AnalyticsActions)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
+import QuestTypes from "QuestTypes" /* 6784 */;
+import AdCreativeType from "AdCreativeType" /* 6788 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7641 */;
+import QuestDataUtils from "QuestDataUtils" /* 7842 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7865 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7866 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7868 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7856 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1358 */;
-import QuestStore from "QuestStore" /* 7839 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7863 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
+import QuestStore from "QuestStore" /* 7846 */;
 
 require = fn;
 function getCommonProperties(adContentId, sourceQuestContent, QUEST, shouldExtendSession) {
@@ -180,7 +180,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

@@ -1,32 +1,32 @@
-// === Module 14670: ConjureProjectsSheet ===
+// === Module 14708: ConjureProjectsSheet ===
 
-// Module 14670 (ConjureProjectsSheet)
+// Module 14708 (ConjureProjectsSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import BottomSheetModal from "BottomSheetModal" /* 5270 */;
-import useMountEffectDefault from "useMountEffect" /* 5588 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import getTimestampStringDefault from "getTimestampString" /* 6071 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6947 */;
-import TableRow from "TableRow" /* 6969 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
-import Search_SearchBar from "Search/SearchBar" /* 7212 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7315 */;
-import ActionSheet from "ActionSheet" /* 7360 */;
-import IconButton from "IconButton" /* 8020 */;
-import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9654 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10957 */;
-import _modDef10961 from "module_10961" /* 10961 */;
-import ConjureProjectIcon from "ConjureProjectIcon" /* 12425 */;
-import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 14672 */;
-import useConjureOwnProjectListStateDefault from "useConjureOwnProjectListState" /* 14675 */;
+import util from "util" /* 1113 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import BottomSheetModal from "BottomSheetModal" /* 5275 */;
+import useMountEffectDefault from "useMountEffect" /* 5593 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import getTimestampStringDefault from "getTimestampString" /* 6076 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
+import TableRow from "TableRow" /* 6975 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import Search_SearchBar from "Search/SearchBar" /* 7218 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import ActionSheet from "ActionSheet" /* 7366 */;
+import IconButton from "IconButton" /* 8028 */;
+import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9674 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10976 */;
+import _modDef10980 from "module_10980" /* 10980 */;
+import ConjureProjectIcon from "ConjureProjectIcon" /* 12463 */;
+import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 14710 */;
+import useConjureOwnProjectListStateDefault from "useConjureOwnProjectListState" /* 14713 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10847 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
 
 const ConjureProjectIconDefault = ConjureProjectIcon;
 
@@ -46,18 +46,18 @@ function ProjectList(query) {
     const obj3 = { style: tmp.state, children: null };
     const obj4 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl4 = util.intl;
-    obj4.children = intl4.string(_modDef3865.X37fkR);
+    obj4.children = intl4.string(_modDef3868.X37fkR);
     obj3.children = React5(Text_Text.Text, obj4);
     tmp8 = React5(View, obj3);
   } else if ("error" === tmp4.kind) {
     const obj5 = { style: tmp.state, children: null };
     const obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj6.children = intl2.string(_modDef3865.DJAPMO);
+    obj6.children = intl2.string(_modDef3868.DJAPMO);
     const items = [React5(Text_Text.Text, obj6), ];
     const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl3 = util.intl;
-    obj7.text = intl3.string(_modDef3865["WFJ/vb"]);
+    obj7.text = intl3.string(_modDef3868["WFJ/vb"]);
     obj7.onPress = function onPress() {
       return ConjureActionCreators.listProjects();
     };
@@ -71,7 +71,7 @@ function ProjectList(query) {
     const obj = { style: tmp.state, children: null };
     const obj9 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = util.intl;
-    obj9.children = intl.string(_modDef3865["9/5sLV"]);
+    obj9.children = intl.string(_modDef3868["9/5sLV"]);
     obj.children = React5(Text_Text.Text, obj9);
     tmp8 = React5(View, obj);
   }
@@ -80,7 +80,7 @@ function ProjectList(query) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 + arg0 }, state: null, trailingIndicator: null, unreadDot: null };
   const obj2 = { gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 + arg0 };
@@ -94,8 +94,8 @@ let closure_9 = createStyles.createStyles((arg0) => {
 let closure_10 = noop.memo(function ProjectRow(project) {
   project = project.project;
   let unreadDot = closure_9(0);
-  const conjureHomeProjectState = project(14661).useConjureHomeProjectState(project.id);
-  const obj = project(14661);
+  const conjureHomeProjectState = project(14699).useConjureHomeProjectState(project.id);
+  const obj = project(14699);
   const items = [ConjurePublishStatusStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(items, () => {
@@ -110,27 +110,27 @@ let closure_10 = noop.memo(function ProjectRow(project) {
     return publishState;
   }, items1);
   const obj2 = project(504);
-  const result = project(14661).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
-  const obj3 = project(14661);
-  const result1 = project(14661).conjureProjectLastActivityTime(project);
+  const result = project(14699).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  const obj3 = project(14699);
+  const result1 = project(14699).conjureProjectLastActivityTime(project);
   if ("deleting" === conjureHomeProjectState) {
-    const intl3 = tmp(1114).intl;
-    let stringResult = intl3.string(_modDef3865.Yh5pAc);
+    const intl3 = tmp(1113).intl;
+    let stringResult = intl3.string(_modDef3868.Yh5pAc);
   } else if ("in_progress" === conjureHomeProjectState) {
-    const intl2 = tmp(1114).intl;
-    stringResult = intl2.string(_modDef3865["Y8pS+n"]);
+    const intl2 = tmp(1113).intl;
+    stringResult = intl2.string(_modDef3868["Y8pS+n"]);
   } else {
     let tmp7ResultResult = null;
     if (null != result1) {
-      const obj5 = { since: result1, getFormatter: tmp(6071).getAbbreviatedFormatter, includeWeeks: true };
+      const obj5 = { since: result1, getFormatter: tmp(6076).getAbbreviatedFormatter, includeWeeks: true };
       tmp7ResultResult = getTimestampStringDefault(obj5);
       const tmp7Result = getTimestampStringDefault;
     }
     const items2 = [tmp7ResultResult, tmp8, ];
     let stringResult1 = null;
     if (result) {
-      const intl = tmp(1114).intl;
-      stringResult1 = intl.string(_modDef3865.CSAaT0);
+      const intl = tmp(1113).intl;
+      stringResult1 = intl.string(_modDef3868.CSAaT0);
     }
     items2[2] = stringResult1;
     const found = items2.filter((item) => null != item);
@@ -139,8 +139,8 @@ let closure_10 = noop.memo(function ProjectRow(project) {
   const items3 = [project.name, stringResult, ];
   let stringResult2 = null;
   if ("unread" === conjureHomeProjectState) {
-    const intl4 = tmp(1114).intl;
-    stringResult2 = intl4.string(_modDef3865["N+3Pzk"]);
+    const intl4 = tmp(1113).intl;
+    stringResult2 = intl4.string(_modDef3868["N+3Pzk"]);
   }
   items3[2] = stringResult2;
   const found1 = items3.filter((item) => {
@@ -165,9 +165,9 @@ let closure_10 = noop.memo(function ProjectRow(project) {
         obj6.trailing = undefined;
         obj6.disabled = tmp9;
         obj6.onPress = function onPress() {
-          return openConjureHomeScreenDefault(project.id);
+          return openConjureHomeScreenDefault(project.id, { entryPoint: "project_list" });
         };
-        return closure_7(tmp(6969).TableRow, obj6);
+        return closure_7(tmp(6975).TableRow, obj6);
       }
     }
   }
@@ -178,11 +178,11 @@ let closure_10 = noop.memo(function ProjectRow(project) {
     obj8.style = unreadDot;
     let tmp17Result = closure_7(View, obj8);
   } else {
-    tmp17Result = closure_7(tmp(6947).ActivityIndicator, { size: "small" });
+    tmp17Result = closure_7(tmp(6953).ActivityIndicator, { size: "small" });
   }
   obj7.children = tmp17Result;
   closure_7(View, obj7);
-  const obj4 = project(14661);
+  const obj4 = project(14699);
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectsSheet.tsx");
@@ -201,12 +201,12 @@ export default function ConjureProjectsSheet() {
   });
   const obj = { title: null, trailing: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3865.uk6jhJ);
+  obj.title = intl.string(_modDef3868.uk6jhJ);
   let tmp10Result;
   if ("you_screen" === placement) {
-    const obj2 = { icon: _modDef10961, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+    const obj2 = { icon: _modDef10980, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
     const intl2 = util.intl;
-    obj2.accessibilityLabel = intl2.string(_modDef3865.qCBh6V);
+    obj2.accessibilityLabel = intl2.string(_modDef3868.qCBh6V);
     obj2.onPress = confirmPin;
     tmp10Result = React5(IconButton.IconButton, obj2);
   }
@@ -215,16 +215,16 @@ export default function ConjureProjectsSheet() {
   const obj4 = { contentContainerStyle: tmp3.scrollContent, scrollIndicatorInsets: { bottom }, keyboardShouldPersistTaps: "handled", children: null };
   const obj5 = { size: "md", onChange: tmp6, placeholder: null, accessibilityLabel: null };
   const intl3 = util.intl;
-  obj5.placeholder = intl3.string(_modDef3865["2y8sUh"]);
+  obj5.placeholder = intl3.string(_modDef3868["2y8sUh"]);
   const intl4 = util.intl;
-  obj5.accessibilityLabel = intl4.string(_modDef3865.u0kEN9);
+  obj5.accessibilityLabel = intl4.string(_modDef3868.u0kEN9);
   const items = [React5(Search_SearchBar.SearchBar, obj5), , ];
   const obj6 = { hasIcons: true, children: null };
   const obj7 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
   const intl5 = util.intl;
-  obj7.label = intl5.string(_modDef3865.bnVYYC);
+  obj7.label = intl5.string(_modDef3868.bnVYYC);
   const intl6 = util.intl;
-  obj7.subLabel = intl6.string(_modDef3865.gnzLwZ);
+  obj7.subLabel = intl6.string(_modDef3868.gnzLwZ);
   obj7.icon = React5(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
   obj7.onPress = function onPress() {
     return openConjureHomeScreenDefault(undefined, { focusComposer: true });

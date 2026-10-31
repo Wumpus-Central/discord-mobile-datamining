@@ -1,20 +1,20 @@
-// === Module 16508: UserProfileWidgetEditingHeader ===
+// === Module 16550: UserProfileWidgetEditingHeader ===
 
-// Module 16508 (UserProfileWidgetEditingHeader)
+// Module 16550 (UserProfileWidgetEditingHeader)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import IconButton from "IconButton" /* 8020 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9550 */;
-import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 12304 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import IconButton from "IconButton" /* 8028 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 9572 */;
+import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 12342 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, heading: { flex: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

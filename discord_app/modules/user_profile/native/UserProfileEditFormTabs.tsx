@@ -1,13 +1,13 @@
-// === Module 16507: UserProfileEditFormTabs ===
+// === Module 16549: UserProfileEditFormTabs ===
 
-// Module 16507 (UserProfileEditFormTabs)
+// Module 16549 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import ChatInputUtils from "ChatInputUtils" /* 5202 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14908 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16506 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16508 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 16509 */;
+import util from "util" /* 1113 */;
+import ChatInputUtils from "ChatInputUtils" /* 5207 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14946 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 16548 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 16550 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 16551 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,10 +17,10 @@ function MainPage() {
   return timestampProducer(View, { style: closure_9().page, children: noop.useContext(UserProfileEditFormMainPageContextDefault) });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7371).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7377).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING }, page: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING };
 obj.page = { paddingHorizontal: PROFILE_SIDE_PADDING, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 };

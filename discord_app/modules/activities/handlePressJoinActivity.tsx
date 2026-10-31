@@ -1,18 +1,18 @@
-// === Module 11755: handlePressJoinActivity ===
+// === Module 11792: handlePressJoinActivity ===
 
-// Module 11755 (handlePressJoinActivity)
-import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 11711 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11752 */;
+// Module 11792 (handlePressJoinActivity)
+import util from "util" /* 1113 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 11748 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11789 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2017 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import UserStore from "UserStore" /* 1384 */;
-import VoiceStateStore from "VoiceStateStore" /* 5674 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
+import ApplicationRecord from "ApplicationRecord" /* 2016 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import UserStore from "UserStore" /* 1383 */;
+import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
 
 require = fn;
 function handlePressJoinActivity(arg0) {
@@ -145,7 +145,7 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -174,7 +174,7 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp13) {
           c0 = tmp;
           throw tmp13;

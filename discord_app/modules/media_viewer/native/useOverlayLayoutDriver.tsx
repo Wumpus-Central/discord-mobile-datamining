@@ -1,9 +1,9 @@
-// === Module 14730: useOverlayLayoutDriver ===
+// === Module 14768: useOverlayLayoutDriver ===
 
-// Module 14730 (useOverlayLayoutDriver)
-import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
+// Module 14768 (useOverlayLayoutDriver)
+import native from "native" /* 1187 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,9 +15,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useOverlayLayoutDriver.tsx");
 
 export function useOverlayLayoutDriver() {
-  sharedValue = sharedValue(5090).useSharedValue(0);
-  let obj = sharedValue(5090);
-  const mediaViewerDimensions = sharedValue(8858).useMediaViewerDimensions();
+  sharedValue = sharedValue(5095).useSharedValue(0);
+  let obj = sharedValue(5095);
+  const mediaViewerDimensions = sharedValue(8867).useMediaViewerDimensions();
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = noop.useEffect(() => {

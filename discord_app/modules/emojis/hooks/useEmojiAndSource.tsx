@@ -1,15 +1,15 @@
-// === Module 10037: useEmojiAndSource ===
+// === Module 10058: useEmojiAndSource ===
 
-// Module 10037 (useEmojiAndSource)
-import EmojiTypes from "EmojiTypes" /* 4958 */;
+// Module 10058 (useEmojiAndSource)
+import EmojiTypes from "EmojiTypes" /* 4963 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import EmojiStore from "EmojiStore" /* 6790 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import EmojiStore from "EmojiStore" /* 6796 */;
 
 require = fn;
-const ExpressionSourceRecord = fn(6952);
+const ExpressionSourceRecord = fn(6958);
 ({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);
@@ -103,7 +103,7 @@ export function useEmojiAndSource(emojiId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -157,7 +157,7 @@ export function useEmojiAndSource(emojiId) {
             current();
           }
           v3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp34) {
           v3 = tmp;
           throw tmp34;

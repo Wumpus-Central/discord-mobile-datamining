@@ -1,9 +1,9 @@
-// === Module 19510: InterestGameCover ===
+// === Module 19567: InterestGameCover ===
 
-// Module 19510 (InterestGameCover)
+// Module 19567 (InterestGameCover)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { cover: null, image: null, name: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

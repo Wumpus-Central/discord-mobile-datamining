@@ -1,6 +1,6 @@
-// === Module 1097: SKUFlags ===
+// === Module 1096: SKUFlags ===
 
-// Module 1097 (SKUFlags)
+// Module 1096 (SKUFlags)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SKUFlags.tsx");

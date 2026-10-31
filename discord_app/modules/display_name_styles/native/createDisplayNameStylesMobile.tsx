@@ -1,10 +1,10 @@
-// === Module 8413: createDisplayNameStylesMobile ===
+// === Module 8421: createDisplayNameStylesMobile ===
 
-// Module 8413 (createDisplayNameStylesMobile)
-import DisplayNameFont from "DisplayNameFont" /* 1404 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import UserStore from "UserStore" /* 1384 */;
+// Module 8421 (createDisplayNameStylesMobile)
+import DisplayNameFont from "DisplayNameFont" /* 1403 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const size = fn(2);

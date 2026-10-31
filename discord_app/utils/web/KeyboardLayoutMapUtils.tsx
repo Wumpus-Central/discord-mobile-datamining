@@ -1,12 +1,12 @@
-// === Module 15907: KeyboardLayoutMapUtils ===
+// === Module 15948: KeyboardLayoutMapUtils ===
 
-// Module 15907 (KeyboardLayoutMapUtils)
+// Module 15948 (KeyboardLayoutMapUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
-import keyCodeDefault from "keyCode" /* 15906 */;
+import keyCodeDefault from "keyCode" /* 15947 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1358 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
 
 require = fn;
 function normalizeKey(toLocaleLowerCase) {
@@ -37,7 +37,7 @@ let closure_12 = async function _syncKeyboardLayoutMap() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -148,7 +148,7 @@ let closure_19 = async function _createKeyboardMapper() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -190,7 +190,7 @@ let closure_19 = async function _createKeyboardMapper() {
           }
         });
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -230,7 +230,7 @@ let closure_21 = async function _resetKeyboardMapper() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -263,7 +263,7 @@ let closure_21 = async function _resetKeyboardMapper() {
           obj.reset();
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp10) {
       c2 = tmp;
@@ -346,20 +346,20 @@ function getExactKeyboardEventMatchFromAny(key) {
   }
   return tmp4;
 }
-const KeyboardConstants = fn(7676);
+const KeyboardConstants = fn(7683);
 ({ LinuxKeyToCode, MacosKeyToCode, WindowsKeyToCode } = KeyboardConstants);
 const logger = new LoggerDefault("KeyboardLayoutMapUtils");
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 if (!PlatformUtils.isLinux()) {
   if (!obj2.isMac()) {
     if (!obj3.isWindows()) {
       WindowsKeyToCode = keyCodeDefault.codes;
     }
     MacosKeyToCode = WindowsKeyToCode;
-    obj3 = fn(1376);
+    obj3 = fn(1375);
   }
   LinuxKeyToCode = MacosKeyToCode;
-  obj2 = fn(1376);
+  obj2 = fn(1375);
 }
 function initializeKeyboardMapper() {
   if (null == closure_18) {

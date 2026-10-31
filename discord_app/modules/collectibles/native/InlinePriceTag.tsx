@@ -1,34 +1,34 @@
-// === Module 15000: InlinePriceTag ===
+// === Module 15037: InlinePriceTag ===
 
-// Module 15000 (InlinePriceTag)
+// Module 15037 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1988 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import useToken from "useToken" /* 5591 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7372 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7724 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7725 */;
-import useCurrentUser from "useCurrentUser" /* 8741 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9506 */;
-import OrbsIcon from "OrbsIcon" /* 9510 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9529 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9543 */;
-import TagIcon from "TagIcon" /* 9544 */;
-import useProductDisableState from "useProductDisableState" /* 9552 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 15006 */;
-import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 15007 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 15008 */;
+import util from "util" /* 1113 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import useToken from "useToken" /* 5596 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7378 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7731 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
+import useCurrentUser from "useCurrentUser" /* 8749 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
+import OrbsIcon from "OrbsIcon" /* 9532 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9551 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9565 */;
+import TagIcon from "TagIcon" /* 9566 */;
+import useProductDisableState from "useProductDisableState" /* 9574 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 15043 */;
+import MobileNitroUpsellInShopPdpExperimentDefault from "MobileNitroUpsellInShopPdpExperiment" /* 15044 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 15045 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7590 */;
+import IAPStore from "IAPStore" /* 7597 */;
 
 require = fn;
 function PriceTag(accessibilityLabel) {
@@ -137,7 +137,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(15001, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(15038, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
@@ -265,7 +265,7 @@ const Constants = fn(1072);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { priceTag: { flexDirection: "row", alignItems: "center" }, strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 }, strikedOrbPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7, marginRight: 4 }, regularPrice: {}, nitroIcon: { width: 20, height: 20, marginLeft: 8, marginRight: 4 }, nitroIconSubscribeNow: { marginLeft: 0 }, root: { flexDirection: "column" }, container: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" }, priceTagRow: { flexDirection: "row", alignItems: "center" }, nitroUpsellPill: { alignSelf: "stretch", marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.round, overflow: "hidden", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4 }, nitroUpsellGradient: null, nitroUpsellSavings: null, nitroUpsellCta: null, nitroUpsellIcon: null, nitroUpsellChevron: null, underline: null, subscribeNowPressable: null, androidTextPadding: null, orbsIcon: null, disabled: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -285,7 +285,7 @@ obj2.disabled = { opacity: 0.5 };
 let closure_12 = createStyles.createStyles(obj2);
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_19 = createStyles.createStyles(() => {
   const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: nativeDefault.radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
   let num;

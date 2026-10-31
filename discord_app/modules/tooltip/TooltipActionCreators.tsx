@@ -1,6 +1,6 @@
-// === Module 10231: TooltipActionCreators ===
+// === Module 10251: TooltipActionCreators ===
 
-// Module 10231 (TooltipActionCreators)
+// Module 10251 (TooltipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

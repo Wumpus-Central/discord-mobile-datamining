@@ -1,18 +1,18 @@
-// === Module 16505: EditableTileAvatarButton ===
+// === Module 16547: EditableTileAvatarButton ===
 
-// Module 16505 (EditableTileAvatarButton)
+// Module 16547 (EditableTileAvatarButton)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import UserSettings from "UserSettings" /* 4834 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8732 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 16494 */;
-import SpinAnimationDefault from "SpinAnimation" /* 16500 */;
-import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 16504 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import UserSettings from "UserSettings" /* 4839 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8740 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 16536 */;
+import SpinAnimationDefault from "SpinAnimation" /* 16542 */;
+import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 16546 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8723 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
 
 require = fn;
 class EditableTileAvatarButtonBase {

@@ -1,6 +1,6 @@
-// === Module 14645: SponsoredQuestUtils ===
+// === Module 14683: SponsoredQuestUtils ===
 
-// Module 14645 (SponsoredQuestUtils)
+// Module 14683 (SponsoredQuestUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/SponsoredQuestUtils.native.tsx");

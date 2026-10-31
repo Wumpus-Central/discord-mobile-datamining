@@ -1,9 +1,9 @@
-// === Module 5045: matchPathCompat ===
+// === Module 5050: matchPathCompat ===
 
-// Module 5045 (matchPathCompat)
-import _mod5046 from "module_5046" /* 5046 */;
+// Module 5050 (matchPathCompat)
+import _mod5051 from "module_5051" /* 5051 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/routing/matchPathCompat.tsx");
 
-export const matchPath = _mod5046.matchPath;
+export const matchPath = _mod5051.matchPath;

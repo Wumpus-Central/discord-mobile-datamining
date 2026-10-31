@@ -1,6 +1,6 @@
-// === Module 13417: ? ===
+// === Module 13453: ? ===
 
-// Module 13417
+// Module 13453
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_aura_06_luster.webp.js");

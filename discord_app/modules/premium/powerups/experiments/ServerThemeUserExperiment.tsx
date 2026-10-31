@@ -1,7 +1,7 @@
-// === Module 5229: ServerThemeUserExperiment ===
+// === Module 5234: ServerThemeUserExperiment ===
 
-// Module 5229 (ServerThemeUserExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 5234 (ServerThemeUserExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-05-server-theme-user", defaultConfig: { enabled: false }, variations: null };

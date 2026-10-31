@@ -1,7 +1,7 @@
-// === Module 12485: conjureHistoryRequests ===
+// === Module 12520: conjureHistoryRequests ===
 
-// Module 12485 (conjureHistoryRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 10929 */;
+// Module 12520 (conjureHistoryRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 10948 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -47,7 +47,7 @@ let closure_4 = async function _restoreSourceHistoryEntry(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -162,7 +162,7 @@ let closure_5 = async function _fetchDatabaseRestorePoints(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -266,7 +266,7 @@ let closure_7 = async function _createDatabaseRestorePoint(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -369,7 +369,7 @@ let closure_9 = async function _settleDatabaseRestore(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

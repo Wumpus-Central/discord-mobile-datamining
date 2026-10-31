@@ -1,7 +1,7 @@
-// === Module 7830: appMessageEmbedTracking ===
+// === Module 7837: appMessageEmbedTracking ===
 
-// Module 7830 (appMessageEmbedTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
+// Module 7837 (appMessageEmbedTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

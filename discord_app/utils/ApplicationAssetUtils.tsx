@@ -1,13 +1,13 @@
-// === Module 8713: ApplicationAssetUtils ===
+// === Module 8721: ApplicationAssetUtils ===
 
-// Module 8713 (ApplicationAssetUtils)
+// Module 8721 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1445 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1444 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8714 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8722 */;
 
 require = fn;
 function updateAssets() {
@@ -71,7 +71,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -137,7 +137,7 @@ let closure_18 = async function _resolveExternalAssets(arg0) {
         throw closure_1_6;
       }
       c9 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   }
 };

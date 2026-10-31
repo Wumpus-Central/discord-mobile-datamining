@@ -1,14 +1,14 @@
-// === Module 13207: GuildAntiRaidActionCreators ===
+// === Module 13242: GuildAntiRaidActionCreators ===
 
-// Module 13207 (GuildAntiRaidActionCreators)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import _modDef2044 from "module_2044" /* 2044 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9055 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 11008 */;
+// Module 13242 (GuildAntiRaidActionCreators)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import _modDef2042 from "module_2042" /* 2042 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 11027 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4880 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 require = fn;
 let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
@@ -27,7 +27,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -71,7 +71,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -91,9 +91,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef2044();
-    toISOStringResult = _modDef2044().add(tmp8, "hours").toISOString();
-    _modDef2044().add(tmp8, "hours");
+    _modDef2042();
+    toISOStringResult = _modDef2042().add(tmp8, "hours").toISOString();
+    _modDef2042().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -137,7 +137,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -186,7 +186,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8475).DEFAULT_LOCKDOWN_DURATION;
+const DEFAULT_LOCKDOWN_DURATION = fn(8483).DEFAULT_LOCKDOWN_DURATION;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);

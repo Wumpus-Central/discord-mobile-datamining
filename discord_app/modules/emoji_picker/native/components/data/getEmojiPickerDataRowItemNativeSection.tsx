@@ -1,7 +1,7 @@
-// === Module 9998: getEmojiPickerDataRowItemNativeSection ===
+// === Module 10019: getEmojiPickerDataRowItemNativeSection ===
 
-// Module 9998 (getEmojiPickerDataRowItemNativeSection)
-import useEmojiPickerData from "useEmojiPickerData" /* 9997 */;
+// Module 10019 (getEmojiPickerDataRowItemNativeSection)
+import useEmojiPickerData from "useEmojiPickerData" /* 10018 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");

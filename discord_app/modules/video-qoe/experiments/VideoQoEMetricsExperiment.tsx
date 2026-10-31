@@ -1,7 +1,7 @@
-// === Module 17050: VideoQoEMetricsExperiment ===
+// === Module 17108: VideoQoEMetricsExperiment ===
 
-// Module 17050 (VideoQoEMetricsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 17108 (VideoQoEMetricsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ name: "2025-09-video-qoe-metrics-tracking", kind: "user", defaultConfig: { externalAnalyticsEnabled: false }, variations: { 0: { externalAnalyticsEnabled: false }, 1: { externalAnalyticsEnabled: true } } });

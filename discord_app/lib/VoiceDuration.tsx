@@ -1,8 +1,8 @@
-// === Module 5941: VoiceDuration ===
+// === Module 5946: VoiceDuration ===
 
-// Module 5941 (VoiceDuration)
-import TimeUtils from "TimeUtils" /* 5767 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5801 */;
+// Module 5946 (VoiceDuration)
+import TimeUtils from "TimeUtils" /* 5772 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5806 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = [1, 100, 1000, 10000];
@@ -209,6 +209,66 @@ prototype["addSpeechChunk"] = function addSpeechChunk() {
       const result1 = speakingMinimumChunkCounts2.set(item, num2 + 1);
     });
   }
+};
+prototype["restartForFragment"] = function restartForFragment() {
+  const self = this;
+  const speaking = this.speaking;
+  let isRunningResult = speaking.isRunning();
+  const listening = this.listening;
+  const isRunningResult1 = listening.isRunning();
+  ({ muted, deafened } = this);
+  const listening2 = this.listening;
+  const isRunningResult2 = muted.isRunning();
+  listening2.reset();
+  const speaking2 = this.speaking;
+  speaking2.reset();
+  const participation = this.participation;
+  participation.reset();
+  const connected = this.connected;
+  connected.reset();
+  const muted2 = this.muted;
+  muted2.reset();
+  const deafened2 = this.deafened;
+  deafened2.reset();
+  const noiseCancellation = this.noiseCancellation;
+  noiseCancellation.reset();
+  const spatialAudio = this.spatialAudio;
+  spatialAudio.reset();
+  const timesUntilSpeakingDurationMilestonesMs = this.timesUntilSpeakingDurationMilestonesMs;
+  timesUntilSpeakingDurationMilestonesMs.clear();
+  const speakingMinimumChunks = this.speakingMinimumChunks;
+  speakingMinimumChunks.clear();
+  const speakingMinimumChunkCounts = this.speakingMinimumChunkCounts;
+  speakingMinimumChunkCounts.clear();
+  this.speechEventCount = 0;
+  const connected2 = this.connected;
+  connected2.start();
+  if (isRunningResult) {
+    const speaking3 = self.speaking;
+    speaking3.start();
+    self.speechEventCount = self.speechEventCount + 1;
+  }
+  if (isRunningResult1) {
+    const listening3 = self.listening;
+    listening3.start();
+  }
+  if (!isRunningResult) {
+    isRunningResult = isRunningResult1;
+  }
+  if (isRunningResult) {
+    const participation2 = self.participation;
+    participation2.start();
+  }
+  if (isRunningResult2) {
+    const muted3 = self.muted;
+    muted3.start();
+  }
+  if (isRunningResult3) {
+    const deafened3 = self.deafened;
+    deafened3.start();
+  }
+  self.noiseCancellation.value = this.noiseCancellation.value;
+  self.spatialAudio.value = this.spatialAudio.value;
 };
 prototype["setNoiseCancellationEnabled"] = function setNoiseCancellationEnabled(value) {
   this.noiseCancellation.value = value;

@@ -1,17 +1,17 @@
-// === Module 13219: GuildDisableCommunication ===
+// === Module 13254: GuildDisableCommunication ===
 
-// Module 13219 (GuildDisableCommunication)
+// Module 13254 (GuildDisableCommunication)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import useMountEffectDefault from "useMountEffect" /* 5588 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5602 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import TableRadioGroup from "TableRadioGroup" /* 7052 */;
-import TableRadioRow from "TableRadioRow" /* 7055 */;
-import TextArea from "TextArea" /* 7247 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11368 */;
+import util from "util" /* 1113 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import useMountEffectDefault from "useMountEffect" /* 5593 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5607 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import TableRadioGroup from "TableRadioGroup" /* 7058 */;
+import TableRadioRow from "TableRadioRow" /* 7061 */;
+import TextArea from "TextArea" /* 7253 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11404 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(4923);
+const GuildDisableCommunicationConstants = fn(4928);
 ({ DisableCommunicationDuration, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8, SET_COMMUNICATION_DISABLED_MODAL_NAME: closure_9 } = GuildDisableCommunicationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
@@ -68,7 +68,7 @@ let items = [
     }
   }
 ];
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, reasonTextArea: null, buttonContainer: null };
 let obj = {
   value: DisableCommunicationDuration.DURATION_60_SEC,
@@ -102,7 +102,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -116,7 +116,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(13220);
+            const obj4 = tmp4(13255);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value: obj4.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };
@@ -130,20 +130,20 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          const intl = user(1114).intl;
-          const obj8 = tmp4(5707);
-          const name = tmp4(6036).getName(closure_129_1, null, closure_129_0);
+          const intl = user(1113).intl;
+          const obj8 = tmp4(5712);
+          const name = tmp4(6041).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
           }
           const obj = { text: null, variant: "success" };
           const obj7 = { user };
-          obj.text = intl.formatToPlainString(user(1114).t.O9C3Nt, obj7);
+          obj.text = intl.formatToPlainString(user(1113).t.O9C3Nt, obj7);
           obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
           closure_129_2();
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp18) {
         c3 = tmp;

@@ -1,11 +1,11 @@
-// === Module 2041: EntitlementRecord ===
+// === Module 2039: EntitlementRecord ===
 
-// Module 2041 (EntitlementRecord)
-import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 15832 */;
-import Record from "Record" /* 1399 */;
-import SKURecord from "SKURecord" /* 2042 */;
-import UserRecord from "UserRecord" /* 1398 */;
+// Module 2039 (EntitlementRecord)
+import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 15872 */;
+import Record from "Record" /* 1398 */;
+import SKURecord from "SKURecord" /* 2040 */;
+import UserRecord from "UserRecord" /* 1397 */;
 
 require = fn;
 let EntitlementRecord;

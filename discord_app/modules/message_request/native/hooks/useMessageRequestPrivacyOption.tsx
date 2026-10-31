@@ -1,19 +1,19 @@
-// === Module 15692: useMessageRequestPrivacyOption ===
+// === Module 15732: useMessageRequestPrivacyOption ===
 
-// Module 15692 (useMessageRequestPrivacyOption)
-import UserSettings from "UserSettings" /* 4834 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7159 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13968 */;
+// Module 15732 (useMessageRequestPrivacyOption)
+import UserSettings from "UserSettings" /* 4839 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 14003 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   const id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(4834).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(4839).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(4834).RestrictedGuildIds;
+  const RestrictedGuildIds = id(4839).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
@@ -28,10 +28,10 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
     MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
   }, items);
   let obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
-  const intl = id(1114).intl;
-  obj.label = intl.string(id(1114).t["7UgSGP"]);
-  const intl2 = id(1114).intl;
-  obj.subLabel = intl2.string(id(1114).t.INRaYb);
+  const intl = id(1113).intl;
+  obj.label = intl.string(id(1113).t["7UgSGP"]);
+  const intl2 = id(1113).intl;
+  obj.subLabel = intl2.string(id(1113).t.INRaYb);
   let tmp5 = !hasItem1;
   if (!hasItem1) {
     tmp5 = !hasItem;
@@ -39,7 +39,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7362).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(7368).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

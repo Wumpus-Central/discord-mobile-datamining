@@ -1,19 +1,19 @@
-// === Module 16510: UserProfilePremiumTryItOutUpsell ===
+// === Module 16552: UserProfilePremiumTryItOutUpsell ===
 
-// Module 16510 (UserProfilePremiumTryItOutUpsell)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5090 */;
-import spring from "spring" /* 5632 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 16486 */;
+// Module 16552 (UserProfilePremiumTryItOutUpsell)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5095 */;
+import spring from "spring" /* 5637 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 16528 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7371).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7377).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 }, card: { marginHorizontal: PROFILE_SIDE_PADDING - UserProfileUpsellCardV2.GRADIENT_BORDER_WIDTH } };
   return obj;
@@ -49,12 +49,12 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
     obj2.transform = items;
     return obj2;
   };
-  let obj = isVisible(5090);
-  fn.__closure = { isVisible, withSpring: isVisible(5632).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE: 0.9 };
+  let obj = isVisible(5095);
+  fn.__closure = { isVisible, withSpring: isVisible(5637).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE: 0.9 };
   fn.__workletHash = 7434922701119;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { isVisible, withSpring: isVisible(5632).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE: 0.9 };
+  let obj2 = { isVisible, withSpring: isVisible(5637).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE: 0.9 };
   const fn2 = function u() {
     value = isVisible.get();
     let str = "none";
@@ -72,16 +72,16 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   fn2.__closure = { isVisible };
   fn2.__workletHash = 4173826125285;
   fn2.__initData = __initData2;
-  const animatedProps = isVisible(5090).useAnimatedProps(fn2);
+  const animatedProps = isVisible(5095).useAnimatedProps(fn2);
   const obj4 = { animatedProps, style: null, children: null };
   let items = [tmp.container, animatedStyle];
   obj4.style = items;
   const obj5 = { style: tmp.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" };
-  let obj3 = isVisible(5090);
-  const intl = isVisible(1114).intl;
-  obj5.text = intl.string(isVisible(1114).t["MswR/h"]);
-  const intl2 = isVisible(1114).intl;
-  obj5.buttonText = intl2.string(isVisible(1114).t.PxUx8e);
+  let obj3 = isVisible(5095);
+  const intl = isVisible(1113).intl;
+  obj5.text = intl.string(isVisible(1113).t["MswR/h"]);
+  const intl2 = isVisible(1113).intl;
+  obj5.buttonText = intl2.string(isVisible(1113).t.PxUx8e);
   obj5.onButtonPress = isVisible.onPreviewPremium;
   obj4.children = jsx(UserProfileUpsellCardV2Default, { style: tmp.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" });
   return jsx(ReanimatedRexportDefault.View, { animatedProps, style: null, children: null });

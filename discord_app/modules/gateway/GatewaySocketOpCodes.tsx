@@ -1,9 +1,9 @@
-// === Module 15488: GatewaySocketOpCodes ===
+// === Module 15527: GatewaySocketOpCodes ===
 
-// Module 15488 (GatewaySocketOpCodes)
+// Module 15527 (GatewaySocketOpCodes)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2005 */;
-import RTCRegionStore from "RTCRegionStore" /* 5858 */;
+import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2004 */;
+import RTCRegionStore from "RTCRegionStore" /* 5863 */;
 
 require = fn;
 const EventEmitter = fn(568).EventEmitter;
@@ -161,4 +161,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
 
 export default GatewaySocketOpCodes;
-export const Opcode = fn(2005).Opcode;
+export const Opcode = fn(2004).Opcode;

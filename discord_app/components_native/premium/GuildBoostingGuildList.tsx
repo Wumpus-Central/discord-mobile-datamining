@@ -1,20 +1,20 @@
-// === Module 15382: GuildBoostingGuildList ===
+// === Module 15421: GuildBoostingGuildList ===
 
-// Module 15382 (GuildBoostingGuildList)
+// Module 15421 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5248 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import GuildIconDefault from "GuildIcon" /* 6951 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7155 */;
-import transitionToGuild from "transitionToGuild" /* 7516 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8460 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9090 */;
-import _modDef10274 from "module_10274" /* 10274 */;
-import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 15351 */;
+import useThemeDefault from "useTheme" /* 5253 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import GuildIconDefault from "GuildIcon" /* 6957 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7161 */;
+import transitionToGuild from "transitionToGuild" /* 7522 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8468 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9109 */;
+import _modDef10294 from "module_10294" /* 10294 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 15390 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import SortedGuildStore from "SortedGuildStore" /* 6766 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import SortedGuildStore from "SortedGuildStore" /* 6772 */;
 
 require = fn;
 function GuildBoostingGuildListItem(guildId) {
@@ -41,23 +41,23 @@ function GuildBoostingGuildListItem(guildId) {
     };
     const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
     const tmp2Result = TouchableHitBoxDefault;
-    obj3.size = tmp5(6951).GuildIconSizes.LARGE;
+    obj3.size = tmp5(6957).GuildIconSizes.LARGE;
     obj3.style = tmp.guildIcon;
     const items1 = [closure_7(GuildIconDefault, obj3), , ];
     const obj4 = { style: tmp.guildCardDescription, children: null };
     const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
-    const items2 = [closure_7(tmp5(5619).Text, obj5), ];
+    const items2 = [closure_7(tmp5(5624).Text, obj5), ];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
     const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
     const tmp2Result3 = GuildIconDefault;
-    obj7.source = _modDef10274;
+    obj7.source = _modDef10294;
     obj7.style = tmp.premiumGuildImage;
     const items3 = [closure_7(FastImageDefault, obj7), ];
     const obj8 = { variant: "text-xs/medium", children: null };
-    const intl = tmp5(1114).intl;
+    const intl = tmp5(1113).intl;
     const obj9 = { subscriberCount: tmp8 };
-    obj8.children = intl.format(tmp5(1114).t.If4iTS, obj9);
-    items3[1] = closure_7(tmp5(5619).Text, obj8);
+    obj8.children = intl.format(tmp5(1113).t.If4iTS, obj9);
+    items3[1] = closure_7(tmp5(5624).Text, obj8);
     obj6.children = items3;
     items2[1] = closure_8(View, obj6);
     obj4.children = items2;
@@ -74,7 +74,7 @@ const View = fn(17).View;
 let closure_6 = fn(1072).NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { guildCard: { padding: 12, paddingLeft: 16, borderRadius: nativeDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, guildIcon: { marginRight: 16 }, guildCardDescription: { flex: 1 }, subscriptionInfo: { flexDirection: "row", alignItems: "center" }, premiumGuildImage: { width: 18, height: 12, marginLeft: -5 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

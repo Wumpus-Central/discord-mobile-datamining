@@ -1,15 +1,15 @@
-// === Module 20020: SafetyFlowsUtils ===
+// === Module 20081: SafetyFlowsUtils ===
 
-// Module 20020 (SafetyFlowsUtils)
-import util from "util" /* 1114 */;
-import _modDef2835 from "module_2835" /* 2835 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import types from "types" /* 20014 */;
-import constants from "constants" /* 20015 */;
+// Module 20081 (SafetyFlowsUtils)
+import util from "util" /* 1113 */;
+import _modDef2836 from "module_2836" /* 2836 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import types from "types" /* 20074 */;
+import constants from "constants" /* 20075 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -39,7 +39,7 @@ function navigateToScreenForTask(arr, task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
     const obj3 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef2835["/fHz9S"]);
+    obj3.text = intl.string(_modDef2836["/fHz9S"]);
     ToastActionCreatorsDefault.open("SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", obj3);
   } else {
     task_type = task_type.task_type;
@@ -115,7 +115,7 @@ export function useOnTaskComplete() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -163,7 +163,7 @@ export function useOnTaskComplete() {
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp15) {
           c4 = tmp;

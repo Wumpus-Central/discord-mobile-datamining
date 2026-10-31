@@ -1,12 +1,12 @@
-// === Module 5193: NavigationRouteUtils ===
+// === Module 5198: NavigationRouteUtils ===
 
-// Module 5193 (NavigationRouteUtils)
-import v1 from "v1" /* 1267 */;
-import Link from "Link" /* 1499 */;
-import RootNavigationRef from "RootNavigationRef" /* 5194 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5200 */;
-import Types from "Types" /* 5201 */;
-import ChatInputUtils from "ChatInputUtils" /* 5202 */;
+// Module 5198 (NavigationRouteUtils)
+import v1 from "v1" /* 1266 */;
+import Link from "Link" /* 1498 */;
+import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5205 */;
+import Types from "Types" /* 5206 */;
+import ChatInputUtils from "ChatInputUtils" /* 5207 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -264,7 +264,7 @@ export function navigateToChannel(openChannel) {
   return false;
 }
 export function navigateToRootTab(drawerOpen) {
-  const rootNavigationRef = icymiScreen(5194).getRootNavigationRef();
+  const rootNavigationRef = icymiScreen(5199).getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -283,21 +283,21 @@ export function navigateToRootTab(drawerOpen) {
             const obj2 = { screen, params: null };
             const obj3 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             obj2.params = obj3;
-            const rootNavigationRef1 = tmp(5194).getRootNavigationRef();
+            const rootNavigationRef1 = tmp(5199).getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
                 if (tmp3) {
                   const rootState = rootNavigationRef1.getRootState();
                   const obj4 = { name: "tabs", key: null, params: null };
-                  const tmpResult3 = tmp(5195);
+                  const tmpResult3 = tmp(5200);
                   const _HermesInternal = HermesInternal;
-                  obj4.key = "tabs-" + tmp(1267).v4();
+                  obj4.key = "tabs-" + tmp(1266).v4();
                   obj4.params = obj2;
                   const items = [obj4];
                   const items1 = [];
-                  const tmpResult4 = tmp(1267);
+                  const tmpResult4 = tmp(1266);
                   HermesBuiltin.arraySpread(modalRoutesAboveMain(rootState.routes), HermesBuiltin.arraySpread(tmpResult3.wrapRouteForRootNavigator(items), 0));
-                  let CommonActions = tmp(1499).CommonActions;
+                  let CommonActions = tmp(1498).CommonActions;
                   const obj5 = {};
                   const merged = Object.assign(rootState);
                   obj5.routes = items1;
@@ -309,7 +309,7 @@ export function navigateToRootTab(drawerOpen) {
                 }
               }
             }
-            const tmpResult = tmp(5194);
+            const tmpResult = tmp(5199);
           } else {
             const obj6 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             rootNavigationRef.setParams(obj6);
@@ -727,7 +727,7 @@ export function getOpenModalKey() {
 }
 export function useOpenModalKey() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(5194).getRootNavigationRef();
+    const rootNavigationRef = closure_0(5199).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -760,7 +760,7 @@ export function useOpenModalKey() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(5194).getRootNavigationRef();
+        const rootNavigationRef = closure_0(5199).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -787,7 +787,7 @@ export function useOpenModalKey() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(5194);
+        const obj = closure_0(5199);
       });
     }
   }, []);
@@ -808,7 +808,7 @@ export function getCurrentNavigationRouteName() {
 }
 export function useCurrentNavigationRouteName() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(5194).getRootNavigationRef();
+    const rootNavigationRef = closure_0(5199).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -827,7 +827,7 @@ export function useCurrentNavigationRouteName() {
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(5194).getRootNavigationRef();
+        const rootNavigationRef = closure_0(5199).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -840,7 +840,7 @@ export function useCurrentNavigationRouteName() {
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(5194);
+        const obj = closure_0(5199);
       });
     }
   }, []);

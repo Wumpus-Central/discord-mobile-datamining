@@ -1,10 +1,10 @@
-// === Module 16892: BountiesScrollIndicatorOverlay ===
+// === Module 16948: BountiesScrollIndicatorOverlay ===
 
-// Module 16892 (BountiesScrollIndicatorOverlay)
+// Module 16948 (BountiesScrollIndicatorOverlay)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import timingPresets from "timingPresets" /* 5252 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import timingPresets from "timingPresets" /* 5257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,8 +13,8 @@ const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const colors = ["rgba(0,0,0,0)", "rgba(0,0,0,0.7)", "rgba(0,0,0,1)"];
-let closure_9 = 5000 + fn(5252).timingSlowDuration;
-const createStyles = fn(5009);
+let closure_9 = 5000 + fn(5257).timingSlowDuration;
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { scrollIndicator: null, scrollIndicatorContent: null, scrollIndicatorText: null };
   const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -73,7 +73,7 @@ export default function BountiesScrollIndicatorOverlay(enabled) {
             if (closure_1_0) {
               num = closure_2_9;
             }
-            let timeout = setTimeout(/* F139206 */ function() { ... }, num);
+            let timeout = setTimeout(/* F139623 */ function() { ... }, num);
           }, num);
         }, num);
       }, closure_1_9);

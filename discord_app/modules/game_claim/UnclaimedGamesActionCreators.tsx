@@ -1,11 +1,11 @@
-// === Module 18196: UnclaimedGamesActionCreators ===
+// === Module 18239: UnclaimedGamesActionCreators ===
 
-// Module 18196 (UnclaimedGamesActionCreators)
+// Module 18239 (UnclaimedGamesActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UnclaimedGamesStore from "UnclaimedGamesStore" /* 18197 */;
+import UnclaimedGamesStore from "UnclaimedGamesStore" /* 18240 */;
 
 require = fn;
 function fetchUnclaimedGames() {
@@ -29,7 +29,7 @@ let closure_8 = async function _fetchUnclaimedGames() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_8 = async function _fetchUnclaimedGames() {
         const obj7 = { type: "UNCLAIMED_GAMES_FETCH_SUCCESS", guildIdToGameIds: body };
         closure_129_1(closure_129_2[4]).dispatch(obj7);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp15) {
       c3 = tmp;

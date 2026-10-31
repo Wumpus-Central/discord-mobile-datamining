@@ -1,9 +1,9 @@
-// === Module 13976: ChatWarningIcon ===
+// === Module 14011: ChatWarningIcon ===
 
-// Module 13976 (ChatWarningIcon)
+// Module 14011 (ChatWarningIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod8477 from "module_8477" /* 8477 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod8485 from "module_8485" /* 8485 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChatWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8477, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8485, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

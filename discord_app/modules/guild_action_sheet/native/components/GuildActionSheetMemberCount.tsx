@@ -1,16 +1,16 @@
-// === Module 11307: GuildActionSheetMemberCount ===
+// === Module 11339: GuildActionSheetMemberCount ===
 
-// Module 11307 (GuildActionSheetMemberCount)
+// Module 11339 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;
@@ -18,7 +18,7 @@ obj.dotContainer = { alignItems: "center", justifyContent: "center", marginRight
 obj.onlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 let obj3 = { backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj.offlineDot = { backgroundColor: nativeDefault.colors.TEXT_STATUS_OFFLINE };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1376);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

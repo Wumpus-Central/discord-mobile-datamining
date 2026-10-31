@@ -1,23 +1,23 @@
-// === Module 7712: CollectiblesActionCreators ===
+// === Module 7719: CollectiblesActionCreators ===
 
-// Module 7712 (CollectiblesActionCreators)
+// Module 7719 (CollectiblesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import RootNavigationRef from "RootNavigationRef" /* 5194 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7725 */;
-import LayerActionCreators from "LayerActionCreators" /* 7753 */;
-import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7754 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7755 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7756 */;
-import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 7757 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
+import LayerActionCreators from "LayerActionCreators" /* 7760 */;
+import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7761 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7762 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7763 */;
+import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 7764 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5622 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7713 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5679 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7728 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7715 */;
-import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 7739 */;
+import DevSettingsStore from "DevSettingsStore" /* 5627 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5684 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7735 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7722 */;
+import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 7746 */;
 
 require = fn;
 function openCollectiblesShop(arg0) {
@@ -187,7 +187,7 @@ let closure_21 = async function _fetchCollectiblesPurchases() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -359,7 +359,7 @@ let closure_24 = async function _maybeFetchCollectiblesProduct(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -393,7 +393,7 @@ let closure_24 = async function _maybeFetchCollectiblesProduct(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp9) {
       c2 = tmp;
       throw tmp9;
@@ -421,7 +421,7 @@ let closure_25 = async function _claimPremiumCollectiblesProduct(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -480,7 +480,7 @@ let closure_25 = async function _claimPremiumCollectiblesProduct(arg0) {
         closure_130_1(closure_130_2[17]).dispatch(obj11);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp29) {
       closure_3 = tmp29;
@@ -508,7 +508,7 @@ let closure_26 = async function _validateCollectiblesRecipient() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -582,7 +582,7 @@ let closure_27 = async function _validateCollectiblesRecipientsBatch() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -658,7 +658,7 @@ let closure_28 = async function _fetchCollectiblesMarketings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -848,16 +848,16 @@ let closure_29 = async function _fetchCollectiblesShopHome() {
     return value;
   })();
 };
-const addDebugLog = fn(7727).addDebugLog;
-let closure_10 = fn(7729).CollectiblesCategoriesRecord;
-const CollectiblesMarketingRecord = fn(7733);
+const addDebugLog = fn(7734).addDebugLog;
+let closure_10 = fn(7736).CollectiblesCategoriesRecord;
+const CollectiblesMarketingRecord = fn(7740);
 ({ CollectiblesMarketingsRecord: closure_11, rehydratePersistedMarketings: closure_12 } = CollectiblesMarketingRecord);
-let closure_15 = fn(7740).CollectiblesShopHomeRecord;
+let closure_15 = fn(7747).CollectiblesShopHomeRecord;
 const constants = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
 ({ Endpoints: closure_17, Routes, UserSettingsSections: closure_18 } = Constants);
-const CollectiblesShopHomeStore = fn(5683);
-const CollectiblesShopStore = fn(7752);
+const CollectiblesShopHomeStore = fn(5688);
+const CollectiblesShopStore = fn(7759);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
@@ -865,7 +865,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(5194).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(5199).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

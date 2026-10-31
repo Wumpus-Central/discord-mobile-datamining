@@ -1,10 +1,10 @@
-// === Module 10989: common/Notifications ===
+// === Module 11008: common/Notifications ===
 
-// Module 10989 (common/Notifications)
+// Module 11008 (common/Notifications)
 import initialize from "initialize" /* 504 */;
-import InAppNotificationContainerDefault from "InAppNotificationContainer" /* 11016 */;
+import InAppNotificationContainerDefault from "InAppNotificationContainer" /* 11035 */;
 import noop from "module_19" /* 19 */;
-import InAppNotificationStore from "InAppNotificationStore" /* 10990 */;
+import InAppNotificationStore from "InAppNotificationStore" /* 11009 */;
 
 require = fn;
 const jsx = fn(21).jsx;

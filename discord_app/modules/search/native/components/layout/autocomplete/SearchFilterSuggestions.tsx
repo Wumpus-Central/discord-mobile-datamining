@@ -1,13 +1,13 @@
-// === Module 18640: SearchFilterSuggestions ===
+// === Module 18682: SearchFilterSuggestions ===
 
-// Module 18640 (SearchFilterSuggestions)
+// Module 18682 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5075 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import spring from "spring" /* 5632 */;
-import springPresets from "springPresets" /* 5633 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13836 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 18641 */;
+import native from "native" /* 5080 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import spring from "spring" /* 5637 */;
+import springPresets from "springPresets" /* 5638 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13871 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 18683 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -89,9 +89,9 @@ function AnimatedEnterExitContainer(children) {
   return jsx(cleanUp(sharedValue[10]).View, { style, children: children.children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9805).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
@@ -112,12 +112,12 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
   let memo;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(18635).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(18677).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(18635);
-  const validFilterTokens = searchContext(18644).useValidFilterTokens(searchContext);
+  let obj = searchContext(18677);
+  const validFilterTokens = searchContext(18686).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsRef(suggestionsMounted.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -155,7 +155,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
     }
     closure_8(closure_1_14);
   }), items);
-  let obj2 = searchContext(18644);
+  let obj2 = searchContext(18686);
   const fn = function f() {
     return dismissed.get();
   };
@@ -175,8 +175,8 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
       return;
     }
   }
-  const obj3 = searchContext(5090);
-  T.__closure = { runOnJS: searchContext(5090).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
+  const obj3 = searchContext(5095);
+  T.__closure = { runOnJS: searchContext(5095).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
   T.__workletHash = 8991360021943;
   T.__initData = __initData3;
   const animatedReaction = obj3.useAnimatedReaction(fn, T);
@@ -214,5 +214,5 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
       return first(memo, {}, text.text);
     })}</View></AnimatedEnterExitContainer>;
   }, items4);
-  return first(searchContext(5075).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
+  return first(searchContext(5080).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
 });

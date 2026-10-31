@@ -1,13 +1,13 @@
-// === Module 15751: GuildAntiRaidReportModal ===
+// === Module 15791: GuildAntiRaidReportModal ===
 
-// Module 15751 (GuildAntiRaidReportModal)
+// Module 15791 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import NavigatorHeader from "NavigatorHeader" /* 6992 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
+import util from "util" /* 1113 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import NavigatorHeader from "NavigatorHeader" /* 6998 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -75,12 +75,12 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15752);
+const GuildReportRaidModalConstants = fn(15792);
 ({ getReportRaidHelpArticleURL: closure_7, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, headerSubtitle: { textAlign: "center", marginTop: 8 }, formBody: { marginTop: 24 }, formRow: { paddingVertical: 2 }, submitButtonContainer: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.submitButtonContainer = rect;
@@ -108,7 +108,7 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -125,13 +125,13 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(13207).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(13207);
-            tmp2(13207).handleReportRaid(guildId);
-            const intl = tmp2(1114).intl;
+            const result = tmp2(13242).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(13242);
+            tmp2(13242).handleReportRaid(guildId);
+            const intl = tmp2(1113).intl;
             c1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: closure_4(intl.string(tmp2(1114).t["54qByS"])), done: false };
+            const obj6 = { value: closure_4(intl.string(tmp2(1113).t["54qByS"])), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {

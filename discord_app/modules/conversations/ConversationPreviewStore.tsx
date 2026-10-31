@@ -1,17 +1,17 @@
-// === Module 7763: ConversationPreviewStore ===
+// === Module 7770: ConversationPreviewStore ===
 
-// Module 7763 (ConversationPreviewStore)
+// Module 7770 (ConversationPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import privDefault from "priv" /* 1452 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6058 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7761 */;
-import ConversationsUtils from "ConversationsUtils" /* 7762 */;
+import privDefault from "priv" /* 1451 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7768 */;
+import ConversationsUtils from "ConversationsUtils" /* 7769 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function clearMessageIndex(conversationId) {
@@ -109,8 +109,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(5650).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(5650).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(5655).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(5655).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;

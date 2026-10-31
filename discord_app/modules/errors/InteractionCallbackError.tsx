@@ -1,6 +1,6 @@
-// === Module 6064: InteractionCallbackError ===
+// === Module 6069: InteractionCallbackError ===
 
-// Module 6064 (InteractionCallbackError)
+// Module 6069 (InteractionCallbackError)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");

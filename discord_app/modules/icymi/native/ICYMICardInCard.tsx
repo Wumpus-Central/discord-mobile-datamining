@@ -1,19 +1,19 @@
-// === Module 18513: ICYMICardInCard ===
+// === Module 18556: ICYMICardInCard ===
 
-// Module 18513 (ICYMICardInCard)
+// Module 18556 (ICYMICardInCard)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import GuildIcon from "GuildIcon" /* 6951 */;
-import TextIcon2 from "TextIcon" /* 8644 */;
-import ClipView from "ClipView" /* 9487 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 18512 */;
-import getIconForChannel from "getIconForChannel" /* 18514 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import GuildIcon from "GuildIcon" /* 6957 */;
+import TextIcon2 from "TextIcon" /* 8652 */;
+import ClipView from "ClipView" /* 9509 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 18555 */;
+import getIconForChannel from "getIconForChannel" /* 18557 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 const GuildIconDefault = GuildIcon;
 const ClipViewDefault = ClipView;
@@ -41,7 +41,7 @@ const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(18472);
+const createICYMIStyles = fn(18515);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginTop: marginHorizontal.margin }, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin }, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };

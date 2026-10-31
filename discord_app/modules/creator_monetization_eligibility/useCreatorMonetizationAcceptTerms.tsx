@@ -1,16 +1,16 @@
-// === Module 19815: useCreatorMonetizationAcceptTerms ===
+// === Module 19872: useCreatorMonetizationAcceptTerms ===
 
-// Module 19815 (useCreatorMonetizationAcceptTerms)
+// Module 19872 (useCreatorMonetizationAcceptTerms)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import UserStore from "UserStore" /* 1384 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(4876).isGuildOwner;
+const isGuildOwner = fn(4881).isGuildOwner;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
 
@@ -50,7 +50,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -72,12 +72,12 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
               if (null != tmp4) {
                 c4 = 4;
                 c5 = 1;
-                const obj6 = { value: tmp47(19816).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                const obj6 = { value: tmp47(19873).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
                 return obj6;
               } else {
                 c4 = 3;
                 c5 = 1;
-                const obj7 = { value: tmp47(19816).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                const obj7 = { value: tmp47(19873).acceptCreatorMonetizationTermsV2(tmp55), done: false };
                 return obj7;
               }
             }
@@ -87,7 +87,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
           if (2 === tmp8) {
             dependencyMap = 1;
             closure_128_0 = tmp47;
-            const tmp25 = new tmp4(6441)(closure_128_0);
+            const tmp25 = new tmp4(6447)(closure_128_0);
             closure_129_3(tmp25);
           } else {
             if (3 === tmp8) {

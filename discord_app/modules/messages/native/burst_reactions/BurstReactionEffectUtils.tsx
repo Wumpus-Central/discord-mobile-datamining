@@ -1,8 +1,8 @@
-// === Module 4967: burst_reactions/BurstReactionEffectUtils ===
+// === Module 4972: burst_reactions/BurstReactionEffectUtils ===
 
-// Module 4967 (burst_reactions/BurstReactionEffectUtils)
-import EmojiUtils from "EmojiUtils" /* 4959 */;
-import getBurstAnimation from "getBurstAnimation" /* 4968 */;
+// Module 4972 (burst_reactions/BurstReactionEffectUtils)
+import EmojiUtils from "EmojiUtils" /* 4964 */;
+import getBurstAnimation from "getBurstAnimation" /* 4973 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ let closure_7 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -195,7 +195,7 @@ let closure_8 = async function _generateAnimationSourceFromLocalImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -332,7 +332,7 @@ export function useBurstReactionAnimationSource(channelId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -417,7 +417,7 @@ export function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -463,7 +463,7 @@ export function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp14) {
           c3 = tmp;

@@ -1,14 +1,14 @@
-// === Module 19923: FormPriceTier ===
+// === Module 19981: FormPriceTier ===
 
-// Module 19923 (FormPriceTier)
+// Module 19981 (FormPriceTier)
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1114 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+import util from "util" /* 1113 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RoleTierEditStore = fn(19885);
+const RoleTierEditStore = fn(19942);
 ({ LoadingState: c3, usePriceTiersAvailableInGuild: closure_4 } = RoleTierEditStore);
 const CurrencyCodes = fn(1072).CurrencyCodes;
 const jsx = fn(21).jsx;
@@ -75,8 +75,8 @@ export default function FormPriceTier(guildId) {
             price(onChange[8]).hideActionSheet();
           };
           obj2.selectedItem = price;
-          obj.openLazy(asyncRequireImpl(8993, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
-          const tmp2 = asyncRequireImpl(8993, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(9002, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
+          const tmp2 = asyncRequireImpl(9002, dependencyMap.paths);
         },
       placeholder: null
     };
@@ -102,8 +102,8 @@ export default function FormPriceTier(guildId) {
             price(onChange[8]).hideActionSheet();
           };
           obj2.selectedItem = price;
-          obj.openLazy(asyncRequireImpl(8993, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
-          const tmp2 = asyncRequireImpl(8993, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(9002, dependencyMap.paths), "GuildRoleSubscriptionPriceTierSelect", obj2);
+          const tmp2 = asyncRequireImpl(9002, dependencyMap.paths);
         },
       placeholder: null
     });

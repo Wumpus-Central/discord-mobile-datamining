@@ -1,8 +1,8 @@
-// === Module 9874: useChatBottomManagerUIStore ===
+// === Module 9895: useChatBottomManagerUIStore ===
 
-// Module 9874 (useChatBottomManagerUIStore)
+// Module 9895 (useChatBottomManagerUIStore)
 import Storage3 from "Storage" /* 510 */;
-import ChatInputUtils from "ChatInputUtils" /* 5202 */;
+import ChatInputUtils from "ChatInputUtils" /* 5207 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

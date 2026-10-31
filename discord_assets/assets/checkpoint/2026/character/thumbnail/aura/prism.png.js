@@ -1,6 +1,6 @@
-// === Module 6405: ? ===
+// === Module 6410: ? ===
 
-// Module 6405
+// Module 6410
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/aura/prism.png.js");

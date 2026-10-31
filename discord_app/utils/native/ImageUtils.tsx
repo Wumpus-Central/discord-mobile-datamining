@@ -1,14 +1,14 @@
-// === Module 1491: utils/ImageUtils ===
+// === Module 1490: utils/ImageUtils ===
 
-// Module 1491 (utils/ImageUtils)
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1413 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1446 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1447 */;
-import _modDef1486 from "module_1486" /* 1486 */;
-import useWindowDimensions from "useWindowDimensions" /* 1492 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1893 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1894 */;
+// Module 1490 (utils/ImageUtils)
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1412 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1445 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1446 */;
+import _modDef1485 from "module_1485" /* 1485 */;
+import useWindowDimensions from "useWindowDimensions" /* 1491 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1892 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1893 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function getSrcWithWidthAndHeight(animated) {
     flag = false;
   }
   const tmp = _slicedToArray(src.split("?"), 2);
-  const items = [tmp[0], _modDef1486.parse(tmp[1])];
+  const items = [tmp[0], _modDef1485.parse(tmp[1])];
   [tmp5, tmp6] = items;
   if (re7.test(tmp5)) {
     tmp6.format = "webp";
@@ -68,7 +68,7 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp4 = _slicedToArray(items, 2);
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    _modDef1486;
+    _modDef1485;
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;

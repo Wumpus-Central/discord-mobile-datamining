@@ -1,17 +1,17 @@
-// === Module 16531: SafetySettingsNotice ===
+// === Module 16573: SafetySettingsNotice ===
 
-// Module 16531 (SafetySettingsNotice)
+// Module 16573 (SafetySettingsNotice)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 16532 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 16574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(7484).SafetySettingsNoticeAction;
+let closure_4 = fn(7490).SafetySettingsNoticeAction;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { blockedIgnoredRedirect: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

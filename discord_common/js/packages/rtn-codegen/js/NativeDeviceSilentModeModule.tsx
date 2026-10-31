@@ -1,6 +1,6 @@
-// === Module 19370: NativeDeviceSilentModeModule ===
+// === Module 19427: NativeDeviceSilentModeModule ===
 
-// Module 19370 (NativeDeviceSilentModeModule)
+// Module 19427 (NativeDeviceSilentModeModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,20 +1,20 @@
-// === Module 16932: QuestHomeOrbShopCarousel ===
+// === Module 16988: QuestHomeOrbShopCarousel ===
 
-// Module 16932 (QuestHomeOrbShopCarousel)
+// Module 16988 (QuestHomeOrbShopCarousel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import AnalyticsActions from "AnalyticsActions" /* 7855 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7864 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9440 */;
-import SkeletonCardDefault from "SkeletonCard" /* 9556 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16919 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 16933 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import AnalyticsActions from "AnalyticsActions" /* 7862 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9462 */;
+import SkeletonCardDefault from "SkeletonCard" /* 9578 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 16975 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 16989 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import BountyStore from "BountyStore" /* 7838 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
+import BountyStore from "BountyStore" /* 7845 */;
 
 require = fn;
 function ListEdgeSpacer(width) {
@@ -91,14 +91,14 @@ function QuestHomeOrbShopCarouselPlaceholder(cardWidth) {
   return closure_9(cardWidth(listEdgeSpacing[14]).FlashList, obj);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(6775).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(6781).BOUNTY_ORB_AMOUNT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(16919).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
-const createStyles = fn(5009);
+const data = Array.from({ length: fn(16975).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const createStyles = fn(5014);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
   const obj2 = { marginTop: nativeDefault.space.PX_32 };

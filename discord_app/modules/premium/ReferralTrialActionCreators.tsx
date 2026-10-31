@@ -1,13 +1,13 @@
-// === Module 7626: ReferralTrialActionCreators ===
+// === Module 7633: ReferralTrialActionCreators ===
 
-// Module 7626 (ReferralTrialActionCreators)
+// Module 7633 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7627 */;
-import UserRecord from "UserRecord" /* 1398 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7634 */;
+import UserRecord from "UserRecord" /* 1397 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 import Backoff from "Backoff" /* 559 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_14 = async function _maybeFetchRecipientEligibility(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -141,7 +141,7 @@ let closure_15 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {

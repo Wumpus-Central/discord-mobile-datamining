@@ -1,16 +1,16 @@
-// === Module 9092: usePrivacyLevelHelpText ===
+// === Module 9111: usePrivacyLevelHelpText ===
 
-// Module 9092 (usePrivacyLevelHelpText)
+// Module 9111 (usePrivacyLevelHelpText)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const constants = fn(4864).GuildScheduledEventPrivacyLevel;
+const constants = fn(4869).GuildScheduledEventPrivacyLevel;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
@@ -27,24 +27,24 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level, arg
     privacy_level = privacy_level.privacy_level;
   }
   if (privacy_level === constants.PUBLIC) {
-    const intl4 = tmp(1114).intl;
-    let stringResult = intl4.string(tmp(1114).t.GFq5Rg);
+    const intl4 = tmp(1113).intl;
+    let stringResult = intl4.string(tmp(1113).t.GFq5Rg);
   } else if (stateFromStores) {
     if (canEveryoneRoleResult) {
       let formatResult = null;
       if (arg2 === constants.PUBLIC) {
-        const intl3 = tmp(1114).intl;
+        const intl3 = tmp(1113).intl;
         const obj4 = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
-        formatResult = intl3.format(tmp(1114).t["ew/Jq4"], obj4);
+        formatResult = intl3.format(tmp(1113).t["ew/Jq4"], obj4);
       }
       let stringResult1 = formatResult;
     } else {
-      const intl2 = tmp(1114).intl;
-      stringResult1 = intl2.string(tmp(1114).t.E5T7a3);
+      const intl2 = tmp(1113).intl;
+      stringResult1 = intl2.string(tmp(1113).t.E5T7a3);
     }
   } else {
-    const intl = tmp(1114).intl;
-    stringResult = intl.string(tmp(1114).t.BOjr7t);
+    const intl = tmp(1113).intl;
+    stringResult = intl.string(tmp(1113).t.BOjr7t);
   }
   const obj6 = { helpText: stringResult, guildOnlyDisabled: null, publicDisabled: null };
   let privacy_level1;

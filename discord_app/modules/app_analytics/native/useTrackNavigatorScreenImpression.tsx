@@ -1,8 +1,8 @@
-// === Module 16363: useTrackNavigatorScreenImpression ===
+// === Module 16405: useTrackNavigatorScreenImpression ===
 
-// Module 16363 (useTrackNavigatorScreenImpression)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6023 */;
+// Module 16405 (useTrackNavigatorScreenImpression)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6028 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");

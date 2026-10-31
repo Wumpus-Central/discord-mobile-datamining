@@ -1,10 +1,10 @@
-// === Module 9261: SecureFramesStreamVerificationBottomSheet ===
+// === Module 9280: SecureFramesStreamVerificationBottomSheet ===
 
-// Module 9261 (SecureFramesStreamVerificationBottomSheet)
-import showShareActionSheet from "showShareActionSheet" /* 8922 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9249 */;
+// Module 9280 (SecureFramesStreamVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8931 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9268 */;
 import noop from "module_19" /* 19 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7878 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7885 */;
 
 require = fn;
 const AnalyticsSections = fn(1072).AnalyticsSections;
@@ -32,15 +32,15 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   }, items1);
   let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   let obj = channelId(504);
-  const intl = channelId(1114).intl;
-  obj2.title = intl.string(channelId(1114).t.QogHld);
-  const intl2 = channelId(1114).intl;
-  obj2.subtitle = intl2.string(channelId(1114).t.qODBkW);
-  const intl3 = channelId(1114).intl;
+  const intl = channelId(1113).intl;
+  obj2.title = intl.string(channelId(1113).t.QogHld);
+  const intl2 = channelId(1113).intl;
+  obj2.subtitle = intl2.string(channelId(1113).t.qODBkW);
+  const intl3 = channelId(1113).intl;
   const obj3 = { helpArticle: null };
-  const tmp3 = streamKey(9262);
-  obj3.helpArticle = channelId(9246).getSecureFramesHelpdeskArticle();
-  obj2.footer = intl3.format(channelId(1114).t["H3+ktv"], obj3);
+  const tmp3 = streamKey(9281);
+  obj3.helpArticle = channelId(9265).getSecureFramesHelpdeskArticle();
+  obj2.footer = intl3.format(channelId(1113).t["H3+ktv"], obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;
   return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;

@@ -1,15 +1,15 @@
-// === Module 1405: ColorPaletteUtils ===
+// === Module 1404: ColorPaletteUtils ===
 
-// Module 1405 (ColorPaletteUtils)
+// Module 1404 (ColorPaletteUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/color_picker/ColorPaletteUtils.tsx");
 
-export function isCustomColorPalette(gummyColors, arr) {
-  closure_0 = gummyColors;
-  let tmp = null != gummyColors;
+export function isCustomColorPalette(arr2, arr) {
+  closure_0 = arr2;
+  let tmp = null != arr2;
   if (tmp) {
-    tmp = 0 !== gummyColors.length;
+    tmp = 0 !== arr2.length;
   }
   if (tmp) {
     tmp = !arr.some((arr) => arr.length === arr2.length && arr.every((item, index) => item === closure_0[index]));

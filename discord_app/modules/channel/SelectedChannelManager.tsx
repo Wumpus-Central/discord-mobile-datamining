@@ -1,17 +1,17 @@
-// === Module 19550: SelectedChannelManager ===
+// === Module 19607: SelectedChannelManager ===
 
-// Module 19550 (SelectedChannelManager)
+// Module 19607 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import router_utils from "router_utils" /* 1100 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6700 */;
-import transitionToGuild from "transitionToGuild" /* 7516 */;
-import MediaEngineStore from "MediaEngineStore" /* 2007 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import router_utils from "router_utils" /* 1099 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
+import transitionToGuild from "transitionToGuild" /* 7522 */;
+import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
-const findFirstVoiceChannelId = fn(4912).findFirstVoiceChannelId;
+const findFirstVoiceChannelId = fn(4917).findFirstVoiceChannelId;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_7, Routes: closure_8, ME: closure_9, NULL_STRING_GUILD_ID: c10 } = Constants);
 class SelectedChannelManager extends tmp3 {

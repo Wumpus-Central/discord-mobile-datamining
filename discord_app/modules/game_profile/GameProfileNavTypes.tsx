@@ -1,6 +1,6 @@
-// === Module 9345: GameProfileNavTypes ===
+// === Module 9365: GameProfileNavTypes ===
 
-// Module 9345 (GameProfileNavTypes)
+// Module 9365 (GameProfileNavTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileNavTypes.tsx");

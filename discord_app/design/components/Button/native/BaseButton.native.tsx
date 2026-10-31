@@ -1,22 +1,22 @@
-// === Module 5638: Button/BaseButton ===
+// === Module 5643: Button/BaseButton ===
 
-// Module 5638 (Button/BaseButton)
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import native from "native" /* 5075 */;
-import ButtonHooks from "ButtonHooks" /* 5636 */;
+// Module 5643 (Button/BaseButton)
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import native from "native" /* 5080 */;
+import ButtonHooks from "ButtonHooks" /* 5641 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 5090 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 5095 */;
 
 require = fn;
 let closure_2 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5639).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5644).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_9 = ReanimatedRexport.createAnimatedComponent(Pressable);
@@ -54,7 +54,7 @@ export function BaseButton(disabled) {
   const tmp = closure_8();
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: null };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

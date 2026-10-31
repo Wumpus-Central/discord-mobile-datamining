@@ -1,8 +1,8 @@
-// === Module 12428: useConjureProjectIcon ===
+// === Module 11343: useConjureProjectIcon ===
 
-// Module 12428 (useConjureProjectIcon)
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6875 */;
+// Module 11343 (useConjureProjectIcon)
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectIcon.tsx");
@@ -26,6 +26,6 @@ export default function useConjureProjectIcon(preview_application_id, size) {
   const merged = Object.assign({ glyphSize: Math.round(0.6 * size), radius: size / 4 });
   return obj4;
 };
-export function conjureProjectIconMetrics(dependencyMap) {
-  return { glyphSize: Math.round(0.6 * dependencyMap), radius: dependencyMap / 4 };
+export function conjureProjectIconMetrics(size) {
+  return { glyphSize: Math.round(0.6 * size), radius: size / 4 };
 }

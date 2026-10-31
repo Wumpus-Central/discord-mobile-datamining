@@ -1,6 +1,6 @@
-// === Module 6223: ? ===
+// === Module 6228: ? ===
 
-// Module 6223
+// Module 6228
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/camper_plaid.png.js");

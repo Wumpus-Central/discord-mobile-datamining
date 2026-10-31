@@ -1,10 +1,10 @@
-// === Module 9061: GuildSettingsFetchActionCreators ===
+// === Module 9080: GuildSettingsFetchActionCreators ===
 
-// Module 9061 (GuildSettingsFetchActionCreators)
+// Module 9080 (GuildSettingsFetchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRecord from "UserRecord" /* 1398 */;
+import UserRecord from "UserRecord" /* 1397 */;
 
 require = fn;
 let closure_7 = async function _fetchGuildIntegrationsApplications() {
@@ -37,7 +37,7 @@ let closure_7 = async function _fetchGuildIntegrationsApplications() {
   closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_SETTINGS_LOADED_INTEGRATIONS", guildId: closure_129_0, integrations: closure_129_1 });
   return closure_129_1;
 };
-const BasicApplicationRecord = fn(2017).BasicApplicationRecord;
+const BasicApplicationRecord = fn(2016).BasicApplicationRecord;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsFetchActionCreators.tsx");

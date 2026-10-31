@@ -1,7 +1,7 @@
-// === Module 4840: UserSettingsProtoUtils ===
+// === Module 4845: UserSettingsProtoUtils ===
 
-// Module 4840 (UserSettingsProtoUtils)
-import ProtoUtils from "ProtoUtils" /* 1235 */;
+// Module 4845 (UserSettingsProtoUtils)
+import ProtoUtils from "ProtoUtils" /* 1234 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");

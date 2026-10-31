@@ -1,17 +1,17 @@
-// === Module 16746: FamilyCenterTopUsersBottomSheet ===
+// === Module 16788: FamilyCenterTopUsersBottomSheet ===
 
-// Module 16746 (FamilyCenterTopUsersBottomSheet)
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import _modDef2537 from "module_2537" /* 2537 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import TableRow from "TableRow" /* 6969 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
-import ActionSheet from "ActionSheet" /* 7360 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8364 */;
+// Module 16788 (FamilyCenterTopUsersBottomSheet)
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import _modDef2538 from "module_2538" /* 2538 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import TableRow from "TableRow" /* 6975 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import ActionSheet from "ActionSheet" /* 7366 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8372 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function UserRow(userActivity) {
@@ -24,14 +24,14 @@ function UserRow(userActivity) {
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow.TableRow, obj2);
   }
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
@@ -41,7 +41,7 @@ export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   const obj = { children: null };
   const obj2 = { variant: "text-md/bold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2537.BxbvS7);
+  obj2.children = intl.string(_modDef2538.BxbvS7);
   const items = [React4(Text_Text.Text, obj2), ];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, { hasIcons: true, children: topUserActivities.map((userActivity) => closure_1_4(UserRow, { userActivity }, userActivity.user_id)) });

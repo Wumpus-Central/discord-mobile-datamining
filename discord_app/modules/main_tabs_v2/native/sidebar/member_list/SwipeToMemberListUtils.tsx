@@ -1,9 +1,9 @@
-// === Module 11503: SwipeToMemberListUtils ===
+// === Module 11537: SwipeToMemberListUtils ===
 
-// Module 11503 (SwipeToMemberListUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 6871 */;
-import ChatGestureSettings from "ChatGestureSettings" /* 11504 */;
+// Module 11537 (SwipeToMemberListUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
+import hasSecondaryViewChatDefault from "hasSecondaryViewChat" /* 6877 */;
+import ChatGestureSettings from "ChatGestureSettings" /* 11538 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");

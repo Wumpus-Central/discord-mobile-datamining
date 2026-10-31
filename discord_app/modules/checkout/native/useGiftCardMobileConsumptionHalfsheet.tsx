@@ -1,18 +1,18 @@
-// === Module 7560: useGiftCardMobileConsumptionHalfsheet ===
+// === Module 7566: useGiftCardMobileConsumptionHalfsheet ===
 
-// Module 7560 (useGiftCardMobileConsumptionHalfsheet)
+// Module 7566 (useGiftCardMobileConsumptionHalfsheet)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import dismissible_content from "dismissible_content" /* 4842 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6529 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import dismissible_content from "dismissible_content" /* 4847 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6535 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WalletBalanceStore from "WalletBalanceStore" /* 7561 */;
-import PaymentSourceStore from "PaymentSourceStore" /* 2050 */;
+import WalletBalanceStore from "WalletBalanceStore" /* 7567 */;
+import PaymentSourceStore from "PaymentSourceStore" /* 2049 */;
 
 require = fn;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const PaymentSourceTypes = fn(1083).PaymentSourceTypes;
 const GiftCardMobileConsumptionActionSheet = "GiftCardMobileConsumptionActionSheet";
 let obj = { Idle: "idle", Opening: "opening", Opened: "opened" };
@@ -21,8 +21,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx");
 
 export function useGiftCardMobileConsumptionHalfsheet() {
-  enabled = enabled(7562).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
-  obj = enabled(7562);
+  enabled = enabled(7568).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
+  obj = enabled(7568);
   let tmp = enabled;
   let items = [markAsDismissed];
   let items1 = [enabled];
@@ -86,7 +86,7 @@ export function useGiftCardMobileConsumptionHalfsheet() {
     return items1;
   }, items6);
   const obj4 = enabled(504);
-  const tmp10 = first(tmp(7563).useSelectedDismissibleContent(memo, { bypassAutoDismiss: true }), 2);
+  const tmp10 = first(tmp(7569).useSelectedDismissibleContent(memo, { bypassAutoDismiss: true }), 2);
   first = tmp10[0];
   noop = tmp12;
   ref = noop.useRef(tmp10[1]);
@@ -126,7 +126,7 @@ export function useGiftCardMobileConsumptionHalfsheet() {
         c0 = false;
         obj = DispatcherDefault;
         const subscription = obj.subscribe("SHOW_ACTION_SHEET", handleShow);
-        const promise = asyncRequireImpl(7567, dependencyMap.paths);
+        const promise = asyncRequireImpl(7573, dependencyMap.paths);
         promise.catch(() => {
           let tmp = c0;
           if (!c0) {

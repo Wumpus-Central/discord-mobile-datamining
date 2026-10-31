@@ -1,16 +1,16 @@
-// === Module 15560: LocalAppDetectionStore ===
+// === Module 15599: LocalAppDetectionStore ===
 
-// Module 15560 (LocalAppDetectionStore)
+// Module 15599 (LocalAppDetectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 15561 */;
-import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 15562 */;
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 15600 */;
+import LocalAppDetectionUtils from "LocalAppDetectionUtils" /* 15601 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConsentStore from "ConsentStore" /* 6736 */;
+import ConsentStore from "ConsentStore" /* 6742 */;
 
 require = fn;
 const Consents = fn(1072).Consents;
-let closure_6 = { detected: false, lastScannedAt: "Array" };
+let closure_6 = { detected: false, lastScannedAt: "a" };
 let closure_7 = { apps: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class LocalAppDetectionStore extends DeviceSettingsStore {

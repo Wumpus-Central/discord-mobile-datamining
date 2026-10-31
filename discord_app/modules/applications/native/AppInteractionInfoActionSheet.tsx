@@ -1,22 +1,22 @@
-// === Module 14486: AppInteractionInfoActionSheet ===
+// === Module 14524: AppInteractionInfoActionSheet ===
 
-// Module 14486 (AppInteractionInfoActionSheet)
+// Module 14524 (AppInteractionInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Pressables from "Pressables" /* 6974 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6996 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7315 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
-import UserActionCreators from "UserActionCreators" /* 8744 */;
+import util from "util" /* 1113 */;
+import Pressables from "Pressables" /* 6980 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7002 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+import UserActionCreators from "UserActionCreators" /* 8752 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1398 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserRecord from "UserRecord" /* 1397 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -49,13 +49,13 @@ export default function AppInteractionInfoActionSheet(message) {
     return React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
   }, items);
   if (interactionMetadata != null) {
-    tmp3 = interactionMetadata.authorizing_integration_owners[message(undefined, 5646).ApplicationIntegrationType.USER_INSTALL];
+    tmp3 = interactionMetadata.authorizing_integration_owners[message(undefined, 5651).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp3;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp6;
   if (interactionMetadata2 != null) {
-    tmp6 = interactionMetadata2.authorizing_integration_owners[message(undefined, 5646).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp6 = interactionMetadata2.authorizing_integration_owners[message(undefined, 5651).ApplicationIntegrationType.GUILD_INSTALL];
   }
   noop = tmp6;
   const interactionMetadata3 = message.interactionMetadata;
@@ -97,28 +97,28 @@ export default function AppInteractionInfoActionSheet(message) {
   }
   if (null != stateFromStores1) {
     const obj5 = { icon: null, label: null, subLabel: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(6951).GuildIconSizes.SMALL_32 };
-    obj5.icon = closure_7(onBack(6951), obj6);
+    const obj6 = { guild: stateFromStores1, size: tmp10(6957).GuildIconSizes.SMALL_32 };
+    obj5.icon = closure_7(onBack(6957), obj6);
     obj5.label = stateFromStores1.name;
-    let intl2 = tmp10(1114).intl;
+    let intl2 = tmp10(1113).intl;
     const obj7 = { application: message.author.username };
-    obj5.subLabel = intl2.formatToPlainString(tmp10(1114).t.ShLXXB, obj7);
-    let tmp25 = closure_7(tmp10(6969).TableRow, obj5);
-    const tmp28 = onBack(6951);
+    obj5.subLabel = intl2.formatToPlainString(tmp10(1113).t.ShLXXB, obj7);
+    let tmp25 = closure_7(tmp10(6975).TableRow, obj5);
+    const tmp28 = onBack(6957);
   } else {
     tmp25 = null;
     if (null != stateFromStores) {
       const obj8 = { icon: null, label: null, subLabel: null, onPress: null, arrow: true };
-      const obj9 = { user: stateFromStores, size: tmp10(1188).AvatarSizes.REFRESH_MEDIUM_32, guildId };
-      obj8.icon = closure_7(tmp10(1188).Avatar, obj9);
+      const obj9 = { user: stateFromStores, size: tmp10(1187).AvatarSizes.REFRESH_MEDIUM_32, guildId };
+      obj8.icon = closure_7(tmp10(1187).Avatar, obj9);
       obj8.label = stateFromStores.username;
-      let intl = tmp10(1114).intl;
+      let intl = tmp10(1113).intl;
       const obj10 = { application: message.author.username };
-      obj8.subLabel = intl.formatToPlainString(tmp10(1114).t.ShLXXB, obj10);
+      obj8.subLabel = intl.formatToPlainString(tmp10(1113).t.ShLXXB, obj10);
       obj8.onPress = function onPress() {
         return showUserProfileActionSheetDefault({ userId: stateFromStores.id, channelId: message.channel_id });
       };
-      tmp25 = closure_7(tmp10(6969).TableRow, obj8);
+      tmp25 = closure_7(tmp10(6975).TableRow, obj8);
     }
   }
   const obj11 = { header: memo, bodyStyles: tmp.body, children: null };
@@ -126,17 +126,17 @@ export default function AppInteractionInfoActionSheet(message) {
   let tmp29Result = null;
   if (null != tmp16) {
     const obj12 = { icon: null, label: null, subLabel: null, onPress: null, arrow: true };
-    const obj13 = { user: tmp16, size: tmp10(1188).AvatarSizes.REFRESH_MEDIUM_32, guildId };
-    obj12.icon = closure_7(tmp10(1188).Avatar, obj13);
+    const obj13 = { user: tmp16, size: tmp10(1187).AvatarSizes.REFRESH_MEDIUM_32, guildId };
+    obj12.icon = closure_7(tmp10(1187).Avatar, obj13);
     obj12.label = tmp16.username;
-    const intl3 = tmp10(1114).intl;
-    obj12.subLabel = intl3.string(tmp10(1114).t["04gxNg"]);
+    const intl3 = tmp10(1113).intl;
+    obj12.subLabel = intl3.string(tmp10(1113).t["04gxNg"]);
     obj12.onPress = function onPress() {
       return showUserProfileActionSheetDefault({ userId: id.id, channelId: message.channel_id });
     };
-    tmp29Result = closure_7(tmp10(6969).TableRow, obj12);
+    tmp29Result = closure_7(tmp10(6975).TableRow, obj12);
   }
   items5[1] = tmp29Result;
-  obj11.children = closure_8(message(7054).TableRowGroup, { hasIcons: true, children: items5 });
-  return closure_7(message(5267).BottomSheet, obj11);
+  obj11.children = closure_8(message(7060).TableRowGroup, { hasIcons: true, children: items5 });
+  return closure_7(message(5272).BottomSheet, obj11);
 };

@@ -1,17 +1,17 @@
-// === Module 13686: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 13721: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 13686 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 13721 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 575 */;
-import openUserSettings from "openUserSettings" /* 7557 */;
+import openUserSettings from "openUserSettings" /* 7563 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { content: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 }, examples: null, newBadge: null, title: null, body: null, actions: null, row: null, outerRow: null, innerRow: null, outerStack: null, innerStack: null };
   const obj2 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 };

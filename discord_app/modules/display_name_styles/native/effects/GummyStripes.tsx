@@ -1,14 +1,14 @@
-// === Module 16424: GummyStripes ===
+// === Module 16466: GummyStripes ===
 
-// Module 16424 (GummyStripes)
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+// Module 16466 (GummyStripes)
+import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_5 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripes.tsx");

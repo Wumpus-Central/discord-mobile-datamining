@@ -1,14 +1,14 @@
-// === Module 6928: Spellchecker ===
+// === Module 6934: Spellchecker ===
 
-// Module 6928 (Spellchecker)
+// Module 6934 (Spellchecker)
 import LoggerDefault from "Logger" /* 3 */;
-import DOMUtils from "DOMUtils" /* 2031 */;
-import fallbackLocalesDefault from "fallbackLocales" /* 6929 */;
-import _mod6930 from "module_6930" /* 6930 */;
+import DOMUtils from "DOMUtils" /* 2029 */;
+import fallbackLocalesDefault from "fallbackLocales" /* 6935 */;
+import _mod6936 from "module_6936" /* 6936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
-import DiscordNative from "DiscordNative" /* 4820 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
+import DiscordNative from "DiscordNative" /* 4825 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -59,7 +59,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod6930;
+      obj = _mod6936;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -222,7 +222,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod6930.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod6936.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {
@@ -247,7 +247,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     }
     logger.error("" + str2 + " is not a valid locale.");
   });
-  const arr = Array.from(new Set(mapped.filter(mapped1(1380).isNotNullish)));
+  const arr = Array.from(new Set(mapped.filter(mapped1(1379).isNotNullish)));
   if (0 !== arr.length) {
     mapped1 = arr.map((item) => {
       let tmp = self.rawLocaleByNormalized[item];
@@ -280,7 +280,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     let _HermesInternal = HermesInternal;
     logger.info("No spellcheck languages resolved from candidates: " + items.join(", "));
   }
-  const set = new Set(mapped.filter(mapped1(1380).isNotNullish));
+  const set = new Set(mapped.filter(mapped1(1379).isNotNullish));
 };
 prototype["buildLanguageIndex"] = function buildLanguageIndex(items) {
   const obj = {};

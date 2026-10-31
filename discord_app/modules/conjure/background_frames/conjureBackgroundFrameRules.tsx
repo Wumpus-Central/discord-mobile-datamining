@@ -1,18 +1,18 @@
-// === Module 18621: conjureBackgroundFrameRules ===
+// === Module 18663: conjureBackgroundFrameRules ===
 
-// Module 18621 (conjureBackgroundFrameRules)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5670 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10863 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 14362 */;
-import validateConjureAppFrame from "validateConjureAppFrame" /* 16247 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
-import FramesStore from "FramesStore" /* 6840 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import VoiceChannelAppStore from "VoiceChannelAppStore" /* 18622 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16249 */;
+// Module 18663 (conjureBackgroundFrameRules)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5675 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10883 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 14400 */;
+import validateConjureAppFrame from "validateConjureAppFrame" /* 16288 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import FramesStore from "FramesStore" /* 6846 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
+import VoiceChannelAppStore from "VoiceChannelAppStore" /* 18664 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 16290 */;
 
 require = fn;
-const FrameIntent = fn(6841).FrameIntent;
+const FrameIntent = fn(6847).FrameIntent;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFrameRules.tsx");
 

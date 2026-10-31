@@ -1,6 +1,6 @@
-// === Module 10856: ConjureLastIntegrationStatusStore ===
+// === Module 10876: ConjureLastIntegrationStatusStore ===
 
-// Module 10856 (ConjureLastIntegrationStatusStore)
+// Module 10876 (ConjureLastIntegrationStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

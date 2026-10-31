@@ -1,18 +1,18 @@
-// === Module 19555: BlockedUserInGdmActionSheet ===
+// === Module 19612: BlockedUserInGdmActionSheet ===
 
-// Module 19555 (BlockedUserInGdmActionSheet)
+// Module 19612 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6036 */;
-import TableRow from "TableRow" /* 6969 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 19556 */;
+import util from "util" /* 1113 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
+import TableRow from "TableRow" /* 6975 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 19613 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function getUserCalloutRowText(arg0) {
@@ -77,22 +77,22 @@ function UserCalloutAvatars(userIds) {
   const items = [UserStore];
   const items1 = [userIds];
   const stateFromStoresArray = userIds(504).useStateFromStoresArray(items, () => userIds.map((item) => user.getUser(item)), items1);
-  let found = stateFromStoresArray.filter(userIds(1380).isNotNullish);
+  let found = stateFromStoresArray.filter(userIds(1379).isNotNullish);
   if (1 === userIds.length) {
     if (null != UserStore.getUser(userIds[0])) {
       const obj3 = { user: null, guildId: null, size: null, "aria-hidden": true };
       found = found[0];
       obj3.user = found;
       obj3.guildId = userIds.guildId;
-      REFRESH_MEDIUM_32 = tmp(1188).AvatarSizes.REFRESH_MEDIUM_32;
+      REFRESH_MEDIUM_32 = tmp(1187).AvatarSizes.REFRESH_MEDIUM_32;
       obj3.size = REFRESH_MEDIUM_32;
-      let tmp6 = closure_10(tmp(1188).Avatar, obj3);
+      let tmp6 = closure_10(tmp(1187).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(12431).UserIcon, {});
+      tmp6 = closure_10(tmp(12466).UserIcon, {});
     }
   } else {
-    const obj4 = { users: found, size: tmp(1188).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10779).FacepileGroupDMAvatar, obj4);
+    const obj4 = { users: found, size: tmp(1187).AvatarSizes.REFRESH_MEDIUM_32 };
+    return closure_10(tmp(10799).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 }
@@ -134,12 +134,12 @@ function BlockedUserInGDMDescription(arg0) {
   }
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15582);
+const SharedSpaceWarningConstants = fn(15621);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center" }, description: { textAlign: "center", alignSelf: "center" }, tableGroup: null, buttons: null, icon: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
 obj2.tableGroup = { paddingVertical: nativeDefault.space.PX_24 };

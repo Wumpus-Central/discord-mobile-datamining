@@ -1,16 +1,16 @@
-// === Module 19326: AgeGateManager ===
+// === Module 19383: AgeGateManager ===
 
-// Module 19326 (AgeGateManager)
-import AgeGateUtils from "AgeGateUtils" /* 6728 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+// Module 19383 (AgeGateManager)
+import AgeGateUtils from "AgeGateUtils" /* 6734 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
-const AgeGateConstants = fn(1098);
+const AgeGateConstants = fn(1097);
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY: closure_7, AgeGateSource: closure_8, AgeGateType: closure_9 } = AgeGateConstants);
 const Constants = fn(1072);
 ({ ChannelTypes: c10, GuildNSFWContentLevel: closure_11 } = Constants);
@@ -44,8 +44,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId) {
   const source = channelId.source;
-  importDefault = source(6728).getAgeGateType(source);
-  let obj = source(6728);
+  importDefault = source(6734).getAgeGateType(source);
+  let obj = source(6734);
   ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -57,7 +57,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(channelId)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

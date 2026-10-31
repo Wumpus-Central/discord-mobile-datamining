@@ -1,14 +1,14 @@
-// === Module 12009: ParticipantTitle ===
+// === Module 12047: ParticipantTitle ===
 
-// Module 12009 (ParticipantTitle)
+// Module 12047 (ParticipantTitle)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import getParticipantTitleDefault from "getParticipantTitle" /* 11990 */;
+import native from "native" /* 1187 */;
+import getParticipantTitleDefault from "getParticipantTitle" /* 12028 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = { usernameText: { fontSize: 14, color: nativeDefault.colors.WHITE } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

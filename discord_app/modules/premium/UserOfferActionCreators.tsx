@@ -1,13 +1,13 @@
-// === Module 8522: UserOfferActionCreators ===
+// === Module 8530: UserOfferActionCreators ===
 
-// Module 8522 (UserOfferActionCreators)
+// Module 8530 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8523 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7627 */;
-import UserOfferStore from "UserOfferStore" /* 7623 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8531 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7634 */;
+import UserOfferStore from "UserOfferStore" /* 7630 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "color", paymentGatewayOverride: "Error" };
+            obj8 = { offerId: "Array", paymentGatewayOverride: "flexDirection" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;
@@ -273,7 +273,7 @@ let closure_14 = async function _fetchChurnDiscountOffer() {
   }
   return value;
 };
-let closure_7 = fn(1386).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
+let closure_7 = fn(1385).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, PaymentGateways: c10 } = Constants);
 const size = fn(2);
@@ -379,13 +379,13 @@ export function triggerUserOffer(triggerType, trigger_location_stack, fn) {
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1376);
+      postResultResult = postResult(1375);
     }
     const obj5 = { payment_gateway: GOOGLE, trigger_type: _JSON, trigger_location_stack, trigger_metadata: null, trigger_uptime_app: null };
     _JSON = JSON;
     obj5.trigger_metadata = JSON.stringify(tmp5);
     obj5.trigger_uptime_app = UserOfferStore.getUptimeForTrigger();
-    const HTTP = postResult(1283).HTTP;
+    const HTTP = postResult(1282).HTTP;
     const request = { url: constants.USER_OFFER_TRIGGER, body: obj5, rejectWithError: true };
     postResult = HTTP.post(request);
     then = postResult.then;

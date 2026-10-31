@@ -1,18 +1,18 @@
-// === Module 18240: VoiceChannel ===
+// === Module 18283: VoiceChannel ===
 
-// Module 18240 (VoiceChannel)
+// Module 18283 (VoiceChannel)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9066 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10782 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12209 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9085 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12247 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7699 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5762 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7706 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
 
 require = fn;
 let closure_17 = async function _handleVoiceChannelPress(arg0) {
@@ -38,8 +38,8 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5762).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(11027);
+const NO_VOICE_STATES = fn(5767).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(11046);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);

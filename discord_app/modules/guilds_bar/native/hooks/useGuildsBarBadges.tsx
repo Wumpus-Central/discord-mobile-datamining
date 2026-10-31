@@ -1,18 +1,18 @@
-// === Module 18347: useGuildsBarBadges ===
+// === Module 18390: useGuildsBarBadges ===
 
-// Module 18347 (useGuildsBarBadges)
-import native from "native" /* 1188 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5042 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18318 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18349 */;
+// Module 18390 (useGuildsBarBadges)
+import native from "native" /* 1187 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5047 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18361 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18392 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10991 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5041 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import UserStore from "UserStore" /* 1384 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11010 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5046 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1072);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_15 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");

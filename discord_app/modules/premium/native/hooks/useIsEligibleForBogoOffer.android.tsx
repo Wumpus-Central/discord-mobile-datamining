@@ -1,12 +1,12 @@
-// === Module 10552: useIsEligibleForBogoOffer ===
+// === Module 10572: useIsEligibleForBogoOffer ===
 
-// Module 10552 (useIsEligibleForBogoOffer)
+// Module 10572 (useIsEligibleForBogoOffer)
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 2053 */;
-import PromotionsStore from "PromotionsStore" /* 9606 */;
+import SubscriptionStore from "SubscriptionStore" /* 2052 */;
+import PromotionsStore from "PromotionsStore" /* 9626 */;
 
 const require = fn;
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
@@ -17,13 +17,13 @@ export function useIsEligibleForBogoOffer() {
   const items1 = [SubscriptionStore];
   const stateFromStores1 = forceUpdate(504).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const obj2 = forceUpdate(504);
-  const premiumTrialOffer = forceUpdate(7620).usePremiumTrialOffer();
-  const obj4 = forceUpdate(7620);
-  const premiumDiscountOffer = forceUpdate(10551).usePremiumDiscountOffer();
-  const obj5 = forceUpdate(10551);
-  const isPaymentsBlocked = forceUpdate(7595).useIsPaymentsBlocked();
-  const obj6 = forceUpdate(7595);
-  forceUpdate = forceUpdate(10553).useForceUpdate();
+  const premiumTrialOffer = forceUpdate(7627).usePremiumTrialOffer();
+  const obj4 = forceUpdate(7627);
+  const premiumDiscountOffer = forceUpdate(10571).usePremiumDiscountOffer();
+  const obj5 = forceUpdate(10571);
+  const isPaymentsBlocked = forceUpdate(7602).useIsPaymentsBlocked();
+  const obj6 = forceUpdate(7602);
+  forceUpdate = forceUpdate(10573).useForceUpdate();
   let valueOfResult = null;
   if (null != stateFromStores) {
     const endDate = stateFromStores.endDate;

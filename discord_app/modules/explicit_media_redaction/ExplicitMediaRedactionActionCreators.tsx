@@ -1,8 +1,8 @@
-// === Module 13260: ExplicitMediaRedactionActionCreators ===
+// === Module 13295: ExplicitMediaRedactionActionCreators ===
 
-// Module 13260 (ExplicitMediaRedactionActionCreators)
+// Module 13295 (ExplicitMediaRedactionActionCreators)
 import Constants from "Constants" /* 1072 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

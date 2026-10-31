@@ -1,10 +1,10 @@
-// === Module 5037: HexagonCampaignPerkAvailability ===
+// === Module 5042: HexagonCampaignPerkAvailability ===
 
-// Module 5037 (HexagonCampaignPerkAvailability)
+// Module 5042 (HexagonCampaignPerkAvailability)
 import initialize from "initialize" /* 504 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5036 */;
-import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5038 */;
-import UserStore from "UserStore" /* 1384 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5041 */;
+import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5043 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const size = fn(2);

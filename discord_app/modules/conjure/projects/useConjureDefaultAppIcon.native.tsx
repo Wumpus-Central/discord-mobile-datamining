@@ -1,7 +1,7 @@
-// === Module 12426: useConjureDefaultAppIcon ===
+// === Module 11341: useConjureDefaultAppIcon ===
 
-// Module 12426 (useConjureDefaultAppIcon)
-import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 12427 */;
+// Module 11341 (useConjureDefaultAppIcon)
+import conjureDefaultAppIcon2 from "conjureDefaultAppIcon" /* 11342 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

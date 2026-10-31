@@ -1,9 +1,9 @@
-// === Module 14790: ShopThisLookMarketingCoachmark ===
+// === Module 14828: ShopThisLookMarketingCoachmark ===
 
-// Module 14790 (ShopThisLookMarketingCoachmark)
-import util from "util" /* 1114 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14784 */;
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 14791 */;
+// Module 14828 (ShopThisLookMarketingCoachmark)
+import util from "util" /* 1113 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14822 */;
+import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 14829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,10 +11,10 @@ function ShopThisLookMarketingCoachmarkImage() {
   return <View style={closure_7().imageContainer}>{jsx(BumpingFistsSpotIllustration.BumpingFistsSpotIllustration, { width: 100, height: 56, resizeMode: "contain" })}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
-const UserProfileThemeTypes = fn(7371).UserProfileThemeTypes;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
+const UserProfileThemeTypes = fn(7377).UserProfileThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx");

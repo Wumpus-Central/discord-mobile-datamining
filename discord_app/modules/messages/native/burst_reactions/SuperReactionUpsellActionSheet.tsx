@@ -1,16 +1,16 @@
-// === Module 9876: SuperReactionUpsellActionSheet ===
+// === Module 9897: SuperReactionUpsellActionSheet ===
 
-// Module 9876 (SuperReactionUpsellActionSheet)
+// Module 9897 (SuperReactionUpsellActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import _mod4978 from "module_4978" /* 4978 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9884 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9885 */;
-import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 9916 */;
+import native from "native" /* 1187 */;
+import _mod4983 from "module_4983" /* 4983 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
+import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 9937 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -19,9 +19,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const AnalyticsPages = fn(1072).AnalyticsPages;
 const jsx = fn(21).jsx;
-const dismissibleContent = fn(4842).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
-let items = [fn(9877), fn(9878), fn(9879), fn(9880), fn(9878), fn(9881), fn(9882), fn(9883)];
-const createStyles = fn(5009);
+const dismissibleContent = fn(4847).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
+let items = [fn(9898), fn(9899), fn(9900), fn(9901), fn(9899), fn(9902), fn(9903), fn(9904)];
+const createStyles = fn(5014);
 let obj2 = { fill: null, nitroIcon: null, description: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

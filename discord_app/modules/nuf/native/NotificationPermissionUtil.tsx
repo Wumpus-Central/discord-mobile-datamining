@@ -1,14 +1,14 @@
-// === Module 13925: NotificationPermissionUtil ===
+// === Module 13960: NotificationPermissionUtil ===
 
-// Module 13925 (NotificationPermissionUtil)
+// Module 13960 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7955 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13926 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 13933 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7963 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13961 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 13968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13923 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 13958 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0) {
@@ -22,7 +22,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -73,7 +73,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
               c6 = 1;
               const obj11 = {
                 value: closure_132_1(closure_132_2[12]).requestPermission((permission_granted) => {
-                              action_location(1253).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type, action_location, permission_granted });
+                              action_location(1252).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type, action_location, permission_granted });
                               dependencyMap();
                             }),
                 done: false
@@ -108,7 +108,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -157,7 +157,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
           });
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -166,9 +166,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(13924).EventActionType;
+const EventActionType = fn(13959).EventActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_10 = fn(7932).NotificationAuthorizationStatus;
+let closure_10 = fn(7940).NotificationAuthorizationStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 
@@ -196,7 +196,7 @@ export function useShowReactivationPrompt() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -227,7 +227,7 @@ export function useShowReactivationPrompt() {
               tmp4(true);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c2 = tmp;

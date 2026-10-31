@@ -1,25 +1,25 @@
-// === Module 13609: CheckpointTopServerStatsScreen ===
+// === Module 13646: CheckpointTopServerStatsScreen ===
 
-// Module 13609 (CheckpointTopServerStatsScreen)
+// Module 13646 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef3091 from "module_3091" /* 3091 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import GuildIcon from "GuildIcon" /* 6951 */;
-import ServerIcon from "ServerIcon" /* 9738 */;
-import CheckpointStatsUtils from "CheckpointStatsUtils" /* 13399 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13585 */;
-import CheckpointTextDefault from "CheckpointText" /* 13587 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13600 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13601 */;
-import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13607 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 13608 */;
-import CheckpointStore from "CheckpointStore" /* 13386 */;
-import CheckpointConstants from "CheckpointConstants" /* 6061 */;
+import util from "util" /* 1113 */;
+import _modDef3092 from "module_3092" /* 3092 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6437 */;
+import GuildIcon from "GuildIcon" /* 6957 */;
+import ServerIcon from "ServerIcon" /* 9758 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13622 */;
+import CheckpointTextDefault from "CheckpointText" /* 13624 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13637 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13638 */;
+import CheckpointGuildStatsDefault from "CheckpointGuildStats" /* 13644 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 13645 */;
+import CheckpointStore from "CheckpointStore" /* 13421 */;
+import CheckpointConstants from "CheckpointConstants" /* 6066 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size_mod from "module_2" /* 2 */;
 
 const GuildIconDefault = GuildIcon;
@@ -74,12 +74,12 @@ export default function CheckpointTopServerStatsScreen() {
   }
   const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3091["M+a+t1"]);
+  const stringResult = intl.string(_modDef3092["M+a+t1"]);
   let formatToPlainStringResult;
   if (null != checkpointTopPercent) {
     const intl2 = util.intl;
     const obj2 = { numDays: rounded, percent: checkpointTopPercent };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3091.BRQODX, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3092.BRQODX, obj2);
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.spotlightContainer, children: null };
@@ -139,11 +139,11 @@ export default function CheckpointTopServerStatsScreen() {
           return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    let formatResult = intl4.format(_modDef3091.sIDTV1, obj17);
+    let formatResult = intl4.format(_modDef3092.sIDTV1, obj17);
   } else {
     const intl3 = util.intl;
     const obj18 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3091.nLCUQ4, obj18);
+    formatResult = intl3.format(_modDef3092.nLCUQ4, obj18);
   }
   const obj19 = { children: null };
   obj16.children = formatResult;

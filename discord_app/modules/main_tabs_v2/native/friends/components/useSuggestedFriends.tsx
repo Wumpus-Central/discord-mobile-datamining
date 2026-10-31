@@ -1,13 +1,13 @@
-// === Module 18047: useSuggestedFriends ===
+// === Module 18090: useSuggestedFriends ===
 
-// Module 18047 (useSuggestedFriends)
+// Module 18090 (useSuggestedFriends)
 import _modDef12 from "module_12" /* 12 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7797 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7804 */;
 
 const require = fn;
-const SuggestedFriendSource = fn(14218).SuggestedFriendSource;
+const SuggestedFriendSource = fn(14256).SuggestedFriendSource;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
@@ -35,9 +35,9 @@ export default function useSuggestedFriends(arg0) {
         return obj;
       });
       return _modDef12.unionBy(found, mapped, (user) => user.user.id).sort((user, user2) => {
-        const name = added(5063).getName(user.user);
-        const obj = added(5063);
-        return name.localeCompare(added(5063).getName(user2.user));
+        const name = added(5068).getName(user.user);
+        const obj = added(5068);
+        return name.localeCompare(added(5068).getName(user2.user));
       });
     } else {
       return [];

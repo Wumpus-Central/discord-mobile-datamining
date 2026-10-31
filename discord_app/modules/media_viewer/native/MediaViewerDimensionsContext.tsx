@@ -1,8 +1,8 @@
-// === Module 8858: MediaViewerDimensionsContext ===
+// === Module 8867: MediaViewerDimensionsContext ===
 
-// Module 8858 (MediaViewerDimensionsContext)
+// Module 8867 (MediaViewerDimensionsContext)
 import _modDef38 from "module_38" /* 38 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

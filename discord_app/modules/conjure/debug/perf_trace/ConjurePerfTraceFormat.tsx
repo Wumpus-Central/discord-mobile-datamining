@@ -1,8 +1,8 @@
-// === Module 12968: ConjurePerfTraceFormat ===
+// === Module 13003: ConjurePerfTraceFormat ===
 
-// Module 12968 (ConjurePerfTraceFormat)
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10869 */;
-import ConjureTimeFormat from "ConjureTimeFormat" /* 12969 */;
+// Module 13003 (ConjurePerfTraceFormat)
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10894 */;
+import ConjureTimeFormat from "ConjureTimeFormat" /* 13004 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

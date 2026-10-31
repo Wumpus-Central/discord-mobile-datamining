@@ -1,23 +1,23 @@
-// === Module 15641: RemoteAuthModal ===
+// === Module 15682: RemoteAuthModal ===
 
-// Module 15641 (RemoteAuthModal)
+// Module 15682 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5604 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import ButtonGroup from "ButtonGroup" /* 6761 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6947 */;
-import _modDef15640 from "module_15640" /* 15640 */;
-import _modDef15642 from "module_15642" /* 15642 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15643 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15647 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5609 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import ButtonGroup from "ButtonGroup" /* 6767 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
+import _modDef15681 from "module_15681" /* 15681 */;
+import _modDef15683 from "module_15683" /* 15683 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 15684 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 15688 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,10 +36,10 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     HTTP.post(request).then((body) => {
       dependencyMap(body.body.handshake_token);
       closure_1_1(constants.LOADED);
-      const result = remoteAuthFingerprint(5604).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5609).DeprecatedLayoutAnimation();
     }).catch(() => {
       closure_1_1(constants.NOT_FOUND);
-      const result = remoteAuthFingerprint(5604).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5609).DeprecatedLayoutAnimation();
     });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -180,7 +180,7 @@ get_ActivityIndicator = fn(17);
 const Endpoints = fn(1072).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, imageStyle: null, logo: null, mainImage: null, warningCaption: null, caption: null, mainCard: null, buttonGroup: null, loadingContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -204,12 +204,12 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 export default function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef15642, style: tmp.imageStyle };
+  const obj2 = { source: _modDef15683, style: tmp.imageStyle };
   const items = [React5(FastImageDefault, obj2), , ];
   const obj3 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj3.style = items1;
-  obj3.source = _modDef15640;
+  obj3.source = _modDef15681;
   items[1] = React5(FastImageDefault, obj3);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.mainCard, children: null };

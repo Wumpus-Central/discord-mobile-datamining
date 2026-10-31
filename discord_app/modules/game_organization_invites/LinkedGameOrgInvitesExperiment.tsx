@@ -1,7 +1,7 @@
-// === Module 11587: LinkedGameOrgInvitesExperiment ===
+// === Module 11623: LinkedGameOrgInvitesExperiment ===
 
-// Module 11587 (LinkedGameOrgInvitesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 11623 (LinkedGameOrgInvitesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-09-linked-game-org-invites-dev", defaultConfig: { enabled: false }, variations: null };

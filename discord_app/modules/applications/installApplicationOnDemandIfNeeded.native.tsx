@@ -1,9 +1,9 @@
-// === Module 11699: installApplicationOnDemandIfNeeded ===
+// === Module 11736: installApplicationOnDemandIfNeeded ===
 
-// Module 11699 (installApplicationOnDemandIfNeeded)
+// Module 11736 (installApplicationOnDemandIfNeeded)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2017 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
+import ApplicationRecord from "ApplicationRecord" /* 2016 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
 
 const require = fn;
 let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
@@ -17,7 +17,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -104,9 +104,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(5202).dismissKeyboard();
-          let obj = closure_1_0(5202);
-          closure_1_0(10884).openOAuth2Modal({
+          closure_1_0(5207).dismissKeyboard();
+          let obj = closure_1_0(5207);
+          closure_1_0(10909).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,

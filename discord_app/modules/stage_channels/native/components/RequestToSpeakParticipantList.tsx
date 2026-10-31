@@ -1,9 +1,9 @@
-// === Module 11855: RequestToSpeakParticipantList ===
+// === Module 11893: RequestToSpeakParticipantList ===
 
-// Module 11855 (RequestToSpeakParticipantList)
+// Module 11893 (RequestToSpeakParticipantList)
 import nativeDefault from "native" /* 575 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7937 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7945 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -80,7 +80,7 @@ function RequestToSpeakParticipant(participant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 }, listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 }, participantItemContainer: { padding: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, touchableContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, participantAvatarContainer: { paddingLeft: 4 }, participantNameplateContainer: { paddingHorizontal: 16, flex: 1 }, participantNameplateText: { fontSize: 16, fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, marginTop: 0, marginBottom: 0, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, participantActionContainer: { flexDirection: "row", paddingRight: 4 }, participantActionIcon: null, emptyContainer: null, emptyParticipant: null, emptyTitle: null, emptyBody: null };
 let obj3 = { fontSize: 16, fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, marginTop: 0, marginBottom: 0, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.participantActionIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

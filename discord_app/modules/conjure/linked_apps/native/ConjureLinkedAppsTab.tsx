@@ -1,8 +1,8 @@
-// === Module 12468: ConjureLinkedAppsTab ===
+// === Module 12503: ConjureLinkedAppsTab ===
 
-// Module 12468 (ConjureLinkedAppsTab)
+// Module 12503 (ConjureLinkedAppsTab)
 import nativeDefault from "native" /* 575 */;
-import _modDef3865 from "module_3865" /* 3865 */;
+import _modDef3868 from "module_3868" /* 3868 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
   let obj = { spacing: nativeDefault.space.PX_8, children: null };
   let obj2 = { description: null, hasIcons: false, children: null };
   let intl = require("util").intl;
-  obj2.description = intl.string(_modDef3865["6c2rjv"]);
+  obj2.description = intl.string(_modDef3868["6c2rjv"]);
   obj2.children = callers.map((build) => {
     _undefined = build;
     const obj = { label: _undefined[build.project_id], trailing: null, arrow: true, onPress: null };
@@ -33,7 +33,7 @@ export default function ConjureLinkedAppsTab(linkedApps) {
       const project_id = build.project_id;
       const name = tmp;
       let obj2 = {
-        content: closure_1_3(closure_1_1(12469), {
+        content: closure_1_3(closure_1_1(12504), {
           sheetKey,
           title: build[project_id],
           value: build.build,
@@ -43,22 +43,22 @@ export default function ConjureLinkedAppsTab(linkedApps) {
           onRemove() {
             closure_0 = project_id;
             const obj2 = { key: "ConjureRemoveLinkedApp-" + project_id, title: null, content: null, confirmText: null, variant: "destructive", onConfirm: null };
-            const intl = project_id(1114).intl;
-            obj2.title = intl.formatToPlainString(name(3865).zSfIvv, { name });
-            const intl2 = project_id(1114).intl;
-            obj2.content = intl2.formatToPlainString(name(3865)["7TX+mR"], { name });
-            const intl3 = project_id(1114).intl;
-            obj2.confirmText = intl3.string(name(3865).vDZEGQ);
+            const intl = project_id(1113).intl;
+            obj2.title = intl.formatToPlainString(name(3868).zSfIvv, { name });
+            const intl2 = project_id(1113).intl;
+            obj2.content = intl2.formatToPlainString(name(3868)["7TX+mR"], { name });
+            const intl3 = project_id(1113).intl;
+            obj2.confirmText = intl3.string(name(3868).vDZEGQ);
             obj2.onConfirm = function onConfirm() {
               return dependencyMap(closure_0);
             };
-            project_id(5959).showConfirmModal(obj2);
+            project_id(5964).showConfirmModal(obj2);
           }
         }),
         key: sheetKey,
         stackingBehavior: "stack"
       };
-      build(5253).showActionSheet(obj2);
+      build(5258).showActionSheet(obj2);
     };
     return closure_1_3(_undefined(_undefined2[10]).TableRow, obj, build.project_id);
   });
@@ -66,9 +66,9 @@ export default function ConjureLinkedAppsTab(linkedApps) {
   let tmp5Result = null;
   if (linkedApps.failed) {
     const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", accessibilityLiveRegion: "assertive", children: null };
-    let intl2 = tmp2(1114).intl;
-    obj3.children = intl2.string(_modDef3865.dIEOrl);
-    tmp5Result = closure_3(tmp2(5619).Text, obj3);
+    let intl2 = tmp2(1113).intl;
+    obj3.children = intl2.string(_modDef3868.dIEOrl);
+    tmp5Result = closure_3(tmp2(5624).Text, obj3);
   }
   items[1] = tmp5Result;
   obj.children = items;

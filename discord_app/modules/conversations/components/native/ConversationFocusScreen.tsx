@@ -1,9 +1,9 @@
-// === Module 9868: ConversationFocusScreen ===
+// === Module 9889: ConversationFocusScreen ===
 
-// Module 9868 (ConversationFocusScreen)
-import ConversationFocusViewDefault from "ConversationFocusView" /* 9869 */;
+// Module 9889 (ConversationFocusScreen)
+import ConversationFocusViewDefault from "ConversationFocusView" /* 9890 */;
 import noop from "module_19" /* 19 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 9829 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 9850 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -11,10 +11,10 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
 
 export default function ConversationFocusScreen() {
-  const params = channelId(1501).useRoute().params;
+  const params = channelId(1500).useRoute().params;
   channelId = params.channelId;
   ({ conversationId, messageId } = params);
-  let obj = channelId(1501);
+  let obj = channelId(1500);
   const items = [SelectedConversationStore];
   const items1 = [channelId];
   const messages = channelId(504).useStateFromStores(items, () => SelectedConversationStore.getHydratedMessages(channelId), items1);

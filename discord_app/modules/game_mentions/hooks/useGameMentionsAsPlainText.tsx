@@ -1,14 +1,14 @@
-// === Module 10729: useGameMentionsAsPlainText ===
+// === Module 10749: useGameMentionsAsPlainText ===
 
-// Module 10729 (useGameMentionsAsPlainText)
+// Module 10749 (useGameMentionsAsPlainText)
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2015 */;
-import UserStore from "UserStore" /* 1384 */;
+import GameStore from "GameStore" /* 2014 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelAutocompleteConstants = fn(6031);
+const ChannelAutocompleteConstants = fn(6036);
 ({ extractGameMentionIds: hasOwnProperty, GAME_MENTION_RAW_RE_GLOBAL: metroRequire } = ChannelAutocompleteConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");

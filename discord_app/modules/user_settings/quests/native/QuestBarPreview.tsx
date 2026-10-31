@@ -1,17 +1,17 @@
-// === Module 17082: QuestBarPreview ===
+// === Module 17140: QuestBarPreview ===
 
-// Module 17082 (QuestBarPreview)
+// Module 17140 (QuestBarPreview)
 import nativeDefault from "native" /* 575 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 17005 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17083 */;
-import QuestDock from "QuestDock" /* 17084 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 17063 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17141 */;
+import QuestDock from "QuestDock" /* 17142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const value = { isRendered: true, isVisibleToUser: true };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { overlay: { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 1000, elevation: 1000, pointerEvents: "box-none" }, questDockContainer: null };
 const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, zIndex: 1001, elevation: 1001 };
 obj2.questDockContainer = rect;

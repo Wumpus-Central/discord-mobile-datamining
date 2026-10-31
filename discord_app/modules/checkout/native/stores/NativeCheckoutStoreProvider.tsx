@@ -1,10 +1,10 @@
-// === Module 10656: NativeCheckoutStoreProvider ===
+// === Module 10676: NativeCheckoutStoreProvider ===
 
-// Module 10656 (NativeCheckoutStoreProvider)
-import SentryUtilsDefault from "SentryUtils" /* 1243 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import v1 from "v1" /* 1267 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10657 */;
+// Module 10676 (NativeCheckoutStoreProvider)
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import v1 from "v1" /* 1266 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10677 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ require = fn;
 function NativeCheckoutStoreProvider(children) {
   ({ checkoutInitParameters: require, order } = children);
   ({ paymentGateway: dependencyMap, orderRequired: asyncGeneratorStep, onOrderRetryCancellation: _slicedToArray, initialSubscriptionFacet: noop, checkoutAnalyticsFields: View, analyticsInitialStep: closure_7 } = children);
-  const contextMetadata = order(5607)(() => {
+  const contextMetadata = order(5612)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -28,7 +28,7 @@ function NativeCheckoutStoreProvider(children) {
     const obj3 = { message: "Checkout session ID: " + id };
     return { loadId: id, startTime: Date.now() };
   });
-  redux = order(5607)(() => {
+  redux = order(5612)(() => {
     const obj = {};
     const merged = Object.assign(View);
     obj.load_id = contextMetadata.loadId;
@@ -36,7 +36,7 @@ function NativeCheckoutStoreProvider(children) {
     return obj;
   });
   value = _slicedToArray(noop.useState(() => React5({ order, checkoutInitParameters, contextMetadata, analyticsFields, paymentGateway: dependencyMap, orderRequired, onOrderRetryCancellation, initialSubscriptionFacet })), 1)[0];
-  order(5588)(() => {
+  order(5593)(() => {
     if (null != View) {
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
       const obj3 = {};
@@ -53,8 +53,8 @@ function NativeCheckoutStoreProvider(children) {
           checkoutSucceeded = purchaseInFlight;
         }
         if (!checkoutSucceeded) {
-          order(1253).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
-          const obj = order(1253);
+          order(1252).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
+          const obj = order(1252);
         }
       };
     }
@@ -80,21 +80,21 @@ function NativeCheckoutStoreProvider(children) {
       const obj2 = { checkoutSucceeded: tmp2, order: null };
       ({ id: obj3.id, status: obj3.status } = orderRecord);
       obj2.order = { id: null, status: null };
-      checkoutInitParameters(10659).discardDraftOrder(obj2);
-      const obj = checkoutInitParameters(10659);
+      checkoutInitParameters(10679).discardDraftOrder(obj2);
+      const obj = checkoutInitParameters(10679);
       const obj5 = { id: null, status: null };
     }
   }, items1);
   return <contextMetadata value={value}><redux.Provider value={value}>{children.children}</redux.Provider></contextMetadata>;
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7602);
+const NativeCheckoutStore = fn(7609);
 ({ createNativeStore: closure_7, NativeCheckoutStoreContext: closure_8, NativeCheckoutStoreContextOrNull: closure_9 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ItemPurchaseType = fn(5742).ItemPurchaseType;
+const ItemPurchaseType = fn(5747).ItemPurchaseType;
 const PaymentGateways = fn(1083).PaymentGateways;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_14 = createStyles.createStyles({ loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx");

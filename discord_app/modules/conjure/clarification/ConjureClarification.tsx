@@ -1,12 +1,12 @@
-// === Module 12549: ConjureClarification ===
+// === Module 12584: ConjureClarification ===
 
-// Module 12549 (ConjureClarification)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import useChannelName from "useChannelName" /* 5647 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+// Module 12584 (ConjureClarification)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import useChannelName from "useChannelName" /* 5652 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -15,15 +15,15 @@ const ChannelTypes = fn(1072).ChannelTypes;
 let closure_6 = { [ChannelTypes.GUILD_TEXT]: "text", [ChannelTypes.GUILD_VOICE]: "voice", [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement", [ChannelTypes.GUILD_STAGE_VOICE]: "stage", [ChannelTypes.GUILD_FORUM]: "forum", [ChannelTypes.GUILD_MEDIA]: "media" };
 let closure_7 = { channel: "#", role: "@", user: "@", project: "", server: "" };
 let obj = { channel: null, role: null, user: null, project: null, server: null };
-let items = [_modDef3865["9+dfPT"], _modDef3865.pGSJqE];
+let items = [_modDef3868["9+dfPT"], _modDef3868.pGSJqE];
 obj.channel = items;
-let items1 = [_modDef3865["2VkCoD"], _modDef3865.c8YlX8];
+let items1 = [_modDef3868["2VkCoD"], _modDef3868.c8YlX8];
 obj.role = items1;
-let items2 = [_modDef3865.GZIAxl, _modDef3865["4bptbQ"]];
+let items2 = [_modDef3868.GZIAxl, _modDef3868["4bptbQ"]];
 obj.user = items2;
-const items3 = [_modDef3865.twlOb6, _modDef3865.twlOb6];
+const items3 = [_modDef3868.twlOb6, _modDef3868.twlOb6];
 obj.project = items3;
-const items4 = [_modDef3865.ZWXDeI, _modDef3865.ZWXDeI];
+const items4 = [_modDef3868.ZWXDeI, _modDef3868.ZWXDeI];
 obj.server = items4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
@@ -76,7 +76,7 @@ export function clarificationDraftPlaceholder(options) {
   if (tmp2) {
     tmp2 = null == options.input;
   }
-  const tmp4 = _modDef3865;
+  const tmp4 = _modDef3868;
   return intl.string(tmp2 ? tmp4.yLN1x6 : tmp4["tOC+tn"]);
 }
 export function isClarificationComplete(questions, arg1) {

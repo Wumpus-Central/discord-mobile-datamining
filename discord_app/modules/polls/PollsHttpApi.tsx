@@ -1,6 +1,6 @@
-// === Module 12376: PollsHttpApi ===
+// === Module 12414: PollsHttpApi ===
 
-// Module 12376 (PollsHttpApi)
+// Module 12414 (PollsHttpApi)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -74,7 +74,7 @@ let closure_4 = async function _submitPollVote(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp21) {
       closure_3 = tmp21;
@@ -98,7 +98,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ let closure_5 = async function _endPollEarly(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp28) {
       closure_3 = tmp28;

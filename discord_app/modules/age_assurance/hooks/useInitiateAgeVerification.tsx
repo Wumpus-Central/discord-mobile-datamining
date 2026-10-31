@@ -1,12 +1,12 @@
-// === Module 8011: useInitiateAgeVerification ===
+// === Module 8019: useInitiateAgeVerification ===
 
-// Module 8011 (useInitiateAgeVerification)
+// Module 8019 (useInitiateAgeVerification)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7960 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7968 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function useAgeVerificationRunner(onComplete) {
@@ -49,7 +49,7 @@ function useAgeVerificationRunner(onComplete) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -170,7 +170,7 @@ function useAgeVerificationRunner(onComplete) {
   };
 }
 const AbortCodes = fn(1072).AbortCodes;
-const SafetyToastType = fn(7484).SafetyToastType;
+const SafetyToastType = fn(7490).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
 

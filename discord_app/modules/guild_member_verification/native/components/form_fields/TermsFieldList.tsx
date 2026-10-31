@@ -1,11 +1,11 @@
-// === Module 6965: TermsFieldList ===
+// === Module 6971: TermsFieldList ===
 
-// Module 6965 (TermsFieldList)
+// Module 6971 (TermsFieldList)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5749 */;
-import TableRowDivider from "TableRowDivider" /* 6966 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5754 */;
+import TableRowDivider from "TableRowDivider" /* 6972 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function TermsFieldListItem(rowNumber) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { termsContainer: { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, termsRow: null, termsRowContent: null, termsRowNumber: null, title: null };
 let obj3 = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -48,10 +48,10 @@ export default function TermsFieldList(rules) {
   dependencyMap = tmp;
   let obj = { children: null };
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = rules(1114).intl;
-  obj2.children = intl.string(rules(1114).t.prJqwT);
+  const intl = rules(1113).intl;
+  obj2.children = intl.string(rules(1113).t.prJqwT);
   let items = [
-    closure_5(rules(5619).Text, obj2),
+    closure_5(rules(5624).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

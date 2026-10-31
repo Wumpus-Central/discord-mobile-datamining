@@ -1,9 +1,9 @@
-// === Module 17533: MagicDoorIcon ===
+// === Module 17593: MagicDoorIcon ===
 
-// Module 17533 (MagicDoorIcon)
+// Module 17593 (MagicDoorIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod17534 from "module_17534" /* 17534 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod17594 from "module_17594" /* 17594 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MagicDoorIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17534, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17594, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

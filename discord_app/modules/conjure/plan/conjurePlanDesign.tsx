@@ -1,21 +1,21 @@
-// === Module 12687: conjurePlanDesign ===
+// === Module 12722: conjurePlanDesign ===
 
-// Module 12687 (conjurePlanDesign)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import conjurePlanTags from "conjurePlanTags" /* 12688 */;
+// Module 12722 (conjurePlanDesign)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import conjurePlanTags from "conjurePlanTags" /* 12723 */;
 
 require = fn;
 const CONJURE_PLAN_DESIGN_ALTS = {};
-CONJURE_PLAN_DESIGN_ALTS[fn(6839).ConjureSupportedSurface.APP_CHANNEL] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6839).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6839).ConjureSupportedSurface.ACTIVITY] = _modDef3865["3/aHX6"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6839).ConjureSupportedSurface.OVERLAY] = _modDef3865["rPpf5/"];
-CONJURE_PLAN_DESIGN_ALTS[fn(6839).ConjureSupportedSurface.PROFILE_WIDGET] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6839).ConjureSupportedSurface.AUTOMOD] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6839).ConjureSupportedSurface.BOT] = null;
-CONJURE_PLAN_DESIGN_ALTS[fn(6839).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
-const items = [fn(6839).ConjureSupportedSurface.ACTIVITY, fn(6839).ConjureSupportedSurface.APP_CHANNEL, fn(6839).ConjureSupportedSurface.VOICE_CHANNEL, fn(6839).ConjureSupportedSurface.OVERLAY];
+CONJURE_PLAN_DESIGN_ALTS[fn(6845).ConjureSupportedSurface.APP_CHANNEL] = _modDef3868["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6845).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3868["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6845).ConjureSupportedSurface.ACTIVITY] = _modDef3868["3/aHX6"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6845).ConjureSupportedSurface.OVERLAY] = _modDef3868["rPpf5/"];
+CONJURE_PLAN_DESIGN_ALTS[fn(6845).ConjureSupportedSurface.PROFILE_WIDGET] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6845).ConjureSupportedSurface.AUTOMOD] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6845).ConjureSupportedSurface.BOT] = null;
+CONJURE_PLAN_DESIGN_ALTS[fn(6845).ConjureSupportedSurface.APPLICATION_COMMANDS] = null;
+const items = [fn(6845).ConjureSupportedSurface.ACTIVITY, fn(6845).ConjureSupportedSurface.APP_CHANNEL, fn(6845).ConjureSupportedSurface.VOICE_CHANNEL, fn(6845).ConjureSupportedSurface.OVERLAY];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanDesign.tsx");
 
@@ -35,7 +35,7 @@ export function conjurePlanDesignAlt(proposal) {
     found = null;
   }
   if (null == found) {
-    let prop = _modDef3865["3/aHX6"];
+    let prop = _modDef3868["3/aHX6"];
   } else {
     prop = obj[found];
   }
@@ -49,7 +49,7 @@ export function conjurePlanReferenceImages(proposal) {
   return reference_images.map((id, index) => {
     const obj = { id: id.id, alt: null };
     const intl = util.intl;
-    obj.alt = intl.formatToPlainString(_modDef3865.xFgQ8L, { number: index + 1 });
+    obj.alt = intl.formatToPlainString(_modDef3868.xFgQ8L, { number: index + 1 });
     return obj;
   });
 }

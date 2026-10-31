@@ -1,10 +1,10 @@
-// === Module 9595: DiscoverableGuildsActionCreators ===
+// === Module 9615: DiscoverableGuildsActionCreators ===
 
-// Module 9595 (DiscoverableGuildsActionCreators)
+// Module 9615 (DiscoverableGuildsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9594 */;
+import DiscoverableGuildsStore from "DiscoverableGuildsStore" /* 9614 */;
 
 require = fn;
 let closure_7 = async function _requestGuilds(arg0) {
@@ -18,7 +18,7 @@ let closure_7 = async function _requestGuilds(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_7 = async function _requestGuilds(arg0) {
         closure_131_1(closure_131_2[3]).dispatch(obj11);
         c5 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp26) {
       closure_4 = tmp26;
@@ -108,7 +108,7 @@ let closure_8 = async function _fetchDiscoverableGuilds(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {
@@ -186,7 +186,7 @@ let closure_8 = async function _fetchDiscoverableGuilds(arg0) {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           c8 = 0;

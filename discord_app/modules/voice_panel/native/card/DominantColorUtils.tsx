@@ -1,8 +1,8 @@
-// === Module 9500: DominantColorUtils ===
+// === Module 9522: DominantColorUtils ===
 
-// Module 9500 (DominantColorUtils)
+// Module 9522 (DominantColorUtils)
 import nativeDefault from "native" /* 575 */;
-import privDefault from "priv" /* 1452 */;
+import privDefault from "priv" /* 1451 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -80,11 +80,11 @@ export function useDominantRGBFromImage(arg0) {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(1894).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(1894);
+            let dominantColorsLocalAsset = ref(1893).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(1893);
           } else {
-            dominantColorsLocalAsset = ref(1894).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(1894);
+            dominantColorsLocalAsset = ref(1893).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(1893);
           }
           dominantColorsLocalAsset.then((result) => {
             const tmp = _slicedToArray(result[0], 3);
@@ -161,11 +161,11 @@ export function useDominantColorFromImage(avatarURI) {
         let result = closure_1_7.set(str, value2);
         if (null != value2) {
           if (typeof value2 === "number") {
-            let dominantColorsLocalAsset = ref(1894).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-            const obj3 = ref(1894);
+            let dominantColorsLocalAsset = ref(1893).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+            const obj3 = ref(1893);
           } else {
-            dominantColorsLocalAsset = ref(1894).getDominantColors(Image.resolveAssetSource(value2));
-            const obj4 = ref(1894);
+            dominantColorsLocalAsset = ref(1893).getDominantColors(Image.resolveAssetSource(value2));
+            const obj4 = ref(1893);
           }
           dominantColorsLocalAsset.then((result) => {
             const tmp = _slicedToArray(result[0], 3);

@@ -1,36 +1,36 @@
-// === Module 18436: ForYouItems ===
+// === Module 18479: ForYouItems ===
 
-// Module 18436 (ForYouItems)
+// Module 18479 (ForYouItems)
 import nativeDefault from "native" /* 575 */;
 import _mod674 from "module_674" /* 674 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import Link from "Link" /* 1499 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import parseURLDefault from "parseURL" /* 5740 */;
-import CustomMarkupAll from "CustomMarkup" /* 6026 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6853 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14151 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 15629 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18434 */;
-import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 18435 */;
-import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 18451 */;
-import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 18452 */;
-import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 18453 */;
-import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 18454 */;
-import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 18455 */;
-import ForYouShowAllRow from "ForYouShowAllRow" /* 18461 */;
-import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 18462 */;
-import ForYouLoadMore from "ForYouLoadMore" /* 18463 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import Link from "Link" /* 1498 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import parseURLDefault from "parseURL" /* 5745 */;
+import CustomMarkupAll from "CustomMarkup" /* 6031 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6859 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14188 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 15670 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 18477 */;
+import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 18478 */;
+import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 18494 */;
+import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 18495 */;
+import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 18496 */;
+import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 18497 */;
+import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 18498 */;
+import ForYouShowAllRow from "ForYouShowAllRow" /* 18504 */;
+import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 18505 */;
+import ForYouLoadMore from "ForYouLoadMore" /* 18506 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import UserStore from "UserStore" /* 1384 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 18430 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import UserStore from "UserStore" /* 1383 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 18473 */;
 
 require = fn;
 function ForYouFooter(loading) {
@@ -65,10 +65,10 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(6026).getNotifCenterV2MessagePreviewParser(closure_27(), closure_28, roleStyle);
-  const intl = item(1114).intl;
-  const stringResult = intl.string(item(1114).t.BOi07B);
-  const obj = message_channel_id(6026);
+  const notifCenterV2MessagePreviewParser = message_channel_id(6031).getNotifCenterV2MessagePreviewParser(closure_27(), closure_28, roleStyle);
+  const intl = item(1113).intl;
+  const stringResult = intl.string(item(1113).t.BOi07B);
+  const obj = message_channel_id(6031);
   let message = item.message;
   let num;
   if (message != null) {
@@ -79,7 +79,7 @@ function ForYouMessagePreviewV2(item) {
   }
   let message2 = item.message;
   let type;
-  const obj2 = item(1397);
+  const obj2 = item(1396);
   if (message2 != null) {
     type = message2.type;
   }
@@ -120,22 +120,22 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8502)(first);
+    const tmp15 = guild_id(8510)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(8395).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(8395);
+      result = tmp2(8403).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(8403);
     }
   } else if (stickers.length > 0) {
-    const intl6 = tmp2(1114).intl;
-    result = intl6.string(tmp2(1114).t["7K5Lma"]);
+    const intl6 = tmp2(1113).intl;
+    result = intl6.string(tmp2(1113).t["7K5Lma"]);
     let ATTACHMENT = constants4.STICKER;
   } else if (tmp7) {
-    const intl5 = tmp2(1114).intl;
-    result = intl5.string(tmp2(1114).t["2v7kfl"]);
+    const intl5 = tmp2(1113).intl;
+    result = intl5.string(tmp2(1113).t["2v7kfl"]);
   } else if (hasFlagResult) {
-    const intl4 = tmp2(1114).intl;
-    result = intl4.string(tmp2(1114).t["6bhHrc"]);
+    const intl4 = tmp2(1113).intl;
+    result = intl4.string(tmp2(1113).t["6bhHrc"]);
     ATTACHMENT = constants4.VOICE_MESSAGE;
   } else {
     const message7 = item.message;
@@ -147,18 +147,18 @@ function ForYouMessagePreviewV2(item) {
       num2 = 0;
     }
     if (tmp2Result6.hasFlag(num2, constants2.IS_COMPONENTS_V2)) {
-      const intl3 = tmp2(1114).intl;
-      result = intl3.string(tmp2(1114).t.Xxm5i3);
+      const intl3 = tmp2(1113).intl;
+      result = intl3.string(tmp2(1113).t.Xxm5i3);
     } else {
       result = stringResult;
       if (tmp8) {
-        const intl2 = tmp2(1114).intl;
-        result = intl2.string(tmp2(1114).t.JAKsM8);
+        const intl2 = tmp2(1113).intl;
+        result = intl2.string(tmp2(1113).t.JAKsM8);
         ATTACHMENT = constants4.ATTACHMENT;
       }
       tmp8 = attachments.length > 0 || embeds1.length > 0;
     }
-    tmp2Result6 = tmp2(1397);
+    tmp2Result6 = tmp2(1396);
   }
   const message9 = item.message;
   let content;
@@ -174,7 +174,7 @@ function ForYouMessagePreviewV2(item) {
   }
   guild_id = item.guild_id;
   message_channel_id = item.message_channel_id;
-  hasFlagResult = item(1397).hasFlag(num, constants2.IS_VOICE_MESSAGE);
+  hasFlagResult = item(1396).hasFlag(num, constants2.IS_VOICE_MESSAGE);
   let items = [GuildStore];
   const stateFromStores = item(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
   const tmp2Result7 = item(504);
@@ -230,19 +230,19 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(8574).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 }), ];
+  const items5 = [item(8582).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 }), ];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
-    items3[1] = closure_22(tmp2(5619).Text, obj5);
+    items3[1] = closure_22(tmp2(5624).Text, obj5);
     obj3.children = items3;
     return closure_22(closure_7, obj3);
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(13721);
+      let tmp29 = guild_id(13756);
       const obj8 = { source: tmp29, size: null, style: null };
-      SMALL = tmp2(1188).IconSizes.SMALL;
+      SMALL = tmp2(1187).IconSizes.SMALL;
       obj8.size = SMALL;
       messagePreviewIconV2 = messagePreviewIconV2.messagePreviewIconV2;
       obj8.style = messagePreviewIconV2;
@@ -251,12 +251,12 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8166);
+        tmp29 = guild_id(8174);
       }
     }
-    tmp29 = guild_id(10285);
+    tmp29 = guild_id(10305);
   }
-  const tmp2Result10 = item(8574);
+  const tmp2Result10 = item(8582);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -302,34 +302,34 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, RefreshControl: closure_8, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_15, MessageFlags: closure_16, AnalyticsLocations: closure_17, MessageTypes: closure_18, EMPTY_STRING_SNOWFLAKE_ID: closure_19 } = Constants);
-const NotificationTypes = fn(6737).NotificationTypes;
+const NotificationTypes = fn(6743).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(5619).TextStyleSheet["text-md/medium"]);
+const merged = Object.assign(fn(5624).TextStyleSheet["text-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(5619).TextStyleSheet["text-md/medium"]);
+const merged1 = Object.assign(fn(5624).TextStyleSheet["text-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj7 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND } };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj13 = { container: { flex: 1 }, row: null, rowCompact: null, rowActive: null, col: null, unreadIndicatorV2: null, unreadIndicatorCompactV2: null, rowText: null, rowTextV2: null, rowBody: null, rowBodyV2: null, rowBodyAcked: null, rowTime: null, rowTimeV2: null, itemV2: null, calloutContainer: null, calloutTextAcked: null, calloutTextNotAcked: null, messagePreviewContainerV2: null, messagePreviewBarV2: null, messagePreviewIconV2Container: null, messagePreviewIconV2: null, messagePreviewTextV2Acked: null, messagePreviewTextV2NotAcked: null, messagePreviewSystemTextV2: null, refreshSpinner: null, forYouDivider: null, friendRequestNoteContainer: null };
 let obj12 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 obj13.row = { marginHorizontal: 4, paddingHorizontal: 12, paddingVertical: 8, marginBottom: 4, borderRadius: nativeDefault.radii.lg, flexDirection: "row", justifyContent: "space-between" };
@@ -481,15 +481,15 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function*() {
-        yield tmp3(18432).deleteNotificationCenterItem(tmp3);
+        yield tmp3(18475).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };
-          const intl = tmp3(1114).intl;
-          obj7.text = intl.string(tmp3(1114).t.WDxhvB);
-          rowIndex(5707).open("REMOVE_NOTIFICATION_ERROR", obj7);
+          const intl = tmp3(1113).intl;
+          obj7.text = intl.string(tmp3(1113).t.WDxhvB);
+          rowIndex(5712).open("REMOVE_NOTIFICATION_ERROR", obj7);
           c4 = 3;
-          rowIndex(5707);
+          rowIndex(5712);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

@@ -1,7 +1,7 @@
-// === Module 4821: getLocalizedLink ===
+// === Module 4826: getLocalizedLink ===
 
-// Module 4821 (getLocalizedLink)
-import util from "util" /* 1114 */;
+// Module 4826 (getLocalizedLink)
+import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/links/getLocalizedLink.tsx");

@@ -1,8 +1,8 @@
-// === Module 18051: DmGdmListRenderTriggerPoint ===
+// === Module 18094: DmGdmListRenderTriggerPoint ===
 
-// Module 18051 (DmGdmListRenderTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 5234 */;
-import Helpers from "Helpers" /* 10658 */;
+// Module 18094 (DmGdmListRenderTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 5239 */;
+import Helpers from "Helpers" /* 10678 */;
 import size from "module_2" /* 2 */;
 
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });

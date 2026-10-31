@@ -1,13 +1,13 @@
-// === Module 1445: ImageLoaderUtils ===
+// === Module 1444: ImageLoaderUtils ===
 
-// Module 1445 (ImageLoaderUtils)
-import URLUtilsDefault from "URLUtils" /* 1378 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1446 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1447 */;
-import privDefault from "priv" /* 1452 */;
-import _modDef1486 from "module_1486" /* 1486 */;
-import ImageUtils from "ImageUtils" /* 1489 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1893 */;
+// Module 1444 (ImageLoaderUtils)
+import URLUtilsDefault from "URLUtils" /* 1377 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1445 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1446 */;
+import privDefault from "priv" /* 1451 */;
+import _modDef1485 from "module_1485" /* 1485 */;
+import ImageUtils from "ImageUtils" /* 1488 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1892 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -44,8 +44,8 @@ function getSrcWithWidthAndHeight(quality) {
       const items = [, ];
       [arr[0], tmp6] = src.split("?");
       let tmp5 = _slicedToArray(src.split("?"), 2);
-      items[1] = _modDef1486.parse(tmp6);
-      const tmp2Result = _modDef1486;
+      items[1] = _modDef1485.parse(tmp6);
+      const tmp2Result = _modDef1485;
       [tmp8, tmp9] = items;
       if (null != format) {
         tmp9.format = format;
@@ -103,7 +103,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp8;
       if (!tmp2Result3.isEmpty(tmp9)) {
-        _modDef1486;
+        _modDef1485;
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -176,7 +176,7 @@ export function loadImage(url, bind) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -224,7 +224,7 @@ export function loadImage(url, bind) {
                       let obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     try {
@@ -261,7 +261,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F120831 */ function() { ... });
+                            image.onerror = closure_2_4(/* F121204 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

@@ -1,6 +1,6 @@
-// === Module 12575: conjureTipImpressions ===
+// === Module 12610: conjureTipImpressions ===
 
-// Module 12575 (conjureTipImpressions)
+// Module 12610 (conjureTipImpressions)
 import size from "module_2" /* 2 */;
 
 const map = new Map();

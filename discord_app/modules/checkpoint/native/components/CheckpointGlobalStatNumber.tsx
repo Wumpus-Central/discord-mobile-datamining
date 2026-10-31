@@ -1,14 +1,14 @@
-// === Module 13599: CheckpointGlobalStatNumber ===
+// === Module 13636: CheckpointGlobalStatNumber ===
 
-// Module 13599 (CheckpointGlobalStatNumber)
+// Module 13636 (CheckpointGlobalStatNumber)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13590 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13591 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13600 */;
+import util from "util" /* 1113 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13627 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13628 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 13637 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 function GlobalStatValue(value) {

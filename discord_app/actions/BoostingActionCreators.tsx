@@ -1,12 +1,12 @@
-// === Module 8457: actions/BoostingActionCreators ===
+// === Module 8465: actions/BoostingActionCreators ===
 
-// Module 8457 (actions/BoostingActionCreators)
+// Module 8465 (actions/BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8458 */;
-import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8459 */;
-import SubscriptionStore from "SubscriptionStore" /* 2053 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8466 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8467 */;
+import SubscriptionStore from "SubscriptionStore" /* 2052 */;
 
 require = fn;
 let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
@@ -20,7 +20,7 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -106,7 +106,7 @@ let closure_9 = async function _fetchAppliedGuildBoostsForUser() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -207,7 +207,7 @@ let closure_12 = async function _fetchAppliedBoostsCooldown() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -282,7 +282,7 @@ let closure_13 = async function _applyToGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -394,7 +394,7 @@ let closure_14 = async function _unapplyFromGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -444,7 +444,7 @@ let closure_14 = async function _unapplyFromGuild(arg0) {
         const obj10 = { type: "GUILD_UNAPPLY_BOOST_SUCCESS", boostId: closure_130_0 };
         closure_131_1(closure_131_2[6]).dispatch(obj10);
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp33) {
       closure_4 = tmp33;

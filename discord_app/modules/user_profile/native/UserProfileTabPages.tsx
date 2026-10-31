@@ -1,9 +1,9 @@
-// === Module 14969: UserProfileTabPages ===
+// === Module 15006: UserProfileTabPages ===
 
-// Module 14969 (UserProfileTabPages)
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5269 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
+// Module 15006 (UserProfileTabPages)
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5274 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

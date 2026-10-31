@@ -1,9 +1,9 @@
-// === Module 12568: ConjureStatusLabels ===
+// === Module 12603: ConjureStatusLabels ===
 
-// Module 12568 (ConjureStatusLabels)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureUsageTypes from "ConjureUsageTypes" /* 10839 */;
+// Module 12603 (ConjureStatusLabels)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import ConjureUsageTypes from "ConjureUsageTypes" /* 10859 */;
 
 require = fn;
 function thinkingLabel(saving) {
@@ -44,19 +44,19 @@ function thinkingLabel(saving) {
     tmp = "end" !== activity.phase;
   }
   if (flag5) {
-    let xnCAaP = _modDef3865["1jqaAc"];
+    let xnCAaP = _modDef3868["1jqaAc"];
   } else if (flag6) {
-    xnCAaP = _modDef3865.xCdlEF;
+    xnCAaP = _modDef3868.xCdlEF;
   } else if (flag7) {
-    xnCAaP = _modDef3865.Rhx0rn;
+    xnCAaP = _modDef3868.Rhx0rn;
   } else if (flag2) {
-    xnCAaP = _modDef3865.M4KI5F;
+    xnCAaP = _modDef3868.M4KI5F;
   } else if (flag3) {
-    xnCAaP = _modDef3865.j8tmjK;
+    xnCAaP = _modDef3868.j8tmjK;
   } else if (flag4) {
     xnCAaP = items[0];
   } else {
-    const tmp4 = _modDef3865;
+    const tmp4 = _modDef3868;
     if (flag) {
       xnCAaP = tmp4.mKK6wB;
     } else if (compacting) {
@@ -67,7 +67,7 @@ function thinkingLabel(saving) {
   }
   return xnCAaP;
 }
-const items = [_modDef3865["AX+5lk"], _modDef3865.VAU6A7, _modDef3865["1emysd"], _modDef3865.EXHX3L, _modDef3865.ChslmX];
+const items = [_modDef3868["AX+5lk"], _modDef3868.VAU6A7, _modDef3868["1emysd"], _modDef3868.EXHX3L, _modDef3868.ChslmX];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureStatusLabels.tsx");
 
@@ -76,16 +76,16 @@ export const INDICATOR_PASS_STAGGER_MS = 1800;
 export const RECALLING_LINES = items;
 export function isPublishLineSwitch(line, text) {
   const intl = util.intl;
-  let tmp4 = line === intl.string(_modDef3865.xCdlEF);
+  let tmp4 = line === intl.string(_modDef3868.xCdlEF);
   if (!tmp4) {
     const intl2 = util.intl;
-    tmp4 = line === intl2.string(_modDef3865.Rhx0rn);
+    tmp4 = line === intl2.string(_modDef3868.Rhx0rn);
   }
   const intl3 = util.intl;
-  let tmp5 = text === intl3.string(_modDef3865.xCdlEF);
+  let tmp5 = text === intl3.string(_modDef3868.xCdlEF);
   if (!tmp5) {
     const intl4 = util.intl;
-    tmp5 = text === intl4.string(_modDef3865.Rhx0rn);
+    tmp5 = text === intl4.string(_modDef3868.Rhx0rn);
   }
   return tmp4 !== tmp5;
 }
@@ -103,13 +103,13 @@ export function isRecallingLine(current) {
 export function connectionLabel(stateFromStores8) {
   if ("connecting" === stateFromStores8) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3865["ECl+Dx"]);
+    return intl3.string(_modDef3868["ECl+Dx"]);
   } else if ("closed" === stateFromStores8) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3865.mQZSp1);
+    return intl2.string(_modDef3868.mQZSp1);
   } else if ("failed" === stateFromStores8) {
     const intl = util.intl;
-    return intl.string(_modDef3865.xzJSZ6);
+    return intl.string(_modDef3868.xzJSZ6);
   }
 }
 export { thinkingLabel };
@@ -121,8 +121,8 @@ export function runesUsedLabels(projectUsage) {
   const runesFromUsdResult = ConjureUsageTypes.runesFromUsd(projectUsage.cost_usd);
   const obj2 = { text: null, aria: null };
   const intl = util.intl;
-  obj2.text = intl.formatToPlainString(_modDef3865.gMuw5d, { runes: runesFromUsdResult.toLocaleString() });
+  obj2.text = intl.formatToPlainString(_modDef3868.gMuw5d, { runes: runesFromUsdResult.toLocaleString() });
   const intl2 = util.intl;
-  obj2.aria = intl2.formatToPlainString(_modDef3865.Z4LvGa, { runes: runesFromUsdResult, turns: projectUsage.turns });
+  obj2.aria = intl2.formatToPlainString(_modDef3868.Z4LvGa, { runes: runesFromUsdResult, turns: projectUsage.turns });
   return obj2;
 }

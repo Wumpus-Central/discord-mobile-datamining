@@ -1,7 +1,7 @@
-// === Module 15007: MobileNitroUpsellInShopPdpExperiment ===
+// === Module 15044: MobileNitroUpsellInShopPdpExperiment ===
 
-// Module 15007 (MobileNitroUpsellInShopPdpExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 15044 (MobileNitroUpsellInShopPdpExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-mobile-nitro-upsell-in-shop-pdp", kind: "user", defaultConfig: { enabled: false, showActionSheet: false }, variations: null };

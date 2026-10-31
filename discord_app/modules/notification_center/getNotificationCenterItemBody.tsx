@@ -1,18 +1,18 @@
-// === Module 18440: getNotificationCenterItemBody ===
+// === Module 18483: getNotificationCenterItemBody ===
 
-// Module 18440 (getNotificationCenterItemBody)
+// Module 18483 (getNotificationCenterItemBody)
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1114 */;
-import StringUtils from "StringUtils" /* 2028 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6853 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6849 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import util from "util" /* 1113 */;
+import StringUtils from "StringUtils" /* 2026 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6859 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
-const isGuildEventEnded = fn(6849).isGuildEventEnded;
+const isGuildEventEnded = fn(6855).isGuildEventEnded;
 const Constants = fn(1072);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
 const size = fn(2);

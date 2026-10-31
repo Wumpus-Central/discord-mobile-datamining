@@ -1,14 +1,14 @@
-// === Module 10163: SummaryActionCreators ===
+// === Module 10183: SummaryActionCreators ===
 
-// Module 10163 (SummaryActionCreators)
+// Module 10183 (SummaryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import SummaryStore from "SummaryStore" /* 10102 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import SummaryStore from "SummaryStore" /* 10122 */;
 
 require = fn;
 function fetchSummary() {
@@ -36,7 +36,7 @@ let closure_13 = async function _fetchSummary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -141,7 +141,7 @@ let closure_14 = async function _fetchSummaries() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -305,7 +305,7 @@ let closure_16 = async function _fetchChannelAffinities() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -382,7 +382,7 @@ let closure_16 = async function _fetchChannelAffinities() {
         obj9.receivedAt = Date.now();
         closure_130_1(closure_130_2[7]).dispatch(obj9);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp38) {
       closure_3 = tmp38;
@@ -521,7 +521,7 @@ function useChannelSummaries(channelIds) {
           return { value, done: true };
         } else {
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (arg0 === 1) {
         c4 = 3;
@@ -569,7 +569,7 @@ let closure_19 = async function _deleteSummary(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -612,7 +612,7 @@ let closure_19 = async function _deleteSummary(arg0) {
         closure_130_1(closure_130_2[7]).dispatch(obj7);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -687,7 +687,7 @@ export function useMaybeFetchChannelAffinitiesAndSummaries() {
           return { value, done: true };
         } else {
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (arg0 === 1) {
         c4 = 3;

@@ -1,6 +1,6 @@
-// === Module 2043: SKUConstants ===
+// === Module 2041: SKUConstants ===
 
-// Module 2043 (SKUConstants)
+// Module 2041 (SKUConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/skus/SKUConstants.tsx");

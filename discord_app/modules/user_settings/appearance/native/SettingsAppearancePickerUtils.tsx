@@ -1,13 +1,13 @@
-// === Module 17222: SettingsAppearancePickerUtils ===
+// === Module 17279: SettingsAppearancePickerUtils ===
 
-// Module 17222 (SettingsAppearancePickerUtils)
+// Module 17279 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1231 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1242 */;
-import ColorUtils from "ColorUtils" /* 5006 */;
-import utils_ColorDefault from "utils/Color" /* 5007 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5245 */;
+import util from "util" /* 1113 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
+import ColorUtils from "ColorUtils" /* 5011 */;
+import utils_ColorDefault from "utils/Color" /* 5012 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5250 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -142,8 +142,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(5007)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5007)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(5012)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5012)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -206,7 +206,7 @@ export function convertThemesToAnimatedThemes(themes) {
 }
 export function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5591).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(5596).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

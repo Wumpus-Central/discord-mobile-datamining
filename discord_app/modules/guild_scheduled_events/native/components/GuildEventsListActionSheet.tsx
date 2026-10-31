@@ -1,14 +1,14 @@
-// === Module 9069: GuildEventsListActionSheet ===
+// === Module 9088: GuildEventsListActionSheet ===
 
-// Module 9069 (GuildEventsListActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7273 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8953 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8957 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8976 */;
-import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9070 */;
+// Module 9088 (GuildEventsListActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7279 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8962 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8966 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8985 */;
+import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9089 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
 
 require = fn;
 function GuildEventsListHeader(arg0) {
@@ -16,20 +16,20 @@ function GuildEventsListHeader(arg0) {
   let tmp3Result = useCanCreateAnEventDefault(guild.id);
   importDefault = tmp3Result;
   if (eventCount > 0) {
-    const intl2 = guild(1114).intl;
+    const intl2 = guild(1113).intl;
     let obj = { count: eventCount };
-    let formatToPlainStringResult = intl2.formatToPlainString(guild(1114).t.p1zLAf, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(guild(1113).t.p1zLAf, obj);
   } else {
-    const intl = guild(1114).intl;
-    formatToPlainStringResult = intl.string(guild(1114).t.tlopTM);
+    const intl = guild(1113).intl;
+    formatToPlainStringResult = intl.string(guild(1113).t.tlopTM);
   }
   let obj2 = { title: formatToPlainStringResult, trailing: null };
   if (tmp3Result) {
     let obj3 = { accessibilityLabel: null, label: null, onPress: null };
-    const intl3 = guild(1114).intl;
-    obj3.accessibilityLabel = intl3.string(guild(1114).t["60lJ0C"]);
-    const intl4 = guild(1114).intl;
-    obj3.label = intl4.string(guild(1114).t.NzROFF);
+    const intl3 = guild(1113).intl;
+    obj3.accessibilityLabel = intl3.string(guild(1113).t["60lJ0C"]);
+    const intl4 = guild(1113).intl;
+    obj3.label = intl4.string(guild(1113).t.NzROFF);
     obj3.onPress = function handleCreateEvent() {
       if (closure_1) {
         let result = guild_scheduled_events_GuildScheduledEventModalActionCreators.closeGuildEventListActionSheet();
@@ -41,17 +41,17 @@ function GuildEventsListHeader(arg0) {
         const result1 = guild_scheduled_events_GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(guild, obj3);
       }
     };
-    tmp3Result = jsx(guild(9001).ActionSheetHeaderPressableText, { accessibilityLabel: null, label: null, onPress: null });
+    tmp3Result = jsx(guild(9010).ActionSheetHeaderPressableText, { accessibilityLabel: null, label: null, onPress: null });
   }
   obj2.trailing = tmp3Result;
-  return jsx(guild(7315).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
+  return jsx(guild(7321).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
 }
 const View = fn(17).View;
-let closure_6 = fn(4864).ANALYTICS_GUILD_EVENTS_MODAL_NAME;
+let closure_6 = fn(4869).ANALYTICS_GUILD_EVENTS_MODAL_NAME;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ReadStateTypes = fn(6770).ReadStateTypes;
+const ReadStateTypes = fn(6776).ReadStateTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventsListActionSheet.tsx");
@@ -59,16 +59,16 @@ let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/c
 export default function GuildEventsListActionSheet(guild) {
   guild = guild.guild;
   let events;
-  events = events(9071)(guild.id);
+  events = events(9090)(guild.id);
   const items = [events, guild.id];
   const tmp = closure_10();
   const effect = noop.useEffect(() => {
-    const item = arr.forEach((id) => arr(8957).getGuildEventUserCounts(id.id, id.id, []));
+    const item = arr.forEach((id) => arr(8966).getGuildEventUserCounts(id.id, id.id, []));
     const guildEventsForCurrentUser = GuildScheduledEventManagerDefault.getGuildEventsForCurrentUser(guild.id);
   }, items);
   const items1 = [guild];
   const callback = noop.useCallback(() => {
-    const result = guild(8976).closeGuildEventListActionSheet();
+    const result = guild(8985).closeGuildEventListActionSheet();
   }, []);
   const callback1 = noop.useCallback((eventId, recurrenceId) => {
     let result = GuildScheduledEventModalActionCreators.openGuildEventDetails({
@@ -76,11 +76,11 @@ export default function GuildEventsListActionSheet(guild) {
       event: eventId,
       recurrenceId,
       onClose() {
-        const result = guild(8976).openGuildEventListActionSheet(closure_1_0);
+        const result = guild(8985).openGuildEventListActionSheet(closure_1_0);
       }
     });
   }, items1);
-  events(5588)(() => {
+  events(5593)(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id: guild.id, guild_events_count: arr.length });
   });
   const items2 = [guild.id];
@@ -90,15 +90,15 @@ export default function GuildEventsListActionSheet(guild) {
     }
   }, items2);
   let obj = { showGradient: true, scrollable: events.length > 0, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
-  const intl = guild(1114).intl;
-  obj.dismissAccessibilityLabel = intl.string(guild(1114).t.VSlyAn);
+  const intl = guild(1113).intl;
+  obj.dismissAccessibilityLabel = intl.string(guild(1113).t.VSlyAn);
   obj.header = <GuildEventsListHeader eventCount={events.length} guild={guild} />;
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { inActionSheet: true, events, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null };
   const obj2 = { eventCount: events.length, guild };
   const ref = noop.useRef(ReadStateStore.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
-  obj4.lastAckedId = events(6953)(ref);
-  obj3.children = jsx(events(9074), { inActionSheet: true, events, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null });
+  obj4.lastAckedId = events(6959)(ref);
+  obj3.children = jsx(events(9093), { inActionSheet: true, events, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null });
   obj.children = <View style={tmp.container}>{null}</View>;
-  return jsx(guild(5267).BottomSheet, { showGradient: true, scrollable: events.length > 0, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null });
+  return jsx(guild(5272).BottomSheet, { showGradient: true, scrollable: events.length > 0, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null });
 };

@@ -1,9 +1,9 @@
-// === Module 10229: FrecencyUserSettingsHooks ===
+// === Module 10249: FrecencyUserSettingsHooks ===
 
-// Module 10229 (FrecencyUserSettingsHooks)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4839 */;
+// Module 10249 (FrecencyUserSettingsHooks)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4844 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 const size = fn(2);

@@ -1,20 +1,20 @@
-// === Module 14413: IAPUtils ===
+// === Module 14451: IAPUtils ===
 
-// Module 14413 (IAPUtils)
+// Module 14451 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import v1 from "v1" /* 1267 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1375 */;
-import PlatformUtils2 from "PlatformUtils" /* 1376 */;
-import DeviceUtils from "DeviceUtils" /* 4966 */;
-import ProductIds from "ProductIds" /* 7586 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 14434 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 14435 */;
+import v1 from "v1" /* 1266 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1374 */;
+import PlatformUtils2 from "PlatformUtils" /* 1375 */;
+import DeviceUtils from "DeviceUtils" /* 4971 */;
+import ProductIds from "ProductIds" /* 7593 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 14472 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 14473 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5622 */;
-import UserStore from "UserStore" /* 1384 */;
-import IAPStore from "IAPStore" /* 7590 */;
+import DevSettingsStore from "DevSettingsStore" /* 5627 */;
+import UserStore from "UserStore" /* 1383 */;
+import IAPStore from "IAPStore" /* 7597 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_16 = async function _makeIAPRequest() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ let closure_16 = async function _makeIAPRequest() {
               const obj6 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("module_14415").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("module_14453").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -141,7 +141,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("module_14415").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("module_14453").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -228,7 +228,7 @@ let closure_18 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -425,7 +425,7 @@ let closure_21 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -446,7 +446,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("module_14415").getStorefront(), done: false };
+            const obj6 = { value: require("module_14453").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -486,17 +486,17 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5690).convertToAlpha2;
+const convertToAlpha2 = fn(5695).convertToAlpha2;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
-const NAMESPACE_SNOWFLAKE_UUID = fn(1386).NAMESPACE_SNOWFLAKE_UUID;
+const NAMESPACE_SNOWFLAKE_UUID = fn(1385).NAMESPACE_SNOWFLAKE_UUID;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
-let PlatformUtils = fn(1376);
+let PlatformUtils = fn(1375);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(14414).default;
+  _default = fn(14452).default;
 }
-let items = [fn(14415).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(14415).ErrorCode.E_UNKNOWN];
+let items = [fn(14453).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(14453).ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 let obj = {
@@ -572,17 +572,17 @@ let obj = {
     return applyArgumentsResult;
   }
 };
-PlatformUtils = fn(1376);
+PlatformUtils = fn(1375);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  let isIOSResult1 = fn(1376).isIOS();
+  let isIOSResult1 = fn(1375).isIOS();
   if (isIOSResult1) {
     let Identifier = ClientInfoUtilsAll.getConstants().Identifier;
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4966).getIsRunningOnSimulator();
-      let obj7 = fn(4966);
+      isRunningOnSimulator = fn(4971).getIsRunningOnSimulator();
+      let obj7 = fn(4971);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -592,10 +592,10 @@ if (PlatformUtils) {
     value = DevSettingsStore.get("force_mock_iap");
   }
   PlatformUtils = value;
-  let obj5 = fn(1376);
+  let obj5 = fn(1375);
 }
 if (PlatformUtils) {
-  obj = fn(14436).default;
+  obj = fn(14474).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();

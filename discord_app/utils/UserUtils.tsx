@@ -1,10 +1,10 @@
-// === Module 5063: UserUtils ===
+// === Module 5068: UserUtils ===
 
-// Module 5063 (UserUtils)
+// Module 5068 (UserUtils)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import StreamerModeStore from "StreamerModeStore" /* 5064 */;
-import UserStore from "UserStore" /* 1384 */;
+import util from "util" /* 1113 */;
+import StreamerModeStore from "StreamerModeStore" /* 5069 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function nameFromUser(primary1) {

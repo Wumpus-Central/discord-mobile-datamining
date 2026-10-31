@@ -1,7 +1,7 @@
-// === Module 7125: useStableCallback ===
+// === Module 7131: useStableCallback ===
 
-// Module 7125 (useStableCallback)
-import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 7126 */;
+// Module 7131 (useStableCallback)
+import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 7132 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("hooks/useStableCallback.tsx");

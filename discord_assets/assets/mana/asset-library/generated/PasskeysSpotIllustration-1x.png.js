@@ -1,6 +1,6 @@
-// === Module 16625: ? ===
+// === Module 16667: ? ===
 
-// Module 16625
+// Module 16667
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PasskeysSpotIllustration-1x.png.js");

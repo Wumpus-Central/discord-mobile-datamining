@@ -1,9 +1,9 @@
-// === Module 19079: getActivityContainerPIPStylesSpec ===
+// === Module 19128: getActivityContainerPIPStylesSpec ===
 
-// Module 19079 (getActivityContainerPIPStylesSpec)
-import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2021 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5652 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12233 */;
+// Module 19128 (getActivityContainerPIPStylesSpec)
+import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2019 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5657 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
 import size from "module_2" /* 2 */;
 
 const LANDSCAPE_ACTIVITY_ASPECT_RATIO = ActivityPanelConstants.LANDSCAPE_ACTIVITY_ASPECT_RATIO;

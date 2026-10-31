@@ -1,11 +1,11 @@
-// === Module 7474: useGame ===
+// === Module 7480: useGame ===
 
-// Module 7474 (useGame)
-import DurationsDefault from "Durations" /* 1090 */;
-import GameActionCreators from "GameActionCreators" /* 7475 */;
+// Module 7480 (useGame)
+import DurationsDefault from "Durations" /* 1089 */;
+import GameActionCreators from "GameActionCreators" /* 7481 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2015 */;
+import GameStore from "GameStore" /* 2014 */;
 
 require = fn;
 const initialize = fn(504);
@@ -39,7 +39,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

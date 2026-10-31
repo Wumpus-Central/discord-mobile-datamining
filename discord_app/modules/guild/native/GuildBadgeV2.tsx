@@ -1,17 +1,19 @@
-// === Module 9287: GuildBadgeV2 ===
+// === Module 9306: GuildBadgeV2 ===
 
-// Module 9287 (GuildBadgeV2)
-import native from "native" /* 1188 */;
-import shared from "shared" /* 5016 */;
-import GuildTraits from "GuildTraits" /* 9285 */;
-import BadgeCategory from "BadgeCategory" /* 9286 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 9288 */;
+// Module 9306 (GuildBadgeV2)
+import nativeDefault from "native" /* 575 */;
+import native from "native" /* 1187 */;
+import shared from "shared" /* 5021 */;
+import GuildTraits from "GuildTraits" /* 9304 */;
+import BadgeCategory from "BadgeCategory" /* 9305 */;
+import ExperimentalWebBadgeIcon from "ExperimentalWebBadgeIcon" /* 9307 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 9310 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
-let closure_3 = createStyles.createStyles({ icon: { marginRight: 8 } });
+const createStyles = fn(5014);
+let closure_4 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
 
@@ -21,20 +23,37 @@ export default function GuildBadgeV2(arg0) {
     size = native.Icon.Sizes.MEDIUM;
   }
   const merged = Object.assign(arg0, Object.assign({ guild: 0, size: 0 }));
+  const tmp4 = closure_4();
   shared;
   if (null == guild) {
     return null;
   } else {
-    const guildBadgeImageSource = GuildBadgeImageSource.getGuildBadgeImageSource(guild, tmp8);
-    let tmp10 = null;
-    if (null != guildBadgeImageSource) {
-      const obj = { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true };
-      const merged1 = Object.assign(merged);
-      tmp10 = jsx(native.Icon, { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true });
+    const tmp5Result = BadgeCategory;
+    const badgeCategory = tmp5Result.getBadgeCategory(GuildTraits.getGuildTraits(guild));
+    if (badgeCategory === BadgeCategory.BadgeCategory.DISCOVERABLE) {
+      const iconSize = native.getIconSize(size);
+      const obj = { size: "custom", color: nativeDefault.colors.BADGE_INVERTED_BACKGROUND, secondaryColor: nativeDefault.colors.BADGE_INVERTED_TEXT, style: null };
+      const size1 = { width: iconSize, height: iconSize };
+      const items = [size1, ];
+      let icon = merged.style;
+      if (icon == null) {
+        icon = tmp4.icon;
+      }
+      items[1] = icon;
+      obj.style = items;
+      return jsx(ExperimentalWebBadgeIcon.ExperimentalWebBadgeIcon, { size: "custom", color: nativeDefault.colors.BADGE_INVERTED_BACKGROUND, secondaryColor: nativeDefault.colors.BADGE_INVERTED_TEXT, style: null });
+    } else {
+      const guildBadgeImageSource = GuildBadgeImageSource.getGuildBadgeImageSource(guild, tmp8);
+      let tmp10 = null;
+      if (null != guildBadgeImageSource) {
+        const obj2 = { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true };
+        const merged1 = Object.assign(merged);
+        tmp10 = jsx(native.Icon, { size, source: guildBadgeImageSource, style: tmp4.icon, disableColor: true });
+      }
+      return tmp10;
     }
-    return tmp10;
+    const tmp5Result4 = GuildTraits;
   }
-  tmp4 = closure_3();
 };
 export function hasGuildBadge(fromGuildProfileResult, arg1) {
   const guildTraits = GuildTraits.getGuildTraits(fromGuildProfileResult);

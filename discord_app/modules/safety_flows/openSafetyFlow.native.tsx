@@ -1,22 +1,22 @@
-// === Module 20013: openSafetyFlow ===
+// === Module 20073: openSafetyFlow ===
 
-// Module 20013 (openSafetyFlow)
+// Module 20073 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4852 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4857 */;
 
 const require = fn;
 let closure_6 = async function _openSafetyFlow() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
+  } else if (tmp9 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -27,32 +27,33 @@ let closure_6 = async function _openSafetyFlow() {
           throw value;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          closure_3 = tmp3;
-          dependencyMap = tmp7;
+          closure_3 = tmp4;
+          dependencyMap = tmp10;
           let requiredAction;
-          let obj6 = closure_0;
+          let obj7 = closure_0;
           if (closure_0 === undefined) {
-            obj6 = {};
+            obj7 = {};
           }
-          requiredAction = obj6.requiredAction;
+          requiredAction = obj7.requiredAction;
           closure_130_1 = undefined;
           closure_130_2 = undefined;
+          closure_130_3 = undefined;
           c6 = 1;
           c7 = 1;
           return { value: "flexDirection", done: true };
         }
       } else {
-        if (1 === tmp7) {
+        if (1 === tmp10) {
           if (arg0 === 1) {
             c7 = 3;
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            let obj9 = { value, done: true };
+            return obj9;
           } else {
             let action = requiredAction;
             if (requiredAction == null) {
@@ -62,23 +63,23 @@ let closure_6 = async function _openSafetyFlow() {
               c5 = 1;
               c6 = 3;
               c7 = 1;
-              const obj9 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
-              return obj9;
+              let obj10 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
+              return obj10;
             } else {
               closure_131_1(closure_131_2[4]).popWithKey(closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
-              const obj12 = closure_131_1(closure_131_2[4]);
+              const obj18 = closure_131_1(closure_131_2[4]);
             }
           }
         } else {
-          if (2 === tmp7) {
+          if (2 === tmp10) {
             c5 = 0;
-            const obj11 = { task: null, initialScreen: null };
-            const obj10 = closure_131_1(closure_131_2[4]);
-            obj11.initialScreen = closure_131_0(closure_131_2[3]).SafetyFlowScreens.ERROR;
-            obj10.pushLazy(closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths), obj11, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
-            const tmp38 = closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths);
+            const obj12 = { task: null, initialScreen: null };
+            const obj16 = closure_131_1(closure_131_2[4]);
+            obj12.initialScreen = closure_131_0(closure_131_2[3]).SafetyFlowScreens.ERROR;
+            obj16.pushLazy(closure_131_0(closure_131_2[12])(closure_131_2[11], closure_131_2.paths), obj12, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
+            const tmp56 = closure_131_0(closure_131_2[12])(closure_131_2[11], closure_131_2.paths);
           } else {
-            if (3 === tmp7) {
+            if (3 === tmp10) {
               if (arg0 === 1) {
                 c7 = 3;
                 throw value;
@@ -92,10 +93,10 @@ let closure_6 = async function _openSafetyFlow() {
                 if (null == closure_130_1) {
                   c5 = 0;
                   c7 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               }
-            } else if (4 === tmp7) {
+            } else if (4 === tmp10) {
               if (arg0 === 1) {
                 c7 = 3;
                 throw value;
@@ -107,26 +108,159 @@ let closure_6 = async function _openSafetyFlow() {
               } else {
                 c6 = 5;
                 c7 = 1;
-                const obj16 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
-                return obj16;
+                const obj17 = { value: closure_131_0(closure_131_2[6]).getCurrentTask(), done: false };
+                return obj17;
               }
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              closure_130_1 = value;
-              if (null == value) {
+            } else if (5 === tmp10) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
                 c5 = 0;
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                const obj20 = { value, done: true };
+                return obj20;
+              } else {
+                closure_130_1 = value;
+                if (null == value) {
+                  c5 = 0;
+                  c7 = 3;
+                  return { value: "HermesInternal", done: "HermesInternal" };
+                } else if (closure_130_1.task_type === closure_131_0(closure_131_2[3]).TaskType.APP_STORE_PARENTAL_REVOCATION) {
+                  if (obj25.getIsAppStoreConsentReinstateEndpointEnabled("openSafetyFlow")) {
+                    if (obj4.isAppStoreAgeSignalColdLaunch()) {
+                      c5 = 2;
+                      c6 = 8;
+                      c7 = 1;
+                      const obj21 = {
+                        value: closure_131_0(closure_131_2[7]).queueAppStoreAgeSignalSubmit(closure_131_3(async () => {
+                                              if (c3 === 2) {
+                                                c3 = 3;
+                                                throw new TypeError("Generator functions may not be called on executing generators");
+                                              } else if (tmp4 === 3) {
+                                                if (arg0 === 1) {
+                                                  throw value;
+                                                } else if (arg0 === 2) {
+                                                  const obj3 = { value, done: true };
+                                                  return obj3;
+                                                } else {
+                                                  return { value: "HermesInternal", done: "HermesInternal" };
+                                                }
+                                              } else {
+                                                try {
+                                                  c3 = 2;
+                                                  if (0 === dependencyMap) {
+                                                    if (arg0 === 1) {
+                                                      c3 = 3;
+                                                      throw value;
+                                                    } else if (arg0 === 2) {
+                                                      c3 = 3;
+                                                      const obj4 = { value, done: true };
+                                                      return obj4;
+                                                    } else {
+                                                      closure_1 = tmp5;
+                                                      closure_128_0 = undefined;
+                                                      if (obj10.isAppStoreAgeSignalColdLaunch()) {
+                                                        dependencyMap = 1;
+                                                        c3 = 1;
+                                                        const obj5 = { value: tmp2(8147).getAppStoreConsentReinstatementProof(), done: false };
+                                                        return obj5;
+                                                      } else {
+                                                        c3 = 3;
+                                                        return { value: "HermesInternal", done: "HermesInternal" };
+                                                      }
+                                                      obj10 = tmp2(8155);
+                                                    }
+                                                  } else {
+                                                    if (1 === tmp5) {
+                                                      if (arg0 === 1) {
+                                                        c3 = 3;
+                                                        throw value;
+                                                      } else if (arg0 === 2) {
+                                                        c3 = 3;
+                                                        const obj7 = { value, done: true };
+                                                        return obj7;
+                                                      } else {
+                                                        closure_128_0 = value;
+                                                        if (null != closure_128_0) {
+                                                          dependencyMap = 2;
+                                                          c3 = 1;
+                                                          const obj8 = { value: tmp2(8148).reinstateAppStoreConsent(closure_128_0), done: false };
+                                                          return obj8;
+                                                        }
+                                                      }
+                                                    } else if (arg0 === 1) {
+                                                      c3 = 3;
+                                                      throw value;
+                                                    } else {
+                                                      if (arg0 === 2) {
+                                                        c3 = 3;
+                                                        const obj = { value, done: true };
+                                                        return obj;
+                                                      }
+                                                      const tmp6 = value;
+                                                    }
+                                                    c3 = 3;
+                                                    const obj9 = { value: tmp6, done: true };
+                                                    return obj9;
+                                                  }
+                                                } catch (tmp14) {
+                                                  c3 = tmp;
+                                                  throw tmp14;
+                                                }
+                                              }
+                                            })),
+                        done: false
+                      };
+                      return obj21;
+                    }
+                    obj4 = closure_131_0(closure_131_2[7]);
+                  }
+                  obj25 = closure_131_0(closure_131_2[8]);
+                }
               }
+            } else {
+              if (6 === tmp10) {
+                c5 = 1;
+                c5 = 3;
+                const currentTask = closure_131_0(closure_131_2[6]).getCurrentTask();
+                c6 = 9;
+                c7 = 1;
+                let obj3 = closure_131_0(closure_131_2[6]);
+              } else if (7 === tmp10) {
+                c5 = 1;
+              } else if (8 === tmp10) {
+                if (arg0 === 1) {
+                  c7 = 3;
+                  throw value;
+                } else if (arg0 !== 2) {
+                  c5 = 1;
+                }
+              } else if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 0;
+                c7 = 3;
+                let obj = { value, done: true };
+                return obj;
+              } else {
+                closure_130_2 = value;
+                if (null == closure_130_2) {
+                  c5 = 0;
+                  c7 = 3;
+                  return { value: "HermesInternal", done: "HermesInternal" };
+                } else {
+                  closure_130_1 = closure_130_2;
+                  c5 = 1;
+                }
+              }
+              c5 = 0;
+              c7 = 3;
+              const obj22 = { value, done: true };
+              return obj22;
             }
-            closure_130_2 = (function getInitialScreenForTask(task_type) {
+            closure_130_3 = (function getInitialScreenForTask(task_type) {
               if (task_type.task_type === closure_1_0(dependencyMap[3]).TaskType.AGE_VERIFICATION) {
                 let UPDATE_APP = closure_1_0(dependencyMap[3]).SafetyFlowScreens.AGE_VERIFICATION;
               } else if (task_type.task_type === closure_1_0(dependencyMap[3]).TaskType.PARENTAL_CONSENT_CONNECTION) {
@@ -140,26 +274,30 @@ let closure_6 = async function _openSafetyFlow() {
               }
               return UPDATE_APP;
             })(closure_130_1);
-            const obj17 = { task: closure_130_1, initialScreen: closure_130_2 };
-            const obj5 = closure_131_1(closure_131_2[4]);
-            obj5.pushLazy(closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths), obj17, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
+            const obj23 = { task: closure_130_1, initialScreen: closure_130_3 };
+            const obj11 = closure_131_1(closure_131_2[4]);
+            obj11.pushLazy(closure_131_0(closure_131_2[12])(closure_131_2[11], closure_131_2.paths), obj23, closure_131_0(closure_131_2[5]).SAFETY_FLOWS_MODAL_KEY);
             c5 = 0;
-            const tmp21 = closure_131_0(closure_131_2[9])(closure_131_2[8], closure_131_2.paths);
+            const tmp39 = closure_131_0(closure_131_2[12])(closure_131_2[11], closure_131_2.paths);
           }
           c6 = 4;
           c7 = 1;
-          const obj18 = { value: closure_131_0(closure_131_2[7]).settleAppStoreAgeSignalReport(), done: false };
-          return obj18;
+          const obj24 = { value: closure_131_0(closure_131_2[7]).settleAppStoreAgeSignalReport(), done: false };
+          return obj24;
         }
         c7 = 3;
       }
-    } catch (tmp58) {
-      closure_4 = tmp58;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp58;
-      } else {
+    } catch (tmp76) {
+      closure_4 = tmp76;
+      if (tmp5 === c5) {
+        c7 = tmp3;
+        throw tmp76;
+      } else if (tmp2 === tmp78) {
         c6 = tmp;
+      } else if (tmp === tmp78) {
+        c6 = tmp7;
+      } else {
+        c6 = tmp6;
       }
     }
   }

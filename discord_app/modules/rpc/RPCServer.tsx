@@ -1,16 +1,16 @@
-// === Module 9310: RPCServer ===
+// === Module 9330: RPCServer ===
 
-// Module 9310 (RPCServer)
+// Module 9330 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import transformUserDefault from "transformUser" /* 9311 */;
-import RPCErrorDefault from "RPCError" /* 9313 */;
-import validateScopeDefault from "validateScope" /* 9315 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 9318 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import transformUserDefault from "transformUser" /* 9331 */;
+import RPCErrorDefault from "RPCError" /* 9333 */;
+import validateScopeDefault from "validateScope" /* 9335 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 9338 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(6444).TransportTypes;
+const TransportTypes = fn(6450).TransportTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire, RPCCommands: closure_7, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
@@ -95,7 +95,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -664,8 +664,8 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
   });
   const result = this.dispatchIsSubscribedUpdate();
 };
-prototype["removeSubscriptions"] = function removeSubscriptions(abortController) {
-  closure_0 = abortController;
+prototype["removeSubscriptions"] = function removeSubscriptions(authorization) {
+  closure_0 = authorization;
   _modDef12.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };

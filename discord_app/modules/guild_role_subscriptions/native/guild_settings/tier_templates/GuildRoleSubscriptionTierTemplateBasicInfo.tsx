@@ -1,21 +1,24 @@
-// === Module 19936: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 19994: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 19936 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 19994 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17151 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
-let obj2 = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null };
+const createStyles = fn(5014);
+let obj2 = { container: { paddingBottom: nativeDefault.space.PX_24 }, header: null, headerText: null, image: null };
+const obj3 = { paddingBottom: nativeDefault.space.PX_24 };
+obj2.header = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
+obj2.headerText = { flexShrink: 1, gap: nativeDefault.space.PX_4 };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.sm };
 obj2.image = size;
 let closure_6 = createStyles.createStyles(obj2);
@@ -30,13 +33,13 @@ export function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.header, children: null };
   ({ image, name, price_tier, description } = template.listings[0]);
-  const items = [React4(FastImageDefault, { source: { uri: image }, style: tmp.image }), React4(native.Spacer, { size: 16 }), ];
-  const obj4 = { style: { flexShrink: 1 }, children: null };
-  const items1 = [React4(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), React4(native.Spacer, { size: 4 }), ];
+  const items = [React4(FastImageDefault, { source: { uri: image }, style: tmp.image }), ];
+  const obj4 = { style: tmp.headerText, children: null };
+  const items1 = [React4(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), ];
   const obj5 = { variant: "heading-md/medium", style: subscriptionPlanTextStyle, children: GuildRoleSubscriptionTypeUtils.formatMonthlyPriceLabel(price_tier) };
-  items1[2] = React4(Text_Text.Text, obj5);
+  items1[1] = React4(Text_Text.Text, obj5);
   obj4.children = items1;
-  items[2] = hasOwnProperty(View, obj4);
+  items[1] = hasOwnProperty(View, obj4);
   obj2.children = items;
   const items2 = [hasOwnProperty(View, obj2), , ];
   const obj7 = { variant: "text-sm/normal", style: descriptionTextStyle };

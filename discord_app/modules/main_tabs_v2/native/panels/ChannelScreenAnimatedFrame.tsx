@@ -1,15 +1,15 @@
-// === Module 18003: ChannelScreenAnimatedFrame ===
+// === Module 18046: ChannelScreenAnimatedFrame ===
 
-// Module 18003 (ChannelScreenAnimatedFrame)
+// Module 18046 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import timing from "timing" /* 5249 */;
-import PanelsConfig from "PanelsConfig" /* 18001 */;
+import native from "native" /* 1187 */;
+import timing from "timing" /* 5254 */;
+import PanelsConfig from "PanelsConfig" /* 18044 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, splitDivider: null };
 const obj3 = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.splitDivider = { borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };

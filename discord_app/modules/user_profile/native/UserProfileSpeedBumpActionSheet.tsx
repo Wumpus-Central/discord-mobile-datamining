@@ -1,38 +1,38 @@
-// === Module 8745: UserProfileSpeedBumpActionSheet ===
+// === Module 8753: UserProfileSpeedBumpActionSheet ===
 
-// Module 8745 (UserProfileSpeedBumpActionSheet)
+// Module 8753 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import UserSettings from "UserSettings" /* 4834 */;
-import TableRow from "TableRow" /* 6969 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
-import UserActionCreators from "UserActionCreators" /* 8744 */;
-import _modDef8748 from "module_8748" /* 8748 */;
+import native from "native" /* 1187 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import UserSettings from "UserSettings" /* 4839 */;
+import TableRow from "TableRow" /* 6975 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+import UserActionCreators from "UserActionCreators" /* 8752 */;
+import _modDef8756 from "module_8756" /* 8756 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function InformationTable(speedBumpType) {
   let items;
-  let obj = { icon: _modDef8748, text: null };
-  const intl = items(1114).intl;
-  obj.text = intl.string(items(1114).t.kcuWva);
+  let obj = { icon: _modDef8756, text: null };
+  const intl = items(1113).intl;
+  obj.text = intl.string(items(1113).t.kcuWva);
   items = [obj, ];
-  const obj2 = { icon: _modDef8748, text: null };
+  const obj2 = { icon: _modDef8756, text: null };
   if ("block" === speedBumpType.speedBumpType) {
-    const intl3 = tmp2(1114).intl;
-    let stringResult = intl3.string(tmp2(1114).t.QxrDY1);
+    const intl3 = tmp2(1113).intl;
+    let stringResult = intl3.string(tmp2(1113).t.QxrDY1);
   } else {
-    const intl2 = tmp2(1114).intl;
-    stringResult = intl2.string(tmp2(1114).t.W6fjkS);
+    const intl2 = tmp2(1113).intl;
+    stringResult = intl2.string(tmp2(1113).t.W6fjkS);
   }
   obj2.text = stringResult;
   items[1] = obj2;
-  return closure_12(items(7054).TableRowGroup, {
+  return closure_12(items(7060).TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
       const obj = { start: 0 === index, end: items.length === index, icon: closure_2_12(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }), label: icon.text };
@@ -41,12 +41,12 @@ function InformationTable(speedBumpType) {
   });
 }
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8746).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8754).UserProfileAnalyticsTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 }, tableContainer: null, header: null, bodyText: null, headerText: null, avatar: null, avatarContainer: null, avatarIconContainer: null, suppress: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 };
 obj.tableContainer = { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };

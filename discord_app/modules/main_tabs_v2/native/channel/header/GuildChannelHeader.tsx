@@ -1,23 +1,23 @@
-// === Module 14529: GuildChannelHeader ===
+// === Module 14567: GuildChannelHeader ===
 
-// Module 14529 (GuildChannelHeader)
+// Module 14567 (GuildChannelHeader)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
-import useChannelName from "useChannelName" /* 5647 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8595 */;
-import ChannelHeader from "ChannelHeader" /* 14520 */;
-import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14531 */;
+import util from "util" /* 1113 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
+import useChannelName from "useChannelName" /* 5652 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
+import ChannelHeader from "ChannelHeader" /* 14558 */;
+import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 14569 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14530 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 7440 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5237 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 14568 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7446 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function GuildChannelMemberCount(channel) {
@@ -26,8 +26,8 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(5591).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(5591);
+  const token = channel(5596).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(5596);
   const items = [ChannelMemberStore, ChannelMemberCountStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let flag = false;
@@ -69,8 +69,8 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(11305);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(7090).ICON_SIZE[token]);
+    const tmpResult = tmp(11337);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(7096).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
 }
@@ -103,10 +103,10 @@ function ChannelLinkedLobbyCoachmark(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   _slicedToArray = undefined;
-  const items = [guild(4842).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(7563).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const items = [guild(4847).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
+  const tmp = _slicedToArray(guild(7569).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp2;
-  const tmp3 = tmp[0] === guild(4842).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
+  const tmp3 = tmp[0] === guild(4847).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
   const items1 = [channel, guild, tmp[1], tmp3];
   const memo = noop.useMemo(() => {
@@ -132,15 +132,15 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(7563);
-  const coachmark = guild(9933).useCoachmark(guild.iconRef, memo);
+  let obj = guild(7569);
+  const coachmark = guild(9954).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;
-const THREAD_CHANNEL_TYPES = fn(4862).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4867).THREAD_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_15, HelpdeskArticles: closure_16, StatusTypes: closure_17 } = Constants);
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 const size = fn(2);
@@ -404,7 +404,7 @@ export default noop.memo(function GuildChannelHeader(channelId) {
     if (tmp33) {
       tmp42 = null;
       if (null != stateFromStores) {
-        const obj13 = { channelId: stateFromStores.id };
+        const obj13 = { channel: stateFromStores };
         tmp42 = closure_19(tmp2(tmp3[24]).PinotChannelLabel, obj13);
       }
     }

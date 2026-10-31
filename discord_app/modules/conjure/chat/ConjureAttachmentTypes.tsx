@@ -1,7 +1,7 @@
-// === Module 12421: ConjureAttachmentTypes ===
+// === Module 12459: ConjureAttachmentTypes ===
 
-// Module 12421 (ConjureAttachmentTypes)
-import FileSizeUtils from "FileSizeUtils" /* 6445 */;
+// Module 12459 (ConjureAttachmentTypes)
+import FileSizeUtils from "FileSizeUtils" /* 6451 */;
 import size from "module_2" /* 2 */;
 
 const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);

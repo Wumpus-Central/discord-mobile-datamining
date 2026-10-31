@@ -1,15 +1,15 @@
-// === Module 18206: FavoritesGuildSuggestionsStore ===
+// === Module 18249: FavoritesGuildSuggestionsStore ===
 
-// Module 18206 (FavoritesGuildSuggestionsStore)
+// Module 18249 (FavoritesGuildSuggestionsStore)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4850 */;
+import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 4855 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const NOOP = fn(1072).NOOP;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 let items = [];
 const module_560 = fn(560);
 const state = module_560.create(() => ({ suggestions: items, dismiss: NOOP }));
@@ -32,7 +32,7 @@ export function setFavoritesGuildSuggestions(suggestions) {
 export function useFavoritesGuildSuggestionsVisibility() {
   const tmp = DismissibleContentShownStateStore((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
   if (tmp) {
-    items = [tmp2(4842).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+    items = [tmp2(4847).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
     let items1 = items;
   } else {
     items1 = [];

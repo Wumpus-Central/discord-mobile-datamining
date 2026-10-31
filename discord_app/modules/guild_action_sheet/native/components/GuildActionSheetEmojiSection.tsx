@@ -1,18 +1,18 @@
-// === Module 15764: GuildActionSheetEmojiSection ===
+// === Module 15804: GuildActionSheetEmojiSection ===
 
-// Module 15764 (GuildActionSheetEmojiSection)
+// Module 15804 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 575 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
-import ToastUtils from "ToastUtils" /* 5706 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9764 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
+import ToastUtils from "ToastUtils" /* 5711 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9785 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6790 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import UserStore from "UserStore" /* 1384 */;
+import EmojiStore from "EmojiStore" /* 6796 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ const Constants = fn(1072);
 ({ UpsellTypes: closure_9, AnalyticsSections: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.TEXT_SUBTLE };
 obj2.dotSeparator = size;

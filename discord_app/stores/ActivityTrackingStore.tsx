@@ -1,19 +1,19 @@
-// === Module 15588: ActivityTrackingStore ===
+// === Module 15630: ActivityTrackingStore ===
 
-// Module 15588 (ActivityTrackingStore)
+// Module 15630 (ActivityTrackingStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 7883 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11509 */;
-import RunningGameStore from "RunningGameStore" /* 2014 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 7891 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11543 */;
+import RunningGameStore from "RunningGameStore" /* 2013 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DetectableGameStore from "DetectableGameStore" /* 2034 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 2038 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import DetectableGameStore from "DetectableGameStore" /* 2032 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 2036 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 
 require = fn;
 function stopActivity(applicationId) {
@@ -69,7 +69,7 @@ function updateActivity(applicationId) {
   ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4853).Interval();
+    const interval = new tmp3(4858).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       updateActivity(closure_0);

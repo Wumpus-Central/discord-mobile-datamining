@@ -1,34 +1,34 @@
-// === Module 14770: UserProfileOverflowMenu ===
+// === Module 14808: UserProfileOverflowMenu ===
 
-// Module 14770 (UserProfileOverflowMenu)
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import ToastUtils from "ToastUtils" /* 5706 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import ClipboardUtils from "ClipboardUtils" /* 7352 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7481 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
-import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11611 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12284 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 14771 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 14780 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14784 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 14789 */;
+// Module 14808 (UserProfileOverflowMenu)
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import ToastUtils from "ToastUtils" /* 5711 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import ClipboardUtils from "ClipboardUtils" /* 7358 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7487 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 11647 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12322 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 14809 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 14818 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 14822 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 14827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7371).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7377).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AVATAR_MAX_SIZE: closure_11, ChannelTypesSets: closure_12, RelationshipTypes: map1 } = Constants);
-const ParticipantTypes = fn(5676).ParticipantTypes;
+const ParticipantTypes = fn(5681).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const size = fn(2);
@@ -303,7 +303,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
               trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14786, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14824, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
               const obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
               const obj3 = { userId: id, showUserProfile: callback1 };
               ActionSheetActionCreatorsDefault.hideActionSheet();

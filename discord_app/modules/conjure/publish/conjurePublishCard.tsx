@@ -1,7 +1,7 @@
-// === Module 12541: conjurePublishCard ===
+// === Module 12576: conjurePublishCard ===
 
-// Module 12541 (conjurePublishCard)
-import _modDef3865 from "module_3865" /* 3865 */;
+// Module 12576 (conjurePublishCard)
+import _modDef3868 from "module_3868" /* 3868 */;
 import size from "module_2" /* 2 */;
 
 const weakMap = new WeakMap();
@@ -58,19 +58,18 @@ export function livePublishCardMessageId(arg0, arg1) {
 }
 export function publishNoticeMessage(notice, name, automod) {
   if (true === notice.commands_failed) {
-    let prop = _modDef3865["PrQg+B"];
   } else if (true === notice.channel_skipped) {
-    prop = _modDef3865.ev23Cw;
-  } else if (notice.update) {
-    prop = _modDef3865.gQzuLC;
-  } else if (automod) {
-    prop = _modDef3865.KORRGl;
-  } else if (null == name) {
-    prop = _modDef3865.MOrR29;
   } else {
-    prop = _modDef3865["/npn7F"];
+    const tmp4 = _modDef3868;
+    if (!notice.update) {
+      if (automod) {
+        let KORRGl = tmp4.KORRGl;
+      } else {
+        KORRGl = tmp ? tmp4["/npn7F"] : tmp4.MOrR29;
+      }
+      return KORRGl;
+    }
   }
-  return prop;
 }
 export function withLivePublishCard(stateFromStores1, stateFromStores2) {
   let diff = stateFromStores1.length - 1;

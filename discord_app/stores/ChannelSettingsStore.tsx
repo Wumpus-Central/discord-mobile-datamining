@@ -1,20 +1,20 @@
-// === Module 8192: ChannelSettingsStore ===
+// === Module 8200: ChannelSettingsStore ===
 
-// Module 8192 (ChannelSettingsStore)
+// Module 8200 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ThreadConstants from "ThreadConstants" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import _modDef2044 from "module_2044" /* 2044 */;
-import ChannelRecord from "ChannelRecord" /* 4862 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 4867 */;
-import ForumLayout from "ForumLayout" /* 4868 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4872 */;
-import ReactionUtils from "ReactionUtils" /* 4953 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4955 */;
-import InviteRecord from "InviteRecord" /* 8193 */;
-import UserRecord from "UserRecord" /* 1398 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ThreadConstants from "ThreadConstants" /* 1112 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import _modDef2042 from "module_2042" /* 2042 */;
+import ChannelRecord from "ChannelRecord" /* 4867 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 4872 */;
+import ForumLayout from "ForumLayout" /* 4873 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4877 */;
+import ReactionUtils from "ReactionUtils" /* 4958 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4960 */;
+import InviteRecord from "InviteRecord" /* 8201 */;
+import UserRecord from "UserRecord" /* 1397 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 import Constants from "Constants" /* 1072 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -99,7 +99,7 @@ function _createInvite(code) {
   }
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
-  obj.createdAt = _modDef2044(code.created_at);
+  obj.createdAt = _modDef2042(code.created_at);
   ({ type: obj.type, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }

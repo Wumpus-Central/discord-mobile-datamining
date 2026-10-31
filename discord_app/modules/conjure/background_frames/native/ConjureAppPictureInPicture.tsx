@@ -1,22 +1,22 @@
-// === Module 19066: ConjureAppPictureInPicture ===
+// === Module 19115: ConjureAppPictureInPicture ===
 
-// Module 19066 (ConjureAppPictureInPicture)
+// Module 19115 (ConjureAppPictureInPicture)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
-import spring from "spring" /* 5632 */;
-import GuildIconDefault from "GuildIcon" /* 6951 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8665 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9317 */;
-import VoiceXIcon from "VoiceXIcon" /* 11911 */;
-import conjureFrameSound from "conjureFrameSound" /* 14501 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18620 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19064 */;
-import conjureAppPictureInPictureActions2 from "conjureAppPictureInPictureActions" /* 19067 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import spring from "spring" /* 5637 */;
+import GuildIconDefault from "GuildIcon" /* 6957 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8673 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9337 */;
+import VoiceXIcon from "VoiceXIcon" /* 11949 */;
+import conjureFrameSound from "conjureFrameSound" /* 14539 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18662 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19113 */;
+import conjureAppPictureInPictureActions2 from "conjureAppPictureInPictureActions" /* 19116 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6840 */;
-import GuildStore from "GuildStore" /* 4880 */;
+import FramesStore from "FramesStore" /* 6846 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 require = fn;
 function StaticCard(arg0) {
@@ -30,7 +30,7 @@ function StaticCard(arg0) {
   const obj2 = { style: tmp.card, children: null };
   let tmp9 = null;
   if (null != stateFromStores) {
-    const obj3 = { guild: stateFromStores, size: tmp5(6951).GuildIconSizes.NORMAL };
+    const obj3 = { guild: stateFromStores, size: tmp5(6957).GuildIconSizes.NORMAL };
     tmp9 = closure_10(GuildIconDefault, obj3);
     const tmp2Result = GuildIconDefault;
   }
@@ -58,12 +58,12 @@ function SoundBadge(frame) {
 }
 const View = fn(17).View;
 const ThemeTypes = fn(1072).ThemeTypes;
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({ asLaunched: closure_8, FrameLayoutModes } = FramesConstants);
-const MIN_PAN_GESTURE_MOVE = fn(11205).MIN_PAN_GESTURE_MOVE;
+const MIN_PAN_GESTURE_MOVE = fn(11224).MIN_PAN_GESTURE_MOVE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let DeviceUtils = fn(4966);
+let DeviceUtils = fn(4971);
 DeviceUtils = DeviceUtils.getRamSize();
 if (DeviceUtils == null) {
   DeviceUtils = Infinity;
@@ -71,8 +71,8 @@ if (DeviceUtils == null) {
 let closure_12 = DeviceUtils < 4;
 let closure_13 = { mass: 0.25, damping: 40, stiffness: 300, overshootClamping: true };
 let closure_14 = { mass: 0.4, damping: 22, stiffness: 220 };
-let closure_15 = { layoutMode: FrameLayoutModes.PIP, portraitSafeAreasConfig: fn(18944).DEFAULT_PORTRAIT_LETTERBOX_CONFIG };
-const createStyles = fn(5009);
+let closure_15 = { layoutMode: FrameLayoutModes.PIP, portraitSafeAreasConfig: fn(18993).DEFAULT_PORTRAIT_LETTERBOX_CONFIG };
+const createStyles = fn(5014);
 let obj = { window: null, mask: null, card: null, soundBadge: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

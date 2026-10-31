@@ -1,20 +1,20 @@
-// === Module 13734: ForumPostList ===
+// === Module 13769: ForumPostList ===
 
-// Module 13734 (ForumPostList)
-import ForumTagHooks from "ForumTagHooks" /* 7450 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 13715 */;
-import ForumPostAppliedTags from "ForumPostAppliedTags" /* 13726 */;
-import ForumPostListBodyDefault from "ForumPostListBody" /* 13735 */;
-import ForumPostListFooterDefault from "ForumPostListFooter" /* 13738 */;
+// Module 13769 (ForumPostList)
+import ForumTagHooks from "ForumTagHooks" /* 7456 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 13750 */;
+import ForumPostAppliedTags from "ForumPostAppliedTags" /* 13761 */;
+import ForumPostListBodyDefault from "ForumPostListBody" /* 13770 */;
+import ForumPostListFooterDefault from "ForumPostListFooter" /* 13773 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ChannelFlags = fn(4865).ChannelFlags;
+const ChannelFlags = fn(4870).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({ header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 }, content: { flex: 1, marginBottom: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/list/ForumPostList.tsx");

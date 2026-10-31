@@ -1,6 +1,6 @@
-// === Module 12969: ConjureTimeFormat ===
+// === Module 13004: ConjureTimeFormat ===
 
-// Module 12969 (ConjureTimeFormat)
+// Module 13004 (ConjureTimeFormat)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureTimeFormat.tsx");

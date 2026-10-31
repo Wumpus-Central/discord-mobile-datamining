@@ -1,15 +1,15 @@
-// === Module 7294: Emoji ===
+// === Module 7300: Emoji ===
 
-// Module 7294 (Emoji)
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4959 */;
-import shared from "shared" /* 5016 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import _modDef7295 from "module_7295" /* 7295 */;
-import _modDef7296 from "module_7296" /* 7296 */;
+// Module 7300 (Emoji)
+import native from "native" /* 1187 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4964 */;
+import shared from "shared" /* 5021 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import _modDef7301 from "module_7301" /* 7301 */;
+import _modDef7302 from "module_7302" /* 7302 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 const View = fn(17).View;
@@ -33,9 +33,9 @@ export default function Emoji(arg0) {
       if ("" !== uRL) {
         const obj4 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = _modDef7295;
+          let tmp9Result = _modDef7301;
         } else {
-          tmp9Result = _modDef7296;
+          tmp9Result = _modDef7302;
         }
         obj4.placeholder = tmp9Result;
         const obj5 = { uri: uRL };

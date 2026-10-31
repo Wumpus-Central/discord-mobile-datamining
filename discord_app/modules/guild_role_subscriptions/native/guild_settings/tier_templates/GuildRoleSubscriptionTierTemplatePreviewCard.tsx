@@ -1,18 +1,18 @@
-// === Module 19934: GuildRoleSubscriptionTierTemplatePreviewCard ===
+// === Module 19992: GuildRoleSubscriptionTierTemplatePreviewCard ===
 
-// Module 19934 (GuildRoleSubscriptionTierTemplatePreviewCard)
+// Module 19992 (GuildRoleSubscriptionTierTemplatePreviewCard)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7142 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15419 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 19938 */;
-import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 19940 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7148 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15458 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 19996 */;
+import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 19998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,8 +44,9 @@ function BenefitShowCase(children) {
 }
 function ChannelBenefitShowCase(channel) {
   ({ description, type, name } = channel.channel);
-  const obj2 = { style: { flexDirection: "row", alignItems: "center" }, children: null };
-  const items = [React7(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(type), { size: "xs" }), React7(native.Spacer, { size: 4 }), React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
+  const tmp = closure_11();
+  const obj2 = { style: tmp.channelTitle, children: null };
+  const items = [React7(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(type), { size: "xs" }), React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
   obj2.children = items;
   return React7(BenefitShowCase, { title: closure_1_10(timestampProducer, obj2), description });
 }
@@ -53,7 +54,7 @@ function ViewEntireTemplateFooter() {
   const tmp = closure_11();
   const obj = { style: tmp.viewEntireTemplateFooter, children: null };
   const obj2 = { children: null };
-  const obj3 = { variant: "text-sm/semibold", color: "interactive-text-hover", style: { marginTop: -1 }, children: null };
+  const obj3 = { variant: "text-sm/semibold", color: "interactive-text-hover", style: tmp.viewEntireTemplateText, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.kejaOD);
   const items = [React7(Text_Text.Text, obj3), React7(native.Spacer, { size: 3 }), React7(timestampProducer, { style: tmp.viewEntireTemplateFooterUnderline })];
@@ -68,19 +69,22 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
-let obj2 = { container: { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 }, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, separator: null, contentContainer: null, contentHeader: null, viewEntireTemplateFooter: null, viewEntireTemplateFooterUnderline: null };
-let obj3 = { padding: 16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 };
+const createStyles = fn(5014);
+let obj2 = { container: { padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 }, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, separator: null, contentContainer: null, channelTitle: null, viewEntireTemplateText: null, contentHeader: null, viewEntireTemplateFooter: null, viewEntireTemplateFooterUnderline: null };
+let obj3 = { padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: 319 };
 obj2.subscriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_SUBTLE };
 let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE };
-obj2.descriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
-let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 16 };
+obj2.descriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_MUTED, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
+let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: nativeDefault.space.PX_16 };
 obj2.separator = size;
-let obj5 = { color: nativeDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
-obj2.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopRightRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, padding: 16, paddingBottom: 0 };
+let obj5 = { color: nativeDefault.colors.TEXT_MUTED, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
+obj2.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopRightRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_0 };
+const obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopRightRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_0 };
+obj2.channelTitle = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.viewEntireTemplateText = { marginTop: -1 };
 obj2.contentHeader = { textTransform: "uppercase" };
-const obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopRightRadius: nativeDefault.radii.sm, borderTopLeftRadius: nativeDefault.radii.sm, padding: 16, paddingBottom: 0 };
-obj2.viewEntireTemplateFooter = { paddingVertical: 16, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, marginLeft: -16, marginRight: -16, marginTop: 16 };
+let obj7 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.viewEntireTemplateFooter = { paddingVertical: nativeDefault.space.PX_16, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, marginLeft: -nativeDefault.space.PX_16, marginRight: -nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_16 };
 const rect = { position: "absolute", left: 0, right: 0, height: 1, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.viewEntireTemplateFooterUnderline = rect;
 let closure_11 = createStyles.createStyles(obj2);
@@ -128,7 +132,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   callback1 = obj3.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19939, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19997, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
     } else {
       handleCreateFromTemplate(selectedTemplate, arg1);
     }
@@ -138,16 +142,11 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19935, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19993, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
     },
     children: null
   };
-  const obj8 = {
-    renderGap() {
-      return closure_1_9(Separator, {});
-    },
-    children: null
-  };
+  const obj8 = { separator: closure_9(Separator, {}), children: null };
   const obj9 = { children: null };
   const obj10 = { title: null, count: null };
   const intl = tmp2(tmp3[14]).intl;
@@ -165,7 +164,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   obj11.children = items5;
   items4[1] = closure_10(suggestedUnusedPrices, obj11);
   obj8.children = items4;
-  const items6 = [closure_10(template(navigation[23]).GappedList, obj8), closure_9(ViewEntireTemplateFooter, {})];
+  const items6 = [closure_10(template(navigation[23]).SeparatedList, obj8), closure_9(ViewEntireTemplateFooter, {})];
   obj7.children = items6;
   items2[1] = closure_10(handleCreateFromTemplate, obj7);
   obj5.children = items2;

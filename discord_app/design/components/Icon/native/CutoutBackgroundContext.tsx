@@ -1,9 +1,9 @@
-// === Module 9488: CutoutBackgroundContext ===
+// === Module 9510: CutoutBackgroundContext ===
 
-// Module 9488 (CutoutBackgroundContext)
+// Module 9510 (CutoutBackgroundContext)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import shared_colors from "shared/colors" /* 9489 */;
+import shared_colors from "shared/colors" /* 9511 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

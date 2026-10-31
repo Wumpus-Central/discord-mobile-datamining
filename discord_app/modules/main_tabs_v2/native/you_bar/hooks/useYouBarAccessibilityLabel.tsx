@@ -1,19 +1,19 @@
-// === Module 18386: useYouBarAccessibilityLabel ===
+// === Module 18429: useYouBarAccessibilityLabel ===
 
-// Module 18386 (useYouBarAccessibilityLabel)
-import util from "util" /* 1114 */;
-import UserUtils from "UserUtils" /* 5063 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10727 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10728 */;
-import isGameActivityDefault from "isGameActivity" /* 10735 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10739 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6708 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import PresenceStore from "PresenceStore" /* 5756 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
-import VoiceStateStore from "VoiceStateStore" /* 5674 */;
+// Module 18429 (useYouBarAccessibilityLabel)
+import util from "util" /* 1113 */;
+import UserUtils from "UserUtils" /* 5068 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10747 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10748 */;
+import isGameActivityDefault from "isGameActivity" /* 10755 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10759 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import PresenceStore from "PresenceStore" /* 5761 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
+import VoiceStateStore from "VoiceStateStore" /* 5679 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
 
 export function useYouBarAccessibilityLabel(stateFromStores) {
-  _require = id(5063).useName(stateFromStores);
+  _require = id(5068).useName(stateFromStores);
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -34,7 +34,7 @@ export function useYouBarAccessibilityLabel(stateFromStores) {
   if (setting != null) {
     text = setting.text;
   }
-  let obj = id(5063);
+  let obj = id(5068);
   let tmp6 = null;
   if ("" !== text) {
     tmp6 = text;

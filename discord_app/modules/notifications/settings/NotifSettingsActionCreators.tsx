@@ -1,13 +1,13 @@
-// === Module 17918: NotifSettingsActionCreators ===
+// === Module 17961: NotifSettingsActionCreators ===
 
-// Module 17918 (NotifSettingsActionCreators)
+// Module 17961 (NotifSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1234 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import notification_settings from "notification_settings" /* 15529 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import notification_settings from "notification_settings" /* 15568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15528 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15567 */;
 
 require = fn;
 function skipEdit(edit) {
@@ -34,7 +34,7 @@ let closure_10 = async function _persistPendingEdit() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_10 = async function _persistPendingEdit() {
               logger.log("Failed to take ownership of apply; current is", NotifSettingsProtoStore.applyingEdit);
               skipEdit(pendingEdit);
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               const protoToB64Result = user_settings_UserSettingsUtils.protoToB64(notification_settings.DeclarativeSettings, pendingEdit.partialSettings);
               if (null != protoToB64Result) {
@@ -91,7 +91,7 @@ let closure_10 = async function _persistPendingEdit() {
               logger.log("Not persisting proto because there is nothing to change");
               skipEdit(pendingEdit);
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             c7 = 3;
@@ -215,7 +215,7 @@ let closure_11 = async function _reload() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

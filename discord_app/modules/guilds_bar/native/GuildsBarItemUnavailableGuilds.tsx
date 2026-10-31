@@ -1,18 +1,18 @@
-// === Module 18366: GuildsBarItemUnavailableGuilds ===
+// === Module 18409: GuildsBarItemUnavailableGuilds ===
 
-// Module 18366 (GuildsBarItemUnavailableGuilds)
+// Module 18409 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import _modDef18357 from "module_18357" /* 18357 */;
+import util from "util" /* 1113 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import _modDef18400 from "module_18400" /* 18400 */;
 import noop from "module_19" /* 19 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6768 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj = { unavailableGuilds: { marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING, justifyContent: "center", alignItems: "center" }, unavailableGuildsIcon: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.unavailableGuildsIcon = size;
@@ -28,9 +28,9 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
   let tmp5 = null;
   if (stateFromStores > 0) {
     let obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    let intl = tmp2(1114).intl;
+    let intl = tmp2(1113).intl;
     const obj3 = { count: stateFromStores };
-    obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t["MEpX+2"], obj3);
+    obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1113).t["MEpX+2"], obj3);
     obj2.onPress = function onPress() {
       const obj2 = { title: null, body: null };
       const intl = util.intl;
@@ -40,8 +40,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18357 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18357 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18400 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18400 });
     tmp5 = <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</Pressable>;
   }
   return tmp5;

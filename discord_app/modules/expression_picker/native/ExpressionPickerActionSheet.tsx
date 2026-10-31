@@ -1,25 +1,25 @@
-// === Module 10215: ExpressionPickerActionSheet ===
+// === Module 10235: ExpressionPickerActionSheet ===
 
-// Module 10215 (ExpressionPickerActionSheet)
+// Module 10235 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import KeyboardTypes from "KeyboardTypes" /* 1624 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import useKeyboardType from "useKeyboardType" /* 5204 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5267 */;
-import NavigatorConstants from "NavigatorConstants" /* 5581 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9945 */;
-import KeyboardUtils from "KeyboardUtils" /* 10217 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 10218 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import KeyboardTypes from "KeyboardTypes" /* 1623 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import useKeyboardType from "useKeyboardType" /* 5209 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
+import NavigatorConstants from "NavigatorConstants" /* 5586 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9966 */;
+import KeyboardUtils from "KeyboardUtils" /* 10237 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10238 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 require = fn;
-let closure_5 = fn(5268).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10216).STICKER_FORMATS;
+let closure_5 = fn(5273).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(10236).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

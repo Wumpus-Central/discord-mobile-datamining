@@ -1,8 +1,8 @@
-// === Module 18950: showLaunchPad ===
+// === Module 18999: showLaunchPad ===
 
-// Module 18950 (showLaunchPad)
+// Module 18999 (showLaunchPad)
 import Constants from "Constants" /* 1072 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import size from "module_2" /* 2 */;
 
 const ComponentActions = Constants.ComponentActions;

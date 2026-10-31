@@ -1,27 +1,27 @@
-// === Module 10300: TimestampSuggestionUtils ===
+// === Module 10320: TimestampSuggestionUtils ===
 
-// Module 10300 (TimestampSuggestionUtils)
-import util from "util" /* 1114 */;
-import _modDef2044 from "module_2044" /* 2044 */;
-import _mod10301 from "module_10301" /* 10301 */;
+// Module 10320 (TimestampSuggestionUtils)
+import util from "util" /* 1113 */;
+import _modDef2042 from "module_2042" /* 2042 */;
+import _mod10321 from "module_10321" /* 10321 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
 
 require = fn;
 let items = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"];
-let items1 = [_modDef2044.ISO_8601];
+let items1 = [_modDef2042.ISO_8601];
 const items2 = [...items];
 HermesBuiltin.arraySpread(new Set(items2), 1);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export function preloadTimestampParser() {
-  _mod10301;
+  _mod10321;
 }
 export function queryTimestampSuggestions(arg0) {
   let obj = cloneResult1;
   if (cloneResult1 === undefined) {
-    obj = _modDef2044();
+    obj = _modDef2042();
   }
   if ("" === arg0) {
     let parsed;
@@ -48,7 +48,7 @@ export function queryTimestampSuggestions(arg0) {
     if (tmp14) {
       tmp14 = first.text === arg0;
     }
-    const obj2 = _modDef2044;
+    const obj2 = _modDef2042;
     if (tmp14) {
       const start = first.start;
       let invalidResult = obj2(start.date());
@@ -76,7 +76,7 @@ export function queryTimestampSuggestions(arg0) {
           if (!start2.isCertain("hour")) {
             const _Math = Math;
             const result = Math.round(cloneResult.valueOf() / 900000) * 900000;
-            obj5 = tmp20(2044)(result);
+            obj5 = tmp20(2042)(result);
           }
         }
         if (tmp14) {
@@ -216,7 +216,7 @@ export function queryTimestampSuggestions(arg0) {
     }
     return items1;
   } else {
-    const tmp6 = _mod10301;
+    const tmp6 = _mod10321;
     locale = LocaleStore.locale;
     if ("en-US" === locale) {
       let en = tmp6.en;

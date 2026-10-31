@@ -1,7 +1,7 @@
-// === Module 16995: OrbsHoldoutExperiment ===
+// === Module 17053: OrbsHoldoutExperiment ===
 
-// Module 16995 (OrbsHoldoutExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 17053 (OrbsHoldoutExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-orbs-holdout", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

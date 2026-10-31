@@ -1,15 +1,15 @@
-// === Module 17996: MainTabs ===
+// === Module 18039: MainTabs ===
 
-// Module 17996 (MainTabs)
+// Module 18039 (MainTabs)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import native from "native" /* 5075 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5189 */;
-import useChatLayoutDefault from "useChatLayout" /* 5196 */;
-import useToken from "useToken" /* 5591 */;
-import useActiveTheme from "useActiveTheme" /* 9802 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10716 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 17997 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import native from "native" /* 5080 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5194 */;
+import useChatLayoutDefault from "useChatLayout" /* 5201 */;
+import useToken from "useToken" /* 5596 */;
+import useActiveTheme from "useActiveTheme" /* 9823 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10736 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 18040 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles((paddingLeft, paddingRight, marginTop, top) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingLeft, paddingRight }, content: { flex: 1 }, frameContainer: null, frameContent: null, framePanels: null, frameBorderClip: null, frameBorder: null };
   const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingTop: null };

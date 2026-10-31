@@ -1,13 +1,13 @@
-// === Module 7515: GuildDiscoveryUtils ===
+// === Module 7521: GuildDiscoveryUtils ===
 
-// Module 7515 (GuildDiscoveryUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import _modDef1486 from "module_1486" /* 1486 */;
+// Module 7521 (GuildDiscoveryUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import _modDef1485 from "module_1485" /* 1485 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4942 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5237 */;
-import GuildStore from "GuildStore" /* 4880 */;
+import LurkingStore from "LurkingStore" /* 4947 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -171,7 +171,7 @@ let closure_13 = async function _getDiscoverableGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -193,7 +193,7 @@ let closure_13 = async function _getDiscoverableGuild() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
             const obj4 = { guild_ids };
-            request.query = _modDef1486.stringify(obj4);
+            request.query = _modDef1485.stringify(obj4);
             c5 = 2;
             c6 = 1;
             const obj5 = { value: HTTP.get(request), done: false };
@@ -251,7 +251,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

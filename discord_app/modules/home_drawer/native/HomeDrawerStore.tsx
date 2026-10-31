@@ -1,11 +1,11 @@
-// === Module 18018: HomeDrawerStore ===
+// === Module 18061: HomeDrawerStore ===
 
-// Module 18018 (HomeDrawerStore)
+// Module 18061 (HomeDrawerStore)
 import Constants from "Constants" /* 1072 */;
-import _mod4924 from "module_4924" /* 4924 */;
-import timing from "timing" /* 5249 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18019 */;
-import identity from "module_1255" /* 1255 */;
+import _mod4929 from "module_4929" /* 4929 */;
+import timing from "timing" /* 5254 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18062 */;
+import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -49,7 +49,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     closure_1().lastInteractionAt.current = Date.now();
   };
   return obj;
-}, _mod4924.shallow);
+}, _mod4929.shallow);
 let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;

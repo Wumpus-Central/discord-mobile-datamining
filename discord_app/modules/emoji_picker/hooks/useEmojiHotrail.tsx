@@ -1,9 +1,9 @@
-// === Module 9927: useEmojiHotrail ===
+// === Module 9948: useEmojiHotrail ===
 
-// Module 9927 (useEmojiHotrail)
+// Module 9948 (useEmojiHotrail)
 import noop from "module_19" /* 19 */;
 
-const EMOJI_ROW_SIZE = fn(6793).EMOJI_ROW_SIZE;
+const EMOJI_ROW_SIZE = fn(6799).EMOJI_ROW_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/hooks/useEmojiHotrail.tsx");
 

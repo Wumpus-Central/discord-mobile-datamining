@@ -1,9 +1,9 @@
-// === Module 8927: showSharePreparingModal ===
+// === Module 8936: showSharePreparingModal ===
 
-// Module 8927 (showSharePreparingModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8925 */;
+// Module 8936 (showSharePreparingModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8934 */;
 import size from "module_2" /* 2 */;
 
 const SHARE_PREPARING_MODAL_KEY = SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY;
@@ -19,27 +19,27 @@ export function showSharePreparingModal(onCancel) {
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(6738).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(6744).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(6738);
+          const obj = _true(6744);
         }
       }
     };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8928, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8937, dependencyMap.paths), {
       onCancel() {
         if (!_true) {
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(6738).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(6744).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(6738);
+          const obj = _true(6744);
         }
       }
     }, SHARE_PREPARING_MODAL_KEY, { animation: "fade", presentation: "transparentModal" }).then(() => {
       if (_true) {
-        _true(6738).popWithKey(SHARE_PREPARING_MODAL_KEY);
-        const obj = _true(6738);
+        _true(6744).popWithKey(SHARE_PREPARING_MODAL_KEY);
+        const obj = _true(6744);
       }
     });
   }, 1000);

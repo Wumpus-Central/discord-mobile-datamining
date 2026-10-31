@@ -1,8 +1,8 @@
-// === Module 12552: ConjureTimelineTree ===
+// === Module 12587: ConjureTimelineTree ===
 
-// Module 12552 (ConjureTimelineTree)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
+// Module 12587 (ConjureTimelineTree)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -216,6 +216,12 @@ function buildTimelineTree(steps, arg1) {
           if (null != node.todo_id) {
             tmp13Result.todoId = node.todo_id;
           }
+          if (null != node.current_action) {
+            tmp13Result.currentAction = node.current_action;
+          }
+          if (null != node.result_text) {
+            tmp13Result.resultText = node.result_text;
+          }
           if (null != node.tier) {
             tmp13Result.tier = node.tier;
           }
@@ -245,22 +251,22 @@ function buildTimelineTree(steps, arg1) {
             }
             const result2 = map2.set(tmp13Result, value2);
             const lines = node.lines;
-            for (const item10117 of lines) {
-              let set = item10117.set;
+            for (const item10121 of lines) {
+              let set = item10121.set;
               if (set == null) {
-                set = value2.get(item10117.key);
+                set = value2.get(item10121.key);
               }
               if (set == null) {
                 set = [];
               }
-              if (null != item10117.add) {
+              if (null != item10121.add) {
                 let items1 = [];
-                let arraySpreadResult2 = HermesBuiltin.arraySpread(item10117.add, HermesBuiltin.arraySpread(tmp42, 0));
+                let arraySpreadResult2 = HermesBuiltin.arraySpread(item10121.add, HermesBuiltin.arraySpread(tmp42, 0));
                 let tmp44 = items1;
               } else {
                 tmp44 = set;
               }
-              let result3 = value2.set(item10117.key, tmp44);
+              let result3 = value2.set(item10121.key, tmp44);
               continue;
             }
           }
@@ -575,13 +581,20 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { healthcheck_failed: _modDef3865.iwOTgo, preview_ready: _modDef3865.okkgSB, working: _modDef3865.t8skVB, error: _modDef3865.avt0ax, error_service_unavailable: _modDef3865.yreXyD, error_rate_limited: _modDef3865.d8lNBq, error_timeout: _modDef3865.t1R7Rt };
+let obj = { healthcheck_failed: _modDef3868.iwOTgo, preview_ready: _modDef3868.okkgSB, working: _modDef3868.t8skVB, error: _modDef3868.avt0ax, error_service_unavailable: _modDef3868.yreXyD, error_rate_limited: _modDef3868.d8lNBq, error_timeout: _modDef3868.t1R7Rt, error_usage_limit: _modDef3868["9zBM8L"], error_internal_error: _modDef3868.ZnbiGS };
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTimelineTree.tsx");
 
 export function describeNode(currentStepResult) {
+  if ("running" === currentStepResult.status) {
+    if (null != currentStepResult.currentAction) {
+      if ("" !== currentStepResult.currentAction) {
+        return currentStepResult.currentAction;
+      }
+    }
+  }
   if (null != currentStepResult.labelText) {
     if ("" !== currentStepResult.labelText) {
       return currentStepResult.labelText;
@@ -593,7 +606,7 @@ export function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef3865.t8skVB;
+    t8skVB = _modDef3868.t8skVB;
   }
   return intl.string(t8skVB);
 }

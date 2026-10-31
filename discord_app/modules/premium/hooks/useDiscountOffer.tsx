@@ -1,15 +1,15 @@
-// === Module 8521: useDiscountOffer ===
+// === Module 8529: useDiscountOffer ===
 
-// Module 8521 (useDiscountOffer)
+// Module 8529 (useDiscountOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
-import UserOfferStore from "UserOfferStore" /* 7623 */;
+import UserStore from "UserStore" /* 1383 */;
+import UserOfferStore from "UserOfferStore" /* 7630 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const CHURN_DISCOUNT_IDS = fn(1386).CHURN_DISCOUNT_IDS;
+const CHURN_DISCOUNT_IDS = fn(1385).CHURN_DISCOUNT_IDS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");
 
@@ -109,7 +109,7 @@ export default function useDiscountOffer(arg0, arg1) {
                           num = time - Date.now();
                         }
                         if (closure_1_0 != null) {
-                          closure_1_0.start(num, /* F135245 */ function() { ... });
+                          closure_1_0.start(num, /* F135658 */ function() { ... });
                         }
                       }
                     });

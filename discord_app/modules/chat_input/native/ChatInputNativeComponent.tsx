@@ -1,16 +1,16 @@
-// === Module 12773: chat_input/ChatInputNativeComponent ===
+// === Module 12808: chat_input/ChatInputNativeComponent ===
 
-// Module 12773 (chat_input/ChatInputNativeComponent)
+// Module 12808 (chat_input/ChatInputNativeComponent)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import ColorUtils from "ColorUtils" /* 5006 */;
-import shared from "shared" /* 5016 */;
-import useTheme from "useTheme" /* 5248 */;
-import ChatInputNativeComponent2 from "ChatInputNativeComponent" /* 12761 */;
-import MobileMarkdownFormatMenuExperiment from "MobileMarkdownFormatMenuExperiment" /* 12778 */;
+import util from "util" /* 1113 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import ColorUtils from "ColorUtils" /* 5011 */;
+import shared from "shared" /* 5021 */;
+import useTheme from "useTheme" /* 5253 */;
+import ChatInputNativeComponent2 from "ChatInputNativeComponent" /* 12796 */;
+import MobileMarkdownFormatMenuExperiment from "MobileMarkdownFormatMenuExperiment" /* 12813 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5033 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
 
 require = fn;
 class ChatInputNativeComponent {
@@ -94,7 +94,7 @@ class ChatInputNativeComponent {
   }
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { style: { flex: 1 }, textColor: { color: nativeDefault.colors.TEXT_DEFAULT }, placeholderColor: null };
 let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.placeholderColor = { color: nativeDefault.colors.TEXT_MUTED };

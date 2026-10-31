@@ -1,12 +1,12 @@
-// === Module 18053: ScreenAlignedThemedGradient ===
+// === Module 18096: ScreenAlignedThemedGradient ===
 
-// Module 18053 (ScreenAlignedThemedGradient)
+// Module 18096 (ScreenAlignedThemedGradient)
 import jsxProd from "jsxProd" /* 21 */;
-import useActiveTheme from "useActiveTheme" /* 9802 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10716 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12233 */;
+import useActiveTheme from "useActiveTheme" /* 9823 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10736 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);

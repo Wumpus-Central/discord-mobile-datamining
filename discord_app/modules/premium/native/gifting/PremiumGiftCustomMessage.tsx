@@ -1,10 +1,10 @@
-// === Module 10705: PremiumGiftCustomMessage ===
+// === Module 10725: PremiumGiftCustomMessage ===
 
-// Module 10705 (PremiumGiftCustomMessage)
+// Module 10725 (PremiumGiftCustomMessage)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import TextArea from "TextArea" /* 7247 */;
-import NativeGiftContext from "NativeGiftContext" /* 10542 */;
+import util from "util" /* 1113 */;
+import TextArea from "TextArea" /* 7253 */;
+import NativeGiftContext from "NativeGiftContext" /* 10562 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,9 +40,9 @@ class GiftCustomMessage {
   }
 }
 const View = fn(17).View;
-const React4 = fn(1386).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
+const React4 = fn(1385).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 const timestampProducer = createStyles.createStyles(obj);
 const obj3 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };

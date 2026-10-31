@@ -1,21 +1,21 @@
-// === Module 7482: RelationshipActionCreators ===
+// === Module 7488: RelationshipActionCreators ===
 
-// Module 7482 (RelationshipActionCreators)
+// Module 7488 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import shared from "shared" /* 5016 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6898 */;
-import ContextMenuActionCreators from "ContextMenuActionCreators" /* 6922 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7485 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7486 */;
-import FriendsUtils from "FriendsUtils" /* 7487 */;
-import SafetyToastsUtils from "SafetyToastsUtils" /* 7489 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7490 */;
+import util from "util" /* 1113 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import shared from "shared" /* 5021 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6904 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 6928 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 7491 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 7492 */;
+import FriendsUtils from "FriendsUtils" /* 7493 */;
+import SafetyToastsUtils from "SafetyToastsUtils" /* 7495 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7496 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
@@ -89,8 +89,8 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1072);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(7483).ClearFriendRequestFilters;
-const SafetyToastType = fn(7484).SafetyToastType;
+const ClearFriendRequestFilters = fn(7489).ClearFriendRequestFilters;
+const SafetyToastType = fn(7490).SafetyToastType;
 const RelationshipErrorUXConfig = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 let obj2 = {
   sendRequest(discordTag) {
@@ -101,15 +101,15 @@ let obj2 = {
       errorUxConfig = body.SHOW_ALWAYS;
     }
     [tmp3, tmp4] = str.split("#");
-    const HTTP = str(1283).HTTP;
+    const HTTP = str(1282).HTTP;
     const request = { url: closure_6.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     body = { username: tmp3, discriminator: parseInt(tmp4), note };
     const merged = Object.assign(captchaPayload);
     request.body = body;
     request.context = context;
     const tmp2 = _slicedToArray(str.split("#"), 2);
-    request.rejectWithError = str(1283).rejectWithMigratedError();
-    const obj3 = str(1283);
+    request.rejectWithError = str(1282).rejectWithMigratedError();
+    const obj3 = str(1282);
     return HTTP.post(request).catch((error) => {
       handleRelationshipAddError(error, errorUxConfig, str);
     });
@@ -188,9 +188,9 @@ let obj2 = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = closure_0(5016).AccessibilityAnnouncer;
-      const intl = closure_0(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t.n6Jo3E));
+      const AccessibilityAnnouncer = closure_0(5021).AccessibilityAnnouncer;
+      const intl = closure_0(1113).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_0(1113).t.n6Jo3E));
     });
   },
   updateRelationship(userId, c0) {
@@ -252,10 +252,10 @@ let obj2 = {
       const obj3 = DispatcherDefault;
       obj3.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
     }).catch(() => {
-      channelId(7490).showFailedToast();
-      const AccessibilityAnnouncer = userId(5016).AccessibilityAnnouncer;
-      const intl = userId(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(userId(1114).t.n6Jo3E));
+      channelId(7496).showFailedToast();
+      const AccessibilityAnnouncer = userId(5021).AccessibilityAnnouncer;
+      const intl = userId(1113).intl;
+      AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
     });
   },
   unignoreUser(id, UserProfileRemediatedNotice, channelId) {
@@ -270,10 +270,10 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, closure_0, closure_1));
     }).catch(() => {
-      channelId(7490).showFailedToast();
-      const AccessibilityAnnouncer = id(5016).AccessibilityAnnouncer;
-      const intl = id(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(id(1114).t.n6Jo3E));
+      channelId(7496).showFailedToast();
+      const AccessibilityAnnouncer = id(5021).AccessibilityAnnouncer;
+      const intl = id(1113).intl;
+      AccessibilityAnnouncer.announce(intl.string(id(1113).t.n6Jo3E));
     });
   }
 };

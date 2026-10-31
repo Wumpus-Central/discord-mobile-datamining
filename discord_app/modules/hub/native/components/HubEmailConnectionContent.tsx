@@ -1,30 +1,30 @@
-// === Module 14288: HubEmailConnectionContent ===
+// === Module 14326: HubEmailConnectionContent ===
 
-// Module 14288 (HubEmailConnectionContent)
+// Module 14326 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import useNavigation from "useNavigation" /* 1498 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14284 */;
-import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 14290 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import useNavigation from "useNavigation" /* 1497 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14322 */;
+import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 14328 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(14276);
+const HubConstants = fn(14314);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { paddingHorizontal: 16 }, header: { marginTop: 16, marginBottom: 16, alignSelf: "center" }, scrollViewContainer: { flexGrow: 2 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 24 }, input: { marginBottom: 32 }, textInput: { borderRadius: nativeDefault.radii.lg }, growSpacing: null, buttonContainer: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg };
 obj2.growSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -50,7 +50,7 @@ export default function HubEmailConnectionContent(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -212,10 +212,10 @@ export default function HubEmailConnectionContent(arg0) {
   const obj4 = { ref, contentContainerStyle: null, children: null };
   const items = [tmp.scrollViewContainer, ];
   const tmp7 = _slicedToArray(noop.useState(null), 2);
-  items[1] = { paddingBottom: invite(5602)().insets.bottom + invite(575).space.PX_16 };
+  items[1] = { paddingBottom: invite(5607)().insets.bottom + invite(575).space.PX_16 };
   obj4.contentContainerStyle = items;
   let obj6 = { style: tmp.container, children: null };
-  let obj5 = { paddingBottom: invite(5602)().insets.bottom + invite(575).space.PX_16 };
+  let obj5 = { paddingBottom: invite(5607)().insets.bottom + invite(575).space.PX_16 };
   const tmp16 = closure_7;
   const items1 = [closure_12(ref, { style: tmp.header, children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }) }), closure_12(Text_Text.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
   let obj9 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
@@ -266,7 +266,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = closure_12(invite(7075), obj11);
+  items1[3] = closure_12(invite(7081), obj11);
   obj6.children = items1;
   const items2 = [closure_13(ref, obj6), closure_12(ref, { style: tmp.growSpacing }), ];
   const obj15 = { style: tmp.buttonContainer, children: null };

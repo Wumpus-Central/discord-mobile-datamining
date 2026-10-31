@@ -1,25 +1,25 @@
-// === Module 11376: UserProfilePrimaryInfo ===
+// === Module 11412: UserProfilePrimaryInfo ===
 
-// Module 11376 (UserProfilePrimaryInfo)
+// Module 11412 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
-import QuestTypes from "QuestTypes" /* 6778 */;
-import Pressables from "Pressables" /* 6974 */;
-import openUserSettings from "openUserSettings" /* 7557 */;
-import GuildTagUtils from "GuildTagUtils" /* 8728 */;
-import BadgeId from "BadgeId" /* 8747 */;
-import useBadges from "useBadges" /* 8807 */;
-import BotTagDefault from "BotTag" /* 9183 */;
-import GuildTagDefault from "GuildTag" /* 9276 */;
-import captureAdUserAction from "captureAdUserAction" /* 9664 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9667 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10752 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11419 */;
-import BadgeUtils from "BadgeUtils" /* 11423 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
+import QuestTypes from "QuestTypes" /* 6784 */;
+import Pressables from "Pressables" /* 6980 */;
+import openUserSettings from "openUserSettings" /* 7563 */;
+import GuildTagUtils from "GuildTagUtils" /* 8736 */;
+import BadgeId from "BadgeId" /* 8755 */;
+import useBadges from "useBadges" /* 8815 */;
+import BotTagDefault from "BotTag" /* 9202 */;
+import GuildTagDefault from "GuildTag" /* 9295 */;
+import captureAdUserAction from "captureAdUserAction" /* 9684 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10772 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11455 */;
+import BadgeUtils from "BadgeUtils" /* 11459 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 class DisplayName {
@@ -671,15 +671,15 @@ function GuildTag(primaryGuildOverride) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8746).getBadgeName;
-const Constants = fn(7371);
+const getBadgeName = fn(8754).getBadgeName;
+const Constants = fn(7377);
 ({ DIVIDER_DOT: closure_8, PROFILE_SIDE_PADDING: closure_9, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const GuildTagBadgeSize = fn(8385).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8757).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8393).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8765).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 }, transparentBackground: { backgroundColor: "transparent" }, badge: { resizeMode: "contain" }, badges: { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 }, badgeRow: null, limitedBadgeRow: null, addBadgesChip: null };
 let obj3 = { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 };
 obj2.badgeRow = { borderRadius: nativeDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
@@ -689,7 +689,7 @@ obj2.addBadgesChip = { flexDirection: "row", alignItems: "center", alignSelf: "c
 const __initData2 = createStyles.createStyles(obj2);
 let closure_17 = { headingVariant: "heading-xl/bold", textVariant: "text-md/normal", badgeSize: 20, badgeRowHorizontalPadding: 7, guildTagBadgeSize: GuildTagBadgeSize.SIZE_16, guildTagTextVariant: "text-sm/medium", guildTagHorizontalPadding: 8 };
 const collapsedCategories = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "heading-lg/bold", textVariant: "text-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "text-xs/medium", guildTagHorizontalPadding: 6 } };
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_19 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {

@@ -1,26 +1,29 @@
-// === Module 17158: GuildRoleSubscriptionMemberPreview ===
+// === Module 17215: GuildRoleSubscriptionMemberPreview ===
 
-// Module 17158 (GuildRoleSubscriptionMemberPreview)
+// Module 17215 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6036 */;
-import RoleIconUtils from "RoleIconUtils" /* 7350 */;
-import RoleIconDefault from "RoleIcon" /* 7368 */;
+import utils_ColorUtilsAll from "utils/ColorUtils" /* 1090 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
+import RoleIconUtils from "RoleIconUtils" /* 7356 */;
+import RoleIconDefault from "RoleIcon" /* 7374 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
-let obj2 = { container: { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: { marginStart: 16 }, contextRow: { flexDirection: "row", alignItems: "center" } };
+const createStyles = fn(5014);
+let obj2 = { container: { flexDirection: "row", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: null, contextRow: null };
+let obj3 = { flexDirection: "row", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj2.content = { marginStart: nativeDefault.space.PX_16 };
+obj2.contextRow = { flexDirection: "row", alignItems: "center" };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx");

@@ -1,15 +1,15 @@
-// === Module 18143: FavoritesGuildCleanupModal ===
+// === Module 18186: FavoritesGuildCleanupModal ===
 
-// Module 18143 (FavoritesGuildCleanupModal)
+// Module 18186 (FavoritesGuildCleanupModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef3447 from "module_3447" /* 3447 */;
-import useChannelNameDefault from "useChannelName" /* 5647 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6968 */;
-import TableRadioRow from "TableRadioRow" /* 7055 */;
-import Modal from "Modal" /* 11447 */;
-import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 18146 */;
+import util from "util" /* 1113 */;
+import _modDef3450 from "module_3450" /* 3450 */;
+import useChannelNameDefault from "useChannelName" /* 5652 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
+import TableRadioRow from "TableRadioRow" /* 7061 */;
+import Modal from "Modal" /* 11481 */;
+import useFavoritesCleanupActivityDefault from "useFavoritesCleanupActivity" /* 18189 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -215,7 +215,7 @@ get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroller: { flex: 1 }, content: null, actions: null };
   const obj2 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -232,13 +232,13 @@ export default function FavoritesGuildCleanupModal() {
     let obj = { cleanup: null };
     const obj2 = { title: null, headerLeft: null, render: null };
     let intl = util.intl;
-    obj2.title = intl.string(_modDef3447["b081B+"]);
+    obj2.title = intl.string(_modDef3450["b081B+"]);
     obj2.headerLeft = function headerLeft() {
       const obj = { text: null, size: "sm", variant: "tertiary", onPress: null };
-      const intl = closure_1_0(1114).intl;
-      obj.text = intl.string(closure_1_0(1114).t["ETE/oC"]);
+      const intl = closure_1_0(1113).intl;
+      obj.text = intl.string(closure_1_0(1113).t["ETE/oC"]);
       obj.onPress = onPress;
-      return closure_1_6(closure_1_0(5629).Button, obj);
+      return closure_1_6(closure_1_0(5634).Button, obj);
     };
     obj2.render = function render() {
       return closure_1_6(closure_1_11, {});

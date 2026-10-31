@@ -1,7 +1,7 @@
-// === Module 13757: GiftingPromoMobileButtonAnimationDismissHoldoutExperiment ===
+// === Module 13792: GiftingPromoMobileButtonAnimationDismissHoldoutExperiment ===
 
-// Module 13757 (GiftingPromoMobileButtonAnimationDismissHoldoutExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 13792 (GiftingPromoMobileButtonAnimationDismissHoldoutExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-gifting-promo-mobile-button-animation-dismiss", kind: "user", defaultConfig: { inHoldout: false }, variations: null };

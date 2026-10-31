@@ -1,14 +1,14 @@
-// === Module 16433: HexagonCampaignDaysLeftBadge ===
+// === Module 16475: HexagonCampaignDaysLeftBadge ===
 
-// Module 16433 (HexagonCampaignDaysLeftBadge)
+// Module 16475 (HexagonCampaignDaysLeftBadge)
 import nativeDefault from "native" /* 575 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import shared from "shared" /* 5016 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5036 */;
-import native from "native" /* 5075 */;
-import Text_Text from "Text/Text" /* 5619 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import shared from "shared" /* 5021 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5041 */;
+import native from "native" /* 5080 */;
+import Text_Text from "Text/Text" /* 5624 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -58,8 +58,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = 60 * DurationsDefault.Millis.SECOND;
-let closure_9 = Object.values(fn(5034).HexagonCampaignPerk);
-const createStyles = fn(5009);
+let closure_9 = Object.values(fn(5039).HexagonCampaignPerk);
+const createStyles = fn(5014);
 let obj2 = { badge: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 3, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT }, badgeOverlay: null, badgeExpressiveDark: null, badgeExpressiveLight: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 3, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
 obj2.badgeOverlay = { backgroundColor: nativeDefault.unsafe_rawColors.OPACITY_BLACK_40 };
@@ -89,13 +89,13 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
     } else {
       const _Math = Math;
       const items = [];
-      HermesBuiltin.arraySpread(closure_9.map((item) => perk(5036).getHexagonCampaignPerkCutoffMs(item, stateFromStores)), 0);
+      HermesBuiltin.arraySpread(closure_9.map((item) => perk(5041).getHexagonCampaignPerkCutoffMs(item, stateFromStores)), 0);
       const _Math2 = Math;
       hexagonCampaignPerkCutoffMs = HermesBuiltin.apply(items, Math);
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp6 = stateFromStores(7617)(memo, closure_8);
+  const tmp6 = stateFromStores(7624)(memo, closure_8);
   let num = 0;
   if (tmp6.hours > 0) {
     num = 1;
@@ -103,13 +103,13 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
   const obj2 = {
     variant: perk.variant,
     renderIcon(color) {
-      return closure_1_6(perk(5735).ClockIcon, { size: "xxs", color });
+      return closure_1_6(perk(5740).ClockIcon, { size: "xxs", color });
     },
     text: null
   };
   const bound = Math.max(tmp6.days + num, 1);
-  const intl = perk(1114).intl;
-  obj2.text = intl.formatToPlainString(stateFromStores(4282)["noGK/D"], { days: bound });
+  const intl = perk(1113).intl;
+  obj2.text = intl.formatToPlainString(stateFromStores(4285)["noGK/D"], { days: bound });
   return closure_6(HexagonCampaignBadge, obj2);
 };
 export function useHexagonCampaignDaysLeft(arg0) {
@@ -130,13 +130,13 @@ export function useHexagonCampaignDaysLeft(arg0) {
     } else {
       const _Math = Math;
       const items = [];
-      HermesBuiltin.arraySpread(closure_9.map((item) => perk(5036).getHexagonCampaignPerkCutoffMs(item, stateFromStores)), 0);
+      HermesBuiltin.arraySpread(closure_9.map((item) => perk(5041).getHexagonCampaignPerkCutoffMs(item, stateFromStores)), 0);
       const _Math2 = Math;
       hexagonCampaignPerkCutoffMs = HermesBuiltin.apply(items, Math);
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp3 = stateFromStores(7617)(memo, closure_8);
+  const tmp3 = stateFromStores(7624)(memo, closure_8);
   let num = 0;
   if (tmp3.hours > 0) {
     num = 1;

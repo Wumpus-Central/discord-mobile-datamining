@@ -1,11 +1,11 @@
-// === Module 1262: AnalyticsTrackingStore ===
+// === Module 1261: AnalyticsTrackingStore ===
 
-// Module 1262 (AnalyticsTrackingStore)
+// Module 1261 (AnalyticsTrackingStore)
 import logger_Logger from "logger/Logger" /* 4 */;
-import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1263 */;
-import FingerprintUtils from "FingerprintUtils" /* 1266 */;
-import v1 from "v1" /* 1267 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1262 */;
+import FingerprintUtils from "FingerprintUtils" /* 1265 */;
+import v1 from "v1" /* 1266 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import Constants from "Constants" /* 1083 */;
 import size from "module_2" /* 2 */;
 
@@ -61,7 +61,7 @@ let closure_31 = [];
 let c32 = null;
 let c33 = false;
 function defaultGetSessionId() {
-  return Promise.resolve({ sessionId: "getCurrentUser" });
+  return Promise.resolve({ sessionId: "Array" });
 }
 let result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 
@@ -343,7 +343,7 @@ export (getLaunchSignature) => {
                   let _Math3 = Math;
                   let obj = { type: "timeout", id: null };
                   let _setTimeout = setTimeout;
-                  obj.id = setTimeout(/* F138335 */ function() { ... }, Math.max(closure_3_8 + (Math.floor(Math.random() * result * 2) - result), closure_3_9));
+                  obj.id = setTimeout(/* F138751 */ function() { ... }, Math.max(closure_3_8 + (Math.floor(Math.random() * result * 2) - result), closure_3_9));
                   closure_3_22 = obj;
                 } else {
                   throw new TypeError("Trying to call a non-function");

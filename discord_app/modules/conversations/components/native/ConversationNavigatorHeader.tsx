@@ -1,15 +1,15 @@
-// === Module 9847: ConversationNavigatorHeader ===
+// === Module 9868: ConversationNavigatorHeader ===
 
-// Module 9847 (ConversationNavigatorHeader)
+// Module 9868 (ConversationNavigatorHeader)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1377 */;
-import useToken from "useToken" /* 5591 */;
-import useChannelNameDefault from "useChannelName" /* 5647 */;
-import HeaderShared from "HeaderShared" /* 9791 */;
-import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9848 */;
+import util from "util" /* 1113 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
+import useToken from "useToken" /* 5596 */;
+import useChannelNameDefault from "useChannelName" /* 5652 */;
+import HeaderShared from "HeaderShared" /* 9812 */;
+import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9869 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 const require = globalThis.__r;
 
@@ -27,7 +27,7 @@ function ConversationNavigatorHeader(channelId) {
   const obj = channelId(504);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj2.children = jsx(channelId(9791).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj2.children = jsx(channelId(9812).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   return <View style={tmp.container}>{null}</View>;
 }
 function HeaderWithBorder(shouldHandleSafeArea) {
@@ -46,7 +46,7 @@ function HeaderWithBorder(shouldHandleSafeArea) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
   let num = 0;

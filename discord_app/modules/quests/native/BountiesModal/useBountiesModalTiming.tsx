@@ -1,10 +1,10 @@
-// === Module 16868: useBountiesModalTiming ===
+// === Module 16924: useBountiesModalTiming ===
 
-// Module 16868 (useBountiesModalTiming)
+// Module 16924 (useBountiesModalTiming)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-let closure_2 = fn(6775).BOUNTY_CTA_TIMER_MILLISECONDS;
+let closure_2 = fn(6781).BOUNTY_CTA_TIMER_MILLISECONDS;
 const BountyVideoEndMode = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP", APP_STORE_LOOP: "APP_STORE_LOOP" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");

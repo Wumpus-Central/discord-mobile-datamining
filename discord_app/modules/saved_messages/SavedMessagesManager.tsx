@@ -1,9 +1,9 @@
-// === Module 19546: SavedMessagesManager ===
+// === Module 19603: SavedMessagesManager ===
 
-// Module 19546 (SavedMessagesManager)
-import SavedMessagesActions from "SavedMessagesActions" /* 11137 */;
+// Module 19603 (SavedMessagesManager)
+import SavedMessagesActions from "SavedMessagesActions" /* 11156 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
 let closure_3 = async function _refreshSavedMessages() {
@@ -17,7 +17,7 @@ let closure_3 = async function _refreshSavedMessages() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_3 = async function _refreshSavedMessages() {
       } else {
         const result = closure_128_0(closure_128_1[2]).showOverdueRemindersToast();
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp11) {
       c2 = tmp;

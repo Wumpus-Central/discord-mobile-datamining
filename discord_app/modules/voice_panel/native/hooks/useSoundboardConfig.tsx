@@ -1,12 +1,12 @@
-// === Module 19262: useSoundboardConfig ===
+// === Module 19318: useSoundboardConfig ===
 
-// Module 19262 (useSoundboardConfig)
-import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7550 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19095 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19115 */;
+// Module 19318 (useSoundboardConfig)
+import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7556 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19144 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19164 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import MediaEngineStore from "MediaEngineStore" /* 2007 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 
 const require = globalThis.__r;
 
@@ -47,8 +47,8 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   obj2.disabled = tmp7;
   let stringResult;
   if (stateFromStores) {
-    const intl = tmp3(1114).intl;
-    stringResult = intl.string(tmp3(1114).t.X1lQli);
+    const intl = tmp3(1113).intl;
+    stringResult = intl.string(tmp3(1113).t.X1lQli);
   }
   obj2.disabledAccessibilityHint = stringResult;
   return obj2;

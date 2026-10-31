@@ -1,6 +1,6 @@
-// === Module 7727: CollectiblesDebugStore ===
+// === Module 7734: CollectiblesDebugStore ===
 
-// Module 7727 (CollectiblesDebugStore)
+// Module 7734 (CollectiblesDebugStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// === Module 12741: useConjurePublishScheduleProposal ===
+// === Module 12776: useConjurePublishScheduleProposal ===
 
-// Module 12741 (useConjurePublishScheduleProposal)
-import _modDef3865 from "module_3865" /* 3865 */;
+// Module 12776 (useConjurePublishScheduleProposal)
+import _modDef3868 from "module_3868" /* 3868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const canPublishProject = fn(6838).canPublishProject;
+const canPublishProject = fn(6844).canPublishProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishScheduleProposal.tsx");
 
@@ -42,7 +42,7 @@ export default function useConjurePublishScheduleProposal(arg0, trigger, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -102,10 +102,10 @@ export default function useConjurePublishScheduleProposal(arg0, trigger, arg2) {
   }), items2);
   let formatToPlainStringResult = null;
   if (trigger.next_run_at > _slicedToArray(noop.useState(() => Date.now()), 1)[0]) {
-    let intl = tmp(1114).intl;
-    const obj2 = { time: tmp(12467).formatPublishScheduleTime(trigger.next_run_at) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3865.orZDqY, obj2);
-    const tmpResult = tmp(12467);
+    let intl = tmp(1113).intl;
+    const obj2 = { time: tmp(12502).formatPublishScheduleTime(trigger.next_run_at) };
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3868.orZDqY, obj2);
+    const tmpResult = tmp(12502);
   }
   let obj3 = { summary: null, firstPublish: null, status: null, error: null, onTurnOn: null };
   const tmp4 = _slicedToArray(noop.useState("idle"), 2);

@@ -1,7 +1,7 @@
-// === Module 17260: DisplayNameStylesEffectOrder ===
+// === Module 17317: DisplayNameStylesEffectOrder ===
 
-// Module 17260 (DisplayNameStylesEffectOrder)
-import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1402 */;
+// Module 17317 (DisplayNameStylesEffectOrder)
+import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1401 */;
 import size from "module_2" /* 2 */;
 
 const items = [..._module.FLYWHEEL_EFFECTS];

@@ -1,15 +1,15 @@
-// === Module 17132: GuildRoleSubscriptionsHooks ===
+// === Module 17190: GuildRoleSubscriptionsHooks ===
 
-// Module 17132 (GuildRoleSubscriptionsHooks)
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7423 */;
-import useRequestDefault from "useRequest" /* 12363 */;
-import subscriptionUtils from "subscriptionUtils" /* 17134 */;
+// Module 17190 (GuildRoleSubscriptionsHooks)
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7429 */;
+import useRequestDefault from "useRequest" /* 12401 */;
+import subscriptionUtils from "subscriptionUtils" /* 17192 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4934 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4939 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ function useFetchListingsForGuild(guildId) {
   }
   return { listingsLoaded };
 }
-const FetchState = fn(4934).FetchState;
+const FetchState = fn(4939).FetchState;
 let closure_10 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHooks.tsx");
@@ -86,7 +86,7 @@ export function useCreateSubscriptionGroupListing() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -118,7 +118,7 @@ export function useCreateSubscriptionGroupListing() {
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -182,7 +182,7 @@ export function useUpdateSubscriptionGroupListing() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -215,7 +215,7 @@ export function useUpdateSubscriptionGroupListing() {
           c6 = 0;
           closure_0(false);
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -407,7 +407,7 @@ export function useDeleteSubscriptionListing() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -439,7 +439,7 @@ export function useDeleteSubscriptionListing() {
           c6 = 0;
           closure_131_0(false);
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -503,7 +503,7 @@ export function usePublishSubscriptionListing() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -554,7 +554,7 @@ export function usePublishSubscriptionListing() {
           c4 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -630,7 +630,7 @@ export function useUpdateSubscriptionsSettings() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -716,7 +716,7 @@ export function useDeleteSubscriptionGroupListing() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -748,7 +748,7 @@ export function useDeleteSubscriptionGroupListing() {
           c5 = 0;
           closure_130_0(false);
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
@@ -812,7 +812,7 @@ export function useFetchSubscriptionsSettings() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -900,7 +900,7 @@ export function useUpdateSubscriptionsTrial() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

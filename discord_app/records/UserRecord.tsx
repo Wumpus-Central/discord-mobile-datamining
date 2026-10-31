@@ -1,19 +1,19 @@
-// === Module 1398: UserRecord ===
+// === Module 1397: UserRecord ===
 
-// Module 1398 (UserRecord)
+// Module 1397 (UserRecord)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import FlagUtils from "FlagUtils" /* 1397 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1980 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1984 */;
-import Record from "Record" /* 1399 */;
+import FlagUtils from "FlagUtils" /* 1396 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1979 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1983 */;
+import Record from "Record" /* 1398 */;
 
 const AvatarUtilsDefault = AvatarUtils;
 
 require = fn;
 const Constants = fn(1072);
 ({ LOCAL_BOT_ID: closure_4, NON_USER_BOT_DISCRIMINATOR: hasOwnProperty, PREMIUM_TYPE_NONE: metroRequire, UserFlags: closure_7 } = Constants);
-const PremiumConstants = fn(1386);
+const PremiumConstants = fn(1385);
 ({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: closure_9, PurchasedFlags: c10 } = PremiumConstants);
 class UserRecord extends tmp2 {
   constructor(arg0) {

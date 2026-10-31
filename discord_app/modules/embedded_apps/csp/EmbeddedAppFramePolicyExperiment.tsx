@@ -1,7 +1,7 @@
-// === Module 10910: EmbeddedAppFramePolicyExperiment ===
+// === Module 10888: EmbeddedAppFramePolicyExperiment ===
 
-// Module 10910 (EmbeddedAppFramePolicyExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 10888 (EmbeddedAppFramePolicyExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-embedded-app-frame-policy", kind: "user", defaultConfig: { enabled: false }, variations: null };

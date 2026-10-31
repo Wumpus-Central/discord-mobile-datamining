@@ -1,18 +1,18 @@
-// === Module 16879: AdVideoPlayer ===
+// === Module 16935: AdVideoPlayer ===
 
-// Module 16879 (AdVideoPlayer)
+// Module 16935 (AdVideoPlayer)
 import nativeDefault from "native" /* 575 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import timing from "timing" /* 5249 */;
-import timingPresets from "timingPresets" /* 5252 */;
-import spring from "spring" /* 5632 */;
-import springPresets from "springPresets" /* 5633 */;
-import media_playback_VideoDefault from "media_playback/Video" /* 8865 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16864 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import timing from "timing" /* 5254 */;
+import timingPresets from "timingPresets" /* 5257 */;
+import spring from "spring" /* 5637 */;
+import springPresets from "springPresets" /* 5638 */;
+import media_playback_VideoDefault from "media_playback/Video" /* 8874 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16920 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1994 */;
+import AppStateStore from "AppStateStore" /* 1993 */;
 import n from "module_671" /* 671 */;
 
 const require = globalThis.__r;
@@ -50,7 +50,7 @@ function canSeekForward(arg0, arg1, arg2, arg3) {
 canSeekForward.__closure = { hasVideoEnded };
 canSeekForward.__workletHash = 14098132092693;
 canSeekForward.__initData = { code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}" };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: null, loadingContainer: null, bufferingSpinner: null, bufferingSpinnerCentered: null, video: null, videoContainer: null, controls: null, controlsTopBottom: null, controlsMiddle: null, controlsTop: null, controlsBottom: null, progressContainer: null, progress: null, icon: null, controlButton: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = {};

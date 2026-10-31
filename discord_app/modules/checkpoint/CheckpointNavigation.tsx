@@ -1,6 +1,6 @@
-// === Module 6430: CheckpointNavigation ===
+// === Module 6435: CheckpointNavigation ===
 
-// Module 6430 (CheckpointNavigation)
+// Module 6435 (CheckpointNavigation)
 import size from "module_2" /* 2 */;
 
 const obj = { HOME: "home", INTRODUCTION: "introduction", VOICE_INTRO: "voice_intro", VOICE_STATS: "voice_stats", VOICE_GENERAL: "voice_general", VOICE_FACE: "voice_face", MESSAGES_INTRO: "messages_intro", MESSAGES_STATS: "messages_stats", MESSAGES_GENERAL: "messages_general", MESSAGES_OUTFIT: "messages_outfit", SERVERS_INTRO: "servers_intro", SERVERS_STATS: "servers_stats", SERVERS_GENERAL: "servers_general", TOP_SERVER_STATS: "top_server_stats", SERVERS_HEADWEAR: "servers_headwear", EMOJI_INTRO: "emoji_intro", EMOJI_STATS: "emoji_stats", EMOJI_GENERAL: "emoji_general", EMOJI_SHOES: "emoji_shoes", GAMES_INTRO: "games_intro", GAMES_STATS: "games_stats", GAMES_GENERAL: "games_general", GAMES_WEARABLE: "games_wearable", GAME_TIME_STATS: "game_time_stats", GAME_TIME_GENERAL: "game_time_general", GAME_TIME_AURA: "game_time_aura", SQUAD_TRANSITION: "squad_transition", SQUAD: "squad", SIDEKICK: "sidekick", SIDEKICK_LEAVE: "sidekick_leave", FINALIZE_CHARACTER: "finalize_character", SUMMARY: "summary", SHARE: "share" };

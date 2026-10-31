@@ -1,20 +1,20 @@
-// === Module 12650: CatIllocon ===
+// === Module 12685: CatIllocon ===
 
-// Module 12650 (CatIllocon)
-import FastImageDefault from "FastImage" /* 5712 */;
-import assetHelpers from "assetHelpers" /* 7063 */;
-import _modDef12651 from "module_12651" /* 12651 */;
-import _modDef12652 from "module_12652" /* 12652 */;
-import _modDef12653 from "module_12653" /* 12653 */;
+// Module 12685 (CatIllocon)
+import FastImageDefault from "FastImage" /* 5717 */;
+import assetHelpers from "assetHelpers" /* 7069 */;
+import _modDef12686 from "module_12686" /* 12686 */;
+import _modDef12687 from "module_12687" /* 12687 */;
+import _modDef12688 from "module_12688" /* 12688 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12651 }, 3: null };
-const obj2 = { uri: _modDef12651 };
-obj[2] = { uri: _modDef12652 };
-const obj3 = { uri: _modDef12652 };
-obj[3] = { uri: _modDef12653 };
+let obj = { 1: null, 2: { uri: _modDef12686 }, 3: null };
+const obj2 = { uri: _modDef12686 };
+obj[2] = { uri: _modDef12687 };
+const obj3 = { uri: _modDef12687 };
+obj[3] = { uri: _modDef12688 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CatIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function CatIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7063).getAssetSource(obj);
+  obj.source = num(7069).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

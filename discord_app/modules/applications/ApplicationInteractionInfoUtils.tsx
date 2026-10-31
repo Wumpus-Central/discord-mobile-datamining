@@ -1,8 +1,8 @@
-// === Module 10131: ApplicationInteractionInfoUtils ===
+// === Module 10151: ApplicationInteractionInfoUtils ===
 
-// Module 10131 (ApplicationInteractionInfoUtils)
-import Server from "Server" /* 1993 */;
-import InteractionTypes from "InteractionTypes" /* 6065 */;
+// Module 10151 (ApplicationInteractionInfoUtils)
+import Server from "Server" /* 1992 */;
+import InteractionTypes from "InteractionTypes" /* 6070 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");

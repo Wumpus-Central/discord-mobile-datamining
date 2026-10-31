@@ -1,18 +1,18 @@
-// === Module 14838: UserProfileActivityVoiceChannel ===
+// === Module 14876: UserProfileActivityVoiceChannel ===
 
-// Module 14838 (UserProfileActivityVoiceChannel)
+// Module 14876 (UserProfileActivityVoiceChannel)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1083 */;
-import native from "native" /* 1188 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import GuildRecord from "GuildRecord" /* 4876 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5707 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7931 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
+import native from "native" /* 1187 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import GuildRecord from "GuildRecord" /* 4881 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5712 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
+import createStyles from "createStyles" /* 5014 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -116,7 +116,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.accessibilityLabel = intl3.formatToPlainString(guild(onAction[15]).t.e95u3C, { count: users.length });
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14840, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14878, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
       users,
       channel,
       onPressUser(userId) {

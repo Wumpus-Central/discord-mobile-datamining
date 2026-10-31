@@ -1,12 +1,12 @@
-// === Module 11206: VoicePanelCardLayoutManager ===
+// === Module 11225: VoicePanelCardLayoutManager ===
 
-// Module 11206 (VoicePanelCardLayoutManager)
+// Module 11225 (VoicePanelCardLayoutManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11208 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11227 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 
 const require = globalThis.__r;
 
@@ -21,12 +21,12 @@ function getTargetCardSize(windowWidth) {
   return Math.max(React6, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11204);
+const VoicePanelConstants = fn(11223);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({ BASE_TARGET_CARD_SIZE: closure_8, VoicePanelCTACardDimensionKeys: closure_9, VoicePanelCTACardDimensions: c10, VOICE_PANEL_CHUNK_DIVISOR: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11207);
+const VoicePanelCardConstants = fn(11226);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(5676).ParticipantTypes;
+const ParticipantTypes = fn(5681).ParticipantTypes;
 let closure_15 = { id: "invalid", type: VoicePanelCardItemType.PARTICIPANT, x: 0, y: 0, width: 0, height: 0, zIndex: 0 };
 let set = new Set();
 let closure_17 = { enlargeSquare: false, fillAspectRatio: false };
@@ -82,7 +82,17 @@ prototype["handleLayoutEffect"] = function handleLayoutEffect() {
 prototype["cleanUp"] = function cleanUp() {
   this.mounted = false;
 };
-prototype["updateState"] = function updateState(arr, windowHeight) {
+prototype["updateItems"] = function updateItems(items) {
+  const self = this;
+  items = this.items;
+  let tmp = items.length === items.length;
+  if (tmp) {
+    tmp = !items.some((item, index) => items[index] !== item);
+  }
+  this.setDirty(!tmp);
+  self.items = items;
+};
+prototype["updateProps"] = function updateProps(windowHeight) {
   const self = this;
   windowHeight = windowHeight.windowHeight;
   const obj = { windowHeight, windowWidth: windowHeight.windowWidth, chunkSize: windowHeight / closure_1_11, safeAreaLeft: Math.max(windowHeight.safeAreaLeft, closure_1_12), safeAreaRight: Math.max(safeAreaRight, closure_1_12), safeAreaBottom: Math.max(safeAreaBottom, closure_1_12), safeAreaTop, gutter, controlBarSize };
@@ -91,13 +101,6 @@ prototype["updateState"] = function updateState(arr, windowHeight) {
     self.props = obj;
     self.setDirty(true);
   }
-  const items = self.items;
-  let tmp2 = arr.length === items.length;
-  if (tmp2) {
-    tmp2 = !arr.some((item, index) => items[index] !== item);
-  }
-  self.setDirty(!tmp2);
-  self.items = arr;
   return self.getContentDimensions();
 };
 prototype["getLayoutKey"] = function getLayoutKey() {
@@ -797,9 +800,9 @@ export function useTargetDimensionsSubscription(participantId, layoutManager) {
   }, items);
   return sharedValue;
 }
-export function useManagerSubscription(first2) {
-  closure_0 = first2;
-  [tmp2, importDefault] = noop.useState(first2.getLayoutKey());
+export function useManagerSubscription(first4) {
+  closure_0 = first4;
+  [tmp2, importDefault] = noop.useState(first4.getLayoutKey());
   const layoutEffect = noop.useLayoutEffect(() => layoutKey.subscribeToManager(() => closure_1_1(layoutKey.getLayoutKey())));
   return tmp2;
 }

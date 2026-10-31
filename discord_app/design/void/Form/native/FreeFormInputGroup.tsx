@@ -1,21 +1,21 @@
-// === Module 7075: FreeFormInputGroup ===
+// === Module 7081: FreeFormInputGroup ===
 
-// Module 7075 (FreeFormInputGroup)
-import native from "native" /* 1188 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import RedesignCompat from "RedesignCompat" /* 7053 */;
-import TextInput from "TextInput" /* 7076 */;
-import FreeFormLabelDefault from "FreeFormLabel" /* 7098 */;
-import FreeFormTextInputDefault from "FreeFormTextInput" /* 7099 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7101 */;
+// Module 7081 (FreeFormInputGroup)
+import native from "native" /* 1187 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import RedesignCompat from "RedesignCompat" /* 7059 */;
+import TextInput from "TextInput" /* 7082 */;
+import FreeFormLabelDefault from "FreeFormLabel" /* 7104 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 7105 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles({ label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FreeFormInputGroup.tsx");

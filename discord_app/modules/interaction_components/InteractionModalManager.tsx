@@ -1,14 +1,14 @@
-// === Module 19430: InteractionModalManager ===
+// === Module 19487: InteractionModalManager ===
 
-// Module 19430 (InteractionModalManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 16342 */;
-import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 19442 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 19445 */;
+// Module 19487 (InteractionModalManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 16384 */;
+import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 19499 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 19502 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import InteractionStore from "InteractionStore" /* 8381 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import InteractionStore from "InteractionStore" /* 8389 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 let require = fn;
 let closure_8 = async function _handleInteractionModalCreate(arg0) {
@@ -22,7 +22,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           let obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp19) {
       c4 = tmp;

@@ -1,11 +1,11 @@
-// === Module 8187: useLegacyTextMigrationHighlight ===
+// === Module 8195: useLegacyTextMigrationHighlight ===
 
-// Module 8187 (useLegacyTextMigrationHighlight)
+// Module 8195 (useLegacyTextMigrationHighlight)
 import nativeDefault from "native" /* 575 */;
-import DevSettingsStore from "DevSettingsStore" /* 5622 */;
+import DevSettingsStore from "DevSettingsStore" /* 5627 */;
 
 const require = fn;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = { highlight: { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_DANGER } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

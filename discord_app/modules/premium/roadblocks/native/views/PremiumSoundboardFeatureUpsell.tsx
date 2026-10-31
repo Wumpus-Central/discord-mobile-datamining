@@ -1,17 +1,17 @@
-// === Module 19133: PremiumSoundboardFeatureUpsell ===
+// === Module 19182: PremiumSoundboardFeatureUpsell ===
 
-// Module 19133 (PremiumSoundboardFeatureUpsell)
+// Module 19182 (PremiumSoundboardFeatureUpsell)
 import nativeDefault from "native" /* 575 */;
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5068 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 10024 */;
+import ConstantsIOS from "ConstantsIOS" /* 1092 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5073 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 10045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0, marginHorizontal: nativeDefault.space.PX_12 };

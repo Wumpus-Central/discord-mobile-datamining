@@ -1,12 +1,12 @@
-// === Module 15269: navigateToSocialLayerStorefront ===
+// === Module 15308: navigateToSocialLayerStorefront ===
 
-// Module 15269 (navigateToSocialLayerStorefront)
-import router_utils from "router_utils" /* 1100 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7398 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10650 */;
+// Module 15308 (navigateToSocialLayerStorefront)
+import router_utils from "router_utils" /* 1099 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7400 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7406 */;
 
 require = fn;
 function navigateToSocialLayerStorefrontWithGuildPreview() {
@@ -30,7 +30,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
               }
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } else if (2 === tmp5) {

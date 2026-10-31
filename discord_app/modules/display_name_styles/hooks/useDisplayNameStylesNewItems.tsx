@@ -1,13 +1,13 @@
-// === Module 17261: useDisplayNameStylesNewItems ===
+// === Module 17318: useDisplayNameStylesNewItems ===
 
-// Module 17261 (useDisplayNameStylesNewItems)
+// Module 17318 (useDisplayNameStylesNewItems)
 import noop from "module_19" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16420 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 16462 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const DisplayNameStylesConstants = fn(1402);
+const DisplayNameStylesConstants = fn(1401);
 ({ FLYWHEEL_EFFECTS: closure_4, FLYWHEEL_FONTS: hasOwnProperty } = DisplayNameStylesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx");

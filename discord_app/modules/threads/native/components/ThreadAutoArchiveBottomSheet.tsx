@@ -1,13 +1,13 @@
-// === Module 18842: ThreadAutoArchiveBottomSheet ===
+// === Module 18888: ThreadAutoArchiveBottomSheet ===
 
-// Module 18842 (ThreadAutoArchiveBottomSheet)
-import TableRadioRow from "TableRadioRow" /* 7055 */;
+// Module 18888 (ThreadAutoArchiveBottomSheet)
+import TableRadioRow from "TableRadioRow" /* 7061 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelFlags = fn(4865).ChannelFlags;
+const ChannelFlags = fn(4870).ChannelFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx");
@@ -23,7 +23,7 @@ export const AutoArchiveDurationOptions = noop.memo(function AutoArchiveDuration
   }
   _require = hasFlagResult;
   const obj2 = { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null };
-  const intl = tmp(1114).intl;
+  const intl = tmp(1113).intl;
   obj2.accessibilityLabel = intl.string(require("util").t.H4mGfI);
   obj2.onChange = onSelectDuration;
   obj2.children = autoArchiveOptions.map((value) => jsx(TableRadioRow.TableRadioRow, { value: value.value, disabled, label: value.label }, value.value));

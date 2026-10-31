@@ -1,12 +1,12 @@
-// === Module 12012: AudienceTile ===
+// === Module 12050: AudienceTile ===
 
-// Module 12012 (AudienceTile)
+// Module 12050 (AudienceTile)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6043 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7942 */;
+import native from "native" /* 1187 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6048 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7950 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
 
 require = fn;
 function RaisedHandIcon(rtsState) {
@@ -24,14 +24,14 @@ function RaisedHandIcon(rtsState) {
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11865), color: PRIMARY_800 }) };
+  const obj = { style: items, children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11903), color: PRIMARY_800 }) };
   items[1] = activeBackground;
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { touchableContainer: { overflow: "visible" }, container: { alignItems: "center" }, avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4 }, raisedHandContainer: null, activeBackground: null, raisedHand: null, nameplateContainer: null, usernameText: null, faded: null };
 let size = { position: "absolute", top: -8, right: 0, height: 24, width: 24, alignItems: "center", justifyContent: "center", borderRadius: 12, borderWidth: 2, borderColor: nativeDefault.unsafe_rawColors.PRIMARY_800, backgroundColor: nativeDefault.colors.WHITE };
 obj.raisedHandContainer = size;

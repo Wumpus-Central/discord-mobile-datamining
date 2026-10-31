@@ -1,18 +1,18 @@
-// === Module 19650: GuildSettingsModalAuditLogFilter ===
+// === Module 19707: GuildSettingsModalAuditLogFilter ===
 
-// Module 19650 (GuildSettingsModalAuditLogFilter)
+// Module 19707 (GuildSettingsModalAuditLogFilter)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5077 */;
-import FormRadio from "FormRadio" /* 7056 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10799 */;
-import AuditLogUtils from "AuditLogUtils" /* 19648 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 19651 */;
+import util from "util" /* 1113 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
+import FormRadio from "FormRadio" /* 7062 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10819 */;
+import AuditLogUtils from "AuditLogUtils" /* 19705 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 19708 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19646 */;
+import UserStore from "UserStore" /* 1383 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 19703 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1072).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = noop.memo(function AuditLogFilterUserRow(selected) {

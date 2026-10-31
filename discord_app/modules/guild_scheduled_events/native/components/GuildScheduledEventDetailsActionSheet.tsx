@@ -1,21 +1,21 @@
-// === Module 8955: GuildScheduledEventDetailsActionSheet ===
+// === Module 8964: GuildScheduledEventDetailsActionSheet ===
 
-// Module 8955 (GuildScheduledEventDetailsActionSheet)
+// Module 8964 (GuildScheduledEventDetailsActionSheet)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8957 */;
+import util from "util" /* 1113 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8966 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6849 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(4864);
+const GuildScheduledEventsConstants = fn(4869);
 ({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { segmentedControl: { paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12 }, header: { flexDirection: "column" } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

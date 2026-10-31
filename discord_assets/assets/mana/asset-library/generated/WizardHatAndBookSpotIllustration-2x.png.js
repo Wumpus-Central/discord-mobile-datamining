@@ -1,6 +1,6 @@
-// === Module 16765: ? ===
+// === Module 16807: ? ===
 
-// Module 16765
+// Module 16807
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WizardHatAndBookSpotIllustration-2x.png.js");

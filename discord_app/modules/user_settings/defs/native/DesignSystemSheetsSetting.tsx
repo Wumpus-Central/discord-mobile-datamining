@@ -1,9 +1,9 @@
-// === Module 17756: DesignSystemSheetsSetting ===
+// === Module 17800: DesignSystemSheetsSetting ===
 
-// Module 17756 (DesignSystemSheetsSetting)
+// Module 17800 (DesignSystemSheetsSetting)
 import Constants from "Constants" /* 1072 */;
-import SettingsConstants from "SettingsConstants" /* 8424 */;
-import SettingBuilders from "SettingBuilders" /* 11505 */;
+import SettingsConstants from "SettingsConstants" /* 8432 */;
+import SettingBuilders from "SettingBuilders" /* 11539 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

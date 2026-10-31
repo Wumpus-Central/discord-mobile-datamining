@@ -1,30 +1,30 @@
-// === Module 8831: MediaSourceUtil ===
+// === Module 8839: MediaSourceUtil ===
 
-// Module 8831 (MediaSourceUtil)
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import util from "util" /* 1114 */;
-import FlagUtils from "FlagUtils" /* 1397 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1440 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1491 */;
-import Server from "Server" /* 1993 */;
-import ToastUtils from "ToastUtils" /* 5706 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5954 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6046 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6060 */;
-import EmbedUtils from "EmbedUtils" /* 6552 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6747 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7457 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7463 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8388 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8574 */;
-import transformMessageComponents from "transformMessageComponents" /* 8686 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8702 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8827 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8832 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8833 */;
-import MediaModalPortal from "MediaModalPortal" /* 8834 */;
+// Module 8839 (MediaSourceUtil)
+import ConstantsIOS from "ConstantsIOS" /* 1092 */;
+import util from "util" /* 1113 */;
+import FlagUtils from "FlagUtils" /* 1396 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1439 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1490 */;
+import Server from "Server" /* 1992 */;
+import ToastUtils from "ToastUtils" /* 5711 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6051 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6065 */;
+import EmbedUtils from "EmbedUtils" /* 6558 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6753 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7463 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7469 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8396 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8582 */;
+import transformMessageComponents from "transformMessageComponents" /* 8694 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8710 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8835 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8840 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8841 */;
+import MediaModalPortal from "MediaModalPortal" /* 8842 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 const require = globalThis.__r;
 
@@ -805,7 +805,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
     return null;
   } else {
     const type = value.type;
-    if (tmp(1993).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(1992).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -826,9 +826,9 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
         }
         return tmp;
       });
-      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1380).isNotNullish) };
+      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1379).isNotNullish) };
       return obj2;
-    } else if (tmp(1993).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(1992).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {

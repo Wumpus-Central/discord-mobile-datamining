@@ -1,9 +1,9 @@
-// === Module 16804: VrHeadsetIcon ===
+// === Module 16857: VrHeadsetIcon ===
 
-// Module 16804 (VrHeadsetIcon)
+// Module 16857 (VrHeadsetIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod16805 from "module_16805" /* 16805 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod16858 from "module_16858" /* 16858 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function VrHeadsetIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16805, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16858, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

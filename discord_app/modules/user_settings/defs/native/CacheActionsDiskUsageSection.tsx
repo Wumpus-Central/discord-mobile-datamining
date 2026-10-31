@@ -1,14 +1,14 @@
-// === Module 17494: CacheActionsDiskUsageSection ===
+// === Module 17554: CacheActionsDiskUsageSection ===
 
-// Module 17494 (CacheActionsDiskUsageSection)
+// Module 17554 (CacheActionsDiskUsageSection)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import FileSizeUtils from "FileSizeUtils" /* 6445 */;
-import Card from "Card" /* 6971 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17497 */;
+import util from "util" /* 1113 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import FileSizeUtils from "FileSizeUtils" /* 6451 */;
+import Card from "Card" /* 6977 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17557 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -159,7 +159,7 @@ function DiskUsageResults(metricKitSize) {
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { label: { flex: 1 }, nestedLabel: { flex: 1, paddingLeft: nativeDefault.space.PX_16 }, value: { flexShrink: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -219,7 +219,7 @@ export function useDiskUsageMeasurement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

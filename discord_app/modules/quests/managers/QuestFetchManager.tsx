@@ -1,15 +1,15 @@
-// === Module 19964: QuestFetchManager ===
+// === Module 20024: QuestFetchManager ===
 
-// Module 19964 (QuestFetchManager)
-import DurationsDefault from "Durations" /* 1090 */;
-import SentryUtilsDefault from "SentryUtils" /* 1243 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6866 */;
-import QuestsEligibility from "QuestsEligibility" /* 9653 */;
-import QuestActionCreators from "QuestActionCreators" /* 9662 */;
+// Module 20024 (QuestFetchManager)
+import DurationsDefault from "Durations" /* 1089 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6872 */;
+import QuestsEligibility from "QuestsEligibility" /* 9673 */;
+import QuestActionCreators from "QuestActionCreators" /* 9682 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7839 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import QuestStore from "QuestStore" /* 7846 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
@@ -52,7 +52,7 @@ class QuestFetchManager extends tmp2 {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -70,7 +70,7 @@ class QuestFetchManager extends tmp2 {
                 lastFetchAttemptedAt._fetch("post_connect_recurring");
               }
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp7) {
             c0 = tmp;

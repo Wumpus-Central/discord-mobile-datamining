@@ -165,6 +165,7 @@ const obj = {
   CONJURE: "/conjure",
   CONJURE_PROJECT: null,
   GLOBAL_DISCOVERY_SERVERS: "/discovery/servers",
+  GLOBAL_DISCOVERY_GAMES: "/discovery/games",
   GLOBAL_DISCOVERY_APPS: "/discovery/applications",
   GLOBAL_DISCOVERY_APPS_CATEGORY: null,
   GLOBAL_DISCOVERY_APPS_PROFILE: null,

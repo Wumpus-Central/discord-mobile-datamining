@@ -1,9 +1,9 @@
-// === Module 12539: useConjureSpendLimitNotice ===
+// === Module 12574: useConjureSpendLimitNotice ===
 
-// Module 12539 (useConjureSpendLimitNotice)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 10850 */;
+// Module 12574 (useConjureSpendLimitNotice)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import ConjureSpendLimitStore from "ConjureSpendLimitStore" /* 10870 */;
 
 const require = globalThis.__r;
 
@@ -27,13 +27,13 @@ export default function useConjureSpendLimitNotice(arg0) {
     if ("blocked" === stateFromStores.state) {
       const submitRequestURL = HelpdeskUtilsDefault.getSubmitRequestURL();
       if (null == formatResult) {
-        const intl2 = tmp(1114).intl;
+        const intl2 = tmp(1113).intl;
         const obj3 = { helpdeskURL: submitRequestURL };
-        let formatResult1 = intl2.format(_modDef3865["bw/n4C"], obj3);
+        let formatResult1 = intl2.format(_modDef3868["bw/n4C"], obj3);
       } else {
-        const intl = tmp(1114).intl;
+        const intl = tmp(1113).intl;
         const obj4 = { limit: formatResult, helpdeskURL: submitRequestURL };
-        formatResult1 = intl.format(_modDef3865.GYqJXH, obj4);
+        formatResult1 = intl.format(_modDef3868.GYqJXH, obj4);
       }
       const obj5 = { blocked: true, message: formatResult1 };
       return obj5;
@@ -45,9 +45,9 @@ export default function useConjureSpendLimitNotice(arg0) {
             const _Math2 = Math;
             const obj6 = { blocked: false, message: null };
             const bound = Math.min(99, Math.floor(stateFromStores.spentUsd / stateFromStores.limitUsd * 100));
-            const intl3 = tmp(1114).intl;
+            const intl3 = tmp(1113).intl;
             const obj7 = { percent: bound, limit: formatResult };
-            obj6.message = intl3.formatToPlainString(_modDef3865.GHgG2B, obj7);
+            obj6.message = intl3.formatToPlainString(_modDef3868.GHgG2B, obj7);
             return obj6;
           }
         }

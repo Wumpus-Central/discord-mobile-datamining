@@ -1,22 +1,22 @@
-// === Module 10716: ThemedGradient ===
+// === Module 10736: ThemedGradient ===
 
-// Module 10716 (ThemedGradient)
+// Module 10736 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1242 */;
-import SentryUtilsDefault from "SentryUtils" /* 1243 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import ColorUtils from "ColorUtils" /* 5006 */;
-import utils_ColorDefault from "utils/Color" /* 5007 */;
-import shared from "shared" /* 5016 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5187 */;
-import GuildThemePresets from "GuildThemePresets" /* 5190 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5192 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5247 */;
-import useThemeDefault from "useTheme" /* 5248 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import ColorUtils from "ColorUtils" /* 5011 */;
+import utils_ColorDefault from "utils/Color" /* 5012 */;
+import shared from "shared" /* 5021 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5192 */;
+import GuildThemePresets from "GuildThemePresets" /* 5195 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5197 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5252 */;
+import useThemeDefault from "useTheme" /* 5253 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5033 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
@@ -220,7 +220,7 @@ function CustomThemesGradient(arg0) {
   closure_129_2 = undefined;
   closure_129_3 = undefined;
   closure_129_0 = baseMix;
-  ({ width, height } = reduced(1492)());
+  ({ width, height } = reduced(1491)());
   if (mixAmount === undefined) {
     mixAmount = {};
   }
@@ -349,8 +349,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5582), obj);
-    const tmp2Result = reduced(5582);
+    tmp10Result = closure_6(reduced(5587), obj);
+    const tmp2Result = reduced(5587);
   }
   return tmp10Result;
 }
@@ -387,7 +387,7 @@ function ActiveGuildThemeGradient(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ softenGradient: { flex: 1 }, linearGradient: { flex: 1 }, absolute: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 } });
 let angleCenter = { x: 0.5, y: 0.5 };
 let c10 = 0.5;

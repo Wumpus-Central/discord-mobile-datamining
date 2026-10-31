@@ -1,6 +1,6 @@
-// === Module 6271: ? ===
+// === Module 6276: ? ===
 
-// Module 6271
+// Module 6276
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/trash_can_blackout.png.js");

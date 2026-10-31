@@ -1,8 +1,8 @@
-// === Module 11426: openBadgeDetailsSheet ===
+// === Module 11462: openBadgeDetailsSheet ===
 
-// Module 11426 (openBadgeDetailsSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+// Module 11462 (openBadgeDetailsSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "badge-details";
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting("modules/badges/native/openBadgeDetail
 
 export const BADGE_DETAILS_SHEET_KEY = "badge-details";
 export function openBadgeDetailsSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11427, dependencyMap.paths), c3, arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11463, dependencyMap.paths), c3, arg0);
 }

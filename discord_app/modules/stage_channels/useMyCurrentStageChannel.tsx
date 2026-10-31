@@ -1,9 +1,9 @@
-// === Module 11823: useMyCurrentStageChannel ===
+// === Module 11861: useMyCurrentStageChannel ===
 
-// Module 11823 (useMyCurrentStageChannel)
+// Module 11861 (useMyCurrentStageChannel)
 import initialize from "initialize" /* 504 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 
 require = fn;
 const size = fn(2);

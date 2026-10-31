@@ -1,23 +1,23 @@
-// === Module 19714: GuildSettingsRolesStore ===
+// === Module 19771: GuildSettingsRolesStore ===
 
-// Module 19714 (GuildSettingsRolesStore)
+// Module 19771 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import PlainRecord from "PlainRecord" /* 4873 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4916 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4918 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6035 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13930 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 19709 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 19715 */;
-import GuildRoleStore from "GuildRoleStore" /* 4915 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9056 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import PlainRecord from "PlainRecord" /* 4878 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4921 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4923 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6040 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 13965 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 19766 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 19772 */;
+import GuildRoleStore from "GuildRoleStore" /* 4920 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9075 */;
 import Constants from "Constants" /* 1072 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19716 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 19773 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

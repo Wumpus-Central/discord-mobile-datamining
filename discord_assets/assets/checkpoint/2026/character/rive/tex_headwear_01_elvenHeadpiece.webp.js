@@ -1,6 +1,6 @@
-// === Module 13460: ? ===
+// === Module 13496: ? ===
 
-// Module 13460
+// Module 13496
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_01_elvenHeadpiece.webp.js");

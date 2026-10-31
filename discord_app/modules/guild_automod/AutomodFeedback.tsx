@@ -1,7 +1,7 @@
-// === Module 7690: AutomodFeedback ===
+// === Module 7697: AutomodFeedback ===
 
-// Module 7690 (AutomodFeedback)
-import util from "util" /* 1114 */;
+// Module 7697 (AutomodFeedback)
+import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
 const Feedback = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };

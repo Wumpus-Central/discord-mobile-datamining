@@ -1,9 +1,9 @@
-// === Module 14761: useEntranceAnimation ===
+// === Module 14799: useEntranceAnimation ===
 
-// Module 14761 (useEntranceAnimation)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
+// Module 14799 (useEntranceAnimation)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ function setUseEntranceAnimationState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj4.setState(closure_0));
 }
-let obj = { duration: 300, easing: fn(1188).STANDARD_EASING };
+let obj = { duration: 300, easing: fn(1187).STANDARD_EASING };
 const module_560 = fn(560);
 let obj4 = module_560.create(() => ({ isComplete: false }));
 let closure_7 = { code: "function useEntranceAnimationTsx1(){const{runOnJS,setUseEntranceAnimationState}=this.__closure;runOnJS(setUseEntranceAnimationState)({isComplete:true});}" };
@@ -45,9 +45,9 @@ export function useEntranceAnimation(entranceAnimationDriver) {
       ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
       const obj3 = timing;
       const fn = function t() {
-        closure_0(5090).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-        obj = closure_0(5090);
-        closure_0(5090).runOnJS(incrementLoads)();
+        closure_0(5095).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+        obj = closure_0(5095);
+        closure_0(5095).runOnJS(incrementLoads)();
       };
       obj4 = { runOnJS: ReanimatedRexport.runOnJS, setUseEntranceAnimationState, incrementLoads };
       fn.__closure = obj4;

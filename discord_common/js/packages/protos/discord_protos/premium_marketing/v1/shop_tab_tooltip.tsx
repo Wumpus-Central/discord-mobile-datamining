@@ -1,13 +1,13 @@
-// === Module 9638: shop_tab_tooltip ===
+// === Module 9658: shop_tab_tooltip ===
 
-// Module 9638 (shop_tab_tooltip)
-import _mod1198 from "module_1198" /* 1198 */;
-import localized_string from "localized_string" /* 9611 */;
-import theme_aware_asset from "theme_aware_asset" /* 9621 */;
+// Module 9658 (shop_tab_tooltip)
+import _mod1197 from "module_1197" /* 1197 */;
+import localized_string from "localized_string" /* 9631 */;
+import theme_aware_asset from "theme_aware_asset" /* 9641 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1198).MessageType;
+const MessageType = fn(1197).MessageType;
 class ShopTabTooltip$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , ];
@@ -65,10 +65,10 @@ const prototype = ShopTabTooltip$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { header: "", body: "", badgeText: "", badgeIcon: "", badgeCountdownEndsAt: "", showHoverGradient: false };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1198.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1198.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1198;
+    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1197;
   }
   return obj;
 };
@@ -86,63 +86,63 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, writeUnknownFields) {
   if ("" !== header.header) {
-    tag.tag(1, _mod1198.WireType.LengthDelimited).string(header.header);
-    const tagResult = tag.tag(1, _mod1198.WireType.LengthDelimited);
+    tag.tag(1, _mod1197.WireType.LengthDelimited).string(header.header);
+    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
   }
   if ("" !== header.body) {
-    tag.tag(2, _mod1198.WireType.LengthDelimited).string(header.body);
-    const tagResult1 = tag.tag(2, _mod1198.WireType.LengthDelimited);
+    tag.tag(2, _mod1197.WireType.LengthDelimited).string(header.body);
+    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
   }
   if (header.asset) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult2 = tag.tag(3, _mod1198.WireType.LengthDelimited);
-    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
+    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.headerLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult3 = tag.tag(4, _mod1198.WireType.LengthDelimited);
-    const joined1 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(4, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(4, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
+    const joined1 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.bodyLocalized) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult4 = tag.tag(5, _mod1198.WireType.LengthDelimited);
-    const joined2 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(5, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(5, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1197.WireType.LengthDelimited);
+    const joined2 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== header.badgeText) {
-    tag.tag(6, _mod1198.WireType.LengthDelimited).string(header.badgeText);
-    const tagResult5 = tag.tag(6, _mod1198.WireType.LengthDelimited);
+    tag.tag(6, _mod1197.WireType.LengthDelimited).string(header.badgeText);
+    const tagResult5 = tag.tag(6, _mod1197.WireType.LengthDelimited);
   }
   if (header.badgeTextLocalized) {
     const LocalizedString3 = localized_string.LocalizedString;
-    const tagResult6 = tag.tag(7, _mod1198.WireType.LengthDelimited);
-    const joined3 = LocalizedString3.internalBinaryWrite(header.badgeTextLocalized, tag.tag(7, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = LocalizedString3.internalBinaryWrite(header.badgeTextLocalized, tag.tag(7, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult6 = tag.tag(7, _mod1197.WireType.LengthDelimited);
+    const joined3 = LocalizedString3.internalBinaryWrite(header.badgeTextLocalized, tag.tag(7, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = LocalizedString3.internalBinaryWrite(header.badgeTextLocalized, tag.tag(7, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== header.badgeIcon) {
-    tag.tag(8, _mod1198.WireType.LengthDelimited).string(header.badgeIcon);
-    const tagResult7 = tag.tag(8, _mod1198.WireType.LengthDelimited);
+    tag.tag(8, _mod1197.WireType.LengthDelimited).string(header.badgeIcon);
+    const tagResult7 = tag.tag(8, _mod1197.WireType.LengthDelimited);
   }
   if ("" !== header.badgeCountdownEndsAt) {
-    tag.tag(9, _mod1198.WireType.LengthDelimited).string(header.badgeCountdownEndsAt);
-    const tagResult8 = tag.tag(9, _mod1198.WireType.LengthDelimited);
+    tag.tag(9, _mod1197.WireType.LengthDelimited).string(header.badgeCountdownEndsAt);
+    const tagResult8 = tag.tag(9, _mod1197.WireType.LengthDelimited);
   }
   if (false !== header.showHoverGradient) {
-    tag.tag(10, _mod1198.WireType.Varint).bool(header.showHoverGradient);
-    const tagResult9 = tag.tag(10, _mod1198.WireType.Varint);
+    tag.tag(10, _mod1197.WireType.Varint).bool(header.showHoverGradient);
+    const tagResult9 = tag.tag(10, _mod1197.WireType.Varint);
   }
   if (header.hoverBackground) {
     const ThemeAwareAsset2 = theme_aware_asset.ThemeAwareAsset;
-    const tagResult10 = tag.tag(11, _mod1198.WireType.LengthDelimited);
-    const joined4 = ThemeAwareAsset2.internalBinaryWrite(header.hoverBackground, tag.tag(11, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = ThemeAwareAsset2.internalBinaryWrite(header.hoverBackground, tag.tag(11, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult10 = tag.tag(11, _mod1197.WireType.LengthDelimited);
+    const joined4 = ThemeAwareAsset2.internalBinaryWrite(header.hoverBackground, tag.tag(11, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = ThemeAwareAsset2.internalBinaryWrite(header.hoverBackground, tag.tag(11, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1198.UnknownFieldHandler.onWrite;
+      onWrite = _mod1197.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, header, tag);

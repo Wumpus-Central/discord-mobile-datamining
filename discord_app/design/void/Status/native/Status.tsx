@@ -1,18 +1,18 @@
-// === Module 15944: Status ===
+// === Module 15985: Status ===
 
-// Module 15944 (Status)
+// Module 15985 (Status)
 import nativeDefault from "native" /* 575 */;
-import spring from "spring" /* 5632 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15942 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15943 */;
-import _modDef15945 from "module_15945" /* 15945 */;
-import _modDef15946 from "module_15946" /* 15946 */;
-import _modDef15947 from "module_15947" /* 15947 */;
-import _modDef15948 from "module_15948" /* 15948 */;
-import _modDef15949 from "module_15949" /* 15949 */;
-import _modDef15950 from "module_15950" /* 15950 */;
-import _modDef15951 from "module_15951" /* 15951 */;
+import spring from "spring" /* 5637 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15983 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15984 */;
+import _modDef15986 from "module_15986" /* 15986 */;
+import _modDef15987 from "module_15987" /* 15987 */;
+import _modDef15988 from "module_15988" /* 15988 */;
+import _modDef15989 from "module_15989" /* 15989 */;
+import _modDef15990 from "module_15990" /* 15990 */;
+import _modDef15991 from "module_15991" /* 15991 */;
+import _modDef15992 from "module_15992" /* 15992 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,15 +20,15 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const STATUS_PADDING = fn(1189).STATUS_PADDING;
+const STATUS_PADDING = fn(1188).STATUS_PADDING;
 const StatusTypes = fn(1072).StatusTypes;
-const ChannelAnimationConstants = fn(14843);
+const ChannelAnimationConstants = fn(14881);
 ({ TYPING_ENTERING: closure_7, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let closure_12 = createStyles.createStyles({ statusIcon: { width: "100%", height: "100%" } });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_13 = createStyles.createStyles((items, arg1) => {
   const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(items);
   ({ height, dotSize } = statusTypingDimensions);
@@ -82,23 +82,23 @@ export default function Status(isMobileOnline) {
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef15945;
+    let tmp4Result = _modDef15986;
   } else if (flag2) {
-    tmp4Result = _modDef15946;
+    tmp4Result = _modDef15987;
   } else if (flag) {
-    tmp4Result = _modDef15947;
+    tmp4Result = _modDef15988;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef15948;
+    tmp4Result = _modDef15989;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef15949;
+    tmp4Result = _modDef15990;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef15951;
+        tmp4Result = _modDef15992;
       }
     }
-    tmp4Result = _modDef15950;
+    tmp4Result = _modDef15991;
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_10(FastImageDefault, obj2);

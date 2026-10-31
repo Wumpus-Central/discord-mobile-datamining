@@ -1,11 +1,11 @@
-// === Module 16314: auth ===
+// === Module 16356: auth ===
 
-// Module 16314 (auth)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2026 */;
-import RPCErrorDefault from "RPCError" /* 9313 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 16315 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
+// Module 16356 (auth)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2024 */;
+import RPCErrorDefault from "RPCError" /* 9333 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 16357 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
 
 require = fn;
 const Constants = fn(1072);

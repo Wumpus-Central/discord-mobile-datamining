@@ -1,27 +1,27 @@
-// === Module 18105: RedesignChannelList ===
+// === Module 18148: RedesignChannelList ===
 
-// Module 18105 (RedesignChannelList)
-import ChannelListState from "ChannelListState" /* 7700 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 12233 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13285 */;
-import GuildsRenderExperiment2 from "GuildsRenderExperiment" /* 18016 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18024 */;
-import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 18135 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 18184 */;
-import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 18185 */;
-import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 18193 */;
-import useShouldRenderChannelList from "useShouldRenderChannelList" /* 18267 */;
-import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 18274 */;
-import GuildsEmptyDefault from "GuildsEmpty" /* 18287 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 18300 */;
+// Module 18148 (RedesignChannelList)
+import ChannelListState from "ChannelListState" /* 7707 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12271 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 13320 */;
+import GuildsRenderExperiment2 from "GuildsRenderExperiment" /* 18059 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18067 */;
+import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 18178 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 18227 */;
+import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 18228 */;
+import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 18236 */;
+import useShouldRenderChannelList from "useShouldRenderChannelList" /* 18310 */;
+import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 18317 */;
+import GuildsEmptyDefault from "GuildsEmpty" /* 18330 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 18343 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import ChannelListStore from "ChannelListStore" /* 7698 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18018 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5762 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import ChannelListStore from "ChannelListStore" /* 7705 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18061 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
 
 require = fn;
 function GuildChannels(arg0) {
@@ -40,9 +40,9 @@ function GuildChannelsList(shouldRender) {
   const merged = Object.assign(shouldRender, Object.assign({ shouldRender: 0 }));
   let found;
   dependencyMap = undefined;
-  const arr = found(18268)(merged.guild);
+  const arr = found(18311)(merged.guild);
   const hasItem = arr.includes(ChannelListGuildActionRow.GUILD_CONJURE);
-  merged(9656);
+  merged(9676);
   found = arr;
   if (hasItem) {
     found = arr;
@@ -50,8 +50,8 @@ function GuildChannelsList(shouldRender) {
       found = arr.filter((item) => item !== constants.GUILD_CONJURE);
     }
   }
-  ({ rows: c2, gameClaimMarkAsDismissed, applicationAccountLinkMarkAsDismissed, startApplicationAccountLinkAuthorization, accountLinkApplication } = found(18270)(merged.guild));
-  const tmp9 = found(18270)(merged.guild);
+  ({ rows: c2, gameClaimMarkAsDismissed, applicationAccountLinkMarkAsDismissed, startApplicationAccountLinkAuthorization, accountLinkApplication } = found(18313)(merged.guild));
+  const tmp9 = found(18313)(merged.guild);
   const items = [ChannelListStore];
   const stateFromStoresObject = merged(504).useStateFromStoresObject(items, () => ChannelListStore.getGuild(merged.guild.id, { guildActionRows: found, channelNoticeRows }));
   let tmp13 = null;
@@ -89,7 +89,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj4.guild = stateFromStores;
           obj4.selectedChannelId = selectedChannelId;
           obj4.selectedVoiceChannelId = stateFromStores1;
-          return closure_15(tmp2(18292).default, obj4);
+          return closure_15(tmp2(18335).default, obj4);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj5 = { style: merged.style, guildId: selectedGuildId };
@@ -104,7 +104,7 @@ function ChannelsWrapper(selectedGuildId) {
           }
           return tmp6Result;
         }
-        tmp2Result = tmp2(4883);
+        tmp2Result = tmp2(4888);
       }
     }
     const obj7 = { style: merged.style, selectedGuildId };
@@ -115,7 +115,7 @@ function ChannelsWrapper(selectedGuildId) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ EMPTY_NUX_SERVER: closure_12, MOBILE_GUILD_UPSELL_LIST: map1 } = Constants);
-const ChannelListGuildActionRow = fn(7706).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7713).ChannelListGuildActionRow;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const memoResult = noop.memo(function ChannelList(gameClaimMarkAsDismissed) {

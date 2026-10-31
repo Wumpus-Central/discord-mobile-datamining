@@ -1,15 +1,15 @@
-// === Module 16810: AddConnectionActionSheet ===
+// === Module 16844: AddConnectionActionSheet ===
 
-// Module 16810 (AddConnectionActionSheet)
+// Module 16844 (AddConnectionActionSheet)
 import Constants from "Constants" /* 1072 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 2024 */;
-import shared from "shared" /* 5016 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import TableRow from "TableRow" /* 6969 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import UserApplicationIdentityConstants from "UserApplicationIdentityConstants" /* 2022 */;
+import shared from "shared" /* 5021 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import TableRow from "TableRow" /* 6975 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
-import native from "native" /* 1188 */;
+import createStyles from "createStyles" /* 5014 */;
+import native from "native" /* 1187 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,10 +19,10 @@ function AddApplicationIdentityTableRow(application) {
   _require = undefined;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7321)(application));
-  const tmp2 = analyticsLocations(7321)(application);
-  analyticsLocations = analyticsLocations(7320)(analyticsLocations(7345).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(7320);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7327)(application));
+  const tmp2 = analyticsLocations(7327)(application);
+  analyticsLocations = analyticsLocations(7326)(analyticsLocations(7351).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(7326);
   const tmp4 = closure_7();
   const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
   const obj2 = {
@@ -40,7 +40,7 @@ function AddApplicationIdentityTableRow(application) {
   let tmp7Result = null;
   if (null != iconSource) {
     const obj3 = { source: iconSource, style: tmp4.icon, disableColor: true };
-    tmp7Result = closure_5(tmp5(1188).Icon, obj3);
+    tmp7Result = closure_5(tmp5(1187).Icon, obj3);
   }
   obj2.icon = tmp7Result;
   obj2.trailing = closure_5(require("TableRow").TableRow.Arrow, {});

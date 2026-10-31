@@ -1,13 +1,13 @@
-// === Module 10857: conjureUnread ===
+// === Module 10877: conjureUnread ===
 
-// Module 10857 (conjureUnread)
+// Module 10877 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectMute from "conjureProjectMute" /* 10858 */;
+import conjureProjectMute from "conjureProjectMute" /* 10878 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6770).ReadStateTypes;
+const ReadStateTypes = fn(6776).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 
@@ -127,6 +127,13 @@ export function useConjureUnreadSummary(arg0) {
     }
     return { hasUnread: num > 0, unreadCount: num, badgeCount: num2 };
   }, items1);
+}
+export function useAckConjureProjectOnLeave(arg0) {
+  closure_0 = arg0;
+  const items = [arg0];
+  const layoutEffect = noop.useLayoutEffect(() => () => {
+    DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_ACK", projectId });
+  }, items);
 }
 export function useAckConjureProjectWhileViewing(projectId, stateFromStores) {
   _require = projectId;

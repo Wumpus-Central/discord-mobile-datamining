@@ -1,6 +1,6 @@
-// === Module 13598: ? ===
+// === Module 13635: ? ===
 
-// Module 13598
+// Module 13635
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/voice_bg_halfres_static.png.js");

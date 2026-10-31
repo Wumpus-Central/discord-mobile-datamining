@@ -1,19 +1,19 @@
-// === Module 12523: ConjureRemovedItems ===
+// === Module 12558: ConjureRemovedItems ===
 
-// Module 12523 (ConjureRemovedItems)
+// Module 12558 (ConjureRemovedItems)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5077 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6968 */;
-import FormCheckbox from "FormCheckbox" /* 6983 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
-import FolderIcon from "FolderIcon" /* 8638 */;
-import AppsIcon from "AppsIcon" /* 8670 */;
-import BotTagDefault from "BotTag" /* 9183 */;
-import RobotIcon from "RobotIcon" /* 12408 */;
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
+import FormCheckbox from "FormCheckbox" /* 6989 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import FolderIcon from "FolderIcon" /* 8646 */;
+import AppsIcon from "AppsIcon" /* 8678 */;
+import BotTagDefault from "BotTag" /* 9202 */;
+import RobotIcon from "RobotIcon" /* 12446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -78,7 +78,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, boxDimmed: { opacity: 0.5 }, optionalLabel: { flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -88,7 +88,7 @@ export default function ConjureRemovedItems(items) {
   const optionalItem = items.optionalItem;
   const obj = { variant: "text-md/semibold", color: "text-strong", children: null };
   const intl = util.intl;
-  obj.children = intl.string(_modDef3865["+E2PqP"]);
+  obj.children = intl.string(_modDef3868["+E2PqP"]);
   items = [timestampProducer(Text_Text.Text, obj), ];
   const obj2 = { items: items.items, children: null };
   let tmp2Result = null;
@@ -119,7 +119,7 @@ export function ConjureRemoveEverythingField(checked) {
   const obj2 = { hasIcons: false, children: null };
   const obj3 = { label: null, checked: null, onPress: null };
   const intl = util.intl;
-  obj3.label = intl.string(_modDef3865.gKA9tU);
+  obj3.label = intl.string(_modDef3868.gKA9tU);
   obj3.checked = checked;
   obj3.onPress = onChange;
   obj2.children = timestampProducer(TableCheckboxRow.TableCheckboxRow, obj3);

@@ -1,7 +1,7 @@
-// === Module 15614: E2eLatencyMeasurementExperiment ===
+// === Module 15655: E2eLatencyMeasurementExperiment ===
 
-// Module 15614 (E2eLatencyMeasurementExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 15655 (E2eLatencyMeasurementExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-e2e-latency-measurement", kind: "user", defaultConfig: { enabled: false }, variations: null };

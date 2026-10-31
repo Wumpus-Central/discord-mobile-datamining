@@ -1,19 +1,19 @@
-// === Module 18035: ChannelUnreadBadge ===
+// === Module 18078: ChannelUnreadBadge ===
 
-// Module 18035 (ChannelUnreadBadge)
-import useFontScale from "useFontScale" /* 5637 */;
-import shared_components_Badge from "shared_components/Badge" /* 9797 */;
-import ChannelListLayout from "ChannelListLayout" /* 11030 */;
+// Module 18078 (ChannelUnreadBadge)
+import useFontScale from "useFontScale" /* 5642 */;
+import shared_components_Badge from "shared_components/Badge" /* 9818 */;
+import ChannelListLayout from "ChannelListLayout" /* 11049 */;
 import noop from "module_19" /* 19 */;
 
 const shared_components_BadgeDefault = shared_components_Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11027).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(6770).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11046).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(6776).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");

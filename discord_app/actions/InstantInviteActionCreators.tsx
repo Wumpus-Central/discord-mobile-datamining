@@ -1,35 +1,35 @@
-// === Module 8937: InstantInviteActionCreators ===
+// === Module 8946: InstantInviteActionCreators ===
 
-// Module 8937 (InstantInviteActionCreators)
+// Module 8946 (InstantInviteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import router_utils from "router_utils" /* 1100 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import FlagUtils from "FlagUtils" /* 1397 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4830 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5745 */;
-import _modDef5867 from "module_5867" /* 5867 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6733 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6896 */;
-import showNSFWGuildJoinGate from "showNSFWGuildJoinGate" /* 7380 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7873 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8950 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11335 */;
-import generateDynamicLinkDefault from "generateDynamicLink" /* 14708 */;
-import ProtocolUtilsDefault from "ProtocolUtils" /* 14710 */;
+import router_utils from "router_utils" /* 1099 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import FlagUtils from "FlagUtils" /* 1396 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4835 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5750 */;
+import _modDef5872 from "module_5872" /* 5872 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6739 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6902 */;
+import showNSFWGuildJoinGate from "showNSFWGuildJoinGate" /* 7386 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7880 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8959 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11371 */;
+import generateDynamicLinkDefault from "generateDynamicLink" /* 14746 */;
+import ProtocolUtilsDefault from "ProtocolUtils" /* 14748 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6849 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6855 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildChannelStore from "GuildChannelStore" /* 4939 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import InstantInviteStore from "InstantInviteStore" /* 8938 */;
-import InviteStore from "InviteStore" /* 5744 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import InstantInviteStore from "InstantInviteStore" /* 8947 */;
+import InviteStore from "InviteStore" /* 5749 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -445,7 +445,7 @@ let closure_42 = async function _transitionToGuildFromEventInvite(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -479,7 +479,7 @@ let closure_42 = async function _transitionToGuildFromEventInvite(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp12) {
       c1 = tmp;
       throw tmp12;
@@ -495,16 +495,16 @@ function trackInviteServerClicked(id5, accept, items2) {
   obj2.location_stack = tmp;
   AnalyticsUtilsDefault.track(constants3.INVITE_SERVER_CLICKED, obj2);
 }
-fn(6926).addPostConnectionCallback;
-let closure_7 = fn(6849).isGuildScheduledEventActive;
-const ChannelRecord = fn(4862);
+fn(6932).addPostConnectionCallback;
+let closure_7 = fn(6855).isGuildScheduledEventActive;
+const ChannelRecord = fn(4867);
 ({ isGuildTextChannelType: closure_8, isGuildVocalChannelOrVocalThreadType: closure_9, createChannelRecord: c10, ChannelRecordBase: closure_11, getAccessPermissions: closure_12 } = ChannelRecord);
 const Constants = fn(1072);
 ({ Endpoints: closure_24, ChannelTypes: closure_25, Routes: closure_26, ME: closure_27, RPCCommands: closure_28, GuildFeatures: closure_29, AnalyticEvents: closure_30, UserFlags: closure_31, Permissions: closure_32, AbortCodes: items } = Constants);
-const AgeGateSource = fn(1098).AgeGateSource;
-const StaticChannelRoute = fn(4865).StaticChannelRoute;
-const StreamTypes = fn(6709).StreamTypes;
-const STAGE_INVITE_STATE_KEY = fn(6703).STAGE_INVITE_STATE_KEY;
+const AgeGateSource = fn(1097).AgeGateSource;
+const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const StreamTypes = fn(6715).StreamTypes;
+const STAGE_INVITE_STATE_KEY = fn(6709).STAGE_INVITE_STATE_KEY;
 let invite = "invite";
 let c39 = null;
 const size = fn(2);
@@ -541,12 +541,12 @@ export default {
                     closure_2 = closure_1_2;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F93357 */ function() { ... });
+                      let nextPromise = resolved.then(/* F93601 */ function() { ... });
                     } else {
                       let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
                       closure_2_1(closure_2_3[39]).dispatch(obj2);
                       let tmp4Result = closure_2_1(closure_2_3[39]);
-                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F93358 */ function() { ... });
+                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F93602 */ function() { ... });
                       let promise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2);
                     }
                     return nextPromise;
@@ -618,7 +618,7 @@ export default {
       const obj2 = { type: "INVITE_RESOLVE", code };
       tmp(572).dispatch(obj2);
       const tmpResult = tmp(572);
-      nextPromise = tmp(14702)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(14740)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -631,7 +631,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(14702)(code, arg1, arg2);
+      const promise = tmp(14740)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -683,7 +683,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -710,7 +710,7 @@ export default {
               if (0 === length) {
                 delete tmp6[tmp4];
               }
-              const HTTP = closure_0(1283).HTTP;
+              const HTTP = closure_0(1282).HTTP;
               const request = { url: closure_1_24.INSTANT_INVITES(closure_0), body: obj4, context: null, rejectWithError: true };
               const obj6 = { location: _location };
               request.context = obj6;
@@ -724,7 +724,7 @@ export default {
             closure_128_1 = _location;
             const obj8 = { type: "INSTANT_INVITE_CREATE_FAILURE", channelId: closure_129_0 };
             tmp3(572).dispatch(obj8);
-            const tmp30 = new tmp3(6441)(closure_128_1);
+            const tmp30 = new tmp3(6447)(closure_128_1);
             throw tmp30;
           } else if (arg0 === 1) {
             c5 = 3;
@@ -790,7 +790,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -816,13 +816,13 @@ export default {
                 }
                 dependencyMap = 3;
               } else {
-                const HTTP = _location(1283).HTTP;
+                const HTTP = _location(1282).HTTP;
                 const obj4 = { url: constants.FRIEND_INVITES, context: null, rejectWithError: null };
                 const obj7 = { location: _location };
                 obj4.context = obj7;
-                obj4.rejectWithError = _location(1283).rejectWithMigratedError();
+                obj4.rejectWithError = _location(1282).rejectWithMigratedError();
                 value = HTTP.get(obj4);
-                const obj5 = _location(1283);
+                const obj5 = _location(1282);
                 const obj8 = { type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: null };
                 const _Date = Date;
                 const date = new Date();
@@ -900,10 +900,10 @@ export default {
   fetchFriendMembers(arg0) {
     closure_0 = arg0;
     return (async () => {
-      await tmp3(6741).get({
+      await tmp3(6747).get({
         url: closure_1_24.INVITE_FRIEND_MEMBERS(code),
         trackedActionData: {
-          event: code(1261).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
+          event: code(1260).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
           properties(body) {
             const obj2 = { code, friend_count: null };
             let num;
@@ -949,11 +949,11 @@ export default {
     const code = invite.code;
     const channel = invite.channel;
     const obj2 = { url: closure_24.INVITE(code), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    const obj = channel(6741);
-    obj2.trackedActionData = { event: code(1261).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
-    const obj3 = { event: code(1261).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
-    obj2.rejectWithError = code(1283).rejectWithMigratedError();
-    const obj4 = code(1283);
+    const obj = channel(6747);
+    obj2.trackedActionData = { event: code(1260).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
+    const obj3 = { event: code(1260).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
+    obj2.rejectWithError = code(1282).rejectWithMigratedError();
+    const obj4 = code(1282);
     return obj.delete(obj2).then(() => {
       DispatcherDefault.dispatch({ type: "INSTANT_INVITE_REVOKE_SUCCESS", code, channelId: channel.id });
     });
@@ -1026,7 +1026,7 @@ export default {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -1847,27 +1847,27 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(14705).onOpenHubInvite(flags);
-        const obj6 = obj(14705);
+        obj(14743).onOpenHubInvite(flags);
+        const obj6 = obj(14743);
       }
     }
     let num = flags.flags;
     if (num == null) {
       num = 0;
     }
-    let hasFlagResult = dMFromUserId(1397).hasFlag(num, dMFromUserId(8950).GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = dMFromUserId(1396).hasFlag(num, dMFromUserId(8959).GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp6(1397).hasFlag(num, tmp6(8950).GuildInviteFlags.IS_APPLICATION_BYPASS);
-      const tmp6Result = tmp6(1397);
+      hasFlagResult = tmp6(1396).hasFlag(num, tmp6(8959).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      const tmp6Result = tmp6(1396);
     }
     if (null != guild) {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(14706).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(14706);
+            const result1 = tmp6(14744).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(14744);
           }
-          tmp6Result3 = tmp6(14706);
+          tmp6Result3 = tmp6(14744);
         }
       }
     }
@@ -2218,7 +2218,7 @@ export default {
         }
       });
     }
-    const obj2 = dMFromUserId(1397);
+    const obj2 = dMFromUserId(1396);
   },
   openNativeAppModal(inviteKey) {
     const result = InviteCodeUtils.parseExtraDataFromInviteKey(inviteKey);
@@ -2272,21 +2272,21 @@ export default {
       targetChannelId = result.targetChannelId;
     }
     DispatcherDefault.dispatch({ type: "INVITE_APP_OPENING", code });
-    if (null != _modDef5867.ua) {
-      const formatted = _modDef5867.ua.toLowerCase();
+    if (null != _modDef5872.ua) {
+      const formatted = _modDef5872.ua.toLowerCase();
       if (formatted.indexOf("googlebot") > -1) {
         const obj6 = { type: "INVITE_APP_NOT_OPENED", code };
         DispatcherDefault.dispatch(obj6);
         const tmp7Result = DispatcherDefault;
       }
     }
-    const os = _modDef5867.os;
+    const os = _modDef5872.os;
     let family;
     if (os != null) {
       family = os.family;
     }
     if ("Android" !== family) {
-      const os2 = _modDef5867.os;
+      const os2 = _modDef5872.os;
       let family1;
       if (os2 != null) {
         family1 = os2.family;
@@ -2330,9 +2330,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(14708).generateAttemptId();
+    const attemptId = tmp18(14746).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(14708);
+    const tmp18Result = tmp18(14746);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }
@@ -2362,12 +2362,12 @@ export default {
     const tmp7Result5 = generateDynamicLinkDefault;
     const obj8 = { fingerprint: null, attempt_id: null, source: null, invite_code: null };
     const tmp7Result6 = AnalyticsUtilsDefault;
-    obj8.fingerprint = tmp18(1266).maybeExtractId(fingerprint);
+    obj8.fingerprint = tmp18(1265).maybeExtractId(fingerprint);
     obj8.attempt_id = attemptId;
     obj8.source = invite;
     obj8.invite_code = baseCode;
     tmp7Result6.track(constants3.DEEP_LINK_CLICKED, obj8);
-    const tmp18Result2 = tmp18(1266);
+    const tmp18Result2 = tmp18(1265);
   },
   setReceivedInstallationIdForInviteCode(inviteCode, receivedInstallationId) {
     DispatcherDefault.dispatch({ type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET", inviteCode, receivedInstallationId });

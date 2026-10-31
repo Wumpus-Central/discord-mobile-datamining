@@ -1,20 +1,20 @@
-// === Module 16502: TryItOutEditableTileBannerImageButton ===
+// === Module 16544: TryItOutEditableTileBannerImageButton ===
 
-// Module 16502 (TryItOutEditableTileBannerImageButton)
+// Module 16544 (TryItOutEditableTileBannerImageButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import UserSettings from "UserSettings" /* 4834 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8749 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 16494 */;
-import useDesaturatedUserColorValueDefault from "useDesaturatedUserColorValue" /* 16503 */;
-import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 16504 */;
+import util from "util" /* 1113 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import UserSettings from "UserSettings" /* 4839 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8757 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 16536 */;
+import useDesaturatedUserColorValueDefault from "useDesaturatedUserColorValue" /* 16545 */;
+import UserProfileEditableTileBaseDefault from "UserProfileEditableTileBase" /* 16546 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8723 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
 
 require = fn;
 function EditableTileBannerImageButtonBase(bannerChange) {
@@ -66,7 +66,7 @@ function EditableTileBannerImageButtonBase(bannerChange) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const ColorUtils = fn(1091);
+const ColorUtils = fn(1090);
 let closure_9 = ColorUtils.hex2int(nativeDefault.unsafe_rawColors.PRIMARY_800);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/TryItOutEditableTileBannerImageButton.tsx");

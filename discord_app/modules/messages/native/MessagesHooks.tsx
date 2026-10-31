@@ -1,26 +1,26 @@
-// === Module 11511: MessagesHooks ===
+// === Module 11545: MessagesHooks ===
 
-// Module 11511 (MessagesHooks)
+// Module 11545 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6875 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7871 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9873 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11512 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11513 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7878 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9894 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11546 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11547 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10096 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6768 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PresenceStore from "PresenceStore" /* 5756 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10116 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6774 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PresenceStore from "PresenceStore" /* 5761 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9874).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9895).updateShouldShowJumpToPresentButton;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 

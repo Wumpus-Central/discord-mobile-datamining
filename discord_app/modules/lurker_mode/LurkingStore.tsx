@@ -1,12 +1,12 @@
-// === Module 4942: LurkingStore ===
+// === Module 4947: LurkingStore ===
 
-// Module 4942 (LurkingStore)
+// Module 4947 (LurkingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRecord from "GuildRecord" /* 4876 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import UserStore from "UserStore" /* 1384 */;
+import GuildRecord from "GuildRecord" /* 4881 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import UserStore from "UserStore" /* 1383 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

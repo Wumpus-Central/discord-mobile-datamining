@@ -1,6 +1,6 @@
-// === Module 1092: ApplicationDistributors ===
+// === Module 1091: ApplicationDistributors ===
 
-// Module 1092 (ApplicationDistributors)
+// Module 1091 (ApplicationDistributors)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationDistributors.tsx");

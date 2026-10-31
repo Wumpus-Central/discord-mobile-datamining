@@ -1,27 +1,27 @@
-// === Module 17194: SettingsAppearanceThemeCarousel ===
+// === Module 17251: SettingsAppearanceThemeCarousel ===
 
-// Module 17194 (SettingsAppearanceThemeCarousel)
+// Module 17251 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5245 */;
-import timing from "timing" /* 5249 */;
-import timingPresets from "timingPresets" /* 5252 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5250 */;
+import timing from "timing" /* 5254 */;
+import timingPresets from "timingPresets" /* 5257 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17195 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17252 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
-const HexagonCampaignConstants = fn(5034);
+const HexagonCampaignConstants = fn(5039);
 ({ HexagonCampaignPerk: closure_9, HexagonCampaignPerkAvailability: c10 } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let closure_14 = ReanimatedRexport.createAnimatedComponent(fn(1188).Icon);
-const createStyles = fn(5009);
+let closure_14 = ReanimatedRexport.createAnimatedComponent(fn(1187).Icon);
+const createStyles = fn(5014);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, hintContainer: { alignSelf: "stretch" }, hintOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, hidden: { opacity: 0 }, labelGroup: null, swatchesGroup: null, badgeSlot: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };

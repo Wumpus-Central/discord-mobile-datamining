@@ -1,15 +1,15 @@
-// === Module 9316: botScopedAccess ===
+// === Module 9336: botScopedAccess ===
 
-// Module 9316 (botScopedAccess)
+// Module 9336 (botScopedAccess)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8901 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 9307 */;
-import RPCErrorDefault from "RPCError" /* 9313 */;
-import validateScopeDefault from "validateScope" /* 9315 */;
-import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9317 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8910 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 9327 */;
+import RPCErrorDefault from "RPCError" /* 9333 */;
+import validateScopeDefault from "validateScope" /* 9335 */;
+import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 9337 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
 
 require = fn;
 const Constants = fn(1072);

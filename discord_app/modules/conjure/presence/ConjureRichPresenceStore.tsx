@@ -1,19 +1,19 @@
-// === Module 11493: ConjureRichPresenceStore ===
+// === Module 11527: ConjureRichPresenceStore ===
 
-// Module 11493 (ConjureRichPresenceStore)
+// Module 11527 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ActivityTypes from "ActivityTypes" /* 5757 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6873 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10737 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ActivityTypes from "ActivityTypes" /* 5762 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6879 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import IdleStore from "IdleStore" /* 6699 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
-import ConjurePagesStore from "ConjurePagesStore" /* 11494 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
+import IdleStore from "IdleStore" /* 6705 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import ConjurePagesStore from "ConjurePagesStore" /* 11528 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -217,7 +217,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_12);
                         details = closure_1_12.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F99227 */ function() { ... });
+                        let found = prop.filter(/* F99479 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -228,7 +228,7 @@ function updateActivity(withGracePeriod) {
                           timeout = null;
                         }
                         let _setTimeout = setTimeout;
-                        timeout = setTimeout(/* F99228 */ function() { ... }, closure_1_10);
+                        timeout = setTimeout(/* F99480 */ function() { ... }, closure_1_10);
                         closure_1_20.emitChange();
                       }
                     }, closure_1_10);
@@ -268,7 +268,7 @@ let closure_18 = async function _fetchOwnedProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -383,7 +383,7 @@ let closure_19 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -449,7 +449,7 @@ let closure_19 = async function _resumeRunningProjects() {
     }
   }
 };
-const StaticChannelRoute = fn(4865).StaticChannelRoute;
+const StaticChannelRoute = fn(4870).StaticChannelRoute;
 let c10 = 300000;
 let c11 = null;
 let c12 = null;

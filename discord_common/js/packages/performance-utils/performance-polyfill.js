@@ -162,7 +162,9 @@ if (!tmp6.clearMeasures) {
     }
   });
 }
-global.performance = tmp6;
+if (global.performance !== tmp6) {
+  global.performance = tmp6;
+}
 let tmp7 = typeof globalThis.define === "function";
 if (typeof globalThis.define === "function") {
   let ajs = globalThis.define.amd;

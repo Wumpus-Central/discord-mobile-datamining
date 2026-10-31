@@ -1,38 +1,38 @@
-// === Module 9720: useOAuth2AuthorizeForm ===
+// === Module 9740: useOAuth2AuthorizeForm ===
 
-// Module 9720 (useOAuth2AuthorizeForm)
+// Module 9740 (useOAuth2AuthorizeForm)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5646 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6875 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6947 */;
-import Authorize from "Authorize" /* 9722 */;
-import scopes2 from "scopes" /* 9723 */;
-import SamsungManagerDefault from "SamsungManager" /* 9724 */;
-import permissions2 from "permissions" /* 9732 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5651 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6881 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
+import Authorize from "Authorize" /* 9742 */;
+import scopes2 from "scopes" /* 9743 */;
+import SamsungManagerDefault from "SamsungManager" /* 9744 */;
+import permissions2 from "permissions" /* 9752 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4956 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import ApplicationRecord from "ApplicationRecord" /* 2017 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
-import UserStore from "UserStore" /* 1384 */;
+import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4961 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import ApplicationRecord from "ApplicationRecord" /* 2016 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let Constants = fn(9721);
+let Constants = fn(9741);
 ({ EMOJI_POINTING_DOWN_CODE_POINT: map1, OAuth2Steps: closure_14 } = Constants);
 Constants = fn(1072);
 ({ AnalyticEvents: closure_15, Endpoints: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_20 = createStyles.createStyles({ loading: { flex: 1, alignSelf: "center", justifyContent: "center" } });
 let __initData = { code: "function useOAuth2AuthorizeFormTsx1(){const{shouldReduceMotion,withSequence,withTiming,Easing,withRepeat}=this.__closure;const TOTAL=500;if(shouldReduceMotion)return{};return{transform:[{translateY:withSequence(withTiming(-5,{duration:TOTAL/2,easing:Easing.inOut(Easing.quad)}),withRepeat(withTiming(5,{duration:TOTAL,easing:Easing.inOut(Easing.quad)}),-1,true))}]};}" };
 const size = fn(2);
@@ -380,7 +380,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -496,7 +496,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -714,13 +714,13 @@ export default function useOAuth2AuthorizeForm(clientId) {
     if (first9) {
       const result = responseType(codeChallenge[22]).showConnectionDisclaimer();
       const obj2 = responseType(codeChallenge[22]);
-      const nextPromise = result.then(() => responseType(9724).getAccountUrlAndAuthCode());
-      const nextPromise1 = result.then(() => responseType(9724).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise = result.then(() => responseType(9744).getAccountUrlAndAuthCode());
+      const nextPromise1 = result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
       });
-      const nextPromise2 = result.then(() => responseType(9724).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise2 = result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -729,7 +729,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const items = [tmp, callback2(closure_0)];
         return Promise.all(items);
       });
-      const nextPromise3 = result.then(() => responseType(9724).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise3 = result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -741,7 +741,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         [tmp, tmp2] = result;
         return responseType(codeChallenge[22]).finishSamsungAuthorization(tmp, tmp2, text1);
       });
-      result.then(() => responseType(9724).getAccountUrlAndAuthCode()).then((result) => {
+      result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -759,9 +759,9 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
         return tmp;
       }).catch((error) => {
-        responseType(1243).captureException(error);
+        responseType(1242).captureException(error);
       });
-      const nextPromise4 = result.then(() => responseType(9724).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise4 = result.then(() => responseType(9744).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -797,7 +797,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

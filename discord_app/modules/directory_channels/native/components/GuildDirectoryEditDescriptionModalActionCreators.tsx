@@ -1,8 +1,8 @@
-// === Module 13812: GuildDirectoryEditDescriptionModalActionCreators ===
+// === Module 13847: GuildDirectoryEditDescriptionModalActionCreators ===
 
-// Module 13812 (GuildDirectoryEditDescriptionModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+// Module 13847 (GuildDirectoryEditDescriptionModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "GUILD_DIRECTORY_EDIT_DESCRIPTION_MODAL_KEY";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/directory_channels/native/com
 
 export default {
   open(merged) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13813, dependencyMap.paths), merged, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13848, dependencyMap.paths), merged, c3);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(c3);

@@ -1,19 +1,19 @@
-// === Module 19268: VoicePanelDrawerToggleButton ===
+// === Module 19324: VoicePanelDrawerToggleButton ===
 
-// Module 19268 (VoicePanelDrawerToggleButton)
+// Module 19324 (VoicePanelDrawerToggleButton)
 import nativeDefault from "native" /* 575 */;
-import NativeViewDefault from "NativeView" /* 6954 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11377 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 15419 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 19233 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 19247 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19248 */;
+import NativeViewDefault from "NativeView" /* 6960 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11413 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 15458 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 19289 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 19303 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19304 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;

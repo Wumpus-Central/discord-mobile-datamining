@@ -1,8 +1,8 @@
-// === Module 11939: beginConsoleTransfer ===
+// === Module 11977: beginConsoleTransfer ===
 
-// Module 11939 (beginConsoleTransfer)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11940 */;
-import transferToXboxDefault from "transferToXbox" /* 11952 */;
+// Module 11977 (beginConsoleTransfer)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11978 */;
+import transferToXboxDefault from "transferToXbox" /* 11990 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp35) {
       c5 = tmp;
       throw tmp35;

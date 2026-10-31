@@ -1,11 +1,11 @@
-// === Module 19108: useTransitionToConnectedActivityInVoice ===
+// === Module 19157: useTransitionToConnectedActivityInVoice ===
 
-// Module 19108 (useTransitionToConnectedActivityInVoice)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+// Module 19157 (useTransitionToConnectedActivityInVoice)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
 
 require = fn;
 const ComponentActions = fn(1072).ComponentActions;
@@ -41,7 +41,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -76,20 +76,20 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  embeddedActivityLocationChannelId = handler(4930).getEmbeddedActivityLocationChannelId(_location2);
+                  embeddedActivityLocationChannelId = handler(4935).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(5673)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(5678)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(11712)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(11749)(obj5), done: false };
                         return obj6;
                       }
                     }
                   }
                   c4 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else if (arg0 === 1) {
                 c4 = 3;
@@ -107,7 +107,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(11660)(closure_1_3, _location);
+                closure_3_1(11697)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

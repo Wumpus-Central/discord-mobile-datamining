@@ -1,7 +1,7 @@
-// === Module 18840: openConjureDeleteAppChannelAlert ===
+// === Module 18886: openConjureDeleteAppChannelAlert ===
 
-// Module 18840 (openConjureDeleteAppChannelAlert)
-import useAlertStore from "useAlertStore" /* 5955 */;
+// Module 18886 (openConjureDeleteAppChannelAlert)
+import useAlertStore from "useAlertStore" /* 5960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -44,7 +44,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(13230)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(13265)(conjureServerApp), done: false };
                 return obj4;
               }
             }
@@ -58,8 +58,8 @@ function ConjureDeleteAppChannelAlert(arg0) {
           if (value) {
             closure_129_1();
           } else {
-            const intl = tmp3(1114).intl;
-            closure_128_0 = intl.string(tmp2(3865).PJ2Fkn);
+            const intl = tmp3(1113).intl;
+            closure_128_0 = intl.string(tmp2(3868).PJ2Fkn);
             closure_129_5(closure_128_0);
             const _Error = Error;
             const error = new Error(closure_128_0);
@@ -94,7 +94,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
   let intl = require("util").intl;
   obj2.title = intl.string(require("util").t["8D8Rsb"]);
   const tmp6 = checked(noop.useState(null), 2);
-  obj2.content = require("ConjureRemovedItems").formatWithAppTag(require("module_3865")["HmNT/r"], conjureServerApp.targetAppName);
+  obj2.content = require("ConjureRemovedItems").formatWithAppTag(require("module_3868")["HmNT/r"], conjureServerApp.targetAppName);
   if (items.length > 0) {
     let tmp8Result = null;
     if (items.length > 0) {

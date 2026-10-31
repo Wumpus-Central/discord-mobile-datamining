@@ -1,21 +1,21 @@
-// === Module 16222: AccessibilityManager ===
+// === Module 16263: AccessibilityManager ===
 
-// Module 16222 (AccessibilityManager)
+// Module 16263 (AccessibilityManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5074 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11208 */;
-import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 16223 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 16224 */;
-import updateSaturation from "updateSaturation" /* 16226 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5079 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11227 */;
+import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 16264 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 16265 */;
+import updateSaturation from "updateSaturation" /* 16267 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: closure_4, Appearance: hasOwnProperty } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SystemTheme = fn(1196).SystemTheme;
+const SystemTheme = fn(1195).SystemTheme;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 
@@ -56,7 +56,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -89,7 +89,7 @@ export default {
             closure_128_0 = value;
             const result = closure_129_0.updateScreenReaderEnabled(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c3 = tmp;

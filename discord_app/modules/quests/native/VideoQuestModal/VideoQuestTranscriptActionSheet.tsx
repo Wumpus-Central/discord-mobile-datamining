@@ -1,19 +1,19 @@
-// === Module 17060: VideoQuestTranscriptActionSheet ===
+// === Module 17118: VideoQuestTranscriptActionSheet ===
 
-// Module 17060 (VideoQuestTranscriptActionSheet)
+// Module 17118 (VideoQuestTranscriptActionSheet)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import QuestActionCreators from "QuestActionCreators" /* 9662 */;
-import AssetUtils from "AssetUtils" /* 9675 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import QuestActionCreators from "QuestActionCreators" /* 9682 */;
+import AssetUtils from "AssetUtils" /* 9695 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const VideoQuestUIStore = fn(7841);
+const VideoQuestUIStore = fn(7848);
 ({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: metroRequire } = VideoQuestUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_8 }, loadingSpinner: { height: 100 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -68,9 +68,9 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }, items1);
   let obj = { scrollable: true, header: null, children: null };
   const obj2 = { title: null };
-  const intl = quest(1114).intl;
-  obj2.title = intl.string(quest(1114).t["1YS80z"]);
-  obj.header = closure_7(quest(7315).BottomSheetTitleHeader, obj2);
+  const intl = quest(1113).intl;
+  obj2.title = intl.string(quest(1113).t["1YS80z"]);
+  obj.header = closure_7(quest(7321).BottomSheetTitleHeader, obj2);
   const obj3 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj4 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -84,7 +84,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }
   const items2 = [tmp7Result, memo.length > 0 && memo.map((children, index) => closure_1_7(quest(dependencyMap[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, index))];
   obj4.children = items2;
-  obj3.children = closure_8(quest(6022).Stack, obj4);
-  obj.children = closure_7(quest(5270).BottomSheetScrollView, obj3);
-  return closure_7(quest(7360).ActionSheet, obj);
+  obj3.children = closure_8(quest(6027).Stack, obj4);
+  obj.children = closure_7(quest(5275).BottomSheetScrollView, obj3);
+  return closure_7(quest(7366).ActionSheet, obj);
 };

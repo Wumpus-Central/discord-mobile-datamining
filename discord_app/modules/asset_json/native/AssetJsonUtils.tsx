@@ -1,7 +1,8 @@
-// === Module 1118: AssetJsonUtils ===
+// === Module 1117: AssetJsonUtils ===
 
-// Module 1118 (AssetJsonUtils)
-import _mod1119 from "module_1119" /* 1119 */;
+// Module 1117 (AssetJsonUtils)
+import _mod1118 from "module_1118" /* 1118 */;
+import _mod1120 from "module_1120" /* 1120 */;
 import _mod1121 from "module_1121" /* 1121 */;
 import _mod1122 from "module_1122" /* 1122 */;
 import _mod1123 from "module_1123" /* 1123 */;
@@ -30,7 +31,6 @@ import _mod1145 from "module_1145" /* 1145 */;
 import _mod1146 from "module_1146" /* 1146 */;
 import _mod1147 from "module_1147" /* 1147 */;
 import _mod1148 from "module_1148" /* 1148 */;
-import _mod1149 from "module_1149" /* 1149 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -55,7 +55,7 @@ let closure_7 = async function _loadJsonAsset(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -148,94 +148,94 @@ const result = size.fileFinishedImporting("modules/asset_json/native/AssetJsonUt
 
 export const jsonAssets = {
   i18n_bg() {
-    return loadJsonAsset(_mod1119);
+    return loadJsonAsset(_mod1118);
   },
   i18n_cs() {
-    return loadJsonAsset(_mod1121);
+    return loadJsonAsset(_mod1120);
   },
   i18n_da() {
-    return loadJsonAsset(_mod1122);
+    return loadJsonAsset(_mod1121);
   },
   i18n_de() {
-    return loadJsonAsset(_mod1123);
+    return loadJsonAsset(_mod1122);
   },
   i18n_el() {
-    return loadJsonAsset(_mod1124);
+    return loadJsonAsset(_mod1123);
   },
   i18n_enGB() {
-    return loadJsonAsset(_mod1125);
+    return loadJsonAsset(_mod1124);
   },
   i18n_esES() {
-    return loadJsonAsset(_mod1126);
+    return loadJsonAsset(_mod1125);
   },
   i18n_es419() {
-    return loadJsonAsset(_mod1127);
+    return loadJsonAsset(_mod1126);
   },
   i18n_fi() {
-    return loadJsonAsset(_mod1128);
+    return loadJsonAsset(_mod1127);
   },
   i18n_fr() {
-    return loadJsonAsset(_mod1129);
+    return loadJsonAsset(_mod1128);
   },
   i18n_hr() {
-    return loadJsonAsset(_mod1130);
+    return loadJsonAsset(_mod1129);
   },
   i18n_hu() {
-    return loadJsonAsset(_mod1131);
+    return loadJsonAsset(_mod1130);
   },
   i18n_it() {
-    return loadJsonAsset(_mod1132);
+    return loadJsonAsset(_mod1131);
   },
   i18n_ja() {
-    return loadJsonAsset(_mod1133);
+    return loadJsonAsset(_mod1132);
   },
   i18n_ko() {
-    return loadJsonAsset(_mod1134);
+    return loadJsonAsset(_mod1133);
   },
   i18n_lt() {
-    return loadJsonAsset(_mod1135);
+    return loadJsonAsset(_mod1134);
   },
   i18n_nl() {
-    return loadJsonAsset(_mod1136);
+    return loadJsonAsset(_mod1135);
   },
   i18n_no() {
-    return loadJsonAsset(_mod1137);
+    return loadJsonAsset(_mod1136);
   },
   i18n_pl() {
-    return loadJsonAsset(_mod1138);
+    return loadJsonAsset(_mod1137);
   },
   i18n_ptBR() {
-    return loadJsonAsset(_mod1139);
+    return loadJsonAsset(_mod1138);
   },
   i18n_ro() {
-    return loadJsonAsset(_mod1140);
+    return loadJsonAsset(_mod1139);
   },
   i18n_ru() {
-    return loadJsonAsset(_mod1141);
+    return loadJsonAsset(_mod1140);
   },
   i18n_svSE() {
-    return loadJsonAsset(_mod1142);
+    return loadJsonAsset(_mod1141);
   },
   i18n_th() {
-    return loadJsonAsset(_mod1143);
+    return loadJsonAsset(_mod1142);
   },
   i18n_tr() {
-    return loadJsonAsset(_mod1144);
+    return loadJsonAsset(_mod1143);
   },
   i18n_uk() {
-    return loadJsonAsset(_mod1145);
+    return loadJsonAsset(_mod1144);
   },
   i18n_vi() {
-    return loadJsonAsset(_mod1146);
+    return loadJsonAsset(_mod1145);
   },
   i18n_zhCN() {
-    return loadJsonAsset(_mod1147);
+    return loadJsonAsset(_mod1146);
   },
   i18n_zhTW() {
-    return loadJsonAsset(_mod1148);
+    return loadJsonAsset(_mod1147);
   },
   i18n_hi() {
-    return loadJsonAsset(_mod1149);
+    return loadJsonAsset(_mod1148);
   }
 };
 export { loadJsonAsset };

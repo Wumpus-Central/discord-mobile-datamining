@@ -1,14 +1,14 @@
-// === Module 13931: MultiAccountActionCreators ===
+// === Module 13966: MultiAccountActionCreators ===
 
-// Module 13931 (MultiAccountActionCreators)
+// Module 13966 (MultiAccountActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TokenManagerAll from "TokenManager" /* 1099 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6734 */;
+import TokenManagerAll from "TokenManager" /* 1098 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6740 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MultiAccountStore from "MultiAccountStore" /* 13927 */;
+import MultiAccountStore from "MultiAccountStore" /* 13962 */;
 
 const require = fn;
 const Constants = fn(1072);
@@ -31,7 +31,7 @@ export function validateMultiAccountTokens() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -74,7 +74,7 @@ export function validateMultiAccountTokens() {
                   const obj8 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: id2 };
                   DispatcherDefault.dispatch(obj8);
                   c5 = 1;
-                  const HTTP = closure_0(1283).HTTP;
+                  const HTTP = closure_0(1282).HTTP;
                   const obj9 = { url: constants2.ME, headers: null, retries: 3, rejectWithError: false };
                   const obj10 = { authorization: token };
                   obj9.headers = obj10;

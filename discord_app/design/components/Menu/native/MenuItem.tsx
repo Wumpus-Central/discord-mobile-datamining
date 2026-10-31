@@ -1,15 +1,15 @@
-// === Module 15778: MenuItem ===
+// === Module 15818: MenuItem ===
 
-// Module 15778 (MenuItem)
-import IconDefault from "Icon" /* 5631 */;
-import FormRowDefault from "FormRow" /* 7303 */;
-import FormLabelDefault from "FormLabel" /* 7305 */;
-import Menu from "Menu" /* 15772 */;
+// Module 15818 (MenuItem)
+import IconDefault from "Icon" /* 5636 */;
+import FormRowDefault from "FormRow" /* 7309 */;
+import FormLabelDefault from "FormLabel" /* 7311 */;
+import Menu from "Menu" /* 15812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_5 = createStyles.createStyles({ formIcon: { width: 20, height: 20 }, formLabel: { fontSize: 14, fontWeight: "500" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");

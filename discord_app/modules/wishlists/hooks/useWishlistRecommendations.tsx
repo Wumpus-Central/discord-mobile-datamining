@@ -1,17 +1,17 @@
-// === Module 10644: useWishlistRecommendations ===
+// === Module 10664: useWishlistRecommendations ===
 
-// Module 10644 (useWishlistRecommendations)
+// Module 10664 (useWishlistRecommendations)
 import _mod12 from "module_12" /* 12 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8750 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9456 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8758 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9478 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import WishlistRecommendationsStore from "WishlistRecommendationsStore" /* 10645 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7399 */;
+import WishlistRecommendationsStore from "WishlistRecommendationsStore" /* 10665 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7405 */;
 
 require = fn;
 function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
@@ -225,7 +225,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
   const getOrFetchStorefrontPricesForSkuIds = userIdsAndWishlistIds(memo3[13]).useGetOrFetchStorefrontPricesForSkuIds({ skuIds: memo7 });
   return { recommendations, wishlistAndRecommendations, skusToUserAndReason: skusToUserAndReason.combinedSkusToUserAndReason, status };
 }
-let closure_8 = fn(7399).WishlistRecommendationReason;
+let closure_8 = fn(7405).WishlistRecommendationReason;
 let closure_9 = 30 * DurationsDefault.Millis.MINUTE;
 let combinedSkusToUserAndReason = { state: "success", data: new WishlistRecommendationRecord({ skus: [], skus_to_user_and_reason: {}, applications: [] }), fetchedAt: 0 };
 const size = fn(2);
@@ -234,7 +234,7 @@ const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistRe
 export function useWishlistRecommendationsForSingleUser(arg0) {
   ({ userId, numItems, source } = arg0);
   if (source === undefined) {
-    source = userId(9455).WishlistFetchSource.USER_PROFILE;
+    source = userId(9477).WishlistFetchSource.USER_PROFILE;
   }
   const items = [userId];
   const effect = noop.useEffect(() => {
@@ -253,13 +253,13 @@ export function useWishlistRecommendationsForSingleUser(arg0) {
     source: null
   };
   const obj = userId(504);
-  obj2.applicationIds = userId(10646).useWishlistApplicationIds(userId);
+  obj2.applicationIds = userId(10666).useWishlistApplicationIds(userId);
   obj2.numItems = numItems;
   obj2.source = source;
-  const obj3 = userId(10646);
+  const obj3 = userId(10666);
   ({ skusToUserAndReason, wishlistAndRecommendations, status } = useWishlistRecommendationsWithWishlists(obj2));
   const tmp4 = useWishlistRecommendationsWithWishlists(obj2);
-  const wishlistSkuFilter = userId(10647).useWishlistSkuFilter({ wishlistAndRecommendations, skusToUserAndReason, userId, numItems });
+  const wishlistSkuFilter = userId(10667).useWishlistSkuFilter({ wishlistAndRecommendations, skusToUserAndReason, userId, numItems });
   return { wishlistAndRecommendations: wishlistSkuFilter.slicedWishlistAndRecommendations, skusToUserAndReason, status, defaultWishlistId, totalUnownedWishlistItemCount: wishlistSkuFilter.totalUnownedWishlistItemCount };
 }
 export function useRecommendationsForApplicationIds(userIds) {
@@ -313,7 +313,7 @@ export function useRecommendationsForSingleUser(source) {
   userId = numItems;
   let USER_PROFILE = source.source;
   if (USER_PROFILE === undefined) {
-    USER_PROFILE = userId(9455).WishlistFetchSource.USER_PROFILE;
+    USER_PROFILE = userId(9477).WishlistFetchSource.USER_PROFILE;
   }
   const obj = { userIdsAndWishlistIds: null, applicationIds: null, numItems: null, source: null };
   let items = [userId];
@@ -328,7 +328,7 @@ export function useRecommendationsForSingleUser(source) {
     return items;
   }, items2);
   const obj2 = userId(504);
-  obj.applicationIds = userId(10646).useWishlistApplicationIds(userId);
+  obj.applicationIds = userId(10666).useWishlistApplicationIds(userId);
   obj.numItems = numItems;
   obj.source = USER_PROFILE;
   const tmp4 = useWishlistRecommendationsWithWishlists(obj);

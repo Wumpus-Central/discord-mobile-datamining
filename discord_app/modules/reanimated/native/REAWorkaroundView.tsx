@@ -1,9 +1,9 @@
-// === Module 5091: REAWorkaroundView ===
+// === Module 5096: REAWorkaroundView ===
 
-// Module 5091 (REAWorkaroundView)
+// Module 5096 (REAWorkaroundView)
 import jsxProd from "jsxProd" /* 21 */;
-import ReanimatedViewNativeComponentDefault from "ReanimatedViewNativeComponent" /* 5092 */;
-import cancelAnimation from "cancelAnimation" /* 1651 */;
+import ReanimatedViewNativeComponentDefault from "ReanimatedViewNativeComponent" /* 5097 */;
+import cancelAnimation from "cancelAnimation" /* 1650 */;
 import size from "module_2" /* 2 */;
 
 class ComponentWrapper {

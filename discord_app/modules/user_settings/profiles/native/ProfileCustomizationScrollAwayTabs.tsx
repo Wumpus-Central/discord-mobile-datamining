@@ -1,6 +1,6 @@
-// === Module 16523: ProfileCustomizationScrollAwayTabs ===
+// === Module 16565: ProfileCustomizationScrollAwayTabs ===
 
-// Module 16523 (ProfileCustomizationScrollAwayTabs)
+// Module 16565 (ProfileCustomizationScrollAwayTabs)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, overflow: "hidden" }, header: null };
 const rect = { position: "absolute", zIndex: 1, top: 0, left: 0, right: 0, paddingTop: nativeDefault.space.PX_4 };
 obj2.header = rect;

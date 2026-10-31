@@ -1,6 +1,6 @@
-// === Module 10606: useTimeout ===
+// === Module 10626: useTimeout ===
 
-// Module 10606 (useTimeout)
+// Module 10626 (useTimeout)
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

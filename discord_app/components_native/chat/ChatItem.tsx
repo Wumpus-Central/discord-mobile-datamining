@@ -1,17 +1,17 @@
-// === Module 9864: ChatItem ===
+// === Module 9885: ChatItem ===
 
-// Module 9864 (ChatItem)
+// Module 9885 (ChatItem)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import MessageTypes2 from "MessageTypes" /* 1089 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6882 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8702 */;
-import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 9865 */;
-import MessageViewNativeComponent from "MessageViewNativeComponent" /* 9866 */;
-import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 9867 */;
+import MessageTypes2 from "MessageTypes" /* 1088 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6888 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8710 */;
+import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 9886 */;
+import MessageViewNativeComponent from "MessageViewNativeComponent" /* 9887 */;
+import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 9888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 require = fn;
 function DCDChatItem(message) {
@@ -41,12 +41,12 @@ function DCDChatItem(message) {
 }
 const View = fn(17).View;
 const MessageTypes = fn(1072).MessageTypes;
-const RowGeneratorConstants = fn(8370);
+const RowGeneratorConstants = fn(8378);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_14 = createStyles.createStyles((marginLeft, marginTop, paddingTop) => {
   const obj = { container: { position: "relative", overflow: "hidden", paddingTop }, offset: { marginTop: -marginTop, marginLeft: -marginLeft }, gradient: { position: "absolute", bottom: 0, height: 24, width: "100%" }, itemRow: { backgroundColor: "transparent" } };
   return obj;
@@ -195,6 +195,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 };
-export const DCDMessageView = fn(9866).default;
-export const DCDSystemMessageView = fn(9867).default;
-export const DCDAutoModerationSystemMessageView = fn(9865).default;
+export const DCDMessageView = fn(9887).default;
+export const DCDSystemMessageView = fn(9888).default;
+export const DCDAutoModerationSystemMessageView = fn(9886).default;

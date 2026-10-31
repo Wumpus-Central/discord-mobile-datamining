@@ -1,18 +1,18 @@
-// === Module 16530: SettingsAccountHeader ===
+// === Module 16572: SettingsAccountHeader ===
 
-// Module 16530 (SettingsAccountHeader)
+// Module 16572 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import TableRow from "TableRow" /* 6969 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6989 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7161 */;
-import openUserSettings from "openUserSettings" /* 7557 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16531 */;
+import util from "util" /* 1113 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import TableRow from "TableRow" /* 6975 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6995 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 7167 */;
+import openUserSettings from "openUserSettings" /* 7563 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 16573 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function RestrictedAccountRedirect() {
@@ -27,10 +27,10 @@ function RestrictedAccountRedirect() {
 }
 const View = fn(17).View;
 const AnalyticsSections = fn(1072).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7484).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7490).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 const obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };

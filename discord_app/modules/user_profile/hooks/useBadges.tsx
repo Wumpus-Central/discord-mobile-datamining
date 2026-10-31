@@ -1,11 +1,11 @@
-// === Module 8807: useBadges ===
+// === Module 8815: useBadges ===
 
-// Module 8807 (useBadges)
+// Module 8815 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 4834 */;
-import StreamerModeStore from "StreamerModeStore" /* 5064 */;
-import UserStore from "UserStore" /* 1384 */;
+import util from "util" /* 1113 */;
+import UserSettings from "UserSettings" /* 4839 */;
+import StreamerModeStore from "StreamerModeStore" /* 5069 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const legacy_username = "legacy_username";

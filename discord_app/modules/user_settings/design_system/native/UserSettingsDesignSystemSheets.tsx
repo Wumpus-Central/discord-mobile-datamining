@@ -1,18 +1,18 @@
-// === Module 17757: UserSettingsDesignSystemSheets ===
+// === Module 17801: UserSettingsDesignSystemSheets ===
 
-// Module 17757 (UserSettingsDesignSystemSheets)
-import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import Card from "Card" /* 6971 */;
-import TextInput from "TextInput" /* 7076 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7315 */;
-import ActionSheet from "ActionSheet" /* 7360 */;
-import ActionSheetRow from "ActionSheetRow" /* 7362 */;
-import PromoSheet from "PromoSheet" /* 10817 */;
-import _modDef17758 from "module_17758" /* 17758 */;
+// Module 17801 (UserSettingsDesignSystemSheets)
+import util from "util" /* 1113 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import Card from "Card" /* 6977 */;
+import TextInput from "TextInput" /* 7082 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import ActionSheet from "ActionSheet" /* 7366 */;
+import ActionSheetRow from "ActionSheetRow" /* 7368 */;
+import PromoSheet from "PromoSheet" /* 10837 */;
+import _modDef17802 from "module_17802" /* 17802 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,13 +38,13 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     const obj2 = { onPress: NOOP, label: tmp12 };
-    tmp14Result = React5(tmp15(9001).ActionSheetHeaderPressableText, obj2);
+    tmp14Result = React5(tmp15(9010).ActionSheetHeaderPressableText, obj2);
   }
   obj.leading = tmp14Result;
   let tmp14Result2 = tmp2;
   if (tmp2) {
     const obj3 = { onPress: NOOP };
-    tmp14Result2 = React5(tmp15(7361).ActionSheetCloseButton, obj3);
+    tmp14Result2 = React5(tmp15(7367).ActionSheetCloseButton, obj3);
   }
   const obj4 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
   obj.trailing = tmp14Result2;
@@ -99,7 +99,7 @@ function DemoPromoSheet() {
   const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = React5(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef17758 };
+  obj3.src = { uri: _modDef17802 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return React5(PromoSheet.PromoSheet, obj2);
@@ -108,7 +108,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemSheets.tsx");

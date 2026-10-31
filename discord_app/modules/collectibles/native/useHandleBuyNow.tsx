@@ -1,6 +1,6 @@
-// === Module 15024: useHandleBuyNow ===
+// === Module 15061: useHandleBuyNow ===
 
-// Module 15024 (useHandleBuyNow)
+// Module 15061 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -26,7 +26,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -42,7 +42,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7712).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7719).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -54,12 +54,12 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_4(false);
-          v1(5253).hideAllActionSheets();
-          const obj = v1(5253);
+          v1(5258).hideAllActionSheets();
+          const obj = v1(5258);
           const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_2 };
-          v1(14443).open(obj8);
+          v1(14481).open(obj8);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -69,7 +69,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(14382)({
+  const tmp3 = onBuySettled(14420)({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -107,7 +107,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

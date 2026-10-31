@@ -1,7 +1,7 @@
-// === Module 11782: makeShellBridgeSecret ===
+// === Module 11819: makeShellBridgeSecret ===
 
-// Module 11782 (makeShellBridgeSecret)
-import v1 from "v1" /* 1267 */;
+// Module 11819 (makeShellBridgeSecret)
+import v1 from "v1" /* 1266 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/shim_host/native/makeShellBridgeSecret.tsx");

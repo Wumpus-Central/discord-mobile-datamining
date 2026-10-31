@@ -1,11 +1,11 @@
-// === Module 12254: useAnimatedScrollLock ===
+// === Module 12292: useAnimatedScrollLock ===
 
-// Module 12254 (useAnimatedScrollLock)
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+// Module 12292 (useAnimatedScrollLock)
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let closure_3 = PlatformUtils.isAndroid();
 let context = noop.createContext(null);
 let closure_5 = { code: "function onBeginDrag_useAnimatedScrollLockTsx1(_,context){const{isDragScrolling}=this.__closure;context.momentumEndCount=0;isDragScrolling.set(true);}" };

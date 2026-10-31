@@ -1,17 +1,17 @@
-// === Module 11229: ChatViewStickyHeader ===
+// === Module 11255: ChatViewStickyHeader ===
 
-// Module 11229 (ChatViewStickyHeader)
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11231 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11236 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11240 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11241 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11260 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11266 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11290 */;
-import PinotLazy from "PinotLazy" /* 11293 */;
-import ForumPostActionBarDefault from "ForumPostActionBar" /* 11312 */;
-import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11316 */;
-import ChatBannerDefault from "ChatBanner" /* 11319 */;
+// Module 11255 (ChatViewStickyHeader)
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11257 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11262 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11266 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11267 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11286 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11292 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11316 */;
+import PinotLazy from "PinotLazy" /* 11319 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 11348 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11352 */;
+import ChatBannerDefault from "ChatBanner" /* 11355 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   }
   return tmp5;
 }
-const LOCATION_CONTEXT_MOBILE = fn(11230).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11256).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -59,7 +59,7 @@ export default noop.memo(function StickyHeader(channel) {
   }));
   let tmp10 = null;
   if (pinotMemberNotice.visible) {
-    const obj2 = { onDismiss: pinotMemberNotice.dismiss };
+    const obj2 = { channel, onDismiss: pinotMemberNotice.dismiss };
     tmp10 = timestampProducer(PinotLazy.PinotMemberNoticeBar, obj2);
   }
   const items = [tmp10, , , , ];

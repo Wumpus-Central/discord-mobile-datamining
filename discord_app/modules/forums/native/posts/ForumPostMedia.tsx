@@ -1,16 +1,16 @@
-// === Module 13722: ForumPostMedia ===
+// === Module 13757: ForumPostMedia ===
 
-// Module 13722 (ForumPostMedia)
+// Module 13757 (ForumPostMedia)
 import nativeDefault from "native" /* 575 */;
-import utils_ImageUtils from "utils/ImageUtils" /* 1491 */;
-import UserSettings from "UserSettings" /* 4834 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5595 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 13723 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13725 */;
+import utils_ImageUtils from "utils/ImageUtils" /* 1490 */;
+import UserSettings from "UserSettings" /* 4839 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5600 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 13758 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 13760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 function ForumPostMediaAndroid(arg0) {
@@ -79,9 +79,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(13724), obj2);
+    let tmp6Result = closure_9(ref(13759), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(13724);
+    const tmp19 = ref(13759);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -94,10 +94,10 @@ function ForumPostMedia(obscureReason) {
       tmp6Result = closure_9(ForumPostMediaIOS, obj4);
       tmp12 = closure_9;
     }
-    tmp3Result = tmp3(1376);
+    tmp3Result = tmp3(1375);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7462).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7468).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };
@@ -108,12 +108,12 @@ function ForumPostMedia(obscureReason) {
           androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
           activeOpacity: 0,
           onPress() {
-                  const obj = ref(7947);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6723).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const obj = ref(7955);
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(6729).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };
-        obj5.children = tmp12(tmp3(6974).PressableOpacity, obj6);
+        obj5.children = tmp12(tmp3(6980).PressableOpacity, obj6);
         let tmp12Result = tmp12(closure_5, obj5);
       }
       return tmp12Result;
@@ -137,7 +137,7 @@ function ForumPostMedia(obscureReason) {
         },
       children: tmp6Result
     };
-    obj7.children = tmp12(tmp3(6974).PressableOpacity, obj8);
+    obj7.children = tmp12(tmp3(6980).PressableOpacity, obj8);
     tmp12Result = tmp12(closure_5, obj7);
   } else {
     const obj9 = { style: null, ref: null, children: null };
@@ -151,12 +151,12 @@ function ForumPostMedia(obscureReason) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, PixelRatio } = get_ActivityIndicator);
-const ANDROID_FOREGROUND_RIPPLE = fn(1192).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let closure_12 = Math.min(PixelRatio.get(), 4);
 let closure_13 = Math.min(PixelRatio.get(), 4);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { mediaContainer: { position: "relative", overflow: "hidden" }, thumbnailBorder: { borderRadius: nativeDefault.radii.sm }, thumbnail: { height: 80, width: 80 }, spoilerIconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center" }, spoilerIcon: null, gridMediaContainer: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj2.spoilerIcon = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, alignSelf: "center" };

@@ -1,31 +1,31 @@
-// === Module 13894: AutocompleteWrapper ===
+// === Module 13929: AutocompleteWrapper ===
 
-// Module 13894 (AutocompleteWrapper)
+// Module 13929 (AutocompleteWrapper)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import KeyboardTypes from "KeyboardTypes" /* 1624 */;
-import Server from "Server" /* 1993 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5678 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
-import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 6892 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7201 */;
-import TimestampUtils from "TimestampUtils" /* 8592 */;
-import GameSearchSession from "GameSearchSession" /* 9124 */;
-import GameSearchFilterGroup from "GameSearchFilterGroup" /* 9125 */;
-import GameSearchSurfaces from "GameSearchSurfaces" /* 9591 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9764 */;
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10204 */;
-import AutocompleteOptions from "AutocompleteOptions" /* 10288 */;
-import TimestampSuggestionUtils from "TimestampSuggestionUtils" /* 10300 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13743 */;
-import Autocomplete from "Autocomplete" /* 13895 */;
-import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 13906 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import KeyboardTypes from "KeyboardTypes" /* 1623 */;
+import Server from "Server" /* 1992 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
+import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 6898 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7207 */;
+import TimestampUtils from "TimestampUtils" /* 8600 */;
+import GameSearchSession from "GameSearchSession" /* 9143 */;
+import GameSearchFilterGroup from "GameSearchFilterGroup" /* 9144 */;
+import GameSearchSurfaces from "GameSearchSurfaces" /* 9611 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9785 */;
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10224 */;
+import AutocompleteOptions from "AutocompleteOptions" /* 10308 */;
+import TimestampSuggestionUtils from "TimestampSuggestionUtils" /* 10320 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13778 */;
+import Autocomplete from "Autocomplete" /* 13930 */;
+import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 13941 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8338 */;
-import EmojiStore from "EmojiStore" /* 6790 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
-import StickersStore from "StickersStore" /* 6831 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8346 */;
+import EmojiStore from "EmojiStore" /* 6796 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import StickersStore from "StickersStore" /* 6837 */;
 
 require = fn;
 function getItemKey(type, arg1) {
@@ -74,21 +74,21 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AutoCompleteResultTypes: closure_11, WHITESPACE_RE: closure_12, AnalyticEvents: map1, UpsellTypes: closure_14 } = Constants);
-const BOOLEAN_CHOICES = fn(6030).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(10205);
+const BOOLEAN_CHOICES = fn(6035).BOOLEAN_CHOICES;
+const ApplicationCommandsConstants = fn(10225);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(6031);
+const ChannelAutocompleteConstants = fn(6036);
 ({ MENTION_SENTINEL: closure_18, CHANNEL_SENTINEL: closure_19, EMOJI_SENTINEL: closure_20, COMMAND_SENTINEL: closure_21, GAME_MENTION_INPUT_PREFIX: closure_22, TIMESTAMP_MENTION_INPUT_PREFIX: closure_23 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10289).AutocompleteTypes;
-const EmojiInteractionPoint = fn(1387).EmojiInteractionPoint;
+const AutocompleteTypes = fn(10309).AutocompleteTypes;
+const EmojiInteractionPoint = fn(1386).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);
 let c29 = "text-sm/semibold";
 const hairlineWidth = StyleSheet.hairlineWidth;
 let c31 = 200;
 let closure_32 = { allowSpaces: true, maxQueryLength: 64 };
-let obj = { allowSpaces: true, maxQueryLength: fn(8673).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
-const createStyles = fn(5009);
+let obj = { allowSpaces: true, maxQueryLength: fn(8681).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
+const createStyles = fn(5014);
 let closure_34 = createStyles.createStyles((borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
   obj = { autocompletePositionRelative: { position: "relative" }, autocompleteWrapper: null, autocompleteContainer: null, autocomplete: null, applicationCommands: null, resultsList: null, sectionDivider: null, sectionTitle: null, stickersAutocompleteList: null, stickersAutocompleteContent: null };
   let str = "absolute";
@@ -786,7 +786,7 @@ class ACWrapper {
     items17 = [];
     items17[0] = autocompleteType;
     effect6 = obj5.useEffect(() => autocompleteType === AutocompleteTypes.GAME_MENTIONS ? (() => {
-      const gameSearchSession = analyticsLocations(9124).getGameSearchSession(analyticsLocations(9591).GameSearchSurface.CHAT_MENTION, analyticsLocations(9125).GameSearchFilterGroup.DEFAULT);
+      const gameSearchSession = analyticsLocations(9143).getGameSearchSession(analyticsLocations(9611).GameSearchSurface.CHAT_MENTION, analyticsLocations(9144).GameSearchFilterGroup.DEFAULT);
       return gameSearchSession.end();
     }) : undefined, items17);
     closure_49 = obj5.useRef(null);

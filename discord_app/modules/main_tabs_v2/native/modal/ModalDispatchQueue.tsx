@@ -1,6 +1,6 @@
-// === Module 6740: ModalDispatchQueue ===
+// === Module 6746: ModalDispatchQueue ===
 
-// Module 6740 (ModalDispatchQueue)
+// Module 6746 (ModalDispatchQueue)
 import size from "module_2" /* 2 */;
 
 class ModalDispatchQueue {

@@ -1,15 +1,15 @@
-// === Module 12403: useConjurePublishProgressLabel ===
+// === Module 12441: useConjurePublishProgressLabel ===
 
-// Module 12403 (useConjurePublishProgressLabel)
-import _modDef3865 from "module_3865" /* 3865 */;
+// Module 12441 (useConjurePublishProgressLabel)
+import _modDef3868 from "module_3868" /* 3868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10847 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let obj = { preparing: _modDef3865.GQeas1, approval: _modDef3865["TkHHD+"], approved_by_grant: _modDef3865["9+kNt8"], setup: _modDef3865["F+AxgM"], build: _modDef3865.oQeMIy, deploy: _modDef3865.LqZvZ2, discord: _modDef3865.LFcGAT, activating: _modDef3865.ff1Fq1 };
+let obj = { preparing: _modDef3868.GQeas1, approval: _modDef3868["TkHHD+"], approved_by_grant: _modDef3868["9+kNt8"], setup: _modDef3868["F+AxgM"], build: _modDef3868.oQeMIy, deploy: _modDef3868.LqZvZ2, discord: _modDef3868.LFcGAT, activating: _modDef3868.ff1Fq1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishProgressLabel.tsx");
 
@@ -38,13 +38,13 @@ export default function useConjurePublishProgressLabel(arg0) {
   }, items1);
   let formatToPlainStringResult = null;
   if (null != stateFromStores) {
-    const intl = tmp(1114).intl;
+    const intl = tmp(1113).intl;
     const obj2 = { action: null, detail: null };
-    const intl2 = tmp(1114).intl;
+    const intl2 = tmp(1113).intl;
     obj2.action = intl2.string(obj[stateFromStores.stage]);
-    obj2.detail = tmp(12404).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
-    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3865)["ndkR+x"], obj2);
-    const tmpResult = tmp(12404);
+    obj2.detail = tmp(12442).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3868)["ndkR+x"], obj2);
+    const tmpResult = tmp(12442);
   }
   return formatToPlainStringResult;
 };

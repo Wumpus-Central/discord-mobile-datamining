@@ -1,20 +1,20 @@
-// === Module 14603: CrunchyrollLinkSuccess ===
+// === Module 14641: CrunchyrollLinkSuccess ===
 
-// Module 14603 (CrunchyrollLinkSuccess)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7286 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9710 */;
-import _modDef14604 from "module_14604" /* 14604 */;
+// Module 14641 (CrunchyrollLinkSuccess)
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9730 */;
+import _modDef14642 from "module_14642" /* 14642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
@@ -25,7 +25,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14604;
+  obj4.source = _modDef14642;
   obj4.style = tmp.image;
   const items = [React4(FastImageDefault, obj4), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };

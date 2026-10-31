@@ -1,11 +1,11 @@
-// === Module 17643: shouldAggressivelyFetchNitroRewards ===
+// === Module 16896: shouldAggressivelyFetchNitroRewards ===
 
-// Module 17643 (shouldAggressivelyFetchNitroRewards)
-import PremiumUtils from "PremiumUtils" /* 2048 */;
-import ProgramRewardsUtils from "ProgramRewardsUtils" /* 15573 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15575 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
-import UserStore from "UserStore" /* 1384 */;
+// Module 16896 (shouldAggressivelyFetchNitroRewards)
+import PremiumUtils from "PremiumUtils" /* 2047 */;
+import ProgramRewardsUtils from "ProgramRewardsUtils" /* 15612 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15614 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const size = fn(2);

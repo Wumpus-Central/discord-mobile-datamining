@@ -1,9 +1,9 @@
-// === Module 8753: UserProfileAnalyticsContext ===
+// === Module 8761: UserProfileAnalyticsContext ===
 
-// Module 8753 (UserProfileAnalyticsContext)
-import v1 from "v1" /* 1267 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7320 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8754 */;
+// Module 8761 (UserProfileAnalyticsContext)
+import v1 from "v1" /* 1266 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8762 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -104,7 +104,7 @@ export function useCreateUserProfileAnalyticsContext(layout) {
 }
 export function useUserProfileAnalyticsContext() {
   const context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7320)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7326)().analyticsLocations;
   let obj = { context, trackUserProfileAction: null, trackUserProfileEditAction: null, trackUserProfileEditSaved: null, trackUserProfileWishlistAction: null };
   const items = [context, analyticsLocations];
   obj.trackUserProfileAction = noop.useCallback((arg0) => {

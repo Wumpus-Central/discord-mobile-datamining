@@ -1,23 +1,23 @@
-// === Module 7634: SessionHeartbeatScheduler ===
+// === Module 7641: SessionHeartbeatScheduler ===
 
-// Module 7634 (SessionHeartbeatScheduler)
+// Module 7641 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import SentryUtilsDefault from "SentryUtils" /* 1243 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7635 */;
-import SessionRouteUtils2 from "SessionRouteUtils" /* 7636 */;
-import MonotonicClock from "MonotonicClock" /* 7637 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7642 */;
-import SessionUtils from "SessionUtils" /* 7644 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7642 */;
+import SessionRouteUtils2 from "SessionRouteUtils" /* 7643 */;
+import MonotonicClock from "MonotonicClock" /* 7644 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7649 */;
+import SessionUtils from "SessionUtils" /* 7651 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 6699 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
+import IdleStore from "IdleStore" /* 6705 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
 
 require = fn;
 function trackHeartbeat() {
@@ -41,7 +41,7 @@ let closure_26 = async function _trackHeartbeat() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -240,7 +240,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -279,7 +279,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           }
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp16) {
       c3 = tmp;
@@ -365,7 +365,7 @@ let closure_39 = async function _getSession() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -523,9 +523,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7635);
+const SessionForegroundUtils = fn(7642);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7636);
+const SessionRouteUtils = fn(7643);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 16788: RestrictedScheduleActionCreators ===
+// === Module 16830: RestrictedScheduleActionCreators ===
 
-// Module 16788 (RestrictedScheduleActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+// Module 16830 (RestrictedScheduleActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -49,7 +49,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ let closure_7 = async function _deleteRestrictedScheduleRule(arg0) {
         const obj7 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_130_0, restrictedSchedule: body };
         closure_131_1(closure_131_2[3]).dispatch(obj7);
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp13) {
       c5 = tmp;

@@ -1,29 +1,29 @@
-// === Module 19755: GuildSettingsModalTemplate ===
+// === Module 19812: GuildSettingsModalTemplate ===
 
-// Module 19755 (GuildSettingsModalTemplate)
+// Module 19812 (GuildSettingsModalTemplate)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import ToastUtils from "ToastUtils" /* 5706 */;
-import CopyIcon2 from "CopyIcon" /* 5726 */;
-import AlertModal from "AlertModal" /* 5959 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import Card from "Card" /* 6971 */;
-import Input from "Input" /* 7077 */;
-import CircleXIcon2 from "CircleXIcon" /* 7086 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7334 */;
-import ClipboardUtils from "ClipboardUtils" /* 7352 */;
-import HeaderActionButton from "HeaderActionButton" /* 7552 */;
-import native from "native" /* 8983 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13169 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19756 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import ToastUtils from "ToastUtils" /* 5711 */;
+import CopyIcon2 from "CopyIcon" /* 5731 */;
+import AlertModal from "AlertModal" /* 5964 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import Card from "Card" /* 6977 */;
+import Input from "Input" /* 7083 */;
+import CircleXIcon2 from "CircleXIcon" /* 7092 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7340 */;
+import ClipboardUtils from "ClipboardUtils" /* 7358 */;
+import HeaderActionButton from "HeaderActionButton" /* 7558 */;
+import native from "native" /* 8992 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 13204 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 19813 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const SceneLoadingIndicator = Text(7202);
-const Form = Text(8169);
+const SceneLoadingIndicator = Text(7208);
+const Form = Text(8177);
 require = fn;
 function TemplateForm(guildId) {
   guildId = guildId.guildId;
@@ -112,21 +112,21 @@ function TemplateForm(guildId) {
       let _Promise1 = new _Promise((arg0) => {
         closure_0 = arg0;
         const obj2 = { key: "guild-template-unsaved-changes", title: null, content: null, confirmText: null, cancelText: null, onConfirm: null, onCloseCallback: null };
-        const intl = guildId(1114).intl;
-        obj2.title = intl.string(guildId(1114).t.pvRCSu);
-        const intl2 = guildId(1114).intl;
-        obj2.content = intl2.string(guildId(1114).t.DRi46S);
-        const intl3 = guildId(1114).intl;
-        obj2.confirmText = intl3.string(guildId(1114).t["6GQDFu"]);
-        const intl4 = guildId(1114).intl;
-        obj2.cancelText = intl4.string(guildId(1114).t.DmDzZB);
+        const intl = guildId(1113).intl;
+        obj2.title = intl.string(guildId(1113).t.pvRCSu);
+        const intl2 = guildId(1113).intl;
+        obj2.content = intl2.string(guildId(1113).t.DRi46S);
+        const intl3 = guildId(1113).intl;
+        obj2.confirmText = intl3.string(guildId(1113).t["6GQDFu"]);
+        const intl4 = guildId(1113).intl;
+        obj2.cancelText = intl4.string(guildId(1113).t.DmDzZB);
         obj2.onConfirm = function onConfirm() {
           return closure_0(true);
         };
         obj2.onCloseCallback = function onCloseCallback() {
           return closure_0(false);
         };
-        guildId(5959).showConfirmModal(obj2);
+        guildId(5964).showConfirmModal(obj2);
       });
     } else {
       _Promise1 = _Promise.resolve(true);
@@ -169,7 +169,7 @@ function TemplateForm(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ function TemplateForm(guildId) {
                 closure_1_7(null);
                 closure_1_9(true);
                 c3 = 1;
-                const obj2 = guildTemplate(13169);
+                const obj2 = guildTemplate(13204);
                 c4 = 2;
                 c5 = 1;
                 const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -202,7 +202,7 @@ function TemplateForm(guildId) {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_0 = closure_2;
-              const aPIError = new handleSave(6440).APIError(closure_128_0);
+              const aPIError = new handleSave(6446).APIError(closure_128_0);
               closure_1_7(aPIError);
             } else if (arg0 === 1) {
               c5 = 3;
@@ -356,14 +356,14 @@ function CopyRow(children) {
     tmp10 = importDefault;
   }
   const tmp = closure_10();
-  const items = [React5(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(575).colors.WHITE }), React5(tmp4(5619).Text, { variant: "text-sm/normal", children: children.label })];
+  const items = [React5(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(575).colors.WHITE }), React5(tmp4(5624).Text, { variant: "text-sm/normal", children: children.label })];
   obj.children = items;
   return React6(View, obj);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { flex: 1 }, containerContent: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, copyRow: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.copyRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -467,7 +467,7 @@ let closure_14 = noop.memo(function TemplateControls(arg0) {
   };
   const tmp = _slicedToArray(noop.useState(false), 2);
   _slicedToArray = tmp[1];
-  const tmp3 = guildTemplate(19757)(guildTemplate.code);
+  const tmp3 = guildTemplate(19814)(guildTemplate.code);
   noop = tmp3;
   let obj = { spacing: guildTemplate(575).space.PX_12, children: null };
   let obj2 = { label: null, children: null };

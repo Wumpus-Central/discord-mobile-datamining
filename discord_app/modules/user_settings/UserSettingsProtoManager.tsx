@@ -1,13 +1,13 @@
-// === Module 16241: UserSettingsProtoManager ===
+// === Module 16282: UserSettingsProtoManager ===
 
-// Module 16241 (UserSettingsProtoManager)
+// Module 16282 (UserSettingsProtoManager)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1236 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4839 */;
-import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 16242 */;
-import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 16243 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1235 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4844 */;
+import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 16283 */;
+import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 16284 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 function handleConnectionOpen() {

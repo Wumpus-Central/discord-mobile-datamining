@@ -1,7 +1,7 @@
-// === Module 6874: ConjureUserExperiment ===
+// === Module 6880: ConjureUserExperiment ===
 
-// Module 6874 (ConjureUserExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 6880 (ConjureUserExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-user", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

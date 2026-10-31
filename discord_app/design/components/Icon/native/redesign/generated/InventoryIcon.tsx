@@ -1,9 +1,9 @@
-// === Module 17529: InventoryIcon ===
+// === Module 17589: InventoryIcon ===
 
-// Module 17529 (InventoryIcon)
+// Module 17589 (InventoryIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod17530 from "module_17530" /* 17530 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod17590 from "module_17590" /* 17590 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function InventoryIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17530, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17590, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,10 +1,10 @@
-// === Module 7901: GuildRoomUtils ===
+// === Module 7909: GuildRoomUtils ===
 
-// Module 7901 (GuildRoomUtils)
-import GuildRoomTypes from "GuildRoomTypes" /* 7899 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 7900 */;
-import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 7903 */;
-import GuildRoomStore from "GuildRoomStore" /* 7898 */;
+// Module 7909 (GuildRoomUtils)
+import GuildRoomTypes from "GuildRoomTypes" /* 7907 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 7908 */;
+import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 7911 */;
+import GuildRoomStore from "GuildRoomStore" /* 7906 */;
 
 require = fn;
 function serverGuildRoomObjectToClient(object_type) {
@@ -37,7 +37,7 @@ function serverGuildRoomObjectToClient(object_type) {
   }
   return obj8;
 }
-let closure_3 = fn(7902).GUILD_ROOM_BACKGROUND_CONFIG;
+let closure_3 = fn(7910).GUILD_ROOM_BACKGROUND_CONFIG;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomUtils.tsx");
 

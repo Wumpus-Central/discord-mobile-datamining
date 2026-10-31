@@ -1,13 +1,14 @@
-// === Module 15110: SafetyPolicyNoticeEmbed ===
+// === Module 15147: SafetyPolicyNoticeEmbed ===
 
-// Module 15110 (SafetyPolicyNoticeEmbed)
+// Module 15147 (SafetyPolicyNoticeEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1114 */;
-import _modDef2044 from "module_2044" /* 2044 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 7962 */;
-import _modDef8019 from "module_8019" /* 8019 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8388 */;
+import util from "util" /* 1113 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 7970 */;
+import _modDef8027 from "module_8027" /* 8027 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8396 */;
+import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 15148 */;
+import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 15149 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -55,16 +56,14 @@ export function createSafetyPolicyNoticeEmbed(message) {
             const obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
             const intl = util.intl;
             obj.titleText = intl.string(util.t["4CxGXi"]);
-            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8019));
+            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8027));
+            const obj3 = SafetyWarningAgeUtils;
+            const daysAgo = SafetyWarningAgeUtils.getDaysAgo(parsed);
+            obj.subtitleText = obj3.formatSafetyWarningAge(daysAgo, SafetyWarningAgeTextExperiment.getIsSafetyWarningAgeTextEnabled("safety_warning_system_message"));
             const intl2 = util.intl;
-            const obj3 = { daysAgo: null };
-            const obj4 = _modDef2044();
-            obj3.daysAgo = obj4.diff(_modDef2044.unix(parsed), "days");
-            obj.subtitleText = intl2.formatToPlainString(util.t.eevFb6, obj3);
+            obj.descriptionText = intl2.string(util.t["5CLb0A"]);
             const intl3 = util.intl;
-            obj.descriptionText = intl3.string(util.t["5CLb0A"]);
-            const intl4 = util.intl;
-            obj.ctaText = intl4.string(util.t.zKnzwm);
+            obj.ctaText = intl3.string(util.t.zKnzwm);
             obj.classificationId = rawValue;
             return obj;
           }

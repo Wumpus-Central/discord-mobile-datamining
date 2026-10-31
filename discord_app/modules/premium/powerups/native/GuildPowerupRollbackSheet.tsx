@@ -1,9 +1,9 @@
-// === Module 14039: GuildPowerupRollbackSheet ===
+// === Module 14074: GuildPowerupRollbackSheet ===
 
-// Module 14039 (GuildPowerupRollbackSheet)
+// Module 14074 (GuildPowerupRollbackSheet)
 import jsxProd from "jsxProd" /* 21 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import PromoSheet from "PromoSheet" /* 10817 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import PromoSheet from "PromoSheet" /* 10837 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

@@ -1,7 +1,7 @@
-// === Module 9806: SearchConstants ===
+// === Module 9827: SearchConstants ===
 
-// Module 9806 (SearchConstants)
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5687 */;
+// Module 9827 (SearchConstants)
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5692 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

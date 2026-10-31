@@ -1,17 +1,17 @@
-// === Module 16509: UserProfileWidgetsEmptyState ===
+// === Module 16551: UserProfileWidgetsEmptyState ===
 
-// Module 16509 (UserProfileWidgetsEmptyState)
+// Module 16551 (UserProfileWidgetsEmptyState)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" }, textContainer: null, centeredText: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.textContainer = { alignSelf: "stretch", gap: nativeDefault.space.PX_8 };

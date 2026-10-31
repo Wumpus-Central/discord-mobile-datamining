@@ -1,16 +1,16 @@
-// === Module 18032: MessagesItemChannel ===
+// === Module 18075: MessagesItemChannel ===
 
-// Module 18032 (MessagesItemChannel)
+// Module 18075 (MessagesItemChannel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import _mod7288 from "module_7288" /* 7288 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11028 */;
-import _mod14370 from "module_14370" /* 14370 */;
-import MessagesItemChannelBase from "MessagesItemChannelBase" /* 18033 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18042 */;
+import _mod7294 from "module_7294" /* 7294 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
+import _mod14408 from "module_14408" /* 14408 */;
+import MessagesItemChannelBase from "MessagesItemChannelBase" /* 18076 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 const MessagesItemChannelBaseDefault = MessagesItemChannelBase;
 
@@ -44,7 +44,7 @@ const memoResult = noop.memo(function MessagesItemChannelFast(arg0) {
 });
 const memoResult1 = noop.memo(function MessagesItemChannelFlash(channelId) {
   const items = [channelId.channelId];
-  const tmp = _slicedToArray(_mod7288.useRecyclingState(false, items), 2);
+  const tmp = _slicedToArray(_mod7294.useRecyclingState(false, items), 2);
   closure_0 = tmp2;
   const items1 = [tmp[1]];
   const obj2 = {};
@@ -74,7 +74,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod14370.useRecyclingState(false);
+  [tmp2, tmp3] = _mod14408.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

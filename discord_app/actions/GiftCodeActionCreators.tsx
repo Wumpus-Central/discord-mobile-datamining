@@ -1,13 +1,13 @@
-// === Module 11334: GiftCodeActionCreators ===
+// === Module 11370: GiftCodeActionCreators ===
 
-// Module 11334 (GiftCodeActionCreators)
-import SentryUtilsDefault from "SentryUtils" /* 1243 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4830 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11335 */;
+// Module 11370 (GiftCodeActionCreators)
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4835 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11371 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7713 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
 
 require = fn;
 function resolveGiftCode() {
@@ -31,7 +31,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -209,11 +209,11 @@ let closure_12 = async function _deliverGiftCodes() {
     return value.body;
   })();
 };
-let closure_6 = fn(7721).isUnknownCollectiblesItemRecord;
+let closure_6 = fn(7728).isUnknownCollectiblesItemRecord;
 const Constants = fn(1072);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
-let closure_10 = fn(1386).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11336).default);
+let closure_10 = fn(1385).PREMIUM_SUBSCRIPTION_APPLICATION;
+const merged = Object.assign(fn(11372).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

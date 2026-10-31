@@ -1,21 +1,21 @@
-// === Module 18961: MobileSurvey ===
+// === Module 19010: MobileSurvey ===
 
-// Module 18961 (MobileSurvey)
+// Module 19010 (MobileSurvey)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import LinkingDefault from "Linking" /* 5704 */;
-import _modDef11955 from "module_11955" /* 11955 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 17662 */;
+import native from "native" /* 1187 */;
+import LinkingDefault from "Linking" /* 5709 */;
+import _modDef11993 from "module_11993" /* 11993 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 17706 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SurveyStore from "SurveyStore" /* 7921 */;
+import SurveyStore from "SurveyStore" /* 7929 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MobileSurvey.tsx");
@@ -38,7 +38,7 @@ export default function MobileSurvey() {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -66,7 +66,7 @@ export default function MobileSurvey() {
               return obj;
             }
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;
@@ -92,8 +92,8 @@ export default function MobileSurvey() {
   if (null != stateFromStores) {
     let obj3 = { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null };
     ({ prompt: obj2.body, cta: obj2.confirmText } = stateFromStores);
-    const intl = tmp(1114).intl;
-    obj3.cancelText = intl.string(tmp(1114).t.f3Pet9);
+    const intl = tmp(1113).intl;
+    obj3.cancelText = intl.string(tmp(1113).t.f3Pet9);
     obj3.onConfirm = function onConfirm() {
       LinkingDefault.openURL(stateFromStores.url);
       SurveyActionCreators.surveyHide(stateFromStores.key, false);
@@ -102,10 +102,10 @@ export default function MobileSurvey() {
       return SurveyActionCreators.surveyHide(stateFromStores.key, true);
     };
     obj3.renderConfirmRightIcon = function renderConfirmRightIcon() {
-      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef11955 });
+      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef11993 });
     };
-    tmp5 = jsx(stateFromStores(6025), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
-    const tmp8 = stateFromStores(6025);
+    tmp5 = jsx(stateFromStores(6030), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
+    const tmp8 = stateFromStores(6030);
   }
   return tmp5;
 };

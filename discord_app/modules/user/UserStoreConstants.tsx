@@ -1,6 +1,6 @@
-// === Module 1396: UserStoreConstants ===
+// === Module 1395: UserStoreConstants ===
 
-// Module 1396 (UserStoreConstants)
+// Module 1395 (UserStoreConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user/UserStoreConstants.tsx");

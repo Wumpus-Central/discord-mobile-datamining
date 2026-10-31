@@ -1,9 +1,9 @@
-// === Module 9557: useGameProfileShopCollection ===
+// === Module 9579: useGameProfileShopCollection ===
 
-// Module 9557 (useGameProfileShopCollection)
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9433 */;
+// Module 9579 (useGameProfileShopCollection)
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9455 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 9302 */;
+import GameProfileStore from "GameProfileStore" /* 9322 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

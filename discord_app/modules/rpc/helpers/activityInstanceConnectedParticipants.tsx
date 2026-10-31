@@ -1,18 +1,18 @@
-// === Module 16254: activityInstanceConnectedParticipants ===
+// === Module 16296: activityInstanceConnectedParticipants ===
 
-// Module 16254 (activityInstanceConnectedParticipants)
-import transformUserDefault from "transformUser" /* 9311 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
-import UserStore from "UserStore" /* 1384 */;
+// Module 16296 (activityInstanceConnectedParticipants)
+import transformUserDefault from "transformUser" /* 9331 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(6444);
+const Constants = fn(6450);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 let obj = { [RPC_SCOPE_CONFIG.ANY]: items };
 items = [RPC_AUTHENTICATED_SCOPE];
-const CONTEXT_MENU_ICON_NAMES = fn(16255);
+const CONTEXT_MENU_ICON_NAMES = fn(16297);
 const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1072).RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {
   scope: obj,
   handler() {
@@ -25,12 +25,12 @@ const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1072).RPCEvents.ACTIV
         const obj = { participants: [] };
         let obj2 = obj;
       } else {
-        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4930).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = embeddedActivityLocationGuildId(4930);
-        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4930).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4935).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = embeddedActivityLocationGuildId(4935);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4935).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
         obj2 = { participants: null };
         const _Array = Array;
-        const obj5 = embeddedActivityLocationGuildId(4930);
+        const obj5 = embeddedActivityLocationGuildId(4935);
         obj2.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {
@@ -40,7 +40,7 @@ const rPCEvent = CONTEXT_MENU_ICON_NAMES.createRPCEvent(fn(1072).RPCEvents.ACTIV
             obj2.nickname = nickname;
             return obj2;
           }
-        }).filter(embeddedActivityLocationGuildId(1380).isNotNullish);
+        }).filter(embeddedActivityLocationGuildId(1379).isNotNullish);
         const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {

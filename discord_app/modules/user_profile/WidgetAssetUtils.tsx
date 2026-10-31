@@ -1,8 +1,8 @@
-// === Module 14928: WidgetAssetUtils ===
+// === Module 14966: WidgetAssetUtils ===
 
-// Module 14928 (WidgetAssetUtils)
+// Module 14966 (WidgetAssetUtils)
 import Constants from "Constants" /* 1072 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
 import size from "module_2" /* 2 */;
 
 const DEFAULT_CDN_HOST = Constants.DEFAULT_CDN_HOST;

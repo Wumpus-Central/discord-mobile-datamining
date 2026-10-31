@@ -1,6 +1,6 @@
-// === Module 5598: requireNativeComponentOrDefault ===
+// === Module 5603: requireNativeComponentOrDefault ===
 
-// Module 5598 (requireNativeComponentOrDefault)
+// Module 5603 (requireNativeComponentOrDefault)
 import LoggerDefault from "Logger" /* 3 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;

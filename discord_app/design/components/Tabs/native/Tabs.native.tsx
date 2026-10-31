@@ -1,13 +1,13 @@
-// === Module 12476: Tabs/Tabs ===
+// === Module 12511: Tabs/Tabs ===
 
-// Module 12476 (Tabs/Tabs)
+// Module 12511 (Tabs/Tabs)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5090 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
-import spring from "spring" /* 5632 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10069 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import spring from "spring" /* 5637 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(ScrollView);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_11 = createStyles.createStyles((gap, arg1) => {
   const obj = { container: { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
   const obj2 = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
@@ -318,7 +318,7 @@ export function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(12477).TabItem, obj, id);
+      return variant(state(12512).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

@@ -1,26 +1,26 @@
-// === Module 14485: EditAttachmentActionSheet ===
+// === Module 14523: EditAttachmentActionSheet ===
 
-// Module 14485 (EditAttachmentActionSheet)
-import util from "util" /* 1114 */;
-import FlagUtils from "FlagUtils" /* 1397 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5018 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6968 */;
-import TextArea from "TextArea" /* 7247 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7315 */;
-import ActionSheet from "ActionSheet" /* 7360 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8733 */;
+// Module 14523 (EditAttachmentActionSheet)
+import util from "util" /* 1113 */;
+import FlagUtils from "FlagUtils" /* 1396 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6974 */;
+import TextArea from "TextArea" /* 7253 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7321 */;
+import ActionSheet from "ActionSheet" /* 7366 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 6056 */;
+import MessageStore from "MessageStore" /* 6061 */;
 
 require = fn;
-let closure_7 = fn(5014).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5019).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(14472).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(14510).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -52,7 +52,7 @@ export default function EditAttachmentActionSheet(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -147,7 +147,7 @@ export default function EditAttachmentActionSheet(arg0) {
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8832)(attachment);
+  const tmp5 = attachment(8840)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

@@ -1,17 +1,17 @@
-// === Module 19917: GuildRoleSubscriptionListingPreview ===
+// === Module 19975: GuildRoleSubscriptionListingPreview ===
 
-// Module 19917 (GuildRoleSubscriptionListingPreview)
+// Module 19975 (GuildRoleSubscriptionListingPreview)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import PriceUtils from "PriceUtils" /* 7407 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17147 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17151 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 17158 */;
-import GuildRoleSubscriptionsActionCreatorExtras from "GuildRoleSubscriptionsActionCreatorExtras" /* 19893 */;
-import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton" /* 19918 */;
-import GuildRoleSubscriptionBenefitPreview from "GuildRoleSubscriptionBenefitPreview" /* 19919 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import PriceUtils from "PriceUtils" /* 7413 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17203 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 17207 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 17215 */;
+import GuildRoleSubscriptionsActionCreatorExtras from "GuildRoleSubscriptionsActionCreatorExtras" /* 19951 */;
+import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton" /* 19976 */;
+import GuildRoleSubscriptionBenefitPreview from "GuildRoleSubscriptionBenefitPreview" /* 19977 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,7 +40,7 @@ function Header(onPress) {
   let str = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useImage(listingId), 1)[0];
   const obj5 = { style: tmp.header, children: null };
   const items = [timestampProducer(Text_Text.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: _slicedToArray(obj2.useName(listingId), 1)[0] }), , , , ];
-  obj6 = { style: tmp.image, source: null };
+  const obj6 = { style: tmp.image, source: null };
   const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
   if (str == null) {
     str = "";
@@ -148,20 +148,32 @@ class BenefitsSection {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
-let obj2 = { container: { padding: 16 }, header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: 16 }, image: { width: 80, height: 80, borderRadius: 40, marginTop: 16 }, priceGroup: { marginTop: 16, alignItems: "center" }, priceInterval: { marginTop: 4 }, content: { paddingHorizontal: 16 }, contentWithBackground: null, separator: null, sectionLabel: null, benefitSpacing: null, roundedBenefitsContainer: null, footer: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: 16 };
+const createStyles = fn(5014);
+let obj2 = { container: { padding: nativeDefault.space.PX_16 }, header: null, image: null, priceGroup: null, priceInterval: null, content: null, contentWithBackground: null, separator: null, sectionLabel: null, benefitSpacing: null, roundedBenefitsContainer: null, footer: null };
+let obj3 = { padding: nativeDefault.space.PX_16 };
+obj2.header = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: nativeDefault.space.PX_16 };
+let size = { width: 80, height: 80, borderRadius: 40, marginTop: nativeDefault.space.PX_16 };
+obj2.image = size;
+let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: nativeDefault.space.PX_16 };
+obj2.priceGroup = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
+let obj5 = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
+obj2.priceInterval = { marginTop: nativeDefault.space.PX_4 };
+let obj6 = { marginTop: nativeDefault.space.PX_4 };
+obj2.content = { paddingHorizontal: nativeDefault.space.PX_16 };
+let obj7 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.contentWithBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-let size = { width: "100%", height: 1, marginTop: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj2.separator = size;
-obj2.sectionLabel = { paddingVertical: 16 };
-obj2.benefitSpacing = { marginTop: 16 };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj2.roundedBenefitsContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, padding: 16 };
+const size1 = { width: "100%", height: 1, marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.separator = size1;
+let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.sectionLabel = { paddingVertical: nativeDefault.space.PX_16 };
+let obj9 = { paddingVertical: nativeDefault.space.PX_16 };
+obj2.benefitSpacing = { marginTop: nativeDefault.space.PX_16 };
+let obj10 = { marginTop: nativeDefault.space.PX_16 };
+obj2.roundedBenefitsContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, padding: nativeDefault.space.PX_16 };
 obj2.footer = { borderBottomStartRadius: 8, borderBottomEndRadius: 8, height: 16 };
 const React7 = createStyles.createStyles(obj2);
-let obj6 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
-BenefitsSection.Looks = obj6;
+const obj12 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
+BenefitsSection.Looks = obj12;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx");
 
@@ -175,7 +187,7 @@ export function GuildRoleSubscriptionListingPreview(arg0) {
   const role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(listingId, guildId);
   const merged = Object.assign(arg0);
   const items = [timestampProducer(Header, {}), , , , ];
-  obj6 = { label: null, children: null };
+  const obj6 = { label: null, children: null };
   const intl = util.intl;
   obj6.label = intl.string(util.t.FJZmYx);
   obj6.children = timestampProducer(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, { role });

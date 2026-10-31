@@ -1,6 +1,6 @@
-// === Module 9790: ScheduledMessageStore ===
+// === Module 9811: ScheduledMessageStore ===
 
-// Module 9790 (ScheduledMessageStore)
+// Module 9811 (ScheduledMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

@@ -1,21 +1,21 @@
-// === Module 7704: NewChannelsStore ===
+// === Module 7711: NewChannelsStore ===
 
-// Module 7704 (NewChannelsStore)
+// Module 7711 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import NSFWContentGate from "NSFWContentGate" /* 6746 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6858 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7273 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import NSFWContentGate from "NSFWContentGate" /* 6752 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6864 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7279 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildChannelStore from "GuildChannelStore" /* 4939 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {
@@ -125,7 +125,7 @@ function pruneNewChannels() {
     closure_16[item] = new Set(items.filter((item) => !channelOrParentOptedIn.isChannelOrParentOptedIn(closure_0, item)));
   });
 }
-let closure_7 = fn(4939).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();

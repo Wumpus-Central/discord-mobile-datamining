@@ -1,14 +1,14 @@
-// === Module 19159: useStableParticipant ===
+// === Module 19211: useStableParticipant ===
 
-// Module 19159 (useStableParticipant)
+// Module 19211 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import NicknameUtils from "NicknameUtils" /* 6036 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6847 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11209 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
+import NicknameUtils from "NicknameUtils" /* 6041 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6853 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11228 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2007 */;
-import UserStore from "UserStore" /* 1384 */;
+import MediaEngineStore from "MediaEngineStore" /* 2006 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5676).ParticipantTypes;
+const ParticipantTypes = fn(5681).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
@@ -40,7 +40,7 @@ export default function useStableParticipant(id, arg1, arg2) {
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_8", ringing: null, hasVideo: 161.285, isSelf: 90.67 };
+          const obj3 = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_8", ringing: null, hasVideo: "image_0", isSelf: 128 };
           id = AuthenticationStore.getId();
           obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj3.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

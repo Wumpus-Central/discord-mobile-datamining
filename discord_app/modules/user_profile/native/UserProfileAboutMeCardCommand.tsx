@@ -1,14 +1,14 @@
-// === Module 11462: UserProfileAboutMeCardCommand ===
+// === Module 11496: UserProfileAboutMeCardCommand ===
 
-// Module 11462 (UserProfileAboutMeCardCommand)
+// Module 11496 (UserProfileAboutMeCardCommand)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5678 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7693 */;
-import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11463 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11469 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7700 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 11497 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11503 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxs = fn(21).jsxs;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { commandClickable: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, marginEnd: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_12 };

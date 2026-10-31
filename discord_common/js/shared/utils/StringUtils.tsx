@@ -1,8 +1,8 @@
-// === Module 2029: utils/StringUtils ===
+// === Module 2027: utils/StringUtils ===
 
-// Module 2029 (utils/StringUtils)
-import _mod2030 from "module_2030" /* 2030 */;
-import DOMUtils from "DOMUtils" /* 2031 */;
+// Module 2027 (utils/StringUtils)
+import _mod2028 from "module_2028" /* 2028 */;
+import DOMUtils from "DOMUtils" /* 2029 */;
 import size from "module_2" /* 2 */;
 
 const re2 = /[\u0300-\u036f]/g;
@@ -20,7 +20,7 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    closure_0 = _mod2030;
+    closure_0 = _mod2028;
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
     const item = items.forEach((item) => {

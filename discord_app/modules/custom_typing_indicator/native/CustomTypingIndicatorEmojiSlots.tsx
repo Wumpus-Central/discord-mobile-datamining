@@ -1,13 +1,13 @@
-// === Module 17282: CustomTypingIndicatorEmojiSlots ===
+// === Module 17342: CustomTypingIndicatorEmojiSlots ===
 
-// Module 17282 (CustomTypingIndicatorEmojiSlots)
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import spring from "spring" /* 5632 */;
-import springPresets from "springPresets" /* 5633 */;
-import EmojiDefault from "Emoji" /* 7294 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9918 */;
-import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13698 */;
+// Module 17342 (CustomTypingIndicatorEmojiSlots)
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import spring from "spring" /* 5637 */;
+import springPresets from "springPresets" /* 5638 */;
+import EmojiDefault from "Emoji" /* 7300 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9939 */;
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji" /* 13733 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -54,8 +54,8 @@ function PlaceholderEmojiGlyph(pressed) {
     obj.transform = items;
     return obj;
   };
-  let obj = pressed(5090);
-  fn.__closure = { pressed, withSpring: pressed(5632).withSpring, interpolate: pressed(5090).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(5633).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
+  let obj = pressed(5095);
+  fn.__closure = { pressed, withSpring: pressed(5637).withSpring, interpolate: pressed(5095).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(5638).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
   fn.__workletHash = 16574219123934;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -122,11 +122,11 @@ function CustomTypingIndicatorEmojiSlot(index) {
   obj4.children = tmp11Result;
   return jsx(index(sharedValue[37]).Card, { style: tmp.slot, onPress: callback, onPressIn: callback1, onPressOut: callback2, accessibilityLabel: formatToPlainStringResult, radius: 16, children: null });
 }
-const EmojiIntention = fn(1387).EmojiIntention;
+const EmojiIntention = fn(1386).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
-let items = [fn(17283).EmojiAngryFaceWithHornsIcon, fn(17285).EmojiColdFaceIcon, fn(17287).EmojiCowboyHatFaceIcon, fn(17289).EmojiCryingFaceIcon, fn(17291).EmojiDisguisedFaceIcon, fn(17293).EmojiFaceVomitingIcon, fn(17295).EmojiFaceWithMonocleIcon, fn(17297).EmojiFaceWithSpiralEyesIcon, fn(17299).EmojiMeltingFaceIcon, fn(17301).EmojiMoneyMouthFaceIcon, fn(17303).EmojiNerdFaceIcon, fn(17305).EmojiPartyingFaceIcon, fn(17307).EmojiSalutingFaceIcon, fn(17309).EmojiSkullIcon, fn(17311).EmojiSmilingFaceWithHornsIcon, fn(17313).EmojiSmilingFaceWithSunglassesIcon, fn(17315).EmojiSquintingFaceWithTongueIcon, fn(17317).EmojiUpsideDownFaceIcon, fn(17319).EmojiWoozyFaceIcon, fn(17321).EmojiZanyFaceIcon, fn(17323).EmojiRollingOnTheFloorLaughingIcon, fn(17325).EmojiSmilingFaceWithHeartsIcon];
-const createStyles = fn(5009);
+let items = [fn(17343).EmojiAngryFaceWithHornsIcon, fn(17345).EmojiColdFaceIcon, fn(17347).EmojiCowboyHatFaceIcon, fn(17349).EmojiCryingFaceIcon, fn(17351).EmojiDisguisedFaceIcon, fn(17353).EmojiFaceVomitingIcon, fn(17355).EmojiFaceWithMonocleIcon, fn(17357).EmojiFaceWithSpiralEyesIcon, fn(17359).EmojiMeltingFaceIcon, fn(17361).EmojiMoneyMouthFaceIcon, fn(17363).EmojiNerdFaceIcon, fn(17365).EmojiPartyingFaceIcon, fn(17367).EmojiSalutingFaceIcon, fn(17369).EmojiSkullIcon, fn(17371).EmojiSmilingFaceWithHornsIcon, fn(17373).EmojiSmilingFaceWithSunglassesIcon, fn(17375).EmojiSquintingFaceWithTongueIcon, fn(17377).EmojiUpsideDownFaceIcon, fn(17379).EmojiWoozyFaceIcon, fn(17381).EmojiZanyFaceIcon, fn(17383).EmojiRollingOnTheFloorLaughingIcon, fn(17385).EmojiSmilingFaceWithHeartsIcon];
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 const __initData = { code: "function CustomTypingIndicatorEmojiSlotsTsx1(){const{pressed,withSpring,interpolate,PLACEHOLDER_EMOJI_RESTING_OPACITY,ON_PRESS_SPRING,PLACEHOLDER_EMOJI_ACTIVE_SCALE}=this.__closure;const value=pressed.get();return{opacity:withSpring(interpolate(value,[0,1],[PLACEHOLDER_EMOJI_RESTING_OPACITY,1]),ON_PRESS_SPRING),transform:[{scale:withSpring(interpolate(value,[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};}" };
 let size = fn(2);
@@ -136,11 +136,11 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
   emojis = emojis.emojis;
   const onChange = emojis.onChange;
   _slicedToArray = undefined;
-  dependencyMap = _slicedToArray(noop.useState(() => emojis(12).sampleSize(items, emojis(1406).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)), 1)[0];
-  _slicedToArray = emojis(1406).getCustomTypingIndicatorEmojisKey(emojis);
+  dependencyMap = _slicedToArray(noop.useState(() => emojis(12).sampleSize(items, emojis(1405).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)), 1)[0];
+  _slicedToArray = emojis(1405).getCustomTypingIndicatorEmojisKey(emojis);
   const obj2 = { direction: "horizontal", spacing: 8, children: null };
-  let obj = emojis(1406);
-  obj2.children = Array.from({ length: emojis(1406).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
+  let obj = emojis(1405);
+  obj2.children = Array.from({ length: emojis(1405).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
     const obj = { index, emoji: null, emojisKey: null, placeholderIcon: null, onChange: null };
     let tmp3 = emojis[index];
     if (tmp3 == null) {
@@ -152,5 +152,5 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
     obj.onChange = onChange;
     return <CustomTypingIndicatorEmojiSlot key={index} index={index} emoji={null} emojisKey={null} placeholderIcon={null} onChange={null} />;
   });
-  return jsx(emojis(6022).Stack, { direction: "horizontal", spacing: 8, children: null });
+  return jsx(emojis(6027).Stack, { direction: "horizontal", spacing: 8, children: null });
 };

@@ -1,9 +1,9 @@
-// === Module 9602: GameProfileNavigationHeader ===
+// === Module 9622: GameProfileNavigationHeader ===
 
-// Module 9602 (GameProfileNavigationHeader)
+// Module 9622 (GameProfileNavigationHeader)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import timing from "timing" /* 5249 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import timing from "timing" /* 5254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { headerContainer: { height: 56, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" }, headerRow: null, icon: null, titleContainer: null, headerRight: null, rankPillContainer: null };
 let obj3 = { height: 56, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" };
 obj2.headerRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -34,13 +34,13 @@ export default function GameProfileNavigationHeader(game) {
   let sharedValue;
   const tmp = closure_8();
   dependencyMap = tmp6;
-  const token = game(5591).useToken(application(575).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN);
-  let obj = game(5591);
+  const token = game(5596).useToken(application(575).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN);
+  let obj = game(5596);
   let num = 0;
   if (null != headerRight) {
     num = 1;
   }
-  sharedValue = game(5090).useSharedValue(num);
+  sharedValue = game(5095).useSharedValue(num);
   const items = [null != headerRight, sharedValue];
   const effect = sharedValue.useEffect(() => {
     let num = 0;
@@ -49,15 +49,15 @@ export default function GameProfileNavigationHeader(game) {
     }
     const result = sharedValue.set(timing.withTiming(num, { duration: 200 }));
   }, items);
-  const obj2 = game(5090);
+  const obj2 = game(5095);
   const fn = function x() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { headerRightProgress: sharedValue };
   fn.__workletHash = 16001524280109;
   fn.__initData = __initData;
-  const animatedStyle = game(5090).useAnimatedStyle(fn);
-  const tmp2Result = game(5090);
+  const animatedStyle = game(5095).useAnimatedStyle(fn);
+  const tmp2Result = game(5095);
   const fn2 = function b() {
     return { opacity: 1 - sharedValue.get() };
   };
@@ -65,7 +65,7 @@ export default function GameProfileNavigationHeader(game) {
   fn2.__workletHash = 5182160908530;
   fn2.__initData = __initData2;
   const items1 = [game, application];
-  const animatedStyle1 = game(5090).useAnimatedStyle(fn2);
+  const animatedStyle1 = game(5095).useAnimatedStyle(fn2);
   const memo = sharedValue.useMemo(() => {
     let iconURL;
     if (game != null) {
@@ -106,7 +106,7 @@ export default function GameProfileNavigationHeader(game) {
   if (null != name) {
     const obj3 = { style: tmp.headerContainer, children: null };
     const obj4 = { android_fallbackColor: token };
-    const items2 = [closure_6(tmp2(8983).BackgroundBlurFill, obj4), ];
+    const items2 = [closure_6(tmp2(8992).BackgroundBlurFill, obj4), ];
     const obj5 = { style: tmp.headerRow, children: null };
     let tmp17Result = null != memo;
     if (tmp17Result) {
@@ -114,12 +114,12 @@ export default function GameProfileNavigationHeader(game) {
       const obj7 = { uri: memo };
       obj6.source = obj7;
       obj6.style = tmp.icon;
-      tmp17Result = closure_6(tmp4(5712), obj6);
+      tmp17Result = closure_6(tmp4(5717), obj6);
     }
     const items3 = [tmp17Result, , ];
     const obj8 = { style: tmp.titleContainer, children: null };
     const obj9 = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", lineClamp: 1, children: name };
-    const items4 = [closure_6(tmp2(5619).Heading, obj9), ];
+    const items4 = [closure_6(tmp2(5624).Heading, obj9), ];
     let l30Rank;
     if (game != null) {
       l30Rank = game.l30Rank;
@@ -128,13 +128,13 @@ export default function GameProfileNavigationHeader(game) {
     if (tmp15Result) {
       const obj10 = { style: tmp.rankPillContainer, children: null };
       const obj11 = { rank: game.l30Rank, compact: true };
-      const items5 = [closure_6(tmp4(9357), obj11), ];
+      const items5 = [closure_6(tmp4(9377), obj11), ];
       const obj12 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj12.style = items6;
       const obj13 = { rank: game.l30Rank };
-      obj12.children = closure_6(tmp4(9357), obj13);
-      items5[1] = closure_6(tmp4(5090).View, obj12);
+      obj12.children = closure_6(tmp4(9377), obj13);
+      items5[1] = closure_6(tmp4(5095).View, obj12);
       obj10.children = items5;
       tmp15Result = closure_7(closure_4, obj10);
     }
@@ -147,7 +147,7 @@ export default function GameProfileNavigationHeader(game) {
       const items7 = [tmp.headerRight, animatedStyle];
       obj14.style = items7;
       obj14.children = headerRight();
-      tmp17Result2 = closure_6(tmp4(5090).View, obj14);
+      tmp17Result2 = closure_6(tmp4(5095).View, obj14);
     }
     items3[2] = tmp17Result2;
     obj5.children = items3;

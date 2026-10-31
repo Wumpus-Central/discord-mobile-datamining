@@ -1,16 +1,16 @@
-// === Module 13876: SmartSearchExperiments ===
+// === Module 13911: SmartSearchExperiments ===
 
-// Module 13876 (SmartSearchExperiments)
-import ConversationExperiments from "ConversationExperiments" /* 9826 */;
-import GuildStore from "GuildStore" /* 4880 */;
+// Module 13911 (SmartSearchExperiments)
+import ConversationExperiments from "ConversationExperiments" /* 9847 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const GuildFeatures = fn(1072).GuildFeatures;
-let ApexExperiment = fn(1448);
+let ApexExperiment = fn(1447);
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-mobile-nlp-search-user-flag", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-ApexExperiment = fn(1448);
+ApexExperiment = fn(1447);
 const apexExperiment1 = ApexExperiment.createApexExperiment({ kind: "guild", name: "2026-09-mobile-nlp-search-guild-experiment", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchExperiments.tsx");

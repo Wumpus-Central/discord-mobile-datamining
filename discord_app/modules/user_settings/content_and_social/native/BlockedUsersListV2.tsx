@@ -1,18 +1,18 @@
-// === Module 16647: BlockedUsersListV2 ===
+// === Module 16689: BlockedUsersListV2 ===
 
-// Module 16647 (BlockedUsersListV2)
+// Module 16689 (BlockedUsersListV2)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7286 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7320 */;
-import Blocked from "Blocked" /* 16648 */;
-import BlockedUserRowV2Default from "BlockedUserRowV2" /* 16652 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7326 */;
+import Blocked from "Blocked" /* 16690 */;
+import BlockedUserRowV2Default from "BlockedUserRowV2" /* 16694 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -48,7 +48,7 @@ function BlockedUsersList(userIds) {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { list: { flex: 1, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, sectionLabelStyle: null };
 let obj3 = { flex: 1, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };

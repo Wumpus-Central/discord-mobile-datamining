@@ -1,8 +1,8 @@
-// === Module 15749: LeaveServerAlert ===
+// === Module 15789: LeaveServerAlert ===
 
-// Module 15749 (LeaveServerAlert)
+// Module 15789 (LeaveServerAlert)
 import Constants from "Constants" /* 1072 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9055 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -14,17 +14,17 @@ export default function LeaveServerAlert(guild) {
   guild = guild.guild;
   const features = guild.features;
   const hasItem = features.has(GuildFeatures.HUB);
-  const intl = guild(1114).intl;
+  const intl = guild(1113).intl;
   const string = intl.string;
-  const t = guild(1114).t;
+  const t = guild(1113).t;
   if (hasItem) {
     let stringResult = string(t.Dv8gFT);
   } else {
     stringResult = string(t.J2TBi3);
   }
   const obj = { title: stringResult, content: null, actions: null };
-  const intl2 = tmp2(1114).intl;
-  obj.content = intl2.formatToPlainString(guild(1114).t.TB1og8, { name: guild.name });
+  const intl2 = tmp2(1113).intl;
+  obj.content = intl2.formatToPlainString(guild(1113).t.TB1og8, { name: guild.name });
   const obj3 = { children: null };
   const obj4 = {
     variant: "destructive",
@@ -33,14 +33,14 @@ export default function LeaveServerAlert(guild) {
     },
     text: null
   };
-  const intl3 = tmp2(1114).intl;
-  obj4.text = intl3.string(guild(1114).t.p89ACt);
-  const items = [closure_4(guild(5959).AlertActionButton, obj4, "confirm"), ];
+  const intl3 = tmp2(1113).intl;
+  obj4.text = intl3.string(guild(1113).t.p89ACt);
+  const items = [closure_4(guild(5964).AlertActionButton, obj4, "confirm"), ];
   const obj5 = { variant: "secondary", text: null };
-  const intl4 = tmp2(1114).intl;
-  obj5.text = intl4.string(guild(1114).t.gm1Vej);
-  items[1] = closure_4(guild(5959).AlertActionButton, obj5, "cancel");
+  const intl4 = tmp2(1113).intl;
+  obj5.text = intl4.string(guild(1113).t.gm1Vej);
+  items[1] = closure_4(guild(5964).AlertActionButton, obj5, "cancel");
   obj3.children = items;
-  obj.actions = closure_5(guild(5959).AlertActions, obj3);
-  return closure_4(guild(5959).AlertModal, obj);
+  obj.actions = closure_5(guild(5964).AlertActions, obj3);
+  return closure_4(guild(5964).AlertModal, obj);
 };

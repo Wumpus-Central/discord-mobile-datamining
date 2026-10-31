@@ -1,8 +1,8 @@
-// === Module 8360: useUserIsTeen ===
+// === Module 8368: useUserIsTeen ===
 
-// Module 8360 (useUserIsTeen)
+// Module 8368 (useUserIsTeen)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const size = fn(2);

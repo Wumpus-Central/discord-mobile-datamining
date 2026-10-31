@@ -1,14 +1,14 @@
-// === Module 17495: DiskUsageManager ===
+// === Module 17555: DiskUsageManager ===
 
-// Module 17495 (DiskUsageManager)
+// Module 17555 (DiskUsageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
-import NativeClientInfoModule from "NativeClientInfoModule" /* 1355 */;
-import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 10190 */;
-import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 17496 */;
+import NativeClientInfoModule from "NativeClientInfoModule" /* 1354 */;
+import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 10210 */;
+import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 17556 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1384 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import UserStore from "UserStore" /* 1383 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 
 require = fn;
 function isStable() {
@@ -35,7 +35,7 @@ let closure_11 = async function _measureAndReportInstallSize() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

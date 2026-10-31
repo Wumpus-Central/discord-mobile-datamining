@@ -1,6 +1,6 @@
-// === Module 16555: UniqueUsernamesActionCreators ===
+// === Module 16597: UniqueUsernamesActionCreators ===
 
-// Module 16555 (UniqueUsernamesActionCreators)
+// Module 16597 (UniqueUsernamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -74,7 +74,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -94,14 +94,14 @@ export default {
               closure_129_2 = undefined;
               const tmp83 = (function validate(arr) {
                 if (false === obj.test(arr)) {
-                  const intl3 = _undefined(1114).intl;
-                  let stringResult = intl3.string(_undefined(1114).t.z7c4bP);
+                  const intl3 = _undefined(1113).intl;
+                  let stringResult = intl3.string(_undefined(1113).t.z7c4bP);
                 } else if (arr.includes("..")) {
-                  const intl2 = _undefined(1114).intl;
-                  stringResult = intl2.string(_undefined(1114).t["C7G+gr"]);
+                  const intl2 = _undefined(1113).intl;
+                  stringResult = intl2.string(_undefined(1113).t["C7G+gr"]);
                 } else if (arr.length < 2) {
-                  const intl = _undefined(1114).intl;
-                  stringResult = intl.formatToPlainString(_undefined(1114).t.IpijXA, { maxNum: 32, minNum: 2 });
+                  const intl = _undefined(1113).intl;
+                  stringResult = intl.formatToPlainString(_undefined(1113).t.IpijXA, { maxNum: 32, minNum: 2 });
                 }
                 return stringResult;
               })(_undefined);

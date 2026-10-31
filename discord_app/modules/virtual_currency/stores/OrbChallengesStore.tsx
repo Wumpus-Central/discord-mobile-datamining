@@ -1,17 +1,17 @@
-// === Module 17648: OrbChallengesStore ===
+// === Module 15625: OrbChallengesStore ===
 
-// Module 17648 (OrbChallengesStore)
+// Module 15625 (OrbChallengesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import OrbChallengeTypes from "OrbChallengeTypes" /* 17649 */;
-import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 17650 */;
-import UserStore from "UserStore" /* 1384 */;
+import OrbChallengeTypes from "OrbChallengeTypes" /* 15626 */;
+import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 15627 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function constructOrbChallengeItemFromUserAchievement(achievementIdentifier) {
   return { achievementIdentifier: achievementIdentifier.achievement_identifier, achievementDefinitionId: String(achievementIdentifier.achievement_definition_id), title: achievementIdentifier.title, orbRewardAmount: achievementIdentifier.reward_amount, achievementStatus: achievementIdentifier.status };
 }
-const items = [null, fn(17649).UserAchievementStatus.NONE, fn(17649).UserAchievementStatus.IN_PROGRESS, fn(17649).UserAchievementStatus.ELIGIBLE, fn(17649).UserAchievementStatus.COMPLETED];
+const items = [null, fn(15626).UserAchievementStatus.NONE, fn(15626).UserAchievementStatus.IN_PROGRESS, fn(15626).UserAchievementStatus.ELIGIBLE, fn(15626).UserAchievementStatus.COMPLETED];
 const set = new Set(items);
 const ClientUnreadNotificationType = { NEW_ACHIEVEMENT: "new_achievement", UNCLAIMED_ACHIEVEMENT: "unclaimed_achievement" };
 let obj2 = { CLAIM_CHALLENGE: "claim_challenge", FETCH_CHALLENGES: "fetch_challenges" };
@@ -55,11 +55,14 @@ class OrbChallengesStore extends Store {
           },
       LOGIN_SUCCESS() {
             return closure_0.handleReset();
+          },
+      CONNECTION_OPEN() {
+            return closure_0.handleConnectionOpen();
           }
     };
     tmp21 = new tmp2(closure_1(closure_2[3]), obj, new.target, tmp2, tmp, new.target);
     closure_0 = tmp21;
-    tmp21.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "flexDirection", userOpenedWalletViaProfileDCF: 28143 };
+    tmp21.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "flexDirection", userOpenedWalletViaProfileDCF: "bindOpenGdmCustomizeActionSheet" };
     return tmp21;
   }
 }
@@ -92,7 +95,18 @@ prototype["handleCurrentUserPremiumTypeChange"] = function handleCurrentUserPrem
   }
 };
 prototype["handleReset"] = function handleReset() {
-  this.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "flexDirection", userOpenedWalletViaProfileDCF: 28143 };
+  this.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "flexDirection", userOpenedWalletViaProfileDCF: "bindOpenGdmCustomizeActionSheet" };
+};
+prototype["handleConnectionOpen"] = function handleConnectionOpen() {
+  const hasFetchedChallenges = this.state.hasFetchedChallenges;
+  let isFetchingChallenges = !hasFetchedChallenges;
+  if (hasFetchedChallenges) {
+    isFetchingChallenges = this.state.isFetchingChallenges;
+  }
+  if (!isFetchingChallenges) {
+    const orbChallenges = OrbChallengeActionCreators.fetchOrbChallenges();
+  }
+  return false;
 };
 prototype["handleOrbChallengesFetchStart"] = function handleOrbChallengesFetchStart(arg0) {
   if (arg0 == null) {
@@ -279,54 +293,17 @@ Object.defineProperty(prototype, "isFetchingChallenges", {
   },
   set: undefined
 });
-const get = function fetchChallengesError() {
-  return this.state.fetchChallengesError;
-};
-Object.defineProperty(prototype, "fetchChallengesError", { get, set: undefined });
+Object.defineProperty(prototype, "fetchChallengesError", {
+  get: function fetchChallengesError() {
+    return this.state.fetchChallengesError;
+  },
+  set: undefined
+});
 OrbChallengesStore.displayName = "OrbChallengesStore";
-const tmp3 = new tmp(DispatcherDefault, {
-  ORB_CHALLENGES_LIST_FETCH(arg0) {
-    return closure_0.handleOrbChallengesFetchStart(arg0);
-  },
-  ORB_CHALLENGES_LIST_FETCH_SUCCESS(response) {
-    return closure_0.handleOrbChallengesFetchSuccess(response);
-  },
-  ORB_CHALLENGES_LIST_FETCH_FAIL(error) {
-    return closure_0.handleOrbChallengesFetchFail(error);
-  },
-  ORB_CHALLENGES_UNREAD_UPDATE(achievementUnreadState) {
-    return closure_0.handleUnreadUpdate(achievementUnreadState);
-  },
-  ORB_CHALLENGES_UNREAD_ACK() {
-    return closure_0.handleUnreadAck();
-  },
-  ORB_CHALLENGE_CLAIM(achievementIdentifier) {
-    return closure_0.handleOrbChallengeClaim(achievementIdentifier);
-  },
-  ORB_CHALLENGE_CLAIM_SUCCESS(achievementIdentifier) {
-    return closure_0.handleOrbChallengeClaimSuccess(achievementIdentifier);
-  },
-  ORB_CHALLENGE_CLAIM_FAIL(achievementIdentifier) {
-    return closure_0.handleOrbChallengeClaimFail(achievementIdentifier);
-  },
-  USER_DISCORD_ACHIEVEMENT_STATE_UPDATE(payload) {
-    return closure_0.handleUserAchievementStateUpdate(payload);
-  },
-  CURRENT_USER_UPDATE() {
-    return closure_0.handleCurrentUserPremiumTypeChange();
-  },
-  UPDATE_CLIENT_PREMIUM_TYPE() {
-    return closure_0.handleCurrentUserPremiumTypeChange();
-  },
-  LOGIN_SUCCESS() {
-    return closure_0.handleReset();
-  }
-}, tmp2, OrbChallengesStore, tmp, prototype, new.target, undefined, get, fn, dependencyMap);
-let closure_129_0 = tmp3;
-tmp3.state = { challenges: [], isFetchingChallenges: false, hasFetchedChallenges: false, fetchChallengesError: null, isClaimingChallengeMap: {}, claimChallengeErrorMap: {}, orbRewardMultiplier: null, nitroGatedOrbMultiplier: null, achievementUnreadState: null, lastFetchedPremiumType: "flexDirection", userOpenedWalletViaProfileDCF: 28143 };
+const orbChallengesStore = new OrbChallengesStore();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/stores/OrbChallengesStore.tsx");
 
-export default tmp3;
+export default orbChallengesStore;
 export { ClientUnreadNotificationType };
 export const OrbChallengesDisplayErrorType = obj2;

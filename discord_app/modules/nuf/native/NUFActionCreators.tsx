@@ -1,15 +1,15 @@
-// === Module 14223: NUFActionCreators ===
+// === Module 14261: NUFActionCreators ===
 
-// Module 14223 (NUFActionCreators)
+// Module 14261 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14198 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14202 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 14304 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14307 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14236 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 14240 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 14342 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14345 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
-import UserStore from "UserStore" /* 1384 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp25) {
         c3 = tmp;
@@ -95,11 +95,11 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(14195);
+const ContactSyncModalStore = fn(14233);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
-let closure_10 = fn(14224).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(14262).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1072).PlatformTypes;
-let closure_12 = fn(7141).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_12 = fn(7147).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 

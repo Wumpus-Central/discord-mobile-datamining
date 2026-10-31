@@ -1,14 +1,14 @@
-// === Module 10756: useDisplayNameStylesEffectDefaultColors ===
+// === Module 10776: useDisplayNameStylesEffectDefaultColors ===
 
-// Module 10756 (useDisplayNameStylesEffectDefaultColors)
+// Module 10776 (useDisplayNameStylesEffectDefaultColors)
 import nativeDefault from "native" /* 575 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1403 */;
-import useToken from "useToken" /* 5591 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1402 */;
+import useToken from "useToken" /* 5596 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1402);
+const DisplayNameStylesConstants = fn(1401);
 ({ DISPLAY_NAME_STYLES_GRADIENT_PRESETS: closure_4, DISPLAY_NAME_STYLES_GUMMY_PRESETS: hasOwnProperty, DISPLAY_NAME_STYLES_PRISM_PRESETS: metroRequire } = DisplayNameStylesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx");

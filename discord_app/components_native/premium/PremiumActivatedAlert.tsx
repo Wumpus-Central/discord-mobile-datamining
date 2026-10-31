@@ -1,38 +1,38 @@
-// === Module 10559: PremiumActivatedAlert ===
+// === Module 10579: PremiumActivatedAlert ===
 
-// Module 10559 (PremiumActivatedAlert)
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import PremiumUtils from "PremiumUtils" /* 2048 */;
-import shared from "shared" /* 5016 */;
-import useThemeDefault from "useTheme" /* 5248 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import common_AlertDefault from "common/Alert" /* 6025 */;
-import _modDef8527 from "module_8527" /* 8527 */;
-import _modDef9909 from "module_9909" /* 9909 */;
-import _modDef10560 from "module_10560" /* 10560 */;
-import _modDef10561 from "module_10561" /* 10561 */;
-import _modDef10562 from "module_10562" /* 10562 */;
-import _modDef10563 from "module_10563" /* 10563 */;
-import _modDef10564 from "module_10564" /* 10564 */;
-import _modDef10565 from "module_10565" /* 10565 */;
-import _modDef10566 from "module_10566" /* 10566 */;
-import _modDef10567 from "module_10567" /* 10567 */;
-import _modDef10568 from "module_10568" /* 10568 */;
-import _modDef10569 from "module_10569" /* 10569 */;
-import _modDef10570 from "module_10570" /* 10570 */;
-import _modDef10571 from "module_10571" /* 10571 */;
-import _modDef10572 from "module_10572" /* 10572 */;
-import _modDef10573 from "module_10573" /* 10573 */;
-import _modDef10574 from "module_10574" /* 10574 */;
-import _modDef10575 from "module_10575" /* 10575 */;
-import _modDef10576 from "module_10576" /* 10576 */;
-import _modDef10577 from "module_10577" /* 10577 */;
-import _modDef10578 from "module_10578" /* 10578 */;
-import _modDef10579 from "module_10579" /* 10579 */;
+// Module 10579 (PremiumActivatedAlert)
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import PremiumUtils from "PremiumUtils" /* 2047 */;
+import shared from "shared" /* 5021 */;
+import useThemeDefault from "useTheme" /* 5253 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import common_AlertDefault from "common/Alert" /* 6030 */;
+import _modDef8535 from "module_8535" /* 8535 */;
+import _modDef9930 from "module_9930" /* 9930 */;
 import _modDef10580 from "module_10580" /* 10580 */;
 import _modDef10581 from "module_10581" /* 10581 */;
-import ShineAnimationDefault from "ShineAnimation" /* 10582 */;
+import _modDef10582 from "module_10582" /* 10582 */;
+import _modDef10583 from "module_10583" /* 10583 */;
+import _modDef10584 from "module_10584" /* 10584 */;
+import _modDef10585 from "module_10585" /* 10585 */;
+import _modDef10586 from "module_10586" /* 10586 */;
+import _modDef10587 from "module_10587" /* 10587 */;
+import _modDef10588 from "module_10588" /* 10588 */;
+import _modDef10589 from "module_10589" /* 10589 */;
+import _modDef10590 from "module_10590" /* 10590 */;
+import _modDef10591 from "module_10591" /* 10591 */;
+import _modDef10592 from "module_10592" /* 10592 */;
+import _modDef10593 from "module_10593" /* 10593 */;
+import _modDef10594 from "module_10594" /* 10594 */;
+import _modDef10595 from "module_10595" /* 10595 */;
+import _modDef10596 from "module_10596" /* 10596 */;
+import _modDef10597 from "module_10597" /* 10597 */;
+import _modDef10598 from "module_10598" /* 10598 */;
+import _modDef10599 from "module_10599" /* 10599 */;
+import _modDef10600 from "module_10600" /* 10600 */;
+import _modDef10601 from "module_10601" /* 10601 */;
+import ShineAnimationDefault from "ShineAnimation" /* 10602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ get_ActivityIndicator = fn(17);
 const SubscriptionStatusTypes = fn(1072).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { alert: { overflow: "hidden", paddingBottom: 24 }, header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" }, headerBackground: null, headerImage: null, body: null, logoPlusPremiumGuild: null, description: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -51,9 +51,9 @@ obj2.headerBackground = obj3;
 obj2.headerImage = { position: "absolute", left: "50%" };
 obj2.body = { paddingHorizontal: 16, marginTop: 40, maxWidth: 300, alignSelf: "center", alignItems: "center" };
 obj2.logoPlusPremiumGuild = { marginTop: 3, width: 101, height: 19 };
-obj2.description = { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop: 20, color: fn(6772).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+obj2.description = { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop: 20, color: fn(6778).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_8 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.TIER_0 === arg0) {
     const obj2 = { headerImage: { marginLeft: -27, width: 88, top: 18 } };
@@ -72,7 +72,7 @@ let closure_8 = createStyles.createStyles((arg0) => {
     return obj;
   }
 });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_9 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.BUNDLE === arg0) {
     const obj2 = { animation: { borderRadius: 6 } };
@@ -141,37 +141,37 @@ export default function PremiumActivatedAlert(onClose) {
   const obj7 = { style: tmp.header, children: null };
   const tmp4Result = common_AlertDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result15 = _modDef10560;
+    let tmp4Result15 = _modDef10580;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result15 = _modDef10561;
+    tmp4Result15 = _modDef10581;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result15 = _modDef10562;
+    tmp4Result15 = _modDef10582;
   } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-    tmp4Result15 = _modDef10563;
+    tmp4Result15 = _modDef10583;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result15 = _modDef10564;
+    tmp4Result15 = _modDef10584;
   }
   const items = [hasOwnProperty(FastImageDefault, { source: tmp4Result15, style: tmp.headerBackground }), , , ];
   const obj8 = { source: tmp4Result15, style: tmp.headerBackground };
   const tmp4Result14 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result17 = _modDef10569;
+    let tmp4Result17 = _modDef10589;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result17 = _modDef10570;
+    tmp4Result17 = _modDef10590;
   } else {
     if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
       if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
         if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result17 = _modDef10571;
+          tmp4Result17 = _modDef10591;
         }
       }
     }
-    tmp4Result17 = _modDef8527;
+    tmp4Result17 = _modDef8535;
   }
   items[1] = hasOwnProperty(FastImageDefault, { source: tmp4Result17, style: tmp9.logo });
   let tmp15Result = null;
   if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-    const obj10 = { source: _modDef10581, style: tmp.logoPlusPremiumGuild };
+    const obj10 = { source: _modDef10601, style: tmp.logoPlusPremiumGuild };
     tmp15Result = hasOwnProperty(FastImageDefault, obj10);
     const tmp4Result18 = FastImageDefault;
   }
@@ -179,15 +179,15 @@ export default function PremiumActivatedAlert(onClose) {
   const obj9 = { source: tmp4Result17, style: tmp9.logo };
   const tmp4Result16 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result20 = _modDef9909;
+    let tmp4Result20 = _modDef9930;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result20 = _modDef10565;
+    tmp4Result20 = _modDef10585;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result20 = _modDef10566;
+    tmp4Result20 = _modDef10586;
   } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-    tmp4Result20 = _modDef10567;
+    tmp4Result20 = _modDef10587;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result20 = _modDef10568;
+    tmp4Result20 = _modDef10588;
   }
   const obj11 = { source: tmp4Result20, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
@@ -199,38 +199,38 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp4Result19 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result22 = _modDef10572;
+      let tmp4Result22 = _modDef10592;
     } else {
-      tmp4Result22 = _modDef10573;
+      tmp4Result22 = _modDef10593;
     }
     tmp7Result = shared;
   } else {
     if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
       if (tmp7Result5.isThemeDark(tmp6)) {
-        let tmp4Result23 = _modDef10574;
+        let tmp4Result23 = _modDef10594;
       } else {
-        tmp4Result23 = _modDef10575;
+        tmp4Result23 = _modDef10595;
       }
       let tmp4Result26 = tmp4Result23;
       tmp7Result5 = shared;
     } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
       if (tmp7Result6.isThemeDark(tmp6)) {
-        let tmp4Result24 = _modDef10576;
+        let tmp4Result24 = _modDef10596;
       } else {
-        tmp4Result24 = _modDef10577;
+        tmp4Result24 = _modDef10597;
       }
       tmp4Result26 = tmp4Result24;
       tmp7Result6 = shared;
     } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
       if (tmp7Result7.isThemeDark(tmp6)) {
-        let tmp4Result25 = _modDef10578;
+        let tmp4Result25 = _modDef10598;
       } else {
-        tmp4Result25 = _modDef10579;
+        tmp4Result25 = _modDef10599;
       }
       tmp4Result26 = tmp4Result25;
       tmp7Result7 = shared;
     } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result26 = _modDef10580;
+      tmp4Result26 = _modDef10600;
     }
     const obj13 = { source: tmp4Result26, style: tmp11.animation };
     const items3 = [hasOwnProperty(tmp4Result21, obj13), ];

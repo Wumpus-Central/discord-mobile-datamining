@@ -1,24 +1,24 @@
-// === Module 15137: VoiceActionSheet ===
+// === Module 15176: VoiceActionSheet ===
 
-// Module 15137 (VoiceActionSheet)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5193 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5595 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7320 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
-import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 15138 */;
-import NUFVoiceChannelsTemplateDefault from "NUFVoiceChannelsTemplate" /* 15146 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 15149 */;
-import VoiceEmptyStateDefault from "VoiceEmptyState" /* 15150 */;
-import VoiceMemberListDefault from "VoiceMemberList" /* 15153 */;
+// Module 15176 (VoiceActionSheet)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5198 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5600 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
+import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 15177 */;
+import NUFVoiceChannelsTemplateDefault from "NUFVoiceChannelsTemplate" /* 15185 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 15188 */;
+import VoiceEmptyStateDefault from "VoiceEmptyState" /* 15189 */;
+import VoiceMemberListDefault from "VoiceMemberList" /* 15192 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5762 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = { container: { flex: 1 }, visualEffectView: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -49,7 +49,7 @@ export default function VoiceActionSheet(channel) {
     let obj3 = { children: null };
     const obj4 = { channel };
     obj3.children = closure_6(NUFVoiceChannelsTemplateDefault, obj4);
-    let children = closure_6(tmp5(7360).ActionSheet, obj3);
+    let children = closure_6(tmp5(7366).ActionSheet, obj3);
     let tmp8 = closure_6;
   } else if (stateFromStores) {
     const obj5 = { children: null };
@@ -58,7 +58,7 @@ export default function VoiceActionSheet(channel) {
     const obj7 = { channel };
     items2[1] = closure_6(VoiceEmptyStateDefault, obj7);
     obj5.children = items2;
-    children = closure_7(tmp5(7360).ActionSheet, obj5);
+    children = closure_7(tmp5(7366).ActionSheet, obj5);
     tmp8 = closure_6;
   } else {
     tmp8 = closure_6;
@@ -70,7 +70,7 @@ export default function VoiceActionSheet(channel) {
     items3[1] = closure_6(VoiceMemberListDefault, obj11);
     obj9.children = items3;
     obj8.children = closure_7(closure_4, obj9);
-    children = closure_6(tmp5(7360).ActionSheet, obj8);
+    children = closure_6(tmp5(7366).ActionSheet, obj8);
   }
-  return tmp8(channel(7320).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(7326).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
 };

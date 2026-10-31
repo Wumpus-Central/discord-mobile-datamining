@@ -1,7 +1,7 @@
-// === Module 2055: GooglePlayPriceChangeRecord ===
+// === Module 2054: GooglePlayPriceChangeRecord ===
 
-// Module 2055 (GooglePlayPriceChangeRecord)
-import Record from "Record" /* 1399 */;
+// Module 2054 (GooglePlayPriceChangeRecord)
+import Record from "Record" /* 1398 */;
 
 const GooglePlayPriceChangeMode = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };
 let GooglePlayPriceChangeRecord;

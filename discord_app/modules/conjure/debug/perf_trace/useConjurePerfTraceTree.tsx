@@ -1,7 +1,7 @@
-// === Module 12971: useConjurePerfTraceTree ===
+// === Module 13006: useConjurePerfTraceTree ===
 
-// Module 12971 (useConjurePerfTraceTree)
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10869 */;
+// Module 13006 (useConjurePerfTraceTree)
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10894 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

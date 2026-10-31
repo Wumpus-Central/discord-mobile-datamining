@@ -1,11 +1,11 @@
-// === Module 18125: VoiceUserItem ===
+// === Module 18168: VoiceUserItem ===
 
-// Module 18125 (VoiceUserItem)
+// Module 18168 (VoiceUserItem)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11028 */;
+import native from "native" /* 1187 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,12 +17,12 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "text-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1188).AvatarSizes.XSMALL_20;
-const createStyles = fn(5009);
+const XSMALL_20 = fn(1187).AvatarSizes.XSMALL_20;
+const createStyles = fn(5014);
 let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
 let size = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: nativeDefault.radii.lg, borderWidth: 4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11030);
+const ChannelListLayout = fn(11049);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

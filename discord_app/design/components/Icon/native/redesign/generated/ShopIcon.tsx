@@ -1,9 +1,9 @@
-// === Module 12290: ShopIcon ===
+// === Module 12328: ShopIcon ===
 
-// Module 12290 (ShopIcon)
+// Module 12328 (ShopIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod12291 from "module_12291" /* 12291 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod12329 from "module_12329" /* 12329 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ShopIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12291, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12329, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

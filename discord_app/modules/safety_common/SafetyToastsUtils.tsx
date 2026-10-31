@@ -1,16 +1,16 @@
-// === Module 7489: SafetyToastsUtils ===
+// === Module 7495: SafetyToastsUtils ===
 
-// Module 7489 (SafetyToastsUtils)
-import util from "util" /* 1114 */;
-import _modDef2673 from "module_2673" /* 2673 */;
-import _modDef3093 from "module_3093" /* 3093 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6036 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import UserStore from "UserStore" /* 1384 */;
+// Module 7495 (SafetyToastsUtils)
+import util from "util" /* 1113 */;
+import _modDef2674 from "module_2674" /* 2674 */;
+import _modDef3096 from "module_3096" /* 3096 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
-const SafetyToastType = fn(7484).SafetyToastType;
+const SafetyToastType = fn(7490).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 
@@ -63,13 +63,13 @@ export function getSafetyToastTypeContent(BLOCK_SUCCESS, id, channelId) {
     return intl11.string(util.t.c6kn6F);
   } else if (SafetyToastType.AGE_VERIFICATION_FAE_FAILED === BLOCK_SUCCESS) {
     const intl10 = util.intl;
-    return intl10.string(_modDef3093["9F2y52"]);
+    return intl10.string(_modDef3096["9F2y52"]);
   } else if (SafetyToastType.AGE_VERIFICATION_ID_FAILED === BLOCK_SUCCESS) {
     const intl9 = util.intl;
-    return intl9.string(_modDef3093["40UKek"]);
+    return intl9.string(_modDef3096["40UKek"]);
   } else if (SafetyToastType.AGE_VERIFICATION_UNDERAGE === BLOCK_SUCCESS) {
     const intl8 = util.intl;
-    return intl8.string(_modDef3093.XBGt7g);
+    return intl8.string(_modDef3096.XBGt7g);
   } else if (SafetyToastType.TIGGER_PAWTECT_VERIFIED === BLOCK_SUCCESS) {
     const intl7 = util.intl;
     return intl7.string(util.t["7nKAXx"]);
@@ -78,7 +78,7 @@ export function getSafetyToastTypeContent(BLOCK_SUCCESS, id, channelId) {
     return intl6.string(util.t.zBpoc7);
   } else if (SafetyToastType.REPORT_TO_MOD_SUCCESS === BLOCK_SUCCESS) {
     const intl5 = util.intl;
-    return intl5.string(_modDef2673.iBypeZ);
+    return intl5.string(_modDef2674.iBypeZ);
   } else if (SafetyToastType.SAFETY_FEEDBACK_SUCCESS === BLOCK_SUCCESS) {
     const intl4 = util.intl;
     return intl4.string(util.t.TcFR5k);
@@ -87,7 +87,7 @@ export function getSafetyToastTypeContent(BLOCK_SUCCESS, id, channelId) {
     return intl3.string(util.t["susqq/"]);
   } else if (SafetyToastType.AGE_VERIFICATION_METHOD_UNAVAILABLE === BLOCK_SUCCESS) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3093.vVwFCK);
+    return intl2.string(_modDef3096.vVwFCK);
   } else {
     const intl = util.intl;
     return intl.string(util.t["+c5xtT"]);

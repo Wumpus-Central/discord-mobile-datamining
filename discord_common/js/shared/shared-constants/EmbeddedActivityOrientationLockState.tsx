@@ -1,6 +1,6 @@
-// === Module 2021: EmbeddedActivityOrientationLockState ===
+// === Module 2019: EmbeddedActivityOrientationLockState ===
 
-// Module 2021 (EmbeddedActivityOrientationLockState)
+// Module 2019 (EmbeddedActivityOrientationLockState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx");

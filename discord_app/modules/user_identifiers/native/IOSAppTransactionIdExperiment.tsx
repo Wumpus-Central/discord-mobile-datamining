@@ -1,7 +1,7 @@
-// === Module 19447: IOSAppTransactionIdExperiment ===
+// === Module 19504: IOSAppTransactionIdExperiment ===
 
-// Module 19447 (IOSAppTransactionIdExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 19504 (IOSAppTransactionIdExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-01-ios-apptransactionid-tracking", defaultConfig: { enabled: false }, variations: null };

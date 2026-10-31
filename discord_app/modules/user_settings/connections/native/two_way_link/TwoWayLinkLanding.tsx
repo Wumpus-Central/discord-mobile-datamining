@@ -1,23 +1,23 @@
-// === Module 9709: TwoWayLinkLanding ===
+// === Module 9729: TwoWayLinkLanding ===
 
-// Module 9709 (TwoWayLinkLanding)
+// Module 9729 (TwoWayLinkLanding)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import TableRow from "TableRow" /* 6969 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7286 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9710 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import TableRow from "TableRow" /* 6975 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9730 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ image: { marginBottom: 32 }, valueProps: { marginTop: 24, maxWidth: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkLanding.tsx");
@@ -46,7 +46,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(5712), obj5), , , ];
+  const items2 = [closure_6(valueProps(5717), obj5), , , ];
   const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: null };
   let tmp11 = headerConnect;
   if (stateFromStores) {
@@ -59,7 +59,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   items2[1] = closure_6(Text_Text.Text, obj6);
   items2[2] = closure_6(Text_Text.Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body });
   const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(5712);
+  const tmp10 = valueProps(5717);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {

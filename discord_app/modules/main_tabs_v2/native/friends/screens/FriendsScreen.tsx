@@ -1,19 +1,19 @@
-// === Module 18779: FriendsScreen ===
+// === Module 18822: FriendsScreen ===
 
-// Module 18779 (FriendsScreen)
+// Module 18822 (FriendsScreen)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1889 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import SendMessageIcon from "SendMessageIcon" /* 5724 */;
-import TableRow from "TableRow" /* 6969 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
-import NoResultsDefault from "NoResults" /* 13353 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17020 */;
-import _modDef18460 from "module_18460" /* 18460 */;
+import util from "util" /* 1113 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import SendMessageIcon from "SendMessageIcon" /* 5729 */;
+import TableRow from "TableRow" /* 6975 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+import NoResultsDefault from "NoResults" /* 13388 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17078 */;
+import _modDef18503 from "module_18503" /* 18503 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7793 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7800 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, flex: 1 }, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
 obj2.requestsButtonContainer = { marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     const items = [];
     if (tmp2) {
-      const obj = { icon: _modDef18460, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef18503, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -123,20 +123,20 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18460 };
+      const obj8 = { source: _modDef18503 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;
       obj7.label = intl5.string(util.t.fyA115);
       if (incoming + outgoing > 0) {
-        const intl2 = v1IEawz(1114).intl;
-        v1IEawz = v1IEawz(1114).t["1IEawz"];
+        const intl2 = v1IEawz(1113).intl;
+        v1IEawz = v1IEawz(1113).t["1IEawz"];
         obj9 = { incoming, outgoing };
         let formatToPlainStringResult = intl2.formatToPlainString(v1IEawz, obj9);
       } else {
-        const intl = v1IEawz(1114).intl;
+        const intl = v1IEawz(1113).intl;
         const obj10 = { spam: tmp6 };
-        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1114).t.e6BtLq, obj10);
+        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1113).t.e6BtLq, obj10);
       }
       obj7.subLabel = formatToPlainStringResult;
       obj7.onPress = function onPress() {

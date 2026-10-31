@@ -1,12 +1,12 @@
-// === Module 15953: Avatar ===
+// === Module 15994: Avatar ===
 
-// Module 15953 (Avatar)
+// Module 15994 (Avatar)
 import nativeDefault from "native" /* 575 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8720 */;
-import ClipView from "ClipView" /* 9487 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14842 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 15942 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15943 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8728 */;
+import ClipView from "ClipView" /* 9509 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14880 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 15983 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 15984 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,11 +48,11 @@ function getStatusSize(arg0) {
 }
 const View = fn(17).View;
 const StatusTypes = fn(1072).StatusTypes;
-const StatusConstants = fn(1189);
+const StatusConstants = fn(1188);
 ({ STATUS_PADDING: metroRequire, StatusSizes: closure_7 } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles((NORMAL) => {
   const obj = { status: { position: "absolute", right: -3, bottom: -3 }, speaking: null, soundboard: null, stageSpeaking: null, voiceStatus: null, decoration: null, container: null };
   const rect = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: nativeDefault.colors.STATUS_SPEAKING };
@@ -311,5 +311,5 @@ export default noop.memo(function Avatar(isMobileOnline) {
     tmp10(cutout, obj14);
   }
 });
-export const AvatarSizes = fn(14842).AvatarSizes;
+export const AvatarSizes = fn(14880).AvatarSizes;
 export { getStatusSize };

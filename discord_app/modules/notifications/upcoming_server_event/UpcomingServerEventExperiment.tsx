@@ -1,7 +1,7 @@
-// === Module 17434: UpcomingServerEventExperiment ===
+// === Module 17494: UpcomingServerEventExperiment ===
 
-// Module 17434 (UpcomingServerEventExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 17494 (UpcomingServerEventExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-04-upcoming-server-event", defaultConfig: { showSettingsToggle: false }, variations: null };

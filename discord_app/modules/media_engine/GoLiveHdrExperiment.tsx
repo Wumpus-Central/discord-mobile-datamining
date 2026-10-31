@@ -1,7 +1,7 @@
-// === Module 15842: GoLiveHdrExperiment ===
+// === Module 15883: GoLiveHdrExperiment ===
 
-// Module 15842 (GoLiveHdrExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 15883 (GoLiveHdrExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { Never: "never", Always: "always", PermittedDevicesOnly: "permittedDevicesOnly" };

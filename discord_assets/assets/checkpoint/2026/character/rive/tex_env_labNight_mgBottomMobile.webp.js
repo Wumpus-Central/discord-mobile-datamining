@@ -1,6 +1,6 @@
-// === Module 13448: ? ===
+// === Module 13484: ? ===
 
-// Module 13448
+// Module 13484
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_env_labNight_mgBottomMobile.webp.js");

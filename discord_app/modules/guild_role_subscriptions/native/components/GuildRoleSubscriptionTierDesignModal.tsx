@@ -1,24 +1,24 @@
-// === Module 19920: GuildRoleSubscriptionTierDesignModal ===
+// === Module 19978: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 19920 (GuildRoleSubscriptionTierDesignModal)
+// Module 19978 (GuildRoleSubscriptionTierDesignModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import useToken from "useToken" /* 5591 */;
-import RoleIconUtils from "RoleIconUtils" /* 7350 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17147 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 17158 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19887 */;
+import util from "util" /* 1113 */;
+import useToken from "useToken" /* 5596 */;
+import RoleIconUtils from "RoleIconUtils" /* 7356 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17203 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 17215 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function MemberPreviews(role) {
   role = role.role;
-  const tmp = closure_12();
+  const tmp = closure_11();
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.DARK);
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, nativeDefault.themes.LIGHT);
   const token2 = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.DARK);
-  const obj5 = { style: tmp.memberPreviews, children: null };
+  const obj5 = { children: null };
   const token3 = useToken.useToken(nativeDefault.colors.TEXT_DEFAULT, nativeDefault.themes.LIGHT);
   const obj6 = { style: null, textStyle: { color: token3 }, role };
   const items = [, , ];
@@ -36,7 +36,7 @@ function MemberPreviews(role) {
   return closure_1_10(View, obj5);
 }
 function Content() {
-  const tmp3 = role(15680)();
+  const tmp3 = role(19943)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -57,43 +57,51 @@ function Content() {
     const obj5 = { uri: customIconSrc };
     tmp10 = obj5;
   }
+  const tmp11 = closure_11();
   const roleSubscriptionSettingsDisabled = require("RoleSubscriptionSettingsDisabledContext").useRoleSubscriptionSettingsDisabled();
-  const obj6 = { children: null };
-  const items1 = [closure_9(MemberPreviews, { role }), , , , ];
-  const obj7 = { style: tmp3.header, children: null };
+  const obj6 = { style: null, children: null };
+  const items1 = [tmp3.container, tmp11.container];
+  obj6.style = items1;
+  const items2 = [closure_9(MemberPreviews, { role }), , ];
+  const obj7 = { children: null };
+  const obj8 = { title: null };
+  const intl = tmp4(1113).intl;
+  obj8.title = intl.string(require("util").t.sEr1zr);
+  const items3 = [closure_9(require("TableRowGroup").TableRowGroupTitle, obj8), ];
+  const obj9 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
   const tmp4Result = require("RoleSubscriptionSettingsDisabledContext");
-  const intl = tmp4(1114).intl;
-  obj7.children = intl.string(require("util").t.sEr1zr);
-  items1[1] = closure_9(role(9093), obj7);
-  const obj8 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
-  const tmpResult = role(9093);
-  const intl2 = tmp4(1114).intl;
-  obj8.description = intl2.string(require("util").t.Glqj9m);
-  obj8.image = tmp10;
-  obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
-  obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
-  obj8.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
+  const intl2 = tmp4(1113).intl;
+  obj9.description = intl2.string(require("util").t.Glqj9m);
+  obj9.image = tmp10;
+  obj9.imageUploadSize = UPLOAD_SMALL_SIZE;
+  obj9.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
+  obj9.setImage = function setImage(icon) {
+    return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
   };
-  obj8.disabled = roleSubscriptionSettingsDisabled;
-  items1[2] = closure_9(role(19886), obj8);
-  const obj9 = { style: tmp3.header, children: null };
-  const tmpResult3 = role(19886);
-  const intl3 = tmp4(1114).intl;
-  obj9.children = intl3.string(require("util").t["W7hH+z"]);
-  items1[3] = closure_9(role(9093), obj9);
-  items1[4] = closure_9(role(19921), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
-  obj6.children = items1;
-  return closure_10(closure_11, obj6);
+  obj9.disabled = roleSubscriptionSettingsDisabled;
+  items3[1] = closure_9(role(19944), obj9);
+  obj7.children = items3;
+  items2[1] = closure_10(View, obj7);
+  const obj10 = { title: null, hasIcons: true, children: null };
+  const intl3 = tmp4(1113).intl;
+  obj10.title = intl3.string(require("util").t["W7hH+z"]);
+  obj10.children = closure_9(role(19979), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items2[2] = closure_9(require("TableRowGroup").TableRowGroup, obj10);
+  obj6.children = items2;
+  return closure_10(View, obj6);
 }
 const View = fn(17).View;
-const constants = fn(17125).GuildRoleSubscriptionsTierScenes;
+const constants = fn(17183).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5009);
-let obj2 = { memberPreviews: { paddingHorizontal: 16, paddingTop: 26 }, member: { padding: 16, borderRadius: nativeDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, memberLight: { borderTopLeftRadius: 8, borderTopRightRadius: 8, borderTopWidth: 1 }, memberDark: { borderBottomLeftRadius: 8, borderBottomRightRadius: 8, borderBottomWidth: 1 } };
-let closure_12 = createStyles.createStyles(obj2);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5014);
+let obj2 = { container: { paddingTop: nativeDefault.space.PX_26 }, member: null, memberLight: null, memberDark: null };
+let obj3 = { paddingTop: nativeDefault.space.PX_26 };
+obj2.member = { padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
+obj2.memberLight = { borderTopLeftRadius: 8, borderTopRightRadius: 8, borderTopWidth: 1 };
+obj2.memberDark = { borderBottomLeftRadius: 8, borderBottomRightRadius: 8, borderBottomWidth: 1 };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDesignModal.tsx");
 

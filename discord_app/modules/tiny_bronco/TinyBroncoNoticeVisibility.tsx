@@ -1,10 +1,10 @@
-// === Module 16562: TinyBroncoNoticeVisibility ===
+// === Module 16604: TinyBroncoNoticeVisibility ===
 
-// Module 16562 (TinyBroncoNoticeVisibility)
-import Server from "Server" /* 1993 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5688 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6725 */;
-import UserStore from "UserStore" /* 1384 */;
+// Module 16604 (TinyBroncoNoticeVisibility)
+import Server from "Server" /* 1992 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5693 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6731 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const size = fn(2);

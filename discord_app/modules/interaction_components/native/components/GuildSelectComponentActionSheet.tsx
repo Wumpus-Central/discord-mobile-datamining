@@ -1,17 +1,17 @@
-// === Module 16517: GuildSelectComponentActionSheet ===
+// === Module 16559: GuildSelectComponentActionSheet ===
 
-// Module 16517 (GuildSelectComponentActionSheet)
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6036 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6068 */;
-import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 12462 */;
+// Module 16559 (GuildSelectComponentActionSheet)
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6073 */;
+import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 12497 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import SortedGuildStore from "SortedGuildStore" /* 6766 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import SortedGuildStore from "SortedGuildStore" /* 6772 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({ guildIdentity: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 16 }, avatar: { marginRight: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/components/GuildSelectComponentActionSheet.tsx");
@@ -56,7 +56,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
       let reduced = flattenedGuildIds.reduce((arr, item) => {
         guild = guild.getGuild(item);
         if (null != guild) {
-          const obj = { type: closure_1_0(6068).SelectOptionType.GUILD, value: null, label: null, guild: null };
+          const obj = { type: closure_1_0(6073).SelectOptionType.GUILD, value: null, label: null, guild: null };
           ({ id: obj.value, name: obj.label } = guild);
           obj.guild = guild;
           arr = arr.push(obj);
@@ -68,7 +68,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
       let obj = require("AutocompleteUtils");
       reduced = require("AutocompleteUtils").queryGuilds(obj2).map((record) => {
         record = record.record;
-        return { type: closure_1_0(6068).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
+        return { type: closure_1_0(6073).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
       });
       const queryGuildsResult = require("AutocompleteUtils").queryGuilds(obj2);
     }

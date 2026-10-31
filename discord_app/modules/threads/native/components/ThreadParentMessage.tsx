@@ -1,17 +1,17 @@
-// === Module 18615: ThreadParentMessage ===
+// === Module 18657: ThreadParentMessage ===
 
-// Module 18615 (ThreadParentMessage)
+// Module 18657 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
-import router_utils from "router_utils" /* 1100 */;
-import Pressables from "Pressables" /* 6974 */;
-import RowGeneratorDefault from "RowGenerator" /* 8369 */;
-import ChatItemDefault from "ChatItem" /* 9864 */;
+import router_utils from "router_utils" /* 1099 */;
+import Pressables from "Pressables" /* 6980 */;
+import RowGeneratorDefault from "RowGenerator" /* 8377 */;
+import ChatItemDefault from "ChatItem" /* 9885 */;
 import noop from "module_19" /* 19 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7759 */;
-import MessageStore from "MessageStore" /* 6056 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7766 */;
+import MessageStore from "MessageStore" /* 6061 */;
 
 require = fn;
-const ReferencedMessageState = fn(7759).ReferencedMessageState;
+const ReferencedMessageState = fn(7766).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: true, inlineEmbedMedia: true, renderReactions: false, renderReplies: true, renderThreadEmbeds: false });

@@ -1,14 +1,14 @@
-// === Module 7261: GuildOnboardingPromptsActionCreators ===
+// === Module 7267: GuildOnboardingPromptsActionCreators ===
 
-// Module 7261 (GuildOnboardingPromptsActionCreators)
+// Module 7267 (GuildOnboardingPromptsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5755 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5760 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7262 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7268 */;
 
 require = fn;
 function fetchOnboardingPrompts(guildId) {
@@ -39,7 +39,7 @@ let closure_14 = async function _maybeFetchOnboardingPrompts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -144,10 +144,10 @@ function _trackOnboardingDirectJoin(guildId) {
   obj5.in_onboarding = true;
   obj4.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj5);
 }
-let closure_8 = fn(7263).serverApiResponseToClientState;
+let closure_8 = fn(7269).serverApiResponseToClientState;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, Endpoints: c10, GuildFeatures: closure_11 } = Constants);
-const GuildMemberFlags = fn(4927).GuildMemberFlags;
+const GuildMemberFlags = fn(4932).GuildMemberFlags;
 let c16 = -2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");

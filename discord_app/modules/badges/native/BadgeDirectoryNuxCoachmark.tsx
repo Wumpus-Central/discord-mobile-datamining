@@ -1,11 +1,11 @@
-// === Module 14883: BadgeDirectoryNuxCoachmark ===
+// === Module 14921: BadgeDirectoryNuxCoachmark ===
 
-// Module 14883 (BadgeDirectoryNuxCoachmark)
+// Module 14921 (BadgeDirectoryNuxCoachmark)
 import nativeDefault from "native" /* 575 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 11415 */;
-import GameTimeTier9LargeBadge from "GameTimeTier9LargeBadge" /* 14884 */;
-import StreamingTier10LargeBadge from "StreamingTier10LargeBadge" /* 14888 */;
-import GameDiversityTier8LargeBadge from "GameDiversityTier8LargeBadge" /* 14892 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 11451 */;
+import GameTimeTier9LargeBadge from "GameTimeTier9LargeBadge" /* 14922 */;
+import StreamingTier10LargeBadge from "StreamingTier10LargeBadge" /* 14926 */;
+import GameDiversityTier8LargeBadge from "GameDiversityTier8LargeBadge" /* 14930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function ProgressGraphic(badgeIconUrls) {
   const badgeDirectoryNuxGraphicLayout = require("BadgeDirectoryNuxGraphicUtils").getBadgeDirectoryNuxGraphicLayout(badgeIconUrls.badgeIconUrls);
   if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
     const obj2 = { style: tmp.graphicRow, children: null };
-    const items = [closure_6(tmp2(14896).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(14900).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(14892).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
+    const items = [closure_6(tmp2(14934).GameDiversityTier9LargeBadge, { width: 42, height: 42 }), closure_6(tmp2(14938).GameDiversityTier10LargeBadge, { width: 60, height: 60 }), closure_6(tmp2(14930).GameDiversityTier8LargeBadge, { width: 42, height: 42 })];
     obj2.children = items;
     return closure_7(View, obj2);
   } else {
@@ -37,11 +37,11 @@ function ProgressGraphic(badgeIconUrls) {
   const obj = require("BadgeDirectoryNuxGraphicUtils");
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = { single: [60], pair: [48, 48], trio: [42, 60, 42] };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { graphicRow: { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 60, gap: nativeDefault.space.PX_8 }, noProgressGraphicRow: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 60, gap: nativeDefault.space.PX_8 };
 obj2.noProgressGraphicRow = { gap: nativeDefault.space.PX_12 };

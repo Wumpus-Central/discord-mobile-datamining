@@ -1,7 +1,7 @@
-// === Module 5239: validateTriggerPoint ===
+// === Module 5244: validateTriggerPoint ===
 
-// Module 5239 (validateTriggerPoint)
-import ExperimentStore from "ExperimentStore" /* 5233 */;
+// Module 5244 (validateTriggerPoint)
+import ExperimentStore from "ExperimentStore" /* 5238 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");

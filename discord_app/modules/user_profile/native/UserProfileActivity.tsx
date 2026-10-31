@@ -1,33 +1,33 @@
-// === Module 14800: UserProfileActivity ===
+// === Module 14838: UserProfileActivity ===
 
-// Module 14800 (UserProfileActivity)
+// Module 14838 (UserProfileActivity)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6700 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import transitionToGuild from "transitionToGuild" /* 7516 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7876 */;
-import StreamActionCreators from "StreamActionCreators" /* 7893 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7931 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8754 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8931 */;
-import closeVoicePanelsDefault from "closeVoicePanels" /* 10904 */;
-import UserActivitySpotify from "UserActivitySpotify" /* 11637 */;
-import UserProfileActivityButtons from "UserProfileActivityButtons" /* 14846 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6706 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import transitionToGuild from "transitionToGuild" /* 7522 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7883 */;
+import StreamActionCreators from "StreamActionCreators" /* 7901 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8762 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8940 */;
+import closeVoicePanelsDefault from "closeVoicePanels" /* 10929 */;
+import UserActivitySpotify from "UserActivitySpotify" /* 11673 */;
+import UserProfileActivityButtons from "UserProfileActivityButtons" /* 14884 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import RequestToStreamStore from "RequestToStreamStore" /* 14801 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6708 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import PresenceStore from "PresenceStore" /* 5756 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6564 */;
-import VoiceStateStore from "VoiceStateStore" /* 5674 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import RequestToStreamStore from "RequestToStreamStore" /* 14839 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import PresenceStore from "PresenceStore" /* 5761 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6570 */;
+import VoiceStateStore from "VoiceStateStore" /* 5679 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
 
 require = fn;
 function ActivityCardText(children) {
@@ -747,8 +747,8 @@ function VoiceCallActivityCard(arg0) {
   dependencyMap = undefined;
   ({ isInChannel, style } = arg0);
   const tmp = closure_25();
-  const tmp5 = stateFromStores(5647)(channel);
-  const tmp4 = stateFromStores(14839)(channel);
+  const tmp5 = stateFromStores(5652)(channel);
+  const tmp4 = stateFromStores(14877)(channel);
   const items = [GuildStore];
   stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   let obj = channel(504);
@@ -761,22 +761,22 @@ function VoiceCallActivityCard(arg0) {
     return isPrivateResult;
   });
   let obj2 = channel(504);
-  const tmp9 = stateFromStores(7320);
-  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7320)(stateFromStores(7345).USER_PROFILE_VOICE_ACTIVITY_CARD));
-  const tmp11 = stateFromStores(14828)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
+  const tmp9 = stateFromStores(7326);
+  ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7326)(stateFromStores(7351).USER_PROFILE_VOICE_ACTIVITY_CARD));
+  const tmp11 = stateFromStores(14866)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
   closure_3 = tmp11;
-  stateFromStores(14829)({ userId: user.id, onAction: tmp11 });
+  stateFromStores(14867)({ userId: user.id, onAction: tmp11 });
   const obj5 = { style: null, title: null, titleStyle: null, children: null };
   const items2 = [tmp.card, style];
   obj5.style = items2;
   const obj3 = { display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations };
   const obj4 = { userId: user.id, onAction: tmp11 };
-  const tmp9Result = stateFromStores(7320)(stateFromStores(7345).USER_PROFILE_VOICE_ACTIVITY_CARD);
+  const tmp9Result = stateFromStores(7326)(stateFromStores(7351).USER_PROFILE_VOICE_ACTIVITY_CARD);
   if (!channel.isDM()) {
     if (!channel.isGroupDM()) {
-      const intl = channel(1114).intl;
+      const intl = channel(1113).intl;
       const string = intl.string;
-      const t = channel(1114).t;
+      const t = channel(1113).t;
       if (isGuildStageVoiceResult) {
         let stringResult = string(t.QygGCN);
       } else {
@@ -793,14 +793,14 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj7.guildId = id;
-    const items3 = [closure_22(tmp2(14853), obj7), ];
+    const items3 = [closure_22(tmp2(14891), obj7), ];
     const obj8 = { style: tmp.voiceCallContent, children: null };
     if (stateFromStores1) {
       const obj9 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
       const obj10 = { channel };
-      obj9.accessibilityLabel = tmp2(9066)(obj10);
-      const intl3 = channel(1114).intl;
-      obj9.accessibilityHint = intl3.string(channel(1114).t["9C444m"]);
+      obj9.accessibilityLabel = tmp2(9085)(obj10);
+      const intl3 = channel(1113).intl;
+      obj9.accessibilityHint = intl3.string(channel(1113).t["9C444m"]);
       obj9.onPress = function onPress() {
         closure_3({ action: "OPEN_VOICE_CHANNEL" });
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -810,29 +810,29 @@ function VoiceCallActivityCard(arg0) {
       const obj11 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj12 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj13 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj12.children = closure_22(tmp2(10745), obj13);
+      obj12.children = closure_22(tmp2(10765), obj13);
       const items4 = [closure_22(closure_7, obj12), tmp5];
       obj11.children = items4;
-      obj9.children = closure_23(channel(5619).Text, obj11);
-      let tmp13Result = closure_22(channel(6974).PressableOpacity, obj9);
+      obj9.children = closure_23(channel(5624).Text, obj11);
+      let tmp13Result = closure_22(channel(6980).PressableOpacity, obj9);
     } else {
       const obj14 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj15 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj16 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj15.children = closure_22(tmp2(10745), obj16);
+      obj15.children = closure_22(tmp2(10765), obj16);
       const items5 = [closure_22(closure_7, obj15), tmp5];
       obj14.children = items5;
-      tmp13Result = closure_23(channel(5619).Text, obj14);
+      tmp13Result = closure_23(channel(5624).Text, obj14);
     }
     const items6 = [tmp13Result, ];
     let tmp18Result2 = null;
     if (null != stateFromStores) {
       const obj17 = { accessibilityRole: "button", accessibilityHint: null, accessibilityLabel: null, onPress: null, children: null };
-      const intl4 = channel(1114).intl;
-      obj17.accessibilityHint = intl4.string(channel(1114).t.KLOhbO);
-      const intl5 = channel(1114).intl;
+      const intl4 = channel(1113).intl;
+      obj17.accessibilityHint = intl4.string(channel(1113).t.KLOhbO);
+      const intl5 = channel(1113).intl;
       const obj18 = { guildName: stateFromStores.name };
-      obj17.accessibilityLabel = intl5.formatToPlainString(channel(1114).t["hq/Qze"], obj18);
+      obj17.accessibilityLabel = intl5.formatToPlainString(channel(1113).t["hq/Qze"], obj18);
       obj17.onPress = function onPress() {
         closure_3({ action: "OPEN_VOICE_GUILD" });
         transitionToGuild.transitionToGuild(stateFromStores.id);
@@ -840,11 +840,11 @@ function VoiceCallActivityCard(arg0) {
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
       };
       const obj19 = { variant: "text-xs/medium", children: null };
-      const intl6 = channel(1114).intl;
+      const intl6 = channel(1113).intl;
       const obj20 = { guildName: stateFromStores.name };
-      obj19.children = intl6.format(channel(1114).t["hq/Qze"], obj20);
-      obj17.children = closure_22(channel(5619).Text, obj19);
-      tmp18Result2 = closure_22(channel(6974).PressableOpacity, obj17);
+      obj19.children = intl6.format(channel(1113).t["hq/Qze"], obj20);
+      obj17.children = closure_22(channel(5624).Text, obj19);
+      tmp18Result2 = closure_22(channel(6980).PressableOpacity, obj17);
     }
     items6[1] = tmp18Result2;
     obj8.children = items6;
@@ -852,22 +852,22 @@ function VoiceCallActivityCard(arg0) {
     obj6.children = items3;
     const items7 = [closure_23(closure_7, obj6), ];
     const obj21 = { channel, isInChannel, onAction: tmp11 };
-    items7[1] = closure_22(channel(14846).VoiceChannelButtons, obj21);
+    items7[1] = closure_22(channel(14884).VoiceChannelButtons, obj21);
     obj5.children = items7;
     return closure_23(tmp14, obj5);
   }
-  const intl2 = channel(1114).intl;
-  stringResult = intl2.string(channel(1114).t["9FaEzi"]);
-  tmp14 = stateFromStores(7370);
+  const intl2 = channel(1113).intl;
+  stringResult = intl2.string(channel(1113).t["9FaEzi"]);
+  tmp14 = stateFromStores(7376);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, TouchableWithoutFeedback: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CARD_PADDING = fn(7371).CARD_PADDING;
+const CARD_PADDING = fn(7377).CARD_PADDING;
 const Constants = fn(1072);
 ({ Permissions: closure_19, PlatformTypes: closure_20, StatusTypes: closure_21 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { card: { gap: 12 }, cardTitle: { marginBottom: 0 }, cardTitleIcon: { tintColor: nativeDefault.colors.TEXT_SUBTLE }, body: { flexDirection: "row", alignItems: "center", gap: 16 }, content: { flex: 1 }, imageContainer: { position: "relative" }, imageAspectRatio: { width: 60, maxHeight: 60, aspectRatio: "1 / 1" }, crunchyrollImageAspectRatio: { width: 60, maxHeight: 100, aspectRatio: "2 / 3" }, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, voiceChannelDivider: null, customButtons: null, streamPreview: null, voiceActivityCard: null, voiceSettings: null, voiceSettingsDivider: null, voiceCallContent: null, voiceCallNameIconWrapper: null };
 let size = { borderRadius: nativeDefault.radii.xs, width: "100%", height: "100%" };
 obj2.largeImage = size;
@@ -885,7 +885,7 @@ obj2.voiceSettings = { padding: 0, marginBottom: -16 };
 let obj5 = { aspectRatio: 1.7777777777777777, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj2.voiceSettingsDivider = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingTop: 16, marginTop: 4, marginHorizontal: -CARD_PADDING, paddingHorizontal: CARD_PADDING };
 obj2.voiceCallContent = { flex: 1, gap: 4 };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 12;

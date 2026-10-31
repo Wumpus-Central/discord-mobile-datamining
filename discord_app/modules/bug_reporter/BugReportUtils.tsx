@@ -1,14 +1,14 @@
-// === Module 11071: bug_reporter/BugReportUtils ===
+// === Module 11090: bug_reporter/BugReportUtils ===
 
-// Module 11071 (bug_reporter/BugReportUtils)
-import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6741 */;
-import DebugUploadManager from "DebugUploadManager" /* 11072 */;
+// Module 11090 (bug_reporter/BugReportUtils)
+import util from "util" /* 1113 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6747 */;
+import DebugUploadManager from "DebugUploadManager" /* 11091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 let closure_7 = async function _fetchBugReportConfig() {
@@ -33,7 +33,7 @@ let closure_8 = async function _submitReport(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

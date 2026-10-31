@@ -1,17 +1,17 @@
-// === Module 11921: KrispLogo ===
+// === Module 11959: KrispLogo ===
 
-// Module 11921 (KrispLogo)
+// Module 11959 (KrispLogo)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
-import shared from "shared" /* 5016 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import LinkingDefault from "Linking" /* 5704 */;
-import _modDef11922 from "module_11922" /* 11922 */;
-import _modDef11923 from "module_11923" /* 11923 */;
+import util from "util" /* 1113 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
+import shared from "shared" /* 5021 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import LinkingDefault from "Linking" /* 5709 */;
+import _modDef11960 from "module_11960" /* 11960 */;
+import _modDef11961 from "module_11961" /* 11961 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 function handleKrispLinkPressed() {
@@ -39,10 +39,10 @@ export default function KrispLogo() {
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef11922;
+    let tmp4Result = _modDef11960;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef11923;
+    tmp4Result = _modDef11961;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };
@@ -50,7 +50,7 @@ export default function KrispLogo() {
   obj2 = shared;
   const intl = util.intl;
   obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items1 = [closure_1_10(tmp6(5712), obj4), ];
+  const items1 = [closure_1_10(tmp6(5717), obj4), ];
   const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);

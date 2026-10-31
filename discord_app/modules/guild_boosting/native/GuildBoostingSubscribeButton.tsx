@@ -1,10 +1,10 @@
-// === Module 7577: GuildBoostingSubscribeButton ===
+// === Module 7584: GuildBoostingSubscribeButton ===
 
-// Module 7577 (GuildBoostingSubscribeButton)
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 7579 */;
+// Module 7584 (GuildBoostingSubscribeButton)
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 7586 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7578 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7585 */;
 
 require = fn;
 let closure_14 = async function _handleBoostPress() {
@@ -21,7 +21,7 @@ let closure_14 = async function _handleBoostPress() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ let closure_14 = async function _handleBoostPress() {
         } else {
           closure_131_0(closure_131_2[10]).closeApplyBoostModal();
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         c5 = tmp;
@@ -71,8 +71,8 @@ let closure_14 = async function _handleBoostPress() {
 let View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_7, AnalyticsObjectTypes: closure_8, AnalyticsPages: closure_9, NOOP: c10 } = Constants);
-let closure_11 = fn(6764).PremiumGuildSubscribeModalScenes;
-const FractionalPremiumStates = fn(1386).FractionalPremiumStates;
+let closure_11 = fn(6770).PremiumGuildSubscribeModalScenes;
+const FractionalPremiumStates = fn(1385).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");

@@ -1,20 +1,20 @@
-// === Module 7157: UserSettingsConfirmPassword ===
+// === Module 7163: UserSettingsConfirmPassword ===
 
-// Module 7157 (UserSettingsConfirmPassword)
+// Module 7163 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7075 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7101 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7158 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7159 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7161 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7081 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7107 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7164 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7165 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7167 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
@@ -54,7 +54,7 @@ class UserSettingsConfirmPasswordInner {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

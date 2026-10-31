@@ -1,10 +1,10 @@
-// === Module 15661: useDeviceCodeAuthorizeCallback ===
+// === Module 15702: useDeviceCodeAuthorizeCallback ===
 
-// Module 15661 (useDeviceCodeAuthorizeCallback)
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7341 */;
-import TwoWayLinkType from "TwoWayLinkType" /* 9715 */;
-import oauth2_actions from "oauth2/actions" /* 9729 */;
-import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15660 */;
+// Module 15702 (useDeviceCodeAuthorizeCallback)
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7347 */;
+import TwoWayLinkType from "TwoWayLinkType" /* 9735 */;
+import oauth2_actions from "oauth2/actions" /* 9749 */;
+import ActivateDeviceUtils from "ActivateDeviceUtils" /* 15701 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ let closure_5 = async function _createTwoWayLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -181,7 +181,7 @@ let closure_5 = async function _createTwoWayLink(arg0, arg1) {
           } else {
             c8 = 0;
             c10 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (arg0 === 1) {
           c10 = 3;
@@ -249,7 +249,7 @@ export function useDeviceCodeAuthorizeCallback(callback, callback2, callback1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

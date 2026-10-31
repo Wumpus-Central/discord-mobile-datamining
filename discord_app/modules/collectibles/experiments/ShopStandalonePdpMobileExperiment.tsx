@@ -1,7 +1,7 @@
-// === Module 8737: ShopStandalonePdpMobileExperiment ===
+// === Module 8745: ShopStandalonePdpMobileExperiment ===
 
-// Module 8737 (ShopStandalonePdpMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 8745 (ShopStandalonePdpMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-shop-standalone-pdp-mobile", kind: "user", defaultConfig: { standalonePdpEnabled: false }, variations: { 0: { standalonePdpEnabled: false }, 1: { standalonePdpEnabled: true } } });

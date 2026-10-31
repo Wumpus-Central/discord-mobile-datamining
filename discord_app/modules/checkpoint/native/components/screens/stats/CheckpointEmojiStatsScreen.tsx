@@ -1,22 +1,22 @@
-// === Module 13612: CheckpointEmojiStatsScreen ===
+// === Module 13647: CheckpointEmojiStatsScreen ===
 
-// Module 13612 (CheckpointEmojiStatsScreen)
+// Module 13647 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import CheckpointStore from "CheckpointStore" /* 13386 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import CheckpointStore from "CheckpointStore" /* 13421 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6061);
+const CheckpointConstants = fn(6066);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = { name: "\u{1F622}", animated: false };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, emojiCubeContainer: { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" }, copy: { flexShrink: 1 }, title: null, titleText: null, titleSpacing: null, number: null, emojis: null, emojiChip: null, emoji: null, customEmoji: null, textEmoji: null, rankText: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -31,13 +31,13 @@ let obj7 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-betw
 obj2.emojiChip = { gap: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_4, paddingRight: nativeDefault.space.PX_8, borderWidth: 1, borderColor: CHECKPOINT_DARK_CYAN, backgroundColor: nativeDefault.colors.BLACK };
 obj2.emoji = { width: 20, height: 20 };
 obj2.customEmoji = { width: 20, height: 20 };
-let PlatformUtils = fn(1376);
+let PlatformUtils = fn(1375);
 let num = 16;
 if (PlatformUtils.isIOS()) {
   num = 20;
 }
 let obj10 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1376);
+PlatformUtils = fn(1375);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 24;
@@ -110,7 +110,7 @@ export default function CheckpointEmojiStatsScreen() {
   }
   [emoji, _slicedToArray] = noop.useState(tmp11 ? closure_11 : emojis[0]);
   const tmp2Result = require("CheckpointStatsUtils");
-  noop = require("useCheckpointSound")(require("module_13404"));
+  noop = require("useCheckpointSound")(require("module_13441"));
   let intl = tmp2(tmp3[14]).intl;
   const string = intl.string;
   if (tmp11) {

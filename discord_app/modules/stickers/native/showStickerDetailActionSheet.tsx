@@ -1,8 +1,8 @@
-// === Module 10266: showStickerDetailActionSheet ===
+// === Module 10286: showStickerDetailActionSheet ===
 
-// Module 10266 (showStickerDetailActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+// Module 10286 (showStickerDetailActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import size from "module_2" /* 2 */;
 
 const sticker_detail_action_sheet = "sticker_detail_action_sheet";
@@ -12,5 +12,5 @@ export function hideStickerDetailActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(sticker_detail_action_sheet);
 }
 export function showStickerDetailActionSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10267, dependencyMap.paths), sticker_detail_action_sheet, arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10287, dependencyMap.paths), sticker_detail_action_sheet, arg0);
 }

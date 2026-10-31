@@ -1,24 +1,24 @@
-// === Module 16713: FamilyCenterSetting ===
+// === Module 16755: FamilyCenterSetting ===
 
-// Module 16713 (FamilyCenterSetting)
+// Module 16755 (FamilyCenterSetting)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef2537 from "module_2537" /* 2537 */;
-import WarningIcon from "WarningIcon" /* 8018 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16714 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 16715 */;
+import util from "util" /* 1113 */;
+import _modDef2538 from "module_2538" /* 2538 */;
+import WarningIcon from "WarningIcon" /* 8026 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 16756 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 16757 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2537.RZqaJn);
+    return intl.string(_modDef2538.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(8653).GroupIcon,
+  IconComponent: fn(8661).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     const isParentalConsentBannerActive = useIsParentalConsentBannerActive.useIsParentalConsentBannerActive();
     const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
@@ -37,7 +37,7 @@ const route = SettingBuilders.createRoute({
         if (daysRemaining >= 0) {
           const obj3 = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
           const intl = util.intl;
-          obj3.accessibilityLabel = intl.string(_modDef2537.wucWfE);
+          obj3.accessibilityLabel = intl.string(_modDef2538.wucWfE);
           tmp6 = jsx(WarningIcon.WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
         }
       }

@@ -1,16 +1,16 @@
-// === Module 14514: ForumChannelSearch ===
+// === Module 14552: ForumChannelSearch ===
 
-// Module 14514 (ForumChannelSearch)
-import Tracking from "Tracking" /* 8196 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9819 */;
+// Module 14552 (ForumChannelSearch)
+import Tracking from "Tracking" /* 8204 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9840 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import ForumSearchStore from "ForumSearchStore" /* 8197 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import ForumSearchStore from "ForumSearchStore" /* 8205 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ inputContainer: { flexGrow: 1, marginLeft: 8 }, cancelButtonContainer: { paddingLeft: 8 } });
 const memoResult = noop.memo(function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -52,8 +52,8 @@ export const ForumChannelSearchInput = noop.memo(function SearchInput(channelId)
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(11311).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(11311);
+  const canSearchForumPostsByChannelId = channelId(11347).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(11347);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {
@@ -102,8 +102,8 @@ export const ForumChannelSearchInput = noop.memo(function SearchInput(channelId)
         obj3.children = <tmp10 {...obj4} />;
         tmp8Result = <View {...obj3} />;
       } else {
-        const intl = tmp2(1114).intl;
-        const t = tmp2(1114).t;
+        const intl = tmp2(1113).intl;
+        const t = tmp2(1113).t;
         intl.string(tmp6 ? t["5h0QOP"] : t.Iy2gnS);
       }
     }

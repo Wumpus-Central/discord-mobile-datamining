@@ -1,12 +1,12 @@
-// === Module 10127: IconUploader ===
+// === Module 10147: IconUploader ===
 
-// Module 10127 (IconUploader)
-import util from "util" /* 1114 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import GuildIcon from "GuildIcon" /* 6951 */;
-import Pressables from "Pressables" /* 6974 */;
-import _modDef10128 from "module_10128" /* 10128 */;
+// Module 10147 (IconUploader)
+import util from "util" /* 1113 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import GuildIcon from "GuildIcon" /* 6957 */;
+import Pressables from "Pressables" /* 6980 */;
+import _modDef10148 from "module_10148" /* 10148 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({ uploadIcon: { position: "absolute", right: -7, top: -7 }, avatar: { height: 64, width: 64, borderRadius: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconUploader.tsx");
@@ -49,7 +49,7 @@ export default function IconUploader(disabled) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -124,7 +124,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp8, ];
   let tmp17 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef10128 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef10148 };
     tmp17 = closure_7(FastImageDefault, obj5);
   }
   items1[1] = tmp17;

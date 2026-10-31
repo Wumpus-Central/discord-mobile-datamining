@@ -1,13 +1,13 @@
-// === Module 15967: RefreshEmptyState ===
+// === Module 16008: RefreshEmptyState ===
 
-// Module 15967 (RefreshEmptyState)
+// Module 16008 (RefreshEmptyState)
 import nativeDefault from "native" /* 575 */;
-import shared from "shared" /* 5016 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8186 */;
+import shared from "shared" /* 5021 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8194 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6717 */;
+import TextStyles_mod from "TextStyles" /* 6723 */;
 
 require = fn;
 class EmptyState {
@@ -78,7 +78,7 @@ const View = fn(17).View;
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", padding: 16 }, title: null, body: null, image: null, cta: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

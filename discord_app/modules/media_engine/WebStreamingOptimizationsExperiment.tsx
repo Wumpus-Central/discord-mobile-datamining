@@ -1,7 +1,7 @@
-// === Module 5881: WebStreamingOptimizationsExperiment ===
+// === Module 5886: WebStreamingOptimizationsExperiment ===
 
-// Module 5881 (WebStreamingOptimizationsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 5886 (WebStreamingOptimizationsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-web-streaming-optimizations", kind: "user", defaultConfig: { degradationPreference: "default", motionContentHint: false, cpuFallback: false }, variations: null };

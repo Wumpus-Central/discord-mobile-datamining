@@ -1,17 +1,17 @@
-// === Module 12193: useCanShowAppLauncherOnboarding ===
+// === Module 12231: useCanShowAppLauncherOnboarding ===
 
-// Module 12193 (useCanShowAppLauncherOnboarding)
+// Module 12231 (useCanShowAppLauncherOnboarding)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DurationsDefault from "Durations" /* 1090 */;
+import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5237 */;
-import UserStore from "UserStore" /* 1384 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12194 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12195 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5242 */;
+import UserStore from "UserStore" /* 1383 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12232 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12233 */;
 
 const require = fn;
-const BuiltInSectionId = fn(6030).BuiltInSectionId;
+const BuiltInSectionId = fn(6035).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let c10 = result;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
@@ -60,10 +60,10 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   }
   const items4 = [];
   if (!tmp16) {
-    items4.push(tmp2(4842).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
+    items4.push(tmp2(4847).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
   const tmp2Result10 = channelId(504);
-  const tmp2Result11 = channelId(7563);
+  const tmp2Result11 = channelId(7569);
   const items5 = [AppLauncherOnboardingStore];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(), recentApplicationCommandMetadata: AppLauncherOnboardingStore.getRecentApplicationCommandMetadata() }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);
@@ -96,12 +96,12 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
   const tmp2Result13 = channelId(504);
-  result = channelId(5039).useIsDismissibleContentDismissed_UNSAFE(tmp2(4842).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
-  const tmp2Result14 = channelId(5039);
-  let result1 = channelId(5039).useIsDismissibleContentDismissed_UNSAFE(tmp2(4842).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
-  const tmp2Result15 = channelId(5039);
+  result = channelId(5044).useIsDismissibleContentDismissed_UNSAFE(tmp2(4847).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+  const tmp2Result14 = channelId(5044);
+  let result1 = channelId(5044).useIsDismissibleContentDismissed_UNSAFE(tmp2(4847).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+  const tmp2Result15 = channelId(5044);
   let tmp30 = null != stateFromStores4;
-  const result2 = channelId(5039).useIsDismissibleContentDismissed_UNSAFE(tmp2(4842).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+  const result2 = channelId(5044).useIsDismissibleContentDismissed_UNSAFE(tmp2(4847).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
   if (tmp30) {
     tmp30 = stateFromStores4.channelId === channelId;
   }
@@ -143,7 +143,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
       obj2.canShowOnboarding = true;
       obj2.canShowAppsOrActivitiesBanner = true;
     }
-    if (_slicedToArray(tmp2Result11.useSelectedDismissibleContent(items4), 1)[0] === tmp2(4842).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
+    if (_slicedToArray(tmp2Result11.useSelectedDismissibleContent(items4), 1)[0] === tmp2(4847).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
       obj2.willShowGlobalSearchOnboarding = true;
       obj2.canShowOnboarding = true;
     }

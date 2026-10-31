@@ -1,21 +1,21 @@
-// === Module 10828: ConjureRemixSheet ===
+// === Module 10848: ConjureRemixSheet ===
 
-// Module 10828 (ConjureRemixSheet)
+// Module 10848 (ConjureRemixSheet)
 import nativeDefault from "native" /* 575 */;
-import TableRadioRow from "TableRadioRow" /* 7055 */;
-import ConjureRemix from "ConjureRemix" /* 10829 */;
+import TableRadioRow from "TableRadioRow" /* 7061 */;
+import ConjureRemix from "ConjureRemix" /* 10849 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import SortedGuildStore from "SortedGuildStore" /* 6766 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import SortedGuildStore from "SortedGuildStore" /* 6772 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const ConjureRemixSheet = "ConjureRemixSheet";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
   const obj = { scroll: { flex: 1, minHeight: 0 }, list: { gap: nativeDefault.space.PX_24, paddingBottom }, intro: null, footer: null, footerBody: null };
   const obj2 = { gap: nativeDefault.space.PX_24, paddingBottom };
@@ -92,7 +92,7 @@ export default function ConjureRemixSheet(project) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

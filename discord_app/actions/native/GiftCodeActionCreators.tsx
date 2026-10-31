@@ -1,8 +1,8 @@
-// === Module 11336: actions/GiftCodeActionCreators ===
+// === Module 11372: actions/GiftCodeActionCreators ===
 
-// Module 11336 (actions/GiftCodeActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
+// Module 11372 (actions/GiftCodeActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -75,7 +75,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
           if (obj18.getIsPaymentsBlocked()) {
             closure_130_1(closure_130_2[3])();
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             channelId = closure_129_1.channelId;
             let tmp41 = null;
@@ -156,7 +156,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
   }
 };
 function openGiftCodeRedeemModal(c0, fromServer) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11342, dependencyMap.paths), { code: _require, giftCodeDebugOverride: fromServer }, "GIFT_CODE_REDEEM_MODAL_KEY");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11378, dependencyMap.paths), { code: _require, giftCodeDebugOverride: fromServer }, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 const Constants = fn(1072);
 ({ Endpoints: closure_4, AnalyticEvents: hasOwnProperty } = Constants);

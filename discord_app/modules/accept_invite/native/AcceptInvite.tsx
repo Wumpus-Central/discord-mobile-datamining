@@ -1,16 +1,16 @@
-// === Module 14274: AcceptInvite ===
+// === Module 14312: AcceptInvite ===
 
-// Module 14274 (AcceptInvite)
+// Module 14312 (AcceptInvite)
 import nativeDefault from "native" /* 575 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1445 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import useToken from "useToken" /* 5591 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5604 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import Card from "Card" /* 6971 */;
-import _modDef14283 from "module_14283" /* 14283 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1444 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import useToken from "useToken" /* 5596 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5609 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import Card from "Card" /* 6977 */;
+import _modDef14321 from "module_14321" /* 14321 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -84,12 +84,12 @@ function AcceptInviteCardComponent(invite) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_8(first(14275), obj2);
+    return closure_8(first(14313), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_8(first(14278), obj);
+    return closure_8(first(14316), obj);
   } else {
     return closure_8(InviteResolving, {});
   }
@@ -99,7 +99,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1072).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { parentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, imageStyle: null, cardContainer: null, cardContent: null, resolvingContainer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -130,7 +130,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef14283;
+    let guildSplashSource = _modDef14321;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

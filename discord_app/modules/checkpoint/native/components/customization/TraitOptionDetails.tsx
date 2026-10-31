@@ -1,10 +1,10 @@
-// === Module 13649: TraitOptionDetails ===
+// === Module 13684: TraitOptionDetails ===
 
-// Module 13649 (TraitOptionDetails)
+// Module 13684 (TraitOptionDetails)
 import nativeDefault from "native" /* 575 */;
-import _modDef3091 from "module_3091" /* 3091 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import RarityBadgeDefault from "RarityBadge" /* 13650 */;
+import _modDef3092 from "module_3092" /* 3092 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import RarityBadgeDefault from "RarityBadge" /* 13685 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function AssetDescription(asset) {
     let format = _require;
     let obj = dependencyMap;
     if (asset.status === require("CheckpointCharacterAssets").CheckpointTraitOptionStatus.NITRO_LOCKED) {
-      const intl = format(1114).intl;
+      const intl = format(1113).intl;
       format = intl.format;
       obj = {
         subscribeHook(children, arg1) {
@@ -28,26 +28,26 @@ function AssetDescription(asset) {
                 style: subscribeLink.subscribeLink,
                 onPress() {
                   const obj = { analyticsLocations: null };
-                  const items = [closure_1_1(7345).CHECKPOINT];
+                  const items = [closure_1_1(7351).CHECKPOINT];
                   obj.analyticsLocations = items;
-                  return closure_1_1(9884)(obj);
+                  return closure_1_1(9905)(obj);
                 },
                 accessibilityRole: "link",
                 children
               }, arg1);
             }
       };
-      let formatResult = format(_modDef3091["3Wq/bk"], obj);
+      let formatResult = format(_modDef3092["3Wq/bk"], obj);
     } else {
-      formatResult = format(6429).getAssetDescription(asset);
-      const formatResult1 = format(6429);
+      formatResult = format(6434).getAssetDescription(asset);
+      const formatResult1 = format(6434);
     }
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, title: { textTransform: "capitalize" }, subscribeLink: { textDecorationLine: "underline" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

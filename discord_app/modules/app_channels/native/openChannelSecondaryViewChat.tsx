@@ -1,9 +1,9 @@
-// === Module 9808: openChannelSecondaryViewChat ===
+// === Module 9829: openChannelSecondaryViewChat ===
 
-// Module 9808 (openChannelSecondaryViewChat)
+// Module 9829 (openChannelSecondaryViewChat)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RootNavigationRef from "RootNavigationRef" /* 5194 */;
-import MessageManagerDefault from "MessageManager" /* 9809 */;
+import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+import MessageManagerDefault from "MessageManager" /* 9830 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -68,11 +68,11 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
   const effect = noop.useEffect(() => {
     function handleFrameDeepLinkQueued(channelId) {
       if (channelId.channelId === handleFrameDeepLinkQueued) {
-        const rootNavigationRef = handleFrameDeepLinkQueued(5194).getRootNavigationRef();
+        const rootNavigationRef = handleFrameDeepLinkQueued(5199).getRootNavigationRef();
         handleFrameDeepLinkQueued = tmp;
-        const obj2 = handleFrameDeepLinkQueued(5194);
+        const obj2 = handleFrameDeepLinkQueued(5199);
         const tmp6 = handleFrameDeepLinkQueued;
-        const rootNavigationRef1 = handleFrameDeepLinkQueued(5194).getRootNavigationRef();
+        const rootNavigationRef1 = handleFrameDeepLinkQueued(5199).getRootNavigationRef();
         let num = -1;
         if (null != rootNavigationRef1) {
           num = -1;
@@ -92,13 +92,13 @@ export function useDismissChannelSecondaryViewChatOnFrameDeepLink(channelId) {
           if (-1 !== num) {
             const rootState = rootNavigationRef.getRootState();
             const obj = {};
-            const StackActions = tmp6(1499).StackActions;
+            const StackActions = tmp6(1498).StackActions;
             const merged = Object.assign(StackActions.pop(rootState.routes.length - num));
             obj.target = rootState.key;
             rootNavigationRef.dispatch(obj);
           }
         }
-        const obj4 = handleFrameDeepLinkQueued(5194);
+        const obj4 = handleFrameDeepLinkQueued(5199);
       }
     }
     if (null != handleFrameDeepLinkQueued) {

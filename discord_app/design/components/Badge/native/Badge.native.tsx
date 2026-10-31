@@ -1,16 +1,16 @@
-// === Module 7300: Badge ===
+// === Module 7306: Badge ===
 
-// Module 7300 (Badge)
+// Module 7306 (Badge)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import useBadgeTextVariant from "useBadgeTextVariant" /* 5076 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import useToken from "useToken" /* 5591 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import BadgeShared from "BadgeShared" /* 7301 */;
+import util from "util" /* 1113 */;
+import useBadgeTextVariant from "useBadgeTextVariant" /* 5081 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import useToken from "useToken" /* 5596 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import BadgeShared from "BadgeShared" /* 7307 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 function getBadgeColors(variant) {

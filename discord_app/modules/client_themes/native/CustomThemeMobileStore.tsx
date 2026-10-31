@@ -1,15 +1,15 @@
-// === Module 1239: CustomThemeMobileStore ===
+// === Module 1238: CustomThemeMobileStore ===
 
-// Module 1239 (CustomThemeMobileStore)
+// Module 1238 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1240 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 5073 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 5078 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 function reset() {
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "color", customTheme: "Error" };
+    obj = { theme: "Array", customTheme: "flexDirection" };
   }
   return obj;
 };

@@ -1,15 +1,15 @@
-// === Module 19017: LaunchPadUnreadServers ===
+// === Module 19066: LaunchPadUnreadServers ===
 
-// Module 19017 (LaunchPadUnreadServers)
+// Module 19066 (LaunchPadUnreadServers)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5751 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
-import transitionToGuild from "transitionToGuild" /* 7516 */;
-import isGuildSelectableDefault from "isGuildSelectable" /* 19023 */;
+import transitionToChannel from "transitionToChannel" /* 5756 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
+import transitionToGuild from "transitionToGuild" /* 7522 */;
+import isGuildSelectableDefault from "isGuildSelectable" /* 19072 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function HistorySeparator() {
@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { listWrapper: { marginTop: 8 }, list: { marginBottom: 4, flexShrink: 0 }, maskStrokeStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, privateChannelWrapper: { position: "relative", paddingVertical: 2, justifyContent: "center", alignItems: "center" }, privateChannelIcon: { width: 48, height: 48, borderRadius: 24, overflow: "hidden" }, badgeWrapper: { position: "absolute", top: "50%", left: "50%", marginLeft: 6, marginTop: 6 }, guildWrapper: { paddingVertical: 2, justifyContent: "center", alignItems: "center" }, guildHistorySeparatorWrapper: { flex: 1, justifyContent: "center", alignItems: "center" }, guildHistorySeparator: null };
 let size = { width: 2, height: 32, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj.guildHistorySeparator = size;
@@ -43,7 +43,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(19018), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
+  obj.children = closure_10(onGuildSelect(19067), { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor });
   return closure_10(closure_5, obj);
 });
 let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {

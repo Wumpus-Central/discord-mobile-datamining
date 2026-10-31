@@ -1,18 +1,18 @@
-// === Module 10241: GIFPickerCategoriesPage ===
+// === Module 10261: GIFPickerCategoriesPage ===
 
-// Module 10241 (GIFPickerCategoriesPage)
+// Module 10261 (GIFPickerCategoriesPage)
 import nativeDefault from "native" /* 575 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7224 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10224 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10227 */;
-import GIFPickerCategoryViewDefault from "GIFPickerCategoryView" /* 10242 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7230 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10244 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10247 */;
+import GIFPickerCategoryViewDefault from "GIFPickerCategoryView" /* 10262 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10223 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10243 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { item: { height, flexDirection: "row", gap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING }, placeholder: null };
   const obj2 = { height, flexDirection: "row", gap: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING };

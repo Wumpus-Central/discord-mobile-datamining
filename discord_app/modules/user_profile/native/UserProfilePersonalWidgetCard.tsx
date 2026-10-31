@@ -1,15 +1,15 @@
-// === Module 14925: UserProfilePersonalWidgetCard ===
+// === Module 14963: UserProfilePersonalWidgetCard ===
 
-// Module 14925 (UserProfilePersonalWidgetCard)
+// Module 14963 (UserProfilePersonalWidgetCard)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 5075 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import GifTagDefault from "GifTag" /* 8565 */;
-import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 14926 */;
-import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 14927 */;
-import WidgetAssetUtils from "WidgetAssetUtils" /* 14928 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 5080 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import GifTagDefault from "GifTag" /* 8573 */;
+import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 14964 */;
+import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 14965 */;
+import WidgetAssetUtils from "WidgetAssetUtils" /* 14966 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -151,7 +151,7 @@ function CoverSection(section) {
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = React7(tmp14(5582), obj9);
+        tmp24Result4 = React7(tmp14(5587), obj9);
       } else {
         tmp24Result4 = null;
       }
@@ -161,7 +161,7 @@ function CoverSection(section) {
     let tmp24Result5 = null;
     if (showGifTag) {
       const obj10 = { style: tmp.gifTag };
-      tmp24Result5 = React7(tmp14(8565), obj10);
+      tmp24Result5 = React7(tmp14(8573), obj10);
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
@@ -239,7 +239,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   }
   let obj = { userId, widget, style: style.cardStyle, titleLeadingIcon: null, title: null, disableInteraction: null, children: null };
   const tmp = closure_14();
-  obj.titleLeadingIcon = closure_9(userId(9506).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj.titleLeadingIcon = closure_9(userId(9528).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   obj.disableInteraction = disableInteraction;
   let obj2 = { style: tmp.sectionsContainer, children: null };
@@ -266,7 +266,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items[1] = tmp2Result;
   obj2.children = items;
   obj.children = closure_10(closure_7, obj2);
-  return closure_9(disableInteraction(14918), obj);
+  return closure_9(disableInteraction(14956), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -276,7 +276,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
 const locations = [0, 0.4, 1];
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { coverContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" }, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" };
 obj2.coverContent = { gap: nativeDefault.space.PX_4 };

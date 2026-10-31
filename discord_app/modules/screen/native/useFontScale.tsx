@@ -1,9 +1,9 @@
-// === Module 5637: useFontScale ===
+// === Module 5642: useFontScale ===
 
-// Module 5637 (useFontScale)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1495 */;
+// Module 5642 (useFontScale)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1494 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1493 */;
+import DimensionsStore from "DimensionsStore" /* 1492 */;
 
 require = fn;
 const size = fn(2);

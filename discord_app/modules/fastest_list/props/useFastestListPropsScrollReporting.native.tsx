@@ -1,7 +1,7 @@
-// === Module 7228: useFastestListPropsScrollReporting ===
+// === Module 7234: useFastestListPropsScrollReporting ===
 
-// Module 7228 (useFastestListPropsScrollReporting)
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+// Module 7234 (useFastestListPropsScrollReporting)
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import size from "module_2" /* 2 */;
 
 const __initData = { code: "function useFastestListPropsScrollReportingNativeTsx1(event){const{scrollPosition,horizontal}=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}}" };

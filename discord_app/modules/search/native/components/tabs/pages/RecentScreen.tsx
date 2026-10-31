@@ -1,24 +1,24 @@
-// === Module 18656: RecentScreen ===
+// === Module 18698: RecentScreen ===
 
-// Module 18656 (RecentScreen)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6723 */;
-import Pressables from "Pressables" /* 6974 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7947 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13836 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13839 */;
-import SearchUtils from "SearchUtils" /* 13843 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13857 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13861 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16675 */;
+// Module 18698 (RecentScreen)
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6729 */;
+import Pressables from "Pressables" /* 6980 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7955 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13871 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13874 */;
+import SearchUtils from "SearchUtils" /* 13878 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13892 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13896 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 16717 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6857 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13863 */;
-import SearchHistoryStore from "SearchHistoryStore" /* 18657 */;
-import SearchQueryStore from "SearchQueryStore" /* 13850 */;
+import SearchMessageStore from "SearchMessageStore" /* 6863 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13898 */;
+import SearchHistoryStore from "SearchHistoryStore" /* 18699 */;
+import SearchQueryStore from "SearchQueryStore" /* 13885 */;
 
 require = fn;
 function ClearAllHistory(searchContext) {
@@ -32,13 +32,13 @@ function ClearAllHistory(searchContext) {
     accessibilityLabel: null,
     children: null
   };
-  const intl = searchContext(1114).intl;
-  obj.accessibilityLabel = intl.string(searchContext(1114).t.LFTAUp);
+  const intl = searchContext(1113).intl;
+  obj.accessibilityLabel = intl.string(searchContext(1113).t.LFTAUp);
   const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
-  const intl2 = searchContext(1114).intl;
-  obj2.children = intl2.string(searchContext(1114).t.LFTAUp);
-  obj.children = jsx(searchContext(5619).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(6974).PressableHighlight, {
+  const intl2 = searchContext(1113).intl;
+  obj2.children = intl2.string(searchContext(1113).t.LFTAUp);
+  obj.children = jsx(searchContext(5624).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(6980).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -58,9 +58,9 @@ function ViewAll(onJumpToMedia) {
   obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
   return jsx(Pressables.PressableHighlight, { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null });
 }
-const SearchConstants = fn(9806);
+const SearchConstants = fn(9827);
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(13852).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(13887).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo(function RecentScreen(searchContext) {
@@ -219,7 +219,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -253,7 +253,7 @@ let closure_20 = noop.memo(function RecentUserScreen(searchContext) {
             const result = tmp2(onPressDMItem[18]).trackSuggestedSearchClicked(obj7);
             tmp5(closure_129_0, closure_129_1);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp20) {
           c4 = tmp;

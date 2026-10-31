@@ -1,18 +1,18 @@
-// === Module 13589: CheckpointIntroScreen ===
+// === Module 13626: CheckpointIntroScreen ===
 
-// Module 13589 (CheckpointIntroScreen)
+// Module 13626 (CheckpointIntroScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef3091 from "module_3091" /* 3091 */;
-import CheckpointStore2 from "CheckpointStore" /* 13386 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 13585 */;
-import CheckpointTextDefault from "CheckpointText" /* 13587 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13590 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13591 */;
+import util from "util" /* 1113 */;
+import _modDef3092 from "module_3092" /* 3092 */;
+import CheckpointStore2 from "CheckpointStore" /* 13421 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 13622 */;
+import CheckpointTextDefault from "CheckpointText" /* 13624 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13627 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 13628 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 const CheckpointStore = CheckpointStore2;
@@ -53,14 +53,14 @@ export default function CheckpointIntroScreen() {
   const obj5 = { style: tmp.descriptions, children: null };
   const tmp7 = CheckpointScreenDefault;
   const intl = util.intl;
-  const tmp6Result3 = _modDef3091;
+  const tmp6Result3 = _modDef3092;
   const tmp6Result = CheckpointTextDefault;
   const items3 = [timestampProducer(tmp6Result, { variant: "heading-lg/medium", children: intl.string(stateFromStores ? tmp6Result3["7YmUVu"] : tmp6Result3["Fyr+NW"]) }), ];
   let tmp5Result2 = !stateFromStores;
   if (!stateFromStores) {
     const obj7 = { variant: "heading-lg/medium", children: null };
     const intl2 = util.intl;
-    obj7.children = intl2.string(_modDef3091["2GRr6H"]);
+    obj7.children = intl2.string(_modDef3092["2GRr6H"]);
     tmp5Result2 = timestampProducer(CheckpointTextDefault, obj7);
     const tmp6Result4 = CheckpointTextDefault;
   }

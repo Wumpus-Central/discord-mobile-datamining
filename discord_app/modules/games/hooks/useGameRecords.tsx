@@ -1,8 +1,8 @@
-// === Module 19509: useGameRecords ===
+// === Module 19566: useGameRecords ===
 
-// Module 19509 (useGameRecords)
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import GameStore from "GameStore" /* 2015 */;
+// Module 19566 (useGameRecords)
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GameStore from "GameStore" /* 2014 */;
 
 const require = globalThis.__r;
 

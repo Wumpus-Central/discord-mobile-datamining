@@ -1,10 +1,10 @@
-// === Module 12779: ConjureMentionSuggestions ===
+// === Module 12814: ConjureMentionSuggestions ===
 
-// Module 12779 (ConjureMentionSuggestions)
+// Module 12814 (ConjureMentionSuggestions)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { fileThumbnail: null };
 let size = { width: nativeDefault.space.PX_24, height: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.xs };
 obj2.fileThumbnail = size;
@@ -31,11 +31,11 @@ export default function ConjureMentionSuggestions(arg0) {
     if (found.length > 0) {
       let obj = { title: null, hasIcons: true, children: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef3865.Vb3sUg);
+      obj.title = intl.string(_modDef3868.Vb3sUg);
       obj.children = found.map((user) => {
         closure_0 = user;
-        const obj = { icon: closure_1_3(projectId(fileThumbnail[8]).Avatar, { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "r" }), label: null, subLabel: null, onPress: null };
-        const obj2 = { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "r" };
+        const obj = { icon: closure_1_3(projectId(fileThumbnail[8]).Avatar, { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "Array" }), label: null, subLabel: null, onPress: null };
+        const obj2 = { user: user.user, size: projectId(fileThumbnail[8]).AvatarSizes.XSMALL, guildId: "Array" };
         obj.label = projectId(fileThumbnail[9]).getName(user.user);
         obj.subLabel = user.user.username;
         obj.onPress = function onPress() {
@@ -50,7 +50,7 @@ export default function ConjureMentionSuggestions(arg0) {
     if (found1.length > 0) {
       let obj2 = { title: null, hasIcons: true, children: null };
       const intl2 = util.intl;
-      obj2.title = intl2.string(_modDef3865.zA5KLM);
+      obj2.title = intl2.string(_modDef3868.zA5KLM);
       obj2.children = found1.map((file) => {
         projectId = file;
         const obj = {

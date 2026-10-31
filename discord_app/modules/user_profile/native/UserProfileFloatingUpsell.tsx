@@ -1,18 +1,18 @@
-// === Module 16498: UserProfileFloatingUpsell ===
+// === Module 16540: UserProfileFloatingUpsell ===
 
-// Module 16498 (UserProfileFloatingUpsell)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 16486 */;
+// Module 16540 (UserProfileFloatingUpsell)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 16528 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const Constants = fn(7371);
+const Constants = fn(7377);
 ({ FLOATING_UPSELL_HEIGHT: hasOwnProperty, PROFILE_SIDE_PADDING: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0, marginHorizontal: timestampProducer - UserProfileUpsellCardV2.GRADIENT_BORDER_WIDTH } };
   return obj;

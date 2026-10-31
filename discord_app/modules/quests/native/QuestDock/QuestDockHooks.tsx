@@ -1,32 +1,32 @@
-// === Module 16998: QuestDockHooks ===
+// === Module 17056: QuestDockHooks ===
 
-// Module 16998 (QuestDockHooks)
+// Module 17056 (QuestDockHooks)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import useToken from "useToken" /* 5591 */;
-import QuestTypes from "QuestTypes" /* 6778 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7864 */;
-import captureAdUserAction from "captureAdUserAction" /* 9664 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9667 */;
-import AssetUtils from "AssetUtils" /* 9675 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9800 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10069 */;
-import QuestDockUtils from "QuestDockUtils" /* 17000 */;
-import AdCreativeUtils from "AdCreativeUtils" /* 17008 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import useToken from "useToken" /* 5596 */;
+import QuestTypes from "QuestTypes" /* 6784 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
+import captureAdUserAction from "captureAdUserAction" /* 9684 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
+import AssetUtils from "AssetUtils" /* 9695 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9821 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
+import QuestDockUtils from "QuestDockUtils" /* 17058 */;
+import AdCreativeUtils from "AdCreativeUtils" /* 17066 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16999 */;
+import QuestDockStore from "QuestDockStore" /* 17057 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(6775);
+const QuestConstants = fn(6781);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: metroRequire, QuestDockMode: closure_7 } = QuestConstants);
-const QuestDockConstants = fn(17001);
+const QuestDockConstants = fn(17059);
 ({ QUEST_DOCK_CLOSED_HEIGHT: closure_8, QUEST_DOCK_COLLAPSED_HEIGHT: closure_9, QUEST_DOCK_EXTERNAL_OFFSET_CLOSED: c10, QUEST_DOCK_EXTERNAL_OFFSET_COLLAPSED_WITH_YOU_BAR: closure_11, QUEST_DOCK_EXTERNAL_OFFSET_EXPANDED_WITH_YOU_BAR: closure_12, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: map1 } = QuestDockConstants);
 const __initData = { code: "function QuestDockHooksTsx1(){const{restingQuestDockMode,minExpandedContentHeight,windowDimensions,safeArea}=this.__closure;return{restingQuestDockMode:restingQuestDockMode.get(),minExpandedContentHeight:minExpandedContentHeight.get(),windowWidth:windowDimensions.get().width,windowHeight:windowDimensions.get().height,safeArea:safeArea.get()};}" };
 const __initData2 = { code: "function QuestDockHooksTsx2(props,previous){const{cheapWorkletShallowEqual,QuestDockMode,runOnJS,setRestingQuestDockMode,questDockWrapperSpecs,getQuestDockCollapsedWidth,youBarHorizontalMargin,QUEST_DOCK_COLLAPSED_HEIGHT,activeQuestDockMode,getQuestDockClosedWidth,QUEST_DOCK_CLOSED_HEIGHT,getQuestDockExpandedHeightLimits,youBarHeight,QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED,getQuestDockExpandedWidth}=this.__closure;var _previous$restingQues;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{restingQuestDockMode:restingQuestDockMode,minExpandedContentHeight:minExpandedContentHeight,windowWidth:windowWidth,windowHeight:windowHeight,safeArea:safeArea}=props;switch(restingQuestDockMode){case QuestDockMode.RESET_TO_PREVIOUS:runOnJS(setRestingQuestDockMode)((_previous$restingQues=previous===null||previous===void 0?void 0:previous.restingQuestDockMode)!==null&&_previous$restingQues!==void 0?_previous$restingQues:QuestDockMode.COLLAPSED);return;case QuestDockMode.COLLAPSED:questDockWrapperSpecs.set({...questDockWrapperSpecs.get(),x:0,y:0,width:getQuestDockCollapsedWidth(windowWidth,safeArea.left,safeArea.right,youBarHorizontalMargin),height:QUEST_DOCK_COLLAPSED_HEIGHT});activeQuestDockMode.set(QuestDockMode.COLLAPSED);break;case QuestDockMode.CLOSED:case QuestDockMode.SOFT_DISMISSED:questDockWrapperSpecs.set({...questDockWrapperSpecs.get(),x:0,y:0,width:getQuestDockClosedWidth(windowWidth,safeArea.left,safeArea.right,youBarHorizontalMargin),height:QUEST_DOCK_CLOSED_HEIGHT});activeQuestDockMode.set(restingQuestDockMode);break;case QuestDockMode.EXPANDED:const minContentHeight=minExpandedContentHeight;const{minHeight:minHeight,maxHeight:maxHeight}=getQuestDockExpandedHeightLimits(windowHeight,safeArea.top,minContentHeight);const heightMidpoint=(maxHeight+minHeight)/2;let height;if(questDockWrapperSpecs.get().height<=QUEST_DOCK_COLLAPSED_HEIGHT){height=maxHeight;}else if(previous!=null&&questDockWrapperSpecs.get().height===getQuestDockExpandedHeightLimits(previous.windowHeight,previous.safeArea.top,minContentHeight).maxHeight){height=maxHeight;}else if(questDockWrapperSpecs.get().height>=heightMidpoint){height=maxHeight;}else{height=maxHeight;}questDockWrapperSpecs.set({...questDockWrapperSpecs.get(),x:0,y:youBarHeight>0?youBarHeight:QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED,width:getQuestDockExpandedWidth(windowWidth,safeArea.left,safeArea.right),height:height});activeQuestDockMode.set(QuestDockMode.EXPANDED);break;}}" };
@@ -167,14 +167,14 @@ export function useQuestDockExternalOffset() {
   }, items1);
 }
 export function useQuestDockDismissalReset() {
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(17005).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(17002).QuestDockGestureContext).activeQuestDockMode;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(17063).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(17060).QuestDockGestureContext).activeQuestDockMode;
   const items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = noop.useEffect(() => {
     let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(17000).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(17000);
+      isSoftDismissedResult = setRestingQuestDockMode(17058).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = setRestingQuestDockMode(17058);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(constants.COLLAPSED);
@@ -182,14 +182,14 @@ export function useQuestDockDismissalReset() {
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(17000).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(17000);
+        isSoftDismissedResult = setRestingQuestDockMode(17058).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = setRestingQuestDockMode(17058);
       }
       if (!isSoftDismissedResult) {
         closure_0(constants.COLLAPSED);
       }
     }
-    setRestingQuestDockMode = setInterval(maybeResetSoftDismissal, 5 * activeQuestDockMode(1090).Millis.MINUTE);
+    setRestingQuestDockMode = setInterval(maybeResetSoftDismissal, 5 * activeQuestDockMode(1089).Millis.MINUTE);
     return () => {
       clearInterval(closure_0);
     };
@@ -208,7 +208,7 @@ export function useActionSheetPressHandler(questCreative) {
     obj2.sourceQuestContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
     obj2.impressionId = questImpressionId;
     obj.captureAdUserAction(obj2);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17009, dependencyMap.paths), "QuestDockContextMenuActionSheet", { creative, impressionId: questImpressionId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17067, dependencyMap.paths), "QuestDockContextMenuActionSheet", { creative, impressionId: questImpressionId });
   }, items);
 }
 export function useQuestDockExpandHandler(questDockCreative) {

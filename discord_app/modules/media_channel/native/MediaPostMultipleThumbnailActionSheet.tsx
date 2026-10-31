@@ -1,16 +1,16 @@
-// === Module 10207: MediaPostMultipleThumbnailActionSheet ===
+// === Module 10227: MediaPostMultipleThumbnailActionSheet ===
 
-// Module 10207 (MediaPostMultipleThumbnailActionSheet)
+// Module 10227 (MediaPostMultipleThumbnailActionSheet)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 }, topContainer: null, setAsThumbnailContainer: null, contentContainer: null, title: null, description: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
 obj2.topContainer = { flex: 1, width: "100%", paddingVertical: 40, paddingHorizontal: 12, backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.sm };
@@ -40,31 +40,31 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   const obj4 = { style: tmp.topContainer, children: null };
   const obj5 = { style: tmp.setAsThumbnailContainer, children: null };
   const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = markAsDismissed(1114).intl;
-  obj6.children = intl.string(markAsDismissed(1114).t.ews2pj);
-  const items1 = [closure_5(markAsDismissed(5619).Text, obj6), closure_5(markAsDismissed(1188).Checkbox, { selected: true })];
+  const intl = markAsDismissed(1113).intl;
+  obj6.children = intl.string(markAsDismissed(1113).t.ews2pj);
+  const items1 = [closure_5(markAsDismissed(5624).Text, obj6), closure_5(markAsDismissed(1187).Checkbox, { selected: true })];
   obj5.children = items1;
   obj4.children = closure_6(View, obj5);
   const items2 = [closure_5(View, obj4), , , , , ];
   const obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
-  const intl2 = markAsDismissed(1114).intl;
-  obj7.children = intl2.string(markAsDismissed(1114).t.WJisip);
-  items2[1] = closure_5(markAsDismissed(5619).Text, obj7);
-  items2[2] = closure_5(markAsDismissed(1188).Spacer, { size: 12 });
+  const intl2 = markAsDismissed(1113).intl;
+  obj7.children = intl2.string(markAsDismissed(1113).t.WJisip);
+  items2[1] = closure_5(markAsDismissed(5624).Text, obj7);
+  items2[2] = closure_5(markAsDismissed(1187).Spacer, { size: 12 });
   const obj8 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
-  const intl3 = markAsDismissed(1114).intl;
-  obj8.children = intl3.string(markAsDismissed(1114).t.X6ZH6d);
-  items2[3] = closure_5(markAsDismissed(5619).Text, obj8);
-  items2[4] = closure_5(markAsDismissed(1188).Spacer, { size: 48 });
+  const intl3 = markAsDismissed(1113).intl;
+  obj8.children = intl3.string(markAsDismissed(1113).t.X6ZH6d);
+  items2[3] = closure_5(markAsDismissed(5624).Text, obj8);
+  items2[4] = closure_5(markAsDismissed(1187).Spacer, { size: 48 });
   const obj9 = { text: null, grow: true, onPress: null };
-  const intl4 = markAsDismissed(1114).intl;
-  obj9.text = intl4.string(markAsDismissed(1114).t["NX+WJN"]);
+  const intl4 = markAsDismissed(1113).intl;
+  obj9.text = intl4.string(markAsDismissed(1113).t["NX+WJN"]);
   obj9.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items2[5] = closure_5(markAsDismissed(5629).Button, obj9);
+  items2[5] = closure_5(markAsDismissed(5634).Button, obj9);
   obj3.children = items2;
-  obj2.children = closure_6(markAsDismissed(5270).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(5275).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(5267).BottomSheet, obj);
+  return closure_5(markAsDismissed(5272).BottomSheet, obj);
 };

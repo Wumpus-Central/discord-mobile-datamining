@@ -1,14 +1,14 @@
-// === Module 8979: EditGuildEventModalNavbar ===
+// === Module 8988: EditGuildEventModalNavbar ===
 
-// Module 8979 (EditGuildEventModalNavbar)
-import util from "util" /* 1114 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7142 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7286 */;
-import HeaderActionButton from "HeaderActionButton" /* 7552 */;
-import _modDef8351 from "module_8351" /* 8351 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8959 */;
+// Module 8988 (EditGuildEventModalNavbar)
+import util from "util" /* 1113 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7148 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7292 */;
+import HeaderActionButton from "HeaderActionButton" /* 7558 */;
+import _modDef8359 from "module_8359" /* 8359 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8968 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
@@ -49,7 +49,7 @@ export default function EditGuildEventModalNavbar(screen) {
   const intl2 = util.intl;
   obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj6.onPress = screen.onClose;
-  obj6.source = _modDef8351;
+  obj6.source = _modDef8359;
   obj6.style = tmp.rightButton;
   obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
   items1[2] = hasOwnProperty(View, obj5);

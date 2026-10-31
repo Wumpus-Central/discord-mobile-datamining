@@ -1,14 +1,14 @@
-// === Module 19512: RedesignDiscoverabilityLanding ===
+// === Module 19569: RedesignDiscoverabilityLanding ===
 
-// Module 19512 (RedesignDiscoverabilityLanding)
+// Module 19569 (RedesignDiscoverabilityLanding)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import NavigatorConstants from "NavigatorConstants" /* 5581 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14198 */;
-import LanternSpotIllustration from "LanternSpotIllustration" /* 19513 */;
+import util from "util" /* 1113 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import NavigatorConstants from "NavigatorConstants" /* 5586 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14236 */;
+import LanternSpotIllustration from "LanternSpotIllustration" /* 19570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, topContainer: null, growContainer: null, illustration: null, title: null, subtitle: null, info: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.topContainer = { paddingTop: nativeDefault.space.PX_16 };

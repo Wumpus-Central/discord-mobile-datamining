@@ -1,14 +1,14 @@
-// === Module 9414: GameProfileLinkAccount ===
+// === Module 9436: GameProfileLinkAccount ===
 
-// Module 9414 (GameProfileLinkAccount)
+// Module 9436 (GameProfileLinkAccount)
 import nativeDefault from "native" /* 575 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7106 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9320 */;
-import GameProfileSection from "GameProfileSection" /* 9415 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9416 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7112 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9340 */;
+import GameProfileSection from "GameProfileSection" /* 9437 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9438 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import UserStore from "UserStore" /* 1384 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, userAvatar: null, cardContent: null, cardText: null, skeletonCardImage: null, skeletonUserAvatar: null, skeletonEllipse: null, skeletonCardContent: null, skeletonAnimationRoot: null, skeletonCardImagesContainerSmall: null, skeletonCardContentHeading: null, skeletonCardContentBody: null, skeletonCardContentBodySecondary: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj.cardImagesContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center", alignSelf: "center" };

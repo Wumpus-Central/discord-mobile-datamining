@@ -1,7 +1,7 @@
-// === Module 9549: useIsVariantColorLight ===
+// === Module 9571: useIsVariantColorLight ===
 
-// Module 9549 (useIsVariantColorLight)
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+// Module 9571 (useIsVariantColorLight)
+import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

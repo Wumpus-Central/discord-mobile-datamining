@@ -1,7 +1,7 @@
-// === Module 8833: useStateFromSharedValue ===
+// === Module 8841: useStateFromSharedValue ===
 
-// Module 8833 (useStateFromSharedValue)
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+// Module 8841 (useStateFromSharedValue)
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ export default function useStateFromSharedValue(arg0) {
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1260).batchUpdates(() => {
+            set(1259).batchUpdates(() => {
               for (const item10005 of set) {
                 let item10005Result = item10005(closure_0);
                 continue;
@@ -48,7 +48,7 @@ export default function useStateFromSharedValue(arg0) {
       const result = map.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(5090).runOnJS(closure_0)(arg0));
+        addListener.addListener(arg0, (arg0) => set(5095).runOnJS(closure_0)(arg0));
       };
       const obj4 = { runOnJS: activeIndex(callback[3]).runOnJS };
       fn.__closure = obj4;
@@ -95,7 +95,7 @@ export function useDerivedStateFromSharedValue(activeIndex, current) {
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1260).batchUpdates(() => {
+            set(1259).batchUpdates(() => {
               for (const item10005 of set) {
                 let item10005Result = item10005(closure_0);
                 continue;
@@ -115,7 +115,7 @@ export function useDerivedStateFromSharedValue(activeIndex, current) {
       const result = map.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(5090).runOnJS(closure_0)(arg0));
+        addListener.addListener(arg0, (arg0) => set(5095).runOnJS(closure_0)(arg0));
       };
       const obj4 = { runOnJS: activeIndex(callback[3]).runOnJS };
       fn.__closure = obj4;

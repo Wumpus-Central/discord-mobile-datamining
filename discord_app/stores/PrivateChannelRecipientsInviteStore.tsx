@@ -1,20 +1,20 @@
-// === Module 15599: PrivateChannelRecipientsInviteStore ===
+// === Module 15641: PrivateChannelRecipientsInviteStore ===
 
-// Module 15599 (PrivateChannelRecipientsInviteStore)
+// Module 15641 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StringUtils from "StringUtils" /* 2028 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9119 */;
-import ExperimentStore from "ExperimentStore" /* 5233 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7794 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import ConsentStore from "ConsentStore" /* 6736 */;
-import FrecencyStore from "FrecencyStore" /* 6889 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import StringUtils from "StringUtils" /* 2026 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9138 */;
+import ExperimentStore from "ExperimentStore" /* 5238 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7801 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import ConsentStore from "ConsentStore" /* 6742 */;
+import FrecencyStore from "FrecencyStore" /* 6895 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function performQuery() {
@@ -219,7 +219,7 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(4862).PrivateChannelRecord;
+const PrivateChannelRecord = fn(4867).PrivateChannelRecord;
 const Constants = fn(1072);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;

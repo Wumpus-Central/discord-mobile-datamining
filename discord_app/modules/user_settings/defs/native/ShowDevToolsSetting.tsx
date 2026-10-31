@@ -1,11 +1,11 @@
-// === Module 17505: ShowDevToolsSetting ===
+// === Module 17565: ShowDevToolsSetting ===
 
-// Module 17505 (ShowDevToolsSetting)
-import DevToolsNavigator from "DevToolsNavigator" /* 16381 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16691 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 17503 */;
-import DevToolsScreens from "DevToolsScreens" /* 17506 */;
-import SettingBuilders from "SettingBuilders" /* 11505 */;
+// Module 17565 (ShowDevToolsSetting)
+import DevToolsNavigator from "DevToolsNavigator" /* 16423 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16733 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 17563 */;
+import DevToolsScreens from "DevToolsScreens" /* 17566 */;
+import SettingBuilders from "SettingBuilders" /* 11539 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

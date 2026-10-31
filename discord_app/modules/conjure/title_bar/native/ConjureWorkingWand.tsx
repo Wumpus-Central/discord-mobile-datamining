@@ -1,13 +1,13 @@
-// === Module 14667: ConjureWorkingWand ===
+// === Module 14705: ConjureWorkingWand ===
 
-// Module 14667 (ConjureWorkingWand)
+// Module 14705 (ConjureWorkingWand)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import inlineStylesDefault from "inlineStyles" /* 8023 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import inlineStylesDefault from "inlineStyles" /* 8031 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 const require = globalThis.__r;
 const ReanimatedRexport = ReanimatedRexport2;
@@ -30,11 +30,11 @@ function WandPart(fill) {
   fn.__closure = { band, BAND_FROM };
   fn.__workletHash = 10738212380370;
   fn.__initData = __initData;
-  const animatedProps = band(5090).useAnimatedProps(fn);
+  const animatedProps = band(5095).useAnimatedProps(fn);
   const size1 = { width: size, height: size, viewBox: "0 0 24 24", children: null };
-  const obj = band(5090);
+  const obj = band(5095);
   obj2 = { band, BAND_FROM };
-  const items = [closure_7(band(8023).Path, { d: path, fill: fill.color }), ];
+  const items = [closure_7(band(8031).Path, { d: path, fill: fill.color }), ];
   let tmp5Result = null;
   if (null != band) {
     const obj3 = { children: null };
@@ -43,13 +43,13 @@ function WandPart(fill) {
     const _HermesInternal = HermesInternal;
     obj5.id = "" + replaced + "band";
     const obj6 = { offset: "0", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 0 };
-    const items1 = [closure_7(band(8023).Stop, obj6), , ];
+    const items1 = [closure_7(band(8031).Stop, obj6), , ];
     const obj7 = { offset: "0.5", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 1 };
-    items1[1] = closure_7(band(8023).Stop, obj7);
+    items1[1] = closure_7(band(8031).Stop, obj7);
     const obj8 = { offset: "1", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 0 };
-    items1[2] = closure_7(band(8023).Stop, obj8);
+    items1[2] = closure_7(band(8031).Stop, obj8);
     obj5.children = items1;
-    const items2 = [closure_8(band(8023).LinearGradient, obj5), ];
+    const items2 = [closure_8(band(8031).LinearGradient, obj5), ];
     const size2 = { id: null, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: 24, height: 24, children: null };
     const _HermesInternal2 = HermesInternal;
     size2.id = "" + replaced + "mask";
@@ -57,13 +57,13 @@ function WandPart(fill) {
     const _HermesInternal3 = HermesInternal;
     size3.fill = "url(#" + replaced + "band)";
     size2.children = closure_7(closure_15, size3);
-    items2[1] = closure_7(band(8023).Mask, size2);
+    items2[1] = closure_7(band(8031).Mask, size2);
     obj4.children = items2;
-    const items3 = [closure_8(band(8023).Defs, obj4), ];
+    const items3 = [closure_8(band(8031).Defs, obj4), ];
     const obj9 = { d: path, fill, mask: null };
     const _HermesInternal4 = HermesInternal;
     obj9.mask = "url(#" + replaced + "mask)";
-    items3[1] = closure_7(band(8023).Path, obj9);
+    items3[1] = closure_7(band(8031).Path, obj9);
     obj3.children = items3;
     tmp5Result = closure_8(closure_9, obj3);
   }
@@ -75,7 +75,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const Easing = fn(5090).Easing;
+const Easing = fn(5095).Easing;
 let closure_10 = Easing.bezier(0.42, 0, 0.58, 1);
 let c11 = -33.6;
 let result = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PURPLE_40).set("oklch.l", "*0.95");
@@ -89,8 +89,8 @@ let obj4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PURPLE_30);
 let result4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PINK_40).set("oklch.l", "*0.95");
 let result5 = result4.set("oklch.c", "*0.8");
 const fill = result5.hex();
-let closure_15 = ReanimatedRexport.createAnimatedComponent(fn(8023).Rect);
-const createStyles = fn(5009);
+let closure_15 = ReanimatedRexport.createAnimatedComponent(fn(8031).Rect);
+const createStyles = fn(5014);
 let closure_16 = createStyles.createStyles((width) => ({ root: { width, height: width }, sparkleSmall: { transformOrigin: "33.6% 18.6%" }, sparkleLarge: { transformOrigin: "75% 75%" } }));
 function twinkle(arg0) {
   const obj = { opacity: 0.35 + 0.65 * arg0, transform: null };

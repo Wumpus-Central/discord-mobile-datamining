@@ -1,21 +1,21 @@
-// === Module 16513: useGuildProfileEditForm ===
+// === Module 16555: useGuildProfileEditForm ===
 
-// Module 16513 (useGuildProfileEditForm)
+// Module 16555 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8723 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import SortedGuildStore from "SortedGuildStore" /* 6766 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8723).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8731).IGNORE_GUILD_IDS;
 let FormStates = fn(1072).FormStates;
-const HexagonCampaignPerk = fn(5034).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5039).HexagonCampaignPerk;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
 
@@ -114,7 +114,7 @@ export default function useGuildProfileEditForm() {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -143,23 +143,23 @@ export default function useGuildProfileEditForm() {
               if (!closure_15) {
                 if (null != stateFromStores) {
                   const obj5 = { pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles };
-                  const guildMemberChangesForUpdateRequest = stateFromStores(11481).getGuildMemberChangesForUpdateRequest(obj5);
+                  const guildMemberChangesForUpdateRequest = stateFromStores(11515).getGuildMemberChangesForUpdateRequest(obj5);
                   closure_131_0 = guildMemberChangesForUpdateRequest;
-                  const obj21 = stateFromStores(11481);
+                  const obj21 = stateFromStores(11515);
                   const obj7 = { pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame };
                   let id;
                   if (selectedGuild != null) {
                     id = selectedGuild.id;
                   }
-                  profileChangesForUpdateRequest = stateFromStores(11481).getProfileChangesForUpdateRequest(obj7, id);
+                  profileChangesForUpdateRequest = stateFromStores(11515).getProfileChangesForUpdateRequest(obj7, id);
                   let id1;
                   if (selectedGuild != null) {
                     id1 = selectedGuild.id;
                   }
                   let result = null != id1;
                   if (result) {
-                    result = stateFromStores(5036).hasHexagonCampaignDisplayNameFont(guildMemberChangesForUpdateRequest.displayNameStyles);
-                    const obj9 = stateFromStores(5036);
+                    result = stateFromStores(5041).hasHexagonCampaignDisplayNameFont(guildMemberChangesForUpdateRequest.displayNameStyles);
+                    const obj9 = stateFromStores(5041);
                   }
                   if (result) {
                     member = member.getMember(id1, tmp65.id);
@@ -167,8 +167,8 @@ export default function useGuildProfileEditForm() {
                     if (member != null) {
                       displayNameStyles = member.displayNameStyles;
                     }
-                    result = !stateFromStores(5036).hasHexagonCampaignDisplayNameFont(displayNameStyles);
-                    const obj10 = stateFromStores(5036);
+                    result = !stateFromStores(5041).hasHexagonCampaignDisplayNameFont(displayNameStyles);
+                    const obj10 = stateFromStores(5041);
                   }
                   closure_131_2 = result;
                   closure_131_3 = true;
@@ -181,7 +181,7 @@ export default function useGuildProfileEditForm() {
                     }
                     c5 = 1;
                     c6 = 1;
-                    const obj8 = { value: stateFromStores(11485).saveGuildIdentityChanges(id2, guildMemberChangesForUpdateRequest), done: false };
+                    const obj8 = { value: stateFromStores(11519).saveGuildIdentityChanges(id2, guildMemberChangesForUpdateRequest), done: false };
                     return obj8;
                   } else {
                     const _Object2 = Object;
@@ -194,15 +194,15 @@ export default function useGuildProfileEditForm() {
                       }
                       c5 = 2;
                       c6 = 1;
-                      const obj12 = { value: stateFromStores(8730).saveProfileChanges(closure_131_8, id3, bannerOriginalMd5), done: false };
+                      const obj12 = { value: stateFromStores(8738).saveProfileChanges(closure_131_8, id3, bannerOriginalMd5), done: false };
                       return obj12;
                     }
                   }
-                  const obj23 = stateFromStores(11481);
+                  const obj23 = stateFromStores(11515);
                 }
               }
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -223,17 +223,17 @@ export default function useGuildProfileEditForm() {
                     assetOrigin = closure_132_1.assetOrigin;
                   }
                   obj16.avatarAssetOrigin = assetOrigin;
-                  const result1 = stateFromStores(7153).trackUserAvatarUpdated(obj16);
-                  const obj4 = stateFromStores(7153);
+                  const result1 = stateFromStores(7159).trackUserAvatarUpdated(obj16);
+                  const obj4 = stateFromStores(7159);
                 }
                 if (closure_131_2) {
                   const obj17 = { perks: null, content: null, contentSurface: null };
                   const items = [constants.DISPLAY_NAME_STYLE];
                   obj17.perks = items;
-                  obj17.content = stateFromStores(6778).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                  obj17.contentSurface = stateFromStores(16411).HexagonCampaignContentSurface.GUILD_PROFILE;
-                  const result2 = stateFromStores(16411).trackHexagonCampaignPerkAction(obj17);
-                  const obj6 = stateFromStores(16411);
+                  obj17.content = stateFromStores(6784).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
+                  obj17.contentSurface = stateFromStores(16453).HexagonCampaignContentSurface.GUILD_PROFILE;
+                  const result2 = stateFromStores(16453).trackHexagonCampaignPerkAction(obj17);
+                  const obj6 = stateFromStores(16453);
                 }
               } else {
                 let avatar;
@@ -244,16 +244,16 @@ export default function useGuildProfileEditForm() {
                   }
                 }
                 if (null != avatar) {
-                  const aPIError = new stateFromStores(6440).APIError(closure_131_5);
+                  const aPIError = new stateFromStores(6446).APIError(closure_131_5);
                   const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("avatar");
                   stateFromStores = firstFieldErrorMessage;
                   if (firstFieldErrorMessage == null) {
-                    const intl = stateFromStores(1114).intl;
-                    stateFromStores = intl.string(stateFromStores(1114).t.s35OuK);
+                    const intl = stateFromStores(1113).intl;
+                    stateFromStores = intl.string(stateFromStores(1113).t.s35OuK);
                   }
-                  const result3 = stateFromStores(16412).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+                  const result3 = stateFromStores(16454).showGenericGuildProfileUpdateFailureToast(stateFromStores);
                   closure_131_4 = true;
-                  const obj19 = stateFromStores(16412);
+                  const obj19 = stateFromStores(16454);
                 }
               }
               let tmp61 = closure_131_3;
@@ -284,12 +284,12 @@ export default function useGuildProfileEditForm() {
               ok1 = closure_131_9.ok;
             }
             if (!ok1) {
-              const aPIError1 = new stateFromStores(6440).APIError(closure_131_9);
+              const aPIError1 = new stateFromStores(6446).APIError(closure_131_9);
               firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
               if (null != firstFieldErrorMessage2) {
-                const result4 = stateFromStores(16412).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+                const result4 = stateFromStores(16454).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
                 closure_131_4 = true;
-                const obj2 = stateFromStores(16412);
+                const obj2 = stateFromStores(16454);
               }
             }
             let tmp24 = closure_131_3;
@@ -311,9 +311,9 @@ export default function useGuildProfileEditForm() {
             tmp82 = closure_131_4;
           }
           if (!tmp82) {
-            const intl2 = stateFromStores(1114).intl;
-            const result5 = stateFromStores(16412).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1114).t.s35OuK));
-            const obj11 = stateFromStores(16412);
+            const intl2 = stateFromStores(1113).intl;
+            const result5 = stateFromStores(16454).showGenericGuildProfileUpdateFailureToast(intl2.string(stateFromStores(1113).t.s35OuK));
+            const obj11 = stateFromStores(16454);
           }
           if (closure_131_3) {
             closure_132_13.delay();

@@ -1,7 +1,7 @@
-// === Module 16238: DeclarativeNotificationSettingsRedesignExperiment ===
+// === Module 16279: DeclarativeNotificationSettingsRedesignExperiment ===
 
-// Module 16238 (DeclarativeNotificationSettingsRedesignExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 16279 (DeclarativeNotificationSettingsRedesignExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-09-declarative-notification-settings-redesign", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

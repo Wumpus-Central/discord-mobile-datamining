@@ -1,36 +1,36 @@
-// === Module 13640: FinalizeTraitActionSheet ===
+// === Module 13675: FinalizeTraitActionSheet ===
 
-// Module 13640 (FinalizeTraitActionSheet)
+// Module 13675 (FinalizeTraitActionSheet)
 import jsxProd from "jsxProd" /* 21 */;
-import _modDef3091 from "module_3091" /* 3091 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6429 */;
+import _modDef3092 from "module_3092" /* 3092 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6434 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const items = [{ option: CheckpointCustomizationUtils.CheckpointCustomizationOption.AURA, subtitle: _modDef3091.f4BaUg }, , , , , ];
-let obj = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.AURA, subtitle: _modDef3091.f4BaUg };
-items[1] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.WEARABLE, subtitle: _modDef3091.gpEOaS };
-let obj2 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.WEARABLE, subtitle: _modDef3091.gpEOaS };
-items[2] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.SHOES, subtitle: _modDef3091["l/tCAO"] };
-let obj3 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.SHOES, subtitle: _modDef3091["l/tCAO"] };
-items[3] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.HAT, subtitle: _modDef3091["+oFzYq"] };
-const obj4 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.HAT, subtitle: _modDef3091["+oFzYq"] };
-items[4] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT, subtitle: _modDef3091.xa55WX };
-const obj5 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT, subtitle: _modDef3091.xa55WX };
-items[5] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.FACE, subtitle: _modDef3091["1dd6Fx"] };
+const items = [{ option: CheckpointCustomizationUtils.CheckpointCustomizationOption.AURA, subtitle: _modDef3092.f4BaUg }, , , , , ];
+let obj = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.AURA, subtitle: _modDef3092.f4BaUg };
+items[1] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.WEARABLE, subtitle: _modDef3092.gpEOaS };
+let obj2 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.WEARABLE, subtitle: _modDef3092.gpEOaS };
+items[2] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.SHOES, subtitle: _modDef3092["l/tCAO"] };
+let obj3 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.SHOES, subtitle: _modDef3092["l/tCAO"] };
+items[3] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.HAT, subtitle: _modDef3092["+oFzYq"] };
+const obj4 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.HAT, subtitle: _modDef3092["+oFzYq"] };
+items[4] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT, subtitle: _modDef3092.xa55WX };
+const obj5 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT, subtitle: _modDef3092.xa55WX };
+items[5] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.FACE, subtitle: _modDef3092["1dd6Fx"] };
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/FinalizeTraitActionSheet.tsx");
 
 export default function FinalizeTraitActionSheet(onSelectOption) {
   onSelectOption = onSelectOption.onSelectOption;
   let obj = { startExpanded: true, header: null, children: null };
   const obj2 = { title: null };
-  let intl = onSelectOption(1114).intl;
-  obj2.title = intl.string(_modDef3091.Zl5vPW);
-  obj.header = jsx(onSelectOption(7315).BottomSheetTitleHeader, { title: null });
+  let intl = onSelectOption(1113).intl;
+  obj2.title = intl.string(_modDef3092.Zl5vPW);
+  obj.header = jsx(onSelectOption(7321).BottomSheetTitleHeader, { title: null });
   const obj3 = { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null };
-  const intl2 = onSelectOption(1114).intl;
-  obj3.accessibilityLabel = intl2.string(_modDef3091.Zl5vPW);
+  const intl2 = onSelectOption(1113).intl;
+  obj3.accessibilityLabel = intl2.string(_modDef3092.Zl5vPW);
   obj3.defaultValue = onSelectOption.selectedOption;
   obj3.onChange = function onChange(arg0) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -38,11 +38,11 @@ export default function FinalizeTraitActionSheet(onSelectOption) {
   };
   obj3.children = items.map((option) => {
     option = option.option;
-    const obj = { value: option, label: onSelectOption(6429).getCustomizationOptionName(option), subLabel: null };
-    const intl = onSelectOption(1114).intl;
+    const obj = { value: option, label: onSelectOption(6434).getCustomizationOptionName(option), subLabel: null };
+    const intl = onSelectOption(1113).intl;
     obj.subLabel = intl.string(option.subtitle);
-    return jsx(onSelectOption(7055).TableRadioRow, { value: option, label: onSelectOption(6429).getCustomizationOptionName(option), subLabel: null }, option);
+    return jsx(onSelectOption(7061).TableRadioRow, { value: option, label: onSelectOption(6434).getCustomizationOptionName(option), subLabel: null }, option);
   });
-  obj.children = jsx(onSelectOption(7052).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
-  return jsx(onSelectOption(7360).ActionSheet, { startExpanded: true, header: null, children: null });
+  obj.children = jsx(onSelectOption(7058).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
+  return jsx(onSelectOption(7366).ActionSheet, { startExpanded: true, header: null, children: null });
 };

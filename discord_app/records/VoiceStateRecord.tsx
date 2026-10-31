@@ -1,7 +1,7 @@
-// === Module 5675: VoiceStateRecord ===
+// === Module 5680: VoiceStateRecord ===
 
-// Module 5675 (VoiceStateRecord)
-import Record from "Record" /* 1399 */;
+// Module 5680 (VoiceStateRecord)
+import Record from "Record" /* 1398 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("records/VoiceStateRecord.tsx");

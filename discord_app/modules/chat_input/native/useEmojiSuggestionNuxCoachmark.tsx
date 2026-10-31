@@ -1,16 +1,16 @@
-// === Module 13947: useEmojiSuggestionNuxCoachmark ===
+// === Module 13982: useEmojiSuggestionNuxCoachmark ===
 
-// Module 13947 (useEmojiSuggestionNuxCoachmark)
-import util from "util" /* 1114 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 13677 */;
-import useChatInputKeyboardOffsetDefault from "useChatInputKeyboardOffset" /* 13944 */;
+// Module 13982 (useEmojiSuggestionNuxCoachmark)
+import util from "util" /* 1113 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 13712 */;
+import useChatInputKeyboardOffsetDefault from "useChatInputKeyboardOffset" /* 13979 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useEmojiSuggestionNuxCoachmark.tsx");
@@ -26,7 +26,7 @@ export default function useEmojiSuggestionNuxCoachmark(targetRef, arg1) {
   }
   const tmp3 = _slicedToArray(noop.useState(arg1), 2);
   if (tmp4) {
-    const items = [tmp7(4842).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
+    const items = [tmp7(4847).DismissibleContent.MOBILE_EMOJI_SUGGESTIONS_NUX_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];

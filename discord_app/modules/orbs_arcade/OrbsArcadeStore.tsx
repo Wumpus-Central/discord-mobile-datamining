@@ -1,14 +1,14 @@
-// === Module 16954: OrbsArcadeStore ===
+// === Module 17010: OrbsArcadeStore ===
 
-// Module 16954 (OrbsArcadeStore)
+// Module 17010 (OrbsArcadeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16955 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17011 */;
 import _slicedToArray from "module_32" /* 32 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9533 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9555 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const orbs_arcade_game_state = tmp(16956);
+const orbs_arcade_game_state = tmp(17012);
 require = fn;
 function handleBalanceChange(balance) {
   balance = balance.balance;
@@ -35,8 +35,10 @@ let fetchedAt = null;
 let c4 = false;
 let orbsArcadeGames = [];
 new Map();
+new Set();
 let set = new Set();
-let c8 = null;
+let c9 = null;
+let set1 = new Set();
 let map = new Map();
 let balance = null;
 const Store = initializeDefault.Store;
@@ -85,17 +87,23 @@ prototype["getGameStateForGame"] = function getGameStateForGame(id) {
   }
   return value;
 };
+Object.defineProperty(prototype, "ownedRewardSkuIds", {
+  get: function ownedRewardSkuIds() {
+    return set;
+  },
+  set: undefined
+});
 prototype["isClaimingRewards"] = function isClaimingRewards(id) {
   return set.has(id);
 };
 Object.defineProperty(prototype, "isLaunchingAnyGame", {
   get: function isLaunchingAnyGame() {
-    return null != c8;
+    return null != c9;
   },
   set: undefined
 });
 prototype["isLaunchingGame"] = function isLaunchingGame(id) {
-  return c8 === id;
+  return c9 === id;
 };
 Object.defineProperty(prototype, "heldRunChargeTotal", {
   get: function heldRunChargeTotal() {
@@ -108,8 +116,9 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
   ORBS_ARCADE_FETCH_GAMES_BEGIN: function handleFetchGamesBegin() {
     c2 = true;
   },
-  ORBS_ARCADE_FETCH_GAMES_SUCCESS: function handleFetchGamesSuccess(arg0) {
-    ({ userId, orbsArcadeGames, gameStateByGameId, fetchedAt } = arg0);
+  ORBS_ARCADE_FETCH_GAMES_SUCCESS: function handleFetchGamesSuccess(ownedRewardSkuIds) {
+    ownedRewardSkuIds = ownedRewardSkuIds.ownedRewardSkuIds;
+    ({ userId, orbsArcadeGames, gameStateByGameId, fetchedAt } = ownedRewardSkuIds);
     if (userId !== AuthenticationStore.getId()) {
       return false;
     } else {
@@ -122,6 +131,8 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
         const items = [gameId.gameId, gameId];
         return items;
       }));
+      const _Set = Set;
+      set = new Set(ownedRewardSkuIds);
     }
   },
   ORBS_ARCADE_FETCH_GAMES_FAILURE: function handleFetchGamesFailure(userId) {
@@ -209,10 +220,10 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
     balance = VirtualCurrencyStore.balance;
   },
   ORBS_ARCADE_LAUNCH_GAME_END: function handleLaunchGameEnd(gameId) {
-    if (c8 !== gameId.gameId) {
+    if (c9 !== gameId.gameId) {
       return false;
     } else {
-      c8 = null;
+      c9 = null;
     }
   },
   VIRTUAL_CURRENCY_BALANCE_UPDATE: handleBalanceChange,
@@ -223,8 +234,10 @@ const orbsArcadeStore = new OrbsArcadeStore(DispatcherDefault, {
     c4 = false;
     orbsArcadeGames = [];
     new Map();
+    new Set();
     set = new Set();
-    c8 = null;
+    c9 = null;
+    const set1 = new Set();
     map = new Map();
     balance = null;
   }

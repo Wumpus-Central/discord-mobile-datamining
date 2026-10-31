@@ -1,14 +1,14 @@
-// === Module 18604: GuildSettingsModalMemberApplications ===
+// === Module 18646: GuildSettingsModalMemberApplications ===
 
-// Module 18604 (GuildSettingsModalMemberApplications)
+// Module 18646 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5043 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18605 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18647 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6911 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6917 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 }, spinnerContainer: { padding: 32 }, footerSpinner: { paddingVertical: 16 }, spinner: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 };
 obj.spinner = { color: nativeDefault.colors.TEXT_BRAND };
@@ -54,14 +54,14 @@ let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequ
         userAvatarSource = AvatarUtilsDefault.getUserAvatarSource(user);
       }
       const obj2 = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };
-      const obj3 = { source: userAvatarSource, size: joinRequest(1188).AvatarSizes.SMALL };
-      obj2.icon = closure_7(joinRequest(1188).Avatar, obj3);
+      const obj3 = { source: userAvatarSource, size: joinRequest(1187).AvatarSizes.SMALL };
+      obj2.icon = closure_7(joinRequest(1187).Avatar, obj3);
       const obj4 = { user };
       obj2.label = closure_7(closure_11, obj4);
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(6969).TableRow, obj2);
+      return closure_7(joinRequest(6975).TableRow, obj2);
     }
   }
 });

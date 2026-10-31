@@ -1,7 +1,7 @@
-// === Module 8161: ManualReviewInconclusiveCopyExperiment ===
+// === Module 8169: ManualReviewInconclusiveCopyExperiment ===
 
-// Module 8161 (ManualReviewInconclusiveCopyExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 8169 (ManualReviewInconclusiveCopyExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-09-manual-review-inconclusive-copy", defaultConfig: { enabled: false }, variations: null };

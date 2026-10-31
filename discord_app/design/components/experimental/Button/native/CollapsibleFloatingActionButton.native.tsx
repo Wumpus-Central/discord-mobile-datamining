@@ -1,13 +1,13 @@
-// === Module 8989: CollapsibleFloatingActionButton ===
+// === Module 8998: CollapsibleFloatingActionButton ===
 
-// Module 8989 (CollapsibleFloatingActionButton)
+// Module 8998 (CollapsibleFloatingActionButton)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import BaseTextButton from "BaseTextButton" /* 5630 */;
-import spring from "spring" /* 5632 */;
-import springPresets from "springPresets" /* 5633 */;
-import ButtonConstants2 from "ButtonConstants" /* 5635 */;
-import FloatingActionButton from "FloatingActionButton" /* 8990 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import BaseTextButton from "BaseTextButton" /* 5635 */;
+import spring from "spring" /* 5637 */;
+import springPresets from "springPresets" /* 5638 */;
+import ButtonConstants2 from "ButtonConstants" /* 5640 */;
+import FloatingActionButton from "FloatingActionButton" /* 8999 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,8 +28,8 @@ function CollapsableButton(arg0) {
       return obj;
     }
   }
-  let obj = collapseText(5090);
-  B.__closure = { FAB_BUTTON_SIZE: collapseText(5635).FAB_BUTTON_SIZE, withSpring: collapseText(5632).withSpring, interpolate: collapseText(5090).interpolate, collapseText, FAB_PADDING_HORIZONTAL: 20, FAB_PADDING_VERTICAL: buttonPadding, SUBTLE_SPRING: collapseText(5633).SUBTLE_SPRING };
+  let obj = collapseText(5095);
+  B.__closure = { FAB_BUTTON_SIZE: collapseText(5640).FAB_BUTTON_SIZE, withSpring: collapseText(5637).withSpring, interpolate: collapseText(5095).interpolate, collapseText, FAB_PADDING_HORIZONTAL: 20, FAB_PADDING_VERTICAL: buttonPadding, SUBTLE_SPRING: collapseText(5638).SUBTLE_SPRING };
   B.__workletHash = 5958377845220;
   B.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(B);
@@ -41,12 +41,12 @@ function CollapsableButton(arg0) {
   obj3.collapseText = collapseText;
   obj3.style = style;
   obj3.pillStyle = animatedStyle;
-  return jsx(collapseText(5630).BaseTextButton, {});
+  return jsx(collapseText(5635).BaseTextButton, {});
 }
 const jsx = fn(21).jsx;
-const ButtonConstants = fn(5635);
-const buttonPadding = ButtonConstants.getButtonPadding(fn(5635).FAB_BUTTON_SIZE, fn(5635).FAB_BUTTON_ICON_SIZE);
-const createStyles = fn(5009);
+const ButtonConstants = fn(5640);
+const buttonPadding = ButtonConstants.getButtonPadding(fn(5640).FAB_BUTTON_SIZE, fn(5640).FAB_BUTTON_ICON_SIZE);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ textButtonPill: { paddingHorizontal: 20, paddingVertical: buttonPadding } });
 const __initData = { code: "function CollapsibleFloatingActionButtonNativeTsx1(){const{FAB_BUTTON_SIZE,withSpring,interpolate,collapseText,FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL,SUBTLE_SPRING}=this.__closure;return{minWidth:FAB_BUTTON_SIZE,minHeight:FAB_BUTTON_SIZE,paddingHorizontal:withSpring(interpolate(collapseText.get(),[0,1],[FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL]),SUBTLE_SPRING,'animate-always'),paddingVertical:FAB_PADDING_VERTICAL};}" };
 const size = fn(2);

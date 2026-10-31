@@ -1,9 +1,9 @@
-// === Module 5945: VideoQualityStats ===
+// === Module 5950: VideoQualityStats ===
 
-// Module 5945 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 5767 */;
-import Histogram from "Histogram" /* 5928 */;
-import SystemResourcesDefault from "SystemResources" /* 5936 */;
+// Module 5950 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 5772 */;
+import Histogram from "Histogram" /* 5894 */;
+import SystemResourcesDefault from "SystemResources" /* 5902 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -487,6 +487,20 @@ Object.defineProperty(prototype, "isVideoStopped", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "videoStoppedReasons", {
+  get: function videoStoppedReasons() {
+    return this.videoStoppedReason;
+  },
+  set: undefined
+});
+prototype["continueAggregationFrom"] = function continueAggregationFrom(previousAggregationStats, flag) {
+  this.previousAggregationStats = previousAggregationStats.previousAggregationStats;
+  if (flag) {
+    const items = [];
+    HermesBuiltin.arraySpread(previousAggregationStats.statsWindow, 0);
+    tmp.statsWindow = items;
+  }
+};
 Object.defineProperty(prototype, "videoStoppedDuration", {
   get: function videoStoppedDuration() {
     const videoStoppedWatch = this.videoStoppedWatch;

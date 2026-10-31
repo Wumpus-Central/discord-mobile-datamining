@@ -1,9 +1,9 @@
-// === Module 15332: usePremiumGroupMembership ===
+// === Module 15371: usePremiumGroupMembership ===
 
-// Module 15332 (usePremiumGroupMembership)
+// Module 15371 (usePremiumGroupMembership)
 import _mod19 from "module_19" /* 19 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumGroupStore from "PremiumGroupStore" /* 15333 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 15372 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;

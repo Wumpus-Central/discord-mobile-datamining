@@ -1,23 +1,23 @@
-// === Module 17196: SettingsAppearanceThemeSelectorItem ===
+// === Module 17253: SettingsAppearanceThemeSelectorItem ===
 
-// Module 17196 (SettingsAppearanceThemeSelectorItem)
+// Module 17253 (SettingsAppearanceThemeSelectorItem)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1242 */;
-import utils_ColorDefault from "utils/Color" /* 5007 */;
-import themes from "themes" /* 5031 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5077 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5245 */;
-import useToken from "useToken" /* 5591 */;
-import Pressables from "Pressables" /* 6974 */;
-import ThemedGradient from "ThemedGradient" /* 10716 */;
-import _modDef17197 from "module_17197" /* 17197 */;
-import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 17198 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
+import utils_ColorDefault from "utils/Color" /* 5012 */;
+import themes from "themes" /* 5036 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5250 */;
+import useToken from "useToken" /* 5596 */;
+import Pressables from "Pressables" /* 6980 */;
+import ThemedGradient from "ThemedGradient" /* 10736 */;
+import _modDef17254 from "module_17254" /* 17254 */;
+import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 17255 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17195 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17252 */;
 
 const ThemedGradientDefault = ThemedGradient;
 
@@ -41,7 +41,7 @@ function GradientThemeBackground(arg0) {
   obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj4), ];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17197, style: tmp4.lock };
+    const obj6 = { source: _modDef17254, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -93,7 +93,7 @@ function CustomThemeBackground(arg0) {
   obj4.customTheme = item;
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4), ];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17197, style: tmp4.lock };
+    const obj6 = { source: _modDef17254, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -104,14 +104,14 @@ const View = fn(17).View;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { rippleColor: { color: nativeDefault.unsafe_rawColors.TRANSPARENT }, themeSelectorItemContainer: { width: SettingsAppearanceConstants.THEME_ITEM_WIDTH, height: SettingsAppearanceConstants.THEME_ITEM_HEIGHT }, themeSelectorItem: null, newRedCircle: null };
 let obj3 = { color: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.themeSelectorItem = { borderRadius: nativeDefault.radii.sm, padding: SettingsAppearanceConstants.THEME_ITEM_PADDING };
 let size = { backgroundColor: nativeDefault.unsafe_rawColors.RED_430, width: 12, height: 12, borderRadius: nativeDefault.radii.sm, position: "absolute", top: 0, right: 0 };
 obj2.newRedCircle = size;
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { themeSelectorGradientBackground: { justifyContent: "center", width: "100%", height: "100%" }, lock: null };
   const internal = nativeDefault.internal;

@@ -1,8 +1,8 @@
-// === Module 1626: useSafeAreaInsets ===
+// === Module 1625: useSafeAreaInsets ===
 
-// Module 1626 (useSafeAreaInsets)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1495 */;
-import SafeAreaStoreDefault from "SafeAreaStore" /* 1627 */;
+// Module 1625 (useSafeAreaInsets)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1494 */;
+import SafeAreaStoreDefault from "SafeAreaStore" /* 1626 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");

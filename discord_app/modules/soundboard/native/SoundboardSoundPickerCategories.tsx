@@ -1,23 +1,23 @@
-// === Module 19134: SoundboardSoundPickerCategories ===
+// === Module 19183: SoundboardSoundPickerCategories ===
 
-// Module 19134 (SoundboardSoundPickerCategories)
+// Module 19183 (SoundboardSoundPickerCategories)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
-import ClockIcon from "ClockIcon" /* 5735 */;
-import GuildIconDefault from "GuildIcon" /* 6951 */;
-import Pressables from "Pressables" /* 6974 */;
-import SoundboardTypes from "SoundboardTypes" /* 7512 */;
-import LockIcon from "LockIcon" /* 8659 */;
-import TrophyIcon from "TrophyIcon" /* 9358 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9775 */;
-import _modDef10251 from "module_10251" /* 10251 */;
-import _modDef19132 from "module_19132" /* 19132 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5303 */;
+import ClockIcon from "ClockIcon" /* 5740 */;
+import GuildIconDefault from "GuildIcon" /* 6957 */;
+import Pressables from "Pressables" /* 6980 */;
+import SoundboardTypes from "SoundboardTypes" /* 7518 */;
+import LockIcon from "LockIcon" /* 8667 */;
+import TrophyIcon from "TrophyIcon" /* 9378 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9796 */;
+import _modDef10271 from "module_10271" /* 10271 */;
+import _modDef19181 from "module_19181" /* 19181 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function SoundCategoryItem(style) {
@@ -37,7 +37,7 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10251;
+    tmp6 = _modDef10271;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -50,13 +50,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef19132;
+    tmp6 = _modDef19181;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef19132;
+    tmp6 = _modDef19181;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -117,13 +117,13 @@ function SoundboardCategoryScrollView(ref) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const setSearchQuery = fn(19117).setSearchQuery;
+const setSearchQuery = fn(19166).setSearchQuery;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 ({ NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, item: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
 let size = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
 obj.item = size;

@@ -1,22 +1,22 @@
-// === Module 16935: HexagonCampaignQuestHomeHeader ===
+// === Module 16991: HexagonCampaignQuestHomeHeader ===
 
-// Module 16935 (HexagonCampaignQuestHomeHeader)
+// Module 16991 (HexagonCampaignQuestHomeHeader)
 import nativeDefault from "native" /* 575 */;
-import QuestTypes from "QuestTypes" /* 6778 */;
-import AdCreativeType from "AdCreativeType" /* 6782 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7812 */;
-import AnalyticsActions from "AnalyticsActions" /* 7855 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7864 */;
+import QuestTypes from "QuestTypes" /* 6784 */;
+import AdCreativeType from "AdCreativeType" /* 6788 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7819 */;
+import AnalyticsActions from "AnalyticsActions" /* 7862 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7871 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(5034).HEXAGON_CAMPAIGN_AD_CONTENT_ID;
+let closure_6 = fn(5039).HEXAGON_CAMPAIGN_AD_CONTENT_ID;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { width: "100%", maxWidth: 448, alignSelf: "center", marginBottom: nativeDefault.space.PX_40 }, banner: { width: "100%", aspectRatio: 1 }, bannerImage: { width: "100%", height: "100%" }, logo: null, sponsoredTag: null, cardShadow: null, card: null, cardArt: null, cardContent: null, cardBody: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_4, left: nativeDefault.space.PX_8, width: 88, height: 88 };
 obj2.logo = size;
@@ -38,10 +38,10 @@ let result = size.fileFinishedImporting("modules/hexagon_campaign/native/Hexagon
 
 export default function HexagonCampaignQuestHomeHeader() {
   const tmp = closure_10();
-  let obj = isHexagonCampaignQuestHomeHeaderEnabled(5075);
-  isHexagonCampaignQuestHomeHeaderEnabled = isHexagonCampaignQuestHomeHeaderEnabled(5038).useIsHexagonCampaignQuestHomeHeaderEnabled("HexagonCampaignQuestHomeHeader");
-  let obj2 = isHexagonCampaignQuestHomeHeaderEnabled(5038);
-  token = isHexagonCampaignQuestHomeHeaderEnabled(5591).useToken(token(575).colors.BACKGROUND_BASE_LOWEST);
+  let obj = isHexagonCampaignQuestHomeHeaderEnabled(5080);
+  isHexagonCampaignQuestHomeHeaderEnabled = isHexagonCampaignQuestHomeHeaderEnabled(5043).useIsHexagonCampaignQuestHomeHeaderEnabled("HexagonCampaignQuestHomeHeader");
+  let obj2 = isHexagonCampaignQuestHomeHeaderEnabled(5043);
+  token = isHexagonCampaignQuestHomeHeaderEnabled(5596).useToken(token(575).colors.BACKGROUND_BASE_LOWEST);
   let items = [token];
   const items1 = [isHexagonCampaignQuestHomeHeaderEnabled];
   const memo = noop.useMemo(() => {
@@ -67,69 +67,69 @@ export default function HexagonCampaignQuestHomeHeader() {
   if (isHexagonCampaignQuestHomeHeaderEnabled) {
     let obj4 = { style: tmp.container, children: null };
     const obj5 = { style: tmp.banner, children: null };
-    const obj6 = { source: tmp5(16947), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
-    const items2 = [closure_8(tmp5(5712), obj6), , , ];
+    const obj6 = { source: tmp5(17003), style: tmp.bannerImage, resizeMode: "cover", accessible: false };
+    const items2 = [closure_8(tmp5(5717), obj6), , , ];
     const obj7 = { colors: memo, locations: [0.716, 0.823, 1], style: absoluteFill.absoluteFill, pointerEvents: "none" };
-    items2[1] = closure_8(tmp5(5582), obj7);
+    items2[1] = closure_8(tmp5(5587), obj7);
     const obj8 = { source: null, style: null, resizeMode: "contain", accessible: false };
-    const tmp5Result = tmp5(5712);
-    obj8.source = tmp5(16948);
+    const tmp5Result = tmp5(5717);
+    obj8.source = tmp5(17004);
     obj8.style = tmp.logo;
-    items2[2] = closure_8(tmp5(5712), obj8);
+    items2[2] = closure_8(tmp5(5717), obj8);
     const obj9 = { style: tmp.sponsoredTag, children: null };
     const obj10 = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
-    const intl = tmp2(1114).intl;
-    obj10.children = intl.string(tmp5(4282).kVJc0r);
-    obj9.children = closure_8(tmp2(5619).Text, obj10);
+    const intl = tmp2(1113).intl;
+    obj10.children = intl.string(tmp5(4285).kVJc0r);
+    obj9.children = closure_8(tmp2(5624).Text, obj10);
     items2[3] = closure_8(closure_5, obj9);
     obj5.children = items2;
     const items3 = [closure_9(closure_5, obj5), ];
     const obj11 = { style: tmp.cardShadow, children: null };
     const obj12 = { style: tmp.card, children: null };
-    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(16949).BundleAbstractUI, { accessible: false }) };
+    const obj13 = { style: tmp.cardArt, children: closure_8(tmp2(17005).BundleAbstractUI, { accessible: false }) };
     const items4 = [closure_8(closure_5, obj13), ];
     const obj14 = { direction: "vertical", spacing: tmp5(575).space.PX_12, style: tmp.cardContent, children: null };
     const obj15 = { direction: "vertical", spacing: tmp5(575).space.PX_8, children: null };
     const obj16 = { direction: "vertical", spacing: tmp5(575).space.PX_4, children: null };
     const obj17 = { variant: "text-lg/semibold", color: "text-strong", children: null };
-    const intl2 = tmp2(1114).intl;
-    obj17.children = intl2.string(tmp5(4282)["fShp/D"]);
-    const items5 = [closure_8(tmp2(5619).Heading, obj17), ];
+    const intl2 = tmp2(1113).intl;
+    obj17.children = intl2.string(tmp5(4285)["fShp/D"]);
+    const items5 = [closure_8(tmp2(5624).Heading, obj17), ];
     const obj18 = { variant: "text-sm/medium", color: "text-default", style: tmp.cardBody, children: null };
-    const intl3 = tmp2(1114).intl;
-    obj18.children = intl3.string(tmp5(4282).XLqMej);
-    items5[1] = closure_8(tmp2(5619).Text, obj18);
+    const intl3 = tmp2(1113).intl;
+    obj18.children = intl3.string(tmp5(4285).XLqMej);
+    items5[1] = closure_8(tmp2(5624).Text, obj18);
     obj16.children = items5;
-    const items6 = [closure_9(tmp2(6022).Stack, obj16), ];
+    const items6 = [closure_9(tmp2(6027).Stack, obj16), ];
     const obj19 = { variant: "text-xs/medium", color: "text-subtle", children: null };
-    const intl4 = tmp2(1114).intl;
+    const intl4 = tmp2(1113).intl;
     const obj20 = {
       learnMoreHook(children, arg1) {
-          return closure_1_8(isHexagonCampaignQuestHomeHeaderEnabled(5619).Text, { variant: "text-xs/medium", color: "text-link", accessibilityRole: "link", onPress: isHexagonCampaignQuestHomeHeaderEnabled(16430).openHexagonCampaignLearnMore, children }, arg1);
+          return closure_1_8(isHexagonCampaignQuestHomeHeaderEnabled(5624).Text, { variant: "text-xs/medium", color: "text-link", accessibilityRole: "link", onPress: isHexagonCampaignQuestHomeHeaderEnabled(16472).openHexagonCampaignLearnMore, children }, arg1);
         }
     };
-    obj19.children = intl4.format(tmp5(4282).uL0TOA, obj20);
-    items6[1] = closure_8(tmp2(5619).Text, obj19);
+    obj19.children = intl4.format(tmp5(4285).uL0TOA, obj20);
+    items6[1] = closure_8(tmp2(5624).Text, obj19);
     obj15.children = items6;
-    const items7 = [closure_9(tmp2(6022).Stack, obj15), ];
-    const tmp5Result2 = tmp5(5712);
+    const items7 = [closure_9(tmp2(6027).Stack, obj15), ];
+    const tmp5Result2 = tmp5(5717);
     let str = "primary-overlay";
     if (tmp2Result.isThemeLight(obj.useThemeContext().theme)) {
       str = "primary";
     }
     const obj21 = { variant: str, text: null, onPress: null, grow: true };
-    const intl5 = tmp2(1114).intl;
-    obj21.text = intl5.string(tmp5(4282)["KX1/jp"]);
+    const intl5 = tmp2(1113).intl;
+    obj21.text = intl5.string(tmp5(4285)["KX1/jp"]);
     obj21.onPress = tmp9;
-    items7[1] = closure_8(tmp2(5629).Button, obj21);
+    items7[1] = closure_8(tmp2(5634).Button, obj21);
     obj14.children = items7;
-    items4[1] = closure_9(tmp2(6022).Stack, obj14);
+    items4[1] = closure_9(tmp2(6027).Stack, obj14);
     obj12.children = items4;
     obj11.children = closure_9(closure_5, obj12);
     items3[1] = closure_8(closure_5, obj11);
     obj4.children = items3;
     tmp11Result = closure_9(closure_5, obj4);
-    tmp2Result = tmp2(5016);
+    tmp2Result = tmp2(5021);
   }
   return tmp11Result;
 };

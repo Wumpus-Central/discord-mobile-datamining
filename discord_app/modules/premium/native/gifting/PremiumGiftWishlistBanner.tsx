@@ -1,10 +1,10 @@
-// === Module 10643: PremiumGiftWishlistBanner ===
+// === Module 10663: PremiumGiftWishlistBanner ===
 
-// Module 10643 (PremiumGiftWishlistBanner)
+// Module 10663 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8742 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10648 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8750 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10668 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,17 +13,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_7 = fn(7399).WishlistRecommendationReason;
-const PremiumConstants = fn(1386);
+let closure_7 = fn(7405).WishlistRecommendationReason;
+const PremiumConstants = fn(1385);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1074).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8746).UserProfileSections;
+const UserProfileSections = fn(8754).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = { title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 }, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 };
@@ -116,7 +116,7 @@ export function PremiumGiftWishlistBanner(giftRecipient) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

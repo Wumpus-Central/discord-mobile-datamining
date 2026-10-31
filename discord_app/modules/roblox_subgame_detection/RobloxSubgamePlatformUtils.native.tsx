@@ -1,6 +1,6 @@
-// === Module 7886: RobloxSubgamePlatformUtils ===
+// === Module 7894: RobloxSubgamePlatformUtils ===
 
-// Module 7886 (RobloxSubgamePlatformUtils)
+// Module 7894 (RobloxSubgamePlatformUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -21,7 +21,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -37,7 +37,7 @@ export default {
             } else {
               dependencyMap = 1;
               c2 = 1;
-              const obj5 = { value: tmp4(7887).canOpenUrlScheme("roblox"), done: false };
+              const obj5 = { value: tmp4(7895).canOpenUrlScheme("roblox"), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -48,7 +48,7 @@ export default {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            const obj = tmp4(7885);
+            const obj = tmp4(7893);
             if (value) {
               obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {

@@ -1,26 +1,26 @@
-// === Module 12243: RecommendationsBanner ===
+// === Module 12281: RecommendationsBanner ===
 
-// Module 12243 (RecommendationsBanner)
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8707 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8749 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8811 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11803 */;
+// Module 12281 (RecommendationsBanner)
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8715 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8757 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8819 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11841 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1398 */;
+import UserRecord from "UserRecord" /* 1397 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11466);
-  heroMediaDimensions = heroMediaDimensions(12234).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(11500);
+  heroMediaDimensions = heroMediaDimensions(12272).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];

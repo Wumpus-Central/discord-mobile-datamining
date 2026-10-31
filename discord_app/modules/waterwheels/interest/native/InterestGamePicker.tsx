@@ -1,20 +1,20 @@
-// === Module 19507: InterestGamePicker ===
+// === Module 19564: InterestGamePicker ===
 
-// Module 19507 (InterestGamePicker)
+// Module 19564 (InterestGamePicker)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef2407 from "module_2407" /* 2407 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5018 */;
-import useGame2 from "useGame" /* 7474 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8673 */;
+import util from "util" /* 1113 */;
+import _modDef2408 from "module_2408" /* 2408 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
+import useGame2 from "useGame" /* 7480 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8681 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2015 */;
+import GameStore from "GameStore" /* 2014 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, ScrollView: metroRequire, StyleSheet: closure_7, View: closure_8 } = get_ActivityIndicator);
-const InterestGamePickerConstants = fn(19508);
+const InterestGamePickerConstants = fn(19565);
 ({ GRID_COLUMNS: c10, GRID_GAP } = InterestGamePickerConstants);
 ({ MAX_SELECTIONS: closure_12, MIN_SELECTIONS: map1, SCREEN_HORIZONTAL_PADDING } = InterestGamePickerConstants);
 ({ THUMBNAIL_HIT_SLOP: closure_15, THUMBNAIL_WIDTH } = InterestGamePickerConstants);
@@ -22,7 +22,7 @@ const TILE_ASPECT_RATIO = InterestGamePickerConstants.TILE_ASPECT_RATIO;
 ({ FOOTER_BORDER_WIDTH, FOOTER_BOTTOM_PADDING, FOOTER_THUMBNAIL_GAP, SELECTED_BORDER_WIDTH, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { screen: { flex: 1 }, body: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, header: null, content: null, intro: null, subtitle: null, search: null, grid: null, tile: null, selected: null, status: null, footer: null, footerContent: null, thumbnails: null, thumbnail: null, footerActions: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.header = { height: nativeDefault.space.PX_64, paddingHorizontal: SCREEN_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", justifyContent: "flex-end" };
@@ -217,7 +217,7 @@ export default function InterestGamePicker(catalog) {
       const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
       const intl = util.intl;
       const obj = { count: length, max };
-      AccessibilityAnnouncer.announce(intl.formatToPlainString(_modDef2407.v9v0uY, obj));
+      AccessibilityAnnouncer.announce(intl.formatToPlainString(_modDef2408.v9v0uY, obj));
     }
   }, items11);
   callback = obj.useCallback((arg0) => {

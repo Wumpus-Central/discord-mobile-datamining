@@ -1,15 +1,15 @@
-// === Module 19638: RuleActionRows ===
+// === Module 19695: RuleActionRows ===
 
-// Module 19638 (RuleActionRows)
+// Module 19695 (RuleActionRows)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import TableRow from "TableRow" /* 6969 */;
-import FormCheckbox from "FormCheckbox" /* 6983 */;
-import getActionInfo from "getActionInfo" /* 19618 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import TableRow from "TableRow" /* 6975 */;
+import FormCheckbox from "FormCheckbox" /* 6989 */;
+import getActionInfo from "getActionInfo" /* 19675 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 require = fn;
 function RuleActionRow(onPress) {
@@ -54,11 +54,11 @@ function RuleActionRow(onPress) {
     return timestampProducer(TableRow.TableRow, obj2);
   }
 }
-let closure_4 = fn(4939).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(13242).AutomodActionType;
+let closure_4 = fn(4944).GUILD_SELECTABLE_CHANNELS_KEY;
+const AutomodActionType = fn(13277).AutomodActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { subLabel: { marginTop: nativeDefault.space.PX_4 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -67,12 +67,12 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(19612).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(19669).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };
-    let intl = tmp(1114).intl;
-    obj2.title = intl.string(tmp(1114).t["18TOiQ"]);
+    let intl = tmp(1113).intl;
+    obj2.title = intl.string(tmp(1113).t["18TOiQ"]);
     obj2.children = availableActionTypes.map((actionType) => {
       rule = actionType;
       return closure_1_6(RuleActionRow, {
@@ -175,7 +175,7 @@ export default function RuleActionRows(rule) {
         }
       }, actionType);
     });
-    tmp3 = closure_6(tmp(7054).TableRowGroup, obj2);
+    tmp3 = closure_6(tmp(7060).TableRowGroup, obj2);
   }
   return tmp3;
 };

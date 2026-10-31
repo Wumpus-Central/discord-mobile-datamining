@@ -1,11 +1,11 @@
-// === Module 10911: useEmbeddedAppCSP ===
+// === Module 11821: useEmbeddedAppCSP ===
 
-// Module 10911 (useEmbeddedAppCSP)
-import getURLForApplication from "getURLForApplication" /* 5667 */;
-import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 10910 */;
-import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 10912 */;
+// Module 11821 (useEmbeddedAppCSP)
+import getURLForApplication from "getURLForApplication" /* 5672 */;
+import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 10888 */;
+import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 10889 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 10909 */;
+import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 10887 */;
 
 require = fn;
 const initialize = fn(504);
@@ -18,10 +18,10 @@ let obj2 = {
     }
     return combined;
   },
-  get(arg0) {
+  get(applicationRouterOrigin) {
     let policy = null;
-    if (null != arg0) {
-      policy = EmbeddedAppCSPStore.getPolicy(arg0);
+    if (null != applicationRouterOrigin) {
+      policy = EmbeddedAppCSPStore.getPolicy(applicationRouterOrigin);
     }
     return policy;
   },
@@ -38,7 +38,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

@@ -1,11 +1,11 @@
-// === Module 13986: CommunicationDisabledManager ===
+// === Module 14021: CommunicationDisabledManager ===
 
-// Module 13986 (CommunicationDisabledManager)
+// Module 14021 (CommunicationDisabledManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4928 */;
-import GuildMemberStore_mod from "GuildMemberStore" /* 4921 */;
-import UserStore from "UserStore" /* 1384 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7281 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4933 */;
+import GuildMemberStore_mod from "GuildMemberStore" /* 4926 */;
+import UserStore from "UserStore" /* 1383 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7287 */;
 import size from "module_2" /* 2 */;
 
 function clearGuildMemberTimeout(guildId, arg1) {

@@ -1,11 +1,11 @@
-// === Module 14959: ProfileReadStateActionCreators ===
+// === Module 14996: ProfileReadStateActionCreators ===
 
-// Module 14959 (ProfileReadStateActionCreators)
+// Module 14996 (ProfileReadStateActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import ProfileReadStateEndpoints2 from "ProfileReadStateEndpoints" /* 14960 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import ProfileReadStateEndpoints2 from "ProfileReadStateEndpoints" /* 14997 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 let closure_7 = async function _ackProfileWishlist(arg0) {
@@ -19,7 +19,7 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -104,7 +104,7 @@ let closure_7 = async function _ackProfileWishlist(arg0) {
     }
   }
 };
-const ProfileReadStateSection = fn(7777).ProfileReadStateSection;
+const ProfileReadStateSection = fn(7784).ProfileReadStateSection;
 let closure_6 = new LoggerDefault("ProfileReadStateActionCreators");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/ProfileReadStateActionCreators.tsx");

@@ -1,9 +1,9 @@
-// === Module 16290: merged15 ===
+// === Module 16332: merged15 ===
 
-// Module 16290 (merged15)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7575 */;
-import RPCErrorDefault from "RPCError" /* 9313 */;
-import validateTransportType from "validateTransportType" /* 16292 */;
+// Module 16332 (merged15)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7582 */;
+import RPCErrorDefault from "RPCError" /* 9333 */;
+import validateTransportType from "validateTransportType" /* 16334 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -114,7 +114,7 @@ let closure_13 = async function _getSkusHandler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(6444);
+let Constants = fn(6450);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);
@@ -276,7 +276,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(16255);
+let CONTEXT_MENU_ICON_NAMES = fn(16297);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -292,7 +292,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(16255);
+CONTEXT_MENU_ICON_NAMES = fn(16297);
 let obj7 = {
   scope: null,
   handler(arg0) {

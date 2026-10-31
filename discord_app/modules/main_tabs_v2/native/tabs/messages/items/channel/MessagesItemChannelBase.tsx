@@ -1,23 +1,23 @@
-// === Module 18033: MessagesItemChannelBase ===
+// === Module 18076: MessagesItemChannelBase ===
 
-// Module 18033 (MessagesItemChannelBase)
+// Module 18076 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 575 */;
-import transitionToChannel from "transitionToChannel" /* 5751 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10782 */;
+import transitionToChannel from "transitionToChannel" /* 5756 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10802 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5756 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
-import UserStore from "UserStore" /* 1384 */;
+import PresenceStore from "PresenceStore" /* 5761 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles(() => {
   const obj = { pressable: { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 }, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
   const obj2 = { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 };
@@ -71,7 +71,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "color", activities: "Error" };
+      obj3 = { status: "Array", activities: "flexDirection" };
     }
     return obj3;
   });

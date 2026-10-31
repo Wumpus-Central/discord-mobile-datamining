@@ -1,7 +1,7 @@
-// === Module 16888: SkipForwardIcon ===
+// === Module 16944: SkipForwardIcon ===
 
-// Module 16888 (SkipForwardIcon)
-import inlineStyles from "inlineStyles" /* 8023 */;
+// Module 16944 (SkipForwardIcon)
+import inlineStyles from "inlineStyles" /* 8031 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

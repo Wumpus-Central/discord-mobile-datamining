@@ -1,7 +1,7 @@
-// === Module 13934: PostReactionPermissionNudgeExperiment ===
+// === Module 13969: PostReactionPermissionNudgeExperiment ===
 
-// Module 13934 (PostReactionPermissionNudgeExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 13969 (PostReactionPermissionNudgeExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-post-reaction-push-banner", kind: "user", defaultConfig: { enabled: false }, variations: null };

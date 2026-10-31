@@ -1,15 +1,15 @@
-// === Module 10957: openConjureHomeScreen ===
+// === Module 10976: openConjureHomeScreen ===
 
-// Module 10957 (openConjureHomeScreen)
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1889 */;
-import RootNavigationRef from "RootNavigationRef" /* 5194 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6873 */;
-import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 6926 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9656 */;
+// Module 10976 (openConjureHomeScreen)
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
+import RootNavigationRef from "RootNavigationRef" /* 5199 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6879 */;
+import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 6932 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9676 */;
 import size from "module_2" /* 2 */;
 
-function openConjureHomeScreen(projectId) {
+function openConjureHomeScreen(projectId, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -18,6 +18,7 @@ function openConjureHomeScreen(projectId) {
   if (flag === undefined) {
     flag = false;
   }
+  const entryPoint = obj.entryPoint;
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   let result = null != rootNavigationRef && rootNavigationRef.isReady();
   if (result) {
@@ -32,13 +33,21 @@ function openConjureHomeScreen(projectId) {
     const sum = c5 + 1;
     c5 = sum;
     obj3.requestId = sum;
-    if (null != projectId) {
-      let obj4 = {};
-      const merged = Object.assign(obj4);
-      tmp9("conjure", obj3, { pop: true });
+    if (null == projectId) {
+      if (flag) {
+        const obj4 = { focusComposer: flag };
+        let obj8 = obj4;
+      }
+      const merged = Object.assign(obj8);
+      if (null == projectId) {
+        let obj5 = {};
+        const merged1 = Object.assign(obj5);
+        tmp9("conjure", obj3, { pop: true });
+      }
+      const obj7 = { entryPoint };
+      obj5 = obj7;
     }
-    const obj5 = { focusComposer: flag };
-    obj4 = obj5;
+    obj8 = {};
   }
 }
 PostConnectionCallbackStore.addPostConnectionCallback;
@@ -57,7 +66,7 @@ export function openConjureHomeScreenWhenReady(projectId) {
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       const result = RootNavigationRef.runWhenRootNavigationReady(() => {
-        openConjureHomeScreen(projectId);
+        openConjureHomeScreen(projectId, { entryPoint: "deep_link" });
       });
     }
   }, 10000);
@@ -69,7 +78,7 @@ export function openConjureHomeScreenWhenReady(projectId) {
       const result = ConjureGuildExperiment.hasConjureGuildWithoutExposure(openConjureHomeScreen);
       if (result) {
         const result1 = RootNavigationRef.runWhenRootNavigationReady(() => {
-          openConjureHomeScreen(projectId);
+          openConjureHomeScreen(projectId, { entryPoint: "deep_link" });
         });
       }
     }

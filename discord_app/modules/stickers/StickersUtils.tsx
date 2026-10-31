@@ -1,13 +1,13 @@
-// === Module 6554: StickersUtils ===
+// === Module 6560: StickersUtils ===
 
-// Module 6554 (StickersUtils)
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1445 */;
-import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 1895 */;
-import StickersTypes from "StickersTypes" /* 6555 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
-import GuildStore from "GuildStore" /* 4880 */;
+// Module 6560 (StickersUtils)
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1444 */;
+import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 1894 */;
+import StickersTypes from "StickersTypes" /* 6561 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 require = fn;
 function getStickerExtensionFromFormatType(format_type) {
@@ -27,14 +27,14 @@ function getStickerExtensionFromFormatType(format_type) {
     throw error;
   }
 }
-const StickersConstants = fn(4837);
+const StickersConstants = fn(4842);
 ({ DEFAULT_STICKER_DIMENSIONS: closure_4, STICKER_APPLICATION_ID: hasOwnProperty, StickerAnimationSettings: metroRequire } = StickersConstants);
 const Endpoints = fn(1072).Endpoints;
 const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: c10, ASSET_ENDPOINT } = GLOBAL_ENV);
 const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-const values = Object.values(fn(6555).StickerExtensions);
+const values = Object.values(fn(6561).StickerExtensions);
 const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\d]+", "(" + values.join("|") + ")"));
 const regExp = new RegExp("(" + location.protocol + ASSET_ENDPOINT + "|" + location.protocol + MEDIA_PROXY_ENDPOINT + ")(" + decodeURIComponentResult + ")", "ig");
 const regExp1 = new RegExp("" + location.protocol + API_ENDPOINT + "(" + decodeURIComponentResult + ")", "ig");

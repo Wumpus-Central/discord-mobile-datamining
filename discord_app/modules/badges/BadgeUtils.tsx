@@ -1,11 +1,11 @@
-// === Module 11423: BadgeUtils ===
+// === Module 11459: BadgeUtils ===
 
-// Module 11423 (BadgeUtils)
-import util from "util" /* 1114 */;
-import StringUtils from "StringUtils" /* 2028 */;
-import Constants from "Constants" /* 8746 */;
-import BadgeId from "BadgeId" /* 8747 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8756 */;
+// Module 11459 (BadgeUtils)
+import util from "util" /* 1113 */;
+import StringUtils from "StringUtils" /* 2026 */;
+import Constants from "Constants" /* 8754 */;
+import BadgeId from "BadgeId" /* 8755 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8764 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -59,10 +59,10 @@ export function getAlwaysVisibleCopy(badge_id) {
   }
   return nPQVxb;
 }
-export function getDirectoryBadges(badges) {
+export function getDirectoryBadges(stateFromStoresArray) {
   const earnable = [];
   const owned = [];
-  const iter = badges[Symbol.iterator]();
+  const iter = stateFromStoresArray[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;

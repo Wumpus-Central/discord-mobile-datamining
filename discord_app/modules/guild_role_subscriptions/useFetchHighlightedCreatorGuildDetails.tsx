@@ -1,6 +1,6 @@
-// === Module 19863: useFetchHighlightedCreatorGuildDetails ===
+// === Module 19920: useFetchHighlightedCreatorGuildDetails ===
 
-// Module 19863 (useFetchHighlightedCreatorGuildDetails)
+// Module 19920 (useFetchHighlightedCreatorGuildDetails)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

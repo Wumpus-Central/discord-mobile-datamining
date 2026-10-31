@@ -1,8 +1,8 @@
-// === Module 7338: getDefaultProviderDescription ===
+// === Module 7344: getDefaultProviderDescription ===
 
-// Module 7338 (getDefaultProviderDescription)
+// Module 7344 (getDefaultProviderDescription)
 import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1114 */;
+import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;

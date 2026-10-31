@@ -1,18 +1,18 @@
-// === Module 6529: actions/BillingActionCreators ===
+// === Module 6535: actions/BillingActionCreators ===
 
-// Module 6529 (actions/BillingActionCreators)
+// Module 6535 (actions/BillingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import _modDef2044 from "module_2044" /* 2044 */;
-import PremiumUtils from "PremiumUtils" /* 2048 */;
-import BillingSharedActionCreators from "BillingSharedActionCreators" /* 6530 */;
-import BillingPaymentGatewayActionCreators from "BillingPaymentGatewayActionCreators" /* 6541 */;
-import HandleConfirmPaymentRegistry from "HandleConfirmPaymentRegistry" /* 6548 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import _modDef2042 from "module_2042" /* 2042 */;
+import PremiumUtils from "PremiumUtils" /* 2047 */;
+import BillingSharedActionCreators from "BillingSharedActionCreators" /* 6536 */;
+import BillingPaymentGatewayActionCreators from "BillingPaymentGatewayActionCreators" /* 6547 */;
+import HandleConfirmPaymentRegistry from "HandleConfirmPaymentRegistry" /* 6554 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PaymentSourceRecord from "PaymentSourceRecord" /* 2051 */;
-import BillingInfoStore from "BillingInfoStore" /* 2049 */;
-import SubscriptionStore from "SubscriptionStore" /* 2053 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 2050 */;
+import BillingInfoStore from "BillingInfoStore" /* 2048 */;
+import SubscriptionStore from "SubscriptionStore" /* 2052 */;
 
 require = fn;
 let closure_20 = async function _deletePaymentSource(arg0) {
@@ -26,7 +26,7 @@ let closure_20 = async function _deletePaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -74,7 +74,7 @@ let closure_20 = async function _deletePaymentSource(arg0) {
         closure_130_1(closure_130_2[8]).dispatch(obj10);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp30) {
       closure_3 = tmp30;
@@ -104,7 +104,7 @@ let closure_21 = async function _updatePaymentSource(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ let closure_21 = async function _updatePaymentSource(arg0, arg1) {
           closure_131_1(closure_131_2[8]).dispatch(obj13);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp28) {
         closure_4 = tmp28;
@@ -191,7 +191,7 @@ let closure_22 = async function _fetchPaymentSources() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_22 = async function _fetchPaymentSources() {
           closure_128_0 = undefined;
           if (BillingInfoStore.isPaymentSourceFetching) {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             c3 = 1;
             const HTTP = HTTPUtils.HTTP;
@@ -268,7 +268,7 @@ let closure_23 = async function _fetchPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -343,7 +343,7 @@ let closure_24 = async function _fetchWalletInformation() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -439,7 +439,7 @@ let closure_27 = async function _fetchSubscriptions() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -464,12 +464,12 @@ let closure_27 = async function _fetchSubscriptions() {
           closure_128_0 = lastLazyPerkSync;
           let tmp36 = null == lastLazyPerkSync;
           if (!tmp36) {
-            tmp36 = _modDef2044().diff(lastLazyPerkSync, "hours") >= 1;
-            const obj6 = _modDef2044();
+            tmp36 = _modDef2042().diff(lastLazyPerkSync, "hours") >= 1;
+            const obj6 = _modDef2042();
           }
           if (tmp36) {
             FULL_RESYNC = constants2.FULL_RESYNC;
-            closure_128_0 = _modDef2044();
+            closure_128_0 = _modDef2042();
           }
           const HTTP = HTTPUtils.HTTP;
           const request = { url: constants.BILLING_SUBSCRIPTIONS, oldFormErrors: true, rejectWithError: false, query: null };
@@ -574,7 +574,7 @@ let closure_30 = async function _createSubscription(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -784,7 +784,7 @@ let closure_31 = async function _payInvoiceManually(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -988,7 +988,7 @@ let closure_34 = async function _cancelSubscription(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1074,7 +1074,7 @@ let closure_36 = async function _updateSubscription(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1265,7 +1265,7 @@ let closure_37 = async function _voidPendingPayment(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1295,7 +1295,7 @@ let closure_37 = async function _voidPendingPayment(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -1314,7 +1314,7 @@ let closure_38 = async function _fetchIpCountryCode() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1417,7 +1417,7 @@ let closure_39 = async function _fetchIpLocation() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1536,7 +1536,7 @@ let closure_40 = async function _redeemReactivationOffer(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1592,7 +1592,7 @@ let closure_40 = async function _redeemReactivationOffer(arg0, arg1) {
           closure_131_1(closure_131_2[8]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp30) {
         closure_4 = tmp30;
@@ -1622,7 +1622,7 @@ let closure_41 = async function _redeemUserDiscountOffer(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1671,7 +1671,7 @@ let closure_41 = async function _redeemUserDiscountOffer(arg0) {
           closure_130_1(closure_130_2[8]).dispatch(obj7);
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp29) {
         closure_3 = tmp29;
@@ -1688,7 +1688,7 @@ let closure_41 = async function _redeemUserDiscountOffer(arg0) {
 let closure_3 = ["line1", "line2", "postalCode"];
 let Constants = fn(1072);
 ({ AnalyticEvents: closure_9, Endpoints: c10, PaymentGateways: closure_11, REDIRECTED_PAYMENT_SOURCES: closure_12, SubscriptionStatusTypes: map1 } = Constants);
-const UserLazyPerkSyncLevels = fn(2058).UserLazyPerkSyncLevels;
+const UserLazyPerkSyncLevels = fn(2057).UserLazyPerkSyncLevels;
 Constants = fn(1083);
 ({ ADYEN_PAYMENT_SOURCES: closure_15, CurrencyCodes: closure_16, PaymentStatusTypes: closure_17, PREPAID_PAYMENT_SOURCES: closure_18, SubscriptionTypes: closure_19 } = Constants);
 const size = fn(2);
@@ -1871,7 +1871,7 @@ export function popupBridgeCallback(paymentSourceType) {
   paymentSourceType = paymentSourceType.paymentSourceType;
   ({ state, path, query, insecure } = paymentSourceType);
   DispatcherDefault.dispatch({ type: "BILLING_POPUP_BRIDGE_CALLBACK_START", paymentSourceType });
-  const HTTP = paymentSourceType(1283).HTTP;
+  const HTTP = paymentSourceType(1282).HTTP;
   const request = { url: closure_10.BILLING_POPUP_BRIDGE_CALLBACK(paymentSourceType), body: { state, path, query, insecure }, oldFormErrors: true, rejectWithError: false };
   return HTTP.post(request).then((result) => {
     DispatcherDefault.dispatch({ type: "BILLING_POPUP_BRIDGE_CALLBACK_END", paymentSourceType });

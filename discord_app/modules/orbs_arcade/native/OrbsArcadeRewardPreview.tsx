@@ -1,13 +1,13 @@
-// === Module 16964: OrbsArcadeRewardPreview ===
+// === Module 17020: OrbsArcadeRewardPreview ===
 
-// Module 16964 (OrbsArcadeRewardPreview)
+// Module 17020 (OrbsArcadeRewardPreview)
 import nativeDefault from "native" /* 575 */;
-import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1982 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9484 */;
-import _modDef9485 from "module_9485" /* 9485 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9520 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16955 */;
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1981 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9506 */;
+import _modDef9507 from "module_9507" /* 9507 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9542 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17011 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function CollectibleRewardPreview(size) {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.avatar, resizeMode: "contain", source: null, accessible: false };
   const obj2 = { skuId: size.reward.skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
-  obj4.source = _modDef9485;
+  obj4.source = _modDef9507;
   const items = [React4(FastImageDefault, obj4), ];
   let tmp6Result = null;
   if (null != collectiblesItemAssetUrl) {
@@ -34,7 +34,7 @@ function CollectibleRewardPreview(size) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { container: { width, height: width, alignItems: "center", justifyContent: "center" }, avatar: null, decoration: null };
   const size = { width: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio, height: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio, borderRadius: width * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

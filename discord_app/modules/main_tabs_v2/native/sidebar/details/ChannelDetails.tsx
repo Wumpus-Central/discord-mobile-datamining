@@ -1,29 +1,29 @@
-// === Module 18634: ChannelDetails ===
+// === Module 18676: ChannelDetails ===
 
-// Module 18634 (ChannelDetails)
+// Module 18676 (ChannelDetails)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import timing from "timing" /* 5249 */;
-import timingPresets from "timingPresets" /* 5252 */;
-import spring from "spring" /* 5632 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13836 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13861 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 13870 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import timing from "timing" /* 5254 */;
+import timingPresets from "timingPresets" /* 5257 */;
+import spring from "spring" /* 5637 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13871 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13896 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 13905 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13850 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import SearchQueryStore from "SearchQueryStore" /* 13885 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(9804);
+const ChannelDetailsStore = fn(9825);
 ({ deleteChannelDetailsSearchState: closure_7, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: closure_9 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10117);
+const ChannelDetailsConstants = fn(10137);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -276,26 +276,28 @@ export default noop.memo(function ChannelDetails(channelId) {
       const obj12 = { style: animatedStyle, children: null };
       const obj13 = { style: tmp.information, onLayout: callback, children: null };
       const obj14 = { channel: stateFromStores };
-      const items12 = [tmp26(tmp7(tmp2[34]), obj14), , ];
-      const obj15 = { channel: stateFromStores, containerStyle: tmp.linkedLobby };
-      items12[1] = tmp26(tmp7(tmp2[35]), obj15);
+      const items12 = [tmp26(tmp7(tmp2[34]), obj14), , , ];
+      const obj15 = { channel: stateFromStores };
+      items12[1] = tmp26(obj(tmp2[35]).PinotChannelDetailsLabel, obj15);
+      const obj16 = { channel: stateFromStores, containerStyle: tmp.linkedLobby };
+      items12[2] = tmp26(tmp7(tmp2[36]), obj16);
       let tmp26Result3 = null;
       if (!stateFromStores.isPrivate()) {
-        const obj16 = { channel: stateFromStores, textAlign: "left", initialExpanded: flag };
-        tmp26Result3 = tmp26(tmp7(tmp2[36]), obj16);
+        const obj17 = { channel: stateFromStores, textAlign: "left", initialExpanded: flag };
+        tmp26Result3 = tmp26(tmp7(tmp2[37]), obj17);
       }
-      items12[2] = tmp26Result3;
+      items12[3] = tmp26Result3;
       obj13.children = items12;
       obj12.children = tmp27(tmp28, obj13);
       items11[1] = tmp26(tmp7(tmp2[24]).View, obj12);
       obj8[1] = items11;
       const items13 = [tmp27(tmp28, obj8), ];
-      const obj17 = { freeze: !isShowing, children: null };
-      const obj18 = { style: tmp.search, collapsable: false, children: null };
-      const obj19 = { searchContext: channelDetailsSearchContext, width: componentWidth };
-      obj18.children = tmp26(tmp7(tmp2[32]), obj19);
-      obj17.children = tmp26(tmp28, obj18);
-      items13[1] = tmp26(obj(tmp2[37]).Freeze, obj17);
+      const obj18 = { freeze: !isShowing, children: null };
+      const obj19 = { style: tmp.search, collapsable: false, children: null };
+      const obj20 = { searchContext: channelDetailsSearchContext, width: componentWidth };
+      obj19.children = tmp26(tmp7(tmp2[32]), obj20);
+      obj18.children = tmp26(tmp28, obj19);
+      items13[1] = tmp26(obj(tmp2[38]).Freeze, obj18);
       obj7.children = items13;
       tmp30 = obj7;
     }

@@ -1,22 +1,22 @@
-// === Module 6041: ChannelUtils ===
+// === Module 6046: ChannelUtils ===
 
-// Module 6041 (ChannelUtils)
+// Module 6046 (ChannelUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import util from "util" /* 1114 */;
-import PremiumConstants from "PremiumConstants" /* 1386 */;
-import Server from "Server" /* 1993 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4946 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import ChannelListUtils from "ChannelListUtils" /* 6042 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6043 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6048 */;
-import ChannelRecord from "ChannelRecord" /* 4862 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildChannelStore from "GuildChannelStore" /* 4939 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5762 */;
+import util from "util" /* 1113 */;
+import PremiumConstants from "PremiumConstants" /* 1385 */;
+import Server from "Server" /* 1992 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4951 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import ChannelListUtils from "ChannelListUtils" /* 6047 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6048 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6053 */;
+import ChannelRecord from "ChannelRecord" /* 4867 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5767 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

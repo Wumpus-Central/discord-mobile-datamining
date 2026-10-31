@@ -1,24 +1,24 @@
-// === Module 14374: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 14412: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 14374 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 14412 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import _modDef3735 from "module_3735" /* 3735 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import spring from "spring" /* 5632 */;
-import XSmallIcon from "XSmallIcon" /* 7048 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7398 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10649 */;
+import util from "util" /* 1113 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import _modDef3738 from "module_3738" /* 3738 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import spring from "spring" /* 5637 */;
+import XSmallIcon from "XSmallIcon" /* 7054 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7404 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import SKUStore from "SKUStore" /* 6890 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import SKUStore from "SKUStore" /* 6896 */;
 
 const require = globalThis.__r;
 
@@ -307,12 +307,12 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(7401).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7407).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, backdropImage: { position: "absolute", inset: 0, opacity: 0.45 }, backdropGradient: { position: "absolute", inset: 0 }, curtain: null, main: null, header: null, closeButtonIcon: null, scroll: null, body: null, bodyLandscape: null, preview: null, previewLandscape: null, messages: null, messagesLandscape: null, contentColumnLandscape: null, title: null, description: null, textLandscape: null, footer: null, footerLandscape: null, cta: null, ctaLandscape: null, finePrint: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.curtain = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
@@ -347,7 +347,7 @@ obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
 let obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.finePrint = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj17 = { linkAccountIcon: null };
 let obj15 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
@@ -527,7 +527,7 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3735.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef3738.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

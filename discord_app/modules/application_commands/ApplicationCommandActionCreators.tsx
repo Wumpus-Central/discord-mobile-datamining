@@ -1,15 +1,15 @@
-// === Module 8336: ApplicationCommandActionCreators ===
+// === Module 8344: ApplicationCommandActionCreators ===
 
-// Module 8336 (ApplicationCommandActionCreators)
+// Module 8344 (ApplicationCommandActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5678 */;
-import InteractionTypes from "InteractionTypes" /* 6065 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7693 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
+import InteractionTypes from "InteractionTypes" /* 6070 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7700 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8337 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8345 */;
 
 require = fn;
 const Endpoints = fn(1072).Endpoints;

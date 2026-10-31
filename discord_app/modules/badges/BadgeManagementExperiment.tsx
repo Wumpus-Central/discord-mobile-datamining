@@ -1,7 +1,7 @@
-// === Module 11416: BadgeManagementExperiment ===
+// === Module 11452: BadgeManagementExperiment ===
 
-// Module 11416 (BadgeManagementExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 11452 (BadgeManagementExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-badge-management", kind: "user", defaultConfig: { enabled: false, tenureBadgeHideable: false }, variations: null };

@@ -1,6 +1,6 @@
-// === Module 1625: ChatInputFocused ===
+// === Module 1624: ChatInputFocused ===
 
-// Module 1625 (ChatInputFocused)
+// Module 1624 (ChatInputFocused)
 import size from "module_2" /* 2 */;
 
 let global = false;

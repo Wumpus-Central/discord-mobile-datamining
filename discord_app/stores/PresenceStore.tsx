@@ -1,15 +1,15 @@
-// === Module 5756: PresenceStore ===
+// === Module 5761: PresenceStore ===
 
-// Module 5756 (PresenceStore)
+// Module 5761 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef1343 from "module_1343" /* 1343 */;
-import ActivityTypes from "ActivityTypes" /* 5757 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5758 */;
+import _modDef1342 from "module_1342" /* 1342 */;
+import ActivityTypes from "ActivityTypes" /* 5762 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5763 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function sortActivity(type, type2) {
@@ -290,7 +290,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (_modDef1343(tmp25.activities, sorted)) {
+        if (_modDef1342(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }

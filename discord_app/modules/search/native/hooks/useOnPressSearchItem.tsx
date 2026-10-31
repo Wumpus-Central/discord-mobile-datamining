@@ -1,20 +1,20 @@
-// === Module 18658: useOnPressSearchItem ===
+// === Module 18700: useOnPressSearchItem ===
 
-// Module 18658 (useOnPressSearchItem)
-import util from "util" /* 1114 */;
-import URLUtilsDefault from "URLUtils" /* 1378 */;
-import LinkingDefault from "Linking" /* 5704 */;
-import ToastUtils from "ToastUtils" /* 5706 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8931 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13836 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13857 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13861 */;
+// Module 18700 (useOnPressSearchItem)
+import util from "util" /* 1113 */;
+import URLUtilsDefault from "URLUtils" /* 1377 */;
+import LinkingDefault from "Linking" /* 5709 */;
+import ToastUtils from "ToastUtils" /* 5711 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8940 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13871 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13892 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13896 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7763 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import SearchQueryStore from "SearchQueryStore" /* 13850 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7770 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import SearchQueryStore from "SearchQueryStore" /* 13885 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -54,7 +54,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       } else {
         value.openGuildVoiceModal(closure_129_0, "Channel List");
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -93,13 +93,13 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9806);
+const SearchConstants = fn(9827);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18659).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9805).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(18701).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
 const Constants = fn(1072);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(4865).StaticChannelRoute;
+const StaticChannelRoute = fn(4870).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useOnPressSearchItem.tsx");
 
@@ -206,7 +206,7 @@ export function useOnPressConversationCitation(searchContext) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -267,7 +267,7 @@ export function useOnPressConversationCitation(searchContext) {
               }
             });
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
       } catch (tmp12) {
@@ -397,7 +397,7 @@ export function useOnPressMediaItem(searchContext) {
 }
 export function useOnPressGroupDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1498).useNavigation();
+  const navigation = searchContext(1497).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((channelId) => {
     closure_0 = searchContext;
@@ -420,7 +420,7 @@ export function useOnPressGroupDMItem(searchContext) {
 }
 export function useOnPressDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1498).useNavigation();
+  const navigation = searchContext(1497).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((userId, arg1) => {
     closure_0 = searchContext;
@@ -546,11 +546,11 @@ export function useOnPressSearchHistoryText(searchContext) {
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13836).delayUntilNavigationComplete(() => {
+      const result = searchContext(13871).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(13836);
+      let obj2 = searchContext(13871);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

@@ -1,12 +1,12 @@
-// === Module 19919: GuildRoleSubscriptionBenefitPreview ===
+// === Module 19977: GuildRoleSubscriptionBenefitPreview ===
 
-// Module 19919 (GuildRoleSubscriptionBenefitPreview)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7372 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 17153 */;
-import EmojiIconDefault from "EmojiIcon" /* 17160 */;
-import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17163 */;
+// Module 19977 (GuildRoleSubscriptionBenefitPreview)
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7378 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 17209 */;
+import EmojiIconDefault from "EmojiIcon" /* 17217 */;
+import GuildRoleSubscriptionBenefitUtils from "GuildRoleSubscriptionBenefitUtils" /* 17220 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -84,10 +84,10 @@ function EmojiBenefitRow(benefit) {
   return timestampProducer(BaseBenefitRow, obj);
 }
 const View = fn(17).View;
-const constants = fn(17125).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(17183).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, emojiContainer: { width: 24, height: 24, alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginEnd: 16 }, benefitColumn: { flexDirection: "column", flexGrow: 1, flex: 1, alignItems: "flex-start", justifyContent: "center" }, benefitDescription: { flex: 1, marginTop: 2 }, channelRow: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, channelIcon: { marginEnd: 8 }, emojiRow: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }, emojiColons: { paddingHorizontal: 2 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitPreview.tsx");

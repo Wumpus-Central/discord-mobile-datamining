@@ -1,6 +1,6 @@
-// === Module 7873: InviteTargetTypes ===
+// === Module 7880: InviteTargetTypes ===
 
-// Module 7873 (InviteTargetTypes)
+// Module 7880 (InviteTargetTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { HIDDEN: new Set([3, 4, 5]), USER_CREATABLE: null, STORE_PAGE: null };

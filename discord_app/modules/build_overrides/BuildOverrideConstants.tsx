@@ -1,6 +1,6 @@
-// === Module 1374: BuildOverrideConstants ===
+// === Module 1373: BuildOverrideConstants ===
 
-// Module 1374 (BuildOverrideConstants)
+// Module 1373 (BuildOverrideConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/build_overrides/BuildOverrideConstants.tsx");

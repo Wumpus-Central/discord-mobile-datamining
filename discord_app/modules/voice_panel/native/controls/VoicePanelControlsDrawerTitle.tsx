@@ -1,20 +1,20 @@
-// === Module 13779: VoicePanelControlsDrawerTitle ===
+// === Module 13814: VoicePanelControlsDrawerTitle ===
 
-// Module 13779 (VoicePanelControlsDrawerTitle)
+// Module 13814 (VoicePanelControlsDrawerTitle)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import NativeViewDefault from "NativeView" /* 6954 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7235 */;
-import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 13780 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import NativeViewDefault from "NativeView" /* 6960 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7241 */;
+import VoicePanelHeaderGlassBlurDefault from "VoicePanelHeaderGlassBlur" /* 13815 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
-let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(11202).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
+const createStyles = fn(5014);
+let obj = { titleWrapper: { position: "absolute", top: 0, left: 0, right: 0, justifyContent: "center", alignItems: "center", padding: 16, height: fn(11221).CONTROLS_DRAWER_HEADER_SIZE }, titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 }, titlePillBG: null };
 let obj3 = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 };
 obj.titlePillBG = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_6 = createStyles.createStyles(obj);

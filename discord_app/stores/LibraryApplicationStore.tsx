@@ -1,12 +1,12 @@
-// === Module 2038: LibraryApplicationStore ===
+// === Module 2036: LibraryApplicationStore ===
 
-// Module 2038 (LibraryApplicationStore)
+// Module 2036 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtilsAll from "FlagUtils" /* 1397 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7574 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 2039 */;
+import FlagUtilsAll from "FlagUtils" /* 1396 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7580 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 2037 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

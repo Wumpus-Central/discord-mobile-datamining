@@ -1,10 +1,10 @@
-// === Module 4838: UserSettingDefinitions ===
+// === Module 4843: UserSettingDefinitions ===
 
-// Module 4838 (UserSettingDefinitions)
+// Module 4843 (UserSettingDefinitions)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 const UserSettingsDelay = fn(1082).UserSettingsDelay;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_settings/UserSettingDefi
 
 export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, arg4) {
   let getSetting = textAndImages;
-  let f86255 = activityRestrictedGuildIds;
+  let f86469 = activityRestrictedGuildIds;
   closure_3 = explicitContentToProto;
   let obj = arg4;
   if (arg4 === undefined) {
@@ -32,15 +32,15 @@ export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, ex
   getSetting = function getSetting() {
     let tmp3;
     if (UserSettingsProtoStore.settings[getSetting] != null) {
-      tmp3 = tmp2[f86255];
+      tmp3 = tmp2[f86469];
     }
     return explicitContentFromProto(tmp3);
   };
-  f86255 = (favorites) => {
+  f86469 = (favorites) => {
     closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, async (arg0) => {
-      arg0[f86255] = closure_3(closure_0, arg0[f86255]);
+      arg0[f86469] = closure_3(closure_0, arg0[f86469]);
     }, INFREQUENT_USER_ACTION);
   };
   return {
@@ -50,7 +50,7 @@ export function defineProtoSetting(textAndImages, activityRestrictedGuildIds, ex
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86262(tmp2);
+      return f86476(tmp2);
     },
     useSetting() {
       const items = [UserSettingsProtoStore];
@@ -111,7 +111,7 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86262(tmp2);
+      return f86476(tmp2);
     }
   };
 }
@@ -125,9 +125,9 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
     }
     return setting;
   }
-  const f86262 = (arg0) => {
+  const f86476 = (arg0) => {
     const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: null };
-    const items = [f86262];
+    const items = [f86476];
     obj2.settings = items;
     DispatcherDefault.dispatch(obj2);
     return getSetting.updateSetting(arg0);
@@ -147,7 +147,7 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86262(tmp2);
+      return f86476(tmp2);
     }
   };
 }

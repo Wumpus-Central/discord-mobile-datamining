@@ -1,10 +1,10 @@
-// === Module 16970: useOrbsArcadeRewardAccentColor ===
+// === Module 17027: useOrbsArcadeRewardAccentColor ===
 
-// Module 16970 (useOrbsArcadeRewardAccentColor)
+// Module 17027 (useOrbsArcadeRewardAccentColor)
 import _modDef671 from "module_671" /* 671 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11349 */;
-import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 14445 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16955 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11385 */;
+import useCollectiblesShopStylesDefault from "useCollectiblesShopStyles" /* 14483 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17011 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -58,3 +58,4 @@ export default function useOrbsArcadeRewardAccentColor(type) {
     }
   }
 };
+export const NITRO_GLOW_COLOR = "#321634";

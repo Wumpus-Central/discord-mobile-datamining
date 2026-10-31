@@ -1,22 +1,22 @@
-// === Module 18954: Alerts ===
+// === Module 19003: Alerts ===
 
-// Module 18954 (Alerts)
+// Module 19003 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5075 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import spring from "spring" /* 5632 */;
-import springPresets from "springPresets" /* 5633 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5954 */;
-import OverlayViewDefault from "OverlayView" /* 5960 */;
-import ModalRegistryDefault from "ModalRegistry" /* 18955 */;
+import native from "native" /* 5080 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import spring from "spring" /* 5637 */;
+import springPresets from "springPresets" /* 5638 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
+import OverlayViewDefault from "OverlayView" /* 5965 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19004 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15596 */;
-import PermissionVADStore from "PermissionVADStore" /* 16183 */;
-import SurveyStore from "SurveyStore" /* 7921 */;
-import AlertStore from "AlertStore" /* 10115 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15638 */;
+import PermissionVADStore from "PermissionVADStore" /* 16224 */;
+import SurveyStore from "SurveyStore" /* 7929 */;
+import AlertStore from "AlertStore" /* 10135 */;
 
 const require = globalThis.__r;
 
@@ -211,7 +211,7 @@ let items3 = [SurveyStore];
 obj3.stores = items3;
 items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj4 = { alertWrapper: null, alertContentWrapper: null };
 let obj6 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -227,7 +227,7 @@ const __initData3 = { code: "function AlertsTsx3(){const{useReducedMotion,visibl
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_12(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "sa", renderKey: "isArray", props: "isArray" });
+let closure_23 = Object.freeze({ renderAlert: "dispatch", renderKey: "isArray", props: "isArray" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -259,7 +259,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "sa", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "dispatch", renderKey: "isArray", props: "isArray" };
       }
     }
   });

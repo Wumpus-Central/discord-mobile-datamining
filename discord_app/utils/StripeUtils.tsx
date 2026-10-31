@@ -1,20 +1,20 @@
-// === Module 6544: StripeUtils ===
+// === Module 6550: StripeUtils ===
 
-// Module 6544 (StripeUtils)
+// Module 6550 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import _mod6545 from "module_6545" /* 6545 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import _mod6551 from "module_6551" /* 6551 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
 
 require = fn;
 function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod6545.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod6551.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -33,7 +33,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

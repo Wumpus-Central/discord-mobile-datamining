@@ -1,8 +1,8 @@
-// === Module 7223: useFastestListPropsPlaceholder ===
+// === Module 7229: useFastestListPropsPlaceholder ===
 
-// Module 7223 (useFastestListPropsPlaceholder)
-import ColorUtils from "ColorUtils" /* 5006 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7224 */;
+// Module 7229 (useFastestListPropsPlaceholder)
+import ColorUtils from "ColorUtils" /* 5011 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7230 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function createNativePlaceholderConfig(listFooter) {
   if (type == null) {
     NONE = FastestListPropsPlaceholder.FastestListPropsPlaceholderType.NONE;
   }
-  const size = { borderRadius: "Array", borderTopLeftRadius: "ty", borderTopRightRadius: "v", borderBottomLeftRadius: "limit", borderBottomRightRadius: "to", divider: "isArray", dividerColor: "isArray", dividerPaddingLeft: "i", dividerPaddingRight: "to", placeholderShape: "isArray", placeholderShapeColor: "isArray", placeholderShapeCount: "it", placeholderShapeGap: "to", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColor: "d", placeholderFeedColor: "to", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "Map", placeholderFeedLabelSecondarySize: "to", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "id", placeholderType: NONE, width: null, height: null, verticalAlignment: null, horizontalAlignment: null };
+  const size = { borderRadius: "Array", borderTopLeftRadius: "current", borderTopRightRadius: "applicationId", borderBottomLeftRadius: "channel_id", borderBottomRightRadius: "syntax", divider: "Array", dividerColor: "isArray", dividerPaddingLeft: "Array", dividerPaddingRight: "applicationId", placeholderShape: "p", placeholderShapeColor: "spriteIndex", placeholderShapeCount: "Array", placeholderShapeGap: "isArray", placeholderShapePaddingHorizontal: "applicationId", placeholderShapePaddingVertical: "label", placeholderFeedBackgroundColor: "T", placeholderFeedColor: "a", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "Array", placeholderFeedLabelSize: "children", placeholderFeedLabelSecondarySize: "no", placeholderFeedPadding: "x", placeholderFeedShape: "applicationId", placeholderFeedShapeSize: "withTiming", placeholderType: NONE, width: null, height: null, verticalAlignment: "Classic", horizontalAlignment: "tier-2" };
   if (null == listFooter) {
     return size;
   } else {
@@ -133,7 +133,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7224).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7230).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

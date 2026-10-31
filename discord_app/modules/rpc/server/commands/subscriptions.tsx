@@ -1,8 +1,8 @@
-// === Module 16297: subscriptions ===
+// === Module 16339: subscriptions ===
 
-// Module 16297 (subscriptions)
+// Module 16339 (subscriptions)
 import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 9313 */;
+import RPCErrorDefault from "RPCError" /* 9333 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -39,7 +39,7 @@ export default {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {

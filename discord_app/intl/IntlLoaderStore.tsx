@@ -1,13 +1,13 @@
-// === Module 2064: IntlLoaderStore ===
+// === Module 2063: IntlLoaderStore ===
 
-// Module 2064 (IntlLoaderStore)
-import util from "util" /* 1114 */;
-import _modDef2065 from "module_2065" /* 2065 */;
-import bg from "bg" /* 4284 */;
-import formatjs from "formatjs" /* 4759 */;
-import moment from "moment" /* 4790 */;
+// Module 2063 (IntlLoaderStore)
+import util from "util" /* 1113 */;
+import _modDef2064 from "module_2064" /* 2064 */;
+import bg from "bg" /* 4289 */;
+import formatjs from "formatjs" /* 4764 */;
+import moment from "moment" /* 4795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import module_1897 from "module_1897" /* 1897 */;
+import module_1896 from "module_1896" /* 1896 */;
 
 require = fn;
 let closure_6 = async function _setAppLocale(arg0) {
@@ -21,7 +21,7 @@ let closure_6 = async function _setAppLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } else {
               try {
@@ -73,7 +73,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2075).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2074).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -87,7 +87,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                   } else {
                     c1 = 2;
                     dependencyMap = 1;
-                    const obj8 = { value: closure_0(1153).loadAllMessagesInLocale(closure_128_0), done: false };
+                    const obj8 = { value: closure_0(1152).loadAllMessagesInLocale(closure_128_0), done: false };
                     return obj8;
                   }
                 } else if (arg0 === 1) {
@@ -99,7 +99,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                   return obj;
                 } else {
                   dependencyMap = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } catch (tmp11) {
                 dependencyMap = tmp;
@@ -158,7 +158,7 @@ let closure_6 = async function _setAppLocale(arg0) {
       } else {
         closure_129_1.setLoadingSucceeded(closure_129_0);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp10) {
       c3 = tmp;
@@ -177,7 +177,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -203,7 +203,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2065);
+            state.setLocaleData(_modDef2064);
             c3 = 3;
           }
         }
@@ -234,7 +234,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -265,7 +265,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -284,7 +284,7 @@ let closure_9 = async function _setMomentLocale(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -335,28 +335,28 @@ let closure_9 = async function _setMomentLocale(arg0) {
       closure_129_1.push("en-US");
       closure_130_0(closure_130_2[10]).locale(closure_129_1);
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp26) {
       c4 = tmp;
       throw tmp26;
     }
   }
 };
-const identity = fn(1255);
+const identity = fn(1254);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "id",
-    localeData: _modDef2065,
+    error: "applicationId",
+    localeData: _modDef2064,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "id" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "applicationId" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -397,7 +397,7 @@ export function setAppLocale() {
 export function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2065;
+    tmp = _modDef2064;
   }
   return tmp;
 }

@@ -1,9 +1,9 @@
-// === Module 7583: BillingStandaloneUtils ===
+// === Module 7590: BillingStandaloneUtils ===
 
-// Module 7583 (BillingStandaloneUtils)
-import v1 from "v1" /* 1267 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import URLUtilsDefault from "URLUtils" /* 1378 */;
+// Module 7590 (BillingStandaloneUtils)
+import v1 from "v1" /* 1266 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import URLUtilsDefault from "URLUtils" /* 1377 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

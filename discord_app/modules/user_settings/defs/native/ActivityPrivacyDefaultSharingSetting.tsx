@@ -1,22 +1,22 @@
-// === Module 17894: ActivityPrivacyDefaultSharingSetting ===
+// === Module 17937: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 17894 (ActivityPrivacyDefaultSharingSetting)
-import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import UserSettings from "UserSettings" /* 4834 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16700 */;
+// Module 17937 (ActivityPrivacyDefaultSharingSetting)
+import util from "util" /* 1113 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import UserSettings from "UserSettings" /* 4839 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 16742 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8424).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8432).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions() {
     return noop.useMemo(() => {
       const obj = { value: preloaded_user_settings.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF, label: null, subLabel: null };
@@ -55,7 +55,7 @@ const radio = SettingBuilders.createRadio({
       const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17895, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17938, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
     }
   }
 });

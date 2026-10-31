@@ -1,16 +1,16 @@
-// === Module 8160: ManualReviewDecidedTeenAlertModal ===
+// === Module 8168: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8160 (ManualReviewDecidedTeenAlertModal)
-import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
-import _modDef3189 from "module_3189" /* 3189 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import AlertModal from "AlertModal" /* 5959 */;
-import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 8161 */;
+// Module 8168 (ManualReviewDecidedTeenAlertModal)
+import util from "util" /* 1113 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import _modDef3192 from "module_3192" /* 3192 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import AlertModal from "AlertModal" /* 5964 */;
+import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 8169 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6722).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6728).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -22,9 +22,9 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
       variant: "text-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(7947);
-        const intl = closure_1_0(1114).intl;
-        return obj.openUrl(closure_1_1(2062).getArticleURL(intl.string(closure_1_1(3189).agiNYw)));
+        const obj = closure_1_1(7955);
+        const intl = closure_1_0(1113).intl;
+        return obj.openUrl(closure_1_1(2061).getArticleURL(intl.string(closure_1_1(3192).agiNYw)));
       },
       children
     }, key);
@@ -32,10 +32,10 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
   const isManualReviewInconclusiveCopyEnabled = ManualReviewInconclusiveCopyExperiment.useIsManualReviewInconclusiveCopyEnabled("manual_review_decided_teen_modal");
   const obj2 = { title: null, content: null, actions: null, trackingProps: null };
   let intl = util.intl;
-  obj2.title = intl.string(_modDef3189.AA3xYb);
+  obj2.title = intl.string(_modDef3192.AA3xYb);
   const intl2 = util.intl;
   const format = intl2.format;
-  const tmp5 = _modDef3189;
+  const tmp5 = _modDef3192;
   if (isManualReviewInconclusiveCopyEnabled) {
     const obj3 = { contentAndSettingsHook };
     let formatResult = format(tmp5.UIbYzl, obj3);

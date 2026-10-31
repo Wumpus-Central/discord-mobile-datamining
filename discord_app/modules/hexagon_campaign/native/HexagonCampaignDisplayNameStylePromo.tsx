@@ -1,11 +1,11 @@
-// === Module 16426: HexagonCampaignDisplayNameStylePromo ===
+// === Module 16468: HexagonCampaignDisplayNameStylePromo ===
 
-// Module 16426 (HexagonCampaignDisplayNameStylePromo)
+// Module 16468 (HexagonCampaignDisplayNameStylePromo)
 import nativeDefault from "native" /* 575 */;
-import _modDef4282 from "module_4282" /* 4282 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16428 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16430 */;
+import _modDef4285 from "module_4285" /* 4285 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16470 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16472 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { promo: { height: 32, justifyContent: "center", paddingBottom: 2, paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_8 }, link: { textDecorationLine: "underline" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,9 +37,9 @@ export default function HexagonCampaignDisplayNameStylePromo(showLearnMore) {
           return React4(Text_Text.Text, { variant: "text-xxs/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress: openHexagonCampaignLearnMore.openHexagonCampaignLearnMore, children }, arg1);
         }
     };
-    let formatResult = intl.format(_modDef4282.eb99JA, obj3);
+    let formatResult = intl.format(_modDef4285.eb99JA, obj3);
   } else {
-    formatResult = intl.string(_modDef4282.WyZOg3);
+    formatResult = intl.string(_modDef4285.WyZOg3);
   }
   items[1] = closure_4(require("Text/Text").Text, { variant: "text-xxs/medium", color: "text-default", lineClamp: 1, children: formatResult });
   obj2.children = items;

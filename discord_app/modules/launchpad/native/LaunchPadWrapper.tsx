@@ -1,23 +1,23 @@
-// === Module 19012: LaunchPadWrapper ===
+// === Module 19061: LaunchPadWrapper ===
 
-// Module 19012 (LaunchPadWrapper)
+// Module 19061 (LaunchPadWrapper)
 import nativeDefault from "native" /* 575 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19010 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, TouchableOpacity: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(11501).LaunchPadTypes;
+const LaunchPadTypes = fn(11535).LaunchPadTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { modalWrapper: null, a11yDismiss: null };
 let size = { height: "100%", width: "100%", paddingTop: nativeDefault.space.PX_8 };
 obj2.modalWrapper = size;

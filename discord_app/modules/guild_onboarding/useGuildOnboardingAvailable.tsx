@@ -1,7 +1,7 @@
-// === Module 7508: useGuildOnboardingAvailable ===
+// === Module 7514: useGuildOnboardingAvailable ===
 
-// Module 7508 (useGuildOnboardingAvailable)
-import ImpersonateStore from "ImpersonateStore" /* 4914 */;
+// Module 7514 (useGuildOnboardingAvailable)
+import ImpersonateStore from "ImpersonateStore" /* 4919 */;
 
 const require = globalThis.__r;
 

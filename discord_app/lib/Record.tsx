@@ -1,6 +1,6 @@
-// === Module 1399: Record ===
+// === Module 1398: Record ===
 
-// Module 1399 (Record)
+// Module 1398 (Record)
 import size from "module_2" /* 2 */;
 
 let Record;

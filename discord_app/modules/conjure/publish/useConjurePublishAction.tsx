@@ -1,24 +1,24 @@
-// === Module 12400: useConjurePublishAction ===
+// === Module 12438: useConjurePublishAction ===
 
-// Module 12400 (useConjurePublishAction)
+// Module 12438 (useConjurePublishAction)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6839 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6875 */;
-import ConjureUtils from "ConjureUtils" /* 7413 */;
-import UserActionCreators from "UserActionCreators" /* 8744 */;
-import conjureAppInServer from "conjureAppInServer" /* 10866 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10941 */;
-import conjurePublishAction2 from "conjurePublishAction" /* 12402 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6845 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
+import ConjureUtils from "ConjureUtils" /* 7419 */;
+import UserActionCreators from "UserActionCreators" /* 8752 */;
+import conjureAppInServer from "conjureAppInServer" /* 10891 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10960 */;
+import conjurePublishAction2 from "conjurePublishAction" /* 12440 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildChannelStore from "GuildChannelStore" /* 4939 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 6838 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10847 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6844 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
 
 const require = globalThis.__r;
 
@@ -135,7 +135,7 @@ let closure_20 = async function _requestConjureInstallConsent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -254,7 +254,7 @@ let closure_20 = async function _requestConjureInstallConsent(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp29) {
       c5 = tmp;
       throw tmp29;
@@ -290,7 +290,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -421,31 +421,31 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(12401).PREVIEW_BOT_NOT_INSTALLED_CODE) {
-                    project = closure_0(10855).getProject(projectId);
+                  if (ok.code === closure_0(12439).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                    project = closure_0(10875).getProject(projectId);
                     project.catch(() => {
 
                     });
-                    const tmp9Result = closure_0(10855);
+                    const tmp9Result = closure_0(10875);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(12401)(ok));
+                  const error = new Error(closure_1(12439)(ok));
                   throw error;
                 }
               }).then((result) => {
                 const channel_skipped = result;
-                const intl = project(1114).intl;
-                closure_5.showConfirmation(intl.string(closure_1_1(3865).S6Px3n));
+                const intl = project(1113).intl;
+                closure_5.showConfirmation(intl.string(closure_1_1(3868).S6Px3n));
                 if (null != channel_skipped.guildId) {
-                  const tmpResult = project(8744);
-                  const profile = tmpResult.fetchProfile(project(10866).conjureProductionBotUserId(closure_4), { withMutualGuilds: true });
+                  const tmpResult = project(8752);
+                  const profile = tmpResult.fetchProfile(project(10891).conjureProductionBotUserId(closure_4), { withMutualGuilds: true });
                   profile.catch(() => {
 
                   });
-                  const tmpResult3 = project(10866);
+                  const tmpResult3 = project(10891);
                 }
-                result = project(10922).refreshPublishedProject(projectId, { isPreview: false });
-                const tmpResult4 = project(10922);
+                result = project(10941).refreshPublishedProject(projectId, { isPreview: false });
+                const tmpResult4 = project(10941);
                 const catchPromise1 = result.catch(() => {
 
                 });
@@ -520,8 +520,8 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                 if (message instanceof Error) {
                   message = message.message;
                 } else {
-                  const intl = closure_0(1114).intl;
-                  message = intl.string(closure_1(3865).gMWZeG);
+                  const intl = closure_0(1113).intl;
+                  message = intl.string(closure_1(3868).gMWZeG);
                 }
                 const obj = closure_1(572);
                 const obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId, pending: false };
@@ -533,15 +533,15 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(12401).PREVIEW_BOT_NOT_INSTALLED_CODE) {
-                    project = closure_0(10855).getProject(projectId);
+                  if (ok.code === closure_0(12439).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                    project = closure_0(10875).getProject(projectId);
                     project.catch(() => {
 
                     });
-                    const tmp9Result = closure_0(10855);
+                    const tmp9Result = closure_0(10875);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(12401)(ok));
+                  const error = new Error(closure_1(12439)(ok));
                   throw error;
                 }
               });
@@ -578,7 +578,7 @@ let closure_24 = async function _waitForAppChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -660,7 +660,7 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -839,7 +839,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -876,13 +876,13 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                   set.add(closure_0);
                   c10 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f136424 = requestConsent;
+                  f136833 = requestConsent;
                   if (requestConsent == null) {
-                    f136424 = (arg0) => closure_2_19(arg0, closure_1_4);
+                    f136833 = (arg0) => closure_2_19(arg0, closure_1_4);
                   }
                   c11 = 3;
                   c12 = 1;
-                  const obj5 = { value: f136424(closure_0), done: false };
+                  const obj5 = { value: f136833(closure_0), done: false };
                   return obj5;
                 }
               }
@@ -916,7 +916,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
             closure_136_25.delete(closure_135_0);
             if (closure_136_14.isProjectPublishing(closure_135_0)) {
               c12 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               closure_135_5 = closure_136_18(closure_135_0, closure_135_4);
               let integrationStatus;
@@ -958,7 +958,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                 obj9 = closure_136_0(closure_136_2[31]);
               }
               c12 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
         } else if (arg0 === 1) {
@@ -970,7 +970,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
           return obj;
         }
         c12 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp50) {
         closure_9 = tmp50;
         if (tmp4 === c10) {
@@ -983,7 +983,7 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
     }
   })();
 };
-let ConjureProjectStore = fn(6838);
+let ConjureProjectStore = fn(6844);
 ({ canPublishProject: closure_11, isProjectOwner: closure_12 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const Permissions = fn(1072).Permissions;

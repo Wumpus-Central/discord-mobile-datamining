@@ -1,7 +1,7 @@
-// === Module 11172: MessageRequestNotification ===
+// === Module 11191: MessageRequestNotification ===
 
-// Module 11172 (MessageRequestNotification)
-import util from "util" /* 1114 */;
+// Module 11191 (MessageRequestNotification)
+import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,19 +21,19 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = noop.useCallback(() => {
-    numMutualGuilds(11005).clearNotification();
-    const obj = numMutualGuilds(11005);
-    const rootNavigationRef = author(5194).getRootNavigationRef();
+    numMutualGuilds(11024).clearNotification();
+    const obj = numMutualGuilds(11024);
+    const rootNavigationRef = author(5199).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
-  let obj = { icon: jsx(author(1188).Avatar, { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null };
+  let obj = { icon: jsx(author(1187).Avatar, { user: author, size: author(1187).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null };
   const obj3 = { text: null };
-  let intl = author(1114).intl;
-  obj3.text = intl.string(author(1114).t["Bx4/Lf"]);
-  obj.children = jsx(author(11018).SystemMessageText, { text: null });
+  let intl = author(1113).intl;
+  obj3.text = intl.string(author(1113).t["Bx4/Lf"]);
+  obj.children = jsx(author(11037).SystemMessageText, { text: null });
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(author(11057).NotificationPressable, { icon: jsx(author(1188).Avatar, { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null });
+  return jsx(author(11076).NotificationPressable, { icon: jsx(author(1187).Avatar, { user: author, size: author(1187).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null });
 };

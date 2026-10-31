@@ -1,7 +1,7 @@
-// === Module 8677: ChannelLinkUrls ===
+// === Module 8685: ChannelLinkUrls ===
 
-// Module 8677 (ChannelLinkUrls)
-import LinkUtils from "LinkUtils" /* 5649 */;
+// Module 8685 (ChannelLinkUrls)
+import LinkUtils from "LinkUtils" /* 5654 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -13,7 +13,7 @@ export function parseChannelLinkUrl(url) {
   const match = MEDIA_POST_URL_RE.exec(url);
   if (null != match) {
     const tmp6 = _slicedToArray(match, 5);
-    const obj3 = { guildId: tmp6[1], channelId: tmp6[3], messageId: tmp6[4], parentChannelId: tmp6[2], conversationId: "find" };
+    const obj3 = { guildId: tmp6[1], channelId: tmp6[3], messageId: tmp6[4], parentChannelId: tmp6[2], conversationId: "ind" };
     return obj3;
   } else {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;

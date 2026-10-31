@@ -1,9 +1,9 @@
-// === Module 11437: ExperimentalEpicIcon ===
+// === Module 11473: ExperimentalEpicIcon ===
 
-// Module 11437 (ExperimentalEpicIcon)
+// Module 11473 (ExperimentalEpicIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod11438 from "module_11438" /* 11438 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod11474 from "module_11474" /* 11474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalEpicIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11438, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11474, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

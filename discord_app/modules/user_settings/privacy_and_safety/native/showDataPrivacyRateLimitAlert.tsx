@@ -1,8 +1,8 @@
-// === Module 16705: showDataPrivacyRateLimitAlert ===
+// === Module 16747: showDataPrivacyRateLimitAlert ===
 
-// Module 16705 (showDataPrivacyRateLimitAlert)
-import util from "util" /* 1114 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
+// Module 16747 (showDataPrivacyRateLimitAlert)
+import util from "util" /* 1113 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/showDataPrivacyRateLimitAlert.tsx");

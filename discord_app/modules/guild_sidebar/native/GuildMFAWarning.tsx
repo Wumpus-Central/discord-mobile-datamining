@@ -1,14 +1,14 @@
-// === Module 18203: GuildMFAWarning ===
+// === Module 18246: GuildMFAWarning ===
 
-// Module 18203 (GuildMFAWarning)
+// Module 18246 (GuildMFAWarning)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import Pressables from "Pressables" /* 6974 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11028 */;
-import _modDef18204 from "module_18204" /* 18204 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import Pressables from "Pressables" /* 6980 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11047 */;
+import _modDef18247 from "module_18247" /* 18247 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ let closure_9 = async function _handlePress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_9 = async function _handlePress() {
         closure_128_0 = value.default;
         closure_129_1(closure_129_2[9]).openURL(closure_128_0.getArticleURL(closure_129_4.SETTING_UP_TWO_FACTOR));
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp17) {
       c3 = tmp;
@@ -79,7 +79,7 @@ const Constants = fn(1072);
 ({ HelpdeskArticles: closure_4, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" }, MFAWarningIcon: { marginVertical: 10, width: 98, height: 53 }, MFAWarningLink: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
 obj2.MFAWarningLink = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
@@ -90,7 +90,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_7();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef18204 };
+  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef18247 };
   const items = [hasOwnProperty(FastImageDefault, obj2), ];
   const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = util.intl;

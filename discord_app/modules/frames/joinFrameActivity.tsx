@@ -1,12 +1,12 @@
-// === Module 13136: joinFrameActivity ===
+// === Module 13171: joinFrameActivity ===
 
-// Module 13136 (joinFrameActivity)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7479 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11641 */;
+// Module 13171 (joinFrameActivity)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7485 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11677 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import VoiceStateStore from "VoiceStateStore" /* 5674 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import VoiceStateStore from "VoiceStateStore" /* 5679 */;
 
 require = fn;
 let closure_12 = async function _joinFrameActivity(arg0) {
@@ -20,7 +20,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -425,7 +425,7 @@ let closure_13 = async function _getVoiceChannelAppChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -510,10 +510,10 @@ let closure_14 = async function _getActivityChannelId() {
   }
   return channel_id1;
 };
-const makeFrameId = fn(6841).makeFrameId;
+const makeFrameId = fn(6847).makeFrameId;
 const Constants = fn(1072);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: c10 } = Constants);
-const ActivityIntent = fn(2019).ActivityIntent;
+const ActivityIntent = fn(11693).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

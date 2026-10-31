@@ -1,16 +1,16 @@
-// === Module 19272: VoicePanelControlsDrawer ===
+// === Module 19329: VoicePanelControlsDrawer ===
 
-// Module 19272 (VoicePanelControlsDrawer)
+// Module 19329 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import spring from "spring" /* 5632 */;
-import Suspender from "Suspender" /* 5984 */;
-import useRefValueDefault from "useRefValue" /* 6953 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10069 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13777 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13778 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19273 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19284 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import spring from "spring" /* 5637 */;
+import Suspender from "Suspender" /* 5989 */;
+import useRefValueDefault from "useRefValue" /* 6959 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10089 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 13812 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13813 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19330 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11204);
+const VoicePanelConstants = fn(11223);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function LazyContentFreezer(shown) {

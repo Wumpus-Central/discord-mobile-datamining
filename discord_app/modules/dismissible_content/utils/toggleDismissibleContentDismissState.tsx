@@ -1,18 +1,18 @@
-// === Module 17544: toggleDismissibleContentDismissState ===
+// === Module 17604: toggleDismissibleContentDismissState ===
 
-// Module 17544 (toggleDismissibleContentDismissState)
+// Module 17604 (toggleDismissibleContentDismissState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod19 from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const UserSettingsProtoActionCreators = obj(4839);
-const DismissibleContentUtils = obj(4843);
-const DismissibleContentTypes = obj(4849);
-const VersionedDismissibleContentUtils = obj(4856);
-const DismissibleContentFrameworkActionCreators = obj(5685);
+const UserSettingsProtoActionCreators = obj(4844);
+const DismissibleContentUtils = obj(4848);
+const DismissibleContentTypes = obj(4854);
+const VersionedDismissibleContentUtils = obj(4861);
+const DismissibleContentFrameworkActionCreators = obj(5690);
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 
@@ -22,10 +22,10 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
   const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
   let obj = require("initialize");
   let obj2 = require("DismissibleContentUnsafeUtils");
-  let result = obj2.useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, { cooldownDurationMs: stateFromStores(1090).Millis.WEEK, guildId: stateFromStores });
+  let result = obj2.useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, { cooldownDurationMs: stateFromStores(1089).Millis.WEEK, guildId: stateFromStores });
   dependencyMap = result;
   const items1 = [APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, stateFromStores, result];
-  const obj3 = { cooldownDurationMs: stateFromStores(1090).Millis.WEEK, guildId: stateFromStores };
+  const obj3 = { cooldownDurationMs: stateFromStores(1089).Millis.WEEK, guildId: stateFromStores };
   return {
     isDismissed: result,
     handleToggleDismissState: useCallback(() => {

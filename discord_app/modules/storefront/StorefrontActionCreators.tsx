@@ -1,15 +1,15 @@
-// === Module 9458: StorefrontActionCreators ===
+// === Module 9480: StorefrontActionCreators ===
 
-// Module 9458 (StorefrontActionCreators)
+// Module 9480 (StorefrontActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingInfoStore from "BillingInfoStore" /* 2049 */;
-import SKUPricesStore from "SKUPricesStore" /* 7404 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9459 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9460 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 9461 */;
+import BillingInfoStore from "BillingInfoStore" /* 2048 */;
+import SKUPricesStore from "SKUPricesStore" /* 7410 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9481 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9482 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 9483 */;
 
 require = fn;
 function shouldFetchStorefrontPromotions(arg0) {
@@ -39,7 +39,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -98,7 +98,7 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -187,7 +187,7 @@ let closure_15 = async function _claimStorefrontPromotion() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -318,7 +318,7 @@ let closure_19 = async function _fetchStorefrontPrices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

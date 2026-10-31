@@ -1,9 +1,9 @@
-// === Module 11657: getOrFetchApplication ===
+// === Module 11694: getOrFetchApplication ===
 
-// Module 11657 (getOrFetchApplication)
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6875 */;
+// Module 11694 (getOrFetchApplication)
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6881 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
 
 require = fn;
 let closure_4 = async function _getOrFetchApplication(arg0) {
@@ -17,7 +17,7 @@ let closure_4 = async function _getOrFetchApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

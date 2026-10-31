@@ -1,14 +1,14 @@
-// === Module 10067: ExpressionPickerCategories ===
+// === Module 10087: ExpressionPickerCategories ===
 
-// Module 10067 (ExpressionPickerCategories)
+// Module 10087 (ExpressionPickerCategories)
 import nativeDefault from "native" /* 575 */;
-import Portal from "Portal" /* 5209 */;
+import Portal from "Portal" /* 5214 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" }, containerRefresh: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 obj2.containerRefresh = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };

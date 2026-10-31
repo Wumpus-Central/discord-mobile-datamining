@@ -1,9 +1,9 @@
-// === Module 7263: GuildOnboardingPromptsConstants ===
+// === Module 7269: GuildOnboardingPromptsConstants ===
 
-// Module 7263 (GuildOnboardingPromptsConstants)
-import util from "util" /* 1114 */;
-import _modDef1343 from "module_1343" /* 1343 */;
-import StringUtils from "StringUtils" /* 2028 */;
+// Module 7269 (GuildOnboardingPromptsConstants)
+import util from "util" /* 1113 */;
+import _modDef1342 from "module_1342" /* 1342 */;
+import StringUtils from "StringUtils" /* 2026 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
@@ -103,7 +103,7 @@ export function isDefaultPrompt(options) {
     const id = obj.id;
     const id2 = options.id;
     const tmp7 = _objectWithoutProperties(obj, closure_3);
-    return _modDef1343(tmp7, _objectWithoutProperties(options, closure_4));
+    return _modDef1342(tmp7, _objectWithoutProperties(options, closure_4));
   }
 }
 export function getDefaultPrompt() {

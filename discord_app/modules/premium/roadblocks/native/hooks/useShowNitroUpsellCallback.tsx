@@ -1,7 +1,7 @@
-// === Module 10011: useShowNitroUpsellCallback ===
+// === Module 10032: useShowNitroUpsellCallback ===
 
-// Module 10011 (useShowNitroUpsellCallback)
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+// Module 10032 (useShowNitroUpsellCallback)
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

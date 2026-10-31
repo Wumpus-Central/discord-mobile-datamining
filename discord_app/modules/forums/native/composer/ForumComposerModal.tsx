@@ -1,28 +1,28 @@
-// === Module 10183: ForumComposerModal ===
+// === Module 10203: ForumComposerModal ===
 
-// Module 10183 (ForumComposerModal)
+// Module 10203 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import KeyboardUIStore from "KeyboardUIStore" /* 1496 */;
-import KeyboardTypes from "KeyboardTypes" /* 1624 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1889 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5954 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8335 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9757 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10182 */;
+import util from "util" /* 1113 */;
+import KeyboardUIStore from "KeyboardUIStore" /* 1495 */;
+import KeyboardTypes from "KeyboardTypes" /* 1623 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1888 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5959 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8343 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9778 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10202 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10184 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import DraftStore from "DraftStore" /* 7694 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8200 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7452 */;
+import NativeMenuStore from "NativeMenuStore" /* 10204 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import DraftStore from "DraftStore" /* 7701 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7458 */;
 
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(7694).DraftType;
+const DraftType = fn(7701).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 14646: useInGameQuestConnectState ===
+// === Module 14684: useInGameQuestConnectState ===
 
-// Module 14646 (useInGameQuestConnectState)
+// Module 14684 (useInGameQuestConnectState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/useInGameQuestConnectState.tsx");

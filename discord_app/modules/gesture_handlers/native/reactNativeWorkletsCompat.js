@@ -1,7 +1,7 @@
-// === Module 5089: reactNativeWorkletsCompat ===
+// === Module 5094: reactNativeWorkletsCompat ===
 
-// Module 5089 (reactNativeWorkletsCompat)
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+// Module 5094 (reactNativeWorkletsCompat)
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gesture_handlers/native/reactNativeWorkletsCompat.js");

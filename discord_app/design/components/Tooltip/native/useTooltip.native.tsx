@@ -1,9 +1,9 @@
-// === Module 9934: useTooltip ===
+// === Module 9955: useTooltip ===
 
-// Module 9934 (useTooltip)
+// Module 9955 (useTooltip)
 import LoggerDefault from "Logger" /* 3 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import AnimatedTooltip from "AnimatedTooltip" /* 9935 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import AnimatedTooltip from "AnimatedTooltip" /* 9956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export function useTooltip(ref, memo) {
   closure_129_0 = ref;
   closure_129_1 = ref;
   closure_129_2 = callback;
-  const tmp8 = context(1492)();
+  const tmp8 = context(1491)();
   closure_129_3 = tmp8;
   closure_129_4 = noop.useRef(tmp8);
   const context1 = noop.useContext(require("LayerContext").LayerContext);
@@ -55,8 +55,8 @@ export function useTooltip(ref, memo) {
     memo = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = memo(9940).getMeasurements(surfaceRef.surfaceRef, memo);
-      const items = [measurements, memo(9940).getMeasurements(closure_1, memo)];
+      const measurements = memo(9961).getMeasurements(surfaceRef.surfaceRef, memo);
+      const items = [measurements, memo(9961).getMeasurements(closure_1, memo)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;
@@ -129,8 +129,8 @@ export function useTooltipHelper(ref, targetRef, callback) {
     memo = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = memo(9940).getMeasurements(surfaceRef.surfaceRef, memo);
-      const items = [measurements, memo(9940).getMeasurements(closure_1, memo)];
+      const measurements = memo(9961).getMeasurements(surfaceRef.surfaceRef, memo);
+      const items = [measurements, memo(9961).getMeasurements(closure_1, memo)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;

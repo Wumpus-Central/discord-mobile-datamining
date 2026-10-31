@@ -1,6 +1,6 @@
-// === Module 4881: LibdiscoreStore ===
+// === Module 4886: LibdiscoreStore ===
 
-// Module 4881 (LibdiscoreStore)
+// Module 4886 (LibdiscoreStore)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

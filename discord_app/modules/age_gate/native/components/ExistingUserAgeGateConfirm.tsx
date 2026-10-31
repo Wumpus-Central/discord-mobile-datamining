@@ -1,7 +1,7 @@
-// === Module 19334: ExistingUserAgeGateConfirm ===
+// === Module 19391: ExistingUserAgeGateConfirm ===
 
-// Module 19334 (ExistingUserAgeGateConfirm)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
+// Module 19391 (ExistingUserAgeGateConfirm)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, buttonWrapper: { width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx");
@@ -40,25 +40,25 @@ export default function ExistingUserAgeGateConfirm(age) {
     return value;
   };
   const tmp = closure_10();
-  importDefault = onConfirm(1498).useNavigation();
-  const obj = onConfirm(1498);
+  importDefault = onConfirm(1497).useNavigation();
+  const obj = onConfirm(1497);
   [tmp3, c2] = noop.useState(false);
   const obj2 = { top: true, style: tmp.container, children: null };
   const obj3 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = onConfirm(1114).intl;
-  obj3.children = intl.format(onConfirm(1114).t.wumolR, { age: age.age });
-  const items = [closure_8(onConfirm(5619).Heading, obj3), , ];
+  const intl = onConfirm(1113).intl;
+  obj3.children = intl.format(onConfirm(1113).t.wumolR, { age: age.age });
+  const items = [closure_8(onConfirm(5624).Heading, obj3), , ];
   const obj4 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
-  const intl2 = onConfirm(1114).intl;
+  const intl2 = onConfirm(1113).intl;
   const obj5 = { helpURL: null };
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   obj5.helpURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.AGE_GATE);
-  obj4.children = intl2.format(onConfirm(1114).t.n3QjDE, obj5);
-  items[1] = closure_8(onConfirm(5619).Text, obj4);
+  obj4.children = intl2.format(onConfirm(1113).t.n3QjDE, obj5);
+  items[1] = closure_8(onConfirm(5624).Text, obj4);
   const obj7 = { style: tmp.buttonWrapper, children: null };
   const obj8 = { loading: tmp3, disabled: tmp3, text: null, onPress: null, grow: true };
-  const intl3 = onConfirm(1114).intl;
-  obj8.text = intl3.string(onConfirm(1114).t["6tahin"]);
+  const intl3 = onConfirm(1113).intl;
+  obj8.text = intl3.string(onConfirm(1113).t["6tahin"]);
   obj8.onPress = function handleConfirm() {
     const self = this;
     const apply = closure_3.apply;
@@ -69,8 +69,8 @@ export default function ExistingUserAgeGateConfirm(age) {
     }
     return applyArgumentsResult;
   };
-  obj7.children = closure_8(onConfirm(5629).Button, obj8);
+  obj7.children = closure_8(onConfirm(5634).Button, obj8);
   items[2] = closure_8(View, obj7);
   obj2.children = items;
-  return closure_9(onConfirm(7286).SafeAreaPaddingView, obj2);
+  return closure_9(onConfirm(7292).SafeAreaPaddingView, obj2);
 };

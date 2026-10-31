@@ -1,9 +1,9 @@
-// === Module 15419: ChevronSmallUpIcon ===
+// === Module 15458: ChevronSmallUpIcon ===
 
-// Module 15419 (ChevronSmallUpIcon)
+// Module 15458 (ChevronSmallUpIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod14170 from "module_14170" /* 14170 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod14208 from "module_14208" /* 14208 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChevronSmallUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14170, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14208, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,16 +1,16 @@
-// === Module 10922: ConjurePublishActionCreators ===
+// === Module 10941: ConjurePublishActionCreators ===
 
-// Module 10922 (ConjurePublishActionCreators)
+// Module 10941 (ConjurePublishActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10853 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10875 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10923 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10925 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10873 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 10900 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 10942 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10944 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1384 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10847 */;
+import UserStore from "UserStore" /* 1383 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
 
 require = fn;
 function unpublishProject() {
@@ -34,7 +34,7 @@ let closure_9 = async function _unpublishProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -150,7 +150,7 @@ let closure_11 = async function _refreshPublishedProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -312,7 +312,7 @@ let closure_13 = async function _refreshPublishedApplication() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -355,7 +355,7 @@ let closure_13 = async function _refreshPublishedApplication() {
             closure_132_14(closure_131_0, closure_131_1, closure_131_2);
           }
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp16) {
         c6 = tmp;

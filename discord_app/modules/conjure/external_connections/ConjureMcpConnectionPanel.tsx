@@ -1,6 +1,6 @@
-// === Module 12480: ConjureMcpConnectionPanel ===
+// === Module 12515: ConjureMcpConnectionPanel ===
 
-// Module 12480 (ConjureMcpConnectionPanel)
+// Module 12515 (ConjureMcpConnectionPanel)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -49,7 +49,7 @@ prototype["mint"] = function mint(dependencyMap) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -89,7 +89,7 @@ prototype["mint"] = function mint(dependencyMap) {
           c2 = 0;
           if (closure_129_1.isStale(closure_128_1)) {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             let connection = null;
             if (!closure_129_0) {

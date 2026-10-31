@@ -1,9 +1,9 @@
-// === Module 9045: TextInput/TextInput ===
+// === Module 9064: TextInput/TextInput ===
 
-// Module 9045 (TextInput/TextInput)
+// Module 9064 (TextInput/TextInput)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5006 */;
-import shared from "shared" /* 5016 */;
+import ColorUtils from "ColorUtils" /* 5011 */;
+import shared from "shared" /* 5021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1072);
 ({ KeyboardThemes: closure_4, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { input: { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT }, placeholderTextColor: null };
 let obj3 = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.placeholderTextColor = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };

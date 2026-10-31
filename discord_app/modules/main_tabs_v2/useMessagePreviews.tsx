@@ -1,11 +1,11 @@
-// === Module 17240: useMessagePreviews ===
+// === Module 17297: useMessagePreviews ===
 
-// Module 17240 (useMessagePreviews)
-import UserSettings from "UserSettings" /* 4834 */;
-import useIsNsfwGatedDefault from "useIsNsfwGated" /* 9816 */;
-import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 17241 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
+// Module 17297 (useMessagePreviews)
+import UserSettings from "UserSettings" /* 4839 */;
+import useIsNsfwGatedDefault from "useIsNsfwGated" /* 9837 */;
+import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 17298 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
 
 const require = globalThis.__r;
 
@@ -56,10 +56,10 @@ export default function useMessagePreview(guild_id, arg1) {
     disabled = useIsNsfwGatedDefault(guild_id);
   }
   if (!disabled) {
-    disabled = stateFromStores === tmp(5687).MessagePreviewTypes.NONE;
+    disabled = stateFromStores === tmp(5692).MessagePreviewTypes.NONE;
   }
   if (!disabled) {
-    let tmp6 = stateFromStores === tmp(5687).MessagePreviewTypes.UNREADS;
+    let tmp6 = stateFromStores === tmp(5692).MessagePreviewTypes.UNREADS;
     if (tmp6) {
       if (unread == null) {
         unread = stateFromStores1;

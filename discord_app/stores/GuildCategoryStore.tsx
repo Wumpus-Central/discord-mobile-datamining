@@ -1,14 +1,14 @@
-// === Module 7274: GuildCategoryStore ===
+// === Module 7280: GuildCategoryStore ===
 
-// Module 7274 (GuildCategoryStore)
+// Module 7280 (GuildCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7275 */;
-import FavoriteStore from "FavoriteStore" /* 4861 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7281 */;
+import FavoriteStore from "FavoriteStore" /* 4866 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4939 */;
-import GuildStore from "GuildStore" /* 4880 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4944 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 function setIndex(arg0, index) {
   arg0.index = index;
@@ -236,7 +236,7 @@ function handleFavoritesUpdate() {
   const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
   closure_12[closure_1_10] = obj;
 }
-let GuildChannelStore = fn(4939);
+let GuildChannelStore = fn(4944);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);

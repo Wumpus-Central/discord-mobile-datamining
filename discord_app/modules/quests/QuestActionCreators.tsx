@@ -1,27 +1,27 @@
-// === Module 9662: QuestActionCreators ===
+// === Module 9682: QuestActionCreators ===
 
-// Module 9662 (QuestActionCreators)
+// Module 9682 (QuestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6741 */;
-import QuestTypes from "QuestTypes" /* 6778 */;
-import AdCreativeType from "AdCreativeType" /* 6782 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7634 */;
-import QuestDataUtils from "QuestDataUtils" /* 7835 */;
-import captureAdUserAction from "captureAdUserAction" /* 9664 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9667 */;
-import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 9668 */;
-import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 9669 */;
-import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 9691 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6747 */;
+import QuestTypes from "QuestTypes" /* 6784 */;
+import AdCreativeType from "AdCreativeType" /* 6788 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7641 */;
+import QuestDataUtils from "QuestDataUtils" /* 7842 */;
+import captureAdUserAction from "captureAdUserAction" /* 9684 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9687 */;
+import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 9688 */;
+import QuestDecisionRoundtripTrackerDefault from "QuestDecisionRoundtripTracker" /* 9689 */;
+import EarnedDecisionRoundtripTrackerDefault from "EarnedDecisionRoundtripTracker" /* 9711 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7836 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 6767 */;
-import NetworkStore from "NetworkStore" /* 5935 */;
-import SortedGuildStore from "SortedGuildStore" /* 6766 */;
-import QuestStore from "QuestStore" /* 7839 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7841 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7843 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 6773 */;
+import NetworkStore from "NetworkStore" /* 5901 */;
+import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import QuestStore from "QuestStore" /* 7846 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7848 */;
 
 require = fn;
 let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
@@ -35,7 +35,7 @@ let closure_16 = async function _manuallyStartConsoleQuest(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -172,7 +172,7 @@ let closure_17 = async function _manualStopConsoleQuest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -202,7 +202,7 @@ let closure_17 = async function _manualStopConsoleQuest(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -221,7 +221,7 @@ let closure_18 = async function _resetRecentQuestCompletions() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -251,7 +251,7 @@ let closure_18 = async function _resetRecentQuestCompletions() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -270,7 +270,7 @@ let closure_19 = async function _fetchCurrentQuests() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -331,8 +331,8 @@ let closure_19 = async function _fetchCurrentQuests() {
         } else if (arg0 !== 2) {
           closure_129_1 = value;
           quests2 = closure_129_1.body.quests;
-          const found = quests2.filter((item) => closure_1_0(7847).isQuestWithKnownConfigVersion(item));
-          closure_129_3 = found.map((item) => closure_1_0(7847).questWithUserStatusFromServer(item));
+          const found = quests2.filter((item) => closure_1_0(7854).isQuestWithKnownConfigVersion(item));
+          closure_129_3 = found.map((item) => closure_1_0(7854).questWithUserStatusFromServer(item));
           closure_129_4 = closure_129_1.body.quest_enrollment_blocked_until;
           closure_129_5 = closure_129_1.body.quest_access_suspended_until;
           closure_129_6 = closure_129_3.filter((userStatus) => {
@@ -358,7 +358,7 @@ let closure_19 = async function _fetchCurrentQuests() {
           obj10.data = obj11;
           closure_130_1(closure_130_2[16]).addBreadcrumb(obj10);
           const excluded_quests = closure_129_1.body.excluded_quests;
-          closure_129_13 = excluded_quests.map((item) => closure_1_0(7847).excludedQuestFromServer(item));
+          closure_129_13 = excluded_quests.map((item) => closure_1_0(7854).excludedQuestFromServer(item));
           const obj9 = closure_130_1(closure_130_2[16]);
           const obj13 = { type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", quests: closure_129_6, excludedQuests: closure_129_13, questEnrollmentBlockedUntil: closure_129_4, questAccessSuspendedUntil: closure_129_5 };
           closure_130_1(closure_130_2[12]).dispatch(obj13);
@@ -393,7 +393,7 @@ let closure_20 = async function _sendHeartbeat(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -515,7 +515,7 @@ let closure_22 = async function _enrollInQuest(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -623,7 +623,7 @@ let closure_24 = async function _trackClaimQuestReward(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -704,7 +704,7 @@ let closure_25 = async function _performClaimQuestReward() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -808,7 +808,7 @@ let closure_26 = async function _fetchQuestRewardCode() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -892,7 +892,7 @@ let closure_27 = async function _dismissQuestContent() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -992,7 +992,7 @@ let closure_28 = async function _completeQuestPreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1150,7 +1150,7 @@ let closure_31 = async function _fetchClaimedQuests() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1231,7 +1231,7 @@ let closure_32 = async function _fetchQuestToDeliver() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1560,7 +1560,7 @@ let closure_32 = async function _fetchQuestToDeliver() {
           }
           c7 = 0;
           c9 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp227) {
         folderExpanded = tmp227;
@@ -1591,7 +1591,7 @@ let closure_33 = async function _fetchEarnedQuestToDeliver(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1631,7 +1631,7 @@ let closure_33 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (content != null) {
                   value = content.get(item);
                 }
-                return !closure_0(7835).earnedDecisionIsValid(value);
+                return !closure_0(7842).earnedDecisionIsValid(value);
               });
               closure_132_2 = found;
               if (0 !== found.length) {
@@ -1704,7 +1704,7 @@ let closure_33 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (obj.isQuestWithKnownConfigVersion(tmp)) {
                   tmp2 = tmp;
                 }
-                obj = closure_0(7847);
+                obj = closure_0(7854);
               }
               items[1] = tmp2;
               return items;
@@ -1755,7 +1755,7 @@ let closure_34 = async function _updateVideoProgress() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1798,7 +1798,7 @@ let closure_34 = async function _updateVideoProgress() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp6) {
         c3 = tmp;
@@ -1818,7 +1818,7 @@ let closure_35 = async function _fetchVideoTranscript(arg0) {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1933,7 +1933,7 @@ let closure_37 = async function _fetchQuestPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -2013,7 +2013,7 @@ let closure_39 = async function _fetchQuestHomeHero() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2260,7 +2260,7 @@ let closure_40 = async function _fetchQuestHomeHeroPreview(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2430,7 +2430,7 @@ let closure_40 = async function _fetchQuestHomeHeroPreview(arg0) {
         closure_132_1(closure_132_2[12]).dispatch(obj12);
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp74) {
       closure_5 = tmp74;
@@ -2443,12 +2443,12 @@ let closure_40 = async function _fetchQuestHomeHeroPreview(arg0) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(9663).getVisibleGuildIdsMethod;
-const FetchStatus = fn(7841).FetchStatus;
-const ORBS_INTRO_QUEST_ID = fn(6775).ORBS_INTRO_QUEST_ID;
+const getVisibleGuildIdsMethod = fn(9683).getVisibleGuildIdsMethod;
+const FetchStatus = fn(7848).FetchStatus;
+const ORBS_INTRO_QUEST_ID = fn(6781).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, Endpoints: closure_14 } = Constants);
-let items = [fn(6778).QuestContent.QUEST_BAR, fn(6778).QuestContent.QUEST_BAR_V2, fn(6778).QuestContent.QUEST_BAR_MOBILE];
+let items = [fn(6784).QuestContent.QUEST_BAR, fn(6784).QuestContent.QUEST_BAR_V2, fn(6784).QuestContent.QUEST_BAR_MOBILE];
 const set = new Set(items);
 const QuestEnrollmentResultType = { SUCCESS: "success", UNKNOWN_ERROR: "unknown_error", PREVIOUS_IN_FLIGHT_REQUEST: "previous_in_flight_request" };
 let map = new Map();

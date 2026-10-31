@@ -1,19 +1,19 @@
-// === Module 11164: BookmarksSpotIllustration ===
+// === Module 11183: BookmarksSpotIllustration ===
 
-// Module 11164 (BookmarksSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7063 */;
-import _modDef11165 from "module_11165" /* 11165 */;
-import _modDef11166 from "module_11166" /* 11166 */;
-import _modDef11167 from "module_11167" /* 11167 */;
+// Module 11183 (BookmarksSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7069 */;
+import _modDef11184 from "module_11184" /* 11184 */;
+import _modDef11185 from "module_11185" /* 11185 */;
+import _modDef11186 from "module_11186" /* 11186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11165 }, 3: null };
-let obj2 = { uri: _modDef11165 };
-obj[2] = { uri: _modDef11166 };
-const obj3 = { uri: _modDef11166 };
-obj[3] = { uri: _modDef11167 };
+let obj = { 1: null, 2: { uri: _modDef11184 }, 3: null };
+let obj2 = { uri: _modDef11184 };
+obj[2] = { uri: _modDef11185 };
+const obj3 = { uri: _modDef11185 };
+obj[3] = { uri: _modDef11186 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BookmarksSpotIllustration.native.tsx");
 

@@ -1,12 +1,12 @@
-// === Module 7314: FormIcon ===
+// === Module 7320: FormIcon ===
 
-// Module 7314 (FormIcon)
-import native from "native" /* 1188 */;
+// Module 7320 (FormIcon)
+import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_3 = createStyles.createStyles({ icon: { opacity: 0.6 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormIcon.tsx");

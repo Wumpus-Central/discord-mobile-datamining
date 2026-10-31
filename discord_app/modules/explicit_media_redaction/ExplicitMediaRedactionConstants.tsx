@@ -1,7 +1,7 @@
-// === Module 7460: ExplicitMediaRedactionConstants ===
+// === Module 7466: ExplicitMediaRedactionConstants ===
 
-// Module 7460 (ExplicitMediaRedactionConstants)
-import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
+// Module 7466 (ExplicitMediaRedactionConstants)
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1094 */;
 import size from "module_2" /* 2 */;
 
 const items = [MessageEmbedTypes.MessageEmbedTypes.IMAGE, MessageEmbedTypes.MessageEmbedTypes.VIDEO, MessageEmbedTypes.MessageEmbedTypes.GIFV];

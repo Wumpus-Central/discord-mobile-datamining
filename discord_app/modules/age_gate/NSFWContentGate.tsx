@@ -1,9 +1,9 @@
-// === Module 6746: NSFWContentGate ===
+// === Module 6752: NSFWContentGate ===
 
-// Module 6746 (NSFWContentGate)
-import GuildRecord from "GuildRecord" /* 4876 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import UserStore from "UserStore" /* 1384 */;
+// Module 6752 (NSFWContentGate)
+import GuildRecord from "GuildRecord" /* 4881 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import UserStore from "UserStore" /* 1383 */;
 import size from "module_2" /* 2 */;
 
 const isGuildNSFW = GuildRecord.isGuildNSFW;

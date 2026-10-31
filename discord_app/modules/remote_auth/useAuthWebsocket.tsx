@@ -1,9 +1,9 @@
-// === Module 17978: useAuthWebsocket ===
+// === Module 18021: useAuthWebsocket ===
 
-// Module 17978 (useAuthWebsocket)
+// Module 18021 (useAuthWebsocket)
 import LoggerDefault from "Logger" /* 3 */;
-import typing from "typing" /* 17977 */;
-import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 17979 */;
+import typing from "typing" /* 18020 */;
+import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 18022 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -122,7 +122,7 @@ export function useAuthWebsocket(callback, arg1) {
             obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -168,46 +168,46 @@ export function useAuthWebsocket(callback, arg1) {
                   encrypted_nonce = closure_129_1.encrypted_nonce;
                   c3 = 2;
                   c4 = 1;
-                  let obj5 = { value: info(17979).decryptNonce(closure_130_8(), encrypted_nonce), done: false };
+                  let obj5 = { value: info(18022).decryptNonce(closure_130_8(), encrypted_nonce), done: false };
                   return obj5;
                 } else if ("pending_remote_init" === op) {
                   closure_1_9.succeed();
-                  const ComponentDispatch2 = closure_2_0(1109).ComponentDispatch;
+                  const ComponentDispatch2 = closure_2_0(1108).ComponentDispatch;
                   ComponentDispatch2.dispatch(constants.WAVE_EMPHASIZE);
                   c3 = 3;
                   c4 = 1;
-                  const obj6 = { value: info(17979).publicKeyFingerprint(closure_130_8()), done: false };
+                  const obj6 = { value: info(18022).publicKeyFingerprint(closure_130_8()), done: false };
                   return obj6;
                 } else if ("pending_login" === op) {
                   ticket = closure_129_1.ticket;
                   if (null == ticket) {
                     closure_1_11();
                   } else {
-                    let obj7 = { step: closure_2_0(17977).RemoteAuthStep.PENDING_LOGIN, ticket };
+                    let obj7 = { step: closure_2_0(18020).RemoteAuthStep.PENDING_LOGIN, ticket };
                     c7(obj7);
-                    const HTTP = closure_2_0(1283).HTTP;
+                    const HTTP = closure_2_0(1282).HTTP;
                     const request = { url: constants2.REMOTE_AUTH_LOGIN, body: null, oldFormErrors: true, rejectWithError: true };
                     let obj8 = { ticket };
                     request.body = obj8;
                     const postResult = HTTP.post(request);
                     HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F139914 */ function() { ... });
-                      return /* F139915 */ function() { ... };
+                      closure_0 = closure_1_3(/* F140335 */ function() { ... });
+                      return /* F140336 */ function() { ... };
                     })()).catch(() => closure_1_11());
                     const nextPromise = HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F139914 */ function() { ... });
-                      return /* F139915 */ function() { ... };
+                      closure_0 = closure_1_3(/* F140335 */ function() { ... });
+                      return /* F140336 */ function() { ... };
                     })());
                   }
                   c4 = 3;
                 } else if ("pending_ticket" === op) {
-                  const ComponentDispatch = closure_2_0(1109).ComponentDispatch;
+                  const ComponentDispatch = closure_2_0(1108).ComponentDispatch;
                   ComponentDispatch.dispatch(constants.WAVE_EMPHASIZE);
                   closure_130_1("remote auth handshake started, awaiting ticket/cancel.");
                   closure_129_6 = closure_129_1.encrypted_user_payload;
                   c3 = 4;
                   c4 = 1;
-                  const obj9 = { value: closure_2_0(17981).decodeEncodedUserRecord(closure_130_8(), closure_129_6), done: false };
+                  const obj9 = { value: closure_2_0(18024).decodeEncodedUserRecord(closure_130_8(), closure_129_6), done: false };
                   return obj9;
                 } else if ("cancel" === op) {
                   closure_130_1("remote auth handshake cancelled.");
@@ -243,13 +243,13 @@ export function useAuthWebsocket(callback, arg1) {
                 } else if ("heartbeat_ack" === op) {
                   closure_130_7 = true;
                   c4 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   !(function warn(arg0) {
                     return logger.warn("[" + Date.now() - data + "ms" + "] " + "received unsupported message");
                   })("received unsupported message");
                   c4 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               }
             } else if (2 === tmp5) {
@@ -287,7 +287,7 @@ export function useAuthWebsocket(callback, arg1) {
                   throw error;
                 } else {
                   closure_130_1("handshake complete awaiting remote auth.");
-                  const obj19 = { step: closure_2_0(17977).RemoteAuthStep.PENDING_REMOTE_INIT, fingerprint: closure_129_4 };
+                  const obj19 = { step: closure_2_0(18020).RemoteAuthStep.PENDING_REMOTE_INIT, fingerprint: closure_129_4 };
                   c7(obj19);
                   c4 = 3;
                   const obj20 = { value: undefined, done: true };
@@ -303,7 +303,7 @@ export function useAuthWebsocket(callback, arg1) {
               return obj21;
             } else {
               closure_129_7 = value;
-              let obj = { step: closure_2_0(17977).RemoteAuthStep.PENDING_TICKET, user: closure_129_7 };
+              let obj = { step: closure_2_0(18020).RemoteAuthStep.PENDING_TICKET, user: closure_129_7 };
               c7(obj);
               c4 = 3;
               const obj22 = { value: undefined, done: true };
@@ -339,7 +339,7 @@ export function useAuthWebsocket(callback, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -356,7 +356,7 @@ export function useAuthWebsocket(callback, arg1) {
               closure_1 = tmp4;
               c2 = 1;
               c3 = 1;
-              const obj6 = { value: info(17979).generateRsaKeyPair(), done: false };
+              const obj6 = { value: info(18022).generateRsaKeyPair(), done: false };
               return obj6;
             }
           } else if (1 === tmp4) {
@@ -371,7 +371,7 @@ export function useAuthWebsocket(callback, arg1) {
               closure_129_3 = value;
               c2 = 2;
               c3 = 1;
-              const obj9 = { value: info(17979).serializePublicKey(closure_129_3), done: false };
+              const obj9 = { value: info(18022).serializePublicKey(closure_129_3), done: false };
               return obj9;
             }
           } else if (2 === tmp4) {
@@ -387,7 +387,7 @@ export function useAuthWebsocket(callback, arg1) {
               closure_0 = closure_129_1;
               c2 = 3;
               c3 = 1;
-              const obj11 = { value: info(17979).publicKeyFingerprint(closure_129_3), done: false };
+              const obj11 = { value: info(18022).publicKeyFingerprint(closure_129_3), done: false };
               return obj11;
             }
           } else if (arg0 === 1) {
@@ -405,7 +405,7 @@ export function useAuthWebsocket(callback, arg1) {
             closure_129_2.send(JSON.stringify(obj12));
             getKeyPair.current = closure_129_3;
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp16) {
           c3 = tmp;

@@ -1,6 +1,6 @@
-// === Module 13511: ? ===
+// === Module 13547: ? ===
 
-// Module 13511
+// Module 13547
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_08_astronaut_cosmic.webp.js");

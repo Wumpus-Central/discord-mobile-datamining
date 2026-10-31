@@ -1,9 +1,9 @@
-// === Module 16824: ClipsIcon ===
+// === Module 16861: ClipsIcon ===
 
-// Module 16824 (ClipsIcon)
+// Module 16861 (ClipsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod16825 from "module_16825" /* 16825 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod16862 from "module_16862" /* 16862 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ClipsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16825, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16862, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

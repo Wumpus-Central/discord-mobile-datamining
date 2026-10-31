@@ -1,13 +1,13 @@
-// === Module 17445: UserSettingsHighlightNotifications ===
+// === Module 17505: UserSettingsHighlightNotifications ===
 
-// Module 17445 (UserSettingsHighlightNotifications)
-import GuildIconDefault from "GuildIcon" /* 6951 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7277 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7282 */;
+// Module 17505 (UserSettingsHighlightNotifications)
+import GuildIconDefault from "GuildIcon" /* 6957 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7283 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7288 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import SortedGuildStore from "SortedGuildStore" /* 6766 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import SortedGuildStore from "SortedGuildStore" /* 6772 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
 
 require = fn;
 function Row(guildId) {
@@ -35,7 +35,7 @@ function Row(guildId) {
     }
     let obj2 = { guild };
     const obj3 = { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd };
-    return jsx(tmp2(7363).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
+    return jsx(tmp2(7369).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
   }
   let obj = guildId(504);
   tmp2 = guildId;
@@ -52,7 +52,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8169).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8177).Form, { children: tmp3 });
   }
   return tmp4;
 };

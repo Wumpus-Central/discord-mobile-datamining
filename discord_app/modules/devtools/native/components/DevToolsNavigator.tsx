@@ -1,19 +1,19 @@
-// === Module 16381: DevToolsNavigator ===
+// === Module 16423: DevToolsNavigator ===
 
-// Module 16381 (DevToolsNavigator)
-import Types from "Types" /* 5201 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import HeaderShared from "HeaderShared" /* 9791 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 16382 */;
-import DevToolsContentDefault from "DevToolsContent" /* 17700 */;
+// Module 16423 (DevToolsNavigator)
+import Types from "Types" /* 5206 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import HeaderShared from "HeaderShared" /* 9812 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 16424 */;
+import DevToolsContentDefault from "DevToolsContent" /* 17744 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9835);
+const NativeStackNavigator = fn(9856);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
   let str = screenKey.screenKey;
@@ -50,9 +50,9 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
         return {
           headerTitle() {
             const obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_4(closure_1_0(12955).HammerIcon, { size: "sm" }), ];
+            const items = [closure_1_4(closure_1_0(12990).HammerIcon, { size: "sm" }), ];
             const obj2 = { style: { marginLeft: closure_1_1(575).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-            items[1] = closure_1_4(closure_1_0(5619).Text, obj2);
+            items[1] = closure_1_4(closure_1_0(5624).Text, obj2);
             obj.children = items;
             return closure_1_5(closure_1_3, obj);
           },
@@ -63,8 +63,8 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
   ,
 
   ];
-  let merged = Object.assign(tmp(17506).DevToolsScreens);
-  let merged1 = Object.assign(tmp(17506).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(17566).DevToolsScreens);
+  let merged1 = Object.assign(tmp(17566).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp, ] = item;
@@ -83,9 +83,9 @@ let closure_8 = noop.memo(function DevToolsNavigator(screenKey) {
       return {
         headerTitle() {
           const obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_4(closure_1_0(12955).HammerIcon, { size: "sm" }), ];
+          const items = [closure_1_4(closure_1_0(12990).HammerIcon, { size: "sm" }), ];
           const obj2 = { style: { marginLeft: closure_1_1(575).space.PX_8 }, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-          items[1] = closure_1_4(closure_1_0(5619).Text, obj2);
+          items[1] = closure_1_4(closure_1_0(5624).Text, obj2);
           obj.children = items;
           return closure_1_5(closure_1_3, obj);
         },

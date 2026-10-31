@@ -1,19 +1,19 @@
-// === Module 18303: GuildsBar ===
+// === Module 18346: GuildsBar ===
 
-// Module 18303 (GuildsBar)
-import NativeViewDefault from "NativeView" /* 6954 */;
-import FastListDefault from "FastList" /* 7234 */;
-import StartupProfilerDefault from "StartupProfiler" /* 11528 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 18184 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 18304 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 18312 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 18376 */;
+// Module 18346 (GuildsBar)
+import NativeViewDefault from "NativeView" /* 6960 */;
+import FastListDefault from "FastList" /* 7240 */;
+import StartupProfilerDefault from "StartupProfiler" /* 11562 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 18227 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 18347 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 18355 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 18419 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "visible", flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBar.tsx");
@@ -80,7 +80,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   }, items1);
   let obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(11528).Profiles.Guilds;
+  obj.profile = fastListRef(11562).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;
@@ -107,6 +107,6 @@ export default noop.memo(function GuildsBar(enableHome) {
   const items2 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {})];
   obj3.children = items2;
   obj2.children = closure_5(tmp12, obj3);
-  obj.children = closure_4(fastListRef(5298).GestureDetector, obj2);
+  obj.children = closure_4(fastListRef(5303).GestureDetector, obj2);
   return closure_4(tmp10, obj);
 });

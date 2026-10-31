@@ -1,27 +1,27 @@
-// === Module 12414: useConjurePublishPanel ===
+// === Module 12452: useConjurePublishPanel ===
 
-// Module 12414 (useConjurePublishPanel)
-import _modDef3865 from "module_3865" /* 3865 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9022 */;
+// Module 12452 (useConjurePublishPanel)
+import _modDef3868 from "module_3868" /* 3868 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9031 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6838).isProjectOwner;
+const isProjectOwner = fn(6844).isProjectOwner;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
-let items = [fn(6839).ConjureSupportedSurface.BOT, _modDef3865.UnoAgo];
+let items = [fn(6845).ConjureSupportedSurface.BOT, _modDef3868.UnoAgo];
 let items1 = [items, , , ];
-let items2 = [fn(6839).ConjureSupportedSurface.ACTIVITY, _modDef3865["I88/iG"]];
+let items2 = [fn(6845).ConjureSupportedSurface.ACTIVITY, _modDef3868["I88/iG"]];
 items1[1] = items2;
-let items3 = [fn(6839).ConjureSupportedSurface.PROFILE_WIDGET, _modDef3865.gXY1x1];
+let items3 = [fn(6845).ConjureSupportedSurface.PROFILE_WIDGET, _modDef3868.gXY1x1];
 items1[2] = items3;
-let items4 = [fn(6839).ConjureSupportedSurface.AUTOMOD, _modDef3865.Q9ruoM];
+let items4 = [fn(6845).ConjureSupportedSurface.AUTOMOD, _modDef3868.Q9ruoM];
 items1[3] = items4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishPanel.tsx");
@@ -39,7 +39,7 @@ export default function useConjurePublishPanel(id, guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -269,4 +269,4 @@ export default function useConjurePublishPanel(id, guildId) {
   return obj5;
 };
 export const CONJURE_PUBLISH_COMPONENTS = items1;
-export const CONJURE_PUBLISH_PERMISSION_LABELS = { screen_capture: _modDef3865["8/7kE7"], connect_user_to_voice: _modDef3865.uvDWXa };
+export const CONJURE_PUBLISH_PERMISSION_LABELS = { screen_capture: _modDef3868["8/7kE7"], connect_user_to_voice: _modDef3868.uvDWXa };

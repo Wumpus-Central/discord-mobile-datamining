@@ -1,6 +1,6 @@
-// === Module 12250: AppLauncherOnboardingActionCreators ===
+// === Module 12288: AppLauncherOnboardingActionCreators ===
 
-// Module 12250 (AppLauncherOnboardingActionCreators)
+// Module 12288 (AppLauncherOnboardingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

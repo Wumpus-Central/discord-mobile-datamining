@@ -1,23 +1,23 @@
-// === Module 15034: CollectiblesEditUserProfileListItems ===
+// === Module 15071: CollectiblesEditUserProfileListItems ===
 
-// Module 15034 (CollectiblesEditUserProfileListItems)
+// Module 15071 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Pressables from "Pressables" /* 6974 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7712 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7725 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8736 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 9504 */;
-import _modDef15035 from "module_15035" /* 15035 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Pressables from "Pressables" /* 6980 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7732 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8744 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 9526 */;
+import _modDef15072 from "module_15072" /* 15072 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 class EditCollectibleListItem {
@@ -60,7 +60,7 @@ const View = fn(17).View;
 let closure_6 = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { pressable: { marginTop: 10, borderRadius: nativeDefault.radii.sm }, item: null, selected: null, optionCell: null, optionCellText: null, newIcon: null, lockIcon: null };
 let obj3 = { marginTop: 10, borderRadius: nativeDefault.radii.sm };
 obj2.item = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
@@ -79,7 +79,7 @@ export function EditCollectiblesListItemNone(asDefault) {
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  const items = [React5(native.Icon, { source: _modDef15035, size: native.IconSizes.LARGE }), ];
+  const items = [React5(native.Icon, { source: _modDef15072, size: native.IconSizes.LARGE }), ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
   const string = intl.string;
@@ -99,7 +99,7 @@ export function EditCollectiblesListItemShop(analyticsSource) {
   const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
   let analyticsLocations;
   const tmp2 = closure_9();
-  analyticsLocations = analyticsLocations(7320)(analyticsSource).analyticsLocations;
+  analyticsLocations = analyticsLocations(7326)(analyticsSource).analyticsLocations;
   const items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
@@ -111,12 +111,12 @@ export function EditCollectiblesListItemShop(analyticsSource) {
     }, items)
   };
   const merged1 = Object.assign(merged);
-  const items1 = [closure_7(analyticsSource(1188).Icon, { source: analyticsLocations(15036), size: analyticsSource(1188).IconSizes.LARGE }), , ];
+  const items1 = [closure_7(analyticsSource(1187).Icon, { source: analyticsLocations(15073), size: analyticsSource(1187).IconSizes.LARGE }), , ];
   const obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
-  const intl = analyticsSource(1114).intl;
-  obj3.children = intl.string(analyticsSource(1114).t.pWG4ze);
-  items1[1] = closure_7(analyticsSource(5619).Text, obj3);
-  items1[2] = closure_7(analyticsSource(9504).NewBadge, { style: tmp2.newIcon });
+  const intl = analyticsSource(1113).intl;
+  obj3.children = intl.string(analyticsSource(1113).t.pWG4ze);
+  items1[1] = closure_7(analyticsSource(5624).Text, obj3);
+  items1[2] = closure_7(analyticsSource(9526).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
 }

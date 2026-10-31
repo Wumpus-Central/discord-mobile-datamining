@@ -1,22 +1,22 @@
-// === Module 9773: PremiumUpsellActionSheet ===
+// === Module 9794: PremiumUpsellActionSheet ===
 
-// Module 9773 (PremiumUpsellActionSheet)
+// Module 9794 (PremiumUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import PremiumUtils from "PremiumUtils" /* 2048 */;
-import ChatInputUtils from "ChatInputUtils" /* 5202 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import APNGPlayer from "APNGPlayer" /* 9482 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9772 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import PremiumUtils from "PremiumUtils" /* 2047 */;
+import ChatInputUtils from "ChatInputUtils" /* 5207 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import APNGPlayer from "APNGPlayer" /* 9504 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9793 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5759 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
-import UserStore from "UserStore" /* 1384 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5764 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function PremiumUpsellImage(arg0) {
@@ -66,15 +66,15 @@ function PremiumUpsellHero(arg0) {
   return tmp13;
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1386);
+const PremiumConstants = fn(1385);
 ({ PremiumSubscriptionSKUs: c10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(5859).ApplicationStreamFPS;
-const premiumMax = fn(9774).MAX_SCHEDULED_MESSAGES_PER_USER;
+const ApplicationStreamFPS = fn(5864).ApplicationStreamFPS;
+const premiumMax = fn(9795).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 }, image: { width: 240, height: 144 }, text: { alignSelf: "center", textAlign: "center" }, betaTag: { marginLeft: 0 }, description: null, textContainer: null, buttonContainer: null, imageGradientBackgroundContainer: null, imageGradientBackground: null, imageInGradientBackground: null };
 let obj3 = { alignSelf: "center", marginTop: nativeDefault.space.PX_16 };
 obj2.description = { marginHorizontal: nativeDefault.space.PX_16 };

@@ -1,15 +1,15 @@
-// === Module 18940: SettingsOverviewScreen ===
+// === Module 18989: SettingsOverviewScreen ===
 
-// Module 18940 (SettingsOverviewScreen)
-import util from "util" /* 1114 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import SettingBuilders from "SettingBuilders" /* 11505 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17409 */;
+// Module 18989 (SettingsOverviewScreen)
+import util from "util" /* 1113 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import SettingBuilders from "SettingBuilders" /* 11539 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17469 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
 
 require = fn;
-const MobileUserSettings = fn(8424).MobileUserSettings;
+const MobileUserSettings = fn(8432).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
@@ -32,8 +32,8 @@ export default function SettingsOverviewScreen() {
     if (!hasPremiumSubscriptionToDisplay) {
       PREMIUM = MobileUserSettings.PREMIUM;
     }
-    const items = [PREMIUM, , , , , , , , , , ];
-    ({ ACCOUNT: arr[1], CONTENT_AND_SOCIAL: arr[2], DATA_AND_PRIVACY: arr[3], SPONSORED_CONTENT_PREFERENCES: arr[4], FAMILY_CENTER: arr[5], AUTHORIZED_APPS: arr[6], DEVICES: arr[7], CONNECTIONS: arr[8], CLIPS: arr[9], SCAN_QR_CODE: arr[10] } = MobileUserSettings);
+    const items = [PREMIUM, , , , , , , , , ];
+    ({ ACCOUNT: arr[1], CONTENT_AND_SOCIAL: arr[2], DATA_AND_PRIVACY: arr[3], SPONSORED_CONTENT_PREFERENCES: arr[4], FAMILY_CENTER: arr[5], DEVICES: arr[6], CONNECTIONS: arr[7], CLIPS: arr[8], SCAN_QR_CODE: arr[9] } = MobileUserSettings);
     obj2.settings = items.filter(GlobalUtils.isNotNullish);
     const items1 = [obj2, , , , , , , , , ];
     const obj3 = { label: null, settings: null };

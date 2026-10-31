@@ -1,10 +1,10 @@
-// === Module 7387: ConjureBuilderRouteStore ===
+// === Module 7393: ConjureBuilderRouteStore ===
 
-// Module 7387 (ConjureBuilderRouteStore)
+// Module 7393 (ConjureBuilderRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelConstants from "ChannelConstants" /* 4865 */;
-import conjureGuildReturnsToProjectDefault from "conjureGuildReturnsToProject" /* 7388 */;
+import ChannelConstants from "ChannelConstants" /* 4870 */;
+import conjureGuildReturnsToProjectDefault from "conjureGuildReturnsToProject" /* 7394 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;

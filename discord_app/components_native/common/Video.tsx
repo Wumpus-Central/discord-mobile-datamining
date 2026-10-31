@@ -1,11 +1,11 @@
-// === Module 8864: common/Video ===
+// === Module 8873: common/Video ===
 
-// Module 8864 (common/Video)
+// Module 8873 (common/Video)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7201 */;
-import openMediaModal from "openMediaModal" /* 8825 */;
+import util from "util" /* 1113 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7207 */;
+import openMediaModal from "openMediaModal" /* 8833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -43,6 +43,7 @@ class VideoComponent {
       flag4 = true;
     }
     closure_1 = undefined;
+    ({ httpEngine, useTextureView } = global);
     tmp = closure_3(closure_4.useState("active" === AppState.currentState), 2);
     closure_1 = tmp[1];
     items = [];
@@ -57,7 +58,7 @@ class VideoComponent {
         };
       }
     }, items);
-    obj = { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null };
+    obj = { style, source, importantForAccessibility, poster, muted: flag2, paused: null, posterResizeMode: null, resizeMode: null, repeat: true, playInBackground: null, pictureInPicture: false, playWhenInactive: false, onLoadStart: null, onLoad: null, onReadyForDisplay: null, onError: null, onEnd: null, disableFocus: null, "aria-hidden": null, mixWithOthers: null, preventsDisplaySleepDuringVideoPlayback: null, httpEngine: null, useTextureView: null };
     tmp3 = jsx;
     if (!flag) {
       if (pauseWhileAppInactive) {
@@ -78,7 +79,8 @@ class VideoComponent {
     obj["aria-hidden"] = ariaHidden;
     obj.mixWithOthers = mixWithOthers;
     obj.preventsDisplaySleepDuringVideoPlayback = flag4;
-    obj.httpEngine = global.httpEngine;
+    obj.httpEngine = httpEngine;
+    obj.useTextureView = useTextureView;
     props = undefined;
     if (controls != null) {
       props = controls.props;
@@ -90,7 +92,7 @@ class VideoComponent {
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: hasOwnProperty, View: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, video: null };
 let obj3 = { flex: 1, shadowColor: nativeDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.video = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -230,7 +232,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(5075).ThemeContext;
+Video.contextType = fn(5080).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

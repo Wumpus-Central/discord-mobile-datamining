@@ -1,26 +1,26 @@
-// === Module 19944: NotificationSettingChannelOverrides ===
+// === Module 20002: NotificationSettingChannelOverrides ===
 
-// Module 19944 (NotificationSettingChannelOverrides)
+// Module 20002 (NotificationSettingChannelOverrides)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5018 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7275 */;
+import util from "util" /* 1113 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5023 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7281 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7274 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7280 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const isGuildReadableType = fn(4862).isGuildReadableType;
+const isGuildReadableType = fn(4867).isGuildReadableType;
 const Constants = fn(1072);
 ({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };

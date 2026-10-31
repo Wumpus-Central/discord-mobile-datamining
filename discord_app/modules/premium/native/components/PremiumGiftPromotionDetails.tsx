@@ -1,14 +1,14 @@
-// === Module 10605: PremiumGiftPromotionDetails ===
+// === Module 10625: PremiumGiftPromotionDetails ===
 
-// Module 10605 (PremiumGiftPromotionDetails)
+// Module 10625 (PremiumGiftPromotionDetails)
 import nativeDefault from "native" /* 575 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1377 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1988 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import SKUPreview from "SKUPreview" /* 9444 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import SKUPreview from "SKUPreview" /* 9466 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
@@ -105,7 +105,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xs };
@@ -113,7 +113,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1, alignSelf: "center" };
   return obj;
 });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj3 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, overflow: "hidden" };
 obj3.preview = size;
@@ -163,7 +163,7 @@ export function PremiumGiftPromotionCollectibleRewardDetails(product) {
       let rounded = Math.floor(1.2 * PX_40);
     } else {
       rounded = PX_40;
-      if (memo.item.type === tmp8(1988).CollectiblesItemType.AVATAR_DECORATION) {
+      if (memo.item.type === tmp8(1987).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
         rounded = Math.floor(1.5 * PX_40);
       }

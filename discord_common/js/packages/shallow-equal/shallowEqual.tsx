@@ -45,12 +45,12 @@ export default function shallowEqual(activeMediaPlayerSource, _require, arr) {
     return tmp2;
   }
 };
-export function areArraysShallowEqual(colors, current) {
-  closure_0 = current;
+export function areArraysShallowEqual(colors, colors2) {
+  closure_0 = colors2;
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = closure_0;
   }
   ({ logCallback, shouldWarnLargeObjects } = tmp);
-  return null != current && colors.length === current.length && colors.every((item, index) => closure_0[index] === item);
+  return null != colors2 && colors.length === colors2.length && colors.every((item, index) => closure_0[index] === item);
 }

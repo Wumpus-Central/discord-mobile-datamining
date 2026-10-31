@@ -1,11 +1,11 @@
-// === Module 9802: useActiveTheme ===
+// === Module 9823: useActiveTheme ===
 
-// Module 9802 (useActiveTheme)
+// Module 9823 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5192 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5033 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1239 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5197 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5038 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 
 require = fn;
 function useActiveThemeType() {
@@ -41,7 +41,7 @@ function useActiveThemeType() {
   }
   return DEFAULT;
 }
-const ThemeConstants = fn(1196);
+const ThemeConstants = fn(1195);
 ({ SystemThemeState: metroRequire, ActiveThemeType: closure_7 } = ThemeConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/client_themes/native/useActiveTheme.tsx");

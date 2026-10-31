@@ -1,7 +1,7 @@
-// === Module 15941: WarningCircle ===
+// === Module 15982: WarningCircle ===
 
-// Module 15941 (WarningCircle)
-import inlineStyles from "inlineStyles" /* 8023 */;
+// Module 15982 (WarningCircle)
+import inlineStyles from "inlineStyles" /* 8031 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,18 +1,18 @@
-// === Module 19400: ActivityFeedbackActionSheet ===
+// === Module 19457: ActivityFeedbackActionSheet ===
 
-// Module 19400 (ActivityFeedbackActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import ToastUtils from "ToastUtils" /* 5706 */;
-import FeedbackUtils from "FeedbackUtils" /* 10141 */;
-import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 10159 */;
-import getActivityReportOptionsDefault from "getActivityReportOptions" /* 19401 */;
-import trackActivityProblemDefault from "trackActivityProblem" /* 19402 */;
+// Module 19457 (ActivityFeedbackActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ToastUtils from "ToastUtils" /* 5711 */;
+import FeedbackUtils from "FeedbackUtils" /* 10161 */;
+import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 10179 */;
+import getActivityReportOptionsDefault from "getActivityReportOptions" /* 19458 */;
+import trackActivityProblemDefault from "trackActivityProblem" /* 19459 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ActivityFeedbackReasons = fn(2019).ActivityFeedbackReasons;
+const ActivityFeedbackReasons = fn(2018).ActivityFeedbackReasons;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const FeedbackType = fn(10138).FeedbackType;
+const FeedbackType = fn(10158).FeedbackType;
 const jsx = fn(21).jsx;
 const items = [, , ];
 ({ OTHER: arr[0], ADS: arr[1], NOT_FUN: arr[2] } = ActivityFeedbackReasons);
@@ -29,12 +29,12 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
   }
   let obj = { headerLabel: null, showHeaderCloseButton: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
   const tmp2 = getActivityReportOptionsDefault(true, true === prop);
-  const intl = activityApplication(1114).intl;
-  obj.headerLabel = intl.formatToPlainString(activityApplication(1114).t.QXYwoD, { applicationName: activityApplication.name });
-  const intl2 = activityApplication(1114).intl;
-  obj.ratingsBodyLabel = intl2.string(activityApplication(1114).t["9hk2KF"]);
-  const intl3 = activityApplication(1114).intl;
-  obj.reasonsHeaderLabel = intl3.string(activityApplication(1114).t.g1q5fr);
+  const intl = activityApplication(1113).intl;
+  obj.headerLabel = intl.formatToPlainString(activityApplication(1113).t.QXYwoD, { applicationName: activityApplication.name });
+  const intl2 = activityApplication(1113).intl;
+  obj.ratingsBodyLabel = intl2.string(activityApplication(1113).t["9hk2KF"]);
+  const intl3 = activityApplication(1113).intl;
+  obj.reasonsHeaderLabel = intl3.string(activityApplication(1113).t.g1q5fr);
   obj.reasons = tmp2;
   obj.feedbackReasons = items;
   obj.otherKey = ActivityFeedbackReasons.OTHER;

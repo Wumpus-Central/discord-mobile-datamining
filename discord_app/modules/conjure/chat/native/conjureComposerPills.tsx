@@ -1,14 +1,14 @@
-// === Module 12758: conjureComposerPills ===
+// === Module 12793: conjureComposerPills ===
 
-// Module 12758 (conjureComposerPills)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import UserUtils from "UserUtils" /* 5063 */;
-import _modDef11044 from "module_11044" /* 11044 */;
-import ChatInputParser from "ChatInputParser" /* 12759 */;
+// Module 12793 (conjureComposerPills)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import UserUtils from "UserUtils" /* 5068 */;
+import _modDef11063 from "module_11063" /* 11063 */;
+import ChatInputParser from "ChatInputParser" /* 12794 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1384 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12452 */;
+import UserStore from "UserStore" /* 1383 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12487 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11044).uri;
+  return Image.resolveAssetSource(_modDef11063).uri;
 }
 export function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -60,7 +60,7 @@ export function conjureUserPillLabel(id) {
 export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12599).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(12634).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -77,7 +77,7 @@ export function decodeConjurePills(draft) {
         }
         if (combined == null) {
           const intl = util.intl;
-          combined = intl.string(_modDef3865.ff9Q4C);
+          combined = intl.string(_modDef3868.ff9Q4C);
         }
       }
       const combined1 = "\u2060" + combined;
@@ -111,7 +111,7 @@ export function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11044).uri;
+        uri = Image.resolveAssetSource(_modDef11063).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);

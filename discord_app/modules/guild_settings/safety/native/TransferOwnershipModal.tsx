@@ -1,10 +1,10 @@
-// === Module 13223: TransferOwnershipModal ===
+// === Module 13258: TransferOwnershipModal ===
 
-// Module 13223 (TransferOwnershipModal)
-import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
-import NavigatorHeader from "NavigatorHeader" /* 6992 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 13222 */;
+// Module 13258 (TransferOwnershipModal)
+import util from "util" /* 1113 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import NavigatorHeader from "NavigatorHeader" /* 6998 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 13257 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 function closeModal() {
   TransferOwnershipModalActionCreatorsDefault.close();
 }
-const TransferOwnershipConstants = fn(13224);
+const TransferOwnershipConstants = fn(13259);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } = TransferOwnershipConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -48,7 +48,7 @@ export default function TransferOwnershipModal(guild) {
         c2 = 0;
         c1 = 0;
         return (function*(arg0) {
-          yield toUser(9055).transferOwnership(id.id, id2.id, constants.EMAIL, id);
+          yield toUser(9074).transferOwnership(id.id, id2.id, constants.EMAIL, id);
           return value;
         })();
       });
@@ -63,11 +63,11 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        toUser(13222).close();
-        const obj = toUser(13222);
-        toUser(9055).close();
-        const obj2 = toUser(9055);
-        const result = closure_0(5706).showTransferOwnershipSuccess();
+        toUser(13257).close();
+        const obj = toUser(13257);
+        toUser(9074).close();
+        const obj2 = toUser(9074);
+        const result = closure_0(5711).showTransferOwnershipSuccess();
       };
       obj.onResend = closure_1_3(function*() {
         if (c0 === 2) {
@@ -80,7 +80,7 @@ export default function TransferOwnershipModal(guild) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -108,7 +108,7 @@ export default function TransferOwnershipModal(guild) {
               return obj;
             } else {
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp8) {
             c0 = tmp;
@@ -116,17 +116,17 @@ export default function TransferOwnershipModal(guild) {
           }
         }
       });
-      const intl = guild(1114).intl;
-      obj.headerText = intl.string(guild(1114).t.Z5s7PM);
-      const intl2 = guild(1114).intl;
-      obj.confirmButtonText = intl2.string(guild(1114).t.Z5s7PM);
-      return closure_1_7(toUser(7074), obj);
+      const intl = guild(1113).intl;
+      obj.headerText = intl.string(guild(1113).t.Z5s7PM);
+      const intl2 = guild(1113).intl;
+      obj.confirmButtonText = intl2.string(guild(1113).t.Z5s7PM);
+      return closure_1_7(toUser(7080), obj);
     };
     obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
     return obj2;
   }, items);
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
-  let intl = guild(1114).intl;
-  obj.headerBackTitle = intl.string(guild(1114).t["13/7kX"]);
-  return jsx(guild(7163).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
+  let intl = guild(1113).intl;
+  obj.headerBackTitle = intl.string(guild(1113).t["13/7kX"]);
+  return jsx(guild(7169).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
 };

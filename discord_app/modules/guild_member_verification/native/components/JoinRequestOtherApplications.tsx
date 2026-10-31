@@ -1,13 +1,13 @@
-// === Module 18608: JoinRequestOtherApplications ===
+// === Module 18650: JoinRequestOtherApplications ===
 
-// Module 18608 (JoinRequestOtherApplications)
+// Module 18650 (JoinRequestOtherApplications)
 import nativeDefault from "native" /* 575 */;
-import DateUtils from "DateUtils" /* 4831 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5043 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import CircleXIcon from "CircleXIcon" /* 7086 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7334 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18605 */;
+import DateUtils from "DateUtils" /* 4836 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5048 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import CircleXIcon from "CircleXIcon" /* 7092 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7340 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18647 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -29,7 +29,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { label: { marginHorizontal: 16, marginBottom: 8 }, container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginHorizontal: 16, marginBottom: 12, borderRadius: nativeDefault.radii.md }, row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 16 }, divider: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.divider = size;
@@ -47,9 +47,9 @@ export default noop.memo(function JoinRequestOtherApplications(arg0) {
   if (0 !== otherGuildJoinRequestsForUser.length) {
     let obj2 = { children: null };
     let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
-    const intl = tmp2(1114).intl;
-    obj3.children = intl.string(tmp2(1114).t["hxa+G3"]);
-    let items = [closure_6(tmp2(5619).Text, obj3), ];
+    const intl = tmp2(1113).intl;
+    obj3.children = intl.string(tmp2(1113).t["hxa+G3"]);
+    let items = [closure_6(tmp2(5624).Text, obj3), ];
     let obj4 = {
       style: tmp.container,
       children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

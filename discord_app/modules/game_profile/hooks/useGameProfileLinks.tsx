@@ -1,8 +1,8 @@
-// === Module 9571: useGameProfileLinks ===
+// === Module 9593: useGameProfileLinks ===
 
-// Module 9571 (useGameProfileLinks)
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9373 */;
+// Module 9593 (useGameProfileLinks)
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9393 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,10 +15,10 @@ export function useGameProfileLinks(game) {
     const websites = game.websites;
     const found = websites.filter((category) => {
       category = category.category;
-      const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = game(9323).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = game(9343).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       let hasItem = GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES.includes(category);
       if (hasItem) {
-        const MOBILE_STORE_WEBSITE_CATEGORIES = game(9373).MOBILE_STORE_WEBSITE_CATEGORIES;
+        const MOBILE_STORE_WEBSITE_CATEGORIES = game(9393).MOBILE_STORE_WEBSITE_CATEGORIES;
         hasItem = !MOBILE_STORE_WEBSITE_CATEGORIES.has(category);
       }
       return hasItem;
@@ -27,9 +27,9 @@ export function useGameProfileLinks(game) {
     const mapped = values.map((item) => closure_0(dependencyMap[2]).getMobileStoreLink(game, item));
     const found1 = mapped.filter(GlobalUtils.isNotNullish);
     const sorted = found.sort((category, category2) => {
-      const prop = game(9323).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const prop = game(9343).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       const index = prop.indexOf(category.category);
-      const prop1 = game(9323).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
+      const prop1 = game(9343).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       return index - prop1.indexOf(category2.category);
     });
     return sorted.concat(found1);

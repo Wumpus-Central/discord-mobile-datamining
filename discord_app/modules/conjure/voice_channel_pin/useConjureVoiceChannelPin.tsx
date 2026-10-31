@@ -1,23 +1,23 @@
-// === Module 12617: useConjureVoiceChannelPin ===
+// === Module 12652: useConjureVoiceChannelPin ===
 
-// Module 12617 (useConjureVoiceChannelPin)
-import useChannelName from "useChannelName" /* 5647 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 10940 */;
+// Module 12652 (useConjureVoiceChannelPin)
+import useChannelName from "useChannelName" /* 5652 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 10959 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildChannelStore from "GuildChannelStore" /* 4939 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
-import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 10851 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjureVoiceChannelPinStore from "ConjureVoiceChannelPinStore" /* 10871 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4939).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const size = fn(2);
@@ -109,7 +109,7 @@ export function useConjureVoiceChannelPinForm(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

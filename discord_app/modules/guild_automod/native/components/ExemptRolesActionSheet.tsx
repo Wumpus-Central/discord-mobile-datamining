@@ -1,9 +1,9 @@
-// === Module 19642: ExemptRolesActionSheet ===
+// === Module 19699: ExemptRolesActionSheet ===
 
-// Module 19642 (ExemptRolesActionSheet)
-import RoleNameDefault from "RoleName" /* 13215 */;
+// Module 19699 (ExemptRolesActionSheet)
+import RoleNameDefault from "RoleName" /* 13250 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4915 */;
+import GuildRoleStore from "GuildRoleStore" /* 4920 */;
 
 const require = fn;
 function renderRoleName(role) {
@@ -15,7 +15,7 @@ function getRoleId(id) {
 function getRoleName(name) {
   return name.name;
 }
-const isEveryoneRole = fn(4916).isEveryoneRole;
+const isEveryoneRole = fn(4921).isEveryoneRole;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/ExemptRolesActionSheet.tsx");
@@ -30,15 +30,15 @@ export default function ExemptRolesActionSheet(guildId) {
   const memo = noop.useMemo(() => stateFromStores.filter((item) => !closure_1_4(item)), items2);
   const obj2 = { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null };
   const obj = guildId(504);
-  const intl = guildId(1114).intl;
-  obj2.title = intl.string(guildId(1114).t["LPJmL/"]);
-  const intl2 = guildId(1114).intl;
-  obj2.searchPlaceholder = intl2.string(guildId(1114).t.aFO1I6);
+  const intl = guildId(1113).intl;
+  obj2.title = intl.string(guildId(1113).t["LPJmL/"]);
+  const intl2 = guildId(1113).intl;
+  obj2.searchPlaceholder = intl2.string(guildId(1113).t.aFO1I6);
   obj2.items = memo;
   obj2.initialSelected = exemptRoles;
   obj2.getId = getRoleId;
   obj2.getSearchText = getRoleName;
   obj2.renderLabel = renderRoleName;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(19643), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
+  return jsx(stateFromStores(19700), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
 };

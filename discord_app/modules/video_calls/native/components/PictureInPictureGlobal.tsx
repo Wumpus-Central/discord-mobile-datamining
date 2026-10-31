@@ -1,38 +1,38 @@
-// === Module 18948: PictureInPictureGlobal ===
+// === Module 18997: PictureInPictureGlobal ===
 
-// Module 18948 (PictureInPictureGlobal)
+// Module 18997 (PictureInPictureGlobal)
 import nativeDefault from "native" /* 575 */;
-import native2 from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import NavigatorConstants from "NavigatorConstants" /* 5581 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6845 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7931 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11660 */;
-import PictureInPictureDefault from "PictureInPicture" /* 11669 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18949 */;
+import native2 from "native" /* 1187 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import NavigatorConstants from "NavigatorConstants" /* 5586 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6851 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7939 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11697 */;
+import PictureInPictureDefault from "PictureInPicture" /* 11706 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4857 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6837 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4862 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6843 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2007 */;
+import MediaEngineStore from "MediaEngineStore" /* 2006 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9874).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9895).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
-const ParticipantTypes = fn(5676).ParticipantTypes;
+const ParticipantTypes = fn(5681).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
-const native = fn(1188);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1188).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1187);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1187).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.pip = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let obj3 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.background = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };

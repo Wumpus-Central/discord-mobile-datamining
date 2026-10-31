@@ -1,14 +1,14 @@
-// === Module 16511: UserProfilePremiumUpsellCard ===
+// === Module 16553: UserProfilePremiumUpsellCard ===
 
-// Module 16511 (UserProfilePremiumUpsellCard)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1626 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7155 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7320 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9884 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9885 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16438 */;
+// Module 16553 (UserProfilePremiumUpsellCard)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1625 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7161 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7326 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9905 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9906 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16480 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,23 +19,23 @@ function UpsellCardLayout(arg0) {
 }
 function PreviewNitroCard(style) {
   let navigation;
-  navigation = navigation(1498).useNavigation();
+  navigation = navigation(1497).useNavigation();
   items = [navigation];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
   const callback = noop.useCallback(() => {
     UserSettingsModalActionCreatorsDefault.setSection(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
     navigation.push(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
   }, items);
-  const intl = navigation(1114).intl;
-  obj2.ctaText = intl.string(navigation(1114).t.PxUx8e);
-  const intl2 = navigation(1114).intl;
-  obj2.description = intl2.string(navigation(1114).t.Tii53U);
+  const intl = navigation(1113).intl;
+  obj2.ctaText = intl.string(navigation(1113).t.PxUx8e);
+  const intl2 = navigation(1113).intl;
+  obj2.description = intl2.string(navigation(1113).t.Tii53U);
   obj2.onPress = callback;
   return <UpsellCardLayout style={style.style} ctaText={null} description={null} onPress={null} />;
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7619).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7626).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
@@ -44,12 +44,12 @@ function GetNitroCard(style) {
     openPremiumModalDefault(obj);
   }, items);
   if (nitroTrialCtaOverride == null) {
-    const intl = tmp(1114).intl;
-    nitroTrialCtaOverride = intl.string(tmp(1114).t.pj0XBN);
+    const intl = tmp(1113).intl;
+    nitroTrialCtaOverride = intl.string(tmp(1113).t.pj0XBN);
   }
   obj2.ctaText = nitroTrialCtaOverride;
-  const intl2 = tmp(1114).intl;
-  obj2.description = intl2.string(analyticsLocations(1114).t.ZFR9LF);
+  const intl2 = tmp(1113).intl;
+  obj2.description = intl2.string(analyticsLocations(1113).t.ZFR9LF);
   obj2.onPress = callback;
   return <UpsellCardLayout style={style.style} ctaText={null} description={null} onPress={null} />;
 }
@@ -57,7 +57,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;

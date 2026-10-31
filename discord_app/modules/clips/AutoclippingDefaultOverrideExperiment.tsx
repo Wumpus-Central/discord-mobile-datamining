@@ -1,7 +1,7 @@
-// === Module 15838: AutoclippingDefaultOverrideExperiment ===
+// === Module 15879: AutoclippingDefaultOverrideExperiment ===
 
-// Module 15838 (AutoclippingDefaultOverrideExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 15879 (AutoclippingDefaultOverrideExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-07-autoclipping-default-override", defaultConfig: { enabled: false }, variations: null };

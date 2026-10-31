@@ -1,9 +1,9 @@
-// === Module 17660: DevToolsGuildTagBadgesScreen ===
+// === Module 17704: DevToolsGuildTagBadgesScreen ===
 
-// Module 17660 (DevToolsGuildTagBadgesScreen)
+// Module 17704 (DevToolsGuildTagBadgesScreen)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import badges_GuildBadge from "badges/GuildBadge" /* 15699 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import badges_GuildBadge from "badges/GuildBadge" /* 15739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(8385);
+const GuildTagConstants = fn(8393);
 ({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire, GUILD_TAG_BADGE_PALETTE_PRESETS, GuildTagBadgeKind } = GuildTagConstants);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
@@ -25,9 +25,9 @@ let closure_9 = found.map((item) => {
   [tmp, tmp2] = item;
   return { name, value };
 });
-let items = [{ label: "Untinted", primary: "displayName", secondary: "d" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({ label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary }))];
+let items = [{ label: "Untinted", primary: "diversity", secondary: "d" }, ...GUILD_TAG_BADGE_PALETTE_PRESETS.map((primary, index) => ({ label: "P" + index + 1, primary: primary.primary, secondary: primary.secondary }))];
 const dependencyMap = [24, 48, 72];
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, controlRow: null, grid: null, tile: null, badgeBox: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };

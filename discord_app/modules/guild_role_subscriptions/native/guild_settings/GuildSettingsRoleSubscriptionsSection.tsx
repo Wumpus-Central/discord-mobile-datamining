@@ -1,16 +1,16 @@
-// === Module 19595: GuildSettingsRoleSubscriptionsSection ===
+// === Module 19652: GuildSettingsRoleSubscriptionsSection ===
 
-// Module 19595 (GuildSettingsRoleSubscriptionsSection)
+// Module 19652 (GuildSettingsRoleSubscriptionsSection)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5730 */;
-import TableRow from "TableRow" /* 6969 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
-import TagsIcon from "TagsIcon" /* 11118 */;
-import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17301 */;
-import WalletIcon from "WalletIcon" /* 19596 */;
+import util from "util" /* 1113 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5735 */;
+import TableRow from "TableRow" /* 6975 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import TagsIcon from "TagsIcon" /* 11137 */;
+import EmojiMoneyMouthFaceIcon from "EmojiMoneyMouthFaceIcon" /* 17361 */;
+import WalletIcon from "WalletIcon" /* 19653 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function HasCreatedListingsSection(arg0) {
@@ -61,7 +61,7 @@ function HasCreatedListingsSection(arg0) {
   obj2.children = items1;
   return closure_7(TableRowGroup.TableRowGroup, obj2);
 }
-const isGuildOwner = fn(4876).isGuildOwner;
+const isGuildOwner = fn(4881).isGuildOwner;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

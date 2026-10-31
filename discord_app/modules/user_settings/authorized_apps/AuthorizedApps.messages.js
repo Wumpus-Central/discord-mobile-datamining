@@ -1,20 +1,20 @@
-// === Module 2140: ? ===
+// === Module 2139: ? ===
 
-// Module 2140
-import AssetJsonUtils from "AssetJsonUtils" /* 1118 */;
-import _mod2141 from "module_2141" /* 2141 */;
-import module_1153_mod from "module_1153" /* 1153 */;
+// Module 2139
+import AssetJsonUtils from "AssetJsonUtils" /* 1117 */;
+import _mod2140 from "module_2140" /* 2140 */;
+import module_1152_mod from "module_1152" /* 1152 */;
 import size from "module_2" /* 2 */;
 
-let module_1153 = module_1153_mod;
-const loader = module_1153.createLoader({
+let module_1152 = module_1152_mod;
+const loader = module_1152.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2141);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2140);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1153 = module_1153_mod;
-const messagesProxy = module_1153.makeMessagesProxy(loader);
+let module_1152 = module_1152_mod;
+const messagesProxy = module_1152.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/AuthorizedApps.messages.js");
 
 export default messagesProxy;

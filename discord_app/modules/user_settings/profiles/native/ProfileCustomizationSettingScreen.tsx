@@ -1,19 +1,19 @@
-// === Module 16386: ProfileCustomizationSettingScreen ===
+// === Module 16428: ProfileCustomizationSettingScreen ===
 
-// Module 16386 (ProfileCustomizationSettingScreen)
-import util from "util" /* 1114 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5755 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7146 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11370 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11485 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16387 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16512 */;
+// Module 16428 (ProfileCustomizationSettingScreen)
+import util from "util" /* 1113 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5760 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7152 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 11406 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11519 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16429 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 16554 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11422 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8723 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11458 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8731 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_18 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {
@@ -161,7 +161,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -193,7 +193,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
                   closure_128_3(true);
                 }
                 c2 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp9) {
               c2 = tmp;

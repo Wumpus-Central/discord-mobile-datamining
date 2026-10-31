@@ -1,13 +1,13 @@
-// === Module 14964: useWishlistSuggestionsDismissibleContent ===
+// === Module 15001: useWishlistSuggestionsDismissibleContent ===
 
-// Module 14964 (useWishlistSuggestionsDismissibleContent)
-import DurationsDefault from "Durations" /* 1090 */;
+// Module 15001 (useWishlistSuggestionsDismissibleContent)
+import DurationsDefault from "Durations" /* 1089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
 
 const require = fn;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const cooldownDurationMs = 90 * DurationsDefault.Millis.DAY;
 let closure_7 = 90 * DurationsDefault.Millis.DAY;
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 14622: useMediaModalFooterAction ===
+// === Module 14660: useMediaModalFooterAction ===
 
-// Module 14622 (useMediaModalFooterAction)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
+// Module 14660 (useMediaModalFooterAction)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -19,5 +19,5 @@ export function setMediaModalFooterAction(footerAction) {
   });
 }
 export function clearMediaModalFooterAction() {
-  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "getCurrentUser" }));
+  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "Array" }));
 }

@@ -1,20 +1,20 @@
-// === Module 13912: ApplicationCommandsCategories ===
+// === Module 13947: ApplicationCommandsCategories ===
 
-// Module 13912 (ApplicationCommandsCategories)
+// Module 13947 (ApplicationCommandsCategories)
 import nativeDefault from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5256 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13743 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5261 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13778 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandsCategoriesConstants = fn(13909);
+const ApplicationCommandsCategoriesConstants = fn(13944);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: metroRequire } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, categoryImage: null, fadedItem: { opacity: 0.5 }, activeItem: null, item: null };
 let size = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
 obj.categoryImage = size;
@@ -53,9 +53,9 @@ let closure_9 = noop.memo(function CategoryItem(section) {
     accessibilityLabel: null,
     children: null
   };
-  const intl = tmp2(1114).intl;
+  const intl = tmp2(1113).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp2(1114).t;
+  const t = tmp2(1113).t;
   if (active) {
     const obj4 = { applicationName: section.name };
     let formatToPlainStringResult = formatToPlainString(t.yl24Gd, obj4);
@@ -66,7 +66,7 @@ let closure_9 = noop.memo(function CategoryItem(section) {
   obj3.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(6974).PressableOpacity, {
+  return jsx(section(6980).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
     },

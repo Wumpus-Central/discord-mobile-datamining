@@ -1,19 +1,19 @@
-// === Module 19484: PresetAvatarSelect ===
+// === Module 19541: PresetAvatarSelect ===
 
-// Module 19484 (PresetAvatarSelect)
+// Module 19541 (PresetAvatarSelect)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import Pressables from "Pressables" /* 6974 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 19485 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 19486 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 19487 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 19488 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 19489 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 19490 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 19491 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 19492 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import Pressables from "Pressables" /* 6980 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 19542 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 19543 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 19544 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 19545 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 19546 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 19547 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 19548 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 19549 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -154,7 +154,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   }
 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj10 = { container: { display: "flex", alignItems: "center", flex: 1 }, buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" }, defaultAvatarButton: null, defaultAvatarContainer: null, defaultAvatarSelected: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl };
 obj10.defaultAvatarButton = size;

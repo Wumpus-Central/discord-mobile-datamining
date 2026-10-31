@@ -1,11 +1,11 @@
-// === Module 4876: GuildRecord ===
+// === Module 4881: GuildRecord ===
 
-// Module 4876 (GuildRecord)
+// Module 4881 (GuildRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import StringUtils from "StringUtils" /* 2028 */;
-import ServerNSFWLevelExperiment from "ServerNSFWLevelExperiment" /* 4877 */;
-import PlainRecord from "PlainRecord" /* 4873 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import StringUtils from "StringUtils" /* 2026 */;
+import ServerNSFWLevelExperiment from "ServerNSFWLevelExperiment" /* 4882 */;
+import PlainRecord from "PlainRecord" /* 4878 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

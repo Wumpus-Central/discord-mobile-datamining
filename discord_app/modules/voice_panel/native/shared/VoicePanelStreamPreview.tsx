@@ -1,13 +1,13 @@
-// === Module 14852: VoicePanelStreamPreview ===
+// === Module 14890: VoicePanelStreamPreview ===
 
-// Module 14852 (VoicePanelStreamPreview)
+// Module 14890 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 575 */;
-import timing from "timing" /* 5249 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6711 */;
+import timing from "timing" /* 5254 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6717 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6708 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6714 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 5090 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 5095 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -17,9 +17,9 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_9 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5629).Button);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(5634).Button);
 const OPACITY_TIMING = { duration: 200 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.roundedCard = size;
@@ -49,8 +49,8 @@ export function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(12003)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(12003);
+  const previewUrl = stream(12041)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(12041);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
   const stateFromStores = mode(504).useStateFromStores(items, () => {
@@ -85,8 +85,8 @@ export function VoicePanelStreamPreview(mode) {
       return obj1;
     }
   }
-  let obj2 = mode(5090);
-  T.__closure = { mode, withTiming: mode(5249).withTiming, OPACITY_TIMING };
+  let obj2 = mode(5095);
+  T.__closure = { mode, withTiming: mode(5254).withTiming, OPACITY_TIMING };
   T.__workletHash = 15496474861955;
   T.__initData = __initData;
   const obj4 = { layout, onPress, style: tmp.roundedCard, disabled: null, accessible: false, children: null };
@@ -103,31 +103,31 @@ export function VoicePanelStreamPreview(mode) {
     const obj7 = { uri: previewUrl };
     obj6.source = obj7;
     obj6.style = absoluteFill.absoluteFill;
-    obj5.children = closure_7(tmp2(5712), obj6);
-    tmp14 = closure_7(tmp2(7235), obj5);
-    const tmp2Result = tmp2(7235);
+    obj5.children = closure_7(tmp2(5717), obj6);
+    tmp14 = closure_7(tmp2(7241), obj5);
+    const tmp2Result = tmp2(7241);
   }
   const items2 = [tmp14, ];
   const obj8 = { layout, children: null };
-  let obj3 = { mode, withTiming: mode(5249).withTiming, OPACITY_TIMING };
+  let obj3 = { mode, withTiming: mode(5254).withTiming, OPACITY_TIMING };
   const obj9 = { style: animatedStyle, children: null };
-  const tmp2Result3 = stream(7235);
+  const tmp2Result3 = stream(7241);
   if (stateFromStores) {
     const obj10 = { style: tmp.ownStreamTextContainer, children: null };
     const obj11 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };
-    const intl2 = tmp8(1114).intl;
-    obj11.children = intl2.string(tmp8(1114).t["ro/HN8"]);
-    obj10.children = closure_7(tmp8(5619).Text, obj11);
+    const intl2 = tmp8(1113).intl;
+    obj11.children = intl2.string(tmp8(1113).t["ro/HN8"]);
+    obj10.children = closure_7(tmp8(5624).Text, obj11);
     let tmp18Result = closure_7(closure_4, obj10);
   } else {
     const obj12 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
-    const intl = tmp8(1114).intl;
-    obj12.text = intl.string(tmp8(1114).t["7Xq/nV"]);
+    const intl = tmp8(1113).intl;
+    obj12.text = intl.string(tmp8(1113).t["7Xq/nV"]);
     obj12.onPress = onPress;
     tmp18Result = closure_7(closure_10, obj12);
   }
   obj9.children = tmp18Result;
-  obj8.children = closure_7(stream(7235), obj9);
+  obj8.children = closure_7(stream(7241), obj9);
   items2[1] = closure_7(tmp2Result3, obj8);
   obj4.children = items2;
   return closure_8(closure_9, obj4);

@@ -1,7 +1,7 @@
-// === Module 7669: MemberSafetyElasticSearchQueryTypes ===
+// === Module 7676: MemberSafetyElasticSearchQueryTypes ===
 
-// Module 7669 (MemberSafetyElasticSearchQueryTypes)
-import DurationsDefault from "Durations" /* 1090 */;
+// Module 7676 (MemberSafetyElasticSearchQueryTypes)
+import DurationsDefault from "Durations" /* 1089 */;
 
 const result = 2 * DurationsDefault.Millis.DAY;
 const size = fn(2);

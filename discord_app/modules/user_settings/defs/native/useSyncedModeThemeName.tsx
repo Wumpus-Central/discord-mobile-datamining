@@ -1,15 +1,15 @@
-// === Module 17227: useSyncedModeThemeName ===
+// === Module 17284: useSyncedModeThemeName ===
 
-// Module 17227 (useSyncedModeThemeName)
-import util from "util" /* 1114 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1240 */;
-import _modDef2771 from "module_2771" /* 2771 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+// Module 17284 (useSyncedModeThemeName)
+import util from "util" /* 1113 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import _modDef2772 from "module_2772" /* 2772 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(1241).BACKGROUND_GRADIENT_PRESETS_MAP;
+let closure_4 = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");
 
@@ -25,7 +25,7 @@ export function useSyncedModeThemeName(DARK) {
     }
     if (null != prop) {
       const intl = util.intl;
-      let stringResult = intl.string(_modDef2771.yl1iMm);
+      let stringResult = intl.string(_modDef2772.yl1iMm);
     } else {
       let prop1;
       if (syncedClientTheme != null) {

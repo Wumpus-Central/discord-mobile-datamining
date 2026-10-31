@@ -1,12 +1,12 @@
-// === Module 12393: MediaKeyboardFloatingSend ===
+// === Module 12431: MediaKeyboardFloatingSend ===
 
-// Module 12393 (MediaKeyboardFloatingSend)
+// Module 12431 (MediaKeyboardFloatingSend)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import spring from "spring" /* 5632 */;
+import spring from "spring" /* 5637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8200 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8208 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { sendContainer: null, gradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

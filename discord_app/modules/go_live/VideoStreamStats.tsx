@@ -1,8 +1,8 @@
-// === Module 7882: VideoStreamStats ===
+// === Module 7889: VideoStreamStats ===
 
-// Module 7882 (VideoStreamStats)
-import TimeUtils from "TimeUtils" /* 5767 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5924 */;
+// Module 7889 (VideoStreamStats)
+import TimeUtils from "TimeUtils" /* 5772 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5943 */;
 
 require = fn;
 const StreamLayouts = fn(1072).StreamLayouts;
@@ -69,59 +69,74 @@ prototype["layoutChange"] = function layoutChange(_lastLayout) {
 prototype["getLayout"] = function getLayout() {
   return this._lastLayout;
 };
+prototype["restartForFragment"] = function restartForFragment() {
+  this._layoutChanges = 0;
+  this._layoutBuckets = {};
+  this._automaticQualityChanges = 0;
+  this._lastLayoutChanged = TimeUtils.now();
+};
 prototype["getStats"] = function getStats() {
   const self = this;
-  const obj = { num_layout_changes: this._layoutChanges, duration_layout_fullscreen: null, duration_layout_theatre: null, duration_layout_pip: null, duration_layout_popout: null, duration_layout_portrait: null, duration_layout_landscape: null, duration_layout_minimized: null };
-  let num = 0;
-  if (null != this._layoutBuckets[StreamLayouts.FULL_SCREEN]) {
-    const _Math = Math;
-    num = Math.round(tmp2);
+  const obj = {};
+  const merged = Object.assign(this._layoutBuckets);
+  if (null == this._streamEnd) {
+    let num = obj[self._lastLayout];
+    if (num == null) {
+      num = 0;
+    }
+    obj[self._lastLayout] = num + (TimeUtils.now() - self._lastLayoutChanged) / 1000;
   }
-  obj.duration_layout_fullscreen = num;
-  let num2 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.THEATRE]) {
-    const _Math2 = Math;
-    num2 = Math.round(tmp4);
-  }
-  obj.duration_layout_theatre = num2;
+  const obj3 = { num_layout_changes: self._layoutChanges, duration_layout_fullscreen: null, duration_layout_theatre: null, duration_layout_pip: null, duration_layout_popout: null, duration_layout_portrait: null, duration_layout_landscape: null, duration_layout_minimized: null };
   let num3 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.PIP]) {
-    const _Math3 = Math;
-    num3 = Math.round(tmp6);
+  if (null != obj[StreamLayouts.FULL_SCREEN]) {
+    const _Math = Math;
+    num3 = Math.round(tmp5);
   }
-  obj.duration_layout_pip = num3;
+  obj3.duration_layout_fullscreen = num3;
   let num4 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.POPOUT]) {
-    const _Math4 = Math;
-    num4 = Math.round(tmp8);
+  if (null != obj[StreamLayouts.THEATRE]) {
+    const _Math2 = Math;
+    num4 = Math.round(tmp7);
   }
-  obj.duration_layout_popout = num4;
+  obj3.duration_layout_theatre = num4;
   let num5 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.PORTRAIT]) {
-    const _Math5 = Math;
-    num5 = Math.round(tmp10);
+  if (null != obj[StreamLayouts.PIP]) {
+    const _Math3 = Math;
+    num5 = Math.round(tmp9);
   }
-  obj.duration_layout_portrait = num5;
+  obj3.duration_layout_pip = num5;
   let num6 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.LANDSCAPE]) {
-    const _Math6 = Math;
-    num6 = Math.round(tmp12);
+  if (null != obj[StreamLayouts.POPOUT]) {
+    const _Math4 = Math;
+    num6 = Math.round(tmp11);
   }
-  obj.duration_layout_landscape = num6;
+  obj3.duration_layout_popout = num6;
   let num7 = 0;
-  if (null != self._layoutBuckets[StreamLayouts.MINIMIZED]) {
+  if (null != obj[StreamLayouts.PORTRAIT]) {
+    const _Math5 = Math;
+    num7 = Math.round(tmp13);
+  }
+  obj3.duration_layout_portrait = num7;
+  let num8 = 0;
+  if (null != obj[StreamLayouts.LANDSCAPE]) {
+    const _Math6 = Math;
+    num8 = Math.round(tmp15);
+  }
+  obj3.duration_layout_landscape = num8;
+  let num9 = 0;
+  if (null != obj[StreamLayouts.MINIMIZED]) {
     const _Math7 = Math;
-    num7 = Math.round(tmp14);
+    num9 = Math.round(tmp17);
   }
-  obj.duration_layout_minimized = num7;
-  let tmp16 = obj;
+  obj3.duration_layout_minimized = num9;
+  let tmp19 = obj3;
   if (self._isSender) {
-    const obj3 = {};
-    const merged = Object.assign(obj);
-    ({ _targetFPS: obj2.target_fps, _targetResolution: obj2.target_resolution_height, _streamSettingsChanged: obj2.stream_settings_changed, _automaticQualityChanges: obj2.num_auto_quality_changes } = self);
-    tmp16 = obj3;
+    const obj6 = {};
+    const merged1 = Object.assign(obj3);
+    ({ _targetFPS: obj4.target_fps, _targetResolution: obj4.target_resolution_height, _streamSettingsChanged: obj4.stream_settings_changed, _automaticQualityChanges: obj4.num_auto_quality_changes } = self);
+    tmp19 = obj6;
   }
-  return tmp16;
+  return tmp19;
 };
 
 export default VideoStreamStats;

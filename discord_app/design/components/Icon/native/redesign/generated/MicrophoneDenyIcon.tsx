@@ -1,9 +1,9 @@
-// === Module 9221: MicrophoneDenyIcon ===
+// === Module 9240: MicrophoneDenyIcon ===
 
-// Module 9221 (MicrophoneDenyIcon)
+// Module 9240 (MicrophoneDenyIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod9222 from "module_9222" /* 9222 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod9241 from "module_9241" /* 9241 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MicrophoneDenyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9222, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9241, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

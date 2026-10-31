@@ -1,19 +1,19 @@
-// === Module 16949: BundleAbstractUI ===
+// === Module 17005: BundleAbstractUI ===
 
-// Module 16949 (BundleAbstractUI)
-import assetHelpers from "assetHelpers" /* 7063 */;
-import _modDef16950 from "module_16950" /* 16950 */;
-import _modDef16951 from "module_16951" /* 16951 */;
-import _modDef16952 from "module_16952" /* 16952 */;
+// Module 17005 (BundleAbstractUI)
+import assetHelpers from "assetHelpers" /* 7069 */;
+import _modDef17006 from "module_17006" /* 17006 */;
+import _modDef17007 from "module_17007" /* 17007 */;
+import _modDef17008 from "module_17008" /* 17008 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16950 }, 3: null };
-let obj2 = { uri: _modDef16950 };
-obj[2] = { uri: _modDef16951 };
-const obj3 = { uri: _modDef16951 };
-obj[3] = { uri: _modDef16952 };
+let obj = { 1: null, 2: { uri: _modDef17006 }, 3: null };
+let obj2 = { uri: _modDef17006 };
+obj[2] = { uri: _modDef17007 };
+const obj3 = { uri: _modDef17007 };
+obj[3] = { uri: _modDef17008 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BundleAbstractUI.native.tsx");
 

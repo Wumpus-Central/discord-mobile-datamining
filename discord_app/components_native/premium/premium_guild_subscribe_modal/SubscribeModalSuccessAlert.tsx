@@ -1,21 +1,21 @@
-// === Module 15470: SubscribeModalSuccessAlert ===
+// === Module 15509: SubscribeModalSuccessAlert ===
 
-// Module 15470 (SubscribeModalSuccessAlert)
+// Module 15509 (SubscribeModalSuccessAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import util from "util" /* 1114 */;
-import useThemeDefault from "useTheme" /* 5248 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import common_AlertDefault from "common/Alert" /* 6025 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6762 */;
-import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 15471 */;
-import _mod15472 from "module_15472" /* 15472 */;
+import ConstantsIOS from "ConstantsIOS" /* 1092 */;
+import util from "util" /* 1113 */;
+import useThemeDefault from "useTheme" /* 5253 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import common_AlertDefault from "common/Alert" /* 6030 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6768 */;
+import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 15510 */;
+import _mod15511 from "module_15511" /* 15511 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 require = fn;
 class PremiumPaymentGuildAnimation {
@@ -29,10 +29,10 @@ class PremiumPaymentGuildAnimation {
   }
 }
 const View = fn(17).View;
-const Gradients = fn(7610).Gradients;
+const Gradients = fn(7617).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" }, animation: { width: "auto", height: 112, alignSelf: "center" }, text: { lineHeight: 18, textAlign: "center" }, activated: { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 }, activatedBackground: null, activatedImage: null, successInfo: null };
 let obj3 = { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 };
 obj2.activatedBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
@@ -72,8 +72,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(5954).close();
-    const obj = closure_1(5954);
+    closure_1(5959).close();
+    const obj = closure_1(5959);
     BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
@@ -111,9 +111,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(15473);
+    let tmp8Result = tmp8(15512);
   } else {
-    tmp8Result = tmp8(15474);
+    tmp8Result = tmp8(15513);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);

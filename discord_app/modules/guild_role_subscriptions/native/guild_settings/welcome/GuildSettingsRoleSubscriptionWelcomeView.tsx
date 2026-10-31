@@ -1,18 +1,18 @@
-// === Module 19812: GuildSettingsRoleSubscriptionWelcomeView ===
+// === Module 19869: GuildSettingsRoleSubscriptionWelcomeView ===
 
-// Module 19812 (GuildSettingsRoleSubscriptionWelcomeView)
+// Module 19869 (GuildSettingsRoleSubscriptionWelcomeView)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
-import NavigatorConstants from "NavigatorConstants" /* 5581 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import ErrorBlockDefault from "ErrorBlock" /* 12384 */;
-import WarningNoticeDefault from "WarningNotice" /* 19814 */;
-import EligibilityActionSheet from "EligibilityActionSheet" /* 19817 */;
-import HowItWorksSectionDefault from "HowItWorksSection" /* 19823 */;
-import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 19836 */;
-import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 19861 */;
+import util from "util" /* 1113 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
+import NavigatorConstants from "NavigatorConstants" /* 5586 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import ErrorBlockDefault from "ErrorBlock" /* 12422 */;
+import WarningNoticeDefault from "WarningNotice" /* 19871 */;
+import EligibilityActionSheet from "EligibilityActionSheet" /* 19874 */;
+import HowItWorksSectionDefault from "HowItWorksSection" /* 19880 */;
+import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 19893 */;
+import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 19918 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -101,7 +101,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(19817, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
+    return obj.openLazy(asyncRequireImpl(19874, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
       eligibility,
       onRequireModeratorMFAClick() {
         navigation.push(constants.SECURITY);
@@ -233,12 +233,12 @@ class MarketingSections {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const React6 = fn(17125).CREATOR_REVENUE_PORTAL_URL;
+const React6 = fn(17183).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const constants = fn(19813).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(19870).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1 }, contentContainer: { flex: 1, padding: 24 }, heroImage: { alignItems: "center", paddingTop: 24 }, subtitle: { marginTop: 8 }, tos: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm, marginTop: 10 }, startEarningButton: { marginTop: 12 }, startEarningButtonContainer: { marginTop: 14 }, startEarningFabContainer: { marginHorizontal: 24 }, divider: null, sectionTitle: null, sectionFooter: null, statusNoticeContainer: null };
 let size = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.divider = size;

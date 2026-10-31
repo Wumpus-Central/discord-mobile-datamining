@@ -1,14 +1,14 @@
-// === Module 20032: PendingRequestList ===
+// === Module 20093: PendingRequestList ===
 
-// Module 20032 (PendingRequestList)
+// Module 20093 (PendingRequestList)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import _modDef2537 from "module_2537" /* 2537 */;
-import _modDef2835 from "module_2835" /* 2835 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 16726 */;
-import _modDef16774 from "module_16774" /* 16774 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import _modDef2538 from "module_2538" /* 2538 */;
+import _modDef2836 from "module_2836" /* 2836 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 16768 */;
+import _modDef16816 from "module_16816" /* 16816 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -159,17 +159,17 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { card: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" }, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
 obj2.row = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 let obj5 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: null };
-const sum = nativeDefault.space.PX_16 + fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL];
+const sum = nativeDefault.space.PX_16 + fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL];
 obj5.marginLeft = sum + nativeDefault.space.PX_12;
 obj2.divider = obj5;
 let obj4 = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
-obj2.avatar = { borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
-let obj6 = { borderRadius: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+obj2.avatar = { borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+let obj6 = { borderRadius: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 obj2.details = { flexGrow: 1, flexShrink: 1, paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4 };
 obj2.actions = { flexDirection: "row", alignItems: "center" };
 let size = { height: 36, width: 36, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
@@ -182,7 +182,7 @@ let obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, b
 obj2.acceptIcon = { color: nativeDefault.colors.WHITE };
 let obj10 = { color: nativeDefault.colors.WHITE };
 obj2.declineIcon = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-const size1 = { width: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL], height: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL], alignItems: "center", justifyContent: "center" };
+const size1 = { width: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL], height: fn(1187).AVATAR_SIZE_MAP[fn(undefined, 1187).AvatarSizes.NORMAL], alignItems: "center", justifyContent: "center" };
 obj2.inviteIconContainer = size1;
 let obj11 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.inviteQrButton = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
@@ -258,8 +258,8 @@ export default function PendingRequestList(arg0) {
   const obj5 = { style: tmp.dividerRow, children: null };
   const items1 = [c7(c5, { style: tmp.dividerLine }), , ];
   const obj7 = { style: tmp.dividerLabel, variant: "text-sm/medium", color: "text-muted", children: null };
-  let intl = tmp5(1114).intl;
-  obj7.children = intl.string(_modDef2835["/SbB94"]);
+  let intl = tmp5(1113).intl;
+  obj7.children = intl.string(_modDef2836["/SbB94"]);
   items1[1] = c7(require("Text/Text").Text, obj7);
   items1[2] = c7(c5, { style: tmp.dividerLine });
   obj5.children = items1;
@@ -284,18 +284,18 @@ export default function PendingRequestList(arg0) {
   const items3 = [c7(c5, { style: tmp.inviteIconContainer, children: c7(require("PlaneIllocon").PlaneIllocon, { size: 32 }) }), , ];
   const obj11 = { style: tmp.details, children: null };
   const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp5(1114).intl;
-  obj12.children = intl2.string(_modDef2835.z9gkwZ);
+  const intl2 = tmp5(1113).intl;
+  obj12.children = intl2.string(_modDef2836.z9gkwZ);
   const items4 = [c7(require("Text/Text").Text, obj12), ];
   const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
-  const intl3 = tmp5(1114).intl;
-  obj13.children = intl3.string(_modDef2835["9t4+vC"]);
+  const intl3 = tmp5(1113).intl;
+  obj13.children = intl3.string(_modDef2836["9t4+vC"]);
   items4[1] = c7(require("Text/Text").Text, obj13);
   obj11.children = items4;
   items3[1] = closure_8(c5, obj11);
   const obj14 = { style: tmp.actions, children: null };
   const obj15 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-  const intl4 = tmp5(1114).intl;
+  const intl4 = tmp5(1113).intl;
   obj15.accessibilityLabel = intl4.string(require("util").t.Ej3B3Y);
   obj15.onPress = onShare;
   const items5 = [, ];
@@ -304,8 +304,8 @@ export default function PendingRequestList(arg0) {
   obj15.children = c7(require("ShareIcon").ShareIcon, { size: "sm", color: tmp.declineIcon.color });
   const items6 = [c7(require("Pressables").PressableOpacity, obj15), ];
   const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-  const intl5 = tmp5(1114).intl;
-  obj17.accessibilityLabel = intl5.string(_modDef2835.z9gkwZ);
+  const intl5 = tmp5(1113).intl;
+  obj17.accessibilityLabel = intl5.string(_modDef2836.z9gkwZ);
   obj17.onPress = onInviteAnotherGuardian;
   const items7 = [, ];
   ({ actionButton: arr8[0], inviteQrButton: arr8[1] } = tmp);

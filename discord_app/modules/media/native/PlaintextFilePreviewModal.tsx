@@ -1,15 +1,15 @@
-// === Module 11579: PlaintextFilePreviewModal ===
+// === Module 11615: PlaintextFilePreviewModal ===
 
-// Module 11579 (PlaintextFilePreviewModal)
+// Module 11615 (PlaintextFilePreviewModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6738 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6947 */;
-import NavigatorHeader from "NavigatorHeader" /* 6992 */;
-import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7297 */;
-import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11578 */;
-import useDownloadedFile from "useDownloadedFile" /* 11582 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6744 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6953 */;
+import NavigatorHeader from "NavigatorHeader" /* 6998 */;
+import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7303 */;
+import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11614 */;
+import useDownloadedFile from "useDownloadedFile" /* 11618 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -58,7 +58,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const constants = { PREVIEW: "PREVIEW" };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" }, scroller: { flex: 1 }, scrollerContent: null, code: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollerContent = { padding: nativeDefault.space.PX_16 };
@@ -120,12 +120,12 @@ export default function PlaintextFilePreviewModal(url) {
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { IconComponent: url(9736).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
-            const intl = url(1114).intl;
-            obj.accessibilityLabel = intl.string(url(1114).t.PdRCRg);
+            const obj = { IconComponent: url(9756).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+            const intl = url(1113).intl;
+            obj.accessibilityLabel = intl.string(url(1113).t.PdRCRg);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_7(url(7552).HeaderActionButton, obj);
+            return closure_1_7(url(7558).HeaderActionButton, obj);
           }
         });
       },
@@ -137,5 +137,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[constants.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(11447).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return jsx(url(11481).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
 };

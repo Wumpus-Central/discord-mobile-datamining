@@ -1,15 +1,15 @@
-// === Module 17039: QuestProgressIndicator ===
+// === Module 17097: QuestProgressIndicator ===
 
-// Module 17039 (QuestProgressIndicator)
+// Module 17097 (QuestProgressIndicator)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import timing from "timing" /* 5249 */;
-import inlineStyles from "inlineStyles" /* 8023 */;
+import timing from "timing" /* 5254 */;
+import inlineStyles from "inlineStyles" /* 8031 */;
 import noop_mod from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import createStyles from "createStyles" /* 5009 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 let noop = noop_mod;
@@ -55,6 +55,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   closure_9 = undefined;
   let sharedValue2;
   dependencyMap = undefined;
+  ({ withAnimation, paused } = loading);
   let obj = progress(stateFromStores[8]);
   let items = [sharedValue1];
   stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
@@ -87,40 +88,40 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   }
   sharedValue2 = progress(stateFromStores[4]).useSharedValue(num2);
   const tmpResult = progress(stateFromStores[4]);
-  class T {
+  class D {
     constructor() {
       obj = { shadowOpacity: closure_10.get() };
       return obj;
     }
   }
-  T.__closure = { glowOpacity: sharedValue2 };
-  T.__workletHash = 17183837725505;
-  T.__initData = __initData;
-  const animatedStyle = progress(stateFromStores[4]).useAnimatedStyle(T);
+  D.__closure = { glowOpacity: sharedValue2 };
+  D.__workletHash = 17183837725505;
+  D.__initData = __initData;
+  const animatedStyle = progress(stateFromStores[4]).useAnimatedStyle(D);
   const tmpResult4 = progress(stateFromStores[4]);
-  class D {
+  class E {
     constructor() {
       obj = { strokeDashoffset: closure_5 - closure_5 * closure_7.get() };
       return obj;
     }
   }
-  D.__closure = { circumference: result, animatedProgress: sharedValue };
-  D.__workletHash = 17281152506254;
-  D.__initData = __initData2;
-  const animatedProps = progress(stateFromStores[4]).useAnimatedProps(D);
+  E.__closure = { circumference: result, animatedProgress: sharedValue };
+  E.__workletHash = 17281152506254;
+  E.__initData = __initData2;
+  const animatedProps = progress(stateFromStores[4]).useAnimatedProps(E);
   const tmpResult5 = progress(stateFromStores[4]);
-  class E {
+  class R {
     constructor() {
       obj = { opacity: closure_8.get() };
       merged = Object.assign(closure_6.opacityMask);
       return obj;
     }
   }
-  E.__closure = { underlayOpacity: sharedValue1, styles: tmp9 };
-  E.__workletHash = 4427598698568;
-  E.__initData = __initData3;
+  R.__closure = { underlayOpacity: sharedValue1, styles: tmp9 };
+  R.__workletHash = 4427598698568;
+  R.__initData = __initData3;
   const items1 = [sharedValue, progress, stateFromStores];
-  const animatedStyle1 = progress(stateFromStores[4]).useAnimatedStyle(E);
+  const animatedStyle1 = progress(stateFromStores[4]).useAnimatedStyle(R);
   scale(() => {
     let num = 500;
     if (stateFromStores) {
@@ -208,7 +209,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   }
   items9[1] = tmp25Result;
   const obj16 = { style: tmp9.imageContainer, children: null };
-  const size2 = { quest, height: 0.78 * tmp5, width: 0.78 * tmp5, withAnimation: loading.withAnimation, accessibilityLabelPrefix: accessibilityLabel };
+  const size2 = { quest, height: 0.78 * tmp5, width: 0.78 * tmp5, withAnimation, paused, accessibilityLabelPrefix: accessibilityLabel };
   obj16.children = closure_9(flag(stateFromStores[14]), size2);
   items9[2] = closure_9(sharedValue, obj16);
   obj8.children = items9;

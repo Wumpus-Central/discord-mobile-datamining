@@ -1,12 +1,12 @@
-// === Module 8723: UserProfileSettingsStore ===
+// === Module 8731: UserProfileSettingsStore ===
 
-// Module 8723 (UserProfileSettingsStore)
+// Module 8731 (UserProfileSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import RouteConstants from "RouteConstants" /* 1073 */;
-import FavoritesConstants from "FavoritesConstants" /* 4871 */;
-import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8724 */;
-import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8725 */;
+import FavoritesConstants from "FavoritesConstants" /* 4876 */;
+import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8732 */;
+import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8733 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

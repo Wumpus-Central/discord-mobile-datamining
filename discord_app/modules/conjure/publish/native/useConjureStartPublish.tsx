@@ -1,8 +1,8 @@
-// === Module 12405: useConjureStartPublish ===
+// === Module 12443: useConjureStartPublish ===
 
-// Module 12405 (useConjureStartPublish)
-import publish_useConjureStartPublishDefault from "publish/useConjureStartPublish" /* 12406 */;
-import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12407 */;
+// Module 12443 (useConjureStartPublish)
+import publish_useConjureStartPublishDefault from "publish/useConjureStartPublish" /* 12444 */;
+import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12445 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/native/useConjureStartPublish.tsx");

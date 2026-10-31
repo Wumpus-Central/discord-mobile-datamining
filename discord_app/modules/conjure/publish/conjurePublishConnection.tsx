@@ -1,16 +1,16 @@
-// === Module 10931: conjurePublishConnection ===
+// === Module 10950: conjurePublishConnection ===
 
-// Module 10931 (conjurePublishConnection)
+// Module 10950 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10854 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10922 */;
-import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 10932 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 10934 */;
-import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 10940 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10874 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10941 */;
+import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 10951 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 10953 */;
+import conjureVoiceChannelPin from "conjureVoiceChannelPin" /* 10959 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2040 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6838 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10847 */;
+import ApplicationStore from "ApplicationStore" /* 2038 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6844 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10867 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
@@ -37,7 +37,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 }
 const map = new Map();
 const map1 = new Map();
-let set = new Set(fn(10941).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(10960).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map2 = new Map();
 const size = fn(2);
@@ -127,7 +127,7 @@ export const publishStepHandlers = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -144,7 +144,7 @@ export const publishStepHandlers = {
               if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
                 if (publishApprovalUrl.getPublishApprovalUrl(projectId) === tmp2.approval_url) {
                   c2 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
                   v1(tmp21[4]).dispatch(obj5);

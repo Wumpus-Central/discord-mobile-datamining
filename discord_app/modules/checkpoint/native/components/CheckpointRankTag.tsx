@@ -1,10 +1,10 @@
-// === Module 13608: CheckpointRankTag ===
+// === Module 13645: CheckpointRankTag ===
 
-// Module 13608 (CheckpointRankTag)
+// Module 13645 (CheckpointRankTag)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6429 */;
-import inlineStyles from "inlineStyles" /* 8023 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6434 */;
+import inlineStyles from "inlineStyles" /* 8031 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,10 +12,10 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6061).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6066).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = { hidden: { opacity: 0 }, text: { color: nativeDefault.colors.BLACK, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, fontSize: 14, lineHeight: 18 }, shape: { position: "absolute", top: 0, left: 0 }, shapeChamferBottomRight: null };
 let obj4 = { transform: null };
 let items = [{ scaleY: -1 }];

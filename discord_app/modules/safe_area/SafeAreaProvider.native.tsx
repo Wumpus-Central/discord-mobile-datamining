@@ -1,9 +1,9 @@
-// === Module 16379: SafeAreaProvider ===
+// === Module 16421: SafeAreaProvider ===
 
-// Module 16379 (SafeAreaProvider)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1260 */;
-import SafeAreaConstants from "SafeAreaConstants" /* 1628 */;
-import _mod1629 from "module_1629" /* 1629 */;
+// Module 16421 (SafeAreaProvider)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import SafeAreaConstants from "SafeAreaConstants" /* 1627 */;
+import _mod1628 from "module_1628" /* 1628 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,9 +14,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
 
 export function SafeAreaReporter() {
-  safeAreaInsets = safeAreaInsets(1629).useSafeAreaInsets();
-  let obj = safeAreaInsets(1629);
-  const appEntryKey = safeAreaInsets(1495).useAppEntryKey();
+  safeAreaInsets = safeAreaInsets(1628).useSafeAreaInsets();
+  let obj = safeAreaInsets(1628);
+  const appEntryKey = safeAreaInsets(1494).useAppEntryKey();
   const items = [safeAreaInsets, appEntryKey];
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_0 = safeAreaInsets;
@@ -66,7 +66,7 @@ export function SafeAreaReporter() {
   }, items);
   dependencyMap = noop.useRef(false);
   const items1 = [safeAreaInsets, appEntryKey];
-  let obj2 = safeAreaInsets(1495);
+  let obj2 = safeAreaInsets(1494);
   return <View style={style} onLayout={noop.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
@@ -119,5 +119,5 @@ export function SafeAreaReporter() {
 }
 export function SafeAreaProvider(arg0) {
   ({ children, style } = arg0);
-  return jsx(_mod1629.SafeAreaProvider, { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style });
+  return jsx(_mod1628.SafeAreaProvider, { initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS, children, style });
 }

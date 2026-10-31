@@ -1,14 +1,14 @@
-// === Module 13727: ForumPostTimestamp ===
+// === Module 13762: ForumPostTimestamp ===
 
-// Module 13727 (ForumPostTimestamp)
-import Text_Text from "Text/Text" /* 5619 */;
-import ForumHooks from "ForumHooks" /* 9817 */;
+// Module 13762 (ForumPostTimestamp)
+import Text_Text from "Text/Text" /* 5624 */;
+import ForumHooks from "ForumHooks" /* 9838 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useForumChannelStore = fn(13713).useForumChannelStore;
+const useForumChannelStore = fn(13748).useForumChannelStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");

@@ -1,8 +1,8 @@
-// === Module 7446: useIsRemote ===
+// === Module 7452: useIsRemote ===
 
-// Module 7446 (useIsRemote)
+// Module 7452 (useIsRemote)
 import initialize from "initialize" /* 504 */;
-import GameConsoleStore from "GameConsoleStore" /* 5760 */;
+import GameConsoleStore from "GameConsoleStore" /* 5765 */;
 
 require = fn;
 const size = fn(2);

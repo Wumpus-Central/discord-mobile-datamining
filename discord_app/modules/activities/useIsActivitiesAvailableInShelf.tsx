@@ -1,7 +1,7 @@
-// === Module 11681: useIsActivitiesAvailableInShelf ===
+// === Module 11718: useIsActivitiesAvailableInShelf ===
 
-// Module 11681 (useIsActivitiesAvailableInShelf)
-import fetchShelf from "fetchShelf" /* 11684 */;
+// Module 11718 (useIsActivitiesAvailableInShelf)
+import fetchShelf from "fetchShelf" /* 11721 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

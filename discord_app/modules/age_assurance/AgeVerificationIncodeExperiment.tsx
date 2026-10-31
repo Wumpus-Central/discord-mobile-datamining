@@ -1,7 +1,7 @@
-// === Module 7983: AgeVerificationIncodeExperiment ===
+// === Module 7991: AgeVerificationIncodeExperiment ===
 
-// Module 7983 (AgeVerificationIncodeExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 7991 (AgeVerificationIncodeExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-06-age-verification-incode", defaultConfig: { enabled: false }, variations: null };

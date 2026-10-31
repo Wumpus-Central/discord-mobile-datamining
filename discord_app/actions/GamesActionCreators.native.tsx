@@ -1,9 +1,9 @@
-// === Module 11656: GamesActionCreators ===
+// === Module 11692: GamesActionCreators ===
 
-// Module 11656 (GamesActionCreators)
+// Module 11692 (GamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LinkingDefault from "Linking" /* 5704 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11657 */;
+import LinkingDefault from "Linking" /* 5709 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11694 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -42,8 +42,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         const join_url = body.body.join_url;
         const secret = body.body.secret;
         if (null != join_url) {
-          applicationId(5704).openURL(join_url, constants.SAFARI);
-          const obj3 = applicationId(5704);
+          applicationId(5709).openURL(join_url, constants.SAFARI);
+          const obj3 = applicationId(5709);
           const obj2 = { type: "ACTIVITY_JOIN", applicationId, parentApplicationId, secret, intent: constants2.PLAY, embedded: null };
           let flag3 = closure_1_0.embedded;
           if (flag3 == null) {
@@ -61,8 +61,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         } else {
           const _HermesInternal = HermesInternal;
           const combined = "" + closure_1_4.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-          applicationId(5704).openURL(combined, constants.SAFARI);
-          const obj6 = applicationId(5704);
+          applicationId(5709).openURL(combined, constants.SAFARI);
+          const obj6 = applicationId(5709);
           const obj8 = { type: "ACTIVITY_JOIN", applicationId, parentApplicationId, secret, intent: constants2.PLAY, embedded: null };
           let flag = closure_1_0.embedded;
           if (flag == null) {
@@ -104,7 +104,7 @@ function fetchJoinSecret(applicationId, arg1) {
 }
 const Constants = fn(1072);
 ({ Endpoints: closure_4, DiscordConnectDeeplinks: hasOwnProperty, WebBrowserType: metroRequire, ActivityFlags: closure_7 } = Constants);
-const ActivityIntent = fn(2019).ActivityIntent;
+const ActivityIntent = fn(11693).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
@@ -151,7 +151,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

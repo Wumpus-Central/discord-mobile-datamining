@@ -1,9 +1,9 @@
-// === Module 15677: GuildPicker ===
+// === Module 15718: GuildPicker ===
 
-// Module 15677 (GuildPicker)
-import util from "util" /* 1114 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5253 */;
+// Module 15718 (GuildPicker)
+import util from "util" /* 1113 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5258 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,58 +16,41 @@ export default function GuildPicker(isGuildIncluded) {
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
-  ({ options: c2, selectedGuild } = onChange(15678)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId }));
+  ({ options: c2, selectedGuild } = onChange(15719)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId }));
+  let tmp4Result;
+  const tmp = onChange;
+  const tmp3 = onChange(15719)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  if (null != selectedGuild) {
+    let obj = { guild: selectedGuild, size: guildId(6957).GuildIconSizes.XSMALL };
+    tmp4Result = jsx(tmp(6957), { guild: selectedGuild, size: guildId(6957).GuildIconSizes.XSMALL });
+    const tmpResult = tmp(6957);
+  }
+  let obj2 = { leading: tmp4Result, label: null, onPress: null, placeholder: null };
   let name;
-  const tmp2 = onChange(15678)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
   if (selectedGuild != null) {
     name = selectedGuild.name;
   }
-  let obj = {
-    label: name,
-    onPress: function handleSelectGuild() {
-      const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const obj = ActionSheetActionCreatorsDefault;
-      const intl = util.intl;
-      obj2.title = intl.string(util.t.etZ9tX);
-      obj2.items = items;
-      obj2.onItemSelect = function onItemSelect(arg0) {
-        if (null != arg0) {
-          if (onChange != null) {
-            tmp(arg0);
-          }
+  obj2.label = name;
+  obj2.onPress = function handleSelectGuild() {
+    const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    const obj = ActionSheetActionCreatorsDefault;
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.etZ9tX);
+    obj2.items = items;
+    obj2.onItemSelect = function onItemSelect(arg0) {
+      if (null != arg0) {
+        if (onChange != null) {
+          tmp(arg0);
         }
-        setImmediate(() => {
-          closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_4);
-        });
-      };
-      obj2.selectedItem = guildId;
-      obj.openLazy(asyncRequireImpl(8993, dependencyMap.paths), GuildPicker, obj2);
-    },
-    placeholder: null
+      }
+      setImmediate(() => {
+        closure_1_1(closure_1_2[5]).hideActionSheet(closure_1_4);
+      });
+    };
+    obj2.selectedItem = guildId;
+    obj.openLazy(asyncRequireImpl(9002, dependencyMap.paths), GuildPicker, obj2);
   };
-  let intl = guildId(1114).intl;
-  obj.placeholder = intl.string(guildId(1114).t.etZ9tX);
-  return jsx(onChange(15679), {
-    label: name,
-    onPress: function handleSelectGuild() {
-      const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-      const obj = ActionSheetActionCreatorsDefault;
-      const intl = util.intl;
-      obj2.title = intl.string(util.t.etZ9tX);
-      obj2.items = items;
-      obj2.onItemSelect = function onItemSelect(arg0) {
-        if (null != arg0) {
-          if (onChange != null) {
-            tmp(arg0);
-          }
-        }
-        setImmediate(() => {
-          closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_4);
-        });
-      };
-      obj2.selectedItem = guildId;
-      obj.openLazy(asyncRequireImpl(8993, dependencyMap.paths), GuildPicker, obj2);
-    },
-    placeholder: null
-  });
+  let intl = guildId(1113).intl;
+  obj2.placeholder = intl.string(guildId(1113).t.etZ9tX);
+  return jsx(onChange(15720), { leading: tmp4Result, label: null, onPress: null, placeholder: null });
 };

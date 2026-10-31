@@ -1,20 +1,20 @@
-// === Module 9509: LimitedTimeBadge ===
+// === Module 9531: LimitedTimeBadge ===
 
-// Module 9509 (LimitedTimeBadge)
+// Module 9531 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import shared from "shared" /* 5016 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import useCountdownDefault from "useCountdown" /* 7617 */;
+import util from "util" /* 1113 */;
+import shared from "shared" /* 5021 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import useCountdownDefault from "useCountdown" /* 7624 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 }, backgroundDarkMode: null, backgroundLightMode: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
 obj2.backgroundDarkMode = { backgroundColor: nativeDefault.colors.WHITE };
@@ -56,7 +56,7 @@ export default function LimitedTimeBadge(unpublishedAt) {
     if (days <= 1) {
       if (days > 1) {
         const intl3 = util.intl;
-        sum1 = `0${tmp9(tmp2(1114).t["1LyF1h"])}`;
+        sum1 = `0${tmp9(tmp2(1113).t["1LyF1h"])}`;
       }
       sum = sum1;
     }

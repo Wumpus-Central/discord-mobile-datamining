@@ -1,11 +1,11 @@
-// === Module 17152: useTrialIntervalOptions ===
+// === Module 17208: useTrialIntervalOptions ===
 
-// Module 17152 (useTrialIntervalOptions)
+// Module 17208 (useTrialIntervalOptions)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const TIER_TRIAL_INTERVALS = fn(17125).TIER_TRIAL_INTERVALS;
-const SubscriptionIntervalTypes = fn(1386).SubscriptionIntervalTypes;
+const TIER_TRIAL_INTERVALS = fn(17183).TIER_TRIAL_INTERVALS;
+const SubscriptionIntervalTypes = fn(1385).SubscriptionIntervalTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useTrialIntervalOptions.tsx");
 
@@ -17,10 +17,10 @@ export default function useTrialIntervalOptions(active_trial) {
       const obj = { value, label: null, isDefault: null };
       if (value.interval === constants.DAY) {
         if (7 === value.interval_count) {
-          const intl = active_trial(1114).intl;
-          const obj3 = { defaultLimit: active_trial(17151).formatPlanIntervalDuration(value) };
-          let formatToPlainStringResult = intl.formatToPlainString(active_trial(1114).t.XfSsr1, obj3);
-          const obj4 = active_trial(17151);
+          const intl = active_trial(1113).intl;
+          const obj3 = { defaultLimit: active_trial(17207).formatPlanIntervalDuration(value) };
+          let formatToPlainStringResult = intl.formatToPlainString(active_trial(1113).t.XfSsr1, obj3);
+          const obj4 = active_trial(17207);
         }
         obj.label = formatToPlainStringResult;
         let tmp5 = value.interval === tmp.DAY;
@@ -30,8 +30,8 @@ export default function useTrialIntervalOptions(active_trial) {
         obj.isDefault = tmp5;
         return obj;
       }
-      formatToPlainStringResult = active_trial(17151).formatPlanIntervalDuration(value);
-      const obj2 = active_trial(17151);
+      formatToPlainStringResult = active_trial(17207).formatPlanIntervalDuration(value);
+      const obj2 = active_trial(17207);
     });
     let selectedOption = closure_0;
     if (null != closure_0) {

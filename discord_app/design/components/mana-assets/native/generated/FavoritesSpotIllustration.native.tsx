@@ -1,19 +1,19 @@
-// === Module 10818: FavoritesSpotIllustration ===
+// === Module 10838: FavoritesSpotIllustration ===
 
-// Module 10818 (FavoritesSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7063 */;
-import _modDef10819 from "module_10819" /* 10819 */;
-import _modDef10820 from "module_10820" /* 10820 */;
-import _modDef10821 from "module_10821" /* 10821 */;
+// Module 10838 (FavoritesSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7069 */;
+import _modDef10839 from "module_10839" /* 10839 */;
+import _modDef10840 from "module_10840" /* 10840 */;
+import _modDef10841 from "module_10841" /* 10841 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10819 }, 3: null };
-let obj2 = { uri: _modDef10819 };
-obj[2] = { uri: _modDef10820 };
-const obj3 = { uri: _modDef10820 };
-obj[3] = { uri: _modDef10821 };
+let obj = { 1: null, 2: { uri: _modDef10839 }, 3: null };
+let obj2 = { uri: _modDef10839 };
+obj[2] = { uri: _modDef10840 };
+const obj3 = { uri: _modDef10840 };
+obj[3] = { uri: _modDef10841 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FavoritesSpotIllustration.native.tsx");
 

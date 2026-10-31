@@ -1,15 +1,15 @@
-// === Module 14937: useProfileNewContent ===
+// === Module 14975: useProfileNewContent ===
 
-// Module 14937 (useProfileNewContent)
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7776 */;
-import WishlistStore from "WishlistStore" /* 9449 */;
-import UserStore from "UserStore" /* 1384 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
+// Module 14975 (useProfileNewContent)
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7783 */;
+import WishlistStore from "WishlistStore" /* 9471 */;
+import UserStore from "UserStore" /* 1383 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ProfileReadStateSection = fn(7777).ProfileReadStateSection;
+const ProfileReadStateSection = fn(7784).ProfileReadStateSection;
 let closure_7 = { hasNewWishlistItems: false, newWishlistItemCount: 0, shouldLogExposure: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileNewContent.tsx");

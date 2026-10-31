@@ -1,6 +1,6 @@
-// === Module 6054: TopSoundboardSoundStore ===
+// === Module 6059: TopSoundboardSoundStore ===
 
-// Module 6054 (TopSoundboardSoundStore)
+// Module 6059 (TopSoundboardSoundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

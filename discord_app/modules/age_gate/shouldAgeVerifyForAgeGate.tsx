@@ -1,9 +1,9 @@
-// === Module 6719: shouldAgeVerifyForAgeGate ===
+// === Module 6725: shouldAgeVerifyForAgeGate ===
 
-// Module 6719 (shouldAgeVerifyForAgeGate)
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5688 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6720 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6725 */;
+// Module 6725 (shouldAgeVerifyForAgeGate)
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5693 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6731 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/age_gate/shouldAgeVerifyForAgeGate.tsx");

@@ -1,8 +1,8 @@
-// === Module 15171: isClipsEnabled ===
+// === Module 15210: isClipsEnabled ===
 
-// Module 15171 (isClipsEnabled)
-import ClipsExperiment from "ClipsExperiment" /* 15172 */;
-import ClipsStore from "ClipsStore" /* 2013 */;
+// Module 15210 (isClipsEnabled)
+import ClipsExperiment from "ClipsExperiment" /* 15211 */;
+import ClipsStore from "ClipsStore" /* 2012 */;
 
 require = fn;
 const size = fn(2);

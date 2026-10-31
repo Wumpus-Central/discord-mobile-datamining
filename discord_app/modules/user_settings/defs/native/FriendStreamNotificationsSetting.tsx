@@ -1,11 +1,11 @@
-// === Module 17420: FriendStreamNotificationsSetting ===
+// === Module 17480: FriendStreamNotificationsSetting ===
 
-// Module 17420 (FriendStreamNotificationsSetting)
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 4834 */;
-import SettingsConstants from "SettingsConstants" /* 8424 */;
-import GoLiveNotificationUtils from "GoLiveNotificationUtils" /* 17421 */;
-import SettingBuilders from "SettingBuilders" /* 11505 */;
+// Module 17480 (FriendStreamNotificationsSetting)
+import util from "util" /* 1113 */;
+import UserSettings from "UserSettings" /* 4839 */;
+import SettingsConstants from "SettingsConstants" /* 8432 */;
+import GoLiveNotificationUtils from "GoLiveNotificationUtils" /* 17481 */;
+import SettingBuilders from "SettingBuilders" /* 11539 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

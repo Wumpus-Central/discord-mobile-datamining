@@ -1,6 +1,6 @@
-// === Module 1086: EntitlementTypes ===
+// === Module 2046: EntitlementTypes ===
 
-// Module 1086 (EntitlementTypes)
+// Module 2046 (EntitlementTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { GIFTS: new Set([3, 6]), PREMIUM_APPS: null };

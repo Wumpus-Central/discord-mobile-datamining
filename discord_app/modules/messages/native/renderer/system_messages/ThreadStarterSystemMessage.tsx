@@ -1,13 +1,13 @@
-// === Module 8471: ThreadStarterSystemMessage ===
+// === Module 8479: ThreadStarterSystemMessage ===
 
-// Module 8471 (ThreadStarterSystemMessage)
+// Module 8479 (ThreadStarterSystemMessage)
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1114 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8414 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7759 */;
+import util from "util" /* 1113 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8422 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7766 */;
 
 require = fn;
-const ReferencedMessageState = fn(7759).ReferencedMessageState;
+const ReferencedMessageState = fn(7766).ReferencedMessageState;
 const MessageTypes = fn(1072).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx");

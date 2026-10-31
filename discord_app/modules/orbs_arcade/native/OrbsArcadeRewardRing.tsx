@@ -1,7 +1,7 @@
-// === Module 16984: OrbsArcadeRewardRing ===
+// === Module 17042: OrbsArcadeRewardRing ===
 
-// Module 16984 (OrbsArcadeRewardRing)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5090 */;
+// Module 17042 (OrbsArcadeRewardRing)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5095 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -27,7 +27,7 @@ function RingArc(progress) {
 }
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let closure_4 = ReanimatedRexport.createAnimatedComponent(fn(8023).Path);
+let closure_4 = ReanimatedRexport.createAnimatedComponent(fn(8031).Path);
 const __initData = { code: "function OrbsArcadeRewardRingTsx1(){const{arcLength,progress}=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};}" };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeRewardRing.tsx");

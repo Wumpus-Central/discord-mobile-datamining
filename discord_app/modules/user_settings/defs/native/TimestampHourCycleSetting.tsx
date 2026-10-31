@@ -1,20 +1,20 @@
-// === Module 17394: TimestampHourCycleSetting ===
+// === Module 17454: TimestampHourCycleSetting ===
 
-// Module 17394 (TimestampHourCycleSetting)
-import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import UserSettings from "UserSettings" /* 4834 */;
+// Module 17454 (TimestampHourCycleSetting)
+import util from "util" /* 1113 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
+import UserSettings from "UserSettings" /* 4839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(8424).MobileUserSettings.APPEARANCE,
-  useValue: fn(4834).TimestampHourCycle.useSetting,
+  parent: fn(8432).MobileUserSettings.APPEARANCE,
+  useValue: fn(4839).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;
     TimestampHourCycle.updateSetting(Number(arg0));
@@ -39,7 +39,7 @@ const radio = SettingBuilders.createRadio({
       return items;
     }, []);
   },
-  usePredicate: fn(5696).supportsSystemDateFormatter
+  usePredicate: fn(5701).supportsSystemDateFormatter
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");

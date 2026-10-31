@@ -1,11 +1,11 @@
-// === Module 7920: QualtricsActionCreators ===
+// === Module 7928: QualtricsActionCreators ===
 
-// Module 7920 (QualtricsActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1283 */;
+// Module 7928 (QualtricsActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SurveyStore from "SurveyStore" /* 7921 */;
-import QualtricsStore from "QualtricsStore" /* 7924 */;
+import SurveyStore from "SurveyStore" /* 7929 */;
+import QualtricsStore from "QualtricsStore" /* 7932 */;
 
 require = fn;
 function fetchSurveyDetails() {
@@ -29,7 +29,7 @@ let closure_11 = async function _fetchSurveyDetails(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -110,7 +110,7 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -312,8 +312,8 @@ let closure_13 = async function _fireSurveyAction() {
     return value;
   })();
 };
-const useQualtricsResponseStore = fn(7923).useQualtricsResponseStore;
-const QualtricsConstants = fn(7925);
+const useQualtricsResponseStore = fn(7931).useQualtricsResponseStore;
+const QualtricsConstants = fn(7933);
 ({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: closure_9 } = QualtricsConstants);
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);

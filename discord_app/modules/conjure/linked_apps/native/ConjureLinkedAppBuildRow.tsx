@@ -1,12 +1,12 @@
-// === Module 12727: ConjureLinkedAppBuildRow ===
+// === Module 12762: ConjureLinkedAppBuildRow ===
 
-// Module 12727 (ConjureLinkedAppBuildRow)
-import util from "util" /* 1114 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5253 */;
-import TableRow from "TableRow" /* 6969 */;
-import TableRowGroup from "TableRowGroup" /* 7054 */;
-import conjureLinkedApps from "conjureLinkedApps" /* 12464 */;
-import ConjureLinkedAppBuildSheetDefault from "ConjureLinkedAppBuildSheet" /* 12469 */;
+// Module 12762 (ConjureLinkedAppBuildRow)
+import util from "util" /* 1113 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5258 */;
+import TableRow from "TableRow" /* 6975 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import conjureLinkedApps from "conjureLinkedApps" /* 12499 */;
+import ConjureLinkedAppBuildSheetDefault from "ConjureLinkedAppBuildSheet" /* 12504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default function ConjureLinkedAppBuildRow(value) {
   require = value;
   const onChange = value.onChange;
   const intl = util.intl;
-  const stringResult = intl.string(onChange(3865).Odrcmq);
+  const stringResult = intl.string(onChange(3868).Odrcmq);
   dependencyMap = stringResult;
   const obj = { hasIcons: false, children: null };
   let obj2 = { label: stringResult, trailing: null, arrow: true, disabled: null, onPress: null };

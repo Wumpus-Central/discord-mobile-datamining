@@ -1,16 +1,16 @@
-// === Module 15448: GuildBoostingMarketingTopPerksCards ===
+// === Module 15487: GuildBoostingMarketingTopPerksCards ===
 
-// Module 15448 (GuildBoostingMarketingTopPerksCards)
+// Module 15487 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5613 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import _modDef15449 from "module_15449" /* 15449 */;
-import _mod15450 from "module_15450" /* 15450 */;
-import _modDef15451 from "module_15451" /* 15451 */;
+import util from "util" /* 1113 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5618 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import _modDef15488 from "module_15488" /* 15488 */;
+import _mod15489 from "module_15489" /* 15489 */;
+import _modDef15490 from "module_15490" /* 15490 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 }, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
 let size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
 obj2.cardGraphic = size;
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15449 };
+      const obj = { style, source: _modDef15488 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   },
@@ -51,7 +51,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod15450, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod15489, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     }
   },
@@ -65,7 +65,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15451 };
+      const obj = { style, source: _modDef15490 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   }

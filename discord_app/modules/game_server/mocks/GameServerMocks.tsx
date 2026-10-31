@@ -1,8 +1,8 @@
-// === Module 14010: GameServerMocks ===
+// === Module 14045: GameServerMocks ===
 
-// Module 14010 (GameServerMocks)
-import GameServerProviderType from "GameServerProviderType" /* 5227 */;
-import GameServerStatus from "GameServerStatus" /* 14011 */;
+// Module 14045 (GameServerMocks)
+import GameServerProviderType from "GameServerProviderType" /* 5232 */;
+import GameServerStatus from "GameServerStatus" /* 14046 */;
 import size from "module_2" /* 2 */;
 
 const obj = { id: "1", name: "GameServer #1", cost: 3, specifications: null };

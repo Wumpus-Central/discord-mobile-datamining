@@ -1,8 +1,8 @@
-// === Module 10165: ConversationDeepLinkUtils ===
+// === Module 10185: ConversationDeepLinkUtils ===
 
-// Module 10165 (ConversationDeepLinkUtils)
+// Module 10185 (ConversationDeepLinkUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7763 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7770 */;
 
 const require = fn;
 function resolveConversationFocusLink() {
@@ -26,7 +26,7 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -99,8 +99,8 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
     }
   }
 };
-fn(6926).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5650).CONVERSATION_QUERY_PARAM;
+fn(6932).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5655).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
@@ -143,7 +143,7 @@ export function consumeConversationFocusParam(state) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -160,7 +160,7 @@ export function consumeConversationFocusParam(state) {
                       channelId = tmp4;
                       v2 = 1;
                       dependencyMap = 1;
-                      const obj4 = { value: v2(10166)(guildId), done: false };
+                      const obj4 = { value: v2(10186)(guildId), done: false };
                       return obj4;
                     }
                   } else if (1 === tmp4) {
@@ -187,11 +187,11 @@ export function consumeConversationFocusParam(state) {
                     return obj8;
                   } else {
                     if (value) {
-                      const conversationFocus = channelId(9828).requestConversationFocus();
-                      const obj = channelId(9828);
+                      const conversationFocus = channelId(9849).requestConversationFocus();
+                      const obj = channelId(9849);
                     }
                     dependencyMap = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp17) {
                   dependencyMap = tmp;

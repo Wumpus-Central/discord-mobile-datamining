@@ -1,11 +1,11 @@
-// === Module 12944: ConjureHomeTargetPicker ===
+// === Module 12979: ConjureHomeTargetPicker ===
 
-// Module 12944 (ConjureHomeTargetPicker)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11377 */;
-import UserIcon from "UserIcon" /* 12431 */;
+// Module 12979 (ConjureHomeTargetPicker)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11413 */;
+import UserIcon from "UserIcon" /* 12466 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function ConjureHomeTargetPicker(target) {
       },
       ...guilds.map((label) => ({
         label: label.name,
-        IconComponent: target(9738).ServerIcon,
+        IconComponent: target(9758).ServerIcon,
         action() {
           return dependencyMap(label.id);
         }
@@ -63,7 +63,7 @@ export default function ConjureHomeTargetPicker(target) {
     ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
     const obj = { ref, variant: "tertiary", size: "sm", shrink: true, text: name, icon: jsx(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs" }), iconPosition: "end", onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
     const intl = util.intl;
-    obj.accessibilityLabel = intl.formatToPlainString(_modDef3865.Lyx6pW, { name });
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef3868.Lyx6pW, { name });
     obj.accessibilityActions = accessibilityActions;
     obj.onAccessibilityAction = onAccessibilityAction;
     return jsx(components_Button_Button.Button, { ref, variant: "tertiary", size: "sm", shrink: true, text: name, icon: jsx(ChevronSmallDownIcon.ChevronSmallDownIcon, { size: "xs" }), iconPosition: "end", onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null });

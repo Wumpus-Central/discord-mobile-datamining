@@ -1,13 +1,13 @@
-// === Module 19106: VoicePanelContainer ===
+// === Module 19155: VoicePanelContainer ===
 
-// Module 19106 (VoicePanelContainer)
-import _mod4924 from "module_4924" /* 4924 */;
-import native from "native" /* 5075 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 19107 */;
-import VoicePanelUIDefault from "VoicePanelUI" /* 19147 */;
+// Module 19155 (VoicePanelContainer)
+import _mod4929 from "module_4929" /* 4929 */;
+import native from "native" /* 5080 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 19156 */;
+import VoicePanelUIDefault from "VoicePanelUI" /* 19198 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import VoicePanelStore from "VoicePanelStore" /* 6869 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import VoicePanelStore from "VoicePanelStore" /* 6875 */;
 
 require = fn;
 function VoicePanel(arg0) {
@@ -39,6 +39,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 
 export default noop.memo(function VoicePanelContainer() {
-  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4924.shallow);
-  return jsx(native.TransitionGroup, { items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4924.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4929.shallow);
+  return jsx(native.TransitionGroup, { items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4929.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
 });

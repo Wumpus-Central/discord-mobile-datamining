@@ -1,10 +1,11 @@
-// === Module 14752: MediaModalVideo ===
+// === Module 14790: MediaModalVideo ===
 
-// Module 14752 (MediaModalVideo)
-import common_Video from "common/Video" /* 8864 */;
-import useMediaLoadingDefault from "useMediaLoading" /* 14753 */;
-import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 14754 */;
-import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 14755 */;
+// Module 14790 (MediaModalVideo)
+import MediaViewerVideoPerfExperiment from "MediaViewerVideoPerfExperiment" /* 8847 */;
+import common_Video from "common/Video" /* 8873 */;
+import useMediaLoadingDefault from "useMediaLoading" /* 14791 */;
+import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 14792 */;
+import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 14793 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,26 +22,27 @@ export default noop.memo(function MediaModalVideo(source) {
   if (uri == null) {
     uri = source.uri;
   }
+  const isMediaViewerVideoPerfEnabled = MediaViewerVideoPerfExperiment.useIsMediaViewerVideoPerfEnabled();
   const items = [uri, , ];
   ({ width: arr[1], height: arr[2] } = source);
   ({ hasError, isLoadingVisible, handleLoadStart, handleLoad, handleError } = useMediaLoadingDefault({ onError, onLoad, onLoadingVisible }));
   if (hasError) {
     const obj2 = { style, status: "error" };
-    let tmp6Result = React4(MediaModalLoadingOverlayDefault, obj2);
+    let tmp8Result = React4(MediaModalLoadingOverlayDefault, obj2);
   } else {
-    const obj = { controls, muted, onError: handleError, onLoad: handleLoad, onLoadStart: handleLoadStart, paused, source: tmp5, style };
-    const items1 = [React4(common_Video.VideoComponent, obj), , ];
-    let tmp7Result = null;
+    const obj3 = { controls, muted, onError: handleError, onLoad: handleLoad, onLoadStart: handleLoadStart, paused, source: tmp7, style, useTextureView: !isMediaViewerVideoPerfEnabled };
+    const items1 = [React4(common_Video.VideoComponent, obj3), , ];
+    let tmp9Result = null;
     if (isLoadingVisible) {
-      const obj3 = { style, status: "loading" };
-      tmp7Result = React4(MediaModalLoadingOverlayDefault, obj3);
+      const obj4 = { style, status: "loading" };
+      tmp9Result = React4(MediaModalLoadingOverlayDefault, obj4);
     }
-    const obj4 = { children: null };
-    items1[1] = tmp7Result;
-    const obj5 = { style, index, source };
-    items1[2] = React4(MediaModalSpoilerOverlayDefault, obj5);
-    obj4.children = items1;
-    tmp6Result = hasOwnProperty(noop.Fragment, obj4);
+    const obj5 = { children: null };
+    items1[1] = tmp9Result;
+    const obj6 = { style, index, source };
+    items1[2] = React4(MediaModalSpoilerOverlayDefault, obj6);
+    obj5.children = items1;
+    tmp8Result = hasOwnProperty(noop.Fragment, obj5);
   }
-  return tmp6Result;
+  return tmp8Result;
 });

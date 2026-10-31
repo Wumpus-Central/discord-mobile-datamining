@@ -1,6 +1,6 @@
-// === Module 12239: AppLauncherHomeTypes ===
+// === Module 12277: AppLauncherHomeTypes ===
 
-// Module 12239 (AppLauncherHomeTypes)
+// Module 12277 (AppLauncherHomeTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/AppLauncherHomeTypes.tsx");

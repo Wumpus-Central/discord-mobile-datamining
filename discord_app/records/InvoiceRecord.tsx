@@ -1,8 +1,8 @@
-// === Module 2056: InvoiceRecord ===
+// === Module 2055: InvoiceRecord ===
 
-// Module 2056 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 2057 */;
-import Record from "Record" /* 1399 */;
+// Module 2055 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 2056 */;
+import Record from "Record" /* 1398 */;
 
 require = fn;
 const PaymentGateways = fn(1072).PaymentGateways;

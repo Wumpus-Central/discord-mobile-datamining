@@ -1,19 +1,19 @@
-// === Module 14340: ActivitiesPrivateChannelCallTooltip ===
+// === Module 14378: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 14340 (ActivitiesPrivateChannelCallTooltip)
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
+// Module 14378 (ActivitiesPrivateChannelCallTooltip)
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const helpdeskUrl = fn(2019).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
+const helpdeskUrl = fn(2018).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 const TIMING_CONFIG = { duration: 500 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { arrow: null, tooltip: { padding: 16 }, tooltipContainer: { position: "absolute", width: 280, zIndex: 2, right: -48, top: -8 }, tooltipText: { textAlign: "center", fontSize: 14 }, closeButtonWrapper: { marginTop: 14 } };
 let obj3 = { marginLeft: 200, top: 9, position: "relative", borderTopWidth: 0, borderRightWidth: 0, borderBottomWidth: 16, borderLeftWidth: 16, transform: null };
 let items = [{ rotateZ: "225deg" }];
@@ -50,8 +50,8 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
       return obj;
     }
   }
-  const tmp2Result = num(5090);
-  T.__closure = { withRepeat: num(5090).withRepeat, withSequence: num(5090).withSequence, withTiming: num(5249).withTiming, OFFSET: 40, translateBounceOffset: num, TIMING_CONFIG };
+  const tmp2Result = num(5095);
+  T.__closure = { withRepeat: num(5095).withRepeat, withSequence: num(5095).withSequence, withTiming: num(5254).withTiming, OFFSET: 40, translateBounceOffset: num, TIMING_CONFIG };
   T.__workletHash = 4621705591670;
   T.__initData = __initData;
   const animatedStyle = tmp2Result.useAnimatedStyle(T);
@@ -59,17 +59,17 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const items1 = [tmp.tooltipContainer, animatedStyle];
   obj3.style = items1;
   let obj4 = { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: tmp.arrow, label: null, title: null, children: null };
-  const intl = tmp2(1114).intl;
-  obj4.label = intl.format(num(1114).t.xAW71b, { helpdeskUrl });
-  const intl2 = tmp2(1114).intl;
-  obj4.title = intl2.string(num(1114).t.HOPqzR);
+  const intl = tmp2(1113).intl;
+  obj4.label = intl.format(num(1113).t.xAW71b, { helpdeskUrl });
+  const intl2 = tmp2(1113).intl;
+  obj4.title = intl2.string(num(1113).t.HOPqzR);
   let obj6 = { style: tmp.closeButtonWrapper, children: null };
   const obj7 = { text: null, onPress: null, variant: "secondary", size: "sm", grow: true };
-  const intl3 = tmp2(1114).intl;
-  obj7.text = intl3.string(num(1114).t["NX+WJN"]);
+  const intl3 = tmp2(1113).intl;
+  obj7.text = intl3.string(num(1113).t["NX+WJN"]);
   obj7.onPress = onClosePress.onClosePress;
-  obj6.children = jsx(num(5629).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj6.children = jsx(num(5634).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj4.children = <View style={tmp.closeButtonWrapper}>{null}</View>;
-  obj3.children = jsx(num(1188).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: tmp.arrow, label: null, title: null, children: null });
+  obj3.children = jsx(num(1187).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: tmp.arrow, label: null, title: null, children: null });
   return jsx(ReanimatedRexportDefault.View, { style: null, children: null });
 };

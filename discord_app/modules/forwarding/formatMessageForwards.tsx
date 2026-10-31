@@ -1,18 +1,18 @@
-// === Module 8404: formatMessageForwards ===
+// === Module 8412: formatMessageForwards ===
 
-// Module 8404 (formatMessageForwards)
+// Module 8412 (formatMessageForwards)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1114 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import DateUtils from "DateUtils" /* 4831 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5645 */;
-import useChannelName from "useChannelName" /* 5647 */;
-import BasicGuildStore from "BasicGuildStore" /* 8405 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import util from "util" /* 1113 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import DateUtils from "DateUtils" /* 4836 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5650 */;
+import useChannelName from "useChannelName" /* 5652 */;
+import BasicGuildStore from "BasicGuildStore" /* 8413 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 class MessageForward {

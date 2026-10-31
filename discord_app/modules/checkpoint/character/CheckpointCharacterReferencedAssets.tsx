@@ -1,9 +1,9 @@
-// === Module 13578: CheckpointCharacterReferencedAssets ===
+// === Module 13446: CheckpointCharacterReferencedAssets ===
 
-// Module 13578 (CheckpointCharacterReferencedAssets)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13410 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13411 */;
-import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 13577 */;
+// Module 13446 (CheckpointCharacterReferencedAssets)
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13447 */;
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13612 */;
+import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits" /* 13613 */;
 import size from "module_2" /* 2 */;
 
 let set = new Set([1]);
@@ -20,9 +20,9 @@ let closure_3 = keys.map((name) => {
 });
 const result = size.fileFinishedImporting("modules/checkpoint/character/CheckpointCharacterReferencedAssets.tsx");
 
-export function getCheckpointCharacterVisibleTextureNames(arg0, chapterID, arg2) {
+export function getCheckpointCharacterVisibleTextureNames(arg0, arg1, arg2) {
   closure_0 = arg0;
-  closure_1 = chapterID;
+  closure_1 = arg1;
   closure_2 = arg2;
   set = new Set();
   const item = set.forEach((item) => {

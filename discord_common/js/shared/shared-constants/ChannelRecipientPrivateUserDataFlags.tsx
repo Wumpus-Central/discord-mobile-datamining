@@ -1,6 +1,6 @@
-// === Module 13667: ChannelRecipientPrivateUserDataFlags ===
+// === Module 13702: ChannelRecipientPrivateUserDataFlags ===
 
-// Module 13667 (ChannelRecipientPrivateUserDataFlags)
+// Module 13702 (ChannelRecipientPrivateUserDataFlags)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ChannelRecipientPrivateUserDataFlags.tsx");

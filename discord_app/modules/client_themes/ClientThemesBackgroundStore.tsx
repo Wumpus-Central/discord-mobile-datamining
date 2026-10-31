@@ -1,21 +1,21 @@
-// === Module 5033: ClientThemesBackgroundStore ===
+// === Module 5038: ClientThemesBackgroundStore ===
 
-// Module 5033 (ClientThemesBackgroundStore)
+// Module 5038 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1240 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2048 */;
-import dismissible_content from "dismissible_content" /* 4842 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5039 */;
-import UserUtils from "UserUtils" /* 5063 */;
-import ProductCatalog from "ProductCatalog" /* 5066 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5074 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1232 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import UserStore from "UserStore" /* 1384 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2047 */;
+import dismissible_content from "dismissible_content" /* 4847 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5044 */;
+import UserUtils from "UserUtils" /* 5068 */;
+import ProductCatalog from "ProductCatalog" /* 5071 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5079 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function getAppliedHexagonCampaignPreset() {
@@ -181,10 +181,10 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4862).isGuildTextChannelType;
-const dependencyMap = fn(1241).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5034).HexagonCampaignPerk;
-const SystemThemeState = fn(1196).SystemThemeState;
+const isGuildTextChannelType = fn(4867).isGuildTextChannelType;
+const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
+const HexagonCampaignPerk = fn(5039).HexagonCampaignPerk;
+const SystemThemeState = fn(1195).SystemThemeState;
 let closure_15 = true;
 let c16 = false;
 let c17 = false;

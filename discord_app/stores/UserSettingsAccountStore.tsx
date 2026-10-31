@@ -1,9 +1,9 @@
-// === Module 7558: UserSettingsAccountStore ===
+// === Module 7564: UserSettingsAccountStore ===
 
-// Module 7558 (UserSettingsAccountStore)
+// Module 7564 (UserSettingsAccountStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 function handleFormClose() {
   OPEN = FormStates.CLOSED;

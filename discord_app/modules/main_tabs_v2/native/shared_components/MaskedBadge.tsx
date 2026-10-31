@@ -1,15 +1,15 @@
-// === Module 9796: MaskedBadge ===
+// === Module 9817: MaskedBadge ===
 
-// Module 9796 (MaskedBadge)
+// Module 9817 (MaskedBadge)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import shared_components_BadgeDefault from "shared_components/Badge" /* 9797 */;
+import native from "native" /* 1187 */;
+import shared_components_BadgeDefault from "shared_components/Badge" /* 9818 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
-let obj2 = { maskStyle: { position: "relative", right: "HermesInternal" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
+const createStyles = fn(5014);
+let obj2 = { maskStyle: { position: "relative", right: "createStyles" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx");

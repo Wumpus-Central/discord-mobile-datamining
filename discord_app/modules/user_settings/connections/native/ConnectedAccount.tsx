@@ -1,41 +1,41 @@
-// === Module 16816: ConnectedAccount ===
+// === Module 16834: ConnectedAccount ===
 
-// Module 16816 (ConnectedAccount)
+// Module 16834 (ConnectedAccount)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native2 from "native" /* 1188 */;
-import AvatarUtils from "AvatarUtils" /* 1410 */;
-import _modDef3221 from "module_3221" /* 3221 */;
-import shared from "shared" /* 5016 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import common_AlertDefault from "common/Alert" /* 6025 */;
-import PlatformsDefault from "Platforms" /* 6568 */;
-import GuildIconDefault from "GuildIcon" /* 6951 */;
-import TableRowDivider from "TableRowDivider" /* 6966 */;
-import TableRow from "TableRow" /* 6969 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6970 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7341 */;
-import TableSwitchRow from "TableSwitchRow" /* 7363 */;
-import IconButton from "IconButton" /* 8020 */;
-import XLargeBoldIcon from "XLargeBoldIcon" /* 9268 */;
-import InfoBoxDefault from "InfoBox" /* 11354 */;
-import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 16817 */;
-import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 16818 */;
-import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 16821 */;
+import util from "util" /* 1113 */;
+import native2 from "native" /* 1187 */;
+import AvatarUtils from "AvatarUtils" /* 1409 */;
+import _modDef3224 from "module_3224" /* 3224 */;
+import shared from "shared" /* 5021 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import common_AlertDefault from "common/Alert" /* 6030 */;
+import PlatformsDefault from "Platforms" /* 6574 */;
+import GuildIconDefault from "GuildIcon" /* 6957 */;
+import TableRowDivider from "TableRowDivider" /* 6972 */;
+import TableRow from "TableRow" /* 6975 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6976 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7347 */;
+import TableSwitchRow from "TableSwitchRow" /* 7369 */;
+import IconButton from "IconButton" /* 8028 */;
+import XLargeBoldIcon from "XLargeBoldIcon" /* 9287 */;
+import InfoBoxDefault from "InfoBox" /* 11390 */;
+import shouldWarnConnectedAccountTwoWayDefault from "shouldWarnConnectedAccountTwoWay" /* 16835 */;
+import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 16836 */;
+import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 16839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import TextStyles from "TextStyles" /* 6717 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import TextStyles from "TextStyles" /* 6723 */;
 
 require = fn;
 function Integration(integration) {
   integration = integration.integration;
   importDefault = undefined;
-  legacyClassComponentStyles = integration(5009).useLegacyClassComponentStyles(legacyClassComponentStyles);
-  const obj = integration(5009);
+  legacyClassComponentStyles = integration(5014).useLegacyClassComponentStyles(legacyClassComponentStyles);
+  const obj = integration(5014);
   [tmp5, c1] = noop.useState();
   const tmp4 = _slicedToArray(noop.useState(), 2);
   const items = [ConnectedAccountsStore];
@@ -49,17 +49,17 @@ function Integration(integration) {
     let tmp12 = tmp5 === integration.id;
     if (tmp12) {
       const obj4 = { style: legacyClassComponentStyles.integrationErrorText, variant: "text-sm/medium", color: "text-feedback-critical", children: null };
-      const intl2 = tmp(1114).intl;
-      obj4.children = intl2.string(tmp(1114).t.fEptJP);
-      tmp12 = closure_14(tmp(5619).Text, obj4);
+      const intl2 = tmp(1113).intl;
+      obj4.children = intl2.string(tmp(1113).t.fEptJP);
+      tmp12 = closure_14(tmp(5624).Text, obj4);
     }
     const obj5 = { style: legacyClassComponentStyles.integrationContainer, children: null };
     const obj6 = { style: legacyClassComponentStyles.integrationContainerInternal, children: null };
-    const obj7 = { guild: integration.guild, size: tmp(6951).GuildIconSizes.SMALL, style: legacyClassComponentStyles.integrationGuildIcon };
+    const obj7 = { guild: integration.guild, size: tmp(6957).GuildIconSizes.SMALL, style: legacyClassComponentStyles.integrationGuildIcon };
     const items4 = [closure_14(GuildIconDefault, obj7), , ];
     const obj8 = { style: legacyClassComponentStyles.integrationTextRowContainer, children: null };
     const obj9 = { lineClamp: 1, variant: "text-sm/medium", children: integration.guild.name };
-    const items5 = [closure_14(tmp(5619).Text, obj9), ];
+    const items5 = [closure_14(tmp(5624).Text, obj9), ];
     value = PlatformsDefault.get(integration.type);
     let platformUserUrl;
     if (value != null) {
@@ -69,7 +69,7 @@ function Integration(integration) {
       }
     }
     const obj10 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: platformUserUrl };
-    items5[1] = closure_14(tmp(5619).Text, obj10);
+    items5[1] = closure_14(tmp(5624).Text, obj10);
     obj8.children = items5;
     items4[1] = closure_15(View, obj8);
     items4[2] = tmp7;
@@ -90,9 +90,9 @@ function Integration(integration) {
       disabled: stateFromStores,
       text: null
     };
-    const intl = tmp(1114).intl;
+    const intl = tmp(1113).intl;
     const string = intl.string;
-    let RXvQQu = tmp(1114).t;
+    let RXvQQu = tmp(1113).t;
     if (stateFromStores) {
       RXvQQu = RXvQQu.RXvQQu;
       let stringResult = string(RXvQQu);
@@ -100,7 +100,7 @@ function Integration(integration) {
       stringResult = string(RXvQQu.XpeFYr);
     }
     obj13.text = stringResult;
-    obj13 = closure_14(tmp(5629).Button, obj13);
+    obj13 = closure_14(tmp(5634).Button, obj13);
     obj11.children = obj13;
     closure_14(View, obj11);
   }
@@ -125,14 +125,14 @@ function RowGroup(children) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ FRIEND_SYNC_PLATFORM_TYPES: closure_9, ACTIVITY_PLATFORM_TYPES: c10, PlatformTypes: closure_11, HelpdeskArticles: closure_12, Fonts } = Constants);
-const MetadataFields = fn(7343).MetadataFields;
+const MetadataFields = fn(7349).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { platformIcon: { marginRight: 4 }, connectedApplicationIdentityIcon: null, container: null, connectedAccountItem: null, connectedAccountHeader: null, connectedAccountSection: null, integrationsSection: null, integrationContainer: null, integrationContainerInternal: null, integrationTextRowContainer: null, integrationErrorText: null, integrationCategoryLabel: null, integrationGuildIcon: null, integrationJoinButton: null, alertInfoBox: null, alertBodyText: null, metadataContainer: null, metadataItemsContainer: null, refreshButtonContainer: null, metadataBannerContainer: null, newBadge: null, rowDivider: null, addDetailsButton: null, learnMoreButton: null, relinkButton: null, relinkText: null };
 let obj3 = { borderRadius: null, marginRight: 4 };
-const native = fn(1188);
-obj3.borderRadius = native.getIconSize(fn(1188).Icon.Sizes.LARGE);
+const native = fn(1187);
+obj3.borderRadius = native.getIconSize(fn(1187).Icon.Sizes.LARGE);
 obj2.connectedApplicationIdentityIcon = obj3;
 obj2.container = { marginHorizontal: 8, marginVertical: 4 };
 obj2.connectedAccountItem = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
@@ -450,46 +450,46 @@ prototype["renderMetadata"] = function renderMetadata() {
     metadata = {};
   }
   let stringResult = dependencyMap;
-  const createdAtDate = account(7342).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
+  const createdAtDate = account(7348).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let redditMetadataItems = tmp2(11568).generateRedditMetadataItems(metadata);
-    const tmp2Result = tmp2(11568);
+    let redditMetadataItems = tmp2(11604).generateRedditMetadataItems(metadata);
+    const tmp2Result = tmp2(11604);
   } else if (constants.STEAM === type) {
-    redditMetadataItems = tmp2(11568).generateSteamMetadataItems(metadata);
-    const tmp2Result7 = tmp2(11568);
+    redditMetadataItems = tmp2(11604).generateSteamMetadataItems(metadata);
+    const tmp2Result7 = tmp2(11604);
   } else if (constants.LETTERBOXD === type) {
-    redditMetadataItems = tmp2(11568).generateLetterboxdMetadataItems(metadata);
-    const tmp2Result8 = tmp2(11568);
+    redditMetadataItems = tmp2(11604).generateLetterboxdMetadataItems(metadata);
+    const tmp2Result8 = tmp2(11604);
   } else {
     if (constants.BLUESKY !== type) {
       if (constants.TWITTER !== type) {
         if (constants.MASTODON !== type) {
           if (constants.EBAY === type) {
-            redditMetadataItems = tmp2(11568).generateEbayMetadataItems(metadata);
-            const tmp2Result9 = tmp2(11568);
+            redditMetadataItems = tmp2(11604).generateEbayMetadataItems(metadata);
+            const tmp2Result9 = tmp2(11604);
           } else if (constants.PAYPAL === type) {
-            redditMetadataItems = tmp2(11568).generatePaypalMetadataItems(metadata);
-            const tmp2Result10 = tmp2(11568);
+            redditMetadataItems = tmp2(11604).generatePaypalMetadataItems(metadata);
+            const tmp2Result10 = tmp2(11604);
           } else {
             redditMetadataItems = [];
             if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp2(11568).generateTikTokMetadataItems(metadata);
-              const tmp2Result11 = tmp2(11568);
+              redditMetadataItems = tmp2(11604).generateTikTokMetadataItems(metadata);
+              const tmp2Result11 = tmp2(11604);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11568).generateTwitterMetadataItems(metadata);
-    const tmp2Result12 = tmp2(11568);
+    redditMetadataItems = tmp2(11604).generateTwitterMetadataItems(metadata);
+    const tmp2Result12 = tmp2(11604);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1113).intl;
     const obj3 = { date: createdAtDate };
-    obj.children = intl.format(tmp2(1114).t["9rfonh"], obj3);
-    redditMetadataItems.push(closure_14(tmp2(5619).Text, obj, MetadataFields.CREATED_AT));
+    obj.children = intl.format(tmp2(1113).t["9rfonh"], obj3);
+    redditMetadataItems.push(closure_14(tmp2(5624).Text, obj, MetadataFields.CREATED_AT));
   }
   let intl2 = self.state.metadataRefreshing || self.state.metadataAlreadyRefreshed;
   function handleRefresh() {
@@ -501,7 +501,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     });
   }
   if (0 === redditMetadataItems.length) {
-    value = self(6568).get(account.type);
+    value = self(6574).get(account.type);
     let hasMetadata;
     if (value != null) {
       hasMetadata = value.hasMetadata;
@@ -514,21 +514,21 @@ prototype["renderMetadata"] = function renderMetadata() {
       ({ metadataContainer: arr3[0], metadataBannerContainer: arr3[1] } = tmp);
       obj4.style = items;
       const obj5 = { text: null, style: null };
-      const intl4 = tmp2(1114).intl;
-      obj5.text = intl4.string(tmp2(1114).t.y2b7CA);
+      const intl4 = tmp2(1113).intl;
+      obj5.text = intl4.string(tmp2(1113).t.y2b7CA);
       obj5.style = tmp.newBadge;
-      const items1 = [closure_14(tmp2(1188).TextBadge, obj5), , , , ];
+      const items1 = [closure_14(tmp2(1187).TextBadge, obj5), , , , ];
       const obj6 = { variant: "text-xs/normal", children: null };
-      const intl5 = tmp2(1114).intl;
-      obj6.children = intl5.string(tmp2(1114).t.eH16Gn);
-      items1[1] = closure_14(tmp2(5619).Text, obj6);
+      const intl5 = tmp2(1113).intl;
+      obj6.children = intl5.string(tmp2(1113).t.eH16Gn);
+      items1[1] = closure_14(tmp2(5624).Text, obj6);
       const obj7 = { style: tmp.rowDivider };
       items1[2] = closure_14(View, obj7);
       let obj8 = { style: tmp.addDetailsButton, children: null };
-      let string = tmp2(5629).Button;
-      const intl6 = tmp2(1114).intl;
+      let string = tmp2(5634).Button;
+      const intl6 = tmp2(1113).intl;
       const string2 = intl6.string;
-      let Button = tmp2(1114).t;
+      let Button = tmp2(1113).t;
       if (self.state.metadataAlreadyRefreshed) {
         let string2Result = string2(Button.i4jeWR);
       } else {
@@ -538,15 +538,15 @@ prototype["renderMetadata"] = function renderMetadata() {
       obj8.children = closure_14(string, obj9);
       items1[3] = closure_14(View, obj8);
       const obj10 = { style: tmp.learnMoreButton, children: null };
-      Button = tmp2(5629).Button;
+      Button = tmp2(5634).Button;
       const obj11 = { text: null, variant: "secondary", size: "sm", onPress: null };
-      intl2 = tmp2(1114).intl;
+      intl2 = tmp2(1113).intl;
       string = intl2.string;
-      stringResult = string(tmp2(1114).t["8O0mlf"]);
+      stringResult = string(tmp2(1113).t["8O0mlf"]);
       obj11.text = stringResult;
       obj11.onPress = function onPress() {
-        const obj = self(5704);
-        return obj.openURL(self(2062).getArticleURL(constants.CONNECTION_DETAILS));
+        const obj = self(5709);
+        return obj.openURL(self(2061).getArticleURL(constants.CONNECTION_DETAILS));
       };
       tmp = closure_14(Button, obj11);
       obj10.children = tmp;
@@ -555,27 +555,27 @@ prototype["renderMetadata"] = function renderMetadata() {
       obj4.children = items1;
       closure_15(View, obj4);
     }
-    const obj15 = self(6568);
+    const obj15 = self(6574);
   } else {
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp19Result = closure_14(tmp2(9266).CheckmarkLargeBoldIcon, { size: "sm" });
+      let tmp19Result = closure_14(tmp2(9285).CheckmarkLargeBoldIcon, { size: "sm" });
     } else {
-      tmp19Result = closure_14(tmp2(12518).RefreshIcon, { size: "sm" });
+      tmp19Result = closure_14(tmp2(12553).RefreshIcon, { size: "sm" });
     }
     const obj12 = { size: "sm", variant: "icon-only", icon: tmp19Result, accessibilityLabel: null, onPress: null, disabled: null };
-    const intl3 = tmp2(1114).intl;
-    obj12.accessibilityLabel = intl3.string(tmp2(1114).t.wzzjk9);
+    const intl3 = tmp2(1113).intl;
+    obj12.accessibilityLabel = intl3.string(tmp2(1113).t.wzzjk9);
     obj12.onPress = handleRefresh;
     obj12.disabled = intl2;
     const obj13 = { style: tmp.metadataContainer, children: null };
     const obj14 = { style: tmp.metadataItemsContainer, children: redditMetadataItems };
     const items2 = [closure_14(View, obj14), ];
-    const obj16 = { style: tmp.refreshButtonContainer, children: closure_14(tmp2(8020).IconButton, obj12) };
+    const obj16 = { style: tmp.refreshButtonContainer, children: closure_14(tmp2(8028).IconButton, obj12) };
     items2[1] = closure_14(View, obj16);
     obj13.children = items2;
     return closure_15(View, obj13);
   }
-  const obj2 = account(7342);
+  const obj2 = account(7348);
 };
 prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
   let tmp2 = null;
@@ -635,7 +635,7 @@ prototype["render"] = function render() {
   if (null != value.migrationData) {
     const intl = util.intl;
     const obj2 = { platformName: account.name };
-    let name = intl.format(_modDef3221.Glhokn, obj2);
+    let name = intl.format(_modDef3224.Glhokn, obj2);
   } else {
     name = account.name;
   }
@@ -678,7 +678,7 @@ prototype["render"] = function render() {
   obj7.children = closure_1_14(View, obj8);
   return closure_1_14(View, obj7);
 };
-ConnectedAccount.contextType = fn(5075).ThemeContext;
+ConnectedAccount.contextType = fn(5080).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectedAccount.tsx");
 

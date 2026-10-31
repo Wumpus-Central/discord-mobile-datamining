@@ -1,10 +1,10 @@
-// === Module 9106: CreateInviteModalActionCreators ===
+// === Module 9125: CreateInviteModalActionCreators ===
 
-// Module 9106 (CreateInviteModalActionCreators)
+// Module 9125 (CreateInviteModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8937 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9100 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8946 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9119 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -59,8 +59,8 @@ export default {
       invite1.then(() => {
         DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId });
       }, (message) => {
-        const intl = channelId(1114).intl;
-        message = intl.string(channelId(1114).t.WB1ip6);
+        const intl = channelId(1113).intl;
+        message = intl.string(channelId(1113).t.WB1ip6);
         let message1;
         if (message != null) {
           message1 = message.message;

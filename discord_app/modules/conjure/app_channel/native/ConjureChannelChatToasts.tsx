@@ -1,13 +1,13 @@
-// === Module 18626: ConjureChannelChatToasts ===
+// === Module 18668: ConjureChannelChatToasts ===
 
-// Module 18626 (ConjureChannelChatToasts)
+// Module 18668 (ConjureChannelChatToasts)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import UserUtils from "UserUtils" /* 5063 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Card from "Card" /* 6971 */;
-import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18627 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import UserUtils from "UserUtils" /* 5068 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Card from "Card" /* 6977 */;
+import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 18669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function ChatToast(message) {
     const obj2 = { style: tmp.opaque, children: null };
     const callback = noop.useCallback(() => onOpenChat(message), items);
     const obj3 = { variant: "primary", shadow: "high", border: "subtle", style: tmp.card, onPress: callback, children: null };
-    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
     const items1 = [hasOwnProperty(native.Avatar, obj4), ];
     const obj5 = { style: tmp.body, children: null };
     const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };
@@ -46,7 +46,7 @@ function ChatToast(message) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, alignItems: "flex-end", gap: nativeDefault.space.PX_8 };
 obj2.column = rect;

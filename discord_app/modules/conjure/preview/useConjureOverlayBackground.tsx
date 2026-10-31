@@ -1,10 +1,10 @@
-// === Module 12690: useConjureOverlayBackground ===
+// === Module 12725: useConjureOverlayBackground ===
 
-// Module 12690 (useConjureOverlayBackground)
+// Module 12725 (useConjureOverlayBackground)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureOverlayBackgroundStore from "ConjureOverlayBackgroundStore" /* 10846 */;
+import ConjureOverlayBackgroundStore from "ConjureOverlayBackgroundStore" /* 10866 */;
 
 const require = globalThis.__r;
 
@@ -57,7 +57,7 @@ export default function useConjureOverlayBackground(projectId, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -100,7 +100,7 @@ export default function useConjureOverlayBackground(projectId, arg1) {
               v0(closure_130_0);
             }
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp22) {
           if (tmp4 === v0) {

@@ -1,10 +1,10 @@
-// === Module 12548: conjureAttachmentDrafts ===
+// === Module 12583: conjureAttachmentDrafts ===
 
-// Module 12548 (conjureAttachmentDrafts)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12421 */;
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12453 */;
+// Module 12583 (conjureAttachmentDrafts)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import ConjureAttachmentTypes from "ConjureAttachmentTypes" /* 12459 */;
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12488 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
@@ -129,10 +129,10 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10830).sendUserMessage;
+const sendUserMessage = fn(10850).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(5206).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5211).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);
@@ -156,7 +156,7 @@ export function conjureAttachmentTooLargeText(contentType) {
   const obj = { size: null };
   const obj2 = ConjureAttachmentTypes;
   obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3865.JZ59Bo, obj);
+  return intl.formatToPlainString(_modDef3868.JZ59Bo, obj);
 }
 export function uploadConjureAttachment(arg0, size, name, contentType) {
   if (obj.isConjureAttachmentWithinLimit(size.size, contentType)) {
@@ -168,7 +168,7 @@ export function uploadConjureAttachment(arg0, size, name, contentType) {
     const obj3 = { size: null };
     const tmpResult3 = ConjureAttachmentTypes;
     obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef3865.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef3868.JZ59Bo, obj3);
     result = Promise.resolve(obj2);
     const tmpResult4 = ConjureAttachmentTypes;
   }

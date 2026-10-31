@@ -1,13 +1,13 @@
-// === Module 13645: TraitOptionList ===
+// === Module 13680: TraitOptionList ===
 
-// Module 13645 (TraitOptionList)
+// Module 13680 (TraitOptionList)
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6429 */;
-import inlineStyles from "inlineStyles" /* 8023 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6434 */;
+import inlineStyles from "inlineStyles" /* 8031 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 const require = globalThis.__r;
 const inlineStylesDefault = inlineStyles;
@@ -21,7 +21,7 @@ function SelectedWindow() {
   return React7(tmp2, size);
 }
 const View = fn(17).View;
-const CheckpointConstants = fn(6061);
+const CheckpointConstants = fn(6066);
 ({ CHECKPOINT_PRIMARY: metroRequire, TRAIT_OPTION_HEIGHT } = CheckpointConstants);
 const TRAIT_OPTION_WIDTH = CheckpointConstants.TRAIT_OPTION_WIDTH;
 const jsxProd = fn(21);
@@ -29,7 +29,7 @@ const jsxProd = fn(21);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 let closure_12 = TRAIT_OPTION_WIDTH + PX_12;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles({ assetList: { paddingHorizontal: PX_16 }, radioGroup: { flexDirection: "row", gap: PX_12 }, selectorOverlay: { position: "absolute", left: PX_16, top: 0, width: TRAIT_OPTION_WIDTH, height: TRAIT_OPTION_HEIGHT } });
 const __initData = { code: "function TraitOptionListTsx1(){const{introIndex}=this.__closure;return introIndex.get();}" };
 const __initData2 = { code: "function TraitOptionListTsx2(index,previousIndex){const{scrollTo,scrollViewRef,ASSET_ITEM_STEP}=this.__closure;if(previousIndex!=null&&index!==previousIndex)scrollTo(scrollViewRef,index*ASSET_ITEM_STEP,0,false);}" };
@@ -109,18 +109,18 @@ export default function TraitOptionList(options) {
       HermesBuiltin.arraySpread(Array.from(obj, (arg0, arg1) => {
         const diff = closure_4 - arg1 - 1;
         closure_0 = diff;
-        let obj = options(5090);
+        let obj = options(5095);
         const obj3 = { duration: 100, easing: null };
-        const Easing = options(5090).Easing;
-        obj3.easing = Easing.out(options(5090).Easing.cubic);
+        const Easing = options(5095).Easing;
+        obj3.easing = Easing.out(options(5095).Easing.cubic);
         const fn = function o(arg0) {
           if (true === arg0) {
             options(disabled[11]).runOnJS(onIntroStep)(diff);
             const obj = options(disabled[11]);
           }
         };
-        const obj2 = options(5249);
-        fn.__closure = { runOnJS: options(5090).runOnJS, onIntroStep, target: diff };
+        const obj2 = options(5254);
+        fn.__closure = { runOnJS: options(5095).runOnJS, onIntroStep, target: diff };
         fn.__workletHash = 1554090468151;
         fn.__initData = __initData;
         return obj.withDelay(250, obj2.withTiming(diff, obj3, "respect-motion-settings", fn));
@@ -167,8 +167,8 @@ export default function TraitOptionList(options) {
           if (null != tmp6) {
             if (tmp6.optionId !== importDefault) {
               onSelectOption(tmp6.trait, tmp6.optionId);
-              const result = x(5255).triggerHapticFeedback(x(5255).HapticFeedbackTypes.IMPACT_LIGHT);
-              const obj = x(5255);
+              const result = x(5260).triggerHapticFeedback(x(5260).HapticFeedbackTypes.IMPACT_LIGHT);
+              const obj = x(5260);
             }
           }
         }
@@ -230,8 +230,8 @@ export default function TraitOptionList(options) {
       closure_10.current = false;
       if (traitOption.optionId !== importDefault) {
         onSelectOption(traitOption.trait, traitOption.optionId);
-        const result = traitOption(5255).triggerHapticFeedback(traitOption(5255).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj2 = traitOption(5255);
+        const result = traitOption(5260).triggerHapticFeedback(traitOption(5260).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj2 = traitOption(5260);
       }
       if (!isScreenReaderEnabled) {
         const current = animatedRef.current;

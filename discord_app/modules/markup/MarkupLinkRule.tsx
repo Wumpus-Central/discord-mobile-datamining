@@ -1,15 +1,15 @@
-// === Module 6032: MarkupLinkRule ===
+// === Module 6037: MarkupLinkRule ===
 
-// Module 6032 (MarkupLinkRule)
+// Module 6037 (MarkupLinkRule)
 import _modDef12 from "module_12" /* 12 */;
-import URLUtilsDefault from "URLUtils" /* 1378 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import privDefault from "priv" /* 1452 */;
-import _modDef1944 from "module_1944" /* 1944 */;
-import findCodedLinks from "findCodedLinks" /* 5743 */;
-import MarkupTypes from "MarkupTypes" /* 6027 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6033 */;
-import errorDefault from "error" /* 6034 */;
+import URLUtilsDefault from "URLUtils" /* 1377 */;
+import GlobalUtils from "GlobalUtils" /* 1379 */;
+import privDefault from "priv" /* 1451 */;
+import _modDef1943 from "module_1943" /* 1943 */;
+import findCodedLinks from "findCodedLinks" /* 5748 */;
+import MarkupTypes from "MarkupTypes" /* 6032 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6038 */;
+import errorDefault from "error" /* 6039 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const findCodedLinksDefault = findCodedLinks;
@@ -186,13 +186,13 @@ function punycodeLink(assetURL) {
 }
 let closure_4 = new privDefault({ max: 50 });
 let items = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"];
-let items1 = [fn(6027).AST_KEY.TEXT, fn(6027).AST_KEY.UNDERLINE, fn(6027).AST_KEY.STRONG, fn(6027).AST_KEY.ITALICS, fn(6027).AST_KEY.STRIKETHROUGH, fn(6027).AST_KEY.INLINE_CODE, fn(6027).AST_KEY.SPOILER, fn(6027).AST_KEY.LINE_BREAK, fn(6027).AST_KEY.TIMESTAMP];
-let items2 = [...items1, fn(6027).AST_KEY.EMOJI, fn(6027).AST_KEY.CUSTOM_EMOJI];
-let items3 = [fn(6027).AST_KEY.LIST, fn(6027).AST_KEY.HEADING, fn(6027).AST_KEY.BLOCK_QUOTE, fn(6027).AST_KEY.SUBTEXT];
-const items4 = [fn(6027).AST_KEY.TEXT];
-const items5 = [fn(6027).AST_KEY.UNDERLINE, fn(6027).AST_KEY.STRONG, fn(6027).AST_KEY.ITALICS, fn(6027).AST_KEY.STRIKETHROUGH, fn(6027).AST_KEY.INLINE_CODE, fn(6027).AST_KEY.SPOILER, fn(6027).AST_KEY.LINE_BREAK, fn(6027).AST_KEY.TIMESTAMP, fn(6027).AST_KEY.EMOJI, fn(6027).AST_KEY.CUSTOM_EMOJI, fn(6027).AST_KEY.LIST, fn(6027).AST_KEY.HEADING, fn(6027).AST_KEY.BLOCK_QUOTE, fn(6027).AST_KEY.SUBTEXT];
+let items1 = [fn(6032).AST_KEY.TEXT, fn(6032).AST_KEY.UNDERLINE, fn(6032).AST_KEY.STRONG, fn(6032).AST_KEY.ITALICS, fn(6032).AST_KEY.STRIKETHROUGH, fn(6032).AST_KEY.INLINE_CODE, fn(6032).AST_KEY.SPOILER, fn(6032).AST_KEY.LINE_BREAK, fn(6032).AST_KEY.TIMESTAMP];
+let items2 = [...items1, fn(6032).AST_KEY.EMOJI, fn(6032).AST_KEY.CUSTOM_EMOJI];
+let items3 = [fn(6032).AST_KEY.LIST, fn(6032).AST_KEY.HEADING, fn(6032).AST_KEY.BLOCK_QUOTE, fn(6032).AST_KEY.SUBTEXT];
+const items4 = [fn(6032).AST_KEY.TEXT];
+const items5 = [fn(6032).AST_KEY.UNDERLINE, fn(6032).AST_KEY.STRONG, fn(6032).AST_KEY.ITALICS, fn(6032).AST_KEY.STRIKETHROUGH, fn(6032).AST_KEY.INLINE_CODE, fn(6032).AST_KEY.SPOILER, fn(6032).AST_KEY.LINE_BREAK, fn(6032).AST_KEY.TIMESTAMP, fn(6032).AST_KEY.EMOJI, fn(6032).AST_KEY.CUSTOM_EMOJI, fn(6032).AST_KEY.LIST, fn(6032).AST_KEY.HEADING, fn(6032).AST_KEY.BLOCK_QUOTE, fn(6032).AST_KEY.SUBTEXT];
 let obj = {};
-let merged = Object.assign(_modDef1944.defaultRules.link);
+let merged = Object.assign(_modDef1943.defaultRules.link);
 obj.match = function match(arr, allowLinks, arg2) {
   if (allowLinks.allowLinks) {
     if (-1 === arr.indexOf("](")) {
@@ -243,7 +243,7 @@ obj.match = function match(arr, allowLinks, arg2) {
         }
         return null;
       }
-      return _modDef1944.defaultRules.link.match(arr, allowLinks, arg2);
+      return _modDef1943.defaultRules.link.match(arr, allowLinks, arg2);
     }
   } else {
     return null;
@@ -291,7 +291,7 @@ obj.parse = function parse(arg0, rules, maskedLinkValidation) {
     const trimmed = str3.trim();
     if (0 !== str2.trim().length) {
       if (0 !== trimmed.length) {
-        const tmp59 = punycodeLink(_modDef1944.unescapeUrl(tmp4));
+        const tmp59 = punycodeLink(_modDef1943.unescapeUrl(tmp4));
         if (null != tmp59) {
           if (!obj30.containsCodedLink(tmp5)) {
             const obj13 = {};
@@ -346,7 +346,7 @@ obj.parse = function parse(arg0, rules, maskedLinkValidation) {
                       }
                       const tmp57Result = _modDef12;
                       const pickResult = _modDef12.pick(rules.rules, tmp28);
-                      const obj23 = { content: _modDef1944.parserFor(pickResult)(value3.whitespaceSanitized, obj13), target: tmp59.target, title: value4.whitespaceSanitized };
+                      const obj23 = { content: _modDef1943.parserFor(pickResult)(value3.whitespaceSanitized, obj13), target: tmp59.target, title: value4.whitespaceSanitized };
                       return obj23;
                     }
                   }

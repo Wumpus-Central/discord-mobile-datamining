@@ -1,17 +1,17 @@
-// === Module 9633: admin_editor_test_component ===
+// === Module 9653: admin_editor_test_component ===
 
-// Module 9633 (admin_editor_test_component)
-import _mod1198 from "module_1198" /* 1198 */;
-import localized_string from "localized_string" /* 9611 */;
-import help_article from "help_article" /* 9612 */;
-import cta_button from "cta_button" /* 9613 */;
-import gradient from "gradient" /* 9619 */;
-import theme_aware_asset from "theme_aware_asset" /* 9621 */;
+// Module 9653 (admin_editor_test_component)
+import _mod1197 from "module_1197" /* 1197 */;
+import localized_string from "localized_string" /* 9631 */;
+import help_article from "help_article" /* 9632 */;
+import cta_button from "cta_button" /* 9633 */;
+import gradient from "gradient" /* 9639 */;
+import theme_aware_asset from "theme_aware_asset" /* 9641 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const AdminEditorTestSelectOption = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", FIRST: 1, [1]: "FIRST", SECOND: 2, [2]: "SECOND" };
-const MessageType = fn(1198).MessageType;
+const MessageType = fn(1197).MessageType;
 class AdminEditorTestComponent$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , , ];
@@ -96,10 +96,10 @@ const prototype = AdminEditorTestComponent$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { deprecatedField: "", plainTextField: "", checkboxField: false, assetField: "", selectField: 0, multiSelectField: [] };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1198.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1198.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1198;
+    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1197;
   }
   return obj;
 };
@@ -118,63 +118,63 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
 prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField, tag, writeUnknownFields) {
   let length;
   if ("" !== deprecatedField.deprecatedField) {
-    tag.tag(1, _mod1198.WireType.LengthDelimited).string(deprecatedField.deprecatedField);
-    const tagResult = tag.tag(1, _mod1198.WireType.LengthDelimited);
+    tag.tag(1, _mod1197.WireType.LengthDelimited).string(deprecatedField.deprecatedField);
+    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
   }
   if (deprecatedField.localizedTextField) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult1 = tag.tag(2, _mod1198.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if ("" !== deprecatedField.plainTextField) {
-    tag.tag(3, _mod1198.WireType.LengthDelimited).string(deprecatedField.plainTextField);
-    const tagResult2 = tag.tag(3, _mod1198.WireType.LengthDelimited);
+    tag.tag(3, _mod1197.WireType.LengthDelimited).string(deprecatedField.plainTextField);
+    const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
   }
   if (deprecatedField.textareaField) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult3 = tag.tag(4, _mod1198.WireType.LengthDelimited);
-    const joined1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
+    const joined1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (false !== deprecatedField.checkboxField) {
-    tag.tag(5, _mod1198.WireType.Varint).bool(deprecatedField.checkboxField);
-    const tagResult4 = tag.tag(5, _mod1198.WireType.Varint);
+    tag.tag(5, _mod1197.WireType.Varint).bool(deprecatedField.checkboxField);
+    const tagResult4 = tag.tag(5, _mod1197.WireType.Varint);
   }
   if ("" !== deprecatedField.assetField) {
-    tag.tag(6, _mod1198.WireType.LengthDelimited).string(deprecatedField.assetField);
-    const tagResult5 = tag.tag(6, _mod1198.WireType.LengthDelimited);
+    tag.tag(6, _mod1197.WireType.LengthDelimited).string(deprecatedField.assetField);
+    const tagResult5 = tag.tag(6, _mod1197.WireType.LengthDelimited);
   }
   if (deprecatedField.themedAssetField) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult6 = tag.tag(7, _mod1198.WireType.LengthDelimited);
-    const joined2 = ThemeAwareAsset.internalBinaryWrite(deprecatedField.themedAssetField, tag.tag(7, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = ThemeAwareAsset.internalBinaryWrite(deprecatedField.themedAssetField, tag.tag(7, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult6 = tag.tag(7, _mod1197.WireType.LengthDelimited);
+    const joined2 = ThemeAwareAsset.internalBinaryWrite(deprecatedField.themedAssetField, tag.tag(7, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = ThemeAwareAsset.internalBinaryWrite(deprecatedField.themedAssetField, tag.tag(7, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (deprecatedField.helpArticleField) {
     const HelpArticle = help_article.HelpArticle;
-    const tagResult7 = tag.tag(8, _mod1198.WireType.LengthDelimited);
-    const joined3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult7 = tag.tag(8, _mod1197.WireType.LengthDelimited);
+    const joined3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(deprecatedField.helpArticleField, tag.tag(8, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (deprecatedField.ctaField) {
     const CTAButton = cta_button.CTAButton;
-    const tagResult8 = tag.tag(9, _mod1198.WireType.LengthDelimited);
-    const joined4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult8 = tag.tag(9, _mod1197.WireType.LengthDelimited);
+    const joined4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = CTAButton.internalBinaryWrite(deprecatedField.ctaField, tag.tag(9, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (deprecatedField.gradientField) {
     const Gradient = gradient.Gradient;
-    const tagResult9 = tag.tag(10, _mod1198.WireType.LengthDelimited);
-    const joined5 = Gradient.internalBinaryWrite(deprecatedField.gradientField, tag.tag(10, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult5 = Gradient.internalBinaryWrite(deprecatedField.gradientField, tag.tag(10, _mod1198.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult9 = tag.tag(10, _mod1197.WireType.LengthDelimited);
+    const joined5 = Gradient.internalBinaryWrite(deprecatedField.gradientField, tag.tag(10, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult5 = Gradient.internalBinaryWrite(deprecatedField.gradientField, tag.tag(10, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (0 !== deprecatedField.selectField) {
-    tag.tag(11, _mod1198.WireType.Varint).int32(deprecatedField.selectField);
-    const tagResult10 = tag.tag(11, _mod1198.WireType.Varint);
+    tag.tag(11, _mod1197.WireType.Varint).int32(deprecatedField.selectField);
+    const tagResult10 = tag.tag(11, _mod1197.WireType.Varint);
   }
   if (deprecatedField.multiSelectField.length) {
-    tag.tag(12, _mod1198.WireType.LengthDelimited).fork();
+    tag.tag(12, _mod1197.WireType.LengthDelimited).fork();
     let num14 = 0;
     if (0 < deprecatedField.multiSelectField.length) {
       do {
@@ -184,12 +184,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
       } while (num14 < length);
     }
     const joined6 = tag.join();
-    const tagResult11 = tag.tag(12, _mod1198.WireType.LengthDelimited);
+    const tagResult11 = tag.tag(12, _mod1197.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1198.UnknownFieldHandler.onWrite;
+      onWrite = _mod1197.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, deprecatedField, tag);

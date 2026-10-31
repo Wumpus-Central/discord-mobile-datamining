@@ -1,12 +1,12 @@
-// === Module 11615: useInvitableGameOrganizations ===
+// === Module 11651: useInvitableGameOrganizations ===
 
-// Module 11615 (useInvitableGameOrganizations)
-import DurationsDefault from "Durations" /* 1090 */;
-import isRetryableFetchErrorDefault from "isRetryableFetchError" /* 11617 */;
-import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 11618 */;
-import useCanInviteGuildIdsDefault from "useCanInviteGuildIds" /* 11619 */;
+// Module 11651 (useInvitableGameOrganizations)
+import DurationsDefault from "Durations" /* 1089 */;
+import isRetryableFetchErrorDefault from "isRetryableFetchError" /* 11653 */;
+import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 11654 */;
+import useCanInviteGuildIdsDefault from "useCanInviteGuildIds" /* 11655 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import InvitableGameOrganizationStore from "InvitableGameOrganizationStore" /* 11616 */;
+import InvitableGameOrganizationStore from "InvitableGameOrganizationStore" /* 11652 */;
 
 const initialize = fn(504);
 const obj2 = {
@@ -30,7 +30,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp8) {
       c1 = tmp;

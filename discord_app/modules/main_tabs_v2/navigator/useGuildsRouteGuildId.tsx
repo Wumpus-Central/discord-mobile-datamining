@@ -1,7 +1,7 @@
-// === Module 18020: useGuildsRouteGuildId ===
+// === Module 18063: useGuildsRouteGuildId ===
 
-// Module 18020 (useGuildsRouteGuildId)
-import Link from "Link" /* 1499 */;
+// Module 18063 (useGuildsRouteGuildId)
+import Link from "Link" /* 1498 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");

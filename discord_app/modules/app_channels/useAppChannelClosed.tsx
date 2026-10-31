@@ -1,58 +1,84 @@
-// === Module 18630: useAppChannelClosed ===
+// === Module 18672: useAppChannelClosed ===
 
-// Module 18630 (useAppChannelClosed)
-import useFrameBySurfaceDefault from "useFrameBySurface" /* 12057 */;
+// Module 18672 (useAppChannelClosed)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({ isLaunched: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
+const set = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelClosed.tsx");
 
 export default function useAppChannelClosed(shouldStartClosed) {
   ({ applicationId, surface } = shouldStartClosed);
-  let tmp = hasOwnProperty(applicationId, surface);
-  const tmp2 = useFrameBySurfaceDefault(applicationId, surface);
-  [tmp4, tmp5] = noop.useState(null);
-  c0 = tmp5;
+  first = undefined;
+  let tmp = closure_5(applicationId, surface);
+  const tmp2 = first(12095)(applicationId, surface);
+  [first] = noop.useState(null);
+  dependencyMap = tmp5;
   let frameId;
-  if (tmp4 != null) {
-    frameId = tmp4.frameId;
+  if (first != null) {
+    frameId = first.frameId;
   }
   if (frameId !== tmp) {
-    const obj2 = { frameId: tmp, hasLaunched: false, isClosed: null == tmp2 && shouldStartClosed.shouldStartClosed() };
+    const obj2 = { frameId: tmp, hasLaunched: false, isClosed: null };
+    let tmp17 = null == tmp2;
+    if (tmp17) {
+      tmp17 = set.has(tmp) || shouldStartClosed.shouldStartClosed();
+      const tmp19 = set.has(tmp) || shouldStartClosed.shouldStartClosed();
+    }
+    obj2.isClosed = tmp17;
     tmp5(obj2);
-    const tmp14 = null == tmp2 && shouldStartClosed.shouldStartClosed();
   } else {
-    if (React4(tmp2)) {
-      if (!tmp4.hasLaunched) {
+    if (closure_4(tmp2)) {
+      if (!first.hasLaunched) {
         const obj3 = {};
-        let merged = Object.assign(tmp4);
+        let merged = Object.assign(first);
         obj3.hasLaunched = true;
         tmp5(obj3);
       }
     }
     if (tmp12) {
-      const obj4 = { frameId: tmp, hasLaunched: false, isClosed: true };
+      const obj4 = {};
+      const merged1 = Object.assign(first);
+      obj4.isClosed = true;
       tmp5(obj4);
     }
-    tmp12 = null == tmp2 && tmp4.hasLaunched;
+    tmp12 = null == tmp2 && first.hasLaunched && !first.isClosed;
   }
-  let frameId1;
-  const launch = noop.useCallback(() => _undefined((arg0) => {
-    let tmp = arg0;
-    if (null != arg0) {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      obj.isClosed = false;
-      tmp = obj;
+  const items = [first];
+  const effect = noop.useEffect(() => {
+    let hasLaunched;
+    if (first != null) {
+      hasLaunched = first.hasLaunched;
     }
-    return tmp;
-  }), []);
-  if (tmp4 != null) {
-    frameId1 = tmp4.frameId;
+    if (true === hasLaunched) {
+      if (first.isClosed) {
+        set.add(first.frameId);
+      } else {
+        set.delete(first.frameId);
+      }
+    }
+  }, items);
+  let frameId1;
+  if (first != null) {
+    frameId1 = first.frameId;
   }
-  const isClosed = frameId1 === tmp && tmp4.isClosed;
-  return { isClosed, launch };
+  return {
+    isClosed: frameId1 === tmp && first.isClosed,
+    launch() {
+      closure_1((arg0) => {
+        let tmp = arg0;
+        if (null != arg0) {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.hasLaunched = false;
+          obj.isClosed = false;
+          tmp = obj;
+        }
+        return tmp;
+      });
+    }
+  };
 };

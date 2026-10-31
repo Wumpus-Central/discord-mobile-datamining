@@ -1,12 +1,12 @@
-// === Module 9572: useGameProfilePlatforms ===
+// === Module 9594: useGameProfilePlatforms ===
 
-// Module 9572 (useGameProfilePlatforms)
-import util from "util" /* 1114 */;
-import PlatformType from "PlatformType" /* 8904 */;
+// Module 9594 (useGameProfilePlatforms)
+import util from "util" /* 1113 */;
+import PlatformType from "PlatformType" /* 8913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let items = [fn(8904).PlatformType.DESKTOP, "mobile", fn(8904).PlatformType.XBOX, fn(8904).PlatformType.PLAYSTATION, fn(8904).PlatformType.NINTENDO, fn(8904).PlatformType.ROBLOX];
+let items = [fn(8913).PlatformType.DESKTOP, "mobile", fn(8913).PlatformType.XBOX, fn(8913).PlatformType.PLAYSTATION, fn(8913).PlatformType.NINTENDO, fn(8913).PlatformType.ROBLOX];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfilePlatforms.tsx");
 

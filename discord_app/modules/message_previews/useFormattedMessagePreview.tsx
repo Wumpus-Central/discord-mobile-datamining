@@ -1,17 +1,17 @@
-// === Module 11002: useFormattedMessagePreview ===
+// === Module 11021: useFormattedMessagePreview ===
 
-// Module 11002 (useFormattedMessagePreview)
+// Module 11021 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
-import MessageTypes from "MessageTypes" /* 1089 */;
-import util from "util" /* 1114 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5645 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6432 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 8430 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8435 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 8530 */;
+import MessageTypes from "MessageTypes" /* 1088 */;
+import util from "util" /* 1113 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5650 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6438 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 8438 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8443 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8538 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserStore from "UserStore" /* 1384 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserStore from "UserStore" /* 1383 */;
 
 const require = globalThis.__r;
 
@@ -379,8 +379,8 @@ export function useFormattedMessagePreview(message, channel) {
   if (message.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
     stringResult = nick;
     if (message.author.id === stateFromStores) {
-      const intl = tmp(1114).intl;
-      stringResult = intl.string(tmp(1114).t.LuZzxn);
+      const intl = tmp(1113).intl;
+      stringResult = intl.string(tmp(1113).t.LuZzxn);
     }
   }
   const obj2 = require("initialize");

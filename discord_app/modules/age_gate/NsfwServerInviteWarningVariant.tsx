@@ -1,11 +1,11 @@
-// === Module 10111: NsfwServerInviteWarningVariant ===
+// === Module 10131: NsfwServerInviteWarningVariant ===
 
-// Module 10111 (NsfwServerInviteWarningVariant)
+// Module 10131 (NsfwServerInviteWarningVariant)
 import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1114 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6720 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 6730 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10112 */;
+import util from "util" /* 1113 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6726 */;
+import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 6736 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10132 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;

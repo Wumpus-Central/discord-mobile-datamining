@@ -1,7 +1,7 @@
-// === Module 15495: VoiceServerUpdateImmediateExperiment ===
+// === Module 15534: VoiceServerUpdateImmediateExperiment ===
 
-// Module 15495 (VoiceServerUpdateImmediateExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 15534 (VoiceServerUpdateImmediateExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-voice-server-update-immediate-mobile", kind: "user", defaultConfig: { enabled: false }, variations: null };

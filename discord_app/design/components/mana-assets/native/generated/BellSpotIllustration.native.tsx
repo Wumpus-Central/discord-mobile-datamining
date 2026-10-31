@@ -1,19 +1,19 @@
-// === Module 17989: BellSpotIllustration ===
+// === Module 18032: BellSpotIllustration ===
 
-// Module 17989 (BellSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7063 */;
-import _modDef17990 from "module_17990" /* 17990 */;
-import _modDef17991 from "module_17991" /* 17991 */;
-import _modDef17992 from "module_17992" /* 17992 */;
+// Module 18032 (BellSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7069 */;
+import _modDef18033 from "module_18033" /* 18033 */;
+import _modDef18034 from "module_18034" /* 18034 */;
+import _modDef18035 from "module_18035" /* 18035 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17990 }, 3: null };
-let obj2 = { uri: _modDef17990 };
-obj[2] = { uri: _modDef17991 };
-const obj3 = { uri: _modDef17991 };
-obj[3] = { uri: _modDef17992 };
+let obj = { 1: null, 2: { uri: _modDef18033 }, 3: null };
+let obj2 = { uri: _modDef18033 };
+obj[2] = { uri: _modDef18034 };
+const obj3 = { uri: _modDef18034 };
+obj[3] = { uri: _modDef18035 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BellSpotIllustration.native.tsx");
 

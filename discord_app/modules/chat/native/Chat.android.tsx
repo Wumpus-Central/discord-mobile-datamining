@@ -1,16 +1,16 @@
-// === Module 13277: Chat ===
+// === Module 13312: Chat ===
 
-// Module 13277 (Chat)
+// Module 13312 (Chat)
 import initialize from "initialize" /* 504 */;
-import ChatNativeComponentDefault from "ChatNativeComponent" /* 10089 */;
-import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 13284 */;
+import ChatNativeComponentDefault from "ChatNativeComponent" /* 10109 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 13319 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 require = fn;
 function DCDChatList() {
   const tmp = closure_7();
-  navigationTTIContentPainted = navigationTTIContentPainted(13278).useNavigationTTIContentPainted();
+  navigationTTIContentPainted = navigationTTIContentPainted(13313).useNavigationTTIContentPainted();
   const items = [navigationTTIContentPainted];
   const memo = noop.useMemo(() => {
     const Gesture = navigationTTIContentPainted(dependencyMap[5]).Gesture;
@@ -20,14 +20,14 @@ function DCDChatList() {
   const callback = noop.useCallback((nativeEvent) => navigationTTIContentPainted(nativeEvent.nativeEvent), items);
   const obj2 = { gesture: memo, children: null };
   const obj3 = { style: tmp.chatList, floatingChatInputEnabled: true, onContentPaintStateChange: callback, children: null };
-  const obj = navigationTTIContentPainted(13278);
-  obj3.children = closure_5(navigationTTIContentPainted(13285).TTIFirstContentfulPaint, { label: "chat_list_android" });
+  const obj = navigationTTIContentPainted(13313);
+  obj3.children = closure_5(navigationTTIContentPainted(13320).TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj2.children = closure_5(ChatListNativeComponentDefault, obj3);
-  return closure_5(navigationTTIContentPainted(5298).GestureDetector, obj2);
+  return closure_5(navigationTTIContentPainted(5303).GestureDetector, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles({ chatList: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/Chat.android.tsx");

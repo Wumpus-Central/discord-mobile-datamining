@@ -1,40 +1,40 @@
-// === Module 6056: MessageStore ===
+// === Module 6061: MessageStore ===
 
-// Module 6056 (MessageStore)
+// Module 6061 (MessageStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import FlagUtils from "FlagUtils" /* 1397 */;
-import Server from "Server" /* 1993 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4887 */;
-import ReactionUtils from "ReactionUtils" /* 4953 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6058 */;
-import InteractionTypes from "InteractionTypes" /* 6065 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 6557 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6560 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6562 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7764 */;
-import MessageQueue from "MessageQueue" /* 8376 */;
-import canEditMessageDefault from "canEditMessage" /* 11635 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 15610 */;
+import FlagUtils from "FlagUtils" /* 1396 */;
+import Server from "Server" /* 1992 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4892 */;
+import ReactionUtils from "ReactionUtils" /* 4958 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6063 */;
+import InteractionTypes from "InteractionTypes" /* 6070 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 6563 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6566 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6568 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7771 */;
+import MessageQueue from "MessageQueue" /* 8384 */;
+import canEditMessageDefault from "canEditMessage" /* 11671 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 15651 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 4914 */;
-import EphemeralMessageStore from "EphemeralMessageStore" /* 6057 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
+import ImpersonateStore from "ImpersonateStore" /* 4919 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 6062 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import DimensionStore from "DimensionStore" /* 6556 */;
-import GuildChannelStore from "GuildChannelStore" /* 4939 */;
-import GuildMemberStore from "GuildMemberStore" /* 4921 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4912 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5040 */;
-import UserStore from "UserStore" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import DimensionStore from "DimensionStore" /* 6562 */;
+import GuildChannelStore from "GuildChannelStore" /* 4944 */;
+import GuildMemberStore from "GuildMemberStore" /* 4926 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4917 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5045 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function reinjectEphemerals(channelId, truncateResult) {
@@ -100,7 +100,7 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -148,7 +148,7 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
           }
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
         closure_132_28.log("Push notification message not in cache, adding directly", closure_131_1.id, closure_131_1.channel_id);
         orCreate = closure_132_1(closure_132_2[19]).getOrCreate(closure_131_0);
@@ -956,7 +956,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6557).getOrCreate(ids.channelId);
+    const orCreate = mutation(6563).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1005,14 +1005,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6557).commit(tmp3);
+        tmp(6563).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6557);
+        const tmpResult2 = tmp(6563);
       }
     }
-    let obj = mutation(6557);
+    let obj = mutation(6563);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

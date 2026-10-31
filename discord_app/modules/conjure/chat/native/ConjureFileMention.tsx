@@ -1,6 +1,6 @@
-// === Module 12450: ConjureFileMention ===
+// === Module 12485: ConjureFileMention ===
 
-// Module 12450 (ConjureFileMention)
+// Module 12485 (ConjureFileMention)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { chip: null, thumbnail: null, name: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: 2, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, transform: null };
 let items = [{ translateY: nativeDefault.space.PX_4 }];
@@ -31,31 +31,31 @@ export default function ConjureFileMention(variant) {
   }
   let context;
   const tmp = closure_9();
-  context = noop.useContext(context(12449).ConjureFileMentionProjectContext);
-  const conjureStoredAttachment = context(12451).useConjureStoredAttachment(context, variant.attachmentId);
+  context = noop.useContext(context(12484).ConjureFileMentionProjectContext);
+  const conjureStoredAttachment = context(12486).useConjureStoredAttachment(context, variant.attachmentId);
   const obj2 = { style: tmp.chip, children: null };
   let obj3 = { projectId: context, file: conjureStoredAttachment, style: tmp.thumbnail, iconColor: null };
-  let obj = context(12451);
+  let obj = context(12486);
   obj3.iconColor = conjureStoredAttachment(575).colors.MENTION_FOREGROUND;
-  let items = [closure_7(conjureStoredAttachment(12454), obj3), ];
+  let items = [closure_7(conjureStoredAttachment(12489), obj3), ];
   let obj4 = { variant: str, style: tmp.name, children: null };
   let name;
   if (conjureStoredAttachment != null) {
     name = conjureStoredAttachment.name;
   }
   if (name == null) {
-    const intl = tmp2(1114).intl;
-    name = intl.string(tmp9(3865).ff9Q4C);
+    const intl = tmp2(1113).intl;
+    name = intl.string(tmp9(3868).ff9Q4C);
   }
   obj4.children = name;
-  items[1] = closure_7(context(5619).Text, obj4);
+  items[1] = closure_7(context(5624).Text, obj4);
   obj2.children = items;
   const tmp6Result = closure_8(closure_6, obj2);
   let tmp8Result = tmp6Result;
   if (null != context) {
     tmp8Result = tmp6Result;
     if (null != conjureStoredAttachment) {
-      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(12421).CONJURE_VIEWABLE_IMAGE_TYPES;
+      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(12459).CONJURE_VIEWABLE_IMAGE_TYPES;
       tmp8Result = tmp6Result;
       if (CONJURE_VIEWABLE_IMAGE_TYPES.has(conjureStoredAttachment.content_type)) {
         let obj5 = {
@@ -70,7 +70,7 @@ export default function ConjureFileMention(variant) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
                     try {
@@ -117,7 +117,7 @@ export default function ConjureFileMention(variant) {
                         return obj;
                       } else {
                         c3 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     } catch (tmp13) {
                       c3 = tmp;
@@ -129,9 +129,9 @@ export default function ConjureFileMention(variant) {
           accessibilityLabel: null,
           children: null
         };
-        const intl2 = tmp2(1114).intl;
+        const intl2 = tmp2(1113).intl;
         let obj6 = { name: conjureStoredAttachment.name };
-        obj5.accessibilityLabel = intl2.formatToPlainString(tmp9(3865).GtNukg, obj6);
+        obj5.accessibilityLabel = intl2.formatToPlainString(tmp9(3868).GtNukg, obj6);
         obj5.children = tmp6Result;
         tmp8Result = closure_7(closure_5, obj5);
       }

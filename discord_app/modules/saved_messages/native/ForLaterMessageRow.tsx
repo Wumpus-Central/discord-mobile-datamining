@@ -1,9 +1,9 @@
-// === Module 11158: ForLaterMessageRow ===
+// === Module 11177: ForLaterMessageRow ===
 
-// Module 11158 (ForLaterMessageRow)
+// Module 11177 (ForLaterMessageRow)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import RowGeneratorDefault from "RowGenerator" /* 8369 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import RowGeneratorDefault from "RowGenerator" /* 8377 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { preview: { marginHorizontal: -16, marginTop: -9, overflow: "hidden" }, flushToCardBottom: { marginBottom: -16, borderBottomLeftRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: nativeDefault.modules.mobile.CARD_DEFAULT_RADIUS }, footer: { paddingHorizontal: 16, paddingTop: 8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

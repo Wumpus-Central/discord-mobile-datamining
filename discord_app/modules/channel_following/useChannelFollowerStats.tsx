@@ -1,11 +1,11 @@
-// === Module 14479: useChannelFollowerStats ===
+// === Module 14517: useChannelFollowerStats ===
 
-// Module 14479 (useChannelFollowerStats)
-import DurationsDefault from "Durations" /* 1090 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11183 */;
+// Module 14517 (useChannelFollowerStats)
+import DurationsDefault from "Durations" /* 1089 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11202 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelFollowerStatsStore from "ChannelFollowerStatsStore" /* 14480 */;
+import ChannelFollowerStatsStore from "ChannelFollowerStatsStore" /* 14518 */;
 
 const require = globalThis.__r;
 

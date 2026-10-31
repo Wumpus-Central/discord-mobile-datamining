@@ -1,20 +1,20 @@
-// === Module 13935: ChatInputContextBar ===
+// === Module 13970: ChatInputContextBar ===
 
-// Module 13935 (ChatInputContextBar)
+// Module 13970 (ChatInputContextBar)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import useToken from "useToken" /* 5591 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import Pressables from "Pressables" /* 6974 */;
-import _modDef7100 from "module_7100" /* 7100 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8335 */;
-import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9786 */;
-import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9788 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import useToken from "useToken" /* 5596 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import Pressables from "Pressables" /* 6980 */;
+import _modDef7106 from "module_7106" /* 7106 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8343 */;
+import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9807 */;
+import ScheduledMessageTypes from "ScheduledMessageTypes" /* 9809 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
-import DraftStore from "DraftStore" /* 7694 */;
-import UserStore from "UserStore" /* 1384 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
+import DraftStore from "DraftStore" /* 7701 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function ChatInputReplyBarNoAuthor(onCancelReplying) {
@@ -36,7 +36,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   }
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
-  obj6.children = closure_1_12(native.Icon, { source: _modDef7100, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj6.children = closure_1_12(native.Icon, { source: _modDef7106, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   obj5.children = closure_1_12(Pressables.PressableOpacity, obj6);
   items[1] = closure_1_12(component, obj5);
   obj3.children = items;
@@ -330,11 +330,11 @@ function ChatInputEditBar(onCancelEditing) {
   obj4.hitSlop = tmp9;
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = closure_1_12(Text_Text.Text, obj3);
-  obj4.children = closure_1_12(native.Icon, { source: _modDef7100, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj4.children = closure_1_12(native.Icon, { source: _modDef7106, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   const items = [tmp8, ];
-  const obj5 = { source: _modDef7100, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef7106, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, { style: tmp.floatingRightActions, children: closure_1_12(Pressables.PressableOpacity, obj4) });
   obj7.children = items;
   obj6.children = map1(closure_1_14, obj7);
@@ -365,11 +365,11 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj5.hitSlop = tmp10;
   obj5.onPress = onCancelScheduling;
   const tmp9 = closure_1_12(Pressables.PressableOpacity, obj4);
-  obj5.children = closure_1_12(native.Icon, { source: _modDef7100, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
+  obj5.children = closure_1_12(native.Icon, { source: _modDef7106, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon });
   const obj7 = { style: tmp.contextBarRow, children: null };
   const obj8 = { children: null };
   const items = [tmp9, ];
-  const obj6 = { source: _modDef7100, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj6 = { source: _modDef7106, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, { style: tmp.floatingRightActions, children: closure_1_12(Pressables.PressableOpacity, obj5) });
   obj8.children = items;
   obj7.children = map1(closure_1_14, obj8);
@@ -429,13 +429,13 @@ function ContextBarItem(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7694).DraftType;
+const DraftType = fn(7701).DraftType;
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let obj = { duration: 250, easing: fn(1188).STANDARD_EASING };
-let createStyles = fn(5009);
+let obj = { duration: 250, easing: fn(1187).STANDARD_EASING };
+let createStyles = fn(5014);
 let closure_16 = createStyles.createStyles((arg0) => {
   let MOBILE_FLOATING_ACCESSORY_BACKGROUND = arg0;
   if (arg0 == null) {
@@ -443,7 +443,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
   }
   return { contextBar: { backgroundColor: MOBILE_FLOATING_ACCESSORY_BACKGROUND } };
 });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_17 = createStyles.createStyles(() => {
   obj = { contextBarRow: { overflow: "hidden", flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL, paddingVertical: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL, gap: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_GAP }, floatingReplyTextWrapper: { flexShrink: 1, minWidth: 0 }, floatingContextBar: null, replyMentionButtonActive: null, replyMentionIcon: null, replyMentionIconActive: null, floatingRightActions: null, floatingMentionGroup: null, floatingDivider: null, floatingCloseIcon: null };
   const obj2 = { overflow: "hidden", flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL, paddingVertical: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL, gap: nativeDefault.modules.mobile.CHAT_INPUT_CONTEXT_BAR_GAP };

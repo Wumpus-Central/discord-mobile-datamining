@@ -1,7 +1,7 @@
-// === Module 12509: ConjureMcpUiExperiment ===
+// === Module 12544: ConjureMcpUiExperiment ===
 
-// Module 12509 (ConjureMcpUiExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 12544 (ConjureMcpUiExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-conjure-mcp-ui", kind: "user", defaultConfig: { enabled: false }, variations: null };

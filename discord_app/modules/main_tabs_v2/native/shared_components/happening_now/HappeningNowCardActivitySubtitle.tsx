@@ -1,20 +1,20 @@
-// === Module 18083: HappeningNowCardActivitySubtitle ===
+// === Module 18126: HappeningNowCardActivitySubtitle ===
 
-// Module 18083 (HappeningNowCardActivitySubtitle)
-import util from "util" /* 1114 */;
-import useChannelNameDefault from "useChannelName" /* 5647 */;
-import ActivityTypes from "ActivityTypes" /* 5757 */;
-import isStreamingDefault from "isStreaming" /* 8823 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9066 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10742 */;
-import HappeningNowCard from "HappeningNowCard" /* 17218 */;
+// Module 18126 (HappeningNowCardActivitySubtitle)
+import util from "util" /* 1113 */;
+import useChannelNameDefault from "useChannelName" /* 5652 */;
+import ActivityTypes from "ActivityTypes" /* 5762 */;
+import isStreamingDefault from "isStreaming" /* 8831 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9085 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10762 */;
+import HappeningNowCard from "HappeningNowCard" /* 17275 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
@@ -31,7 +31,7 @@ export function HappeningNowVoiceCardSubtitle(voiceState) {
     const obj3 = { channel: stateFromStores };
     tmp8 = getChannelA11yLabelDefault(obj3);
   }
-  obj2.children = jsx(voiceState(17218).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
+  obj2.children = jsx(voiceState(17275).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: useChannelNameDefault(stateFromStores) });
   return <View style={tmp.cardDetails}>{null}</View>;
 }
 export function HappeningNowActivityCardSubtitle(activity) {

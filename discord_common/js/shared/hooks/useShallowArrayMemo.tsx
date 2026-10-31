@@ -1,8 +1,8 @@
-// === Module 18128: useShallowArrayMemo ===
+// === Module 18171: useShallowArrayMemo ===
 
-// Module 18128 (useShallowArrayMemo)
+// Module 18171 (useShallowArrayMemo)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
-import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 18129 */;
+import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 18172 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useShallowArrayMemo.tsx");

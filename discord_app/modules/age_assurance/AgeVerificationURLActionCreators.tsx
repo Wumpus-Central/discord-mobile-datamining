@@ -1,9 +1,9 @@
-// === Module 7960: AgeVerificationURLActionCreators ===
+// === Module 7968: AgeVerificationURLActionCreators ===
 
-// Module 7960 (AgeVerificationURLActionCreators)
+// Module 7968 (AgeVerificationURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7961 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7969 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -29,7 +29,7 @@ let closure_8 = async function _requestAgeVerification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -208,7 +208,7 @@ let closure_16 = async function _requestAgeVerificationV(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -284,7 +284,7 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -359,7 +359,7 @@ let closure_19 = async function _registerIncodeInterview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -391,7 +391,7 @@ let closure_19 = async function _registerIncodeInterview() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp9) {
         c1 = tmp;
@@ -411,7 +411,7 @@ let closure_20 = async function _requestIncodeSessionBootstrap() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -507,7 +507,7 @@ function fetchAgeVerificationMethodsSuspendedUser() {
   const request = { url: Endpoints.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS, rejectWithError: true, body: { token: suspendedUserToken } };
   return HTTP.post(request);
 }
-const VerificationVendorName = fn(6722).VerificationVendorName;
+const VerificationVendorName = fn(6728).VerificationVendorName;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");

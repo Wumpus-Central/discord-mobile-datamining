@@ -1,21 +1,21 @@
-// === Module 14444: ProductPurchaseSuccessModal ===
+// === Module 14482: ProductPurchaseSuccessModal ===
 
-// Module 14444 (ProductPurchaseSuccessModal)
+// Module 14482 (ProductPurchaseSuccessModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1988 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import spring from "spring" /* 5632 */;
-import _mod6999 from "module_6999" /* 6999 */;
-import XSmallIcon from "XSmallIcon" /* 7048 */;
-import tinycolorDefault from "tinycolor" /* 7723 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14443 */;
+import util from "util" /* 1113 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1987 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import spring from "spring" /* 5637 */;
+import _mod7005 from "module_7005" /* 7005 */;
+import XSmallIcon from "XSmallIcon" /* 7054 */;
+import tinycolorDefault from "tinycolor" /* 7730 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 const require = globalThis.__r;
 
@@ -43,7 +43,7 @@ function CancelButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-  return closure_11(_mod6999.HeaderBackButton, obj);
+  return closure_11(_mod7005.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
@@ -95,10 +95,10 @@ const Constants = fn(1072);
 ({ Orientation: closure_9, VerticalGradient: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { closeButtonIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY } };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_15 = createStyles.createStyles((arg0) => {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -182,7 +182,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   let callback;
   dependencyMap = undefined;
   const currentUser = require("useCurrentUser").useCurrentUser();
-  const backgroundColors = callback(14445)(product.styles).backgroundColors;
+  const backgroundColors = callback(14483)(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
@@ -224,9 +224,9 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   const tmp2Result13 = require("useAvatarDecorationPreviewSizes");
   let items1 = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  let tmp12 = product.type === tmp2(1988).CollectiblesItemType.PROFILE_EFFECT;
+  let tmp12 = product.type === tmp2(1987).CollectiblesItemType.PROFILE_EFFECT;
   if (!tmp12) {
-    tmp12 = product.type === tmp2(1988).CollectiblesItemType.PROFILE_FRAME;
+    tmp12 = product.type === tmp2(1987).CollectiblesItemType.PROFILE_FRAME;
   }
   closure_129_0 = stateFromStores;
   closure_129_1 = tmp12;
@@ -323,7 +323,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const obj8 = { uri: mobileBgUrl };
       obj7.source = obj8;
       obj7.style = tmp6.imageBackground;
-      let tmp28 = closure_11(tmp4(5712), obj7);
+      let tmp28 = closure_11(tmp4(5717), obj7);
       let tmp29 = closure_11;
       let tmp30 = closure_11;
     }
@@ -341,7 +341,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj11 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
       const obj12 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp30(tmp2(14449).BalanceWidgetPill, obj12);
+      showOrbBalancePill = tmp30(tmp2(14487).BalanceWidgetPill, obj12);
     }
     obj11.children = showOrbBalancePill;
     const items5 = [tmp30(closure_7, obj11), ];
@@ -362,7 +362,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const items7 = [tmp6.preview, animatedStyle];
     obj15.style = items7;
     const type = product.type;
-    if (tmp2(1988).CollectiblesItemType.BUNDLE === type) {
+    if (tmp2(1987).CollectiblesItemType.BUNDLE === type) {
       const obj16 = { style: tmp6.previewBundle, onLayout: tmp25, children: null };
       let tmp29Result = null != tmp24;
       if (tmp29Result) {
@@ -370,28 +370,28 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
         ({ firstAvatarDecoration: obj34.deco, firstProfileEffect: obj34.pfx, firstNameplate: obj34.nameplate } = shopProductItems);
         obj17.previewAssets = product.previewAssets;
         obj17.targetSize = tmp24;
-        tmp29Result = tmp29(tmp4(9471), obj17);
+        tmp29Result = tmp29(tmp4(9493), obj17);
       }
       obj16.children = tmp29Result;
       let tmp29Result2 = tmp29(closure_7, obj16);
-    } else if (tmp2(1988).CollectiblesItemType.AVATAR_DECORATION === type) {
+    } else if (tmp2(1987).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj18 = { item: _slicedToArray(product.items, 1)[0], size: avatarDecorationSize, avatarSource, animate: !stateFromStores };
-      tmp29Result2 = tmp29(tmp4(9484), obj18);
-    } else if (tmp2(1988).CollectiblesItemType.PROFILE_EFFECT === type) {
+      tmp29Result2 = tmp29(tmp4(9506), obj18);
+    } else if (tmp2(1987).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj19 = { user: currentUser, profileEffect: product.items[0] };
-      tmp29Result2 = tmp29(tmp4(11355), obj19);
-    } else if (tmp2(1988).CollectiblesItemType.PROFILE_FRAME === type) {
+      tmp29Result2 = tmp29(tmp4(11391), obj19);
+    } else if (tmp2(1987).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj20 = { user: currentUser, profileFrame: product.items[0] };
-      tmp29Result2 = tmp29(tmp4(11471), obj20);
+      tmp29Result2 = tmp29(tmp4(11505), obj20);
     } else {
       tmp29Result2 = null;
-      if (tmp2(1988).CollectiblesItemType.NAMEPLATE === type) {
+      if (tmp2(1987).CollectiblesItemType.NAMEPLATE === type) {
         const obj21 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp29Result2 = tmp29(tmp2(11472).NameplatePreview, obj21);
+        tmp29Result2 = tmp29(tmp2(11506).NameplatePreview, obj21);
       }
     }
     obj15.children = tmp29Result2;
-    const items8 = [tmp30(tmp4(5090).View, obj15), ];
+    const items8 = [tmp30(tmp4(5095).View, obj15), ];
     const obj22 = { style: null, children: null };
     const items9 = [tmp6.messages, animatedStyle1];
     obj22.style = items9;
@@ -399,15 +399,15 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       let renderMessagesResult = renderMessages();
     } else {
       const obj23 = { variant: "heading-xl/bold", color: "text-overlay-light", style: tmp6.title, children: null };
-      const intl3 = tmp2(1114).intl;
+      const intl3 = tmp2(1113).intl;
       const obj24 = { itemName: product.name };
-      obj23.children = intl3.format(tmp2(1114).t.YNaxMp, obj24);
-      const items10 = [tmp30(tmp2(5619).Text, obj23), ];
+      obj23.children = intl3.format(tmp2(1113).t.YNaxMp, obj24);
+      const items10 = [tmp30(tmp2(5624).Text, obj23), ];
       const obj25 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
-      let result = tmp2(7725).isPremiumCollectiblesProduct(product);
-      const intl4 = tmp2(1114).intl;
+      let result = tmp2(7732).isPremiumCollectiblesProduct(product);
+      const intl4 = tmp2(1113).intl;
       const format = intl4.format;
-      const t = tmp2(1114).t;
+      const t = tmp2(1113).t;
       if (result) {
         const obj26 = { itemName: product.name };
         let formatResult = format(t.nW6E3m, obj26);
@@ -417,36 +417,36 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       }
       const obj28 = { children: null };
       obj25.children = formatResult;
-      items10[1] = tmp30(tmp2(5619).Text, obj25);
+      items10[1] = tmp30(tmp2(5624).Text, obj25);
       obj28.children = items10;
       renderMessagesResult = closure_12(closure_13, obj28);
-      const tmp2Result24 = tmp2(7725);
+      const tmp2Result24 = tmp2(7732);
     }
     obj22.children = renderMessagesResult;
-    items8[1] = tmp30(tmp4(5090).View, obj22);
+    items8[1] = tmp30(tmp4(5095).View, obj22);
     obj14.children = items8;
     items6[1] = closure_12(closure_6, obj14);
     const obj29 = { style: tmp6.footer, children: null };
     const obj30 = { style: tmp6.cta, children: null };
     if (canUseNow) {
       const obj31 = { loading: isApplying, disabled: isApplying, onPress: handleUseNow, text: null, size: "lg", grow: true };
-      const intl2 = tmp2(1114).intl;
-      obj31.text = intl2.string(tmp2(1114).t.MAS7uK);
+      const intl2 = tmp2(1113).intl;
+      obj31.text = intl2.string(tmp2(1113).t.MAS7uK);
       let obj32 = obj31;
     } else {
       obj32 = { onPress: handleEditProfile, text: null, size: "lg", grow: true };
-      const intl = tmp2(1114).intl;
-      obj32.text = intl.string(tmp2(1114).t["2p2aYz"]);
+      const intl = tmp2(1113).intl;
+      obj32.text = intl.string(tmp2(1113).t["2p2aYz"]);
     }
-    obj30.children = tmp30(tmp2(5629).Button, obj32);
+    obj30.children = tmp30(tmp2(5634).Button, obj32);
     obj29.children = tmp30(closure_7, obj30);
     items6[2] = tmp30(closure_7, obj29);
     rect.children = items6;
-    items3[1] = closure_12(tmp2(7286).SafeAreaPaddingView, rect);
+    items3[1] = closure_12(tmp2(7292).SafeAreaPaddingView, rect);
     const obj33 = { style: null, pointerEvents: "none" };
     const items11 = [tmp6.curtain, animatedStyle2];
     obj33.style = items11;
-    items3[2] = tmp30(tmp4(5090).View, obj33);
+    items3[2] = tmp30(tmp4(5095).View, obj33);
     obj6.children = items3;
     return closure_12(closure_7, obj6);
   }

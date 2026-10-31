@@ -1,11 +1,11 @@
-// === Module 5041: UserGuildJoinRequestStore ===
+// === Module 5046: UserGuildJoinRequestStore ===
 
-// Module 5041 (UserGuildJoinRequestStore)
+// Module 5046 (UserGuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4872 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5042 */;
-import UserStore from "UserStore" /* 1384 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4877 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5047 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 function handleGatewayJoinRequestUpdate(arg0) {

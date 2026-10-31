@@ -1,9 +1,9 @@
-// === Module 14056: ScreenArrowIcon ===
+// === Module 14091: ScreenArrowIcon ===
 
-// Module 14056 (ScreenArrowIcon)
+// Module 14091 (ScreenArrowIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod11893 from "module_11893" /* 11893 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod11931 from "module_11931" /* 11931 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ScreenArrowIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11893, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11931, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

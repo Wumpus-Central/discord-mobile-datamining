@@ -1,14 +1,14 @@
-// === Module 14915: GameCoverImage ===
+// === Module 14953: GameCoverImage ===
 
-// Module 14915 (GameCoverImage)
+// Module 14953 (GameCoverImage)
 import nativeDefault from "native" /* 575 */;
-import GameCoverArt from "GameCoverArt" /* 9355 */;
+import GameCoverArt from "GameCoverArt" /* 9375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { cover: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.cover = { aspectRatio: 0.75, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };

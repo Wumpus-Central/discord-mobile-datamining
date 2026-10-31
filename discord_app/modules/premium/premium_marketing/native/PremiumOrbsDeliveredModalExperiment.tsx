@@ -1,7 +1,7 @@
-// === Module 15188: PremiumOrbsDeliveredModalExperiment ===
+// === Module 15227: PremiumOrbsDeliveredModalExperiment ===
 
-// Module 15188 (PremiumOrbsDeliveredModalExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 15227 (PremiumOrbsDeliveredModalExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-mobile-nitro-orbs-delivered-modal", kind: "user", defaultConfig: false, variations: { 1: true } });

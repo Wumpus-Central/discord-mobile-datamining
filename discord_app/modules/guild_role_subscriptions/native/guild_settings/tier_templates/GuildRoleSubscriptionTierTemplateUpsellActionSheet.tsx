@@ -1,35 +1,39 @@
-// === Module 18256: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 18299: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 18256 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 18299 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5267 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8765 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9055 */;
+import util from "util" /* 1113 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5272 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8773 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(5009);
-const obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" }, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
+const createStyles = fn(5014);
+const obj2 = { container: { padding: nativeDefault.space.PX_16, justifyContent: "center" }, videoContainer: null, info: null, title: null, subtitle: null, footer: null };
+let obj3 = { padding: nativeDefault.space.PX_16, justifyContent: "center" };
 obj2.videoContainer = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-obj2.info = { marginTop: 16, alignItems: "center" };
-obj2.title = { marginTop: 24, textAlign: "center" };
-obj2.subtitle = { marginTop: 12, textAlign: "center" };
-obj2.footer = { marginTop: 32 };
-obj2.button = { marginBottom: 8 };
+let obj4 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+obj2.info = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
+let obj5 = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
+obj2.title = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
+let obj6 = { marginTop: nativeDefault.space.PX_24, textAlign: "center" };
+obj2.subtitle = { marginTop: nativeDefault.space.PX_12, textAlign: "center" };
+let obj7 = { marginTop: nativeDefault.space.PX_12, textAlign: "center" };
+obj2.footer = { marginTop: nativeDefault.space.PX_32 };
 let closure_13 = createStyles.createStyles(obj2);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
@@ -50,7 +54,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const obj4 = {
     style: tmp.container,
     onLayout(nativeEvent) {
-      const diff = nativeEvent.nativeEvent.layout.width - 32;
+      const diff = nativeEvent.nativeEvent.layout.width - 2 * nativeDefault.space.PX_16;
       let result = diff;
       if (closure_3) {
         result = diff / 2;
@@ -63,7 +67,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const intl = util.intl;
   obj5.accessibilityLabel = intl.string(util.t.gCgirr);
   const size = { style: tmp.videoContainer, src, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true };
-  obj5.children = closure_10(markAsDismissed(8864), size);
+  obj5.children = closure_10(markAsDismissed(8873), size);
   const items2 = [closure_10(View, obj5), , ];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };
@@ -76,28 +80,24 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   items3[1] = closure_10(Text_Text.Text, obj8);
   obj6.children = items3;
   items2[1] = closure_11(View, obj6);
-  const obj9 = { style: tmp.footer, children: null };
-  const obj10 = { style: tmp.button, children: null };
-  const obj11 = { text: null, onPress: null };
+  const obj9 = { spacing: markAsDismissed(575).space.PX_8, style: tmp.footer, children: null };
+  const obj10 = { text: null, onPress: null };
   const intl4 = util.intl;
-  obj11.text = intl4.string(util.t.BQq86h);
-  obj11.onPress = function handleClickUseTemplate() {
+  obj10.text = intl4.string(util.t.BQq86h);
+  obj10.onPress = function handleClickUseTemplate() {
     GuildSettingsActionCreatorsDefault.open(require, constants.ROLE_SUBSCRIPTIONS_TIERS, undefined, constants2.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  obj10.children = closure_10(components_Button_Button.Button, obj11);
-  const items4 = [closure_10(View, obj10), ];
-  const obj12 = { style: tmp.button, children: null };
-  const obj13 = { text: null, onPress: null, variant: "secondary" };
+  const items4 = [closure_10(components_Button_Button.Button, obj10), ];
+  const obj11 = { text: null, onPress: null, variant: "secondary" };
   const intl5 = util.intl;
-  obj13.text = intl5.string(util.t.WAI6xu);
-  obj13.onPress = function onPress() {
-    return markAsDismissed(_undefined[17]).hideActionSheet();
+  obj11.text = intl5.string(util.t.WAI6xu);
+  obj11.onPress = function onPress() {
+    return markAsDismissed(_undefined[18]).hideActionSheet();
   };
-  obj12.children = closure_10(components_Button_Button.Button, obj13);
-  items4[1] = closure_10(View, obj12);
+  items4[1] = closure_10(components_Button_Button.Button, obj11);
   obj9.children = items4;
-  items2[2] = closure_11(View, obj9);
+  items2[2] = closure_11(Stack_Stack.Stack, obj9);
   obj4.children = items2;
   obj3.children = closure_11(View, obj4);
   return closure_10(Sheet_BottomSheet.BottomSheet, obj3);

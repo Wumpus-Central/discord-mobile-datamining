@@ -1,9 +1,9 @@
-// === Module 12326: AppLauncherTextInputOption ===
+// === Module 12364: AppLauncherTextInputOption ===
 
-// Module 12326 (AppLauncherTextInputOption)
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1889 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9918 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 9924 */;
+// Module 12364 (AppLauncherTextInputOption)
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9939 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 9945 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,10 +11,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const EmojiIntention = fn(1387).EmojiIntention;
+const EmojiIntention = fn(1386).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({ content: { flex: 1, flexDirection: "row", alignItems: "center" }, stringOptionInput: { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 }, expressionButton: { marginVertical: -8, marginRight: -8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/options/text_input/AppLauncherTextInputOption.tsx");

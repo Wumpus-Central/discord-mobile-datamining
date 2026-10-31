@@ -1,15 +1,15 @@
-// === Module 11496: ExternalStreamingStore ===
+// === Module 11530: ExternalStreamingStore ===
 
-// Module 11496 (ExternalStreamingStore)
+// Module 11530 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import _modDef1343 from "module_1343" /* 1343 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7341 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import _modDef1342 from "module_1342" /* 1342 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7347 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6566 */;
-import StreamerModeStore from "StreamerModeStore" /* 5064 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6572 */;
+import StreamerModeStore from "StreamerModeStore" /* 5069 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {
@@ -98,7 +98,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -499,7 +499,7 @@ prototype2["getStream"] = function getStream() {
 ExternalStreamingStore.displayName = "ExternalStreamingStore";
 const externalStreamingStore = new ExternalStreamingStore(DispatcherDefault, {
   STREAMING_UPDATE: function streamUpdate(stream) {
-    if (_modDef1343(stream.stream, stream)) {
+    if (_modDef1342(stream.stream, stream)) {
       return false;
     } else {
       stream = stream.stream;

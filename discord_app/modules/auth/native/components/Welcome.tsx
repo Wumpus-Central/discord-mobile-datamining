@@ -1,31 +1,31 @@
-// === Module 17935: Welcome ===
+// === Module 17978: Welcome ===
 
-// Module 17935 (Welcome)
+// Module 17978 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import Link from "Link" /* 1499 */;
-import UserUtilsDefault from "UserUtils" /* 5063 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7106 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7142 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7647 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 14183 */;
-import _modDef15083 from "module_15083" /* 15083 */;
-import _mod15640 from "module_15640" /* 15640 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17932 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import Link from "Link" /* 1498 */;
+import UserUtilsDefault from "UserUtils" /* 5068 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7112 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7148 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7654 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 14221 */;
+import _modDef15120 from "module_15120" /* 15120 */;
+import _mod15681 from "module_15681" /* 15681 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 17975 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 17936 */;
-import ExperimentStore from "ExperimentStore" /* 5233 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7630 */;
-import MultiAccountStore from "MultiAccountStore" /* 13927 */;
-import UserRecord from "UserRecord" /* 1398 */;
-import InviteStore from "InviteStore" /* 5744 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 9104 */;
+import AgeGateStore from "AgeGateStore" /* 17979 */;
+import ExperimentStore from "ExperimentStore" /* 5238 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7637 */;
+import MultiAccountStore from "MultiAccountStore" /* 13962 */;
+import UserRecord from "UserRecord" /* 1397 */;
+import InviteStore from "InviteStore" /* 5749 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 9123 */;
 
 const require = globalThis.__r;
 
@@ -47,7 +47,7 @@ function InviteCard(invite) {
       let tmp18 = dependencyMap;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "Array" };
+      const obj = { user: null, guildId: "a" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = dependencyMap(native.Avatar, obj);
@@ -59,7 +59,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "Array" };
+      const obj4 = { user: null, guildId: "a" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
@@ -76,9 +76,9 @@ function InviteCard(invite) {
     const items1 = [tmp14, ];
     const obj6 = { style: tmp.text, children: null };
     const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: stringResult };
-    const items2 = [tmp18(tmp17(5619).Text, obj7), ];
+    const items2 = [tmp18(tmp17(5624).Text, obj7), ];
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-    items2[1] = tmp18(tmp17(5619).Text, obj8);
+    items2[1] = tmp18(tmp17(5624).Text, obj8);
     obj6.children = items2;
     items1[1] = __initData(React4, obj6);
     obj5.children = items1;
@@ -91,7 +91,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef15083 };
+  const obj2 = { source: _modDef15120 };
   const items1 = [dependencyMap(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -114,7 +114,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj2 = { style: tmp4.centerpieceContainer, children: null };
   const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  const items = [dependencyMap(FastImageDefault, { style: tmp4.logo, source: _mod15640 }), , ];
+  const items = [dependencyMap(FastImageDefault, { style: tmp4.logo, source: _mod15681 }), , ];
   const obj5 = { style: null, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   const items1 = [tmp4.header, typeConsolidationTextTransform];
   obj5.style = items1;
@@ -159,11 +159,11 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, StorageKeys: closure_14, AuthStates: closure_15, InviteStates: closure_16, ThemeTypes: closure_17 } = Constants);
-const GuildTemplateStates = fn(7495).GuildTemplateStates;
-const InviteTypes = fn(7872).InviteTypes;
+const GuildTemplateStates = fn(7501).GuildTemplateStates;
+const InviteTypes = fn(7879).InviteTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let closure_22 = createStyles.createStyles((arg0) => {
   const obj = { container: { height: "100%", flex: 1, padding: 16 }, logo: { flex: 0, width: 93, height: 70, tintColor: "white", alignSelf: "center", marginBottom: 24 }, scrollViewContainer: { flexShrink: 0, flexGrow: 1, justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8, textTransform: "uppercase" }, subHeader: null, subHeaderWithInvite: null, centerpieceContainer: null, buttonContainer: null };
   let num = 300;
@@ -176,7 +176,7 @@ let closure_22 = createStyles.createStyles((arg0) => {
   obj.buttonContainer = { paddingHorizontal: 28, maxWidth: 480, alignSelf: "center", width: "100%" };
   return obj;
 });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj3 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, flexDirection: "row", borderRadius: nativeDefault.radii.sm }, text: { marginLeft: 16 } };
 let closure_23 = createStyles.createStyles(obj3);
 const size = fn(2);

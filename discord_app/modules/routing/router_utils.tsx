@@ -1,11 +1,11 @@
-// === Module 1100: router_utils ===
+// === Module 1099: router_utils ===
 
-// Module 1100 (router_utils)
+// Module 1099 (router_utils)
 import LoggerDefault from "Logger" /* 3 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import RoutingSources from "RoutingSources" /* 1112 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
+import RoutingSources from "RoutingSources" /* 1111 */;
 import Constants from "Constants" /* 1072 */;
-import _extends_mod from "module_1101" /* 1101 */;
+import _extends_mod from "module_1100" /* 1100 */;
 import size from "module_2" /* 2 */;
 
 function transitionTo(CHANNELResult, guildScheduledEvent2) {

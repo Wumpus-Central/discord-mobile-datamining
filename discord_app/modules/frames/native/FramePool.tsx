@@ -1,15 +1,15 @@
-// === Module 19042: FramePool ===
+// === Module 19091: FramePool ===
 
-// Module 19042 (FramePool)
+// Module 19091 (FramePool)
 import initialize from "initialize" /* 504 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10903 */;
-import makeIframeIdDefault from "makeIframeId" /* 11761 */;
-import WebViewContext from "WebViewContext" /* 11784 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 12070 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10928 */;
+import makeIframeIdDefault from "makeIframeId" /* 11798 */;
+import WebViewContext from "WebViewContext" /* 11822 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 12108 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6840 */;
+import FramesStore from "FramesStore" /* 6846 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ function PooledFrame(frame) {
   iframeId = undefined;
   dependencyMap = undefined;
   const id = frame.id;
-  [iframeId, dependencyMap] = noop.useState(() => first(11761)());
+  [iframeId, dependencyMap] = noop.useState(() => first(11798)());
   const items = [id, iframeId];
   const effect = noop.useEffect(() => {
     FramePoolManagerDefault.registerFrameEntry(id, first);
@@ -35,20 +35,20 @@ function PooledFrame(frame) {
   const callback = noop.useCallback(() => {
     dependencyMap(makeIframeIdDefault());
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(iframeId(12070).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
+  let syncExternalStore = noop.useSyncExternalStore(iframeId(12108).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
   let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
   if (syncExternalStore == null) {
     const obj2 = { layoutMode: constants.FOCUSED };
     syncExternalStore = obj2;
   }
   obj.presentation = syncExternalStore;
-  return jsx(iframeId(19043), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(iframeId(19092), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({ FrameLayoutModes: closure_7, isLaunched: closure_8 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({ pool: { position: "absolute", opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");

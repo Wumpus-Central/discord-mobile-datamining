@@ -1,15 +1,15 @@
-// === Module 10232: GIFPickerSearchSuggestions ===
+// === Module 10252: GIFPickerSearchSuggestions ===
 
-// Module 10232 (GIFPickerSearchSuggestions)
+// Module 10252 (GIFPickerSearchSuggestions)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10223 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10243 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj = { suggestionsContainer: { justifyContent: "center", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, footerSuggestionsContainer: null, footerSuggestionsTitle: null };
 let obj3 = { justifyContent: "center", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
 obj.footerSuggestionsContainer = { justifyContent: "flex-start", paddingVertical: nativeDefault.space.PX_16 };
@@ -29,14 +29,14 @@ export default noop.memo(function GIFPickerSearchSuggestions(onClickSuggestion) 
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { style: tmp.footerSuggestionsContainer, children: null };
     const obj3 = { style: tmp.footerSuggestionsTitle, variant: "text-md/medium", color: "text-default", children: null };
-    const intl = tmp2(1114).intl;
-    obj3.children = intl.string(tmp2(1114).t["3JGJo2"]);
-    const items1 = [closure_5(tmp2(5619).Text, obj3), ];
+    const intl = tmp2(1113).intl;
+    obj3.children = intl.string(tmp2(1113).t["3JGJo2"]);
+    const items1 = [closure_5(tmp2(5624).Text, obj3), ];
     const obj4 = {
       style: tmp.suggestionsContainer,
       children: stateFromStoresArray.map((text) => {
           closure_0 = text;
-          return closure_1_5(onClickSuggestion(5629).Button, {
+          return closure_1_5(onClickSuggestion(5634).Button, {
             size: "sm",
             variant: "secondary",
             hitSlop: nativeDefault.space.PX_8,

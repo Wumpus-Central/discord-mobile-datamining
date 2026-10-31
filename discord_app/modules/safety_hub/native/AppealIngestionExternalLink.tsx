@@ -1,19 +1,19 @@
-// === Module 13289: AppealIngestionExternalLink ===
+// === Module 13324: AppealIngestionExternalLink ===
 
-// Module 13289 (AppealIngestionExternalLink)
+// Module 13324 (AppealIngestionExternalLink)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import LinkingDefault from "Linking" /* 5704 */;
-import Pressables from "Pressables" /* 6974 */;
-import _mod8355 from "module_8355" /* 8355 */;
+import native from "native" /* 1187 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import LinkingDefault from "Linking" /* 5709 */;
+import Pressables from "Pressables" /* 6980 */;
+import _mod8363 from "module_8363" /* 8363 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { childButton: { marginBottom: 8, borderRadius: nativeDefault.radii.xs }, childContainer: null, childButtonText: null, chevron: null };
 const obj3 = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
 obj2.childContainer = { minHeight: 60, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingVertical: 16, paddingStart: 16, paddingEnd: 8, borderRadius: nativeDefault.radii.xs };
@@ -39,7 +39,7 @@ export default function AppealIngestionExternalLink(children) {
     children: null
   };
   const obj2 = { style: tmp.childContainer, children: null };
-  const items = [closure_4(Text_Text.Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text }), closure_4(native.Icon, { source: _mod8355, color: tmp.chevron.color })];
+  const items = [closure_4(Text_Text.Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text }), closure_4(native.Icon, { source: _mod8363, color: tmp.chevron.color })];
   obj2.children = items;
   obj.children = closure_5(View, obj2);
   return closure_4(Pressables.PressableHighlight, obj);

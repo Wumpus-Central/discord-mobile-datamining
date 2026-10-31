@@ -1,27 +1,27 @@
-// === Module 19208: ActivityShelfItem ===
+// === Module 19260: ActivityShelfItem ===
 
-// Module 19208 (ActivityShelfItem)
+// Module 19260 (ActivityShelfItem)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1893 */;
-import native2 from "native" /* 5075 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5678 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6036 */;
-import NativeViewDefault from "NativeView" /* 6954 */;
-import Pressables from "Pressables" /* 6974 */;
-import TestModeUtils from "TestModeUtils" /* 9535 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11803 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 12207 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12236 */;
-import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 12293 */;
-import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 12299 */;
-import _modDef14338 from "module_14338" /* 14338 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 19205 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 19206 */;
-import useActivityUsersDefault from "useActivityUsers" /* 19207 */;
-import _modDef19209 from "module_19209" /* 19209 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1892 */;
+import native2 from "native" /* 5080 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5683 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6041 */;
+import NativeViewDefault from "NativeView" /* 6960 */;
+import Pressables from "Pressables" /* 6980 */;
+import TestModeUtils from "TestModeUtils" /* 9557 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11841 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 12245 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12274 */;
+import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 12331 */;
+import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 12337 */;
+import _modDef14376 from "module_14376" /* 14376 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 19257 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 19258 */;
+import useActivityUsersDefault from "useActivityUsers" /* 19259 */;
+import _modDef19261 from "module_19261" /* 19261 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -67,7 +67,7 @@ function ParticipantsText(arg0) {
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
-  const items1 = [timestampProducer(native.Icon, { source: _modDef14338, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
+  const items1 = [timestampProducer(native.Icon, { source: _modDef14376, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
   const obj4 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
   if (action === useActivityShelfItem.ActivityAction.START) {
     let num2 = activityItem.application.maxParticipants;
@@ -90,13 +90,13 @@ function ParticipantsText(arg0) {
   return React6(tmp2Result, obj2);
 }
 const ThemeTypes = fn(1072).ThemeTypes;
-const ANDROID_FOREGROUND_RIPPLE = fn(1192).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { borderRadius: nativeDefault.radii.md, overflow: "hidden", height: 120, position: "relative", backgroundColor: "black", justifyContent: "center" }, imageOuterContainer: { justifyContent: "center", alignItems: "center" }, ongoingActivityJoinedContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(255,255,255,0.5)", zIndex: 1 }, overlayBubble: null, participantsContainer: null, participantsText: null, developerIconContainer: null, developerIconColor: null };
 let obj4 = { backgroundColor: null, borderRadius: null };
-const ColorUtils = fn(5006);
+const ColorUtils = fn(5011);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.5);
 obj4.borderRadius = nativeDefault.radii.round;
 obj2.overlayBubble = obj4;
@@ -162,7 +162,7 @@ export default function ActivityShelfItem(arg0) {
     tmp15Result3 = null;
     if (isTestModeForApplication) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
-      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef19209, color: tmp.developerIconColor.color };
+      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef19261, color: tmp.developerIconColor.color };
       obj9.children = timestampProducer(native.Icon, obj10);
       tmp15Result3 = timestampProducer(NativeViewDefault, obj9);
       const tmp3Result4 = NativeViewDefault;

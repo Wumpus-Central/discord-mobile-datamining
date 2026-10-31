@@ -1,23 +1,23 @@
-// === Module 18089: HappeningNowCardEmbeddedActivity ===
+// === Module 18132: HappeningNowCardEmbeddedActivity ===
 
-// Module 18089 (HappeningNowCardEmbeddedActivity)
+// Module 18132 (HappeningNowCardEmbeddedActivity)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1995 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7345 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1994 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7351 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17217);
+const HappeningNowConstants = fn(17274);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { content: { flexShrink: 1, gap: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 }, activityBackground: null, cardTitle: null };
 let size = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.activityBackground = size;
@@ -100,12 +100,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj2.highlighted_user_ids = items1;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    asyncRequireImpl(13134, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(13169, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(13134, dependencyMap.paths);
+    const promise = asyncRequireImpl(13169, dependencyMap.paths);
   }, items3);
   context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   cardKey.useRef(cardKey);

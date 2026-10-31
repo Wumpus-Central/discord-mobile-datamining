@@ -1,13 +1,13 @@
-// === Module 10852: conjureChatConnection ===
+// === Module 10872: conjureChatConnection ===
 
-// Module 10852 (conjureChatConnection)
+// Module 10872 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10835 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10853 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10854 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10855 */;
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10855 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10873 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10874 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10875 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -98,7 +98,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3865["913RMa"]);
+      const stringResult = intl.string(_modDef3868["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -187,7 +187,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3865["0+RUWx"]);
+      const stringResult = intl.string(_modDef3868["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;

@@ -1,9 +1,9 @@
-// === Module 7476: subscribeGuildMembers ===
+// === Module 7482: subscribeGuildMembers ===
 
-// Module 7476 (subscribeGuildMembers)
+// Module 7482 (subscribeGuildMembers)
 import _modDef12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6754 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6760 */;
 
 const require = fn;
 let c5 = false;
@@ -26,11 +26,11 @@ export function useSubscribeGuildMembers(memo, AddMembersActionSheet) {
         const obj2 = { extra: null };
         const obj3 = { count: userIds.length, guildId, reason };
         obj2.extra = obj3;
-        reason(1243).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
-        const obj = reason(1243);
+        reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
+        const obj = reason(1242);
       }
-      closure_0(7445).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7445);
+      closure_0(7451).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7451);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) => closure_1_0(closure_1_2[4]).unsubscribeMembers(guildId, userIds));
@@ -68,11 +68,11 @@ export function useEnsureHydratedGuildUsers(guild_id, items1) {
         const obj2 = { extra: null };
         const obj3 = { count: userIds.length, guildId, reason };
         obj2.extra = obj3;
-        reason(1243).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
-        const obj = reason(1243);
+        reason(1242).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
+        const obj = reason(1242);
       }
-      closure_0(7445).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7445);
+      closure_0(7451).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7451);
     });
     return () => {
       const item = reason(12).forEach(guild_id, (userIds, guildId) => closure_1_0(closure_1_2[4]).unsubscribeMembers(guildId, userIds));

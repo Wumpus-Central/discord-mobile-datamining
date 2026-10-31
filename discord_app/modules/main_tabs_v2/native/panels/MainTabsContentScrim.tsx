@@ -1,11 +1,11 @@
-// === Module 18545: MainTabsContentScrim ===
+// === Module 18588: MainTabsContentScrim ===
 
-// Module 18545 (MainTabsContentScrim)
+// Module 18588 (MainTabsContentScrim)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import createStyles from "createStyles" /* 5009 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -30,13 +30,13 @@ export function MainTabsContentScrim(translateX) {
     obj.opacity = ReanimatedRexport.interpolate(value, items, [0, 0.5], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   };
-  let obj = translateX(5090);
-  fn.__closure = { interpolate: translateX(5090).interpolate, translateX, maxWidth, Extrapolation: translateX(5090).Extrapolation };
+  let obj = translateX(5095);
+  fn.__closure = { interpolate: translateX(5095).interpolate, translateX, maxWidth, Extrapolation: translateX(5095).Extrapolation };
   fn.__workletHash = 7933670426250;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj3 = { style: null, pointerEvents: "none" };
   let items = [tmp.scrim, animatedStyle];
   obj3.style = items;
-  return jsx(maxWidth(5090).View, { style: null, pointerEvents: "none" });
+  return jsx(maxWidth(5095).View, { style: null, pointerEvents: "none" });
 }

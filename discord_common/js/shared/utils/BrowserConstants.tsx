@@ -1,7 +1,7 @@
-// === Module 5860: BrowserConstants ===
+// === Module 5865: BrowserConstants ===
 
-// Module 5860 (BrowserConstants)
-import formatDefault from "format" /* 1353 */;
+// Module 5865 (BrowserConstants)
+import formatDefault from "format" /* 1352 */;
 
 let str = formatDefault.version;
 if (str == null) {

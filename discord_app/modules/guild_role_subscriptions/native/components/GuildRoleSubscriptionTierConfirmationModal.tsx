@@ -1,29 +1,29 @@
-// === Module 19916: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 19974: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 19916 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 19974 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import FormHeaderDefault from "FormHeader" /* 9093 */;
-import FormStylesDefault from "FormStyles" /* 15680 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19887 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19895 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 19917 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import TableRowGroup from "TableRowGroup" /* 7060 */;
+import FormStylesDefault from "FormStyles" /* 19943 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19945 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 19953 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 19975 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 19885 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19942 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
-let obj2 = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(5014);
+let obj2 = { coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;
-let closure_11 = createStyles.createStyles(obj2);
+let closure_10 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx");
 
@@ -34,7 +34,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     flag = false;
   }
   const merged = Object.assign(onDone, Object.assign({ onDone: 0, isForGroupSetupModal: 0 }));
-  const tmp2 = closure_11();
+  const tmp2 = closure_10();
   const tmp5 = FormStylesDefault();
   const editStateContext = EditStateContextProvider.useEditStateContext();
   ({ guildId, editStateId } = editStateContext);
@@ -53,7 +53,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
           c3 = 0;
           closure_128_1(false);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp22) {
         closure_2 = tmp22;
@@ -116,34 +116,33 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
   obj2.submitting = tmp9;
   const merged1 = Object.assign(merged);
   if (flag) {
+    let obj3 = { style: tmp5.container, children: null };
     let tmp13Result = null != first;
     if (tmp13Result) {
-      let obj3 = { children: null };
-      let obj4 = { style: tmp5.header, children: null };
+      let obj4 = { children: null };
+      const obj5 = { title: null };
       const intl3 = util.intl;
-      obj4.children = intl3.string(util.t["3S8gA7"]);
-      const items1 = [React6(FormHeaderDefault, obj4), ];
-      const obj5 = { style: tmp2.coverPhotoContainer, children: null };
+      obj5.title = intl3.string(util.t["3S8gA7"]);
+      const items1 = [React6(TableRowGroup.TableRowGroupTitle, obj5), ];
       const obj6 = { style: tmp2.coverPhoto, resizeMode: "cover", source: first };
-      obj5.children = React6(FastImageDefault, obj6);
-      items1[1] = React6(View, obj5);
-      obj3.children = items1;
-      tmp13Result = closure_1_10(React7, obj3);
-      const tmp3Result = FormHeaderDefault;
+      items1[1] = React6(FastImageDefault, obj6);
+      obj4.children = items1;
+      tmp13Result = React7(View, obj4);
     }
+    const items2 = [tmp13Result, ];
     const obj7 = { children: null };
-    const items2 = [tmp13Result, , ];
-    const obj8 = { style: tmp5.header, children: null };
+    const obj8 = { title: null };
     const intl4 = util.intl;
-    obj8.children = intl4.string(util.t["74JctW"]);
-    items2[1] = React6(FormHeaderDefault, obj8);
-    const obj9 = { style: tmp2.description, variant: "text-md/medium", color: "interactive-text-active", children: _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 1)[0] };
-    items2[2] = React6(Text_Text.Text, obj9);
-    obj7.children = items2;
-    flag = closure_1_10(React7, obj7);
-    const tmp3Result2 = FormHeaderDefault;
+    obj8.title = intl4.string(util.t["74JctW"]);
+    const items3 = [React6(TableRowGroup.TableRowGroupTitle, obj8), ];
+    const obj9 = { variant: "text-md/medium", color: "interactive-text-active", children: _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 1)[0] };
+    items3[1] = React6(Text_Text.Text, obj9);
+    obj7.children = items3;
+    items2[1] = React7(View, obj7);
+    obj3.children = items2;
+    flag = React7(View, obj3);
   }
-  const items3 = [flag, React6(GuildRoleSubscriptionListingPreview.GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
-  obj2.children = items3;
-  return closure_1_10(GuildRoleSubscriptionTierEditStepDefault, obj2);
+  const items4 = [flag, React6(GuildRoleSubscriptionListingPreview.GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
+  obj2.children = items4;
+  return React7(GuildRoleSubscriptionTierEditStepDefault, obj2);
 };

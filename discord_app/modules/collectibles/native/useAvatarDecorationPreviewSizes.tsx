@@ -1,8 +1,8 @@
-// === Module 14447: useAvatarDecorationPreviewSizes ===
+// === Module 14485: useAvatarDecorationPreviewSizes ===
 
-// Module 14447 (useAvatarDecorationPreviewSizes)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1492 */;
-import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9484 */;
+// Module 14485 (useAvatarDecorationPreviewSizes)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1491 */;
+import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9506 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx");

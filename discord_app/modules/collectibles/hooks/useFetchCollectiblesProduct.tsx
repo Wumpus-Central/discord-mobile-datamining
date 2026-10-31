@@ -1,10 +1,10 @@
-// === Module 11349: useFetchCollectiblesProduct ===
+// === Module 11385: useFetchCollectiblesProduct ===
 
-// Module 11349 (useFetchCollectiblesProduct)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7712 */;
+// Module 11385 (useFetchCollectiblesProduct)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7719 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 6890 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7713 */;
+import SKUStore from "SKUStore" /* 6896 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7720 */;
 
 const require = globalThis.__r;
 
@@ -47,7 +47,7 @@ export function useFetchCollectiblesProduct(skuId, includeBundles) {
     if (product != null) {
       type = product.type;
     }
-    tmp10 = type === tmp(1988).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(1987).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === product.items.length;

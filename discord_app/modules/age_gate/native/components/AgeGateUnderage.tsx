@@ -1,8 +1,8 @@
-// === Module 17975: AgeGateUnderage ===
+// === Module 18018: AgeGateUnderage ===
 
-// Module 17975 (AgeGateUnderage)
+// Module 18018 (AgeGateUnderage)
 import nativeDefault from "native" /* 575 */;
-import NavigatorHeader from "NavigatorHeader" /* 6992 */;
+import NavigatorHeader from "NavigatorHeader" /* 6998 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {

@@ -1,17 +1,17 @@
-// === Module 10047: EmojiGrid ===
+// === Module 10068: EmojiGrid ===
 
-// Module 10047 (EmojiGrid)
+// Module 10068 (EmojiGrid)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1410 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4959 */;
-import EmojiDefault from "Emoji" /* 7294 */;
-import LayoutUtils from "LayoutUtils" /* 10050 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1409 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4964 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import EmojiDefault from "Emoji" /* 7300 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function Emoji(guildEmoji) {
   guildEmoji = guildEmoji.guildEmoji;
-  const tmp = closure_5();
+  const tmp = closure_4();
   if (null == guildEmoji.id) {
     let uRL = EmojiUtilsDefault.getURL(guildEmoji.name);
     const tmp3Result = EmojiUtilsDefault;
@@ -23,16 +23,15 @@ function Emoji(guildEmoji) {
   }
   return jsx(EmojiDefault, { src: uRL, fastImageStyle: tmp.gridEmojiFastImage, textEmojiStyle: tmp.gridEmojiText, name: guildEmoji.name }, guildEmoji.id);
 }
-const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { gridEmojiFastImage: null, gridEmojiText: null, emojiGridRowContainer: null, emojiGridContainer: null };
 let size = { height: 40, width: 40, borderRadius: nativeDefault.radii.sm };
 obj2.gridEmojiFastImage = size;
 obj2.gridEmojiText = { fontSize: 18, lineHeight: 44 };
-obj2.emojiGridRowContainer = { marginTop: 16, flexDirection: "row" };
-obj2.emojiGridContainer = { marginTop: 8, alignItems: "center" };
-let closure_5 = createStyles.createStyles(obj2);
+obj2.emojiGridRowContainer = { marginTop: 16 };
+obj2.emojiGridContainer = { marginTop: 8 };
+let closure_4 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/emoji/EmojiGrid.tsx");
 
@@ -50,8 +49,8 @@ export function EmojiGrid(numberToShow) {
     num2 = 5;
   }
   let obj = {};
-  const merged = Object.assign(doNotDisplayEmojiIds(10032).useSharedMessageEmojiStyles());
-  const merged1 = Object.assign(closure_5());
+  const merged = Object.assign(doNotDisplayEmojiIds(10053).useSharedMessageEmojiStyles());
+  const merged1 = Object.assign(closure_4());
   let emojis;
   if (expressionSourceGuild != null) {
     emojis = expressionSourceGuild.emojis;
@@ -62,16 +61,16 @@ export function EmojiGrid(numberToShow) {
   const substr = emojis.slice(0, num + 1);
   const found = substr.filter((id) => !doNotDisplayEmojiIds.includes(id.id));
   const substr1 = found.slice(0, num);
-  const obj2 = doNotDisplayEmojiIds(10032);
+  const obj2 = doNotDisplayEmojiIds(10053);
   const tmp = doNotDisplayEmojiIds;
-  const obj3 = { style: obj.emojiGridContainer, children: null };
-  const arr4 = obj(10048)(substr1, num2);
-  obj3.children = jsx(tmp(10050).GappedList, {
-    gap: 8,
-    children: obj(10048)(substr1, num2).map((arr, index) => {
-      obj = { style: obj.emojiGridRowContainer, children: jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) }) };
-      return <View key={index} style={obj.emojiGridRowContainer}>{jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) })}</View>;
+  const arr4 = obj(10069)(substr1, num2);
+  return jsx(tmp(6027).Stack, {
+    spacing: 8,
+    align: "center",
+    style: obj.emojiGridContainer,
+    children: obj(10069)(substr1, num2).map((arr, index) => {
+      obj = { direction: "horizontal", spacing: 32, justify: "center", style: obj.emojiGridRowContainer, children: arr.map((guildEmoji) => closure_1_3(closure_1_5, { guildEmoji }, guildEmoji.id)) };
+      return jsx(Stack_Stack.Stack, { direction: "horizontal", spacing: 32, justify: "center", style: obj.emojiGridRowContainer, children: arr.map((guildEmoji) => closure_1_3(closure_1_5, { guildEmoji }, guildEmoji.id)) }, index);
     })
   });
-  return <View style={obj.emojiGridContainer}>{null}</View>;
 }

@@ -1,29 +1,29 @@
-// === Module 8897: ICYMIStore ===
+// === Module 8906: ICYMIStore ===
 
-// Module 8897 (ICYMIStore)
+// Module 8906 (ICYMIStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import utils from "utils" /* 8710 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8903 */;
-import ICYMITypes from "ICYMITypes" /* 8910 */;
-import isItemUnreadInChannel from "isItemUnreadInChannel" /* 8912 */;
-import ICYMIUtils from "ICYMIUtils" /* 8914 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import utils from "utils" /* 8718 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8912 */;
+import ICYMITypes from "ICYMITypes" /* 8919 */;
+import isItemUnreadInChannel from "isItemUnreadInChannel" /* 8921 */;
+import ICYMIUtils from "ICYMIUtils" /* 8923 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8898 */;
-import ExperimentStore from "ExperimentStore" /* 5233 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6849 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8907 */;
+import ExperimentStore from "ExperimentStore" /* 5238 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6855 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8907 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import MessageStore from "MessageStore" /* 6056 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
-import ReadStateStore from "ReadStateStore" /* 6836 */;
-import RelationshipStore from "RelationshipStore" /* 4951 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6769 */;
-import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8909 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8911 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8916 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import MessageStore from "MessageStore" /* 6061 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
+import ReadStateStore from "ReadStateStore" /* 6842 */;
+import RelationshipStore from "RelationshipStore" /* 4956 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6775 */;
+import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8918 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8920 */;
 
 require = fn;
 function filterStaffGuild(data) {
@@ -590,12 +590,12 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(6849);
+let GuildScheduledEventStore = fn(6855);
 ({ eventScheduledToStartWithin: metroRequire, isGuildEventEnded: closure_7, isGuildScheduledEventActive: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
-const ContentInventoryFeedKey = fn(8913).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8922).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_26 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
@@ -927,7 +927,7 @@ obj = {
     items = items.items;
     let set1;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(8910).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(8919).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set1.has(type.type));
     const found1 = found.filter(filterStaffGuild);
     closure_30 = found1.map((type) => {
@@ -1020,7 +1020,7 @@ obj = {
     });
     const items4 = [...items2];
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(8910).SUPPORTED_ITEM_TYPES);
+    set = new Set(set1(8919).SUPPORTED_ITEM_TYPES);
     [arr9, arr10] = items5;
     let tmp6 = _slicedToArray(items5, 2);
     if (c41) {
@@ -1029,15 +1029,15 @@ obj = {
           if (c38 > 0) {
             c43 = null;
           }
-          const tmp8 = arr11.length > tmp(8910).MIN_ITEMS_FOR_NEW_PILL;
+          const tmp8 = arr11.length > tmp(8919).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp8;
           }
           if (tmp8) {
-            const tmpResult = tmp(8914);
+            const tmpResult = tmp(8923);
             const items6 = [];
             HermesBuiltin.arraySpread(arr10, HermesBuiltin.arraySpread(arr9, 0));
-            tmpResult.hydrateItems(items6, 0, tmp(8910).ICYMI_PAGE_SIZE, closure_34);
+            tmpResult.hydrateItems(items6, 0, tmp(8919).ICYMI_PAGE_SIZE, closure_34);
             if (arr9.length + arr10.length === 0) {
               c54 = true;
             }
@@ -1048,8 +1048,8 @@ obj = {
             str = "foreground_load";
           }
           obj2.homeSessionId = str;
-          tmp(8920).trackFeedLoaded(obj2);
-          const tmpResult2 = tmp(8920);
+          tmp(8929).trackFeedLoaded(obj2);
+          const tmpResult2 = tmp(8929);
         }
       }
     }

@@ -1,13 +1,13 @@
-// === Module 17846: SponsoredContentPreferencesScreen ===
+// === Module 17889: SponsoredContentPreferencesScreen ===
 
-// Module 17846 (SponsoredContentPreferencesScreen)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2062 */;
-import SettingBuilders from "SettingBuilders" /* 11505 */;
-import SettingLayoutDefault from "SettingLayout" /* 16533 */;
+// Module 17889 (SponsoredContentPreferencesScreen)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2061 */;
+import SettingBuilders from "SettingBuilders" /* 11539 */;
+import SettingLayoutDefault from "SettingLayout" /* 16575 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8424).MobileUserSettings;
+const MobileUserSettings = fn(8432).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -17,17 +17,17 @@ export default function SponsoredContentPreferencesScreen() {
   const obj = { settings: null, subLabel: null };
   const items = [MobileUserSettings.USE_DATA_FOR_QUESTS_SPONSORED_CONTENT];
   obj.settings = items;
-  const intl = items1(1114).intl;
+  const intl = items1(1113).intl;
   const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
-  obj.subLabel = intl.format(items1(1114).t.cf9mvV, obj2);
+  obj.subLabel = intl.format(items1(1113).t.cf9mvV, obj2);
   items1 = [obj, , ];
   const obj4 = { settings: null, subLabel: null };
   const items2 = [MobileUserSettings.USE_DATA_FOR_QUESTS_3P_SPONSORED_CONTENT];
   obj4.settings = items2;
-  const intl2 = items1(1114).intl;
+  const intl2 = items1(1113).intl;
   const obj5 = { helpdeskArticle: null };
   obj5.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS);
-  obj4.subLabel = intl2.format(items1(1114).t["2QFDU/"], obj5);
+  obj4.subLabel = intl2.format(items1(1113).t["2QFDU/"], obj5);
   items1[1] = obj4;
   const obj7 = { settings: null };
   const items3 = [MobileUserSettings.MANAGE_SPONSORED_CONTENT];

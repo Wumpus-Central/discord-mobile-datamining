@@ -1,28 +1,28 @@
-// === Module 14948: UserProfileDismissibleUpsells ===
+// === Module 14986: UserProfileDismissibleUpsells ===
 
-// Module 14948 (UserProfileDismissibleUpsells)
+// Module 14986 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 575 */;
-import dismissible_content from "dismissible_content" /* 4842 */;
+import dismissible_content from "dismissible_content" /* 4847 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1384 */;
+import UserStore from "UserStore" /* 1383 */;
 
-const util = ShopIcon(1114);
-const native = ShopIcon(1188);
-const Text_Text = ShopIcon(5619);
-const components_Button_Button = ShopIcon(5629);
-const Pressables = ShopIcon(6974);
-const XSmallIcon = ShopIcon(7048);
-const NitroWheelIcon = ShopIcon(9506);
-const ShopIcon2 = ShopIcon(12290);
+const util = ShopIcon(1113);
+const native = ShopIcon(1187);
+const Text_Text = ShopIcon(5624);
+const components_Button_Button = ShopIcon(5634);
+const Pressables = ShopIcon(6980);
+const XSmallIcon = ShopIcon(7054);
+const NitroWheelIcon = ShopIcon(9528);
+const ShopIcon2 = ShopIcon(12328);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8746).TrackUserProfileActions;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const TrackUserProfileActions = fn(8754).TrackUserProfileActions;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(7610).Gradients.PREMIUM_GUILD];
+let items = [...fn(7617).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { upsellContainer: { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
 let obj3 = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.customProfileThemeUpsellContainer = { backgroundColor: nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };

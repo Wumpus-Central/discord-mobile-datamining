@@ -1,14 +1,14 @@
-// === Module 16973: OrbsArcadeGameGraphic ===
+// === Module 17030: OrbsArcadeGameGraphic ===
 
-// Module 16973 (OrbsArcadeGameGraphic)
+// Module 17030 (OrbsArcadeGameGraphic)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5712 */;
+import FastImageDefault from "FastImage" /* 5717 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
-const obj2 = { graphic: { width: "100%", aspectRatio: 1.7777777777777777, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, graphicImage: { width: "100%", height: "100%" } };
+const createStyles = fn(5014);
+const obj2 = { graphic: { width: nativeDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH, maxWidth: "100%", alignSelf: "center", aspectRatio: 1.7777777777777777, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, graphicImage: { width: "100%", height: "100%" } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeGameGraphic.tsx");

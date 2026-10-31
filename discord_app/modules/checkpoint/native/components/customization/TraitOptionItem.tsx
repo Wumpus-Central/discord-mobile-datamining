@@ -1,20 +1,20 @@
-// === Module 13646: TraitOptionItem ===
+// === Module 13681: TraitOptionItem ===
 
-// Module 13646 (TraitOptionItem)
+// Module 13681 (TraitOptionItem)
 import nativeDefault from "native" /* 575 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5077 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6062 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6108 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6429 */;
-import _modDef7032 from "module_7032" /* 7032 */;
-import inlineStyles from "inlineStyles" /* 8023 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9506 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5082 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6067 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6113 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6434 */;
+import _modDef7038 from "module_7038" /* 7038 */;
+import inlineStyles from "inlineStyles" /* 8031 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9528 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6061 */;
+import CheckpointConstants from "CheckpointConstants" /* 6066 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -30,7 +30,7 @@ function RarityIndicator(rarity) {
     obj2.maskElement = closure_1_11(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
     const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
     obj2.children = closure_1_11(LinearGradientDefault, obj3);
-    let tmp4Result = closure_1_11(_modDef7032, obj2);
+    let tmp4Result = closure_1_11(_modDef7038, obj2);
   } else {
     const items1 = [, , ];
     ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);

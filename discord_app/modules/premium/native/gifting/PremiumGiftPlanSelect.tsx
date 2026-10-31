@@ -1,15 +1,15 @@
-// === Module 10541: PremiumGiftPlanSelect ===
+// === Module 10561: PremiumGiftPlanSelect ===
 
-// Module 10541 (PremiumGiftPlanSelect)
+// Module 10561 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import native from "native" /* 1188 */;
-import timing from "timing" /* 5249 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10600 */;
+import native from "native" /* 1187 */;
+import timing from "timing" /* 5254 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10620 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8755 */;
-import PromotionsStore from "PromotionsStore" /* 9606 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8763 */;
+import PromotionsStore from "PromotionsStore" /* 9626 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -18,9 +18,9 @@ const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let items = [, ];
-({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1386).PremiumTypes);
+({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1385).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };

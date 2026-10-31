@@ -1,15 +1,15 @@
-// === Module 12473: ConjureEffortTiers ===
+// === Module 12508: ConjureEffortTiers ===
 
-// Module 12473 (ConjureEffortTiers)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 12474 */;
+// Module 12508 (ConjureEffortTiers)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 12509 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
 let closure_3 = ["thinking"];
 let closure_4 = ["fast"];
-let obj = { simple: _modDef3865.Mqb8mc, balanced: _modDef3865.zCZfA6, complex: _modDef3865["8l2atm"] };
+let obj = { simple: _modDef3868.Mqb8mc, balanced: _modDef3868.zCZfA6, complex: _modDef3868["8l2atm"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 
@@ -112,9 +112,9 @@ export function conjureCanPickModel(choices) {
 }
 export function conjureCustomizeMessage(choices) {
   if (choices.main.length > 0) {
-    let qSViP4 = _modDef3865.eGqPbV;
+    let qSViP4 = _modDef3868.eGqPbV;
   } else {
-    qSViP4 = _modDef3865.qSViP4;
+    qSViP4 = _modDef3868.qSViP4;
   }
   return qSViP4;
 }

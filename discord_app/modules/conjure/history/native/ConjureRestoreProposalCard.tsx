@@ -1,13 +1,13 @@
-// === Module 12739: ConjureRestoreProposalCard ===
+// === Module 12774: ConjureRestoreProposalCard ===
 
-// Module 12739 (ConjureRestoreProposalCard)
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import Stack_Stack from "Stack/Stack" /* 6022 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12442 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 12487 */;
+// Module 12774 (ConjureRestoreProposalCard)
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import Stack_Stack from "Stack/Stack" /* 6027 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12477 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 12522 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ export default function ConjureRestoreProposalCard(arg0) {
   const relative = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at).relative;
   const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3865["t+b0rz"]);
+  obj2.children = intl.string(_modDef3868["t+b0rz"]);
   const items = [React3(Text_Text.Text, obj2), , ];
   const items1 = [React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: proposal.subject }), ];
   let tmp3Result = null;
@@ -35,7 +35,7 @@ export default function ConjureRestoreProposalCard(arg0) {
   if (null != onRestore) {
     const obj5 = { text: null, variant: "secondary", onPress: null };
     const intl2 = util.intl;
-    obj5.text = intl2.string(_modDef3865.H8Jfhu);
+    obj5.text = intl2.string(_modDef3868.H8Jfhu);
     obj5.onPress = onRestore;
     tmp3Result2 = React3(components_Button_Button.Button, obj5);
   }

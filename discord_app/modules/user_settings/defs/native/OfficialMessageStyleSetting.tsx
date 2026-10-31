@@ -1,11 +1,11 @@
-// === Module 17255: OfficialMessageStyleSetting ===
+// === Module 17312: OfficialMessageStyleSetting ===
 
-// Module 17255 (OfficialMessageStyleSetting)
+// Module 17312 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16225 */;
+import util from "util" /* 1113 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16266 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 require = fn;
 function useOfficialMessageStyleSettingValue() {
@@ -36,13 +36,13 @@ function useOfficialMessageStyleSettingOptions() {
     return items;
   }, []);
 }
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nC2XBl);
   },
-  parent: fn(8424).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
   useValue: useOfficialMessageStyleSettingValue,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: useOfficialMessageStyleSettingOptions

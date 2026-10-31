@@ -1,22 +1,22 @@
-// === Module 14816: Badges ===
+// === Module 14854: Badges ===
 
-// Module 14816 (Badges)
+// Module 14854 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import utils from "utils" /* 8710 */;
-import TrophyIcon from "TrophyIcon" /* 9358 */;
-import GameControllerIcon from "GameControllerIcon" /* 9707 */;
-import RetryIcon from "RetryIcon" /* 11064 */;
-import TimerIcon from "TimerIcon" /* 11604 */;
-import FireIcon from "FireIcon" /* 14683 */;
-import NewUserIcon from "NewUserIcon" /* 14817 */;
-import FlashIcon from "FlashIcon" /* 14819 */;
-import TrendingType from "TrendingType" /* 14821 */;
+import DurationsDefault from "Durations" /* 1089 */;
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import utils from "utils" /* 8718 */;
+import TrophyIcon from "TrophyIcon" /* 9378 */;
+import GameControllerIcon from "GameControllerIcon" /* 9727 */;
+import RetryIcon from "RetryIcon" /* 11083 */;
+import TimerIcon from "TimerIcon" /* 11640 */;
+import FireIcon from "FireIcon" /* 14721 */;
+import NewUserIcon from "NewUserIcon" /* 14855 */;
+import FlashIcon from "FlashIcon" /* 14857 */;
+import TrendingType from "TrendingType" /* 14859 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
 
 require = fn;
 class ActiveTimestamp {
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;

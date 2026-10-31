@@ -1,10 +1,10 @@
-// === Module 19875: GuildSettingsRoleSubscriptionsEnableMonetization ===
+// === Module 19932: GuildSettingsRoleSubscriptionsEnableMonetization ===
 
-// Module 19875 (GuildSettingsRoleSubscriptionsEnableMonetization)
-import UnavailableNoticeDefault from "UnavailableNotice" /* 18560 */;
-import PlaceholderDefault from "Placeholder" /* 19811 */;
+// Module 19932 (GuildSettingsRoleSubscriptionsEnableMonetization)
+import UnavailableNoticeDefault from "UnavailableNotice" /* 18603 */;
+import PlaceholderDefault from "Placeholder" /* 19868 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4880 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -18,10 +18,10 @@ export default function GuildSubscriptionEnableMonetization(guildId) {
     let tmp5 = jsx(PlaceholderDefault, {});
   } else {
     const obj2 = { brightTitle: true, title: null, description: null };
-    const intl = tmp(1114).intl;
-    obj2.title = intl.string(tmp(1114).t.KeeWp0);
-    const intl2 = tmp(1114).intl;
-    obj2.description = intl2.string(tmp(1114).t["tJLG+L"]);
+    const intl = tmp(1113).intl;
+    obj2.title = intl.string(tmp(1113).t.KeeWp0);
+    const intl2 = tmp(1113).intl;
+    obj2.description = intl2.string(tmp(1113).t["tJLG+L"]);
     tmp5 = jsx(UnavailableNoticeDefault, { brightTitle: true, title: null, description: null });
   }
   return tmp5;

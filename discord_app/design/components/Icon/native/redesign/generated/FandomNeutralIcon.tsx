@@ -1,9 +1,9 @@
-// === Module 9586: FandomNeutralIcon ===
+// === Module 9606: FandomNeutralIcon ===
 
-// Module 9586 (FandomNeutralIcon)
+// Module 9606 (FandomNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod9587 from "module_9587" /* 9587 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod9607 from "module_9607" /* 9607 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function FandomNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9587, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9607, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,6 +1,6 @@
-// === Module 7343: Constants ===
+// === Module 7349: Constants ===
 
-// Module 7343 (Constants)
+// Module 7349 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/connections/Constants.tsx");

@@ -1,9 +1,9 @@
-// === Module 10521: DeviceMedia ===
+// === Module 10541: DeviceMedia ===
 
-// Module 10521 (DeviceMedia)
+// Module 10541 (DeviceMedia)
 import Constants from "Constants" /* 1072 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10522 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10542 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -92,9 +92,9 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(10522)(obj2);
+          lastAssetIndex(10542)(obj2);
         }
-        obj = assets(1376);
+        obj = assets(1375);
       }
     }
   },
@@ -151,7 +151,7 @@ export default {
           obj2.num_assets = length;
           AnalyticsUtilsDefault.track(constants.MEDIA_PICKER_ASSETS_DEBUG, obj2);
         }
-        batchSize(1260).batchUpdates(() => {
+        batchSize(1259).batchUpdates(() => {
           const obj = { assets, page: 0, lastAssetIndex: batchSize, endCursor: null, hasReachedEnd: null };
           let end_cursor;
           if (assets != null) {
@@ -174,7 +174,7 @@ export default {
           obj.hasReachedEnd = !num;
           state.setState(obj);
         });
-        const obj3 = batchSize(1260);
+        const obj3 = batchSize(1259);
       }
     });
   },

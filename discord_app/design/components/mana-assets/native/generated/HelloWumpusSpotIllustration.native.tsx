@@ -1,19 +1,19 @@
-// === Module 14268: HelloWumpusSpotIllustration ===
+// === Module 14306: HelloWumpusSpotIllustration ===
 
-// Module 14268 (HelloWumpusSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7063 */;
-import _modDef14269 from "module_14269" /* 14269 */;
-import _modDef14270 from "module_14270" /* 14270 */;
-import _modDef14271 from "module_14271" /* 14271 */;
+// Module 14306 (HelloWumpusSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7069 */;
+import _modDef14307 from "module_14307" /* 14307 */;
+import _modDef14308 from "module_14308" /* 14308 */;
+import _modDef14309 from "module_14309" /* 14309 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14269 }, 3: null };
-let obj2 = { uri: _modDef14269 };
-obj[2] = { uri: _modDef14270 };
-const obj3 = { uri: _modDef14270 };
-obj[3] = { uri: _modDef14271 };
+let obj = { 1: null, 2: { uri: _modDef14307 }, 3: null };
+let obj2 = { uri: _modDef14307 };
+obj[2] = { uri: _modDef14308 };
+const obj3 = { uri: _modDef14308 };
+obj[3] = { uri: _modDef14309 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HelloWumpusSpotIllustration.native.tsx");
 

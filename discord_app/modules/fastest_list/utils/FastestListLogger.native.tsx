@@ -1,8 +1,8 @@
-// === Module 7221: FastestListLogger ===
+// === Module 7227: FastestListLogger ===
 
-// Module 7221 (FastestListLogger)
+// Module 7227 (FastestListLogger)
 import LoggerDefault from "Logger" /* 3 */;
-import SentryUtilsDefault from "SentryUtils" /* 1243 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 
 const logger = new LoggerDefault("FastestList");
 const size = fn(2);

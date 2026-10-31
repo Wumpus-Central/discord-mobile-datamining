@@ -1,11 +1,11 @@
-// === Module 17074: QuestPreviewToolSetting ===
+// === Module 17132: QuestPreviewToolSetting ===
 
-// Module 17074 (QuestPreviewToolSetting)
+// Module 17132 (QuestPreviewToolSetting)
 import Constants from "Constants" /* 1072 */;
-import util from "util" /* 1114 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 9661 */;
-import QuestsIcon from "QuestsIcon" /* 14676 */;
-import SettingBuilders from "SettingBuilders" /* 11505 */;
+import util from "util" /* 1113 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 9681 */;
+import QuestsIcon from "QuestsIcon" /* 14714 */;
+import SettingBuilders from "SettingBuilders" /* 11539 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

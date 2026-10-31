@@ -1,24 +1,24 @@
-// === Module 14095: GuildPowerupsPerkCard ===
+// === Module 14130: GuildPowerupsPerkCard ===
 
-// Module 14095 (GuildPowerupsPerkCard)
+// Module 14130 (GuildPowerupsPerkCard)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import shared from "shared" /* 5016 */;
-import useThemeDefault from "useTheme" /* 5248 */;
-import LinearGradientDefault from "LinearGradient" /* 5582 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7143 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14047 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14048 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14092 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import shared from "shared" /* 5021 */;
+import useThemeDefault from "useTheme" /* 5253 */;
+import LinearGradientDefault from "LinearGradient" /* 5587 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7149 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 14082 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 14083 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 14127 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, card: { padding: 0, overflow: "hidden" }, contentContainer: null, imageContainer: null, gradient: null, headerContainer: null, badge: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.contentContainer = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };

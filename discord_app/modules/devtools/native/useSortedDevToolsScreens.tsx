@@ -1,11 +1,11 @@
-// === Module 17701: useSortedDevToolsScreens ===
+// === Module 17745: useSortedDevToolsScreens ===
 
-// Module 17701 (useSortedDevToolsScreens)
+// Module 17745 (useSortedDevToolsScreens)
 import initialize from "initialize" /* 504 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 17502 */;
-import DevToolsScreens from "DevToolsScreens" /* 17506 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 17562 */;
+import DevToolsScreens from "DevToolsScreens" /* 17566 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7856 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7863 */;
 
 require = fn;
 function getSortedDevToolsScreens() {

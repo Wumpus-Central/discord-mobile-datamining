@@ -1,26 +1,26 @@
-// === Module 19945: InviteSettingsModal ===
+// === Module 20003: InviteSettingsModal ===
 
-// Module 19945 (InviteSettingsModal)
+// Module 20003 (InviteSettingsModal)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1261 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import NavigatorHeader from "NavigatorHeader" /* 6992 */;
-import Navigator from "Navigator" /* 7163 */;
-import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 9106 */;
-import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 19946 */;
+import util from "util" /* 1113 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import NavigatorHeader from "NavigatorHeader" /* 6998 */;
+import Navigator from "Navigator" /* 7169 */;
+import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 9125 */;
+import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 20004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9100 */;
-import GuildStore from "GuildStore" /* 4880 */;
-import PermissionStore from "PermissionStore" /* 4941 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9119 */;
+import GuildStore from "GuildStore" /* 4885 */;
+import PermissionStore from "PermissionStore" /* 4946 */;
 
 require = fn;
 function AdvancedInstantInviteScreen() {
   let tmp = closure_12();
-  navigation = navigation(1498).useNavigation();
-  let obj = navigation(1498);
+  navigation = navigation(1497).useNavigation();
+  let obj = navigation(1497);
   const items = [ChannelStore, CreateInviteModalStore, GuildStore];
   const stateFromStoresObject = navigation(504).useStateFromStoresObject(items, () => {
     const pendingSettings = CreateInviteModalStore.getPendingSettings();
@@ -71,8 +71,8 @@ function AdvancedInstantInviteScreen() {
     }
   }, items1);
   const tmp2Result = navigation(12);
-  const unmountEffect = navigation(5588).useUnmountEffect(() => {
-    channel(9106).resetSettings();
+  const unmountEffect = navigation(5593).useUnmountEffect(() => {
+    channel(9125).resetSettings();
   });
   const items2 = [channel];
   callback = noop.useCallback(() => {
@@ -97,46 +97,46 @@ function AdvancedInstantInviteScreen() {
         let tmp;
         if (dependencyMap) {
           const obj = { onPress, text: null };
-          const intl = navigation(1114).intl;
-          obj.text = intl.string(navigation(1114).t["R3BPH+"]);
-          tmp = jsx(navigation(7552).HeaderActionButton, { onPress, text: null });
+          const intl = navigation(1113).intl;
+          obj.text = intl.string(navigation(1113).t["R3BPH+"]);
+          tmp = jsx(navigation(7558).HeaderActionButton, { onPress, text: null });
         }
         return tmp;
       }
     });
   }, items3);
   const callback1 = noop.useCallback((maxUses) => {
-    channel(9106).updateSettings({ maxUses });
+    channel(9125).updateSettings({ maxUses });
   }, []);
   const callback2 = noop.useCallback((maxAge) => {
-    channel(9106).updateSettings({ maxAge });
+    channel(9125).updateSettings({ maxAge });
   }, []);
   const callback3 = noop.useCallback((temporary) => {
-    channel(9106).updateSettings({ temporary });
+    channel(9125).updateSettings({ temporary });
   }, []);
   const callback4 = noop.useCallback((flags) => {
-    channel(9106).updateSettings({ flags });
+    channel(9125).updateSettings({ flags });
   }, []);
   const callback5 = noop.useCallback((roleIds) => {
-    channel(9106).updateSettings({ roleIds });
+    channel(9125).updateSettings({ roleIds });
   }, []);
   let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
   let obj5 = { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null };
-  const tmp2Result2 = navigation(5588);
-  obj5.maxUsesOptions = channel(9101).getMaxUsesOptions;
+  const tmp2Result2 = navigation(5593);
+  obj5.maxUsesOptions = channel(9120).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj5.onChangeMaxAge = callback2;
   obj5.onChangeMaxUses = callback1;
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(19947), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
-  return jsx(navigation(8169).Form, { contentContainerStyle: tmp.formContainer, children: null });
+  obj4.children = jsx(channel(20005), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
+  return jsx(navigation(8177).Form, { contentContainerStyle: tmp.formContainer, children: null });
 }
 const Constants = fn(1072);
 ({ InviteModalScenes: closure_9, Permissions: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { formContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 }, formContent: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 obj2.formContent = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };

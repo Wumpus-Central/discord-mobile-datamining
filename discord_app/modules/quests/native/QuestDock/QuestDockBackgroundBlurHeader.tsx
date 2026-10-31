@@ -1,22 +1,22 @@
-// === Module 17093: QuestDockBackgroundBlurHeader ===
+// === Module 17151: QuestDockBackgroundBlurHeader ===
 
-// Module 17093 (QuestDockBackgroundBlurHeader)
+// Module 17151 (QuestDockBackgroundBlurHeader)
 import nativeDefault from "native" /* 575 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1377 */;
-import spring from "spring" /* 5632 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
+import spring from "spring" /* 5637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(6775).QuestDockMode;
-const QuestDockConstants = fn(17001);
+const QuestDockMode = fn(6781).QuestDockMode;
+const QuestDockConstants = fn(17059);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({ QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: c10, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT, QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { header: { alignItems: "center", justifyContent: "space-between", flexDirection: "row", height: QUEST_DOCK_COLLAPSED_HEIGHT, overflow: "hidden", paddingRight: QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT, paddingLeft: QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, gap: nativeDefault.space.PX_8, position: "absolute", zIndex: 2 }, secondaryContent: { flexGrow: 0, flexShrink: 0 }, secondaryContentStretched: { alignSelf: "stretch" }, secondaryContentOverlay: { justifyContent: "center", position: "absolute", bottom: 0, top: 0, right: 0 }, expandedContent: null, leadingContent: null, actionDisclosures: null, actionDisclosuresIcon: null, tertiaryContent: null };
 let obj3 = { alignItems: "center", justifyContent: "space-between", flexDirection: "row", height: QUEST_DOCK_COLLAPSED_HEIGHT, overflow: "hidden", paddingRight: QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT, paddingLeft: QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, gap: nativeDefault.space.PX_8, position: "absolute", zIndex: 2 };
 obj.expandedContent = { alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -35,7 +35,7 @@ function questDockHeaderLayoutAnimation(originX) {
   return obj;
 }
 let obj4 = { alignItems: "center", flexDirection: "row", gap: nativeDefault.space.PX_8 };
-questDockHeaderLayoutAnimation.__closure = { withSpring: fn(5632).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+questDockHeaderLayoutAnimation.__closure = { withSpring: fn(5637).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
 questDockHeaderLayoutAnimation.__workletHash = 13829887811453;
 questDockHeaderLayoutAnimation.__initData = { code: "function questDockHeaderLayoutAnimation_QuestDockBackgroundBlurHeaderTsx1(values){const{withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}};}" };
 const __initData = { code: "function QuestDockBackgroundBlurHeaderTsx2(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_CONTENT_BORDER_RADII,questDockBorderRadius,withSpring,questDockAnimatedBorderRadius,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,questDockWrapperSpecs,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED}=this.__closure;return{borderTopLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderTopRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderBottomLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),borderBottomRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:activeQuestDockMode.get()===QuestDockMode.EXPANDED?questDockWrapperSpecs.get().width-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*2:questDockWrapperSpecs.get().width,transform:[{translateX:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)},{translateY:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}]};}" };
@@ -46,7 +46,7 @@ const __initData5 = { code: "function QuestDockBackgroundBlurHeaderTsx6(){const{
 const __initData6 = { code: "function QuestDockBackgroundBlurHeaderTsx7(){const{activeQuestDockMode,QuestDockMode}=this.__closure;return{pointerEvents:activeQuestDockMode.get()===QuestDockMode.EXPANDED?'auto':'none'};}" };
 const __initData7 = { code: "function QuestDockBackgroundBlurHeaderTsx8(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_CONTENT_BORDER_RADII,questDockBorderRadius,withSpring,questDockAnimatedBorderRadius,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,questDockWrapperSpecs}=this.__closure;return{borderRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:questDockBorderRadius,borderBottomLeftRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),borderBottomRightRadius:activeQuestDockMode.get()===QuestDockMode.EXPANDED?QUEST_DOCK_CONTENT_BORDER_RADII:withSpring(questDockAnimatedBorderRadius.get(),QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED),width:questDockWrapperSpecs.get().width};}" };
 const __initData8 = { code: "function QuestDockBackgroundBlurHeaderTsx9(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}" };
-let obj5 = { withSpring: fn(5632).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+let obj5 = { withSpring: fn(5637).withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBackgroundBlurHeader.tsx");
 
@@ -68,7 +68,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   let token;
   noop = undefined;
   ({ onDisclosurePress, onSubmenuPress } = promotedLabelLeading);
-  const context = noop.useContext(activeQuestDockMode(17002).QuestDockGestureContext);
+  const context = noop.useContext(activeQuestDockMode(17060).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const questDockWrapperSpecs = context.questDockWrapperSpecs;
   [tmp5, c2] = token(noop.useState(false), 2);
@@ -82,10 +82,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj = utils_PlatformUtils;
   }, []);
   const tmp4 = token(noop.useState(false), 2);
-  token = activeQuestDockMode(5591).useToken(questDockWrapperSpecs(575).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-  const tmp9 = questDockWrapperSpecs(17085)(token);
+  token = activeQuestDockMode(5596).useToken(questDockWrapperSpecs(575).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
+  const tmp9 = questDockWrapperSpecs(17143)(token);
   noop = tmp9;
-  let obj = activeQuestDockMode(5591);
+  let obj = activeQuestDockMode(5596);
   const fn = function q() {
     const obj2 = { borderTopLeftRadius: activeQuestDockMode.get() === QuestDockMode.EXPANDED ? QUEST_DOCK_CONTENT_BORDER_RADII : token, borderTopRightRadius: activeQuestDockMode.get() === QuestDockMode.EXPANDED ? QUEST_DOCK_CONTENT_BORDER_RADII : token, borderBottomLeftRadius: null, borderBottomRightRadius: null, width: null, transform: null };
     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -121,12 +121,12 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj2.transform = items;
     return obj2;
   };
-  let obj2 = activeQuestDockMode(5090);
-  fn.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, withSpring: activeQuestDockMode(5632).withSpring, questDockAnimatedBorderRadius: tmp9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11 };
+  let obj2 = activeQuestDockMode(5095);
+  fn.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, withSpring: activeQuestDockMode(5637).withSpring, questDockAnimatedBorderRadius: tmp9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11 };
   fn.__workletHash = 17202411570804;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj3 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, withSpring: activeQuestDockMode(5632).withSpring, questDockAnimatedBorderRadius: tmp9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11 };
+  let obj3 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, withSpring: activeQuestDockMode(5637).withSpring, questDockAnimatedBorderRadius: tmp9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11 };
   class W {
     constructor() {
       obj = closure_0(closure_2[8]);
@@ -138,12 +138,12 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
       return obj1;
     }
   }
-  let obj4 = activeQuestDockMode(5090);
-  W.__closure = { withSpring: activeQuestDockMode(5632).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  let obj4 = activeQuestDockMode(5095);
+  W.__closure = { withSpring: activeQuestDockMode(5637).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   W.__workletHash = 5804990093011;
   W.__initData = __initData2;
   const animatedStyle1 = obj4.useAnimatedStyle(W);
-  let obj5 = { withSpring: activeQuestDockMode(5632).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  let obj5 = { withSpring: activeQuestDockMode(5637).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   class F {
     constructor() {
       right = 0;
@@ -158,8 +158,8 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   F.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: closure_10 };
   F.__workletHash = 14001429324395;
   F.__initData = __initData3;
-  const animatedStyle2 = activeQuestDockMode(5090).useAnimatedStyle(F);
-  let obj6 = activeQuestDockMode(5090);
+  const animatedStyle2 = activeQuestDockMode(5095).useAnimatedStyle(F);
+  let obj6 = activeQuestDockMode(5095);
   const obj7 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: closure_10 };
   class V {
     constructor() {
@@ -172,12 +172,12 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
       return obj1;
     }
   }
-  const obj8 = activeQuestDockMode(5090);
-  V.__closure = { withSpring: activeQuestDockMode(5632).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const obj8 = activeQuestDockMode(5095);
+  V.__closure = { withSpring: activeQuestDockMode(5637).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   V.__workletHash = 6229744150165;
   V.__initData = __initData4;
   const animatedStyle3 = obj8.useAnimatedStyle(V);
-  const obj9 = { withSpring: activeQuestDockMode(5632).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const obj9 = { withSpring: activeQuestDockMode(5637).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   class Z {
     constructor() {
       right = 0;
@@ -190,8 +190,8 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   Z.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: closure_10 };
   Z.__workletHash = 10870034799551;
   Z.__initData = __initData5;
-  const animatedStyle4 = activeQuestDockMode(5090).useAnimatedStyle(Z);
-  const obj10 = activeQuestDockMode(5090);
+  const animatedStyle4 = activeQuestDockMode(5095).useAnimatedStyle(Z);
+  const obj10 = activeQuestDockMode(5095);
   const fn2 = function j() {
     let pointerEvents = "none";
     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -202,8 +202,8 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   fn2.__closure = { activeQuestDockMode, QuestDockMode };
   fn2.__workletHash = 3272003844163;
   fn2.__initData = __initData6;
-  const animatedProps = activeQuestDockMode(5090).useAnimatedProps(fn2);
-  const obj11 = activeQuestDockMode(5090);
+  const animatedProps = activeQuestDockMode(5095).useAnimatedProps(fn2);
+  const obj11 = activeQuestDockMode(5095);
   const fn3 = function z() {
     const obj2 = { borderRadius: activeQuestDockMode.get() === QuestDockMode.EXPANDED ? QUEST_DOCK_CONTENT_BORDER_RADII : token, borderBottomLeftRadius: null, borderBottomRightRadius: null, width: null };
     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -221,12 +221,12 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj2.width = questDockWrapperSpecs.get().width;
     return obj2;
   };
-  const obj12 = activeQuestDockMode(5090);
-  fn3.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, withSpring: activeQuestDockMode(5632).withSpring, questDockAnimatedBorderRadius: tmp9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs };
+  const obj12 = activeQuestDockMode(5095);
+  fn3.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, withSpring: activeQuestDockMode(5637).withSpring, questDockAnimatedBorderRadius: tmp9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs };
   fn3.__workletHash = 8904986205240;
   fn3.__initData = __initData7;
   const animatedStyle5 = obj12.useAnimatedStyle(fn3);
-  const obj13 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, withSpring: activeQuestDockMode(5632).withSpring, questDockAnimatedBorderRadius: tmp9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs };
+  const obj13 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII, questDockBorderRadius: token, withSpring: activeQuestDockMode(5637).withSpring, questDockAnimatedBorderRadius: tmp9, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs };
   class J {
     constructor() {
       obj = closure_0(closure_2[8]);
@@ -238,8 +238,8 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
       return obj1;
     }
   }
-  const obj14 = activeQuestDockMode(5090);
-  J.__closure = { withSpring: activeQuestDockMode(5632).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const obj14 = activeQuestDockMode(5095);
+  J.__closure = { withSpring: activeQuestDockMode(5637).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   J.__workletHash = 10022958892825;
   J.__initData = __initData8;
   let animatedStyle6;
@@ -254,14 +254,14 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj16.style = items;
     const obj17 = { children: null };
     const obj18 = { color: "interactive-text-active", variant: "text-sm/medium", children: null };
-    const intl2 = tmp(1114).intl;
-    obj18.children = intl2.string(tmp(1114).t.o6FLcF);
-    const items1 = [closure_12(tmp(5619).Text, obj18), ];
+    const intl2 = tmp(1113).intl;
+    obj18.children = intl2.string(tmp(1113).t.o6FLcF);
+    const items1 = [closure_12(tmp(5624).Text, obj18), ];
     const obj19 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp18.actionDisclosuresIcon };
-    items1[1] = closure_12(tmp(14464).CircleQuestionIcon, obj19);
+    items1[1] = closure_12(tmp(14502).CircleQuestionIcon, obj19);
     obj17.children = items1;
     obj16.children = closure_14(closure_13, obj17);
-    let tmp19Result = closure_12(tmp(6974).PressableOpacity, obj16);
+    let tmp19Result = closure_12(tmp(6980).PressableOpacity, obj16);
     let tmp22 = closure_12;
   } else {
     const obj20 = { style: null, children: null };
@@ -269,21 +269,21 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     ({ actionDisclosures: arr[0], tertiaryContent: arr[1] } = tmp18);
     obj20.style = items2;
     const obj21 = { color: "text-default", variant: "text-sm/medium", children: null };
-    const intl = tmp(1114).intl;
-    obj21.children = intl.string(tmp(1114).t.o6FLcF);
-    obj20.children = closure_12(tmp(5619).Text, obj21);
+    const intl = tmp(1113).intl;
+    obj21.children = intl.string(tmp(1113).t.o6FLcF);
+    obj20.children = closure_12(tmp(5624).Text, obj21);
     tmp19Result = closure_12(closure_6, obj20);
     tmp22 = closure_12;
   }
   const obj22 = { style: null, layout: questDockHeaderLayoutAnimation, children: null };
   const items3 = [tmp18.header, animatedStyle];
   obj22.style = items3;
-  const obj15 = { withSpring: activeQuestDockMode(5632).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
-  const tmp7Result = questDockWrapperSpecs(7235);
+  const obj15 = { withSpring: activeQuestDockMode(5637).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  const tmp7Result = questDockWrapperSpecs(7241);
   if (tmpResult.isAndroid()) {
     if (null != blurHash) {
       const obj23 = { placeholder: blurHash, layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation };
-      let tmp22Result = tmp22(tmp7(17094), obj23);
+      let tmp22Result = tmp22(tmp7(17152), obj23);
     }
     const items4 = [tmp22Result, , ];
     let tmp22Result2 = children;
@@ -308,11 +308,11 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj27.style = items7;
     obj27.layout = questDockHeaderLayoutAnimation;
     const obj28 = { style: animatedStyle1, children: promotedLabelLeading.collapsedContent };
-    obj27.children = tmp22(tmp7(7235), obj28);
-    const items8 = [tmp22(tmp7(7235), obj27), ];
+    obj27.children = tmp22(tmp7(7241), obj28);
+    const items8 = [tmp22(tmp7(7241), obj27), ];
     const obj29 = { animatedProps, style: null, layout: null, children: null };
     let secondaryContentOverlay = null != secondaryContentWidth;
-    const tmp7Result4 = tmp7(7235);
+    const tmp7Result4 = tmp7(7241);
     if (secondaryContentOverlay) {
       secondaryContentOverlay = tmp18.secondaryContentOverlay;
     }
@@ -323,24 +323,24 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     const items10 = [tmp18.expandedContent, animatedStyle3];
     obj30.style = items10;
     let tmp25Result = !flag;
-    const tmp7Result5 = tmp7(7235);
+    const tmp7Result5 = tmp7(7241);
     if (!flag) {
       const obj31 = { children: null };
-      const items11 = [tmp19Result, tmp22(tmp7(17096), {})];
+      const items11 = [tmp19Result, tmp22(tmp7(17154), {})];
       obj31.children = items11;
       tmp25Result = closure_14(closure_13, obj31);
     }
     const items12 = [tmp25Result, ];
     const obj32 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    const intl3 = tmp(1114).intl;
-    obj32.accessibilityLabel = intl3.string(tmp(1114).t.PdRCRg);
+    const intl3 = tmp(1113).intl;
+    obj32.accessibilityLabel = intl3.string(tmp(1113).t.PdRCRg);
     obj32.onPress = onSubmenuPress;
     obj32.style = tmp18.tertiaryContent;
     const obj33 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE };
-    obj32.children = tmp22(tmp(9736).MoreHorizontalIcon, obj33);
-    items12[1] = tmp22(tmp(6974).PressableOpacity, obj32);
+    obj32.children = tmp22(tmp(9756).MoreHorizontalIcon, obj33);
+    items12[1] = tmp22(tmp(6980).PressableOpacity, obj32);
     obj30.children = items12;
-    obj29.children = closure_14(tmp7(7235), obj30);
+    obj29.children = closure_14(tmp7(7241), obj30);
     items8[1] = tmp22(tmp7Result5, obj29);
     obj26.children = items8;
     items4[2] = closure_14(closure_6, obj26);
@@ -357,6 +357,6 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     }
     return closure_14(tmp7Result, obj22);
   }
-  tmp22Result = tmp22(tmp7(17065), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
-  tmpResult = activeQuestDockMode(1377);
+  tmp22Result = tmp22(tmp7(17123), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
+  tmpResult = activeQuestDockMode(1376);
 });

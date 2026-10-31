@@ -1,18 +1,18 @@
-// === Module 5619: Text/Text ===
+// === Module 5624: Text/Text ===
 
-// Module 5619 (Text/Text)
+// Module 5624 (Text/Text)
 import _modDef12 from "module_12" /* 12 */;
 import NativeText2 from "NativeText" /* 299 */;
 import nativeDefault from "native" /* 575 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1377 */;
-import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 5621 */;
-import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5623 */;
-import useTypographyVariantRemap from "useTypographyVariantRemap" /* 5624 */;
-import PlainTextEligibility from "PlainTextEligibility" /* 5627 */;
-import _modDef5628 from "module_5628" /* 5628 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1376 */;
+import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 5626 */;
+import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5628 */;
+import useTypographyVariantRemap from "useTypographyVariantRemap" /* 5629 */;
+import PlainTextEligibility from "PlainTextEligibility" /* 5632 */;
+import _modDef5633 from "module_5633" /* 5633 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
 
 require = fn;
 class Text {
@@ -159,7 +159,7 @@ obj16[800] = Fonts.GINTO_NORD_EXTRA_BOLD_ITALIC;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj7[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj7[900] } = Fonts);
 const dependencyMap = { headline: obj3, nitro: obj4, primary: { 400: null, 500: null, 600: null, 700: null, 800: null }, code: { 400: null, 700: null } };
 let closure_14 = { headline: obj16, nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(5620).TextVariantsFlat;
+const TextVariantsFlat = fn(5625).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
@@ -199,9 +199,9 @@ const mapped = TextVariantsFlat.map((name) => {
   return tmp;
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(5621);
+const useManaTextMigrationHighlight = fn(5626);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {

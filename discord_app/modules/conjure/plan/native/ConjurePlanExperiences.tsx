@@ -1,15 +1,15 @@
-// === Module 12700: ConjurePlanExperiences ===
+// === Module 12735: ConjurePlanExperiences ===
 
-// Module 12700 (ConjurePlanExperiences)
+// Module 12735 (ConjurePlanExperiences)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef3865 from "module_3865" /* 3865 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import AppsIcon2 from "AppsIcon" /* 8670 */;
-import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12686 */;
-import conjurePlanFormat from "conjurePlanFormat" /* 12694 */;
-import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12703 */;
-import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12704 */;
+import util from "util" /* 1113 */;
+import _modDef3868 from "module_3868" /* 3868 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import AppsIcon2 from "AppsIcon" /* 8678 */;
+import conjurePlanExperienceSurfaces from "conjurePlanExperienceSurfaces" /* 12721 */;
+import conjurePlanFormat from "conjurePlanFormat" /* 12729 */;
+import conjurePlanExperienceSections from "conjurePlanExperienceSections" /* 12738 */;
+import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12739 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -91,7 +91,7 @@ function ExperienceBlocks(showsRequirements) {
         const obj2 = { channels: true, caption: null, children: null };
         const intl2 = util.intl;
         const obj4 = { count: result.channels.length };
-        obj2.caption = intl2.formatToPlainString(_modDef3865.w8F5sy, obj4);
+        obj2.caption = intl2.formatToPlainString(_modDef3868.w8F5sy, obj4);
         const obj5 = { style: tmp.infoRows, children: null };
         const channels = result.channels;
         obj5.children = channels.map((description) => {
@@ -106,7 +106,7 @@ function ExperienceBlocks(showsRequirements) {
       if (result1.length > 0) {
         const obj6 = { caption: null, children: null };
         const intl3 = util.intl;
-        obj6.caption = intl3.string(_modDef3865.MY6UGJ);
+        obj6.caption = intl3.string(_modDef3868.MY6UGJ);
         const obj7 = { labels: result1 };
         obj6.children = hasOwnProperty(Chips, obj7);
         items1.push(hasOwnProperty(InfoBlock, obj6, "features"));
@@ -183,7 +183,7 @@ function ComponentSection(arg0) {
   const items = [hasOwnProperty(View, obj4), ];
   const intl = util.intl;
   if (result) {
-    let BM4Ymz = _modDef3865.BM4Ymz;
+    let BM4Ymz = _modDef3868.BM4Ymz;
   } else {
     BM4Ymz = conjurePlanExperienceSections.CONJURE_PLAN_EXPERIENCE_KIND_LABELS[experience.kind];
   }
@@ -220,8 +220,8 @@ function ComponentSection(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { frame: fn(9707).GameControllerIcon, overlay_widget: fn(12701).WindowTopIcon, user_widget: fn(10785).UserCircleIcon, bot: fn(12408).RobotIcon, commands: fn(12408).RobotIcon, automod: fn(11255).ShieldIcon };
-const createStyles = fn(5009);
+let obj = { frame: fn(9727).GameControllerIcon, overlay_widget: fn(12736).WindowTopIcon, user_widget: fn(10805).UserCircleIcon, bot: fn(12446).RobotIcon, commands: fn(12446).RobotIcon, automod: fn(11281).ShieldIcon };
+const createStyles = fn(5014);
 let obj3 = { intro: { gap: nativeDefault.space.PX_8 }, divider: null, component: null, componentHeader: null, iconBox: null, preview: null, listItem: null, bullet: null, listText: null, infoBlocks: null, infoBlock: null, channelsBlock: null, infoRows: null, infoRow: null, infoText: null, chips: null, chip: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
 obj3.divider = { marginVertical: nativeDefault.space.PX_24, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };

@@ -1,11 +1,11 @@
-// === Module 5084: BaseRive ===
+// === Module 5089: BaseRive ===
 
-// Module 5084 (BaseRive)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5023 */;
-import DataBindByName from "DataBindByName" /* 5085 */;
-import ManaContext from "ManaContext" /* 5136 */;
-import useRivePlayback from "useRivePlayback" /* 5137 */;
-import RiveTypes from "RiveTypes" /* 5138 */;
+// Module 5089 (BaseRive)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5028 */;
+import DataBindByName from "DataBindByName" /* 5090 */;
+import ManaContext from "ManaContext" /* 5141 */;
+import useRivePlayback from "useRivePlayback" /* 5142 */;
+import RiveTypes from "RiveTypes" /* 5143 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -401,7 +401,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -420,7 +420,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
                   closure_128_1 = undefined;
                   c2 = 1;
                   c3 = 1;
-                  const obj3 = { value: tmp2(5139).ignoreErrors(ref3.current), done: false };
+                  const obj3 = { value: tmp2(5144).ignoreErrors(ref3.current), done: false };
                   return obj3;
                 }
               } else {
@@ -435,7 +435,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
                   } else if (dependencyMap()) {
                     c3 = 3;
                   } else {
-                    const RiveImages = tmp2(5085).RiveImages;
+                    const RiveImages = tmp2(5090).RiveImages;
                     closure_128_0 = RiveImages.loadFromURLAsync((function ensureImageUri(source) {
                       if (typeof source === "number") {
                         return closure_1_5.resolveAssetSource(source).uri;

@@ -1,12 +1,12 @@
-// === Module 9926: useTopAndNewlyAddedEmojis ===
+// === Module 9947: useTopAndNewlyAddedEmojis ===
 
-// Module 9926 (useTopAndNewlyAddedEmojis)
-import EmojiStore from "EmojiStore" /* 6790 */;
+// Module 9947 (useTopAndNewlyAddedEmojis)
+import EmojiStore from "EmojiStore" /* 6796 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1387).EmojiIntention;
+const EmojiIntention = fn(1386).EmojiIntention;
 let closure_4 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/hooks/useTopAndNewlyAddedEmojis.tsx");

@@ -1,8 +1,8 @@
-// === Module 16500: SpinAnimation ===
+// === Module 16542: SpinAnimation ===
 
-// Module 16500 (SpinAnimation)
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
+// Module 16542 (SpinAnimation)
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,8 +13,8 @@ let result = size.fileFinishedImporting("modules/user_profile/native/SpinAnimati
 
 export default function SpinAnimation(children) {
   const shouldAnimate = children.shouldAnimate;
-  const sharedValue = shouldAnimate(5090).useSharedValue(0);
-  let obj = shouldAnimate(5090);
+  const sharedValue = shouldAnimate(5095).useSharedValue(0);
+  let obj = shouldAnimate(5095);
   let fn = function l() {
     const obj = { transform: null };
     const items = [{ rotateZ: "" + sharedValue.get() + "deg" }];
@@ -25,7 +25,7 @@ export default function SpinAnimation(children) {
   fn.__workletHash = 7820847848206;
   fn.__initData = __initData;
   let items = [sharedValue, shouldAnimate];
-  const style = shouldAnimate(5090).useAnimatedStyle(fn);
+  const style = shouldAnimate(5095).useAnimatedStyle(fn);
   const effect = noop.useEffect(() => {
     if (shouldAnimate) {
       const obj2 = ReanimatedRexport;
@@ -40,5 +40,5 @@ export default function SpinAnimation(children) {
     }
     return fn;
   }, items);
-  return jsx(sharedValue(5090).View, { style, children: children.children });
+  return jsx(sharedValue(5095).View, { style, children: children.children });
 };

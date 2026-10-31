@@ -1,11 +1,11 @@
-// === Module 15689: MobileNativeUpdateUtils ===
+// === Module 15729: MobileNativeUpdateUtils ===
 
-// Module 15689 (MobileNativeUpdateUtils)
+// Module 15729 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import HTTPUtils from "HTTPUtils" /* 1283 */;
-import PlatformUtils from "PlatformUtils" /* 1376 */;
-import Linking from "Linking" /* 5704 */;
+import ConstantsIOS from "ConstantsIOS" /* 1092 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import PlatformUtils from "PlatformUtils" /* 1375 */;
+import Linking from "Linking" /* 5709 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let closure_5 = async function _checkForNewerBuild() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -104,7 +104,7 @@ function openBuildInstallerUrl(install) {
   } catch (err) {
   }
 }
-const UPDATE_CONFIG = fn(5741).UPDATE_CONFIG;
+const UPDATE_CONFIG = fn(5746).UPDATE_CONFIG;
 const logger = new LoggerDefault("MobileNativeUpdateUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");

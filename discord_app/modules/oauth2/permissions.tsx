@@ -1,9 +1,9 @@
-// === Module 9732: permissions ===
+// === Module 9752: permissions ===
 
-// Module 9732 (permissions)
+// Module 9752 (permissions)
 import Constants from "Constants" /* 1072 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import util from "util" /* 1114 */;
+import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

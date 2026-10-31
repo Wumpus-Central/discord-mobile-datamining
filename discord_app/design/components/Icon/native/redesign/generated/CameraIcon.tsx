@@ -1,9 +1,9 @@
-// === Module 10530: CameraIcon ===
+// === Module 10550: CameraIcon ===
 
-// Module 10530 (CameraIcon)
+// Module 10550 (CameraIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5711 */;
-import _mod10531 from "module_10531" /* 10531 */;
+import BaseIconImage from "BaseIconImage" /* 5716 */;
+import _mod10551 from "module_10551" /* 10551 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function CameraIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10531, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10551, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

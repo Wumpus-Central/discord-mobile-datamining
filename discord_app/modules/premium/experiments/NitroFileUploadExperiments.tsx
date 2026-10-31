@@ -1,15 +1,15 @@
-// === Module 5070: NitroFileUploadExperiments ===
+// === Module 5075: NitroFileUploadExperiments ===
 
-// Module 5070 (NitroFileUploadExperiments)
-import PremiumConstants from "PremiumConstants" /* 1386 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1448 */;
+// Module 5075 (NitroFileUploadExperiments)
+import PremiumConstants from "PremiumConstants" /* 1385 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 ({ MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE: closure_0, MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE_1GB: closure_1 } = PremiumConstants);
 const NitroFileUploadRollout = "NitroFileUploadRollout";
 let ApexExperiment = ApexExperiment_mod;
 let obj = { name: "2026-09-nitro-file-upload-rollout", kind: "user", defaultConfig: { enabled: false }, variations: null };
-const obj2 = { 1: null };
+let obj2 = { 1: null };
 obj2[1] = { enabled: true };
 obj.variations = obj2;
 let closure_3 = ApexExperiment.createApexExperiment(obj);
@@ -22,30 +22,32 @@ export function getNitroFileUploadLimitBytes(arg0) {
   if (arg0 === undefined) {
     obj = {};
   }
-  let _location = { location: obj.location }.location;
+  const obj2 = { location: obj.location, autoTrackExposure: obj.autoTrackExposure };
+  let _location = obj2.location;
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  return closure_3.getConfig({ location: _location }).enabled ? framebus : React;
+  return closure_3.getConfig({ location: _location }, { autoTrackExposure: obj2.autoTrackExposure }).enabled ? framebus : React;
 }
 export function getNitroFileUploadRolloutConfig(arg0) {
-  let obj = arg0;
+  let autoTrackExposure = arg0;
   if (arg0 === undefined) {
-    obj = {};
+    autoTrackExposure = {};
   }
-  let _location = obj.location;
+  let _location = autoTrackExposure.location;
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  return closure_3.getConfig({ location: _location });
+  return closure_3.getConfig({ location: _location }, { autoTrackExposure: autoTrackExposure.autoTrackExposure });
 }
 export function getNitroFileUploadRolloutCopy(legacyCopy) {
   let rolloutCopy = legacyCopy.legacyCopy;
-  let _location = {}.location;
+  const autoTrackExposure = {};
+  let _location = autoTrackExposure.location;
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  if (closure_3.getConfig({ location: _location }).enabled) {
+  if (closure_3.getConfig({ location: _location }, { autoTrackExposure: autoTrackExposure.autoTrackExposure }).enabled) {
     rolloutCopy = legacyCopy.rolloutCopy;
   }
   return rolloutCopy;

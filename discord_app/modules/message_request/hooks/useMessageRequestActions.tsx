@@ -1,16 +1,16 @@
-// === Module 13965: useMessageRequestActions ===
+// === Module 14000: useMessageRequestActions ===
 
-// Module 13965 (useMessageRequestActions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1253 */;
-import UserSettings from "UserSettings" /* 4834 */;
-import ReportModals from "ReportModals" /* 8344 */;
+// Module 14000 (useMessageRequestActions)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import UserSettings from "UserSettings" /* 4839 */;
+import ReportModals from "ReportModals" /* 8352 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7765 */;
+import UserProfileStore from "UserProfileStore" /* 7772 */;
 
 require = fn;
-const MessageRequestConstants = fn(13966);
+const MessageRequestConstants = fn(14001);
 ({ MessageRequestAnalyticsAction: closure_7, BATCH_REJECT_LIMIT: closure_8 } = MessageRequestConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -57,7 +57,7 @@ export function useMessageRequestActions(user) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -151,7 +151,7 @@ export function useMessageRequestActions(user) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -244,7 +244,7 @@ export function useMessageRequestActions(user) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       while (true) {
@@ -265,7 +265,7 @@ export function useMessageRequestActions(user) {
             closure_131_1 = undefined;
             if (isUserProfileLoading) {
               v3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               let tmp30 = _undefined(true);
               let tmp34 = onAcceptSuccess(onRejectSuccess[9])(tmp58, closure_8);
@@ -347,7 +347,7 @@ export function useMessageRequestActions(user) {
         let obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -377,7 +377,7 @@ export function useMessageRequestActions(user) {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -427,7 +427,7 @@ export function useMessageRequestActions(user) {
                       return obj;
                     } else {
                       c1 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } catch (tmp16) {
                     c1 = tmp;

@@ -1,14 +1,14 @@
-// === Module 13940: EmojiSuggestionBarUtils ===
+// === Module 13975: EmojiSuggestionBarUtils ===
 
-// Module 13940 (EmojiSuggestionBarUtils)
-import native from "native" /* 5075 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
-import spring from "spring" /* 5632 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9764 */;
+// Module 13975 (EmojiSuggestionBarUtils)
+import native from "native" /* 5080 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
+import spring from "spring" /* 5637 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9785 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5010 */;
+import AccessibilityStore from "AccessibilityStore" /* 5015 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ require = fn;
 const UpsellTypes = fn(1072).UpsellTypes;
 const jsx = fn(21).jsx;
 let closure_8 = { focused: false, text: "", selectionStart: 0, selectionEnd: 0 };
-const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1188).STANDARD_EASING };
+const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1187).STANDARD_EASING };
 let obj2 = { duration: 200, dampingRatio: 0.7 };
 const __initData = { code: "function EmojiSuggestionBarUtilsTsx1(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}" };
 let closure_12 = { code: "function EmojiSuggestionBarUtilsTsx2(finished){const{runOnJS,cleanUp}=this.__closure;if(finished){runOnJS(cleanUp)();}}" };
@@ -154,21 +154,21 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
   const items = [setDataImmediate];
   const stateFromStores = chatInputRef(504).useStateFromStores(items, () => setDataImmediate.useReducedMotion);
   obj2 = chatInputRef(504);
-  analyticsLocations = chatInputStateRef(7320)(chatInputStateRef(7345).EMOJI_SUGGESTIONS).analyticsLocations;
-  const tmp5 = chatInputStateRef(13905)(tmp[1], 16);
+  analyticsLocations = chatInputStateRef(7326)(chatInputStateRef(7351).EMOJI_SUGGESTIONS).analyticsLocations;
+  const tmp5 = chatInputStateRef(13940)(tmp[1], 16);
   setData = tmp5.setData;
   setDataImmediate = tmp5.setDataImmediate;
   const items1 = [setData];
   const imperativeHandle = setData.useImperativeHandle(ref, () => ({ setData }), items1);
   let obj3 = { channel, text, selectionStart, selectionEnd, enabled: null, maxCount: null, minUnlockedEmojis: null };
-  const tmp4 = chatInputStateRef(7320);
+  const tmp4 = chatInputStateRef(7326);
   if (focused) {
     focused = !suppressed;
   }
   obj3.enabled = focused;
   obj3.maxCount = MAX_SUGGESTIONS_LARGE;
   obj3.minUnlockedEmojis = minUnlockedEmojis;
-  const tmp7Result = chatInputStateRef(13941)(obj3);
+  const tmp7Result = chatInputStateRef(13976)(obj3);
   unlockedEmojis = tmp7Result.unlockedEmojis;
   queryEnd = tmp7Result.queryEnd;
   clear = tmp7Result.clear;
@@ -207,7 +207,7 @@ export function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnl
     const obj4 = { emoji, displayedSuggestions: unlockedEmojis };
     ref = queryEnd + combined.length;
   }, items2);
-  const tmp7 = chatInputStateRef(13941);
+  const tmp7 = chatInputStateRef(13976);
   return {
     unlockedEmojis,
     lockedEmojis: tmp7Result.lockedEmojis,

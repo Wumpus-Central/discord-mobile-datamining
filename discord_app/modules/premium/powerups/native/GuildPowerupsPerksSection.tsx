@@ -1,16 +1,16 @@
-// === Module 14093: GuildPowerupsPerksSection ===
+// === Module 14128: GuildPowerupsPerksSection ===
 
-// Module 14093 (GuildPowerupsPerksSection)
+// Module 14128 (GuildPowerupsPerksSection)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import _modDef2569 from "module_2569" /* 2569 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 14076 */;
-import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 14094 */;
-import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 14096 */;
-import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 14098 */;
+import util from "util" /* 1113 */;
+import _modDef2570 from "module_2570" /* 2570 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 14111 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 14129 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 14131 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 14133 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5009 */;
+import createStyles from "createStyles" /* 5014 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -25,9 +25,9 @@ export default function GuildPowerupPerksSection(arg0) {
   let obj2 = { title: null, description: null };
   const tmp = closure_7();
   const intl = util.intl;
-  obj2.title = intl.string(_modDef2569.TV3Vm8);
+  obj2.title = intl.string(_modDef2570.TV3Vm8);
   const intl2 = util.intl;
-  obj2.description = intl2.string(_modDef2569.STx9hp);
+  obj2.description = intl2.string(_modDef2570.STx9hp);
   const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj2), ];
   items[1] = closure_4(View, {
     style: tmp.container,

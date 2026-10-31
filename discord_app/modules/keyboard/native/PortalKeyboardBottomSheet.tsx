@@ -1,17 +1,17 @@
-// === Module 12228: PortalKeyboardBottomSheet ===
+// === Module 12266: PortalKeyboardBottomSheet ===
 
-// Module 12228 (PortalKeyboardBottomSheet)
+// Module 12266 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1889 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import HapticUtils from "HapticUtils" /* 5255 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5269 */;
-import BottomSheetModal from "BottomSheetModal" /* 5270 */;
-import isChannelFocused from "isChannelFocused" /* 6867 */;
-import native from "native" /* 8983 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1888 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import HapticUtils from "HapticUtils" /* 5260 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5274 */;
+import BottomSheetModal from "BottomSheetModal" /* 5275 */;
+import isChannelFocused from "isChannelFocused" /* 6873 */;
+import native from "native" /* 8992 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10184 */;
+import NativeMenuStore from "NativeMenuStore" /* 10204 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -40,11 +40,11 @@ get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let closure_9 = PlatformUtils.isIOS();
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj3 = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8983).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8983).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8992).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8992).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj3.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };

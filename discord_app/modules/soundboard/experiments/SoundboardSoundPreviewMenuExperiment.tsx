@@ -1,7 +1,7 @@
-// === Module 19129: SoundboardSoundPreviewMenuExperiment ===
+// === Module 19178: SoundboardSoundPreviewMenuExperiment ===
 
-// Module 19129 (SoundboardSoundPreviewMenuExperiment)
-import ApexExperiment from "ApexExperiment" /* 1448 */;
+// Module 19178 (SoundboardSoundPreviewMenuExperiment)
+import ApexExperiment from "ApexExperiment" /* 1447 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-08-mobile-soundboard-sound-preview-menu", defaultConfig: { enabled: false, returnOnUpsellDismiss: false }, variations: null };

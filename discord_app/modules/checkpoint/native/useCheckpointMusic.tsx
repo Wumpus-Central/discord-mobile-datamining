@@ -1,9 +1,9 @@
-// === Module 13405: useCheckpointMusic ===
+// === Module 13442: useCheckpointMusic ===
 
-// Module 13405 (useCheckpointMusic)
+// Module 13442 (useCheckpointMusic)
 import _mod17 from "module_17" /* 17 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13386 */;
+import CheckpointStore from "CheckpointStore" /* 13421 */;
 import size from "module_2" /* 2 */;
 
 ({ useEffect: c3, useRef: closure_4 } = noop);
@@ -16,11 +16,11 @@ export default function useCheckpointMusic() {
   closure_4(null);
   closure_3(() => {
     let num = 1;
-    const obj = stateFromStores(11011);
+    const obj = stateFromStores(11030);
     if (CheckpointStore.isMuted) {
       num = 0;
     }
-    const sound = obj.createSound(ref(13406), "vibing_wumpus", num);
+    const sound = obj.createSound(ref(13443), "vibing_wumpus", num);
     ref.current = sound;
     sound.loop();
     ref = AppState.addEventListener("change", (event) => {

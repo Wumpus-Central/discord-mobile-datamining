@@ -1,6 +1,6 @@
-// === Module 11731: VideoStreamReadyActionCreators ===
+// === Module 11768: VideoStreamReadyActionCreators ===
 
-// Module 11731 (VideoStreamReadyActionCreators)
+// Module 11768 (VideoStreamReadyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

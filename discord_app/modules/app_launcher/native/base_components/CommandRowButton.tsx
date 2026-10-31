@@ -1,11 +1,11 @@
-// === Module 12256: CommandRowButton ===
+// === Module 12294: CommandRowButton ===
 
-// Module 12256 (CommandRowButton)
+// Module 12294 (CommandRowButton)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import SendMessageIcon from "SendMessageIcon" /* 5724 */;
-import TableRowArrow from "TableRowArrow" /* 6978 */;
+import util from "util" /* 1113 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import SendMessageIcon from "SendMessageIcon" /* 5729 */;
+import TableRowArrow from "TableRowArrow" /* 6984 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -58,7 +58,7 @@ export function useCommandRowSend(command) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ export function useCommandRowSend(command) {
           c3 = 0;
           closure_128_5(false);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {

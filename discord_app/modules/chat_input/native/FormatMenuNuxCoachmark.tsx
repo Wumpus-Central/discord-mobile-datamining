@@ -1,22 +1,22 @@
-// === Module 13943: FormatMenuNuxCoachmark ===
+// === Module 13978: FormatMenuNuxCoachmark ===
 
-// Module 13943 (FormatMenuNuxCoachmark)
+// Module 13978 (FormatMenuNuxCoachmark)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7095 */;
+import util from "util" /* 1113 */;
+import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const useChatInputKeyboardOffsetDefault = tmp5(13944);
+const useChatInputKeyboardOffsetDefault = tmp5(13979);
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const rect = { position: "absolute", top: -nativeDefault.space.PX_8, bottom: 0, left: null, width: 0 };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num = 5;
 if (PlatformUtils.isAndroid()) {
   num = 4;
@@ -34,11 +34,11 @@ export default function FormatMenuNuxCoachmark() {
   require("useSelectedDismissibleContent");
   if (isMobileMarkdownFormatMenuEnabled) {
     if (tmp6) {
-      const items = [tmp2(4842).DismissibleContent.MOBILE_MARKDOWN_FORMAT_MENU_COACHMARK];
+      const items = [tmp2(4847).DismissibleContent.MOBILE_MARKDOWN_FORMAT_MENU_COACHMARK];
     }
     const tmp11 = _slicedToArray(tmp8([]), 2);
     importDefault = tmp12;
-    const tmp13 = tmp11[0] === tmp2(4842).DismissibleContent.MOBILE_MARKDOWN_FORMAT_MENU_COACHMARK;
+    const tmp13 = tmp11[0] === tmp2(4847).DismissibleContent.MOBILE_MARKDOWN_FORMAT_MENU_COACHMARK;
     dependencyMap = tmp13;
     const tmp14 = useChatInputKeyboardOffsetDefault();
     _slicedToArray = tmp14;
@@ -61,7 +61,7 @@ export default function FormatMenuNuxCoachmark() {
       return obj;
     }, items1);
     const ref = coachmark.useRef(null);
-    coachmark = tmp2(9933).useCoachmark(ref, memo);
+    coachmark = tmp2(9954).useCoachmark(ref, memo);
     const items2 = [coachmark];
     const obj2 = {
       style: tmp.anchor,

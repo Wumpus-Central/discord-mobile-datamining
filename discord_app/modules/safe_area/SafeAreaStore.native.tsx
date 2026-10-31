@@ -1,7 +1,7 @@
-// === Module 1627: SafeAreaStore ===
+// === Module 1626: SafeAreaStore ===
 
-// Module 1627 (SafeAreaStore)
-import SafeAreaConstants from "SafeAreaConstants" /* 1628 */;
+// Module 1626 (SafeAreaStore)
+import SafeAreaConstants from "SafeAreaConstants" /* 1627 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

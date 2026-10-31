@@ -1,9 +1,9 @@
-// === Module 14732: useMediaItemSpoilerState ===
+// === Module 14770: useMediaItemSpoilerState ===
 
-// Module 14732 (useMediaItemSpoilerState)
-import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5090 */;
-import timing from "timing" /* 5249 */;
+// Module 14770 (useMediaItemSpoilerState)
+import native from "native" /* 1187 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5095 */;
+import timing from "timing" /* 5254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
 
 export function useMediaItemSpoilerState(index) {
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8830).useMediaItemHasSpoiler(index);
-  let obj = mediaItemHasSpoiler(8830);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8838).useMediaItemHasSpoiler(index);
+  let obj = mediaItemHasSpoiler(8838);
   const tmp = mediaItemHasSpoiler;
   [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   const tmp4 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
@@ -23,7 +23,7 @@ export function useMediaItemSpoilerState(index) {
   if (mediaItemHasSpoiler) {
     num = 1;
   }
-  sharedValue = mediaItemHasSpoiler(5090).useSharedValue(num);
+  sharedValue = mediaItemHasSpoiler(5095).useSharedValue(num);
   const items = [mediaItemHasSpoiler, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 0;
@@ -42,13 +42,13 @@ export function useMediaItemSpoilerState(index) {
     const obj3 = { runOnJS: ReanimatedRexport.runOnJS, setSpoilerActive, hasSpoiler: mediaItemHasSpoiler };
   }, items);
   const items1 = [tmp5, ];
-  let obj3 = mediaItemHasSpoiler(5090);
+  let obj3 = mediaItemHasSpoiler(5095);
   let fn = function l() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { spoilerOpacity: sharedValue };
   fn.__workletHash = 8496335051493;
   fn.__initData = __initData;
-  items1[1] = tmp(5090).useAnimatedStyle(fn);
+  items1[1] = tmp(5095).useAnimatedStyle(fn);
   return items1;
 }

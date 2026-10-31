@@ -1,18 +1,18 @@
-// === Module 18561: GuildRoleSubscriptionPurchasePage ===
+// === Module 18604: GuildRoleSubscriptionPurchasePage ===
 
-// Module 18561 (GuildRoleSubscriptionPurchasePage)
+// Module 18604 (GuildRoleSubscriptionPurchasePage)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import LinkingDefault from "Linking" /* 5704 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8595 */;
-import _modDef11872 from "module_11872" /* 11872 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 18571 */;
+import util from "util" /* 1113 */;
+import native from "native" /* 1187 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import LinkingDefault from "Linking" /* 5709 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8603 */;
+import _modDef11910 from "module_11910" /* 11910 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 18614 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1193 */;
-import ChannelStore from "ChannelStore" /* 4858 */;
-import GuildStore from "GuildStore" /* 4880 */;
+import ThemeStore from "ThemeStore" /* 1192 */;
+import ChannelStore from "ChannelStore" /* 4863 */;
+import GuildStore from "GuildStore" /* 4885 */;
 
 const require = globalThis.__r;
 
@@ -40,7 +40,7 @@ function SocialBadge(onPress) {
   obj.onPress = onPress;
   const items = [closure_1_14(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef11872, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef11910, style: tmp.socialBadgeArrow };
     tmp5Result = closure_1_14(native.Icon, obj3);
   }
   items[2] = tmp5Result;
@@ -53,8 +53,8 @@ const Constants = fn(1072);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5009);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, heroImage: { aspectRatio: 4, width: "100%" }, guildIconContainer: null, guildIcon: null, contentCard: null, loadingContainer: null, socialContainer: null, socialBadge: null, socialBadgeIcon: null, socialBadgeArrow: null, separator: null, moneyBirbPlaceholder: null, gatedChannel: null, gatedChannelIcon: null };
+const createStyles = fn(5014);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, heroImage: { aspectRatio: 4, width: "100%" }, guildIconContainer: null, guildIcon: null, contentCard: null, loadingContainer: null, socialBadge: null, socialBadgeIcon: null, socialBadgeArrow: null, separator: null, moneyBirbPlaceholder: null, gatedChannel: null, gatedChannelIcon: null };
 const rect = { borderWidth: 3, borderRadius: nativeDefault.radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute" };
 obj2.guildIconContainer = rect;
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -62,7 +62,6 @@ obj2.guildIcon = { borderRadius: nativeDefault.radii.sm };
 let obj4 = { borderRadius: nativeDefault.radii.sm };
 obj2.contentCard = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 47, paddingHorizontal: 16, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md, marginTop: -15 };
 obj2.loadingContainer = { flex: 1, justifyContent: "center", alignItems: "center", paddingBottom: 40 };
-obj2.socialContainer = { flexDirection: "row" };
 let obj5 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 47, paddingHorizontal: 16, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md, marginTop: -15 };
 obj2.socialBadge = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.xl, paddingVertical: 4, paddingHorizontal: 8, alignItems: "center" };
 obj2.socialBadgeIcon = { height: 24, marginRight: 6 };
@@ -73,7 +72,7 @@ obj2.separator = size;
 obj2.moneyBirbPlaceholder = { marginVertical: 64, alignSelf: "center", backgroundColor: "transparent" };
 obj2.gatedChannel = { flexDirection: "row", alignItems: "center", marginBottom: -4 };
 let obj7 = { height: 24, marginLeft: 6, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.gatedChannelIcon = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
+obj2.gatedChannelIcon = { tintColor: nativeDefault.colors.TEXT_DEFAULT, marginHorizontal: 3 };
 let closure_17 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx");
@@ -140,11 +139,8 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
               const obj8 = {
                 unlockHook() {
                               const obj = { style: closure_2.gatedChannel, children: null };
-                              const items = [closure_2_14(native.Spacer, { size: 3 }), , , ];
                               const obj2 = { size: native.Icon.Sizes.SMALL_20, style: closure_2.gatedChannelIcon, source: utils_ChannelUtils.getChannelIcon(stateFromStores1) };
-                              items[1] = closure_2_14(native.Icon, obj2);
-                              items[2] = closure_2_14(native.Spacer, { size: 3 });
-                              items[3] = closure_2_14(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children });
+                              const items = [closure_2_14(native.Icon, obj2), closure_2_14(Text_Text.Text, { variant: "text-xs/semibold", color: "text-default", children })];
                               obj.children = items;
                               return __initData(timestampProducer, obj);
                             }
@@ -173,55 +169,53 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
             }
             if (tmp21Result) {
               const items5 = [closure_14(tmp(tmp2[11]).Spacer, { size: 24 }), ];
-              const obj17 = { style: tmp4.socialContainer, children: null };
               if (hasItem) {
-                const obj18 = { iconSource: tmp5(tmp2[28]), text: null };
+                const obj17 = { iconSource: tmp5(tmp2[28]), text: null };
                 const intl4 = tmp(tmp2[10]).intl;
-                obj18.text = intl4.string(tmp(tmp2[10]).t["2MhjUV"]);
-                hasItem = closure_14(SocialBadge, obj18);
+                obj17.text = intl4.string(tmp(tmp2[10]).t["2MhjUV"]);
+                hasItem = closure_14(SocialBadge, obj17);
               }
               const items6 = [hasItem, ];
               let tmp23Result = null != store_page_trailer_url;
               if (tmp23Result) {
-                const obj19 = { iconSource: tmp5(tmp2[29]), text: null, onPress: null };
+                const obj18 = { iconSource: tmp5(tmp2[29]), text: null, onPress: null };
                 const intl5 = tmp(tmp2[10]).intl;
-                obj19.text = intl5.string(tmp(tmp2[10]).t["4PGeGA"]);
-                obj19.onPress = function onPress() {
+                obj18.text = intl5.string(tmp(tmp2[10]).t["4PGeGA"]);
+                obj18.onPress = function onPress() {
                   return LinkingDefault.openURL(store_page_trailer_url);
                 };
-                tmp23Result = closure_14(SocialBadge, obj19);
+                tmp23Result = closure_14(SocialBadge, obj18);
               }
-              const obj20 = { children: null };
-              const obj21 = { gap: 8, children: null };
+              const obj19 = { children: null };
+              const obj20 = { direction: "horizontal", spacing: 8, children: null };
               items6[1] = tmp23Result;
-              obj21.children = items6;
-              obj17.children = closure_15(tmp(tmp2[27]).GappedList, obj21);
-              items5[1] = closure_14(closure_6, obj17);
-              obj20.children = items5;
-              tmp21Result = closure_15(closure_16, obj20);
+              obj20.children = items6;
+              items5[1] = closure_15(tmp(tmp2[27]).Stack, obj20);
+              obj19.children = items5;
+              tmp21Result = closure_15(closure_16, obj19);
             }
             items4[4] = tmp21Result;
             items4[5] = closure_14(tmp(tmp2[11]).Spacer, { size: 16 });
             items4[6] = closure_14(LegalDisclaimer, {});
             items4[7] = closure_14(Separator, {});
-            const obj22 = { variant: typeConsolidationEyebrow.variant, color: "text-muted", style: null, children: null };
+            const obj21 = { variant: typeConsolidationEyebrow.variant, color: "text-muted", style: null, children: null };
             const items7 = [{ textTransform: "uppercase" }, typeConsolidationEyebrow.style];
-            obj22.style = items7;
-            obj22.children = formatResult;
-            items4[8] = closure_14(tmp(tmp2[9]).Text, obj22);
+            obj21.style = items7;
+            obj21.children = formatResult;
+            items4[8] = closure_14(tmp(tmp2[9]).Text, obj21);
             items4[9] = closure_14(tmp(tmp2[11]).Spacer, { size: 24 });
-            const obj23 = { gap: 16, children: mapped.map((listingId) => closure_2_14(GuildRoleSubscriptionPurchasePreviewCardDefault, { listingId, guildId }, listingId)) };
-            items4[10] = closure_14(tmp(tmp2[27]).GappedList, obj23);
+            const obj22 = { spacing: 16, children: mapped.map((listingId) => closure_2_14(GuildRoleSubscriptionPurchasePreviewCardDefault, { listingId, guildId }, listingId)) };
+            items4[10] = closure_14(tmp(tmp2[27]).Stack, obj22);
             obj11.children = items4;
             items3[1] = closure_15(closure_6, obj11);
-            const obj24 = { source: tmp19, style: tmp4.moneyBirbPlaceholder };
-            items3[2] = closure_14(tmp5(tmp2[24]), obj24);
+            const obj23 = { source: tmp19, style: tmp4.moneyBirbPlaceholder };
+            items3[2] = closure_14(tmp5(tmp2[24]), obj23);
             obj9.children = items3;
             return closure_15(closure_7, obj9);
           }
           const intl = tmp(tmp2[10]).intl;
           formatResult = intl.string(tmp(tmp2[10]).t["mPHb1/"]);
-          const obj27 = require("GuildRoleSubscriptionSettingsUtils");
+          const obj26 = require("GuildRoleSubscriptionSettingsUtils");
         }
       }
     }

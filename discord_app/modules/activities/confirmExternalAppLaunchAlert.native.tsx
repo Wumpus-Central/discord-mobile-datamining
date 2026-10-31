@@ -1,20 +1,20 @@
-// === Module 11708: confirmExternalAppLaunchAlert ===
+// === Module 11745: confirmExternalAppLaunchAlert ===
 
-// Module 11708 (confirmExternalAppLaunchAlert)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 5619 */;
-import components_Button_Button from "components/Button/Button" /* 5629 */;
-import LinkingDefault from "Linking" /* 5704 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5953 */;
-import _modDef11709 from "module_11709" /* 11709 */;
+// Module 11745 (confirmExternalAppLaunchAlert)
+import util from "util" /* 1113 */;
+import Text_Text from "Text/Text" /* 5624 */;
+import components_Button_Button from "components/Button/Button" /* 5634 */;
+import LinkingDefault from "Linking" /* 5709 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5958 */;
+import _modDef11746 from "module_11746" /* 11746 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11709, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11746, style: tmp.announcementBirb };
   const items = [hasOwnProperty(FastImageDefault, obj2), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
@@ -47,10 +47,10 @@ function LinkButton() {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-const PRIVATE_APPS_HELP_ARTICLE = fn(2019).PRIVATE_APPS_HELP_ARTICLE;
+const PRIVATE_APPS_HELP_ARTICLE = fn(2018).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");

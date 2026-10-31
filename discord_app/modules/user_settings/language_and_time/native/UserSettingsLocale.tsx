@@ -1,14 +1,14 @@
-// === Module 17343: UserSettingsLocale ===
+// === Module 17403: UserSettingsLocale ===
 
-// Module 17343 (UserSettingsLocale)
+// Module 17403 (UserSettingsLocale)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1114 */;
-import FastImageDefault from "FastImage" /* 5712 */;
-import TableRadioRow from "TableRadioRow" /* 7055 */;
-import flags from "flags" /* 17344 */;
+import util from "util" /* 1113 */;
+import FastImageDefault from "FastImage" /* 5717 */;
+import TableRadioRow from "TableRadioRow" /* 7061 */;
+import flags from "flags" /* 17404 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2063 */;
+import LocaleStore from "LocaleStore" /* 2062 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
       } else {
         closure_130_1(closure_130_2[8]).updateLocale(closure_129_0);
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp14) {
       c4 = tmp;
@@ -75,9 +75,9 @@ let closure_10 = async function _handleLanguageChange(arg0) {
   }
 };
 const ScrollView = fn(17).ScrollView;
-const setAppLocale = fn(2064).setAppLocale;
+const setAppLocale = fn(2063).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16 };
