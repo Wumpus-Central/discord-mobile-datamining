@@ -1,6 +1,6 @@
 // discord_app/modules/quests/utils/QuestRewardUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _mod4435 from "../../../../_runtime/metro/04435__.js";
+import _mod4440 from "../../../../_runtime/metro/04440__.js";
 import QuestTypes from "../QuestTypes.tsx";
 import QuestDataUtils from "QuestDataUtils.tsx";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
@@ -75,8 +75,8 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
   }
 }
 let items = [
-  fn(9681).QuestRewardExpirationMode.PREMIUM_EXTENSION,
-  fn(9681).QuestRewardExpirationMode.PREMIUM_PERMANENT,
+  fn(9701).QuestRewardExpirationMode.PREMIUM_EXTENSION,
+  fn(9701).QuestRewardExpirationMode.PREMIUM_PERMANENT,
 ];
 const set = new Set(items);
 const size = fn(2);
@@ -137,7 +137,7 @@ export function getCollectibleQuestRewardDuration(config) {
         const date = new Date(config.expiresAt);
         const _Date2 = Date;
         const date1 = new Date(tmp5.expiresAt);
-        const differenceInDaysResult = _mod4435.differenceInDays(date1, date);
+        const differenceInDaysResult = _mod4440.differenceInDays(date1, date);
         const _Math3 = Math;
         let num = 0;
         const rounded = Math.floor(differenceInDaysResult / 30);
@@ -156,7 +156,7 @@ export function getCollectibleQuestRewardDuration(config) {
           const obj3 = { months: sum };
           return intl3.formatToPlainString(util.t.kridzK, obj3);
         } else {
-          const differenceInDaysResult1 = _mod4435.differenceInDays(date1, date);
+          const differenceInDaysResult1 = _mod4440.differenceInDays(date1, date);
           if (differenceInDaysResult1 >= 7) {
             const _Math = Math;
             const rounded2 = Math.ceil(differenceInDaysResult1 / 7);
@@ -168,9 +168,9 @@ export function getCollectibleQuestRewardDuration(config) {
             const obj = { days: differenceInDaysResult1 };
             return intl.formatToPlainString(util.t["k2UNz+"], obj);
           }
-          const tmp3Result2 = _mod4435;
+          const tmp3Result2 = _mod4440;
         }
-        const tmp3Result = _mod4435;
+        const tmp3Result = _mod4440;
       }
     }
   }
@@ -370,56 +370,6 @@ export function getQuestOrbMultiplier(config) {
       }
     }
     return result;
-  }
-}
-export function getQuestOrbMultiplierForUser(rewardsConfig, isFractionalPremiumWithNoStandardSub) {
-  if (null == isFractionalPremiumWithNoStandardSub) {
-    return 1;
-  } else {
-    const rewards = rewardsConfig.rewardsConfig.rewards;
-    const found = rewards.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
-    let type;
-    if (found != null) {
-      type = found.type;
-    }
-    let num = null;
-    if (type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY) {
-      ({ premiumOrbQuantity, orbQuantity } = found);
-      let result = null;
-      if (null != premiumOrbQuantity) {
-        result = null;
-        if (0 !== orbQuantity) {
-          const _Math = Math;
-          result = Math.round((premiumOrbQuantity / orbQuantity) * 100) / 100;
-        }
-      }
-      num = result;
-    }
-    if (num == null) {
-      num = 1;
-    }
-    const rewards1 = rewardsConfig.rewardsConfig.rewards;
-    const questOrbMultiplierEligibilityForUser = QuestOrbMultiplierHooks.getQuestOrbMultiplierEligibilityForUser(
-      isFractionalPremiumWithNoStandardSub,
-    );
-    const found1 = rewards1.find((type) => type.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY);
-    let premiumOrbQuantity1;
-    if (found1 != null) {
-      premiumOrbQuantity1 = found1.premiumOrbQuantity;
-    }
-    let tmp9 = null != premiumOrbQuantity1;
-    if (tmp9) {
-      tmp9 = premiumOrbQuantity1 > 0;
-    }
-    let num6 = 1;
-    if (tmp9) {
-      num6 = 1;
-      if (tmp2Result2.shouldReceiveQuestOrbMultiplier(questOrbMultiplierEligibilityForUser)) {
-        num6 = num;
-      }
-      tmp2Result2 = QuestOrbMultiplierUtils;
-    }
-    return num6;
   }
 }
 export function getQuestOrbRewardQuantityForUser(config, stateFromStores) {

@@ -1,5 +1,5 @@
 // discord_common/js/packages/media-engine/native/Devices.tsx
-import formatDefault from "../../../../../_runtime/01353_format.js";
+import formatDefault from "../../../../../_runtime/01352_format.js";
 import Constants from "Constants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -82,7 +82,7 @@ export function sanitizeDevices(AUDIO_INPUT, items) {
 export function getAudioInputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2009).getVoiceEngine();
+    const voiceEngine = closure_0(2008).getVoiceEngine();
     const inputDevices = voiceEngine.getInputDevices((arr) => {
       const AUDIO_INPUT = constants.AUDIO_INPUT;
       c1 = false;
@@ -161,7 +161,7 @@ export function getAudioInputDevices() {
 export function getAudioOutputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2009).getVoiceEngine();
+    const voiceEngine = closure_0(2008).getVoiceEngine();
     const outputDevices = voiceEngine.getOutputDevices((arr) => {
       const AUDIO_OUTPUT = constants.AUDIO_OUTPUT;
       c1 = false;
@@ -240,7 +240,7 @@ export function getAudioOutputDevices() {
 export function getVideoInputDevices() {
   return new Promise((arg0) => {
     closure_0 = arg0;
-    const voiceEngine = closure_0(2009).getVoiceEngine();
+    const voiceEngine = closure_0(2008).getVoiceEngine();
     const videoInputDevices = voiceEngine.getVideoInputDevices((arr) => {
       const VIDEO_INPUT = constants.VIDEO_INPUT;
       c1 = false;

@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/native/components/customization/TraitOptionDetails.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3091 from "../../../Checkpoint2026.messages.js";
+import _modDef3092 from "../../../Checkpoint2026.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import RarityBadgeDefault from "RarityBadge.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ function AssetDescription(asset) {
     let format = _require;
     let obj = dependencyMap;
     if (asset.status === require("CheckpointCharacterAssets").CheckpointTraitOptionStatus.NITRO_LOCKED) {
-      const intl = format(1114).intl;
+      const intl = format(1113).intl;
       format = intl.format;
       obj = {
         subscribeHook(children, arg1) {
@@ -33,9 +33,9 @@ function AssetDescription(asset) {
               style: subscribeLink.subscribeLink,
               onPress() {
                 const obj = { analyticsLocations: null };
-                const items = [closure_1_1(7345).CHECKPOINT];
+                const items = [closure_1_1(7351).CHECKPOINT];
                 obj.analyticsLocations = items;
-                return closure_1_1(9884)(obj);
+                return closure_1_1(9905)(obj);
               },
               accessibilityRole: "link",
               children,
@@ -44,17 +44,17 @@ function AssetDescription(asset) {
           );
         },
       };
-      let formatResult = format(_modDef3091["3Wq/bk"], obj);
+      let formatResult = format(_modDef3092["3Wq/bk"], obj);
     } else {
-      formatResult = format(6429).getAssetDescription(asset);
-      const formatResult1 = format(6429);
+      formatResult = format(6434).getAssetDescription(asset);
+      const formatResult1 = format(6434);
     }
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 },
   title: { textTransform: "capitalize" },

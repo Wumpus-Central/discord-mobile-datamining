@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
 import utils_UploadUtils from "../../../utils/native/UploadUtils.tsx";
 import AttachmentPreviewDefault from "../../media/native/AttachmentPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,8 +15,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1188).STANDARD_EASING };
-const createStyles = fn(5009);
+let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1187).STANDARD_EASING };
+const createStyles = fn(5014);
 let obj2 = {
   containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 },
   attachmentPreviewContentContainer: null,

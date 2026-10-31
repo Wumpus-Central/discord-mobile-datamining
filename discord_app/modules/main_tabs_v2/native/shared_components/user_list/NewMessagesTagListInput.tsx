@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -23,7 +23,7 @@ let obj = {
   showSearchButton: null,
 };
 let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;

@@ -1,4 +1,5 @@
 // discord_app/modules/media_viewer/native/components/renderers/MediaModalVideo.tsx
+import MediaViewerVideoPerfExperiment from "../../MediaViewerVideoPerfExperiment.tsx";
 import common_Video from "../../../../../components_native/common/Video.tsx";
 import useMediaLoadingDefault from "../../useMediaLoading.tsx";
 import MediaModalLoadingOverlayDefault from "../MediaModalLoadingOverlay.tsx";
@@ -19,6 +20,7 @@ export default noop.memo(function MediaModalVideo(source) {
   if (uri == null) {
     uri = source.uri;
   }
+  const isMediaViewerVideoPerfEnabled = MediaViewerVideoPerfExperiment.useIsMediaViewerVideoPerfEnabled();
   const items = [uri, ,];
   ({ width: arr[1], height: arr[2] } = source);
   ({ hasError, isLoadingVisible, handleLoadStart, handleLoad, handleError } = useMediaLoadingDefault({
@@ -28,30 +30,31 @@ export default noop.memo(function MediaModalVideo(source) {
   }));
   if (hasError) {
     const obj2 = { style, status: "error" };
-    let tmp6Result = React4(MediaModalLoadingOverlayDefault, obj2);
+    let tmp8Result = React4(MediaModalLoadingOverlayDefault, obj2);
   } else {
-    const obj = {
+    const obj3 = {
       controls,
       muted,
       onError: handleError,
       onLoad: handleLoad,
       onLoadStart: handleLoadStart,
       paused,
-      source: tmp5,
+      source: tmp7,
       style,
+      useTextureView: !isMediaViewerVideoPerfEnabled,
     };
-    const items1 = [React4(common_Video.VideoComponent, obj), ,];
-    let tmp7Result = null;
+    const items1 = [React4(common_Video.VideoComponent, obj3), ,];
+    let tmp9Result = null;
     if (isLoadingVisible) {
-      const obj3 = { style, status: "loading" };
-      tmp7Result = React4(MediaModalLoadingOverlayDefault, obj3);
+      const obj4 = { style, status: "loading" };
+      tmp9Result = React4(MediaModalLoadingOverlayDefault, obj4);
     }
-    const obj4 = { children: null };
-    items1[1] = tmp7Result;
-    const obj5 = { style, index, source };
-    items1[2] = React4(MediaModalSpoilerOverlayDefault, obj5);
-    obj4.children = items1;
-    tmp6Result = hasOwnProperty(noop.Fragment, obj4);
+    const obj5 = { children: null };
+    items1[1] = tmp9Result;
+    const obj6 = { style, index, source };
+    items1[2] = React4(MediaModalSpoilerOverlayDefault, obj6);
+    obj5.children = items1;
+    tmp8Result = hasOwnProperty(noop.Fragment, obj5);
   }
-  return tmp6Result;
+  return tmp8Result;
 });

@@ -14,7 +14,7 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ InviteStates: closure_4, AbortCodes: hasOwnProperty } = Constants);
-const InviteTypes = fn(7872).InviteTypes;
+const InviteTypes = fn(7879).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/InviteEmbed.tsx",

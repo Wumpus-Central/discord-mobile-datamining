@@ -6,8 +6,8 @@ import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import shared from "../../../../design/shared.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
-import _modDef11922 from "../../../../../_runtime/metro/11922__.js";
-import _modDef11923 from "../../../../../_runtime/metro/11923__.js";
+import _modDef11960 from "../../../../../_runtime/metro/11960__.js";
+import _modDef11961 from "../../../../../_runtime/metro/11961__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../ThemeStore.tsx";
 
@@ -51,10 +51,10 @@ export default function KrispLogo() {
   const items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef11922;
+    let tmp4Result = _modDef11960;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef11923;
+    tmp4Result = _modDef11961;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };
@@ -62,7 +62,7 @@ export default function KrispLogo() {
   obj2 = shared;
   const intl = util.intl;
   obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items1 = [closure_1_10(tmp6(5712), obj4)];
+  const items1 = [closure_1_10(tmp6(5717), obj4)];
   const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);

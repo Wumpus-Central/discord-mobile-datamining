@@ -9,9 +9,9 @@ import EmojiPackStore from "../modules/emojis/default_emojis/EmojiPackStore.tsx"
 import PermissionStore from "../stores/PermissionStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
-const PremiumTypeUtils = isPremiumResult(1984);
-const CreatorMonetizationRestrictionsUtils = isPremiumResult(4933);
-const RoleSubscriptionEmojiUtils = isPremiumResult(4963);
+const PremiumTypeUtils = isPremiumResult(1983);
+const CreatorMonetizationRestrictionsUtils = isPremiumResult(4938);
+const RoleSubscriptionEmojiUtils = isPremiumResult(4968);
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
@@ -178,10 +178,10 @@ let closure_21 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(4862);
+const ChannelRecord = fn(4867);
 ({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: metroRequire } = ChannelRecord);
 const Permissions = fn(1072).Permissions;
-const EmojiConstants = fn(1387);
+const EmojiConstants = fn(1386);
 ({
   EMOJI_MAX_FILESIZE: c10,
   EMOJI_MAX_LENGTH: closure_11,
@@ -189,7 +189,7 @@ const EmojiConstants = fn(1387);
   EmojiDisabledReasons,
 } = EmojiConstants);
 ({ EmojiIntention: closure_14, isExternalEmojiAllowedForIntention: closure_15 } = EmojiConstants);
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const items = [,];
 ({ PREMIUM_LOCKED: arr[0], ROLE_SUBSCRIPTION_LOCKED: arr[1] } = EmojiDisabledReasons);
 const set = new Set(items);

@@ -98,7 +98,7 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
     }
   }
 }
-const QuestConstants = fn(6775);
+const QuestConstants = fn(6781);
 ({
   DismissibleQuestContentFlags: closure_7,
   BILLABLE_PLACEMENTS: closure_8,
@@ -107,14 +107,14 @@ const QuestConstants = fn(6775);
 } = QuestConstants);
 let c11 = 2592000000;
 let obj = {};
-obj[fn(6778).QuestContent.QUEST_BAR] = fn(6778).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6778).QuestContent.QUEST_BAR_V2] = fn(6778).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(6778).QuestContent.QUEST_BAR_MOBILE] = fn(6778).AdPlacement.MOBILE_HOME_DOCK_AREA;
-obj[fn(6778).QuestContent.QUEST_HOME_HERO] = fn(6778).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6778).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6778).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6778).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6778).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(6778).QuestContent.VIDEO_MODAL_MOBILE] = fn(6778).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(6778).AdPlacement.VIDEO_MODAL_MOBILE];
+obj[fn(6784).QuestContent.QUEST_BAR] = fn(6784).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6784).QuestContent.QUEST_BAR_V2] = fn(6784).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(6784).QuestContent.QUEST_BAR_MOBILE] = fn(6784).AdPlacement.MOBILE_HOME_DOCK_AREA;
+obj[fn(6784).QuestContent.QUEST_HOME_HERO] = fn(6784).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6784).QuestContent.QUEST_HOME_HERO_SHELF] = fn(6784).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6784).QuestContent.QUEST_HOME_HERO_BANNER] = fn(6784).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(6784).QuestContent.VIDEO_MODAL_MOBILE] = fn(6784).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(6784).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");

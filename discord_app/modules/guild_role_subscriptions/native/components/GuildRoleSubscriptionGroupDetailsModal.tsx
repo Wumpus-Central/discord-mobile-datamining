@@ -1,11 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
-import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
-import FormStylesDefault from "FormStyles.tsx";
 import FormSeparatorDefault from "FormSeparator.tsx";
 import RoleSubscriptionSettingsDisabledContext from "../../RoleSubscriptionSettingsDisabledContext.tsx";
+import FormStylesDefault from "FormStyles.tsx";
 import FormImagePicker from "FormImagePicker.tsx";
 import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -16,78 +17,60 @@ require = fn;
 class Content {
   constructor(arg0) {
     ({ cover, setCover, description, setDescription } = global);
-    tmp = closure_12();
-    tmp2 = closure_1(closure_2[8])();
-    obj = closure_0(closure_2[9]);
+    tmp = closure_11();
+    tmp2 = closure_1(closure_2[9])();
+    obj = closure_0(closure_2[10]);
     roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
-    obj1 = { children: null };
-    obj10 = { style: tmp2.header, children: null };
-    tmp4 = closure_1(closure_2[10]);
-    intl = closure_0(closure_2[11]).intl;
-    obj10.children = intl.string(closure_0(closure_2[11]).t["3S8gA7"]);
-    items = [, , , ,];
-    items[0] = jsx(tmp4, obj10);
-    obj11 = { style: tmp.paddedContainer, children: null };
-    obj12 = {
+    obj1 = { style: tmp2.container, children: null };
+    obj8 = { children: null };
+    obj9 = { title: null };
+    intl = closure_0(closure_2[12]).intl;
+    obj9.title = intl.string(closure_0(closure_2[12]).t["3S8gA7"]);
+    items = [, ,];
+    items[0] = jsx(closure_0(closure_2[11]).TableRowGroupTitle, obj9);
+    obj10 = {
       style: tmp.coverPhoto,
       image: cover,
       imageUploadSize: UPLOAD_BANNER_SIZE.width,
-      previewShape: closure_0(closure_2[12]).PreviewShape.SQUIRCLE,
+      previewShape: closure_0(closure_2[13]).PreviewShape.SQUIRCLE,
       setImage: setCover,
       disabled: roleSubscriptionSettingsDisabled,
       standalone: true,
       size: 114,
     };
-    items1 = [,];
-    items1[0] = jsx(closure_0(closure_2[12]).ImagePickerIcon, obj12);
-    obj13 = { style: tmp.coverDescription, variant: "text-sm/medium", color: "text-default", children: null };
-    intl2 = closure_0(closure_2[11]).intl;
-    obj13.children = intl2.string(closure_0(closure_2[11]).t["0ng4rB"]);
-    items1[1] = jsx(closure_0(closure_2[13]).Text, obj13);
-    obj11.children = items1;
-    items[1] = jsxs(View, obj11);
-    obj14 = { style: tmp.paddedContainer };
-    items[2] = jsx(closure_1(closure_2[14]), obj14);
-    obj15 = { style: tmp2.header, children: null };
-    tmp5 = closure_1(closure_2[10]);
-    intl3 = closure_0(closure_2[11]).intl;
-    obj15.children = intl3.string(closure_0(closure_2[11]).t["74JctW"]);
-    items[3] = jsx(tmp5, obj15);
-    obj16 = {
-      containerStyle: tmp2.inputContainer,
-      accessibilityLabel: null,
-      maxLength: null,
-      value: null,
-      placeholder: null,
-      onChange: null,
-      disabled: null,
-    };
-    intl4 = closure_0(closure_2[11]).intl;
-    obj16.accessibilityLabel = intl4.string(closure_0(closure_2[11]).t["74JctW"]);
-    obj16.maxLength = closure_7;
-    obj16.value = description;
-    intl5 = closure_0(closure_2[11]).intl;
-    obj16.placeholder = intl5.string(closure_0(closure_2[11]).t["3YHwoG"]);
-    obj16.onChange = setDescription;
-    obj16.disabled = roleSubscriptionSettingsDisabled;
-    items[4] = jsx(closure_0(closure_2[15]).TextArea, obj16);
-    obj1.children = items;
-    return jsxs(Fragment, obj1);
+    items[1] = jsx(closure_0(closure_2[13]).ImagePickerIcon, obj10);
+    obj11 = { style: tmp.coverDescription, variant: "text-sm/medium", color: "text-default", children: null };
+    intl2 = closure_0(closure_2[12]).intl;
+    obj11.children = intl2.string(closure_0(closure_2[12]).t["0ng4rB"]);
+    items[2] = jsx(closure_0(closure_2[14]).Text, obj11);
+    obj8.children = items;
+    items1 = [, ,];
+    items1[0] = jsxs(View, obj8);
+    items1[1] = jsx(closure_1(closure_2[15]), { withoutMargins: true });
+    obj12 = { label: null, maxLength: null, value: null, placeholder: null, onChange: null, disabled: null };
+    intl3 = closure_0(closure_2[12]).intl;
+    obj12.label = intl3.string(closure_0(closure_2[12]).t["74JctW"]);
+    obj12.maxLength = closure_7;
+    obj12.value = description;
+    intl4 = closure_0(closure_2[12]).intl;
+    obj12.placeholder = intl4.string(closure_0(closure_2[12]).t["3YHwoG"]);
+    obj12.onChange = setDescription;
+    obj12.disabled = roleSubscriptionSettingsDisabled;
+    items1[2] = jsx(closure_0(closure_2[16]).TextArea, obj12);
+    obj1.children = items1;
+    return jsxs(View, obj1);
   }
 }
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(17125);
+const GuildRoleSubscriptionsConstants = fn(17183);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } =
   GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1072).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5009);
-let closure_12 = createStyles.createStyles({
-  coverPhoto: { height: 114, width: "100%" },
-  coverDescription: { marginTop: 16 },
-  paddedContainer: { paddingHorizontal: 16 },
-});
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5014);
+let obj2 = { coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: nativeDefault.space.PX_16 } };
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx",

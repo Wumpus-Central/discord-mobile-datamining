@@ -6,7 +6,7 @@ import DurationsDefault from "../utils/Durations.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import AppStateStore from "native/AppStateStore.tsx";
-import asyncRequireImpl from "../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/01994_asyncRequireImpl.js";
 import TypeUtils from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
 import ThreadActionUtils from "../modules/threads/ThreadActionUtils.tsx";
 import BasicPermissionUtilsDefault from "../utils/BasicPermissionUtils.tsx";
@@ -123,7 +123,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -171,7 +171,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
         closure_130_67.length = 0;
         closure_130_68 = false;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
@@ -183,7 +183,7 @@ let closure_80 = async function _processBulkAckQueue(arg0) {
         } else {
           closure_130_79(closure_129_0);
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -491,9 +491,9 @@ function mergeForGuild(guild) {
   }
   const value3 = obj.get(guild.id, tmp3.GUILD_HOME);
   const obj4 = id(11);
-  const tmp12 = id(2044);
-  const tmp12Result = id(2044)(Date.now());
-  value3.lastMessageId = obj4.fromTimestamp(id(2044)(Date.now()).subtract(24, "h").valueOf());
+  const tmp12 = id(2042);
+  const tmp12Result = id(2042)(Date.now());
+  value3.lastMessageId = obj4.fromTimestamp(id(2042)(Date.now()).subtract(24, "h").valueOf());
   guild = GuildStore.getGuild(guild.id);
   if (null != guild) {
     let prop2;
@@ -506,7 +506,7 @@ function mergeForGuild(guild) {
       value4.lastMessageId = prop2;
     }
   }
-  const subtractResult = id(2044)(Date.now()).subtract(24, "h");
+  const subtractResult = id(2042)(Date.now()).subtract(24, "h");
 }
 function mergeRelationships(relationships) {
   const currentUser = UserStore.getCurrentUser();
@@ -819,19 +819,19 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6849).isEventUpcoming;
-const ChannelRecord = fn(4862);
+const isEventUpcoming = fn(6855).isEventUpcoming;
+const ChannelRecord = fn(4867);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5652);
+const ActivityPanelConstants = fn(5657);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
-const ChannelConstants = fn(4865);
+const ChannelConstants = fn(4870);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(4864).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6770).ReadStateTypes;
-const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
+const GuildScheduledEventStatus = fn(4869).GuildScheduledEventStatus;
+const ReadStateTypes = fn(6776).ReadStateTypes;
+const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
 let channelId = SelectedChannelStore.getChannelId();
@@ -1924,14 +1924,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6884, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6890, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6884, dependencyMap.paths);
+          const promise = asyncRequireImpl(6890, dependencyMap.paths);
         }
       }
     });
@@ -2293,6 +2293,8 @@ let apply = fn(12);
 let closure_89 = apply.throttle((arg0) => {
   arg0.delete();
 }, 100);
+const map1 = new Map();
+const map2 = new Map();
 const Store = initializeDefault.Store;
 class ReadStateStoreClass extends Store {
 }
@@ -2803,7 +2805,14 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       }
     });
   },
-  LOGOUT: clearDeleteOldReadStatesTimer,
+  LOGOUT: function handleLogout() {
+    if (null != c69) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(c69);
+    }
+    map1.clear();
+    map2.clear();
+  },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
     ({ readStates, selectedChannelId } = arg0);
     const timestamp = Date.now();
@@ -3246,7 +3255,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flexDirection", force: -2.365, isExplicitUserAction: 34.199, trackAnalytics: true });
+    return value.ack({ messageId: "HermesInternal", local: "HermesInternal", immediate: "flexDirection", force: "Sloven\u010Dina", isExplicitUserAction: "Slovak", trackAnalytics: "sk" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3633,7 +3642,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flexDirection", isExplicitUserAction: "CONJURE_REMIX_STATE_SET", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flexDirection", isExplicitUserAction: "Enable Counts", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;
@@ -4029,18 +4038,46 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
       }
     }
   },
-  CONJURE_TURN_SETTLED: function handleConjureTurnSettled(badgeCount) {
-    badgeCount = badgeCount.badgeCount;
-    value = ReadState.get(badgeCount.projectId, ReadStateTypes.CONJURING_PROJECT);
+  CONJURE_TURN_NOTIFICATION: function handleConjureTurnNotification(projectId) {
+    projectId = projectId.projectId;
+    let num = map1.get(projectId);
+    if (num == null) {
+      num = 0;
+    }
+    const result = map1.set(projectId, Math.max(projectId.nonce, num));
+    return false;
+  },
+  CONJURE_TURN_SETTLED: function handleConjureTurnSettled(entityId) {
+    ({ projectId, badgeCount, nonce } = entityId);
+    value = ReadState.get(projectId, ReadStateTypes.CONJURING_PROJECT);
     value._persisted = true;
-    value.ackMessageId = badgeCount.entityId;
+    value.ackMessageId = entityId.entityId;
     if (badgeCount == null) {
       badgeCount = value.mentionCount + 1;
     }
     value.mentionCount = badgeCount;
+    let tmp = null != nonce;
+    if (tmp) {
+      let num2 = map2.get(projectId);
+      if (num2 == null) {
+        num2 = 0;
+      }
+      tmp = nonce <= num2;
+    }
+    if (tmp) {
+      const _Date = Date;
+      const obj = { messageId: require("SnowflakeUtils").fromTimestamp(Date.now()), isExplicitUserAction: true, trackAnalytics: false, immediate: true };
+      value.ack(obj);
+      const obj2 = require("SnowflakeUtils");
+    }
   },
   CONJURE_PROJECT_ACK: function handleConjureProjectAck(projectId) {
-    const ifExists = ReadState.getIfExists(projectId.projectId, ReadStateTypes.CONJURING_PROJECT);
+    projectId = projectId.projectId;
+    value = map1.get(projectId);
+    if (null != value) {
+      const result = map2.set(projectId, value);
+    }
+    const ifExists = ReadState.getIfExists(projectId, ReadStateTypes.CONJURING_PROJECT);
     if (null == ifExists) {
       return false;
     } else {
@@ -4049,14 +4086,14 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
         num = require("SnowflakeUtils").getNonTimestampBits(ifExists.ackMessageId);
         const obj2 = require("SnowflakeUtils");
       }
-      if (0 === ifExists.mentionCount) {
-        if (0 === num) {
-          return false;
-        }
+      let ackResult = 0 !== ifExists.mentionCount || 0 !== num;
+      if (ackResult) {
+        const _Date = Date;
+        const obj = { messageId: require("SnowflakeUtils").fromTimestamp(Date.now()), isExplicitUserAction: true, trackAnalytics: false, immediate: true };
+        ackResult = ifExists.ack(obj);
+        const obj3 = require("SnowflakeUtils");
       }
-      const _Date = Date;
-      const obj = { messageId: require("SnowflakeUtils").fromTimestamp(Date.now()), isExplicitUserAction: true, trackAnalytics: false, immediate: true };
-      return ifExists.ack(obj);
+      return ackResult;
     }
   },
   CONJURE_PROJECT_DELETE_SUCCESS: function handleConjureProjectDeleteSuccess(projectId) {

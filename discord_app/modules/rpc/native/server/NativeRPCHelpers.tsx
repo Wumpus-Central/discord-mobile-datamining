@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/native/server/NativeRPCHelpers.tsx
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const TransportTypes = fn(6444).TransportTypes;
+const TransportTypes = fn(6450).TransportTypes;
 const RPCCloseCodes = fn(1072).RPCCloseCodes;
 let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
   closure_0 = arg0;
@@ -20,7 +20,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -38,20 +38,20 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
             closure_131_0 = closure_0;
             closure_131_1 = closure_1;
             closure_131_2 = dependencyMap;
-            const result = closure_0(11775).validateOriginAndUpdateSocket(closure_0, closure_1);
+            const result = closure_0(11812).validateOriginAndUpdateSocket(closure_0, closure_1);
             if (null == dependencyMap) {
               const obj5 = { closeCode: constants.INVALID_CLIENTID };
-              const tmp23 = new closure_1(9313)(obj5, "No Client ID Specified");
+              const tmp23 = new closure_1(9333)(obj5, "No Client ID Specified");
               c6 = 3;
               const obj6 = { value: Promise.reject(tmp23), done: true };
               return obj6;
             } else {
               c5 = 1;
               c6 = 1;
-              const obj7 = { value: closure_0(11775).processSocketThrottlers(dependencyMap, closure_0.transport !== tmp2.POST_MESSAGE, closure_0.abortController.signal), done: false };
+              const obj7 = { value: closure_0(11812).processSocketThrottlers(dependencyMap, closure_0.transport !== tmp2.POST_MESSAGE, closure_0.abortController.signal), done: false };
               return obj7;
             }
-            const obj10 = closure_0(11775);
+            const obj10 = closure_0(11812);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -62,7 +62,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
           return obj8;
         } else {
           c6 = 3;
-          const obj9 = { value: closure_0(11775).validateSocketApplication(closure_131_0, closure_131_2, closure_131_1), done: true };
+          const obj9 = { value: closure_0(11812).validateSocketApplication(closure_131_0, closure_131_2, closure_131_1), done: true };
           return obj9;
         }
       } catch (tmp25) {
@@ -85,5 +85,5 @@ export function validateSocketClient() {
   }
   return applyArgumentsResult;
 }
-export () => closure_0(11775).getDeprecatedVoiceSettingsWithShortcut(() => [])
-export (arg0) => closure_0(11775).getVoiceSettingsWithShortcut(arg0, () => "")
+export () => closure_0(11812).getDeprecatedVoiceSettingsWithShortcut(() => [])
+export (arg0) => closure_0(11812).getVoiceSettingsWithShortcut(arg0, () => "")

@@ -10,15 +10,15 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const SPRING = { mass: 0.4, damping: 18, stiffness: 300 };
 const FADE = { duration: 150 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { target: null, fill: null };
 let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(19064).CLOSE_TARGET_SIZE,
-  height: fn(19064).CLOSE_TARGET_SIZE,
-  borderRadius: fn(19064).CLOSE_TARGET_SIZE / 2,
+  width: fn(19113).CLOSE_TARGET_SIZE,
+  height: fn(19113).CLOSE_TARGET_SIZE,
+  borderRadius: fn(19113).CLOSE_TARGET_SIZE / 2,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
@@ -33,7 +33,7 @@ const rect = {
   left: 0,
   right: 0,
   bottom: 0,
-  borderRadius: fn(19064).CLOSE_TARGET_SIZE / 2,
+  borderRadius: fn(19113).CLOSE_TARGET_SIZE / 2,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.STATUS_DANGER,
@@ -85,12 +85,12 @@ export default function ConjureAppPictureInPictureCloseTarget(hovered) {
     return obj3;
   };
   const point = {
-    withTiming: shown(5249).withTiming,
+    withTiming: shown(5254).withTiming,
     shown,
     FADE,
     x,
-    CLOSE_TARGET_SIZE: shown(19064).CLOSE_TARGET_SIZE,
-    withSpring: shown(5632).withSpring,
+    CLOSE_TARGET_SIZE: shown(19113).CLOSE_TARGET_SIZE,
+    withSpring: shown(5637).withSpring,
     y,
     SPRING,
     hovered,
@@ -99,8 +99,8 @@ export default function ConjureAppPictureInPictureCloseTarget(hovered) {
   fn.__closure = point;
   fn.__workletHash = 15134050536622;
   fn.__initData = __initData;
-  const animatedStyle = shown(5090).useAnimatedStyle(fn);
-  let obj = shown(5090);
+  const animatedStyle = shown(5095).useAnimatedStyle(fn);
+  let obj = shown(5095);
   const fn2 = function u() {
     let num = 0;
     if (hovered.get()) {
@@ -108,22 +108,22 @@ export default function ConjureAppPictureInPictureCloseTarget(hovered) {
     }
     return { opacity: timing.withTiming(num, closure_6) };
   };
-  let obj3 = shown(5090);
-  fn2.__closure = { withTiming: shown(5249).withTiming, hovered, FADE };
+  let obj3 = shown(5095);
+  fn2.__closure = { withTiming: shown(5254).withTiming, hovered, FADE };
   fn2.__workletHash = 1295924731740;
   fn2.__initData = __initData2;
   const animatedStyle1 = obj3.useAnimatedStyle(fn2);
   let obj4 = { style: null, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", children: null };
   let items = [tmp.target, animatedStyle];
   obj4.style = items;
-  const obj2 = { withTiming: shown(5249).withTiming, hovered, FADE };
-  const items1 = [closure_3(shown(11845).DoorExitIcon, { size: "md", color: hovered(575).colors.ICON_STRONG })];
+  const obj2 = { withTiming: shown(5254).withTiming, hovered, FADE };
+  const items1 = [closure_3(shown(11883).DoorExitIcon, { size: "md", color: hovered(575).colors.ICON_STRONG })];
   const obj6 = { style: null, children: null };
   const items2 = [tmp.fill, animatedStyle1];
   obj6.style = items2;
   let obj5 = { size: "md", color: hovered(575).colors.ICON_STRONG };
-  obj6.children = closure_3(shown(11845).DoorExitIcon, { size: "md", color: hovered(575).colors.WHITE });
-  items1[1] = closure_3(hovered(5090).View, obj6);
+  obj6.children = closure_3(shown(11883).DoorExitIcon, { size: "md", color: hovered(575).colors.WHITE });
+  items1[1] = closure_3(hovered(5095).View, obj6);
   obj4.children = items1;
-  return closure_4(hovered(5090).View, obj4);
+  return closure_4(hovered(5095).View, obj4);
 }

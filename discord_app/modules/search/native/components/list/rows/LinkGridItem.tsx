@@ -32,7 +32,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                 const item = type.forEach((type) => {
                   closure_0 = diff;
                   if (Array.isArray(type)) {
-                    const item = type.forEach(/* F115162 */ function() { ... });
+                    const item = type.forEach(/* F115470 */ function() { ... });
                   } else {
                     if ("link" !== type.type) {
                       if ("channelMention" !== type.type) {
@@ -42,7 +42,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                           closure_1 = tmp2;
                           const _Array = Array;
                           if (Array.isArray(content)) {
-                            const item1 = content.forEach(/* F115162 */ function() { ... });
+                            const item1 = content.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== content.type) {
                               if ("channelMention" !== content.type) {
@@ -68,7 +68,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                       closure_1 = tmp2;
                       const _Array2 = Array;
                       if (Array.isArray(type)) {
-                        const item2 = type.forEach(/* F115162 */ function() { ... });
+                        const item2 = type.forEach(/* F115470 */ function() { ... });
                       } else {
                         if ("link" !== type.type) {
                           if ("channelMention" !== type.type) {
@@ -99,7 +99,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                         const item1 = content.forEach((type) => {
                           closure_0 = diff;
                           if (Array.isArray(type)) {
-                            const item = type.forEach(/* F115162 */ function() { ... });
+                            const item = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -109,7 +109,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array = Array;
                                   if (Array.isArray(content)) {
-                                    const item1 = content.forEach(/* F115162 */ function() { ... });
+                                    const item1 = content.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
@@ -135,7 +135,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array2 = Array;
                               if (Array.isArray(type)) {
-                                const item2 = type.forEach(/* F115162 */ function() { ... });
+                                const item2 = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -182,7 +182,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                     const item2 = type.forEach((type) => {
                       closure_0 = diff;
                       if (Array.isArray(type)) {
-                        const item = type.forEach(/* F115162 */ function() { ... });
+                        const item = type.forEach(/* F115470 */ function() { ... });
                       } else {
                         if ("link" !== type.type) {
                           if ("channelMention" !== type.type) {
@@ -192,7 +192,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array = Array;
                               if (Array.isArray(content)) {
-                                const item1 = content.forEach(/* F115162 */ function() { ... });
+                                const item1 = content.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
@@ -218,7 +218,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                           closure_1 = tmp2;
                           const _Array2 = Array;
                           if (Array.isArray(type)) {
-                            const item2 = type.forEach(/* F115162 */ function() { ... });
+                            const item2 = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -270,7 +270,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                         const item = type.forEach((type) => {
                           closure_0 = diff;
                           if (Array.isArray(type)) {
-                            const item = type.forEach(/* F115162 */ function() { ... });
+                            const item = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -280,7 +280,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array = Array;
                                   if (Array.isArray(content)) {
-                                    const item1 = content.forEach(/* F115162 */ function() { ... });
+                                    const item1 = content.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
@@ -306,7 +306,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array2 = Array;
                               if (Array.isArray(type)) {
-                                const item2 = type.forEach(/* F115162 */ function() { ... });
+                                const item2 = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -337,7 +337,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                 const item1 = content.forEach((type) => {
                                   closure_0 = diff;
                                   if (Array.isArray(type)) {
-                                    const item = type.forEach(/* F115162 */ function() { ... });
+                                    const item = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -347,7 +347,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array = Array;
                                           if (Array.isArray(content)) {
-                                            const item1 = content.forEach(/* F115162 */ function() { ... });
+                                            const item1 = content.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
@@ -373,7 +373,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
                                       if (Array.isArray(type)) {
-                                        const item2 = type.forEach(/* F115162 */ function() { ... });
+                                        const item2 = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -420,7 +420,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                             const item2 = type.forEach((type) => {
                               closure_0 = diff;
                               if (Array.isArray(type)) {
-                                const item = type.forEach(/* F115162 */ function() { ... });
+                                const item = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -430,7 +430,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array = Array;
                                       if (Array.isArray(content)) {
-                                        const item1 = content.forEach(/* F115162 */ function() { ... });
+                                        const item1 = content.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
@@ -456,7 +456,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
                                   if (Array.isArray(type)) {
-                                    const item2 = type.forEach(/* F115162 */ function() { ... });
+                                    const item2 = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -524,7 +524,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                     const item = type.forEach((type) => {
                       closure_0 = diff;
                       if (Array.isArray(type)) {
-                        const item = type.forEach(/* F115162 */ function() { ... });
+                        const item = type.forEach(/* F115470 */ function() { ... });
                       } else {
                         if ("link" !== type.type) {
                           if ("channelMention" !== type.type) {
@@ -534,7 +534,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array = Array;
                               if (Array.isArray(content)) {
-                                const item1 = content.forEach(/* F115162 */ function() { ... });
+                                const item1 = content.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
@@ -560,7 +560,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                           closure_1 = tmp2;
                           const _Array2 = Array;
                           if (Array.isArray(type)) {
-                            const item2 = type.forEach(/* F115162 */ function() { ... });
+                            const item2 = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -591,7 +591,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                             const item1 = content.forEach((type) => {
                               closure_0 = diff;
                               if (Array.isArray(type)) {
-                                const item = type.forEach(/* F115162 */ function() { ... });
+                                const item = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -601,7 +601,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array = Array;
                                       if (Array.isArray(content)) {
-                                        const item1 = content.forEach(/* F115162 */ function() { ... });
+                                        const item1 = content.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
@@ -627,7 +627,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
                                   if (Array.isArray(type)) {
-                                    const item2 = type.forEach(/* F115162 */ function() { ... });
+                                    const item2 = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -674,7 +674,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                         const item2 = type.forEach((type) => {
                           closure_0 = diff;
                           if (Array.isArray(type)) {
-                            const item = type.forEach(/* F115162 */ function() { ... });
+                            const item = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -684,7 +684,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array = Array;
                                   if (Array.isArray(content)) {
-                                    const item1 = content.forEach(/* F115162 */ function() { ... });
+                                    const item1 = content.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
@@ -710,7 +710,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array2 = Array;
                               if (Array.isArray(type)) {
-                                const item2 = type.forEach(/* F115162 */ function() { ... });
+                                const item2 = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -783,7 +783,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                         const item = type.forEach((type) => {
                           closure_0 = diff;
                           if (Array.isArray(type)) {
-                            const item = type.forEach(/* F115162 */ function() { ... });
+                            const item = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -793,7 +793,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array = Array;
                                   if (Array.isArray(content)) {
-                                    const item1 = content.forEach(/* F115162 */ function() { ... });
+                                    const item1 = content.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
@@ -819,7 +819,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array2 = Array;
                               if (Array.isArray(type)) {
-                                const item2 = type.forEach(/* F115162 */ function() { ... });
+                                const item2 = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -850,7 +850,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                 const item1 = content.forEach((type) => {
                                   closure_0 = diff;
                                   if (Array.isArray(type)) {
-                                    const item = type.forEach(/* F115162 */ function() { ... });
+                                    const item = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -860,7 +860,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array = Array;
                                           if (Array.isArray(content)) {
-                                            const item1 = content.forEach(/* F115162 */ function() { ... });
+                                            const item1 = content.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
@@ -886,7 +886,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
                                       if (Array.isArray(type)) {
-                                        const item2 = type.forEach(/* F115162 */ function() { ... });
+                                        const item2 = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -933,7 +933,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                             const item2 = type.forEach((type) => {
                               closure_0 = diff;
                               if (Array.isArray(type)) {
-                                const item = type.forEach(/* F115162 */ function() { ... });
+                                const item = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -943,7 +943,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array = Array;
                                       if (Array.isArray(content)) {
-                                        const item1 = content.forEach(/* F115162 */ function() { ... });
+                                        const item1 = content.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
@@ -969,7 +969,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
                                   if (Array.isArray(type)) {
-                                    const item2 = type.forEach(/* F115162 */ function() { ... });
+                                    const item2 = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -1021,7 +1021,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                 const item = type.forEach((type) => {
                                   closure_0 = diff;
                                   if (Array.isArray(type)) {
-                                    const item = type.forEach(/* F115162 */ function() { ... });
+                                    const item = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -1031,7 +1031,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array = Array;
                                           if (Array.isArray(content)) {
-                                            const item1 = content.forEach(/* F115162 */ function() { ... });
+                                            const item1 = content.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
@@ -1057,7 +1057,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
                                       if (Array.isArray(type)) {
-                                        const item2 = type.forEach(/* F115162 */ function() { ... });
+                                        const item2 = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -1088,7 +1088,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                         const item1 = content.forEach((type) => {
                                           closure_0 = diff;
                                           if (Array.isArray(type)) {
-                                            const item = type.forEach(/* F115162 */ function() { ... });
+                                            const item = type.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== type.type) {
                                               if ("channelMention" !== type.type) {
@@ -1098,7 +1098,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                                   closure_1 = tmp2;
                                                   const _Array = Array;
                                                   if (Array.isArray(content)) {
-                                                    const item1 = content.forEach(/* F115162 */ function() { ... });
+                                                    const item1 = content.forEach(/* F115470 */ function() { ... });
                                                   } else {
                                                     if ("link" !== content.type) {
                                                       if ("channelMention" !== content.type) {
@@ -1124,7 +1124,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                               closure_1 = tmp2;
                                               const _Array2 = Array;
                                               if (Array.isArray(type)) {
-                                                const item2 = type.forEach(/* F115162 */ function() { ... });
+                                                const item2 = type.forEach(/* F115470 */ function() { ... });
                                               } else {
                                                 if ("link" !== type.type) {
                                                   if ("channelMention" !== type.type) {
@@ -1171,7 +1171,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                     const item2 = type.forEach((type) => {
                                       closure_0 = diff;
                                       if (Array.isArray(type)) {
-                                        const item = type.forEach(/* F115162 */ function() { ... });
+                                        const item = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -1181,7 +1181,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                               closure_1 = tmp2;
                                               const _Array = Array;
                                               if (Array.isArray(content)) {
-                                                const item1 = content.forEach(/* F115162 */ function() { ... });
+                                                const item1 = content.forEach(/* F115470 */ function() { ... });
                                               } else {
                                                 if ("link" !== content.type) {
                                                   if ("channelMention" !== content.type) {
@@ -1207,7 +1207,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array2 = Array;
                                           if (Array.isArray(type)) {
-                                            const item2 = type.forEach(/* F115162 */ function() { ... });
+                                            const item2 = type.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== type.type) {
                                               if ("channelMention" !== type.type) {
@@ -1275,7 +1275,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                             const item = type.forEach((type) => {
                               closure_0 = diff;
                               if (Array.isArray(type)) {
-                                const item = type.forEach(/* F115162 */ function() { ... });
+                                const item = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -1285,7 +1285,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array = Array;
                                       if (Array.isArray(content)) {
-                                        const item1 = content.forEach(/* F115162 */ function() { ... });
+                                        const item1 = content.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
@@ -1311,7 +1311,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
                                   if (Array.isArray(type)) {
-                                    const item2 = type.forEach(/* F115162 */ function() { ... });
+                                    const item2 = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -1342,7 +1342,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                     const item1 = content.forEach((type) => {
                                       closure_0 = diff;
                                       if (Array.isArray(type)) {
-                                        const item = type.forEach(/* F115162 */ function() { ... });
+                                        const item = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -1352,7 +1352,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                               closure_1 = tmp2;
                                               const _Array = Array;
                                               if (Array.isArray(content)) {
-                                                const item1 = content.forEach(/* F115162 */ function() { ... });
+                                                const item1 = content.forEach(/* F115470 */ function() { ... });
                                               } else {
                                                 if ("link" !== content.type) {
                                                   if ("channelMention" !== content.type) {
@@ -1378,7 +1378,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array2 = Array;
                                           if (Array.isArray(type)) {
-                                            const item2 = type.forEach(/* F115162 */ function() { ... });
+                                            const item2 = type.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== type.type) {
                                               if ("channelMention" !== type.type) {
@@ -1425,7 +1425,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                 const item2 = type.forEach((type) => {
                                   closure_0 = diff;
                                   if (Array.isArray(type)) {
-                                    const item = type.forEach(/* F115162 */ function() { ... });
+                                    const item = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -1435,7 +1435,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array = Array;
                                           if (Array.isArray(content)) {
-                                            const item1 = content.forEach(/* F115162 */ function() { ... });
+                                            const item1 = content.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
@@ -1461,7 +1461,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
                                       if (Array.isArray(type)) {
-                                        const item2 = type.forEach(/* F115162 */ function() { ... });
+                                        const item2 = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -1550,7 +1550,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                     const item = type.forEach((type) => {
                       closure_0 = diff;
                       if (Array.isArray(type)) {
-                        const item = type.forEach(/* F115162 */ function() { ... });
+                        const item = type.forEach(/* F115470 */ function() { ... });
                       } else {
                         if ("link" !== type.type) {
                           if ("channelMention" !== type.type) {
@@ -1560,7 +1560,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array = Array;
                               if (Array.isArray(content)) {
-                                const item1 = content.forEach(/* F115162 */ function() { ... });
+                                const item1 = content.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
@@ -1586,7 +1586,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                           closure_1 = tmp2;
                           const _Array2 = Array;
                           if (Array.isArray(type)) {
-                            const item2 = type.forEach(/* F115162 */ function() { ... });
+                            const item2 = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -1617,7 +1617,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                             const item1 = content.forEach((type) => {
                               closure_0 = diff;
                               if (Array.isArray(type)) {
-                                const item = type.forEach(/* F115162 */ function() { ... });
+                                const item = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -1627,7 +1627,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array = Array;
                                       if (Array.isArray(content)) {
-                                        const item1 = content.forEach(/* F115162 */ function() { ... });
+                                        const item1 = content.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
@@ -1653,7 +1653,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
                                   if (Array.isArray(type)) {
-                                    const item2 = type.forEach(/* F115162 */ function() { ... });
+                                    const item2 = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -1700,7 +1700,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                         const item2 = type.forEach((type) => {
                           closure_0 = diff;
                           if (Array.isArray(type)) {
-                            const item = type.forEach(/* F115162 */ function() { ... });
+                            const item = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -1710,7 +1710,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array = Array;
                                   if (Array.isArray(content)) {
-                                    const item1 = content.forEach(/* F115162 */ function() { ... });
+                                    const item1 = content.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
@@ -1736,7 +1736,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array2 = Array;
                               if (Array.isArray(type)) {
-                                const item2 = type.forEach(/* F115162 */ function() { ... });
+                                const item2 = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -1788,7 +1788,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                             const item = type.forEach((type) => {
                               closure_0 = diff;
                               if (Array.isArray(type)) {
-                                const item = type.forEach(/* F115162 */ function() { ... });
+                                const item = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -1798,7 +1798,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array = Array;
                                       if (Array.isArray(content)) {
-                                        const item1 = content.forEach(/* F115162 */ function() { ... });
+                                        const item1 = content.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
@@ -1824,7 +1824,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
                                   if (Array.isArray(type)) {
-                                    const item2 = type.forEach(/* F115162 */ function() { ... });
+                                    const item2 = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -1855,7 +1855,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                     const item1 = content.forEach((type) => {
                                       closure_0 = diff;
                                       if (Array.isArray(type)) {
-                                        const item = type.forEach(/* F115162 */ function() { ... });
+                                        const item = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -1865,7 +1865,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                               closure_1 = tmp2;
                                               const _Array = Array;
                                               if (Array.isArray(content)) {
-                                                const item1 = content.forEach(/* F115162 */ function() { ... });
+                                                const item1 = content.forEach(/* F115470 */ function() { ... });
                                               } else {
                                                 if ("link" !== content.type) {
                                                   if ("channelMention" !== content.type) {
@@ -1891,7 +1891,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array2 = Array;
                                           if (Array.isArray(type)) {
-                                            const item2 = type.forEach(/* F115162 */ function() { ... });
+                                            const item2 = type.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== type.type) {
                                               if ("channelMention" !== type.type) {
@@ -1938,7 +1938,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                 const item2 = type.forEach((type) => {
                                   closure_0 = diff;
                                   if (Array.isArray(type)) {
-                                    const item = type.forEach(/* F115162 */ function() { ... });
+                                    const item = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -1948,7 +1948,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array = Array;
                                           if (Array.isArray(content)) {
-                                            const item1 = content.forEach(/* F115162 */ function() { ... });
+                                            const item1 = content.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
@@ -1974,7 +1974,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
                                       if (Array.isArray(type)) {
-                                        const item2 = type.forEach(/* F115162 */ function() { ... });
+                                        const item2 = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -2042,7 +2042,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                         const item = type.forEach((type) => {
                           closure_0 = diff;
                           if (Array.isArray(type)) {
-                            const item = type.forEach(/* F115162 */ function() { ... });
+                            const item = type.forEach(/* F115470 */ function() { ... });
                           } else {
                             if ("link" !== type.type) {
                               if ("channelMention" !== type.type) {
@@ -2052,7 +2052,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array = Array;
                                   if (Array.isArray(content)) {
-                                    const item1 = content.forEach(/* F115162 */ function() { ... });
+                                    const item1 = content.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
@@ -2078,7 +2078,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                               closure_1 = tmp2;
                               const _Array2 = Array;
                               if (Array.isArray(type)) {
-                                const item2 = type.forEach(/* F115162 */ function() { ... });
+                                const item2 = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -2109,7 +2109,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                 const item1 = content.forEach((type) => {
                                   closure_0 = diff;
                                   if (Array.isArray(type)) {
-                                    const item = type.forEach(/* F115162 */ function() { ... });
+                                    const item = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -2119,7 +2119,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                           closure_1 = tmp2;
                                           const _Array = Array;
                                           if (Array.isArray(content)) {
-                                            const item1 = content.forEach(/* F115162 */ function() { ... });
+                                            const item1 = content.forEach(/* F115470 */ function() { ... });
                                           } else {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
@@ -2145,7 +2145,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
                                       if (Array.isArray(type)) {
-                                        const item2 = type.forEach(/* F115162 */ function() { ... });
+                                        const item2 = type.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== type.type) {
                                           if ("channelMention" !== type.type) {
@@ -2192,7 +2192,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                             const item2 = type.forEach((type) => {
                               closure_0 = diff;
                               if (Array.isArray(type)) {
-                                const item = type.forEach(/* F115162 */ function() { ... });
+                                const item = type.forEach(/* F115470 */ function() { ... });
                               } else {
                                 if ("link" !== type.type) {
                                   if ("channelMention" !== type.type) {
@@ -2202,7 +2202,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                       closure_1 = tmp2;
                                       const _Array = Array;
                                       if (Array.isArray(content)) {
-                                        const item1 = content.forEach(/* F115162 */ function() { ... });
+                                        const item1 = content.forEach(/* F115470 */ function() { ... });
                                       } else {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
@@ -2228,7 +2228,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
                                   if (Array.isArray(type)) {
-                                    const item2 = type.forEach(/* F115162 */ function() { ... });
+                                    const item2 = type.forEach(/* F115470 */ function() { ... });
                                   } else {
                                     if ("link" !== type.type) {
                                       if ("channelMention" !== type.type) {
@@ -2351,7 +2351,7 @@ function LinkParsedGridItem(author) {
               const item = type.forEach((type) => {
                 closure_0 = diff;
                 if (Array.isArray(type)) {
-                  const item = type.forEach(/* F115162 */ function() { ... });
+                  const item = type.forEach(/* F115470 */ function() { ... });
                 } else {
                   if ("link" !== type.type) {
                     if ("channelMention" !== type.type) {
@@ -2361,7 +2361,7 @@ function LinkParsedGridItem(author) {
                         closure_1 = tmp2;
                         const _Array = Array;
                         if (Array.isArray(content)) {
-                          const item1 = content.forEach(/* F115162 */ function() { ... });
+                          const item1 = content.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== content.type) {
                             if ("channelMention" !== content.type) {
@@ -2387,7 +2387,7 @@ function LinkParsedGridItem(author) {
                     closure_1 = tmp2;
                     const _Array2 = Array;
                     if (Array.isArray(type)) {
-                      const item2 = type.forEach(/* F115162 */ function() { ... });
+                      const item2 = type.forEach(/* F115470 */ function() { ... });
                     } else {
                       if ("link" !== type.type) {
                         if ("channelMention" !== type.type) {
@@ -2418,7 +2418,7 @@ function LinkParsedGridItem(author) {
                       const item1 = content.forEach((type) => {
                         closure_0 = diff;
                         if (Array.isArray(type)) {
-                          const item = type.forEach(/* F115162 */ function() { ... });
+                          const item = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -2428,7 +2428,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array = Array;
                                 if (Array.isArray(content)) {
-                                  const item1 = content.forEach(/* F115162 */ function() { ... });
+                                  const item1 = content.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
@@ -2454,7 +2454,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array2 = Array;
                             if (Array.isArray(type)) {
-                              const item2 = type.forEach(/* F115162 */ function() { ... });
+                              const item2 = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -2501,7 +2501,7 @@ function LinkParsedGridItem(author) {
                   const item2 = type.forEach((type) => {
                     closure_0 = diff;
                     if (Array.isArray(type)) {
-                      const item = type.forEach(/* F115162 */ function() { ... });
+                      const item = type.forEach(/* F115470 */ function() { ... });
                     } else {
                       if ("link" !== type.type) {
                         if ("channelMention" !== type.type) {
@@ -2511,7 +2511,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array = Array;
                             if (Array.isArray(content)) {
-                              const item1 = content.forEach(/* F115162 */ function() { ... });
+                              const item1 = content.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
@@ -2537,7 +2537,7 @@ function LinkParsedGridItem(author) {
                         closure_1 = tmp2;
                         const _Array2 = Array;
                         if (Array.isArray(type)) {
-                          const item2 = type.forEach(/* F115162 */ function() { ... });
+                          const item2 = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -2589,7 +2589,7 @@ function LinkParsedGridItem(author) {
                       const item = type.forEach((type) => {
                         closure_0 = diff;
                         if (Array.isArray(type)) {
-                          const item = type.forEach(/* F115162 */ function() { ... });
+                          const item = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -2599,7 +2599,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array = Array;
                                 if (Array.isArray(content)) {
-                                  const item1 = content.forEach(/* F115162 */ function() { ... });
+                                  const item1 = content.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
@@ -2625,7 +2625,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array2 = Array;
                             if (Array.isArray(type)) {
-                              const item2 = type.forEach(/* F115162 */ function() { ... });
+                              const item2 = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -2656,7 +2656,7 @@ function LinkParsedGridItem(author) {
                               const item1 = content.forEach((type) => {
                                 closure_0 = diff;
                                 if (Array.isArray(type)) {
-                                  const item = type.forEach(/* F115162 */ function() { ... });
+                                  const item = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -2666,7 +2666,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array = Array;
                                         if (Array.isArray(content)) {
-                                          const item1 = content.forEach(/* F115162 */ function() { ... });
+                                          const item1 = content.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
@@ -2692,7 +2692,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
                                     if (Array.isArray(type)) {
-                                      const item2 = type.forEach(/* F115162 */ function() { ... });
+                                      const item2 = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -2739,7 +2739,7 @@ function LinkParsedGridItem(author) {
                           const item2 = type.forEach((type) => {
                             closure_0 = diff;
                             if (Array.isArray(type)) {
-                              const item = type.forEach(/* F115162 */ function() { ... });
+                              const item = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -2749,7 +2749,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array = Array;
                                     if (Array.isArray(content)) {
-                                      const item1 = content.forEach(/* F115162 */ function() { ... });
+                                      const item1 = content.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
@@ -2775,7 +2775,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
                                 if (Array.isArray(type)) {
-                                  const item2 = type.forEach(/* F115162 */ function() { ... });
+                                  const item2 = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -2843,7 +2843,7 @@ function LinkParsedGridItem(author) {
                   const item = type.forEach((type) => {
                     closure_0 = diff;
                     if (Array.isArray(type)) {
-                      const item = type.forEach(/* F115162 */ function() { ... });
+                      const item = type.forEach(/* F115470 */ function() { ... });
                     } else {
                       if ("link" !== type.type) {
                         if ("channelMention" !== type.type) {
@@ -2853,7 +2853,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array = Array;
                             if (Array.isArray(content)) {
-                              const item1 = content.forEach(/* F115162 */ function() { ... });
+                              const item1 = content.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
@@ -2879,7 +2879,7 @@ function LinkParsedGridItem(author) {
                         closure_1 = tmp2;
                         const _Array2 = Array;
                         if (Array.isArray(type)) {
-                          const item2 = type.forEach(/* F115162 */ function() { ... });
+                          const item2 = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -2910,7 +2910,7 @@ function LinkParsedGridItem(author) {
                           const item1 = content.forEach((type) => {
                             closure_0 = diff;
                             if (Array.isArray(type)) {
-                              const item = type.forEach(/* F115162 */ function() { ... });
+                              const item = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -2920,7 +2920,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array = Array;
                                     if (Array.isArray(content)) {
-                                      const item1 = content.forEach(/* F115162 */ function() { ... });
+                                      const item1 = content.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
@@ -2946,7 +2946,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
                                 if (Array.isArray(type)) {
-                                  const item2 = type.forEach(/* F115162 */ function() { ... });
+                                  const item2 = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -2993,7 +2993,7 @@ function LinkParsedGridItem(author) {
                       const item2 = type.forEach((type) => {
                         closure_0 = diff;
                         if (Array.isArray(type)) {
-                          const item = type.forEach(/* F115162 */ function() { ... });
+                          const item = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -3003,7 +3003,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array = Array;
                                 if (Array.isArray(content)) {
-                                  const item1 = content.forEach(/* F115162 */ function() { ... });
+                                  const item1 = content.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
@@ -3029,7 +3029,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array2 = Array;
                             if (Array.isArray(type)) {
-                              const item2 = type.forEach(/* F115162 */ function() { ... });
+                              const item2 = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -3102,7 +3102,7 @@ function LinkParsedGridItem(author) {
                       const item = type.forEach((type) => {
                         closure_0 = diff;
                         if (Array.isArray(type)) {
-                          const item = type.forEach(/* F115162 */ function() { ... });
+                          const item = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -3112,7 +3112,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array = Array;
                                 if (Array.isArray(content)) {
-                                  const item1 = content.forEach(/* F115162 */ function() { ... });
+                                  const item1 = content.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
@@ -3138,7 +3138,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array2 = Array;
                             if (Array.isArray(type)) {
-                              const item2 = type.forEach(/* F115162 */ function() { ... });
+                              const item2 = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -3169,7 +3169,7 @@ function LinkParsedGridItem(author) {
                               const item1 = content.forEach((type) => {
                                 closure_0 = diff;
                                 if (Array.isArray(type)) {
-                                  const item = type.forEach(/* F115162 */ function() { ... });
+                                  const item = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -3179,7 +3179,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array = Array;
                                         if (Array.isArray(content)) {
-                                          const item1 = content.forEach(/* F115162 */ function() { ... });
+                                          const item1 = content.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
@@ -3205,7 +3205,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
                                     if (Array.isArray(type)) {
-                                      const item2 = type.forEach(/* F115162 */ function() { ... });
+                                      const item2 = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -3252,7 +3252,7 @@ function LinkParsedGridItem(author) {
                           const item2 = type.forEach((type) => {
                             closure_0 = diff;
                             if (Array.isArray(type)) {
-                              const item = type.forEach(/* F115162 */ function() { ... });
+                              const item = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -3262,7 +3262,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array = Array;
                                     if (Array.isArray(content)) {
-                                      const item1 = content.forEach(/* F115162 */ function() { ... });
+                                      const item1 = content.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
@@ -3288,7 +3288,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
                                 if (Array.isArray(type)) {
-                                  const item2 = type.forEach(/* F115162 */ function() { ... });
+                                  const item2 = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -3340,7 +3340,7 @@ function LinkParsedGridItem(author) {
                               const item = type.forEach((type) => {
                                 closure_0 = diff;
                                 if (Array.isArray(type)) {
-                                  const item = type.forEach(/* F115162 */ function() { ... });
+                                  const item = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -3350,7 +3350,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array = Array;
                                         if (Array.isArray(content)) {
-                                          const item1 = content.forEach(/* F115162 */ function() { ... });
+                                          const item1 = content.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
@@ -3376,7 +3376,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
                                     if (Array.isArray(type)) {
-                                      const item2 = type.forEach(/* F115162 */ function() { ... });
+                                      const item2 = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -3407,7 +3407,7 @@ function LinkParsedGridItem(author) {
                                       const item1 = content.forEach((type) => {
                                         closure_0 = diff;
                                         if (Array.isArray(type)) {
-                                          const item = type.forEach(/* F115162 */ function() { ... });
+                                          const item = type.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== type.type) {
                                             if ("channelMention" !== type.type) {
@@ -3417,7 +3417,7 @@ function LinkParsedGridItem(author) {
                                                 closure_1 = tmp2;
                                                 const _Array = Array;
                                                 if (Array.isArray(content)) {
-                                                  const item1 = content.forEach(/* F115162 */ function() { ... });
+                                                  const item1 = content.forEach(/* F115470 */ function() { ... });
                                                 } else {
                                                   if ("link" !== content.type) {
                                                     if ("channelMention" !== content.type) {
@@ -3443,7 +3443,7 @@ function LinkParsedGridItem(author) {
                                             closure_1 = tmp2;
                                             const _Array2 = Array;
                                             if (Array.isArray(type)) {
-                                              const item2 = type.forEach(/* F115162 */ function() { ... });
+                                              const item2 = type.forEach(/* F115470 */ function() { ... });
                                             } else {
                                               if ("link" !== type.type) {
                                                 if ("channelMention" !== type.type) {
@@ -3490,7 +3490,7 @@ function LinkParsedGridItem(author) {
                                   const item2 = type.forEach((type) => {
                                     closure_0 = diff;
                                     if (Array.isArray(type)) {
-                                      const item = type.forEach(/* F115162 */ function() { ... });
+                                      const item = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -3500,7 +3500,7 @@ function LinkParsedGridItem(author) {
                                             closure_1 = tmp2;
                                             const _Array = Array;
                                             if (Array.isArray(content)) {
-                                              const item1 = content.forEach(/* F115162 */ function() { ... });
+                                              const item1 = content.forEach(/* F115470 */ function() { ... });
                                             } else {
                                               if ("link" !== content.type) {
                                                 if ("channelMention" !== content.type) {
@@ -3526,7 +3526,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array2 = Array;
                                         if (Array.isArray(type)) {
-                                          const item2 = type.forEach(/* F115162 */ function() { ... });
+                                          const item2 = type.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== type.type) {
                                             if ("channelMention" !== type.type) {
@@ -3594,7 +3594,7 @@ function LinkParsedGridItem(author) {
                           const item = type.forEach((type) => {
                             closure_0 = diff;
                             if (Array.isArray(type)) {
-                              const item = type.forEach(/* F115162 */ function() { ... });
+                              const item = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -3604,7 +3604,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array = Array;
                                     if (Array.isArray(content)) {
-                                      const item1 = content.forEach(/* F115162 */ function() { ... });
+                                      const item1 = content.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
@@ -3630,7 +3630,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
                                 if (Array.isArray(type)) {
-                                  const item2 = type.forEach(/* F115162 */ function() { ... });
+                                  const item2 = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -3661,7 +3661,7 @@ function LinkParsedGridItem(author) {
                                   const item1 = content.forEach((type) => {
                                     closure_0 = diff;
                                     if (Array.isArray(type)) {
-                                      const item = type.forEach(/* F115162 */ function() { ... });
+                                      const item = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -3671,7 +3671,7 @@ function LinkParsedGridItem(author) {
                                             closure_1 = tmp2;
                                             const _Array = Array;
                                             if (Array.isArray(content)) {
-                                              const item1 = content.forEach(/* F115162 */ function() { ... });
+                                              const item1 = content.forEach(/* F115470 */ function() { ... });
                                             } else {
                                               if ("link" !== content.type) {
                                                 if ("channelMention" !== content.type) {
@@ -3697,7 +3697,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array2 = Array;
                                         if (Array.isArray(type)) {
-                                          const item2 = type.forEach(/* F115162 */ function() { ... });
+                                          const item2 = type.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== type.type) {
                                             if ("channelMention" !== type.type) {
@@ -3744,7 +3744,7 @@ function LinkParsedGridItem(author) {
                               const item2 = type.forEach((type) => {
                                 closure_0 = diff;
                                 if (Array.isArray(type)) {
-                                  const item = type.forEach(/* F115162 */ function() { ... });
+                                  const item = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -3754,7 +3754,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array = Array;
                                         if (Array.isArray(content)) {
-                                          const item1 = content.forEach(/* F115162 */ function() { ... });
+                                          const item1 = content.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
@@ -3780,7 +3780,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
                                     if (Array.isArray(type)) {
-                                      const item2 = type.forEach(/* F115162 */ function() { ... });
+                                      const item2 = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -3869,7 +3869,7 @@ function LinkParsedGridItem(author) {
                   const item = type.forEach((type) => {
                     closure_0 = diff;
                     if (Array.isArray(type)) {
-                      const item = type.forEach(/* F115162 */ function() { ... });
+                      const item = type.forEach(/* F115470 */ function() { ... });
                     } else {
                       if ("link" !== type.type) {
                         if ("channelMention" !== type.type) {
@@ -3879,7 +3879,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array = Array;
                             if (Array.isArray(content)) {
-                              const item1 = content.forEach(/* F115162 */ function() { ... });
+                              const item1 = content.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
@@ -3905,7 +3905,7 @@ function LinkParsedGridItem(author) {
                         closure_1 = tmp2;
                         const _Array2 = Array;
                         if (Array.isArray(type)) {
-                          const item2 = type.forEach(/* F115162 */ function() { ... });
+                          const item2 = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -3936,7 +3936,7 @@ function LinkParsedGridItem(author) {
                           const item1 = content.forEach((type) => {
                             closure_0 = diff;
                             if (Array.isArray(type)) {
-                              const item = type.forEach(/* F115162 */ function() { ... });
+                              const item = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -3946,7 +3946,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array = Array;
                                     if (Array.isArray(content)) {
-                                      const item1 = content.forEach(/* F115162 */ function() { ... });
+                                      const item1 = content.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
@@ -3972,7 +3972,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
                                 if (Array.isArray(type)) {
-                                  const item2 = type.forEach(/* F115162 */ function() { ... });
+                                  const item2 = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -4019,7 +4019,7 @@ function LinkParsedGridItem(author) {
                       const item2 = type.forEach((type) => {
                         closure_0 = diff;
                         if (Array.isArray(type)) {
-                          const item = type.forEach(/* F115162 */ function() { ... });
+                          const item = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -4029,7 +4029,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array = Array;
                                 if (Array.isArray(content)) {
-                                  const item1 = content.forEach(/* F115162 */ function() { ... });
+                                  const item1 = content.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
@@ -4055,7 +4055,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array2 = Array;
                             if (Array.isArray(type)) {
-                              const item2 = type.forEach(/* F115162 */ function() { ... });
+                              const item2 = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -4107,7 +4107,7 @@ function LinkParsedGridItem(author) {
                           const item = type.forEach((type) => {
                             closure_0 = diff;
                             if (Array.isArray(type)) {
-                              const item = type.forEach(/* F115162 */ function() { ... });
+                              const item = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -4117,7 +4117,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array = Array;
                                     if (Array.isArray(content)) {
-                                      const item1 = content.forEach(/* F115162 */ function() { ... });
+                                      const item1 = content.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
@@ -4143,7 +4143,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
                                 if (Array.isArray(type)) {
-                                  const item2 = type.forEach(/* F115162 */ function() { ... });
+                                  const item2 = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -4174,7 +4174,7 @@ function LinkParsedGridItem(author) {
                                   const item1 = content.forEach((type) => {
                                     closure_0 = diff;
                                     if (Array.isArray(type)) {
-                                      const item = type.forEach(/* F115162 */ function() { ... });
+                                      const item = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -4184,7 +4184,7 @@ function LinkParsedGridItem(author) {
                                             closure_1 = tmp2;
                                             const _Array = Array;
                                             if (Array.isArray(content)) {
-                                              const item1 = content.forEach(/* F115162 */ function() { ... });
+                                              const item1 = content.forEach(/* F115470 */ function() { ... });
                                             } else {
                                               if ("link" !== content.type) {
                                                 if ("channelMention" !== content.type) {
@@ -4210,7 +4210,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array2 = Array;
                                         if (Array.isArray(type)) {
-                                          const item2 = type.forEach(/* F115162 */ function() { ... });
+                                          const item2 = type.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== type.type) {
                                             if ("channelMention" !== type.type) {
@@ -4257,7 +4257,7 @@ function LinkParsedGridItem(author) {
                               const item2 = type.forEach((type) => {
                                 closure_0 = diff;
                                 if (Array.isArray(type)) {
-                                  const item = type.forEach(/* F115162 */ function() { ... });
+                                  const item = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -4267,7 +4267,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array = Array;
                                         if (Array.isArray(content)) {
-                                          const item1 = content.forEach(/* F115162 */ function() { ... });
+                                          const item1 = content.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
@@ -4293,7 +4293,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
                                     if (Array.isArray(type)) {
-                                      const item2 = type.forEach(/* F115162 */ function() { ... });
+                                      const item2 = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -4361,7 +4361,7 @@ function LinkParsedGridItem(author) {
                       const item = type.forEach((type) => {
                         closure_0 = diff;
                         if (Array.isArray(type)) {
-                          const item = type.forEach(/* F115162 */ function() { ... });
+                          const item = type.forEach(/* F115470 */ function() { ... });
                         } else {
                           if ("link" !== type.type) {
                             if ("channelMention" !== type.type) {
@@ -4371,7 +4371,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array = Array;
                                 if (Array.isArray(content)) {
-                                  const item1 = content.forEach(/* F115162 */ function() { ... });
+                                  const item1 = content.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
@@ -4397,7 +4397,7 @@ function LinkParsedGridItem(author) {
                             closure_1 = tmp2;
                             const _Array2 = Array;
                             if (Array.isArray(type)) {
-                              const item2 = type.forEach(/* F115162 */ function() { ... });
+                              const item2 = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -4428,7 +4428,7 @@ function LinkParsedGridItem(author) {
                               const item1 = content.forEach((type) => {
                                 closure_0 = diff;
                                 if (Array.isArray(type)) {
-                                  const item = type.forEach(/* F115162 */ function() { ... });
+                                  const item = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -4438,7 +4438,7 @@ function LinkParsedGridItem(author) {
                                         closure_1 = tmp2;
                                         const _Array = Array;
                                         if (Array.isArray(content)) {
-                                          const item1 = content.forEach(/* F115162 */ function() { ... });
+                                          const item1 = content.forEach(/* F115470 */ function() { ... });
                                         } else {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
@@ -4464,7 +4464,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
                                     if (Array.isArray(type)) {
-                                      const item2 = type.forEach(/* F115162 */ function() { ... });
+                                      const item2 = type.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== type.type) {
                                         if ("channelMention" !== type.type) {
@@ -4511,7 +4511,7 @@ function LinkParsedGridItem(author) {
                           const item2 = type.forEach((type) => {
                             closure_0 = diff;
                             if (Array.isArray(type)) {
-                              const item = type.forEach(/* F115162 */ function() { ... });
+                              const item = type.forEach(/* F115470 */ function() { ... });
                             } else {
                               if ("link" !== type.type) {
                                 if ("channelMention" !== type.type) {
@@ -4521,7 +4521,7 @@ function LinkParsedGridItem(author) {
                                     closure_1 = tmp2;
                                     const _Array = Array;
                                     if (Array.isArray(content)) {
-                                      const item1 = content.forEach(/* F115162 */ function() { ... });
+                                      const item1 = content.forEach(/* F115470 */ function() { ... });
                                     } else {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
@@ -4547,7 +4547,7 @@ function LinkParsedGridItem(author) {
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
                                 if (Array.isArray(type)) {
-                                  const item2 = type.forEach(/* F115162 */ function() { ... });
+                                  const item2 = type.forEach(/* F115470 */ function() { ... });
                                 } else {
                                   if ("link" !== type.type) {
                                     if ("channelMention" !== type.type) {
@@ -4828,11 +4828,11 @@ function LinkEmbedGridItem(containerStyle) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchConstants = fn(9806);
+const SearchConstants = fn(9827);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_9, SearchLinkTypes: c10 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles({ iconContainer: { alignItems: "center", justifyContent: "center" }, tapToSee: { fontStyle: "italic" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/LinkGridItem.tsx");

@@ -34,7 +34,7 @@ let closure_15 = async function _fetchCurrentAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -100,7 +100,7 @@ let closure_16 = async function _setAppIcon(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -194,7 +194,7 @@ let closure_16 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(9958);
+const AppIconConstants = fn(9979);
 ({
   getDefaultIcon: metroRequire,
   getIconById: closure_7,
@@ -203,7 +203,7 @@ const AppIconConstants = fn(9958);
 } = AppIconConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 let closure_13 = new LoggerDefault("AppIconUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");
@@ -224,7 +224,7 @@ export function useCurrentAppIcon() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -257,7 +257,7 @@ export function useCurrentAppIcon() {
             closure_128_0 = value;
             closure_129_0(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -301,7 +301,7 @@ export function useAppIcons() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -334,7 +334,7 @@ export function useAppIcons() {
             closure_128_0 = value;
             closure_129_0(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp12) {
           c3 = tmp;

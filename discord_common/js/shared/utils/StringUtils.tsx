@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/StringUtils.tsx
-import _mod2030 from "../../../../_runtime/metro/02030__.js";
+import _mod2028 from "../../../../_runtime/metro/02028__.js";
 import DOMUtils from "DOMUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -18,7 +18,7 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    closure_0 = _mod2030;
+    closure_0 = _mod2028;
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
     const item = items.forEach((item) => {

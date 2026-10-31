@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormBigRadioBox.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import native from "../../../../design/void/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import FormRadio from "../../../../design/components/Forms/native/FormRadio.native.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -38,7 +38,8 @@ obj2.containerSelected = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-obj2.indicator = { position: "absolute", right: 18, top: 18 };
+const rect = { position: "absolute", top: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16 };
+obj2.indicator = rect;
 let size = {
   height: 40,
   width: 40,
@@ -88,13 +89,13 @@ export default function FormBigRadioBox(arg0) {
     tmp7 = onPress;
   }
   obj2.onPress = tmp7;
-  const items1 = [React4(native.RadioIndicator, { style: tmp.indicator, active: selected }), , ,];
+  const tmp6 = TouchableHitBoxDefault;
+  const items1 = [React4(View, { style: tmp.indicator, children: React4(FormRadio.FormRadio, { selected }) }), , ,];
   const items2 = [tmp.iconContainer];
   if (selected) {
     selected = tmp.iconContainerSelected;
   }
-  const obj3 = { style: tmp.indicator, active: selected };
-  const tmp6 = TouchableHitBoxDefault;
+  const obj3 = { style: tmp.indicator, children: React4(FormRadio.FormRadio, { selected }) };
   items2[1] = selected;
   items1[1] = React4(View, { style: items2, children: React4(icon, { size: "md" }) });
   items1[2] = React4(Text_Text.Text, {

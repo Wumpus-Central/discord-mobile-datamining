@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/settings/conjureProjectNameError.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/conjure/settings/conjureProje
 export function conjureProjectNameError(trimmed) {
   if ("" === trimmed) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef3865.l669D8);
+    let stringResult = intl2.string(_modDef3868.l669D8);
   } else {
     stringResult = null;
     if (trimmed.length < ConjureProjectTypes.MIN_PROJECT_NAME_LENGTH) {

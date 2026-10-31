@@ -5,7 +5,7 @@ import FramesActionCreatorsDefault from "FramesActionCreators.native.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({ MAIN_SURFACE: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
 const Routes = fn(1072).Routes;
 const size = fn(2);

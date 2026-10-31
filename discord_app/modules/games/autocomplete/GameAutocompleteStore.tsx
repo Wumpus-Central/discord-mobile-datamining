@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import DurationsDefault from "../../../utils/Durations.tsx";
-import privDefault from "../../../../_runtime/01452_priv.js";
+import privDefault from "../../../../_runtime/01451_priv.js";
 import GameAutocompleteUtils from "GameAutocompleteUtils.tsx";
 
 require = fn;
@@ -58,10 +58,10 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(result, filter_g
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp(8673).shouldSuppressAutocompleteFetch(result, (arg0) =>
+      result1 = tmp(8681).shouldSuppressAutocompleteFetch(result, (arg0) =>
         closure_3.peek("" + closure_0 + ":" + arg0),
       );
-      const tmpResult = tmp(8673);
+      const tmpResult = tmp(8681);
     }
     return result1;
   }

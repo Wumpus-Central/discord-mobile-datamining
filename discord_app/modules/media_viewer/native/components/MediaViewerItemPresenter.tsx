@@ -223,10 +223,10 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 if (PlatformUtils.isAndroid()) {
   const _parseInt = parseInt;
-  obj2 = fn(4966);
+  obj2 = fn(4971);
 }
 let closure_9 = {
   code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,BORDER_RADIUS_END,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,BORDER_RADIUS_END]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}",

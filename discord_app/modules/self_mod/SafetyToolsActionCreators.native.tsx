@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/self_mod/SafetyToolsActionCre
 export function openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType) {
   const tmp = closure_3(channelId);
   _require = tmp;
-  ActionSheetActionCreatorsDefault.openLazy(require("asyncRequireImpl")(11271, dependencyMap.paths), tmp, {
+  ActionSheetActionCreatorsDefault.openLazy(require("asyncRequireImpl")(11297, dependencyMap.paths), tmp, {
     channelId,
     warningId,
     warningType,

@@ -21,7 +21,7 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(5650);
+const ConversationConstants = fn(5655);
 ({
   MAX_CONVERSATIONS_PER_CHANNEL: closure_9,
   MOBILE_FETCH_LIMIT: c10,
@@ -29,7 +29,7 @@ const ConversationConstants = fn(5650);
 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
@@ -49,7 +49,7 @@ let closure_14 = createStyles.createStyles((arg0) => {
   };
   return obj;
 });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj = { empty: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_15 = createStyles.createStyles(obj);
 const ListEmptyComponent = noop.memo(function EmptyComponent() {
@@ -69,7 +69,7 @@ export default function ConversationListScreen() {
   _require = channelId;
   let guildId = params.guildId;
   let _handleEndReached = guildId;
-  const bottom = _handleEndReached(1626)().bottom;
+  const bottom = _handleEndReached(1625)().bottom;
   const tmp3 = closure_14(bottom);
   dependencyMap = tmp3;
   let obj = require("BaseNavigationContainer");
@@ -135,7 +135,7 @@ export default function ConversationListScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -280,7 +280,7 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(7288).FlashList, {
+  obj7.children = jsx(tmp(7294).FlashList, {
     data: memo,
     renderItem,
     keyExtractor,

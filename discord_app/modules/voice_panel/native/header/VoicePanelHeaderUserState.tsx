@@ -67,9 +67,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const tmp4Result = tmp4(type, id, guildId);
 }
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8983).BackgroundBlurView);
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8992).BackgroundBlurView);
 const OPACITY_TIMING = { duration: 100 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.round, padding: 6 };
 obj.container = rect;
@@ -95,7 +95,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/header/Voi
 export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   let channelId;
-  const context = noop.useContext(channelId(11203));
+  const context = noop.useContext(channelId(11222));
   channelId = context.channelId;
   const guildId = context.guildId;
   const tmp2 = closure_8();
@@ -108,8 +108,8 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     }
     return id;
   });
-  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(19159)(stateFromStores, channelId, guildId), guildId);
-  isHeaderHidden(5090);
+  const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(19211)(stateFromStores, channelId, guildId), guildId);
+  isHeaderHidden(5095);
   const fn = function h() {
     let num = 0;
     if (isHeaderHidden.get()) {
@@ -118,7 +118,7 @@ export default noop.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
     return { opacity: timing.withTiming(num, closure_7) };
   };
   let obj = isHeaderHidden(504);
-  fn.__closure = { withTiming: isHeaderHidden(5249).withTiming, isHeaderHidden, OPACITY_TIMING };
+  fn.__closure = { withTiming: isHeaderHidden(5254).withTiming, isHeaderHidden, OPACITY_TIMING };
   fn.__workletHash = 7032221979181;
   fn.__initData = __initData;
   let tmp7 = null;

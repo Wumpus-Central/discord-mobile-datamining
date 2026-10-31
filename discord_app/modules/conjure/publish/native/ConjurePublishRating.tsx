@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishRating.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -23,7 +23,7 @@ function Star(rating) {
   }
   dependencyMap = tmp2;
   let tmp = closure_9();
-  sharedValue = rating(5090).useSharedValue(1);
+  sharedValue = rating(5095).useSharedValue(1);
   let items = [tmp2, rating, reducedMotion, sharedValue];
   const effect = noop.useEffect(() => {
     let tmp = closure_2;
@@ -43,7 +43,7 @@ function Star(rating) {
       );
     }
   }, items);
-  let obj = rating(5090);
+  let obj = rating(5095);
   const fn = function x() {
     const obj = { transform: null };
     const items = [{ scale: sharedValue.get() }];
@@ -53,11 +53,11 @@ function Star(rating) {
   fn.__closure = { scale: sharedValue };
   fn.__workletHash = 8453054615454;
   fn.__initData = __initData;
-  const animatedStyle = rating(5090).useAnimatedStyle(fn);
+  const animatedStyle = rating(5095).useAnimatedStyle(fn);
   if (tmp2) {
-    let StarOutlineIcon = tmp3(10042).StarIcon;
+    let StarOutlineIcon = tmp3(10063).StarIcon;
   } else {
-    StarOutlineIcon = tmp3(10040).StarOutlineIcon;
+    StarOutlineIcon = tmp3(10061).StarOutlineIcon;
   }
   let obj3 = {
     style: tmp.star,
@@ -68,21 +68,21 @@ function Star(rating) {
     onPress: null,
     children: null,
   };
-  let obj2 = rating(5090);
-  obj3.accessibilityLabel = rating(12736).conjurePublishRatingOptionLabel(rating);
+  let obj2 = rating(5095);
+  obj3.accessibilityLabel = rating(12771).conjurePublishRatingOptionLabel(rating);
   obj3.disabled = null != picked;
   obj3.hitSlop = reducedMotion(575).space.PX_8;
   obj3.onPress = rating.onPress;
   let obj4 = { style: animatedStyle, children: null };
   const colors = reducedMotion(575).colors;
   obj4.children = closure_7(StarOutlineIcon, { size: "sm", color: tmp2 ? colors.ICON_BRAND : colors.ICON_MUTED });
-  obj3.children = closure_7(reducedMotion(5090).View, obj4);
-  return closure_7(rating(6974).PressableOpacity, obj3);
+  obj3.children = closure_7(reducedMotion(5095).View, obj4);
+  return closure_7(rating(6980).PressableOpacity, obj3);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
   stars: { flexDirection: "row" },
@@ -167,11 +167,11 @@ export default function ConjurePublishRating(arg0) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
         obj.openLazy(
-          asyncRequireImpl(12737, dependencyMap.paths),
+          asyncRequireImpl(12772, dependencyMap.paths),
           ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY,
           obj2,
         );
-        const tmp6 = asyncRequireImpl(12737, dependencyMap.paths);
+        const tmp6 = asyncRequireImpl(12772, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

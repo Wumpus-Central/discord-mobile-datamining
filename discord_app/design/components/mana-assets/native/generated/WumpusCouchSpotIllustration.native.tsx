@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef17021 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WumpusCouchSpotIllustration-1x.png.js";
-import _modDef17022 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WumpusCouchSpotIllustration-2x.png.js";
-import _modDef17023 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WumpusCouchSpotIllustration-3x.png.js";
+import _modDef17079 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WumpusCouchSpotIllustration-1x.png.js";
+import _modDef17080 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WumpusCouchSpotIllustration-2x.png.js";
+import _modDef17081 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WumpusCouchSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17021 }, 3: null };
-let obj2 = { uri: _modDef17021 };
-obj[2] = { uri: _modDef17022 };
-const obj3 = { uri: _modDef17022 };
-obj[3] = { uri: _modDef17023 };
+let obj = { 1: null, 2: { uri: _modDef17079 }, 3: null };
+let obj2 = { uri: _modDef17079 };
+obj[2] = { uri: _modDef17080 };
+const obj3 = { uri: _modDef17080 };
+obj[3] = { uri: _modDef17081 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx",

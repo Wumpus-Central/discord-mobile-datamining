@@ -2,7 +2,7 @@
 import logger_Logger from "../logger/Logger.tsx";
 import discord_common_IdGenerator from "../id-generator/IdGenerator.tsx";
 import FingerprintUtils from "../fingerprint-utils/FingerprintUtils.tsx";
-import v1 from "../../../../_runtime/01267_v1.js";
+import v1 from "../../../../_runtime/01266_v1.js";
 import HTTPUtils from "../http-utils/HTTPUtils.tsx";
 import Constants from "../../shared/Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -59,7 +59,7 @@ let closure_31 = [];
 let c32 = null;
 let c33 = false;
 function defaultGetSessionId() {
-  return Promise.resolve({ sessionId: "getCurrentUser" });
+  return Promise.resolve({ sessionId: "Array" });
 }
 let result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 
@@ -341,7 +341,7 @@ export (getLaunchSignature) => {
                   let _Math3 = Math;
                   let obj = { type: "timeout", id: null };
                   let _setTimeout = setTimeout;
-                  obj.id = setTimeout(/* F138335 */ function() { ... }, Math.max(closure_3_8 + (Math.floor(Math.random() * result * 2) - result), closure_3_9));
+                  obj.id = setTimeout(/* F138751 */ function() { ... }, Math.max(closure_3_8 + (Math.floor(Math.random() * result * 2) - result), closure_3_9));
                   closure_3_22 = obj;
                 } else {
                   throw new TypeError("Trying to call a non-function");

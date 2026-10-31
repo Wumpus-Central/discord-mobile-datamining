@@ -3,6 +3,7 @@ import QuestTaskUtils from "../../../quests/utils/QuestTaskUtils.tsx";
 import useIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
 import getSocketFrameDefault from "../../helpers/getSocketFrame.tsx";
 import useThermalState from "../../../device/useThermalState.tsx";
+import ThermalStates from "../../../../../discord_common/js/shared/constants/ThermalStates.tsx";
 import activityInstanceConnectedParticipants from "../../helpers/activityInstanceConnectedParticipants.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import ConjureBuilderPreviewStore from "../../../conjure/preview/ConjureBuilderPreviewStore.tsx";
@@ -10,8 +11,8 @@ import QuestStore from "../../../quests/QuestStore.tsx";
 
 require = fn;
 const RPCEvents = fn(1072).RPCEvents;
-const Constants = fn(2019);
-({ ActivityLayoutMode: metroRequire, ActivityScreenOrientation: closure_7 } = Constants);
+const ActivityScreenOrientation = fn(2018).ActivityScreenOrientation;
+const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
@@ -28,7 +29,7 @@ export function getInitialSubscriptionPayload(application, arg1, quest_id) {
     }
     let tmp37 = null;
     if (null != layoutModeForApp) {
-      const obj2 = { is_pip_mode: layoutModeForApp !== constants.FOCUSED };
+      const obj2 = { is_pip_mode: layoutModeForApp !== ActivityLayoutMode.FOCUSED };
       tmp37 = obj2;
     }
     return tmp37;
@@ -59,14 +60,16 @@ export function getInitialSubscriptionPayload(application, arg1, quest_id) {
   } else if (RPCEvents.THERMAL_STATE_UPDATE === arg1) {
     const thermalState = useThermalState.getThermalState();
     let tmp23 = null;
-    if (thermalState !== useThermalState.ThermalStates.UNHANDLED) {
+    if (thermalState !== ThermalStates.ThermalStates.UNHANDLED) {
       const obj8 = { thermal_state: thermalState };
       tmp23 = obj8;
     }
     return tmp23;
   } else if (RPCEvents.ORIENTATION_UPDATE === arg1) {
     const obj9 = {
-      screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? React5.LANDSCAPE : React5.PORTRAIT,
+      screen_orientation: useIsScreenLandscape.getIsScreenLandscape()
+        ? ActivityScreenOrientation.LANDSCAPE
+        : ActivityScreenOrientation.PORTRAIT,
     };
     return obj9;
   } else if (RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === arg1) {

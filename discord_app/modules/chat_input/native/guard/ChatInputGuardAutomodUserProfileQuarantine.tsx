@@ -7,7 +7,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4927).GuildMemberFlags;
+const GuildMemberFlags = fn(4932).GuildMemberFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -37,24 +37,24 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
     const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
   }, items2);
   const obj = guildId(504);
-  const automodReason = guildId(4947).getAutomodReason(stateFromStores);
+  const automodReason = guildId(4952).getAutomodReason(stateFromStores);
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
-    const intl2 = tmp(1114).intl;
-    let stringResult = intl2.string(tmp(1114).t.Viksoo);
+    const intl2 = tmp(1113).intl;
+    let stringResult = intl2.string(tmp(1113).t.Viksoo);
   } else {
-    const intl = tmp(1114).intl;
-    stringResult = intl.string(tmp(1114).t["/PGQf0"]);
+    const intl = tmp(1113).intl;
+    stringResult = intl.string(tmp(1113).t["/PGQf0"]);
   }
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
-    const intl4 = tmp(1114).intl;
-    let stringResult1 = intl4.string(tmp(1114).t.ml72ZU);
+    const intl4 = tmp(1113).intl;
+    let stringResult1 = intl4.string(tmp(1113).t.ml72ZU);
   } else {
-    const intl3 = tmp(1114).intl;
-    stringResult1 = intl3.string(tmp(1114).t["8HW7r9"]);
+    const intl3 = tmp(1113).intl;
+    stringResult1 = intl3.string(tmp(1113).t["8HW7r9"]);
   }
   const obj3 = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
-  const obj2 = guildId(4947);
-  obj3.icon = jsx(guildId(13988).ChatXIcon, {});
+  const obj2 = guildId(4952);
+  obj3.icon = jsx(guildId(14023).ChatXIcon, {});
   obj3.message = stringResult1;
   return jsx(ChatInputGuardDefault, {
     type: "simple-action",

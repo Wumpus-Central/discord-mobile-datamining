@@ -1,7 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
@@ -12,8 +11,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
-let obj2 = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null };
+const createStyles = fn(5014);
+let obj2 = { container: { paddingBottom: nativeDefault.space.PX_24 }, header: null, headerText: null, image: null };
+const obj3 = { paddingBottom: nativeDefault.space.PX_24 };
+obj2.header = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_16 };
+obj2.headerText = { flexShrink: 1, gap: nativeDefault.space.PX_4 };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.sm };
 obj2.image = size;
 let closure_6 = createStyles.createStyles(obj2);
@@ -30,11 +33,8 @@ export function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.header, children: null };
   ({ image, name, price_tier, description } = template.listings[0]);
-  const items = [
-    React4(FastImageDefault, { source: { uri: image }, style: tmp.image }),
-    React4(native.Spacer, { size: 16 }),
-  ];
-  const obj4 = { style: { flexShrink: 1 }, children: null };
+  const items = [React4(FastImageDefault, { source: { uri: image }, style: tmp.image })];
+  const obj4 = { style: tmp.headerText, children: null };
   const items1 = [
     React4(Text_Text.Text, {
       variant: "heading-md/semibold",
@@ -42,16 +42,15 @@ export function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
       style: { flexWrap: "wrap" },
       children: name,
     }),
-    React4(native.Spacer, { size: 4 }),
   ];
   const obj5 = {
     variant: "heading-md/medium",
     style: subscriptionPlanTextStyle,
     children: GuildRoleSubscriptionTypeUtils.formatMonthlyPriceLabel(price_tier),
   };
-  items1[2] = React4(Text_Text.Text, obj5);
+  items1[1] = React4(Text_Text.Text, obj5);
   obj4.children = items1;
-  items[2] = hasOwnProperty(View, obj4);
+  items[1] = hasOwnProperty(View, obj4);
   obj2.children = items;
   const items2 = [hasOwnProperty(View, obj2), ,];
   const obj7 = { variant: "text-sm/normal", style: descriptionTextStyle };

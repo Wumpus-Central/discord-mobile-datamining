@@ -84,11 +84,11 @@ export function isPremiumGuild(has) {
     obj = GuildRecordUtils;
   }
 }
-export function isDiscoverableGuild(features) {
-  let hasItem = null != features;
+export function isDiscoverableGuild(guild) {
+  let hasItem = null != guild;
   if (hasItem) {
     const _Set = Set;
-    const set = new Set(features.features);
+    const set = new Set(guild.features);
     hasItem = set.has(constants.DISCOVERABLE);
   }
   return hasItem;

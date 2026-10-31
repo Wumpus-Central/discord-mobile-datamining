@@ -46,7 +46,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6770).ReadStateTypes;
+const ReadStateTypes = fn(6776).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 
@@ -136,6 +136,16 @@ export function useConjureUnreadSummary(arg0) {
       return { hasUnread: num > 0, unreadCount: num, badgeCount: num2 };
     },
     items1,
+  );
+}
+export function useAckConjureProjectOnLeave(arg0) {
+  closure_0 = arg0;
+  const items = [arg0];
+  const layoutEffect = noop.useLayoutEffect(
+    () => () => {
+      DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_ACK", projectId });
+    },
+    items,
   );
 }
 export function useAckConjureProjectWhileViewing(projectId, stateFromStores) {

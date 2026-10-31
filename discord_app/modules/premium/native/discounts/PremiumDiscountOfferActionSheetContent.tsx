@@ -15,10 +15,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   contentContainer: {
     paddingHorizontal: 36,

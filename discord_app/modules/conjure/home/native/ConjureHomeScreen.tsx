@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, centered: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.centered = {
@@ -26,15 +26,16 @@ const result = size.fileFinishedImporting("modules/conjure/home/native/ConjureHo
 export default function ConjureHomeScreen(navigation) {
   navigation = navigation.navigation;
   let first;
-  closure_6 = undefined;
+  let connectedOrOverlay;
   let ref;
   const tmp = closure_10();
   const params = navigation.route.params;
   const projectId = params.projectId;
   let num = params.requestId;
+  const entryPoint = params.entryPoint;
   const isFocused = navigation(num[7]).useIsFocused();
   const items = [navigation];
-  const callback = num.useCallback(() => {
+  const callback = isFocused.useCallback(() => {
     if (navigation.canGoBack()) {
       let goBackResult = navigation.goBack();
     } else {
@@ -44,12 +45,14 @@ export default function ConjureHomeScreen(navigation) {
   }, items);
   const obj = navigation(num[7]);
   const conjureForMeGuildId = navigation(num[8]).useConjureForMeGuildId("ConjureHomeScreen");
-  const items1 = [isFocused, projectId, num];
-  const memo = num.useMemo(() => ({ routeFocused: isFocused, projectId, requestId: num }), items1);
+  const items1 = [isFocused, projectId, num, entryPoint];
+  const memo = isFocused.useMemo(() => ({ routeFocused: isFocused, projectId, requestId: num, entryPoint }), items1);
   const obj3 = navigation(num[8]);
-  const items2 = [ref];
+  const items2 = [connectedOrOverlay];
   let tmp9;
-  const stateFromStores = navigation(num[9]).useStateFromStores(items2, () => ref.isConnectedOrOverlay());
+  const stateFromStores = navigation(num[9]).useStateFromStores(items2, () =>
+    connectedOrOverlay.isConnectedOrOverlay(),
+  );
   if (true === params.focusComposer) {
     if (num == null) {
       num = 0;
@@ -57,9 +60,9 @@ export default function ConjureHomeScreen(navigation) {
     tmp9 = num;
   }
   num = tmp9;
-  const tmp11 = isFocused(num.useState(), 2);
+  const tmp11 = entryPoint(isFocused.useState(), 2);
   first = tmp11[0];
-  closure_6 = tmp11[1];
+  connectedOrOverlay = tmp11[1];
   ref = obj2.useRef(false);
   const items3 = [navigation];
   const effect = obj2.useEffect(
@@ -77,7 +80,7 @@ export default function ConjureHomeScreen(navigation) {
       if (first !== tmp) {
         function ready() {
           ref.current = true;
-          closure_1_6(num);
+          connectedOrOverlay(num);
         }
         if (ref.current) {
           if (navigation.isFocused()) {
@@ -91,7 +94,7 @@ export default function ConjureHomeScreen(navigation) {
         closure_2 = navigation.addListener("transitionEnd", (data) => {
           if (!data.data.closing) {
             ref.current = true;
-            closure_1_6(num);
+            connectedOrOverlay(num);
           }
         });
         return () => {
@@ -113,8 +116,8 @@ export default function ConjureHomeScreen(navigation) {
       }
     }
     obj7.focusRequest = tmp23;
-    obj6.children = closure_8(projectId(tmp3[11]), obj7);
-    let tmp15Result = closure_8(projectId(tmp3[10]).Provider, obj6);
+    obj6.children = tmp15(projectId(tmp3[11]), obj7);
+    let tmp15Result = tmp15(projectId(tmp3[10]).Provider, obj6);
     const tmp22 = projectId(tmp3[11]);
   } else {
     const obj8 = { style: null, children: null };
@@ -123,24 +126,24 @@ export default function ConjureHomeScreen(navigation) {
       const obj9 = { variant: "heading-lg/semibold", color: "text-default", children: null };
       const intl = tmp2(tmp3[13]).intl;
       obj9.children = intl.string(projectId(tmp3[14])["c+8IMp"]);
-      const items5 = [closure_8(tmp2(tmp3[12]).Text, obj9), ,];
+      const items5 = [tmp15(tmp2(tmp3[12]).Text, obj9), ,];
       const obj10 = { variant: "text-md/normal", color: "text-muted", children: null };
       const intl2 = tmp2(tmp3[13]).intl;
       obj10.children = intl2.string(projectId(tmp3[14])["5PqGKy"]);
-      items5[1] = closure_8(tmp2(tmp3[12]).Text, obj10);
+      items5[1] = tmp15(tmp2(tmp3[12]).Text, obj10);
       const obj11 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl3 = tmp2(tmp3[13]).intl;
       obj11.text = intl3.string(tmp2(tmp3[13]).t["13/7kX"]);
       obj11.onPress = callback;
-      items5[2] = closure_8(tmp2(tmp3[15]).Button, obj11);
+      items5[2] = tmp15(tmp2(tmp3[15]).Button, obj11);
       obj8.children = items5;
       tmp15Result = closure_9(tmp16, obj8);
     } else {
       obj8.style = tmp.centered;
-      obj8.children = closure_8(first, {});
-      tmp15Result = closure_8(tmp16, obj8);
+      obj8.children = tmp15(num, {});
+      tmp15Result = tmp15(tmp16, obj8);
     }
   }
   obj5.children = tmp15Result;
-  return closure_8(closure_6, obj5);
+  return ref(first, obj5);
 }

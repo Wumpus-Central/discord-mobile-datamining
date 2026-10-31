@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/native/utils/openGuildPowerupRollbackSheet.tsx
-import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/utils
 
 export default function openGuildPowerupRollbackSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(14039, dependencyMap.paths),
+    asyncRequireImpl(14074, dependencyMap.paths),
     GUILD_POWERUP_ROLLBACK_SHEET_KEY,
     arg0,
   );

@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const SafetySettingsNoticeType = fn(7484).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7490).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -22,10 +22,10 @@ export function SensitiveContentFiltersTeenNotice() {
   let obj = require("TinyBroncoSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(16664).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(16706).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
-      label: tmp(1114).t.EUo0yj,
+      label: tmp(1113).t.EUo0yj,
       labelHook: function handleOpenHelpCenterArticle() {
         const obj = LinkingDefault;
         obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));
@@ -33,7 +33,7 @@ export function SensitiveContentFiltersTeenNotice() {
       noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
     };
     tmp4Result = jsx(SafetySettingsNoticeDefault, {
-      label: tmp(1114).t.EUo0yj,
+      label: tmp(1113).t.EUo0yj,
       labelHook: function handleOpenHelpCenterArticle() {
         const obj = LinkingDefault;
         obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));

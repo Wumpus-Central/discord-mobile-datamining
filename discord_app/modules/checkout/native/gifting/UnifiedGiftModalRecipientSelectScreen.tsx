@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10707).UserRowModes;
+const UserRowModes = fn(10727).UserRowModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/checkout/native/gifting/Unifi
 
 export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) {
   setRecipientUser = setRecipientUser.setRecipientUser;
-  importDefault = setRecipientUser(1498).useNavigation();
+  importDefault = setRecipientUser(1497).useNavigation();
   const obj2 = {
     style: closure_6().container,
     children: jsx(SearchableUserListDefault, {

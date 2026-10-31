@@ -7,7 +7,7 @@ import AnalyticsTypes from "../quests/lib/analytics/AnalyticsTypes.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const HexagonCampaignConstants = fn(5034);
+const HexagonCampaignConstants = fn(5039);
 ({
   HEXAGON_CAMPAIGN_AD_CONTENT_ID: closure_4,
   HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: hasOwnProperty,

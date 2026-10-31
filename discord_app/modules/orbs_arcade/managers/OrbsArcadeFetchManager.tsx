@@ -63,15 +63,15 @@ class OrbsArcadeFetchManager extends tmp2 {
         }
         let result = !tmp4;
         if (!tmp4) {
-          const obj = applyArgumentsResult(16961);
+          const obj = applyArgumentsResult(17017);
           result = obj.isOrbsArcadeEnrollmentOver(
-            applyArgumentsResult(16955).orbsArcadeGameStateFromServer(game_state),
+            applyArgumentsResult(17011).orbsArcadeGameStateFromServer(game_state),
           );
-          const obj2 = applyArgumentsResult(16955);
+          const obj2 = applyArgumentsResult(17011);
         }
         if (tmp8) {
-          const orbsArcadeGames = applyArgumentsResult(16960).fetchOrbsArcadeGames();
-          const obj3 = applyArgumentsResult(16960);
+          const orbsArcadeGames = applyArgumentsResult(17016).fetchOrbsArcadeGames();
+          const obj3 = applyArgumentsResult(17016);
         }
         tmp8 = game.versionId !== game_state.game_version_id || result;
       }
@@ -89,14 +89,14 @@ class OrbsArcadeFetchManager extends tmp2 {
         let items = [];
         HermesBuiltin.arraySpread(
           orbsArcadeGames.flatMap((id) => {
-            const items = [, ,];
-            ({ startsAt: arr[0], endsAt: arr[1] } = id);
+            const items = [, , ,];
+            ({ startsAt: arr[0], endsAt: arr[1], windowEndsAt: arr[2] } = id);
             gameStateForGame = gameStateForGame.getGameStateForGame(id.id);
             let expiresAt;
             if (gameStateForGame != null) {
               expiresAt = gameStateForGame.expiresAt;
             }
-            items[2] = expiresAt;
+            items[3] = expiresAt;
             return items;
           }),
           0,
@@ -130,7 +130,7 @@ class OrbsArcadeFetchManager extends tmp2 {
             () => {
               closure_0.boundaryRefetchTimerId = null;
               closure_0.scheduledBoundaryAt = null;
-              const orbsArcadeGames = applyArgumentsResult(16960).fetchOrbsArcadeGames();
+              const orbsArcadeGames = applyArgumentsResult(17016).fetchOrbsArcadeGames();
             },
             Math.min(diff + Math.floor(Math.random() * closure_5), DAY),
           );

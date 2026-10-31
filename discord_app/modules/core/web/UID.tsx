@@ -1,6 +1,6 @@
 // discord_app/modules/core/web/UID.tsx
 import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
-import uniqueIdDefault from "../../../../_runtime/06024_uniqueId.js";
+import uniqueIdDefault from "../../../../_runtime/06029_uniqueId.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/core/web/UID.tsx");

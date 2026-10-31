@@ -2,7 +2,7 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import inlineStyles from "../../../../_runtime/08023_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08031_inlineStyles.js";
 import noop_mod from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
@@ -88,6 +88,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   closure_9 = undefined;
   let sharedValue2;
   dependencyMap = undefined;
+  ({ withAnimation, paused } = loading);
   let obj = progress(stateFromStores[8]);
   let items = [sharedValue1];
   stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
@@ -120,40 +121,40 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   }
   sharedValue2 = progress(stateFromStores[4]).useSharedValue(num2);
   const tmpResult = progress(stateFromStores[4]);
-  class T {
+  class D {
     constructor() {
       obj = { shadowOpacity: closure_10.get() };
       return obj;
     }
   }
-  T.__closure = { glowOpacity: sharedValue2 };
-  T.__workletHash = 17183837725505;
-  T.__initData = __initData;
-  const animatedStyle = progress(stateFromStores[4]).useAnimatedStyle(T);
+  D.__closure = { glowOpacity: sharedValue2 };
+  D.__workletHash = 17183837725505;
+  D.__initData = __initData;
+  const animatedStyle = progress(stateFromStores[4]).useAnimatedStyle(D);
   const tmpResult4 = progress(stateFromStores[4]);
-  class D {
+  class E {
     constructor() {
       obj = { strokeDashoffset: closure_5 - closure_5 * closure_7.get() };
       return obj;
     }
   }
-  D.__closure = { circumference: result, animatedProgress: sharedValue };
-  D.__workletHash = 17281152506254;
-  D.__initData = __initData2;
-  const animatedProps = progress(stateFromStores[4]).useAnimatedProps(D);
+  E.__closure = { circumference: result, animatedProgress: sharedValue };
+  E.__workletHash = 17281152506254;
+  E.__initData = __initData2;
+  const animatedProps = progress(stateFromStores[4]).useAnimatedProps(E);
   const tmpResult5 = progress(stateFromStores[4]);
-  class E {
+  class R {
     constructor() {
       obj = { opacity: closure_8.get() };
       merged = Object.assign(closure_6.opacityMask);
       return obj;
     }
   }
-  E.__closure = { underlayOpacity: sharedValue1, styles: tmp9 };
-  E.__workletHash = 4427598698568;
-  E.__initData = __initData3;
+  R.__closure = { underlayOpacity: sharedValue1, styles: tmp9 };
+  R.__workletHash = 4427598698568;
+  R.__initData = __initData3;
   const items1 = [sharedValue, progress, stateFromStores];
-  const animatedStyle1 = progress(stateFromStores[4]).useAnimatedStyle(E);
+  const animatedStyle1 = progress(stateFromStores[4]).useAnimatedStyle(R);
   scale(() => {
     let num = 500;
     if (stateFromStores) {
@@ -276,7 +277,8 @@ export default noop.memo(function QuestProgressIndicator(loading) {
     quest,
     height: 0.78 * tmp5,
     width: 0.78 * tmp5,
-    withAnimation: loading.withAnimation,
+    withAnimation,
+    paused,
     accessibilityLabelPrefix: accessibilityLabel,
   };
   obj16.children = closure_9(flag(stateFromStores[14]), size2);

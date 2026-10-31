@@ -5,14 +5,14 @@ import components_Button_Button from "../../../../../../design/components/Button
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef14578 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef14616 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_7 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -24,7 +24,7 @@ export function PlayStationLinkSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef14578 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14616 }), []);
   const items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), ,];
   const obj5 = {
     variant: "heading-xl/extrabold",

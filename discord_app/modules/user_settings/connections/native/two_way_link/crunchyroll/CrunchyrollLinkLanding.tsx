@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef14599 from "../../../../../../../_runtime/metro/14599__.js";
+import _modDef14637 from "../../../../../../../_runtime/metro/14637__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(14597).CrunchyrollLinkModalScenes;
+let closure_4 = fn(14635).CrunchyrollLinkModalScenes;
 const Constants = fn(1072);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -17,13 +17,13 @@ const result = size.fileFinishedImporting(
 
 export default function CrunchyrollLinkLanding() {
   const tmp = closure_8();
-  navigation = navigation(1498).useNavigation();
+  navigation = navigation(1497).useNavigation();
   let items = [navigation];
   const memo = noop.useMemo(() => {
     const obj = { label: null, icon: null };
-    const intl = navigation(1114).intl;
-    obj.label = intl.string(navigation(1114).t["2TXHQd"]);
-    obj.icon = navigation(8839).PlayIcon;
+    const intl = navigation(1113).intl;
+    obj.label = intl.string(navigation(1113).t["2TXHQd"]);
+    obj.icon = navigation(8848).PlayIcon;
     const items = [obj];
     return items;
   }, []);
@@ -32,7 +32,7 @@ export default function CrunchyrollLinkLanding() {
   }, items);
   const obj2 = {
     platformType: constants2.CRUNCHYROLL,
-    img: _modDef14599,
+    img: _modDef14637,
     imgStyle: tmp.image,
     headerConnect: null,
     body: null,
@@ -40,17 +40,17 @@ export default function CrunchyrollLinkLanding() {
     onNext: null,
     valueProps: null,
   };
-  let intl = navigation(1114).intl;
-  obj2.headerConnect = intl.string(navigation(1114).t["Da+3NJ"]);
-  const intl2 = navigation(1114).intl;
-  obj2.body = intl2.string(navigation(1114).t.MaPpPL);
-  let obj = navigation(1498);
+  let intl = navigation(1113).intl;
+  obj2.headerConnect = intl.string(navigation(1113).t["Da+3NJ"]);
+  const intl2 = navigation(1113).intl;
+  obj2.body = intl2.string(navigation(1113).t.MaPpPL);
+  let obj = navigation(1497);
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(9709).TwoWayLinkLanding, {
+  return jsx(navigation(9729).TwoWayLinkLanding, {
     platformType: constants2.CRUNCHYROLL,
-    img: _modDef14599,
+    img: _modDef14637,
     imgStyle: tmp.image,
     headerConnect: null,
     body: null,

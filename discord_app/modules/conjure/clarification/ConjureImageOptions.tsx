@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/clarification/ConjureImageOptions.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import MaskedLinkStoreMethodsAdditional from "../../../stores/MaskedLinkStoreMethodsAdditional.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
@@ -55,7 +55,7 @@ export function imageOptionViewerSize(value) {
 export function ownImageOption(image) {
   const obj = { id: "own:" + image.attachment.id, label: null, image: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef3865.SUdqCQ);
+  obj.label = intl.string(_modDef3868.SUdqCQ);
   obj.image = { attachment_id: image.attachment.id };
   return obj;
 }
@@ -139,6 +139,6 @@ export function imageOptionCaption(option) {
 export function ownImageUploadText(question) {
   const intl = util.intl;
   const isMatch = /\bicons?\b/i.test(question.question);
-  const tmp2 = _modDef3865;
+  const tmp2 = _modDef3868;
   return intl.string(isMatch ? tmp2.qU4WN6 : tmp2.cbMDDB);
 }

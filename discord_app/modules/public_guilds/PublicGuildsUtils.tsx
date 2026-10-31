@@ -31,7 +31,7 @@ export function isPublicSystemMessage(message) {
   return tmp;
 }
 export function getPublicSystemMessageAvatar() {
-  return require("../../../_runtime/metro/08497__.js");
+  return require("../../../_runtime/metro/08505__.js");
 }
 export function trackEnableCommunityFlow(fromStep) {
   const obj = AnalyticsUtilsDefault;

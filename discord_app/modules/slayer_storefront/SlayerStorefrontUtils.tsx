@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/06787_keysSorter.js";
+import keysSorter from "../../../_runtime/06793_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -186,8 +186,8 @@ function getSKUShareURL(guildId, applicationId) {
       applicationId.slug,
     );
 }
-let closure_4 = fn(7399).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7401);
+let closure_4 = fn(7405).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7407);
 ({
   BLOONS_TD6_SPLIT_TENDER_PROMOTION_ID: closure_9,
   getChannelsGameShopPrefix: c10,
@@ -198,7 +198,7 @@ const Constants = fn(1072);
 ({ GuildFeatures: map1, Routes: closure_14, SKUProductLines: closure_15 } = Constants);
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 let str = "jpg";
-if (fn(6449).SUPPORTS_WEBP) {
+if (fn(6455).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getRequiredSubscriptionPlanIds(arr) {
@@ -463,7 +463,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, application_id) {
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "color", primaryIconLabel: "Error" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "flexDirection" };
         } else {
           const obj3 = StoreUtils;
           obj4 = {
@@ -480,7 +480,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, application_id) {
       }
     }
   }
-  return { primaryIconAsset: "color", primaryIconLabel: "Error" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "flexDirection" };
 }
 export function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

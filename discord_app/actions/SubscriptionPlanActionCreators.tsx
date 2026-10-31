@@ -30,7 +30,7 @@ let closure_9 = async function _fetchSubscriptionPlansForSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ let closure_9 = async function _fetchSubscriptionPlansForSKU() {
   })();
 };
 const Endpoints = fn(1072).Endpoints;
-const PremiumConstants = fn(1386);
+const PremiumConstants = fn(1385);
 ({ ACTIVE_PREMIUM_SKUS: metroRequire, PremiumSubscriptionSKUs: closure_7 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/SubscriptionPlanActionCreators.tsx");

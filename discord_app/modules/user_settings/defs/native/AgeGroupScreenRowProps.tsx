@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3093 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3096 from "../../../age_assurance/AgeAssurance.messages.js";
 import AgeVerificationUtils from "../../../age_assurance/AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
@@ -12,11 +12,11 @@ let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGr
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3093.SH6Tcv);
+    return intl.string(_modDef3096.SH6Tcv);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3093.rJiO86);
+    return intl.string(_modDef3096.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     const obj = AgeVerificationActionCreatorsDefault;

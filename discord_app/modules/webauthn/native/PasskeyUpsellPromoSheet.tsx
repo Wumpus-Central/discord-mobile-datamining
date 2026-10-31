@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPr
 
 export default function PasswordlessUpsellPromoSheet() {
   let obj = {
-    source: require("../../../../_runtime/metro/17613__.js"),
+    source: require("../../../../_runtime/metro/17673__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   };
   _require = noop.useRef(false);
@@ -58,10 +58,10 @@ export default function PasswordlessUpsellPromoSheet() {
             ({ ticket, credential } = arg0);
             const obj2 = { screen: constants.WEBAUTHN_NAME, params: null };
             const obj3 = { ticket, credential, name: null };
-            const intl = ref(1114).intl;
-            obj3.name = intl.string(ref(1114).t["8H5RmH"]);
+            const intl = ref(1113).intl;
+            obj3.name = intl.string(ref(1113).t["8H5RmH"]);
             obj2.params = obj3;
-            ref(7557).openUserSettings(obj2);
+            ref(7563).openUserSettings(obj2);
           },
         };
         NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {});
@@ -70,7 +70,7 @@ export default function PasswordlessUpsellPromoSheet() {
     },
     text: null,
   };
-  const intl3 = tmp4(1114).intl;
+  const intl3 = tmp4(1113).intl;
   obj5.text = intl3.string(require("util").t.NIFmCJ);
   const items = [closure_6(require("components/Button/Button").Button, obj5)];
   const obj6 = {
@@ -82,7 +82,7 @@ export default function PasswordlessUpsellPromoSheet() {
     },
     text: null,
   };
-  const intl4 = tmp4(1114).intl;
+  const intl4 = tmp4(1113).intl;
   obj6.text = intl4.string(require("util").t["7J6/nG"]);
   items[1] = closure_6(require("components/Button/Button").Button, obj6);
   obj4.children = items;

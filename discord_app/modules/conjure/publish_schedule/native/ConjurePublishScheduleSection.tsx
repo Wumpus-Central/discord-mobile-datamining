@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish_schedule/native/ConjurePublishScheduleSection.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import useConjurePublishScheduleDefault from "../useConjurePublishSchedule.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -28,15 +28,15 @@ export default function ConjurePublishScheduleSection(projectId) {
     }
     const obj = { spacing: tmp(575).space.PX_16, children: null };
     let obj2 = { variant: "heading-md/semibold", children: null };
-    let intl = projectId(1114).intl;
-    obj2.children = intl.string(tmp(3865).ptzKKH);
-    const items = [closure_3(projectId(5619).Heading, obj2), , , , ,];
+    let intl = projectId(1113).intl;
+    obj2.children = intl.string(tmp(3868).ptzKKH);
+    const items = [closure_3(projectId(5624).Heading, obj2), , , , ,];
     let tmp8Result = null;
     if (tmp3.loading) {
       const obj3 = { variant: "text-sm/normal", accessibilityLiveRegion: "polite", children: null };
-      let intl2 = tmp7(1114).intl;
-      obj3.children = intl2.string(tmp(3865)["71yzD9"]);
-      tmp8Result = closure_3(tmp7(5619).Text, obj3);
+      let intl2 = tmp7(1113).intl;
+      obj3.children = intl2.string(tmp(3868)["71yzD9"]);
+      tmp8Result = closure_3(tmp7(5624).Text, obj3);
     }
     items[1] = tmp8Result;
     let tmp6Result = null;
@@ -45,19 +45,19 @@ export default function ConjurePublishScheduleSection(projectId) {
       if (null != tmp3.saved) {
         const obj4 = { children: null };
         const obj5 = { variant: "text-sm/normal", color: "text-subtle", children: null };
-        let intl3 = tmp7(1114).intl;
-        obj5.children = intl3.string(tmp(3865).ubcNP7);
-        const items1 = [closure_3(tmp7(5619).Text, obj5)];
+        let intl3 = tmp7(1113).intl;
+        obj5.children = intl3.string(tmp(3868).ubcNP7);
+        const items1 = [closure_3(tmp7(5624).Text, obj5)];
         const obj6 = { spacing: tmp(575).space.PX_8, children: null };
-        const result = tmp7(12467).publishScheduleDetails(tmp3.saved);
+        const result = tmp7(12502).publishScheduleDetails(tmp3.saved);
         const items2 = [
           result.map((children, index) =>
             closure_1_3(projectId(dependencyMap[5]).Text, { variant: "text-sm/normal", children }, index),
           ),
         ];
         const obj7 = { variant: "secondary", text: null, disabled: null, onPress: null };
-        const intl4 = tmp7(1114).intl;
-        obj7.text = intl4.string(tmp(3865).J7ZMMf);
+        const intl4 = tmp7(1113).intl;
+        obj7.text = intl4.string(tmp(3868).J7ZMMf);
         obj7.disabled = tmp3.deleting;
         obj7.onPress = function confirmDelete() {
           const obj2 = {
@@ -69,20 +69,20 @@ export default function ConjurePublishScheduleSection(projectId) {
             onConfirm: null,
           };
           const intl = util.intl;
-          obj2.title = intl.string(_modDef3865["Tw/KaB"]);
+          obj2.title = intl.string(_modDef3868["Tw/KaB"]);
           const intl2 = util.intl;
-          obj2.content = intl2.string(_modDef3865.qr1iIe);
+          obj2.content = intl2.string(_modDef3868.qr1iIe);
           const intl3 = util.intl;
-          obj2.confirmText = intl3.string(_modDef3865.J7ZMMf);
+          obj2.confirmText = intl3.string(_modDef3868.J7ZMMf);
           obj2.onConfirm = remove.remove;
           AlertModal.showConfirmModal(obj2);
         };
-        items2[1] = closure_3(tmp7(5629).Button, obj7);
+        items2[1] = closure_3(tmp7(5634).Button, obj7);
         obj6.children = items2;
-        items1[1] = closure_4(tmp7(6022).Stack, obj6);
+        items1[1] = closure_4(tmp7(6027).Stack, obj6);
         obj4.children = items1;
         tmp6Result = closure_4(closure_5, obj4);
-        const tmp7Result = tmp7(12467);
+        const tmp7Result = tmp7(12502);
       }
     }
     items[2] = tmp6Result;
@@ -95,13 +95,13 @@ export default function ConjurePublishScheduleSection(projectId) {
         accessibilityLiveRegion: "assertive",
         children: tmp3.error,
       };
-      tmp8Result4 = closure_3(tmp7(5619).Text, obj8);
+      tmp8Result4 = closure_3(tmp7(5624).Text, obj8);
     }
     items[3] = tmp8Result4;
     let tmp8Result5 = null;
     if (null != tmp3.status) {
       const obj9 = { variant: "text-sm/normal", accessibilityLiveRegion: "polite", children: tmp3.status };
-      tmp8Result5 = closure_3(tmp7(5619).Text, obj9);
+      tmp8Result5 = closure_3(tmp7(5624).Text, obj9);
     }
     items[4] = tmp8Result5;
     let tmp8Result6 = null;
@@ -109,15 +109,15 @@ export default function ConjurePublishScheduleSection(projectId) {
       tmp8Result6 = null;
       if (null != tmp3.error) {
         const obj10 = { variant: "secondary", text: null, onPress: null };
-        const intl5 = tmp7(1114).intl;
-        obj10.text = intl5.string(tmp(3865).iLTcFU);
+        const intl5 = tmp7(1113).intl;
+        obj10.text = intl5.string(tmp(3868).iLTcFU);
         obj10.onPress = tmp3.retry;
-        tmp8Result6 = closure_3(tmp7(5629).Button, obj10);
+        tmp8Result6 = closure_3(tmp7(5634).Button, obj10);
       }
     }
     items[5] = tmp8Result6;
     obj.children = items;
-    tmp6Result2 = closure_4(projectId(6022).Stack, obj);
+    tmp6Result2 = closure_4(projectId(6027).Stack, obj);
   }
   return tmp4;
 }

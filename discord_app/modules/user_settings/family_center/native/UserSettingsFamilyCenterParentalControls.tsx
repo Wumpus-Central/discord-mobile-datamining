@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/family_center/native/UserSettingsFamilyCenterParentalControls.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2537 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2538 from "../../../parent_tools/FamilyCenter.messages.js";
 import FamilyCenterActionCreatorsDefault from "../../../parent_tools/FamilyCenterActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -12,10 +12,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const FamilyCenterSubPages = fn(7709).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7716).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = {
   container: { display: "flex", flex: 1 },
   segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
@@ -88,7 +88,7 @@ export default function FamilyCenterParentalControlsSettings() {
       if (null != id) {
         let obj = { title: null, headerRight: null };
         let intl = util.intl;
-        obj.title = intl.string(_modDef2537["1Op+NP"]);
+        obj.title = intl.string(_modDef2538["1Op+NP"]);
         let fn;
         if (!closure_5) {
           fn = (arg0) => {
@@ -106,7 +106,7 @@ export default function FamilyCenterParentalControlsSettings() {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "color", headerRight: "Error" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "flexDirection" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[14]).intl;

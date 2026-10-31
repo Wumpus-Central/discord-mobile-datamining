@@ -1,6 +1,6 @@
 // discord_app/modules/notification_center/getTimestampString.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2044 from "../../../_runtime/metro/02044__.js";
+import _modDef2042 from "../../../_runtime/metro/02042__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getDurationString(getFormatter) {
@@ -67,7 +67,7 @@ let c5 = 31104000;
 const result = size.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  const obj = { seconds: _modDef2044().diff(_modDef2044(since), "s"), getFormatter, includeWeeks };
+  const obj = { seconds: _modDef2042().diff(_modDef2042(since), "s"), getFormatter, includeWeeks };
   ({ since, getFormatter, includeWeeks } = arg0);
   return getDurationString(obj);
 }

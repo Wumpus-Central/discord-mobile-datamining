@@ -36,10 +36,10 @@ function HomeDrawerDMExpandedChildren(channel) {
   });
   let obj2 = channel(504);
   const tmp3 = useMessagePreviewsDefault(channel, {
-    unread: channel(18360).useBaseChannelUnreadBadgeState(channel, false).unread,
+    unread: channel(18403).useBaseChannelUnreadBadgeState(channel, false).unread,
   });
   closure_4 = tmp3;
-  const obj3 = channel(18360);
+  const obj3 = channel(18403);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () =>
     UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id),
@@ -110,14 +110,14 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(18326).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(18369).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
-const isMultiUserDM = fn(4862).isMultiUserDM;
+const isMultiUserDM = fn(4867).isMultiUserDM;
 const NOOP = fn(1083).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_12 = createStyles.createStyles({
   title: { flexDirection: "row", alignItems: "center", gap: 4 },
   titleText: { flexShrink: 1 },

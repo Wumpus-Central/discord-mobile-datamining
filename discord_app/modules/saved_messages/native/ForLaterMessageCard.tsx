@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef5734 from "../../../../_runtime/metro/05734__.js";
+import _modDef5739 from "../../../../_runtime/metro/05739__.js";
 import SavedMessageHelpers from "../SavedMessageHelpers.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -57,7 +57,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   card: { gap: 16, marginBottom: 16 },
   cardDivider: {
@@ -99,7 +99,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -134,7 +134,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -150,7 +150,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       } else {
                         c1 = 1;
                         c2 = 1;
-                        const obj5 = { value: v3(11144).savedMessageJumpToMessage(tmp4, c1), done: false };
+                        const obj5 = { value: v3(11163).savedMessageJumpToMessage(tmp4, c1), done: false };
                         return obj5;
                       }
                     } else if (arg0 === 1) {
@@ -161,8 +161,8 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       const obj6 = { value, done: true };
                       return obj6;
                     } else {
-                      v1(6738).pop();
-                      const arr = v1(6738);
+                      v1(6744).pop();
+                      const arr = v1(6744);
                       const obj8 = {
                         channel_id: tmp4.saveData.channelId,
                         message_id: tmp4.saveData.messageId,
@@ -177,20 +177,20 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                       }
                       obj8.message_author_id = id;
                       if (null != tmp4.saveData.dueAt) {
-                        let BOOKMARK = v3(10172).SavedMessageSortTypes.REMINDER;
+                        let BOOKMARK = v3(10192).SavedMessageSortTypes.REMINDER;
                       } else {
-                        BOOKMARK = v3(10172).SavedMessageSortTypes.BOOKMARK;
+                        BOOKMARK = v3(10192).SavedMessageSortTypes.BOOKMARK;
                       }
                       obj8.type = BOOKMARK;
                       let diffResult;
                       if (null != tmp4.saveData.dueAt) {
-                        diffResult = v1(2044)().diff(tmp4.saveData.dueAt);
-                        const obj = v1(2044)();
+                        diffResult = v1(2042)().diff(tmp4.saveData.dueAt);
+                        const obj = v1(2042)();
                       }
                       obj8.due_duration = diffResult;
-                      v1(1253).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
+                      v1(1252).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                       c2 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } catch (tmp26) {
                     c2 = tmp;
@@ -214,7 +214,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp8) {
           c0 = tmp;
           throw tmp8;

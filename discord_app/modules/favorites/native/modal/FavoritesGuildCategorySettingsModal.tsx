@@ -129,10 +129,10 @@ function FavoritesGuildCategorySettings(categoryId) {
   return ref(c5, obj6);
 }
 const ScrollView = fn(17).ScrollView;
-let maxLength = fn(4871).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+let maxLength = fn(4876).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -143,12 +143,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(10121)().onGoBack;
+  onGoBack = onGoBack(10141)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
-  const intl = categoryId(1114).intl;
-  obj.title = intl.string(categoryId(1114).t["/uELTj"]);
+  const intl = categoryId(1113).intl;
+  obj.title = intl.string(categoryId(1113).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(10123), obj);
+  return closure_8(onGoBack(10143), obj);
 }

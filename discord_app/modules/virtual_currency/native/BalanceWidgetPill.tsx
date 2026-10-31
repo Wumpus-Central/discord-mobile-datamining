@@ -11,10 +11,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
-    minHeight: fn(5635).SMALL_BUTTON_HEIGHT,
+    minHeight: fn(5640).SMALL_BUTTON_HEIGHT,
     borderRadius: nativeDefault.radii.round,
     justifyContent: "center",
     alignItems: "center",
@@ -29,7 +29,7 @@ let obj2 = {
   balanceText: null,
 };
 let obj4 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

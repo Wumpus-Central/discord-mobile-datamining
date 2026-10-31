@@ -56,8 +56,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = 60 * DurationsDefault.Millis.SECOND;
-let closure_9 = Object.values(fn(5034).HexagonCampaignPerk);
-const createStyles = fn(5009);
+let closure_9 = Object.values(fn(5039).HexagonCampaignPerk);
+const createStyles = fn(5014);
 let obj2 = {
   badge: {
     flexDirection: "row",
@@ -109,7 +109,7 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
       const _Math = Math;
       const items = [];
       HermesBuiltin.arraySpread(
-        closure_9.map((item) => perk(5036).getHexagonCampaignPerkCutoffMs(item, stateFromStores)),
+        closure_9.map((item) => perk(5041).getHexagonCampaignPerkCutoffMs(item, stateFromStores)),
         0,
       );
       const _Math2 = Math;
@@ -117,7 +117,7 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp6 = stateFromStores(7617)(memo, closure_8);
+  const tmp6 = stateFromStores(7624)(memo, closure_8);
   let num = 0;
   if (tmp6.hours > 0) {
     num = 1;
@@ -125,13 +125,13 @@ export default function HexagonCampaignDaysLeftBadge(perk) {
   const obj2 = {
     variant: perk.variant,
     renderIcon(color) {
-      return closure_1_6(perk(5735).ClockIcon, { size: "xxs", color });
+      return closure_1_6(perk(5740).ClockIcon, { size: "xxs", color });
     },
     text: null,
   };
   const bound = Math.max(tmp6.days + num, 1);
-  const intl = perk(1114).intl;
-  obj2.text = intl.formatToPlainString(stateFromStores(4282)["noGK/D"], { days: bound });
+  const intl = perk(1113).intl;
+  obj2.text = intl.formatToPlainString(stateFromStores(4285)["noGK/D"], { days: bound });
   return closure_6(HexagonCampaignBadge, obj2);
 }
 export function useHexagonCampaignDaysLeft(arg0) {
@@ -153,7 +153,7 @@ export function useHexagonCampaignDaysLeft(arg0) {
       const _Math = Math;
       const items = [];
       HermesBuiltin.arraySpread(
-        closure_9.map((item) => perk(5036).getHexagonCampaignPerkCutoffMs(item, stateFromStores)),
+        closure_9.map((item) => perk(5041).getHexagonCampaignPerkCutoffMs(item, stateFromStores)),
         0,
       );
       const _Math2 = Math;
@@ -161,7 +161,7 @@ export function useHexagonCampaignDaysLeft(arg0) {
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp3 = stateFromStores(7617)(memo, closure_8);
+  const tmp3 = stateFromStores(7624)(memo, closure_8);
   let num = 0;
   if (tmp3.hours > 0) {
     num = 1;

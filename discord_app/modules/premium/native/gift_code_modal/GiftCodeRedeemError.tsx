@@ -1,14 +1,14 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01499_Link.js";
+import Link from "../../../../../_runtime/01498_Link.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11487 from "../../../../../_runtime/metro/11487__.js";
-import _modDef11488 from "../../../../../_runtime/metro/11488__.js";
+import _modDef11521 from "../../../../../_runtime/metro/11521__.js";
+import _modDef11522 from "../../../../../_runtime/metro/11522__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -41,9 +41,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp8Result = _modDef11487;
+    let tmp8Result = _modDef11521;
   } else {
-    tmp8Result = _modDef11488;
+    tmp8Result = _modDef11522;
   }
   const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
   const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

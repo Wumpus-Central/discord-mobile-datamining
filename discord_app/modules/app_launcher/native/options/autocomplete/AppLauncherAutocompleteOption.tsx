@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -13,9 +13,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ANDROID_FOREGROUND_RIPPLE = fn(1192).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ content: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -41,7 +41,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12325, dependencyMap.paths),
+      asyncRequireImpl(12363, dependencyMap.paths),
       "AppLauncherAutocompleteActionSheet",
       {
         option,

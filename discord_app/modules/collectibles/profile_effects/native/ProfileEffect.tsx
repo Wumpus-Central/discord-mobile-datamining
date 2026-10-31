@@ -25,7 +25,7 @@ function StaticEffect(useThumbnail) {
   c0 = undefined;
   ({ thumbnailPreviewSrc, accessibilityLabel } = profileEffect);
   [tmp3, c0] = thumbnailUrlOverride.useState(0);
-  const height = reducedMotionSrc(1492)().height;
+  const height = reducedMotionSrc(1491)().height;
   const callback = thumbnailUrlOverride.useCallback((nativeEvent) => {
     memo(nativeEvent.nativeEvent.layout.width);
   }, []);
@@ -78,7 +78,7 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj3.children = jsx(tmp4(5712), {
+    obj3.children = jsx(tmp4(5717), {
       resizeMode: "cover",
       resizeMethod: "resize",
       enableAnimation: true,
@@ -88,14 +88,14 @@ function StaticEffect(useThumbnail) {
       width: null,
       style: null,
     });
-    const tmp4Result = tmp4(5712);
+    const tmp4Result = tmp4(5717);
   }
   return <closure_5 {...obj3} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({
   profileEffects: {
     position: "absolute",
@@ -120,7 +120,7 @@ function ProfileEffect(profileEffect) {
   const tmp = c10();
   let ref = tmp;
   const tmp2 = ref(noop.useState(0), 2);
-  const height = memo1(1492)().height;
+  const height = memo1(1491)().height;
   noop = tmp2[0];
   const accessibilityLabel = profileEffect.accessibilityLabel;
   let items = [profileEffect.effects];
@@ -146,7 +146,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(9477).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(9499).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -162,7 +162,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(9480)(
+  const tmp9Result = memo1(9502)(
     noop.useCallback((arg0) => {
       if (ref.current) {
         if (!ref3.current) {
@@ -190,7 +190,7 @@ function ProfileEffect(profileEffect) {
   );
   const stop = tmp9Result.stop;
   const reset = tmp9Result.reset;
-  const tmp9 = memo1(9480);
+  const tmp9 = memo1(9502);
   const items5 = [onLoad];
   const stateFromStores = memo(504).useStateFromStores(items5, () => onLoad.getState());
   noop.useRef(null);

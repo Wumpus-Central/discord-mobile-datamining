@@ -15,7 +15,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 function createFastConnectSocket() {
   if (null != window.WebSocket) {
-    let obj = obj3(15500);
+    let obj = obj3(15539);
     constants = obj.getConstants();
     let flag;
     if (constants != null) {
@@ -41,14 +41,14 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp7}`);
     const _Date = Date;
     closure_0 = Date.now();
-    const tmp9 = obj3(15487)(combined);
+    const tmp9 = obj3(15526)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp9._socketId);
     const _isNaN = isNaN;
     if (isNaN(parsed)) {
       obj2.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp9._socketId);
     } else {
-      const tmp3Result = tmp3(15500);
+      const tmp3Result = tmp3(15539);
       if (flag) {
         const result = tmp3Result.enableZstdStreamSupport(parsed);
       } else {

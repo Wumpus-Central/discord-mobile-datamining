@@ -8,9 +8,9 @@ import GuildStore from "../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(6741);
+const TrackedHTTPUtilsDefault = tmp4(6747);
 require = fn;
-const InviteTypes = fn(7872).InviteTypes;
+const InviteTypes = fn(7879).InviteTypes;
 const Constants = fn(1072);
 ({
   Endpoints: metroRequire,
@@ -74,7 +74,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
       rejectWithError: false,
     };
     const obj6 = {
-      event: tmp(1261).NetworkActionNames.INVITE_RESOLVE,
+      event: tmp(1260).NetworkActionNames.INVITE_RESOLVE,
       properties(ok) {
         let body1 = null;
         if (ok.ok) {

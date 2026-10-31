@@ -101,7 +101,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   },
 ];
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 },
   text: null,
@@ -120,12 +120,12 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(6036).getName(guildId, channelId, user);
-  const intl = user(1114).intl;
-  let obj = name(6036);
+  name = name(6041).getName(guildId, channelId, user);
+  const intl = user(1113).intl;
+  let obj = name(6041);
   items = [user.id];
   let obj2 = {
-    heading: intl.formatToPlainString(user(1114).t.sjSitP, { name }),
+    heading: intl.formatToPlainString(user(1113).t.sjSitP, { name }),
     bodyText: _slicedToArray(
       noop.useState(() => {
         let sampleResult = _mod12.sample(items);
@@ -145,10 +145,10 @@ const memoResult = noop.memo(function UserProfileActivityEmptyOtherUser(user) {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
   }, items);
   const obj4 = { size: "sm", variant: "secondary", text: null, onPress: null };
-  const intl2 = user(1114).intl;
-  obj4.text = intl2.string(user(1114).t["g33r/P"]);
+  const intl2 = user(1113).intl;
+  obj4.text = intl2.string(user(1113).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5629).Button, obj4);
+  obj3.children = closure_7(user(5634).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

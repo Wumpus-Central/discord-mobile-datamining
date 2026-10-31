@@ -3,13 +3,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import BottomSheetModal from "../../../../_runtime/05270_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05275_BottomSheetModal.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
-import _modDef18985 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
-import _modDef18986 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
+import _modDef19034 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
+import _modDef19035 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -48,7 +48,7 @@ function CatEarsBackdrop() {
     importantForAccessibility: "no-hide-descendants",
   };
   const obj6 = { uri: null };
-  obj6.uri = _modDef18985;
+  obj6.uri = _modDef19034;
   obj5.source = obj6;
   obj5.style = tmp.mascotImage;
   obj4.children = React6(FastImageDefault, obj5);
@@ -69,11 +69,11 @@ function FeatureRow(arg0) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 let closure_5 = fn(1074).CollectiblesMobileShopScreen;
-const ACTION_SHEET_MAX_WIDTH = fn(5268).ACTION_SHEET_MAX_WIDTH;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ACTION_SHEET_MAX_WIDTH = fn(5273).ACTION_SHEET_MAX_WIDTH;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   mascotContainer: null,
   mascotLayer: null,
@@ -158,7 +158,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
   };
-  const obj4 = { uri: _modDef18986 };
+  const obj4 = { uri: _modDef19035 };
   obj3.source = obj4;
   obj3.style = tmp.framePreviewImage;
   const items3 = [closure_8(FastImageDefault, obj3), , ,];
@@ -169,30 +169,30 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
     style: tmp.headerText,
     children: null,
   };
-  const intl = markAsDismissed(1114).intl;
-  obj5.children = intl.string(markAsDismissed(1114).t.vRCvqo);
-  items3[1] = closure_8(markAsDismissed(5619).Text, obj5);
+  const intl = markAsDismissed(1113).intl;
+  obj5.children = intl.string(markAsDismissed(1113).t.vRCvqo);
+  items3[1] = closure_8(markAsDismissed(5624).Text, obj5);
   const obj6 = { style: tmp.featureRows, children: null };
-  const obj7 = { icon: closure_8(markAsDismissed(14250).PaintIllocon, { size: 32 }), text: null };
-  const intl2 = markAsDismissed(1114).intl;
-  obj7.text = intl2.string(markAsDismissed(1114).t["6ZWB0C"]);
+  const obj7 = { icon: closure_8(markAsDismissed(14288).PaintIllocon, { size: 32 }), text: null };
+  const intl2 = markAsDismissed(1113).intl;
+  obj7.text = intl2.string(markAsDismissed(1113).t["6ZWB0C"]);
   const items4 = [closure_8(FeatureRow, obj7), ,];
-  const obj8 = { icon: closure_8(markAsDismissed(14238).HeartIllocon, { size: 32 }), text: null };
-  const intl3 = markAsDismissed(1114).intl;
-  obj8.text = intl3.string(markAsDismissed(1114).t.MkVbBY);
+  const obj8 = { icon: closure_8(markAsDismissed(14276).HeartIllocon, { size: 32 }), text: null };
+  const intl3 = markAsDismissed(1113).intl;
+  obj8.text = intl3.string(markAsDismissed(1113).t.MkVbBY);
   items4[1] = closure_8(FeatureRow, obj8);
-  const obj9 = { icon: closure_8(markAsDismissed(18987).ShopIllocon, { size: 32 }), text: null };
-  const intl4 = markAsDismissed(1114).intl;
-  obj9.text = intl4.string(markAsDismissed(1114).t["/4bQuG"]);
+  const obj9 = { icon: closure_8(markAsDismissed(19036).ShopIllocon, { size: 32 }), text: null };
+  const intl4 = markAsDismissed(1113).intl;
+  obj9.text = intl4.string(markAsDismissed(1113).t["/4bQuG"]);
   items4[2] = closure_8(FeatureRow, obj9);
   obj6.children = items4;
   items3[2] = closure_9(closure_4, obj6);
   const obj10 = { size: "lg", text: null, onPress: null };
-  const intl5 = markAsDismissed(1114).intl;
-  obj10.text = intl5.string(markAsDismissed(1114).t.S9hXPI);
+  const intl5 = markAsDismissed(1113).intl;
+  obj10.text = intl5.string(markAsDismissed(1113).t.S9hXPI);
   obj10.onPress = callback;
-  items3[3] = closure_8(markAsDismissed(5629).Button, obj10);
+  items3[3] = closure_8(markAsDismissed(5634).Button, obj10);
   obj2.children = items3;
   obj.children = closure_9(closure_4, obj2);
-  return closure_8(markAsDismissed(5267).BottomSheet, obj);
+  return closure_8(markAsDismissed(5272).BottomSheet, obj);
 }

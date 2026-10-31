@@ -1,8 +1,7 @@
 // discord_app/modules/quests/native/useQuestHomeHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
@@ -11,9 +10,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function QuestHomeHeaderTitle() {
-  const tmp = closure_10();
+  const tmp = closure_11();
   const obj = { style: tmp.headerTitleContainer, children: null };
-  const items = [React6(QuestsIcon.QuestsIcon, { size: "md", color: "icon-strong" })];
+  const items = [React7(QuestsIcon.QuestsIcon, { size: "md", color: "icon-strong" })];
   const obj2 = {
     variant: "redesign/heading-18/bold",
     color: "mobile-text-heading-primary",
@@ -24,28 +23,31 @@ function QuestHomeHeaderTitle() {
   };
   const intl = util.intl;
   obj2.children = intl.string(util.t.JALI2K);
-  items[1] = React6(Text_Text.Heading, obj2);
+  items[1] = React7(Text_Text.Heading, obj2);
   obj.children = items;
-  return React7(View, obj);
+  return closure_1_10(View, obj);
 }
 function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   isVirtualCurrencyEnabled = isVirtualCurrencyEnabled.isVirtualCurrencyEnabled;
   const merged = Object.assign(isVirtualCurrencyEnabled, Object.assign({ isVirtualCurrencyEnabled: 0 }));
   let balance;
-  const tmp2 = closure_10();
+  const tmp2 = closure_11();
   const tmp3 = balance;
-  balance = balance(9532).useFetchVirtualCurrencyBalance().balance;
-  [][0] = balance;
-  let obj2 = { style: tmp2.headerRightContainer, children: null };
+  balance = balance(9554).useFetchVirtualCurrencyBalance().balance;
+  let obj = balance(9554);
+  const orbBalanceEntrypoint = balance(16887).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
+  let items = [balance, openBalanceWidgetActionSheet];
+  let obj3 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
-    let obj3 = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(tmp3(14449).BalanceWidgetPillButton, obj3);
+    const obj4 = { balance, onPress: tmp6, showNotificationBadge: orbBalanceEntrypoint.hasUnreadUpdate };
+    isVirtualCurrencyEnabled = closure_9(tmp3(14487).BalanceWidgetPillButton, obj4);
   }
-  let items = [isVirtualCurrencyEnabled];
+  const items1 = [isVirtualCurrencyEnabled];
   const merged1 = Object.assign(merged);
-  items[1] = closure_8(FiltersButton, {});
-  obj2.children = items;
-  return closure_9(View, obj2);
+  items1[1] = closure_9(FiltersButton, {});
+  obj3.children = items1;
+  return closure_10(View, obj3);
 }
 function FiltersButton(setSelectedSortMethod) {
   setSelectedSortMethod = setSelectedSortMethod.setSelectedSortMethod;
@@ -71,7 +73,7 @@ function FiltersButton(setSelectedSortMethod) {
   const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16850, dependencyMap.paths),
+      asyncRequireImpl(16906, dependencyMap.paths),
       "QuestHomeSortingFilteringBottomSheet",
       {
         onSortMethodChange: setSelectedSortMethod,
@@ -82,7 +84,7 @@ function FiltersButton(setSelectedSortMethod) {
     );
   }, items);
   const obj = {
-    icon: closure_8(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, {
+    icon: closure_9(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, {
       size: "sm",
       color: INTERACTIVE_TEXT_DEFAULT,
     }),
@@ -94,15 +96,16 @@ function FiltersButton(setSelectedSortMethod) {
   };
   const intl = setSelectedSortMethod(tmp3[10]).intl;
   obj.accessibilityLabel = intl.string(setSelectedSortMethod(tmp3[10]).t.UdhTtk);
-  return closure_8(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
+  return closure_9(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(6775).QuestHomeSortMethods;
-const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_7 = fn(1074).CollectiblesMobileShopScreen;
+const QuestHomeSortMethods = fn(6781).QuestHomeSortMethods;
+const Constants = fn(1072);
+({ AnalyticEvents: metroRequire, AnalyticsPages: closure_7 } = Constants);
+let closure_8 = fn(1074).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5014);
 let obj2 = {
   headerTitleContainer: {
     width: "100%",
@@ -130,7 +133,7 @@ obj2.headerRightContainer = {
   gap: nativeDefault.space.PX_8,
   marginTop: nativeDefault.space.PX_8,
 };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/useQuestHomeHeader.tsx");
 
@@ -146,10 +149,10 @@ export default function useQuestHomeHeader(setSelectedSortMethod) {
   const layoutEffect = selectedSortMethod.useLayoutEffect(() => {
     navigation.setOptions({
       headerTitle() {
-        return closure_1_8(closure_1_11, {});
+        return closure_1_9(closure_1_12, {});
       },
       headerRight() {
-        return closure_2_8(QuestHomeHeaderRight, {
+        return closure_2_9(QuestHomeHeaderRight, {
           isVirtualCurrencyEnabled,
           setSelectedSortMethod,
           setSelectedFilters,

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import VoiceNormalIcon2 from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
@@ -28,7 +28,7 @@ function StaticCard(arg0) {
   const obj2 = { style: tmp.card, children: null };
   let tmp9 = null;
   if (null != stateFromStores) {
-    const obj3 = { guild: stateFromStores, size: tmp5(6951).GuildIconSizes.NORMAL };
+    const obj3 = { guild: stateFromStores, size: tmp5(6957).GuildIconSizes.NORMAL };
     tmp9 = closure_10(GuildIconDefault, obj3);
     const tmp2Result = GuildIconDefault;
   }
@@ -64,12 +64,12 @@ function SoundBadge(frame) {
 }
 const View = fn(17).View;
 const ThemeTypes = fn(1072).ThemeTypes;
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({ asLaunched: closure_8, FrameLayoutModes } = FramesConstants);
-const MIN_PAN_GESTURE_MOVE = fn(11205).MIN_PAN_GESTURE_MOVE;
+const MIN_PAN_GESTURE_MOVE = fn(11224).MIN_PAN_GESTURE_MOVE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let DeviceUtils = fn(4966);
+let DeviceUtils = fn(4971);
 DeviceUtils = DeviceUtils.getRamSize();
 if (DeviceUtils == null) {
   DeviceUtils = Infinity;
@@ -79,9 +79,9 @@ let closure_13 = { mass: 0.25, damping: 40, stiffness: 300, overshootClamping: t
 let closure_14 = { mass: 0.4, damping: 22, stiffness: 220 };
 let closure_15 = {
   layoutMode: FrameLayoutModes.PIP,
-  portraitSafeAreasConfig: fn(18944).DEFAULT_PORTRAIT_LETTERBOX_CONFIG,
+  portraitSafeAreasConfig: fn(18993).DEFAULT_PORTRAIT_LETTERBOX_CONFIG,
 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { window: null, mask: null, card: null, soundBadge: null };
 const rect = {
   position: "absolute",

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useChannelName from "../../../channel/useChannelName.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
@@ -21,9 +21,9 @@ function ChannelRow(channel) {
   channel = channel.channel;
   const onChannelSelected = channel.onChannelSelected;
   ({ selected, guild, start, end } = channel);
-  let str = onChannelSelected(5647)(channel);
+  let str = onChannelSelected(5652)(channel);
   const items = [onChannelSelected, channel];
-  const channelIconComponentOrDefault = channel(17163).getChannelIconComponentOrDefault(channel, guild);
+  const channelIconComponentOrDefault = channel(17220).getChannelIconComponentOrDefault(channel, guild);
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onChannelSelected(channel);
@@ -32,7 +32,7 @@ function ChannelRow(channel) {
     value: channel.id,
     start,
     end,
-    icon: closure_13(channel(6969).TableRow.Icon, { IconComponent: channelIconComponentOrDefault }),
+    icon: closure_13(channel(6975).TableRow.Icon, { IconComponent: channelIconComponentOrDefault }),
     label: null,
     labelLineClamp: 1,
     legacyCompat_selected: null,
@@ -44,13 +44,13 @@ function ChannelRow(channel) {
   obj2.label = str;
   obj2.legacyCompat_selected = selected;
   obj2.legacyCompat_onPress = callback;
-  return closure_13(channel(7055).TableRadioRow, obj2);
+  return closure_13(channel(7061).TableRadioRow, obj2);
 }
 const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   header: { gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 },
   createChannelRow: null,
@@ -116,16 +116,16 @@ export default function ChannelSelectorActionSheet(guildId) {
     items3,
   );
   if (title == null) {
-    const intl = tmp6(1114).intl;
-    title = intl.string(tmp6(1114).t.PDn2fR);
+    const intl = tmp6(1113).intl;
+    title = intl.string(tmp6(1113).t.PDn2fR);
   }
-  const intl2 = tmp6(1114).intl;
-  const stringResult = intl2.string(guildId(1114).t.UTYBjS);
+  const intl2 = tmp6(1113).intl;
+  const stringResult = intl2.string(guildId(1113).t.UTYBjS);
   let obj3 = { scrollable: true, startExpanded: true, header: null, children: null };
   const obj4 = { style: tmp.header, children: null };
   const items4 = [
-    closure_13(guildId(7315).BottomSheetTitleHeader, { title }),
-    closure_13(guildId(7212).SearchBar, {
+    closure_13(guildId(7321).BottomSheetTitleHeader, { title }),
+    closure_13(guildId(7218).SearchBar, {
       size: "md",
       placeholder: stringResult,
       accessibilityLabel: stringResult,
@@ -171,10 +171,10 @@ export default function ChannelSelectorActionSheet(guildId) {
   if (!hideCreateChannel) {
     const obj7 = { style: tmp.createChannelRow, children: null };
     const obj8 = { start: true, end: true, icon: null, label: null, onPress: null };
-    const obj9 = { IconComponent: tmp6(11449).PlusMediumIcon };
-    obj8.icon = closure_13(tmp6(6969).TableRow.Icon, obj9);
-    const intl3 = tmp6(1114).intl;
-    obj8.label = intl3.string(tmp6(1114).t.d7AN7W);
+    const obj9 = { IconComponent: tmp6(11483).PlusMediumIcon };
+    obj8.icon = closure_13(tmp6(6975).TableRow.Icon, obj9);
+    const intl3 = tmp6(1113).intl;
+    obj8.label = intl3.string(tmp6(1113).t.d7AN7W);
     obj8.onPress = function handleCreateChannel() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       const obj3 = { guildId, createMode: null, onChannelCreated: null };
@@ -189,19 +189,19 @@ export default function ChannelSelectorActionSheet(guildId) {
         const obj = onChannelSelected(dependencyMap[30]);
       };
       obj2.pushLazy(
-        asyncRequireImpl(9017, dependencyMap.paths),
+        asyncRequireImpl(9026, dependencyMap.paths),
         obj3,
         CreateChannelModalActionCreatorsDefault.CREATE_CHANNEL_MODAL_KEY,
       );
     };
-    obj7.children = closure_13(tmp6(6969).TableRow, obj8);
+    obj7.children = closure_13(tmp6(6975).TableRow, obj8);
     tmp9Result = closure_13(tmp10, obj7);
   }
   obj5.ListHeaderComponent = tmp9Result;
   const obj10 = { style: tmp.emptyState, variant: "text-md/normal", color: "text-muted", children: null };
-  const intl4 = tmp6(1114).intl;
-  obj10.children = intl4.string(guildId(1114).t.V6nAfF);
-  obj5.ListEmptyComponent = closure_13(guildId(5619).Text, obj10);
-  obj3.children = closure_13(guildId(7288).BottomSheetFlashList, obj5);
-  return closure_13(guildId(5267).BottomSheet, obj3);
+  const intl4 = tmp6(1113).intl;
+  obj10.children = intl4.string(guildId(1113).t.V6nAfF);
+  obj5.ListEmptyComponent = closure_13(guildId(5624).Text, obj10);
+  obj3.children = closure_13(guildId(7294).BottomSheetFlashList, obj5);
+  return closure_13(guildId(5272).BottomSheet, obj3);
 }

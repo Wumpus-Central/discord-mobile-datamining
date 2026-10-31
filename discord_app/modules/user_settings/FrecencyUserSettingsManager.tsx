@@ -64,7 +64,7 @@ let closure_22 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -128,7 +128,7 @@ let closure_22 = async function _saveProtos(arg0) {
         },
       );
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp25) {
       c4 = tmp;
       throw tmp25;
@@ -143,9 +143,9 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6889).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6895).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1361).FREQUENCY_ITEM_LIMIT;
+const FREQUENCY_ITEM_LIMIT = fn(1360).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;

@@ -13,12 +13,12 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     flexDirection: "row",
     alignItems: "center",
-    height: fn(5581).NAV_BAR_HEIGHT,
+    height: fn(5586).NAV_BAR_HEIGHT,
     paddingHorizontal: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -31,7 +31,7 @@ let obj2 = {
 let obj3 = {
   flexDirection: "row",
   alignItems: "center",
-  height: fn(5581).NAV_BAR_HEIGHT,
+  height: fn(5586).NAV_BAR_HEIGHT,
   paddingHorizontal: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomWidth: StyleSheet.hairlineWidth,

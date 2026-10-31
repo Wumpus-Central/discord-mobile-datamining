@@ -64,7 +64,7 @@ export default function CheckpointCountUpStatNumber(start) {
         return obj;
       }, items2)}
     >
-      {jsx(num2(13590), { value: tmp4, size: num2 })}
+      {jsx(num2(13627), { value: tmp4, size: num2 })}
     </View>
   );
 }

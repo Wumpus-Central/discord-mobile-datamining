@@ -20,7 +20,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -73,7 +73,7 @@ function UnsavedChangesSavePromptAlert(arg0) {
           c3 = 0;
           closure_129_3(false);
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -131,16 +131,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5202).dismissKeyboard();
-    const obj = onReset(5202);
+    onReset(5207).dismissKeyboard();
+    const obj = onReset(5207);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5253).hideActionSheet();
-      const tmp7Result = tmp7(5253);
-      tmp7(5954).close();
-      const tmp4Result = tmp4(5955);
+      tmp7(5258).hideActionSheet();
+      const tmp7Result = tmp7(5258);
+      tmp7(5959).close();
+      const tmp4Result = tmp4(5960);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(5954);
+      const tmp7Result3 = tmp7(5959);
     } else {
       const obj4 = {
         title: null,
@@ -151,14 +151,14 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
         onCancel: null,
         isDismissable: false,
       };
-      const intl = tmp4(1114).intl;
-      obj4.title = intl.string(tmp4(1114).t.pvRCSu);
-      const intl2 = tmp4(1114).intl;
-      obj4.body = intl2.string(tmp4(1114).t.DRi46S);
-      const intl3 = tmp4(1114).intl;
-      obj4.confirmText = intl3.string(tmp4(1114).t["6GQDFu"]);
-      const intl4 = tmp4(1114).intl;
-      obj4.cancelText = intl4.string(tmp4(1114).t.DmDzZB);
+      const intl = tmp4(1113).intl;
+      obj4.title = intl.string(tmp4(1113).t.pvRCSu);
+      const intl2 = tmp4(1113).intl;
+      obj4.body = intl2.string(tmp4(1113).t.DRi46S);
+      const intl3 = tmp4(1113).intl;
+      obj4.confirmText = intl3.string(tmp4(1113).t["6GQDFu"]);
+      const intl4 = tmp4(1113).intl;
+      obj4.cancelText = intl4.string(tmp4(1113).t.DmDzZB);
       obj4.onConfirm = function onConfirm() {
         onReset();
         onContinue();
@@ -166,10 +166,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(5954).show(obj4);
-      const tmp7Result4 = tmp7(5954);
+      tmp7(5959).show(obj4);
+      const tmp7Result4 = tmp7(5959);
     }
-    obj2 = onReset(11371);
+    obj2 = onReset(11407);
   } else {
     onContinue();
   }

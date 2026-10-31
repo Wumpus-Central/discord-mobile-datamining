@@ -10,8 +10,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7694).DraftType;
-const MessageSendLocation = fn(5014).MessageSendLocation;
+const DraftType = fn(7701).DraftType;
+const MessageSendLocation = fn(5019).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/useCreateThread.tsx");
 
@@ -26,7 +26,7 @@ export default function useCreateThread(arg0) {
     useDefaultThreadName,
   } = arg0);
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  return analyticsLocations(9755).useCreateThreadCommon({
+  return analyticsLocations(9776).useCreateThreadCommon({
     parentChannel,
     parentMessageId,
     threadSettings,
@@ -58,7 +58,7 @@ export function useCreateForumPost(parentChannel) {
   const threadSettings = parentChannel.threadSettings;
   let analyticsLocations;
   ({ appliedTags, onThreadCreated } = parentChannel);
-  analyticsLocations = analyticsLocations(7320)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7326)().analyticsLocations;
   _require = asyncGeneratorStep(async (arg0) => {
     const guildId = arg0;
     c2 = 0;
@@ -66,11 +66,11 @@ export function useCreateForumPost(parentChannel) {
     return (async (arg0) => {
       analyticsLocations = tmp4;
       closure_129_0 = guildId;
-      const obj7 = new analyticsLocations(10188)();
+      const obj7 = new analyticsLocations(10208)();
       closure_129_1 = obj7;
-      const maxFileSizeResult = guildId(8208).maxFileSize(guildId.getGuildId());
+      const maxFileSizeResult = guildId(8216).maxFileSize(guildId.getGuildId());
       closure_129_2 = maxFileSizeResult;
-      const effectiveUploadLimit = guildId(8223).getEffectiveUploadLimit(maxFileSizeResult);
+      const effectiveUploadLimit = guildId(8231).getEffectiveUploadLimit(maxFileSizeResult);
       obj7.on("progress", (currentSize) => {
         if (currentSize.currentSize > closure_1_3) {
           analyticsLocations.cancel();
@@ -80,13 +80,13 @@ export function useCreateForumPost(parentChannel) {
             draftType: FirstThreadMessage.FirstThreadMessage,
             resetState: true,
           };
-          analyticsLocations(9757).setUploads(obj2);
+          analyticsLocations(9778).setUploads(obj2);
           const obj3 = { file: currentSize, maxSize: tmp, baseMaxSize, guildId: null, analyticsLocations: null };
-          const obj = analyticsLocations(9757);
+          const obj = analyticsLocations(9778);
           obj3.guildId = uploads.getGuildId();
           obj3.analyticsLocations = analyticsLocations;
-          analyticsLocations(9760)(obj3);
-          const tmp10 = analyticsLocations(9760);
+          analyticsLocations(9781)(obj3);
+          const tmp10 = analyticsLocations(9781);
         }
       });
       await obj7.uploadFiles(guildId);

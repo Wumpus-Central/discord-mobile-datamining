@@ -17,7 +17,7 @@ function PooledFrame(frame) {
   iframeId = undefined;
   dependencyMap = undefined;
   const id = frame.id;
-  [iframeId, dependencyMap] = noop.useState(() => first(11761)());
+  [iframeId, dependencyMap] = noop.useState(() => first(11798)());
   const items = [id, iframeId];
   const effect = noop.useEffect(() => {
     FramePoolManagerDefault.registerFrameEntry(id, first);
@@ -36,7 +36,7 @@ function PooledFrame(frame) {
   const callback = noop.useCallback(() => {
     dependencyMap(makeIframeIdDefault());
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(iframeId(12070).subscribe, () =>
+  let syncExternalStore = noop.useSyncExternalStore(iframeId(12108).subscribe, () =>
     FramePoolManagerDefault.getWinningTargetState(id),
   );
   let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
@@ -45,13 +45,13 @@ function PooledFrame(frame) {
     syncExternalStore = obj2;
   }
   obj.presentation = syncExternalStore;
-  return jsx(iframeId(19043), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(iframeId(19092), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({ FrameLayoutModes: closure_7, isLaunched: closure_8 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({ pool: { position: "absolute", opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");

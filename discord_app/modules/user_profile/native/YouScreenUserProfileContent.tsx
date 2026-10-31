@@ -271,11 +271,11 @@ function YouScreenPrimaryInfoSection(navigateToProfileCustomization) {
   return closure_1_14(View, obj4);
 }
 const View = fn(17).View;
-const useIsContentShown = fn(4850).useIsContentShown;
-const UserProfileSections = fn(8746).UserProfileSections;
-let UserProfileThemeTypes = fn(7371).UserProfileThemeTypes;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
-let closure_12 = fn(16389).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(4855).useIsContentShown;
+const UserProfileSections = fn(8754).UserProfileSections;
+let UserProfileThemeTypes = fn(7377).UserProfileThemeTypes;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
+let closure_12 = fn(16431).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const size = fn(2);

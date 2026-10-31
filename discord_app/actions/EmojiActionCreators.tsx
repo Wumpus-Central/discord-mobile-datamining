@@ -28,7 +28,7 @@ let closure_11 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -143,7 +143,7 @@ export function uploadEmoji(guildId) {
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
   DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(1283).HTTP;
+  const HTTP = guildId(1282).HTTP;
   const request = {
     url: Endpoints.GUILD_EMOJIS(guildId),
     body: { image, name, roles },
@@ -159,8 +159,8 @@ export function uploadEmoji(guildId) {
     page = analyticsLocation.page;
   }
   request.context = { client_event_source: page };
-  request.rejectWithError = tmp3(1283).rejectWithMigratedError();
-  const tmp3Result = tmp3(1283);
+  request.rejectWithError = tmp3(1282).rejectWithMigratedError();
+  const tmp3Result = tmp3(1282);
   return HTTP.post(request).then(
     (body) => {
       DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId });
@@ -220,7 +220,7 @@ export function favoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4839).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4844).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -292,7 +292,7 @@ export function unfavoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(4839).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(4844).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {

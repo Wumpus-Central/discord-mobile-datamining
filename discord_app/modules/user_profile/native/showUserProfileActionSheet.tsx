@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/showUserProfileActionSheet.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -14,7 +14,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = RelationshipStore.isBlocked(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      const tmp8 = asyncRequireImpl(8745, dependencyMap.paths);
+      const tmp8 = asyncRequireImpl(8753, dependencyMap.paths);
       const obj = ActionSheetActionCreatorsDefault;
       const _HermesInternal = HermesInternal;
       const combined = "" + UserProfile + "IgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
@@ -30,7 +30,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
     }
     isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
   }
-  const tmp20 = asyncRequireImpl(8764, dependencyMap.paths);
+  const tmp20 = asyncRequireImpl(8772, dependencyMap.paths);
   const combined1 = "" + UserProfile + ignoreBlockedSpeedBump.userId;
   const obj4 = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
@@ -40,7 +40,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   }
   return ActionSheetActionCreatorsDefault.openLazy(tmp20, combined1, obj4, str);
 }
-fn(6926).addPostConnectionCallback;
+fn(6932).addPostConnectionCallback;
 const UserProfile = "UserProfile";
 let closure_7 = new LoggerDefault("showUserProfileActionSheet");
 const size = fn(2);
@@ -71,7 +71,7 @@ export function showUserProfileActionSheetPostConnection(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -152,7 +152,7 @@ export function showUserProfileActionSheetPostConnection(arg0) {
               showUserProfileActionSheet(closure_129_0);
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp40) {
           if (tmp4 === c3) {

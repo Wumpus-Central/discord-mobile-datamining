@@ -13,14 +13,14 @@ function GuildOnboardingHomePage(guildId) {
   guildId = guildId.guildId;
   dependencyMap = undefined;
   let tmp = dependencyMap;
-  const sharedValue = guildId(5090).useSharedValue(-999);
-  let obj = guildId(5090);
+  const sharedValue = guildId(5095).useSharedValue(-999);
+  let obj = guildId(5095);
   const items = [GuildOnboardingHomeSettingsStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () =>
     GuildOnboardingHomeSettingsStore.getSettings(guildId),
   );
   let tmp4 = stateFromStores;
-  const tmp5 = stateFromStores(7394)(guildId);
+  const tmp5 = stateFromStores(7400)(guildId);
   let tmp6 = !tmp5;
   if (!tmp5) {
     let num;
@@ -85,14 +85,14 @@ function GuildOnboardingHomePage(guildId) {
   } else {
     let obj3 = { guildId, scrollValue: sharedValue, children: null };
     const obj4 = { guildId, hideDescription: tmp5 };
-    const items3 = [closure_9(tmp4(18578), obj4)];
+    const items3 = [closure_9(tmp4(18621), obj4)];
     if (tmp5) {
       let obj5 = { children: null };
       const obj6 = { guildId };
-      const items4 = [closure_9(tmp4(18583), obj6), ,];
+      const items4 = [closure_9(tmp4(18625), obj6), ,];
       const obj7 = { guildId };
-      items4[1] = closure_9(tmp4(18587), obj7);
-      tmp4 = tmp4(18588);
+      items4[1] = closure_9(tmp4(18629), obj7);
+      tmp4 = tmp4(18630);
       const obj8 = { guildId };
       tmp = closure_9(tmp4, obj8);
       items4[2] = tmp;
@@ -100,16 +100,16 @@ function GuildOnboardingHomePage(guildId) {
       let tmp12Result = closure_11(closure_10, obj5);
     } else {
       const obj9 = { guildId };
-      tmp12Result = closure_9(tmp4(18591), obj9);
+      tmp12Result = closure_9(tmp4(18633), obj9);
     }
     items3[1] = tmp12Result;
     obj3.children = items3;
-    closure_11(tmp4(18577), obj3);
-    const tmp4Result = tmp4(18577);
+    closure_11(tmp4(18620), obj3);
+    const tmp4Result = tmp4(18620);
   }
   let obj2 = guildId(504);
 }
-const NO_SETTINGS = fn(7392).NO_SETTINGS;
+const NO_SETTINGS = fn(7398).NO_SETTINGS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);

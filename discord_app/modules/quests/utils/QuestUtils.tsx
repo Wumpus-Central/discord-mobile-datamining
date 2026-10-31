@@ -27,8 +27,13 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(6775);
-({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
+const QuestConstants = fn(6781);
+({
+  DISCORD_APPLICATION_ID: closure_8,
+  QuestVariants: closure_9,
+  RewardFilterTypes: c10,
+  TaskFilterTypes: closure_11,
+} = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
@@ -96,29 +101,14 @@ export function isQuestFeaturedByHero(questHomeHero, id) {
   return flag;
 }
 export function shouldShowBountiesGivenFilters(filters) {
-  const someResult = filters.some((group) => "task" === group.group);
-  let tmp2 = !someResult;
-  if (!someResult) {
-    tmp2 =
-      0 === filters.length ||
-      filters.some((group) => {
-        let tmp = "reward" === group.group;
-        if (tmp) {
-          tmp = group.filter === constants.VIRTUAL_CURRENCY;
-        }
-        return tmp;
-      });
-    const tmp3 =
-      0 === filters.length ||
-      filters.some((group) => {
-        let tmp = "reward" === group.group;
-        if (tmp) {
-          tmp = group.filter === constants.VIRTUAL_CURRENCY;
-        }
-        return tmp;
-      });
+  const found = filters.filter((group) => "task" === group.group);
+  const found1 = filters.filter((group) => "reward" === group.group);
+  let tmp = 0 === found.length || found.some((item) => item.filter === constants2.VIDEO);
+  if (tmp) {
+    tmp = 0 === found1.length || found1.some((item) => item.filter === constants.VIRTUAL_CURRENCY);
+    const tmp2 = 0 === found1.length || found1.some((item) => item.filter === constants.VIRTUAL_CURRENCY);
   }
-  return tmp2;
+  return tmp;
 }
 export function setQuestHomeUtmContext(arg0) {
   ({ questId, fromContent, utmSource, utmMedium } = arg0);

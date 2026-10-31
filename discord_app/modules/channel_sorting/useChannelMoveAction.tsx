@@ -77,8 +77,8 @@ export default function useChannelMoveAction(getGuildId) {
     let _categories = categories._categories;
     let found = _categories.filter((channel) => channel.channel.id !== NULL_STRING_CHANNEL_ID);
   } else {
-    found = tmp(14358).getSectionSiblings(listChannel, categories);
-    const tmpResult5 = tmp(14358);
+    found = tmp(14396).getSectionSiblings(listChannel, categories);
+    const tmpResult5 = tmp(14396);
   }
   let id1 = null;
   if (found.length > 1) {
@@ -165,8 +165,8 @@ export default function useChannelMoveAction(getGuildId) {
         getDestinationMove: null,
         getPlacementMove: null,
       };
-      const intl = tmp(1114).intl;
-      obj4.label = intl.string(tmp(1114).t.A95Fzm);
+      const intl = tmp(1113).intl;
+      obj4.label = intl.string(tmp(1113).t.A95Fzm);
       obj4.guildId = guildId;
       obj4.channel = listChannel;
       obj4.isFavorites = isFavoritesGuildIdResult;
@@ -197,17 +197,17 @@ export default function useChannelMoveAction(getGuildId) {
         };
         return obj4;
       } else {
-        const intl2 = tmp(1114).intl;
-        const t = tmp(1114).t;
+        const intl2 = tmp(1113).intl;
+        const t = tmp(1113).t;
         const obj5 = {
           firstLabel: intl2.string(isCategoryResult ? t.IMqgs9 : t.Q9TKt6),
           lastLabel: null,
           isFirst: null,
           isLast: null,
         };
-        const intl3 = tmp(1114).intl;
+        const intl3 = tmp(1113).intl;
         let id = intl3.string;
-        const t2 = tmp(1114).t;
+        const t2 = tmp(1113).t;
         obj5.lastLabel = id(isCategoryResult ? t2["8fQe3x"] : t2["/Pkxmw"]);
         id = id1.first.channel.id;
         obj5.isFirst = id === listChannel.id;

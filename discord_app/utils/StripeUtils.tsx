@@ -2,7 +2,7 @@
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _mod6545 from "../../_runtime/metro/06545__.js";
+import _mod6551 from "../../_runtime/metro/06551__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
@@ -12,7 +12,7 @@ function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod6545.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod6551.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -31,7 +31,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

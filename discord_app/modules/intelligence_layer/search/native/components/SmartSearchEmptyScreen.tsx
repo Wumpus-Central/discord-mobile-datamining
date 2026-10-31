@@ -1,7 +1,7 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchEmptyScreen.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef4120 from "../../SmartSearch.messages.js";
+import _modDef4123 from "../../SmartSearch.messages.js";
 import AccessibilityAnnouncer2 from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { flex: 1, gap: nativeDefault.space.PX_8 }, copy: null };
 let obj3 = { flex: 1, gap: nativeDefault.space.PX_8 };
 obj.copy = {
@@ -57,11 +57,11 @@ export default noop.memo(function SmartSearchEmptyScreen(smartSearchQuery) {
   const obj2 = { style: tmp.copy, children: null };
   const obj3 = { variant: "text-sm/semibold", color: "text-muted", accessibilityRole: "header", children: null };
   let intl = util.intl;
-  obj3.children = intl.string(_modDef4120["HX/WYf"]);
+  obj3.children = intl.string(_modDef4123["HX/WYf"]);
   const items2 = [hasOwnProperty(Text_Text.Text, obj3)];
   const obj4 = { variant: "text-sm/semibold", color: "text-muted", accessibilityRole: "header", children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef4120["0ySxbu"]);
+  obj4.children = intl2.string(_modDef4123["0ySxbu"]);
   items2[1] = hasOwnProperty(Text_Text.Text, obj4);
   obj2.children = items2;
   items1[1] = timestampProducer(View, obj2);

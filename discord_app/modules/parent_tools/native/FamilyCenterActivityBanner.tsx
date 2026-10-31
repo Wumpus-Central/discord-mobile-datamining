@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityBanner.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2537 from "../FamilyCenter.messages.js";
+import _modDef2538 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
@@ -34,9 +34,9 @@ function FamilyCenterActivityBannerButton() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({ container: { width: "100%" } });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj3 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -73,21 +73,21 @@ export default function FamilyCenterActivityBanner() {
   const intl = util.intl;
   const obj2 = useAgeSpecificText;
   const intl2 = util.intl;
-  const ageSpecificText = obj2.useAgeSpecificText(intl.string(_modDef2537["T7GyW+"]), intl2.string(_modDef2537.goKE2b));
-  const stringResult = intl.string(_modDef2537["T7GyW+"]);
+  const ageSpecificText = obj2.useAgeSpecificText(intl.string(_modDef2538["T7GyW+"]), intl2.string(_modDef2538.goKE2b));
+  const stringResult = intl.string(_modDef2538["T7GyW+"]);
   const intl3 = util.intl;
   const obj3 = useAgeSpecificText;
   const intl4 = util.intl;
   const obj4 = { style: tmp4.container, children: null };
   const ageSpecificText1 = obj3.useAgeSpecificText(
-    intl3.format(_modDef2537.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }),
-    intl4.format(_modDef2537.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }),
+    intl3.format(_modDef2538.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }),
+    intl4.format(_modDef2538.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }),
   );
   const obj5 = { source: null, style: null };
-  const formatResult = intl3.format(_modDef2537.MXjDSv, {
+  const formatResult = intl3.format(_modDef2538.MXjDSv, {
     articleLink: "https://support.discord.com/hc/articles/14155060633623",
   });
-  obj5.source = importDefault(tmp3 ? 16732 : 16733);
+  obj5.source = importDefault(tmp3 ? 16774 : 16775);
   obj5.style = tmp4.art;
   const items = [
     React4(FastImageDefault, obj5),

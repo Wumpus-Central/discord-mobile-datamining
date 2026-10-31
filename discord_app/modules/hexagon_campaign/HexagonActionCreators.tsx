@@ -29,7 +29,7 @@ let closure_9 = async function _enrollInHexagonCampaign() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_9 = async function _enrollInHexagonCampaign() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -78,7 +78,7 @@ let closure_11 = async function _enrollAndWaitForHexagonCampaignPerk(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -190,7 +190,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -254,7 +254,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
     }
   }
 };
-let closure_5 = fn(5034).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
+let closure_5 = fn(5039).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
 let closure_6 = new LoggerDefault("HexagonActionCreators");
 const result = 5 * DurationsDefault.Millis.SECOND;
 let closure_10 = null;

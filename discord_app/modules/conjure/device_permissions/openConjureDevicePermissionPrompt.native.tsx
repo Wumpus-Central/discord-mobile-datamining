@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/device_permissions/openConjureDevicePermissionPrompt.native.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import conjureDevicePermissions from "conjureDevicePermissions.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -30,9 +30,9 @@ export default function _default(arg0) {
     const mapped = closure_1_1.map(conjureDevicePermissions.getConjureDevicePermissionLabel);
     obj2.content = mapped.join("\n");
     const intl = util.intl;
-    obj2.confirmText = intl.string(_modDef3865.xbsXd9);
+    obj2.confirmText = intl.string(_modDef3868.xbsXd9);
     const intl2 = util.intl;
-    obj2.cancelText = intl2.string(_modDef3865.rDyl56);
+    obj2.cancelText = intl2.string(_modDef3868.rDyl56);
     obj2.onConfirm = function onConfirm() {
       return closure_0(true);
     };

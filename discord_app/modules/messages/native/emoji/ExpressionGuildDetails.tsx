@@ -6,13 +6,13 @@ import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import guild_GuildUtils from "../../../guild/GuildUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GuildBadgeDefault = tmp10(6955);
+const GuildBadgeDefault = tmp10(6961);
 require = fn;
 const View = fn(17).View;
-const React4 = fn(6952).ExpressionSourceGuildRecord;
+const React4 = fn(6958).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   guildDetailsContainer: { flexDirection: "column" },
   guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" },

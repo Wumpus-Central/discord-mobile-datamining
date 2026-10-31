@@ -5,14 +5,14 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef17139 from "../../../../../_runtime/metro/17139__.js";
+import _modDef17197 from "../../../../../_runtime/metro/17197__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL },
   body: { alignItems: "center", textAlign: "center" },
@@ -35,7 +35,7 @@ export default function ResubscribedAlert(onClose) {
   const obj2 = { style: tmp.body, children: null };
   const obj3 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj3.source = _modDef17139;
+  obj3.source = _modDef17197;
   obj3.style = tmp.headerImage;
   const items = [React4(FastImageDefault, obj3), React4(native.Spacer, { size: 27 }), , ,];
   const obj4 = {

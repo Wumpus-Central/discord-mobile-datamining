@@ -2,22 +2,22 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
-import _modDef8166 from "../../../../../_runtime/metro/08166__.js";
-import _modDef8188 from "../../../../../_runtime/metro/08188__.js";
+import _modDef8174 from "../../../../../_runtime/metro/08174__.js";
+import _modDef8196 from "../../../../../_runtime/metro/08196__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef11974 from "../../../../../_runtime/metro/11974__.js";
-import _modDef11975 from "../../../../../_runtime/metro/11975__.js";
-import _modDef11976 from "../../../../../_runtime/metro/11976__.js";
+import _modDef12012 from "../../../../../_runtime/metro/12012__.js";
+import _modDef12013 from "../../../../../_runtime/metro/12013__.js";
+import _modDef12014 from "../../../../../_runtime/metro/12014__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -303,10 +303,10 @@ const Constants = fn(1072);
 ({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   header: {
-    height: fn(5581).NAV_BAR_HEIGHT,
+    height: fn(5586).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
@@ -323,16 +323,16 @@ let obj = {
   icon: null,
 };
 let obj4 = { backgroundColor: null };
-let ColorUtils = fn(5006);
+let ColorUtils = fn(5011);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconBackground = obj4;
 let obj5 = { backgroundColor: null };
-ColorUtils = fn(5006);
+ColorUtils = fn(5011);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconContainer = obj5;
 obj.settingsButton = { marginRight: 4 };
 let obj3 = {
-  height: fn(5581).NAV_BAR_HEIGHT,
+  height: fn(5586).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 12,
@@ -407,9 +407,9 @@ export function HideChannelCallButton(channel) {
     children: null,
   };
   let obj = channel(504);
-  obj2.source = _modDef11974;
-  const intl = channel(1114).intl;
-  obj2.accessibilityLabel = intl.string(channel(1114).t.cpT0Cq);
+  obj2.source = _modDef12012;
+  const intl = channel(1113).intl;
+  obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
   obj2.onPress = function handleClose() {
     const obj = AnalyticsUtilsDefault;
     const obj2 = { video_layout: "pop out" };
@@ -421,7 +421,7 @@ export function HideChannelCallButton(channel) {
     const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
   };
   obj2.containerStyle = tmp.iconContainer;
-  obj2.children = closure_12(channel(1188).MaskedBadge, { value: stateFromStores, maskStyle: {} });
+  obj2.children = closure_12(channel(1187).MaskedBadge, { value: stateFromStores, maskStyle: {} });
   return closure_12(ChannelCallNavigatorIconDefault, obj2);
 }
 export { StageSettingsButton };

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/host_approval/native/ConjureHostApproval.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -20,18 +20,18 @@ function ConjureHostApprovalCard(arg0) {
   const items = [closure_4(ConjureAwaitingUser.ConjureAwaitingPulseRing, {}), , , ,];
   const obj2 = { variant: "text-xs/semibold", color: "text-brand", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3865.W4DsVo);
+  obj2.children = intl.string(_modDef3868.W4DsVo);
   items[1] = closure_4(Text_Text.Text, obj2);
   const obj3 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3865.E4Gc7e, { host: approval.host });
+  obj3.children = intl2.format(_modDef3868.E4Gc7e, { host: approval.host });
   items[2] = closure_4(Text_Text.Text, obj3);
   let tmp6Result = null;
   if ("" !== reason) {
     const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl3 = util.intl;
     const obj5 = { reason };
-    obj4.children = intl3.format(tmp3(3865)["5poqiN"], obj5);
+    obj4.children = intl3.format(tmp3(3868)["5poqiN"], obj5);
     tmp6Result = closure_4(Text_Text.Text, obj4);
   }
   items[3] = tmp6Result;
@@ -45,7 +45,7 @@ function ConjureHostApprovalCard(arg0) {
     text: null,
   };
   const intl4 = util.intl;
-  obj7.text = intl4.string(_modDef3865.B05C3K);
+  obj7.text = intl4.string(_modDef3868.B05C3K);
   const items1 = [closure_4(components_Button_Button.Button, obj7), ,];
   const obj8 = {
     variant: "secondary",
@@ -56,7 +56,7 @@ function ConjureHostApprovalCard(arg0) {
     text: null,
   };
   const intl5 = util.intl;
-  obj8.text = intl5.string(_modDef3865["rGv+om"]);
+  obj8.text = intl5.string(_modDef3868["rGv+om"]);
   items1[1] = closure_4(components_Button_Button.Button, obj8);
   const obj9 = {
     variant: "secondary",
@@ -67,7 +67,7 @@ function ConjureHostApprovalCard(arg0) {
     text: null,
   };
   const intl6 = util.intl;
-  obj9.text = intl6.string(_modDef3865.vWkaSE);
+  obj9.text = intl6.string(_modDef3868.vWkaSE);
   items1[2] = closure_4(components_Button_Button.Button, obj9);
   obj6.children = items1;
   items[4] = closure_5(Stack_Stack.Stack, obj6);
@@ -77,7 +77,7 @@ function ConjureHostApprovalCard(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { cards: { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, card: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.card = {
@@ -92,7 +92,7 @@ const result = size.fileFinishedImporting("modules/conjure/host_approval/native/
 export function ConjureHostApprovalCards(projectId) {
   projectId = projectId.projectId;
   const tmp = closure_6();
-  const conjureHostApprovals = projectId(10870).useConjureHostApprovals(projectId);
+  const conjureHostApprovals = projectId(10895).useConjureHostApprovals(projectId);
   let tmp2 = null;
   if (0 !== conjureHostApprovals.length) {
     const obj2 = {
@@ -109,39 +109,39 @@ export function ConjureAllowedHostsSetting(projectId) {
   projectId = projectId.projectId;
   let intl = projectId;
   let stringResult = dependencyMap;
-  const conjureAllowedHosts = projectId(10870).useConjureAllowedHosts(projectId);
+  const conjureAllowedHosts = projectId(10895).useConjureAllowedHosts(projectId);
   if (null == conjureAllowedHosts) {
     return null;
   } else {
     let obj2 = { title: null, description: null, hasIcons: false, children: null };
-    let intl2 = intl(1114).intl;
-    obj2.title = intl2.string(_modDef3865.Ufr2wk);
-    const intl3 = intl(1114).intl;
-    obj2.description = intl3.string(_modDef3865.wremls);
+    let intl2 = intl(1113).intl;
+    obj2.title = intl2.string(_modDef3868.Ufr2wk);
+    const intl3 = intl(1113).intl;
+    obj2.description = intl3.string(_modDef3868.wremls);
     if (0 === conjureAllowedHosts.length) {
       const obj3 = { label: null };
-      intl = intl(1114).intl;
-      stringResult = intl.string(_modDef3865.AweHIi);
+      intl = intl(1113).intl;
+      stringResult = intl.string(_modDef3868.AweHIi);
       obj3.label = stringResult;
-      let mapped = closure_4(intl(6969).TableRow, obj3);
+      let mapped = closure_4(intl(6975).TableRow, obj3);
     } else {
       mapped = conjureAllowedHosts.map((label) => {
         closure_0 = label;
         const obj = { label, trailing: null };
         const obj2 = { variant: "secondary", size: "sm", text: null, accessibilityLabel: null, onPress: null };
-        const intl = projectId(1114).intl;
-        obj2.text = intl.string(_modDef3865["4r+tVj"]);
-        const intl2 = projectId(1114).intl;
-        obj2.accessibilityLabel = intl2.formatToPlainString(_modDef3865.mocW6h, { host: label });
+        const intl = projectId(1113).intl;
+        obj2.text = intl.string(_modDef3868["4r+tVj"]);
+        const intl2 = projectId(1113).intl;
+        obj2.accessibilityLabel = intl2.formatToPlainString(_modDef3868.mocW6h, { host: label });
         obj2.onPress = function onPress() {
           return ConjureHostApproval.removeAllowedHost(projectId, closure_0);
         };
-        obj.trailing = closure_1_4(projectId(5629).Button, obj2);
-        return closure_1_4(projectId(6969).TableRow, obj, label);
+        obj.trailing = closure_1_4(projectId(5634).Button, obj2);
+        return closure_1_4(projectId(6975).TableRow, obj, label);
       });
     }
     obj2.children = mapped;
-    closure_4(intl(7054).TableRowGroup, obj2);
+    closure_4(intl(7060).TableRowGroup, obj2);
   }
-  let obj = projectId(10870);
+  let obj = projectId(10895);
 }

@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({
   image: { marginBottom: 32 },
   valueProps: { marginTop: 24, maxWidth: "100%" },
@@ -49,7 +49,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
   }
   items1[1] = imgStyle;
   obj5.style = items1;
-  const items2 = [closure_6(valueProps(5712), obj5), , ,];
+  const items2 = [closure_6(valueProps(5717), obj5), , ,];
   const obj6 = {
     variant: "heading-xl/bold",
     color: "mobile-text-heading-primary",
@@ -73,7 +73,7 @@ export function TwoWayLinkLanding(learnMoreLink) {
     children: body,
   });
   const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-  const tmp10 = valueProps(5712);
+  const tmp10 = valueProps(5717);
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label, index) => {

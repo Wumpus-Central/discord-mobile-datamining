@@ -66,7 +66,7 @@ function useEligibleActiveOutboundPromotions(arg0) {
     });
   }, items3);
 }
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/promotions/PromotionsHooks.tsx");
 

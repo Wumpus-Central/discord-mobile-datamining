@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import FriendSuggestionStore from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
 
 const require = fn;
-const SuggestedFriendSource = fn(14218).SuggestedFriendSource;
+const SuggestedFriendSource = fn(14256).SuggestedFriendSource;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
@@ -42,9 +42,9 @@ export default function useSuggestedFriends(arg0) {
       return _modDef12
         .unionBy(found, mapped, (user) => user.user.id)
         .sort((user, user2) => {
-          const name = added(5063).getName(user.user);
-          const obj = added(5063);
-          return name.localeCompare(added(5063).getName(user2.user));
+          const name = added(5068).getName(user.user);
+          const obj = added(5068);
+          return name.localeCompare(added(5068).getName(user2.user));
         });
     } else {
       return [];

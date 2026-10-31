@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants.tsx";
@@ -14,7 +14,7 @@ const Constants = fn(1072);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   regularMetadataContainer: null,
   assetName: null,
@@ -304,23 +304,23 @@ export default noop.memo(function CardDetailsV2(arg0) {
   let isInImprovedMobileShopLoading;
   ({ collectibleProductState, preferVCPrice, isDisabled } = arg0);
   const tmp = closure_10();
-  const currentUser = isInImprovedMobileShopLoading(8741).useCurrentUser();
-  const obj = isInImprovedMobileShopLoading(8741);
+  const currentUser = isInImprovedMobileShopLoading(8749).useCurrentUser();
+  const obj = isInImprovedMobileShopLoading(8749);
   const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
-  const shopDiscountSource = isInImprovedMobileShopLoading(7725).getShopDiscountSource(currentUser);
-  const obj3 = isInImprovedMobileShopLoading(7725);
-  const token = isInImprovedMobileShopLoading(5591).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-  const obj4 = isInImprovedMobileShopLoading(5591);
-  const obj5 = isInImprovedMobileShopLoading(5006);
-  const obj6 = isInImprovedMobileShopLoading(5006);
-  const hexToRgbaStringResult = obj5.hexToRgbaString(isInImprovedMobileShopLoading(5006).hexWithOpacity(token, 0.9));
-  const obj7 = isInImprovedMobileShopLoading(5006);
-  const obj8 = isInImprovedMobileShopLoading(5006);
-  const hexToRgbaStringResult1 = obj7.hexToRgbaString(isInImprovedMobileShopLoading(5006).hexWithOpacity(token, 0));
-  const cardProductName = isInImprovedMobileShopLoading(9546).getCardProductName(product);
-  const obj9 = isInImprovedMobileShopLoading(9546);
-  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9547).useIsInImprovedMobileShopLoading();
-  const obj10 = isInImprovedMobileShopLoading(9547);
+  const shopDiscountSource = isInImprovedMobileShopLoading(7732).getShopDiscountSource(currentUser);
+  const obj3 = isInImprovedMobileShopLoading(7732);
+  const token = isInImprovedMobileShopLoading(5596).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  const obj4 = isInImprovedMobileShopLoading(5596);
+  const obj5 = isInImprovedMobileShopLoading(5011);
+  const obj6 = isInImprovedMobileShopLoading(5011);
+  const hexToRgbaStringResult = obj5.hexToRgbaString(isInImprovedMobileShopLoading(5011).hexWithOpacity(token, 0.9));
+  const obj7 = isInImprovedMobileShopLoading(5011);
+  const obj8 = isInImprovedMobileShopLoading(5011);
+  const hexToRgbaStringResult1 = obj7.hexToRgbaString(isInImprovedMobileShopLoading(5011).hexWithOpacity(token, 0));
+  const cardProductName = isInImprovedMobileShopLoading(9568).getCardProductName(product);
+  const obj9 = isInImprovedMobileShopLoading(9568);
+  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9569).useIsInImprovedMobileShopLoading();
+  const obj10 = isInImprovedMobileShopLoading(9569);
   const items = [IAPStore];
   const items1 = [isInImprovedMobileShopLoading];
   const stateFromStores = isInImprovedMobileShopLoading(504).useStateFromStores(
@@ -346,7 +346,7 @@ export default noop.memo(function CardDetailsV2(arg0) {
   obj12.colors = items2;
   const obj11 = isInImprovedMobileShopLoading(504);
   const items3 = [
-    closure_8(isInImprovedMobileShopLoading(5619).Text, {
+    closure_8(isInImprovedMobileShopLoading(5624).Text, {
       style: tmp.assetName,
       variant: "heading-sm/bold",
       color: "mobile-text-heading-primary",

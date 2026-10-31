@@ -10,14 +10,14 @@ function OneWayToTwoWayNewTag(markAsDismissed) {
   const items = [markAsDismissed];
   const effect = noop.useEffect(() => markAsDismissed(ContentDismissActionType.UNKNOWN), items);
   const tmp = closure_8();
-  return closure_6(markAsDismissed(1188).NewTag, { containerStyle: closure_8().newContainer, variant: "text-xs/bold" });
+  return closure_6(markAsDismissed(1187).NewTag, { containerStyle: closure_8().newContainer, variant: "text-xs/bold" });
 }
 const View = fn(17).View;
 const Fonts = fn(1072).Fonts;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
@@ -68,7 +68,7 @@ export function OneWayToTwoWayLinkUpsell(newIndicatorDismissibleContent) {
   obj4.contentTypes = items;
   const items1 = [
     closure_6(SelectedDismissibleContentDefault, obj4),
-    closure_6(newIndicatorDismissibleContent(5619).Text, {
+    closure_6(newIndicatorDismissibleContent(5624).Text, {
       style: tmp.title,
       variant: "text-md/semibold",
       children: title,
@@ -79,7 +79,7 @@ export function OneWayToTwoWayLinkUpsell(newIndicatorDismissibleContent) {
   obj2.children = items2;
   const items3 = [
     closure_7(View, obj2),
-    closure_6(newIndicatorDismissibleContent(5619).Text, {
+    closure_6(newIndicatorDismissibleContent(5624).Text, {
       style: tmp.body,
       variant: "text-sm/medium",
       children: body,
@@ -87,10 +87,10 @@ export function OneWayToTwoWayLinkUpsell(newIndicatorDismissibleContent) {
   ];
   const obj7 = { style: tmp.reconnectButton, children: null };
   const obj8 = { text: null, onPress: null };
-  const intl = newIndicatorDismissibleContent(1114).intl;
-  obj8.text = intl.string(newIndicatorDismissibleContent(1114).t.vD60Pv);
+  const intl = newIndicatorDismissibleContent(1113).intl;
+  obj8.text = intl.string(newIndicatorDismissibleContent(1113).t.vD60Pv);
   obj8.onPress = onPress;
-  obj7.children = closure_6(newIndicatorDismissibleContent(5629).Button, obj8);
+  obj7.children = closure_6(newIndicatorDismissibleContent(5634).Button, obj8);
   items3[2] = closure_6(View, obj7);
   obj.children = items3;
   return closure_7(View, obj);

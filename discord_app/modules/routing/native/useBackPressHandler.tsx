@@ -3,7 +3,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import KeyCommands from "../../keyboard/native/KeyCommands.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const BackPressTracking = tmp(6020);
+const BackPressTracking = tmp(6025);
 require = fn;
 const NativeModules = fn(17).NativeModules;
 const size = fn(2);

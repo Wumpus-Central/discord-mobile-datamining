@@ -1,7 +1,7 @@
 // discord_app/modules/app_database/modules/Messages.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
-import _mod4888 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import _mod4893 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import requireSortedDescending from "messages/requireSortedDescending.tsx";
 import isReadableChannel from "messages/isReadableChannel.tsx";
 import KvMessage2 from "messages/KvMessage.tsx";
@@ -138,7 +138,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -285,7 +285,7 @@ prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009,
     guildId,
     channel_id,
     KvMessage.fromMessage(guildId, channel_id, item10009, result),
-    _mod4888.ConflictOptions.Skip,
+    _mod4893.ConflictOptions.Skip,
   );
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
@@ -296,7 +296,7 @@ prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, databa
     guildId,
     channelId,
     KvMessage.fromMessage(guildId, channelId, message, result),
-    _mod4888.ConflictOptions.Replace,
+    _mod4893.ConflictOptions.Replace,
   );
   messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
@@ -351,7 +351,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

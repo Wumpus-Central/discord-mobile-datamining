@@ -19,7 +19,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -56,7 +56,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } else {
                   try {
@@ -191,7 +191,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
                     end({ error: true });
                   } else if (429 === status.status) {
                     failure_statuses.push(429);
-                    let dispatchResult = retry(status.body.retry_after * closure_1(1090).Millis.SECOND);
+                    let dispatchResult = retry(status.body.retry_after * closure_1(1089).Millis.SECOND);
                   } else {
                     let num2 = status.status;
                     if (num2 == null) {
@@ -220,7 +220,7 @@ let closure_6 = async function _fetchApplicationCommandIndex(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp10) {
         c2 = tmp;

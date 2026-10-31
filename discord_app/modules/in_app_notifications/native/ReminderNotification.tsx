@@ -36,15 +36,15 @@ function NotificationBody(channel) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
   const obj2 = channel(504);
-  const hasPreviewableMedia = channel(11003).useHasPreviewableMedia(message);
-  const tmp6 = channel.type === channel(1094).ChannelTypes.DM;
+  const hasPreviewableMedia = channel(11022).useHasPreviewableMedia(message);
+  const tmp6 = channel.type === channel(1093).ChannelTypes.DM;
   let num = 1;
   if (tmp6) {
     num = closure_8;
   }
-  obj3 = channel(11003);
+  obj3 = channel(11022);
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(11003).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(11022).getMessagePreviewTextVariant();
   if (!tmp6) {
     const obj4 = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
     tmp10 = closure_10(MessageNotificationHeaderDefault, obj4);
@@ -56,12 +56,12 @@ function NotificationBody(channel) {
         channel,
         message,
         color: "text-default",
-        layout: tmp(5687).ChannelListLayoutTypes.COZY,
+        layout: tmp(5692).ChannelListLayoutTypes.COZY,
         variant: messagePreviewTextVariant,
         muted: false,
         lineClamp: num,
       };
-      let tmp14 = closure_10(tmp(11020).ChannelRowPreview, obj5);
+      let tmp14 = closure_10(tmp(11039).ChannelRowPreview, obj5);
     }
     const obj6 = { children: null };
     items2[1] = tmp14;
@@ -70,10 +70,10 @@ function NotificationBody(channel) {
   }
   tmp14 = closure_10(MessagePreviewTextDefault, { message, lineClamp: num, showMessageAuthor: true, maxHeight });
   const obj7 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
-  const tmpResult = channel(11003);
+  const tmpResult = channel(11022);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11004);
+const InAppNotificationConstants = fn(11023);
 ({
   IN_APP_NOTIFICATION_MAX_HEIGHT: closure_7,
   NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8,
@@ -82,13 +82,13 @@ const InAppNotificationConstants = fn(11004);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles({
   cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 },
   avatarContainer: { position: "relative" },
   rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN },
 });
-let obj3 = { direction: fn(1188).CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
+let obj3 = { direction: fn(1187).CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let closure_16 = noop.memo(function RightAccessory(message) {
   message = message.message;
   const tmp = closure_13();
@@ -112,8 +112,8 @@ export default noop.memo(function ReminderNotification(notification) {
   const items = [notification];
   const memo = noop.useMemo(() => {
     const obj = { type: "simple", text: null };
-    const intl = notification(1114).intl;
-    obj.text = intl.string(notification(1114).t.Whs8tE);
+    const intl = notification(1113).intl;
+    obj.text = intl.string(notification(1113).t.Whs8tE);
     return obj;
   }, []);
   const callback = noop.useCallback(() => {
@@ -128,7 +128,7 @@ export default noop.memo(function ReminderNotification(notification) {
   }, items);
   let obj = { user: notification.author, guildId: channel.guild_id };
   const tmp2 = closure_10(NotificationAvatar, { user: notification.author, guildId: channel.guild_id });
-  return closure_10(notification(11057).NotificationPressable, {
+  return closure_10(notification(11076).NotificationPressable, {
     icon: closure_10(NotificationAvatar, { user: notification.author, guildId: channel.guild_id }),
     header: memo,
     onPress: callback,

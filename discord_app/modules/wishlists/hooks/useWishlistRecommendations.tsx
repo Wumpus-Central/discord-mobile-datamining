@@ -243,7 +243,7 @@ function useWishlistRecommendationsWithWishlists(userIdsAndWishlistIds) {
     status,
   };
 }
-let closure_8 = fn(7399).WishlistRecommendationReason;
+let closure_8 = fn(7405).WishlistRecommendationReason;
 let closure_9 = 30 * DurationsDefault.Millis.MINUTE;
 let combinedSkusToUserAndReason = {
   state: "success",
@@ -256,7 +256,7 @@ const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistRe
 export function useWishlistRecommendationsForSingleUser(arg0) {
   ({ userId, numItems, source } = arg0);
   if (source === undefined) {
-    source = userId(9455).WishlistFetchSource.USER_PROFILE;
+    source = userId(9477).WishlistFetchSource.USER_PROFILE;
   }
   const items = [userId];
   const effect = noop.useEffect(() => {
@@ -277,13 +277,13 @@ export function useWishlistRecommendationsForSingleUser(arg0) {
     source: null,
   };
   const obj = userId(504);
-  obj2.applicationIds = userId(10646).useWishlistApplicationIds(userId);
+  obj2.applicationIds = userId(10666).useWishlistApplicationIds(userId);
   obj2.numItems = numItems;
   obj2.source = source;
-  const obj3 = userId(10646);
+  const obj3 = userId(10666);
   ({ skusToUserAndReason, wishlistAndRecommendations, status } = useWishlistRecommendationsWithWishlists(obj2));
   const tmp4 = useWishlistRecommendationsWithWishlists(obj2);
-  const wishlistSkuFilter = userId(10647).useWishlistSkuFilter({
+  const wishlistSkuFilter = userId(10667).useWishlistSkuFilter({
     wishlistAndRecommendations,
     skusToUserAndReason,
     userId,
@@ -359,7 +359,7 @@ export function useRecommendationsForSingleUser(source) {
   userId = numItems;
   let USER_PROFILE = source.source;
   if (USER_PROFILE === undefined) {
-    USER_PROFILE = userId(9455).WishlistFetchSource.USER_PROFILE;
+    USER_PROFILE = userId(9477).WishlistFetchSource.USER_PROFILE;
   }
   const obj = { userIdsAndWishlistIds: null, applicationIds: null, numItems: null, source: null };
   let items = [userId];
@@ -376,7 +376,7 @@ export function useRecommendationsForSingleUser(source) {
     return items;
   }, items2);
   const obj2 = userId(504);
-  obj.applicationIds = userId(10646).useWishlistApplicationIds(userId);
+  obj.applicationIds = userId(10666).useWishlistApplicationIds(userId);
   obj.numItems = numItems;
   obj.source = USER_PROFILE;
   const tmp4 = useWishlistRecommendationsWithWishlists(obj);

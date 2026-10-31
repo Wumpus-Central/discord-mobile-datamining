@@ -17,7 +17,7 @@ let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -227,7 +227,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -339,7 +339,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
     }
   })();
 };
-let closure_7 = fn(7263).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+let closure_7 = fn(7269).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
 const size = fn(2);

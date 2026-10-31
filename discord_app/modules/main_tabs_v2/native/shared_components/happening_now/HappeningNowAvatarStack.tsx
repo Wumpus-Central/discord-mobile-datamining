@@ -13,11 +13,11 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(14843).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(14881).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 createStyles.createStyles((arg0, marginLeft) => {
   const obj = {
     avatarStack: { flexDirection: "row" },

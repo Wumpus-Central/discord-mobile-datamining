@@ -1,6 +1,6 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -16,11 +16,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8814)();
+  const tmp5 = first(8822)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8815).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8823).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(575).unsafe_rawColors.PRIMARY_800);
@@ -39,11 +39,11 @@ function useDominantRGBFromImage(arg0, arg1) {
       let nextPromise = dependencyMap;
       if (null == VideoBackgroundManagerDefault.cachedDominantColors[closure_0]) {
         if (typeof first === "number") {
-          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1894);
+          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1893);
           getDominantColorsLocalAsset = dominantColorsLocalAsset.getDominantColorsLocalAsset;
           let dominantColorsLocalAsset1 = getDominantColorsLocalAsset(timestampProducer.resolveAssetSource(first));
         } else {
-          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1894);
+          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1893);
           dominantColorsLocalAsset1 = dominantColorsLocalAsset2.getDominantColors(
             timestampProducer.resolveAssetSource(first),
           );
@@ -53,13 +53,13 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(8815).cachedDominantColors[closure_1_0] = obj;
+            first(8823).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(8815).cachedDominantColors[tmp4]);
+        closure_3(getDominantColorsLocalAsset(8823).cachedDominantColors[tmp4]);
       }
     }
   }, items);
@@ -169,7 +169,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({
   videoBackground: { alignItems: "center" },
   videoDetailsSpacer: { paddingTop: 12 },
@@ -189,12 +189,12 @@ const memoizeResult = apply.memoize((uri) => {
   }
   return tmp;
 });
-VideoBackground.AvatarSizes = fn(1188).AvatarSizes;
+VideoBackground.AvatarSizes = fn(1187).AvatarSizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
 export default noop.memo(VideoBackground);
-export const AvatarSizes = fn(1188).AvatarSizes;
+export const AvatarSizes = fn(1187).AvatarSizes;
 export const memoizedImageSource = memoizeResult;
 export { useDominantRGBFromImage };
 export function useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult) {

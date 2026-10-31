@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({
   spinner: { height: 32, width: 32 },
   center: { alignItems: "center", justifyContent: "center" },
@@ -37,7 +37,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
   c9 = undefined;
   let onReady;
   const tmp2 = onReady();
-  const surfaceDirectRendererExperiment = resizeMode(5883).useSurfaceDirectRendererExperiment(userId, {
+  const surfaceDirectRendererExperiment = resizeMode(5888).useSurfaceDirectRendererExperiment(userId, {
     location: "VideoRenderer",
   });
   let tmp6 = first1(noop.useState(0), 2);
@@ -52,10 +52,10 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
   const tmp13 = first1(noop.useState(0), 2);
   const first3 = tmp13[0];
   closure_8 = tmp15;
-  let obj = resizeMode(5883);
+  let obj = resizeMode(5888);
   [tmp17, c9] = first1(noop.useState(true), 2);
-  width(11728)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-  onReady = width(11730)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+  width(11765)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+  onReady = width(11767)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
   noop.useRef(null);
   const ref1 = noop.useRef(null);
   ref = noop.useRef({ width: 0, height: 0 });
@@ -83,7 +83,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
     const layout = nativeEvent.nativeEvent.layout;
     width = layout.width;
     const height = layout.height;
-    let isAndroidResult = resizeMode(1376).isAndroid();
+    let isAndroidResult = resizeMode(1375).isAndroid();
     if (!isAndroidResult) {
       isAndroidResult = null == ref.current;
     }
@@ -111,7 +111,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
       });
       tmp5 = width <= 0 || height <= 0;
     }
-    const obj = resizeMode(1376);
+    const obj = resizeMode(1375);
   }, []);
   const memo = noop.useMemo(() => {
     if (0 !== first) {
@@ -142,7 +142,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
   }, items2);
   const tmp16 = first1(noop.useState(true), 2);
   const items3 = [width, first1, first2, first3, memo];
-  const store = resizeMode(8894).useStore((orientation) => orientation.orientation);
+  const store = resizeMode(8903).useStore((orientation) => orientation.orientation);
   const layoutEffect = noop.useLayoutEffect(() => {
     let isAndroidResult = PlatformUtils.isAndroid();
     if (isAndroidResult) {
@@ -219,10 +219,10 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
   }, items9);
   if (tmp17) {
     const obj3 = { animate: true, style: tmp2.spinner };
-    tmp35 = closure_8(tmp18(11732), obj3);
+    tmp35 = closure_8(tmp18(11769), obj3);
   }
-  const tmp37 = store === resizeMode(8894).OrientationType.PORTRAIT;
-  const obj2 = resizeMode(8894);
+  const tmp37 = store === resizeMode(8903).OrientationType.PORTRAIT;
+  const obj2 = resizeMode(8903);
   if (tmp3Result.isAndroid()) {
     const obj4 = { onLayout: callback2, style: null, children: null };
     const items10 = [tmp2.center, closure_6.absoluteFillObject];
@@ -244,10 +244,10 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
       onReady: callback1,
       style: memo2,
     };
-    const items11 = [closure_8(tmp18(11735), obj7), tmp35];
+    const items11 = [closure_8(tmp18(11772), obj7), tmp35];
     obj6.children = items11;
     obj5.children = c9(first2, obj6);
-    const items12 = [closure_8(tmp18(11733), obj5)];
+    const items12 = [closure_8(tmp18(11770), obj5)];
     const obj8 = { style: memo5, children: null };
     let tmp56 = null;
     if (!tmp17) {
@@ -267,7 +267,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
     items12[1] = closure_8(first2, obj8);
     obj4.children = items12;
     let tmp43Result1 = c9(tmp52, obj4);
-    const tmp18Result = tmp18(11733);
+    const tmp18Result = tmp18(11770);
   } else if (flag) {
     const obj9 = {
       ref,
@@ -292,7 +292,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
       onReady: callback1,
       style: memo1,
     };
-    const items13 = [closure_8(tmp18(11735), obj12)];
+    const items13 = [closure_8(tmp18(11772), obj12)];
     let tmp48 = null;
     if (tmp37) {
       let renderTagResult1;
@@ -328,7 +328,7 @@ export default noop.memo(function VideoRenderer(gestureEnabled) {
       onReady: callback1,
       style: memo1,
     };
-    const items17 = [closure_8(tmp18(11735), obj15), tmp35];
+    const items17 = [closure_8(tmp18(11772), obj15), tmp35];
     obj14.children = items17;
     tmp43Result1 = c9(first2, obj14);
   }

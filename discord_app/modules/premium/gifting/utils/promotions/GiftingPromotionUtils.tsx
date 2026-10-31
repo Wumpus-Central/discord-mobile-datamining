@@ -10,7 +10,7 @@ import PromotionsStore from "../../../promotions/PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SubscriptionPlans = fn(1386).SubscriptionPlans;
+const SubscriptionPlans = fn(1385).SubscriptionPlans;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 

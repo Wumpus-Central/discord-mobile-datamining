@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -161,7 +161,7 @@ export default function ShareEmbed(embed) {
       let tmp9Result = null != memo;
       if (tmp9Result) {
         let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-        tmp9Result = closure_5(isLoadingEmbed(5712), obj2);
+        tmp9Result = closure_5(isLoadingEmbed(5717), obj2);
       }
       let obj3 = { children: null };
       const items6 = [tmp9Result];

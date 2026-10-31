@@ -99,12 +99,12 @@ function useFrecentApps(onlyActivityApps) {
     return found2;
   }, items5);
 }
-const FetchState = fn(7270).FetchState;
-const WATCH_YOUTUBE_PROD_APP_ID = fn(2019).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(6030);
+const FetchState = fn(7276).FetchState;
+const WATCH_YOUTUBE_PROD_APP_ID = fn(2018).WATCH_YOUTUBE_PROD_APP_ID;
+const ApplicationCommandConstants = fn(6035);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
-let items = [fn(1993).ApplicationCommandType.CHAT, fn(1993).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1992).ApplicationCommandType.CHAT, fn(1992).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 filters.commandTypes = items;
 const options = {
   placeholderCount: 0,

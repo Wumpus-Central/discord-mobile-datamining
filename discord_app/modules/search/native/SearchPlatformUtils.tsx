@@ -163,11 +163,11 @@ function fetchInitialMessages(searchContext) {
   } else {
     const searchTabFetchId = require("SearchUtils").getSearchTabFetchId(searchContext, searchTabs[0], queryString);
     if (!SearchMessageStore.getIsFetching(searchTabFetchId)) {
-      const result = queryString(13870).clearAllSearchMesssages();
-      const obj3 = queryString(13870);
+      const result = queryString(13905).clearAllSearchMesssages();
+      const obj3 = queryString(13905);
       const obj5 = { searchContext };
-      queryString(13857).trackSearchStarted(obj5);
-      const obj4 = queryString(13857);
+      queryString(13892).trackSearchStarted(obj5);
+      const obj4 = queryString(13892);
       const obj7 = {
         searchContext,
         searchTabs,
@@ -189,14 +189,14 @@ function fetchInitialMessages(searchContext) {
       }
       const obj8 = { cursor };
       obj7.pagination = obj8;
-      const obj6 = queryString(13870);
-      obj7.trackExactTotalHits = tmp6(4834).SearchResultExactCountEnabled.getSetting();
+      const obj6 = queryString(13905);
+      obj7.trackExactTotalHits = tmp6(4839).SearchResultExactCountEnabled.getSetting();
       obj7.searchMode = constants5.NEWEST;
-      const SearchResultExactCountEnabled = tmp6(4834).SearchResultExactCountEnabled;
-      obj7.searchAnalyticsIds = tmp6(13843).getSearchAnalyticsIds(searchContext, queryString(13858));
+      const SearchResultExactCountEnabled = tmp6(4839).SearchResultExactCountEnabled;
+      obj7.searchAnalyticsIds = tmp6(13878).getSearchAnalyticsIds(searchContext, queryString(13893));
       const tabMessages = obj6.fetchTabMessages(obj7);
-      const tmp6Result = tmp6(13843);
-      const obj9 = { searchContext, searchQueryString: queryString, SearchSessionAnalyticsManager: queryString(13858) };
+      const tmp6Result = tmp6(13878);
+      const obj9 = { searchContext, searchQueryString: queryString, SearchSessionAnalyticsManager: queryString(13893) };
       const answer = SmartSearchActionCreatorsAll.fetchAnswer(obj9);
     }
     const obj = require("SearchUtils");
@@ -218,7 +218,7 @@ function syncAutocomplete(searchContext) {
     queryString,
   });
 }
-const SearchConstants = fn(9806);
+const SearchConstants = fn(9827);
 ({
   CHANNEL_SEARCH_INITIAL_MESSAGE_TABS: closure_7,
   MAX_SEARCH_RESULTS_LIMIT: closure_8,
@@ -229,11 +229,11 @@ const SearchConstants = fn(9806);
   SearchLinkTypes: map1,
   SearchMediaTypes: closure_14,
 } = SearchConstants);
-const SearchPlatformConstants = fn(13852);
+const SearchPlatformConstants = fn(13887);
 ({ PLATFORM_REGEX_ICON_PAIRS: closure_15, SEARCH_TEXT_INPUT_DEBOUNCE_TIME } = SearchPlatformConstants);
 const Constants = fn(1072);
 ({ MessageFlags: closure_16, SearchModes: closure_17, SearchTypes: closure_18 } = Constants);
-let closure_19 = fn(13838).SUGGESTED_SEARCHES_WINDOW_SIZE;
+let closure_19 = fn(13873).SUGGESTED_SEARCHES_WINDOW_SIZE;
 let obj = {
   performKeyboardAwareNavigation,
   delayUntilNavigationComplete,
@@ -296,14 +296,14 @@ obj.fetchNextMessages = function fetchNextMessages(searchContext, tab, onFetchSu
       }
       const obj6 = { cursor };
       obj5.pagination = obj6;
-      const obj4 = queryString(13870);
+      const obj4 = queryString(13905);
       const tmp17 = queryString;
-      obj5.trackExactTotalHits = tmp2(4834).SearchResultExactCountEnabled.getSetting();
+      obj5.trackExactTotalHits = tmp2(4839).SearchResultExactCountEnabled.getSetting();
       obj5.searchMode = constants5.NEWEST;
-      const SearchResultExactCountEnabled2 = tmp2(4834).SearchResultExactCountEnabled;
-      obj5.searchAnalyticsIds = tmp2(13843).getSearchAnalyticsIds(searchContext, tmp17(13858));
+      const SearchResultExactCountEnabled2 = tmp2(4839).SearchResultExactCountEnabled;
+      obj5.searchAnalyticsIds = tmp2(13878).getSearchAnalyticsIds(searchContext, tmp17(13893));
       tabMessages = obj4.fetchTabMessages(obj5);
-      const tmp2Result = tmp2(13843);
+      const tmp2Result = tmp2(13878);
     }
     return tabMessages;
   } else {
@@ -319,7 +319,7 @@ obj.fetchNextMessages = function fetchNextMessages(searchContext, tab, onFetchSu
     } else if (null == totalCount) {
       const tmp10 = null != cursor1;
     }
-    SearchResultExactCountEnabled = tmp2(4834).SearchResultExactCountEnabled;
+    SearchResultExactCountEnabled = tmp2(4839).SearchResultExactCountEnabled;
   }
   const obj2 = require("SearchUtils");
 };
@@ -356,10 +356,10 @@ obj.subscribeSearchQueryState = function subscribeSearchQueryState(searchContext
   closure_2 = fn2;
   let tmp = arg3;
   function callback() {
-    const tmp = f104872(SearchQueryStore.getManager(closure_0));
+    const tmp = f105123(SearchQueryStore.getManager(closure_0));
     if (null == closure_3) {
       closure_3 = tmp;
-      f104873(tmp, closure_3);
+      f105124(tmp, closure_3);
     }
   }
   const tmp2 = fn(SearchQueryStore.getManager(searchContext));
@@ -376,11 +376,11 @@ obj.subscribeSearchQueryState = function subscribeSearchQueryState(searchContext
 obj.subscribeTextInputValue = function subscribeTextInputValue(searchContext, debounceResult, arg2) {
   searchContext = debounceResult;
   let flag = arg2;
-  const f104872 = (getTextInputValue) => ({
+  const f105123 = (getTextInputValue) => ({
     textInputValue: getTextInputValue.getTextInputValue(),
     textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput(),
   });
-  const f104873 = (textInputValue, textInputValue2) => {
+  const f105124 = (textInputValue, textInputValue2) => {
     textInputValue = undefined;
     if (textInputValue2 != null) {
       textInputValue = textInputValue2.textInputValue;
@@ -388,10 +388,10 @@ obj.subscribeTextInputValue = function subscribeTextInputValue(searchContext, de
     searchContext(textInputValue.textInputValue, textInputValue, textInputValue.textInputChangedFromInput);
   };
   function callback() {
-    const tmp = f104872(SearchQueryStore.getManager(closure_0));
+    const tmp = f105123(SearchQueryStore.getManager(closure_0));
     if (null == closure_3) {
       closure_3 = tmp;
-      f104873(tmp, closure_3);
+      f105124(tmp, closure_3);
     }
   }
   const manager = SearchQueryStore.getManager(searchContext);
@@ -414,7 +414,7 @@ let result = size.fileFinishedImporting("modules/search/native/SearchPlatformUti
 
 export default obj;
 export function getMedia(searchContext, items1) {
-  guildIdFromSearchContext = guildIdFromSearchContext(13843).getGuildIdFromSearchContext(searchContext);
+  guildIdFromSearchContext = guildIdFromSearchContext(13878).getGuildIdFromSearchContext(searchContext);
   const items = [];
   let item = items1.forEach((getContentMessage) => {
     closure_0 = getContentMessage;
@@ -490,13 +490,13 @@ export function getMedia(searchContext, items1) {
         obj = MediaSourceUtil;
       });
     }
-    let result = guildIdFromSearchContext(8831).extractMediaFromMessageComponents(
+    let result = guildIdFromSearchContext(8839).extractMediaFromMessageComponents(
       getContentMessage,
       contentMessage,
       closure_0,
     );
     const iter = result[Symbol.iterator]();
-    let obj = guildIdFromSearchContext(8831);
+    let obj = guildIdFromSearchContext(8839);
     while (iter !== undefined) {
       let obj6 = {
         type: constants.COMPONENT,
@@ -522,7 +522,7 @@ export function getMedia(searchContext, items1) {
       mediaIndex.push(obj7);
       mediaIndex = mediaIndex + 1;
     }
-    obj3 = guildIdFromSearchContext(1397);
+    obj3 = guildIdFromSearchContext(1396);
   });
   return items;
 }

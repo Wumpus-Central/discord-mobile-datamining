@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/PencilSparkleIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod14476 from "../../../../../../../_runtime/metro/14476__.js";
+import _mod14514 from "../../../../../../../_runtime/metro/14514__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function PencilSparkleIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14476, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14514, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

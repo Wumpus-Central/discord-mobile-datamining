@@ -30,7 +30,7 @@ function ConversationNavigatorHeader(channelId) {
     variant: "heading-lg/semibold",
     subtitleColor: "text-muted",
   };
-  obj2.children = jsx(channelId(9791).GenericHeaderTitle, {
+  obj2.children = jsx(channelId(9812).GenericHeaderTitle, {
     title: channelId.title,
     subtitle: useChannelNameDefault(stateFromStores, true),
     variant: "heading-lg/semibold",
@@ -54,7 +54,7 @@ function HeaderWithBorder(shouldHandleSafeArea) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = {
     flex: 1,

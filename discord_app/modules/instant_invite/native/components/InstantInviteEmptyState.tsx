@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FreeFormTextInputDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 import InstantInviteUtilsDefault from "../../../../utils/InstantInviteUtils.tsx";
-import _modDef9139 from "../../../../../_runtime/metro/09139__.js";
+import _modDef9158 from "../../../../../_runtime/metro/09158__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { padding: 16 },
   emptyStateContainer: { padding: 0, marginBottom: 16 },
@@ -46,15 +46,15 @@ export default function InstantInviteEmptyState(link) {
     containerStyle: tmp.emptyStateContainer,
     imageStyle: tmp.emptyStateArt,
     titleStyle: tmp.emptyStateTitle,
-    source: _modDef9139,
+    source: _modDef9158,
     title: null,
     body: null,
   };
-  const intl = stateFromStores(1114).intl;
-  obj3.title = intl.string(stateFromStores(1114).t.tQc0l8);
-  const intl2 = stateFromStores(1114).intl;
-  obj3.body = intl2.string(stateFromStores(1114).t.DXgdcD);
-  const items1 = [closure_5(stateFromStores(1188).RefreshEmptyState, obj3), , ,];
+  const intl = stateFromStores(1113).intl;
+  obj3.title = intl.string(stateFromStores(1113).t.tQc0l8);
+  const intl2 = stateFromStores(1113).intl;
+  obj3.body = intl2.string(stateFromStores(1113).t.DXgdcD);
+  const items1 = [closure_5(stateFromStores(1187).RefreshEmptyState, obj3), , ,];
   const obj4 = { style: tmp.linkContainer, children: null };
   const obj5 = {
     accessibilityRole: "button",
@@ -71,15 +71,15 @@ export default function InstantInviteEmptyState(link) {
   }
   obj5.value = str;
   obj5.style = tmp.inviteInput;
-  obj5.clearButtonVisibility = stateFromStores(1188).ClearButtonVisibility.NEVER;
+  obj5.clearButtonVisibility = stateFromStores(1187).ClearButtonVisibility.NEVER;
   const items2 = [closure_5(FreeFormTextInputDefault, obj5)];
   const obj6 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
-  const intl3 = tmp2(1114).intl;
-  obj6.accessibilityLabel = intl3.string(stateFromStores(1114).t["3D5yo/"]);
+  const intl3 = tmp2(1113).intl;
+  obj6.accessibilityLabel = intl3.string(stateFromStores(1113).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(7555).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(6974).PressableOpacity, obj6);
+  obj6.children = closure_5(stateFromStores(7561).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(6980).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
   const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -87,10 +87,10 @@ export default function InstantInviteEmptyState(link) {
     obj7.children = null;
     items1[2] = closure_5(tmp10, obj7);
     const obj8 = { text: null, onPress: null };
-    const intl5 = tmp2(1114).intl;
-    obj8.text = intl5.string(tmp2(1114).t.Ej3B3Y);
+    const intl5 = tmp2(1113).intl;
+    obj8.text = intl5.string(tmp2(1113).t.Ej3B3Y);
     obj8.onPress = onShare;
-    items1[3] = closure_5(tmp2(5629).Button, obj8);
+    items1[3] = closure_5(tmp2(5634).Button, obj8);
     obj2.children = items1;
     return closure_6(View, obj2);
   } else {
@@ -114,11 +114,11 @@ export default function InstantInviteEmptyState(link) {
       str5 = str6;
     }
     if (0 === stateFromStores.maxAge) {
-      let dqPWMN = tmp2(1114).t["99ISmn"];
+      let dqPWMN = tmp2(1113).t["99ISmn"];
     } else {
-      dqPWMN = tmp2(1114).t.dqPWMN;
+      dqPWMN = tmp2(1113).t.dqPWMN;
     }
-    const intl4 = tmp2(1114).intl;
+    const intl4 = tmp2(1113).intl;
     const obj9 = { maxAge: str3, maxUses: str5 };
     intl4.format(dqPWMN, obj9);
     const tmp8Result = InstantInviteUtilsDefault;

@@ -12,13 +12,13 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const StageChannelListStore = fn(11987);
+const StageChannelListStore = fn(12025);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } =
   StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(6703).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(6709).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let cutout = { direction: fn(1188).CutoutDirection.RIGHT, radius: 13, inset: -6 };
+let cutout = { direction: fn(1187).CutoutDirection.RIGHT, radius: 13, inset: -6 };
 let closure_11 = { STREAM: 0, [0]: "STREAM", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE" };
 let closure_12 = noop.memo(function StageChannelCallListRenderer(channel) {
   channel = channel.channel;
@@ -300,10 +300,10 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(12014).useThrottleDurationForChannel(channel.id);
-  width = isScreenLandscape(1492)().width;
-  let obj = width(12014);
-  isScreenLandscape = width(8765).useIsScreenLandscape();
+  const throttleDurationForChannel = width(12052).useThrottleDurationForChannel(channel.id);
+  width = isScreenLandscape(1491)().width;
+  let obj = width(12052);
+  isScreenLandscape = width(8773).useIsScreenLandscape();
   const items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
@@ -317,9 +317,9 @@ export default function StageChannelCallList(channel) {
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(8765);
+  const obj2 = width(8773);
   const tmp4 = _slicedToArray(
-    width(12014).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
+    width(12052).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
     2,
   );
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });

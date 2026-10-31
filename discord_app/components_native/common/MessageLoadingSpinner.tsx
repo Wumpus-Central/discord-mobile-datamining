@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let result = null;
 if (!PlatformUtils.isAndroid()) {
   result = fn(17).requireNativeComponent("DCDMessageLoadingSpinner");

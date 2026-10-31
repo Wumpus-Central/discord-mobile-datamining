@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalGuildSpace.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef2441 from "../../guild_space/GuildSpace.messages.js";
+import _modDef2442 from "../../guild_space/GuildSpace.messages.js";
 import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
 import ServerHubAnalytics from "../../guild_space/ServerHubAnalytics.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -33,7 +33,7 @@ const Constants = fn(1072);
 ({ Permissions: metroRequire, SystemChannelFlags: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1 }, content: { paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -62,53 +62,53 @@ export default function GuildSettingsModalGuildSpace(contentContainerStyle) {
     obj4.contentContainerStyle = items3;
     const obj5 = { style: tmp.stackPadding, spacing: nativeDefault.space.PX_24, children: null };
     const obj6 = { title: null, description: null, hasIcons: false, children: null };
-    const intl = tmp2(1114).intl;
-    obj6.title = intl.string(tmp2(1114).t["0JLdD3"]);
-    const intl2 = tmp2(1114).intl;
-    obj6.description = intl2.string(tmp2(1114).t.Xa1KEN);
+    const intl = tmp2(1113).intl;
+    obj6.title = intl.string(tmp2(1113).t["0JLdD3"]);
+    const intl2 = tmp2(1113).intl;
+    obj6.description = intl2.string(tmp2(1113).t.Xa1KEN);
     const obj7 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-      settingType: tmp2(19599).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+      settingType: tmp2(19656).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
       label: null,
       subLabel: null,
       disabled: null,
     };
-    const intl3 = tmp2(1114).intl;
-    obj7.label = intl3.string(_modDef2441.btBTIw);
-    const intl4 = tmp2(1114).intl;
-    obj7.subLabel = intl4.string(tmp2(1114).t.n3aRYQ);
+    const intl3 = tmp2(1113).intl;
+    obj7.label = intl3.string(_modDef2442.btBTIw);
+    const intl4 = tmp2(1113).intl;
+    obj7.subLabel = intl4.string(tmp2(1113).t.n3aRYQ);
     obj7.disabled = !stateFromStores1;
     const items4 = [closure_8(GuildSpaceSystemMessageSwitch, obj7), ,];
     const obj8 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-      settingType: tmp2(19599).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+      settingType: tmp2(19656).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
       label: null,
       disabled: null,
     };
-    const intl5 = tmp2(1114).intl;
-    obj8.label = intl5.string(tmp2(1114).t["9tlK5J"]);
+    const intl5 = tmp2(1113).intl;
+    obj8.label = intl5.string(tmp2(1113).t["9tlK5J"]);
     obj8.disabled = !stateFromStores1;
     items4[1] = closure_8(GuildSpaceSystemMessageSwitch, obj8);
     const obj9 = {
       guild: stateFromStores,
       flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
-      settingType: tmp2(19599).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
+      settingType: tmp2(19656).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
       label: null,
       subLabel: null,
       disabled: null,
     };
-    const intl6 = tmp2(1114).intl;
-    obj9.label = intl6.string(_modDef2441["5xxUI2"]);
-    const intl7 = tmp2(1114).intl;
-    obj9.subLabel = intl7.string(_modDef2441.FMGoDB);
+    const intl6 = tmp2(1113).intl;
+    obj9.label = intl6.string(_modDef2442["5xxUI2"]);
+    const intl7 = tmp2(1113).intl;
+    obj9.subLabel = intl7.string(_modDef2442.FMGoDB);
     obj9.disabled = !stateFromStores1;
     items4[2] = closure_8(GuildSpaceSystemMessageSwitch, obj9);
     obj6.children = items4;
-    obj5.children = closure_9(tmp2(7054).TableRowGroup, obj6);
-    obj4.children = closure_8(tmp2(6022).Stack, obj5);
-    const items5 = [closure_8(tmp2(8169).Form, obj4), closure_8(tmp2(5601).NavScrim, {})];
+    obj5.children = closure_9(tmp2(7060).TableRowGroup, obj6);
+    obj4.children = closure_8(tmp2(6027).Stack, obj5);
+    const items5 = [closure_8(tmp2(8177).Form, obj4), closure_8(tmp2(5606).NavScrim, {})];
     obj3.children = items5;
     tmp6 = closure_9(closure_10, obj3);
   }

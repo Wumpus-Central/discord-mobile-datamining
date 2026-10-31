@@ -13,10 +13,10 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10982);
+const ChannelCallConstants = fn(11001);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5676).ParticipantTypes;
-const timeout = new fn(4853).Timeout();
+const ParticipantTypes = fn(5681).ParticipantTypes;
+const timeout = new fn(4858).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -30,7 +30,7 @@ let size = {
   y: "Path",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8894).OrientationType.PORTRAIT,
+  screenOrientation: fn(8903).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,
@@ -41,7 +41,7 @@ const size1 = {
   y: "Path",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8894).OrientationType.PORTRAIT,
+  screenOrientation: fn(8903).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,
@@ -61,7 +61,7 @@ export function setFocus(focus) {
 }
 export function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1260).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1259).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 }
 export function resetFocusTimer() {
   timeout.stop();
@@ -96,7 +96,7 @@ export function setVoiceChatDrawerState(embeddedActivityLocationChannelId, CLOSE
 }
 export const togglePipFocus = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1260).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1259).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 export function useIsVoiceChatFocused() {
   const voiceChatDrawerState = obj3().voiceChatDrawerState;

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointPressable from "../CheckpointPressable.tsx";
@@ -89,13 +89,13 @@ function TraitTab(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6061);
+const CheckpointConstants = fn(6066);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [fn(6429).CheckpointCustomizationOption.BASE, fn(6429).CheckpointCustomizationOption.OUTFIT_COLOR];
+let items = [fn(6434).CheckpointCustomizationOption.BASE, fn(6434).CheckpointCustomizationOption.OUTFIT_COLOR];
 let closure_10 = items.length + 1;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 },
   row: null,
@@ -244,7 +244,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       } else {
         const obj = { selectedOption: activeCustomizationOption, onSelectOption };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(13640, dependencyMap.paths),
+          asyncRequireImpl(13675, dependencyMap.paths),
           "CheckpointFinalizeTraitPicker",
           obj,
         );

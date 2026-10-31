@@ -6,7 +6,7 @@ import useWindowDimensions from "../../modules/screen/useWindowDimensions.native
 import ReanimatedRexportDefault from "../../modules/reanimated/ReanimatedRexport.tsx";
 import timing from "../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../design/animation/reanimated/spring/spring.tsx";
-import _modDef7100 from "../../../_runtime/metro/07100__.js";
+import _modDef7106 from "../../../_runtime/metro/07106__.js";
 import Upload from "../../lib/uploader/Upload.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../modules/media_uploads/native/showUploadPreviewActionSheet.tsx";
@@ -390,14 +390,14 @@ class ImageCarouselRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7694).DraftType;
-const ImageCarouselConstants = fn(10507);
+const DraftType = fn(7701).DraftType;
+const ImageCarouselConstants = fn(10527);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   container: { width: "100%" },
   pressableContainer: { marginHorizontal: 4 },
@@ -557,12 +557,12 @@ export default noop.memo(function ImageCarousel(arg0) {
   return closure_12(ImageCarouselRow, obj);
 });
 export function useTileEntranceAnimatedStyle(arg0) {
-  sharedValue = sharedValue(5090).useSharedValue(0);
+  sharedValue = sharedValue(5095).useSharedValue(0);
   const items = [sharedValue, arg0];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  const obj = sharedValue(5090);
+  const obj = sharedValue(5095);
   const fn = function l() {
     const obj = { opacity: null, transform: null };
     const obj3 = { duration: 300, easing: null };
@@ -579,12 +579,12 @@ export function useTileEntranceAnimatedStyle(arg0) {
     obj.transform = items;
     return obj;
   };
-  const obj2 = sharedValue(5090);
+  const obj2 = sharedValue(5095);
   fn.__closure = {
-    withTiming: sharedValue(5249).withTiming,
+    withTiming: sharedValue(5254).withTiming,
     animatedStylePropValue: sharedValue,
-    STANDARD_EASING: sharedValue(1188).STANDARD_EASING,
-    withSpring: sharedValue(5632).withSpring,
+    STANDARD_EASING: sharedValue(1187).STANDARD_EASING,
+    withSpring: sharedValue(5637).withSpring,
   };
   fn.__workletHash = 14458898683767;
   fn.__initData = __initData;

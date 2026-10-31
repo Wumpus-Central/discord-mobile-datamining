@@ -29,7 +29,7 @@ let closure_8 = async function _stopLurkingAll() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_8 = async function _stopLurkingAll() {
                           _null = null;
                         }
                         closure_130_1 = _null;
-                        const HTTP = closure_0(1283).HTTP;
+                        const HTTP = closure_0(1282).HTTP;
                         const request = {
                           url: closure_2_6.GUILD_LEAVE(closure_0),
                           body: { lurking: true },
@@ -123,7 +123,7 @@ let closure_8 = async function _stopLurkingAll() {
           return obj;
         }
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp13) {
         c1 = tmp;
         throw tmp13;

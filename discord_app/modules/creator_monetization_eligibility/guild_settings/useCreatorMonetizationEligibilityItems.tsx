@@ -39,7 +39,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -103,7 +103,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
             tmp13();
           }
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp16) {
           c2 = tmp;
           throw tmp16;
@@ -156,8 +156,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let handleContactSupportClick;
       if (!noRecentViolations) {
         handleContactSupportClick = function handleContactSupportClick() {
-          const tmp = onEligibilityBecameStale(5700);
-          return tmp(onEligibilityBecameStale(2062).getSubmitRequestURL());
+          const tmp = onEligibilityBecameStale(5705);
+          return tmp(onEligibilityBecameStale(2061).getSubmitRequestURL());
         };
       }
       obj2.actionHandler = handleContactSupportClick;

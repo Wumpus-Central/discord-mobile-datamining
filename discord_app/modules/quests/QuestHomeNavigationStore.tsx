@@ -2,7 +2,12 @@
 import ZustandStore from "../../lib/ZustandStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const zustandStore = ZustandStore.createZustandStore(() => ({ sort: null, filter: null, scrollToQuestId: null }));
+const zustandStore = ZustandStore.createZustandStore(() => ({
+  sort: null,
+  filter: null,
+  scrollToQuestId: null,
+  scrollToQuestsSection: false,
+}));
 const result = size.fileFinishedImporting("modules/quests/QuestHomeNavigationStore.tsx");
 
 export default zustandStore;

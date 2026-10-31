@@ -4,7 +4,7 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const createExperiment = fn(5231);
+const createExperiment = fn(5236);
 let obj2 = {
   kind: "guild",
   id: "2026-06_guild_rooms",

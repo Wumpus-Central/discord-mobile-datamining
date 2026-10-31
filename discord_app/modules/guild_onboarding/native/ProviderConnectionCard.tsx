@@ -55,7 +55,7 @@ export default function ProviderConnectionCard(connection) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -70,8 +70,8 @@ export default function ProviderConnectionCard(connection) {
                 return obj3;
               } else {
                 const obj4 = {};
-                const obj5 = v3(1253);
-                const merged = Object.assign(provider_id(5755).collectGuildAnalyticsMetadata(guildId));
+                const obj5 = v3(1252);
+                const merged = Object.assign(provider_id(5760).collectGuildAnalyticsMetadata(guildId));
                 obj4.connection_type = "provider";
                 provider_id = connection.provider_id;
                 if (provider_id == null) {
@@ -94,7 +94,7 @@ export default function ProviderConnectionCard(connection) {
               return obj;
             } else {
               v3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } catch (tmp9) {
             v3 = tmp;

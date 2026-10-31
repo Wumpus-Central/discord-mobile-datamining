@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9792).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9813).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = {
     header: {

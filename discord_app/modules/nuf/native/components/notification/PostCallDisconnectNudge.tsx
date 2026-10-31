@@ -1,6 +1,6 @@
 // discord_app/modules/nuf/native/components/notification/PostCallDisconnectNudge.tsx
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PushNotificationActionCreators from "../../../../../actions/native/PushNotificationActionCreators.tsx";
 import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet.tsx";
@@ -10,8 +10,8 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const PermissionPromptType = fn(13923).PermissionPromptType;
-const NotificationPermissionConstants = fn(13924);
+const PermissionPromptType = fn(13958).PermissionPromptType;
+const NotificationPermissionConstants = fn(13959);
 ({ EventActionLocation: closure_8, NotificationNudgeSurface: closure_9 } = NotificationPermissionConstants);
 const jsx = fn(21).jsx;
 let c11 = "post-call-disconnect-nudge-key";
@@ -41,10 +41,10 @@ export default function PostCallDisconnectNudge(arg0) {
 }
 export const POST_CALL_DISCONNECT_NUDGE_KEY = "post-call-disconnect-nudge-key";
 export function usePostCallDisconnectNudge() {
-  let obj = stateFromStores1(17404);
+  let obj = stateFromStores1(17464);
   let tmp2 = stateFromStores;
-  const canSeePushNotificationNudge = stateFromStores(13925).useCanSeePushNotificationNudge();
-  let obj2 = stateFromStores(13925);
+  const canSeePushNotificationNudge = stateFromStores(13960).useCanSeePushNotificationNudge();
+  let obj2 = stateFromStores(13960);
   const items = [VoiceStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
     currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null),
@@ -77,11 +77,11 @@ export function usePostCallDisconnectNudge() {
     if (!obj.useConfig({ location: "usePostCallDisconnectNudge" }).inHoldout) {
       prop = null;
       if (canSeePushNotificationNudge) {
-        prop = tmp2(4842).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
+        prop = tmp2(4847).DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT;
       }
     }
   }
-  const tmp6Result = tmp6(stateFromStores(7563).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
+  const tmp6Result = tmp6(stateFromStores(7569).useSelectedTimeRecurringDismissibleContent(prop, closure_12), 2);
   first = tmp6Result[0];
   markAsDismissed = tmp12;
   const items3 = [first, tmp6Result[1]];
@@ -91,7 +91,7 @@ export function usePostCallDisconnectNudge() {
         PermissionPromptType.CALL_DISCONNECT_BOTTOM_SHEET,
       );
       const obj3 = { markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18544, dependencyMap.paths), c11, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18587, dependencyMap.paths), c11, obj3);
     }
   }, items3);
 }

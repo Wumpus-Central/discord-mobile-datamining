@@ -7,7 +7,7 @@ import Record from "../../lib/Record.tsx";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
 require = fn;
-const createExecutable = fn(2017).createExecutable;
+const createExecutable = fn(2016).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {

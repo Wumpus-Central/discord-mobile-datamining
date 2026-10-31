@@ -10,7 +10,7 @@ require = fn;
 const AppStates = fn(1072).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles((fontSize) => ({
   textEmoji: { fontSize },
   imageEmoji: { width: fontSize, height: fontSize },

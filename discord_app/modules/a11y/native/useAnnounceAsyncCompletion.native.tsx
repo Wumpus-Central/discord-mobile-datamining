@@ -23,7 +23,7 @@ export default function useAnnounceAsyncCompletion() {
     if (polite === undefined) {
       str = "assertive";
     }
-    const AccessibilityAnnouncer = ref(5016).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = ref(5021).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(intl, str);
     if (obj.isIOS()) {
       if (tmpResult.getIsScreenReaderEnabled()) {
@@ -59,6 +59,6 @@ export default function useAnnounceAsyncCompletion() {
       return resolved;
     }
     resolved = Promise.resolve();
-    obj = intl(1376);
+    obj = intl(1375);
   }, []);
 }

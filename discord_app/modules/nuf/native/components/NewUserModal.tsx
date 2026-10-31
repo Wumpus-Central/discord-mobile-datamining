@@ -10,9 +10,9 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9835);
+const NativeStackNavigator = fn(9856);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj3 = {
   header: {
     borderBottomWidth: 0,
@@ -98,14 +98,14 @@ export default function NewUserModal(arg0) {
     closure_5(Navigator.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(17988).RedesignNotificationScreen;
+        return closure_0(18031).RedesignNotificationScreen;
       },
       initialParams: { onComplete },
     }),
     closure_5(Navigator.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(19504).default;
+        return closure_0(19561).default;
       },
       options() {
         return {
@@ -115,7 +115,7 @@ export default function NewUserModal(arg0) {
             obj.onPress = function onPress() {
               closure_0 = closure_1_4;
               const lazyResult = React.lazy(() => closure_0(paths[7])(paths[6], paths.paths));
-              closure_2_0(5955).openAlert(
+              closure_2_0(5960).openAlert(
                 "skip-avatar-upload",
                 closure_2_5(lazyResult, {
                   onConfirm() {
@@ -124,7 +124,7 @@ export default function NewUserModal(arg0) {
                 }),
               );
             };
-            return closure_2_5(closure_1(14215), obj);
+            return closure_2_5(closure_1(14253), obj);
           },
         };
       },
@@ -134,7 +134,7 @@ export default function NewUserModal(arg0) {
       name: "contact-sync",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(14203).ContactSyncOnboardingModal;
+        return closure_0(14241).ContactSyncOnboardingModal;
       },
       initialParams: { onComplete },
     }),
@@ -142,7 +142,7 @@ export default function NewUserModal(arg0) {
       name: "interest-picker",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(19505).default;
+        return closure_0(19562).default;
       },
       initialParams: { onComplete },
     }),
@@ -150,14 +150,14 @@ export default function NewUserModal(arg0) {
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(19511).default;
+        return closure_0(19568).default;
       },
       initialParams: { onComplete },
     }),
     closure_5(Navigator.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(19517).default;
+        return closure_0(19574).default;
       },
       initialParams: { onComplete },
     }),

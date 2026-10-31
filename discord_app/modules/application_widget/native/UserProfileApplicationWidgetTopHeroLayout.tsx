@@ -1,8 +1,8 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7032 from "../../../../_runtime/metro/07032__.js";
+import _modDef7038 from "../../../../_runtime/metro/07038__.js";
 import UserProfileSharedStyles from "../../user_profile/native/UserProfileSharedStyles.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
@@ -13,11 +13,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const HorizontalGradient = fn(1072).HorizontalGradient;
-const CARD_PADDING = fn(7371).CARD_PADDING;
+const CARD_PADDING = fn(7377).CARD_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const colors = ["transparent", "black"];
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   root: { position: "relative" },
   contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 },
@@ -157,7 +157,7 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
       obj17.source = obj18;
       obj17.style = { width: "100%", height: "100%" };
       obj12.children = React5(FastImageDefault, obj17);
-      tmp15Result3 = React5(_modDef7032, obj12);
+      tmp15Result3 = React5(_modDef7038, obj12);
     }
     obj10.children = tmp15Result3;
     tmp15Result4 = React5(View, obj10);

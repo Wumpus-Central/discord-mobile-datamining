@@ -20,8 +20,8 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategoryTypes = fn(6793).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9921).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(6799).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(9942).IMAGE_SIZE;
 const Constants = fn(1072);
 ({
   AnalyticsObjects: metroRequire,
@@ -29,10 +29,10 @@ const Constants = fn(1072);
   AnalyticsSections: closure_8,
   UpsellTypes: closure_9,
 } = Constants);
-const EmojiConstants = fn(1387);
+const EmojiConstants = fn(1386);
 ({ EmojiDisabledReasons: c10, EmojiIntention: closure_11 } = EmojiConstants);
-const MIN_MARGIN = fn(1229).MIN_MARGIN;
-const PremiumUpsellTypes = fn(1386).PremiumUpsellTypes;
+const MIN_MARGIN = fn(1228).MIN_MARGIN;
+const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 const size = fn(2);

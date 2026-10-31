@@ -10,7 +10,7 @@ const View = fn(17).View;
 const BANNER_HEIGHT = fn(1072).BANNER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({
   bannerContainer: { position: "relative" },
   gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" },

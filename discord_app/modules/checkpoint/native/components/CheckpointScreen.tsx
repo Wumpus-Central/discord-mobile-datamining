@@ -6,10 +6,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_NAV_HEIGHT = fn(6061).CHECKPOINT_NAV_HEIGHT;
+const CHECKPOINT_NAV_HEIGHT = fn(6066).CHECKPOINT_NAV_HEIGHT;
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({
   container: { height: "100%", width: "100%" },
   scroll: { width: "100%" },
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointScreen(children) {
   let insets;
   const tmp = closure_9();
-  insets = insets(5602)().insets;
+  insets = insets(5607)().insets;
   const items = [, , ,];
   ({ bottom: arr[0], left: arr[1], right: arr[2], top: arr[3] } = insets);
   const obj = { style: tmp.container, children: null };

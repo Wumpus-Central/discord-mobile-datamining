@@ -8,7 +8,7 @@ import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategoryTypes = fn(6793).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6799).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -16,10 +16,10 @@ const Constants = fn(1072);
   CATEGORY_ICON_SIZE,
   EXPRESSION_FOOTER_HEIGHT,
 } = Constants);
-let ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+let ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED },

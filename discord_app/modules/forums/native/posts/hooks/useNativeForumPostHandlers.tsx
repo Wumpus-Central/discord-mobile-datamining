@@ -29,7 +29,7 @@ const Constants = fn(1072);
   AnalyticsSections: map1,
   EMPTY_STRING_SNOWFLAKE_ID: closure_14,
 } = Constants);
-let closure_15 = fn(1113).OpenThreadAnalyticsLocations;
+let closure_15 = fn(1112).OpenThreadAnalyticsLocations;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostHandlers.tsx");
 
@@ -37,7 +37,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(5610).ReactionTypes.NORMAL;
+    NORMAL = threadId(5615).ReactionTypes.NORMAL;
   }
   const items = [threadId];
   const items1 = [threadId];
@@ -52,7 +52,7 @@ export default function useNativeForumPostHandlers(threadId) {
     const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
     const mapped = mediaItems.map((src) => {
       src = src.src;
-      const str = NORMAL(1378).toURLSafe(src);
+      const str = NORMAL(1377).toURLSafe(src);
       let tmp = null != str;
       if (src.srcIsAnimated) {
         if (tmp) {
@@ -65,16 +65,16 @@ export default function useNativeForumPostHandlers(threadId) {
           tmp = endsWithResult;
         }
         if (tmp) {
-          let isAttachmentPathUrlResult = src.type === threadId(8919).ForumPostMediaTypes.ATTACHMENT;
+          let isAttachmentPathUrlResult = src.type === threadId(8928).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentPathUrlResult) {
-            isAttachmentPathUrlResult = callback1(9810).isAttachmentPathUrl(str);
-            const obj5 = callback1(9810);
+            isAttachmentPathUrlResult = callback1(9831).isAttachmentPathUrl(str);
+            const obj5 = callback1(9831);
           }
           if (!isAttachmentPathUrlResult) {
-            let result = src.type === threadId(8919).ForumPostMediaTypes.EMBED;
+            let result = src.type === threadId(8928).ForumPostMediaTypes.EMBED;
             if (result) {
-              result = callback1(9810).isExternalProxiedAttachmentUrl(str);
-              const obj6 = callback1(9810);
+              result = callback1(9831).isExternalProxiedAttachmentUrl(str);
+              const obj6 = callback1(9831);
             }
             isAttachmentPathUrlResult = result;
           }

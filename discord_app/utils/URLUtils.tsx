@@ -3,8 +3,8 @@ import _modDef12 from "../../_runtime/metro/00012__.js";
 import Constants from "../Constants.tsx";
 import URLUtilsDefault from "URLUtils.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
-import UrlAll from "../../_runtime/01381_Url.js";
-import ip from "../../_runtime/01379_ip.js";
+import UrlAll from "../../_runtime/01380_Url.js";
+import ip from "../../_runtime/01378_ip.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function isDiscordDirectAssetUrl(shareURI) {

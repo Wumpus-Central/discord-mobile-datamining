@@ -3,14 +3,14 @@ import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LaunchPadTypes = fn(11501).LaunchPadTypes;
-let PlatformUtils = fn(1376);
+const LaunchPadTypes = fn(11535).LaunchPadTypes;
+let PlatformUtils = fn(1375);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(18001);
+const PanelsConfig = fn(18044);
 let panelsConfig = PlatformUtils
   ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG
   : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
@@ -512,7 +512,13 @@ export default function useMainTabsPanelsGesture(canDrag) {
   return {
     gesture: memo,
     panelGestureContext: onPreMovement.useMemo(
-      () => ({ gesture: memo, disallowGesture: sharedValue2, edgeSwipeOnly: sharedValue3, translateX: sharedValue }),
+      () => ({
+        gesture: memo,
+        disallowGesture: sharedValue2,
+        edgeSwipeOnly: sharedValue3,
+        translateX: sharedValue,
+        isInMainTabs: true,
+      }),
       items4,
     ),
     isDragging: sharedValue1,

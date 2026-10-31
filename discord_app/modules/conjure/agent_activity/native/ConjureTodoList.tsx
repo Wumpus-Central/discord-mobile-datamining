@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/agent_activity/native/ConjureTodoList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ConjureTodoState from "../ConjureTodoState.tsx";
 import ConjureTodoAgents from "../ConjureTodoAgents.tsx";
@@ -26,7 +26,7 @@ function TodoAgents(agents) {
           items[1] = items[ConjureNativeStatusLine.laneTintIndexFor(key.key) % ConjureNativeStatusLine.LANE_TINT_COUNT];
           obj.style = items;
           const intl = util.intl;
-          obj.accessibilityLabel = intl.formatToPlainString(_modDef3865.TVvPCJ, { name: key.name, task: key.task });
+          obj.accessibilityLabel = intl.formatToPlainString(_modDef3868.TVvPCJ, { name: key.name, task: key.task });
           return timestampProducer(hasOwnProperty, obj, key.key);
         }),
 
@@ -34,12 +34,12 @@ function TodoAgents(agents) {
     let tmp9 = null;
     if (overflow > 0) {
       const obj3 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
-      let intl = tmp2(1114).intl;
+      let intl = tmp2(1113).intl;
       const obj4 = { count: overflow };
-      obj3.accessibilityLabel = intl.formatToPlainString(items(3865).SPGdDc, obj4);
+      obj3.accessibilityLabel = intl.formatToPlainString(items(3868).SPGdDc, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(5619).Text, obj3);
+      tmp9 = closure_6(tmp2(5624).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -63,16 +63,16 @@ function TodoMarker(status) {
       obj.style = items;
       if ("completed" === status) {
         const intl4 = util.intl;
-        let stringResult = intl4.string(_modDef3865.KvBdun);
+        let stringResult = intl4.string(_modDef3868.KvBdun);
       } else if ("in_progress" === status) {
         const intl3 = util.intl;
-        stringResult = intl3.string(_modDef3865["m5G9+S"]);
+        stringResult = intl3.string(_modDef3868["m5G9+S"]);
       } else if ("unfinished" === status) {
         const intl2 = util.intl;
-        stringResult = intl2.string(_modDef3865.lRpwhD);
+        stringResult = intl2.string(_modDef3868.lRpwhD);
       } else {
         const intl = util.intl;
-        stringResult = intl.string(_modDef3865.sPGeWi);
+        stringResult = intl.string(_modDef3868.sPGeWi);
       }
       obj.accessibilityLabel = stringResult;
       let tmp2Result = null;
@@ -86,29 +86,29 @@ function TodoMarker(status) {
   }
   if ("completed" === status) {
     const intl8 = util.intl;
-    let stringResult1 = intl8.string(_modDef3865.KvBdun);
+    let stringResult1 = intl8.string(_modDef3868.KvBdun);
     let tmp21 = require;
   } else {
     if ("in_progress" === status) {
       const intl7 = util.intl;
-      stringResult1 = intl7.string(_modDef3865["m5G9+S"]);
+      stringResult1 = intl7.string(_modDef3868["m5G9+S"]);
       tmp21 = require;
     } else if ("unfinished" !== status) {
       tmp21 = require;
       const intl5 = util.intl;
-      stringResult1 = intl5.string(_modDef3865.sPGeWi);
+      stringResult1 = intl5.string(_modDef3868.sPGeWi);
     }
     const intl6 = util.intl;
-    stringResult1 = intl6.string(_modDef3865.lRpwhD);
+    stringResult1 = intl6.string(_modDef3868.lRpwhD);
     tmp21 = require;
   }
-  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6983).FormCheckbox, { checked: "completed" === status }) };
+  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6989).FormCheckbox, { checked: "completed" === status }) };
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { list: { gap: nativeDefault.space.PX_8 }, row: null, marker: null, markerUnfinished: null, markerInProgress: null, markerSpinner: null, text: null, agents: null, agentMark: null, agentMarkTint0: null, agentMarkTint1: null, agentMarkTint2: null, agentMarkTint3: null, textCompleted: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -158,8 +158,8 @@ export default function ConjureTodoList(announceProgress) {
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12551);
-  ({ completed, total } = agents(12551).todoProgress(todos));
+  let obj = agents(12586);
+  ({ completed, total } = agents(12586).todoProgress(todos));
   let items = [agents];
   noop = noop.useMemo(() => {
     let items = agents;
@@ -171,14 +171,14 @@ export default function ConjureTodoList(announceProgress) {
   if (0 === total) {
     return null;
   }
-  const intl = agents(1114).intl;
-  const todoProgressResult = agents(12551).todoProgress(todos);
-  const intl2 = agents(1114).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(flag2(3865)["P/I+JW"], { completed, total });
+  const intl = agents(1113).intl;
+  const todoProgressResult = agents(12586).todoProgress(todos);
+  const intl2 = agents(1113).intl;
+  const formatToPlainStringResult = intl.formatToPlainString(flag2(3868)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
-  const formatToPlainStringResult1 = intl2.formatToPlainString(flag2(3865)["7tzwKB"], { completed, total });
-  const intl3 = agents(1114).intl;
-  obj2.title = intl3.string(flag2(3865).RtzECX);
+  const formatToPlainStringResult1 = intl2.formatToPlainString(flag2(3868)["7tzwKB"], { completed, total });
+  const intl3 = agents(1113).intl;
+  obj2.title = intl3.string(flag2(3868).RtzECX);
   let str = "none";
   if (flag) {
     str = "none";
@@ -186,15 +186,15 @@ export default function ConjureTodoList(announceProgress) {
       str = "polite";
     }
   }
-  obj2.meta = closure_6(agents(12683).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj2.meta = closure_6(agents(12718).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj2.showHeader = total > 0;
   obj2.superseded = flag3;
   obj2.expanded = flag4;
   obj2.onToggleExpanded = announceProgress.onToggleExpanded;
-  const intl4 = agents(1114).intl;
-  obj2.showLabel = intl4.string(flag2(3865).RKyN9q);
-  const intl5 = agents(1114).intl;
-  obj2.hideLabel = intl5.string(flag2(3865).xydHoj);
+  const intl4 = agents(1113).intl;
+  obj2.showLabel = intl4.string(flag2(3868).RKyN9q);
+  const intl5 = agents(1113).intl;
+  obj2.hideLabel = intl5.string(flag2(3868).xydHoj);
   let obj3 = { style: tmp.list, children: null };
   let items1 = [
     todos.map((status) => {
@@ -233,7 +233,7 @@ export default function ConjureTodoList(announceProgress) {
       let obj4 = { style: tmp.row, children: null };
       let items2 = [closure_6(TodoMarker, { status: "pending" }), ];
       const obj5 = { variant: "text-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-      items2[1] = closure_6(agents(5619).Text, obj5);
+      items2[1] = closure_6(agents(5624).Text, obj5);
       obj4.children = items2;
       tmp11Result = closure_7(closure_5, obj4);
     }
@@ -241,5 +241,5 @@ export default function ConjureTodoList(announceProgress) {
   items1[1] = tmp11Result;
   obj3.children = items1;
   obj2.children = closure_7(closure_5, obj3);
-  return closure_6(flag2(12683), obj2);
+  return closure_6(flag2(12718), obj2);
 };

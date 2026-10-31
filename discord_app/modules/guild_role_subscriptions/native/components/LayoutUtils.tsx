@@ -1,37 +1,25 @@
 // discord_app/modules/guild_role_subscriptions/native/components/LayoutUtils.tsx
-import native from "../../../../design/void/native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = fn;
 const jsxProd = fn(21);
-({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+({ Fragment: closure_1, jsxs: c2, jsx: c3 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LayoutUtils.tsx");
 
-export function GappedList(gap) {
-  let num = gap.gap;
-  if (num === undefined) {
-    num = 4;
-  }
-  const renderGap = gap.renderGap;
-  let found;
-  const Children = found.Children;
-  found = Children.toArray(gap.children).filter((item) => null != item);
-  let obj = { children: null };
-  const Children1 = found.Children;
+export function SeparatedList(separator) {
+  separator = separator.separator;
+  const Children = separator.Children;
+  const found = Children.toArray(separator.children).filter((item) => null != item);
+  const obj = { children: null };
+  const Children1 = separator.Children;
   obj.children = Children1.map(found, (arg0, arg1) => {
-    const items = [arg0];
-    if (arg1 === found.length - 1) {
-      const obj2 = { children: null };
-      items[1] = tmp3;
-      obj2.children = items;
-      return tmp(tmp2, obj2);
-    } else if (null != renderGap) {
-      let tmp4Result = tmp4();
-    } else {
-      const obj = { size: num };
-      tmp4Result = React3(native.Spacer, obj);
+    const children = [arg0];
+    let tmp3 = arg1 !== found.length - 1;
+    if (tmp3) {
+      tmp3 = separator;
     }
+    children[1] = tmp3;
+    return React2(framebus, { children });
   });
-  return closure_3(closure_4, obj);
+  return closure_3(found, obj);
 }

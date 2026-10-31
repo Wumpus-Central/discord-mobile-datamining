@@ -1,11 +1,11 @@
 // discord_app/modules/game_organization_invites/native/openGameOrganizationJoinModal.tsx
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useGameOrganizationCharacterEligibilityFetch2 from "../useGameOrganizationCharacterEligibilityFetch.tsx";
 import GameOrganizationInviteStore from "../GameOrganizationInviteStore.tsx";
 
 require = fn;
-const GameOrganizationInviteConstants = fn(11327);
+const GameOrganizationInviteConstants = fn(11363);
 ({ GameOrganizationCharacterMode: closure_4, GameOrganizationInviteStates: hasOwnProperty } =
   GameOrganizationInviteConstants);
 const size = fn(2);
@@ -27,6 +27,6 @@ export default function openGameOrganizationJoinModal(code) {
     const items = [code];
     const many = useGameOrganizationCharacterEligibilityFetch.fetchMany(items);
   }
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13150, dependencyMap.paths), { code });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13185, dependencyMap.paths), { code });
   const obj2 = { code };
 }

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishNotesSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
@@ -73,7 +73,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3865.Gd63Fl);
+    obj4.title = intl.string(_modDef3868.Gd63Fl);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = channels;
@@ -100,7 +100,7 @@ export default function ConjurePublishNotesSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -146,9 +146,9 @@ export default function ConjurePublishNotesSheet(guildId) {
   );
   let obj = { startExpanded: true, header: null, children: null };
   let obj2 = { title: null };
-  let intl = guildId(1114).intl;
-  obj2.title = intl.formatToPlainString(_modDef3865.lsYQII, { projectName });
-  obj.header = closure_10(guildId(7315).BottomSheetTitleHeader, obj2);
+  let intl = guildId(1113).intl;
+  obj2.title = intl.formatToPlainString(_modDef3868.lsYQII, { projectName });
+  obj.header = closure_10(guildId(7321).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp3.container, children: null };
   let tmp15Result = null;
   if (channels.length > 0) {
@@ -163,36 +163,36 @@ export default function ConjurePublishNotesSheet(guildId) {
       onChange: null,
       disabled: null,
     };
-    const intl2 = tmp14(1114).intl;
-    obj5.label = intl2.string(tmp(3865).r4du8k);
-    const intl3 = tmp14(1114).intl;
-    const tmpResult = tmp(3865);
+    const intl2 = tmp14(1113).intl;
+    obj5.label = intl2.string(tmp(3868).r4du8k);
+    const intl3 = tmp14(1113).intl;
+    const tmpResult = tmp(3868);
     obj5.placeholder = intl3.string(drafting ? tmpResult.aYQksU : tmpResult["3hV1Gc"]);
     let stringResult;
     if (draftFailed) {
-      const intl4 = tmp14(1114).intl;
-      stringResult = intl4.string(tmp(3865)["Em8bo+"]);
+      const intl4 = tmp14(1113).intl;
+      stringResult = intl4.string(tmp(3868)["Em8bo+"]);
     }
     obj5.description = stringResult;
     let stringResult1;
     if (tmp7) {
-      const intl5 = tmp14(1114).intl;
-      stringResult1 = intl5.string(tmp(3865)["6oEjjD"]);
+      const intl5 = tmp14(1113).intl;
+      stringResult1 = intl5.string(tmp(3868)["6oEjjD"]);
     }
     obj5.errorMessage = stringResult1;
     obj5.maxLength = maxNotesLength;
     obj5.value = str;
     obj5.onChange = callback;
     obj5.disabled = sending;
-    const items3 = [closure_10(tmp14(7247).TextArea, obj5)];
-    const intl6 = tmp14(1114).intl;
+    const items3 = [closure_10(tmp14(7253).TextArea, obj5)];
+    const intl6 = tmp14(1113).intl;
     if (null != selectedChannel) {
       const _HermesInternal = HermesInternal;
-      let combined = "#" + tmp14(5647).computeChannelName(selectedChannel, callback2, trimmed);
-      const tmp14Result = tmp14(5647);
+      let combined = "#" + tmp14(5652).computeChannelName(selectedChannel, callback2, trimmed);
+      const tmp14Result = tmp14(5652);
     } else {
-      const intl7 = tmp14(1114).intl;
-      combined = intl7.string(tmp(3865)["7CvxMC"]);
+      const intl7 = tmp14(1113).intl;
+      combined = intl7.string(tmp(3868)["7CvxMC"]);
     }
     const obj6 = { channel: combined, onPick: null };
     let fn = callback1;
@@ -201,29 +201,29 @@ export default function ConjurePublishNotesSheet(guildId) {
     }
     const obj7 = { variant: "text-md/medium", color: "text-subtle", children: null };
     obj6.onPick = fn;
-    obj7.children = intl6.format(tmp(3865)["1lVhj/"], obj6);
-    items3[1] = closure_10(tmp14(5619).Text, obj7);
+    obj7.children = intl6.format(tmp(3868)["1lVhj/"], obj6);
+    items3[1] = closure_10(tmp14(5624).Text, obj7);
     obj4.children = items3;
     tmp15Result = closure_11(tmp16, obj4);
   }
   const items4 = [tmp15Result];
   const obj8 = { style: tmp3.actions, children: null };
   const obj9 = { variant: "tertiary", grow: true, text: null, onPress: null };
-  const intl8 = tmp14(1114).intl;
-  obj9.text = intl8.string(guildId(1114).t["ETE/oC"]);
+  const intl8 = tmp14(1113).intl;
+  obj9.text = intl8.string(guildId(1113).t["ETE/oC"]);
   obj9.onPress = callback2;
-  const items5 = [closure_10(guildId(5629).Button, obj9)];
+  const items5 = [closure_10(guildId(5634).Button, obj9)];
   const obj10 = { variant: "primary", grow: true, text: null, loading: null, disabled: null, onPress: null };
-  const intl9 = tmp14(1114).intl;
-  obj10.text = intl9.string(_modDef3865["69aIG4"]);
+  const intl9 = tmp14(1113).intl;
+  obj10.text = intl9.string(_modDef3868["69aIG4"]);
   obj10.loading = sending;
   obj10.disabled = "" === trimmed || trimmed.length > maxNotesLength || null == selectedChannel || sending;
   obj10.onPress = callback3;
-  items5[1] = closure_10(guildId(5629).Button, obj10);
+  items5[1] = closure_10(guildId(5634).Button, obj10);
   obj8.children = items5;
   items4[1] = closure_11(markEdited, obj8);
   obj3.children = items4;
   obj.children = closure_11(markEdited, obj3);
-  return closure_10(guildId(7360).ActionSheet, obj);
+  return closure_10(guildId(7366).ActionSheet, obj);
 }
 export const CONJURE_PUBLISH_NOTES_SHEET_KEY = "ConjurePublishNotesSheet";

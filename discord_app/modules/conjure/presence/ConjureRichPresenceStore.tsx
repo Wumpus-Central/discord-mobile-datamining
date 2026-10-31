@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/presence/ConjureRichPresenceStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActivityTypes from "../../../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
 import conjurePresenceActivity from "conjurePresenceActivity.tsx";
@@ -215,7 +215,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_12);
                         details = closure_1_12.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F99227 */ function() { ... });
+                        let found = prop.filter(/* F99479 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -226,7 +226,7 @@ function updateActivity(withGracePeriod) {
                           timeout = null;
                         }
                         let _setTimeout = setTimeout;
-                        timeout = setTimeout(/* F99228 */ function() { ... }, closure_1_10);
+                        timeout = setTimeout(/* F99480 */ function() { ... }, closure_1_10);
                         closure_1_20.emitChange();
                       }
                     }, closure_1_10);
@@ -266,7 +266,7 @@ let closure_18 = async function _fetchOwnedProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -381,7 +381,7 @@ let closure_19 = async function _resumeRunningProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -447,7 +447,7 @@ let closure_19 = async function _resumeRunningProjects() {
     }
   }
 };
-const StaticChannelRoute = fn(4865).StaticChannelRoute;
+const StaticChannelRoute = fn(4870).StaticChannelRoute;
 let c10 = 300000;
 let c11 = null;
 let c12 = null;

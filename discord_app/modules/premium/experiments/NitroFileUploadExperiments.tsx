@@ -13,7 +13,7 @@ let obj = {
   defaultConfig: { enabled: false },
   variations: null,
 };
-const obj2 = { 1: null };
+let obj2 = { 1: null };
 obj2[1] = { enabled: true };
 obj.variations = obj2;
 let closure_3 = ApexExperiment.createApexExperiment(obj);
@@ -31,30 +31,36 @@ export function getNitroFileUploadLimitBytes(arg0) {
   if (arg0 === undefined) {
     obj = {};
   }
-  let _location = { location: obj.location }.location;
+  const obj2 = { location: obj.location, autoTrackExposure: obj.autoTrackExposure };
+  let _location = obj2.location;
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  return closure_3.getConfig({ location: _location }).enabled ? framebus : React;
+  return closure_3.getConfig({ location: _location }, { autoTrackExposure: obj2.autoTrackExposure }).enabled
+    ? framebus
+    : React;
 }
 export function getNitroFileUploadRolloutConfig(arg0) {
-  let obj = arg0;
+  let autoTrackExposure = arg0;
   if (arg0 === undefined) {
-    obj = {};
+    autoTrackExposure = {};
   }
-  let _location = obj.location;
+  let _location = autoTrackExposure.location;
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  return closure_3.getConfig({ location: _location });
+  return closure_3.getConfig({ location: _location }, { autoTrackExposure: autoTrackExposure.autoTrackExposure });
 }
 export function getNitroFileUploadRolloutCopy(legacyCopy) {
   let rolloutCopy = legacyCopy.legacyCopy;
-  let _location = {}.location;
+  const autoTrackExposure = {};
+  let _location = autoTrackExposure.location;
   if (_location == null) {
     _location = NitroFileUploadRollout;
   }
-  if (closure_3.getConfig({ location: _location }).enabled) {
+  if (
+    closure_3.getConfig({ location: _location }, { autoTrackExposure: autoTrackExposure.autoTrackExposure }).enabled
+  ) {
     rolloutCopy = legacyCopy.rolloutCopy;
   }
   return rolloutCopy;

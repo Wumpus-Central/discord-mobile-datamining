@@ -15,20 +15,30 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     flexDirection: "row",
-    padding: 16,
+    padding: nativeDefault.space.PX_16,
     borderRadius: nativeDefault.radii.xs,
     borderWidth: 1,
     borderColor: nativeDefault.colors.BORDER_SUBTLE,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   },
   avatar: { width: 40, height: 40, borderRadius: 20 },
-  content: { marginStart: 16 },
-  contextRow: { flexDirection: "row", alignItems: "center" },
+  content: null,
+  contextRow: null,
 };
+let obj3 = {
+  flexDirection: "row",
+  padding: nativeDefault.space.PX_16,
+  borderRadius: nativeDefault.radii.xs,
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.BORDER_SUBTLE,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+};
+obj2.content = { marginStart: nativeDefault.space.PX_16 };
+obj2.contextRow = { flexDirection: "row", alignItems: "center" };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(

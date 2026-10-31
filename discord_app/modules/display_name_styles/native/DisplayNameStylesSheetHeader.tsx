@@ -1,39 +1,62 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesSheetHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(5014);
 let obj2 = {
-  trailingButtonClearance: { paddingTop: nativeDefault.space.PX_8 },
-  centeredAccessory: { justifyContent: "center", alignItems: "center" },
+  header: { paddingTop: nativeDefault.space.PX_6, paddingBottom: nativeDefault.space.PX_12 },
+  row: null,
+  title: null,
+  titleText: null,
+  leading: null,
+  trailing: null,
 };
-let closure_4 = createStyles.createStyles(obj2);
+let obj3 = { paddingTop: nativeDefault.space.PX_6, paddingBottom: nativeDefault.space.PX_12 };
+obj2.row = { minHeight: nativeDefault.space.PX_32, justifyContent: "center" };
+const obj4 = { minHeight: nativeDefault.space.PX_32, justifyContent: "center" };
+obj2.title = { paddingHorizontal: nativeDefault.space.PX_80, alignItems: "center" };
+obj2.titleText = { textAlign: "center" };
+let obj5 = { paddingHorizontal: nativeDefault.space.PX_80, alignItems: "center" };
+obj2.leading = { position: "absolute", left: nativeDefault.space.PX_16 };
+let obj6 = { position: "absolute", left: nativeDefault.space.PX_16 };
+obj2.trailing = { position: "absolute", right: nativeDefault.space.PX_16, minWidth: nativeDefault.space.PX_64 };
+let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesSheetHeader.tsx");
 
-export default function DisplayNameStylesSheetHeader(arg0) {
-  ({ leading, trailing } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ leading: 0, trailing: 0 }));
-  const tmp2 = closure_4();
-  const obj = { style: tmp2.trailingButtonClearance, children: null };
-  const obj2 = {};
-  const merged1 = Object.assign(merged);
-  let tmp3Result = leading;
-  if (null != leading) {
-    const obj3 = { style: tmp2.centeredAccessory, children: leading };
-    tmp3Result = <View style={tmp2.centeredAccessory}>{leading}</View>;
+export default function DisplayNameStylesSheetHeader(children) {
+  ({ leading, trailing } = children);
+  const tmp = closure_5();
+  const obj = { style: tmp.header, children: null };
+  const obj2 = { style: tmp.row, children: null };
+  const obj3 = {
+    style: tmp.title,
+    children: React3(Text_Text.Heading, {
+      variant: "redesign/heading-18/bold",
+      color: "text-default",
+      style: tmp.titleText,
+      children: children.title,
+    }),
+  };
+  const items = [React3(View, obj3), ,];
+  let tmp2Result = null != leading;
+  if (tmp2Result) {
+    const obj5 = { style: tmp.leading, children: leading };
+    tmp2Result = React3(View, obj5);
   }
-  obj2.leading = tmp3Result;
-  let tmp3Result2 = trailing;
-  if (null != trailing) {
-    const obj4 = { style: tmp2.centeredAccessory, children: trailing };
-    tmp3Result2 = <View style={tmp2.centeredAccessory}>{trailing}</View>;
+  items[1] = tmp2Result;
+  let tmp2Result2 = null != trailing;
+  if (tmp2Result2) {
+    const obj6 = { style: tmp.trailing, children: trailing };
+    tmp2Result2 = React3(View, obj6);
   }
-  obj2.trailing = tmp3Result2;
-  obj.children = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, {});
-  return <View style={tmp2.trailingButtonClearance}>{null}</View>;
+  items[2] = tmp2Result2;
+  obj2.children = items;
+  obj.children = React4(View, obj2);
+  return React3(View, obj);
 }

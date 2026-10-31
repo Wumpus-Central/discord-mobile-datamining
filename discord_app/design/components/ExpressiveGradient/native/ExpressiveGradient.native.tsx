@@ -1,7 +1,7 @@
 // discord_app/design/components/ExpressiveGradient/native/ExpressiveGradient.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import LinearGradientDefault from "../../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/CatIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef12651 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-1x.png.js";
-import _modDef12652 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js";
-import _modDef12653 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-3x.png.js";
+import _modDef12686 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-1x.png.js";
+import _modDef12687 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js";
+import _modDef12688 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CatIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12651 }, 3: null };
-const obj2 = { uri: _modDef12651 };
-obj[2] = { uri: _modDef12652 };
-const obj3 = { uri: _modDef12652 };
-obj[3] = { uri: _modDef12653 };
+let obj = { 1: null, 2: { uri: _modDef12686 }, 3: null };
+const obj2 = { uri: _modDef12686 };
+obj[2] = { uri: _modDef12687 };
+const obj3 = { uri: _modDef12687 };
+obj[3] = { uri: _modDef12688 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CatIllocon.native.tsx");
 
@@ -28,7 +28,7 @@ export function CatIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7063).getAssetSource(obj);
+  obj.source = num(7069).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

@@ -17,7 +17,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
   };
   const items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(12321).AppLauncherList, {
+  return jsx(onPressRow(12359).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {
@@ -27,10 +27,10 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
     keyboardDismissMode: "on-drag",
   });
 }
-const DEFAULT_CONTENT_PADDING = fn(1497).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1496).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({
   emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 },
 });

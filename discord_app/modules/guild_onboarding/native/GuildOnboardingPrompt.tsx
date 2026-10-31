@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MemberVerificationActionCreatorsDefault from "../../guild_member_verification/MemberVerificationActionCreators.tsx";
@@ -248,25 +248,25 @@ function DropdownOption(option) {
   obj3.children = closure_13(EmojiDefault, obj4);
   const items1 = [
     closure_13(closure_5, obj3),
-    closure_13(tmp2(5619).Text, { variant: "text-md/semibold", children: option.title }),
+    closure_13(tmp2(5624).Text, { variant: "text-md/semibold", children: option.title }),
   ];
   obj2.children = items1;
   return closure_14(closure_5, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let closure_11 = fn(7259).GuildOnboardingModalStates;
-const EMOJI_URL_BASE_SIZE = fn(1387).EMOJI_URL_BASE_SIZE;
+let closure_11 = fn(7265).GuildOnboardingModalStates;
+const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5581).NAV_BAR_HEIGHT,
+    marginTop: fn(5586).NAV_BAR_HEIGHT,
     marginBottom: 16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -293,7 +293,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5581).NAV_BAR_HEIGHT,
+  marginTop: fn(5586).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -627,7 +627,7 @@ export function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7299, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7305, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, flag) {

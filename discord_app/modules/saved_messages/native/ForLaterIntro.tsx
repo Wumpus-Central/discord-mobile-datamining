@@ -10,7 +10,7 @@ import SavedMessagesTypes from "../SavedMessagesTypes.tsx";
 import BookmarkIcon from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
 import ReminderWatchSpotIllustration from "../../../design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx";
 import BookmarksSpotIllustration2 from "../../../design/components/mana-assets/native/generated/BookmarksSpotIllustration.native.tsx";
-import _modDef11168 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef11187 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -27,7 +27,7 @@ function IntroDemo(isReminder) {
   };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef11168 };
+  const obj4 = { uri: _modDef11187 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
   const items = [hasOwnProperty(FastImageDefault, obj3)];

@@ -14,11 +14,11 @@ export default function useActivityShelfItems(enableFilter) {
   let items = [DeveloperActivityShelfStore];
   const filter = flag(504).useStateFromStoresObject(items, () => ({ filter: filter.getFilter() })).filter;
   const obj = flag(504);
-  const activityShelfData = flag(12190).useActivityShelfData(enableFilter.guildId);
-  const tmp2 = filter(12191)(activityShelfData);
+  const activityShelfData = flag(12228).useActivityShelfData(enableFilter.guildId);
+  const tmp2 = filter(12229)(activityShelfData);
   dependencyMap = tmp2;
-  const obj2 = flag(12190);
-  const developerActivityShelfItems = flag(12192).useDeveloperActivityShelfItems();
+  const obj2 = flag(12228);
+  const developerActivityShelfItems = flag(12230).useDeveloperActivityShelfItems();
   const items1 = [developerActivityShelfItems, flag, filter, tmp2];
   return developerActivityShelfItems.useMemo(() => {
     function shouldKeepShelfItem(application) {

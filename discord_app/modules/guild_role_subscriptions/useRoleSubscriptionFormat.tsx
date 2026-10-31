@@ -6,8 +6,8 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const hasPermission = fn(4916).hasPermission;
-const constants = fn(17125).GuildRoleSubscriptionFormat;
+const hasPermission = fn(4921).hasPermission;
+const constants = fn(17183).GuildRoleSubscriptionFormat;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");

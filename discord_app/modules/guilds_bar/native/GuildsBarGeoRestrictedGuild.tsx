@@ -13,9 +13,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(18302).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(18345).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(18314);
+  let obj = restrictedGuild(18357);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -57,12 +57,12 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     () => ({
       onPress() {
         const obj2 = { title: null, body: null, cancelText: null, onCancel: null, isDismissable: false };
-        const intl = restrictedGuild(1114).intl;
-        obj2.title = intl.string(restrictedGuild(1114).t.aCAiGl);
-        const intl2 = restrictedGuild(1114).intl;
-        obj2.body = intl2.format(restrictedGuild(1114).t["4cJV9S"], { serverName: name.name });
-        const intl3 = restrictedGuild(1114).intl;
-        obj2.cancelText = intl3.string(restrictedGuild(1114).t.J2TBi3);
+        const intl = restrictedGuild(1113).intl;
+        obj2.title = intl.string(restrictedGuild(1113).t.aCAiGl);
+        const intl2 = restrictedGuild(1113).intl;
+        obj2.body = intl2.format(restrictedGuild(1113).t["4cJV9S"], { serverName: name.name });
+        const intl3 = restrictedGuild(1113).intl;
+        obj2.cancelText = intl3.string(restrictedGuild(1113).t.J2TBi3);
         obj2.onCancel = function onCancel() {
           closure_2_1(dependencyMap[11]).leaveGuild(id.id);
         };
@@ -75,7 +75,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18314).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18357).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -84,11 +84,11 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren: "__removeChild",
-    expandedChildren: null,
-    children: "\u{1F469}\u200D\u{1F680}",
+    externalChildren: "man_gesturing_ok_tone1",
+    expandedChildren: "man_gesturing_ok_light_skin_tone",
+    children: true,
   };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(18314).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(18357).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
@@ -106,13 +106,13 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(6951).GuildIconSizes.LARGE,
+      size: tmp2(6957).GuildIconSizes.LARGE,
     };
     tmp8Result = jsx(GuildIconDefault, {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(6951).GuildIconSizes.LARGE,
+      size: tmp2(6957).GuildIconSizes.LARGE,
     });
     const tmp9Result = GuildIconDefault;
   }
@@ -121,7 +121,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18314).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18357).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -130,8 +130,8 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren: "__removeChild",
-    expandedChildren: null,
-    children: "\u{1F469}\u200D\u{1F680}",
+    externalChildren: "man_gesturing_ok_tone1",
+    expandedChildren: "man_gesturing_ok_light_skin_tone",
+    children: true,
   });
 });

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish_schedule/useConjurePublishSchedule.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,7 +9,7 @@ import ConjureConnectionStore from "../connection/ConjureConnectionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ensureConnection = fn(10830).ensureConnection;
+const ensureConnection = fn(10850).ensureConnection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishSchedule.tsx");
 
@@ -64,7 +64,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
           .catch(() => {
             if (ref.current.value === sum) {
               const intl = util.intl;
-              closure_2_8(intl.string(_modDef3865.n25haz));
+              closure_2_8(intl.string(_modDef3868.n25haz));
               closure_4(false);
             }
           });
@@ -101,7 +101,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -171,7 +171,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
                     closure_129_7(false);
                   }
                   c5 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   closure_129_3(closure_128_1);
                   const intl = tmp6(tmp80[6]).intl;

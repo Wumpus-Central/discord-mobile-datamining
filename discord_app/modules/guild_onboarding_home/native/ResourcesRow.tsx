@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding_home/native/ResourcesRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(18584).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(18626).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 },
   channelItem: {
@@ -46,13 +46,13 @@ export default function ResourcesRow(guildId) {
             channelId.channelId,
           );
         },
-        children: closure_1_5(guildId(5619).Text, {
+        children: closure_1_5(guildId(5624).Text, {
           variant: "text-md/medium",
           color: "text-default",
           children: children.title,
         }),
       };
-      return closure_1_5(guildId(6974).PressableOpacity, obj, children.channelId);
+      return closure_1_5(guildId(6980).PressableOpacity, obj, children.channelId);
     }),
   ];
   let tmp6 = null;
@@ -60,16 +60,16 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18586, dependencyMap.paths), closure_4, { guildId });
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18628, dependencyMap.paths), closure_4, { guildId });
       },
       children: null,
     };
     const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
-    const intl = guildId(1114).intl;
+    const intl = guildId(1113).intl;
     const obj4 = { count: arr.length - 2 };
-    obj3.children = intl.format(guildId(1114).t.F6iMs4, obj4);
-    obj2.children = closure_5(guildId(5619).Text, obj3);
-    tmp6 = closure_5(guildId(6974).PressableOpacity, obj2);
+    obj3.children = intl.format(guildId(1113).t.F6iMs4, obj4);
+    obj2.children = closure_5(guildId(5624).Text, obj3);
+    tmp6 = closure_5(guildId(6980).PressableOpacity, obj2);
   }
   items[1] = tmp6;
   obj.children = items;

@@ -52,11 +52,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
     isJoining,
   });
 }
-let closure_4 = fn(4862).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8195).PAGE_SIZE;
+let closure_4 = fn(4867).createChannelRecordFromServer;
+const PAGE_SIZE = fn(8203).PAGE_SIZE;
 const Constants = fn(1072);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(4865).ChannelFlags;
+const ChannelFlags = fn(4870).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 
@@ -103,7 +103,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -161,7 +161,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -219,7 +219,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -374,7 +374,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -421,7 +421,7 @@ export default {
             return obj;
           }
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp9) {
           c0 = tmp;
           throw tmp9;
@@ -468,7 +468,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -540,7 +540,7 @@ export default {
                 dispatchThreadMemberLocalUpdate(closure_129_0, false);
               }
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -582,7 +582,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -734,7 +734,7 @@ export default {
       if (flag) {
         obj7.archived = false;
       }
-      const HTTP = tmp3(1283).HTTP;
+      const HTTP = tmp3(1282).HTTP;
       const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj7, rejectWithError: true };
       await HTTP.patch(request);
       if (1 === tmp7) {
@@ -766,7 +766,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -818,7 +818,7 @@ export default {
               return obj14;
             } else {
               dependencyMap = 1;
-              const HTTP2 = tmp3(1283).HTTP;
+              const HTTP2 = tmp3(1282).HTTP;
               const request = { url: closure_1_12.CHANNEL(closure_128_0.id), body: null, rejectWithError: true };
               const obj15 = { flags: closure_128_0.flags & ~constants.PINNED };
               request.body = obj15;
@@ -855,7 +855,7 @@ export default {
                 return obj21;
               } else {
                 dependencyMap = 2;
-                const HTTP = tmp3(1283).HTTP;
+                const HTTP = tmp3(1282).HTTP;
                 const request1 = { url: closure_1_12.CHANNEL(closure_128_1.id), body: null, rejectWithError: true };
                 const obj22 = { flags: closure_128_1.flags | constants.PINNED };
                 request1.body = obj22;
@@ -921,7 +921,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

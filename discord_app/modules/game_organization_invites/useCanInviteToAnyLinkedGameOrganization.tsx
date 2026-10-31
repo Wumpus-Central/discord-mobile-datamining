@@ -11,8 +11,8 @@ const result = size.fileFinishedImporting(
 );
 
 export default function useCanInviteToAnyLinkedGameOrganization(location) {
-  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(11587).useLinkedGameOrgInvitesEnabled(location);
-  const obj = linkedGameOrgInvitesEnabled(11587);
+  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(11623).useLinkedGameOrgInvitesEnabled(location);
+  const obj = linkedGameOrgInvitesEnabled(11623);
   const items = [GuildStore, GuildMemberStore, GuildRoleStore, PermissionStore];
   const items1 = [linkedGameOrgInvitesEnabled];
   return linkedGameOrgInvitesEnabled(504).useStateFromStores(

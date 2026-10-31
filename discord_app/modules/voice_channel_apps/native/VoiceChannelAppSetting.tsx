@@ -1,5 +1,5 @@
 // discord_app/modules/voice_channel_apps/native/VoiceChannelAppSetting.tsx
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -37,14 +37,15 @@ function VoiceChannelAppRow(guildId) {
   };
   let tmp8Result = null;
   if (null != found) {
-    const obj4 = { application: found.iconApplication };
-    tmp8Result = jsx(tmp5(tmp3[8]), { application: found.iconApplication });
+    ({ applicationId: obj4.applicationId, name: obj4.name, iconApplication: obj4.iconApplication } = found);
+    tmp8Result = jsx(tmp5(tmp3[8]), { applicationId: null, name: null, iconApplication: null });
+    const obj7 = { applicationId: null, name: null, iconApplication: null };
   }
   obj3.icon = tmp8Result;
   obj3.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(18848, dependencyMap.paths),
+      asyncRequireImpl(18895, dependencyMap.paths),
       VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY,
       { guildId, selectedApplicationId: application_id, onChange },
     );

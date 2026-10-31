@@ -143,13 +143,13 @@ class BaseActivityPanelPIPView {
           str2 = "animate-always";
           obj13.translateY = tmpResult1.withSpring(
             point2.y,
-            obj3.get().gestureActive ? closure_12 : closure_13,
+            obj3.get().gestureActive ? closure_11 : closure_12,
             "animate-always",
           );
           items = [,];
           items[0] = obj13;
           tmpResult2 = tmp(tmp2[24]);
-          tmp21 = obj3.get().gestureActive ? closure_12 : closure_13;
+          tmp21 = obj3.get().gestureActive ? closure_11 : closure_12;
           tmp22 = undefined;
           if (!tmp16) {
             tmp22 = transitionComplete;
@@ -188,7 +188,7 @@ class BaseActivityPanelPIPView {
     obj1 = {
       pipState,
       getClampedPIPPosition: transitionState(closure_2[21]).getClampedPIPPosition,
-      ACTIVITY_PIP_SIZE: closure_10,
+      ACTIVITY_PIP_SIZE: shown,
       windowDimensions: tmp3,
       safeArea: tmp4,
       pipAvoidanceSpecs,
@@ -204,16 +204,16 @@ class BaseActivityPanelPIPView {
       withTiming: transitionState(closure_2[23]).withTiming,
       REDUCED_MOTION_TIMING: closure_19,
       withSpring: transitionState(closure_2[24]).withSpring,
-      ACTIVITY_LAYOUT_PHYSICS_GESTURE: height,
-      ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_13,
+      ACTIVITY_LAYOUT_PHYSICS_GESTURE: width,
+      ACTIVITY_LAYOUT_PHYSICS_DEFAULT: height,
     };
     J.__closure = obj1;
     J.__workletHash = 14326479117867;
     J.__initData = closure_21;
     animatedStyle = obj3.useAnimatedStyle(J);
     obj13 = {
-      pipWidth: closure_10.width,
-      pipHeight: closure_10.height,
+      pipWidth: shown.width,
+      pipHeight: shown.height,
       pipOrientationLockState,
       isLandscape: context1.wrapperDimensions.isLandscape,
     };
@@ -237,7 +237,7 @@ class BaseActivityPanelPIPView {
     }, items2);
     obj14.runOnJS = transitionState(closure_2[20]).runOnJS;
     obj14.setMode = setMode;
-    obj14.ActivityPanelModes = width;
+    obj14.ActivityPanelModes = closure_10;
     W.__closure = obj14;
     W.__workletHash = 2951177166574;
     W.__initData = closure_23;
@@ -273,7 +273,7 @@ class BaseActivityPanelPIPView {
       const items = [{ name: "activate" }];
       obj.accessibilityActions = items;
       obj.onAccessibilityAction = function onAccessibilityAction() {
-        setMode(width.PANEL);
+        setMode(constants.PANEL);
       };
       return obj;
     }, items4);
@@ -306,23 +306,23 @@ class BaseActivityPanelPIPView {
   }
 }
 const View = fn(17).View;
-const ActivityLayoutMode = fn(2019).ActivityLayoutMode;
-const ActivityPanelConstants = fn(5652);
-let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
+const ActivityPanelConstants = fn(5657);
+const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
-  ActivityPanelModes: closure_11,
-  ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12,
-  ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1,
-  LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14,
+  ActivityPanelModes: c10,
+  ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_11,
+  ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12,
+  LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1,
 } = ActivityPanelConstants);
-let closure_15 = fn(18944).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(18993).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1072).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11205).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(11224).PIP_WINDOW_OFFSET;
+const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
-const native = fn(1188);
-const boxShadowStyle = native.generateBoxShadowStyle(fn(1188).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(5009);
+const native = fn(1187);
+const boxShadowStyle = native.generateBoxShadowStyle(fn(1187).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
+const createStyles = fn(5014);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
@@ -392,7 +392,7 @@ export default noop.memo(function ActivityPanelPIPView(transitionState) {
   const tmpResult = transitionState(504);
   const items2 = [memo];
   stateFromStores1 = transitionState(504).useStateFromStores(items2, () => ChannelStore.getChannel(c2));
-  const tmp8 = transitionCleanUp(1626)();
+  const tmp8 = transitionCleanUp(1625)();
   closure_129_0 = tmp8;
   const items3 = [tmp8.right];
   memo = activity.useMemo(() => {
@@ -403,7 +403,7 @@ export default noop.memo(function ActivityPanelPIPView(transitionState) {
     if (num == null) {
       num = 0;
     }
-    const obj = { right: { disable: false, override: Math.max(closure_2_14, num) } };
+    const obj = { right: { disable: false, override: Math.max(map1, num) } };
     return obj;
   }, items3);
   const items4 = [activity, stateFromStores1, memo, stateFromStores, transitionCleanUp, transitionState];
@@ -452,7 +452,7 @@ export function useBaseActivityPanelPIPView() {
     if (num == null) {
       num = 0;
     }
-    const obj = { right: { disable: false, override: Math.max(closure_2_14, num) } };
+    const obj = { right: { disable: false, override: Math.max(map1, num) } };
     return obj;
   }, items);
   return obj;

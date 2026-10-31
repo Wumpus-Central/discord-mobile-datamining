@@ -53,8 +53,8 @@ export function useEventScheduleById(guildEventId, recurrenceId) {
   );
   let tmp5 = null;
   if (recurrenceId == null) {
-    nextRecurrenceIdInEvent = tmp2(8960).getNextRecurrenceIdInEvent(stateFromStores);
-    const tmp2Result = tmp2(8960);
+    nextRecurrenceIdInEvent = tmp2(8969).getNextRecurrenceIdInEvent(stateFromStores);
+    const tmp2Result = tmp2(8969);
   }
   useEventExceptionDefault;
   if (stateFromStores != tmp5) {
@@ -65,12 +65,12 @@ export function useEventScheduleById(guildEventId, recurrenceId) {
   } else {
     if (tmp5 != stateFromStores.recurrence_rule) {
       if (tmp5 != nextRecurrenceIdInEvent) {
-        const baseScheduleForRecurrence = tmp2(8960).getBaseScheduleForRecurrence(
+        const baseScheduleForRecurrence = tmp2(8969).getBaseScheduleForRecurrence(
           nextRecurrenceIdInEvent,
           stateFromStores,
         );
-        const tmp2Result3 = tmp2(8960);
-        const scheduleForRecurrenceWithException = tmp2(8960).getScheduleForRecurrenceWithException(
+        const tmp2Result3 = tmp2(8969);
+        const scheduleForRecurrenceWithException = tmp2(8969).getScheduleForRecurrenceWithException(
           baseScheduleForRecurrence,
           tmp7,
         );
@@ -81,7 +81,7 @@ export function useEventScheduleById(guildEventId, recurrenceId) {
           toDateResult = endDate.toDate();
         }
         obj2.endTime = toDateResult;
-        const tmp2Result4 = tmp2(8960);
+        const tmp2Result4 = tmp2(8969);
       }
     }
     const obj3 = { startTime: null, endTime: null };

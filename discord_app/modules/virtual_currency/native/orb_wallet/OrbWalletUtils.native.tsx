@@ -1,25 +1,27 @@
 // discord_app/modules/virtual_currency/native/orb_wallet/OrbWalletUtils.native.tsx
+import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import openPremiumPlanSelectionActionSheetDefault from "../../../premium/native/openPremiumPlanSelectionActionSheet.tsx";
+import CollectiblesActionCreators from "../../../collectibles/CollectiblesActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-
-const PremiumTypes = fn(1386).PremiumTypes;
+require = fn;
+const constants = fn(1074).CollectiblesMobileShopScreen;
+const PremiumTypes = fn(1385).PremiumTypes;
 const context = noop.createContext({ analyticsPage: AnalyticsLocationDefault.ORB_WALLET });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletUtils.native.tsx");
+let result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletUtils.native.tsx");
 
 export const OrbWalletAnalyticsContext = context;
 export function useOrbWalletAnalyticsPage() {
   return noop.useContext(context).analyticsPage;
 }
-export function useOpenNitroCheckoutFromOrbWallet(ORB_WALLET_HEADER_NITRO_UPSELL_CTA) {
-  importDefault = ORB_WALLET_HEADER_NITRO_UPSELL_CTA;
-  const analyticsPage = analyticsLocations.useContext(context).analyticsPage;
-  analyticsLocations = require("useAnalyticsLocations")(ORB_WALLET_HEADER_NITRO_UPSELL_CTA).analyticsLocations;
-  const items = [analyticsPage, analyticsLocations, ORB_WALLET_HEADER_NITRO_UPSELL_CTA];
-  return analyticsLocations.useCallback(() => {
+export function useOpenNitroCheckoutFromOrbWallet(ORB_CHALLENGE_DISCOVERY_CLICK) {
+  const objectType = ORB_CHALLENGE_DISCOVERY_CLICK;
+  const analyticsPage = noop.useContext(context).analyticsPage;
+  analyticsLocations = analyticsPage(analyticsLocations[4])(ORB_CHALLENGE_DISCOVERY_CLICK).analyticsLocations;
+  const items = [analyticsPage, analyticsLocations, ORB_CHALLENGE_DISCOVERY_CLICK];
+  return noop.useCallback(() => {
     const obj = { analyticsLocation: null, analyticsLocations: null, premiumType: null };
     const obj2 = { page: analyticsPage, section: AnalyticsLocationDefault.ORB_WALLET, objectType };
     obj.analyticsLocation = obj2;
@@ -28,3 +30,50 @@ export function useOpenNitroCheckoutFromOrbWallet(ORB_WALLET_HEADER_NITRO_UPSELL
     openPremiumPlanSelectionActionSheetDefault(obj, "stack");
   }, items);
 }
+export function navigateToShopFromOrbWallet(analyticsLocations) {
+  analyticsLocations = analyticsLocations.analyticsLocations;
+  if (analyticsLocations === undefined) {
+    analyticsLocations = [];
+  }
+  let ORBS = analyticsLocations.screen;
+  if (ORBS === undefined) {
+    ORBS = constants.ORBS;
+  }
+  ActionSheetActionCreatorsDefault.hideActionSheet();
+  const obj2 = CollectiblesActionCreators;
+  const result = obj2.openCollectiblesShopMobile({ analyticsLocations, analyticsSource: AnalyticsLocationDefault.ORBS_BALANCE_MENU, screen: ORBS, onNavigateAway: analyticsLocations.onNavigateAway });
+  const obj3 = { analyticsLocations, analyticsSource: AnalyticsLocationDefault.ORBS_BALANCE_MENU, screen: ORBS, onNavigateAway: analyticsLocations.onNavigateAway };
+}
+export const ORB_CHALLENGE_DISCOVERY_CLICKS = {
+  (analyticsLocations) => {
+    analyticsLocations = analyticsLocations.analyticsLocations;
+    let ORBS = constants.SHOP_ALL;
+    if (analyticsLocations === undefined) {
+      analyticsLocations = [];
+    }
+    if (ORBS === undefined) {
+      ORBS = constants.ORBS;
+    }
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const obj2 = CollectiblesActionCreators;
+    const result = obj2.openCollectiblesShopMobile({ analyticsLocations, analyticsSource: AnalyticsLocationDefault.ORBS_BALANCE_MENU, screen: ORBS, onNavigateAway: analyticsLocations.reopenWallet });
+    const obj3 = { analyticsLocations, analyticsSource: AnalyticsLocationDefault.ORBS_BALANCE_MENU, screen: ORBS, onNavigateAway: analyticsLocations.reopenWallet };
+  },
+  (analyticsLocations) => {
+    analyticsLocations = analyticsLocations.analyticsLocations;
+    let ORBS = constants.SHOP_ALL;
+    if (analyticsLocations === undefined) {
+      analyticsLocations = [];
+    }
+    if (ORBS === undefined) {
+      ORBS = constants.ORBS;
+    }
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    const obj2 = CollectiblesActionCreators;
+    const result = obj2.openCollectiblesShopMobile({ analyticsLocations, analyticsSource: AnalyticsLocationDefault.ORBS_BALANCE_MENU, screen: ORBS, onNavigateAway: analyticsLocations.reopenWallet });
+    const obj3 = { analyticsLocations, analyticsSource: AnalyticsLocationDefault.ORBS_BALANCE_MENU, screen: ORBS, onNavigateAway: analyticsLocations.reopenWallet };
+  },
+  (openNitroCheckout) => {
+    openNitroCheckout.openNitroCheckout();
+  }
+};

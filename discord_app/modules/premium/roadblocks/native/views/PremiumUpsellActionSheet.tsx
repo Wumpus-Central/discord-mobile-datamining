@@ -5,7 +5,7 @@ import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05587_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import APNGPlayer from "../../../../image/native/APNGPlayer.android.tsx";
 import openPremiumUpsellActionSheet from "../utils/openPremiumUpsellActionSheet.tsx";
@@ -76,15 +76,15 @@ function PremiumUpsellHero(arg0) {
   return tmp13;
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1386);
+const PremiumConstants = fn(1385);
 ({ PremiumSubscriptionSKUs: c10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(5859).ApplicationStreamFPS;
-const premiumMax = fn(9774).MAX_SCHEDULED_MESSAGES_PER_USER;
+const ApplicationStreamFPS = fn(5864).ApplicationStreamFPS;
+const premiumMax = fn(9795).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 },
   image: { width: 240, height: 144 },

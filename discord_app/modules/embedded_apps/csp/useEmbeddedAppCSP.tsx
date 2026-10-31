@@ -16,10 +16,10 @@ let obj2 = {
     }
     return combined;
   },
-  get(arg0) {
+  get(applicationRouterOrigin) {
     let policy = null;
-    if (null != arg0) {
-      policy = EmbeddedAppCSPStore.getPolicy(arg0);
+    if (null != applicationRouterOrigin) {
+      policy = EmbeddedAppCSPStore.getPolicy(applicationRouterOrigin);
     }
     return policy;
   },
@@ -36,7 +36,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;

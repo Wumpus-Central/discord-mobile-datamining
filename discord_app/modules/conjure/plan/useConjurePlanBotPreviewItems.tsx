@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/useConjurePlanBotPreviewItems.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import conjurePlanBot from "conjurePlanBot.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -58,7 +58,7 @@ function mentionMember(str, username) {
 }
 const Constants = fn(1072);
 ({ MessageStates: closure_8, MessageTypes: closure_9 } = Constants);
-const guildTextChannelRecord = new fn(4862).GuildTextChannelRecord({
+const guildTextChannelRecord = new fn(4867).GuildTextChannelRecord({
   id: "1337",
   guild_id: "1337",
   type: Constants.ChannelTypes.GUILD_TEXT,
@@ -82,11 +82,11 @@ export function useConjurePlanBotExchanges(proposal) {
       } else {
         const obj2 = { message: null, reply: null, event: null };
         const intl = util.intl;
-        obj2.message = intl.string(_modDef3865.J7qggf);
+        obj2.message = intl.string(_modDef3868.J7qggf);
         const intl2 = util.intl;
-        obj2.reply = intl2.string(_modDef3865.nqYtiy);
+        obj2.reply = intl2.string(_modDef3868.nqYtiy);
         const intl3 = util.intl;
-        obj2.event = intl3.string(_modDef3865["05lU9W"]);
+        obj2.event = intl3.string(_modDef3868["05lU9W"]);
         items = conjurePlanBot.getConjurePlanBotExchanges(closure_0, tmp, obj2);
       }
       return items;
@@ -103,11 +103,11 @@ export function useConjurePlanCommandExchanges(proposal) {
       obj.bot = undefined;
       const obj2 = { message: null, reply: null, event: null };
       const intl = util.intl;
-      obj2.message = intl.string(_modDef3865.J7qggf);
+      obj2.message = intl.string(_modDef3868.J7qggf);
       const intl2 = util.intl;
-      obj2.reply = intl2.string(_modDef3865.nqYtiy);
+      obj2.reply = intl2.string(_modDef3868.nqYtiy);
       const intl3 = util.intl;
-      obj2.event = intl3.string(_modDef3865["05lU9W"]);
+      obj2.event = intl3.string(_modDef3868["05lU9W"]);
       let conjurePlanBotExchanges = conjurePlanBot.getConjurePlanBotExchanges(obj, "commands", obj2);
       const tmp2Result = conjurePlanBot;
     } else {
@@ -204,9 +204,9 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
             let obj = { bot: tmp4, currentUser: tmp, viewer: tmp3, member: tmp5 };
             let obj2 = { targetMessage: null, memberMessage: null };
             const intl = util.intl;
-            obj2.targetMessage = intl.string(_modDef3865["y+QYes"]);
+            obj2.targetMessage = intl.string(_modDef3868["y+QYes"]);
             const intl2 = util.intl;
-            obj2.memberMessage = intl2.string(_modDef3865.BUTRDc);
+            obj2.memberMessage = intl2.string(_modDef3868.BUTRDc);
             (function buildPreviewItems(arg0, arg1, memberMessage) {
               ({ bot, currentUser } = arg1);
               ({ viewer, member } = arg1);
@@ -218,13 +218,13 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 ({ interactionName, messageType } = obj);
                 const StringResult = String(items.length + 1);
                 const obj3 = { channelId: id.id, content: bot, author: bot2, type: null };
-                const obj2 = projectId(6058);
+                const obj2 = projectId(6063);
                 if (messageType == null) {
                   messageType = constants2.DEFAULT;
                 }
                 const obj4 = {};
                 obj3.type = messageType;
-                const merged = Object.assign(exchanges(10299)(obj3));
+                const merged = Object.assign(exchanges(10319)(obj3));
                 obj4.id = StringResult;
                 obj4.state = constants.SENT;
                 if (null != interactionName) {
@@ -232,17 +232,17 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                   obj6 = {
                     id: StringResult,
                     name: interactionName,
-                    type: projectId(6065).InteractionTypes.APPLICATION_COMMAND,
-                    user: projectId(10299).userRecordToServer(currentUser),
+                    type: projectId(6070).InteractionTypes.APPLICATION_COMMAND,
+                    user: projectId(10319).userRecordToServer(currentUser),
                   };
                   obj5.interaction = obj6;
                   let obj7 = obj5;
-                  const tmp2Result = projectId(10299);
+                  const tmp2Result = projectId(10319);
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp4 = exchanges(10299);
+                const tmp4 = exchanges(10319);
                 items.push({
                   key: StringResult,
                   record: obj2.createMessageRecord(obj4),

@@ -3,13 +3,13 @@ import util from "../../../../intl/index.native.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRadioGroup from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import _modDef19914 from "../../../../../_runtime/metro/19914__.js";
-import _modDef19915 from "../../../../../_runtime/metro/19915__.js";
+import _modDef19972 from "../../../../../_runtime/metro/19972__.js";
+import _modDef19973 from "../../../../../_runtime/metro/19973__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(17148).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(17204).AllChannelAccessOptions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const size = fn(2);
@@ -34,7 +34,7 @@ export default function AllChannelsSwitch(channelAccessFormat) {
   };
   const obj3 = {
     value: AllChannelAccessOptions.SOME_CHANNELS_ACCESS,
-    icon: hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef19914 }),
+    icon: hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef19972 }),
     label: null,
     disabled: null,
   };
@@ -43,8 +43,8 @@ export default function AllChannelsSwitch(channelAccessFormat) {
   obj3.disabled = disabled;
   const items = [hasOwnProperty(TableRadioRow.TableRadioRow, obj3)];
   const obj5 = { value: AllChannelAccessOptions.ALL_CHANNELS_ACCESS, icon: null, label: null, disabled: null };
-  const obj4 = { source: _modDef19914 };
-  obj5.icon = hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef19915 });
+  const obj4 = { source: _modDef19972 };
+  obj5.icon = hasOwnProperty(TableRow.TableRow.Icon, { source: _modDef19973 });
   const intl2 = util.intl;
   obj5.label = intl2.string(util.t.l4Tr7X);
   obj5.disabled = disabled;

@@ -65,14 +65,25 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(6030).BuiltInSectionId;
-const MessageSendLocation = fn(5014).MessageSendLocation;
+const BuiltInSectionId = fn(6035).BuiltInSectionId;
+const MessageSendLocation = fn(5019).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
 export const FAKE_BUILT_IN_APP = { id: BuiltInSectionId.BUILT_IN };
 export function isRealApplication(application) {
   return application.id !== BuiltInSectionId.BUILT_IN;
+}
+export function isConjureAppWithoutIcon(icon, arg1) {
+  let tmp = null == icon.icon;
+  if (tmp) {
+    let tmp3 = icon instanceof ApplicationRecord ? icon.conjureProjectId : icon.conjure_project_id;
+    if (tmp3 == null) {
+      tmp3 = arg1;
+    }
+    tmp = null != tmp3;
+  }
+  return tmp;
 }
 export function getSectionName(FAKE_BUILT_IN_APP) {
   if (FAKE_BUILT_IN_APP.id !== BuiltInSectionId.BUILT_IN) {
@@ -158,7 +169,7 @@ export function executeAppLauncherCommand(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -235,7 +246,7 @@ export function executeAppLauncherCommand(arg0) {
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;

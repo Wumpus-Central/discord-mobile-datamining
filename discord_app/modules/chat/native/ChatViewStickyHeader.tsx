@@ -38,7 +38,7 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   }
   return tmp5;
 }
-const LOCATION_CONTEXT_MOBILE = fn(11230).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11256).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -61,7 +61,7 @@ export default noop.memo(function StickyHeader(channel) {
   }));
   let tmp10 = null;
   if (pinotMemberNotice.visible) {
-    const obj2 = { onDismiss: pinotMemberNotice.dismiss };
+    const obj2 = { channel, onDismiss: pinotMemberNotice.dismiss };
     tmp10 = timestampProducer(PinotLazy.PinotMemberNoticeBar, obj2);
   }
   const items = [tmp10, , , ,];

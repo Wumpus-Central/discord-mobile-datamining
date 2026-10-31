@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   container: {
     marginHorizontal: nativeDefault.space.PX_16,
@@ -81,19 +81,19 @@ export default noop.memo(function SmartSearchTip(children) {
     accessibilityRole: "header",
     children: null,
   };
-  const intl = citations(1114).intl;
-  obj4.children = intl.string(guildId(4120).ydAwWi);
-  const items1 = [closure_5(citations(5619).Text, obj4)];
+  const intl = citations(1113).intl;
+  obj4.children = intl.string(guildId(4123).ydAwWi);
+  const items1 = [closure_5(citations(5624).Text, obj4)];
   const obj5 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
-  const intl2 = citations(1114).intl;
-  obj5.children = intl2.string(guildId(4120).QIdSmb);
-  items1[1] = closure_5(citations(5619).Text, obj5);
+  const intl2 = citations(1113).intl;
+  obj5.children = intl2.string(guildId(4123).QIdSmb);
+  items1[1] = closure_5(citations(5624).Text, obj5);
   obj3.children = items1;
   const items2 = [closure_6(View, obj3)];
   let tmp4Result = memo.length > 0;
   if (tmp4Result) {
     const obj6 = {
-      size: tmp5(1188).AvatarSizes.XSMALL_20,
+      size: tmp5(1187).AvatarSizes.XSMALL_20,
       totalCount: memo.length,
       names: memo.map((username) => username.username),
       children: null,
@@ -103,13 +103,13 @@ export default noop.memo(function SmartSearchTip(children) {
       const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
       return hasOwnProperty(native.Avatar, obj, user.id);
     });
-    tmp4Result = closure_5(tmp5(14841).AvatarPile, obj6);
+    tmp4Result = closure_5(tmp5(14879).AvatarPile, obj6);
   }
   items2[1] = tmp4Result;
   obj2.children = items2;
   const items3 = [
     closure_6(View, obj2),
-    closure_5(citations(5619).Text, {
+    closure_5(citations(5624).Text, {
       variant: "text-md/normal",
       color: "text-default",
       children: children.answerText,

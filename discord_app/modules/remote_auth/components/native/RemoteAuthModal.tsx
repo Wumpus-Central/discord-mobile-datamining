@@ -12,8 +12,8 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef15640 from "../../../../../_runtime/metro/15640__.js";
-import _modDef15642 from "../../../../../_runtime/metro/15642__.js";
+import _modDef15681 from "../../../../../_runtime/metro/15681__.js";
+import _modDef15683 from "../../../../../_runtime/metro/15683__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -40,11 +40,11 @@ function RemoteAuthBody(remoteAuthFingerprint) {
       .then((body) => {
         dependencyMap(body.body.handshake_token);
         closure_1_1(constants.LOADED);
-        const result = remoteAuthFingerprint(5604).DeprecatedLayoutAnimation();
+        const result = remoteAuthFingerprint(5609).DeprecatedLayoutAnimation();
       })
       .catch(() => {
         closure_1_1(constants.NOT_FOUND);
-        const result = remoteAuthFingerprint(5604).DeprecatedLayoutAnimation();
+        const result = remoteAuthFingerprint(5609).DeprecatedLayoutAnimation();
       });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -218,7 +218,7 @@ get_ActivityIndicator = fn(17);
 const Endpoints = fn(1072).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   background: { width: "100%", height: "100%" },
   container: { flex: 1, alignItems: "stretch", alignContent: "center" },
@@ -291,12 +291,12 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 export default function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef15642, style: tmp.imageStyle };
+  const obj2 = { source: _modDef15683, style: tmp.imageStyle };
   const items = [React5(FastImageDefault, obj2), ,];
   const obj3 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj3.style = items1;
-  obj3.source = _modDef15640;
+  obj3.source = _modDef15681;
   items[1] = React5(FastImageDefault, obj3);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.mainCard, children: null };

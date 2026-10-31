@@ -32,7 +32,7 @@ export function onRouteSettingOnPress(arg0) {
         const timerId = setTimeout(() => {
           UserSettingsModalActionCreatorsDefault.setSection(closure_1_1.route);
           const obj3 = { destinationPane: closure_1_1.route, source: { page: constants.USER_SETTINGS } };
-          const result = navigation(7159).trackUserSettingsPaneViewed(obj3);
+          const result = navigation(7165).trackUserSettingsPaneViewed(obj3);
           navigation.navigate(closure_1_1.route);
         }, 100);
         const tmpResult3 = KeyboardManagerUtils;
@@ -61,7 +61,7 @@ export function getSettingTitle(id) {
   return cachedSettingTitle;
 }
 export function getSettingSearchableTitles() {
-  const entries = Object.entries(items(16384).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(16426).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
@@ -82,7 +82,7 @@ export function getSettingSearchableTitles() {
 export function getSettingScreens() {
   let items = [];
   set = new Set();
-  const entries = Object.entries(items(16384).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(16426).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     if (tmp2.type === constants2.ROUTE) {
@@ -97,7 +97,7 @@ export function getSettingScreens() {
 }
 export function getDesignSystemScreens() {
   let items = [];
-  const entries = Object.entries(items(16384).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(16426).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     let tmp3 = tmp2.type === constants2.ROUTE;

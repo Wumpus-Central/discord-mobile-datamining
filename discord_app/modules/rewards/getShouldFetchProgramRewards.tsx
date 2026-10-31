@@ -4,7 +4,7 @@ import shouldAggressivelyFetchNitroRewards from "shouldAggressivelyFetchNitroRew
 import ProgramRewardsStore from "ProgramRewardsStore.tsx";
 
 require = fn;
-const DidNotFetchReason = fn(15572).DidNotFetchReason;
+const DidNotFetchReason = fn(15611).DidNotFetchReason;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/getShouldFetchProgramRewards.tsx");
 

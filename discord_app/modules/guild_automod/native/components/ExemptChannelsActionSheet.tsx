@@ -74,10 +74,10 @@ export default function ExemptChannelsActionSheet(guildId) {
     onSave: null,
   };
   let obj2 = guildId(504);
-  const intl = guildId(1114).intl;
-  obj3.title = intl.string(guildId(1114).t.OGiMXJ);
-  const intl2 = guildId(1114).intl;
-  obj3.searchPlaceholder = intl2.string(guildId(1114).t.vephiL);
+  const intl = guildId(1113).intl;
+  obj3.title = intl.string(guildId(1113).t.OGiMXJ);
+  const intl2 = guildId(1113).intl;
+  obj3.searchPlaceholder = intl2.string(guildId(1113).t.vephiL);
   obj3.items = memo;
   obj3.initialSelected = exemptChannels;
   obj3.getId = getChannelOptionId;
@@ -85,7 +85,7 @@ export default function ExemptChannelsActionSheet(guildId) {
   obj3.renderLabel = getChannelOptionName;
   obj3.renderIcon = callback;
   obj3.onSave = onSave;
-  return jsx(stateFromStores(19643), {
+  return jsx(stateFromStores(19700), {
     title: null,
     searchPlaceholder: null,
     listId: "automod-exempt-channels",

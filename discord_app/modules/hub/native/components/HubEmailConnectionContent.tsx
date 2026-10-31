@@ -17,12 +17,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(14276);
+const HubConstants = fn(14314);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   header: { marginTop: 16, marginBottom: 16, alignSelf: "center" },
@@ -58,7 +58,7 @@ export default function HubEmailConnectionContent(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -226,10 +226,10 @@ export default function HubEmailConnectionContent(arg0) {
   const obj4 = { ref, contentContainerStyle: null, children: null };
   const items = [tmp.scrollViewContainer];
   const tmp7 = _slicedToArray(noop.useState(null), 2);
-  items[1] = { paddingBottom: invite(5602)().insets.bottom + invite(575).space.PX_16 };
+  items[1] = { paddingBottom: invite(5607)().insets.bottom + invite(575).space.PX_16 };
   obj4.contentContainerStyle = items;
   let obj6 = { style: tmp.container, children: null };
-  let obj5 = { paddingBottom: invite(5602)().insets.bottom + invite(575).space.PX_16 };
+  let obj5 = { paddingBottom: invite(5607)().insets.bottom + invite(575).space.PX_16 };
   const tmp16 = closure_7;
   const items1 = [
     closure_12(ref, {
@@ -323,7 +323,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = closure_12(invite(7075), obj11);
+  items1[3] = closure_12(invite(7081), obj11);
   obj6.children = items1;
   const items2 = [closure_13(ref, obj6), closure_12(ref, { style: tmp.growSpacing })];
   const obj15 = { style: tmp.buttonContainer, children: null };

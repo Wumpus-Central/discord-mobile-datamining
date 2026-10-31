@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/tips/native/ConjureBotPermissionsTip.tsx
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureTipHintDefault from "ConjureTipHint.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 function BotPermissionsHint(projectId) {
   projectId = projectId.projectId;
-  dependencyMap = noop.useContext(projectId(12400).ConjurePublishActionContext);
-  let obj = { icon: projectId(11255).ShieldIcon, children: null };
-  const intl = projectId(1114).intl;
+  dependencyMap = noop.useContext(projectId(12438).ConjurePublishActionContext);
+  let obj = { icon: projectId(11281).ShieldIcon, children: null };
+  const intl = projectId(1113).intl;
   const obj2 = { onReview: null };
   importDefault = asyncGeneratorStep(async () => {
     if (v3 === 2) {
@@ -22,7 +22,7 @@ function BotPermissionsHint(projectId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -53,7 +53,7 @@ function BotPermissionsHint(projectId) {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } catch (tmp10) {
         v3 = tmp;
         throw tmp10;
@@ -70,12 +70,12 @@ function BotPermissionsHint(projectId) {
     }
     return applyArgumentsResult;
   };
-  obj.children = intl.format(_modDef3865["0S9HY8"], obj2);
-  return jsx(ConjureTipHintDefault, { icon: projectId(11255).ShieldIcon, children: null });
+  obj.children = intl.format(_modDef3868["0S9HY8"], obj2);
+  return jsx(ConjureTipHintDefault, { icon: projectId(11281).ShieldIcon, children: null });
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(12589).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(12624).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj.render = function render(arg0, context) {
   return <BotPermissionsHint projectId={context.context.projectId} />;
 };

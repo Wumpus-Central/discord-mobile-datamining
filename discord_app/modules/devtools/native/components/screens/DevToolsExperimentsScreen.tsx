@@ -184,12 +184,12 @@ function GuildExperimentDebugView(arg0) {
   const obj4 = _modDef12(obj3);
   obj6.subLabel = str;
   const items1 = [
-    closure_11(obj3(7054).TableRowGroup, {
+    closure_11(obj3(7060).TableRowGroup, {
       title: "Overview",
       hasIcons: false,
-      children: closure_11(obj3(6969).TableRow, obj6),
+      children: closure_11(obj3(6975).TableRow, obj6),
     }),
-    closure_11(obj3(1188).Spacer, { size: 16 }),
+    closure_11(obj3(1187).Spacer, { size: 16 }),
     ,
     ,
     ,
@@ -198,10 +198,10 @@ function GuildExperimentDebugView(arg0) {
     ,
   ];
   const obj8 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(6969).TableRow, obj6) };
-  obj8.children = closure_11(obj3(6969).TableRow, { label: items.join("\n") });
-  items1[2] = closure_11(obj3(7054).TableRowGroup, obj8);
-  items1[3] = closure_11(obj3(1188).Spacer, { size: 16 });
+  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(6975).TableRow, obj6) };
+  obj8.children = closure_11(obj3(6975).TableRow, { label: items.join("\n") });
+  items1[2] = closure_11(obj3(7060).TableRowGroup, obj8);
+  items1[3] = closure_11(obj3(1187).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
   if (null != loadedGuildExperiment) {
@@ -209,12 +209,12 @@ function GuildExperimentDebugView(arg0) {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj9 = { label: items.join("\n") };
-  items1[4] = closure_11(obj3(7054).TableRowGroup, {
+  items1[4] = closure_11(obj3(7060).TableRowGroup, {
     title: "Server Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(6969).TableRow, { label: str3 }),
+    children: closure_11(obj3(6975).TableRow, { label: str3 }),
   });
-  items1[5] = closure_11(obj3(1188).Spacer, { size: 16 });
+  items1[5] = closure_11(obj3(1187).Spacer, { size: 16 });
   if (null != override) {
     const _JSON2 = JSON;
     str2 = JSON.stringify(override, undefined, 2);
@@ -222,22 +222,22 @@ function GuildExperimentDebugView(arg0) {
   const obj10 = {
     title: "Server Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(6969).TableRow, { label: str3 }),
+    children: closure_11(obj3(6975).TableRow, { label: str3 }),
   };
-  items1[6] = closure_11(obj3(7054).TableRowGroup, {
+  items1[6] = closure_11(obj3(7060).TableRowGroup, {
     title: "Override Descriptor",
     hasIcons: false,
-    children: closure_11(obj3(6969).TableRow, { label: str2 }),
+    children: closure_11(obj3(6975).TableRow, { label: str2 }),
   });
-  items1[7] = closure_11(obj3(1188).Spacer, { size: 16 });
+  items1[7] = closure_11(obj3(1187).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    let mapped3 = closure_11(tmp20(6969).TableRow, { label: "none" });
+    let mapped3 = closure_11(tmp20(6975).TableRow, { label: "none" });
   } else {
     mapped3 = mapped.map((label) =>
       closure_1_11(obj3(dependencyMap[23]).TableRow, { label, labelLineClamp: 1 }, label),
     );
   }
-  items1[8] = closure_11(obj3(7054).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
+  items1[8] = closure_11(obj3(7060).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
   obj5.children = items1;
   return closure_12(View, obj5);
 }
@@ -256,7 +256,7 @@ class ExperimentDetails {
     obj9 = { paddingHorizontal: null };
     callback = closure_4.useCallback(() => {
       ClipboardUtils.copy(uRLForExperiment, () => {
-        uRLForExperiment(5707).open("experiment-link-copied", { text: "Copied experiment link", variant: "success" });
+        uRLForExperiment(5712).open("experiment-link-copied", { text: "Copied experiment link", variant: "success" });
         if (onCopyLink != null) {
           onCopyLink();
         }
@@ -276,7 +276,7 @@ class ExperimentDetails {
         if (isDestructive) {
           variant = "danger";
         }
-        return closure_1_11(onCopyLink(6969).TableRow, { variant, label, onPress }, index);
+        return closure_1_11(onCopyLink(6975).TableRow, { variant, label, onPress }, index);
       }),
     };
     items1 = [, ,];
@@ -322,11 +322,11 @@ function ExperimentActionSheet(arg0) {
   return closure_1_11(Sheet_BottomSheet.BottomSheet, obj);
 }
 const View = fn(17).View;
-const ExperimentConstants = fn(5234);
+const ExperimentConstants = fn(5239);
 ({ ExperimentBuckets: closure_9, ExperimentTypes: c10 } = ExperimentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   listContainer: null,

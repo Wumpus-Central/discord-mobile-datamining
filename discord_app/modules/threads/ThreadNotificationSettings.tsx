@@ -56,7 +56,7 @@ function computeThreadNotificationSetting(channel) {
     obj6 = FlagUtils;
   }
 }
-const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
+const ThreadMemberFlags = fn(1112).ThreadMemberFlags;
 const UserNotificationSettings = fn(1072).UserNotificationSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");

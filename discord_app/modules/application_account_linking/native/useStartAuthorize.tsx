@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const AuthorizeFlow = fn(7322).AuthorizeFlow;
+const AuthorizeFlow = fn(7328).AuthorizeFlow;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
@@ -55,7 +55,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -116,7 +116,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
           };
           AnalyticsUtilsDefault.track(constants2.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj8);
           const obj9 = { onSuccess: closure_129_0.onSuccess, onError: closure_129_0.onError };
-          const result = closure_0(7327).accountLinkAuthorizationStarted(closure_0.id, obj9);
+          const result = closure_0(7333).accountLinkAuthorizationStarted(closure_0.id, obj9);
           c4 = 0;
           c6 = 3;
           return { value: true, done: true };

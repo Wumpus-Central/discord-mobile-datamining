@@ -13,13 +13,13 @@ const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;
 const ChannelTypes = Constants.ChannelTypes;
 const result = size.fileFinishedImporting("modules/pinot/useIsChannelPinotPromotable.tsx");
 
-export function usePinotPromotableChannelId(guild_id, mobile_channel_header_label) {
+export function usePinotPromotableChannelId(guild_id, mobile_member_coachmark) {
   _require = guild_id;
   guild_id = undefined;
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
-  isPinotAdminEnabled = require("PinotExperiment").useIsPinotAdminEnabled(guild_id, mobile_channel_header_label);
+  isPinotAdminEnabled = require("PinotExperiment").useIsPinotAdminEnabled(guild_id, mobile_member_coachmark);
   const obj = require("PinotExperiment");
   const items = [GuildStore, GuildRoleStore, ChannelStore];
   const items1 = [isPinotAdminEnabled, guild_id];
@@ -50,13 +50,13 @@ export function usePinotPromotableChannelId(guild_id, mobile_channel_header_labe
     items1,
   );
 }
-export function useIsChannelPinotPromotable(guild_id, location) {
+export function useIsChannelPinotPromotable(guild_id, create_guild_channel) {
   _require = guild_id;
   guild_id = undefined;
   if (guild_id != null) {
     guild_id = guild_id.guild_id;
   }
-  isPinotAdminEnabled = require("PinotExperiment").useIsPinotAdminEnabled(guild_id, location);
+  isPinotAdminEnabled = require("PinotExperiment").useIsPinotAdminEnabled(guild_id, create_guild_channel);
   let obj = require("PinotExperiment");
   const items = [GuildStore, GuildRoleStore, ChannelStore];
   const items1 = [isPinotAdminEnabled, guild_id];

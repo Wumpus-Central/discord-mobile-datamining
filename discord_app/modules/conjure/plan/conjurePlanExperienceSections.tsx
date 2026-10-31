@@ -1,18 +1,18 @@
 // discord_app/modules/conjure/plan/conjurePlanExperienceSections.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import conjurePlanFormat from "conjurePlanFormat.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanExperienceSections.tsx");
 
 export const CONJURE_PLAN_EXPERIENCE_KIND_LABELS = {
-  frame: _modDef3865.Z2bt4u,
-  overlay_widget: _modDef3865["0mGHfU"],
-  user_widget: _modDef3865.Jipr29,
-  bot: _modDef3865.EbvC13,
-  commands: _modDef3865.EbvC13,
-  automod: _modDef3865.tiMvei,
+  frame: _modDef3868.Z2bt4u,
+  overlay_widget: _modDef3868["0mGHfU"],
+  user_widget: _modDef3868.Jipr29,
+  bot: _modDef3868.EbvC13,
+  commands: _modDef3868.EbvC13,
+  automod: _modDef3868.tiMvei,
 };
 export function conjurePlanExperienceIsApp(experience) {
   let tmp = "frame" === experience.kind;
@@ -74,7 +74,7 @@ export function conjurePlanRequirementsSectionId(arr) {
 export function conjurePlanFrameFeatures(usableInVoice) {
   if (usableInVoice.usableInVoice) {
     const intl = util.intl;
-    const items = [intl.string(_modDef3865["4oGg2h"])];
+    const items = [intl.string(_modDef3868["4oGg2h"])];
     let items1 = items;
   } else {
     items1 = [];
@@ -82,7 +82,7 @@ export function conjurePlanFrameFeatures(usableInVoice) {
   const items2 = [...items1];
   if (usableInVoice.launchableAnywhere) {
     const intl2 = util.intl;
-    const items3 = [intl2.string(_modDef3865.BTGCfR)];
+    const items3 = [intl2.string(_modDef3868.BTGCfR)];
     let items4 = items3;
   } else {
     items4 = [];
@@ -91,9 +91,9 @@ export function conjurePlanFrameFeatures(usableInVoice) {
   return items2;
 }
 export function conjurePlanRequirementGroups(proposal) {
-  let items = [{ key: "permissions", caption: _modDef3865["2UbW6r"], names: proposal.bot_permissions }];
-  let obj = { key: "permissions", caption: _modDef3865["2UbW6r"], names: proposal.bot_permissions };
-  items[1] = { key: "intents", caption: _modDef3865["7TKfpj"], names: proposal.privileged_intents };
+  let items = [{ key: "permissions", caption: _modDef3868["2UbW6r"], names: proposal.bot_permissions }];
+  let obj = { key: "permissions", caption: _modDef3868["2UbW6r"], names: proposal.bot_permissions };
+  items[1] = { key: "intents", caption: _modDef3868["7TKfpj"], names: proposal.privileged_intents };
   return items.flatMap((names) => {
     names = names.names;
     if (null != names) {

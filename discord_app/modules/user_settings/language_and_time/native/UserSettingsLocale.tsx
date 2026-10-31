@@ -32,7 +32,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
       } else {
         closure_130_1(closure_130_2[8]).updateLocale(closure_129_0);
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp14) {
       c4 = tmp;
@@ -73,9 +73,9 @@ let closure_10 = async function _handleLanguageChange(arg0) {
   }
 };
 const ScrollView = fn(17).ScrollView;
-const setAppLocale = fn(2064).setAppLocale;
+const setAppLocale = fn(2063).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16 };

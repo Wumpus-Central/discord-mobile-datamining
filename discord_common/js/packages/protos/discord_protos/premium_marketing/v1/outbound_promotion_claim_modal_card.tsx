@@ -1,10 +1,10 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/outbound_promotion_claim_modal_card.tsx
-import _mod1198 from "../../../../../../../_runtime/metro/01198__.js";
+import _mod1197 from "../../../../../../../_runtime/metro/01197__.js";
 import theme_aware_asset from "theme_aware_asset.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const MessageType = fn(1198).MessageType;
+const MessageType = fn(1197).MessageType;
 class OutboundPromotionClaimModalCard$Type extends MessageType {
   constructor() {
     obj = {
@@ -25,10 +25,10 @@ const prototype = OutboundPromotionClaimModalCard$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = {};
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1198.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1198.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1198;
+    const result = _mod1197.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1197;
   }
   return obj;
 };
@@ -63,7 +63,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1198.UnknownFieldHandler.onRead;
+              onRead = _mod1197.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -76,22 +76,22 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 prototype["internalBinaryWrite"] = function internalBinaryWrite(asset, tag, writeUnknownFields) {
   if (asset.asset) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult = tag.tag(1, _mod1198.WireType.LengthDelimited);
+    const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
     const joined = ThemeAwareAsset.internalBinaryWrite(
       asset.asset,
-      tag.tag(1, _mod1198.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1197.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(
       asset.asset,
-      tag.tag(1, _mod1198.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1197.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1198.UnknownFieldHandler.onWrite;
+      onWrite = _mod1197.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, asset, tag);

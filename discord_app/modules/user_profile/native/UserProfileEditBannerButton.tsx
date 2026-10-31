@@ -7,7 +7,7 @@ import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(16405);
+const EditButtonDefault = tmp(16447);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -57,7 +57,7 @@ function EditButton(disabled) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,

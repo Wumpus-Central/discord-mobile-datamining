@@ -45,13 +45,13 @@ function needsHexagonCampaignEnrollment(themes) {
   return result;
 }
 const View = fn(17).View;
-const ThemeConstants = fn(1196);
+const ThemeConstants = fn(1195);
 ({ SystemTheme: map1, SystemThemeState: closure_14 } = ThemeConstants);
-const HexagonCampaignPerk = fn(5034).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5039).HexagonCampaignPerk;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = {
   flex: 1,
   paddingHorizontal: nativeDefault.space.PX_16,
@@ -59,7 +59,7 @@ let obj2 = {
   gap: nativeDefault.space.PX_24,
   marginBottom: null,
 };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num = 0;
 if (!PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
@@ -90,7 +90,7 @@ let closure_22 = items.map((item) => {
   return internal.resolveSemanticColor(item, nativeDefault.colors.CARD_SECONDARY_BG);
 });
 let cardSecondaryStops = items.map((item, index) => index);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj6 = {
   width: "100%",
   gap: nativeDefault.space.PX_16,
@@ -102,70 +102,70 @@ let closure_24 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   items,
 );
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_25 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE },
   items,
 );
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 let closure_26 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG },
   items,
 );
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj12 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_27 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST },
   items,
 );
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj14 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 let closure_28 = createStyles.createAnimatedThemedStyles(
   { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   items,
 );
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj16 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_29 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_DEFAULT }, items);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj18 = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_30 = createStyles.createAnimatedThemedStyles(
   { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
   items,
 );
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj20 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_31 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_SUBTLE }, items);
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj22 = { color: nativeDefault.colors.TEXT_SUBTLE };
 let closure_32 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED }, items);
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj24 = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_33 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_MUTED }, items);
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj26 = { borderColor: nativeDefault.colors.BORDER_MUTED };
 let closure_34 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG }, items);
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj28 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_35 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_NORMAL }, items);
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj30 = { borderColor: nativeDefault.colors.BORDER_NORMAL };
 let closure_36 = createStyles.createAnimatedThemedStyles(
   { tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON },
   items,
 );
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj32 = { tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON };
 let closure_37 = createStyles.createAnimatedThemedStyles({ tintColor: nativeDefault.colors.TEXT_SUBTLE }, items);
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj34 = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_38 = createStyles.createAnimatedThemedStyles(
   { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   items,
 );
-createStyles = fn(5009);
+createStyles = fn(5014);
 const obj36 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let closure_39 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_BRAND }, items);
 function getSegmentedControlItems() {
@@ -246,8 +246,8 @@ function ThemePicker(defaultIndex) {
   [tmp12, c13] = canGoBack(hasSaveButton.useState(str), 2);
   const tmp8Result = canGoBack(hasSaveButton.useState(str), 2);
   closure_14 = tmp14;
-  const headerHeight = require("../../../../../_runtime/metro/06999__.js").useHeaderHeight();
-  const tmp3Result = require("../../../../../_runtime/metro/06999__.js");
+  const headerHeight = require("../../../../../_runtime/metro/07005__.js").useHeaderHeight();
+  const tmp3Result = require("../../../../../_runtime/metro/07005__.js");
   [tmp16, c15] = canGoBack(hasSaveButton.useState(0), 2);
   const callback = obj2.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.width);
@@ -453,7 +453,7 @@ function ThemePicker(defaultIndex) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -569,7 +569,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -609,7 +609,7 @@ function ThemePicker(defaultIndex) {
                   callback1(tmp12);
                   close();
                   c2 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               }
             }
@@ -685,7 +685,7 @@ function ThemePicker(defaultIndex) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

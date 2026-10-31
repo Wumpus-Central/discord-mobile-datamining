@@ -15,7 +15,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
 
 export default function usePremiumTryItOutPresetShuffle() {
-  const tmp = callback(5248)();
+  const tmp = callback(5253)();
   const isThemeLightResult = shared.isThemeLight(tmp);
   require = isThemeLightResult;
   const items = [isThemeLightResult];
@@ -29,7 +29,7 @@ export default function usePremiumTryItOutPresetShuffle() {
       imageUri: tryItOutPresetConfig.getBannerSrc(false),
       staticImageUri: tryItOutPresetConfig.getBannerSrc(true),
       description: tryItOutPresetConfig.getBannerAltText(),
-      originalAsset: "find",
+      originalAsset: "ind",
     });
     const themeColors = tryItOutPresetConfig.themeColors;
     obj2.themeColors = isThemeLightResult ? themeColors.light : themeColors.dark;

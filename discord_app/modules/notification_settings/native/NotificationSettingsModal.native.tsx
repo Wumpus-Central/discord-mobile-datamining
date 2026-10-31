@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import MuteTimers from "../../../lib/MuteTimers.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -43,8 +43,8 @@ function ConnectedNotificationSettings(guildId) {
   guildId = guildId.guildId;
   let memo;
   let shouldUseNewNotificationSystem;
-  const navigation = guildId(1498).useNavigation();
-  let obj = guildId(1498);
+  const navigation = guildId(1497).useNavigation();
+  let obj = guildId(1497);
   const items = [UserGuildSettingsStore, GuildStore, GuildCategoryStore, GuildMemberCountStore];
   const stateFromStoresObject = guildId(504).useStateFromStoresObject(items, () => ({
     guild: GuildStore.getGuild(guildId),
@@ -78,8 +78,8 @@ function ConnectedNotificationSettings(guildId) {
     items1,
   );
   const obj2 = guildId(504);
-  shouldUseNewNotificationSystem = guildId(11056).useShouldUseNewNotificationSystem("NotificationSettingsModalNative");
-  const obj3 = guildId(11056);
+  shouldUseNewNotificationSystem = guildId(11075).useShouldUseNewNotificationSystem("NotificationSettingsModalNative");
+  const obj3 = guildId(11075);
   const items2 = [UserGuildSettingsStore];
   const items3 = [shouldUseNewNotificationSystem, memo, tmp3.channelOverrides];
   const obj5 = { children: null };
@@ -116,14 +116,14 @@ function ConnectedNotificationSettings(guildId) {
       navigation,
       shouldUseNewNotificationSystem,
     }),
-    closure_29(guildId(5601).NavScrim, {}),
+    closure_29(guildId(5606).NavScrim, {}),
   ];
   obj5.children = items4;
   return closure_30(closure_31, obj5);
 }
 let closure_3 = ["categories"];
 const View = fn(17).View;
-const ChannelRecord = fn(4862);
+const ChannelRecord = fn(4867);
 ({ CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING: closure_7, isGuildReadableType: closure_8 } = ChannelRecord);
 const Constants = fn(1072);
 ({
@@ -138,12 +138,12 @@ const Constants = fn(1072);
   HelpdeskArticles: closure_25,
   EMPTY_STRING_SNOWFLAKE_ID: closure_26,
 } = Constants);
-const UnreadSetting = fn(6770).UnreadSetting;
+const UnreadSetting = fn(6776).UnreadSetting;
 let closure_28 = fn(1082).GuildNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const hybrid = "hybrid";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   highlightsLearnMore: { fontSize: 12, color: nativeDefault.unsafe_rawColors.BLUE_345, marginTop: 4 },
   formStack: null,
@@ -171,8 +171,8 @@ class NotificationSettings extends PureComponent {
         const _HermesInternal = HermesInternal;
         const tmpResult2 = ActionSheetActionCreatorsDefault;
         const obj2 = { guildId };
-        tmpResult2.openLazy(asyncRequireImpl(11051, dependencyMap.paths), "muteSettings" + guildId, obj2);
-        const tmp7 = asyncRequireImpl(11051, dependencyMap.paths);
+        tmpResult2.openLazy(asyncRequireImpl(11070, dependencyMap.paths), "muteSettings" + guildId, obj2);
+        const tmp7 = asyncRequireImpl(11070, dependencyMap.paths);
       }
     };
     applyArgumentsResult.handleToggleChange = function handleToggleChange(mobile_push, arg1, NotificationLabel) {
@@ -350,8 +350,8 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     style: closure_33(this.context).highlightsLearnMore,
     accessibilityRole: "link",
     onPress() {
-      const obj = self(5704);
-      return obj.openURL(self(2062).getArticleURL(constants.HIGHLIGHTS));
+      const obj = self(5709);
+      return obj.openURL(self(2061).getArticleURL(constants.HIGHLIGHTS));
     },
     children: null,
   };
@@ -419,17 +419,17 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     tmp6 = require;
   }
   const obj3 = { helperText: null, hasIcons: false, children: null };
-  const intl2 = tmp6(1114).intl;
-  obj3.helperText = intl2.string(tmp6(1114).t["8wbTQ6"]);
-  obj3.children = __initData7(tmp6(6969).TableRow, {
+  const intl2 = tmp6(1113).intl;
+  obj3.helperText = intl2.string(tmp6(1113).t["8wbTQ6"]);
+  obj3.children = __initData7(tmp6(6975).TableRow, {
     label: formatResult,
     onPress: this.handleMutePress,
     arrow: !muted,
   });
-  const items = [__initData7(tmp6(7054).TableRowGroup, obj3, "mute")];
+  const items = [__initData7(tmp6(7060).TableRowGroup, obj3, "mute")];
   let tmp10Result = null;
   if (muted) {
-    const obj5 = { muteConfig: props.muteConfig, type: tmp6(11055).MuteSettingType.SERVER };
+    const obj5 = { muteConfig: props.muteConfig, type: tmp6(11074).MuteSettingType.SERVER };
     tmp10Result = __initData7(MutedUntilTextDefault, obj5, "muted-until");
   }
   items[1] = tmp10Result;
@@ -560,7 +560,7 @@ prototype["getOverriddenChannels"] = function getOverriddenChannels() {
   });
   return mapped.filter((item) => null != item);
 };
-NotificationSettings.contextType = fn(5075).ThemeContext;
+NotificationSettings.contextType = fn(5080).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_settings/native/NotificationSettingsModal.native.tsx");
 
@@ -585,7 +585,7 @@ export default function NotificationSettingsModal() {
     obj4.title = intl2.string(util.t.s7vIQT);
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.render = function render(guildId, navigation) {
-      return closure_1_29(closure_1_1(19944), { guildId: guildId.guildId, navigation });
+      return closure_1_29(closure_1_1(20002), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj4;
     const obj6 = { headerLeft: null, title: null, render: null };
@@ -593,7 +593,7 @@ export default function NotificationSettingsModal() {
     const intl3 = util.intl;
     obj6.title = intl3.string(util.t.h850Ss);
     obj6.render = function render(channelId) {
-      return closure_1_29(closure_1_1(11049), { channelId: channelId.channelId });
+      return closure_1_29(closure_1_1(11068), { channelId: channelId.channelId });
     };
     obj[constants.CHANNEL_OVERRIDE] = obj6;
     return obj;

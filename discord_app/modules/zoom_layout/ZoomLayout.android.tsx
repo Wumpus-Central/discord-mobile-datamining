@@ -26,7 +26,7 @@ export default function ZoomLayout(ref) {
         value = PixelRatio.get();
         const result = x * value;
         const result1 = y * value;
-        const Commands = ref(11734).Commands;
+        const Commands = ref(11771).Commands;
         Commands.zoomTo(tmp.current, result / num - result, result1 / num - result1, num, flag);
       }
     },
@@ -40,7 +40,7 @@ export default function ZoomLayout(ref) {
         flag = true;
       }
       if (null != ref.current) {
-        const Commands = ref(11734).Commands;
+        const Commands = ref(11771).Commands;
         Commands.unzoom(tmp.current, flag);
       }
     },

@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17004);
+const YouBarConstants = fn(17062);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7,
@@ -16,7 +16,7 @@ const YouBarConstants = fn(17004);
 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   youButton: {
     flexDirection: "row",
@@ -45,8 +45,8 @@ let obj3 = {
 size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarUser.tsx");
 
-export default noop.memo(function YouBarUser(isQuestRendered) {
-  isQuestRendered = isQuestRendered.isQuestRendered;
+export default noop.memo(function YouBarUser(isCondensed) {
+  isCondensed = isCondensed.isCondensed;
   _require = undefined;
   const tmp = closure_11();
   const items = [UserStore];
@@ -54,8 +54,8 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
   _require = tmp5;
   let obj = require("initialize");
   const tmp2 = _require;
-  const sharedValue = require("ReanimatedRexport").useSharedValue(isQuestRendered ? closure_8 : closure_7);
-  const items1 = [!isQuestRendered, sharedValue];
+  const sharedValue = require("ReanimatedRexport").useSharedValue(isCondensed ? closure_8 : closure_7);
+  const items1 = [!isCondensed, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(spring.withSpring(closure_0 ? React5 : React6, timestampProducer));
   }, items1);
@@ -69,32 +69,32 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
   S.__closure = { nameMargin: sharedValue };
   S.__workletHash = 12063452832866;
   S.__initData = __initData;
-  const animatedStyle = tmp2(5090).useAnimatedStyle(S);
-  const tmp2Result = tmp2(5090);
-  const name = sharedValue(5063).useName(stateFromStores);
+  const animatedStyle = tmp2(5095).useAnimatedStyle(S);
+  const tmp2Result = tmp2(5095);
+  const name = sharedValue(5068).useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
-      const obj5 = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
-      const items2 = [closure_9(tmp9(18405), obj5)];
+      const obj5 = { isLargeAvatar: tmp5, onPress: isCondensed.onAvatarPress };
+      const items2 = [closure_9(tmp9(18448), obj5)];
       const obj6 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items3;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp9(18406), obj7);
-      items2[1] = closure_9(tmp9(5090).View, obj6);
+      obj6.children = closure_9(tmp9(18449), obj7);
+      items2[1] = closure_9(tmp9(5095).View, obj6);
       obj3.children = items2;
     }
     return tmp11(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items4 = [closure_9(sharedValue(18404), { isLarge: !isQuestRendered })];
+  const items4 = [closure_9(sharedValue(18447), { isLarge: !isCondensed })];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items5;
-  items4[1] = closure_9(sharedValue(5090).View, obj9);
+  items4[1] = closure_9(sharedValue(5095).View, obj9);
   obj8.children = items4;
   obj3 = obj8;
   const obj10 = { style: tmp.placeholder };
-  const obj4 = sharedValue(5063);
+  const obj4 = sharedValue(5068);
 });

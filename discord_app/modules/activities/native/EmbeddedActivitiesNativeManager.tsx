@@ -19,7 +19,7 @@ import EmbeddedActivitiesManager from "../EmbeddedActivitiesManager.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroRequire, ComponentActions: closure_7 } = Constants);
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
@@ -105,11 +105,11 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
         tmp14 = null != applicationId;
       }
       if (tmp14) {
-        tmp14 = thermalState >= self(dependencyMap[13]).ThermalStates.SERIOUS;
+        tmp14 = thermalState >= self(dependencyMap[14]).ThermalStates.SERIOUS;
       }
       if (tmp14) {
-        const respondToSeriousThermalState = self(dependencyMap[14]).requestRespondToSeriousThermalState();
-        const tmp2Result2 = self(dependencyMap[14]);
+        const respondToSeriousThermalState = self(dependencyMap[15]).requestRespondToSeriousThermalState();
+        const tmp2Result2 = self(dependencyMap[15]);
       }
       const tmp2Result = self(dependencyMap[13]);
     });

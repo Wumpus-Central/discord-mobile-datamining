@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { width: "100%" },
   card: {
@@ -85,28 +85,28 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj2.analyticsPage = analyticsPage;
   obj2.onPaymentSuccess = onPaymentSuccess;
   obj2.onPaymentDismiss = onPaymentDismiss;
-  const obj = helpArticleLinkProps(15268);
+  const obj = helpArticleLinkProps(15307);
   const obj3 = { type: null, name: null, properties: null };
-  const buttonActionHandler = helpArticleLinkProps(15268).getButtonActionHandler(obj2);
-  obj3.type = helpArticleLinkProps(1261).ImpressionTypes.VIEW;
-  obj3.name = helpArticleLinkProps(1261).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
+  const buttonActionHandler = helpArticleLinkProps(15307).getButtonActionHandler(obj2);
+  obj3.type = helpArticleLinkProps(1260).ImpressionTypes.VIEW;
+  obj3.name = helpArticleLinkProps(1260).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = useTrackImpressionDefault;
   obj3.properties = {
-    component_type: helpArticleLinkProps(10589).MarketingComponentType.MARKETING_PAGE_BANNER,
+    component_type: helpArticleLinkProps(10609).MarketingComponentType.MARKETING_PAGE_BANNER,
     component_id: componentId,
     promotion_id: promotionId,
   };
   tmp2Result(obj3);
   const obj4 = {
-    component_type: helpArticleLinkProps(10589).MarketingComponentType.MARKETING_PAGE_BANNER,
+    component_type: helpArticleLinkProps(10609).MarketingComponentType.MARKETING_PAGE_BANNER,
     component_id: componentId,
     promotion_id: promotionId,
   };
-  const formatStringWithCommonPremiumParams = helpArticleLinkProps(15271).useFormatStringWithCommonPremiumParams(
+  const formatStringWithCommonPremiumParams = helpArticleLinkProps(15310).useFormatStringWithCommonPremiumParams(
     bannerFields.body,
   );
-  const tmp4Result = helpArticleLinkProps(15271);
-  helpArticleLinkProps = helpArticleLinkProps(15271).getHelpArticleLinkProps(
+  const tmp4Result = helpArticleLinkProps(15310);
+  helpArticleLinkProps = helpArticleLinkProps(15310).getHelpArticleLinkProps(
     bannerFields.helpArticle,
     bannerFields.helpArticleId,
   );
@@ -126,7 +126,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   }
   const items2 = [
     tmp12Result,
-    closure_4(helpArticleLinkProps(5619).Text, {
+    closure_4(helpArticleLinkProps(5624).Text, {
       color: "mobile-text-heading-primary",
       variant: "text-lg/bold",
       children: bannerFields.header,
@@ -151,11 +151,11 @@ export default function MarketingPageBannerTile(bannerFields) {
       },
       children: helpArticleLinkProps.linkText,
     };
-    tmp12Result3 = closure_4(tmp4(5619).Text, obj11);
+    tmp12Result3 = closure_4(tmp4(5624).Text, obj11);
   }
   items3[2] = tmp12Result3;
   obj10.children = items3;
-  items2[2] = closure_5(helpArticleLinkProps(5619).Text, obj10);
+  items2[2] = closure_5(helpArticleLinkProps(5624).Text, obj10);
   let tmp12Result4 = null != bannerFields.button;
   if (tmp12Result4) {
     const obj12 = { style: tmp.ctaButton, children: null };

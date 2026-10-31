@@ -79,7 +79,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const constants = { PREVIEW: "PREVIEW" };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
@@ -148,12 +148,12 @@ export default function PlaintextFilePreviewModal(url) {
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { IconComponent: url(9736).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
-            const intl = url(1114).intl;
-            obj.accessibilityLabel = intl.string(url(1114).t.PdRCRg);
+            const obj = { IconComponent: url(9756).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+            const intl = url(1113).intl;
+            obj.accessibilityLabel = intl.string(url(1113).t.PdRCRg);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_7(url(7552).HeaderActionButton, obj);
+            return closure_1_7(url(7558).HeaderActionButton, obj);
           },
         });
       },
@@ -172,5 +172,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[constants.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(11447).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return jsx(url(11481).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
 }

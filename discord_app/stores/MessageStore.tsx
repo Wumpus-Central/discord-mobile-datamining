@@ -98,7 +98,7 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -149,7 +149,7 @@ let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg
           }
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
         closure_132_28.log(
           "Push notification message not in cache, adding directly",
@@ -1061,7 +1061,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(6557).getOrCreate(ids.channelId);
+    const orCreate = mutation(6563).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1110,14 +1110,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(6557).commit(tmp3);
+        tmp(6563).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(6557);
+        const tmpResult2 = tmp(6563);
       }
     }
-    let obj = mutation(6557);
+    let obj = mutation(6563);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

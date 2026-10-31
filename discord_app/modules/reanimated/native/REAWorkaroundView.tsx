@@ -1,7 +1,7 @@
 // discord_app/modules/reanimated/native/REAWorkaroundView.tsx
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import ReanimatedViewNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ReanimatedViewNativeComponent.tsx";
-import cancelAnimation from "../../../../_runtime/01651_cancelAnimation.js";
+import cancelAnimation from "../../../../_runtime/01650_cancelAnimation.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 class ComponentWrapper {

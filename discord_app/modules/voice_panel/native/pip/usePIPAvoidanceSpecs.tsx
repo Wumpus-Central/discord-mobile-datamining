@@ -10,13 +10,13 @@ import getAdjustedBottomOffsetsDefault from "../../../panels/morphable/native/ge
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-let VoicePanelControlsModes = VoicePanelControlsConstants.VoicePanelControlsModes;
+const VoicePanelControlsModes = VoicePanelControlsConstants.VoicePanelControlsModes;
 let PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
-let closure_6 = {
-  code: "function usePIPAvoidanceSpecsTsx1(){const{mode,controlsSpecs,keyboardHeight,safeArea,screenName}=this.__closure;return{mode:mode.get(),controlsSpecs:controlsSpecs.get(),keyboardHeight:keyboardHeight.get(),safeArea:safeArea.get(),screenName:screenName.get()};}",
+let __initData = {
+  code: "function usePIPAvoidanceSpecsTsx1(){const{mode,controlsSpecs,keyboardHeight,safeArea,screenName,dockHeight}=this.__closure;return{mode:mode.get(),controlsSpecs:controlsSpecs.get(),keyboardHeight:keyboardHeight.get(),safeArea:safeArea.get(),screenName:screenName.get(),dockHeight:dockHeight.get()};}",
 };
-const __initData = {
-  code: "function usePIPAvoidanceSpecsTsx2(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,VoicePanelControlsModes,DEFAULT_CHANNEL_INPUT_HEIGHT,PIP_WINDOW_OFFSET,getPIPBottomOffsetForPIPMode,getAdjustedBottomOffsets,calculateVoicePanelHeaderSpecs,edgeGutter,updateSharedValueIfChanged,pipAvoidanceSpecs}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,controlsSpecs:controlsSpecs,keyboardHeight:keyboardHeight,safeArea:safeArea,screenName:screenName}=props;const screenBottomOffset=function(){if(mode!==VoicePanelModes.PIP){if(mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.DRAWER){return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;}return 0;}return getPIPBottomOffsetForPIPMode(screenName);}();let{bottomOffset:bottomOffset}=getAdjustedBottomOffsets({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeArea.bottom,keyboardHeight:keyboardHeight});if(keyboardHeight<=0&&mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.FLOATING_DEFAULT){bottomOffset+=controlsSpecs.height+PIP_WINDOW_OFFSET;}const{height:headerHeight}=calculateVoicePanelHeaderSpecs(safeArea,edgeGutter);updateSharedValueIfChanged(pipAvoidanceSpecs,{top:mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.FLOATING_DEFAULT?headerHeight:0,bottom:bottomOffset});}",
+let closure_7 = {
+  code: "function usePIPAvoidanceSpecsTsx2(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,VoicePanelControlsModes,DEFAULT_CHANNEL_INPUT_HEIGHT,PIP_WINDOW_OFFSET,getPIPBottomOffsetForPIPMode,getAdjustedBottomOffsets,calculateVoicePanelHeaderSpecs,edgeGutter,updateSharedValueIfChanged,pipAvoidanceSpecs}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,controlsSpecs:controlsSpecs,keyboardHeight:keyboardHeight,safeArea:safeArea,screenName:screenName,dockHeight:dockHeight}=props;const screenBottomOffset=function(){if(mode!==VoicePanelModes.PIP){if(mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.DRAWER){return DEFAULT_CHANNEL_INPUT_HEIGHT+PIP_WINDOW_OFFSET;}return 0;}return getPIPBottomOffsetForPIPMode(screenName);}();let{bottomOffset:bottomOffset}=getAdjustedBottomOffsets({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeArea.bottom,keyboardHeight:keyboardHeight});if(keyboardHeight<=0&&mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.FLOATING_DEFAULT){bottomOffset+=controlsSpecs.height+PIP_WINDOW_OFFSET;}if(mode===VoicePanelModes.PIP){bottomOffset+=dockHeight;}const{height:headerHeight}=calculateVoicePanelHeaderSpecs(safeArea,edgeGutter);updateSharedValueIfChanged(pipAvoidanceSpecs,{top:mode===VoicePanelModes.PANEL&&controlsSpecs.mode===VoicePanelControlsModes.FLOATING_DEFAULT?headerHeight:0,bottom:bottomOffset});}",
 };
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx");
 
@@ -24,11 +24,12 @@ export default function usePIPAvoidanceSpecs(mode) {
   mode = mode.mode;
   const controlsSpecs = mode.controlsSpecs;
   const safeArea = mode.safeArea;
+  const dockHeight = mode.dockHeight;
   const sharedValue = mode(safeArea[3]).useSharedValue({ top: 0, bottom: 0 });
   const tmp2 = controlsSpecs(safeArea[4])();
-  VoicePanelControlsModes = tmp2;
+  PIP_WINDOW_OFFSET = tmp2;
   const tmp3 = controlsSpecs(safeArea[5])();
-  PIP_WINDOW_OFFSET = tmp3;
+  __initData = tmp3;
   let obj = mode(safeArea[3]);
   const token = mode(safeArea[6]).useToken(controlsSpecs(safeArea[7]).modules.mobile.VOICE_PANEL_GUTTER);
   let obj2 = mode(safeArea[6]);
@@ -36,17 +37,18 @@ export default function usePIPAvoidanceSpecs(mode) {
     return {
       mode: mode.get(),
       controlsSpecs: controlsSpecs.get(),
-      keyboardHeight: closure_4.get(),
+      keyboardHeight: closure_5.get(),
       safeArea: safeArea.get(),
-      screenName: closure_5.get(),
+      screenName: closure_6.get(),
+      dockHeight: dockHeight.get(),
     };
   };
-  fn.__closure = { mode, controlsSpecs, keyboardHeight: tmp2, safeArea, screenName: tmp3 };
-  fn.__workletHash = 17017598468922;
-  fn.__initData = token;
-  const fn2 = function u(safeAreaState, current) {
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp)) {
-      ({ mode, controlsSpecs, keyboardHeight, safeArea } = safeAreaState);
+  fn.__closure = { mode, controlsSpecs, keyboardHeight: tmp2, safeArea, screenName: tmp3, dockHeight };
+  fn.__workletHash = 2903120831429;
+  fn.__initData = __initData;
+  const fn2 = function u(dockHeight, current) {
+    if (!obj.cheapWorkletShallowEqual(dockHeight, tmp)) {
+      ({ mode, controlsSpecs, keyboardHeight, safeArea } = dockHeight);
       if (mode !== VoicePanelModes.PIP) {
         let num = 0;
         if (mode === VoicePanelModes.PANEL) {
@@ -69,6 +71,10 @@ export default function usePIPAvoidanceSpecs(mode) {
       if (tmp10) {
         sum = bottomOffset + (controlsSpecs.height + PIP_WINDOW_OFFSET);
       }
+      let sum1 = sum;
+      if (mode === VoicePanelModes.PIP) {
+        sum1 = sum + dockHeight.dockHeight;
+      }
       let num4 = 0;
       if (mode === VoicePanelModes.PANEL) {
         num4 = 0;
@@ -76,7 +82,7 @@ export default function usePIPAvoidanceSpecs(mode) {
           num4 = calculateVoicePanelHeaderSpecsDefault(safeArea, token).height;
         }
       }
-      const rect = { top: num4, bottom: sum };
+      const rect = { top: num4, bottom: sum1 };
       updateSharedValueIfChangedDefault(sharedValue, rect);
       const tmp9Result = updateSharedValueIfChangedDefault;
     }
@@ -86,8 +92,8 @@ export default function usePIPAvoidanceSpecs(mode) {
   const obj3 = mode(safeArea[3]);
   fn2.__closure = {
     cheapWorkletShallowEqual: mode(safeArea[8]).cheapWorkletShallowEqual,
-    VoicePanelModes: sharedValue,
-    VoicePanelControlsModes,
+    VoicePanelModes: dockHeight,
+    VoicePanelControlsModes: sharedValue,
     DEFAULT_CHANNEL_INPUT_HEIGHT: 60,
     PIP_WINDOW_OFFSET,
     getPIPBottomOffsetForPIPMode: controlsSpecs(safeArea[9]),
@@ -97,8 +103,8 @@ export default function usePIPAvoidanceSpecs(mode) {
     updateSharedValueIfChanged: controlsSpecs(safeArea[12]),
     pipAvoidanceSpecs: sharedValue,
   };
-  fn2.__workletHash = 13029906729161;
-  fn2.__initData = __initData;
+  fn2.__workletHash = 10171816207853;
+  fn2.__initData = token;
   const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
   return sharedValue;
 }

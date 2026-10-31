@@ -1,5 +1,5 @@
 // discord_app/modules/age_assurance/AgeVerificationConstants.tsx
-import _modDef3093 from "AgeAssurance.messages.js";
+import _modDef3096 from "AgeAssurance.messages.js";
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -16,11 +16,11 @@ const obj = {
 };
 const obj2 = {};
 const set = new Set(items);
-obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef3093["2yLvkS"], description: _modDef3093.eJmat5 };
-const obj3 = { title: _modDef3093["2yLvkS"], description: _modDef3093.eJmat5 };
-obj2[obj.ID_VERIFICATION] = { title: _modDef3093.dwkwo0, description: _modDef3093.ZdmRwW };
-const obj4 = { title: _modDef3093.dwkwo0, description: _modDef3093.ZdmRwW };
-obj2[obj.GOOGLE_WALLET] = { title: _modDef3093.Y9sLpR, description: _modDef3093.dah4bF };
+obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef3096["2yLvkS"], description: _modDef3096.eJmat5 };
+const obj3 = { title: _modDef3096["2yLvkS"], description: _modDef3096.eJmat5 };
+obj2[obj.ID_VERIFICATION] = { title: _modDef3096.dwkwo0, description: _modDef3096.ZdmRwW };
+const obj4 = { title: _modDef3096.dwkwo0, description: _modDef3096.ZdmRwW };
+obj2[obj.GOOGLE_WALLET] = { title: _modDef3096.Y9sLpR, description: _modDef3096.dah4bF };
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
 
 export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;

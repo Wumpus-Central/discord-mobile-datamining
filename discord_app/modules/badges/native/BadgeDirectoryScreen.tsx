@@ -8,9 +8,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 let c6 = "badge-directory";
-const createStyles = fn(5009);
-let obj2 = { sheetHeader: { height: fn(5581).NAV_BAR_HEIGHT }, view: null };
-let obj3 = { height: fn(5581).NAV_BAR_HEIGHT };
+const createStyles = fn(5014);
+let obj2 = { sheetHeader: { height: fn(5586).NAV_BAR_HEIGHT }, view: null };
+let obj3 = { height: fn(5586).NAV_BAR_HEIGHT };
 obj2.view = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -51,9 +51,9 @@ export default function BadgeDirectoryScreen(targetUserId) {
   if (null != targetUserId) {
     if (targetUserId !== stateFromStores) {
       if (null != stateFromStores1) {
-        const intl2 = tmp2(1114).intl;
+        const intl2 = tmp2(1113).intl;
         const obj3 = { username: stateFromStores1 };
-        let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.EIcwoe, obj3);
+        let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1113).t.EIcwoe, obj3);
       }
       dependencyMap = formatToPlainStringResult;
       const items2 = [formatToPlainStringResult, targetUserId, stateFromStores1];
@@ -72,7 +72,7 @@ export default function BadgeDirectoryScreen(targetUserId) {
       if (tmp2Result.isBadgeDirectoryIOSPageSheet()) {
         const obj4 = { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
         ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-        let tmp9Result = jsx(tmp2(7163).Navigator, {
+        let tmp9Result = jsx(tmp2(7169).Navigator, {
           screens: memo,
           initialRouteName,
           headerStatusBarHeight: 0,
@@ -81,12 +81,12 @@ export default function BadgeDirectoryScreen(targetUserId) {
         });
       } else {
         const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-        tmp9Result = jsx(tmp2(11447).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+        tmp9Result = jsx(tmp2(11481).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
       }
       return tmp9Result;
     }
   }
-  const intl = tmp2(1114).intl;
-  formatToPlainStringResult = intl.string(tmp2(1114).t.UqnlQF);
+  const intl = tmp2(1113).intl;
+  formatToPlainStringResult = intl.string(tmp2(1113).t.UqnlQF);
   let obj2 = targetUserId(504);
 }

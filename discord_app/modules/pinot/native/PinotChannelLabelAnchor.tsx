@@ -7,16 +7,16 @@ let closure_2 = module_560.create(() => ({ labels: {} }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/native/PinotChannelLabelAnchor.tsx");
 
-export function usePinotChannelLabelAnchor(channelId) {
-  closure_0 = channelId;
+export function usePinotChannelLabelAnchor(id) {
+  closure_0 = id;
   noop = noop.useRef(null);
-  const items = [channelId];
+  const items = [id];
   const callback = noop.useCallback(() => {
     state.setState((labels) => {
       labels = labels.labels;
       const current = ref.current;
       let num;
-      if (labels[channelId] != null) {
+      if (labels[id] != null) {
         num = tmp2.layoutVersion;
       }
       if (num == null) {
@@ -30,7 +30,7 @@ export function usePinotChannelLabelAnchor(channelId) {
         const obj = { view: current, layoutVersion: sum };
         tmp5 = obj;
       }
-      labels2[channelId] = tmp5;
+      labels2[id] = tmp5;
       return { labels: labels2 };
     });
   }, items);

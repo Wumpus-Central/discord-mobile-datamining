@@ -70,7 +70,7 @@ function appendFailedUserMessage(projectId, nonce, message) {
     userId: null,
     timestamp: null,
     attachments: null,
-    held: "sa",
+    held: "dispatch",
   };
   const currentUser1 = UserStore.getCurrentUser();
   let id1;
@@ -343,7 +343,7 @@ let closure_23 = async function _openWithFreshTicket(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -382,7 +382,7 @@ let closure_23 = async function _openWithFreshTicket(arg0) {
           closure_131_5 = closure_5;
           if (closure_131_1.disposed) {
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             closure_132_13(closure_131_0, "failed");
             const _Error = Error;
@@ -460,7 +460,7 @@ let closure_23 = async function _openWithFreshTicket(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp63) {
       closure_5 = tmp63;
@@ -612,43 +612,43 @@ function closeAllConnections() {
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
   conjureMediaTickets.clearMediaTickets();
 }
-const getOlderHistoryCursor = fn(10831).getOlderHistoryCursor;
-const ConjureBrowserSessionsStore = fn(10840);
-const ConjureSmartContextStore = fn(10841);
-const ConjureDebugLogStore = fn(10842);
-const ConjureLiveReloadStore = fn(10844);
-const ConjureModelSettingsStore = fn(10845);
-const ConjureOverlayBackgroundStore = fn(10846);
-const ConjurePublishStatusStore = fn(10847);
-const ConjureRemixStore = fn(10848);
-const ConjureSettingsStore = fn(10849);
-const ConjureSpendLimitStore = fn(10850);
-const ConjureVoiceChannelPinStore = fn(10851);
+const getOlderHistoryCursor = fn(10851).getOlderHistoryCursor;
+const ConjureBrowserSessionsStore = fn(10860);
+const ConjureSmartContextStore = fn(10861);
+const ConjureDebugLogStore = fn(10862);
+const ConjureLiveReloadStore = fn(10864);
+const ConjureModelSettingsStore = fn(10865);
+const ConjureOverlayBackgroundStore = fn(10866);
+const ConjurePublishStatusStore = fn(10867);
+const ConjureRemixStore = fn(10868);
+const ConjureSettingsStore = fn(10869);
+const ConjureSpendLimitStore = fn(10870);
+const ConjureVoiceChannelPinStore = fn(10871);
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const map2 = new Map();
 let obj = {};
-let merged = Object.assign(fn(10867).browserSessionsFrameHandlers);
-let merged1 = Object.assign(fn(10852).chatFrameHandlers);
-const merged2 = Object.assign(fn(10868).debugFrameHandlers);
-const merged3 = Object.assign(fn(10870).hostAccessFrameHandlers);
-const merged4 = Object.assign(fn(10872).liveReloadFrameHandlers);
-const merged5 = Object.assign(fn(10873).modelSettingsFrameHandlers);
-const merged6 = Object.assign(fn(10874).previewFrameHandlers);
-const merged7 = Object.assign(fn(10931).publishFrameHandlers);
-const merged8 = Object.assign(fn(10942).publishScheduleFrameHandlers);
-const merged9 = Object.assign(fn(10944).remixFrameHandlers);
-const merged10 = Object.assign(fn(10945).settingsFrameHandlers);
-const merged11 = Object.assign(fn(10947).smartContextFrameHandlers);
+let merged = Object.assign(fn(10892).browserSessionsFrameHandlers);
+let merged1 = Object.assign(fn(10872).chatFrameHandlers);
+const merged2 = Object.assign(fn(10893).debugFrameHandlers);
+const merged3 = Object.assign(fn(10895).hostAccessFrameHandlers);
+const merged4 = Object.assign(fn(10897).liveReloadFrameHandlers);
+const merged5 = Object.assign(fn(10898).modelSettingsFrameHandlers);
+const merged6 = Object.assign(fn(10899).previewFrameHandlers);
+const merged7 = Object.assign(fn(10950).publishFrameHandlers);
+const merged8 = Object.assign(fn(10961).publishScheduleFrameHandlers);
+const merged9 = Object.assign(fn(10963).remixFrameHandlers);
+const merged10 = Object.assign(fn(10964).settingsFrameHandlers);
+const merged11 = Object.assign(fn(10966).smartContextFrameHandlers);
 let obj2 = {};
-const merged12 = Object.assign(fn(10948).appBuildRequestStepHandlers);
-const merged13 = Object.assign(fn(10852).chatStepHandlers);
-const merged14 = Object.assign(fn(10868).debugStepHandlers);
-const merged15 = Object.assign(fn(10874).previewStepHandlers);
-const merged16 = Object.assign(fn(10949).projectStepHandlers);
-const merged17 = Object.assign(fn(10931).publishStepHandlers);
-const merged18 = Object.assign(fn(10950).usageStepHandlers);
+const merged12 = Object.assign(fn(10967).appBuildRequestStepHandlers);
+const merged13 = Object.assign(fn(10872).chatStepHandlers);
+const merged14 = Object.assign(fn(10893).debugStepHandlers);
+const merged15 = Object.assign(fn(10899).previewStepHandlers);
+const merged16 = Object.assign(fn(10968).projectStepHandlers);
+const merged17 = Object.assign(fn(10950).publishStepHandlers);
+const merged18 = Object.assign(fn(10969).usageStepHandlers);
 const set1 = new Set([
   "hello",
   "history",

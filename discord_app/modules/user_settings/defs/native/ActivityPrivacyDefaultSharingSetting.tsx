@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
 import UserSettings from "../../UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ActivityPrivacyUpsellUtils from "../../../activity_privacy/ActivityPrivacyUpsellUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8424).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8432).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions() {
     return noop.useMemo(() => {
       const obj = {
@@ -65,7 +65,7 @@ const radio = SettingBuilders.createRadio({
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       obj2.settingName = activityRestrictionSettingName;
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17895, dependencyMap.paths),
+        asyncRequireImpl(17938, dependencyMap.paths),
         "ActivityPrivacyUpsellActionSheet",
         obj2,
       );

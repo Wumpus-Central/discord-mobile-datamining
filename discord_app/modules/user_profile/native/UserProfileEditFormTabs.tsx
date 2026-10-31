@@ -18,10 +18,10 @@ function MainPage() {
   });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7371).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7377).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING },
   page: null,

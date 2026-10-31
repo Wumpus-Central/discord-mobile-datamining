@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildHideAction.tsx
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3447 from "../intl/FavoritesGuild.messages.js";
+import _modDef3450 from "../intl/FavoritesGuild.messages.js";
 import FavoritesUtils from "../FavoritesUtils.tsx";
 import FavoritesActionCreators from "../FavoritesActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -23,9 +23,9 @@ export default function useFavoritesGuildHideAction() {
     obj2 = FavoritesUtils;
   }, []);
   const intl = util.intl;
-  obj.label = intl.string(_modDef3447["8FO0y9"]);
+  obj.label = intl.string(_modDef3450["8FO0y9"]);
   const intl2 = util.intl;
-  obj.subLabel = intl2.string(_modDef3447.FaHxWl);
+  obj.subLabel = intl2.string(_modDef3450.FaHxWl);
   obj.perform = callback;
   return obj;
 }

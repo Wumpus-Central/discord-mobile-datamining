@@ -5,7 +5,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import EmailVerificationModalActionCreatorsDefault from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import _modDef7072 from "../../../../../_runtime/metro/07072__.js";
+import _modDef7078 from "../../../../../_runtime/metro/07078__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,10 +15,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const resetChangeEmailStore = fn(6991).resetChangeEmailStore;
+const resetChangeEmailStore = fn(6997).resetChangeEmailStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   contentContainer: {
     flexGrow: 2,
@@ -62,7 +62,7 @@ export default function ChangeEmailComplete(email) {
     contentContainerStyle: tmp.contentContainer,
     children: null,
   };
-  const obj2 = { style: tmp.image, source: _modDef7072 };
+  const obj2 = { style: tmp.image, source: _modDef7078 };
   const items = [timestampProducer(FastImageDefault, obj2), , ,];
   const obj3 = { style: tmp.bodyInner, children: null };
   const obj4 = {

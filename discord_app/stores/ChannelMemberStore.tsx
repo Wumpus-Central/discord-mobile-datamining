@@ -3,7 +3,7 @@ import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import MurmurHashV3Default from "../../_runtime/01252_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01251_MurmurHashV3.js";
 import PermissionUtilsAll from "../utils/PermissionUtils.tsx";
 import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
 import ApplicationStreamingStore from "ApplicationStreamingStore.tsx";
@@ -136,14 +136,14 @@ prototype["setGroups"] = function setGroups(groups) {
     Object.defineProperty(obj2, "title", {
       get: () => {
         if (constants.ONLINE === id) {
-          const intl3 = id(1114).intl;
-          return intl3.string(id(1114).t.WbGtnH);
+          const intl3 = id(1113).intl;
+          return intl3.string(id(1113).t.WbGtnH);
         } else if (tmp2.OFFLINE === tmp) {
-          const intl2 = id(1114).intl;
-          return intl2.string(id(1114).t.Vv0abJ);
+          const intl2 = id(1113).intl;
+          return intl2.string(id(1113).t.Vv0abJ);
         } else {
-          const intl = id(1114).intl;
-          return intl.string(id(1114).t["UQMV/E"]);
+          const intl = id(1113).intl;
+          return intl.string(id(1113).t["UQMV/E"]);
         }
       },
       set: undefined
@@ -193,7 +193,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "children" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -209,14 +209,14 @@ prototype["insert"] = function insert(arg0, arg1) {
     Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1113).intl;
+            return intl3.string(id(1113).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1113).intl;
+            return intl2.string(id(1113).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1113).intl;
+            return intl.string(id(1113).t["UQMV/E"]);
           }
         },
       set: undefined
@@ -288,7 +288,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "applicationId" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "children" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -304,14 +304,14 @@ prototype["update"] = function update(arg0, arg1) {
     Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1113).intl;
+            return intl3.string(id(1113).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1113).intl;
+            return intl2.string(id(1113).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1113).intl;
+            return intl.string(id(1113).t["UQMV/E"]);
           }
         },
       set: undefined
@@ -459,14 +459,14 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
     Object.defineProperty(obj2, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1113).intl;
+            return intl3.string(id(1113).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1113).intl;
+            return intl2.string(id(1113).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1113).intl;
+            return intl.string(id(1113).t["UQMV/E"]);
           }
         },
       set: undefined

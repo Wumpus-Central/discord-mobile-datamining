@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx
-import _modDef3093 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3096 from "../../../age_assurance/AgeAssurance.messages.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ export default function SettingsAgeGroupResetAlert() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -40,13 +40,13 @@ export default function SettingsAgeGroupResetAlert() {
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(6727).resetAgeVerification(), done: false };
+            const obj6 = { value: tmp3(6733).resetAgeVerification(), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
-          const intl = tmp3(1114).intl;
-          tmp3(5706).presentError(intl.string(tmp3(1114).t.fEptJP));
+          const intl = tmp3(1113).intl;
+          tmp3(5711).presentError(intl.string(tmp3(1113).t.fEptJP));
           const _Error = Error;
           const error = new Error("Reset failed");
           throw error;
@@ -59,11 +59,11 @@ export default function SettingsAgeGroupResetAlert() {
           const obj7 = { value, done: true };
           return obj7;
         } else {
-          tmp3(5955).dismissAlert(closure_1_6);
+          tmp3(5960).dismissAlert(closure_1_6);
           closure_128_0.goBack();
           dependencyMap = 0;
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp29) {
         if (tmp4 === dependencyMap) {
@@ -78,9 +78,9 @@ export default function SettingsAgeGroupResetAlert() {
   _require = require("useNavigation").useNavigation();
   let obj2 = { title: null, content: null, actions: null };
   let intl = require("util").intl;
-  obj2.title = intl.string(_modDef3093["bD//cU"]);
+  obj2.title = intl.string(_modDef3096["bD//cU"]);
   const intl2 = require("util").intl;
-  obj2.content = intl2.string(_modDef3093.FbTAmI);
+  obj2.content = intl2.string(_modDef3096.FbTAmI);
   const obj3 = { children: null };
   const obj4 = {
     variant: "destructive",
@@ -97,7 +97,7 @@ export default function SettingsAgeGroupResetAlert() {
     text: null,
   };
   const intl3 = require("util").intl;
-  obj4.text = intl3.string(_modDef3093.V822Mp);
+  obj4.text = intl3.string(_modDef3096.V822Mp);
   const items = [closure_4(require("AlertModal").AlertActionButton, obj4, "confirm")];
   let obj5 = { variant: "secondary", text: null };
   const intl4 = require("util").intl;

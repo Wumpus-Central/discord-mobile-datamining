@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/native/components/KeywordsRow.tsx
-import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,10 +18,10 @@ export default function KeywordsRow(label) {
     const _String = String;
     let StringResult = String(keywords.length);
   } else {
-    const intl = tmp2(1114).intl;
-    StringResult = intl.string(tmp2(1114).t.PoWNfe);
+    const intl = tmp2(1113).intl;
+    StringResult = intl.string(tmp2(1113).t.PoWNfe);
   }
-  obj.trailing = keywords(label(5619).Text, {
+  obj.trailing = keywords(label(5624).Text, {
     variant: "text-sm/medium",
     color: "text-muted",
     lineClamp: 1,
@@ -37,8 +37,8 @@ export default function KeywordsRow(label) {
       obj4 = { type, maxWordCount };
     }
     const merged = Object.assign(obj4);
-    obj.openLazy(asyncRequireImpl(19632, dependencyMap.paths), "AutomodKeywords", obj2);
-    const tmp = asyncRequireImpl(19632, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(19689, dependencyMap.paths), "AutomodKeywords", obj2);
+    const tmp = asyncRequireImpl(19689, dependencyMap.paths);
   };
-  return keywords(label(6969).TableRow, obj);
+  return keywords(label(6975).TableRow, obj);
 }

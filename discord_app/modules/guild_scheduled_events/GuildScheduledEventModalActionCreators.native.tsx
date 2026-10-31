@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx
-import asyncRequireImpl from "../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import ScheduleUtils from "utils/ScheduleUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -15,8 +15,8 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = ScheduleUtils;
   }
   obj2.recurrenceId = recurrenceId;
-  obj.openLazy(asyncRequireImpl(8955, dependencyMap.paths), closure_5, obj2, "stack");
-  const tmp3 = asyncRequireImpl(8955, dependencyMap.paths);
+  obj.openLazy(asyncRequireImpl(8964, dependencyMap.paths), closure_5, obj2, "stack");
+  const tmp3 = asyncRequireImpl(8964, dependencyMap.paths);
 }
 let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
   if (c5 === 2) {
@@ -29,7 +29,7 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
         obj.recurrenceId = recurrenceId;
         closure_131_6(obj);
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp17) {
       c5 = tmp;
@@ -76,8 +76,8 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let closure_4 = fn(4864).EXPLICIT_END_EVENT_SHEET_KEY;
-let closure_5 = fn(8954).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
+let closure_4 = fn(4869).EXPLICIT_END_EVENT_SHEET_KEY;
+let closure_5 = fn(8963).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx",
@@ -95,5 +95,5 @@ export function transitionToEventDetailsFromInvite() {
   return applyArgumentsResult;
 }
 export function openEndEventModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9201, dependencyMap.paths), closure_4, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9220, dependencyMap.paths), closure_4, { channel });
 }

@@ -19,7 +19,7 @@ let closure_12 = async function _authorizeLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -75,7 +75,7 @@ const WebBrowserType = fn(1072).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLink");
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_11 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

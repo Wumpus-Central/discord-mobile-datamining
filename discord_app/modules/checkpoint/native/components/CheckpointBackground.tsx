@@ -1,11 +1,11 @@
 // discord_app/modules/checkpoint/native/components/CheckpointBackground.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_3 = fn(6061).CHECKPOINT_BACKGROUND_GRADIENT;
+let closure_3 = fn(6066).CHECKPOINT_BACKGROUND_GRADIENT;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ background: { position: "absolute", width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointBackground.tsx");
@@ -23,7 +23,7 @@ export default function CheckpointBackground(gradientStartColor) {
     return items;
   }, items);
   const items1 = [
-    closure_5(gradientStartColor(5582), {
+    closure_5(gradientStartColor(5587), {
       colors: memo,
       start: VerticalGradient.START,
       end: VerticalGradient.END,
@@ -31,10 +31,10 @@ export default function CheckpointBackground(gradientStartColor) {
     }),
   ];
   const obj3 = { source: null, style: null, resizeMode: "cover" };
-  const obj4 = { uri: gradientStartColor(13582) };
+  const obj4 = { uri: gradientStartColor(13619) };
   obj3.source = obj4;
   obj3.style = tmp2.background;
-  items1[1] = closure_5(gradientStartColor(5712), obj3);
+  items1[1] = closure_5(gradientStartColor(5717), obj3);
   obj.children = items1;
   return closure_7(closure_6, obj);
 }

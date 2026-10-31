@@ -28,23 +28,23 @@ export function getNames(user) {
   const names = {};
   const nick = RelationshipStore.getNickname(user.id);
   if (null != nick) {
-    const obj3 = names(2028);
-    let str = names(2028).stripDiacritics(nick.toLocaleLowerCase());
-    names[nick] = names(2028).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
-    let str2 = names(2028).stripDiacritics(nick.toLocaleLowerCase()).trim();
+    const obj3 = names(2026);
+    let str = names(2026).stripDiacritics(nick.toLocaleLowerCase());
+    names[nick] = names(2026).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
+    let str2 = names(2026).stripDiacritics(nick.toLocaleLowerCase()).trim();
   }
   const globalName = UserUtilsDefault.getGlobalName(user);
   if (tmp4) {
-    const obj6 = names(2028);
-    const str4 = names(2028).stripDiacritics(globalName.toLocaleLowerCase());
-    names[globalName] = names(2028).stripDiacritics(globalName.toLocaleLowerCase()).trim().split(" ");
-    const str5 = names(2028).stripDiacritics(globalName.toLocaleLowerCase()).trim();
+    const obj6 = names(2026);
+    const str4 = names(2026).stripDiacritics(globalName.toLocaleLowerCase());
+    names[globalName] = names(2026).stripDiacritics(globalName.toLocaleLowerCase()).trim().split(" ");
+    const str5 = names(2026).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
   tmp4 = null != globalName && null == names[globalName];
-  const obj7 = names(2028);
-  const str7 = names(2028).stripDiacritics(username.toLocaleLowerCase());
-  names[user.username] = names(2028).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
+  const obj7 = names(2026);
+  const str7 = names(2026).stripDiacritics(username.toLocaleLowerCase());
+  names[user.username] = names(2026).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
   const nicknames = GuildMemberStore.getNicknames(user.id);
   const item = nicknames.forEach((toLocaleLowerCase) => {
     if (null == names[toLocaleLowerCase]) {

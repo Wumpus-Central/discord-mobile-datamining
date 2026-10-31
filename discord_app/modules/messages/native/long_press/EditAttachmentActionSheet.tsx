@@ -16,9 +16,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageStore from "../../../../stores/MessageStore.tsx";
 
 require = fn;
-let closure_7 = fn(5014).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5019).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(14472).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(14510).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -50,7 +50,7 @@ export default function EditAttachmentActionSheet(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -148,7 +148,7 @@ export default function EditAttachmentActionSheet(arg0) {
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8832)(attachment);
+  const tmp5 = attachment(8840)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

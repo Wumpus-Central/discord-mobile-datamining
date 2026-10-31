@@ -138,7 +138,7 @@ function handlePermissionsChange() {
 }
 const Constants = fn(1072);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(4865);
+const ChannelConstants = fn(4870);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1083).Permissions;
 let c17 = false;

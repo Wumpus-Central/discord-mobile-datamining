@@ -21,11 +21,11 @@ let closure_10 = async function _refreshProviderAccessToken() {
   }
   return { access_token: closure_130_0 };
 };
-let Constants = fn(6444);
+let Constants = fn(6450);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ AnalyticsLocations: hasOwnProperty, ComponentActions: metroRequire, PlatformTypes: closure_7 } = Constants);
-Constants = fn(2019);
+Constants = fn(2018);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
 Constants = fn(1083);
 ({ RPCCommands, RPCErrors: closure_8 } = Constants);
@@ -185,7 +185,7 @@ let closure_11 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

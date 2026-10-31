@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/CollectiblesUtils.tsx
 import _mod12 from "../../../_runtime/metro/00012__.js";
 import Constants2 from "../../../discord_common/js/shared/Constants.tsx";
-import EntitlementTypes from "../../../discord_common/js/shared/shared-constants/EntitlementTypes.tsx";
 import util from "../../intl/index.native.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import PerksStateUtils from "../premium/perks_state/PerksStateUtils.tsx";
 import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import NameplateRecord from "records/NameplateRecord.tsx";
 import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import EntitlementTypes from "../../../discord_common/js/shared/shared-constants/EntitlementTypes.tsx";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import PriceUtils from "../../utils/PriceUtils.tsx";
 import AvatarDecorationRecord from "records/AvatarDecorationRecord.tsx";
@@ -292,7 +292,7 @@ export function getBundleItemsPriceSum(bundledProducts, arg1) {
         return acc + num;
       }, 0);
     } else {
-      tmp(1376);
+      tmp(1375);
     }
     DEFAULT = constants2.DEFAULT;
     obj = require("PlatformUtils");
@@ -401,7 +401,7 @@ export function getProductDiscount(product, hasShopDiscount, DISCORD_ORB) {
           return acc + num;
         }, 0);
       } else {
-        tmp(1376);
+        tmp(1375);
       }
       DEFAULT = constants2.DEFAULT;
       obj = require("PlatformUtils");

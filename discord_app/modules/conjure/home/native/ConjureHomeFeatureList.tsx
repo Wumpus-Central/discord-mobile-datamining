@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
-import LinearGradientDefault from "../../../../../_runtime/05582_LinearGradient.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
+import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import ShieldIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
@@ -26,7 +26,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   list: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
   card: null,
@@ -539,8 +539,8 @@ let closure_14 = {
     obj5.style = items3;
     const obj6 = { left: nativeDefault.space.PX_6 };
     const items4 = [
-      closure_5(styles(9358).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),
-      closure_5(styles(5619).Text, { variant: "text-xxs/bold", color: "text-overlay-light", children: 128 }),
+      closure_5(styles(9378).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),
+      closure_5(styles(5624).Text, { variant: "text-xxs/bold", color: "text-overlay-light", children: 128 }),
     ];
     obj5.children = items4;
     items1[4] = closure_6(closure_4, obj5);
@@ -551,13 +551,13 @@ let closure_14 = {
     obj8.style = items5;
     const obj9 = { right: nativeDefault.space.PX_6 };
     const items6 = [
-      closure_5(styles(9446).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }),
+      closure_5(styles(9468).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }),
       ,
     ];
     const obj10 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[1] = closure_5(styles(9446).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
+    items6[1] = closure_5(styles(9468).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
     const obj11 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[2] = closure_5(styles(9446).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
+    items6[2] = closure_5(styles(9468).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
     obj8.children = items6;
     items1[5] = closure_6(closure_4, obj8);
     obj.children = items1;
@@ -585,7 +585,7 @@ let closure_14 = {
     const obj11 = { style: styles.botTag, children: null };
     const obj12 = { variant: "text-xxs/bold", color: "text-overlay-light", children: null };
     const intl = util.intl;
-    obj12.children = intl.string(_modDef3865.VlgiLf);
+    obj12.children = intl.string(_modDef3868.VlgiLf);
     obj11.children = hasOwnProperty(Text_Text.Text, obj12);
     items4[1] = hasOwnProperty(React4, obj11);
     obj9.children = items4;
@@ -604,7 +604,7 @@ let closure_14 = {
   "profile-widgets": function ProfileWidgetsVisual(styles) {
     styles = styles.styles;
     let token;
-    token = styles(5591).useToken(token(575).colors.BACKGROUND_BRAND);
+    token = styles(5596).useToken(token(575).colors.BACKGROUND_BRAND);
     items = [token];
     const obj2 = { style: null, children: null };
     items1 = [,];
@@ -615,7 +615,7 @@ let closure_14 = {
       return items;
     }, items);
     items2 = [
-      closure_5(token(5582), {
+      closure_5(token(5587), {
         style: styles.profileBanner,
         colors: memo,
         start: { x: 0, y: 0.5 },
@@ -638,7 +638,7 @@ let closure_14 = {
       return timestampProducer(React4, obj, item);
     });
     const items6 = [closure_5(closure_4, obj8)];
-    let obj = styles(5591);
+    let obj = styles(5596);
     const obj3 = { style: styles.profileBanner, colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 } };
     const obj6 = { style: styles.lineName };
     items6[1] = closure_5(closure_4, {
@@ -693,7 +693,7 @@ let closure_14 = {
     const obj4 = { style: styles.crosshair };
     const tmp = LinearGradientDefault;
     items3 = [
-      closure_5(styles(5735).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }),
+      closure_5(styles(5740).ClockIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }),
       closure_5(Line, { style: styles.overlayTimerValue }),
     ];
     obj6.children = items3;

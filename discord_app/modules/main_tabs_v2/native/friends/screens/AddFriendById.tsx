@@ -29,7 +29,7 @@ const Constants = fn(1072);
 ({ PLACEHOLDER_TAG: closure_7, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -170,8 +170,8 @@ export default function _default(arg0) {
     const trimmed1 = first2.trim();
     if (trimmed.length <= 0) {
       let obj2 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: null };
-      let intl = sourcePage(1114).intl;
-      obj2.message = intl.string(sourcePage(1114).t.mxnceg);
+      let intl = sourcePage(1113).intl;
+      obj2.message = intl.string(sourcePage(1113).t.mxnceg);
       closure_6(obj2);
     } else {
       const hasItem = trimmed.includes("#");
@@ -184,7 +184,7 @@ export default function _default(arg0) {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(7487).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(7493).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
@@ -194,7 +194,7 @@ export default function _default(arg0) {
         const obj6 = {
           discordTag: tmp2,
           context: { location: "Search - Add Friend Search" },
-          errorUxConfig: sourcePage(7482).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+          errorUxConfig: sourcePage(7488).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
           note: null,
         };
         let tmp9;
@@ -202,8 +202,8 @@ export default function _default(arg0) {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(7482);
-        ref(7482)
+        const obj5 = ref(7488);
+        ref(7488)
           .sendRequest(obj6)
           .then(
             () => {
@@ -262,9 +262,9 @@ export default function _default(arg0) {
               closure_6(obj3);
             },
           );
-        const sendRequestResult = ref(7482).sendRequest(obj6);
+        const sendRequestResult = ref(7488).sendRequest(obj6);
       }
-      let obj = sourcePage(7487);
+      let obj = sourcePage(7493);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText, ref } = arg0);
@@ -274,8 +274,8 @@ export default function _default(arg0) {
   let tmp2 = textState(
     noop.useState(() => {
       const obj = { validatedText: "", hint: null };
-      const intl = sourcePage(1114).intl;
-      obj.hint = intl.string(sourcePage(1114).t["6p7Mhh"]);
+      const intl = sourcePage(1113).intl;
+      obj.hint = intl.string(sourcePage(1113).t["6p7Mhh"]);
       return obj;
     }),
     2,
@@ -375,9 +375,9 @@ export default function _default(arg0) {
   ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
   items6[2] = headerTextStyle;
   obj5.style = items6;
-  let intl = sourcePage(1114).intl;
-  obj5.children = intl.string(sourcePage(1114).t.Yi6Mpu);
-  const items7 = [closure_9(sourcePage(5619).Text, obj5), ,];
+  let intl = sourcePage(1113).intl;
+  obj5.children = intl.string(sourcePage(1113).t.Yi6Mpu);
+  const items7 = [closure_9(sourcePage(5624).Text, obj5), ,];
   let obj6 = {
     returnKeyType: "done",
     submitBehavior: "submit",
@@ -394,7 +394,7 @@ export default function _default(arg0) {
     }
   }
   obj6.status = str2;
-  items7[1] = closure_9(sourcePage(7247).TextArea, obj6);
+  items7[1] = closure_9(sourcePage(7253).TextArea, obj6);
   if (first1.status === constants2.ERROR) {
     if (first1.field === constants3.MESSAGE) {
       const obj7 = { errorMessage: first1.message };
@@ -409,19 +409,19 @@ export default function _default(arg0) {
     const obj9 = { style: tmp.redesignGrow };
     items8[1] = closure_9(tmp15, obj9);
     const obj10 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
-    const intl3 = sourcePage(1114).intl;
-    obj10.text = intl3.string(sourcePage(1114).t["PMsq/b"]);
+    const intl3 = sourcePage(1113).intl;
+    obj10.text = intl3.string(sourcePage(1113).t["PMsq/b"]);
     obj10.disabled = str.trim().length <= 0;
     obj10.onPress = handleSubmitEditing;
     obj10.loading = first1.status === constants2.LOADING;
-    items8[2] = closure_9(sourcePage(5629).Button, obj10);
+    items8[2] = closure_9(sourcePage(5634).Button, obj10);
     obj8.children = items8;
     return closure_10(closure_11, obj8);
   }
   const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
-  let intl2 = sourcePage(1114).intl;
-  obj11.children = intl2.string(sourcePage(1114).t.UtfQNw);
-  tmp16Result = closure_9(sourcePage(5619).Text, obj11);
+  let intl2 = sourcePage(1113).intl;
+  obj11.children = intl2.string(sourcePage(1113).t.UtfQNw);
+  tmp16Result = closure_9(sourcePage(5624).Text, obj11);
   let obj = { status: constants2.NONE };
   let obj3 = {
     textState,

@@ -29,7 +29,7 @@ function scheduleNextNotification() {
     let _Date = Date;
     const timestamp = Date.now();
     const dueAt = found.saveData.dueAt;
-    const sum = timestamp + found(1090).Millis.WEEK;
+    const sum = timestamp + found(1089).Millis.WEEK;
     if (dueAt.getTime() <= sum) {
       const dueAt2 = found.saveData.dueAt;
       const _Date2 = Date;

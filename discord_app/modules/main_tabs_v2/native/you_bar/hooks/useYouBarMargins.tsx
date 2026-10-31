@@ -4,6 +4,7 @@ import utils_PlatformUtils from "../../../../../../discord_common/js/shared/util
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import useChatLayoutDefault from "../../../../chat/native/useChatLayout.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
+import useVoicePanelDockHeightDefault from "../../../../voice_panel/native/dock/useVoicePanelDockHeight.tsx";
 import YouBarConstants from "../YouBarConstants.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -25,8 +26,6 @@ export function useYouBarHorizontalMargin() {
   return tmp4;
 }
 export function useYouBarBottomMargin() {
-  return Math.max(
-    useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM),
-    useSafeAreaInsetsDefault().bottom,
-  );
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM);
+  return Math.max(token, useSafeAreaInsetsDefault().bottom, useVoicePanelDockHeightDefault());
 }

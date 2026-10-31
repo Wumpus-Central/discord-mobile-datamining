@@ -1,9 +1,9 @@
 // discord_app/modules/conjure/home/native/ConjureHomeBackdrop.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useTheme from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../_runtime/08023_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08031_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;

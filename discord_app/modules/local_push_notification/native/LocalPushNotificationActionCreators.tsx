@@ -15,7 +15,7 @@ let result = size.fileFinishedImporting(
 
 export function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7647).trackAppOpened("notification");
+    data(7654).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -35,25 +35,25 @@ export function receiveLocalNotification(getData) {
         const result = GuildActionCreatorsDefault.transitionToGuildSync(tmp4.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(1995)(13134, dependencyMap.paths).then((result) => result.default(projectId.channelId));
-        const promise2 = data(1995)(13134, dependencyMap.paths);
+        data(1994)(13169, dependencyMap.paths).then((result) => result.default(projectId.channelId));
+        const promise2 = data(1994)(13169, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
-        data(1995)(5751, dependencyMap.paths).then((transitionToMessage) => {
+        data(1994)(5756, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = projectId);
           return transitionToMessage.transitionToMessage(channelId, messageId, {
-            jumpType: data(5244).JumpType.INSTANT,
+            jumpType: data(5249).JumpType.INSTANT,
           });
         });
-        const promise = data(1995)(5751, dependencyMap.paths);
+        const promise = data(1994)(5756, dependencyMap.paths);
       } else if (constants.CONJURE === type) {
         projectId = tmp4.projectId;
-        data(1995)(10957, dependencyMap.paths).then((openConjureHomeScreenWhenReady) =>
+        data(1994)(10976, dependencyMap.paths).then((openConjureHomeScreenWhenReady) =>
           openConjureHomeScreenWhenReady.openConjureHomeScreenWhenReady(projectId),
         );
-        const promise3 = data(1995)(10957, dependencyMap.paths);
+        const promise3 = data(1994)(10976, dependencyMap.paths);
       }
     }
-    let obj2 = data(7647);
+    let obj2 = data(7654);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

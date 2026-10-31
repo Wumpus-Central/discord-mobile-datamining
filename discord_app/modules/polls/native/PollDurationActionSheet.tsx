@@ -18,8 +18,8 @@ function PollDurationRadioGroup(onChange) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   const obj = { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null };
-  const intl = onChange(1114).intl;
-  obj.title = intl.string(onChange(1114).t["0ZStp9"]);
+  const intl = onChange(1113).intl;
+  obj.title = intl.string(onChange(1113).t["0ZStp9"]);
   obj.onChange = callback;
   obj.defaultValue = onChange.selectedDuration;
   const entries = Object.entries(tmp);
@@ -27,7 +27,7 @@ function PollDurationRadioGroup(onChange) {
     [tmp, tmp2] = item;
     return jsx(onChange(dependencyMap[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
   });
-  return jsx(onChange(7052).TableRadioGroup, {
+  return jsx(onChange(7058).TableRadioGroup, {
     title: null,
     hasIcons: false,
     onChange: null,

@@ -1,13 +1,12 @@
 // discord_app/modules/activities/Constants.tsx
-import Constants2 from "../../Constants.tsx";
+import Constants from "../../Constants.tsx";
 import Server from "../../flow/Server.tsx";
 import EmbeddedActivityOrientationLockState from "../../../discord_common/js/shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
 import EmbeddedActivitySupportedPlatforms from "../../../discord_common/js/shared/shared-constants/EmbeddedActivitySupportedPlatforms.tsx";
 import ActivityApplications from "../../../discord_common/js/shared/shared-constants/ActivityApplications.tsx";
-import Constants from "../../../discord_common/js/shared/activities/Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const ChannelTypes = Constants2.ChannelTypes;
+const ChannelTypes = Constants.ChannelTypes;
 const items = [
   "1037680572660727838",
   "235088799074484224",
@@ -23,7 +22,6 @@ const items = [
 ];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
-({ ActivityIntent, ActivityLayoutMode } = Constants);
 const obj = {
   label_type: Server.EmbeddedActivityLabelTypes.NONE,
   release_phase: "",
@@ -127,8 +125,6 @@ export const ActivityTooltipName = {
   POKER_MARKETING_TOOLTIP: "POKER_MARKETING_TOOLTIP",
   YOUTUBE_MARKETING_TOOLTIP: "YOUTUBE_MARKETING_TOOLTIP",
 };
-export { ActivityIntent };
-export { ActivityLayoutMode };
 export const APPLICATIONS_WITH_ALLOWED_POPUPS = new Set(items2);
 export const ActivityScreenOrientation = {
   UNHANDLED: -1,

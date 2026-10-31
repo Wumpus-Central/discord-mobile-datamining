@@ -12,9 +12,9 @@ function CoachmarkImage() {
   );
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
 });
@@ -33,19 +33,19 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(2048).canUsePremiumProfileCustomization(stateFromStores);
-  const intl = visible(1114).intl;
+  const result = markAsDismissed(2047).canUsePremiumProfileCustomization(stateFromStores);
+  const intl = visible(1113).intl;
   const string = intl.string;
-  const tmp6 = markAsDismissed(2931);
+  const tmp6 = markAsDismissed(2932);
   if (result) {
     let stringResult = string(tmp6.h6sykk);
   } else {
     stringResult = string(tmp6.M5amXH);
   }
   dependencyMap = stringResult;
-  const intl2 = tmp(1114).intl;
+  const intl2 = tmp(1113).intl;
   const string2 = intl2.string;
-  const tmp4Result = tmp4(2931);
+  const tmp4Result = tmp4(2932);
   if (result) {
     let string2Result = string2(tmp4Result.TyUdka);
   } else {
@@ -70,7 +70,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     }),
     items2,
   );
-  const obj2 = markAsDismissed(2048);
-  const coachmark = visible(9933).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(2047);
+  const coachmark = visible(9954).useCoachmark(visible.targetRef, memo);
   return null;
 }

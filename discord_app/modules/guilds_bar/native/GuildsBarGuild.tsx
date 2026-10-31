@@ -13,14 +13,14 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(4876);
+const GuildRecord = fn(4881);
 ({ getGuildIconSource: closure_4, getGuildIconURL: hasOwnProperty } = GuildRecord);
-const useItemDragState = fn(18305).useItemDragState;
-const TRANSITION_PHYSICS = fn(18302).TRANSITION_PHYSICS;
+const useItemDragState = fn(18348).useItemDragState;
+const TRANSITION_PHYSICS = fn(18345).TRANSITION_PHYSICS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,

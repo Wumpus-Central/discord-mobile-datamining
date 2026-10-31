@@ -33,7 +33,7 @@ let closure_15 = async function _maybeStartLurking(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -118,7 +118,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
             });
           }
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       }
       if (null != messageId) {
@@ -138,7 +138,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
                 if (closure_129_7.type === closure_130_10.GUILD_STAGE_VOICE) {
                   if (!closure_130_9.can(closure_130_12.CONNECT, closure_129_7)) {
                     c4 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 }
                 if (closure_129_3 != null) {
@@ -211,7 +211,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
       return { value, done: true };
     } else if (value) {
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else if (3 === tmp5) {
     if (arg0 === 1) {
@@ -257,7 +257,7 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
       return { value, done: true };
     } else if (value) {
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else if (arg0 === 1) {
     c4 = 3;
@@ -291,8 +291,8 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
   ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
   return "flexDirection";
 };
-const isGuildVocalChannelType = fn(4862).isGuildVocalChannelType;
-const isGuildLurker = fn(4876).isGuildLurker;
+const isGuildVocalChannelType = fn(4867).isGuildVocalChannelType;
+const isGuildLurker = fn(4881).isGuildLurker;
 const Constants = fn(1072);
 ({ ChannelTypes: c10, LinkingTypes: closure_11, Permissions: closure_12, Routes: map1 } = Constants);
 const size = fn(2);

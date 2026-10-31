@@ -3,15 +3,15 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 import UserSettingsVoiceProcessing from "../../../user_settings/voice/native/UserSettingsVoiceProcessing.tsx";
 import useSelectedActiveStreamDefault from "../../../video_calls/native/useSelectedActiveStream.tsx";
-import useIsConnectedToVoiceChannelDefault from "../hooks/useIsConnectedToVoiceChannel.tsx";
 import MobileGoLiveEntrypointExperiment from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
+import useShowConnectedControlsDefault from "useShowConnectedControls.tsx";
 import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -21,10 +21,10 @@ const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment
 
 require = fn;
 function NOOP() {}
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11202).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11221).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 },
   scrollViewScreenReader: null,
@@ -42,7 +42,7 @@ let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
 let closure_10 = noop.memo(function ListItems(arg0) {
   ({ channel, openTab } = arg0);
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
-  const tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
+  const tmp2 = useShowConnectedControlsDefault(channelId);
   const embeddedActivityLaunchability = getEmbeddedActivityLaunchability.useEmbeddedActivityLaunchability(channelId);
   const DeveloperMode = UserSettings.DeveloperMode;
   const setting = DeveloperMode.useSetting();

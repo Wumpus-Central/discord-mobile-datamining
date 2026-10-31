@@ -12,29 +12,29 @@ const result = size.fileFinishedImporting("modules/age_gate/native/components/Ns
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
-  const messageRequestPrivacyOption = guild(15692).useMessageRequestPrivacyOption({ guild });
-  const obj2 = { header: closure_3(guild(7315).BottomSheetTitleHeader, { title: guild.name }), children: null };
+  const messageRequestPrivacyOption = guild(15732).useMessageRequestPrivacyOption({ guild });
+  const obj2 = { header: closure_3(guild(7321).BottomSheetTitleHeader, { title: guild.name }), children: null };
   const obj4 = { hasIcons: false, children: null };
   const obj5 = { label: null, onPress: null };
-  const intl = guild(1114).intl;
-  obj5.label = intl.string(guild(1114).t.h850Ss);
+  const intl = guild(1113).intl;
+  obj5.label = intl.string(guild(1113).t.h850Ss);
   obj5.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
   };
   const items = [
-    closure_3(guild(7362).ActionSheetRow, obj5),
-    closure_3(guild(15693).RestrictedGuildPrivacyOption, { guild }),
+    closure_3(guild(7368).ActionSheetRow, obj5),
+    closure_3(guild(15733).RestrictedGuildPrivacyOption, { guild }),
     messageRequestPrivacyOption,
   ];
   const obj6 = { variant: "danger", label: null, onPress: null };
-  const intl2 = guild(1114).intl;
-  obj6.label = intl2.string(guild(1114).t.J2TBi3);
+  const intl2 = guild(1113).intl;
+  obj6.label = intl2.string(guild(1113).t.J2TBi3);
   obj6.onPress = function onPress() {
     return GuildActionSheetActions.handleLeaveServer(guild);
   };
-  items[3] = closure_3(guild(7362).ActionSheetRow, obj6);
+  items[3] = closure_3(guild(7368).ActionSheetRow, obj6);
   obj4.children = items;
-  obj2.children = closure_4(guild(7362).ActionSheetRow.Group, obj4);
-  return closure_3(guild(7360).ActionSheet, obj2);
+  obj2.children = closure_4(guild(7368).ActionSheetRow.Group, obj4);
+  return closure_3(guild(7366).ActionSheet, obj2);
 }

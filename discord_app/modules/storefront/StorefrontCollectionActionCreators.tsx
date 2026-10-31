@@ -19,7 +19,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -332,7 +332,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionPageFetchedAt <= closure_130_17) {
                         c7 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     }
                   }
@@ -450,7 +450,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -502,7 +502,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionsAfterFetchedAt <= TWELVE_HOURS_MS) {
                         c6 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       }
                     }
                   }
@@ -595,7 +595,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -677,7 +677,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
                       }
                     }
                     c6 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 }
                 c4 = 1;

@@ -26,7 +26,7 @@ export function maybeFetchTopSoundboardSoundsByGuild(id) {
         if (!obj.isPseudoGuildId(id)) {
           const obj3 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: id };
           DispatcherDefault.dispatch(obj3);
-          const HTTP = tmp2(1283).HTTP;
+          const HTTP = tmp2(1282).HTTP;
           const obj4 = {
             url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id),
             oldFormErrors: true,
@@ -55,7 +55,7 @@ export function fetchTopSoundboardSounds(guildId) {
   if (!obj.isPseudoGuildId(guildId)) {
     const obj3 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
     DispatcherDefault.dispatch(obj3);
-    const HTTP = tmp(1283).HTTP;
+    const HTTP = tmp(1282).HTTP;
     const obj4 = {
       url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(guildId),
       oldFormErrors: true,

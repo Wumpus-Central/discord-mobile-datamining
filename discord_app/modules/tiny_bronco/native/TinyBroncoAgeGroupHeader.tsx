@@ -1,7 +1,7 @@
 // discord_app/modules/tiny_bronco/native/TinyBroncoAgeGroupHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3125 from "../TinyBronco.messages.js";
+import _modDef3128 from "../TinyBronco.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
@@ -32,14 +32,14 @@ function AccountStatusNotice(arg0) {
       const obj3 = { style: tmp.notice, children: null };
       const obj4 = {
         style: tmp.noticeIcon,
-        children: closure_8(tmp2(5730).CircleInformationIcon, { size: "xs", color: "text-link" }),
+        children: closure_8(tmp2(5735).CircleInformationIcon, { size: "xs", color: "text-link" }),
       };
       items = [closure_8(View, obj4), ,];
       const obj5 = { style: tmp.noticeBody, variant: "text-sm/normal", color: "text-default", children: null };
-      const intl = tmp2(1114).intl;
+      const intl = tmp2(1113).intl;
       obj6 = { handleOnBlogHook: handleOpenBlog };
       obj5.children = intl.format(obj6[arg0.ageGroup], obj6);
-      items[1] = closure_8(tmp2(5619).Text, obj5);
+      items[1] = closure_8(tmp2(5624).Text, obj5);
       obj7 = {
         style: tmp.noticeDismiss,
         activeOpacity: 0.5,
@@ -49,11 +49,11 @@ function AccountStatusNotice(arg0) {
         onPress: null,
         children: null,
       };
-      const intl2 = tmp2(1114).intl;
-      obj7.accessibilityLabel = intl2.string(tmp2(1114).t.WAI6xu);
+      const intl2 = tmp2(1113).intl;
+      obj7.accessibilityLabel = intl2.string(tmp2(1113).t.WAI6xu);
       obj7.onPress = tmp7;
-      obj7.children = closure_8(tmp2(7048).XSmallIcon, { size: "sm", color: "icon-strong" });
-      items[2] = closure_8(tmp2(6974).PressableOpacity, obj7);
+      obj7.children = closure_8(tmp2(7054).XSmallIcon, { size: "sm", color: "icon-strong" });
+      items[2] = closure_8(tmp2(6980).PressableOpacity, obj7);
       obj3.children = items;
       tmp8 = closure_9(View, obj3);
     }
@@ -66,7 +66,7 @@ function AgeGroupDescription(ageGroup) {
     const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = util.intl;
     const obj3 = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
-    obj2.children = intl3.format(_modDef3125.gi4ulu, obj3);
+    obj2.children = intl3.format(_modDef3128.gi4ulu, obj3);
     return React6(Text_Text.Text, obj2);
   } else if (useAgeGroupPresentation.AgeGroupState.TEEN === ageGroup) {
     const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
@@ -75,7 +75,7 @@ function AgeGroupDescription(ageGroup) {
       handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle,
       handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification,
     };
-    obj4.children = intl2.format(_modDef3125["221iML"], obj5);
+    obj4.children = intl2.format(_modDef3128["221iML"], obj5);
     return React6(Text_Text.Text, obj4);
   } else if (useAgeGroupPresentation.AgeGroupState.UNVERIFIED === ageGroup) {
     const obj = { variant: "text-sm/normal", color: "text-default", children: null };
@@ -85,7 +85,7 @@ function AgeGroupDescription(ageGroup) {
         handleOpenUnconfirmedAgeGroupSupportArticle.handleOpenUnconfirmedAgeGroupSupportArticle,
       handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification,
     };
-    obj.children = intl.format(_modDef3125["W0/7DD"], obj6);
+    obj.children = intl.format(_modDef3128["W0/7DD"], obj6);
     return React6(Text_Text.Text, obj);
   }
 }
@@ -96,23 +96,23 @@ function AgeGroupCallToAction(ageGroup) {
   } else if (useAgeGroupPresentation.AgeGroupState.TEEN === ageGroup) {
     const obj2 = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
     const intl2 = util.intl;
-    obj2.text = intl2.string(_modDef3125["+7NlgO"]);
+    obj2.text = intl2.string(_modDef3128["+7NlgO"]);
     obj2.onPress = useAgeGroupPresentation.handleOpenAgeGatedContentArticle;
     return React6(components_Button_Button.Button, obj2);
   } else if (useAgeGroupPresentation.AgeGroupState.UNVERIFIED === ageGroup) {
     const obj = { grow: true, variant: "secondary", size: "md", text: null, onPress: null };
     const intl = util.intl;
-    obj.text = intl.string(_modDef3125["cI+bc/"]);
+    obj.text = intl.string(_modDef3128["cI+bc/"]);
     obj.onPress = useAgeGroupPresentation.handleShowAgeVerification;
     return React6(components_Button_Button.Button, obj);
   }
 }
 const View = fn(17).View;
-const TINY_BRONCO_BLOG_URL = fn(6731).TINY_BRONCO_BLOG_URL;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const TINY_BRONCO_BLOG_URL = fn(6737).TINY_BRONCO_BLOG_URL;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   header: { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 },
   notice: null,
@@ -147,16 +147,16 @@ let obj4 = {
 };
 obj2.description = { gap: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj2);
-let items = [fn(4842).DismissibleContent.TINY_BRONCO_NOTICE];
+let items = [fn(4847).DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
 let obj6 = {};
-obj6[fn(10112).AgeGroupState.ADULT] = _modDef3125["8TWztV"];
-obj6[fn(10112).AgeGroupState.TEEN] = _modDef3125.qSkhZH;
-obj6[fn(10112).AgeGroupState.UNVERIFIED] = _modDef3125.vGxRDB;
+obj6[fn(10132).AgeGroupState.ADULT] = _modDef3128["8TWztV"];
+obj6[fn(10132).AgeGroupState.TEEN] = _modDef3128.qSkhZH;
+obj6[fn(10132).AgeGroupState.UNVERIFIED] = _modDef3128.vGxRDB;
 let obj7 = {};
-obj7[fn(10112).AgeGroupState.ADULT] = _modDef3125.t5QjmQ;
-obj7[fn(10112).AgeGroupState.TEEN] = _modDef3125["41MDhK"];
-obj7[fn(10112).AgeGroupState.UNVERIFIED] = _modDef3125.m95jW8;
+obj7[fn(10132).AgeGroupState.ADULT] = _modDef3128.t5QjmQ;
+obj7[fn(10132).AgeGroupState.TEEN] = _modDef3128["41MDhK"];
+obj7[fn(10132).AgeGroupState.UNVERIFIED] = _modDef3128.m95jW8;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoAgeGroupHeader.tsx");
 

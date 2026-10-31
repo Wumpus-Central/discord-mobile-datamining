@@ -1,7 +1,7 @@
 // discord_app/modules/autocompleter/Autocompleter.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import _modDef1944 from "../../../_runtime/metro/01944__.js";
+import _modDef1943 from "../../../_runtime/metro/01943__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
 import CodedLink from "../coded_links/CodedLink.tsx";
@@ -25,8 +25,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4939).GUILD_VOCAL_CHANNELS_KEY;
-fn(6891).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4944).GUILD_VOCAL_CHANNELS_KEY;
+fn(6897).AutocompleterResultTypes;
 const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -606,7 +606,7 @@ prototype["queryLink"] = function queryLink(query) {
       const items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef1944.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef1943.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

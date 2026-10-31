@@ -20,15 +20,15 @@ function EmojiConfetti(children) {
   const top = children.top;
   ({ bottom, left } = children);
   ({ right, leading: dependencyMap } = children);
-  const sharedValue = top(5090).useSharedValue(0);
-  let obj = top(5090);
-  const sharedValue1 = top(5090).useSharedValue(0);
-  const obj2 = top(5090);
-  const sharedValue2 = top(5090).useSharedValue(0.2);
-  const obj3 = top(5090);
-  const sharedValue3 = top(5090).useSharedValue(0);
-  let obj4 = top(5090);
-  const mountLayoutEffect = top(5588).useMountLayoutEffect(() => {
+  const sharedValue = top(5095).useSharedValue(0);
+  let obj = top(5095);
+  const sharedValue1 = top(5095).useSharedValue(0);
+  const obj2 = top(5095);
+  const sharedValue2 = top(5095).useSharedValue(0.2);
+  const obj3 = top(5095);
+  const sharedValue3 = top(5095).useSharedValue(0);
+  let obj4 = top(5095);
+  const mountLayoutEffect = top(5593).useMountLayoutEffect(() => {
     let num = 0;
     if (!dependencyMap) {
       const _Math = Math;
@@ -60,7 +60,7 @@ function EmojiConfetti(children) {
       obj17.withSequence(withTimingResult4, withTimingResult5, timing.withTiming(0, { duration: 240 })),
     );
   });
-  let obj5 = top(5588);
+  let obj5 = top(5593);
   const fn = function f() {
     const items = [{ scale: sharedValue2.get() }];
     let num = 1;
@@ -99,8 +99,8 @@ function EmojiConfetti(children) {
   };
   fn.__workletHash = 1455873119263;
   fn.__initData = __initData;
-  const style = top(5090).useAnimatedStyle(fn);
-  return closure_11(left(5090).View, { style, children: children.emojiComponent });
+  const style = top(5095).useAnimatedStyle(fn);
+  return closure_11(left(5095).View, { style, children: children.emojiComponent });
 }
 function EmojiBurstAnimation(emojiComponent) {
   emojiComponent = emojiComponent.emojiComponent;
@@ -116,10 +116,10 @@ function EmojiBurstAnimation(emojiComponent) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const EMOJI_URL_BASE_SIZE = fn(1387).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -133,13 +133,13 @@ let obj2 = {
   emojiName: null,
   burstContainer: null,
 };
-let PlatformUtils = fn(1376);
+let PlatformUtils = fn(1375);
 let num = 36;
 if (PlatformUtils.isIOS()) {
   num = 48;
 }
 let obj4 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1376);
+PlatformUtils = fn(1375);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 56;
@@ -148,7 +148,7 @@ obj4.lineHeight = num2;
 obj4.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 obj2.selectedTextEmoji = obj4;
 let obj6 = { marginLeft: nativeDefault.space.PX_16, fontSize: 40, lineHeight: null };
-PlatformUtils = fn(1376);
+PlatformUtils = fn(1375);
 let num3;
 if (PlatformUtils.isIOS()) {
   num3 = 56;
@@ -396,7 +396,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -412,7 +412,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             } else {
               let tmp22 = tmp2;
               if (memo) {
-                const DoubleTapReactionEmoji = tmp2(4834).DoubleTapReactionEmoji;
+                const DoubleTapReactionEmoji = tmp2(4839).DoubleTapReactionEmoji;
                 const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
                 tmp22 = first;
                 obj5.emojiName = first.name;
@@ -436,13 +436,13 @@ export default function DoubleTapToReactActionSheet(emoji) {
             emoji_name: closure_129_2.name,
             emoji_animated: closure_129_2.animated,
             recommended: closure_129_4.current,
-            location: tmp22(7345).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+            location: tmp22(7351).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
           };
-          tmp22(1253).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
+          tmp22(1252).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp24) {
           c3 = tmp;
           throw tmp24;

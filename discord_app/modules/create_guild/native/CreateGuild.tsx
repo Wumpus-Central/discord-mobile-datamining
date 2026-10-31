@@ -9,7 +9,7 @@ const ScrollView = fn(17).ScrollView;
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   flex: { flex: 1 },
   contentContainer: {
@@ -40,7 +40,7 @@ export default function CreateGuild(arg0) {
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
-  isScreenReaderEnabled = isScreenReaderEnabled(5269).useIsScreenReaderEnabled();
+  isScreenReaderEnabled = isScreenReaderEnabled(5274).useIsScreenReaderEnabled();
   ref = noop.useRef(null);
   const items = [isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
@@ -71,19 +71,19 @@ export default function CreateGuild(arg0) {
     children: null,
   };
   if (customTitle == null) {
-    const intl = tmp4(1114).intl;
-    customTitle = intl.string(tmp4(1114).t.XioBx6);
+    const intl = tmp4(1113).intl;
+    customTitle = intl.string(tmp4(1113).t.XioBx6);
   }
   obj3.children = customTitle;
-  const items1 = [closure_7(isScreenReaderEnabled(5619).Text, obj3), , , , , , ,];
+  const items1 = [closure_7(isScreenReaderEnabled(5624).Text, obj3), , , , , , ,];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   if (customDescription == null) {
-    const intl2 = tmp4(1114).intl;
-    customDescription = intl2.string(tmp4(1114).t["/k/L/j"]);
+    const intl2 = tmp4(1113).intl;
+    customDescription = intl2.string(tmp4(1113).t["/k/L/j"]);
   }
   obj4.children = customDescription;
-  items1[1] = closure_7(isScreenReaderEnabled(5619).Text, obj4);
-  items1[2] = closure_7(ref(13175), {
+  items1[1] = closure_7(isScreenReaderEnabled(5624).Text, obj4);
+  items1[2] = closure_7(ref(13210), {
     iconBackgroundColor: tmp.contentContainer.backgroundColor,
     style: tmp.iconUploader,
     onPress: onIconPress,
@@ -99,8 +99,8 @@ export default function CreateGuild(arg0) {
     autoCorrect: false,
     returnKeyType: "done",
   };
-  const intl3 = tmp4(1114).intl;
-  obj6.label = intl3.string(isScreenReaderEnabled(1114).t.dBih7e);
+  const intl3 = tmp4(1113).intl;
+  obj6.label = intl3.string(isScreenReaderEnabled(1113).t.dBih7e);
   let firstFieldErrorMessage;
   if (error != null) {
     firstFieldErrorMessage = error.getFirstFieldErrorMessage("name");
@@ -113,7 +113,7 @@ export default function CreateGuild(arg0) {
   }
   let tmp9Result = !!isStaffResult;
   obj6.autoFocus = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(7076).TextInput, obj6);
+  items1[3] = closure_7(isScreenReaderEnabled(7082).TextInput, obj6);
   if (tmp9Result) {
     const obj7 = {
       onValueChange: onStaffOnlyChange,
@@ -123,24 +123,24 @@ export default function CreateGuild(arg0) {
       label: "Staff Only",
       subLabel: null,
     };
-    const intl4 = tmp4(1114).intl;
-    obj7.subLabel = intl4.string(tmp4(1114).t.edQ5va);
-    tmp9Result = closure_7(tmp4(7363).TableSwitchRow, obj7);
+    const intl4 = tmp4(1113).intl;
+    obj7.subLabel = intl4.string(tmp4(1113).t.edQ5va);
+    tmp9Result = closure_7(tmp4(7369).TableSwitchRow, obj7);
   }
   items1[4] = tmp9Result;
   const obj8 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl5 = tmp4(1114).intl;
-  obj8.children = intl5.format(isScreenReaderEnabled(1114).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
-  items1[5] = closure_7(isScreenReaderEnabled(5619).Text, obj8);
+  const intl5 = tmp4(1113).intl;
+  obj8.children = intl5.format(isScreenReaderEnabled(1113).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
+  items1[5] = closure_7(isScreenReaderEnabled(5624).Text, obj8);
   const obj10 = { disabled: "" === guild.name, size: "md", grow: true, text: null, onPress: null, loading: null };
   if (customButtonLabel == null) {
-    const intl6 = tmp4(1114).intl;
-    customButtonLabel = intl6.string(tmp4(1114).t["O0p/lS"]);
+    const intl6 = tmp4(1113).intl;
+    customButtonLabel = intl6.string(tmp4(1113).t["O0p/lS"]);
   }
   obj10.text = customButtonLabel;
   obj10.onPress = onCreate;
   obj10.loading = submitting;
-  items1[6] = closure_7(isScreenReaderEnabled(5629).Button, obj10);
+  items1[6] = closure_7(isScreenReaderEnabled(5634).Button, obj10);
   let firstFieldErrorMessage1;
   if (error != null) {
     firstFieldErrorMessage1 = error.getFirstFieldErrorMessage("name");
@@ -164,12 +164,12 @@ export default function CreateGuild(arg0) {
           message2 = error.message;
         }
         const obj11 = { children: message2 };
-        tmp9Result2 = closure_7(ref(7101), obj11);
-        const tmp12Result = ref(7101);
+        tmp9Result2 = closure_7(ref(7107), obj11);
+        const tmp12Result = ref(7107);
       }
     }
   }
   items1[7] = tmp9Result2;
-  obj.children = closure_8(isScreenReaderEnabled(6022).Stack, { children: items1 });
+  obj.children = closure_8(isScreenReaderEnabled(6027).Stack, { children: items1 });
   return closure_7(ScrollView, obj);
 }

@@ -1,5 +1,5 @@
 // discord_app/modules/game_profile/hooks/useGameProfileMediaDimensions.tsx
-import privDefault from "../../../../_runtime/01452_priv.js";
+import privDefault from "../../../../_runtime/01451_priv.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 

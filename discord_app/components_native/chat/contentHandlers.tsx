@@ -1,6 +1,6 @@
 // discord_app/components_native/chat/contentHandlers.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../modules/toast/native/ToastUtils.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
@@ -46,7 +46,7 @@ let closure_6 = asyncGeneratorStep(async (arg0) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -140,7 +140,7 @@ let closure_5 = asyncGeneratorStep(async (arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -239,7 +239,7 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -317,7 +317,7 @@ obj.onLongPressAttachmentLink = function onLongPressAttachmentLink() {
   return applyArgumentsResult;
 };
 obj.onTapMention = function onTapMention(nativeEvent) {
-  const nativeSyntheticEventData = parsedUserId(10167).getNativeSyntheticEventData(nativeEvent);
+  const nativeSyntheticEventData = parsedUserId(10187).getNativeSyntheticEventData(nativeEvent);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
   if (null != userId) {
@@ -330,7 +330,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       if (null != guildId) {
         const obj3 = { guildId, roleId, channelId };
         ActionSheetActionCreatorsDefault.openLazy(
-          parsedUserId(1995)(11583, dependencyMap.paths),
+          parsedUserId(1994)(11619, dependencyMap.paths),
           "RoleMembersActionSheet",
           obj3,
         );
@@ -340,19 +340,19 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       if (null != guildId) {
         const obj5 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(1995)(11583, dependencyMap.paths);
+        const tmp10 = parsedUserId(1994)(11619, dependencyMap.paths);
         obj5.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj5.channelId = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj5);
       }
     }
     if (null == roleName) {
-      const DeveloperMode = parsedUserId(4834).DeveloperMode;
+      const DeveloperMode = parsedUserId(4839).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj7 = { secondaryConfirmText: null, onConfirmSecondary: null };
-          const intl = parsedUserId(1114).intl;
-          obj7.secondaryConfirmText = intl.string(parsedUserId(1114).t["/AXYnE"]);
+          const intl = parsedUserId(1113).intl;
+          obj7.secondaryConfirmText = intl.string(parsedUserId(1113).t["/AXYnE"]);
           obj7.onConfirmSecondary = function onConfirmSecondary() {
             ClipboardUtils.copy(parsedUserId);
             const result = ToastUtils.presentCopiedToClipboard();
@@ -360,19 +360,19 @@ obj.onTapMention = function onTapMention(nativeEvent) {
           let obj11 = obj7;
         }
         const obj10 = { title: null, body: null, confirmText: null, isDismissable: true };
-        const intl2 = parsedUserId(1114).intl;
-        obj10.title = intl2.string(parsedUserId(1114).t.r0DLNm);
-        const intl3 = parsedUserId(1114).intl;
-        obj10.body = intl3.string(parsedUserId(1114).t.Fqqbhg);
-        const intl4 = parsedUserId(1114).intl;
-        obj10.confirmText = intl4.string(parsedUserId(1114).t.BddRzS);
+        const intl2 = parsedUserId(1113).intl;
+        obj10.title = intl2.string(parsedUserId(1113).t.r0DLNm);
+        const intl3 = parsedUserId(1113).intl;
+        obj10.body = intl3.string(parsedUserId(1113).t.Fqqbhg);
+        const intl4 = parsedUserId(1113).intl;
+        obj10.confirmText = intl4.string(parsedUserId(1113).t.BddRzS);
         const merged = Object.assign(obj11);
         AlertActionCreatorsDefault.show(obj10);
       }
       obj11 = {};
     }
   }
-  let obj = parsedUserId(10167);
+  let obj = parsedUserId(10187);
 };
 obj.onTapTimestamp = function onTapTimestamp(nativeEvent) {
   ToastUtils.presentTimestamp(nativeEvent.nativeEvent.node.full);
@@ -386,7 +386,7 @@ obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
   tmp = null != node.content && typeof node.content === "string";
 };
 obj.onTapEmoji = function onTapEmoji(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10030, dependencyMap.paths), "MessageEmojiActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10051, dependencyMap.paths), "MessageEmojiActionSheet", {
     emojiNode: emojiNode.nativeEvent.node,
   });
 };

@@ -6,7 +6,7 @@ import FramesStore from "../../frames/FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({
   getFrameHostWindowKey: c3,
   isLaunched: closure_4,
@@ -14,7 +14,7 @@ const FramesConstants = fn(6841);
   OVERLAY_SURFACE: metroRequire,
 } = FramesConstants);
 let c7 = "0";
-const CONJURE_PREVIEW_SURFACE = { type: fn(5670).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
+const CONJURE_PREVIEW_SURFACE = { type: fn(5675).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewSurface.tsx");
 

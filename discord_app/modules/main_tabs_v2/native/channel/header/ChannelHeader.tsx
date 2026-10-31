@@ -14,7 +14,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const ComponentActions = fn(1072).ComponentActions;
-const StaticChannelRoute = fn(4865).StaticChannelRoute;
+const StaticChannelRoute = fn(4870).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx");
@@ -36,7 +36,7 @@ export default function ChannelHeader(channelId) {
   const items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(563);
-  const isChannelContentGated = channelId(6728).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6734).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;
@@ -79,8 +79,8 @@ export default function ChannelHeader(channelId) {
         obj4.screenIndex = screenIndex;
         let stringResult;
         if (!stateFromStores.isForumChannel()) {
-          const intl = tmp(1114).intl;
-          stringResult = intl.string(tmp(1114).t["L9fR+P"]);
+          const intl = tmp(1113).intl;
+          stringResult = intl.string(tmp(1113).t["L9fR+P"]);
         }
         obj4.searchPlaceholder = stringResult;
         tmp8Result = jsx(ForumChannelHeaderDefault, {

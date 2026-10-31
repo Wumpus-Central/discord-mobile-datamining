@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1072);
 ({ Endpoints: hasOwnProperty, AnalyticEvents: metroRequire, LoggingInviteTypes: closure_7 } = Constants);
-const MessageSendLocation = fn(5014).MessageSendLocation;
+const MessageSendLocation = fn(5019).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -161,12 +161,12 @@ export default {
       if (null != message_id) {
         obj4.message_id = message_id;
       }
-      const HTTP = tmp4(1283).HTTP;
+      const HTTP = tmp4(1282).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2),
         retries: 3,
         query: obj4,
-        rejectWithError: tmp4(1283).rejectWithMigratedError(),
+        rejectWithError: tmp4(1282).rejectWithMigratedError(),
       };
       await HTTP.get(request);
       closure_128_0 = value;
@@ -183,12 +183,12 @@ export default {
         message_id: userId.messageId,
         channel_id: userId.channelId,
       }));
-      const HTTP = v3(1283).HTTP;
+      const HTTP = v3(1282).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_SUBSCRIBE,
         body: { subscriptions: mapped },
         retries: 1,
-        rejectWithError: v3(1283).rejectWithMigratedError(),
+        rejectWithError: v3(1282).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       return value.body;

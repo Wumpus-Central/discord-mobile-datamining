@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7619).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7626).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const items = [analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -36,12 +36,12 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     onButtonPress: null,
     onLayout: null,
   };
-  let obj = analyticsLocations(7619);
-  const intl = analyticsLocations(1114).intl;
-  obj2.text = intl.format(analyticsLocations(1114).t.TmfgI2, { onClick: callback });
+  let obj = analyticsLocations(7626);
+  const intl = analyticsLocations(1113).intl;
+  obj2.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {
-    const intl2 = tmp(1114).intl;
-    nitroTrialCtaOverride = intl2.string(tmp(1114).t.pj0XBN);
+    const intl2 = tmp(1113).intl;
+    nitroTrialCtaOverride = intl2.string(tmp(1113).t.pj0XBN);
   }
   obj2.buttonText = nitroTrialCtaOverride;
   obj2.onButtonPress = callback;

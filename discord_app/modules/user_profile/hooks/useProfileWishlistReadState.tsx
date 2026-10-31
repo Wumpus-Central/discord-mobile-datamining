@@ -1,4 +1,5 @@
 // discord_app/modules/user_profile/hooks/useProfileWishlistReadState.tsx
+import ProfileReadStateUtils from "../ProfileReadStateUtils.tsx";
 import ProfileReadStateActionCreators from "../ProfileReadStateActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -6,7 +7,7 @@ import WishlistStore from "../../wishlists/WishlistStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 
 require = fn;
-const ProfileReadStateSection = fn(7777).ProfileReadStateSection;
+const ProfileReadStateSection = fn(7784).ProfileReadStateSection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileWishlistReadState.tsx");
 
@@ -17,15 +18,15 @@ export default function useProfileWishlistReadState(ownerId) {
   if (flag === undefined) {
     flag = true;
   }
-  _slicedToArray = undefined;
   let stateFromStores1;
   closure_5 = undefined;
-  const profileReadStateConfigPeek = ownerId(flag[5]).useProfileReadStateConfigPeek();
-  let obj = ownerId(flag[5]);
+  const profileReadStateConfigPeek = ownerId(wishlistId[5]).useProfileReadStateConfigPeek();
+  let obj = ownerId(wishlistId[5]);
   let tmp = ownerId;
-  const items = [UserProfileStore];
+  const tmp2 = wishlistId;
+  const items = [closure_5];
   const items1 = [ownerId];
-  const stateFromStores = ownerId(flag[6]).useStateFromStores(
+  const stateFromStores = ownerId(wishlistId[6]).useStateFromStores(
     items,
     () => {
       let profileReadStateSectionAckedAt = null;
@@ -39,7 +40,7 @@ export default function useProfileWishlistReadState(ownerId) {
     },
     items1,
   );
-  const tmp6 = _slicedToArray(stateFromStores1.useState(undefined), 2);
+  const tmp6 = flag(stateFromStores.useState(undefined), 2);
   const first = tmp6[0];
   let tmp8 = flag;
   if (flag) {
@@ -58,13 +59,12 @@ export default function useProfileWishlistReadState(ownerId) {
     }
     tmp6[1](tmp11);
   }
-  const tmp13 = wishlistId(flag[7])(ownerId);
-  _slicedToArray = tmp13;
-  const obj2 = ownerId(flag[6]);
-  const obj3 = stateFromStores1;
-  const items2 = [closure_5, UserProfileStore];
-  const items3 = [ownerId, wishlistId];
-  stateFromStores1 = tmp(flag[6]).useStateFromStores(
+  const obj2 = ownerId(wishlistId[6]);
+  const obj3 = stateFromStores;
+  const tmp4 = closure_5;
+  const items2 = [stateFromStores1, tmp4];
+  const items3 = [ownerId, wishlistId, stateFromStores];
+  stateFromStores1 = tmp(tmp2[6]).useStateFromStores(
     items2,
     () => {
       if (null != ownerId) {
@@ -77,7 +77,12 @@ export default function useProfileWishlistReadState(ownerId) {
                 if (wishlistSettings != null) {
                   updated_at = wishlistSettings.updated_at;
                 }
-                return null == updated_at || WishlistStore.getUpdatedAt(wishlistId) === updated_at;
+                let shouldAckWishlistResult =
+                  null == updated_at || WishlistStore.getUpdatedAt(wishlistId) === updated_at;
+                if (shouldAckWishlistResult) {
+                  shouldAckWishlistResult = ProfileReadStateUtils.shouldAckWishlist(wishlistSettings, stateFromStores);
+                }
+                return shouldAckWishlistResult;
               }
             }
           }
@@ -87,15 +92,12 @@ export default function useProfileWishlistReadState(ownerId) {
     },
     items3,
   );
-  closure_5 = tmp15;
-  const items4 = [flag, undefined !== first, tmp13, stateFromStores1, ownerId];
+  closure_5 = tmp14;
+  const items4 = [flag, undefined !== first, stateFromStores1, ownerId];
   const effect = obj3.useEffect(() => {
     let tmp = flag;
     if (flag) {
       tmp = closure_5;
-    }
-    if (tmp) {
-      tmp = closure_3;
     }
     if (tmp) {
       tmp = stateFromStores1;

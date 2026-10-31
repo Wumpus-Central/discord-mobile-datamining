@@ -19,7 +19,7 @@ export function deleteChannelStates() {
 }
 export function useIsChannelDetailsSearchActive(arg0) {
   closure_0 = arg0;
-  const f95399 = (isSearchActive) => isSearchActive.isSearchActive;
+  const f95653 = (isSearchActive) => isSearchActive.isSearchActive;
   return obj((states) => {
     states = states.states;
     value = states.get(closure_0);
@@ -28,12 +28,12 @@ export function useIsChannelDetailsSearchActive(arg0) {
       const merged = Object.assign(closure_2);
       value = obj;
     }
-    return f95400(value);
+    return f95654(value);
   });
 }
 export function useChannelDetailsSearchActiveSource(arg0) {
   closure_0 = arg0;
-  const f95400 = (searchActiveSource) => searchActiveSource.searchActiveSource;
+  const f95654 = (searchActiveSource) => searchActiveSource.searchActiveSource;
   return obj((states) => {
     states = states.states;
     value = states.get(closure_0);
@@ -42,7 +42,7 @@ export function useChannelDetailsSearchActiveSource(arg0) {
       const merged = Object.assign(closure_2);
       value = obj;
     }
-    return f95400(value);
+    return f95654(value);
   });
 }
 export function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActiveSource) {
@@ -58,12 +58,12 @@ export function setIsChannelDetailsSearchActive(arg0, isSearchActive, searchActi
   const merged2 = Object.assign(obj);
   const map = new Map(states);
   const result = map.set(arg0, {});
-  map(1260).batchUpdates(() => {
+  map(1259).batchUpdates(() => {
     const obj = { states: map };
     return obj.setState(obj);
   });
   const obj3 = {};
-  const obj5 = map(1260);
+  const obj5 = map(1259);
 }
 export function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;
@@ -79,7 +79,7 @@ export function deleteChannelDetailsSearchState(arg0) {
   const states = obj.getState().states;
   states.delete(arg0);
   const map = new Map(states);
-  obj = map(1260);
+  obj = map(1259);
   obj.batchUpdates(() => {
     const obj = { states: map };
     return obj.setState(obj);

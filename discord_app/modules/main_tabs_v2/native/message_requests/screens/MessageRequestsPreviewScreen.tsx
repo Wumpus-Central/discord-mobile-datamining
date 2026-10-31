@@ -17,7 +17,7 @@ export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
   const ref = noop.useRef(null);
   const items = [channelId];
-  const isMessageRequestRestrictedViewer = channelId(13964).useIsMessageRequestRestrictedViewer();
+  const isMessageRequestRestrictedViewer = channelId(13999).useIsMessageRequestRestrictedViewer();
   const effect = noop.useEffect(() => {
     const obj = MessageManagerDefault;
     const messages = obj.fetchMessages({ channelId, messageId: ReadStateStore.lastMessageId(channelId) });
@@ -43,5 +43,5 @@ export default function MessageRequestsScreen(route) {
     });
   }
   obj2.children = tmp5Result;
-  return jsx(channelId(10988).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(11007).ChannelContainer, { guildId: ME, channelId, children: null });
 }

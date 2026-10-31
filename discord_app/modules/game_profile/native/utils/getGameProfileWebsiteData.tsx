@@ -4,11 +4,11 @@ import AppleNeutralIcon from "../../../../design/components/Icon/native/redesign
 import XNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XNeutralIcon.tsx";
 import FacebookNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/FacebookNeutralIcon.tsx";
 import InstagramNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/InstagramNeutralIcon.tsx";
+import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
 import ThirdPartyGameApplicationWebsiteCategory from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
 import RobloxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/RobloxNeutralIcon.tsx";
 import GooglePlayNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/GooglePlayNeutralIcon.tsx";
-import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import YoutubeNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/YoutubeNeutralIcon.tsx";
 import BlueskyNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/BlueskyNeutralIcon.tsx";
 import RedditNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/RedditNeutralIcon.tsx";

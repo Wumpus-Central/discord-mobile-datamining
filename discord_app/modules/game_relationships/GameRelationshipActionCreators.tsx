@@ -40,7 +40,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -118,9 +118,9 @@ let closure_9 = async function _removeGameFriend() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(5016).AccessibilityAnnouncer;
-      const intl = closure_1_0(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1114).t.zRf8cO));
+      const AccessibilityAnnouncer = closure_1_0(5021).AccessibilityAnnouncer;
+      const intl = closure_1_0(1113).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1113).t.zRf8cO));
     },
   });
   await "HermesInternal";
@@ -133,9 +133,9 @@ let closure_10 = async function _cancelGameFriendRequest() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(5016).AccessibilityAnnouncer;
-      const intl = closure_1_0(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1114).t.XMf21q));
+      const AccessibilityAnnouncer = closure_1_0(5021).AccessibilityAnnouncer;
+      const intl = closure_1_0(1113).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1113).t.XMf21q));
     },
   });
   await "HermesInternal";
@@ -162,7 +162,7 @@ export default {
   acceptGameFriendRequest(arg0) {
     function onSuccess() {}
     ({ userId, applicationId } = arg0);
-    const HTTP = onSuccess(1283).HTTP;
+    const HTTP = onSuccess(1282).HTTP;
     const request = {
       url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId),
       body: { type: constants.FRIEND },
@@ -177,14 +177,14 @@ export default {
         AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
       })
       .catch((error) => {
-        const aPIError = new onSuccess(6440).APIError(error);
+        const aPIError = new onSuccess(6446).APIError(error);
         let anyErrorMessage = aPIError.getAnyErrorMessage();
         const obj = { title: null, body: null };
-        const intl = onSuccess(1114).intl;
-        obj.title = intl.string(onSuccess(1114).t["328j/I"]);
+        const intl = onSuccess(1113).intl;
+        obj.title = intl.string(onSuccess(1113).t["328j/I"]);
         if (null == anyErrorMessage) {
-          const intl2 = onSuccess(1114).intl;
-          anyErrorMessage = intl2.string(onSuccess(1114).t.fEptJP);
+          const intl2 = onSuccess(1113).intl;
+          anyErrorMessage = intl2.string(onSuccess(1113).t.fEptJP);
         }
         obj.body = anyErrorMessage;
         AlertActionCreatorsDefault.show(obj);

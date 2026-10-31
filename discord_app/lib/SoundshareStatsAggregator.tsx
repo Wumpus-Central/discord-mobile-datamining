@@ -74,6 +74,19 @@ prototype["traceEvent"] = function traceEvent(soundshareSession, type) {
     _report.soundshare_last_session = soundshareSession;
   }
 };
+prototype["restartForFragment"] = function restartForFragment() {
+  const keys = Object.keys(this._report);
+  const found = keys.filter((item) => item.endsWith("_count"));
+  const merged = Object.assign(
+    this._report,
+    Object.fromEntries(
+      found.map((item) => {
+        const items = [item, 0];
+        return items;
+      }),
+    ),
+  );
+};
 prototype["getStats"] = function getStats() {
   const obj = {};
   const merged = Object.assign(this._report);

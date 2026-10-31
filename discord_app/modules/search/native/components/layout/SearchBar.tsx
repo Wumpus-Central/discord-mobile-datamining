@@ -16,12 +16,12 @@ const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(9806);
+const SearchConstants = fn(9827);
 ({ SEARCH_BAR_HEIGHT: c10, SearchQueryTagTypes: closure_11 } = SearchConstants);
-const SearchFilterAddLocations = fn(9805).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_15 = createStyles.createStyles((minHeight) => {
   const obj = {
     searchBar: { minHeight: minHeight + 2 },

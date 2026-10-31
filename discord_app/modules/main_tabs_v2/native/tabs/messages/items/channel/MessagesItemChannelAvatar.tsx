@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11027).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11046).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -48,7 +48,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
     muted = !channelSelected;
   }
   const tmpResult = closure_10(muted);
-  const REFRESH_MEDIUM_32 = channel(1188).AvatarSizes.REFRESH_MEDIUM_32;
+  const REFRESH_MEDIUM_32 = channel(1187).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = AuthenticationStore.getId();
   const items = [TypingStore];
   stateFromStores = channel(504).useStateFromStores(items, () => {
@@ -123,13 +123,13 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         guildId: "e",
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
-        status: null,
-        streaming: "3009b1746fe9c2e1e2935c2a9cae0bc9",
-        style: "CheckoutUntranslated.compiled.messages",
-        size: "jsona",
-        animate: "VOICE_CATEGORY_EXPAND",
-        typing: null,
-        autoStatusCutout: true,
+        status: true,
+        streaming: true,
+        style: false,
+        size: true,
+        animate: true,
+        typing: "dispatch",
+        autoStatusCutout: false,
       };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
@@ -141,19 +141,19 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1188).Avatar, {
+      tmp11Result = jsx(tmp3(1187).Avatar, {
         user: stateFromStores2,
         avatarDecoration: stateFromStores2.avatarDecoration,
         guildId: "e",
         isMobileOnline: stateFromStores3,
         isVROnline: stateFromStores4,
-        status: null,
-        streaming: "3009b1746fe9c2e1e2935c2a9cae0bc9",
-        style: "CheckoutUntranslated.compiled.messages",
-        size: "jsona",
-        animate: "VOICE_CATEGORY_EXPAND",
-        typing: null,
-        autoStatusCutout: true,
+        status: true,
+        streaming: true,
+        style: false,
+        size: true,
+        animate: true,
+        typing: "dispatch",
+        autoStatusCutout: false,
       });
     }
   }

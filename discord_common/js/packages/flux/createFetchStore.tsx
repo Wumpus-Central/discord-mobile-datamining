@@ -6,15 +6,15 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-function areStatesEqual(colors, current) {
+function areStatesEqual(colors, colors2) {
   if (Array.isArray(colors)) {
     const _Array = Array;
-    if (Array.isArray(current)) {
-      let result = discord_common_shallowEqual.areArraysShallowEqual(colors, current);
+    if (Array.isArray(colors2)) {
+      let result = discord_common_shallowEqual.areArraysShallowEqual(colors, colors2);
     }
     return result;
   }
-  result = Object.is(colors, current);
+  result = Object.is(colors, colors2);
 }
 function defaultRetryableErrors(status) {
   let tmp = status instanceof HTTPResponseError;
@@ -133,7 +133,7 @@ export function createFetchStore(ApplicationStore, arg1) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -204,7 +204,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                       closure_130_6 = HermesBuiltin.apply(items1, undefined);
                       if (closure_130_6 === closure_1_8) {
                         c7 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "HermesInternal", done: "HermesInternal" };
                       } else {
                         if (null != closure_130_6) {
                           if (
@@ -223,7 +223,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                             })(closure_130_3, closure_131_9)
                           ) {
                             c7 = 3;
-                            return { value: "HermesInternal", done: null };
+                            return { value: "HermesInternal", done: "HermesInternal" };
                           }
                         }
                         failureLockedUntil = closure_130_3.getState().failureLockedUntil;
@@ -231,7 +231,7 @@ export function createFetchStore(ApplicationStore, arg1) {
                           const _Date2 = Date;
                           if (Date.now() < failureLockedUntil) {
                             c7 = 3;
-                            return { value: "HermesInternal", done: null };
+                            return { value: "HermesInternal", done: "HermesInternal" };
                           }
                         }
                       }

@@ -190,7 +190,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16 },
   roleLabel: null,
@@ -213,7 +213,7 @@ obj2.roleListFooter = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 let closure_12 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -237,7 +237,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   dependencyMap = undefined;
   handleRoleSelectionChange = undefined;
   const tmp = closure_12();
-  const tmp4 = selectedRoleIds(12435)(projectId, arg1);
+  const tmp4 = selectedRoleIds(12470)(projectId, arg1);
   ({ liveReload, isGuildCollaboration, selectedRoleIds } = tmp4);
   ({
     supportsVisibility,
@@ -288,7 +288,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -316,7 +316,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -338,7 +338,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
               const obj = tmp3(dependencyMap[11]);
             } else {
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           }
           dependencyMap = 0;
@@ -360,7 +360,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   if (flag) {
     let obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl = require("util").intl;
-    obj3.children = intl.string(tmp2(3865).s7VnVF);
+    obj3.children = intl.string(tmp2(3868).s7VnVF);
     tmp9 = closure_9(require("Text/Text").Text, obj3);
   }
   const items1 = [
@@ -384,17 +384,17 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   if (supportsVisibility) {
     let obj4 = { hasIcons: false, children: null };
     let obj5 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-    const intl2 = tmp13(1114).intl;
-    obj5.label = intl2.string(tmp2(3865).ujIxRm);
-    const intl3 = tmp13(1114).intl;
-    obj5.subLabel = intl3.string(tmp2(3865).gT8zk1);
+    const intl2 = tmp13(1113).intl;
+    obj5.label = intl2.string(tmp2(3868).ujIxRm);
+    const intl3 = tmp13(1113).intl;
+    obj5.subLabel = intl3.string(tmp2(3868).gT8zk1);
     obj5.checked = isPublic;
     obj5.disabled = tmp5;
     obj5.onPress = function onPress(arg0) {
       return _undefined(ConjureProjectTypes.ConjureProjectFlags.PUBLIC, arg0);
     };
-    obj4.children = closure_9(tmp13(6968).TableCheckboxRow, obj5);
-    tmp12Result = closure_9(tmp13(7054).TableRowGroup, obj4);
+    obj4.children = closure_9(tmp13(6974).TableCheckboxRow, obj5);
+    tmp12Result = closure_9(tmp13(7060).TableRowGroup, obj4);
   }
   items1[2] = tmp12Result;
   let tmp12Result6 = null;
@@ -403,17 +403,17 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     if (supportsCollaboration) {
       let obj6 = { hasIcons: false, children: null };
       let obj7 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-      const intl4 = tmp13(1114).intl;
-      obj7.label = intl4.string(tmp2(3865).lVvR4E);
-      const intl5 = tmp13(1114).intl;
-      obj7.subLabel = intl5.string(tmp2(3865).SQZGoV);
+      const intl4 = tmp13(1113).intl;
+      obj7.label = intl4.string(tmp2(3868).lVvR4E);
+      const intl5 = tmp13(1113).intl;
+      obj7.subLabel = intl5.string(tmp2(3868).SQZGoV);
       obj7.checked = isGuildCollaboration;
       obj7.disabled = tmp5;
       obj7.onPress = function onPress(arg0) {
         return _undefined(ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION, arg0);
       };
-      obj6.children = closure_9(tmp13(6968).TableCheckboxRow, obj7);
-      tmp12Result6 = closure_9(tmp13(7054).TableRowGroup, obj6);
+      obj6.children = closure_9(tmp13(6974).TableCheckboxRow, obj7);
+      tmp12Result6 = closure_9(tmp13(7060).TableRowGroup, obj6);
     }
   }
   items1[3] = tmp12Result6;
@@ -421,22 +421,22 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   if (liveReload.available) {
     const obj8 = { hasIcons: false, children: null };
     const obj10 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-    const intl6 = tmp13(1114).intl;
-    obj10.label = intl6.string(tmp2(3865).eEo0ye);
+    const intl6 = tmp13(1113).intl;
+    obj10.label = intl6.string(tmp2(3868).eEo0ye);
     ({ description: obj9.subLabel, checked: obj9.checked } = liveReload);
     obj10.disabled = tmp5;
     obj10.onPress = handleLiveReloadChange;
-    obj8.children = closure_9(tmp13(6968).TableCheckboxRow, obj10);
-    tmp12Result7 = closure_9(tmp13(7054).TableRowGroup, obj8);
+    obj8.children = closure_9(tmp13(6974).TableCheckboxRow, obj10);
+    tmp12Result7 = closure_9(tmp13(7060).TableRowGroup, obj8);
   }
   items1[4] = tmp12Result7;
   let tmp12Result8 = null;
   if (supportsCollaboratorRoles) {
     const obj11 = { label: null, subLabel: null, arrow: true, disabled: null, accessibilityHint: null, onPress: null };
-    const intl7 = tmp13(1114).intl;
-    obj11.label = intl7.string(tmp2(3865)["pO3+p5"]);
-    const intl8 = tmp13(1114).intl;
-    obj11.subLabel = intl8.string(tmp2(3865)["9MdtK9"]);
+    const intl7 = tmp13(1113).intl;
+    obj11.label = intl7.string(tmp2(3868)["pO3+p5"]);
+    const intl8 = tmp13(1113).intl;
+    obj11.subLabel = intl8.string(tmp2(3868)["9MdtK9"]);
     if (!tmp5) {
       tmp5 = !isGuildCollaboration;
     }
@@ -446,21 +446,21 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     obj11.disabled = tmp5;
     let stringResult;
     if (!isGuildCollaboration) {
-      const intl9 = tmp13(1114).intl;
-      stringResult = intl9.string(tmp2(3865).nZw5r9);
+      const intl9 = tmp13(1113).intl;
+      stringResult = intl9.string(tmp2(3868).nZw5r9);
     }
     const obj12 = { hasIcons: false, children: null };
     obj11.accessibilityHint = stringResult;
     obj11.onPress = callback;
-    obj12.children = closure_9(tmp13(6969).TableRow, obj11);
-    tmp12Result8 = closure_9(tmp13(7054).TableRowGroup, obj12);
+    obj12.children = closure_9(tmp13(6975).TableRow, obj11);
+    tmp12Result8 = closure_9(tmp13(7060).TableRowGroup, obj12);
   }
   items1[5] = tmp12Result8;
   let tmp12Result9 = null;
   if (null != saveError) {
     const obj13 = { accessibilityRole: "alert", children: null };
     const obj14 = { variant: "text-xs/normal", color: "text-feedback-critical", children: saveError };
-    obj13.children = closure_9(tmp13(5619).Text, obj14);
+    obj13.children = closure_9(tmp13(5624).Text, obj14);
     tmp12Result9 = closure_9(View, obj13);
   }
   const obj15 = {
@@ -476,19 +476,19 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   const obj16 = { style: tmp.content, children: null };
   const obj17 = { hasIcons: false, children: null };
   const obj18 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-  const intl10 = tmp13(1114).intl;
-  obj18.label = intl10.string(selectedRoleIds(3865)["4liZ45"]);
-  const intl11 = tmp13(1114).intl;
-  obj18.subLabel = intl11.string(selectedRoleIds(3865).I5cl7p);
+  const intl10 = tmp13(1113).intl;
+  obj18.label = intl10.string(selectedRoleIds(3868)["4liZ45"]);
+  const intl11 = tmp13(1113).intl;
+  obj18.subLabel = intl11.string(selectedRoleIds(3868).I5cl7p);
   obj18.checked = smartContext.checked;
   obj18.disabled = saving;
   obj18.onPress = handleSmartContextChange;
   const items2 = [closure_9(require("TableCheckboxRow").TableCheckboxRow, obj18)];
   const obj19 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-  const intl12 = tmp13(1114).intl;
-  obj19.label = intl12.string(selectedRoleIds(3865).mpjaVm);
-  const intl13 = tmp13(1114).intl;
-  obj19.subLabel = intl13.string(selectedRoleIds(3865)["2PxChh"]);
+  const intl12 = tmp13(1113).intl;
+  obj19.label = intl12.string(selectedRoleIds(3868).mpjaVm);
+  const intl13 = tmp13(1113).intl;
+  obj19.subLabel = intl13.string(selectedRoleIds(3868)["2PxChh"]);
   obj19.checked = hostApproval.checked;
   obj19.disabled = saving;
   obj19.onPress = handleRequireHostApprovalChange;
@@ -502,7 +502,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   if (null != experimentalError) {
     const obj21 = { accessibilityRole: "alert", children: null };
     const obj41 = { variant: "text-xs/normal", color: "text-feedback-critical", children: experimentalError };
-    obj21.children = closure_9(tmp13(5619).Text, obj41);
+    obj21.children = closure_9(tmp13(5624).Text, obj41);
     tmp12Result10 = closure_9(View, obj21);
   }
   items3[2] = tmp12Result10;

@@ -1,45 +1,45 @@
 // discord_app/modules/checkpoint/CheckpointConstants.tsx
-import _modDef3091 from "Checkpoint2026.messages.js";
+import _modDef3092 from "Checkpoint2026.messages.js";
 
-const items = [{ list: "gamesByPlayers", label: _modDef3091.b4s18j }, , , ,];
-const obj = { list: "gamesByPlayers", label: _modDef3091.b4s18j };
-items[1] = { list: "newGamesByPlayers", label: _modDef3091.DcxpNj };
-const obj2 = { list: "newGamesByPlayers", label: _modDef3091.DcxpNj };
-items[2] = { list: "indieGamesByPlayers", label: _modDef3091.OAUTki };
-const obj3 = { list: "indieGamesByPlayers", label: _modDef3091.OAUTki };
-items[3] = { list: "gamesByCoplayUsers", label: _modDef3091.ioC4Qg };
-const obj4 = { list: "gamesByCoplayUsers", label: _modDef3091.ioC4Qg };
-items[4] = { list: "gamesByStreamWatchMinutes", label: _modDef3091.M1L00s };
+const items = [{ list: "gamesByPlayers", label: _modDef3092.b4s18j }, , , ,];
+const obj = { list: "gamesByPlayers", label: _modDef3092.b4s18j };
+items[1] = { list: "newGamesByPlayers", label: _modDef3092.DcxpNj };
+const obj2 = { list: "newGamesByPlayers", label: _modDef3092.DcxpNj };
+items[2] = { list: "indieGamesByPlayers", label: _modDef3092.OAUTki };
+const obj3 = { list: "indieGamesByPlayers", label: _modDef3092.OAUTki };
+items[3] = { list: "gamesByCoplayUsers", label: _modDef3092.ioC4Qg };
+const obj4 = { list: "gamesByCoplayUsers", label: _modDef3092.ioC4Qg };
+items[4] = { list: "gamesByStreamWatchMinutes", label: _modDef3092.M1L00s };
 const obj6 = {
-  [fn(6062).CheckpointTraitRarity.DEFAULT]: "#FFE047",
-  [fn(6062).CheckpointTraitRarity.COMMON]: "#35ED7E",
-  [fn(6062).CheckpointTraitRarity.RARE]: "#EF3054",
-  [fn(6062).CheckpointTraitRarity.EPIC]: "#7D53DE",
-  [fn(6062).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
+  [fn(6067).CheckpointTraitRarity.DEFAULT]: "#FFE047",
+  [fn(6067).CheckpointTraitRarity.COMMON]: "#35ED7E",
+  [fn(6067).CheckpointTraitRarity.RARE]: "#EF3054",
+  [fn(6067).CheckpointTraitRarity.EPIC]: "#7D53DE",
+  [fn(6067).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
 };
-obj6[fn(6062).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
+obj6[fn(6067).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
 const obj7 = {};
-obj7[fn(6062).CheckpointTraitRarity.DEFAULT] = _modDef3091.bP4GV1;
-obj7[fn(6062).CheckpointTraitRarity.COMMON] = _modDef3091.QwkKWr;
-obj7[fn(6062).CheckpointTraitRarity.RARE] = _modDef3091.KLmNgL;
-obj7[fn(6062).CheckpointTraitRarity.EPIC] = _modDef3091.hAmdLZ;
-obj7[fn(6062).CheckpointTraitRarity.ULTRA] = _modDef3091.Tv4xyf;
-obj7[fn(6062).CheckpointTraitRarity.NITRO] = _modDef3091["0ModIv"];
+obj7[fn(6067).CheckpointTraitRarity.DEFAULT] = _modDef3092.bP4GV1;
+obj7[fn(6067).CheckpointTraitRarity.COMMON] = _modDef3092.QwkKWr;
+obj7[fn(6067).CheckpointTraitRarity.RARE] = _modDef3092.KLmNgL;
+obj7[fn(6067).CheckpointTraitRarity.EPIC] = _modDef3092.hAmdLZ;
+obj7[fn(6067).CheckpointTraitRarity.ULTRA] = _modDef3092.Tv4xyf;
+obj7[fn(6067).CheckpointTraitRarity.NITRO] = _modDef3092["0ModIv"];
 const items1 = [
-  fn(6062).CheckpointTraitRarity.ULTRA,
-  fn(6062).CheckpointTraitRarity.EPIC,
-  fn(6062).CheckpointTraitRarity.RARE,
-  fn(6062).CheckpointTraitRarity.COMMON,
-  fn(6062).CheckpointTraitRarity.DEFAULT,
-  fn(6062).CheckpointTraitRarity.NITRO,
+  fn(6067).CheckpointTraitRarity.ULTRA,
+  fn(6067).CheckpointTraitRarity.EPIC,
+  fn(6067).CheckpointTraitRarity.RARE,
+  fn(6067).CheckpointTraitRarity.COMMON,
+  fn(6067).CheckpointTraitRarity.DEFAULT,
+  fn(6067).CheckpointTraitRarity.NITRO,
 ];
 const items2 = [
-  fn(6062).CheckpointTraitRarity.DEFAULT,
-  fn(6062).CheckpointTraitRarity.COMMON,
-  fn(6062).CheckpointTraitRarity.RARE,
-  fn(6062).CheckpointTraitRarity.EPIC,
-  fn(6062).CheckpointTraitRarity.ULTRA,
-  fn(6062).CheckpointTraitRarity.NITRO,
+  fn(6067).CheckpointTraitRarity.DEFAULT,
+  fn(6067).CheckpointTraitRarity.COMMON,
+  fn(6067).CheckpointTraitRarity.RARE,
+  fn(6067).CheckpointTraitRarity.EPIC,
+  fn(6067).CheckpointTraitRarity.ULTRA,
+  fn(6067).CheckpointTraitRarity.NITRO,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");

@@ -7,7 +7,7 @@ import UserProfileStore from "../UserProfileStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ProfileReadStateSection = fn(7777).ProfileReadStateSection;
+const ProfileReadStateSection = fn(7784).ProfileReadStateSection;
 let closure_7 = { hasNewWishlistItems: false, newWishlistItemCount: 0, shouldLogExposure: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileNewContent.tsx");

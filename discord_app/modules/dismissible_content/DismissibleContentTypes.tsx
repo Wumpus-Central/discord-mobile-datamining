@@ -53,7 +53,6 @@ const items1 = [
   dismissible_content.DismissibleContent.GUILD_TAG_UPDATED_COACHMARK,
   dismissible_content.DismissibleContent.GAME_ACCOUNT_LINK_RECURRING_UPSELL,
   dismissible_content.DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
-  dismissible_content.DismissibleContent.FIRST_BOOSTER_UPSELL_OVERSEER,
   dismissible_content.DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE,
   dismissible_content.DismissibleContent.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
@@ -104,7 +103,6 @@ const items4 = [
   dismissible_content.DismissibleContent.GAME_SERVER_HOSTING_NEW_COACHMARK,
   dismissible_content.DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK_V2,
   dismissible_content.DismissibleContent.GAME_CLAIM_COACHMARK,
-  dismissible_content.DismissibleContent.FIRST_BOOSTER_UPSELL,
   dismissible_content.DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER,
   dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
 ];

@@ -15,17 +15,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
-let obj = {
+const createStyles = fn(5014);
+let closure_7 = createStyles.createStyles({
   contentContainer: {
     paddingHorizontal: 36,
     paddingTop: 18,
     paddingBottom: 36,
     width: "100%",
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     alignItems: "flex-start",
     display: "flex",
     flexDirection: "column",
@@ -34,19 +33,7 @@ let obj = {
   buttonContainer: { marginVertical: 6, width: "100%", height: 48 },
   title: { width: "100%", textAlign: "center" },
   heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" },
-};
-let closure_7 = createStyles.createStyles(obj);
-let obj3 = {
-  paddingHorizontal: 36,
-  paddingTop: 18,
-  paddingBottom: 36,
-  width: "100%",
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  alignItems: "flex-start",
-  display: "flex",
-  flexDirection: "column",
-  gap: 0,
-};
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx");
 

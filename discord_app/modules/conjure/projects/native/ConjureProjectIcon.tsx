@@ -3,10 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
-import useConjureDefaultAppIconDefault from "../useConjureDefaultAppIcon.native.tsx";
+import ConjureAppIconTileDefault from "ConjureAppIconTile.tsx";
 import useConjureProjectIcon from "../useConjureProjectIcon.tsx";
 import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,35 +12,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const useConjureProjectIconDefault = useConjureProjectIcon;
 
 require = fn;
-function ConjureProjectIconFallback(project) {
-  project = project.project;
-  ({ pixels, glyphStyle } = project);
-  const tmp2 = useConjureDefaultAppIconDefault(project.application_id, project.name);
-  ({ character, foregroundColor } = tmp2);
-  const tmp3 = closure_9(pixels, tmp2.backgroundColor, foregroundColor);
-  const obj = { style: tmp3.tile, children: null };
-  if (null != character) {
-    const obj2 = {
-      variant: "heading-md/bold",
-      color: "none",
-      style: tmp3.character,
-      allowFontScaling: false,
-      children: character,
-    };
-    let tmp4Result = hasOwnProperty(Text_Text.Text, obj2);
-  } else {
-    const obj3 = { size: "custom", style: glyphStyle, color: foregroundColor };
-    tmp4Result = hasOwnProperty(AppsIcon.AppsIcon, obj3);
-  }
-  obj.children = tmp4Result;
-  return hasOwnProperty(React4, obj);
-}
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const dependencyMap = { header: 20, list: 32, card: 40, dialog: 48 };
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   const obj = {
     frame: { width, height: width, borderRadius, overflow: "hidden", alignItems: "center", justifyContent: "center" },
@@ -59,22 +34,12 @@ let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   obj.glyph = { width: width2, height: width2 };
   return obj;
 });
-createStyles = fn(5009);
-let closure_9 = createStyles.createStyles((width, backgroundColor, color) => {
-  const obj = {
-    tile: null,
-    character: { color, fontSize: Math.round(width / 2), lineHeight: Math.round(0.625 * width) },
-  };
-  const size = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor };
-  obj.tile = size;
-  return obj;
-});
-createStyles = fn(5009);
-let closure_11 = createStyles.createStyles((backgroundColor) => {
+createStyles = fn(5014);
+let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { tile: { backgroundColor } };
   return obj;
 });
-let size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectIcon.tsx");
 
 export default function ConjureProjectIcon(project) {
@@ -89,18 +54,20 @@ export default function ConjureProjectIcon(project) {
     children: null,
   };
   if (null != url) {
-    const obj2 = { source: null, style: null };
+    const obj3 = { source: null, style: null };
     const tmp2Result = FastImageDefault;
-    obj2.source = AvatarUtils.makeSource(url);
-    obj2.style = tmp5.image;
-    let tmp11 = hasOwnProperty(tmp2Result, obj2);
-    let tmp10 = hasOwnProperty;
+    obj3.source = AvatarUtils.makeSource(url);
+    obj3.style = tmp5.image;
+    let tmp10 = hasOwnProperty(tmp2Result, obj3);
+    let tmp9 = hasOwnProperty;
   } else {
-    const obj3 = { project, pixels: tmp, glyphStyle: tmp5.glyph };
-    tmp10 = hasOwnProperty;
-    tmp11 = hasOwnProperty(ConjureProjectIconFallback, obj3);
+    const obj5 = { applicationId: null, name: null, size: null };
+    ({ application_id: obj2.applicationId, name: obj2.name } = project);
+    obj5.size = tmp;
+    tmp9 = hasOwnProperty;
+    tmp10 = hasOwnProperty(ConjureAppIconTileDefault, obj5);
   }
-  const items = [tmp11, tmp10(React4, { style: tmp5.border, pointerEvents: "none" })];
+  const items = [tmp10, tmp9(React4, { style: tmp5.border, pointerEvents: "none" })];
   obj.children = items;
   return timestampProducer(React4, obj);
 }
@@ -110,7 +77,7 @@ export function ConjureNewProjectIcon(arg0) {
   const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   const obj3 = _modDef671(token);
   const obj4 = { style: null, children: null };
-  const items = [tmp3.frame, closure_11(_modDef671(token).alpha(0.24).css()).tile];
+  const items = [tmp3.frame, closure_9(_modDef671(token).alpha(0.24).css()).tile];
   obj4.style = items;
   const alphaResult = _modDef671(token).alpha(0.24);
   obj4.children = hasOwnProperty(MagicWandIcon.MagicWandIcon, {

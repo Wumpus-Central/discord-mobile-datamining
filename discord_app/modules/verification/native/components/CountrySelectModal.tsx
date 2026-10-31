@@ -20,10 +20,10 @@ export default function CountrySelectModal() {
     obj2.render = function render() {
       return closure_1_4(closure_1_1(dependencyMap[5]), {
         onClose() {
-          return closure_1_1(6738).pop();
+          return closure_1_1(6744).pop();
         },
         onCountrySelected(countryCode) {
-          return closure_1_1(7207).setCountryCode(countryCode);
+          return closure_1_1(7213).setCountryCode(countryCode);
         },
       });
     };
@@ -32,7 +32,7 @@ export default function CountrySelectModal() {
   }, []);
   const effect = noop.useEffect(
     () => () => {
-      closure_1_1(7201).runAfterInteractions(closure_1_1(7238).setCountrySelectorClosed, 400);
+      closure_1_1(7207).runAfterInteractions(closure_1_1(7244).setCountrySelectorClosed, 400);
     },
     [],
   );

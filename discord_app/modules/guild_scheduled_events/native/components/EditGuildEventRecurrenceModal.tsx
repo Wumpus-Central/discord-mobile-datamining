@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -48,7 +48,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -106,13 +106,13 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(8960).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(8960);
-  const scheduleForRecurrenceWithException = guildEvent(8960).getScheduleForRecurrenceWithException(
+  const baseScheduleForRecurrence = guildEvent(8969).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(8969);
+  const scheduleForRecurrenceWithException = guildEvent(8969).getScheduleForRecurrenceWithException(
     baseScheduleForRecurrence,
     tmp3,
   );
-  let obj2 = guildEvent(8960);
+  let obj2 = guildEvent(8969);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(
@@ -136,8 +136,8 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     closure_8(anyErrorMessage);
   }, items);
   let obj3 = { size: "md", text: null, onPress: null, disabled: null };
-  const intl = guildEvent(1114).intl;
-  obj3.text = intl.string(guildEvent(1114).t["R3BPH+"]);
+  const intl = guildEvent(1113).intl;
+  obj3.text = intl.string(guildEvent(1113).t["R3BPH+"]);
   obj3.onPress = function handleSave() {
     const self = this;
     const apply = closure_11.apply;
@@ -149,10 +149,10 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
     return applyArgumentsResult;
   };
   obj3.disabled = null != first;
-  const action = closure_8(guildEvent(5629).Button, obj3);
+  const action = closure_8(guildEvent(5634).Button, obj3);
   let obj5 = {
     style: null,
-    children: closure_8(guildEvent(7163).Navigator, {
+    children: closure_8(guildEvent(7169).Navigator, {
       screens: {
         [closure_11.TIME]: {
           title: "",

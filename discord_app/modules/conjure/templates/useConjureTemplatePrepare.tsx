@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/templates/useConjureTemplatePrepare.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const prepareTemplate = fn(10830).prepareTemplate;
+const prepareTemplate = fn(10850).prepareTemplate;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/useConjureTemplatePrepare.tsx");
 

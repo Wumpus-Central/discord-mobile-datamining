@@ -10,6 +10,7 @@ import conjureDMAppChannel from "../../conjure/app_channel/conjureDMAppChannel.t
 import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import openChannelSecondaryViewChat from "openChannelSecondaryViewChat.tsx";
 import useChannelContentGate from "../../chat/native/useChannelContentGate.tsx";
+import ConjureAppIconTileDefault from "../../conjure/projects/native/ConjureAppIconTile.tsx";
 import getInlineFramePresentationDefault from "../../frames/native/getInlineFramePresentation.tsx";
 import FrameSurfaceState from "../../frames/native/FrameSurfaceState.tsx";
 import useChannelAppFrameTeardownDefault from "../../frames/useChannelAppFrameTeardown.tsx";
@@ -100,28 +101,40 @@ function ClosedAppChannel(arg0) {
   if (data != null) {
     icon = data.icon;
   }
-  let tmp4Result = null;
   if (null != icon) {
     const obj2 = { source: null, style: null };
-    const tmp8 = FastImageDefault;
-    ({ id: obj4.id, icon: obj4.icon } = data);
+    const tmp11 = FastImageDefault;
+    ({ id: obj6.id, icon: obj6.icon } = data);
     obj2.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null, size: 64 });
     obj2.style = tmp.icon;
-    tmp4Result = hasOwnProperty(tmp8, obj2);
-    const obj5 = { id: null, icon: null, size: 64 };
+    let tmp4Result = hasOwnProperty(tmp11, obj2);
+    const obj4 = { id: null, icon: null, size: 64 };
+  } else {
+    let conjureProjectId;
+    if (data != null) {
+      conjureProjectId = data.conjureProjectId;
+    }
+    tmp4Result = null;
+    if (null != conjureProjectId) {
+      const obj7 = { style: tmp.icon, children: null };
+      ({ id: obj3.applicationId, name: obj3.name } = data);
+      obj7.children = hasOwnProperty(ConjureAppIconTileDefault, { applicationId: null, name: null, size: 64 });
+      tmp4Result = hasOwnProperty(View, obj7);
+      const obj8 = { applicationId: null, name: null, size: 64 };
+    }
   }
-  const obj6 = { icon: tmp4Result, heading: null, action: null };
+  const obj14 = { icon: tmp4Result, heading: null, action: null };
   let name;
   if (data != null) {
     name = data.name;
   }
-  obj6.heading = name;
-  const obj10 = { text: null, onPress: null };
+  obj14.heading = name;
+  const obj15 = { text: null, onPress: null };
   const intl = util.intl;
-  obj10.text = intl.string(util.t.PPYvuv);
-  obj10.onPress = onLaunch;
-  obj6.action = hasOwnProperty(components_Button_Button.Button, obj10);
-  return hasOwnProperty(FrameSurfaceState.FrameSurfaceExplanation, obj6);
+  obj15.text = intl.string(util.t.PPYvuv);
+  obj15.onPress = onLaunch;
+  obj14.action = hasOwnProperty(components_Button_Button.Button, obj15);
+  return hasOwnProperty(FrameSurfaceState.FrameSurfaceExplanation, obj14);
 }
 function AppChannel(arg0) {
   ({ applicationId, channel } = arg0);
@@ -149,12 +162,12 @@ function AppChannel(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = { icon: null };
-let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg };
+let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_8 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;

@@ -1,5 +1,5 @@
 // discord_app/modules/game_profile/native/components/GameProfileHorizontalScrollView.tsx
-import LegacyBaseButton from "../../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

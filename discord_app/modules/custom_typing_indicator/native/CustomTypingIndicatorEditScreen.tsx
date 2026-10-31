@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import CustomTypingIndicatorTypes from "../CustomTypingIndicatorTypes.tsx";
-import Link from "../../../../_runtime/01499_Link.js";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import Link from "../../../../_runtime/01498_Link.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
@@ -101,14 +101,14 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17280, dependencyMap.paths),
+      asyncRequireImpl(17340, dependencyMap.paths),
       "CustomTypingIndicatorTypingSuggestionPickerSheet",
       { initialValue: first2, onChange },
     );
   }, items4);
   const callback2 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17281, dependencyMap.paths),
+      asyncRequireImpl(17341, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );
@@ -149,7 +149,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -192,7 +192,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
                 }
               }
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else if (arg0 === 1) {
             c4 = 3;
@@ -395,7 +395,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   screen: { flex: 1 },
   container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 },

@@ -3,7 +3,7 @@ import CollectiblesItemType from "../../../../discord_common/js/shared/shared-co
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const isProfileEffectRecord = fn(7719).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
 const size = fn(2);

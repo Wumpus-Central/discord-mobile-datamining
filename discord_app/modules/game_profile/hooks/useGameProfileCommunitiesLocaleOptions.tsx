@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GameProfileCommunitiesLocaleFilterStore from "../GameProfileCommunitiesLocaleFilterStore.tsx";
 
 require = fn;
-let closure_4 = fn(9597).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9617).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleOptions.tsx");
 
@@ -22,15 +22,15 @@ export default function useGameProfileCommunitiesLocaleOptions(dependencyMap, ar
       closure_0 = locale;
       if ("en-US" === locale) {
         const obj2 = { locale, label: null };
-        const intl2 = closure_0(1114).intl;
-        obj2.label = intl2.string(closure_0(1114).t.LQLMGP);
+        const intl2 = closure_0(1113).intl;
+        obj2.label = intl2.string(closure_0(1113).t.LQLMGP);
         return obj2;
       } else {
         const found = closure_0.find((value) => value.value === closure_0);
         const obj = { locale, label: null };
         let stringResult = locale;
         if (null != found) {
-          const intl = closure_0(1114).intl;
+          const intl = closure_0(1113).intl;
           stringResult = intl.string(found.localizedName);
         }
         obj.label = stringResult;

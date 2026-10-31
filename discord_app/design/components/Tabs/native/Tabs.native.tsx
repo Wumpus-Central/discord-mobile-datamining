@@ -1,7 +1,7 @@
 // discord_app/design/components/Tabs/native/Tabs.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import cheapWorkletShallowEqual from "../../../../modules/reanimated/native/cheapWorkletShallowEqual.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(ScrollView);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_11 = createStyles.createStyles((gap, arg1) => {
   const obj = {
     container: {
@@ -423,7 +423,7 @@ export function Tabs(state) {
             const result = pressed.set(-1);
           };
           obj.variant = variant;
-          return variant(state(12477).TabItem, obj, id);
+          return variant(state(12512).TabItem, obj, id);
         }),
       }),
     items3,

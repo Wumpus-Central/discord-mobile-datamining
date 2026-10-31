@@ -1,6 +1,6 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01267_v1.js";
+import v1 from "../../../_runtime/01266_v1.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "flexDirection";
 };
-const GlobalDiscoveryServersConstants = fn(9057);
+const GlobalDiscoveryServersConstants = fn(9076);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,
@@ -216,9 +216,9 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "c",
-    discoverySplash: false,
-    emojis: false,
+    preferredLocale: "isArray",
+    discoverySplash: "png",
+    emojis: true,
   };
   ({
     approximate_presence_count: obj.presenceCount,

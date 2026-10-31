@@ -48,8 +48,8 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   obj2.disabled = tmp7;
   let stringResult;
   if (stateFromStores) {
-    const intl = tmp3(1114).intl;
-    stringResult = intl.string(tmp3(1114).t.X1lQli);
+    const intl = tmp3(1113).intl;
+    stringResult = intl.string(tmp3(1113).t.X1lQli);
   }
   obj2.disabledAccessibilityHint = stringResult;
   return obj2;

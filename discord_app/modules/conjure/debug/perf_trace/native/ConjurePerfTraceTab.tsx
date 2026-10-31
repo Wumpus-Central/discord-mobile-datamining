@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/debug/perf_trace/native/ConjurePerfTraceTab.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import v1 from "../../../../../../_runtime/01267_v1.js";
-import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
+import v1 from "../../../../../../_runtime/01266_v1.js";
+import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../../actions/ModalActionCreators.tsx";
 import Card from "../../../../../design/components/Card/native/Card.native.tsx";
@@ -30,7 +30,7 @@ function PerfTraceRow(arg0) {
     variant: "primary",
     onPress() {
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(12966, dependencyMap.paths),
+        asyncRequireImpl(13001, dependencyMap.paths),
         { projectId, traceId: trace.id },
         "CONJURE_PERF_TRACE_MODAL",
       );
@@ -41,7 +41,7 @@ function PerfTraceRow(arg0) {
   const obj3 = { style: tmp.rowBody, children: null };
   const obj4 = { style: tmp.rowTop, children: null };
   const obj5 = { status: null };
-  const tmp9 = trace(12972);
+  const tmp9 = trace(13007);
   obj5.status = ConjurePerfTraceLayout.perfTraceStatus(trace);
   const items = [
     closure_8(tmp9, obj5),
@@ -82,7 +82,7 @@ function PerfTraceRow(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   list: { paddingHorizontal: nativeDefault.space.PX_16 },
   placeholder: null,
@@ -206,7 +206,7 @@ export default function ConjurePerfTraceTab(projectId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -223,7 +223,7 @@ export default function ConjurePerfTraceTab(projectId) {
                   combined = tmp4;
                   c1 = 1;
                   dependencyMap = 1;
-                  const obj6 = { value: combined(8770).clearFolder("cache", combined1), done: false };
+                  const obj6 = { value: combined(8778).clearFolder("cache", combined1), done: false };
                   return obj6;
                 }
               } else if (1 === tmp4) {
@@ -237,7 +237,7 @@ export default function ConjurePerfTraceTab(projectId) {
                 } else {
                   c1 = 2;
                   dependencyMap = 1;
-                  const obj8 = { value: combined(8770).removeFile("cache", closure_128_1), done: false };
+                  const obj8 = { value: combined(8778).removeFile("cache", closure_128_1), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -249,7 +249,7 @@ export default function ConjurePerfTraceTab(projectId) {
                 return obj;
               } else {
                 dependencyMap = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp12) {
               dependencyMap = tmp;
@@ -324,7 +324,7 @@ export default function ConjurePerfTraceTab(projectId) {
 }
 export function openPerfTrace(projectId, traceId) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(12966, dependencyMap.paths),
+    asyncRequireImpl(13001, dependencyMap.paths),
     { projectId, traceId },
     "CONJURE_PERF_TRACE_MODAL",
   );

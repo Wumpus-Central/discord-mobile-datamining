@@ -12,8 +12,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12374 from "../../../../_runtime/metro/12374__.js";
-import _modDef12375 from "../../../../_runtime/metro/12375__.js";
+import _modDef12412 from "../../../../_runtime/metro/12412__.js";
+import _modDef12413 from "../../../../_runtime/metro/12413__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -145,7 +145,7 @@ function PollVotesHeader(message) {
             const obj = { value, done: true };
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else {
           try {
@@ -238,7 +238,7 @@ function PollVotesHeader(message) {
                 }
                 closure_129_5.current = true;
                 v3 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
             const current2 = closure_129_3.current;
@@ -446,9 +446,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12374;
+    let tmp2Result = _modDef12412;
   } else {
-    tmp2Result = _modDef12375;
+    tmp2Result = _modDef12413;
   }
   obj2.source = tmp2Result;
   const items = [map1(tmp8, obj2), ,];
@@ -472,7 +472,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   headerText: { textAlign: "center", paddingHorizontal: 16 },
   subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },

@@ -8,12 +8,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(7382).NsfwGateSource;
+const NsfwGateSource = fn(7388).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     flex: 1,
@@ -34,14 +34,14 @@ export default function NsfwGateGuild(guildId) {
   guildId = guildId.guildId;
   let currentUser;
   const tmp = closure_12();
-  const intl = guildId(1114).intl;
-  const intl2 = guildId(1114).intl;
-  const stringResult = intl.string(guildId(1114).t.vAymlG);
-  const intl3 = guildId(1114).intl;
+  const intl = guildId(1113).intl;
+  const intl2 = guildId(1113).intl;
+  const stringResult = intl.string(guildId(1113).t.vAymlG);
+  const intl3 = guildId(1113).intl;
   let obj = { helpURL: null };
-  const stringResult1 = intl2.string(guildId(1114).t.Crj6eC);
-  obj.helpURL = currentUser(2062).getArticleURL(constants2.NSFW_GUILD_GUIDELINES);
-  let obj2 = currentUser(2062);
+  const stringResult1 = intl2.string(guildId(1113).t.Crj6eC);
+  obj.helpURL = currentUser(2061).getArticleURL(constants2.NSFW_GUILD_GUIDELINES);
+  let obj2 = currentUser(2061);
   currentUser = UserStore.getCurrentUser();
   const items = [guildId, currentUser];
   const effect = noop.useEffect(() => {
@@ -74,34 +74,34 @@ export default function NsfwGateGuild(guildId) {
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj3 = { style: tmp.container, children: null };
-  const items1 = [closure_10(currentUser(7136), {}), , , , ,];
+  const items1 = [closure_10(currentUser(7142), {}), , , , ,];
   const obj4 = { source: null, style: null };
-  const formatResult = intl3.format(guildId(1114).t.Z12LNW, obj);
-  obj4.source = currentUser(7385);
+  const formatResult = intl3.format(guildId(1113).t.Z12LNW, obj);
+  obj4.source = currentUser(7391);
   obj4.style = tmp.image;
-  items1[1] = closure_10(currentUser(5712), obj4);
-  items1[2] = closure_10(guildId(5619).Heading, {
+  items1[1] = closure_10(currentUser(5717), obj4);
+  items1[2] = closure_10(guildId(5624).Heading, {
     style: tmp.header,
     variant: "heading-xl/extrabold",
     color: "mobile-text-heading-primary",
     children: stringResult,
   });
-  items1[3] = closure_10(guildId(5619).Text, {
+  items1[3] = closure_10(guildId(5624).Text, {
     style: tmp.description,
     variant: "text-md/normal",
     color: "text-default",
     children: stringResult1,
   });
-  items1[4] = closure_10(guildId(5619).Text, {
+  items1[4] = closure_10(guildId(5624).Text, {
     style: tmp.description,
     variant: "text-md/normal",
     color: "text-default",
     children: formatResult,
   });
   const obj8 = { onPress: guildId.onClose, size: "md", text: null };
-  const intl4 = guildId(1114).intl;
-  obj8.text = intl4.string(guildId(1114).t.gRqiWV);
-  items1[5] = closure_10(guildId(5629).Button, obj8);
+  const intl4 = guildId(1113).intl;
+  obj8.text = intl4.string(guildId(1113).t.gRqiWV);
+  items1[5] = closure_10(guildId(5634).Button, obj8);
   obj3.children = items1;
   return closure_11(View, obj3);
 }

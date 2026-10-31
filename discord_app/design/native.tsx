@@ -112,7 +112,6 @@ import useNavigatorBackHandlerDefault from "components/Navigator/native/useNavig
 import PromoSheet from "components/Sheet/native/PromoSheet.native.tsx";
 import ActionSheetIconHeader from "components/Sheet/native/ActionSheetIconHeader.native.tsx";
 import StickyWrapper from "components/Sticky/native/StickyWrapper.native.tsx";
-import SegmentedControlPages from "components/SegmentedControl/native/SegmentedControlPages.native.tsx";
 import Modal from "components/Modal/native/Modal.native.tsx";
 import CameraLottie from "components/LottieIcon/native/generated/CameraLottie.tsx";
 import ThemeContextProvider_RootThemeContextProvider from "components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx";
@@ -129,6 +128,7 @@ import ModalFloatingAction from "components/Modal/native/ModalFloatingAction.nat
 import ModalActionButton from "components/Modal/native/ModalActionButton.native.tsx";
 import Pile from "components/Pile/native/Pile.native.tsx";
 import PileOverflow from "components/Pile/native/PileOverflow.native.tsx";
+import SegmentedControlPages from "components/SegmentedControl/native/SegmentedControlPages.native.tsx";
 import GuildIconPile from "components/Pile/native/GuildIconPile.native.tsx";
 import TabsGradientDefault from "components/Tabs/native/TabsGradient.native.tsx";
 import Checkbox from "components/Checkbox/native/Checkbox.native.tsx";
@@ -276,6 +276,7 @@ export const AnimatedEnterExitItem = AnimatedEnterExitItemDefault;
 export const AnimatedEnterExitRenderItemFn = AnimatedEnterExitItem.RenderItemFn;
 export const BottomSheet = Sheet_BottomSheet.BottomSheet;
 export const BottomSheetProps = Sheet_BottomSheet.BottomSheetProps;
+export const useBottomSheetWidth = Sheet_BottomSheet.useBottomSheetWidth;
 export const useBottomSheetRef = useBottomSheetRef.useBottomSheetRef;
 export const BottomSheetHandle = Sheet_BottomSheetHandle.BottomSheetHandle;
 export const PromoSheet = PromoSheet.PromoSheet;

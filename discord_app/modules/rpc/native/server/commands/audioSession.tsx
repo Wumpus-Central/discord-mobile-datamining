@@ -2,12 +2,12 @@
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let Constants = fn(6444);
+let Constants = fn(6450);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1072);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16255);
+const CONTEXT_MENU_ICON_NAMES = fn(16297);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -24,7 +24,7 @@ let obj3 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

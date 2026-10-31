@@ -6,6 +6,7 @@ let closure_0 = { chatOpen: true, debugOpen: false, previewSelection: null, chat
 let c1 = null;
 let c2 = false;
 let c3 = "";
+let c4 = null;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
@@ -24,6 +25,9 @@ prototype["getShownProjectId"] = function getShownProjectId() {
     tmp = c1;
   }
   return tmp;
+};
+prototype["getReturnRoute"] = function getReturnRoute() {
+  return c4;
 };
 prototype["getHomePrompt"] = function getHomePrompt() {
   return c3;
@@ -86,6 +90,10 @@ const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
     }
     return false;
   },
+  CONJURE_PAGES_RETURN_ROUTE_SAVE: function handleReturnRouteSave(route) {
+    route = route.route;
+    return false;
+  },
   CONJURE_PROJECT_DELETE_SUCCESS: function handleProjectDeleteSuccess(projectId) {
     projectId = projectId.projectId;
     set.add(projectId);
@@ -101,6 +109,7 @@ const conjurePagesStore = new ConjurePagesStore(DispatcherDefault, {
     c1 = null;
     c2 = false;
     c3 = "";
+    c4 = null;
     map.clear();
     map1.clear();
     set.clear();

@@ -1,6 +1,6 @@
 // discord_app/modules/clips/ClipAnalyticsUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef5849 from "../../../_runtime/metro/05849__.js";
+import _modDef5854 from "../../../_runtime/metro/05854__.js";
 import VideoQualityStats from "../../lib/VideoQualityStats.tsx";
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -151,7 +151,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(8206);
+const ClipsConstants = fn(8214);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -302,7 +302,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef5849(isFavorite, tmp)) {
+    if (!_modDef5854(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -319,7 +319,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef5849(name, tmp5)) {
+    if (!_modDef5854(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -339,7 +339,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef5849(start1, start)) {
+    if (!_modDef5854(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -355,7 +355,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef5849(end1, end)) {
+    if (!_modDef5854(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -371,7 +371,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef5849(applicationAudio1, applicationAudio)) {
+    if (!_modDef5854(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -387,7 +387,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef5849(voiceAudio1, voiceAudio)) {
+    if (!_modDef5854(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -403,7 +403,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef5849(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef5854(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -425,7 +425,7 @@ export function trackClipEdited(editMetadata, isFavorite) {
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef5849(preset1, preset)) {
+    if (!_modDef5854(preset1, preset)) {
       tmp31 = preset1;
     }
   }

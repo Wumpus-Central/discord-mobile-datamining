@@ -29,7 +29,7 @@ export function validateMultiAccountTokens() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -72,7 +72,7 @@ export function validateMultiAccountTokens() {
                   const obj8 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: id2 };
                   DispatcherDefault.dispatch(obj8);
                   c5 = 1;
-                  const HTTP = closure_0(1283).HTTP;
+                  const HTTP = closure_0(1282).HTTP;
                   const obj9 = { url: constants2.ME, headers: null, retries: 3, rejectWithError: false };
                   const obj10 = { authorization: token };
                   obj9.headers = obj10;

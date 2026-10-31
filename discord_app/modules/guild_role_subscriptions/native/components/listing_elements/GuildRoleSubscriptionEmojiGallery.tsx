@@ -1,11 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx
-import chunkDefault from "../../../../../../_runtime/10048_chunk.js";
-import LayoutUtils from "../LayoutUtils.tsx";
+import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
+import chunkDefault from "../../../../../../_runtime/10069_chunk.js";
 import EmojiIconDefault from "../EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const View = fn(17).View;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -17,27 +16,19 @@ export default function EmojiGallery(emojiIds) {
   if (maxPerRow === undefined) {
     maxPerRow = 9;
   }
-  let obj = { children: null };
   const arr = chunkDefault(emojiIds.emojiIds, maxPerRow);
-  obj.children = jsx(LayoutUtils.GappedList, {
-    gap: 8,
-    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
-      const obj = {
-        style: { flexDirection: "row" },
-        children: jsx(LayoutUtils.GappedList, {
-          gap: 16,
+  return jsx(Stack_Stack.Stack, {
+    spacing: 8,
+    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) =>
+      jsx(
+        Stack_Stack.Stack,
+        {
+          direction: "horizontal",
+          spacing: 16,
           children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
-        }),
-      };
-      return (
-        <View key={index} style={{ flexDirection: "row" }}>
-          {jsx(LayoutUtils.GappedList, {
-            gap: 16,
-            children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)),
-          })}
-        </View>
-      );
-    }),
+        },
+        index,
+      ),
+    ),
   });
-  return <View>{null}</View>;
 }

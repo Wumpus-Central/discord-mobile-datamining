@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   actionBarCTAContainer: { marginVertical: 4 },
   iconStyle: null,
@@ -49,7 +49,7 @@ export function ScheduleEventPrompt(isLive) {
           { channel },
         );
       },
-      iconSource: channel(9097),
+      iconSource: channel(9116),
       iconStyle: tmp.promptIconStyle,
       completed: isLive.isLive,
       title: null,
@@ -67,7 +67,7 @@ export function ScheduleEventPrompt(isLive) {
           { channel },
         );
       },
-      iconSource: channel(9097),
+      iconSource: channel(9116),
       iconStyle: tmp.promptIconStyle,
       completed: isLive.isLive,
       title: null,
@@ -92,7 +92,7 @@ export function StartEventPrompt(event) {
           recurrenceId,
         );
       },
-      iconSource: recurrenceId(9193),
+      iconSource: recurrenceId(9212),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -103,13 +103,13 @@ export function StartEventPrompt(event) {
     ({ iconContainerStyle: arr[0], greenIcon: arr[1] } = tmp);
     obj2.iconContainerStyle = items;
     obj2.completed = isLive;
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1113).intl;
     const obj3 = { eventName: name };
-    obj2.title = intl.formatToPlainString(tmp2(1114).t["1vGXqM"], obj3);
-    const intl2 = tmp2(1114).intl;
-    const obj4 = { startTime: tmp2(4831).calendarFormat(recurrenceId(2044)(scheduled_start_time)) };
-    obj2.subtitle = intl2.formatToPlainString(tmp2(1114).t.PTebCR, obj4);
-    tmp4 = jsx(tmp2(8169).FormCTA, {
+    obj2.title = intl.formatToPlainString(tmp2(1113).t["1vGXqM"], obj3);
+    const intl2 = tmp2(1113).intl;
+    const obj4 = { startTime: tmp2(4836).calendarFormat(recurrenceId(2042)(scheduled_start_time)) };
+    obj2.subtitle = intl2.formatToPlainString(tmp2(1113).t.PTebCR, obj4);
+    tmp4 = jsx(tmp2(8177).FormCTA, {
       style: tmp.actionBarCTAContainer,
       onPress: function handleStartEvent() {
         const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(
@@ -117,14 +117,14 @@ export function StartEventPrompt(event) {
           recurrenceId,
         );
       },
-      iconSource: recurrenceId(9193),
+      iconSource: recurrenceId(9212),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
       title: null,
       subtitle: null,
     });
-    const tmp2Result = tmp2(4831);
+    const tmp2Result = tmp2(4836);
   }
   return tmp4;
 }

@@ -23,7 +23,7 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
               }
             }
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (2 === tmp7) {
           c5 = 0;
@@ -196,7 +196,7 @@ let closure_11 = async function _removeGuildJoinRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -267,7 +267,7 @@ let closure_12 = async function _ackUserGuildJoinRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -306,7 +306,7 @@ let closure_12 = async function _ackUserGuildJoinRequest(arg0) {
         const obj10 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: closure_130_1, guildId: closure_130_0 };
         closure_131_1(closure_131_2[6]).dispatch(obj10);
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
@@ -363,12 +363,12 @@ let closure_13 = async function _updateGuildJoinRequest() {
     }
     if (body) {
       const obj2 = { title: null, body: null };
-      const intl = closure_1_0(1114).intl;
-      obj2.title = intl.string(closure_1_0(1114).t.DxJj4e);
-      const intl2 = closure_1_0(1114).intl;
-      obj2.body = intl2.string(closure_1_0(1114).t.rSAOk9);
-      closure_1_1(5953).show(obj2);
-      const obj = closure_1_1(5953);
+      const intl = closure_1_0(1113).intl;
+      obj2.title = intl.string(closure_1_0(1113).t.DxJj4e);
+      const intl2 = closure_1_0(1113).intl;
+      obj2.body = intl2.string(closure_1_0(1113).t.rSAOk9);
+      closure_1_1(5958).show(obj2);
+      const obj = closure_1_1(5958);
     }
     return Promise.reject(error);
   });
@@ -404,7 +404,7 @@ let closure_14 = async function _resetGuildJoinRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -475,7 +475,7 @@ let closure_15 = async function _fetchRequestToJoinGuilds() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -514,7 +514,7 @@ let closure_15 = async function _fetchRequestToJoinGuilds() {
         const obj7 = { type: "USER_JOIN_REQUEST_GUILDS_FETCH", guilds: closure_128_0.body };
         closure_129_1(closure_129_2[6]).dispatch(obj7);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -546,7 +546,7 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -620,8 +620,8 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
     }
   }
 };
-let closure_4 = fn(4862).createChannelRecordFromServer;
-const joinRequestFromServer = fn(5041).joinRequestFromServer;
+let closure_4 = fn(4867).createChannelRecordFromServer;
+const joinRequestFromServer = fn(5046).joinRequestFromServer;
 const Constants = fn(1072);
 ({ AbortCodes: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);

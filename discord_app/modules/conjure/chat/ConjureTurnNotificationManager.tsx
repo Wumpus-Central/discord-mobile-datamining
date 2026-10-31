@@ -105,7 +105,7 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
 }
 const Constants = fn(1072);
 ({ Routes: closure_11, StatusTypes: closure_12 } = Constants);
-const StaticChannelRoute = fn(4865).StaticChannelRoute;
+const StaticChannelRoute = fn(4870).StaticChannelRoute;
 const prototype = function ConjureTurnNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

@@ -58,13 +58,13 @@ function PlaceholderEmojiGlyph(pressed) {
     obj.transform = items;
     return obj;
   };
-  let obj = pressed(5090);
+  let obj = pressed(5095);
   fn.__closure = {
     pressed,
-    withSpring: pressed(5632).withSpring,
-    interpolate: pressed(5090).interpolate,
+    withSpring: pressed(5637).withSpring,
+    interpolate: pressed(5095).interpolate,
     PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4,
-    ON_PRESS_SPRING: pressed(5633).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: pressed(5638).ON_PRESS_SPRING,
     PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14,
   };
   fn.__workletHash = 16574219123934;
@@ -149,34 +149,34 @@ function CustomTypingIndicatorEmojiSlot(index) {
     children: null,
   });
 }
-const EmojiIntention = fn(1387).EmojiIntention;
+const EmojiIntention = fn(1386).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
 let items = [
-  fn(17283).EmojiAngryFaceWithHornsIcon,
-  fn(17285).EmojiColdFaceIcon,
-  fn(17287).EmojiCowboyHatFaceIcon,
-  fn(17289).EmojiCryingFaceIcon,
-  fn(17291).EmojiDisguisedFaceIcon,
-  fn(17293).EmojiFaceVomitingIcon,
-  fn(17295).EmojiFaceWithMonocleIcon,
-  fn(17297).EmojiFaceWithSpiralEyesIcon,
-  fn(17299).EmojiMeltingFaceIcon,
-  fn(17301).EmojiMoneyMouthFaceIcon,
-  fn(17303).EmojiNerdFaceIcon,
-  fn(17305).EmojiPartyingFaceIcon,
-  fn(17307).EmojiSalutingFaceIcon,
-  fn(17309).EmojiSkullIcon,
-  fn(17311).EmojiSmilingFaceWithHornsIcon,
-  fn(17313).EmojiSmilingFaceWithSunglassesIcon,
-  fn(17315).EmojiSquintingFaceWithTongueIcon,
-  fn(17317).EmojiUpsideDownFaceIcon,
-  fn(17319).EmojiWoozyFaceIcon,
-  fn(17321).EmojiZanyFaceIcon,
-  fn(17323).EmojiRollingOnTheFloorLaughingIcon,
-  fn(17325).EmojiSmilingFaceWithHeartsIcon,
+  fn(17343).EmojiAngryFaceWithHornsIcon,
+  fn(17345).EmojiColdFaceIcon,
+  fn(17347).EmojiCowboyHatFaceIcon,
+  fn(17349).EmojiCryingFaceIcon,
+  fn(17351).EmojiDisguisedFaceIcon,
+  fn(17353).EmojiFaceVomitingIcon,
+  fn(17355).EmojiFaceWithMonocleIcon,
+  fn(17357).EmojiFaceWithSpiralEyesIcon,
+  fn(17359).EmojiMeltingFaceIcon,
+  fn(17361).EmojiMoneyMouthFaceIcon,
+  fn(17363).EmojiNerdFaceIcon,
+  fn(17365).EmojiPartyingFaceIcon,
+  fn(17367).EmojiSalutingFaceIcon,
+  fn(17369).EmojiSkullIcon,
+  fn(17371).EmojiSmilingFaceWithHornsIcon,
+  fn(17373).EmojiSmilingFaceWithSunglassesIcon,
+  fn(17375).EmojiSquintingFaceWithTongueIcon,
+  fn(17377).EmojiUpsideDownFaceIcon,
+  fn(17379).EmojiWoozyFaceIcon,
+  fn(17381).EmojiZanyFaceIcon,
+  fn(17383).EmojiRollingOnTheFloorLaughingIcon,
+  fn(17385).EmojiSmilingFaceWithHeartsIcon,
 ];
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({
   slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
 });
@@ -191,13 +191,13 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
   const onChange = emojis.onChange;
   _slicedToArray = undefined;
   dependencyMap = _slicedToArray(
-    noop.useState(() => emojis(12).sampleSize(items, emojis(1406).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)),
+    noop.useState(() => emojis(12).sampleSize(items, emojis(1405).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)),
     1,
   )[0];
-  _slicedToArray = emojis(1406).getCustomTypingIndicatorEmojisKey(emojis);
+  _slicedToArray = emojis(1405).getCustomTypingIndicatorEmojisKey(emojis);
   const obj2 = { direction: "horizontal", spacing: 8, children: null };
-  let obj = emojis(1406);
-  obj2.children = Array.from({ length: emojis(1406).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
+  let obj = emojis(1405);
+  obj2.children = Array.from({ length: emojis(1405).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
     const obj = { index, emoji: null, emojisKey: null, placeholderIcon: null, onChange: null };
     let tmp3 = emojis[index];
     if (tmp3 == null) {
@@ -218,5 +218,5 @@ export default function CustomTypingIndicatorEmojiSlots(emojis) {
       />
     );
   });
-  return jsx(emojis(6022).Stack, { direction: "horizontal", spacing: 8, children: null });
+  return jsx(emojis(6027).Stack, { direction: "horizontal", spacing: 8, children: null });
 }

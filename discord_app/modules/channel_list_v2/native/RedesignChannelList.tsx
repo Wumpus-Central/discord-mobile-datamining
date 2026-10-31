@@ -38,9 +38,9 @@ function GuildChannelsList(shouldRender) {
   const merged = Object.assign(shouldRender, Object.assign({ shouldRender: 0 }));
   let found;
   dependencyMap = undefined;
-  const arr = found(18268)(merged.guild);
+  const arr = found(18311)(merged.guild);
   const hasItem = arr.includes(ChannelListGuildActionRow.GUILD_CONJURE);
-  merged(9656);
+  merged(9676);
   found = arr;
   if (hasItem) {
     found = arr;
@@ -54,8 +54,8 @@ function GuildChannelsList(shouldRender) {
     applicationAccountLinkMarkAsDismissed,
     startApplicationAccountLinkAuthorization,
     accountLinkApplication,
-  } = found(18270)(merged.guild));
-  const tmp9 = found(18270)(merged.guild);
+  } = found(18313)(merged.guild));
+  const tmp9 = found(18313)(merged.guild);
   const items = [ChannelListStore];
   const stateFromStoresObject = merged(504).useStateFromStoresObject(items, () =>
     ChannelListStore.getGuild(merged.guild.id, { guildActionRows: found, channelNoticeRows }),
@@ -95,7 +95,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj4.guild = stateFromStores;
           obj4.selectedChannelId = selectedChannelId;
           obj4.selectedVoiceChannelId = stateFromStores1;
-          return closure_15(tmp2(18292).default, obj4);
+          return closure_15(tmp2(18335).default, obj4);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj5 = { style: merged.style, guildId: selectedGuildId };
@@ -110,7 +110,7 @@ function ChannelsWrapper(selectedGuildId) {
           }
           return tmp6Result;
         }
-        tmp2Result = tmp2(4883);
+        tmp2Result = tmp2(4888);
       }
     }
     const obj7 = { style: merged.style, selectedGuildId };
@@ -121,7 +121,7 @@ function ChannelsWrapper(selectedGuildId) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ EMPTY_NUX_SERVER: closure_12, MOBILE_GUILD_UPSELL_LIST: map1 } = Constants);
-const ChannelListGuildActionRow = fn(7706).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7713).ChannelListGuildActionRow;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const memoResult = noop.memo(function ChannelList(gameClaimMarkAsDismissed) {

@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/RegistrationStepsUtils.tsx
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import Link from "../../../../_runtime/01499_Link.js";
+import Link from "../../../../_runtime/01498_Link.js";
 import LoginDefault from "components/Login.tsx";
 import WelcomeDefault from "components/Welcome.tsx";
 import RegistrationUtils from "RegistrationUtils.tsx";
@@ -42,7 +42,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp12) {
       c3 = tmp;
       throw tmp12;
@@ -133,7 +133,7 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
       closure_132_0(closure_132_2[28]);
     } else {
       c8 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else if (arg0 === 1) {
     c8 = 3;
@@ -146,10 +146,10 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6735).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(17933);
+const usePromoEmailConsentStore = fn(6741).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(17976);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(17934);
+const RegistrationConstants = fn(17977);
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsx = fn(21).jsx;
@@ -303,7 +303,7 @@ export function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(7210), {
+      return closure_15(closure_1(7216), {
         onClose() {
           return closure_0.pop();
         },

@@ -62,7 +62,6 @@ const result = size.fileFinishedImporting("modules/device/useThermalState.tsx");
 export default function useThermalState() {
   return _getThermalState(ThermalUtilsDefault.useRawThermalState());
 }
-export const ThermalStates = ThermalStates.ThermalStates;
 export { AndroidThermalStates };
 export function getThermalState() {
   return _getThermalState(ThermalUtilsDefault.getRawThermalState());

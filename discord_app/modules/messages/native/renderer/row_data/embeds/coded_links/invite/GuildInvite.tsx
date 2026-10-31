@@ -20,10 +20,10 @@ import GuildBadgeImageSource from "../../../../../../../guild_badge/native/Guild
 import CodedLinksConstants from "../CodedLinksConstants.tsx";
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite.tsx";
 import GuestUtilsDefault from "../../../../../../../guests/GuestUtils.tsx";
-import _modDef13185 from "../../../../../../../../../_runtime/metro/13185__.js";
-import _modDef13186 from "../../../../../../../../../_runtime/metro/13186__.js";
+import _modDef13220 from "../../../../../../../../../_runtime/metro/13220__.js";
+import _modDef13221 from "../../../../../../../../../_runtime/metro/13221__.js";
 import InviteErrorUtils from "../../../../../../../../utils/InviteErrorUtils.tsx";
-import _modDef14282 from "../../../../../../../../../_runtime/metro/14282__.js";
+import _modDef14320 from "../../../../../../../../../_runtime/metro/14320__.js";
 import getHeaderTextForInvite from "../../../../../../getHeaderTextForInvite.tsx";
 import GuildRecord from "../../../../../../../../records/GuildRecord.tsx";
 import ApplicationStreamingStore from "../../../../../../../../stores/ApplicationStreamingStore.tsx";
@@ -70,10 +70,10 @@ export function createExpiredGuildInvite(author, arg1, theme) {
     tmp6 = require;
   }
   obj.headerText = str.toUpperCase();
-  obj.titleColor = tmp6(8373).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6(8381).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
   if (arg1) {
-    const intl4 = tmp6(1114).intl;
-    let stringResult = intl4.string(tmp6(1114).t["F/OLvL"]);
+    const intl4 = tmp6(1113).intl;
+    let stringResult = intl4.string(tmp6(1113).t["F/OLvL"]);
   } else {
     author = author.author;
     let username;
@@ -81,23 +81,23 @@ export function createExpiredGuildInvite(author, arg1, theme) {
       username = author.username;
     }
     if (null != username) {
-      const intl3 = tmp6(1114).intl;
+      const intl3 = tmp6(1113).intl;
       const obj2 = { username: UserUtilsDefault.getFormattedName(author.author) };
-      stringResult = intl3.formatToPlainString(tmp6(1114).t["9Akp1s"], obj2);
+      stringResult = intl3.formatToPlainString(tmp6(1113).t["9Akp1s"], obj2);
       const tmpResult = UserUtilsDefault;
     } else {
-      const intl2 = tmp6(1114).intl;
-      stringResult = intl2.string(tmp6(1114).t["SMJr+a"]);
+      const intl2 = tmp6(1113).intl;
+      stringResult = intl2.string(tmp6(1113).t["SMJr+a"]);
     }
   }
   obj.subtitle = stringResult;
-  const intl5 = tmp6(1114).intl;
-  obj.titleText = intl5.string(tmp6(1114).t["Jhx/ud"]);
-  const tmp6Result = tmp6(8373);
+  const intl5 = tmp6(1113).intl;
+  obj.titleText = intl5.string(tmp6(1113).t["Jhx/ud"]);
+  const tmp6Result = tmp6(8381);
   if (tmp6Result2.isThemeDark(theme)) {
-    let tmpResult2 = _modDef13185;
+    let tmpResult2 = _modDef13220;
   } else {
-    tmpResult2 = _modDef13186;
+    tmpResult2 = _modDef13221;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -150,7 +150,7 @@ export function createDisabledGuildInvite(invite, theme) {
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14282);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14320);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -208,9 +208,9 @@ export function createErroredGuildInvite(code, arg1, theme) {
   obj3.titleText = title;
   const tmp5Result = RowGeneratorStyleSheet;
   if (tmp5Result2.isThemeDark(theme)) {
-    let tmpResult = _modDef13185;
+    let tmpResult = _modDef13220;
   } else {
-    tmpResult = _modDef13186;
+    tmpResult = _modDef13221;
   }
   obj3.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);

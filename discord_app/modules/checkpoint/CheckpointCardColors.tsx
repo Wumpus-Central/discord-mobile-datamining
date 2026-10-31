@@ -1,23 +1,23 @@
 // discord_app/modules/checkpoint/CheckpointCardColors.tsx
 import CheckpointCardColorPalette from "../../../discord_common/js/shared/shared-constants/CheckpointCardColorPalette.tsx";
-import _modDef6087 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-purple.png.js";
-import _modDef6088 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_purple.png.js";
-import _modDef6089 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_purple_static.png.js";
-import _modDef6090 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-cyan.png.js";
-import _modDef6091 from "../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
-import _modDef6092 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js";
-import _modDef6093 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-pink.png.js";
-import _modDef6094 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_pink.png.js";
-import _modDef6095 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_pink_static.png.js";
-import _modDef6096 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
-import _modDef6097 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_green.png.js";
-import _modDef6098 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_green_static.png.js";
-import _modDef6099 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
-import _modDef6100 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_red.png.js";
-import _modDef6101 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_red_static.png.js";
-import _modDef6102 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
-import _modDef6103 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_yellow.png.js";
-import _modDef6104 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_yellow_static.png.js";
+import _modDef6092 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-purple.png.js";
+import _modDef6093 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_purple.png.js";
+import _modDef6094 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_purple_static.png.js";
+import _modDef6095 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-cyan.png.js";
+import _modDef6096 from "../../../discord_assets/assets/checkpoint/2026/clyde_small.png.js";
+import _modDef6097 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_static.png.js";
+import _modDef6098 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-pink.png.js";
+import _modDef6099 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_pink.png.js";
+import _modDef6100 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_pink_static.png.js";
+import _modDef6101 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
+import _modDef6102 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_green.png.js";
+import _modDef6103 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_green_static.png.js";
+import _modDef6104 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
+import _modDef6105 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_red.png.js";
+import _modDef6106 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_red_static.png.js";
+import _modDef6107 from "../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
+import _modDef6108 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_yellow.png.js";
+import _modDef6109 from "../../../discord_assets/assets/checkpoint/2026/clyde_small_yellow_static.png.js";
 import CheckpointTraitConfig from "../../../discord_common/js/shared/shared-constants/CheckpointTraitConfig.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -27,9 +27,9 @@ const obj2 = {
   tertiaryBackgroundColor: "#A5E3E9",
   shadowColor: "#0C9BA7",
   backgroundGradientStartColor: "#12606D",
-  recapCardBackgroundImage: _modDef6090,
-  clydeLogoImage: _modDef6091,
-  clydeLogoStaticImage: _modDef6092,
+  recapCardBackgroundImage: _modDef6095,
+  clydeLogoImage: _modDef6096,
+  clydeLogoStaticImage: _modDef6097,
 };
 const obj = {
   primaryBackgroundColor: "#7D53DE",
@@ -37,9 +37,9 @@ const obj = {
   tertiaryBackgroundColor: "#CFC3EB",
   shadowColor: "#411D96",
   backgroundGradientStartColor: "#2F156B",
-  recapCardBackgroundImage: _modDef6087,
-  clydeLogoImage: _modDef6088,
-  clydeLogoStaticImage: _modDef6089,
+  recapCardBackgroundImage: _modDef6092,
+  clydeLogoImage: _modDef6093,
+  clydeLogoStaticImage: _modDef6094,
 };
 const obj3 = {
   primaryBackgroundColor: "#FF4CD2",
@@ -47,9 +47,9 @@ const obj3 = {
   tertiaryBackgroundColor: "#E9BBE9",
   shadowColor: "#B20086",
   backgroundGradientStartColor: "#80005F",
-  recapCardBackgroundImage: _modDef6093,
-  clydeLogoImage: _modDef6094,
-  clydeLogoStaticImage: _modDef6095,
+  recapCardBackgroundImage: _modDef6098,
+  clydeLogoImage: _modDef6099,
+  clydeLogoStaticImage: _modDef6100,
 };
 const obj4 = {
   primaryBackgroundColor: "#35ED7E",
@@ -57,9 +57,9 @@ const obj4 = {
   tertiaryBackgroundColor: "#B5DCB3",
   shadowColor: "#0FA44A",
   backgroundGradientStartColor: "#0A7535",
-  recapCardBackgroundImage: _modDef6096,
-  clydeLogoImage: _modDef6097,
-  clydeLogoStaticImage: _modDef6098,
+  recapCardBackgroundImage: _modDef6101,
+  clydeLogoImage: _modDef6102,
+  clydeLogoStaticImage: _modDef6103,
 };
 const obj5 = {
   primaryBackgroundColor: "#EF3054",
@@ -67,9 +67,9 @@ const obj5 = {
   tertiaryBackgroundColor: "#F6AFBC",
   shadowColor: "#A60D2A",
   backgroundGradientStartColor: "#76091E",
-  recapCardBackgroundImage: _modDef6099,
-  clydeLogoImage: _modDef6100,
-  clydeLogoStaticImage: _modDef6101,
+  recapCardBackgroundImage: _modDef6104,
+  clydeLogoImage: _modDef6105,
+  clydeLogoStaticImage: _modDef6106,
 };
 let closure_3 = {
   [CheckpointCardColorPalette.CheckpointCardColorPalette.NONE]: obj2,
@@ -84,9 +84,9 @@ let closure_3 = {
     tertiaryBackgroundColor: "#FFE0B8",
     shadowColor: "#B29400",
     backgroundGradientStartColor: "#806A00",
-    recapCardBackgroundImage: _modDef6102,
-    clydeLogoImage: _modDef6103,
-    clydeLogoStaticImage: _modDef6104,
+    recapCardBackgroundImage: _modDef6107,
+    clydeLogoImage: _modDef6108,
+    clydeLogoStaticImage: _modDef6109,
   },
 };
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointCardColors.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignDisplayNameStylePromo.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4282 from "../HexagonCampaign.messages.js";
+import _modDef4285 from "../HexagonCampaign.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient.tsx";
 import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore.tsx";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   promo: {
     height: 32,
@@ -55,9 +55,9 @@ export default function HexagonCampaignDisplayNameStylePromo(showLearnMore) {
         );
       },
     };
-    let formatResult = intl.format(_modDef4282.eb99JA, obj3);
+    let formatResult = intl.format(_modDef4285.eb99JA, obj3);
   } else {
-    formatResult = intl.string(_modDef4282.WyZOg3);
+    formatResult = intl.string(_modDef4285.WyZOg3);
   }
   items[1] = closure_4(require("Text/Text").Text, {
     variant: "text-xxs/medium",

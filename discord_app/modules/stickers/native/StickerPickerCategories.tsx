@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10249).useStickerPickerStore;
+let useStickerPickerStore = fn(10269).useStickerPickerStore;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_8,
@@ -20,10 +20,10 @@ const Constants = fn(1072);
 } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
 const NODE_SIZE = Constants.NODE_SIZE;
-const ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -272,9 +272,9 @@ export default function _default(categories) {
   );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10066)();
+  const tmp19 = categoryIndex(10086)();
   const items9 = [
-    closure_14(categoryIndex(7217), {
+    closure_14(categoryIndex(7223), {
       estimatedListSize: "windowSize",
       horizontal: true,
       itemSize: EXPRESSION_FOOTER_HEIGHT,
@@ -294,18 +294,18 @@ export default function _default(categories) {
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
     const obj3 = { onPress: callback3, accessibilityRole: "button", accessibilityLabel: null, children: null };
-    const intl = categories(1114).intl;
-    obj3.accessibilityLabel = intl.string(categories(1114).t.rzCcjK);
+    const intl = categories(1113).intl;
+    obj3.accessibilityLabel = intl.string(categories(1113).t.rzCcjK);
     const obj4 = { style: null, children: null };
     const items10 = [,];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj4.style = items10;
-    const obj5 = { style: tmp.guildIcon, source: tmp17(10285) };
-    obj4.children = closure_14(categories(1188).Icon, obj5);
+    const obj5 = { style: tmp.guildIcon, source: tmp17(10305) };
+    obj4.children = closure_14(categories(1187).Icon, obj5);
     obj3.children = closure_14(closure_5, obj4);
-    tmp22Result = closure_14(categories(6974).PressableOpacity, obj3);
+    tmp22Result = closure_14(categories(6980).PressableOpacity, obj3);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(10067), obj);
+  return closure_15(categoryIndex(10087), obj);
 }

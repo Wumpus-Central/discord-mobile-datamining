@@ -73,17 +73,17 @@ export function QuestEmbedPreview(questId) {
   let tmp6 = null;
   if (null != memo1) {
     let obj2 = { title: null, children: null };
-    const intl = tmp2(1114).intl;
-    obj2.title = intl.string(tmp2(1114).t["habP/M"]);
+    const intl = tmp2(1113).intl;
+    obj2.title = intl.string(tmp2(1113).t["habP/M"]);
     let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-    obj2.children = jsx(stateFromStores(9864), {
+    obj2.children = jsx(stateFromStores(9885), {
       rowGenerator: memo,
       message: memo1,
       horizontalOffset: 0,
       pointerEvents: "none",
     });
-    tmp6 = jsx(stateFromStores(17077), { title: null, children: null });
-    const tmp9 = stateFromStores(17077);
+    tmp6 = jsx(stateFromStores(17135), { title: null, children: null });
+    const tmp9 = stateFromStores(17135);
   }
   return tmp6;
 }

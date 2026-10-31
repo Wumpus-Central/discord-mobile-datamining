@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import _modDef8511 from "../../../../../../_runtime/metro/08511__.js";
+import _modDef8519 from "../../../../../../_runtime/metro/08519__.js";
 import ReferralTrialEmbedRedesign from "../row_data/embeds/ReferralTrialEmbedRedesign.tsx";
 import ReferralTrialEmbed from "../row_data/embeds/ReferralTrialEmbed.tsx";
 import ReferralTrialStore from "../../../../premium/ReferralTrialStore.tsx";
 import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_5 = createStyles.createNativeStyleProperties({
   iconTintColor: nativeDefault.colors.ICON_STRONG,
   iconDividerColor: nativeDefault.colors.ICON_STRONG,
@@ -44,7 +44,7 @@ export function createReferralSystemMessage(message) {
         const merged = Object.assign(createCommonMessageDefault(message));
         obj2.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = closure_5(theme);
-        obj2.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8511);
+        obj2.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8519);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj2;
       }
@@ -63,7 +63,7 @@ export function createReferralSystemMessage(message) {
         const merged1 = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = closure_5(theme);
-        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8511);
+        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8519);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

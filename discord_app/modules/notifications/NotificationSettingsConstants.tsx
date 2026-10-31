@@ -1,5 +1,5 @@
 // discord_app/modules/notifications/NotificationSettingsConstants.tsx
-import _modDef2867 from "NotificationSettings.messages.js";
+import _modDef2868 from "NotificationSettings.messages.js";
 import NotifSettings from "../../../discord_common/js/shared/shared-constants/NotifSettings.tsx";
 import NotifTypes from "../../../discord_common/js/shared/shared-constants/NotifTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -7,19 +7,19 @@ import size from "../../../_runtime/metro/00002__.js";
 const obj = { badge: true, visibility: "popup", vibrate: true, sound: true };
 const obj2 = { badge: true, visibility: "default", vibrate: true, sound: true };
 const obj3 = { badge: true, visibility: "default", vibrate: false, sound: false };
-const items = [{ title: _modDef2867.S5cB9e, string_id: "111_realtime", redesignTitle: _modDef2867.gbaIfD }, , , ,];
-const obj4 = { title: _modDef2867.S5cB9e, string_id: "111_realtime", redesignTitle: _modDef2867.gbaIfD };
-items[1] = { title: _modDef2867["UzRF+8"], string_id: "222_social", redesignTitle: _modDef2867.BBcVf5 };
-const obj5 = { title: _modDef2867["UzRF+8"], string_id: "222_social", redesignTitle: _modDef2867.BBcVf5 };
-items[2] = { title: _modDef2867.zRKbpz, string_id: "333_server", redesignTitle: _modDef2867.qxdDqr };
-const obj6 = { title: _modDef2867.zRKbpz, string_id: "333_server", redesignTitle: _modDef2867.qxdDqr };
-items[3] = { title: _modDef2867.q5M7HV, string_id: "444_other", redesignTitle: _modDef2867["ZwNQS+"] };
-const obj7 = { title: _modDef2867.q5M7HV, string_id: "444_other", redesignTitle: _modDef2867["ZwNQS+"] };
-items[4] = { title: _modDef2867.JKnEI5, string_id: "555_account_safety", redesignState: true };
-const obj8 = { title: _modDef2867.JKnEI5, string_id: "555_account_safety", redesignState: true };
+const items = [{ title: _modDef2868.S5cB9e, string_id: "111_realtime", redesignTitle: _modDef2868.gbaIfD }, , , ,];
+const obj4 = { title: _modDef2868.S5cB9e, string_id: "111_realtime", redesignTitle: _modDef2868.gbaIfD };
+items[1] = { title: _modDef2868["UzRF+8"], string_id: "222_social", redesignTitle: _modDef2868.BBcVf5 };
+const obj5 = { title: _modDef2868["UzRF+8"], string_id: "222_social", redesignTitle: _modDef2868.BBcVf5 };
+items[2] = { title: _modDef2868.zRKbpz, string_id: "333_server", redesignTitle: _modDef2868.qxdDqr };
+const obj6 = { title: _modDef2868.zRKbpz, string_id: "333_server", redesignTitle: _modDef2868.qxdDqr };
+items[3] = { title: _modDef2868.q5M7HV, string_id: "444_other", redesignTitle: _modDef2868["ZwNQS+"] };
+const obj7 = { title: _modDef2868.q5M7HV, string_id: "444_other", redesignTitle: _modDef2868["ZwNQS+"] };
+items[4] = { title: _modDef2868.JKnEI5, string_id: "555_account_safety", redesignState: true };
+const obj8 = { title: _modDef2868.JKnEI5, string_id: "555_account_safety", redesignState: true };
 const items1 = [
   {
-    title: _modDef2867["IUH/Oe"],
+    title: _modDef2868["IUH/Oe"],
     id: NotifSettings.NotifSettings.CALLS,
     string_id: "calls",
     category: "111_realtime",
@@ -59,17 +59,16 @@ const items1 = [
   ,
   ,
   ,
-  ,
 ];
 const obj9 = {
-  title: _modDef2867["IUH/Oe"],
+  title: _modDef2868["IUH/Oe"],
   id: NotifSettings.NotifSettings.CALLS,
   string_id: "calls",
   category: "111_realtime",
   behavior: { badge: false, ringtone: "call_ringing", visibility: "popup", vibrate: true, sound: true },
 };
 items1[1] = {
-  title: _modDef2867.VeBD1N,
+  title: _modDef2868.VeBD1N,
   id: NotifSettings.NotifSettings.VOICE_CONNECTED,
   string_id: "mediaConnections",
   category: "111_realtime",
@@ -77,7 +76,7 @@ items1[1] = {
   systemOnly: true,
 };
 const obj10 = {
-  title: _modDef2867.VeBD1N,
+  title: _modDef2868.VeBD1N,
   id: NotifSettings.NotifSettings.VOICE_CONNECTED,
   string_id: "mediaConnections",
   category: "111_realtime",
@@ -85,7 +84,7 @@ const obj10 = {
   systemOnly: true,
 };
 items1[2] = {
-  title: _modDef2867.NGdNZb,
+  title: _modDef2868.NGdNZb,
   id: NotifSettings.NotifSettings.DMS,
   string_id: "directMessages",
   category: "222_social",
@@ -93,7 +92,7 @@ items1[2] = {
   systemOnly: true,
 };
 const obj11 = {
-  title: _modDef2867.NGdNZb,
+  title: _modDef2868.NGdNZb,
   id: NotifSettings.NotifSettings.DMS,
   string_id: "directMessages",
   category: "222_social",
@@ -101,49 +100,49 @@ const obj11 = {
   systemOnly: true,
 };
 items1[3] = {
-  title: _modDef2867.NxgGZA,
+  title: _modDef2868.NxgGZA,
   id: NotifSettings.NotifSettings.FRIEND_REQUESTS,
   string_id: "friendRequests",
   category: "222_social",
   behavior: obj,
 };
 const obj12 = {
-  title: _modDef2867.NxgGZA,
+  title: _modDef2868.NxgGZA,
   id: NotifSettings.NotifSettings.FRIEND_REQUESTS,
   string_id: "friendRequests",
   category: "222_social",
   behavior: obj,
 };
 items1[4] = {
-  title: _modDef2867.MOjygY,
+  title: _modDef2868.MOjygY,
   id: NotifSettings.NotifSettings.POLLS,
   string_id: "polls",
   category: "222_social",
   behavior: obj2,
 };
 const obj13 = {
-  title: _modDef2867.MOjygY,
+  title: _modDef2868.MOjygY,
   id: NotifSettings.NotifSettings.POLLS,
   string_id: "polls",
   category: "222_social",
   behavior: obj2,
 };
 items1[5] = {
-  title: _modDef2867.wv4QHR,
+  title: _modDef2868.wv4QHR,
   id: NotifSettings.NotifSettings.REACTIONS,
   string_id: "reactions",
   category: "222_social",
   behavior: obj2,
 };
 const obj14 = {
-  title: _modDef2867.wv4QHR,
+  title: _modDef2868.wv4QHR,
   id: NotifSettings.NotifSettings.REACTIONS,
   string_id: "reactions",
   category: "222_social",
   behavior: obj2,
 };
 items1[6] = {
-  title: _modDef2867.n0Wp6j,
+  title: _modDef2868.n0Wp6j,
   id: NotifSettings.NotifSettings.MISSED_MESSAGES_LOW,
   string_id: "missed_messages_low",
   category: "222_social",
@@ -152,7 +151,7 @@ items1[6] = {
   variations: [0, 2, 3, 4],
 };
 const obj15 = {
-  title: _modDef2867.n0Wp6j,
+  title: _modDef2868.n0Wp6j,
   id: NotifSettings.NotifSettings.MISSED_MESSAGES_LOW,
   string_id: "missed_messages_low",
   category: "222_social",
@@ -161,7 +160,7 @@ const obj15 = {
   variations: [0, 2, 3, 4],
 };
 items1[7] = {
-  title: _modDef2867.n0Wp6j,
+  title: _modDef2868.n0Wp6j,
   id: NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT,
   string_id: "missed_messages_default",
   category: "222_social",
@@ -170,7 +169,7 @@ items1[7] = {
   variations: [1, 5],
 };
 const obj16 = {
-  title: _modDef2867.n0Wp6j,
+  title: _modDef2868.n0Wp6j,
   id: NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT,
   string_id: "missed_messages_default",
   category: "222_social",
@@ -179,7 +178,7 @@ const obj16 = {
   variations: [1, 5],
 };
 items1[8] = {
-  title: _modDef2867.DxG4wK,
+  title: _modDef2868.DxG4wK,
   id: NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY,
   string_id: "voice_channel_activity",
   category: "222_social",
@@ -187,7 +186,7 @@ items1[8] = {
   redesignState: true,
 };
 const obj17 = {
-  title: _modDef2867.DxG4wK,
+  title: _modDef2868.DxG4wK,
   id: NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY,
   string_id: "voice_channel_activity",
   category: "222_social",
@@ -195,7 +194,7 @@ const obj17 = {
   redesignState: true,
 };
 items1[9] = {
-  title: _modDef2867.Iy9grw,
+  title: _modDef2868.Iy9grw,
   id: NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW,
   string_id: "voice_activity_low",
   category: "222_social",
@@ -205,7 +204,7 @@ items1[9] = {
   redesignState: false,
 };
 const obj18 = {
-  title: _modDef2867.Iy9grw,
+  title: _modDef2868.Iy9grw,
   id: NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW,
   string_id: "voice_activity_low",
   category: "222_social",
@@ -215,7 +214,7 @@ const obj18 = {
   redesignState: false,
 };
 items1[10] = {
-  title: _modDef2867.Iy9grw,
+  title: _modDef2868.Iy9grw,
   id: NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT,
   string_id: "voice_activity_default",
   category: "222_social",
@@ -225,7 +224,7 @@ items1[10] = {
   redesignState: false,
 };
 const obj19 = {
-  title: _modDef2867.Iy9grw,
+  title: _modDef2868.Iy9grw,
   id: NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT,
   string_id: "voice_activity_default",
   category: "222_social",
@@ -235,7 +234,7 @@ const obj19 = {
   redesignState: false,
 };
 items1[11] = {
-  title: _modDef2867.Yv02mS,
+  title: _modDef2868.Yv02mS,
   id: NotifSettings.NotifSettings.GO_LIVE,
   string_id: "go_live",
   category: "222_social",
@@ -243,7 +242,7 @@ items1[11] = {
   redesignState: true,
 };
 const obj20 = {
-  title: _modDef2867.Yv02mS,
+  title: _modDef2868.Yv02mS,
   id: NotifSettings.NotifSettings.GO_LIVE,
   string_id: "go_live",
   category: "222_social",
@@ -251,95 +250,75 @@ const obj20 = {
   redesignState: true,
 };
 items1[12] = {
-  title: _modDef2867.LjJQt7,
-  id: NotifSettings.NotifSettings.FRIENDS_GAMING,
-  string_id: "friends_gaming",
+  title: _modDef2868["9EDo+/"],
+  id: NotifSettings.NotifSettings.FRIENDS_GAMING_LOW,
+  string_id: "gaming_low",
   category: "222_social",
   behavior: obj3,
-  redesignState: true,
+  experiment: "2026-05-noisier-notif-settings-defaults",
+  variations: [0, 1, 2, 4],
 };
 const obj21 = {
-  title: _modDef2867.LjJQt7,
-  id: NotifSettings.NotifSettings.FRIENDS_GAMING,
-  string_id: "friends_gaming",
+  title: _modDef2868["9EDo+/"],
+  id: NotifSettings.NotifSettings.FRIENDS_GAMING_LOW,
+  string_id: "gaming_low",
+  category: "222_social",
+  behavior: obj3,
+  experiment: "2026-05-noisier-notif-settings-defaults",
+  variations: [0, 1, 2, 4],
+};
+items1[13] = {
+  title: _modDef2868["9EDo+/"],
+  id: NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT,
+  string_id: "gaming_default",
+  category: "222_social",
+  behavior: obj2,
+  experiment: "2026-05-noisier-notif-settings-defaults",
+  variations: [3, 5],
+};
+const obj22 = {
+  title: _modDef2868["9EDo+/"],
+  id: NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT,
+  string_id: "gaming_default",
+  category: "222_social",
+  behavior: obj2,
+  experiment: "2026-05-noisier-notif-settings-defaults",
+  variations: [3, 5],
+};
+items1[14] = {
+  title: _modDef2868["9EDo+/"],
+  id: NotifSettings.NotifSettings.GAMING_OTHER,
+  string_id: "gaming_other",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
-items1[13] = {
-  title: _modDef2867["9EDo+/"],
-  id: NotifSettings.NotifSettings.FRIENDS_GAMING_LOW,
-  string_id: "gaming_low",
-  category: "222_social",
-  behavior: obj3,
-  experiment: "2026-05-noisier-notif-settings-defaults",
-  variations: [0, 1, 2, 4],
-  redesignState: false,
-};
-const obj22 = {
-  title: _modDef2867["9EDo+/"],
-  id: NotifSettings.NotifSettings.FRIENDS_GAMING_LOW,
-  string_id: "gaming_low",
-  category: "222_social",
-  behavior: obj3,
-  experiment: "2026-05-noisier-notif-settings-defaults",
-  variations: [0, 1, 2, 4],
-  redesignState: false,
-};
-items1[14] = {
-  title: _modDef2867["9EDo+/"],
-  id: NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT,
-  string_id: "gaming_default",
-  category: "222_social",
-  behavior: obj2,
-  experiment: "2026-05-noisier-notif-settings-defaults",
-  variations: [3, 5],
-  redesignState: false,
-};
 const obj23 = {
-  title: _modDef2867["9EDo+/"],
-  id: NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT,
-  string_id: "gaming_default",
-  category: "222_social",
-  behavior: obj2,
-  experiment: "2026-05-noisier-notif-settings-defaults",
-  variations: [3, 5],
-  redesignState: false,
-};
-items1[15] = {
-  title: _modDef2867["9EDo+/"],
+  title: _modDef2868["9EDo+/"],
   id: NotifSettings.NotifSettings.GAMING_OTHER,
   string_id: "gaming_other",
+  category: "222_social",
+  behavior: obj3,
+  redesignState: true,
+};
+items1[15] = {
+  title: _modDef2868.AAZKLL,
+  id: NotifSettings.NotifSettings.CUSTOM_STATUS_UPDATE,
+  string_id: "custom_status_update",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 const obj24 = {
-  title: _modDef2867["9EDo+/"],
-  id: NotifSettings.NotifSettings.GAMING_OTHER,
-  string_id: "gaming_other",
+  title: _modDef2868.AAZKLL,
+  id: NotifSettings.NotifSettings.CUSTOM_STATUS_UPDATE,
+  string_id: "custom_status_update",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 items1[16] = {
-  title: _modDef2867.AAZKLL,
-  id: NotifSettings.NotifSettings.CUSTOM_STATUS_UPDATE,
-  string_id: "custom_status_update",
-  category: "222_social",
-  behavior: obj3,
-  redesignState: true,
-};
-const obj25 = {
-  title: _modDef2867.AAZKLL,
-  id: NotifSettings.NotifSettings.CUSTOM_STATUS_UPDATE,
-  string_id: "custom_status_update",
-  category: "222_social",
-  behavior: obj3,
-  redesignState: true,
-};
-items1[17] = {
-  title: _modDef2867.vcrTV5,
+  title: _modDef2868.vcrTV5,
   id: NotifSettings.NotifSettings.FRIEND_ACTIVITY_LOW,
   string_id: "social",
   category: "222_social",
@@ -347,309 +326,309 @@ items1[17] = {
   systemOnly: true,
   experiment: "2026-05-noisier-notif-settings-defaults",
   variations: [0, 1, 2, 3],
+  redesignState: false,
+};
+const obj25 = {
+  title: _modDef2868.vcrTV5,
+  id: NotifSettings.NotifSettings.FRIEND_ACTIVITY_LOW,
+  string_id: "social",
+  category: "222_social",
+  behavior: obj3,
+  systemOnly: true,
+  experiment: "2026-05-noisier-notif-settings-defaults",
+  variations: [0, 1, 2, 3],
+  redesignState: false,
+};
+items1[17] = {
+  title: _modDef2868.vcrTV5,
+  id: NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT,
+  string_id: "social",
+  category: "222_social",
+  behavior: obj2,
+  systemOnly: true,
+  experiment: "2026-05-noisier-notif-settings-defaults",
+  variations: [4, 5],
   redesignState: false,
 };
 const obj26 = {
-  title: _modDef2867.vcrTV5,
-  id: NotifSettings.NotifSettings.FRIEND_ACTIVITY_LOW,
+  title: _modDef2868.vcrTV5,
+  id: NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT,
   string_id: "social",
   category: "222_social",
-  behavior: obj3,
+  behavior: obj2,
   systemOnly: true,
   experiment: "2026-05-noisier-notif-settings-defaults",
-  variations: [0, 1, 2, 3],
+  variations: [4, 5],
   redesignState: false,
 };
 items1[18] = {
-  title: _modDef2867.vcrTV5,
-  id: NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT,
-  string_id: "social",
-  category: "222_social",
-  behavior: obj2,
-  systemOnly: true,
-  experiment: "2026-05-noisier-notif-settings-defaults",
-  variations: [4, 5],
-  redesignState: false,
-};
-const obj27 = {
-  title: _modDef2867.vcrTV5,
-  id: NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT,
-  string_id: "social",
-  category: "222_social",
-  behavior: obj2,
-  systemOnly: true,
-  experiment: "2026-05-noisier-notif-settings-defaults",
-  variations: [4, 5],
-  redesignState: false,
-};
-items1[19] = {
-  title: _modDef2867.tQCxJ5,
+  title: _modDef2868.tQCxJ5,
   id: NotifSettings.NotifSettings.PROFILE_UPDATES,
   string_id: "profile_updates",
+  category: "222_social",
+  behavior: obj3,
+  redesignState: true,
+};
+const obj27 = {
+  title: _modDef2868.tQCxJ5,
+  id: NotifSettings.NotifSettings.PROFILE_UPDATES,
+  string_id: "profile_updates",
+  category: "222_social",
+  behavior: obj3,
+  redesignState: true,
+};
+items1[19] = {
+  title: _modDef2868["/aEaD/"],
+  id: NotifSettings.NotifSettings.FRIEND_ONLINE,
+  string_id: "friend_online",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 const obj28 = {
-  title: _modDef2867.tQCxJ5,
-  id: NotifSettings.NotifSettings.PROFILE_UPDATES,
-  string_id: "profile_updates",
+  title: _modDef2868["/aEaD/"],
+  id: NotifSettings.NotifSettings.FRIEND_ONLINE,
+  string_id: "friend_online",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 items1[20] = {
-  title: _modDef2867["/aEaD/"],
-  id: NotifSettings.NotifSettings.FRIEND_ONLINE,
-  string_id: "friend_online",
+  title: _modDef2868.nDMkO6,
+  id: NotifSettings.NotifSettings.FRIEND_REQUEST_REMINDER,
+  string_id: "friend_request_reminder",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 const obj29 = {
-  title: _modDef2867["/aEaD/"],
-  id: NotifSettings.NotifSettings.FRIEND_ONLINE,
-  string_id: "friend_online",
+  title: _modDef2868.nDMkO6,
+  id: NotifSettings.NotifSettings.FRIEND_REQUEST_REMINDER,
+  string_id: "friend_request_reminder",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 items1[21] = {
-  title: _modDef2867.nDMkO6,
-  id: NotifSettings.NotifSettings.FRIEND_REQUEST_REMINDER,
-  string_id: "friend_request_reminder",
+  title: _modDef2868["8t+tz0"],
+  id: NotifSettings.NotifSettings.FRIEND_SUGGESTIONS,
+  string_id: "friend_suggestions",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 const obj30 = {
-  title: _modDef2867.nDMkO6,
-  id: NotifSettings.NotifSettings.FRIEND_REQUEST_REMINDER,
-  string_id: "friend_request_reminder",
+  title: _modDef2868["8t+tz0"],
+  id: NotifSettings.NotifSettings.FRIEND_SUGGESTIONS,
+  string_id: "friend_suggestions",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 items1[22] = {
-  title: _modDef2867["8t+tz0"],
-  id: NotifSettings.NotifSettings.FRIEND_SUGGESTIONS,
-  string_id: "friend_suggestions",
+  title: _modDef2868.semyB9,
+  id: NotifSettings.NotifSettings.NUDGE_NEW_FRIEND_DM,
+  string_id: "nudge_new_friend_dm",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 const obj31 = {
-  title: _modDef2867["8t+tz0"],
-  id: NotifSettings.NotifSettings.FRIEND_SUGGESTIONS,
-  string_id: "friend_suggestions",
+  title: _modDef2868.semyB9,
+  id: NotifSettings.NotifSettings.NUDGE_NEW_FRIEND_DM,
+  string_id: "nudge_new_friend_dm",
   category: "222_social",
   behavior: obj3,
   redesignState: true,
 };
 items1[23] = {
-  title: _modDef2867.semyB9,
-  id: NotifSettings.NotifSettings.NUDGE_NEW_FRIEND_DM,
-  string_id: "nudge_new_friend_dm",
-  category: "222_social",
-  behavior: obj3,
-  redesignState: true,
+  title: _modDef2868["4qWUAO"],
+  id: NotifSettings.NotifSettings.GUILD_MESSAGES,
+  string_id: "messages",
+  category: "333_server",
+  behavior: obj,
+  systemOnly: true,
 };
 const obj32 = {
-  title: _modDef2867.semyB9,
-  id: NotifSettings.NotifSettings.NUDGE_NEW_FRIEND_DM,
-  string_id: "nudge_new_friend_dm",
-  category: "222_social",
-  behavior: obj3,
-  redesignState: true,
+  title: _modDef2868["4qWUAO"],
+  id: NotifSettings.NotifSettings.GUILD_MESSAGES,
+  string_id: "messages",
+  category: "333_server",
+  behavior: obj,
+  systemOnly: true,
 };
 items1[24] = {
-  title: _modDef2867["4qWUAO"],
-  id: NotifSettings.NotifSettings.GUILD_MESSAGES,
-  string_id: "messages",
-  category: "333_server",
-  behavior: obj,
-  systemOnly: true,
-};
-const obj33 = {
-  title: _modDef2867["4qWUAO"],
-  id: NotifSettings.NotifSettings.GUILD_MESSAGES,
-  string_id: "messages",
-  category: "333_server",
-  behavior: obj,
-  systemOnly: true,
-};
-items1[25] = {
-  title: _modDef2867.HibKoy,
+  title: _modDef2868.HibKoy,
   id: NotifSettings.NotifSettings.FORUM_NOTIFICATIONS,
   string_id: "forumThreadCreated",
+  category: "333_server",
+  behavior: obj,
+};
+const obj33 = {
+  title: _modDef2868.HibKoy,
+  id: NotifSettings.NotifSettings.FORUM_NOTIFICATIONS,
+  string_id: "forumThreadCreated",
+  category: "333_server",
+  behavior: obj,
+};
+items1[25] = {
+  title: _modDef2868["40TIqW"],
+  id: NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS,
+  string_id: "guildEventLive",
   category: "333_server",
   behavior: obj,
 };
 const obj34 = {
-  title: _modDef2867.HibKoy,
-  id: NotifSettings.NotifSettings.FORUM_NOTIFICATIONS,
-  string_id: "forumThreadCreated",
+  title: _modDef2868["40TIqW"],
+  id: NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS,
+  string_id: "guildEventLive",
   category: "333_server",
   behavior: obj,
 };
 items1[26] = {
-  title: _modDef2867["40TIqW"],
-  id: NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS,
-  string_id: "guildEventLive",
+  title: _modDef2868["4n388K"],
+  id: NotifSettings.NotifSettings.STAGE_NOTIFICATIONS,
+  string_id: "stageLive",
   category: "333_server",
   behavior: obj,
 };
 const obj35 = {
-  title: _modDef2867["40TIqW"],
-  id: NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS,
-  string_id: "guildEventLive",
+  title: _modDef2868["4n388K"],
+  id: NotifSettings.NotifSettings.STAGE_NOTIFICATIONS,
+  string_id: "stageLive",
   category: "333_server",
   behavior: obj,
 };
 items1[27] = {
-  title: _modDef2867["4n388K"],
-  id: NotifSettings.NotifSettings.STAGE_NOTIFICATIONS,
-  string_id: "stageLive",
+  title: _modDef2868.kIrLfg,
+  id: NotifSettings.NotifSettings.OTHER_GUILD,
+  string_id: "other",
   category: "333_server",
-  behavior: obj,
+  behavior: obj3,
 };
 const obj36 = {
-  title: _modDef2867["4n388K"],
-  id: NotifSettings.NotifSettings.STAGE_NOTIFICATIONS,
-  string_id: "stageLive",
+  title: _modDef2868.kIrLfg,
+  id: NotifSettings.NotifSettings.OTHER_GUILD,
+  string_id: "other",
   category: "333_server",
-  behavior: obj,
+  behavior: obj3,
 };
 items1[28] = {
-  title: _modDef2867.kIrLfg,
-  id: NotifSettings.NotifSettings.OTHER_GUILD,
-  string_id: "other",
+  title: _modDef2868.tP1neL,
+  id: NotifSettings.NotifSettings.SAFETY_ALERTS,
+  string_id: "safety_alerts",
   category: "333_server",
-  behavior: obj3,
+  behavior: obj,
+  redesignState: true,
 };
 const obj37 = {
-  title: _modDef2867.kIrLfg,
-  id: NotifSettings.NotifSettings.OTHER_GUILD,
-  string_id: "other",
+  title: _modDef2868.tP1neL,
+  id: NotifSettings.NotifSettings.SAFETY_ALERTS,
+  string_id: "safety_alerts",
   category: "333_server",
-  behavior: obj3,
+  behavior: obj,
+  redesignState: true,
 };
 items1[29] = {
-  title: _modDef2867.tP1neL,
-  id: NotifSettings.NotifSettings.SAFETY_ALERTS,
-  string_id: "safety_alerts",
-  category: "333_server",
-  behavior: obj,
-  redesignState: true,
-};
-const obj38 = {
-  title: _modDef2867.tP1neL,
-  id: NotifSettings.NotifSettings.SAFETY_ALERTS,
-  string_id: "safety_alerts",
-  category: "333_server",
-  behavior: obj,
-  redesignState: true,
-};
-items1[30] = {
-  title: _modDef2867["T+79Eo"],
+  title: _modDef2868["T+79Eo"],
   id: NotifSettings.NotifSettings.OTHER,
   string_id: "default",
   category: "444_other",
   behavior: obj3,
+  systemOnly: true,
+};
+const obj38 = {
+  title: _modDef2868["T+79Eo"],
+  id: NotifSettings.NotifSettings.OTHER,
+  string_id: "default",
+  category: "444_other",
+  behavior: obj3,
+  systemOnly: true,
+};
+items1[30] = {
+  title: _modDef2868.zJlwvV,
+  id: NotifSettings.NotifSettings.SYSTEM,
+  string_id: "systemMessages",
+  category: "444_other",
+  behavior: obj,
   systemOnly: true,
 };
 const obj39 = {
-  title: _modDef2867["T+79Eo"],
-  id: NotifSettings.NotifSettings.OTHER,
-  string_id: "default",
+  title: _modDef2868.zJlwvV,
+  id: NotifSettings.NotifSettings.SYSTEM,
+  string_id: "systemMessages",
   category: "444_other",
-  behavior: obj3,
+  behavior: obj,
   systemOnly: true,
 };
 items1[31] = {
-  title: _modDef2867.zJlwvV,
-  id: NotifSettings.NotifSettings.SYSTEM,
-  string_id: "systemMessages",
-  category: "444_other",
-  behavior: obj,
-  systemOnly: true,
-};
-const obj40 = {
-  title: _modDef2867.zJlwvV,
-  id: NotifSettings.NotifSettings.SYSTEM,
-  string_id: "systemMessages",
-  category: "444_other",
-  behavior: obj,
-  systemOnly: true,
-};
-items1[32] = {
-  title: _modDef2867.S9Z8aG,
+  title: _modDef2868.S9Z8aG,
   id: NotifSettings.NotifSettings.INVITES_RECONNECTING,
   string_id: "invites_reconnecting",
+  category: "444_other",
+  behavior: obj3,
+  redesignState: true,
+};
+const obj40 = {
+  title: _modDef2868.S9Z8aG,
+  id: NotifSettings.NotifSettings.INVITES_RECONNECTING,
+  string_id: "invites_reconnecting",
+  category: "444_other",
+  behavior: obj3,
+  redesignState: true,
+};
+items1[32] = {
+  title: _modDef2868.roU6W6,
+  id: NotifSettings.NotifSettings.TRENDING_SUGGESTIONS,
+  string_id: "trending_suggestions",
   category: "444_other",
   behavior: obj3,
   redesignState: true,
 };
 const obj41 = {
-  title: _modDef2867.S9Z8aG,
-  id: NotifSettings.NotifSettings.INVITES_RECONNECTING,
-  string_id: "invites_reconnecting",
+  title: _modDef2868.roU6W6,
+  id: NotifSettings.NotifSettings.TRENDING_SUGGESTIONS,
+  string_id: "trending_suggestions",
   category: "444_other",
   behavior: obj3,
   redesignState: true,
 };
 items1[33] = {
-  title: _modDef2867.roU6W6,
-  id: NotifSettings.NotifSettings.TRENDING_SUGGESTIONS,
-  string_id: "trending_suggestions",
+  title: _modDef2868.nLISld,
+  id: NotifSettings.NotifSettings.UPDATES_OFFERS,
+  string_id: "updates_offers",
   category: "444_other",
   behavior: obj3,
   redesignState: true,
 };
 const obj42 = {
-  title: _modDef2867.roU6W6,
-  id: NotifSettings.NotifSettings.TRENDING_SUGGESTIONS,
-  string_id: "trending_suggestions",
+  title: _modDef2868.nLISld,
+  id: NotifSettings.NotifSettings.UPDATES_OFFERS,
+  string_id: "updates_offers",
   category: "444_other",
   behavior: obj3,
   redesignState: true,
 };
 items1[34] = {
-  title: _modDef2867.nLISld,
-  id: NotifSettings.NotifSettings.UPDATES_OFFERS,
-  string_id: "updates_offers",
-  category: "444_other",
-  behavior: obj3,
+  title: _modDef2868.k9gFti,
+  id: NotifSettings.NotifSettings.FAMILY_CENTER,
+  string_id: "family_center",
+  category: "555_account_safety",
+  behavior: obj,
+  systemOnly: true,
   redesignState: true,
 };
 const obj43 = {
-  title: _modDef2867.nLISld,
-  id: NotifSettings.NotifSettings.UPDATES_OFFERS,
-  string_id: "updates_offers",
-  category: "444_other",
-  behavior: obj3,
+  title: _modDef2868.k9gFti,
+  id: NotifSettings.NotifSettings.FAMILY_CENTER,
+  string_id: "family_center",
+  category: "555_account_safety",
+  behavior: obj,
+  systemOnly: true,
   redesignState: true,
 };
 items1[35] = {
-  title: _modDef2867.k9gFti,
-  id: NotifSettings.NotifSettings.FAMILY_CENTER,
-  string_id: "family_center",
-  category: "555_account_safety",
-  behavior: obj,
-  systemOnly: true,
-  redesignState: true,
-};
-const obj44 = {
-  title: _modDef2867.k9gFti,
-  id: NotifSettings.NotifSettings.FAMILY_CENTER,
-  string_id: "family_center",
-  category: "555_account_safety",
-  behavior: obj,
-  systemOnly: true,
-  redesignState: true,
-};
-items1[36] = {
-  title: _modDef2867.ut0AeD,
+  title: _modDef2868.ut0AeD,
   id: NotifSettings.NotifSettings.SECURITY,
   string_id: "security",
   category: "555_account_safety",
@@ -657,147 +636,143 @@ items1[36] = {
   systemOnly: true,
   redesignState: true,
 };
-const obj46 = {};
+const obj45 = {};
 const items2 = [NotifSettings.NotifSettings.FAMILY_CENTER];
-obj46[NotifTypes.NotifTypes.FAMILY_CENTER_DISCONNECTED] = items2;
+obj45[NotifTypes.NotifTypes.FAMILY_CENTER_DISCONNECTED] = items2;
 const items3 = [NotifSettings.NotifSettings.FAMILY_CENTER];
-obj46[NotifTypes.NotifTypes.FAMILY_CENTER_REQUEST_ACCEPTED] = items3;
+obj45[NotifTypes.NotifTypes.FAMILY_CENTER_REQUEST_ACCEPTED] = items3;
 const items4 = [NotifSettings.NotifSettings.FAMILY_CENTER];
-obj46[NotifTypes.NotifTypes.FAMILY_CENTER_REQUEST_DECLINED] = items4;
+obj45[NotifTypes.NotifTypes.FAMILY_CENTER_REQUEST_DECLINED] = items4;
 const items5 = [NotifSettings.NotifSettings.FAMILY_CENTER];
-obj46[NotifTypes.NotifTypes.FAMILY_CENTER_REQUEST_SEND] = items5;
+obj45[NotifTypes.NotifTypes.FAMILY_CENTER_REQUEST_SEND] = items5;
 const items6 = [NotifSettings.NotifSettings.FAMILY_CENTER];
-obj46[NotifTypes.NotifTypes.FAMILY_CENTER_RESTRICTED_SCHEDULE_UPDATED] = items6;
+obj45[NotifTypes.NotifTypes.FAMILY_CENTER_RESTRICTED_SCHEDULE_UPDATED] = items6;
 const items7 = [NotifSettings.NotifSettings.SECURITY];
-obj46[NotifTypes.NotifTypes.DM_SPAM_DETECTED] = items7;
+obj45[NotifTypes.NotifTypes.DM_SPAM_DETECTED] = items7;
 const items8 = [NotifSettings.NotifSettings.SECURITY];
-obj46[NotifTypes.NotifTypes.NEW_USER_SESSION] = items8;
+obj45[NotifTypes.NotifTypes.NEW_USER_SESSION] = items8;
 const items9 = [NotifSettings.NotifSettings.SECURITY];
-obj46[NotifTypes.NotifTypes.SUSPICIOUS_SESSION] = items9;
+obj45[NotifTypes.NotifTypes.SUSPICIOUS_SESSION] = items9;
 const items10 = [NotifSettings.NotifSettings.INVITES_RECONNECTING];
-obj46[NotifTypes.NotifTypes.INVITE_REMINDER_PUSH] = items10;
+obj45[NotifTypes.NotifTypes.INVITE_REMINDER_PUSH] = items10;
 const items11 = [NotifSettings.NotifSettings.INVITES_RECONNECTING];
-obj46[NotifTypes.NotifTypes.SUMMONS_DIRECT] = items11;
+obj45[NotifTypes.NotifTypes.SUMMONS_DIRECT] = items11;
 const items12 = [NotifSettings.NotifSettings.INVITES_RECONNECTING];
-obj46[NotifTypes.NotifTypes.USER_RESURRECTION_NOTIFICATION] = items12;
+obj45[NotifTypes.NotifTypes.USER_RESURRECTION_NOTIFICATION] = items12;
 const items13 = [NotifSettings.NotifSettings.TRENDING_SUGGESTIONS];
-obj46[NotifTypes.NotifTypes.SERVER_TRENDING_NOTIFICATION] = items13;
+obj45[NotifTypes.NotifTypes.SERVER_TRENDING_NOTIFICATION] = items13;
 const items14 = [NotifSettings.NotifSettings.UPDATES_OFFERS];
-obj46[NotifTypes.NotifTypes.REFERRAL_PROGRAM_NOTIF_CENTER_ENTRYPOINT_REMINDER] = items14;
+obj45[NotifTypes.NotifTypes.REFERRAL_PROGRAM_NOTIF_CENTER_ENTRYPOINT_REMINDER] = items14;
 const items15 = [NotifSettings.NotifSettings.UPDATES_OFFERS];
-obj46[NotifTypes.NotifTypes.REFERRAL_PROGRAM_PUSH_NOTIF_ENTRYPOINT_REMINDER] = items15;
+obj45[NotifTypes.NotifTypes.REFERRAL_PROGRAM_PUSH_NOTIF_ENTRYPOINT_REMINDER] = items15;
 const items16 = [NotifSettings.NotifSettings.UPDATES_OFFERS];
-obj46[NotifTypes.NotifTypes.TRIAL_FOR_ALL_REMINDER] = items16;
+obj45[NotifTypes.NotifTypes.TRIAL_FOR_ALL_REMINDER] = items16;
 const items17 = [NotifSettings.NotifSettings.FRIEND_ONLINE];
-obj46[NotifTypes.NotifTypes.FRIEND_ONLINE_PUSH] = items17;
+obj45[NotifTypes.NotifTypes.FRIEND_ONLINE_PUSH] = items17;
 const items18 = [NotifSettings.NotifSettings.FRIEND_REQUEST_REMINDER];
-obj46[NotifTypes.NotifTypes.FRIEND_REQUEST_REMINDER_PUSH] = items18;
+obj45[NotifTypes.NotifTypes.FRIEND_REQUEST_REMINDER_PUSH] = items18;
 const items19 = [NotifSettings.NotifSettings.FRIEND_SUGGESTIONS];
-obj46[NotifTypes.NotifTypes.FRIEND_SUGGESTION_CREATE] = items19;
+obj45[NotifTypes.NotifTypes.FRIEND_SUGGESTION_CREATE] = items19;
 const items20 = [NotifSettings.NotifSettings.NUDGE_NEW_FRIEND_DM];
-obj46[NotifTypes.NotifTypes.NUDGE_NEW_FRIEND_DM_PUSH] = items20;
+obj45[NotifTypes.NotifTypes.NUDGE_NEW_FRIEND_DM_PUSH] = items20;
 const items21 = [NotifSettings.NotifSettings.GAMING_OTHER];
-obj46[NotifTypes.NotifTypes.APPLICATION_LIBRARY_INSTALL_COMPLETE] = items21;
+obj45[NotifTypes.NotifTypes.APPLICATION_LIBRARY_INSTALL_COMPLETE] = items21;
 const items22 = [NotifSettings.NotifSettings.GAMING_OTHER];
-obj46[NotifTypes.NotifTypes.GAME_UPDATE] = items22;
+obj45[NotifTypes.NotifTypes.GAME_UPDATE] = items22;
 const items23 = [
   NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW,
   NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT,
   NotifSettings.NotifSettings.GO_LIVE,
 ];
-obj46[NotifTypes.NotifTypes.GUILD_STREAM_START] = items23;
+obj45[NotifTypes.NotifTypes.GUILD_STREAM_START] = items23;
 const items24 = [NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY];
-obj46[NotifTypes.NotifTypes.VOICE_CHANNEL_INVITE] = items24;
-const items25 = [NotifSettings.NotifSettings.SAFETY_ALERTS];
-obj46[NotifTypes.NotifTypes.MENTION_RAID_DETECTED] = items25;
+obj45[NotifTypes.NotifTypes.VOICE_CHANNEL_INVITE] = items24;
+const items25 = [NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY];
+obj45[NotifTypes.NotifTypes.VOICE_CHANNEL_ACTIVITY_PEAK_AFFINITY] = items25;
 const items26 = [NotifSettings.NotifSettings.SAFETY_ALERTS];
-obj46[NotifTypes.NotifTypes.RAID_DETECTED] = items26;
-const items27 = [NotifSettings.NotifSettings.STAGE_NOTIFICATIONS];
-obj46[NotifTypes.NotifTypes.STAGE_INSTANCE_CREATE] = items27;
-const items28 = [NotifSettings.NotifSettings.FRIEND_REQUESTS];
-obj46[NotifTypes.NotifTypes.RELATIONSHIP_ADD] = items28;
-const items29 = [NotifSettings.NotifSettings.POLLS];
-obj46[NotifTypes.NotifTypes.POLL_ENDED_PUSH] = items29;
-const items30 = [NotifSettings.NotifSettings.REACTIONS];
-obj46[NotifTypes.NotifTypes.REACTIONS_PUSH_NOTIFICATION] = items30;
-const items31 = [NotifSettings.NotifSettings.FORUM_NOTIFICATIONS];
-obj46[NotifTypes.NotifTypes.FORUM_THREAD_CREATED] = items31;
-const items32 = [NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS];
-obj46[NotifTypes.NotifTypes.GUILD_SCHEDULED_EVENT_UPDATE] = items32;
-const items33 = [NotifSettings.NotifSettings.OTHER_GUILD];
-obj46[NotifTypes.NotifTypes.HOME_LIFECYCLE_PUSH] = items33;
+obj45[NotifTypes.NotifTypes.MENTION_RAID_DETECTED] = items26;
+const items27 = [NotifSettings.NotifSettings.SAFETY_ALERTS];
+obj45[NotifTypes.NotifTypes.RAID_DETECTED] = items27;
+const items28 = [NotifSettings.NotifSettings.STAGE_NOTIFICATIONS];
+obj45[NotifTypes.NotifTypes.STAGE_INSTANCE_CREATE] = items28;
+const items29 = [NotifSettings.NotifSettings.FRIEND_REQUESTS];
+obj45[NotifTypes.NotifTypes.RELATIONSHIP_ADD] = items29;
+const items30 = [NotifSettings.NotifSettings.POLLS];
+obj45[NotifTypes.NotifTypes.POLL_ENDED_PUSH] = items30;
+const items31 = [NotifSettings.NotifSettings.REACTIONS];
+obj45[NotifTypes.NotifTypes.REACTIONS_PUSH_NOTIFICATION] = items31;
+const items32 = [NotifSettings.NotifSettings.FORUM_NOTIFICATIONS];
+obj45[NotifTypes.NotifTypes.FORUM_THREAD_CREATED] = items32;
+const items33 = [NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS];
+obj45[NotifTypes.NotifTypes.GUILD_SCHEDULED_EVENT_UPDATE] = items33;
 const items34 = [NotifSettings.NotifSettings.OTHER_GUILD];
-obj46[NotifTypes.NotifTypes.TOP_MESSAGES_PUSH] = items34;
-const items35 = [NotifSettings.NotifSettings.CALLS];
-obj46[NotifTypes.NotifTypes.CALL_RING] = items35;
-const items36 = [
+obj45[NotifTypes.NotifTypes.HOME_LIFECYCLE_PUSH] = items34;
+const items35 = [NotifSettings.NotifSettings.OTHER_GUILD];
+obj45[NotifTypes.NotifTypes.TOP_MESSAGES_PUSH] = items35;
+const items36 = [NotifSettings.NotifSettings.CALLS];
+obj45[NotifTypes.NotifTypes.CALL_RING] = items36;
+const items37 = [
   NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW,
   NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT,
   NotifSettings.NotifSettings.GO_LIVE,
 ];
-obj46[NotifTypes.NotifTypes.GO_LIVE_NOTIFICATION] = items36;
-const items37 = [
+obj45[NotifTypes.NotifTypes.GO_LIVE_NOTIFICATION] = items37;
+const items38 = [
   NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW,
   NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT,
   NotifSettings.NotifSettings.VOICE_CHANNEL_ACTIVITY,
 ];
-obj46[NotifTypes.NotifTypes.VOICE_CHANNEL_ACTIVITY] = items37;
-const items38 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
-obj46[NotifTypes.NotifTypes.MISSED_MESSAGE_PUSH] = items38;
-const items39 = [
-  NotifSettings.NotifSettings.FRIENDS_GAMING_LOW,
-  NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT,
-  NotifSettings.NotifSettings.FRIENDS_GAMING,
-];
-obj46[NotifTypes.NotifTypes.FRIEND_GAMING_ACTIVITY_PUSH] = items39;
-const items40 = [
-  NotifSettings.NotifSettings.FRIENDS_GAMING_LOW,
-  NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT,
-  NotifSettings.NotifSettings.FRIENDS_GAMING,
-];
-obj46[NotifTypes.NotifTypes.FRIENDS_PLAYING_GAME] = items40;
-const items41 = [
-  NotifSettings.NotifSettings.FRIENDS_GAMING_LOW,
-  NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT,
-  NotifSettings.NotifSettings.FRIENDS_GAMING,
-];
-obj46[NotifTypes.NotifTypes.FRIENDS_PLAYING_TRENDING_GAME] = items41;
-const items42 = [NotifSettings.NotifSettings.FAMILY_CENTER, NotifSettings.NotifSettings.SYSTEM];
-obj46[NotifTypes.NotifTypes.PARENTAL_CONSENT_FINAL_WARNING] = items42;
-const items43 = [
+obj45[NotifTypes.NotifTypes.VOICE_CHANNEL_ACTIVITY] = items38;
+const items39 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
+obj45[NotifTypes.NotifTypes.MISSED_MESSAGE_PUSH] = items39;
+const items40 = [NotifSettings.NotifSettings.FRIEND_SUGGESTIONS];
+obj45[NotifTypes.NotifTypes.AFFINITY_FRIEND_SUGGESTION] = items40;
+const items41 = [NotifSettings.NotifSettings.FRIENDS_GAMING_LOW, NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT];
+obj45[NotifTypes.NotifTypes.FRIEND_GAMING_ACTIVITY_PUSH] = items41;
+const items42 = [NotifSettings.NotifSettings.FRIENDS_GAMING_LOW, NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT];
+obj45[NotifTypes.NotifTypes.FRIENDS_PLAYING_GAME] = items42;
+const items43 = [NotifSettings.NotifSettings.FRIENDS_GAMING_LOW, NotifSettings.NotifSettings.FRIENDS_GAMING_DEFAULT];
+obj45[NotifTypes.NotifTypes.FRIENDS_PLAYING_TRENDING_GAME] = items43;
+const items44 = [NotifSettings.NotifSettings.TRENDING_SUGGESTIONS];
+obj45[NotifTypes.NotifTypes.GUILD_RECOMMENDATION] = items44;
+const items45 = [NotifSettings.NotifSettings.FAMILY_CENTER, NotifSettings.NotifSettings.SYSTEM];
+obj45[NotifTypes.NotifTypes.PARENTAL_CONSENT_FINAL_WARNING] = items45;
+const items46 = [
   NotifSettings.NotifSettings.FRIEND_ACTIVITY_LOW,
   NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT,
   NotifSettings.NotifSettings.CUSTOM_STATUS_UPDATE,
 ];
-obj46[NotifTypes.NotifTypes.CUSTOM_STATUS_UPDATE] = items43;
-const items44 = [
+obj45[NotifTypes.NotifTypes.CUSTOM_STATUS_UPDATE] = items46;
+const items47 = [
   NotifSettings.NotifSettings.FRIEND_ACTIVITY_LOW,
   NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT,
   NotifSettings.NotifSettings.PROFILE_UPDATES,
 ];
-obj46[NotifTypes.NotifTypes.PROFILE_UPDATES_NOTIFICATION] = items44;
-const obj47 = {};
-const items45 = [NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS];
-obj47[NotifTypes.NotifTypes.GUILD_SCHEDULED_EVENT_UPCOMING] = items45;
-const items46 = [NotifSettings.NotifSettings.OTHER_GUILD];
-obj47[NotifTypes.NotifTypes.ADMIN_NOTIFICATION_PUSH] = items46;
-const items47 = [NotifSettings.NotifSettings.OTHER_GUILD];
-obj47[NotifTypes.NotifTypes.CHANNEL_PROMPT_DEADCHAT] = items47;
-const items48 = [NotifSettings.NotifSettings.OTHER_GUILD];
-obj47[NotifTypes.NotifTypes.GUILD_JOIN_REQUEST_APPROVED] = items48;
+obj45[NotifTypes.NotifTypes.PROFILE_UPDATES_NOTIFICATION] = items47;
+const obj46 = {};
+const items48 = [NotifSettings.NotifSettings.GUILD_EVENT_NOTIFICATIONS];
+obj46[NotifTypes.NotifTypes.GUILD_SCHEDULED_EVENT_UPCOMING] = items48;
 const items49 = [NotifSettings.NotifSettings.OTHER_GUILD];
-obj47[NotifTypes.NotifTypes.GUILD_JOIN_REQUEST_REJECTED] = items49;
+obj46[NotifTypes.NotifTypes.ADMIN_NOTIFICATION_PUSH] = items49;
 const items50 = [NotifSettings.NotifSettings.OTHER_GUILD];
-obj47[NotifTypes.NotifTypes.MESSAGE_PIN] = items50;
-const items51 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
-obj47[NotifTypes.NotifTypes.ICYMI_SUMMARY] = items51;
-const items52 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
-obj47[NotifTypes.NotifTypes.MESSAGE_REMINDER_DUE] = items52;
-const items53 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
-obj47[NotifTypes.NotifTypes.SUMMARY_REMINDER] = items53;
+obj46[NotifTypes.NotifTypes.CHANNEL_PROMPT_DEADCHAT] = items50;
+const items51 = [NotifSettings.NotifSettings.OTHER_GUILD];
+obj46[NotifTypes.NotifTypes.GUILD_JOIN_REQUEST_APPROVED] = items51;
+const items52 = [NotifSettings.NotifSettings.OTHER_GUILD];
+obj46[NotifTypes.NotifTypes.GUILD_JOIN_REQUEST_REJECTED] = items52;
+const items53 = [NotifSettings.NotifSettings.OTHER_GUILD];
+obj46[NotifTypes.NotifTypes.MESSAGE_PIN] = items53;
+const items54 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
+obj46[NotifTypes.NotifTypes.ICYMI_SUMMARY] = items54;
+const items55 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
+obj46[NotifTypes.NotifTypes.MESSAGE_REMINDER_DUE] = items55;
+const items56 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
+obj46[NotifTypes.NotifTypes.SUMMARY_REMINDER] = items56;
+const items57 = [NotifSettings.NotifSettings.REACTIONS];
+obj46[NotifTypes.NotifTypes.REACTION_TRENDING_PUSH_NOTIFICATION] = items57;
 const result = size.fileFinishedImporting("modules/notifications/NotificationSettingsConstants.tsx");
 
 export const NOTIF_CATEGORIES = items;
 export const NOTIF_SETTINGS = items1;
-export const NOTIF_SETTING_MAPPING = obj46;
-export const NOTIF_SETTING_REDESIGN_MAPPING = obj47;
+export const NOTIF_SETTING_MAPPING = obj45;
+export const NOTIF_SETTING_REDESIGN_MAPPING = obj46;

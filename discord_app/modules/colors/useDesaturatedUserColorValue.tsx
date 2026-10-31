@@ -1,7 +1,7 @@
 // discord_app/modules/colors/useDesaturatedUserColorValue.tsx
 import _mod19 from "../../../_runtime/metro/00019__.js";
 import utils_ColorUtils from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import tinycolorDefault from "../../../_runtime/07723_tinycolor.js";
+import tinycolorDefault from "../../../_runtime/07730_tinycolor.js";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

@@ -3,13 +3,13 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8716 from "../../../../_runtime/metro/08716__.js";
+import _modDef8724 from "../../../../_runtime/metro/08724__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8902);
+const SpotifyConstants = fn(8911);
 ({
   SPOTIFY_APP_PROTOCOL: metroRequire,
   SpotifyEndpoints: closure_7,
@@ -263,14 +263,14 @@ export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   let obj2 = {
-    icon: closure_9(activity(5629).Button.Icon, { source: _modDef8716 }),
+    icon: closure_9(activity(5634).Button.Icon, { source: _modDef8724 }),
     text: null,
     size: "sm",
     onPress: null,
     grow: true,
   };
-  const intl = activity(1114).intl;
-  obj2.text = intl.formatToPlainString(activity(1114).t.LEgD7t, { platform: activity.name });
+  const intl = activity(1113).intl;
+  obj2.text = intl.formatToPlainString(activity(1113).t.LEgD7t, { platform: activity.name });
   obj2.onPress = function handlePress() {
     const sync_id = activity.sync_id;
     const canOpenURLResult = React4.canOpenURL("" + timestampProducer + ":");
@@ -280,7 +280,7 @@ export function SpotifyPlayButton(activity) {
           let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id)).catch(() => {});
           const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id));
         } else {
-          const HTTP = activity(1283).HTTP;
+          const HTTP = activity(1282).HTTP;
           const obj2 = {
             url: closure_2_7.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier),
             rejectWithError: true,
@@ -292,7 +292,7 @@ export function SpotifyPlayButton(activity) {
       })
       .catch(() => {});
   };
-  obj.children = closure_9(activity(5629).Button, obj2);
+  obj.children = closure_9(activity(5634).Button, obj2);
   return closure_9(closure_5, obj);
 }
 export { SpotifyTrack };

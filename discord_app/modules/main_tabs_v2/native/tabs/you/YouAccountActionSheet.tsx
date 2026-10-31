@@ -18,7 +18,7 @@ import useDesignToggleDefault from "../../../../devtools/design_toggles/useDesig
 import TableRadioGroup from "../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRadioRow from "../../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolidationExperiment.tsx";
-import _modDef7251 from "../../../../../../_runtime/metro/07251__.js";
+import _modDef7257 from "../../../../../../_runtime/metro/07257__.js";
 import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
 import BottomSheetTitleHeader from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
@@ -47,11 +47,11 @@ import DeveloperExperimentStore from "../../../../../stores/DeveloperExperimentS
 import StreamerModeStore from "../../../../../stores/StreamerModeStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const TableRowGroup = currentLocale(7054);
-const TableSwitchRow = currentLocale(7363);
-const BellSlashIcon = currentLocale(10973);
-const DevToolsContentDefault = tmp4(17700);
-const YouSwitchClientsRadioGroupDefault = tmp4(18398);
+const TableRowGroup = currentLocale(7060);
+const TableSwitchRow = currentLocale(7369);
+const BellSlashIcon = currentLocale(10992);
+const DevToolsContentDefault = tmp4(17744);
+const YouSwitchClientsRadioGroupDefault = tmp4(18441);
 require = fn;
 function AccountSectionHeading(children) {
   const tmp = closure_21();
@@ -66,32 +66,32 @@ function AccountSectionHeading(children) {
 function YouStatusRadioGroup() {
   const memo = noop.useMemo(() => {
     const obj = {
-      icon: closure_1_19(setting(6977).TableRowIcon, { source: closure_1(15951), variant: "text-status-online" }),
+      icon: closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15992), variant: "text-status-online" }),
       value: constants.ONLINE,
     };
     const items = [obj, , ,];
     const obj3 = { icon: null, value: null };
-    const obj2 = { source: closure_1(15951), variant: "text-status-online" };
-    obj3.icon = closure_1_19(setting(6977).TableRowIcon, { source: closure_1(15948), variant: "text-status-idle" });
+    const obj2 = { source: closure_1(15992), variant: "text-status-online" };
+    obj3.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15989), variant: "text-status-idle" });
     obj3.value = constants.IDLE;
     items[1] = obj3;
     const obj5 = { icon: null, value: null };
-    const obj4 = { source: closure_1(15948), variant: "text-status-idle" };
-    obj5.icon = closure_1_19(setting(6977).TableRowIcon, { source: closure_1(15949), variant: "text-status-dnd" });
+    const obj4 = { source: closure_1(15989), variant: "text-status-idle" };
+    obj5.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15990), variant: "text-status-dnd" });
     obj5.value = constants.DND;
     items[2] = obj5;
     const obj7 = { icon: null, value: null };
-    const obj6 = { source: closure_1(15949), variant: "text-status-dnd" };
-    obj7.icon = closure_1_19(setting(6977).TableRowIcon, { source: closure_1(15950), variant: "text-status-offline" });
+    const obj6 = { source: closure_1(15990), variant: "text-status-dnd" };
+    obj7.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15991), variant: "text-status-offline" });
     obj7.value = constants.INVISIBLE;
     items[3] = obj7;
     return items;
   }, []);
-  const StatusSetting = setting(4834).StatusSetting;
+  const StatusSetting = setting(4839).StatusSetting;
   setting = StatusSetting.useSetting();
-  const StatusExpiresAtSetting = setting(4834).StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = setting(4839).StatusExpiresAtSetting;
   closure_1 = StatusExpiresAtSetting.useSetting();
-  const manaTypeConsolidationExperiment = setting(7143).useManaTypeConsolidationExperiment(
+  const manaTypeConsolidationExperiment = setting(7149).useManaTypeConsolidationExperiment(
     "YouAccountActionSheetOnlineStatus",
   );
   let items = [setting];
@@ -99,8 +99,8 @@ function YouStatusRadioGroup() {
     setUserStatusDefault({ prevStatus: setting, nextStatus });
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
-  let intl = setting(1114).intl;
-  const stringResult = intl.string(setting(1114).t["0DPAZH"]);
+  let intl = setting(1113).intl;
+  const stringResult = intl.string(setting(1113).t["0DPAZH"]);
   let tmp6;
   if (!manaTypeConsolidationExperiment) {
     tmp6 = stringResult;
@@ -146,7 +146,7 @@ function YouStatusRadioGroup() {
     obj.subLabel = formatToPlainStringResult;
     return closure_2_19(TableRadioRow.TableRadioRow, obj, value.value);
   });
-  const tmp5Result = closure_19(setting(7052).TableRadioGroup, obj2);
+  const tmp5Result = closure_19(setting(7058).TableRadioGroup, obj2);
   let tmp9 = tmp5Result;
   if (manaTypeConsolidationExperiment) {
     let obj3 = { children: null };
@@ -224,9 +224,9 @@ function YouAccountRadioGroup() {
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(17938).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(17981).useMultiAccountUsers().multiAccountUsers;
   closure_129_0 = multiAccountUsers;
-  let obj2 = stateFromStores(17938);
+  let obj2 = stateFromStores(17981);
   const items1 = [StreamerModeStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(
     items1,
@@ -251,19 +251,19 @@ function YouAccountRadioGroup() {
           str2 = "never";
         }
         const obj3 = {
-          label: multiAccountUsers(5063).getUserTag(obj, { mode: "username", identifiable: str2 }),
+          label: multiAccountUsers(5068).getUserTag(obj, { mode: "username", identifiable: str2 }),
           value: id.id,
           subLabel: combined,
           icon: null,
         };
-        const obj4 = { user: obj, guildId: "Array", size: stateFromStores(1188).AvatarSizes.REFRESH_MEDIUM_32 };
-        obj3.icon = closure_2_19(stateFromStores(1188).Avatar, obj4);
+        const obj4 = { user: obj, guildId: "Array", size: stateFromStores(1187).AvatarSizes.REFRESH_MEDIUM_32 };
+        obj3.icon = closure_2_19(stateFromStores(1187).Avatar, obj4);
         return obj3;
       }),
     items2,
   );
   let obj3 = stateFromStores(504);
-  const manaTypeConsolidationExperiment = stateFromStores(7143).useManaTypeConsolidationExperiment(
+  const manaTypeConsolidationExperiment = stateFromStores(7149).useManaTypeConsolidationExperiment(
     "YouAccountActionSheetSwitchAccounts",
   );
   const items3 = [multiAccountUsers];
@@ -275,21 +275,21 @@ function YouAccountRadioGroup() {
   if (null == stateFromStores) {
     return null;
   } else {
-    const intl = tmp2(1114).intl;
-    const stringResult = intl.string(tmp2(1114).t.oMNyYN);
+    const intl = tmp2(1113).intl;
+    const stringResult = intl.string(tmp2(1113).t.oMNyYN);
     let obj5 = { style: tmp.account, children: null };
     const obj6 = { style: tmp.manage, children: null };
     const obj7 = {
       onPress() {
-        return multiAccountUsers(18392)();
+        return multiAccountUsers(18435)();
       },
       children: null,
     };
     const obj8 = { variant: "text-sm/semibold", color: "text-brand", children: null };
-    const intl2 = tmp2(1114).intl;
-    obj8.children = intl2.string(tmp2(1114).t.HxrBOZ);
-    obj7.children = closure_19(tmp2(5619).Text, obj8);
-    obj6.children = closure_19(tmp2(6974).PressableOpacity, obj7);
+    const intl2 = tmp2(1113).intl;
+    obj8.children = intl2.string(tmp2(1113).t.HxrBOZ);
+    obj7.children = closure_19(tmp2(5624).Text, obj8);
+    obj6.children = closure_19(tmp2(6980).PressableOpacity, obj7);
     const items4 = [closure_19(View, obj6), ,];
     let tmp16Result = manaTypeConsolidationExperiment;
     if (manaTypeConsolidationExperiment) {
@@ -318,13 +318,13 @@ function YouAccountRadioGroup() {
     obj10.defaultValue = stateFromStores.id;
     obj10.children = memo.map((value) => {
       const merged = Object.assign(value);
-      return closure_1_19(stateFromStores(7055).TableRadioRow, {}, value.value);
+      return closure_1_19(stateFromStores(7061).TableRadioRow, {}, value.value);
     });
-    items4[2] = closure_19(tmp2(7052).TableRadioGroup, obj10);
+    items4[2] = closure_19(tmp2(7058).TableRadioGroup, obj10);
     obj5.children = items4;
     return closure_20(View, obj5);
   }
-  let obj4 = stateFromStores(7143);
+  let obj4 = stateFromStores(7149);
 }
 function FocusModeSetting() {
   let currentLocale = require;
@@ -355,11 +355,11 @@ function FocusModeSetting() {
       if (arg0) {
         const obj3 = {
           onSelect(quiet_mode_enabled, arg1) {
-            closure_1_0(10999).setFocusMode(quiet_mode_enabled, arg1);
-            const obj = closure_1_0(10999);
-            closure_1_1(5253).hideActionSheet();
-            const obj2 = closure_1_1(5253);
-            const result = closure_1_0(18387).showYouAccountActionSheet();
+            closure_1_0(11018).setFocusMode(quiet_mode_enabled, arg1);
+            const obj = closure_1_0(11018);
+            closure_1_1(5258).hideActionSheet();
+            const obj2 = closure_1_1(5258);
+            const result = closure_1_0(18430).showYouAccountActionSheet();
           },
         };
         require("ActionSheetActionCreators").openLazy(
@@ -530,7 +530,7 @@ function CustomStatus() {
     const intl4 = util.intl;
     obj11.accessibilityLabel = intl4.string(util.t.wfYTHe);
     obj11.style = tmp.customStatusRemoveButton;
-    const obj12 = { style: tmp.trailingIcon, source: _modDef7251 };
+    const obj12 = { style: tmp.trailingIcon, source: _modDef7257 };
     obj11.children = closure_1_19(FastImageDefault, obj12);
     tmp21Result2 = closure_1_19(Pressables.PressableOpacity, obj11);
     const tmp18Result = FastImageDefault;
@@ -541,14 +541,14 @@ function CustomStatus() {
   return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13927).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(13962).MultiAccountTokenStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AuthStates: closure_14, StatusTypes: closure_15, ThemeTypes: closure_16 } = Constants);
-const EMOJI_URL_BASE_SIZE = fn(1387).EMOJI_URL_BASE_SIZE;
-let closure_18 = fn(13928).MultiAccountSwitchLocation;
+const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
+let closure_18 = fn(13963).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   account: { position: "relative" },
   manage: { position: "absolute", right: 0, zIndex: 100 },

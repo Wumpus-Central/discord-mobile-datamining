@@ -3,7 +3,7 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useBadgeTextVariant from "../../../../../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import BadgeShared from "../../../../../discord_common/js/packages/design/components/Badge/shared/BadgeShared.tsx";

@@ -2,8 +2,6 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef9289 from "../../../../../_runtime/metro/09289__.js";
-import _modDef9292 from "../../../../../_runtime/metro/09292__.js";
 import GuildPopoutActionCreators from "../../../guild_profile/GuildPopoutActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPopoutStore from "../../../guild_profile/GuildPopoutStore.tsx";
@@ -14,40 +12,52 @@ const require = globalThis.__r;
 
 require = fn;
 function CommunityPill(guildVisibility) {
-  let GlobeEarthIcon;
+  _require = undefined;
   const tmp = closure_11();
-  const intl = GlobeEarthIcon(1114).intl;
-  importDefault = intl.string(GlobeEarthIcon(1114).t.TME4LJ);
-  let tmp4Result = _modDef9289;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(9285).GuildVisibility.PUBLIC) {
-    const intl2 = tmp2(1114).intl;
-    importDefault = intl2.string(tmp2(1114).t.op2cJ6);
-    GlobeEarthIcon = tmp2(9574).GlobeEarthIcon;
-    tmp4Result = _modDef9292;
+  const tmp4 = guildVisibility.guildVisibility === require("GuildTraits").GuildVisibility.PUBLIC;
+  const intl = require("util").intl;
+  const t = require("util").t;
+  _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
+  let ExperimentalWebIcon;
+  if (tmp4) {
+    ExperimentalWebIcon = tmp2(11333).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
     accessibilityRole: "button",
     onPress() {
-      ToastActionCreatorsDefault.open("SERVER_BADGE_DESCRIPTION_INVITE_ONLY", { text, icon: GlobeEarthIcon });
+      ToastActionCreatorsDefault.open("SERVER_BADGE_DESCRIPTION_INVITE_ONLY", { text, icon: ExperimentalWebIcon });
     },
     children: null,
   };
-  const items = [
-    closure_9(GlobeEarthIcon(1188).Icon, { style: tmp.communityPillIcon, source: tmp4Result, disableColor: true }),
-  ];
-  const obj3 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
-  const intl3 = tmp2(1114).intl;
-  obj3.children = intl3.string(GlobeEarthIcon(1114).t.K7iRig);
-  items[1] = closure_9(GlobeEarthIcon(5619).Text, obj3);
+  if (tmp4) {
+    const obj2 = {
+      size: "xs",
+      color: ExperimentalWebIcon(575).colors.BADGE_INVERTED_BACKGROUND,
+      secondaryColor: ExperimentalWebIcon(575).colors.BADGE_INVERTED_TEXT,
+      style: tmp.communityPillIcon,
+    };
+    let tmp7Result = closure_9(tmp2(9307).ExperimentalWebBadgeIcon, obj2);
+    let tmp10 = closure_9;
+  } else {
+    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(9311), disableColor: true };
+    tmp7Result = closure_9(tmp2(1187).Icon, obj3);
+    tmp10 = closure_9;
+  }
+  const items = [tmp7Result];
+  const obj4 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
+  const intl2 = tmp2(1113).intl;
+  const t2 = tmp2(1113).t;
+  obj4.children = intl2.string(tmp4 ? t2.SiZQ0N : t2.K7iRig);
+  items[1] = tmp10(require("Text/Text").Text, obj4);
   obj.children = items;
-  return closure_10(GlobeEarthIcon(6974).PressableOpacity, obj);
+  return closure_10(require("Pressables").PressableOpacity, obj);
 }
 const View = fn(17).View;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   content: { padding: 16 },
   avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 },
@@ -88,7 +98,7 @@ obj2.communityPill = {
   borderRadius: nativeDefault.radii.round,
 };
 obj2.communityPillIcon = { width: 16, height: 16, marginRight: 6 };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1376);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
@@ -215,8 +225,8 @@ export default function GuildActionSheetHeader(guild) {
   }
   ({ description, name } = stateFromStores1);
   tmp5Result6 = guild(stateFromStores[21]);
-  const guildTraits = guild(stateFromStores[12]).getGuildTraits(stateFromStores1);
-  const tmp5Result8 = guild(stateFromStores[12]);
+  const guildTraits = guild(stateFromStores[10]).getGuildTraits(stateFromStores1);
+  const tmp5Result8 = guild(stateFromStores[10]);
   const result = 0.56 * width;
   c4 = result;
   const items4 = [tmp.guildBanner, width, result];

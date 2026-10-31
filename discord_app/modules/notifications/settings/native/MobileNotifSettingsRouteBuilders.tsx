@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2867 from "../../NotificationSettings.messages.js";
+import _modDef2868 from "../../NotificationSettings.messages.js";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/notifications/settings/native
 export function buildOverviewCategoriesSection() {
   const obj = { label: null, settings: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef2867["/UdAvP"]);
+  obj.label = intl.string(_modDef2868["/UdAvP"]);
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_CALLS_MESSAGES,
     MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS,
@@ -44,7 +44,6 @@ export function buildCategoryFriendsActivitySettingsSection() {
   const obj = { settings: null };
   const items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_ACTIVITY_TITLE,
-    MobileNotifSettings.MobileNotifSettings.NOTIF_FRIENDS_GAMING,
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIENDS_GAMING_LOW,
     MobileNotifSettings.MobileNotifSettings.NOTIF_FRIENDS_GAMING_DEFAULT,
     MobileNotifSettings.MobileNotifSettings.NOTIF_GAMING_OTHER,

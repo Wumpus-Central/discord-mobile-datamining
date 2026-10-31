@@ -21,11 +21,11 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 
 require = fn;
-const createChannelRecord = fn(4862).createChannelRecord;
+const createChannelRecord = fn(4867).createChannelRecord;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   empty: {
     flex: 1,
@@ -110,14 +110,14 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   if (stateFromStores == null) {
     stateFromStores = null;
   }
-  const channelContentGate = flag(11196).useChannelContentGate(guildId, stateFromStores);
+  const channelContentGate = flag(11215).useChannelContentGate(guildId, stateFromStores);
   closure_11 = chatInputRef.useRef(channelId);
   chatInputRef.useRef(null);
   ref = chatInputRef.useRef(null);
-  channelId(5607)(() => new channelId(isActive[15])());
-  const tmp10 = channelId(11214)(channelId);
+  channelId(5612)(() => new channelId(isActive[15])());
+  const tmp10 = channelId(11233)(channelId);
   isResourceChannel = tmp10;
-  let obj3 = flag(11196);
+  let obj3 = flag(11215);
   const items3 = [MessageStore];
   const items4 = [channelId, tmp10];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(
@@ -187,17 +187,17 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   let obj4 = { profile: null, children: null };
   const tmp16 = channel;
   const tmp3Result = flag(504);
-  obj4.profile = flag(11528).Profiles.ChatView;
+  obj4.profile = flag(11562).Profiles.ChatView;
   let setInterstitial = stateFromStores;
-  const items10 = [stateFromStores(channelId(14172), { channelId, guildId }), ,];
+  const items10 = [stateFromStores(channelId(14210), { channelId, guildId }), ,];
   let setInterstitialResult = null;
   if (!flag2) {
-    setInterstitialResult = setInterstitial(tmp9(10716), { absolute: true });
+    setInterstitialResult = setInterstitial(tmp9(10736), { absolute: true });
   }
   items10[1] = setInterstitialResult;
   if (null != channelContentGate) {
-    let result = tmp3(11196).renderChannelContentGate(channelContentGate);
-    const tmp3Result2 = tmp3(11196);
+    let result = tmp3(11215).renderChannelContentGate(channelContentGate);
+    const tmp3Result2 = tmp3(11215);
     tmp9(9).setInterstitial(channelContentGate.kind);
     const tmp9Result = tmp9(9);
   } else {
@@ -288,22 +288,22 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
     }
     if (channelIsLoading) {
       let obj5 = { style: tmp.empty, title: null, body: null };
-      let intl = tmp3(1114).intl;
-      obj5.title = intl.string(tmp3(1114).t.ai6Lbr);
-      const intl2 = tmp3(1114).intl;
-      obj5.body = intl2.string(tmp3(1114).t["LTr+x9"]);
-      let setInterstitialResult2 = setInterstitial(tmp3(1188).EmptyState, obj5);
+      let intl = tmp3(1113).intl;
+      obj5.title = intl.string(tmp3(1113).t.ai6Lbr);
+      const intl2 = tmp3(1113).intl;
+      obj5.body = intl2.string(tmp3(1113).t["LTr+x9"]);
+      let setInterstitialResult2 = setInterstitial(tmp3(1187).EmptyState, obj5);
       tmp = tmp9(9);
       setInterstitial = tmp.setInterstitial;
       setInterstitial("EmptyState");
     } else if (channel.isDirectory()) {
       let obj6 = { channel, guildId };
-      setInterstitialResult2 = setInterstitial(tmp9(14186), obj6);
+      setInterstitialResult2 = setInterstitial(tmp9(14224), obj6);
       tmp9(9).setInterstitial("GuildDirectory");
       const tmp9Result3 = tmp9(9);
     } else if (channel.isForumLikeChannel()) {
       let obj7 = { channel };
-      setInterstitialResult2 = setInterstitial(tmp9(14320), obj7);
+      setInterstitialResult2 = setInterstitial(tmp9(14358), obj7);
       tmp9(9).setInterstitial("ForumChannel");
       const tmp9Result4 = tmp9(9);
     } else {
@@ -312,5 +312,5 @@ export default noop.memo(function ChatView(alwaysRespectKeyboard) {
   }
   items10[2] = result;
   obj4.children = items10;
-  return tmp16(channelId(11528), obj4);
+  return tmp16(channelId(11562), obj4);
 });

@@ -135,6 +135,7 @@ import LocaleStore from "../user_settings/LocaleStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import EmailSettingsStore from "../user_settings/notifications/EmailSettingsStore.tsx";
+import OrbChallengesStore from "../virtual_currency/stores/OrbChallengesStore.tsx";
 import PIPSpeakerStore from "../voice_panel/native/pip/PIPSpeakerStore.tsx";
 import ActivityInviteModalStore from "../../stores/ActivityInviteModalStore.tsx";
 import ActivityTrackingStore from "../../stores/ActivityTrackingStore.tsx";

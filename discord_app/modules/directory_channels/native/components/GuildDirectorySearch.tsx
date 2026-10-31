@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators.tsx";
-import _modDef13804 from "../../../../../_runtime/metro/13804__.js";
+import _modDef13839 from "../../../../../_runtime/metro/13839__.js";
 import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators.tsx";
 import GuildDirectoryActionCreatorsAll from "../../GuildDirectoryActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -24,7 +24,7 @@ function DefaultState() {
   const obj2 = { style: tmp.emptyWrapper, children: null };
   const obj3 = { style: tmp.emptyStateImage, source: null };
   let obj = require("useTypeConsolidationTextTransform");
-  obj3.source = _modDef13804;
+  obj3.source = _modDef13839;
   let items = [closure_10(FastImageDefault, obj3)];
   const obj4 = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = require("util").intl;
@@ -46,8 +46,8 @@ function EmptyState(channel) {
   const items = [GuildStore];
   importDefault = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.getGuildId()));
   const obj = channel(504);
-  const canCreateOrAddGuildInDirectory = channel(13805).useCanCreateOrAddGuildInDirectory(channel);
-  const intl = channel(1114).intl;
+  const canCreateOrAddGuildInDirectory = channel(13840).useCanCreateOrAddGuildInDirectory(channel);
+  const intl = channel(1113).intl;
   if (canCreateOrAddGuildInDirectory) {
     const obj3 = {
       addServerHook() {
@@ -58,14 +58,14 @@ function EmptyState(channel) {
         });
       },
     };
-    let formatResult = intl.format(tmp2(1114).t.ZxNVMy, obj3);
+    let formatResult = intl.format(tmp2(1113).t.ZxNVMy, obj3);
   } else {
-    formatResult = intl.string(tmp2(1114).t.vYyEnv);
+    formatResult = intl.string(tmp2(1113).t.vYyEnv);
   }
   const obj4 = { style: tmp.emptyWrapper, children: null };
   const obj5 = { style: tmp.emptyStateImage, source: null };
-  const obj2 = channel(13805);
-  obj5.source = _modDef13804;
+  const obj2 = channel(13840);
+  obj5.source = _modDef13839;
   const items1 = [closure_10(FastImageDefault, obj5), ,];
   const obj6 = {
     style: tmp.emptyStateTitle,
@@ -73,10 +73,10 @@ function EmptyState(channel) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl2 = tmp2(1114).intl;
-  obj6.children = intl2.string(channel(1114).t["6HXiuE"]);
-  items1[1] = closure_10(channel(5619).Text, obj6);
-  items1[2] = closure_10(channel(5619).Text, {
+  const intl2 = tmp2(1113).intl;
+  obj6.children = intl2.string(channel(1113).t["6HXiuE"]);
+  items1[1] = closure_10(channel(5624).Text, obj6);
+  items1[2] = closure_10(channel(5624).Text, {
     style: tmp.emptyStateText,
     variant: "text-sm/medium",
     color: "text-default",
@@ -90,7 +90,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   flex: { flex: 1, height: "100%" },
   fauxHeader: { paddingHorizontal: 0 },

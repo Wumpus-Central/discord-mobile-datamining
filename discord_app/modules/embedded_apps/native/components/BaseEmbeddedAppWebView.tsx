@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
-import WebView from "../../../../../_runtime/07971_WebView.js";
+import WebView from "../../../../../_runtime/07979_WebView.js";
 import useEmbeddedAppCSPDefault from "../../csp/useEmbeddedAppCSP.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -319,7 +319,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -486,7 +486,7 @@ function BaseEmbeddedAppWebViewContent(shellBridgeSecret) {
 }
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_11 = new LoggerDefault("BaseEmbeddedAppWebView");
 const size = fn(2);

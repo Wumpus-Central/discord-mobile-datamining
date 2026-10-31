@@ -1,14 +1,14 @@
 // discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameCoverArt from "GameCoverArt.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
-import _modDef9359 from "../../../../../_runtime/metro/09359__.js";
+import _modDef9379 from "../../../../../_runtime/metro/09379__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -16,11 +16,11 @@ const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9350);
+const GameProfileConstants = fn(9370);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   artHero: null,
@@ -171,7 +171,7 @@ export default function GameProfileHeader(arg0) {
   const items8 = [timestampProducer(Text_Text.Text, obj13)];
   let tmp12Result3 = game.id === hasOwnProperty;
   if (tmp12Result3) {
-    const obj14 = { source: _modDef9359, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj14 = { source: _modDef9379, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp12Result3 = timestampProducer(FastImageDefault, obj14);
     const tmp6Result2 = FastImageDefault;
   }

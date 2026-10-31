@@ -3,7 +3,7 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import frecency_user_settings from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
-import v1 from "../../_runtime/01267_v1.js";
+import v1 from "../../_runtime/01266_v1.js";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";

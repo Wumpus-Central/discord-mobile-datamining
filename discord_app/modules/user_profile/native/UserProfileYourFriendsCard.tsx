@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const jsx = fn(21).jsx;
-let closure_11 = Object.freeze({ direction: fn(1188).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(5009);
+let closure_11 = Object.freeze({ direction: fn(1187).CutoutDirection.RIGHT, inset: -4 });
+const createStyles = fn(5014);
 let closure_12 = createStyles.createStyles({
   facepile: { flexDirection: "row", alignItems: "center" },
   avatars: { flexDirection: "row" },
@@ -43,7 +43,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9132).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9151).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -87,16 +87,16 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             const items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
             }
             obj4.cutout = tmp3;
-            obj.children = jsx(closure_0(1188).CutoutableAvatarImage, {
+            obj.children = jsx(closure_0(1187).CutoutableAvatarImage, {
               user,
               guildId: "r",
-              size: closure_0(1188).AvatarSizes.XSMALL,
+              size: closure_0(1187).AvatarSizes.XSMALL,
               cutout: null,
             });
             return (
@@ -117,16 +117,16 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
             const items = [{ translateX: 4 * (first.length - 1 - index) }];
             obj2.transform = items;
             obj.style = obj2;
-            const obj4 = { user, guildId: "r", size: closure_0(1188).AvatarSizes.XSMALL, cutout: null };
+            const obj4 = { user, guildId: "r", size: closure_0(1187).AvatarSizes.XSMALL, cutout: null };
             let tmp3;
             if (index < first.length - 1) {
               tmp3 = closure_2_11;
             }
             obj4.cutout = tmp3;
-            obj.children = jsx(closure_0(1188).CutoutableAvatarImage, {
+            obj.children = jsx(closure_0(1187).CutoutableAvatarImage, {
               user,
               guildId: "r",
-              size: closure_0(1188).AvatarSizes.XSMALL,
+              size: closure_0(1187).AvatarSizes.XSMALL,
               cutout: null,
             });
             return (

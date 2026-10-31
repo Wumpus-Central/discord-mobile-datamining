@@ -9,7 +9,7 @@ import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(9806).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_6 = fn(9827).SEARCH_MESSAGE_TAB_SENTINEL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");
 

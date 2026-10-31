@@ -99,7 +99,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(13803).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(13838).DirectoryEntryCategories;
 let Endpoints = fn(1072).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;
@@ -110,7 +110,7 @@ asyncGeneratorStep(async (arg0, category_id) => {
     closure_3 = tmp3;
     closure_130_0 = closure_0;
     category_id(572).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
-    const HTTP = closure_0(1283).HTTP;
+    const HTTP = closure_0(1282).HTTP;
     const request = { url: c6.DIRECTORY_CHANNEL_ENTRIES(closure_0), query: { category_id }, rejectWithError: true };
     await HTTP.get(request);
     if (1 === tmp7) {
@@ -183,7 +183,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -206,7 +206,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
               c5 = 1;
               const obj6 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId, query };
               query(572).dispatch(obj6);
-              const HTTP = channelId(1283).HTTP;
+              const HTTP = channelId(1282).HTTP;
               const request = { url: c6.DIRECTORY_ENTRIES_SEARCH(channelId), query: null, rejectWithError: true };
               const obj8 = { query };
               request.query = obj8;
@@ -290,12 +290,12 @@ export function removeDirectoryGuildEntry(channelId, guildId) {
   };
   const obj = TrackedHTTPUtilsDefault;
   obj2.trackedActionData = {
-    event: closure_0(1261).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
+    event: closure_0(1260).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
     properties: { directory_channel_id: channelId, guild_id: guildId },
   };
   obj.delete(obj2);
   const obj3 = {
-    event: closure_0(1261).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
+    event: closure_0(1260).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
     properties: { directory_channel_id: channelId, guild_id: guildId },
   };
   DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });

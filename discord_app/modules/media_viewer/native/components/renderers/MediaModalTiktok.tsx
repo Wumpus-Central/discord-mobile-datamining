@@ -8,11 +8,11 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 let jsx = fn(21).jsx;
 let closure_6 = { autoplay: 1, controls: 0, enable_music_info: 0, enable_timestamp: 0, utm_source: "discord.gg" };
-let obj = { "-1": fn(8862).PlayerState.UNSTARTED, 0: null, 1: null, 2: null, 3: null };
-obj[0] = fn(8862).PlayerState.ENDED;
-obj[1] = fn(8862).PlayerState.PLAYING;
-obj[2] = fn(8862).PlayerState.PAUSED;
-obj[3] = fn(8862).PlayerState.BUFFERING;
+let obj = { "-1": fn(8871).PlayerState.UNSTARTED, 0: null, 1: null, 2: null, 3: null };
+obj[0] = fn(8871).PlayerState.ENDED;
+obj[1] = fn(8871).PlayerState.PLAYING;
+obj[2] = fn(8871).PlayerState.PAUSED;
+obj[3] = fn(8871).PlayerState.BUFFERING;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/renderers/MediaModalTiktok.tsx");
 

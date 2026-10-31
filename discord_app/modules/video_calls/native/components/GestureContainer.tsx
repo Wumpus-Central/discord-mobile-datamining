@@ -8,11 +8,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10981).useChannelCallStore;
-const Constants = fn(11662);
+const useChannelCallStore = fn(11000).useChannelCallStore;
+const Constants = fn(11699);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
 const __initData = {
@@ -30,11 +30,11 @@ let result = size.fileFinishedImporting("modules/video_calls/native/components/G
 export default function GestureContainer(children) {
   let sharedValue;
   const tmp = closure_8();
-  const height = sharedValue(1492)().height;
+  const height = sharedValue(1491)().height;
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
-  sharedValue = height(5090).useSharedValue(0);
-  const Gesture = height(5298).Gesture;
-  let obj = height(5090);
+  sharedValue = height(5095).useSharedValue(0);
+  const Gesture = height(5303).Gesture;
+  let obj = height(5095);
   const PanResult = Gesture.Pan();
   class S {
     constructor(arg0) {
@@ -59,20 +59,20 @@ export default function GestureContainer(children) {
   fn.__closure = {
     position: sharedValue,
     THRESHOLD_VELOCITY: 500,
-    runOnJS: height(5090).runOnJS,
-    ModalActionCreators: sharedValue(6738),
-    withTiming: height(5249).withTiming,
-    DECELERATED_EASING: height(1188).DECELERATED_EASING,
+    runOnJS: height(5095).runOnJS,
+    ModalActionCreators: sharedValue(6744),
+    withTiming: height(5254).withTiming,
+    DECELERATED_EASING: height(1187).DECELERATED_EASING,
   };
   fn.__workletHash = 10736744030668;
   fn.__initData = __initData;
   let obj2 = {
     position: sharedValue,
     THRESHOLD_VELOCITY: 500,
-    runOnJS: height(5090).runOnJS,
-    ModalActionCreators: sharedValue(6738),
-    withTiming: height(5249).withTiming,
-    DECELERATED_EASING: height(1188).DECELERATED_EASING,
+    runOnJS: height(5095).runOnJS,
+    ModalActionCreators: sharedValue(6744),
+    withTiming: height(5254).withTiming,
+    DECELERATED_EASING: height(1187).DECELERATED_EASING,
   };
   let items = [-closure_5, closure_5];
   const onEndResult = onUpdateResult.onEnd(fn);
@@ -91,16 +91,16 @@ export default function GestureContainer(children) {
     obj.transform = items1;
     return obj;
   };
-  const obj8 = height(5090);
-  fn2.__closure = { interpolate: height(5090).interpolate, position: sharedValue, height };
+  const obj8 = height(5095);
+  fn2.__closure = { interpolate: height(5095).interpolate, position: sharedValue, height };
   fn2.__workletHash = 16049033434372;
   fn2.__initData = __initData3;
   let obj4 = { style: tmp.background, children: null };
   const animatedStyle = obj8.useAnimatedStyle(fn2);
-  let obj3 = { interpolate: height(5090).interpolate, position: sharedValue, height };
-  obj4.children = jsx(height(5298).GestureDetector, {
+  let obj3 = { interpolate: height(5095).interpolate, position: sharedValue, height };
+  obj4.children = jsx(height(5303).GestureDetector, {
     gesture: failOffsetXResult,
-    children: jsx(sharedValue(5090).View, { style: animatedStyle, children: children.children }),
+    children: jsx(sharedValue(5095).View, { style: animatedStyle, children: children.children }),
   });
   return <View style={tmp.background}>{null}</View>;
 }

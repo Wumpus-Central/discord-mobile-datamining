@@ -4,8 +4,8 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3059 from "../../../Checkpoint.messages.js";
-import _modDef3091 from "../../../Checkpoint2026.messages.js";
+import _modDef3060 from "../../../Checkpoint.messages.js";
+import _modDef3092 from "../../../Checkpoint2026.messages.js";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
 import CheckpointScreenDefault from "../CheckpointScreen.tsx";
 import TextWritingAnimation from "../TextWritingAnimation.tsx";
@@ -57,11 +57,11 @@ export default function CheckpointWelcomeScreen() {
   obj6.style = items1;
   const tmp5 = CheckpointScreenDefault;
   const intl = util.intl;
-  obj6.text = intl.string(_modDef3059["CdU/PF"]);
+  obj6.text = intl.string(_modDef3060["CdU/PF"]);
   const items3 = [hasOwnProperty(TextWritingAnimationDefault, obj6), ,];
   const obj8 = { style: tmp.subtitle, text: null, delay: null, variant: "heading-xl/medium" };
   const intl2 = util.intl;
-  obj8.text = intl2.formatToPlainString(_modDef3091.xhZ23b, { username: name });
+  obj8.text = intl2.formatToPlainString(_modDef3092.xhZ23b, { username: name });
   obj8.delay = 100 + TextWritingAnimation.DURATION;
   items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj8);
   items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });

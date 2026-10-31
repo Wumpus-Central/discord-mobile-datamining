@@ -3,7 +3,7 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef2044 from "../../../_runtime/metro/02044__.js";
+import _modDef2042 from "../../../_runtime/metro/02042__.js";
 import DatabaseDaosDefault from "../app_database/DatabaseDaos.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
 import RegexUtilsDefault from "../../utils/RegexUtils.tsx";
@@ -67,7 +67,7 @@ let closure_39 = async function _loadSavedEmojis() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -93,9 +93,9 @@ let closure_39 = async function _loadSavedEmojis() {
               c2 = 1;
               c3 = 1;
               const obj6 = {
-                value: React(4907).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
+                value: React(4912).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () =>
-                    closure_2_1(6794).getAsync(closure_1_0),
+                    closure_2_1(6800).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,
@@ -162,7 +162,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let flag = closure_0(6828).canUseRoleSubscriptionIAP(guildId);
+      let flag = closure_0(6834).canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis === "function") {
         if (flag === undefined) {
           flag = false;
@@ -182,7 +182,7 @@ function updateGuildEmoji(guildId) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj = closure_0(6828);
+      obj = closure_0(6834);
     }
   }
 }
@@ -341,14 +341,14 @@ function handleRoleUpdate(guildId) {
         importDefaultResult31.compute();
       }
     }
-    obj = closure_0(4931);
+    obj = closure_0(4936);
   }
   return false;
 }
-const EmojiConstants = fn(1387);
+const EmojiConstants = fn(1386);
 ({ EmojiDisabledReasons: closure_18, EmojiIntention: closure_19 } = EmojiConstants);
 const NULL_STRING_GUILD_ID = fn(1072).NULL_STRING_GUILD_ID;
-const EmojiCategories = fn(6793).EmojiCategories;
+const EmojiCategories = fn(6799).EmojiCategories;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let items = [
   EmojiCategories.TOP_GUILD_EMOJI.toString(),
@@ -408,7 +408,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(item);
       });
       if (!someResult) {
-        let result = emoji(4963).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = emoji(4968).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -417,7 +417,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = emoji(4963);
+        obj = emoji(4968);
       }
       tmp6 = someResult;
     }
@@ -805,7 +805,7 @@ prototype2["getFrequentlyUsedEmojisWithoutFetchingLatest"] = function getFrequen
       }
       return byId;
     });
-    const found = mapped.filter(self(1380).isNotNullish);
+    const found = mapped.filter(self(1379).isNotNullish);
     const items = [];
     HermesBuiltin.arraySpread(dedupeEmojisByNameOrIdDefault(found).values(), 0);
     self.frequentlyUsed = items;
@@ -834,7 +834,7 @@ prototype2["rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest"] =
       }
       return byId;
     });
-    const found = mapped.filter(self(1380).isNotNullish);
+    const found = mapped.filter(self(1379).isNotNullish);
     obj = dedupeEmojisByNameOrIdDefault(found);
     const items = [...obj.values()];
     self.frequentlyUsedReactionEmojis = items;
@@ -886,7 +886,7 @@ prototype2["rebuildFavoriteEmojisWithoutFetchingLatest"] = function rebuildFavor
     }
     return byId;
   });
-  const found = mapped.filter(self(1380).isNotNullish);
+  const found = mapped.filter(self(1379).isNotNullish);
   obj = dedupeEmojisByNameOrIdDefault(found);
   const items = [...obj.values()];
   self.favorites = items;
@@ -1232,7 +1232,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(5651).escape(formatted);
+  const escapeResult = formatted(5656).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;
@@ -1358,7 +1358,7 @@ prototype3["searchWithoutFetchingLatest"] = function searchWithoutFetchingLatest
       if (!tmp5) {
         let tmp6 = _slicedToArray;
         if (_slicedToArray) {
-          tmp6 = emoji.type !== channel(4958).EmojiTypes.UNICODE;
+          tmp6 = emoji.type !== channel(4963).EmojiTypes.UNICODE;
         }
         tmp5 = tmp6;
       }
@@ -1633,8 +1633,8 @@ const emojiStore = new EmojiStore(DispatcherDefault, {
   TOP_EMOJIS_FETCH_SUCCESS: function handleTopEmojisLoaded(topEmojisMetadata) {
     topEmojisMetadata = topEmojisMetadata.topEmojisMetadata;
     obj = { emojiIds: topEmojisMetadata.map((emojiId) => emojiId.emojiId), topEmojisTTL: null };
-    const tmpResult = _modDef2044(_modDef2044());
-    obj.topEmojisTTL = _modDef2044(_modDef2044()).add(1, "days").valueOf();
+    const tmpResult = _modDef2042(_modDef2042());
+    obj.topEmojisTTL = _modDef2042(_modDef2042()).add(1, "days").valueOf();
     const result = map.set(topEmojisMetadata.guildId, obj);
   },
   TOGGLE_GUILD_EXPANDED_STATE: function toggleGuildExpandedState(guildId) {

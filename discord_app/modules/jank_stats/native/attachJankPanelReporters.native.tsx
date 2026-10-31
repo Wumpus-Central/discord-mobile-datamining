@@ -9,7 +9,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const isStreamParticipant = fn(5676).isStreamParticipant;
+const isStreamParticipant = fn(5681).isStreamParticipant;
 let c10 = false;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/jank_stats/native/attachJankPanelReporters.native.tsx");
@@ -18,7 +18,7 @@ export default function attachJankPanelReporters() {
   if (!c10) {
     c10 = true;
     let update = "voice";
-    const f117566 = () => {
+    const f117938 = () => {
       state = state.getState();
       return state.isAnyVoicePanelOpen();
     };
@@ -26,11 +26,11 @@ export default function attachJankPanelReporters() {
     const isAnyVoicePanelOpenResult = state.isAnyVoicePanelOpen();
     closure_2 = isAnyVoicePanelOpenResult;
     if (isAnyVoicePanelOpenResult) {
-      update(f117566[8]).setJankPanelOpen("voice", true);
-      const obj3 = update(f117566[8]);
+      update(f117938[8]).setJankPanelOpen("voice", true);
+      const obj3 = update(f117938[8]);
     }
     const subscription = VoicePanelStore.subscribe(() => {
-      const tmp = f117566();
+      const tmp = f117938();
       if (tmp !== closure_2) {
         closure_2 = tmp;
         getJankSurfaceName.setJankPanelOpen(update, tmp);
@@ -39,15 +39,15 @@ export default function attachJankPanelReporters() {
     const items = [closure_2, ChannelStore, SelectedChannelStore];
     closure_129_0 = "activity";
     closure_129_1 = () => {
-      let result = update(f117566[10]).isConnectedToActivityInText();
+      let result = update(f117938[10]).isConnectedToActivityInText();
       if (result) {
-        result = update(f117566[10]).isActivityPanelFullscreen();
-        const tmpResult = update(f117566[10]);
+        result = update(f117938[10]).isActivityPanelFullscreen();
+        const tmpResult = update(f117938[10]);
       }
       return result;
     };
     closure_129_2 = undefined;
-    let result = update(f117566[10]).isConnectedToActivityInText();
+    let result = update(f117938[10]).isConnectedToActivityInText();
     if (result) {
       result = tmp9(tmp10[10]).isActivityPanelFullscreen();
       const tmp9Result = tmp9(tmp10[10]);
@@ -58,7 +58,7 @@ export default function attachJankPanelReporters() {
       const tmp9Result4 = tmp9(tmp10[8]);
     }
     update = () => {
-      const tmp = f117566();
+      const tmp = f117938();
       if (tmp !== closure_2) {
         closure_2 = tmp;
         getJankSurfaceName.setJankPanelOpen(update, tmp);
@@ -76,7 +76,7 @@ export default function attachJankPanelReporters() {
       const tmp9Result5 = tmp9(tmp10[8]);
     }
     update = () => {
-      const tmp = f117566();
+      const tmp = f117938();
       if (tmp !== closure_2) {
         closure_2 = tmp;
         getJankSurfaceName.setJankPanelOpen(update, tmp);
@@ -84,7 +84,7 @@ export default function attachJankPanelReporters() {
     };
     const item1 = items1.forEach((addChangeListener) => addChangeListener.addChangeListener(update));
     update = function update() {
-      const result = update(f117566[8]).setJankVoicePanelFocus(
+      const result = update(f117938[8]).setJankVoicePanelFocus(
         (function getVoicePanelFocus() {
           const voicePanelsOpened = state.getState().voicePanelsOpened;
           if (0 === voicePanelsOpened.size) {
@@ -124,9 +124,9 @@ export default function attachJankPanelReporters() {
         })(),
       );
     };
-    let obj4 = update(f117566[10]);
+    let obj4 = update(f117938[10]);
     const tmp6 = closure_2;
-    const result2 = update(f117566[8]).setJankVoicePanelFocus(
+    const result2 = update(f117938[8]).setJankVoicePanelFocus(
       (function getVoicePanelFocus() {
         const voicePanelsOpened = state.getState().voicePanelsOpened;
         if (0 === voicePanelsOpened.size) {
@@ -168,6 +168,6 @@ export default function attachJankPanelReporters() {
     const subscription1 = VoicePanelStore.subscribe(update);
     const items2 = [ChannelRTCStore, tmp6];
     const item2 = items2.forEach((addChangeListener) => addChangeListener.addChangeListener(update));
-    const tmp9Result6 = update(f117566[8]);
+    const tmp9Result6 = update(f117938[8]);
   }
 }

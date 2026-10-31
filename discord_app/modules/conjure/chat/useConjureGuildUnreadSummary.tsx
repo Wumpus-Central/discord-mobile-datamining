@@ -5,7 +5,7 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const ReadStateTypes = fn(6770).ReadStateTypes;
+const ReadStateTypes = fn(6776).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/useConjureGuildUnreadSummary.tsx");
 
@@ -30,5 +30,5 @@ export default function useConjureGuildUnreadSummary(arg0) {
     }
   }, items1);
   let obj = stateFromStoresArray(504);
-  return stateFromStoresArray(10857).useConjureUnreadSummary(arg0);
+  return stateFromStoresArray(10877).useConjureUnreadSummary(arg0);
 }

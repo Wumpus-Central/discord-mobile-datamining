@@ -14,8 +14,8 @@ function handleChannelDelete(channel) {
     enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
   }
   if (enabled) {
-    enabled = channel(1377).isDesktop();
-    const obj2 = channel(1377);
+    enabled = channel(1376).isDesktop();
+    const obj2 = channel(1376);
   }
   if (enabled) {
     if (
@@ -49,8 +49,8 @@ function handleChannelDelete(channel) {
         enabled2 = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
       }
       if (enabled2) {
-        enabled2 = channel(1377).isDesktop();
-        const obj4 = channel(1377);
+        enabled2 = channel(1376).isDesktop();
+        const obj4 = channel(1376);
       }
       let tmp10 = !enabled2;
       if (!enabled2) {
@@ -70,7 +70,7 @@ function handleChannelDelete(channel) {
     return false;
   }
 }
-const isStaticChannelRoute = fn(4865).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
 let tabs = [];
 let c8 = null;
 let closure_9 = 1;
@@ -485,8 +485,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj3(1377).isDesktop();
-      const obj2 = obj3(1377);
+      enabled = obj3(1376).isDesktop();
+      const obj2 = obj3(1376);
     }
     if (enabled) {
       obj3 = { kind: "route", routePath, routeLabel: routePath.routeLabel };
@@ -573,8 +573,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj3(1377).isDesktop();
-      const obj2 = obj3(1377);
+      enabled = obj3(1376).isDesktop();
+      const obj2 = obj3(1376);
     }
     if (enabled) {
       if (null != channelId) {

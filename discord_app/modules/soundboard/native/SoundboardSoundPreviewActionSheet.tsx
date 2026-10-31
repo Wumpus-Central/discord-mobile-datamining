@@ -16,7 +16,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   soundPresentation: {
     borderWidth: 2,
@@ -43,7 +43,7 @@ obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAK
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 obj2.emoji = size;
 obj2.emojiFastImage = { width: 128, height: 128 };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 60;
@@ -136,7 +136,7 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   }
   stateFromStores3 = tmp12;
   const items8 = [stateFromStores1, sound];
-  const items9 = [id, sound, tmp12];
+  const items9 = [id, sound, tmp12, analyticsSource];
   const callback2 = obj3.useCallback(() => {
     if (stateFromStores1) {
       SoundboardActionCreators.removeFavoriteSound(sound.soundId);
@@ -154,7 +154,13 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
   const callback3 = obj3.useCallback(() => {
     if (!stateFromStores3) {
       _undefined(true);
-      const obj4 = { sound_id: null, sound_name: null, sound_guild_id: null, location_guild_id: null };
+      const obj4 = {
+        sound_id: null,
+        sound_name: null,
+        sound_guild_id: null,
+        location_guild_id: null,
+        location_stack: null,
+      };
       ({ soundId: obj2.sound_id, name: obj2.sound_name, guildId: obj2.sound_guild_id } = sound);
       channel = ChannelStore.getChannel(id);
       let guild_id;
@@ -162,6 +168,8 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
         guild_id = channel.guild_id;
       }
       obj4.location_guild_id = guild_id;
+      const items = [analyticsSource];
+      obj4.location_stack = items;
       AnalyticsUtilsDefault.track(constants.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, obj4);
       SoundboardActionCreators.playSoundLocally(id, sound);
     }

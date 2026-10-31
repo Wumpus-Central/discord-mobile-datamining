@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_5 = { color: fn(6061).CHECKPOINT_PRIMARY };
+let closure_5 = { color: fn(6066).CHECKPOINT_PRIMARY };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointText.tsx");
 

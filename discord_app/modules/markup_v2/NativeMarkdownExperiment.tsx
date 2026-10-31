@@ -1,14 +1,14 @@
 // discord_app/modules/markup_v2/NativeMarkdownExperiment.tsx
 import LabFeatureStore from "../labs/LabFeatureStore.tsx";
 
-let ApexExperiment = fn(1448);
+let ApexExperiment = fn(1447);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2025-04-native-markdown",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-ApexExperiment = fn(1448);
+ApexExperiment = fn(1447);
 const apexExperiment1 = ApexExperiment.createApexExperiment({
   name: "2026-10-native-markdown-setting",
   kind: "user",

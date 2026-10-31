@@ -46,8 +46,8 @@ function ingestStickerPack(item10017, packStickersDatabase, packsDatabase, premi
     })(item10017.stickers),
   );
 }
-const TypeTag = fn(4874).TypeTag;
-const LibdiscoreStore = fn(4881).LibdiscoreStore;
+const TypeTag = fn(4879).TypeTag;
+const LibdiscoreStore = fn(4886).LibdiscoreStore;
 let c4 = false;
 let closure_5 = null;
 const HOUR = DurationsDefault.Millis.HOUR;

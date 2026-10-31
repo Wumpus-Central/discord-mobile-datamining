@@ -84,10 +84,10 @@ function collectForumAnalyticsMetadata(sessionId) {
   }
   return tmp;
 }
-const DraftType = fn(7694).DraftType;
+const DraftType = fn(7701).DraftType;
 const Permissions = fn(1072).Permissions;
-const ChannelFlags = fn(4865).ChannelFlags;
-const constants = fn(1113).ThreadSortOrderReadableForAnalytics;
+const ChannelFlags = fn(4870).ChannelFlags;
+const constants = fn(1112).ThreadSortOrderReadableForAnalytics;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/tracking/TrackingUtils.tsx");
 

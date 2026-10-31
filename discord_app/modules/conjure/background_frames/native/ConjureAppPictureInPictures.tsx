@@ -10,17 +10,17 @@ function ConjureAppPictureInPictureLayer(frameIds) {
   frameIds = frameIds.frameIds;
   let height;
   const tmp = closure_10();
-  const size = height(1492)();
+  const size = height(1491)();
   const width = size.width;
   height = size.height;
-  const tmp4 = height(1626)();
+  const tmp4 = height(1625)();
   dependencyMap = tmp4;
-  noop = height(19061)(tmp4);
-  const tmp5 = height(7095)({ includeCustomKeyboard: true });
-  const sharedValue = width(5090).useSharedValue(false);
-  const obj = width(5090);
+  noop = height(19110)(tmp4);
+  const tmp5 = height(7101)({ includeCustomKeyboard: true });
+  const sharedValue = width(5095).useSharedValue(false);
+  const obj = width(5095);
   const tmp2 = height;
-  const sharedValue1 = width(5090).useSharedValue(false);
+  const sharedValue1 = width(5095).useSharedValue(false);
   const items = [width, height, tmp4];
   const memo = noop.useMemo(
     () => conjureAppPictureInPictureLayout.getCloseTargetCenter(width, height, closure_2),
@@ -39,7 +39,7 @@ function ConjureAppPictureInPictureLayer(frameIds) {
   }
   obj3.pointerEvents = str;
   const items2 = [
-    closure_8(tmp2(19065), { center: memo, shown: sharedValue, hovered: sharedValue1 }),
+    closure_8(tmp2(19114), { center: memo, shown: sharedValue, hovered: sharedValue1 }),
     frameIds.map((frameId, index) =>
       React6(
         ConjureAppPictureInPictureWithSize,
@@ -83,11 +83,11 @@ function ConjureAppPictureInPictureWithSize(frameId) {
   return closure_8(windowWidth(stateFromStores[14]), obj2);
 }
 const View = fn(17).View;
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({ asLaunched: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles({
   layer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
   hidden: { opacity: 0 },

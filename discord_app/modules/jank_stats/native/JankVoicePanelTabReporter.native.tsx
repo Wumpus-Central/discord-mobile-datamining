@@ -4,8 +4,8 @@ import getJankSurfaceName from "getJankSurfaceName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const VoicePanelModes = fn(11204).VoicePanelModes;
-const VoicePanelControlsModes = fn(11202).VoicePanelControlsModes;
+const VoicePanelModes = fn(11223).VoicePanelModes;
+const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;
 const map = new Map();
 function isDrawerShown(drawerMode, arg1) {
   let tmp = drawerMode.drawerMode && !drawerMode.hidden;

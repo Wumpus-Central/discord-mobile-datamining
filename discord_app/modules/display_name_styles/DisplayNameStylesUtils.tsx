@@ -9,7 +9,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1402);
+const DisplayNameStylesConstants = fn(1401);
 ({
   DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4,
   DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty,
@@ -17,10 +17,10 @@ const DisplayNameStylesConstants = fn(1402);
   HEXAGON_CAMPAIGN_FONTS: closure_7,
 } = DisplayNameStylesConstants);
 let items = [
-  fn(1403).DisplayNameEffect.NEON,
-  fn(1403).DisplayNameEffect.TOON,
-  fn(1403).DisplayNameEffect.POP,
-  fn(1403).DisplayNameEffect.GUMMY,
+  fn(1402).DisplayNameEffect.NEON,
+  fn(1402).DisplayNameEffect.TOON,
+  fn(1402).DisplayNameEffect.POP,
+  fn(1402).DisplayNameEffect.GUMMY,
 ];
 const set = new Set(items);
 const items1 = [
@@ -62,10 +62,10 @@ export function isSolidPresetColor(arg0, arg1) {
   closure_0 = arg0;
   return timestampProducer(arg1).some((item) => item[0] === closure_0);
 }
-export function createColorPaletteList(selectedEffectId, items) {
-  let tmp = timestampProducer(selectedEffectId);
-  closure_0 = ColorPaletteUtils.isCustomColorPalette(items, tmp);
-  const presetPalettesWithCustom = ColorPaletteUtils.getPresetPalettesWithCustom(tmp, items);
+export function createColorPaletteList(arg0, arr2) {
+  let tmp = timestampProducer(arg0);
+  closure_0 = ColorPaletteUtils.isCustomColorPalette(arr2, tmp);
+  const presetPalettesWithCustom = ColorPaletteUtils.getPresetPalettesWithCustom(tmp, arr2);
   return presetPalettesWithCustom.map((colors, index) => {
     const obj = { colors, isCustom: null };
     let tmp = closure_0;
@@ -75,45 +75,6 @@ export function createColorPaletteList(selectedEffectId, items) {
     obj.isCustom = tmp;
     return obj;
   });
-}
-export function updateCustomSwatch(arr, GUMMY, gummyColors) {
-  if (0 !== arr.length) {
-    if (null != gummyColors) {
-      if (0 !== gummyColors.length) {
-        const tmp9 = timestampProducer(GUMMY);
-        const first = arr[0];
-        const isCustom = first.isCustom;
-        if (obj5.isCustomColorPalette(gummyColors, tmp9)) {
-          if (!isCustom) {
-            const obj = { colors: gummyColors.slice(), isCustom: true };
-            const substr = arr.slice();
-            substr[0] = obj;
-            let tmp3 = substr;
-          } else {
-            discord_common_shallowEqual;
-            tmp3 = arr;
-          }
-          let tmp = tmp3;
-        } else {
-          tmp = arr;
-          if (isCustom) {
-            tmp = arr;
-            if (tmp11Result2.areArraysShallowEqual(tmp9[0], gummyColors)) {
-              const obj2 = { colors: null, isCustom: false };
-              const first1 = tmp9[0];
-              obj2.colors = first1.slice();
-              const substr1 = arr.slice();
-              substr1[0] = obj2;
-              tmp = substr1;
-            }
-            tmp11Result2 = discord_common_shallowEqual;
-          }
-        }
-        return tmp;
-      }
-    }
-  }
-  return arr;
 }
 export function getEffectColorCount(effectId) {
   if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
@@ -178,8 +139,8 @@ export function buildGummyColors(color) {
     return _modDef671.hsl((((closure_0 + hueShift) % 360) + 360) % 360, saturation, lightness).num();
   });
 }
-export function rebuildGummySourceColor(selectedColors) {
-  const first = selectedColors[0];
+export function rebuildGummySourceColor(color) {
+  const first = color[0];
   if (null == first) {
     return _modDef671.hsl(0, hasOwnProperty, React4).num();
   } else {

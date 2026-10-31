@@ -25,12 +25,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10981);
+const ChannelCallStore = fn(11000);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5676).ParticipantTypes;
+const ParticipantTypes = fn(5681).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   elevationShadow: null,
   background: null,
@@ -42,8 +42,8 @@ let obj = {
   thermalAlertIconContainer: null,
   thermalAlertIcon: null,
 };
-const native = fn(1188);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1188).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1187);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1187).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.background = {
   backgroundColor: nativeDefault.colors.BLACK,
   borderRadius: nativeDefault.radii.sm,

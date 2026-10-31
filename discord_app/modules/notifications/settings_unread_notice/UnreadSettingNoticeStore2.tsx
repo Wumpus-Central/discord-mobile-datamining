@@ -130,7 +130,7 @@ function shouldTrackChannel(channelId) {
   }
 }
 const UserNotificationSettings = fn(1072).UserNotificationSettings;
-const UnreadSetting = fn(6770).UnreadSetting;
+const UnreadSetting = fn(6776).UnreadSetting;
 const constants = fn(1082).ChannelNotificationSettingsFlags;
 let items = [{ timeSinceJoin: DurationsDefault.Millis.HOUR, sends: 1, viewTime: DurationsDefault.Millis.MINUTE }, , ,];
 let obj = { timeSinceJoin: DurationsDefault.Millis.HOUR, sends: 1, viewTime: DurationsDefault.Millis.MINUTE };

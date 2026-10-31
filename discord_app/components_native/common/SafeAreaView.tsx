@@ -1,5 +1,5 @@
 // discord_app/components_native/common/SafeAreaView.tsx
-import _modDef1343 from "../../../_runtime/metro/01343__.js";
+import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import useRefValueDefault from "../../hooks/useRefValue.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -62,7 +62,7 @@ export function SafeAreaPaddingView(top) {
   items[4] = tmp12;
   current = items;
   const tmp13 = useRefValueDefault(ref);
-  const tmp14 = _modDef1343(items, tmp13);
+  const tmp14 = _modDef1342(items, tmp13);
   closure_2 = tmp14;
   if (tmp14) {
     current = tmp13;

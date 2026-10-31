@@ -105,9 +105,9 @@ function AnimatedEnterExitContainer(children) {
   return jsx(cleanUp(sharedValue[10]).View, { style, children: children.children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9805).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9826).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = {
@@ -148,12 +148,12 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
   let memo;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(18635).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(18677).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(18635);
-  const validFilterTokens = searchContext(18644).useValidFilterTokens(searchContext);
+  let obj = searchContext(18677);
+  const validFilterTokens = searchContext(18686).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsRef(suggestionsMounted.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -212,7 +212,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
       ),
     items,
   );
-  let obj2 = searchContext(18644);
+  let obj2 = searchContext(18686);
   const fn = function f() {
     return dismissed.get();
   };
@@ -232,8 +232,8 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
       return;
     }
   }
-  const obj3 = searchContext(5090);
-  T.__closure = { runOnJS: searchContext(5090).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
+  const obj3 = searchContext(5095);
+  T.__closure = { runOnJS: searchContext(5095).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
   T.__workletHash = 8991360021943;
   T.__initData = __initData3;
   const animatedReaction = obj3.useAnimatedReaction(fn, T);
@@ -281,7 +281,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
       </AnimatedEnterExitContainer>
     );
   }, items4);
-  return first(searchContext(5075).TransitionGroup, {
+  return first(searchContext(5080).TransitionGroup, {
     items: memo1,
     renderItem: callback,
     getItemKey: getSuggestionsKey,

@@ -41,6 +41,7 @@ class VideoComponent {
       flag4 = true;
     }
     closure_1 = undefined;
+    ({ httpEngine, useTextureView } = global);
     tmp = closure_3(closure_4.useState("active" === AppState.currentState), 2);
     closure_1 = tmp[1];
     items = [];
@@ -78,6 +79,7 @@ class VideoComponent {
       mixWithOthers: null,
       preventsDisplaySleepDuringVideoPlayback: null,
       httpEngine: null,
+      useTextureView: null,
     };
     tmp3 = jsx;
     if (!flag) {
@@ -99,7 +101,8 @@ class VideoComponent {
     obj["aria-hidden"] = ariaHidden;
     obj.mixWithOthers = mixWithOthers;
     obj.preventsDisplaySleepDuringVideoPlayback = flag4;
-    obj.httpEngine = global.httpEngine;
+    obj.httpEngine = httpEngine;
+    obj.useTextureView = useTextureView;
     props = undefined;
     if (controls != null) {
       props = controls.props;
@@ -111,7 +114,7 @@ class VideoComponent {
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: hasOwnProperty, View: metroRequire, AppState: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     flex: 1,
@@ -317,7 +320,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(5075).ThemeContext;
+Video.contextType = fn(5080).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

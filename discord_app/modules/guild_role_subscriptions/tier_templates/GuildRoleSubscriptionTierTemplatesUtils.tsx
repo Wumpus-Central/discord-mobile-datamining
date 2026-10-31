@@ -7,7 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleSubscriptionsStore from "../GuildRoleSubscriptionsStore.tsx";
 import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore.tsx";
-import allSettled_mod from "../../../../_runtime/06450_allSettled.js";
+import allSettled_mod from "../../../../_runtime/06456_allSettled.js";
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -138,9 +138,9 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(17148).useEditStateStore;
+const useEditStateStore = fn(17204).useEditStateStore;
 const GuildFeatures = fn(1072).GuildFeatures;
-const ChannelFlags = fn(4865).ChannelFlags;
+const ChannelFlags = fn(4870).ChannelFlags;
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
 let closure_12 = {};

@@ -18,9 +18,9 @@ const result = size.fileFinishedImporting("modules/activities/panel/native/pip/u
 export default function usePIPAvoidanceSpecs(safeArea) {
   _require = safeArea;
   const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(12036)();
+  const tmp2 = sharedValue(12074)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(19062)();
+  const tmp3 = sharedValue(19111)();
   __initData = tmp3;
   let obj = require("ReanimatedRexport");
   const fn = function n() {
@@ -47,9 +47,9 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   let obj2 = require("ReanimatedRexport");
   fn2.__closure = {
     cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-    getPIPBottomOffsetForPIPMode: sharedValue(18949),
-    getAdjustedBottomOffsets: sharedValue(19063),
-    updateSharedValueIfChanged: sharedValue(11208),
+    getPIPBottomOffsetForPIPMode: sharedValue(18998),
+    getAdjustedBottomOffsets: sharedValue(19112),
+    updateSharedValueIfChanged: sharedValue(11227),
     pipAvoidanceSpecs: sharedValue,
   };
   fn2.__workletHash = 643938425459;

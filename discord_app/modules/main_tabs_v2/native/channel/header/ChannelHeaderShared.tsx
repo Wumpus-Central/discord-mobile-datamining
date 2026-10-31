@@ -14,8 +14,9 @@ import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import BotTagDefault from "../../../../applications/native/BotTag.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef11306 from "../../../../../../_runtime/metro/11306__.js";
+import _modDef11338 from "../../../../../../_runtime/metro/11338__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
+import ConjureAppIconTileDefault from "../../../../conjure/projects/native/ConjureAppIconTile.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
@@ -25,7 +26,7 @@ require = fn;
 function TitleWrapper(headerAccessibilityLabel) {
   ({ children, onPress, titleContentHeight } = headerAccessibilityLabel);
   c1 = undefined;
-  const tmp = closure_11();
+  const tmp = closure_12();
   [tmp3, c1] = noop.useState(undefined);
   [][0] = titleContentHeight;
   const callback = noop.useCallback((nativeEvent) => {
@@ -60,7 +61,7 @@ function ChannelTitle(guildId) {
     disableArrow = false;
   }
   ({ userId, icon } = guildId);
-  const tmp = closure_11();
+  const tmp = closure_12();
   const obj = { style: tmp.channelContent, children: null };
   const obj2 = { style: tmp.nameWithArrow, children: null };
   let tmp4 = null;
@@ -103,7 +104,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef11306, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef11338, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -133,8 +134,8 @@ function UserAvatar(user) {
     status: "done",
     isMobileOnline: true,
     isVROnline: null,
-    style: "sku",
-    autoStatusCutout: null,
+    style: "button",
+    autoStatusCutout: "Group DM",
   };
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -143,7 +144,7 @@ function UserAvatar(user) {
   obj.status = tmp3;
   obj.isMobileOnline = isMobileOnline;
   obj.isVROnline = isVROnline;
-  obj.style = closure_11().channelIcon;
+  obj.style = closure_12().channelIcon;
   return React6(native.Avatar, obj);
 }
 function ChannelIconRaw(IconComponent) {
@@ -208,7 +209,7 @@ function ParentChannelSubTitle(channel) {
   const obj = { lineClamp: 1, accessibilityLabel: null, style: null, children: null };
   const intl = util.intl;
   const obj2 = { channelName: null };
-  const tmp = closure_11();
+  const tmp = closure_12();
   obj2.channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   obj.accessibilityLabel = intl.formatToPlainString(util.t.BjYvHO, obj2);
   obj.style = tmp.parentChannelName;
@@ -217,19 +218,29 @@ function ParentChannelSubTitle(channel) {
 }
 function AppSubTitle(application) {
   application = application.application;
-  const tmp = closure_11();
+  const tmp = closure_12();
   const obj2 = { style: tmp.appSubTitle, children: null };
-  let tmp7 = null;
   const manaTypeConsolidationExperiment =
     ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle");
   if (null != application.icon) {
     const obj3 = { source: null, style: null };
-    const tmp10 = FastImageDefault;
-    ({ id: obj5.id, icon: obj5.icon } = application);
-    obj3.source = AvatarUtilsDefault.getApplicationIconSource({ id: null, icon: null, size: 16 });
+    const tmp13 = FastImageDefault;
+    const obj5 = { id: null, icon: null, size: null };
+    ({ id: obj7.id, icon: obj7.icon } = application);
+    obj5.size = v16;
+    obj3.source = AvatarUtilsDefault.getApplicationIconSource(obj5);
     obj3.style = tmp.appIcon;
-    tmp7 = React6(tmp10, obj3);
-    const obj6 = { id: null, icon: null, size: 16 };
+    let tmp7 = React6(tmp13, obj3);
+  } else {
+    tmp7 = null;
+    if (null != application.conjureProjectId) {
+      const obj8 = { style: tmp.appIcon, children: null };
+      const obj9 = { applicationId: null, name: null, size: null };
+      ({ id: obj4.applicationId, name: obj4.name } = application);
+      obj9.size = v16;
+      obj8.children = React6(ConjureAppIconTileDefault, obj9);
+      tmp7 = React6(hasOwnProperty, obj8);
+    }
   }
   const items = [tmp7, ,];
   let str = "text-sm/normal";
@@ -249,7 +260,7 @@ function AppSubTitle(application) {
   return React7(hasOwnProperty, obj2);
 }
 function AppSubTitleSkeleton() {
-  const tmp = closure_11();
+  const tmp = closure_12();
   const obj = { style: tmp.appSubTitle, "aria-hidden": true, children: null };
   const items = [
     React6(hasOwnProperty, { style: tmp.skeletonIcon }),
@@ -259,7 +270,7 @@ function AppSubTitleSkeleton() {
   return React7(hasOwnProperty, obj);
 }
 function NoAppSubTitle() {
-  const tmp = closure_11();
+  const tmp = closure_12();
   const manaTypeConsolidationExperiment =
     ManaTypeConsolidationExperiment.useManaTypeConsolidationExperiment("ChannelHeaderAppSubTitle");
   let str = "text-sm/normal";
@@ -279,14 +290,15 @@ function NoAppSubTitle() {
   return React6(Text_Text.Text, obj2);
 }
 function EmptyIcon() {
-  return React6(hasOwnProperty, { style: closure_11().channelIconWrapper });
+  return React6(hasOwnProperty, { style: closure_12().channelIconWrapper });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5009);
-let closure_11 = createStyles.createStyles(() => {
+let c11 = 16;
+const createStyles = fn(5014);
+let closure_12 = createStyles.createStyles(() => {
   const obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },
     channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 },
@@ -323,13 +335,13 @@ let closure_11 = createStyles.createStyles(() => {
   obj.subTitleContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
   const obj3 = { tintColor: nativeDefault.colors.TEXT_STRONG };
   obj.appSubTitle = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, flexShrink: 1 };
-  const size = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs };
+  const size = { width: v16, height: v16, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
   obj.appIcon = size;
   obj.appName = { flexShrink: 1 };
   obj.noApp = { fontStyle: "italic" };
   const size1 = {
-    width: 16,
-    height: 16,
+    width: v16,
+    height: v16,
     borderRadius: nativeDefault.radii.xs,
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
   };

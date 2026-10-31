@@ -328,8 +328,8 @@ export function getExistingRolesRows(guild, sortedGuildRoles, channel, accessPer
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1114).intl;
-      stringResult = intl.string(tmp4(1114).t["gnsna/"]);
+      const intl = tmp4(1113).intl;
+      stringResult = intl.string(tmp4(1113).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
     const items = [obj];
@@ -395,8 +395,8 @@ export function getExistingRolesRowWithPermissionDisabled(
     const intl2 = require("util").intl;
     let stringResult = intl2.string(require("util").t.nZfHsf);
     if (stringResult === undefined) {
-      const intl = tmp4(1114).intl;
-      stringResult = intl.string(tmp4(1114).t["gnsna/"]);
+      const intl = tmp4(1113).intl;
+      stringResult = intl.string(tmp4(1113).t["gnsna/"]);
     }
     let obj = { rowType: RowType.EMPTY_STATE, colorString, name: stringResult, disabled: true, id: "EMPTY_STATE" };
     const items = [obj];

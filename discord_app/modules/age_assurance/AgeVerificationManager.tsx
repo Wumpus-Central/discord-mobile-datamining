@@ -60,10 +60,10 @@ function handleMessageCreate(channelId) {
 function handleLoadChannelMessages(channelId) {
   const messages = MessageActionCreatorsDefault.fetchMessages({ channelId, limit });
 }
-const transformUser = fn(1384).transformUser;
+const transformUser = fn(1383).transformUser;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, MAX_MESSAGES_PER_CHANNEL: c10 } = Constants);
-const SafetyToastType = fn(7484).SafetyToastType;
+const SafetyToastType = fn(7490).SafetyToastType;
 let closure_11 = new LoggerDefault("AgeVerificationManager");
 const prototype = function AgeVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -94,7 +94,7 @@ const prototype = function AgeVerificationManager() {
     }
     try {
       if (isAdultStatusResult) {
-        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6557).clear(channelId.channelId));
+        const item = ChannelMessagesDefault.forEach((channelId) => closure_1_1(6563).clear(channelId.channelId));
         const channelId = SelectedChannelStore.getChannelId();
         if (null != channelId) {
           handleLoadChannelMessages(tmp17);
@@ -113,8 +113,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              closure_1_0(7469).preloadForumThreads(channel);
-              const obj = closure_1_0(7469);
+              closure_1_0(7475).preloadForumThreads(channel);
+              const obj = closure_1_0(7475);
             }
           })(tmp17);
           const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(tmp17);

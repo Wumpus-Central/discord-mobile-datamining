@@ -2,7 +2,7 @@
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import GuildProfileConstants from "../../guild_profile/GuildProfileConstants.tsx";
-import rawDefault from "../../../../_runtime/10758_raw.js";
+import rawDefault from "../../../../_runtime/10778_raw.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const BANNER_PALETTE_PRESETS = GuildProfileConstants.BANNER_PALETTE_PRESETS;

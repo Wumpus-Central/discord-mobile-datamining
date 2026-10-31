@@ -485,7 +485,7 @@ function handleAppWillBecomeActive() {
     const newLocalMessages = MessageActionCreatorsDefault.fetchNewLocalMessages(channelId, closure_1_14);
   }
 }
-const isTextChannel = fn(4862).isTextChannel;
+const isTextChannel = fn(4867).isTextChannel;
 const Constants = fn(1072);
 ({
   MAX_MESSAGES_PER_CHANNEL: closure_14,
@@ -495,7 +495,7 @@ const Constants = fn(1072);
   Routes: closure_18,
   ChannelTypesSets: closure_19,
 } = Constants);
-const isStaticChannelRoute = fn(4865).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
 let closure_21 = 10 * DurationsDefault.Millis.SECOND;
 const logger = new LoggerDefault("MessageManager");
 let closure_25 = 90 * DurationsDefault.Millis.DAY;

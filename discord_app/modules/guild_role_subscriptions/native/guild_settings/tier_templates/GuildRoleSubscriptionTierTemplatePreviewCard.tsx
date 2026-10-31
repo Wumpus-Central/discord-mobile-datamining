@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
@@ -62,10 +62,10 @@ function BenefitShowCase(children) {
 }
 function ChannelBenefitShowCase(channel) {
   ({ description, type, name } = channel.channel);
-  const obj2 = { style: { flexDirection: "row", alignItems: "center" }, children: null };
+  const tmp = closure_11();
+  const obj2 = { style: tmp.channelTitle, children: null };
   const items = [
     React7(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(type), { size: "xs" }),
-    React7(native.Spacer, { size: 4 }),
     React7(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: name }),
   ];
   obj2.children = items;
@@ -78,7 +78,7 @@ function ViewEntireTemplateFooter() {
   const obj3 = {
     variant: "text-sm/semibold",
     color: "interactive-text-hover",
-    style: { marginTop: -1 },
+    style: tmp.viewEntireTemplateText,
     children: null,
   };
   const intl = util.intl;
@@ -102,10 +102,10 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
-    padding: 16,
+    padding: nativeDefault.space.PX_16,
     borderRadius: nativeDefault.radii.md,
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
     width: 319,
@@ -114,44 +114,57 @@ let obj2 = {
   descriptionPlanTextStyle: null,
   separator: null,
   contentContainer: null,
+  channelTitle: null,
+  viewEntireTemplateText: null,
   contentHeader: null,
   viewEntireTemplateFooter: null,
   viewEntireTemplateFooterUnderline: null,
 };
 let obj3 = {
-  padding: 16,
+  padding: nativeDefault.space.PX_16,
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
   width: 319,
 };
 obj2.subscriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_SUBTLE };
 let obj4 = { color: nativeDefault.colors.TEXT_SUBTLE };
-obj2.descriptionPlanTextStyle = { color: nativeDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
+obj2.descriptionPlanTextStyle = {
+  color: nativeDefault.colors.TEXT_MUTED,
+  paddingTop: nativeDefault.space.PX_8,
+  paddingBottom: nativeDefault.space.PX_16,
+};
 let size = {
   width: "100%",
   height: 1,
   backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER,
-  marginVertical: 16,
+  marginVertical: nativeDefault.space.PX_16,
 };
 obj2.separator = size;
-let obj5 = { color: nativeDefault.colors.TEXT_MUTED, paddingTop: 8, paddingBottom: 16 };
+let obj5 = {
+  color: nativeDefault.colors.TEXT_MUTED,
+  paddingTop: nativeDefault.space.PX_8,
+  paddingBottom: nativeDefault.space.PX_16,
+};
 obj2.contentContainer = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderTopRightRadius: nativeDefault.radii.sm,
   borderTopLeftRadius: nativeDefault.radii.sm,
-  padding: 16,
-  paddingBottom: 0,
+  padding: nativeDefault.space.PX_16,
+  paddingBottom: nativeDefault.space.PX_0,
 };
-obj2.contentHeader = { textTransform: "uppercase" };
 const obj6 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderTopRightRadius: nativeDefault.radii.sm,
   borderTopLeftRadius: nativeDefault.radii.sm,
-  padding: 16,
-  paddingBottom: 0,
+  padding: nativeDefault.space.PX_16,
+  paddingBottom: nativeDefault.space.PX_0,
 };
+obj2.channelTitle = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.viewEntireTemplateText = { marginTop: -1 };
+obj2.contentHeader = { textTransform: "uppercase" };
+let obj7 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.viewEntireTemplateFooter = {
-  paddingVertical: 16,
+  paddingVertical: nativeDefault.space.PX_16,
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
@@ -159,9 +172,9 @@ obj2.viewEntireTemplateFooter = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomLeftRadius: nativeDefault.radii.sm,
   borderBottomRightRadius: nativeDefault.radii.sm,
-  marginLeft: -16,
-  marginRight: -16,
-  marginTop: 16,
+  marginLeft: -nativeDefault.space.PX_16,
+  marginRight: -nativeDefault.space.PX_16,
+  marginTop: nativeDefault.space.PX_16,
 };
 const rect = {
   position: "absolute",
@@ -231,7 +244,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(19939, dependencyMap.paths),
+        asyncRequireImpl(19997, dependencyMap.paths),
         "TierTemplatePriceReselectionCard",
         obj2,
       );
@@ -253,7 +266,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19935, dependencyMap.paths), "TierTemplateCard", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19993, dependencyMap.paths), "TierTemplateCard", {
         template,
         guildId,
         handleSelectTemplateInPreview: callback1,
@@ -261,12 +274,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     },
     children: null,
   };
-  const obj8 = {
-    renderGap() {
-      return closure_1_9(Separator, {});
-    },
-    children: null,
-  };
+  const obj8 = { separator: closure_9(Separator, {}), children: null };
   const obj9 = { children: null };
   const obj10 = { title: null, count: null };
   const intl = tmp2(tmp3[14]).intl;
@@ -294,7 +302,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   obj11.children = items5;
   items4[1] = closure_10(suggestedUnusedPrices, obj11);
   obj8.children = items4;
-  const items6 = [closure_10(template(navigation[23]).GappedList, obj8), closure_9(ViewEntireTemplateFooter, {})];
+  const items6 = [closure_10(template(navigation[23]).SeparatedList, obj8), closure_9(ViewEntireTemplateFooter, {})];
   obj7.children = items6;
   items2[1] = closure_10(handleCreateFromTemplate, obj7);
   obj5.children = items2;

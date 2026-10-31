@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorS
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(9806).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+let closure_5 = fn(9827).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchCitation.tsx");
@@ -40,7 +40,7 @@ export function SmartSearchCitation(smartSearchQuery) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -56,7 +56,7 @@ export function SmartSearchCitation(smartSearchQuery) {
             } else {
               closure_0 = tmp3;
               const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-              const result = v2(13860).trackSmartSearchCitationOpened(obj4, v2(13858));
+              const result = v2(13895).trackSmartSearchCitationOpened(obj4, v2(13893));
               if ("conversation" === citation.sourceType) {
                 dependencyMap = 1;
                 v2 = 2;
@@ -64,7 +64,7 @@ export function SmartSearchCitation(smartSearchQuery) {
                 const obj5 = { value: onPressConversationCitation(citation), done: false };
                 return obj5;
               }
-              const obj6 = v2(13860);
+              const obj6 = v2(13895);
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;

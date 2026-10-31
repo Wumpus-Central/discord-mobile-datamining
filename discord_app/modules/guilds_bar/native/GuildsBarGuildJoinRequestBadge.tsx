@@ -2,16 +2,16 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MemberVerificationTypes from "../../guild_member_verification/MemberVerificationTypes.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef13787 from "../../../../_runtime/metro/13787__.js";
-import _modDef18320 from "../../../../_runtime/metro/18320__.js";
-import _modDef18321 from "../../../../_runtime/metro/18321__.js";
-import _modDef18322 from "../../../../_runtime/metro/18322__.js";
+import _modDef13822 from "../../../../_runtime/metro/13822__.js";
+import _modDef18363 from "../../../../_runtime/metro/18363__.js";
+import _modDef18364 from "../../../../_runtime/metro/18364__.js";
+import _modDef18365 from "../../../../_runtime/metro/18365__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { badgeImageContainer: null, badgeImage: null };
 let size = {
   position: "absolute",
@@ -27,7 +27,7 @@ let size = {
   overflow: "hidden",
 };
 obj2.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(6772).DARK_1_LIGHT_08 };
+const size1 = { height: 16, width: 16, opacity: fn(6778).DARK_1_LIGHT_08 };
 obj2.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -37,15 +37,15 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = closure_5();
   if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = _modDef18320;
+    let tmp4 = _modDef18363;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = _modDef18321;
+    tmp4 = _modDef18364;
   } else if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = _modDef18322;
+    tmp4 = _modDef18365;
   } else {
     tmp4 = null;
     if (MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = _modDef13787;
+      tmp4 = _modDef13822;
     }
   }
   let tmp9 = null;

@@ -9,7 +9,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const constants3 = fn(4954).NotificationSettingsUpdateType;
+const constants3 = fn(4959).NotificationSettingsUpdateType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 
@@ -39,7 +39,7 @@ export function getAccessibleEmojiDisplayName(me, count, emoji, arg3) {
       PirBBE = t.PirBBE;
       tmp5 = require;
     }
-    const intl = tmp5(1114).intl;
+    const intl = tmp5(1113).intl;
     const obj = { reactions: count, emojiName: null };
     if (null == emoji.id) {
       let str2 = UnicodeEmojisDefault.convertSurrogateToName(emoji.name);

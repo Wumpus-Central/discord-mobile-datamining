@@ -6,7 +6,7 @@ import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 const require = fn;
 let closure_3 = ["buttons"];
-let Constants = fn(6444);
+let Constants = fn(6450);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 const TransportTypes = Constants.TransportTypes;
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
@@ -16,12 +16,12 @@ let closure_12 = ["1402418171662569542"];
 let items = [, ,];
 ({ IPC: arr[0], WEBSOCKET: arr[1], POST_MESSAGE: arr[2] } = TransportTypes);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16255);
+const CONTEXT_MENU_ICON_NAMES = fn(16297);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items1 = [
-  fn(8901).OAuth2Scopes.RPC,
-  fn(8901).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  fn(8910).OAuth2Scopes.RPC,
+  fn(8910).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
   RPC_LOCAL_SCOPE,
   RPC_EMBEDDED_APP_SCOPE,
 ];
@@ -42,7 +42,7 @@ obj3.handler = function handler(isSocketConnected) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

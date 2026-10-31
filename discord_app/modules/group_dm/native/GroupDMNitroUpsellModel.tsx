@@ -6,7 +6,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const MAX_GROUP_DM_PARTICIPANTS = fn(1072).MAX_GROUP_DM_PARTICIPANTS;
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const GroupDMNitroAcquisitionStrategy = { MARKETING: "marketing", CHECKOUT: "checkout" };
 let obj2 = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
 const size = fn(2);

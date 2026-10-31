@@ -24,7 +24,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_18 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {
@@ -178,7 +178,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -210,7 +210,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
                       closure_128_3(true);
                     }
                     c2 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp9) {
                   c2 = tmp;

@@ -1,18 +1,18 @@
 // discord_app/design/components/mana-assets/native/generated/ControllerIllocon.native.tsx
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14235 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ControllerIllocon-1x.png.js";
-import _modDef14236 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ControllerIllocon-2x.png.js";
-import _modDef14237 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ControllerIllocon-3x.png.js";
+import _modDef14273 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ControllerIllocon-1x.png.js";
+import _modDef14274 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ControllerIllocon-2x.png.js";
+import _modDef14275 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ControllerIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14235 }, 3: null };
-const obj2 = { uri: _modDef14235 };
-obj[2] = { uri: _modDef14236 };
-const obj3 = { uri: _modDef14236 };
-obj[3] = { uri: _modDef14237 };
+let obj = { 1: null, 2: { uri: _modDef14273 }, 3: null };
+const obj2 = { uri: _modDef14273 };
+obj[2] = { uri: _modDef14274 };
+const obj3 = { uri: _modDef14274 };
+obj[3] = { uri: _modDef14275 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/ControllerIllocon.native.tsx",
@@ -30,7 +30,7 @@ export function ControllerIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7063).getAssetSource(obj);
+  obj.source = num(7069).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

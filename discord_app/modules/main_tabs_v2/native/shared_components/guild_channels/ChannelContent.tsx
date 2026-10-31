@@ -152,11 +152,11 @@ function ChannelContentComponent(arg0) {
   return timestampProducer(View, obj2);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(6770).UnreadSetting;
+const UnreadSetting = fn(6776).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
-let PlatformUtils = fn(1376);
+const createStyles = fn(5014);
+let PlatformUtils = fn(1375);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
@@ -170,8 +170,8 @@ let obj3 = {
   channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
   channelTraitIcon: null,
 };
-let obj4 = { opacity: fn(11027).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1376);
+let obj4 = { opacity: fn(11046).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+PlatformUtils = fn(1375);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

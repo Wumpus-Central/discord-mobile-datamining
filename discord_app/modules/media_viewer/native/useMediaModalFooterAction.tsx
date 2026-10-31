@@ -17,5 +17,5 @@ export function setMediaModalFooterAction(footerAction) {
   });
 }
 export function clearMediaModalFooterAction() {
-  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "getCurrentUser" }));
+  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "Array" }));
 }

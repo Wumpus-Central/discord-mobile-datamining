@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../LocaleStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8424).MobileUserSettings;
+const MobileUserSettings = fn(8432).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
@@ -39,18 +39,17 @@ export default function SettingsOverviewScreen() {
     if (!hasPremiumSubscriptionToDisplay) {
       PREMIUM = MobileUserSettings.PREMIUM;
     }
-    const items = [PREMIUM, , , , , , , , , ,];
+    const items = [PREMIUM, , , , , , , , ,];
     ({
       ACCOUNT: arr[1],
       CONTENT_AND_SOCIAL: arr[2],
       DATA_AND_PRIVACY: arr[3],
       SPONSORED_CONTENT_PREFERENCES: arr[4],
       FAMILY_CENTER: arr[5],
-      AUTHORIZED_APPS: arr[6],
-      DEVICES: arr[7],
-      CONNECTIONS: arr[8],
-      CLIPS: arr[9],
-      SCAN_QR_CODE: arr[10],
+      DEVICES: arr[6],
+      CONNECTIONS: arr[7],
+      CLIPS: arr[8],
+      SCAN_QR_CODE: arr[9],
     } = MobileUserSettings);
     obj2.settings = items.filter(GlobalUtils.isNotNullish);
     const items1 = [obj2, , , , , , , , ,];

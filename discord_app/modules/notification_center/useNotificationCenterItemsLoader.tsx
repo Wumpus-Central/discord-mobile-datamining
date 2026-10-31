@@ -11,7 +11,7 @@ import NotificationCenterStore from "NotificationCenterStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6770).ReadStateTypes;
+const ReadStateTypes = fn(6776).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notification_center/useNotificationCenterItemsLoader.tsx");
 
@@ -137,7 +137,7 @@ export function useNotificationCenterItemsLoader(isFocused) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

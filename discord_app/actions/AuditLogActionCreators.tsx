@@ -173,7 +173,7 @@ export function filterByUserId(id, guildId) {
       if (!tmp5) {
         if (null != guildId) {
           DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          const obj2 = { userId: id, action: "Array", targetId: "applicationId" };
+          const obj2 = { userId: id, action: "concat", targetId: "style" };
           const tmp10Result = DispatcherDefault;
           nextPromise = makeRequest(guildId, obj2).then(
             (body) => {

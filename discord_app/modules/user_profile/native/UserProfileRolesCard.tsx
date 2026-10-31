@@ -162,7 +162,7 @@ const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" },
   role: {
@@ -201,13 +201,13 @@ export default function UserProfileRolesCard(userId) {
   let tmp4 = null;
   if (0 !== roles.length) {
     const obj2 = { title: null, style: null, children: null };
-    const intl = tmp(1114).intl;
-    obj2.title = intl.string(tmp(1114).t["LPJmL/"]);
+    const intl = tmp(1113).intl;
+    obj2.title = intl.string(tmp(1113).t["LPJmL/"]);
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7370), obj2);
-    const tmp7 = guildId(7370);
+    tmp4 = closure_9(guildId(7376), obj2);
+    const tmp7 = guildId(7376);
   }
   return tmp4;
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignPromoGradient.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -11,14 +11,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const angleCenter = { x: 0.5, y: 0.5 };
-[closure_9, c10, closure_11, closure_12] = fn(16429).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
-const prop = fn(16429).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
+[closure_9, c10, closure_11, closure_12] = fn(16471).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
+const prop = fn(16471).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS;
 const locations = prop.map((location) => location.location);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { shade: null };
-const importDefaultResultResult = _slicedToArray(fn(16429).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS, 4);
+const importDefaultResultResult = _slicedToArray(fn(16471).HEXAGON_CAMPAIGN_PROMO_GRADIENT_STOPS, 4);
 obj2.shade = {
-  backgroundColor: nativeDefault.colors[fn(undefined, 16429).HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE_TOKEN],
+  backgroundColor: nativeDefault.colors[fn(undefined, 16471).HEXAGON_CAMPAIGN_PROMO_GRADIENT_SHADE_TOKEN],
 };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);

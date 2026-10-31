@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7100 from "../../../../_runtime/metro/07100__.js";
+import _modDef7106 from "../../../../_runtime/metro/07106__.js";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import ScheduledMessagesUtils from "../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageTypes.tsx";
@@ -51,7 +51,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
   obj6.children = closure_1_12(native.Icon, {
-    source: _modDef7100,
+    source: _modDef7106,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
@@ -398,14 +398,14 @@ function ChatInputEditBar(onCancelEditing) {
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = closure_1_12(Text_Text.Text, obj3);
   obj4.children = closure_1_12(native.Icon, {
-    source: _modDef7100,
+    source: _modDef7106,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   const items = [tmp8];
-  const obj5 = { source: _modDef7100, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef7106, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, {
     style: tmp.floatingRightActions,
     children: closure_1_12(Pressables.PressableOpacity, obj4),
@@ -463,14 +463,14 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj5.onPress = onCancelScheduling;
   const tmp9 = closure_1_12(Pressables.PressableOpacity, obj4);
   obj5.children = closure_1_12(native.Icon, {
-    source: _modDef7100,
+    source: _modDef7106,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj7 = { style: tmp.contextBarRow, children: null };
   const obj8 = { children: null };
   const items = [tmp9];
-  const obj6 = { source: _modDef7100, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj6 = { source: _modDef7106, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, {
     style: tmp.floatingRightActions,
     children: closure_1_12(Pressables.PressableOpacity, obj5),
@@ -535,13 +535,13 @@ function ContextBarItem(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7694).DraftType;
+const DraftType = fn(7701).DraftType;
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let obj = { duration: 250, easing: fn(1188).STANDARD_EASING };
-let createStyles = fn(5009);
+let obj = { duration: 250, easing: fn(1187).STANDARD_EASING };
+let createStyles = fn(5014);
 let closure_16 = createStyles.createStyles((arg0) => {
   let MOBILE_FLOATING_ACCESSORY_BACKGROUND = arg0;
   if (arg0 == null) {
@@ -549,7 +549,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
   }
   return { contextBar: { backgroundColor: MOBILE_FLOATING_ACCESSORY_BACKGROUND } };
 });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_17 = createStyles.createStyles(() => {
   obj = {
     contextBarRow: {

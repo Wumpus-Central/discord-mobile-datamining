@@ -16,15 +16,15 @@ function MediaViewer(arg0) {
   let sharedValue1;
   __initData = undefined;
   ({ renderOverlay, swipeVelocityThreshold } = arg0);
-  value = [height(7345).MEDIA_VIEWER];
-  const tmp3 = height(7320);
+  value = [height(7351).MEDIA_VIEWER];
+  const tmp3 = height(7326);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   _require = tmp6;
   const tmp4 = sharedValue(sharedValue1.useState(true), 2);
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(14764)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(14802)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -54,7 +54,7 @@ function MediaViewer(arg0) {
   const overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
   const items1 = [dismiss, isClosing];
   const obj7 = require("useMediaViewerPanGesture");
-  height(6017)(
+  height(6022)(
     sharedValue1.useCallback(() => {
       if (!isClosing.get()) {
         dismiss();
@@ -70,7 +70,7 @@ function MediaViewer(arg0) {
     obj.backgroundColor = "black";
     return obj;
   }, items2);
-  const tmp18 = height(6017);
+  const tmp18 = height(6022);
   function re() {
     let tmp = null;
     if (!isMediaViewerEntranceJankFixEnabled) {
@@ -265,7 +265,7 @@ function MediaViewer(arg0) {
   });
   const obj18 = { style: StyleSheet.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const items7 = [
-    isMediaViewerEntranceJankFixEnabled(height(11193), { barStyle: "light-content", hidden: !tmp5 }),
+    isMediaViewerEntranceJankFixEnabled(height(11212), { barStyle: "light-content", hidden: !tmp5 }),
     ,
     ,
     ,
@@ -273,7 +273,7 @@ function MediaViewer(arg0) {
   const obj20 = { style: null };
   const items8 = [memo, animatedStyle];
   obj20.style = items8;
-  items7[1] = isMediaViewerEntranceJankFixEnabled(height(5090).View, obj20);
+  items7[1] = isMediaViewerEntranceJankFixEnabled(height(5095).View, obj20);
   const obj21 = { ref: animatedRef, style: null, children: null };
   const items9 = [isClosing.pan, animatedStyle2];
   obj21.style = items9;
@@ -296,25 +296,25 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp31Result = tmp31(tmp(14766), obj22);
+    tmp31Result = tmp31(tmp(14804), obj22);
   }
   obj21.children = tmp31Result;
-  items7[2] = isMediaViewerEntranceJankFixEnabled(height(5091), obj21);
+  items7[2] = isMediaViewerEntranceJankFixEnabled(height(5096), obj21);
   const obj23 = { style: null, pointerEvents: null, children: null };
   const items10 = [sharedValue(sharedValue1.useState(obj10), 1)[0], animatedStyle1];
   obj23.style = items10;
   let str = "none";
-  const tmp35 = height(5091);
+  const tmp35 = height(5096);
   if (tmp5) {
     str = "box-none";
   }
   obj23.pointerEvents = str;
   obj23.children = renderOverlay(dismiss, overlayEnabled, sharedValue);
-  items7[3] = isMediaViewerEntranceJankFixEnabled(height(5091), obj23);
-  items7[4] = isMediaViewerEntranceJankFixEnabled(height(11665), {});
+  items7[3] = isMediaViewerEntranceJankFixEnabled(height(5096), obj23);
+  items7[4] = isMediaViewerEntranceJankFixEnabled(height(11702), {});
   obj18.children = items7;
   const children = tmp33(tmp34, obj18);
-  return isMediaViewerEntranceJankFixEnabled(tmp7(7320).AnalyticsLocationProvider, {
+  return isMediaViewerEntranceJankFixEnabled(tmp7(7326).AnalyticsLocationProvider, {
     value: tmp3(value).analyticsLocations,
     children,
   });
@@ -323,7 +323,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let closure_9 = PlatformUtils.isAndroid();
 let obj = { pan: null };
 let obj3 = {};

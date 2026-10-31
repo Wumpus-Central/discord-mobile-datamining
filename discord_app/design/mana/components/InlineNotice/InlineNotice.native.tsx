@@ -1,7 +1,7 @@
 // discord_app/design/mana/components/InlineNotice/InlineNotice.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import _modDef2076 from "../../../intl/Mana.messages.js";
+import _modDef2075 from "../../../intl/Mana.messages.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ function NoticeMessageList(children) {
   dependencyMap = tmp;
   obj = { style: tmp.stack, children: null };
   const items1 = [
-    closure_5(variant(5619).Text, { variant, color, children: children.intro }),
+    closure_5(variant(5624).Text, { variant, color, children: children.intro }),
     closure_5(View, {
       accessibilityRole: "list",
       style: tmp.stack,
@@ -43,65 +43,65 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
   critical: {
-    Icon: fn(7080).CircleErrorIcon,
+    Icon: fn(7086).CircleErrorIcon,
     iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
     background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
     border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL,
-    typeLabel: _modDef2076.uKMqrF,
+    typeLabel: _modDef2075.uKMqrF,
   },
   warning: null,
   info: null,
   success: null,
 };
 let obj2 = {
-  Icon: fn(7080).CircleErrorIcon,
+  Icon: fn(7086).CircleErrorIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,
   border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL,
-  typeLabel: _modDef2076.uKMqrF,
+  typeLabel: _modDef2075.uKMqrF,
 };
 obj.warning = {
-  Icon: fn(8018).WarningIcon,
+  Icon: fn(8026).WarningIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
   border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING,
-  typeLabel: _modDef2076["7vL/d/"],
+  typeLabel: _modDef2075["7vL/d/"],
 };
 let obj3 = {
-  Icon: fn(8018).WarningIcon,
+  Icon: fn(8026).WarningIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING,
   border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING,
-  typeLabel: _modDef2076["7vL/d/"],
+  typeLabel: _modDef2075["7vL/d/"],
 };
 obj.info = {
-  Icon: fn(5730).CircleInformationIcon,
+  Icon: fn(5735).CircleInformationIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
   border: nativeDefault.colors.INLINENOTICE_BORDER_INFO,
-  typeLabel: _modDef2076.BReS7U,
+  typeLabel: _modDef2075.BReS7U,
 };
 let obj4 = {
-  Icon: fn(5730).CircleInformationIcon,
+  Icon: fn(5735).CircleInformationIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
   border: nativeDefault.colors.INLINENOTICE_BORDER_INFO,
-  typeLabel: _modDef2076.BReS7U,
+  typeLabel: _modDef2075.BReS7U,
 };
 obj.success = {
-  Icon: fn(7334).CircleCheckIcon,
+  Icon: fn(7340).CircleCheckIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE,
   border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE,
-  typeLabel: _modDef2076["1MXXPf"],
+  typeLabel: _modDef2075["1MXXPf"],
 };
-const TextVariantsFlat = fn(5620).TextVariantsFlat;
+const TextVariantsFlat = fn(5625).TextVariantsFlat;
 let found = TextVariantsFlat.find((name) => "experimental/body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {
   lineHeight = found.lineHeight;
 }
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let closure_9 = createStyles.createStyles((arg0, height) => {
   obj = {
     container: {
@@ -140,14 +140,14 @@ let closure_9 = createStyles.createStyles((arg0, height) => {
   obj.cta = { alignSelf: "flex-start" };
   return obj;
 });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj8 = { stack: null, listItem: null, listItemText: null };
 let obj5 = {
-  Icon: fn(7334).CircleCheckIcon,
+  Icon: fn(7340).CircleCheckIcon,
   iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE,
   background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE,
   border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE,
-  typeLabel: _modDef2076["1MXXPf"],
+  typeLabel: _modDef2075["1MXXPf"],
 };
 obj8.stack = { gap: nativeDefault.space.PX_4 };
 let obj9 = { gap: nativeDefault.space.PX_4 };

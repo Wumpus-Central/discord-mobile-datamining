@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/remix/ConjureRemix.tsx
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import ConjureWorkerTickets from "../connection/ConjureWorkerTickets.tsx";
 import conjureRemixConnection from "conjureRemixConnection.tsx";
@@ -41,7 +41,7 @@ function prepareConjureRemix(project, currentGuildId, arg2) {
           v3 = 3;
         } else if ("rejected" !== closure_129_2) {
           if (closure_129_0 !== closure_130_0) {
-            const result = currentGuildId(10855).updateProjectSettings(closure_129_1.id, { guild_id: closure_129_0, preview_guild_id: closure_129_0 });
+            const result = currentGuildId(10875).updateProjectSettings(closure_129_1.id, { guild_id: closure_129_0, preview_guild_id: closure_129_0 });
             c3 = 4;
             v3 = 1;
             return { value: result.then(() => true, () => false), done: false };
@@ -51,11 +51,11 @@ function prepareConjureRemix(project, currentGuildId, arg2) {
           tmp33();
         }
         v3(closure_129_1.id);
-        currentGuildId(10855);
+        currentGuildId(10875);
         c3 = 3;
         v3 = 1;
         return {
-          value: currentGuildId(10855).deleteProject(closure_129_1.id).catch(() => {
+          value: currentGuildId(10875).deleteProject(closure_129_1.id).catch(() => {
 
               }),
           done: false
@@ -79,16 +79,16 @@ function prepareConjureRemix(project, currentGuildId, arg2) {
         if (closure_130_4 != null) {
           tmp10();
         }
-        currentGuildId(10860).forgetEarlyTicket(closure_129_1.id);
+        currentGuildId(10880).forgetEarlyTicket(closure_129_1.id);
         v3(closure_129_1.id);
         closure_1_5(closure_129_1.id);
-        currentGuildId(10860);
+        currentGuildId(10880);
       }
     }
     return value;
   };
   const intl = require("util").intl;
-  dependencyMap = intl.string(_modDef3865.Cn8H0Y);
+  dependencyMap = intl.string(_modDef3868.Cn8H0Y);
   const mintRemixTicketResult = require("ConjureWorkerTickets").mintRemixTicket(project.id);
   asyncGeneratorStep = mintRemixTicketResult;
   mintRemixTicketResult.catch(() => {
@@ -167,7 +167,7 @@ function prepareConjureRemix(project, currentGuildId, arg2) {
     }
   };
 }
-const ConjureConnectionStore = fn(10830);
+const ConjureConnectionStore = fn(10850);
 ({ closeConnection: closure_4, ensureConnection: hasOwnProperty } = ConjureConnectionStore);
 let c6 = " (Remix)";
 const map = new Map();

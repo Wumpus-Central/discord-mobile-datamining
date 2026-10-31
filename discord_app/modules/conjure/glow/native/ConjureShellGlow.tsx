@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let closure_12 = PlatformUtils.isAndroid();
 let c13 = 500;
 let items = [
@@ -59,7 +59,7 @@ const start = { x: 0.5, y: 0 };
 const end = { x: 0.5, y: 1 };
 const start2 = { x: 0, y: 0.5 };
 const end2 = { x: 1, y: 0.5 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_22 = createStyles.createStyles({
   root: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", zIndex: 0 },
   band: { position: "absolute", left: 0, right: 0, bottom: 0, height: 500 },

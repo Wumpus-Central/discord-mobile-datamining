@@ -33,41 +33,41 @@ function QuestRewardDetailsBottomSheet(quest) {
   const stateFromStores = quest(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   let obj = quest(504);
   const tmp4 = quest;
-  const defaultRewardName = quest(9680).getDefaultRewardName(quest.config, stateFromStores);
+  const defaultRewardName = quest(9700).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(575).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(575).space.PX_16, children: null };
-  const items3 = [closure_6(memo(14640), { quest, height: 56, width: 56, withAnimation: true })];
+  const items3 = [closure_6(memo(14678), { quest, height: 56, width: 56, withAnimation: true })];
   const obj5 = { direction: "vertical", spacing: memo(575).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: null };
-  let intl = quest(1114).intl;
-  obj6.children = intl.string(quest(1114).t["jyYgZ+"]);
+  let intl = quest(1113).intl;
+  obj6.children = intl.string(quest(1113).t["jyYgZ+"]);
   const items4 = [
-    closure_6(quest(5619).Text, obj6),
-    closure_6(quest(5619).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName }),
+    closure_6(quest(5624).Text, obj6),
+    closure_6(quest(5624).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName }),
   ];
   obj5.children = items4;
-  items3[1] = closure_7(quest(6022).Stack, obj5);
+  items3[1] = closure_7(quest(6027).Stack, obj5);
   obj4.children = items3;
-  const items5 = [closure_7(quest(6022).Stack, obj4)];
+  const items5 = [closure_7(quest(6027).Stack, obj4)];
   let tmp9Result = null != memo1;
   if (tmp9Result) {
     const obj7 = { children: null };
     const obj8 = { style: tmp.separator };
     const items6 = [closure_6(View, obj8)];
     const obj9 = { variant: "text-md/normal", color: "text-subtle", children: memo1 };
-    items6[1] = closure_6(tmp4(5619).Text, obj9);
+    items6[1] = closure_6(tmp4(5624).Text, obj9);
     obj7.children = items6;
     tmp9Result = closure_7(closure_8, obj7);
   }
-  const obj2 = quest(9680);
+  const obj2 = quest(9700);
   items5[1] = tmp9Result;
   obj3.children = items5;
-  return closure_6(quest(5267).BottomSheet, { startExpanded: true, children: closure_7(quest(6022).Stack, obj3) });
+  return closure_6(quest(5272).BottomSheet, { startExpanded: true, children: closure_7(quest(6027).Stack, obj3) });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   wrapper: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 },
   rewardDetailsCopy: { flexShrink: 1 },

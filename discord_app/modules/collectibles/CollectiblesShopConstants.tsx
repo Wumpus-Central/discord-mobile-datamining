@@ -133,7 +133,6 @@ export const SHOP_CARD_PER_PRODUCT_NEW_BADGE_EXPIRY_SETTINGS = {};
 export const COLLECTIBLES_SHOP_CACHE_DURATION_MS = 600000;
 export const COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS = 600000;
 export const ViewState = { VISIBLE: 0, [0]: "VISIBLE", HIDDEN: 1, [1]: "HIDDEN", IN: 2, [2]: "IN", OUT: 3, [3]: "OUT" };
-export const SEARCH_BAR_ICON_WIDTH_PX = 24;
 export const CollectiblesUpgradedSearchBarWidthPx = { DEFAULT: 182, [182]: "DEFAULT", WIDE: 256, [256]: "WIDE" };
 export const STATE_TRANSITION_THRESHOLD_PX = 20;
 export const CollectiblesSearchBarCTAName = {

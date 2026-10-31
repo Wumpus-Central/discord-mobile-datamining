@@ -45,9 +45,9 @@ export default function BadgeArtImage(style) {
           enableAnimation: null,
         });
       } else {
-        APNGPlayer(1376);
+        APNGPlayer(1375);
       }
-      APNGPlayer = APNGPlayer(9482).APNGPlayer;
+      APNGPlayer = APNGPlayer(9504).APNGPlayer;
       const obj5 = { url: fallbackUrl, style: size, autoplay: true };
       tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
     }

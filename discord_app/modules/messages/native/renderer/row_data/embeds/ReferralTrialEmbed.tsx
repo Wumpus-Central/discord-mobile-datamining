@@ -9,10 +9,10 @@ import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8511 from "../../../../../../../_runtime/metro/08511__.js";
+import _modDef8519 from "../../../../../../../_runtime/metro/08519__.js";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
-import _modDef8527 from "../../../../../../../_runtime/metro/08527__.js";
-import _modDef8528 from "../../../../../../../_runtime/metro/08528__.js";
+import _modDef8535 from "../../../../../../../_runtime/metro/08535__.js";
+import _modDef8536 from "../../../../../../../_runtime/metro/08536__.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../../../stores/billing/SubscriptionStore.tsx";
@@ -23,7 +23,7 @@ const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-let closure_9 = fn(1386).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+let closure_9 = fn(1385).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx");
 
@@ -48,7 +48,7 @@ export function createReferralTrialEmbedRedeemable(message, theme, id, relevantU
           backgroundColor,
           borderColor: backgroundColor,
           thumbnailCornerRadius: 3,
-          headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8527),
+          headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8535),
           headerText: null,
           headerColor: null,
           thumbnailUrl: null,
@@ -58,7 +58,7 @@ export function createReferralTrialEmbedRedeemable(message, theme, id, relevantU
         obj.headerText = intl.string(util.t.gtNqJQ).toLocaleLowerCase();
         obj.headerColor = headerTextColor;
         const stringResult = intl.string(util.t.gtNqJQ);
-        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8528);
+        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8536);
         let userId;
         if (relevantUserTrialOffer != null) {
           userId = relevantUserTrialOffer.userId;
@@ -177,7 +177,7 @@ export function createReferralTrialEmbedRedeemable(message, theme, id, relevantU
                     const intl8 = util.intl;
                     obj11.acceptLabelText = intl8.string(util.t.bXTClc);
                     obj11.acceptLabelColor = acceptLabelColor;
-                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8511);
+                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8519);
                     tmp33 = obj11;
                     const tmp44Result11 = renderer_EmbedUtils;
                   }

@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 24;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   surface: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 },
   highlight: {
@@ -90,17 +90,17 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5253).hideActionSheet(projectId(12075).CONJURE_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(5253);
+        size(5258).hideActionSheet(projectId(12113).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(5258);
       }
     };
   }, []);
   const items1 = [projectId];
   const effect2 = noop.useEffect(
     () => () => {
-      const result = projectId(10877).inspectConjurePreviewPoint(
+      const result = projectId(10902).inspectConjurePreviewPoint(
         closure_1_0,
-        projectId(10897).CONJURE_INSPECT_CLEAR_POINT,
+        projectId(10922).CONJURE_INSPECT_CLEAR_POINT,
       );
     },
     items1,
@@ -145,7 +145,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(10877).inspectConjurePreviewPoint(point, point);
+        const result = projectId(10902).inspectConjurePreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -174,12 +174,12 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
             closure_8(true);
           }
         });
-        const obj2 = projectId(10877);
+        const obj2 = projectId(10902);
       }
     }
   }, items4);
-  const intl = projectId(1114).intl;
-  const tmp19 = size(3865);
+  const intl = projectId(1113).intl;
+  const tmp19 = size(3868);
   if (first2) {
     let prop = tmp19["URbF/7"];
     let tmp21 = tmp18;
@@ -203,8 +203,8 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     testID: "conjure-design-surface",
     children: null,
   };
-  const intl2 = tmp16(1114).intl;
-  obj.accessibilityLabel = intl2.string(tmp21(3865)["DesV7/"]);
+  const intl2 = tmp16(1113).intl;
+  obj.accessibilityLabel = intl2.string(tmp21(3868)["DesV7/"]);
   let obj2 = { style: tmp.surface, pointerEvents: "none", children: null };
   let tmp24Result = null;
   if (null != first1) {
@@ -229,7 +229,7 @@ export default function ConjureDesignFeedbackOverlay(projectId) {
     items6[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp24(tmp16(5619).Text, obj6);
+    obj5.children = tmp24(tmp16(5624).Text, obj6);
     items6[2] = tmp24(tmp27, obj5);
     obj2.children = items6;
     obj.children = closure_9(tmp27, obj2);

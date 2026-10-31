@@ -12,7 +12,7 @@ import shared from "../../../design/shared.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useBadgeTextVariant from "../../../../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05587_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -22,7 +22,7 @@ import useIsEligibleSenderForReferralProgram from "../referral_program/hooks/use
 import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import _modDef16834 from "../../../../_runtime/metro/16834__.js";
+import _modDef16871 from "../../../../_runtime/metro/16871__.js";
 import PremiumTabBadgeCopy from "../promotions/PremiumTabBadgeCopy.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -67,7 +67,7 @@ function OfferBadge(componentId) {
   if (acked) {
     const obj5 = { style: tmp4.acked, children: null };
     const obj6 = {
-      source: _modDef16834,
+      source: _modDef16871,
       size: native.Icon.Sizes.EXTRA_SMALL,
       color: tmp4.icon.color,
       style: tmp4.icon,
@@ -88,11 +88,11 @@ function OfferBadge(componentId) {
   return tmp10;
 }
 const View = fn(17).View;
-let closure_6 = fn(1386).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(7610).Gradients;
+let closure_6 = fn(1385).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+const Gradients = fn(7617).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   tag: { paddingVertical: 4, paddingHorizontal: 8, borderRadius: nativeDefault.radii.round },
   badge: null,
@@ -309,7 +309,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = intl);
           obj11.style = items4;
           const obj12 = {
-            source: _modDef16834,
+            source: _modDef16871,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: intl.icon.color,
             style: intl.icon,

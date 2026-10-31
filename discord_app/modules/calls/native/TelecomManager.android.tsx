@@ -28,7 +28,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ DeviceEventEmitter: closure_4, NativeEventEmitter } = get_ActivityIndicator);
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(5763).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5768).MediaEngineContextTypes;
 let c18 = "telecom-end-call-requested";
 let c19 = "telecom-set-foreground-requested";
 let c20 = "telecom-mic-mute-requested";
@@ -367,9 +367,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
       const obj3 = { guildId };
       tmp19 = obj3;
     }
-    const obj4 = self(19565);
-    const reportIncomingCallResult = self(19565).reportIncomingCall(channelId, channelName, tmp19);
-    self(19565)
+    const obj4 = self(19622);
+    const reportIncomingCallResult = self(19622).reportIncomingCall(channelId, channelName, tmp19);
+    self(19622)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((result) => {
         if (!result) {
@@ -381,7 +381,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
         obj.warn("Failed to report incoming call:", error);
         self.clearCall(closure_0);
       });
-    const nextPromise = self(19565)
+    const nextPromise = self(19622)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((result) => {
         if (!result) {
@@ -397,7 +397,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(19565);
+  obj = self(19622);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj
     .cancelIncomingCall(channelId)
@@ -448,7 +448,7 @@ prototype["doReconcile"] = function doReconcile() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -642,7 +642,7 @@ prototype["doReconcile"] = function doReconcile() {
           channel2 = channel.getChannel(closure_129_0);
           if (null == channel2) {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             const obj18 = { channelId: closure_129_0, guildId: null, channelName: null, state: null };
             let guildId = RTCConnectionStore.getGuildId();
@@ -736,7 +736,7 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
       }
     }
   }
-  obj = self(1623);
+  obj = self(1622);
 };
 prototype["startCall"] = function startCall(channelId) {
   closure_0 = channelId;
@@ -752,7 +752,7 @@ prototype["startCall"] = function startCall(channelId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -835,7 +835,7 @@ prototype["startCall"] = function startCall(channelId) {
 prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(19565);
+  obj = self(19622);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj
     .endCall(currentCall.channelId)
@@ -991,7 +991,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(19565);
+            obj = self(19622);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

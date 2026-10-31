@@ -227,7 +227,7 @@ function useForumPostEmbeds(embeds, hasSpoilerEmbeds) {
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1380).isNotNullish);
+          let found = mapped.filter(tmp(1379).isNotNullish);
         }
         return found;
       }

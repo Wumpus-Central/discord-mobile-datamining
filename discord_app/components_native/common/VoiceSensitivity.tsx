@@ -13,10 +13,10 @@ import AppStateStore from "../../stores/native/AppStateStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
-const NativePermissionTypes = fn(7932).NativePermissionTypes;
+const NativePermissionTypes = fn(7940).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   sensitivity: { position: "relative", height: 20 },
   sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" },
@@ -43,7 +43,7 @@ obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_3
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
 obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 let obj5 = { flex: 1, backgroundColor: null };
-const ColorUtils = fn(5006);
+const ColorUtils = fn(5011);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 obj2.sensitivityDefault = obj5;
 let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -116,7 +116,7 @@ export default function VoiceSensitivity(auto) {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -134,7 +134,7 @@ export default function VoiceSensitivity(auto) {
               c1 = 1;
               c2 = 1;
               const obj4 = {
-                value: onThresholdChange(7949).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                value: onThresholdChange(7957).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                 done: false,
               };
               return obj4;
@@ -153,10 +153,10 @@ export default function VoiceSensitivity(auto) {
             }
             if (tmp5) {
               mediaEngine = mediaEngine.getMediaEngine();
-              mediaEngine.on(auto(5784).MediaEngineEvent.VoiceActivity, callback);
+              mediaEngine.on(auto(5789).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp17) {
           c2 = tmp;

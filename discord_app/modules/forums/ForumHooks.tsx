@@ -29,7 +29,7 @@ import ForumSearchStore from "ForumSearchStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ForumTimestampFormats = fn(7448).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7454).ForumTimestampFormats;
 const Constants = fn(1072);
 ({
   AnalyticsObjectTypes: closure_20,
@@ -37,8 +37,8 @@ const Constants = fn(1072);
   EMPTY_STRING_SNOWFLAKE_ID: closure_22,
   Permissions: closure_23,
 } = Constants);
-const ChannelFlags = fn(4865).ChannelFlags;
-let closure_25 = fn(1113).MAX_THREAD_UNREAD_MESSAGE_COUNT;
+const ChannelFlags = fn(4870).ChannelFlags;
+let closure_25 = fn(1112).MAX_THREAD_UNREAD_MESSAGE_COUNT;
 let closure_26 = { isNew: false, hasUnreads: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumHooks.tsx");
@@ -434,7 +434,7 @@ export function useForumPostMessageAuthor(message, thread) {
   const items = [UserStore];
   const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
   const obj = id(504);
-  const nullableMessageAuthor = id(6432).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(6438).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
     let tmp2 = null != id;

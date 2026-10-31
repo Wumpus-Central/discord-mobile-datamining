@@ -1,5 +1,5 @@
 // discord_app/modules/markup/CustomMarkup.native.tsx
-import _modDef1944 from "../../../_runtime/metro/01944__.js";
+import _modDef1943 from "../../../_runtime/metro/01943__.js";
 import MarkupUtilsDefault from "MarkupUtils.tsx";
 import MarkupReactRules from "MarkupReactRules.native.tsx";
 import MarkupTypes from "MarkupTypes.tsx";
@@ -18,19 +18,19 @@ function createRules(arg0) {
   items = [MarkupUtilsDefault.defaultRules, tmp];
   const obj2 = {};
   const obj3 = {};
-  const merged = Object.assign(_modDef1944.defaultRules.link);
+  const merged = Object.assign(_modDef1943.defaultRules.link);
   obj3.react = tmp[MarkupTypes.AST_KEY.LINK].react;
   obj2[MarkupTypes.AST_KEY.LINK] = obj3;
   const obj4 = {};
-  const merged1 = Object.assign(_modDef1944.defaultRules.url);
+  const merged1 = Object.assign(_modDef1943.defaultRules.url);
   obj4.react = tmp[MarkupTypes.AST_KEY.URL].react;
   obj2[MarkupTypes.AST_KEY.URL] = obj4;
   const obj5 = {};
-  const merged2 = Object.assign(_modDef1944.defaultRules.autolink);
+  const merged2 = Object.assign(_modDef1943.defaultRules.autolink);
   obj5.react = tmp[MarkupTypes.AST_KEY.AUTOLINK].react;
   obj2[MarkupTypes.AST_KEY.AUTOLINK] = obj5;
   const obj6 = {};
-  const merged3 = Object.assign(_modDef1944.defaultRules.blockQuote);
+  const merged3 = Object.assign(_modDef1943.defaultRules.blockQuote);
   obj6.react = tmp[MarkupTypes.AST_KEY.BLOCK_QUOTE].react;
   obj2[MarkupTypes.AST_KEY.BLOCK_QUOTE] = obj6;
   items[2] = obj2;

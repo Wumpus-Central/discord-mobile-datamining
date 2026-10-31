@@ -51,7 +51,7 @@ class QuestFetchManager extends tmp2 {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -69,7 +69,7 @@ class QuestFetchManager extends tmp2 {
                   lastFetchAttemptedAt._fetch("post_connect_recurring");
                 }
                 c0 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               }
             } catch (tmp7) {
               c0 = tmp;

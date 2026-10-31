@@ -18,7 +18,7 @@ const View = fn(17).View;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = {
   nitroWheel: { marginLeft: nativeDefault.space.PX_8 },
   sublabel: null,

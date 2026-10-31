@@ -8,8 +8,8 @@ import ReanimatedRexport from "../../../../../modules/reanimated/ReanimatedRexpo
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(6974).PressableHighlight);
-const PlatformUtils = fn(1376);
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(6980).PressableHighlight);
+const PlatformUtils = fn(1375);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx",

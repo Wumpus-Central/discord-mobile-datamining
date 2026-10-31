@@ -22,7 +22,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -42,7 +42,7 @@ function ConjureDeleteAppChannelAlert(arg0) {
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(13230)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(13265)(conjureServerApp), done: false };
                 return obj4;
               }
             }
@@ -56,8 +56,8 @@ function ConjureDeleteAppChannelAlert(arg0) {
           if (value) {
             closure_129_1();
           } else {
-            const intl = tmp3(1114).intl;
-            closure_128_0 = intl.string(tmp2(3865).PJ2Fkn);
+            const intl = tmp3(1113).intl;
+            closure_128_0 = intl.string(tmp2(3868).PJ2Fkn);
             closure_129_5(closure_128_0);
             const _Error = Error;
             const error = new Error(closure_128_0);

@@ -54,8 +54,8 @@ class NsfwGateGuildAlert {
     intl3 = guildId(closure_2[9]).intl;
     obj1.text = intl3.string(guildId(closure_2[9]).t.wi6hPV);
     obj1.onPress = function onPress() {
-      const obj = currentUser(5704);
-      return obj.openURL(currentUser(2062).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
+      const obj = currentUser(5709);
+      return obj.openURL(currentUser(2061).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
     };
     items1 = [,];
     items1[0] = jsx(guildId(closure_2[8]).AlertActionButton, obj1, "help-center");
@@ -67,7 +67,7 @@ class NsfwGateGuildAlert {
     return jsx(guildId(closure_2[8]).AlertModal, obj);
   }
 }
-const NsfwGateSource = fn(7382).NsfwGateSource;
+const NsfwGateSource = fn(7388).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;

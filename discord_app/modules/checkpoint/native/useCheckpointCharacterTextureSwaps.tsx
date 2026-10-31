@@ -1,10 +1,11 @@
 // discord_app/modules/checkpoint/native/useCheckpointCharacterTextureSwaps.tsx
-import DataBindByName from "../../../../_runtime/05085_DataBindByName.js";
+import DataBindByName from "../../../../_runtime/05090_DataBindByName.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = async function _loadImage(arg0) {
+let closure_5 = async function _loadImage(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -15,7 +16,7 @@ let closure_4 = async function _loadImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -64,7 +65,7 @@ let closure_4 = async function _loadImage(arg0) {
     }
   }
 };
-let closure_5 = async function _swapTextures(arg0) {
+let closure_6 = async function _swapTextures(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -75,7 +76,7 @@ let closure_5 = async function _swapTextures(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -125,7 +126,7 @@ let closure_5 = async function _swapTextures(arg0) {
                 Array.from(
                   set,
                   (() => {
-                    closure_0 = closure_1_2(function* (arg0) {
+                    closure_0 = closure_1_3(function* (arg0) {
                       if (c4 === 2) {
                         c4 = 3;
                         throw new TypeError("Generator functions may not be called on executing generators");
@@ -136,7 +137,7 @@ let closure_5 = async function _swapTextures(arg0) {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: null };
+                          return { value: "HermesInternal", done: "HermesInternal" };
                         }
                       } else {
                         try {
@@ -159,7 +160,7 @@ let closure_5 = async function _swapTextures(arg0) {
                               const obj4 = {
                                 value: (function loadImage() {
                                   const self = this;
-                                  const apply = closure_1_4.apply;
+                                  const apply = closure_1_5.apply;
                                   if (typeof apply === "unknown") {
                                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                                   } else {
@@ -184,7 +185,7 @@ let closure_5 = async function _swapTextures(arg0) {
                               const result = closure_1_5.set(closure_129_0, closure_129_1);
                             }
                             c4 = 3;
-                            return { value: "HermesInternal", done: null };
+                            return { value: "HermesInternal", done: "HermesInternal" };
                           }
                         } catch (tmp16) {
                           c4 = tmp;
@@ -250,38 +251,104 @@ let closure_5 = async function _swapTextures(arg0) {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointCharacterTextureSwaps.tsx");
 
-export function useCheckpointCharacterTextureSwaps(arg0, memo2, arg2) {
-  closure_0 = arg0;
-  closure_1 = memo2;
-  closure_2 = arg2;
-  noop = noop.useRef(new Map());
-  const items = [arg0, arg2];
+export function useCheckpointCharacterTextureSwaps(file) {
+  file = file.file;
+  const referencedAssets = file.referencedAssets;
+  const initialReferencedAssets = file.initialReferencedAssets;
+  noop = undefined;
+  closure_3 = noop.useRef(new Map());
+  const tmp2 = initialReferencedAssets(noop.useState(initialReferencedAssets), 2);
+  noop = tmp2[1];
+  const items = [file, initialReferencedAssets];
   const effect = noop.useEffect(() => {
     const map = new Map();
-    const entries = Object.entries(closure_2);
+    const entries = Object.entries(initialReferencedAssets);
     const item = entries.forEach((item) => {
       [tmp] = item;
       return map.set(tmp, tmp2.uri);
     });
     closure_3.current = map;
   }, items);
-  const items1 = [arg0, memo2];
+  const items1 = [file, referencedAssets];
   const effect1 = noop.useEffect(() => {
-    if (null != closure_0) {
-      c0 = false;
-      (function swapTextures() {
+    if (null != c0) {
+      c0 = ref(function* () {
+        if (c2 === 2) {
+          c2 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: "HermesInternal" };
+          }
+        } else {
+          try {
+            c2 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                c2 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c2 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_0 = tmp4;
+                c1 = 1;
+                c2 = 1;
+                const obj4 = {
+                  value: (function swapTextures() {
+                    const self = this;
+                    const apply = closure_1_6.apply;
+                    if (typeof apply === "unknown") {
+                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                    } else {
+                      applyArgumentsResult = apply(self, arguments);
+                    }
+                    return applyArgumentsResult;
+                  })(c0, ref.current, referencedAssets, () => closure_1_0),
+                  done: false,
+                };
+                return obj4;
+              }
+            } else if (arg0 === 1) {
+              c2 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c2 = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              if (!closure_0) {
+                closure_2_4(referencedAssets);
+              }
+              c2 = 3;
+              return { value: "HermesInternal", done: "HermesInternal" };
+            }
+          } catch (tmp13) {
+            c2 = tmp;
+            throw tmp13;
+          }
+        }
+      });
+      (function swap() {
         const self = this;
-        const apply = closure_1_5.apply;
+        const apply = c0.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(closure_0, ref.current, closure_1, () => c0);
+      })();
       return () => {
         c0 = true;
       };
     }
   }, items1);
+  return tmp2[0] === referencedAssets;
 }

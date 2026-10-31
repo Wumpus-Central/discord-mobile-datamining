@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/history/native/ConjureRestoreProposalCard.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -19,7 +19,7 @@ export default function ConjureRestoreProposalCard(arg0) {
   const relative = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at).relative;
   const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3865["t+b0rz"]);
+  obj2.children = intl.string(_modDef3868["t+b0rz"]);
   const items = [React3(Text_Text.Text, obj2), ,];
   const items1 = [
     React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: proposal.subject }),
@@ -35,7 +35,7 @@ export default function ConjureRestoreProposalCard(arg0) {
   if (null != onRestore) {
     const obj5 = { text: null, variant: "secondary", onPress: null };
     const intl2 = util.intl;
-    obj5.text = intl2.string(_modDef3865.H8Jfhu);
+    obj5.text = intl2.string(_modDef3868.H8Jfhu);
     obj5.onPress = onRestore;
     tmp3Result2 = React3(components_Button_Button.Button, obj5);
   }

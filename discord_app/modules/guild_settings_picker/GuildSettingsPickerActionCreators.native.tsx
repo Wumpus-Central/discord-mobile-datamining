@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings_picker/GuildSettingsPickerActionCreators.native.tsx
-import asyncRequireImpl from "../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/guild_settings_picker/GuildSe
 
 export function openGuildSettingsPickerModal(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(15672, dependencyMap.paths),
+    asyncRequireImpl(15713, dependencyMap.paths),
     "GuildSettingsPickerBottomSheet",
     arg0,
   );

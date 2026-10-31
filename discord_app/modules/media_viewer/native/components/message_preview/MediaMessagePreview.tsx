@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05303_LegacyBaseButton.js";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -111,8 +111,8 @@ function MeasureMessageAfterEntrance(entranceAnimationDriver) {
       ReanimatedRexport.runOnJS(closure_1)(true);
     }
   };
-  let obj = entranceAnimationDriver(5090);
-  fn2.__closure = { runOnJS: entranceAnimationDriver(5090).runOnJS, setHasEntranceFinished: tmp3[1] };
+  let obj = entranceAnimationDriver(5095);
+  fn2.__closure = { runOnJS: entranceAnimationDriver(5095).runOnJS, setHasEntranceFinished: tmp3[1] };
   fn2.__workletHash = 16173671243775;
   fn2.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
@@ -148,7 +148,7 @@ obj.setOptions({
   forcedTheme: ThemeTypes.DARK,
   forceHideSimpleEmbedContent: true,
 });
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let closure_17 = createStyles.createStyles({
   dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 },
 });
@@ -158,7 +158,7 @@ const __initData = {
 const __initData2 = {
   code: "function MediaMessagePreviewTsx2(isFinished){const{runOnJS,setHasEntranceFinished}=this.__closure;if(isFinished){runOnJS(setHasEntranceFinished)(true);}}",
 };
-createStyles = fn(5009);
+createStyles = fn(5014);
 let closure_22 = createStyles.createNativeStyleProperties({
   reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
@@ -167,7 +167,7 @@ let closure_22 = createStyles.createNativeStyleProperties({
   activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
   activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
 });
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj2 = {
   renderCodedLinks: false,
   renderGiftCode: false,

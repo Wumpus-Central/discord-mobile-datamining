@@ -12,10 +12,10 @@ const Constants = fn(1072);
   ChatInputComponentViewedTypes: metroRequire,
   VerticalGradient: closure_7,
 } = Constants);
-const EmojiIntention = fn(1387).EmojiIntention;
+const EmojiIntention = fn(1386).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   container: { flex: 1 },
   list: { overflow: "hidden", flex: 1 },

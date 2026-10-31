@@ -3,7 +3,22 @@ import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUti
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_5 = async function _requestAgeSignalChallenge() {
+let closure_4 = async function _reinstateAppStoreConsent() {
+  const HTTP = HTTPUtils.HTTP;
+  const request = {
+    url: constants.APP_STORE_CONSENT_REINSTATE,
+    body: null,
+    rejectWithError: true,
+    failImmediatelyWhenRateLimited: true,
+  };
+  const obj4 = {};
+  const merged = Object.assign(closure_0);
+  obj4.is_cold_launch = true;
+  request.body = obj4;
+  await HTTP.post(request);
+  return value.body.outcome;
+};
+let closure_6 = async function _requestAgeSignalChallenge() {
   c3 = 0;
   c4 = 0;
   return (async (arg0, value) => {
@@ -17,7 +32,7 @@ let closure_5 = async function _requestAgeSignalChallenge() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -78,7 +93,7 @@ let closure_5 = async function _requestAgeSignalChallenge() {
             }
           }
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp12) {
         c4 = tmp;
@@ -87,7 +102,7 @@ let closure_5 = async function _requestAgeSignalChallenge() {
     }
   })();
 };
-let closure_6 = async function _registerAgeSignalAttestKey() {
+let closure_7 = async function _registerAgeSignalAttestKey() {
   c3 = 0;
   c4 = 0;
   return (async (arg0, value) => {
@@ -108,7 +123,7 @@ let closure_6 = async function _registerAgeSignalAttestKey() {
     return true === registered;
   })();
 };
-let closure_7 = async function _submitAgeSignal(arg0) {
+let closure_8 = async function _submitAgeSignal(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -119,7 +134,7 @@ let closure_7 = async function _submitAgeSignal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -166,7 +181,7 @@ let closure_7 = async function _submitAgeSignal(arg0) {
             }
             if ("accepted" !== result) {
               if ("skipped" !== result) {
-                let obj = closure_1_4;
+                let obj = toSubmitOutcome;
               }
               return obj;
             }
@@ -237,13 +252,13 @@ let closure_7 = async function _submitAgeSignal(arg0) {
   }
 };
 const Endpoints = fn(1072).Endpoints;
-let closure_4 = { result: "skipped", reason: null };
+let closure_5 = { result: "skipped", reason: null };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");
 
-export function requestAgeSignalChallenge() {
+export function reinstateAppStoreConsent() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -251,7 +266,7 @@ export function requestAgeSignalChallenge() {
   }
   return applyArgumentsResult;
 }
-export function registerAgeSignalAttestKey() {
+export function requestAgeSignalChallenge() {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -261,9 +276,19 @@ export function registerAgeSignalAttestKey() {
   }
   return applyArgumentsResult;
 }
-export function submitAgeSignal() {
+export function registerAgeSignalAttestKey() {
   const self = this;
   const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export function submitAgeSignal() {
+  const self = this;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

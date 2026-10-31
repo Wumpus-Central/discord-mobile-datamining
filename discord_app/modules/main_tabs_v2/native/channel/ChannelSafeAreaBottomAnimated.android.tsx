@@ -1,10 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue.android.tsx";
+import useChannelSafeAreaHeightSharedValue from "useChannelSafeAreaHeightSharedValue.android.tsx";
+import useIsChannelFullyOpenDefault from "useIsChannelFullyOpen.tsx";
 import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles.tsx";
+import MobileRTCV2Experiment from "../../../voice_panel/native/dock/MobileRTCV2Experiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
+const useChannelSafeAreaHeightSharedValueDefault = useChannelSafeAreaHeightSharedValue;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,20 +22,36 @@ const result = size.fileFinishedImporting(
 );
 
 export default noop.memo(function ChannelSafeAreaBottom(channelId) {
-  const tmp = useChannelSafeAreaHeightSharedValueDefault();
-  closure_0 = tmp;
-  const tmp2 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
+  const tmp3 = useChannelSafeAreaHeightSharedValueDefault();
+  closure_0 = tmp3;
+  const tmp4 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
   const fn = function n() {
     return { height: closure_0.get() };
   };
-  fn.__closure = { heightSharedValue: tmp };
+  fn.__closure = { heightSharedValue: tmp3 };
   fn.__workletHash = 6491350126069;
   fn.__initData = __initData;
   const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-  const obj2 = { style: animatedStyle, children: null };
-  const obj3 = { style: null };
-  const items = [absoluteFill.absoluteFill, tmp2];
-  obj3.style = items;
-  obj2.children = <React4 style={null} />;
-  return jsx(ReanimatedRexportDefault.View, { style: animatedStyle, children: null });
+  const isMobileRTCV2Enabled = MobileRTCV2Experiment.useIsMobileRTCV2Enabled("ChannelSafeAreaBottom");
+  useChannelSafeAreaHeightSharedValue;
+  if (isMobileRTCV2Enabled) {
+    if (!tmp7) {
+      const obj3 = { style: null, children: null };
+      const obj4 = { height: tmp9 };
+      obj3.style = obj4;
+      const obj5 = { style: null };
+      const items = [React3.absoluteFill, tmp4];
+      obj5.style = items;
+      obj3.children = <React4 style={null} />;
+      let tmp13 = <React4 style={null}>{null}</React4>;
+    }
+    return tmp13;
+  }
+  const obj6 = { style: animatedStyle, children: null };
+  const obj7 = { style: null };
+  const items1 = [React3.absoluteFill, tmp4];
+  obj7.style = items1;
+  obj6.children = <React4 style={null} />;
+  tmp13 = jsx(ReanimatedRexportDefault.View, { style: animatedStyle, children: null });
+  tmp7 = useIsChannelFullyOpenDefault();
 });

@@ -1,6 +1,7 @@
 // discord_app/modules/checkpoint/CheckpointStatsUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
+import StringUtils from "../../utils/StringUtils.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import UserRecord from "../../records/UserRecord.tsx";
 
@@ -22,6 +23,14 @@ export function getCheckpointTopPercent(prop) {
     }
   }
   return bound;
+}
+export function getGuildAcronymCharacter(guildName) {
+  const atResult = Array.from(StringUtils.getAcronym(guildName)).at(0);
+  let toLocaleUpperCaseResult;
+  if (atResult != null) {
+    toLocaleUpperCaseResult = atResult.toLocaleUpperCase(util.intl.currentLocale);
+  }
+  return toLocaleUpperCaseResult;
 }
 export function formatCheckpointCompactNumber(stateFromStores1) {
   const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "long" });

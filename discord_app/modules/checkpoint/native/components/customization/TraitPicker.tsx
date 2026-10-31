@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/customization/TraitPicker.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3091 from "../../../Checkpoint2026.messages.js";
+import _modDef3092 from "../../../Checkpoint2026.messages.js";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -23,7 +23,7 @@ function EarnedCountHeader(customizationOption) {
     "" +
     customizationOptionName +
     ", " +
-    intl.formatToPlainString(_modDef3091.Vfq58K, {
+    intl.formatToPlainString(_modDef3092.Vfq58K, {
       earnedCount,
       totalCount,
       countHook(arg0) {
@@ -39,7 +39,7 @@ function EarnedCountHeader(customizationOption) {
     children: null,
   };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3091.Vfq58K, {
+  obj3.children = intl2.format(_modDef3092.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
@@ -49,16 +49,16 @@ function EarnedCountHeader(customizationOption) {
   return React6(Text_Text.Text, obj3);
 }
 const View = fn(17).View;
-const rarityOrder = fn(6061).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(6066).CHECKPOINT_RARITY_ORDER_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5009);
-let obj2 = { container: { gap: fn(13645).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
-let obj3 = { gap: fn(13645).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13645).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13645).CONTENT_INSET };
-obj2.details = { paddingHorizontal: fn(13645).CONTENT_INSET };
+const createStyles = fn(5014);
+let obj2 = { container: { gap: fn(13680).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
+let obj3 = { gap: fn(13680).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13680).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13680).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13680).CONTENT_INSET };
 let closure_11 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function TraitPickerTsx1(){const{INTRO_DETAILS_DURATION_MS,Easing,withTiming,isDetailsVisible,INTRO_DETAILS_OFFSET_Y}=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isDetailsVisible?1:0,timing),transform:[{translateY:withTiming(isDetailsVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};}",
@@ -81,14 +81,14 @@ export default function TraitPicker(customizationOption) {
   earnedCount = undefined;
   let useReducedMotion;
   const tmp = closure_11();
-  const tmp4 = !customizationOption(6429).getIsTraitRarityVisible(customizationOption);
-  let obj = customizationOption(6429);
+  const tmp4 = !customizationOption(6434).getIsTraitRarityVisible(customizationOption);
+  let obj = customizationOption(6434);
   let items = [useReducedMotion];
   dependencyMap = customizationOption(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj2 = customizationOption(504);
-  _slicedToArray = customizationOption(5269).useIsScreenReaderEnabled();
-  let obj3 = customizationOption(5269);
-  const traitPickerOptions = customizationOption(13647).useTraitPickerOptions({
+  _slicedToArray = customizationOption(5274).useIsScreenReaderEnabled();
+  let obj3 = customizationOption(5274);
+  const traitPickerOptions = customizationOption(13682).useTraitPickerOptions({
     customizationOption,
     optionIds,
     savedOptionId,
@@ -96,7 +96,7 @@ export default function TraitPicker(customizationOption) {
   });
   ({ availableTraitOptions, earnedCount } = traitPickerOptions);
   closure_5 = tmp6;
-  const tmp8 = selectedOptionId(5607)(() => {
+  const tmp8 = selectedOptionId(5612)(() => {
     let num = 0;
     if (!closure_5) {
       num = 0;
@@ -118,7 +118,7 @@ export default function TraitPicker(customizationOption) {
     tmp9 = 0 === tmp8;
   }
   useReducedMotion = tmp9;
-  const obj4 = customizationOption(13647);
+  const obj4 = customizationOption(13682);
   const obj5 = { customizationOption, optionIds, savedOptionId, rarityOrder };
   const fn = function b() {
     const obj = { duration: 600, easing: null };
@@ -138,11 +138,11 @@ export default function TraitPicker(customizationOption) {
     obj3.transform = items;
     return obj3;
   };
-  const tmp2Result = customizationOption(5090);
+  const tmp2Result = customizationOption(5095);
   fn.__closure = {
     INTRO_DETAILS_DURATION_MS: 600,
-    Easing: customizationOption(5090).Easing,
-    withTiming: customizationOption(5249).withTiming,
+    Easing: customizationOption(5095).Easing,
+    withTiming: customizationOption(5254).withTiming,
     isDetailsVisible: tmp9,
     INTRO_DETAILS_OFFSET_Y: PX_12,
   };
@@ -151,8 +151,8 @@ export default function TraitPicker(customizationOption) {
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
   const obj6 = {
     INTRO_DETAILS_DURATION_MS: 600,
-    Easing: customizationOption(5090).Easing,
-    withTiming: customizationOption(5249).withTiming,
+    Easing: customizationOption(5095).Easing,
+    withTiming: customizationOption(5254).withTiming,
     isDetailsVisible: tmp9,
     INTRO_DETAILS_OFFSET_Y: PX_12,
   };
@@ -168,7 +168,7 @@ export default function TraitPicker(customizationOption) {
     tmp14 = tmp15;
   }
   obj7.paused = tmp14;
-  const autoSelectTraitOption = customizationOption(13648).useAutoSelectTraitOption(obj7);
+  const autoSelectTraitOption = customizationOption(13683).useAutoSelectTraitOption(obj7);
   let diff = earnedCount;
   if (null == selectedOptionId) {
     diff = earnedCount - tmp12;
@@ -186,7 +186,7 @@ export default function TraitPicker(customizationOption) {
   }
   const items2 = [
     showEarnedCount,
-    closure_8(selectedOptionId(13645), {
+    closure_8(selectedOptionId(13680), {
       customizationOption,
       options: availableTraitOptions,
       selectedOptionId,
@@ -203,8 +203,8 @@ export default function TraitPicker(customizationOption) {
     const items3 = [tmp.details, animatedStyle];
     obj10.style = items3;
     const obj11 = { asset: found, hideDescriptionAndRarity: tmp4 };
-    obj10.children = closure_8(tmp7(13649), obj11);
-    tmp23Result = closure_8(tmp7(5090).View, obj10);
+    obj10.children = closure_8(tmp7(13684), obj11);
+    tmp23Result = closure_8(tmp7(5095).View, obj10);
   }
   items2[2] = tmp23Result;
   obj8.children = items2;

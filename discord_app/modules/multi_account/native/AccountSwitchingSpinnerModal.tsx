@@ -15,11 +15,11 @@ class AccountSwitchingSpinnerModal {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const React4 = createStyles.createStyles({
   switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
 });
-AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1093).ModalAnimation.FADE, closable: false };
+AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1092).ModalAnimation.FADE, closable: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 

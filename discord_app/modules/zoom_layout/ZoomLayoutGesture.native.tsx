@@ -1,6 +1,6 @@
 // discord_app/modules/zoom_layout/ZoomLayoutGesture.native.tsx
 import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../_runtime/05303_LegacyBaseButton.js";
 import spring from "../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -51,33 +51,33 @@ function releaseTranslation(get, bound, arg2) {
             const tmp3 = -closure_1;
           }
         };
-        let obj2 = { bound, translation: get, withSpring: tmp5(5632).withSpring, SPRING_CONFIG };
+        let obj2 = { bound, translation: get, withSpring: tmp5(5637).withSpring, SPRING_CONFIG };
         fn.__closure = obj2;
         fn.__workletHash = 7034972790996;
         fn.__initData = __initData;
-        const result1 = get.set(tmp5(5090).withDecay(SPRING_CONFIG, fn));
-        const tmp5Result = tmp5(5090);
+        const result1 = get.set(tmp5(5095).withDecay(SPRING_CONFIG, fn));
+        const tmp5Result = tmp5(5095);
       }
     }
-    const result2 = get.set(tmp5(5632).withSpring(bound, SPRING_CONFIG));
-    const tmp5Result2 = tmp5(5632);
+    const result2 = get.set(tmp5(5637).withSpring(bound, SPRING_CONFIG));
+    const tmp5Result2 = tmp5(5637);
   }
   const tmp2 = -bound;
 }
 releaseTranslation.__closure = {
   MAX_PAN_VELOCITY: 4000,
-  accessibilityPreferencesSharedValue: fn(5251).accessibilityPreferencesSharedValue,
-  withSpring: fn(5632).withSpring,
+  accessibilityPreferencesSharedValue: fn(5256).accessibilityPreferencesSharedValue,
+  withSpring: fn(5637).withSpring,
   SPRING_CONFIG,
   MAX_FLING_OVERSHOOT: 48,
-  withDecay: fn(5090).withDecay,
+  withDecay: fn(5095).withDecay,
   PAN_DECELERATION: 0.998,
 };
 releaseTranslation.__workletHash = 13339877968106;
 releaseTranslation.__initData = {
   code: "function releaseTranslation_ZoomLayoutGestureNativeTsx2(translation,bound,velocity){const{MAX_PAN_VELOCITY,accessibilityPreferencesSharedValue,withSpring,SPRING_CONFIG,MAX_FLING_OVERSHOOT,withDecay,PAN_DECELERATION}=this.__closure;const position=translation.get();const clamped=Math.max(-bound,Math.min(bound,position));const releaseVelocity=Math.max(-MAX_PAN_VELOCITY,Math.min(MAX_PAN_VELOCITY,velocity));if(accessibilityPreferencesSharedValue.get().reduceMotion){translation.set(clamped);}else if(position!==clamped||bound===0){translation.set(withSpring(clamped,SPRING_CONFIG));}else{const overshoot=Math.min(MAX_FLING_OVERSHOOT,Math.abs(releaseVelocity)*0.02);translation.set(withDecay({velocity:releaseVelocity,deceleration:PAN_DECELERATION,clamp:[-bound-overshoot,bound+overshoot]},function(finished){if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));}));}}",
 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden" }, content: { flex: 1 } });
 let closure_12 = {
   code: "function ZoomLayoutGestureNativeTsx4(){const{cancelAnimation,scale,translateX,translateY}=this.__closure;cancelAnimation(scale);cancelAnimation(translateX);cancelAnimation(translateY);}",
@@ -129,11 +129,11 @@ let closure_27 = {
 };
 let obj2 = {
   MAX_PAN_VELOCITY: 4000,
-  accessibilityPreferencesSharedValue: fn(5251).accessibilityPreferencesSharedValue,
-  withSpring: fn(5632).withSpring,
+  accessibilityPreferencesSharedValue: fn(5256).accessibilityPreferencesSharedValue,
+  withSpring: fn(5637).withSpring,
   SPRING_CONFIG,
   MAX_FLING_OVERSHOOT: 48,
-  withDecay: fn(5090).withDecay,
+  withDecay: fn(5095).withDecay,
   PAN_DECELERATION: 0.998,
 };
 const size = fn(2);
@@ -737,13 +737,13 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
         translateX,
         translateY,
         animated: flag,
-        withSpring: onCreateGesture(5632).withSpring,
+        withSpring: onCreateGesture(5637).withSpring,
         SPRING_CONFIG,
       };
       fn.__closure = point;
       fn.__workletHash = 7362250952825;
       fn.__initData = __initData;
-      onCreateGesture(5090).runOnUI(fn)();
+      onCreateGesture(5095).runOnUI(fn)();
     },
     unzoom() {
       obj = arg0;
@@ -778,14 +778,14 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
         }
         const result4 = translateY.set(num2);
       };
-      let obj2 = onCreateGesture(5090);
+      let obj2 = onCreateGesture(5095);
       fn.__closure = {
         stopAnimation,
         touchStoppedAnimation,
         panInterrupted,
         scale,
         animated: flag,
-        withSpring: onCreateGesture(5632).withSpring,
+        withSpring: onCreateGesture(5637).withSpring,
         minimumZoomScale,
         SPRING_CONFIG,
         translateX,

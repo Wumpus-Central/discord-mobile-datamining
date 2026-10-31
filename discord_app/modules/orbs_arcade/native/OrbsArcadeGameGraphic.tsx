@@ -5,10 +5,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = {
   graphic: {
-    width: "100%",
+    width: nativeDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH,
+    maxWidth: "100%",
+    alignSelf: "center",
     aspectRatio: 1.7777777777777777,
     borderRadius: nativeDefault.radii.xs,
     overflow: "hidden",

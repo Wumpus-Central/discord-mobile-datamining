@@ -5,7 +5,7 @@ import PIPSpeakerStore from "../voice_panel/native/pip/PIPSpeakerStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 
 const require = fn;
-const VoicePanelPIPModes = fn(19059).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19108).VoicePanelPIPModes;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/external_pip/useExternalPipSelectedTile.android.tsx");
 

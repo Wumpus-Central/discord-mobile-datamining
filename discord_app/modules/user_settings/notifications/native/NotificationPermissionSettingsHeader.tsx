@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
-const NotificationPermissionConstants = fn(13924);
+const NotificationPermissionConstants = fn(13959);
 ({
   EventActionLocation: closure_7,
   EventActionType: closure_8,
@@ -16,7 +16,7 @@ const NotificationPermissionConstants = fn(13924);
 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_16 },
   cardContent: { alignItems: "center" },
@@ -43,7 +43,7 @@ const result = size.fileFinishedImporting(
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  canSeePushNotificationNudge = canSeePushNotificationNudge(13925).useCanSeePushNotificationNudge();
+  canSeePushNotificationNudge = canSeePushNotificationNudge(13960).useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
     if (canSeePushNotificationNudge) {
@@ -58,26 +58,26 @@ export default function NotificationPermissionSettingsHeader() {
     const obj4 = { style: tmp.cardContent, children: null };
     const obj5 = { style: tmp.iconCircle, children: null };
     const obj6 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-    obj5.children = closure_11(tmp2(10973).BellSlashIcon, obj6);
+    obj5.children = closure_11(tmp2(10992).BellSlashIcon, obj6);
     const items1 = [closure_11(View, obj5), , ,];
     const obj7 = { variant: "heading-lg/bold", color: "text-default", children: null };
-    const intl = tmp2(1114).intl;
-    obj7.children = intl.string(tmp2(1114).t.MUwOvc);
-    items1[1] = closure_11(tmp2(5619).Text, obj7);
+    const intl = tmp2(1113).intl;
+    obj7.children = intl.string(tmp2(1113).t.MUwOvc);
+    items1[1] = closure_11(tmp2(5624).Text, obj7);
     const obj8 = { variant: "text-sm/medium", style: tmp.body, color: "text-muted", children: null };
-    const intl2 = tmp2(1114).intl;
-    obj8.children = intl2.string(tmp2(1114).t.G4uKoe);
-    items1[2] = closure_11(tmp2(5619).Text, obj8);
+    const intl2 = tmp2(1113).intl;
+    obj8.children = intl2.string(tmp2(1113).t.G4uKoe);
+    items1[2] = closure_11(tmp2(5624).Text, obj8);
     const obj9 = { style: { alignSelf: "stretch" }, children: null };
     const obj10 = { variant: "primary", text: null, onPress: null };
-    const intl3 = tmp2(1114).intl;
-    obj10.text = intl3.string(tmp2(1114).t["5xWOXv"]);
+    const intl3 = tmp2(1113).intl;
+    obj10.text = intl3.string(tmp2(1113).t["5xWOXv"]);
     obj10.onPress = tmp6;
-    obj9.children = closure_11(tmp2(5629).Button, obj10);
+    obj9.children = closure_11(tmp2(5634).Button, obj10);
     items1[3] = closure_11(View, obj9);
     obj4.children = items1;
     obj3.children = closure_12(View, obj4);
-    obj2.children = closure_11(tmp2(6971).Card, obj3);
+    obj2.children = closure_11(tmp2(6977).Card, obj3);
     tmp7 = closure_11(View, obj2);
   }
   return tmp7;

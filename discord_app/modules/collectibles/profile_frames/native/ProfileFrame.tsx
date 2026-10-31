@@ -124,7 +124,7 @@ function LiveProfileFrame(frame) {
   c9 = undefined;
   c10 = undefined;
   const tmp = c10();
-  const settled = frame(8787).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
+  const settled = frame(8795).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
   const items = [frame.layers, frameOrder, profileThemeType, filterLayer];
   const memo = profileThemeType.useMemo(() => {
     const layers = frame.layers;
@@ -137,12 +137,12 @@ function LiveProfileFrame(frame) {
       return result;
     });
   }, items);
-  let obj = frame(8787);
+  let obj = frame(8795);
   let num = 0;
   if (settled) {
     num = 1;
   }
-  sharedValue = frame(5090).useSharedValue(num);
+  sharedValue = frame(5095).useSharedValue(num);
   const items1 = [settled, sharedValue];
   const effect = profileThemeType.useEffect(() => {
     let num = 0;
@@ -159,7 +159,7 @@ function LiveProfileFrame(frame) {
           overflowTop: c8,
           overflowBottom: c9,
           overflowHorizontal: c10,
-        } = containerWidth(8789)(frame, containerWidth));
+        } = containerWidth(8797)(frame, containerWidth));
         const obj4 = { style: null, children: null };
         const items2 = [tmp.container];
         const obj5 = { opacity: sharedValue };
@@ -177,7 +177,7 @@ function LiveProfileFrame(frame) {
             containerHeight={containerHeight}
           />
         ));
-        return jsx(containerWidth(5090).View, { style: null, children: null });
+        return jsx(containerWidth(5095).View, { style: null, children: null });
       }
     }
   }
@@ -185,15 +185,15 @@ function LiveProfileFrame(frame) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(8768).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8786);
+let closure_5 = fn(8776).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8794);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } =
   ProfileFrameConstants);
 let jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
-const Easing = fn(5090).Easing;
-source.easing = Easing.in(fn(5090).Easing.ease);
-const createStyles = fn(5009);
+const Easing = fn(5095).Easing;
+source.easing = Easing.in(fn(5095).Easing.ease);
+const createStyles = fn(5014);
 let obj3 = { container: null, layer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

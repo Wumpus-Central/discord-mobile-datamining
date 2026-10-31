@@ -70,8 +70,8 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(6849).isGuildEventEnded;
-const constants = fn(4864).GuildScheduledEventEntityTypes;
+const isGuildEventEnded = fn(6855).isGuildEventEnded;
+const constants = fn(4869).GuildScheduledEventEntityTypes;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/useCanInviteForGuildEvent.tsx");

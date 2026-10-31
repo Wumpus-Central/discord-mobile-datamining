@@ -14,8 +14,6 @@ export function usePinotMemberNotice(channel, mobile_channel_header) {
     mobile_channel_header,
   );
   let obj = pinotPromotableChannelId(stateFromStores[2]);
-  const tmp = pinotPromotableChannelId;
-  const tmp2 = stateFromStores;
   let tmp4 = null;
   if (null != pinotPromotableChannelId) {
     let guild_id;
@@ -24,32 +22,45 @@ export function usePinotMemberNotice(channel, mobile_channel_header) {
     }
     tmp4 = guild_id;
   }
-  let tmp6 = null;
-  if (obj2.useIsPinotMemberNoticeEnabled(tmp4, mobile_channel_header)) {
-    tmp6 = pinotPromotableChannelId;
+  const isPinotMemberNoticeEnabled = pinotPromotableChannelId(stateFromStores[3]).useIsPinotMemberNoticeEnabled(
+    tmp4,
+    mobile_channel_header,
+  );
+  const obj2 = pinotPromotableChannelId(stateFromStores[3]);
+  const canMessageInPinotChannel = pinotPromotableChannelId(stateFromStores[4]).useCanMessageInPinotChannel(channel);
+  pinotPromotableChannelId(stateFromStores[5]);
+  let tmp10 = null;
+  if (isPinotMemberNoticeEnabled) {
+    tmp10 = null;
+    if (canMessageInPinotChannel) {
+      tmp10 = null;
+      if (!tmp9) {
+        tmp10 = pinotPromotableChannelId;
+      }
+    }
   }
-  pinotPromotableChannelId = tmp6;
-  obj2 = pinotPromotableChannelId(stateFromStores[3]);
+  pinotPromotableChannelId = tmp10;
+  const tmpResult = pinotPromotableChannelId(stateFromStores[4]);
   const items = [PinotMemberNoticeAckStore];
-  const items1 = [tmp6];
-  stateFromStores = tmp(tmp2[4]).useStateFromStores(
+  const items1 = [tmp10];
+  stateFromStores = pinotPromotableChannelId(stateFromStores[6]).useStateFromStores(
     items,
     () => {
-      let isAckedResult = null != pinotPromotableChannelId;
-      if (isAckedResult) {
-        isAckedResult = PinotMemberNoticeAckStore.isAcked(tmp);
+      let isHiddenResult = null != pinotPromotableChannelId;
+      if (isHiddenResult) {
+        isHiddenResult = PinotMemberNoticeAckStore.isHidden(tmp);
       }
-      return isAckedResult;
+      return isHiddenResult;
     },
     items1,
   );
-  const items2 = [tmp6];
+  const items2 = [tmp10];
   dismiss = dismiss.useCallback(() => {
     if (null != pinotPromotableChannelId) {
       PinotMemberNoticeActionCreators.ackPinotMemberNotice(tmp);
     }
   }, items2);
-  const items3 = [tmp6, stateFromStores, dismiss];
+  const items3 = [tmp10, stateFromStores, dismiss];
   return dismiss.useMemo(() => {
     if (null != pinotPromotableChannelId) {
       if (!stateFromStores) {

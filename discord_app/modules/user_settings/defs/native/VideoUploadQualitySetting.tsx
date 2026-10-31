@@ -6,14 +6,14 @@ import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
-const VideoQualitySettings = fn(1195).VideoQualitySettings;
-const SettingBuilders = fn(11505);
+const VideoQualitySettings = fn(1194).VideoQualitySettings;
+const SettingBuilders = fn(11539);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(8424).MobileUserSettings.CHAT,
+  parent: fn(8432).MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
     const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);

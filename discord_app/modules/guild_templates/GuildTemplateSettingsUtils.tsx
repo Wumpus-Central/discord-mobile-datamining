@@ -43,11 +43,11 @@ export function useGuildTemplate(guildId) {
     closure_0 = async function _fetchGuildTemplate(arg0) {
       closure_129_0 = closure_0;
       tmp3(null);
-      await closure_2_1(7493).loadTemplatesForGuild(closure_0);
+      await closure_2_1(7499).loadTemplatesForGuild(closure_0);
       if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const aPIError = new guildId(6440).APIError(closure_129_1);
+        const aPIError = new guildId(6446).APIError(closure_129_1);
         tmp3(aPIError);
         closure_1(closure_129_0);
         c6 = 3;

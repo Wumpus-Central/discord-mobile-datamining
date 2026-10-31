@@ -11,7 +11,7 @@ require = fn;
 function FavoritesGuildAddCategoryActionSheet() {
   const tmp = closure_9();
   [value, obj4.onChange] = noop.useState("");
-  const result = value(4883).isFavoritesGuildCategoryNameValid(value);
+  const result = value(4888).isFavoritesGuildCategoryNameValid(value);
   importDefault = result;
   const items = [result, value];
   const callback = noop.useCallback(() => {
@@ -28,9 +28,9 @@ function FavoritesGuildAddCategoryActionSheet() {
     children: null,
   };
   const obj3 = { title: null };
-  const intl = value(1114).intl;
-  obj3.title = intl.string(value(1114).t["ISN+NM"]);
-  obj2.header = closure_6(value(7315).BottomSheetTitleHeader, obj3);
+  const intl = value(1113).intl;
+  obj3.title = intl.string(value(1113).t["ISN+NM"]);
+  obj2.header = closure_6(value(7321).BottomSheetTitleHeader, obj3);
   const obj4 = {
     label: null,
     placeholder: null,
@@ -42,28 +42,28 @@ function FavoritesGuildAddCategoryActionSheet() {
     returnKeyType: "done",
     onSubmitEditing: null,
   };
-  const intl2 = value(1114).intl;
-  obj4.label = intl2.string(value(1114).t.OCAkGP);
-  const intl3 = value(1114).intl;
-  obj4.placeholder = intl3.string(value(1114).t.eTVbtx);
+  const intl2 = value(1113).intl;
+  obj4.label = intl2.string(value(1113).t.OCAkGP);
+  const intl3 = value(1113).intl;
+  obj4.placeholder = intl3.string(value(1113).t.eTVbtx);
   obj4.value = value;
   obj4.maxLength = maxLength;
   obj4.onSubmitEditing = callback;
-  const items1 = [closure_6(value(7076).TextInput, obj4)];
+  const items1 = [closure_6(value(7082).TextInput, obj4)];
   const obj5 = { text: null, onPress: null, disabled: null };
-  const intl4 = value(1114).intl;
-  obj5.text = intl4.string(value(1114).t.CumH4u);
+  const intl4 = value(1113).intl;
+  obj5.text = intl4.string(value(1113).t.CumH4u);
   obj5.onPress = callback;
   obj5.disabled = !result;
-  items1[1] = closure_6(value(5629).Button, obj5);
+  items1[1] = closure_6(value(5634).Button, obj5);
   obj2.children = items1;
-  return closure_7(value(5267).BottomSheet, obj2);
+  return closure_7(value(5272).BottomSheet, obj2);
 }
-const maxLength = fn(4871).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+const maxLength = fn(4876).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.body = { gap: nativeDefault.space.PX_16 };

@@ -24,8 +24,8 @@ function GuildChannelMemberCount(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  const token = channel(5591).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
-  let obj = channel(5591);
+  const token = channel(5596).useToken(nativeDefault.modules.mobile.CHANNEL_HEADER_ICON_SIZE);
+  let obj = channel(5596);
   const items = [ChannelMemberStore, ChannelMemberCountStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
     let flag = false;
@@ -67,8 +67,8 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(11305);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(7090).ICON_SIZE[token]);
+    const tmpResult = tmp(11337);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(7096).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
 }
@@ -101,10 +101,10 @@ function ChannelLinkedLobbyCoachmark(guild) {
   guild = guild.guild;
   const channel = guild.channel;
   _slicedToArray = undefined;
-  const items = [guild(4842).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(7563).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const items = [guild(4847).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
+  const tmp = _slicedToArray(guild(7569).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp2;
-  const tmp3 = tmp[0] === guild(4842).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
+  const tmp3 = tmp[0] === guild(4847).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
   const items1 = [channel, guild, tmp[1], tmp3];
   const memo = noop.useMemo(() => {
@@ -138,15 +138,15 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(7563);
-  const coachmark = guild(9933).useCoachmark(guild.iconRef, memo);
+  let obj = guild(7569);
+  const coachmark = guild(9954).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;
-const THREAD_CHANNEL_TYPES = fn(4862).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4867).THREAD_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_15, HelpdeskArticles: closure_16, StatusTypes: closure_17 } = Constants);
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 const size = fn(2);
@@ -438,7 +438,7 @@ export default noop.memo(function GuildChannelHeader(channelId) {
     if (tmp33) {
       tmp42 = null;
       if (null != stateFromStores) {
-        const obj13 = { channelId: stateFromStores.id };
+        const obj13 = { channel: stateFromStores };
         tmp42 = closure_19(tmp2(tmp3[24]).PinotChannelLabel, obj13);
       }
     }

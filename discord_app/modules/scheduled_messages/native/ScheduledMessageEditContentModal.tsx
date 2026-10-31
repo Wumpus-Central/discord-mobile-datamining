@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   modal: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerLeftContainer: null,
@@ -68,7 +68,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -82,7 +82,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const obj5 = v1(7817);
+              const obj5 = v1(7824);
               const obj4 = {
                 content: obj5.parse(stateFromStores, first).content,
                 flags: scheduledMessage.createArgs.flags,
@@ -90,7 +90,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
               v1 = 1;
               dependencyMap = 1;
               const obj7 = {
-                value: tmp4(9786).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
+                value: tmp4(9807).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
                 done: false,
               };
               return obj7;
@@ -104,11 +104,11 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             return obj;
           } else {
             if (value) {
-              v1(6738).pop();
-              const arr = v1(6738);
+              v1(6744).pop();
+              const arr = v1(6744);
             }
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           dependencyMap = tmp;

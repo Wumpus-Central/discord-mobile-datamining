@@ -18,7 +18,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4862).createChannelRecordFromServer;
+let closure_6 = fn(4867).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_9,
@@ -60,7 +60,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -191,7 +191,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -311,7 +311,7 @@ export default {
     closure_0 = id;
     const self = this;
     return (async () => {
-      const HTTP = tmp2(1283).HTTP;
+      const HTTP = tmp2(1282).HTTP;
       const request = {
         url: constants.USER_CHANNELS,
         body: { recipients: self._getRecipients(tmp2) },
@@ -319,7 +319,7 @@ export default {
         rejectWithError: null,
       };
       self._getRecipients(tmp2);
-      request.rejectWithError = tmp2(1283).rejectWithMigratedError();
+      request.rejectWithError = tmp2(1282).rejectWithMigratedError();
       await HTTP.post(request);
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
@@ -341,7 +341,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -387,7 +387,7 @@ export default {
   getDMChannel(arr) {
     closure_0 = arr;
     return (async () => {
-      const HTTP = tmp5(1283).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
@@ -454,28 +454,24 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "applicationId" },
+      channel: { id, guild_id: "concat", parent_id: "style" },
       silent: flag2,
     });
     if (flag) {
-      flag3(1100).transitionTo(constants2.FRIENDS);
-      const obj6 = flag3(1100);
+      flag3(1099).transitionTo(constants2.FRIENDS);
+      const obj6 = flag3(1099);
     }
-    const HTTP = flag3(1283).HTTP;
+    const HTTP = flag3(1282).HTTP;
     const request = {
       url: closure_11.CHANNEL(id),
       query: { silent: flag2 },
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = {
-      type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "applicationId" },
-      silent: flag2,
-    };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "concat", parent_id: "style" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
-    request.rejectWithError = flag3(1283).rejectWithMigratedError();
-    const obj8 = flag3(1283);
+    request.rejectWithError = flag3(1282).rejectWithMigratedError();
+    const obj8 = flag3(1282);
     const delResult = HTTP.del(request);
     return HTTP.del(request)
       .then(() => {
@@ -506,12 +502,12 @@ export default {
     closure_1 = arr3;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1283).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       const request = {
         url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id),
         body,
         oldFormErrors: true,
-        rejectWithError: tmp5(1283).rejectWithMigratedError(),
+        rejectWithError: tmp5(1282).rejectWithMigratedError(),
       };
       await HTTP.put(request);
       closure_128_0 = value;
@@ -527,11 +523,11 @@ export default {
     closure_0 = channelId;
     closure_1 = id;
     return (async () => {
-      const HTTP = tmp5(1283).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       await HTTP.del({
         url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2),
         oldFormErrors: true,
-        rejectWithError: tmp5(1283).rejectWithMigratedError(),
+        rejectWithError: tmp5(1282).rejectWithMigratedError(),
       });
       closure_128_0 = value;
       tmp2(572).dispatch({
@@ -601,7 +597,7 @@ export default {
     return (async () => {
       const name = tmp3;
       const channel2 = channel.getChannel(tmp2);
-      const HTTP = tmp2(1283).HTTP;
+      const HTTP = tmp2(1282).HTTP;
       const request = { url: closure_1_11.CHANNEL(tmp2), body: { name }, oldFormErrors: true, rejectWithError: true };
       await HTTP.patch(request);
       closure_128_1 = value;
@@ -619,8 +615,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7492).checkGuildTemplateDirty(closure_128_2);
-        name(7492);
+        const result = name(7498).checkGuildTemplateDirty(closure_128_2);
+        name(7498);
       }
       return closure_128_1;
     })();
@@ -640,7 +636,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -784,7 +780,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

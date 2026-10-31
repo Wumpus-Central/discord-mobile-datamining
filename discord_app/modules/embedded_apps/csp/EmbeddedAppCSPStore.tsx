@@ -5,8 +5,8 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 const map = new Map();
 const Store = initializeDefault.Store;
 class EmbeddedAppCSPStore extends Store {}
-EmbeddedAppCSPStore.prototype["getPolicy"] = function getPolicy(arg0) {
-  value = map.get(arg0);
+EmbeddedAppCSPStore.prototype["getPolicy"] = function getPolicy(applicationRouterOrigin) {
+  value = map.get(applicationRouterOrigin);
   if (value == null) {
     value = null;
   }

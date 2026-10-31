@@ -36,7 +36,7 @@ let closure_10 = async function _convertViaSysimg(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -281,7 +281,7 @@ let closure_13 = async function _convertFileToJpeg(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -381,7 +381,7 @@ const ImageConversionFailureReason = {
 };
 let obj2 = {
   label: "heic",
-  matches: fn(8231).isHeicFile,
+  matches: fn(8239).isHeicFile,
   canConvert(canConvertHeic) {
     return canConvertHeic.canConvertHeic();
   },
@@ -390,7 +390,7 @@ let obj2 = {
 };
 let obj3 = {
   label: "jxr",
-  matches: fn(8231).isJxrFile,
+  matches: fn(8239).isJxrFile,
   canConvert(canConvertJxr) {
     return canConvertJxr.canConvertJxr();
   },
@@ -401,7 +401,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/imageConversion.tsx");
 
 export { ImageConversionFailureReason };
-export const renameToJpegExtension = fn(8231).renameToJpegExtension;
+export const renameToJpegExtension = fn(8239).renameToJpegExtension;
 export { maybeConvertHeicToJpeg };
 export { maybeConvertJxrToJpeg };
 export function convertFileToJpeg() {

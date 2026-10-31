@@ -5,8 +5,8 @@ import ApexExperimentStore from "ApexExperimentStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/index.tsx");
 
-export const ApexExperiment = fn(1449).ApexExperiment;
-export const ApexExperimentsMessage = fn(1451).ApexExperimentsMessage;
-export const ExperimentName = fn(1451).ExperimentName;
+export const ApexExperiment = fn(1448).ApexExperiment;
+export const ApexExperimentsMessage = fn(1450).ApexExperimentsMessage;
+export const ExperimentName = fn(1450).ExperimentName;
 export const createApexExperiment = apex_ApexExperimentDefault;
 export { ApexExperimentStore };

@@ -58,9 +58,9 @@ function FailedUserRow(user) {
       status: true,
       isMobileOnline: null,
       isVROnline: null,
-      size: "image/gif",
-      avatarDecoration: null,
-      autoStatusCutout: null,
+      size: "image/heic",
+      avatarDecoration: "nl-CW",
+      autoStatusCutout: "nl",
     };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
@@ -69,15 +69,15 @@ function FailedUserRow(user) {
     obj4.status = tmp13;
     obj4.isMobileOnline = tmp6;
     obj4.isVROnline = tmp7;
-    obj4.size = tmp2(1188).AvatarSizes.XSMALL;
+    obj4.size = tmp2(1187).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1188).Avatar, obj4)];
+    const items2 = [closure_10(tmp2(1187).Avatar, obj4)];
     const obj5 = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(5619).Text, obj5);
+    items2[1] = closure_10(tmp2(5624).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -98,13 +98,13 @@ function FailedChannelRow(channel) {
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
   const items1 = [
-    closure_10(channel(13373).GuildIconWithChannelType, {
+    closure_10(channel(13408).GuildIconWithChannelType, {
       "aria-label": "",
       guild: stateFromStores,
       channel,
-      size: channel(13373).GuildIconWithChannelTypeSizes.SMALL_32,
+      size: channel(13408).GuildIconWithChannelTypeSizes.SMALL_32,
     }),
-    closure_10(channel(5619).Text, {
+    closure_10(channel(5624).Text, {
       style: tmp.label,
       variant: "text-md/medium",
       lineClamp: 1,
@@ -155,7 +155,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1083).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     borderWidth: 1,

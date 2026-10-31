@@ -1,5 +1,5 @@
 // discord_app/modules/keyboard/native/PortalKeyboardConstants.tsx
-import BottomSheetModal from "../../../../_runtime/05270_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05275_BottomSheetModal.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const keyboardAnimationConfigs = BottomSheetModal.getKeyboardAnimationConfigs("keyboard", 250);

@@ -1,7 +1,7 @@
 // discord_app/modules/network/NetStats.android.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import configure from "../../../_runtime/01478_configure.js";
+import configure from "../../../_runtime/01477_configure.js";
 import NativeTTIManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import RTCBandwidthMonitor from "../../lib/RTCBandwidthMonitor.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -70,7 +70,7 @@ let closure_10 = {
 };
 let c11 = null;
 const tmp3 = new LoggerDefault("NetStats");
-let global = { type: fn(1478).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+let global = { type: fn(1477).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 global = null;
 let closure_14 = "active" === AppState.currentState;
 let closure_15 = 0;
@@ -177,7 +177,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -245,7 +245,7 @@ prototype["track"] = function track() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

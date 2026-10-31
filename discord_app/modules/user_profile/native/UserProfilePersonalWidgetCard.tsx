@@ -171,7 +171,7 @@ function CoverSection(section) {
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = React7(tmp14(5582), obj9);
+        tmp24Result4 = React7(tmp14(5587), obj9);
       } else {
         tmp24Result4 = null;
       }
@@ -181,7 +181,7 @@ function CoverSection(section) {
     let tmp24Result5 = null;
     if (showGifTag) {
       const obj10 = { style: tmp.gifTag };
-      tmp24Result5 = React7(tmp14(8565), obj10);
+      tmp24Result5 = React7(tmp14(8573), obj10);
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
@@ -267,7 +267,7 @@ function UserProfilePersonalWidgetCardContent(style) {
     children: null,
   };
   const tmp = closure_14();
-  obj.titleLeadingIcon = closure_9(userId(9506).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj.titleLeadingIcon = closure_9(userId(9528).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   obj.disableInteraction = disableInteraction;
   let obj2 = { style: tmp.sectionsContainer, children: null };
@@ -293,7 +293,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items[1] = tmp2Result;
   obj2.children = items;
   obj.children = closure_10(closure_7, obj2);
-  return closure_9(disableInteraction(14918), obj);
+  return closure_9(disableInteraction(14956), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -303,7 +303,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
 const locations = [0, 0.4, 1];
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   coverContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" },
   coverContent: null,

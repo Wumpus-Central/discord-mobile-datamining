@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/archive/native/ConjureArchivePicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import FilePickerUtils from "../../../../utils/native/FilePickerUtils.tsx";
 import ConjureAttachmentTypes from "../../chat/ConjureAttachmentTypes.tsx";
 import conjureAttachmentRequests from "../../chat/conjureAttachmentRequests.tsx";
@@ -49,7 +49,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
         const items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp14) {
       c6 = tmp;
@@ -103,7 +103,7 @@ let closure_8 = async function _sendConjureArchiveImport(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10830);
+const ConjureConnectionStore = fn(10850);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let closure_6 = ["zip", "tar", "gz", "tgz", "bz2", "xz"];
 const size = fn(2);
@@ -128,7 +128,7 @@ export function describeConjureArchiveRejection(bytes) {
     obj2.size = tmpResult.formatConjureAttachmentLimit(
       ConjureAttachmentTypes.conjureAttachmentLimit(bytes.contentType),
     );
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3865.ThxcOX, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3868.ThxcOX, obj2);
     const tmpResult2 = ConjureAttachmentTypes;
   }
   return formatToPlainStringResult;

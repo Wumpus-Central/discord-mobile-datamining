@@ -1,14 +1,14 @@
 // discord_app/modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx
 import util from "../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef3189 from "../ManualReview.messages.js";
+import _modDef3192 from "../ManualReview.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import ManualReviewInconclusiveCopyExperiment from "../ManualReviewInconclusiveCopyExperiment.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6722).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6728).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -22,9 +22,9 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(7947);
-          const intl = closure_1_0(1114).intl;
-          return obj.openUrl(closure_1_1(2062).getArticleURL(intl.string(closure_1_1(3189).agiNYw)));
+          const obj = closure_1_1(7955);
+          const intl = closure_1_0(1113).intl;
+          return obj.openUrl(closure_1_1(2061).getArticleURL(intl.string(closure_1_1(3192).agiNYw)));
         },
         children,
       },
@@ -35,10 +35,10 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
     ManualReviewInconclusiveCopyExperiment.useIsManualReviewInconclusiveCopyEnabled("manual_review_decided_teen_modal");
   const obj2 = { title: null, content: null, actions: null, trackingProps: null };
   let intl = util.intl;
-  obj2.title = intl.string(_modDef3189.AA3xYb);
+  obj2.title = intl.string(_modDef3192.AA3xYb);
   const intl2 = util.intl;
   const format = intl2.format;
-  const tmp5 = _modDef3189;
+  const tmp5 = _modDef3192;
   if (isManualReviewInconclusiveCopyEnabled) {
     const obj3 = { contentAndSettingsHook };
     let formatResult = format(tmp5.UIbYzl, obj3);

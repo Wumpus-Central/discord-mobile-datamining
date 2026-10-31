@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSe
 export default noop.memo(function GuildSettingsModalMembersWrapper(guildId) {
   guildId = guildId.guildId;
   return jsx(
-    importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 18595 : 18597),
+    importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 18637 : 18639),
     { guildId },
   );
 });

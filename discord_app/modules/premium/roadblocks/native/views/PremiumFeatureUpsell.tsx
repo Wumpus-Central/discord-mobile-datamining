@@ -5,7 +5,7 @@ import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05587_LinearGradient.js";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -175,13 +175,13 @@ function PremiumFeatureUpsellPill(featureName) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const PremiumConstants = fn(1386);
+const PremiumConstants = fn(1385);
 ({ PremiumSubscriptionSKUs: closure_7, PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Gradients = fn(7610).Gradients;
+const Gradients = fn(7617).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -251,7 +251,7 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5632).withSpring, springStandard: fn(5633).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5637).withSpring, springStandard: fn(5638).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = {
   code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",

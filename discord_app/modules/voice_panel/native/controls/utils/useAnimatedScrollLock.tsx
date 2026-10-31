@@ -3,7 +3,7 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let closure_3 = PlatformUtils.isAndroid();
 let context = noop.createContext(null);
 let closure_5 = {

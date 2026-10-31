@@ -3,7 +3,7 @@ import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import _modDef2537 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2538 from "../../../parent_tools/FamilyCenter.messages.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
@@ -31,7 +31,7 @@ function FamilyCenterLoading() {
 function FamilyCenterLoadError() {
   const tmp = closure_19();
   const intl = util.intl;
-  const stringResult = intl.string(_modDef2537.nGX8Co);
+  const stringResult = intl.string(_modDef2538.nGX8Co);
   require = stringResult;
   items = [stringResult];
   const effect = noop.useEffect(() => {
@@ -228,8 +228,8 @@ function FamilyCenter() {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const AgeGateSource = fn(1098).AgeGateSource;
-const FamilyCenterConstants = fn(7709);
+const AgeGateSource = fn(1097).AgeGateSource;
+const FamilyCenterConstants = fn(7716);
 ({
   FamilyCenterPageLocationAnalyticsIds: closure_11,
   FamilyCenterSubPageAnalyticsIds: closure_12,
@@ -239,7 +239,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let items = [,];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { display: "flex", flex: 1 },
   segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },

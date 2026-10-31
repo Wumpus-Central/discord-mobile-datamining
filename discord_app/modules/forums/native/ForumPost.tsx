@@ -138,7 +138,7 @@ function ConnectedForumPost(arg0) {
   }
   const obj8 = require("initialize");
 }
-const useForumChannelStore = fn(13713).useForumChannelStore;
+const useForumChannelStore = fn(13748).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -173,9 +173,9 @@ export function ForumPostListDisabled(threadId) {
     ChannelStore.getChannel(stateFromStores.parent_id),
   );
   const obj2 = threadId(504);
-  const firstForumPostMessage = threadId(7469).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(7475).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(9817);
+  threadId(9838);
   if (loaded) {
     const obj4 = { style, children: null };
     const obj5 = {
@@ -189,8 +189,8 @@ export function ForumPostListDisabled(threadId) {
       firstMessageLoaded: loaded,
       isLocalDeviceMedia: true,
     };
-    obj4.children = closure_6(tmp4(13734), obj5);
-    tmp5 = closure_6(tmp(13733).ForumPostDisabledContainer, obj4);
+    obj4.children = closure_6(tmp4(13769), obj5);
+    tmp5 = closure_6(tmp(13768).ForumPostDisabledContainer, obj4);
   }
   return tmp5;
 }

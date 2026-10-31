@@ -10,14 +10,14 @@ import CheckmarkLargeIcon2 from "../../../design/components/Icon/native/redesign
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import _modDef9188 from "../../../../_runtime/metro/09188__.js";
+import _modDef9207 from "../../../../_runtime/metro/09207__.js";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
-import _modDef16992 from "../../../../_runtime/metro/16992__.js";
+import _modDef17050 from "../../../../_runtime/metro/17050__.js";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -27,7 +27,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef9188;
+  obj.icon = _modDef9207;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -167,7 +167,7 @@ export default noop.memo(function QuestContextMenu(children) {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef16992;
+    obj2.iconSource = _modDef17050;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

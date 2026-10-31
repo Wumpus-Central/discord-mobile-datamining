@@ -28,7 +28,7 @@ function handleUserSettingsProtoStoreChange() {
   );
 }
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-let items = [fn(1993).ApplicationCommandType.CHAT, fn(1993).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1992).ApplicationCommandType.CHAT, fn(1992).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 let global = { pendingUsages: [] };
 let obj = {
   computeBonus() {
@@ -38,7 +38,7 @@ let obj = {
     return arg0;
   },
   afterCompute() {},
-  numFrequentlyItems: fn(1361).FREQUENCY_ITEM_LIMIT,
+  numFrequentlyItems: fn(1360).FREQUENCY_ITEM_LIMIT,
 };
 let closure_7 = new FrecencyDefault({
   computeBonus() {
@@ -48,7 +48,7 @@ let closure_7 = new FrecencyDefault({
     return arg0;
   },
   afterCompute() {},
-  numFrequentlyItems: fn(1361).FREQUENCY_ITEM_LIMIT,
+  numFrequentlyItems: fn(1360).FREQUENCY_ITEM_LIMIT,
 });
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationFrecencyStore extends PersistedStore {}

@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/native/utils/openGuildPowerupsBottomSheet.tsx
-import asyncRequireImpl from "../../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/premium/powerups/native/utils
 
 export default function openGuildPowerupsBottomSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(14042, dependencyMap.paths),
+    asyncRequireImpl(14077, dependencyMap.paths),
     GUILD_POWERUPS_BOTTOM_SHEET_KEY,
     arg0,
   );

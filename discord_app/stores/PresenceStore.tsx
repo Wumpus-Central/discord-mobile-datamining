@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1343 from "../../_runtime/metro/01343__.js";
+import _modDef1342 from "../../_runtime/metro/01342__.js";
 import ActivityTypes from "../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import hasRichActivityDefault from "../modules/activities/utils/hasRichActivity.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
@@ -301,7 +301,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (_modDef1343(tmp25.activities, sorted)) {
+        if (_modDef1342(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }

@@ -1,5 +1,5 @@
 // discord_app/actions/native/GiftCodeActionCreators.tsx
-import asyncRequireImpl from "../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01994_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -25,7 +25,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -73,7 +73,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
           if (obj18.getIsPaymentsBlocked()) {
             closure_130_1(closure_130_2[3])();
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           } else {
             channelId = closure_129_1.channelId;
             let tmp41 = null;
@@ -160,7 +160,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
 };
 function openGiftCodeRedeemModal(c0, fromServer) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(11342, dependencyMap.paths),
+    asyncRequireImpl(11378, dependencyMap.paths),
     { code: _require, giftCodeDebugOverride: fromServer },
     "GIFT_CODE_REDEEM_MODAL_KEY",
   );

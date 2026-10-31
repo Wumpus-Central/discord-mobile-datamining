@@ -87,7 +87,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -207,7 +207,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   return error(first1, obj6);
 }
 const ScrollView = fn(17).ScrollView;
-const ApplicationTypes = fn(1361).ApplicationTypes;
+const ApplicationTypes = fn(1360).ApplicationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const size = fn(2);

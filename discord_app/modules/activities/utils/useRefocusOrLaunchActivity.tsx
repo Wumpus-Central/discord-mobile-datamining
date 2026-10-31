@@ -5,7 +5,7 @@ import FramesStore from "../../frames/FramesStore.tsx";
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
 const require = fn;
-const FrameLayoutModes = fn(6841).FrameLayoutModes;
+const FrameLayoutModes = fn(6847).FrameLayoutModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
 
@@ -47,7 +47,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

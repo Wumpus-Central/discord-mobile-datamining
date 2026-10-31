@@ -44,7 +44,7 @@ let body = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -77,7 +77,7 @@ let body = {
             const obj5 = { type: "GUILD_SETTINGS_OPEN", guildId, section: SAFETY, subsection };
             SAFETY(closure_1_2[9]).dispatch(obj5);
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp25) {
           c0 = tmp;
@@ -275,7 +275,7 @@ let body = {
     obj(572).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(572);
-    const obj6 = obj(7147);
+    const obj6 = obj(7153);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -414,7 +414,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -432,7 +432,7 @@ let body = {
               closure_128_0 = undefined;
               const isLurkingResult = lurking.isLurking(tmp2);
               closure_128_0 = isLurkingResult;
-              const HTTP = tmp2(1283).HTTP;
+              const HTTP = tmp2(1282).HTTP;
               const request = {
                 url: closure_1_10.GUILD_LEAVE(tmp2),
                 body: null,
@@ -445,15 +445,15 @@ let body = {
               }
               const obj5 = { lurking: isCurrentUserGuestResult };
               request.body = obj5;
-              request.rejectWithError = tmp2(1283).rejectWithMigratedError();
-              const obj4 = tmp2(1283);
+              request.rejectWithError = tmp2(1282).rejectWithMigratedError();
+              const obj4 = tmp2(1282);
               dependencyMap = 1;
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                  const AccessibilityAnnouncer = closure_1_0(5017).AccessibilityAnnouncer;
-                  const intl = closure_1_0(1114).intl;
-                  AccessibilityAnnouncer.announce(intl.string(closure_1_0(1114).t["7iPyVW"]));
+                  const AccessibilityAnnouncer = closure_1_0(5022).AccessibilityAnnouncer;
+                  const intl = closure_1_0(1113).intl;
+                  AccessibilityAnnouncer.announce(intl.string(closure_1_0(1113).t["7iPyVW"]));
                 }),
                 done: false,
               };
@@ -473,11 +473,11 @@ let body = {
               tmp10 = closure_128_0;
             }
             if (tmp10) {
-              tmp2(1100).transitionTo(constants.GUILD_DISCOVERY);
-              const obj = tmp2(1100);
+              tmp2(1099).transitionTo(constants.GUILD_DISCOVERY);
+              const obj = tmp2(1099);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp21) {
           c3 = tmp;
@@ -503,7 +503,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -633,7 +633,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -647,7 +647,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1283).HTTP;
+              const HTTP = v3(1282).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_PIN_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;
@@ -668,7 +668,7 @@ let body = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -690,7 +690,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -704,7 +704,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1283).HTTP;
+              const HTTP = v3(1282).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_SLOWMODE_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;
@@ -725,7 +725,7 @@ let body = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -748,7 +748,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -789,7 +789,7 @@ let body = {
               return obj;
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
           if (closure_128_2) {
             c1 = 2;

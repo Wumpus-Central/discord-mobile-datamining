@@ -25,10 +25,10 @@ export function getCheckpointFlow(flag) {
 }
 export function getCheckpointRoutes(stats) {
   stats = stats.stats;
-  if (stats.flow === stats(6430).CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(13401).CHECKPOINT_SHARED_DATA_FLOW;
+  if (stats.flow === stats(6435).CheckpointFlow.SHARED_DATA) {
+    let prop = tmp(13438).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(13402).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(13439).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   return prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
@@ -48,10 +48,10 @@ export function getCheckpointRoutes(stats) {
 export function getAdjacentCheckpointRoute(stats) {
   stats = stats.stats;
   ({ flow, currentRoute, direction } = stats);
-  if (flow === stats(6430).CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(13401).CHECKPOINT_SHARED_DATA_FLOW;
+  if (flow === stats(6435).CheckpointFlow.SHARED_DATA) {
+    let prop = tmp(13438).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(13402).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(13439).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const found = prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
@@ -69,7 +69,7 @@ export function getAdjacentCheckpointRoute(stats) {
   });
   const index = found.indexOf(currentRoute);
   if (-1 === index) {
-    let INTRODUCTION = tmp(6430).CheckpointRoute.INTRODUCTION;
+    let INTRODUCTION = tmp(6435).CheckpointRoute.INTRODUCTION;
   } else {
     INTRODUCTION = found[index + direction];
     if (INTRODUCTION == null) {

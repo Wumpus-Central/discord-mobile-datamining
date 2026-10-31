@@ -1,7 +1,7 @@
 // discord_app/modules/badges/native/useBadgeDirectoryNuxEntryPoint.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/useBadgeDirectoryNuxEntryPoint.tsx");
 

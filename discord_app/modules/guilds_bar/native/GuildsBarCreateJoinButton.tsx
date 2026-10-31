@@ -23,7 +23,7 @@ let closure_14 = async function _handleCreateJoinGuildPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -106,9 +106,9 @@ const Constants = fn(1072);
   TooltipNames: closure_9,
   UpsellTypes: c10,
 } = Constants);
-const PremiumUpsellTypes = fn(1386).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
@@ -148,9 +148,9 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: -35.191,
-    expandedChildren: -1892548606,
-    children: 1546188226,
+    label: "m",
+    expandedChildren: "guilds-bar-drag-preview",
+    children: null,
   };
   const intl = util.intl;
   obj4.label = intl.string(util.t.l5WIbf);
@@ -167,9 +167,9 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: guildsBarAnimatedWrapperStyles,
     overState: "y",
     config: memo,
-    label: -35.191,
-    expandedChildren: -1892548606,
-    children: 1546188226,
+    label: "m",
+    expandedChildren: "guilds-bar-drag-preview",
+    children: null,
   });
   return <View style={tmp.stretch}>{null}</View>;
 });

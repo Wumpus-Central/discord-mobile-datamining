@@ -21,9 +21,9 @@ export default function OrbsArcadeHowToPlaySheet(gameId) {
       const obj2 = { asset: stateFromStores.asset };
       tmp5Result = jsx(OrbsArcadeGameGraphicDefault, { asset: stateFromStores.asset });
     }
-    const obj3 = { illustration: tmp5Result, title: null, description: null, actions: null };
-    const intl = tmp(1114).intl;
-    obj3.title = intl.string(tmp(1114).t["uz4M/z"]);
+    const obj3 = { illustration: tmp5Result, title: null, description: null, gradientColor: "blue", actions: null };
+    const intl = tmp(1113).intl;
+    obj3.title = intl.string(tmp(1113).t["uz4M/z"]);
     let str = stateFromStores.instructions;
     if (str == null) {
       str = "";
@@ -32,19 +32,20 @@ export default function OrbsArcadeHowToPlaySheet(gameId) {
     const obj4 = {
       game: stateFromStores,
       sheetKey: "OrbsArcadeHowToPlaySheet",
-      secondaryAction: tmp(16974).OrbsArcadeSheetSecondaryAction.CLOSE,
+      secondaryAction: tmp(17031).OrbsArcadeSheetSecondaryAction.CLOSE,
       direction: "vertical",
     };
     obj3.actions = jsx(OrbsArcadeSheetActionsDefault, {
       game: stateFromStores,
       sheetKey: "OrbsArcadeHowToPlaySheet",
-      secondaryAction: tmp(16974).OrbsArcadeSheetSecondaryAction.CLOSE,
+      secondaryAction: tmp(17031).OrbsArcadeSheetSecondaryAction.CLOSE,
       direction: "vertical",
     });
-    tmp5Result2 = jsx(tmp(10817).PromoSheet, {
+    tmp5Result2 = jsx(tmp(10837).PromoSheet, {
       illustration: tmp5Result,
       title: null,
       description: null,
+      gradientColor: "blue",
       actions: null,
     });
   }

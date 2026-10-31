@@ -7,6 +7,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 
+const ReadStateTypes = fn(6776).ReadStateTypes;
 const logger = new LoggerDefault("ReadStates");
 class ReadStates {
   constructor() {
@@ -41,7 +42,7 @@ prototype["getAll"] = function getAll(arg0) {
   return (async () => {
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    const states = tmp2(tmp5[4]).readStates(tmp2);
+    const states = tmp2(tmp5[5]).readStates(tmp2);
     await states.getMany();
     closure_128_1 = value;
     const _performance = performance;
@@ -78,7 +79,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       const _Set = Set;
       const set = new Set(keys);
       const sorted = _modDef12(keys).sort(SnowflakeUtilsDefault.compare);
-      const obj10 = _modDef12(keys);
+      const obj11 = _modDef12(keys);
       let str = sorted.reverse().value()[0];
       if (str == null) {
         str = "0";
@@ -88,15 +89,19 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp7 = nextResult;
-        if (null != nextResult._lastMessageId) {
-          let obj12 = SnowflakeUtilsDefault;
-          if (1 === obj12.compare(tmp7._lastMessageId, str2)) {
+        let tmp9 = nextResult.type === ReadStateTypes.CHANNEL;
+        if (tmp9) {
+          tmp9 = null != tmp7._lastMessageId;
+        }
+        if (tmp9) {
+          let obj = SnowflakeUtilsDefault;
+          if (1 === obj.compare(tmp7._lastMessageId, str2)) {
             str2 = tmp7._lastMessageId;
           }
           let hasItem = set.has(tmp7.channelId);
           if (hasItem) {
-            let tmp35Result = SnowflakeUtilsDefault;
-            hasItem = 1 === tmp35Result.compare(tmp7._lastMessageId, _lastMessageId);
+            let tmp12Result = SnowflakeUtilsDefault;
+            hasItem = 1 === tmp12Result.compare(tmp7._lastMessageId, _lastMessageId);
           }
           if (hasItem) {
             _lastMessageId = tmp7._lastMessageId;
@@ -106,12 +111,12 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database, arg1) {
       }
       const iter2 = sorted.reverse();
       const result = DatabaseDaosDefault.nonGuildVersionsTransaction(database);
-      const obj = { id: "highest_last_message_id", versionString: str2 };
-      const items = [obj, ,];
-      const obj3 = { id: "private_channels_version", versionString: _lastMessageId };
-      items[1] = obj3;
-      const obj4 = { id: "read_state_version", version: tmp.readStateVersion };
-      items[2] = obj4;
+      const obj2 = { id: "highest_last_message_id", versionString: str2 };
+      const items = [obj2, ,];
+      const obj4 = { id: "private_channels_version", versionString: _lastMessageId };
+      items[1] = obj4;
+      const obj5 = { id: "read_state_version", version: tmp.readStateVersion };
+      items[2] = obj5;
       result.putAll(items);
     }
   }

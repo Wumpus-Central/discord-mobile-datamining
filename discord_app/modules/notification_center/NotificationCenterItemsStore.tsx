@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6849).isGuildEventEnded;
+const isGuildEventEnded = fn(6855).isGuildEventEnded;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 let obj = {
   loading: false,
@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "PX_8",
-  notifCenterActive: "auto",
-  notifCenterTabFocused: 0,
+  notifCenterActive: "none",
+  notifCenterTabFocused: "URL",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "PX_8",
-      notifCenterActive: "auto",
-      notifCenterTabFocused: 0,
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "PX_8",
-      notifCenterActive: "auto",
-      notifCenterTabFocused: 0,
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(6854);
+        obj = id(6860);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "PX_8",
-      notifCenterActive: "auto",
-      notifCenterTabFocused: 0,
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

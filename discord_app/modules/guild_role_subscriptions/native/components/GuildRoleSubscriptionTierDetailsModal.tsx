@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx
 import util from "../../../../intl/index.native.tsx";
+import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TextInput from "../../../../design/components/TextInput/native/TextInput.native.tsx";
 import TextArea from "../../../../design/components/TextInput/native/TextArea.native.tsx";
-import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
-import FormStylesDefault from "FormStyles.tsx";
 import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import RoleSubscriptionSettingsDisabledContext from "../../RoleSubscriptionSettingsDisabledContext.tsx";
+import FormStylesDefault from "FormStyles.tsx";
 import FormImagePicker from "FormImagePicker.tsx";
 import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep.tsx";
 import EditStateContextProvider from "../../edit_state/EditStateContextProvider.tsx";
@@ -43,12 +43,13 @@ function Content() {
   const tmp4Result = GuildRoleSubscriptionsHooks;
   const roleSubscriptionSettingsDisabled =
     RoleSubscriptionSettingsDisabledContext.useRoleSubscriptionSettingsDisabled();
-  const obj7 = { style: tmp3.header, children: null };
-  const tmp4Result2 = RoleSubscriptionSettingsDisabledContext;
+  const obj7 = { style: tmp3.container, children: null };
+  const obj8 = { children: null };
+  const obj9 = { title: null };
   const intl = util.intl;
-  obj7.children = intl.string(util.t["6XpbbR"]);
-  const items = [React7(FormHeaderDefault, obj7), , , , , , ,];
-  const obj8 = {
+  obj9.title = intl.string(util.t["6XpbbR"]);
+  const items = [closure_1_10(TableRowGroup.TableRowGroupTitle, obj9)];
+  const obj10 = {
     description: null,
     image: null,
     imageUploadSize: null,
@@ -56,25 +57,21 @@ function Content() {
     setImage: null,
     disabled: null,
   };
-  const tmpResult = FormHeaderDefault;
+  const tmp4Result2 = RoleSubscriptionSettingsDisabledContext;
   const intl2 = util.intl;
-  obj8.description = intl2.string(util.t.pNZfgG);
-  obj8.image = tmp17;
-  obj8.imageUploadSize = UPLOAD_MEDIUM_SIZE;
-  obj8.previewShape = FormImagePicker.PreviewShape.CIRCLE;
-  obj8.setImage = function setImage(uri) {
+  obj10.description = intl2.string(util.t.pNZfgG);
+  obj10.image = tmp17;
+  obj10.imageUploadSize = UPLOAD_MEDIUM_SIZE;
+  obj10.previewShape = FormImagePicker.PreviewShape.CIRCLE;
+  obj10.setImage = function setImage(uri) {
     return require(uri.uri);
   };
-  obj8.disabled = roleSubscriptionSettingsDisabled;
-  items[1] = React7(FormImagePickerDefault, obj8);
-  const obj9 = { style: tmp3.header, children: null };
-  const tmpResult6 = FormImagePickerDefault;
-  const intl3 = util.intl;
-  obj9.children = intl3.string(util.t.rJ6Oad);
-  items[2] = React7(FormHeaderDefault, obj9);
-  const obj10 = {
-    containerStyle: tmp3.inputContainer,
-    accessibilityLabel: null,
+  obj10.disabled = roleSubscriptionSettingsDisabled;
+  items[1] = closure_1_10(FormImagePickerDefault, obj10);
+  obj8.children = items;
+  const items1 = [closure_1_11(View, obj8), , ,];
+  const obj11 = {
+    label: null,
     maxLength: null,
     value: null,
     placeholder: null,
@@ -83,64 +80,50 @@ function Content() {
     clearable: true,
     disabled: null,
   };
+  const intl3 = util.intl;
+  obj11.label = intl3.string(util.t.rJ6Oad);
+  obj11.maxLength = maxLength2;
+  obj11.value = tmp7;
   const intl4 = util.intl;
-  obj10.accessibilityLabel = intl4.string(util.t.rJ6Oad);
-  obj10.maxLength = maxLength2;
-  obj10.value = tmp7;
+  obj11.placeholder = intl4.string(util.t["i4/g+E"]);
+  obj11.onChange = tmp8;
+  obj11.disabled = roleSubscriptionSettingsDisabled;
+  items1[1] = closure_1_10(TextInput.TextInput, obj11);
+  const obj12 = { label: null, maxLength: null, value: null, placeholder: null, onChange: null, disabled: null };
   const intl5 = util.intl;
-  obj10.placeholder = intl5.string(util.t["i4/g+E"]);
-  obj10.onChange = tmp8;
-  obj10.disabled = roleSubscriptionSettingsDisabled;
-  items[3] = React7(TextInput.TextInput, obj10);
-  const obj11 = { style: tmp3.header, children: null };
-  const tmpResult7 = FormHeaderDefault;
-  const intl6 = util.intl;
-  obj11.children = intl6.string(util.t["74JctW"]);
-  items[4] = React7(FormHeaderDefault, obj11);
-  const obj12 = {
-    containerStyle: tmp3.inputContainer,
-    accessibilityLabel: null,
-    maxLength: null,
-    value: null,
-    placeholder: null,
-    onChange: null,
-    disabled: null,
-  };
-  const intl7 = util.intl;
-  obj12.accessibilityLabel = intl7.string(util.t["74JctW"]);
+  obj12.label = intl5.string(util.t["74JctW"]);
   obj12.maxLength = maxLength;
   obj12.value = tmp15;
-  const intl8 = util.intl;
-  obj12.placeholder = intl8.string(util.t["3YHwoG"]);
+  const intl6 = util.intl;
+  obj12.placeholder = intl6.string(util.t["3YHwoG"]);
   obj12.onChange = tmp16;
   obj12.disabled = roleSubscriptionSettingsDisabled;
-  items[5] = React7(TextArea.TextArea, obj12);
-  const obj13 = { style: tmp3.header, children: null };
-  const tmpResult8 = FormHeaderDefault;
-  const intl9 = util.intl;
-  obj13.children = intl9.string(util.t.CrRVAx);
-  items[6] = React7(FormHeaderDefault, obj13);
-  const tmpResult9 = FormHeaderDefault;
+  items1[2] = closure_1_10(TextArea.TextArea, obj12);
+  const obj13 = { title: null, hasIcons: false, children: null };
+  const intl7 = util.intl;
+  obj13.title = intl7.string(util.t.CrRVAx);
+  const tmpResult = FormImagePickerDefault;
   if (!tmp20) {
     tmp20 = roleSubscriptionSettingsDisabled;
   }
   const obj14 = { disabled: tmp20, guildId: editStateContext.guildId, price: tmp12, onChange: tmp13 };
-  const obj15 = { children: null };
-  items[7] = React7(FormPriceTierDefault, obj14);
-  obj15.children = items;
-  return closure_1_11(closure_1_10, obj15);
+  obj13.children = closure_1_10(FormPriceTierDefault, obj14);
+  items1[3] = closure_1_10(TableRowGroup.TableRowGroup, obj13);
+  obj7.children = items1;
+  return closure_1_11(View, obj7);
 }
-const GuildRoleSubscriptionsConstants = fn(17125);
+const View = fn(17).View;
+const GuildRoleSubscriptionsConstants = fn(17183);
 ({
-  GuildRoleSubscriptionsTierScenes: hasOwnProperty,
-  MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire,
-  MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_7,
+  GuildRoleSubscriptionsTierScenes: metroRequire,
+  MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7,
+  MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_8,
 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const memoResult = noop.memo(function GuildRoleSubscriptionTierDetailsTab() {
-  return React7(Content, {});
+  return closure_1_10(Content, {});
 });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -171,7 +154,7 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj6.canProceedToNextStep = tmp3;
   obj6.nextStep = constants.CHANNEL_BENEFITS;
   const merged = Object.assign(arg0);
-  obj6.children = React7(memoResult, {});
-  return React7(GuildRoleSubscriptionTierEditStepDefault, obj6);
+  obj6.children = closure_1_10(memoResult, {});
+  return closure_1_10(GuildRoleSubscriptionTierEditStepDefault, obj6);
 }
 export const GuildRoleSubscriptionTierDetailsTab = memoResult;

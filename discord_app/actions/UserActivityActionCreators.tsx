@@ -56,11 +56,11 @@ export function sync(activity, userId) {
 }
 export function play(activity, userId) {
   _require = activity;
-  const promise = require("asyncRequireImpl")(11638, dependencyMap.paths);
-  const nextPromise = require("asyncRequireImpl")(11638, dependencyMap.paths).then((getSpotifyMetadataFromActivity) =>
+  const promise = require("asyncRequireImpl")(11674, dependencyMap.paths);
+  const nextPromise = require("asyncRequireImpl")(11674, dependencyMap.paths).then((getSpotifyMetadataFromActivity) =>
     getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1),
   );
-  require("asyncRequireImpl")(11638, dependencyMap.paths)
+  require("asyncRequireImpl")(11674, dependencyMap.paths)
     .then((getSpotifyMetadataFromActivity) =>
       getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1),
     )

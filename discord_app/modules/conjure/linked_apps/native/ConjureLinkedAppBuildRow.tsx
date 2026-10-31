@@ -18,7 +18,7 @@ export default function ConjureLinkedAppBuildRow(value) {
   require = value;
   const onChange = value.onChange;
   const intl = util.intl;
-  const stringResult = intl.string(onChange(3865).Odrcmq);
+  const stringResult = intl.string(onChange(3868).Odrcmq);
   dependencyMap = stringResult;
   const obj = { hasIcons: false, children: null };
   let obj2 = { label: stringResult, trailing: null, arrow: true, disabled: null, onPress: null };

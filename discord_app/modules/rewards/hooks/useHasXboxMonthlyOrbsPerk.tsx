@@ -6,7 +6,7 @@ import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
 

@@ -52,7 +52,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
             if (null == asset) {
               applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.NONE);
               c9 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else if (asset === closure_2_7) {
               applyBackgroundMediaFilterSettings(
                 closure_0,
@@ -85,7 +85,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
                 BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR,
               );
               c9 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               if (typeof asset !== "string") {
                 if (typeof asset !== "number") {
@@ -272,7 +272,7 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(5908);
+const VideoBackgroundConstants = fn(5927);
 ({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
 const NOOP = fn(1072).NOOP;
 const size = fn(2);

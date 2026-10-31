@@ -17,7 +17,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(4923);
+const GuildDisableCommunicationConstants = fn(4928);
 ({
   DisableCommunicationDuration,
   GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8,
@@ -70,7 +70,7 @@ let items = [
     },
   },
 ];
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   reasonTextArea: null,
@@ -108,7 +108,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -122,7 +122,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(13220);
+            const obj4 = tmp4(13255);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = {
@@ -144,20 +144,20 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          const intl = user(1114).intl;
-          const obj8 = tmp4(5707);
-          const name = tmp4(6036).getName(closure_129_1, null, closure_129_0);
+          const intl = user(1113).intl;
+          const obj8 = tmp4(5712);
+          const name = tmp4(6041).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
           }
           const obj = { text: null, variant: "success" };
           const obj7 = { user };
-          obj.text = intl.formatToPlainString(user(1114).t.O9C3Nt, obj7);
+          obj.text = intl.formatToPlainString(user(1113).t.O9C3Nt, obj7);
           obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
           closure_129_2();
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp18) {
         c3 = tmp;

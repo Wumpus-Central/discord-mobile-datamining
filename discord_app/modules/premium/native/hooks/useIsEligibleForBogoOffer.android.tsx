@@ -4,7 +4,7 @@ import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx"
 import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 
 const require = fn;
-const PremiumTypes = fn(1386).PremiumTypes;
+const PremiumTypes = fn(1385).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
@@ -19,13 +19,13 @@ export function useIsEligibleForBogoOffer() {
     premiumTypeSubscription.getPremiumTypeSubscription(),
   );
   const obj2 = forceUpdate(504);
-  const premiumTrialOffer = forceUpdate(7620).usePremiumTrialOffer();
-  const obj4 = forceUpdate(7620);
-  const premiumDiscountOffer = forceUpdate(10551).usePremiumDiscountOffer();
-  const obj5 = forceUpdate(10551);
-  const isPaymentsBlocked = forceUpdate(7595).useIsPaymentsBlocked();
-  const obj6 = forceUpdate(7595);
-  forceUpdate = forceUpdate(10553).useForceUpdate();
+  const premiumTrialOffer = forceUpdate(7627).usePremiumTrialOffer();
+  const obj4 = forceUpdate(7627);
+  const premiumDiscountOffer = forceUpdate(10571).usePremiumDiscountOffer();
+  const obj5 = forceUpdate(10571);
+  const isPaymentsBlocked = forceUpdate(7602).useIsPaymentsBlocked();
+  const obj6 = forceUpdate(7602);
+  forceUpdate = forceUpdate(10573).useForceUpdate();
   let valueOfResult = null;
   if (null != stateFromStores) {
     const endDate = stateFromStores.endDate;

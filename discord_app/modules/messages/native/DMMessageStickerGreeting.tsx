@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -48,7 +48,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
   return obj;
 });
 let c14 = "749054660769218631";
-const END = fn(5187).GradientPercentage.END;
+const END = fn(5192).GradientPercentage.END;
 const __initData = {
   code: "function DMMessageStickerGreetingTsx1(){const{styles,isRendered,hasInputText,hasMessages,HEIGHT_COMPACT,HEIGHT_FULL,withDelay,withTiming,STANDARD_EASING}=this.__closure;const gradientOverlayOffset=styles.gradient.height;const hasHeight=isRendered&&!hasInputText;const heightExpanded=(hasMessages?HEIGHT_COMPACT:HEIGHT_FULL)-1;const targetHeight=hasHeight?heightExpanded+gradientOverlayOffset:0;const targetMargin=hasHeight?-gradientOverlayOffset:0;function generateAnimationConfig(value){return withDelay(300,withTiming(value,{easing:STANDARD_EASING,duration:250}));}return{justifyContent:'flex-end',overflow:'hidden',marginTop:generateAnimationConfig(targetMargin),height:generateAnimationConfig(targetHeight)};}",
 };
@@ -136,7 +136,7 @@ export default function DMMessageStickerGreeting(channel) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -156,8 +156,8 @@ export default function DMMessageStickerGreeting(channel) {
                 if (closure_1_1 !== text) {
                   dependencyMap(text);
                 }
-                closure_1(5707).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
-                const obj = closure_1(5707);
+                closure_1(5712).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
+                const obj = closure_1(5712);
                 const obj2 = { text, variant: "critical" };
               }
               closure_128_0 = showErrorToast;
@@ -168,7 +168,7 @@ export default function DMMessageStickerGreeting(channel) {
                   showConvoStarterInDM(false);
                   showErrorToast(tmp26);
                   c5 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   c3 = 1;
                   const obj4 = { channelId: _undefined.id, source: "In-channel greet" };

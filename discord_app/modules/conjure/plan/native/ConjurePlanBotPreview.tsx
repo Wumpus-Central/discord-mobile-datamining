@@ -30,7 +30,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { chat: null, menu: null };
 let tmp3 = new RowGeneratorDefault();
 obj2.chat = {
@@ -51,8 +51,8 @@ const obj3 = {
 };
 obj2.menu = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(12587).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(12587).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(12622).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(12622).MESSAGE_EDGE_INSET,
 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

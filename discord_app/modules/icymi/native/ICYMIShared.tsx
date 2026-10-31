@@ -161,7 +161,7 @@ const Constants = fn(1072);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(18472);
+const createICYMIStyles = fn(18515);
 createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -662,23 +662,23 @@ export function SimplePost(arg0) {
   let token;
   const tmp = closure_21();
   const tmp2 = token;
-  const tmp4 = token(5248)();
-  token = highlight(5591).useToken(token(575).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
-  let obj = highlight(5591);
-  const hexWithOpacityResult = highlight(5006).hexWithOpacity(token(575).unsafe_rawColors.BRAND_360, 0.25);
+  const tmp4 = token(5253)();
+  token = highlight(5596).useToken(token(575).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
+  let obj = highlight(5596);
+  const hexWithOpacityResult = highlight(5011).hexWithOpacity(token(575).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
-  let obj2 = highlight(5006);
-  const sharedValue = highlight(5090).useSharedValue(0);
-  let obj3 = highlight(5090);
+  let obj2 = highlight(5011);
+  const sharedValue = highlight(5095).useSharedValue(0);
+  let obj3 = highlight(5095);
   const fn = function c() {
     const obj = { backgroundColor: null };
     const items = [token, c2];
     obj.backgroundColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
     return obj;
   };
-  let obj4 = highlight(5090);
+  let obj4 = highlight(5095);
   fn.__closure = {
-    interpolateColor: highlight(5090).interpolateColor,
+    interpolateColor: highlight(5095).interpolateColor,
     progress: sharedValue,
     bgColor: token,
     bgColorHighlighted: hexWithOpacityResult,
@@ -703,7 +703,7 @@ export function SimplePost(arg0) {
     const items1 = [tmp.simplePostContent, animatedStyle];
     obj7.style = items1;
     obj7.children = children;
-    const items2 = [closure_18(tmp2(5090).View, obj7)];
+    const items2 = [closure_18(tmp2(5095).View, obj7)];
     let tmp12Result = null;
     if (!hideDivider) {
       tmp12Result = closure_18(Separator, {});
@@ -779,28 +779,28 @@ export function ThreadAsComments(arg0) {
         if (mostRecentMessage != null) {
           author = mostRecentMessage.author;
         }
-        const obj4 = { user: author, guildId: thread.guild_id, size: parentMessage(1188).AvatarSizes.XSMALL };
-        const items4 = [closure_18(parentMessage(1188).Avatar, obj4), ,];
+        const obj4 = { user: author, guildId: thread.guild_id, size: parentMessage(1187).AvatarSizes.XSMALL };
+        const items4 = [closure_18(parentMessage(1187).Avatar, obj4), ,];
         const obj5 = { variant: "text-sm/semibold", lineClamp: 1, style: tmp.recentCommentText, children: null };
         if (mostRecentMessage.content.length > 0) {
           let parseInlineReplyResult = MarkupUtilsDefault.parseInlineReply(mostRecentMessage.content, true);
         } else {
-          const intl = parentMessage(1114).intl;
-          parseInlineReplyResult = intl.string(parentMessage(1114).t["6kp9H2"]);
+          const intl = parentMessage(1113).intl;
+          parseInlineReplyResult = intl.string(parentMessage(1113).t["6kp9H2"]);
         }
         obj5.children = parseInlineReplyResult;
-        items4[1] = closure_18(parentMessage(5619).Text, obj5);
+        items4[1] = closure_18(parentMessage(5624).Text, obj5);
         const obj7 = { style: tmp.commentCount, children: null };
         const obj8 = { style: tmp.commentsIcon };
-        const items5 = [closure_18(parentMessage(8635).ChatIcon, obj8), ,];
+        const items5 = [closure_18(parentMessage(8643).ChatIcon, obj8), ,];
         const obj9 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-        items5[1] = closure_18(parentMessage(5619).Text, obj9);
+        items5[1] = closure_18(parentMessage(5624).Text, obj9);
         const obj10 = { style: tmp.chevron, size: "xxs" };
-        items5[2] = closure_18(parentMessage(7372).ChevronSmallRightIcon, obj10);
+        items5[2] = closure_18(parentMessage(7378).ChevronSmallRightIcon, obj10);
         obj7.children = items5;
         items4[2] = closure_19(View, obj7);
         obj3.children = items4;
-        return closure_19(parentMessage(6974).PressableHighlight, obj3);
+        return closure_19(parentMessage(6980).PressableHighlight, obj3);
       }
     }
     const obj11 = { style: null, onPress: null, children: null };
@@ -814,18 +814,18 @@ export function ThreadAsComments(arg0) {
       style: tmp.recentCommentText,
       children: null,
     };
-    const intl2 = parentMessage(1114).intl;
-    obj12.children = intl2.string(parentMessage(1114).t.VMWjXW);
-    const items7 = [closure_18(parentMessage(5619).Text, obj12)];
+    const intl2 = parentMessage(1113).intl;
+    obj12.children = intl2.string(parentMessage(1113).t.VMWjXW);
+    const items7 = [closure_18(parentMessage(5624).Text, obj12)];
     const obj13 = { style: tmp.commentCount, children: null };
     const obj14 = { style: tmp.commentsIcon };
-    const items8 = [closure_18(parentMessage(8635).ChatIcon, obj14)];
+    const items8 = [closure_18(parentMessage(8643).ChatIcon, obj14)];
     const obj15 = { style: tmp.chevron, size: "xxs" };
-    items8[1] = closure_18(parentMessage(7372).ChevronSmallRightIcon, obj15);
+    items8[1] = closure_18(parentMessage(7378).ChevronSmallRightIcon, obj15);
     obj13.children = items8;
     items7[1] = closure_19(View, obj13);
     obj11.children = items7;
-    return closure_19(parentMessage(6974).PressableHighlight, obj11);
+    return closure_19(parentMessage(6980).PressableHighlight, obj11);
   } else {
     return null;
   }

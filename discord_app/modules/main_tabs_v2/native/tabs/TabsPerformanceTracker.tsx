@@ -69,12 +69,12 @@ export function useTrackTabPerformance(GUILDS) {
         const fn = function t() {
           return ReanimatedRexport.runOnJS(log)();
         };
-        let obj3 = { runOnJS: GUILDS(5090).runOnJS, log };
+        let obj3 = { runOnJS: GUILDS(5095).runOnJS, log };
         fn.__closure = obj3;
         fn.__workletHash = 7114578957129;
         fn.__initData = __initData;
-        GUILDS(5090).runOnUI(fn)();
-        const obj2 = GUILDS(5090);
+        GUILDS(5095).runOnUI(fn)();
+        const obj2 = GUILDS(5095);
       }
     }
     let obj = dependencyMap2[tmp2];
@@ -126,12 +126,12 @@ export function useTrackTabPerformance(GUILDS) {
         const fn = function t() {
           return ReanimatedRexport.runOnJS(log)();
         };
-        let obj3 = { runOnJS: GUILDS(5090).runOnJS, log };
+        let obj3 = { runOnJS: GUILDS(5095).runOnJS, log };
         fn.__closure = obj3;
         fn.__workletHash = 331508196106;
         fn.__initData = __initData2;
-        GUILDS(5090).runOnUI(fn)();
-        const obj2 = GUILDS(5090);
+        GUILDS(5095).runOnUI(fn)();
+        const obj2 = GUILDS(5095);
       }
     }
     let obj = dependencyMap2[tmp2];

@@ -9,11 +9,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(6942).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6948).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1072).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_12 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 },
   submitButton: { marginTop: 12, marginBottom: 12 },
@@ -44,7 +44,7 @@ export default function MemberVerificationForm(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -65,12 +65,12 @@ export default function MemberVerificationForm(guild) {
               if (memo1) {
                 (function showIncompleteToast() {
                   const obj2 = { text: null, variant: "critical" };
-                  const intl = closure_1_0(1114).intl;
-                  obj2.text = intl.string(closure_1_0(1114).t.StC497);
-                  closure_1_1(5707).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  const intl = closure_1_0(1113).intl;
+                  obj2.text = intl.string(closure_1_0(1113).t.StC497);
+                  closure_1_1(5712).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 VerificationLevels(null);
                 closure_2_8(true);

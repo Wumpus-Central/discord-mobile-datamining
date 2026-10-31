@@ -7,12 +7,12 @@ import SentryInitUtils from "../modules/errors/native/SentryInitUtils.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import AppEntryKeyContext from "../modules/window/native/AppEntryKeyContext.tsx";
-import Link from "../../_runtime/01499_Link.js";
+import Link from "../../_runtime/01498_Link.js";
 import ManaContext from "../../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx";
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import getInitialNavigationStateDefault from "../modules/main_tabs_v2/native/getInitialNavigationState.tsx";
-import Portal from "../../_runtime/05209_Portal.js";
+import Portal from "../../_runtime/05214_Portal.js";
 import useThemeDefault from "../hooks/useTheme.tsx";
 import BackPressTracking from "../modules/routing/native/BackPressTracking.android.tsx";
 import ModalDispatchQueueDefault from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
@@ -21,12 +21,12 @@ import useNavigationTheme from "../design/components/Navigator/native/useNavigat
 import useIsScreenLandscape from "../modules/screen/useIsScreenLandscape.native.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
 import WebViewContext from "../modules/embedded_apps/native/WebViewContext.tsx";
-import MemoryRouter from "../../_runtime/12021_MemoryRouter.js";
+import MemoryRouter from "../../_runtime/12059_MemoryRouter.js";
 import RouteManagerDefault from "../modules/routing/RouteManager.tsx";
 import AnimatedKeyboardProviderDefault from "../modules/keyboard/native/AnimatedKeyboardProvider.android.tsx";
 import DiscordGestureHandlerRootViewDefault from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
 import MainNavigationLoggerDefault from "../modules/main_tabs_v2/helpers/MainNavigationLogger.tsx";
-import ReanimatedScreenProvider from "../../_runtime/16366_ReanimatedScreenProvider.js";
+import ReanimatedScreenProvider from "../../_runtime/16408_ReanimatedScreenProvider.js";
 import RootThemeContextProvider from "../modules/themes/RootThemeContextProvider.native.tsx";
 import AccessibilityPreferencesContextProviderDefault from "../modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx";
 import ErrorBoundaryDefault from "ErrorBoundary.tsx";
@@ -190,35 +190,35 @@ function AppNavigationContainerOrEmpty(arg0) {
   }
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(6868).handleHistoryStoreNavigationChange;
+let closure_7 = fn(6874).handleHistoryStoreNavigationChange;
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, Routes: closure_12 } = Constants);
-const isStaticChannelRoute = fn(4865).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   flex: { flex: 1 },
   rootBackgroundColor: { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND },
 };
 let closure_16 = createStyles.createStyles(obj2);
-const ReanimatedRexport = fn(5090);
+const ReanimatedRexport = fn(5095);
 let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
-let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(5090).ReanimatedLogLevel.error, strict: false });
+let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(5095).ReanimatedLogLevel.error, strict: false });
 try {
-  fn(5961).enableFreeze();
-  let obj6 = fn(5961);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(16363).useTrackNavigatorScreenImpression };
-  fn(7199).setDesignConfig(obj8);
+  fn(5966).enableFreeze();
+  let obj6 = fn(5966);
+  let obj8 = { useTrackNavigatorScreenImpression: fn(16405).useTrackNavigatorScreenImpression };
+  fn(7205).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = {
     code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}",
   };
-  let obj7 = fn(7199);
+  let obj7 = fn(7205);
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(16365).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(16407).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -229,13 +229,13 @@ try {
         fn.__closure = obj2;
         fn.__workletHash = 8891274578898;
         fn.__initData = __initData;
-        appEntryKey(5090).runOnUI(fn)();
+        appEntryKey(5095).runOnUI(fn)();
         c22 = true;
-        const obj = appEntryKey(5090);
+        const obj = appEntryKey(5095);
       }
     }, []);
     const effect1 = noop.useEffect(() => {
-      let SplashScreenManager = appEntryKey(1376).isIOS();
+      let SplashScreenManager = appEntryKey(1375).isIOS();
       if (SplashScreenManager) {
         SplashScreenManager = NativeModules.SplashScreenManager;
       }
@@ -243,10 +243,10 @@ try {
         const SplashScreenManager2 = NativeModules.SplashScreenManager;
         SplashScreenManager2.hideSplashScreen();
       }
-      const obj = appEntryKey(1376);
+      const obj = appEntryKey(1375);
     }, []);
-    let obj = appEntryKey(16365);
-    const riveAppStatePlaybackExperiment = appEntryKey(17926).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(16407);
+    const riveAppStatePlaybackExperiment = appEntryKey(17969).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     let items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

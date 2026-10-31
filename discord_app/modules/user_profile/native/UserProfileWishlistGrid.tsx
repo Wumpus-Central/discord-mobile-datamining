@@ -2,7 +2,7 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -52,14 +52,14 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_10 = fn(9452).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(9450).getWishlistProductLines;
-let Constants = fn(8746);
+let closure_10 = fn(9474).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(9472).getWishlistProductLines;
+let Constants = fn(8754);
 ({ TrackUserProfileWishlistActions: closure_15, UserProfileSections: closure_16 } = Constants);
 Constants = fn(1072);
 ({ Routes: closure_17, SKUProductLines: closure_18 } = Constants);
 let closure_19 = fn(1074).CollectiblesMobileShopScreen;
-const PremiumConstants = fn(1386);
+const PremiumConstants = fn(1385);
 ({
   GiftingOrigin: closure_20,
   PremiumSubscriptionSKUToPremiumType: closure_21,
@@ -68,7 +68,7 @@ const PremiumConstants = fn(1386);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
 let closure_26 = new LoggerDefault("UserProfileWishlistGrid");
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   headerRow: null,
   headerButtons: null,
@@ -332,7 +332,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -395,7 +395,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                 obj7.analyticsSource = c1(context[43]).USER_PROFILE_WISHLIST;
                                 obj7.screen = constants2.FEATURED_PAGE;
                                 obj7.onNavigateAway = function onNavigateAway() {
-                                  closure_1(8742)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
+                                  closure_1(8750)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
                                 };
                                 const result = wishlistId(context[50]).openCollectiblesShopMobile(obj7);
                                 const obj28 = wishlistId(context[50]);
@@ -521,7 +521,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                             obj29.lockedRecipientUser = lockedRecipientUser;
                             obj29.giftingOrigin = constants3.USER_PROFILE_WISHLIST;
                             obj29.onGiftModalDismiss = function onGiftModalDismiss() {
-                              closure_1(8742)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
+                              closure_1(8750)({ userId: user.id, initialSection: closure_2_16.WISHLIST });
                             };
                             const result4 = wishlistId(context[47]).openSocialLayerStorefrontGiftModal(obj29);
                             const obj55 = wishlistId(context[47]);
@@ -688,7 +688,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14962, dependencyMap.paths),
+      asyncRequireImpl(14999, dependencyMap.paths),
       "EditWishlistActionSheet",
       { wishlistId, analyticsContext: context, analyticsLocations },
       "stack",

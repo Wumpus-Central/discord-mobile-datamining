@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles({
   root: { position: "relative" },
   band: { position: "absolute", top: 0, bottom: 0 },
@@ -42,7 +42,7 @@ export default function ConjureShimmer(epoch) {
   const width = tmp5[0];
   dependencyMap = tmp5[1];
   let obj = tint(504);
-  sharedValue = tint(5090).useSharedValue(0);
+  sharedValue = tint(5095).useSharedValue(0);
   if (live) {
     live = !stateFromStores;
   }
@@ -76,7 +76,7 @@ export default function ConjureShimmer(epoch) {
     items[4] = cssResult;
     return items;
   }, items2);
-  let obj3 = tint(5090);
+  let obj3 = tint(5095);
   let fn = function k() {
     const obj = { transform: null };
     const items = [{ translateX: -c5 + sharedValue.get() * (c5 + first) }];
@@ -86,7 +86,7 @@ export default function ConjureShimmer(epoch) {
   fn.__closure = { bandWidth: result, progress: sharedValue, width };
   fn.__workletHash = 5317727670570;
   fn.__initData = __initData;
-  const animatedStyle = tint(5090).useAnimatedStyle(fn);
+  const animatedStyle = tint(5095).useAnimatedStyle(fn);
   let obj4 = {
     style: tmp.root,
     onLayout: live.useCallback((nativeEvent) => {
@@ -121,11 +121,11 @@ export default function ConjureShimmer(epoch) {
     items4[2] = animatedStyle;
     obj8.style = items4;
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
-    obj8.children = closure_8(width(5582), obj10);
-    obj6.children = closure_8(width(5090).View, obj8);
-    obj5.children = closure_8(width(7032), obj6);
+    obj8.children = closure_8(width(5587), obj10);
+    obj6.children = closure_8(width(5095).View, obj8);
+    obj5.children = closure_8(width(7038), obj6);
     tmp14 = closure_8(closure_6, obj5);
-    const tmp18 = width(7032);
+    const tmp18 = width(7038);
   }
   items3[1] = tmp14;
   obj4.children = items3;

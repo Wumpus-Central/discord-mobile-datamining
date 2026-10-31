@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/projects/useConjureProjectShareTarget.tsx
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 const require = fn;
@@ -37,8 +37,8 @@ export default function useConjureProjectShareTarget(guild_id) {
     tmp5 = null;
     if (null == guild_id.install_scope_setup) {
       if ("user" === guild_id.install_scope) {
-        const intl = guild_id(1114).intl;
-        stateFromStores = intl.string(_modDef3865.KxFFKT);
+        const intl = guild_id(1113).intl;
+        stateFromStores = intl.string(_modDef3868.KxFFKT);
       }
       tmp5 = stateFromStores;
     }

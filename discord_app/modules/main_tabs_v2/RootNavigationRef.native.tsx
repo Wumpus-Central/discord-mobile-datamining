@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/RootNavigationRef.native.tsx
-import Link from "../../../_runtime/01499_Link.js";
+import Link from "../../../_runtime/01498_Link.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let ready = Link.createNavigationContainerRef();

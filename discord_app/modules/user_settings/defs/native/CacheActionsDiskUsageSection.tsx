@@ -184,7 +184,7 @@ function DiskUsageResults(metricKitSize) {
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   label: { flex: 1 },
   nestedLabel: { flex: 1, paddingLeft: nativeDefault.space.PX_16 },
@@ -248,7 +248,7 @@ export function useDiskUsageMeasurement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {

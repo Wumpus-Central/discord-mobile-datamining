@@ -1,6 +1,6 @@
 // discord_app/intl/util.tsx
-import _mod1153 from "../../_runtime/metro/01153__.js";
-import _Parser from "../../_runtime/01176__Parser.js";
+import _mod1152 from "../../_runtime/metro/01152__.js";
+import _Parser from "../../_runtime/01175__Parser.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -12,11 +12,11 @@ const result = size.fileFinishedImporting("intl/util.tsx");
 
 export function getAvailableLocales() {
   _require = require("messages/en-US.messages.js").default;
-  const found = require("../../_runtime/metro/01175__.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01174__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
-    const obj2 = _mod1153;
+    const obj2 = _mod1152;
     obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
   });
@@ -35,10 +35,10 @@ export function getAvailableLocales() {
   });
 }
 export function getLanguages() {
-  return require("../../_runtime/metro/01175__.js");
+  return require("../../_runtime/metro/01174__.js");
 }
 export function getNormalizedLocale(Language, arg1) {
-  const found = require("../../_runtime/metro/01175__.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01174__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
     return Language;
@@ -69,11 +69,11 @@ export function getNormalizedLocale(Language, arg1) {
       }
     }
   }
-  const arr = require("../../_runtime/metro/01175__.js");
+  const arr = require("../../_runtime/metro/01174__.js");
 }
 export function parseRuntimeIcuAsIntlMessage(acknowledgedBadgeLabel, currentLocale) {
   const parsed = _Parser.parse(acknowledgedBadgeLabel, { ignoreTag: true });
-  const internalIntlMessage = new _mod1153.InternalIntlMessage(parsed, currentLocale);
+  const internalIntlMessage = new _mod1152.InternalIntlMessage(parsed, currentLocale);
   return internalIntlMessage;
 }
 export function useSyncMessages(arg0, withFormattersResult) {

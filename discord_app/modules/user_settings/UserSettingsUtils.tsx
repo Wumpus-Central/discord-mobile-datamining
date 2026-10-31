@@ -23,8 +23,8 @@ function b64ToProto(arg0, arg1) {
 }
 const ZERO_STRING_GUILD_ID = fn(1072).ZERO_STRING_GUILD_ID;
 let obj = {
-  [PRELOADED_USER_SETTINGS]: fn(1197).PreloadedUserSettings,
-  [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1233).FrecencyUserSettings,
+  [PRELOADED_USER_SETTINGS]: fn(1196).PreloadedUserSettings,
+  [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1232).FrecencyUserSettings,
 };
 ({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = fn(1082).UserSettingsTypes);
 const size = fn(2);

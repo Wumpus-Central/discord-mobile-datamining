@@ -1,6 +1,6 @@
 // discord_app/modules/emoji_picker/native/openEmojiPickerActionSheet.tsx
 import EmojiConstants from "../../emojis/EmojiConstants.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import emojis_EmojiActionCreators from "../../emojis/EmojiActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -15,7 +15,7 @@ export function openEmojiPickerActionSheet(arg0, stack) {
     EmojiInteractionPoint.EmojiPickerActionSheetOpened,
   );
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(9920, dependencyMap.paths),
+    asyncRequireImpl(9941, dependencyMap.paths),
     EmojiPickerActionSheet,
     arg0,
     stack,

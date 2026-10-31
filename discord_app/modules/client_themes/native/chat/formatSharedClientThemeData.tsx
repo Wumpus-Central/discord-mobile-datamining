@@ -1,8 +1,8 @@
 // discord_app/modules/client_themes/native/chat/formatSharedClientThemeData.tsx
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2771 from "../../intl/ClientThemes.messages.js";
-import _modDef8511 from "../../../../../_runtime/metro/08511__.js";
+import _modDef2772 from "../../intl/ClientThemes.messages.js";
+import _modDef8519 from "../../../../../_runtime/metro/08519__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -28,14 +28,14 @@ export function formatSharedClientThemeData(message, ensureAvatarSourceResult, n
       str2 = ensureAvatarSourceResult.uri;
     }
     obj.createdByAvatarUrl = str2;
-    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8511).uri;
+    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8519).uri;
     const intl = util.intl;
     obj.previewLabel = intl.string(util.t.SKNnqq);
     const intl2 = util.intl;
-    obj.previewHeading = intl2.string(_modDef2771.yl1iMm);
+    obj.previewHeading = intl2.string(_modDef2772.yl1iMm);
     const intl3 = util.intl;
     const _HermesInternal = HermesInternal;
-    obj.createdByLabel = "" + intl3.format(_modDef2771.fQPSEf, { username: "__USERNAME__" });
+    obj.createdByLabel = "" + intl3.format(_modDef2772.fQPSEf, { username: "__USERNAME__" });
     return obj;
   }
 }

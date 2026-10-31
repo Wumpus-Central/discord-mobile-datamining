@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useDMPermissionsOverrideCount from "../../privacy_and_safety/useDMPermissionsOverrideCount.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -8,17 +8,17 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(17855);
+const UserSettingsSafetySelectedGuildStore = fn(17898);
 ({
   getSelectedGuildId: metroRequire,
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
   setSelectedGuildId: closure_8,
   useUserSafetySettingsSelectedGuildStore: closure_9,
 } = UserSettingsSafetySelectedGuildStore);
-const MobileUserSettings = fn(8424).MobileUserSettings;
+const MobileUserSettings = fn(8432).MobileUserSettings;
 let items = [,];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const guildSelector = SettingBuilders.createGuildSelector({
   unsearchable: true,
   useSelectedGuildId() {
@@ -52,7 +52,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17856, dependencyMap.paths),
+      asyncRequireImpl(17899, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },

@@ -128,11 +128,11 @@ export function mergeProfileReadState(profileReadState, ackedAt) {
   }
   return tmp;
 }
-export function shouldAckWishlist(wishlistSettings, profileReadStateSectionAckedAt) {
-  let tmp = null == profileReadStateSectionAckedAt;
+export function shouldAckWishlist(wishlistSettings, stateFromStores) {
+  let tmp = null == stateFromStores;
   if (!tmp) {
     let flag = false;
-    if (null != profileReadStateSectionAckedAt) {
+    if (null != stateFromStores) {
       let updated_at;
       if (wishlistSettings != null) {
         updated_at = wishlistSettings.updated_at;
@@ -148,8 +148,8 @@ export function shouldAckWishlist(wishlistSettings, profileReadStateSectionAcked
         }
         tmp4 = tmp7;
       }
-      flag = null != tmp4 && tmp4 > profileReadStateSectionAckedAt;
-      const tmp8 = null != tmp4 && tmp4 > profileReadStateSectionAckedAt;
+      flag = null != tmp4 && tmp4 > stateFromStores;
+      const tmp8 = null != tmp4 && tmp4 > stateFromStores;
     }
     tmp = flag;
   }

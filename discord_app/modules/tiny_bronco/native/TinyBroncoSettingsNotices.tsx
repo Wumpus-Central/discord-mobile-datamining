@@ -1,6 +1,6 @@
 // discord_app/modules/tiny_bronco/native/TinyBroncoSettingsNotices.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3125 from "../TinyBronco.messages.js";
+import _modDef3128 from "../TinyBronco.messages.js";
 import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
@@ -37,14 +37,14 @@ function TeenNotice(noticeType) {
     const result1 = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.CONFIRM_AGE);
   }, items2);
   let obj2 = { type: "info", message: null, role: "status", action: null };
-  const intl = noticeType(1114).intl;
+  const intl = noticeType(1113).intl;
   obj2.message = intl.format(noticeType.message, { handleOnConfirmAgeHook: callback1 });
   const obj3 = { text: null, onPress: null };
-  const intl2 = noticeType(1114).intl;
-  obj3.text = intl2.string(noticeType(1114).t.hvVgAZ);
+  const intl2 = noticeType(1113).intl;
+  obj3.text = intl2.string(noticeType(1113).t.hvVgAZ);
   obj3.onPress = callback;
   obj2.action = obj3;
-  obj.children = jsx(noticeType(8017).InlineNotice, { type: "info", message: null, role: "status", action: null });
+  obj.children = jsx(noticeType(8025).InlineNotice, { type: "info", message: null, role: "status", action: null });
   return <View style={closure_10().container}>{null}</View>;
 }
 class MessageRequestsTeenNotice {
@@ -84,14 +84,14 @@ function UnconfirmedNotice(message) {
     );
   }, items2);
   let obj2 = { type: "info", message: null, role: "status", action: null };
-  const intl = AGE_CONFIRMATION_NOTICE(1114).intl;
+  const intl = AGE_CONFIRMATION_NOTICE(1113).intl;
   obj2.message = intl.format(message.message, { handleOnAgeGatedContentHook: callback });
   const obj3 = { text: null, onPress: null };
-  const intl2 = AGE_CONFIRMATION_NOTICE(1114).intl;
-  obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1114).t.FDSSia);
+  const intl2 = AGE_CONFIRMATION_NOTICE(1113).intl;
+  obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1113).t.FDSSia);
   obj3.onPress = callback1;
   obj2.action = obj3;
-  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8017).InlineNotice, {
+  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8025).InlineNotice, {
     type: "info",
     message: null,
     role: "status",
@@ -106,22 +106,22 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(6731).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(7484);
+let closure_6 = fn(6737).TINY_BRONCO_SETTINGS_LOCATION;
+const Constants = fn(7490);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoSettingsNotices.tsx");
 
 export function ContentFiltersTeenNotice() {
-  return <TeenNotice message={_modDef3125.qbBkFI} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
+  return <TeenNotice message={_modDef3128.qbBkFI} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
 }
 export { MessageRequestsTeenNotice };
 export function ContentFiltersUnconfirmedNotice() {
-  return <UnconfirmedNotice message={_modDef3125.HGJo1F} />;
+  return <UnconfirmedNotice message={_modDef3128.HGJo1F} />;
 }
 export { MessageRequestsUnconfirmedNotice };
 export function useIsEnabled() {

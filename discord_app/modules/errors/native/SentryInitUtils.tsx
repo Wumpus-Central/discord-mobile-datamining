@@ -32,7 +32,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -562,8 +562,8 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1243).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1243);
+    tmp25(1242).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1242);
   }
   const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
@@ -574,8 +574,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6534).increment(obj6, true);
-  const tmp26Result = tmp26(6534);
+  tmp26(6540).increment(obj6, true);
+  const tmp26Result = tmp26(6540);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1072);
@@ -600,7 +600,7 @@ let closure_11 = [
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1369);
+const CommonSentryInitUtils = fn(1368);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -667,13 +667,13 @@ export function initSentry() {
             tunnel: `/error-reporting-proxy/${str2}`,
             autoInitializeNativeSdk: false,
             beforeSend,
-            dist: "35320400000000",
+            dist: "35320500000000",
             dsn: SentryStaffDsn,
             environment: ReleaseChannel,
             tracesSampleRate: 0,
             sampleRate: 1,
             ignoreErrors,
-            release: "discord_android@353.4.0-2+353204",
+            release: "discord_android@353.5.0-2+353205",
             tracePropagationTargets: null,
             integrations: null,
             beforeBreadcrumb: null,
@@ -708,7 +708,7 @@ export function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod674;
-          _mod674.setTag("buildNumber", "35320400000000");
+          _mod674.setTag("buildNumber", "35320500000000");
           const tmp15Result17 = _mod674;
           _mod674.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod674;

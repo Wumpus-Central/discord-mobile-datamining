@@ -27,9 +27,9 @@ import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(8714).FetchState;
-const AppLauncherRouteName = fn(1497).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(10097).CodedLinkExtendedType;
+const FetchState = fn(8722).FetchState;
+const AppLauncherRouteName = fn(1496).AppLauncherRouteName;
+const CodedLinkExtendedType = fn(10117).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);

@@ -66,10 +66,10 @@ export default function GiftPurchaseButton(style) {
     productIdForGift(function* () {
       yield createOrReuseGiftOrder({ planId, recipientUserId, productId: productIdForGift });
       closure_128_0 = value;
-      const premiumTypeFromPlanId = planId(2048).getPremiumTypeFromPlanId(closure_129_0);
+      const premiumTypeFromPlanId = planId(2047).getPremiumTypeFromPlanId(closure_129_0);
       const premiumType = premiumTypeFromPlanId.premiumType;
       const planInterval = premiumTypeFromPlanId.planInterval;
-      planId(10538).openGiftModal({
+      planId(10558).openGiftModal({
         recipientUserId: closure_129_2,
         premiumType,
         planInterval,
@@ -79,11 +79,11 @@ export default function GiftPurchaseButton(style) {
       });
       yield "HermesInternal";
       const obj7 = { title: null, body: null };
-      const intl = planId(1114).intl;
-      obj7.title = intl.string(planId(1114).t.R0RpRX);
-      const intl2 = planId(1114).intl;
-      obj7.body = intl2.string(planId(1114).t.CKsXk3);
-      tmp3(5954).show(obj7);
+      const intl = planId(1113).intl;
+      obj7.title = intl.string(planId(1113).t.R0RpRX);
+      const intl2 = planId(1113).intl;
+      obj7.body = intl2.string(planId(1113).t.CKsXk3);
+      tmp3(5959).show(obj7);
     }),
     items3,
   );

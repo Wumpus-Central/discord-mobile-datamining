@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef3091 from "../../../Checkpoint2026.messages.js";
+import _modDef3092 from "../../../Checkpoint2026.messages.js";
 import CheckpointStore2 from "../../../CheckpointStore.tsx";
 import CheckpointScreenDefault from "../CheckpointScreen.tsx";
 import CheckpointTextDefault from "../CheckpointText.tsx";
@@ -78,7 +78,7 @@ export default function CheckpointIntroScreen() {
   const obj5 = { style: tmp.descriptions, children: null };
   const tmp7 = CheckpointScreenDefault;
   const intl = util.intl;
-  const tmp6Result3 = _modDef3091;
+  const tmp6Result3 = _modDef3092;
   const tmp6Result = CheckpointTextDefault;
   const items3 = [
     timestampProducer(tmp6Result, {
@@ -90,7 +90,7 @@ export default function CheckpointIntroScreen() {
   if (!stateFromStores) {
     const obj7 = { variant: "heading-lg/medium", children: null };
     const intl2 = util.intl;
-    obj7.children = intl2.string(_modDef3091["2GRr6H"]);
+    obj7.children = intl2.string(_modDef3092["2GRr6H"]);
     tmp5Result2 = timestampProducer(CheckpointTextDefault, obj7);
     const tmp6Result4 = CheckpointTextDefault;
   }

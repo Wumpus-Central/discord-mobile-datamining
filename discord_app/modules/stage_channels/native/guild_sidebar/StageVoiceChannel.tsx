@@ -21,22 +21,22 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5762).NO_VOICE_STATES;
+const NO_VOICE_STATES = fn(5767).NO_VOICE_STATES;
 const Constants = fn(1072);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   voiceStates: { marginLeft: 36, marginBottom: 8 },
   container: {
-    marginVertical: fn(11027).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11046).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_16 = createStyles.createStyles(obj);
 let obj3 = {
-  marginVertical: fn(11027).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11046).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -79,9 +79,9 @@ export default noop.memo(function StageVoiceChannel(channel) {
     arr3 = NO_VOICE_STATES;
   }
   let obj = channel(504);
-  const stageParticipantsCount = channel(6759).useStageParticipantsCount(
+  const stageParticipantsCount = channel(6765).useStageParticipantsCount(
     channel.id,
-    tmp2(6753).StageChannelParticipantNamedIndex.AUDIENCE,
+    tmp2(6759).StageChannelParticipantNamedIndex.AUDIENCE,
   );
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
@@ -101,19 +101,19 @@ export default noop.memo(function StageVoiceChannel(channel) {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
-  const tmp2Result = channel(6759);
-  const isConnectedToVoiceChannel = channel(10985).useIsConnectedToVoiceChannel(channel);
+  const tmp2Result = channel(6765);
+  const isConnectedToVoiceChannel = channel(11004).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  const tmp2Result2 = channel(10985);
-  const intl = tmp2(1114).intl;
+  const tmp2Result2 = channel(11004);
+  const intl = tmp2(1113).intl;
   const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {
     if (channel.userLimit > 0) {
-      const intl2 = tmp2(1114).intl;
+      const intl2 = tmp2(1113).intl;
       let obj2 = { channelName: tmp10, userCount: sum, limit: channel.userLimit };
-      let formatToPlainStringResult1 = intl2.formatToPlainString(tmp2(1114).t.rhh6Ev, obj2);
+      let formatToPlainStringResult1 = intl2.formatToPlainString(tmp2(1113).t.rhh6Ev, obj2);
     }
     let obj3 = {};
     const obj4 = {
@@ -122,8 +122,8 @@ export default noop.memo(function StageVoiceChannel(channel) {
       accessibilityLabel: formatToPlainStringResult1,
       accessibilityHint: null,
     };
-    const intl3 = tmp2(1114).intl;
-    obj4.accessibilityHint = intl3.string(tmp2(1114).t.g6pBAk);
+    const intl3 = tmp2(1113).intl;
+    obj4.accessibilityHint = intl3.string(tmp2(1113).t.g6pBAk);
     const merged = Object.assign(obj4);
     obj3.onPress = callback;
     obj3.onLongPress = callback1;
@@ -176,11 +176,11 @@ export default noop.memo(function StageVoiceChannel(channel) {
     obj3.children = tmp12Result;
     return <tmp5Result />;
   }
-  formatToPlainStringResult1 = intl.formatToPlainString(channel(1114).t.TPPk2T, { channelName: tmp10 });
+  formatToPlainStringResult1 = intl.formatToPlainString(channel(1113).t.TPPk2T, { channelName: tmp10 });
   if (sum > 0) {
-    const intl4 = tmp2(1114).intl;
+    const intl4 = tmp2(1113).intl;
     const obj8 = { channelName: tmp10, userCount: sum };
-    formatToPlainStringResult1 = intl4.formatToPlainString(tmp2(1114).t["7yr3Qc"], obj8);
+    formatToPlainStringResult1 = intl4.formatToPlainString(tmp2(1113).t["7yr3Qc"], obj8);
   }
-  const formatToPlainStringResult = intl.formatToPlainString(channel(1114).t.TPPk2T, { channelName: tmp10 });
+  const formatToPlainStringResult = intl.formatToPlainString(channel(1113).t.TPPk2T, { channelName: tmp10 });
 });

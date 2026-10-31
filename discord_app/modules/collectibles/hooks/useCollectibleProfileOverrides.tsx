@@ -4,9 +4,9 @@ import useShopProductItems from "useShopProductItems.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const isAvatarDecorationRecord = fn(7718).isAvatarDecorationRecord;
-const isProfileEffectRecord = fn(7719).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7720).isProfileFrameRecord;
+const isAvatarDecorationRecord = fn(7725).isAvatarDecorationRecord;
+const isProfileEffectRecord = fn(7726).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7727).isProfileFrameRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectibleProfileOverrides.tsx");
 

@@ -23,9 +23,9 @@ class ConjurePlanCommandMention {
     return tmp2(closure_0(closure_1[5]).Text, obj);
   }
 }
-const COMMAND_SENTINEL = fn(6031).COMMAND_SENTINEL;
+const COMMAND_SENTINEL = fn(6036).COMMAND_SENTINEL;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = { mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND } };
 const hasOwnProperty = createStyles.createStyles(obj2);
 let size = fn(2);
@@ -35,9 +35,9 @@ export { ConjurePlanCommandMention };
 export function ConjurePlanCommandText(text) {
   text = text.text;
   ({ commandNames, size } = text);
-  const conjurePlanCommandPattern = size(12693).useConjurePlanCommandPattern(commandNames);
-  const obj = size(12693);
-  const result = size(12693).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
+  const conjurePlanCommandPattern = size(12728).useConjurePlanCommandPattern(commandNames);
+  const obj = size(12728);
+  const result = size(12728).splitConjurePlanCommandText(text, conjurePlanCommandPattern);
   if (null != result) {
     text = result.map((kind) => {
       if ("command" === kind.kind) {
@@ -117,7 +117,7 @@ export function ConjurePlanCommandMarkup(markup) {
                           size = closure_1;
                           const result = markup(size[6]).splitConjurePlanCommandText(mapped, size);
                           if (null != result) {
-                            mapped = result.map(/* F102608 */ function() { ... });
+                            mapped = result.map(/* F102867 */ function() { ... });
                           }
                           let cloneElementResult = mapped;
                           let obj = markup(size[6]);
@@ -127,7 +127,7 @@ export function ConjurePlanCommandMarkup(markup) {
                             cloneElementResult = mapped;
                             if (null != mapped.props.children) {
                               ({ Children, cloneElement } = conjurePlanCommandPattern);
-                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F102609 */ function() { ... }));
+                              cloneElementResult = cloneElement(mapped, undefined, Children.map(mapped.props.children, /* F102868 */ function() { ... }));
                             }
                           }
                         }

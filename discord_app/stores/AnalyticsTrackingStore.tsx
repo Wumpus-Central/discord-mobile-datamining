@@ -6,7 +6,7 @@ import SessionHeartbeatScheduler from "../modules/analytics_sessions/SessionHear
 import AuthenticationStore from "AuthenticationStore.tsx";
 
 require = fn;
-const AnalyticsUtils = fn(1261);
+const AnalyticsUtils = fn(1260);
 const obj2 = {
   dispatcher: DispatcherDefault,
   actionHandler: {
@@ -48,8 +48,8 @@ const obj2 = {
   getLaunchSignature() {
     return AnalyticsUtils2.launchSignature;
   },
-  scheduleWhenIdle: fn(7645).requestSafeIdleCallback,
-  sendUnloadRequest: fn(7646).sendUnloadRequest,
+  scheduleWhenIdle: fn(7652).requestSafeIdleCallback,
+  sendUnloadRequest: fn(7653).sendUnloadRequest,
 };
 const items = [AuthenticationStore];
 obj2.waitFor = items;

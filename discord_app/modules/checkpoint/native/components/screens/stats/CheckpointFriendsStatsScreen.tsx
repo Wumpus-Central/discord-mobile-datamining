@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/native/components/screens/stats/CheckpointFriendsStatsScreen.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3059 from "../../../../Checkpoint.messages.js";
+import _modDef3060 from "../../../../Checkpoint.messages.js";
 import FriendsIcon from "../../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import AnalyticsLocationDefault from "../../../../../app_analytics/AnalyticsLocation.tsx";
 import ChatIcon from "../../../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
@@ -31,12 +31,12 @@ function FriendsHeader(children) {
   const intl = util.intl;
   const obj4 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp2 = CheckpointTextDefault;
-  obj5.children = intl.string(_modDef3059.ZQakPR).toLocaleUpperCase();
+  obj5.children = intl.string(_modDef3060.ZQakPR).toLocaleUpperCase();
   items[1] = map1(tmp2, obj5);
   obj3.children = items;
   const items1 = [closure_1_14(React5, obj3)];
   const obj6 = { children: null };
-  const stringResult = intl.string(_modDef3059.ZQakPR);
+  const stringResult = intl.string(_modDef3060.ZQakPR);
   obj6.children = title.toLocaleUpperCase();
   items1[1] = map1(CheckpointDisplayTextDefault, obj6);
   obj2.children = items1;
@@ -54,7 +54,7 @@ function SidekickStats(sidekick) {
   const rounded1 = Math.round(sidekick.numVoiceMinutes);
   const intl = util.intl;
   const intl2 = util.intl;
-  const stringResult = intl.string(_modDef3059.wWKySP);
+  const stringResult = intl.string(_modDef3060.wWKySP);
   const obj = { style: tmp.stats, children: null };
   obj2 = {
     accessible: true,
@@ -71,7 +71,7 @@ function SidekickStats(sidekick) {
   const obj4 = {
     accessible: true,
     accessibilityLabel:
-      "" + rounded1 + " " + intl2.formatToPlainString(_modDef3059.UZbUtl, { numMinutes: rounded1 }).toLocaleLowerCase(),
+      "" + rounded1 + " " + intl2.formatToPlainString(_modDef3060.UZbUtl, { numMinutes: rounded1 }).toLocaleLowerCase(),
     style: tmp.stat,
     children: null,
   };
@@ -101,7 +101,7 @@ function SidekickMessageInput(user) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -203,15 +203,15 @@ function SidekickMessageInput(user) {
     }
     obj2.editable = tmp16;
     obj2.placeholderTextColor = CHECKPOINT_WHITE;
-    let intl = tmp15(1114).intl;
+    let intl = tmp15(1113).intl;
     if (tmp5) {
-      let stringResult = intl.string(tmp15(1114).t.fjcCk5);
+      let stringResult = intl.string(tmp15(1113).t.fjcCk5);
     } else {
       const obj3 = { name: user.username };
-      stringResult = intl.formatToPlainString(tmp15(1114).t["0ZQw/X"], obj3);
+      stringResult = intl.formatToPlainString(tmp15(1113).t["0ZQw/X"], obj3);
     }
     obj2.placeholder = stringResult;
-    let items = [closure_13(user(1188).TextInput, obj2)];
+    let items = [closure_13(user(1187).TextInput, obj2)];
     let obj4 = { style: tmp.messageInputActions, children: null };
     let obj5 = {
       onPress: function handleGift() {
@@ -224,10 +224,10 @@ function SidekickMessageInput(user) {
       accessibilityLabel: null,
       children: null,
     };
-    const intl2 = tmp15(1114).intl;
-    obj5.accessibilityLabel = intl2.string(user(1114).t.Ve9Ge6);
+    const intl2 = tmp15(1113).intl;
+    obj5.accessibilityLabel = intl2.string(user(1113).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(13315).GiftIcon, obj6);
+    obj5.children = closure_13(user(13350).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5)];
     const obj7 = {
       onPress: function handleSend() {
@@ -252,12 +252,12 @@ function SidekickMessageInput(user) {
       disabled = tmp.disabled;
     }
     obj7.style = disabled;
-    const intl3 = tmp15(1114).intl;
-    obj7.accessibilityLabel = intl3.string(user(1114).t.oeb1vg);
+    const intl3 = tmp15(1113).intl;
+    obj7.accessibilityLabel = intl3.string(user(1113).t.oeb1vg);
     const obj8 = { disabled: !tmp10 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj7.children = closure_13(user(5724).SendMessageIcon, obj9);
+    obj7.children = closure_13(user(5729).SendMessageIcon, obj9);
     items1[1] = closure_13(closure_6, obj7);
     obj4.children = items1;
     items[1] = closure_14(closure_7, obj4);
@@ -268,7 +268,7 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6061);
+const CheckpointConstants = fn(6066);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
@@ -286,7 +286,7 @@ let closure_15 = {
   "Avatar05/Fill": CHECKPOINT_PRIMARY,
   ConnectorColor: CHECKPOINT_PRIMARY,
 };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1376);
 let tmp5;
 if (PlatformUtils.isIOS()) {
   let obj2 = { "unifont-17.0.03": null };
@@ -295,7 +295,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj2;
 }
 obj2 = tmp5;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj5 = {
   container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 },
   animation: null,

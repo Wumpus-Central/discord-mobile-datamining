@@ -33,8 +33,8 @@ export function useShouldRenderChannelList() {
       }
     }
     function checkNavigationState() {
-      const obj = first(5193);
-      const rootNavigationRef = first(5194).getRootNavigationRef();
+      const obj = first(5198);
+      const rootNavigationRef = first(5199).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -43,14 +43,14 @@ export function useShouldRenderChannelList() {
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5194);
+      const obj2 = first(5199);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
-      let ComponentDispatch = first(1109).ComponentDispatch;
+      let ComponentDispatch = first(1108).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5194).getRootNavigationRef();
+      let rootNavigationRef = first(5199).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }

@@ -16,13 +16,14 @@ const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
 let obj = {
-  games: fn(9707).GameControllerIcon,
-  apps: fn(8670).AppsIcon,
-  profile_widget: fn(12783).WidgetsIcon,
-  automod: fn(11255).ShieldIcon,
-  chat_bot: fn(12408).RobotIcon,
+  games: fn(9727).GameControllerIcon,
+  apps: fn(8678).AppsIcon,
+  profile_widget: fn(12818).WidgetsIcon,
+  overlay_widget: fn(9587).ScreenIcon,
+  automod: fn(11281).ShieldIcon,
+  chat_bot: fn(12446).RobotIcon,
 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" },
   item: null,
@@ -109,7 +110,7 @@ let closure_15 = noop.memo(function ConjureHomeCarouselItem(offset) {
   const tmp = closure_13();
   let result = STEP * offset.count;
   c3 = result;
-  obj = index(viewportWidth[14]);
+  obj = index(viewportWidth[15]);
   const fn = function u() {
     const result = index * closure_11;
     const result1 = conjureHomeCarouselFan.wrapConjureHomeCarouselDistance(result, offset.get(), c3);
@@ -122,12 +123,12 @@ let closure_15 = noop.memo(function ConjureHomeCarouselItem(offset) {
     return obj3;
   };
   fn.__closure = {
-    wrapConjureHomeCarouselDistance: index(viewportWidth[15]).wrapConjureHomeCarouselDistance,
+    wrapConjureHomeCarouselDistance: index(viewportWidth[16]).wrapConjureHomeCarouselDistance,
     index,
     STEP,
     offset,
     loop: result,
-    conjureHomeCarouselFan: index(viewportWidth[15]).conjureHomeCarouselFan,
+    conjureHomeCarouselFan: index(viewportWidth[16]).conjureHomeCarouselFan,
     viewportWidth,
     CARD_WIDTH: 240,
   };
@@ -140,22 +141,22 @@ let closure_15 = noop.memo(function ConjureHomeCarouselItem(offset) {
   let obj4 = { style: tmp.promptRow, children: null };
   const obj5 = { style: tmp.avatar, source: null };
   let obj2 = {
-    wrapConjureHomeCarouselDistance: index(viewportWidth[15]).wrapConjureHomeCarouselDistance,
+    wrapConjureHomeCarouselDistance: index(viewportWidth[16]).wrapConjureHomeCarouselDistance,
     index,
     STEP,
     offset,
     loop: result,
-    conjureHomeCarouselFan: index(viewportWidth[15]).conjureHomeCarouselFan,
+    conjureHomeCarouselFan: index(viewportWidth[16]).conjureHomeCarouselFan,
     viewportWidth,
     CARD_WIDTH: 240,
   };
-  const tmp4 = offset(viewportWidth[16]);
-  const obj6 = index(viewportWidth[17]);
-  obj5.source = obj6.makeSource(index(viewportWidth[17]).getDefaultAvatarURL(undefined, inspiration.authorAvatarSeed));
+  const tmp4 = offset(viewportWidth[17]);
+  const obj6 = index(viewportWidth[18]);
+  obj5.source = obj6.makeSource(index(viewportWidth[18]).getDefaultAvatarURL(undefined, inspiration.authorAvatarSeed));
   const items1 = [closure_9(tmp4, obj5)];
   const obj8 = {
     style: tmp.bubble,
-    children: closure_9(index(viewportWidth[18]).Text, {
+    children: closure_9(index(viewportWidth[19]).Text, {
       variant: "text-sm/medium",
       color: "text-strong",
       lineClamp: 2,
@@ -167,12 +168,12 @@ let closure_15 = noop.memo(function ConjureHomeCarouselItem(offset) {
   const items2 = [closure_10(View, obj4)];
   const obj10 = { style: tmp.card, children: null };
   const obj11 = { style: tmp.thumbnail, children: null };
-  const size = { asset: offset(viewportWidth[20])[inspiration.id], width: "100%", height: "100%" };
-  obj11.children = closure_9(index(viewportWidth[19]).LocalSvg, size);
+  const size = { asset: offset(viewportWidth[21])[inspiration.id], width: "100%", height: "100%" };
+  obj11.children = closure_9(index(viewportWidth[20]).LocalSvg, size);
   const items3 = [closure_9(View, obj11)];
   const obj12 = { style: tmp.footer, children: null };
   const obj13 = { style: tmp.categoryIcon, children: null };
-  const obj7 = index(viewportWidth[17]);
+  const obj7 = index(viewportWidth[18]);
   const obj9 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 2, children: inspiration.shortPrompt };
   obj13.children = closure_9(obj[inspiration.category], {
     size: "sm",
@@ -181,7 +182,7 @@ let closure_15 = noop.memo(function ConjureHomeCarouselItem(offset) {
   const items4 = [closure_9(View, obj13)];
   const obj15 = { style: tmp.footerText, children: null };
   const items5 = [
-    closure_9(index(viewportWidth[18]).Text, {
+    closure_9(index(viewportWidth[19]).Text, {
       variant: "text-md/semibold",
       color: "text-strong",
       lineClamp: 1,
@@ -191,8 +192,8 @@ let closure_15 = noop.memo(function ConjureHomeCarouselItem(offset) {
   const obj17 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
   const obj14 = { size: "sm", color: offset(viewportWidth[7]).colors.ICON_STRONG };
   const obj16 = { variant: "text-md/semibold", color: "text-strong", lineClamp: 1, children: inspiration.name };
-  obj17.children = index(viewportWidth[21]).conjureHomeCategoryLabel(inspiration.category);
-  items5[1] = closure_9(index(viewportWidth[18]).Text, obj17);
+  obj17.children = index(viewportWidth[22]).conjureHomeCategoryLabel(inspiration.category);
+  items5[1] = closure_9(index(viewportWidth[19]).Text, obj17);
   obj15.children = items5;
   items4[1] = closure_10(View, obj15);
   obj12.children = items4;
@@ -200,7 +201,7 @@ let closure_15 = noop.memo(function ConjureHomeCarouselItem(offset) {
   obj10.children = items3;
   items2[1] = closure_10(View, obj10);
   obj3.children = items2;
-  return closure_10(offset(viewportWidth[14]).View, obj3);
+  return closure_10(offset(viewportWidth[15]).View, obj3);
 });
 const __initData2 = {
   code: "function ConjureHomeCarouselTsx2(frame){const{offset,CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,loop}=this.__closure;var _frame$timeSincePrevi;const elapsed=(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:0;offset.set((offset.get()+CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND*elapsed/1000)%loop);}",
@@ -219,7 +220,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   noop = undefined;
   let frameCallback;
   onScreen = undefined;
-  const memo = noop.useMemo(() => memo(12937).conjureHomeInspirationEntries(), []);
+  const memo = noop.useMemo(() => memo(12972).conjureHomeInspirationEntries(), []);
   obj = noop;
   const tmp = closure_13();
   const tmp2 = memo;
@@ -229,15 +230,15 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   const items1 = [AppStateStore];
   const stateFromStores1 = memo(504).useStateFromStores(items1, () => state.getState() === constants.ACTIVE);
   const obj3 = memo(504);
-  const isFocused = memo(1499).useIsFocused();
+  const isFocused = memo(1498).useIsFocused();
   const tmp7 = sharedValue(noop.useState(0), 2);
   const viewportWidth = tmp7[0];
   dependencyMap = tmp7[1];
-  const obj4 = memo(1499);
-  sharedValue = memo(5090).useSharedValue(0);
+  const obj4 = memo(1498);
+  sharedValue = memo(5095).useSharedValue(0);
   let result = closure_11 * memo.length;
   noop = result;
-  const obj5 = memo(5090);
+  const obj5 = memo(5095);
   class C {
     constructor(arg0) {
       num = onScreen.timeSincePreviousFrame;
@@ -246,15 +247,15 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
       }
       value = closure_3.get();
       result = closure_3.set(
-        (value + (closure_0(closure_2[15]).CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND * num) / 1000) % closure_4,
+        (value + (closure_0(closure_2[16]).CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND * num) / 1000) % closure_4,
       );
       return;
     }
   }
-  const obj6 = memo(5090);
+  const obj6 = memo(5095);
   C.__closure = {
     offset: sharedValue,
-    CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND: memo(12785).CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,
+    CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND: memo(12820).CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,
     loop: result,
   };
   C.__workletHash = 7470635772737;
@@ -278,8 +279,8 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     frameCallback.setActive(onScreen);
   }, items2);
   const obj8 = { style: tmp.carousel, accessible: true, accessibilityLabel: null, onLayout: null, children: null };
-  const intl = tmp2(1114).intl;
-  obj8.accessibilityLabel = intl.string(viewportWidth(3865).Qc4S39);
+  const intl = tmp2(1113).intl;
+  obj8.accessibilityLabel = intl.string(viewportWidth(3868).Qc4S39);
   obj8.onLayout = function onLayout(nativeEvent) {
     return dependencyMap(nativeEvent.nativeEvent.layout.width);
   };

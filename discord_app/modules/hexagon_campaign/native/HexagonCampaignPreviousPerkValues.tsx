@@ -10,16 +10,16 @@ import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsS
 const require = globalThis.__r;
 
 require = fn;
-const isHexagonCampaignAppIcon = fn(9958).isHexagonCampaignAppIcon;
-const ClientThemesConstants = fn(1241);
+const isHexagonCampaignAppIcon = fn(9979).isHexagonCampaignAppIcon;
+const ClientThemesConstants = fn(1240);
 ({ BACKGROUND_GRADIENT_PRESETS_MAP: closure_7, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } = ClientThemesConstants);
-const SystemThemeState = fn(1196).SystemThemeState;
+const SystemThemeState = fn(1195).SystemThemeState;
 const DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = { theme: "system" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignPreviousPerkValues.tsx");
 
 export { DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME };
-export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(9959).FreemiumAppIconIds.DEFAULT;
+export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(9980).FreemiumAppIconIds.DEFAULT;
 export function getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME) {
   _require = DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
   if (null != DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME.backgroundGradientPresetId) {

@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationJoinModal/GameOrganizationCharacterList.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2405 from "../../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2404 from "../../GameOrganizationInvitesUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -31,7 +31,7 @@ function CharacterSubLabel(text) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   card: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 },
   selectedCard: null,
@@ -62,7 +62,7 @@ let closure_9 = noop.memo(function CharacterCard(character) {
     if (description == null) {
       const intl = util.intl;
       const obj3 = { noun: character.noun };
-      formatToPlainStringResult = intl.formatToPlainString(_modDef2405.VNY3C1, obj3);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef2404.VNY3C1, obj3);
     }
   }
   const obj4 = {
@@ -133,10 +133,10 @@ export default function GameOrganizationCharacterList(characters) {
   let someResult = characters.some((eligible) => !eligible.eligible);
   const obj = { spacing: nativeDefault.space.PX_12, children: null };
   const obj2 = { style: tmp.title, title: null };
-  const intl = characters(1114).intl;
-  obj2.title = intl.formatToPlainString(_modDef2405["Xm+emB"], { noun });
+  const intl = characters(1113).intl;
+  obj2.title = intl.formatToPlainString(_modDef2404["Xm+emB"], { noun });
   const items1 = [
-    closure_5(characters(7054).TableRowGroupTitle, obj2),
+    closure_5(characters(7060).TableRowGroupTitle, obj2),
     closure_5(View, {
       accessibilityRole: "radiogroup",
       style: tmp.cards,
@@ -151,12 +151,12 @@ export default function GameOrganizationCharacterList(characters) {
   ];
   if (someResult) {
     const obj4 = { variant: "text-md/medium", color: "text-subtle", children: null };
-    const intl2 = tmp4(1114).intl;
+    const intl2 = tmp4(1113).intl;
     const obj5 = { noun };
-    obj4.children = intl2.formatToPlainString(_modDef2405.ybJIQJ, obj5);
-    someResult = closure_5(tmp4(5619).Text, obj4);
+    obj4.children = intl2.formatToPlainString(_modDef2404.ybJIQJ, obj5);
+    someResult = closure_5(tmp4(5624).Text, obj4);
   }
   items1[2] = someResult;
   obj.children = items1;
-  return closure_6(characters(6022).Stack, obj);
+  return closure_6(characters(6027).Stack, obj);
 }

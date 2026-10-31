@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const route = SettingBuilders.createRoute({
-  IconComponent: fn(7129).EyeSlashIcon,
+  IconComponent: fn(7135).EyeSlashIcon,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["93ZDWE"]);
@@ -17,7 +17,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
   },
-  parent: fn(8424).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8432).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1072).UserSettingsSections.IGNORED_USERS,
     getComponent() {

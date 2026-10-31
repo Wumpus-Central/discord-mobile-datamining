@@ -54,7 +54,7 @@ let closure_8 = async function _conditionallyFetchProgramRewards() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_8 = async function _conditionallyFetchProgramRewards() {
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;
@@ -103,7 +103,7 @@ let closure_9 = async function _conditionallyFetchProgramRewardsIgnoreCacheTTL()
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -137,7 +137,7 @@ let closure_9 = async function _conditionallyFetchProgramRewardsIgnoreCacheTTL()
         return obj;
       }
       c0 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp10) {
       c0 = tmp;
       throw tmp10;

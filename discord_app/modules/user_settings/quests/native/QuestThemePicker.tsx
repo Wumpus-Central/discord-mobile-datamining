@@ -139,11 +139,11 @@ class QuestThemePicker {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-let closure_8 = fn(1241).LEGACY_STANDARD_BACKGROUND_THEMES;
+let closure_8 = fn(1240).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   themeSection: { marginBottom: nativeDefault.space.PX_8 },
   themeSelector: null,

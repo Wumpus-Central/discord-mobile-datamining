@@ -90,9 +90,9 @@ export function fetchStoreListingForSku(skuId) {
   }
   const obj6 = { url: STORE_LISTINGS_SKUResult, rejectWithError: null };
   const obj4 = require("StoreUtils");
-  obj6.rejectWithError = tmp7(1283).rejectWithMigratedError();
+  obj6.rejectWithError = tmp7(1282).rejectWithMigratedError();
   const result1 = obj4.httpGetWithCountryCodeQuery(obj6);
-  const tmp7Result = tmp7(1283);
+  const tmp7Result = tmp7(1282);
   return result1
     .then((body) => {
       const dispatch = DispatcherDefault.dispatch;

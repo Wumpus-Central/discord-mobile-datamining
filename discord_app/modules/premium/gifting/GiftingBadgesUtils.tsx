@@ -1,6 +1,6 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2633 from "GiftingBadge.messages.js";
+import _modDef2634 from "GiftingBadge.messages.js";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import GiftingBadgeExperiment2 from "experiments/GiftingBadgeExperiment.tsx";
@@ -10,7 +10,7 @@ import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_5 = fn(8755).getSingleRequirementThreshold;
+let closure_5 = fn(8763).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -24,7 +24,7 @@ export function getGiftingBadgeAccessibilityLabel(name) {
     str = "";
   }
   const intl = util.intl;
-  return "" + str + ", " + intl.formatToPlainString(_modDef2633.qvx9E4, { count });
+  return "" + str + ", " + intl.formatToPlainString(_modDef2634.qvx9E4, { count });
 }
 export function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = closure_5(currentTier);
@@ -87,9 +87,9 @@ export function useGiftingBadgeCoachmarkVariant(platform) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10590).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(10610).GiftingBadgeExperiment;
   const enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = stateFromStores(10597).GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = stateFromStores(10617).GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   let str2 = "-DISABLED";
   if ("web" === platform.platform) {
@@ -103,7 +103,7 @@ export function useGiftingBadgeCoachmarkVariant(platform) {
     }
     tmp4 = enabled3;
   }
-  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10598).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10618).GiftingBadgeCoachmarkAudienceExperiment;
   if (tmp4) {
     str = "";
   }
@@ -123,10 +123,10 @@ export function useGiftingBadgeCoachmarkVariant(platform) {
     return flag;
   });
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(5039).useIsDismissibleContentDismissed_UNSAFE(
-    tmp(4842).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
+  const result = stateFromStores(5044).useIsDismissibleContentDismissed_UNSAFE(
+    tmp(4847).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK,
   );
-  const tmpResult3 = stateFromStores(5039);
+  const tmpResult3 = stateFromStores(5044);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () =>
     badgeById.getBadgeById(stateFromStores(dependencyMap[11]).BadgeId.GIFTING),

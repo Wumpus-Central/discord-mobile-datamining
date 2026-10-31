@@ -1,14 +1,13 @@
 // discord_app/modules/channel/native/ChannelLongPressActionSheet.tsx
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import StageChannelPermissions from "../../stage_channels/StageChannelPermissions.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useChannelName from "../useChannelName.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCreators.tsx";
-import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import ReadStateActionCreators from "../../../actions/ReadStateActionCreators.tsx";
@@ -23,6 +22,7 @@ import ReportModals from "../../in_app_reports/ReportModals.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../actions/native/CreateChannelModalActionCreators.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
+import LeaveGroupDMConfirmationAlert from "../../group_dm/native/LeaveGroupDMConfirmationAlert.tsx";
 import showChatGDMCustomizeActionSheetDefault from "../../group_dm/native/showChatGDMCustomizeActionSheet.tsx";
 import openFavoritesGuildMoveToCategoryActionSheetDefault from "../../favorites/native/openFavoritesGuildMoveToCategoryActionSheet.tsx";
 import ConjureRemixSheet from "../../conjure/remix/native/ConjureRemixSheet.tsx";
@@ -83,7 +83,7 @@ let closure_35 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -231,7 +231,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   const DeveloperMode = tmp5(tmp2[99]).DeveloperMode;
   setting = DeveloperMode.useSetting();
   if (null != stateFromStores) {
-    let obj5 = { guild: stateFromStores, size: tmp5(tmp2[100]).GuildIconSizes.LARGE };
+    const obj5 = { guild: stateFromStores, size: tmp5(tmp2[100]).GuildIconSizes.LARGE };
     let tmp24 = jsx(tmp(tmp2[100]), { guild: stateFromStores, size: tmp5(tmp2[100]).GuildIconSizes.LARGE });
     let tmp23 = jsx;
     const tmpResult3 = tmp(tmp2[100]);
@@ -403,35 +403,38 @@ function ChannelLongPressActionSheetConnected(channel) {
         const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
         const intl = util.intl;
         const intl2 = util.intl;
-        let formatResult = intl2.format(util.t.SSIVOu, { name: channelName });
-        let formatToPlainStringResult1 = intl.formatToPlainString(util.t.hJ5Ap4, { name: channelName });
+        const formatToPlainStringResult = intl.formatToPlainString(util.t.hJ5Ap4, { name: channelName });
+        let formatResult1 = intl2.format(util.t.SSIVOu, { name: channelName });
+        let formatToPlainStringResult1 = formatToPlainStringResult;
         if (channel.isManaged()) {
           const intl3 = util.intl;
           const obj2 = { name: channelName };
           formatToPlainStringResult1 = intl3.formatToPlainString(util.t.hVGjEW, obj2);
           const intl4 = util.intl;
           const obj3 = { name: channelName };
-          formatResult = intl4.format(util.t.IK1Qvs, obj3);
+          formatResult1 = intl4.format(util.t.IK1Qvs, obj3);
         }
-        const formatToPlainStringResult = intl.formatToPlainString(util.t.hJ5Ap4, { name: channelName });
-        const obj5 = {
+        const formatResult = intl2.format(util.t.SSIVOu, { name: channelName });
+        const obj4 = {
           title: formatToPlainStringResult1,
-          body: formatResult,
+          body: formatResult1,
           confirmText: null,
           cancelText: null,
           onConfirm: null,
         };
         const intl5 = util.intl;
-        obj5.confirmText = intl5.string(util.t.p89ACt);
+        obj4.confirmText = intl5.string(util.t.p89ACt);
         const intl6 = util.intl;
-        obj5.cancelText = intl6.string(util.t.gm1Vej);
-        obj5.onConfirm = function onConfirm() {
+        obj4.cancelText = intl6.string(util.t.gm1Vej);
+        obj4.onConfirm = function onConfirm(arg0) {
           onClose(guildId[27]).closePrivateChannel(
             user.id,
             currentlySelectedChannelId.getCurrentlySelectedChannelId() === user.id,
+            arg0,
           );
         };
-        AlertActionCreatorsDefault.show(obj5);
+        const result = LeaveGroupDMConfirmationAlert.openLeaveGroupDMConfirmationAlert(obj4);
+        const tmpResult = LeaveGroupDMConfirmationAlert;
       };
       buttons2.push(obj12);
     }
@@ -451,7 +454,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[23]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10787, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10807, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -834,7 +837,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj43.IconComponent = tmp5(tmp2[73]).ChatIcon;
             obj43.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10979, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10998, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons20.push(obj43);
@@ -868,7 +871,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 }
               } else {
                 try {
@@ -897,7 +900,7 @@ function ChannelLongPressActionSheetConnected(channel) {
                   } else {
                     value.openEndStageModal(closure_128_0);
                     paths = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 } catch (tmp10) {
                   paths = tmp;
@@ -1104,11 +1107,11 @@ function ChannelLongPressActionSheetConnected(channel) {
               str = "danger";
             }
             return closure_1_33(
-              channel(7362).ActionSheetRow,
+              channel(7368).ActionSheetRow,
               {
                 variant: str,
                 label,
-                icon: closure_1_33(channel(7362).ActionSheetRow.Icon, {
+                icon: closure_1_33(channel(7368).ActionSheetRow.Icon, {
                   IconComponent,
                   style: iconStyle,
                   disableColor,
@@ -1246,8 +1249,8 @@ function ChannelLongPressActionSheetConnected(channel) {
   tmp70 = null != remixProject && null != guildId1;
   tmp72 = null != tmp52 && null != guildId1;
 }
-const SafetyWarningTypes = fn(10784).SafetyWarningTypes;
-const ChannelRecord = fn(4862);
+const SafetyWarningTypes = fn(10804).SafetyWarningTypes;
+const ChannelRecord = fn(4867);
 ({
   isGuildTextChannelType: closure_9,
   isGuildVocalChannelType: c10,
@@ -1266,7 +1269,7 @@ const Constants = fn(1072);
   Permissions: closure_30,
   ZERO_STRING_GUILD_ID: closure_31,
 } = Constants);
-let closure_32 = fn(10117).ChannelDetailsNavigatorScreens;
+let closure_32 = fn(10137).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");

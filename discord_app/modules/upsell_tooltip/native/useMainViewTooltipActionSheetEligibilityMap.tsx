@@ -26,7 +26,7 @@ import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.t
 import UserRequiredActionStore from "../../../stores/UserRequiredActionStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1386);
+const PremiumConstants = fn(1385);
 ({
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,

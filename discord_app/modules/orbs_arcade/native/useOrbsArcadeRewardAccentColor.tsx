@@ -56,3 +56,4 @@ export default function useOrbsArcadeRewardAccentColor(type) {
     }
   }
 }
+export const NITRO_GLOW_COLOR = "#321634";

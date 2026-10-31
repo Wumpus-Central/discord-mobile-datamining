@@ -8,7 +8,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isEveryoneRole = fn(4916).isEveryoneRole;
+const isEveryoneRole = fn(4921).isEveryoneRole;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");

@@ -8,7 +8,7 @@ import RpcCommandInterception from "RpcCommandInterception.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(6444).TransportTypes;
+const TransportTypes = fn(6450).TransportTypes;
 const Constants = fn(1072);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -115,7 +115,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -727,8 +727,8 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
   });
   const result = this.dispatchIsSubscribedUpdate();
 };
-prototype["removeSubscriptions"] = function removeSubscriptions(abortController) {
-  closure_0 = abortController;
+prototype["removeSubscriptions"] = function removeSubscriptions(authorization) {
+  closure_0 = authorization;
   _modDef12.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };

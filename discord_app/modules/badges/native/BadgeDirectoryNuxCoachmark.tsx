@@ -29,9 +29,9 @@ function ProgressGraphic(badgeIconUrls) {
   if ("fallback" === badgeDirectoryNuxGraphicLayout.type) {
     const obj2 = { style: tmp.graphicRow, children: null };
     const items = [
-      closure_6(tmp2(14896).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
-      closure_6(tmp2(14900).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
-      closure_6(tmp2(14892).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
+      closure_6(tmp2(14934).GameDiversityTier9LargeBadge, { width: 42, height: 42 }),
+      closure_6(tmp2(14938).GameDiversityTier10LargeBadge, { width: 60, height: 60 }),
+      closure_6(tmp2(14930).GameDiversityTier8LargeBadge, { width: 42, height: 42 }),
     ];
     obj2.children = items;
     return closure_7(View, obj2);
@@ -47,11 +47,11 @@ function ProgressGraphic(badgeIconUrls) {
   const obj = require("BadgeDirectoryNuxGraphicUtils");
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(4855).ContentDismissActionType;
+const ContentDismissActionType = fn(4860).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = { single: [60], pair: [48, 48], trio: [42, 60, 42] };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   graphicRow: {
     flexDirection: "row",

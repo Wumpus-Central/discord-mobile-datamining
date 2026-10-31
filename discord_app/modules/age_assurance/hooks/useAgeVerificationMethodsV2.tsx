@@ -52,7 +52,7 @@ export function useAgeVerificationMethodsV2() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -83,8 +83,8 @@ export function useAgeVerificationMethodsV2() {
             tmp75(true);
             v0(false);
             v0 = 2;
-            const result = closure_0(7961).isCurrentUserSuspended();
-            const obj7 = closure_0(7993);
+            const result = closure_0(7969).isCurrentUserSuspended();
+            const obj7 = closure_0(8001);
             if (result) {
               c5 = 4;
               c6 = 1;
@@ -96,7 +96,7 @@ export function useAgeVerificationMethodsV2() {
               const obj9 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
               return obj9;
             }
-            const obj6 = closure_0(7961);
+            const obj6 = closure_0(7969);
           }
         } else if (1 === tmp9) {
           v0 = 0;
@@ -156,7 +156,7 @@ export function useAgeVerificationMethodsV2() {
             tmp75(false);
           }
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp75) {
         if (tmp5 === v0) {

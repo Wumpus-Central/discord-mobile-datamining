@@ -29,14 +29,14 @@ function Loading() {
   return closure_1_14(map1, obj2);
 }
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9180);
+const InstantInviteSendStateStore = fn(9199);
 ({ setSendState: metroRequire, useInstantInviteSendStates: closure_7 } = InstantInviteSendStateStore);
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
-const InviteSendStates = fn(7872).InviteSendStates;
+const InviteSendStates = fn(7879).InviteSendStates;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, emptyState: null, searchAndShareContainer: null };
 let size = {
   height: 16,
@@ -75,9 +75,9 @@ export default function ActivityInviteSheet(activity) {
   dependencyMap = undefined;
   noop = undefined;
   const tmp = closure_15();
-  analyticsLocations = analyticsLocations(7320)(analyticsLocations(7345).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(7326)(analyticsLocations(7351).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(7320);
+  const tmp4 = analyticsLocations(7326);
   [tmp6, c2] = noop.useState(null);
   const tmp7 = closure_7((arg0) => arg0);
   _slicedToArray = tmp7;
@@ -188,28 +188,28 @@ export default function ActivityInviteSheet(activity) {
   }
   let obj3 = { showGradient: tmp18, scrollable: true, startExpanded: true, header: null, children: null };
   let obj4 = { title: null };
-  const intl = tmp11(1114).intl;
-  obj4.title = intl.string(activity(1114).t["OzOM/q"]);
-  obj3.header = closure_12(activity(7315).BottomSheetTitleHeader, obj4);
+  const intl = tmp11(1113).intl;
+  obj4.title = intl.string(activity(1113).t["OzOM/q"]);
+  obj3.header = closure_12(activity(7321).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
-    const obj5 = { style: tmp.emptyState, Illustration: tmp11(9134).AppCrash, title: tmp6 };
-    let tmp19Result = closure_12(tmp11(1188).EmptyState, obj5);
+    const obj5 = { style: tmp.emptyState, Illustration: tmp11(9153).AppCrash, title: tmp6 };
+    let tmp19Result = closure_12(tmp11(1187).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = closure_12(Loading, {});
   } else {
     const obj6 = { children: null };
     const obj7 = { style: tmp.searchAndShareContainer, children: null };
-    const obj8 = { size: "md", round: true, onChange: tmp11(9131).searchInviteSuggestions, placeholder: null };
-    const intl2 = tmp11(1114).intl;
-    obj8.placeholder = intl2.string(tmp11(1114).t.iI1gMg);
-    obj7.children = closure_12(tmp11(7212).SearchBar, obj8);
+    const obj8 = { size: "md", round: true, onChange: tmp11(9150).searchInviteSuggestions, placeholder: null };
+    const intl2 = tmp11(1113).intl;
+    obj8.placeholder = intl2.string(tmp11(1113).t.iI1gMg);
+    obj7.children = closure_12(tmp11(7218).SearchBar, obj8);
     obj6.children = closure_12(View, obj7);
     const items4 = [closure_12(View, obj6)];
     if (tmp16) {
       const obj9 = { style: tmp.emptyState, title: null };
-      const intl3 = tmp11(1114).intl;
-      obj9.title = intl3.string(tmp11(1114).t.ojoWgX);
-      let tmp17Result2 = closure_12(tmp11(1188).EmptyState, obj9);
+      const intl3 = tmp11(1113).intl;
+      obj9.title = intl3.string(tmp11(1113).t.ojoWgX);
+      let tmp17Result2 = closure_12(tmp11(1187).EmptyState, obj9);
     } else {
       const obj10 = {
         data: stateFromStores,
@@ -218,7 +218,7 @@ export default function ActivityInviteSheet(activity) {
         onInviteSent: callback2,
         onPressAvatar: callback1,
       };
-      tmp17Result2 = closure_12(tmp2(19087), obj10);
+      tmp17Result2 = closure_12(tmp2(19136), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;
@@ -226,6 +226,6 @@ export default function ActivityInviteSheet(activity) {
     tmp19Result = closure_14(closure_13, obj11);
   }
   obj3.children = tmp19Result;
-  obj2.children = closure_12(activity(5267).BottomSheet, obj3);
-  return closure_12(activity(7320).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_12(activity(5272).BottomSheet, obj3);
+  return closure_12(activity(7326).AnalyticsLocationProvider, obj2);
 }

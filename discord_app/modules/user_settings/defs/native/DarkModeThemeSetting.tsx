@@ -5,14 +5,14 @@ import useSyncedModeThemeName from "useSyncedModeThemeName.tsx";
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SystemTheme = fn(1196).SystemTheme;
-const SettingBuilders = fn(11505);
+const SystemTheme = fn(1195).SystemTheme;
+const SettingBuilders = fn(11539);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(8424).MobileUserSettings.APPEARANCE,
+  parent: fn(8432).MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
     const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());

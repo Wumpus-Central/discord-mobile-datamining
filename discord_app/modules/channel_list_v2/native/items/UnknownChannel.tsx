@@ -16,19 +16,19 @@ function handlePress() {
   obj2.icon = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open("UNKNOWN_CHANNEL_UPDATE_DISCORD", obj2);
 }
-const UnreadSetting = fn(6770).UnreadSetting;
+const UnreadSetting = fn(6776).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   container: {
-    marginVertical: fn(11027).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11046).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = {
-  marginVertical: fn(11027).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11046).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -55,8 +55,8 @@ export default noop.memo(function UnknownChannel(channel) {
     resolvedUnreadSetting: null,
   };
   const tmp2 = useChannelNameDefault(channel);
-  const intl = channel(1114).intl;
-  obj.accessibilityLabel = intl.formatToPlainString(channel(1114).t.yjQ9P8, { channelName: tmp2 });
+  const intl = channel(1113).intl;
+  obj.accessibilityLabel = intl.formatToPlainString(channel(1113).t.yjQ9P8, { channelName: tmp2 });
   obj.accessibilityState = { selected };
   obj.channel = channel;
   obj.selected = selected;

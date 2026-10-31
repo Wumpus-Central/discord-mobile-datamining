@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/debug/native/ConjureDebugAgentTab.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ConjureUsageTypes from "../../usage/ConjureUsageTypes.tsx";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { tab: { gap: nativeDefault.space.PX_24 }, forceCompaction: null };
 let obj3 = { gap: nativeDefault.space.PX_24 };
 obj2.forceCompaction = { gap: nativeDefault.space.PX_8 };
@@ -55,34 +55,34 @@ export default function ConjureDebugAgentTab(arg0) {
   ];
   const obj2 = { title: null, children: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3865.JghNal);
+  obj2.title = intl.string(_modDef3868.JghNal);
   if (null == lifetime) {
     const obj3 = { children: null };
     const intl3 = util.intl;
-    obj3.children = intl3.string(_modDef3865.s0U5Fv);
+    obj3.children = intl3.string(_modDef3868.s0U5Fv);
     let tmp6Result5 = React4(ConjureDebugPrimitives.DebugNote, obj3);
   } else {
     const obj4 = { label: null, value: null, hint: null };
     const intl32 = util.intl;
-    obj4.label = intl32.string(_modDef3865["9nqym2"]);
+    obj4.label = intl32.string(_modDef3868["9nqym2"]);
     const tmp9Result = ConjureDebugFormat;
     obj4.value = tmp9Result.formatCount(ConjureUsageTypes.runesFromUsd(lifetime.cost_usd));
     const intl33 = util.intl;
     const obj5 = { count: null };
     const tmp9Result44 = ConjureUsageTypes;
     obj5.count = ConjureDebugFormat.formatCount(lifetime.turns);
-    obj4.hint = intl33.formatToPlainString(_modDef3865.NCdUIh, obj5);
+    obj4.hint = intl33.formatToPlainString(_modDef3868.NCdUIh, obj5);
     const items1 = [React4(ConjureDebugPrimitives.DebugStatRow, obj4), , , ,];
     const intl34 = util.intl;
     const orchestrator = lifetime.orchestrator;
     const tmp9Result45 = ConjureDebugFormat;
-    const obj6 = { label: intl34.string(_modDef3865.xtxP0e), value: null, hint: null };
+    const obj6 = { label: intl34.string(_modDef3868.xtxP0e), value: null, hint: null };
     const intl35 = util.intl;
     const obj7 = { count: null };
-    const stringResult = intl34.string(_modDef3865.xtxP0e);
+    const stringResult = intl34.string(_modDef3868.xtxP0e);
     const tmp9Result46 = ConjureDebugFormat;
     obj7.count = tmp9Result46.formatCount(ConjureUsageTypes.runeCount(orchestrator));
-    obj6.value = intl35.formatToPlainString(_modDef3865.yHJxuP, obj7);
+    obj6.value = intl35.formatToPlainString(_modDef3868.yHJxuP, obj7);
     const tmp9Result47 = ConjureUsageTypes;
     const formatCountResult = ConjureDebugFormat.formatCount(orchestrator.input_tokens);
     const tmp9Result48 = ConjureDebugFormat;
@@ -101,13 +101,13 @@ export default function ConjureDebugAgentTab(arg0) {
     const intl36 = util.intl;
     const codegen = lifetime.codegen;
     const tmp9Result50 = ConjureDebugFormat;
-    const obj8 = { label: intl36.string(_modDef3865["9Sj3SX"]), value: null, hint: null };
+    const obj8 = { label: intl36.string(_modDef3868["9Sj3SX"]), value: null, hint: null };
     const intl37 = util.intl;
     const obj9 = { count: null };
-    const stringResult1 = intl36.string(_modDef3865["9Sj3SX"]);
+    const stringResult1 = intl36.string(_modDef3868["9Sj3SX"]);
     const tmp9Result51 = ConjureDebugFormat;
     obj9.count = tmp9Result51.formatCount(ConjureUsageTypes.runeCount(codegen));
-    obj8.value = intl37.formatToPlainString(_modDef3865.yHJxuP, obj9);
+    obj8.value = intl37.formatToPlainString(_modDef3868.yHJxuP, obj9);
     const tmp9Result52 = ConjureUsageTypes;
     const formatCountResult2 = ConjureDebugFormat.formatCount(codegen.input_tokens);
     const tmp9Result53 = ConjureDebugFormat;
@@ -125,7 +125,7 @@ export default function ConjureDebugAgentTab(arg0) {
     items1[2] = React4(ConjureDebugPrimitives.DebugStatRow, obj8);
     const intl38 = util.intl;
     const tmp9Result55 = ConjureDebugFormat;
-    const stringResult2 = intl38.string(_modDef3865.ANCEo3);
+    const stringResult2 = intl38.string(_modDef3868.ANCEo3);
     const usageOrEmptyResult = ConjureUsageTypes.usageOrEmpty(lifetime.compaction);
     const obj10 = { label: stringResult2, value: null, hint: null };
     const intl39 = util.intl;
@@ -133,7 +133,7 @@ export default function ConjureDebugAgentTab(arg0) {
     const tmp9Result56 = ConjureUsageTypes;
     const tmp9Result57 = ConjureDebugFormat;
     obj11.count = tmp9Result57.formatCount(ConjureUsageTypes.runeCount(usageOrEmptyResult));
-    obj10.value = intl39.formatToPlainString(_modDef3865.yHJxuP, obj11);
+    obj10.value = intl39.formatToPlainString(_modDef3868.yHJxuP, obj11);
     const tmp9Result58 = ConjureUsageTypes;
     const formatCountResult4 = ConjureDebugFormat.formatCount(usageOrEmptyResult.input_tokens);
     const tmp9Result59 = ConjureDebugFormat;
@@ -163,7 +163,7 @@ export default function ConjureDebugAgentTab(arg0) {
       if (Object.keys(status.agent.outcomes).length > 0) {
         const obj12 = { label: null, value: null };
         const intl2 = util.intl;
-        obj12.label = intl2.string(_modDef3865.SQHm7C);
+        obj12.label = intl2.string(_modDef3868.SQHm7C);
         const _Object2 = Object;
         const entries = Object.entries(status.agent.outcomes);
         const sorted = entries.sort((arg0, arg1) => {
@@ -189,22 +189,22 @@ export default function ConjureDebugAgentTab(arg0) {
   items[1] = React4(ConjureDebugPrimitives.DebugSection, obj2);
   const obj14 = { title: null, children: null };
   const intl4 = util.intl;
-  obj14.title = intl4.string(_modDef3865.dZHPE5);
+  obj14.title = intl4.string(_modDef3868.dZHPE5);
   if (null == lastTurn) {
     const obj15 = { children: null };
     const intl5 = util.intl;
-    obj15.children = intl5.string(_modDef3865.DfVjal);
+    obj15.children = intl5.string(_modDef3868.DfVjal);
     let tmp8Result7 = React4(ConjureDebugPrimitives.DebugNote, obj15);
   } else {
     const intl40 = util.intl;
     const total = lastTurn.total;
-    const obj16 = { label: intl40.string(_modDef3865["7X3i9d"]), value: null, hint: null };
+    const obj16 = { label: intl40.string(_modDef3868["7X3i9d"]), value: null, hint: null };
     const intl41 = util.intl;
     const obj17 = { count: null };
-    const stringResult3 = intl40.string(_modDef3865["7X3i9d"]);
+    const stringResult3 = intl40.string(_modDef3868["7X3i9d"]);
     const tmp9Result62 = ConjureDebugFormat;
     obj17.count = tmp9Result62.formatCount(ConjureUsageTypes.runeCount(total));
-    obj16.value = intl41.formatToPlainString(_modDef3865.yHJxuP, obj17);
+    obj16.value = intl41.formatToPlainString(_modDef3868.yHJxuP, obj17);
     const tmp9Result63 = ConjureUsageTypes;
     const formatCountResult6 = ConjureDebugFormat.formatCount(total.input_tokens);
     const tmp9Result64 = ConjureDebugFormat;
@@ -222,7 +222,7 @@ export default function ConjureDebugAgentTab(arg0) {
     const items2 = [React4(ConjureDebugPrimitives.DebugStatRow, obj16)];
     const obj18 = { label: null, value: null };
     const intl42 = util.intl;
-    obj18.label = intl42.string(_modDef3865["8OUg09"]);
+    obj18.label = intl42.string(_modDef3868["8OUg09"]);
     let cache_hit_rate = lastTurn.cache_hit_rate;
     if (cache_hit_rate == null) {
       cache_hit_rate = ConjureUsageTypes.cacheHitRate(lastTurn.total);
@@ -240,20 +240,20 @@ export default function ConjureDebugAgentTab(arg0) {
   items[2] = React4(ConjureDebugPrimitives.DebugSection, obj14);
   const obj20 = { title: null, children: null };
   const intl6 = util.intl;
-  obj20.title = intl6.string(_modDef3865.NbRk9a);
+  obj20.title = intl6.string(_modDef3868.NbRk9a);
   if (null != lastCompaction) {
     if (null != contextCeiling) {
       const obj21 = { children: null };
       const obj22 = { label: null, used: null, max: null, formatValue: null };
       const intl9 = util.intl;
-      obj22.label = intl9.string(_modDef3865.Kw5wiQ);
+      obj22.label = intl9.string(_modDef3868.Kw5wiQ);
       obj22.used = lastCompaction.tokensAfter;
       obj22.max = contextCeiling;
       obj22.formatValue = ConjureDebugFormat.formatCount;
       const items3 = [React4(ConjureDebugPrimitives.DebugMeter, obj22)];
       const obj23 = { label: null, value: null, hint: null };
       const intl10 = util.intl;
-      obj23.label = intl10.string(_modDef3865.mRbSns);
+      obj23.label = intl10.string(_modDef3868.mRbSns);
       const tmp9Result68 = ConjureDebugFormat;
       const formatCountResult8 = ConjureDebugFormat.formatCount(lastCompaction.tokensBefore);
       const _HermesInternal2 = HermesInternal;
@@ -264,7 +264,7 @@ export default function ConjureDebugAgentTab(arg0) {
       obj24.count = ConjureDebugFormat.formatCount(lastCompaction.retainedMessages);
       const tmp9Result70 = ConjureDebugFormat;
       obj24.time = ConjureDebugFormat.formatObservedAt(lastCompaction.observedAt);
-      obj23.hint = intl11.formatToPlainString(_modDef3865.Vq3skS, obj24);
+      obj23.hint = intl11.formatToPlainString(_modDef3868.Vq3skS, obj24);
       items3[1] = React4(ConjureDebugPrimitives.DebugStatRow, obj23);
       obj21.children = items3;
       let tmp8Result11 = timestampProducer(hasOwnProperty, obj21);
@@ -275,7 +275,7 @@ export default function ConjureDebugAgentTab(arg0) {
     if (null != lastDecline) {
       const obj25 = { label: null, value: null, critical: true, hint: null };
       const intl12 = util.intl;
-      obj25.label = intl12.string(_modDef3865["4BX5KK"]);
+      obj25.label = intl12.string(_modDef3868["4BX5KK"]);
       const tmp9Result72 = ConjureDebugFormat;
       const formatCountResult9 = ConjureDebugFormat.formatCount(lastDecline.projected);
       const _HermesInternal3 = HermesInternal;
@@ -284,7 +284,7 @@ export default function ConjureDebugAgentTab(arg0) {
       const obj26 = { time: null };
       const tmp9Result73 = ConjureDebugFormat;
       obj26.time = ConjureDebugFormat.formatObservedAt(lastDecline.observedAt);
-      obj25.hint = intl13.formatToPlainString(_modDef3865["6ngCax"], obj26);
+      obj25.hint = intl13.formatToPlainString(_modDef3868["6ngCax"], obj26);
       tmp8Result8 = React4(ConjureDebugPrimitives.DebugStatRow, obj25);
       const tmp9Result74 = ConjureDebugFormat;
     }
@@ -292,7 +292,7 @@ export default function ConjureDebugAgentTab(arg0) {
     const obj27 = { style: tmp.forceCompaction, children: null };
     const obj28 = { variant: "secondary", size: "sm", text: null, disabled: null, onPress: null };
     const intl14 = util.intl;
-    obj28.text = intl14.string(_modDef3865["1EiJeb"]);
+    obj28.text = intl14.string(_modDef3868["1EiJeb"]);
     obj28.disabled = "pending" === forceState;
     obj28.onPress = handleForceCompaction;
     const items5 = [React4(components_Button_Button.Button, obj28), ,];
@@ -318,12 +318,12 @@ export default function ConjureDebugAgentTab(arg0) {
       const obj30 = { children: null };
       const obj31 = { variant: "critical-primary", size: "sm", text: null, onPress: null };
       const intl43 = util.intl;
-      obj31.text = intl43.string(_modDef3865.ZxG2AI);
+      obj31.text = intl43.string(_modDef3868.ZxG2AI);
       obj31.onPress = handleForceCompactionOverride;
       const items6 = [React4(components_Button_Button.Button, obj31)];
       const obj32 = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl44 = util.intl;
-      obj32.children = intl44.string(_modDef3865.V73vdN);
+      obj32.children = intl44.string(_modDef3868.V73vdN);
       items6[1] = React4(Text_Text.Text, obj32);
       obj30.children = items6;
       tmp6Result6 = timestampProducer(hasOwnProperty, obj30);
@@ -334,7 +334,7 @@ export default function ConjureDebugAgentTab(arg0) {
     const obj33 = { style: tmp.forceCompaction, children: null };
     const obj34 = { variant: "secondary", size: "sm", text: null, loading: null, disabled: null, onPress: null };
     const intl15 = util.intl;
-    obj34.text = intl15.string(_modDef3865["5qCjBu"]);
+    obj34.text = intl15.string(_modDef3868["5qCjBu"]);
     let tmp25 = "pending" === restartState;
     obj34.loading = tmp25;
     if (!tmp25) {
@@ -365,34 +365,34 @@ export default function ConjureDebugAgentTab(arg0) {
     if (null != session) {
       const obj38 = { title: null, children: null };
       const intl16 = util.intl;
-      obj38.title = intl16.string(_modDef3865.EsSzCS);
+      obj38.title = intl16.string(_modDef3868.EsSzCS);
       let tmp6Result7 = null;
       if (null != session) {
         const obj39 = { label: null, value: null, hint: null };
         const intl17 = util.intl;
-        obj39.label = intl17.string(_modDef3865.CLXHAs);
+        obj39.label = intl17.string(_modDef3868.CLXHAs);
         obj39.value = ConjureDebugFormat.formatObservedAt(session.instance_since);
         const intl18 = util.intl;
-        obj39.hint = intl18.string(_modDef3865.UCwUEX);
+        obj39.hint = intl18.string(_modDef3868.UCwUEX);
         const items8 = [React4(ConjureDebugPrimitives.DebugStatRow, obj39), , ,];
         const obj40 = { label: null, value: null };
         const intl19 = util.intl;
-        obj40.label = intl19.string(_modDef3865["8V8e1Z"]);
+        obj40.label = intl19.string(_modDef3868["8V8e1Z"]);
         const tmp9Result77 = ConjureDebugFormat;
         obj40.value = ConjureDebugFormat.formatCount(session.sockets);
         items8[1] = React4(ConjureDebugPrimitives.DebugStatRow, obj40);
         const obj41 = { label: null, value: null };
         const intl20 = util.intl;
-        obj41.label = intl20.string(_modDef3865["4pBzYW"]);
+        obj41.label = intl20.string(_modDef3868["4pBzYW"]);
         const intl21 = util.intl;
-        const tmp2Result = _modDef3865;
+        const tmp2Result = _modDef3868;
         obj41.value = intl21.string(session.turn_inflight ? tmp2Result.Wv025I : tmp2Result["7/lsFY"]);
         items8[2] = React4(ConjureDebugPrimitives.DebugStatRow, obj41);
         let tmp8Result9 = null;
         if (session.queued_messages > 0) {
           const obj42 = { label: null, value: null };
           const intl22 = util.intl;
-          obj42.label = intl22.string(_modDef3865["3oUYnv"]);
+          obj42.label = intl22.string(_modDef3868["3oUYnv"]);
           obj42.value = ConjureDebugFormat.formatCount(session.queued_messages);
           tmp8Result9 = React4(ConjureDebugPrimitives.DebugStatRow, obj42);
           const tmp9Result79 = ConjureDebugFormat;
@@ -428,45 +428,45 @@ export default function ConjureDebugAgentTab(arg0) {
     if (null != limits) {
       const obj45 = { title: null, children: null };
       const intl23 = util.intl;
-      obj45.title = intl23.string(_modDef3865["LEIhp/"]);
+      obj45.title = intl23.string(_modDef3868["LEIhp/"]);
       const obj46 = { label: null, value: null };
       const intl24 = util.intl;
-      obj46.label = intl24.string(_modDef3865.IlDBN3);
+      obj46.label = intl24.string(_modDef3868.IlDBN3);
       obj46.value = ConjureDebugFormat.formatCount(limits.max_subagent_iterations);
       const items10 = [React4(ConjureDebugPrimitives.DebugStatRow, obj46), , , , ,];
       const obj47 = { label: null, value: null };
       const intl25 = util.intl;
-      obj47.label = intl25.string(_modDef3865["ZdzKR+"]);
+      obj47.label = intl25.string(_modDef3868["ZdzKR+"]);
       const intl26 = util.intl;
       const obj48 = { count: null };
       const tmp9Result80 = ConjureDebugFormat;
       obj48.count = ConjureDebugFormat.formatCount(limits.context_window_tokens);
-      obj47.value = intl26.formatToPlainString(_modDef3865.yHJxuP, obj48);
+      obj47.value = intl26.formatToPlainString(_modDef3868.yHJxuP, obj48);
       items10[1] = React4(ConjureDebugPrimitives.DebugStatRow, obj47);
       const obj49 = { label: null, value: null };
       const intl27 = util.intl;
-      obj49.label = intl27.string(_modDef3865.cIhN2W);
+      obj49.label = intl27.string(_modDef3868.cIhN2W);
       const intl28 = util.intl;
       const obj50 = { count: null };
       const tmp9Result81 = ConjureDebugFormat;
       obj50.count = ConjureDebugFormat.formatCount(limits.per_turn_max_output_tokens);
-      obj49.value = intl28.formatToPlainString(_modDef3865.yHJxuP, obj50);
+      obj49.value = intl28.formatToPlainString(_modDef3868.yHJxuP, obj50);
       items10[2] = React4(ConjureDebugPrimitives.DebugStatRow, obj49);
       const obj51 = { label: null, value: null };
       const intl29 = util.intl;
-      obj51.label = intl29.string(_modDef3865["+fOn/q"]);
+      obj51.label = intl29.string(_modDef3868["+fOn/q"]);
       const tmp9Result82 = ConjureDebugFormat;
       obj51.value = ConjureDebugFormat.formatCount(limits.max_user_message_chars);
       items10[3] = React4(ConjureDebugPrimitives.DebugStatRow, obj51);
       const obj52 = { label: null, value: null };
       const intl30 = util.intl;
-      obj52.label = intl30.string(_modDef3865.kIHga0);
+      obj52.label = intl30.string(_modDef3868.kIHga0);
       const tmp9Result83 = ConjureDebugFormat;
       obj52.value = ConjureDebugFormat.formatCount(limits.max_build_attempts);
       items10[4] = React4(ConjureDebugPrimitives.DebugStatRow, obj52);
       const obj53 = { label: null, value: null };
       const intl31 = util.intl;
-      obj53.label = intl31.string(_modDef3865.Iw03yW);
+      obj53.label = intl31.string(_modDef3868.Iw03yW);
       const tmp9Result84 = ConjureDebugFormat;
       obj53.value = ConjureDebugFormat.formatCount(limits.max_session_attempts);
       items10[5] = React4(ConjureDebugPrimitives.DebugStatRow, obj53);
@@ -481,11 +481,11 @@ export default function ConjureDebugAgentTab(arg0) {
   if (null != contextCeiling) {
     const intl8 = util.intl;
     const obj54 = { ceiling: ConjureDebugFormat.formatCount(contextCeiling) };
-    let formatToPlainStringResult = intl8.formatToPlainString(_modDef3865.GMLCNv, obj54);
+    let formatToPlainStringResult = intl8.formatToPlainString(_modDef3868.GMLCNv, obj54);
     const tmp9Result86 = ConjureDebugFormat;
   } else {
     const intl7 = util.intl;
-    formatToPlainStringResult = intl7.string(_modDef3865.s0U5Fv);
+    formatToPlainStringResult = intl7.string(_modDef3868.s0U5Fv);
   }
   tmp8Result11 = React4(ConjureDebugPrimitives.DebugNote, { children: formatToPlainStringResult });
 }

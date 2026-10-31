@@ -50,18 +50,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const point = {
-  shape: fn(9487).CutoutShape.Circle,
-  x: fn(14665).ICON_SIZE.sm - 7,
-  y: fn(14665).ICON_SIZE.sm - 8,
+  shape: fn(9509).CutoutShape.Circle,
+  x: fn(14703).ICON_SIZE.sm - 7,
+  y: fn(14703).ICON_SIZE.sm - 8,
   size: 10,
 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" },
   iconAnchor: null,
   dot: null,
 };
-let size = { width: fn(14665).ICON_SIZE.sm, height: fn(14665).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(14703).ICON_SIZE.sm, height: fn(14703).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = {
   position: "absolute",
@@ -98,14 +98,14 @@ export default function ForLaterActionButton(ref) {
     accessibilityLabel: null,
     maxFontSizeMultiplier: 2,
   };
-  obj3.showRedDot = type === type(10172).SavedMessageSortTypes.REMINDER && stateFromStores;
-  const intl = tmp(1114).intl;
-  if (type === type(10172).SavedMessageSortTypes.REMINDER) {
-    let aUXxzT = tmp(1114).t.aUXxzT;
+  obj3.showRedDot = type === type(10192).SavedMessageSortTypes.REMINDER && stateFromStores;
+  const intl = tmp(1113).intl;
+  if (type === type(10192).SavedMessageSortTypes.REMINDER) {
+    let aUXxzT = tmp(1113).t.aUXxzT;
   } else {
-    aUXxzT = tmp(1114).t["2pAkDA"];
+    aUXxzT = tmp(1113).t["2pAkDA"];
   }
   obj4.accessibilityLabel = intl.string(aUXxzT);
-  obj2.children = closure_6(type(8020).IconButton, obj4);
+  obj2.children = closure_6(type(8028).IconButton, obj4);
   return closure_6(View, obj2);
 }

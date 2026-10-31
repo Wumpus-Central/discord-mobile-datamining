@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/character/CheckpointCharacterReferencedAssets.tsx
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils.tsx";
 import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets.tsx";
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils.tsx";
 import CheckpointCharacterRiveTraits from "CheckpointCharacterRiveTraits.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -19,9 +19,9 @@ let closure_3 = keys.map((name) => {
 });
 const result = size.fileFinishedImporting("modules/checkpoint/character/CheckpointCharacterReferencedAssets.tsx");
 
-export function getCheckpointCharacterVisibleTextureNames(arg0, chapterID, arg2) {
+export function getCheckpointCharacterVisibleTextureNames(arg0, arg1, arg2) {
   closure_0 = arg0;
-  closure_1 = chapterID;
+  closure_1 = arg1;
   closure_2 = arg2;
   set = new Set();
   const item = set.forEach((item) => {

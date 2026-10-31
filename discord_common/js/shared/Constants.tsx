@@ -576,7 +576,6 @@ export const Fonts = {
   GINTO_DISCORD_NORD_BOLD_ITALIC: "ABCGintoDiscordNord-BoldItalic",
   GINTO_DISCORD_NORD_BLACK_ITALIC: "ABCGintoDiscordNord-BlackItalic",
 };
-export const EntitlementTypes = fn(1086).EntitlementTypes;
 export const ActivityPartyPrivacy = { PRIVATE: 0, [0]: "PRIVATE", PUBLIC: 1, [1]: "PUBLIC" };
 export const StatusTypes = {
   ONLINE: "online",
@@ -663,10 +662,10 @@ export const BasicPermissions = {
   [1048576]: "CONNECT",
 };
 export const Permissions = frozen5;
-export const NOOP = fn(1087).NOOP;
-export const NOOP_NULL = fn(1087).NOOP_NULL;
-export const NOOP_PROMISE = fn(1087).NOOP_PROMISE;
-export const NOOP_TRUE = fn(1087).NOOP_TRUE;
+export const NOOP = fn(1086).NOOP;
+export const NOOP_NULL = fn(1086).NOOP_NULL;
+export const NOOP_PROMISE = fn(1086).NOOP_PROMISE;
+export const NOOP_TRUE = fn(1086).NOOP_TRUE;
 export const ElevatedPermissionsList = items23;
 export const ElevatedPermissions = applyResult;
 export const RPC_VERSION = 1;
@@ -1306,7 +1305,7 @@ export const SKUFeatureTypes = {
   SECURE_NETWORKING: 13,
   [13]: "SECURE_NETWORKING",
 };
-export const GameGenres = fn(1088).GameGenres;
+export const GameGenres = fn(1087).GameGenres;
 export const PriceTierTypes = {
   GUILD_ROLE_SUBSCRIPTIONS: 1,
   [1]: "GUILD_ROLE_SUBSCRIPTIONS",

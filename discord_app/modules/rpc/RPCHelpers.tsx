@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import UrlDefault from "../../../_runtime/01381_Url.js";
+import UrlDefault from "../../../_runtime/01380_Url.js";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
@@ -60,7 +60,7 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -185,7 +185,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -232,7 +232,7 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4862).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6444);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4867).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6450);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1072);
 ({
@@ -424,21 +424,29 @@ export function transformGuildMember(currentGuildMember) {
   obj.color_string = currentGuildMember.colorString;
   return obj;
 }
-export function transformChannel(channel, result) {
+export function transformChannel(channel, result, arg2) {
   let nSFW = channel;
   closure_1 = result;
-  const items = [];
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = true;
+  }
   const guild_id = channel.getGuildId();
-  const items1 = [constants3.GUILD_CATEGORY, ...GUILD_VOCAL_CHANNEL_TYPES];
-  if (!items1.includes(channel.type)) {
+  if (flag) {
+    const items = [constants3.GUILD_CATEGORY];
+    HermesBuiltin.arraySpread(GUILD_VOCAL_CHANNEL_TYPES, 1);
+    flag = !items.includes(channel.type);
+  }
+  const items1 = [];
+  if (flag) {
     const promise = new Promise((arg0) => {
       nSFW = arg0;
       MessageStore.whenReady(nSFW.id, () => closure_0());
       const messages = MessageActionCreatorsDefault.fetchMessages({ channelId: nSFW.id, limit });
     });
-    items.push(promise);
+    items1.push(promise);
   }
-  return Promise.all(items).then(() => {
+  return Promise.all(items1).then(() => {
     if (!nSFW.isNSFW()) {
       if (closure_1) {
         const messages = MessageStore.getMessages(nSFW.id);
@@ -481,7 +489,7 @@ export function transformChannel(channel, result) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(6036).getName(dependencyMap, id.id, user),
+            nick: closure_1(6041).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -490,7 +498,7 @@ export function transformChannel(channel, result) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9311)(user);
+          obj.user = closure_1(9331)(user);
           return obj;
         }
       });

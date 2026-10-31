@@ -8,7 +8,7 @@ import ApplicationActionCreators from "../../applications/ApplicationActionCreat
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjureWorkerTickets from "../connection/ConjureWorkerTickets.tsx";
-import conjurePreviewTicket from "../preview/conjurePreviewTicket.tsx";
+import prefetchConjurePreviewFrame from "../preview/prefetchConjurePreviewFrame.tsx";
 import conjurePreviewSurface from "../preview/conjurePreviewSurface.tsx";
 import createProxyTicket from "../../activities/createProxyTicket.tsx";
 import conjureAppInServer from "conjureAppInServer.tsx";
@@ -48,7 +48,7 @@ let closure_18 = async function _listProjects() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -174,7 +174,7 @@ let closure_20 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -216,7 +216,7 @@ let closure_20 = async function _forgetMissingProjects() {
             }
           }
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (1 === tmp4) {
         c5 = 0;
@@ -307,7 +307,7 @@ let closure_31 = async function _fetchMissingProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -392,7 +392,7 @@ let closure_32 = async function _fetchMissingConjureProjectNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -469,7 +469,7 @@ let closure_34 = async function _drainMissingProjects() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -557,7 +557,7 @@ let closure_36 = async function _fetchProjectLimit() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -747,7 +747,7 @@ let closure_43 = async function _postProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -770,11 +770,13 @@ let closure_43 = async function _postProject(arg0) {
             const obj6 = {};
             const merged = Object.assign(flags);
             flags = flags.flags;
-            GUILD_COLLABORATION = flags;
+            flags2 = flags;
             if (flags == null) {
-              GUILD_COLLABORATION = ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION;
+              flags2 =
+                ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION |
+                ConjureProjectTypes.ConjureProjectFlags.PUBLIC;
             }
-            obj6.flags = GUILD_COLLABORATION;
+            obj6.flags = flags2;
             request.body = obj6;
             c6 = 2;
             c7 = 1;
@@ -810,11 +812,11 @@ let closure_43 = async function _postProject(arg0) {
           const obj9 = { value: body, done: true };
           return obj9;
         }
-      } catch (tmp39) {
-        closure_4 = tmp39;
+      } catch (tmp41) {
+        closure_4 = tmp41;
         if (tmp4 === c5) {
           c7 = tmp2;
-          throw tmp39;
+          throw tmp41;
         } else {
           c6 = tmp;
         }
@@ -868,7 +870,7 @@ let closure_47 = async function _fetchConjureApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -905,7 +907,7 @@ let closure_47 = async function _fetchConjureApplication(arg0) {
           const obj = closure_130_1(closure_130_2[8]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } catch (tmp18) {
       c4 = tmp;
@@ -924,7 +926,7 @@ let closure_48 = async function _refreshPreviewApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -959,7 +961,7 @@ let closure_48 = async function _refreshPreviewApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp11) {
       c1 = tmp;
       throw tmp11;
@@ -1004,7 +1006,7 @@ let closure_50 = async function _fetchApplicationChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1080,7 +1082,7 @@ let closure_52 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1146,7 +1148,7 @@ let closure_52 = async function _deleteProject() {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6770).ReadStateTypes;
+const ReadStateTypes = fn(6776).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;
@@ -1275,8 +1277,8 @@ export function prefetchProject(projectId) {
   obj = conjureProjectSockets;
   const result = map.set(projectId, { read: promise, at: Date.now(), userId: id });
   const obj2 = { read: promise, at: Date.now(), userId: id };
-  const result1 = conjurePreviewTicket.prefetchConjurePreviewTicket(projectId);
-  const tmpResult2 = conjurePreviewTicket;
+  const result1 = prefetchConjurePreviewFrame.prefetchConjurePreviewFrame(projectId);
+  const tmpResult2 = prefetchConjurePreviewFrame;
 }
 export function takePrefetchedRead(arg0) {
   value = map.get(arg0);

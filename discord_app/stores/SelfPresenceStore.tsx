@@ -2,7 +2,7 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1343 from "../../_runtime/metro/01343__.js";
+import _modDef1342 from "../../_runtime/metro/01342__.js";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import ActivityTypes from "../../discord_common/js/shared/shared-constants/ActivityTypes.tsx";
 import LibraryApplicationUtils from "../utils/LibraryApplicationUtils.tsx";
@@ -127,7 +127,7 @@ function handleUpdate() {
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!_modDef1343(found, found)) {
+    if (!_modDef1342(found, found)) {
       closure_19 = filterPlayingActivities(found);
       flag = true;
     }
@@ -166,7 +166,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5756).sortActivity;
+const sortActivity = fn(5761).sortActivity;
 const Constants = fn(1072);
 const StatusTypes = Constants.StatusTypes;
 const AppStates = Constants.AppStates;

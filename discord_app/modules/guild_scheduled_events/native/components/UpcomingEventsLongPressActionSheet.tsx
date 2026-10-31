@@ -9,10 +9,10 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const View = fn(17).View;
-const ReadStateTypes = fn(6770).ReadStateTypes;
+const ReadStateTypes = fn(6776).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_9 = createStyles.createStyles({ headerIcon: { marginRight: 16 } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -34,37 +34,37 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const obj5 = { guild: stateFromStores, size: null };
   const obj2 = guildId(504);
   const tmp8 = stateFromStores1;
-  obj5.size = guildId(6951).GuildIconSizes.LARGE;
-  obj4.children = closure_7(stateFromStores1(6951), obj5);
+  obj5.size = guildId(6957).GuildIconSizes.LARGE;
+  obj4.children = closure_7(stateFromStores1(6957), obj5);
   obj3.leading = closure_7(View, obj4);
-  const intl = guildId(1114).intl;
-  obj3.title = intl.string(guildId(1114).t.tlopTM);
-  const items2 = [closure_7(guildId(7315).BottomSheetTitleHeader, obj3), ,];
+  const intl = guildId(1113).intl;
+  obj3.title = intl.string(guildId(1113).t.tlopTM);
+  const items2 = [closure_7(guildId(7321).BottomSheetTitleHeader, obj3), ,];
   const obj6 = { leading: null, label: null, onPress: null };
-  const tmp9 = stateFromStores1(6951);
-  obj6.leading = closure_7(guildId(1188).Icon, { source: stateFromStores1(13884) });
+  const tmp9 = stateFromStores1(6957);
+  obj6.leading = closure_7(guildId(1187).Icon, { source: stateFromStores1(13919) });
   const obj8 = { text: null };
-  const intl2 = guildId(1114).intl;
-  obj8.text = intl2.string(guildId(1114).t.e6RscS);
-  obj6.label = closure_7(guildId(8169).FormLabel, obj8);
+  const intl2 = guildId(1113).intl;
+  obj8.text = intl2.string(guildId(1113).t.e6RscS);
+  obj6.label = closure_7(guildId(8177).FormLabel, obj8);
   obj6.onPress = function onPress() {
     ReadStateActionCreators.ackGuildFeature(guildId, ReadStateTypes.GUILD_EVENT);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items2[1] = closure_7(guildId(8169).FormRow, obj6);
+  items2[1] = closure_7(guildId(8177).FormRow, obj6);
   const obj9 = { leading: null, label: null, onPress: null };
-  const obj7 = { source: stateFromStores1(13884) };
-  obj9.leading = closure_7(guildId(1188).Icon, { source: tmp8(stateFromStores1 ? 13885 : 13886) });
-  const intl3 = tmp2(1114).intl;
+  const obj7 = { source: stateFromStores1(13919) };
+  obj9.leading = closure_7(guildId(1187).Icon, { source: tmp8(stateFromStores1 ? 13920 : 13921) });
+  const intl3 = tmp2(1113).intl;
   const string = intl3.string;
-  const t = tmp2(1114).t;
+  const t = tmp2(1113).t;
   if (stateFromStores1) {
     let stringResult = string(t.COiLo0);
   } else {
     stringResult = string(t.ONG3Yz);
   }
   const obj11 = { children: null };
-  obj9.label = closure_7(guildId(8169).FormLabel, { text: stringResult });
+  obj9.label = closure_7(guildId(8177).FormLabel, { text: stringResult });
   obj9.onPress = function onPress() {
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
@@ -73,7 +73,7 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
       NotificationLabel.mutedEvents(!stateFromStores1),
     );
   };
-  items2[2] = closure_7(guildId(8169).FormRow, obj9);
+  items2[2] = closure_7(guildId(8177).FormRow, obj9);
   obj11.children = items2;
-  return closure_8(guildId(7360).ActionSheet, obj11);
+  return closure_8(guildId(7366).ActionSheet, obj11);
 }

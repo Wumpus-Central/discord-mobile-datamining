@@ -12,17 +12,17 @@ import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionC
 import TableSwitchRow from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import usePremiumTrialOffer from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 import useMessageMaxLengthDefault from "../../modules/messages/useMessageMaxLength.tsx";
-import _modDef9765 from "../../../_runtime/metro/09765__.js";
-import _modDef9766 from "../../../_runtime/metro/09766__.js";
-import _modDef9986 from "../../../_runtime/metro/09986__.js";
-import _modDef9987 from "../../../_runtime/metro/09987__.js";
-import _modDef9988 from "../../../_runtime/metro/09988__.js";
-import _modDef9989 from "../../../_runtime/metro/09989__.js";
-import _modDef9990 from "../../../_runtime/metro/09990__.js";
-import _modDef9991 from "../../../_runtime/metro/09991__.js";
-import _modDef9992 from "../../../_runtime/metro/09992__.js";
-import _modDef9993 from "../../../_runtime/metro/09993__.js";
-import _modDef9994 from "../../../_runtime/metro/09994__.js";
+import _modDef9786 from "../../../_runtime/metro/09786__.js";
+import _modDef9787 from "../../../_runtime/metro/09787__.js";
+import _modDef10007 from "../../../_runtime/metro/10007__.js";
+import _modDef10008 from "../../../_runtime/metro/10008__.js";
+import _modDef10009 from "../../../_runtime/metro/10009__.js";
+import _modDef10010 from "../../../_runtime/metro/10010__.js";
+import _modDef10011 from "../../../_runtime/metro/10011__.js";
+import _modDef10012 from "../../../_runtime/metro/10012__.js";
+import _modDef10013 from "../../../_runtime/metro/10013__.js";
+import _modDef10014 from "../../../_runtime/metro/10014__.js";
+import _modDef10015 from "../../../_runtime/metro/10015__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import UnsyncedUserSettingsStore from "../../modules/user_settings/UnsyncedUserSettingsStore.tsx";
@@ -103,7 +103,7 @@ function GlobalEmojiUpsell(arg0) {
     }
   }
   const obj5 = { alertWidth, upsellItem: null };
-  const obj6 = { image: _modDef9765, title: null, description: null };
+  const obj6 = { image: _modDef9786, title: null, description: null };
   const intl4 = util.intl;
   obj6.title = intl4.string(util.t.UNtcBV);
   obj6.description = formatResult1;
@@ -112,7 +112,7 @@ function GlobalEmojiUpsell(arg0) {
 }
 function AnimatedEmojiUpsell(alertWidth) {
   const obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  const obj2 = { image: _modDef9766, title: null, description: null };
+  const obj2 = { image: _modDef9787, title: null, description: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.F6rmyq);
   const intl2 = util.intl;
@@ -138,9 +138,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9986;
+    let tmp4Result = _modDef10007;
   } else {
-    tmp4Result = _modDef9987;
+    tmp4Result = _modDef10008;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -156,7 +156,7 @@ function CustomProfilesUpsell(alertWidth) {
     imageStyle: createStyles2.useLegacyClassComponentStyles(closure_16).customProfileUpsellImage,
     upsellItem: null,
   };
-  const obj3 = { image: _modDef9988, title: null, description: null };
+  const obj3 = { image: _modDef10009, title: null, description: null };
   const intl = util.intl;
   obj3.title = intl.string(util.t.rTY76D);
   const intl2 = util.intl;
@@ -190,7 +190,7 @@ function CustomAppIconsUpsell(alertWidth) {
 }
 function GlobalStickerUpsell(alertWidth) {
   const obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  const obj2 = { image: _modDef9989, title: null, description: null };
+  const obj2 = { image: _modDef10010, title: null, description: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.jn2mBl);
   const intl2 = util.intl;
@@ -217,9 +217,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9990;
+    let tmp4Result = _modDef10011;
   } else {
-    tmp4Result = _modDef9991;
+    tmp4Result = _modDef10012;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -238,9 +238,9 @@ function GuildCapUpsell(alertWidth) {
   };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9992;
+    let tmp4Result = _modDef10013;
   } else {
-    tmp4Result = _modDef9993;
+    tmp4Result = _modDef10014;
   }
   const obj4 = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -347,7 +347,7 @@ class PremiumUpsellAlert {
     obj26.confirmColor = initialUpsellKey(closure_2[42]).ButtonColors.GREEN;
     obj26.confirmText = getNitroText;
     obj26.renderConfirmIcon = function renderConfirmIcon() {
-      const obj = { source: _modDef9994, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
+      const obj = { source: _modDef10015, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
       if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
         if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
           if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {
@@ -465,12 +465,12 @@ class PremiumUpsellAlert {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, UpsellTypes: closure_9 } = Constants);
-const getIcons = fn(9958).getIcons;
-const PremiumConstants = fn(1386);
+const getIcons = fn(9979).getIcons;
+const PremiumConstants = fn(1385);
 ({ PremiumSubscriptionSKUs: closure_11, PremiumTypes: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   carousel: { alignItems: "center" },
   upsellContainer: { alignItems: "center" },
@@ -520,7 +520,7 @@ UpsellItem.prototype["render"] = function render() {
   obj.children = items1;
   return closure_1_14(View, obj);
 };
-UpsellItem.contextType = fn(5075).ThemeContext;
+UpsellItem.contextType = fn(5080).ThemeContext;
 UpsellItem.defaultProps = { isInitial: false };
 let c28 = 500;
 let c29 = 32;

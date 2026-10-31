@@ -35,7 +35,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 }
 const map = new Map();
 const map1 = new Map();
-let set = new Set(fn(10941).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(10960).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map2 = new Map();
 const size = fn(2);
@@ -134,7 +134,7 @@ export const publishStepHandlers = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -151,7 +151,7 @@ export const publishStepHandlers = {
               if (obj7.validPublishApproval(tmp2.approval_url, tmp2.approval_kind)) {
                 if (publishApprovalUrl.getPublishApprovalUrl(projectId) === tmp2.approval_url) {
                   c2 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
                   const obj5 = { type: "CONJURE_PROJECT_PUBLISH_APPROVAL", projectId, approvalUrl: tmp2.approval_url };
                   v1(tmp21[4]).dispatch(obj5);

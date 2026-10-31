@@ -3,14 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef18357 from "../../../../_runtime/metro/18357__.js";
+import _modDef18400 from "../../../../_runtime/metro/18400__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj = {
   unavailableGuilds: {
     marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
@@ -40,9 +40,9 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
   let tmp5 = null;
   if (stateFromStores > 0) {
     let obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
-    let intl = tmp2(1114).intl;
+    let intl = tmp2(1113).intl;
     const obj3 = { count: stateFromStores };
-    obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1114).t["MEpX+2"], obj3);
+    obj2.accessibilityLabel = intl.formatToPlainString(tmp2(1113).t["MEpX+2"], obj3);
     obj2.onPress = function onPress() {
       const obj2 = { title: null, body: null };
       const intl = util.intl;
@@ -52,8 +52,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18357 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18357 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18400 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18400 });
     tmp5 = (
       <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
         {null}

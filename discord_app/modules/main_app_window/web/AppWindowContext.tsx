@@ -7,14 +7,14 @@ import WindowStore from "../../../stores/web/WindowStore.tsx";
 
 require = fn;
 let jsx = fn(21).jsx;
-let componentDispatcher = new fn(1109).ComponentDispatcher();
+let componentDispatcher = new fn(1108).ComponentDispatcher();
 let obj = {
   appContext: fn(1072).AppContext.APP,
   renderWindow: window,
   windowDispatch: componentDispatcher,
   windowId: null,
 };
-const WindowIdUtils = fn(6862);
+const WindowIdUtils = fn(6868);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);
 const map = new Map();

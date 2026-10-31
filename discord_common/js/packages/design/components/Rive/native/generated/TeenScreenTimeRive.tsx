@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/generated/TeenScreenTimeRive.tsx
 import BaseRive from "../BaseRive.tsx";
 import RiveErrorBoundary from "../RiveErrorBoundary.tsx";
-import _modDef5177 from "../../../../../../../../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js";
+import _modDef5182 from "../../../../../../../../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js";
 import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
@@ -21,7 +21,7 @@ function TeenScreenTimeRiveInner(defaultViewModelInstance) {
   const merged = Object.assign(tmp2);
   return jsx(BaseRive.BaseRive, {
     ref: defaultViewModelInstance.ref,
-    src: _modDef5177,
+    src: _modDef5182,
     artboard: str,
     artboardProperties,
     artboardViewModelInstances,

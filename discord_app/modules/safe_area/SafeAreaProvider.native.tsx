@@ -1,7 +1,7 @@
 // discord_app/modules/safe_area/SafeAreaProvider.native.tsx
 import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import SafeAreaConstants from "SafeAreaConstants.native.tsx";
-import _mod1629 from "../../../_runtime/metro/01629__.js";
+import _mod1628 from "../../../_runtime/metro/01628__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,9 +12,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safe_area/SafeAreaProvider.native.tsx");
 
 export function SafeAreaReporter() {
-  safeAreaInsets = safeAreaInsets(1629).useSafeAreaInsets();
-  let obj = safeAreaInsets(1629);
-  const appEntryKey = safeAreaInsets(1495).useAppEntryKey();
+  safeAreaInsets = safeAreaInsets(1628).useSafeAreaInsets();
+  let obj = safeAreaInsets(1628);
+  const appEntryKey = safeAreaInsets(1494).useAppEntryKey();
   const items = [safeAreaInsets, appEntryKey];
   const layoutEffect = noop.useLayoutEffect(() => {
     closure_0 = safeAreaInsets;
@@ -64,7 +64,7 @@ export function SafeAreaReporter() {
   }, items);
   dependencyMap = noop.useRef(false);
   const items1 = [safeAreaInsets, appEntryKey];
-  let obj2 = safeAreaInsets(1495);
+  let obj2 = safeAreaInsets(1494);
   return (
     <View
       style={style}
@@ -122,7 +122,7 @@ export function SafeAreaReporter() {
 }
 export function SafeAreaProvider(arg0) {
   ({ children, style } = arg0);
-  return jsx(_mod1629.SafeAreaProvider, {
+  return jsx(_mod1628.SafeAreaProvider, {
     initialMetrics: SafeAreaConstants.INITIAL_SAFE_AREA_METRICS,
     children,
     style,

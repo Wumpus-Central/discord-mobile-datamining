@@ -170,12 +170,12 @@ function ChannelContent(arg0) {
   return React5(View, obj2);
 }
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(11027).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6770).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(11046).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6776).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
-let PlatformUtils = fn(1376);
+const createStyles = fn(5014);
+let PlatformUtils = fn(1375);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
@@ -190,7 +190,7 @@ let obj3 = {
   channelTraitIcon: null,
 };
 let obj4 = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1376);
+PlatformUtils = fn(1375);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

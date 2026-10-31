@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
 const rect = {
   flexDirection: "column",
@@ -19,7 +19,7 @@ const rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(5581).NAV_BAR_HEIGHT,
+  height: fn(5586).NAV_BAR_HEIGHT,
   zIndex: 1,
 };
 obj2.stepContainer = rect;

@@ -137,10 +137,10 @@ class BaseActivityPanelFocusedView {
       } else {
         const tmp9Result2 = spring;
         if (!wrapperOffset.get().gestureActive) {
-          let tmp21 = React7;
+          let tmp21 = React6;
           tmp9Result2.withSpring(height, tmp21, "animate-always", transitionComplete);
         }
-        tmp21 = React6;
+        tmp21 = React5;
       }
       const obj2 = {
         transitionState,
@@ -166,8 +166,8 @@ class BaseActivityPanelFocusedView {
       withTiming: transitionState(closure_2[20]).withTiming,
       REDUCED_MOTION_TIMING: closure_18,
       withSpring: transitionState(closure_2[21]).withSpring,
-      ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset,
-      ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown,
+      ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperDimensions,
+      ACTIVITY_LAYOUT_PHYSICS_DEFAULT: wrapperOffset,
     };
     fn.__closure = obj1;
     fn.__workletHash = 3642447648301;
@@ -191,7 +191,7 @@ class BaseActivityPanelFocusedView {
         }
         obj1 = { opacity: null };
         obj3 = closure_0(closure_2[21]);
-        obj1.opacity = obj3.withSpring(num, closure_9);
+        obj1.opacity = obj3.withSpring(num, closure_8);
         return obj1;
       }
     }
@@ -200,7 +200,7 @@ class BaseActivityPanelFocusedView {
       shown,
       windowDimensions: tmp3,
       withSpring: transitionState(closure_2[21]).withSpring,
-      ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown,
+      ACTIVITY_LAYOUT_PHYSICS_DEFAULT: wrapperOffset,
     };
     T.__closure = obj12;
     T.__workletHash = 8351375063373;
@@ -214,23 +214,20 @@ class BaseActivityPanelFocusedView {
       return items;
     }, items1);
     obj7 = transitionState(closure_2[18]);
-    class A {
-      constructor() {
-        num = 0;
-        if (IS_IOS) {
-          tmp = closure_10;
-          num = closure_10.get();
-        }
-        size = { width: wrapperDimensions.width, height: wrapperDimensions.height - num };
-        return size;
+    fn2 = function f() {
+      let num = 0;
+      if (IS_IOS) {
+        num = closure_10.get();
       }
-    }
-    A.__closure = { IS_IOS, animatedKeyboardHeight: tmp7, wrapperDimensions };
-    A.__workletHash = 10029372697959;
-    A.__initData = closure_23;
+      const size = { width: wrapperDimensions.width, height: wrapperDimensions.height - num };
+      return size;
+    };
+    fn2.__closure = { IS_IOS, animatedKeyboardHeight: tmp7, wrapperDimensions };
+    fn2.__workletHash = 10029372697959;
+    fn2.__initData = closure_23;
     items2 = [];
     items2[0] = updateActivityPanelModeToPIP;
-    animatedStyle2 = obj7.useAnimatedStyle(A);
+    animatedStyle2 = obj7.useAnimatedStyle(fn2);
     tmp13 = jsxs;
     callback = closure_3.useCallback(() => {
       updateActivityPanelModeToPIP();
@@ -269,25 +266,25 @@ class BaseActivityPanelFocusedView {
     return tmp13(transitionState(closure_2[19]).ThemeContextProvider, obj13);
   }
 }
-const ActivityLayoutMode = fn(2019).ActivityLayoutMode;
-const ActivityPanelConstants = fn(5652);
+const ActivityPanelConstants = fn(5657);
 ({
-  ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8,
-  ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9,
-  ActivityPanelModes: c10,
+  ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_7,
+  ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8,
+  ActivityPanelModes: closure_9,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(18944);
+const ActivityPanelNativeConstants = fn(18993);
 ({
-  DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11,
-  DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12,
-  DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1,
+  DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: c10,
+  DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11,
+  DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: closure_12,
 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1072).ThemeTypes;
-const IS_IOS = fn(11204).IS_IOS;
+const IS_IOS = fn(11223).IS_IOS;
+const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   wrapper: {
     position: "absolute",
@@ -360,11 +357,11 @@ export default noop.memo(function ActivityPanelFocusedView(transitionState) {
     isWindowLandscape = wrapperDimensions.isWindowLandscape;
   }
   closure_129_1 = isWindowLandscape;
-  const tmp5 = wrapperDimensions.isLandscape && !wrapperDimensions.isWindowLandscape ? closure_12 : closure_11;
+  const tmp5 = wrapperDimensions.isLandscape && !wrapperDimensions.isWindowLandscape ? closure_11 : closure_10;
   const items1 = [tmp3.right, isWindowLandscape];
   memo = obj2.useMemo(() => {
     if (transitionCleanUp) {
-      let obj = map1;
+      let obj = closure_2_12;
     } else {
       obj = { right: null };
       const obj2 = { disable: false, override: null };
@@ -409,7 +406,7 @@ export default noop.memo(function ActivityPanelFocusedView(transitionState) {
 });
 export function useBaseActivityPanelFocusedView(context) {
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1626)();
+  const tmp = isWindowLandscape(1625)();
   closure_0 = tmp;
   const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
   const isLandscape = wrapperDimensions.isLandscape;
@@ -419,13 +416,13 @@ export function useBaseActivityPanelFocusedView(context) {
   }
   const obj2 = {
     portraitSafeAreasConfig:
-      wrapperDimensions.isLandscape && !wrapperDimensions.isWindowLandscape ? closure_12 : closure_11,
+      wrapperDimensions.isLandscape && !wrapperDimensions.isWindowLandscape ? closure_11 : closure_10,
     landscapeSafeAreasConfig: null,
   };
   const items = [tmp.right, isWindowLandscape];
   obj2.landscapeSafeAreasConfig = noop.useMemo(() => {
     if (transitionCleanUp) {
-      let obj = map1;
+      let obj = closure_2_12;
     } else {
       obj = { right: null };
       const obj2 = { disable: false, override: null };

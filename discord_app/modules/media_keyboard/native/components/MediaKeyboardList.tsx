@@ -17,12 +17,12 @@ const MediaKeyboardItemDefault = MediaKeyboardItem;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-let closure_6 = fn(1622).InAppCameraUsedCameraPreviewTypes;
-let closure_7 = fn(5268).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(7932).NativePermissionStatus;
+let closure_6 = fn(1621).InAppCameraUsedCameraPreviewTypes;
+let closure_7 = fn(5273).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(7940).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   listContainer: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,

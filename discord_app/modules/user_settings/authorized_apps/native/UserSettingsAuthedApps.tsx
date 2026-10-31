@@ -3,142 +3,40 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
+import TableRowApplicationIconDefault from "../../../applications/native/TableRowApplicationIcon.tsx";
 import GlobeEarthIcon from "../../../../design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx";
 import applications from "../../../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
 import EmbedIcon from "../../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7270).FetchState;
+const FetchState = fn(7276).FetchState;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5009);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5014);
 let obj2 = {
-  spinner: { padding: 16 },
-  emptyText: { marginTop: 24 },
-  emptyContainer: { padding: 16 },
-  container: { paddingHorizontal: 16, paddingTop: nativeDefault.space.PX_24 },
-  headerDescription: { marginTop: 12 },
-  appListHeader: { marginTop: 24 },
+  spinner: { padding: nativeDefault.space.PX_16 },
+  emptyText: null,
+  headerDescription: null,
+  appListHeader: null,
 };
-let closure_14 = createStyles.createStyles(obj2);
+let obj3 = { padding: nativeDefault.space.PX_16 };
+obj2.emptyText = { marginTop: nativeDefault.space.PX_16 };
+const obj4 = { marginTop: nativeDefault.space.PX_16 };
+obj2.headerDescription = { marginTop: nativeDefault.space.PX_8 };
+const obj5 = { marginTop: nativeDefault.space.PX_8 };
+obj2.appListHeader = { marginBottom: nativeDefault.space.PX_16 };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx");
 
-export default function UserSettingsAuthedApps() {
-  const tmp = closure_14();
-  _require = tmp;
-  let items = [AuthorizedAppsStore];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
-    fetchState: authStore.getFetchState(),
-    appAuthTokens: authStore.getNewestTokensForNonChildrenApplications(),
-  }));
-  const appAuthTokens = stateFromStoresObject.appAuthTokens;
-  let obj = require("initialize");
-  navigation = require("useNavigation").useNavigation();
-  let obj2 = require("useNavigation");
-  const focusEffect = require("Link").useFocusEffect(noop.useCallback(() => appAuthTokens(navigation[15]).fetch(), []));
-  let items1 = [navigation];
-  noop = noop.useCallback((item) => {
-    item = item.item;
-    const index = item.index;
-    let obj = {
-      icon: closure_1_10(appAuthTokens(navigation[20]), { application: item.application }),
-      label: item.application.name,
-      onPress: function handleAppPress() {
-        UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
-        const obj3 = {
-          destinationPane: constants2.AUTHORIZED_APP,
-          source: { page: constants.USER_SETTINGS },
-          applicationId: item.application.id,
-        };
-        const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj3);
-        navigation.push(constants2.AUTHORIZED_APP, { oauth2Token: item });
-      },
-      arrow: true,
-      start: 0 === index,
-      end: index === item.numItems - 1,
-    };
-    return closure_1_10(closure_0(navigation[19]).TableRow, obj);
-  }, items1);
-  if (null != appAuthTokens) {
-    if (stateFromStoresObject.fetchState === FetchState.FETCHED) {
-      function renderHeader() {
-        const obj = { children: null };
-        const obj2 = { children: null };
-        const obj3 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
-        const intl = util.intl;
-        obj3.children = intl.string(util.t.HU3RFw);
-        const items = [closure_2_10(Text_Text.Text, obj3)];
-        const obj4 = { style: closure_0.headerDescription, variant: "heading-sm/medium", children: null };
-        const intl2 = util.intl;
-        obj4.children = intl2.string(util.t.Nu5Yi0);
-        items[1] = closure_2_10(Text_Text.Text, obj4);
-        obj2.children = items;
-        const items1 = [closure_2_11(React4, obj2)];
-        const obj5 = { style: closure_0.appListHeader, children: null };
-        const obj6 = { title: null };
-        const intl3 = util.intl;
-        obj6.title = intl3.string(util.t.PHjkRE);
-        obj5.children = closure_2_10(TableRowGroup.TableRowGroupTitle, obj6);
-        items1[1] = closure_2_10(React4, obj5);
-        obj.children = items1;
-        return closure_2_11(closure_2_12, obj);
-      }
-      if (0 === appAuthTokens.length) {
-        let obj4 = { style: tmp.emptyContainer, children: null };
-        const items2 = [renderHeader()];
-        let obj5 = {
-          color: "mobile-text-heading-primary",
-          style: tmp.emptyText,
-          variant: "heading-md/extrabold",
-          children: null,
-        };
-        let intl = tmp3(tmp2[17]).intl;
-        obj5.children = intl.string(tmp3(tmp2[17]).t["E+SM6T"]);
-        items2[1] = closure_10(tmp3(tmp2[16]).Text, obj5);
-        obj4.children = items2;
-        let tmp10 = closure_11(closure_4, obj4);
-      } else {
-        let obj6 = {
-          contentContainerStyle: null,
-          ListHeaderComponent: null,
-          renderItem: null,
-          data: null,
-          keyExtractor: null,
-        };
-        const items3 = [tmp.container];
-        const obj7 = { paddingBottom: appAuthTokens(navigation[11])().bottom + PX_24 };
-        items3[1] = obj7;
-        obj6.contentContainerStyle = items3;
-        obj6.ListHeaderComponent = renderHeader();
-        obj6.renderItem = function renderItem(item) {
-          return closure_3({ item: item.item, index: item.index, numItems: appAuthTokens.length });
-        };
-        obj6.data = appAuthTokens.sort((id, id2) => Number(id2.id) - Number(id.id));
-        obj6.keyExtractor = function keyExtractor(id) {
-          return id.id;
-        };
-        tmp10 = closure_10(tmp3(tmp2[23]).FlashList, obj6);
-      }
-    }
-    return tmp10;
-  }
-  tmp10 = closure_10(closure_5, { style: tmp.spinner, animating: true, size: "large" });
-  let obj3 = require("Link");
-  const obj8 = { style: tmp.spinner, animating: true, size: "large" };
-}
 export function DisclosureIcon(disclosure) {
   disclosure = disclosure.disclosure;
   const style = disclosure.style;
@@ -155,4 +53,82 @@ export function DisclosureIcon(disclosure) {
       return closure_2_10(CircleInformationIcon.CircleInformationIcon, obj);
     }
   }, items);
+}
+export function useAuthorizedApps() {
+  let items = [AuthorizedAppsStore];
+  const stateFromStoresObject = appAuthTokens(504).useStateFromStoresObject(items, () => ({
+    fetchState: authStore.getFetchState(),
+    appAuthTokens: authStore.getNewestTokensForNonChildrenApplications(),
+  }));
+  appAuthTokens = stateFromStoresObject.appAuthTokens;
+  const obj = appAuthTokens(504);
+  const focusEffect = appAuthTokens(1498).useFocusEffect(
+    noop.useCallback(() => closure_1(dependencyMap[13]).fetch(), []),
+  );
+  closure_1 = tmp3;
+  const items1 = [appAuthTokens, stateFromStoresObject.fetchState !== FetchState.FETCHED];
+  const obj2 = appAuthTokens(1498);
+  return {
+    loading: stateFromStoresObject.fetchState !== FetchState.FETCHED,
+    apps: noop.useMemo(() => {
+      const items = [];
+      if (closure_1) {
+        let sorted = items;
+      } else {
+        HermesBuiltin.arraySpread(appAuthTokens, 0);
+        sorted = items.sort((id, id2) => Number(id2.id) - Number(id.id));
+      }
+      return sorted;
+    }, items1),
+  };
+}
+export function AuthorizedAppsHeader() {
+  const tmp = closure_12();
+  const obj = { style: tmp.appListHeader, children: null };
+  const obj2 = { color: "text-strong", variant: "heading-md/semibold", children: null };
+  const intl = util.intl;
+  obj2.children = intl.string(util.t["f6kk+r"]);
+  const items = [closure_1_10(Text_Text.Heading, obj2)];
+  const obj3 = { style: tmp.headerDescription, color: "text-default", variant: "text-sm/normal", children: null };
+  const intl2 = util.intl;
+  obj3.children = intl2.string(util.t.G9JfLg);
+  items[1] = closure_1_10(Text_Text.Text, obj3);
+  obj.children = items;
+  return closure_1_11(React4, obj);
+}
+export function AuthorizedAppsEmpty(loading) {
+  const tmp = closure_12();
+  if (loading.loading) {
+    const obj2 = { style: tmp.spinner, animating: true, size: "large" };
+    let tmp2Result = closure_1_10(hasOwnProperty, obj2);
+  } else {
+    const obj = { color: "text-default", style: tmp.emptyText, variant: "text-sm/normal", children: null };
+    const intl = util.intl;
+    obj.children = intl.string(util.t["E+SM6T"]);
+    tmp2Result = closure_1_10(Text_Text.Text, obj);
+  }
+  return tmp2Result;
+}
+export function AuthorizedAppRow(app) {
+  app = app.app;
+  ({ start, end } = app);
+  importDefault = app(1497).useNavigation();
+  const obj2 = {
+    icon: closure_10(TableRowApplicationIconDefault, { application: app.application }),
+    label: app.application.name,
+    onPress: function handleAppPress() {
+      UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
+      const obj3 = {
+        destinationPane: constants2.AUTHORIZED_APP,
+        source: { page: constants.USER_SETTINGS },
+        applicationId: app.application.id,
+      };
+      const result = UserSettingsUtils.trackUserSettingsPaneViewed(obj3);
+      closure_1.push(constants2.AUTHORIZED_APP, { oauth2Token: app });
+    },
+    arrow: true,
+    start,
+    end,
+  };
+  return closure_10(app(6975).TableRow, obj2);
 }

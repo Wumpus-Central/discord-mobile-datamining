@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import AccessibilityPreferencesContext from "../../AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import DataBindByName from "../../../../../../../_runtime/05085_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/05090_DataBindByName.js";
 import ManaContext from "../../ManaContext/ManaContext.native.tsx";
 import useRivePlayback from "useRivePlayback.tsx";
 import RiveTypes from "RiveTypes.tsx";
@@ -419,7 +419,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -438,7 +438,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
                   closure_128_1 = undefined;
                   c2 = 1;
                   c3 = 1;
-                  const obj3 = { value: tmp2(5139).ignoreErrors(ref3.current), done: false };
+                  const obj3 = { value: tmp2(5144).ignoreErrors(ref3.current), done: false };
                   return obj3;
                 }
               } else {
@@ -453,7 +453,7 @@ export function useImageBinding(auraImage, instance, auraImage2, auraImage1, pla
                   } else if (dependencyMap()) {
                     c3 = 3;
                   } else {
-                    const RiveImages = tmp2(5085).RiveImages;
+                    const RiveImages = tmp2(5090).RiveImages;
                     closure_128_0 = RiveImages.loadFromURLAsync(
                       (function ensureImageUri(source) {
                         if (typeof source === "number") {

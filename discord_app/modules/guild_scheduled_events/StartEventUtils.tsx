@@ -25,7 +25,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -252,8 +252,8 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "flexDirection";
 };
-let closure_4 = fn(4862).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(4864);
+let closure_4 = fn(4867).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(4869);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } =
   GuildScheduledEventsConstants);
 const ChannelTypes = fn(1072).ChannelTypes;

@@ -62,12 +62,12 @@ function SoundButtonEmoji(arg0) {
     obj2.transform = items2;
     return obj2;
   };
-  const obj2 = animationConfig(5090);
+  const obj2 = animationConfig(5095);
   fn.__closure = {
     animationConfig,
-    withDelay: animationConfig(5090).withDelay,
-    withSpring: animationConfig(5632).withSpring,
-    interpolate: animationConfig(5090).interpolate,
+    withDelay: animationConfig(5095).withDelay,
+    withSpring: animationConfig(5637).withSpring,
+    interpolate: animationConfig(5095).interpolate,
     SPRING_CONFIG,
   };
   fn.__workletHash = 13932429225740;
@@ -82,9 +82,9 @@ function SoundButtonEmoji(arg0) {
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const obj3 = {
     animationConfig,
-    withDelay: animationConfig(5090).withDelay,
-    withSpring: animationConfig(5632).withSpring,
-    interpolate: animationConfig(5090).interpolate,
+    withDelay: animationConfig(5095).withDelay,
+    withSpring: animationConfig(5637).withSpring,
+    interpolate: animationConfig(5095).interpolate,
     SPRING_CONFIG,
   };
   const fn2 = function o() {
@@ -135,12 +135,12 @@ function SoundButtonEmoji(arg0) {
     obj2.transform = items2;
     return obj2;
   };
-  const obj5 = animationConfig(5090);
+  const obj5 = animationConfig(5095);
   fn2.__closure = {
     animationConfig: obj4,
-    withDelay: animationConfig(5090).withDelay,
-    withSpring: animationConfig(5632).withSpring,
-    interpolate: animationConfig(5090).interpolate,
+    withDelay: animationConfig(5095).withDelay,
+    withSpring: animationConfig(5637).withSpring,
+    interpolate: animationConfig(5095).interpolate,
     SPRING_CONFIG,
   };
   fn2.__workletHash = 13932429225740;
@@ -152,9 +152,9 @@ function SoundButtonEmoji(arg0) {
   const obj9 = { fastImageStyle: tmp.emoji, textEmojiStyle: tmp.emoji, src: null, name: null };
   const obj6 = {
     animationConfig: obj4,
-    withDelay: animationConfig(5090).withDelay,
-    withSpring: animationConfig(5632).withSpring,
-    interpolate: animationConfig(5090).interpolate,
+    withDelay: animationConfig(5095).withDelay,
+    withSpring: animationConfig(5637).withSpring,
+    interpolate: animationConfig(5095).interpolate,
     SPRING_CONFIG,
   };
   obj9.src = getSoundboardEmojiUrlDefault(sound, 24);
@@ -173,7 +173,7 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_7 = ReanimatedRexport.createAnimatedComponent(View);
 const SPRING_CONFIG = { damping: 10, stiffness: 300, mass: 1 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   button: null,
   buttonPressed: null,
@@ -189,7 +189,7 @@ let obj = {
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = {
   marginTop: 4,
-  height: fn(19118).SOUND_BUTTON_HEIGHT,
+  height: fn(19167).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -201,7 +201,7 @@ obj.button = {
 };
 let obj2 = {
   marginTop: 4,
-  height: fn(19118).SOUND_BUTTON_HEIGHT,
+  height: fn(19167).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -229,7 +229,7 @@ const rect = {
   borderRadius: nativeDefault.radii.lg - 2,
 };
 obj.playingBackground = rect;
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 24;
@@ -260,7 +260,7 @@ const size1 = {
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(6974).PressableOpacity);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(6980).PressableOpacity);
 const __initData = {
   code: 'function SoundButtonTsx1(){const{animationConfig,withDelay,withSpring,interpolate,SPRING_CONFIG}=this.__closure;var _animationConfig$play,_animationConfig$pres,_animationConfig;const isNotPressed=animationConfig.sharedValues.pressed.get()===0;const isPlaying=animationConfig.sharedValues.playing.get()>0;const shouldDoPlayingAnimation=isNotPressed&&isPlaying;const playingAnimationScaleValue=withDelay((_animationConfig$play=animationConfig.playingAnimationDelay)!==null&&_animationConfig$play!==void 0?_animationConfig$play:0,withSpring(interpolate(animationConfig.sharedValues.playing.get(),[0,1],[1,animationConfig.scaleFactors.playing]),SPRING_CONFIG));const pressedAnimationScaleValue=withSpring(interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[1,animationConfig.scaleFactors.pressed]),SPRING_CONFIG);const rotationScaleValue=interpolate(animationConfig.sharedValues.pressed.get(),[0,1],[0,(_animationConfig$pres=(_animationConfig=animationConfig)===null||_animationConfig===void 0?void 0:_animationConfig.pressedRotationDegrees)!==null&&_animationConfig$pres!==void 0?_animationConfig$pres:0]);return{transform:[{scale:shouldDoPlayingAnimation?playingAnimationScaleValue:pressedAnimationScaleValue},{rotate:rotationScaleValue+"deg"}]};}',
 };

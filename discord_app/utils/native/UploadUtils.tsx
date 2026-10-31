@@ -41,7 +41,7 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -371,7 +371,7 @@ let closure_26 = async function _openImagePicker(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -473,7 +473,7 @@ let closure_28 = async function _mediaManager(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -515,7 +515,7 @@ let closure_28 = async function _mediaManager(arg0) {
           closure_130_2 = closure_4;
           closure_131_19.warn(closure_130_2);
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -652,7 +652,7 @@ let closure_30 = async function _getPhotoKitDataUTI(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -678,7 +678,7 @@ let closure_30 = async function _getPhotoKitDataUTI(arg0) {
             }
           }
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else if (1 === tmp7) {
         c5 = 0;
@@ -727,7 +727,7 @@ let closure_31 = async function _shouldConvertToPNG(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -850,7 +850,7 @@ function convertVideo(videoMetadata) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "HermesInternal", done: "HermesInternal" };
             }
           } else {
             try {
@@ -985,7 +985,7 @@ function convertVideo(videoMetadata) {
                               if (closure_129_1) {
                                 closure_7 = closure_7 + 1;
                                 c4 = 3;
-                                return { value: "HermesInternal", done: null };
+                                return { value: "HermesInternal", done: "HermesInternal" };
                               } else {
                                 logger.error("No adjustments possible for current failures", { currentFailures: closure_129_0.failures, config, capabilities: closure_129_0.capabilities, attempt: closure_7 + 1 });
                                 const _Error = Error;
@@ -1267,7 +1267,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "Array" };
+                      obj8 = { uri, overrideType: "a" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1286,7 +1286,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "Array" };
+                  const obj9 = { uri, overrideType: "a" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }
@@ -1334,7 +1334,7 @@ let closure_36 = async function _buildResolvedUpload(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -1418,7 +1418,7 @@ let closure_37 = async function _processVideoUpload(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1554,7 +1554,7 @@ let closure_38 = async function _processImageOrFileUpload(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1806,7 +1806,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -1887,7 +1887,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
           } else {
             closure_130_10 = value;
             if ((function shouldConvertBase64ToJPG(str) {
-              let isIOSResult = closure_1_0(1376).isIOS();
+              let isIOSResult = closure_1_0(1375).isIOS();
               if (isIOSResult) {
                 isIOSResult = null != str.match(closure_1_20);
               }
@@ -1899,7 +1899,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
               const obj9 = { value: closure_131_27(closure_131_1(closure_131_2[16]).convertBase64ToJPEG, closure_130_0.replace(closure_131_20, ""), obj8), done: false };
               return obj9;
             } else if ((function shouldConvertBase64ToGIF(str) {
-              let isIOSResult = closure_1_0(1376).isIOS();
+              let isIOSResult = closure_1_0(1375).isIOS();
               if (isIOSResult) {
                 isIOSResult = null != str.match(closure_1_21);
               }
@@ -1932,7 +1932,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                 const obj16 = closure_131_0(closure_131_2[20]);
                 if (!obj16.shouldConvertToJPG(closure_130_0, closure_130_1, closure_130_2, closure_130_4, closure_130_7)) {
                   if ((function shouldConvertToGifFilepath(str, str2) {
-                    const isIOSResult = closure_1_0(1376).isIOS();
+                    const isIOSResult = closure_1_0(1375).isIOS();
                     if (!isIOSResult) {
                       return isIOSResult;
                     } else {
@@ -1945,9 +1945,9 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(8220);
+                      tmpResult = closure_1_0(8228);
                     }
-                    const obj = closure_1_0(1376);
+                    const obj = closure_1_0(1375);
                   })(closure_130_0, closure_130_1)) {
                     c4 = 2;
                     c6 = 10;
@@ -2152,7 +2152,7 @@ let closure_40 = async function _fetchVideoMetadata(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2256,7 +2256,7 @@ let closure_41 = async function _getImageDimensionsIfMissing() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -2397,7 +2397,7 @@ let closure_43 = async function _checkVideoEncodingSupport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2474,7 +2474,7 @@ let closure_45 = async function _calculateImageQualityMetrics(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -2588,13 +2588,13 @@ let closure_45 = async function _calculateImageQualityMetrics(arg0) {
 };
 let closure_3 = ["filename"];
 const Image = fn(17).Image;
-let UnsyncedUserSettingsStore = fn(1195);
+let UnsyncedUserSettingsStore = fn(1194);
 ({ VideoCompressionQuality: closure_7, VideoQualitySettings: closure_8 } = UnsyncedUserSettingsStore);
 let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1072);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(7932).NativePermissionTypes;
+const NativePermissionTypes = fn(7940).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2663,8 +2663,8 @@ export function getFileSize(uri) {
 }
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(8220).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(8220).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(8228).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(8228).shouldForceConvertToJPG;
 export function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

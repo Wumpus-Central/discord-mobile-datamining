@@ -1,7 +1,7 @@
 // discord_app/stores/GiftCodeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef2044 from "../../_runtime/metro/02044__.js";
+import _modDef2042 from "../../_runtime/metro/02042__.js";
 import GiftCodeUtils from "../utils/GiftCodeUtils.tsx";
 import GiftCodeActionCreatorsDefault from "../actions/GiftCodeActionCreators.tsx";
 import GiftCodeRecord from "../records/GiftCodeRecord.tsx";
@@ -16,14 +16,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4853).Timeout();
+      const timeout = new code(4858).Timeout();
       dependencyMap[code] = timeout;
       value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef2044().valueOf();
+          const diff = valueOfResult - _modDef2042().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -86,7 +86,7 @@ function updateGiftCode(giftCode) {
                                             closure_2_18.emitChange();
                                           } else if (null != closure_2_7[closure_1_0]) {
                                             let _Math = Math;
-                                            obj2.start(Math.min(closure_2_5, diff), /* F98950 */ function() { ... });
+                                            obj2.start(Math.min(closure_2_5, diff), /* F99236 */ function() { ... });
                                           }
                                           let obj3 = closure_2_1(closure_2_2[3])();
                                         }
@@ -108,7 +108,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef2044();
+          const obj4 = _modDef2042();
         }
       }
     }

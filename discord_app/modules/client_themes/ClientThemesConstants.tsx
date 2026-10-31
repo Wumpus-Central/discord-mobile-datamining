@@ -3,7 +3,7 @@ import Constants from "../../../discord_common/js/shared/Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import ClientThemesTypes from "ClientThemesTypes.tsx";
-import _modDef4282 from "../hexagon_campaign/HexagonCampaign.messages.js";
+import _modDef4285 from "../hexagon_campaign/HexagonCampaign.messages.js";
 import apply from "../../../_runtime/metro/00012__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -453,7 +453,7 @@ const obj24 = {
   angle: 135,
   getName() {
     const intl = util.intl;
-    return intl.string(_modDef4282["+xs8ZP"]);
+    return intl.string(_modDef4285["+xs8ZP"]);
   },
   midpointPercentage: 35,
   unsupported_overlayOpacityMultiplier: 0.8,

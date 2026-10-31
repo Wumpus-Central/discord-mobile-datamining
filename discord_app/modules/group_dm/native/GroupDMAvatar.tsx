@@ -66,13 +66,8 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj9 = {
-      style: tmp.firstFace,
-      size: pileSizeOverride,
-      guildId: "r",
-      cutout: memo1,
-      animate: "e917bbc0ce83e446d747ae7376398628",
-    };
+    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
+    obj9.cutout = memo1;
     obj9.animate = animate;
     if (null == users) {
       obj10 = { source: null };
@@ -92,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "overlay",
+      animate: "primary-overlay",
     };
     obj12.animate = animate;
     if (null == users) {
@@ -113,15 +108,15 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1188).AvatarSizes.LARGE_48] = fn(1188).AvatarSizes.SMALL;
-obj[fn(1188).AvatarSizes.XLARGE] = fn(1188).AvatarSizes.NORMAL;
-obj[fn(1188).AvatarSizes.XXLARGE] = fn(1188).AvatarSizes.LARGE;
-obj[fn(1188).AvatarSizes.PROFILE] = fn(1188).AvatarSizes.XXLARGE;
-obj[fn(1188).AvatarSizes.REFRESH_MEDIUM_32] = fn(1188).AvatarSizes.XSMALL_20;
-obj[fn(1188).AvatarSizes.XSMALL] = fn(1188).AvatarSizes.SIZE_16;
-obj[fn(1188).AvatarSizes.SIZE_16] = fn(1188).AvatarSizes.XXSMALL_10;
-obj[fn(1188).AvatarSizes.NORMAL] = fn(1188).AvatarSizes.XSMALL;
-const createStyles = fn(5009);
+obj[fn(1187).AvatarSizes.LARGE_48] = fn(1187).AvatarSizes.SMALL;
+obj[fn(1187).AvatarSizes.XLARGE] = fn(1187).AvatarSizes.NORMAL;
+obj[fn(1187).AvatarSizes.XXLARGE] = fn(1187).AvatarSizes.LARGE;
+obj[fn(1187).AvatarSizes.PROFILE] = fn(1187).AvatarSizes.XXLARGE;
+obj[fn(1187).AvatarSizes.REFRESH_MEDIUM_32] = fn(1187).AvatarSizes.XSMALL_20;
+obj[fn(1187).AvatarSizes.XSMALL] = fn(1187).AvatarSizes.SIZE_16;
+obj[fn(1187).AvatarSizes.SIZE_16] = fn(1187).AvatarSizes.XXSMALL_10;
+obj[fn(1187).AvatarSizes.NORMAL] = fn(1187).AvatarSizes.XSMALL;
+const createStyles = fn(5014);
 const React6 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },
@@ -154,7 +149,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
     }
     return tmp5;
   }
-  tmp5 = closure_5(channel(1188).Avatar, {
+  tmp5 = closure_5(channel(1187).Avatar, {
     autoStatusCutout: true,
     status,
     style,

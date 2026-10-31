@@ -8,13 +8,13 @@ import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWitho
 
 require = fn;
 let closure_3 = ["allowConjurePictureInPictureOnNavigateAway", "allowVibegrationsPictureInPictureOnNavigateAway"];
-const SystemThemeState = fn(1196).SystemThemeState;
+const SystemThemeState = fn(1195).SystemThemeState;
 const ListDensityMode = fn(1082).ListDensityMode;
 const Constants = fn(1072);
 ({ DEFAULT_CHAT_SIDEBAR_WIDTH: closure_7, CHANNEL_SIDEBAR_WIDTH } = Constants);
 let closure_9 = Constants.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-const ExpressionPickerWidths = fn(1229).ExpressionPickerWidths;
-let closure_11 = fn(1230).STAGE_AUDIENCE_SIDEBAR_DEFAULT_WIDTH;
+const ExpressionPickerWidths = fn(1228).ExpressionPickerWidths;
+let closure_11 = fn(1229).STAGE_AUDIENCE_SIDEBAR_DEFAULT_WIDTH;
 let obj = { DATA_SAVER: "data_saver", STANDARD: "standard", BEST: "best" };
 let closure_12 = (window.innerWidth - CHANNEL_SIDEBAR_WIDTH) / 2;
 const STANDARD = obj.STANDARD;

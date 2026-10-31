@@ -20,14 +20,14 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   row: {
     position: "relative",
-    paddingLeft: fn(12587).MESSAGE_CONTENT_INSET,
-    paddingRight: fn(12587).MESSAGE_EDGE_INSET,
-    paddingVertical: fn(12596).ROW_PAD,
-    gap: fn(12596).BLOCK_GAP,
+    paddingLeft: fn(12622).MESSAGE_CONTENT_INSET,
+    paddingRight: fn(12622).MESSAGE_EDGE_INSET,
+    paddingVertical: fn(12631).ROW_PAD,
+    gap: fn(12631).BLOCK_GAP,
   },
   rowGroupStart: null,
   boundaryRow: null,
@@ -40,28 +40,28 @@ let obj = {
 };
 let obj3 = {
   position: "relative",
-  paddingLeft: fn(12587).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(12587).MESSAGE_EDGE_INSET,
-  paddingVertical: fn(12596).ROW_PAD,
-  gap: fn(12596).BLOCK_GAP,
+  paddingLeft: fn(12622).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(12622).MESSAGE_EDGE_INSET,
+  paddingVertical: fn(12631).ROW_PAD,
+  gap: fn(12631).BLOCK_GAP,
 };
-obj.rowGroupStart = { marginTop: fn(12596).GROUP_GAP };
-let obj4 = { marginTop: fn(12596).GROUP_GAP };
-obj.boundaryRow = { paddingHorizontal: fn(12587).MESSAGE_EDGE_INSET, paddingVertical: fn(12596).ROW_PAD };
-const rect = { position: "absolute", left: fn(12587).MESSAGE_EDGE_INSET, top: fn(12596).ROW_PAD };
+obj.rowGroupStart = { marginTop: fn(12631).GROUP_GAP };
+let obj4 = { marginTop: fn(12631).GROUP_GAP };
+obj.boundaryRow = { paddingHorizontal: fn(12622).MESSAGE_EDGE_INSET, paddingVertical: fn(12631).ROW_PAD };
+const rect = { position: "absolute", left: fn(12622).MESSAGE_EDGE_INSET, top: fn(12631).ROW_PAD };
 obj.avatar = rect;
-let obj5 = { paddingHorizontal: fn(12587).MESSAGE_EDGE_INSET, paddingVertical: fn(12596).ROW_PAD };
-obj.spoken = { position: "relative", gap: fn(12596).BLOCK_GAP };
-const rect1 = { left: fn(12587).MESSAGE_EDGE_INSET - fn(12587).MESSAGE_CONTENT_INSET, top: 0 };
+let obj5 = { paddingHorizontal: fn(12622).MESSAGE_EDGE_INSET, paddingVertical: fn(12631).ROW_PAD };
+obj.spoken = { position: "relative", gap: fn(12631).BLOCK_GAP };
+const rect1 = { left: fn(12622).MESSAGE_EDGE_INSET - fn(12622).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj6 = { position: "relative", gap: fn(12596).BLOCK_GAP };
-obj.avatarSpokenReplying = { top: fn(12597).REPLY_PREVIEW_HEIGHT + fn(12596).BLOCK_GAP };
-let obj7 = { top: fn(12597).REPLY_PREVIEW_HEIGHT + fn(12596).BLOCK_GAP };
+let obj6 = { position: "relative", gap: fn(12631).BLOCK_GAP };
+obj.avatarSpokenReplying = { top: fn(12632).REPLY_PREVIEW_HEIGHT + fn(12631).BLOCK_GAP };
+let obj7 = { top: fn(12632).REPLY_PREVIEW_HEIGHT + fn(12631).BLOCK_GAP };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj8 = { marginBottom: -nativeDefault.space.PX_4 };
-obj.activityBox = { marginLeft: -fn(12596).RAIL_INDENT };
+obj.activityBox = { marginLeft: -fn(12631).RAIL_INDENT };
 let closure_10 = createStyles.createStyles(obj);
-let obj9 = { marginLeft: -fn(12596).RAIL_INDENT };
+let obj9 = { marginLeft: -fn(12631).RAIL_INDENT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageRow.tsx");
 

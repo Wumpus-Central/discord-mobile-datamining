@@ -7,12 +7,12 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const ActivityLayoutMode = fn(2019).ActivityLayoutMode;
-const ActivityPanelModes = fn(5652).ActivityPanelModes;
-const FramesConstants = fn(6841);
-({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
+const ActivityPanelModes = fn(5657).ActivityPanelModes;
+const FramesConstants = fn(6847);
+({ asLaunched: closure_8, FrameLayoutModes: closure_9, getPipOrientationLockStateForFrame: c10 } = FramesConstants);
+const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_13 = createStyles.createStyles({
   activityContainer: { flex: 1 },
   wrapper: { position: "absolute", left: "50%", top: "50%" },
@@ -70,7 +70,7 @@ export default function VoicePanelSecondaryPIPContent() {
   const stateFromStoresObject1 = windowDimensions(connectedEmbeddedActivityChannelId[11]).useStateFromStoresObject(
     items1,
     () => {
-      const tmp = closure_1_9(mainFrame.getMainFrame());
+      const tmp = closure_1_8(mainFrame.getMainFrame());
       let id;
       if (tmp != null) {
         id = tmp.id;
@@ -84,7 +84,7 @@ export default function VoicePanelSecondaryPIPContent() {
         activityPanelMode = constants.DISCONNECTED;
       }
       obj.framePanelMode = activityPanelMode;
-      obj.framePipOrientationLockState = closure_1_11(tmp);
+      obj.framePipOrientationLockState = closure_1_10(tmp);
       return obj;
     },
   );
@@ -95,7 +95,7 @@ export default function VoicePanelSecondaryPIPContent() {
     ChannelStore.getChannel(connectedEmbeddedActivityChannelId),
   );
   const obj5 = windowDimensions(connectedEmbeddedActivityChannelId[11]);
-  const fn = function s() {
+  const fn = function p() {
     const scale = pIPState.scale;
     value = scale.get();
     const result = pIPState.width * value;

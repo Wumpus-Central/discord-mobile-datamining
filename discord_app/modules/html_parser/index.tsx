@@ -1,5 +1,5 @@
 // discord_app/modules/html_parser/index.tsx
-import _mod9386 from "../../../_runtime/metro/09386__.js";
+import _mod9406 from "../../../_runtime/metro/09406__.js";
 import HTMLParserRunUtils from "HTMLParserRunUtils.tsx";
 import HTMLParserLinkUtils from "HTMLParserLinkUtils.tsx";
 import HTMLParserConstants from "HTMLParserConstants.tsx";
@@ -378,7 +378,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
   obj.links = [];
   obj.lists = [];
   obj.held = [];
-  const Parser = obj(9386).Parser;
+  const Parser = obj(9406).Parser;
   const fn = () => HermesBuiltin.applyArguments(new.target, new.target);
   class fn extends Parser {
     onclosetag(arg0, arg1) {
@@ -562,7 +562,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
                           const str = markup.slice(startIndex, startIndex + arg0.length + 2);
                         },
                       };
-                      const parser = new _mod9386.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
+                      const parser = new _mod9406.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
                       parser.end(markup);
                       map1 = map;
                     } else {
@@ -666,7 +666,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
         appendText(obj, substr);
       },
     };
-    let parser = new obj(9386).Parser(obj3, { decodeEntities: true });
+    let parser = new obj(9406).Parser(obj3, { decodeEntities: true });
     parser.end(str.replace(/</g, "&lt;"));
   }
   const runs = obj.runs;

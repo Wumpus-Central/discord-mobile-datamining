@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
@@ -67,7 +67,7 @@ function PublishSheetBody(entryPoint) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -101,7 +101,7 @@ function PublishSheetBody(entryPoint) {
           c3 = 0;
           closure_128_3.current = false;
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -120,7 +120,7 @@ function PublishSheetBody(entryPoint) {
             }
           } else {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         }
         c3 = 0;
@@ -141,11 +141,11 @@ function PublishSheetBody(entryPoint) {
     }
   };
   const tmp = closure_13();
-  const tmp4 = entryPoint(12414)(project, publish);
+  const tmp4 = entryPoint(12452)(project, publish);
   dependencyMap = tmp4;
-  entryPoint(6017)(() => true, tmp4.saving);
+  entryPoint(6022)(() => true, tmp4.saving);
   closure_3 = noop.useRef(false);
-  const context = noop.useContext(entryPoint(5586));
+  const context = noop.useContext(entryPoint(5591));
   let transitionState;
   if (context != null) {
     transitionState = context.transitionState;
@@ -169,10 +169,10 @@ function PublishSheetBody(entryPoint) {
     isPrivate = appChannelsPrivate.isPrivate;
   }
   if (true === isPrivate) {
-    AppsIcon = publish(8669).AppsLockIcon;
+    AppsIcon = publish(8677).AppsLockIcon;
     let tmp12 = publish;
   } else {
-    AppsIcon = publish(8670).AppsIcon;
+    AppsIcon = publish(8678).AppsIcon;
     tmp12 = publish;
   }
   if (tmp4.initial) {
@@ -196,8 +196,8 @@ function PublishSheetBody(entryPoint) {
     dismissAccessibilityLabel: null,
     children: null,
   };
-  let intl = tmp12(1114).intl;
-  obj2.dismissAccessibilityLabel = intl.string(entryPoint(3865).NEPcoi);
+  let intl = tmp12(1113).intl;
+  obj2.dismissAccessibilityLabel = intl.string(entryPoint(3868).NEPcoi);
   let obj3 = { style: tmp.content, children: null };
   if (editable) {
     let obj4 = {
@@ -209,46 +209,46 @@ function PublishSheetBody(entryPoint) {
       onError(text) {
         if (null != text) {
           obj2 = { text, variant: "critical" };
-          entryPoint(5707).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
-          obj = entryPoint(5707);
+          entryPoint(5712).open("CONJURE_PUBLISH_SHEET_ERROR", obj2);
+          obj = entryPoint(5712);
         }
       },
     };
-    let tmp15Result = tmp15(tmp12(12420).ConjureAppIconTile, obj4);
+    let tmp15Result = tmp15(tmp12(12458).ConjureAppIconTile, obj4);
   } else {
     const obj5 = { project, size: "dialog" };
-    tmp15Result = tmp15(tmp2(12425), obj5);
+    tmp15Result = tmp15(tmp2(12463), obj5);
   }
   const items2 = [tmp15Result, , , , , ,];
   if (editable) {
     const obj6 = { label: null, value: null, onChange: null, maxLength: null, disabled: null, errorMessage: null };
-    const intl2 = tmp12(1114).intl;
-    obj6.label = intl2.string(tmp2(3865).knevPu);
+    const intl2 = tmp12(1113).intl;
+    obj6.label = intl2.string(tmp2(3868).knevPu);
     ({ name: obj9.value, setName: obj9.onChange } = tmp4);
-    obj6.maxLength = tmp12(6839).MAX_PROJECT_NAME_LENGTH;
+    obj6.maxLength = tmp12(6845).MAX_PROJECT_NAME_LENGTH;
     ({ saving: obj9.disabled, nameError } = tmp4);
     const obj7 = { children: null };
     obj6.errorMessage = nameError;
-    const items3 = [tmp15(tmp12(7076).TextInput, obj6)];
+    const items3 = [tmp15(tmp12(7082).TextInput, obj6)];
     const obj8 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, disabled: null };
-    const intl3 = tmp12(1114).intl;
-    obj8.label = intl3.string(tmp2(3865).ynaGa1);
-    const intl4 = tmp12(1114).intl;
-    obj8.placeholder = intl4.string(tmp2(3865)["I+3UTL"]);
+    const intl3 = tmp12(1113).intl;
+    obj8.label = intl3.string(tmp2(3868).ynaGa1);
+    const intl4 = tmp12(1113).intl;
+    obj8.placeholder = intl4.string(tmp2(3868)["I+3UTL"]);
     ({ description: obj11.value, setDescription: obj11.onChange } = identity);
-    obj8.maxLength = tmp12(6839).MAX_APP_DESCRIPTION_LENGTH;
+    obj8.maxLength = tmp12(6845).MAX_APP_DESCRIPTION_LENGTH;
     obj8.disabled = tmp4.saving;
-    items3[1] = tmp15(tmp12(7247).TextArea, obj8);
+    items3[1] = tmp15(tmp12(7253).TextArea, obj8);
     obj7.children = items3;
     let tmp16Result = closure_9(closure_8, obj7);
   } else {
     const obj10 = { style: tmp.nameGroup, children: null };
     const obj12 = { variant: "heading-lg/semibold", color: "text-strong", lineClamp: 1, children: tmp4.displayName };
-    const items4 = [tmp15(tmp12(5619).Text, obj12)];
+    const items4 = [tmp15(tmp12(5624).Text, obj12)];
     let tmp15Result6 = null;
     if ("" !== tmp4.description) {
       const obj13 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 2, children: tmp4.description };
-      tmp15Result6 = tmp15(tmp12(5619).Text, obj13);
+      tmp15Result6 = tmp15(tmp12(5624).Text, obj13);
     }
     items4[1] = tmp15Result6;
     obj10.children = items4;
@@ -256,8 +256,8 @@ function PublishSheetBody(entryPoint) {
   }
   items2[1] = tmp16Result;
   const obj14 = { title: null, rows: null };
-  const intl5 = tmp12(1114).intl;
-  obj14.title = intl5.string(entryPoint(3865).BqNMms);
+  const intl5 = tmp12(1113).intl;
+  obj14.title = intl5.string(entryPoint(3868).BqNMms);
   obj14.rows = items1;
   items2[2] = closure_7(RowSection, obj14);
   let tmp15Result7 = null;
@@ -267,32 +267,32 @@ function PublishSheetBody(entryPoint) {
   }
   items2[3] = tmp15Result7;
   const obj16 = { title: null, following: null, rows: null };
-  const intl6 = tmp12(1114).intl;
-  obj16.title = intl6.string(entryPoint(3865).LnqeFd);
+  const intl6 = tmp12(1113).intl;
+  obj16.title = intl6.string(entryPoint(3868).LnqeFd);
   obj16.following = items1.length > 0 && null == appChannelsPrivate;
   const devicePermissions = tmp4.devicePermissions;
   obj16.rows = devicePermissions.map((item) => {
     obj = { icon: closure_1_11[item], label: null };
-    const intl = publish(1114).intl;
-    obj.label = intl.string(publish(12414).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
+    const intl = publish(1113).intl;
+    obj.label = intl.string(publish(12452).CONJURE_PUBLISH_PERMISSION_LABELS[item]);
     return closure_7(ContentRow, obj, item);
   });
   items2[4] = closure_7(RowSection, obj16);
   let tmp16Result2 = null;
   if (null != sharing) {
     const obj17 = { title: null };
-    const intl7 = tmp12(1114).intl;
-    obj17.title = intl7.string(tmp2(3865).esTM8y);
+    const intl7 = tmp12(1113).intl;
+    obj17.title = intl7.string(tmp2(3868).esTM8y);
     const items5 = [tmp15(SectionTitle, obj17)];
     const obj18 = { style: tmp.sharingRow, children: null };
     if (null != sharing.guild) {
-      const obj19 = { guild: sharing.guild, size: tmp12(6951).GuildIconSizes.SMALL_36 };
-      let tmp15Result8 = tmp15(tmp2(6951), obj19);
-      const tmp2Result = tmp2(6951);
+      const obj19 = { guild: sharing.guild, size: tmp12(6957).GuildIconSizes.SMALL_36 };
+      let tmp15Result8 = tmp15(tmp2(6957), obj19);
+      const tmp2Result = tmp2(6957);
     } else {
       const obj20 = { style: tmp.onlyMeIcon, children: null };
       const obj21 = { size: "xs", color: tmp2(575).colors.ICON_DEFAULT };
-      obj20.children = tmp15(tmp12(12431).UserIcon, obj21);
+      obj20.children = tmp15(tmp12(12466).UserIcon, obj21);
       tmp15Result8 = tmp15(tmp17, obj20);
     }
     const items6 = [tmp15Result8];
@@ -303,15 +303,15 @@ function PublishSheetBody(entryPoint) {
       name = guild.name;
     }
     if (name == null) {
-      const intl8 = tmp12(1114).intl;
-      name = intl8.string(tmp2(3865)["37xgkF"]);
+      const intl8 = tmp12(1113).intl;
+      name = intl8.string(tmp2(3868)["37xgkF"]);
     }
     const obj23 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: name };
-    const items7 = [tmp15(tmp12(5619).Text, obj23)];
+    const items7 = [tmp15(tmp12(5624).Text, obj23)];
     let tmp15Result9 = null;
     if (null != sharing.caption) {
       const obj24 = { variant: "text-xs/normal", color: "text-subtle", children: sharing.caption };
-      tmp15Result9 = tmp15(tmp12(5619).Text, obj24);
+      tmp15Result9 = tmp15(tmp12(5624).Text, obj24);
     }
     const obj25 = { children: null };
     items7[1] = tmp15Result9;
@@ -327,16 +327,16 @@ function PublishSheetBody(entryPoint) {
   let tmp15Result10 = null;
   if (null != tmp4.note) {
     const obj27 = { variant: "text-sm/normal", color: "text-subtle", children: tmp4.note };
-    tmp15Result10 = tmp15(tmp12(5619).Text, obj27);
+    tmp15Result10 = tmp15(tmp12(5624).Text, obj27);
   }
   const items8 = [tmp15Result10];
   const obj28 = { style: tmp.actions, children: null };
   const obj55 = { variant: "secondary", size: "md", grow: true, text: null, disabled: null, onPress: null };
-  const intl9 = tmp12(1114).intl;
-  obj55.text = intl9.string(tmp12(1114).t["ETE/oC"]);
+  const intl9 = tmp12(1113).intl;
+  obj55.text = intl9.string(tmp12(1113).t["ETE/oC"]);
   obj55.disabled = tmp4.saving;
   obj55.onPress = hidePublishSheet;
-  const items9 = [closure_7(tmp12(5629).Button, obj55)];
+  const items9 = [closure_7(tmp12(5634).Button, obj55)];
   const obj56 = {
     variant: "primary",
     size: "md",
@@ -362,14 +362,14 @@ function PublishSheetBody(entryPoint) {
     }
     return applyArgumentsResult;
   };
-  items9[1] = closure_7(tmp12(5629).Button, obj56);
+  items9[1] = closure_7(tmp12(5634).Button, obj56);
   obj28.children = items9;
   items8[1] = closure_9(closure_5, obj28);
   obj26.children = items8;
   items2[6] = closure_9(closure_5, obj26);
   obj3.children = items2;
   obj2.children = closure_9(closure_5, obj3);
-  return closure_7(tmp12(7360).ActionSheet, obj2);
+  return closure_7(tmp12(7366).ActionSheet, obj2);
 }
 function SectionTitle(children) {
   const tmp = closure_13();
@@ -420,7 +420,7 @@ function AppChannelsPrivateSection(appChannelsPrivate) {
   obj = { start: true, end: true, label: null, value: null, disabled: null, onValueChange: null };
   obj2 = { variant: "text-md/medium", color: str, children: null };
   const intl = util.intl;
-  obj2.children = intl.formatToPlainString(_modDef3865.Td1mlg, { count: channelCount });
+  obj2.children = intl.formatToPlainString(_modDef3868.Td1mlg, { count: channelCount });
   obj.label = React5(Text_Text.Text, obj2);
   obj.value = isPrivate;
   obj.disabled = disabled;
@@ -440,13 +440,13 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 ConjurePublishSheet = "ConjurePublishSheet";
-let obj = { screen_capture: fn(9565).ScreenIcon, connect_user_to_voice: fn(8665).VoiceNormalIcon };
+let obj = { screen_capture: fn(9587).ScreenIcon, connect_user_to_voice: fn(8673).VoiceNormalIcon };
 let obj2 = {};
-obj2[fn(6839).ConjureSupportedSurface.BOT] = fn(12408).RobotIcon;
-obj2[fn(6839).ConjureSupportedSurface.ACTIVITY] = fn(12410).ActivitiesIcon;
-obj2[fn(6839).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12412).BadgeIcon;
-obj2[fn(6839).ConjureSupportedSurface.AUTOMOD] = fn(11255).ShieldIcon;
-const createStyles = fn(5009);
+obj2[fn(6845).ConjureSupportedSurface.BOT] = fn(12446).RobotIcon;
+obj2[fn(6845).ConjureSupportedSurface.ACTIVITY] = fn(12448).ActivitiesIcon;
+obj2[fn(6845).ConjureSupportedSurface.PROFILE_WIDGET] = fn(12450).BadgeIcon;
+obj2[fn(6845).ConjureSupportedSurface.AUTOMOD] = fn(11281).ShieldIcon;
+const createStyles = fn(5014);
 let obj4 = {
   content: { gap: nativeDefault.space.PX_16 },
   nameGroup: null,

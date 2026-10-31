@@ -27,13 +27,13 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let canAccessSettings = guild(15745).useGuildActionSheetPermissions(guild).canAccessSettings;
-  const total = stateFromStores(8460)(guild.id).total;
-  let obj = guild(15745);
+  let canAccessSettings = guild(15785).useGuildActionSheetPermissions(guild).canAccessSettings;
+  const total = stateFromStores(8468)(guild.id).total;
+  let obj = guild(15785);
   const items = [GuildChannelStore];
   stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);
-  let shouldRenderInviteResult = guild(9102).shouldRenderInvite(stateFromStores, guild);
+  let shouldRenderInviteResult = guild(9121).shouldRenderInvite(stateFromStores, guild);
   const items1 = [stateFromStores, guild];
   closure_2 = noop.useCallback(() => {
     const channelId = SelectedChannelStore.getChannelId(guild.id);
@@ -53,16 +53,16 @@ export default function GuildActionSheetTabItems(guild) {
   }, items1);
   let obj4 = { direction: "horizontal", style: { flexWrap: "wrap" }, children: null };
   if (total > 0) {
-    const intl2 = tmp(1114).intl;
+    const intl2 = tmp(1113).intl;
     const obj5 = { subscriptions: total };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["pob/cL"], obj5);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1113).t["pob/cL"], obj5);
   } else {
-    const intl = tmp(1114).intl;
-    formatToPlainStringResult = intl.string(tmp(1114).t.Uj0md3);
+    const intl = tmp(1113).intl;
+    formatToPlainStringResult = intl.string(tmp(1113).t.Uj0md3);
   }
   const obj6 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
-  let obj3 = guild(9102);
-  obj6.icon = closure_12(guild(9899).BoostGemIcon, {
+  let obj3 = guild(9121);
+  obj6.icon = closure_12(guild(9920).BoostGemIcon, {
     color: stateFromStores(575).unsafe_rawColors.GUILD_BOOSTING_PINK,
   });
   obj6.onPress = function onPress() {
@@ -72,40 +72,40 @@ export default function GuildActionSheetTabItems(guild) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     BoostingActionCreatorsAll.openApplyBoostModal(guild.id);
   };
-  const items2 = [closure_12(guild(8020).IconButton, obj6), , ,];
+  const items2 = [closure_12(guild(8028).IconButton, obj6), , ,];
   if (shouldRenderInviteResult) {
     const obj8 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-    const intl3 = tmp(1114).intl;
-    obj8.label = intl3.string(tmp(1114).t.VINpSK);
-    obj8.icon = tmp3(10959);
+    const intl3 = tmp(1113).intl;
+    obj8.label = intl3.string(tmp(1113).t.VINpSK);
+    obj8.icon = tmp3(10978);
     obj8.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_2();
     };
-    shouldRenderInviteResult = closure_12(tmp(8020).IconButton, obj8);
+    shouldRenderInviteResult = closure_12(tmp(8028).IconButton, obj8);
   }
   items2[1] = shouldRenderInviteResult;
   const obj9 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-  const intl4 = tmp(1114).intl;
-  obj9.label = intl4.string(guild(1114).t.HcoRu0);
-  obj9.icon = stateFromStores(8391);
+  const intl4 = tmp(1113).intl;
+  obj9.label = intl4.string(guild(1113).t.HcoRu0);
+  obj9.icon = stateFromStores(8399);
   obj9.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
   };
-  items2[2] = closure_12(guild(8020).IconButton, obj9);
+  items2[2] = closure_12(guild(8028).IconButton, obj9);
   if (canAccessSettings) {
     const obj10 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-    const intl5 = tmp(1114).intl;
-    obj10.label = intl5.string(tmp(1114).t["3D5yo/"]);
-    obj10.icon = tmp3(7556);
+    const intl5 = tmp(1113).intl;
+    obj10.label = intl5.string(tmp(1113).t["3D5yo/"]);
+    obj10.icon = tmp3(7562);
     obj10.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsActionCreatorsDefault.open(guild.id);
     };
-    canAccessSettings = closure_12(tmp(8020).IconButton, obj10);
+    canAccessSettings = closure_12(tmp(8028).IconButton, obj10);
   }
   items2[3] = canAccessSettings;
   obj4.children = items2;
-  return closure_13(guild(6761).ButtonGroup, obj4);
+  return closure_13(guild(6767).ButtonGroup, obj4);
 }

@@ -944,6 +944,20 @@ Object.defineProperty(prototype, "isVideoStopped", {
   },
   set: undefined,
 });
+Object.defineProperty(prototype, "videoStoppedReasons", {
+  get: function videoStoppedReasons() {
+    return this.videoStoppedReason;
+  },
+  set: undefined,
+});
+prototype["continueAggregationFrom"] = function continueAggregationFrom(previousAggregationStats, flag) {
+  this.previousAggregationStats = previousAggregationStats.previousAggregationStats;
+  if (flag) {
+    const items = [];
+    HermesBuiltin.arraySpread(previousAggregationStats.statsWindow, 0);
+    tmp.statsWindow = items;
+  }
+};
 Object.defineProperty(prototype, "videoStoppedDuration", {
   get: function videoStoppedDuration() {
     const videoStoppedWatch = this.videoStoppedWatch;

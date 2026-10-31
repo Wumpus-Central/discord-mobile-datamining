@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/useSheetDismissPointerEvents.tsx
-import LegacyBaseButton from "../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const __initData = {

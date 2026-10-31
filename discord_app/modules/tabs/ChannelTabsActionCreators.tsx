@@ -177,7 +177,7 @@ function selectChannelTab(id) {
   }
 }
 const Routes = fn(1072).Routes;
-const isStaticChannelRoute = fn(4865).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4870).isStaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");

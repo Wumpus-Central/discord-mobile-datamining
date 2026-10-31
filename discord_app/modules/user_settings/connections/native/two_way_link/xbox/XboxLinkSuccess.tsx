@@ -9,12 +9,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Linking: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9703).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9717);
+const XboxLinkModalScenes = fn(9723).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9737);
 ({ XBOX_ANDROID_APP_LINK: closure_9, XBOX_IOS_APP_LINK: c10, XBOX_URL_BASE: closure_11 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   image: { width: 58, height: 85, marginBottom: 24 },
   getApp: {
@@ -90,7 +90,7 @@ export default function XboxLinkDiscordSuccess() {
   }, items1);
   const obj5 = { source: null, style: null };
   const obj2 = first(navigation[10]);
-  obj5.source = require("../../../../../../../_runtime/metro/14575__.js");
+  obj5.source = require("../../../../../../../_runtime/metro/14613__.js");
   obj5.style = tmp.image;
   const items2 = [closure_12(require("FastImage"), obj5), , ,];
   const obj6 = {
@@ -110,7 +110,7 @@ export default function XboxLinkDiscordSuccess() {
   const obj9 = { style: tmp.appLogoBox, children: null };
   const obj10 = { source: null, style: null };
   const tmp15 = require("FastImage");
-  obj10.source = require("../../../../../../../_runtime/metro/12006__.js");
+  obj10.source = require("../../../../../../../_runtime/metro/12044__.js");
   obj10.style = tmp.appLogo;
   obj9.children = closure_12(require("FastImage"), obj10);
   const items3 = [closure_12(closure_5, obj9), ,];

@@ -1,102 +1,120 @@
 // discord_app/modules/orbs_arcade/native/OrbsArcadeRewardUnlockedSheet.tsx
+import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 
 const require = fn;
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(5014);
+let obj2 = { chain: { marginHorizontal: nativeDefault.space.PX_8 } };
+let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadeRewardUnlockedSheet.tsx");
 
 export default function OrbsArcadeRewardUnlockedSheet(gameId) {
   gameId = gameId.gameId;
   let stateFromStores1;
+  const tmp = closure_8();
   const items = [OrbsArcadeStore];
   const items1 = [gameId];
-  const stateFromStores = gameId(stateFromStores1[3]).useStateFromStores(
+  const stateFromStores = gameId(stateFromStores1[6]).useStateFromStores(
     items,
     () => OrbsArcadeStore.getGame(gameId),
     items1,
   );
-  const obj = gameId(stateFromStores1[3]);
+  const obj = gameId(stateFromStores1[6]);
   const items2 = [OrbsArcadeStore];
   const items3 = [gameId];
-  stateFromStores1 = gameId(stateFromStores1[3]).useStateFromStores(
+  stateFromStores1 = gameId(stateFromStores1[6]).useStateFromStores(
     items2,
     () => OrbsArcadeStore.getGameStateForGame(gameId),
     items3,
+  );
+  const obj2 = gameId(stateFromStores1[6]);
+  const items4 = [OrbsArcadeStore];
+  const stateFromStores2 = gameId(stateFromStores1[6]).useStateFromStores(
+    items4,
+    () => ownedRewardSkuIds.ownedRewardSkuIds,
   );
   let rewards;
   if (stateFromStores != null) {
     rewards = stateFromStores.rewards;
   }
-  const items4 = [rewards, stateFromStores1];
-  const memo = noop.useMemo(() => {
+  const items5 = [rewards, stateFromStores1, stateFromStores2];
+  const memo = stateFromStores2.useMemo(() => {
     let flag;
     if (stateFromStores != null) {
       const rewards = stateFromStores.rewards;
-      flag = rewards.every((id) => {
-        const orbsArcadeRewardStatus = gameId(stateFromStores1[4]).getOrbsArcadeRewardStatus(id.id, closure_1_2);
-        return orbsArcadeRewardStatus !== gameId(stateFromStores1[5]).OrbsArcadeRewardStatus.LOCKED;
+      flag = rewards.every((item) => {
+        const orbsArcadeRewardStatus = gameId(stateFromStores1[7]).getOrbsArcadeRewardStatus(
+          item,
+          closure_1_2,
+          stateFromStores2,
+        );
+        return orbsArcadeRewardStatus !== gameId(stateFromStores1[8]).OrbsArcadeRewardStatus.LOCKED;
       });
     }
     if (flag == null) {
       flag = false;
     }
     return flag;
-  }, items4);
+  }, items5);
   if (null == stateFromStores) {
     return null;
   } else {
-    const length = tmp(tmp2[4]).getOrbsArcadeClaimableRewards(stateFromStores.rewards, stateFromStores1).length;
+    const length = tmp2(tmp3[7]).getOrbsArcadeClaimableRewards(stateFromStores.rewards, stateFromStores1).length;
     let str = stateFromStores.name;
     if (str == null) {
       str = "";
     }
-    const obj3 = {
+    const obj4 = {
       gradientColor: "blue",
-      illustration: closure_5(tmp(tmp2[7]).GameTrophySpotIllustration, { scale: 0.5 }),
+      illustration: closure_6(tmp2(tmp3[10]).GameTrophySpotIllustration, { scale: 0.55 }),
       title: null,
       description: null,
       actions: null,
     };
-    const intl = tmp(tmp2[8]).intl;
+    const intl = tmp2(tmp3[11]).intl;
     if (memo) {
-      let v2ld2SU = tmp(tmp2[8]).t["2ld2SU"];
+      let v2ld2SU = tmp2(tmp3[11]).t["2ld2SU"];
     } else if (length > 1) {
-      v2ld2SU = tmp(tmp2[8]).t.NmSe9v;
+      v2ld2SU = tmp2(tmp3[11]).t.NmSe9v;
     } else {
-      v2ld2SU = tmp(tmp2[8]).t["/xryus"];
+      v2ld2SU = tmp2(tmp3[11]).t["/xryus"];
     }
-    obj3.title = intl.string(v2ld2SU);
-    const intl2 = tmp(tmp2[8]).intl;
-    const t = tmp(tmp2[8]).t;
-    const obj4 = { gameName: str };
-    obj3.description = intl2.formatToPlainString(memo ? t["x+5mCs"] : t.xUeO0j, obj4);
-    const obj5 = { spacing: stateFromStores(tmp2[10]).space.PX_24, children: null };
-    const obj6 = {
+    obj4.title = intl.string(v2ld2SU);
+    const intl2 = tmp2(tmp3[11]).intl;
+    const t = tmp2(tmp3[11]).t;
+    const obj5 = { gameName: str };
+    obj4.description = intl2.formatToPlainString(memo ? t["x+5mCs"] : t.xUeO0j, obj5);
+    const obj6 = { spacing: stateFromStores(tmp3[5]).space.PX_24, children: null };
+    const obj7 = { style: tmp.chain, children: null };
+    const obj8 = {
       game: stateFromStores,
       gameState: stateFromStores1,
       grantAnimatedOnOpenRewardIds: gameId.unlockedRewardIds,
     };
-    const items5 = [closure_5(stateFromStores(tmp2[11]), obj6)];
-    const obj7 = {
+    obj7.children = closure_6(stateFromStores(tmp3[13]), obj8);
+    const items6 = [closure_6(View, obj7)];
+    const obj9 = {
       game: stateFromStores,
       sheetKey: "OrbsArcadeRewardUnlockedSheet",
       primaryAction: null,
       secondaryAction: null,
     };
     let CLAIM = null;
-    const tmpResult = tmp(tmp2[4]);
+    const tmp2Result = tmp2(tmp3[7]);
     if (length > 0) {
-      CLAIM = tmp(tmp2[12]).OrbsArcadeSheetPrimaryAction.CLAIM;
+      CLAIM = tmp2(tmp3[14]).OrbsArcadeSheetPrimaryAction.CLAIM;
     }
-    obj7.primaryAction = CLAIM;
-    obj7.secondaryAction = tmp(tmp2[12]).OrbsArcadeSheetSecondaryAction.CLOSE;
-    items5[1] = closure_5(stateFromStores(tmp2[12]), obj7);
-    obj5.children = items5;
-    obj3.actions = closure_6(tmp(tmp2[9]).Stack, obj5);
-    return closure_5(tmp(tmp2[6]).PromoSheet, obj3);
+    obj9.primaryAction = CLAIM;
+    obj9.secondaryAction = tmp2(tmp3[14]).OrbsArcadeSheetSecondaryAction.CLOSE;
+    items6[1] = closure_6(stateFromStores(tmp3[14]), obj9);
+    obj6.children = items6;
+    obj4.actions = closure_7(tmp2(tmp3[12]).Stack, obj6);
+    return closure_6(tmp2(tmp3[9]).PromoSheet, obj4);
   }
-  const obj2 = gameId(stateFromStores1[3]);
+  const obj3 = gameId(stateFromStores1[6]);
 }

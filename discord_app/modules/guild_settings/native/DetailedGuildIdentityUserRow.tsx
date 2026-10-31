@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   mainIdentity: { flexDirection: "row", alignItems: "center" },
   primaryAvatar: { marginRight: nativeDefault.space.PX_4 },

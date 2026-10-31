@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileTabPages.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 

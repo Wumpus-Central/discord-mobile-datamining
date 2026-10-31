@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
@@ -80,9 +80,9 @@ function ReactionNotificationBodyWrapper(arg0) {
   dependencyMap = tmp3;
   const tmp4 = closure_13();
   noop = tmp4;
-  const AnimateEmoji = message(4834).AnimateEmoji;
+  const AnimateEmoji = message(4839).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  const previewableMedia = message(11040).usePreviewableMedia(message);
+  const previewableMedia = message(11059).usePreviewableMedia(message);
   const items = [setting, reaction, , ,];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
   const emojiHook = noop.useCallback(() => {
@@ -223,22 +223,22 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj = message(11040);
-  const hasPreviewableMedia = message(11003).useHasPreviewableMedia(message);
-  let obj2 = message(11003);
+  let obj = message(11059);
+  const hasPreviewableMedia = message(11022).useHasPreviewableMedia(message);
+  let obj2 = message(11022);
   if (hasPreviewableMedia) {
     message = obj3.useGetInitialMessagePreview({ message });
   }
   if (renderAnnouncementText) {
     let obj4 = { text: null };
-    let intl2 = tmp5(1114).intl;
+    let intl2 = tmp5(1113).intl;
     let obj5 = { count: reactionCount };
-    obj4.text = intl2.format(tmp5(1114).t.Tqk79E, obj5);
+    obj4.text = intl2.format(tmp5(1113).t.Tqk79E, obj5);
     return closure_10(ReactionNotificationBody, obj4);
   } else if (isMilestone) {
-    let intl = tmp5(1114).intl;
+    let intl = tmp5(1113).intl;
     let format = intl.format;
-    let t = tmp5(1114).t;
+    let t = tmp5(1113).t;
     if (tmp3) {
       let obj6 = { count: reactionCount };
       let formatResult = format(t.NfZxrD, obj6);
@@ -252,7 +252,7 @@ function ReactionNotificationBodyWrapper(arg0) {
     let obj9 = { text, secondaryText, hasMessageContent: tmp3, messagePreview: message };
     return closure_10(ReactionNotificationBody, obj9);
   }
-  obj3 = message(11046);
+  obj3 = message(11065);
 }
 function ReactorNotificationIcon(notification) {
   ({ user, guild, channel } = notification.notification);
@@ -279,7 +279,7 @@ function ReactorNotificationIcon(notification) {
   tmp = closure_13();
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(11004);
+const InAppNotificationConstants = fn(11023);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Constants = fn(1072);
@@ -287,7 +287,7 @@ const Constants = fn(1072);
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   newContainerRoleDot: { paddingRight: 4, paddingTop: 0 },
   container: { flexDirection: "column" },
@@ -296,14 +296,14 @@ let obj2 = {
   italic: null,
   guildIcon: null,
 };
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1376);
 let tmp5;
 if (!PlatformUtils.isIOS()) {
   let items = [{ translateY: 2 }];
   tmp5 = items;
 }
 obj2.imageEmoji = { height: 16, width: 16, transform: tmp5 };
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1376);
 obj2.italic = {
   fontStyle: "italic",
   fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC,
@@ -434,7 +434,7 @@ export default function ReactionNotification(notification) {
   const callback1 = obj2.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(11048, dependencyMap.paths),
+        asyncRequireImpl(11067, dependencyMap.paths),
         { channelId: id },
         "in-app-notification-settings-modal",
       ),

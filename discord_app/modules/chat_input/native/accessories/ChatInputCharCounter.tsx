@@ -10,10 +10,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ MAX_MESSAGE_LENGTH: metroRequire, UpsellTypes: closure_7 } = Constants);
-const PremiumUpsellTypes = fn(1386).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1385).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
 let closure_11 = createStyles.createStyles(obj);
 class ChatCounter {

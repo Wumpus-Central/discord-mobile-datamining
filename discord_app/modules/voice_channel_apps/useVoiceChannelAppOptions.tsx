@@ -76,7 +76,7 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
     () => application_id.map((application_id) => application_id.application_id),
     items5,
   );
-  const tmp9 = memo5(7324)(memo1, false);
+  const tmp9 = memo5(7330)(memo1, false);
   closure_129_4 = tmp9;
   let obj3 = require("initialize");
   const tmp8 = memo5;
@@ -173,7 +173,7 @@ export function useVoiceChannelAppSettingOptions(guildId, application_id) {
       }),
     items11,
   );
-  const tmp21 = tmp8(7324)(memo4);
+  const tmp21 = tmp8(7330)(memo4);
   closure_129_11 = tmp21;
   const items12 = [memo3, tmp21];
   memo5 = obj.useMemo(

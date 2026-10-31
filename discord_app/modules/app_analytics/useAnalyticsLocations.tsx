@@ -1,6 +1,6 @@
 // discord_app/modules/app_analytics/useAnalyticsLocations.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
-import _modDef1343 from "../../../_runtime/metro/01343__.js";
+import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -41,7 +41,7 @@ export default function useAnalyticsLocations() {
   }, items2);
   const items3 = [items, first];
   const effect = context.useEffect(() => {
-    if (!_modDef1343(items, first)) {
+    if (!_modDef1342(items, first)) {
       closure_2(items);
     }
   }, items3);

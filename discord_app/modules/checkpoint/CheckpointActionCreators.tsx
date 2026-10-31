@@ -18,7 +18,7 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -115,7 +115,7 @@ let closure_9 = async function _completeCheckpoint() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -183,7 +183,7 @@ let closure_10 = async function _resetCheckpoint() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -269,7 +269,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     while (true) {
@@ -318,10 +318,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(7629);
+                  const obj = checkpointCardType(7636);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(7817).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(7824).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -352,7 +352,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             }
           }
           c10 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         c8 = 0;

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/settings/native/ConjureSettingsSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,7 +30,7 @@ function SettingsTabStrip(tabs) {
     items,
   );
   const tmp = setActiveIndex(noop.useState(0), 2);
-  obj = tabs(8971);
+  obj = tabs(8980);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -52,29 +52,29 @@ function SettingsTabStrip(tabs) {
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(12476).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(12511).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp10Result = closure_12(tmp5(9195).SegmentedControl, obj5);
+    tmp10Result = closure_12(tmp5(9214).SegmentedControl, obj5);
   }
   obj3.children = tmp10Result;
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6838);
+let ConjureProjectStore = fn(6844);
 ({ canPublishProject: closure_9, isProjectOwner: c10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = {
-  project: _modDef3865.W0eQfN,
-  app: _modDef3865.lFaJYF,
-  secrets: _modDef3865.vDpCPU,
-  model: _modDef3865.Rs3qc9,
-  linked: _modDef3865.fBEHdq,
-  experimental: _modDef3865["0Pe9uw"],
+  project: _modDef3868.W0eQfN,
+  app: _modDef3868.lFaJYF,
+  secrets: _modDef3868.vDpCPU,
+  model: _modDef3868.Rs3qc9,
+  linked: _modDef3868.fBEHdq,
+  experimental: _modDef3868["0Pe9uw"],
 };
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_15 = createStyles.createStyles((paddingBottom) => {
   obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
   return obj;
@@ -244,7 +244,7 @@ export default function ConjureSettingsSheet(projectId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

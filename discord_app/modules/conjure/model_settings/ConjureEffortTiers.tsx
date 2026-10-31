@@ -1,13 +1,13 @@
 // discord_app/modules/conjure/model_settings/ConjureEffortTiers.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3865 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../intl/ConjureUntranslated.messages.js";
 import ConjureModelLabels from "ConjureModelLabels.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 require = fn;
 let closure_3 = ["thinking"];
 let closure_4 = ["fast"];
-let obj = { simple: _modDef3865.Mqb8mc, balanced: _modDef3865.zCZfA6, complex: _modDef3865["8l2atm"] };
+let obj = { simple: _modDef3868.Mqb8mc, balanced: _modDef3868.zCZfA6, complex: _modDef3868["8l2atm"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 
@@ -110,9 +110,9 @@ export function conjureCanPickModel(choices) {
 }
 export function conjureCustomizeMessage(choices) {
   if (choices.main.length > 0) {
-    let qSViP4 = _modDef3865.eGqPbV;
+    let qSViP4 = _modDef3868.eGqPbV;
   } else {
-    qSViP4 = _modDef3865.qSViP4;
+    qSViP4 = _modDef3868.qSViP4;
   }
   return qSViP4;
 }

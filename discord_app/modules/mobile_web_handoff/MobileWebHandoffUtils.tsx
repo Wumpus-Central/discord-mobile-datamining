@@ -1,5 +1,5 @@
 // discord_app/modules/mobile_web_handoff/MobileWebHandoffUtils.tsx
-import v1 from "../../../_runtime/01267_v1.js";
+import v1 from "../../../_runtime/01266_v1.js";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -15,7 +15,7 @@ let closure_4 = async function _createHandoffToken(key) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {

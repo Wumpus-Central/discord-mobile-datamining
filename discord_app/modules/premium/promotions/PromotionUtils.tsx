@@ -30,7 +30,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -128,7 +128,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1386).PromotionFlags;
+const PromotionFlags = fn(1385).PromotionFlags;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
 const size = fn(2);

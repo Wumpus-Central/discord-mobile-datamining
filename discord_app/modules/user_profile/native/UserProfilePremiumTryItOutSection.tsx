@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_16 },
   cardInner: null,
@@ -79,10 +79,10 @@ export default function UserProfilePremiumTryItOutSection(arg0) {
     onLayout: null,
     children: null,
   };
-  const intl = analyticsLocations(1114).intl;
-  obj.text = intl.format(analyticsLocations(1114).t.TmfgI2, { onClick: callback });
-  const intl2 = analyticsLocations(1114).intl;
-  obj.buttonText = intl2.string(analyticsLocations(1114).t.PxUx8e);
+  const intl = analyticsLocations(1113).intl;
+  obj.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
+  const intl2 = analyticsLocations(1113).intl;
+  obj.buttonText = intl2.string(analyticsLocations(1113).t.PxUx8e);
   obj.onButtonPress = onPreviewPremium;
   obj.onLayout = onLayout;
   const obj2 = { style: tmp.divider, children: null };
@@ -90,7 +90,7 @@ export default function UserProfilePremiumTryItOutSection(arg0) {
   const obj4 = { style: tmp.lockCircle, children: null };
   const obj3 = { style: tmp.dividerLine };
   const tmp4 = UserProfileUpsellCardV2Default;
-  obj4.children = closure_5(analyticsLocations(8659).LockIcon, {
+  obj4.children = closure_5(analyticsLocations(8667).LockIcon, {
     size: "xs",
     color: nativeDefault.colors.ICON_MUTED,
     style: tmp.lockIcon,

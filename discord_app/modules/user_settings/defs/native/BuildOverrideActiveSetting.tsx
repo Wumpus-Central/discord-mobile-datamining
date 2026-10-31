@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2142 from "../../dev_tools/UserSettingsDevTools.messages.js";
+import _modDef2141 from "../../dev_tools/UserSettingsDevTools.messages.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import build_overrides_BuildOverrideUtils from "../../../build_overrides/native/BuildOverrideUtils.tsx";
@@ -17,14 +17,14 @@ function handleBuildOverrideActivePress() {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const SettingBuilders = fn(11505);
+const SettingBuilders = fn(11539);
 const obj2 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2142.jBvMiO);
+    return intl.string(_modDef2141.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(12518).RefreshIcon,
+  IconComponent: fn(12553).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     const items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -42,7 +42,7 @@ const obj2 = {
       const obj3 = { label: null, value: null };
       const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj3.label = "" + intl.string(_modDef2142.d11XdP) + " ";
+      obj3.label = "" + intl.string(_modDef2141.d11XdP) + " ";
       obj3.value = stateFromStores.id;
       const items1 = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), ,];
       const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -54,7 +54,7 @@ const obj2 = {
       if (staffOrDeveloperSettingPredicate) {
         const obj5 = { text: null, variant: "secondary", onPress: null };
         const intl3 = util.intl;
-        obj5.text = intl3.string(_modDef2142.VBPcR9);
+        obj5.text = intl3.string(_modDef2141.VBPcR9);
         obj5.onPress = handleBuildOverrideActivePress;
         tmp7Result = React4(components_Button_Button.Button, obj5);
       }
@@ -86,10 +86,10 @@ const result = size.fileFinishedImporting("modules/user_settings/defs/native/Bui
 export default SettingBuilders.createStatic({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2142.jBvMiO);
+    return intl.string(_modDef2141.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(12518).RefreshIcon,
+  IconComponent: fn(12553).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     const items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {
@@ -107,7 +107,7 @@ export default SettingBuilders.createStatic({
       const obj3 = { label: null, value: null };
       const intl = util.intl;
       const _HermesInternal = HermesInternal;
-      obj3.label = "" + intl.string(_modDef2142.d11XdP) + " ";
+      obj3.label = "" + intl.string(_modDef2141.d11XdP) + " ";
       obj3.value = stateFromStores.id;
       const items1 = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), ,];
       const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -119,7 +119,7 @@ export default SettingBuilders.createStatic({
       if (staffOrDeveloperSettingPredicate) {
         const obj5 = { text: null, variant: "secondary", onPress: null };
         const intl3 = util.intl;
-        obj5.text = intl3.string(_modDef2142.VBPcR9);
+        obj5.text = intl3.string(_modDef2141.VBPcR9);
         obj5.onPress = handleBuildOverrideActivePress;
         tmp7Result = React4(components_Button_Button.Button, obj5);
       }

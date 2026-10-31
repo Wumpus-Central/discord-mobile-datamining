@@ -28,10 +28,10 @@ const result = size.fileFinishedImporting(
 export default function EnableCommunityModal() {
   const memo = noop.useMemo(() => {
     function headerRight() {
-      const obj = { source: closure_1_1(8351), onPress, accessibilityLabel: null };
-      const intl = closure_1_0(1114).intl;
-      obj.accessibilityLabel = intl.string(closure_1_0(1114).t.cpT0Cq);
-      return closure_1_4(closure_1_0(7552).HeaderActionButton, obj);
+      const obj = { source: closure_1_1(8359), onPress, accessibilityLabel: null };
+      const intl = closure_1_0(1113).intl;
+      obj.accessibilityLabel = intl.string(closure_1_0(1113).t.cpT0Cq);
+      return closure_1_4(closure_1_0(7558).HeaderActionButton, obj);
     }
     return {
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_1]: {
@@ -41,7 +41,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19773), {});
+          return closure_1_4(closure_1_1(19830), {});
         },
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_2]: {
@@ -50,7 +50,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19785), {});
+          return closure_1_4(closure_1_1(19842), {});
         },
       },
       [closure_1_0(closure_1_2[8]).EnableCommunityModalSteps.STEP_3]: {
@@ -59,7 +59,7 @@ export default function EnableCommunityModal() {
           return null;
         },
         render() {
-          return closure_1_4(closure_1_1(19786), {});
+          return closure_1_4(closure_1_1(19843), {});
         },
       },
     };

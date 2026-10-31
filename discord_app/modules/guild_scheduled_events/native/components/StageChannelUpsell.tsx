@@ -2,28 +2,28 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef8351 from "../../../../../_runtime/metro/08351__.js";
-import _modDef9016 from "../../../../../_runtime/metro/09016__.js";
+import _modDef8359 from "../../../../../_runtime/metro/08359__.js";
+import _modDef9025 from "../../../../../_runtime/metro/09025__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const createChannelRecord = fn(4862).createChannelRecord;
-let closure_6 = fn(9015).useStageChannelUpsellCardStore;
-let closure_7 = fn(8954).CREATE_GUILD_EVENT_MODAL_KEY;
+const createChannelRecord = fn(4867).createChannelRecord;
+let closure_6 = fn(9024).useStageChannelUpsellCardStore;
+let closure_7 = fn(8963).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     flexDirection: "column",
@@ -52,10 +52,10 @@ export default function StageChannelUpsell(arg0) {
   if (!tmp2[0]) {
     let obj = { style: tmp.container, children: null };
     let obj2 = { onPress: tmp3, accessibilityRole: "button", style: tmp.closeContainer, children: null };
-    let obj3 = { source: _modDef8351 };
+    let obj3 = { source: _modDef8359 };
     obj2.children = closure_9(native.Icon, obj3);
     const items = [closure_9(Pressables.PressableOpacity, obj2), , , , ,];
-    const obj4 = { source: _modDef9016, style: tmp.image };
+    const obj4 = { source: _modDef9025, style: tmp.image };
     items[1] = closure_9(FastImageDefault, obj4);
     const obj5 = { style: tmp.header, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -70,7 +70,7 @@ export default function StageChannelUpsell(arg0) {
     const obj8 = {
       suggestionsHook(children, arg1) {
         return closure_1_9(
-          guildId(5619).Text,
+          guildId(5624).Text,
           { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children },
           arg1,
         );
@@ -85,7 +85,7 @@ export default function StageChannelUpsell(arg0) {
     obj10.onPress = function handleCreateChannel() {
       ModalActionCreatorsDefault.popWithKey(closure_7);
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(9017, dependencyMap.paths),
+        asyncRequireImpl(9026, dependencyMap.paths),
         {
           guildId,
           channelType: ChannelTypes.GUILD_STAGE_VOICE,

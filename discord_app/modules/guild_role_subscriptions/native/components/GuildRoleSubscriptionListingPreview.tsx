@@ -51,7 +51,7 @@ function Header(onPress) {
     ,
     ,
   ];
-  obj6 = { style: tmp.image, source: null };
+  const obj6 = { style: tmp.image, source: null };
   const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
   if (str == null) {
     str = "";
@@ -180,22 +180,14 @@ class BenefitsSection {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
-  container: { padding: 16 },
-  header: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-    borderTopStartRadius: 8,
-    borderTopEndRadius: 8,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: 16,
-  },
-  image: { width: 80, height: 80, borderRadius: 40, marginTop: 16 },
-  priceGroup: { marginTop: 16, alignItems: "center" },
-  priceInterval: { marginTop: 4 },
-  content: { paddingHorizontal: 16 },
+  container: { padding: nativeDefault.space.PX_16 },
+  header: null,
+  image: null,
+  priceGroup: null,
+  priceInterval: null,
+  content: null,
   contentWithBackground: null,
   separator: null,
   sectionLabel: null,
@@ -203,30 +195,55 @@ let obj2 = {
   roundedBenefitsContainer: null,
   footer: null,
 };
-let obj3 = {
+let obj3 = { padding: nativeDefault.space.PX_16 };
+obj2.header = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   borderTopStartRadius: 8,
   borderTopEndRadius: 8,
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  padding: 16,
+  padding: nativeDefault.space.PX_16,
 };
+let size = { width: 80, height: 80, borderRadius: 40, marginTop: nativeDefault.space.PX_16 };
+obj2.image = size;
+let obj4 = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  borderTopStartRadius: 8,
+  borderTopEndRadius: 8,
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  padding: nativeDefault.space.PX_16,
+};
+obj2.priceGroup = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
+let obj5 = { marginTop: nativeDefault.space.PX_16, alignItems: "center" };
+obj2.priceInterval = { marginTop: nativeDefault.space.PX_4 };
+let obj6 = { marginTop: nativeDefault.space.PX_4 };
+obj2.content = { paddingHorizontal: nativeDefault.space.PX_16 };
+let obj7 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.contentWithBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-let size = { width: "100%", height: 1, marginTop: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj2.separator = size;
-obj2.sectionLabel = { paddingVertical: 16 };
-obj2.benefitSpacing = { marginTop: 16 };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const size1 = {
+  width: "100%",
+  height: 1,
+  marginTop: nativeDefault.space.PX_16,
+  backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
+};
+obj2.separator = size1;
+let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.sectionLabel = { paddingVertical: nativeDefault.space.PX_16 };
+let obj9 = { paddingVertical: nativeDefault.space.PX_16 };
+obj2.benefitSpacing = { marginTop: nativeDefault.space.PX_16 };
+let obj10 = { marginTop: nativeDefault.space.PX_16 };
 obj2.roundedBenefitsContainer = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   borderRadius: nativeDefault.radii.lg,
-  padding: 16,
+  padding: nativeDefault.space.PX_16,
 };
 obj2.footer = { borderBottomStartRadius: 8, borderBottomEndRadius: 8, height: 16 };
 const React7 = createStyles.createStyles(obj2);
-let obj6 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
-BenefitsSection.Looks = obj6;
+const obj12 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
+BenefitsSection.Looks = obj12;
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx",
@@ -242,7 +259,7 @@ export function GuildRoleSubscriptionListingPreview(arg0) {
   const role = GuildRoleSubscriptionListingEditStateUtilsAll.useRole(listingId, guildId);
   const merged = Object.assign(arg0);
   const items = [timestampProducer(Header, {}), , , ,];
-  obj6 = { label: null, children: null };
+  const obj6 = { label: null, children: null };
   const intl = util.intl;
   obj6.label = intl.string(util.t.FJZmYx);
   obj6.children = timestampProducer(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, { role });

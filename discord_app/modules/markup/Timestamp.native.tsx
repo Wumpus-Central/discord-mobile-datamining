@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = {
   timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE },
 };
@@ -22,7 +22,7 @@ export default function Timestamp(node) {
     style = node.style;
   }
   const tmp2 = useFormattedTimestampDefault(node);
-  return jsx(node(1188).LegacyText, {
+  return jsx(node(1187).LegacyText, {
     style,
     onPress() {
       ToastActionCreatorsDefault.open("TIMESTAMP", { text: node.full });

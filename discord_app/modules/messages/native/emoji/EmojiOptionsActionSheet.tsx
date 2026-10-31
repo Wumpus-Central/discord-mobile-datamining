@@ -19,11 +19,11 @@ export default function EmojiOptionsActionSheet(emojiSrc) {
   }, items);
   let obj = { children: null };
   let obj2 = { hasIcons: true, children: null };
-  const obj3 = { icon: jsx(emojiSrc(5722).LinkIcon, {}), label: null, onPress: null };
-  const intl = emojiSrc(1114).intl;
-  obj3.label = intl.string(emojiSrc(1114).t.cIoudn);
+  const obj3 = { icon: jsx(emojiSrc(5727).LinkIcon, {}), label: null, onPress: null };
+  const intl = emojiSrc(1113).intl;
+  obj3.label = intl.string(emojiSrc(1113).t.cIoudn);
   obj3.onPress = callback;
-  obj2.children = jsx(emojiSrc(6969).TableRow, { icon: jsx(emojiSrc(5722).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(emojiSrc(7054).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(emojiSrc(7360).ActionSheet, { children: null });
+  obj2.children = jsx(emojiSrc(6975).TableRow, { icon: jsx(emojiSrc(5727).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(emojiSrc(7060).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(emojiSrc(7366).ActionSheet, { children: null });
 }

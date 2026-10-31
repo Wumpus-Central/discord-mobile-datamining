@@ -31,10 +31,10 @@ export default noop.memo(function GuildsBarFavorites() {
   const memo = noop.useMemo(
     () => ({
       onPress() {
-        closure_1_1(18329)(closure_1_5);
+        closure_1_1(18372)(closure_1_5);
       },
       onLongPress() {
-        closure_1_1(18138)();
+        closure_1_1(18181)();
       },
     }),
     [],
@@ -64,10 +64,10 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: "AUDIO_TOGGLE_SELF_DEAF",
-    externalChildren: "AUDIO_TOGGLE_SELF_MUTE",
-    expandedChildren: "VOICE_STATE_UPDATES",
-    children: "CONSOLE_COMMAND_UPDATE",
+    label: 0,
+    externalChildren: null,
+    expandedChildren: null,
+    children: null,
   };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
   let intl = util.intl;
@@ -88,9 +88,9 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: "AUDIO_TOGGLE_SELF_DEAF",
-    externalChildren: "AUDIO_TOGGLE_SELF_MUTE",
-    expandedChildren: "VOICE_STATE_UPDATES",
-    children: "CONSOLE_COMMAND_UPDATE",
+    label: 0,
+    externalChildren: null,
+    expandedChildren: null,
+    children: null,
   });
 });

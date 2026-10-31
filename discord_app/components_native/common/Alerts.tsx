@@ -258,7 +258,7 @@ let items3 = [SurveyStore];
 obj3.stores = items3;
 items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj4 = { alertWrapper: null, alertContentWrapper: null };
 let obj6 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -280,7 +280,7 @@ const __initData3 = {
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_12(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "sa", renderKey: "isArray", props: "isArray" });
+let closure_23 = Object.freeze({ renderAlert: "dispatch", renderKey: "isArray", props: "isArray" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -312,7 +312,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "sa", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "dispatch", renderKey: "isArray", props: "isArray" };
       }
     }
   });

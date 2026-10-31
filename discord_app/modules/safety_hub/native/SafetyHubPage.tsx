@@ -3,8 +3,8 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
-import _modDef3189 from "../../age_assurance/ManualReview.messages.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
+import _modDef3192 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
@@ -59,7 +59,7 @@ function ManualOrAutomatedReviewBanner() {
   _require = closure_22();
   const obj = { type: "critical", message: null, role: "alert", action: null };
   const intl = require("util").intl;
-  obj.message = intl.format(_modDef3189.vPoM8y, {
+  obj.message = intl.format(_modDef3192.vPoM8y, {
     manualReviewHook(children, arg1) {
       return closure_2_12(
         Text_Text.Text,
@@ -171,12 +171,12 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(7962).AgeCheckStatus;
+const AgeCheckStatus = fn(7970).AgeCheckStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -217,7 +217,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16590, dependencyMap.paths),
+          asyncRequireImpl(16632, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

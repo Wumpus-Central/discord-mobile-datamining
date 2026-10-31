@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = { surface: { padding: nativeDefault.space.PX_12 } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

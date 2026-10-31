@@ -8,11 +8,11 @@ import MessageStore from "../../stores/MessageStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9874);
+let useChatBottomManagerUIStore = fn(9895);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.round,
@@ -22,7 +22,7 @@ let obj2 = {
   containerIOS: { bottom: "100%", pointerEvents: "box-none" },
 };
 let closure_10 = createStyles.createStyles(obj2);
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let closure_11 = PlatformUtils.isIOS()
   ? (View) => {
       const obj = { marginBottom: null };
@@ -62,10 +62,10 @@ export default function JumpToPresentButton(channelId) {
     return tmp;
   });
   const obj = channelId(504);
-  const isVoicePanelMounted = channelId(11822).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(11822);
-  const isVoicePanelOpen = channelId(11822).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(11822);
+  const isVoicePanelMounted = channelId(11860).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(11860);
+  const isVoicePanelOpen = channelId(11860).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(11860);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(
     items1,
@@ -80,9 +80,9 @@ export default function JumpToPresentButton(channelId) {
     const items2 = [tmp.containerIOS, tmp2];
     tmp10 = items2;
   }
-  const intl = tmp3(1114).intl;
+  const intl = tmp3(1113).intl;
   const string = intl.string;
-  const t = tmp3(1114).t;
+  const t = tmp3(1113).t;
   if (stateFromStores) {
     let stringResult = string(t.dpjpOp);
   } else {
@@ -92,15 +92,15 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13776), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(13775), {
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13811), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(13810), {
       accessibilityLabel: stringResult,
-      icon: screenIndex(13776),
+      icon: screenIndex(13811),
       onPress: channelId.onJumpToPresent,
     });
-    const tmp16 = screenIndex(13775);
+    const tmp16 = screenIndex(13810);
   } else {
-    tmp12Result = jsx(tmp3(13777).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(13812).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

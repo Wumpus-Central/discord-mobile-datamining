@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetySystemNotificationEmbed.tsx
 import _mod17 from "../../../../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../../../Constants.tsx";
-import util from "../../../../../../intl/index.native.tsx";
-import _modDef2044 from "../../../../../../../_runtime/metro/02044__.js";
 import SafetyHubUtils from "../../../../../safety_hub/SafetyHubUtils.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
+import SafetyWarningAgeUtils from "../../../../../safety_hub/SafetyWarningAgeUtils.tsx";
+import SafetyWarningAgeTextExperiment from "../../../../../safety_hub/experiments/SafetyWarningAgeTextExperiment.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -49,7 +49,7 @@ export function createSafetySystemNotificationEmbed(message) {
                   parseMessageForPropsResult.learn_more_link,
                   parseMessageForPropsResult.classification_id,
                 );
-                const tmp6Result3 = SafetyHubUtils;
+                const tmp6Result6 = SafetyHubUtils;
               }
               tmp9 = mapCtaToNativeDataResult1;
               tmp10 = mapCtaToNativeDataResult;
@@ -61,7 +61,7 @@ export function createSafetySystemNotificationEmbed(message) {
             const obj2 = {
               titleText: str,
               titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(
-                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8019 : 8603)),
+                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8027 : 8611)),
               ),
               subtitleText: null,
               descriptionText: null,
@@ -73,16 +73,18 @@ export function createSafetySystemNotificationEmbed(message) {
               secondaryCtaKey: null,
               footerTheme: null,
             };
-            const intl = util.intl;
+            const tmp6Result7 = renderer_EmbedUtils;
+            const tmp6Result8 = SafetyWarningAgeUtils;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {
               num = 0;
             }
-            const obj3 = { daysAgo: null };
-            const tmp6Result4 = renderer_EmbedUtils;
-            const obj7 = _modDef2044();
-            obj3.daysAgo = obj7.diff(_modDef2044.unix(num), "days");
-            obj2.subtitleText = intl.formatToPlainString(util.t.eevFb6, obj3);
+            const daysAgo = SafetyWarningAgeUtils.getDaysAgo(num);
+            const tmp6Result9 = SafetyWarningAgeUtils;
+            obj2.subtitleText = tmp6Result8.formatSafetyWarningAge(
+              daysAgo,
+              SafetyWarningAgeTextExperiment.getIsSafetyWarningAgeTextEnabled("safety_warning_system_message"),
+            );
             let str4 = parseMessageForPropsResult.body;
             if (str4 == null) {
               str4 = "";

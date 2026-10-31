@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherBackButton.tsx
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01499_Link.js";
+import Link from "../../../../../_runtime/01498_Link.js";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ export default function AppLauncherBackButton(onPress) {
   const obj2 = {
     size: "sm",
     variant: "secondary-overlay",
-    icon: importDefault(canGoBackResult ? 6997 : 7049),
+    icon: importDefault(canGoBackResult ? 7003 : 7055),
     onPress: onPress.onPress,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,
@@ -26,7 +26,7 @@ export default function AppLauncherBackButton(onPress) {
   return jsx(IconButton.IconButton, {
     size: "sm",
     variant: "secondary-overlay",
-    icon: importDefault(canGoBackResult ? 6997 : 7049),
+    icon: importDefault(canGoBackResult ? 7003 : 7055),
     onPress: onPress.onPress,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,

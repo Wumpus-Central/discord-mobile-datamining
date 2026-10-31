@@ -1,7 +1,7 @@
 // discord_app/modules/polls/native/PollAnswerInput.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
@@ -94,13 +94,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7694).DraftType;
-const PollsConstants = fn(8398);
+const DraftType = fn(7701).DraftType;
+const PollsConstants = fn(8406);
 ({ MAX_POLL_ANSWER_LENGTH: c10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
-const EmojiIntention = fn(1387).EmojiIntention;
+const EmojiIntention = fn(1386).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
   inputContainer: { flex: 1 },
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12388, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12426, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -207,15 +207,15 @@ export default function PollAnswerInput(answer) {
     onBlur: null,
     blurOnSubmit: false,
     style: null,
-    selectionColor: "id",
-    textContentType: true,
-    accessibilityLabel: true,
-    accessibilityHint: true,
-    maxLength: true,
-    returnKeyType: true,
-    required: true,
-    autoCorrect: true,
-    "aria-invalid": true,
+    selectionColor: "children",
+    textContentType: false,
+    accessibilityLabel: false,
+    accessibilityHint: false,
+    maxLength: false,
+    returnKeyType: false,
+    required: false,
+    autoCorrect: false,
+    "aria-invalid": false,
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

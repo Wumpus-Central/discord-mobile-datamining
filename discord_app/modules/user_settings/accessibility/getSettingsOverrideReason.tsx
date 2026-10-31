@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/accessibility/getSettingsOverrideReason.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4058 from "../../game_mode/GameMode.messages.js";
+import _modDef4061 from "../../game_mode/GameMode.messages.js";
 import UserSettingsOverridesStore from "../UserSettingsOverridesStore.tsx";
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ export default function getSettingsOverrideReason(arg0) {
     return intl2.string(util.t["2ExvRu"]);
   } else if (constants.GAME_MODE === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef4058.VGcdxP);
+    return intl.string(_modDef4061.VGcdxP);
   }
 }
 export function useSettingsOverrideReason(arg0) {
@@ -35,7 +35,7 @@ export function useSettingsOverrideReason(arg0) {
       formatResult = intl.string(util.t["2ExvRu"]);
     } else if (constants.GAME_MODE === appliedOverrideReasonKey) {
       const intl3 = util.intl;
-      formatResult = intl3.string(_modDef4058.VGcdxP);
+      formatResult = intl3.string(_modDef4061.VGcdxP);
     }
     return formatResult;
   });

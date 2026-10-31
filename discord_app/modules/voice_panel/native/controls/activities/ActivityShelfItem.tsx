@@ -15,11 +15,11 @@ import useActivityShelfItem from "../../../../activities/utils/useActivityShelfI
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
 import getItemSubtitleForMaxPlayers from "../../../../activities/utils/getItemSubtitleForMaxPlayers.tsx";
-import _modDef14338 from "../../../../../../_runtime/metro/14338__.js";
+import _modDef14376 from "../../../../../../_runtime/metro/14376__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef19209 from "../../../../../../_runtime/metro/19209__.js";
+import _modDef19261 from "../../../../../../_runtime/metro/19261__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -71,7 +71,7 @@ function ParticipantsText(arg0) {
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
   const items1 = [
-    timestampProducer(native.Icon, { source: _modDef14338, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
+    timestampProducer(native.Icon, { source: _modDef14376, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
   ];
   const obj4 = {
     lineClamp: 1,
@@ -101,10 +101,10 @@ function ParticipantsText(arg0) {
   return React6(tmp2Result, obj2);
 }
 const ThemeTypes = fn(1072).ThemeTypes;
-const ANDROID_FOREGROUND_RIPPLE = fn(1192).ANDROID_FOREGROUND_RIPPLE;
+const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     borderRadius: nativeDefault.radii.md,
@@ -129,7 +129,7 @@ let obj2 = {
   developerIconColor: null,
 };
 let obj4 = { backgroundColor: null, borderRadius: null };
-const ColorUtils = fn(5006);
+const ColorUtils = fn(5011);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.5);
 obj4.borderRadius = nativeDefault.radii.round;
 obj2.overlayBubble = obj4;
@@ -259,7 +259,7 @@ export default function ActivityShelfItem(arg0) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
       const obj10 = {
         size: native.Icon.Sizes.REFRESH_SMALL_16,
-        source: _modDef19209,
+        source: _modDef19261,
         color: tmp.developerIconColor.color,
       };
       obj9.children = timestampProducer(native.Icon, obj10);

@@ -8,9 +8,9 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(9806);
+const SearchConstants = fn(9827);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-let closure_9 = fn(9805).SearchResultContentEntityTypes;
+let closure_9 = fn(9826).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/PeopleScreen.tsx");
@@ -56,7 +56,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -102,7 +102,7 @@ export default noop.memo(function PeopleScreen(searchContext) {
             const result = closure_1(stateFromStores[12]).trackSearchResultClicked(obj7);
             onPressDMItem(closure_130_0, closure_130_2);
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp10) {
           c5 = tmp;

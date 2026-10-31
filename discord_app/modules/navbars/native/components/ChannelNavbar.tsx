@@ -113,10 +113,10 @@ function DMChannelName(style) {
     accessibilityRole: "header",
     children: null,
   };
-  const intl = userId(1114).intl;
-  obj2.accessibilityLabel = intl.formatToPlainString(userId(1114).t.fYqXVY, { channelName: stateFromStores });
+  const intl = userId(1113).intl;
+  obj2.accessibilityLabel = intl.formatToPlainString(userId(1113).t.fYqXVY, { channelName: stateFromStores });
   obj2.children = stateFromStores;
-  return closure_16(userId(1188).LegacyText, obj2);
+  return closure_16(userId(1187).LegacyText, obj2);
 }
 function ConnectedStatus(style) {
   const userId = style.userId;
@@ -132,25 +132,25 @@ function ConnectedStatus(style) {
   });
   ({ status, isMobileOnline, isVROnline, streaming } = stateFromStoresObject);
   let obj = userId(504);
-  return closure_16(userId(1188).Status, {
+  return closure_16(userId(1187).Status, {
     isMobileOnline,
     isVROnline,
     status,
     streaming,
-    size: userId(1188).StatusSizes.SMALL,
+    size: userId(1187).StatusSizes.SMALL,
     style: style.style,
   });
 }
 const View = fn(17).View;
-const THREAD_CHANNEL_TYPES = fn(4862).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4867).THREAD_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_12, Fonts } = Constants);
-const StaticChannelRoute = fn(4865).StaticChannelRoute;
-const DismissibleContentConstants = fn(4855);
+const StaticChannelRoute = fn(4870).StaticChannelRoute;
+const DismissibleContentConstants = fn(4860);
 ({ ContentDismissActionType: closure_14, DismissibleContentGroupName: closure_15 } = DismissibleContentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   navbarTitleContainer: { height: "100%", flex: 1, flexDirection: "row", alignItems: "center" },
   navbarTitlePrimaryText: null,
@@ -519,11 +519,11 @@ export function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(9090), obj)];
+      const children1 = [closure_16(closure_1(9109), obj)];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
-        const items1 = [onPress(4842).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP];
+        const items1 = [onPress(4847).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP];
         obj2.contentTypes = items1;
         obj2.groupName = constants2.CHANNEL_HEADER_CALL_BUTTON_TOOLTIPS;
         obj2.children = function children(markAsDismissed) {
@@ -542,8 +542,8 @@ export function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10500), obj2);
-        const tmp4Result = closure_1(10500);
+        tmp3Result = closure_16(closure_1(10520), obj2);
+        const tmp4Result = closure_1(10520);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

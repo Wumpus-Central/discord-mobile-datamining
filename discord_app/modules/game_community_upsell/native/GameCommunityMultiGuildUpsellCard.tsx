@@ -19,7 +19,7 @@ const Constants = fn(1072);
 ({ GuildFeatures: c10, JoinGuildSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,
@@ -197,7 +197,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {

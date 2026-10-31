@@ -7,7 +7,7 @@ import NativeMarkdownExperiment from "../../../markup_v2/NativeMarkdownExperimen
 import ChangeLogStandardTemplate from "../../../../components_native/ChangeLogStandardTemplate.tsx";
 import renderMessageMarkup from "../../renderMessageMarkup.tsx";
 import parseNativeMarkupDefault from "../../../markup_v2/native/parseNativeMarkup.tsx";
-import priv from "../../../../../_runtime/01452_priv.js";
+import priv from "../../../../../_runtime/01451_priv.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const MessageTypes = Constants.MessageTypes;

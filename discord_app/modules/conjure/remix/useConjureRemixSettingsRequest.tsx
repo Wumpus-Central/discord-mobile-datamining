@@ -45,7 +45,7 @@ export default function useConjureRemixSettingsRequest(arg0, type) {
     if (null != settings_keys) {
       let obj2 = { keys: settings_keys, note: null };
       const intl = require("util").intl;
-      obj2.note = intl.string(settings_keys(3865).F2yVHg);
+      obj2.note = intl.string(settings_keys(3868).F2yVHg);
       tmp5 = obj2;
     }
   }

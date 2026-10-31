@@ -5,7 +5,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const ChannelTypes = fn(1072).ChannelTypes;
-const FramesConstants = fn(6841);
+const FramesConstants = fn(6847);
 ({ asLaunched: hasOwnProperty, getFrameSurfaceForChannel: metroRequire } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelRunningApp.tsx");
@@ -38,7 +38,7 @@ export default function useAppChannelRunningApp(arg0) {
     items1,
   );
   let obj = require("initialize");
-  let tmp4 = stateFromStores(14361)(stateFromStores);
+  let tmp4 = stateFromStores(14399)(stateFromStores);
   const items2 = [FramesStore];
   const items3 = [stateFromStores];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
@@ -67,8 +67,8 @@ export default function useAppChannelRunningApp(arg0) {
   let stringResult = null;
   ({ audible, userMuted } = stateFromStoresObject);
   if (tmp4) {
-    const intl = tmp(1114).intl;
-    stringResult = intl.string(tmp(1114).t["1yCkJY"]);
+    const intl = tmp(1113).intl;
+    stringResult = intl.string(tmp(1113).t["1yCkJY"]);
   }
   obj3.runningLabel = stringResult;
   obj3.audible = audible;

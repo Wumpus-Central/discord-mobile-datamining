@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   tag: {
     paddingHorizontal: 6,
@@ -21,7 +21,7 @@ let obj2 = {
   tagText: null,
 };
 const obj4 = { textAlign: "center", color: nativeDefault.unsafe_rawColors.WHITE, marginTop: null };
-const PlatformUtils = fn(1376);
+const PlatformUtils = fn(1375);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = -2;

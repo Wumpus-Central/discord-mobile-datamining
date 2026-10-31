@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3735 from "../intl/SlayerStorefront.messages.js";
+import _modDef3738 from "../intl/SlayerStorefront.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
@@ -333,12 +333,12 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(7401).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7407).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5009);
+let createStyles = fn(5014);
 let obj2 = {
   root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK },
   backdropImage: { position: "absolute", inset: 0, opacity: 0.45 },
@@ -423,7 +423,7 @@ obj2.finePrint = {
   marginBottom: nativeDefault.space.PX_12,
 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5009);
+createStyles = fn(5014);
 let obj17 = { linkAccountIcon: null };
 let obj15 = {
   textAlign: "center",
@@ -629,7 +629,7 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3735.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef3738.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

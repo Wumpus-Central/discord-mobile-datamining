@@ -19,8 +19,12 @@ prototype["initialize"] = function initialize(ackedChannelIds) {
 prototype["getState"] = function getState() {
   return { ackedChannelIds: Array.from(set) };
 };
-prototype["isAcked"] = function isAcked(arg0) {
-  return set.has(arg0);
+prototype["isHidden"] = function isHidden(arg0) {
+  let hasItem = set.has(arg0);
+  if (!hasItem) {
+    hasItem = set.size >= 2;
+  }
+  return hasItem;
 };
 PinotMemberNoticeAckStoreImpl.displayName = "PinotMemberNoticeAckStore";
 PinotMemberNoticeAckStoreImpl.persistKey = "PinotMemberNoticeAckStore";

@@ -194,7 +194,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               let obj3 = { node: root, direction: -1, selectedGuildId };
               let tmp36 = checkNodeAndIterate(obj3);
               if (null != tmp36) {
-                let obj4 = { beforeItem: "Array", afterItem: 0 };
+                let obj4 = { beforeItem: "Array", afterItem: null };
                 let obj5 = { section: tmp36.section + tmp50.GUILDS, row: tmp36.item, mention: true };
                 obj4.afterItem = obj5;
                 let tmp37 = obj4;
@@ -203,7 +203,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "Array" };
+            let obj6 = { beforeItem: null, afterItem: "a" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -215,18 +215,18 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6766).GuildsNodeType;
-const GuildsBarConstants = fn(18302);
+const GuildsNodeType = fn(6772).GuildsNodeType;
+const GuildsBarConstants = fn(18345);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(17004);
+const YouBarConstants = fn(17062);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });
-let closure_17 = { beforeItem: "color", afterItem: "Error" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
+let closure_17 = { beforeItem: "Array", afterItem: "flexDirection" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
 const __initData = {
   code: "function GuildsBarUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}",
 };

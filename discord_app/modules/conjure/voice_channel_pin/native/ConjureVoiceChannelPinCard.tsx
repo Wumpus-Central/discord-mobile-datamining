@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/voice_channel_pin/native/ConjureVoiceChannelPinCard.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
@@ -16,7 +16,7 @@ function ConjureVoiceChannelPinForm(projectId) {
   channels = undefined;
   dependencyMap = undefined;
   const tmp = closure_10();
-  const conjureVoiceChannelPinForm = channels(12617).useConjureVoiceChannelPinForm(projectId.projectId);
+  const conjureVoiceChannelPinForm = channels(12652).useConjureVoiceChannelPinForm(projectId.projectId);
   ({ guildId, channels } = conjureVoiceChannelPinForm);
   const selected = conjureVoiceChannelPinForm.selected;
   ({ setPicked: c2, pinning } = conjureVoiceChannelPinForm);
@@ -27,27 +27,27 @@ function ConjureVoiceChannelPinForm(projectId) {
   }
   let channelIconWithGuild = null;
   if (null != selected) {
-    channelIconWithGuild = tmp2(8595).getChannelIconWithGuild(selected, guild);
-    const tmp2Result = tmp2(8595);
+    channelIconWithGuild = tmp2(8603).getChannelIconWithGuild(selected, guild);
+    const tmp2Result = tmp2(8603);
   }
   let obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
-  let intl = tmp2(1114).intl;
-  obj2.children = intl.string(selected(3865)["1vVBAw"]);
-  const items = [closure_7(channels(5619).Text, obj2), , ,];
+  let intl = tmp2(1113).intl;
+  obj2.children = intl.string(selected(3868)["1vVBAw"]);
+  const items = [closure_7(channels(5624).Text, obj2), , ,];
   if (channels.length > 0) {
     let obj3 = { hasIcons: null != channelIconWithGuild, children: null };
     if (null == selected) {
-      const intl3 = tmp2(1114).intl;
-      let stringResult = intl3.string(tmp11(3865)["9+dfPT"]);
+      const intl3 = tmp2(1113).intl;
+      let stringResult = intl3.string(tmp11(3868)["9+dfPT"]);
     } else {
-      stringResult = tmp2(5647).computeChannelName(selected, UserStore, RelationshipStore);
-      const tmp2Result2 = tmp2(5647);
+      stringResult = tmp2(5652).computeChannelName(selected, UserStore, RelationshipStore);
+      const tmp2Result2 = tmp2(5652);
     }
     let obj4 = { label: stringResult, icon: null, arrow: true, disabled: null, onPress: null };
     let tmp10Result;
     if (null != channelIconWithGuild) {
       const obj5 = { source: channelIconWithGuild };
-      tmp10Result = closure_7(tmp2(6977).TableRowIcon, obj5);
+      tmp10Result = closure_7(tmp2(6983).TableRowIcon, obj5);
     }
     obj4.icon = tmp10Result;
     obj4.disabled = pinning;
@@ -57,7 +57,7 @@ function ConjureVoiceChannelPinForm(projectId) {
       const obj4 = { title: null };
       const obj = ActionSheetActionCreators;
       const intl = util.intl;
-      obj4.title = intl.string(_modDef3865.peOi1H);
+      obj4.title = intl.string(_modDef3868.peOi1H);
       obj3.header = obj4;
       obj3.guild = guild;
       obj3.channels = channels;
@@ -68,39 +68,39 @@ function ConjureVoiceChannelPinForm(projectId) {
       obj2.content = React5(ChannelPickerActionSheetDefault, obj3);
       obj.showActionSheet(obj2);
     };
-    obj3.children = closure_7(tmp2(6969).TableRow, obj4);
-    let tmp10Result4 = closure_7(tmp2(7054).TableRowGroup, obj3);
+    obj3.children = closure_7(tmp2(6975).TableRow, obj4);
+    let tmp10Result4 = closure_7(tmp2(7060).TableRowGroup, obj3);
   } else {
     const obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
-    const intl2 = tmp2(1114).intl;
-    obj6.children = intl2.string(tmp11(3865).JVUsIY);
-    tmp10Result4 = closure_7(tmp2(5619).Text, obj6);
+    const intl2 = tmp2(1113).intl;
+    obj6.children = intl2.string(tmp11(3868).JVUsIY);
+    tmp10Result4 = closure_7(tmp2(5624).Text, obj6);
   }
   items[1] = tmp10Result4;
   let tmp10Result5 = null;
   if (failed) {
     const obj7 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
-    const intl4 = tmp2(1114).intl;
-    obj7.children = intl4.string(tmp11(3865).d7EeAm);
-    tmp10Result5 = closure_7(tmp2(5619).Text, obj7);
+    const intl4 = tmp2(1113).intl;
+    obj7.children = intl4.string(tmp11(3868).d7EeAm);
+    tmp10Result5 = closure_7(tmp2(5624).Text, obj7);
   }
   items[2] = tmp10Result5;
   const obj8 = { style: tmp.actions, children: null };
   const obj9 = { variant: "secondary", size: "sm", text: null, disabled: null, onPress: null };
-  const intl5 = tmp2(1114).intl;
-  obj9.text = intl5.string(selected(3865).Iw0l8o);
+  const intl5 = tmp2(1113).intl;
+  obj9.text = intl5.string(selected(3868).Iw0l8o);
   obj9.disabled = pinning;
   obj9.onPress = skip;
-  const items1 = [closure_7(channels(5629).Button, obj9)];
+  const items1 = [closure_7(channels(5634).Button, obj9)];
   let tmp10Result6 = null;
   if (channels.length > 0) {
     const obj10 = { variant: "primary", size: "sm", text: null, disabled: null, loading: null, onPress: null };
-    const intl6 = tmp2(1114).intl;
-    obj10.text = intl6.string(tmp11(3865).FYI3qr);
+    const intl6 = tmp2(1113).intl;
+    obj10.text = intl6.string(tmp11(3868).FYI3qr);
     obj10.disabled = null == selected;
     obj10.loading = pinning;
     obj10.onPress = pin;
-    tmp10Result6 = closure_7(tmp2(5629).Button, obj10);
+    tmp10Result6 = closure_7(tmp2(5634).Button, obj10);
   }
   const obj11 = { children: null };
   items1[1] = tmp10Result6;
@@ -112,7 +112,7 @@ function ConjureVoiceChannelPinForm(projectId) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, actions: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.actions = { flexDirection: "row", justifyContent: "flex-end", gap: nativeDefault.space.PX_8 };
@@ -130,14 +130,14 @@ export default function ConjureVoiceChannelPinCard(projectId) {
   const obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl2 = util.intl;
   let gKe6Lw = importDefault;
-  obj2.children = intl2.string(_modDef3865.UGAfl9);
+  obj2.children = intl2.string(_modDef3868.UGAfl9);
   const tmp5 = React5(Text_Text.Text, obj2);
   if (null != outcome) {
     const obj3 = { style: tmp.card, children: null };
     const items = [tmp5];
     if ("pinned" === outcome.status) {
       intl = util.intl;
-      gKe6Lw = _modDef3865.gKe6Lw;
+      gKe6Lw = _modDef3868.gKe6Lw;
       if (pinnedName == null) {
         pinnedName = "";
       }
@@ -145,7 +145,7 @@ export default function ConjureVoiceChannelPinCard(projectId) {
       let formatToPlainStringResult = intl.formatToPlainString(gKe6Lw, obj4);
     } else {
       const intl3 = util.intl;
-      formatToPlainStringResult = intl3.string(_modDef3865["+kpQ3v"]);
+      formatToPlainStringResult = intl3.string(_modDef3868["+kpQ3v"]);
     }
     const obj5 = { variant: "text-sm/normal", color: "text-default", children: formatToPlainStringResult };
     tmp4Result = React5(Text_Text.Text, obj5);

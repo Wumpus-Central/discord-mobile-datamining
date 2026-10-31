@@ -13,21 +13,19 @@ import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscrip
 
 require = fn;
 function DeleteButton(onDelete) {
-  const obj = { style: closure_15().deleteButton, children: null };
-  const obj2 = { variant: "critical-secondary", text: null, icon: null, onPress: null };
+  const obj = { variant: "critical-secondary", text: null, icon: null, onPress: null };
   const intl = util.intl;
-  obj2.text = intl.string(util.t.p4Bh7f);
-  obj2.icon = map1(TrashIcon.TrashIcon, {
+  obj.text = intl.string(util.t.p4Bh7f);
+  obj.icon = map1(TrashIcon.TrashIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT,
   });
-  obj2.onPress = onDelete.onDelete;
-  obj.children = map1(components_Button_Button.Button, obj2);
-  return map1(hasOwnProperty, obj);
+  obj.onPress = onDelete.onDelete;
+  return map1(components_Button_Button.Button, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(17125);
+const GuildRoleSubscriptionsConstants = fn(17183);
 ({
   GuildRoleSubscriptionBenefitTypes: c10,
   MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11,
@@ -35,7 +33,7 @@ const GuildRoleSubscriptionsConstants = fn(17125);
 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -45,16 +43,7 @@ let obj2 = {
     height: "100%",
   },
   scrollContainer: { flexGrow: 1 },
-  deleteButton: null,
 };
-let obj3 = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  height: "100%",
-};
-obj2.deleteButton = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -81,7 +70,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -159,7 +148,6 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     return value;
   };
   const tmp2 = closure_15();
-  const tmp5 = value(15680)();
   [value] = GuildRoleSubscriptionBenefitEditorModalStateStore.useNameState();
   dependencyMap = tmp7;
   [first1, _slicedToArray] = GuildRoleSubscriptionBenefitEditorModalStateStore.useEmojiIdState();
@@ -188,30 +176,31 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
   }
   if (!tmp14) {
     if (merged.benefitType === constants.CHANNEL) {
-      const intl2 = merged(1114).intl;
-      let stringResult = intl2.string(merged(1114).t.Odqwp9);
+      const intl2 = merged(1113).intl;
+      let stringResult = intl2.string(merged(1113).t.Odqwp9);
       let tmp21 = merged;
     } else {
-      const intl = merged(1114).intl;
-      stringResult = intl.string(merged(1114).t["0rVUnI"]);
+      const intl = merged(1113).intl;
+      stringResult = intl.string(merged(1113).t["0rVUnI"]);
       tmp21 = merged;
     }
     if (merged.benefitType === constants.CHANNEL) {
-      const intl4 = tmp21(1114).intl;
-      let stringResult1 = intl4.string(tmp21(1114).t.GK18KJ);
+      const intl4 = tmp21(1113).intl;
+      let stringResult1 = intl4.string(tmp21(1113).t.GK18KJ);
     } else {
-      const intl3 = tmp21(1114).intl;
-      stringResult1 = intl3.string(tmp21(1114).t["kV54/Y"]);
+      const intl3 = tmp21(1113).intl;
+      stringResult1 = intl3.string(tmp21(1113).t["kV54/Y"]);
     }
     if (merged.benefitType === constants.CHANNEL) {
-      const intl6 = tmp21(1114).intl;
-      let stringResult2 = intl6.string(tmp21(1114).t["DDUpp+"]);
+      const intl6 = tmp21(1113).intl;
+      let stringResult2 = intl6.string(tmp21(1113).t["DDUpp+"]);
     } else {
-      const intl5 = tmp21(1114).intl;
-      stringResult2 = intl5.string(tmp21(1114).t.NNqncc);
+      const intl5 = tmp21(1113).intl;
+      stringResult2 = intl5.string(tmp21(1113).t.NNqncc);
     }
     if (merged.benefitType === constants.CHANNEL) {
-      let obj2 = {
+      let obj2 = { title: stringResult1, hasIcons: true, children: null };
+      let obj3 = {
         channelId: first4,
         guildId: merged.guildId,
         onChange: function handleChannelSelected(id) {
@@ -219,12 +208,12 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
           closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
         },
       };
-      let tmp27 = closure_13(tmp3(19907), obj2);
+      obj2.children = closure_13(tmp3(19965), obj3);
+      let tmp27 = closure_13(tmp21(7060).TableRowGroup, obj2);
       let tmp28 = closure_13;
     } else {
       let obj = {
-        containerStyle: tmp5.inputContainer,
-        accessibilityLabel: stringResult1,
+        label: stringResult1,
         maxLength: maxLength2,
         value,
         placeholder: null,
@@ -233,14 +222,14 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
         autoFocus: true,
         clearable: true,
       };
-      const intl7 = tmp21(1114).intl;
-      obj.placeholder = intl7.string(tmp21(1114).t["kV54/Y"]);
+      const intl7 = tmp21(1113).intl;
+      obj.placeholder = intl7.string(tmp21(1113).t["kV54/Y"]);
       obj.onChange = tmp7;
-      tmp27 = closure_13(tmp21(7076).TextInput, obj);
+      tmp27 = closure_13(tmp21(7082).TextInput, obj);
       tmp28 = closure_13;
     }
-    let obj3 = { style: tmp2.container, children: null };
-    let obj4 = {
+    let obj4 = { style: tmp2.container, children: null };
+    let obj5 = {
       title: stringResult,
       onClose: merged.onClose,
       canSave: tmp14,
@@ -256,24 +245,24 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       },
       listingId: merged.listingId,
     };
-    const items = [tmp28(tmp3(19909), obj4)];
-    let obj5 = {
+    const items = [tmp28(tmp3(19967), obj5)];
+    const obj6 = {
       keyboardShouldPersistTaps: "handled",
       showsVerticalScrollIndicator: false,
       alwaysBounceVertical: false,
       contentContainerStyle: null,
       children: null,
     };
-    const items1 = [tmp2.scrollContainer];
-    const obj6 = { paddingBottom: value(1626)().bottom + 32 + 16 };
-    items1[1] = obj6;
-    obj5.contentContainerStyle = items1;
-    const obj7 = { style: tmp5.header, children: stringResult1 };
-    const items2 = [tmp28(tmp3(9093), obj7), tmp27, , , , ,];
-    const obj8 = { style: tmp5.header, children: null };
-    const intl8 = tmp21(1114).intl;
-    obj8.children = intl8.string(tmp21(1114).t.sMOuuS);
-    items2[2] = tmp28(tmp3(9093), obj8);
+    const items1 = [tmp2.scrollContainer, tmp5.container];
+    const obj7 = { paddingBottom: null };
+    const sum = value(1625)().bottom + tmp3(575).space.PX_32;
+    obj7.paddingBottom = sum + tmp3(575).space.PX_16;
+    items1[2] = obj7;
+    obj6.contentContainerStyle = items1;
+    const items2 = [tmp27, , ,];
+    const obj8 = { title: null, hasIcons: true, children: null };
+    const intl8 = tmp21(1113).intl;
+    obj8.title = intl8.string(tmp21(1113).t.sMOuuS);
     const obj9 = { emoji: null, guildId: null, onChange: null };
     const obj10 = { emojiId: first1, emojiName: first2 };
     obj9.emoji = obj10;
@@ -282,32 +271,19 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    items2[3] = tmp28(tmp3(19910), obj9);
-    const obj11 = { style: tmp5.header, children: null };
-    const tmp31 = first2;
-    const tmp32 = closure_6;
-    const tmp3Result = tmp3(9093);
-    const intl9 = tmp21(1114).intl;
-    obj11.children = intl9.string(tmp21(1114).t["74JctW"]);
-    items2[4] = tmp28(tmp3(9093), obj11);
-    const obj12 = {
-      containerStyle: tmp5.inputContainer,
-      accessibilityLabel: null,
-      maxLength: null,
-      value: null,
-      onChange: null,
-      placeholder: null,
-    };
-    const intl10 = tmp21(1114).intl;
-    obj12.accessibilityLabel = intl10.string(tmp21(1114).t["74JctW"]);
-    obj12.maxLength = maxLength;
-    obj12.value = first3;
-    obj12.onChange = tmp10[1];
-    obj12.placeholder = stringResult2;
-    items2[5] = tmp28(tmp21(7247).TextArea, obj12);
+    obj8.children = tmp28(tmp3(19968), obj9);
+    items2[1] = tmp28(tmp21(7060).TableRowGroup, obj8);
+    const obj11 = { label: null, maxLength: null, value: null, onChange: null, placeholder: null };
+    const intl9 = tmp21(1113).intl;
+    obj11.label = intl9.string(tmp21(1113).t["74JctW"]);
+    obj11.maxLength = maxLength;
+    obj11.value = first3;
+    obj11.onChange = tmp10[1];
+    obj11.placeholder = stringResult2;
+    items2[2] = tmp28(tmp21(7253).TextArea, obj11);
     let tmp28Result = null;
     if (null != merged.onDelete) {
-      const obj13 = {
+      const obj12 = {
         onDelete: function handleDelete() {
           const self = this;
           const apply = closure_11.apply;
@@ -319,13 +295,13 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
           return applyArgumentsResult;
         },
       };
-      tmp28Result = tmp28(DeleteButton, obj13);
+      tmp28Result = tmp28(DeleteButton, obj12);
     }
-    items2[6] = tmp28Result;
-    obj5.children = items2;
-    items[1] = closure_14(tmp32, obj5);
-    obj3.children = items;
-    return closure_14(tmp31, obj3);
+    items2[3] = tmp28Result;
+    obj6.children = items2;
+    items[1] = closure_14(closure_6, obj6);
+    obj4.children = items;
+    return closure_14(first2, obj4);
   } else if (merged.benefitType === constants.CHANNEL) {
     let tmp16 = null != first4;
   } else {
@@ -338,4 +314,5 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     }
     tmp16 = num3 > 0;
   }
+  tmp5 = value(19943)();
 }

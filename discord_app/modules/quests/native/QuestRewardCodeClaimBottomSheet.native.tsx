@@ -117,10 +117,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
     if (null != rewardCode) {
       ClipboardUtils.copy(tmp.code, () => {
         const obj2 = { text: null, icon: null };
-        const intl = quest(1114).intl;
-        obj2.text = intl.string(quest(1114).t.MSaeTe);
-        obj2.icon = quest(5726).CopyIcon;
-        rewardCode(5707).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+        const intl = quest(1113).intl;
+        obj2.text = intl.string(quest(1113).t.MSaeTe);
+        obj2.icon = quest(5731).CopyIcon;
+        rewardCode(5712).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
       });
     }
   }, items4);
@@ -242,10 +242,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(6775).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(6781).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },

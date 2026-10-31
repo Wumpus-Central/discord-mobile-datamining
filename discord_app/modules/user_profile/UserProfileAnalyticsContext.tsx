@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/UserProfileAnalyticsContext.tsx
-import v1 from "../../../_runtime/01267_v1.js";
+import v1 from "../../../_runtime/01266_v1.js";
 import useAnalyticsLocationsDefault from "../app_analytics/useAnalyticsLocations.tsx";
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -102,7 +102,7 @@ export function useCreateUserProfileAnalyticsContext(layout) {
 }
 export function useUserProfileAnalyticsContext() {
   const context = noop.useContext(closure_5);
-  analyticsLocations = analyticsLocations(7320)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7326)().analyticsLocations;
   let obj = { context, trackUserProfileAction: null, trackUserProfileEditAction: null, trackUserProfileEditSaved: null, trackUserProfileWishlistAction: null };
   const items = [context, analyticsLocations];
   obj.trackUserProfileAction = noop.useCallback((arg0) => {

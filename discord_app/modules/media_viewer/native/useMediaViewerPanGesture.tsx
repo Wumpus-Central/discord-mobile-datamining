@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/useMediaViewerPanGesture.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../_runtime/05298_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05303_LegacyBaseButton.js";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import MediaViewerAnalyticsManager from "../MediaViewerAnalyticsManager.tsx";
 import useVideoControls from "useVideoControls.tsx";

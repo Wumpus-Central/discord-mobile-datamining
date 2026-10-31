@@ -3,7 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef1343 from "../../_runtime/metro/01343__.js";
+import _modDef1342 from "../../_runtime/metro/01342__.js";
 import ConnectedAccountsActionCreatorsDefault from "../actions/ConnectedAccountsActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ConnectedAccountsStore from "ConnectedAccountsStore.tsx";
@@ -101,7 +101,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -308,7 +308,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -530,7 +530,7 @@ prototype2["getStream"] = function getStream() {
 ExternalStreamingStore.displayName = "ExternalStreamingStore";
 const externalStreamingStore = new ExternalStreamingStore(DispatcherDefault, {
   STREAMING_UPDATE: function streamUpdate(stream) {
-    if (_modDef1343(stream.stream, stream)) {
+    if (_modDef1342(stream.stream, stream)) {
       return false;
     } else {
       stream = stream.stream;

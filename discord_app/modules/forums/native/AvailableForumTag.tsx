@@ -10,10 +10,10 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const EMOJI_URL_BASE_SIZE = fn(1387).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 const obj2 = {
   pill: {
     display: "flex",

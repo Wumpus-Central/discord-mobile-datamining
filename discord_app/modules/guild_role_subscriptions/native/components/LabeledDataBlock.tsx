@@ -1,6 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/LabeledDataBlock.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,10 +8,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
+    backgroundColor: nativeDefault.colors.CARD_MUTED_BG,
     borderRadius: nativeDefault.radii.sm,
     flexBasis: "auto",
     flexGrow: 1,
@@ -44,9 +43,7 @@ export default function LabeledDataBlock(arg0) {
   ];
   let tmp4Result = null != icon;
   if (tmp4Result) {
-    const obj4 = { accessibilityRole: "button", onPress: onPressIcon, children: null };
-    const obj5 = { size: native.Icon.Sizes.SMALL, source: icon };
-    obj4.children = React3(native.Icon, obj5);
+    const obj4 = { accessibilityRole: "button", onPress: onPressIcon, children: React3(icon, { size: "sm" }) };
     tmp4Result = React3(Pressables.PressableOpacity, obj4);
   }
   items1[1] = tmp4Result;
@@ -54,8 +51,8 @@ export default function LabeledDataBlock(arg0) {
   const items2 = [React4(View, obj2)];
   let tmp4Result2 = children;
   if (typeof children === "string") {
-    const obj6 = { variant: "heading-xl/medium", color: "mobile-text-heading-primary", children };
-    tmp4Result2 = React3(Text_Text.Text, obj6);
+    const obj5 = { variant: "heading-xl/medium", color: "mobile-text-heading-primary", children };
+    tmp4Result2 = React3(Text_Text.Text, obj5);
   }
   items2[1] = tmp4Result2;
   obj.children = items2;

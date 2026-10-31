@@ -1,6 +1,6 @@
 // discord_app/modules/accept_invite/native/AcceptInviteManager.tsx
 import router_utils from "../../routing/router_utils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
@@ -15,7 +15,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7806).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7813).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1072);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -150,7 +150,7 @@ const prototype = function AcceptInviteManager() {
             inviteInstanceId,
           };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(19324, dependencyMap.paths),
+            asyncRequireImpl(19381, dependencyMap.paths),
             obj4,
             ACCEPT_INVITE_MODAL_KEY,
           );

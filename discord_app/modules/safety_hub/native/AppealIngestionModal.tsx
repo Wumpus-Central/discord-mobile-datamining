@@ -13,12 +13,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7962);
+const SafetyHubConstants = fn(7970);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   headerContainer: { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 },
@@ -330,7 +330,7 @@ export function AppealIngestionModalScreen(children) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -352,7 +352,7 @@ export function AppealIngestionModalScreen(children) {
                 v2 = 2;
                 c5 = 1;
                 const obj6 = {
-                  value: tmp27(13264).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                  value: tmp27(13299).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                   done: false,
                 };
                 return obj6;
@@ -367,8 +367,8 @@ export function AppealIngestionModalScreen(children) {
               if (body != null) {
                 code = body.code;
               }
-              closure_129_4(safetyHubAppealSignal(7961).getRequestReviewErrorFromCode(code));
-              const obj2 = safetyHubAppealSignal(7961);
+              closure_129_4(safetyHubAppealSignal(7969).getRequestReviewErrorFromCode(code));
+              const obj2 = safetyHubAppealSignal(7969);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;

@@ -8,6 +8,7 @@ export const StorefrontPromotionCollectiblesFlavor = { DEFAULT: "default", NITRO
 export const StorefrontPromotionCollectiblesType = {
   TARGETED_OFFER: "TARGETED_OFFER",
   COLLECT_AND_CLAIM: "COLLECT_AND_CLAIM",
+  COLLECTION_SALE: "COLLECTION_SALE",
 };
 export const StorefrontPromotionCollectAndClaimSubtype = { TAKEOVER: "TAKEOVER", BASIC: "BASIC" };
 export const StorefrontPromotionCollectiblesContentTheme = { LIGHT: "light", DARK: "dark" };

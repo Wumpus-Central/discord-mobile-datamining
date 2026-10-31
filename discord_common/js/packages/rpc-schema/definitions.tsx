@@ -1,8 +1,8 @@
 // discord_common/js/packages/rpc-schema/definitions.tsx
 import Constants2 from "../../shared/Constants.tsx";
-import EntitlementTypes from "../../shared/shared-constants/EntitlementTypes.tsx";
 import ChannelTypes from "../../shared/shared-constants/ChannelTypes.tsx";
 import EmbeddedActivityOrientationLockState2 from "../../shared/shared-constants/EmbeddedActivityOrientationLockState.tsx";
+import EntitlementTypes from "../../shared/shared-constants/EntitlementTypes.tsx";
 import EmbeddedSurfaceType from "../../shared/shared-constants/EmbeddedSurfaceType.tsx";
 import ActivityTypes from "../../shared/shared-constants/ActivityTypes.tsx";
 import InviteTargetTypes from "../../shared/shared-constants/InviteTargetTypes.tsx";
@@ -1390,100 +1390,6 @@ let obj16 = {
   },
 };
 let obj18 = { embeddedAppSDK: true, request: "Array", response: ActivityInstanceParticipants };
-let obj20 = {
-  request: "Array",
-  response(boolean) {
-    return VoiceCapabilities(boolean);
-  },
-};
-let obj22 = {
-  request: "Array",
-  response(string) {
-    const obj = { session_id: string.string().required(), channel_id: null, capabilities: null, participants: null };
-    const stringResult = string.string();
-    obj.channel_id = string.string().required();
-    const stringResult1 = string.string();
-    obj.capabilities = VoiceCapabilities(string).required();
-    const obj4 = VoiceCapabilities(string);
-    const obj2 = {
-      user_id: null,
-      username: null,
-      global_name: null,
-      avatar: null,
-      mute: null,
-      deaf: null,
-      self_mute: null,
-      self_deaf: null,
-    };
-    const arrayResult = string.array();
-    obj2.user_id = string.string().required();
-    const stringResult2 = string.string();
-    obj2.username = string.string().required();
-    const stringResult3 = string.string();
-    const stringResult4 = string.string();
-    obj2.global_name = string.string().allow(null).required();
-    const allowResult = string.string().allow(null);
-    const stringResult5 = string.string();
-    obj2.avatar = string.string().allow(null).required();
-    const allowResult1 = string.string().allow(null);
-    obj2.mute = string.boolean().required();
-    const booleanResult = string.boolean();
-    obj2.deaf = string.boolean().required();
-    const booleanResult1 = string.boolean();
-    obj2.self_mute = string.boolean().required();
-    const booleanResult2 = string.boolean();
-    obj2.self_deaf = string.boolean().required();
-    const booleanResult3 = string.boolean();
-    const objectResult = string.object(obj2);
-    obj.participants = arrayResult.items(string.object(obj2).required()).required();
-    return obj;
-  },
-};
-let obj25 = {
-  request: "Array",
-  response(boolean) {
-    const obj = { available: boolean.boolean().required(), transport: null, requires_existing_watch: null };
-    const booleanResult = boolean.boolean();
-    const stringResult = boolean.string();
-    obj.transport = boolean.string().valid("iframe").required();
-    const validResult = boolean.string().valid("iframe");
-    obj.requires_existing_watch = boolean.boolean().required();
-    return obj;
-  },
-};
-let obj26 = {
-  request: "Array",
-  response(boolean) {
-    const obj = { available: boolean.boolean().required(), transport: null };
-    const booleanResult = boolean.boolean();
-    const stringResult = boolean.string();
-    obj.transport = boolean.string().valid("iframe").required();
-    return obj;
-  },
-};
-const obj36 = {
-  request: "Array",
-  response(boolean) {
-    const obj = { hidden: boolean.boolean().required() };
-    return obj;
-  },
-};
-const obj39 = {
-  request: "Array",
-  response(array) {
-    const obj = { permissions: null };
-    const arrayResult = array.array();
-    const obj2 = { permission: null, state: null };
-    const requiredResult = array.array().required();
-    const stringResult = array.string();
-    obj2.permission = array.string().valid("screen_capture", "connect_user_to_voice").required();
-    const validResult = array.string().valid("screen_capture", "connect_user_to_voice");
-    const stringResult1 = array.string();
-    obj2.state = array.string().valid("granted", "denied", "prompt", "unsupported").required();
-    obj.permissions = requiredResult.items(array.object(obj2));
-    return obj;
-  },
-};
 const obj42 = {
   embeddedAppSDK: true,
   request: "Array",
@@ -1611,30 +1517,6 @@ const obj63 = {
     const obj = { entitlements: null };
     const arrayResult = array.array();
     obj.entitlements = array.array().items(RPCEntitlement(array)).required();
-    return obj;
-  },
-};
-const obj67 = {
-  request: "Array",
-  response(arg0) {
-    return Channel(arg0).allow(null);
-  },
-};
-const obj72 = {
-  request: "Array",
-  response(array) {
-    const obj = { guilds: null };
-    const obj2 = { id: null, name: null, icon_url: null };
-    const arrayResult = array.array();
-    const stringResult = array.string();
-    obj2.id = array.string().required().meta({ className: "GuildId" });
-    const requiredResult = array.string().required();
-    obj2.name = array.string().required();
-    const stringResult1 = array.string();
-    const stringResult2 = array.string();
-    obj2.icon_url = array.string().allow(null).required();
-    const allowResult = array.string().allow(null);
-    obj.guilds = arrayResult.items(array.object(obj2)).required();
     return obj;
   },
 };
@@ -1803,7 +1685,12 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.GET_VOICE_CAPABILITIES]: obj20,
+  [helpers.RPCCommand.GET_VOICE_CAPABILITIES]: {
+    request: "Array",
+    response(boolean) {
+      return VoiceCapabilities(boolean);
+    },
+  },
   [helpers.RPCCommand.GET_VOICE_SESSION_PARTICIPANTS]: {
     request(string) {
       const obj = { session_id: string.string().required() };
@@ -1845,7 +1732,49 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.START_VOICE_SESSION]: obj22,
+  [helpers.RPCCommand.START_VOICE_SESSION]: {
+    request: "Array",
+    response(string) {
+      const obj = { session_id: string.string().required(), channel_id: null, capabilities: null, participants: null };
+      const stringResult = string.string();
+      obj.channel_id = string.string().required();
+      const stringResult1 = string.string();
+      obj.capabilities = VoiceCapabilities(string).required();
+      const obj4 = VoiceCapabilities(string);
+      const obj2 = {
+        user_id: null,
+        username: null,
+        global_name: null,
+        avatar: null,
+        mute: null,
+        deaf: null,
+        self_mute: null,
+        self_deaf: null,
+      };
+      const arrayResult = string.array();
+      obj2.user_id = string.string().required();
+      const stringResult2 = string.string();
+      obj2.username = string.string().required();
+      const stringResult3 = string.string();
+      const stringResult4 = string.string();
+      obj2.global_name = string.string().allow(null).required();
+      const allowResult = string.string().allow(null);
+      const stringResult5 = string.string();
+      obj2.avatar = string.string().allow(null).required();
+      const allowResult1 = string.string().allow(null);
+      obj2.mute = string.boolean().required();
+      const booleanResult = string.boolean();
+      obj2.deaf = string.boolean().required();
+      const booleanResult1 = string.boolean();
+      obj2.self_mute = string.boolean().required();
+      const booleanResult2 = string.boolean();
+      obj2.self_deaf = string.boolean().required();
+      const booleanResult3 = string.boolean();
+      const objectResult = string.object(obj2);
+      obj.participants = arrayResult.items(string.object(obj2).required()).required();
+      return obj;
+    },
+  },
   [helpers.RPCCommand.UPDATE_VOICE_SPATIAL]: {
     request(string) {
       const obj = { session_id: string.string().required(), listener: null, sources: null };
@@ -2119,14 +2048,34 @@ export const RPCCommandSchemas = {
   [helpers.RPCCommand.ENABLE_VOICE_SPATIAL]: obj11,
   [helpers.RPCCommand.DISABLE_VOICE_SPATIAL]: obj11,
   [helpers.RPCCommand.STOP_VOICE_SESSION]: obj11,
-  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: obj25,
+  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: {
+    request: "Array",
+    response(boolean) {
+      const obj = { available: boolean.boolean().required(), transport: null, requires_existing_watch: null };
+      const booleanResult = boolean.boolean();
+      const stringResult = boolean.string();
+      obj.transport = boolean.string().valid("iframe").required();
+      const validResult = boolean.string().valid("iframe");
+      obj.requires_existing_watch = boolean.boolean().required();
+      return obj;
+    },
+  },
   [helpers.RPCCommand.START_APPLICATION_STREAMING_VIEW]: obj13,
   [helpers.RPCCommand.SUSPEND_APPLICATION_STREAMING_VIEW]: obj11,
   [helpers.RPCCommand.RESUME_APPLICATION_STREAMING_VIEW]: obj11,
   [helpers.RPCCommand.SET_APPLICATION_STREAMING_VIEW_FIT]: obj12,
   [helpers.RPCCommand.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: obj11,
   [helpers.RPCCommand.STOP_APPLICATION_STREAMING_VIEW]: obj11,
-  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: obj26,
+  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: {
+    request: "Array",
+    response(boolean) {
+      const obj = { available: boolean.boolean().required(), transport: null };
+      const booleanResult = boolean.boolean();
+      const stringResult = boolean.string();
+      obj.transport = boolean.string().valid("iframe").required();
+      return obj;
+    },
+  },
   [helpers.RPCCommand.START_CAMERA_VIEW]: obj13,
   [helpers.RPCCommand.SUSPEND_CAMERA_VIEW]: obj11,
   [helpers.RPCCommand.RESUME_CAMERA_VIEW]: obj11,
@@ -2405,7 +2354,13 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.HIDE_TOOLTIP]: obj36,
+  [helpers.RPCCommand.HIDE_TOOLTIP]: {
+    request: "Array",
+    response(boolean) {
+      const obj = { hidden: boolean.boolean().required() };
+      return obj;
+    },
+  },
   [helpers.RPCCommand.SHOW_TOAST]: {
     request(string) {
       const obj = { message: null, type: null };
@@ -2442,7 +2397,22 @@ export const RPCCommandSchemas = {
       return { confirmed: boolean.boolean(), acknowledged: boolean.boolean() };
     },
   },
-  [helpers.RPCCommand.GET_DEVICE_PERMISSIONS]: obj39,
+  [helpers.RPCCommand.GET_DEVICE_PERMISSIONS]: {
+    request: "Array",
+    response(array) {
+      const obj = { permissions: null };
+      const arrayResult = array.array();
+      const obj2 = { permission: null, state: null };
+      const requiredResult = array.array().required();
+      const stringResult = array.string();
+      obj2.permission = array.string().valid("screen_capture", "connect_user_to_voice").required();
+      const validResult = array.string().valid("screen_capture", "connect_user_to_voice");
+      const stringResult1 = array.string();
+      obj2.state = array.string().valid("granted", "denied", "prompt", "unsupported").required();
+      obj.permissions = requiredResult.items(array.object(obj2));
+      return obj;
+    },
+  },
   [helpers.RPCCommand.REQUEST_DEVICE_PERMISSIONS]: {
     request(array) {
       const obj = { permissions: null };
@@ -2660,7 +2630,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "concat", response: "add" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "construct", response: "add" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {
@@ -2732,14 +2702,22 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: obj67,
+  [helpers.RPCCommand.GET_SELECTED_VOICE_CHANNEL]: {
+    request: "Array",
+    response(arg0) {
+      return Channel(arg0).allow(null);
+    },
+  },
   [helpers.RPCCommand.SELECT_VOICE_CHANNEL]: {
     request(string) {
-      const obj = { channel_id: null, timeout: null, force: null, navigate: null };
+      const obj = { channel_id: null, expected_channel_id: null, timeout: null, force: null, navigate: null };
       const stringResult = string.string();
       const allowResult = string.string().allow(null);
       obj.channel_id = string.string().allow(null).optional().meta({ className: "ChannelId" });
       const optionalResult = string.string().allow(null).optional();
+      const stringResult1 = string.string();
+      obj.expected_channel_id = string.string().optional().meta({ className: "ChannelId" });
+      const optionalResult1 = string.string().optional();
       const numberResult = string.number();
       const minResult = string.number().min(0);
       obj.timeout = string.number().min(0).max(60).optional();
@@ -2881,7 +2859,24 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.GET_GUILDS]: obj72,
+  [helpers.RPCCommand.GET_GUILDS]: {
+    request: "Array",
+    response(array) {
+      const obj = { guilds: null };
+      const obj2 = { id: null, name: null, icon_url: null };
+      const arrayResult = array.array();
+      const stringResult = array.string();
+      obj2.id = array.string().required().meta({ className: "GuildId" });
+      const requiredResult = array.string().required();
+      obj2.name = array.string().required();
+      const stringResult1 = array.string();
+      const stringResult2 = array.string();
+      obj2.icon_url = array.string().allow(null).required();
+      const allowResult = array.string().allow(null);
+      obj.guilds = arrayResult.items(array.object(obj2)).required();
+      return obj;
+    },
+  },
   [helpers.RPCCommand.GET_ROLES]: {
     embeddedAppSDK: true,
     request(string) {
@@ -3149,7 +3144,7 @@ export const RPCEventSchemas = {
       obj.channel_id = string.string().required().meta({ className: "ChannelId" });
       return obj;
     },
-    payload: function UserVoiceState(string) {
+    payload(string) {
       const obj = {
         nick: string.string().required(),
         mute: null,
@@ -3182,9 +3177,14 @@ export const RPCEventSchemas = {
       obj2.suppress = string.boolean().required();
       const booleanResult5 = string.boolean();
       obj.voice_state = string.object(obj2).required();
-      const objectResult2 = string.object(obj2);
+      const objectResult3 = string.object(obj2);
       obj.user = User(string).required();
-      return string.object(obj);
+      const obj16 = User(string);
+      const obj3 = { channel_id: null };
+      const objectResult4 = string.object(obj);
+      const stringResult1 = string.string();
+      obj3.channel_id = string.string().optional().meta({ className: "ChannelId" });
+      return objectResult4.keys(obj3);
     },
   },
   [helpers.RPCEvent.SPEAKING_START]: obj14,

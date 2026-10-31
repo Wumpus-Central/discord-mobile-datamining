@@ -24,6 +24,6 @@ export default function useConjureProjectIcon(preview_application_id, size) {
   const merged = Object.assign({ glyphSize: Math.round(0.6 * size), radius: size / 4 });
   return obj4;
 }
-export function conjureProjectIconMetrics(dependencyMap) {
-  return { glyphSize: Math.round(0.6 * dependencyMap), radius: dependencyMap / 4 };
+export function conjureProjectIconMetrics(size) {
+  return { glyphSize: Math.round(0.6 * size), radius: size / 4 };
 }

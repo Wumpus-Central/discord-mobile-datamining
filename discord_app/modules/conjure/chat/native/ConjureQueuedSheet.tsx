@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/chat/native/ConjureQueuedSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3865 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
@@ -31,7 +31,7 @@ function ConjureQueuedRow(content) {
     const obj2 = { style: tmp7, children: null };
     const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3865["07XimM"]);
+    obj3.children = intl2.string(_modDef3868["07XimM"]);
     obj2.children = React6(Text_Text.Text, obj3);
     let tmp18Result = React6(timestampProducer, obj2);
   } else {
@@ -73,7 +73,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureQueuedSheet = "ConjureQueuedSheet";
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   scroller: { maxHeight: 360 },
   item: { alignItems: "flex-start", gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_8 },
@@ -112,9 +112,9 @@ export default function ConjureQueuedSheet(projectId) {
   if (0 !== memo.length) {
     const obj2 = { header: null, children: null };
     const obj3 = { title: null };
-    const intl = tmp2(1114).intl;
-    obj3.title = intl.string(stateFromStores(3865).hzgPbZ);
-    obj2.header = closure_8(tmp2(7315).BottomSheetTitleHeader, obj3);
+    const intl = tmp2(1113).intl;
+    obj3.title = intl.string(stateFromStores(3868).hzgPbZ);
+    obj2.header = closure_8(tmp2(7321).BottomSheetTitleHeader, obj3);
     const obj4 = {
       style: tmp.scroller,
       nestedScrollEnabled: true,
@@ -123,7 +123,7 @@ export default function ConjureQueuedSheet(projectId) {
       ),
     };
     obj2.children = closure_8(closure_5, obj4);
-    tmp7 = closure_8(tmp2(7360).ActionSheet, obj2);
+    tmp7 = closure_8(tmp2(7366).ActionSheet, obj2);
   }
   return tmp7;
 }

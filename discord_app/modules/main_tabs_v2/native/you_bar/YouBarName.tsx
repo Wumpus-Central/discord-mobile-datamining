@@ -41,7 +41,7 @@ function Username(userId) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = {
   userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 },
   statusRow: { flexDirection: "row", gap: nativeDefault.space.PX_4 },
@@ -62,14 +62,14 @@ export default noop.memo(function YouName(username) {
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(11357).useCustomStatusActivity();
-  let obj2 = userId(11357);
+  const customStatusActivity = userId(11393).useCustomStatusActivity();
+  let obj2 = userId(11393);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10729).useGameMentionsAsPlainText(state);
-  let obj3 = userId(10729);
+  const gameMentionsAsPlainText = userId(10749).useGameMentionsAsPlainText(state);
+  let obj3 = userId(10749);
   const items1 = [
     PresenceStore,
     ApplicationStreamingStore,
@@ -103,7 +103,7 @@ export default noop.memo(function YouName(username) {
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_11(stateFromStores(10725), obj6);
+    let tmp9Result = closure_11(stateFromStores(10745), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -112,7 +112,7 @@ export default noop.memo(function YouName(username) {
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_11(stateFromStores(10746), obj7);
+      tmp11Result2 = closure_11(stateFromStores(10766), obj7);
     }
     const items3 = [tmp11Result2];
     const obj8 = {
@@ -126,12 +126,12 @@ export default noop.memo(function YouName(username) {
     };
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
-      humanizeStatusResult = tmp2(5063).humanizeStatus(stateFromStores);
-      const tmp2Result2 = tmp2(5063);
+      humanizeStatusResult = tmp2(5068).humanizeStatus(stateFromStores);
+      const tmp2Result2 = tmp2(5068);
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_11(tmp2(5619).Text, obj8);
+    items3[1] = closure_11(tmp2(5624).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_12(closure_13, obj9);
   }

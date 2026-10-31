@@ -73,7 +73,7 @@ export function canUseRoleSubscriptionIAP(guildId) {
 export function useCanUseRoleSubscriptionIAP(guildId) {
   _require = guildId;
   const memo = noop.useMemo(() => {
-    const str = guildId(6829).getSystemVersion();
+    const str = guildId(6835).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");
@@ -118,7 +118,7 @@ export function useCanUseRoleSubscriptionIAP(guildId) {
     }
     return tmp;
   }, []);
-  let memo1 = noop.useMemo(() => guildId(1376).isIOS(), []);
+  let memo1 = noop.useMemo(() => guildId(1375).isIOS(), []);
   items = [GuildStore];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {

@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05582_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ColorConstants from "../../../colors/native/ColorConstants.tsx";
 import PremiumGroupWordmarkDefault from "PremiumGroupWordmark.tsx";

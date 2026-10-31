@@ -49,7 +49,7 @@ let closure_26 = async function _joinGuild(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -216,11 +216,11 @@ let closure_26 = async function _joinGuild(arg0) {
             if (code2 === closure_132_15.GUILD_AT_CAPACITY) {
               (function showGuildAtCapacityAlert() {
                 const obj2 = { title: null, body: null };
-                const intl = closure_1_0(1114).intl;
-                obj2.title = intl.string(closure_1_0(1114).t.ZZlox4);
-                const intl2 = closure_1_0(1114).intl;
-                obj2.body = intl2.string(closure_1_0(1114).t.ZUEGFn);
-                closure_1_1(5953).show(obj2);
+                const intl = closure_1_0(1113).intl;
+                obj2.title = intl.string(closure_1_0(1113).t.ZZlox4);
+                const intl2 = closure_1_0(1113).intl;
+                obj2.body = intl2.string(closure_1_0(1113).t.ZUEGFn);
+                closure_1_1(5958).show(obj2);
               })();
               const obj17 = { cause: closure_131_12 };
               const joinGuildRefusedError3 = new closure_132_0(closure_132_3[16]).JoinGuildRefusedError(obj17);
@@ -388,7 +388,7 @@ const Constants = fn(1072);
   Routes: closure_21,
   AnalyticEvents: closure_22,
 } = Constants);
-const AgeGateSource = fn(1098).AgeGateSource;
+const AgeGateSource = fn(1097).AgeGateSource;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/GuildActionCreators.tsx");
 
@@ -420,7 +420,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -495,7 +495,7 @@ export default {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp36) {
           c5 = tmp;
@@ -669,7 +669,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -713,7 +713,7 @@ export default {
             }
             dependencyMap = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp25) {
           closure_2 = tmp25;
@@ -751,7 +751,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -771,8 +771,8 @@ export default {
               let body;
               let stringResult = closure_1;
               if (null == closure_1) {
-                const intl = color(1114).intl;
-                stringResult = intl.string(color(1114).t.QBMHvB);
+                const intl = color(1113).intl;
+                stringResult = intl.string(color(1113).t.QBMHvB);
               }
               const obj5 = { name: stringResult, color: null, colors: null, permissions: null };
               color = closure_2;
@@ -789,14 +789,14 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(4946).NONE;
+              obj5.permissions = primary_color(4951).NONE;
               c6 = 1;
-              const HTTP = color(1283).HTTP;
+              const HTTP = color(1282).HTTP;
               const request = {
                 url: closure_1_16.GUILD_ROLES(closure_0),
                 oldFormErrors: true,
                 body: obj5,
-                rejectWithError: color(1283).rejectWithMigratedError(),
+                rejectWithError: color(1282).rejectWithMigratedError(),
               };
               c7 = 2;
               c8 = 1;
@@ -806,7 +806,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4830)(closure_131_2);
+            const tmp30 = new obj6(4835)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -826,7 +826,7 @@ export default {
               obj6(572).dispatch(obj10);
               const obj = obj6(572);
             }
-            const result = obj6(7492).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(7498).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -855,7 +855,7 @@ export default {
       } else if (icon != null) {
         icon.startsWith("data:");
       }
-      const HTTP = tmp5(1283).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       const request = {
         url: closure_1_16.GUILD_ROLE(tmp5, tmp2),
         body: null,
@@ -867,10 +867,10 @@ export default {
       obj4.icon = tmp13;
       obj4.unicode_emoji = closure_2.unicodeEmoji;
       request.body = obj4;
-      request.rejectWithError = tmp5(1283).rejectWithMigratedError();
+      request.rejectWithError = tmp5(1282).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(7492).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7498).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -897,16 +897,16 @@ export default {
     closure_1 = arg1;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1283).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       const request = {
         url: closure_1_16.GUILD_CHANNELS(tmp5),
         body,
         oldFormErrors: true,
-        rejectWithError: tmp5(1283).rejectWithMigratedError(),
+        rejectWithError: tmp5(1282).rejectWithMigratedError(),
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7492).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7498).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -915,16 +915,16 @@ export default {
     closure_1 = arg1;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1283).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       const request = {
         url: closure_1_16.GUILD_ROLES(tmp5),
         body,
         oldFormErrors: true,
-        rejectWithError: tmp5(1283).rejectWithMigratedError(),
+        rejectWithError: tmp5(1282).rejectWithMigratedError(),
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7492).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7498).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -1080,7 +1080,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1098,13 +1098,13 @@ export default {
               const obj4 = {
                 url: closure_1_16.GUILD_APPLICATIONS(tmp5),
                 oldFormErrors: true,
-                rejectWithError: tmp5(1283).rejectWithMigratedError(),
+                rejectWithError: tmp5(1282).rejectWithMigratedError(),
               };
               if (null != tmp2) {
                 const obj5 = { channel_id: tmp23 };
                 obj4.query = obj5;
               }
-              const HTTP = tmp5(1283).HTTP;
+              const HTTP = tmp5(1282).HTTP;
               c2 = 1;
               dependencyMap = 1;
               const obj6 = { value: HTTP.get(obj4), done: false };
@@ -1122,7 +1122,7 @@ export default {
             const obj8 = { type: "GUILD_APPLICATIONS_FETCH_SUCCESS", guildId: closure_129_0, applications: body };
             tmp2(572).dispatch(obj8);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp14) {
           dependencyMap = tmp;
@@ -1149,7 +1149,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1167,12 +1167,12 @@ export default {
               if (null != after) {
                 obj5.after = after;
               }
-              const HTTP = v3(1283).HTTP;
+              const HTTP = v3(1282).HTTP;
               const request = {
                 url: closure_1_16.GUILD_BANS(guildId),
                 oldFormErrors: true,
                 query: obj5,
-                rejectWithError: v3(1283).rejectWithMigratedError(),
+                rejectWithError: v3(1282).rejectWithMigratedError(),
               };
               value = HTTP.get(request);
               c1 = 1;
@@ -1194,7 +1194,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -1218,7 +1218,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1247,12 +1247,12 @@ export default {
               if (tmp6) {
                 obj5.query = query;
               }
-              const HTTP = v3(1283).HTTP;
+              const HTTP = v3(1282).HTTP;
               const request = {
                 url: closure_1_16.GUILD_BANS_SEARCH(guildId),
                 oldFormErrors: true,
                 query: obj5,
-                rejectWithError: v3(1283).rejectWithMigratedError(),
+                rejectWithError: v3(1282).rejectWithMigratedError(),
               };
               value = HTTP.get(request);
               c1 = 1;
@@ -1274,7 +1274,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp11) {
           v3 = tmp;
@@ -1296,7 +1296,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1310,11 +1310,11 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1283).HTTP;
+              const HTTP = v3(1282).HTTP;
               const obj4 = {
                 url: closure_1_16.GUILD_BANS(closure_0),
                 oldFormErrors: true,
-                rejectWithError: v3(1283).rejectWithMigratedError(),
+                rejectWithError: v3(1282).rejectWithMigratedError(),
               };
               value = HTTP.get(obj4);
               c1 = 1;
@@ -1336,7 +1336,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -1378,7 +1378,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1392,11 +1392,11 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1283).HTTP;
+              const HTTP = v3(1282).HTTP;
               const obj4 = {
                 url: closure_1_16.GUILD_ROLE_CONNECTIONS_ASSIGN(closure_0, closure_1),
                 oldFormErrors: true,
-                rejectWithError: v3(1283).rejectWithMigratedError(),
+                rejectWithError: v3(1282).rejectWithMigratedError(),
               };
               c1 = 1;
               v3 = 1;
@@ -1412,7 +1412,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -1435,7 +1435,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
@@ -1449,11 +1449,11 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1283).HTTP;
+              const HTTP = v3(1282).HTTP;
               const obj4 = {
                 url: closure_1_16.GUILD_ROLE_CONNECTIONS_UNASSIGN(closure_0, closure_1),
                 oldFormErrors: true,
-                rejectWithError: v3(1283).rejectWithMigratedError(),
+                rejectWithError: v3(1282).rejectWithMigratedError(),
               };
               c1 = 1;
               v3 = 1;
@@ -1469,7 +1469,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -1481,11 +1481,11 @@ export default {
   getGuildRoleConnectionsConfigurations(guildId) {
     closure_0 = guildId;
     return (async () => {
-      const HTTP = v3(1283).HTTP;
+      const HTTP = v3(1282).HTTP;
       await HTTP.get({
         url: closure_1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(closure_0),
         oldFormErrors: true,
-        rejectWithError: v3(1283).rejectWithMigratedError(),
+        rejectWithError: v3(1282).rejectWithMigratedError(),
       });
       return value.body;
     })();

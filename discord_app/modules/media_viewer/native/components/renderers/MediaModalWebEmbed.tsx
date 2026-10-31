@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/components/renderers/MediaModalWebEmbed.tsx
 import URLUtilsDefault from "../../../../../utils/URLUtils.tsx";
 import MediaModalWebViewBase from "MediaModalWebViewBase.tsx";
-import escapeDefault from "../../../../../../_runtime/14748_escape.js";
+import escapeDefault from "../../../../../../_runtime/14786_escape.js";
 import EmbedIFrameConfig from "../../../../chat/EmbedIFrameConfig.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ function WebEmbed(onLoad) {
   onLoad = onLoad.onLoad;
   importDefault = undefined;
   ({ src, style, onError, onLoadStart, onToggleOverlay } = onLoad);
-  [obj.playerState, importDefault] = noop.useState(onLoad(8862).PlayerState.UNREADY);
+  [obj.playerState, importDefault] = noop.useState(onLoad(8871).PlayerState.UNREADY);
   const items = [onLoad];
   const callback = noop.useCallback(() => {
     closure_1(MediaModalWebViewBase.PlayerState.PLAYING);
@@ -36,7 +36,7 @@ function WebEmbed(onLoad) {
     '\n<html>\n  <head>\n    <meta name="viewport" content="initial-scale=1">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src="' +
     escapeDefault(src) +
     '" allow="autoplay" sandbox="' +
-    onLoad(14751).EMBED_IFRAME_SANDBOX +
+    onLoad(14789).EMBED_IFRAME_SANDBOX +
     '" scrolling="no"></iframe>\n  </body>\n</html>\n';
   obj2.baseUrl = baseURL;
   obj.source = obj2;

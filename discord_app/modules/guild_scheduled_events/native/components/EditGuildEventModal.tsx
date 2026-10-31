@@ -16,9 +16,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4864).GuildScheduledEventEntityTypes;
+let closure_8 = fn(4869).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -45,7 +45,7 @@ export default noop.memo(function EditGuildEventModal(guild) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "HermesInternal", done: "HermesInternal" };
       }
     } else {
       try {
@@ -73,12 +73,12 @@ export default noop.memo(function EditGuildEventModal(guild) {
           return obj;
         } else if (null == value) {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "HermesInternal", done: "HermesInternal" };
         } else {
           if (!closure_128_5) {
-            const AccessibilityAnnouncer = tmp4(5018).AccessibilityAnnouncer;
-            const intl = tmp4(1114).intl;
-            AccessibilityAnnouncer.announce(intl.string(tmp4(1114).t["5HzXO5"]));
+            const AccessibilityAnnouncer = tmp4(5023).AccessibilityAnnouncer;
+            const intl = tmp4(1113).intl;
+            AccessibilityAnnouncer.announce(intl.string(tmp4(1113).t["5HzXO5"]));
             closure_128_1();
           } else {
             let id;
@@ -86,9 +86,9 @@ export default noop.memo(function EditGuildEventModal(guild) {
               id = closure_128_2.id;
             }
           }
-          const AccessibilityAnnouncer2 = tmp4(5018).AccessibilityAnnouncer;
-          const intl2 = tmp4(1114).intl;
-          AccessibilityAnnouncer2.announce(intl2.string(tmp4(1114).t["F9On+q"]));
+          const AccessibilityAnnouncer2 = tmp4(5023).AccessibilityAnnouncer;
+          const intl2 = tmp4(1113).intl;
+          AccessibilityAnnouncer2.announce(intl2.string(tmp4(1113).t["F9On+q"]));
         }
       } catch (tmp26) {
         c2 = tmp;

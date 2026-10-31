@@ -11,9 +11,9 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 function ConjurePublishSpinner() {
   const tmp = closure_6();
-  const token = sharedValue(5591).useToken(nativeDefault.colors.BACKGROUND_BRAND);
-  let obj = sharedValue(5591);
-  sharedValue = sharedValue(5090).useSharedValue(0);
+  const token = sharedValue(5596).useToken(nativeDefault.colors.BACKGROUND_BRAND);
+  let obj = sharedValue(5596);
+  sharedValue = sharedValue(5095).useSharedValue(0);
   let items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
@@ -23,7 +23,7 @@ function ConjurePublishSpinner() {
     );
     return () => sharedValue(dependencyMap[7]).cancelAnimation(closure_1_0);
   }, items);
-  let obj2 = sharedValue(5090);
+  let obj2 = sharedValue(5095);
   const fn = function _() {
     const obj = { transform: null };
     const items = [{ rotate: "" + sharedValue.get() + "deg" }];
@@ -33,7 +33,7 @@ function ConjurePublishSpinner() {
   fn.__closure = { rotation: sharedValue };
   fn.__workletHash = 16804123436708;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(5090).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(5095).useAnimatedStyle(fn);
   const obj4 = {
     style: null,
     children: jsx(ProgressCircleDefault, { percent: 70, size: 12, strokeWidth: 2, color: token, style: tmp.spinner }),
@@ -47,12 +47,12 @@ function ConjurePublishSpinner() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = { dot: null, spinner: null };
 let size = {
-  width: fn(12533).CONJURE_HEADER_BADGE_SIZE,
-  height: fn(12533).CONJURE_HEADER_BADGE_SIZE,
-  borderRadius: fn(12533).CONJURE_HEADER_BADGE_SIZE / 2,
+  width: fn(12568).CONJURE_HEADER_BADGE_SIZE,
+  height: fn(12568).CONJURE_HEADER_BADGE_SIZE,
+  borderRadius: fn(12568).CONJURE_HEADER_BADGE_SIZE / 2,
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
 obj2.dot = size;

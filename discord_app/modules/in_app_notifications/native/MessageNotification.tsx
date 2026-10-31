@@ -1,6 +1,6 @@
 // discord_app/modules/in_app_notifications/native/MessageNotification.tsx
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01994_asyncRequireImpl.js";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -10,11 +10,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const InAppNotificationConstants = fn(11004);
+const InAppNotificationConstants = fn(11023);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: metroRequire } =
   InAppNotificationConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_8 = createStyles.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
 let closure_9 = noop.memo(function MessagePreview(message) {
   return jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight });
@@ -98,7 +98,7 @@ export default noop.memo(function MessageNotification(notification) {
   const callback1 = guild.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(11048, dependencyMap.paths),
+        asyncRequireImpl(11067, dependencyMap.paths),
         { channelId: channel.id },
         "in-app-notification-settings-modal",
       ),

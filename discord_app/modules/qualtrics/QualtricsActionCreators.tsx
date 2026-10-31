@@ -27,7 +27,7 @@ let closure_11 = async function _fetchSurveyDetails(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -315,8 +315,8 @@ let closure_13 = async function _fireSurveyAction() {
     return value;
   })();
 };
-const useQualtricsResponseStore = fn(7923).useQualtricsResponseStore;
-const QualtricsConstants = fn(7925);
+const useQualtricsResponseStore = fn(7931).useQualtricsResponseStore;
+const QualtricsConstants = fn(7933);
 ({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: closure_9 } = QualtricsConstants);
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);

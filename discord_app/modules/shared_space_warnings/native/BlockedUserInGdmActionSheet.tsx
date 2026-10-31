@@ -100,22 +100,22 @@ function UserCalloutAvatars(userIds) {
     () => userIds.map((item) => user.getUser(item)),
     items1,
   );
-  let found = stateFromStoresArray.filter(userIds(1380).isNotNullish);
+  let found = stateFromStoresArray.filter(userIds(1379).isNotNullish);
   if (1 === userIds.length) {
     if (null != UserStore.getUser(userIds[0])) {
       const obj3 = { user: null, guildId: null, size: null, "aria-hidden": true };
       found = found[0];
       obj3.user = found;
       obj3.guildId = userIds.guildId;
-      REFRESH_MEDIUM_32 = tmp(1188).AvatarSizes.REFRESH_MEDIUM_32;
+      REFRESH_MEDIUM_32 = tmp(1187).AvatarSizes.REFRESH_MEDIUM_32;
       obj3.size = REFRESH_MEDIUM_32;
-      let tmp6 = closure_10(tmp(1188).Avatar, obj3);
+      let tmp6 = closure_10(tmp(1187).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(12431).UserIcon, {});
+      tmp6 = closure_10(tmp(12466).UserIcon, {});
     }
   } else {
-    const obj4 = { users: found, size: tmp(1188).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10779).FacepileGroupDMAvatar, obj4);
+    const obj4 = { users: found, size: tmp(1187).AvatarSizes.REFRESH_MEDIUM_32 };
+    return closure_10(tmp(10799).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 }
@@ -157,12 +157,12 @@ function BlockedUserInGDMDescription(arg0) {
   }
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15582);
+const SharedSpaceWarningConstants = fn(15621);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" },
   headerImage: { alignSelf: "center", width: 73, height: 86 },

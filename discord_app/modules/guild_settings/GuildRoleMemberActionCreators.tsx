@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings/GuildRoleMemberActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import privDefault from "../../../_runtime/01452_priv.js";
+import privDefault from "../../../_runtime/01451_priv.js";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore.tsx";
@@ -53,7 +53,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     }
   } else {
     try {
@@ -93,7 +93,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "HermesInternal", done: "HermesInternal" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;

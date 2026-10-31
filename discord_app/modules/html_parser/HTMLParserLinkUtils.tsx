@@ -2,7 +2,7 @@
 import MarkupLinkRuleDefault from "../markup/MarkupLinkRule.tsx";
 import HTMLParserRunUtils from "HTMLParserRunUtils.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import t from "../../../_runtime/metro/01944__.js";
+import t from "../../../_runtime/metro/01943__.js";
 
 require = fn;
 function getLink(href, arg1) {
@@ -50,7 +50,7 @@ function appendParsedNode(items1, content, bold, target) {
 }
 let closure_3 = ["link"];
 let closure_4 = ["link"];
-const HTMLParserConstants = fn(9385);
+const HTMLParserConstants = fn(9405);
 ({
   ASCII_CONTROL_CHARACTERS: metroRequire,
   HTTP_URL_SCHEME: closure_7,
@@ -201,13 +201,13 @@ export function addTextLinks(items1) {
             } while (sum2 < tmp5);
           }
           let tmp9 = link;
-          let obj2 = link(6033);
+          let obj2 = link(6038);
           let str3 = obj2.sanitizeWhitespace(str2);
           let trimmed = str3.trim();
           let str4 = "";
           if (0 !== trimmed.length) {
             link = tmp.link;
-            let tmp9Result = tmp9(6033);
+            let tmp9Result = tmp9(6038);
             let result = tmp9Result.sanitizeUnicodeConfusables(trimmed);
             let _Array = Array;
             let arr = Array.from(result.matchAll(closure_10));
@@ -265,11 +265,11 @@ export function addTextLinks(items1) {
         if ("" === tmp23.link) {
           let link2 = tmp23.link;
           let tmp48 = _objectWithoutProperties(tmp23, closure_4);
-          let obj11 = link(9410);
+          let obj11 = link(9430);
           let mergeRunResult = obj11.mergeRun(items1, tmp23.text, tmp48);
           let flag2 = false;
         } else {
-          let obj10 = link(9410);
+          let obj10 = link(9430);
           let mergeRunResult1 = obj10.mergeRun(items1, tmp23.text, tmp23);
           flag2 = false;
         }
@@ -302,12 +302,12 @@ export function addTextLinks(items1) {
               let tmp39 = appendParsedNode(items1, closure_13(tmp23.text, obj3), tmp23);
               flag2 = isMatch;
             }
-            let obj7 = link(9410);
+            let obj7 = link(9430);
             let mergeRunResult2 = obj7.mergeRun(items1, tmp23.text, tmp23);
             flag2 = isMatch;
           }
         }
-        let obj9 = link(9410);
+        let obj9 = link(9430);
         let mergeRunResult3 = obj9.mergeRun(items1, tmp23.text, tmp23);
         flag2 = isMatch;
       }

@@ -1,5 +1,5 @@
 // discord_app/modules/activities/openActivityShareLinkModal.native.tsx
-import asyncRequireImpl from "../../../_runtime/01995_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01994_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import showSearchableDestinationListModalDefault from "../share/native/showSearchableDestinationListModal.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -11,7 +11,7 @@ export const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 export function openActivityShareLinkModal(arg0) {
   ({ applicationId, customId, linkId, channelId, message, onShare } = arg0);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(16281, dependencyMap.paths),
+    asyncRequireImpl(16323, dependencyMap.paths),
     { applicationId, customId, linkId, channelId, message, onShare },
     ACTIVITY_SHARE_LINK_MODAL,
   );

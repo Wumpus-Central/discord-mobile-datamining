@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import _modDef11412 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
+import _modDef11448 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -10,7 +10,7 @@ function OrbsBadgeCoachmarkImg() {
   const tmp = closure_6();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef11412 };
+  const obj3 = { uri: _modDef11448 };
   obj2.source = obj3;
   obj2.style = tmp.coachmarkImage;
   obj.children = jsx(FastImageDefault, { source: null, style: null });
@@ -18,7 +18,7 @@ function OrbsBadgeCoachmarkImg() {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5009);
+const createStyles = fn(5014);
 let closure_6 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
   coachmarkImage: { width: 80, height: 80 },

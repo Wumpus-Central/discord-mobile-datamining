@@ -1,56 +1,49 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormDropdown.tsx
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import ChevronSmallDownIcon2 from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import FormStylesDefault from "FormStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5009);
-const styles = createStyles.createStyles({
-  container: { alignItems: "center", flexDirection: "row" },
-  content: { marginStart: 8, flexGrow: 1 },
-});
+const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormDropdown.tsx");
 
 export default function FormDropdown(arg0) {
   ({ disabled, label } = arg0);
   ({ leading, onPress, placeholder } = arg0);
-  const tmp = styles();
-  if (disabled) {
-    let ChevronSmallDownIcon = LockIcon.LockIcon;
-    let tmp7 = require;
-  } else {
-    ChevronSmallDownIcon = ChevronSmallDownIcon2.ChevronSmallDownIcon;
-    tmp7 = require;
-  }
-  const tmp4 = FormStylesDefault();
-  const obj = { style: null, accessibilityRole: "spinbutton", disabled, onPress: null, children: null };
-  const items = [tmp.container, tmp4.dropdownInput];
-  obj.style = items;
-  let tmp11;
-  const tmp5Result = React3(ChevronSmallDownIcon, { size: "md" });
-  if (!disabled) {
-    tmp11 = onPress;
-  }
-  obj.onPress = tmp11;
-  const items1 = [leading, ,];
-  const obj2 = { style: tmp.content, variant: "text-md/medium", color: null, children: null };
-  let str = "text-muted";
-  if (null != label) {
-    str = "text-default";
-  }
-  obj2.color = str;
+  const obj = {
+    start: true,
+    end: true,
+    icon: leading,
+    label: null,
+    trailing: null,
+    arrow: null,
+    disabled: null,
+    onPress: null,
+  };
   if (label == null) {
-    label = placeholder;
+    const obj2 = { variant: "text-md/medium", color: "text-muted", children: placeholder };
+    label = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-muted", children: placeholder });
   }
-  obj2.children = label;
-  items1[1] = React3(tmp7(5619).Text, obj2);
-  items1[2] = tmp5Result;
-  obj.children = items1;
-  return React4(TouchableHitBoxDefault, obj);
+  obj.label = label;
+  let tmpResult;
+  if (disabled) {
+    const obj3 = { IconComponent: LockIcon.LockIcon };
+    tmpResult = jsx(TableRow.TableRow.Icon, { IconComponent: LockIcon.LockIcon });
+  }
+  obj.trailing = tmpResult;
+  obj.arrow = !disabled;
+  obj.disabled = disabled;
+  obj.onPress = onPress;
+  return jsx(TableRow.TableRow, {
+    start: true,
+    end: true,
+    icon: leading,
+    label: null,
+    trailing: null,
+    arrow: null,
+    disabled: null,
+    onPress: null,
+  });
 }
-export const useFormDropdownStyles = styles;
