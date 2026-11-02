@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const GameOrganizationJoinModalConstants = fn(13186);
+const GameOrganizationJoinModalConstants = fn(13201);
 ({ closeGameOrganizationJoinModal: metroRequire, GameOrganizationJoinScenes: closure_7 } =
   GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
@@ -122,7 +122,7 @@ export function AcceptStep(code) {
     }
   };
   const tmp = closure_10();
-  const tmp4 = character(13188)(code);
+  const tmp4 = character(13203)(code);
   dependencyMap = code(1497).useNavigation();
   let obj = code(1497);
   [tmp7, c3] = noop.useState(false);
@@ -143,14 +143,14 @@ export function AcceptStep(code) {
     obj4.children = intl4.formatToPlainString(tmp2(2404).WmxMAI, obj7);
     const items = [closure_8(tmp5(5624).Text, obj4)];
     const obj8 = { linkedGuild: tmp4.linkedGuild };
-    items[1] = closure_8(tmp2(13195), obj8);
+    items[1] = closure_8(tmp2(13210), obj8);
     obj3.children = items;
     const items1 = [closure_9(tmp5(6027).Stack, obj3)];
     const obj9 = { spacing: tmp2(575).space.PX_24, children: null };
     const obj10 = { variant: "heading-lg/semibold", children: null };
     let intl = tmp5(1113).intl;
     obj10.children = intl.string(tmp2(2404).yFqGy8);
-    const items2 = [closure_8(tmp5(5624).Text, obj10), closure_8(tmp2(13196), {})];
+    const items2 = [closure_8(tmp5(5624).Text, obj10), closure_8(tmp2(13211), {})];
     obj9.children = items2;
     items1[1] = closure_9(tmp5(6027).Stack, obj9);
     obj2.children = items1;
@@ -182,7 +182,7 @@ export function AcceptStep(code) {
     items4[1] = closure_8(tmp5(5634).Button, obj14);
     obj12.children = items4;
     obj11.children = closure_9(tmp5(6767).ButtonGroup, obj12);
-    items3[1] = closure_8(tmp5(13193).ModalFooter, obj11);
+    items3[1] = closure_8(tmp5(13208).ModalFooter, obj11);
     obj5.children = items3;
     return closure_9(tmp5(7972).ModalScreen, obj5);
   }

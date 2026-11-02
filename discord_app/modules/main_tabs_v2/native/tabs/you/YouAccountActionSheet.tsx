@@ -50,8 +50,8 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 const TableRowGroup = currentLocale(7060);
 const TableSwitchRow = currentLocale(7369);
 const BellSlashIcon = currentLocale(10992);
-const DevToolsContentDefault = tmp4(17744);
-const YouSwitchClientsRadioGroupDefault = tmp4(18441);
+const DevToolsContentDefault = tmp4(17757);
+const YouSwitchClientsRadioGroupDefault = tmp4(18454);
 require = fn;
 function AccountSectionHeading(children) {
   const tmp = closure_21();
@@ -66,23 +66,23 @@ function AccountSectionHeading(children) {
 function YouStatusRadioGroup() {
   const memo = noop.useMemo(() => {
     const obj = {
-      icon: closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15992), variant: "text-status-online" }),
+      icon: closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15996), variant: "text-status-online" }),
       value: constants.ONLINE,
     };
     const items = [obj, , ,];
     const obj3 = { icon: null, value: null };
-    const obj2 = { source: closure_1(15992), variant: "text-status-online" };
-    obj3.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15989), variant: "text-status-idle" });
+    const obj2 = { source: closure_1(15996), variant: "text-status-online" };
+    obj3.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15993), variant: "text-status-idle" });
     obj3.value = constants.IDLE;
     items[1] = obj3;
     const obj5 = { icon: null, value: null };
-    const obj4 = { source: closure_1(15989), variant: "text-status-idle" };
-    obj5.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15990), variant: "text-status-dnd" });
+    const obj4 = { source: closure_1(15993), variant: "text-status-idle" };
+    obj5.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15994), variant: "text-status-dnd" });
     obj5.value = constants.DND;
     items[2] = obj5;
     const obj7 = { icon: null, value: null };
-    const obj6 = { source: closure_1(15990), variant: "text-status-dnd" };
-    obj7.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15991), variant: "text-status-offline" });
+    const obj6 = { source: closure_1(15994), variant: "text-status-dnd" };
+    obj7.icon = closure_1_19(setting(6983).TableRowIcon, { source: closure_1(15995), variant: "text-status-offline" });
     obj7.value = constants.INVISIBLE;
     items[3] = obj7;
     return items;
@@ -224,9 +224,9 @@ function YouAccountRadioGroup() {
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = stateFromStores(504);
-  const multiAccountUsers = stateFromStores(17981).useMultiAccountUsers().multiAccountUsers;
+  const multiAccountUsers = stateFromStores(17994).useMultiAccountUsers().multiAccountUsers;
   closure_129_0 = multiAccountUsers;
-  let obj2 = stateFromStores(17981);
+  let obj2 = stateFromStores(17994);
   const items1 = [StreamerModeStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(
     items1,
@@ -281,7 +281,7 @@ function YouAccountRadioGroup() {
     const obj6 = { style: tmp.manage, children: null };
     const obj7 = {
       onPress() {
-        return multiAccountUsers(18435)();
+        return multiAccountUsers(18448)();
       },
       children: null,
     };
@@ -359,7 +359,7 @@ function FocusModeSetting() {
             const obj = closure_1_0(11018);
             closure_1_1(5258).hideActionSheet();
             const obj2 = closure_1_1(5258);
-            const result = closure_1_0(18430).showYouAccountActionSheet();
+            const result = closure_1_0(18443).showYouAccountActionSheet();
           },
         };
         require("ActionSheetActionCreators").openLazy(
@@ -541,11 +541,11 @@ function CustomStatus() {
   return closure_1_19(TableRowGroup.TableRowGroup, { hasIcons: false, children: dependencyMap(Card.Card, obj4) });
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13962).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(13977).MultiAccountTokenStatus;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AuthStates: closure_14, StatusTypes: closure_15, ThemeTypes: closure_16 } = Constants);
 const EMOJI_URL_BASE_SIZE = fn(1386).EMOJI_URL_BASE_SIZE;
-let closure_18 = fn(13963).MultiAccountSwitchLocation;
+let closure_18 = fn(13978).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
 const createStyles = fn(5014);

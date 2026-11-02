@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(18357);
+  let obj = id(18370);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(18357).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(18370).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -71,10 +71,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "HermesInternal",
     overState: "a",
-    preventClipping: "film",
-    config: "filmklapper",
-    externalChildren: "klapper",
-    children: "klaptr\u00E6",
+    preventClipping: "b\u00E6rbar computer",
+    config: "computer",
+    externalChildren: "laptop",
+    children: "pc",
   };
   const obj3 = id(5095);
   obj4.id = "" + id;
@@ -89,10 +89,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(18356).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(18369).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(12219).HourglassIcon, {});
+  obj4.children = jsx(id(12359).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -105,9 +105,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "HermesInternal",
     overState: "a",
-    preventClipping: "film",
-    config: "filmklapper",
-    externalChildren: "klapper",
-    children: "klaptr\u00E6",
+    preventClipping: "b\u00E6rbar computer",
+    config: "computer",
+    externalChildren: "laptop",
+    children: "pc",
   });
 });

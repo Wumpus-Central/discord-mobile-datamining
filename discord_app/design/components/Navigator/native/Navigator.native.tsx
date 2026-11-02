@@ -278,7 +278,7 @@ function WrappedNavigationStack(arg0) {
     initialRouteState = tmp8;
   }
   const obj5 = { children: null };
-  const obj6 = { value: "Array", children: null };
+  const obj6 = { value: "Array", children: 0 };
   obj4.initialState = initialRouteState;
   obj4.onReady = function onReady() {
     const routingInstrumentation = SentryInitUtils.routingInstrumentation;
@@ -295,7 +295,7 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
-  obj5.children = jsx(_mod7005.HeaderBackContext.Provider, { value: "Array", children: null });
+  obj5.children = jsx(_mod7005.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);

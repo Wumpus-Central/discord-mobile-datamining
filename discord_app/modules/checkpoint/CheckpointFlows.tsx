@@ -26,9 +26,9 @@ export function getCheckpointFlow(flag) {
 export function getCheckpointRoutes(stats) {
   stats = stats.stats;
   if (stats.flow === stats(6435).CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(13438).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp(13453).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(13439).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(13454).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   return prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
@@ -49,9 +49,9 @@ export function getAdjacentCheckpointRoute(stats) {
   stats = stats.stats;
   ({ flow, currentRoute, direction } = stats);
   if (flow === stats(6435).CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(13438).CHECKPOINT_SHARED_DATA_FLOW;
+    let prop = tmp(13453).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(13439).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(13454).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const found = prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {

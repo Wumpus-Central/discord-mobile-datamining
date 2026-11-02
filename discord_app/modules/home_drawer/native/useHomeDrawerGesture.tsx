@@ -10,7 +10,7 @@ import HomeDrawerStore from "HomeDrawerStore.tsx";
 import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 
 require = fn;
-const computeMaxX = fn(18061).computeMaxX;
+const computeMaxX = fn(18074).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const GestureConstants = fn(11242);
 ({
@@ -20,7 +20,7 @@ const GestureConstants = fn(11242);
   PULL_GESTURE_RESISTANCE,
 } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(11535).LaunchPadTypes;
+const LaunchPadTypes = fn(11536).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let c18 = 48;

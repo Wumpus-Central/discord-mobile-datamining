@@ -13,8 +13,8 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import useIsPremiumSubscriber from "../../../premium/useIsPremiumSubscriber.tsx";
-import _modDef12329 from "../../../../../_runtime/metro/12329__.js";
-import SvgCss from "../../../../../_runtime/12821_SvgCss.js";
+import _modDef12469 from "../../../../../_runtime/metro/12469__.js";
+import SvgCss from "../../../../../_runtime/12824_SvgCss.js";
 import OrbWalletUtils from "OrbWalletUtils.native.tsx";
 import VirtualCurrencyAnalyticsUtil from "../../VirtualCurrencyAnalyticsUtil.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -126,9 +126,9 @@ function OrbWalletShopPrimaryCard() {
   const ORB_WALLET_SHOP_CTA = AnalyticsLocationDefault.ORB_WALLET_SHOP_CTA;
   closure_129_0 = ORB_WALLET_SHOP_CTA;
   closure_129_1 = callback;
-  const orbWalletAnalyticsPage = analyticsLocations(16890).useOrbWalletAnalyticsPage();
+  const orbWalletAnalyticsPage = analyticsLocations(16903).useOrbWalletAnalyticsPage();
   closure_129_2 = orbWalletAnalyticsPage;
-  const obj = analyticsLocations(16890);
+  const obj = analyticsLocations(16903);
   const items1 = [analyticsLocations(4847).DismissibleContent.ORB_WALLET_SHOP_CTA_CARD];
   const tmp7 = _slicedToArray(
     analyticsLocations(7569).useSelectedDismissibleContent(items1, {
@@ -173,7 +173,7 @@ function OrbWalletShopPrimaryCard() {
     obj4.subTextDescription = intl3.string(_modDef2172.HACucK);
     const intl4 = tmp5(1113).intl;
     obj4.buttonText = intl4.string(_modDef2172["7raRgL"]);
-    obj4.buttonIcon = _modDef12329;
+    obj4.buttonIcon = _modDef12469;
     obj4.onCtaPress = callback1;
     obj4.onClose = tmp10;
     tmp11 = closure_11(BaseOrbWalletPrimaryCard, obj4);
@@ -308,8 +308,8 @@ obj4.primaryCardText = { flex: 1, gap: nativeDefault.space.PX_4 };
 let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj4.primaryCardCloseButton = { position: "absolute", top: nativeDefault.space.PX_4, end: nativeDefault.space.PX_4 };
 let closure_15 = createStyles.createStyles(obj4);
-let size = { asset: fn(16902), width: 56, height: 37 };
-const size1 = { asset: fn(16903), width: 50, height: 37 };
+let size = { asset: fn(16915), width: 56, height: 37 };
+const size1 = { asset: fn(16916), width: 50, height: 37 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletCards.tsx");
 

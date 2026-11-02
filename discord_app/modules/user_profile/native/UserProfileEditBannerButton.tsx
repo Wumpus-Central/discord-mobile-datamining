@@ -5,9 +5,10 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
 import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
+import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(16447);
+const EditButtonDefault = tmp(16460);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
@@ -108,7 +109,9 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
   let refreshEditButtonContainer = closure_7();
   let tmp = importDefault;
   let obj = dependencyMap;
-  const obj2 = { style: refreshEditButtonContainer.container, children: null };
+  ({ ref, onLayout, width } = useMeasuredLayoutDefault());
+  const obj2 = { ref, style: refreshEditButtonContainer.container, onLayout, children: null };
+  const tmp2 = useMeasuredLayoutDefault();
   const items = [
     hasOwnProperty(UserProfileBannerDefault, {
       user,
@@ -117,7 +120,7 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
       pendingAvatarSrc,
       pendingThemeColors,
       pendingAccentColor,
-      bannerHeight: useUserProfileBannerHeightDefault(),
+      bannerHeight: useUserProfileBannerHeightDefault(width),
       bannerSafeArea,
     }),
     ,
@@ -139,10 +142,10 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
     obj.onPress = onPressEdit;
     obj.accessibilityLabel = editButtonAccessibilityLabel;
     obj.disabled = editDisabled;
-    let tmp5Result = hasOwnProperty(tmp, obj);
+    let tmp6Result = hasOwnProperty(tmp, obj);
   } else {
     const obj4 = { onPress: onPressEdit, accessibilityLabel: editButtonAccessibilityLabel, disabled: editDisabled };
-    tmp5Result = hasOwnProperty(EditButton, obj4);
+    tmp6Result = hasOwnProperty(EditButton, obj4);
   }
-  const tmp2 = useUserProfileBannerHeightDefault();
+  const tmp3 = useUserProfileBannerHeightDefault(width);
 }

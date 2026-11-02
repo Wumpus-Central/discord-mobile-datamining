@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/CompassSpotIllustration.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef18841 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-1x.png.js";
-import _modDef18842 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-2x.png.js";
-import _modDef18843 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-3x.png.js";
+import _modDef18848 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-1x.png.js";
+import _modDef18849 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-2x.png.js";
+import _modDef18850 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18841 }, 3: null };
-let obj2 = { uri: _modDef18841 };
-obj[2] = { uri: _modDef18842 };
-const obj3 = { uri: _modDef18842 };
-obj[3] = { uri: _modDef18843 };
+let obj = { 1: null, 2: { uri: _modDef18848 }, 3: null };
+let obj2 = { uri: _modDef18848 };
+obj[2] = { uri: _modDef18849 };
+const obj3 = { uri: _modDef18849 };
+obj[3] = { uri: _modDef18850 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/CompassSpotIllustration.native.tsx",

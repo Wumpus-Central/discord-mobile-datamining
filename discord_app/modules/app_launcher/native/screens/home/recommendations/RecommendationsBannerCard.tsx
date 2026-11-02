@@ -110,7 +110,7 @@ export default function RecommendationsBannerCard(application) {
   });
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result2 = closure_6(tmp4(12270).BaseAppRow, obj5);
+    let tmp12Result2 = closure_6(tmp4(12410).BaseAppRow, obj5);
   } else {
     const items1 = [tmp.container, ,];
     let num = 8;

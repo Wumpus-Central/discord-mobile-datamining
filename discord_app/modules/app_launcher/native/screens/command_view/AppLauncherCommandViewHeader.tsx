@@ -10,7 +10,7 @@ const AppLauncherNativeConstants = fn(1496);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(12321).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(12461).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
 const createStyles = fn(5014);
 let obj2 = {
@@ -34,7 +34,7 @@ let obj2 = {
   icon: null,
   headerBannerOverlay: null,
 };
-let size = { width: fn(12321).BACK_BUTTON_SIZE, height: fn(12321).BACK_BUTTON_SIZE };
+let size = { width: fn(12461).BACK_BUTTON_SIZE, height: fn(12461).BACK_BUTTON_SIZE };
 obj2.overflowMenuContainer = size;
 const rect = {
   position: "absolute",
@@ -208,7 +208,7 @@ export function AppLauncherCommandViewHeader(onPress) {
   const obj11 = { style: null };
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   obj11.style = items3;
-  const items4 = [tmp16(section(5095).View, obj11), tmp16(section(12321), { onPress: onPress.onPressBack }), , ,];
+  const items4 = [tmp16(section(5095).View, obj11), tmp16(section(12461), { onPress: onPress.onPressBack }), , ,];
   const obj12 = {
     lineClamp: 1,
     animated: true,
@@ -234,7 +234,7 @@ export function AppLauncherCommandViewHeader(onPress) {
       id = rootCommand.id;
     }
   }
-  obj13.children = tmp16(section(12346), { commandId: id });
+  obj13.children = tmp16(section(12486), { commandId: id });
   items4[3] = tmp16(View, obj13);
   const obj14 = { style: null, children: tmp15 };
   const items6 = [tmp.appIconMask, animatedStyle1];

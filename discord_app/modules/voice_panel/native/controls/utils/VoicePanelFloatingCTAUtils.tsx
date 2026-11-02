@@ -35,7 +35,7 @@ function useFloatingCTAProps(stateFromStores) {
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   const tmp5 = setShowFloatingCTA(5253)();
-  const tmp6 = setShowFloatingCTA(19144)(noop.useContext(setShowFloatingCTA(11222)).channelId);
+  const tmp6 = setShowFloatingCTA(19151)(noop.useContext(setShowFloatingCTA(11222)).channelId);
   let id1;
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
@@ -133,7 +133,7 @@ function useFloatingCTAProps(stateFromStores) {
   }
   closure_130_0 = stateFromStores;
   tmpResultResult = setShowFloatingCTA(8965)(guild_id, id2, nextRecurrenceIdInEvent);
-  const tmp26 = setShowFloatingCTA(19144)(noop.useContext(setShowFloatingCTA(11222)).channelId);
+  const tmp26 = setShowFloatingCTA(19151)(noop.useContext(setShowFloatingCTA(11222)).channelId);
   const items4 = [ChannelRTCStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items4, () => {
     let id;

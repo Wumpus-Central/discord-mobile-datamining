@@ -15,11 +15,11 @@ import useActivityShelfItem from "../../../../activities/utils/useActivityShelfI
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
 import getItemSubtitleForMaxPlayers from "../../../../activities/utils/getItemSubtitleForMaxPlayers.tsx";
-import _modDef14376 from "../../../../../../_runtime/metro/14376__.js";
+import _modDef14391 from "../../../../../../_runtime/metro/14391__.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import _modDef19261 from "../../../../../../_runtime/metro/19261__.js";
+import _modDef19268 from "../../../../../../_runtime/metro/19268__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useActivityShelfItemDefault = useActivityShelfItem;
@@ -71,7 +71,7 @@ function ParticipantsText(arg0) {
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
   const items1 = [
-    timestampProducer(native.Icon, { source: _modDef14376, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
+    timestampProducer(native.Icon, { source: _modDef14391, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }),
   ];
   const obj4 = {
     lineClamp: 1,
@@ -259,7 +259,7 @@ export default function ActivityShelfItem(arg0) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
       const obj10 = {
         size: native.Icon.Sizes.REFRESH_SMALL_16,
-        source: _modDef19261,
+        source: _modDef19268,
         color: tmp.developerIconColor.color,
       };
       obj9.children = timestampProducer(native.Icon, obj10);

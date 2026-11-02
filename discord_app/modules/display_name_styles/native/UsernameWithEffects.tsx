@@ -150,7 +150,7 @@ export default noop.memo(function UsernameWithEffects(userName) {
   });
   let tmp10;
   if (null != displayNameStylesFont) {
-    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "a" };
+    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
     tmp10 = obj3;
   }
   let num = merged.lineClamp;

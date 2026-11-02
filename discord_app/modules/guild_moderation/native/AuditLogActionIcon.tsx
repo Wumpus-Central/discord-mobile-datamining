@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import RobotIcon2 from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
-import _modDef19714 from "../../../../_runtime/metro/19714__.js";
-import _modDef19715 from "../../../../_runtime/metro/19715__.js";
-import _modDef19716 from "../../../../_runtime/metro/19716__.js";
+import _modDef19721 from "../../../../_runtime/metro/19721__.js";
+import _modDef19722 from "../../../../_runtime/metro/19722__.js";
+import _modDef19723 from "../../../../_runtime/metro/19723__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,13 +14,13 @@ function AuditIcons(action) {
   const tmp = closure_10();
   const tmp2 = hasOwnProperty(action);
   if (constants.CREATE === tmp2) {
-    let tmp4 = _modDef19714;
+    let tmp4 = _modDef19721;
   } else if (constants.UPDATE === tmp2) {
-    tmp4 = _modDef19715;
+    tmp4 = _modDef19722;
   } else {
     tmp4 = null;
     if (constants.DELETE === tmp2) {
-      tmp4 = _modDef19716;
+      tmp4 = _modDef19723;
     }
   }
   if (action === constants2.MESSAGE_DELETE) {
@@ -49,7 +49,7 @@ function AuditIcons(action) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const AuditLogRecord = fn(19704);
+const AuditLogRecord = fn(19711);
 ({ getTargetType: closure_4, getActionType: hasOwnProperty } = AuditLogRecord);
 const Constants = fn(1072);
 ({ AuditLogTargetTypes, AuditLogActionTypes: metroRequire, AuditLogActions: closure_7 } = Constants);
@@ -75,32 +75,32 @@ obj2.iconComponent = { width: 22, height: 22 };
 obj2.actionImage = { position: "absolute" };
 let closure_10 = createStyles.createStyles(obj2);
 let obj3 = {
-  [ALL]: fn(19710).ListBulletsIcon,
-  [CHANNEL]: fn(19646).ChannelListIcon,
-  [CHANNEL_OVERWRITE]: fn(19646).ChannelListIcon,
+  [ALL]: fn(19717).ListBulletsIcon,
+  [CHANNEL]: fn(19653).ChannelListIcon,
+  [CHANNEL_OVERWRITE]: fn(19653).ChannelListIcon,
   [EMOJI]: fn(9452).ReactionIcon,
   [GUILD]: fn(5735).CircleInformationIcon,
   [GUILD_PROFILE]: fn(5735).CircleInformationIcon,
-  [INTEGRATION]: fn(18897).PuzzlePieceIcon,
+  [INTEGRATION]: fn(18904).PuzzlePieceIcon,
   [INVITE]: fn(5727).LinkIcon,
   [ROLE]: fn(10084).FlagIcon,
   [USER]: fn(8661).GroupIcon,
-  [WEBHOOK]: fn(18802).WebhookIcon,
+  [WEBHOOK]: fn(18809).WebhookIcon,
   [STAGE_INSTANCE]: fn(8669).StageIcon,
   [GUILD_SCHEDULED_EVENT]: fn(9115).CalendarIcon,
   [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(9115).CalendarIcon,
   [THREAD]: fn(8645).ThreadIcon,
   [STICKER]: fn(11042).StickerIcon,
-  [APPLICATION_COMMAND]: fn(11498).SlashBoxIcon,
-  [AUTO_MODERATION_RULE]: fn(18802).WebhookIcon,
-  [GUILD_SOUNDBOARD]: fn(14087).SoundboardIcon,
+  [APPLICATION_COMMAND]: fn(11499).SlashBoxIcon,
+  [AUTO_MODERATION_RULE]: fn(18809).WebhookIcon,
+  [GUILD_SOUNDBOARD]: fn(14102).SoundboardIcon,
   [ONBOARDING_PROMPT]: fn(8661).GroupIcon,
   [GUILD_ONBOARDING]: fn(8661).GroupIcon,
   [HOME_SETTINGS]: fn(8661).GroupIcon,
   [GUILD_MEMBER_VERIFICATION]: fn(8661).GroupIcon,
-  [VOICE_CHANNEL_STATUS]: fn(19646).ChannelListIcon,
-  [GUILD_HOME]: fn(19712).HomeIcon,
-  [UNKNOWN]: fn(14502).CircleQuestionIcon,
+  [VOICE_CHANNEL_STATUS]: fn(19653).ChannelListIcon,
+  [GUILD_HOME]: fn(19719).HomeIcon,
+  [UNKNOWN]: fn(14516).CircleQuestionIcon,
 };
 ({
   ALL,

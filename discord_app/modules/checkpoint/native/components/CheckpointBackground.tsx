@@ -31,7 +31,7 @@ export default function CheckpointBackground(gradientStartColor) {
     }),
   ];
   const obj3 = { source: null, style: null, resizeMode: "cover" };
-  const obj4 = { uri: gradientStartColor(13619) };
+  const obj4 = { uri: gradientStartColor(13634) };
   obj3.source = obj4;
   obj3.style = tmp2.background;
   items1[1] = closure_5(gradientStartColor(5717), obj3);

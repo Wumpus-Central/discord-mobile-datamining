@@ -870,7 +870,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "chestnut",
+    rtcRegion: "tokyo_tower",
     safetyWarnings: false,
     blockedUserWarningDismissed: false,
     template: false,

@@ -84,7 +84,7 @@ export default function XboxLinkModal(locationStack) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(14612), {});
+          return closure_1_6(closure_1_1(14626), {});
         },
       },
       [closure_2_4.EDUCATION]: {
@@ -108,7 +108,7 @@ export default function XboxLinkModal(locationStack) {
     };
   }, items);
   const obj = twoWayLinkStyles(9730);
-  const accountLinkStepTracking = twoWayLinkStyles(14621).useAccountLinkStepTracking(
+  const accountLinkStepTracking = twoWayLinkStyles(14635).useAccountLinkStepTracking(
     PlatformTypes.XBOX,
     locationStack.locationStack,
   );

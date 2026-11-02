@@ -6,7 +6,7 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "TwoWayLinkStyles.tsx";
-import _modDef14620 from "../../../../../../_runtime/metro/14620__.js";
+import _modDef14634 from "../../../../../../_runtime/metro/14634__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,7 +25,7 @@ export function TwoWayLinkError(arg0) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14620;
+  obj4.source = _modDef14634;
   obj4.style = tmp.image;
   const items = [
     React4(FastImageDefault, obj4),

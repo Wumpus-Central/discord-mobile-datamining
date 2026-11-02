@@ -96,37 +96,37 @@ export default function CheckpointGameTimeStatsScreen() {
   const obj5 = { style: tmp.imageContainer, children: null };
   const tmp2Result = CheckpointStatsUtils;
   const obj6 = { animatedUri: null, staticUri: null, style: null };
-  const tmp12Result = tmp12(13622);
-  obj6.animatedUri = tmp12(13665);
-  obj6.staticUri = tmp12(13666);
+  const tmp12Result = tmp12(13637);
+  obj6.animatedUri = tmp12(13680);
+  obj6.staticUri = tmp12(13681);
   obj6.style = tmp.image;
-  obj5.children = timestampProducer(tmp12(13629), obj6);
+  obj5.children = timestampProducer(tmp12(13644), obj6);
   const items2 = [timestampProducer(View, obj5)];
   const obj7 = { style: tmp.copy, children: null };
   const obj8 = { style: tmp.title, children: null };
   const items3 = [timestampProducer(CalendarIcon.CalendarIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
   const obj10 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
   const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-  const tmp12Result4 = tmp12(13629);
+  const tmp12Result4 = tmp12(13644);
   obj10.children = stringResult.toLocaleUpperCase();
-  items3[1] = timestampProducer(tmp12(13624), obj10);
+  items3[1] = timestampProducer(tmp12(13639), obj10);
   obj8.children = items3;
   const items4 = [React5(View, obj8), ,];
   if (rounded <= 0 && null != stateFromStores1) {
     const obj11 = { value: stateFromStores1 };
-    let tmp14Result = timestampProducer(tmp12(13636), obj11);
+    let tmp14Result = timestampProducer(tmp12(13651), obj11);
   } else {
     const obj12 = { accessible: true, accessibilityLabel: null, style: null, children: null };
     const _HermesInternal = HermesInternal;
     obj12.accessibilityLabel = "" + rounded + " " + stringResult;
     obj12.style = tmp.number;
     const obj13 = { end: rounded };
-    obj12.children = timestampProducer(tmp12(13637), obj13);
+    obj12.children = timestampProducer(tmp12(13652), obj13);
     tmp14Result = timestampProducer(View, obj12);
   }
   items4[1] = tmp14Result;
   const obj14 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const tmp12Result5 = tmp12(13624);
+  const tmp12Result5 = tmp12(13639);
   if (rounded <= 0 && null != stateFromStores1) {
     const intl5 = util.intl;
     const obj15 = { numUsers: CheckpointStatsUtils.formatCheckpointCompactNumber(stateFromStores1) };
@@ -149,7 +149,7 @@ export default function CheckpointGameTimeStatsScreen() {
   }
   const obj18 = { children: null };
   obj14.children = formatToPlainStringResult1;
-  items4[2] = timestampProducer(tmp12(13624), obj14);
+  items4[2] = timestampProducer(tmp12(13639), obj14);
   obj7.children = items4;
   items2[1] = React5(View, obj7);
   obj4.children = items2;

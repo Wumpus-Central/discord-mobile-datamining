@@ -24,7 +24,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const YouBarConstants = fn(17062);
+const YouBarConstants = fn(17075);
 ({
   YOU_BAR_HEIGHT: c10,
   YOU_BAR_PADDING: closure_11,

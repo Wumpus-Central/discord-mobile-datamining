@@ -5,7 +5,7 @@ import UserSettingsAppearanceThemeUtils from "../../appearance/native/UserSettin
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

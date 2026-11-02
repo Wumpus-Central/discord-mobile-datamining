@@ -13,7 +13,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5014);
 let obj2 = {
-  container: { marginBottom: fn(12319).BETWEEN_SECTIONS_MARGIN },
+  container: { marginBottom: fn(12459).BETWEEN_SECTIONS_MARGIN },
   header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 },
 };
 let closure_8 = createStyles.createStyles(obj2);

@@ -30,7 +30,7 @@ export default function useAvatarDecorationSections() {
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(563);
-  return first(15064)(
+  return first(15068)(
     useMemo(() => {
       let obj = CollectiblesUtils;
       const avatarDecorations = obj.getAvatarDecorations(stateFromStores, first);

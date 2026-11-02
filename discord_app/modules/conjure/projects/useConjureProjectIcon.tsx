@@ -1,8 +1,11 @@
 // discord_app/modules/conjure/projects/useConjureProjectIcon.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import prefetchConjureApplicationDefault from "prefetchConjureApplication.tsx";
+import noop from "../../../../_runtime/metro/00019__.js";
+import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
+const require = fn;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/useConjureProjectIcon.tsx");
 
 export default function useConjureProjectIcon(preview_application_id, size) {
@@ -10,16 +13,23 @@ export default function useConjureProjectIcon(preview_application_id, size) {
   if (application_id == null) {
     application_id = preview_application_id.application_id;
   }
-  const data = ApplicationActionCreators.useApplication(application_id).data;
-  let icon;
-  if (data != null) {
-    icon = data.icon;
-  }
+  const items = [ApplicationStore];
+  const stateFromStores = application_id(504).useStateFromStores(items, () => {
+    const application = ApplicationStore.getApplication(application_id);
+    let icon;
+    if (application != null) {
+      icon = application.icon;
+    }
+    return icon;
+  });
+  const items1 = [application_id];
+  const effect = noop.useEffect(() => prefetchConjureApplicationDefault(application_id), items1);
   let applicationIconURL;
-  if (null != icon) {
-    const obj3 = { id: application_id, icon: data.icon, size };
+  if (null != stateFromStores) {
+    const obj3 = { id: application_id, icon: stateFromStores, size };
     applicationIconURL = AvatarUtilsDefault.getApplicationIconURL(obj3);
   }
+  const obj = application_id(504);
   const obj4 = { url: applicationIconURL };
   const merged = Object.assign({ glyphSize: Math.round(0.6 * size), radius: size / 4 });
   return obj4;

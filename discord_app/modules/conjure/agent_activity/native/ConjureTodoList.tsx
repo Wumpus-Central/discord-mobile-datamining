@@ -158,8 +158,8 @@ export default function ConjureTodoList(announceProgress) {
   noop = undefined;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = agents(12586);
-  ({ completed, total } = agents(12586).todoProgress(todos));
+  let obj = agents(12589);
+  ({ completed, total } = agents(12589).todoProgress(todos));
   let items = [agents];
   noop = noop.useMemo(() => {
     let items = agents;
@@ -172,7 +172,7 @@ export default function ConjureTodoList(announceProgress) {
     return null;
   }
   const intl = agents(1113).intl;
-  const todoProgressResult = agents(12586).todoProgress(todos);
+  const todoProgressResult = agents(12589).todoProgress(todos);
   const intl2 = agents(1113).intl;
   const formatToPlainStringResult = intl.formatToPlainString(flag2(3868)["P/I+JW"], { completed, total });
   let obj2 = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
@@ -186,7 +186,7 @@ export default function ConjureTodoList(announceProgress) {
       str = "polite";
     }
   }
-  obj2.meta = closure_6(agents(12718).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj2.meta = closure_6(agents(12721).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj2.showHeader = total > 0;
   obj2.superseded = flag3;
   obj2.expanded = flag4;
@@ -241,5 +241,5 @@ export default function ConjureTodoList(announceProgress) {
   items1[1] = tmp11Result;
   obj3.children = items1;
   obj2.children = closure_7(closure_5, obj3);
-  return closure_6(flag2(12718), obj2);
+  return closure_6(flag2(12721), obj2);
 };

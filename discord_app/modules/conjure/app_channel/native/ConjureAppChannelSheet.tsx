@@ -243,7 +243,7 @@ function ConjureAppChannelSheetContent(channel) {
         const obj12 = { IconComponent: tmp2(tmp3[29]).RemixIcon };
         obj11.icon = closure_10(tmp2(tmp3[25]).TableRowIcon, obj12);
         const intl3 = tmp2(tmp3[27]).intl;
-        obj11.label = intl3.string(tmp5(tmp3[30]).KMwCb7);
+        obj11.label = intl3.string(tmp5(tmp3[30])["276ll6"]);
         tmp24Result9 = closure_10(tmp2(tmp3[24]).TableRow, obj11);
       }
     }

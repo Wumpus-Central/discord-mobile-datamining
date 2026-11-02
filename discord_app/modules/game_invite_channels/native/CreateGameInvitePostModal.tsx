@@ -27,7 +27,7 @@ function CreateGameInvitePostContent(parentChannel) {
   let items = [tags];
   const memo = noop.useMemo(() => new Set(first.map((id) => id.id)), items);
   const tmp4 = noMicTag(noop.useState(""), 2);
-  const createGameInvitePost = parentChannel(14369).useCreateGameInvitePost({
+  const createGameInvitePost = parentChannel(14384).useCreateGameInvitePost({
     parentChannel,
     description: tmp5,
     appliedTagIds: memo,
@@ -148,7 +148,7 @@ function CreateGameInvitePostContent(parentChannel) {
   if (isSlowmodeEnabled) {
     const obj16 = { style: tmp.slowmodeRow, children: null };
     const obj17 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj16.children = closure_8(tmp2(13734), obj17);
+    obj16.children = closure_8(tmp2(13749), obj17);
     tmp15Result4 = closure_8(View, obj16);
   }
   const items9 = [tmp15Result4];

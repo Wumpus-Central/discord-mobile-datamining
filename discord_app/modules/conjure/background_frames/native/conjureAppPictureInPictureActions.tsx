@@ -1,21 +1,33 @@
 // discord_app/modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx
 import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
+import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
 import EmbeddedAppShimExperiment from "../../../activities/experiments/EmbeddedAppShimExperiment.tsx";
+import openConjureProjectInBuilderDefault from "../../projects/openConjureProjectInBuilder.native.tsx";
 import getConjureAppSoundButtonDefault from "../../app_channel/native/getConjureAppSoundButton.tsx";
 import closeFrameDefault from "../../../frames/closeFrame.tsx";
 import conjureBackgroundFrames from "../conjureBackgroundFrames.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
+import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 require = fn;
 function getConjureAppPictureInPictureActions(id, appName, arg2) {
   _require = id;
-  const obj = { label: null, IconComponent: null, onPress: null };
+  let obj = { label: null, IconComponent: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.formatToPlainString(_modDef3868.dPf03z, { appName });
   obj.IconComponent = require("WindowLaunchIcon").WindowLaunchIcon;
   obj.onPress = function onPress() {
-    return conjureBackgroundFrames.returnToConjureFrameSurface(closure_0);
+    if (obj.isConjurePreviewSurface(id.surface)) {
+      const result = ConjureProjectStore.findProjectByApplicationId(id.applicationId);
+      if (null != result) {
+        openConjureProjectInBuilderDefault(result);
+      }
+    } else {
+      const result1 = conjureBackgroundFrames.returnToConjureFrameSurface(id);
+      const tmp2Result = conjureBackgroundFrames;
+    }
+    obj = conjurePreviewSurface;
   };
   const items = [obj];
   if (arg2) {
@@ -39,6 +51,18 @@ let result = size.fileFinishedImporting(
 );
 
 export const CONJURE_APP_PICTURE_IN_PICTURE_LOCATION = "ConjureAppPictureInPicture";
+export function openConjureAppPictureInPictureFrame(surface) {
+  if (obj.isConjurePreviewSurface(surface.surface)) {
+    const result = ConjureProjectStore.findProjectByApplicationId(surface.applicationId);
+    if (null != result) {
+      openConjureProjectInBuilderDefault(result);
+    }
+  } else {
+    const result1 = conjureBackgroundFrames.returnToConjureFrameSurface(surface);
+    const tmpResult = conjureBackgroundFrames;
+  }
+  obj = conjurePreviewSurface;
+}
 export { getConjureAppPictureInPictureActions };
 export function showConjureAppPictureInPictureActions(frameId, title) {
   const tmp = asLaunched(FramesStore.getFrame(frameId));

@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import _modDef3450 from "../intl/FavoritesGuild.messages.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef11484 from "../../../../_runtime/metro/11484__.js";
+import _modDef11485 from "../../../../_runtime/metro/11485__.js";
 import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ export function FavoritesGuildHeaderActionButton() {
   const obj = {
     variant: "secondary",
     size: "sm",
-    icon: _modDef11484,
+    icon: _modDef11485,
     onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1,
@@ -25,7 +25,7 @@ export function FavoritesGuildHeaderActionButton() {
   return jsx(IconButton.IconButton, {
     variant: "secondary",
     size: "sm",
-    icon: _modDef11484,
+    icon: _modDef11485,
     onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1,

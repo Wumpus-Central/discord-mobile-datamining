@@ -454,7 +454,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "concat", parent_id: "style" },
+      channel: { id, guild_id: "Array", parent_id: "isArray" },
       silent: flag2,
     });
     if (flag) {
@@ -468,7 +468,7 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "concat", parent_id: "style" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1282).rejectWithMigratedError();
     const obj8 = flag3(1282);

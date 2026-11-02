@@ -26,7 +26,7 @@ export function conjureChatMoreSections(project) {
   if (preview(project)) {
     const obj2 = { kind: "action", key: "remix", label: null, IconComponent: null, onPress: null };
     const intl2 = tmp2(removeTarget[1]).intl;
-    obj2.label = intl2.string(require("../../intl/ConjureUntranslated.messages.js").XWgAfc);
+    obj2.label = intl2.string(require("../../intl/ConjureUntranslated.messages.js")["276ll6"]);
     obj2.IconComponent = tmp2(removeTarget[4]).RemixIcon;
     obj2.onPress = onRemix;
     items.push(obj2);

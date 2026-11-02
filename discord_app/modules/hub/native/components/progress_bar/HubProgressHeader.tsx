@@ -12,7 +12,7 @@ const HubProgressBarConstants = fn(9131);
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);
 let obj2 = {
-  container: { overflow: "hidden", height: fn(13843).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 },
+  container: { overflow: "hidden", height: fn(13858).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 },
   icon: { width: 48, height: 48 },
   innerContainer: {
     paddingVertical: 8,
@@ -73,7 +73,7 @@ export default function HubProgressHeader(guild) {
       }
       if (!tmp) {
         const obj2 = { guild, analyticsSource: "Directory Channel Header" };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14229, dependencyMap.paths), React4, obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14244, dependencyMap.paths), React4, obj2);
       }
     };
     obj5.iconSource = flag(tmp3[14]);

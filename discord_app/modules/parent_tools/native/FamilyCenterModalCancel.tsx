@@ -17,7 +17,7 @@ function FamilyCenterModalCancelScreen(otherUser) {
     otherUser(5711).presentFailedToast(intl.string(otherUser(1113).t.R0RpRX));
   }, []);
   const tmp2 = cancelLinkRequest(8370)();
-  const familyCenterActions = otherUser(13344).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+  const familyCenterActions = otherUser(13359).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
   cancelLinkRequest = familyCenterActions.cancelLinkRequest;
   const isCancelLoading = familyCenterActions.isCancelLoading;
   const items = [cancelLinkRequest, otherUser.id];
@@ -29,14 +29,14 @@ function FamilyCenterModalCancelScreen(otherUser) {
   const obj3 = { children: null };
   const obj4 = { style: tmp.header, children: null };
   const obj5 = { otherUser, iconSrc: null };
-  const obj = otherUser(13344);
+  const obj = otherUser(13359);
   obj5.iconSrc = cancelLinkRequest(8359);
-  const items1 = [closure_5(cancelLinkRequest(16815), obj5), ,];
+  const items1 = [closure_5(cancelLinkRequest(16828), obj5), ,];
   const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1113).intl;
   obj6.children = intl.string(cancelLinkRequest(2538).HynllX);
   items1[1] = closure_5(otherUser(5624).Text, obj6);
-  items1[2] = closure_5(cancelLinkRequest(16783), { user: otherUser });
+  items1[2] = closure_5(cancelLinkRequest(16796), { user: otherUser });
   obj4.children = items1;
   obj3.children = closure_6(View, obj4);
   const items2 = [closure_5(otherUser(7973).ModalContent, obj3)];
@@ -60,7 +60,7 @@ function FamilyCenterModalCancelScreen(otherUser) {
   items3[1] = closure_5(otherUser(5634).Button, obj10);
   obj8.children = items3;
   obj7.children = closure_6(otherUser(6767).ButtonGroup, obj8);
-  items2[1] = closure_5(otherUser(13193).ModalFooter, obj7);
+  items2[1] = closure_5(otherUser(13208).ModalFooter, obj7);
   obj2.children = items2;
   return closure_6(otherUser(7972).ModalScreen, obj2);
 }
@@ -99,5 +99,5 @@ export default function FamilyCenterModalCancel(otherUser) {
   let obj = { initialRouteName: "CANCEL", screens: memo, headerBackTitle: null };
   const intl = otherUser(1113).intl;
   obj.headerBackTitle = intl.string(otherUser(1113).t["13/7kX"]);
-  return closure_5(otherUser(11481).Modal, obj);
+  return closure_5(otherUser(11482).Modal, obj);
 }

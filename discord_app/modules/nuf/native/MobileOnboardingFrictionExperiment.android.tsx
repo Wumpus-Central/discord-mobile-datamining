@@ -11,8 +11,8 @@ const ApexExperiment = fn(1447);
 let obj2 = {
   name: "2026-10-android-mobile-onboarding-friction-negative-test",
   kind: "user",
-  defaultConfig: fn(18037).CONTROL,
-  variations: { 0: fn(18037).CONTROL, 1: fn(18037).LOW_FRICTION_V1 },
+  defaultConfig: fn(18050).CONTROL,
+  variations: { 0: fn(18050).CONTROL, 1: fn(18050).LOW_FRICTION_V1 },
 };
 let closure_6 = ApexExperiment.createApexExperiment(obj2);
 const size = fn(2);

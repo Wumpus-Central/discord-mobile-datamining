@@ -118,7 +118,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12239).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12379).getAppLauncherIconSource(app.section.application);
     let obj = {
       style: disabled ? tmp.appContainerDisabled : tmp.appContainer,
       disabled,
@@ -154,14 +154,14 @@ function FrecentApp(app) {
     }
     const items = [tmp3];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12248).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(12388).SubmittingOverlay, obj3);
     obj.children = items;
     return closure_12(app(6980).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const FrecencySectionSelection = fn(12241).FrecencySectionSelection;
+const FrecencySectionSelection = fn(12381).FrecencySectionSelection;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

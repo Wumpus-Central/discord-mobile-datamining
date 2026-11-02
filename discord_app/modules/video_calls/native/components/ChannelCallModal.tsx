@@ -59,7 +59,7 @@ const ChannelCallStore = fn(11000);
   useIsVoiceChatFocused: closure_11,
 } = ChannelCallStore);
 let VoiceChatDrawerState = fn(11001).VoiceChatDrawerState;
-const Constants = fn(11699);
+const Constants = fn(11700);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -71,8 +71,8 @@ let closure_18 = noop.memo(function NavigatorContainer(arg0) {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(11845).terminate();
-        const obj = closure_1_1(11845);
+        closure_1_1(11846).terminate();
+        const obj = closure_1_1(11846);
         closure_1_1(11212).setHidden(false);
         const obj2 = closure_1_1(11212);
         if (!obj3.isModalOpen(closure_1_31)) {

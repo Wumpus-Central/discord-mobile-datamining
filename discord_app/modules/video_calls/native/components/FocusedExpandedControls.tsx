@@ -10,8 +10,8 @@ import showAudioOutputSelector from "../../../voice_calls/native/audio_output_se
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import VoiceActionUtils from "../VoiceActionUtils.tsx";
-import _modDef11999 from "../../../../../_runtime/metro/11999__.js";
 import _modDef12000 from "../../../../../_runtime/metro/12000__.js";
+import _modDef12001 from "../../../../../_runtime/metro/12001__.js";
 import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
 import useDeafStatesDefault from "../../useDeafStates.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -31,10 +31,10 @@ function ExpandedControlItemIcon(iconSource) {
     if (iconSource.showIconSparkle) {
       const obj = { children: null };
       const items = [tmp11, , ];
-      const obj3 = { style: tmp.sparkle2, source: _modDef11999 };
+      const obj3 = { style: tmp.sparkle2, source: _modDef12000 };
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.sparkle, source: null };
-      obj4.source = _modDef12000;
+      obj4.source = _modDef12001;
       items[2] = React5(FastImageDefault, obj4);
       obj.children = items;
       tmp7 = React6(View, obj);
@@ -150,7 +150,7 @@ export function DeafenButton(disabled) {
   }
   const tmp3 = useDeafStatesDefault(disabled.channel);
   const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
-  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12003 : 12004), label: null };
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 12004 : 12005), label: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t.wjcRFX);
   return React5(ExpandedControlItem, obj2);

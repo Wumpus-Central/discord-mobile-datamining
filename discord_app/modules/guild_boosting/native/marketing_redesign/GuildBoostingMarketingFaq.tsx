@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef15492 from "../../../../../_runtime/metro/15492__.js";
+import _modDef15496 from "../../../../../_runtime/metro/15496__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -217,7 +217,7 @@ export default function GuildBoostingMarketingFaq() {
           children: getQuestion.getQuestion(),
         }),
       ];
-      const obj4 = { source: _modDef15492, style: null };
+      const obj4 = { source: _modDef15496, style: null };
       const items2 = [closure_0.questionIcon];
       let questionIconExpanded = tmp;
       if (tmp) {

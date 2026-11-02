@@ -162,7 +162,7 @@ function NameplateActionSheetPreview(arg0) {
   obj3.children = items1;
   const items3 = [
     closure_11(View, obj3),
-    closure_10(tmp10(11506).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }),
+    closure_10(tmp10(11507).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }),
   ];
   const obj5 = { style: tmp.nameplateGradientContainer, children: null };
   const items4 = [

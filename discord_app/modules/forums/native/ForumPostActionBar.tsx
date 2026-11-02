@@ -101,7 +101,7 @@ export default function ForumPostActionBar(channel) {
   if (tmp11) {
     const obj7 = { style: tmp.reactionRow, children: null };
     const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj7.children = closure_10(tmp2(11349).ForumPostActionBarReactions, obj8);
+    obj7.children = closure_10(tmp2(11350).ForumPostActionBarReactions, obj8);
     tmp11 = closure_10(View, obj7);
   }
   const items5 = [tmp11];
@@ -137,7 +137,7 @@ export default function ForumPostActionBar(channel) {
       obj2.jumpType = Client.JumpType.ANIMATED;
       obj.jumpToMessage(obj2);
     };
-    obj11.children = closure_10(tmp2(11350).ArrowLargeUpIcon, { size: "xs" });
+    obj11.children = closure_10(tmp2(11351).ArrowLargeUpIcon, { size: "xs" });
     items7[2] = closure_10(tmp2(6980).PressableOpacity, obj11);
     obj9.children = items7;
     items5[1] = closure_11(View, obj9);

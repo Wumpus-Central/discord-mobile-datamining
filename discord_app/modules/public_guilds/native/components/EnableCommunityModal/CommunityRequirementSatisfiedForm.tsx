@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting(
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  const enableCommunitySharedStyles = formSwitchDisabled(19831).useEnableCommunitySharedStyles();
+  const enableCommunitySharedStyles = formSwitchDisabled(19838).useEnableCommunitySharedStyles();
   const obj2 = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children];
   let tmp6 = null;

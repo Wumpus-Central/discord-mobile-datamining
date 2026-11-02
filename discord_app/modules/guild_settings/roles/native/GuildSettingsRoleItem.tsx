@@ -178,7 +178,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                     c1 = 1;
                     c2 = 1;
                     const obj6 = {
-                      value: tmp2(11602).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
+                      value: tmp2(11603).putRoleConnectionsConfigurations(guildId, tmp2.id, []),
                       done: false,
                     };
                     return obj6;

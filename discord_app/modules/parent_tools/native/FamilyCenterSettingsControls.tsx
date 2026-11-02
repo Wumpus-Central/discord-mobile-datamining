@@ -15,7 +15,7 @@ require = fn;
 function SpendingLimitRow(teenId) {
   teenId = teenId.teenId;
   const tmp = closure_9();
-  const spendingLimitDisplayState = teenId(16800).useSpendingLimitDisplayState(teenId.cap);
+  const spendingLimitDisplayState = teenId(16813).useSpendingLimitDisplayState(teenId.cap);
   const kind = spendingLimitDisplayState.kind;
   if ("off" === kind) {
     const obj2 = { trailing: null };
@@ -74,7 +74,7 @@ function SpendingLimitRow(teenId) {
   let fn;
   if (null != teenId) {
     fn = () => {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16798, dependencyMap.paths), { teenId }, undefined, {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16811, dependencyMap.paths), { teenId }, undefined, {
         animation: "slide_from_right",
       });
     };
@@ -168,10 +168,10 @@ function FamilyCenterSettingsTeenControls() {
 }
 function FamilyCenterSettingsParentalControls() {
   const tmp = closure_9();
-  selectedTeenUser = selectedTeenUser(16784).useSelectedTeenUser();
-  let obj = selectedTeenUser(16784);
-  const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(16784).useShouldLoadSettingsForSelectedTeenUser();
-  const obj2 = selectedTeenUser(16784);
+  selectedTeenUser = selectedTeenUser(16797).useSelectedTeenUser();
+  let obj = selectedTeenUser(16797);
+  const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(16797).useShouldLoadSettingsForSelectedTeenUser();
+  const obj2 = selectedTeenUser(16797);
   dependencyMap = selectedTeenUser(1497).useNavigation();
   let rules;
   if (selectedTeenUser != null) {
@@ -183,7 +183,7 @@ function FamilyCenterSettingsParentalControls() {
   if (rules == null) {
     rules = [];
   }
-  const ParentalControlledSpendingLimit = tmp2(16709).ParentalControlledSpendingLimit;
+  const ParentalControlledSpendingLimit = tmp2(16722).ParentalControlledSpendingLimit;
   let id;
   if (selectedTeenUser != null) {
     id = selectedTeenUser.id;
@@ -208,7 +208,7 @@ function FamilyCenterSettingsParentalControls() {
   }, items);
   const obj3 = selectedTeenUser(1497);
   const tmp11 = shouldLoadSettingsForSelectedTeenUser;
-  ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(16801)(rules));
+  ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(16814)(rules));
   const obj4 = { style: tmp.parentalControlsContainer, children: null };
   const obj5 = { variant: "text-sm/semibold", children: null };
   const intl = tmp2(1113).intl;

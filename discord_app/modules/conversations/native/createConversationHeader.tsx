@@ -3,7 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import _modDef3770 from "../Conversations.messages.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
-import _modDef12760 from "../../../../_runtime/metro/12760__.js";
+import _modDef12763 from "../../../../_runtime/metro/12763__.js";
 import RowGeneratorConstants from "../../messages/native/renderer/RowGeneratorConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -16,7 +16,7 @@ export default function createConversationHeader(conversationId) {
     channelId: conversationId.channelId,
     startMessageId: conversationId.startMessageId,
     title: conversationId.title,
-    expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef12760),
+    expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef12763),
     expandAccessibilityLabel: null,
   };
   const intl = util.intl;

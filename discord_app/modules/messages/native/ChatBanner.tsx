@@ -220,7 +220,7 @@ function NewMessagesChatBar(channel) {
           objectType: constants.ACK_MANUAL,
         });
       };
-      XSmallBoldIcon = XSmallBoldIcon(11359).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(11360).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;
@@ -235,7 +235,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11356).ChatOverlays;
+const ChatOverlays = fn(11357).ChatOverlays;
 const Constants = fn(1072);
 ({
   AnalyticsObjectTypes: closure_8,

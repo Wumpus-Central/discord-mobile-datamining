@@ -5,7 +5,7 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef11639 from "../../../../_runtime/metro/11639__.js";
+import _modDef11640 from "../../../../_runtime/metro/11640__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -71,7 +71,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   }, items);
   let obj = { showGradient: true, scrollable: true, startExpanded: true, header: null, footer: null, children: null };
   const obj2 = { style: tmp.titleImage, children: null };
-  const obj3 = { source: _modDef11639, resizeMode: "contain" };
+  const obj3 = { source: _modDef11640, resizeMode: "contain" };
   obj2.children = closure_5(FastImageDefault, obj3);
   obj.header = closure_5(View, obj2);
   const obj4 = { style: null, children: null };
@@ -106,7 +106,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj12 = { style: tmp.noticeContainer, children: null };
   const obj13 = { style: tmp.innerContainer, children: null };
   const obj5 = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(11640).TimerIcon, { size: "sm" }) })];
+  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(11641).TimerIcon, { size: "sm" }) })];
   const obj15 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1113).intl;
   obj15.children = intl5.string(onClick(1113).t.Fq3DJb);
@@ -114,7 +114,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj13.children = items4;
   const items5 = [closure_6(View, obj13)];
   const obj16 = { style: tmp.secondInnerContainer, children: null };
-  const obj14 = { style: tmp.item, children: closure_5(onClick(11640).TimerIcon, { size: "sm" }) };
+  const obj14 = { style: tmp.item, children: closure_5(onClick(11641).TimerIcon, { size: "sm" }) };
   const items6 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(5727).LinkIcon, { size: "sm" }) })];
   const obj18 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1113).intl;

@@ -15,7 +15,7 @@ function ExternalLinkItem(data) {
   let tmp3 = null;
   if (data.is_localized) {
     const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    const obj2 = { IconComponent: url(15172).LinkExternalMediumIcon };
+    const obj2 = { IconComponent: url(15176).LinkExternalMediumIcon };
     obj.trailing = closure_4(url(6983).TableRowIcon, obj2);
     obj.onPress = function onLinkPress() {
       LinkingDefault.openURL(url);

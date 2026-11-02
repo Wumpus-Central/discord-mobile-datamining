@@ -5,7 +5,7 @@ import useSecureFramesVerifiedUsers from "../../../rtc/hooks/useSecureFramesVeri
 import SecureFramesPersistedStore from "../../../rtc/SecureFramesPersistedStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;

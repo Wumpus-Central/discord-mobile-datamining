@@ -463,7 +463,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, application_id) {
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "flexDirection" };
+          let obj4 = { primaryIconAsset: "raw", primaryIconLabel: "cix" };
         } else {
           const obj3 = StoreUtils;
           obj4 = {
@@ -480,7 +480,7 @@ export function getPrimaryCarouselItemInfo(tenantMetadata, application_id) {
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "flexDirection" };
+  return { primaryIconAsset: "raw", primaryIconLabel: "cix" };
 }
 export function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

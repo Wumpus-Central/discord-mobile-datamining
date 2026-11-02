@@ -240,7 +240,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   let callback;
   dependencyMap = undefined;
   const currentUser = require("useCurrentUser").useCurrentUser();
-  const backgroundColors = callback(14483)(product.styles).backgroundColors;
+  const backgroundColors = callback(14497)(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
@@ -413,7 +413,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj11 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
       const obj12 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp30(tmp2(14487).BalanceWidgetPill, obj12);
+      showOrbBalancePill = tmp30(tmp2(14501).BalanceWidgetPill, obj12);
     }
     obj11.children = showOrbBalancePill;
     const items5 = [tmp30(closure_7, obj11)];
@@ -468,15 +468,15 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       tmp29Result2 = tmp29(tmp4(9506), obj18);
     } else if (tmp2(1987).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj19 = { user: currentUser, profileEffect: product.items[0] };
-      tmp29Result2 = tmp29(tmp4(11391), obj19);
+      tmp29Result2 = tmp29(tmp4(11392), obj19);
     } else if (tmp2(1987).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj20 = { user: currentUser, profileFrame: product.items[0] };
-      tmp29Result2 = tmp29(tmp4(11505), obj20);
+      tmp29Result2 = tmp29(tmp4(11506), obj20);
     } else {
       tmp29Result2 = null;
       if (tmp2(1987).CollectiblesItemType.NAMEPLATE === type) {
         const obj21 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp29Result2 = tmp29(tmp2(11506).NameplatePreview, obj21);
+        tmp29Result2 = tmp29(tmp2(11507).NameplatePreview, obj21);
       }
     }
     obj15.children = tmp29Result2;

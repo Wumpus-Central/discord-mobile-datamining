@@ -699,9 +699,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(12761).pickConjurePhotos(
+                value: projectId(12764).pickConjurePhotos(
                   "mixed",
-                  projectId(12459).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(12118).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };

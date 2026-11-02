@@ -2726,16 +2726,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     if (type === constants2.GUILD_STAGE_VOICE) {
       if (!self._videoDecoderFallbackSuppressed) {
-        const logger2 = self.logger;
-        logger2.info("Suppressing video decoder fallback: stage channel");
+        const logger = self.logger;
+        logger.info("Suppressing video decoder fallback: stage channel");
         self._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = codecs.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger = self.logger;
+      const logger2 = self.logger;
       const _HermesInternal = HermesInternal;
-      logger.info(
+      logger2.info(
         "The originally selected video decoder is not working, fallback to the other available decoders: " +
           mapped.join(","),
       );

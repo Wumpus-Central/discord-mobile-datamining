@@ -109,7 +109,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(15810).showSimpleActionSheet(obj);
+            const result = closure_0(15814).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;

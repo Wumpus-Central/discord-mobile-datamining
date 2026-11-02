@@ -9,9 +9,9 @@ import StreamKeyUtils from "../../go_live/utils/StreamKeyUtils.tsx";
 import _modDef8350 from "../../../../_runtime/metro/08350__.js";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
 import openGroupDMAddMembersDefault from "../../group_dm/native/openGroupDMAddMembers.tsx";
-import _modDef11967 from "../../../../_runtime/metro/11967__.js";
-import _modDef19336 from "../../../../_runtime/metro/19336__.js";
-import _modDef19337 from "../../../../_runtime/metro/19337__.js";
+import _modDef11968 from "../../../../_runtime/metro/11968__.js";
+import _modDef19343 from "../../../../_runtime/metro/19343__.js";
+import _modDef19344 from "../../../../_runtime/metro/19344__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
@@ -33,7 +33,7 @@ export function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.dsXapM);
-  obj.icon = _modDef19336;
+  obj.icon = _modDef19343;
   obj.onPress = function onPress() {
     require("openUserSettings").openUserSettings({ screen: constants.VOICE });
     const obj = require("openUserSettings");
@@ -59,7 +59,7 @@ export function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(19333, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(19340, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -89,7 +89,7 @@ export function reportStreamIssue(stream) {
   let obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.KHGhHf);
-  obj.icon = _modDef19337;
+  obj.icon = _modDef19344;
   obj.onPress = function onPress() {
     const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(stream);
     let videoStats = StreamRTCConnectionStore.getVideoStats(encodeStreamKeyResult);
@@ -104,11 +104,11 @@ export function reportStreamIssue(stream) {
       max_viewers: StreamRTCConnectionStore.getMaxViewers(encodeStreamKeyResult),
     };
     const obj5 = ActionSheetActionCreatorsDefault;
-    obj5.openLazy(asyncRequireImpl(19338, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
+    obj5.openLazy(asyncRequireImpl(19345, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
       stream,
       analyticsData: obj3,
     });
-    const tmp6 = asyncRequireImpl(19338, dependencyMap.paths);
+    const tmp6 = asyncRequireImpl(19345, dependencyMap.paths);
   };
   return obj;
 }
@@ -146,7 +146,7 @@ export function invite(dependencyMap, stream, targetApplicationId) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.VINpSK);
-  obj.icon = _modDef11967;
+  obj.icon = _modDef11968;
   obj.onPress = onPress;
   return obj;
 }

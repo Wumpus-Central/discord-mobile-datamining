@@ -424,7 +424,7 @@ export function BountiesScrollVideoItem(bounty) {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(14685).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(14699).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(6788).AdCreativeType.BOUNTY,
     questContent: bounty(6786).QuestContent.VIDEO_MODAL_MOBILE,

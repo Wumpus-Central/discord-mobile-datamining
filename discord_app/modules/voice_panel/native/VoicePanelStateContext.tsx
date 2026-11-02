@@ -50,9 +50,9 @@ const obj = {
   sheetExitProgress: null,
   showControls: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
   showFloatingCTA: null,
-  streamOutputSinkStack: "\u{1F43D}",
+  streamOutputSinkStack: "\u{1F414}",
   windowDimensions: 6,
-  wrapperDimensions: 261,
+  wrapperDimensions: 268,
   useReducedMotion: "/developers",
   wrapperOffset: null,
   pipHandoff: "/developers/teams",
@@ -88,7 +88,7 @@ ReanimatedHelperTypes = fn(7242);
 obj.dockPressProgress = ReanimatedHelperTypes.createFakeSharedValue(0);
 ReanimatedHelperTypes = fn(7242);
 obj.dockPressed = ReanimatedHelperTypes.createFakeSharedValue(false);
-obj.dismissToPIPGestureRef = { current: "Array" };
+obj.dismissToPIPGestureRef = { current: "r" };
 ReanimatedHelperTypes = fn(7242);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7242);

@@ -66,7 +66,7 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   });
   let tmp5 = null;
   if (null != stateFromStores) {
-    tmp5 = stateFromStores(11650)(stateFromStores);
+    tmp5 = stateFromStores(11651)(stateFromStores);
   }
   dependencyMap = tmp5;
   const tmp7 = closure_6((arg0) => {
@@ -168,7 +168,7 @@ export default function GameOrganizationInviteActionSheet(guildId) {
     let tmp16Result = closure_10(Loading, {});
   } else {
     const obj8 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-    tmp16Result = closure_10(stateFromStores(15787), obj8);
+    tmp16Result = closure_10(stateFromStores(15791), obj8);
   }
   obj2.children = tmp16Result;
   return closure_10(guildId(7366).ActionSheet, obj2);

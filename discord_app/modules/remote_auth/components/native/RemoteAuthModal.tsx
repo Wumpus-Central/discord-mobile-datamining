@@ -12,8 +12,8 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef15681 from "../../../../../_runtime/metro/15681__.js";
-import _modDef15683 from "../../../../../_runtime/metro/15683__.js";
+import _modDef15685 from "../../../../../_runtime/metro/15685__.js";
+import _modDef15687 from "../../../../../_runtime/metro/15687__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -291,12 +291,12 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 export default function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef15683, style: tmp.imageStyle };
+  const obj2 = { source: _modDef15687, style: tmp.imageStyle };
   const items = [React5(FastImageDefault, obj2), ,];
   const obj3 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj3.style = items1;
-  obj3.source = _modDef15681;
+  obj3.source = _modDef15685;
   items[1] = React5(FastImageDefault, obj3);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.mainCard, children: null };

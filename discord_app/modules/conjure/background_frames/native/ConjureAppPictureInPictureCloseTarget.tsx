@@ -16,9 +16,9 @@ let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(19113).CLOSE_TARGET_SIZE,
-  height: fn(19113).CLOSE_TARGET_SIZE,
-  borderRadius: fn(19113).CLOSE_TARGET_SIZE / 2,
+  width: fn(19120).CLOSE_TARGET_SIZE,
+  height: fn(19120).CLOSE_TARGET_SIZE,
+  borderRadius: fn(19120).CLOSE_TARGET_SIZE / 2,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
@@ -33,7 +33,7 @@ const rect = {
   left: 0,
   right: 0,
   bottom: 0,
-  borderRadius: fn(19113).CLOSE_TARGET_SIZE / 2,
+  borderRadius: fn(19120).CLOSE_TARGET_SIZE / 2,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.STATUS_DANGER,
@@ -89,7 +89,7 @@ export default function ConjureAppPictureInPictureCloseTarget(hovered) {
     shown,
     FADE,
     x,
-    CLOSE_TARGET_SIZE: shown(19113).CLOSE_TARGET_SIZE,
+    CLOSE_TARGET_SIZE: shown(19120).CLOSE_TARGET_SIZE,
     withSpring: shown(5637).withSpring,
     y,
     SPRING,
@@ -117,12 +117,12 @@ export default function ConjureAppPictureInPictureCloseTarget(hovered) {
   let items = [tmp.target, animatedStyle];
   obj4.style = items;
   const obj2 = { withTiming: shown(5254).withTiming, hovered, FADE };
-  const items1 = [closure_3(shown(11883).DoorExitIcon, { size: "md", color: hovered(575).colors.ICON_STRONG })];
+  const items1 = [closure_3(shown(11884).DoorExitIcon, { size: "md", color: hovered(575).colors.ICON_STRONG })];
   const obj6 = { style: null, children: null };
   const items2 = [tmp.fill, animatedStyle1];
   obj6.style = items2;
   let obj5 = { size: "md", color: hovered(575).colors.ICON_STRONG };
-  obj6.children = closure_3(shown(11883).DoorExitIcon, { size: "md", color: hovered(575).colors.WHITE });
+  obj6.children = closure_3(shown(11884).DoorExitIcon, { size: "md", color: hovered(575).colors.WHITE });
   items1[1] = closure_3(hovered(5095).View, obj6);
   obj4.children = items1;
   return closure_4(hovered(5095).View, obj4);

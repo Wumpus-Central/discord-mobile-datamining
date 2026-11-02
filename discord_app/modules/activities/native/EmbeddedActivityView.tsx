@@ -116,7 +116,7 @@ function EmbeddedActivityWebView(applicationId) {
     1,
   )[0]);
   const merged1 = Object.assign(merged);
-  return closure_13(applicationId(11820).BaseEmbeddedAppWebView, {
+  return closure_13(applicationId(11821).BaseEmbeddedAppWebView, {
     iframeId,
     shellBridgeSecret,
     deepLinkQueryParams: applicationId.deepLinkQueryParams,
@@ -128,7 +128,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_7, View: closure_8 } = get_ActivityIndicator);
 const ActivityScreenOrientation = fn(2018).ActivityScreenOrientation;
 fn(1360).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
-const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(5014);

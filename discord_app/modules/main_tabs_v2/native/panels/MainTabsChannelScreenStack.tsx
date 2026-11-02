@@ -103,7 +103,7 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const setVisibleChannelScreen = fn(18591).setVisibleChannelScreen;
+const setVisibleChannelScreen = fn(18604).setVisibleChannelScreen;
 const ONYX_BORDER_WIDTH = fn(9813).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);

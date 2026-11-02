@@ -70,7 +70,7 @@ export function BaseButton(disabled) {
     onPressOut,
   );
   if (null == pressed) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: null };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

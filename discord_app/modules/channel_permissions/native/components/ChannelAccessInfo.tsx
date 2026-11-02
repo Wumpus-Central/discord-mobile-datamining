@@ -147,7 +147,7 @@ export default function ChannelAccessInfo(guild) {
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(14028);
+    channel(14043);
     const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(8661).GroupIcon)];
     const ROLES = constants.ROLES;
     channel(9061);
@@ -158,7 +158,7 @@ export default function ChannelAccessInfo(guild) {
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3)];
   const tmp2Result = guild(9031);
-  items6[1] = closure_8(guild(1187).Icon, { source: channel(11910), size: guild(1187).Icon.Sizes.SMALL });
+  items6[1] = closure_8(guild(1187).Icon, { source: channel(11911), size: guild(1187).Icon.Sizes.SMALL });
   obj2.children = items6;
   items2[1] = closure_9(guild(6980).PressableOpacity, obj2);
   obj10.children = items2;

@@ -84,7 +84,7 @@ export default function BadgeTierGrid(badge) {
           if (complex_icon_static_url == null) {
             complex_icon_static_url = owned.complex_icon_static_url;
           }
-          const tierRowSubtitle = badge(11459).getTierRowSubtitle({
+          const tierRowSubtitle = badge(11460).getTierRowSubtitle({
             tier: owned,
             isUnlocked: owned,
             isViewingOtherUser,
@@ -110,8 +110,8 @@ export default function BadgeTierGrid(badge) {
             }
             items1[1] = dimmedIcon;
             obj4.style = items1;
-            tmp9Result = closure_2_4(isViewingOtherUser(11451), obj4);
-            const tmp11 = isViewingOtherUser(11451);
+            tmp9Result = closure_2_4(isViewingOtherUser(11452), obj4);
+            const tmp11 = isViewingOtherUser(11452);
           }
           const items2 = [tmp9Result, ,];
           let tmp13Result = null != owned.name;

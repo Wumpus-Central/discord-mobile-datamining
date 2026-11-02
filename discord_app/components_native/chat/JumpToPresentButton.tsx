@@ -62,10 +62,10 @@ export default function JumpToPresentButton(channelId) {
     return tmp;
   });
   const obj = channelId(504);
-  const isVoicePanelMounted = channelId(11860).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(11860);
-  const isVoicePanelOpen = channelId(11860).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(11860);
+  const isVoicePanelMounted = channelId(11861).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(11861);
+  const isVoicePanelOpen = channelId(11861).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(11861);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(
     items1,
@@ -92,15 +92,15 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13811), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(13810), {
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13826), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(13825), {
       accessibilityLabel: stringResult,
-      icon: screenIndex(13811),
+      icon: screenIndex(13826),
       onPress: channelId.onJumpToPresent,
     });
-    const tmp16 = screenIndex(13810);
+    const tmp16 = screenIndex(13825);
   } else {
-    tmp12Result = jsx(tmp3(13812).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(13827).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17062);
+const YouBarConstants = fn(17075);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_BUTTON_HIT_SLOP: closure_7,
@@ -34,7 +34,7 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   hasNameplate = hasNameplate.hasNameplate;
   let onLongPress;
   const tmp = closure_10();
-  value = onLongPress(18456)().value;
+  value = onLongPress(18469)().value;
   _require = value;
   const fn = function u() {
     let num = 0;

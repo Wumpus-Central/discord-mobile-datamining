@@ -60,16 +60,16 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
         const _location = nextExpiry;
         function add(item10063, owned) {
           if (!set.has(item10063.id)) {
-            const result = nextExpiry(12071).conjureProjectGuildId(item10063);
+            const result = nextExpiry(12072).conjureProjectGuildId(item10063);
             if (null == result) {
               set.add(item10063.id);
               let num = closure_2_10.getFinishedAt(item10063.id);
               const isThinkingResult = closure_2_10.isThinking(item10063.id);
               const obj4 = { thinking: isThinkingResult, finishedAt: num, now };
-              const conjureActivityResult = nextExpiry(12071).conjureActivity(obj4);
+              const conjureActivityResult = nextExpiry(12072).conjureActivity(obj4);
               if ("done" === conjureActivityResult) {
                 if (null != num) {
-                  const sum = num + nextExpiry(12071).CONJURE_DONE_WINDOW_MS;
+                  const sum = num + nextExpiry(12072).CONJURE_DONE_WINDOW_MS;
                   bound = sum;
                   if (null != bound) {
                     const _Math = Math;
@@ -123,7 +123,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
               }
               obj5.sortTime = num;
               items.push(obj5);
-              const tmpResult = nextExpiry(12071);
+              const tmpResult = nextExpiry(12072);
             } else {
               value = map.get(result);
               if (null == value) {
@@ -134,7 +134,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
                 const tmpResult2 = nextExpiry(6879);
               }
             }
-            const obj2 = nextExpiry(12071);
+            const obj2 = nextExpiry(12072);
           }
         }
         function isEnabled(id) {
@@ -175,7 +175,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
           }
           continue;
         }
-        let obj2 = { entries: _location(12071).sortConjureProjects(items), nextExpiry: bound };
+        let obj2 = { entries: _location(12072).sortConjureProjects(items), nextExpiry: bound };
         return obj2;
       })(nextExpiry),
     items1,

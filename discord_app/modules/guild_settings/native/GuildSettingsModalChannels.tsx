@@ -18,11 +18,11 @@ import HeaderActionButton from "../../../design/components/Navigator/native/Head
 import Form from "../../../design/void/Form/native/index.tsx";
 import ChannelSettingsActionCreators from "../../../actions/ChannelSettingsActionCreators.tsx";
 import FavoritesActionCreators from "../../favorites/FavoritesActionCreators.tsx";
-import _modDef13216 from "../../../../_runtime/metro/13216__.js";
+import _modDef13231 from "../../../../_runtime/metro/13231__.js";
 import ChannelSortingUtils from "../../channel_sorting/ChannelSortingUtils.tsx";
-import _modDef17277 from "../../../../_runtime/metro/17277__.js";
+import _modDef17290 from "../../../../_runtime/metro/17290__.js";
 import GuildSettingsModalChannelsActionCreatorsDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
-import _modDef18197 from "../../../../_runtime/metro/18197__.js";
+import _modDef18210 from "../../../../_runtime/metro/18210__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -115,7 +115,7 @@ function ChannelItem(isFavoritesGuild) {
   if (stateFromStores) {
     tmp7Result2 = null;
     if (sortingEnabled) {
-      const obj10 = { source: tmp13(18195), style: actionIconStyle };
+      const obj10 = { source: tmp13(18208), style: actionIconStyle };
       tmp7Result2 = closure_16(channel(8177).FormRow.Icon, obj10);
     }
   }
@@ -290,7 +290,7 @@ Category.prototype["render"] = function render() {
   } else {
     tmp3Result = null;
     if (null != sortHandlers) {
-      const obj6 = { source: tmp11(18195), style: actionIconStyle };
+      const obj6 = { source: tmp11(18208), style: actionIconStyle };
       tmp3Result = __initData2(native.Icon, obj6);
     }
   }
@@ -423,18 +423,18 @@ class GuildSettingsModalChannels extends PureComponent3 {
         const obj = { label: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.ffgJrs);
-        obj.icon = _modDef18197;
+        obj.icon = _modDef18210;
         obj.onPress = function onPress() {
-          closure_1_1(18193).startReordering(constants.GUILD_CATEGORY);
+          closure_1_1(18206).startReordering(constants.GUILD_CATEGORY);
         };
         items.push(obj);
       }
       const obj2 = { label: null, icon: null, onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.nIfr0Y);
-      obj2.icon = _modDef13216;
+      obj2.icon = _modDef13231;
       obj2.onPress = function onPress() {
-        closure_1_1(18193).startReordering(
+        closure_1_1(18206).startReordering(
           constants.GUILD_TEXT,
           constants.GUILD_ANNOUNCEMENT,
           constants.GUILD_FORUM,
@@ -446,9 +446,9 @@ class GuildSettingsModalChannels extends PureComponent3 {
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef17277;
+      obj3.icon = _modDef17290;
       obj3.onPress = function onPress() {
-        closure_1_1(18193).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
+        closure_1_1(18206).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };
       items.push(obj3);
       const obj5 = { key: "GuildSettingsChannelsSort", header: null, options: null, hasIcons: true };
@@ -533,8 +533,8 @@ class GuildSettingsModalChannels extends PureComponent3 {
                           if (PermissionStore.can(constants2.MANAGE_ROLES, localChannel)) {
                             if (PermissionStore.can(constants2.MANAGE_ROLES, channel)) {
                               const appChannelBotUserId =
-                                applyArgumentsResult(11645).getAppChannelBotUserId(localChannel);
-                              const obj2 = applyArgumentsResult(11645);
+                                applyArgumentsResult(11646).getAppChannelBotUserId(localChannel);
+                              const obj2 = applyArgumentsResult(11646);
                               const areChannelsLockedResult = PermissionUtilsAll.areChannelsLocked(
                                 localChannel,
                                 channel,

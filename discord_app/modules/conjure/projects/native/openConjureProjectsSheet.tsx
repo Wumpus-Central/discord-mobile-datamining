@@ -11,8 +11,15 @@ const result = size.fileFinishedImporting("modules/conjure/projects/native/openC
 export default function openConjureProjectsSheet() {
   if ("success" === ConjureProjectStore.getOwnedProjectsFetchState()) {
     if (0 === ConjureProjectStore.getOwnedProjects().length) {
-      openConjureHomeScreenDefault();
+      if (0 === ConjureProjectStore.getSharedWithMeProjects().length) {
+        openConjureHomeScreenDefault();
+      }
     }
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14708, dependencyMap.paths), "ConjureProjectsSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13006, dependencyMap.paths), "ConjureProjectsSheet");
+}
+export function openConjureProjectsSheetForGuild(guildId) {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13006, dependencyMap.paths), "ConjureProjectsSheet", {
+    guildId,
+  });
 }

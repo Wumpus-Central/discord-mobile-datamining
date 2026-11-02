@@ -158,7 +158,7 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   obj3.size = tmp10(1187).AvatarSizes.EDIT_AVATAR_DECORATION;
   const items1 = [
     closure_10(purchase(8829), obj3),
-    closure_10(purchase(15076), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo }),
+    closure_10(purchase(15080), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo }),
   ];
   obj.children = items1;
   return closure_11(View, obj);

@@ -70,7 +70,7 @@ function AddDescription(id) {
             obj2.description = ref.current;
             id(9778).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
             const obj = id(9778);
-            id(14508).close();
+            id(14522).close();
           },
         );
         let merged = Object.assign(arg0);
@@ -121,7 +121,7 @@ function AddDescription(id) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const DraftType = fn(7701).DraftType;
-const maxLength = fn(14510).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+const maxLength = fn(14524).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5014);

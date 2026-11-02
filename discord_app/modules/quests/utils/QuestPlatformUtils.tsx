@@ -664,12 +664,12 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
-    iosAttributionClickFramework = tmp2(14663).getIosAttributionClickFramework(
+    iosAttributionClickFramework = tmp2(14677).getIosAttributionClickFramework(
       null != iosAppId,
       impressionId.sourceQuestContent,
       adContentId,
     );
-    const tmp2Result = tmp2(14663);
+    const tmp2Result = tmp2(14677);
   }
   let fn;
   if (null != iosAttributionClickFramework) {
@@ -943,12 +943,12 @@ export function openGameLinkDirectly(quest, impressionId) {
         iosAppId = ios.iosAppId;
       }
     }
-    iosAttributionClickFramework = tmp(14663).getIosAttributionClickFramework(
+    iosAttributionClickFramework = tmp(14677).getIosAttributionClickFramework(
       null != iosAppId,
       impressionId.sourceQuestContent,
       quest.id,
     );
-    const tmpResult5 = tmp(14663);
+    const tmpResult5 = tmp(14677);
   }
   const ComponentDispatch = tmp(1108).ComponentDispatch;
   ComponentDispatch.dispatch(constants.QUEST_GAME_LINK_OPENED);

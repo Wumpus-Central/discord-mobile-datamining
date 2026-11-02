@@ -348,7 +348,7 @@ export function GameShareModal(content) {
             };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(18566).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(18579).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

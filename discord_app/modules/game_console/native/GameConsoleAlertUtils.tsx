@@ -59,7 +59,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     const obj2 = { title, body: null, onConfirm: null, isDismissable: false };
     let obj = actions_AlertActionCreatorsDefault;
-    obj2.body = jsx(reconnectPlatformType(11984).SelfDismissibleAlertBody, {
+    obj2.body = jsx(reconnectPlatformType(11985).SelfDismissibleAlertBody, {
       body,
       errorCodeMessage,
       dismissCallback: actions_AlertActionCreatorsDefault.close,

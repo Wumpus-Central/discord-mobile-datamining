@@ -22,13 +22,13 @@ import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/ge
 import _modDef11272 from "../../../../../_runtime/metro/11272__.js";
 import ChannelCallConnectingScreen from "../../../video_calls/native/components/ChannelCallConnectingScreen.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
-import _modDef11967 from "../../../../../_runtime/metro/11967__.js";
+import _modDef11968 from "../../../../../_runtime/metro/11968__.js";
 import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
 import SoundboardIcon from "../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
-import _modDef19223 from "../../../../../_runtime/metro/19223__.js";
-import _modDef19224 from "../../../../../_runtime/metro/19224__.js";
+import _modDef19230 from "../../../../../_runtime/metro/19230__.js";
+import _modDef19231 from "../../../../../_runtime/metro/19231__.js";
 import useSoundboardConfigDefault from "../hooks/useSoundboardConfig.tsx";
 import useHideSelfVideoDefault from "../../../calls/useHideSelfVideo.tsx";
 import ChannelCallUtils from "../../../video_calls/native/ChannelCallUtils.tsx";
@@ -168,7 +168,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, PlatformTypes: closure_14 } = Constants);
-let closure_15 = fn(19332).SelfStreamAndVideoAlertType;
+let closure_15 = fn(19339).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(5768).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -177,7 +177,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/Voi
 export function GameConsoles(channel) {
   channel = channel.channel;
   const connected = channel.connected;
-  const arr = connected(11975)();
+  const arr = connected(11976)();
   let tmp2 = null;
   if (!channel.isGuildStageVoice()) {
     let tmp3 = null;
@@ -263,7 +263,7 @@ export function SoundboardButton(channel) {
 }
 export function ScreenshareButton(channel) {
   let isActive;
-  const tmp = isActive(11919)(channel.channel);
+  const tmp = isActive(11920)(channel.channel);
   const onPress = tmp.onPress;
   isActive = tmp.isActive;
   const items = [isActive, onPress];
@@ -343,7 +343,7 @@ export function DeafenSwitch() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj2.icon = jsx(TableRowIcon.TableRowIcon, {
     IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
-    source: _modDef19224,
+    source: _modDef19231,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
@@ -395,10 +395,10 @@ export function InviteButton(channel) {
       tmp8 = null;
       if (channel.connected) {
         const obj2 = { onPress: tmp7, icon: null, label: null, trailing: null };
-        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11967 };
+        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef11968 };
         obj2.icon = jsx(TableRowIcon.TableRowIcon, {
           IconComponent: GroupPlusIcon.GroupPlusIcon,
-          source: _modDef11967,
+          source: _modDef11968,
         });
         const intl = util.intl;
         obj2.label = intl.string(util.t["f1+QIK"]);
@@ -423,7 +423,7 @@ export function HideNonVideoParticipants(channelId) {
   const obj = channelId(504);
   obj2.icon = jsx(channelId(6983).TableRowIcon, {
     IconComponent: channelId(11040).VideoIcon,
-    source: stateFromStores(11918),
+    source: stateFromStores(11919),
   });
   const intl = channelId(1113).intl;
   obj2.accessibilityHint = intl.string(channelId(1113).t.ZMTRyc);
@@ -461,7 +461,7 @@ export function HideSelfVideo() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f133070 = () => f133070(!VIDEO);
+          const f133127 = () => f133127(!VIDEO);
           const obj2 = {
             importer() {
               return VIDEO(paths[16])(paths[15], paths.paths).then((result) => {
@@ -546,7 +546,7 @@ export function VoiceSettingsButton(guildId) {
   }, items);
   const obj = {
     onPress: callback,
-    icon: jsx(guildId(6983).TableRowIcon, { IconComponent: guildId(7561).SettingsIcon, source: _modDef19223 }),
+    icon: jsx(guildId(6983).TableRowIcon, { IconComponent: guildId(7561).SettingsIcon, source: _modDef19230 }),
     label: null,
     subLabel: null,
     trailing: null,
@@ -558,7 +558,7 @@ export function VoiceSettingsButton(guildId) {
   obj.trailing = jsx(guildId(6984).TableRowArrow, {});
   return jsx(guildId(6975).TableRow, {
     onPress: callback,
-    icon: jsx(guildId(6983).TableRowIcon, { IconComponent: guildId(7561).SettingsIcon, source: _modDef19223 }),
+    icon: jsx(guildId(6983).TableRowIcon, { IconComponent: guildId(7561).SettingsIcon, source: _modDef19230 }),
     label: null,
     subLabel: null,
     trailing: null,

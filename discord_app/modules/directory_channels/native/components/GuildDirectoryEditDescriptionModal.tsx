@@ -34,7 +34,7 @@ function GuildDirectoryEditDescription(entry) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj3 = tmp4(13849);
+            const obj3 = tmp4(13864);
             dependencyMap = 1;
             c4 = 1;
             const obj5 = {
@@ -51,7 +51,7 @@ function GuildDirectoryEditDescription(entry) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          closure_1(13847).close();
+          closure_1(13862).close();
           c4 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
         }

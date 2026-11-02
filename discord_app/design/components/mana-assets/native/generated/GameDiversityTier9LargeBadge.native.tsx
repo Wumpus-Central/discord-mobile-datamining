@@ -1,17 +1,17 @@
 // discord_app/design/components/mana-assets/native/generated/GameDiversityTier9LargeBadge.native.tsx
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef14935 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-1x.png.js";
-import _modDef14936 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-2x.png.js";
-import _modDef14937 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-3x.png.js";
+import _modDef14939 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-1x.png.js";
+import _modDef14940 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-2x.png.js";
+import _modDef14941 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9LargeBadge-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14935 }, 3: null };
-let obj2 = { uri: _modDef14935 };
-obj[2] = { uri: _modDef14936 };
-const obj3 = { uri: _modDef14936 };
-obj[3] = { uri: _modDef14937 };
+let obj = { 1: null, 2: { uri: _modDef14939 }, 3: null };
+let obj2 = { uri: _modDef14939 };
+obj[2] = { uri: _modDef14940 };
+const obj3 = { uri: _modDef14940 };
+obj[3] = { uri: _modDef14941 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/GameDiversityTier9LargeBadge.native.tsx",

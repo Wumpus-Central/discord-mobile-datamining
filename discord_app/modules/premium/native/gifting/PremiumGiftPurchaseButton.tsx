@@ -65,8 +65,8 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   const setSelectedGiftingPromotionReward = nativeGiftContext.setSelectedGiftingPromotionReward;
   ({ setCurrentAnalyticsStep: c7, productId } = nativeGiftContext);
   let obj2 = defaultSelection(10562);
-  const canPurchaseIAP = defaultSelection(14451).useCanPurchaseIAP(productId);
-  const obj3 = defaultSelection(14451);
+  const canPurchaseIAP = defaultSelection(14465).useCanPurchaseIAP(productId);
+  const obj3 = defaultSelection(14465);
   let items = [c7];
   const stateFromStores = defaultSelection(504).useStateFromStores(items, () => {
     const marketingComponentByType = _undefined2.getMarketingComponentByType(
@@ -114,7 +114,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
     }
   }, items2);
   const tmp4Result = defaultSelection(504);
-  const product = defaultSelection(11385).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
+  const product = defaultSelection(11386).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
   let tmp14 = null != product;
   if (tmp14) {
     tmp14 = product.items.length > 0;

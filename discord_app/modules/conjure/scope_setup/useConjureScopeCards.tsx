@@ -221,7 +221,7 @@ export function useConjureScopeSetupCard(projectId) {
       }
     }
     let obj5 = {
-      clarification: tmp(12580).ownerOnlyClarification(memo),
+      clarification: tmp(12583).ownerOnlyClarification(memo),
       readOnly: true,
       hideSubmit: true,
       failure: null,
@@ -278,8 +278,8 @@ export function useConjureScopeSwitchCard(merged) {
     items1,
   );
   let obj = projectId(504);
-  const conjureEligibleGuilds = projectId(12596).useConjureEligibleGuilds("ConjureScopeSwitchCard");
-  let obj2 = projectId(12596);
+  const conjureEligibleGuilds = projectId(12599).useConjureEligibleGuilds("ConjureScopeSwitchCard");
+  let obj2 = projectId(12599);
   let obj3 = conjureEligibleGuilds;
   [tmp6, c6] = feature(conjureEligibleGuilds.useState(false), 2);
   const tmp5 = feature(conjureEligibleGuilds.useState(false), 2);
@@ -398,6 +398,6 @@ export function useConjureScopeSwitchCard(merged) {
   }
   const obj5 = { clarification: null, readOnly: true, hideSubmit: true, failure: null };
   let tmp7 = feature(conjureEligibleGuilds.useState(null), 2);
-  obj5.clarification = projectId(12580).ownerOnlyClarification(memo);
+  obj5.clarification = projectId(12583).ownerOnlyClarification(memo);
   return obj5;
 }

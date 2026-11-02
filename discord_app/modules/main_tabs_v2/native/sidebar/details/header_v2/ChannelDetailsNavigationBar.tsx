@@ -179,7 +179,7 @@ function SearchBar(cleanUp) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj3 = {
     style: null,
-    children: closure_15(cleanUp(18678), {
+    children: closure_15(cleanUp(18685), {
       ref,
       channelId: channel.id,
       guildId: channel.guild_id,
@@ -319,7 +319,7 @@ let obj = {
   container: {
     position: "relative",
     zIndex: 1,
-    height: fn(13913).SEARCH_BAR_HEIGHT,
+    height: fn(13928).SEARCH_BAR_HEIGHT,
     marginTop: nativeDefault.space.PX_8,
   },
   navigationHeader: null,
@@ -330,7 +330,7 @@ let obj = {
 let obj3 = {
   position: "relative",
   zIndex: 1,
-  height: fn(13913).SEARCH_BAR_HEIGHT,
+  height: fn(13928).SEARCH_BAR_HEIGHT,
   marginTop: nativeDefault.space.PX_8,
 };
 obj.navigationHeader = {
@@ -339,7 +339,7 @@ obj.navigationHeader = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13913).SEARCH_BAR_HEIGHT,
+  height: fn(13928).SEARCH_BAR_HEIGHT,
 };
 obj.backButton = { alignSelf: "stretch", justifyContent: "center" };
 let obj4 = {
@@ -348,7 +348,7 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(13913).SEARCH_BAR_HEIGHT,
+  height: fn(13928).SEARCH_BAR_HEIGHT,
 };
 obj.buttonsContainer = {
   flex: 1,

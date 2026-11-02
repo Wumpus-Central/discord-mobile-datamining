@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Link from "../../../../../_runtime/01498_Link.js";
 import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
-import useConjureWandStatusDefault from "useConjureWandStatus.tsx";
-import ConjureWorkingWandDefault from "ConjureWorkingWand.tsx";
 import openConjureProjectsSheetDefault from "../../projects/native/openConjureProjectsSheet.tsx";
 import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin.tsx";
+import useConjureWandStatusDefault from "useConjureWandStatus.tsx";
+import ConjureWorkingWandDefault from "ConjureWorkingWand.tsx";
 import YouBarButtonDefault from "../../../main_tabs_v2/native/you_bar/YouBarButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ require = fn;
 function confirmUnpin() {
   confirmConjureYouBarPinDefault(false);
 }
-const YOU_BAR_BUTTON_ICON_SIZE = fn(17062).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(17075).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);
 let obj = {

@@ -43,7 +43,7 @@ export default function HubEmailConnectionWaitlist(school) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
   let obj = onClose(1497);
-  obj3.source = navigation(14334);
+  obj3.source = navigation(14349);
   obj3.style = tmp.header;
   const items1 = [closure_5(navigation(5717), obj3), , ,];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };

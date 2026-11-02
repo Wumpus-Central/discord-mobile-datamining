@@ -14,7 +14,7 @@ export default function SingleStream(channel) {
   channel = channel.channel;
   const obj = {
     gestureEnabled: true,
-    resizeMode: channel(11764).ResizeMode.CONTAIN,
+    resizeMode: channel(11765).ResizeMode.CONTAIN,
     onSingleTap() {
       closure_1_3();
     },
@@ -27,7 +27,7 @@ export default function SingleStream(channel) {
   };
   return jsx(StreamTileDefault, {
     gestureEnabled: true,
-    resizeMode: channel(11764).ResizeMode.CONTAIN,
+    resizeMode: channel(11765).ResizeMode.CONTAIN,
     onSingleTap() {
       closure_1_3();
     },

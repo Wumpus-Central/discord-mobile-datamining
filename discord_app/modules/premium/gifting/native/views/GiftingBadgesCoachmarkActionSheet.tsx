@@ -9,7 +9,7 @@ import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocatio
 import BadgeId from "../../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import utils_openGiftModal from "../../../native/utils/openGiftModal.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
-import _modDef19032 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import _modDef19039 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
 
@@ -98,7 +98,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
   const obj4 = { source: null, style: null };
-  const obj5 = { uri: _modDef19032 };
+  const obj5 = { uri: _modDef19039 };
   obj4.source = obj5;
   obj4.style = tmp.newBadgeImage;
   obj3.children = closure_7(FastImageDefault, obj4);
@@ -118,7 +118,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1113).intl;
   obj10.text = intl3.string(_modDef2634.DZnomS);
-  obj10.icon = closure_7(markAsDismissed(13350).GiftIcon, {
+  obj10.icon = closure_7(markAsDismissed(13365).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });

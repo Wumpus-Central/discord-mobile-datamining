@@ -54,7 +54,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   imageSize = imageSize.imageSize;
   value = undefined;
   const tmp = closure_10();
-  const tmp4 = value(12425)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
+  const tmp4 = value(12565)(channelId, answer.localCreationAnswerId, answer.image, imageSize, imageSize);
   const upload = tmp4.upload;
   let str;
   if (upload != null) {
@@ -75,7 +75,7 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   const obj2 = { top: true, style: tmp.container, children: null };
   const obj3 = { style: tmp.header, children: null };
   const obj4 = {
-    onPress: onSave(12427).closeEditPollCreationImageAltTextModal,
+    onPress: onSave(12567).closeEditPollCreationImageAltTextModal,
     activeOpacity: 0.5,
     accessibilityRole: "button",
     accessibilityLabel: null,

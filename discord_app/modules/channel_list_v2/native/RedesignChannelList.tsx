@@ -38,7 +38,7 @@ function GuildChannelsList(shouldRender) {
   const merged = Object.assign(shouldRender, Object.assign({ shouldRender: 0 }));
   let found;
   dependencyMap = undefined;
-  const arr = found(18311)(merged.guild);
+  const arr = found(18324)(merged.guild);
   const hasItem = arr.includes(ChannelListGuildActionRow.GUILD_CONJURE);
   merged(9676);
   found = arr;
@@ -54,8 +54,8 @@ function GuildChannelsList(shouldRender) {
     applicationAccountLinkMarkAsDismissed,
     startApplicationAccountLinkAuthorization,
     accountLinkApplication,
-  } = found(18313)(merged.guild));
-  const tmp9 = found(18313)(merged.guild);
+  } = found(18326)(merged.guild));
+  const tmp9 = found(18326)(merged.guild);
   const items = [ChannelListStore];
   const stateFromStoresObject = merged(504).useStateFromStoresObject(items, () =>
     ChannelListStore.getGuild(merged.guild.id, { guildActionRows: found, channelNoticeRows }),
@@ -95,7 +95,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj4.guild = stateFromStores;
           obj4.selectedChannelId = selectedChannelId;
           obj4.selectedVoiceChannelId = stateFromStores1;
-          return closure_15(tmp2(18335).default, obj4);
+          return closure_15(tmp2(18348).default, obj4);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj5 = { style: merged.style, guildId: selectedGuildId };

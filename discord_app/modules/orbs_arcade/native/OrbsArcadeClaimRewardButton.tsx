@@ -66,15 +66,15 @@ export default function OrbsArcadeClaimRewardButton(game) {
               let orbsArcadeClaimableRewards;
               let gameState;
               closure_128_3 = undefined;
-              orbsArcadeClaimableRewards = tmp5(17017).getOrbsArcadeClaimableRewards(
+              orbsArcadeClaimableRewards = tmp5(17030).getOrbsArcadeClaimableRewards(
                 game.rewards,
                 gameStateForGame.getGameStateForGame(game.id),
               );
               dependencyMap = 1;
-              const obj6 = tmp5(17017);
+              const obj6 = tmp5(17030);
               c3 = 2;
               c4 = 1;
-              const obj4 = { value: tmp5(17016).claimOrbsArcadeRewards(game.id), done: false };
+              const obj4 = { value: tmp5(17029).claimOrbsArcadeRewards(game.id), done: false };
               return obj4;
             }
           } else if (1 === tmp8) {
@@ -106,11 +106,11 @@ export default function OrbsArcadeClaimRewardButton(game) {
                 showOrbsArcadeClaimRewardsError();
               }
               if (closure_128_3.length > 0) {
-                const result = tmp5(17033).openOrbsArcadeRewardsCollectedModal(
+                const result = tmp5(17046).openOrbsArcadeRewardsCollectedModal(
                   closure_128_3,
                   closure_128_0.entitlements,
                 );
-                const obj = tmp5(17033);
+                const obj = tmp5(17046);
               }
             }
             c4 = 3;

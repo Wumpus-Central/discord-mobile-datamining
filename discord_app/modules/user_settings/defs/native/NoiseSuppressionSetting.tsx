@@ -5,7 +5,7 @@ import UserSettingsVoiceUtils from "../../voice/native/UserSettingsVoiceUtils.ts
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

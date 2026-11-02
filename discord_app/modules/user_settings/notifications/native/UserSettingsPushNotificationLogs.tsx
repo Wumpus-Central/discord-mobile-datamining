@@ -221,7 +221,7 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj3.children = closure_7(defaultValue(14763).ShareIcon, {});
+  obj3.children = closure_7(defaultValue(14767).ShareIcon, {});
   items1[1] = closure_7(defaultValue(6980).PressableOpacity, obj3);
   obj2.children = items1;
   let items2 = [closure_8(View, obj2)];

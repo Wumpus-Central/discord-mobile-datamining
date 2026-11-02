@@ -62,12 +62,12 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const items2 = [tmp.overlayContent, animatedStyle];
   obj6.style = items2;
   const items3 = [
-    closure_8(isScrollingInBoundsSharedValue(16954), { bounty, sourceQuestContent, disabled: !isActive }),
+    closure_8(isScrollingInBoundsSharedValue(16967), { bounty, sourceQuestContent, disabled: !isActive }),
   ];
   const obj8 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: closure_8(isScrollingInBoundsSharedValue(16956), {
+    children: closure_8(isScrollingInBoundsSharedValue(16969), {
       bounty,
       visible,
       sourceQuestContent,

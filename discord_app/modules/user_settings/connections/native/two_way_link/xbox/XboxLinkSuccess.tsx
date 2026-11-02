@@ -90,7 +90,7 @@ export default function XboxLinkDiscordSuccess() {
   }, items1);
   const obj5 = { source: null, style: null };
   const obj2 = first(navigation[10]);
-  obj5.source = require("../../../../../../../_runtime/metro/14613__.js");
+  obj5.source = require("../../../../../../../_runtime/metro/14627__.js");
   obj5.style = tmp.image;
   const items2 = [closure_12(require("FastImage"), obj5), , ,];
   const obj6 = {
@@ -110,7 +110,7 @@ export default function XboxLinkDiscordSuccess() {
   const obj9 = { style: tmp.appLogoBox, children: null };
   const obj10 = { source: null, style: null };
   const tmp15 = require("FastImage");
-  obj10.source = require("../../../../../../../_runtime/metro/12044__.js");
+  obj10.source = require("../../../../../../../_runtime/metro/12045__.js");
   obj10.style = tmp.appLogo;
   obj9.children = closure_12(require("FastImage"), obj10);
   const items3 = [closure_12(closure_5, obj9), ,];

@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(17062).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(17075).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}",
@@ -18,7 +18,7 @@ export default noop.memo(function YouBarNameplate(isQuestRendered) {
   let token;
   ({ nameplate, barWidth } = isQuestRendered);
   token = isQuestRendered(5596).useToken(token(575).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(17143)(token);
+  const tmp4 = token(17156)(token);
   dependencyMap = tmp4;
   let obj = isQuestRendered(5596);
   const tmp2 = token;

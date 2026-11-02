@@ -154,7 +154,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
     title: null,
     leading: closure_13(markAsDismissed(7367).ActionSheetCloseButton, { onPress: handleCancel }),
   };
-  obj10.icon = closure_13(markAsDismissed(14574).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj10.icon = closure_13(markAsDismissed(14588).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj10.onPress = function handleConnect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -181,7 +181,7 @@ export { UnionIcon };
 export function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-    appInstalled.isAppInstalled(stateFromStores(15600).DetectableAppNames.ROBLOX),
+    appInstalled.isAppInstalled(stateFromStores(15604).DetectableAppNames.ROBLOX),
   );
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];

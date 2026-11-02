@@ -12,7 +12,7 @@ function formatToastDuration(seconds) {
 }
 const Accessibility = fn(1072).Accessibility;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;

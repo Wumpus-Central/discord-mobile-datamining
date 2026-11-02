@@ -96,37 +96,37 @@ export default function CheckpointMessagesStatsScreen() {
   const obj5 = { style: tmp.imageContainer, children: null };
   const tmp2Result = CheckpointStatsUtils;
   const obj6 = { animatedUri: null, staticUri: null, style: null };
-  const tmp11Result = tmp11(13622);
-  obj6.animatedUri = tmp11(13640);
-  obj6.staticUri = tmp11(13641);
+  const tmp11Result = tmp11(13637);
+  obj6.animatedUri = tmp11(13655);
+  obj6.staticUri = tmp11(13656);
   obj6.style = tmp.image;
-  obj5.children = timestampProducer(tmp11(13629), obj6);
+  obj5.children = timestampProducer(tmp11(13644), obj6);
   const items2 = [timestampProducer(View, obj5)];
   const obj7 = { style: tmp.copy, children: null };
   const obj8 = { style: tmp.title, children: null };
   const items3 = [timestampProducer(ChatIcon.ChatIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
   const obj10 = { isStepHeading: true, variant: "heading-md/extrabold", style: tmp.titleText, children: null };
   const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-  const tmp11Result4 = tmp11(13629);
+  const tmp11Result4 = tmp11(13644);
   obj10.children = stringResult.toLocaleUpperCase();
-  items3[1] = timestampProducer(tmp11(13624), obj10);
+  items3[1] = timestampProducer(tmp11(13639), obj10);
   obj8.children = items3;
   const items4 = [React5(View, obj8), ,];
   if (rounded <= 0 && null != stateFromStores1) {
     const obj11 = { value: stateFromStores1 };
-    let tmp13Result = timestampProducer(tmp11(13636), obj11);
+    let tmp13Result = timestampProducer(tmp11(13651), obj11);
   } else {
     const obj12 = { accessible: true, accessibilityLabel: null, style: null, children: null };
     const _HermesInternal = HermesInternal;
     obj12.accessibilityLabel = "" + rounded + " " + stringResult;
     obj12.style = tmp.number;
     const obj13 = { end: rounded };
-    obj12.children = timestampProducer(tmp11(13637), obj13);
+    obj12.children = timestampProducer(tmp11(13652), obj13);
     tmp13Result = timestampProducer(View, obj12);
   }
   items4[1] = tmp13Result;
   const obj14 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const tmp11Result5 = tmp11(13624);
+  const tmp11Result5 = tmp11(13639);
   if (rounded <= 0 && null != stateFromStores1) {
     const intl5 = util.intl;
     const obj15 = { numWords: CheckpointStatsUtils.formatCheckpointCompactNumber(stateFromStores1), numCopies: null };
@@ -154,7 +154,7 @@ export default function CheckpointMessagesStatsScreen() {
   }
   const obj18 = { children: null };
   obj14.children = formatToPlainStringResult1;
-  items4[2] = timestampProducer(tmp11(13624), obj14);
+  items4[2] = timestampProducer(tmp11(13639), obj14);
   obj7.children = items4;
   items2[1] = React5(View, obj7);
   obj4.children = items2;

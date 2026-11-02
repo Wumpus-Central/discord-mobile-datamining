@@ -75,13 +75,14 @@ items[4] = {
     return intl.string(util.t["755t4q"]);
   },
 };
-items[5] = {
+const obj6 = {
   duration: "Array",
   label() {
     const intl = util.intl;
     return intl.string(util.t["46dqJY"]);
   },
 };
+items[5] = obj6;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");
 

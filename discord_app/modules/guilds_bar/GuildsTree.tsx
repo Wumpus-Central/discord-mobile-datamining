@@ -229,7 +229,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
                     items1 = [];
                   } else {
                     let children = type.children;
-                    let mapped = children.map(/* F123378 */ function() { ... });
+                    let mapped = children.map(/* F123432 */ function() { ... });
                     items1 = mapped.flat();
                   }
                   return items1;

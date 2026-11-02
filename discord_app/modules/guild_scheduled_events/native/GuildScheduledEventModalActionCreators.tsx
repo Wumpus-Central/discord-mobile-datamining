@@ -366,7 +366,7 @@ export function showGuildEventModeratorActionSheet(event, arg1, recurrenceId) {
                 "stack",
               );
             },
-            onRsvp: "children",
+            onRsvp: "applicationId",
           });
         },
       };

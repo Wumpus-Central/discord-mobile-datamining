@@ -11,8 +11,8 @@ import components_Button_Button from "../../design/components/Button/native/Butt
 import FastImageDefault from "../common/FastImage.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef15423 from "../../../_runtime/metro/15423__.js";
-import _modDef15424 from "../../../_runtime/metro/15424__.js";
+import _modDef15427 from "../../../_runtime/metro/15427__.js";
+import _modDef15428 from "../../../_runtime/metro/15428__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -141,11 +141,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef15423;
+    obj11.source = _modDef15427;
     const items4 = [React7(FastImageDefault, obj11), ,];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef15424;
+    obj12.source = _modDef15428;
     items4[1] = React7(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

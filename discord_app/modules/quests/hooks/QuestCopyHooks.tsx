@@ -23,7 +23,7 @@ const require = globalThis.__r;
 
 const util = v1votF6(1113);
 const utils_QuestUtils = v1votF6(7866);
-const SponsoredQuestUtils = v1votF6(14683);
+const SponsoredQuestUtils = v1votF6(14697);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -775,7 +775,7 @@ export function usePrimaryCtaCopy(arg0) {
     const intl3 = quest(1113).intl;
     return intl3.string(quest(1113).t.l7E81v);
   } else if (constants3.WATCH_VIDEO === memo) {
-    return quest(14671).getVideoQuestWatchCtaText(tmp5);
+    return quest(14685).getVideoQuestWatchCtaText(tmp5);
   } else if (constants3.IN_GAME === memo) {
     if (tmp2Result4.canLaunchActivity(quest)) {
       const features = quest.config.features;

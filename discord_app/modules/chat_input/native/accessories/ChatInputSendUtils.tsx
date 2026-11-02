@@ -77,7 +77,7 @@ function chatInputSendMessage(params) {
     current2.showSideActions();
   }
   let obj3 = chatInputRef(8343);
-  const handleLegacyCommandsResult = channel(13743).handleLegacyCommands(text, { channel, isEdit: false });
+  const handleLegacyCommandsResult = channel(13758).handleLegacyCommands(text, { channel, isEdit: false });
   let tmp14 = tts;
   parsed = parsedMessage;
   let tmp16 = text;
@@ -108,8 +108,8 @@ function chatInputSendMessage(params) {
   if (null != mentionTimestamps) {
     result = tmp16;
     if (mentionTimestamps.size > 0) {
-      result = tmp12(13740).serializeComposerTimestampMentions(tmp16, mentionTimestamps);
-      const tmp12Result = tmp12(13740);
+      result = tmp12(13755).serializeComposerTimestampMentions(tmp16, mentionTimestamps);
+      const tmp12Result = tmp12(13755);
     }
   }
   if (parsed == null) {
@@ -118,7 +118,7 @@ function chatInputSendMessage(params) {
   }
   parsed.tts = tmp14;
   const obj5 = {};
-  const obj4 = channel(13743);
+  const obj4 = channel(13758);
   const merged = Object.assign(chatInputRef(7636).getSendMessageOptionsForReply(params.pendingReply));
   obj5.location = MessageSendLocation.CHAT_INPUT;
   const id = channel.id;
@@ -372,18 +372,18 @@ export function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                const obj = { text, parsedMessage, tts: "applicationId", source: "LKR", params };
+                const obj = { text, parsedMessage, tts: "applicationId", source: true, params };
                 chatInputSendMessage(obj);
               },
             };
-            params(5258).openLazy(tmp19(1994)(13745, tmp20.paths), "add-media-to-original-forum-post", obj5);
+            params(5258).openLazy(tmp19(1994)(13760, tmp20.paths), "add-media-to-original-forum-post", obj5);
             const obj6 = params(5258);
           }
           obj4 = ForumPostMediaUtils;
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        const obj7 = { text, parsedMessage: tmp2, tts: "applicationId", source: true, params };
+        const obj7 = { text, parsedMessage: tmp2, tts: "applicationId", source: false, params };
         chatInputSendMessage(obj7);
       }
     }

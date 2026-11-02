@@ -178,7 +178,7 @@ function ActivityInfo(activity) {
                   analyticsLocations: num3,
                 };
                 v3 = num3;
-                const obj7 = { value: v3(11792).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(11793).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
@@ -508,7 +508,7 @@ const MODE_CHANGE_PHYSICS = fn(11223).MODE_CHANGE_PHYSICS;
 const EDGE_GUTTER = fn(11226).EDGE_GUTTER;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(15621).VoiceChannelWarningSurfaces;
+const constants4 = fn(15625).VoiceChannelWarningSurfaces;
 const Features = fn(5768).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
@@ -803,7 +803,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
   const context = noop.useContext(guildId(11222));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(19144)(channelId);
+  const tmp2 = guildId(19151)(channelId);
   dependencyMap = tmp2;
   let items = [
     SortedVoiceStateStore,
@@ -853,7 +853,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(19272).areVoicePanelPreJoinContentPropsEqual,
+    channelId(19279).areVoicePanelPreJoinContentPropsEqual,
   );
   return closure_25(channelId(5080).TransitionItem, { item: stateFromStores, renderItem });
 });

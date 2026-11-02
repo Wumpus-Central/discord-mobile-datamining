@@ -7,7 +7,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const PlatformTypes = fn(1072).PlatformTypes;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;

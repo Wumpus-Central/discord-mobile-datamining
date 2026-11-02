@@ -10,7 +10,7 @@ import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import _modDef8852 from "../../../../../_runtime/metro/08852__.js";
 import PaginationDefault from "../../../../../_runtime/10629_Pagination.js";
-import _modDef11591 from "../../../../../_runtime/metro/11591__.js";
+import _modDef11592 from "../../../../../_runtime/metro/11592__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19770);
+const GuildSettingsRoleConstants = fn(19777);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
@@ -303,7 +303,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
           const obj = { style: closure_3.templateContent, children: null };
           const items = [
             closure_3_14(native.Icon, {
-              source: _modDef11591,
+              source: _modDef11592,
               size: native.IconSizes.MEDIUM,
               color: nativeDefault.unsafe_rawColors.GREEN_360,
             }),

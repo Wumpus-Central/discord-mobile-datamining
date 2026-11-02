@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export function showGuildSettingsModalStickerInfoActionSheet(arg0) {
   ({ guildId, stickerId } = arg0);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19746, dependencyMap.paths),
+    asyncRequireImpl(19753, dependencyMap.paths),
     GuildSettingsModalStickerInfoActionSheet,
     {
       guildId,

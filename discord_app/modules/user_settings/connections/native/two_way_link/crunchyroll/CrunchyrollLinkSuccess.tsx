@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../../../design/components/Button
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef14642 from "../../../../../../../_runtime/metro/14642__.js";
+import _modDef14656 from "../../../../../../../_runtime/metro/14656__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,7 +25,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef14642;
+  obj4.source = _modDef14656;
   obj4.style = tmp.image;
   const items = [React4(FastImageDefault, obj4), ,];
   const obj5 = {

@@ -10,7 +10,7 @@ import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx"
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const currentUser = UserStore.getCurrentUser();

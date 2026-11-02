@@ -7,6 +7,7 @@ import authDefault from "server/commands/auth.tsx";
 import screenCaptureDefault from "server/commands/screenCapture.tsx";
 import setRunsInBackgroundDefault from "server/commands/setRunsInBackground.tsx";
 import frameRelaunchDeepLinkDefault from "../server/commands/frameRelaunchDeepLink.tsx";
+import pictureInPictureInteractiveDefault from "../server/commands/pictureInPictureInteractive.tsx";
 import voiceSettingsDefault from "server/commands/voiceSettings.tsx";
 import unsupportedDefault from "server/commands/unsupported.tsx";
 import crossPlatformRPCEventHandlersDefault from "../server/events/crossPlatformRPCEventHandlers.tsx";
@@ -17,22 +18,23 @@ import CustomThemeMobileStore from "../../client_themes/native/CustomThemeMobile
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 
-const merged = Object.assign(fn(16303).crossPlatformCommands);
+const merged = Object.assign(fn(16307).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const audioSession = Object.assign(audioSessionDefault);
 const auth = Object.assign(authDefault);
 const screenCapture = Object.assign(screenCaptureDefault);
 const setRunsInBackground = Object.assign(setRunsInBackgroundDefault);
 const frameRelaunchDeepLink = Object.assign(frameRelaunchDeepLinkDefault);
+const pictureInPictureInteractive = Object.assign(pictureInPictureInteractiveDefault);
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(16366);
-const merged10 = Object.assign(
+const discordEnvironmentEvents = fn(16378);
+const merged11 = Object.assign(
   discordEnvironmentEvents.createDiscordEnvironmentEvents(true, getNativeDiscordCustomThemeDefault),
 );
-const merged11 = Object.assign(fn(16368).screenCaptureEvents);
-const merged12 = Object.assign(fn(16369).voiceSettingsEventHandlers);
+const merged12 = Object.assign(fn(16380).screenCaptureEvents);
+const merged13 = Object.assign(fn(16381).voiceSettingsEventHandlers);
 const obj4 = {
   server: NativeRPCServerDefault,
   commands: {},

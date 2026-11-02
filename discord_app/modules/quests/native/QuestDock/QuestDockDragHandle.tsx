@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(6781).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(17059).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(17072).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5014);
@@ -36,7 +36,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = closure_8();
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(17060).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(17073).QuestDockGestureContext).activeQuestDockMode;
   importDefault = tmp4;
   const fn = function c() {
     let num = 0;
@@ -125,7 +125,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   };
   const obj8 = { style: animatedStyle, layout: null, children: null };
   const tmp10 = ReanimatedNativeViewDefault;
-  obj8.layout = activeQuestDockMode(17058).dimensionsLayoutTransition;
+  obj8.layout = activeQuestDockMode(17071).dimensionsLayoutTransition;
   const obj9 = { style: null, children: null };
   let items = [tmp.dragHandleOverlay, animatedStyle2];
   obj9.style = items;

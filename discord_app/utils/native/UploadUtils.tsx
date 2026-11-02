@@ -382,8 +382,8 @@ let closure_26 = async function _openImagePicker(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
@@ -391,8 +391,8 @@ let closure_26 = async function _openImagePicker(arg0) {
           c4 = 1;
           c5 = 2;
           c6 = 1;
-          const obj4 = { value: openImagePickerUnhandled(closure_0), done: false };
-          return obj4;
+          const obj6 = { value: openImagePickerUnhandled(closure_0), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c4 = 0;
@@ -402,13 +402,13 @@ let closure_26 = async function _openImagePicker(arg0) {
             if (closure_129_1.message === closure_130_23) {
               const obj7 = { errorStr: closure_130_23 };
             } else if ("E_CROPPER_IMAGE_NOT_FOUND" === closure_129_1.code) {
-              const intl2 = closure_130_0(closure_130_2[15]).intl;
-              closure_130_0(closure_130_2[14]).presentFailedToast(intl2.string(closure_130_0(closure_130_2[15]).t.TTzyzW));
-              const obj6 = closure_130_0(closure_130_2[14]);
+              const intl = closure_130_0(closure_130_2[15]).intl;
+              closure_130_0(closure_130_2[14]).presentFailedToast(intl.string(closure_130_0(closure_130_2[15]).t.TTzyzW));
+              const obj4 = closure_130_0(closure_130_2[14]);
             } else {
               closure_130_0(closure_130_2[14]).presentFailedToast(closure_129_1.message);
               { errorStr: null }[0] = closure_129_1.message;
-              const obj5 = closure_130_0(closure_130_2[14]);
+              const obj3 = closure_130_0(closure_130_2[14]);
             }
           }
           c6 = 3;
@@ -425,21 +425,21 @@ let closure_26 = async function _openImagePicker(arg0) {
       } else {
         closure_129_0 = value;
         if (null != closure_129_0.errorStr) {
-          const intl = closure_130_0(closure_130_2[15]).intl;
-          const obj11 = { reason: closure_129_0.errorStr };
-          closure_130_0(closure_130_2[14]).presentFailedToast(intl.formatToPlainString(closure_130_0(closure_130_2[15]).t.Ex162J, obj11));
-          const obj = closure_130_0(closure_130_2[14]);
+          const intl2 = closure_130_0(closure_130_2[15]).intl;
+          const obj12 = { reason: closure_129_0.errorStr };
+          closure_130_0(closure_130_2[14]).presentFailedToast(intl2.formatToPlainString(closure_130_0(closure_130_2[15]).t.Ex162J, obj12));
+          const obj11 = closure_130_0(closure_130_2[14]);
         }
         c4 = 0;
         c6 = 3;
-        const obj12 = { value: closure_129_0, done: true };
-        return obj12;
+        const obj = { value: closure_129_0, done: true };
+        return obj;
       }
-    } catch (tmp46) {
-      closure_3 = tmp46;
+    } catch (tmp36) {
+      closure_3 = tmp36;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp46;
+        throw tmp36;
       } else {
         c5 = tmp;
       }
@@ -1267,7 +1267,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "a" };
+                      obj8 = { uri, overrideType: "Array" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1286,7 +1286,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "a" };
+                  const obj9 = { uri, overrideType: "Array" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }

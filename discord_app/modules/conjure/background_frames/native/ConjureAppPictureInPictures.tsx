@@ -8,65 +8,96 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 require = fn;
 function ConjureAppPictureInPictureLayer(frameIds) {
   frameIds = frameIds.frameIds;
+  let width;
   let height;
-  const tmp = closure_10();
-  const size = height(1491)();
-  const width = size.width;
+  let tmp = closure_10();
+  const size = width(height[6])();
+  width = size.width;
   height = size.height;
-  const tmp4 = height(1625)();
-  dependencyMap = tmp4;
-  noop = height(19110)(tmp4);
-  const tmp5 = height(7101)({ includeCustomKeyboard: true });
-  const sharedValue = width(5095).useSharedValue(false);
-  const obj = width(5095);
-  const tmp2 = height;
-  const sharedValue1 = width(5095).useSharedValue(false);
+  const tmp4 = width(height[7])();
+  noop = tmp4;
+  const avoidance = width(height[8])(tmp4);
+  const tmp5 = width(height[9])({ includeCustomKeyboard: true });
+  const sharedValue = frameIds(height[10]).useSharedValue(false);
+  let obj = frameIds(height[10]);
+  const tmp2 = width;
+  const tmp3 = height;
+  const sharedValue1 = frameIds(height[10]).useSharedValue(false);
   const items = [width, height, tmp4];
   const memo = noop.useMemo(
-    () => conjureAppPictureInPictureLayout.getCloseTargetCenter(width, height, closure_2),
+    () => conjureAppPictureInPictureLayout.getCloseTargetCenter(width, height, closure_3),
     items,
   );
-  const items1 = [tmp.layer];
+  let obj2 = frameIds(height[10]);
+  const items1 = [sharedValue];
+  const items2 = [frameIds, width];
+  const stateFromStoresArray = frameIds(height[12]).useStateFromStoresArray(
+    items1,
+    () =>
+      frameIds.map((item) => {
+        const tmp = sharedValue1(sharedValue.getFrame(item));
+        const pictureInPictureSize = frameIds(height[11]).getPictureInPictureSize(width, memo(tmp));
+        const obj = frameIds(height[11]);
+        const obj2 = frameIds(height[11]);
+        return obj2.getPictureInPictureWindowSize(
+          pictureInPictureSize,
+          frameIds(height[13]).isConjureAppPictureInPictureInteractive(tmp, frameIds(height[14]).SHOWS_STATIC_CARD),
+        ).height;
+      }),
+    items2,
+  );
+  const items3 = [stateFromStoresArray];
+  closure_9 = noop.useMemo(() => conjureAppPictureInPictureLayout.getStackOffsets(stateFromStoresArray), items3);
+  const items4 = [tmp.layer];
   let hidden = tmp5;
   if (tmp5) {
     hidden = tmp.hidden;
   }
-  const obj3 = { style: items1, pointerEvents: null, children: null };
-  items1[1] = hidden;
+  const obj4 = { style: items4, pointerEvents: null, children: null };
+  items4[1] = hidden;
   let str = "box-none";
   if (tmp5) {
     str = "none";
   }
-  obj3.pointerEvents = str;
-  const items2 = [
-    closure_8(tmp2(19114), { center: memo, shown: sharedValue, hovered: sharedValue1 }),
-    frameIds.map((frameId, index) =>
-      React6(
-        ConjureAppPictureInPictureWithSize,
-        {
-          frameId,
-          index,
-          windowWidth: width,
-          windowHeight: height,
-          safeArea,
-          avoidance,
-          closeTargetCenter: memo,
-          closeTargetShown: sharedValue,
-          closeTargetHovered: sharedValue1,
-        },
+  obj4.pointerEvents = str;
+  const items5 = [
+    stateFromStoresArray(tmp2(tmp3[15]), { center: memo, shown: sharedValue, hovered: sharedValue1 }),
+    frameIds.map((frameId, index) => {
+      const obj = {
         frameId,
-      ),
-    ),
+        stackOffset: null,
+        windowWidth: null,
+        windowHeight: null,
+        safeArea: null,
+        avoidance: null,
+        closeTargetCenter: null,
+        closeTargetShown: null,
+        closeTargetHovered: null,
+      };
+      let num = closure_9[index];
+      if (num == null) {
+        num = 0;
+      }
+      obj.stackOffset = num;
+      obj.windowWidth = width;
+      obj.windowHeight = height;
+      obj.safeArea = safeArea;
+      obj.avoidance = avoidance;
+      obj.closeTargetCenter = memo;
+      obj.closeTargetShown = sharedValue;
+      obj.closeTargetHovered = sharedValue1;
+      return React6(ConjureAppPictureInPictureWithSize, obj, frameId);
+    }),
   ];
-  obj3.children = items2;
-  return closure_9(sharedValue, obj3);
+  obj4.children = items5;
+  return closure_9(avoidance, obj4);
 }
 function ConjureAppPictureInPictureWithSize(frameId) {
   frameId = frameId.frameId;
   const windowWidth = frameId.windowWidth;
   const items = [FramesStore];
   const items1 = [frameId];
-  stateFromStores = frameId(stateFromStores[13]).useStateFromStores(
+  stateFromStores = frameId(stateFromStores[12]).useStateFromStores(
     items,
     () => React5(timestampProducer(FramesStore.getFrame(frameId))),
     items1,
@@ -77,7 +108,7 @@ function ConjureAppPictureInPictureWithSize(frameId) {
     items2,
   );
   const obj2 = {};
-  const obj = frameId(stateFromStores[13]);
+  const obj = frameId(stateFromStores[12]);
   const merged = Object.assign(frameId);
   obj2.size = memo;
   return closure_8(windowWidth(stateFromStores[14]), obj2);

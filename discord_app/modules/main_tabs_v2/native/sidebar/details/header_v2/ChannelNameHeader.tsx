@@ -57,7 +57,7 @@ function DirectMessageIcon(channel) {
       status: "done",
       isMobileOnline: true,
       isVROnline: null,
-      statusStyle: "button",
+      statusStyle: "redesign/message-preview/medium",
     };
     let isSystemUserResult;
     if (stateFromStores != null) {

@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -15,7 +15,7 @@ const toggle = SettingBuilders.createToggle({
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   },
-  onValueChange: fn(16266).toggleSyncProfileThemeWithUserTheme,
+  onValueChange: fn(16270).toggleSyncProfileThemeWithUserTheme,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");

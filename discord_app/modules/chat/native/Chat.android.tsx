@@ -8,7 +8,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 require = fn;
 function DCDChatList() {
   const tmp = closure_7();
-  navigationTTIContentPainted = navigationTTIContentPainted(13313).useNavigationTTIContentPainted();
+  navigationTTIContentPainted = navigationTTIContentPainted(13328).useNavigationTTIContentPainted();
   const items = [navigationTTIContentPainted];
   const memo = noop.useMemo(() => {
     const Gesture = navigationTTIContentPainted(dependencyMap[5]).Gesture;
@@ -23,8 +23,8 @@ function DCDChatList() {
     onContentPaintStateChange: callback,
     children: null,
   };
-  const obj = navigationTTIContentPainted(13313);
-  obj3.children = closure_5(navigationTTIContentPainted(13320).TTIFirstContentfulPaint, { label: "chat_list_android" });
+  const obj = navigationTTIContentPainted(13328);
+  obj3.children = closure_5(navigationTTIContentPainted(13335).TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj2.children = closure_5(ChatListNativeComponentDefault, obj3);
   return closure_5(navigationTTIContentPainted(5303).GestureDetector, obj2);
 }

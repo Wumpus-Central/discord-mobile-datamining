@@ -160,7 +160,7 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   items5[3] = callback1;
   items5[4] = callback3;
   items5[5] = panGestureGeneratorResult;
-  const callback4 = obj.useCallback((onStartResult) => {
+  const callback4 = obj.useCallback((onFinalizeResult) => {
     let num = 10;
     if (obj.isAndroid()) {
       num = 20;
@@ -171,18 +171,18 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
     const runOnJSResult = Gesture.Tap().runOnJS(true);
     const enabledResult = Gesture.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler);
     const numberOfTapsResult = Gesture.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(2);
-    onStartResult = Gesture.Tap()
-      .runOnJS(true)
-      .enabled(!mediaItemHasSpoiler)
-      .numberOfTaps(2)
-      .maxDistance(num)
-      .onStart(callback2);
-    const Gesture2 = LegacyBaseButton.Gesture;
     const maxDistanceResult = Gesture.Tap()
       .runOnJS(true)
       .enabled(!mediaItemHasSpoiler)
       .numberOfTaps(2)
       .maxDistance(num);
+    const Gesture2 = LegacyBaseButton.Gesture;
+    const onStartResult = Gesture.Tap()
+      .runOnJS(true)
+      .enabled(!mediaItemHasSpoiler)
+      .numberOfTaps(2)
+      .maxDistance(num)
+      .onStart(callback2);
     const TapResult1 = Gesture2.Tap();
     let tmp5 = !mediaItemHasSpoiler;
     if (mediaItemHasSpoiler) {
@@ -205,7 +205,7 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
     const onStartResult2 = Gesture3.LongPress().runOnJS(true).enabled(!mediaItemHasSpoiler).onStart(callback3);
     const Gesture6 = LegacyBaseButton.Gesture;
     return Gesture4.Simultaneous(
-      Gesture5.Race(onStartResult, c22),
+      Gesture5.Race(onFinalizeResult, c22),
       Gesture6.Exclusive(onStartResult, onStartResult1),
       onStartResult2,
     );

@@ -63,7 +63,7 @@ export function Content(arg0) {
   const items = [
     closure_6(SectionTitle, obj7),
     closure_6(guildId(1187).Spacer, { size: 8 }),
-    closure_6(guildId(17215).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(guildId(17228).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , ,];
@@ -120,5 +120,5 @@ export function Content(arg0) {
   }
   items1[3] = tmp5Result4;
   obj5.children = items1;
-  return closure_8(guildId(17214).SeparatedList, obj5);
+  return closure_8(guildId(17227).SeparatedList, obj5);
 }

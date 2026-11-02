@@ -4,22 +4,22 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(16888).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_5 = fn(16901).ORB_WALLET_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/useOrbBalanceEntrypoint.tsx");
 
 export function useOrbBalanceEntrypoint(location) {
   let isOrbchievementsMobileEnabled;
-  isOrbchievementsMobileEnabled = isOrbchievementsMobileEnabled(16905).useIsOrbchievementsMobileEnabled({
+  isOrbchievementsMobileEnabled = isOrbchievementsMobileEnabled(16918).useIsOrbchievementsMobileEnabled({
     location: location.location,
   });
-  let obj = isOrbchievementsMobileEnabled(16905);
-  const orbChallengeUnreadState = isOrbchievementsMobileEnabled(16891).useOrbChallengeUnreadState({
+  let obj = isOrbchievementsMobileEnabled(16918);
+  const orbChallengeUnreadState = isOrbchievementsMobileEnabled(16904).useOrbChallengeUnreadState({
     enabled: isOrbchievementsMobileEnabled,
   });
   const items = [isOrbchievementsMobileEnabled];
   ({ hasUnreadUpdate, notificationType } = orbChallengeUnreadState);
-  let obj2 = isOrbchievementsMobileEnabled(16891);
+  let obj2 = isOrbchievementsMobileEnabled(16904);
   return {
     isOrbchievementsEnabled: isOrbchievementsMobileEnabled,
     hasUnreadUpdate,

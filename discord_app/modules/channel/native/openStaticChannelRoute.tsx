@@ -29,13 +29,13 @@ export default function openStaticChannelRoute(arg0) {
         const features3 = guild.features;
         if (features3.has(constants.COMMUNITY)) {
           const obj3 = { guildId, defaultTab: GuildOnboardingTab.BROWSE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11576, dependencyMap.paths), obj3, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11577, dependencyMap.paths), obj3, closure_10);
         }
       } else if ("customize" === staticRoute) {
         const features2 = guild.features;
         if (features2.has(constants.COMMUNITY)) {
           const obj5 = { guildId, defaultTab: GuildOnboardingTab.CUSTOMIZE };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11576, dependencyMap.paths), obj5, closure_10);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11577, dependencyMap.paths), obj5, closure_10);
         }
       } else {
         if ("home" !== staticRoute) {
@@ -52,17 +52,17 @@ export default function openStaticChannelRoute(arg0) {
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj6 = { role, guildId };
                       obj2.openLazy(
-                        asyncRequireImpl(11589, dependencyMap.paths),
+                        asyncRequireImpl(11590, dependencyMap.paths),
                         "GuildRoleConnectionsConnectAccountsActionSheet-" + role.id,
                         obj6,
                       );
-                      const tmp9 = asyncRequireImpl(11589, dependencyMap.paths);
+                      const tmp9 = asyncRequireImpl(11590, dependencyMap.paths);
                     }
                   }
                 }
               }
               const obj8 = { guildId };
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11598, dependencyMap.paths), obj8);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11599, dependencyMap.paths), obj8);
             } else {
               GlobalUtils.assertNever(staticRoute);
             }

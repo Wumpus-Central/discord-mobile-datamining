@@ -94,7 +94,7 @@ export default function NitroOrbsDeliveredModal(arg0) {
     children: null,
   };
   const callback2 = noop.useCallback(() => _undefined(true), []);
-  obj3.children = closure_10(onClose(14692).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
+  obj3.children = closure_10(onClose(14706).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
   const items2 = [closure_10(View, obj3), ,];
   let tmp14Result = !tmp12Result;
   if (!tmp12Result) {
@@ -109,7 +109,7 @@ export default function NitroOrbsDeliveredModal(arg0) {
     obj6.children = closure_10(onClose(7367).ActionSheetCloseButton, obj7);
     const items3 = [closure_10(View, obj6), ,];
     const obj8 = { style: tmp.body, children: null };
-    const obj9 = { source: tmp2(15226), style: tmp.orbGraphic, resizeMode: "contain" };
+    const obj9 = { source: tmp2(15230), style: tmp.orbGraphic, resizeMode: "contain" };
     const items4 = [closure_10(tmp2(5717), obj9)];
     const obj10 = { children: null };
     const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp.title, children: null };

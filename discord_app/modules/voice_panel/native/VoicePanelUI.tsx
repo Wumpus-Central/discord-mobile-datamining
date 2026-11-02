@@ -52,9 +52,9 @@ function AnimatedWrapper(wrapperOffset) {
   let animatedStyle1;
   let animatedStyle2;
   let obj = connected;
-  const tmp5 = height(19204);
-  const tmp5Result = height(19204)(wrapperOffset(575).Shadow.SHADOW_TOP_HIGH);
-  height = wrapperOffset(11857).useGlobalStatusIndicatorState().height;
+  const tmp5 = height(19211);
+  const tmp5Result = height(19211)(wrapperOffset(575).Shadow.SHADOW_TOP_HIGH);
+  height = wrapperOffset(11858).useGlobalStatusIndicatorState().height;
   let tmp8 = closure_33();
   dependencyMap = tmp8;
   const context1 = connected.useContext(height(11222));
@@ -75,7 +75,7 @@ function AnimatedWrapper(wrapperOffset) {
   const sheetExitProgress = context1.sheetExitProgress;
   const windowDimensions = context1.windowDimensions;
   const useReducedMotion = context1.useReducedMotion;
-  obj2 = wrapperOffset(11857);
+  obj2 = wrapperOffset(11858);
   const fn = function n() {
     return controlsSpecs.get().height;
   };
@@ -83,7 +83,7 @@ function AnimatedWrapper(wrapperOffset) {
   fn.__workletHash = 3576504626753;
   fn.__initData = __initData15;
   const derivedValue = wrapperOffset(5095).useDerivedValue(fn);
-  obj4 = wrapperOffset(19197);
+  obj4 = wrapperOffset(19204);
   const pIPState = obj4.usePIPState();
   let obj3 = wrapperOffset(5095);
   const fn2 = function c() {
@@ -216,9 +216,9 @@ function AnimatedWrapper(wrapperOffset) {
     wrapperDimensions,
     updateSharedValueIfChanged: height(11227),
     wrapperOffset,
-    getMaxPanelWidth: wrapperOffset(19184).getMaxPanelWidth,
-    getPanelX: wrapperOffset(19184).getPanelX,
-    roundToNearestPixel: height(12271),
+    getMaxPanelWidth: wrapperOffset(19191).getMaxPanelWidth,
+    getPanelX: wrapperOffset(19191).getPanelX,
+    roundToNearestPixel: height(12411),
     windowDimensions,
   };
   fn3.__workletHash = 2786627914150;
@@ -231,9 +231,9 @@ function AnimatedWrapper(wrapperOffset) {
     wrapperDimensions,
     updateSharedValueIfChanged: height(11227),
     wrapperOffset,
-    getMaxPanelWidth: wrapperOffset(19184).getMaxPanelWidth,
-    getPanelX: wrapperOffset(19184).getPanelX,
-    roundToNearestPixel: height(12271),
+    getMaxPanelWidth: wrapperOffset(19191).getMaxPanelWidth,
+    getPanelX: wrapperOffset(19191).getPanelX,
+    roundToNearestPixel: height(12411),
     windowDimensions,
   };
   class R {
@@ -421,7 +421,7 @@ function AnimatedWrapper(wrapperOffset) {
     runOnJS: wrapperOffset(5095).runOnJS,
     updateSourceTrackingView: height(5874).updateSourceTrackingView,
     isDockEnabled: isDockEnabled2,
-    getDockSheetTransform: wrapperOffset(19201).getDockSheetTransform,
+    getDockSheetTransform: wrapperOffset(19208).getDockSheetTransform,
     isDockConnected,
     dockMinimizeProgress,
     dockHeight,
@@ -446,7 +446,7 @@ function AnimatedWrapper(wrapperOffset) {
     runOnJS: wrapperOffset(5095).runOnJS,
     updateSourceTrackingView: height(5874).updateSourceTrackingView,
     isDockEnabled: isDockEnabled2,
-    getDockSheetTransform: wrapperOffset(19201).getDockSheetTransform,
+    getDockSheetTransform: wrapperOffset(19208).getDockSheetTransform,
     isDockConnected,
     dockMinimizeProgress,
     dockHeight,
@@ -458,8 +458,8 @@ function AnimatedWrapper(wrapperOffset) {
     DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: sheetExitProgress,
     DRAWER_SIZE_PHYSICS: obj4,
   };
-  dockSheetSurfaceFills = wrapperOffset(19201).useDockSheetSurfaceFills();
-  let obj9 = wrapperOffset(19201);
+  dockSheetSurfaceFills = wrapperOffset(19208).useDockSheetSurfaceFills();
+  let obj9 = wrapperOffset(19208);
   class J {
     constructor() {
       if (isDockEnabled) {
@@ -508,7 +508,7 @@ function AnimatedWrapper(wrapperOffset) {
   let obj10 = wrapperOffset(5095);
   J.__closure = {
     isDockEnabled: isDockEnabled2,
-    getDockSheetSurfaceStyle: wrapperOffset(19201).getDockSheetSurfaceStyle,
+    getDockSheetSurfaceStyle: wrapperOffset(19208).getDockSheetSurfaceStyle,
     isDockConnected,
     dockPressProgress,
     dockJoinMorphOrigin,
@@ -523,7 +523,7 @@ function AnimatedWrapper(wrapperOffset) {
   animatedStyle1 = obj10.useAnimatedStyle(J);
   let obj11 = {
     isDockEnabled: isDockEnabled2,
-    getDockSheetSurfaceStyle: wrapperOffset(19201).getDockSheetSurfaceStyle,
+    getDockSheetSurfaceStyle: wrapperOffset(19208).getDockSheetSurfaceStyle,
     isDockConnected,
     dockPressProgress,
     dockJoinMorphOrigin,
@@ -597,12 +597,12 @@ function AnimatedWrapper(wrapperOffset) {
   const obj12 = wrapperOffset(5095);
   U.__closure = {
     isDockEnabled: isDockEnabled2,
-    getDockSheetShape: wrapperOffset(19201).getDockSheetShape,
+    getDockSheetShape: wrapperOffset(19208).getDockSheetShape,
     isDockConnected,
     dockJoinMorphOrigin,
     dockMinimizeProgress,
     wrapperDimensions,
-    getDockSheetShadowOpacity: wrapperOffset(19201).getDockSheetShadowOpacity,
+    getDockSheetShadowOpacity: wrapperOffset(19208).getDockSheetShadowOpacity,
     dockPressProgress,
     computeBorderRadii,
     mode,
@@ -677,12 +677,12 @@ function AnimatedWrapper(wrapperOffset) {
   const obj18 = { style: wrapperRootStyles, pointerEvents: "box-none", children: null };
   const obj13 = {
     isDockEnabled: isDockEnabled2,
-    getDockSheetShape: wrapperOffset(19201).getDockSheetShape,
+    getDockSheetShape: wrapperOffset(19208).getDockSheetShape,
     isDockConnected,
     dockJoinMorphOrigin,
     dockMinimizeProgress,
     wrapperDimensions,
-    getDockSheetShadowOpacity: wrapperOffset(19201).getDockSheetShadowOpacity,
+    getDockSheetShadowOpacity: wrapperOffset(19208).getDockSheetShadowOpacity,
     dockPressProgress,
     computeBorderRadii,
     mode,
@@ -1571,7 +1571,7 @@ export default noop.memo(function VoicePanelUI() {
               }
               flag = false;
               if (tmp13) {
-                channelId(5095).runOnJS(closure_1(19200))();
+                channelId(5095).runOnJS(closure_1(19207))();
                 flag = true;
                 const tmpResult = channelId(5095);
               }
@@ -1818,12 +1818,12 @@ export default noop.memo(function VoicePanelUI() {
             windowDimensions: windowDimensions.get(),
             safeArea: safeArea.get(),
           };
-          const result4 = channelId(19107).calculatePIPPositionFromVelocity(obj6);
+          const result4 = channelId(19114).calculatePIPPositionFromVelocity(obj6);
           ({ pipX, pipY } = result4);
           const obj7 = { pipX, pipY };
           closure_1(11227)(wrapperDimensions, obj7);
           closure_1(11227)(closure_1_25, { gestureActive: false });
-          const obj5 = channelId(19107);
+          const obj5 = channelId(19114);
         } else if (mode.get() === isFocusedVideoZoomed.PANEL) {
           if (velocityY > 0) {
             if (connected.get()) {
@@ -2284,7 +2284,7 @@ export default noop.memo(function VoicePanelUI() {
   let tmp37Result2 = null;
   if (tmp6[0]) {
     const obj29 = { value: tmp4(AnalyticsLocationDefault.VOICE_PANEL).analyticsLocations, children: null };
-    const items8 = [closure_21(tmp2(19276), {}), ,];
+    const items8 = [closure_21(tmp2(19283), {}), ,];
     const obj30 = { opacity: derivedValue, onPress: dismissPanel };
     items8[1] = closure_21(closure_73, obj30);
     const obj31 = { gesture: tmp35, children: null };
@@ -2299,27 +2299,27 @@ export default noop.memo(function VoicePanelUI() {
     let _HermesInternal = HermesInternal;
     obj32.nativeID = "voice-panel-ui-" + channelId;
     obj32.layout = layoutTransition;
-    obj32.onAccessibilityEscape = tmp2(10929);
-    const items9 = [closure_21(tmp2(19278), {}), , ,];
+    obj32.onAccessibilityEscape = tmp2(10928);
+    const items9 = [closure_21(tmp2(19285), {}), , ,];
     const obj33 = { wrapperOffset, children: null };
     let tmp37Result = tmp40;
     if (isDockEnabled) {
       const obj34 = { children: tmp40 };
-      tmp37Result = closure_21(channelId(19201).VoicePanelContentWithDock, obj34);
+      tmp37Result = closure_21(channelId(19208).VoicePanelContentWithDock, obj34);
     }
     const obj35 = { children: null };
     obj33.children = tmp37Result;
     items9[1] = closure_21(AnimatedWrapper, obj33);
-    items9[2] = closure_21(tmp2(19280), {});
+    items9[2] = closure_21(tmp2(19287), {});
     const obj36 = { gestureState: sharedValue4 };
-    items9[3] = closure_21(tmp2(19288), obj36);
+    items9[3] = closure_21(tmp2(19295), obj36);
     obj32.children = items9;
-    obj31.children = tmp36(tmp2(19277), obj32);
+    obj31.children = tmp36(tmp2(19284), obj32);
     items8[2] = closure_21(channelId(5303).GestureDetector, obj31);
     obj35.children = items8;
     obj29.children = tmp36(channelId(5611).LayerScope, obj35);
     tmp37Result2 = closure_21(channelId(7326).AnalyticsLocationProvider, obj29);
-    let tmp2Result = tmp2(19277);
+    let tmp2Result = tmp2(19284);
   }
   return tmp37Result2;
 });

@@ -184,6 +184,7 @@ items1[8] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["voice_activity_low", "voice_activity_default", "default"],
 };
 const obj17 = {
   title: _modDef2868.DxG4wK,
@@ -192,6 +193,7 @@ const obj17 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["voice_activity_low", "voice_activity_default", "default"],
 };
 items1[9] = {
   title: _modDef2868.Iy9grw,
@@ -240,6 +242,7 @@ items1[11] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["voice_activity_low", "voice_activity_default"],
 };
 const obj20 = {
   title: _modDef2868.Yv02mS,
@@ -248,6 +251,7 @@ const obj20 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["voice_activity_low", "voice_activity_default"],
 };
 items1[12] = {
   title: _modDef2868["9EDo+/"],
@@ -292,6 +296,7 @@ items1[14] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 const obj23 = {
   title: _modDef2868["9EDo+/"],
@@ -300,6 +305,7 @@ const obj23 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 items1[15] = {
   title: _modDef2868.AAZKLL,
@@ -308,6 +314,7 @@ items1[15] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social"],
 };
 const obj24 = {
   title: _modDef2868.AAZKLL,
@@ -316,6 +323,7 @@ const obj24 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social"],
 };
 items1[16] = {
   title: _modDef2868.vcrTV5,
@@ -368,6 +376,7 @@ items1[18] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social"],
 };
 const obj27 = {
   title: _modDef2868.tQCxJ5,
@@ -376,6 +385,7 @@ const obj27 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social"],
 };
 items1[19] = {
   title: _modDef2868["/aEaD/"],
@@ -384,6 +394,7 @@ items1[19] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 const obj28 = {
   title: _modDef2868["/aEaD/"],
@@ -392,6 +403,7 @@ const obj28 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 items1[20] = {
   title: _modDef2868.nDMkO6,
@@ -400,6 +412,7 @@ items1[20] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social"],
 };
 const obj29 = {
   title: _modDef2868.nDMkO6,
@@ -408,6 +421,7 @@ const obj29 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social"],
 };
 items1[21] = {
   title: _modDef2868["8t+tz0"],
@@ -416,6 +430,7 @@ items1[21] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social", "default"],
 };
 const obj30 = {
   title: _modDef2868["8t+tz0"],
@@ -424,6 +439,7 @@ const obj30 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social", "default"],
 };
 items1[22] = {
   title: _modDef2868.semyB9,
@@ -432,6 +448,7 @@ items1[22] = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social"],
 };
 const obj31 = {
   title: _modDef2868.semyB9,
@@ -440,6 +457,7 @@ const obj31 = {
   category: "222_social",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["social"],
 };
 items1[23] = {
   title: _modDef2868["4qWUAO"],
@@ -520,6 +538,7 @@ items1[28] = {
   category: "333_server",
   behavior: obj,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 const obj37 = {
   title: _modDef2868.tP1neL,
@@ -528,6 +547,7 @@ const obj37 = {
   category: "333_server",
   behavior: obj,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 items1[29] = {
   title: _modDef2868["T+79Eo"],
@@ -568,6 +588,7 @@ items1[31] = {
   category: "444_other",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 const obj40 = {
   title: _modDef2868.S9Z8aG,
@@ -576,6 +597,7 @@ const obj40 = {
   category: "444_other",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 items1[32] = {
   title: _modDef2868.roU6W6,
@@ -584,6 +606,7 @@ items1[32] = {
   category: "444_other",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 const obj41 = {
   title: _modDef2868.roU6W6,
@@ -592,6 +615,7 @@ const obj41 = {
   category: "444_other",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 items1[33] = {
   title: _modDef2868.nLISld,
@@ -600,6 +624,7 @@ items1[33] = {
   category: "444_other",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 const obj42 = {
   title: _modDef2868.nLISld,
@@ -608,6 +633,7 @@ const obj42 = {
   category: "444_other",
   behavior: obj3,
   redesignState: true,
+  sourceAndroidChannels: ["default"],
 };
 items1[34] = {
   title: _modDef2868.k9gFti,
@@ -617,6 +643,7 @@ items1[34] = {
   behavior: obj,
   systemOnly: true,
   redesignState: true,
+  sourceAndroidChannels: ["default", "systemMessages"],
 };
 const obj43 = {
   title: _modDef2868.k9gFti,
@@ -626,6 +653,7 @@ const obj43 = {
   behavior: obj,
   systemOnly: true,
   redesignState: true,
+  sourceAndroidChannels: ["default", "systemMessages"],
 };
 items1[35] = {
   title: _modDef2868.ut0AeD,
@@ -635,6 +663,7 @@ items1[35] = {
   behavior: obj,
   systemOnly: true,
   redesignState: true,
+  sourceAndroidChannels: ["systemMessages", "default"],
 };
 const obj45 = {};
 const items2 = [NotifSettings.NotifSettings.FAMILY_CENTER];

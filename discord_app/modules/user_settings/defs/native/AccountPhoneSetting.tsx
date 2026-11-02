@@ -8,7 +8,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 let closure_4 = fn(7211).PHONE_VERIFICATION_MODAL_KEY;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

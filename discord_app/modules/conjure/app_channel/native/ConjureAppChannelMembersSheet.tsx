@@ -41,7 +41,7 @@ export default noop.memo(function ConjureAppChannelMembersSheet(channelId) {
       disableThemedGradient: true,
       listStyleOverride: tmp.list,
     };
-    obj2.children = jsx(guild_id(11620), {
+    obj2.children = jsx(guild_id(11621), {
       channelId,
       guildId: guild_id,
       headerShown: false,

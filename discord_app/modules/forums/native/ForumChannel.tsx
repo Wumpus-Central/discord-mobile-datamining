@@ -145,7 +145,7 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14361, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14376, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -166,7 +166,7 @@ function SortAndViewOptions(channel) {
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_15(id(12342).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_15(id(12482).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -176,7 +176,7 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1113).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14362, dependencyMap.paths),
+      asyncRequireImpl(14377, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
@@ -471,7 +471,7 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(13748).useForumChannelStore;
+const useForumChannelStore = fn(13763).useForumChannelStore;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 let closure_14 = fn(11241).getVoicePanelDockButtonsTop;
@@ -773,7 +773,7 @@ export default function ForumChannel(channel) {
   };
   const intl = tmp2(tmp3[17]).intl;
   obj17.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj17.icon = require("../../../../_runtime/metro/14371__.js");
+  obj17.icon = require("../../../../_runtime/metro/14386__.js");
   obj17.disabled = tmp17;
   obj17.positionBottom = sum;
   obj17.onPress = callback1;

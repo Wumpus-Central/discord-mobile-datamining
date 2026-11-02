@@ -170,7 +170,7 @@ function resolveMessageCodedLinks(content) {
                                                         return obj3;
                                                       } else {
                                                         const useGameOrganizationInviteFetch =
-                                                          tmp4(19523).useGameOrganizationInviteFetch;
+                                                          tmp4(19530).useGameOrganizationInviteFetch;
                                                         const items = [code];
                                                         v1 = 1;
                                                         dependencyMap = 1;
@@ -188,7 +188,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj = { value, done: true };
                                                       return obj;
                                                     } else {
-                                                      v1(13201)(closure_128_0).catch(closure_1_6);
+                                                      v1(13216)(closure_128_0).catch(closure_1_6);
                                                       dependencyMap = 3;
                                                       return { value: "HermesInternal", done: "HermesInternal" };
                                                     }
@@ -403,7 +403,7 @@ function resolveMessageCodedLinks(content) {
                                                             return obj3;
                                                           } else {
                                                             const useGameOrganizationInviteFetch =
-                                                              tmp4(19523).useGameOrganizationInviteFetch;
+                                                              tmp4(19530).useGameOrganizationInviteFetch;
                                                             const items = [code];
                                                             v1 = 1;
                                                             dependencyMap = 1;
@@ -421,7 +421,7 @@ function resolveMessageCodedLinks(content) {
                                                           const obj = { value, done: true };
                                                           return obj;
                                                         } else {
-                                                          v1(13201)(closure_128_0).catch(closure_1_6);
+                                                          v1(13216)(closure_128_0).catch(closure_1_6);
                                                           dependencyMap = 3;
                                                           return { value: "HermesInternal", done: "HermesInternal" };
                                                         }

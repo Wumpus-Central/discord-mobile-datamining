@@ -2396,7 +2396,7 @@ export function useFetchQuestHomeBounties(arg0) {
                   c1 = 3;
                   c4 = 1;
                   const obj6 = {
-                    value: previewAdCreativeIds(14677).fetchBountyPreview(
+                    value: previewAdCreativeIds(14691).fetchBountyPreview(
                       arr,
                       previewAdCreativeIds(6784).AdPlacement.VIDEO_MODAL_MOBILE,
                     ),
@@ -2408,7 +2408,7 @@ export function useFetchQuestHomeBounties(arg0) {
               c1 = 2;
               c4 = 1;
               const obj7 = {
-                value: previewAdCreativeIds(14677).fetchQuestHomeBounties(
+                value: previewAdCreativeIds(14691).fetchQuestHomeBounties(
                   previewAdCreativeIds(6784).AdPlacement.VIDEO_MODAL_MOBILE,
                 ),
                 done: false,

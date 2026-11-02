@@ -56,21 +56,21 @@ export default noop.memo(function PortalKeyboardRendererComponent(item) {
           chatInputRef,
           onClose: cleanUp,
           transitionState: state,
-          entrypoint: tmp(11501).AppLauncherEntrypoint.TEXT,
+          entrypoint: tmp(11502).AppLauncherEntrypoint.TEXT,
         };
-        return jsx(chatInputRef(12223), {
+        return jsx(chatInputRef(12363), {
           context: memo1,
           chatInputRef,
           onClose: cleanUp,
           transitionState: state,
-          entrypoint: tmp(11501).AppLauncherEntrypoint.TEXT,
+          entrypoint: tmp(11502).AppLauncherEntrypoint.TEXT,
         });
       } else if (tmp(1623).KeyboardTypes.MEDIA === type) {
         const obj3 = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-        return jsx(chatInputRef(12391), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
+        return jsx(chatInputRef(12531), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else if (tmp(1623).KeyboardTypes.EXPRESSION === type) {
         let obj = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-        return jsx(chatInputRef(12433), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
+        return jsx(chatInputRef(12573), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else {
         return null;
       }

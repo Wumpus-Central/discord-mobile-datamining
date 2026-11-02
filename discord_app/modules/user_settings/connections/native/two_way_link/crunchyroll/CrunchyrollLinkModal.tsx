@@ -26,7 +26,7 @@ function CloseButton() {
     accessibilityLabel: null,
   });
 }
-const constants = fn(14635).CrunchyrollLinkModalScenes;
+const constants = fn(14649).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1072).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function CrunchyrollLinkModal(locationStack) {
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => {
     function onClose() {
-      return closure_1_1(14633).hideModal();
+      return closure_1_1(14647).hideModal();
     }
     function blank() {
       return null;
@@ -52,7 +52,7 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(14636), {});
+          return closure_1_6(closure_1_1(14650), {});
         },
       },
       [closure_2_4.PRE_CONNECT]: {
@@ -63,7 +63,7 @@ export default function CrunchyrollLinkModal(locationStack) {
           return closure_1_6(onClose(9731).TwoWayLinkStepHeader, { idx: 1, total: 2 });
         },
         render() {
-          return closure_1_6(closure_1_1(14638), {});
+          return closure_1_6(closure_1_1(14652), {});
         },
       },
       [closure_2_4.DISCORD_CONSENT]: {
@@ -75,7 +75,7 @@ export default function CrunchyrollLinkModal(locationStack) {
         },
         render(arg0) {
           ({ callbackCode, callbackState } = arg0);
-          return closure_1_6(closure_1_1(14640), { callbackCode, callbackState });
+          return closure_1_6(closure_1_1(14654), { callbackCode, callbackState });
         },
       },
       [closure_2_4.SUCCESS]: {
@@ -99,7 +99,7 @@ export default function CrunchyrollLinkModal(locationStack) {
     };
   }, items);
   const obj = twoWayLinkStyles(9730);
-  const accountLinkStepTracking = twoWayLinkStyles(14621).useAccountLinkStepTracking(
+  const accountLinkStepTracking = twoWayLinkStyles(14635).useAccountLinkStepTracking(
     PlatformTypes.CRUNCHYROLL,
     locationStack.locationStack,
   );

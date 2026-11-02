@@ -13,8 +13,8 @@ import _modDef9005 from "../../../../_runtime/metro/09005__.js";
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import InvalidLink from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import GuildIconUploaderDefault from "../../guild/native/GuildIconUploader.tsx";
-import _modDef13215 from "../../../../_runtime/metro/13215__.js";
-import _modDef13216 from "../../../../_runtime/metro/13216__.js";
+import _modDef13230 from "../../../../_runtime/metro/13230__.js";
+import _modDef13231 from "../../../../_runtime/metro/13231__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../rebrand/native/TextStyles.tsx";
 
@@ -200,9 +200,9 @@ function Channels(channels) {
         if (isGuildVocalChannelType(type)) {
           let tmp10Result = _modDef9005;
         } else if (type === constants2.GUILD_CATEGORY) {
-          tmp10Result = _modDef13215;
+          tmp10Result = _modDef13230;
         } else {
-          tmp10Result = _modDef13216;
+          tmp10Result = _modDef13231;
         }
         obj2.source = tmp10Result;
         const items1 = [closure_2_11(native.Icon, obj2)];

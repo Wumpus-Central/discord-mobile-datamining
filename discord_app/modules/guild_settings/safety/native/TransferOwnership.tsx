@@ -11,7 +11,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const TransferOwnershipConstants = fn(13259);
+const TransferOwnershipConstants = fn(13274);
 ({ TransferOwnershipModalScenes: closure_9, TransferOwnershipVerificationTypes: c10 } = TransferOwnershipConstants);
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
@@ -100,8 +100,8 @@ export default function TransferOwnership(guild) {
             v1(9074)
               .transferOwnership(user.id, id.id, MFA)
               .then(() => {
-                v1(13257).close();
-                const obj = v1(13257);
+                v1(13272).close();
+                const obj = v1(13272);
                 v1(9074).close();
                 const obj2 = v1(9074);
                 const result = closure_1_0(5711).showTransferOwnershipSuccess();
@@ -184,7 +184,7 @@ export default function TransferOwnership(guild) {
   const obj9 = { source: null, style: null };
   const obj7 = { paddingTop: toUser(575).space.PX_16, paddingHorizontal: token };
   const tmp12 = c7;
-  obj9.source = toUser(13261);
+  obj9.source = toUser(13276);
   obj9.style = tmp5.arrow;
   const items1 = [closure_12(toUser(5717), obj9), , ,];
   const obj10 = { style: tmp5.avatarsWrapper, children: null };

@@ -331,7 +331,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       sku_id: skuId,
       guild_id: true,
       application_id: true,
-      cta_type: "detectPlatform",
+      cta_type: "addedNodes",
       location_stack: null,
     };
     let applicationId;
@@ -967,7 +967,7 @@ obj.hero = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "applicationId" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "assign" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
   height: fn(10673).MOBILE_HERO_HEIGHT_PX,

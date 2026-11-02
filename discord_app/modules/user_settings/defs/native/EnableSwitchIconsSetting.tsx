@@ -8,7 +8,7 @@ function useEnableSwitchIconsSettingValue() {
   const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -16,7 +16,7 @@ const toggle = SettingBuilders.createToggle({
   },
   parent: fn(8432).MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
-  onValueChange: fn(16266).setSwitchIconsEnabled,
+  onValueChange: fn(16270).setSwitchIconsEnabled,
   hasIcon: true,
 });
 const size = fn(2);

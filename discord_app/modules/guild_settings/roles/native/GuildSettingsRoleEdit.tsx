@@ -38,11 +38,11 @@ require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(4921).isEveryoneRole;
-const RoleColorsStyle = fn(19771).RoleColorsStyle;
-const constants = fn(19766).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(19778).RoleColorsStyle;
+const constants = fn(19773).GuildSettingsRoleEditSections;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(19773).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(19780).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 const createStyles = fn(5014);
@@ -194,10 +194,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(19785).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(19792).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(19785);
+          const obj = applyArgumentsResult(19792);
           const obj3 = { text: null, variant: "success" };
           const intl = applyArgumentsResult(1113).intl;
           obj3.text = intl.string(applyArgumentsResult(1113).t.ulZn1j);
@@ -228,15 +228,15 @@ class GuildSettingsRoleEdit extends PureComponent {
           updateRoleResult.then(
             () => {
               if (null != closure_1_2) {
-                const result = closure_3_0(11602).putRoleConnectionsConfigurations(closure_1_4, closure_1_5, tmp);
+                const result = closure_3_0(11603).putRoleConnectionsConfigurations(closure_1_4, closure_1_5, tmp);
                 result.then(success, failure);
-                const obj5 = closure_3_0(11602);
+                const obj5 = closure_3_0(11603);
               } else if (typeof success === "function") {
-                closure_3_0(19785).commitSectionChanges(closure_1_5, effectiveSection);
+                closure_3_0(19792).commitSectionChanges(closure_1_5, effectiveSection);
                 navigation.pop();
                 const obj2 = { submitting: false, formErrors: {} };
                 closure_0.setState(obj2);
-                const obj = closure_3_0(19785);
+                const obj = closure_3_0(19792);
                 obj4 = { text: null, variant: "success" };
                 const intl = closure_3_0(1113).intl;
                 obj4.text = intl.string(closure_3_0(1113).t.ulZn1j);
@@ -326,7 +326,7 @@ class GuildSettingsRoleEdit extends PureComponent {
                 if (null === guild_connections) {
                   v1 = 1;
                   c2 = 1;
-                  const obj6 = { value: tmp4(11602).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
+                  const obj6 = { value: tmp4(11603).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
                   return obj6;
                 }
               }
@@ -396,11 +396,11 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(19785).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(19785);
+              const result = applyArgumentsResult(19792).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(19792);
             } else {
-              const result1 = applyArgumentsResult(19785).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(19785);
+              const result1 = applyArgumentsResult(19792).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(19792);
             }
             closure_0(true);
           };

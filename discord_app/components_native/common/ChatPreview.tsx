@@ -285,8 +285,8 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "PX_8",
           shouldInitialScroll: "Array",
-          animated: 85.192,
-          scrollPosition: 105.692,
+          animated: 75.942,
+          scrollPosition: 87.567,
           focusTargetId: 0,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
@@ -362,9 +362,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: 0,
-        selectedChannelId: 1,
-        tapLinkData: 4,
+        messageChannel: "Enable useStateFromStores profiling",
+        selectedChannelId: "May require app restart after changes.",
+        tapLinkData: null,
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

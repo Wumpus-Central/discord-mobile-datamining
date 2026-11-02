@@ -138,7 +138,7 @@ function ConnectedForumPost(arg0) {
   }
   const obj8 = require("initialize");
 }
-const useForumChannelStore = fn(13748).useForumChannelStore;
+const useForumChannelStore = fn(13763).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -189,8 +189,8 @@ export function ForumPostListDisabled(threadId) {
       firstMessageLoaded: loaded,
       isLocalDeviceMedia: true,
     };
-    obj4.children = closure_6(tmp4(13769), obj5);
-    tmp5 = closure_6(tmp(13768).ForumPostDisabledContainer, obj4);
+    obj4.children = closure_6(tmp4(13784), obj5);
+    tmp5 = closure_6(tmp(13783).ForumPostDisabledContainer, obj4);
   }
   return tmp5;
 }

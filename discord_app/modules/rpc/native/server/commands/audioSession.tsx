@@ -7,7 +7,7 @@ let Constants = fn(6450);
 Constants = fn(1072);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16297);
+const CONTEXT_MENU_ICON_NAMES = fn(16301);
 let obj3 = {
   scope: null,
   handler(socket) {

@@ -22,7 +22,7 @@ export function SensitiveContentFiltersTeenNotice() {
   let obj = require("TinyBroncoSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(16706).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(16719).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
       label: tmp(1113).t.EUo0yj,

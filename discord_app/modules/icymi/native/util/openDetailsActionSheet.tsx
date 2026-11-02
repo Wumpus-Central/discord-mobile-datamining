@@ -20,7 +20,7 @@ export function openDetailsActionSheet(arg0) {
       actionDestinationType: null,
     },
   });
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18523, dependencyMap.paths), "ItemDetailsActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18536, dependencyMap.paths), "ItemDetailsActionSheet", {
     guildId,
     channelId,
     id,

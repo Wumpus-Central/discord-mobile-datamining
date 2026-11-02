@@ -56,12 +56,12 @@ export default function ConjureThinkingOverlay(projectId) {
   if (tmp6) {
     tmp6 = "end" !== stateFromStores.phase;
   }
-  const text = projectId(12540).useConjureRevealedText(str, { streaming: tmp6 }).text;
+  const text = projectId(12199).useConjureRevealedText(str, { streaming: tmp6 }).text;
   const obj3 = { style: tmp.root, children: null };
   const obj4 = { style: tmp.opaque, children: null };
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: tmp.header, children: null };
-  const obj2 = projectId(12540);
+  const obj2 = projectId(12199);
   const items2 = [closure_7(projectId(10074).LightbulbIcon, { size: "xs", color: ref(575).colors.TEXT_BRAND })];
   const obj8 = { variant: "text-sm/semibold", color: "text-strong", children: null };
   const intl = tmp3(1113).intl;
@@ -85,7 +85,7 @@ export default function ConjureThinkingOverlay(projectId) {
       children: null,
     };
     const obj10 = { source: text };
-    obj9.children = closure_7(tmp10(12538), obj10);
+    obj9.children = closure_7(tmp10(12197), obj10);
     let tmp7Result = closure_7(closure_4, obj9);
   } else {
     const obj11 = { variant: "text-sm/normal", color: "text-muted", children: null };

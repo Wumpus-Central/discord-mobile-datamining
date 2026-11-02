@@ -59,14 +59,17 @@ export function activePreviewTarget(activeMode, frameSurface) {
     const obj = { mode: activeMode, surface: frameSurface, appChannel: tmp };
   }
 }
-export function getPreviewTargetLabel(memo1) {
-  const mode = memo1.mode;
+export function getPreviewTargetLabel(string) {
+  const mode = string.mode;
   if ("frame" === mode) {
-    if (null == memo1.appChannel) {
-      let previewFrameSurfaceLabel = ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface);
+    if (null == string.appChannel) {
+      let previewFrameSurfaceLabel = ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface);
     } else {
       const intl4 = util.intl;
-      const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface), channel: memo1.appChannel };
+      const obj = {
+        surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(string.surface),
+        channel: string.appChannel,
+      };
       previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3868["6xVl+N"], obj);
     }
     return previewFrameSurfaceLabel;

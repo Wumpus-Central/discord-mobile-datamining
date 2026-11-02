@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const QuestDockMode = fn(6781).QuestDockMode;
-let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(17059).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(17072).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5014);
 let obj = { wrapper: null };

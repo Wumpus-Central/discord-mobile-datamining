@@ -535,7 +535,7 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F139299 */ function() { ... });
+                              someResult = assets.some(/* F139357 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }
@@ -911,7 +911,7 @@ function showSimpleMediaKeyboard(channel) {
                             const assets = didCancel.assets;
                             let someResult;
                             if (assets != null) {
-                              someResult = assets.some(/* F139299 */ function() { ... });
+                              someResult = assets.some(/* F139357 */ function() { ... });
                             }
                             tmp2 = someResult;
                           }

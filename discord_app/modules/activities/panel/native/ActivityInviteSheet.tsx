@@ -218,7 +218,7 @@ export default function ActivityInviteSheet(activity) {
         onInviteSent: callback2,
         onPressAvatar: callback1,
       };
-      tmp17Result2 = closure_12(tmp2(19136), obj10);
+      tmp17Result2 = closure_12(tmp2(19143), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;

@@ -22,8 +22,8 @@ export default noop.memo(function MediaTile(channel) {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = closure_7();
-  const speakerTileStyles = channel(12026).useSpeakerTileStyles();
-  const obj = channel(12026);
+  const speakerTileStyles = channel(12027).useSpeakerTileStyles();
+  const obj = channel(12027);
   const tmp5 = participant;
   const isScreenLandscape = channel(8773).useIsScreenLandscape();
   const obj2 = channel(8773);
@@ -39,9 +39,9 @@ export default noop.memo(function MediaTile(channel) {
     tmp8 = null;
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       const obj4 = { style: null, children: null };
-      const items2 = [tmp.container, tmp2(12026).getSizeStyle(size, speakerTileStyles)];
-      const tmp2Result = tmp2(12026);
-      items2[2] = tmp2(12026).getTileWidthStyle(size, participant(1491)().width, isScreenLandscape);
+      const items2 = [tmp.container, tmp2(12027).getSizeStyle(size, speakerTileStyles)];
+      const tmp2Result = tmp2(12027);
+      items2[2] = tmp2(12027).getTileWidthStyle(size, participant(1491)().width, isScreenLandscape);
       obj4.style = items2;
       const obj5 = {
         hasBottomSafeArea: false,
@@ -54,11 +54,11 @@ export default noop.memo(function MediaTile(channel) {
         shrinkStreamEmptyState: false,
         contentStyle: null,
       };
-      const tmp2Result2 = tmp2(12026);
+      const tmp2Result2 = tmp2(12027);
       obj5.avatarSize = tmp2(1187).AvatarSizes.XLARGE;
       obj5.channel = channel;
       obj5.contentStyle = tmp.media;
-      obj4.children = jsx(tmp5(12036), {
+      obj4.children = jsx(tmp5(12037), {
         hasBottomSafeArea: false,
         hasLeftSafeArea: false,
         hasRightSafeArea: false,
@@ -70,7 +70,7 @@ export default noop.memo(function MediaTile(channel) {
         contentStyle: null,
       });
       tmp8 = <View style={null}>{null}</View>;
-      const tmp5Result = tmp5(12036);
+      const tmp5Result = tmp5(12037);
     }
   }
   return tmp8;

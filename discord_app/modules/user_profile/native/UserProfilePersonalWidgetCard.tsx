@@ -293,7 +293,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items[1] = tmp2Result;
   obj2.children = items;
   obj.children = closure_10(closure_7, obj2);
-  return closure_9(disableInteraction(14956), obj);
+  return closure_9(disableInteraction(14960), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);

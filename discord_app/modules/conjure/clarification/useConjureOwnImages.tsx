@@ -234,7 +234,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
                 if (null != arg0[closure_0]) {
                   obj = closure_0(closure_2[5]);
                   const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                  result.catch(/* F139441 */ function() { ... });
+                  result.catch(/* F139497 */ function() { ... });
                 }
                 const obj2 = {};
                 const merged = Object.assign(arg0);
@@ -298,7 +298,7 @@ export function useConjureOwnImages(projectId, arg1, arg2) {
               if (null != arg0[closure_0]) {
                 obj = closure_0(closure_2[5]);
                 const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                result.catch(/* F139441 */ function() { ... });
+                result.catch(/* F139497 */ function() { ... });
               }
               const obj2 = {};
               const merged = Object.assign(arg0);

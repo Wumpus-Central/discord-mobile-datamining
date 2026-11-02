@@ -43,7 +43,7 @@ function IgnoredUserRow(userRecord) {
   };
   const items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(16695).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(16708).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {

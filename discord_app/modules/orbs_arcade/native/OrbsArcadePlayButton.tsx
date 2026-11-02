@@ -75,7 +75,7 @@ export default function OrbsArcadePlayButton(game) {
   }
   let analyticsLocations;
   analyticsLocations = analyticsLocations(7326)().analyticsLocations;
-  const tmp4 = analyticsLocations(17036)(game);
+  const tmp4 = analyticsLocations(17049)(game);
   const text = tmp4.text;
   ({ isPaidPlay, canAffordPlay } = tmp4);
   const items = [OrbsArcadeStore];
@@ -85,7 +85,7 @@ export default function OrbsArcadePlayButton(game) {
     () => OrbsArcadeStore.getGameStateForGame(game.id),
     items1,
   );
-  let result = analyticsLocations(17037)(game, stateFromStores);
+  let result = analyticsLocations(17050)(game, stateFromStores);
   const obj = game(504);
   const items2 = [OrbsArcadeStore];
   const items3 = [game.id];
@@ -107,7 +107,7 @@ export default function OrbsArcadePlayButton(game) {
         onPress: "a",
       };
       const intl3 = tmp5(1113).intl;
-      const obj4 = { count: tmp5(17017).getOrbsArcadeClaimableRewards(game.rewards, stateFromStores).length };
+      const obj4 = { count: tmp5(17030).getOrbsArcadeClaimableRewards(game.rewards, stateFromStores).length };
       obj3.text = intl3.formatToPlainString(tmp5(1113).t["18ToNc"], obj4);
       let tmp18Result2 = jsx(tmp5(5634).Button, {
         grow: true,
@@ -117,7 +117,7 @@ export default function OrbsArcadePlayButton(game) {
         disabled: true,
         onPress: "a",
       });
-      const tmp5Result3 = tmp5(17017);
+      const tmp5Result3 = tmp5(17030);
     }
     return tmp18Result2;
   }
@@ -133,10 +133,10 @@ export default function OrbsArcadePlayButton(game) {
     if (null != result.timeUntilNextRound) {
       const intl2 = tmp5(1113).intl;
       const obj6 = { duration: null };
-      result = tmp5(17026).formatOrbsArcadeTimeUntil(result.timeUntilNextRound);
+      result = tmp5(17039).formatOrbsArcadeTimeUntil(result.timeUntilNextRound);
       obj6.duration = result;
       let formatToPlainStringResult = intl2.formatToPlainString(tmp5(1113).t["Uk+BE3"], obj6);
-      const tmp5Result4 = tmp5(17026);
+      const tmp5Result4 = tmp5(17039);
     } else {
       const intl = tmp5(1113).intl;
       formatToPlainStringResult = intl.string(tmp5(1113).t.iJjbMd);

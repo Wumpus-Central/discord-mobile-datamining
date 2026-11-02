@@ -32,13 +32,13 @@ export default function UserSettingsEditGuildProfile() {
     onReset();
     GuildIdentityActionCreators.setCurrentGuild(id.id);
   }
-  const context = noop.useContext(guild(16450));
+  const context = noop.useContext(guild(16463));
   let tmp = closure_10();
   let obj = stateFromStores(5080);
   const tmp6 = guild(7326);
   const items = [UserStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  let tmp8 = guild(16555)();
+  let tmp8 = guild(16568)();
   guild = tmp8.guild;
   ({ resetPending: dependencyMap, handleSubmit: noop } = tmp8);
   let obj2 = stateFromStores(504);
@@ -100,18 +100,18 @@ export default function UserSettingsEditGuildProfile() {
       if (null != context) {
         const obj9 = { theme: obj.useThemeContext().theme, children: null };
         const obj10 = { children: tmp17 };
-        obj9.children = closure_7(tmp5(12056).DisableCustomTheme, obj10);
+        obj9.children = closure_7(tmp5(12057).DisableCustomTheme, obj10);
         tmp14Result = closure_7(tmp5(5080).ThemeContextProvider, obj9);
       }
       obj8.stickyHeader = tmp14Result;
       const _HermesInternal = HermesInternal;
-      items3[1] = closure_7(tmp2(16560), obj8, "" + stateFromStores.id + "-" + guild.id);
+      items3[1] = closure_7(tmp2(16573), obj8, "" + stateFromStores.id + "-" + guild.id);
       obj7.children = items3;
       return closure_9(tmp5(7326).AnalyticsLocationProvider, obj7);
     }
   }
   const obj11 = { children: null };
-  const items4 = [closure_7(stateFromStores(16450).ProfileCustomizationHeaderSpacer, {}), closure_7(guild(16557), {})];
+  const items4 = [closure_7(stateFromStores(16463).ProfileCustomizationHeaderSpacer, {}), closure_7(guild(16570), {})];
   obj11.children = items4;
   return closure_9(closure_8, obj11);
 }

@@ -292,7 +292,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(13882);
+    obj2 = replaced(13897);
   }
   return flag;
 }

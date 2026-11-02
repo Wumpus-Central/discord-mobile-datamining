@@ -1,7 +1,7 @@
 // discord_app/modules/game_server/hooks/useGameServerPerk.tsx
 import util from "../../../intl/index.native.tsx";
 import _modDef2996 from "../GameServer.messages.js";
-import _modDef14137 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
+import _modDef14152 from "../../../../discord_assets/assets/premium/game_servers/game_server_tile.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameServerStore from "../GameServerStore.tsx";
 
@@ -48,8 +48,8 @@ export default function useGameServerPerk(guildId) {
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef14137;
-        obj.staticImageUrl = _modDef14137;
+        obj.animatedImageUrl = _modDef14152;
+        obj.staticImageUrl = _modDef14152;
         tmp = obj;
       }
     }

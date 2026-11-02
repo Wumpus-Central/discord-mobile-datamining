@@ -72,7 +72,7 @@ export default noop.memo(function DirectoryChannel(guildId) {
     obj2.channel = stateFromStores;
     obj2.selected = selected;
     obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(18161), {
+    tmp7 = jsx(id(18174), {
       onPress: callback,
       onLongPress: tmp6,
       style: tmp.container,
@@ -84,7 +84,7 @@ export default noop.memo(function DirectoryChannel(guildId) {
       selected: null,
       resolvedUnreadSetting: null,
     });
-    const tmp10 = id(18161);
+    const tmp10 = id(18174);
   }
   return tmp7;
 });

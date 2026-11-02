@@ -35,8 +35,8 @@ export function receiveLocalNotification(getData) {
         const result = GuildActionCreatorsDefault.transitionToGuildSync(tmp4.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(1994)(13169, dependencyMap.paths).then((result) => result.default(projectId.channelId));
-        const promise2 = data(1994)(13169, dependencyMap.paths);
+        data(1994)(13184, dependencyMap.paths).then((result) => result.default(projectId.channelId));
+        const promise2 = data(1994)(13184, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
         data(1994)(5756, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = projectId);

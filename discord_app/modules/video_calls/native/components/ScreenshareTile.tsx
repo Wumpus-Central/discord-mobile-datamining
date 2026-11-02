@@ -6,7 +6,7 @@ import LegacyBaseButton from "../../../../../_runtime/05303_LegacyBaseButton.js"
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef11755 from "../../../../../_runtime/metro/11755__.js";
+import _modDef11756 from "../../../../../_runtime/metro/11756__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,7 +50,7 @@ export default function ScreenShareTile(onSingleTap) {
   const items = [hasOwnProperty(View, { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) }), ,];
   const obj4 = { source: null, style: null, resizeMode: "contain" };
   const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-  obj4.source = _modDef11755;
+  obj4.source = _modDef11756;
   obj4.style = tmp.image;
   items[1] = hasOwnProperty(FastImageDefault, obj4);
   const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };

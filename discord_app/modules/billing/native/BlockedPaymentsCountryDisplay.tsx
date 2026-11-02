@@ -5,8 +5,8 @@ import native from "../../../design/void/native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef11376 from "../../../../_runtime/metro/11376__.js";
 import _modDef11377 from "../../../../_runtime/metro/11377__.js";
+import _modDef11378 from "../../../../_runtime/metro/11378__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -41,9 +41,9 @@ export default function BlockedPaymentsCountryDisplay() {
   const obj6 = { style: tmp.image, source: null };
   const tmp8 = FastImageDefault;
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11376;
+    let tmp2Result = _modDef11377;
   } else {
-    tmp2Result = _modDef11377;
+    tmp2Result = _modDef11378;
   }
   obj6.source = tmp2Result;
   items[2] = hasOwnProperty(tmp8, obj6);

@@ -151,20 +151,20 @@ export function ShopCategory(category) {
   dependencyMap = category(1497).useNavigation();
   const unpublishedAt = category.unpublishedAt;
   let obj = category(1497);
-  const filteredAndSortedProducts = category(16978).useFilteredAndSortedProducts({
+  const filteredAndSortedProducts = category(16991).useFilteredAndSortedProducts({
     products: category.products,
     bypassAndroidUnsyncedFilter: category.isOrbsExclusive,
   });
   const mobileBannerUrl = category.mobileBannerUrl;
-  let obj2 = category(16978);
+  let obj2 = category(16991);
   let obj3 = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
-  const collectiblesShopDeepLinkProps = category(17825).useCollectiblesShopDeepLinkProps({
+  const collectiblesShopDeepLinkProps = category(17838).useCollectiblesShopDeepLinkProps({
     products: filteredAndSortedProducts,
   });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
   const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   const ref = unpublishedAt.useRef(null);
-  const obj4 = category(17825);
+  const obj4 = category(17838);
   let items = [category.storeListingId];
   const recyclingState = category(7294).useRecyclingState(null, items, () => {
     const current = ref.current;
@@ -177,19 +177,19 @@ export function ShopCategory(category) {
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  const obj7 = category(17829);
+  const obj7 = category(17842);
   const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({
     shouldScroll: tmp9,
     initialScrollIndex: productIndex,
     flashListRef: ref,
-    afterMs: category(17829).INITIAL_SCROLL_DELAY_MS,
+    afterMs: category(17842).INITIAL_SCROLL_DELAY_MS,
     resetKey: category.storeListingId,
   });
   const obj8 = {
     shouldScroll: tmp9,
     initialScrollIndex: productIndex,
     flashListRef: ref,
-    afterMs: category(17829).INITIAL_SCROLL_DELAY_MS,
+    afterMs: category(17842).INITIAL_SCROLL_DELAY_MS,
     resetKey: category.storeListingId,
   };
   collectiblesAnalyticsContext = category(9462).useCollectiblesAnalyticsContext();

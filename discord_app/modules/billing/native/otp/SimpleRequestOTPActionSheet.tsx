@@ -128,7 +128,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   let items = [closure_8];
   const stateFromStores = selectedSkuId(504).useStateFromStores(items, () => SKUStore.get(selectedSkuId));
   let obj3 = selectedSkuId(504);
-  const fetchCollectiblesProduct = selectedSkuId(11385).useFetchCollectiblesProduct(selectedSkuId);
+  const fetchCollectiblesProduct = selectedSkuId(11386).useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   noop = product;
   let isFetching = fetchCollectiblesProduct.isFetching;
@@ -272,9 +272,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
       options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
     },
   };
-  closure_8 = tmp(14420)(obj6);
+  closure_8 = tmp(14434)(obj6);
   const items5 = [product];
-  let obj4 = selectedSkuId(11385);
+  let obj4 = selectedSkuId(11386);
   const obj7 = {
     isGift: true,
     options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },

@@ -56,7 +56,7 @@ export function SmartSearchCitation(smartSearchQuery) {
             } else {
               closure_0 = tmp3;
               const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-              const result = v2(13895).trackSmartSearchCitationOpened(obj4, v2(13893));
+              const result = v2(13910).trackSmartSearchCitationOpened(obj4, v2(13908));
               if ("conversation" === citation.sourceType) {
                 dependencyMap = 1;
                 v2 = 2;
@@ -64,7 +64,7 @@ export function SmartSearchCitation(smartSearchQuery) {
                 const obj5 = { value: onPressConversationCitation(citation), done: false };
                 return obj5;
               }
-              const obj6 = v2(13895);
+              const obj6 = v2(13910);
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;

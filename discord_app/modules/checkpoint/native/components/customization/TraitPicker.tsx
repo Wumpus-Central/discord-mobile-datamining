@@ -54,11 +54,11 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const createStyles = fn(5014);
-let obj2 = { container: { gap: fn(13680).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
-let obj3 = { gap: fn(13680).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(13680).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(13680).CONTENT_INSET };
-obj2.details = { paddingHorizontal: fn(13680).CONTENT_INSET };
+let obj2 = { container: { gap: fn(13695).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
+let obj3 = { gap: fn(13695).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13695).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13695).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13695).CONTENT_INSET };
 let closure_11 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function TraitPickerTsx1(){const{INTRO_DETAILS_DURATION_MS,Easing,withTiming,isDetailsVisible,INTRO_DETAILS_OFFSET_Y}=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isDetailsVisible?1:0,timing),transform:[{translateY:withTiming(isDetailsVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};}",
@@ -88,7 +88,7 @@ export default function TraitPicker(customizationOption) {
   let obj2 = customizationOption(504);
   _slicedToArray = customizationOption(5274).useIsScreenReaderEnabled();
   let obj3 = customizationOption(5274);
-  const traitPickerOptions = customizationOption(13682).useTraitPickerOptions({
+  const traitPickerOptions = customizationOption(13697).useTraitPickerOptions({
     customizationOption,
     optionIds,
     savedOptionId,
@@ -118,7 +118,7 @@ export default function TraitPicker(customizationOption) {
     tmp9 = 0 === tmp8;
   }
   useReducedMotion = tmp9;
-  const obj4 = customizationOption(13682);
+  const obj4 = customizationOption(13697);
   const obj5 = { customizationOption, optionIds, savedOptionId, rarityOrder };
   const fn = function b() {
     const obj = { duration: 600, easing: null };
@@ -168,7 +168,7 @@ export default function TraitPicker(customizationOption) {
     tmp14 = tmp15;
   }
   obj7.paused = tmp14;
-  const autoSelectTraitOption = customizationOption(13683).useAutoSelectTraitOption(obj7);
+  const autoSelectTraitOption = customizationOption(13698).useAutoSelectTraitOption(obj7);
   let diff = earnedCount;
   if (null == selectedOptionId) {
     diff = earnedCount - tmp12;
@@ -186,7 +186,7 @@ export default function TraitPicker(customizationOption) {
   }
   const items2 = [
     showEarnedCount,
-    closure_8(selectedOptionId(13680), {
+    closure_8(selectedOptionId(13695), {
       customizationOption,
       options: availableTraitOptions,
       selectedOptionId,
@@ -203,7 +203,7 @@ export default function TraitPicker(customizationOption) {
     const items3 = [tmp.details, animatedStyle];
     obj10.style = items3;
     const obj11 = { asset: found, hideDescriptionAndRarity: tmp4 };
-    obj10.children = closure_8(tmp7(13684), obj11);
+    obj10.children = closure_8(tmp7(13699), obj11);
     tmp23Result = closure_8(tmp7(5095).View, obj10);
   }
   items2[2] = tmp23Result;

@@ -120,7 +120,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   const obj13 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1113).intl;
   obj13.text = intl3.string(guildId(1113).t.kMRDWs);
-  obj13.icon = closure_7(guildId(18267).BoostTier2Icon, { color: "white" });
+  obj13.icon = closure_7(guildId(18280).BoostTier2Icon, { color: "white" });
   obj13.onPress = guildId.onUnlockPress;
   items5[2] = closure_7(guildId(5634).Button, obj13);
   obj7.children = items5;

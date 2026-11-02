@@ -5,7 +5,7 @@ import ClientInfoUtils from "../../../../utils/native/ClientInfoUtils.tsx";
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;

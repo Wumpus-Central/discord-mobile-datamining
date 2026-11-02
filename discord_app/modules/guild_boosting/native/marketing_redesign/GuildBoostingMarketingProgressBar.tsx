@@ -22,7 +22,7 @@ let obj2 = {
     alignItems: "center",
     width: "100%",
     marginTop: 40,
-    paddingHorizontal: fn(15468).MARKER_DIMENSIONS / 2 + 34,
+    paddingHorizontal: fn(15472).MARKER_DIMENSIONS / 2 + 34,
   },
   progressBar: { height: 54, maxWidth: 660, width: "100%" },
   progressBarScrubber: null,
@@ -35,12 +35,12 @@ let obj3 = {
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(15468).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(15472).MARKER_DIMENSIONS / 2 + 34,
 };
 obj2.progressBarScrubber = {
   height: 8,
-  top: fn(15468).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(15468).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(15472).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(15472).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,

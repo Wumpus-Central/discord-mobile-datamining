@@ -79,13 +79,13 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
   [USER_INTERACTION]: fn(8643).ChatIcon,
-  [USER_CALLED]: fn(13348).PhoneIcon,
+  [USER_CALLED]: fn(13363).PhoneIcon,
   [USER_ADD]: fn(5715).FriendsIcon,
-  [GUILD_ADD]: fn(15473).ServerGridIcon,
+  [GUILD_ADD]: fn(15477).ServerGridIcon,
   [GUILD_INTERACTION]: fn(8645).ThreadIcon,
   [PURCHASES]: fn(8015).CreditCardIcon,
   [TOTAL_VOICE_MINUTES]: fn(5740).ClockIcon,
-  [GIFTS]: fn(13350).GiftIcon,
+  [GIFTS]: fn(13365).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
   fn(7716).TeenActionDisplayType);

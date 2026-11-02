@@ -58,9 +58,9 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(15045).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(15049).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(15045);
+  let obj = balance(15049);
   let isPartiallyOwnedBundle = balance(9574).useProductDisableState(product.skuId).isDisabled;
   let obj2 = balance(9574);
   if (!isPartiallyOwnedBundle) {
@@ -76,7 +76,7 @@ function VCButton(balance) {
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(15048, dependencyMap.paths),
+      asyncRequireImpl(15052, dependencyMap.paths),
       {
         skuId: product.skuId,
         analyticsLocations,
@@ -92,7 +92,7 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(6744).pushLazy(balance(1994)(15053, dependencyMap.paths), obj3, modalKey);
+            product(6744).pushLazy(balance(1994)(15057, dependencyMap.paths), obj3, modalKey);
             const tmp4Result = product(6744);
           } else {
             const ALL = balance(1075).FractionalPremiumSKUsSets.ALL;
@@ -122,11 +122,11 @@ function VCButton(balance) {
                 product(5258).hideActionSheet();
               };
               tmp4Result3.openLazy(
-                balance(1994)(15054, dependencyMap.paths),
+                balance(1994)(15058, dependencyMap.paths),
                 "FractionalNitroCollectedActionSheet",
                 obj4,
               );
-              const tmp10 = balance(1994)(15054, dependencyMap.paths);
+              const tmp10 = balance(1994)(15058, dependencyMap.paths);
             } else {
               const obj5 = {
                 product,
@@ -135,8 +135,8 @@ function VCButton(balance) {
                 orbBalancePriorToPurchase,
                 stageCollectibleChangeForEditProfile,
               };
-              product(14481).open(obj5);
-              const tmp4Result4 = product(14481);
+              product(14495).open(obj5);
+              const tmp4Result4 = product(14495);
             }
           }
           const obj2 = product(6744);
@@ -224,7 +224,7 @@ const CollectiblesShopConstants = fn(1074);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const Constants = fn(1072);
 ({ MarketingURLs: closure_9, UserSettingsSections: c10 } = Constants);
-const RootNavigatorScreen = fn(11513).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11514).RootNavigatorScreen;
 const PremiumTypes = fn(1385).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

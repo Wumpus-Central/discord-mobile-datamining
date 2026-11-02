@@ -57,7 +57,7 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  const canShowTooltip = positionY(11866).useCanShowTooltip(
+  const canShowTooltip = positionY(11867).useCanShowTooltip(
     positionY(1092).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
     true,
   );

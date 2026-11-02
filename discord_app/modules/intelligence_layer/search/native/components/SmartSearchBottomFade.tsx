@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting(
 export default noop.memo(function SmartSearchBottomFade(height) {
   let searchHostSurfaceColor;
   const tmp = closure_7(height.height);
-  searchHostSurfaceColor = searchHostSurfaceColor(18759).useSearchHostSurfaceColor();
+  searchHostSurfaceColor = searchHostSurfaceColor(18766).useSearchHostSurfaceColor();
   let items = [searchHostSurfaceColor];
   const memo = noop.useMemo(() => {
     const obj = _modDef671(searchHostSurfaceColor);

@@ -19,7 +19,7 @@ const __initData = {
 const __initData2 = {
   code: "function useControllerPIPStateTsx2(current){const{clampPIPScale,pipState,scale}=this.__closure;const newScale=clampPIPScale({scale:current.scale,width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:current.windowDimensions,safeArea:current.safeArea,pipAvoidanceSpecs:current.pipAvoidanceSpecs});if(current.scale!==newScale){scale.set(newScale);}}",
 };
-let size = fn(2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
 export function useControllerPIPState(channelId) {
@@ -33,25 +33,24 @@ export function useControllerPIPState(channelId) {
   c7 = undefined;
   let obj8;
   let obj = obj8(5095);
-  const sharedValue = obj.useSharedValue(obj8(19191).getVoicePanelPIPScaleCached());
-  const size = {
+  const sharedValue = obj.useSharedValue(obj8(19198).getVoicePanelPIPScaleCached());
+  const ref = pipAvoidanceSpecs.useRef({
     id: "diversity",
     mode: "isArray",
     width: false,
     height: null,
-    containerHeight: "slide_from_bottom",
-    showSecondaryPIP: "motorcycle",
+    containerHeight: 0,
+    showSecondaryPIP: false,
     scale: sharedValue,
-  };
-  const ref = pipAvoidanceSpecs.useRef(size);
-  let obj2 = obj8(19191);
+  });
+  let obj2 = obj8(19198);
   const items = [obj8];
   closure_129_0 = channelId;
   closure_129_1 = mode;
   const stateFromStores = obj8(504).useStateFromStores(items, () => PIPSpeakerStore.getSpeakerId(obj8));
-  const tmp7 = ref(19144)(channelId);
+  const tmp7 = ref(19151)(channelId);
   closure_129_2 = tmp7;
-  const obj5 = obj8(504);
+  const obj4 = obj8(504);
   const tmp6 = ref;
   const items1 = [safeArea, sharedValue, c7];
   const items2 = [channelId, tmp7, mode];
@@ -103,8 +102,8 @@ export function useControllerPIPState(channelId) {
     },
     items2,
   );
-  const tmp9 = ref(19192)(channelId);
-  const obj6 = obj8(504);
+  const tmp9 = ref(19199)(channelId);
+  const obj5 = obj8(504);
   [tmp11, c7] = windowDimensions(
     pipAvoidanceSpecs.useState(() => closure_2.getTargetDimensions(ref)),
     2,
@@ -113,14 +112,15 @@ export function useControllerPIPState(channelId) {
     pipAvoidanceSpecs.useState(() => closure_2.getTargetDimensions(ref)),
     2,
   );
-  const pIPMode = obj8(19107).getPIPMode({
+  const pIPMode = obj8(19114).getPIPMode({
     channelId,
     connected,
     manuallyFocusedId: focusedId,
     mode,
     selfHasVideo: tmp9,
   });
-  const obj4 = {
+  const obj6 = obj8(19114);
+  const obj7 = {
     connected,
     mode,
     focusedId,
@@ -128,8 +128,7 @@ export function useControllerPIPState(channelId) {
     selfHasVideo: tmp9,
     showSecondaryPIP: stateFromStores1,
   };
-  const obj7 = obj8(19107);
-  ({ participant, dimensions } = ref(19193)(channelId, layoutManager, focusedId, stateFromStores, {
+  ({ participant, dimensions } = ref(19200)(channelId, layoutManager, focusedId, stateFromStores, {
     connected,
     mode,
     focusedId,
@@ -147,7 +146,7 @@ export function useControllerPIPState(channelId) {
   obj8.id = id;
   obj8.showSecondaryPIP = stateFromStores1;
   obj8.mode = pIPMode;
-  let tmp13 = ref(19193)(channelId, layoutManager, focusedId, stateFromStores, {
+  let tmp13 = ref(19200)(channelId, layoutManager, focusedId, stateFromStores, {
     connected,
     mode,
     focusedId,
@@ -201,7 +200,7 @@ export function useControllerPIPState(channelId) {
     }
   }
   const tmpResult2 = obj8(5095);
-  F.__closure = { clampPIPScale: obj8(19107).clampPIPScale, pipState: obj8, scale: sharedValue };
+  F.__closure = { clampPIPScale: obj8(19114).clampPIPScale, pipState: obj8, scale: sharedValue };
   F.__workletHash = 9660590378927;
   F.__initData = __initData2;
   const animatedReaction = tmpResult2.useAnimatedReaction(E, F);
@@ -224,6 +223,6 @@ export function useControllerPIPState(channelId) {
       });
     });
   }, items3);
-  tmp6(19194)(channelId, layoutManager, pIPMode);
+  tmp6(19201)(channelId, layoutManager, pIPMode);
   return obj8;
 }

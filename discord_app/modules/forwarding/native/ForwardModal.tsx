@@ -26,7 +26,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(13368).MAX_DESTINATION_COUNT;
+const MAX_DESTINATION_COUNT = fn(13383).MAX_DESTINATION_COUNT;
 let UserRowModes = fn(10727).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -263,7 +263,7 @@ export default function ForwardModal(message) {
                     closure_0 = arg0;
                     closure_1_0(5960).openAlert(
                       "staff-to-non-staff-forward",
-                      closure_1_15(forwardOptions(13374), {
+                      closure_1_15(forwardOptions(13389), {
                         onConfirm() {
                           return closure_0(true);
                         },

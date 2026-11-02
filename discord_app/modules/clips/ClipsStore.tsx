@@ -289,14 +289,14 @@ let obj = {
   clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
   debugTooltipsEnabled: false,
   enableAutoclipping: "flexDirection",
-  showPovClipsInGallery: "experiment-disabled",
+  showPovClipsInGallery: "native-text-override",
 };
 obj = {
   clipsSettings: obj,
   hardwareClassification: null,
   hardwareClassificationForDecoupled: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(15874).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(15878).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
   newClipIds: [],
   hasClips: false,
   hasTakenDecoupledClip: false,

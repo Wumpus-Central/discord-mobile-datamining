@@ -134,8 +134,8 @@ function UserAvatar(user) {
     status: "done",
     isMobileOnline: true,
     isVROnline: null,
-    style: "button",
-    autoStatusCutout: "Group DM",
+    style: "redesign/message-preview/medium",
+    autoStatusCutout: 1,
   };
   let tmp3 = null;
   if (!user.isSystemUser()) {

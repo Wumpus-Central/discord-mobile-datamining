@@ -396,7 +396,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   obj4.renderItem = callback;
   obj4.scrollIndicatorInsets = memo4;
   const items6 = [
-    onScrollWorklet(require("../../../../_runtime/metro/14407__.js").AnimatedLegendList, obj4),
+    onScrollWorklet(require("../../../../_runtime/metro/14421__.js").AnimatedLegendList, obj4),
     renderAccessory(memo1),
   ];
   obj5.children = items6;

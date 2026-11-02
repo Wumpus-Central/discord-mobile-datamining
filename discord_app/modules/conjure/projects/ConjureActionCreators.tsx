@@ -83,17 +83,18 @@ let closure_18 = async function _listProjects() {
               DispatcherDefault.dispatch(obj5);
               c4 = 1;
               const HTTP = HTTPUtils.HTTP;
+              let get = HTTP.get;
               const request = { url: constants.CONJURE_PROJECTS, query: null, rejectWithError: true };
-              let tmp50;
               if (null != guild_id) {
                 const obj7 = { guild_id };
-                tmp50 = obj7;
+                let obj8 = obj7;
+              } else {
+                obj8 = { include_shared: true };
               }
-              request.query = tmp50;
+              request.query = obj8;
+              get = get(request);
               c5 = 2;
               c6 = 1;
-              const obj8 = { value: HTTP.get(request), done: false };
-              return obj8;
             } else {
               if (null != tmp37) {
                 if (tmp37 !== closure_14) {
@@ -152,10 +153,10 @@ let closure_18 = async function _listProjects() {
           closure_131_17(closure_130_2);
         }
         c6 = 3;
-      } catch (tmp51) {
+      } catch (tmp50) {
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp51;
+          throw tmp50;
         } else {
           c5 = tmp;
         }

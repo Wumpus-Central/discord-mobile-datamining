@@ -81,7 +81,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14314).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14329).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5014);
@@ -208,7 +208,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(14327).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(14342).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {

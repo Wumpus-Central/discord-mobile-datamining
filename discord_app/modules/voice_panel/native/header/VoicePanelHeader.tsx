@@ -47,7 +47,7 @@ function MusicMuteButton(channelId) {
       }
       const obj3 = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 11880 : 8558),
+        icon: importDefault(stateFromStores ? 11881 : 8558),
         onPress() {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         },

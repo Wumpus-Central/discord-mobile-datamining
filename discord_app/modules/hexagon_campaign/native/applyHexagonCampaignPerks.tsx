@@ -119,17 +119,17 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
   const obj16 = {};
   obj16[closure_131_7.CLIENT_THEME] = {
     apply() {
-      dependencyMap(16996).handleSaveTheme(closure_2_9, closure_1_4, closure_1_3);
+      dependencyMap(17009).handleSaveTheme(closure_2_9, closure_1_4, closure_1_3);
       return Promise.resolve(true);
     },
     restore() {
-      const obj = dependencyMap(16996);
+      const obj = dependencyMap(17009);
       let DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = closure_1_7.clientTheme;
       if (DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME == null) {
-        DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = dependencyMap(16995).DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
+        DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = dependencyMap(17008).DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
       }
       obj.handleSaveTheme(
-        dependencyMap(16995).getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME),
+        dependencyMap(17008).getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME),
         closure_1_4,
         closure_1_3,
       );
@@ -138,16 +138,16 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
   };
   obj16[closure_131_7.APP_ICON] = {
     apply() {
-      return dependencyMap(15340).setAppIcon(dependencyMap(9980).LimitedTimeAppIconIds.HEXAGON, dependencyMap2, {
+      return dependencyMap(15344).setAppIcon(dependencyMap(9980).LimitedTimeAppIconIds.HEXAGON, dependencyMap2, {
         showErrorToast: false,
       });
     },
     restore() {
       let DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = closure_1_7.appIconId;
       if (DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID == null) {
-        DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = dependencyMap(16995).DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID;
+        DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = dependencyMap(17008).DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID;
       }
-      return dependencyMap(15340).setAppIcon(DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID, dependencyMap2, {
+      return dependencyMap(15344).setAppIcon(DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID, dependencyMap2, {
         showErrorToast: false,
       });
     },

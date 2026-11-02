@@ -28,16 +28,16 @@ function useAppChannelAppActions(channel) {
     }),
     items,
   );
-  const tmp5 = application_id(12095)(application_id, memo);
+  const tmp5 = application_id(12204)(application_id, memo);
   dependencyMap = tmp5;
   const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(channel);
   bot = undefined;
   if (appChannelApplication != null) {
     bot = appChannelApplication.bot;
   }
-  const tmp8 = application_id(14543)(application_id);
+  const tmp8 = application_id(14557)(application_id);
   closure_4 = tmp8;
-  const tmp9 = application_id(14544)(application_id).length > 0;
+  const tmp9 = application_id(14558)(application_id).length > 0;
   closure_5 = tmp9;
   const items1 = [application_id, bot, channel, tmp8, tmp5, tmp9];
   return bot.useMemo(() => {
@@ -65,7 +65,7 @@ function useAppChannelAppActions(channel) {
       if (null != appName) {
         fn3 = null;
         if (closure_5) {
-          fn3 = () => application_id(14545)({ applicationId, appName });
+          fn3 = () => application_id(14559)({ applicationId, appName });
         }
       }
     }
@@ -80,7 +80,7 @@ function useAppChannelAppActions(channel) {
     obj.appInfo = fn4;
     let fn5 = null;
     if (null != application_id) {
-      fn5 = () => application_id(14548)(applicationId, closure_0, "app_channel_header_mobile");
+      fn5 = () => application_id(14562)(applicationId, closure_0, "app_channel_header_mobile");
     }
     obj.report = fn5;
     return obj;

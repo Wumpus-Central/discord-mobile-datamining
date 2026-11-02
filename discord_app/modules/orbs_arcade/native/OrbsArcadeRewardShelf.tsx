@@ -30,7 +30,7 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const obj2 = { children: null };
   const obj = rewards(504);
   const items2 = [
-    closure_9(rewards(13409).Pile, {
+    closure_9(rewards(13424).Pile, {
       "aria-label": memo,
       shape: rewards(9509).CutoutShape.Circle,
       size: v50,

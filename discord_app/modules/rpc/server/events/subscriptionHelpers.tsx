@@ -12,7 +12,8 @@ import QuestStore from "../../../quests/QuestStore.tsx";
 require = fn;
 const RPCEvents = fn(1072).RPCEvents;
 const ActivityScreenOrientation = fn(2018).ActivityScreenOrientation;
-const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
+const FrameLayoutModes = fn(6847).FrameLayoutModes;
+const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
@@ -27,12 +28,22 @@ export function getInitialSubscriptionPayload(application, arg1, quest_id) {
     if (null != id) {
       layoutModeForApp = EmbeddedActivitiesStore.getLayoutModeForApp(id);
     }
-    let tmp37 = null;
+    if (null == layoutModeForApp) {
+      const tmp47 = getSocketFrameDefault(application);
+      if (null == tmp47) {
+        layoutModeForApp = null;
+      } else if (tmp47.data.layoutMode === FrameLayoutModes.PIP) {
+        let FOCUSED2 = ActivityLayoutMode.PIP;
+      } else {
+        FOCUSED2 = ActivityLayoutMode.FOCUSED;
+      }
+    }
+    let tmp53 = null;
     if (null != layoutModeForApp) {
       const obj2 = { is_pip_mode: layoutModeForApp !== ActivityLayoutMode.FOCUSED };
-      tmp37 = obj2;
+      tmp53 = obj2;
     }
-    return tmp37;
+    return tmp53;
   } else if (RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE === arg1) {
     const application2 = application.application;
     let id1;
@@ -43,12 +54,22 @@ export function getInitialSubscriptionPayload(application, arg1, quest_id) {
     if (null != id1) {
       layoutModeForApp1 = EmbeddedActivitiesStore.getLayoutModeForApp(id1);
     }
-    let tmp32 = null;
+    if (null == layoutModeForApp1) {
+      const tmp34 = getSocketFrameDefault(application);
+      if (null == tmp34) {
+        layoutModeForApp1 = null;
+      } else if (tmp34.data.layoutMode === FrameLayoutModes.PIP) {
+        let FOCUSED = ActivityLayoutMode.PIP;
+      } else {
+        FOCUSED = ActivityLayoutMode.FOCUSED;
+      }
+    }
+    let tmp40 = null;
     if (null != layoutModeForApp1) {
       const obj5 = { layout_mode: layoutModeForApp1 };
-      tmp32 = obj5;
+      tmp40 = obj5;
     }
-    return tmp32;
+    return tmp40;
   } else if (RPCEvents.FRAME_LAYOUT_MODE_UPDATE === arg1) {
     const tmp26 = getSocketFrameDefault(application);
     let tmp27 = null;

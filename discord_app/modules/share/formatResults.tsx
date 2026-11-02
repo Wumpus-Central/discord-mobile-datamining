@@ -168,7 +168,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = fn(13370).isAllowedType;
+const isAllowedType = fn(13385).isAllowedType;
 const Constants = fn(1072);
 ({ Permissions: closure_9, ChannelTypes: c10 } = Constants);
 const re11 = /^deleted_user_[0-9a-f]{12}$/;

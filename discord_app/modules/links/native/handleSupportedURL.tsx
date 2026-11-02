@@ -53,7 +53,7 @@ const NativePermissionTypes = fn(7940).NativePermissionTypes;
 let closure_21 = fn(10910).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_22 = fn(7716).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_23 = fn(5747).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15671).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(15675).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(8432).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -215,7 +215,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: false };
+      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj26 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj21.navigationSettings = obj26;
       rootNavigationRef1(inviteCode[30])(obj21);
@@ -306,7 +306,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15682, dependencyMap.paths),
+                    asyncRequireImpl(15686, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -897,8 +897,8 @@ export default function handleSupportedURL(payload) {
                       sourceQuestContent: QuestContent.QuestContent.QUEST_EMBED_MOBILE,
                       properties: null,
                     };
-                    const obj3 = { referrer_id: payload.referrerId };
-                    obj2.properties = obj3;
+                    const obj4 = { referrer_id: payload.referrerId };
+                    obj2.properties = obj4;
                     AnalyticsActions.trackQuestEvent(obj2);
                   }
                   let sort;
@@ -910,22 +910,22 @@ export default function handleSupportedURL(payload) {
                     filter = payload.filter;
                   }
                   const obj5 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
-                  let tmp9 = null;
+                  let tmp3 = null;
                   if (null != sort) {
-                    tmp9 = null;
+                    tmp3 = null;
                     if ("" !== sort) {
-                      tmp9 = sort;
+                      tmp3 = sort;
                     }
                   }
-                  obj5.sort = tmp9;
-                  let tmp10 = null;
+                  obj5.sort = tmp3;
+                  let tmp4 = null;
                   if (null != filter) {
-                    tmp10 = null;
+                    tmp4 = null;
                     if ("" !== filter) {
-                      tmp10 = filter;
+                      tmp4 = filter;
                     }
                   }
-                  obj5.filter = tmp10;
+                  obj5.filter = tmp4;
                   obj5.fromContent = QuestContent.QuestContent.QUEST_SHARE_LINK;
                   QuestUtils.openQuestHome(obj5);
                 });

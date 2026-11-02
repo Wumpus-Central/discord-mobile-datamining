@@ -128,7 +128,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
                 c7 = 3;
                 c8 = 1;
                 const obj7 = {
-                  value: closure_0(13435).sendCheckpointCard(closure_132_0, c3, closure_133_0),
+                  value: closure_0(13450).sendCheckpointCard(closure_132_0, c3, closure_133_0),
                   done: false,
                 };
                 return obj7;
@@ -151,7 +151,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
               return obj9;
             } else {
               c6 = 0;
-              closure_0(13364).closeForwardModal();
+              closure_0(13379).closeForwardModal();
               closure_1_11(1, { skipThrottle: true });
               c8 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
@@ -537,7 +537,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
       return applyArgumentsResult;
     },
     onShare: function handleShare() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13422, dependencyMap.paths), "CheckpointShare", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13437, dependencyMap.paths), "CheckpointShare", {
         character: stateFromStores,
         stats,
         onForward: handleForward,
@@ -571,7 +571,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(13421).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13436).CheckpointFetchStates;
 const CheckpointConstants = fn(6066);
 ({
   CHECKPOINT_LOGO_SIZE,

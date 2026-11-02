@@ -76,9 +76,9 @@ function YouBarAnimatedBackground(condensedReason) {
   ({ barWidth, backgroundColor } = condensedReason);
   const tmp = closure_8();
   token = condensedReason(5596).useToken(token(575).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp3 = token(17143)(token);
+  const tmp3 = token(17156)(token);
   dependencyMap = tmp3;
-  const tmp4 = token(17143)(YOU_BAR_HEIGHT / 2, token);
+  const tmp4 = token(17156)(YOU_BAR_HEIGHT / 2, token);
   View = tmp4;
   let obj = condensedReason(5596);
   class R {
@@ -137,7 +137,7 @@ function YouBarAnimatedBackground(condensedReason) {
   return closure_6(token(5095).View, obj4);
 }
 let View = fn(17).View;
-const YouBarConstants = fn(17062);
+const YouBarConstants = fn(17075);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);

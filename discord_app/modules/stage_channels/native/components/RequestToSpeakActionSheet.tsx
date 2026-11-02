@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-const _modDef11892 = tmp4(11892);
+const _modDef11893 = tmp4(11893);
 require = fn;
 function RequestToSpeakRow(channel) {
   c0 = undefined;
@@ -59,9 +59,9 @@ function ManageSelfSpeakerRow(channel) {
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(11888).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(11889).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(11890).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(11891).MicrophoneArrowRightIcon;
   }
   let obj2 = {
     onPress: function handleSetSelfSpeaker() {
@@ -83,7 +83,7 @@ function ManageSelfSpeakerRow(channel) {
     trailing: null,
   };
   const tmp5Result = useAudienceRequestToSpeakStateDefault(stateFromStores, id);
-  obj2.trailing = closure_9(channel(1187).Icon, { source: _modDef11892 });
+  obj2.trailing = closure_9(channel(1187).Icon, { source: _modDef11893 });
   return closure_9(channel(6975).TableRow, obj2);
 }
 const View = fn(17).View;
@@ -178,13 +178,13 @@ export default function RequestToSpeakActionSheet(channelId) {
     const obj16 = { channel: stateFromStores, height: null };
     const _Math = Math;
     obj16.height = Math.max(first1 - first - 8, 0);
-    items4[1] = closure_9(tmp3(11893), obj16);
+    items4[1] = closure_9(tmp3(11894), obj16);
     obj7.children = items4;
     obj6.children = closure_10(tmp(6027).Stack, obj7);
     obj5.children = closure_9(tmp(5275).BottomSheetScrollView, obj6);
     obj4.children = closure_9(tmp(5272).BottomSheet, obj5);
     tmp14 = closure_9(tmp(7326).AnalyticsLocationProvider, obj4);
-    const tmp3Result = tmp3(11893);
+    const tmp3Result = tmp3(11894);
   }
   return tmp14;
 }

@@ -121,12 +121,12 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "flexDirection",
-    shouldShowThread: "flag_cx",
+    shouldShowThread: "#E893FF",
   });
   return React5(ReanimatedRexportDefault.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(12806).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12809).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5014);

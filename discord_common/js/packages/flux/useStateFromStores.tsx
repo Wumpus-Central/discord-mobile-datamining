@@ -27,7 +27,7 @@ function useStateFromStores(items, getCurrentUser, items1) {
       areStatesEqual: tmp,
       getStateFromStores: getCurrentUser,
       prevDeps: "Boolean",
-      state: "__d",
+      state: "__closure",
     };
     tmp2.current = obj;
   }

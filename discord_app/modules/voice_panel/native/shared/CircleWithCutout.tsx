@@ -68,5 +68,5 @@ export default noop.memo(function CircleWithCutout(arg0) {
   size.children = items2;
   return React4(inlineStylesDefault, size);
 });
-export const getBadgeLeft = fn(11716).getBadgeLeft;
-export const getBadgeTop = fn(11716).getBadgeTop;
+export const getBadgeLeft = fn(11717).getBadgeLeft;
+export const getBadgeTop = fn(11717).getBadgeTop;

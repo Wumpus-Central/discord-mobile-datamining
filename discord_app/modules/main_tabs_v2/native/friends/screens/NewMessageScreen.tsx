@@ -177,7 +177,7 @@ function Header(recipientLimit) {
   fn.__initData = __initData;
   if (recipientLimit.usePersonLimitCopy) {
     let obj2 = { title, memberCount: numInGroup + 1, recipientLimit };
-    return closure_17(recipientLimit(18830), obj2);
+    return closure_17(recipientLimit(18837), obj2);
   } else {
     const obj3 = { style: tmp.header, children: null };
     const obj4 = { title };
@@ -247,7 +247,7 @@ function ChatPreview(channelId) {
     secondaryTextFieldRef: channelId.tagListInputRef,
   };
   obj4.portal = channelId(1375).isAndroid();
-  items2[1] = closure_17(channelId(12221).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(12361).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
@@ -495,8 +495,8 @@ export default function NewMessageScreen(navigation) {
           const obj = source_page(572);
           obj2.channel = {
             id: navigation(7396).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
-            guild_id: "concat",
-            parent_id: "style",
+            guild_id: "Array",
+            parent_id: "isArray",
           };
           obj.dispatch(obj2);
         };
@@ -536,8 +536,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(11626).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(11626);
+    enabled = tmp13(11627).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(11627);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {

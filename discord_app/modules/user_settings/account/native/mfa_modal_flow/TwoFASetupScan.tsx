@@ -26,7 +26,7 @@ export default function TwoFASetupScan(totpSecret) {
     closure_1(true);
     ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  const twoFASetupStyles = totpSecret(16648).useTwoFASetupStyles();
+  const twoFASetupStyles = totpSecret(16661).useTwoFASetupStyles();
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { style: null, children: null };
   const items1 = [,];
@@ -63,5 +63,5 @@ export default function TwoFASetupScan(totpSecret) {
   items2[3] = closure_4(totpSecret(6980).PressableOpacity, obj5);
   obj2.children = items2;
   obj7.children = closure_5(totpSecret(7292).SafeAreaPaddingView, obj2);
-  return closure_4(totpSecret(16644).TwoFASetupModalScreen, obj7);
+  return closure_4(totpSecret(16657).TwoFASetupModalScreen, obj7);
 }

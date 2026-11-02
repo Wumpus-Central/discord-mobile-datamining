@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 function BotPermissionsHint(projectId) {
   projectId = projectId.projectId;
-  dependencyMap = noop.useContext(projectId(12438).ConjurePublishActionContext);
+  dependencyMap = noop.useContext(projectId(12097).ConjurePublishActionContext);
   let obj = { icon: projectId(11281).ShieldIcon, children: null };
   const intl = projectId(1113).intl;
   const obj2 = { onReview: null };
@@ -75,7 +75,7 @@ function BotPermissionsHint(projectId) {
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(12624).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(12627).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj.render = function render(arg0, context) {
   return <BotPermissionsHint projectId={context.context.projectId} />;
 };

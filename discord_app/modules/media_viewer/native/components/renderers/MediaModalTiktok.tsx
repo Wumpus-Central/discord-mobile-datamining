@@ -289,7 +289,7 @@ export function createTiktokVideoControls() {
         const current = ref.current;
         if (current != null) {
           const _HermesInternal = HermesInternal;
-          current.injectJavaScript("\n    window.postMessage(" + tmp6 + ", '*')\n  ");
+          current.injectJavaScript("\n    window.postMessage(" + tmp5 + ", '*')\n  ");
         }
         const obj2 = { "x-tiktok-player": true };
       }

@@ -314,10 +314,10 @@ const ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_12,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: map1,
 } = ActivityPanelConstants);
-let closure_14 = fn(18993).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_14 = fn(19000).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1072).ThemeTypes;
 const PIP_WINDOW_OFFSET = fn(11224).PIP_WINDOW_OFFSET;
-const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1187);

@@ -50,7 +50,7 @@ function GameSection(arg0) {
   return closure_8(Stack_Stack.Stack, obj);
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const days = fn(11363).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
+const days = fn(11364).GAME_ORGANIZATION_INVITE_EXPIRY_DAYS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5014);

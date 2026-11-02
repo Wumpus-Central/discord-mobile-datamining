@@ -19,8 +19,8 @@ export default function FormChannelPicker(channelId) {
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp5Result = useChannelNameDefault(stateFromStores);
   if (null != stateFromStores) {
-    let TextIcon = tmp(17220).getChannelIconComponentOrDefault(stateFromStores);
-    const tmpResult = tmp(17220);
+    let TextIcon = tmp(17233).getChannelIconComponentOrDefault(stateFromStores);
+    const tmpResult = tmp(17233);
   } else {
     TextIcon = tmp(8652).TextIcon;
   }
@@ -46,7 +46,7 @@ export default function FormChannelPicker(channelId) {
     }
     obj2.selectedChannelId = id;
     obj2.onChannelSelected = onChannelSelected;
-    obj.openLazy(asyncRequireImpl(19966, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(19973, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
   };
   return jsx(channelId(6975).TableRow, {
     icon: jsx(channelId(6975).TableRow.Icon, { IconComponent: TextIcon }),

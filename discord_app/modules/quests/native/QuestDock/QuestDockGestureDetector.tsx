@@ -514,7 +514,7 @@ function useQuestDockSwipeGesture() {
   return memo;
 }
 const QuestDockMode = fn(6781).QuestDockMode;
-const QuestDockConstants = fn(17059);
+const QuestDockConstants = fn(17072);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: metroRequire,

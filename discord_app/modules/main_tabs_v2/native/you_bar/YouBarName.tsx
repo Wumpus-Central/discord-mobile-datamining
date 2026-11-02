@@ -62,8 +62,8 @@ export default noop.memo(function YouName(username) {
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(11393).useCustomStatusActivity();
-  let obj2 = userId(11393);
+  const customStatusActivity = userId(11394).useCustomStatusActivity();
+  let obj2 = userId(11394);
   let state;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;

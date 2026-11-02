@@ -25,7 +25,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   }, items2);
   if (stateFromStores) {
     const obj3 = { source: null, style: null };
-    const obj4 = { uri: onPressViewBadge(14693) };
+    const obj4 = { uri: onPressViewBadge(14707) };
     obj3.source = obj4;
     obj3.style = tmp.background;
     let tmp9Result = closure_6(onPressViewBadge(5717), obj3);
@@ -42,9 +42,9 @@ function OrbBadgeCollectedRootScreen(modalKey) {
       pauseWhileAppInactive: true,
       paused: false,
     };
-    const obj6 = { uri: onPressViewBadge(14694) };
+    const obj6 = { uri: onPressViewBadge(14708) };
     obj5.source = obj6;
-    obj5.poster = onPressViewBadge(14693);
+    obj5.poster = onPressViewBadge(14707);
     obj5.style = tmp.background;
     tmp9Result = closure_6(tmp2(8873).VideoComponent, obj5);
     tmp12 = onPressViewBadge;

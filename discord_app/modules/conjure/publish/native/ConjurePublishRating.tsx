@@ -69,7 +69,7 @@ function Star(rating) {
     children: null,
   };
   let obj2 = rating(5095);
-  obj3.accessibilityLabel = rating(12771).conjurePublishRatingOptionLabel(rating);
+  obj3.accessibilityLabel = rating(12774).conjurePublishRatingOptionLabel(rating);
   obj3.disabled = null != picked;
   obj3.hitSlop = reducedMotion(575).space.PX_8;
   obj3.onPress = rating.onPress;
@@ -167,11 +167,11 @@ export default function ConjurePublishRating(arg0) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
         obj.openLazy(
-          asyncRequireImpl(12772, dependencyMap.paths),
+          asyncRequireImpl(12775, dependencyMap.paths),
           ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY,
           obj2,
         );
-        const tmp6 = asyncRequireImpl(12772, dependencyMap.paths);
+        const tmp6 = asyncRequireImpl(12775, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

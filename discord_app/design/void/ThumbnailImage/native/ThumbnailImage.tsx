@@ -5,7 +5,7 @@ let _default = fn(17).Image;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1375);
 if (PlatformUtils.isAndroid()) {
-  _default = fn(15980).default;
+  _default = fn(15984).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");

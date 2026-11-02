@@ -32,13 +32,13 @@ export default function OrbsArcadeHowToPlaySheet(gameId) {
     const obj4 = {
       game: stateFromStores,
       sheetKey: "OrbsArcadeHowToPlaySheet",
-      secondaryAction: tmp(17031).OrbsArcadeSheetSecondaryAction.CLOSE,
+      secondaryAction: tmp(17044).OrbsArcadeSheetSecondaryAction.CLOSE,
       direction: "vertical",
     };
     obj3.actions = jsx(OrbsArcadeSheetActionsDefault, {
       game: stateFromStores,
       sheetKey: "OrbsArcadeHowToPlaySheet",
-      secondaryAction: tmp(17031).OrbsArcadeSheetSecondaryAction.CLOSE,
+      secondaryAction: tmp(17044).OrbsArcadeSheetSecondaryAction.CLOSE,
       direction: "vertical",
     });
     tmp5Result2 = jsx(tmp(10837).PromoSheet, {

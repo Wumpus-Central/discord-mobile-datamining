@@ -16,13 +16,13 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   const items = [c4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj2 = channel(504);
-  dependencyMap = channel(14008).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+  dependencyMap = channel(14023).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
     navigation.pop();
   }, items1);
-  const obj3 = channel(14008);
-  const messageRequestActions = channel(14000).useMessageRequestActions({
+  const obj3 = channel(14023);
+  const messageRequestActions = channel(14015).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
       const obj2 = { text: null, variant: "critical" };
@@ -60,7 +60,7 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
     buttonSecondaryDisabled: null,
     buttonSecondaryLoading: null,
   };
-  const obj4 = channel(14000);
+  const obj4 = channel(14015);
   const obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {
@@ -96,7 +96,7 @@ export default noop.memo(function ChatInputGuardSpamMessageRequest(channel) {
   };
   obj6.buttonSecondaryDisabled = tmp7;
   obj6.buttonSecondaryLoading = isUserProfileLoading;
-  return jsx(navigation(14006), {
+  return jsx(navigation(14021), {
     type: "button-action",
     message: null,
     subtext: null,

@@ -7,8 +7,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef11960 from "../../../../../_runtime/metro/11960__.js";
 import _modDef11961 from "../../../../../_runtime/metro/11961__.js";
+import _modDef11962 from "../../../../../_runtime/metro/11962__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -19,9 +19,9 @@ function KrispLogo() {
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef11960;
+    let tmp2Result = _modDef11961;
   } else {
-    tmp2Result = _modDef11961;
+    tmp2Result = _modDef11962;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

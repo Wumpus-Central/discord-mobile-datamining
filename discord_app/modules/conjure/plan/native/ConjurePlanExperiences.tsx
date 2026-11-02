@@ -275,10 +275,10 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {
   frame: fn(9727).GameControllerIcon,
-  overlay_widget: fn(12736).WindowTopIcon,
+  overlay_widget: fn(12739).WindowTopIcon,
   user_widget: fn(10805).UserCircleIcon,
-  bot: fn(12446).RobotIcon,
-  commands: fn(12446).RobotIcon,
+  bot: fn(12105).RobotIcon,
+  commands: fn(12105).RobotIcon,
   automod: fn(11281).ShieldIcon,
 };
 const createStyles = fn(5014);

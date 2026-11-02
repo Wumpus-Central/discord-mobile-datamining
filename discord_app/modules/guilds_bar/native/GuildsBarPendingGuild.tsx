@@ -160,7 +160,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children: 80,
+    children: "H:mm",
   };
   let str = guildName;
   const tmp2Result2 = guildId(stateFromStores[19]);
@@ -206,6 +206,6 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children: 80,
+    children: "H:mm",
   });
 });

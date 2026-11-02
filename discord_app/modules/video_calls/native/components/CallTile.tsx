@@ -7,11 +7,11 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef12042 from "../../../../../_runtime/metro/12042__.js";
 import _modDef12043 from "../../../../../_runtime/metro/12043__.js";
 import _modDef12044 from "../../../../../_runtime/metro/12044__.js";
 import _modDef12045 from "../../../../../_runtime/metro/12045__.js";
 import _modDef12046 from "../../../../../_runtime/metro/12046__.js";
+import _modDef12047 from "../../../../../_runtime/metro/12047__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -42,17 +42,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef12042;
+    let tmp3 = _modDef12043;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef12043;
-    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef12044;
-    } else if (constants2.PLAYSTATION === voicePlatform) {
+    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = _modDef12045;
-    } else if (constants2.QUEST === voicePlatform) {
+    } else if (constants2.PLAYSTATION === voicePlatform) {
       tmp3 = _modDef12046;
+    } else if (constants2.QUEST === voicePlatform) {
+      tmp3 = _modDef12047;
     }
   }
   let tmp14 = null;

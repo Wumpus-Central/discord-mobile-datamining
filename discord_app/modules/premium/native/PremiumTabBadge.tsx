@@ -22,7 +22,7 @@ import useIsEligibleSenderForReferralProgram from "../referral_program/hooks/use
 import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import _modDef16871 from "../../../../_runtime/metro/16871__.js";
+import _modDef16884 from "../../../../_runtime/metro/16884__.js";
 import PremiumTabBadgeCopy from "../promotions/PremiumTabBadgeCopy.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -67,7 +67,7 @@ function OfferBadge(componentId) {
   if (acked) {
     const obj5 = { style: tmp4.acked, children: null };
     const obj6 = {
-      source: _modDef16871,
+      source: _modDef16884,
       size: native.Icon.Sizes.EXTRA_SMALL,
       color: tmp4.icon.color,
       style: tmp4.icon,
@@ -309,7 +309,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = intl);
           obj11.style = items4;
           const obj12 = {
-            source: _modDef16871,
+            source: _modDef16884,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: intl.icon.color,
             style: intl.icon,

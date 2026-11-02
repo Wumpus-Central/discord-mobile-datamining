@@ -129,7 +129,7 @@ export default {
               closure_128_0 = value;
               const obj8 = closure_1(7636);
               const obj7 = {
-                content: closure_1(11659)(closure_129_1),
+                content: closure_1(11660)(closure_129_1),
                 tts: false,
                 invalidEmojis: [],
                 validNonShortcutEmojis: [],

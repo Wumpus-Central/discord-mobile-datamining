@@ -45,7 +45,7 @@ function MoreRow(row) {
     return jsx(row(6975).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(12092);
+const conjureDesignFeedbackStore = fn(12214);
 ({
   enterConjureDesignFeedback: c3,
   exitConjureDesignFeedback: closure_4,
@@ -83,7 +83,7 @@ export default function ConjureChatMoreSheet(canAnnotate) {
     tmp = obj5;
   }
   obj4.annotate = tmp;
-  const result = id(12550).conjureChatMoreSections(obj4);
+  const result = id(12216).conjureChatMoreSections(obj4);
   const obj6 = { dismissAccessibilityLabel: null, children: null };
   const intl = tmp3(1113).intl;
   obj6.dismissAccessibilityLabel = intl.string(_modDef3868.OsD9T0);

@@ -85,9 +85,9 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj2.analyticsPage = analyticsPage;
   obj2.onPaymentSuccess = onPaymentSuccess;
   obj2.onPaymentDismiss = onPaymentDismiss;
-  const obj = helpArticleLinkProps(15307);
+  const obj = helpArticleLinkProps(15311);
   const obj3 = { type: null, name: null, properties: null };
-  const buttonActionHandler = helpArticleLinkProps(15307).getButtonActionHandler(obj2);
+  const buttonActionHandler = helpArticleLinkProps(15311).getButtonActionHandler(obj2);
   obj3.type = helpArticleLinkProps(1260).ImpressionTypes.VIEW;
   obj3.name = helpArticleLinkProps(1260).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = useTrackImpressionDefault;
@@ -102,11 +102,11 @@ export default function MarketingPageBannerTile(bannerFields) {
     component_id: componentId,
     promotion_id: promotionId,
   };
-  const formatStringWithCommonPremiumParams = helpArticleLinkProps(15310).useFormatStringWithCommonPremiumParams(
+  const formatStringWithCommonPremiumParams = helpArticleLinkProps(15314).useFormatStringWithCommonPremiumParams(
     bannerFields.body,
   );
-  const tmp4Result = helpArticleLinkProps(15310);
-  helpArticleLinkProps = helpArticleLinkProps(15310).getHelpArticleLinkProps(
+  const tmp4Result = helpArticleLinkProps(15314);
+  helpArticleLinkProps = helpArticleLinkProps(15314).getHelpArticleLinkProps(
     bannerFields.helpArticle,
     bannerFields.helpArticleId,
   );

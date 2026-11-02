@@ -10,7 +10,7 @@ import openMediaModal from "../modules/media_viewer/native/components/openMediaM
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import _modDef10277 from "../../_runtime/metro/10277__.js";
-import _modDef17527 from "../../_runtime/metro/17527__.js";
+import _modDef17540 from "../../_runtime/metro/17540__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -308,7 +308,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef17527, obj4)];
+      const items = [closure_7(_modDef17540, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };

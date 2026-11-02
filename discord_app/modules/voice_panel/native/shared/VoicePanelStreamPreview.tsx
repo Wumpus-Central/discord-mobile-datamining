@@ -68,8 +68,8 @@ export function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(12041)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(12041);
+  const previewUrl = stream(12042)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(12042);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
   const stateFromStores = mode(504).useStateFromStores(

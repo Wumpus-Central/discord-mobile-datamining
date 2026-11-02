@@ -1,7 +1,7 @@
 // discord_app/modules/safety_hub/native/AppealIngestionRequestSent.tsx
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink.tsx";
-import _modDef13330 from "../../../../_runtime/metro/13330__.js";
+import _modDef13345 from "../../../../_runtime/metro/13345__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ export default function AppealIngestionRequestSent() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  obj4.source = _modDef13330;
+  obj4.source = _modDef13345;
   obj4.style = tmp.checkboxPng;
   const items = [
     closure_6(FastImageDefault, obj4),

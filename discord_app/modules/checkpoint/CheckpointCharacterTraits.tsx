@@ -15,10 +15,10 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 let closure_129_0 = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
-let f88775 = (arg0) => require.has(arg0);
+let f88811 = (arg0) => require.has(arg0);
 const set = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
 let closure_130_0 = new Set(Object.values(CheckpointTrait.CheckpointTrait));
-f88775 = (arg0) => require.has(arg0);
+f88811 = (arg0) => require.has(arg0);
 let obj = {};
 obj[CheckpointTrait.CheckpointTrait.FACE] = CheckpointTraitConfig.CHECKPOINT_FACE_OPTION_TO_RARITY;
 obj[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointTraitConfig.CHECKPOINT_OUTFIT_OPTION_TO_RARITY;
@@ -328,7 +328,7 @@ export function getCharacterLayerOrdering(wearable) {
   const tmp2 = CheckpointTraitConfig;
   return hasItem
     ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING
-    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f88775);
+    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f88811);
 }
 export const CHECKPOINT_TRAIT_TO_OPTION_ASSETS = obj2;
 export const CHECKPOINT_TRAIT_TO_OPTION_IDS = obj3;
@@ -341,7 +341,7 @@ export function getOutfitDefaultOptionId(character) {
 export function getTraitOptionRarity(item, item10034) {
   let tmp2;
   if (null != obj[item][item10034]) {
-    if (typeof f88775 === "function") {
+    if (typeof f88811 === "function") {
       if (closure_130_0.has(tmp)) {
         tmp2 = tmp;
       }

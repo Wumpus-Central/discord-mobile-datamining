@@ -59,9 +59,9 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
 export default function VoicePanelPIPPushToTalkOverlay() {
-  pIPState = pIPState(19197).usePIPState();
+  pIPState = pIPState(19204).usePIPState();
   const tmp2 = closure_13();
-  let obj = pIPState(19197);
+  let obj = pIPState(19204);
   const sharedValue = pIPState(5095).useSharedValue(false);
   closure_129_0 = sharedValue;
   closure_129_1 = BLACK.useRef(false);
@@ -163,7 +163,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     withSpring: pIPState(5637).withSpring,
     isPushingToTalk,
     PUSH_TO_TALK_PIP_PHYSICS,
-    getVoicePanelPIPBorderRadius: pIPState(19107).getVoicePanelPIPBorderRadius,
+    getVoicePanelPIPBorderRadius: pIPState(19114).getVoicePanelPIPBorderRadius,
     pipState: pIPState,
   };
   fn3.__workletHash = 450590017248;
@@ -219,13 +219,13 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     withSpring: pIPState(5637).withSpring,
     isPushingToTalk,
     PUSH_TO_TALK_PIP_PHYSICS,
-    getVoicePanelPIPBorderRadius: pIPState(19107).getVoicePanelPIPBorderRadius,
+    getVoicePanelPIPBorderRadius: pIPState(19114).getVoicePanelPIPBorderRadius,
     pipState: pIPState,
   };
   obj12.children = closure_7(closure_11, {
     style: animatedStyle1,
     size: pIPState(1187).Icon.Sizes.SMALL_20,
-    source: isPushingToTalk(19287),
+    source: isPushingToTalk(19294),
     disableColor: true,
   });
   obj11.children = closure_7(NativeView, obj12);

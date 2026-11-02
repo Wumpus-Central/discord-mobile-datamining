@@ -217,8 +217,8 @@ export function fromDiscoverableGuildSearchResult(id) {
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "isArray",
-    discoverySplash: "png",
-    emojis: true,
+    discoverySplash: "onPress",
+    emojis: "Array",
   };
   ({
     approximate_presence_count: obj.presenceCount,

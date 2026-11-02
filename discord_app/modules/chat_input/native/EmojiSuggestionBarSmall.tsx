@@ -19,13 +19,13 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_7(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(13975).useSuggestionBarHeight(
+  const suggestionBarHeight = displayEmojis(13990).useSuggestionBarHeight(
     transitionState,
     cleanUp,
     CONTAINER_SMALL_WRAPPER_HEIGHT,
     onOccupiedHeightChange,
   );
-  let obj = displayEmojis(13975);
+  let obj = displayEmojis(13990);
   class A {
     constructor() {
       obj = { opacity: null };

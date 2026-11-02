@@ -16,7 +16,7 @@ export default function getConjureAppSoundButton(arg0, arg1) {
   if (arg1) {
     let VoiceXIcon = tmp(8673).VoiceNormalIcon;
   } else {
-    VoiceXIcon = tmp(11949).VoiceXIcon;
+    VoiceXIcon = tmp(11950).VoiceXIcon;
   }
   obj.IconComponent = VoiceXIcon;
   obj.onPress = function onPress() {

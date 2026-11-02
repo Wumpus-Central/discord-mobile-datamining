@@ -60,7 +60,7 @@ export default function useFrameLifecycle(applicationId) {
         const obj7 = { state: noop.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: noop.Loading, frame: "a" };
+        const obj8 = { state: noop.Loading, frame: "Array" };
         obj10 = obj8;
       } else {
         if (null != data) {

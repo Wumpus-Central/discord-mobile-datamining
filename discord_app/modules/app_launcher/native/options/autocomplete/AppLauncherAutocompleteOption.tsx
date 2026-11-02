@@ -41,7 +41,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12363, dependencyMap.paths),
+      asyncRequireImpl(12503, dependencyMap.paths),
       "AppLauncherAutocompleteActionSheet",
       {
         option,

@@ -218,7 +218,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(14515).KeyboardIcon;
+      let ImageIcon = tmp2(14529).KeyboardIcon;
     } else {
       ImageIcon = tmp2(8659).ImageIcon;
     }

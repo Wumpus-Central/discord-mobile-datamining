@@ -4,11 +4,11 @@ import util from "../../../../intl/index.native.tsx";
 import Link from "../../../../../_runtime/01498_Link.js";
 import _modDef3868 from "../../intl/ConjureUntranslated.messages.js";
 import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
+import openConjureProjectsSheetDefault from "../../projects/native/openConjureProjectsSheet.tsx";
 import useConjureWandStatusDefault from "useConjureWandStatus.tsx";
 import YouScreenNavIconDefault from "../../../main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx";
 import getIconSize from "../../../../../discord_common/js/packages/design/components/Icon/getIconSize.tsx";
 import ConjureWorkingWandDefault from "ConjureWorkingWand.tsx";
-import openConjureProjectsSheetDefault from "../../projects/native/openConjureProjectsSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

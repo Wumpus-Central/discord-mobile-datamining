@@ -6,7 +6,7 @@ import VoicePanelControlUtils from "utils/VoicePanelControlUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(15811).BACKDROP_OPAQUE_MAX_OPACITY;
+let closure_4 = fn(15815).BACKDROP_OPAQUE_MAX_OPACITY;
 const VoicePanelConstants = fn(11223);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
 const VoicePanelControlsModes = fn(11221).VoicePanelControlsModes;

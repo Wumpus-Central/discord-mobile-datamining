@@ -24,7 +24,7 @@ function MediaViewer(arg0) {
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(14802)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(14806)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -296,7 +296,7 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp31Result = tmp31(tmp(14804), obj22);
+    tmp31Result = tmp31(tmp(14808), obj22);
   }
   obj21.children = tmp31Result;
   items7[2] = isMediaViewerEntranceJankFixEnabled(height(5096), obj21);
@@ -311,7 +311,7 @@ function MediaViewer(arg0) {
   obj23.pointerEvents = str;
   obj23.children = renderOverlay(dismiss, overlayEnabled, sharedValue);
   items7[3] = isMediaViewerEntranceJankFixEnabled(height(5096), obj23);
-  items7[4] = isMediaViewerEntranceJankFixEnabled(height(11702), {});
+  items7[4] = isMediaViewerEntranceJankFixEnabled(height(11703), {});
   obj18.children = items7;
   const children = tmp33(tmp34, obj18);
   return isMediaViewerEntranceJankFixEnabled(tmp7(7326).AnalyticsLocationProvider, {

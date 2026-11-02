@@ -87,7 +87,7 @@ export default function FamilyCenterActivityBanner() {
   const formatResult = intl3.format(_modDef2538.MXjDSv, {
     articleLink: "https://support.discord.com/hc/articles/14155060633623",
   });
-  obj5.source = importDefault(tmp3 ? 16774 : 16775);
+  obj5.source = importDefault(tmp3 ? 16787 : 16788);
   obj5.style = tmp4.art;
   const items = [
     React4(FastImageDefault, obj5),

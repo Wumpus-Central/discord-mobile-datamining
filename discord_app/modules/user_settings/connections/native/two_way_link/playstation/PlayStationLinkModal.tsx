@@ -24,7 +24,7 @@ function CloseButton() {
     accessibilityLabel: null,
   });
 }
-const constants = fn(14624).PlayStationLinkModalScenes;
+const constants = fn(14638).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -37,7 +37,7 @@ export default function PlayStationLinkModal(platformType) {
   const items = [platformType, twoWayLinkStyles];
   const memo = noop.useMemo(() => {
     function onClose() {
-      return onClose(14622).hideModal();
+      return onClose(14636).hideModal();
     }
     function blank() {
       return null;
@@ -49,7 +49,7 @@ export default function PlayStationLinkModal(platformType) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return jsx(platformType(14625).PlayStationLinkLanding, { platformType });
+          return jsx(platformType(14639).PlayStationLinkLanding, { platformType });
         },
       },
       [closure_2_4.PRE_CONNECT]: {
@@ -60,7 +60,7 @@ export default function PlayStationLinkModal(platformType) {
           return closure_1_5(platformType(9731).TwoWayLinkStepHeader, { idx: 1, total: 2 });
         },
         render() {
-          return jsx(platformType(14627).PlayStationLinkPreConnect, { platformType });
+          return jsx(platformType(14641).PlayStationLinkPreConnect, { platformType });
         },
       },
       [closure_2_4.DISCORD_CONSENT]: {
@@ -72,7 +72,7 @@ export default function PlayStationLinkModal(platformType) {
         },
         render(arg0) {
           ({ callbackCode, callbackState } = arg0);
-          return jsx(platformType(14629).PlayStationLinkDiscordConsent, { platformType, callbackCode, callbackState });
+          return jsx(platformType(14643).PlayStationLinkDiscordConsent, { platformType, callbackCode, callbackState });
         },
       },
       [closure_2_4.SUCCESS]: {
@@ -81,7 +81,7 @@ export default function PlayStationLinkModal(platformType) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return jsx(platformType(14631).PlayStationLinkSuccess, { onClose });
+          return jsx(platformType(14645).PlayStationLinkSuccess, { onClose });
         },
       },
       [closure_2_4.ERROR]: {
@@ -90,13 +90,13 @@ export default function PlayStationLinkModal(platformType) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render(errorCode) {
-          return jsx(platformType(14632).PlayStationLinkError, { onClose, errorCode: errorCode.errorCode });
+          return jsx(platformType(14646).PlayStationLinkError, { onClose, errorCode: errorCode.errorCode });
         },
       },
     };
   }, items);
   const obj = platformType(9730);
-  const accountLinkStepTracking = platformType(14621).useAccountLinkStepTracking(
+  const accountLinkStepTracking = platformType(14635).useAccountLinkStepTracking(
     platformType,
     platformType.locationStack,
   );

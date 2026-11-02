@@ -78,7 +78,7 @@ function useBaseActivityPanelHeaderContent(landscape) {
   const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = noop.useCallback(fn, items2);
   const obj3 = {
-    mode: landscape(19129).MorphablePanelModes.PANEL,
+    mode: landscape(19136).MorphablePanelModes.PANEL,
     panGestureEnabled: true,
     pipState,
     swipeRequiresPop: true,
@@ -86,7 +86,7 @@ function useBaseActivityPanelHeaderContent(landscape) {
     onPanMinimizeGestureEnd: callback,
     disableHorizontalSafeAreas: true,
   };
-  obj2.gesture = setMode(19129)(obj3);
+  obj2.gesture = setMode(19136)(obj3);
   obj2.headerWrapperStyles = memo;
   obj2.headerStyles = memo1;
   obj2.styles = tmp;
@@ -266,7 +266,7 @@ export default noop.memo(function ActivityPanelHeader() {
   let wrapperDimensions;
   const tmp2 = closure_14();
   const headerContainer = tmp2;
-  const context = noop.useContext(wrapperDimensions(19124));
+  const context = noop.useContext(wrapperDimensions(19131));
   wrapperDimensions = context.wrapperDimensions;
   let items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);

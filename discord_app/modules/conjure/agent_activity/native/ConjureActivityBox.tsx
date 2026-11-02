@@ -7,7 +7,7 @@ import ConjureSubagentMark from "ConjureSubagentMark.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ConjureNativeStepImagesDefault = tmp5(12715);
+const ConjureNativeStepImagesDefault = tmp5(12718);
 require = fn;
 function TurnStatusLine(epoch) {
   ({ projectId: require, tree, turnActive } = epoch);
@@ -224,7 +224,7 @@ function TimelineRow(inGutter) {
     trailing: null,
   };
   let tmp7 = ConjureNativeStatusLineDefault;
-  obj.line = node(12587).describeNode(node);
+  obj.line = node(12590).describeNode(node);
   obj.live = flag2;
   let tmp9 = !flag2;
   if (!flag2) {
@@ -245,10 +245,10 @@ function TimelineRow(inGutter) {
     let obj3 = {
       variant: "text-xs/normal",
       color: "text-subtle",
-      children: node(12442).describeDuration(node.durationMs),
+      children: node(12101).describeDuration(node.durationMs),
     };
     tmp4Result = closure_6(node(5624).Text, obj3);
-    const tmp8Result = node(12442);
+    const tmp8Result = node(12101);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), ,];
@@ -304,15 +304,15 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5014);
 let obj2 = {
-  activityBox: { marginLeft: -fn(12631).RAIL_INDENT },
+  activityBox: { marginLeft: -fn(12634).RAIL_INDENT },
   activityDetail: null,
   stepDetail: null,
   stepLine: null,
   stepCommand: null,
 };
-let obj3 = { marginLeft: -fn(12631).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(12631).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(12631).RAIL_INDENT };
+let obj3 = { marginLeft: -fn(12634).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(12634).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(12634).RAIL_INDENT };
 obj2.stepDetail = {
   marginTop: nativeDefault.space.PX_4,
   paddingLeft: nativeDefault.space.PX_12,

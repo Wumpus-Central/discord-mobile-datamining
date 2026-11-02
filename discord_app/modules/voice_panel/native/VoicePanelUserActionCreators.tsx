@@ -11,7 +11,7 @@ export function closeVoicePanelUserActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(VoicePanelUserActionSheet);
 }
 export function openVoicePanelUserActionSheet(guildId, channelId, userId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19243, dependencyMap.paths), VoicePanelUserActionSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19250, dependencyMap.paths), VoicePanelUserActionSheet, {
     guildId,
     channelId,
     userId,

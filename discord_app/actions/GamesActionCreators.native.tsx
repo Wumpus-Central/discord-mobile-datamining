@@ -130,7 +130,7 @@ const Constants = fn(1072);
   WebBrowserType: metroRequire,
   ActivityFlags: closure_7,
 } = Constants);
-const ActivityIntent = fn(11693).ActivityIntent;
+const ActivityIntent = fn(11694).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 

@@ -244,7 +244,7 @@ export function FinalizeTraitTabs(activeCustomizationOption) {
       } else {
         const obj = { selectedOption: activeCustomizationOption, onSelectOption };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(13675, dependencyMap.paths),
+          asyncRequireImpl(13690, dependencyMap.paths),
           "CheckpointFinalizeTraitPicker",
           obj,
         );

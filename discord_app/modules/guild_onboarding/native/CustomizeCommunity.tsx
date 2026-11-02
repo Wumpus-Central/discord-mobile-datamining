@@ -34,7 +34,7 @@ function EmptyCustomizeCommunity(setTab) {
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj4 = { style: tmp.emptyContainerImage, source: null };
   const obj2 = setTab(504);
-  obj4.source = tmp4(isThemeDarkResult ? 11578 : 11579);
+  obj4.source = tmp4(isThemeDarkResult ? 11579 : 11580);
   const items1 = [closure_15(FastImageDefault, obj4), ,];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1113).intl;
@@ -616,7 +616,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11580)(guildId);
+  const tmp7 = stateFromStores(11581)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);

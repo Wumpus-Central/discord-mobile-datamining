@@ -109,7 +109,7 @@ export default function useScreenshareUtils(arg0) {
         if (tmp11) {
           if (flag) {
             let fn = function l() {
-              return closure_0(11920).showMobileGoLiveActionSheet(closure_1);
+              return closure_0(11921).showMobileGoLiveActionSheet(closure_1);
             };
           } else {
             fn = tmp14;
@@ -130,12 +130,12 @@ export default function useScreenshareUtils(arg0) {
       }
       obj.onPress = fn;
       if (obj2.isMetaQuest()) {
-        importDefault(tmp ? 11930 : 11931);
+        importDefault(tmp ? 11931 : 11932);
       } else {
         if (showMobileGoLiveUpsell) {
-          let tmp20 = 11932;
+          let tmp20 = 11933;
         } else {
-          tmp20 = tmp ? 11933 : 11932;
+          tmp20 = tmp ? 11934 : 11933;
         }
         obj.imgSource = importDefault(tmp20);
         return obj;
@@ -171,7 +171,7 @@ export function getStreamPressHandler(analyticsLocations) {
     if (hasPermission) {
       if (showMobileGoLiveUpsell) {
         let fn = function l() {
-          return closure_0(11920).showMobileGoLiveActionSheet(closure_1);
+          return closure_0(11921).showMobileGoLiveActionSheet(closure_1);
         };
       } else {
         fn = tmp;

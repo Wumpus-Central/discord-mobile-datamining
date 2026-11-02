@@ -36,8 +36,8 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  quest = quest(17092).useVideoQuestModalContext().quest;
-  let obj = quest(17092);
+  quest = quest(17105).useVideoQuestModalContext().quest;
+  let obj = quest(17105);
   const questTaskDetails = quest(9681).useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
@@ -59,11 +59,11 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(14670).getVideoQuestProgressRemainingAccessibilityLabel(
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(14684).getVideoQuestProgressRemainingAccessibilityLabel(
       questTaskDetails,
       tmp8,
     );
-    const tmp3Result = tmp3(14670);
+    const tmp3Result = tmp3(14684);
   }
   const obj3 = { style: null, children: null };
   const items = [tmp2.videoContentHeaderWrapper, style];
@@ -100,7 +100,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj4.children = items1;
   const items2 = [
     closure_6(View, obj4),
-    closure_5(questTaskDetails(17113), { iconColor: closeButtonIconColor, onClose }),
+    closure_5(questTaskDetails(17126), { iconColor: closeButtonIconColor, onClose }),
   ];
   obj3.children = items2;
   return closure_6(View, obj3);

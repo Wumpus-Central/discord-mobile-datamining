@@ -83,7 +83,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(18041);
+        obj = obj(18054);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
         obj(5207).dismissKeyboard();

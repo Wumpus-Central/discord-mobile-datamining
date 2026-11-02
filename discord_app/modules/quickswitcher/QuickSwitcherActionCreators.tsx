@@ -548,7 +548,7 @@ export function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(13385).openChannelTabActive(closure_128_0, null);
+                    tmp5(13400).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
                   }
@@ -601,7 +601,7 @@ export function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(13385).openChannelTabActive(closure_128_0, null);
+                    tmp5(13400).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
                   }
@@ -630,7 +630,7 @@ export function switchToResultInNewTab(type) {
     trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
     let obj4 = { type: "QUICKSWITCHER_SWITCH_TO", result: type };
     DispatcherDefault.dispatch(obj4);
-    tmp(13385).openChannelTabActive(channel.id, guildId);
-    const tmpResult = tmp(13385);
+    tmp(13400).openChannelTabActive(channel.id, guildId);
+    const tmpResult = tmp(13400);
   }
 }

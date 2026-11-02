@@ -11,7 +11,7 @@ import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef17211 from "../../../../../_runtime/metro/17211__.js";
+import _modDef17224 from "../../../../../_runtime/metro/17224__.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import GuildRoleSubscriptionCardAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -92,7 +92,7 @@ function WhatYouLose(subscription) {
     numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length,
   });
   const obj10 = { variant: "text-sm/medium", color: "interactive-text-default", children: guild.name };
-  obj13.source = _modDef17211;
+  obj13.source = _modDef17224;
   obj13.style = tmp.cactus;
   items2[6] = closure_1_10(FastImageDefault, obj13);
   obj7.children = items2;

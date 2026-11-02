@@ -69,7 +69,7 @@ export default noop.memo(function ExpressionButton(active) {
   obj4.children = jsx(native.Icon, {
     size: token1,
     style: tmp7.expressionButtonIconTint,
-    source: importDefault(showKeyboardIcon ? 12367 : 9453),
+    source: importDefault(showKeyboardIcon ? 12507 : 9453),
   });
   return jsx(Pressables.PressableOpacity, {
     ref: noop.useRef(null),

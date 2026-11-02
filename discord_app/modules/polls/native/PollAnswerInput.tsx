@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12426, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12566, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -208,14 +208,14 @@ export default function PollAnswerInput(answer) {
     blurOnSubmit: false,
     style: null,
     selectionColor: "children",
-    textContentType: false,
-    accessibilityLabel: false,
-    accessibilityHint: false,
-    maxLength: false,
-    returnKeyType: false,
-    required: false,
-    autoCorrect: false,
-    "aria-invalid": false,
+    textContentType: true,
+    accessibilityLabel: true,
+    accessibilityHint: true,
+    maxLength: true,
+    returnKeyType: true,
+    required: true,
+    autoCorrect: true,
+    "aria-invalid": true,
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

@@ -128,7 +128,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     cutouts,
     externalChildren: badge,
     expandedChildren: null,
-    children: "button",
+    children: "redesign/message-preview/medium",
   };
   let tmp11Result = null;
   if (null != channel) {
@@ -173,6 +173,6 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     cutouts,
     externalChildren: badge,
     expandedChildren: null,
-    children: "button",
+    children: "redesign/message-preview/medium",
   });
 });

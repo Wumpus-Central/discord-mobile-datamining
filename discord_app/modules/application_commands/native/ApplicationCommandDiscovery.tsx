@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const ApplicationCommandConstants = fn(6035);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(13944).ITEM_HEIGHT;
+const ITEM_HEIGHT = fn(13959).ITEM_HEIGHT;
 const AUTOCOMPLETE_ROW_HEIGHT = fn(10225).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
@@ -333,7 +333,7 @@ export default function ApplicationCommandDiscovery(channel) {
     const section = item.section;
     let found;
     if (item.inputType === ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER) {
-      return filteredSectionId(onHeightChange(13948), {});
+      return filteredSectionId(onHeightChange(13963), {});
     } else {
       found = sectionDescriptors.find((id) => id.id === item.applicationId);
       const obj = {
@@ -349,7 +349,7 @@ export default function ApplicationCommandDiscovery(channel) {
         showIcon: item.applicationId !== section.section.id,
         guildId: found.guild_id,
       };
-      return filteredSectionId(onHeightChange(13949), obj);
+      return filteredSectionId(onHeightChange(13964), obj);
     }
   };
   obj9.renderSectionHeader = function renderSectionHeader(section) {

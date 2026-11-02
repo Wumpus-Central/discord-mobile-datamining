@@ -105,9 +105,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj5.channelId = channelId;
     obj5.roleId = roleId;
-    obj4.children = closure_8(tmp9(11620), obj5);
+    obj4.children = closure_8(tmp9(11621), obj5);
     tmp16Result = closure_8(tmp3(5272).BottomSheet, obj4);
-    let tmp9Result = tmp9(11620);
+    let tmp9Result = tmp9(11621);
   }
   return tmp16Result;
 }

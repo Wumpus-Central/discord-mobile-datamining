@@ -28,7 +28,7 @@ export default noop.memo(function GuildRoleConnectionsModal(guildId) {
       return jsx(guildId(7558).HeaderActionButton, { source: onClose(8359), onPress, accessibilityLabel: null });
     };
     obj2.render = function render() {
-      return jsx(onClose(11599), { guildId, onCloseModal });
+      return jsx(onClose(11600), { guildId, onCloseModal });
     };
     obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
     return obj;

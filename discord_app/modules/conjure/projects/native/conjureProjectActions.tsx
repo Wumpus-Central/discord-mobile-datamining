@@ -86,7 +86,7 @@ let closure_11 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1113).intl;
-          await tmp3(12556).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3868).Owerd3));
+          await tmp3(12222).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3868).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1113).intl;
@@ -229,7 +229,7 @@ export function conjureProjectActions(project) {
   if (closure_8(project)) {
     let obj2 = { label: null, IconComponent: null, action: null };
     const intl2 = tmp3(muted[8]).intl;
-    obj2.label = intl2.string(tmp8(muted[9]).XWgAfc);
+    obj2.label = intl2.string(tmp8(muted[9])["276ll6"]);
     obj2.IconComponent = tmp3(muted[20]).RemixIcon;
     obj2.action = project.onRemix;
     items.push(obj2);

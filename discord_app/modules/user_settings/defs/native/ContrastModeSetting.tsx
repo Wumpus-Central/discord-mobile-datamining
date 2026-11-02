@@ -9,7 +9,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;

@@ -6,9 +6,9 @@ let size = {
   mode: "isArray",
   width: false,
   height: null,
-  containerHeight: "slide_from_bottom",
-  showSecondaryPIP: "motorcycle",
-  scale: "racing_motorcycle",
+  containerHeight: 0,
+  showSecondaryPIP: false,
+  scale: null,
 };
 const ReanimatedHelperTypes = fn(7242);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);

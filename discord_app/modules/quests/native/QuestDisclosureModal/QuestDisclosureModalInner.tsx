@@ -77,7 +77,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
     const intl = tmp2(1113).intl;
     obj.text = intl.string(tmp2(1113).t.xQSdPv);
     items1 = [obj, ,];
-    const obj2 = { icon: closure_6(tmp2(12466).UserIcon, { size: "xs" }), text: null };
+    const obj2 = { icon: closure_6(tmp2(12125).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1113).intl;
     obj2.text = intl2.string(tmp2(1113).t.mYt7hQ);
     items1[1] = obj2;

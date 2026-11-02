@@ -58,11 +58,11 @@ export default noop.memo(function TextChannel(subtitle) {
   let arr4;
   dependencyMap = undefined;
   const isForumLikeChannelResult = channel.isForumLikeChannel();
-  const channelUnreadBadgeState = channel(18403).useChannelUnreadBadgeState(channel, flag);
+  const channelUnreadBadgeState = channel(18416).useChannelUnreadBadgeState(channel, flag);
   ({ newChannel, unread, resolvedUnreadSetting, mentionCount } = channelUnreadBadgeState);
   ({ optInEnabled, isMentionLowImportance } = channelUnreadBadgeState);
   const tmp5 = closure_12(flag, unread);
-  let obj = channel(18403);
+  let obj = channel(18416);
   const obj2 = channel(7443);
   const items = [ActiveJoinedThreadsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () =>
@@ -79,18 +79,18 @@ export default noop.memo(function TextChannel(subtitle) {
   if (unread) {
     tmp12 = !flag;
   }
-  const tmp8ResultResult = arr4(17297)(channel, { unread: tmp12 });
-  const tmp8Result = arr4(17297);
+  const tmp8ResultResult = arr4(17310)(channel, { unread: tmp12 });
+  const tmp8Result = arr4(17310);
   const isChannelSpoilerGated = channel(6753).useIsChannelSpoilerGated(channel);
   const tmp2Result8 = channel(6753);
   const fontScale = channel(5642).useFontScale();
   const tmp2Result9 = channel(5642);
   const items2 = [LocaleStore];
   const stateFromStores2 = channel(504).useStateFromStores(items2, () => locale.locale);
-  const tmp17 = arr4(19078)();
+  const tmp17 = arr4(19085)();
   const tmp2Result10 = channel(504);
   ({ isSubscriptionGated, needSubscriptionToAccess } = arr4(6045)(channel.id));
-  arr4 = tmp8(12247)(channel);
+  arr4 = tmp8(12387)(channel);
   if (null != tmp8ResultResult) {
     if (!isChannelSpoilerGated) {
       const obj5 = {
@@ -125,11 +125,11 @@ export default noop.memo(function TextChannel(subtitle) {
     obj6.underlayColor = tmp17;
     const obj7 = { color: tmp17 };
     obj6.androidRippleConfig = getThemedRippleConfig(obj7);
-    const tmp8Result4 = tmp8(19074);
-    const merged = Object.assign(tmp2(19081).useTextChannelPressEvents(channel, flag2));
-    const tmp2Result12 = tmp2(19081);
+    const tmp8Result4 = tmp8(19081);
+    const merged = Object.assign(tmp2(19088).useTextChannelPressEvents(channel, flag2));
+    const tmp2Result12 = tmp2(19088);
     const obj8 = { channel, unread, mentionCount };
-    const merged1 = Object.assign(tmp2(18719).getChannelAccessibilityProps(obj8));
+    const merged1 = Object.assign(tmp2(18726).getChannelAccessibilityProps(obj8));
     if (selected) {
       const obj9 = { style: tmp5.selectedBorder, pointerEvents: "none" };
       selected = closure_10(View, obj9);
@@ -153,10 +153,10 @@ export default noop.memo(function TextChannel(subtitle) {
       showGuildBadgeIcon: null,
       end: null,
     };
-    const tmp2Result13 = tmp2(18719);
+    const tmp2Result13 = tmp2(18726);
     const obj11 = { unread, resolvedUnreadSetting, muted: flag };
-    obj10.unreadBadge = closure_10(tmp8(19075), obj11);
-    const tmp8Result5 = tmp8(18719);
+    obj10.unreadBadge = closure_10(tmp8(19082), obj11);
+    const tmp8Result5 = tmp8(18726);
     if (newChannel) {
       newChannel = optInEnabled;
     }
@@ -189,7 +189,7 @@ export default noop.memo(function TextChannel(subtitle) {
     }
     obj12.newPostCount = tmp40;
     obj12.locale = stateFromStores2;
-    obj10.mentionBadge = tmp8(19076)(obj12);
+    obj10.mentionBadge = tmp8(19083)(obj12);
     obj10.unread = unread;
     obj10.resolvedUnreadSetting = resolvedUnreadSetting;
     obj10.mentionCount = mentionCount;
@@ -209,11 +209,11 @@ export default noop.memo(function TextChannel(subtitle) {
     return tmp8Result4(closure_11(tmp2(6980).PressableHighlight, obj6));
   }
   const tmp18 = arr4(6045)(channel.id);
-  result = channel(19080).renderChannelSubtitle({
+  result = channel(19087).renderChannelSubtitle({
     subtitle: subtitle.subtitle,
     muted: flag,
     channelId: channel.id,
     guildId: channel.guild_id,
   });
-  const tmp2Result14 = channel(19080);
+  const tmp2Result14 = channel(19087);
 });

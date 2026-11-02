@@ -19,13 +19,13 @@ import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticU
 import leaveEmbeddedActivity from "../../../activities/leaveEmbeddedActivity.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
-import _modDef12043 from "../../../../../_runtime/metro/12043__.js";
+import _modDef12044 from "../../../../../_runtime/metro/12044__.js";
 import useStableParticipant from "../utils/useStableParticipant.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import _modDef19215 from "../../../../../_runtime/metro/19215__.js";
+import _modDef19222 from "../../../../../_runtime/metro/19222__.js";
 import getRandomNumberInRangeDefault from "../utils/getRandomNumberInRange.tsx";
-import _modDef19263 from "../../../../../_runtime/metro/19263__.js";
-import _modDef19264 from "../../../../../_runtime/metro/19264__.js";
+import _modDef19270 from "../../../../../_runtime/metro/19270__.js";
+import _modDef19271 from "../../../../../_runtime/metro/19271__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -56,13 +56,13 @@ function StreamIcon(voicePlatform) {
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
   const animatedStyle = controlsSpecs(5095).useAnimatedStyle(fn);
-  let tmp2Result = _modDef19215;
+  let tmp2Result = _modDef19222;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef19263;
+    tmp2Result = _modDef19270;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp2Result = _modDef12043;
+    tmp2Result = _modDef12044;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef19264;
+    tmp2Result = _modDef19271;
   }
   const obj3 = { source: tmp2Result, style: null };
   const items = [tmp.iconWithoutBackground, animatedStyle];
@@ -360,10 +360,10 @@ let closure_31 = noop.memo(function CloseButton(participant) {
   }, items);
   const obj4 = { icon: null, onPress: null, accessibilityLabel: null };
   let obj2 = { withSpring: participant(5637).withSpring, hidden: controlsHidden, MODE_CHANGE_PHYSICS, hiddenOffsetY };
-  obj4.icon = guildId(19265);
+  obj4.icon = guildId(19272);
   obj4.onPress = callback;
-  const tmp6 = guildId(19143);
-  let result = participant(19211).isStableActivityParticipant(participant);
+  const tmp6 = guildId(19150);
+  let result = participant(19218).isStableActivityParticipant(participant);
   const intl = participant(1113).intl;
   const string = intl.string;
   const t = participant(1113).t;
@@ -629,7 +629,7 @@ let closure_43 = noop.memo(function UserTagChiplet(arg0) {
   if (null != gameRecord) {
     if (!tmp6) {
       let obj = { game: gameRecord, userId, textColor };
-      let tmp9 = closure_16(tmp(19268), obj);
+      let tmp9 = closure_16(tmp(19275), obj);
     }
     return tmp9;
   }

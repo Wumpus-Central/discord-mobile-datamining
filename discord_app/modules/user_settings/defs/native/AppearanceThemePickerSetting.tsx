@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11539);
+const SettingBuilders = fn(11540);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -15,7 +15,7 @@ const route = SettingBuilders.createRoute({
     const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
-  useTrailing: fn(17239).useAppearanceSettingTrailing,
+  useTrailing: fn(17252).useAppearanceSettingTrailing,
   screen: {
     route: fn(1072).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

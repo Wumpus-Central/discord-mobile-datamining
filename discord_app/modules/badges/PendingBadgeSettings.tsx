@@ -83,7 +83,7 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(11459);
+        let tmp12Result = tmp12(11460);
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           if (!map.has(tmp15)) {
             let result = map.set(tmp15, item10027);
@@ -217,7 +217,7 @@ export function resetPendingBadgeSettings() {
   DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
     pendingBadgeDisplayOrder: "children",
-    pendingBadgeHiddenBadges: "format",
+    pendingBadgeHiddenBadges: "Boolean",
   });
 }
 export function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {
@@ -256,7 +256,7 @@ export function applyPendingBadgeSettings(stateFromStoresArray, arg1) {
     const _Map = Map;
     const map = new Map();
     for (const item10026 of mapped) {
-      let obj = set(11459);
+      let obj = set(11460);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let arr = items1.push(item10026);
       } else {

@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/multi_account/native/openMana
 export default function openManageAccountsModal(initialRouteName) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(18436, dependencyMap.paths),
+    asyncRequireImpl(18449, dependencyMap.paths),
     { initialRouteName },
     SWITCH_ACCOUNTS_MODAL_KEY,
   );

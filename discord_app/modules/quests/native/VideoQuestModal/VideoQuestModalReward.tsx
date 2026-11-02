@@ -26,8 +26,8 @@ export default noop.memo(function VideoQuestModalReward(style) {
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(17092).useVideoQuestModalContext().quest;
-  const obj = quest(17092);
+  quest = quest(17105).useVideoQuestModalContext().quest;
+  const obj = quest(17105);
   const items = [quest.id];
   const questTaskDetails = quest(9681).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {

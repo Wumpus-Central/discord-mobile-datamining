@@ -470,10 +470,10 @@ export default function UserProfileWidgetsBoard(userId) {
   }
   const cardStyle = userId.cardStyle;
   const tmp = closure_12();
-  const displayableBoardWidgets = userId(14967).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(14971).useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;
-  let obj = userId(14967);
+  let obj = userId(14971);
   const trackUserProfileAction = userId(8761).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_129_2 = trackUserProfileAction;
   closure_129_3 = noop.useRef(false);

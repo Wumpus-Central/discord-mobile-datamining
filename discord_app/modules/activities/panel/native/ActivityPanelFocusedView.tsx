@@ -272,7 +272,7 @@ const ActivityPanelConstants = fn(5657);
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_8,
   ActivityPanelModes: closure_9,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(18993);
+const ActivityPanelNativeConstants = fn(19000);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: c10,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_11,
@@ -280,7 +280,7 @@ const ActivityPanelNativeConstants = fn(18993);
 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1072).ThemeTypes;
 const IS_IOS = fn(11223).IS_IOS;
-const ActivityLayoutMode = fn(11693).ActivityLayoutMode;
+const ActivityLayoutMode = fn(11694).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };

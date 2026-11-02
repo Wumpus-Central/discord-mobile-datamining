@@ -13,8 +13,8 @@ import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef15120 from "../../../../../_runtime/metro/15120__.js";
-import _mod15681 from "../../../../../_runtime/metro/15681__.js";
+import _modDef15124 from "../../../../../_runtime/metro/15124__.js";
+import _mod15685 from "../../../../../_runtime/metro/15685__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -45,7 +45,7 @@ function InviteCard(invite) {
       let tmp18 = dependencyMap;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "a" };
+      const obj = { user: null, guildId: "Array" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = dependencyMap(native.Avatar, obj);
@@ -57,7 +57,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "a" };
+      const obj4 = { user: null, guildId: "Array" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
@@ -89,7 +89,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef15120 };
+  const obj2 = { source: _modDef15124 };
   const items1 = [dependencyMap(FastImageDefault, obj2)];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -119,7 +119,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj2 = { style: tmp4.centerpieceContainer, children: null };
   const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  const items = [dependencyMap(FastImageDefault, { style: tmp4.logo, source: _mod15681 }), ,];
+  const items = [dependencyMap(FastImageDefault, { style: tmp4.logo, source: _mod15685 }), ,];
   const obj5 = {
     style: null,
     lineClamp: null,

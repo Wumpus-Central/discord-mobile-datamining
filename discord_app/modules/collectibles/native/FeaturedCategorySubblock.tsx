@@ -51,14 +51,14 @@ export default function _default(subblock) {
     date = new Date(unpublishedAt);
   }
   let obj5 = {
-    onChange: subblock(17835).useTrackProductCardImpression(
+    onChange: subblock(17848).useTrackProductCardImpression(
       subblock.categoryStoreListingId,
       "mobile_home",
       "featured_block",
     ).handleCardVisibilityChange,
     children: null,
   };
-  let obj4 = subblock(17835);
+  let obj4 = subblock(17848);
   const obj6 = {
     accessibilityRole: "button",
     accessibilityLabel: null,

@@ -12,8 +12,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12412 from "../../../../_runtime/metro/12412__.js";
-import _modDef12413 from "../../../../_runtime/metro/12413__.js";
+import _modDef12552 from "../../../../_runtime/metro/12552__.js";
+import _modDef12553 from "../../../../_runtime/metro/12553__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -446,9 +446,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12412;
+    let tmp2Result = _modDef12552;
   } else {
-    tmp2Result = _modDef12413;
+    tmp2Result = _modDef12553;
   }
   obj2.source = tmp2Result;
   const items = [map1(tmp8, obj2), ,];

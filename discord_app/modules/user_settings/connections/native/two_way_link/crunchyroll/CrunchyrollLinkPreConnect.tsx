@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkPreConnect.tsx
-import _modDef14639 from "../../../../../../../_runtime/metro/14639__.js";
+import _modDef14653 from "../../../../../../../_runtime/metro/14653__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(14635).CrunchyrollLinkModalScenes;
+let closure_4 = fn(14649).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1072).PlatformTypes;
 const redirectDestination = fn(8909).CRUNCHYROLL_LINK_DEST_ORIGIN;
 const jsx = fn(21).jsx;
@@ -29,7 +29,7 @@ export default function CrunchyrollLinkPreConnect() {
     platformType: PlatformTypes.CRUNCHYROLL,
     onError: callback1,
     onNext: callback,
-    img: _modDef14639,
+    img: _modDef14653,
     imgStyle: tmp.image,
     title: null,
     body: null,
@@ -44,7 +44,7 @@ export default function CrunchyrollLinkPreConnect() {
     platformType: PlatformTypes.CRUNCHYROLL,
     onError: callback1,
     onNext: callback,
-    img: _modDef14639,
+    img: _modDef14653,
     imgStyle: tmp.image,
     title: null,
     body: null,

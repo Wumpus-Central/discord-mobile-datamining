@@ -22,54 +22,54 @@ export default function GiftBoxAnimation(giftStyle) {
   } else {
     const match = _mod6556.match(giftStyle);
     const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, () =>
-      require("../../../../../_runtime/metro/11508__.js"),
+      require("../../../../../_runtime/metro/11509__.js"),
     );
     const withResult1 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"));
     const withResult2 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"));
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"));
     const withResult3 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
       .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"));
     const withResult4 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
       .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
       .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"));
     const withResult5 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
       .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
       .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"))
       .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/10707__.js"));
     const withResult6 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
       .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
       .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"))
       .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/10707__.js"))
       .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/10704__.js"));
     const withResult7 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
       .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
       .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"))
       .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/10707__.js"))
       .with(PremiumGiftStyles.CAKE, () => require("../../../../../_runtime/metro/10704__.js"))
       .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/10713__.js"));
     const withResult8 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
       .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
       .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"))
       .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/10707__.js"))
@@ -77,9 +77,9 @@ export default function GiftBoxAnimation(giftStyle) {
       .with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => require("../../../../../_runtime/metro/10713__.js"))
       .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/10716__.js"));
     const withResult9 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
       .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
       .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"))
       .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/10707__.js"))
@@ -88,9 +88,9 @@ export default function GiftBoxAnimation(giftStyle) {
       .with(PremiumGiftStyles.SEASONAL_CAKE, () => require("../../../../../_runtime/metro/10716__.js"))
       .with(PremiumGiftStyles.SEASONAL_CHEST, () => require("../../../../../_runtime/metro/10719__.js"));
     const withResult10 = match
-      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+      .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+      .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
       .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
       .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"))
       .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/10707__.js"))
@@ -101,9 +101,9 @@ export default function GiftBoxAnimation(giftStyle) {
       .with(PremiumGiftStyles.SEASONAL_COFFEE, () => require("../../../../../_runtime/metro/10722__.js"));
     const obj = {
       source: match
-        .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-        .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-        .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+        .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+        .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+        .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
         .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
         .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"))
         .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/10707__.js"))
@@ -118,9 +118,9 @@ export default function GiftBoxAnimation(giftStyle) {
     };
     return jsx(LottieAnimationViewDefault, {
       source: match
-        .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11508__.js"))
-        .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11509__.js"))
-        .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11510__.js"))
+        .with(PremiumGiftStyles.SNOWGLOBE, () => require("../../../../../_runtime/metro/11509__.js"))
+        .with(PremiumGiftStyles.BOX, () => require("../../../../../_runtime/metro/11510__.js"))
+        .with(PremiumGiftStyles.CUP, () => require("../../../../../_runtime/metro/11511__.js"))
         .with(PremiumGiftStyles.STANDARD_BOX, () => require("../../../../../_runtime/metro/10701__.js"))
         .with(PremiumGiftStyles.COFFEE, () => require("../../../../../_runtime/metro/10710__.js"))
         .with(PremiumGiftStyles.CHEST, () => require("../../../../../_runtime/metro/10707__.js"))

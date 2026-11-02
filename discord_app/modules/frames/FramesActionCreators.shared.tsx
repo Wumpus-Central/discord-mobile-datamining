@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
 import createProxyTicket from "../activities/createProxyTicket.tsx";
-import leaveFrame from "leaveFrame.tsx";
 import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
+import leaveFrame from "leaveFrame.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import FramesStore from "FramesStore.tsx";
@@ -269,7 +269,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(10927);
+    obj2 = obj2(10938);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -474,6 +474,12 @@ export { promoteFrame };
 export { updateFrameLayoutMode };
 export function setFrameRunsInBackground(id, enabled) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_RUNS_IN_BACKGROUND", frameId: id, enabled });
+}
+export function setFramePictureInPictureInteractive(id, enabled) {
+  DispatcherDefault.dispatch({ type: "FRAME_SET_PICTURE_IN_PICTURE_INTERACTIVE", frameId: id, enabled });
+}
+export function resetFrameGuestClaims(frameId) {
+  DispatcherDefault.dispatch({ type: "FRAME_SET_PICTURE_IN_PICTURE_INTERACTIVE", frameId, enabled: false });
 }
 export function setFrameUserMuted(id, muted) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_USER_MUTED", frameId: id, muted });

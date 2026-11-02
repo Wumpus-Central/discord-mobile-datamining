@@ -7,11 +7,11 @@ import _modDef5741 from "../../../../../_runtime/metro/05741__.js";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import _modDef7262 from "../../../../../_runtime/metro/07262__.js";
 import _modDef8424 from "../../../../../_runtime/metro/08424__.js";
-import _modDef11591 from "../../../../../_runtime/metro/11591__.js";
-import _modDef11596 from "../../../../../_runtime/metro/11596__.js";
-import _modDef14371 from "../../../../../_runtime/metro/14371__.js";
-import _modDef17777 from "../../../../../_runtime/metro/17777__.js";
-import _modDef17778 from "../../../../../_runtime/metro/17778__.js";
+import _modDef11592 from "../../../../../_runtime/metro/11592__.js";
+import _modDef11597 from "../../../../../_runtime/metro/11597__.js";
+import _modDef14386 from "../../../../../_runtime/metro/14386__.js";
+import _modDef17790 from "../../../../../_runtime/metro/17790__.js";
+import _modDef17791 from "../../../../../_runtime/metro/17791__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -50,9 +50,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant:
-              "function pnpm_presetsTs2(event,screenSize){return{transform:[{translateX:(event.translationX-screenSize.width)*0.3}]};}",
-            action: "function pnpm_presetsTs3(event){return{transform:[{translateX:event.translationX}]};}",
+            variant: "circa {{count}} luni",
+            action: "1 lun\u0103",
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -75,9 +74,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant:
-            "function pnpm_presetsTs2(event,screenSize){return{transform:[{translateX:(event.translationX-screenSize.width)*0.3}]};}",
-          action: "function pnpm_presetsTs3(event){return{transform:[{translateX:event.translationX}]};}",
+          variant: "circa {{count}} luni",
+          action: "1 lun\u0103",
         };
         let str = "default";
         if (index === closure_0 - 1) {
@@ -112,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [
-  _modDef14371,
+  _modDef14386,
   _modDef7262,
   _modDef8424,
-  _modDef11596,
+  _modDef11597,
   _modDef5741,
-  _modDef17777,
-  _modDef17778,
-  _modDef11591,
+  _modDef17790,
+  _modDef17791,
+  _modDef11592,
 ];
 let closure_8 = [
   "Launch Probe!",

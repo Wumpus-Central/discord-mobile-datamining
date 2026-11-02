@@ -11,7 +11,7 @@ import GameOrganizationInviteStore from "../../../../../../game_organization_inv
 
 require = fn;
 const CodedLinkExtendedType = fn(10117).CodedLinkExtendedType;
-const constants = fn(11363).GameOrganizationInviteStates;
+const constants = fn(11364).GameOrganizationInviteStates;
 const InviteTypes = fn(7879).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(

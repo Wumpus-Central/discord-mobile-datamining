@@ -11,7 +11,7 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import InviteErrorUtils from "../../../utils/InviteErrorUtils.tsx";
-import _modDef14320 from "../../../../_runtime/metro/14320__.js";
+import _modDef14335 from "../../../../_runtime/metro/14335__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const GuildIconDefault = GuildIcon;
@@ -20,7 +20,7 @@ require = fn;
 function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
   const tmp = closure_10();
-  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 14317 : 14318);
+  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 14332 : 14333);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -88,7 +88,7 @@ function InviteDisabledError(onPressClose) {
     const obj4 = { children: null };
     const obj5 = { style: tmp.disabledView, children: null };
     const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64, canAnimate: false });
-    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef14320 };
+    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef14335 };
     const items = [React5(native.Icon, obj6)];
     const obj7 = { style: tmp.guildIcon, icon: guildIconURL, size: null };
     const obj3 = { id: null, icon: null, size: 64, canAnimate: false };

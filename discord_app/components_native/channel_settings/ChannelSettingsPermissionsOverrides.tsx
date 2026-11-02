@@ -380,7 +380,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         const obj = {
           variant: "text-xs/medium",
           color: "text-subtle",
-          children: closure_1_0(18915).renderDescription(description.description),
+          children: closure_1_0(18922).renderDescription(description.description),
         };
         const items = [closure_1_19(closure_1_0(5624).Text, obj)];
         let tmp5Result = null;
@@ -392,7 +392,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           }
         }
         items[1] = tmp5Result;
-        const obj2 = closure_1_0(18915);
+        const obj2 = closure_1_0(18922);
         const tmp3Result = closure_1_21(closure_1_20, { children: items });
         const tmp6Result = closure_1_0(1375);
         const obj4 = {
@@ -409,7 +409,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         obj5.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj4.trailing = closure_1_19(id(18916), obj5);
+        obj4.trailing = closure_1_19(id(18923), obj5);
         return closure_1_19(closure_1_0(6975).TableRow, obj4, "row-" + index);
       }),
     });

@@ -5,7 +5,7 @@ const require = fn;
 const RPCCommands = fn(1072).RPCCommands;
 const weakMap = new WeakMap();
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16297);
+const CONTEXT_MENU_ICON_NAMES = fn(16301);
 obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_USER_PROFILE, {
   scope: fn(6450).RPC_EMBEDDED_APP_SCOPE,
   handler(socket) {

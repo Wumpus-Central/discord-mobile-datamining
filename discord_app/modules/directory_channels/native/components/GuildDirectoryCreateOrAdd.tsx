@@ -73,7 +73,7 @@ function GuildDirectoryCreateOrAddFooter(handleFooterPress) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
-const GuildDirectoryCreate = fn(13843).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(13858).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5014);
@@ -118,7 +118,7 @@ let closure_12 = noop.memo(function GuildDirectoryEntryEditRow(guild) {
   const obj2 = {
     label: guild.name,
     icon: closure_9(directoryChannelId(6957), { style: tmp.guildIcon, guild }),
-    trailing: closure_9(directoryChannelId(13846), { entry: stateFromStores }),
+    trailing: closure_9(directoryChannelId(13861), { entry: stateFromStores }),
     start,
     end,
   };

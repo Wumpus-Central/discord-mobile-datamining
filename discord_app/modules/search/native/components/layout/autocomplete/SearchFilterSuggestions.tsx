@@ -148,12 +148,12 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
   let memo;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(18677).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(18684).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(18677);
-  const validFilterTokens = searchContext(18686).useValidFilterTokens(searchContext);
+  let obj = searchContext(18684);
+  const validFilterTokens = searchContext(18693).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsRef(suggestionsMounted.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -212,7 +212,7 @@ export default noop.memo(function SearchFilterSuggestions(searchContext) {
       ),
     items,
   );
-  let obj2 = searchContext(18686);
+  let obj2 = searchContext(18693);
   const fn = function f() {
     return dismissed.get();
   };

@@ -514,7 +514,7 @@ function ChannelLongPressActionSheetConnected(channel) {
     const buttons5 = obj21.buttons;
     const obj22 = { label: null, IconComponent: null, onPress: null };
     const intl7 = tmp5(tmp2[23]).intl;
-    obj22.label = intl7.string(tmp(tmp2[42]).KMwCb7);
+    obj22.label = intl7.string(tmp(tmp2[42])["276ll6"]);
     obj22.IconComponent = tmp5(tmp2[43]).RemixIcon;
     obj22.onPress = function onPress() {
       const obj2 = {

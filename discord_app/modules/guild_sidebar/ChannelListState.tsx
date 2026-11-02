@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: 0,
+      version: "Enable useStateFromStores profiling",
     });
     merged.id = global;
     obj = closure_25;

@@ -18,7 +18,7 @@ import MessageStore from "../../../../stores/MessageStore.tsx";
 require = fn;
 let closure_7 = fn(5019).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(14510).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(14524).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);

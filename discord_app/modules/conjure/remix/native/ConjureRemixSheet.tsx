@@ -18,13 +18,13 @@ let closure_12 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     scroll: { flex: 1, minHeight: 0 },
     list: { gap: nativeDefault.space.PX_24, paddingBottom },
-    intro: null,
+    fields: null,
     footer: null,
     footerBody: null,
   };
   const obj2 = { gap: nativeDefault.space.PX_24, paddingBottom };
-  obj.intro = { gap: nativeDefault.space.PX_8 };
-  const obj3 = { gap: nativeDefault.space.PX_8 };
+  obj.fields = { gap: nativeDefault.space.PX_16 };
+  const obj3 = { gap: nativeDefault.space.PX_16 };
   obj.footer = {
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -43,42 +43,44 @@ let result = size.fileFinishedImporting("modules/conjure/remix/native/ConjureRem
 
 export default function ConjureRemixSheet(project) {
   project = project.project;
-  const currentGuildId = project.currentGuildId;
-  let onRemixed = project.onRemixed;
-  value = undefined;
-  _slicedToArray = undefined;
-  first1 = undefined;
-  closure_6 = undefined;
-  c7 = undefined;
+  const onRemixed = project.onRemixed;
+  let first1;
+  let first2;
   c8 = undefined;
+  c11 = undefined;
   closure_12 = undefined;
-  [value, _slicedToArray] = first1.useState(currentGuildId);
-  [first1, closure_6] = first1.useState(false);
-  [tmp6, c7] = first1.useState(null);
-  const tmp5 = _slicedToArray(first1.useState(null), 2);
-  [tmp8, c8] = first1.useState(0);
-  const tmp9 = _slicedToArray(first1.useState(0), 2);
-  closure_9 = tmp9[1];
-  let tmp10 = closure_12(tmp9[0]);
-  closure_10 = first1.useRef(null);
-  let items = [project, currentGuildId, tmp8];
-  const effect = first1.useEffect(() => {
-    const prepareConjureRemixResult = ConjureRemix.prepareConjureRemix(project, currentGuildId);
-    project = prepareConjureRemixResult;
-    closure_10.current = prepareConjureRemixResult;
-    return () => prepareConjureRemixResult.dismiss();
-  }, items);
-  const tmp7 = _slicedToArray(first1.useState(0), 2);
-  const items1 = [c8, c7];
-  const stateFromStoresArray = project(onRemixed[10]).useStateFromStoresArray(items1, () => {
+  const tmp = first1(first2.useState(project.currentGuildId), 2);
+  value = tmp[0];
+  asyncGeneratorStep = tmp[1];
+  const tmp3 = first1(first2.useState(""), 2);
+  first1 = tmp3[0];
+  const tmp5 = first1(
+    first2.useState(() => ConjureRemix.copyProjectName(project.name)),
+    2,
+  );
+  first2 = tmp5[0];
+  const tmp7 = first1(first2.useState(false), 2);
+  const first3 = tmp7[0];
+  let guild = tmp7[1];
+  [tmp10, c8] = first1(first2.useState(null), 2);
+  let tmp11 = first1(first2.useState(0), 2);
+  closure_9 = tmp11[1];
+  const tmp12 = closure_12(tmp11[0]);
+  let items = [project];
+  const memo = first2.useMemo(() => ConjureRemix.createConjureRemix(project), items);
+  const items1 = [memo];
+  const effect = first2.useEffect(() => () => memo.dismiss(), items1);
+  const tmp9 = first1(first2.useState(null), 2);
+  const items2 = [c8, guild];
+  const stateFromStoresArray = project(value[10]).useStateFromStoresArray(items2, () => {
     const items = [];
-    const flattenedGuildIds = _undefined2.getFlattenedGuildIds();
+    const flattenedGuildIds = _undefined.getFlattenedGuildIds();
     while (tmp2 !== undefined) {
-      let guild = _undefined.getGuild(tmp3);
+      guild = guild.getGuild(tmp3);
       let tmp6 = guild;
       let result = null != guild;
       if (result) {
-        let obj = project(onRemixed[11]);
+        let obj = project(first[11]);
         result = obj.isConjureGuildEligible(tmp6, "ConjureRemixSheet");
       }
       if (result) {
@@ -88,13 +90,17 @@ export default function ConjureRemixSheet(project) {
     }
     return items;
   });
-  const intl = project(onRemixed[12]).intl;
-  const stringResult = intl.string(currentGuildId(onRemixed[13])["maL0+X"]);
-  const someResult = stateFromStoresArray.some((id) => id.id === first);
+  const intl = project(value[12]).intl;
+  const stringResult = intl.string(onRemixed(value[13]).cIWtCk);
+  let someResult = stateFromStoresArray.some((id) => id.id === first);
+  if (someResult) {
+    someResult = tmp15(tmp16[9]).isValidCopyName(first2);
+    const tmp15Result = tmp15(tmp16[9]);
+  }
   c11 = someResult;
-  const items2 = [value, someResult, onRemixed, first1];
-  closure_12 = first1.useCallback(
-    value(function* () {
+  const items3 = [someResult, value, first2, onRemixed, first1, memo];
+  closure_12 = obj.useCallback(
+    asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -110,7 +116,7 @@ export default function ConjureRemixSheet(project) {
       } else {
         try {
           c3 = 2;
-          if (0 === onRemixed) {
+          if (0 === value) {
             if (arg0 === 1) {
               c3 = 3;
               throw value;
@@ -119,117 +125,122 @@ export default function ConjureRemixSheet(project) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_0 = tmp2;
+              closure_0 = tmp5;
               closure_128_0 = undefined;
-              if (!first1) {
-                if (c11) {
-                  if (null != ref.current) {
-                    closure_6(true);
-                    _undefined(null);
-                    const current = tmp25.current;
-                    onRemixed = 1;
-                    c3 = 1;
-                    const obj4 = { value: current.open(first), done: false };
-                    return obj4;
-                  }
-                }
+              if (c11) {
+                guild(true);
+                _undefined(null);
+                const obj4 = { name: first2, prompt: first1 };
+                value = 1;
+                c3 = 1;
+                const obj5 = { value: memo.confirm(first, obj4), done: false };
+                return obj5;
               }
-              c3 = 3;
             }
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             closure_128_0 = value;
-            if (!closure_128_0.ok) {
-              closure_129_7(closure_128_0.message);
-              if (!closure_128_0.kept) {
-                closure_129_8((arg0) => arg0 + 1);
+            if (null != closure_128_0) {
+              if (!closure_128_0.ok) {
+                closure_129_8(closure_128_0.message);
+                closure_129_7(false);
               }
-              closure_129_6(false);
             }
+            tmp2(value[14]).hideActionSheet(closure_1_11);
+            closure_129_1(closure_128_0.projectId, closure_128_0.guildId);
+            c3 = 3;
+            const obj7 = { value: undefined, done: true };
+            return obj7;
           }
-          tmp5(onRemixed[14]).hideActionSheet(closure_1_11);
-          closure_129_2(closure_128_0.projectId, closure_128_0.guildId);
           c3 = 3;
-          const obj6 = { value: undefined, done: true };
-          return obj6;
-        } catch (tmp32) {
+        } catch (tmp28) {
           c3 = tmp;
-          throw tmp32;
+          throw tmp28;
         }
       }
     }),
-    items2,
+    items3,
   );
-  const callback = first1.useCallback((nativeEvent) => {
+  const callback = obj.useCallback((nativeEvent) => {
     closure_9(nativeEvent.nativeEvent.layout.height);
   }, []);
-  let obj2 = { scrollable: true, header: null, footer: null, children: null };
-  let obj3 = { title: null };
-  const intl2 = project(onRemixed[12]).intl;
-  obj3.title = intl2.string(currentGuildId(onRemixed[13])["9wQTdG"]);
-  obj2.header = closure_9(project(onRemixed[16]).BottomSheetTitleHeader, obj3);
-  let obj4 = { style: tmp10.footer, onLayout: callback, children: null };
-  let obj5 = { bottom: true, style: tmp10.footerBody, children: null };
-  let tmp18Result = null;
-  if (null != tmp6) {
-    let obj6 = { accessibilityRole: "alert", children: null };
-    const obj7 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp6 };
-    obj6.children = tmp18(tmp12(tmp13[18]).Text, obj7);
-    tmp18Result = tmp18(tmp19, obj6);
+  let obj3 = { scrollable: true, startExpanded: true, header: null, footer: null, children: null };
+  let obj4 = { title: null, subtitle: null };
+  const intl2 = tmp15(tmp16[12]).intl;
+  obj4.title = intl2.string(onRemixed(value[13])["276ll6"]);
+  const intl3 = tmp15(tmp16[12]).intl;
+  obj4.subtitle = intl3.formatToPlainString(onRemixed(value[13])["QN8T+C"], { projectName: project.name });
+  obj3.header = closure_9(project(value[16]).BottomSheetTitleHeader, obj4);
+  let obj6 = { style: tmp12.footer, onLayout: callback, children: null };
+  let obj7 = { bottom: true, style: tmp12.footerBody, children: null };
+  let tmp21Result = null;
+  if (null != tmp10) {
+    const obj8 = { accessibilityRole: "alert", children: null };
+    const obj9 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp10 };
+    obj8.children = tmp21(tmp15(tmp16[18]).Text, obj9);
+    tmp21Result = tmp21(tmp22, obj8);
   }
-  const items3 = [tmp18Result];
-  const obj8 = { variant: "primary", size: "md", text: null, loading: null, disabled: null, onPress: null };
-  const intl3 = tmp12(tmp13[12]).intl;
-  obj8.text = intl3.string(currentGuildId(onRemixed[13]).XWgAfc);
-  obj8.loading = first1;
-  obj8.disabled = !someResult;
-  obj8.onPress = function onPress() {
+  const items4 = [tmp21Result];
+  const obj10 = { variant: "primary", size: "md", text: null, loading: null, disabled: null, onPress: null };
+  const intl4 = tmp15(tmp16[12]).intl;
+  obj10.text = intl4.string(onRemixed(value[13])["276ll6"]);
+  obj10.loading = first3;
+  obj10.disabled = !someResult;
+  obj10.onPress = function onPress() {
     closure_12().catch(() => {});
   };
-  items3[1] = closure_9(project(onRemixed[19]).Button, obj8);
-  obj5.children = items3;
-  obj4.children = closure_10(project(onRemixed[17]).SafeAreaPaddingView, obj5);
-  obj2.footer = closure_9(closure_6, obj4);
-  const obj9 = { style: tmp10.scroll, contentContainerStyle: tmp10.list, children: null };
-  const obj10 = { style: tmp10.intro, children: null };
-  const obj11 = { variant: "text-md/normal", color: "text-default", children: null };
-  const intl4 = tmp12(tmp13[12]).intl;
-  obj11.children = intl4.format(currentGuildId(onRemixed[13]).JKN64Y, { name: project.name });
-  const items4 = [closure_9(project(onRemixed[18]).Text, obj11)];
-  const obj13 = { variant: "text-md/normal", color: "text-default", children: null };
-  const intl5 = tmp12(tmp13[12]).intl;
-  obj13.children = intl5.string(currentGuildId(onRemixed[13])["fT4+km"]);
-  items4[1] = closure_9(project(onRemixed[18]).Text, obj13);
-  obj10.children = items4;
-  const items5 = [closure_10(closure_6, obj10)];
-  const obj14 = {
-    title: stringResult,
-    description: null,
-    hasIcons: false,
-    value: null,
-    onChange: null,
-    accessibilityLabel: null,
+  items4[1] = closure_9(project(value[19]).Button, obj10);
+  obj7.children = items4;
+  obj6.children = memo(project(value[17]).SafeAreaPaddingView, obj7);
+  obj3.footer = closure_9(first3, obj6);
+  const obj11 = {
+    style: tmp12.scroll,
+    contentContainerStyle: tmp12.list,
+    keyboardShouldPersistTaps: "handled",
     children: null,
   };
-  const intl6 = tmp12(tmp13[12]).intl;
-  obj14.description = intl6.string(currentGuildId(onRemixed[13]).R2uxWO);
-  obj14.value = value;
-  obj14.onChange = function onChange(arg0) {
-    return closure_4(arg0);
-  };
-  obj14.accessibilityLabel = stringResult;
-  obj14.children = stateFromStoresArray.map((label) =>
-    React7(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first1 }, label.id),
-  );
-  items5[1] = closure_9(project(onRemixed[21]).TableRadioGroup, obj14);
-  obj9.children = items5;
-  obj2.children = closure_10(project(onRemixed[20]).BottomSheetScrollView, obj9);
-  return closure_9(project(onRemixed[15]).ActionSheet, obj2);
+  const obj12 = { style: tmp12.fields, children: null };
+  const obj13 = { label: null, placeholder: null, value: null, onChange: null, disabled: null };
+  const intl5 = tmp15(tmp16[12]).intl;
+  obj13.label = intl5.string(onRemixed(value[13]).cvvDlE);
+  const intl6 = tmp15(tmp16[12]).intl;
+  obj13.placeholder = intl6.string(onRemixed(value[13]).u3W0k0);
+  obj13.value = first1;
+  obj13.onChange = tmp3[1];
+  obj13.disabled = first3;
+  const items5 = [closure_9(project(value[21]).TextArea, obj13)];
+  const obj14 = { label: null, value: null, onChange: null, maxLength: null, disabled: null };
+  const intl7 = tmp15(tmp16[12]).intl;
+  obj14.label = intl7.string(onRemixed(value[13]).PuVQeX);
+  obj14.value = first2;
+  obj14.onChange = tmp5[1];
+  obj14.maxLength = project(value[23]).MAX_PROJECT_NAME_LENGTH;
+  obj14.disabled = first3;
+  items5[1] = closure_9(project(value[22]).TextInput, obj14);
+  obj12.children = items5;
+  const items6 = [memo(first3, obj12)];
+  let obj2 = project(value[10]);
+  let obj5 = { projectName: project.name };
+  items6[1] = closure_9(project(value[24]).TableRadioGroup, {
+    title: stringResult,
+    hasIcons: false,
+    value,
+    onChange(arg0) {
+      return closure_3(arg0);
+    },
+    accessibilityLabel: stringResult,
+    children: stateFromStoresArray.map((label) =>
+      React7(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first3 }, label.id),
+    ),
+  });
+  obj11.children = items6;
+  obj3.children = memo(project(value[20]).BottomSheetScrollView, obj11);
+  return closure_9(project(value[15]).ActionSheet, obj3);
 }
 export const CONJURE_REMIX_SHEET_KEY = "ConjureRemixSheet";

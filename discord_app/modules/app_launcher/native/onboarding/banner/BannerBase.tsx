@@ -34,7 +34,7 @@ const rect = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: PX_12,
   flexDirection: "row",
-  minHeight: fn(12238).APP_ICON_SIZE + 2 * PX_12 + 4,
+  minHeight: fn(12378).APP_ICON_SIZE + 2 * PX_12 + 4,
   bottom: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
 };
@@ -136,7 +136,7 @@ export default function BannerBase(children) {
   let tmp11Result = null != image;
   if (tmp11Result) {
     const obj9 = { style: tmp.imageContainer, children: null };
-    const obj10 = { style: tmp.trinketsLottie, source: tmp4(12250), autoPlay: !stateFromStores };
+    const obj10 = { style: tmp.trinketsLottie, source: tmp4(12390), autoPlay: !stateFromStores };
     const items5 = [closure_7(tmp7(5618), obj10), image];
     obj9.children = items5;
     tmp11Result = closure_8(View, obj9);

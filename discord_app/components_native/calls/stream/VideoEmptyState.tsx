@@ -72,7 +72,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       let obj2 = {
         style: tmp2.placeholderImage,
-        children: closure_5(stream(11760).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }),
+        children: closure_5(stream(11761).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }),
       };
       tmp10 = closure_5(View, obj2);
     }

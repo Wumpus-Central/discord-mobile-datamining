@@ -423,7 +423,7 @@ export function Tabs(state) {
             const result = pressed.set(-1);
           };
           obj.variant = variant;
-          return variant(state(12512).TabItem, obj, id);
+          return variant(state(12171).TabItem, obj, id);
         }),
       }),
     items3,

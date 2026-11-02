@@ -6,8 +6,8 @@ import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05587_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef15360 from "../../../../../_runtime/metro/15360__.js";
-import _modDef15361 from "../../../../../_runtime/metro/15361__.js";
+import _modDef15364 from "../../../../../_runtime/metro/15364__.js";
+import _modDef15365 from "../../../../../_runtime/metro/15365__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,14 +18,14 @@ function CheckIcon() {
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   return closure_1_11(native.Icon, {
-    source: _modDef15360,
+    source: _modDef15364,
     color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
     size: native.IconSizes.SMALL,
   });
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef15361, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef15365, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(children) {
   return closure_1_11(Text_Text.Text, {

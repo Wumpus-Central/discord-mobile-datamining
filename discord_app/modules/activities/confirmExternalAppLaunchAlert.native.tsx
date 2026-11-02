@@ -5,14 +5,14 @@ import components_Button_Button from "../../design/components/Button/native/Butt
 import LinkingDefault from "../../lib/native/Linking.tsx";
 import FastImageDefault from "../../components_native/common/FastImage.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
-import _modDef11746 from "../../../_runtime/metro/11746__.js";
+import _modDef11747 from "../../../_runtime/metro/11747__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11746, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11747, style: tmp.announcementBirb };
   const items = [hasOwnProperty(FastImageDefault, obj2), , ,];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;

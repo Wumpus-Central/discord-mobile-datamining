@@ -372,7 +372,7 @@ export default function ScheduleDowntimeScreen() {
                   dependencyMap = 3;
                   c5 = 1;
                   const obj6 = {
-                    value: closure_0(16830).deleteRestrictedScheduleRule(teenId, rule.ruleId),
+                    value: closure_0(16843).deleteRestrictedScheduleRule(teenId, rule.ruleId),
                     done: false,
                   };
                   return obj6;
@@ -497,7 +497,7 @@ export default function ScheduleDowntimeScreen() {
                 c4 = 2;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj6 = { value: closure_0(16830).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
+                const obj6 = { value: closure_0(16843).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
                 return obj6;
               }
             }
@@ -612,7 +612,7 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = closure_11(tmp2(stringResult[23]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f130027 = (first1) => {
+      const f130082 = (first1) => {
         closure_1_11(first1);
         const result = (closure_0(rule[17]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };
