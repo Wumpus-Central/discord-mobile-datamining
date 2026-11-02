@@ -1,7 +1,14 @@
 // === Module 16153: ? ===
 
 // Module 16153
-import _mod16131 from "module_16131" /* 16131 */;
+import _mod16154 from "module_16154" /* 16154 */;
 
 
-export default _mod16131({}.isPrototypeOf);
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod16154(obj);
+  }
+  return tmp2;
+};

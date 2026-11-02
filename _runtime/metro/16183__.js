@@ -2,12 +2,9 @@
 
 // Module 16183
 import _mod16131 from "module_16131" /* 16131 */;
-import _mod16140 from "module_16140" /* 16140 */;
-import all from "module_16150" /* 16150 */;
+import _mod16132 from "module_16132" /* 16132 */;
 
-let closure_0 = _mod16131(Function.toString);
-if (!all(_mod16140.inspectSource)) {
-  _mod16140.inspectSource = (arg0) => closure_0(arg0);
-}
 
-export default _mod16140.inspectSource;
+export default _mod16131 && _mod16132(() => 42 !== Object.defineProperty(() => {
+
+}, "prototype", { value: 42, writable: false }).prototype);

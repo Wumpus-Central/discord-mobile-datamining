@@ -1,102 +1,38 @@
 // === Module 13140: ? ===
 
 // Module 13140
-import _mod13045 from "module_13045" /* 13045 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod13052 from "module_13052" /* 13052 */;
+import _mod13054 from "module_13054" /* 13054 */;
+import _mod13055 from "module_13055" /* 13055 */;
 
-let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
+require = arg1;
+const dependencyMap = arg6;
+function instrumentConsole() {
+  if ("console" in _mod13055.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = _mod13054.CONSOLE_LEVELS;
+    const item = CONSOLE_LEVELS.forEach((item) => {
+      closure_0 = item;
+      if (item in closure_0(13055).GLOBAL_OBJ.console) {
+        tmp(13060).fill(tmp(13055).GLOBAL_OBJ.console, item, (arg0) => {
+          _mod13054.originalConsoleMethods[level] = arg0;
+          return () => {
+            const items = [...arguments];
+            level(13052).triggerHandlers("console", { args: items, level });
+            const obj3 = level(13054).originalConsoleMethods[level];
+            if (obj3) {
+              obj3.apply(level(13055).GLOBAL_OBJ.console, items);
+            }
+            const obj = { args: items, level };
+            const obj2 = level(13052);
+          };
+        });
+        const tmpResult = tmp(13060);
+      }
+    });
+  }
+}
 
-export function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const entries = Object.entries(_mod13045.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
-    const first = arg0[0];
-    return first.localeCompare(arg1[0]);
-  });
-}
-export function sanitizeMetricKey(str) {
-  return str.replace(/[^\w\-.]+/gi, "_");
-}
-export function sanitizeTags(tags) {
-  let obj = {};
-  for (const key10007 in arg0) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10007);
-    } else {
-      hasOwnPropertyResult = call(arg0, key10007);
-    }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      let _String = String;
-      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
-      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
-        const obj = dependencyMap[Symbol.iterator]();
-        while (obj !== undefined) {
-          let tmp4 = closure_1_2(tmp2, 2);
-          if (item === tmp4[0]) {
-            obj.return();
-            return tmp5;
-          }
-        }
-        return item;
-      })(item), "");
-      continue;
-    }
-    continue;
-  }
-  return obj;
-}
-export function sanitizeUnit(none) {
-  return none.replace(/[^\w]+/gi, "_");
-}
-export function serializeMetricBuckets(arg0) {
-  let str = "";
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let _Object = Object;
-    let entries = Object.entries(nextResult.tags);
-    let arr2 = entries;
-    let str2 = "";
-    if (entries.length > 0) {
-      let mapped = arr2.map((item) => {
-        [tmp, tmp2] = item;
-        return "" + tmp + ":" + tmp2;
-      });
-      let _HermesInternal = HermesInternal;
-      str2 = "|#" + mapped.join(",");
-    }
-    let _HermesInternal2 = HermesInternal;
-    let str3 = "";
-    let str4 = "@";
-    let str5 = ":";
-    let str6 = "|";
-    let str7 = "|T";
-    let str8 = "\n";
-    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
-    continue;
-  }
-  return str;
-}
-export function simpleHash(item) {
-  let length;
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < item.length) {
-    do {
-      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
-      num2 = sum & sum;
-      num = num + 1;
-      num3 = num2;
-      length = item.length;
-    } while (num < length);
-  }
-  return num3 >>> 0;
+export function addConsoleInstrumentationHandler(errorCallback) {
+  _mod13052.addHandler("console", errorCallback);
+  _mod13052.maybeInstrument("console", instrumentConsole);
 }

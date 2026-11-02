@@ -1,7 +1,4 @@
 // === Module 16028: ? ===
 
 // Module 16028
-
-export function CanonicalizeLocaleList(items) {
-  return Intl.getCanonicalLocales(items);
-}
+Object.defineProperty(Intl, "Locale", { value: fn(16029).Locale, writable: true, enumerable: false, configurable: true });

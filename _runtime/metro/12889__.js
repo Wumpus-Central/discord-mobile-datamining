@@ -1,23 +1,38 @@
 // === Module 12889: ? ===
 
 // Module 12889
-import _mod12829 from "module_12829" /* 12829 */;
-import _mod12833 from "module_12833" /* 12833 */;
+import _mod12836 from "module_12836" /* 12836 */;
 
-const Dimension = _mod12833.TYPE.Dimension;
-const obj = {
-  name: "Dimension",
-  structure: { value: String, unit: String },
+const Comment = _mod12836.TYPE.Comment;
+let obj = {
+  name: "Comment",
+  structure: { value: String },
   parse() {
+    const self = this;
     const tokenStart = this.scanner.tokenStart;
-    const consumeNumberResult = _mod12829.consumeNumber(this.scanner.source, tokenStart);
-    this.eat(Dimension);
-    const obj2 = { type: "Dimension", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, consumeNumberResult), unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart) };
-    return obj2;
+    const tokenEnd = this.scanner.tokenEnd;
+    this.eat(Comment);
+    const sum = tokenEnd - tokenStart + 2;
+    let tmp3 = sum >= 2;
+    if (2 <= sum) {
+      const source = self.scanner.source;
+      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
+    }
+    if (tmp3) {
+      const source2 = self.scanner.source;
+      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
+    }
+    let diff = tokenEnd;
+    if (tmp3) {
+      diff = tokenEnd - 2;
+    }
+    const obj = { type: "Comment", loc: self.getLocation(tokenStart, self.scanner.tokenStart), value: self.scanner.source.substring(tokenStart + 2, diff) };
+    return obj;
   },
   generate(value) {
+    this.chunk("/*");
     this.chunk(value.value);
-    this.chunk(value.unit);
+    this.chunk("*/");
   }
 };
 

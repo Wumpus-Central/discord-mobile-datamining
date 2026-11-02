@@ -20,7 +20,7 @@ export function flattenArray(style) {
                       let item = arr.forEach((arr) => {
                         if (Array.isArray(arr)) {
                           if (typeof closure_1_1 === "function") {
-                            let item = arr.forEach(/* F121594 */ function() { ... });
+                            let item = arr.forEach(/* F121648 */ function() { ... });
                           } else {
                             throw new TypeError("Trying to call a non-function");
                           }

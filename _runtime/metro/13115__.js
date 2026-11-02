@@ -1,23 +1,34 @@
 // === Module 13115: ? ===
 
 // Module 13115
-import eventFromMessage from "eventFromMessage" /* 13099 */;
-import _mod13116 from "module_13116" /* 13116 */;
-import setupIntegration from "module_13095" /* 13095 */;
+import _mod13060 from "module_13060" /* 13060 */;
+import _mod13098 from "module_13098" /* 13098 */;
+import _mod13101 from "module_13101" /* 13101 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+export function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod13116.applyAggregateErrorsToEvent(eventFromMessage.exceptionFromError, options.stackParser, options.maxValueLength, closure_1, closure_0, exception, originalException);
-    }
-  };
-});
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod13101.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod13060.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod13098.createEnvelope(obj, items1);
+}

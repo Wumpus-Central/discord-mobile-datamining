@@ -3,9 +3,7 @@
 // Module 12927
 const obj = {
   parse: {
-    prelude() {
-      return this.createSingleNodeList(this.SelectorList());
-    },
+    prelude: null,
     block() {
       return this.Block(true);
     }

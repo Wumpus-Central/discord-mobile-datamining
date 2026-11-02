@@ -281,7 +281,7 @@ export (headerLeftBarButtonItems, left) => {
                                 const obj3 = {};
                                 const merged1 = Object.assign(icon);
                                 const items = icon.items;
-                                obj3.items = items.map(/* F88668 */ function() { ... });
+                                obj3.items = items.map(/* F88704 */ function() { ... });
                                 const merged2 = Object.assign(obj3);
                                 let obj = obj2;
                               } else {

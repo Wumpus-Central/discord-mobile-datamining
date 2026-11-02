@@ -1,266 +1,84 @@
 // === Module 12854: ? ===
 
 // Module 12854
-function getTrace(arg0) {
-  closure_0 = arg0;
-  c1 = null;
-  if (null !== this.matched) {
-    function hasMatch(matched) {
-      if (Array.isArray(matched.match)) {
-        let num = 0;
-        if (0 < matched.match.length) {
-          while (!hasMatch(matched.match[num])) {
-            num = num + 1;
-          }
-          const syntax = matched.syntax;
-          let tmp7 = null !== syntax;
-          if (tmp7) {
-            let tmp8 = "Type" === syntax.type;
-            if (!tmp8) {
-              tmp8 = "Property" === syntax.type;
-            }
-            if (!tmp8) {
-              tmp8 = "Keyword" === syntax.type;
-            }
-            tmp7 = tmp8;
-          }
-          if (tmp7) {
-            items1.unshift(matched.syntax);
-          }
-          return true;
-        }
-      } else if (matched.node === closure_0) {
-        const syntax2 = matched.syntax;
-        let tmp3 = null !== syntax2;
-        if (tmp3) {
-          let tmp2 = "Type" === syntax2.type;
-          if (!tmp2) {
-            tmp2 = "Property" === syntax2.type;
-          }
-          if (!tmp2) {
-            tmp2 = "Keyword" === syntax2.type;
-          }
-          tmp3 = tmp2;
-        }
-        if (tmp3) {
-          const items = [matched.syntax];
-          items1 = items;
-        } else {
-          items1 = [];
-        }
-        return true;
-      }
-      return false;
-    }
-    hasMatch(tmp.matched);
-  }
-  return c1;
-}
+import _mod12855 from "module_12855" /* 12855 */;
 
-export default {
-  getTrace,
-  isType(arg0, arg1) {
-    const self = this;
-    closure_0 = arg1;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      c1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
-              }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
-                }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
-              }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
-            }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              const items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
-          }
-          return false;
-        }
-        hasMatch(self.matched);
-      }
-      let callResult = c1;
-    } else {
-      callResult = call(self, arg0);
+class Tokenizer {
+  constructor(arg0) {
+    return;
+  }
+}
+Tokenizer.prototype = {
+  charCodeAt(sum) {
+    let num = 0;
+    if (sum < this.str.length) {
+      num = this.str.charCodeAt(sum);
     }
-    return null !== callResult && callResult.some((type) => {
-      let tmp = "Type" === type.type;
-      if (tmp) {
-        tmp = type.name === closure_0;
-      }
-      return tmp;
-    });
+    return num;
   },
-  isProperty(arg0, arg1) {
-    const self = this;
-    closure_0 = arg1;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      c1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
-              }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
-                }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
-              }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
-            }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              const items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
-          }
-          return false;
-        }
-        hasMatch(self.matched);
-      }
-      let callResult = c1;
-    } else {
-      callResult = call(self, arg0);
-    }
-    return null !== callResult && callResult.some((type) => {
-      let tmp = "Property" === type.type;
-      if (tmp) {
-        tmp = type.name === closure_0;
-      }
-      return tmp;
-    });
+  charCode() {
+    return this.charCodeAt(this.pos);
   },
-  isKeyword(arg0) {
+  nextCharCode() {
+    return this.charCodeAt(this.pos + 1);
+  },
+  nextNonWsCode(pos) {
+    return this.charCodeAt(this.findWsEnd(pos));
+  },
+  findWsEnd(pos) {
     const self = this;
-    const call = getTrace.call;
-    if (typeof call === "unknown") {
-      closure_0 = arg0;
-      let items1 = null;
-      if (null !== self.matched) {
-        function hasMatch(matched) {
-          if (Array.isArray(matched.match)) {
-            let num = 0;
-            if (0 < matched.match.length) {
-              while (!hasMatch(matched.match[num])) {
-                num = num + 1;
-              }
-              const syntax = matched.syntax;
-              let tmp7 = null !== syntax;
-              if (tmp7) {
-                let tmp8 = "Type" === syntax.type;
-                if (!tmp8) {
-                  tmp8 = "Property" === syntax.type;
+    let sum = pos;
+    let tmp2 = pos;
+    if (pos < this.str.length) {
+      while (true) {
+        let str = self.str;
+        let charCodeAtResult = str.charCodeAt(sum);
+        if (13 !== charCodeAtResult) {
+          if (10 !== charCodeAtResult) {
+            if (12 !== charCodeAtResult) {
+              if (32 !== charCodeAtResult) {
+                tmp2 = sum;
+                if (9 !== charCodeAtResult) {
+                  break;
                 }
-                if (!tmp8) {
-                  tmp8 = "Keyword" === syntax.type;
-                }
-                tmp7 = tmp8;
               }
-              if (tmp7) {
-                items1.unshift(matched.syntax);
-              }
-              return true;
+              break;
             }
-          } else if (matched.node === closure_0) {
-            const syntax2 = matched.syntax;
-            let tmp3 = null !== syntax2;
-            if (tmp3) {
-              let tmp2 = "Type" === syntax2.type;
-              if (!tmp2) {
-                tmp2 = "Property" === syntax2.type;
-              }
-              if (!tmp2) {
-                tmp2 = "Keyword" === syntax2.type;
-              }
-              tmp3 = tmp2;
-            }
-            if (tmp3) {
-              const items = [matched.syntax];
-              items1 = items;
-            } else {
-              items1 = [];
-            }
-            return true;
           }
-          return false;
         }
-        hasMatch(self.matched);
+        sum = sum + 1;
+        tmp2 = sum;
+        if (sum >= self.str.length) {
+          break;
+        }
       }
-      let callResult = items1;
-    } else {
-      callResult = call(self, arg0);
     }
-    let someResult = null !== callResult;
-    if (someResult) {
-      someResult = callResult.some((type) => "Keyword" === type.type);
+    return tmp2;
+  },
+  substringToPos(wsEnd) {
+    this.pos = wsEnd;
+    return this.str.substring(this.pos, wsEnd);
+  },
+  eat(arg0) {
+    const self = this;
+    if (this.charCode() !== arg0) {
+      const _String = String;
+      self.error(`Expect \`${String.fromCharCode(arg0)}\``);
     }
-    return someResult;
+    self.pos = self.pos + 1;
+  },
+  peek() {
+    const self = this;
+    let str = "";
+    if (this.pos < this.str.length) {
+      self.pos = +self.pos + 1;
+      str = self.str.charAt(tmp);
+    }
+    return str;
+  },
+  error(arg0) {
+    throw new _mod12855(arg0, this.str, this.pos);
   }
 };
+
+export default Tokenizer;

@@ -1,8 +1,5 @@
 // === Module 16121: ? ===
 
 // Module 16121
-import _mod16190 from "module_16190" /* 16190 */;
-import module_16122 from "module_16122" /* 16122 */;
 
-
-export default _mod16190.Object.assign;
+export const units = ["degree", "acre", "hectare", "percent", "bit", "byte", "gigabit", "gigabyte", "kilobit", "kilobyte", "megabit", "megabyte", "petabyte", "terabit", "terabyte", "day", "hour", "millisecond", "minute", "month", "second", "week", "year", "centimeter", "foot", "inch", "kilometer", "meter", "mile-scandinavian", "mile", "millimeter", "yard", "gram", "kilogram", "ounce", "pound", "stone", "celsius", "fahrenheit", "fluid-ounce", "gallon", "liter", "milliliter"];

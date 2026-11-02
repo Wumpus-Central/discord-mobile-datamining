@@ -1,9 +1,23 @@
 // === Module 12916: ? ===
 
 // Module 12916
-import defaultRecognizer from "defaultRecognizer" /* 12917 */;
-import _mod12919 from "module_12919" /* 12919 */;
-import _mod12920 from "module_12920" /* 12920 */;
+const obj = {
+  name: "Value",
+  structure: null,
+  parse() {
+    const element = { type: "Value", loc: null, children: null };
+    const sequence = this.readSequence(this.scope.Value);
+    element.loc = this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart);
+    element.children = sequence;
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0);
+  }
+};
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
-
-export default { AtrulePrelude: defaultRecognizer, Selector: _mod12919, Value: _mod12920 };
+export default obj;

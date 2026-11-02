@@ -1,90 +1,42 @@
 // === Module 12928: ? ===
 
 // Module 12928
-import _mod12833 from "module_12833" /* 12833 */;
+import _mod12836 from "module_12836" /* 12836 */;
 
-function consumeRaw() {
-  return this.createSingleNodeList(this.Raw(this.scanner.tokenIndex, null, false));
-}
-function parentheses() {
-  const self = this;
-  const scanner = this.scanner;
-  scanner.skipSC();
-  if (this.scanner.tokenType === Ident) {
-    if (self.lookupNonWSType(1) === Colon) {
-      let singleNodeList = self.createSingleNodeList(self.Declaration());
-    }
-    return singleNodeList;
-  }
-  const call = readSequence.call;
-  singleNodeList = typeof call === "unknown" ? readSequence() : call(self);
-}
-function readSequence() {
-  const self = this;
-  const list = this.createList();
-  const scanner = this.scanner;
-  scanner.skipSC();
-  let tmp2 = null;
-  if (!this.scanner.eof) {
-    while (true) {
-      let tokenType = self.scanner.tokenType;
-      if (WhiteSpace === tokenType) {
-        let WhiteSpaceResult = self.WhiteSpace();
-      } else {
-        if (Comment === tokenType) {
-          let iter = self.scanner;
-          let nextResult = iter.next();
-          WhiteSpaceResult = tmp2;
-        } else {
-          if (Function === tokenType) {
-            let FunctionResult = self.Function(consumeRaw, self.scope.AtrulePrelude);
-          } else {
-            if (Ident === tokenType) {
-              FunctionResult = self.Identifier();
-            } else if (LeftParenthesis !== tokenType) {
-              break;
-            } else {
-              FunctionResult = self.Parentheses(parentheses, self.scope.AtrulePrelude);
-            }
-            break;
-          }
-          WhiteSpaceResult = tmp2;
-          if (null !== tmp2) {
-            let arr = list.push(tmp2);
-            WhiteSpaceResult = null;
-          }
-          let arr3 = list.push(FunctionResult);
-        }
-        break;
-      }
-      tmp2 = WhiteSpaceResult;
-      if (self.scanner.eof) {
-        break;
-      }
-    }
-  }
-  return list;
-}
-const WhiteSpace = _mod12833.TYPE.WhiteSpace;
-const Comment = _mod12833.TYPE.Comment;
-const Ident = _mod12833.TYPE.Ident;
-const Function = _mod12833.TYPE.Function;
-const Colon = _mod12833.TYPE.Colon;
-const LeftParenthesis = _mod12833.TYPE.LeftParenthesis;
+const String = _mod12836.TYPE.String;
+const Ident = _mod12836.TYPE.Ident;
+const Url = _mod12836.TYPE.Url;
+const Function = _mod12836.TYPE.Function;
+const LeftParenthesis = _mod12836.TYPE.LeftParenthesis;
 
 export default {
   parse: {
     prelude() {
       const self = this;
-      const call = readSequence.call;
-      const tmp2 = typeof call === "unknown" ? readSequence() : call(self);
-      if (null === self.getFirstListNode(tmp2)) {
-        self.error("Condition is expected");
+      const list = this.createList();
+      const scanner = this.scanner;
+      scanner.skipSC();
+      const tokenType = this.scanner.tokenType;
+      if (String === tokenType) {
+        list.push(self.String());
+      } else {
+        if (Url !== tokenType) {
+          if (Function !== tokenType) {
+            self.error("String or url() is expected");
+          }
+        }
+        list.push(self.Url());
       }
-      return tmp2;
+      let tmp7 = self.lookupNonWSType(0) !== Ident;
+      if (tmp7) {
+        tmp7 = self.lookupNonWSType(0) !== LeftParenthesis;
+      }
+      if (!tmp7) {
+        list.push(self.WhiteSpace());
+        list.push(self.MediaQueryList());
+      }
+      return list;
     },
-    block() {
-      return this.Block(false);
-    }
+    block: null
   }
 };

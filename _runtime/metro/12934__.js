@@ -3,7 +3,7 @@
 // Module 12934
 
 export default {
-  parse: function selectorList() {
+  parse() {
     return this.createSingleNodeList(this.SelectorList());
   }
 };

@@ -1,42 +1,43 @@
 // === Module 12925: ? ===
 
 // Module 12925
-import _mod12833 from "module_12833" /* 12833 */;
+import _mod12836 from "module_12836" /* 12836 */;
+import _mod12880 from "module_12880" /* 12880 */;
 
-const String = _mod12833.TYPE.String;
-const Ident = _mod12833.TYPE.Ident;
-const Url = _mod12833.TYPE.Url;
-const Function = _mod12833.TYPE.Function;
-const LeftParenthesis = _mod12833.TYPE.LeftParenthesis;
+const Comma = _mod12836.TYPE.Comma;
+const WhiteSpace = _mod12836.TYPE.WhiteSpace;
 
-export default {
-  parse: {
-    prelude() {
-      const self = this;
-      const list = this.createList();
-      const scanner = this.scanner;
-      scanner.skipSC();
-      const tokenType = this.scanner.tokenType;
-      if (String === tokenType) {
-        list.push(self.String());
-      } else {
-        if (Url !== tokenType) {
-          if (Function !== tokenType) {
-            self.error("String or url() is expected");
+export default function() {
+  const self = this;
+  const list = this.createList();
+  const scanner = this.scanner;
+  scanner.skipSC();
+  list.push(this.Identifier());
+  const scanner2 = this.scanner;
+  scanner2.skipSC();
+  if (this.scanner.tokenType !== Comma) {
+    return list;
+  } else {
+    list.push(self.Operator());
+    if (self.parseCustomProperty) {
+      let element = self.Value(null);
+    } else {
+      element = self.Raw(self.scanner.tokenIndex, _mod12880.mode.exclamationMarkOrSemicolon, false);
+    }
+    if ("Value" === element.type) {
+      const children = element.children;
+      if (children.isEmpty()) {
+        let diff = self.scanner.tokenIndex - self.scanner.tokenIndex;
+        if (diff <= 0) {
+          const scanner3 = self.scanner;
+          while (scanner3.lookupType(diff) !== WhiteSpace) {
+            diff = diff + 1;
           }
         }
-        list.push(self.Url());
+        const children2 = element.children;
+        children2.appendData({ type: "WhiteSpace", loc: null, value: " " });
       }
-      let tmp7 = self.lookupNonWSType(0) !== Ident;
-      if (tmp7) {
-        tmp7 = self.lookupNonWSType(0) !== LeftParenthesis;
-      }
-      if (!tmp7) {
-        list.push(self.WhiteSpace());
-        list.push(self.MediaQueryList());
-      }
-      return list;
-    },
-    block: null
+    }
+    list.push(element);
   }
 };

@@ -1,7 +1,10 @@
 // === Module 15918: ? ===
 
 // Module 15918
-import _mod15910 from "module_15910" /* 15910 */;
+import _mod15917 from "module_15917" /* 15917 */;
 
 
-export default (arg0, arg1, arg2) => 0 === _mod15910(arg0, arg1, arg2);
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod15917(arg0, arg1, closure_0));
+};

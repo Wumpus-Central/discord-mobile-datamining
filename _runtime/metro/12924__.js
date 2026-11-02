@@ -1,13 +1,7 @@
 // === Module 12924: ? ===
 
 // Module 12924
-const obj = {
-  parse: {
-    prelude: null,
-    block() {
-      return this.Block(true);
-    }
-  }
-};
 
-export default obj;
+export default function() {
+  return this.createSingleNodeList(this.Raw(this.scanner.tokenIndex, null, false));
+};

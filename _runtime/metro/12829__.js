@@ -2,326 +2,329 @@
 
 // Module 12829
 import _mod12830 from "module_12830" /* 12830 */;
+import _mod12832 from "module_12832" /* 12832 */;
 
-function consumeEscaped(arr, sum) {
-  sum = sum + 2;
-  const diff = sum - 1;
-  let num = 0;
-  if (diff < arr.length) {
-    num = arr.charCodeAt(diff);
-  }
-  let sum3 = sum;
-  if (obj.isHexDigit(num)) {
-    const _Math = Math;
-    const bound = Math.min(arr.length, sum + 5);
-    let tmp8 = sum;
-    if (sum < bound) {
-      let num3 = 0;
-      if (sum < arr.length) {
-        num3 = arr.charCodeAt(sum);
-      }
-      let tmp9 = sum;
-      tmp8 = sum;
-      if (tmp2Result.isHexDigit(num3)) {
-        const sum1 = tmp9 + 1;
-        tmp8 = sum1;
-        while (sum1 < bound) {
-          let obj2 = _mod12830;
-          let num4 = 0;
-          if (sum1 < arr.length) {
-            num4 = arr.charCodeAt(sum1);
-          }
-          tmp9 = sum1;
-          tmp8 = sum1;
-          if (!obj2.isHexDigit(num4)) {
-            break;
-          }
-        }
-      }
-      tmp2Result = _mod12830;
-    }
-    let num5 = 0;
-    if (tmp8 < arr.length) {
-      num5 = arr.charCodeAt(tmp8);
-    }
-    sum3 = tmp8;
-    if (obj3.isWhiteSpace(num5)) {
-      let num7 = 1;
-      if (13 === num5) {
-        const sum2 = tmp8 + 1;
-        let num8 = 0;
-        if (sum2 < arr.length) {
-          num8 = arr.charCodeAt(sum2);
-        }
-        num7 = 1;
-        if (10 === num8) {
-          num7 = 2;
-        }
-      }
-      sum3 = tmp8 + num7;
-    }
-    obj3 = _mod12830;
-  }
-  return sum3;
+const require = globalThis.__r;
+
+function noop() {
+
 }
+const WhiteSpace = _mod12830.TYPE.WhiteSpace;
+const Comment = _mod12830.TYPE.Comment;
+const Ident = _mod12830.TYPE.Ident;
+const Function = _mod12830.TYPE.Function;
+const Url = _mod12830.TYPE.Url;
+const Hash = _mod12830.TYPE.Hash;
+const Percentage = _mod12830.TYPE.Percentage;
+const Number = _mod12830.TYPE.Number;
 
-export default {
-  consumeEscaped,
-  consumeName(StringResult, sum) {
-    let tmp2 = sum;
-    if (sum < StringResult.length) {
-      while (true) {
-        let charCodeAtResult = StringResult.charCodeAt(sum);
-        let obj = _mod12830;
-        let diff = sum;
-        if (obj.isName(charCodeAtResult)) {
-          sum = diff + 1;
-          tmp2 = sum;
-          if (sum >= StringResult.length) {
-            break;
-          }
+export default function createParser(arg0) {
+  let obj = arg0;
+  const obj2 = { scanner: new require("TokenStream")(), locationMap: null, filename: "<unknown>", needPositions: false, onParseError: null, onParseErrorThrow: false, parseAtrulePrelude: true, parseRulePrelude: true, parseValue: true, parseCustomProperty: false, readSequence: null, createList: null, createSingleNodeList: null, getFirstListNode: null, getLastListNode: null, parseWithFallback: null, lookupNonWSType: null, eat: null, consume: null, consumeFunctionName: null, getLocation: null, getLocationFromList: null, error: null };
+  const tmp = new require("TokenStream")();
+  obj2.locationMap = new require("OffsetToLocation")();
+  obj2.onParseError = noop;
+  obj2.readSequence = require("module_12837");
+  obj2.createList = function createList() {
+    return new closure_0(12838)();
+  };
+  obj2.createSingleNodeList = function createSingleNodeList(self) {
+    return new closure_0(12838)().appendData(self);
+  };
+  obj2.getFirstListNode = function getFirstListNode(sequence) {
+    let firstResult = sequence;
+    if (sequence) {
+      firstResult = sequence.first();
+    }
+    return firstResult;
+  };
+  obj2.getLastListNode = function getLastListNode(children) {
+    return children.last();
+  };
+  obj2.parseWithFallback = function parseWithFallback(Atrule, consumeRaw) {
+    const self = this;
+    try {
+      const call = Atrule.call;
+      if (typeof call === "unknown") {
+        let callResult = Atrule();
+      } else {
+        callResult = call(self);
+      }
+      return callResult;
+    } catch (tmp4) {
+      if (obj.onParseErrorThrow) {
+        throw tmp4;
+      } else {
+        const call2 = consumeRaw.call;
+        if (typeof call2 === "unknown") {
+          let call2Result = consumeRaw(tmp);
         } else {
-          let tmp4Result = _mod12830;
-          let sum1 = sum + 1;
-          let num = 0;
-          if (sum1 < StringResult.length) {
-            num = StringResult.charCodeAt(sum1);
-          }
-          tmp2 = sum;
-          if (!tmp4Result.isValidEscape(charCodeAtResult, num)) {
-            break;
-          } else {
-            diff = consumeEscaped(StringResult, sum) - 1;
-          }
+          call2Result = call2(obj, tmp);
         }
-        break;
+        obj.onParseErrorThrow = true;
+        obj.onParseError(tmp4, call2Result);
+        obj.onParseErrorThrow = false;
+        return call2Result;
       }
     }
-    return tmp2;
-  },
-  consumeNumber(str, sum) {
-    let charCodeAtResult = str.charCodeAt(sum);
-    let tmp2 = 43 !== charCodeAtResult;
-    if (tmp2) {
-      tmp2 = 45 !== charCodeAtResult;
-    }
-    let tmp3 = sum;
-    if (!tmp2) {
-      sum = sum + 1;
-      charCodeAtResult = str.charCodeAt(sum);
-      tmp3 = sum;
-    }
-    let tmp7 = tmp3;
-    if (obj.isDigit(charCodeAtResult)) {
-      const sum1 = tmp3 + 1;
-      let tmp9 = sum1;
-      if (sum1 < str.length) {
-        let tmp10 = sum1;
-        tmp9 = sum1;
-        if (tmp5Result.isDigit(str.charCodeAt(sum1))) {
-          const sum2 = tmp10 + 1;
-          tmp9 = sum2;
-          while (sum2 < str.length) {
-            let obj3 = _mod12830;
-            tmp10 = sum2;
-            tmp9 = sum2;
-            if (!obj3.isDigit(str.charCodeAt(sum2))) {
-              break;
-            }
-          }
-        }
-        tmp5Result = _mod12830;
+  };
+  obj2.lookupNonWSType = function lookupNonWSType(arg0) {
+    let sum = arg0;
+    const scanner = this.scanner;
+    const lookupTypeResult = scanner.lookupType(+sum);
+    while (lookupTypeResult === WhiteSpace) {
+      sum = tmp2 + 1;
+      if (0 !== lookupTypeResult) {
+        continue;
+      } else {
+        return 0;
       }
-      charCodeAtResult = str.charCodeAt(tmp9);
-      tmp7 = tmp9;
     }
-    let isDigitResult = 46 === charCodeAtResult;
-    if (isDigitResult) {
-      isDigitResult = _mod12830.isDigit(str.charCodeAt(tmp7 + 1));
-      const tmp5Result3 = _mod12830;
-    }
-    let tmp15 = tmp7;
-    if (isDigitResult) {
-      const sum3 = tmp7 + 2;
-      str.charCodeAt(sum3);
-      let tmp18 = sum3;
-      if (sum3 < str.length) {
-        let tmp21 = sum3;
-        tmp18 = sum3;
-        if (obj5.isDigit(str.charCodeAt(sum3))) {
-          const sum4 = tmp21 + 1;
-          tmp18 = sum4;
-          while (sum4 < str.length) {
-            let obj6 = _mod12830;
-            tmp21 = sum4;
-            tmp18 = sum4;
-            if (!obj6.isDigit(str.charCodeAt(sum4))) {
-              break;
-            }
-          }
-        }
-        obj5 = _mod12830;
-      }
-      tmp15 = tmp18;
-    }
-    const charCodeAtResult2 = str.charCodeAt(tmp15);
-    obj = _mod12830;
-    let tmp28 = charCodeAtResult2;
-    if (obj7.isUppercaseLetter(charCodeAtResult2)) {
-      tmp28 = charCodeAtResult2 | 32;
-    }
-    let tmp29 = tmp15;
-    if (tmp28 === 101) {
-      let charCodeAtResult3 = str.charCodeAt(tmp15 + 1);
-      let num7 = 0;
-      if (!tmp30) {
-        charCodeAtResult3 = str.charCodeAt(tmp15 + 2);
-        num7 = 1;
-      }
-      tmp29 = tmp15;
-      if (tmp5Result4.isDigit(charCodeAtResult3)) {
-        const sum5 = tmp15 + 1 + num7 + 1;
-        let tmp33 = sum5;
-        if (sum5 < str.length) {
-          let tmp34 = sum5;
-          tmp33 = sum5;
-          if (tmp26Result.isDigit(str.charCodeAt(sum5))) {
-            const sum6 = tmp34 + 1;
-            tmp33 = sum6;
-            while (sum6 < str.length) {
-              let obj10 = _mod12830;
-              tmp34 = sum6;
-              tmp33 = sum6;
-              if (!obj10.isDigit(str.charCodeAt(sum6))) {
-                break;
-              }
-            }
-          }
-          tmp26Result = _mod12830;
-        }
-        tmp29 = tmp33;
-      }
-      tmp30 = 45 !== charCodeAtResult3 && 43 !== charCodeAtResult3;
-      tmp5Result4 = _mod12830;
-    }
-    return tmp29;
-  },
-  consumeBadUrlRemnants(arr2, sum) {
-    let sum1 = sum;
-    let sum2 = sum;
-    if (sum < arr2.length) {
-      const charCodeAtResult = arr2.charCodeAt(sum1);
-      while (41 !== charCodeAtResult) {
-        let obj = _mod12830;
-        sum = sum1 + 1;
-        let num = 0;
-        if (sum < arr2.length) {
-          num = arr2.charCodeAt(sum);
-        }
-        let tmp8 = sum1;
-        if (obj.isValidEscape(charCodeAtResult, num)) {
-          tmp8 = consumeEscaped(arr2, sum1);
-        }
-        sum1 = tmp8 + 1;
-        sum2 = sum1;
-      }
-      sum2 = sum1 + 1;
-    }
-    return sum2;
-  },
-  cmpChar(source, tokenStart, c8) {
-    const charCodeAtResult = source.charCodeAt(tokenStart);
-    let tmp2 = charCodeAtResult;
-    if (obj.isUppercaseLetter(charCodeAtResult)) {
-      tmp2 = charCodeAtResult | 32;
-    }
-    return tmp2 === c8;
-  },
-  cmpStr(source, tokenStart, length, c0) {
-    if (length - tokenStart !== _require.length) {
-      return false;
+    return lookupTypeResult;
+  };
+  obj2.eat = function eat(arg0) {
+    const self = this;
+    if (this.scanner.tokenType === arg0) {
+      self.scanner.next();
+      const iter2 = self.scanner;
     } else {
-      if (tokenStart >= 0) {
-        if (length <= source.length) {
-          let sum = tokenStart;
-          if (tokenStart < length) {
-            while (true) {
-              let charCodeAtResult = source.charCodeAt(sum);
-              let charCodeAtResult1 = _require.charCodeAt(sum - tokenStart);
-              let obj = _mod12830;
-              let tmp8 = charCodeAtResult;
-              if (obj.isUppercaseLetter(charCodeAtResult)) {
-                tmp8 = charCodeAtResult | 32;
-              }
-              if (tmp8 !== charCodeAtResult1) {
-                break;
-              } else {
-                sum = sum + 1;
-              }
-            }
-            return false;
-          }
-          return true;
+      const tokenStart = self.scanner.tokenStart;
+      let iter = `${closure_0(closure_1_1[0]).NAME[arg0]} is expected`;
+      if (Ident === arg0) {
+        if (self.scanner.tokenType === Function) {
+          let tokenEnd = self.scanner.tokenEnd - 1;
+          let str = "Identifier is expected but function found";
+        } else {
+          str = "Identifier is expected";
+          tokenEnd = tokenStart;
         }
-      }
-      return false;
-    }
-  },
-  getNewlineLength(arr, arg1, charCodeAtResult) {
-    let num = 1;
-    if (13 === charCodeAtResult) {
-      const sum = arg1 + 1;
-      let num2 = 0;
-      if (sum < arr.length) {
-        num2 = arr.charCodeAt(sum);
-      }
-      num = 1;
-      if (10 === num2) {
-        num = 2;
-      }
-    }
-    return num;
-  },
-  findWhiteSpaceStart(source, sum) {
-    let tmp = sum;
-    if (sum >= 0) {
-      let tmp5 = sum;
-      tmp = sum;
-      if (obj.isWhiteSpace(source.charCodeAt(sum))) {
-        const diff = tmp5 - 1;
-        tmp = diff;
-        while (diff >= 0) {
-          let obj2 = _mod12830;
-          tmp5 = diff;
-          tmp = diff;
-          if (!obj2.isWhiteSpace(source.charCodeAt(diff))) {
-            break;
+      } else {
+        if (Hash === arg0) {
+          const scanner = self.scanner;
+          str = iter;
+          tokenEnd = tokenStart;
+          if (scanner.isDelim(35)) {
+            iter = self.scanner;
+            iter.next();
+            tokenEnd = tokenStart + 1;
+            str = "Name is expected";
+          }
+        } else if (Percentage !== arg0) {
+          const source = self.scanner.source;
+          str = iter;
+          tokenEnd = tokenStart;
+          if (source.charCodeAt(self.scanner.tokenStart) === arg0) {
+            tokenEnd = tokenStart + 1;
+            str = iter;
           }
         }
-      }
-      obj = _mod12830;
-    }
-    return tmp + 1;
-  },
-  findWhiteSpaceEnd(arr, sum) {
-    let tmp = sum;
-    if (sum < arr.length) {
-      let tmp4 = sum;
-      tmp = sum;
-      if (obj.isWhiteSpace(arr.charCodeAt(sum))) {
-        sum = tmp4 + 1;
-        tmp = sum;
-        while (sum < arr.length) {
-          let obj2 = _mod12830;
-          tmp4 = sum;
-          tmp = sum;
-          if (!obj2.isWhiteSpace(arr.charCodeAt(sum))) {
-            break;
-          }
+        str = iter;
+        tokenEnd = tokenStart;
+        if (self.scanner.tokenType === Number) {
+          tokenEnd = self.scanner.tokenEnd;
+          str = "Percent sign is expected";
         }
       }
-      obj = _mod12830;
+      self.error(str, tokenEnd);
     }
-    return tmp;
+  };
+  obj2.consume = function consume(Number) {
+    const scanner = this.scanner;
+    const tokenValue = scanner.getTokenValue();
+    this.eat(Number);
+    return tokenValue;
+  };
+  obj2.consumeFunctionName = function consumeFunctionName() {
+    const substr = this.scanner.source.substring(this.scanner.tokenStart, this.scanner.tokenEnd - 1);
+    this.eat(Function);
+    return substr;
+  };
+  obj2.getLocation = function getLocation(tokenStart, tokenStart2) {
+    const self = this;
+    let locationRange = null;
+    if (this.needPositions) {
+      const locationMap = self.locationMap;
+      locationRange = locationMap.getLocationRange(tokenStart, tokenStart2, self.filename);
+    }
+    return locationRange;
+  };
+  obj2.getLocationFromList = function getLocationFromList(list) {
+    const self = this;
+    if (this.needPositions) {
+      const firstListNode = self.getFirstListNode(list);
+      const lastListNode = self.getLastListNode(list);
+      const locationMap = self.locationMap;
+      if (null !== firstListNode) {
+        let tokenStart = firstListNode.loc.start.offset - self.locationMap.startOffset;
+      } else {
+        tokenStart = self.scanner.tokenStart;
+      }
+      if (null !== lastListNode) {
+        let tokenStart2 = lastListNode.loc.end.offset - self.locationMap.startOffset;
+      } else {
+        tokenStart2 = self.scanner.tokenStart;
+      }
+      return locationMap.getLocationRange(tokenStart, tokenStart2, self.filename);
+    } else {
+      return null;
+    }
+  };
+  obj2.error = function error(arg0, arg1) {
+    const self = this;
+    if (undefined !== arg1) {
+      if (arg1 < self.scanner.source.length) {
+        const locationMap2 = self.locationMap;
+        let _location = locationMap2.getLocation(arg1);
+      }
+      let str = arg0;
+      if (!arg0) {
+        str = "Unexpected input";
+      }
+      const tmp62 = new closure_0(12839)(str, self.scanner.source, _location.offset, _location.line, _location.column);
+      throw tmp62;
+    }
+    const locationMap = self.locationMap;
+    const getLocation = locationMap.getLocation;
+    if (self.scanner.eof) {
+      _location = getLocation(closure_0(12832).findWhiteSpaceStart(self.scanner.source, self.scanner.source.length - 1));
+      const obj = closure_0(12832);
+    } else {
+      _location = getLocation(self.scanner.tokenStart);
+    }
+  };
+  _require = obj2;
+  if (!arg0) {
+    obj = {};
   }
+  const obj3 = { context: {}, scope: {}, atrule: {}, pseudo: {} };
+  if (obj.parseContext) {
+    for (const key10042 in obj.parseContext) {
+      let tmp4 = typeof obj.parseContext[key10042];
+      if ("function" === tmp4) {
+        obj3.context[key10042] = obj.parseContext[key10042];
+        continue;
+      } else {
+        if ("string" !== tmp4) {
+          continue;
+        } else {
+          _require = obj.parseContext[key10042];
+          obj3.context[key10042] = function() {
+            return this[closure_0]();
+          };
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+  }
+  if (obj.scope) {
+    for (const key10053 in obj.scope) {
+      obj3.scope[key10053] = obj.scope[key10053];
+      continue;
+    }
+  }
+  if (obj.atrule) {
+    for (const key10057 in obj.atrule) {
+      let tmp7 = obj.atrule[key10057];
+      if (!tmp7.parse) {
+        continue;
+      } else {
+        obj3.atrule[key10057] = tmp7.parse;
+        continue;
+      }
+      continue;
+    }
+  }
+  if (obj.pseudo) {
+    for (const key10063 in obj.pseudo) {
+      let tmp9 = obj.pseudo[key10063];
+      if (!tmp9.parse) {
+        continue;
+      } else {
+        obj3.pseudo[key10063] = tmp9.parse;
+        continue;
+      }
+      continue;
+    }
+  }
+  if (obj.node) {
+    for (const key10069 in obj.node) {
+      obj3[key10069] = obj.node[key10069].parse;
+      continue;
+    }
+  }
+  for (const key10072 in obj3) {
+    obj2[key10072] = obj3[key10072];
+    continue;
+  }
+  return (source, arg1) => {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    const onComment = obj.onComment;
+    source(12836)(source, source.scanner);
+    const locationMap = source.locationMap;
+    locationMap.setSource(source, obj.offset, obj.line, obj.column);
+    source.filename = obj.filename || "<unknown>";
+    source.needPositions = Boolean(obj.positions);
+    source.onParseError = typeof obj.onParseError === "function" ? obj.onParseError : noop;
+    source.onParseErrorThrow = false;
+    let BooleanResult = !("parseAtrulePrelude" in obj);
+    if (!BooleanResult) {
+      const _Boolean = Boolean;
+      BooleanResult = Boolean(obj.parseAtrulePrelude);
+    }
+    source.parseAtrulePrelude = BooleanResult;
+    let BooleanResult1 = !("parseRulePrelude" in obj);
+    if (!BooleanResult1) {
+      const _Boolean2 = Boolean;
+      BooleanResult1 = Boolean(obj.parseRulePrelude);
+    }
+    source.parseRulePrelude = BooleanResult1;
+    let BooleanResult2 = !("parseValue" in obj);
+    if (!BooleanResult2) {
+      const _Boolean3 = Boolean;
+      BooleanResult2 = Boolean(obj.parseValue);
+    }
+    source.parseValue = BooleanResult2;
+    let BooleanResult3 = "parseCustomProperty" in obj;
+    if (BooleanResult3) {
+      const _Boolean4 = Boolean;
+      BooleanResult3 = Boolean(obj.parseCustomProperty);
+    }
+    source.parseCustomProperty = BooleanResult3;
+    const context = obj2.context;
+    if (context.hasOwnProperty(obj.context || "default")) {
+      if (typeof onComment === "function") {
+        const scanner = obj2.scanner;
+        scanner.forEachToken((arg0, arg1, length) => {
+          if (arg0 === Comment) {
+            const _location = source.getLocation(arg1, length);
+            const obj = _mod12832;
+            let num = 2;
+            const slice = source.slice;
+            const sum = arg1 + 2;
+            if (obj.cmpStr(source, length - 2, length, "*/")) {
+              num = length - num;
+              let substr = slice(sum, num);
+            } else {
+              substr = slice(sum, length);
+            }
+            onComment(substr, _location);
+          }
+        });
+      }
+      const call = tmp12.call;
+      if (!obj2.scanner.eof) {
+        obj2.error();
+      }
+      return typeof call === "unknown" ? obj2.context[tmp](obj) : call(obj2, obj);
+    } else {
+      const _Error = Error;
+      const error = new Error("Unknown context `" + tmp + "`");
+      throw error;
+    }
+  };
 };

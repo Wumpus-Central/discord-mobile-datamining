@@ -1,40 +1,86 @@
 // === Module 12915: ? ===
 
 // Module 12915
-import _mod12874 from "module_12874" /* 12874 */;
-import _mod12916 from "module_12916" /* 12916 */;
-import _mod12923 from "module_12923" /* 12923 */;
-import _mod12929 from "module_12929" /* 12929 */;
+import _mod12836 from "module_12836" /* 12836 */;
 
-const obj = {
-  parseContext: {
-    default: "StyleSheet",
-    stylesheet: "StyleSheet",
-    atrule: "Atrule",
-    atrulePrelude(atrule) {
-      let StringResult = null;
-      if (atrule.atrule) {
-        const _String = String;
-        StringResult = String(atrule.atrule);
+const Function = _mod12836.TYPE.Function;
+const Url = _mod12836.TYPE.Url;
+const RightParenthesis = _mod12836.TYPE.RightParenthesis;
+
+export default {
+  name: "Url",
+  structure: { value: ["String", "Raw"] },
+  parse() {
+    const self = this;
+    const tokenStart = this.scanner.tokenStart;
+    const tokenType = this.scanner.tokenType;
+    if (Url === tokenType) {
+      const sum = tokenStart + 4;
+      const diff = self.scanner.tokenEnd - 1;
+      let tmp14 = sum;
+      if (sum < diff) {
+        const source3 = self.scanner.source;
+        let tmp18 = sum;
+        tmp14 = sum;
+        if (obj6.isWhiteSpace(source3.charCodeAt(sum))) {
+          const sum1 = tmp18 + 1;
+          tmp14 = sum1;
+          while (sum1 < diff) {
+            let obj2 = _mod12836;
+            let source = self.scanner.source;
+            tmp18 = sum1;
+            tmp14 = sum1;
+            if (!obj2.isWhiteSpace(source.charCodeAt(sum1))) {
+              break;
+            }
+          }
+        }
+        obj6 = _mod12836;
       }
-      return this.AtrulePrelude(StringResult);
-    },
-    mediaQueryList: "MediaQueryList",
-    mediaQuery: "MediaQuery",
-    rule: "Rule",
-    selectorList: "SelectorList",
-    selector: "Selector",
-    block() {
-      return this.Block(true);
-    },
-    declarationList: "DeclarationList",
-    declaration: "Declaration",
-    value: "Value"
+      let tmp19 = diff;
+      if (tmp14 < diff) {
+        const source4 = self.scanner.source;
+        let tmp23 = diff;
+        tmp19 = diff;
+        if (obj7.isWhiteSpace(source4.charCodeAt(diff - 1))) {
+          const diff1 = tmp23 - 1;
+          tmp19 = diff1;
+          while (tmp14 < diff1) {
+            let obj3 = _mod12836;
+            let source2 = self.scanner.source;
+            tmp23 = diff1;
+            tmp19 = diff1;
+            if (!obj3.isWhiteSpace(source2.charCodeAt(diff1 - 1))) {
+              break;
+            }
+          }
+        }
+        obj7 = _mod12836;
+      }
+      const obj4 = { type: "Raw", loc: self.getLocation(tmp14, tmp19), value: self.scanner.source.substring(tmp14, tmp19) };
+      self.eat(Url);
+      let StringResult = obj4;
+    } else if (Function === tokenType) {
+      const obj = _mod12836;
+      if (!obj.cmpStr(self.scanner.source, self.scanner.tokenStart, self.scanner.tokenEnd, "url(")) {
+        self.error("Function name must be `url`");
+      }
+      self.eat(tmp26);
+      const scanner = self.scanner;
+      scanner.skipSC();
+      StringResult = self.String();
+      const scanner2 = self.scanner;
+      scanner2.skipSC();
+      self.eat(RightParenthesis);
+    } else {
+      self.error("Url or Function is expected");
+    }
+    return { type: "Url", loc: self.getLocation(tokenStart, self.scanner.tokenStart), value: StringResult };
   },
-  scope: _mod12916,
-  atrule: _mod12923,
-  pseudo: _mod12929,
-  node: _mod12874
+  generate(value) {
+    this.chunk("url");
+    this.chunk("(");
+    this.node(value.value);
+    this.chunk(")");
+  }
 };
-
-export default obj;

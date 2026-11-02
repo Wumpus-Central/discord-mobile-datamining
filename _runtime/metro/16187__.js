@@ -1,17 +1,13 @@
 // === Module 16187: ? ===
 
 // Module 16187
-import _mod16139 from "module_16139" /* 16139 */;
-import _mod16146 from "module_16146" /* 16146 */;
+import _mod16135 from "module_16135" /* 16135 */;
+import _mod16144 from "module_16144" /* 16144 */;
+import all from "module_16154" /* 16154 */;
 
-let closure_2 = _mod16139("keys");
+let closure_0 = _mod16135(Function.toString);
+if (!all(_mod16144.inspectSource)) {
+  _mod16144.inspectSource = (arg0) => closure_0(arg0);
+}
 
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod16146(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
+export default _mod16144.inspectSource;

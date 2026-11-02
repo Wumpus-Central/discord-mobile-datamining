@@ -53,7 +53,7 @@ export function useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, 
   const fn = function h(handlerTag) {
     let tmp = mutable.value[handlerTag.handlerTag];
     if (undefined === tmp) {
-      const obj = { lastUpdateEvent: "Array" };
+      const obj = { lastUpdateEvent: "r" };
       iter.value[handlerTag.handlerTag] = obj;
       tmp = obj;
     }

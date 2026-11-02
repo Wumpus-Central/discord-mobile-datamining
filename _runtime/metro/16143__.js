@@ -1,34 +1,19 @@
 // === Module 16143: ? ===
 
 // Module 16143
-import _mod16124 from "module_16124" /* 16124 */;
-import _mod16128 from "module_16128" /* 16128 */;
 import _mod16144 from "module_16144" /* 16144 */;
 
-let prop = Object.getOwnPropertySymbols;
-if (prop) {
-  prop = !_mod16128(() => {
-    const SymbolResult = Symbol("symbol detection");
-    const StringResult = _mod16124.String(SymbolResult);
-    let tmp5 = !StringResult;
-    if (StringResult) {
-      const _Object = Object;
-      const _Symbol = Symbol;
-      tmp5 = !(Object(SymbolResult) instanceof Symbol);
-    }
-    if (!tmp5) {
-      const _Symbol2 = Symbol;
-      let tmp2Result = !sham;
-      if (!sham) {
-        tmp2Result = _mod16144;
-      }
-      if (tmp2Result) {
-        tmp2Result = _mod16144 < 41;
-      }
-      tmp5 = tmp2Result;
-    }
-    return tmp5;
-  });
-}
 
-export default prop;
+export default (arg0, arg1) => {
+  let tmp3 = _mod16144[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod16144[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod16144;
+  }
+  return tmp3;
+};

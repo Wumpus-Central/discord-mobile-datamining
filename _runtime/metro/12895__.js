@@ -1,77 +1,18 @@
 // === Module 12895: ? ===
 
 // Module 12895
-import _mod12833 from "module_12833" /* 12833 */;
+import _mod12836 from "module_12836" /* 12836 */;
 
-const WhiteSpace = _mod12833.TYPE.WhiteSpace;
-const Comment = _mod12833.TYPE.Comment;
-const Ident = _mod12833.TYPE.Ident;
-const LeftParenthesis = _mod12833.TYPE.LeftParenthesis;
+const Ident = _mod12836.TYPE.Ident;
 const obj = {
-  name: "MediaQuery",
-  structure: null,
+  name: "Identifier",
+  structure: { name: String },
   parse() {
-    const self = this;
-    const scanner = this.scanner;
-    scanner.skipSC();
-    const list = this.createList();
-    let tmp2 = null;
-    let tmp3 = null;
-    let tmp4 = null;
-    if (!this.scanner.eof) {
-      while (true) {
-        let tokenType = self.scanner.tokenType;
-        if (Comment === tokenType) {
-          let iter = self.scanner;
-          let nextResult = iter.next();
-          let WhiteSpaceResult = tmp2;
-          let IdentifierResult = tmp3;
-        } else {
-          if (WhiteSpace === tokenType) {
-            WhiteSpaceResult = self.WhiteSpace();
-            IdentifierResult = tmp3;
-          } else {
-            if (Ident === tokenType) {
-              IdentifierResult = self.Identifier();
-              WhiteSpaceResult = tmp2;
-              if (null !== tmp2) {
-                let arr = list.push(tmp2);
-                WhiteSpaceResult = null;
-              }
-              let arr3 = list.push(IdentifierResult);
-            } else {
-              tmp4 = tmp3;
-              if (LeftParenthesis !== tokenType) {
-                break;
-              } else {
-                IdentifierResult = self.MediaFeature();
-              }
-            }
-            break;
-          }
-          break;
-        }
-        tmp2 = WhiteSpaceResult;
-        tmp3 = IdentifierResult;
-        tmp4 = IdentifierResult;
-        if (self.scanner.eof) {
-          break;
-        }
-      }
-    }
-    if (null === tmp4) {
-      self.error("Identifier or parenthesis is expected");
-    }
-    const element = { type: "MediaQuery", loc: self.getLocationFromList(list), children: list };
-    return element;
+    return { type: "Identifier", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd), name: this.consume(Ident) };
   },
-  generate(arg0) {
-    this.children(arg0);
+  generate(name) {
+    this.chunk(name.name);
   }
 };
-const obj2 = { children: null };
-const items = [["Identifier", "MediaFeature", "WhiteSpace"]];
-obj2.children = items;
-obj.structure = obj2;
 
 export default obj;

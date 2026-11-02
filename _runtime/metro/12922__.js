@@ -1,43 +1,73 @@
 // === Module 12922: ? ===
 
 // Module 12922
-import _mod12833 from "module_12833" /* 12833 */;
-import _mod12877 from "module_12877" /* 12877 */;
+import _mod12836 from "module_12836" /* 12836 */;
 
-const Comma = _mod12833.TYPE.Comma;
-const WhiteSpace = _mod12833.TYPE.WhiteSpace;
+const Delim = _mod12836.TYPE.Delim;
+const Ident = _mod12836.TYPE.Ident;
+const Dimension = _mod12836.TYPE.Dimension;
+const Percentage = _mod12836.TYPE.Percentage;
+const Number = _mod12836.TYPE.Number;
+const Hash = _mod12836.TYPE.Hash;
+const Colon = _mod12836.TYPE.Colon;
+const LeftSquareBracket = _mod12836.TYPE.LeftSquareBracket;
 
-export default function() {
-  const self = this;
-  const list = this.createList();
-  const scanner = this.scanner;
-  scanner.skipSC();
-  list.push(this.Identifier());
-  const scanner2 = this.scanner;
-  scanner2.skipSC();
-  if (this.scanner.tokenType !== Comma) {
-    return list;
-  } else {
-    list.push(self.Operator());
-    if (self.parseCustomProperty) {
-      let element = self.Value(null);
+export default {
+  getNode(arg0) {
+    const self = this;
+    const tokenType = this.scanner.tokenType;
+    if (LeftSquareBracket === tokenType) {
+      return self.AttributeSelector();
+    } else if (Hash === tokenType) {
+      return self.IdSelector();
+    } else if (Colon === tokenType) {
+      const scanner = self.scanner;
+      if (scanner.lookupType(1) === tmp6) {
+        let result = self.PseudoElementSelector();
+      } else {
+        result = self.PseudoClassSelector();
+      }
+      return result;
+    } else if (Ident === tokenType) {
+      return self.TypeSelector();
     } else {
-      element = self.Raw(self.scanner.tokenIndex, _mod12877.mode.exclamationMarkOrSemicolon, false);
-    }
-    if ("Value" === element.type) {
-      const children = element.children;
-      if (children.isEmpty()) {
-        let diff = self.scanner.tokenIndex - self.scanner.tokenIndex;
-        if (diff <= 0) {
-          const scanner3 = self.scanner;
-          while (scanner3.lookupType(diff) !== WhiteSpace) {
-            diff = diff + 1;
+      if (Number !== tokenType) {
+        if (Percentage !== tokenType) {
+          if (Dimension === tokenType) {
+            const source = self.scanner.source;
+            if (46 === source.charCodeAt(self.scanner.tokenStart)) {
+              self.error("Identifier is expected", self.scanner.tokenStart + 1);
+            }
+          } else if (Delim === tokenType) {
+            const source2 = self.scanner.source;
+            const charCodeAtResult = source2.charCodeAt(self.scanner.tokenStart);
+            if (43 !== charCodeAtResult) {
+              if (62 !== charCodeAtResult) {
+                if (126 !== charCodeAtResult) {
+                  if (47 === charCodeAtResult) {
+                    return self.Combinator();
+                  } else if (46 === charCodeAtResult) {
+                    return self.ClassSelector();
+                  } else {
+                    if (42 !== charCodeAtResult) {
+                      if (124 !== charCodeAtResult) {
+                        if (35 === charCodeAtResult) {
+                          return self.IdSelector();
+                        }
+                      }
+                    }
+                    return self.TypeSelector();
+                  }
+                }
+              }
+            }
+            arg0.space = null;
+            arg0.ignoreWSAfter = true;
+            return self.Combinator();
           }
         }
-        const children2 = element.children;
-        children2.appendData({ type: "WhiteSpace", loc: null, value: " " });
       }
+      return self.Percentage();
     }
-    list.push(element);
   }
 };

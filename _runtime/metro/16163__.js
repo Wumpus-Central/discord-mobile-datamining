@@ -1,44 +1,17 @@
 // === Module 16163: ? ===
 
 // Module 16163
-import _mod16128 from "module_16128" /* 16128 */;
-import _mod16150 from "module_16150" /* 16150 */;
+import _mod16132 from "module_16132" /* 16132 */;
+import element from "element" /* 16164 */;
+import getOwnPropertyDescriptor from "module_16131" /* 16131 */;
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod16150(arg1)) {
-          tmp11Result = _mod16128;
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
-      }
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod16132(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
     }
-    return tmp7;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
+  }).a);
 }
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
-};
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
 
-export default isForced;
+export default tmp2;

@@ -1,14 +1,21 @@
 // === Module 16154: ? ===
 
 // Module 16154
-import _mod16135 from "module_16135" /* 16135 */;
-import _mod16155 from "module_16155" /* 16155 */;
-
-
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod16135(arg0[arg1])) {
-    tmp4 = _mod16155(tmp);
+let all = typeof document === "object";
+if (typeof document === "object") {
+  const _document = document;
+  all = document.all;
+}
+if (undefined === all) {
+  if (undefined !== all) {
+    let fn = (fn) => {
+      let tmp = typeof fn === "function";
+      if (typeof fn !== "function") {
+        tmp = fn === all;
+      }
+      return tmp;
+    };
   }
-  return tmp4;
-};
+  module.exports = fn;
+}
+fn = (fn) => typeof fn === "function";

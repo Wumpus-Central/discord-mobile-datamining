@@ -343,7 +343,7 @@ function getRouteConfigsFromChildren(children) {
                                           }
                                           let Children = closure_2_6.Children;
                                           let items5 = [];
-                                          HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce(/* F81663 */ function() { ... }, []), 0);
+                                          HermesBuiltin.arraySpread(Children.toArray(type.props.children).reduce(/* F81699 */ function() { ... }, []), 0);
                                           HermesBuiltin.apply(items5, arr);
                                           return arr;
                                         } else {
@@ -1187,12 +1187,12 @@ export function useNavigationBuilder(StackRouter, UNSTABLE_routeNamesChangeBehav
                 const obj = { state: rehydratedState, descriptors, navigation: navigationHelpers, children };
                 tmpResult = tmp(obj);
               }
-              obj2 = { value: "Array", children: null };
+              obj2 = { value: "Array", children: 0 };
               obj3 = { value: navigationHelpers, children: null };
               obj4 = { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) };
               obj3.children = jsx(NavigationStateListenerProvider.NavigationStateListenerProvider, { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) });
               obj2.children = jsx(NavigationHelpersContext.NavigationHelpersContext.Provider, { value: navigationHelpers, children: null });
-              return jsx(NavigationMetaContext.NavigationMetaContext.Provider, { value: "Array", children: null });
+              return jsx(NavigationMetaContext.NavigationMetaContext.Provider, { value: "Array", children: 0 });
             })
       };
       return obj20;

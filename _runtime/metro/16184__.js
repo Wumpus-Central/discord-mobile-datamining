@@ -1,30 +1,12 @@
 // === Module 16184: ? ===
 
 // Module 16184
-import _mod16147 from "module_16147" /* 16147 */;
-import getOwnPropertyDescriptor_mod from "module_16127" /* 16127 */;
+import _mod16131 from "module_16131" /* 16131 */;
+import _mod16165 from "module_16165" /* 16165 */;
+import _mod16182 from "module_16182" /* 16182 */;
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod16147(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {
 
-  }.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-  }
-  tmp3 = tmp5;
-}
-
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export default _mod16131 ? ((arg0, arg1, arg2) => _mod16182.f(arg0, arg1, _mod16165(1, arg2))) : ((arg0, arg1, arg2) => {
+  arg0[arg1] = arg2;
+  return arg0;
+});
