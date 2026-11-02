@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "f171afff980c8e21add7808b4b6646ed",
-  name: "member_pricing",
+  hash: "337f717407aa04f32bdedf504de7310b",
+  name: "emoji",
   type: "png",
 });

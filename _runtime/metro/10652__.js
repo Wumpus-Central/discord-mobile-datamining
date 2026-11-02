@@ -22,7 +22,7 @@ export (onConfigurePanGesture) => {
     const Gesture = onConfigurePanGesture(onGestureStart[1]).Gesture;
     const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
     onConfigurePanGesture = withTestIdResult;
-    const userDefinedConflictGestures = { onBegin: "spriteIndex", onStart: "backgroundColor", onUpdate: "View", onEnd: "sa", onFinalize: "r" };
+    const userDefinedConflictGestures = { onBegin: "Array", onStart: "children", onUpdate: "useMemo", onEnd: "value", onFinalize: "displayName" };
     withTestIdResult.onBegin = (onBegin) => {
       obj.onBegin = onBegin;
       return withTestIdResult;

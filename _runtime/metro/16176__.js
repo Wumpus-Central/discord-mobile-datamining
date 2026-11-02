@@ -1,11 +1,11 @@
 // _runtime/metro/16176__.js
-import _mod16149 from "16149__.js";
+import _mod16177 from "16177__.js";
 
 export default (arg0) => {
-  if (_mod16149(arg0)) {
-    return arg0;
-  } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
+  const tmp = _mod16177(arg0);
+  let num = 0;
+  if (tmp > 0) {
+    num = min(tmp, 9007199254740991);
   }
+  return num;
 };

@@ -1,99 +1,28 @@
 // _runtime/metro/13072__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import _mod13055 from "13055__.js";
+import _mod13056 from "13056__.js";
 
-const SentryNonRecordingSpan = require;
-class SentryNonRecordingSpan {
-  constructor() {
-    obj = global;
-    if (global === undefined) {
-      obj = {};
-    }
-    self = this;
-    tmp = c2(this, SentryNonRecordingSpan);
-    traceId = obj.traceId;
-    if (!traceId) {
-      tmp2 = closure_0;
-      tmp3 = closure_1;
-      obj2 = closure_0(closure_1[2]);
-      traceId = obj2.generateTraceId();
-    }
-    self._traceId = traceId;
-    spanId = obj.spanId;
-    if (!spanId) {
-      tmp4 = closure_0;
-      tmp5 = closure_1;
-      obj3 = closure_0(closure_1[2]);
-      spanId = obj3.generateSpanId();
-    }
-    self._spanId = spanId;
-    return;
-  }
+require = arg1;
+const dependencyMap = arg6;
+
+export function getMainCarrier() {
+  const GLOBAL_OBJ = _mod13055.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || _mod13056.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod13056.SDK_VERSION;
+  tmp3[_mod13056.SDK_VERSION] = tmp3[_mod13056.SDK_VERSION] || {};
+  return _mod13055.GLOBAL_OBJ;
 }
-const entry = {
-  key: "spanContext",
-  value: function spanContext() {
-    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(13044).TRACE_FLAG_NONE };
-  },
-};
-const items = [
-  entry,
-  {
-    key: "end",
-    value: function end(arg0) {},
-  },
-  {
-    key: "setAttribute",
-    value: function setAttribute(arg0, arg1) {
-      return this;
-    },
-  },
-  {
-    key: "setAttributes",
-    value: function setAttributes(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "setStatus",
-    value: function setStatus(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "updateName",
-    value: function updateName(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "isRecording",
-    value: function isRecording() {
-      return false;
-    },
-  },
-  {
-    key: "addEvent",
-    value: function addEvent(arg0, arg1, arg2) {
-      return this;
-    },
-  },
-  {
-    key: "addLink",
-    value: function addLink(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "addLinks",
-    value: function addLinks(arg0) {
-      return this;
-    },
-  },
-  {
-    key: "recordException",
-    value: function recordException(arg0, arg1) {},
-  },
-];
-
-export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);
+export function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = _mod13056.SDK_VERSION;
+  }
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[_mod13056.SDK_VERSION] || {};
+  tmp[_mod13056.SDK_VERSION] = tmp4;
+  return tmp4;
+}

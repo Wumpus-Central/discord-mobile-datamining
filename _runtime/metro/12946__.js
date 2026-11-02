@@ -1,10 +1,4 @@
 // _runtime/metro/12946__.js
+import _mod12877 from "12877__.js";
 
-export default {
-  trueFunc() {
-    return true;
-  },
-  falseFunc() {
-    return false;
-  },
-};
+export default { node: _mod12877 };

@@ -1,210 +1,138 @@
 // _runtime/metro/13063__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import _mod13061 from "13061__.js";
 
-const SyncPromise = require;
-const obj = { PENDING: 0 };
-obj[0] = "PENDING";
-obj.RESOLVED = 1;
-obj[1] = "RESOLVED";
-obj.REJECTED = 2;
-obj[2] = "REJECTED";
-class SyncPromise {
-  constructor(arg0) {
-    self = this;
-    tmp = SyncPromise;
-    tmp2 = closure_3(this, SyncPromise);
-    __init = SyncPromise.prototype.__init;
-    call = __init.call;
-    if (typeof call === "unknown") {
-      __initResult = __init();
+require = arg1;
+const dependencyMap = arg6;
+
+export function isMatchingPattern(arr, test) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  const isStringResult = _mod13061.isString(arr);
+  if (!isStringResult) {
+    return isStringResult;
+  } else {
+    if (tmpResult.isRegExp(test)) {
+      let isMatch = test.test(arr);
     } else {
-      callResult = call(self);
+      isMatch = _mod13061.isString(test);
+      if (isMatch) {
+        if (flag) {
+          let hasItem = arr === test;
+        } else {
+          hasItem = arr.includes(test);
+        }
+      }
+      const tmpResult2 = _mod13061;
     }
-    __init2 = tmp.prototype.__init2;
-    call2 = __init2.call;
-    if (typeof call2 === "unknown") {
-      __init2Result = __init2();
-    } else {
-      call2Result = call2(self);
-    }
-    __init3 = tmp.prototype.__init3;
-    call3 = __init3.call;
-    if (typeof call3 === "unknown") {
-      __init3Result = __init3();
-    } else {
-      call3Result = call3(self);
-    }
-    __init4 = tmp.prototype.__init4;
-    call4 = __init4.call;
-    if (typeof call4 === "unknown") {
-      __init4 = __init4();
-    } else {
-      call4Result = call4(self);
-    }
-    self._state = c2.PENDING;
-    self._handlers = [];
-    return;
+    tmpResult = _mod13061;
   }
 }
-const entry = {
-  key: "then",
-  value: function then(arg0, arg1) {
-    const self = this;
-    closure_1 = arg0;
-    closure_0 = arg1;
-    SyncPromise((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      const _handlers = self._handlers;
-      const items = [
-        false,
-        (arg0) => {
-          if (closure_1) {
-            try {
-              closure_0(tmp(arg0));
-            } catch (tmp6) {
-              closure_1(tmp6);
-            }
-          } else {
-            closure_0(arg0);
-          }
-        },
-        (arg0) => {
-          if (closure_0) {
-            try {
-              closure_0(tmp(arg0));
-            } catch (tmp6) {
-              closure_1(tmp6);
-            }
-          } else {
-            closure_1(arg0);
-          }
-        },
-      ];
-      _handlers.push(items);
-      self._executeHandlers();
-    });
-    return Object.create(SyncPromise.prototype);
-  },
-};
-let items = [
-  entry,
-  {
-    key: "catch",
-    value: function _catch(arg0) {
-      return this.then((result) => result, arg0);
-    },
-  },
-  {
-    key: "finally",
-    value: function _finally(arg0) {
-      const self = this;
-      closure_0 = arg0;
-      SyncPromise((arg0, arg1) => {
-        closure_0 = arg0;
-        _self = arg1;
-        return _self
-          .then(
-            (result) => {
-              c3 = false;
-              closure_2 = result;
-              if (closure_0) {
-                tmp();
-              }
-            },
-            (arg0) => {
-              c3 = true;
-              closure_2 = arg0;
-              if (closure_0) {
-                tmp();
-              }
-            },
-          )
-          .then(() => {
-            if (c3) {
-              closure_1(closure_2);
-            } else {
-              closure_0(closure_2);
-            }
-          });
-      });
-      return Object.create(SyncPromise.prototype);
-    },
-  },
-  {
-    key: "__init",
-    value: function __init() {
-      const self = this;
-      this._resolve = (arg0) => {
-        self._setResult(obj.RESOLVED, arg0);
-      };
-    },
-  },
-  {
-    key: "__init2",
-    value: function __init2() {
-      const self = this;
-      this._reject = (arg0) => {
-        self._setResult(obj.REJECTED, arg0);
-      };
-    },
-  },
-  {
-    key: "__init3",
-    value: function __init3() {
-      const self = this;
-      this._setResult = (_state, _value) => {
-        if (self._state === self.PENDING) {
-          if (obj2.isThenable(_value)) {
-            _value.then(self._resolve, self._reject);
-          } else {
-            self._state = _state;
-            self._value = _value;
-            self._executeHandlers();
-          }
-          obj2 = SyncPromise(13046);
+export function safeJoin(arg0, arg1) {
+  if (Array.isArray(arg0)) {
+    const items = [];
+    let num = 0;
+    if (0 < arg0.length) {
+      try {
+        const push = items.push;
+        if (obj.isVueViewModel(tmp2)) {
+          push("[VueViewModel]");
+        } else {
+          const _String = String;
+          push(String(tmp2));
         }
-      };
-    },
-  },
-  {
-    key: "__init4",
-    value: function __init4() {
-      const self = this;
-      this._executeHandlers = () => {
-        if (self._state !== obj.PENDING) {
-          const _handlers = self._handlers;
-          const substr = _handlers.slice();
-          self._handlers = [];
-          const item = substr.forEach((item) => {
-            if (!item[0]) {
-              if (_state._state === constants.RESOLVED) {
-                item[1](_state._value);
-              }
-              if (_state._state === constants.REJECTED) {
-                item[2](_state._value);
-              }
-              item[0] = true;
-            }
-          });
+        num = num + 1;
+        obj = _mod13061;
+      } catch (err) {
+        arr.push(tmp);
+      }
+    }
+    return items.join(arg1);
+  } else {
+    return "";
+  }
+}
+export function snipLine(arr, lineno) {
+  if (arr.length <= 150) {
+    return arr;
+  } else {
+    let tmp = lineno;
+    if (lineno > length) {
+      tmp = length;
+    }
+    const _Math = Math;
+    let num3 = Math.max(tmp - 60, 0);
+    if (num3 < 5) {
+      num3 = 0;
+    }
+    const _Math2 = Math;
+    let bound = Math.min(num3 + 140, length);
+    if (bound > length - 5) {
+      bound = length;
+    }
+    if (bound === length) {
+      const _Math3 = Math;
+      num3 = Math.max(bound - 140, 0);
+    }
+    const substr = arr.slice(num3, bound);
+    let combined = substr;
+    if (num3 > 0) {
+      const _HermesInternal = HermesInternal;
+      combined = "'{snip} " + substr;
+    }
+    let text = combined;
+    if (bound < length) {
+      text = `${tmp6} {snip}`;
+    }
+    return text;
+  }
+}
+export function stringMatchesSomePattern(transaction) {
+  if (items === undefined) {
+    items = [];
+  }
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  return items.some((test) => {
+    const isStringResult = _mod13061.isString(transaction);
+    if (!isStringResult) {
+      return isStringResult;
+    } else {
+      if (tmpResult.isRegExp(test)) {
+        let isMatch = test.test(transaction);
+      } else {
+        isMatch = _mod13061.isString(test);
+        if (isMatch) {
+          if (flag) {
+            let hasItem = transaction === test;
+          } else {
+            hasItem = transaction.includes(test);
+          }
         }
-      };
-    },
-  },
-];
-const _moduleResult = _createClass(SyncPromise, items);
-
-export const SyncPromise = _moduleResult;
-export function rejectedSyncPromise(arg0) {
-  closure_0 = arg0;
-  return new _moduleResult((arg0, fn) => {
-    fn(closure_0);
+        const tmpResult2 = _mod13061;
+      }
+      tmpResult = _mod13061;
+    }
   });
 }
-export function resolvedSyncPromise(item) {
-  closure_0 = item;
-  return new _moduleResult((fn) => {
-    fn(closure_0);
-  });
+export function truncate(str) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 0;
+  }
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
+    if (0 !== num) {
+      combined = str;
+      if (str.length > num) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + str.slice(0, num) + "...";
+      }
+    }
+  }
+  return combined;
 }

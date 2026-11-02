@@ -1,30 +1,13 @@
 // _runtime/metro/13043__.js
-import _mod13037 from "13037__.js";
-import _mod13040 from "13040__.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentUnhandledRejection() {
-  onunhandledrejection = _mod13040.GLOBAL_OBJ.onunhandledrejection;
-  _mod13040.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
-    _mod13037.triggerHandlers("unhandledrejection", arg0);
-    if (!onunhandledrejection) {
-      return !onunhandledrejection;
-    } else {
-      const self = this;
-      const apply = onunhandledrejection.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-    }
-  };
-  _mod13040.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
-}
-let onunhandledrejection = null;
-
-export function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
-  _mod13037.addHandler("unhandledrejection", errorCallback);
-  _mod13037.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "66946e5f24d9f7d485f69d93acc2bd06",
+  name: "CloudDownloadIcon",
+  type: "png",
+});

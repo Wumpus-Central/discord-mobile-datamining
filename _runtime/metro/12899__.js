@@ -1,18 +1,40 @@
 // _runtime/metro/12899__.js
-let obj = {
-  name: "Operator",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.scanner.next();
-    const obj = { type: "Operator", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: null };
+import _mod12836 from "12836__.js";
+
+const Comma = _mod12836.TYPE.Comma;
+const obj = {
+  name: "MediaQueryList",
+  structure: null,
+  parse(arg0) {
+    const self = this;
+    const list = this.createList();
     const scanner = this.scanner;
-    obj.value = scanner.substrToCursor(tokenStart);
-    return obj;
+    scanner.skipSC();
+    if (!this.scanner.eof) {
+      list.push(self.MediaQuery(arg0));
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.MediaQuery(arg0));
+          if (self.scanner.tokenType !== Comma) {
+            break;
+          }
+        }
+        const iter = self.scanner;
+      }
+    }
+    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(value) {
-    this.chunk(value.value);
+  generate(arg0) {
+    this.children(arg0, function () {
+      this.chunk(",");
+    });
   },
 };
+const obj2 = { children: null };
+const items = [["MediaQuery"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

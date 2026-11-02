@@ -69,7 +69,7 @@ export function getActionFromState(index, initialRouteName) {
                                                           if (typeof closure_1_2 === "function") {
                                                             let _Object = Object;
                                                             let entries = Object.entries(tmp5);
-                                                            reduced = entries.reduce(/* F81618 */ function() { ... }, {});
+                                                            reduced = entries.reduce(/* F81654 */ function() { ... }, {});
                                                           } else {
                                                             throw new TypeError("Trying to call a non-function");
                                                           }

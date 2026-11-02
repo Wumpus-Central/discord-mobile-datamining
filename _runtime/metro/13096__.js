@@ -1,58 +1,50 @@
 // _runtime/metro/13096__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _createClass from "00042__createClass.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import _wrapNativeSuper from "00158__wrapNativeSuper.js";
+import _mod13054 from "13054__.js";
+import spanTimeInputToSeconds from "../13059_spanTimeInputToSeconds.js";
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../13069_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
+import _mod13082 from "13082__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+require = arg1;
+const dependencyMap = arg6;
+
+export function setMeasurement(arg0, arg1, arg2) {
+  if (activeSpan === undefined) {
+    activeSpan = spanTimeInputToSeconds.getActiveSpan();
+  }
+  let rootSpan = activeSpan;
+  if (activeSpan) {
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+  }
+  if (rootSpan) {
+    if (_mod13082.DEBUG_BUILD) {
+      const logger = _mod13054.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class SentryError {
-  constructor(arg0) {
-    str = require;
-    if (require === undefined) {
-      str = "warn";
-    }
-    self = this;
-    tmp = closure_0(this, SentryError);
-    items = [];
-    items[0] = global;
-    tmp2 = c2;
-    obj = c2(SentryError);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.message = global;
-    tmp3Result.logLevel = str;
-    return tmp3Result;
+    const obj2 = {};
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj2);
   }
 }
-_classCallCheck = SentryError;
-_inherits(SentryError, _wrapNativeSuper(Error));
-
-export const SentryError = _createClass(SentryError);
+export function timedEventsToMeasurements(arr) {
+  if (arr) {
+    if (0 !== arr.length) {
+      let obj = {};
+      const item = arr.forEach((attributes) => {
+        const tmp = attributes.attributes || {};
+        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
+        }
+        if (tmp4) {
+          obj = { value: tmp3, unit: tmp2 };
+          obj[attributes.name] = obj;
+        }
+      });
+      return obj;
+    }
+  }
+}

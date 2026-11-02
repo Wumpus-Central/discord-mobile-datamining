@@ -1,72 +1,13 @@
 // _runtime/metro/13039__.js
-import GLOBAL_OBJ from "13040__.js";
+import registerAsset from "01119__.js";
 
-const require = globalThis.__r;
-
-function consoleSandbox(fn) {
-  if ("console" in console(13040).GLOBAL_OBJ) {
-    console = tmp(13040).GLOBAL_OBJ.console;
-    dependencyMap = {};
-    const _Object = Object;
-    const keys = Object.keys(obj);
-    const item = keys.forEach((item) => {
-      closure_1[item] = console[item];
-      console[item] = obj[item];
-    });
-    try {
-      const item1 = keys.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      return fn();
-    } catch (tmp8) {
-      const item2 = arr.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      throw tmp8;
-    }
-  } else {
-    return fn();
-  }
-  tmp = console;
-}
-let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
-const originalConsoleMethods = {};
-
-export const CONSOLE_LEVELS = items;
-export { consoleSandbox };
-export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
-  _require = false;
-  const obj = {
-    enable() {
-      c0 = true;
-    },
-    disable() {
-      c0 = false;
-    },
-    isEnabled() {
-      return c0;
-    },
-  };
-  const forEach = items.forEach;
-  if (require("13038__.js").DEBUG_BUILD) {
-    const item = forEach((arg0) => {
-      closure_0 = arg0;
-      obj[arg0] = () => {
-        const args = [...arguments];
-        if (args) {
-          consoleSandbox(() => {
-            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
-            items = ["Sentry Logger [" + args + "]:", ...closure_0];
-            _console[args].apply(items);
-          });
-        }
-      };
-    });
-  } else {
-    const item1 = forEach((arg0) => {
-      obj[arg0] = () => {};
-    });
-  }
-  return obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e605304dde4d78202fb1f94d6df2847d",
+  name: "ListNumberedIcon",
+  type: "png",
 });
-export { originalConsoleMethods };

@@ -1,54 +1,57 @@
 // _runtime/metro/12905__.js
-import _mod12833 from "12833__.js";
-import _mod12877 from "12877__.js";
+import _mod12836 from "12836__.js";
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, _mod12877.mode.leftCurlyBracket, true);
-}
-function consumePrelude() {
-  const self = this;
-  const SelectorListResult = this.SelectorList();
-  let tmp2 = "Raw" !== SelectorListResult.type;
-  if (tmp2) {
-    tmp2 = false === self.scanner.eof;
-  }
-  if (tmp2) {
-    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
-  }
-  if (tmp2) {
-    self.error();
-  }
-  return SelectorListResult;
-}
-const LeftCurlyBracket = _mod12833.TYPE.LeftCurlyBracket;
-
-export default {
-  name: "Rule",
-  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
+const Ident = _mod12836.TYPE.Ident;
+const Function = _mod12836.TYPE.Function;
+const Colon = _mod12836.TYPE.Colon;
+const RightParenthesis = _mod12836.TYPE.RightParenthesis;
+const obj = {
+  name: "PseudoClassSelector",
+  structure: null,
   parse() {
     const self = this;
-    const tokenIndex = this.scanner.tokenIndex;
-    if (this.parseRulePrelude) {
-      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
-    } else {
-      const call = consumeRaw.call;
-      if (typeof call === "unknown") {
-        parseWithFallbackResult = self.Raw(tokenIndex, _mod12877.mode.leftCurlyBracket, true);
-      } else {
-        parseWithFallbackResult = call(self, tokenIndex);
+    this.eat(Colon);
+    if (this.scanner.tokenType === Function) {
+      const str = self.consumeFunctionName();
+      const formatted = str.toLowerCase();
+      const pseudo = self.pseudo;
+      if (!pseudo.hasOwnProperty(formatted)) {
+        const list = self.createList();
+        list.push(self.Raw(self.scanner.tokenIndex, null, false));
+        self.eat(RightParenthesis);
       }
+      const scanner = self.scanner;
+      scanner.skipSC();
+      let skipSCResult1 = self.pseudo[formatted];
+      const call = skipSCResult1.call;
+      const scanner2 = self.scanner;
+      skipSCResult1 = scanner2.skipSC();
+      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
+    } else {
+      const element = {
+        type: "PseudoClassSelector",
+        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+        name: self.consume(Ident),
+        children: null,
+      };
+      return element;
     }
-    const obj = {
-      type: "Rule",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      prelude: parseWithFallbackResult,
-      block: self.Block(true),
-    };
-    return obj;
   },
-  generate(prelude) {
-    this.node(prelude.prelude);
-    this.node(prelude.block);
+  generate(name) {
+    const self = this;
+    this.chunk(":");
+    this.chunk(name.name);
+    if (null !== name.children) {
+      self.chunk("(");
+      self.children(name);
+      self.chunk(")");
+    }
   },
-  walkContext: "rule",
+  walkContext: "function",
 };
+const obj2 = { name: String, children: null };
+const items = [["Raw"], null];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

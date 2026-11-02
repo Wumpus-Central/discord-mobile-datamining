@@ -1,82 +1,119 @@
 // _runtime/metro/13134__.js
-import stackParserFromStackParserOptions from "../13042_stackParserFromStackParserOptions.js";
-import setupIntegration from "13095__.js";
+import extractRequestData from "../13135_extractRequestData.js";
+import _slicedToArray from "00032__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import setupIntegration from "13110__.js";
 
-let c2 = "_sentryBundlerPluginAppKey:";
+let closure_4 = ["ip", "user"];
+let obj = {
+  include: {
+    cookies: true,
+    data: true,
+    headers: true,
+    ip: false,
+    query_string: true,
+    url: true,
+    user: { id: true, username: true, email: true },
+  },
+  transactionNamingScheme: "methodPath",
+};
 
-export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
-  const behaviour = arg0;
-  return {
-    name: "ThirdPartyErrorsFilter",
-    setup(on) {
-      const options = on;
-      on.on("beforeEnvelope", (arg0) => {
-        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp3;
-            if (Array.isArray(arg0)) {
-              tmp3 = arg0[1];
-            }
-            if (tmp3) {
-              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-              arg0[1] = tmp3;
-              const obj = options(dependencyMap[2]);
-            }
-          }
-        });
-      });
-      on.on("applyFrameMetadata", (type) => {
-        if (!type.type) {
-          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-          const obj = options(dependencyMap[2]);
+export const requestDataIntegration = setupIntegration.defineIntegration(() => {
+  obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let obj2 = {};
+  const merged = Object.assign(obj);
+  const merged1 = Object.assign(obj);
+  let obj3 = {};
+  const merged2 = Object.assign(obj.include);
+  const merged3 = Object.assign(obj.include);
+  if (obj.include) {
+    if (typeof obj.include.user === "boolean") {
+      let user = obj.include.user;
+    }
+    obj3.user = user;
+    obj2.include = obj3;
+    const obj4 = {
+      name: "RequestData",
+      processEvent(sdkProcessingMetadata) {
+        let prop = sdkProcessingMetadata.sdkProcessingMetadata;
+        if (undefined === prop) {
+          prop = {};
         }
-      });
-    },
-    processEvent(tags) {
-      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
-      let mapped;
-      if (framesFromEvent) {
-        let found = framesFromEvent.filter((filename) => filename.filename);
-        mapped = found.map((module_metadata) => {
-          if (module_metadata.module_metadata) {
-            const _Object = Object;
-            const keys = Object.keys(module_metadata.module_metadata);
-            const found = keys.filter((item) => item.startsWith(length));
-            let mapped = found.map((arr) => arr.slice(length.length));
-          } else {
-            mapped = [];
+        ({ request, normalizedRequest } = prop);
+        const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
+          include = include.include;
+          const user = include.user;
+          const items = ["method"];
+          const entries = Object.entries(closure_1_3(include, closure_1_4));
+          while (tmp2 !== undefined) {
+            let tmp5 = closure_1_2(tmp3, 2);
+            let first = tmp5[0];
+            if (tmp5[1]) {
+              let arr = items.push(first);
+            }
+            continue;
           }
-          return mapped;
-        });
-      }
-      if (mapped) {
-        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
-          let str2 = "some";
+          let flag = true;
+          if (undefined !== user) {
+            flag = user;
+            if (typeof user !== "boolean") {
+              const items1 = [];
+              const _Object = Object;
+              const entries1 = Object.entries(user);
+              flag = items1;
+              for (const item10032 of entries1) {
+                let tmp11 = closure_1_2(item10032, 2);
+                let first1 = tmp11[0];
+                if (tmp11[1]) {
+                  let arr2 = items1.push(first1);
+                }
+                continue;
+              }
+            }
+          }
+          const include2 = { ip: include.ip, user: flag, request: null, transaction: null };
+          let tmp15;
+          if (0 !== items.length) {
+            tmp15 = items;
+          }
+          include2.request = tmp15;
+          include2.transaction = include.transactionNamingScheme;
+          return { include: include2 };
+        })(obj2);
+        if (normalizedRequest) {
+          let tmp5;
+          if (request) {
+            let ip = request.ip;
+            if (!ip) {
+              ip = request.socket && request.socket.remoteAddress;
+              const tmp6 = request.socket && request.socket.remoteAddress;
+            }
+            tmp5 = ip;
+          }
+          let user;
+          if (request) {
+            user = request.user;
+          }
+          const obj3 = extractRequestData;
+          obj = { ipAddress: tmp5, user };
+          const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
+          return sdkProcessingMetadata;
         } else {
-          str2 = "every";
-        }
-        if (
-          mapped[str2](
-            (arr) =>
-              !arr.some((item) => {
-                filterKeys = filterKeys.filterKeys;
-                return filterKeys.includes(item);
-              }),
-          )
-        ) {
-          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
-            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
-              const obj2 = {};
-              const merged = Object.assign(tags.tags);
-              obj2.third_party_code = true;
-              tags.tags = obj2;
-            }
+          let result1 = sdkProcessingMetadata;
+          if (request) {
+            obj2 = extractRequestData;
+            result1 = obj2.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
           }
-          return null;
+          return result1;
         }
-      }
-      return tags;
-    },
-  };
+      },
+    };
+    return obj4;
+  }
+  user = {};
+  const merged4 = Object.assign(obj.include.user);
+  const merged5 = Object.assign(obj.include || {}.user);
 });

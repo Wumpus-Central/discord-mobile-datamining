@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "78e18d727d8c0a3ff78e647d73ffb0be",
-  name: "QuoteIcon",
+  hash: "3707ecbdc52255079d75d7398451480d",
+  name: "RibbonIcon",
   type: "png",
 });

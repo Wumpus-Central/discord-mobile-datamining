@@ -1,456 +1,167 @@
 // _runtime/metro/12872__.js
-const obj = {
-  "@charset": {
-    syntax: '@charset "<charset>";',
-    groups: ["CSS Charsets"],
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@charset",
-  },
-  "@counter-style": {
-    syntax:
-      "@counter-style <counter-style-name> {\n  [ system: <counter-system>; ] ||\n  [ symbols: <counter-symbols>; ] ||\n  [ additive-symbols: <additive-symbols>; ] ||\n  [ negative: <negative-symbol>; ] ||\n  [ prefix: <prefix>; ] ||\n  [ suffix: <suffix>; ] ||\n  [ range: <range>; ] ||\n  [ pad: <padding>; ] ||\n  [ speak-as: <speak-as>; ] ||\n  [ fallback: <counter-style-name>; ]\n}",
-    interfaces: ["CSSCounterStyleRule"],
-    groups: ["CSS Counter Styles"],
-    descriptors: {
-      "additive-symbols": {
-        syntax: "[ <integer> && <symbol> ]#",
-        media: "all",
-        initial: "n/a (required)",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-      fallback: {
-        syntax: "<counter-style-name>",
-        media: "all",
-        initial: "decimal",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      negative: {
-        syntax: "<symbol> <symbol>?",
-        media: "all",
-        initial: '"-" hyphen-minus',
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-      pad: {
-        syntax: "<integer> && <symbol>",
-        media: "all",
-        initial: '0 ""',
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      prefix: {
-        syntax: "<symbol>",
-        media: "all",
-        initial: '""',
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      range: {
-        syntax: "[ [ <integer> | infinite ]{2} ]# | auto",
-        media: "all",
-        initial: "auto",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-      "speak-as": {
-        syntax: "auto | bullets | numbers | words | spell-out | <counter-style-name>",
-        media: "all",
-        initial: "auto",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      suffix: {
-        syntax: "<symbol>",
-        media: "all",
-        initial: '". "',
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      symbols: {
-        syntax: "<symbol>+",
-        media: "all",
-        initial: "n/a (required)",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-      system: {
-        syntax:
-          "cyclic | numeric | alphabetic | symbolic | additive | [ fixed <integer>? ] | [ extends <counter-style-name> ]",
-        media: "all",
-        initial: "symbolic",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-    },
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@counter-style",
-  },
-  "@document": {
-    syntax:
-      "@document [ <url> | url-prefix(<string>) | domain(<string>) | media-document(<string>) | regexp(<string>) ]# {\n  <group-rule-body>\n}",
-    interfaces: ["CSSGroupingRule", "CSSConditionRule"],
-    groups: ["CSS Conditional Rules"],
-    status: "nonstandard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@document",
-  },
-  "@font-face": {
-    syntax:
-      "@font-face {\n  [ font-family: <family-name>; ] ||\n  [ src: <src>; ] ||\n  [ unicode-range: <unicode-range>; ] ||\n  [ font-variant: <font-variant>; ] ||\n  [ font-feature-settings: <font-feature-settings>; ] ||\n  [ font-variation-settings: <font-variation-settings>; ] ||\n  [ font-stretch: <font-stretch>; ] ||\n  [ font-weight: <font-weight>; ] ||\n  [ font-style: <font-style>; ]\n}",
-    interfaces: ["CSSFontFaceRule"],
-    groups: ["CSS Fonts"],
-    descriptors: {
-      "font-display": {
-        syntax: "[ auto | block | swap | fallback | optional ]",
-        media: "visual",
-        percentages: "no",
-        initial: "auto",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "experimental",
-      },
-      "font-family": {
-        syntax: "<family-name>",
-        media: "all",
-        initial: "n/a (required)",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      "font-feature-settings": {
-        syntax: "normal | <feature-tag-value>#",
-        media: "all",
-        initial: "normal",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-      "font-variation-settings": {
-        syntax: "normal | [ <string> <number> ]#",
-        media: "all",
-        initial: "normal",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-      "font-stretch": {
-        syntax: "<font-stretch-absolute>{1,2}",
-        media: "all",
-        initial: "normal",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      "font-style": {
-        syntax: "normal | italic | oblique <angle>{0,2}",
-        media: "all",
-        initial: "normal",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      "font-weight": {
-        syntax: "<font-weight-absolute>{1,2}",
-        media: "all",
-        initial: "normal",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "standard",
-      },
-      "font-variant": {
-        syntax:
-          "normal | none | [ <common-lig-values> || <discretionary-lig-values> || <historical-lig-values> || <contextual-alt-values> || stylistic(<feature-value-name>) || historical-forms || styleset(<feature-value-name>#) || character-variant(<feature-value-name>#) || swash(<feature-value-name>) || ornaments(<feature-value-name>) || annotation(<feature-value-name>) || [ small-caps | all-small-caps | petite-caps | all-petite-caps | unicase | titling-caps ] || <numeric-figure-values> || <numeric-spacing-values> || <numeric-fraction-values> || ordinal || slashed-zero || <east-asian-variant-values> || <east-asian-width-values> || ruby ]",
-        media: "all",
-        initial: "normal",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-      src: {
-        syntax: "[ <url> [ format( <string># ) ]? | local( <family-name> ) ]#",
-        media: "all",
-        initial: "n/a (required)",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-      "unicode-range": {
-        syntax: "<unicode-range>#",
-        media: "all",
-        initial: "U+0-10FFFF",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "orderOfAppearance",
-        status: "standard",
-      },
-    },
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@font-face",
-  },
-  "@font-feature-values": {
-    syntax: "@font-feature-values <family-name># {\n  <feature-value-block-list>\n}",
-    interfaces: ["CSSFontFeatureValuesRule"],
-    groups: ["CSS Fonts"],
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@font-feature-values",
-  },
-  "@import": {
-    syntax: "@import [ <string> | <url> ] [ <media-query-list> ]?;",
-    groups: ["Media Queries"],
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@import",
-  },
-  "@keyframes": {
-    syntax: "@keyframes <keyframes-name> {\n  <keyframe-block-list>\n}",
-    interfaces: ["CSSKeyframeRule", "CSSKeyframesRule"],
-    groups: ["CSS Animations"],
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@keyframes",
-  },
-  "@media": {
-    syntax: "@media <media-query-list> {\n  <group-rule-body>\n}",
-    interfaces: ["CSSGroupingRule", "CSSConditionRule", "CSSMediaRule", "CSSCustomMediaRule"],
-    groups: ["CSS Conditional Rules", "Media Queries"],
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@media",
-  },
-  "@namespace": {
-    syntax: "@namespace <namespace-prefix>? [ <string> | <url> ];",
-    groups: ["CSS Namespaces"],
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@namespace",
-  },
-  "@page": null,
-  "@property": {
-    syntax: "@property <custom-property-name> {\n  <declaration-list>\n}",
-    interfaces: ["CSS", "CSSPropertyRule"],
-    groups: ["CSS Houdini"],
-    descriptors: {
-      syntax: {
-        syntax: "<string>",
-        media: "all",
-        percentages: "no",
-        initial: "n/a (required)",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "experimental",
-      },
-      inherits: {
-        syntax: "true | false",
-        media: "all",
-        percentages: "no",
-        initial: "auto",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "experimental",
-      },
-      "initial-value": {
-        syntax: "<string>",
-        media: "all",
-        initial: "n/a (required)",
-        percentages: "no",
-        computed: "asSpecified",
-        order: "uniqueOrder",
-        status: "experimental",
-      },
-    },
-    status: "experimental",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@property",
-  },
-  "@supports": {
-    syntax: "@supports <supports-condition> {\n  <group-rule-body>\n}",
-    interfaces: ["CSSGroupingRule", "CSSConditionRule", "CSSSupportsRule"],
-    groups: ["CSS Conditional Rules"],
-    status: "standard",
-    mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@supports",
-  },
-  "@viewport": null,
-};
-const obj4 = {
-  syntax: "@page <page-selector-list> {\n  <page-body>\n}",
-  interfaces: ["CSSPageRule"],
-  groups: ["CSS Pages"],
-  descriptors: {
-    bleed: {
-      syntax: "auto | <length>",
-      media: ["visual", "paged"],
-      initial: "auto",
-      percentages: "no",
-      computed: "asSpecified",
-      order: "uniqueOrder",
-      status: "standard",
-    },
-    marks: {
-      syntax: "none | [ crop || cross ]",
-      media: ["visual", "paged"],
-      initial: "none",
-      percentages: "no",
-      computed: "asSpecified",
-      order: "orderOfAppearance",
-      status: "standard",
-    },
-    size: {
-      syntax: "<length>{1,2} | auto | [ <page-size> || [ portrait | landscape ] ]",
-      media: ["visual", "paged"],
-      initial: "auto",
-      percentages: "no",
-      computed: "asSpecifiedRelativeToAbsoluteLengths",
-      order: "orderOfAppearance",
-      status: "standard",
-    },
-  },
-  status: "standard",
-  mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@page",
-};
-obj["@page"] = obj4;
-const obj7 = {
-  syntax: "@viewport {\n  <group-rule-body>\n}",
-  interfaces: ["CSSViewportRule"],
-  groups: ["CSS Device Adaptation"],
-  descriptors: null,
-  status: "standard",
-  mdn_url: "https://developer.mozilla.org/docs/Web/CSS/@viewport",
-};
-const size = {
-  height: {
-    syntax: "<viewport-length>{1,2}",
-    media: ["visual", "continuous"],
-    initial: ["min-height", "max-height"],
-    percentages: ["min-height", "max-height"],
-    computed: ["min-height", "max-height"],
-    order: "orderOfAppearance",
-    status: "standard",
-  },
-  "max-height": {
-    syntax: "<viewport-length>",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "referToHeightOfInitialViewport",
-    computed: "lengthAbsolutePercentageAsSpecifiedOtherwiseAuto",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  "max-width": {
-    syntax: "<viewport-length>",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "referToWidthOfInitialViewport",
-    computed: "lengthAbsolutePercentageAsSpecifiedOtherwiseAuto",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  "max-zoom": {
-    syntax: "auto | <number> | <percentage>",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "the zoom factor itself",
-    computed: "autoNonNegativeOrPercentage",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  "min-height": {
-    syntax: "<viewport-length>",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "referToHeightOfInitialViewport",
-    computed: "lengthAbsolutePercentageAsSpecifiedOtherwiseAuto",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  "min-width": {
-    syntax: "<viewport-length>",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "referToWidthOfInitialViewport",
-    computed: "lengthAbsolutePercentageAsSpecifiedOtherwiseAuto",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  "min-zoom": {
-    syntax: "auto | <number> | <percentage>",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "the zoom factor itself",
-    computed: "autoNonNegativeOrPercentage",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  orientation: {
-    syntax: "auto | portrait | landscape",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "referToSizeOfBoundingBox",
-    computed: "asSpecified",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  "user-zoom": {
-    syntax: "zoom | fixed",
-    media: ["visual", "continuous"],
-    initial: "zoom",
-    percentages: "referToSizeOfBoundingBox",
-    computed: "asSpecified",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  "viewport-fit": {
-    syntax: "auto | contain | cover",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "no",
-    computed: "asSpecified",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-  width: {
-    syntax: "<viewport-length>{1,2}",
-    media: ["visual", "continuous"],
-    initial: ["min-width", "max-width"],
-    percentages: ["min-width", "max-width"],
-    computed: ["min-width", "max-width"],
-    order: "orderOfAppearance",
-    status: "standard",
-  },
-  zoom: {
-    syntax: "auto | <number> | <percentage>",
-    media: ["visual", "continuous"],
-    initial: "auto",
-    percentages: "the zoom factor itself",
-    computed: "autoNonNegativeOrPercentage",
-    order: "uniqueOrder",
-    status: "standard",
-  },
-};
-obj7.descriptors = size;
-obj["@viewport"] = obj7;
+import _mod12874 from "12874__.js";
+import 12873__ from "12873__.js";
+import size_mod from "12875__.js";
+import size_mod from "12876__.js";
+
+function patchDictionary(descriptors, descriptors1) {
+  const obj = {};
+  for (const key10004 in arg0) {
+    let syntax = arg0[key10004].syntax;
+    if (!syntax) {
+      syntax = arg0[key10004];
+    }
+    obj[key10004] = syntax;
+    continue;
+  }
+  for (const key10011 in arg1) {
+    let syntax3 = arg1[key10011].syntax;
+    if (key10011 in arg0) {
+      if (syntax3) {
+        if (re0.test(arg1[key10011].syntax)) {
+          let str2 = arg1[key10011].syntax;
+          let text = `${obj[key10011]} `;
+          let syntax2 = `${obj[key10011]} ${str2.trim()}`;
+        } else {
+          syntax2 = arg1[key10011].syntax;
+        }
+        obj[key10011] = syntax2;
+        continue;
+      } else {
+        delete tmp[tmp2];
+        continue;
+      }
+      continue;
+    } else {
+      if (!syntax3) {
+        continue;
+      } else {
+        let str = arg1[key10011].syntax;
+        obj[key10011] = str.replace(re0, "");
+        continue;
+      }
+      continue;
+    }
+    continue;
+  }
+  return obj;
+}
+const re0 = /^\s*\|\s*/;
+let obj = { types: null, atrules: null, properties: null };
+obj.types = patchDictionary(module_12873, _mod12874.syntaxes);
+let size = size_mod;
+const obj2 = Object.create(null);
+for (const key10022 in _module1) {
+  let tmp24 = size[key10022];
+  let tmp7 = null;
+  if (tmp24.descriptors) {
+    let _Object = Object;
+    let obj3 = Object.create(null);
+    tmp7 = obj3;
+    let keys = Object.keys();
+    if (keys !== undefined) {
+      tmp7 = obj3;
+      let tmp9 = keys[tmp2];
+      while (tmp9 !== undefined) {
+        obj3[tmp9] = tmp24.descriptors[tmp9].syntax;
+        continue;
+      }
+    }
+  }
+  let str = tmp24.syntax;
+  let substr = key10022.substr(1);
+  let str2 = str.trim();
+  let str3 = str2.match(/^@\S+\s+([^;\{]*)/)[1];
+  let trimmed = str3.trim();
+  if (!trimmed) {
+    trimmed = null;
+  }
+  let obj4 = { prelude: trimmed, descriptors: tmp7 };
+  obj2[substr] = obj4;
+  continue;
+}
+const atrules = _mod12874.atrules;
+const obj5 = {};
+for (const key10049 in obj2) {
+  let descriptors1 = atrules[key10049];
+  if (descriptors1) {
+    descriptors1 = atrules[key10049].descriptors;
+  }
+  if (!descriptors1) {
+    descriptors1 = null;
+  }
+  if (key10049 in atrules) {
+    if ("prelude" in atrules[key10049]) {
+      let obj6 = { prelude: atrules[key10049].prelude, descriptors: null };
+      if (obj2[key10049].descriptors) {
+        if (!descriptors1) {
+          descriptors1 = {};
+        }
+        let patchDictionaryResult = patchDictionary(obj2[key10049].descriptors, descriptors1);
+      } else {
+        patchDictionaryResult = descriptors1;
+        if (descriptors1) {
+          let obj7 = {};
+          patchDictionaryResult = obj7;
+          let keys1 = Object.keys();
+          if (keys1 !== undefined) {
+            patchDictionaryResult = obj7;
+            let tmp16 = keys1[tmp];
+            while (tmp16 !== undefined) {
+              obj7[tmp16] = descriptors1[tmp16].syntax;
+              continue;
+            }
+          }
+        }
+      }
+      obj6.descriptors = patchDictionaryResult;
+      obj5[key10049] = obj6;
+      continue;
+    }
+  }
+  let prelude = obj2[key10049].prelude;
+  if (!prelude) {
+    prelude = null;
+  }
+}
+for (const key10070 in atrules) {
+  let call = globalThis.hasOwnProperty.call;
+  if (typeof call === "unknown") {
+    let hasOwnPropertyResult = hasOwnProperty(key10070);
+  } else {
+    hasOwnPropertyResult = call(obj2, key10070);
+  }
+  if (hasOwnPropertyResult) {
+    continue;
+  } else {
+    let prelude1 = atrules[key10070].prelude;
+    if (!prelude1) {
+      prelude1 = null;
+    }
+    let obj8 = { prelude: prelude1, descriptors: null };
+    let descriptors = atrules[key10070].descriptors;
+    if (descriptors) {
+      let descriptors2 = atrules[key10070].descriptors;
+      let obj16 = {};
+      descriptors = obj16;
+      let keys2 = Object.keys();
+      if (keys2 !== undefined) {
+        descriptors = obj16;
+        let tmp21 = keys2[tmp];
+        while (tmp21 !== undefined) {
+          obj16[tmp21] = descriptors2[tmp21].syntax;
+          continue;
+        }
+      }
+    }
+    obj8.descriptors = descriptors;
+    obj5[key10070] = obj8;
+    continue;
+  }
+  continue;
+}
+obj.atrules = obj5;
+let size = size_mod;
+obj.properties = patchDictionary(size, _mod12874.properties);
 
 export default obj;

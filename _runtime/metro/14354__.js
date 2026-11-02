@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/directory_channels/native/images",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 119,
+  height: 83,
   scales: [2, 3],
-  hash: "b44246d7ff29916e5a982207e3d0936c",
-  name: "add_server",
+  hash: "0b100afac52015c470ea1ec3ef8acf50",
+  name: "redesign_email_header",
   type: "png",
 });

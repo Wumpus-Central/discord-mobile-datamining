@@ -1,30 +1,50 @@
 // _runtime/metro/12881__.js
-import _mod12833 from "12833__.js";
+import _mod12836 from "12836__.js";
 
-const LeftSquareBracket = _mod12833.TYPE.LeftSquareBracket;
-const RightSquareBracket = _mod12833.TYPE.RightSquareBracket;
+const Semicolon = _mod12836.TYPE.Semicolon;
+const LeftCurlyBracket = _mod12836.TYPE.LeftCurlyBracket;
 const obj = {
-  name: "Brackets",
+  name: "AtrulePrelude",
   structure: null,
-  parse(call, arg1) {
-    const self = this;
-    this.eat(LeftSquareBracket);
-    call = call.call;
-    if (!self.scanner.eof) {
-      self.eat(RightSquareBracket);
+  parse(key10009) {
+    let formatted = key10009;
+    if (null !== key10009) {
+      formatted = key10009.toLowerCase();
     }
-    const element = {
-      type: "Brackets",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
-    };
+    const self = this;
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const atrule = this.atrule;
+    if (atrule.hasOwnProperty(formatted)) {
+      if (typeof self.atrule[formatted].prelude === "function") {
+        const prelude = self.atrule[formatted].prelude;
+        const call = prelude.call;
+        typeof call === "unknown" ? prelude() : call(self);
+      }
+    }
+    let sequence = self.readSequence(self.scope.AtrulePrelude);
+    const scanner2 = self.scanner;
+    scanner2.skipSC();
+    let tmp6 = true !== self.scanner.eof;
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== LeftCurlyBracket;
+    }
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== Semicolon;
+    }
+    if (tmp6) {
+      self.error("Semicolon or block is expected");
+    }
+    if (null === sequence) {
+      sequence = self.createList();
+    }
+    const element = { type: "AtrulePrelude", loc: self.getLocationFromList(sequence), children: sequence };
     return element;
   },
   generate(arg0) {
-    this.chunk("[");
     this.children(arg0);
-    this.chunk("]");
   },
+  walkContext: "atrulePrelude",
 };
 const obj2 = { children: null };
 const items = [[]];

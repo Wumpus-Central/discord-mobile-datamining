@@ -38,7 +38,7 @@ export (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValu
         } else {
           items1 = [];
         }
-        mapped = items1.map(/* F122882 */ function() { ... });
+        mapped = items1.map(/* F122936 */ function() { ... });
         tmp3 = closure_4;
         if (closure_4) {
           iter2 = closure_3;
@@ -63,7 +63,7 @@ export (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValu
               if (!mapped.includes(diff)) {
                 arr1 = mapped.push(diff);
               }
-              sorted = mapped.sort(/* F122883 */ function() { ... });
+              sorted = mapped.sort(/* F122937 */ function() { ... });
               tmp8 = closure_6;
               closure_6.value = sorted.indexOf(diff);
               return sorted;
@@ -102,7 +102,7 @@ export (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValu
         length = items.length;
         tmp = !length;
         if (length) {
-          tmp = !items.find(/* F122884 */ function() { ... });
+          tmp = !items.find(/* F122938 */ function() { ... });
         }
         return !tmp;
       }

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 88,
   height: 80,
   scales: [2, 3],
-  hash: "d16693419c73a203fe410baf14480d7e",
-  name: "finishing_touches",
+  hash: "b14cf67ed38d1ab1d1a28d6633250b87",
+  name: "safety_check_light",
   type: "png",
 });

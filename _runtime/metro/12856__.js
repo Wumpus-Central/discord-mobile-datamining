@@ -1,164 +1,155 @@
 // _runtime/metro/12856__.js
-import _mod12827 from "12827__.js";
-
-const require = globalThis.__r;
-
-function isCommaContextStart(type) {
-  let tmp = null === type;
-  if (!tmp) {
-    let tmp4 = type.type === _mod12827.TYPE.Comma;
-    if (!tmp4) {
-      tmp4 = type.type === _mod12827.TYPE.Function;
-    }
-    if (!tmp4) {
-      tmp4 = type.type === _mod12827.TYPE.LeftParenthesis;
-    }
-    if (!tmp4) {
-      tmp4 = type.type === _mod12827.TYPE.LeftSquareBracket;
-    }
-    if (!tmp4) {
-      tmp4 = type.type === _mod12827.TYPE.LeftCurlyBracket;
-    }
-    if (!tmp4) {
-      let tmp5 = type.type === _mod12827.TYPE.Delim;
-      if (tmp5) {
-        tmp5 = "?" !== type.value;
-      }
-      tmp4 = tmp5;
-    }
-    tmp = tmp4;
-  }
-  return tmp;
+function noop(arg0) {
+  return arg0;
 }
-function internalMatch(arr, match, self) {
-  _require = arr;
-  dependencyMap = match;
-  c2 = null;
-  type = null;
-  c4 = -1;
-  closure_5 = 0;
-  let prev = { type: 0, syntax: null, token: null, prev: null };
-  while (true) {
-    let sum = c4 + 1;
-    c4 = sum;
-    let tmp3 = null;
-    if (sum < arr.length) {
-      tmp3 = arr[c4];
-    }
-    type = tmp3;
-    if (null === tmp3) {
-      break;
-    } else {
-      let tmp10 = _require;
-      if (tmp3.type === require("12827__.js").TYPE.WhiteSpace) {
-        continue;
-      } else if (type.type !== tmp10(12827).TYPE.Comment) {
-        break;
-      }
-      continue;
-    }
-  }
-}
-const Match = "Match";
-let c4 = 0;
-
-export default {
-  matchAsList(arr, match, self) {
-    let obj = self;
-    if (!self) {
-      obj = {};
-    }
-    const str = internalMatch(arr, match, obj);
-    if (null !== str.match) {
-      let prev = str.match;
-      let tmp3 = null;
-      let tmp4 = null;
-      if (null !== prev) {
-        do {
-          prev.prev = tmp3;
-          tmp3 = prev;
-          tmp4 = prev;
-          prev = prev.prev;
-        } while (null !== tmp2);
-      }
-      let prev2 = tmp4.prev;
-      str.match = [];
-      if (null !== prev2) {
-        do {
-          type = prev2.type;
-          if (0 !== type) {
-            if (2 !== type) {
-              if (3 !== type) {
-                match = str.match;
-                let obj2 = { token: prev2.token.value, node: prev2.token.node };
-                arr = match.push(obj2);
-              }
-            }
-            let match1 = str.match;
-            let obj5 = { type: null, syntax: null };
-            ({ type: obj3.type, syntax: obj3.syntax } = prev2);
-            let arr2 = match1.push(obj5);
-          }
-          prev2 = prev2.prev;
-        } while (null !== prev2);
-      }
-    }
-    return str;
-  },
-  matchAsTree(arr, match, self) {
-    let obj = self;
-    if (!self) {
-      obj = {};
-    }
-    const str = internalMatch(arr, match, obj);
-    if (null === str.match) {
-      return str;
-    } else {
-      let prev = str.match;
-      let obj2 = { syntax: match.syntax || null, match: [] };
-      str.match = obj2;
-      const items = [obj2];
-      let tmp3 = null;
-      let tmp4 = null;
-      if (null !== prev) {
-        do {
-          prev.prev = tmp3;
-          tmp3 = prev;
-          tmp4 = prev;
-          prev = prev.prev;
-        } while (null !== tmp5);
-      }
-      let prev2 = tmp4.prev;
-      if (null !== prev2) {
-        do {
-          type = prev2.type;
-          if (2 === type) {
-            match = obj2.match;
-            let obj3 = { syntax: prev2.syntax, match: [] };
-            arr = match.push(obj3);
-            let arr2 = items.push(obj3);
-            let tmp10 = obj3;
-          } else if (3 === type) {
-            let arr3 = items.pop();
-            tmp10 = items[items.length - 1];
+function generate(type, fn, arg2, arg3) {
+  let str = ",";
+  switch (type.type) {
+    case "Group":
+      closure_0 = fn;
+      generate = arg2;
+      closure_2 = arg3;
+      if (" " !== type.combinator) {
+        if (!arg3) {
+          let combinator = `${" " + type.combinator} `;
+        }
+        const terms = type.terms;
+        const mapped = terms.map((item) => generate(item, closure_0, closure_1, closure_2));
+        const joined = mapped.join(combinator);
+        let explicit = type.explicit;
+        if (!explicit) {
+          explicit = arg2;
+        }
+        let sum1 = joined;
+        if (explicit) {
+          if (arg3) {
+            let str27 = "[";
           } else {
-            let match1 = obj2.match;
-            let syntax = prev2.syntax;
-            if (!syntax) {
-              syntax = null;
-            }
-            let obj4 = { syntax, token: prev2.token.value, node: prev2.token.node };
-            let arr7 = match1.push(obj4);
-            tmp10 = obj2;
+            str27 = "[ ";
           }
-          prev2 = prev2.prev;
-          obj2 = tmp10;
-        } while (null !== prev2);
+          let str28 = " ]";
+          const sum = str27 + joined;
+          if (arg3) {
+            str28 = "]";
+          }
+          sum1 = sum + str28;
+        }
+        let str29 = "";
+        if (type.disallowEmpty) {
+          str29 = "!";
+        }
+        str = sum1 + str29;
+        return fn(str, type);
       }
-      return str;
+      combinator = type.combinator;
+      break;
+    case "Multiplier":
+      if (0 !== type.min) {
+        if (0 === type.min) {
+          if (1 === type.max) {
+            let str16 = "?";
+          }
+        }
+        if (1 !== type.min) {
+          if (1 === type.min) {
+            const str18 = "";
+          }
+          let str19 = "";
+          let str20 = "";
+          if (type.comma) {
+            str20 = "#";
+          }
+          if (type.min === type.max) {
+            let text = `${"{" + type.min}}`;
+          } else {
+            const text1 = `{${type.min}`;
+            if (0 !== type.max) {
+              str19 = type.max;
+            }
+            text = `${tmp14 + "," + str19}}`;
+          }
+          const sum2 = str20 + text;
+        }
+        let str25 = "+";
+        if (type.comma) {
+          str25 = "#";
+        }
+      } else {
+        str16 = "*";
+      }
+      return generate(type.term, fn, arg2, arg3) + fn(str16, type);
+    case "Type":
+      let str7 = "";
+      const text2 = `<${type.name}`;
+      if (type.opts) {
+        const opts = type.opts;
+        if ("Range" === opts.type) {
+          let str11 = "-\u221E";
+          if (null !== opts.min) {
+            str11 = opts.min;
+          }
+          let str13 = "\u221E";
+          const text3 = ` [${str11}`;
+          if (null !== opts.max) {
+            str13 = opts.max;
+          }
+          str7 = fn(text3 + "," + str13 + "]", type.opts);
+        } else {
+          const _Error = Error;
+          const error = new Error("Unknown node type `" + opts.type + "`");
+          throw error;
+        }
+      }
+      str = `${tmp + str7}>`;
+      break;
+    case "Property":
+      str = `${"<'" + type.name}'>`;
+      break;
+    case "Keyword":
+      str = type.name;
+      break;
+    case "AtKeyword":
+      str = `@${type.name}`;
+      break;
+    case "Function":
+      str = `${type.name}(`;
+      break;
+    case "String":
+      str = type.value;
+      break;
+    case "Token":
+      str = type.value;
+      break;
+    case "Comma":
+      break;
+    default:
+      const _Error2 = Error;
+      const error1 = new Error("Unknown node type `" + type.type + "`");
+      throw error1;
+  }
+}
+
+export default (arg0, forceBraces) => {
+  let decorate = noop;
+  let flag = false;
+  let flag2 = false;
+  let tmp = forceBraces;
+  if (typeof forceBraces !== "function") {
+    flag = false;
+    flag2 = false;
+    tmp = decorate;
+    if (forceBraces) {
+      const _Boolean = Boolean;
+      const _Boolean2 = Boolean;
+      const BooleanResult = Boolean(forceBraces.forceBraces);
+      if (typeof forceBraces.decorate === "function") {
+        decorate = forceBraces.decorate;
+      }
+      tmp = decorate;
+      flag = Boolean(forceBraces.compact);
+      flag2 = BooleanResult;
+      const BooleanResult1 = Boolean(forceBraces.compact);
     }
-  },
-  getTotalIterationCount() {
-    return c4;
-  },
+  }
+  return generate(arg0, tmp, flag2, flag);
 };

@@ -1,19 +1,12 @@
 // _runtime/metro/16159__.js
-import _mod16128 from "16128__.js";
-import element from "../16160_element.js";
-import getOwnPropertyDescriptor from "16127__.js";
+import _mod16154 from "16154__.js";
+import _mod16160 from "16160__.js";
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod16128(
-    () =>
-      7 !==
-      Object.defineProperty(element("div"), "a", {
-        get() {
-          return 7;
-        },
-      }).a,
-  );
-}
-
-export default tmp2;
+export default (arg0) => {
+  if (_mod16154(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod16160(arg0) + " is not a function");
+    throw tmp6;
+  }
+};

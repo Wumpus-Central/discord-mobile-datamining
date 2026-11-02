@@ -153,7 +153,7 @@ function runOnJS(__remoteFunction) {
                                   if (!closure_2_4) {
                                     if (globalThis._WORKLET) {
                                       if (obj.isWorkletFunction(closure_2_11)) {
-                                        let fn = /* F121458 */ function() { ... };
+                                        let fn = /* F121512 */ function() { ... };
                                       } else {
                                         let tmp5 = closure_2_11;
                                         if (closure_2_11.__remoteFunction) {
@@ -165,7 +165,7 @@ function runOnJS(__remoteFunction) {
                                         } else {
                                           _scheduleRemoteFunctionOnJS = closure_2_0._scheduleRemoteFunctionOnJS;
                                         }
-                                        fn = /* F121459 */ function() { ... };
+                                        fn = /* F121513 */ function() { ... };
                                       }
                                       obj = closure_2_1(closure_2_2[3]);
                                     }
@@ -173,7 +173,7 @@ function runOnJS(__remoteFunction) {
                                     HermesBuiltin.arraySpread(items, 1);
                                     return HermesBuiltin.apply(items1, undefined);
                                   }
-                                  fn = /* F121457 */ function() { ... };
+                                  fn = /* F121511 */ function() { ... };
                                 };
                               } else {
                                 let tmp5 = closure_2_11;
@@ -204,7 +204,7 @@ function runOnJS(__remoteFunction) {
                           }
                           fn = () => {
                             const items = [...arguments];
-                            return queueMicrotask(items.length ? (/* F134444 */ function() { ... }) : items);
+                            return queueMicrotask(items.length ? (/* F134501 */ function() { ... }) : items);
                           };
                         };
                       } else {

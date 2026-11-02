@@ -1,108 +1,84 @@
 // _runtime/metro/12877__.js
-import _mod12833 from "12833__.js";
+import _mod12878 from "12878__.js";
+import _mod12879 from "12879__.js";
+import _mod12880 from "12880__.js";
+import _mod12881 from "12881__.js";
+import _mod12882 from "12882__.js";
+import _mod12883 from "12883__.js";
+import _mod12884 from "12884__.js";
+import _mod12885 from "12885__.js";
+import _mod12886 from "12886__.js";
+import _mod12887 from "12887__.js";
+import _mod12888 from "12888__.js";
+import _mod12889 from "12889__.js";
+import consumeValueRaw from "../12890_consumeValueRaw.js";
+import _mod12891 from "12891__.js";
+import _mod12892 from "12892__.js";
+import _mod12893 from "12893__.js";
+import _mod12894 from "12894__.js";
+import _mod12895 from "12895__.js";
+import _mod12896 from "12896__.js";
+import _mod12897 from "12897__.js";
+import _mod12898 from "12898__.js";
+import _mod12899 from "12899__.js";
+import _mod12900 from "12900__.js";
+import _mod12901 from "12901__.js";
+import _mod12902 from "12902__.js";
+import _mod12903 from "12903__.js";
+import _mod12904 from "12904__.js";
+import _mod12905 from "12905__.js";
+import _mod12906 from "12906__.js";
+import consumeNumber from "../12907_consumeNumber.js";
+import _mod12908 from "12908__.js";
+import _mod12909 from "12909__.js";
+import _mod12910 from "12910__.js";
+import _mod12911 from "12911__.js";
+import _mod12912 from "12912__.js";
+import eatIdentifierOrAsterisk from "../12913_eatIdentifierOrAsterisk.js";
+import eatHexSequence from "../12914_eatHexSequence.js";
+import _mod12915 from "12915__.js";
+import _mod12916 from "12916__.js";
+import _mod12917 from "12917__.js";
 
-function getOffsetExcludeWS() {
-  let self = this;
-  if (this.scanner.tokenIndex > 0) {
-    const scanner = self.scanner;
-    if (scanner.lookupType(-1) === WhiteSpace) {
-      let num2 = 1;
-      if (self.scanner.tokenIndex > 1) {
-        const scanner2 = self.scanner;
-        self = self.scanner.tokenIndex;
-        num2 = self - num2;
-        let firstCharOffset = scanner2.getTokenStart(num2);
-      } else {
-        firstCharOffset = self.scanner.firstCharOffset;
-      }
-    }
-  }
-  return self.scanner.tokenStart;
-}
-function balanceEnd() {
-  return 0;
-}
-const WhiteSpace = _mod12833.TYPE.WhiteSpace;
-const Semicolon = _mod12833.TYPE.Semicolon;
-const LeftCurlyBracket = _mod12833.TYPE.LeftCurlyBracket;
-const Delim = _mod12833.TYPE.Delim;
-let obj = {
-  name: "Raw",
-  structure: { value: String },
-  parse(arg0, balanceEnd, arg2) {
-    const self = this;
-    let tmp = balanceEnd;
-    const scanner = this.scanner;
-    const tokenStart1 = scanner.getTokenStart(arg0);
-    ({ scanner: scanner2, scanner: scanner3 } = this);
-    if (!balanceEnd) {
-      tmp = balanceEnd;
-    }
-    scanner2.skip(scanner3.getRawLength(arg0, tmp));
-    if (arg2) {
-      if (self.scanner.tokenStart > tokenStart1) {
-        const call = getOffsetExcludeWS.call;
-        if (typeof call !== "unknown") {
-          call(self);
-        }
-        if (self.scanner.tokenIndex <= 0) {
-          const tokenStart2 = self.scanner.tokenStart;
-        } else {
-          const scanner4 = self.scanner;
-        }
-        let num3 = 1;
-        if (self.scanner.tokenIndex > 1) {
-          const scanner5 = self.scanner;
-          num3 = self.scanner.tokenIndex - num3;
-          let firstCharOffset = scanner5.getTokenStart(num3);
-        } else {
-          firstCharOffset = self.scanner.firstCharOffset;
-        }
-      }
-    }
-    const tokenStart = self.scanner.tokenStart;
-    const obj = {
-      type: "Raw",
-      loc: self.getLocation(tokenStart1, tokenStart),
-      value: self.scanner.source.substring(tokenStart1, tokenStart),
-    };
-    return obj;
-  },
-  generate(value) {
-    this.chunk(value.value);
-  },
-  mode: {
-    default: balanceEnd,
-    leftCurlyBracket(arg0) {
-      let num = 0;
-      if (arg0 === LeftCurlyBracket) {
-        num = 1;
-      }
-      return num;
-    },
-    leftCurlyBracketOrSemicolon(arg0) {
-      if (arg0 === LeftCurlyBracket) {
-        let num = 1;
-      } else {
-        num = 0;
-      }
-      return num;
-    },
-    exclamationMarkOrSemicolon(arg0, str, sum) {
-      if (arg0 !== Delim) {
-        let num2 = 0;
-        return num2;
-      }
-      num2 = 1;
-    },
-    semicolonIncluded(arg0) {
-      let num = 0;
-      if (arg0 === Semicolon) {
-        num = 2;
-      }
-      return num;
-    },
-  },
+export default {
+  AnPlusB: _mod12878,
+  Atrule: _mod12879,
+  AtrulePrelude: _mod12881,
+  AttributeSelector: _mod12882,
+  Block: _mod12883,
+  Brackets: _mod12884,
+  CDC: _mod12885,
+  CDO: _mod12886,
+  ClassSelector: _mod12887,
+  Combinator: _mod12888,
+  Comment: _mod12889,
+  Declaration: consumeValueRaw,
+  DeclarationList: _mod12891,
+  Dimension: _mod12892,
+  Function: _mod12893,
+  Hash: _mod12894,
+  Identifier: _mod12895,
+  IdSelector: _mod12896,
+  MediaFeature: _mod12897,
+  MediaQuery: _mod12898,
+  MediaQueryList: _mod12899,
+  Nth: _mod12900,
+  Number: _mod12901,
+  Operator: _mod12902,
+  Parentheses: _mod12903,
+  Percentage: _mod12904,
+  PseudoClassSelector: _mod12905,
+  PseudoElementSelector: _mod12906,
+  Ratio: consumeNumber,
+  Raw: _mod12880,
+  Rule: _mod12908,
+  Selector: _mod12909,
+  SelectorList: _mod12910,
+  String: _mod12911,
+  StyleSheet: _mod12912,
+  TypeSelector: eatIdentifierOrAsterisk,
+  UnicodeRange: eatHexSequence,
+  Url: _mod12915,
+  Value: _mod12916,
+  WhiteSpace: _mod12917,
 };
-
-export default obj;

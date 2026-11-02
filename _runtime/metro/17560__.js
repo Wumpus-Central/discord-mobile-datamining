@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1c2e533ca379db7ea82903ea36d239f5",
-  name: "FileWarningIcon",
+  hash: "45e29ff493e27168e5d63eb6f088968a",
+  name: "WrenchIcon",
   type: "png",
 });

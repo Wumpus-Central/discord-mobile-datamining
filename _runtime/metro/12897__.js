@@ -1,52 +1,67 @@
 // _runtime/metro/12897__.js
+import _mod12836 from "12836__.js";
 
-export default {
-  name: "Nth",
-  structure: { nth: ["AnPlusB", "Identifier"], selector: ["SelectorList", null] },
-  parse(arg0) {
+const Ident = _mod12836.TYPE.Ident;
+const Number = _mod12836.TYPE.Number;
+const Dimension = _mod12836.TYPE.Dimension;
+const LeftParenthesis = _mod12836.TYPE.LeftParenthesis;
+const RightParenthesis = _mod12836.TYPE.RightParenthesis;
+const Colon = _mod12836.TYPE.Colon;
+const Delim = _mod12836.TYPE.Delim;
+let obj = {
+  name: "MediaFeature",
+  structure: { name: String, value: ["Identifier", "Number", "Dimension", "Ratio", null] },
+  parse() {
     const self = this;
+    this.eat(LeftParenthesis);
     const scanner = this.scanner;
     scanner.skipSC();
-    const tokenStart = this.scanner.tokenStart;
     const scanner2 = this.scanner;
-    if (!scanner2.lookupValue(0, "odd")) {
-      const scanner3 = self.scanner;
-      if (!scanner3.lookupValue(0, "even")) {
-        let AnPlusBResult = self.AnPlusB();
-      }
+    scanner2.skipSC();
+    if (this.scanner.tokenType === RightParenthesis) {
+      self.eat(tmp6);
+      const obj = {
+        type: "MediaFeature",
+        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+        name: consumeResult,
+        value: null,
+      };
+      return obj;
+    } else {
+      self.eat(Colon);
       const scanner4 = self.scanner;
       scanner4.skipSC();
-      if (arg0) {
-        const scanner5 = self.scanner;
-        if (scanner5.lookupValue(0, "of")) {
-          self.scanner.next();
-          const SelectorListResult = self.SelectorList();
-          let tmp5 = SelectorListResult;
-          let offset = tokenStart;
-          if (self.needPositions) {
-            offset = self.getLastListNode(SelectorListResult.children).loc.end.offset;
-            tmp5 = SelectorListResult;
-          }
-          const iter = self.scanner;
+      const tokenType = self.scanner.tokenType;
+      if (Number === tokenType) {
+        if (self.lookupNonWSType(1) === Delim) {
+          let RatioResult = self.Ratio();
+        } else {
+          RatioResult = self.Number();
         }
-        const obj = { type: "Nth", loc: self.getLocation(tokenStart, offset), nth: AnPlusBResult, selector: tmp5 };
-        return obj;
-      }
-      tmp5 = null;
-      offset = tokenStart;
-      if (self.needPositions) {
-        offset = AnPlusBResult.loc.end.offset;
-        tmp5 = null;
+      } else {
+        if (Dimension === tokenType) {
+          let DimensionResult = self.Dimension();
+          const scanner3 = self.scanner;
+          scanner3.skipSC();
+        } else if (Ident !== tokenType) {
+          self.error("Number, dimension, ratio or identifier is expected");
+          DimensionResult = null;
+        }
+        DimensionResult = self.Identifier();
       }
     }
-    AnPlusBResult = self.Identifier();
+    consumeResult = this.consume(Ident);
   },
-  generate(nth) {
+  generate(name) {
     const self = this;
-    this.node(nth.nth);
-    if (null !== nth.selector) {
-      self.chunk(" of ");
-      self.node(nth.selector);
+    this.chunk("(");
+    this.chunk(name.name);
+    if (null !== name.value) {
+      self.chunk(":");
+      self.node(name.value);
     }
+    self.chunk(")");
   },
 };
+
+export default obj;

@@ -1,116 +1,444 @@
 // _runtime/metro/12948__.js
+import _mod9416 from "09416__.js";
 import _mod12949 from "12949__.js";
+import includesScopePseudo from "../12950_includesScopePseudo.js";
 
-function getProcedure(type) {
-  value = map.get(type.type);
-  let num = -1;
-  if (null !== value) {
-    num = -1;
-    if (undefined !== value) {
-      num = value;
-    }
+const self = this;
+let f60095 = require;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-  if (type.type === _mod12949.SelectorType.Attribute) {
-    value2 = map1.get(type.action);
-    let num8 = 4;
-    if (null !== value2) {
-      num8 = 4;
-      if (undefined !== value2) {
-        num8 = value2;
-      }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
     }
-    let tmp7 = type.action === _mod12949.AttributeAction.Equals;
-    if (tmp7) {
-      tmp7 = "id" === type.name;
-    }
-    if (tmp7) {
-      num8 = 9;
-    }
-    num = num8;
-    if (type.ignoreCase) {
-      num = num8 >> 1;
-    }
-  } else if (type.type === _mod12949.SelectorType.Pseudo) {
-    let num6 = 3;
-    if (type.data) {
-      let num3 = 0;
-      if ("has" !== type.name) {
-        num3 = 0;
-        if ("contains" !== type.name) {
-          const _Array = Array;
-          let num4 = 2;
-          if (Array.isArray(type.data)) {
-            const _Math = Math;
-            const _Math2 = Math;
-            const data = type.data;
-            let num5 = min.apply(
-              Math,
-              data.map((arr) => {
-                return min.apply(Math, arr.map(getProcedure));
-              }),
-            );
-            if (num5 < 0) {
-              num5 = 0;
-            }
-            num4 = num5;
+    if (!fn) {
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
           }
-          num3 = num4;
         }
-      }
-      num6 = num3;
-    }
-    num = num6;
-  }
-  return num;
-}
-const items = [_mod12949.SelectorType.Universal, 50];
-const items1 = [items, , ,];
-const items2 = [_mod12949.SelectorType.Tag, 30];
-items1[1] = items2;
-const items3 = [_mod12949.SelectorType.Attribute, 1];
-items1[2] = items3;
-const items4 = [_mod12949.SelectorType.Pseudo, 0];
-items1[3] = items4;
-const map = new Map(items1);
-const items5 = [_mod12949.AttributeAction.Exists, 10];
-const items6 = [items5, , , , ,];
-const items7 = [_mod12949.AttributeAction.Equals, 8];
-items6[1] = items7;
-const items8 = [_mod12949.AttributeAction.Not, 7];
-items6[2] = items8;
-const items9 = [_mod12949.AttributeAction.Start, 6];
-items6[3] = items9;
-const items10 = [_mod12949.AttributeAction.End, 6];
-items6[4] = items10;
-const items11 = [_mod12949.AttributeAction.Any, 5];
-items6[5] = items11;
-const map1 = new Map(items6);
-
-export function isTraversal(type) {
-  return !map.has(type.type);
-}
-export default function sortByProcedure(arr) {
-  const mapped = arr.map(getProcedure);
-  for (let num = 1; num < arr.length; num = num + 1) {
-    let tmp2 = mapped[num];
-    if (tmp2 >= 0) {
-      let diff = num - 1;
-      if (0 <= diff) {
-        if (tmp2 < mapped[diff]) {
-          let sum = diff + 1;
-          arr[sum] = arr[diff];
-          arr[diff] = arr[sum];
-          mapped[sum] = mapped[diff];
-          mapped[diff] = tmp2;
-          let diff1 = diff - 1;
-          while (0 <= diff1) {
-            diff = diff1;
-            if (tmp2 >= mapped[diff1]) {
-              break;
+        obj = {};
+        if (null != __esModule) {
+          for (const key10009 in arg0) {
+            let tmp9 = "default" !== key10009;
+            if (!tmp9) {
+              if (!tmp9) {
+                continue;
+              } else {
+                let tmp6 = self2(obj, arg0, key10009);
+                continue;
+              }
+              continue;
+            } else {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10009);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10009);
+              }
             }
           }
         }
-      }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
     }
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__importDefault;
+    }
+    if (!fn2) {
+      fn2 = (__esModule) => {
+        if (!__esModule) {
+          obj = { default: __esModule };
+          let tmp = obj;
+        } else {
+          tmp = __esModule;
+        }
+        return tmp;
+      };
+    }
+    const _Object3 = Object;
+    function prepareContext(arr, removeSubsets, arg2) {
+      let flag = arg2;
+      if (undefined === arg2) {
+        flag = false;
+      }
+      let tmp = arr;
+      if (flag) {
+        const _Array = Array;
+        if (Array.isArray(arr)) {
+          let substr = arr.slice(0);
+        } else {
+          substr = [arr];
+        }
+        let num2 = 0;
+        tmp = substr;
+        if (0 < substr.length) {
+          do {
+            let push = substr.push;
+            let applyResult = push.apply(substr, f60095(12956).getNextSiblings(substr[num2], removeSubsets));
+            num2 = num2 + 1;
+            tmp = substr;
+          } while (num2 < length);
+        }
+      }
+      if (Array.isArray(tmp)) {
+        let removeSubsetsResult = removeSubsets.removeSubsets(tmp);
+      } else {
+        removeSubsetsResult = removeSubsets.getChildren(tmp);
+      }
+      return removeSubsetsResult;
+    }
+    exports.compile = undefined;
+    exports._compileUnsafe = undefined;
+    exports._compileToken = undefined;
+    exports.prepareContext = undefined;
+    exports.selectAll = undefined;
+    exports.selectOne = undefined;
+    exports.is = undefined;
+    exports.filters = undefined;
+    exports.pseudos = undefined;
+    exports.aliases = undefined;
+    let closure_5 = fn2(_mod12949);
+    function defaultEquals(arg0, arg1) {
+      return arg0 === arg1;
+    }
+    let obj = { adapter: fn(_mod9416), equals: defaultEquals };
+    exports.compile = function addAdapter(arg0, arg1, arg2) {
+      let tmp = arg1;
+      if (null == arg1) {
+        tmp = closure_7;
+      }
+      adapter = tmp.adapter;
+      let tmp2 = null !== adapter;
+      if (tmp2) {
+        tmp2 = undefined !== adapter;
+      }
+      if (!tmp2) {
+        tmp.adapter = adapter;
+      }
+      const equals = tmp.equals;
+      let tmp4 = null !== equals;
+      if (tmp4) {
+        tmp4 = undefined !== equals;
+      }
+      if (!tmp4) {
+        const adapter2 = tmp.adapter;
+        let equals1;
+        if (null !== adapter2) {
+          if (undefined !== adapter2) {
+            equals1 = adapter2.equals;
+          }
+        }
+        if (null === equals1) {
+          equals1 = metroRequire;
+        }
+        tmp.equals = equals1;
+      }
+      return f60095(arg0, tmp, arg2);
+    };
+    exports._compileUnsafe = function addAdapter(arg0, arg1, arg2) {
+      let tmp = arg1;
+      if (null == arg1) {
+        tmp = closure_7;
+      }
+      adapter = tmp.adapter;
+      let tmp2 = null !== adapter;
+      if (tmp2) {
+        tmp2 = undefined !== adapter;
+      }
+      if (!tmp2) {
+        tmp.adapter = adapter;
+      }
+      const equals = tmp.equals;
+      let tmp4 = null !== equals;
+      if (tmp4) {
+        tmp4 = undefined !== equals;
+      }
+      if (!tmp4) {
+        const adapter2 = tmp.adapter;
+        let equals1;
+        if (null !== adapter2) {
+          if (undefined !== adapter2) {
+            equals1 = adapter2.equals;
+          }
+        }
+        if (null === equals1) {
+          equals1 = metroRequire;
+        }
+        tmp.equals = equals1;
+      }
+      return f60095(arg0, tmp, arg2);
+    };
+    exports._compileToken = function addAdapter(arg0, arg1, arg2) {
+      let tmp = arg1;
+      if (null == arg1) {
+        tmp = closure_7;
+      }
+      adapter = tmp.adapter;
+      let tmp2 = null !== adapter;
+      if (tmp2) {
+        tmp2 = undefined !== adapter;
+      }
+      if (!tmp2) {
+        tmp.adapter = adapter;
+      }
+      const equals = tmp.equals;
+      let tmp4 = null !== equals;
+      if (tmp4) {
+        tmp4 = undefined !== equals;
+      }
+      if (!tmp4) {
+        const adapter2 = tmp.adapter;
+        let equals1;
+        if (null !== adapter2) {
+          if (undefined !== adapter2) {
+            equals1 = adapter2.equals;
+          }
+        }
+        if (null === equals1) {
+          equals1 = metroRequire;
+        }
+        tmp.equals = equals1;
+      }
+      return f60095(arg0, tmp, arg2);
+    };
+    exports.prepareContext = prepareContext;
+    f60095 = (arg0, arg1, adapter) => {
+      if (arg0 !== closure_5.default.falseFunc) {
+        if (arg1) {
+          if (0 !== arg1.length) {
+            adapter = adapter.adapter;
+            adapter.findAll(arg0, arg1);
+          }
+          return [];
+        }
+      }
+    };
+    exports.selectAll = function select(fn, arr, context) {
+      let tmp = context;
+      if (null == context) {
+        tmp = closure_7;
+      }
+      adapter = tmp.adapter;
+      let tmp2 = null !== adapter;
+      if (tmp2) {
+        tmp2 = undefined !== adapter;
+      }
+      if (!tmp2) {
+        tmp.adapter = adapter;
+      }
+      const equals = tmp.equals;
+      let tmp4 = null !== equals;
+      if (tmp4) {
+        tmp4 = undefined !== equals;
+      }
+      if (!tmp4) {
+        const adapter2 = tmp.adapter;
+        let equals1;
+        if (null !== adapter2) {
+          if (undefined !== adapter2) {
+            equals1 = adapter2.equals;
+          }
+        }
+        if (null === equals1) {
+          equals1 = metroRequire;
+        }
+        tmp.equals = equals1;
+      }
+      let compileUnsafeResult = fn;
+      if (typeof fn !== "function") {
+        compileUnsafeResult = closure_0(12950).compileUnsafe(fn, tmp, arr);
+      }
+      const adapter3 = tmp.adapter;
+      let flag = compileUnsafeResult.shouldTestNextSiblings;
+      if (undefined === flag) {
+        flag = false;
+      }
+      let tmp7 = arr;
+      if (flag) {
+        const _Array = Array;
+        if (Array.isArray(arr)) {
+          let substr = arr.slice(0);
+        } else {
+          substr = [arr];
+        }
+        let num2 = 0;
+        tmp7 = substr;
+        if (0 < substr.length) {
+          do {
+            let push = substr.push;
+            let applyResult = push.apply(substr, closure_0(12956).getNextSiblings(substr[num2], adapter3));
+            num2 = num2 + 1;
+            tmp7 = substr;
+          } while (num2 < length);
+        }
+      }
+      if (Array.isArray(tmp7)) {
+        let removeSubsetsResult = adapter3.removeSubsets(tmp7);
+      } else {
+        removeSubsetsResult = adapter3.getChildren(tmp7);
+      }
+      return f60095(compileUnsafeResult, removeSubsetsResult, tmp);
+    };
+    f60095 = (arg0, arg1, adapter) => {
+      let findOneResult = null;
+      if (arg0 !== closure_5.default.falseFunc) {
+        findOneResult = null;
+        if (arg1) {
+          findOneResult = null;
+          if (0 !== arg1.length) {
+            adapter = adapter.adapter;
+            findOneResult = adapter.findOne(arg0, arg1);
+          }
+        }
+      }
+      return findOneResult;
+    };
+    exports.selectOne = function select(fn, arr, context) {
+      let tmp = context;
+      if (null == context) {
+        tmp = closure_7;
+      }
+      adapter = tmp.adapter;
+      let tmp2 = null !== adapter;
+      if (tmp2) {
+        tmp2 = undefined !== adapter;
+      }
+      if (!tmp2) {
+        tmp.adapter = adapter;
+      }
+      const equals = tmp.equals;
+      let tmp4 = null !== equals;
+      if (tmp4) {
+        tmp4 = undefined !== equals;
+      }
+      if (!tmp4) {
+        const adapter2 = tmp.adapter;
+        let equals1;
+        if (null !== adapter2) {
+          if (undefined !== adapter2) {
+            equals1 = adapter2.equals;
+          }
+        }
+        if (null === equals1) {
+          equals1 = metroRequire;
+        }
+        tmp.equals = equals1;
+      }
+      let compileUnsafeResult = fn;
+      if (typeof fn !== "function") {
+        compileUnsafeResult = closure_0(12950).compileUnsafe(fn, tmp, arr);
+      }
+      const adapter3 = tmp.adapter;
+      let flag = compileUnsafeResult.shouldTestNextSiblings;
+      if (undefined === flag) {
+        flag = false;
+      }
+      let tmp7 = arr;
+      if (flag) {
+        const _Array = Array;
+        if (Array.isArray(arr)) {
+          let substr = arr.slice(0);
+        } else {
+          substr = [arr];
+        }
+        let num2 = 0;
+        tmp7 = substr;
+        if (0 < substr.length) {
+          do {
+            let push = substr.push;
+            let applyResult = push.apply(substr, closure_0(12956).getNextSiblings(substr[num2], adapter3));
+            num2 = num2 + 1;
+            tmp7 = substr;
+          } while (num2 < length);
+        }
+      }
+      if (Array.isArray(tmp7)) {
+        let removeSubsetsResult = adapter3.removeSubsets(tmp7);
+      } else {
+        removeSubsetsResult = adapter3.getChildren(tmp7);
+      }
+      return f60095(compileUnsafeResult, removeSubsetsResult, tmp);
+    };
+    exports.is = function is(arg0, fn, arg2) {
+      let tmp = arg2;
+      if (null == arg2) {
+        tmp = obj;
+      }
+      adapter = tmp.adapter;
+      let tmp2 = null !== adapter;
+      if (tmp2) {
+        tmp2 = undefined !== adapter;
+      }
+      if (!tmp2) {
+        tmp.adapter = fnResult;
+      }
+      const equals = tmp.equals;
+      let tmp4 = null !== equals;
+      if (tmp4) {
+        tmp4 = undefined !== equals;
+      }
+      if (!tmp4) {
+        const adapter2 = tmp.adapter;
+        let equals1;
+        if (null !== adapter2) {
+          if (undefined !== adapter2) {
+            equals1 = adapter2.equals;
+          }
+        }
+        if (null === equals1) {
+          equals1 = defaultEquals;
+        }
+        tmp.equals = equals1;
+      }
+      let compileResult = fn;
+      if (typeof fn !== "function") {
+        compileResult = f60095(12950).compile(fn, tmp);
+      }
+      return compileResult(arg0);
+    };
+    exports.default = exports.selectAll;
+    const _Object4 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+        return f60095(12959).filters;
+      },
+    };
+    Object.defineProperty(exports, "filters", obj2);
+    const _Object5 = Object;
+    const obj3 = {
+      enumerable: true,
+      get() {
+        return f60095(12959).pseudos;
+      },
+    };
+    Object.defineProperty(exports, "pseudos", obj3);
+    const _Object6 = Object;
+    const obj4 = {
+      enumerable: true,
+      get() {
+        return f60095(12959).aliases;
+      },
+    };
+    Object.defineProperty(exports, "aliases", obj4);
+    const fnResult = fn(_mod9416);
+  } else {
+    const _Object2 = Object;
   }
+} else {
+  let _Object = Object;
 }

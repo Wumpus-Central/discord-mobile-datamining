@@ -1,6 +1,21 @@
 // _runtime/metro/12916__.js
-import defaultRecognizer from "../12917_defaultRecognizer.js";
-import _mod12919 from "12919__.js";
-import _mod12920 from "12920__.js";
+const obj = {
+  name: "Value",
+  structure: null,
+  parse() {
+    const element = { type: "Value", loc: null, children: null };
+    const sequence = this.readSequence(this.scope.Value);
+    element.loc = this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart);
+    element.children = sequence;
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0);
+  },
+};
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
-export default { AtrulePrelude: defaultRecognizer, Selector: _mod12919, Value: _mod12920 };
+export default obj;

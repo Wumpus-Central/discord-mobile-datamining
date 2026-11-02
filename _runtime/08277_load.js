@@ -109,7 +109,7 @@ function load(response) {
                     if (arg0) {
                       closure_1(arg0);
                     } else {
-                      obj.close(closure_0, /* F140365 */ function() { ... });
+                      obj.close(closure_0, /* F140432 */ function() { ... });
                     }
                   });
                 }
@@ -219,7 +219,7 @@ function load(response) {
 function loadView(byteLength) {
   let obj = response;
   if (response === undefined) {
-    obj = { expanded: false, async: false, includeUnknown: false, domParser: "cix" };
+    obj = { expanded: false, async: false, includeUnknown: false, domParser: "applicationId" };
   }
   let flag = obj.expanded;
   if (flag === undefined) {

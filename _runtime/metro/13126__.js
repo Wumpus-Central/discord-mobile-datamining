@@ -1,15 +1,14 @@
 // _runtime/metro/13126__.js
+import _mod13125 from "13125__.js";
 
-export function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    const items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
-    }
-    str = str2;
-  }
-  return str;
+require = arg1;
+const dependencyMap = arg6;
+
+export function getTraceMetaTags() {
+  const entries = Object.entries(_mod13125.getTraceData());
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
+  });
+  return mapped.join("\n");
 }
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];

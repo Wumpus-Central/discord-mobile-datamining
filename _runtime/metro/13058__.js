@@ -1,21 +1,30 @@
 // _runtime/metro/13058__.js
-import _mod13057 from "13057__.js";
-import _mod13059 from "13059__.js";
+import _mod13052 from "13052__.js";
+import _mod13055 from "13055__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-
-export function getAsyncContextStrategy(mainCarrier) {
-  const sentryCarrier = _mod13057.getSentryCarrier(mainCarrier);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod13059.getStackAsyncContextStrategy();
-    const tmpResult = _mod13059;
-  }
-  return acs;
+function instrumentUnhandledRejection() {
+  onunhandledrejection = _mod13055.GLOBAL_OBJ.onunhandledrejection;
+  _mod13055.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
+    _mod13052.triggerHandlers("unhandledrejection", arg0);
+    if (!onunhandledrejection) {
+      return !onunhandledrejection;
+    } else {
+      const self = this;
+      const apply = onunhandledrejection.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+  };
+  _mod13055.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
 }
-export function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod13057.getMainCarrier();
-  _mod13057.getSentryCarrier(mainCarrier).acs = acs;
+let onunhandledrejection = null;
+
+export function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
+  _mod13052.addHandler("unhandledrejection", errorCallback);
+  _mod13052.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 }

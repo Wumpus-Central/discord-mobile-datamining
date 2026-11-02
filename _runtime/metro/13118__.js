@@ -1,73 +1,78 @@
 // _runtime/metro/13118__.js
-import _mod13040 from "13040__.js";
+import _mod13078 from "13078__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod13040.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod13040.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp16 = _mod13040.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        if (!set.has(item10026)) {
-          let addResult = set.add(item10026);
-          let obj2 = arg0(item10026);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
-            }
-            continue;
-          }
-        }
-        continue;
-      }
-    }
-  })(fn);
-  return map.get(arg1);
-}
-const map = new Map();
-const set = new Set();
 
-export function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          if (item10010.filename) {
-            if (!item10010.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
-              if (tmp9) {
-                item10010.module_metadata = tmp10;
-              }
+export function makePromiseBuffer(bufferSize) {
+  const items = [];
+  return {
+    $: items,
+    add(fn) {
+      let tmp2 = undefined === promise;
+      if (!tmp2) {
+        tmp2 = items.length < tmp;
+      }
+      if (tmp2) {
+        promise = fn();
+        if (-1 === items.indexOf(promise)) {
+          items.push(promise);
+        }
+        promise
+          .then(() => {
+            let first = items.splice(items.indexOf(promise), 1)[0];
+            if (!first) {
+              first = Promise.resolve(undefined);
             }
-          }
-          continue;
-        }
+            return first;
+          })
+          .then(null, () => {
+            let first = items.splice(items.indexOf(promise), 1)[0];
+            if (!first) {
+              first = Promise.resolve(undefined);
+            }
+            return first.then(null, () => {});
+          });
+        return promise;
+      } else {
+        const sentryError = new bufferSize(items[1]).SentryError(
+          "Not adding Promise because buffer limit was reached.",
+        );
+        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
       }
-    });
-  } catch (err) {}
-}
-export { getMetadataForUrl };
-export function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
+    },
+    drain(arg0) {
+      bufferSize = arg0;
+      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
+        closure_0 = fn;
+        closure_1 = arg1;
+        length = length.length;
+        if (length) {
+          const _setTimeout = setTimeout;
+          const timeout = setTimeout(() => {
+            let tmp2 = closure_0;
+            if (closure_0) {
+              tmp2 = tmp > 0;
+            }
+            if (tmp2) {
+              closure_0(false);
+            }
+          }, closure_0);
+          const item = arr.forEach((item) => {
+            _mod13078.resolvedSyncPromise(item).then(() => {
+              diff = diff - 1;
+              if (!diff) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(closure_1_3);
+                fn(true);
+              }
+            }, closure_1);
+          });
+        } else {
+          return fn(true);
         }
-      }
-    });
-  } catch (err) {}
+        arr = length;
+      });
+    },
+  };
 }

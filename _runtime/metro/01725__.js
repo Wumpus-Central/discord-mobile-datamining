@@ -92,7 +92,7 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "displayName",
       lastTimestamp: null,
-      startTimestamp: "LongPressCommandMention",
+      startTimestamp: "VOICE_CHANNEL_EFFECT_CLEAR",
       reduceMotion: null,
     };
     let num = obj.velocity;

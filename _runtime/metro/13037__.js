@@ -1,55 +1,13 @@
 // _runtime/metro/13037__.js
-import _mod13038 from "13038__.js";
-import _mod13039 from "13039__.js";
-import stackParserFromStackParserOptions from "../13042_stackParserFromStackParserOptions.js";
+import registerAsset from "01119__.js";
 
-require = arg1;
-const dependencyMap = {};
-let closure_3 = {};
-
-export function addHandler(console, errorCallback) {
-  dependencyMap[console] = dependencyMap[console] || [];
-  dependencyMap[console].push(errorCallback);
-  const tmp2 = dependencyMap[console] || [];
-}
-export function maybeInstrument(console, fn) {
-  if (!closure_3[console]) {
-    tmp2[console] = true;
-    try {
-      fn();
-    } catch (tmp5) {
-      if (_mod13038.DEBUG_BUILD) {
-        const logger = _mod13039.logger;
-        const _HermesInternal = HermesInternal;
-        logger.error("Error while instrumenting " + tmp, tmp5);
-      }
-    }
-  }
-}
-export function resetInstrumentationHandlers() {
-  const keys = Object.keys(closure_2);
-  const item = keys.forEach((item) => {
-    dependencyMap[item] = undefined;
-  });
-}
-export function triggerHandlers(arg0, arg1) {
-  let tmp8 = arg0;
-  if (arg0) {
-    tmp8 = dependencyMap[arg0];
-  }
-  if (tmp8) {
-    const iter = tmp8[Symbol.iterator]();
-    if (iter !== undefined) {
-      try {
-        tmp15(arg1);
-      } catch (tmp18) {
-        if (_mod13038.DEBUG_BUILD) {
-          const logger = _mod13039.logger;
-          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = stackParserFromStackParserOptions;
-        }
-      }
-    }
-    const nextResult = iter.next();
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "01cd25a11a733a16463d72c98cca83b7",
+  name: "CloudIcon",
+  type: "png",
+});

@@ -73,9 +73,9 @@ export function VirtualDetector(children) {
             handlerTags,
             methods: tmp2.gesture.detectorCallbacks,
             viewRef: "a",
-            userSelect: 553648930,
-            touchAction: "a",
-            enableContextMenu: "isArray",
+            userSelect: null,
+            touchAction: null,
+            enableContextMenu: null,
           };
           ({
             userSelect: obj.userSelect,

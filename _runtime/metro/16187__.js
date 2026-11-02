@@ -1,15 +1,11 @@
 // _runtime/metro/16187__.js
-import _mod16139 from "16139__.js";
-import _mod16146 from "16146__.js";
+import _mod16135 from "16135__.js";
+import _mod16144 from "16144__.js";
+import all from "16154__.js";
 
-let closure_2 = _mod16139("keys");
+let closure_0 = _mod16135(Function.toString);
+if (!all(_mod16144.inspectSource)) {
+  _mod16144.inspectSource = (arg0) => closure_0(arg0);
+}
 
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod16146(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
+export default _mod16144.inspectSource;

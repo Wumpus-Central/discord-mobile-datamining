@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6d9d454b0d30ca95b55c7977c96de9cb",
-  name: "StickerPlusIcon",
+  hash: "c993344d8197e11d62f0d0a7ef753412",
+  name: "BoostGemOutlineIcon",
   type: "png",
 });

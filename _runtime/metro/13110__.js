@@ -1,69 +1,128 @@
 // _runtime/metro/13110__.js
-import errorCallback from "../13035_errorCallback.js";
-import _mod13039 from "13039__.js";
-import spanTimeInputToSeconds from "../13044_spanTimeInputToSeconds.js";
-import _mod13051 from "13051__.js";
-import BAGGAGE_HEADER_NAME from "../13052_BAGGAGE_HEADER_NAME.js";
-import _mod13057 from "13057__.js";
-import _mod13058 from "13058__.js";
-import _mod13066 from "13066__.js";
-import _mod13075 from "13075__.js";
-import "module_13038";
-import __SENTRY_DEBUG__ from "13067__.js";
-import dateTimestampInSeconds from "13053__.js";
+import _mod13054 from "13054__.js";
+import _mod13081 from "13081__.js";
+import _mod13082 from "13082__.js";
+import _slicedToArray from "00032__.js";
 
-errorCallback;
-
-export function getTraceData(arg0) {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+function setupIntegration(on, name, arg2) {
+  closure_0 = on;
+  if (arg2[name.name]) {
+    if (_mod13082.DEBUG_BUILD) {
+      const logger2 = _mod13054.logger;
+      const _HermesInternal2 = HermesInternal;
+      logger2.log("Integration skipped because it was already installed: " + name.name);
+    }
+  } else {
+    arg2[name.name] = name;
+    if (tmp) {
+      name.setupOnce();
+      items.push(name.name);
+    }
+    if (tmp4) {
+      name.setup(on);
+    }
+    if (typeof name.preprocessEvent === "function") {
+      const preprocessEvent = name.preprocessEvent;
+      closure_1 = preprocessEvent.bind(name);
+      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
+    }
+    if (typeof name.processEvent === "function") {
+      const processEvent = name.processEvent;
+      closure_2 = processEvent.bind(name);
+      const _Object = Object;
+      const obj = { id: name.name };
+      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
+    }
+    if (_mod13082.DEBUG_BUILD) {
+      const logger = _mod13054.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Integration installed: " + name.name);
+    }
+    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
+    tmp4 = name.setup && typeof name.setup === "function";
   }
-  const client = _mod13066.getClient();
-  if (obj3.isEnabled()) {
-    if (client) {
-      const mainCarrier = _mod13057.getMainCarrier();
-      const tmpResult = _mod13057;
-      const asyncContextStrategy = _mod13058.getAsyncContextStrategy(mainCarrier);
-      if (asyncContextStrategy.getTraceData) {
-        return asyncContextStrategy.getTraceData(obj);
-      } else {
-        const currentScope = _mod13066.getCurrentScope();
-        let span = obj.span;
-        if (!span) {
-          span = spanTimeInputToSeconds.getActiveSpan();
-          const tmpResult10 = spanTimeInputToSeconds;
-        }
-        if (span) {
-          let spanToTraceHeaderResult = spanTimeInputToSeconds.spanToTraceHeader(span);
-          const tmpResult11 = spanTimeInputToSeconds;
-        } else {
-          const propagationContext = currentScope.getPropagationContext();
-          ({ traceId, sampled, spanId } = propagationContext);
-          spanToTraceHeaderResult = _mod13051.generateSentryTraceHeader(traceId, spanId, sampled);
-          const tmpResult12 = _mod13051;
-        }
-        const tmpResult13 = _mod13075;
-        if (span) {
-          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
-        } else {
-          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
-        }
-        const tmpResult9 = _mod13066;
-        const result = BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = _mod13051.TRACEPARENT_REGEXP;
-        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
-          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-          let obj5 = obj4;
-        } else {
-          const logger = _mod13039.logger;
-          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
-          obj5 = {};
-        }
-        return obj5;
+}
+let items = [];
+
+export function addIntegration(name) {
+  const client = _mod13081.getClient();
+  if (client) {
+    client.addIntegration(name);
+  } else if (_mod13082.DEBUG_BUILD) {
+    const logger = _mod13054.logger;
+    const _HermesInternal = HermesInternal;
+    logger.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
+  }
+}
+export function afterSetupIntegrations(arg0, arg1) {
+  const iter = arg1[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let obj = nextResult;
+    if (nextResult) {
+      let afterAllSetup = obj.afterAllSetup;
+    }
+    if (nextResult) {
+      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    }
+    continue;
+  }
+}
+export function defineIntegration(arg0) {
+  return arg0;
+}
+export function getIntegrationsToSetup(defaultIntegrations) {
+  const arr = defaultIntegrations.defaultIntegrations || [];
+  const integrations = defaultIntegrations.integrations;
+  const item = arr.forEach((item) => {
+    item.isDefaultInstance = true;
+  });
+  if (Array.isArray(integrations)) {
+    items = [];
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
+    let arr2 = items;
+  } else {
+    arr2 = arr;
+    if (typeof integrations === "function") {
+      const integrationsResult = integrations(arr);
+      const _Array = Array;
+      let tmp2 = integrationsResult;
+      if (!Array.isArray(integrationsResult)) {
+        const items1 = [integrationsResult];
+        tmp2 = items1;
       }
-      const tmpResult8 = _mod13058;
+      arr2 = tmp2;
     }
   }
-  return {};
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
+    let isDefaultInstance = tmp2;
+    if (obj[name]) {
+      isDefaultInstance = !tmp2.isDefaultInstance;
+    }
+    if (isDefaultInstance) {
+      isDefaultInstance = name.isDefaultInstance;
+    }
+    if (!isDefaultInstance) {
+      obj[name] = name;
+    }
+  });
+  const values = Object.values({});
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
+  if (findIndexResult > -1) {
+    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  }
+  return values;
+}
+export const installedIntegrations = items;
+export { setupIntegration };
+export function setupIntegrations(arg0, arr) {
+  closure_0 = arg0;
+  const obj = {};
+  const item = arr.forEach((item) => {
+    if (item) {
+      setupIntegration(closure_0, item, obj);
+    }
+  });
+  return obj;
 }

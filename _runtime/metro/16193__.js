@@ -1,4 +1,8 @@
 // _runtime/metro/16193__.js
-import _mod17 from "00017__.js";
+import _mod16171 from "16171__.js";
+import _mod16172 from "16172__.js";
 
-const parsed = parseInt(_mod17.Platform.Version, 10);
+export default Object.keys ||
+  function keys(arg0) {
+    return _mod16172(arg0, _mod16171);
+  };
